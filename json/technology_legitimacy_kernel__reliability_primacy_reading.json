@@ -1,0 +1,571 @@
+{
+  "header": {
+    "constraint_id": "technology_legitimacy_kernel__reliability_primacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "94cb0374-c41e-4e82-9709-23520a33409a"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.52,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Reliability Primacy Legitimacy Gate for Climate Technologies",
+    "topic_domain": "energy/climate/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_operators",
+      "grid_operators",
+      "reliability_engineering_establishment"
+    ],
+    "victims": [
+      "ratepayers",
+      "renewable_energy_developers",
+      "distributed_generation_operators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "grid_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Manage real-time frequency and voltage stability across the transmission system. Under reliability-primacy framing, they adjudicate which technologies qualify as 'grid-stabilizing' based on dispatchability metrics. They enforce the constraint through grid interconnection standards, dispatch scheduling rules, and ancillary service requirements. Benefit from a constraint that privileges the dispatchable generators they historically control and understand."
+    },
+    {
+      "name": "nuclear_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Operate large, dispatchable, baseload generation with high capacity factors (>90%). The reliability-primacy frame legitimizes their continued operation and new construction by treating dispatchability as the paramount climate virtue. They collect carbon-free credentials and operational support without needing to develop expensive storage, fast-response ramp rates, or variable-cost integration strategies."
+    },
+    {
+      "name": "renewable_energy_developers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Develop wind, solar, and other intermittent renewables. Under reliability-primacy framing, their technologies are treated as incomplete without paired battery storage or other costly dispatchability augmentation, raising capital requirements and lowering returns. The constraint subjects them to burden-of-proof standards (proving grid stability impact) that baseload operators are exempted from."
+    },
+    {
+      "name": "battery_storage_manufacturers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Manufacture battery systems deployed alongside renewables to create synthetic dispatchability. They benefit from the constraint because it creates regulatory demand for storage co-location. They also bear costs if storage-plus-renewable bundles become uneconomic relative to nuclear or natural-gas baselines, constraining their total addressable market."
+    },
+    {
+      "name": "ratepayers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Pay electricity bills and capital costs for grid investments. Under reliability-primacy framing, they bear the cost of redundant dispatchable capacity, expensive fast-response reserves, and storage systems that the constraint necessitates. The constraint masks this cost transfer by treating reliability as a non-negotiable engineering requirement rather than a policy choice with distributional consequences."
+    },
+    {
+      "name": "climate_scientists",
+      "role": "beneficiary",
+      "secondary_role": "excluded",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study climate mitigation pathways and decarbonization timelines. The reliability-primacy frame privileges their concern (grid stability is essential) but excludes their voice from adjudicating what counts as 'sufficient' stability, what trade-offs with deployment velocity are acceptable, and whether near-term emissions reductions outweigh long-term reliability margins. The constraint is enforced by engineers, not climate modelers."
+    },
+    {
+      "name": "coal_and_gas_operators",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operate fossil-fuel dispatchable generators that are losing economic and regulatory legitimacy. The constraint de facto legitimizes their dispatchable architecture (if not their carbon intensity) and can slow their displacement by privileging baseload and fast-response attributes they possess; however, their explicit exclusion from climate-mitigation legitimacy means they cannot be open beneficiaries. They are structurally trapped: excluded from the climate narrative but favored by its technology-selection criteria."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Set grid interconnection standards, renewable portfolio standards, and technology certification rules. They observe the constraint's operation and must adjudicate conflicts between reliability-primacy and competing principles (velocity, reversibility, cost). They have the power to reframe the kernel (e.g., by elevating velocity or precaution to co-equal status) but currently enforce reliability primacy as the binding legitimacy gate."
+    },
+    {
+      "name": "distributed_generation_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Operate rooftop solar, small wind, microhydro, and other distributed, variable-output systems. The reliability-primacy frame treats their generation as grid-destabilizing (variable, non-dispatchable) unless augmented with costly local storage or demand management. They face higher integration costs and longer interconnection timelines than centralized dispatchable generators."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures grid frequency and voltage stability by requiring generation sources to be dispatchable (responsive to real-time demand, ramp-capable) and baseload-capable (available on demand at rated capacity). Solves the engineering problem of maintaining reliable power supply amid variable load and contingent failures.",
+    "transfer_function": "Transfers capital and operational costs from grid operators and nuclear/dispatchable-generator operators to renewable developers (storage requirement), distributed generators (integration surcharges), and ratepayers (higher electricity costs and reserve margins). Also transfers legitimacy (climate credibility) from intermittent renewables to dispatchable technologies.",
+    "absent_voices": "Climate scientists and decarbonization velocity analysts would object that the constraint weights reliability above emissions-reduction speed, but they are excluded from technology-certification decisions. Fossil-fuel operators would defend the constraint's criteria (they meet the dispatchability requirement) but are barred from citing it. Ratepayers and low-income consumers bear the cost but have no seat in grid-planning decisions.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint vanished and replaced reliability-primacy with velocity-primacy or precautionary criteria, technology development investments would shift dramatically: renewable deployment would accelerate (no storage burden), nuclear licensing might slow (long-build-time disadvantage), distributed generation would proliferate, storage R&D priorities would shift from duration/capacity to rapid response. Grid operational practices and reserve margin requirements would be recalibrated. Electricity prices would follow these reallocation patterns.",
+    "founding_problem": "Early renewable-heavy grids in high-penetration regions (Denmark, Germany, California) experienced frequency instability, voltage swings, and greater reliance on fossil-fuel fast-response generators for balancing. The constraint was built to ensure dispatchable generation remains available to stabilize the grid during periods of low wind/solar output.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Grid operators and reliability engineers attest the problem remains live and worsening as renewable penetration increases. Renewable advocates and decarbonization modelers attest the founding problem is solvable through battery storage, smart grids, and demand management without privileging dispatchability as the legitimacy gate. Recent grid operations data from regions with >50% renewables (parts of California, Texas, Denmark) show mixed stability outcomes — neither side's corroboration is uncontested. No neutral engineering authority has settled whether the problem is inherent to renewables or to inadequate storage/grid infrastructure investment."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.52,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The reliability-primacy reading of the technology-legitimacy kernel claims that a technology's right to climate-mitigation support depends solely on its ability to provide dispatchable, baseload generation ensuring grid stability. This reading is one of three structurally distinct framings of what makes a climate technology 'legitimate.' Under this reading, nuclear and natural-gas plants with high capacity factors and fast-response capability are intrinsically climate-legitimate; intermittent renewables are legitimate only if paired with sufficient storage to meet dispatchability requirements; deployment velocity and worst-case failure reversibility are secondary or tertiary concerns. The constraint enforces this by conditioning grid interconnection, capacity-auction participation, and regulatory approval on dispatchability metrics. The committer-frame tension: grid operators and reliability engineers genuinely need stable frequency and voltage, making the constraint's coordination function real; however, the choice to make dispatchability the SOLE legitimacy criterion (rather than one criterion among several) advantages incumbent dispatchable operators and burdens renewable developers and ratepayers. The reading competes with velocity-primacy (which would privilege fast deployment over stability margins) and precautionary (which would privilege reversibility and bounded failure modes).",
+    "key_agents": [
+      "grid_operators: institutional agenda-setter, trapped in current architecture, enforce the reliability-primacy frame through interconnection standards and dispatch rules",
+      "nuclear_operators: institutional beneficiary, mobile exit options, gain carbon-free legitimacy and protected dispatch economics",
+      "renewable_energy_developers: organized payers, constrained exit (must comply or leave the market), face higher integration costs and burden-of-proof standards",
+      "ratepayers: powerless payers, trapped, bear the cost of redundant dispatchable capacity and storage infrastructure",
+      "battery_storage_manufacturers: powerful, arbitrage exit, benefit from constraint-driven storage demand but vulnerable to alternative framings",
+      "regulatory_authorities: institutional observers, analytical seat, have power to reframe the kernel but currently enforce reliability primacy",
+      "climate_scientists: analytical beneficiaries, excluded from technology certification (voice present in founding problem, absent from enforcement)"
+    ],
+    "logic_rationale": "Extractiveness is measured at 0.68 at interval end, rising from 0.54. The rise reflects two processes: (1) renewable penetration increases over the interval, making the storage-bundling requirement more economically burdensome (sunk costs of dispatchability augmentation grow); (2) the constraint's enforcement tightens as grid volatility concerns intensify, requiring stricter conformance to dispatchability metrics. Suppression is moderate (0.52) because renewable developers retain exit options (they can lobby for reframing, invest in storage, or diversify geographically), but the constraint's enforcement is active (interconnection delays, higher integration surcharges, dispatch priority subordination). Theater is rising (0.25→0.41) because an increasing share of grid-stability rhetoric is decoupled from measured outcomes: as battery storage and demand management increasingly provide the stability attributes dispatchability was supposed to ensure, the constraint increasingly justifies itself through narrative about 'proven reliability' rather than engineering necessity. The three-metric trajectory on one shared time grid documents both the extraction accumulation and the theatrical maintenance drift.",
+    "directionality_logic": "Grid operators (powerful, institutional, trapped) are beneficiaries on the supply side — the constraint privileges their technical expertise and control of dispatch algorithms. They face low directionality (d ≈ 0.2), making their effective extraction negative or neutral in the engine's computation: they are subsidized by the constraint. Nuclear operators (institutional, mobile exit, beneficiary role) face d ≈ 0.3: they benefit substantially but retain options (can relocate, advocate for alternative framings, diversify generation mix). Renewable developers (organized, constrained exit, payer role) face d ≈ 0.7: they are trapped in the market (renewables are their business model) but must comply with dispatchability requirements, making them targets for the transfer. Ratepayers (powerless, trapped exit) face d ≈ 0.85: they cannot exit (electricity is essential), cannot renegotiate (individual consumers have no seat), and bear diffuse costs that manifest in higher bills. The directionality spread (0.2 to 0.85) is the seat divergence: the constraint's type varies sharply by seat. Grid operators compute it as beneficial coordination (rope). Ratepayers compute it as extraction without choice (snare). The engine surfaces this divergence through per-seat classification.",
+    "perspectival_gap": "From the grid operator's seat (agenda-setter, trapped institutional actor), the constraint solves a genuine coordination problem: ensuring stable frequency and voltage is a real engineering challenge, and dispatchability is a proven solution. They perceive the constraint as natural law (you cannot have a stable grid without dispatchable generation). From the renewable developer's seat (payer, constrained), the same constraint is enforced extraction: the grid has always been variable (load is variable), dispatchability is only one solution among several (storage, demand management, oversizing), and the constraint privileges one solution to advantage incumbent operators. From the ratepayer's seat (powerless, trapped), the constraint is pure cost-shifting: they bear higher electricity prices to subsidize the dispatchable-generation architecture, with no voice in whether that architecture is the right one. The engine's per-seat classification captures this perspectival geometry; the authored claim (tangled_rope) reflects the structural fact that both genuine coordination (grid stability) and asymmetric extraction (cost to ratepayers) coexist in the constraint's operation.",
+    "mandatrophy_analysis": "The constraint avoids misclassification as pure rope by explicitly declaring victims (ratepayers, renewable developers) and active enforcement (interconnection standards, dispatch subordination). The founding problem (grid instability during high-renewable-penetration periods) is live and contested — neither the grid-operator nor renewable-advocate corroboration is unchallenged by the other — which supports the tangled_rope classification. If the founding problem were dead (stability fully solved by storage and smart grids) but the constraint persisted anyway, the classification would drift toward piton (inertial enforcement of obsolete architecture). Currently, the problem remains contested enough that both the coordination and extraction narratives have some empirical support.",
+    "kernel_context": "This constraint instantiates the reliability_primacy_reading of the contested kernel technology_legitimacy_kernel, which defines what makes a climate technology 'legitimate' for decarbonization support. The kernel is a fixed textual commitment: 'A technology is legitimate for climate mitigation if and only if [criterion].' Three structurally distinct readings populate the [criterion] slot: (1) reliability_primacy_reading (THIS constraint): dispatchable, baseload-capable generation ensuring grid stability; (2) velocity_primacy_reading (sibling): can be deployed at scale within remaining carbon-budget timelines (2030/2050 targets); (3) precautionary_reading (sibling): worst-case failure modes and legacy costs are bounded and reversible within one generation. Each reading produces a different beneficiary set, different victim set, and different measured extractiveness. The reliability-primacy reading benefits grid operators and nuclear operators (high-capacity-factor dispatchable generators); it victimizes ratepayers (higher costs) and renewable developers (storage burden). The velocity-primacy reading would benefit fast-deploying renewables and distributed generation; it would victimize operators whose technologies require long build times (nuclear). The precautionary reading would benefit operators of inherently safe, reversible systems; it might victimize operators of long-lived, difficult-to-decommission systems. The sibling readings are NOT alternative framings of a single ε-value: each reading instantiates a distinct constraint with a distinct ε. The corpus contains three separate JSON files, one per reading, each with its own beneficiary/victim structure and its own metrics."
+  },
+  "omegas": [
+    {
+      "id": "dispatchability_necessity",
+      "question": "Is dispatchability genuinely necessary for grid stability, or is it one solution among several sufficient alternatives (storage, demand management, oversizing, interconnection)?",
+      "resolution_mechanism": "Grid operations data from regions with >60% renewable penetration (Denmark, Costa Rica, parts of California, Australia); comparison of stability metrics across grids with different dispatchability-to-storage ratios; engineering studies isolating the causal contribution of dispatchability to frequency stability.",
+      "impact": "If dispatchability is necessary, the constraint reflects genuine coordination requirements and the tangled_rope classification holds. If it is one solution among several, the constraint becomes a choice to privilege one solution, raising the extraction reading and potentially supporting snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dispatchability is a fundamental requirement or a contingent policy choice."
+    },
+    {
+      "id": "foundational_problem_persistence",
+      "question": "Has the founding problem (grid instability during high-renewable periods) actually been solved by technological advances (battery cost reductions, smart grid deployment, demand management), or does it persist?",
+      "resolution_mechanism": "Comparison of grid-stability metrics (frequency nadir, voltage excursion magnitude) in 2015 vs. 2030; capacity factor and response-time data for battery and demand-response systems deployed since 2020; grid operators' own reliability assessments and historical dispatch logs.",
+      "impact": "If solved, the founding problem is dead and the constraint becomes mandatrophic (persisting despite obsolescence), supporting piton classification. If persisting, the constraint remains justified as coordination, supporting tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding problem the constraint was built to solve remains live or has been substantially addressed."
+    },
+    {
+      "id": "kernel_reading_foreclosure",
+      "question": "Do the three readings of the technology-legitimacy kernel logically foreclose one another, or do they coexist as live positions held by different institutional actors?",
+      "resolution_mechanism": "Analysis of whether a single decision-maker (a regulator, grid operator, or technology investor) could hold two readings simultaneously without internal contradiction, or whether the readings mandate incompatible actions.",
+      "impact": "If readings foreclose one another, the constraint is one reading of a fully-determined kernel whose alternatives are ruled out. If they coexist, the constraint is one reading among live competitors, and the kernel itself is under-determined.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the three readings of the legitimacy kernel are mutually exclusive or coexistent."
+    },
+    {
+      "id": "suppression_source",
+      "question": "Is the measured suppression (0.52) primarily structural (regulatory barriers, interconnection delays, technical standards) or internalized (renewable developers' belief that dispatchability is genuinely necessary)?",
+      "resolution_mechanism": "Post-policy-change observations: if a jurisdiction abandons the reliability-primacy criterion and renewable deployment accelerates, suppression was structural. If developers continue to invest in dispatchability augmentation even after the regulatory requirement is removed, suppression is partly internalized.",
+      "impact": "If structural, the suppression decays when the constraint is removed. If internalized, the suppression persists, suggesting the constraint has embedded itself in how renewable developers think about their technology.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether measured suppression is external enforcement or internalized belief."
+    },
+    {
+      "id": "coal_operator_structural_capture",
+      "question": "Do coal and natural-gas operators benefit from the reliability-primacy frame even though they are excluded from climate-legitimacy narratives?",
+      "resolution_mechanism": "Analysis of dispatch economics and utilization rates for fossil-fuel dispatchable plants before and after the reliability-primacy frame becomes regulatory standard; comparison of retirement rates across jurisdictions with different legitimacy criteria.",
+      "impact": "If fossil operators benefit, the constraint serves an unstated second function (maintaining dispatchable fossil capacity) that contradicts its stated climate purpose. The extraction reading would increase.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fossil-fuel operators indirectly benefit from a constraint that privileges dispatchability."
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 25,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.4
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.75
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.6
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.67
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.5
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.32
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.54
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.5
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.6
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.58
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "technology_legitimacy_kernel__velocity_primacy_reading",
+      "technology_legitimacy_kernel__precautionary_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the contested technology-legitimacy kernel. The kernel asks: what makes a climate technology 'legitimate' for mitigation support? This reading answers: dispatchable, baseload-capable generation ensuring grid stability. Sibling readings provide different answers (velocity deployment, precautionary reversibility) and therefore different ε values, beneficiary sets, and victim sets. Each reading is a separate constraint story with its own structural data. They are linked here because the kernel contest determines which reading applies in practice, and jurisdictions may adopt different readings for the same underlying technology."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "gain_flow": "nuclear_operators",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "technology_legitimacy_kernel__velocity_primacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "technology_legitimacy_kernel__precautionary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dispatchability_primacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "grid_stability_paramount",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "dispatchable_generation_grid_stability",
+    "drift_state": {
+      "moment": "contemporary_renewable_acceleration",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

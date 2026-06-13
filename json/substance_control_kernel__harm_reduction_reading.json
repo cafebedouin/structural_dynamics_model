@@ -1,0 +1,277 @@
+{
+  "header": {
+    "constraint_id": "substance_control_kernel__harm_reduction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "24be4e2a-8eec-4421-9036-f25adf55ff6b"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.48,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.67,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Harm Reduction Model: Substance Use as Health Condition",
+    "topic_domain": "public_health/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_health_institutions",
+      "harm_reduction_providers"
+    ],
+    "victims": [
+      "people_who_use_drugs",
+      "drug_supply_communities"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.31
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The harm reduction reading treats substance use as a health condition requiring pragmatic medical intervention (methadone, buprenorphine, naloxone, sterile equipment) to reduce overdose and disease transmission, independent of whether the user achieves abstinence. Users shift from criminal defendants to medical patients; enforcement moves from possession/use to supply-side trafficking. The state becomes a service provider rather than a punisher. This is ONE reading of a contested kernel: the substance control kernel is framed by three incompatible readings (prohibition, harm reduction, legalization), each grounding legitimacy in a different premise. The harm reduction reading coexists with legalization (both non-criminalize users but differ on supply legality and state paternalism) and coexists with prohibition (both remain active readings in different jurisdictions). This constraint story instantiates ONLY the harm reduction reading; the sibling readings are separate constraint stories linked via network.affects_constraints.",
+    "key_agents": [
+      "people_who_use_drugs: Primary payer (medicalization replaces criminalization but adds paternalistic gatekeeping); secondary beneficiary (access to treatment replaces incarceration risk)",
+      "public_health_institutions: Agenda-setter (control medical framing, define treatment standards, measure success via harm reduction metrics)",
+      "harm_reduction_providers: Beneficiary (institutional funding and legitimacy tied to the medical model; gatekeeping power over treatment)",
+      "law_enforcement_agencies: Payer (lose authority over users, caseload reduction) and secondary agenda-setter (remain responsible for supply-side enforcement)",
+      "drug_supply_communities: Victim (supply remains criminalized while demand is medicalized; disproportionate enforcement burden)",
+      "addiction_medicine_physicians: Beneficiary (gain professional authority, funding, and gatekeeping control)",
+      "criminal_justice_reformers: Beneficiary (decriminalization aligns with broader reform goals but supply criminalization remains)",
+      "analytical_observer: Sees the bifurcated structure (medical demand, criminal supply)"
+    ],
+    "logic_rationale": "Extractiveness is moderate-to-substantial (0.62 endpoint) because the constraint imposes paternalistic medical gatekeeping and identity-locking on users even as it removes criminal penalties. The temporal series shows rising extractiveness in the early interval (0–15 years) as treatment infrastructure builds and gatekeeping is refined, then plateaus as the system matures. Suppression is moderate (0.48 endpoint) and declining over time — the shift from criminal to medical means coercive force (police, incarceration) declines, but internalized medical compliance ('you must take medication to be helped') replaces it. Theater is modest and stable (~0.31) because the harm reduction function is real (overdose prevention, disease control measurably occur), though some enforcement effort defends the supply-side criminalization asymmetry rather than health outcomes. Accessibility_collapse is substantial (0.67) because users face structural difficulty exiting the medicalized role: they are identity-locked ('person in recovery', 'chronic patient') by institutional definition, and the alternative path (return to criminal prosecution) was worse. Resistance is high (0.71) because users, supply communities, libertarian critics, and legalization advocates all mount real opposition to the constraint — it is not naturalized, and every beneficiary (health institutions, providers) must actively defend it.",
+    "directionality_logic": "people_who_use_drugs sit in a high-extraction seat (d near 1.0): they bear the compliance burden, identity-locking, gatekeeping costs. They are also described as beneficiaries (treatment access, reduced overdose risk, no criminal prosecution) — this is genuine dual-position asymmetry: they benefit from treatment and fear criminal prosecution, but they pay the medicalization price. The engine derives d from beneficiary/victim declarations plus exit_options (identity_locked is a high-d signal). public_health_institutions benefit from authority and funding (low d, near beneficiary end). harm_reduction_providers benefit from legitimacy and resource flow (low d). law_enforcement_agencies pay in authority loss but retain supply-side power (moderate d, near 0.5). drug_supply_communities are pure targets (d near 1.0: no benefit, only supply-side criminalization burden). The directionality override is not needed — the structural derivation captures the asymmetry.",
+    "perspectival_gap": "The public_health_institutions seat experiences this as genuine coordination (solving a real public health problem, building medical infrastructure). The people_who_use_drugs seat experiences it as paternalistic extraction (medical authority replaces criminal authority, but gatekeeping persists). The drug_supply_communities seat experiences pure victimhood (criminalization intensified while demand-side moves to medical). The law_enforcement_agencies seat experiences it as loss of jurisdiction and resource, though they retain supply-side authority. These perspectives compute to different directionalities and different effective extraction — this divergence is exactly what the framework exists to capture.",
+    "mandatrophy_analysis": "Harm reduction is not mandatrophic in the classical sense (founding problem still live, constraint still performs function). However, the constraint's bifurcation (medical demand, criminal supply) creates asymmetric function decay: the medical side solves overdose and disease transmission, but the criminal supply side persists structurally, making the constraint incomplete at addressing root causes. The founding problem (overdose, disease, mass incarceration, treatment barriers) is partly solved (users in treatment access help, incarceration drops) but incompletely (supply-side remains criminalized, transit costs rise, low-level dealers face disproportionate enforcement, geographic inequality between harm-reduction and prohibition jurisdictions grows). The constraint's function is live but geographically and structurally bounded.",
+    "kernel_context": "This constraint instantiates the 'harm_reduction_reading' of the 'substance_control_kernel'. The kernel is a contested commitment: what is substance use, structurally? The harm reduction reading answers: substance use is a chronic health condition requiring medical intervention, independent of abstinence. Sibling readings: (1) prohibition_reading: substance use is moral transgression requiring state punishment. (2) legalization_reading: substance use is individual liberty; state intervenes only to prevent third-party harm and capture externality costs. These three readings are structurally incompatible at the root premise level and are each the subject of separate constraint stories. The harm reduction reading COEXISTS with legalization (both remove criminal penalties for users) and COEXISTS with prohibition (both are actively held in different jurisdictions). The kernel contest is not resolved; multiple readings persist in parallel across geographies and institutional contexts."
+  },
+  "omegas": [
+    {
+      "id": "supply_demand_asymmetry_sustainability",
+      "question": "Can a bifurcated system (medicalized demand, criminalized supply) persist indefinitely, or does supply-side criminalization pressure demand-side medicalization toward prohibition regression?",
+      "resolution_mechanism": "Longitudinal policy tracking: do harm reduction jurisdictions shift back toward prohibition when supply-side enforcement costs rise, or do they intensify supply-side measures to defend the medical demand boundary? Jurisdictional comparison: which diverges first — demand-side medicalization or supply-side enforcement stringency?",
+      "impact": "If supply criminalization destabilizes the system, the constraint regresses toward prohibition (becomes snare rather than tangled rope). If supply measures intensify without demand regression, extraction on supply communities rises and the constraint approaches snare classification. If both remain stable, the bifurcation persists as structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the medical/criminal bifurcation is a stable equilibrium or structurally unstable."
+    },
+    {
+      "id": "paternalism_internalization_trajectory",
+      "question": "Is the measured suppression (0.48, declining) genuinely declining, or is coercive paternalism being internalized (users accept medical gatekeeping as legitimate)?",
+      "resolution_mechanism": "Post-treatment suppression trajectory: follow cohorts of users after exiting medical treatment — do they accept medication/monitoring as legitimately necessary, or do they experience it as imposed? Qualitative research with people exiting the system.",
+      "impact": "If internalized, effective suppression is higher than measured (the constraint carries suppression with users even after institutional exit). If rejected, rising resistance should push back on medical gatekeeping, forcing increased suppression_requirement to maintain it. This affects whether the constraint is sustainable or faces growing resistance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structurally declining or being internalied as perceived legitimacy."
+    },
+    {
+      "id": "medical_model_naturalness",
+      "question": "Is the medical model of addiction a genuine natural fact (brain chemistry, neural plasticity, chronic disease process) or a constructed framing that benefits medical institutions?",
+      "resolution_mechanism": "Neuroscience consensus and the existence of competing biological models (social determination, choice architecture, reinforcement learning without pathology). Does the 'disease' model survive empirical challenge, or is it defended for institutional reasons?",
+      "impact": "If genuine natural model, the constraint is coordinating around a real fact. If constructed and beneficiary-defended, the constraint is a false summit — medical framing riding on real public health problems (overdose, disease) but claiming authority via medicalization that is not warranted. This feeds FSM evaluation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the medical model of addiction is natural fact or constructed institutional framing."
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "Is the identity-locking in harm reduction (people defined as 'in recovery', 'chronic patients') structurally necessary for maintaining compliance, or is it a therapeutic boundary that could be loosened?",
+      "resolution_mechanism": "Jurisdictions experimenting with 'recovery-oriented systems of care' that deemphasize illness identity and foregrounding of abstinence and self-efficacy: do outcomes differ (relapse rates, treatment engagement, post-treatment functioning) from identity-locked models?",
+      "impact": "If loosening identity-lock improves outcomes, the constraint's extraction on users can be reduced without sacrificing function. If identity-lock is necessary for compliance, removing it raises extraction on people_who_use_drugs but is aligned with autonomy values.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether identity-locking is functionally necessary or therapeutically optional."
+    },
+    {
+      "id": "sibling_reading_empirical_test",
+      "question": "Which reading (prohibition, harm reduction, legalization) produces the lowest overdose mortality and disease transmission in real-world implementation?",
+      "resolution_mechanism": "Cross-jurisdictional comparative outcomes data: Portugal (decriminalization + treatment), Netherlands (harm reduction + quasi-legal supply tolerance), Switzerland (heroin-assisted treatment), Sweden (strict prohibition + abstinence focus), Canada (decriminalization experiment), Uruguay/Canada (legalization experiment).",
+      "impact": "Empirical superiority of one reading's outcomes does not prove legitimacy (the constraint could be effective at harm reduction but still extractive), but it would falsify claims that prohibition is necessary to prevent overdose or that legalization alone solves problems without medical intervention.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Real-world comparative effectiveness of the three kernel readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_kernel__prohibition_reading",
+      "substance_control_kernel__legalization_reading",
+      "public_health_institutional_authority",
+      "supply_chain_criminalization"
+    ],
+    "dual_formulation_note": "The harm_reduction_reading is one of three structurally incompatible readings of the substance_control_kernel. The sibling readings (prohibition_reading, legalization_reading) are separate constraint stories with different ε values, beneficiary/victim structures, and enforcement mechanisms. The kernel contest itself is the subject of the 'substance_control_kernel__kernel_comparison' meta-constraint story, which analyzes how the three readings compete for institutional adoption. Each reading story is complete in itself; the network links document structural influence and shared root problem."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.75
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "substance_control_kernel__prohibition_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "substance_control_kernel__prohibition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "substance_control_kernel__legalization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "substance_use_is_chronic_health_condition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "harm_reduction_independent_of_abstinence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "substance_use_as_treatable_medical_condition",
+    "drift_state": {
+      "moment": "contemporary_opioid_crisis_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

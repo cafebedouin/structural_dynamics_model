@@ -1,0 +1,227 @@
+{
+  "header": {
+    "constraint_id": "npt_treaty_text__withdrawal_threshold_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_npt_withdrawal_threshold",
+    "story_uid": "8256e7c5-ba53-45b8-8cff-4694da51e89f"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.61,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NPT Article X Withdrawal Threshold: Regime Stability vs. Sovereignty Preservation",
+    "topic_domain": "international/legal/security",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "threshold_states",
+      "nws_regime_stability"
+    ],
+    "victims": [
+      "withdrawal_exercisers",
+      "nnws_crisis_actors"
+    ]
+  },
+  "interval": {
+    "start": 1968,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1968,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2003,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1968,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2003,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1968,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2003,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The NPT's Article X permits withdrawal on 90 days' notice if 'extraordinary events' jeopardize supreme interests. The text is ambiguous: it does not define 'extraordinary' or specify who adjudicates. This reading instantiates the high-threshold interpretation—the NWS-led understanding that withdrawal is only legitimate under extreme, nearly existential circumstances, with full diplomatic justification and exposure to international pressure. This reading benefits threshold states by preserving their exit option's credibility, but extracts from those actually considering or executing withdrawal (North Korea, Iran, potentially Japan/South Korea in crisis). The founding problem (preventing proliferation while preserving sovereignty) is contested: NWS say the problem is live and the regime solves it; low-threshold advocates say the problem is overstated and the regime's extractions are unjustified.",
+    "key_agents": [
+      "nws_establishment: NWS collective, administers and enforces the high-threshold reading; institutional power, no exit option (the constraint is their creation)",
+      "threshold_states: Japan, South Korea, Iran, Brazil; powerful, benefit from the exit option's existence even if never used; constrained exit (regional security dependencies)",
+      "withdrawal_exercisers: North Korea (actual 2003), Iran (post-JCPOA crisis), potential others; organized, highly constrained; bear extraction cost of legitimacy challenges and sanctions",
+      "low_threshold_advocates: non-aligned movement, disarmament NGOs, some NNWS; excluded from authority, politically active but institutionally subordinated",
+      "treaty_depositary_authority: UN Secretary-General; administers notifications but defers to NWS interpretation in practice"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.38 (1968, treaty text ambiguous, NWS interpretation nascent) to 0.68 (2024, high-threshold interpretation enforced through North Korea precedent and Iran case studies). North Korea's 2003 withdrawal announcement (later reversed) crystallized the NWS consensus: withdrawal is legitimate only if justified by overwhelming security crisis and sustained against international pressure. The measurement trajectory tracks the accumulation of enforcement machinery—not written rules but diplomatic practice, sanctions, and legitimacy denial. Theater ratio rises from 0.18 to 0.42: early years the regime emphasized disarmament coordination language; by 2024, a growing share of NPT review conference energy goes to defending the withdrawal interpretation and managing its contradictions with sovereignty rhetoric. Suppression requirement (the active force needed to keep states bound) rises from 0.42 to 0.71: initially the regime's normative appeal and Cold War strategic logic were enough; by 2024, threat of sanctions, alliance pressure, and diplomatic isolation are necessary to hold threshold states in the regime despite their doubts. The shared time grid ensures every metric is authored at every examined point.",
+    "directionality_logic": "NWS and regime beneficiaries (nws_establishment, non_state_security_actors) sit at low directionality (~0.1–0.2): they collect from the regime's operation and face no exit cost. Threshold states sit near symmetric (~0.45–0.55): they benefit from preserving their exit option's credibility but pay the cost of being continuously monitored and constrained; their exit option's value depends on others believing they could use it, which requires the high threshold to credibly exist. Withdrawal exercisers sit at high directionality (~0.8–0.9): they pay extraction (legitimacy costs, sanctions, isolation) if they exercise the nominal right. Crisis actors face identity-locked exit: their security identity is entangled with the regime (they are defined as 'NPT-bound non-nuclear states' in alliance security calculations), so actual exit, though permitted, is identity-shattering. Low-threshold advocates have analytical directionality (~0.5, observing the constraint's operation but neither collecting nor paying directly). The depositary sits near agenda-setter but with reduced actual power (d~0.35): they administer procedure but do not independently judge legitimacy.",
+    "mandatrophy_analysis": "The founding problem—preventing proliferation while respecting sovereignty—has two contradictory resolutions in this reading. The high-threshold interpretation prioritizes regime stability (preventing proliferation) at the cost of making nominal sovereignty commitments (Article X) effectively non-exercisable. This classification as tangled_rope (not snare, not pure rope) depends on whether the coordination benefit (non-proliferation infrastructure) is genuine. If non-proliferation is a real collective action problem (many states face incentives to defect if others do), then the high threshold is the enforcement cost of that coordination, and the constraint is legitimately tangled. If non-proliferation is instead a cover story for NWS domination (the real point is keeping nuclear weapons concentrated in five hands), then the coordination story evaporates and the constraint reclassifies as snare. The measurement trajectory and seat-divergence analysis do not resolve this—they document the empirical operation. The resolution hinges on whether the low-threshold advocates' critique is right: is the NPT coordination actually solving a live proliferation problem, or is it an extraction mechanism dressed as coordination? This ambiguity is the constitutive feature of the constraint.",
+    "perspectival_gap": "From the NWS seat, this is successful coordination: the regime has prevented dozens of potential nuclear states from acquiring weapons, reduced the number of nuclear states from a projected 20+ to 9, and created inspection infrastructure (IAEA). The high threshold is the enforcement cost of this success. From the threshold-state seat, this is asymmetric negotiation: we accept constraints on our nuclear development in exchange for NWS disarmament commitments (Article VI) that have never materialized, and the exit option's credibility is our only leverage—the high threshold is the extraction price for that leverage. From the low-threshold advocate seat, this is false coordination masking NWS hegemony: the regime extracts developing states' non-proliferation in exchange for nominal exit rights that are practically unexercisable. The engine should compute these divergences from the structural data. The constraint's claimed type is tangled_rope, but from some seats it may compute as snare (extractive, heavily enforcement-dependent, alternative suppressed). This divergence is what the corpus exists to measure.",
+    "kernel_context": "This constraint instantiates the withdrawal_threshold_reading of the contested kernel npt_treaty_text. The kernel is the NPT's Article X language (the fixed text permitting withdrawal under 'extraordinary events'). Two sibling readings interpret this same text: nws_reading (disarmament as aspiration, non-proliferation as binding constraint) and nnws_reading (disarmament as binding obligation, non-proliferation as conditional). This reading focuses on Article X's ambiguity about withdrawal thresholds and instantiates the high-threshold interpretation (regime stability priority over sovereignty preservation). Sibling reading nws_reading emphasizes the binding character of non-proliferation constraints under Article II; sibling reading nnws_reading emphasizes disarmament obligations under Article VI. The withdrawal_threshold_reading does not directly foreclose either sibling—they are readings of different articles. However, this reading influences both: a high-threshold Article X reading makes non-proliferation (nws_reading) easier to enforce and disarmament obligations (nnws_reading) easier to defer, because states are locked into the regime. The three readings coexist as competing institutional positions: NWS-led interpretation favors withdrawal_threshold_reading + nws_reading; non-aligned and threshold-state coalitions advance nnws_reading and low-threshold Article X interpretation."
+  },
+  "omegas": [
+    {
+      "id": "coordination_vs_hegemony_reading",
+      "question": "Is the NPT non-proliferation regime a genuine solution to a collective action problem (states have incentives to defect if others do, so coordination is necessary), or is it hegemonic NWS control dressed as coordination?",
+      "resolution_mechanism": "Historical counterfactual analysis: without the NPT and high-threshold Article X, would proliferation have accelerated dramatically, or would regional security dynamics produce roughly the same five-state nuclear landscape? Model-based analysis of incentive structures for states to pursue nuclear weapons absent the regime.",
+      "impact": "If coordination is genuine, the tangled_rope classification holds: extraction (the high threshold, the cost to exit) is the necessary enforcement machinery for genuine collective benefit (non-proliferation). If hegemonic, the classification reclassifies to snare: the coordination story is cover; persistence depends entirely on coercion and enforcement; alternatives (easy exit, regional nuclear deterrence, open proliferation) are suppressed.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the NPT solves a real collective action problem or is NWS-led extraction."
+    },
+    {
+      "id": "extraordinary_events_definition_ambiguity",
+      "question": "Does the treaty text's 'extraordinary events' clause include regional security crises (conventional invasion, blockade, existential ally abandonment), or only global catastrophic scenarios (superpower war, nuclear exchange, planetary threat)?",
+      "resolution_mechanism": "Formal treaty interpretation per Vienna Convention on the Law of Treaties (object and purpose, negotiating history, subsequent practice). Comparative case analysis: which state withdrawals or withdrawal threats have the international community recognized as meeting 'extraordinary events'? (North Korea's 2003 claim was rejected; Iran's post-JCPOA stance was disputed.)",
+      "impact": "A narrow definition (only global catastrophe) means threshold states in regional crises have no legitimate exit, making the constraint more extractive (d increases for crisis actors). A broad definition (regional security crisis counts) reduces extraction but weakens regime stability. The measurement metrics would shift: lower suppression requirement under broad definition (fewer states need to be coerced), higher extraction (more states claim extraordinary events simultaneously).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ambiguity in what conditions justify Article X withdrawal."
+    },
+    {
+      "id": "identity_lock_mechanism_interpersonal",
+      "question": "For threshold states (especially Japan, South Korea) that self-identify as 'responsible nuclear-threshold states' respecting international law, is the high-threshold interpretation structurally internalized (they have fused their identity with the regime) or structurally imposed (external sanctions and alliance pressure hold them in)?",
+      "resolution_mechanism": "Post-exit scenario analysis: if a threshold state (say, Japan post-US withdrawal from East Asia) chose to withdraw and pursue nuclear weapons openly, how much of the suppressive force would persist from internal commitment vs. external pressure? Survey data from security elites in threshold states on whether they view Article X as a negotiable constraint or an internalized norm.",
+      "impact": "If identity-locked (internalized), the suppression metric understates the constraint's true hold—the state carries the suppression with them even if the regime changes. The constraint's persistence depends partly on identity fusion, making exit more costly than formal measures show. If structurally imposed, suppression is accurate as measured; exit is easier if the external regime weakens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether threshold-state commitment to the NPT is internalized identity or external coercion."
+    },
+    {
+      "id": "north_korea_precedent_lock_in",
+      "question": "Did North Korea's 2003 withdrawal announcement lock in the high-threshold interpretation permanently, or was the high threshold always the de facto practice and North Korea's announcement merely surfaced it?",
+      "resolution_mechanism": "Archival analysis of pre-2003 NPT review conferences and treaty depositary records: what was the stated interpretation of Article X before North Korea announced? Did the interpretation change after 2003, or did enforcement intensity increase while the interpretation remained stable?",
+      "impact": "If the 2003 precedent created the high-threshold interpretation, then the constraint is somewhat contingent—a different NWS response (acknowledging North Korea's right to withdraw) would have produced a low-threshold regime. If the high threshold was always the practice, 2003 merely hardened what was already enforceable, and the constraint has deeper institutional roots. This affects whether the high threshold is an artifact of recent great-power fragmentation or a structural feature of NWS-led regimes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether North Korea's 2003 withdrawal announcement created or merely surfaced the high-threshold interpretation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "npt_treaty_text__nws_reading",
+      "npt_treaty_text__nnws_reading"
+    ],
+    "dual_formulation_note": "The NPT's Article X withdrawal threshold is one contestable element of the broader NPT kernel. This reading (withdrawal_threshold_reading: high threshold, regime stability priority) coexists with nws_reading (non-proliferation as binding, disarmament as aspirational) and nnws_reading (disarmament as binding, non-proliferation as conditional). All three readings instantiate different structural constraints from the same treaty text. This reading influences both siblings: a high-threshold Article X makes non-proliferation easier to enforce (supports nws_reading) and disarmament obligations easier to defer (undermines nnws_reading). The three stories should be generated separately per ε-invariance; this constraint story models Article X withdrawal dynamics specifically."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "article_x_ambiguous_extraordinary_events",
+    "drift_state": {
+      "moment": "north_korea_2003_through_2024",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "npt_treaty_text__nws_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "npt_treaty_text__nnws_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "article_x_extraordinariness_requires_existential_justification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "regime_stability_priority_over_individual_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

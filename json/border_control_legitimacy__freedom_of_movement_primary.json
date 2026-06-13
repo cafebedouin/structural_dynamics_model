@@ -1,0 +1,271 @@
+{
+  "header": {
+    "constraint_id": "border_control_legitimacy__freedom_of_movement_primary",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "821a5ee5-bbbc-427d-8626-e869b7457e08"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.87,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.41,
+    "resistance": 0.78,
+    "claimed_type": "snare",
+    "human_readable": "Border Closure as Violation of Freedom of Movement",
+    "topic_domain": "political_philosophy/international_law/migration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "displaced_persons_seeking_work",
+      "asylum_seekers_fleeing_persecution",
+      "economic_migrants",
+      "stateless_individuals",
+      "separated_families"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.83
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.86
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.87
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.62
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_contest_axiom_foreclosure",
+      "question": "Can a single coherent legal and political framework hold both the freedom-of-movement-primary axiom (freedom of movement is a fundamental human right) AND the sovereignty-primary axiom (border closure is constitutive of statehood) without logical contradiction?",
+      "resolution_mechanism": "Comparative constitutional law analysis: examine whether any state has successfully grounded legitimacy in both freedom of movement AND absolute border closure authority in the same constitutional order. Examine whether the axioms must be held by different factions (foreclosure across factions) or whether they truly coexist within one framework (coexistence acknowledged as internal tension).",
+      "impact": "If the axioms truly foreclose each other, the relation shifts from coexists_with to forecloses, and the constraint should be reformulated as a pure negation of sovereignty_primary. If they coexist in tension, the current coexists_with relation stands but requires higher confidence in the theoretical distinction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the two foundational axioms of competing kernel readings logically foreclose or coexist."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.87) structural (legal barriers, enforcement machinery, impossibility of exit) or internalized (migrants have internalized the belief that borders are legitimate and unchangeable)?",
+      "resolution_mechanism": "Ethnographic study of displaced populations in border regions and diaspora contexts: track whether suppression persists after exposure to alternative framings (human rights arguments, evidence of successful movements of people). If suppression is partly internalized, it should decay when the frame breaks; if purely structural, it persists despite frame change.",
+      "impact": "If suppression is substantially internalized, the constraint's effective extraction is higher than the structural measure suggests — the payer carries suppression with them and may not recognize themselves as payers. This would support deeper reformulation of the constraint from snare to entrenched psychological capture. If purely structural, the high suppression reflects law and enforcement architecture only, and legal change alone could dissolve it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Suppression mechanism: structural (law/enforcement) vs. internalized (belief internalization)."
+    },
+    {
+      "id": "fundamental_right_vs_policy_preference",
+      "question": "Is the freedom-of-movement axiom grounded in a deontological human right (people have inherent dignity that entails movement) or in instrumental policy preference (movement produces better outcomes)?",
+      "resolution_mechanism": "Philosophical argumentation and precedent analysis: examine the grounding structure of freedom-of-movement claims in human rights documents (UDHR, ICCPR, regional conventions). Determine whether the grounding is deontological (inherent right) or instrumental (serves flourishing). This affects whether challenges to the axiom's empirical evidence can refute it.",
+      "impact": "Deontological grounding is foreclosed-resistant: empirical arguments (e.g., security concerns, welfare distribution problems) cannot refute an inherent right claim. Instrumental grounding is vulnerable to empirical refutation: if evidence shows that open borders produce measurable harms exceeding benefits, the axiom weakens. Clarifying the grounding type informs which evidence matters for the kernel contest.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Epistemic grounding of the freedom-of-movement axiom."
+    },
+    {
+      "id": "theater_ratio_performance_vs_enforcement",
+      "question": "Does the rising theater_ratio (0.48 to 0.62 over the interval) indicate increased performative justification (states rhetorically defending borders while enforcement capacity remains stable) or increased performative enforcement (states performing closure through theater while actual exclusion weakens)?",
+      "resolution_mechanism": "Time-series analysis of state border rhetoric vs. enforcement capacity: track political speech justifying borders, count actual deportations/detention, measure border crossing rates, examine enforcement budget. Determine whether rhetoric is compensating for erosion of state capacity or whether both rhetoric and capacity are rising together.",
+      "impact": "If performance compensates for eroding capacity, the theater_ratio rise indicates the constraint is becoming piton-like (maintained by theater, not by structural effectiveness). If both rhetoric and capacity rise, the theater increase reflects higher stakes and amplified legitimacy struggle, keeping the snare classification. The piton possibility would shift prognosis and suggest the constraint is more vulnerable to collapse than current metrics suggest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Interpretation of rising theater_ratio: rhetorical compensation vs. amplified enforcement."
+    },
+    {
+      "id": "committer_kernel_contest_readings",
+      "question": "This constraint is one reading (freedom_of_movement_primary) of the kernel border_control_legitimacy. The sibling readings (sovereignty_primary and jurisdictional_sovereignty) represent competing framings of state authority and its legitimacy. What is the structural nature of the contest?",
+      "resolution_mechanism": "Genealogical and discourse analysis: trace the historical development of border control doctrine in international law, state practice, and human rights law. Identify the moments where each reading emerged as a coherent position and document the competing authority structures grounding each (state sovereignty doctrine vs. human rights universalism vs. jurisdictional balancing). Map where each reading is institutionalized (which states, which courts, which international bodies).",
+      "impact": "This omega documents the kernel contest itself as an irreducible structural fact about this constraint. Clarifying the contest structure informs which evidence and arguments pertain to which reading, prevents conflation of readings, and grounds the cs_structure.reading_relations declarations. The contest is not a flaw in the analysis; it is the phenomenon the constraint captures.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The kernel contest structure: three readings of border control legitimacy with incommensurable authority grounds."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint captures the freedom-of-movement-primary reading of the contested border_control_legitimacy kernel: the claim that freedom of movement is a fundamental human right and that territorial sovereignty does NOT entail absolute border closure authority. Under this reading, state capacity to exclude non-citizens is delegitimized. Displaced persons, asylum seekers, economic migrants, and stateless individuals are identified as victims trapped by border enforcement machinery. The constraint appears as a snare from this reading's perspective: borders extract exclusion from movement-seeking populations through legal prohibition, enforcement, and legitimized state violence, with no genuine coordination function justifying the extraction. The measurement series track the constraint's intensification over 50 time units as enforcement machinery hardens (suppression rising) and states increase rhetorical justification (theater rising) while the core extraction (denial of movement) plateaus at high levels. This reading structurally contests sovereignty_primary (which grounds legitimacy in absolute state discretion) and coexists with jurisdictional_sovereignty (which attempts to balance state authority with protection obligations).",
+    "kernel_context": "This constraint is ONE READING of the contested kernel border_control_legitimacy. The reading instantiated here is freedom_of_movement_primary: freedom of movement is a fundamental human right; territorial sovereignty does not entail border closure authority. Sibling readings: (1) sovereignty_primary: State territorial sovereignty entails absolute discretion to exclude non-citizens; border control is constitutive of statehood itself. (2) jurisdictional_sovereignty: Sovereignty is jurisdictional authority (power to regulate rights/obligations within territory) but does not necessarily include border closure; legitimacy requires balancing protection obligations with labor needs and public consent. The structural delta: under freedom_of_movement_primary, displaced persons/workers enter the victim set; enforcement apparatus is delegitimized; state authority is limited to jurisdictional regulation (who gets what rights once present) rather than exclusion. The contest is grounded in fundamentally different conceptions of human rights universalism (freedom_of_movement_primary), state sovereignty discretion (sovereignty_primary), and jurisdictional balancing (jurisdictional_sovereignty). No single framework can hold all three simultaneously without internal contradiction, but they coexist as live positions held by different international actors (human rights bodies hold freedom_of_movement_primary; state governments typically hold sovereignty_primary; some international courts and constitutional frameworks attempt jurisdictional_sovereignty as a middle ground). This constraint reports what the world looks like from the freedom_of_movement_primary reading only.",
+    "key_agents": [
+      "territorial_state_apparatus (institutional, agenda_setter): Administers border closure; justifies it as necessary to sovereignty and security; maintains enforcement machinery through law, detention, deportation.",
+      "displaced_persons_seeking_work (powerless, payer, trapped): Seek employment but face absolute legal prohibition; bear extraction through exclusion and immobility.",
+      "asylum_seekers_fleeing_persecution (powerless, payer, identity_locked): Flee violence but face borders; locked in their asylum-seeking identity by the persecution they fled; extraction is risked survival.",
+      "economic_migrants (powerless, payer, trapped): Seek wage improvements but are legally prohibited from crossing to higher-wage labor markets; extraction is prevented productivity.",
+      "stateless_individuals (powerless, payer, excluded, trapped): Possess no citizenship; global borders trap them in legal void with no rights anywhere; they are excluded from border-setting conversations by definition.",
+      "separated_families (powerless, payer, identity_locked): Divided by borders; reunion requires state permission; identity as family members overridden by non-citizen status.",
+      "international_human_rights_bodies (institutional, observer, analytical): Produce normative arguments that freedom of movement is fundamental; hold the freedom_of_movement_primary reading; minimal enforcement capacity.",
+      "national_security_advocates (institutional, excluded, analytical): Argue border control is necessary for security; structurally excluded from freedom_of_movement_primary framing; would dispute the axiom itself."
+    ],
+    "logic_rationale": "Extractiveness is high (0.81 at interval end) because the constraint denies displaced persons access to labor markets, family, and safety without state permission—the extraction is fundamental, not marginal. Suppression is higher still (0.87) because the constraint's persistence depends on active enforcement: legal frameworks, detention, deportation, militarized borders. Alternatives (illegal border crossing, visa overstay, family separation) exist but are dangerous and legally prohibited, leaving no safe exit. Theater_ratio is elevated (0.62) because states increasingly justify borders through security narratives and economic arguments, which this reading frames as cover stories for exclusion—the performance is expanding as international challenge to border legitimacy intensifies. Accessibility_collapse is moderate-low (0.41) because alternatives to borders remain conceptually and organizationally salient (labor mobility programs, refugee resettlement, open-border experiments); they are legally suppressed, not intellectually suppressed. Resistance is high (0.78) because asylum-seeking, migrant, and human rights communities actively contest border legitimacy; this reading amplifies that resistance by framing border closure as rights violation rather than policy choice. The measurement series show extraction plateauing once enforced (rising sharply 0-24, then flat 24-50), suppression continuously intensifying (rising throughout, as enforcement machinery is hardened in response to migration pressure), and theater rising (states investing in legitimacy rhetoric as their authority is challenged). This profile is consistent with snare: genuine extraction for identified victims, active enforcement to sustain it, increasing rhetorical performance to defend legitimacy.",
+    "perspectival_gap": "Seat divergence is fundamental: from the territorial state apparatus's position, border control is a coordination function (organizing who belongs, who may access resources, protecting citizens). From the displaced person's position, the same structure operates as extractive snare (denied movement, denied labor, denied family). The state sees a functional ordering; the payer sees oppression. The engine computes this divergence from structural data: the state sits at d~0.0 (benefits from control, organized power, analytical exit); the displaced person sits at d~1.0 (targeted for extraction, powerless, trapped or identity-locked exit). These are not two perspectives on one truth; they are incommensurable positions in a contested kernel. The state's position is coded in sovereignty_primary; this position is coded in freedom_of_movement_primary. The divergence is not a gap to be bridged—it is the phenomenon itself.",
+    "directionality_logic": "Territorial state apparatus: d near 0.0 (full beneficiary). The state controls borders, extracts compliance, and uses closure to organize its territory. It has institutional power, unlimited time horizon (generational permanence of the state), and analytical exit (the state can redraw borders conceptually; it is not subject to the constraint it administers). Benefits flow to the state in the form of control, legitimacy claims, and resource prioritization for citizens. Displaced persons: d = 1.0 (full targets). They are explicitly identified as victims in base_properties.victims. They bear extraction through prohibition, enforcement, and consequences (deportation, family separation, forced immobility). Power is powerless; exit options are trapped or identity_locked (asylum seekers cannot exit their asylum-seeking identity; economic migrants cannot exit their labor-seeking identity). The constraint is specifically designed to target them. Asylum seekers specifically: d = 1.0 + identity_locked multiplier (unable to exit their persecution status, doubly bound). Their very identity (fleeing person, persecution victim) is what makes them migration-vulnerable; they cannot un-flee. Stateless individuals: d = 1.0 + global scope amplification (every state closes borders to them; there is no alternative jurisdiction). They are trapped by the logic of the state system itself—each state closure reinforces their statelessness. No directionality overrides are needed; the structural data derives the true d values cleanly.",
+    "mandatrophy_analysis": "Mandatrophy resolution (founding_problem_status x disappearance_verdict mismatch): Under sovereignty_primary, the founding problem is 'states need border closure for security and social cohesion' and that problem is asserted as live. Under freedom_of_movement_primary, the founding problem is reframed as 'human beings lack equal access to opportunity and safety due to territorial exclusion' and that problem is asserted as contested (human rights bodies say it is live; states say it is not live). The disappearance_verdict is world_rearranges (borders are not natural law; if they vanished, states would be forced to compete via rights/economics). The mismatch: sovereignty_primary asserts founding_problem_status=live but under this reading that problem (state security necessity) is itself contested, not inherent. Freedom_of_movement_primary inverts the problem and asserts status=contested, reflecting genuine disagreement. This constraint does NOT show mandatrophy (the constraint persisting past the death of its founding problem) because the founding problem is explicitly contested—states claim it remains live for security reasons; human rights frameworks deny it. The constraint persists because it is actively defended by states with institutional power, not because anyone has forgotten why it was built. Mandatrophy would only apply if states had abandoned the security justification while maintaining the closure machinery out of inertia; here the justification is actively reasserted."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "border_control_legitimacy__sovereignty_primary",
+      "border_control_legitimacy__jurisdictional_sovereignty"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the border_control_legitimacy kernel. It asserts that freedom of movement is a fundamental human right and that territorial sovereignty does NOT entail border closure authority. Sibling readings instantiate alternative authority grounds: sovereignty_primary grounds legitimacy in state discretion; jurisdictional_sovereignty attempts to balance state authority with protection obligations. The three readings are linked via network.affects_constraints and coexist as live positions in international law and political philosophy. Each reading instantiates a different ε_value and victim/beneficiary structure. Collectively, the three constraints map the border_control_legitimacy kernel's contested structure."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "diffuse_epistemic",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "border_control_legitimacy__sovereignty_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "border_control_legitimacy__jurisdictional_sovereignty",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "freedom_of_movement_fundamental_human_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "territorial_sovereignty_does_not_entail_closure_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "universal_human_rights_framework",
+    "drift_state": {
+      "moment": "contemporary_border_enforcement_intensification",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "border_control_legitimacy__sovereignty_primary",
+      "border_control_legitimacy__jurisdictional_sovereignty"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

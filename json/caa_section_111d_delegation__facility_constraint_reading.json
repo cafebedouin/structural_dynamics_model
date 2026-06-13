@@ -1,0 +1,249 @@
+{
+  "header": {
+    "constraint_id": "caa_section_111d_delegation__facility_constraint_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_caa_section_111d_delegation__facility_constraint_reading",
+    "story_uid": "3bf8bdfe-44f3-4944-93b9-3dd0c2d99200"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "CAA Section 111(d) 'Best System' — Facility-Level Constraint Reading",
+    "topic_domain": "administrative_law/environmental_regulation/constitutional_interpretation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "fossil_fuel_operators",
+      "coal_plant_owners",
+      "state_energy_authorities"
+    ],
+    "victims": [
+      "climate_policy_advocates",
+      "renewable_energy_developers",
+      "future_generations_climate_exposure"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Section 111(d) of the Clean Air Act directs EPA to set emission standards for existing sources based on the 'best system of emission reduction' (BSER). This constraint story instantiates ONE READING of a contested constitutional kernel: the facility-constraint reading holds that 'best system' is limited to measures implementable at individual plants — heat-rate improvements, post-combustion carbon capture, efficiency upgrades — NOT generation-shifting, coal retirement mandates, or wholesale market restructuring. This reading protects fossil fuel operators from forced-exit mandates, preserves state energy-mix authority, and creates a regulatory ceiling that climate advocates experience as an extraction (they lose access to the most direct federal decarbonization tool). The sibling reading (systemic_transformation_reading) claims the statute authorizes grid-wide transformation, including renewable substitution and coal retirement. These readings are NOT observables of the same constraint; they are structurally distinct constraints arising from competing interpretations of the same authorizing text (the kernel). This story generates the facility-constraint reading only.",
+    "key_agents": [
+      "fossil_fuel_operators: benefit from regulatory ceiling that forbids generation-shifting mandates; organized, powerful, near-beneficiary directionality",
+      "coal_plant_owners: benefit from protection against forced retirement; regional, organized, captured upside from regulatory constraint",
+      "state_energy_authorities: benefit from retained control over energy-mix decisions; institutional, autonomous, agenda-setters under the constraint",
+      "climate_policy_advocates: payer seat; excluded from direct EPA-mandated decarbonization pathway; organized, powerful enough to litigate but structurally constrained",
+      "environmental_justice_communities: victim seat; trapped co-location with plants; powerless; bear local costs of continued coal operation",
+      "epa_enforcement_seat: analytical observer; interprets the statute; authority cabined to facility-level measures"
+    ],
+    "logic_rationale": "Extractiveness at 0.68 reflects the asymmetry: fossil operators benefit from a regulatory ceiling that climate advocates experience as foreclosure. The ceiling is sustained by active enforcement (EPA does not issue generation-shifting rules; litigation enforces the boundary) — hence suppression at 0.72. Theater ratio at 0.41 indicates the facility-level compliance narrative is substantial but increasingly performative: operators implement efficiency measures and announce carbon-reduction commitments, but the aggregate effect is slow decarbonization relative to climate science demands. The trajectory over the interval shows extractiveness rising modestly as fossil operators adapt to modest facility-level standards while maintaining market advantage; theater rises as the gap widens between facility-level compliance and climate-scale need. Accessibility collapse at 0.62 reflects that alternatives (EPA generation-shifting, renewable mandate) are foreclosed by this reading; climate advocates can litigate or seek state policies, but the federal pathway is closed — not quite a natural law (collapse could be reversed by legislative amendment or a sibling-reading victory), but substantially constrained.",
+    "perspectival_gap": "From the fossil operator and state energy authority seats, this reading is genuine coordination: EPA sets clear facility-level standards, states choose how to meet them, markets respond. From the climate advocate and EJ community seats, the same structure is enforced extraction: a regulatory ceiling that protects incumbent operators and forecloses rapid decarbonization. The engine computes different directionality and classification for each seat based on whether they benefit from or bear costs from the facility constraint. The agenda_setter/beneficiary vs. payer asymmetry drives the perspectival split.",
+    "directionality_logic": "Fossil operators (powerful, organized, beneficiary) sit near d=0.1–0.2: they benefit directly from the constraint and face low exit friction (can operate efficiently under facility-level standards). State energy authorities (institutional, beneficiary/agenda_setter) sit near d=0.15–0.25: they wield the constraint and benefit from state autonomy, with mobile exit options (can shift energy mix if political pressure grows). Climate advocates (organized, payer) sit near d=0.75–0.85: they bear the cost of regulatory foreclosure, have constrained exit (can litigate, lobby, seek state change, but cannot unilaterally bypass the constraint), and lack power parity with operators. EJ communities (powerless, trapped, victim) sit near d=0.9–1.0: fully targeted by continued plant operation, trapped in location, structurally excluded from remedy.",
+    "mandatrophy_analysis": "The founding_problem (does Section 111(d) authorize generation-shifting?) was live at the statute's enactment (1970); the facility-constraint reading treats it as definitively resolved by the West Virginia v. EPA decision (2022), which affirmed that EPA lacks that authority. However, climate advocates and the dissent argue the founding problem remains contested — the statute's text is ambiguous and the policy case for EPA authority is live. The measurement series shows extractiveness rising over the interval: this reflects the constraint hardening as fossil operators adjust their operations to the new regulatory ceiling and climate advocates exhaust litigation avenues without reversing the ruling. Theater rises because facility-level compliance becomes increasingly theatrical (the plants achieve modest efficiency while the broader energy system locks in fossil dependency). This trajectory is consistent with mandatrophy — the constraint's original coordination function (EPA/state coordination on emission standards) is superseded by a new extraction function (protection of fossil capital and regulatory foreclosure of decarbonization). The constraint is NOT defunct (it actively forecloses alternatives), but its founding problem has been declaratively 'solved' by judicial authority while the parties dispute whether the solution is correct.",
+    "kernel_context": "This constraint instantiates the facility_constraint_reading of kernel_caa_section_111d_delegation. The contested kernel is the text of Section 111(d) of the Clean Air Act: does 'best system of emission reduction' authorize EPA to mandate generation-shifting and coal retirement, or is it limited to facility-level measures? The facility-constraint reading holds the latter. The sibling reading (systemic_transformation_reading) holds the former. These are not two ways of measuring the same constraint — they are structurally distinct constraints with different beneficiaries, victims, and extraction profiles. The readings coexist as competing interpretations in current law (the Supreme Court has sided with the facility-constraint reading in West Virginia v. EPA, but the dissent and statutory text remain contested). This story generates only the facility-constraint reading; the sibling reading is a separate constraint story."
+  },
+  "omegas": [
+    {
+      "id": "statutory_text_interpretation_indeterminacy",
+      "question": "Does the text 'best system of emission reduction' in Section 111(d) more naturally read as facility-level-only or as system-wide emission reduction?",
+      "resolution_mechanism": "Canonical statutory interpretation (textualism, intentionalism, purposivism produce different readings); legislative history review; comparable statutory language in other environmental statutes; academic statutory construction scholarship from neutral sources outside the benefiting parties.",
+      "impact": "If the text more naturally reads system-wide, the facility-constraint reading is a restrictive interpretation that benefits incumbents; if facility-level-only is the natural reading, the constraint reflects statutory design. This determines whether the constraint is a judicial artifact favoring fossil operators or a faithful implementation of congressional intent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the statutory kernel admits the facility-constraint reading as a reasonable (vs. forced or artificial) interpretation."
+    },
+    {
+      "id": "climate_necessity_vs_statutory_boundaries",
+      "question": "If climate science establishes that facility-level measures are insufficient to prevent catastrophic atmospheric carbon accumulation, does that scientific fact alter the legal boundary between EPA and state authority?",
+      "resolution_mechanism": "Legislative amendment to Section 111(d) explicitly authorizing EPA generation-shifting; judicial reversal of West Virginia v. EPA via new Supreme Court composition or case law evolution; expert testimony on climate tipping points and their relationship to feasible decarbonization pathways from climate science organizations independent of policy advocates.",
+      "impact": "Scientific evidence of insufficiency would create a gap between the constraint's foreclosure effect and climate necessity, motivating legislative remedy or new judicial interpretation. The constraint's persistence despite such evidence would establish it as a form of democratic foreclosure (the regulatory ceiling persists despite emergent need). This feeds the mandatrophy analysis and the false-summit question: is the facility constraint a discovered legal boundary or a constructed protection of fossil assets dressed as statutory interpretation?",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether climate science necessity can override the legal/political constraint's boundaries."
+    },
+    {
+      "id": "suppression_internalization_vs_structural",
+      "question": "Is the climate advocate and EJ community suppression primarily structural (litigation costs, political imbalance, legal foreclosure) or internalized (belief that EPA lacks authority, acceptance of federalism doctrine)?",
+      "resolution_mechanism": "Survey of climate advocate and EJ community actors: if suppression persists after the facility-constraint reading is reversed (via legislative amendment or judicial overruling), that persistence indicates internalization; if suppression ceases immediately upon legal change, the suppression was primarily structural. Post-reversal trajectory of advocacy aggressiveness and legislative-reform energy.",
+      "impact": "Structural suppression indicates the constraint operates via external barriers (the legal rule itself); internalized suppression indicates the constraint's subjects have absorbed the boundary as legitimate, creating path dependence even if the boundary changes. High internalization would indicate the constraint has done identity work on the advocacy community (they have become 'EPA-authority-limited' rather than 'climate-first'), which persists even when the constraint is formally reversed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism of suppression operation in climate-policy advocacy."
+    },
+    {
+      "id": "false_summit_kernel_reading",
+      "question": "Is the facility-constraint reading itself a false summit — a reading that serves fossil operator interests, dressed as statutory interpretation, maintained through beneficiary institutional support and interpreted by justices with ideological commitments?",
+      "resolution_mechanism": "Critical statutory interpretation scholarship from law schools independent of fossil-industry funding; comparison of how the same statutory language was interpreted in prior EPA regulations before the political landscape changed; analysis of the Supreme Court's voting bloc composition and prior decisions on regulatory authority in other statutes; examination of amicus curiae briefs and their funding sources in West Virginia v. EPA.",
+      "impact": "If the reading is a false summit (natural law dressed as interpretation, benefiting fossil operators), the constraint's claimed type (tangled_rope coordination) would reclassify toward snare (pure extraction). The false-summit signature would fire because a commitment-system reading produces a constraint that is formalized/fixed_text (Section 111(d)), grounds itself in lineage/expertise (statutory interpretation, Supreme Court authority), but primarily serves fossil operator extraction rather than genuine coordination. Declaring beneficiaries (fossil operators) on a constraint claiming to be statutory interpretation would trigger FSM evaluation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the facility-constraint reading is a natural legal boundary or a constructed reading that serves fossil operator interests."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "caa_section_111d_delegation__systemic_transformation_reading",
+      "coal_plant_economic_viability_constraint",
+      "state_renewable_portfolio_standard_constraint"
+    ],
+    "dual_formulation_note": "This constraint and caa_section_111d_delegation__systemic_transformation_reading are competing interpretations of the same statutory kernel (Section 111(d) 'best system of emission reduction'). They are NOT two measurements of one constraint; they are structurally distinct constraints with different beneficiaries, victims, and extraction profiles. The facility-constraint reading benefits fossil operators and coal plant owners by limiting EPA's authority; the systemic-transformation reading would benefit climate advocates and renewable developers by expanding EPA's authority. Only ONE reading prevails in any given period of law; when the facility-constraint reading is dominant (as under West Virginia v. EPA), the systemic reading remains a live dispute and a separate constraint. The two readings form a kernel family: all members link via network.affects_constraints. The upstream story (facility_constraint_reading) currently influences the downstream story (systemic_transformation_reading) because the facility reading is the legally dominant interpretation; if the systemic reading were adopted (via legislative amendment or judicial reversal), the directionality would invert."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "caa_section_111d_delegation__systemic_transformation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "facility_level_authority_limit",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_energy_mix_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "enumerated_federal_powers_federalism_doctrine",
+    "drift_state": {
+      "moment": "contemporary_climate_crisis_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "caa_section_111d_delegation__systemic_transformation_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

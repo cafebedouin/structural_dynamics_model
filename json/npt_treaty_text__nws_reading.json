@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "npt_treaty_text__nws_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "dc83f332-d94c-4060-bcc2-7314309b4386"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.71,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NPT Non-Proliferation Binding on NNWS, Disarmament Aspirational (NWS Reading)",
+    "topic_domain": "international_law/arms_control",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_weapons_states"
+    ],
+    "victims": [
+      "non_nuclear_weapons_states",
+      "non_aligned_movement"
+    ]
+  },
+  "interval": {
+    "start": 1968,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1968,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1968,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1968,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Non-Proliferation Treaty (NPT), signed 1968, is contested at the interpretive level. The kernel is Article VI, which commits signatory states to 'pursue negotiations in good faith on effective measures relating to cessation of the nuclear arms race at an early date and to nuclear disarmament.' The NWS reading—instantiated here—interprets this language as an aspirational goal without enforcement mechanism or binding timeline. Non-proliferation (Article II, preventing NNWS from acquiring weapons) is treated as a binding, verifiable obligation. Disarmament (Article VI) is treated as a long-term aspiration contingent on NWS consensus, which is unobtainable. This interpretive frame benefits NWS by preserving their arsenals indefinitely while concentrating verification authority and transparency obligations on NNWS. The NNWS/NAM reading (a sibling constraint, separate JSON) interprets Article VI as binding and views non-proliferation as conditional on NWS compliance. The withdrawal_threshold_reading (third sibling) contests whether Article X permits easy exit or requires regime stability. This constraint story generates ONLY the NWS reading, treating it as a structurally coherent claim with its own ε, beneficiary/victim structure, and interpretive commitments.",
+    "key_agents": [
+      "nuclear_weapons_states (agenda setter + beneficiary; institutional power; arbitrage exit): interpret disarmament as aspirational, control IAEA budgets and treaty interpretation",
+      "non_nuclear_weapons_states (payer; organized power; constrained exit): submit to inspections, forgo weapons development, receive conditional security guarantees",
+      "IAEA secretariat (agenda setter; institutional power; constrained exit): administers verification focused on horizontal proliferation, leaves vertical arsenals outside scope",
+      "non_aligned movement (payer + excluded; organized power; identity-locked exit): advocates for binding disarmament but structurally sidelined from interpretation",
+      "International Court of Justice (observer; institutional power; analytical exit): has ruled Article VI carries legal weight, but ICJ opinions do not bind treaty interpretation"
+    ],
+    "logic_rationale": "Base extractiveness is high (0.78) because the constraint extracts asymmetric verification and transparency obligations from NNWS while exempting NWS arsenals; it transfers interpretive control to NWS; and it permits indefinite postponement of disarmament. Suppression is substantial (0.71) because the constraint's persistence depends on actively excluding NAM and threshold-state voices from the interpretation process and blocking amendment mechanisms that would strengthen Article VI. Theater ratio climbs steadily (0.22→0.48) because the NWS reading requires increasing performative justification: disarmament conferences are held with no binding outcomes; NWS pledge periodic reductions (three warheads cut, then arsenals rearm elsewhere); the IAEA expands safeguards inspection capacity while NWS arsenals remain off-limits. The measurement grid is shared across all three metrics at every time point: 1968 (founding, interpretion open), 1985 (Reagan/Thatcher security discourse, interpretation hardens), 2000 (Cold War over, disarmament pressure rises, suppression intensifies), 2010 (NPT Review Conference, failed amendment votes), 2020 (TPNW adopted outside NPT, NWS delegitimation pressure), 2026 (present). The trajectory shows extraction rising early, plateauing after 2010 (the reading is locked in), and theater rising continuously as the regime requires increasing performative activity to sustain the interpretation against growing contestation.",
+    "perspectival_gap": "From the NWS seat, this is genuine coordination: the NPT prevented arms proliferation, secured extended deterrence for allies, and created IAEA safeguards that verify NNWS compliance. From the NNWS/NAM seats, this is tangled extraction: they accepted non-proliferation asymmetrically (NNWS transparent, NWS opaque) in exchange for a disarmament promise that NWS explicitly interprets as non-binding. The engine computes these divergent classifications from the structural data: NWS derives low/negative extractiveness (beneficiary + low d); NNWS derives high extractiveness (victim + high d). The claimed type is tangled_rope, which the metrics support: genuine coordination function (preventing proliferation spread) layered with asymmetric extraction (verification asymmetry, interpretive control asymmetry, arsenal exemption). The payer and beneficiary seats should compute into different types; the framework detects this divergence.",
+    "directionality_logic": "NWS directionality sits near 0.0 (full beneficiary): they collect from the interpretation (arsenal security, verification asymmetry, interpretive veto), have high institutional power, have arbitrage exit (can withdraw and lose little immediate cost), and operate at civilizational horizon. NNWS directionality sits near 0.85–0.95 (near-total target): they bear verification costs and forgo development capability, have constrained exit (withdrawal means isolation), and operate under generational time pressure. NAM sits near 0.80 (target): organized power, but identity-locked exit (withdrawal is self-delegitimating), generational horizon, and their interests are explicitly sidelined. The engine derives these d values from beneficiary/victim + power + exit + horizon data; no override is needed because the structural asymmetry is clear.",
+    "mandatrophy_analysis": "The constraint shows early mandatrophy indicators. The founding problem (horizontal proliferation prevention) has been substantially solved: fewer than 10 undeclared states have weapons, and proliferation rates have slowed. The treaty's original function is live but weakened. What persists is the interpretive claim (Article VI as aspirational) and the institutional structure (IAEA safeguards). The rising theater_ratio (0.22→0.48) is the diagnostic signal: NWS must perform disarmament commitment (conferences, pledges, symbolic reductions) to maintain legitimacy, but these performances have decoupled from function. The constraint could be reclassified as piton if the theater ratio continues rising and extractiveness plateaus, but at present (2026) extraction is still being actively defended rather than theatrically maintained, so tangled_rope classification holds. The omega variable on 'article_vi_binding_status' directly addresses whether mandatrophy is present.",
+    "kernel_context": "This constraint instantiates the NWS READING of the NPT treaty-text kernel (kernel_id: npt_treaty_text). The kernel is Article VI's disarmament commitment language. The NWS reading interprets 'at an early date' and 'pursue negotiations in good faith' as permitting indefinite postponement, treating disarmament as aspirational. The sibling NNWS reading (separate JSON: npt_treaty_text__nnws_reading) interprets the same language as binding and time-indexed, treating non-proliferation as conditional on NWS compliance. The withdrawal_threshold reading (third sibling: npt_treaty_text__withdrawal_threshold_reading) contests whether Article X permits easy exit (sovereignty preservation) or requires high cost to exit (regime stability). The three readings instantiate THREE DIFFERENT constraints with THREE DIFFERENT ε values and beneficiary/victim structures—they are not angles on one constraint, they are different constraints grounded in contested reading of the same kernel. The NWS reading has the highest ε because interpretive control of 'aspirational' permits unlimited extraction; the NNWS reading has lower ε because binding disarmament would compress extraction; the withdrawal_threshold reading is orthogonal—it trades off constraint strength (exit cost) against state sovereignty."
+  },
+  "omegas": [
+    {
+      "id": "article_vi_binding_status",
+      "question": "Does Article VI constitute a binding legal obligation to pursue nuclear disarmament with a timescale, or is it an aspirational goal without enforcement mechanism?",
+      "resolution_mechanism": "International Court of Justice would need to deliver a binding judgment on an contentious case (not merely advisory opinion). Alternatively, a treaty amendment adopted by consensus would explicitly define the disarmament obligation's legal character. Short of that, the question remains contested between the parties.",
+      "impact": "If Article VI is binding and time-indexed, the NWS reading collapses and the constraint reclassifies to tangled_rope with lower extractiveness (or to snare if NWS simply ignore the binding). If Article VI remains aspirational, the NWS reading holds and extraction persists indefinitely. This is the most consequential omega: it determines whether the constraint is a temporary abuse (snare eventually remedied) or a structurally stable extraction.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The kernel-level interpretive contest between NWS and NNWS readings."
+    },
+    {
+      "id": "verification_asymmetry_justification",
+      "question": "Is the asymmetry between IAEA inspection of NNWS facilities and non-inspection of NWS arsenals justified as a technical necessity (weapons are harder to verify, require different methods) or as an institutional asymmetry (NWS have veto power and chose to exempt themselves)?",
+      "resolution_mechanism": "Technical analysis of verification feasibility for weapons-in-stockpile vs. proliferation-prevention inspection. Comparison with verification methods in bilateral arms control treaties (START, New START) that DO verify NWS arsenals. If bilateral treaties prove verification of NWS arsenals is feasible, the asymmetry is revealed as a choice, not a technical necessity.",
+      "impact": "If asymmetry is technical necessity, the NWS reading gains legitimacy as a pragmatic accommodation. If asymmetry is institutional choice, it appears as pure extraction and strengthens the NNWS reading's claim that disarmament is non-binding because NWS refused to subject themselves to verification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether verification asymmetry is necessitated by physics or by power."
+    },
+    {
+      "id": "identity_lock_on_npt_commitment",
+      "question": "How much of NNWS compliance with the NPT is a structural constraint (exit would cost them security) vs. an identity lock (they have defined themselves as NPT believers, and withdrawal would dissolve their self-concept)?",
+      "resolution_mechanism": "Post-withdrawal trajectory analysis: if a state withdraws and quickly acquires weapons with no security consequence, identity lock was primary (the security guarantee was secondary). If a state withdraws and faces immediate isolation/pressure, structural exit cost was primary.",
+      "impact": "If compliance is structural, the constraint is sustained by rational incentive and could be changed by improving the security guarantee or reducing exit cost. If compliance is identity-locked, the constraint is sustained by belief, and changing terms would require identity-fusion breaking (much harder). This affects the feasibility of reform vs. dissolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The mechanism sustaining NNWS acceptance of asymmetric verification."
+    },
+    {
+      "id": "nws_internal_commitment_divergence",
+      "question": "Do NWS internally disagree on whether Article VI is binding or aspirational, or is the disagreement purely between NWS (as bloc) and NNWS?",
+      "resolution_mechanism": "Close-door diplomatic cables (FOIAs, declassification), internal governmental position papers. Do some NWS treat disarmament as binding internally (drafting reduction schedules, legal reasoning) while claiming it is aspirational in public? Or is the claim genuinely unified across the NWS bloc?",
+      "impact": "If NWS internally treat disarmament as binding but publicly claim it is aspirational (theatrical performance), the theater ratio rises further and mandatrophy accelerates. If NWS genuinely believe their own reading, the constraint is more stable. The finding affects whether the constraint is a lie (snare) or a strategic choice (tangled rope with performance costs).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the NWS reading is unified across the bloc or theatrically maintained."
+    },
+    {
+      "id": "iaea_budget_allocation_choice",
+      "question": "Is IAEA's concentration of safeguards resources on horizontal proliferation (NNWS detection) vs. vertical arsenal monitoring (NWS verification) a technical priority (horizontal proliferation is the greater threat) or an institutional capture (NWS control the IAEA board and prefer resources focused on NNWS)?",
+      "resolution_mechanism": "Counterfactual analysis: if IAEA had the same budget but could allocate freely, what fraction would it assign to NWS arsenal verification vs. NNWS safeguards? Expert elicitation from IAEA technical staff (would they detect violations if tasked?). Comparison with IAEA's historical efforts to inspect NWS facilities (Iraq aftermath inspections) to assess technical capacity.",
+      "impact": "If the focus is a technical priority, the verification asymmetry is justified and extraction is lower than claimed. If the focus is institutional capture, the asymmetry is a mechanism for sustaining the extraction and the theater ratio rises (performative safeguards that miss the real threat: NWS arsenals).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether IAEA budget allocation reflects technical threat assessment or institutional power dynamics."
+    },
+    {
+      "id": "reading_stability_under_npt_amendments",
+      "question": "If a future NPT amendment explicitly added a binding disarmament timeline with verification mechanisms, could NWS ratify the amendment while maintaining the NWS reading, or would ratification constitute acceptance of the NNWS reading?",
+      "resolution_mechanism": "Treaty amendment process: if amendment is adopted by consensus (or supermajority), the NWS interpretive claim becomes formally overridden. If NWS block amendment, the NWS reading persists by veto. This tests whether the reading is defended by argument or by institutional power.",
+      "impact": "If NWS can maintain the reading after a binding amendment (through clever implementing clauses or reservations), the constraint is more extractive than coded—it is snare rather than tangled rope because no coordination function is genuinely traded. If amendment would dissolve the reading, the reading's stability depends on veto power, confirming the suppression component.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the NWS reading can survive a binding amendment or requires veto power to persist."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "npt_treaty_text__nnws_reading",
+      "npt_treaty_text__withdrawal_threshold_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the NPT kernel (Article VI disarmament language). The NNWS reading (npt_treaty_text__nnws_reading) interprets the same language as binding and time-indexed, treating non-proliferation as conditional on NWS disarmament progress. The withdrawal_threshold reading (npt_treaty_text__withdrawal_threshold_reading) addresses Article X exit mechanisms separately. The three readings have different ε values and beneficiary/victim structures because they instantiate different constraints—not different viewpoints on the same constraint. The NWS reading has the highest extractiveness because interpretive control of 'aspirational' permits unlimited arsenal preservation. The NNWS reading has lower extractiveness because binding disarmament would constrain NWS. The withdrawal_threshold reading is orthogonal—it trades off constraint strength (exit cost) against state sovereignty. Do not merge these into one constraint; do not average over them."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.82
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "equal_security_partnership",
+    "drift_state": {
+      "moment": "post_cold_war_disarmament_expectations",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "npt_treaty_text__nnws_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "npt_treaty_text__withdrawal_threshold_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "disarmament_aspirational_not_binding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "verification_asymmetry_necessary",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

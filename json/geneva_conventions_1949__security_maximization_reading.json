@@ -1,0 +1,259 @@
+{
+  "header": {
+    "constraint_id": "geneva_conventions_1949__security_maximization_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "fcf4f5c2-fc36-46a4-a082-89409b425adc"
+  },
+  "base_properties": {
+    "extractiveness": 0.87,
+    "suppression": 0.92,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Geneva Conventions 1949 — Security Maximization Reading",
+    "topic_domain": "political/legal/military",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "national_security_apparatus",
+      "executive_military_authority"
+    ],
+    "victims": [
+      "detained_irregular_combatants",
+      "civilian_populations_in_conflict_zones",
+      "detained_persons_without_status_determination"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.77
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.87
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.87
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.92
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.92
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The security-maximization reading of the 1949 Geneva Conventions treats international humanitarian law as a peacetime framework whose protections yield to operational necessity in asymmetric conflict. Under this reading, states facing irregular combatants (insurgents, terrorists, unlawful combatants) have unilateral authority to suspend protections: expanding the 'unlawful combatant' category to deny POW status and habeas corpus; degrading civilian immunity via 'human shields' doctrine and collateral damage acceptance; permitting indefinite detention without trial; and normalizing coercive interrogation. The constraint is CLAIMED as tangled-rope (coordination function + asymmetric extraction) while authored metrics describe highly extractive, intensively suppressed operation. This divergence is intentional: the reading's proponents frame the Conventions as coordination (mutual restraint framework); the victimized parties and humanitarian-law advocates frame the same reading as pure extraction (state violence license). The engine measures this divergence from the structural data.",
+    "key_agents": [
+      "national_security_apparatus: institutional agenda-setter with arbitrage exit; interprets and enforces the security-maximization reading",
+      "executive_military_authority: institutional agenda-setter/beneficiary; administers detention and interrogation under the reading",
+      "detained_irregular_combatants: powerless payers; held indefinitely without status determination or protections",
+      "civilian_populations_in_conflict_zones: powerless payers; experience collateral harm and conditional immunity",
+      "detained_persons_without_status_determination: powerless payers; exist in legal gray zone created by the reading",
+      "humanitarian_organizations: excluded organized actors; cannot enforce competing readings or access detainees",
+      "international_humanitarian_law_scholars: observers; document the structural contest between readings"
+    ],
+    "logic_rationale": "Extractiveness is high (0.87) and rising through the interval because the reading permits the security apparatus to unilaterally expand detention authority, narrow protected categories, and degrade protections without requiring external justification. Suppression is very high (0.92) because the constraint's persistence depends on active exclusion of competing readings and suppression of detainee resistance (detention without trial, restricted access, no habeas corpus path). Theater ratio rises from 0.25 to 0.48: the initial operational-necessity framing (coordination cover story) degrades over time as the constraint's extractive function becomes visible—indefinite detention reveals itself as permanent, collateral damage normalizes, and the 'non-torture' framing of coercive interrogation becomes increasingly theatrical. The measurements run on one shared time grid (t0=0 through tn=24) with every metric authored at every examined point. The interval represents the post-2001 era of asymmetric conflict (0 = early 2000s post-9/11 security expansion; 24 = contemporary plateau where indefinite detention and enhanced interrogation are normalized practices).",
+    "directionality_logic": "Beneficiary extraction (security apparatus → d ≈ 0.15): high institutional power, unilateral exit (can reinterpret Conventions without external constraint), global scope, generational time horizon. The power atom 'institutional' normally sits near d = 0.5 (symmetric), but exit options drop the directionality: the apparatus has arbitrage exit (can choose which reading to adopt unilaterally), which shifts d downward toward beneficiary. Victim extraction (detainees → d ≈ 1.0): powerless agents, trapped exit (no legal pathway to release or status determination), local scope, immediate time horizon. The composition of power + exit + scope yields high effective extraction despite the base extractiveness being authored at 0.87—institutional actors sitting in the target position experience d amplification because they are institutional (surprising and notable), and the engine flags this via high χ.",
+    "perspectival_gap": "The security apparatus seat and the payer seats should compute dramatically differently. From the institutional agenda-setter perspective, the reading adapts the Conventions to operational reality: irregular combatants reject the Conventions, so symmetrical application is impossible; security-maximization interpretation permits necessary flexibility. From the detainee perspective, the reading licenses indefinite detention, coercive interrogation, and deprivation of all legal protection. From the humanitarian seat, the reading suppresses the competing humanitarian-ceiling reading by claiming operational necessity overrides absolute minimums. The engine computes per-seat classification from this structural data without reconciling the seats to a single verdict.",
+    "mandatrophy_analysis": "The constraint is classified as tangled-rope, not snare, because the security apparatus genuinely believes (and can articulate a defensible reading of the text) that the Conventions permit the security-maximization interpretation. This is not pure cover. However, the asymmetric extraction (detainees bear near-total costs, security apparatus collects near-total benefits) and active enforcement (the reading's persistence requires exclusion of competing humanitarian readings, suppression of detainee resistance, and restriction of humanitarian access) make tangled-rope the proper classification over rope. The mandatrophy analysis: the founding problem (irregular combatants do not comply with the Conventions) is real and contested. The security-maximization reading's answer is that this justifies unilateral suspension of protections. But the 1977 Protocols and the principle of absolute humanitarian minimum provide alternative answers: protections apply regardless of adversary compliance. The constraint persists not because the founding problem is unsolved, but because the security apparatus has authority to choose its own reading and the competing readings lack enforcement power. This is mandatrophy by substitution: the Conventions exist as a live text; the reading that dominates practice (security-maximization) treats them as conditional rather than absolute.",
+    "kernel_context": "This constraint instantiates the security-maximization reading of the contested 1949 Geneva Conventions kernel. The kernel is the foundational text of international humanitarian law, binding all states to specific protections for combatants, prisoners, and civilians. The three sibling readings are: (1) humanitarian-ceiling reading—the Conventions establish absolute floors regardless of conflict type or adversary compliance; (2) conditional-reciprocity reading—protections apply fully only when adversaries comply, permitting proportional degradation if irregular forces violate the Conventions; (3) security-maximization reading (this constraint)—the Conventions are peacetime aspirations that yield to operational necessity in asymmetric conflict. The security-maximization reading treats the kernel as inherently conditional and subject to state reinterpretation based on operational necessity. This differs structurally from the other readings: humanitarian-ceiling denies that reinterpretation is permissible; conditional-reciprocity permits reinterpretation only in response to adversary violations. The security-maximization reading claims unilateral reinterpretation authority based on the asymmetry of the conflict type itself."
+  },
+  "omegas": [
+    {
+      "id": "operational_necessity_threshold",
+      "question": "What level of adversary non-compliance, or what conflict characteristics, justify application of the security-maximization reading rather than the humanitarian-ceiling reading?",
+      "resolution_mechanism": "Documented analysis of conflicts with different adversary-compliance profiles and different state responses: do states apply security-maximization readings only when irregular forces systematically violate the Conventions, or do they apply it prophylactically whenever conflict is asymmetric?",
+      "impact": "If the reading is applied only in response to documented violations, it approaches the conditional-reciprocity reading. If it is applied prophylactically (in anticipation of non-compliance), it becomes unilateral suspension authority not grounded in adversary action. This determines whether the reading is genuinely responsive (bounded) or categorically permissive (unbounded).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether security-maximization is applied conditionally or categorically."
+    },
+    {
+      "id": "suppression_mechanism_internalized_vs_structural",
+      "question": "Is the suppression of detainees' resistance and humanitarian oversight primarily structural (no legal pathway to release, no habeas corpus, restricted access) or internalized (detainees accept the unlawful-combatant categorization as legitimate)?",
+      "resolution_mechanism": "Post-release trajectory study: detainees who have been released track whether suppressive patterns persist (internalized) or dissolve (structural only). Interview evidence from detained persons about whether they view deprivation as procedurally illegitimate or substantively justified.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural 0.92 metric suggests—detainees carry the suppression with them after exit. If structural only, remediation requires only legal pathway restoration. The distinction affects whether classification should include identity-locked exit for affected agents.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression is internalized (identity/narrative-based) or structural (legal/institutional barriers)."
+    },
+    {
+      "id": "competing_reading_foreclosure",
+      "question": "Does the security-maximization reading logically foreclose the humanitarian-ceiling reading, or do both remain live interpretive positions held by different institutional seats?",
+      "resolution_mechanism": "Textual analysis of the 1949 Conventions: does the security-maximization reading's argument (operational necessity overrides explicit protections) logically require that the humanitarian-ceiling reading (explicit protections are non-negotiable) is false? Or are both coherent readings of the same text, with the choice between them a matter of interpretive authority rather than logical necessity?",
+      "impact": "If foreclosed, the security-maximization reading wins the kernel contest definitively (only one reading can be true). If both remain live, the contest is one of institutional power (who controls interpretation authority), not logical entailment. This determines whether the constraint's persistence is grounded in the text's inherent properties or in power asymmetry between interpretive authorities.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the security-maximization and humanitarian-ceiling readings are logically incompatible or merely differently weighted."
+    },
+    {
+      "id": "false_summit_humanitarian_coordination",
+      "question": "Is the 'coordination function' framed in the six_questions genuinely a coordination problem the reading solves, or is it a false summit—a constructed-necessity framing that masks extraction?",
+      "resolution_mechanism": "Compare documented instances where states applied the humanitarian-ceiling reading despite facing irregular combatants: did the absence of the security-maximization reading's interpretive flexibility result in operational failure, or did restraint prove operationally compatible?",
+      "impact": "If the coordination function is genuine, the tangled-rope classification is correct (asymmetric extraction riding on real coordination). If the coordination function is a false summit, the constraint should be reclassified as snare (pure extraction wearing a coordination costume). Historical evidence from multiple jurisdictions with different readings would clarify whether the reading is necessary or merely convenient.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reading's coordination function is genuine or a false-summit framing of pure extraction."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "geneva_conventions_1949__humanitarian_ceiling_reading",
+      "geneva_conventions_1949__conditional_reciprocity_reading"
+    ],
+    "dual_formulation_note": "The 1949 Geneva Conventions constitute a contested kernel with three structurally distinct readings: the humanitarian-ceiling reading (absolute protections, non-negotiable); the conditional-reciprocity reading (protections contingent on adversary compliance); and this constraint (security-maximization reading, protections yield to operational necessity). These are NOT different observable framings of a single constraint—they have fundamentally different ε values, beneficiary structures, and enforcement mechanisms. The humanitarian-ceiling reading treats protections as natural law (near-mountain ε ≈ 0.1); the security-maximization reading treats protections as discretionary (snare/tangled-rope ε ≈ 0.87). Each reading is a separate constraint story, linked via this network field. The divergence in ε reflects different claims about the kernel's nature, not measurement ambiguity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "operational_necessity_subordinates_protection",
+    "drift_state": {
+      "moment": "contemporary_global_counterterrorism_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "geneva_conventions_1949__humanitarian_ceiling_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "geneva_conventions_1949__conditional_reciprocity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "operational_necessity_overrides_protection_text",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "irregular_combatants_forfeit_lawful_status",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "state_security_maximization_paramount_in_asymmetric_conflict",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "very_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "geneva_conventions_1949__humanitarian_ceiling_reading",
+      "geneva_conventions_1949__conditional_reciprocity_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

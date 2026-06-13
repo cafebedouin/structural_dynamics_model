@@ -1,0 +1,288 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__near_miss_as_bridge",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "47a717a0-7c84-41c8-a00e-f2fe60723950"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Near-Miss Integration for Competence Retention",
+    "topic_domain": "safety/organizational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "safety_training_program",
+      "organizational_learning_system"
+    ],
+    "victims": [
+      "front_line_operators",
+      "safety_investigators"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.17
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "High-reliability organizations maintain competence for catastrophe prevention through a hybrid system: regular simulator exercises provide safe, repeatable training, but simulators are validated and updated through investigation of real-world near-miss incidents and minor failures. This reading asserts that near-misses provide sufficient real-world feedback to keep training current without requiring full catastrophes. Operators and safety investigators bear the workload of reporting and analyzing incidents; the training program and organizational learning system benefit from the captured data. The constraint is CLAIMED as tangled rope because it genuinely coordinates (hybrid training feedback loop) while asymmetrically extracting (workload and classification risk fall on operators and investigators). The claim and metrics are independent: metrics describe a moderately extractive, mildly enforced arrangement that begins as genuine coordination but drifts slightly toward theater (near-miss investigation becomes compliance ritual disconnected from simulator updating).",
+    "key_agents": [
+      "safety_training_program_administrator: Institutional agenda-setter; controls what counts as valid feedback, decides simulator updates, benefits from near-miss volume. Power: institutional. Exit: constrained (role is the position).",
+      "front_line_operators: Powerless payers with identity-locked exit (professional identity, regulatory compliance); bear reporting burden and classification risk but benefit from better training feedback. Extraction: moderate but internalized through professional commitment.",
+      "safety_investigators: Moderate-power payers; workload grows with incident volume; face conflicting loyalties in classification (operator-protection vs. organization-protection). Constrained exit (professional identity, organizational dependency).",
+      "competing_training_modalities: Excluded powerful voices (catastrophe-purists, simulation-sufficiency advocates, apprenticeship traditions); locked out of near-miss classification process despite relevant expertise."
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.38) because the constraint does provide genuine coordination benefit (near-miss feedback genuinely improves simulator validity) but also concentrates data-capture power in the training administrator's hands and loads investigation work on operators and investigators who have no proportional gain. Suppression is low (0.22) because participation is motivated by professional identity and regulatory requirement, not by active coercion — operators WANT to maintain competence and comply with rules; the suppression that exists is the identity-lock mechanism and the implicit career risk in incident classification. Theater ratio rises gradually (0.08 → 0.18) over the interval because early in the constraint's operation the near-miss investigation genuinely feeds simulator design; over time, incident classification becomes institutionalized and decouples slightly from actual simulator updating — near-miss reports are archived as compliance artifacts rather than active learning inputs. The trajectory levels off at 0.18 because the constraint stabilizes: organizations learn to maintain the fiction of integration without genuine feedback coupling. Accessibility collapse is moderate-high (0.65) because once the constraint is understood, alternatives (pure simulation, catastrophe-based learning) appear inadequate — the near-miss hybrid becomes the only acceptable middle path. Resistance is moderate (0.42) because some operators and investigators push back on the classification process (questioning its fairness, arguing incidents are misclassified for organizational protection), but they lack institutional power to disrupt the system; their resistance is absorbed as procedural improvement rather than structural change.",
+    "perspectival_gap": "The training administrator and front-line operators experience this constraint divergently. From the administrator's seat, near-miss investigation is a genuine coordinating mechanism that generates irreplaceable training data — high-fidelity feedback that simulation design cannot produce alone. From the operator's seat, near-miss investigation is a compliance burden that carries classification risk (whether the incident will be read as operator error or system failure) and offers no direct benefit — the operator's competence improves only if the feedback actually reaches simulator design, which is uncertain. The engine should compute a beneficiary-side type (the administrator's reading is closer to rope, genuine coordination) and a payer-side type (the operator's reading is closer to tangled_rope or mild snare, extraction with a coordination cover story). This divergence is exactly what the structural data encodes: beneficiaries/victims + constrained exit → different directionalities per seat.",
+    "directionality_logic": "Front-line operators (powerless, identity_locked exit, victims list): high directionality (d ≈ 0.75–0.85) because they are trapped by professional identity, bear the investigation workload, and face classification risk without proportional benefit. The constraint extracts their time and carries implicit threat (misclassification). Safety investigators (moderate power, constrained exit, victims list): moderate-high directionality (d ≈ 0.65–0.75) because they expand their workload significantly with incident investigation obligations, but they retain some professional agency in classification decisions (moderate power) and may genuinely believe near-miss investigation improves safety (internalized benefit). Training administrator (institutional power, constrained exit by role, beneficiaries list): low directionality (d ≈ 0.15–0.25) because the administrator collects the data, controls the classification, shapes simulator updates, and captures the budget/legitimacy benefit of a mature learning system. The administrator has constrained exit not because of external barriers but because the role IS the constraint's administration — exit would mean abdicating the power. Competing voices (excluded, trapped): high directionality (d ≈ 0.90–1.0) structurally, though they are not formally seated; their exclusion from classification decisions is the suppression mechanism.",
+    "mandatrophy_analysis": "The near-miss reading avoids the mandatrophy trap (false mandate) by grounding the founding problem in a real trilemma: competence must be maintained, simulation alone is insufficient for validation, and catastrophe-based learning is indefensible. The near-miss integration constraint genuinely solves this trilemma. However, there is a secondary mandatrophy risk: if near-miss investigation devolves into compliance ritual (incidents are reported, classified, and filed but do not actually update simulators), the founding problem PERSISTS but the constraint becomes theater. The measurement series tracking theater_ratio rising to 0.18 captures this drift: the constraint's mandate (keep training valid through field feedback) is outliving its function (near-miss data → simulator updating) as the system institutionalizes. At theater_ratio > 0.5, a piton classification would be warranted; at 0.18, the constraint is still functionally coupled to its original problem, but the trajectory suggests degradation risk. Mandatrophy resolution: the constraint is NOT resolved because the problem it was built to solve (competence maintenance through feedback) is still live and the constraint still produces some feedback coupling. If simulator updating stopped entirely while incident reporting continued, mandatrophy would fire and the classification would shift toward piton.",
+    "kernel_context": "This constraint instantiates the 'near_miss_as_bridge' reading of the contested kernel 'competence_retention_exercise'. The kernel itself is a stabilized commitment claim: how should organizations maintain competence for catastrophe-avoidance? Three readings compete: (1) simulation_as_sufficient — high-fidelity simulation alone constitutes genuine exercise of catastrophe-avoidance competence, making real events unnecessary for training; (2) catastrophe_as_necessary — only actual catastrophic events provide the visceral stakes and organizational learning required to maintain genuine competence; (3) near_miss_as_bridge — this reading, instantiated here — near-miss incidents and minor failures provide sufficient real-world feedback to validate simulator training without requiring catastrophes. The near-miss reading claims the hybrid system is BOTH necessary (simulation alone is insufficient) AND sufficient (catastrophes are not required). The sibling readings make incompatible claims about sufficiency and necessity; the structural difference is located in what counts as valid feedback data and whether organizational learning requires actual stakes escalation."
+  },
+  "omegas": [
+    {
+      "id": "near_miss_feedback_coupling_decay",
+      "question": "Do near-miss investigations actually translate into simulator updates, or does the incident-reporting process become decoupled from training feedback over time?",
+      "resolution_mechanism": "Audit the simulator training scenarios against the incident database: measure the proportion of investigated near-misses that appear as updated scenarios within 2 years of investigation. If coupling falls below ~70%, the constraint is devolving into theater.",
+      "impact": "If coupling decays substantially, the constraint loses its coordination function and becomes pure extraction (operators report incidents, investigators classify them, trainers archive them, but simulator design does not actually respond). Classification would shift toward piton or snare. If coupling holds, the constraint remains tangled_rope with genuine coordination component.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether near-miss investigation genuinely feeds simulator updating or becomes compliance theater."
+    },
+    {
+      "id": "classification_bias_toward_system",
+      "question": "Are near-miss incidents systematically classified as system-based (protecting operators) or operator-error-based (protecting the organization), and does this classification bias limit the actual learning value?",
+      "resolution_mechanism": "Examine incident classification patterns longitudinally: track the ratio of system-based to operator-error classifications and correlate with organizational changes. If bias exists, determine whether it is structural (investigator pressure) or reflective of true system causation.",
+      "impact": "A systematic bias toward one classification type suggests the constraint's extraction function (operator time and classification work) exceeds its coordination function (genuine learning). High operator-error classification suggests extraction; high system-based classification suggests organizational protection. True balance would reflect genuine mixed causation. Sustained bias that masks learning opportunities would shift the classification from tangled_rope toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incident classification serves learning or protects organizational or operator interests at learning's expense."
+    },
+    {
+      "id": "identity_lock_internalization_suppression",
+      "question": "Is the measured suppression (0.22) structural — external barriers to refusing incident reporting — or internalized through professional identity commitment?",
+      "resolution_mechanism": "Post-exit analysis: if operators who leave the organization continue to believe near-miss reporting is essential to safety, suppression is substantially internalized. If operators express relief at no longer participating, suppression was structural. Industry surveys of retired operators provide direct evidence.",
+      "impact": "If suppression is primarily internalized, the constraint's effective suppression is higher than the scalar suggests — operators carry the constraint's commitments with them after exit, limiting alternatives and mobility. If structural, the constraint depends on continuous role-based exclusion. Internalization favors snare classification; structural suppression supports tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether identity-locked suppression is structural or internalized through professional commitment."
+    },
+    {
+      "id": "kernel_reading_alternative_sufficiency",
+      "question": "Does the near-miss reading's claim of sufficiency (catastrophes are not required) hold up under empirical challenge from the catastrophe-as-necessary reading?",
+      "resolution_mechanism": "Comparative analysis across high-reliability organizations: do those using ONLY near-miss integration (without waiting for catastrophes) maintain competence as effectively as those that have experienced and learned from real catastrophes? Do organizations that experienced a real catastrophe subsequently improve competence maintenance beyond those using hybrid near-miss systems?",
+      "impact": "If near-miss integration alone sustains competence equally well, the near-miss reading forecloses the catastrophe-as-necessary reading — the axiom 'feedback_sufficiency_without_catastrophe' holds and the sibling reading becomes unnecessary. If catastrophe-exposed organizations demonstrably maintain competence better, the near-miss reading is merely one tool, not sufficient, and coexists with the catastrophe-as-necessary reading rather than foreclosing it.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether near-miss feedback alone is sufficient to maintain competence or whether catastrophe-level events provide irreducible learning that near-miss systems cannot capture."
+    },
+    {
+      "id": "simulation_fidelity_validation_gap",
+      "question": "Can simulator training be validated as competence-maintaining without field-incident feedback? Can pure simulation (the sibling reading) achieve the validation standard the near-miss reading claims to provide?",
+      "resolution_mechanism": "Controlled experiment or natural experiment: compare competence retention in organizations using (A) near-miss-integrated simulation, (B) pure high-fidelity simulation with external validation, and (C) catastrophe-based learning alone. Measure competence decay, incident severity, and recovery time.",
+      "impact": "If pure simulation with external validation equals or exceeds near-miss-integrated performance, the simulation_as_sufficient reading forecloses the near-miss reading's necessity claim. If near-miss integration provides irreducible value, the near-miss reading coexists with (but is superior to) pure simulation. If catastrophe-based learning is superior to both, the kernel remains genuinely contested.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether near-miss integration is necessary for simulator validation, or whether other validation methods can achieve equivalent competence maintenance."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "simulator_training_system",
+      "incident_investigation_protocol",
+      "organizational_memory_codification"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel 'competence_retention_exercise'. Sibling constraints in the family: (1) competence_retention_exercise__simulation_as_sufficient (pure high-fidelity simulation is sufficient), (2) competence_retention_exercise__catastrophe_as_necessary (only catastrophes provide irreducible learning). All three readings share the core problem — how to maintain catastrophe-avoidance competence — but diverge on sufficiency of feedback sources. The near-miss reading claims a hybrid system (simulation + field validation) is both necessary and sufficient. The three constraints should be read together: their epsilon values will differ substantially (simulation_as_sufficient may show lower extraction if it claims no workload burden; catastrophe_as_necessary may show higher resistance if it confronts the human cost argument; near-miss_as_bridge sits in the middle). Each constraint's classification will be computed independently by the engine; the family structure allows comparative analysis across readings of the same kernel."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.78
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_retention_exercise__simulation_as_sufficient",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "competence_retention_exercise__catastrophe_as_necessary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "feedback_sufficiency_without_catastrophe",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "hybrid_validation_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "training_feedback_loop_maturity",
+    "drift_state": {
+      "moment": "contemporary_compliance_institutionalization",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

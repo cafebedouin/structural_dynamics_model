@@ -1,0 +1,307 @@
+{
+  "header": {
+    "constraint_id": "preparedness_retention__husk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a13c1e1c-23eb-43a3-b542-3064550651ba"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.76,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.59,
+    "claimed_type": "piton",
+    "human_readable": "Preparedness as Ceremonial Retention (Husk Reading)",
+    "topic_domain": "governance/disaster_preparedness/institutional_memory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_legitimacy_apparatus"
+    ],
+    "victims": [
+      "actual_response_capacity",
+      "frontline_responders",
+      "at_risk_populations"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.73
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.76
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.76
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "After major disaster events expose gaps between certified preparedness and actual response competence, institutions formalize preparedness through visible programs: mandatory drills, systematic inspections, standardized certifications. Over time, these visible programs become the primary measure of preparedness itself. Resources shift from live skill transmission (apprenticeship, adaptive training, tacit knowledge transfer) to ceremonial compliance (drill scheduling, checklist completion, certification paperwork). The husk reading asserts this is a constraint in which the ceremonial apparatus persists not because it preserves competence but because it provides institutional legitimacy and because the actual competence gap is structurally invisible until disaster strikes. This reading contests the 'competence reading' (which holds that drills and inspections DO preserve competence) and competes with the 'hybrid reading' (which holds that specialized institutions retain competence while broader society becomes ceremonial). The husk reading's distinctive claim: preparedness IS performance—the competence-to-ceremony ratio is high, extraction is substantial, and the victim is actual response capacity.",
+    "key_agents": [
+      "institutional_administrators: Set and defend the ceremonial apparatus as evidence of preparedness; benefit from visible compliance without resource burden of live competence maintenance",
+      "frontline_responders: Conduct ritual drills disconnected from real scenarios; bear the cost when actual competence fails during D5 events",
+      "emergency_management_planners: Design protocols that prioritize observable compliance over tacit skill retention; face institutional pressure to demonstrate quantitative performance",
+      "at_risk_populations: Depend entirely on responder competence during actual events; reassured by ceremonial indicators but discover the gap between appearance and reality too late",
+      "technical_specialists: Possess tacit expertise that cannot be certified through drills; excluded from planning that prioritizes measurable outputs over competence preservation",
+      "oversight_bodies: Benefit from institutional narrative that compliance metrics demonstrate preparedness; have structural incentive to accept ceremonial indicators"
+    ],
+    "logic_rationale": "The theater_ratio is exceptionally high (0.76 at interval end) and rising steeply from t=0 to t=25, then plateauing—this is the classic piton signature: performative maintenance maintaining the ceremony at a fixed, high level. The measurement grid shows theater rising faster than base_extractiveness, indicating the ratio of ceremonial to functional activity is increasing even as extraction holds relatively stable. This is Goodhart drift: the metric (drills conducted, certifications issued, checklists completed) has displaced the object (actual competence). Suppression_requirement rises from 0.42 to 0.62, indicating the constraint requires increasing active enforcement to suppress the growing gap between ceremony and competence—responders see the disconnect, technical specialists resist being excluded, at-risk populations (post-disaster) recognize the failure. The constraint persists because the administrator benefits from appearance without bearing the cost of competence (arbitrage exit), while responders and at-risk populations are trapped. The time-grid is shared across all three metrics, preventing the temporal alignment errors documented in OQ-105. The coercion grid shows differential pressure across levels: organizational and individual-level stakes_inflation rise faster than structural-level accessibility_collapse, indicating the competence gap is felt most acutely by those closest to response, while structural narratives insulate institutional legitimacy.",
+    "perspectival_gap": "From the institutional administrator seat, the constraint is a coordination function that preserves preparedness through systematized, repeatable protocols—visible compliance proves readiness. From the frontline responder and at-risk population seats, the same structure is pure extraction: resources flow away from competence-building into ceremonial display. From the technical specialist seat (structurally excluded), the constraint is obviously a snare—it uses the appearance of preparedness to suppress alternative voices and lock in the ceremonial apparatus. The engine should compute markedly different types at different seats: the administrator seat (beneficiary, institutional power, arbitrage exit) would compute toward piton or snare at low extraction; the responder seat (moderate power, constrained exit, direct exposure to competence gap) would compute toward snare; the technical specialist seat (excluded, moderate power, mobile exit—but structurally excluded from the conversation) would compute as analyst-observer to snare-perceiver. The authored metrics and claimed_type apply to the constraint as a SYSTEM, not to any single seat's experience of it.",
+    "directionality_logic": "Institutional_legitimacy_apparatus is the beneficiary: it collects the legitimacy gains (institutional trust, regulatory compliance, public confidence) without bearing the resource cost of live competence maintenance. Actual_response_capacity is the victim: resources that could build deep competence are diverted to ceremony; when disaster strikes, the gap between certified readiness and actual competence becomes catastrophically visible. Frontline_responders and at_risk_populations also bear high costs: responders expend effort in ritual without developing adaptive judgment; at-risk populations depend on responder competence that the constraint actively starves. The directionality for each victim seat is high (toward 1.0 extraction) because exit is constrained (responders cannot refuse to participate in mandatory drills without losing employment; at-risk populations cannot exit the disaster) or trapped (actual_response_capacity is an emergent property, not an agent—it is starved by the constraint's operation). Institutional administrators have d near 0.0 (full beneficiary, arbitrage exit if the constraint becomes politically untenable). Technical_specialists have high d (toward extraction) despite their expertise because they are excluded from the decision-making that would use it—exclusion is itself a suppression mechanism.",
+    "mandatrophy_analysis": "This reading asserts classic mandatrophy: the founding problem (responders lack competence; institutions need to demonstrate preparedness) gave rise to a coordination solution (formalized drills and inspections). Over time, the means (ceremonial compliance) became decoupled from the end (live competence preservation). The constraint now extracts from competence-building to fund appearance-maintenance. The founding_problem_status is 'contested' because institutional administrators claim the founding problem is still live (disasters still happen, responders still need preparation) while technical specialists and post-disaster auditors claim the problem was misdiagnosed and the constraint now persists by inertia and institutional incentive rather than necessity. The theater_ratio evidence (0.76 and rising until plateau at t=25) supports the contested verdict: the constraint has become mostly theater, with residual coordination function (drills do teach SOME skills) but the ratio heavily weighted toward ceremony. A piton classification captures this: the constraint persists not because any seat genuinely benefits enough to maintain it (even institutional_legitimacy is theater-dependent and brittle), but because the cost to fix (dismantling the ceremonial apparatus and reorganizing around competence measurement) exceeds the clear benefit to any single agent. Institutional administrators could change it but don't (they benefit from appearance); responders cannot change it (constrained exit); oversight bodies have no incentive to change it (they benefit from the narrative that compliance = readiness). The resistance measurement (0.59 average, rising at organizational and class levels) shows real pushback—technical specialists resisting exclusion, responders complaining about ritual wastefulness, post-disaster auditors questioning the competence gap—but suppression (0.62 at interval end) is sufficient to maintain the ceremonial apparatus against this resistance.",
+    "kernel_context": "This constraint is the HUSK READING of the contested kernel 'preparedness_retention'. The kernel is the persistent commitment to what 'preparedness' MEANS and HOW it is verified. The husk reading instantiates one reading: preparedness IS memorial performance—drills and inspections are rituals that FEEL like retention but LACK live competence. The sibling readings contest this: the COMPETENCE READING holds that drills and inspections DO preserve competence (they are competence-preserving practices); the HYBRID READING holds that specialized technical institutions (water boards, Rijkswaterstaat) retain genuine competence while broader societal preparedness becomes ceremonial. The husk reading's structural delta: high ceremony-to-competence ratio, resource allocation favors visible compliance, beneficiary is institutional legitimacy, victim is actual response capacity. The core disagreement is located in the EFFICACY OF CEREMONIAL PREPARATION—does ritual drill participation actually preserve competence (competence reading), does it preserve competence only in specialized sectors (hybrid), or does it substitute appearance for competence (husk)? This is NOT a difference of opinion about whether drills are good; it is a structural disagreement about what happens inside the constraint."
+  },
+  "omegas": [
+    {
+      "id": "ceremony_competence_fungibility",
+      "question": "At what point does ceremonial drill participation cease to preserve competence and become purely theatrical? Is there a threshold separating drills that build skill from drills that merely perform readiness?",
+      "resolution_mechanism": "Longitudinal competence assessment comparing responders trained via ceremonial drills with responders trained via immersive adaptive scenarios, measured against live disaster performance outcomes. Post-disaster debriefs examining whether responders who passed inspections lacked specific competencies.",
+      "impact": "If ceremony and competence are fungible at some threshold (e.g., responders who drill quarterly maintain 70% of peak competence), the husk reading overstates extraction and the competence reading gains ground. If the threshold is zero (drills preserve almost no adaptive competence), the husk reading is strengthened and the competence reading fails.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ceremonial drills preserve any measurable live competence or are pure theater."
+    },
+    {
+      "id": "institutional_legitimacy_beneficiary_identity",
+      "question": "Is the beneficiary of the preparedness ceremonial apparatus truly 'institutional legitimacy' (an abstract good) or specific institutional actors (administrators, oversight bodies) who capture legitimacy gains? Does institutional legitimacy distribute or concentrate?",
+      "resolution_mechanism": "Trace resource flows from preparedness budgets to specific actors and institutions. Examine institutional budget allocation before and after major disasters: does legitimacy-restoration funding flow to competence-building or to expanded ceremonial programs?",
+      "impact": "If legitimacy gains concentrate on institutional administrators and oversight bodies, they should be listed as beneficiaries rather than 'institutional_legitimacy_apparatus' (a non-agent entity). If legitimacy distributes diffusely, the constraint is harder to classify (diffuse beneficiary, concentrated victim) and may reframe as snare rather than piton.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether institutional legitimacy is the true beneficiary or a cover story for concentrated institutional benefits."
+    },
+    {
+      "id": "suppression_internalization_mechanism",
+      "question": "Is the high suppression (0.62 at interval end) structural (legal requirement to participate in drills, employer enforcement of certification) or internalized (responders have accepted the ceremonial logic and suppress their own doubts about competence preservation)?",
+      "resolution_mechanism": "Post-disaster exit analysis: if responders withdraw from preparedness systems after major events, suppression is primarily structural. If they rationalize the system despite failures, suppression is internalized. Qualitative interviews with responders about their frame for interpreting preparedness effectiveness.",
+      "impact": "If suppression is internalized, the constraint's effective suppression is higher than the structural measure suggests—responders carry the suppression with them even after leaving the preparedness system. This would increase the extraction assessment and support the husk reading. If structural, the constraint is more brittle—withdrawal and replacement of personnel could destabilize it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized in responder frames."
+    },
+    {
+      "id": "hybrid_reading_incompatibility",
+      "question": "Does the husk reading's core premise (preparedness is ceremony, competence is lacking) structurally coexist with the hybrid reading's claim (specialized technical institutions retain competence while broader society becomes ceremonial), or does the presence of technical competence anywhere contradict the husk claim?",
+      "resolution_mechanism": "Examine whether specialized institutions (water boards, search-rescue teams) operate under different measurement and training regimes than general preparedness frameworks. If they do, the hybrid reading is live and the husk reading applies only to non-specialized sectors. If all preparedness—specialized and general—uses the same ceremonial measurement, the husk and hybrid readings foreclose each other.",
+      "impact": "If hybrid and husk readings coexist (different sectors, different competence profiles), the constraint_family needs two separate stories. If they foreclose, the reading_relations should use 'forecloses' rather than 'coexists_with'.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the husk reading and hybrid reading can both be structurally true in the same system or whether one foreclosed the other."
+    },
+    {
+      "id": "disaster_timing_bias",
+      "question": "Does the husk reading's claim rest on unmeasured, low-frequency events (major disasters are rare)? Is the competence gap visible only when a disaster exceeds the threshold that drills prepared for, making competence assessment contingent on disaster rarity?",
+      "resolution_mechanism": "Measure responder competence not only during major disasters but in medium-scale exercises or regional events where the constraint still governs response but disaster outcomes are more frequent. Compare competence across frequency distributions.",
+      "impact": "If competence gaps emerge consistently across all disaster scales (not just catastrophic outliers), the husk reading is robust. If gaps appear only for rare, maximum-scale events that drills never prepared for, the husk reading overstates extraction—the constraint may be rope or tangled_rope at typical scales. This would support the competence reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the husk reading's competence gap is an artifact of rare, maximum-scale disaster measurement or a genuine feature at typical disaster scales."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_retention__competence_reading",
+      "preparedness_retention__hybrid_reading"
+    ],
+    "dual_formulation_note": "The preparedness_retention kernel is decomposed into three constraint stories corresponding to three live readings: the competence reading (drills preserve competence), the husk reading (drills are ceremonial, competence is lacking), and the hybrid reading (technical sectors retain competence, general populace becomes ceremonial). The husk reading presented here asserts that institutional preparedness is substantially extractive (ε=0.68) and highly theatrical (theater_ratio=0.76). The competence reading would assert lower extraction (coordination-heavy, beneficiary widely distributed, victims absent or minimal). The hybrid reading would show stratified extraction (high in general preparedness sectors, low in specialized technical sectors) with different ε and theater_ratio values. The three readings share a contested kernel (what preparedness means and how it is verified) but instantiate different constraints with different structural properties and different measured types. All three stories must be authored for the family to be complete; they are linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.82
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "formal_ceremonial_preparedness",
+    "drift_state": {
+      "moment": "contemporary_post_disaster_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_retention__competence_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "preparedness_retention__hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "ceremony_substitutes_for_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "institutional_legitimacy_extraction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "piton",
+    "downstream_of": [
+      "preparedness_retention__competence_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

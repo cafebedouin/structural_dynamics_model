@@ -1,0 +1,612 @@
+{
+  "header": {
+    "constraint_id": "climate_response_imperative__adaptation_priority_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "240c5400-7c73-4793-a3ad-9375ff2cb856"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.59,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Adaptation-Priority Climate Response Imperative",
+    "topic_domain": "climate_policy/political_economy/intergenerational_justice",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "climate_finance_institutions",
+      "global_north_technology_exporters",
+      "adaptation_consultancy_sector"
+    ],
+    "victims": [
+      "climate_exposed_developing_nations",
+      "vulnerable_populations_global_south",
+      "future_generations_post_2100"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "climate_exposed_developing_nations",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Face immediate, measurable climate impacts (flooding, drought, sea-level rise) requiring urgent capital investment in infrastructure, early warning systems, and migration capacity. The adaptation-priority reading tells them resilience-building is their primary responsibility. They lack the domestic capital to fund adaptation at the scale needed; external climate finance is insufficient and comes with conditionality. They did not cause the atmospheric carbon stock but bear the first and heaviest costs. Exit options are absent — geography and sovereignty constraints prevent relocation of vulnerable populations at scale."
+    },
+    {
+      "name": "global_north_high_emitters",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The adaptation-priority framing allows them to frame climate response as a technical problem (building resilience in exposed regions) rather than a redistribution problem (reducing their own emissions and transferring capital). They benefit by postponing costly decarbonization and structural economic change. They set the international agenda through financial institutions, technology standards, and climate diplomacy, defining what counts as 'climate response.'"
+    },
+    {
+      "name": "climate_finance_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Administer adaptation funding, charging fees and interest on loans for resilience projects. They expand their mandates and lending portfolios by framing adaptation as an investment opportunity ('climate-resilient development'). They benefit from the flow of capital through their systems, independent of whether adaptation projects achieve their stated goals or simply redistribute existing poverty."
+    },
+    {
+      "name": "global_north_technology_exporters",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Export climate-adaptation technology (seawalls, drought-resistant crops, water treatment, early warning systems) to developing nations. The adaptation-priority reading creates a market for their products as the primary climate response modality. They benefit from the capital flows toward adaptation infrastructure without bearing the cost of emissions reduction in their home markets."
+    },
+    {
+      "name": "vulnerable_populations_global_south",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Experience climate impacts directly — crop failures, flooding, heat stress, water scarcity — and are told adaptation is their responsibility. They have no capital to fund adaptation, no voice in international climate negotiations, and limited capacity to migrate or relocate. The adaptation-priority framing tells them the problem is lack of resilience, not the carbon stock their countries did not create. Suppression operates both structurally (economic dependence, legal barriers to migration) and internalized (narratives of individual/community responsibility for climate adaptation)."
+    },
+    {
+      "name": "mitigation_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that rapid mitigation (emissions reduction, energy transition, carbon pricing) is the primary and most cost-effective climate response. They are excluded from the adaptation-priority framing's decision-making architecture; their voices appear in scientific bodies but are overridden in policy and finance institutions dominated by the beneficiary seats. They would argue for structural change in Global North energy and economic systems; that argument is suppressed by the adaptation-priority framing."
+    },
+    {
+      "name": "future_generations_post_2100",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Will inherit a world with higher baseline climate disruption, degraded natural systems, and accumulated maladaptation costs (failed seawalls, agricultural monocultures dependent on inputs, infrastructure built in locations that become uninhabitable). The adaptation-priority reading frames their interests as outside the current decision-making window — they are a non-stakeholder in present policy, yet they pay the highest cost."
+    },
+    {
+      "name": "degrowth_movement",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argues that climate response requires structural economic transformation in the Global North — reduced consumption, redistribution, post-growth institutions — to enable both emissions reduction and equitable adaptation. They are excluded from mainstream climate finance and policy discourse, which frames economic growth as compatible with climate response. Their alternative reading is treated as politically infeasible rather than as a competing framing of the climate-response kernel."
+    },
+    {
+      "name": "international_climate_consensus_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scientific assessments (IPCC) and policy frameworks (UNFCCC) document both mitigation and adaptation as necessary, but implementation prioritizes adaptation in allocating capital and institutional resources. The observer seat sees the structural discrepancy between stated equivalence and actual resource allocation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a genuine coordination problem in climate response: because future impacts are unevenly distributed geographically, some regions face immediate capital needs (seawalls, irrigation, early warning) while others face medium-term energy transition costs. A division of labor — immediate adaptation in exposed regions, emissions reduction in high-emitting regions — could theoretically coordinate these parallel problems. The adaptation-priority reading frames this division as the primary solution.",
+    "transfer_function": "Moves capital from multilateral institutions and Global North governments to climate-exposed developing nations, nominally for resilience infrastructure. It also moves technology and expertise from Global North suppliers to Global South implementers. The reading's implicit transfer: it shifts responsibility for climate response from the emissions-causing regions to the impact-bearing regions, framing adaptation (capital-intensive, locally-implemented, infrastructure-focused) as the primary response modality.",
+    "absent_voices": "Mitigation advocates, degrowth movements, and representatives of vulnerable populations in the Global South are structurally excluded from the institutions (World Bank, regional development banks, bilateral climate finance flows) that operationalize the adaptation-priority reading. They appear in scientific bodies and civil-society testimony but their positions are overridden in resource-allocation decisions. Future generations have no seat at all.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the adaptation-priority framing and its enforcement vanished, the climate-response architecture would reorganize around a different allocation: more capital toward emissions reduction in high-emitting regions, less toward adaptation finance for developing nations, or a shift toward reparative justice frameworks that center mitigation over adaptation. The beneficiary seats (finance institutions, technology exporters, high-emitting governments) would lose the primary mechanism that distributes costs away from themselves.",
+    "founding_problem": "Early climate science and policy recognized that some climate change is already unavoidable due to committed warming and the atmospheric carbon stock. Some regions face immediate impacts regardless of mitigation efforts. The founding problem: how to allocate response resources between reducing future emissions (mitigation, long-term, concentrated in high-emitting regions) and reducing present and near-term impacts (adaptation, urgent, concentrated in exposed regions).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The IPCC and climate science community attest the founding problem is live: committed warming and regional impact inequality are scientific facts. However, IPCC assessments also document that rapid mitigation significantly reduces long-term adaptation burdens and that adaptation alone cannot manage unmitigated warming scenarios. Developing-nation governments, climate-justice advocates, and economic-impact researchers attest that the adaptation-priority reading has been weaponized to excuse slow mitigation; they argue the founding problem is being solved by shifting responsibility rather than addressing its root cause (emissions in high-emitting regions)."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.71,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.72,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.72,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.67,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "projected"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 40,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.78
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.61
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.51
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.78
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.59
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.71
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.68
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The adaptation-priority reading frames climate response as primarily resilience-building and damage reduction in exposed regions, with mitigation (emissions reduction) as aspirational or secondary. This is ONE reading of a contested kernel — the climate response imperative itself. The reading originates in legitimate recognition that some warming is committed and that impact-bearing regions need urgent capital; however, it has been operationalized to shift responsibility for emissions reduction away from high-emitting regions and to concentrate capital flows through financial institutions and technology exporters. The structural delta is stark: present-day developing nations enter the victim set via immediate capital requirements they cannot meet domestically, creating a vicious circle where those least responsible for the atmospheric carbon stock bear the highest immediate costs. This reading licenses inaction on mitigation in high-emitting regions by defining climate response primarily as adaptation in low-emitting regions.",
+    "key_agents": [
+      "climate_exposed_developing_nations — payers, trapped in geographic vulnerability, face immediate capital needs they cannot finance domestically",
+      "global_north_high_emitters — beneficiaries and agenda-setters, postpone costly decarbonization by framing adaptation as primary response",
+      "climate_finance_institutions — beneficiaries, administer capital flows and profit from adaptation lending",
+      "global_north_technology_exporters — beneficiaries, export adaptation technology into expanding markets",
+      "vulnerable_populations_global_south — powerless payers, experience impacts directly and are told adaptation is their responsibility",
+      "mitigation_advocates and degrowth_movement — excluded, their arguments are suppressed by beneficiary-dominated institutions",
+      "future_generations_post_2100 — powerless payers with no seat in the current decision-making architecture"
+    ],
+    "logic_rationale": "Extractiveness measures 0.72 at interval end, rising from 0.58 at start. The rise reflects the constraint's operationalization: as adaptation finance grows, the gap between nominal 'climate response' and actual emissions reduction in high-emitting regions widens. The constraint extracts from vulnerable regions by defining response as their responsibility. Suppression is high (0.68) because the reading's persistence depends on actively excluding mitigation advocates and degrowth alternatives from finance institutions and policy-making; structural suppression operates via economic dependence and legal barriers (developing nations cannot unilaterally decarbonize the Global North); internalized suppression operates via narratives of individual/community climate responsibility. Theater rises from 0.28 to 0.41 as adaptation projects accumulate — early projects may have genuine resilience impact, but increasingly the institutional machinery celebrates projects that provide optics of climate action while maintaining underlying extractive structure. The coercion grid shows stakes inflation rising highest at the individual level (0.52→0.78) in the Global South, where vulnerability increases and exit options collapse; resistance at structural level remains higher (0.68→0.71 resistance, 0.71→0.72 suppression), because the constraint requires active enforcement of the adaptation-vs-mitigation priority split against competing framings. Measurements are observed through ~2030 (when adaptation finance institutionalization is clear), then projected forward assuming no structural change.",
+    "perspectival_gap": "The agenda-setter seat (Global North high-emitters) and the payer seats (developing nations, vulnerable populations) should compute very differently. From the agenda-setter's position, the constraint is genuine coordination: they are providing adaptation finance, sharing technology, and recognizing climate impacts. From the payer seats, the same structure operates as cost-shifting and responsibility-displacement: the constraint licenses continued emissions in high-emitting regions while demanding capital-intensive adaptation in low-emitting regions, entrenching historical inequity. The engine computes this divergence from the structural data — the adaptation-priority reading itself makes both positions linguistically coherent, which is exactly the mechanism that allows the constraint's persistence.",
+    "directionality_logic": "High-emitting governments sit near d=0.0 (beneficiaries, can postpone costly structural change). Finance institutions sit near d=0.1-0.2 (collect rents from capital flows). Developing nations sit near d=0.85-0.95 (trapped, identity-locked to vulnerability, no arbitrage). Vulnerable populations sit at d=1.0 (full targets, no power, no exit). Future generations cannot be modeled within this framework but structurally occupy d=1.0 (targets who will pay the cost of present maladaptation). The directionality_overrides are not used here; the structural derivation from beneficiary/victim + exit captures the asymmetry.",
+    "mandatrophy_analysis": "This constraint does NOT resolve by mandatrophy. The founding problem (unequal impact distribution, unequal emissions responsibility) is still live; the constraint does not solve it but rather displaces it. Climate impacts will continue to rise in exposed regions; adaptation will become increasingly expensive relative to what developing nations can finance; the constraint's core transfer (adaptation responsibility to climate-exposed regions, mitigation postponement in high-emitting regions) will become more transparently extractive as impacts accelerate. The constraint persists not because the founding problem is solved but because the agenda-setting seats benefit from its persistence and have the power to enforce it. This is the signature of a tangled rope that will likely move toward snare classification (pure extraction without residual coordination function) as the climate impacts escalate and adaptation-only approaches fail to meet needs.",
+    "kernel_context": "This constraint instantiates the 'adaptation_priority_reading' of the contested kernel 'climate_response_imperative.' The kernel names a durable political commitment: climate response is necessary. The contest is among three readings: (1) adaptation_priority_reading (this story) — climate response is primarily resilience-building in exposed regions, with mitigation aspirational; (2) mitigation_priority_reading (sibling) — climate response is primarily emissions reduction via innovation and market mechanisms, with adaptation as residual; (3) degrowth_reading (sibling) — climate response requires structural economic transformation in Global North (reduced consumption, redistribution, post-growth institutions) to enable both mitigation and equitable adaptation. The three readings are incommensurable at the level of policy priority but live simultaneously in different institutional seats. The adaptation-priority reading, operationalized through World Bank, regional development banks, and bilateral climate finance, excludes the other two from resource allocation despite their presence in scientific bodies and civil society. This story captures ONLY the adaptation-priority reading's constraint — its ε, its beneficiary/victim structure, its suppression mechanics. The sibling readings are separate constraint stories with different ε values and different institutional locations."
+  },
+  "omegas": [
+    {
+      "id": "adaptation_mitigation_substitutability",
+      "question": "Can rapid adaptation in exposed regions fully substitute for rapid mitigation in high-emitting regions, or are they structurally complementary (both necessary, neither sufficient alone)?",
+      "resolution_mechanism": "Empirical observation of adaptation-only scenarios (e.g., island nations with maximal adaptation investment but no global emissions reduction) versus scenarios combining both. Climate model projections of end-of-century impacts under adaptation-only vs. combined strategies.",
+      "impact": "If adaptation can substitute, the constraint's extraction is justified as an efficient division of labor (developing nations adapt, high-emitting regions emit less slowly). If structurally complementary, the constraint's prioritization of adaptation over mitigation in capital allocation is inefficient at best, predatory at worst — it leaves both regions underserved by choosing one response over the other.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether adaptation and mitigation are substitutes or complements in climate response."
+    },
+    {
+      "id": "suppression_mechanism_internalized_vs_structural",
+      "question": "To what extent is the suppression of mitigation-priority and degrowth alternatives a structural exclusion from finance institutions (external barrier) versus internalized acceptance by developing-nation policymakers that adaptation is their responsibility (cognitive capture)?",
+      "resolution_mechanism": "Qualitative research with developing-nation climate negotiators and policymakers; analysis of how national climate strategies shifted when access to adaptation finance depended on accepting adaptation-priority framing versus when alternative framings were available.",
+      "impact": "If structural, the constraint persists by institutional gatekeeping and can be shifted by changing finance architecture. If significantly internalized, developing nations carry suppression internals even if external barriers are removed — the constraint's reach extends beyond its institutional machinery.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of alternative climate-response readings is structural or internalized."
+    },
+    {
+      "id": "reading_foreclosure_potential",
+      "question": "Does the adaptation-priority reading logically foreclose the mitigation-priority or degrowth readings within a single coherent climate-response framework, or do all three readings remain logically live options whose relative priority is a political choice?",
+      "resolution_mechanism": "Formal analysis of the axioms and premises of each reading; whether accepting one reading's core premise requires rejecting another's core premise (foreclosure) or whether the three readings differ only in priority weighting (coexistence).",
+      "impact": "If foreclosure, one reading is structurally true and the others are false — the contest is empirical. If coexistence, the readings are different political commitments to different stakeholder interests — the contest is irreducibly political and cannot be settled by evidence alone. Determines whether climate policy can be 'resolved' or must acknowledge persistent value pluralism.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical structure of the climate-response kernel contest: foreclosure vs. coexistence."
+    },
+    {
+      "id": "future_generation_representation",
+      "question": "How would climate response framing change if future generations (post-2100, bearing the highest cost of present maladaptation) had voting power in present climate policy?",
+      "resolution_mechanism": "Counterfactual institutional design analysis; comparison of climate-response priorities in scenarios where future-generation interests are represented versus present scenario.",
+      "impact": "If future-generation interests would shift the priority from adaptation-in-south to rapid-mitigation-everywhere, the present adaptation-priority framing systematically excludes the interests most affected. The constraint's persistence depends on the disenfranchisement of its highest-cost-bearing stakeholders.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether future-generation representation would reverse the adaptation-priority framing."
+    },
+    {
+      "id": "climate_finance_genuine_coordination_vs_extraction",
+      "question": "Is the capital flow toward adaptation finance a genuine coordination mechanism for solving unequal-impact problems, or is it extraction structured to appear as coordination (transfer of capital that maintains underlying asymmetries)?",
+      "resolution_mechanism": "Analysis of whether adaptation finance enables developing nations to reach climate-safe infrastructure states or merely to manage perpetual shortfalls. Measurement of whether adaptation-finance recipients become more autonomous or more dependent on continued finance.",
+      "impact": "If coordination, the constraint is operating as intended despite extraction metrics. If extraction, the constraint's coordination function is theatrical and the high extraction metrics are diagnostic of the true structure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether adaptation finance enables autonomous development or perpetual dependency."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_response_imperative__mitigation_priority_reading",
+      "climate_response_imperative__degrowth_reading"
+    ],
+    "dual_formulation_note": "The climate response imperative kernel decomposes into three structurally distinct constraints, each with different ε values and different institutional locations. adaptation_priority_reading (this story, ε=0.72) operationalized through World Bank and regional development banks; mitigation_priority_reading (sibling, likely lower ε, technology-centric framing) operationalized through UNFCCC and carbon markets; degrowth_reading (sibling, likely higher ε given threat to established institutions, largely suppressed) advocated by civil society and academic heterodoxy. The three readings are incommensurable at the axiom level but live simultaneously. All three stories must be authored separately, each with its own ε, beneficiary/victim structure, and institutional location. The network edges record the sibling relationships and the fact that each reading's institutional dominance depends on excluding the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.82
+    }
+  ],
+  "gain_flow": "climate_finance_institutions",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "climate_response_imperative__mitigation_priority_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "climate_response_imperative__degrowth_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "immediate_adaptation_existentially_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "adaptation_financially_primary_in_developing_world",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "mitigation_responsibility_shared_not_differentiated",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_paris_adaptation_primacy",
+    "drift_state": {
+      "moment": "contemporary_2026",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

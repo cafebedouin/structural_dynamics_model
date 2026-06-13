@@ -1,0 +1,518 @@
+{
+  "header": {
+    "constraint_id": "preparedness_retention__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "e9d69e96-6cfb-497d-8a9f-11357c675f13"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.41,
+    "theater_ratio": 0.68,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Stratified Preparedness: Technical Competence vs. Ceremonial Memory",
+    "topic_domain": "governance/disaster_preparedness",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "water_management_institutions",
+      "institutional_continuity"
+    ],
+    "victims": [
+      "distributed_public_resilience",
+      "peripheral_communities"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "rijkswaterstaat",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The Dutch national water authority maintains a core of specialized hydrologists, engineers, and operational staff with continuous, hands-on competence in water management. They design and conduct drills for municipal and regional water boards, set inspection standards, and retain institutional memory through staffing continuity and technical training. They frame this dual-track approach as necessary specialization: local communities cannot and should not retain the deep technical knowledge needed for major flood defense, so they concentrate it in Rijkswaterstaat and trust the institution to serve as guarantor."
+    },
+    {
+      "name": "water_boards",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Elected regional bodies responsible for water management. They benefit from having Rijkswaterstaat maintain technical competence and provide ready-made drills and inspection protocols—this lightens their administrative burden and gives them plausible assurance of preparedness without needing to develop deep expertise in-house. They also pay by delegating authority over preparedness standards and accepting ceremonial participation in drills rather than co-designing them; their input into preparedness design is constrained to choosing among presets."
+    },
+    {
+      "name": "municipal_emergency_managers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Participate in standardized drills, attend training, and execute inspection checklists provided by Rijkswaterstaat. Their professional identity is bound to the drill cycle and inspection schedule—they are competent at following protocol but lack the authority or capacity to redesign preparedness strategy. Their exit is identity-locked: stepping outside the certification regime means losing standing as a 'prepared' municipality, even if they developed autonomous competence."
+    },
+    {
+      "name": "specialized_water_technicians",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Embedded in Rijkswaterstaat and specialized water boards. They retain live competence through continuous hands-on work with flood defenses, modeling systems, and real-time decision-making during crisis. Their career advancement depends on remaining within the institutional framework that values technical expertise. They benefit from the stratified system because it protects their professional domain from dilution and ensures their knowledge remains essential and valued."
+    },
+    {
+      "name": "community_leaders_and_residents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Participate in community drill events, receive preparedness messaging, and are told they are prepared. They have no role in designing preparedness strategy and cannot exit or challenge the prescribed approach. Their understanding of actual flood defense is limited to the ceremonial aspects they witness; they have no access to the technical knowledge or decision-making that determines whether their community survives a major event. Their exit is trapped: they cannot leave the jurisdiction, and opting out of drills carries social and administrative penalties."
+    },
+    {
+      "name": "rival_local_preparedness_models",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bottom-up community networks, local flood defense knowledge, and distributed volunteer expertise are structurally excluded from official preparedness planning. Communities that might develop autonomous competence are prevented from doing so by the requirement to follow standardized protocols and by the implicit message that 'real' preparedness is something only specialized institutions can provide. Their exclusion is maintained by funding and certification mechanisms that channel all preparedness resources through the institutional hierarchy."
+    },
+    {
+      "name": "political_accountability_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Parliament and provincial oversight bodies receive preparedness reports and inspect drills. They can assess whether the formal machinery appears sound but lack the technical depth to verify whether the observed ceremonies translate to actual competence. Their oversight is structurally limited to reviewing compliance with the stratified system's own metrics, not questioning the system's architecture itself."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Concentrates scarce technical expertise (hydrology, advanced modeling, real-time flood defense operations) in specialized institutions that can maintain continuity and depth, avoiding the diffusion of competence across hundreds of local actors who cannot sustain it. Creates a single authoritative source for preparedness standards and drill design, reducing transaction costs of coordination across fragmented local governments.",
+    "transfer_function": "Moves authority over preparedness design and execution from local communities to centralized institutions; moves the appearance of preparedness (compliance with drills, possession of certificates) from actual autonomous capacity to ceremonial participation. Distributes the risk of single-point-of-failure onto the peripheral communities while concentrating the expertise and reputation benefits in the institutional core.",
+    "absent_voices": "Bottom-up community networks and local leaders who might develop autonomous flood defense knowledge are excluded from preparedness planning. They would argue for distributed resilience and community capacity-building but are framed out of the conversation by the insistence that 'real' preparedness requires specialized expertise. Independent water management cultures and alternative institutional models for flood defense (e.g., community-based early warning systems developed in other countries) are not heard.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the stratified preparedness system disappeared, Rijkswaterstaat and water boards would lose the institutional delegation and the appearance of public preparedness. Communities would need to either develop local competence (a multi-year reorganization) or negotiate alternative institutional arrangements for flood defense. The Dutch flood defense system would face a legitimacy and coordination crisis, though the underlying technical infrastructure would persist.",
+    "founding_problem": "Post-WWII Dutch water management faced a choice: rebuild with distributed local knowledge that was fragmented and inconsistently maintained, or concentrate expertise in a national authority (Rijkswaterstaat) that could maintain standards and prevent deadly inconsistencies in dike maintenance and water control. The founding problem was real: catastrophic flood risk required reliable, coordinated response across hundreds of municipalities with no mechanism to enforce consistency.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Rijkswaterstaat and water board officials attest the founding problem remains live—coordination across fragmented local authorities is still necessary for safety. Civil society organizations, independent hydrologists, and researchers attest the founding problem was solved decades ago and the institutional structure now persists as a rent-extraction and authority-protection mechanism; parliamentary inquiries after near-miss flood events (1995, 2021) have documented that much public 'preparedness' is ceremonial and that actual competence is confined to the institutional core. International comparative research (comparing Dutch institutional models to community-based preparedness in Bangladesh and the Philippines) shows distributed competence is technically feasible but politically excluded by the Dutch framework."
+  },
+  "interval": {
+    "start": 1960,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.35,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.2,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.15,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.41,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1960,
+    "tn": 2025,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1960,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2025,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1960,
+        "value": 0.52
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2025,
+        "value": 0.61
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1960,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2025,
+        "value": 0.48
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1960,
+        "value": 0.28
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2025,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1960,
+        "value": 0.55
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2025,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1960,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2025,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1960,
+        "value": 0.25
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2025,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1960,
+        "value": 0.18
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2025,
+        "value": 0.28
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1960,
+        "value": 0.12
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2025,
+        "value": 0.35
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1960,
+        "value": 0.18
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2025,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1960,
+        "value": 0.1
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2025,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1960,
+        "value": 0.08
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2025,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1960,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2025,
+        "value": 0.45
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1960,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2025,
+        "value": 0.38
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1960,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2025,
+        "value": 0.32
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1960,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2025,
+        "value": 0.25
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The Netherlands built its post-war preparedness system by concentrating hydrological and operational expertise in Rijkswaterstaat and regional water boards while distributing ceremonial participation in drills and inspections to municipalities and communities. This reading (hybrid_reading) asserts that the system is genuinely dual-track: the institutional core maintains live competence while the periphery performs preparation. This differs from the husk_reading (which claims even the institutions are ceremonial) and the competence_reading (which claims drills sustain distributed competence). The three readings instantiate different ε-values and occupy different structural positions. This story generates the hybrid_reading only: stratification as a durable division of labor with distinct beneficiaries and victims.",
+    "key_agents": [
+      "Rijkswaterstaat: core technical institution (water management engineers, hydrologists) — maintains live operational competence",
+      "Water boards: regional coordinating bodies — benefit from delegated competence, pay by accepting limited input into strategy",
+      "Municipal emergency managers: local administrators — perform preparedness protocol, identity-locked to certification regime",
+      "Community residents: peripheral participants — perform drills, lack access to decision-making or technical knowledge",
+      "Specialized water technicians: career beneficiaries — protected professional domain within institutional framework"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.35 (1960) to 0.62 (2025) because the system's initial justification (solving coordination crisis) weakens while its extraction mechanism (monopoly over preparedness authority) hardens. Theater ratio climbs even more sharply (0.20 → 0.68) because drills and inspections increasingly satisfy compliance without verifying competence—the machinery is performing its own function rather than assessing preparedness. Suppression requirement rises gradually (0.15 → 0.41) because maintaining the stratified system requires active exclusion of bottom-up preparedness alternatives and identity-locking of peripheral actors. Accessibility_collapse and resistance are measured at four levels: at the structural level, the system is highly consolidated and resistant organizations have weakened over time; at the individual level, communities retain moderate resistance but accessibility to alternatives has tightened. The grid captures the differentiation: suppression is imposed differentially at each level, with the strongest suppression at the individual and organizational levels (where exit attempts are most likely) and the weakest at the structural level (where the system is legitimized as natural).",
+    "perspectival_gap": "From Rijkswaterstaat's position, the constraint is genuine coordination—they are protecting a real functional core against fragmentation. From the municipal emergency manager's position, it is enforced compliance with alien protocols (identity-locked). From the community level, it is ceremonial participation in a system they do not understand and cannot influence (trapped). The engine should compute these as different types in different seats: the institutional agenda-setter may compute as rope (they coordinate and invest), while the powerless and identity-locked seats compute as tangled_rope or snare (they are coordinated by and pay through the same structure). The dual-track claim is precisely this: the same constraint operates as genuine specialization at the center and as extraction at the periphery.",
+    "directionality_logic": "Rijkswaterstaat and specialized water technicians are net beneficiaries (d toward 0.0) — they retain professional autonomy, control preparedness standards, and protect their expertise from dilution. Water boards are partially beneficiary, partially payer (d near 0.5) — they gain coordination and reduced burden but lose input authority. Municipal emergency managers are targets (d toward 0.8) — they follow protocol without understanding the underlying decisions and are locked into the certification regime by professional identity. Communities and residents are the heaviest targets (d near 0.9) — they are trapped, powerless, and excluded from decision-making while bearing the consequences of single-point-of-failure concentration. The directionality gradient runs from institutional core (beneficiary) through organizational middle (intermediate) to individual periphery (target). No overrides needed: the structural derivation from power + exit + beneficiary/victim declarations captures this cleanly.",
+    "mandatrophy_analysis": "The hybrid reading claims Mandatrophy is LIVE as a contested question. The founding problem (post-WWII coordination crisis) was real and arguably addressed by the 1960s. By 2025, the constraint persists but its original mandate is dead—communities no longer need Rijkswaterstaat to prevent them from developing autonomous competence because they have been systematically excluded from doing so. The system now extracts authority rent (monopoly over preparedness certification) while performing coordination that could be achieved through less hierarchical means. The theater_ratio and extraction rise in parallel over the interval, indicating that the function (coordination) is being displaced by the form (compliance machinery). This is classic Mandatrophy drift: the constraint persists past the death of its founding justification, sustained by the beneficiaries' interest in retaining authority. The mismatch (founding_problem_status=dead, but the system operates as if the problem is live) is where Mandatrophy resolution fires.",
+    "kernel_context": "This constraint instantiates the hybrid_reading of the preparedness_retention kernel. The kernel is the contested question: 'What is preparedness?' The three readings offer distinct answers. The competence_reading claims preparedness is live exercised knowledge preserved through drills and inspections across all levels of society. The husk_reading claims preparedness is entirely ceremonial—even the institutions perform ritual without substance. The hybrid_reading (this one) claims preparedness is stratified: the institutions maintain live competence while the periphery maintains ceremonial memory. These readings have different ε-values, different victim/beneficiary structures, and different futures. The kernel itself is a fixed set of institutions and practices (Rijkswaterstaat, water boards, drills, inspections, certification) that all three readings reference. The committer contest is about what those practices are doing and what they justify. This story generates only the hybrid_reading; the other readings are separate constraint stories (not included here) with their own ε, their own metrics, their own stakeholders, and their own classification paths."
+  },
+  "omegas": [
+    {
+      "id": "institutional_competence_vs_ceremonial_performance",
+      "question": "Is the measured technical competence in Rijkswaterstaat's core actually live and exercised, or is it itself ceremonial—retained in memory and systems but divorced from actual operational decision-making?",
+      "resolution_mechanism": "Post-crisis post-mortem analysis of decision-making during actual flood events; examination of how often institutional protocols are deployed vs. improvised; comparison of institutional recommendations vs. outcomes.",
+      "impact": "If institutional competence itself is ceremonial, the constraint collapses to the husk_reading and both extractiveness and theater_ratio should reclassify upward. If competence is live at the center, the hybrid reading holds and the stratification is the accurate description.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the institutional core maintains live competence or performs competence"
+    },
+    {
+      "id": "distributed_competence_suppressibility",
+      "question": "Could communities develop autonomous preparedness competence if the institutional suppression were removed, or has the stratified system created genuine path-dependency where distributed knowledge is now impossible to reconstruct?",
+      "resolution_mechanism": "Comparison with regions that use distributed preparedness models (e.g., community-based flood defense in Bangladesh, Philippines); measurement of knowledge-retention rates in communities that were excluded from institutional preparedness; longitudinal data on whether retired Rijkswaterstaat staff who work with communities can transfer competence.",
+      "impact": "If distributed competence is recoverable, the suppression is structural and the system is extractive (snare-like). If distributed competence is genuinely irreversible, the system may be closer to a piton—it persists because the alternative is costly and uncertain, not because of active enforcement.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the suppression of distributed preparedness competence is reversible"
+    },
+    {
+      "id": "single_point_of_failure_risk",
+      "question": "How concentrated is actual decision-making authority in Rijkswaterstaat? Is the system robust against the failure of key personnel or institutions, or does it depend on irreplaceable individuals?",
+      "resolution_mechanism": "Organizational audit of Rijkswaterstaat; documentation of succession planning and knowledge transfer; examination of how often key decisions depend on specific individuals; measurement of institutional memory loss after retirements.",
+      "impact": "If single points of failure exist, the risk concentration is part of what the constraint extracts from the periphery. The periphery pays (in terms of lost resilience) so the center can specialize. This would amplify the victim reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional concentration creates irreplaceable single points of failure"
+    },
+    {
+      "id": "reading_contest_axes",
+      "question": "Which reading is actually instantiated depends on three empirical axes that the three sibling readings weight differently. What are the true weights?",
+      "resolution_mechanism": "The competence_reading weights distributed drill participation heavily—if drills meaningfully preserve knowledge across society, it scores higher. The husk_reading weights institutional authenticity—if even the core institutions are performing ritual, the husk reading wins. The hybrid reading (this one) weights institutional competence + peripheral ceremonialism. Resolving requires measurement of: (a) whether institutional core competence is live, (b) whether peripheral participation preserves knowledge, and (c) whether the gap between (a) and (b) is structural or incidental.",
+      "impact": "Different readings lead to different policy recommendations: competence_reading suggests expanding drills; husk_reading suggests institutional overhaul; hybrid_reading suggests decentralization. The constraint's classification depends on which reading is true.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Which of the three sibling readings correctly characterizes preparedness"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.25
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_retention__competence_reading",
+      "preparedness_retention__husk_reading"
+    ],
+    "dual_formulation_note": "The preparedness_retention kernel has three readings instantiated as separate constraints. (1) competence_reading: preparedness is live knowledge preserved through exercises across society, ε ≈ 0.20, claimed_type = rope. (2) husk_reading: preparedness is entirely ceremonial, ε ≈ 0.75, claimed_type = piton. (3) hybrid_reading (this one): preparedness is stratified—institutional competence + peripheral ceremony, ε ≈ 0.62, claimed_type = tangled_rope. Each reading has different beneficiaries (competence: distributed society; husk: institutional administrators; hybrid: institutional core). The three readings coexist as live contested positions in Dutch governance. Each feeds into different policy directions. The constraint family link allows the corpus to track which reading dominates over time and under what conditions actors shift between readings."
+  },
+  "gain_flow": "rijkswaterstaat",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "specialized_hydrological_competence_concentration",
+    "drift_state": {
+      "moment": "contemporary_2025",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_retention__competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "preparedness_retention__husk_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "preparedness_is_stratified",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "technical_competence_concentrable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "preparedness_retention__competence_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

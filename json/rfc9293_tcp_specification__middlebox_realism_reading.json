@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__middlebox_realism_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "RFC 9293 TCP Specification vs. Middlebox-Shaped Reality",
+    "topic_domain": "network_protocol_engineering/distributed_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "middlebox_operators"
+    ],
+    "victims": [
+      "endpoint_implementers",
+      "application_developers",
+      "end_users_privacy_autonomy"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.71
+    }
+  ],
+  "omegas": [
+    {
+      "id": "specification_vs_middlebox_authority_contest",
+      "question": "Whose authority is primary: RFC 9293 as written standard, or deployed middlebox population as de facto protocol?",
+      "resolution_mechanism": "This omega documents the fundamental kernel contest. The three sibling readings resolve it differently. Strict_invariance_reading: RFC authority is primary, middleboxes are defects. Optimization_latitude_reading: both are legitimate within semantic bounds. Middlebox_realism_reading (this story): middleboxes are primary, RFC is aspiration. The resolution is not empirical — it is a reading choice.",
+      "impact": "The reading chosen determines the constraint's classification, the beneficiary/victim assignment, and the type divergence across seats. This is the kernel-reading framing documented in cs_structure.reading_relations and cs_structure.axioms.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "RFC 9293 kernel reading contest: authority locus"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "RFC 9293 is the normative specification for TCP behavior, written as an invariant state machine and published as international standard. But the deployed internet contains hundreds of millions of middleboxes (firewalls, NATs, DPI devices, load balancers, state-reset proxies) that inspect and modify TCP packets for policy enforcement, surveillance, address translation, and load distribution. These modifications violate RFC 9293 in measurable ways: they reset connections, shorten timeouts, drop packets that comply with the specification, and rewrite state that the specification assumes is endpoint-owned. Endpoint implementations must choose between strict RFC compliance (which fails on paths with non-compliant middleboxes) and pragmatic adaptation (which violates the specification to work on the real network). Application developers invest in workarounds (application-level keepalives, connection retry, protocol tunneling) to compensate. This story instantiates the middlebox_realism_reading: the specification's authority is subordinate to what the deployed network actually does. Real TCP is path-dependent: behavior depends on which middleboxes a packet encounters, not on what RFC 9293 says. The coordination function (single interoperable transport semantics) is real, but the extraction function (middlebox control over endpoints) is the dominant structural fact.",
+    "key_agents": [
+      "rfc_editor_authority: Maintains the specification as normative; claims authority to define TCP. Power: institutional. Does not control deployed paths.",
+      "endpoint_implementers: Build TCP stacks; face the bind between spec compliance and middlebox reality. Power: powerful but constrained. Exit: must work around middleboxes.",
+      "middlebox_operators: Deploy state-enforcing network devices; extract control by unilateral packet modification. Power: institutional. Authority is de facto (what they do is what actually happens).",
+      "application_developers: Build apps that depend on TCP's spec; must compensate for middlebox interference. Power: moderate. Payer seat.",
+      "end_users: Use TCP through ISP/enterprise networks containing middleboxes; experience blocked connections, surveillance, throttling. Power: powerless. Trapped exit.",
+      "standards_body_researchers: Measure middlebox behavior empirically. Role: observer. Authority: analytical."
+    ],
+    "logic_rationale": "Extractiveness is 0.68 (high) because middleboxes unilaterally impose control on endpoints without negotiation or compensation. Endpoints pay by losing autonomy and bearing reliability costs. Suppression is 0.71 because the control is enforced physically (packets are modified or dropped) and endpoints cannot refuse without losing network connectivity. Theater is 0.42 (moderate) because middlebox policy enforcement is real (not purely performative) but a significant fraction of their activity is architectural theater — replaying RFC assertions while actually running a different protocol. Accessibility_collapse is 0.58 (moderate) because endpoints have constrained alternatives (QUIC and other protocols inherit the same middlebox problem; IPv6 is not yet dominant; switching networks does not avoid middleboxes) but encryption and tunneling provide some workaround capability. Resistance is 0.64 because endpoint implementers, application developers, and standards bodies actively push back (IETF standards for middlebox-aware TCP, TAPS work, encryption adoption), though the large installed base of middleboxes and the power of network operators limit the practical effect. The measurement series shows extractiveness rising from 0.45 to 0.68 over the interval, driven by accumulation of middlebox deployment and sophisticated policy enforcement (post-2010 DPI expansion, post-2015 encrypted traffic blocking). Theater_ratio rises from 0.18 to 0.42, indicating an increasing share of middlebox activity is devoted to defending the specification-vs-reality gap rather than performing the founding functions (NAT, basic firewall). Suppression_requirement rises from 0.48 to 0.71, indicating escalating effort required to suppress alternative routing (QUIC adoption, encrypted DNS, VPN use) that would bypass middleboxes.",
+    "perspectival_gap": "From the RFC editor seat: the specification is normative, deviations are implementation defects, and the authority structure (the IETF process) is legitimate because it is open and consensus-driven. From the middlebox operator seat: the specification is advisory, deployed network reality is law, and their authority to modify packets derives from control of the physical path. From the endpoint implementer seat: the specification is the goal but middlebox compatibility is the constraint — they must optimize both and the gap is painful. From the end-user seat: the specification is invisible; they experience blocked connections and surveillance, with no way to negotiate with the network. The engine computes these per-seat divergences from the structural data: rfc_editor is analytical (external authority), middlebox_operators and endpoint_implementers are both institutional but with opposite directionalities (beneficiary vs. payer), end_users are powerless and trapped. The computed type divergence — rope from the RFC seat, snare from the middlebox seat, tangled_rope from the implementer seat — is the measurement the framework exists to take.",
+    "directionality_logic": "Middlebox_operators are beneficiaries (d near 0.0): they extract control, have arbitrage-level exit options (they can deploy alternative blocking mechanisms or cooperate with other network operators), and operate at institutional power. Endpoint_implementers are near full targets (d near 1.0): they pay by losing autonomy, are constrained by the need to interoperate, and bear the cost of implementing workarounds. The RFC editor authority is a beneficiary in a narrow sense (their authority is vindicated by the specification's acceptance) but analytically positioned (they do not collect rents). End_users are targets (d near 1.0): they are trapped, powerless, and experience the constraint as blocking and surveillance with no negotiation path. Application_developers are payers (d moderate-high): they pay by implementing workarounds but retain moderate power (they can adopt encryption, use QUIC, pressure vendors) and have some arbiting mobility (they can choose which applications to build). The directionality logic maps to effective extraction: the constraint extracts heavily from powerless end-users (d=1.0 → high χ), significantly from endpoint implementers (d=0.85 → high χ), moderately from app developers (d=0.65 → moderate χ), and captures the gains at middlebox operators and state surveillance agencies (d=0.0 → no χ, they collect).",
+    "mandatrophy_analysis": "The founding problem (address scarcity and firewall state management) is dead: IPv6 solves address scarcity, endpoint firewalls are mature, TLS is ubiquitous. Middleboxes persist because they provide benefits unrelated to the founding problem: ISPs use them for subscriber policy enforcement and revenue collection (traffic shaping, service-level differentiation), enterprises use them for access control and monitoring, state actors use them for surveillance. The constraint is mandatroph: the arrangement persists despite the founding problem being solved because the institutions that deployed middleboxes benefit from their continued operation and have the power to defend them. The specification (RFC 9293) has become theater: endpoints are told to implement it, but middleboxes silently enforce a different protocol, and the entire ecosystem has adapted to expect deviations. The classification as tangled_rope (rather than snare) rests on the genuine coordination function the specification provides (single interoperable semantics) plus the active enforcement required to suppress alternatives (blocking QUIC, encrypted DNS, VPNs, alternative routing). If the middleboxes were purely extractive with no coordination function, this would be snare. The presence of both functions makes it tangled_rope, though the balance has shifted significantly toward extraction over the interval.",
+    "kernel_context": "This constraint instantiates ONE reading of the contested RFC 9293 TCP specification kernel. The kernel is the text of RFC 9293 itself — a formally specified state machine and behavior semantics for TCP implementations. Three readings are live: (1) strict_invariance_reading: the specification is an invariant that implementations must replicate exactly; deviations are protocol corruption and interoperability failures. (2) optimization_latitude_reading: the specification defines behavioral outcomes (reliable ordered byte stream delivery) and permits implementation latitude for performance and engineering pragmatism within semantic bounds; deviations that preserve the outcome are acceptable. (3) middlebox_realism_reading (this constraint): the specification describes ideal endpoint behavior in isolation, but real TCP is shaped by the deployed middlebox population; specification authority is subordinate to what the network actually does, and endpoints must adapt to middleboxes regardless of RFC compliance. This story is ONLY the middlebox_realism_reading. The other readings are separate constraints with different ε values and classifications. The reading contest is the evidence the framework measures."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "rfc9293_tcp_specification__strict_invariance_reading",
+      "rfc9293_tcp_specification__optimization_latitude_reading",
+      "internet_middlebox_deployment",
+      "tls_encryption_adoption_pressure"
+    ],
+    "dual_formulation_note": "RFC 9293 TCP specification is a kernel with three structurally distinct readings. This story instantiates middlebox_realism_reading: the specification's authority is subordinate to deployed middlebox reality. The strict_invariance_reading treats RFC 9293 as an invariant protocol law (mountain). The optimization_latitude_reading treats RFC 9293 as defining outcomes with implementation freedom (rope). Each reading is a separate constraint with its own ε, classification, and beneficiary/victim structure. The readings coexist as live positions held by different institutional actors (RFC editors, network operators, endpoint vendors). Link all three via network.affects_constraints to document the family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "rfc_specification_as_normative_invariant",
+    "drift_state": {
+      "moment": "contemporary_deployed_middlebox_dominance",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "rfc9293_tcp_specification__strict_invariance_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "rfc9293_tcp_specification__optimization_latitude_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "deployed_middleboxes_define_de_facto_protocol",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "endpoint_autonomy_subordinate_to_network_operator_control",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

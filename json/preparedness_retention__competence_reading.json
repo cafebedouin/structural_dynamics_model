@@ -1,0 +1,262 @@
+{
+  "header": {
+    "constraint_id": "preparedness_retention__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "c795ab4d-47f9-4a50-a908-eee005b9f31e"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.15,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.18,
+    "claimed_type": "rope",
+    "human_readable": "Preparedness as Live Competence Retention Through Drills and Inspections",
+    "topic_domain": "governance/institutional_memory/disaster_preparedness",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "population_safety",
+      "operational_institutions"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.13
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.15
+    }
+  ],
+  "omegas": [
+    {
+      "id": "competence_vs_ceremony_distinction",
+      "question": "How do we distinguish whether a drill regiment maintains actual operational competence versus performing competence as theater?",
+      "resolution_mechanism": "Measure post-disaster response performance against predictions derived from drill performance; compare response capacity in jurisdictions with continuous drill regimens versus lapsed regimens; conduct embedded observation of how personnel use drill learning in actual operations.",
+      "impact": "If competence is genuine and measurable through disaster outcomes and skill tests, the constraint's classification as low-extraction coordination holds. If drills consistently fail to predict actual performance or competence atrophies despite regular drills, the classification shifts toward piton (inertial ritual with decoupled function).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether drill performance translates to actual operational competence."
+    },
+    {
+      "id": "reading_boundary_husk_vs_competence",
+      "question": "This reading claims preparedness IS live exercised knowledge. The sibling husk_reading claims preparedness IS memorial performance disconnected from live knowledge. Are these two readings of the same constraint (competing framings of a single commitment), or two entirely different constraints?",
+      "resolution_mechanism": "Examine the kernel text—what commitment do drills and inspections instantiate? If the commitment is 'maintain response capacity by exercise' (kernel premise independent of outcome), then both readings are readings of it, distinguished by whether the exercises actually work. If the kernel is instead 'perform the appearance of preparedness,' then this reading and husk_reading are incompatible descriptions of different commitments.",
+      "impact": "If this reading and husk_reading are readings of the same kernel, they coexist_with each other (different parties hold them, neither forecloses the other). If they describe different kernels, this is not a kernel reading at all—it is a standalone constraint story about a competence-preserving practice that happens to share institutional apparatus with a ceremonial reading of a different kernel.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether this reading shares a kernel with its siblings or describes a distinct constraint."
+    },
+    {
+      "id": "fiscal_sustainability_omega",
+      "question": "Is continuous competence preservation through drills fiscally sustainable as written, or does budget pressure eventually force degradation toward ceremonial compliance (theater)?",
+      "resolution_mechanism": "Time-series analysis of drill budget as fraction of institutional budget across multi-decade horizon; regression of drill frequency against fiscal stress indicators; case comparison of agencies that sustained vs. abandoned drill regimens under budget cuts.",
+      "impact": "If competence-preserving drills are fiscally sustainable, the constraint remains a low-extraction coordination mechanism. If budget pressure systematically drives drift toward theater (measured by increasing ratio of drill count to actual personnel engagement depth), the constraint degrades into a hybrid or piton state.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the competence reading remains viable across fiscal cycles."
+    },
+    {
+      "id": "identity_fusion_preparedness_professionals",
+      "question": "For emergency response professionals, has competence-preservation become an identity-constituting practice, such that questioning drill regimens triggers identity threat rather than substantive debate?",
+      "resolution_mechanism": "Interview and ethnographic study: ask personnel why drills matter and examine whether answers focus on capacity/skill outcomes or on professional identity/community belonging. Test whether competence critiques are met with adaptation or with identity-protective backlash.",
+      "impact": "If identity fusion is high, competence-preservation language may mask extraction (time, effort, career constraint) that personnel tolerate because the practice constitutes their professional self. This would shift the beneficiary structure from 'population safety + operational personnel' to 'professional identity maintenance,' with operational personnel bearing identity-locked costs rather than genuinely coordinated ones.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether competence maintenance has become fused with professional identity."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This is the competence_reading of the preparedness_retention kernel. It asserts that preparedness is fundamentally live exercised knowledge—that drills, inspections, and competence-assessment regimens are not ceremonial performances but essential coordination mechanisms that prevent atrophy of operational knowledge across personnel turnover and time gaps between real events. The constraint names the commitment: maintain response capacity through continuous practice and evaluation. This reading coexists with two sibling readings: the husk_reading (preparedness is memorial theater disconnected from actual competence) and the hybrid_reading (preparedness is stratified—technical competence retained in specialized institutions while broader societal memory becomes ceremonial). The three readings share the same institutional apparatus (drills, inspections) but disagree fundamentally on whether that apparatus functions as described.",
+    "kernel_context": "Kernel: preparedness_retention. Contested readings: competence_reading (THIS STORY), husk_reading, hybrid_reading. The kernel commitment is ambiguous: 'Preparedness is maintained through drills and inspections.' But what does 'maintained' mean, and does the apparatus actually achieve it? This reading instantiates the interpretation that drills ARE the live practice that keeps competence current. The husk_reading interprets the same institutional apparatus as ceremonial performance—the rituals feel like retention but competence has decoupled. The hybrid_reading interprets preparedness as stratified: some sectors (water authorities, specialized military units) maintain genuine competence through embedded practice, while broader societal preparedness has become hollow. The three readings cannot all be true of the same constraint if we require ε to be invariant. This story operationalizes the competence interpretation: ε is low because drills solve a genuine coordination problem (knowledge retention across time) with minimal coercive overhead. If the husk or hybrid readings were true instead, ε would be higher (extraction of time and effort from personnel without functional return). The engine will classify each reading separately from its structural data; where readings diverge in their computed type, that divergence IS what the committer frame exists to measure.",
+    "key_agents": [
+      "Emergency response institutions: set and enforce drill regimens, manage competence assessment. They argue drills are essential; they bear the cost of personnel release and exercise administration.",
+      "Operational personnel: participate in drills, invest time and cognitive effort. They benefit from competence development and professional advancement; they pay the cost of time away from routine work.",
+      "Population at risk: passive beneficiaries who depend on preparedness when disasters occur. They have no voice in drill design or standards.",
+      "Fiscal administrators: fund drills and can redirect resources. They face the cost-benefit tradeoff between present spending and future (probabilistic) disaster reduction.",
+      "Institutional memory keepers: maintain procedures, competence standards, lesson-retention systems. They benefit from drills as data sources for continuous improvement.",
+      "Disaster historians and analysts: provide empirical evidence on whether drills preserve actual competence or degenerate into theater."
+    ],
+    "logic_rationale": "Extractiveness is low (0.28) because the constraint solves a genuine coordination problem with minimal coercive framing. Drills are voluntary participation in most democratic systems; institutions can (and do) choose to scale them back. Personnel have biographical/career incentives aligned with competence—skill development improves career prospects. Suppression is very low (0.15) because the constraint does not require active suppression of alternatives; instead, it offers a solution (competence through practice) that actors adopt because the problem is real. Theater ratio is modest (0.22) because some ceremonialism is inevitable in institutional practice, but the core function (skill development, knowledge transfer) remains substantive. Accessibility collapse is moderate-high (0.72) because, once you understand that competence atrophies without practice, the need for drills becomes nearly unavoidable—the constraint emerges from structural necessity, not from suppressed alternatives. Resistance is low (0.18) because the constraint does not demand coercive compliance; it asks for something personnel often want (skill development, professional advancement). The measurement series shows slow, modest increase in extractiveness and theater ratio over 40 time units, reflecting a slight drift toward increased administrative burden and bureaucratic documentation as drill programs mature. This is normal institutional aging, not evidence of degradation toward pure extraction. The stability at time_point 40 (compared to time_point 30) suggests the drift plateaus.",
+    "perspectival_gap": "The institutional agenda-setters (emergency response organizations) should compute this constraint differently from operational personnel and fiscal administrators. From the agenda-setter perspective, drills are a core function they control and believe in—low extraction, high necessity. From the operational personnel seat, drills are a coordinated activity that benefits their career but costs time—symmetric, with alignment on shared competence goals. From the fiscal administrator seat, drills are a recurrent cost with delayed, probabilistic benefit—higher apparent extraction unless they believe the competence argument strongly. The engine computes d per seat from the structural data (beneficiary/victim declarations, exit options, power): institutions get low d (beneficiary), personnel get symmetric d (coordinated), administrators get moderate d (payer but mobile, can redirect). This divergence is the analytical signal—the competence reading depends on actors having alignment on the value of live knowledge.",
+    "directionality_logic": "Beneficiaries: population_safety (passive, benefits from competence when disaster occurs) and operational_institutions (direct stake in maintaining response capacity). Neither is extractive; both benefit from drills. Payers: operational_personnel (time and effort, but also career benefit—symmetric) and fiscal_administrators (budget cost, mobile exit—higher d but not trapped). The constraint is characterized as pure coordination because the transfer (time, budget) flows to a genuine functional output (competence preservation), not to rents or asymmetric advantage. No agent is identity_locked to participation; drills can be scaled or abandoned. Exit is constrained for personnel (their career depends on competence demonstration) but not coercively constrained—the constraint creates conditions they find beneficial.",
+    "mandatrophy_analysis": "Mandatrophy detection: The founding problem (knowledge atrophy across personnel turnover and time gaps between events) remains LIVE. Drills and inspections directly address that problem. There is no evidence that the founding mandate has outlived its function. The constraint does not fit the mandatrophy profile. However, the hybrid_reading and husk_reading suggest that in some jurisdictions, the constraint DOES show mandatrophy: the drill apparatus persists ceremonially while actual competence maintenance has moved elsewhere (to specialized agencies like water authorities) or has degraded entirely (to theater). This reading explicitly rejects that diagnosis—it asserts that where drills are done well, they preserve actual competence. The engine will measure this disagreement through the (founding_problem_status x disappearance_verdict) mismatch: this reading has status=live + verdict=world_rearranges (drills matter, disaster response degrades without them). If measurements show theater_ratio rising sharply or resistance collapsing, the mismatch consumer will flag the reading as contestable."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_retention__husk_reading",
+      "preparedness_retention__hybrid_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading (competence_reading) of the preparedness_retention kernel. It coexists with husk_reading (preparedness as hollow ceremony) and hybrid_reading (preparedness as stratified technical/ceremonial). The three readings share institutional apparatus (drills, inspections) but disagree fundamentally on whether that apparatus preserves actual operational competence or has decoupled into theater. ε-invariance requires separate stories: the competence reading operationalizes low ε (genuine coordination, minimal extraction); the husk reading operationalizes higher ε (time and effort extracted without functional return); the hybrid reading operationalizes intermediate ε (competence genuine in specialized institutions, hollow in broader society). All three stories link via network.affects_constraints to document the kernel contest. Engine classification divergence across readings is the measurement—committer frame exists to capture what competence-preservation MEANS when different institutional actors hold different interpretations of whether it works."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_retention__husk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "preparedness_retention__hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "live_knowledge_requires_continuous_practice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "competence_preservable_through_coordinated_practice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "operational_competence_live_and_maintained",
+    "drift_state": {
+      "moment": "contemporary_post_covid_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

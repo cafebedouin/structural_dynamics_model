@@ -1,0 +1,387 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__simulation_as_sufficient",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "dc5d349d-ee3a-4c08-a5d7-f6215365414c"
+  },
+  "base_properties": {
+    "extractiveness": 0.61,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.54,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-as-Sufficient Competence Retention Framework",
+    "topic_domain": "safety/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_infrastructure_operators",
+      "training_standardizers"
+    ],
+    "victims": [
+      "field_practitioners",
+      "operational_safety_culture"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "simulation_infrastructure_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Designs, maintains, validates, and expands high-fidelity simulation environments. Publishes research supporting simulator-sufficiency claims. Sits on standards bodies and certification boards. Directly controls what scenarios practitioners train on and what metrics count as 'competent.' Benefits from constraint expansion because larger simulator infrastructure = larger budgets, more permanent staff, more institutional authority. Can shift to competing organizations if their current employer invests less in simulation."
+    },
+    {
+      "name": "training_standardizers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Sets curricula, passing scores, and competence standards. Maintains the certification apparatus. Benefits from simulator-sufficiency because simulator metrics are portable, auditable, and easy to defend in regulatory contexts. Field judgment and near-miss learning are ambiguous and hard to standardize. Can move to another standardizing body if their current one deprioritizes simulators."
+    },
+    {
+      "name": "field_practitioners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Operate in real environments where context-specific judgment and tacit knowledge accumulated through experience matter. Must pass simulator benchmarks to maintain certification and employment. Invest time in both simulator training (to pass certification) and field learning (to be actually competent). Bear the cost of gaps between simulator scenarios and real-world complexity. Cannot exit the constraint: leaving professional practice means loss of livelihood; refusing simulator training means loss of certification. Carry responsibility for real consequences; their competence is measured by simulator performance rather than real outcomes."
+    },
+    {
+      "name": "operational_safety_culture",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The shared epistemic and procedural traditions that accumulate across field experience, incident analysis, and embodied learning in high-stakes contexts. Includes tacit knowledge about how systems actually fail, pattern recognition developed over decades, and the moral gravity of responsibility. The constraint suppresses this by institutionalizing the claim that simulator performance is equivalent. Practitioners internalize that field judgment is secondary to metrics, reducing investment in incident-based learning networks. Over time, the organizational memory of tacit competence-building erodes."
+    },
+    {
+      "name": "catastrophe_prevention_goal",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The ultimate purpose: keeping practitioners competent to prevent catastrophes without requiring that catastrophes occur to teach the lesson. This is a vindicated proposition — if the constraint achieves catastrophe prevention, it succeeds. The question is whether simulator-sufficiency is the best pathway to this goal, or whether alternative readings (near-miss learning, field experience) achieve it more effectively."
+    },
+    {
+      "name": "near_miss_learning_networks",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Root-cause investigation teams, incident learning forums, and cross-organizational lesson-sharing mechanisms. Excluded because the constraint's logic treats simulator performance as the primary competence measure, making field-sourced learning secondary. They would argue that incidents reveal failure modes simulators miss, and that structured near-miss analysis maintains competence just as effectively as simulation. Their participation in competence-definition would require admitting that non-simulator pathways are valid, which would undermine the constraint."
+    },
+    {
+      "name": "catastrophe_researchers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study why catastrophes occur, what competencies prevent them, and how training shapes actual performance. Can measure whether simulator-trained practitioners have equivalent, better, or worse catastrophe-prevention outcomes compared to field-experienced or near-miss-trained cohorts. Provide external validation or refutation of the constraint's core claim: that simulator performance correlates with or constitutes genuine competence."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem of maintaining catastrophe-avoidance competence during long quiet periods when actual catastrophes do not occur to refresh skills. Enables organizations to train systematically and repeatedly on low-frequency, high-consequence scenarios without waiting for real events. Provides a repeatable, auditable pathway for competence validation.",
+    "transfer_function": "Moves authority to define and measure competence from field practitioners and incident-learning networks to simulation engineers and training standardizers. Moves resources from near-miss investigation and tacit-knowledge documentation to simulator platform development and maintenance. Moves responsibility for 'readiness' from professional judgment to simulator score thresholds. Moves institutional legitimacy from incident-based organizational learning to audit-certified training completion.",
+    "absent_voices": "Practitioners trained primarily through near-miss incidents and field experience; organizations that maintain competence successfully through incident learning networks rather than simulation; researchers who have documented failure modes in simulator-trained cohorts; tacit-knowledge holders whose expertise was never standardizable and thus invisible to certification systems. These voices would attest that simulator training is necessary but not sufficient; that context-specific judgment cannot be fully standardized; and that organizations relying exclusively on simulators show competence gaps in novel scenarios where field experience would help.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint vanished — if simulator performance were no longer sufficient grounds for certification — training pathways would diversify. Organizations would invest more heavily in near-miss learning networks, incident investigation capability, and field-experience requirements for advancement. Simulator investment would decline or shift from primary competence vehicle to supplementary tool. Competence definition would reintegrate field judgment, tacit knowledge, and incident-sourced learning. The institutional architecture of high-reliability organizations would reorganize around multiple competence pathways rather than a single simulator-validated pathway.",
+    "founding_problem": "High-reliability organizations must maintain catastrophe-avoidance competence during periods when actual catastrophes do not occur. Practitioners cannot wait years or decades for a real disaster to refresh their competence. How can organizations keep people ready for low-frequency, high-consequence events without either waiting for the events or accepting a different competence-maintenance mechanism?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The constraint's defenders and catastrophe researchers both corroborate: competence decay during quiet periods is real and has been documented in actual incidents where long-quiet organizations failed when something did happen. However, near-miss researchers and field practitioners corroborate that the founding problem has alternative solutions that the constraint does not acknowledge: organizations with strong incident investigation cultures maintain competence through near-miss analysis and field-sourced learning during quiet periods. The founding problem is live; the claim that simulation is the uniquely valid solution is contested by external observers and alternative-pathway organizations."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "High-reliability organizations (aviation, nuclear, healthcare, emergency response) face the problem of maintaining catastrophe-avoidance competence during long periods without actual catastrophes. This constraint instantiates ONE READING of a contested kernel about how competence should be retained and validated: the assertion that high-fidelity simulation constitutes genuine exercise of catastrophe-avoidance competence because the cognitive and procedural demands are structurally equivalent to real events. This reading shapes training pathways, resource allocation, certification standards, and the relative authority of different knowledge sources. Three readings of the kernel coexist: (1) 'catastrophe_as_necessary' — only real catastrophes provide the visceral stakes and uncontrolled learning necessary for genuine competence; (2) 'near_miss_as_bridge' — near-miss incidents and minor failures provide sufficient real-world feedback and tacit-knowledge development without catastrophes; (3) 'simulation_as_sufficient' — simulation is structurally equivalent and constitutes genuine competence. This story models reading (3) as a tangled rope: it solves a genuine coordination problem (training people without waiting for catastrophes) while creating asymmetric extraction (simulator operators and training standardizers gain permanent institutional authority; field practitioners lose autonomy; tacit-knowledge development is suppressed). The theater ratio rises from 0.35 to 0.58 over 40 years, indicating that simulator activity increasingly becomes certification-passing and audit-compliance rather than genuine skill-building — a characteristic trajectory for tangled ropes aging toward piton-hood. The constraint requires active enforcement because field practitioners and incident-learning networks continuously push back against the equivalence claim.",
+    "key_agents": [
+      "simulation_infrastructure_operators: institutional beneficiary and agenda-setter; directly gains budget, permanent staff, and authority from constraint expansion; can exit to rival organizations",
+      "training_standardizers: institutional beneficiary; gains power to define competence through portable metrics; mobile power level — can shift to another standards body",
+      "field_practitioners: moderate-power payers; constrained exit (certification requirement); bear the cost of simulator-field mismatches and reduced tacit-knowledge development",
+      "operational_safety_culture: powerless, identity-locked payer; suppressed by the assertion that simulator performance is sufficient; represents the cumulative, tacit-knowledge traditions of field learning",
+      "near_miss_learning_networks: excluded; represent the alternative competence pathway; structurally prevented from participating in competence definition",
+      "catastrophe_researchers: observers; can measure whether the reading's core claim is empirically true (whether simulator-trained practitioners have equivalent competence to field-experienced or near-miss-trained cohorts)"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.42 at t=0 to 0.61 at t=40, with the steepest growth in the first 15 years as simulator infrastructure expands and becomes standardized. Growth plateaus after t=25, indicating the constraint reaches institutional equilibrium once simulator standardization is entrenched and practitioners have internalized that simulator performance is the primary competence measure. Theater ratio shows parallel growth (0.35→0.58), indicating that a growing share of simulator activity is performative validation (passing audits, maintaining certifications) rather than genuine skill-building. This is the Goodhart drift characteristic of tangled ropes: the measurement (simulator score) becomes decoupled from the underlying phenomenon it was supposed to measure (real catastrophe-avoidance ability). Suppression follows the same trajectory (0.55→0.72) because active institutional enforcement is required to prevent field practitioners and incident-learning networks from reclaiming authority over competence definition. Accessibility collapse (0.68) is moderate because near-miss learning remains available as an alternative, but is institutionally suppressed rather than structurally impossible. Resistance (0.54) is moderate-high because field practitioners continuously attest that simulator training is incomplete, and catastrophe researchers measure divergent outcomes between simulator-trained and field-experienced cohorts. The rise in all three enforcement-related metrics (suppression, theater, accessibility collapse) reflects a tangled rope at the inflection point where the real coordination function (training without catastrophes) is being consumed by the extractive function (institutional control over competence definition). One shared time grid is used for all metrics; every metric is authored at every examined time point to enable proper temporal analysis.",
+    "perspectival_gap": "Simulator operators and training standardizers experience this constraint as genuine coordination: they solve a real problem (maintaining competence without catastrophes), maintain control over resources and institutions that depend on simulation, and see certification through simulator performance as enabling safety. Field practitioners experience the same structure as extractive: their field judgment is systematized into subordinate status, their incident-based learning is downgraded relative to simulator scores, and they carry real responsibility while their competence is measured by simulator performance. Catastrophe researchers sit at a seat where they can measure which framing is empirically more accurate: whether practitioners trained primarily through simulators have equivalent or divergent catastrophe-prevention outcomes compared to field-experienced or near-miss-trained practitioners. The engine computes these divergent directionalities from the structural data: simulator operators collect institutional authority and budget (d is low, beneficiary direction); field practitioners lose autonomy and bear the cost of gaps between simulator fidelity and field reality (d is high, target direction). The institutional power asymmetry (institutional vs. moderate power) means simulator operators' preferences shape the constraint's evolution far more than field practitioners' objections.",
+    "directionality_logic": "Simulator infrastructure operators are structural beneficiaries (d ≈ 0.15, adjusted downward from the analytical default of 0.0 only because they do provide a real service — simulation is necessary, not purely extractive). They set the agenda, maintain institutional structures, gain budget and permanent positions, and have arbitrage-grade exit options (can move to rival organizations if their current employer deprioritizes simulation). Training standardizers are also beneficiaries (d ≈ 0.25) because they gain the power to define competence through portable, measurable metrics; they have mobile exit (can join another standards body). Field practitioners are the structural targets (d ≈ 0.78) because they must pass simulator thresholds (constrained exit), bear the cost of simulator-field mismatches, and have their professional judgment subordinated to metrics. Operational_safety_culture is abstract but deeply suppressed (identity-locked exit): practitioners internalize that field judgment is secondary, suppressing the long-term development of tacit wisdom that would normally accumulate through incident analysis. Near-miss learning networks are excluded rather than coordinated (they would argue for a different competence pathway, but are structurally prevented from participating in competence-definition).",
+    "mandatrophy_analysis": "The tangled rope classification holds because the constraint carries both a genuine coordination function (training people systematically to be ready for catastrophes without waiting for catastrophes to occur) and substantial asymmetric extraction (simulator operators and standardizers gain permanent institutional authority; field practitioners and incident-learning networks lose autonomy; tacit-knowledge development is suppressed). The rising theater ratio (from 0.35 to 0.58) indicates that the constraint is aging toward a piton state: the coordinating function is real but increasingly theatrical, while the extraction persists. If the theater ratio approaches 0.7+, the constraint may reclassify as piton (atrophied coordination, persistent extraction by pure institutional inertia). The suppression measurement (0.55→0.72) shows that increasingly active institutional force is required to prevent field practitioners from reasserting tacit-knowledge pathways. The accessibility collapse (0.68) shows that alternatives are suppressed but not eliminated: organizations with strong near-miss cultures do maintain competence without heavy simulator investment, proving that simulator-sufficiency is not structural necessity. The rise in suppression and theater together is diagnostic of a constraint whose real coordination function is shrinking relative to its extractive function — exactly the tangled-rope-to-piton trajectory.",
+    "kernel_context": "This constraint instantiates the 'simulation_as_sufficient' reading of a contested kernel: 'competence_retention_exercise'. The kernel is the proposition that catastrophe-avoidance competence can be maintained during quiet periods without requiring catastrophes to occur. Three readings of this kernel coexist as live positions held by different research communities and organizations: (1) 'catastrophe_as_necessary' (constraint_id: competence_retention_exercise__catastrophe_as_necessary) — asserts that only real catastrophic events provide the organizational learning, visceral stakes, and uncontrolled complexity required to maintain genuine competence; (2) 'near_miss_as_bridge' (constraint_id: competence_retention_exercise__near_miss_as_bridge) — asserts that near-miss incidents and minor failures provide sufficient real-world feedback, tacit-knowledge development, and procedural validation without requiring full catastrophes; (3) 'simulation_as_sufficient' (this reading) — asserts that high-fidelity simulation constitutes genuine competence exercise because the cognitive and procedural demands are structurally equivalent to real events. These readings differ fundamentally in what counts as valid evidence of readiness and what paths organizations must pursue to maintain competence. Reading (1) and (3) foreclose each other within a single framework: one cannot simultaneously hold that 'only real catastrophes teach competence' and 'simulation teaches competence as effectively.' Reading (2) coexists with both (1) and (3) because near-miss learning could be the bridge that validates either catastrophe-dependence or simulation-sufficiency — it is a competing pathway, not a logically incompatible foundation."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_structural_limit",
+      "question": "Is there a structural (not merely technical) limit to how well simulation can replicate the contextual, emotional, cascading-consequence, and decision-under-irreversible-uncertainty dimensions of actual catastrophic events?",
+      "resolution_mechanism": "Longitudinal comparative study: track organizations using different competence-maintenance models (simulation-primary, near-miss-primary, field-experience-primary) over 20+ years. Measure catastrophe-prevention performance, competence-gap emergence, failure modes in novel scenarios, and tacit-judgment quality in improvisation. If simulator-trained cohorts show divergent failure signatures or competence erosion compared to field-experienced cohorts, a structural fidelity limit exists.",
+      "impact": "If a structural ceiling exists, the 'simulation_as_sufficient' reading's core axiom becomes empirically false even within the reading's own epistemic framework. The reading would be foreclosed toward 'catastrophe_as_necessary' or 'near_miss_as_bridge' — simulation would be necessary but insufficient. If no ceiling, the reading remains defensible. This is the empirical crux of the kernel contest.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether simulation has an irreducible fidelity gap relative to real catastrophic scenarios."
+    },
+    {
+      "id": "tacit_knowledge_suppression_mechanism",
+      "question": "Does the institutional assertion that 'simulator performance is sufficient' actively suppress the development and transmission of tacit, situation-specific knowledge that would otherwise emerge from field experience and incident analysis?",
+      "resolution_mechanism": "Ethnographic and cognitive study: compare organizations with simulation-heavy and near-miss-heavy competence models on (a) breadth and depth of incident-analysis networks, (b) practitioners' investment in field judgment and pattern-recognition development, (c) organizational memory of failure modes and contextual lessons, (d) post-exit practitioner behavior — do people leaving simulator-heavy organizations reassert tacit-knowledge commitment?",
+      "impact": "If suppression is structural (practitioners internalize that field judgment is secondary, reducing collective investment in near-miss analysis), the long-term competence cost is hidden in the measuring system. Extractiveness would be higher than measured because the constraint extracts not just authority but cognitive capacity and organizational epistemology itself. This would provide evidence for deeper snare-hood.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulator-sufficiency claims suppress tacit-knowledge development and incident-learning investment."
+    },
+    {
+      "id": "reading_forecloses_to_near_miss_by_axiom_overriding",
+      "question": "As simulator technology matures and theater-ratio rises (simulators become increasingly optimized for certification-passing rather than competence-transfer), does the reading's own core axiom ('structural equivalence of cognitive demands') erode? Can the reading hold if simulators diverge from field realism in service of measurability and audit compliance?",
+      "resolution_mechanism": "Track the evolution of simulator design objectives and actual design choices over time. Measure divergence between field-realism requirements and certification-compliance optimization. If divergence becomes substantial, the reading's axiom is no longer defensible within its own framework — the reading would have abandoned its core epistemic ground.",
+      "impact": "The reading could drift from 'simulation is equivalent' toward 'simulation is an efficient proxy for certification' — a shift from an empirical claim to an administrative claim. This would constitute axiom_overriding within the reading's own tradition and would create space for foreclosure toward near_miss_as_bridge (which makes no structural equivalence claim, only sufficiency of field-sourced learning).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the reading's core premise (structural equivalence) can survive institutional pressures that optimize simulators for measurability rather than field-relevance."
+    },
+    {
+      "id": "practitioner_suppression_internalization",
+      "question": "For field practitioners, is suppression of tacit-knowledge development and near-miss learning structural (external institutional barriers) or internalized (practitioners adopt the belief that simulator performance is sufficient)?",
+      "resolution_mechanism": "Post-exit measurement: practitioners leaving simulator-heavy organizations — do they maintain or reassert commitment to simulator-sufficiency framing after external constraints are removed? If suppression is internalized, the constraint's epistemic footprint persists after institutional exit; if structural, practitioners reassert field judgment immediately.",
+      "impact": "If suppression is internalized, the constraint's actual extraction is deeper than measured — it constrains not just organizational learning but individual epistemic autonomy and professional identity. This would constitute evidence for identity-locking and movement toward snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether practitioner suppression persists after exit — evidence for internalized versus structural suppression."
+    },
+    {
+      "id": "kernel_reading_coexistence_boundary",
+      "question": "Can 'simulation_as_sufficient' and 'near_miss_as_bridge' coexist indefinitely as organizational choices, or does institutional rationalization eventually force a kernel-level resolution?",
+      "resolution_mechanism": "Historical analysis: organizations that have tried to run both pathways simultaneously (heavy simulator investment AND strong incident-learning networks) — do they eventually commit to one, or maintain both? Regulatory pressure analysis: do regulators eventually require one reading or the other, or allow both?",
+      "impact": "If regulatory or economic pressures eventually force a choice, the kernel moves from 'contested' to 'resolved' — one reading forecloses the others. If organizations can sustain both indefinitely, coexistence is stable. This determines whether the kernel contest is a permanent feature of high-reliability organizational structure or a temporary state heading toward resolution.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the three readings can coexist indefinitely or regulatory/economic forces will foreclose some readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_retention_exercise__catastrophe_as_necessary",
+      "competence_retention_exercise__near_miss_as_bridge",
+      "high_reliability_organizational_learning",
+      "incident_investigation_institutional_pathways"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the kernel 'competence_retention_exercise'. The sibling readings 'catastrophe_as_necessary' and 'near_miss_as_bridge' instantiate alternative epistemic frames for the same founding problem. All three readings affect the institutional structure of high-reliability organizations and the mechanisms by which field learning is captured and transmitted. The network links show which constraints' operational success depends on the outcome of the kernel contest. This reading (simulation_as_sufficient) directly competes with near-miss_as_bridge for resource allocation and institutional legitimacy."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "gain_flow": "simulation_infrastructure_operators",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "simulator_sufficiency_premise",
+    "drift_state": {
+      "moment": "contemporary_operational_safety_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "competence_retention_exercise__catastrophe_as_necessary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "competence_retention_exercise__near_miss_as_bridge",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulator_cognitive_demand_equivalence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "procedural_standardization_prerequisite",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
