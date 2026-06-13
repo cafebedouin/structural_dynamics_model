@@ -1,0 +1,22 @@
+{
+ "archive": "iran_essay_2026-06-11",
+ "reason": "OQ-109 Phase C population correction (operator-approved, 2026-06-12): two stories from the 'strategic_communications_geopolitical_narrative' (Iran/Hormuz-Beirut) essay run were sitting untracked in the live prolog/testsets/, loading the corpus at n=7. They carry the post-removal provenance schema but were generated under a DIFFERENT generation regime than cohort zero (model claude-sonnet-4-20250514 vs _c0's claude-sonnet-4-5-20250929; temperature=1.0 vs 0.2; source_essay strategic_communications_geopolitical_narrative vs cohort_zero_regen; seeded_from=none). NOT cohort-zero-homogeneous, so they may not join the cohort-zero stability/sigma-seat population. Archived out of the live glob to restore the cohort-zero population to the 5 _c0 stories and make the n=5 manifest true again.",
+ "disposition": "separate cohort (genuine 2-story essay, not a fragment)",
+ "disposition_witness": "outputs/tensions_ledger.md lists exactly these two stories from this essay; positive control `grep -l strategic_communications_geopolitical_narrative json/*.json` returns exactly these two and no others (the search demonstrably finds essay members, so 'only two' is a fact about the corpus, not the search). => possibility 2 (complete 2-story essay), not possibility 1 (interrupted-run fragment).",
+ "schema_commit": "c6d6880c39ec6bdfedde2a1d41cc00211f451559",
+ "prompt_commit": "046e0a40c34cddf4fff29b8c15f632dbdef31b7a",
+ "one_shot_example": "agent/example_platform_commission.json",
+ "code_commit": "59ea29c929af2822e5a95e4649024550d2c466d3",
+ "archived_at": "2026-06-12",
+ "n_pl": 2,
+ "n_json": 2,
+ "n_reports": 2,
+ "generation_regime": {
+  "model": "claude-sonnet-4-20250514",
+  "sampling_params": "temperature=1.0",
+  "source_essay": "strategic_communications_geopolitical_narrative",
+  "seeded_from": "none (organically grown, not regen-seeded)"
+ },
+ "stories": ["proxy_integration_narrative", "strategic_victory_narrative"],
+ "notes": "Validates against the schema AS OF schema_commit (the live cohort-zero schema at the time of generation), not necessarily a later live schema. Provenance-quality caveats travel with the archive, not blockers: (1) strategic_victory_narrative.json carries generated_date '2025-01-18' (model-hallucinated; this topic-run driver let the model fill generated_date rather than driver-stamping it, unlike cohort_zero_regen which overrides it); proxy_integration_narrative.json carries '2026-06-11'. (2) strategic_victory_narrative.pl emits story_seed/3 redefinition + omega_variable discontiguous lint warnings on load (separate-cohort hygiene). Revivable later as its own homogeneous cohort with its own snapshot manifest; do NOT mix into cohort-zero denominators (OQ-26 / OQ-109 item 4-6 homogeneity)."
+}
