@@ -45,6 +45,52 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-13 — Twin cross-model comparison harness + two generation-quality fixes (classify_corpus driver; Fix A axiom-status, Fix B sibling snap)
+**Files:** python/run_pipeline.py, python/story_repair.py, agent/generate_kernel_corpus.py, python/audits/twin_comparison.py, audits/2026-06-13_twin_comparison/
+**Tier:** landed
+
+Plan `federated-toasting-sedgewick.md` implemented in four commits.
+
+**Fix A (generation-quality, forward-only — does NOT alter the built twins, which
+author zero out-of-enum statuses):** `generate_kernel_corpus.py` prompt now offers only
+`holdable`/`overridden` (not `foreclosed`, which is engine-derived via
+`cs_axiom_foreclosed/2`). `story_repair.py` coerces `contested→holdable`,
+`foreclosed→holdable` (NOT `overridden`: that over-claims displacement unless a
+`cs_axiom_contradiction` is authored, which repair cannot see — contradictions live in
+the scope manifest / separate `_contradictions.pl`, so it takes the plan's safe-fallback
+branch). Any OTHER out-of-enum value is COUNTED in `repair_stats` + reported to stderr +
+coerced holdable; `process_batch_results` surfaces a nonzero count as an escalation line.
+
+**Fix B:** `snap_sibling_id()` snaps a drifted `cs_reading_relation` sibling_id to
+`<kernel>__<declared_sibling>` only on a UNIQUE confident match (exact, then unique
+suffix-normalized) against the seed's `sibling_reading_ids`; ambiguous/unmatched stay
+as-authored → quarantine (OQ-58), never wrong-snapped. Applied in `process_batch_results`
+before `generate_pl` + JSON write.
+
+**B1 — `classify_corpus(corpus_path, output_name, expected_model)` in run_pipeline.py:**
+fresh-process driver classifying a NON-default corpus into its own manifest-bearing
+output, WITHOUT running the full pipeline (no overwrite of shared outputs/ or tracked
+validation_suite.pl) and never touching canonical pipeline_output.json. Single
+deterministic corpus_path overlay (`retractall` default + `assertz` one clause).
+Refuses on: zero-glob; load-incomplete (corpus_constraint != glob); model-swap (every
+loaded story_provenance model prefix-matches expected_model, with #provenance==glob so
+non-vacuous — a count CANNOT catch a name-identical haiku↔flash swap); stale raw;
+seen!=classified. `expected_model=None` for mixed corpora. `build_manifest` gained a
+`testsets_dir` param + stamps `corpus_path` ONLY for non-default corpora (no-arg manifest
+byte-identical — witnessed).
+
+**B-result (audits/2026-06-13_twin_comparison/):** haiku vs flash twins (960 each),
+classified serially at one commit (8126231), joined over n=960 by twin_comparison.py
+(N=1000 permutations, pre-registered H1/H2). **H1 (structural, per-field, no aggregate):
+all 7 fields HOLD** — Wilson-95 lo > permute band95. Powerless seat most model-sensitive
+(rate 0.397); institutional highest agreement (0.672) but narrowest chance margin.
+Recurring signature lean `constructed_high_extraction`(haiku)↔`false_ci_rope`(flash) —
+STRUCTURAL coding not detection (OQ-70). **H2 (continuous): pre-registered literal not
+met; the invariance tail (obs<band5) fired for all 5 — continuous values track the
+constraint not the model.** Forward work (in FINDINGS.md, not promoted to an OQ to avoid
+a concurrent-writer label collision): seated follow-up on the powerless-seat
+model-sensitivity and the signature lean.
+
 ## 2026-06-13 — Branch cleanup: merged oq117-evidence-block into main; landed the China-legitimacy topic-run artifacts; gitignored *.pdf
 **Files:** KNOWN_STATE.md, ISSUES.md (merge), .gitignore, prolog/testsets/{demographic_resource_allocation,livelihood_security_reading,performance_legitimacy_contradictions,performance_legitimacy_flat_control,property_sector_overhang,qualitative_development_reading,quantitative_growth_reading,techno_nationalist_reading}.pl, json/ (7 matching), essays/2026-06/captive_on_both_ends_v3.md
 **Tier:** landed
