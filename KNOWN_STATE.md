@@ -45,6 +45,38 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-13 — OQ-109 RESOLVED: replicate spend ran (15 draws, batch), σ/seat prediction FALSIFIED-AS-TESTED (Fisher p=0.649) → discharged to OQ-118 (draw-stability tracks field-construction-type, not the σ/seat line)
+**Files:** agent/cohort_replicate_batch.py, python/cohort_stability.py, python/cohort_sigma_seat_eval.py, audits/2026-06-12_cohort_zero/, ISSUES.md (OQ-109 resolved, OQ-118 filed)
+**Tier:** landed
+
+Gated spend authorized + executed (batch `msgbatch_01UbfPq13BcHgJKxcsqK549i`, commit `dcfaea97`):
+15 draws = 5 contested kernels (qwerty/free_market/total_war/printing_press/zero_as_number) × 3,
+sonnet-4-5 @ temp 0.2, seeded from `prolog/kernel_seeds.json` through the FROZEN seed-spec
+(title+domain+summary) so SIGMA_SEAT_PREDICTION (`5f2a626c`) applies. Runner reuses the batch
+primitives (cache_control prefix, poll_batch) + cohort_zero_regen's source_desc/stamps; draws are
+probe artifacts (replicate dir, none join the corpus). New stat instrument: self-contained Fisher
+exact in cohort_sigma_seat_eval, validated vs scipy to 6 sig figs (4 cases) BEFORE use.
+
+**σ/seat partition test FAILED its pre-registered falsifier:** 6 stories, 188 (field,story) cells,
+47.87% prediction-consistent, **Fisher two-sided p=0.649 = NO SEPARATION**. The noise hypothesis
+the prediction named as its own falsifier was NOT rejected. Operator ruling (split): ROBUST =
+apparatus-presence mis-bucketing (boltzmann/network/interval 6/6 stable, predicted seat — no naming
+confound, firmest) + the scoped null; CONFOUNDED-HELD (two halves, graduations) = cast/σ fields
+(exact-match conflates fresh-cast vs renamed-cast → re-test with the already-built graded distance
+metric) and verdict-stability (n=6 + temp 0.2 confound → temp-sweep or accept-as-confounded).
+META-FINDING (the yield): draw-stability is an artifact of FIELD-CONSTRUCTION-TYPE (free-authored
+cast vs schema-mandated/computed), not the σ/seat line — gates the corpus's analysis contract
+(which fields a cross-story claim may trust). NOT noise-over-seat (confounded halves can't
+adjudicate). Within-vs-between distance separates cleanly (within ~0.37 < between ~0.59;
+printing_press d1-d3=0.543 reproduces the signature-identity witness's "one draw escapes").
+
+**OQ-109 → resolved** (migration complete; σ/seat residual DISCHARGED to OQ-118, not answered —
+the close note says discharge-to-successor explicitly). **OQ-118 filed** carrying the robust pair as
+settled, the two confounded halves with graduation conditions, the escalate-don't-redraw discipline
+(a graded re-test is a NEW pre-registered test, not a retrofit of `5f2a626c`), and reading_diff's
+cohort-one carry. Process: settled empirical artifacts committed BEFORE escalating interpretation;
+the theory ruling was the operator's, not stamped in auto mode.
+
 ## 2026-06-13 — OQ-109 Phase C analytical tail CLOSED to partial: population correction (Iran pair → separate cohort, n=7→n=5) + stability/σ-seat instruments wired & witnessed; two named residuals (gated σ/seat spend, cohort-one reading_diff)
 **Files:** prolog/testsets/ (n=5 restored), prolog/archives/datasets/iran_essay_2026-06-11/, python/cohort_stability.py, python/cohort_sigma_seat_eval.py, ISSUES.md, audits/2026-06-12_cohort_zero/
 **Tier:** landed

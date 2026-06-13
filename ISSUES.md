@@ -4701,14 +4701,17 @@ verdicts. Cross-refs: OQ-107, OQ-101 (the tensions ledger is the natural place t
 **Ω-type:** Ω_E (engineering follow-through with witnessable cutover effects; one embedded
 re-witnessing obligation — the FNL regime resets at the example cutover).
 
-**Status:** partial — Phase C mechanical (archive / schema removal / cohort-zero swap / battery)
-AND the analytical-tail instruments LANDED (2026-06-12/13, branch `oq109-phasec-closeout`,
-`audits/2026-06-12_cohort_zero/WRITEUP.md`). TWO named residuals remain: (1) the σ/seat evaluation
-awaits the GATED replicate spend (instruments wired + parse-checked + witnessed; the partition test
-refuses a verdict below 3 stories × 2 draws); (2) the `reading_diff` re-point is a COHORT-ONE item
-(no live stakeholder-cell target — `constraint_stakeholder/7` is Unknown procedure on the corpus).
-Filed 2026-06-11 at the OQ-83 close; R4 ruled SATISFIED (operator, 2026-06-11); corpus-scale census
-recorded declined-with-reason in the OQ-83 close.
+**Status:** resolved — 2026-06-13 (operator ruling). The Phase C MIGRATION is complete and
+witnessed (archive / schema removal / cohort-zero swap / battery / analytical-tail instruments;
+population corrected to n=5). The σ/seat residual was **DISCHARGED TO A SUCCESSOR (OQ-118), not
+answered**: the gated replicate spend RAN (15 draws, batch `msgbatch_01UbfPq13BcHgJKxcsqK549i`,
+commit `dcfaea97`), the partition test executed, and the frozen σ/seat prediction (`5f2a626c`) was
+**falsified-as-tested on exact-match fields** (Fisher two-sided p=0.649) — the structured finding
+and its two graded re-test conditions live in OQ-118. The `reading_diff` re-point remains
+COHORT-ONE-gated (no live stakeholder-cell story; `constraint_stakeholder/7` Unknown procedure) —
+forward dependency carried into OQ-118's cohort-one scope. Filed 2026-06-11 at the OQ-83 close; R4
+ruled SATISFIED (operator, 2026-06-11); corpus-scale census recorded declined-with-reason in the
+OQ-83 close.
 
 **CLOSE-OUT (2026-06-12/13, branch `oq109-phasec-closeout`; `audits/2026-06-12_cohort_zero/WRITEUP.md`):**
 - **Step 0 population correction (RESOLVED):** two untracked Iran-essay stories
@@ -4725,14 +4728,19 @@ recorded declined-with-reason in the OQ-83 close.
   `organization_floor`×3 + `--selftest` PASS) and `python/cohort_sigma_seat_eval.py` (parse-check
   reproduces the frozen prediction with zero drift; population gate REFUSES a verdict below 3×2,
   returns NO TEST at n=1 — never a degenerate "insufficient power" number).
-- **σ/seat at n=1 = NO TEST (not a verdict):** the degenerate `organization_floor`×3 table is
-  analysis SUBSTRATE, not a finding. The partition test is the GATED replicate spend's deliverable
-  (run `agent/cohort_zero_regen.py --replicates <set>`, set chosen against the seat-side prediction
-  fields; then re-run both instruments). This is the σ/seat residual.
-- **`reading_diff` re-point → COHORT-ONE (residual 2):** `constraint_stakeholder/7` is Unknown
-  procedure on the live corpus and the `_c0` stories are perspectives-free, so the re-point has no
-  live fireable positive control. Deferred to when a stakeholder-cell-bearing story lands; do not
-  ship a re-point whose only "witness" is that nothing fired (inert-proving-inert).
+- **σ/seat residual → DISCHARGED TO OQ-118 (spend ran, prediction falsified-as-tested):** the
+  gated replicate spend executed via batch (`agent/cohort_replicate_batch.py`, 15 draws = 5
+  contested kernels × 3, seeded from `kernel_seeds.json` through the FROZEN seed-spec so `5f2a626c`
+  applies; commit `dcfaea97`). The σ/seat partition test (`cohort_sigma_seat_eval.py`, Fisher
+  validated vs scipy) returned **NO SEPARATION, p=0.649** — the noise hypothesis the prediction
+  pre-registered as its own falsifier was NOT rejected. The structured result (draw-stability tracks
+  field-construction-type, not the σ/seat line) + two graded re-test conditions are OQ-118's subject.
+  Per the frozen prediction's clause: mismatch = finding, NOT a redraw — honored (the frozen file is
+  untouched).
+- **`reading_diff` re-point → COHORT-ONE (carried to OQ-118 scope):** `constraint_stakeholder/7` is
+  Unknown procedure on the live corpus and the `_c0` stories are perspectives-free, so the re-point
+  has no live fireable positive control. Deferred to when a stakeholder-cell-bearing story lands; do
+  not ship a re-point whose only "witness" is that nothing fired (inert-proving-inert).
 
 **Inheritance (explicit):** the four-tuple surface is retirable — the cross-framing diff is
 produced and preserved (18 tracked pilot-arm JSONs + `STEP4C_PARTITION.md`,
@@ -5466,7 +5474,73 @@ contradicts the same independence doctrine, lint side), OQ-70 (convention-read-a
 
 ---
 
-*Last updated: 2026-06-11. Add new items with sequential OQ-NN labels. Mark
+## OQ-118 — Draw-stability tracks field-construction-type, not the σ/seat line: the cohort's analysis contract (successor to OQ-109's σ/seat residual)
+
+**Ω-type:** Ω_E (the re-tests are measurable) + Ω_P (where the seat boundary sits is a theory ruling).
+
+**Status:** open — filed 2026-06-13, successor to OQ-109's σ/seat residual (discharged here, not
+answered). The frozen σ/seat prediction (`audits/2026-06-12_cohort_zero/SIGMA_SEAT_PREDICTION.md`,
+committed `5f2a626c`) was tested on the replicate spend and **falsified-as-tested**; this entry
+carries the structured finding and its open graduation conditions.
+
+**The replicate spend (settled substrate; `audits/2026-06-12_cohort_zero/`, commit `dcfaea97`):**
+15 draws = 5 contested kernels (`qwerty_path_naturalization`, `free_market_naturalization`,
+`total_war_unthinkability`, `printing_press_reformation`, `zero_as_number`) × 3, batch
+`msgbatch_01UbfPq13BcHgJKxcsqK549i`, `claude-sonnet-4-5-20250929` @ temp 0.2, seeded from
+`prolog/kernel_seeds.json` through the FROZEN seed-spec (title+domain+summary) so the prediction
+applies. Instruments: `python/cohort_stability.py` + `python/cohort_sigma_seat_eval.py` (Fisher
+exact validated vs scipy to 6 sig figs).
+
+**Settled now (robust, recorded):**
+- **Apparatus-presence mis-bucketing (firmest — no naming confound):** `boltzmann`/`network`/
+  `interval` presence are draw-STABLE 6/6, but the frozen prediction bucketed them **seat**. They
+  are prompt/schema-determined — a fourth bucket the prediction folded into seat. This is a
+  classification error IN THE PREDICTION, witnessed (presence is binary; nothing to conflate).
+- **Null partition (scoped):** the σ/seat split does NOT beat chance on exact-match over these
+  schema fields — predicted-σ 58 stable / 62 unstable, predicted-seat 36 / 32, 47.87% consistent,
+  **Fisher two-sided p=0.649**. The noise hypothesis the prediction pre-registered as its own
+  falsifier was NOT rejected.
+
+**The actual subject (meta-finding):** draw-stability is an **artifact of field-construction-type**
+— free-authored "cast" fields (stakeholder multisets, beneficiaries/victims, vindicated_propositions)
+are draw-unstable; schema-mandated/computed fields (apparatus presence, omega count, verdicts) are
+draw-stable — **not** the theorem's σ/seat line. This is a property the meta-analysis corpus needs
+characterized BEFORE any cross-story claim trusts a field's stability (it gates the analysis
+contract: which fields are comparable across n=1-per-story draws). NOT a vindication of the noise
+model over the seat model — the two confounded halves below cannot adjudicate between them.
+
+**Two confounded halves — the OQ's opening work (graduation conditions):**
+1. **Cast/σ re-test with GRADED similarity (no new instrument):** exact set-match scores "invented a
+   fresh cast" identically to "renamed the same cast" — the naming-drift mechanism the
+   signature-identity witness documented (`audits/2026-06-12_signature_identity_witness/`). Re-test
+   the cast fields with the within-vs-between DISTANCE metric (already built + witnessed this
+   session, `cohort_stability.pair_distance`) applied at field level, splitting positive-agreement
+   from agreement-in-absence. This is a NEW pre-registered test, NOT a redraw of `5f2a626c`.
+2. **Verdict-stability disentangled from temperature:** `disappearance_verdict` (4 stable/2),
+   `founding_problem_status` (3/3) look more draw-stable than "seat-expressive" predicts, but at
+   n=6 and temp 0.2 this is suggestive-confounded, not a finding — temp 0.2 + a strong situation
+   summary may over-determine the verdict (a generation-regime cause, not σ). Graduation: a temp
+   sweep, or an explicit accept-as-confounded ruling.
+
+**Discipline carried forward:** the escalate-don't-redraw clause is inherited — a graded re-test is
+a new pre-registered test with its own frozen prediction, never a retrofit of the prediction that
+just failed. Mismatch = finding about where the seat boundary sits, escalated, never an inline
+redraw.
+
+**Related cohort-one item (carried from OQ-109):** the `reading_diff` re-point is COHORT-ONE-gated
+— `constraint_stakeholder/7` is Unknown procedure on the live corpus, so it has no live positive
+control; pick up when a stakeholder-cell-bearing story lands (inert-proving-inert otherwise).
+
+**Cross-refs:** OQ-109 (parent; σ/seat residual discharged here), OQ-26 (ε generated-not-invariant
+— the determinism-frontier context), OQ-75 (Stage-2 cross-story claims that this analysis contract
+gates), the signature-identity witness (KIND-not-story identity; the graded-metric template).
+
+**Origin:** 2026-06-13, OQ-109 Phase C σ/seat falsifier result + operator ruling (split, with
+verdict-stability demoted to confounded-half; discharge-to-successor).
+
+---
+
+*Last updated: 2026-06-13. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
