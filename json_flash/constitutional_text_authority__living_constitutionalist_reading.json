@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "constitutional_text_authority__living_constitutionalist_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "31d68c86-6e91-4c33-8bcb-a2324f80f4d9"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Living Constitutionalist Reading of Constitutional Authority",
+    "topic_domain": "constitutional_law/legal_theory/interpretive_jurisprudence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "judiciary",
+      "evolving_social_values",
+      "rights_advocates"
+    ],
+    "victims": [
+      "originalist_scholars",
+      "positivist_scholars"
+    ]
+  },
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the 'living constitutionalist' reading of constitutional authority, where the meaning of the Constitution evolves with social attitudes and values. Authority is derived from contemporary moral principles and ancient values applied to changing circumstances, allowing for judicial adaptation without formal amendment. This reading is one of several competing interpretations of the 'constitutional_text_authority' kernel.",
+    "logic_rationale": "The extractiveness (0.3) is moderate, reflecting the power transferred to the judiciary and the diminished role of other interpretive methods. Suppression (0.2) is low, as this reading is a dominant, though contested, interpretive framework, not one that actively suppresses dissent through coercion. Theater ratio (0.1) is low, as the interpretive work is genuine, even if its premises are debated. The slight dip in extractiveness and suppression towards the end of the interval reflects increased contestation and the rise of counter-interpretations.",
+    "directionality_logic": "The judiciary and rights advocates are beneficiaries, as this reading grants them flexibility and a pathway for evolving rights. Originalist and positivist scholars are 'payers' in the sense that their interpretive frameworks are challenged and their influence is reduced by this approach. The legislature's role in constitutional change is also somewhat diminished.",
+    "perspectival_gap": "From the perspective of the judiciary and rights advocates, this is a necessary and beneficial interpretive approach that keeps the Constitution relevant. From the perspective of originalist or positivist scholars, it represents an overreach of judicial power and a distortion of the Constitution's true meaning. The engine will compute these divergent classifications based on the declared structural relationships.",
+    "kernel_context": "This constraint instantiates the 'living_constitutionalist_reading' of the 'constitutional_text_authority' kernel. Sibling readings include the 'originalist_reading' (meaning fixed at ratification) and the 'positivist_reading' (validity from formal enactment, not moral content). This reading emphasizes adaptability and contemporary relevance, in contrast to the historical focus of originalism and the procedural focus of positivism."
+  },
+  "omegas": [
+    {
+      "id": "judicial_discretion_vs_democratic_legitimacy",
+      "question": "Does the interpretive flexibility granted to the judiciary by this reading undermine democratic legitimacy by allowing unelected judges to impose their values?",
+      "resolution_mechanism": "Empirical study of public trust in the judiciary versus other branches over time, correlated with the perceived 'activism' of constitutional rulings. Conceptual analysis of the nature of constitutional democracy and the role of judicial review.",
+      "impact": "If democratic legitimacy is significantly undermined, the constraint's effective extractiveness from the 'electorate' or 'legislature' seats would be higher, potentially shifting its classification towards a Tangled Rope or Snare from those perspectives. If it is seen as a necessary check, the Rope classification holds.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the balance between judicial adaptation and democratic accountability."
+    },
+    {
+      "id": "living_constitutionalism_vs_originalism_ambiguity",
+      "question": "Is the 'living constitutionalist' reading a distinct interpretive method, or is it merely a rhetorical cover for judicial policy-making, indistinguishable from other readings in practice?",
+      "resolution_mechanism": "Comparative analysis of judicial opinions across different interpretive philosophies, examining the actual methodologies employed and their consistency with stated principles. Expert consensus among legal theorists on the distinctiveness of the approach.",
+      "impact": "If it is found to be merely rhetorical, the 'theater_ratio' would be higher, and the 'extractiveness' from 'originalist_scholars' would be more direct, as their framework is dismissed without genuine engagement. If it is a distinct method, the current metrics are appropriate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the genuine distinctiveness of the living constitutionalist method."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_text_authority__originalist_reading",
+      "constitutional_text_authority__positivist_reading",
+      "judicial_review_doctrine",
+      "unenumerated_rights_doctrine"
+    ],
+    "dual_formulation_note": "This constraint is one of three primary readings of the 'constitutional_text_authority' kernel, each representing a distinct interpretive framework for the U.S. Constitution. They are linked as a constraint family."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_text_authority__originalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_text_authority__positivist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "constitutional_meaning_evolves",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "contemporary_values_inform_interpretation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "constitutional_adaptability_framework",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild_gemini",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
