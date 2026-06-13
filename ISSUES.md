@@ -3079,8 +3079,13 @@ report the axis-count distribution at scale as a readout, not a gate. **The OQ-7
 landed — every kernel topic gets a forced-flat control with a mechanical alignment key
 (`flat_control_of/2`), so a recognizer miss can no longer cost the axiom axis. Remaining for
 this rebuild's analysis design: report the construction-pair diff as its own stratum in the
-correlation readout (OQ-76 Remaining).** OQ-70's bait confound
-is still live — FNL prevalence in a rebuilt corpus is not a detection result until OQ-70 is ruled.
+correlation readout (OQ-76 Remaining).** **OQ-70's bait confound is RESOLVED (operator option A,
+2026-06-05; `claimed_natural` source 2 + `appears_as_rope`'s sibling clause removed, `72ec2cdd`) —
+no signature now reads a single authored perspective as a story-level claim, so FNL prevalence in the
+rebuilt corpus is readable as a detection result (part (a)) and no longer held back by the
+single-perspective convention. (Engine-side robustness independently witnessed 2026-06-13: on the
+mountain probe the false-foundational rejection rides Boltzmann non-compliance + type_1_false_summit
++ computed type, gates independent of the FNL signature — OQ-117 ENGINE ADJUDICATION.)
 
 **Stability-table dependency (2026-06-12, from OQ-109):** this rebuild's readouts are
 cross-story claims, so the stability-table-gates-claims rule (OQ-109 item 4) applies —
