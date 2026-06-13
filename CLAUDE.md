@@ -108,6 +108,13 @@ writes.
 to 3,337 (archived at `prolog/archives/datasets/original_v6/`); the live corpus is the
 post-2026-06-05 rebuild (see Critical Distinctions).
 
+**Building a corpus from scratch / in bulk / as a second-model twin:** follow the runbook
+`docs/technical/bulk_corpus_generation.md` — which generation path to use (and why NOT
+`generate_json.py` for kernel corpora), the seed pipeline, the five-defect provenance fix, the
+per-chunk recipe (ladder strip → generate → manual OQ-58 sweep → run_pipeline → commit), the
+recurring failure modes, and the twin-model method. The reusable seed pool + this build's records:
+`prolog/kernels/rebuild_2026-06-13/`.
+
 ## Running the System
 
 **Run `swipl` from `prolog/` (convention); corpus LOADING is cwd-independent (2026-06-04):**
