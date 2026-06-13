@@ -45,6 +45,35 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-13 — Two-model TWIN CORPUS: full never-generated rebuild (Haiku, 988) + Gemini Flash twin (971) reconciled into testsets_haiku/ + testsets_flash/ + testsets/ (branch corpus-rebuild-fresh, merged to main)
+**Files:** agent/run_no_scope_gemini.py, agent/_pilot_ladder_strip.py, agent/generate_kernel_corpus.py, prolog/testsets_haiku/, prolog/testsets_flash/, prolog/testsets/, json_haiku/, json_flash/, prolog/beta_processed_flash.txt, ISSUES.md (OQ-75), CLAUDE.md (Corpus Loading)
+**Tier:** landed
+
+Branched `corpus-rebuild-fresh` off `main`, cherry-picked the five-defect provenance fix
+(`2e3e1998`→`dc12bf5a`), and ran the full never-generated reading-seeds pool (1005 readings /
+331 kernels — NOT the plan's remembered 304/101; manifest-pool growth, builder byte-identical)
+through the fixed Anthropic/Haiku no-scope path in 8 chunks: **988/1005 generated, 17 named
+failures**, n_constraints 5→993, ~$27 Haiku batch. Then generated the SAME pool with
+**gemini-2.5-flash** via a faithful kernel-aware port (`agent/run_no_scope_gemini.py`: reuses
+`build_cached_messages` + `process_batch_results` verbatim through an Anthropic-result-shaped
+adapter; only the batch API/provider + destinations differ; `thinking_budget=0`): **971
+generated, 34 failures**. Reconciled by filename → `testsets_haiku/` (960) and `testsets_flash/`
+(960) are the INTERSECTION (set-equal, 0 mismatch either way — the controlled two-model
+comparison set; JSON in `json_haiku/`/`json_flash/`); `testsets/` (44 = 28 Haiku-only + 11
+Flash-only + 5 Sonnet baseline) is the standard location reserved for the c-orchestrator essay
+corpus. All five provenance/robustness defects held at scale (993/993 then 960/960 provenance
+facts, zero "Redefined static procedure"; Flash stamps `gemini-2.5-flash`). One grid-gate firing
+all run (`dueling_disappearance_mechanism__contraction_reading`, pilot_04) — regenerated per the
+increment-0 ruling, not waived.
+
+Tripwires promoted to CLAUDE.md (Corpus Loading): **overlay `corpus_path` with `asserta` /
+`retractall`-first, never plain `assertz`** — appends after config.pl's default and is silently
+ignored (witnessed: loaded 44 instead of 960, no error). Residuals (ISSUES OQ-75, not blockers):
+17 Haiku + 34 Flash readings to redraw, dominant cause the generation-side `status:'contested'`
+enum violation (valid `holdable|overridden|foreclosed`); naming-drift quarantine class
+(model mangles sibling-edge targets, all CAUGHT not crashed); run_pipeline's JSON_DIR is hardcoded
+to `json/` so a twin-comparison harness must point its json source at the matching mirror.
+
 ## 2026-06-13 — OQ-109 RESOLVED: replicate spend ran (15 draws, batch), σ/seat prediction FALSIFIED-AS-TESTED (Fisher p=0.649) → discharged to OQ-118 (draw-stability tracks field-construction-type, not the σ/seat line)
 **Files:** agent/cohort_replicate_batch.py, python/cohort_stability.py, python/cohort_sigma_seat_eval.py, audits/2026-06-12_cohort_zero/, ISSUES.md (OQ-109 resolved, OQ-118 filed)
 **Tier:** landed

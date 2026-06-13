@@ -162,6 +162,12 @@ RELATIVE `Dir` is anchored against `corpus_loader.pl`'s own source directory (`p
 throws `corpus_empty` (fail-closed; escape: `config:param(allow_empty_corpus, true)`). To load an
 archived corpus (e.g. `archives/datasets/original_v6` or `archives/datasets/kernel_v1`), overlay
 `corpus_path` before calling `load_all_testsets` (relative overlays resolve against `prolog/`).
+**Overlay with `asserta` (or `retractall(config:param(corpus_path,_))` first) — NOT plain
+`assertz`.** config.pl:489 defines the default `param(corpus_path, testsets)` as the first clause
+and the loader takes the first solution, so a plain `assertz('testsets_flash')` appends *after* the
+default and is **silently ignored** — you load the default `testsets` and the count looks
+successful (witnessed 2026-06-13: a twin-corpus overlay loaded 44 instead of 960 with no error).
+This is also how the `testsets_haiku/` / `testsets_flash/` twin corpora are loaded for comparison.
 
 **Confirmation:** after `load_all_testsets`, `corpus_loaded/0` is asserted and
 **`corpus_loader:corpus_constraint/1`** holds one fact per loaded testset (id = file base name) —
