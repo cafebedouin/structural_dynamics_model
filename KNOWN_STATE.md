@@ -45,6 +45,39 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-13 — Essay-synthesis read-site: report scalars over a propaganda-artifact testset are formalization-of-a-reading, not measurement; OQ-102(a)/OQ-103 are RESOLVED, not open
+**Files:** outputs/constraint_reports/{demographic_resource_allocation,livelihood_security_reading,performance_legitimacy_flat_control,property_sector_overhang,qualitative_development_reading,quantitative_growth_reading,techno_nationalist_reading}_report.md, essays/2026-06/captive_on_both_ends_v3.md, docs/technical/build_discipline.md (Instrument-richness section), ISSUES.md (OQ-102, OQ-103)
+**Tier:** correction-key
+
+Claude-web synthesized `captive_on_both_ends_v3.md` from the seven China-legitimacy reports
+generated 2026-06-13 00:12. Its substantive reading is **correct and report-witnessed**: every
+report shows `grid authored 0/32 (absent 32)`, `[INDEX VACUOUS] … ZERO per-index checks ran (not a
+clean pass)`, structural verdict `OPEN(no_gradient_data)`, and drift series flagged
+`authored-as-PROJECTED (guesses, not observations)`. So the confident scalars (ε=0.42, χ=0.575,
+purity=0.667, Boltzmann non-compliance, Wasserstein transport, theorems T2–T6) are a formalization
+of **one analyst's reading of one translated press conference** — a regime self-presentation
+artifact — not measurement of China. Treat them as a well-structured restatement of the
+interpretation, never as evidence for it; the rhetoric's *structure* is anatomized, the *mechanism
+it describes* is not. Durable rule promoted to `build_discipline.md` → *Instrument richness is gated
+on substrate instrumentation* (read-site paragraph).
+
+**Correction (the citation-staleness rung):** Claude-web cited **OQ-102(a)** (basis=projected
+provenance) and **OQ-103** (contamination-edge provenance) as *open*. Both are **resolved** —
+OQ-102 closed 2026-06-11, OQ-103 resolved 2026-06-12. The very flags the synthesizer relied on to
+see the soft spots — the `basis=projected` drift tail and the `Provenance | Salience` edge columns
+— **are those two fixes working**, not live gaps. Do not propagate "OQ-103 open / NOT CARRIED" into
+substrate. The coupling-thesis check still stands: lean on a contamination edge only when its
+`Provenance` column reads `authored` (livelihood↔{qualitative,quantitative,techno} edges are
+`explicit | authored | 1.00`); a `corpus-derived` edge is corpus topology, not the story's claim.
+
+**Open editorial next-step (not yet in substrate, the user's call):** the essay's "dominant Western
+frame" contrast (beat-separated coverage, demographics-as-crisis, techno-nationalism-as-threat) was
+characterized from general knowledge, not from a read of how the March 2026 conference was actually
+covered. The whole "what isn't being said" claim rests on that contrast and would need a check
+against real recent coverage before it is rigorous rather than gestural.
+
+---
+
 ## 2026-06-13 — OQ-109 RESOLVED: replicate spend ran (15 draws, batch), σ/seat prediction FALSIFIED-AS-TESTED (Fisher p=0.649) → discharged to OQ-118 (draw-stability tracks field-construction-type, not the σ/seat line)
 **Files:** agent/cohort_replicate_batch.py, python/cohort_stability.py, python/cohort_sigma_seat_eval.py, audits/2026-06-12_cohort_zero/, ISSUES.md (OQ-109 resolved, OQ-118 filed)
 **Tier:** landed
