@@ -45,22 +45,41 @@ directions across many ids. The two models systematically foreground different
 structural codings of the same substrate. Per OQ-70 this is STRUCTURAL-coding
 disagreement, **not** a detection claim — signature prevalence is bait-confounded.
 
-## H2 — continuous drift
+## H2 — continuous drift (disposition: FALSIFIED-for-drift; tail exploratory)
 
-**Pre-registered literal rule (H2 holds iff observed mean|Δ| > band95): NOT met for
-any of the 5 continuous fields.** There is no anti-dispersion — true haiku/flash pairs
-are not MORE different than random re-pairings.
+**This disposition is a discretionary call and is surfaced as such.** The pre-registered
+test produced a result the committed rule did not name a confirmatory disposition for, so
+how to report the tail was a judgment, not a mechanical read. An earlier draft of this
+file folded it in as "invariance fired for all 5 fields" — that let a *failed* test wear
+the credibility of a passed one (5/5 reads like clean convergence). The disposition below
+is what `PRE_REGISTRATION.md` actually entitles.
 
-**The opposite tail fired for all 5 fields: observed mean|Δ| < band5.** True pairs are
-*more similar* than chance re-pairing — the continuous values (`theater_ratio`, the four
-perspective χ) **track the constraint, not the generating model.** This is the natural
-invariance reading, pre-registered as the reported alternative tail. Committing to it
-(a kill condition existed and was run — the permutation band — so this is COMMIT, not
-hedge): the continuous surface is model-invariant in the paired-similarity sense.
+The pre-registered statistic tested a **single direction**: observed paired-Δ spread
+*exceeds* the permuted-Δ band ⇒ drift. That test **FAILED for all 5 fields** (observed did
+not exceed the band). The only other named disposition is OPEN (statistic not stood up).
+Per the committed rule, the licensed disposition is **H2-drift FALSIFIED**, with the
+residual marked OPEN — **not** "invariance confirmed."
 
-`chi:institutional` is the weakest continuous invariance (obs 0.0746 vs band5 0.0793 —
-just inside the tail, band 0.0793–0.0802 is very tight): the institutional χ is close to
-chance, echoing the institutional seat's narrow structural margin above.
+Observed Δ fell *below* the band for all 5 fields, which is consistent with
+continuous-metric invariance. But the lower tail was pre-registered only to be **reported**
+(`PRE_REGISTRATION.md` H2: "RESULTS.md reports observed against BOTH tails and states which
+fired") — it carries **no pre-committed falsifier**. It is therefore an **exploratory
+finding requiring its own registered test on a fresh corpus** before it counts as a result.
+It is **not** a second confirmation alongside H1.
+
+**[EDGE] The invariance tail may not be independent of H1.** `perspective_chi` feeds the
+structural classification (the dual-threshold χ AND ε path), so type is partly a *function*
+of χ. If structural type is invariant (H1 holds), the χ values that determine it are
+mechanically dragged toward non-random paired-similarity — the H2 lower tail could be
+**partly entailed by H1 rather than separate evidence about models.** The uniform 5/5 is
+exactly the pattern a near-tautology against a loose threshold would produce. Before the
+invariance tail counts as evidence *about models*, the H1-entailed portion must be carved
+out (e.g. a registered test that residualizes χ against type, or conditions on
+H1-disagreeing ids). Until then it is reported, not claimed.
+
+`chi:institutional` is the field closest to chance (obs 0.0746 vs a very tight band
+0.0793–0.0802) — i.e. its below-tail margin is the slimmest, echoing the institutional
+seat's narrow structural margin in H1. (Descriptive only; same exploratory caveat.)
 
 ## What this is and is not
 
@@ -75,6 +94,24 @@ chance, echoing the institutional seat's narrow structural margin above.
 - **Headline verdict** is `verdict_join.verdict` only (OQ-98). **Signature** agreement
   is structural coding, not detection (OQ-70). Paired claims are over the matched
   intersection only; runs are serial (OQ-77).
+
+## Validity confirmations (substrate-witnessed 2026-06-13)
+
+- **Part A is irrelevant to this comparison — WITNESSED, not inferred.** Census of every
+  authored `cs_axiom_status` across both twin corpora: `holdable` ×3885, `overridden` ×55,
+  nothing else. Positive control: the same grep pattern *does* flag `foreclosed`/`banana`
+  when seeded into a test file, so the empty out-of-enum result is a real absence, not a
+  blind grep. The Fix A repair path therefore could not have altered either built corpus.
+- **The tree moving under the run did not contaminate the classify path.** `34481f4b`
+  (the concurrent OQ-122 commit that landed mid-session, and an ancestor of the classify
+  commit `8126231`) touched only `ISSUES.md` and an audit directory — **zero classify-path
+  files** (corpus_loader / json_report / diagnostic_summary / cs_axiom_engine / drl_core /
+  config). Both twins were classified at `8126231` with HEAD not moving between the two
+  runs, so model-difference is not aliased onto code-difference.
+- **Inertness diff normalization was field-surgical.** Exactly four named manifest keys
+  were popped (`pipeline_run_at`, `code_commit`, `code_commit_short`, `code_dirty`); no
+  block/range normalization, so the control was not blinded to data adjacent to the commit
+  field.
 
 ## Reproduce
 

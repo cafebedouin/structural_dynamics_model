@@ -85,9 +85,13 @@ classified serially at one commit (8126231), joined over n=960 by twin_compariso
 all 7 fields HOLD** — Wilson-95 lo > permute band95. Powerless seat most model-sensitive
 (rate 0.397); institutional highest agreement (0.672) but narrowest chance margin.
 Recurring signature lean `constructed_high_extraction`(haiku)↔`false_ci_rope`(flash) —
-STRUCTURAL coding not detection (OQ-70). **H2 (continuous): pre-registered literal not
-met; the invariance tail (obs<band5) fired for all 5 — continuous values track the
-constraint not the model.** Forward work (in FINDINGS.md, not promoted to an OQ to avoid
+STRUCTURAL coding not detection (OQ-70). **H2 (continuous): the pre-registered drift test
+(obs > band95) FAILED for all 5 fields → H2-drift FALSIFIED.** Observed Δ fell BELOW the
+band for all 5 (consistent with continuous invariance), but the lower tail was
+pre-registered only to be REPORTED, carries no pre-committed falsifier, and may be partly
+ENTAILED by H1 (perspective_chi feeds the χ-classification) — so it is EXPLORATORY, needs
+its own registered test, NOT a second confirmation. (Earlier draft over-claimed
+"invariance fired"; corrected.) Forward work (in FINDINGS.md, not promoted to an OQ to avoid
 a concurrent-writer label collision): seated follow-up on the powerless-seat
 model-sensitivity and the signature lean.
 
