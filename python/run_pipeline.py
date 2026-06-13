@@ -99,16 +99,21 @@ def check_orbits_corpus_hash(orbits_path: Path) -> None:
             )
 
 
-def build_manifest(run_at: str) -> dict:
+def build_manifest(run_at: str, testsets_dir: Path = TESTSETS_DIR) -> dict:
     """Build the manifest dict for a pipeline run.
 
     Args:
         run_at: ISO 8601 UTC timestamp string captured at pipeline start.
+        testsets_dir: corpus directory to count (default TESTSETS_DIR). When a
+            NON-default corpus is classified (classify_corpus, B1), n_constraints
+            is counted there and a `corpus_path` key is stamped so an output can
+            never be read as the default corpus. The no-arg pipeline passes the
+            default and the manifest stays byte-identical (B1 inertness control).
     """
-    n_constraints = len(list(TESTSETS_DIR.glob("*.pl"))) if TESTSETS_DIR.exists() else 0
+    n_constraints = len(list(testsets_dir.glob("*.pl"))) if testsets_dir.exists() else 0
     n_sotu = len(list(TESTSETS_SOTU_DIR.glob("*.pl"))) if TESTSETS_SOTU_DIR.exists() else 0
     commit = _git_head_sha()
-    return {
+    manifest = {
         "pipeline_run_at": run_at,
         "n_constraints": n_constraints,
         "n_sotu_constraints": n_sotu,
@@ -119,6 +124,12 @@ def build_manifest(run_at: str) -> dict:
         # verdict + raw inputs) as a sibling of diagnostic_verdict.
         "schema_version": 2,
     }
+    # Stamp corpus_path ONLY for a non-default corpus — keeps the no-arg manifest
+    # byte-for-byte unchanged (only difference from a default run is the absence of
+    # this key, so the inertness diff is empty modulo pipeline_run_at).
+    if testsets_dir.resolve() != TESTSETS_DIR.resolve():
+        manifest["corpus_path"] = testsets_dir.name
+    return manifest
 
 
 def inject_manifest(src_path: Path, dst_path: Path, manifest: dict) -> None:
@@ -137,6 +148,102 @@ def inject_manifest(src_path: Path, dst_path: Path, manifest: dict) -> None:
     out.update(data)
     with open(dst_path, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
+
+
+def classify_corpus(corpus_path: str, output_name: str,
+                    expected_model: Optional[str],
+                    run_at: Optional[str] = None) -> dict:
+    """Classify a NON-default corpus into its own manifest-bearing output (B1).
+
+    A minimal, gate-free, fresh-process driver for the twin-comparison harness. Runs
+    the same _json_report swipl goal the no-arg pipeline runs, but overlays
+    config:param(corpus_path) to *corpus_path* via retract-default-then-assert — a
+    single deterministic clause, so corpus_loader.pl's non-deterministic param read
+    cannot reach a shadowed default on backtrack. Does NOT run the full pipeline
+    (that overwrites shared outputs/ + tracked validation_suite.pl) and never touches
+    the canonical pipeline_output.json — it writes OUTPUTS_DIR/output_name.
+
+    *corpus_path* is relative to prolog/ (resolved there by corpus_loader).
+    *expected_model*: a model-id PREFIX every loaded story_provenance must match
+    (e.g. 'claude-haiku-4-5' or 'gemini-2.5-flash'); None for a mixed-model corpus
+    (the essay/control regime), which skips the single-model fingerprint.
+
+    Refuses (raises) rather than emit a swap or a partial:
+      - zero-glob: a relative-path miss is loud, not a silent empty run.
+      - load completeness: corpus_constraint count == glob_count (no file failed to load).
+      - provenance fingerprint (single-model corpora): every loaded story_provenance
+        model starts with *expected_model* — a count cannot catch a name-identical
+        haiku<->flash swap, the model can. Non-vacuous: #story_provenance == glob_count
+        is also asserted, so the model-match cannot pass over an empty fact set.
+      - raw freshness: the raw artifact is deleted pre-run and must reappear newer.
+      - seen == classified: len(per_constraint) == glob_count == manifest.n_constraints.
+
+    Returns the manifest dict written into output_name.
+    """
+    run_at = run_at or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    corpus_dir = (PROLOG_DIR / corpus_path).resolve()
+    glob_count = len(list(corpus_dir.glob("*.pl"))) if corpus_dir.exists() else 0
+    if glob_count == 0:
+        raise RuntimeError(
+            f"classify_corpus: zero .pl files at {corpus_dir} (relative path "
+            f"{corpus_path!r} did not resolve to a populated corpus) — refusing")
+
+    raw_path = OUTPUTS_DIR / "pipeline_output.raw.json"
+    raw_path.unlink(missing_ok=True)
+    delete_marker = time.time()
+
+    # Single deterministic overlay clause (retract default first), then the standard
+    # export, then an in-process gate that THROWS on mismatch (non-zero exit ->
+    # run_prolog raises -> no inject_manifest; the swap/partial is refused, not echoed).
+    overlay = (
+        "retractall(config:param(corpus_path,_)), "
+        f"assertz(config:param(corpus_path,'{corpus_path}')), "
+    )
+    gate = (
+        f"absolute_file_name('{corpus_path}', AbsDir), "
+        "format(user_error, '[classify] resolved corpus dir: ~w~n', [AbsDir]), "
+        "findall(Mdl, narrative_ontology:story_provenance(_,_,_,_,_,_,Mdl,_), Mdls), "
+        "length(Mdls, NProv), "
+        "findall(Cc, corpus_loader:corpus_constraint(Cc), Ccs), length(Ccs, NCorp), "
+        "format(user_error, '[classify] story_provenance=~w corpus_constraint=~w "
+        f"glob={glob_count}~n', [NProv, NCorp]), "
+        f"( NCorp =:= {glob_count} -> true ; throw(classify_load_incomplete(NCorp, {glob_count})) )"
+    )
+    if expected_model is not None:
+        # Non-vacuous single-model fingerprint: full provenance coverage + prefix match.
+        gate += (
+            f", ( NProv =:= {glob_count} -> true ; throw(classify_provenance_coverage(NProv, {glob_count})) )"
+            ", ( NProv > 0 -> true ; throw(classify_provenance_empty) )"
+            f", ( forall(member(Mm, Mdls), atom_concat('{expected_model}', _, Mm)) "
+            f"     -> true ; sort(Mdls, US), throw(classify_model_mismatch('{expected_model}', US)) )"
+        )
+    goal = overlay + "run_json_report, " + gate
+    run_prolog(
+        ["stack.pl", "covering_analysis.pl", "maxent_classifier.pl",
+         "dirac_classification.pl", "diagnostic_summary.pl",
+         "post_synthesis.pl", "json_report.pl"],
+        goal,
+    )
+
+    # Raw freshness: must exist and be newer than the pre-run delete.
+    if not raw_path.exists():
+        raise RuntimeError("classify_corpus: pipeline_output.raw.json not produced")
+    if raw_path.stat().st_mtime < delete_marker:
+        raise RuntimeError("classify_corpus: raw artifact is stale (older than pre-run delete)")
+
+    manifest = build_manifest(run_at, corpus_dir)
+    out_path = OUTPUTS_DIR / output_name
+    inject_manifest(raw_path, out_path, manifest)
+
+    # Seen == classified: glob == per_constraint == manifest.n_constraints. A seen file
+    # that failed to classify makes glob-n and per_constraint diverge silently.
+    written = json.loads(out_path.read_text(encoding="utf-8"))
+    n_pc = len(written.get("per_constraint", []))
+    if not (n_pc == glob_count == manifest["n_constraints"]):
+        raise RuntimeError(
+            f"classify_corpus: seen!=classified — per_constraint={n_pc}, glob={glob_count}, "
+            f"manifest.n={manifest['n_constraints']} (a seen file failed to classify; refusing)")
+    return manifest
 
 
 # ---------------------------------------------------------------------------
