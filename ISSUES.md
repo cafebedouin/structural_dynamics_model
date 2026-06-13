@@ -5472,6 +5472,48 @@ stage; no tightening of bin boundaries toward config thresholds.
 **Cross-refs:** OQ-78 (mechanism + evidence + probe), OQ-116 (MOUNTAIN_METRIC_CONFLICT lint
 contradicts the same independence doctrine, lint side), OQ-70 (convention-read-as-detection).
 
+**EVIDENCE (2026-06-13, NOT a ruling — `audits/2026-06-13_oq117_within_arm_proxy/`):** the (b)
+read was attempted over the now-landed Phase C cohort. Two findings, sequenced as the writeup
+pins them:
+
+1. **(b)-as-specified is NOT computable without funding a fed arm — corrects the prior "near-free"
+   framing.** Comparator positive control (`comparator_positive_control.txt`): the probe is live
+   (exact-name search FOUND the withheld replicates), and on that live probe **the matched fed arm
+   does not exist** — `kernel_v2_test2` holds only `manifest.json` (0 stories), no fed-arm story
+   was ever generated for the 5 σ/seat kernels (only `dcfaea97`, the withheld spend), and kernel_v1
+   supplies only topic-adjacent siblings under different kernel identity, reading-split, pre-de-leak
+   schema with **no `claimed_type` field** (PERSPECTIVE-prose, OQ-70 regime) — three stacked
+   confounds, not a comparator. So the literal cross-arm divergence-rate read needs a **matched
+   fed-arm spend** (Spend B), it is not free.
+
+2. **Within-arm proxy — computable, run, MECHANISM-ESTABLISHED / DIRECTION-CONFOUNDED.**
+   (`within_arm_proxy.txt`: manifest hypothesis = would-be-fed claim vs withheld replicate's
+   freely-authored claim.) `claimed_type` = mountain **15/15 draws, draw-stable** → the claim is
+   reconstructed from title+domain+summary alone (the hypothesis token is not what selects it):
+   **mechanism established.** But all 5 kernels were *selected as contested-naturalization kernels*
+   and naturalization IS the mountain claim, so "mountain 15/15" cannot separate idiom-default
+   (→ document-as-condition) from these-kernels-are-mountains (→ hypothesis did no work): **direction
+   confounded.** It does NOT lean document-as-condition — reading it so is the confound leaking in.
+   Clean cells, untouched by the confound: **`free_market_naturalization`** claimed mountain @ ε=0.68
+   stable across 3 draws → claimed-vs-computed divergence **persists with the hypothesis withheld**
+   (within-story gap; summary smuggles the claim, ε authored honestly) — the witnessed shape (b)
+   exists to find; and **`printing_press_reformation`** the lone ε-unstable kernel (0.38/0.42/0.68),
+   an OQ-118 cast-instability echo on the metric side.
+
+**The (c) fork, well-posed (operator's floor, two distinct spends — DO NOT conflate):** (i) accept
+the mechanism + free_market's ε-divergence as sufficient for **document-as-condition** — defensible,
+but the close note MUST state the *direction* was not established, only the mechanism, and MUST NOT
+claim the proxy showed mountain-is-the-idiom; OR (ii) fund **Spend A — non-naturalization withheld
+draws** (~5 non-naturalization contested kernels × 3 via `cohort_replicate_batch.py --ids …
+--draws 3`; 42 candidates in `kernel_seeds.json`; no code change), which kills the selection confound
+and converts "mechanism-established" into a rulable direction. **Spend B — matched fed-arm** (same 5
+σ/seat kernels × 3, hypothesis fed; needs a seed-spec change to feed the hypothesis) is the
+*separate, optional* buy for the literal rate (b) names; it does NOT touch the selection confound.
+Cost (batch API, sonnet-4-5, priced off `dcfaea97`): **≈ $1 per 15-draw batch** (output-dominated;
+≈ $0.77 cached / ≈ $1.11 cold), **≈ $2 for both** — dollars negligible; real cost is Spend B's code
+change + analysis/witness time. Direction-of-fix discipline from OQ-78 still binds: no numeric
+disclosure to any authoring stage.
+
 ---
 
 ## OQ-118 — Draw-stability tracks field-construction-type, not the σ/seat line: the cohort's analysis contract (successor to OQ-109's σ/seat residual)
