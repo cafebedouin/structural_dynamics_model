@@ -3079,8 +3079,13 @@ report the axis-count distribution at scale as a readout, not a gate. **The OQ-7
 landed — every kernel topic gets a forced-flat control with a mechanical alignment key
 (`flat_control_of/2`), so a recognizer miss can no longer cost the axiom axis. Remaining for
 this rebuild's analysis design: report the construction-pair diff as its own stratum in the
-correlation readout (OQ-76 Remaining).** OQ-70's bait confound
-is still live — FNL prevalence in a rebuilt corpus is not a detection result until OQ-70 is ruled.
+correlation readout (OQ-76 Remaining).** **OQ-70's bait confound is RESOLVED (operator option A,
+2026-06-05; `claimed_natural` source 2 + `appears_as_rope`'s sibling clause removed, `72ec2cdd`) —
+no signature now reads a single authored perspective as a story-level claim, so FNL prevalence in the
+rebuilt corpus is readable as a detection result (part (a)) and no longer held back by the
+single-perspective convention. (Engine-side robustness independently witnessed 2026-06-13: on the
+mountain probe the false-foundational rejection rides Boltzmann non-compliance + type_1_false_summit
++ computed type, gates independent of the FNL signature — OQ-117 ENGINE ADJUDICATION.)
 
 **Stability-table dependency (2026-06-12, from OQ-109):** this rebuild's readouts are
 cross-story claims, so the stability-table-gates-claims rule (OQ-109 item 4) applies —
@@ -5465,7 +5470,9 @@ discrepancy recorded, not amended.
 **Ω-type:** Ω_E (witnessed, quantifiable concordance manufacture) + an Ω_P design call (decouple
 at SCOPE vs document-as-condition).
 
-**Status:** open — escalated 2026-06-12 out of OQ-78's evidence pass (operator-directed: own
+**Status:** resolved — (c) RULED **document-as-condition**, seat-framed (operator, 2026-06-13);
+decouple withdrawn as an ε-layer artifact; two forward items filed (OQ-119 join-diff, OQ-120
+rope/snare). Ruling block at the foot of this entry. Originally escalated 2026-06-12 out of OQ-78's evidence pass (operator-directed: own
 entry, not a paragraph inside OQ-78's resolution). Same-day rulings: free-gate re-weighting
 principle added at filing (below); the (c) design call is SEQUENCED AFTER OQ-78's fate-2 read
 (now the OQ-109 Phase C cross-arm read — the bin-withdrawal probe was HALTED pre-spend).
@@ -5560,6 +5567,177 @@ stage; no tightening of bin boundaries toward config thresholds.
 
 **Cross-refs:** OQ-78 (mechanism + evidence + probe), OQ-116 (MOUNTAIN_METRIC_CONFLICT lint
 contradicts the same independence doctrine, lint side), OQ-70 (convention-read-as-detection).
+
+**EVIDENCE (2026-06-13, NOT a ruling — `audits/2026-06-13_oq117_within_arm_proxy/`):** the (b)
+read was attempted over the now-landed Phase C cohort. Two findings, sequenced as the writeup
+pins them:
+
+1. **(b)-as-specified is NOT computable without funding a fed arm — corrects the prior "near-free"
+   framing.** Comparator positive control (`comparator_positive_control.txt`): the probe is live
+   (exact-name search FOUND the withheld replicates), and on that live probe **the matched fed arm
+   does not exist** — `kernel_v2_test2` holds only `manifest.json` (0 stories), no fed-arm story
+   was ever generated for the 5 σ/seat kernels (only `dcfaea97`, the withheld spend), and kernel_v1
+   supplies only topic-adjacent siblings under different kernel identity, reading-split, pre-de-leak
+   schema with **no `claimed_type` field** (PERSPECTIVE-prose, OQ-70 regime) — three stacked
+   confounds, not a comparator. So the literal cross-arm divergence-rate read needs a **matched
+   fed-arm spend** (Spend B), it is not free.
+
+2. **Within-arm proxy — computable, run, MECHANISM-ESTABLISHED / DIRECTION-CONFOUNDED.**
+   (`within_arm_proxy.txt`: manifest hypothesis = would-be-fed claim vs withheld replicate's
+   freely-authored claim.) `claimed_type` = mountain **15/15 draws, draw-stable** → the claim is
+   reconstructed from title+domain+summary alone (the hypothesis token is not what selects it):
+   **mechanism established.** But all 5 kernels were *selected as contested-naturalization kernels*
+   and naturalization IS the mountain claim, so "mountain 15/15" cannot separate idiom-default
+   (→ document-as-condition) from these-kernels-are-mountains (→ hypothesis did no work): **direction
+   confounded.** It does NOT lean document-as-condition — reading it so is the confound leaking in.
+   Clean cells, untouched by the confound: **`free_market_naturalization`** claimed mountain @ ε=0.68
+   stable across 3 draws → claimed-vs-computed divergence **persists with the hypothesis withheld**
+   (within-story gap; summary smuggles the claim, ε authored honestly) — the witnessed shape (b)
+   exists to find; and **`printing_press_reformation`** the lone ε-unstable kernel (0.38/0.42/0.68),
+   an OQ-118 cast-instability echo on the metric side.
+
+**The (c) fork, well-posed (operator's floor, two distinct spends — DO NOT conflate):** (i) accept
+the mechanism + free_market's ε-divergence as sufficient for **document-as-condition** — defensible,
+but the close note MUST state the *direction* was not established, only the mechanism, and MUST NOT
+claim the proxy showed mountain-is-the-idiom; OR (ii) fund **Spend A — non-naturalization withheld
+draws** (~5 non-naturalization contested kernels × 3 via `cohort_replicate_batch.py --ids …
+--draws 3`; 42 candidates in `kernel_seeds.json`; no code change), which kills the selection confound
+and converts "mechanism-established" into a rulable direction. **Spend B — matched fed-arm** (same 5
+σ/seat kernels × 3, hypothesis fed; needs a seed-spec change to feed the hypothesis) is the
+*separate, optional* buy for the literal rate (b) names; it does NOT touch the selection confound.
+Cost (batch API, sonnet-4-5, priced off `dcfaea97`): **≈ $1 per 15-draw batch** (output-dominated;
+≈ $0.77 cached / ≈ $1.11 cold), **≈ $2 for both** — dollars negligible; real cost is Spend B's code
+change + analysis/witness time. Direction-of-fix discipline from OQ-78 still binds: no numeric
+disclosure to any authoring stage.
+
+**SPEND RESULTS (2026-06-13, both arms run — `audits/2026-06-13_oq117_within_arm_proxy/RESULTS.md`;
+freeze `9aa1c90e` preceded both batch IDs). Still NOT a ruling — escalated.**
+
+- **Spend A — Outcome A2 (STRUCTURE-TRACKING), conclusive. mountain 0/15.** Five non-naturalization
+  kernels (impositions/coerced-reversal/transition/decline) all authored their honest *non-mountain*
+  claim withheld (turkish/meiji→scaffold, gold_to_fiat→tangled_rope, mormon→snare/tangled_rope/rope,
+  dueling→rope). **The within-arm proxy's selection confound is KILLED:** "mountain 15/15" on the
+  naturalization kernels was **correct-read, not idiom** — the model authors `claimed_type` as a
+  structure-tracking read of the summary. (c)-implication, claim channel: honest/summary-reconstructed
+  → feeding the claim is redundant → **document-as-condition suffices on the claim side.**
+- **Spend B — Outcome B3 (AMBIGUOUS by the frozen headline), informative structure.** Fed claim =
+  mountain; ε is the measurement. **Headline free_market fed-arm mean ε = 0.427** (withheld was 0.68
+  dead-stable) — lands in the frozen 0.40–0.55 dead band → **B3, reported as ambiguous, NOT narrated
+  into B1 (≤0.40).** The structure: feeding moves ε **only at the divergent cell** — free_market
+  −0.25 and destabilizes 0.68→[0.42,0.18,0.68] (one draw collapses to the mountain floor), total_war
+  −0.10 to floor; inert where ε was already mountain-consistent (qwerty/zero Δ=0); printing_press
+  perversely +0.10. Set-mean Δ −0.05. **Partial, divergent-cell-localized manufactured concordance —
+  neither uniform (B1) nor inert (B2).**
+- **Combined (c) read, escalated (operator's floor):** document-as-condition is right for the
+  **claim** side (A2 conclusive); the **metric** side shows a **real but bounded** decouple rationale,
+  localized to cells where claim and metric honestly diverge, that did NOT clear the frozen B1 bar.
+  The call is genuinely **intermediate** — not a clean decouple, not a clean document. Per the freeze:
+  escalated, not narrated to a verdict. Discipline honored: freeze-before-draw, ambiguous-reported-as-
+  ambiguous, escalate-don't-redraw, no numeric disclosure to authoring.
+
+**ENGINE ADJUDICATION (2026-06-13, operator redirect — supersedes the hand-ε layer for the mountain
+case; `audits/2026-06-13_oq117_within_arm_proxy/ENGINE_ADJUDICATION.md`).** The spends measured
+authored `claimed_type`+ε by hand; the engine's *purpose* is to adjudicate the mountain claim. Ran
+the full pipeline on all 30 mountain-claiming stories (15 withheld + 15 fed) in an isolated worktree
+(live n=5 corpus untouched). **0/30 ratified as mountain** (`true_mountain_report`: Total Validated
+0; computed mountain 0/30). Three gates by ε band: false_natural_law + **Boltzmann non_compliant** +
+`! ALERT [severe]: type_1_false_summit` → tangled_rope (free_market, printing_press); false_ci_rope →
+tangled_rope/piton (qwerty); **coupling_invariant_rope** certified-genuine → rope but claim corrected
+mountain→rope (total_war, zero_as_number). **Feeding the claim does not change the verdict** —
+signature tally withheld {FNL 6,FCR 3,CIR 6} ≈ fed {FNL 5,FCR 4,CIR 6}, 0/30 both arms; the one mobile
+cell (free_market_fed_d2, ε wobbled to 0.18) moved between two *rejecting* gates (FNL→FCR), never to
+ratification. **Consequence for (c):** the manufactured-concordance worry does NOT occur for mountain
+claims at the layer the engine decides types → **strengthens document-as-condition, weakens the
+decouple rationale** I'd called real-but-bounded (it was an ε-layer artifact the engine catches on
+both arms). **Scope bound:** tested the fed claim=mountain only; the rope/snare free boundary is
+untested, so "robust to feeding" holds for the mountain case, not all claim types. Caveats:
+grid 32/32 absent (OQ-93, verdict rests on ε/χ/signature/Boltzmann not grid); FNL is OQ-70-lineage
+but the rejection is independent of it (Boltzmann + false_summit + computed-type are separate gates);
+homogeneous probe corpus inflates the borderline/confidence stats (per-constraint verdicts are the
+robust part).
+
+**(c) RULING — document-as-condition, seat-framed (operator, 2026-06-13).** The ε-layer spends and
+the engine run together resolve (c):
+
+- **Seat-theoretic re-register (operator correction, `docs/seat-theorem-v1.md`).** The engine does
+  not adjudicate whether a claim is "really" a mountain — by the Coupling Theorem a contentful
+  verdict cannot be seat-free. The multi-perspective × multi-axiom × multi-temporal machinery's
+  purpose is to **show the seat** (Q5 liveness = the σ/seat test: maintained-with-a-beneficiary = a
+  live parameter = a seat; removal-rearranges-nothing-no-for-whom = mountain). So "0/30 ratified" is
+  NOT "30 false mountains caught"; it is: from the engine's seats these structures read non-mountain
+  because they carry the liveness flags (maintained extraction, beneficiary, coupling) a mountain
+  claim conceals. `false_natural_law` = concealment-detection (Corollary 2a), not truth-rejection.
+- **Why feeding can't manufacture concordance (the (c) core worry, answered).** The authored claim
+  **label** is not a live parameter of the seat-constituted type — the constituting parameters are
+  ε/coupling/beneficiary/timeline. The engine reads the seat off the **structure**, not the label;
+  feeding moved ε only between *rejecting* gates (free_market_fed_d2 FNL→FCR), never to a mountain
+  reading. 0/30 both arms. **Decouple is WITHDRAWN** — it would do surgery (sever SCOPE→hypothesis→
+  claim) to fix a manufactured-concordance that does not occur at the layer the engine decides types;
+  the Spend-B "real-but-bounded decouple rationale" was an ε-layer artifact the engine catches on
+  both arms.
+- **The documented condition (sharper than the ε version).** Manifest-fed stories have the claim
+  instructed, but that does not bias the seat-constituted classification — the claim-coupling lives
+  at the authored-ε layer and is *shown* downstream (Corollary 2a concealment-detection), not
+  ratified. No provenance-bit code change is forced (the worry it would address does not materialize
+  at the type layer); the condition is the record itself, here.
+- **Scope bound.** Established for the **mountain / false-foundational** case — exactly the case (c)
+  named (manufactured concordance = a concealed seat ratified as σ-fixed). The rope/snare ε boundary
+  is a separate, lower-stakes question (both non-mountain; the dangerous direction is false
+  foundational-ness) → OQ-120.
+- **NOT funded (positive-control instinct, same as the matched-fed-arm gap).** The join-structure
+  fed-vs-withheld diff is the proper *engine-characterization* test, but it is **not cleanly
+  computable on this corpus**: the axiom axis no-opped (`cs_kernel_id` absent), the temporal axis is
+  thin (grid 32/32 absent OQ-93; `classify_at_time` OQ-33 fabrication; confidence low) — only the
+  observer axis is non-vacuously instrumented. A diff over a join measured on ~1.5/3 axes is
+  grid-absent vacuity in a richer outfit. Filed → OQ-119, blocked on a three-axis-instrumented
+  corpus (witness all three non-vacuous before running).
+
+**Cross-refs:** OQ-119 (join-diff, engine-characterization, blocked), OQ-120 (rope/snare boundary),
+OQ-118 (cast-instability — printing_press's metric-side ε wobble), `docs/seat-theorem-v1.md`,
+`audits/2026-06-13_oq117_within_arm_proxy/ENGINE_ADJUDICATION.md`.
+
+---
+
+## OQ-119 — Join-structure fed-vs-withheld diff: does feeding move the cross-examination (not just the type)? — blocked on a three-axis-instrumented corpus
+
+**Ω-type:** Ω_E (engine-characterization; measurable once the substrate instruments all three axes).
+
+**Status:** open — blocked on substrate. Filed 2026-06-13 from the OQ-117 (c) ruling.
+
+**The question (engine-characterization, NOT a (c) gate — (c) is resolved).** OQ-117 showed feeding
+the mountain claim does not change the engine's *type* verdict (0/30 both arms). A sharper question
+remains: does feeding move the **join structure** — which observer seats disagree, which axioms
+dissent, how the drift trajectory runs — even when the final type holds? That is whether feeding
+shifts the cross-examination the engine performs (perspective × axiom × temporal), per the seat
+theorem (`docs/seat-theorem-v1.md`).
+
+**Why it is blocked (positive-control before spend).** On the OQ-117 probe corpus the join is
+instrumented on only ~1.5 of its 3 axes: **observer** axis live (four-seat χ spread witnessed,
+e.g. free_market institutional χ=−0.029 vs analytical 0.932); **axiom** axis partial — the
+committer/CS vantage no-opped (`cs_kernel_id` absent from the probe testsets); **temporal** axis
+thin-to-vacuous (grid 32/32 absent OQ-93; `classify_at_time` carries the OQ-33 fabricated-suppression
+issue; drift confidence "low"). A fed-vs-withheld join diff over that substrate would measure the one
+live axis with two underpowered axes adding noise — the grid-absent vacuity failure (a richer
+instrument computed over substrate that cannot support it is not a richer measurement). **Graduation:
+a corpus where observer + axiom + temporal are each witnessed non-vacuous** (authored grid, present
+`cs_kernel_id`, non-thin timelines) — then the diff is clean. Until then: do not run.
+
+---
+
+## OQ-120 — Rope/snare ε boundary under feeding: the free decision boundary OQ-117 left untested
+
+**Ω-type:** Ω_E (measurable; lower-stakes than the mountain case).
+
+**Status:** open — filed 2026-06-13 from the OQ-117 (c) ruling (scope bound).
+
+OQ-117's engine run tested the fed claim = **mountain** only and ruled (c) document-as-condition for
+the false-foundational case. OQ-78's actual free ε decision boundary is the **rope/snare** split
+(0.45/0.46), the one ε gate no SCOPE bin edge touches. Feeding a rope or snare claim and reading
+whether the engine's seat-constituted type moves across that boundary is the remaining test — but it
+is **lower-stakes**: both rope and snare are non-mountain, and the dangerous concealment (a seat
+asserted as σ-fixed) is the mountain/false-foundational shape OQ-117 already covered. Pick up if a
+rope/snare concordance question arises; not gating anything. Direction-of-fix from OQ-78 binds (no
+numeric disclosure to authoring).
 
 ---
 

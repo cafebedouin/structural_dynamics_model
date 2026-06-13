@@ -38,6 +38,23 @@ defeat the work; understanding what a position commits you to is valuable indepe
 the position is ultimately right, and is in fact the only thing available once neutrality is
 gone.
 
+**And this seat is not neutral — it is the distributional seat, declared (operator, 2026-06-13).**
+Making the implications of a seat legible is not a neutral-descriptive service offered to all seats
+evenhandedly. Beyond adding a deterministic layer to LLM interactions, the engine exists *to call out
+concealment that benefits some at the expense of others* — the concealment that the structural lens
+(maintained extraction, a beneficiary class, coupling topology) makes visible. That is the seat
+theorem's Q1 (*who benefits, who pays?* — the sharpest, most contested question of the battery, §6),
+adopted as the engine's own standpoint. It is a seat, and it is *not* a neutral one: it takes the
+side of the concealed-against, by deciding that concealment-of-distribution is the thing worth
+finding. Declaring this is the only seat-theorem-compliant move — an engine that surfaced others'
+concealed seats while presenting its own selection as neutral would commit the no-seat pose it exists
+to expose. So: the engine rules **concealment** (Corollary 2a — the gap between a no-seat claim and
+demonstrable seat-constituting structure), not a seat-free fact. Witnessed instance: OQ-117's
+`false_natural_law` is concealment-detection, not truth-rejection — it rules that "natural default
+state" conceals a maintained, beneficiary-bearing, strongly-coupled structure, the engine committal
+about the concealment while declining (rightly, there being none) to rule a seat-free fact of
+mountain-hood (`audits/2026-06-13_oq117_within_arm_proxy/ENGINE_ADJUDICATION.md`).
+
 This seat is itself seat-theorem-compliant, and saying so is not circular — it is the one move
 the theorem permits. It does not claim to be the correct seat; it declares itself, states its
 purpose, and stakes it as something that could be wrong. A document that argued "all positions

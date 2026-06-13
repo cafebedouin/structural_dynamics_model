@@ -727,6 +727,60 @@ directions of the absence-as-value sin and that it composes on itself:
 
 ---
 
+## Instrument richness is gated on substrate instrumentation (the positive control, one level up)
+
+The positive-control rule asks *did the probe fire?* — generalize it one level up to *is the axis
+instrumented?* A richer instrument (a multi-axis join, a cross-perspective diff, any aggregate over
+several channels) computed over substrate that does not populate all its channels is not a richer
+measurement — it is the grid-absent vacuity of Patterns 5/6 wearing a more sophisticated outfit. The
+extra dimensions do not add signal; they add noise that *looks* like signal, and the sophistication
+of the instrument disguises the same hole. **Before running a join/aggregate over N axes, witness
+each axis is non-vacuously instrumented on the test corpus** — the same way you witness a probe fires
+before trusting its absence. An axis that no-ops (its source predicate empty) or reads thin
+(fabricated-default-fed, low-confidence) is a channel of noise, and a diff over it measures the one
+live axis with the dead ones blurring the result.
+
+One thread (OQ-117, 2026-06-13) supplied this three times in three costumes, each caught by the same
+instinct:
+- the **matched fed arm** that did not exist — a divergence-rate read blocked because its comparator
+  substrate was absent (caught by the probe-fires control on the name search);
+- the **join-structure fed-vs-withheld diff** — proposed as "the proper test," then withdrawn because
+  on the test corpus the committer/axiom axis no-opped (`cs_kernel_id` absent) and the temporal axis
+  read thin (grid absent, OQ-93/OQ-33), leaving only the observer axis live: a join measured on ~1.5
+  of 3 axes (filed → OQ-119, blocked on a three-axis-instrumented corpus);
+- the **grid-absent temporal axis** *inside* that join — the same vacuity one level down.
+
+The rule: name every axis the richer instrument spans, confirm each is populated non-vacuously on
+*this* substrate, and if any is not, the instrument is **not cleanly computable here** — file it
+behind its substrate gate (the corpus that instruments all axes), do not run a confounded version
+now. "More dimensions" must never launder an underpowered measurement into a finding.
+
+**The same vacuity recurs at the essay/read site — formalization-of-a-reading is not measurement
+(2026-06-13).** A `constraint_reports/*.md` is a rich instrument too, and when its substrate is a
+single regime-self-presentation testset (one translated press conference) the report still emits
+confident scalars — ε, χ, purity, Boltzmann (non-)compliance, Wasserstein transport, theorems
+T2–T6 — every one computed from the testset author's authored inputs, several of them on series the
+engine itself labels `basis=projected` (*guesses, not observations*, OQ-102(a)). The report does
+not hide this: it prints `grid authored 0/32`, `[INDEX VACUOUS] … ZERO per-index checks ran (not a
+clean pass)`, and a structural verdict of `OPEN(no_gradient_data)`. **The hazard is the synthesizer
+sliding past those flags** — reading the confident numbers as *evidence about the world the story
+describes* when they are a well-structured *restatement of one analyst's reading of the source*.
+The witnessed instance: the `captive_on_both_ends_v3` essay synthesized from seven China-legitimacy
+reports, all `INDEX VACUOUS / OPEN(no_gradient_data) / basis=projected`. The contamination edges
+that carry such an essay's coupling thesis are the load-bearing read: confirm each edge's
+`Provenance` column says `authored` (the testset asserts the link) before leaning on it — a
+`corpus-derived` edge is the corpus's topology, not this story's claim (OQ-103, the
+`shared_beneficiary` xprize case). Note the provenance flags that make this checkable — the
+`basis=projected` tail and the `Provenance | Salience` edge columns — **are the OQ-102 (closed
+2026-06-11) and OQ-103 (resolved 2026-06-12) fixes working, not open gaps**: cite them as resolved
+surfacing, never as live defects. The rule is the same one level up: a vacuous instrument that
+prints confidently must inherit its own `OPEN` at the read site — the prose may not be more certain
+than the verdict line. The under-discussed thing such reports *do* anatomize is the **structure of
+the rhetoric** (how a legitimacy claim is built), never the **mechanism it describes** (how the
+extraction works); the second sentence is not licensed by a propaganda transcript.
+
+---
+
 ## A gating count is not a finding without its composition (compute the breakdown in the SAME pass)
 
 A count that is about to gate a decision (a corpus build, a verdict, a "build vs don't") is **not a

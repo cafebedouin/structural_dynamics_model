@@ -1,0 +1,506 @@
+{
+  "header": {
+    "constraint_id": "dueling_honor_settlement_decline",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.81,
+    "resistance": 0.12,
+    "claimed_type": "rope",
+    "human_readable": "Dueling as Legitimate Honor Settlement Mechanism",
+    "topic_domain": "cultural/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "aristocratic_officer_class",
+      "landed_gentry"
+    ],
+    "victims": [
+      "lower_status_challengers",
+      "families_of_duelists"
+    ],
+    "vindicated_propositions": [
+      "honor_as_material_property",
+      "violence_as_legitimate_arbitration"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "aristocratic_officer_class",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Set and enforced the dueling code as the authoritative mechanism for resolving honor disputes within their class. Benefited from a system that made status challenges costly and ritualized, preserving social hierarchy through controlled violence. Could not exit without losing standing in the only social world that mattered to their identity, but the constraint was their own construction."
+    },
+    {
+      "name": "landed_gentry",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Participated in the dueling system as a marker of gentlemanly status. The code protected their honor claims from casual challenge and made status contestation expensive. Exit meant social death within their class, but the system coordinated their collective interest in status stability."
+    },
+    {
+      "name": "lower_status_challengers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Faced a choice between accepting insult without recourse or challenging someone with superior dueling training and resources. The code formally opened honor settlement to them but practically extracted life and limb when they used it. Could not exit because the alternative was permanent dishonor in a society where honor determined economic and social access."
+    },
+    {
+      "name": "families_of_duelists",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bore the economic and emotional costs of dueling deaths and injuries. Had no voice in the code's operation but absorbed its consequences. Could not prevent their male relatives from participating without dishonoring the family name."
+    },
+    {
+      "name": "emerging_bourgeoisie",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Excluded from the dueling system by class barriers but increasingly powerful economically. Advocated for legal and commercial mechanisms of dispute resolution that did not require aristocratic martial training. Their exclusion was structural, not accidental—the dueling code existed partly to mark the boundary between those who could claim honor and those who could not."
+    },
+    {
+      "name": "state_legal_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Formally criminalized dueling while tacitly tolerating it among the officer class and gentry. Prosecuted selectively, usually only when duels became public scandals. Observed the tension between the state's monopoly on violence and the aristocracy's claim to private honor settlement."
+    },
+    {
+      "name": "anti_dueling_reformers",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Documented dueling's costs, argued for its irrationality, and pushed for enforcement of existing prohibitions. Provided the moral and empirical case that eventually supported the constraint's collapse, but had no direct power to end the practice while it retained social legitimacy among the powerful."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provided a ritualized, rule-bound mechanism for resolving honor disputes within a class that valued personal honor as a material asset and had no other trusted arbitration system for insults and status challenges.",
+    "transfer_function": "Transferred risk of death and injury from the aristocratic class collectively onto individual duelists and their families; transferred social legitimacy and status-maintenance capacity from emerging commercial dispute mechanisms to the aristocratic martial code.",
+    "absent_voices": "The emerging bourgeoisie and families of duelists had no seat in setting the code's rules. The bourgeoisie would have argued for commercial and legal alternatives; families would have argued for mechanisms that did not risk their members' lives. Both were structurally excluded because their presence would have undermined the code's function as a class boundary marker.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "When dueling became unthinkable rather than merely illegal, honor disputes migrated to legal defamation suits, social ostracism, and commercial reputation mechanisms. The aristocratic officer class lost a primary tool for maintaining status boundaries. The shift required a generation to complete because it involved not just behavior change but identity transformation—what it meant to be a gentleman changed.",
+    "founding_problem": "In the absence of a trusted state legal system for adjudicating honor disputes among the aristocracy, insults and status challenges had no authoritative resolution mechanism. Private violence was endemic but chaotic; the dueling code ritualized and contained it.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "State legal authorities and anti-dueling reformers attest the founding problem is dead: modern legal systems provide defamation remedies and the state monopoly on violence is established. The aristocratic officer class attests the problem is still live, but their testimony is self-interested. Historical analysis from outside the benefiting parties shows the founding problem was solved by the 19th century, yet dueling persisted for decades after as a status marker."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 100,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.35,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 100,
+        "value": 0.82,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.65,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 100,
+        "value": 0.88,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.7,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 100,
+        "value": 0.9,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.75,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 100,
+        "value": 0.92,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.4,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 100,
+        "value": 0.25,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.7,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 100,
+        "value": 0.15,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.65,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 100,
+        "value": 0.12,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.85,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 100,
+        "value": 0.08,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.3,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 100,
+        "value": 0.2,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.75,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 100,
+        "value": 0.1,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.8,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 100,
+        "value": 0.08,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.9,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 100,
+        "value": 0.05,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.15,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 100,
+        "value": 0.08,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.25,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 100,
+        "value": 0.12,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.3,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 100,
+        "value": 0.15,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.2,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 100,
+        "value": 0.1,
+        "basis": "observed"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Dueling as a legitimate honor-settlement mechanism operated for centuries among European aristocracy and officer classes, then collapsed within a generation in the late 19th and early 20th centuries. The constraint is claimed as rope (a coordination mechanism for honor disputes) while the metrics describe substantially extractive operation with rising suppression over time. The measurement series and coercion grid track the constraint's trajectory from a functional coordination mechanism to an increasingly costly status marker to an unthinkable practice. The grid shows accessibility collapse rising dramatically at all levels while suppression and stakes inflation fall—the signature of a constraint becoming cognitively unavailable rather than merely prohibited.",
+    "logic_rationale": "Extraction is high (0.68) because the dueling code imposed asymmetric costs: aristocrats with training and resources faced manageable risk, while lower-status challengers faced near-certain death or maiming. Suppression is high (0.72) because exit meant permanent dishonor in a society where honor determined access to economic and social goods. Theater ratio is low (0.18) because the dueling code was functionally operative for most of its history—deaths were real, honor claims were genuinely adjudicated. Accessibility collapse is high (0.81) and resistance is low (0.12) because by the interval's end, dueling had become unthinkable rather than merely illegal—the cognitive frame that made it a legitimate option had dissolved. The coercion grid captures the constraint's unusual collapse pattern: suppression falling at all levels while accessibility collapse rises, indicating the constraint became unavailable rather than merely unenforced.",
+    "directionality_logic": "The aristocratic officer class and landed gentry are structural beneficiaries (set the rules, preserved status hierarchy through controlled violence, collected social legitimacy from the system—d near beneficiary end). Lower-status challengers and families of duelists are targets (bore asymmetric costs, trapped by honor logic—d near target end). The emerging bourgeoisie is excluded rather than coordinated. State legal authorities and reformers are analytical observers.",
+    "perspectival_gap": "The agenda-setter seat (aristocratic officer class) and the payer seats (lower-status challengers, families) should compute differently. From the aristocratic position, the constraint was genuine coordination they built and maintained for their collective interest. From the trapped payer positions, the same structure operated as enforced extraction that they could not exit without social death. The engine computes this divergence from the structural data—the authored claim does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (lack of trusted honor arbitration) was solved by state legal development decades before dueling collapsed. The constraint persisted as a status marker and class boundary mechanism long after its coordination function was obsolete. The six-questions interview captures this: founding_problem_status is 'dead' (attested by state authorities and reformers from outside the benefiting parties), yet disappearance_verdict is 'world_rearranges' because the constraint's collapse required identity transformation, not just behavior change. This is the mandatrophy signature: a constraint whose founding problem is dead but whose disappearance would rearrange the world because it has become constitutive of identity rather than instrumental."
+  },
+  "omegas": [
+    {
+      "id": "decline_mechanism_ambiguity",
+      "question": "Did dueling decline because legal prohibition finally achieved enforcement (drop to fringe), or because the cognitive frame that made it thinkable dissolved (contraction to unthinkable), or through an overdetermined combination where both mechanisms operated?",
+      "resolution_mechanism": "Historical analysis of the temporal relationship between legal enforcement, prosecution rates, social censure, and participation rates across different jurisdictions and social classes. If participation dropped before enforcement increased, contraction preceded prohibition. If enforcement and participation declined together, the mechanisms are confounded.",
+      "impact": "If pure drop, the constraint is a standard enforcement story. If pure contraction, it is an identity-transformation story where the constraint became cognitively unavailable. If overdetermined, both mechanisms operated and their interaction is the phenomenon. The coercion grid's pattern (accessibility collapse rising while suppression falls) suggests contraction, but the question remains open.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dueling's disappearance was enforcement-driven, identity-driven, or overdetermined."
+    },
+    {
+      "id": "coordination_extraction_separability",
+      "question": "Was the dueling code's coordination function (ritualized honor settlement) structurally separable from its extraction function (status boundary maintenance), or were they inseparable aspects of the same mechanism?",
+      "resolution_mechanism": "Comparative analysis of honor-settlement mechanisms in societies with different class structures. If ritualized honor settlement can operate without class-based asymmetric costs, the functions are separable. If every honor-settlement mechanism that ritualizes violence also maintains status boundaries, they may be inseparable.",
+      "impact": "If separable, the constraint is a tangled rope (genuine coordination plus extraction). If inseparable, the coordination function itself is the extraction mechanism—there is no non-extractive version of ritualized violent honor settlement in a class society.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's coordination and extraction components are structurally separable."
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "What specific identity-fusion mechanism bound aristocratic participants to the dueling code such that exit meant social death? Was it professional identity (officer corps honor), relational identity (gentleman as social role), ideological identity (honor as material property), or institutional identity (aristocracy as a class)?",
+      "resolution_mechanism": "Historical analysis of which identity frame broke first in the constraint's collapse. If officer corps honor dissolved before gentlemanly identity, professional identity was primary. If the concept of honor as material property dissolved first, ideological identity was primary.",
+      "impact": "Identifies which identity frame was load-bearing for the constraint's persistence. The frame that broke first is the one the constraint depended on most. This informs how similar identity-locked constraints might collapse.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which identity-fusion mechanism was primary in binding participants to the dueling code."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "gain_flow": "aristocratic_officer_class",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "046e0a40c34cddf4fff29b8c15f632dbdef31b7a",
+    "schema_commit": "c6d6880c39ec6bdfedde2a1d41cc00211f451559",
+    "generated_date": "2026-06-12",
+    "source_essay": "dueling_decline_kernel_contest",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-4-20250514",
+    "sampling_params": "temperature=1.0",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
