@@ -5,13 +5,15 @@ consequences that follow from them, and the open questions that remain — separ
 papers separate axioms from theorems from empirical findings, so that a wrong foundation can be
 found wrong without taking the whole structure down with it.**
 
-**Version: v1.2** *(first versioned draft was v1.0, the consequences-only sketch restructured into
+**Version: v1.3** *(first versioned draft was v1.0, the consequences-only sketch restructured into
 axioms/consequences/empirical/open. v1.1: mutual-deference framing of Axiom R and §7, routing-as-
 correctability in §5, character-upstream-of-selector in §8, §3 labeled abductive. v1.2: invariant
 boundary as seat-identified/fallible/interested with the three-way distinction (§2); CS drift
 terminal states as the existing early-warning signal for sealing (§5); ε disciplines stated as
-rules (§7). Supersedes the unversioned consequences-only sketch,
-retained as design_discipline_v0_backup.md)*
+rules (§7). v1.3: §9 added — the engine's pipeline seat is discovery not justification, the
+no-verdict-skips-adjudication gate, the systematic-bias risk and its cheap control (independently
+re-deriving open item (b)), convergence-under-component-failure as the design working. Supersedes
+the unversioned consequences-only sketch, retained as design_discipline_v0_backup.md)*
 
 **Status:** Companion to `build_discipline.md`, referenced from `CLAUDE.md`, amended as design
 decisions are made and recorded. Where `build_discipline.md` governs *how we build and verify*,
@@ -658,6 +660,67 @@ whether to take the fall. Neither transfers, and the engine claims neither.
 
 ---
 
+## 9. Where the engine sits: context of discovery, not context of justification
+
+*(Recorded 2026-06-12 from a post-essay review comment — an external model reflecting on the
+`essays/2026-06/marked_to_market.md` run, relayed by the operator. The run is the provenance:
+an engine the review judged partly miswired, a reviewer model that could not see the essay, an
+audit model that misattributed a failure — and a correct, twice-hardened draft at the end.
+Claims about the engine's wiring in this section are that review's assessment, attributed, not
+independently witnessed here.)*
+
+**The location claim.** "Does the engine work?" deserves a more precise yes than a shrug. The
+engine works because of *where it sits in the pipeline*, and that location makes miscalibration
+nearly free. The old distinction is the context of discovery vs the context of justification:
+nothing in discovery has to be calibrated, because nothing in discovery is load-bearing — it
+only has to point somewhere worth digging. What the engine actually contributed to the
+marked-to-market essay: an anomaly (identical fingerprints with no contamination edges —
+probably a bug) seeded the essay's central one-machine reading; the victory-metric
+falsifiability omega became both the unfalsifiability critique of the subject *and* the
+reflexive kill-condition discipline applied to the essay's own thesis; the cover-story theorem
+became the diagnosis of a third party. None of those required the coupling scores to be right.
+They required the *questions* to be well-formed — and question-formation is the part of the
+machine that is wired correctly. This deepens §4's ontology-as-anomaly-detector corollary: even
+a partly miswired instrument keeps its discovery value, *provided the gate below holds.*
+
+**The gate (a wiring constraint, stated as a rule).** The condition under which "it works"
+stays true: **no verdict skips adjudication.** A miscalibrated instrument upstream of an
+adversarial substrate-check is a hypothesis generator; the same instrument feeding prose
+directly is a confabulator with a Prolog accent. So "the engine works" is a property of the
+*pipeline shape*, not of the engine alone — never wire engine verdicts into published prose
+without an adjudication stage between, and treat any proposed shortcut from classifier to
+essay as the design drift §4 names.
+
+**The risk that survives the gate is systematic bias, not random miswiring.** Random errors
+wash out in review. A constant tilt — the engine always leaning extraction-rising, the selector
+(Q1) overfiring — passes every round, because each round checks *facts*, not *distributions*:
+every essay inherits the tilt and no single review sees it. This is the authored-priors-as-
+findings loop (in-repo forms: the OQ-70 bait confound; the authored-input-circularity caution;
+the review cited OQ-102, the authored-vs-imputed provenance OQ, resolved 2026-06-11 — same
+family). The cheap, occasional control: **feed the engine a constraint you believe genuinely
+benign and see if it can say so.** This is open item (b) below — the false-positive rate on
+high-trust cases — independently re-derived by a reviewer who had not read this document. The
+convergence is itself evidence the probe is the right one, and upgrades its standing: still not
+a current test, but the first probe to run when the corpus matures, and cheap enough to run
+informally before then.
+
+**Convergence under component failure is the design working.** A machine partly miswired,
+reviewed by a model that couldn't see the essay, audited by a model that misattributed the
+failure, converged on a correct, twice-hardened draft. That is not "it works despite the
+errors" — it is the whole reason the pipeline has more than one stage. Two lessons folded in
+from the run's audit-of-the-audit: (a) **adjudicate facts separately from verdicts applies to
+audits of audits, all the way down** — the audit reached the correct conclusion through an
+incorrect account of why (its "source materials: complete" was false; its "failed to read"
+indicted the wrong party), while the audited run was *correct behavior given its actual
+context* (it declared the gap in its own metadata, bounded the refutation with an omega, and
+named what would resolve it) — right-verdict-wrong-mechanism is itself a finding one level up,
+the §5 facts-vs-routing separation recursed; (b) **the recursion terminates safely only because
+someone at the bottom holds the substrate** — some stage must adjudicate against the artifact
+itself, not against another stage's report of it, or the tower of reviews is reports all the
+way down.
+
+---
+
 ## Open items for the next pass on this document
 
 *(What this draft has not yet done — not load-bearing claims.)*
@@ -689,7 +752,9 @@ whether to take the fall. Neither transfers, and the engine claims neither.
   case where Q1 misleads weakens the selector-bet first and most. Neither is a current test — the
   engine is not yet at the point of posing them cleanly — but the *principle* is recorded: the
   soft spots (ε, the selector) get pressure-tested empirically when the engine is mature enough,
-  not left as permanent declarations.
+  not left as permanent declarations. *(Probe (b) was independently re-derived by an external
+  reviewer 2026-06-12 — see §9; its standing is upgraded accordingly: first probe to run when
+  the corpus matures, cheap enough to run informally before then.)*
 
 - **Document scope: this is a Claude-Code-facing document.** No table of contents, glossary, or
   how-to-read preamble — the audience is the engine's own development, and the recurring

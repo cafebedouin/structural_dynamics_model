@@ -45,6 +45,24 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-12 — design_discipline v1.3: §9 recorded — engine's pipeline seat is discovery not justification; no-verdict-skips-adjudication; benign-constraint bias control independently re-derived
+**Files:** docs/design/design_discipline.md, essays/2026-06/marked_to_market.md
+**Tier:** landed
+
+New §9 in `design_discipline.md` (v1.2 → v1.3) records a post-essay review comment (external
+model on the `marked_to_market.md` run, relayed by operator) as design doctrine: (1) the engine
+sits in the context of discovery, where miscalibration is nearly free because nothing is
+load-bearing — its contribution is well-formed questions (anomaly seeds, omegas-as-kill-
+conditions, theorems-as-lenses), not calibrated scores; (2) the standing condition is that no
+verdict skips adjudication (engine→prose direct wiring = design drift); (3) the surviving risk
+is systematic bias not random error (review checks facts, not distributions) — the proposed
+benign-constraint control independently re-derives the doc's open item (b) false-positive-on-
+high-trust probe, upgrading its standing; (4) convergence under component failure is the design
+working, with the audit-of-audits lesson (right-verdict-wrong-mechanism is a finding one level
+up; recursion terminates only where a stage holds the substrate). Wiring-state claims in §9 are
+attributed to the review, not independently witnessed. Also removed a stray
+`marked_to_market.md:Zone.Identifier` Windows download artifact from `essays/2026-06/`.
+
 ## 2026-06-12 — OQ-78 evidence pass: ε clustering two-layer; bin boundaries EQUAL config thresholds; circularity → OQ-117; THEN probe HALTED pre-spend — epsilon_bin channel DEAD at the generation interface (hypothesis is the live channel)
 **Files:** prompts/uke_scope_v2_json.md, prompts/constraint_story_generation_prompt_json.md, prolog/config.pl, agent/story_generator_base.py, agent/generate_kernel_corpus.py, agent/c-orchestrator.py, ISSUES.md
 **Tier:** correction-key
