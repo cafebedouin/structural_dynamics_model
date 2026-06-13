@@ -1,0 +1,259 @@
+{
+  "header": {
+    "constraint_id": "war_powers_allocation__congressional_primacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_war_powers_allocation__congressional_primacy_reading",
+    "story_uid": "bd2089c8-2bfd-4d12-aa69-48a64ac6a50f"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.59,
+    "claimed_type": "tangled_rope",
+    "human_readable": "War Powers Allocation: Congressional Primacy Reading",
+    "topic_domain": "constitutional_law/separation_of_powers",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legislative_branch"
+    ],
+    "victims": [
+      "legislative_branch"
+    ]
+  },
+  "interval": {
+    "start": 1789,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1789,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1898,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1945,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1973,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1789,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1898,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1945,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1973,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1789,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1898,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1945,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1973,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.41
+    }
+  ],
+  "omegas": [
+    {
+      "id": "emergency_vs_inherent_authority_boundary",
+      "question": "Is the constitutional boundary between emergency powers (acknowledged by Congress for immediate threats) and inherent executive authority (asserted without authorization) a stable doctrine or a shifting front controlled by executive reinterpretation?",
+      "resolution_mechanism": "Mapping the historical record of executive claims: if each administration expands the definition of 'immediate threat' or 'emergency deployment' beyond the previous, the boundary is not stable but is being erased by incremental redefinition. If courts accept each new claim as falling within prior doctrine, the normalization is complete.",
+      "impact": "If the boundary is stable, the constraint remains partly enforceable through judicial review of whether particular actions fall within emergency scope. If unstable and shifting, the constraint has been functionally dissolved—all action can be claimed as emergency or inherent authority, and the distinction from unilateral war powers becomes semantic.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether emergency power doctrines have systematically expanded to absorb most military deployments."
+    },
+    {
+      "id": "congressional_capacity_vs_deliberation_requirement",
+      "question": "Does the constraint require congressional deliberation before force deployment, or does it only require that Congress exist and could theoretically deliberate if it chose to? Is inaction consent?",
+      "resolution_mechanism": "Legislative history, statutory interpretation, and historical practice: (1) Did the Founders expect Congress to affirmatively authorize each war, or only to fund it after action was taken? (2) Have successive Congresses acquiesced to executive deployments through funding votes, transforming tacit funding into retroactive authorization? (3) Is the requirement for explicit authorization or for congressional participation in any form?",
+      "impact": "If the constraint requires affirmative authorization before deployment, then de facto action followed by Congress funding it violates the constraint. If the constraint only requires congressional capacity to object, the constraint becomes nearly empty—Congress is always capable but often passive.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint requires affirmative authorization or only the possibility of congressional action."
+    },
+    {
+      "id": "justiciability_abstention_structural_role",
+      "question": "Is judicial abstention from war powers disputes (treating them as non-justiciable political questions) a neutral observational stance, or is it a form of implicit suppression that enables executive bypassing?",
+      "resolution_mechanism": "Comparative constitutional law: how do other democracies with similar separation-of-powers principles handle justiciability of war powers? Do they enforce the constraint more effectively through judicial review, and what are the institutional consequences? Does U.S. case law show systematic deference to executive claims when courts do enter the domain?",
+      "impact": "If judicial abstention is neutral, the constraint persists through political (congressional) remedies and constitutional interpretation outside courts. If abstention is suppressive, it is part of the enforcement machinery of the constraint's violation—courts enable executive bypassing by refusing to check it.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether institutional doctrines of non-justiciability structure suppression of the war powers constraint."
+    },
+    {
+      "id": "reading_foreclosure_from_rival_framings",
+      "question": "This reading (congressional primacy) instantiates one interpretation of the War Powers Clause. The inherent_executive_reading interprets the same clause to grant the president independent authority. Can both readings coexist in the same constitutional framework, or does accepting one logically rule out the other?",
+      "resolution_mechanism": "Constitutional hermeneutics: if the clause text permits both readings with equal plausibility, they coexist. If the text, original intent, or doctrinal structure definitively supports one reading over another, the other is foreclosed. If the readings rest on irreconcilable premises (e.g., one requires separation of powers to be strict, the other flexible), one forecloses the other.",
+      "impact": "If the readings coexist, both are live political/constitutional claims and the constraint operates as a zone of institutional contestation. If this reading forecloses the rival, the constraint becomes a binding constitutional fact, not a reading. If the rival forecloses this one, the constraint is constitutionally overridden.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the congressional primacy reading forecloses, coexists with, or is foreclosed by the inherent executive authority reading."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the suppression of the congressional primacy constraint structural (courts refuse to hear cases, political costs of challenging the president are high, institutional capacity to enforce is weak) or internalized (Congress members believe the president really does have inherent authority, or believe the constraint is too inconvenient to enforce)?",
+      "resolution_mechanism": "Post-constraint enforcement trajectory: if suppression is purely structural and barriers were removed (courts became willing to hear cases, political coalition against executive action formed), would enforcement resume? If suppression is internalized, removal of structural barriers alone would not restore enforcement—Congress has accepted the executive reading or decided enforcement is too costly.",
+      "impact": "If structural, the constraint could be revived through institutional reform (court reform, congressional assertion of power). If internalized, revival requires shifting congressional and public opinion about what the Constitution means, which is a much deeper change.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression of the constraint is structural or has been internalized into institutional practice."
+    },
+    {
+      "id": "mandatrophy_status_war_powers",
+      "question": "Has the founding problem (unchecked executive war-making) been solved, or has the constraint that was designed to prevent it atrophied while the problem persists?",
+      "resolution_mechanism": "Comparative analysis: (1) Count the number of military deployments since 1945 that lacked explicit congressional authorization or a plausible emergency justification accepted at the time of deployment. (2) Assess whether the founding problem (executive unilateralism in war) is alive or dead. (3) Measure whether Congress actively enforces the constraint or has accepted a subordinate role. (4) Evaluate whether the constraint's atrophy serves any coordinating function or is purely inertial.",
+      "impact": "If mandatrophy is resolved (founding problem dead, constraint serves no function), the constraint should be formally abandoned or reinterpreted. If mandatrophy is active (founding problem live, constraint weak), the constraint is extractive or zombie-like—it maintains rhetorical authority while enabling the very thing it was meant to prevent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint is zombified: founder problem persists while constraint enforcement has atrophied."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The War Powers Clause of Article I vests in Congress the power 'To declare War.' Article II vests in the President the role of Commander-in-Chief. For over two centuries, these provisions have been read in fundamentally different ways. Under the congressional primacy reading—the reading instantiated in THIS constraint story—the Constitution requires explicit legislative authorization before the president deploys military force beyond immediate self-defense. This reading grounds itself in the Founders' deliberate decision to lodge war power in the legislature, treating war as a matter too grave for unilateral executive action. However, successive administrations have asserted inherent executive authority to deploy force without prior authorization, invoking emergency doctrines, commander-in-chief prerogatives, and de facto practice that Congress has repeatedly funded retroactively. The constraint is claimed by Congress and constitutional scholars who defend the congressional primacy reading; it is systematically suppressed by executive actors who assert a rival reading. The consequence is a tangle: the constraint exists as law and constitutional principle; it is structured to coordinate democratic deliberation on war; yet it extracts from Congress the power to enforce it against executive reinterpretation, and the executive extracts from Congress the decision-making authority the constraint nominally reserves. This is why it is tangled_rope: it coordinates a genuine principle (no unilateral war) but does so while extracting from the coordinate body (Congress) the effective power to ensure the coordination.",
+    "key_agents": [
+      "Legislative Branch: Claims the constraint; cannot reliably enforce it against rival readings. Experiences extraction when bypassed; benefits theoretically from the constraint's legitimating principle. Dual-positioned: agenda-setter of the rule, victim of executive evasion.",
+      "Executive Branch: Contests the constraint through alternative readings; asserts inherent authority; benefits from the constraint's unenforceability by maintaining both rhetorical compliance and practical freedom of action.",
+      "Military Command: Identity-locked to civilian control; caught between the constraint and the chain of command. Forced to execute orders that may violate the constraint but cannot refuse without institutional defiance.",
+      "Courts: Observationally abstain from enforcing the constraint, treating war powers as a non-justiciable political question. Their abstention implicitly enables executive suppression.",
+      "Constitutional Scholars (Congressional Primacy Faction): Benefit from the constraint as an interpretive anchor; bear the cost of watching it atrophy.",
+      "Affected Foreign Populations and U.S. Military Personnel: Excluded or powerless in the constraint system; bear the costs of deployments made without the deliberation the constraint nominates."
+    ],
+    "logic_rationale": "The extractiveness score (0.68 at interval end) reflects the measure to which executive unilateral action extracts congressional war power: the president can deploy force, face funding choices and political pressure post-hoc, and usually prevail because the cost of defunding deployed forces is politically prohibitive. The suppression score (0.72) is high because the constraint's enforcement is actively suppressed through executive reinterpretation, judicial abstention, and the normalization of emergency/inherent authority doctrines. Accessibility collapse (0.78) is substantial but not absolute: alternatives to military action exist (diplomacy, economic pressure, multilateral action through the UN) but become harder to access once deployment is already underway. Resistance (0.59) is moderate—Congress often resists and demands authorizations after the fact, but this resistance rarely prevents action. Theater ratio (0.41) reflects the constraint's partial performativity: a real authorization structure exists (Congress does sometimes formally authorize war), but a growing share of military operations proceed outside this structure, and the authorization machinery itself has become a post-hoc ratification of executive decisions already made. The measurement series spanning 1789–2026 tracks the progressive erosion of congressional enforcement capacity and the rise of suppression mechanisms (emergency doctrine, judicial abstention). The gridded coercion metrics show that suppression has intensified at the organizational level (executive institutions hardening claims of authority) and individual level (military personnel and affected civilians experiencing suppression), while structural alternatives have become less accessible.",
+    "perspectival_gap": "The congressional seat experiences the constraint as weak, unenforced, and extractive—Congress sets the legal framework but the executive determines the facts on the ground. The executive seat experiences the constraint as a rule it can follow (by invoking emergency or inherent authority) while preserving practical freedom of action—the constraint is real enough to provide rhetorical cover but permeable enough to allow action. The military seat experiences the constraint as an ambiguity that creates institutional stress and divided loyalty. The scholarly seat experiences the constraint as a constitutional principle being progressively hollowed out.",
+    "directionality_logic": "Legislative branch directionality: Congress nominally sets the war powers rules but cannot enforce them against executive reinterpretation. Congress benefits from the constraint's rhetorical authority (it can invoke it to demand authorizations, restrict funds, assert prerogatives) but bears the extraction cost when the executive bypasses it. Congress is simultaneously beneficiary (theoretically) and victim (practically). Derived directionality is near symmetric with target tilt: Congress has institutional power but constrained exit—it cannot leave the constitutional system or dissolve the executive. Executive directionality: The executive benefits substantially from the constraint's unenforceability. It can claim compliance with constitutional principle while freely deploying force through reinterpretation. The executive's directionality is near beneficiary end: it has institutional power, arbitrage-grade exit (through alternative readings, emergency doctrines, practice normalization), and gains from the constraint's weakness. The override is not needed; the structural derivation already captures the asymmetry. Military command directionality: Military leadership is caught between the constraint (congressional authorization) and the command structure (presidential orders). Their exit is identity-locked—refusal to obey either violates their institutional identity. Their directionality is near target end: they bear the costs of the institutional ambiguity without being able to resolve it. Foreign populations and affected civilians: powerless and structurally excluded, their directionality would be at the absolute target end if they were positioned in the constraint system at all, but they are not formally seated. This reflects the constraint's design: it is a constraint on what the U.S. government does, not a constraint that includes those affected by the government's action.",
+    "mandatrophy_analysis": "The constraint manifests strong mandatrophy signals. The founding problem (preventing unilateral executive war-making) remains live—the post-9/11 era shows expanded executive deployments through emergency doctrines, kinetic operations in multiple countries, drone strikes, cyber operations, and covert military actions, many without formal congressional authorization or post-hoc ratification. Yet the constraint (congressional authorization requirement) has become increasingly difficult to enforce. Congress often funds military operations after the fact rather than authorizing them before; courts decline to adjudicate war powers disputes; emergency and inherent authority doctrines have expanded to accommodate most executive action; and the theater_ratio suggests that a growing share of the constraint's activity is rhetorical (authorizations sought when politically convenient, ignored when inconvenient). The constraint has not been formally abandoned—it remains part of constitutional law—but its active enforcement capacity has atrophied. This is the classic mandatrophy pattern: the problem the constraint was designed to solve persists, but the constraint has become an inert principle, a check that does not check. The measurement series confirms this: from 1789–1945, extractiveness rose but remained under 0.60 because congressional deliberation was still generally sought (even if increasingly bypassed). From 1945–2026, extractiveness rose sharply and suppression intensified, reflecting the post-war shift to executive dominance in military deployments. The theater_ratio shows increasing performativity: the constraint's machinery is invoked more often but accomplishes less.",
+    "kernel_context": "This constraint story instantiates the 'congressional primacy reading' of the War Powers Clause kernel. The kernel is the constitutional provision that Congress declares war and the president is commander-in-chief—a compressed formula that conceals a fundamental interpretive contest. Three readings of this kernel are in active play: (1) Congressional primacy reading (THIS story): Military force beyond immediate defense requires explicit congressional authorization as constitutional necessity. (2) Functional accommodation reading: War powers vary by operational context; imminent threats permit unilateral action; prolonged campaigns require authorization. (3) Inherent executive reading: Commander-in-chief power grants the president inherent authority to deploy force in defense of national interests without prior authorization. These readings are not three descriptions of one fact; they are three structural interpretations of what the Constitution does. This story's reading is distinguished by its insistence that the constitutional text and original intent demand affirmative legislative authorization before significant military force. The rival readings dispute whether such authorization is actually required or whether presidential authority is inherent and can be constrained only by practical limits (Congress's funding power) or political pressure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "war_powers_allocation__functional_accommodation_reading",
+      "war_powers_allocation__inherent_executive_reading"
+    ],
+    "dual_formulation_note": "The war_powers_allocation kernel permits three structurally distinct constraints: congressional_primacy_reading (this story) asserts mandatory authorization; functional_accommodation_reading permits context-sensitive authority (emergency vs. prolonged); inherent_executive_reading asserts presidential authority as primary. Each reading instantiates different ε, different beneficiary/victim sets, and different classification paths. They are linked because all three are live readings of the same constitutional language, and accepting one reading partially constrains which others remain coherent. This story networks to both siblings in affects_constraints because the congressional primacy reading forecloses (or significantly pressures) the inherent_executive reading while coexisting with the functional_accommodation reading."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "war_powers_allocation__inherent_executive_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "war_powers_allocation__functional_accommodation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legislative_authorization_necessary_for_prolonged_force",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "separation_of_powers_precludes_unilateral_war_making",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "constitutional_legislative_war_power_supremacy",
+    "drift_state": {
+      "moment": "contemporary_post_cold_war_security_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

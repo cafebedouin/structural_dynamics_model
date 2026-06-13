@@ -1,0 +1,369 @@
+{
+  "header": {
+    "constraint_id": "article17_erasure_right__competitive_moat_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "04c385dc-3e2e-4619-a352-a67fbc7f207f"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.42,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.59,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Article 17 Erasure Right as Competitive Moat (Right to Be Forgotten)",
+    "topic_domain": "technology_governance/data_protection/competition_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_digital_platforms",
+      "large_data_controllers"
+    ],
+    "victims": [
+      "challenger_platforms",
+      "startups_building_data_services",
+      "emerging_market_entrants"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_digital_platforms",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Large established platforms (Google, Facebook, Amazon) have existing compliance infrastructure, dedicated legal teams, and distributed data architectures already in place. They absorb Article 17 compliance costs as a fixed institutional overhead. Their size allows them to spread compliance and technical costs across billions of users and vast revenue streams, reducing per-user friction. They additionally benefit from the barrier this creates: competitors cannot easily replicate their compliance engineering or legal infrastructure, making market entry prohibitively expensive."
+    },
+    {
+      "name": "challenger_platforms",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Smaller competitors and regional platforms must build Article 17 compliance infrastructure from scratch: legal interpretation expertise, technical systems for data location and deletion, cross-border coordination, audit trails, and proof systems. These are fixed costs that do not scale with user base until the platform reaches billions-user scale. A regional social network or emerging search engine cannot afford a dedicated privacy compliance team; the cost is prohibitive relative to revenue."
+    },
+    {
+      "name": "startups_building_data_services",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Early-stage data-science startups and analytics firms serving SME customers face the same Article 17 infrastructure burden as incumbents but lack the user base or revenue to distribute costs. A startup offering ML-powered customer analytics or HR data services must implement erasure-request handling, data location mapping, technical deletion verification, and potentially GDPR-compliant audit trails. Each user erasure request may require manual intervention or custom engineering. The cost per request is high; scaling to automated compliance is prohibitively expensive for a sub-100-person team."
+    },
+    {
+      "name": "data_brokers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Data brokers and data aggregation services accumulate and sell datasets. Article 17 compliance requires them to maintain accurate data-lineage maps (knowing exactly where every data point sits), respond to erasure requests within 30 days, and prove deletion. For a company managing billions of data points across multiple sources and customers, this infrastructure is substantial. Compliance is often outsourced to specialized vendors, raising operational costs and reducing profit margins."
+    },
+    {
+      "name": "eu_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "EU regulators (DPAs, national regulators, the European Commission) set and enforce the rules. They define what 'erasure' means in practice, accept compliance frameworks, and issue enforcement actions against non-compliant controllers. They face a competing mandate: protecting individual privacy rights while avoiding economic burden so severe that it distorts competition."
+    },
+    {
+      "name": "individuals_in_eu",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "EU residents have a legal right to erasure but depend on platforms to honor it. They benefit from the nominal right and the platforms' compliance machinery. In practice, those with resources to hire lawyers or advocacy organizations can more effectively exercise the right; those without must rely on platform responsiveness and voluntariness. The right exists; its exercise is unequally distributed."
+    },
+    {
+      "name": "non_eu_competitors",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Non-EU data controllers (U.S., Chinese, other jurisdictions) face Article 17 obligations only if they process EU residents' data. They can avoid compliance by not operating in the EU or by not storing EU residents' data in systems subject to GDPR. This is a structural choice unavailable to EU-based competitors, who cannot opt out of GDPR. Non-EU competitors can compete in the EU market without bearing the same compliance burden if they use different technical approaches (e.g., not storing persistent profiles of EU users)."
+    },
+    {
+      "name": "privacy_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Privacy advocacy groups, civil-society organizations, and academic researchers study the right to erasure. They monitor whether platforms honor requests, document selective compliance, and push for stronger enforcement. They do not collect from the constraint but observe its operation and advocate for interpretations aligned with privacy protection."
+    },
+    {
+      "name": "competition_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Competition authorities (EU national authorities, DGCOMP, national merger authorities) assess whether Article 17 compliance creates or reinforces market dominance. They can use competition law to challenge platform practices that use compliance costs as anti-competitive barriers."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a uniform legal obligation across EU-regulated entities to honor individual requests to delete personal data, preventing indefinite retention and creating accountability mechanisms. Solves the collective-action problem of fragmented data retention policies by enforcing a shared standard: individuals have a delete right, controllers must respond within 30 days, and deletion must be verifiable.",
+    "transfer_function": "Transfers compliance costs (legal expertise, technical infrastructure, operational labor) from data subjects (who would otherwise lack leverage to compel deletion) to data controllers (who bear the obligation). Also transfers a competitive advantage from smaller, leaner entrants to established players with distributed cost structures.",
+    "absent_voices": "Non-EU competitors operating globally can structure their operations to avoid GDPR applicability; they are not absent from the policy conversation but are structurally exempted. EU-based startups and challengers who lack the resources to mount effective advocacy are underrepresented in regulatory consultations dominated by incumbent platforms' legal teams. They cannot afford to participate in rulemaking.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Article 17 and its enforcement disappeared overnight, EU residents would lose the nominal right to deletion; data controllers would no longer face uniform compliance obligations; smaller competitors would face lower infrastructure barriers to entry (though they would compete in a market with less data privacy protection). Incumbent platforms would lose the compliance moat protecting their market position but would also no longer bear the compliance costs. The competitive landscape would shift substantially.",
+    "founding_problem": "Unchecked data retention by platforms created lasting digital records and privacy harms; individuals had no effective mechanism to prevent indefinite persistence of their data in corporate systems.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Privacy advocates and individuals attest the founding problem remains live: platforms retain data far longer than users expect, and deletion requests are often ignored or delayed (documented in NGO reports and academic studies, e.g., Norwegian Consumer Council investigations). Incumbents attest the problem is solved through Article 17 compliance. Competition authorities and emerging competitors attest the founding problem's solution has been weaponized as an entry barrier, shifting the constraint from privacy protection to market protection."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Article 17 of the GDPR establishes the 'right to be forgotten'—individuals can request erasure of their personal data from controllers. This story instantiates ONE reading of this contested kernel: Article 17 functions as incumbent protection via compliance cost asymmetry and technical infrastructure requirements. In this reading, the nominal privacy right is genuine but operates as a competitive moat. Incumbents with distributed cost structures absorb compliance costs; challengers cannot replicate the infrastructure at sub-billion-user scale. The constraint coordinates privacy rights (real coordination function) AND asymmetrically extracts from challengers via barrier amplification. This is a Tangled Rope: it solves a genuine coordination problem (data retention accountability) AND operates as enforced asymmetric extraction (compliance cost barrier). The claim/metric divergence is structural, not error: the regulation CLAIMS to be privacy protection; the authored metrics describe substantial extractive operation (0.68 extractiveness, rising over time from 0.48 to 0.68 as incumbents optimize moat strategies).",
+    "key_agents": [
+      "incumbent_digital_platforms: Institutional power, arbitrage-level exit, globally distributed, benefit from compliance moat — d near beneficiary end (~0.2)",
+      "challenger_platforms: Moderate power, constrained exit, regional scope, bear fixed compliance costs — d near target end (~0.75)",
+      "startups_building_data_services: Powerless, trapped exit, national scope, unable to afford compliance infrastructure at scale — d at full target (~0.95)",
+      "eu_regulators: Institutional power, analytical exit, continental scope, set and enforce the rules — agenda-setter seat",
+      "individuals_in_eu: Organized power, constrained exit, benefit from nominal right but unequally exercise it — beneficiary seat",
+      "competition_authorities: Institutional power, analytical exit, observe and potentially intervene on competition grounds — observer seat"
+    ],
+    "logic_rationale": "Extractiveness is 0.68 (at interval end) because the compliance cost burden falls asymmetrically on challengers; incumbents absorb it as institutional overhead and use it as a moat. Suppression is moderate (0.42) because the constraint does not require coercive silencing of alternatives—it is a regulatory cost that makes alternatives unaffordable. Theater ratio is 0.48 (approaching 0.5) because the compliance operation is half genuine privacy protection (real coordination function) and half moat maintenance (exclusionary effect): incumbents genuinely delete data AND strategically maintain the infrastructure as a barrier. Accessibility collapse is 0.71 because challengers cannot realistically exit GDPR or avoid compliance; alternatives (structured data in non-EU bases, minimal profiling) are technically constrained and competitive disadvantages. Resistance is 0.59 because startups and challengers resist the cost burden but lack the power to change the regulatory framework; incumbents defend it; the regulation is stable despite opposition from below. The measurement trajectory shows extractiveness rising from 0.48 to 0.68 over the interval, indicating that as incumbents mature their compliance infrastructure and optimize cost distribution, the moat deepens—initial chaos (early compliance, high per-unit costs for all) gives way to entrenched advantage (large platforms achieve economies of scale, smaller entrants remain priced out). Theater ratio rises from 0.32 to 0.48, indicating that while real data-deletion activity continues, an increasing share of the infrastructure is devoted to proving compliance and maintaining the barrier rather than to enabling user control.",
+    "perspectival_gap": "The incumbent and challenger seats compute radically different constraint types. From the incumbent seat (institutional power, arbitrage exit, beneficiary): Article 17 is a well-behaved Rope—it coordinates privacy rights, they comply, the infrastructure spreads over billions of users, cost per user is negligible, they benefit from the legitimate right. From the challenger seat (moderate-to-powerless power, trapped exit, payer): Article 17 is a Snare—it imposes a fixed compliance cost that is impossible to escape, it prices them out of the market, and the regulation persists because incumbents defend it and regulation-makers cannot see the asymmetry (they only see the beneficiary side: privacy protection is real). The engine computes BOTH seats' perspectives from the structural data and surfaces the divergence. The agenda-setter (regulator) and observer (competition authority) seats add additional readings: regulators see coordination (privacy protection is the goal), competition authorities see competitive harm (the moat effect is a side effect they may remedy). This multi-seat structure is the core of the tangled-rope diagnosis: the constraint genuinely coordinates AND asymmetrically extracts, and different seats experience fundamentally different constraint types.",
+    "directionality_logic": "Incumbents derive d near 0.15-0.25 (beneficiary end): they hold institutional power, arbitrage-level exit options (they can restructure data architectures if needed, operate globally, negotiate with regulators), and clearly benefit from the compliance moat. Challengers derive d near 0.75-0.95 (target end): they hold powerless-to-moderate power, trapped exit (they cannot leave GDPR or avoid compliance, they cannot restructure as globally as incumbents), and bear the asymmetric cost. Individuals derive d near 0.5 (symmetric): they genuinely benefit from the privacy right (low d) but also bear diffuse costs (higher d from compliance-driven pricing and reduced competitive choice in data services). Regulators and competition authorities are analytical seats with d at 0.5 (neutral observation). The derivation is driven by (1) beneficiary/victim declarations (incumbents explicitly benefit, challengers explicitly pay), (2) exit options (incumbents have arbitrage, challengers have trapped or identity-locked), and (3) power asymmetry (institutional vs. moderate/powerless). No directionality overrides needed; the derivation captures the structure.",
+    "mandatrophy_analysis": "The founding problem (unchecked data retention, privacy harms from indefinite persistence) was live and real in 2014-2017; Article 17 addressed it coordinately. By 2023-2025, the problem has been substantially solved—major platforms honor deletion requests at scale, deletion mechanisms are implemented and audited, individual privacy protection is credibly offered. However, the regulation persists and has acquired a second function: incumbent protection via compliance moat. The founding-problem-status is contested: privacy advocates say the problem remains live (platforms still retain more data than users realize, deletion enforcement is incomplete); incumbents say it is solved; competition authorities say the original coordination function is solved but the constraint has accumulated a new extractive function (the moat). This is a textbook mandatrophy scenario: the original mandate (privacy protection) has been achieved; the constraint persists for a different reason (incumbent competitive protection). The classification prevents misreading this as a failed Rope or a pure Snare. It is a Tangled Rope specifically because BOTH the coordination and extraction components are active: deletion rights are genuinely exercised and enforced, AND the compliance cost is genuinely asymmetric. Removing Article 17 would harm privacy (coordination loss); leaving it unchanged perpetuates competitive distortion (extraction persistence). The remedy is not abolition but restructuring: equivalent-treatment technical standards that lower compliance costs for challengers, or exemptions for small-scale processors, or baseline compatibility layers that let challengers plug into compliance infrastructure. Recognizing mandatrophy does not eliminate the constraint; it clarifies what kind of remedy is needed.",
+    "kernel_context": "This constraint is the competitive_moat_reading of the article17_erasure_right kernel. Article 17 of GDPR is the stable text; the contest is over its function. The privacy_fundamental_reading reads Article 17 as instantiating individual data sovereignty as a fundamental right limiting corporate data retention—the coordination function is the entire point, and the cost is a legitimate price for privacy protection. The censorship_mechanism_reading reads Article 17 as enabling suppression of content via strategic erasure requests weaponizing privacy rights against speech—incumbents and governments use it to silence dissent by deleting archives and records. The competitive_moat_reading (this constraint) reads Article 17 as operating as incumbent protection via compliance cost asymmetry—it is neither about privacy fundamentalism nor about censorship but about competitive structure. These readings coexist across different parties: privacy advocates hold the fundamental reading, free-speech advocates hold the censorship reading, competition authorities and challenger platforms hold the competitive-moat reading. The structural delta that distinguishes this reading: ε is substantially higher (0.68 vs. near-zero for the fundamental reading) because the competitive effect is extractive; beneficiaries are explicitly incumbents (not individuals in the fundamental reading) and victims are explicitly challengers (not present in the fundamental reading). The three readings are NOT alternatives in a single framework (one true, others false)—they coexist as coherent readings held by different parties, each capturing real structure that the others omit."
+  },
+  "omegas": [
+    {
+      "id": "compliance_cost_measurement_ambiguity",
+      "question": "What is the true marginal cost for a challenger platform to build and maintain Article 17 compliance infrastructure, versus the average cost distributed across an incumbent's installed base?",
+      "resolution_mechanism": "Detailed cost-accounting studies from challenger platforms and startups, regulatory data-call responses (e.g., from competition authorities), or contractor quotes for compliance-as-a-service solutions serving SME platforms.",
+      "impact": "A measured cost ratio of >10:1 (challenger per-user cost to incumbent per-user cost) would strongly support the moat diagnosis; a ratio <2:1 would suggest the asymmetry is weaker and the constraint may be closer to a Rope. The extractiveness metric depends on this ratio; the higher the cost asymmetry, the more extractive the constraint.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Scale and cost asymmetry between incumbent and challenger compliance infrastructure."
+    },
+    {
+      "id": "reading_boundary_ambiguity",
+      "question": "Does Article 17 compliance primarily enable privacy protection (fundamental reading) or primarily function as a competitive moat (competitive-moat reading), or are both effects equally present?",
+      "resolution_mechanism": "Comparative analysis of privacy outcomes and competitive structure before and after Article 17 implementation; regulatory assessments of whether Article 17 enforcement correlates more strongly with privacy protection or with competitive disadvantage for challengers; survey of affected parties' primary motivations for compliance.",
+      "impact": "If evidence shows privacy protection dominates and moat is incidental, reclassify toward Rope (coordination-dominant). If evidence shows moat dominates and privacy is theater, reclassify toward Snare (extraction-dominant). If both effects are structurally inseparable (deletion compliance requires the same infrastructure that creates the moat), the Tangled Rope classification is confirmed and remedies must address both effects simultaneously.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the privacy protection and competitive moat functions are separable or structurally coupled."
+    },
+    {
+      "id": "accessibility_collapse_mechanism",
+      "question": "Is the high accessibility collapse (0.71) driven by legal barriers (GDPR is mandatory and cannot be opted out of) or by technical barriers (the infrastructure cost is prohibitive) or by market barriers (challengers cannot fundraise adequately to cover compliance costs)?",
+      "resolution_mechanism": "Analysis of alternative market strategies (non-EU bases, minimal profiling, federated infrastructure) and their competitive viability; case studies of startups that attempted to compete under Article 17 and the barriers they hit.",
+      "impact": "If legal barriers dominate, the constraint is inescapable and accessibility collapse is accurately high. If technical barriers dominate, solutions may emerge from compliance-as-a-service or open-source infrastructure. If market barriers dominate (limited venture capital for compliance-heavy startups), the issue is venture-capital structure, not the constraint itself. This distinction informs remedy design.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism driving alternatives' collapse: legal mandate, technical difficulty, or market structure."
+    },
+    {
+      "id": "incumbent_strategic_moat_maintenance",
+      "question": "Do incumbents actively lobby for stricter Article 17 enforcement, fund compliance infrastructure as a service to smaller players to neutralize the moat, or treat the moat as a competitive advantage they defend?",
+      "resolution_mechanism": "Analysis of regulatory comments filed by incumbents vs. challengers; documentation of compliance-as-a-service offerings (whether incumbents actively market them to competitors); lobbying records and positions on Article 17 amendment or clarification proposals.",
+      "impact": "If incumbents actively lobby for stricter enforcement and defend the moat, that confirms the extraction diagnosis and suggests the moat is intentional. If incumbents share compliance infrastructure or support standard-setting that lowers barriers, the moat may be incidental and the constraint may be moving toward Rope. The theater ratio measurement reflects this: rising theater ratio suggests increasing strategic moat maintenance over time.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether incumbents actively defend the compliance-cost moat as a competitive advantage."
+    },
+    {
+      "id": "sibling_reading_foreclosure_scope",
+      "question": "Does the competitive-moat reading's core premise (compliance cost asymmetry is a primary function of Article 17) logically foreclose the privacy-fundamental reading (privacy protection is the primary function), or do both premises remain coherent within different frameworks?",
+      "resolution_mechanism": "Logical analysis: if one party claims 'Article 17 exists to protect privacy' and another claims 'Article 17 functions to protect incumbents,' can both be true within the SAME commitment framework (e.g., GDPR's founding documents and legislative intent)? Or does one reading require denying the other?",
+      "impact": "If the readings foreclose each other, they represent a genuine logical conflict and the regulation is being read in contradictory ways (one is wrong). If they coexist, both effects are real and the regulation is doing both things simultaneously—privacy protection AND moat creation. This distinction determines whether the constraint is a straightforward Rope (privacy) or a Tangled Rope (both effects), and affects remedy design (can you keep privacy protection while removing the moat, or are they coupled?).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between the privacy-fundamental and competitive-moat readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.14
+  },
+  "network": {
+    "affects_constraints": [
+      "article17_erasure_right__privacy_fundamental_reading",
+      "article17_erasure_right__censorship_mechanism_reading",
+      "gdpr_data_controller_liability",
+      "data_portability_competitive_dynamics"
+    ],
+    "dual_formulation_note": "This is one of three readings of the article17_erasure_right kernel. The privacy_fundamental_reading treats Article 17 as privacy protection with minimal extraction (Mountains/Rope); this reading (competitive_moat) treats it as Tangled Rope with substantial extraction via barrier amplification. The censorship_mechanism_reading treats it as a Snare enabling suppression. All three readings coexist; they are not alternatives but represent different parties' structural positions and interests. The privacy reading is upstream (GDPR's stated intent); the competitive-moat reading influences it (documents how a well-intentioned right becomes a moat); the censorship reading is partially downstream (depends on the right existing to weaponize it)."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "privacy_protection_through_data_sovereignty",
+    "drift_state": {
+      "moment": "contemporary_post_2023",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "article17_erasure_right__privacy_fundamental_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "article17_erasure_right__censorship_mechanism_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "compliance_cost_asymmetry_competitively_significant",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "deletion_infrastructure_as_barrier_to_entry",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "incumbent_digital_platforms",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "article17_erasure_right__privacy_fundamental_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

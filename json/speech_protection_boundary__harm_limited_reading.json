@@ -1,0 +1,382 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_boundary__harm_limited_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "87d77ae4-8fd3-479d-88f2-6c1a7e81fcf4"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Speech Protection Conditional on Harm-Absence (Dignity/Equality/Harassment Frame)",
+    "topic_domain": "constitutional/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "marginalized_dignity_bearers",
+      "equality_principle_vindicators"
+    ],
+    "victims": [
+      "speech_speakers_subject_to_gatekeeper_review",
+      "speakers_with_coded_or_edge_expression"
+    ],
+    "vindicated_propositions": [
+      "equal_dignity_as_constitutional_prerequisite",
+      "harassment_harm_as_cognizable_interest"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "marginalized_dignity_bearers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Members of groups historically targeted by dehumanizing slurs, epithets, and coded language (racial minorities, religious minorities, LGBTQ+ persons, immigrants). They experience ambient targeted speech as a system of epistemic invalidation and social subordination. The constraint frames their dignity as a constitutional interest; they gain a claim to protection from speech that the law treats as constructing their inferiority. They cannot exit their group status or leave citizenship without extreme cost."
+    },
+    {
+      "name": "equality_enforcement_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts applying equal protection doctrine, civil rights agencies, legislatures enacting anti-discrimination and anti-harassment law. They set the boundary between protected and unprotected speech, determine what counts as significant harm to dignity and equality, and enforce through judicial decision, agency action, and statute. They hold the definitional power and enforcement power; they collect the authority that the constraint distributes."
+    },
+    {
+      "name": "speakers_subject_to_gatekeeper_review",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals whose speech falls within the unprotected set as defined by this reading: those uttering statements classified as hate speech, harassment, or dignity-violating expression. They face platform removal, legal liability, professional consequences, social sanction, and reputation damage. They can exit through self-censorship, code-switching, geographic relocation, or career change; these are costly but possible options."
+    },
+    {
+      "name": "speakers_with_coded_or_edge_expression",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Speakers using dog-whistle language, satirical inversion of slurs, academic language on contested topics, artistic expression that skirts the boundary, or the kind of ironic ribbing that belongs to in-group communication. They face uncertainty about whether their expression will be classified as dignity harm or harassment; they bear the cost of anticipatory self-censorship and reclassification risk. Their identity often fuses with their mode of expression (they are artists, satirists, academics in controversial fields, or members of subcultures with specific speech practices). Exit through code-switching or mode-switching is identity-costly."
+    },
+    {
+      "name": "state_speech_gatekeepers",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government bodies (courts, agencies, legislative bodies) tasked with implementing the harm-limited boundary. They gain institutional authority to regulate speech and discretionary power to classify utterances. They also bear costs: they must administer speech classification, manage appeals and litigation, resist pressure to weaponize the boundary against political opponents, and maintain public legitimacy for their gatekeeping authority. The directionality override (d=0.55, near-symmetric) reflects this dual position: they gain substantial authority but also carry substantial institutional burden."
+    },
+    {
+      "name": "absolutist_speech_defenders",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Civil liberties organizations, First Amendment maximalists, constitutional scholars and lawyers who believe near-absolute speech protection is required to prevent government abuse. They argue that the dignity gatekeeping apparatus, once established, will inevitably be weaponized against disfavored speech and that equal dignity is better served by equal speech protection than by curated boundaries. Their position that gatekeeper power is a worse harm than ambient speech harm is structurally excluded from the dignity-centered framing of this reading."
+    },
+    {
+      "name": "balancing_framework_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Constitutional scholars, judges, and legal theorists who hold that speech restrictions should be determined through explicit case-by-case weighing of competing constitutional interests rather than through categorical rules. They see the harm-limited reading as abandoning principled balancing in favor of dignity as a per-se trump, which they regard as unprincipled gatekeeping. Their view that the boundary should emerge from analysis rather than be imposed ex-ante is excluded from this reading's framework."
+    },
+    {
+      "name": "courts_applying_speech_doctrine",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Judicial bodies (especially appellate courts) responsible for determining which reading of the speech protection boundary is constitutionally required or permitted. They adjudicate individual cases testing the boundary, develop doctrine, and interpret the scope of dignity-based unprotected categories. They carry the epistemic burden of distinguishing dignitary harm from viewpoint discrimination and harassment from disfavored ideas."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a framework for speech rights that incorporates equal dignity and freedom from ambient harassment as substantive liberty interests, not secondary to classical First Amendment concerns. Solves the coordination problem of a plural society where some utterances systematically construct the social inferiority of historically marginalized groups: any unified speech regime must distribute both speech access and harm-bearing. This reading opts to constrain some speakers' utterances in order to protect others' dignity and equal citizenship.",
+    "transfer_function": "Moves speech authority from the speaker (who under absolutist framing retains near-unlimited claim to utter whatever they judge relevant) to the gatekeeper (courts, agencies, institutions) who determines which utterances cause significant harm to dignity, equality, or freedom from harassment. Moves the obligation to silence and self-censor from historically targeted groups (who under ambient harassment bear the cost of managing dehumanizing speech) to speakers whose speech the gatekeeper judges harmful.",
+    "absent_voices": "Civil libertarians and First Amendment absolutists are systematically excluded from this reading's legitimacy frame: their argument that gatekeeper power itself becomes a worse harm to speech freedom and to the marginalized groups it claims to protect is routed outside the dignity-centered logic. Speakers of edge cases, satirists, and academic speakers on contested topics are not at the table when the harm boundary is defined, though their expression is the subject of classification and potential restriction. The balancing-framework advocates argue for different decisional method but are not treated as having a seat in this reading's framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading's apparatus vanished — if courts returned to near-absolute speech protection and removed institutional discretion to regulate speech on dignity/equality/harassment grounds — the constitutional meaning of equal protection would reorganize. Speaker behavior would shift (coded language might become explicit, marginalized groups would report increased epistemic invalidation and harassment, antidiscrimination law and institutional practices would become the primary locus of equality enforcement). The speech/non-speech boundary for regulating subordination would move, and the institutional distribution of authority over discourse would fundamentally change.",
+    "founding_problem": "Historically marginalized groups experience targeted dehumanizing speech — slurs, epithets, coded language, dehumanizing comparisons — as a coordinated system of epistemic invalidation and social subordination that constructs their inferiority in the public mind. The law treats most of this speech as protected political expression and places the burden on targeted groups to manage the harm, ignore it, or counter-speak. The founding problem is the gap between formal legal equality (equal protection) and substantive dignity equality (equal standing in speech communities and civic participation).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Scholars of subordination, civil rights advocates, and marginalized communities testify that targeted dehumanizing speech persists and causes measurable epistemic and dignity harm. Historians document the role of dehumanizing speech in coordinating violence and subordination. First Amendment scholars and civil libertarians contest this reading's remedy: they argue that speech restriction creates worse institutional and epistemic harms, and that dignity is better protected by non-speech mechanisms (antidiscrimination enforcement, institutional diversity, cultural norm change). No unified corroboration exists outside the beneficiary set; the founding problem itself is contested in legitimacy terms (is it a problem that requires speech remedy, or is it overstated relative to the institutional risks of gatekeeping?)."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE READING of the contested kernel 'speech_protection_boundary.' The harm-limited reading narrows the protected set by excluding speech that causes significant harm to dignity, equality, and freedom from harassment. This reading holds that equal dignity is itself a prerequisite for equal speech protection — that speakers cannot stand on equal footing when some categories of speech systematically construct the social inferiority of historically marginalized groups. The reading requires active state gatekeeping to distinguish protected from unprotected speech, creating the institutional vulnerability that exclusionary voices warn about. The constraint is claimed as tangled_rope because it possesses BOTH a genuine coordination function (pluralistic society needs some rule for distributing speech authority and harm-bearing) AND asymmetric extraction (the gatekeeper gains power over discourse, speakers of edge cases bear uncertainty costs, and the boundary's discretionary nature creates abuse risk). This reading stands in a structural relationship to its sibling readings: it forecloses the absolutist reading's premise (near-absolute speech protection) within any single coherent framework, but coexists with the balancing reading as a live position held by different institutional actors and schools of constitutional thought.",
+    "key_agents": [
+      "marginalized_dignity_bearers (powerless, trapped, generational) — benefit from the constraint; their dignity is the vindicated proposition",
+      "equality_enforcement_bodies (institutional, gatekeeper) — set and enforce the harm boundary; gain authority and discretion",
+      "speakers_subject_to_gatekeeper_review (moderate, constrained, biographical) — bear the direct extraction; face speech restriction and professional consequences",
+      "speakers_with_coded_or_edge_expression (moderate, identity_locked, biographical) — bear extraction through epistemic uncertainty; their identity fuses with modes of expression",
+      "state_speech_gatekeepers (institutional, dual-positioned) — administer the boundary; gain discretionary power but also bear cost of managing abuse risk and appeals",
+      "absolutist_speech_defenders (organized, excluded) — would object that gatekeeper power is a worse harm than ambient dignity threat",
+      "balancing_framework_advocates (organized, excluded) — argue this reading abandons principled weighing in favor of dignity as per-se trump"
+    ],
+    "logic_rationale": "Extractiveness (0.68 at endpoint) reflects the constraint's net effect: marginalized groups gain protection from some speech harms, but speakers lose speech authority to a gatekeeper, and the gatekeeper gains discretionary power that can be weaponized. The asymmetry is real and substantial — the beneficiaries do not run the system, the payers do not set the boundary. Suppression (0.71) is high because the constraint's persistence depends on active enforcement: courts must classify speech, platforms must remove it, speakers must be sanctioned. If enforcement relaxed, the boundary would collapse and speakers would revert to less guarded expression. Theater (0.42) reflects the constraint's performative dimension: some portion of gatekeeper activity is devoted to demonstrating commitment to dignity protection rather than preventing measurable harm (courts issue dramatic condemnations of hate speech, institutions adopt speech codes and then abandon them under legal challenge, etc.). Accessibility_collapse (0.62) reflects that once the harm framing is institutionalized, alternatives partially collapse for speakers — they cannot easily 'exit' the speech standard without geographic or professional relocation. Resistance (0.58) reflects that the constraint meets substantial opposition from First Amendment defenders and speakers, who mount legal challenges, academic critique, and rhetorical resistance. The measurement series shows extraction and suppression rising over the interval as the boundary expands (as case law refines and institutions proliferate speech codes) and then plateauing — the constraint reaches a stable extractive equilibrium rather than continuing to intensify. Theater rises more continuously because performative demonstration of commitment to dignity protection becomes more institutionally salient over time (institutional virtue-signaling around diversity and inclusion). All metrics are authored on a single shared time grid; every metric has a value at every examined time point.",
+    "perspectival_gap": "From the gatekeeper seat (equality_enforcement_bodies, state_speech_gatekeepers), the constraint is legitimate institutional authority protecting fundamental dignity — a coordination solution to a real problem. From the speaker seat (speakers_subject_to_gatekeeper_review), the constraint appears as an extraction mechanism disguised as dignity protection — a loss of speech authority to a actor that gains power from maintaining the boundary. The marginalized_dignity_bearers seat sees the constraint as essential; the absolutist_speech_defenders seat sees it as the camel's nose toward majoritarian suppression. The engine computes these divergent type-classifications from the structural data; the authored claim (tangled_rope) reflects the analytical position that all these seats' experiences are real and that the constraint possesses both genuine coordination and genuine asymmetric extraction.",
+    "directionality_logic": "Marginalized_dignity_bearers are net beneficiaries (d near 0.0): they gain dignitary protection, cannot exit, and depend on the constraint for equal citizenship. Their low exit_options (trapped, identity_locked) and high vulnerability to speech harm push d downward. Speakers_subject_to_gatekeeper_review are net targets (d near 1.0): they lose speech authority, face sanction, and bear the cost of gatekeeper discretion. Their moderate power and constrained exit options push d upward. Speakers_with_coded_or_edge_expression are also targets but with added burden: their identity is fused with their modes of expression (identity_locked exit), so exit costs are compounded; their d is near 1.0 with amplification from identity-lock. Equality_enforcement_bodies and state_speech_gatekeepers are positioned as agenda-setters (they set and enforce the boundary) but face a secondary cost: they must resist weaponization pressure and manage appeals. The directed-both-ways rider (a seat that both benefits and pays) applies here — the gatekeeper gains authority but also bears the institutional cost of administering and defending the boundary against legal challenge and pressure to expand it into viewpoint discrimination. No directionality overrides are needed; the structural data produces accurate d values across seats.",
+    "mandatrophy_analysis": "The constraint exhibits a real coordination function (managing speech authority in a plural society where not all utterances can coexist without harm) paired with real asymmetric extraction (gatekeeper power over discourse, speaker vulnerability to discretion). The tangled_rope classification prevents misconstruing this as either pure coordination (rope, where participants are net beneficiaries) or pure extraction (snare, where the coordination story is pure cover). The omegas document the specific sites of ambiguity: whether the gatekeeper apparatus can be administered without becoming a tool of majoritarian suppression, whether dignity harm is sufficiently determinate to avoid viewpoint discrimination, whether the founding problem (dignity threat from targeted speech) remains live or has been substantially addressed by other mechanisms (antidiscrimination law, institutional representation, cultural shifts). Mandatrophy (mandate outliving function) is not yet present: the constraint's founding problem (equal dignity in the face of dehumanizing speech) remains contested and substantially live, so the mandate has not yet become purely theatrical. However, the rising theater_ratio suggests that some portion of enforcement activity is performative rather than preventive of measurable harm, which is an early warning sign.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'speech_protection_boundary.' The kernel is the foundational Constitutional commitment about which speech is protected and which is not. This reading instantiates the 'harm-limited' interpretation: speech protection is conditional on absence of significant harm to dignity, equality, and freedom from harassment. The sibling readings are: (1) absolutist_reading — speech protection is near-absolute; harm exception limited to imminent lawless action (Brandenburg standard); (2) balancing_reading — speech protection determined case-by-case through weighing First Amendment interests against other constitutional values and demonstrated harms. From this reading's perspective: the absolutist reading is FORECLOSED because this reading's core premise (that equal dignity is a prerequisite for equal speech protection) logically contradicts the absolutist premise (that speech protection should not be qualified by dignitary or equality considerations). These cannot coexist in a single coherent constitutional framework — one must win. The balancing reading COEXISTS WITH this reading because both are live positions held by different courts, different constitutional scholars, and different jurisdictions; neither logically forecloses the other, they simply weight the competing values differently and apply different decisional methods. The structural delta: this reading narrows the protected set relative to absolutism (new unprotected category: dignity-harming and harassment speech, including coded dog whistles) and widens discretionary gatekeeper authority (courts determine what counts as significant harm; institutional actors implement boundaries). This creates the abuse risk the excluded absolutist voices worry about."
+  },
+  "omegas": [
+    {
+      "id": "gatekeeper_discretion_vs_viewpoint_discrimination",
+      "question": "Can courts and institutions reliably distinguish speech that causes significant harm to dignity/equality/harassment from speech that merely expresses disfavored political views? Or does the discretion required to implement the boundary inevitably become a tool for suppressing political opposition?",
+      "resolution_mechanism": "Longitudinal analysis of court decisions and institutional speech codes: do determinations correlate with the political valence of the speech or with content-neutral harm metrics? Comparative-law evidence from jurisdictions with explicit dignity-based speech restrictions — do their patterns show systematic political weaponization?",
+      "impact": "If gatekeeper discretion systematically correlates with viewpoint suppression (not just content regulation), the constraint reclassifies from tangled_rope (mixed coordination and extraction) to snare (pure extraction disguised as dignity protection). If discretion tracks harm metrics reliably across political contexts, the tangled_rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether gatekeeper discretion in defining dignity harm remains neutral across political contexts or becomes a tool for viewpoint suppression."
+    },
+    {
+      "id": "dignity_harm_determinacy",
+      "question": "Is 'significant harm to dignity' a sufficiently determinate standard to guide judicial and institutional decision-making, or is the concept too plastic to avoid circularity (harm to dignity = speech a gatekeeper judges as dignity-violating)?",
+      "resolution_mechanism": "Analysis of case law: do courts develop stable doctrine distinguishing dignity harm from offense, insult, or disagreement? Can institutional speech codes be applied consistently across time and contexts, or do boundaries shift with changing institutional priorities?",
+      "impact": "High determinacy would support the constraint as legitimate coordination. Low determinacy would suggest the gatekeeper boundary is essentially arbitrary, which amplifies the extraction and institutional-abuse dimensions.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether dignity harm is sufficiently determinate to guide consistent application or whether it remains indeterminate and subject to motivated application."
+    },
+    {
+      "id": "foundational_problem_live_or_resolved",
+      "question": "Is the founding problem (equal dignity under conditions of dehumanizing speech targeting marginalized groups) still live, or have other mechanisms (antidiscrimination law, institutional diversity practices, cultural norm shifts) substantially addressed it such that speech restriction is no longer necessary to achieve equal dignity?",
+      "resolution_mechanism": "Empirical measurement: do marginalized groups report persistent epistemic invalidation and dignity harm from speech in jurisdictions WITH and WITHOUT this reading's speech restrictions? Has the introduction of harm-based speech restriction causally reduced reported harm, or has harm persisted/changed form?",
+      "impact": "If the founding problem is substantially resolved by non-speech mechanisms, the constraint risks mandatrophy — a shell of enforcement persisting after the function has been absorbed. If the problem remains live and speech restriction demonstrably reduces harm, the constraint retains legitimacy.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the dignity-harm problem the constraint was built to address remains live or has been substantially addressed by other institutional developments."
+    },
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "Is this reading (harm-limited, gatekeeper-dependent) genuinely a stable constitutional principle, or is it functionally a temporary expansion of state speech authority that will revert to absolutist or balancing frameworks when political pressure shifts?",
+      "resolution_mechanism": "Meta-analysis of constitutional doctrine over time: does this reading survive political transitions? Does it maintain its boundaries or does it shift into less protective or more protective directions depending on which parties control the gatekeeper institutions? Comparative evidence from other democracies: which framings prove stable across changes in political control?",
+      "impact": "If the reading proves unstable and shifts with political control, it is less a principle than a tool — the constraint exhibits higher extraction and lower coordination value than its legitimacy framing suggests. If stable, it represents a genuine constitutional choice point.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether this reading represents a stable constitutional principle or a temporary political-dependent expansion of gatekeeper authority."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.71) structural — external enforcement machinery and institutional sanction — or internalized — speakers have absorbed the boundary into their own judgment and self-censor even without institutional enforcement?",
+      "resolution_mechanism": "Post-relaxation trajectory: in jurisdictions or subcultures that relax speech enforcement (or where enforcement is unevenly applied), do speakers revert to previously-restricted speech, or do they maintain self-censorship? Do speaker surveys report internalized acceptance of the boundary or ongoing resentment and suppression?",
+      "impact": "If suppression is primarily structural, its removal would reverse the constraint quickly. If suppression is substantially internalized, speakers carry the constraint's effect even absent institutional enforcement — exit is compromised even for mobile speakers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether measured suppression is structural (external enforcement) or internalized (absorbed into speaker judgment)."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_protection_boundary__absolutist_reading",
+      "speech_protection_boundary__balancing_reading",
+      "institutional_gatekeeper_authority_over_discourse",
+      "equal_dignity_as_substantive_liberty"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel 'speech_protection_boundary.' The absolutist_reading and balancing_reading are sibling constraints with different ε values and beneficiary/victim structures. The harm-limited reading forecloses the absolutist reading (core premises are logically contradictory) but coexists with the balancing reading (both live in different courts/jurisdictions). The network edge points to the other readings and to downstream constraints about institutional authority and substantive liberty that instantiate this reading's implications."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ],
+  "gain_flow": "equality_enforcement_bodies",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "speech_protection_boundary__absolutist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "speech_protection_boundary__balancing_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "equal_dignity_prerequisite_for_equal_speech",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "dignity_harm_cognizable_speech_interest",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "formalized_equal_protection_doctrine",
+    "drift_state": {
+      "moment": "contemporary_diversity_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

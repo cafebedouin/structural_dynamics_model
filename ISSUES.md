@@ -3120,13 +3120,38 @@ failures all recovered in attempt 2, no `failures.json`); cost ~$0.87 (Haiku bat
   **generation-side naming drift**: the model appended `_reading` to sibling targets but the reading_ids
   / files carry no suffix, so within-kernel edges that should resolve land in quarantine. Watch this at
   scale; it inflates the dangling count for any kernel whose reading_ids lack a `_reading` suffix.
-- **Next step (gated on operator go — decision gate after the pilot):** operator decides scale/spend
-  (one more increment vs. full ~975-reading completion) BEFORE generating `pilot_02..`. To continue: in a
-  tree with the manifest pool, `python3 agent/build_never_generated_seeds.py`, carve the next N whole
-  kernels (kernels 11.. in builder file order) to `outputs/completion_seeds/chunks/pilot_NN.json`, strip
-  their ids from `prolog/beta_processed.txt` (OQ-121 before/after witness), generate with
-  `python3 -m agent.generate_kernel_corpus --seeds <chunk>`, run the OQ-58 sweep manually, then
-  `run_pipeline`. Do NOT auto-continue.
+- **FULL COMPLETION RUN — DONE (operator ruled full completion, 2026-06-13).** The remaining pool was
+  carved into 7 chunks (`pilot_02..08`, 50 kernels each except 08's 21) and generated serially (one batch
+  at a time, OQ-77), each chunk: ladder-strip (OQ-121 before/after witnessed) → generate → manual OQ-58
+  sweep → `run_pipeline` → commit. **Final corpus: n_constraints 5 → 993** (commits `e0a58643`,
+  `5a541468`, `615c4445`, `647ba9f2`, `f4c7b13d`, `837723c8`, `441bdbad`, + pilot_08). Of 1005 readings
+  attempted: **988 generated, 17 failed** (3-attempt retry exhausted, all NAMED — graceful, defect #1/#5
+  holds at scale; ids in `outputs/no_scope_runs/cumulative_failures.json`, gitignored). At-scale load
+  witness: 993 testsets load, 993 story_provenance facts (defect-3 multifile holds: one per story),
+  **zero "Redefined static procedure" warnings**; provenance models 988× `claude-haiku-4-5-20251001`
+  (generated) + 5× `claude-sonnet-4-5` (the main-baseline stories) — no fabrication. Total Haiku-batch
+  cost ≈ $27.
+- **Residual / forward items for this corpus (not blockers):**
+  1. **17 failed readings** to re-attempt (fresh draws) — dominant cause is a **generation-side enum
+     violation**: the model emits axiom `status: 'contested'` (valid set `holdable|overridden|foreclosed`)
+     — 33 occurrences in pilots 02–03 alone, mostly retry-recovered but the residual failures cluster
+     here, plus `not one of ['empirical...']` directionality-kind enums and JSON-parse truncations. A
+     prompt/schema note constraining axiom-status to the enum would cut both the failures and the retry
+     cost. The 17 partial-kernel gaps also leave their siblings' edges dangling (quarantined).
+  2. **Naming-drift quarantine class** (≈6–17 edges/chunk, all CAUGHT not crashed): the model mangles
+     sibling-edge targets — appends `_reading` where the file has none (`naskh_principle`), uses single-
+     underscore (`us_constitution_interpretive_originalist`), or drops the kernel prefix
+     (`bitcoin_electronic_cash_reading`). Within-kernel edges that should resolve instead land in
+     `prolog/cs_reading_relation_quarantine.json` (which is last-run-scoped — it currently holds only
+     pilot_08's 6 edges; the per-chunk sets are in each chunk's commit). Disposition is OQ-58 (reviewed,
+     not auto-rewritten). A target-normalizer at emission (strip/normalize the suffix, re-prefix) would
+     resolve most without a redraw.
+  3. **Grid first-contact gate:** one firing across the whole run
+     (`dueling_disappearance_mechanism__contraction_reading`, indicator `C-dir`, pilot_04) — REGENERATED
+     per the increment-0 operator ruling (not waived); the fresh draw passed. Expect occasional firings on
+     redraws/new chunks; regenerate, don't waive.
+  - Throwaway driver `agent/_pilot_ladder_strip.py` (OQ-121 strip + witness) is committed for reuse; not
+    pipeline-wired. Branch `corpus-rebuild-fresh` is UNMERGED to `main` per operator ruling (2026-06-13).
 
 ## OQ-76 — Kernel/flat gate is stochastic on a real boundary band: routing noise lands in Stage-2's cross-axis correlation
 

@@ -1,0 +1,357 @@
+{
+  "header": {
+    "constraint_id": "irc_469_material_participation_kernel__strict_gatekeeper_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_irc_469_material_participation_kernel__strict_gatekeeper_reading",
+    "measurement_id_prefix": "irc469_mp_strict",
+    "story_uid": "d75c2012-98ac-4d39-9069-90f74228178e"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.68,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.74,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IRC § 469 Material Participation Strict Gatekeeper (Regulatory Reading)",
+    "topic_domain": "tax_law/real_estate/regulatory_interpretation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_bracket_wage_earners",
+      "passive_investment_sheltering_complex"
+    ],
+    "victims": [
+      "rental_real_estate_active_participants",
+      "real_estate_professionals",
+      "small_property_operators"
+    ],
+    "vindicated_propositions": [
+      "graduated_income_protection_via_loss_limitation",
+      "labor_valued_taxation_principle"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "high_bracket_wage_earners",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Earn substantial W-2 income in high tax brackets (39.6%+ marginal rate). The strict material participation reading protects their high passive losses from passive-income rules that would otherwise disallow losses against ordinary income. They can structure their real estate investments to qualify as passive, absorb losses without verification burden, and defer loss realization through carried interests. Exit: switch jurisdictions or investment vehicles; arbitrage: invest in passive real estate funds meeting lesser scrutiny, or move income-producing assets to corporate structures."
+    },
+    {
+      "name": "passive_investment_sheltering_complex",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Large-scale real estate sponsors (syndications, REITs, family offices, institutional fund managers) that package passive real estate investments for high-bracket individuals. The strict reading's complexity and documentation bar creates advisory capture: CPAs, tax counsel, and wealth managers become mandatory intermediaries to navigate qualification, ensuring steady demand for structuring services. The high bar itself is their revenue model. Exit: operate in passive-shelter-permissive jurisdictions or structures; arbitrage: offer both aggressive and conservative strategies to different client cohorts."
+    },
+    {
+      "name": "rental_real_estate_active_participants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Small to mid-scale landlords and real estate traders who manage properties actively (dealing with tenants, repairs, leasing decisions) and expect to offset ordinary income with real estate operating losses. The strict reading forces them into either (a) proving material participation via 750+ hours or regulatory tests, imposing extensive documentation burden; (b) accepting passive-loss limitation and losing loss deductions against W-2 income; or (c) abandoning active management to qualify as passive. Their identity is often constituted through real estate operation ('I'm a landlord,' 'I fix my own units'). Exit requires unraveling professional identity and portfolio structure built on loss deductibility assumption."
+    },
+    {
+      "name": "real_estate_professionals",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "CPAs, tax attorneys, property managers, inspectors, and contractors whose bread-and-butter income depends on being retained to meet the strict documentation bar. They are simultaneously victims (their client base must absorb the compliance cost) and reluctant enforcers (their professional role is to navigate the strict reading). The constraint's friction is their job security but also creates client resentment. Exit: reduced to moving between firms or specializing in tax-shelter advisory, which is the same side of the constraint."
+    },
+    {
+      "name": "small_property_operators",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individual owners of 1–4 unit rentals or small commercial properties. They work the properties themselves (painting, repairs, tenant screening) and record hours casually, if at all. The strict reading's documentation bar — contemporaneous logs, detailed hour records, reasonable attribution — is beyond routine small-business practice. They cannot afford advisory help and do not understand the regulatory interpretation. The constraint forces them to either formalize operations (high friction cost) or lose expected loss deductions. Exit: liquidate properties, convert to corporate structures, or accept losing deductions they believe are theirs by law."
+    },
+    {
+      "name": "irs_examinations_function",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The IRS examination program enforces the strict reading through audit targets on passive-loss limitation positions. It administers the regulatory interpretation, issues Revenue Rulings, and litigates borderline cases. The examination function's position drives the constraint's enforcement: strict examination practices, published rulings, and litigation strategy set the de-facto standard narrower than the statutory text. Administrative capacity to audit determines which positioning gets enforced."
+    },
+    {
+      "name": "tax_courts_and_judges",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The U.S. Tax Court and federal district courts adjudicate disputes over material participation qualification. They produce case law that shapes the regulatory interpretation. Their decisions either tighten or relax enforcement, but they respond to cases brought (litigation is expensive and slow, so most disputes never reach court). They see the full-information picture but can only adjudicate cases brought."
+    },
+    {
+      "name": "congress_tax_authority",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Congress enacted IRC § 469 (passive loss rules) in 1986 as revenue raising and to prevent high-income individuals from using real estate losses to shelter earned income. The statute is ambiguous on material participation (no statutory definition; regulatory definition exists). Congress could revise the statute to narrow or broaden qualification, but tax legislation is rare. Their role is original architect; agenda-setter power only via legislative revision (low frequency)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents high-bracket individuals from systematically using real estate losses (depreciation, construction deductions, developer shelters) to offset earned income through pass-through investments, ensuring graduated income tax collection and supporting legislative intent to preserve vertical equity in the tax code.",
+    "transfer_function": "Transfers tax-deduction rights from small and moderate-scale real estate operators (rental landlords, small developers) to high-bracket wage earners and passive-investment structures that can navigate the strict documentation bar. The mechanism: narrow material participation definition concentrates loss-deduction access among those who can afford advisory and implement tight record-keeping.",
+    "absent_voices": "Real estate developers, contractors, and active small landlords with low documentation sophistication are structurally absent from regulatory interpretation processes. IRS guidance is written for tax professionals; comment letters on proposed regulations come from tax counsel and large sponsors, not from small operators. The power imbalance means restrictive interpretations persist because affected operators cannot afford to litigate.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strict material participation reading and its enforcement disappeared overnight, the real estate tax shelter market would immediately loosen: high-bracket individuals could structure passive real estate investments with aggressive loss deductions; small landlords could claim losses on self-managed properties without extensive documentation; the tax advisor and structuring-service market would shrink. Federal tax revenue would fall in the near term (passive losses claimed), and the distribution of real estate investment returns would shift toward high-bracket beneficiaries.",
+    "founding_problem": "High-income individuals were using pass-through real estate investments to shelter earned income from taxation through aggressive depreciation and construction-period deductions, undermining vertical equity in the graduated income tax. The Tax Reform Act of 1986 enacted IRC § 469 to prevent this by disallowing passive losses against ordinary income.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The IRS examinations function and Treasury Department attests the founding problem remains live: passive-loss shelter strategies evolve to evade the rules and require constant administrative vigilance. Tax practitioners and academic commentators attest the problem is substantially mitigated by modern IRS enforcement and that the strict material participation rule now over-protects passive-loss limitation by excluding legitimate small operators. Congressional testimony on Tax Cuts and Jobs Act (2017) and subsequent tax policy analysis from the Treasury Office of Tax Analysis documents the shift: modern debate is whether the rule prevents abuse or chills legitimate real estate operation."
+  },
+  "interval": {
+    "start": 1987,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1987,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1997,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1987,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1997,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2007,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1987,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1997,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.28,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "IRC § 469 (passive loss limitation) emerged from the 1986 Tax Reform Act to prevent high-income individuals from sheltering earned income through real estate pass-throughs. The statute hinges on 'material participation' — a concept left undefined in the statute, defined operationally via regulation, ruling, and litigation. This constraint story instantiates the STRICT GATEKEEPER READING: material participation requires verifiable, substantial personal labor (≥750 hours, contemporaneous records, specific regulatory safe harbors) and a high documentation bar. This reading narrows the qualifying population, concentrates loss-deduction access among those who can afford advisory, and creates compliance friction for small operators. The STRATEGIC SHELTER READING (sibling constraint) interprets material participation permissively, allowing aggressive hour-counting and grouping elections. These are not alternative measurements of the same constraint — they represent irreconcilable interpretations of the same statutory kernel. Each produces different extraction patterns, different beneficiary structures, and different qualification barriers. This story authors the strict reading as-is, independent of the sibling; the engine compares their structural predictions.",
+    "key_agents": [
+      "high_bracket_wage_earners: Beneficiary (arbitrary beneficiary ~d≈0.1) — protected loss-deduction access via narrow definition that excludes unsophisticated operators; can structure passive real estate investments to claim losses without extensive verification burden.",
+      "passive_investment_sheltering_complex: Beneficiary (institutional beneficiary ~d≈0.15) — large sponsors (syndications, REITs, family offices) that structure investments for high-bracket clients; the strict rule's complexity creates advisory capture and steady demand for structuring services.",
+      "rental_real_estate_active_participants: Target (moderate target ~d≈0.70) — small to mid-scale landlords who actively manage properties and expect loss deductions; the strict reading forces them to prove material participation via 750+ hours and contemporaneous records or accept passive-loss limitation.",
+      "real_estate_professionals: Target (organized target ~d≈0.65) — CPAs, tax attorneys, property managers whose client base must absorb the compliance cost; they are reluctant enforcers of the strict reading, simultaneously victimized and professionally dependent on the constraint.",
+      "small_property_operators: Target (powerless target ~d≈0.85) — individual owners of 1–4 unit rentals; documentation bar is beyond routine practice; cannot afford advisory help; trapped between formal compliance cost and loss-deduction loss.",
+      "IRS_examinations_function: Agenda-setter (institutional agenda-setter ~d≈0.5) — administers and enforces the regulatory interpretation; examination practices and published rulings drive the de-facto standard; administrative capacity determines which positioning gets enforced.",
+      "tax_courts_and_judges: Observer (analytical observer ~d≈0.5) — adjudicates disputes; produces case law that shapes interpretation; sees full-information picture but can only decide cases brought (litigation is expensive and rare).",
+      "congress_tax_authority: Observer/Architect (institutional d≈0.45, secondary role agenda-setter) — enacted the statute; could revise it to narrow or broaden material participation definition; currently inactive (legislative revision is rare)."
+    ],
+    "logic_rationale": "The strict gatekeeper reading produces high extractiveness (0.71 at interval end) because it concentrates loss-deduction access among high-bracket individuals and passive-investment structures that can navigate the documentation bar, while excluding small operators from loss deductions they believed were theirs. Suppression is high (0.68) because the constraint persists through active enforcement: IRS examinations, published rulings that narrow safe harbors, litigation strategy that tightens qualification standards. The measurement series shows extractiveness rising from 0.38 (1987, immediately post-enactment) to 0.71 (2026), as regulatory interpretation tightened and advisory-capture deepened. Theater ratio rises from 0.08 to 0.28 over the same period: early enforcement was substantive (real examination of hour records and material participation claims); modern enforcement increasingly relies on form (complex documentation requirements that de-facto exclude small operators regardless of actual participation). Suppression requirement rises from 0.42 to 0.68 as the IRS examination function built capacity and case law tightened safe harbors. All metrics are measured on the same time grid (start=1987, end=2026, measured at 10-year intervals plus endpoints) so temporal analysis can detect drift and divergence.",
+    "perspectival_gap": "Seats diverge dramatically in their experience of the constraint. From the high-bracket wage earner's perspective, the constraint is genuine coordination (preventing abuse of real estate losses) implemented via a reasonable documentation standard that they can easily meet through their advisors. From the small operator's perspective, the constraint is an extraction mechanism that denies loss deductions based on impractical documentation requirements. From the IRS perspective, the constraint is an administrable rule that has tightened over time as interpretation evolved. The engine computes per-seat classification from the structural data (power, exit, beneficiary/victim status); the strict reading's architecture predicts different types from different seats: rope-to-coordination-beneficiary (high-bracket), tangled-rope (small operators, professionals), piton-theater (IRS administrative function).",
+    "directionality_logic": "Beneficiary seats (high-bracket wage earners, passive-investment complex) derive low d (d≈0.1–0.15) from beneficiary role + powerful/institutional power + arbitrage exit options (they can restructure investments if the rule tightens; switching jurisdictions or fund structures is available). Victim seats divide by power and exit: rental-real-estate-active-participants (moderate power, constrained exit via portfolio structure) derive ~d≈0.70; real-estate professionals (organized power, constrained exit to same advisory market) derive ~d≈0.65; small-property operators (powerless, identity-locked exit because operation is their professional identity) derive high d≈0.85. The strict reading's architecture concentrates extraction on powerless actors (d≈0.85) with identity-lock (they are 'landlords,' unraveling means professional reconstitution) and no arbitrage to other jurisdictions or structures. No directionality overrides are necessary; the structural derivation captures the asymmetry.",
+    "mandatrophy_analysis": "The strict gatekeeper reading is vulnerable to mandatrophy (mandate outliving function): the founding problem (high-income individuals sheltering earned income via aggressive real estate losses) has been substantially mitigated by modern enforcement, case law, and market sophistication. Yet the material participation restriction persists and has tightened, now excluding legitimate small operators and forcing unnecessary compliance costs. The constraint persists not because the founding problem demands it, but because (1) the extraction beneficiaries (high-bracket individuals, advisors) have captured the regulatory interpretation and prefer tight rules that exclude competition; (2) the IRS examination function has built institutional capacity around the tight interpretation; (3) small operators have no legislative voice to revise the rule. A mandatrophy verdict would recognize that the strict reading has outlived its coordination justification and now functions primarily as an extraction mechanism. The measurement series supports this: rising theater ratio (documentation form replacing substance) and rising suppression requirement (administrative tightening unrelated to abuse patterns) indicate theatrical maintenance, not responsive administration.",
+    "kernel_context": "This constraint is one reading of the contested kernel: IRC § 469 material participation definition (irc_469_material_participation_kernel). The strict gatekeeper reading instantiates the regulatory interpretation as narrow, verification-heavy, and exclusionary — material participation requires ≥750 hours, contemporaneous records, specific safe harbors, and regulatory approval. The sibling reading is strategic_shelter_reading, which interprets material participation permissively — allowing aggressive hour-counting, related-party grouping, and self-certification. These readings are not observables of the same measurement; they instantiate fundamentally different structural claims about what material participation means, who qualifies, and what extraction follows. The strict reading produces a concentrated beneficiary group (high-bracket individuals, advisors) and dispersed victims (small operators excluded from deductions). The strategic reading produces broader qualification and fewer exclusions. The two readings coexist in the regulatory system: the IRS publishes rulings reflecting the strict reading; taxpayers pursue aggressive positions reflecting the strategic reading; the Tax Court mediates disputes, producing case law that shifts between the readings over time. This story authors only the strict reading; the engine compares its structural predictions against the strategic reading's predictions and against actual litigation outcomes."
+  },
+  "omegas": [
+    {
+      "id": "documentation_sufficiency_ambiguity",
+      "question": "What evidence standard constitutes adequate proof of material participation? Are contemporaneous hour logs required, or can reconstructed records, testimony, and circumstantial evidence suffice?",
+      "resolution_mechanism": "IRS guidance (published rulings, examination manual updates) and Tax Court precedent establish the sufficiency standard. A shift from contemporaneous-only to reconstructed-acceptable would relax qualification; a shift to strict contemporaneous-required would tighten it.",
+      "impact": "If reconstructed records become acceptable, extractiveness falls (more operators qualify); small operators' d decreases (exit becomes less identity-locked as compliance burden drops). If contemporaneous-only hardens, extractiveness rises (fewer qualify, high-bracket advantage amplifies).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the strict reading's documentation bar is contemporaneous-records-only or flexible-reconstruction-acceptable."
+    },
+    {
+      "id": "regulatory_interpretation_vs_statutory_text",
+      "question": "Does the strict material participation reading faithfully implement the statutory text (IRC § 469(h)), or does it exceed the statute by reading in requirements the statute does not contain?",
+      "resolution_mechanism": "Statutory analysis comparing the regulation's language and case law doctrine against the statute's text and legislative history. A court could hold that the strict reading is ultra vires (exceeds delegated authority) and collapse it to the statutory definition.",
+      "impact": "If the strict reading is found to exceed the statute, the regulatory interpretation could be invalidated, material participation qualification would broaden, and small operators would gain loss-deduction access they currently lack. Extractiveness would fall; small-operator d would decrease.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the strict reading is a valid regulatory implementation of the statute or an ultra-vires tightening."
+    },
+    {
+      "id": "separation_of_coordination_and_extraction",
+      "question": "Is the material participation requirement structurally necessary to implement the passive-loss limitation (prevent high-income shelter), or is it a sufficient-but-not-necessary mechanism that also extracts from legitimate small operators?",
+      "resolution_mechanism": "Policy analysis: construct alternative implementations (e.g., income-ceiling passivity triggers, property-type passive presumptions) that achieve the founding problem's solution with lower friction on small operators. Test whether other countries use narrower or broader definitions.",
+      "impact": "If the requirement is sufficient-but-not-necessary and extraction can be decoupled, a narrowed or alternative rule would preserve coordination (founding problem solution) while reducing extraction (small operators gain deductions). Current beneficiaries would lose protected access.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether material participation is structurally necessary to achieve passive-loss limitation or whether extraction is separable from coordination."
+    },
+    {
+      "id": "identity_lock_mechanism_in_small_operators",
+      "question": "Is the exit_options identity_locked assessment accurate for small real estate operators? Or is the lock primarily economic (portfolio structure, sunk costs) rather than identity-constitutive (professional self-concept)?",
+      "resolution_mechanism": "Post-exit trajectory study: if operators who exit real estate (liquidate, sell, corporate restructure) retain identity as 'real estate people' and continue involvement through advisory or passive investment, the lock is economic; if identity dissolves with exit, the lock is constitutive.",
+      "impact": "If identity-lock is primarily economic, d for small operators should decrease (exit becomes more available via restructuring, cost-of-exit decreases). If constitutive, d remains high (exit costs more than restructuring — it costs reconstitution of professional self).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether small-operator exit_options identity-lock is constitutive or primarily economic."
+    },
+    {
+      "id": "founding_problem_persistence_empirical",
+      "question": "Do modern high-income individuals systematically use real estate pass-throughs to shelter earned income, or has enforcement and market evolution substantially mitigated the founding problem?",
+      "resolution_mechanism": "IRS examination data (percentage of examined returns with passive-loss limitation adjustments, dollar amounts of disallowed losses, trends over time) and research using tax panel data (SOI data, confidential IRS files).",
+      "impact": "If founding problem is substantially mitigated (examination data shows declining shelter use, case law is sparse, adjustment amounts are flat or declining), mandatrophy is present and the constraint persists primarily for extraction. If founding problem persists (examination data shows increasing shelter attempts, new avoidance strategies), the constraint remains justified.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the founding problem (high-income earned-income sheltering via real estate) persists in modern practice."
+    },
+    {
+      "id": "kernel_reading_structural_incommensurability",
+      "question": "Are the strict gatekeeper reading and the strategic shelter reading structurally incommensurable (cannot coexist in one framework), or do they represent different compliance postures held by different parties within the same framework?",
+      "resolution_mechanism": "Regulatory specification analysis: does the statute itself contain language that privileges one reading, or are both readings supportable from the statutory text alone? If the statute is agnostic, the readings coexist (different parties' interpretations, not incommensurable). If the statute favors one, that reading's premise foreclosed the other.",
+      "impact": "If incommensurable, one reading will eventually dominate via precedent or legislative change, and the loser's structural predictions will diverge from actual outcomes. If they coexist, both readings' structural predictions remain live (the constraint's actual operation is a mixture).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the strict and strategic readings are structurally incommensurable or coexistent."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "irc_469_material_participation_kernel__strategic_shelter_reading",
+      "real_estate_passive_loss_limitation_mechanism",
+      "tax_audit_capacity_constraint"
+    ],
+    "dual_formulation_note": "This constraint (strict gatekeeper reading) and irc_469_material_participation_kernel__strategic_shelter_reading are two readings of the same contested kernel: IRC § 469 material participation definition. They are NOT alternative measurements of the same constraint — they instantiate fundamentally different structural claims about what material participation means, who qualifies, and what extraction follows. The strict reading produces concentrated beneficiary access (high-bracket individuals, advisors); the strategic reading produces broader qualification. Each has its own ε, its own beneficiary/victim structure, its own classification. The engine compares their predictions against each other and against actual litigation outcomes to measure interpretive drift. Both readings remain live in the regulatory system; neither has been foreclosed by statute or precedent."
+  },
+  "directionality_overrides": [],
+  "gain_flow": "passive_investment_sheltering_complex",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "tax_audit_capacity_constraint",
+      "real_estate_passive_loss_limitation_mechanism"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "statutory_passive_loss_limitation_core",
+    "drift_state": {
+      "moment": "contemporary_2026",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "irc_469_material_participation_kernel__strategic_shelter_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "material_participation_requires_verifiable_labor",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "documentation_bar_bars_unrecorded_participation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

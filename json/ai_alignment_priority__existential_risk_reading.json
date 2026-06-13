@@ -1,0 +1,245 @@
+{
+  "header": {
+    "constraint_id": "ai_alignment_priority__existential_risk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "935c7dc6-7ec6-425c-b4dc-765a12afede2"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.41,
+    "resistance": 0.67,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Existential AI Alignment Priority Framework",
+    "topic_domain": "technology/governance/existential_risk",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "future_humanity",
+      "capability_research_institutions"
+    ],
+    "victims": [
+      "marginalized_populations",
+      "near_term_safety_advocates"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72
+    }
+  ],
+  "omegas": [
+    {
+      "id": "existential_vs_speculative",
+      "question": "Are loss-of-control catastrophe scenarios for advanced AI systems sufficiently probable and near enough in time to justify prioritization over demonstrable present harms?",
+      "resolution_mechanism": "Long-horizon forecasting calibration against actual AI capability timelines and failure modes. Comparison of extinction probability estimates across independent forecasters and disciplines. Analysis of whether catastrophe scenarios rest on empirically grounded threat models or theoretical worst-case assumptions.",
+      "impact": "If existential scenarios are lower probability or farther horizon than claimed, the victim set and resource allocation shift toward present harms. If they are higher probability, the prioritization holds. This is the crux separating the existential_risk_reading from the nearterm_harms_reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Probability and timeline of existential loss-of-control scenarios versus present harm timescales"
+    },
+    {
+      "id": "suppression_mechanism_structural",
+      "question": "Is the measured suppression (0.72) structural — resource scarcity making near-term harm work literally impossible — or internalized — near-term harm advocates have accepted existential risk as more legitimate?",
+      "resolution_mechanism": "Post-priority-shift scenario: if funding and venues were reallocated to near-term harm research, would advocacy momentum resume (structural suppression) or would the field remain deprioritized (internalized)? Historical comparison with suppressed research areas that later regained prominence.",
+      "impact": "If structural, the constraint's effectiveness depends on active enforcement of priority hierarchies; if internalized, the victims have adopted the beneficiaries' framework and the suppression is self-sustaining even if enforcement relaxed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of near-term harm research is structural or internalized"
+    },
+    {
+      "id": "undifferentiated_future_beneficiary",
+      "question": "Is 'all of humanity' / 'future humanity' a meaningful beneficiary for structural analysis, or does the existential reading hide a more specific beneficiary (capability researchers, frontier labs, particular institutional actors)?",
+      "resolution_mechanism": "Track resource flows under the existential-risk framing: who actually receives funding, who sets research agendas, whose careers advance? If benefits concentrate on frontier researchers and capability labs, the declared beneficiary is future humanity but the structural beneficiary is present-day institutional actors.",
+      "impact": "If future humanity is the actual beneficiary, the constraint is genuine long-horizon altruism. If actual benefits concentrate on institutional actors, the constraint is extractive (beneficiaries extract resources by framing it as serving future interests). This feeds the false-summit detection (natural law vs. constructed claim).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether beneficiary is genuinely undifferentiated future or disguises specific present institutional receivers"
+    },
+    {
+      "id": "reading_boundary_robustness",
+      "question": "Is the boundary between existential-risk reading and integrated reading stable under institutional pressure, or would merging them (equally prioritizing both catastrophic and present harms) dissolve the constraint's enforcement structure?",
+      "resolution_mechanism": "Test whether the existential-risk reading can coexist with integrated harm prioritization in the same institutional framework without losing resource control. If integration forces reorganization, the readings coexist but are genuinely incompatible in resource allocation terms; if integration is merely reframed as 'long-term alignment includes near-term justice', the readings are rhetorical variants.",
+      "impact": "If the readings coexist but control different resource streams, this is institutional division-of-labor. If merging them dissolves priority gatekeeping, the existential-risk reading's enforcement structure depends on suppressing the integrated reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether existential and integrated readings can coexist without the existential reading losing institutional control"
+    },
+    {
+      "id": "red_teaming_methodology_capture",
+      "question": "Does the adversarial red-teaming methodology (testing systems against hypothetical future adversaries) reveal genuine alignment failure modes, or does it generate capability insights that advance the frontier systems it purports to test?",
+      "resolution_mechanism": "Empirical tracking of red-teaming outputs: do they lead to fixes that constrain capability, or do they lead to capability improvements that better handle adversarial inputs? Independent analysis of whether red-teaming methodologies are primarily defensive or exploratory.",
+      "impact": "If red-teaming primarily generates capability insights, the methodology itself is extractive: it transfers capability research under the label of alignment testing. This would make the constraint doubly extractive (resource transfer + capability advance). If red-teaming is genuinely defensive, the methodology is aligned with the framing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether red-teaming methodology is defensive alignment testing or capability-advancing research mislabeled"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The existential-risk reading of AI alignment frames the primary safety constraint as preventing catastrophic loss of control over sufficiently advanced AI systems. This reading treats alignment as a civilizational-scale problem requiring long-horizon, capability-focused research. It competes with the nearterm_harms_reading, which prioritizes present algorithmic discrimination and extractive harms affecting marginalized populations now. It also competes with the integrated_reading, which claims both catastrophic and present harms demand joint priority. This constraint story models the existential-risk reading as a tangled rope: it performs genuine coordination (unifying safety research around a shared threat model) while extracting (redirecting resources away from near-term justice work). The claim and metrics are intentionally divergent: the reading CLAIMS to be rope (the beneficiaries frame it as coordination) while the authored metrics show substantial extraction and high theater (capability research advancing under safety justification). The engine measures this divergence; do not reconcile the claim to the metrics.",
+    "key_agents": [
+      "existential_risk_researchers: institutional agenda-setters; define alignment canonically; control funding allocation and publication norms",
+      "capability_research_institutions: beneficiaries; receive resources under existential-risk umbrella; justify frontier capability development as safety-necessary",
+      "marginalized_populations: powerless victims; experience present algorithmic harms; excluded from resource priority discussions; their voice is suppressed by the existential framing",
+      "near_term_safety_advocates: moderate-power payers; argue for present justice; constrained by being reframed as 'myopic' relative to existential urgency",
+      "future_humanity: non-agent beneficiary; serves as legitimating fiction for resource transfers to present institutions",
+      "deployed_ai_system_users: powerless victims; experience present harms; trapped outside the constraint's logic because their suffering is particular and immediate, not existential"
+    ],
+    "logic_rationale": "Extractiveness is high (0.68) because the resource transfer (away from deployed-system fairness, toward frontier capability research) is justified by speculative future scenarios rather than demonstrated present harms. The beneficiaries (capability researchers, frontier labs) collect resources; the victims (marginalized populations, near-term advocates) lose priority access. Suppression is high (0.72) because the existential framing actively excludes alternative priority models from institutional decision-making—near-term harm research is labeled important but subordinate. Theater is high (0.58) and rising: red-teaming and alignment testing generate genuine safety-relevant insights, but those same activities advance capability research and frontier system capabilities. The rising theater trajectory (0.42 -> 0.58) indicates increasing share of activity devoted to framing capability research as safety work rather than actually constraining capability. The measurement series spans 25 years (projected to ~2050) and tracks the constraint's intensification as capability research scales and the existential-framing institutional infrastructure matures. All three metrics share one time grid, authored at every point to enable temporal analysis.",
+    "perspectival_gap": "From the institutional beneficiary seat, this is rope: we coordinate on catastrophic-risk prevention and everyone benefits from the safety infrastructure. From the marginalized-population seat, this is snare: the priority hierarchy suppresses attention to our present harms, resources flow away from deployed-system fairness, and we are told our suffering is less important than hypothetical future catastrophes. From the near-term-advocate seat, this is tangled rope: there is genuine coordination benefit (we all want aligned AI systems), but we pay the cost of being deprioritized and our research agenda is constrained.",
+    "directionality_logic": "Existential-risk researchers: d ≈ 0.2-0.3 (beneficiaries with institutional power and mobility; the constraint subsidizes their research). Capability institutions: d ≈ 0.15 (direct beneficiaries; they set agendas and collect extracted resources). Marginalized populations: d ≈ 0.85-0.90 (full targets; powerless, trapped, bearing present costs for speculative future benefits; no exit except political reorganization). Near-term safety advocates: d ≈ 0.65 (constrained payers; moderate power lets them mount resistance, but suppression of their research agenda is active and successful). Future humanity: non-agent, d does not apply. Policy makers: d ≈ 0.5 (symmetric; they gain information and priority guidance, but their legitimacy depends on the existential framing and they lose autonomy over risk-prioritization criteria). Deployed-system users: d ≈ 0.88 (full targets; powerless, immediate-horizon, trapped; their harms are categorically excluded from the alignment definition). The directionality profile shows asymmetric concentration of extraction on powerless, trapped, immediate-horizon agents (marginalized populations, deployed-system users) while beneficiaries are institutional and civilizational-horizon actors.",
+    "mandatrophy_analysis": "The existential-risk reading faces a mandatrophy question: is the founding problem (loss of control over advanced AI) still live or has it been superseded by the present problem (deployed harms)? The constraint's answer: the founding problem is live and civilization-scale, therefore present harms are acceptable costs. The near-term-reading answer: the founding problem is speculative and the present harm problem is now primary. This mandatrophy divergence is unresolvable inside the existential-risk reading's own framework because the reading axiomatically prioritizes civilizational over biographical time horizons. The classification prevents mislabeling this as pure rope (which would require absence of victims and active enforcement) and catches the asymmetry: the constraint coordinates safety research (rope function) while extracting resources away from justice (snare function), held together by suppression of the integrated reading.",
+    "kernel_context": "This constraint is the EXISTENTIAL_RISK_READING of the AI_ALIGNMENT_PRIORITY kernel. The kernel is a contested commitment to 'what does alignment mean and who sets the research agenda?' This reading instantiates alignment as catastrophic loss-of-control prevention with civilizational time horizon. Sibling readings: (1) NEARTERM_HARMS_READING—alignment means preventing present algorithmic discrimination and extractive harms; priority is justice for marginalized populations affected NOW. (2) INTEGRATED_READING—alignment requires addressing both catastrophic and present harms as complementary, not competing priorities. The existential reading's core premise: preventing existential catastrophe is humanity's primary constraint on AI development and should dominate resource allocation. The nearterm reading's core premise: preventing present justice violations is the primary constraint and should dominate resource allocation. The integrated reading's core premise: both constraints are live and neither should dominate at the other's expense; the tension between them is the actual problem to solve. These readings do not foreclose each other (a party could shift from one to another), but they coexist in institutional competition for legitimacy and resources. The existential reading influences both siblings by setting the information environment (catastrophic scenarios are more visible, more discussed in major venues, more adequately funded) but does not logically rule either out."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.14
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_alignment_priority__nearterm_harms_reading",
+      "ai_alignment_priority__integrated_reading"
+    ],
+    "dual_formulation_note": "The ai_alignment_priority kernel decomposes into three structurally distinct constraints. Each reading instantiates a different ε (existential reading: high ε on speculative scenarios; nearterm reading: lower ε on measured present harms; integrated reading: moderate ε on both). The three stories form a family linked by network.affects_constraints because each reading's institutional success shapes the others' operating environment (resource competition, legitimacy battles, research agenda setting). They share a kernel (the contested definition of alignment) but diverge in victim sets, time horizons, and beneficiary structures. Do not interpret this family as 'three views of one constraint'—the ε-invariance principle requires treating them as distinct constraints with distinct metrics, victim relationships, and classifications. The decomposition is necessary because measuring alignment with a single observable (e.g., 'research publications') produces different ε values for each reading: what counts as evidence of alignment differs fundamentally across the three interpretations."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "ai_alignment_priority__nearterm_harms_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ai_alignment_priority__integrated_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "existential_catastrophe_civilizational_priority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "present_harms_secondary_to_extinction_prevention",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "loss_of_control_as_primary_alignment_threat",
+    "drift_state": {
+      "moment": "contemporary_deployment_harm_recognition",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

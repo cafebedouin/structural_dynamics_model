@@ -1,0 +1,253 @@
+{
+  "header": {
+    "constraint_id": "speech_harm_boundary__harm_balancing_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a1037b46-43cb-4bcf-818e-31881a71d7a7"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Speech Protection with Proportional Harm Balancing",
+    "topic_domain": "constitutional/political",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "speakers_with_protected_speech",
+      "public_discourse_participants"
+    ],
+    "victims": [
+      "targets_of_harmful_speech",
+      "marginalized_groups_bearing_harassment_costs"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    }
+  ],
+  "omegas": [
+    {
+      "id": "harm_threshold_definition_contest",
+      "question": "What counts as demonstrable harm sufficient to override speech protection—immediate incitement to violence, emotional distress, systemic group defamation, epistemic harm, or dignitary injury? Does the proportionality test admit empirical evidence of psychological harm or only legally codified injury categories?",
+      "resolution_mechanism": "Case-law trajectory showing how courts define and expand/narrow the harm categories; comparative analysis of jurisdictions with explicit harm definitions; empirical studies of harm causation that courts do or do not admit as evidence.",
+      "impact": "If harm is defined narrowly (imminent incitement only), extractiveness drops because targets must clear a high bar; extraction is then minimal. If harm includes systemic harassment, group libel, or dignitary injury, extractiveness rises and the constraint approaches the dignity reading. The threshold is not neutral—it distributes costs between speakers and targets. The oscillation in theater_ratio suggests enforcement is drifting toward performance of harm-finding rather than substance.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Contestation over what evidence and categories define demonstrable harm."
+    },
+    {
+      "id": "presumption_asymmetry_extraction",
+      "question": "Does the presumption of protection for speakers, coupled with the burden of proof on targets, constitute an asymmetric extraction mechanism that benefits speakers and burdens targets, or is it a legitimate allocation of epistemic burden in adversarial adjudication?",
+      "resolution_mechanism": "Empirical audit of outcomes: do speakers proportionally win cases where harm is asserted? Do targets with fewer resources fail to meet the evidentiary burden? Comparative study of symmetric vs. asymmetric burden regimes and their effects on discourse access.",
+      "impact": "If the presumption systematically advantages speakers over targets (especially resource-poor targets), the constraint contains a structural extraction element that is authorized by its own logic. If the burden is neutrally applied and targets succeed proportionally to their case merits, the asymmetry is procedural, not extractive. High probability the asymmetry persists because harm is hard to demonstrate for dispersed targets; this is where the constraint's extractiveness concentrates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the protection presumption creates structural extraction against targets."
+    },
+    {
+      "id": "identity_lock_vs_exit_for_targets",
+      "question": "For targets of group-directed speech (marginalized identities), is the exit option truly constrained, or do they have viable workarounds (platform switching, community migration, counter-speech)?",
+      "resolution_mechanism": "Ethnographic study of harassment targets' actual options and choices; measure the psychological, economic, and relational costs of each exit pathway; compare exit availability across identity groups.",
+      "impact": "If exit is genuinely identity-locked (cannot exit the identity being targeted), the target is structurally trapped and suppression is high. If viable alternatives exist (platform exit, counter-speech communities, legal remedy), targets have more agency than the model suggests. The directionality would shift—targets might move from d=1.0 (fully targeted) toward d=0.7 (constrained but with leverage). This shapes both the type certification and the proportionality balance's legitimacy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether marginalized-group targets are identity-locked or have viable exit paths."
+    },
+    {
+      "id": "kernel_reading_stability_question",
+      "question": "Does this harm-balancing reading constitute a stable, enduring alternative interpretation of the speech-protection kernel, or is it an unstable intermediate state subject to pressure from the absolutist and dignity readings?",
+      "resolution_mechanism": "Historical institutional analysis of the reading's doctrinal coherence; measurement of how often each reading is cited, adopted, and abandoned in case law; examination of whether courts deploy the harm-balancing framework consistently or instrumentally (as a tool to reach predetermined outcomes that could be justified under any reading).",
+      "impact": "If the reading is stable and coherent, it deserves classification as a distinct constraint with its own persistence dynamics and should remain extant in the corpus. If pressure from sibling readings is forcing it toward degradation or compromise, the constraint may be approaching piton status (maintained theatrically while its foundational premise is eroded). The measurement plateau from t=32 onward could indicate either stability or the beginning of theatrical maintenance. The high theater_ratio (0.41) suggests performance is increasingly central to the constraint's operation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Structural stability of the harm-balancing reading as a distinct kernel interpretation."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.62) primarily structural—legal barriers, adjudicatory burden, procedural gatekeeping—or partly internalized, such that targets internalize the 'high burden of proof' norm and self-suppress before adjudication?",
+      "resolution_mechanism": "Post-harm-removal trajectory study: when legal protection becomes available for a speech category (e.g., legislative expansion of unprotected categories), do targets of that speech immediately cease self-suppression, or do they persist in muted participation? Compare voice and participation rates before and after remedy availability.",
+      "impact": "If suppression is primarily structural, removing legal barriers (lowering the harm threshold) would directly increase target voice. If suppression is internalized, targets would require additional support (community rebuilding, confidence restoration, counterspeech resources) to re-engage. If suppression is mixed (structure + internalization), different target groups show different ratios—organized groups more structural-suppression-affected, isolated targets more internalized. This shapes both the extractiveness measure (if internalized, the actual extraction is higher than the structural barriers suggest) and the remedy design.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in the harm-balancing constraint."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the harm-balancing reading of the speech-harm-boundary kernel: a framework where speech protection is presumptive but yields when demonstrable harm is shown and proportional to the restriction. Judicial bodies adjudicate the balance on a case-by-case basis, determining whether speech crosses from protected expression into unprotected harm (hate speech, incitement, harassment, group defamation). Unlike the absolutist sibling reading (which treats harm override as nearly impossible) or the dignity sibling reading (which subordinates speech to dignity protection), this reading threads a middle path: protection for speakers, but accessible boundaries where targets can petition for restriction if harm is proven. The constraint is actively contested—all three readings coexist in contemporary jurisprudence across different jurisdictions and litigated routinely. The authored metrics reflect moderate extractiveness (0.48), suggesting the balancing framework captures some genuine coordination benefit but also contains asymmetric cost distribution that benefits speakers and burdens targets.",
+    "key_agents": [
+      "speakers_asserting_protection: Benefit from the presumption; face restriction only when harm is adjudged to cross the threshold; can exit to less-regulated venues.",
+      "targets_of_harmful_speech: Bear costs until harm is demonstrated; must clear a high evidentiary bar; trapped until adjudication.",
+      "marginalized_groups_bearing_harassment_costs: Systemically targeted; identity-locked (cannot exit the identity being attacked); excluded from rule-setting; bear costs diffusely across many incidents.",
+      "judicial_adjudicators: Set and administer the harm threshold; shift the boundary through case law; accumulate power to define what counts as unprotected speech.",
+      "legislatures: Codify harm categories in statute; can tighten or loosen the boundary; can constrain or expand judicial discretion.",
+      "absolutist_defenders: Excluded from the consensus grounding this reading; reject harm-balancing as violating categorical speech protection.",
+      "dignity_advocates: Excluded from the consensus; argue the balance is set wrong and dignity should be categorical, not bargainable."
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.48 at interval end) because the constraint contains genuine coordination (a shared adjudicatory framework beats bilateral contests) but asymmetric cost allocation (speakers get a presumption; targets must prove harm). The measurement series show extractiveness rising from 0.35 to 0.48 over the interval—a steady drift upward as more speech is litigated and the harm threshold experiences pressure from both absolutist and dignitarian directions. Theater rises from 0.25 to 0.41, suggesting enforcement increasingly performs harm-finding (public declarations that speech is harmful) rather than materially changing speech distribution. Suppression rises from 0.48 to 0.62, indicating that maintaining the constraint requires increasing active defense against both sibling readings. The plateau from t=32 onward suggests the constraint has reached a semi-stable state where its internal contradictions are managed theatrically rather than resolved. Accessibility collapse is moderate (0.58) because alternatives exist—speakers can go to other forums, targets can organize counter-speech, legislatures can change the boundary—but the judicial framework's legitimacy closes off pure exit. Resistance is high (0.72) because all three readings have organized constituencies that actively resist the others; the harm-balancing reading must defend against absolutist claims that it violates freedom and dignity claims that it is insufficiently protective.",
+    "perspectival_gap": "The constraint's classification should diverge sharply by seat: from the speaker's seat (moderate power, mobile exit, presumption), it computes as protective coordination—a rope or legitimately balanced tangled rope. From the target's seat (powerless, identity-locked, burden of proof), it computes as extractive and suppressive—a snare where the coordination serves only speakers and the target's costs are the price of that coordination. From the judicial seat, it is an agenda-setting framework that distributes authority and allows discretionary boundary-shifting, making the constraint itself a mechanism for institutional power accumulation. This perspectival divergence is NOT a defect—it is the measurement the engine is designed to detect. The authored claim (tangled rope) reflects the framework's official self-description; the authored metrics reflect that it functions asymmetrically across seats. The engine should compute tangled rope from the beneficiary/victim data but show high per-seat divergence when it disaggregates.",
+    "directionality_logic": "Speakers claiming protection are structurally beneficiaries (presumption applies to them; they use it; d near 0.2-0.3, full beneficiary end). Targets of harmful speech are structural victims (burden of proof falls on them; they must prove harm to get relief; d near 0.8-0.9, full target end). Marginalized groups are doubly victims: targeted identities (cannot exit) + procedurally burdened (few resources to litigate). Judicial adjudicators derive their power from the constraint—they are the mechanism through which it operates, giving them a dual role between agenda-setter and beneficiary. Legislatures have similar duality: they codify the harm categories, shaping who qualifies for protection, and can redistribute costs if political pressure rises. Absolutist and dignity-advocate seats are excluded, not positioned within the constraint—they reject its premise. The directionality overrides would be unnecessary if the structural data (beneficiary: speakers + public_discourse_participants; victims: targets + marginalized_groups) accurately captures the asymmetry. No overrides are warranted; the derived d values should map cleanly to the seat divergence.",
+    "mandatrophy_analysis": "The constraint avoids misclassification as pure extraction (snare) by virtue of its genuine coordination function: the harm-balancing framework does solve a real coordination problem that bilateral speech contests would not. It avoids pure coordination (rope) by virtue of asymmetric cost allocation and the burden of proof falling on targets. Tangled rope captures this: coordination (shared adjudicatory framework) + extraction (targets must prove harm while speakers enjoy presumption). The mandate is not dead (harmless speech continues to flow; harmful speech continues to be litigated), but the mandate is contested at the foundational level—all three readings claim to be the correct interpretation of the kernel. This contestation is not a mandate-death; it is active mandate-governance where the three readings struggle to define the constraint's scope. The theater_ratio plateau suggests that at interval end (t=40), the constraint is maintained partly by performances of harm-finding and judicial pronouncements on the boundary, not purely by organic compliance with the underlying principle. This is not yet piton degradation (the framework still does coordinate adjudication), but it is approaching the boundary where theaters ratio could indicate functional atrophy.",
+    "kernel_context": "This constraint is one reading of the contested kernel: speech_harm_boundary. The three readings are: absolutist_reading (speech protection near-absolute; harm override threshold extremely high, harm must be imminent and causally direct); harm_balancing_reading (this one: protection presumptive but yields to demonstrated harm; proportionality balancing; moderate extraction); dignity_reading (speech protection subordinate to human dignity; personhood-denying speech categorically unprotected; broad unprotected categories). The harm-balancing reading coexists with both siblings in contemporary jurisprudence. Different jurisdictions favor different readings; within jurisdictions, different cases push the boundary in different directions. The reading does not logically foreclose the absolutist reading (one could hold both by saying 'speech protection is near-absolute except when serious harm is demonstrated'), but it does influence it by creating structural pressure: as harm-balancing cases accumulate, the absolutist threshold must either drift higher (to exclude more cases) or accept that the reading it opposes is operationally dominant. The dignity reading is similarly non-exclusive logically but competitive institutionally: both harm-balancing and dignity frameworks claim to protect vulnerable groups, but they do so through different mechanisms (case-by-case harm proof vs. categorical dignity protection). The reading is formalized and lineage-grounded (rooted in constitutional text and evolved through case law); it has an authoritative interpreter (courts); the interpretation layer is active and carries considerable drift as the boundary shifts case-by-case."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_harm_boundary__absolutist_reading",
+      "speech_harm_boundary__dignity_reading"
+    ],
+    "dual_formulation_note": "The speech_harm_boundary kernel is instantiated in three distinct constraint stories, each with a different reading of where the balance between protection and harm should lie. This story (harm_balancing_reading) represents the middle ground: protection presumptive but yielding to proportionally justified harm restrictions. The sibling stories (absolutist_reading and dignity_reading) represent the poles of the contest. These are not the same constraint viewed from different angles—they are materially different structural arrangements with different ε values, different beneficiary/victim configurations, and different classifications. They are linked here as members of the same constraint family because they instantiate the same kernel and contend with each other in legal and political discourse. The absolutist reading (constraint_id: speech_harm_boundary__absolutist_reading) has very low extractiveness and near-zero suppression of protected speakers; the dignity reading (constraint_id: speech_harm_boundary__dignity_reading) has higher extractiveness against speakers but lower extractiveness against targets. The harm-balancing reading balances moderately in between, which is why its metrics show mid-range extractiveness and why the stakeholder divergence is acute."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "speech_protection_presumptive_harm_justifies_restriction",
+    "drift_state": {
+      "moment": "contemporary_platform_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "speech_harm_boundary__absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "speech_harm_boundary__dignity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "harm_override_requires_demonstration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "proportionality_test_balances_values",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
