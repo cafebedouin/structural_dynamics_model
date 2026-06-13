@@ -463,9 +463,10 @@ def build_cached_messages(gen_seed):
             "",
             "For cs_structure.axioms: declare 1–2 foundational normative claims that",
             "distinguish THIS reading from its siblings. Use snake_case atom names unique",
-            "across the sibling set. Assign status: holdable (live claim), overridden",
-            "(superseded within this reading's tradition), or foreclosed (ruled out by",
-            "this reading's own commitments).",
+            "across the sibling set. Assign status: holdable (live claim) or overridden",
+            "(superseded within this reading's own tradition). Do NOT author 'foreclosed' —",
+            "foreclosure is engine-computed from cs_axiom_contradiction; authoring it as a",
+            "status over-claims structural displacement.",
         ]
     if gen_seed.get("flat_control_of"):
         lines += [
@@ -607,6 +608,44 @@ def strip_extra_properties(story: dict, schema: dict) -> tuple:
     return result, sorted(removed)
 
 
+def _strip_reading_suffix(s):
+    """Drop a trailing `_reading` token for suffix-normalized sibling matching."""
+    return s[:-len("_reading")] if s.endswith("_reading") else s
+
+
+def snap_sibling_id(target, kernel_id, sibling_reading_ids):
+    """Fix B: normalize a model-authored cs_reading_relation sibling_id to the canonical
+    kernel-qualified declared sibling, ONLY on a unique confident match.
+
+    The declared siblings (`sibling_reading_ids` from the seed manifest) are the
+    authoritative target set; the model frequently drifts (drops/adds a `_reading`
+    suffix, or omits the kernel prefix). Resolution order:
+      1. exact     — the authored short id IS a declared sibling
+      2. suffix    — a UNIQUE declared sibling matches after stripping `_reading` both sides
+    Snap = re-qualify to `<kernel>__<declared_sibling>`. If there is no match, or the
+    match is AMBIGUOUS (more than one declared sibling normalizes equal), the authored
+    value is returned UNCHANGED — it then routes to validate_reading_relation_integrity's
+    quarantine (OQ-58), never wrong-snapped.
+
+    Returns (resolved_id, snapped_bool).
+    """
+    if not target or not kernel_id or not sibling_reading_ids:
+        return target, False
+    short = target.split("__", 1)[1] if "__" in target else target
+    # 1. exact match against a declared sibling short id
+    if short in sibling_reading_ids:
+        resolved = f"{kernel_id}__{short}"
+        return resolved, resolved != target
+    # 2. unique suffix-normalized match
+    nshort = _strip_reading_suffix(short)
+    matches = [s for s in sibling_reading_ids if _strip_reading_suffix(s) == nshort]
+    if len(matches) == 1:
+        resolved = f"{kernel_id}__{matches[0]}"
+        return resolved, resolved != target
+    # no match or ambiguous → leave as-authored (quarantine handles it)
+    return target, False
+
+
 def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_log,
                           gen_seeds_by_id=None, rejections_path=None, overwrite=False,
                           id_map=None, token_acc=None,
@@ -636,6 +675,11 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
     rejected = []
     gen_seeds_by_id = gen_seeds_by_id or {}
     _schema = _load_schema()  # load once; used by path-aware strip
+    # Fix A (cs_axiom status): repair_story coerces known drift (contested/foreclosed ->
+    # holdable) silently, but a NOVEL out-of-enum status is counted here. A nonzero
+    # fallback count after the batch is an escalation signal (a status string nobody
+    # anticipated), reported below — never a silent default.
+    repair_stats = {}
 
     for result in client.messages.batches.results(batch_id):
         # custom_id may be a short transport key (no-scope uses index ids because the batch
@@ -678,7 +722,7 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
             # conditional allOf/then (claimed-type vs metrics) survive repair → fail-closed,
             # which is correct: those are semantic, and clamping them would fabricate data.
             repaired, props_removed = strip_extra_properties(story, _schema)
-            repaired = repair_story(repaired, _schema)
+            repaired = repair_story(repaired, _schema, repair_stats)
             # Re-stamp: strip/repair drop the top-level provenance block (it is not in their
             # preserved-field set), which would re-introduce a spurious "provenance required"
             # error on top of the genuine one. Provenance is pipeline-authored — re-apply it
@@ -738,6 +782,24 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
         manifest_kernel_id = gen_seed.get("kernel_id")
         if manifest_kernel_id:
             story["_kernel_id"] = manifest_kernel_id
+
+        # Fix B: snap drifted cs_reading_relation targets to declared siblings BEFORE
+        # generate_pl emits and before the JSON is written (so the downstream quarantine
+        # check sees the resolved value). Snap only on a unique confident match against
+        # the seed's declared sibling_reading_ids; ambiguous/unmatched targets stay
+        # as-authored → quarantined (never wrong-snapped).
+        sibling_reading_ids = gen_seed.get("sibling_reading_ids") or []
+        if manifest_kernel_id and sibling_reading_ids:
+            cs_struct = story.get("cs_structure")
+            if isinstance(cs_struct, dict):
+                for rr in cs_struct.get("reading_relations") or []:
+                    if not isinstance(rr, dict) or not rr.get("sibling_id"):
+                        continue
+                    resolved, snapped = snap_sibling_id(
+                        rr["sibling_id"], manifest_kernel_id, sibling_reading_ids)
+                    if snapped:
+                        print(f"  SNAP {cid}: reading_relation {rr['sibling_id']!r} → {resolved!r}")
+                        rr["sibling_id"] = resolved
         # Flat-control alignment key (OQ-76) — injected from the manifest, like _kernel_id
         manifest_fco = gen_seed.get("flat_control_of")
         if manifest_fco:
@@ -793,6 +855,15 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
         rejections_path.write_text(
             json.dumps(existing + rejected, indent=2, ensure_ascii=False), encoding="utf-8")
         print(f"  {len(rejected)} rejection(s) logged → {rejections_path}")
+
+    # Fix A escalation surface: a nonzero fallback means the model emitted a cs_axiom
+    # status outside {holdable, overridden, contested, foreclosed}. Coerced to holdable
+    # (safe) but reported loudly — a novel mangle warrants a look at the prompt/model.
+    n_fallback = repair_stats.get("axiom_status_fallback", 0)
+    if n_fallback:
+        vals = sorted(set(repair_stats.get("axiom_status_fallback_values", [])))
+        print(f"  ⚠ {n_fallback} novel out-of-enum cs_axiom status(es) coerced to holdable "
+              f"(ESCALATE): {vals}")
 
     return succeeded, failed, kernel_membership, rejected
 

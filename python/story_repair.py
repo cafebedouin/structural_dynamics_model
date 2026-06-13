@@ -56,6 +56,47 @@ BASE_PROPS_UNIT_RANGE = {
 }
 VALID_ID_RE = re.compile(r"^[a-z][a-z0-9_]*$")
 
+# cs_axiom status enum (schema: holdable | overridden). `foreclosed` is engine-DERIVED
+# (cs_axiom_foreclosed/2 from cs_axiom_contradiction/2), NOT an authored status; the
+# generation prompt no longer offers it. This map is the repair safety-net for a model
+# that emits it (or the non-enum `contested`) anyway.
+VALID_AXIOM_STATUS = {"holdable", "overridden"}
+# Known out-of-enum drift, mapped to the minimal defensible authored status:
+#  - contested:  not an axiom status (founding_problem_status uses it); a contested
+#                axiom is still coherently *holdable*.
+#  - foreclosed: maps to `holdable`, NOT `overridden`. `overridden` would be harmless
+#                ONLY when the constraint also authors a cs_axiom_contradiction for that
+#                atom (then the engine derives foreclosure independently); otherwise it
+#                over-claims structural displacement. repair_story has no contradiction
+#                context — contradictions are authored in the scope manifest and emitted
+#                to a separate <kernel>_contradictions.pl, not in the per-story JSON this
+#                function sees — so it cannot establish the "harmless" branch and takes
+#                the safe fallback (plan pre-commit rule: no contradiction → holdable).
+AXIOM_STATUS_REMAP = {"contested": "holdable", "foreclosed": "holdable"}
+
+
+def _normalize_axiom_status(status, stats):
+    """Coerce a cs_axiom status into the {holdable, overridden} enum.
+
+    Known drift (AXIOM_STATUS_REMAP) is mapped silently. Any OTHER out-of-enum value
+    is a NOVEL mangle: it is COUNTED in *stats* (when provided), reported to stderr,
+    and coerced to `holdable` — deliberately NOT a silent default. A nonzero
+    `axiom_status_fallback` count is an escalation signal (a status string nobody
+    anticipated; inspect `axiom_status_fallback_values`).
+    """
+    if status in VALID_AXIOM_STATUS:
+        return status
+    if status in AXIOM_STATUS_REMAP:
+        return AXIOM_STATUS_REMAP[status]
+    if stats is not None:
+        stats["axiom_status_fallback"] = stats.get("axiom_status_fallback", 0) + 1
+        stats.setdefault("axiom_status_fallback_values", []).append(status)
+    import sys
+    print(f"[story_repair] WARNING: out-of-enum cs_axiom status {status!r} coerced to "
+          f"'holdable' (novel mangle — escalate, nonzero fallback count is signal)",
+          file=sys.stderr)
+    return "holdable"
+
 
 def sanitize_id(s):
     """Convert a string to a valid constraint/atom id, transliterating non-ASCII first."""
@@ -78,8 +119,13 @@ def _clamp(v, lo, hi):
     return max(lo, min(hi, v))
 
 
-def repair_story(story, schema=None):
-    """Apply deterministic, meaning-preserving repairs in place; returns the story."""
+def repair_story(story, schema=None, stats=None):
+    """Apply deterministic, meaning-preserving repairs in place; returns the story.
+
+    *stats* (optional mutable dict): out-of-enum repair signals are accumulated here
+    (currently `axiom_status_fallback` count + `axiom_status_fallback_values`). A
+    caller that wants to fail-loud on novel mangles passes a dict and inspects it.
+    """
     if not isinstance(story, dict):
         return story
 
@@ -175,8 +221,12 @@ def repair_story(story, schema=None):
             ds["moment"] = sanitize_id(ds["moment"])
         if isinstance(cs.get("axioms"), list):
             for ax in cs["axioms"]:
-                if isinstance(ax, dict) and ax.get("atom") and not VALID_ID_RE.match(str(ax["atom"])):
+                if not isinstance(ax, dict):
+                    continue
+                if ax.get("atom") and not VALID_ID_RE.match(str(ax["atom"])):
                     ax["atom"] = sanitize_id(ax["atom"])
+                if "status" in ax:
+                    ax["status"] = _normalize_axiom_status(ax["status"], stats)
         if isinstance(cs.get("reading_relations"), list):
             for rr in cs["reading_relations"]:
                 if isinstance(rr, dict) and rr.get("sibling_id") and not VALID_ID_RE.match(str(rr["sibling_id"])):
