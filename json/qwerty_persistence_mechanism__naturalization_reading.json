@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence_mechanism__naturalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_qwerty_persistence_mechanism__naturalization_reading",
+    "measurement_id_prefix": "qwerty_nat",
+    "story_uid": "569e351f-b48f-4243-8b09-5e8868873955"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.08,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "QWERTY Keyboard Persistence as Adequate Equilibrium",
+    "topic_domain": "economic_history/technology_standards",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": []
+  },
+  "interval": {
+    "start": 1873,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1873,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1930,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1873,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1930,
+      "value": 0.06
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.07
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1873,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1930,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.05
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dvorak_empirical_superiority_contested",
+      "question": "Does Dvorak layout objectively provide measurable typing speed or ergonomic advantages over QWERTY in controlled testing?",
+      "resolution_mechanism": "Systematic meta-analysis of peer-reviewed typing speed and ergonomic studies comparing QWERTY and Dvorak in matched populations with equal training time. Blind trials controlling for expectancy effects.",
+      "impact": "If Dvorak shows statistically significant, economically meaningful advantage: switches the reading toward lock-in (the advantage exists but was not adopted). If advantage is marginal or within noise: supports the naturalization reading (QWERTY's adequacy is genuine, Dvorak's superiority is mythologized). If advantage exists but is offset by retraining costs: supports the naturalization reading (adequacy dominates).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Dvorak's claimed technical superiority stands up to rigorous comparative testing."
+    },
+    {
+      "id": "active_manufacturer_suppression_of_alternatives",
+      "question": "Have computer manufacturers, during the digital era (post-1950), actively suppressed alternative keyboard layouts through exclusive contracting, patent litigation, or deliberate incompatibility?",
+      "resolution_mechanism": "Historical archives of manufacturer decisions, patent disputes, and licensing agreements. Testimony from keyboard designers and manufacturer engineers about design trade-offs.",
+      "impact": "If active suppression is documented: undermines the naturalization reading (QWERTY persists partly through enforcement, not just adequacy). If manufacturers simply follow user demand without anti-competitive action: supports the naturalization reading (market selection, not suppression).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether QWERTY's dominance rests on active corporate defense or on user preference and coordination."
+    },
+    {
+      "id": "skill_switching_cost_vs_imposed_lock_in",
+      "question": "To what extent are users' switching costs from QWERTY attributable to their own skill investment versus to technological or contractual barriers imposed by manufacturers?",
+      "resolution_mechanism": "Survey of users attempting alternative layouts; measurement of retraining curves and subjective cost perception. Analysis of whether users could legally and technically switch if they chose to.",
+      "impact": "If switching costs are primarily skill-based (own investment): supports naturalization reading (users prefer QWERTY because they have invested in it, not because they are trapped). If substantial costs are imposed (incompatible hardware, proprietary lock-in, contractual barriers): suggests lock-in or extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether QWERTY persistence reflects rational preference or technological/contractual lock-in."
+    },
+    {
+      "id": "sibling_reading_foreclosure_status",
+      "question": "Do the axioms of the naturalization reading logically foreclose the lock-in reading and the beneficiary-extraction reading, or can different parties coherently hold different readings simultaneously?",
+      "resolution_mechanism": "Structural analysis: if naturalization's core premise (QWERTY is adequately chosen through market selection) logically entails that lock-in and extraction readings are false, then foreclosure holds. If the readings are about different causal mechanisms that could coexist (adequacy AND imperfect information, adequacy AND suppression), then coexistence holds.",
+      "impact": "If naturalization forecloses the siblings: the readings are mutually exclusive and the evidence must choose. If they coexist: multiple mechanisms may operate simultaneously (QWERTY is adequate AND path-dependent AND supported by suppression), requiring more nuanced analysis.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The logical relationship between the naturalization reading and its siblings in the kernel."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The QWERTY keyboard layout has dominated input devices since the 1870s, despite competing designs like Dvorak that proponents claim are superior. The naturalization reading argues that QWERTY persists because it genuinely became adequate through market selection and fair competition, not because of lock-in or suppression. Users face real switching costs (retraining), but those costs represent their own skill investment in QWERTY literacy, not imposed scarcity. Manufacturers have no systematic incentive to maintain QWERTY beyond following user preference. Dvorak and alternatives have remained marginal despite decades of opportunity, suggesting their claimed advantages do not justify the retraining cost. This reading instantiates a clean ε-invariant constraint with no beneficiary extraction, minimal enforcement, and stable equilibrium.",
+    "key_agents": [
+      "keyboard users (billions globally): have invested in QWERTY literacy; face retraining cost to switch; benefit from universal standardization",
+      "typing teachers and education sector: benefit from training on the standard layout; no active defense required",
+      "computer manufacturers: produce QWERTY keyboards because users expect it; follow market demand; take no anti-competitive action",
+      "Dvorak researchers and alternatives proponents: advocate for alternative layouts; remain free to publish and promote; ideas have not achieved mainstream adoption",
+      "economic historians: study the persistence question; dispute remains open across readings"
+    ],
+    "logic_rationale": "Extractiveness is low (0.12) because no systematic beneficiary collects from QWERTY's persistence. Users pay a switching cost (their own skill retraining), not a transfer to someone else. Manufacturers coordinate on the standard but do not extract rents through it—they simply follow user preference to minimize friction. Suppression is minimal (0.08) because no active enforcement machinery is required to maintain QWERTY's dominance; it persists through voluntary choice and network effects. Theater ratio is near-zero (0.05) because QWERTY is what it claims to be: a standard that solves a coordination problem. Accessibility collapse is high (0.72) because once users have learned QWERTY, the alternative layouts become inaccessible to them without substantial retraining—but this inaccessibility is the natural consequence of skill investment, not imposed suppression. Resistance is low (0.15) because the arrangement faces little organized opposition—advocates for alternatives exist but do not mount sustained campaigns against QWERTY, suggesting they accept the trade-off between claimed technical advantage and retraining cost.",
+    "directionality_logic": "Under the naturalization reading, there is no clear target/beneficiary asymmetry. Users benefit from coordination (one standard across all devices) and pay a coordination cost (skill retraining to switch). Manufacturers benefit from serving user demand efficiently but do not extract rents. Dvorak proponents are excluded not by suppression but by competition—their ideas have not prevailed in the market. Directionality is near-symmetric (d ≈ 0.5) across all agents because the constraint operates as a genuine coordination equilibrium, not an extractive arrangement. This stands in sharp contrast to the lock-in and beneficiary-extraction readings, where directionality would diverge significantly.",
+    "perspectival_gap": "The naturalization reading predicts minimal perspectival divergence: all seats (users, manufacturers, educators) should perceive QWERTY as a neutral standard that coordinates activity efficiently. The lock-in reading would predict that users and Dvorak proponents perceive QWERTY as an imposed constraint, while manufacturers perceive it as a natural choice. The beneficiary-extraction reading would predict that users and workers perceive QWERTY as defended by manufacturers for profit, while manufacturers deny active enforcement. The engine computes these seat-level divergences from the structural data; the naturalization reading's metrics (low extraction, minimal suppression, no identifiable beneficiary) should produce convergent perception across seats.",
+    "mandatrophy_analysis": "The founding problem (fragmented keyboard layouts, retraining friction) remains live under this reading. QWERTY persists because it solves the coordination problem well enough, not because the problem has become obsolete. There is no mandatrophy signal: the constraint's mandate and its function are aligned. Alternative readings (lock-in, extraction) would argue for mandatrophy—that QWERTY persists despite its founding problem being solved or the solution becoming inferior. The naturalization reading resolves this by asserting that the founding problem endures (users still benefit from universal standardization) and QWERTY still solves it adequately.",
+    "kernel_context": "This constraint instantiates the naturalization_reading of the contested kernel qwerty_persistence_mechanism. The kernel contest has three readings: (1) beneficiary_extraction_reading — QWERTY persists because manufacturers actively defended it to protect training investments and market position; (2) lock_in_reading — QWERTY persists through path-dependent coordination failure despite technical inferiority; (3) naturalization_reading (this constraint) — QWERTY persists because it was/became genuinely adequate; alternatives lapsed through fair competition. The structural deltas are: naturalization claims no systematic beneficiary (vs. extraction's identified manufacturers), vindicated-proposition entries rather than extraction mechanics; switching costs reflect genuine skill investment, not imposed scarcity (vs. lock-in's path-dependency framing); Dvorak advantage is empirically contested (vs. lock-in's assumed inferiority). The three readings are authored as separate constraint stories, linked via network.affects_constraints, distinguished by their ε values (naturalization's low ε vs. lock-in's moderate ε vs. extraction's high ε), and grounded in different structural data."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "qwerty_persistence_mechanism__lock_in_reading",
+      "qwerty_persistence_mechanism__beneficiary_extraction_reading"
+    ],
+    "dual_formulation_note": "The QWERTY persistence kernel decomposes into three structurally distinct constraint stories with different ε values, stakeholder structures, and persistence mechanisms. The naturalization_reading (this constraint) claims QWERTY persists through adequate equilibrium (low ε, no beneficiary, fair competition). The lock_in_reading claims path-dependent coordination failure (moderate-high ε, asymmetric vulnerability, no active beneficiary but locked users). The beneficiary_extraction_reading claims manufacturers actively maintain QWERTY to protect training-cost sunk investment (high ε, identified beneficiary, active enforcement). Each reading grounds its ε in different structural mechanisms: naturalization in market selection, lock-in in path-dependency dynamics, extraction in manufacturer power and intent. The three stories share a kernel (QWERTY's dominance) but emit different constraints because their ε values differ by wide margins and their beneficiary/victim structures differ fundamentally. All three readings remain live in the scholarly literature; the corpus jointly documents the contest."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "qwerty_persistence_mechanism__lock_in_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "qwerty_persistence_mechanism__beneficiary_extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "market_selection_adequacy_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "skill_investment_switching_cost",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "competitive_equilibrium_baseline",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,419 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__freedom_imperative_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a568910b-5b9f-4c89-95c7-98992683a948"
+  },
+  "base_properties": {
+    "extractiveness": 0.88,
+    "suppression": 0.76,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.72,
+    "claimed_type": "snare",
+    "human_readable": "Software Source Code Restriction (Freedom Imperative Reading)",
+    "topic_domain": "intellectual_property/political_economy_of_technology",
+    "requires_active_enforcement": true,
+    "victims": [
+      "software_users_collective",
+      "derivative_developers",
+      "security_researchers",
+      "maintenance_communities"
+    ],
+    "beneficiaries": [
+      "proprietary_software_publishers"
+    ],
+    "vindicated_propositions": [
+      "source_code_as_civic_infrastructure",
+      "user_autonomy_and_dignity",
+      "collective_software_stewardship"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "proprietary_software_publishers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Control and enforce licensing terms that restrict access to source code, modify rights, and redistribution freedoms. Justify restrictions as protecting business models, incentivizing investment, and maintaining quality control. Collect economic value from licensing fees and control over the software's evolution. Deploy legal and technical enforcement (DMCA, code signing, legal threats) to maintain source closure."
+    },
+    {
+      "name": "software_users_collective",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Cannot inspect, modify, repair, or understand the software they depend on for work, communication, and daily life. Are locked into versions and upgrade cycles controlled by publishers. Bear costs of security vulnerabilities they cannot patch themselves, compatibility locks, and inability to adapt software to their needs. Exit is constrained by network effects and digital dependency; many cannot realistically switch because their entire workflow is built on closed software stacks."
+    },
+    {
+      "name": "derivative_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Cannot build upon, extend, or integrate closed software without license violations. Are barred from creating derived works or improvements. Must either pay for commercial licenses to access APIs (which may still restrict derivative use), reverse-engineer (legally risky), or avoid the software entirely. Their creative agency and ability to improve existing tools is constrained by licensing restrictions."
+    },
+    {
+      "name": "security_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Cannot audit closed software for vulnerabilities without the publisher's permission (which may be withheld or conditioned on non-disclosure). Discover critical flaws but are prohibited from disclosing them publicly or building fixes without violating the DMCA or license terms. Their ability to protect users from security threats is structurally constrained."
+    },
+    {
+      "name": "maintenance_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "In the Global South and resource-constrained regions, cannot maintain or adapt software after publisher abandonment. A closed codebase for software used in schools, hospitals, or government becomes unsustainable waste when the publisher shifts business models. The community bears the cost of losing critical infrastructure it cannot repair or fork."
+    },
+    {
+      "name": "free_and_open_source_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operates outside and against the proprietary model. Has built viable alternatives (Linux, Apache, Firefox, etc.) that demonstrate software can be produced and maintained through freedom-respecting models. Their existence proves the closure is not technically necessary. They are excluded from mainstream technology stacks through market dominance, not technical superiority."
+    },
+    {
+      "name": "regulatory_authorities_jurisdictions",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Increasingly investigate whether software source access is a public good or critical infrastructure question. Some jurisdictions (EU, France) have proposed or enacted requirements for source access in critical systems. Others defer to property-rights framing. They measure whether restriction regimes serve or harm public interests."
+    },
+    {
+      "name": "hardware_manufacturers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Locked into closed firmware and boot ecosystems. Cannot modify or inspect code running on their own hardware without licensing from software publishers. Yet also depend on software closure to prevent user customization and preserve their own control of hardware lifespans and ecosystems. A dual position: payer where they lack autonomy over their own devices, beneficiary where they use closure to constrain user freedom."
+    },
+    {
+      "name": "excluded_developers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Those who would fork, redistribute, or build alternatives are legally barred from doing so. Software developers in the Global South who want to localize or adapt software for their own communities cannot without violating IP law. These are not participants in the market at all — they are excluded by design."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "At the reading's own level (not at the kernel level): the freedom imperative reading does not frame this as a coordination problem to be solved. It frames source closure as an unjust constraint that prevents genuine coordination — the constraint's stated 'function' is coordination of development and quality, but the reading contests that the claimed function requires closure. The reading's analysis is: a genuine coordination function exists (how software gets made, maintained, improved), but closure is not the only way to achieve it, and closure carries the cost of unjust user subjugation.",
+    "transfer_function": "Transfers control, knowledge, and agency from users to publishers. Publishers gain: monopoly power over software evolution, ability to embed surveillance and lock-in, revenue from licensing, control over who can benefit from the software's labor. Users lose: ability to audit, repair, modify, or redistribute software; understanding of tools they depend on; capacity to adapt software to their own needs; freedom to fork and exit if dissatisfied.",
+    "absent_voices": "Derivative developers globally (especially in resource-constrained regions) who would build on closed software but are legally barred. Security researchers who discover vulnerabilities but cannot disclose or patch without legal risk. Maintenance communities in the Global South that inherit unmaintainable closed systems. Software developers in countries without strong IP enforcement who would localize and adapt software but cannot under international licensing regimes. These voices are structurally excluded by the licensing mechanism itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If source closure and its enforcement vanished overnight, the software ecosystem would reorganize around freedom-respecting models (as Linux, Apache, and thousands of open-source projects demonstrate it can). Publishers would lose the ability to enforce monopoly upgrades and licensing lock-in. Users would gain the ability to audit, fork, and maintain software. Derivative developers would create new applications from open codebases. Maintenance communities would repair and adapt software for local contexts. The arrangement persists only because legal and technical enforcement hold it in place.",
+    "founding_problem": "Early software was rare, expensive to develop, and needed capital investment to produce. The proprietary model was justified as necessary to recover development costs and incentivize innovation. The market scarcity and high development costs of the 1980s–1990s created a genuine coordination problem: how to fund software development and maintain quality.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The Free Software Foundation, major open-source foundations, academic research on open-source software development (from Linus Torvalds' git to collaborative Linux kernel development to modern AI models trained on open data) document that software can be produced at massive scale without source closure. Cloud computing and global internet infrastructure enable distributed development at zero marginal cost. Business models exist (services, support, customization) that fund development without source restriction. Economists and software engineers outside the proprietary sector attest the founding problem — capital scarcity — is solved. Publishers attest closure is still necessary for business models, but that is a claim about preferred profit structures, not about technical necessity."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 28,
+      "value": 0.85,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.87,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 42,
+      "value": 0.88,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.88,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 28,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 42,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 21,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 28,
+      "value": 0.73,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 42,
+      "value": 0.76,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.76,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint embodies the freedom-imperative reading of contested software source-code status. The reading holds that access to software source code is an ethical imperative, that users have inalienable rights to inspect, modify, and redistribute software, and that proprietary licensing is categorically illegitimate. Under this reading, all proprietary software operates as a constraint that extracts user agency and freedom; users become victims rather than beneficiaries. The measuring station (this reading) sits in the Free Software Foundation / software-freedom movement tradition. This is NOT a neutral assessment: it is the position that proprietary software is an injustice, authored from that frame. The constraint story captures how that reading models the situation structurally — what it claims, who it identifies as suffering, what it identifies as unjust, and what tensions exist within the reading itself.",
+    "key_agents": [
+      "Proprietary software publishers: institutional power, control enforcement, collect licensing monopoly rents",
+      "Software users (collective): organized power, identity-locked exit, structurally prevented from understanding or modifying their tools",
+      "Derivative developers: moderate power, constrained exit, creative agency restricted",
+      "Security researchers: moderate power, constrained exit, prevented from protecting users",
+      "Maintenance communities (Global South): powerless, trapped exit, inherit unmaintainable infrastructure",
+      "Free/open-source community: organized power, mobile exit, demonstrates alternatives",
+      "Excluded developers (Global South, localization contexts): moderate power, excluded from participation entirely"
+    ],
+    "logic_rationale": "Extractiveness is very high (0.88 at interval end) because the reading treats source closure as fundamentally extractive of user autonomy and freedom — it is not a coordination cost, it is the systematic prevention of coordination that respects human agency. The measurement series tracks a slow rise from 0.71 to 0.88 over the interval, reflecting the reading's historical observation that proprietary dominance (especially in cloud, mobile, and AI) has intensified since the 1980s, with more critical infrastructure locked behind closed licenses and stronger technical enforcement (DMCA, secure boot, DRM). Suppression rises from 0.62 to 0.76 because the enforcement machinery — legal threats, DMCA takedowns, code signing, anti-tampering measures — has grown more sophisticated and widespread. Theater ratio stays relatively low (0.28 to 0.42) because while publishers' security and quality arguments are real, the reading contends they are instrumentally secondary; the primary function of closure is to maintain monopoly power, not to achieve the stated coordination benefits. All measurements are on one shared time grid (every metric at every time point).",
+    "perspectival_gap": "The payer seats (users, derivative developers, researchers, maintenance communities) and the agenda-setter seat (publishers) should compute to radically different type classifications from the same structural data. From the publisher's seat, the arrangement is legitimate intellectual property protection and sustainable business model. From the user seat (the freedom reading's measuring station), the same structure is fundamental injustice. The divergence is NOT a measurement error; it is the core truth the reading asserts: that power asymmetry produces incommensurable evaluations of the same constraint. The engine computes this per-seat divergence from the structural data (beneficiary/victim, power, exit, scope). The authored claim does not adjudicate the divergence; the claim ASSERTS it.",
+    "directionality_logic": "Proprietary publishers are the structural beneficiaries (d near 0.0: they control the constraint, collect monopoly rents, have high power and mobile/arbitrage exit options). Software users collectively are near full targets (d near 1.0: they are identity-locked, have no alternative ecosystem at their desired scale, suffer direct costs in agency and freedom, organized but constrained by network effects and digital dependency). Derivative developers and security researchers are in the 0.7–0.85 range: they face severe constraints on their creative and protective agency, moderate power, but not completely trapped as users are. Maintenance communities in the Global South are near full targets (d near 1.0: powerless, trapped, inherit incomputable infrastructure). The free-open-source community sits near 0.0–0.15 (they are beneficiaries of the closure regime in the sense that it creates demand for alternatives; they have arbitrage-grade exit and organized power). The reading does not hide this: it names who benefits (publishers and their customers in high-income countries who value low purchase price over autonomy) and who pays (users globally who lose freedom, developers everywhere who cannot innovate).",
+    "mandatrophy_analysis": "The freedom reading identifies a fundamental mandatrophy: the founding problem (capital scarcity for software development) is solved, but the constraint (source closure) persists and has intensified. This is not a Piton — the arrangement is not atrophying; it is actively enforced and extracting at full capacity. But it is a Snare whose mandate is dead: the justification (needed to fund development) no longer holds, yet the extraction machinery remains and strengthens. The reading does not invoke Piton because the arrangement is not theater — it is fully functional extraction riding on a dead mandate. The key is the gap between founding problem and current reality: if the founding problem were still live (capital scarcity were preventing software development), the arrangement might be legitimate coordination cost. But cloud computing, collaborative development, and successful open-source at scale prove the founding problem is solved. The constraint persists as pure rent collection justified by obsolete narrative.",
+    "kernel_context": "This constraint instantiates the freedom_imperative_reading of the contested kernel: software_source_status. Three sibling readings exist: (1) pragmatic_development_reading — which argues open source is superior methodology but frames freedom as instrumental to quality, not foundational; (2) property_rights_reading — which asserts software is intellectual property and creators have legitimate rights to restrict; (3) utilitarian_hybrid_reading — which claims both models serve different contexts depending on welfare calculus. The freedom reading is structurally the most absolutist: it holds source access as an inalienable user right, frames closure as categorically illegitimate, and places proprietary software in the victim set universally. The readings differ on whether source access is (a) a foundational human right (freedom reading), (b) instrumental to better code (pragmatic reading), (c) a legitimate creator property right (property reading), or (d) context-dependent (utilitarian reading)."
+  },
+  "omegas": [
+    {
+      "id": "mandate_death_or_contestation",
+      "question": "Is the founding problem (capital scarcity for software development) genuinely solved, or does the constraint's justification remain contested by legitimate economic arguments?",
+      "resolution_mechanism": "Economic analysis: What is the capital required to develop mission-critical software (OS, databases, AI systems) under open-source models vs. proprietary models? Do open-source projects systematically underfund maintenance and security? Is the apparent viability of open-source predicated on underpaid labor or volunteer time that would not be sustainable at scale?",
+      "impact": "If the founding problem is solved, the constraint is a Snare with dead mandate and should be dismantled (freedom reading's verdict). If capital constraints are real and open-source cannot sustain critical infrastructure, closure may remain a coordination cost (pragmatic or property readings' position).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding mandate for source closure is obsolete or still live."
+    },
+    {
+      "id": "identity_lock_mechanism_internalized_or_structural",
+      "question": "The measured suppression (0.76) treats user identity-lock as partially structural. Is the lock structural (users are genuinely unable to migrate due to network effects, market dominance, ecosystem lock-in) or partially internalized (users could migrate but have internalized the belief that proprietary software is inevitable/superior)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if users who migrate to open-source systems report persistent felt constraints about proprietary tools, suppression is partially internalized. If constraints lift immediately after switching, suppression is primarily structural. Also: measure switching costs in jurisdictions with strong open-source uptake (e.g., some EU governments, Brazil, Russia post-sanctions) to isolate structural vs. internalized components.",
+      "impact": "If primarily structural, the constraint's suppression is correctly measured and reflects real exit barriers (markets are concentrated, switching costs are high). If partially internalized, the measured suppression underestimates how much of the constraint's force is maintained by belief in inevitability rather than hard technical barriers — increasing the urgency of consciousness-raising and alternative-visibility.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether user suppression is structural (market dominance, lock-in) or internalized (belief in propriety inevitability)."
+    },
+    {
+      "id": "global_south_harm_or_heterogeneous_impact",
+      "question": "Does source closure harm the Global South uniformly, or does the impact differ across regions and economic contexts?",
+      "resolution_mechanism": "Ethnographic and economic study of software dependency and repair capacity in different regions. How do maintenance communities in countries with strong pirate software ecosystems experience closure? Do they have de facto access through informal channels (reducing harm) or is closure enforced such that they inherit broken infrastructure (increasing harm)?",
+      "impact": "If harm is uniform, the Global South case is clear evidence of victimhood (powerless, trapped seats bearing the full cost). If harm is heterogeneous (some regions have workarounds, others face total exclusion), the analysis must differentiate by region rather than treating the Global South as monolithic — some maintenance communities may have constrained but workable exit options (arbitrage through informal distribution), while others are genuinely trapped.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether source closure harms all regions equally or creates differentiated victim sets."
+    },
+    {
+      "id": "foreclosure_vs_coexistence_reading_contest",
+      "question": "Does the freedom reading logically foreclose the property-rights reading, or can both readings coexist as positions held by different parties?",
+      "resolution_mechanism": "Examine whether a single framework (e.g., a jurisdiction's legal system) could recognize BOTH user inalienable rights to source access AND creator property rights over software patents/business methods. If one framework can hold both (user gets source, creator gets patent protection on innovations), the readings coexist. If user source access necessarily extinguishes creator property claims, the readings foreclose each other.",
+      "impact": "If forecloses: the readings cannot coexist in a single legal framework; one must win, the other must be suppressed. If coexists: different parties can maintain different readings simultaneously without logical contradiction, even though they conflict materially (e.g., GPL and proprietary software coexisting in the same ecosystem). This omega determines the cs_structure.reading_relations value between freedom_reading and property_rights_reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the freedom and property-rights readings logically foreclose each other or can coexist as different parties' positions."
+    },
+    {
+      "id": "surveillance_and_freedom_coupling",
+      "question": "Is source closure inherently coupled to surveillance risk, or is surveillance a separable threat that can be present in both open and closed software?",
+      "resolution_mechanism": "Audit both open-source and proprietary software for surveillance vectors (telemetry, tracking, data exfiltration). The freedom reading often implies source closure enables hidden surveillance. If open-source code can contain surveillance vectors despite transparency, the threat is not unique to closure. If proprietary software exhibits systematic surveillance that open-source lacks, the coupling is real.",
+      "impact": "If coupled: source access is necessary to detect and prevent surveillance; closure is doubly harmful (lack of agency + hidden tracking). If separable: both open and closed software require auditing; source access helps but is not sufficient to ensure privacy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether surveillance risk is inherently tied to source closure or a separable concern."
+    },
+    {
+      "id": "reading_contingency_on_normative_framing",
+      "question": "Does the freedom reading's claim that source access is an inalienable right rest on a particular normative framework (e.g., software-as-civic-infrastructure, autonomy-centered ethics, labor-dignity framing) that other readings reject?",
+      "resolution_mechanism": "Examine how the freedom reading grounds its claim to inalienability. Is it grounded in: (a) a deontological principle (freedom is inherently valuable, users have intrinsic rights), (b) a consequentialist argument (source access produces better outcomes), (c) a labor/dignity argument (users have a right to understand and maintain what they depend on)? The property-rights reading grounds itself differently (creator property rights as foundational). If the two readings rest on incommensurable ethical foundations, they may be non-resolvable by evidence alone.",
+      "impact": "If the freedom reading rests on contestable normative premises (even if internally sound), it cannot claim universal validity; it remains one reading among others. If the premises can be grounded empirically (e.g., autonomy is necessary for human flourishing, source access correlates with better outcomes), the reading gains force beyond normative preference.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the freedom reading's foundational claims rest on contestable normative frameworks."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "software_source_status__pragmatic_development_reading",
+      "software_source_status__property_rights_reading",
+      "software_source_status__utilitarian_hybrid_reading",
+      "digital_rights_management_enforcement",
+      "open_source_community_coordination"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel: software_source_status. Four structurally distinct readings exist, each with different ε values and stakeholder structures. The freedom_imperative_reading claims all proprietary software is extractive (high ε), while the property_rights_reading frames it as legitimate property protection (lower ε). The pragmatic_development_reading frames open source as superior methodology (instrumental framing of freedom). The utilitarian_hybrid_reading claims both serve different contexts (context-dependent ε). Each reading instantiates a different constraint with different beneficiary/victim sets. They are linked via the kernel, not fused into one constraint. The ε-invariance principle requires separate stories per reading because the observable that measures 'is proprietary software harmful?' yields radically different answers under each reading. The freedom reading measures 'user autonomy lost' (high ε), the property reading measures 'creator property rights respected' (low ε from creator seat), and the utilitarian reading measures 'welfare served by this license' (context-dependent ε). These are not the same constraint viewed from different angles; they are different constraints with different ε values instantiated from the same contested kernel."
+  },
+  "directionality_overrides": [],
+  "gain_flow": "proprietary_software_publishers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "software_source_status__pragmatic_development_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "software_source_status__property_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "software_source_status__utilitarian_hybrid_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "source_code_access_inalienable_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "proprietary_closure_categorically_unjust",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "software_freedom_governance_framework",
+    "drift_state": {
+      "moment": "contemporary_cloud_ai_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

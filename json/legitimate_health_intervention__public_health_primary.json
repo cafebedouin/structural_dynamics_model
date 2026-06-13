@@ -1,0 +1,594 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__public_health_primary",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "7c6356f1-d099-4678-86cf-7c25c8c9eb18"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.73,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Public Health Legitimacy (Population Morbidity Primary)",
+    "topic_domain": "public_health/constitutional_law/medical_ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "immunocompromised_populations",
+      "healthcare_system_capacity"
+    ],
+    "victims": [
+      "vaccine_refusers",
+      "workers_facing_employment_termination"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Sets vaccination mandates, enforcement mechanisms (employment termination, access restrictions), and determines the measurement scope for 'population benefit.' Frames mandate as coordination solution to a collective-action problem (under-vaccination relative to herd-immunity thresholds). Owns the epidemiological data that legitimates the constraint under this reading. Authority derives from scientific credibility and institutional position; exit from this role is non-applicable (analytical seat)."
+    },
+    {
+      "name": "immunocompromised_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Cannot be vaccinated due to medical contraindication (e.g., immunosuppressive therapy, severe prior reaction). Depend entirely on population immunity (herd effect) to access public space, education, healthcare, employment without extreme isolation or extreme risk. Unvaccinated populations create a disease vector that directly collapses their exit options: public participation without isolation is contingent on high population immunity. The constraint exists primarily to protect this population."
+    },
+    {
+      "name": "vaccine_refusers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Refuse vaccination on grounds of bodily autonomy, prior adverse reaction, or low personal risk perception. Face employment termination in healthcare, education, and public service; exclusion from public schools; restriction from healthcare facilities; social stigma. From this reading's seat, refusal is reframed as harming immunocompromised populations through disease transmission. Exit options include geographic relocation (high cost), informal employment (lower wages, less security), or compliance. Constrained exit means moderate power anchors at moderate vulnerability under enforcement."
+    },
+    {
+      "name": "healthcare_workers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face the strictest vaccine mandates: employment termination for refusal, with limited exemption pathways. Simultaneously benefit from reduced disease transmission in healthcare facilities, which protects their ability to work. The constraint is structurally asymmetric for this seat: their occupational power (organized, skilled, in-demand) would normally afford mobile exit, but the mandate's scope eliminates most occupational alternatives within healthcare. They must either comply or leave the profession entirely."
+    },
+    {
+      "name": "workers_facing_employment_termination",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lose employment for vaccine refusal even in sectors where disease transmission risk is low (e.g., outdoor work, home-based work, remote work). The enforcement mechanism (employment termination) is applied categorically, not calibrated to occupational risk. They bear the full extraction cost (lost income, loss of benefits, career disruption) while immunocompromised populations benefit from population-level protection that may be over-broad for their occupational context."
+    },
+    {
+      "name": "proportionality_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would argue that mandate severity should scale with disease threat level, occupational exposure risk, age, prior infection status, and vulnerable-population density. From this reading's framework, they are structurally excluded: legitimacy derives from population-level outcome, not from individual risk calibration. Their core claim — that proportionality matters — is foreclosed by this reading's legitimacy basis."
+    },
+    {
+      "name": "epidemiologists_measuring_benefit",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Provide epidemiological measurements that quantify 'population benefit': prevented deaths, prevented hospitalizations, prevented disease spread. They define the measurement scope that operationalizes this reading's legitimacy claim. Their methodological choices (what counts as benefit, what populations are included, what outcomes matter) are structural gates through which the constraint's legitimacy operates. Authority derives from scientific credibility; exit is non-applicable (analytical seat)."
+    },
+    {
+      "name": "bodily_autonomy_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold that informed consent is a foundational legitimacy condition for medical intervention, superseding population benefit. This reading structurally forecloses their position: if legitimacy is population-outcome-derived, consent becomes a secondary procedural matter, not foundational. They are excluded from the decision framework itself — their framing of the problem is replaced by this reading's framing (externality imposition rather than rights violation)."
+    },
+    {
+      "name": "courts_and_constitutional_review",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Evaluate whether this reading's legitimacy framework satisfies constitutional doctrine (right to bodily integrity, due process, equal protection). Test whether enforcement mechanisms (employment termination, access restriction) are proportional to the state's interest in population health. Measure whether less-restrictive alternatives exist and whether exemptions are applied consistently. Courts either ratify or constrain this reading's scope."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a genuine collective-action problem: individual vaccination choice, left uncoordinated, produces under-vaccination relative to herd-immunity threshold (typically 70–95% depending on disease transmissibility). Without coordination, individuals choosing rationally for their own risk profile would under-vaccinate relative to population-level risk, leaving vulnerable subsets (immunocompromised who cannot be vaccinated) exposed to disease and healthcare infrastructure exposed to surge capacity loss. The mandate coordinates individual choice toward the population-level equilibrium that protects the immunocompromised.",
+    "transfer_function": "Moves disease-transmission burden from vaccine refusers to the mandate structure. Refusers lose employment security, public access, educational access, and bodily autonomy of choice. Immunocompromised populations gain public-space access through population immunity protection. Healthcare system infrastructure gains capacity protection from reduced surge demand. The constraint transfers the compliance cost (employment termination, social restriction) from immunocompromised to refusers.",
+    "absent_voices": "Vaccine-hesitant and low-health-literacy populations, cultural and religious vaccine objectors, individuals with prior severe adverse reactions (a small but real population), and proportionality advocates are structurally excluded. Their claims — that compliance should be voluntary, that risk should be individually assessed, that mandates should scale with threat level — are reframed as externality imposition rather than valid concerns about autonomy or proportionality. Their exclusion from the decision framework means the constraint operates without negotiation over its scope or intensity.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint disappeared overnight (mandates lifted, employment protections restored, access restrictions removed), vaccine uptake would decline in refuser populations, population immunity would fall below herd-immunity threshold, disease transmission would accelerate in vulnerable populations, and healthcare system surge capacity would contract. Immunocompromised populations would face elevated disease risk requiring renewed isolation or intensive vaccination-focused public health campaigns. The constitutional and public health orders would reorganize around a weaker collective-action mechanism, likely shifting toward voluntary incentives or proportionality-calibrated enforcement.",
+    "founding_problem": "Preventable infectious disease produces population-level morbidity and mortality; individual vaccination choice, if left uncoordinated via market or voluntary preference, produces under-vaccination relative to the herd-immunity threshold necessary to protect vulnerable populations who cannot be vaccinated. Population-level disease burden is the founding problem, not individual autonomy or proportionality concern.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Public health epidemiologists and immunologists attest that preventable disease burden remains substantial and that unvaccinated populations create disease vectors. Constitutional law scholars and bodily autonomy advocates contest whether the founding problem justifies the enforcement mechanisms employed, or whether it was over-solved (disease severity declining, variant escape increasing, vaccination uptake higher via voluntary means). No corroboration from outside the public-health-authority benefiting set; this reading's core claim (that population benefit legitimates mandate) is itself the contested terrain."
+  },
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.28,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.71,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint embodies one reading of the contested kernel 'legitimate_health_intervention': legitimacy derives from measurable reduction in population-level morbidity/mortality; individual refusal is reframed as externality imposition. Under this reading, vaccine refusers become victims (from a different reading's perspective, they are targets of rights violation) and immunocompromised populations become beneficiaries. The constraint operates through enforcement mechanisms (employment termination, access restriction, school exclusion) that carry high extractiveness (0.68 by interval end) sustained by active suppression. The measurement series shows rising extractiveness and suppression in the interval 0–24 (early enforcement intensification) followed by plateau at 24–36 (enforcement infrastructure matured and stabilized). Theater ratio remains low-to-moderate, indicating the public-health coordination function is real but growing share of enforcement activity defends mandate boundaries rather than disease prevention. The claim/metric gap is deliberate: the constraint is CLAIMED as tangled_rope under this reading (genuine coordination function + asymmetric enforcement) while the temporal trajectory tracks enforcement infrastructure hardening and rising suppression cost.",
+    "key_agents": [
+      "public_health_authority: Institutional agenda-setter; frames legitimacy in population-outcome terms; owns enforcement machinery.",
+      "immunocompromised_populations: Powerless beneficiaries; trapped exit; entire public participation depends on mandate's immunological protection.",
+      "vaccine_refusers: Moderate-power payers; constrained exit; bear employment termination and access restriction from enforcement.",
+      "healthcare_workers: Organized payers facing strictest enforcement; simultaneously benefit from workplace disease control.",
+      "bodily_autonomy_advocates: Excluded structural position; their core claim (consent-centered legitimacy) is foreclosed by this reading's framework.",
+      "epidemiologists_measuring_benefit: Institutional agenda-setters determining what 'population benefit' means; measurement definitions gate legitimacy.",
+      "courts_and_constitutional_review: Analytical observers testing whether population-benefit framework satisfies proportionality doctrine."
+    ],
+    "logic_rationale": "Extractiveness rises from 0.45 to 0.68 over 30 time units, driven by expanding enforcement scope (employment mandates, school access restrictions, healthcare facility exclusions) and employment-termination consequences for refusers. By t=24 the enforcement infrastructure has stabilized — suppression plateaus at 0.71 — indicating the constraint has hardened into institutional routine. Theater ratio rises from 0.12 to 0.28 but remains below the piton threshold (0.5), indicating the coordination function (herd immunity protection for immunocompromised) remains real but enforcement activity increasingly defends mandate boundaries rather than direct disease prevention. Suppression is high (0.71) because the constraint's persistence depends on actively excluding exit alternatives: employment compliance, geographic relocation, and informal work are the bounded options. Accessibility_collapse at 0.62 reflects constrained but not completely foreclosed alternatives — refusers can still find employment outside mandate scope, move jurisdictions, or comply; the constraint does not eliminate all options, but it eliminates most convenient ones. Resistance at 0.73 is high because vaccine hesitancy remains persistent and substantial despite enforcement; the constraint must be continuously defended, suggesting it lacks the 'natural law' character of uncontested coordination.",
+    "perspectival_gap": "The public_health_authority and the immunocompromised_populations should compute as net beneficiaries with low directionality (d near 0.0–0.2), experiencing the constraint as protective coordination. The vaccine_refusers and workers_facing_employment_termination should compute as high-d targets (0.7–0.95) experiencing the constraint as coercive extraction. Courts and constitutional reviewers should compute near-symmetric (d ~ 0.5): they see both the coordination benefit and the autonomy cost, weighted by doctrine. The engine's per-seat computation should diverge sharply between beneficiary and payer seats, reflecting the structural asymmetry this reading instantiates: what is coordination for immunocompromised becomes extraction for refusers.",
+    "directionality_logic": "Beneficiary directionality: immunocompromised populations hold role=beneficiary, power=powerless, exit=trapped — the constraint subsidizes their public participation (d approaches 0.0, maximum beneficiary). Payer directionality: vaccine_refusers hold role=payer, power=moderate, exit=constrained (employment termination is the enforcement gate; geographic relocation is costly; informal work is available but lower-wage) — they target d around 0.75–0.85. Healthcare workers hold role=payer with high occupational power but face the strictest mandate enforcement, so their d is higher (0.65–0.75) than their raw power would suggest; the constraint overrides their occupational leverage. The public_health_authority is the agenda_setter, power=institutional — they derive directionality from their role as enforcer, not from bearing costs, so d is low (0.1–0.2). Courts are analytical observers with d=0.5. No directionality overrides are needed; the structural derivation captures the intended per-seat divergence.",
+    "mandatrophy_analysis": "The constraint avoids misclassification as pure extraction by declaring the immunocompromised beneficiary and coordination-function structures. Without those declarations it would be a snare (high extraction, high suppression, no beneficiary). The tangled_rope classification requires both a coordination function (herd immunity protection — genuine) and asymmetric enforcement (employment termination, access restriction — clearly asymmetric). The measurement trajectory supports tangled_rope: extractiveness rises to 0.68 (high but not snare-maximal) and plateaus rather than accelerating, suppression plateaus at 0.71 (high and sustained but not escalating), theater ratio stays below 0.3 (indicating function is real, not pure performance). If extractiveness were rising toward 0.85+ and theater ratio toward 0.6+, the reclassification pressure toward snare would strengthen; the observed plateau suggests the constraint has found an enforcement equilibrium.",
+    "kernel_context": "This constraint is the public_health_primary reading of the legitimate_health_intervention kernel. The contested kernel is the legitimacy basis for health intervention: three readings compete. This reading asserts legitimacy derives from measurable population-level morbidity/mortality reduction; refusal becomes externality imposition. The sibling bodily_autonomy_primary reading asserts legitimacy requires informed consent regardless of population benefit (forecloses this reading — they cannot coexist in a single consent-centered framework). The proportionality_reading asserts legitimacy requires balancing intervention severity against threat level with both population and individual harm weighted by disease characteristics (coexists with this reading in pluralist jurisdictions but competes in practice — proportionality advocates pressure this reading toward threshold calibration). Under this reading, bodily autonomy becomes a secondary procedural question, not foundational legitimacy. Under the autonomy reading, population benefit becomes secondary to consent. The kernel — what makes intervention legitimate — is the contested territory."
+  },
+  "omegas": [
+    {
+      "id": "measurement_scope_definition",
+      "question": "What populations and disease outcomes count as 'measurable population benefit'? Does benefit calculation include only prevented deaths, or also prevented illness, prevented healthcare surge, prevented lost work days, prevented long-term sequelae?",
+      "resolution_mechanism": "Epidemiological methodological transparency: declaring the measurement scope upfront (e.g., 'all-cause mortality in high-risk cohorts' vs. 'infection-prevention across all populations'). Comparison of jurisdictions using different measurement scopes and observing whether mandate scope/intensity tracks measurement scope.",
+      "impact": "Narrow scope (deaths only) tends to reduce perceived population benefit, weakening this reading's legitimacy claim; broad scope (all morbidity) tends to amplify it. Measurement scope is the gate through which this reading operates — who defines it has structural power over what counts as legitimate.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Measurement scope shapes what qualifies as population benefit under this reading."
+    },
+    {
+      "id": "externality_imposition_threshold",
+      "question": "At what population-immunity level does individual refusal transition from 'exercising autonomy' to 'imposing externality'? Is there a threshold (e.g., 85% population immunity) below which refusal is externality, above which it is autonomous choice?",
+      "resolution_mechanism": "Explicit threshold declaration by public health authority; empirical measurement of population immunity level and disease transmission at which mandate enforcement begins and ends (or is reweighted). Comparison with proportionality reading's threshold approach.",
+      "impact": "A clear threshold would support this reading's coherence; the absence of a threshold leaves the externality claim categorical (refusal is always externality) rather than contingent, which strengthens the snare-classification pressure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether externality imposition is threshold-contingent or categorical."
+    },
+    {
+      "id": "autonomy_foreclosure_vs_coexistence",
+      "question": "Does this reading logically foreclose bodily autonomy as a legitimacy condition, or can both legitimacy bases coexist (one reading dominant in high-threat scenarios, the other in low-threat scenarios)?",
+      "resolution_mechanism": "Examining court rulings and policy documents: do they describe autonomy as categorically overridden by population benefit, or do they reserve autonomy as a fallback when population benefit is marginal? Natural experiments from jurisdictions using proportionality thresholds (autonomy recovered below threat level).",
+      "impact": "Pure foreclosure means this reading strictly rules out autonomy-centered framing — the two readings cannot coexist in one framework. Coexistence means proportionality advocates have structural room to argue for threshold calibration. Foreclosure strengthens this reading's logical coherence but increases vulnerability to bodily_autonomy_primary counter-claims in constitutional review.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading forecloses bodily autonomy as a legitimacy condition or allows coexistence via proportionality thresholds."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.71) primarily structural (employment termination gates compliance), internalized (refusers have accepted the legitimacy frame), or both? Does suppression persist after the enforcement mechanism is removed?",
+      "resolution_mechanism": "Post-mandate lift observation in jurisdictions that ended enforcement: if suppression persists (continued low vaccination in refuser populations despite no legal requirement), the suppression is partially internalized. If vaccination uptake recovers, suppression was primarily structural.",
+      "impact": "High structural suppression suggests the constraint is coercive and dependent on active enforcement; high internalized suppression suggests refusers have accepted the legitimacy frame or are risk-averse enough to comply regardless. Mixed suppression indicates the constraint has created path-dependent compliance habits that persist even after enforcement softens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural enforcement or internalized acceptance."
+    },
+    {
+      "id": "exempt_populations_and_proportionality",
+      "question": "Why are some populations exempt (medical contraindication, prior severe infection, religious objection in some jurisdictions) while others are not? What principle determines exemption scope, and does it cohere with the population-benefit legitimacy claim?",
+      "resolution_mechanism": "Examining exemption policy: if exemptions are medically determined (contraindication, prior infection), this is proportionality framing leaking in. If exemptions are political/religious, this suggests the reading's universality is compromised. Measuring whether exemption scope tracks with threat-level heterogeneity or with political pressure.",
+      "impact": "Principled exemptions (medically determined) suggest this reading tolerates proportionality calibration and is closer to tangled_rope. Arbitrary or politically-driven exemptions suggest the constraint is inconsistent with its own legitimacy claim and is closer to snare. The existence of exemptions challenges the claim that refusal is categorically externality imposition.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exemptions undermine the population-benefit legitimacy claim by revealing hidden proportionality logic."
+    },
+    {
+      "id": "kernel_reading_contest_risk",
+      "question": "This reading forecloses bodily_autonomy_primary and competes with proportionality_reading. What mechanism in constitutional law or democratic process adjudicates between readings? Is foreclosure by this reading stable under challenge, or does it generate durable opposition that eventually shifts institutional framing toward autonomy or proportionality?",
+      "resolution_mechanism": "Historical observation: how stable is this reading's dominance over 10-year intervals? Do courts enforce it consistently, or do they migrate toward autonomy or proportionality framing? Do public opinion and electoral pressure support or erode this reading's legitimacy?",
+      "impact": "A durable, court-enforced reading is a credible constraint with stable classification. A fragile reading that undergoes court reversal or legislative override becomes a piton (theater-heavy enforcement of an unsupported legitimacy claim) or transient constraint (sunset by legal change). Long-term institutional instability would pressure reclassification.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether this reading remains institutionally dominant or is subject to reversal under competing readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "legitimate_health_intervention__bodily_autonomy_primary",
+      "legitimate_health_intervention__proportionality_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the contested kernel 'legitimate_health_intervention'. All three readings share the same epidemiological facts but differ in what legitimates intervention. public_health_primary: legitimacy from population-outcome measurement. bodily_autonomy_primary: legitimacy from consent-centered framework (forecloses population-primary when applied to same population in same jurisdiction). proportionality_reading: legitimacy from proportionality balancing (coexists with public_health_primary in pluralist jurisdictions but competes in high-enforcement scenarios). Each reading has distinct ε, distinct beneficiary/victim structure, and distinct enforcement implications. Not decomposition per ε-invariance, but rather an irreducible reading contest over what ground legitimacy."
+  },
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 36,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 36,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 36,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.41
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 36,
+        "value": 0.64
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 36,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 36,
+        "value": 0.69
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.51
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 36,
+        "value": 0.73
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.44
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 36,
+        "value": 0.67
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 36,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 36,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 36,
+        "value": 0.74
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 36,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 36,
+        "value": 0.75
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 36,
+        "value": 0.73
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 36,
+        "value": 0.38
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 36,
+        "value": 0.71
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 36,
+        "value": 0.34
+      }
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "population_disease_prevention_primary",
+    "reading_relations": [
+      {
+        "sibling_id": "legitimate_health_intervention__bodily_autonomy_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "legitimate_health_intervention__proportionality_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "population_outcome_measurement_legitimates_intervention",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "individual_refusal_constitutes_externality_imposition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "drift_state": {
+      "moment": "contemporary_endemic_transition_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "legitimate_health_intervention__bodily_autonomy_primary",
+      "legitimate_health_intervention__proportionality_reading"
+    ]
+  },
+  "gain_flow": "public_health_authority",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

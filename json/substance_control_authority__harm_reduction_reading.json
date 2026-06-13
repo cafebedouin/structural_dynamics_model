@@ -1,0 +1,562 @@
+{
+  "header": {
+    "constraint_id": "substance_control_authority__harm_reduction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "5df93f88-e95a-4fc2-8286-613bab0fef78",
+    "created_at": "2026-06-12T14:32:18Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Harm Reduction Authority: Drug Use Acceptance via Public Health Intervention",
+    "topic_domain": "public_health/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "people_using_drugs",
+      "public_health_system",
+      "law_enforcement_resource_conservation"
+    ],
+    "victims": [
+      "people_using_drugs",
+      "neighbors_of_injection_sites",
+      "emergency_health_services"
+    ],
+    "vindicated_propositions": [
+      "harm_reduction_epidemiology",
+      "public_health_primacy_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "people_using_drugs",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Exit the criminal justice system (no arrest for possession/use) and gain access to sterile supplies, supervised consumption facilities, medication-assisted treatment, and overdose reversal without legal penalty. They remain exposed to health harms (infection, overdose, addiction) and bear the costs of managing these harms through the constraint's service infrastructure. Their identity as people who use drugs becomes structurally recognized rather than criminalized, but this recognition locks them into a health-serviced population category."
+    },
+    {
+      "name": "harm_reduction_service_providers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Set and administer the harm reduction framework: operate needle exchanges, supervised consumption sites, distribution of naloxone, linkage to treatment. They argue this approach reduces overdose deaths and infectious disease while respecting user dignity. They have discretionary authority over service design and site location, constrained by public opposition and political approval."
+    },
+    {
+      "name": "public_health_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Declares drug use as a public health problem rather than a criminal problem; authorizes and funds harm reduction services; reframes enforcement from criminalization to health intervention. They bear responsibility for measured outcomes (infection rates, overdose deaths, community health) and face political pressure when harms occur in their jurisdiction."
+    },
+    {
+      "name": "law_enforcement",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Exit the resource-intensive enforcement role (drug arrest, possession prosecution, incarceration) and redirect capacity to violent crime. They benefit from decriminalized use reducing enforcement demand; they also bear the cost of managing open drug scenes and associated disorder without criminalization as a tool. The constraint requires active non-enforcement — officers must not arrest for possession, which some resist as a loss of authority."
+    },
+    {
+      "name": "neighbors_of_service_sites",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear visible externalities: injection sites in their neighborhoods, discarded equipment, congregating users, increased street-level disorder. They pay through reduced property values, visible drug use, and perceived safety decline. Their exit options are limited — relocating is expensive and geographically constrained by where service infrastructure concentrates."
+    },
+    {
+      "name": "emergency_medical_services",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Bear the cost of overdose response: ambulance deployment, emergency department treatment, repeat presentations. The constraint increases their service volume (more users survive overdoses via naloxone distribution; they then seek emergency care). They pay through resource depletion and crowding; the benefit (lives saved) is diffuse across the public health system."
+    },
+    {
+      "name": "political_opposition_to_harm_reduction",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would argue for prohibition-based enforcement, framing harm reduction as capitulation to drug use and enablement of addiction. They are excluded from the constraint's legitimacy structure (which is grounded in public health authority) but retain political power to challenge site operations, defund services, and reverse policies through electoral and legislative pressure."
+    },
+    {
+      "name": "addiction_treatment_system",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Receives users into treatment pathways via harm reduction linkage: medication-assisted treatment, counseling, residential programs. They benefit from the constraint generating demand and access pathways. They also depend on sustained funding and political support for the harm reduction infrastructure that feeds their client base."
+    },
+    {
+      "name": "epidemiologists_and_public_health_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Measure outcomes and validate the harm reduction framework: overdose mortality, HIV and hepatitis C prevalence, treatment engagement, cost-effectiveness. They take no direct role in the constraint's operation but furnish the empirical legitimacy claims on which the public health authority grounds its mandate."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the coordination problem of managing widespread drug use while containing infectious disease transmission and overdose mortality: instead of distributed, under-resourced enforcement against individuals, establishes centralized public health infrastructure (needle programs, supervised sites, treatment linkage, overdose response) that reaches users outside criminal justice channels and improves measurable population health outcomes.",
+    "transfer_function": "Moves resources (public funds, service provision capacity) from criminal enforcement toward health services; transfers authority over drug use from law enforcement to public health; transfers the obligation to manage health harms from individuals to the public health system. Users transfer from victim status in the criminal justice system (arrest, incarceration, criminal record) to victim status in the health system (disease exposure, overdose risk, addiction), but with decriminalized access to harm reduction and treatment services.",
+    "absent_voices": "Political prohibition constituencies (who would argue drug use should remain criminalized to protect communities and deter addiction) are structurally excluded from the public health authority's legitimacy frame. Neighbors experiencing street-level externalities at service sites have limited voice in site placement decisions. People with opioid use disorder who have achieved abstinence-based recovery (and may view harm reduction as antithetical to recovery) are often marginalized in harm reduction program design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the harm reduction authority and decriminalized framework disappeared overnight, law enforcement would resume arrests for possession, treatment capacity would shift from harm reduction services to incarceration, infectious disease control would collapse (no needle programs, no supervised sites), and overdose deaths would rise sharply. The health and criminal justice systems would reorganize around enforcement; public health resources would redirect to post-hoc emergency response rather than prevention.",
+    "founding_problem": "Two connected crises: (1) mass incarceration for drug possession was consuming law enforcement and correctional resources without reducing drug use; (2) infectious disease (HIV, hepatitis C) was spreading through injection-drug populations without effective prevention pathways. Criminalization created barriers to public health intervention — users avoided services to evade law enforcement.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The public health authority and harm reduction providers attest both crises are ongoing (new viral variants spreading, incarceration still consuming resources). Epidemiological data from jurisdictions with established harm reduction programs corroborates disease prevalence reduction. Law enforcement in harm-reduction jurisdictions attests resource relief from reduced drug enforcement. Political prohibition advocates dispute whether harm reduction adequately addresses public safety and social order concerns."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 25,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.6
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.32
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.32
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.22
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.26
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.18
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.25
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.32
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.45
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.74
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.78
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.76
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.68
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "A public health authority decriminalizes drug use and establishes harm reduction services (needle exchanges, supervised consumption sites, medication-assisted treatment, overdose reversal) as the primary state mechanism for managing drug use while minimizing health harms. This is ONE READING of the contested kernel 'substance_control_authority' — specifically, the harm reduction reading. Other readings (prohibition, legalization) instantiate different constraints from the same kernel but with different ε values, beneficiary structures, and classifications. This reading authorizes drug use while the authority manages health externalities through services rather than criminalization. The constraint's persistence requires active non-enforcement (police do not arrest for possession) and sustained funding of service infrastructure, making it a Tangled Rope: genuine coordination function (disease control, overdose prevention) combined with asymmetric extraction (users bear health risks and service-defined identity-locking; neighbors and emergency services bear externality costs). The claim/metric gap is intentional: this reading's structural premise is that decriminalization + services constitute legitimate state authority (rope-like coordination); the authored metrics reflect how that authority operates in practice (substantial suppression of criminal enforcement, asymmetric burden distribution, moderate theater as services become bureaucratic).",
+    "key_agents": [
+      "people_using_drugs: primary beneficiary (exit criminal justice) and victim (remain in health-managed victim set via identity-locking)",
+      "public_health_authority: primary agenda-setter, authorizes decriminalization and services",
+      "law_enforcement: secondary agenda-setter, enforces non-arrest policy; benefits from resource relief, pays through authority reduction",
+      "neighbors_of_service_sites: payer, bear visible externalities without choice in site placement",
+      "emergency_medical_services: payer, increased overdose response volume",
+      "political_opposition: excluded, would argue for prohibition-based enforcement"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.58 at interval end) because the constraint transfers significant costs to people using drugs (managed health risks, service-defined identity) and neighbors (visible externalities, property impacts) while providing genuine coordination benefits (disease prevention, overdose survival). The metric rises slightly over the interval (0.48 to 0.58) as the service infrastructure matures and institutional capture becomes visible — early phases focus on health outcomes; later phases show bureaucratic mission drift where service providers' interests (maintaining funding, expanding programs) begin to diverge from user autonomy and treatment outcomes. Suppression is moderate (0.42) because the constraint requires active suppression of criminalization (police must refrain from arrests, resist institutional pressure for enforcement) but does not require high coercive force against users themselves — the identity-locking operates through service dependency rather than direct coercion. Theater rises slowly (0.18 to 0.28) as the constraint matures: early phases emphasize genuine public health rationale; later phases introduce more performative elements (ceremonial community engagement, media-focused naloxone distributions) that operate alongside core service delivery. Accessibility collapse is substantial (0.62 baseline) because alternatives to the managed health framework close: once users engage with services, criminal alternatives (self-management, unregulated supply) become less viable; the service system becomes structurally difficult to exit without facing health risks. Resistance is high (0.71) because political opposition from prohibition constituencies remains powerful and organized, and neighbors mount sustained NIMBY campaigns against site placement — the constraint survives despite substantial organized resistance.",
+    "perspectival_gap": "The public health authority seat and the people-using-drugs seat should compute very differently. From the authority's position, the constraint is legitimate coordination (managing a genuine public health crisis through evidence-based services); it computes as rope-like in the authority's operational frame. From the powerless-trapped-identity-locked seat of people using drugs, the same structure operates as enforced, beneficially paternalistic but still extraction-bearing — users must enter service infrastructure, accept the identity of 'person in treatment,' and submit to program rules in exchange for accessing harm reduction. The engine computes this divergence from directionality: the authority has institutional power and arbitrage exit (can shift to enforcement if political pressure rises); people using drugs have powerless status and identity-locked exit (cannot exit without facing health/social consequences). These structural differences produce different d values and thus different per-seat classifications. Law enforcement occupies an intermediate position: they benefit from resource relief (lower drug-arrest volume) but pay through institutional authority reduction (cannot use drug-law enforcement as a tool) and must defend decriminalized spaces.",
+    "directionality_logic": "Beneficiaries: people using drugs benefit from decriminalization (exit criminal justice) but remain victims of health costs; public health system benefits from mandate and resources; law enforcement benefits from resource relief. Victims: people using drugs (health burdens, identity-locking); neighbors of sites (externalities, property impact); emergency services (increased demand volume). The constraint is tangled because the same population (people using drugs) is both beneficiary (decriminalized) and victim (serviced/identity-locked). Directionality for the authority is low-d (beneficiary: institutional mandate, budgets, legitimacy); directionality for people using drugs is middle-d (both beneficiary from decriminalization and victim from identity-locking and health burden); directionality for neighbors is high-d (targets of externality, no exit). The identity-locking mechanism is critical: users cannot simply refuse services without facing health consequences (overdose, infection) that make exit costly; the constraint locks them into a 'managed person' identity within the public health system.",
+    "mandatrophy_analysis": "The constraint avoids Piton classification (mere theater) because genuine coordination function persists: disease prevention through needle programs and supervised consumption sites produces measurable epidemiological benefit; overdose response infrastructure directly reduces mortality. However, the constraint shows mandatrophy risk as the interval progresses: (1) the founding problem (incarceration overload, disease transmission) shows only partial resolution — drug use persists, political opposition remains organized; (2) service providers' institutional interests (program expansion, budget growth, professional authority) begin to diverge from the founding mandate (user autonomy, treatment outcomes); (3) theater ratio rises, suggesting performative elements ('harm reduction' framing used to justify service-provider authority) begin to displace functional elements. The six-questions mismatch (founding_problem_status=live, disappearance_verdict=world_rearranges) confirms the constraint has not become vestigial — removing it would cause substantial rearrangement. But the slight extraction rise over the interval signals early-stage extraction drift: the constraint may be beginning to function as a rationalizing cover story for health system expansion and user-management authority, not merely as a legitimate response to the founding problem. This is pre-Piton (still substantially functional) but shows the trajectory toward Piton if extraction continues rising and theater continues growing.",
+    "kernel_context": "This constraint is the harm_reduction_reading of the contested kernel substance_control_authority. The kernel itself is a persisting state commitment: 'the state's authority to regulate drug use and distribution.' Three structurally distinct readings instantiate this kernel differently: (1) the prohibition_reading authorizes criminalization to protect third parties from drug-related crime and social disorder; (2) the legalization_reading authorizes commercial drug markets with state quality/access controls; (3) the harm_reduction_reading (this one) authorizes decriminalization and public health services while accepting drug use continues. These readings have radically different ε values, beneficiary structures, and classifications because they define the state's scope and obligation differently. Prohibition reads the kernel as criminalizing scope; legalization reads it as market-regulatory scope; harm reduction reads it as health-service scope. Each reading claims the same kernel — state authority over drugs — but instantiates it via different mechanisms (criminal enforcement, commercial licensing, health services) and thus produces different constraints with different extraction profiles."
+  },
+  "omegas": [
+    {
+      "id": "identity_locking_reversibility",
+      "question": "Is the identity-locking of people using drugs through service dependency structurally reversible, or does it create path dependence that prevents exit to independent self-management?",
+      "resolution_mechanism": "Longitudinal tracking of users who exit services: do they maintain abstinence or return to use without service support? Post-exit survey data on whether service labels (person in treatment, person in recovery) persist in self-identification and community perception.",
+      "impact": "If reversible, identity-locking is a manageable coordination cost (users can leave and rebuild non-service-defined identity). If path-dependent, the constraint's effective suppression and extraction are higher than authored — the service infrastructure creates dependency bonds that exceed voluntary participation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether service-defined identity can be shed post-exit or persists as limiting internalization."
+    },
+    {
+      "id": "service_provider_mission_capture",
+      "question": "As harm reduction services mature and institutionalize, do institutional interests (budget growth, professional autonomy, program expansion) capture the original health mandate, such that services become tools of user management rather than user health optimization?",
+      "resolution_mechanism": "Comparative organizational analysis of early-phase (5-year) vs. late-phase (15+ year) harm reduction programs: tracking of budget allocation shifts, staff professional identity consolidation, and user satisfaction/autonomy metrics over program lifecycle.",
+      "impact": "Evidence of capture would reclassify the constraint from Tangled Rope toward Snare or Piton (extraction becomes primary; coordination becomes cover story). Evidence of sustained user-centered mandate would confirm Tangled Rope with high coordination integrity.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether institutional mission remains user-health-centered or drifts toward provider-interest-centered."
+    },
+    {
+      "id": "neighbor_externality_justice",
+      "question": "Is the distribution of site externalities (concentration in lower-income neighborhoods with less political power) a feature of the harm reduction constraint itself, or a distributional failure upstream of the constraint?",
+      "resolution_mechanism": "Geographic analysis of site placement: are sites placed proportionally across neighborhoods by population and service demand, or concentrated in politically powerless areas? Comparative analysis across harm-reduction jurisdictions to identify if placement reflects evidence-based epidemiology or political feasibility.",
+      "impact": "If the constraint itself (harm reduction mechanism) requires externality concentration to function, then the constraint is structurally inequitable and extraction from 'neighbors' should be weighted as structurally necessary rather than incidental. If externality concentration reflects political choice upstream of the constraint, then the constraint could function with equitable distribution (the failure is in governance, not in the harm reduction mechanism).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether concentrated externalities are intrinsic to harm reduction or artifacts of implementation justice failures."
+    },
+    {
+      "id": "kernel_reading_scope",
+      "question": "Does this harm_reduction_reading of the substance_control_authority kernel describe a necessary decomposition from sibling readings, or could the readings coexist in a framework that accommodates both harm reduction and prohibition?",
+      "resolution_mechanism": "Textual and institutional analysis: examining whether jurisdictions holding a strong harm reduction mandate simultaneously maintain criminal penalties for drug trafficking (not possession/use) or whether the reading's core premise (decriminalization of use) logically forecloses the prohibition reading's core premise (criminalization as protective enforcement).",
+      "impact": "If the readings logically foreclose each other, the constraint is a clean kernel decomposition and the sibling readings are genuinely alternative systems. If jurisdictions successfully hold both (decriminalized possession + criminalized trafficking), then the readings may not fully decompose, and the boundary between them is more permeable than the kernel analysis suggests.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether harm reduction logically forecloses prohibition or whether both can coexist in mixed regimes."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_authority__prohibition_reading",
+      "substance_control_authority__legalization_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three kernel readings of substance_control_authority. The harm_reduction_reading (this file) decriminalizes use and establishes health services as the primary mechanism. The prohibition_reading instantiates the kernel via criminalization (affects this constraint by competing for state authority). The legalization_reading instantiates the kernel via commercial markets (affects this constraint by offering market-based alternative to service-based coordination). All three readings share the same kernel ('state authority to manage drug use') but differ structurally in scope, mechanism, and extraction profile. Network edges run between all three — each reading influences the institutional landscape and legitimacy conditions for the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.52
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "substance_control_authority__prohibition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "substance_control_authority__legalization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "decriminalization_of_use_is_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "health_services_reduce_population_harm_better_than_enforcement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "public_health_primacy_framework",
+    "drift_state": {
+      "moment": "contemporary_political_opposition_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "public_health_authority",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

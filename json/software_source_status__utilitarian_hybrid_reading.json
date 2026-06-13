@@ -1,0 +1,299 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__utilitarian_hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "7a1cbf56-797f-4e89-8dd6-189b92ca3697"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.41,
+    "resistance": 0.62,
+    "claimed_type": "rope",
+    "human_readable": "Software Licensing Framework: Utilitarian Hybrid Model",
+    "topic_domain": "economic/intellectual_property/software_engineering",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "welfare_maximizing_users",
+      "adaptive_developers",
+      "mixed_ecosystem_participants"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.16
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.17
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.22
+    }
+  ],
+  "omegas": [
+    {
+      "id": "context_demarcation_ambiguity",
+      "question": "What precise criteria distinguish contexts where open-source maximizes welfare from contexts where proprietary licensing does? Where is the boundary between 'infrastructure should be open' and 'specialized domains may be proprietary'?",
+      "resolution_mechanism": "Empirical analysis of welfare outcomes (security, auditability, reliability, innovation speed, accessibility) across software domains (infrastructure vs. specialized tools); regulatory mapping of where jurisdictions mandate interoperability or source disclosure; comparative cost-benefit analysis of proprietary vs. open implementations in identical domains.",
+      "impact": "A clear demarcation criterion would operationalize the hybrid reading and make license choice verifiable; absence of a clear criterion leaves the reading vulnerable to rhetorical abuse (claiming 'context' as cover for proprietary enclosure that does not maximize welfare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Operational demarcation of context-dependent license choice boundaries."
+    },
+    {
+      "id": "welfare_metric_construction",
+      "question": "What welfare function aggregates across stakeholders (users, developers, vendors, society) and how are values measured (security, speed, cost, innovation, accessibility, equity)? Does welfare aggregation privilege majority outcomes over minority interests? Who measures welfare?",
+      "resolution_mechanism": "Operationalization of welfare metrics through regulatory frameworks or technical standards bodies; comparative analysis of licensing outcomes using standardized welfare metrics; examination of cases where proprietary and open-source implementations compete in the same domain and welfare outcomes differ; investigation of who sets the welfare metric and whether it captures all affected parties.",
+      "impact": "If welfare is measured only by corporate profit or development speed, the hybrid reading becomes cover for proprietary enclosure; if welfare includes accessibility and equity, the reading may constrain proprietary vendors more heavily. The metric construction is the constraint's operational core.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Welfare aggregation is constructed rather than discovered; the choice of metric shapes the licensing outcome."
+    },
+    {
+      "id": "kernel_reading_committer_ambiguity",
+      "question": "Is the hybrid reading genuinely a middle position between freedom-imperative and property-rights extremes, or is it a subtle reframing that subordinates both to a welfare metric that serves existing power (vendors, infrastructure operators)? Does welfare aggregation neutrally optimize outcomes, or does it privilege the metrics that existing institutions can measure and control?",
+      "resolution_mechanism": "Historical analysis of how the welfare-maximization frame has been applied in regulatory and industry contexts; examination of who benefits most when licensing is chosen by 'welfare outcomes'; comparison of outcomes under the hybrid reading vs. outcomes under freedom-imperative and property-rights readings in controlled historical or counterfactual cases; critical analysis of the welfare metric itself as a potential concealment of power.",
+      "impact": "If the hybrid reading is genuinely neutral, it resolves the kernel contest by establishing welfare as arbiter and enabling context-dependent choice; if it is a subtle power move, it resolves the contest by redefining terms in a way that favors institutional actors over freedom advocates or individual creators. The reading's legitimacy depends on whether welfare aggregation is a principle or a pretext.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Committer-frame under-determination: is the hybrid reading a genuine middle or a subtle reframing that subordinates freedom/property to a welfare metric that serves institutional power?"
+    },
+    {
+      "id": "proprietary_domain_innovation_empirics",
+      "question": "In domains where proprietary software dominates (medical imaging, financial modeling, aerospace systems), does proprietary licensing actually produce better welfare outcomes (safety, reliability, integration) than open-source alternatives would? Or does proprietary enclosure merely extract rent while open-source could achieve equal or better outcomes if investment were available?",
+      "resolution_mechanism": "Comparative case studies of specialized domains where both proprietary and open-source implementations exist; analysis of welfare metrics (safety, reliability, time-to-market, cost, accessibility, interoperability) across implementations; counterfactual analysis of what would happen if proprietary domains received equivalent open-source development investment; regulatory data on actual failures and successes in proprietary vs. open systems.",
+      "impact": "If proprietary licensing in specialized domains genuinely maximizes welfare, the hybrid reading is justified; if proprietary dominance is due to historical lock-in or investment disparity rather than superior outcomes, then contextual justification for proprietary licensing is weakened and the reading should be revised toward open-source default.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical welfare outcomes in proprietary-dominant domains."
+    },
+    {
+      "id": "reading_coexistence_stability",
+      "question": "If the utilitarian hybrid reading coexists with freedom-imperative, property-rights, and pragmatic-development readings, under what conditions does coexistence remain stable vs. collapse into conflict? Does the hybrid reading's framework eventually absorb or exclude the other readings?",
+      "resolution_mechanism": "Longitudinal analysis of how the four readings have competed and coexisted historically; observation of whether the hybrid reading's welfare criterion becomes dominant and crowds out other frameworks; examination of whether freedom-imperative and property-rights constituencies remain live positions or are gradually delegitimized as the hybrid frame becomes institutionalized.",
+      "impact": "If coexistence is unstable and the hybrid reading eventually forecloses others, then the declared relation ('coexists_with') is inaccurate and should be revised to 'influences' or 'forecloses'. If coexistence is stable, the constraint persists as a multi-reading kernel.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term stability of the four-reading coexistence under the software-source-status kernel."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The utilitarian-hybrid reading of the software-source-status kernel proposes that software licensing should maximize aggregate welfare, with both open-source and proprietary models legitimate when context-appropriate. This reading sits between the freedom-imperative position (which treats proprietary software as categorically unjust) and the property-rights position (which grants creators absolute rights to restrict access), and between the pragmatic-development position (which privileges open-source methodology). The reading instantiates one constraint generated from the contested kernel: software licensing should track welfare outcomes rather than ideology, with open-source as the default for infrastructure and shared tools, proprietary licensing justified only in specialized domains where it demonstrably improves outcomes. The claim/metric gap is intentional: CLAIMED as rope (coordination through shared welfare principle) while authored metrics show low-to-moderate extraction (0.38), moderate suppression (0.22), and rising resistance (0.62 endpoint), indicating that the hybrid reading faces ongoing contestation from excluded freedom-imperative and property-rights constituencies.",
+    "key_agents": [
+      "Welfare-maximizing users (organized, mobile exit, global): benefit from both models coexisting; their welfare is the constraint's metric.",
+      "Open-source maintainers (organized, mobile exit, global): set community norms, enforce copyleft/permissive licenses; benefit from recognition that open-source has genuine quality advantages.",
+      "Proprietary software vendors (powerful, constrained exit, global): extract licensing fees; legitimate in hybrid reading only when context-specific optimization justifies enclosure; face rising resistance.",
+      "Infrastructure stakeholders (institutional, constrained exit, global): benefit from open-source default for foundational systems; have stakes in interoperability.",
+      "Specialized domain developers (moderate power, mobile exit, regional): choose licenses contextually; justified in proprietary choices under the hybrid reading when domain complexity and safety justify enclosure.",
+      "Freedom-imperative constituency (moderate power, constrained exit, excluded): structurally excluded because the reading treats freedom as context-dependent, not absolute; would argue proprietary software is inherently unjust.",
+      "Property-rights advocates (powerful, mobile exit, excluded): structurally excluded because the reading treats property rights as overridable by welfare considerations; would argue creators have unconditional rights.",
+      "Pragmatic-development constituency (moderate power, mobile exit, observer): partially aligned (open-source often superior) but departing on specialized domains; see freedom as instrumental to quality, not absolute.",
+      "Regulatory authorities (institutional, analytical exit, national): set policy on interoperability, critical infrastructure, IP protection; observe the hybrid reading as framework for principled license allocation."
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.38 endpoint) and grows slowly, then stabilizes. Early growth (0.28→0.38 over the first 25 time points) reflects proprietary vendors testing the boundaries of contextual legitimacy and establishing specialized-domain enclaves; stabilization suggests the hybrid framework has found an equilibrium where open-source dominates infrastructure and proprietary exists in justified niches. Suppression is low (0.22) but rising (0.16→0.22 over the interval) because enforcing the welfare-outcome criterion requires resisting freedom-imperative and property-rights constituencies—the suppression is resistance to excluded voices, not coercion of participants. Theater is low (0.18) and stable: the constraint does real coordination work (enabling context-dependent choice based on welfare) rather than pure performance. The measurement series is aligned on one shared grid, with observations at regular intervals (every 5 points through t=30, then a final point at t=40 to show plateau). The trajectory shows: extraction growing as proprietary vendors test boundaries, then stabilizing as specialized domains stabilize; suppression rising as excluded constituencies mount counter-arguments; theater stable because the coordination function is genuine and not purely theatrical.",
+    "perspectival_gap": "The hybrid reading should compute differently across seats. From the welfare-maximizing user perspective, the arrangement is genuine coordination (choices should track welfare outcomes, both models have legitimacy). From the proprietary-vendor perspective, it is partially extractive (they are constrained to justify enclosure through welfare metrics, not property rights, which is a higher bar). From the freedom-imperative perspective, it is pure extraction (the framework denies their foundational commitment and treats freedom as negotiable). From the open-source maintainer perspective, it is legitimate coordination (their quality and auditability advantages are recognized while they maintain license control). The engine should compute these as distinct classifications per seat: the constraint that is rope from one chair is snare from another because the welfare metric is not neutral—it contains contestable assumptions about what counts as welfare and who measures it.",
+    "directionality_logic": "Beneficiaries have low directionality (d near 0.0): welfare-maximizing users benefit from having both models available and rational choice frameworks; open-source maintainers benefit from recognition of their advantages; mixed-ecosystem participants benefit from pluralism. Payers have higher directionality (d toward 0.5–1.0): proprietary vendors pay a cost (must justify enclosure through welfare outcomes, not rights), freedom-imperative and property-rights advocates pay a cost (their foundational commitments are demoted to negotiable). Excluded voices have high directionality (d near 1.0): they are structurally locked out of the decision framework because the welfare metric is constructed to override their concerns. Open-source maintainers are genuinely dual-positioned (beneficiary of the arrangement's recognition of open-source quality, but also partially paying because they must compete on welfare grounds rather than rights claims).",
+    "mandatrophy_analysis": "The constraint is NOT mandatrophic—its founding problem (how to choose licenses rationally) is still live, and the arrangement continues to serve that function. The hybrid reading instantiates a solution to the founding problem, and the resistance (0.62) and rising suppression (0.16→0.22) indicate that the solution is contested but not abandoned. The founding_problem_status is correctly authored as 'contested' (pragmatic and infrastructure advocates attest the problem is solved by the hybrid approach; freedom-imperative and property-rights advocates attest the problem is solved wrongly because welfare aggregation is an invalid frame). The disappearance verdict is world_rearranges (the software ecosystem would reorganize without the constraint's decision principle), which is coherent with a live founding problem. No mandatrophy flag.",
+    "kernel_context": "This constraint instantiates the UTILITARIAN-HYBRID reading of the contested software_source_status kernel. The kernel asks: what principle should govern software licensing—freedom, property rights, pragmatic development methodology, or welfare aggregation? The utilitarian reading answers: aggregate welfare, context-dependent. The other readings are: (1) FREEDOM_IMPERATIVE_READING: Software freedom is a fundamental right; proprietary software is categorically unjust. (2) PROPERTY_RIGHTS_READING: Creators have legitimate rights to restrict access and modification. (3) PRAGMATIC_DEVELOPMENT_READING: Open-source development methodology is superior; freedom is instrumental to quality. The hybrid reading coexists with all three because they rest on different foundational commitments (rights, methodology, outcomes), but it creates structural pressure on each: it subordinates freedom-claims to welfare-outcomes, it overrides property-rights when welfare justifies open-source, it acknowledges that open-source is often superior while accepting proprietary legitimacy in justified contexts. The reading relations are: coexists_with all three siblings (each remains live in different constituencies, none logically forecloses another, but the hybrid reading's welfare metric creates institutional pressure). The founding axioms are: (1) welfare_aggregation_principle (utilitarian metric governs license choice), status=holdable, role=foundational; (2) context_dependent_optimization (both models serve different contexts), status=holdable, role=foundational."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "software_source_status__freedom_imperative_reading",
+      "software_source_status__property_rights_reading",
+      "software_source_status__pragmatic_development_reading"
+    ],
+    "dual_formulation_note": "The software_source_status kernel decomposes into four constraint stories, each instantiating a different reading. The utilitarian-hybrid reading (this file) coexists with freedom-imperative, property-rights, and pragmatic-development readings. All four are linked via network.affects_constraints; each reading's ε value is stable within its own reading (ε-invariance), but the four readings have different ε values reflecting different foundational premises. The hybrid reading's welfare metric creates institutional pressure on all three siblings without foreclosing them logically."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.72
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.18
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "software_source_status__freedom_imperative_reading",
+      "software_source_status__property_rights_reading",
+      "software_source_status__pragmatic_development_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "software_source_status__freedom_imperative_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "software_source_status__property_rights_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "software_source_status__pragmatic_development_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "welfare_aggregation_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "context_dependent_optimization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "rational_licensing_choice_framework",
+    "drift_state": {
+      "moment": "contemporary_regulatory_pressure_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "header": {
+    "constraint_id": "secession_legitimacy_boundary__constitutional_impossibility_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "5781e8f6-09a7-45dd-bb78-1faa5a80e6ca"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.87,
+    "resistance": 0.58,
+    "claimed_type": "mountain",
+    "human_readable": "Constitutional Impossibility of Unilateral Secession",
+    "topic_domain": "political/constitutional",
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "federal_authority_structure"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_doctrine",
+      "question": "Is the constitutional rule against unilateral secession a discovered natural principle of federalism (a mountain), or a constructed doctrine that benefits the federal authority structure and happens to be written into the Constitution?",
+      "resolution_mechanism": "Comparative analysis of federal systems that lack explicit anti-secession clauses: do they organically produce the same rule, or do they permit secession when provincial majorities vote for it? Examination of whether pre-constitutional federal theory identified anti-secession as a necessary principle, or whether it emerged as a post-hoc defense of territorial integrity.",
+      "impact": "If the rule is discovered natural law, the classification holds as mountain; if it is constructed doctrine benefiting federal authority, FSM would reclassify as tangled_rope (coordination + extraction). The beneficiary declaration (federal_authority_structure) is designed to test this ambiguity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constitutional impossibility is natural to federalism or a constructed doctrine."
+    },
+    {
+      "id": "reading_contest_foreclosure",
+      "question": "Does the constitutional_impossibility_reading logically foreclose the popular_sovereignty_reading and grievance_threshold_reading, or can they coexist as competing frameworks held by different parties?",
+      "resolution_mechanism": "Examine whether a single legal/constitutional framework could simultaneously hold (a) constitutional supremacy bars unilateral secession AND (b) provincial referendum results self-legitimize secession. If holding both requires rejecting the Constitution's authority, they foreclose each other. If holding both requires only assigning different weight to competing principles, they coexist.",
+      "impact": "If they foreclose each other, this reading is a competing absolute; if they coexist, the contest is between factions with different axioms, not between logically incompatible systems. Affects the reading_relations array: forecloses vs. coexists_with.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between this reading and sibling readings."
+    },
+    {
+      "id": "suppression_as_enforcement_or_coercion",
+      "question": "Is the measured suppression (0.71) the structural cost of enforcing a constitutional rule, or does it represent coercive suppression of a legitimate self-determination claim?",
+      "resolution_mechanism": "Distinguish enforcement cost from coercion: enforcement is the machinery required to sustain a rule (court proceedings, constitutional amendment barriers, legal prohibition); coercion is the measure applied to suppress resistance to an unjust rule. Examine whether separatist movements experience the suppression as procedural obstacle (constitutional amendment process) or as active oppression (criminal prosecution, military occupation, denial of democratic voice).",
+      "impact": "If suppression is procedural enforcement cost, it is consistent with the mountain reading (structures that are natural produce resistance but do not require active coercion). If suppression is active coercion of a legitimacy claim, the constraint drifts toward snare. The measurement of 0.71 is high either way; the ambiguity is about the category, not the magnitude.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether suppression measures procedural enforcement or coercive denial of legitimacy."
+    },
+    {
+      "id": "federal_authority_as_beneficiary",
+      "question": "Does naming 'federal_authority_structure' as a beneficiary commit us to the claim that the constraint exists because it serves federal interests, or does it merely document that federal authority is preserved by the rule?",
+      "resolution_mechanism": "If the constraint is genuinely a discovered natural principle (mountain), then federal authority is preserved incidentally, not beneficially — the federal structure benefits, but not because the rule was created to benefit it. The FSM check gates on beneficiary presence alone (not on motive). Document what the constraint's actual genealogy reveals: was it adopted to preserve federal authority, or adopted as a principle of federalism and federal authority persists as a consequence?",
+      "impact": "This omega is diagnostic for FSM: if beneficiary declaration triggers FSM, the constraint is reclassified as tangled_rope. The reclassification signals that a 'natural law' framing masks constructed doctrine. The measurement series (extractiveness drifting upward over time) supports the reclassification: if the rule were natural, extractiveness would be stable; rising extractiveness suggests the rule is being increasingly used to defend federal authority against legitimacy challenges.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether beneficiary presence indicates the rule is constructed or merely that federal authority is preserved."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the constitutional_impossibility_reading of a contested kernel: the secession_legitimacy_boundary. The reading asserts that the Constitution establishes federal supremacy and territorial indivisibility as supreme law. Unilateral secession is not merely impermissible as policy — it is categorically illegitimate as a legal claim. Only constitutional amendment, controlled by processes the federal framework itself defines, can alter this boundary. This reading frames the Constitution as the discovered source of federal legitimacy, not as a constructed instrument that benefits federal authority. The claim/metric gap is deliberate: the constraint is CLAIMED as a mountain (natural principle of federalism) while the authored metrics describe measurable extraction and suppression — the engine will detect whether this reading credibly sustains the mountain classification or whether rising extractiveness signals false summitry.",
+    "key_agents": [
+      "federal_government: Agenda-setter; administers the constitutional rule; claims it is supremacy doctrine, not extractive constraint.",
+      "separatist_provincial_movement: Payer; constrained by the rule; identity-locked (self-determination is fused with separatist identity); exit requires constitutional amendment.",
+      "non_separatist_provincial_residents: Beneficiary; protected by the rule from unilateral majority secession; depend on federal constitutional protection.",
+      "constitutional_court: Observer; interprets the Constitution and adjudicates whether the rule holds; authority derives from the Constitution itself.",
+      "international_community: Observer; sees the rule through international law and precedent; generally recognizes state borders and reinforces the federalism reading."
+    ],
+    "logic_rationale": "The base extractiveness of 0.62 reflects the constraint's dual nature: it is claimed as natural principle (low extraction) but operates to preserve federal authority against legitimacy challenges (non-trivial extraction). Suppression of 0.71 is high because enforcing the rule against organized separatist movements requires sustained constitutional and legal action — court decisions affirming the rule, amendment processes that set the bar impossibly high, criminal prohibition of separatist advocacy in some regimes. Theater ratio of 0.28 indicates modest performative content: the constitutional text is genuinely enforced, but constitutional reaffirmation rituals (court decisions rehearsing the supremacy doctrine) are part of the enforcement machinery. Accessibility collapse of 0.87 is consistent with a mountain: once the constitutional text is understood as supreme, the alternatives (unilateral secession as a legitimate claim) collapse nearly entirely — the only remaining exit is amendment. Resistance of 0.58 is moderate: natural laws meet little resistance, but constructed doctrines always meet some; separatist movements actively contest the rule, which is why resistance is non-trivial. The measurement series show extractiveness rising from 0.48 to 0.62 over the interval, suggesting the rule is increasingly used to defend federal authority rather than to preserve a naturally emergent principle of federalism — this trajectory is precisely what FSM detects.",
+    "perspectival_gap": "The federal-government seat and the separatist-movement seat experience fundamentally different constraints. From the federal position, the rule is a discovered principle that defines the federation's structure — the federal government is not extracting but administering supremacy doctrine. From the separatist position, the same rule is an imposed boundary that denies the legitimacy of self-determination — the constraint operates as coercive suppression of a rival claim. The non-separatist residents sit between: they benefit from the rule's protection against unilateral majority action, but they experience it as coordination benefit, not extraction. The engine will compute per-seat classifications from the stakeholder positions and structural data; the divergence between the federal (low d, beneficiary framing) and separatist (high d, payer/target framing) positions is the measurement the corpus exists to take.",
+    "directionality_logic": "Federal government: d near 0.0 (full beneficiary; administers the rule, collects the coordination benefit of territorial unity). Separatist movement: d near 1.0 (full target; identity-locked exit; the rule denies its core legitimacy claim). Non-separatist residents: d near 0.5 (symmetric; genuine coordination benefit balanced by some constraint on provincial autonomy). The identity-lock on the separatist movement drives its high d: exit from the constraint means existential recategorization — the movement cannot leave the federation without ceasing to be a self-determination movement. This is not a choice to exit; it is a redefinition of identity.",
+    "mandatrophy_analysis": "The founding problem is live but contested: federal authority attests that the founding problem (territorial cohesion and unified coordination) is still present and the rule is still necessary; separatist movements and comparative analysts attest the founding problem is solved (provinces are capable of independent governance) or wrongly framed (the problem is federal overreach, not dissolution). The rising extractiveness over the interval (0.48 → 0.62) is a key signal: if the rule were addressing a genuine natural principle, extractiveness should be stable. The upward drift suggests the rule is increasingly deployed to defend federal authority against legitimacy challenges, which indicates the constraint is performing less like discovered natural law and more like constructed doctrine. This is exactly the condition that triggers FSM evaluation: a mountain with rising extractiveness and a declared beneficiary (federal_authority_structure) signals a false summit candidate.",
+    "kernel_context": "This constraint is the constitutional_impossibility_reading of the secession_legitimacy_boundary kernel. The reading instantiates the claim that the Constitution establishes federal supremacy and territorial indivisibility as supreme law, rendering unilateral secession categorically illegitimate. Three sibling readings contest this interpretation: (1) grievance_threshold_reading — secession becomes legitimate when federal actions cross a structural injustice threshold, regardless of constitutional text; (2) popular_sovereignty_reading — democratic majority within provincial boundaries holds ultimate sovereignty; referendum results are self-legitimating; (3) treaty_primacy_reading — indigenous treaty rights predate and supersede both federal and provincial authority. This reading (constitutional_impossibility) stands against all three: it asserts constitutional supremacy as the frame that governs all others. The readings differ not in their empirical claims (whether secession would work, whether provinces have grievances) but in their axioms about legitimacy: which authority framework is supreme."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "secession_legitimacy_boundary__grievance_threshold_reading",
+      "secession_legitimacy_boundary__popular_sovereignty_reading",
+      "secession_legitimacy_boundary__treaty_primacy_reading"
+    ],
+    "dual_formulation_note": "The secession_legitimacy_boundary kernel decomposes into four constraint stories, one for each reading. All readings share the same domain (secession legitimacy) but differ in which authority framework is treated as supreme and which actors hold legitimate claims. The constitutional_impossibility_reading treats the Constitution as supreme; grievance_threshold treats structural justice as a competing supremacy; popular_sovereignty treats provincial referendum as self-legitimating; treaty_primacy treats treaty authority as prior to both federal and provincial. Each reading is a distinct constraint with its own ε, beneficiary/victim structure, and type. The four stories are linked via network.affects_constraints so contamination and coupling analysis can track how legitimacy contests at the kernel level cascade to downstream policy constraints."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "secession_legitimacy_boundary__grievance_threshold_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "secession_legitimacy_boundary__popular_sovereignty_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "secession_legitimacy_boundary__treaty_primacy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "constitutional_supremacy_doctrine",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "territorial_indivisibility_principle",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "federal_constitutional_order",
+    "drift_state": {
+      "moment": "contemporary_separatist_contestation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "mountain",
+    "downstream_of": [
+      "secession_legitimacy_boundary"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

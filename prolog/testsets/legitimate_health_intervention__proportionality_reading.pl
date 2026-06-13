@@ -1,0 +1,291 @@
+% ============================================================================
+% CONSTRAINT STORY: legitimate_health_intervention__proportionality_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-12
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_legitimate_health_intervention__proportionality_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: legitimate_health_intervention__proportionality_reading
+ *   human_readable: Proportionality Standard for Health Interventions (Legitimacy Reading)
+ *   domain: public_health/medical_ethics/constitutional_law
+ *
+ * SUMMARY:
+ *   The proportionality reading asserts that legitimate health intervention
+ *   requires that intervention severity be justified by threat level: both
+ *   population harm prevention and individual bodily autonomy have claims,
+ *   but those claims are weighted by disease characteristics
+ *   (transmissibility, case-fatality rate, population vulnerability). This
+ *   reading sits between pure bodily autonomy (which permits no coercion
+ *   regardless of collective consequence) and pure public health (which
+ *   permits any coercion for any population benefit). The constraint is
+ *   claimed as tangled_rope because it genuinely coordinates a legitimate
+ *   middle ground (solving the collective-action problem of when coercion is
+ *   justified) while simultaneously extracting from individuals subject to
+ *   intervention without full consent. The reading is one of three siblings
+ *   competing over the same kernel (legitimate_health_intervention):
+ *   bodily_autonomy_primary reads legitimacy as consent-absolute,
+ *   public_health_primary reads it as outcomes-absolute, and
+ *   proportionality_reading reads it as threshold-dependent. The ε-invariance
+ *   principle applies: this reading's ε is conditional on disease
+ *   characteristics — measles (R₀~15, case-fatality ~0.2%) justifies broader
+ *   intervention than seasonal flu (R₀~1.3, case-fatality ~0.1%), making the
+ *   constraint's extractiveness a function of epidemiological facts, not
+ *   political choice. This functional dependency is the reading's defining
+ *   feature.
+ *
+ * KEY AGENTS:
+ *   - public_health_authorities: institutional power, analytical exit, set intervention scope and enforce compliance. Under proportionality, their mandate is bounded — they must justify severity relative to threat, not pursue any intervention that maximizes health outcomes.
+ *   - individuals_subject_to_coercive_intervention: powerless, trapped, bear direct costs of intervention without full consent. The proportionality constraint nominally protects them by requiring intervention to track threat, but the protection is conditional and enforced by external bodies (courts, ethics boards), not by the individuals themselves.
+ *   - population_receiving_protected_health_status: organized, constrained exit, benefit from herd immunity and collective protection. They experience the constraint as legitimate coordination — the burden is distributed according to threat and intervention necessity.
+ *   - medical_ethics_bodies and courts: institutional observers, analytical exit, provide external legitimacy checkpoints. They interpret proportionality and constrain authorities' intervention scope over time as threats decline.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(legitimate_health_intervention__proportionality_reading, 0.38).
+domain_priors:suppression_score(legitimate_health_intervention__proportionality_reading, 0.42).
+domain_priors:theater_ratio(legitimate_health_intervention__proportionality_reading, 0.19).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(legitimate_health_intervention__proportionality_reading, extractiveness, 0.38).
+narrative_ontology:constraint_metric(legitimate_health_intervention__proportionality_reading, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(legitimate_health_intervention__proportionality_reading, theater_ratio, 0.19).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(legitimate_health_intervention__proportionality_reading, accessibility_collapse, 0.61).
+narrative_ontology:constraint_metric(legitimate_health_intervention__proportionality_reading, resistance, 0.58).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(legitimate_health_intervention__proportionality_reading, tangled_rope).
+narrative_ontology:human_readable(legitimate_health_intervention__proportionality_reading, "Proportionality Standard for Health Interventions (Legitimacy Reading)").
+narrative_ontology:topic_domain(legitimate_health_intervention__proportionality_reading, "public_health/medical_ethics/constitutional_law").
+
+domain_priors:requires_active_enforcement(legitimate_health_intervention__proportionality_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(legitimate_health_intervention__proportionality_reading, '1aa98bc7-0151-4c12-a424-b80aaa79de77').
+narrative_ontology:cs_kernel_codification('1aa98bc7-0151-4c12-a424-b80aaa79de77', formalized).
+narrative_ontology:cs_authority_grounding('1aa98bc7-0151-4c12-a424-b80aaa79de77', lineage).
+narrative_ontology:cs_interpretation_layer_present('1aa98bc7-0151-4c12-a424-b80aaa79de77').
+narrative_ontology:cs_reading_relation('1aa98bc7-0151-4c12-a424-b80aaa79de77', legitimate_health_intervention__bodily_autonomy_primary, coexists_with).
+narrative_ontology:cs_reading_relation('1aa98bc7-0151-4c12-a424-b80aaa79de77', legitimate_health_intervention__public_health_primary, coexists_with).
+narrative_ontology:cs_axiom('1aa98bc7-0151-4c12-a424-b80aaa79de77', foundational, intervention_severity_must_track_threat_level).
+narrative_ontology:cs_axiom_status(intervention_severity_must_track_threat_level, holdable).
+narrative_ontology:cs_axiom_grounding('1aa98bc7-0151-4c12-a424-b80aaa79de77', intervention_severity_must_track_threat_level, deontological).
+narrative_ontology:cs_axiom('1aa98bc7-0151-4c12-a424-b80aaa79de77', foundational, autonomy_claims_weigh_against_public_benefit_proportionately).
+narrative_ontology:cs_axiom_status(autonomy_claims_weigh_against_public_benefit_proportionately, holdable).
+narrative_ontology:cs_axiom_grounding('1aa98bc7-0151-4c12-a424-b80aaa79de77', autonomy_claims_weigh_against_public_benefit_proportionately, deontological).
+narrative_ontology:cs_reference_frame('1aa98bc7-0151-4c12-a424-b80aaa79de77', legitimate_proportional_intervention_framework).
+narrative_ontology:cs_drift_state('1aa98bc7-0151-4c12-a424-b80aaa79de77', endemic_phase_threat_decline, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('1aa98bc7-0151-4c12-a424-b80aaa79de77', '').
+narrative_ontology:cs_kernel_id(legitimate_health_intervention__proportionality_reading, legitimate_health_intervention).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(legitimate_health_intervention__proportionality_reading, population_receiving_protected_health_status).
+narrative_ontology:constraint_victim(legitimate_health_intervention__proportionality_reading, individuals_subject_to_coercive_intervention).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(legitimate_health_intervention__proportionality_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
+    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
+    'no_scope_rebuild', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_seed(legitimate_health_intervention__proportionality_reading, 'none', 1).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(legitimate_health_intervention__proportionality_reading_tests).
+:- end_tests(legitimate_health_intervention__proportionality_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   The extractiveness score (0.38 endpoint) reflects the constraint's core tension: it genuinely solves a coordination problem (when is coercion legitimate?) but does so by imposing bodily intrusion on individuals without full consent. The proportionality standard reduces extraction relative to pure public health maximization because it limits intervention scope to threat-justified cases. However, extraction persists because the proportionality judgment is made by authorities and external bodies, not by individuals. Suppression (0.42) is substantial because authorities must actively maintain the constraint against two kinds of resistance: (1) pure-autonomy advocates who reject any coercion, and (2) pure-health advocates who want broader intervention for lower thresholds. Theater (0.19) is moderate-low because the constraint's functional core (threat-level determination) is genuine, but theater increases as threats decline and authorities must rhetorically justify persisting mandates. The temporal series models the constraint's lifecycle through a pandemic: emergency phase (high threat, low extraction, minimal suppression because threat is visible), peak intervention (high threat, peak extraction as enforcement burden rises, peak suppression as resistance grows), endemic transition (declining threat, proportionality standard begins to constrain scope), post-emergency (threat falls below intervention-justification threshold, suppression and theater rise as authorities must defend persisting mandates against legitimacy challenges), and stabilization (endemic steady-state with proportionality as accepted framework, residual mandates for specific populations). The measurement grid is one shared sequence — every metric is authored at every time point.
+ *
+ * PERSPECTIVAL GAP:
+ *   Why would different seats compute different constraint types? The agenda-setter (public_health_authorities) and the observer seats (courts, ethics bodies) should compute tangled_rope or rope because they see genuine coordination function (threat-level-dependent intervention is a principled boundary) and legitimate enforcement (courts back proportionality doctrine). The payer seats (individuals subject to intervention, especially those with objections) should compute higher extractiveness scores and may compute snare if they perceive the proportionality boundary as fictional (theater concealing pure power). The beneficiary seats (population receiving protection) should compute rope if they believe the coordination is genuine and the burden distribution is fair. The structural divergence is rooted in asymmetric information and power: individuals do not set the threat-level threshold, and their objections only matter if courts agree. This creates a principal-agent problem at the core of the constraint: individuals are asked to bear costs that others (authorities) justify by appeal to threat level that the individuals cannot independently verify. Under pure autonomy, this would be impermissible. Under pure public health, it is necessary. Under proportionality, it is legitimate if the threshold is transparent and reviewed. The divergence between computed seat-level types and the claimed tangled_rope type is exactly the measurement the constraint story enables.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality is heterogeneous across stakeholders. Public health authorities are near-beneficiary (d~0.2) because they administer the constraint without bearing its bodily costs — they do collect legitimacy from it (their intervention is bounded and thus more defensible), but they do not experience it as extraction. Individuals subject to intervention are full targets (d~0.95): they bear direct bodily costs, their exit is trapped (they cannot refuse without legal/social consequence), and the constraint's boundary (what counts as proportionate threat) is determined by external authorities, not by them. The population receiving protected status is near-symmetric (d~0.5): they benefit from collective protection but also bear costs when threshold-justified interventions affect them indirectly (economic effects of lockdowns, social effects of mandates). Vaccine-hesitant and religious objectors occupy an asymmetric position within the target set: they are objectors whose claims are nominally weighted in proportionality calculations, but only if external bodies (courts) validate them — their structural position is trapped (coerced unless courts intervene) with constrained negotiating power (their objection alone does not stop intervention). The directionality derivation chain runs: beneficiary/victim declaration → power atom + exit options → d value. Individuals_subject_to_coercive_intervention are victims (declared in base_properties) with powerless power and trapped exit, yielding high d. Public_health_authorities are neither beneficiary nor victim in the formal sense (they administer, not collect individual rents), so their d is derived from their institutional power (institutional) and analytical exit (arbitrage-like — they could change policy but choose not to), yielding d~0.2. Population_receiving_protected_health_status is beneficiary (declared in base_properties) with organized power and constrained exit, yielding d~0.5.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The proportionality constraint avoids mandatrophy at its founding (threat is real, intervention is necessary, proportionality boundaries are not yet tested) but faces mandatrophy risk as threats decline. If authorities maintain high-severity interventions after threat falls below justification threshold, and courts do not intervene to enforce proportionality, the constraint becomes inert doctrine — the theater ratio rises, suppression must increase to maintain compliance against legitimacy challenges, and extraction persists without coordination function. The measurement series models this risk: theater_ratio rises from 0.08 (emergency) to 0.24 (post-emergency) even as threat falls, indicating growing theater. Suppression declines from 0.52 (peak enforcement) to 0.42 (endemic) but stabilizes at moderate level, suggesting that proportionality doctrine is constraining scope but not eliminating it. If the constraint resolved into pure theater (high theater ratio, authorities maintaining interventions through narrative reframing rather than threat justification), it would transition toward piton. The mandatrophy resolution in this story is: proportionality doctrine is held intact because courts actively enforce it, narrowing intervention scope as threats decline. The constraint avoids becoming a zombie by virtue of external oversight (courts, ethics bodies) that can override authorities when proportionality is violated. If that oversight mechanism weakened (courts defer to authorities, ethics bodies are captured), mandatrophy would accelerate.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    threat_level_determination_authority,
+    'Who determines what counts as a sufficient threat level to justify a given intervention severity, and by what process? Is this judgment made by health authorities alone, or is it subject to external review?',
+    'Comparative analysis of institutional design: jurisdictions where courts review proportionality claims vs. those where authorities self-judge. Outcomes: do threat-level claims remain stable in court-review systems or drift upward in authority-self-judge systems?',
+    'If authorities self-judge threat level, the proportionality standard becomes a reputational constraint (authorities must publicly defend their threat assessment) but lacks hard external limits. If courts review, proportionality becomes a hard constraint (courts can invalidate interventions). This affects whether the constraint functions as coordination or as constrained extraction.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(threat_level_determination_authority, empirical, 'Whether threat-level determination is subject to external institutional review or internally determined by authorities.').
+
+omega_variable(
+    proportionality_doctrine_vs_constructed,
+    'Is proportionality a natural or constructed constraint? Is it a fundamental ethical principle that any legitimate authority must respect, or is it a specific institutional doctrine adopted by some frameworks and rejected by others?',
+    'Historical and comparative institutional analysis: do traditions that reject proportionality (pure autonomy, pure utilitarianism) produce equally stable, legitimate institutions? Or does proportionality emerge as a necessary compromise in pluralistic democracies where no single principle can rule?',
+    'If proportionality is natural, the constraint functions as a mountain-like boundary that any legitimate system must respect. If it is constructed, it is a tangled_rope that benefits some actors (those who can appeal to proportionality to resist intervention) and burdens others (those whose refusal is overridden by proportionality reasoning). This reading treats it as constructed (tangled_rope), but the question is open.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(proportionality_doctrine_vs_constructed, conceptual, 'Whether proportionality is a natural principle of justice or a contingent institutional doctrine.').
+
+omega_variable(
+    suppression_internalization_trajectory,
+    'After the immediate health threat ends, do individuals who were coerced under proportionality doctrine maintain belief in the proportionality principle, or do they internalize suppression as subjection?',
+    'Post-exit interview and behavior tracking: survey individuals who were subject to intervention mandates one and five years after mandates end; assess whether they accept proportionality reasoning or reject it as cover for unacceptable coercion.',
+    'If individuals maintain proportionality belief (suppression is internalized as commitment to principle), the constraint''s legitimacy survives interval-end and can re-activate if threats re-emerge. If suppression is internalized as distrust (individuals learned that authorities expand threat claims and that proportionality is theater), future proportionality interventions face higher resistance and require more structural suppression.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_internalization_trajectory, empirical, 'Whether suppression experienced during intervention is internalized as commitment to proportionality or as learned distrust of authorities.').
+
+omega_variable(
+    measurement_basis_committer_uncertainty,
+    'Is the proportionality_reading constraint what this kernel instantiates, or is it the public_health_primary reading that authorities actually operationalize (using proportionality language to justify public-health-maximizing interventions)?',
+    'Textual and behavioral analysis: do authority decision-memos cite proportionality as a limiting principle (this reading) or as a cover story (public_health reading with proportionality rhetoric)? Do court interventions narrow scope based on proportionality (confirm this reading) or defer to authority threat assessment (suggest public_health reading in practice)?',
+    'If the actual reading is public_health_primary with proportionality theater, then extractiveness is higher (0.50+) and theater is higher (0.35+) than authored. The structural data (beneficiaries, victims, enforcement) would point toward public_health_primary, not proportionality_reading. This is the most critical uncertainty for the constraint''s classification.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(measurement_basis_committer_uncertainty, conceptual, 'Whether the actual institutional reading is proportionality (as authored) or public-health-primary with proportionality language.').
+
+omega_variable(
+    identity_locked_resistance_among_objectors,
+    'For vaccine-hesitant and religious-objector populations, is resistance to intervention identity-locked (part of their self-conception and worldview, such that accepting intervention means accepting a different identity), or is it structured resistance to a specific policy?',
+    'Qualitative analysis of objector communities: do they object to THIS intervention under THESE circumstances, or do they object to the entire framework of state-coerced medicine as incompatible with their identity? Post-exit analysis: if intervention becomes voluntary, do objectors accept it, or do they maintain resistance as identity-defining?',
+    'If resistance is identity-locked, suppression requirements are higher (objectors cannot exit the resistance through accommodation) and the constraint''s extraction is higher (it extracts from a non-mobile population). If resistance is structured, objectors might accept intervention if proportionality thresholds shift (threat rises) or if they gain negotiating power, reducing extraction.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(identity_locked_resistance_among_objectors, empirical, 'Whether objector resistance to health intervention is structured to circumstances or identity-locked.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(legitimate_health_intervention__proportionality_reading, 0, 40).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(legi_tr_t0, legitimate_health_intervention__proportionality_reading, theater_ratio, 0, 0.08).
+narrative_ontology:measurement(legi_tr_t8, legitimate_health_intervention__proportionality_reading, theater_ratio, 8, 0.12).
+narrative_ontology:measurement(legi_tr_t16, legitimate_health_intervention__proportionality_reading, theater_ratio, 16, 0.18).
+narrative_ontology:measurement(legi_tr_t24, legitimate_health_intervention__proportionality_reading, theater_ratio, 24, 0.22).
+narrative_ontology:measurement(legi_tr_t32, legitimate_health_intervention__proportionality_reading, theater_ratio, 32, 0.24).
+narrative_ontology:measurement(legi_tr_t40, legitimate_health_intervention__proportionality_reading, theater_ratio, 40, 0.19).
+
+% Extraction over time
+narrative_ontology:measurement(legi_be_t0, legitimate_health_intervention__proportionality_reading, base_extractiveness, 0, 0.22).
+narrative_ontology:measurement(legi_be_t8, legitimate_health_intervention__proportionality_reading, base_extractiveness, 8, 0.31).
+narrative_ontology:measurement(legi_be_t16, legitimate_health_intervention__proportionality_reading, base_extractiveness, 16, 0.39).
+narrative_ontology:measurement(legi_be_t24, legitimate_health_intervention__proportionality_reading, base_extractiveness, 24, 0.36).
+narrative_ontology:measurement(legi_be_t32, legitimate_health_intervention__proportionality_reading, base_extractiveness, 32, 0.38).
+narrative_ontology:measurement(legi_be_t40, legitimate_health_intervention__proportionality_reading, base_extractiveness, 40, 0.38).
+
+% Suppression requirement over time
+narrative_ontology:measurement(legi_su_t0, legitimate_health_intervention__proportionality_reading, suppression_requirement, 0, 0.28).
+narrative_ontology:measurement(legi_su_t8, legitimate_health_intervention__proportionality_reading, suppression_requirement, 8, 0.52).
+narrative_ontology:measurement(legi_su_t16, legitimate_health_intervention__proportionality_reading, suppression_requirement, 16, 0.48).
+narrative_ontology:measurement(legi_su_t24, legitimate_health_intervention__proportionality_reading, suppression_requirement, 24, 0.42).
+narrative_ontology:measurement(legi_su_t32, legitimate_health_intervention__proportionality_reading, suppression_requirement, 32, 0.4).
+narrative_ontology:measurement(legi_su_t40, legitimate_health_intervention__proportionality_reading, suppression_requirement, 40, 0.42).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(legitimate_health_intervention__proportionality_reading, enforcement_mechanism).
+narrative_ontology:affects_constraint(legitimate_health_intervention__proportionality_reading, legitimate_health_intervention__bodily_autonomy_primary).
+narrative_ontology:affects_constraint(legitimate_health_intervention__proportionality_reading, legitimate_health_intervention__public_health_primary).
+
+% DUAL FORMULATION NOTE:
+% The proportionality_reading constraint decomposes the contested kernel legitimate_health_intervention into three structurally distinct readings. Each reading instantiates a different ε and different beneficiary/victim structure depending on which principle (autonomy, public health, proportionality) is treated as grounding legitimacy. The bodily_autonomy_primary reading prohibits coercion regardless of threat (ε near-zero for true autonomy, high theater if enforced); the public_health_primary reading permits any coercion that improves outcomes (ε high, low theater if authorities are trusted); the proportionality_reading (this constraint) permits coercion only when proportionate to threat (ε moderate, moderate theater as theater increases with threat decline). Each reading has different victim sets: autonomy reading has no victims (coercion is never legitimate, so victims = everyone coerced); public-health reading has victims only where autonomy advocates are powerless (victims = objectors who cannot refuse); proportionality reading has victims = those subject to intervention without full consent, but the victim set shrinks as threat declines and proportionality constrains scope. The three readings coexist as live institutional positions held by different authorities (courts, legislatures, ethics bodies) and compete in case-by-case adjudication as new threats emerge. All three affect each other: if public-health authorities interpret proportionality as public-health-maximizing intervention (reading 2 in reading 1's clothing), courts may intervene to enforce pure autonomy (reading 1) as a corrective. If courts enforce pure autonomy, public-health authorities may seek legislation to restore proportionality-based intervention. The network link from this constraint to both siblings documents these cross-reading influences.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

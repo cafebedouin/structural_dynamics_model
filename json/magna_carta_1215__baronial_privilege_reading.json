@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_1215__baronial_privilege_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_magna_carta_1215__baronial_privilege_reading",
+    "story_uid": "6201f341-bed2-47d4-90f2-48795070b6d8"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Magna Carta 1215: Baronial Privilege Reading (Feudal Contract)",
+    "topic_domain": "constitutional_law/legal_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "landed_barons"
+    ],
+    "victims": [
+      "crown",
+      "commoners_peasants_unfree"
+    ]
+  },
+  "interval": {
+    "start": 1215,
+    "end": 1225
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1215,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1216,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1217,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1220,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1223,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1225,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1215,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1216,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1217,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1220,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1223,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1225,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1215,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1216,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1217,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1220,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1223,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1225,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Magna Carta of 1215 is read in this constraint as a feudal contract between King John and the English landed magnates (barons, ecclesiastical magnates, and London merchant oligarchs), not as a declaration of universal rights. Under this reading, 'free men' means landowning feudal tenants-in-chief, numbering approximately 200. The constraint operates as a tangled rope: it coordinates the king-baron feudal relationship (removing uncertainty from inheritance incidents, wardship profit-taking, and arbitrary tallages) while simultaneously extracting from the crown (the payer) and concentrating benefit among landholder beneficiaries. The commoners, peasants, and unfree laborers of England are structurally excluded from both the protection set and the negotiating coalition. This reading treats the Charter as a narrow class victory for the magnate coalition, not as an early statement of universal procedural due process. The sibling readings (living_document_reading, universal_rights_reading) interpret the same text and authority structure (the Charter and its reissues) but frame the constraint's scope, beneficiary class, and legitimacy differently.",
+    "key_agents": [
+      "landed_barons: Negotiators and primary beneficiaries; roughly 200 tenants-in-chief whose feudal privileges are formalized and protected",
+      "crown (King John and successors): Payer; loses extractive feudal prerogatives; enforcement is enacted through baronial leverage and later ecclesiastical sanction",
+      "ecclesiastical_magnates: Co-beneficiaries and enforcers; bishops and abbots who negotiated and guaranteed the Charter through excommunication threats",
+      "commoners_peasants_unfree: Excluded; structurally absent from the negotiation and protection set; remain in pre-1215 feudal subordination",
+      "london_merchants: Partial beneficiaries; secured municipal freedoms and commercial standardization as allied interests of the baronial coalition"
+    ],
+    "logic_rationale": "Extractiveness at the end of the interval (1225) is 0.68 because the Charter constrains the crown's feudal exaction but leaves the feudal extraction of the barons over their own subjects untouched — it is a redistribution of prerogative within the magnate class, not a dismantling of extraction. Suppression is high (0.72) because enforcement depends on active baronial (and ecclesiastical) pressure to keep the crown from reverting to arbitrary will; the crown repeatedly violated the 1215 Charter, necessitating reissues (1217, 1225) with hardening enforcement clauses. Theater is moderate (0.28) because the Charter's stated coordination function is real — it does stabilize the feudal bargain — but increasing enforcement burden shows the constraint's instability. The measurement series shows extractiveness rising from 1215 (0.55) to 1217 (0.68), then stabilizing as the reissued Charters (1217, 1225) formalize enforcement through ecclesiastical sanction and baronial coalition discipline.",
+    "perspectival_gap": "The landed-baron seat experiences the constraint as a victory: they negotiated it, it protects their interests, and it formalizes their feudal leverage. From the crown's seat, it is enforced extraction of prerogative through collective baronial and ecclesiastical power. From the commoners' seats (structured into the excluded category), the constraint does not materially alter their feudal subordination to the barons — they see no benefit and no protection in Clause 39 (lawful judgment) because 'lawful' means judgment by their feudal lord. The engine should compute different directionalities for these seats: d near 0.0 (beneficiary) for landed barons, d near 1.0 (target) for the crown, and d near 0.5 (unaffected symmetric) for commoners — they neither gain nor lose from this particular constraint because it never applied to them.",
+    "directionality_logic": "The landed barons are the structural beneficiaries — they extracted the Charter, benefit from codified feudal protection, and lose nothing from the constraint (d ~ 0.15–0.25: full beneficiaries). The crown is the structural target — loses feudal exaction capacity, faces enforcement pressure, has constrained exit (cannot renounce the Charter without facing baronial revolt or ecclesiastical sanction) (d ~ 0.85–0.95: full target). Ecclesiastical magnates are beneficiaries with enforcement power (d ~ 0.2: beneficiary, shifted upward slightly by enforcement cost, but still net-positive). Commoners and peasants are neither beneficiaries nor victims of THIS constraint — they are excluded from its scope; the constraint does not improve or worsen their feudal subordination to the barons (d ~ 0.5: symmetric, because unaffected). London merchants are secondary beneficiaries (d ~ 0.35–0.45: partial beneficiary, gained municipal privileges only through baronial coalition membership). The crown's identity-lock is institutional — renouncing the Charter triggers immediate baronial revolt and ecclesiastical excommunication, so it faces trapped exit, not just constrained exit.",
+    "mandatrophy_analysis": "The founding problem (arbitrary feudal exaction by King John) remains structurally live in this reading: King John's successors (Henry III, later kings) repeatedly violated the Charter, necessitating reissues and enforcement cycles through the 13th century. The problem does not die — it is re-suppressed through baronial coalition discipline and ecclesiastical sanction. However, the mandatrophy resolution is tricky: the constraint is NOT degraded into a piton (the coordination function — formalized feudal obligation — is real and repeatedly asserted through reissues). Instead, the constraint is continuously reinforced through enforcement cycles. The theater ratio rises from 0.12 to 0.28 because enforcement machinery (excommunication threats, baronial assembly legitimacy) becomes increasingly theatrical: the constraint's enforcement function shifts from the original contractual negotiation toward institutional performance of 'the Charter' as symbol. This is NOT mandatrophy (the constraint's primary function is not atrophied) but rather the beginning of the symbolic reification that enables later 'universal rights' readings to claim the same text.",
+    "kernel_context": "This constraint instantiates the 'baronial_privilege_reading' of the contested kernel 'magna_carta_1215'. The reading interprets the Charter as a feudal contract between the crown and a narrow class of landowning magnates (roughly 200 tenants-in-chief, plus ecclesiastical magnates and allied merchants). The sibling readings are: (1) 'universal_rights_reading' — interpreting the same text as laying the foundation for transhistorical universal due process and the right to lawful judgment, extending 'free men' to all persons; (2) 'living_document_reading' — interpreting the Charter as an adaptive constitutional substrate whose meaning is legitimately transformed by interpretive tradition and precedential accumulation, without claiming originalist fidelity. This reading (baronial_privilege_reading) differs from the universal_rights_reading in the SCOPE of 'free men' (landed magnates vs. all persons) and in the beneficiary class (magnates only vs. universal subjects). It differs from the living_document_reading in the SOURCE OF AUTHORITY — the baronial reading grounds legitimacy in the original feudal contract and the magnates' negotiating power, while the living_document reading grounds legitimacy in the interpretive tradition and precedential evolution. The kernel itself is the text of Magna Carta 1215 and the authority structure of monarchy (the crown as feudal superior bound by reciprocal feudal obligation). Readings diverge in how they understand the scope of 'free' and the class of persons protected."
+  },
+  "omegas": [
+    {
+      "id": "free_men_scope_ambiguity",
+      "question": "Does 'free men' (liberi homines) in the original Magna Carta text refer to all persons, all non-enslaved persons, or only landowning feudal tenants?",
+      "resolution_mechanism": "Philological and contextual analysis of 1215 usage; examination of contemporary charters, legal documents, and Chronicle accounts of the drafting; comparison with how 'free' and 'free person' are deployed in other medieval legal texts of the period.",
+      "impact": "If 'free men' means all non-enslaved persons, the universal_rights_reading becomes textually grounded; if it means only landowning tenants, the baronial_privilege_reading is more defensible. This ambiguity is inscribed in the original text and cannot be resolved by pure textual analysis — it depends on historical linguistic reconstruction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The referent set of 'free men' in 1215 usage"
+    },
+    {
+      "id": "kernel_versus_readings_legitimacy",
+      "question": "Is the Magna Carta 1215 a kernel that can sustain multiple readings, or does it have a single original (baronial privilege) reading that later readings misappropriate?",
+      "resolution_mechanism": "Historiographical consensus and genealogy of readings: did medieval law itself (13th–15th centuries) recognize the Charter as capable of multiple interpretations, or was the reinterpretation as 'universal rights' a post-hoc innovation (16th–19th centuries)? At what historical moment did interpretive divergence become deliberate rather than accidental?",
+      "impact": "If the Charter genuinely sustains multiple readings (kernel status confirmed), all three readings (baronial_privilege, universal_rights, living_document) have equal structural legitimacy and coexist. If it does not, the baronial_privilege reading is the original and the others are extensions/distortions — which affects the type classification (baronial reading is primary Rope/Tangled Rope; others are secondary reinterpretations of that primary constraint).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the Magna Carta is a contested kernel or a single-reading constraint misread over time"
+    },
+    {
+      "id": "enforcement_coalescence_and_symbolic_capture",
+      "question": "Why does the theater ratio rise from 0.12 (1215) to 0.28 (1225), and what does this rise indicate about the constraint's evolution?",
+      "resolution_mechanism": "Examination of enforcement mechanisms: what portion of the Charter's 1225 enforcement apparatus is active suppression (barons forcing the crown to comply) versus institutional performance (the Charter as symbol, the reissue ceremony as legitimacy theater)? Traced through the Provisions of Oxford (1258) and the Barons' Wars (1264–1267), which institutionalize the Charter's role as a symbol of baronial legitimacy against the crown.",
+      "impact": "Rising theater ratio could indicate (a) degradation into piton, (b) transition from ad-hoc enforcement to institutionalized performance, or (c) the Charter's capture as a symbolic framework that later enables 'universal rights' readings to claim the same text. If (c), the rising theater ratio is the harbinger of the reading-shift — the constraint becomes valuable AS SYMBOL before becoming valuable as legal principle to a wider class.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The role of theatrical enforcement in the Charter's stabilization and later reinterpretation"
+    },
+    {
+      "id": "commoner_exclusion_structural_versus_rhetorical",
+      "question": "Is the exclusion of commoners, peasants, and unfree laborers from the Charter's protection a structural necessity of feudal law (only barons have standing to sue the king in feudal court), or a rhetorical choice to exclude classes whose protection would have threatened baronial interests?",
+      "resolution_mechanism": "Comparative feudal law across Europe; examination of whether other feudal monarchies' charters extended protection to non-landholder classes; examination of whether the barons explicitly debated and rejected extending protection to commoners, or whether the exclusion was implicit in the feudal legal framework.",
+      "impact": "If structural (feudal law permits only barons to sue the king), the baronial_privilege reading is descriptively accurate and the universal_rights reading is anachronistic. If rhetorical/chosen (barons could have extended protection but chose not to), the baronial reading is deliberately partial and the universal_rights reading reflects a later choice to universalize.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether commoner exclusion is inherent to feudal law or a strategic baronial choice"
+    },
+    {
+      "id": "sibling_reading_foreclosure_ambiguity",
+      "question": "Does the baronial_privilege reading (narrow scope) logically FORECLOSE the universal_rights reading, or can both readings coexist within different interpretive traditions?",
+      "resolution_mechanism": "Examine whether a party can hold both interpretations simultaneously without logical contradiction: Can one believe the Charter was ORIGINALLY a baronial privilege AND BECOME a universal rights document through legitimate reinterpretation? Or does claiming one reading's truth require denying the other reading's coherence?",
+      "impact": "If foreclosed: the relation to universal_rights_reading is 'forecloses' (singular core premise rules out the other). If coexists: the relation is 'coexists_with' (different parties hold different readings without logical contradiction). The cs_structure.reading_relations field depends on this resolution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the baronial and universal readings are logically incompatible or can be held simultaneously in different frameworks"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "magna_carta_1215__universal_rights_reading",
+      "magna_carta_1215__living_document_reading",
+      "english_common_law_precedential_authority",
+      "feudal_reciprocal_obligation"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel 'magna_carta_1215'. Sibling constraints with different readings of the same text: magna_carta_1215__universal_rights_reading (scope extended to all persons) and magna_carta_1215__living_document_reading (legitimacy grounded in interpretive tradition rather than original feudal contract). All three stories link via network.affects_constraints to form the constraint family. The epsilon values differ substantially across readings because the scope of 'free men' and the beneficiary class differ, producing different structural extraction profiles."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "feudal_reciprocal_obligation_codified",
+    "drift_state": {
+      "moment": "early_13th_century_reissue_cycle",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "magna_carta_1215__universal_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "magna_carta_1215__living_document_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "free_men_equals_landed_magnates",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "charter_binds_crown_feudal_reciprocity_only",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

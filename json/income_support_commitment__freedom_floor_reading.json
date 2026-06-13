@@ -1,0 +1,420 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_income_support_commitment__freedom_floor_reading",
+    "story_uid": "44c98a27-27a2-4d65-8fc1-18dc3060b1ef"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.42,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Support as Freedom Floor",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "caregivers",
+      "precarious_workers",
+      "abuse_survivors",
+      "artists_entrepreneurs",
+      "educational_pursuers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "caregivers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Provide essential unpaid care work (childcare, elder care, disability support) that the market does not price and society treats as non-negotiable obligation. Without income support, must choose between care responsibilities and wage labor, or accept extreme poverty. Unconditional support decouples care provision from market demand, recognizing care as socially necessary work."
+    },
+    {
+      "name": "precarious_workers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Work in gig, seasonal, or low-wage unstable employment where individual bargaining power is minimal. Without income floor, must accept exploitative terms to survive; employer wage-setting power depends on worker desperation. Support enables refusal of abusive conditions and negotiation for better terms."
+    },
+    {
+      "name": "abuse_survivors",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Trapped in economic dependence on abusers because leaving means destitution. Income support provides material basis for exit without requiring family reinvolvement, shelter system reliance, or return to abuser for economic survival. Floor is precondition for safety, not optional supplement."
+    },
+    {
+      "name": "artists_entrepreneurs",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Pursue creative work or business development that generates no income during gestation phase. Without support, forced into wage work that crowds out time/energy for creative development or startup work. Support enables genuine risk-taking and skill development inaccessible to survival-mode workers."
+    },
+    {
+      "name": "educational_pursuers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Pursue education, skill-building, or career transition requiring full-time study without immediate income. Low-income students especially cannot afford tuition + living costs from wage work. Support decouples education access from family wealth, enabling human capital investment across class boundaries."
+    },
+    {
+      "name": "employers_labor_market",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Finance unconditional income through taxation (corporate, income, or consumption taxes). The support floor eliminates employers' unilateral wage-setting power by expanding workers' exit options — workers can refuse exploitative terms because survival is decoupled from employment. This shifts bargaining power back toward labor, raising real wage floors."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the income floor through general taxation. For lower-income taxpayers, the cost-benefit is often favorable (they receive the same floor). For high-income taxpayers, effective transfer is upward through the fiscal system. Constraint operationalizes a collective funding decision; cost bearers are identified by tax structure, not by the constraint itself."
+    },
+    {
+      "name": "means_tested_welfare_dependents",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Under means-tested regimes, subjected to stigma, surveillance, behavioral conditions, and poverty traps (clawback of benefits as income rises). If universal income support replaced means testing, they would gain dignity, privacy, and freedom from paternalistic controls. Their voice in this reading is muted — the reading does not address them as present stakeholders but structures them out."
+    },
+    {
+      "name": "state_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers the income support system, sets transfer level, determines eligibility (universal vs. targeted), and establishes enforcement mechanisms. In this reading, the state's role is to fund and deliver coordination (pooled risk, universal coverage) and to constrain the market power that would otherwise force survival-mode labor."
+    },
+    {
+      "name": "dependency_trap_reading_constituency",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocates for work-incentive design and conditional support, arguing unconditional transfers reduce labor supply and create state dependence. From the freedom_floor_reading position, this constituency is excluded from the conversation; it is articulated as the sibling dependency_trap_reading in the kernel contest."
+    },
+    {
+      "name": "targeting_efficiency_reading_constituency",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocates for means-tested, targeted income support concentrated on demonstrated need. From the freedom_floor_reading position, this constituency is excluded; it is articulated as the sibling targeting_efficiency_reading in the kernel contest."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of funding a survival-level income floor (pooled risk, universal coverage, tax coordination) and decouples labor supply from survival need — enabling workers to exit exploitative conditions and enabling caregivers to pursue socially necessary work the market does not price but society depends on.",
+    "transfer_function": "Transfers income from employed workers and capital holders (via taxation) to individuals whose labor (paid or unpaid) does not generate survival income, or whose participation in paid labor is curtailed by care obligations, education pursuits, or exit from exploitation.",
+    "absent_voices": "Means-tested welfare recipients (excluded by universality's design, treated as a solved problem), employers who benefit from desperation-driven wage suppression (outside the conversation in this reading), and the dependency_trap_reading and targeting_efficiency_reading communities (articulated as sibling readings, not present stakeholders).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support disappeared overnight, labor markets would reorganize immediately around desperation: wage floors would collapse, caregiving would exit to family-only provision or disappear, abuse survivors would lose escape capacity, creative work and education would become luxury goods for the wealthy, and workers' bargaining power would vanish. The material preconditions for autonomy would evaporate.",
+    "founding_problem": "Markets do not price essential unpaid care work; wage labor coerces participation through survival threat; workers trapped in exploitative conditions cannot refuse them without risking destitution; caregiving responsibilities and creative/educational pursuits are crowded out by survival-mode wage work.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Academic literature on care work economics (Folbre, Hochschild), labor historians documenting desperation-driven wage acceptance (Piven & Cloward), abuse researchers attesting exit barriers (National Domestic Violence Hotline), and independent economists modeling labor-supply elasticity and bargaining power shifts (Bivens, Rodrik) all corroborate the founding problem from outside the direct beneficiary communities. Policy jurisdictions implementing unconditional income pilots (Finland, Kenya, Kenya GiveDirectly, Stockton SEED) provide observational evidence of behavioral shifts."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.12
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the freedom_floor_reading of the contested kernel income_support_commitment. It models unconditional income support as a genuine coordination mechanism that solves the collective-action problem of funding a survival-level floor while simultaneously decoupling labor supply from desperation, enabling workers to exit exploitative conditions and caregivers to pursue socially necessary work the market does not price. The reading is structurally distinct from two sibling readings: dependency_trap_reading (which argues unconditional support creates work disincentive and state dependence) and targeting_efficiency_reading (which concentrates support on demonstrated need rather than universalizing it). Each reading has a different ε, beneficiary set, and type classification; they are not variations on one constraint but separate constraints grounded in different empirical and normative premises.",
+    "key_agents": [
+      "Caregivers (childcare, elder care, disability): primary beneficiary whose unpaid essential work is not priced by markets; identity-locked in care obligations without support.",
+      "Precarious workers (gig, seasonal, low-wage): beneficiary whose constrained exit options give employers unilateral wage-setting power; support shifts bargaining equilibrium.",
+      "Abuse survivors: beneficiary whose material dependence on abusers is the actual barrier to exit; income floor is exit precondition.",
+      "Artists and entrepreneurs: beneficiary whose creative/business work cannot fund itself during development; support enables genuine risk-taking.",
+      "Employers and organized labor market: payer whose effective wage-setting power is constrained by workers' improved exit capacity; support raises the effective wage floor.",
+      "State apparatus: agenda-setter that administers the system, sets transfer level, and coordinates taxation and distribution.",
+      "Political factions holding sibling readings: excluded from this reading's stakeholder set; named as structural alternatives in the kernel contest."
+    ],
+    "logic_rationale": "Extractiveness is low (0.18) because the constraint solves a genuine coordination problem (pooled risk, universal coverage) without creating asymmetric extraction — beneficiaries genuinely gain autonomy and dignity, not just rents. There are no victims in this reading (universality eliminates means-test stigma and surveillance). Suppression is minimal (0.12) because the constraint relies on voluntary participation and taxation, not coercion; the 'suppression' that exists is political friction from competing readings, not inherent to the arrangement itself. Theater ratio is very low (0.08) because the performance of the system tracks its actual function — income delivery, autonomy enablement, labor-market shift. The measurement series shows slight upward drift in all three metrics as the system faces political pressure and implementation complexity, but the core magnitudes remain stable and low, consistent with a genuine rope classification. All metrics are authored on the shared time grid so no backward injection occurs.",
+    "perspectival_gap": "The freedom_floor_reading describes a scenario where employers and organized labor see the constraint as raising wage floors and reducing their unilateral power (d toward target end, χ upward). Beneficiary seats (caregivers, precarious workers) experience it as liberation and dignity restoration (d toward beneficiary end, χ negative or near-zero). The state sees it as coordination infrastructure it maintains. The dependency_trap_reading and targeting_efficiency_reading constituencies would experience this same system as either harmful (undermining work motivation) or wasteful (supporting those not needing support), producing divergent d and χ values from the same structural arrangement. The engine computes these seat-level differences from the beneficiary/victim declarations and power atoms; this commentary explains why the divergence is structural and expected.",
+    "directionality_logic": "Beneficiary directionality is set by the explicit beneficiary declaration (caregivers, precarious workers, abuse survivors, artists, educational pursuers) combined with their improved exit options: support provides them genuine alternatives to desperation-driven labor. Employer directionality is set by constraint payership (taxes funding the system) and institutional power that is constrained by workers' improved bargaining position. Taxpayers sit on the payer axis but lower-income taxpayers are also beneficiaries (they receive the floor), so their net d is near symmetric; high-income taxpayers bear net transfer costs and have d shifted toward target. No directionality overrides are necessary; the structural data (beneficiary/victim + power + exit options) produces honest derivation.",
+    "mandatrophy_analysis": "The founding problem (markets don't price care, desperation suppresses wages, exit barriers trap workers) is live and observable. The constraint's function (enabling exit, funding care, shifting bargaining power) remains continuous with its founding problem — no mandatrophy. The constraint could degrade if: (1) political pressure to means-test it returned (moving toward dependency_trap or targeting_efficiency readings), (2) transfer levels fell below survival, or (3) enforcement shifted to behavioral conditions and surveillance. These would indicate drift toward snare or piton, not mandatrophy in the freedom_floor_reading itself. As authored, the constraint remains in coherent operation.",
+    "kernel_context": "This constraint instantiates the freedom_floor_reading of the income_support_commitment kernel. The kernel is a contested commitment about what unconditional income support IS FOR and WHAT IT DOES: (1) freedom_floor_reading (this one): enables autonomy, dignity, exit capacity, and decouples labor supply from desperation; (2) dependency_trap_reading (sibling): creates work disincentive, skill atrophy, and state dependence; (3) targeting_efficiency_reading (sibling): should be concentrated on demonstrated need, not universal. Each reading has distinct ε, beneficiary sets, and type. They are structurally different constraints, not perspectives on one constraint. The committer structure (authority grounding in founding problem corroboration, interpretation via pilot results and behavioral data) is captured in omega variables naming the empirical resolution path."
+  },
+  "omegas": [
+    {
+      "id": "labor_supply_elasticity_reading_contest",
+      "question": "Do unconditional income transfers reduce labor supply (dependency_trap_reading hypothesis) or increase bargaining power and selective exit capacity without reducing overall work (freedom_floor_reading hypothesis)?",
+      "resolution_mechanism": "Randomized controlled trials with sufficient follow-up time (3+ years) measuring labor participation, wage outcomes, and occupational mobility. Pilot programs: Finland 2017–2018, Kenya GiveDirectly 2016–2019, Stockton SEED 2019–2021. Mechanism: track separable outcomes (hours worked vs. job quality, wage acceptance vs. employment rate, creative/educational pursuit vs. wage labor exit).",
+      "impact": "If labor supply falls significantly and wages do not rise, dependency_trap_reading gains empirical support and the freedom_floor_reading's core claim (exit capacity improves bargaining) is undermined. If labor supply is stable or shifts toward higher-quality work and wages rise, freedom_floor_reading is empirically vindicated and dependency_trap_reading is falsified. Targeting_efficiency_reading would survive regardless — efficiency is about distribution, not supply elasticity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether unconditional income reduces or reshapes labor supply; the empirical pivot for freedom_floor vs dependency_trap."
+    },
+    {
+      "id": "care_work_valuation_and_market_pricing",
+      "question": "Is unpaid care work (childcare, elder care, disability support) genuinely non-priced by markets, or do alternative market arrangements exist and fail only due to undersupply of demand?",
+      "resolution_mechanism": "Comparative analysis of care-work labor markets across jurisdictions: where care work is commodified (private childcare, for-profit elder care), do prices equilibrate at livable wages, or do they stabilize at poverty wages due to consumer inability to pay + care-giver desperation? Compare to professionalized care (nursing, therapy) where licensing and training investment raises wages. Empirical question: what market conditions would be required for unpaid care work to become priced care work at living wages?",
+      "impact": "If care work IS genuinely non-priceable (asymmetric information, demand-side poverty, love's labor dynamics), the founding problem of the freedom_floor_reading is structural and income support is necessary coordination. If care work IS priceable but merely undersupplied or underpaid due to bargaining asymmetry, alternative solutions (professional licensing, minimum care standards) might suffice without universal income support, weakening the reading's claim to necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether unpaid care work is structurally non-priceable or merely undersupplied/underpaid."
+    },
+    {
+      "id": "universality_vs_targeting_dignity_tradeoff",
+      "question": "Does the means-testing required by targeting_efficiency_reading produce unavoidable stigma and surveillance harms, or can means-testing be administered with privacy and dignity maintained?",
+      "resolution_mechanism": "Ethnographic and survey data from means-tested welfare recipients on stigma, behavioral compliance burden, and privacy intrusion. Comparison: universal programs (Social Security) vs. targeted programs (TANF, food stamps) on reported dignity and autonomy. Mechanism: track both direct stigma (perceived judgment) and structural stigma (administrative surveillance, benefit clawback design).",
+      "impact": "If means-testing creates unavoidable dignity harm, targeting_efficiency_reading's cost-benefit calculus must account for hidden costs of administration and psychological burden, possibly favoring universality. If means-testing can be redesigned to minimize stigma, targeting_efficiency_reading remains viable as an alternative reading. The core tradeoff — efficiency vs. dignity — remains unresolved empirically; this omega documents where the readings' empirical premises diverge.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether means-testing's administrative costs (dignity, surveillance, psychological burden) are unavoidable or redesignable."
+    },
+    {
+      "id": "founding_problem_status_contested",
+      "question": "Is the founding problem (markets don't price care, desperation suppresses wages, exit barriers trap workers) genuinely live, or has market evolution and labor-law development substantially solved it?",
+      "resolution_mechanism": "Longitudinal data: care-work wages over time, labor-market desperation indicators (gig work growth, union decline, wage stagnation in low-income brackets), domestic violence shelter waiting lists and exit barriers, creative-work and educational-pursuit participation by class. If all indicators improve substantially, founding problem is dead; if stagnant or worsening, it is live. Contested status reflects partisan disagreement on what counts as 'solved'.",
+      "impact": "If founding problem is dead, the constraint becomes mandatrophic or pitonized — it persists as administrative inertia or ideology rather than solving an active coordination problem. If contested, mandatrophy is contested (one reading says solved, another says live) — the constraint's necessity is politically mediated. This resolves the R5 genealogy question: founding_problem_status determination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding problem (markets don't price care, desperation suppresses wages) is live or dead."
+    },
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "Do the three sibling readings (freedom_floor, dependency_trap, targeting_efficiency) partition the conceptual space exhaustively, or do additional readings exist that the framing has missed?",
+      "resolution_mechanism": "Genealogical analysis of income support policy debates: are there distinct policy positions or normative framings that cannot be mapped to one of the three readings? Examples: (1) libertarian reading (income support violates property rights and state coercion), (2) communitarian reading (income support only works embedded in reciprocal obligation), (3) ecological reading (income support enables sustainability transitions away from consumption-maximizing work). If new readings emerge with distinct ε and beneficiary sets, the kernel is under-partitioned.",
+      "impact": "If the three readings are exhaustive, the kernel contest is fully specified and the generative model is complete. If new readings exist, the kernel complexity is higher and the constraint family is larger. This does not change THIS constraint's classification but affects how it relates to the broader income-support ecosystem.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the three kernel readings exhaust the normative conceptual space or additional readings exist."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.12) entirely structural (political/institutional resistance to universality) or partially internalized (beneficiaries internalize dependency fears, caregivers internalize shame at claiming support, precarious workers internalize desperation as personal failure)?",
+      "resolution_mechanism": "Post-implementation qualitative research on beneficiary self-conception and dignity shift: do beneficiaries' subjective framing of support change when it is framed as universal right vs. means-tested welfare? Do caregivers' sense of legitimacy and self-worth respond to recognition of care work? Do precarious workers' bargaining confidence increase with income floor? Mechanism: compare beneficiary narratives in universal vs. targeted programs on internalized shame/legitimacy.",
+      "impact": "If suppression is mostly structural, the measured 0.12 is accurate. If partially internalized, the true suppression experienced by beneficiaries is higher until internalized shame dissolves (which may take multiple years post-implementation). Internalization suggests beneficiaries carry suppression even when structural barriers are removed — the constraint's true persistence lies in absorbed norms, not just institutions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether measured suppression is structural (institutional resistance) or partially internalized (beneficiary shame, desperation norm)."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_commitment__dependency_trap_reading",
+      "income_support_commitment__targeting_efficiency_reading"
+    ],
+    "dual_formulation_note": "The income_support_commitment kernel has three structurally distinct readings. This story (freedom_floor_reading) is the core universal/dignity framing, emphasizing autonomy and labor-market exit capacity. The sibling readings (dependency_trap_reading and targeting_efficiency_reading) decompose the contested kernel into separate constraints with different ε values, beneficiary sets, and empirical premises. This family requires all three stories linked via network.affects_constraints to capture the full kernel contest. The freedom_floor_reading influences both siblings by establishing the universality framing and dignity claim that they must either defend or counter."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "income_support_commitment__dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "income_support_commitment__targeting_efficiency_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "autonomy_requires_material_exit_capacity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "unpaid_care_work_is_socially_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "labor_supply_shifts_with_bargaining_power",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "universal_survival_floor_enables_autonomy",
+    "drift_state": {
+      "moment": "contemporary_neoliberal_austerity",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

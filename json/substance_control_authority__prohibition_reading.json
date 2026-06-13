@@ -1,0 +1,263 @@
+{
+  "header": {
+    "constraint_id": "substance_control_authority__prohibition_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_substance_control_authority__prohibition_reading",
+    "story_uid": "d07b0828-33ab-49e9-b2aa-d69511b5646e"
+  },
+  "base_properties": {
+    "extractiveness": 0.76,
+    "suppression": 0.81,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Criminalization Authority for Drug Prohibition (Protective Reading)",
+    "topic_domain": "criminal_justice/public_health/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "third_party_communities",
+      "law_enforcement_institutions"
+    ],
+    "victims": [
+      "users_criminalized",
+      "communities_overpoliced"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.81
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the PROHIBITION READING of the substance_control_authority kernel: state authority to criminalize drug use/possession, justified as protecting third parties from drug-related crime and social disorder. The reading is one of three contested framings of the same stabilized commitment (the state's authority to regulate drugs). Under this reading, users are victims of criminalization, third parties are protected from harms, and enforcement institutions benefit from authority and budget allocation. The claim/metric independence is deliberate: this reading CLAIMS the constraint is tangled_rope (genuine coordination problem: preventing third-party harm + asymmetric extraction via criminalization), while the authored metrics describe substantially extractive, heavily enforced operation with rising theater ratio (enforcement increasingly divorced from protective function). The engine measures this gap; do not reconcile the claim to the metrics.",
+    "key_agents": [
+      "state_criminal_authority: Sets the criminalization schedule, directs enforcement, administers courts and prisons. Powerful institutional actor with arbitrage exit (can adjust policy at will). Structural beneficiary.",
+      "users_criminalized: Subject to criminalization, arrest, prosecution, incarceration. Powerless, trapped (criminalization forecloses legal alternatives). Primary victim seat.",
+      "third_party_communities: Promised protective benefit from reduced drug-related crime. Organized but constrained (their exit is relocation, expensive and disruptive). Claimed beneficiary seat.",
+      "law_enforcement_institutions: Collect budget, authority, prestige from drug enforcement. Institutional power, mobile exit (can deprioritize drugs). Structural beneficiary, often more directly than third parties.",
+      "families_of_users: Identity-locked to users; bear costs of incarceration and stigma while experiencing mixed protective/extractive effects. Moderate power, generational time horizon.",
+      "communities_overpoliced: Bear enforcement burden disproportionately; not the primary locus of drug use but suffer surveillance and arrest concentration. Organized but constrained; dual victim/targeted seat.",
+      "public_health_researchers: Analytical observers who measure outcomes; their findings contest the protective framing but are marginalized in criminal-justice policy."
+    ],
+    "logic_rationale": "Extractiveness starts moderate (0.48) at interval start and rises monotonically to 0.76 at interval end, plateauing. This trajectory reflects the ratchet dynamic: as criminalization becomes institutionalized, enforcement infrastructure expands (DEA, task forces, surveillance capacity), creating constituencies for continuation. Extractiveness rises because the constraint increasingly extracts value from criminalized populations without proportional reduction in the protective benefit (which itself becomes more theatrical). Suppression is high (0.81 at end) because the constraint's persistence depends fundamentally on excluding alternatives: drug users cannot legally satisfy their substance use, harm-reduction advocates are excluded from policy forums, and decriminalization/legalization reading are treated as criminal permissiveness. The constraint must actively suppress the articulation of alternative frameworks. Theater ratio rises from 0.18 to 0.42: early in the interval, enforcement genuinely reduced some drug-related crime; by interval end, enforcement is increasingly devoted to maintaining the criminalization architecture itself (mandatory minimums, asset seizure, federal scheduling lobbying) rather than solving the third-party harms that justified the original authority. The measurements are authored on a single shared time grid so every metric is valued at every time point the others are examined.",
+    "perspectival_gap": "The state authority and law enforcement institutions experience this constraint as a coordination success: they have solved the third-party-protection problem and are administering the solution. From the user seats and overpoliced-community seats, the same structure operates as pure extraction: the protective benefit is either marginal or negative (users and communities bear enforcement harms that exceed the protective gains), and the arrangement persists by actively suppressing alternatives. The engine computes these divergent seat classifications from the structural data. The authorization shift from 'we protect third parties' to 'we protect our institutional authority' happens at the individual-agent level (police officer choosing to enforce or not) and the institutional level (law enforcement lobbying against policy alternatives). The perspectival gap is irreducible in the commitment-system framing: the same kernel generates incompatible readings depending on which seat perceives the constraint.",
+    "directionality_logic": "Users_criminalized: d approaches 1.0 (full target). Victims by declaration; trapped exit (criminalization is the only path forward short of geographic relocation, which is blocked by poverty and criminal record); powerless; identity of 'user' may be fused with self-concept, creating psychological identity-lock beyond legal/geographic trapping. Effective extraction χ scales upward from high base ε by full target directionality. Communities_overpoliced: d around 0.75–0.85 (strong target). Named victims; constrained exit (police presence is inescapable in their geographic scope); organized power gives them some collective voice, but not enough to shift policy; spatial scope (regional/national) means they cannot vote police enforcement away. Effective extraction χ scales by target directionality plus scope amplification. Third_party_communities: d around 0.25–0.35 (beneficiary end). Named beneficiaries; promised protective benefit; organized power; constrained exit (relocation is expensive and disruptive). The constraint extracts from users to provide them a protective good. Directionality of third-party communities is POSITIVE (they benefit) but not zero because they also bear indirect costs: the constraint narrows their own choices (police presence, restriction on treatment options for family members). Law_enforcement_institutions: d around 0.15–0.25 (beneficiary end). Named beneficiary; institutional power; arbitrage exit (policy can shift, though institutional inertia is high). They collect extraction directly (budget, authority). Effective extraction χ is inverted to subsidy; they are subsidized by the constraint. No overrides are needed; the structural derivation produces accurate directionality at each seat.",
+    "mandatrophy_analysis": "Mandatrophy is evident in the theater-ratio trajectory. The founding problem was drug-related crime and third-party harm. The original mandate was to deter drug use via criminal penalty, which would reduce crime and disorder. After ~24 time points (mid-interval), the theater ratio shows enforcement effort increasingly devoted to maintaining the criminalization schedule itself rather than achieving the protective outcome. Indicators: (a) drug-war budget increases even as drug-related violent crime declines; (b) federal scheduling decisions driven by pharmaceutical-industry lobbying (protecting market share) rather than public-health evidence; (c) mandatory-minimum laws become harder to reform despite empirical evidence they are ineffective at deterrence; (d) asset-seizure revenue becomes a direct budget source for law enforcement, creating financial incentive to arrest independent of protective benefit. The mandate (protect third parties from drug harms via deterrence) has outlived its primary function (that function is partially achieved or is no longer the actual driver of enforcement decisions). The constraint persists because it benefits institutional actors whose primary incentive is continuation, not outcome. The theater-ratio rise from 0.18 to 0.42 models this: by interval end, 42% of enforcement activity is performative (defending the apparatus) rather than functional (solving the founding problem). The Tangled_Rope claim acknowledges the mandatrophy: there IS a real coordination function (reducing third-party harm), but it is entangled with pure extraction (maintaining institutional power and budget). A pure Snare would have no genuine third-party benefit; a pure Rope would have no extraction. The actual constraint is both, and the theater ratio captures the drift toward the extraction pole.",
+    "kernel_context": "This constraint instantiates the PROHIBITION_READING of the contested kernel substance_control_authority. The kernel is the state's authority to regulate drugs; the reading is the criminalization framing justified by third-party protection. Sibling readings: (1) harm_reduction_reading — state authority to accept drug use while minimizing health harms through public health interventions (decriminalization, treatment access, supervised consumption); (2) legalization_reading — state authority to regulate drug markets as legal commerce with quality/access controls (taxation, licensing, product regulation like alcohol). The readings coexist in contemporary policy discourse: different jurisdictions adopt different readings, and within single jurisdictions, different agencies or political factions advocate for incompatible readings simultaneously. They do NOT foreclose each other logically — a jurisdiction can move from prohibition to harm reduction without contradiction, or can adopt legalization while acknowledging harm reduction alongside. However, the axioms differ. See cs_structure below."
+  },
+  "omegas": [
+    {
+      "id": "protective_benefit_counterfactual",
+      "question": "What fraction of the measured reduction in drug-related crime is attributable to the deterrent effect of criminalization, versus to other factors (improved employment, treatment access, neighborhood economic change, demographic shifts)?",
+      "resolution_mechanism": "Quasi-experimental study comparing jurisdictions with different enforcement intensities controlling for socioeconomic variables; or interrupted time-series analysis of enforcement escalations/de-escalations with crime outcomes.",
+      "impact": "If criminalization accounts for <20% of crime reduction, the protective-benefit framing collapses and the constraint reclassifies toward pure Snare. If >50%, the Tangled_Rope claim is more defensible. Current econometric literature estimates 15–35%, with high uncertainty.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Attribution of crime reduction to criminalization vs. confounders."
+    },
+    {
+      "id": "racial_disparities_mechanism",
+      "question": "Are the documented racial disparities in drug enforcement (arrest rates, sentencing) the result of differential drug use prevalence across racial groups, or of discriminatory enforcement targeting of communities?",
+      "resolution_mechanism": "Survey data on drug use prevalence by race; comparison of enforcement actions to prevalence; qualitative interviews with police about enforcement priorities; analysis of surveillance technology deployment by neighborhood race/poverty.",
+      "impact": "If disparities are purely driven by prevalence, the constraint's asymmetric harm (concentrated on overpoliced communities) is indirect. If driven by enforcement discrimination, the constraint's structure includes active targeting of powerless communities for extraction, reclassifying it toward Snare. Evidence strongly suggests both prevalence and targeting play a role, with targeting amplifying the disparities.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether racial disparities in enforcement reflect usage patterns or discriminatory targeting."
+    },
+    {
+      "id": "substitution_dynamics",
+      "question": "When criminalization reduces supply of one drug, do users and dealers substitute to other substances, or does reduction in supply reduce overall drug use? Does substitution create new harms (more dangerous substances, larger criminal organizations)?",
+      "resolution_mechanism": "Time-series analysis of enforcement against one drug and market emergence of substitutes; epidemiological tracking of overdose by substance type and purity; DEA seizure data by drug class pre/post enforcement spikes.",
+      "impact": "If substitution is rapid and harms increase (more potent substances, larger cartels), the constraint's protective benefit is illusory and the extraction is pure. If substitution is minimal and use genuinely declines, the protective case is stronger. Evidence shows substantial substitution (fentanyl replacing heroin, synthetic drugs replacing plant-based drugs) with increased overdose mortality.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether criminalization reduces drug use or triggers harmful substitution."
+    },
+    {
+      "id": "identity_fusion_suppression_ambiguity",
+      "question": "For users and families of users, is the measured suppression (trapped/identity_locked exit) structural (legal/economic barriers that would disappear with policy change) or internalized (the user has internalized criminal-justice framing as deserved punishment and carries the suppression with them even if legal barriers were removed)?",
+      "resolution_mechanism": "Post-decriminalization trajectory analysis in jurisdictions that shifted policy: do users' subjective sense of agency and belonging recover, or do internalized shame and criminal identity persist?",
+      "impact": "If structural, decriminalization would recover agency and exit options. If internalized, the constraint has done iatrogenic identity damage that persists after the mechanism is removed. Likely both are present to some degree; the question is the proportion. If internalization is >60%, the constraint's damage exceeds its protective benefit even after policy reversal.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression of users is structural or internalized via criminalization narratives."
+    },
+    {
+      "id": "reading_contest_structure",
+      "question": "Is the prohibition reading's core premise (drug users are the source of third-party harm requiring criminalization) logically compatible with the harm-reduction reading's core premise (drug users are people experiencing a health condition requiring treatment, not punishment)?",
+      "resolution_mechanism": "Jurisprudential and policy analysis: can the same legal framework simultaneously treat drug use as crime AND as medical condition? How do jurisdictions that hold both achieve consistency? What does the choice reveal about the reading that is actually operative?",
+      "impact": "If the premises are logically incompatible (they are), then adoption of the harm-reduction reading FORECLOSES the prohibition reading's core claim within any single coherent framework. However, multiple frameworks can coexist across different jurisdictions and policy domains (DEA treats it as crime; public health treats it as illness). The manifest reading choice is which framework the state allocates primary authority to; currently, criminal authority dominates, making prohibition operative despite medical-model advocacy.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the prohibition and harm-reduction readings are logically compatible or foreclosed."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_authority__harm_reduction_reading",
+      "substance_control_authority__legalization_reading"
+    ],
+    "dual_formulation_note": "The substance_control_authority kernel decomposes into three structurally distinct readings: (1) prohibition_reading (this constraint) — criminalization to protect third parties; (2) harm_reduction_reading — decriminalization + treatment + public health interventions; (3) legalization_reading — regulated market with quality/taxation controls. The ε values differ radically: prohibition_reading has high extraction (0.76) due to criminalization costs and incarceration harms; harm_reduction_reading has moderate extraction (0.35–0.45) due to treatment/supervision costs; legalization_reading has low extraction (0.15–0.25) if regulated as a normal market. The beneficiary/victim structures differ: prohibition creates users as victims; harm-reduction treats users as clients; legalization treats users as consumers. Each reading is a separate constraint with its own classification. They are linked via network edges because changing one reading constrains the others: proof that prohibition is ineffective at protective benefit (high theater ratio, low crime-reduction attribution) creates pressure toward harm_reduction or legalization readings."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "criminal_deterrence_framework",
+    "drift_state": {
+      "moment": "contemporary_institutional_capture_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "substance_control_authority__harm_reduction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "substance_control_authority__legalization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "drug_use_criminally_causative_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "criminal_penalty_deters_drug_use",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

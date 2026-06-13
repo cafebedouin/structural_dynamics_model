@@ -1,0 +1,340 @@
+{
+  "header": {
+    "constraint_id": "tcp_ip_interpretation__prioritization_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a102dbc3-4862-4ffc-bcab-17b073363e85"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "TCP/IP Differentiated Service Quality Authorization (Prioritization Reading)",
+    "topic_domain": "technology/policy/telecommunications",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "isp_operators",
+      "premium_content_providers"
+    ],
+    "victims": [
+      "unfunded_edge_services",
+      "small_content_providers",
+      "residential_users"
+    ],
+    "vindicated_propositions": [
+      "network_investment_incentive_thesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "isp_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Operate last-mile infrastructure and interpret TCP/IP rule set as permitting differentiated service quality tiers. They argue that paid fast lanes fund network upgrades, security infrastructure, and backbone capacity. They set QoS parameters, negotiate with content providers, and enforce prioritization rules. They collect revenue from both premium content providers and ISP subscribers paying for higher tiers."
+    },
+    {
+      "name": "premium_content_providers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Large video platforms and data-center operators can afford paid prioritization and gain measurable performance advantage. They negotiate directly with ISPs, pay for fast-lane access, and see their content delivered reliably. Their alternatives include absorbing slower delivery costs or building private networks."
+    },
+    {
+      "name": "unfunded_edge_services",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Non-commercial services, open-source repositories, public health information systems, and educational content without revenue streams cannot afford prioritization fees. They experience degraded delivery quality, user abandonment, and competitive disadvantage relative to funded alternatives. Their exit is exit from the internet entirely."
+    },
+    {
+      "name": "small_content_providers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Startups, independent publishers, and regional content providers face binary choice: pay for prioritization they cannot afford or accept degraded performance that erodes their user base. Their capital constraints make the fee a ceiling on market entry. Some relocate to jurisdictions with stronger non-discrimination rules."
+    },
+    {
+      "name": "residential_users",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Pay ISPs for subscriptions and experience service tiers where premium content loads fast while unfunded services buffer. They benefit from improved infrastructure funding and premium service availability, but the cost of access rises and content diversity contracts (unfunded services fail, reducing choice)."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "National telecom and competition regulators evaluate whether differentiation violates net neutrality rules or telecommunications law. They read TCP/IP specifications, commission technical analysis, and issue interpretive guidance or prohibitions. Their reading of the TCP/IP kernel shapes whether the prioritization reading persists."
+    },
+    {
+      "name": "civil_society_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Digital rights organizations and internet freedom advocates argue the prioritization reading violates internet values and democratic infrastructure norms. They lack direct enforcement power but conduct public campaigns, file regulatory comments, and support litigation contesting the reading. They are structurally excluded from ISP boardrooms where the interpretation is operationalized."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Differentiating service quality based on content characteristics and investment enables ISPs to match capacity allocation to actual network demand: premium services get reliability guarantees, commodity services use best-effort delivery. This solves the capacity planning problem — unlimited demand cannot be met at uniform quality on finite infrastructure.",
+    "transfer_function": "Moves revenue from premium content providers and premium-tier residential users to ISP operators in exchange for QoS guarantees and network priority. Simultaneously moves accessibility from unfunded and small content providers to funded and large providers, concentrating audience reach among those who can afford prioritization.",
+    "absent_voices": "Non-commercial internet services (Wikipedia, Linux distributions, public health databases, open-source communities) would contest the prioritization reading, arguing it degrades the internet's egalitarian infrastructure function. They are absent from ISP strategy conversations because they generate no negotiable revenue and have no institutional seat at governance tables.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the prioritization reading were prohibited overnight and strict non-discrimination reinstated, ISPs would lose a major revenue stream (fast-lane fees would collapse), premium content providers would face cost increases (no paid shortcuts), and unfunded services would recover delivery quality. Internet architecture and business models would reorganize around commodity delivery and alternative funding mechanisms.",
+    "founding_problem": "Network capacity is finite; demand for video streaming and data-intensive services exceeded backbone provisioning. Early internet assumed symmetric, lightweight traffic; modern applications broke that assumption. The problem: how to allocate limited capacity among competing uses without service collapse.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "ISP operators attest the problem is live and worsening, citing engineering data on peak-load congestion. Network economists and technologists debate whether capacity scarcity is real (ISP argument) or manufactured via under-investment (regulator and advocate argument). Regulatory filings from telecom authorities note the problem statement but dispute the prioritization reading as the appropriate solution."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The TCP/IP protocol suite does not explicitly forbid or mandate differentiated service quality — the specification is technically neutral on QoS. ISP operators, telecommunications regulators, and internet governance bodies contest how to read this permissiveness. This story instantiates the prioritization reading: TCP/IP permits ISPs to implement tiered service quality, negotiate paid fast lanes with content providers, and implement QoS algorithms that degrade commodity traffic to fund network investment. The sibling readings (neutrality: strict non-discrimination; zero-rating: selective exemptions for sponsored content) decompose the kernel into distinct normative claims with different extraction profiles and beneficiary structures. This reading alone carries the prioritization architecture; the others are NOT part of this story.",
+    "key_agents": [
+      "isp_operators: institutional agenda-setters; interpret TCP/IP as permitting differentiation; collect fast-lane revenue",
+      "premium_content_providers: powerful beneficiaries; negotiate prioritization; enjoy reliable delivery",
+      "unfunded_edge_services: powerless payers; no revenue to afford prioritization; experience degraded service",
+      "small_content_providers: moderate payers; constrained exit; face competitive disadvantage",
+      "regulatory_bodies: institutional observers; adjudicate the TCP/IP reading; issue interpretive guidance",
+      "civil_society_advocates: excluded voices; argue against the reading; lack boardroom access"
+    ],
+    "logic_rationale": "Extractiveness (0.68) reflects the revenue ISPs collect from premium providers and the accessibility cost imposed on unfunded services — the transfer is decoupled from marginal network cost and depends on ISP market power. Suppression (0.72) is high because the prioritization reading persists through active enforcement: ISP packet inspection, QoS rate-limiting, and contractual terms that exclude rival interpretations. Theater ratio (0.41) shows that roughly two-fifths of the constraint's operational activity is performative: justifying prioritization as necessary for network health, publicizing infrastructure investment, and maintaining the technical framing while extraction is the operative mechanism. The measurement series track the interval from early-stage fast-lane introduction (t=0, lower metrics) to mature tiering (t=25, plateau). Extractiveness plateaus around t=20 because regulatory pressure and market saturation limit further acceleration; suppression plateaus in parallel.",
+    "perspectival_gap": "From the ISP operator seat: the prioritization reading is legitimate network management grounded in technical necessity and funded by rational market negotiation. From the small provider and unfunded service seats: the same reading is monopolistic extraction disguised as engineering. From the regulatory seat: the question is whether the TCP/IP kernel permits or forbids the prioritization reading — the answering authority adjudicates which interpretation prevails. The engine computes these perspectives from the structural data: ISP beneficiary status, small-provider victim status, constrained exits, and regulatory power to enforce competing readings.",
+    "directionality_logic": "ISP operators are the structural beneficiaries (d near 0.0): they set the reading, collect the revenue, maintain arbitrage exit options (can switch regulatory jurisdictions or business models). Premium content providers are secondary beneficiaries (d near 0.15): they benefit from prioritization but depend on ISPs for implementation. Unfunded edge services are full targets (d near 1.0): powerless, trapped, no revenue to negotiate, directly harmed by degradation. Small content providers are partial targets (d near 0.75): moderate power, constrained exit, asymmetric harm. Residential users are near symmetric (d near 0.5): genuine infrastructure benefit from investment, but indirect cost from reduced content diversity and higher subscription tiers. Regulatory bodies sit at d=0.5 (analytical seat, no extraction collected or imposed).",
+    "mandatrophy_analysis": "The prioritization reading instantiates a tangled rope: it coordinates real network capacity allocation (coordination function) AND extracts revenue from content providers and disadvantages unfunded services (asymmetric extraction). The coordination function — matching service quality to demand — is genuine but not exhaustive: bandwidth scarcity could be solved via alternative mechanisms (congestion pricing for all users uniformly, universal rate caps, public investment in capacity). The extraction component (revenue concentration with ISPs, accessibility closure for unfunded services) does NOT follow logically from the coordination function. A Tangled Rope diagnosis is correct because the arrangement requires active enforcement (suppression=0.72) and cannot persist as pure coordination — unfunded services would resist and small providers would lobby for alternative readings without ISP policing and regulatory gatekeeping.",
+    "kernel_context": "This constraint is the prioritization reading of the tcp_ip_interpretation kernel. The kernel is the TCP/IP protocol specification and its interpretation in governance and business practice. The prioritization reading asserts that TCP/IP permits differentiated service quality and ISPs should implement tiered quality as a network investment mechanism. The sibling neutrality_reading asserts strict non-discrimination (TCP/IP embodies end-to-end principle). The sibling zero_rating_reading asserts selective exemptions for sponsored content (TCP/IP permits category-based differentiation). The three readings decompose the same kernel into distinct normative claims with different technical instantiations, beneficiary sets, and political coalitions. The contest between them is live — regulatory bodies in different jurisdictions have adopted each reading at different times, and the TCP/IP specification itself remains technically neutral, permitting all three interpretations. The prioritization reading forecloses neither the neutrality reading (both could coexist in a jurisdiction if policy explicitly authorized both) nor the zero_rating_reading (zero-rating is a subset of differentiation logic); rather, the prioritization and neutrality readings COEXIST as competing interpretations across jurisdictions and evolve through regulatory and litigation cycles."
+  },
+  "omegas": [
+    {
+      "id": "network_scarcity_reality",
+      "question": "Is network capacity scarcity real, or is it constructed through under-investment and artificial rate-limiting to justify the prioritization reading?",
+      "resolution_mechanism": "Comparative engineering analysis of capacity provisioning in jurisdictions that prohibited differentiation (EU, India) versus jurisdictions that permitted it (USA, South Korea); examination of ISP investment patterns in relation to revenue from fast lanes.",
+      "impact": "If scarcity is real, the prioritization reading solves a genuine coordination problem and extraction is a necessary cost of network maintenance. If constructed, the reading is pure extraction disguised as technical necessity and should be classified as snare rather than tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether network scarcity justifies or merely rationalizes differentiation."
+    },
+    {
+      "id": "alternative_capacity_solutions",
+      "question": "Are there non-discriminatory mechanisms (uniform congestion pricing, public capacity investment, architectural redesign) that solve the capacity allocation problem without concentration of control and revenue with ISPs?",
+      "resolution_mechanism": "Technical and economic analysis of alternative architectures; regulatory experiments in jurisdictions adopting neutrality rules (were capacity problems solved differently or did service degrade).",
+      "impact": "If alternatives exist and succeed, the prioritization reading's claim to necessity collapses; extraction becomes the motive force and classification shifts toward snare. If alternatives fail technically or economically, the reading's necessity claim holds and tangled_rope classification is appropriate.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether differentiation is the only solution to capacity management or one choice among structurally equivalent alternatives."
+    },
+    {
+      "id": "reading_stability_under_regulatory_pressure",
+      "question": "Will the prioritization reading persist if regulatory or legislative pressure strengthens, or is it contingent on ISP market power and weak enforcement of alternatives?",
+      "resolution_mechanism": "Observation of jurisdictions that have shifted from permitting to prohibiting prioritization (or vice versa), and analysis of what changed in ISP behavior when the regulatory reading shifted.",
+      "impact": "If the reading persists only under weak regulatory conditions, it is contingent institutional power rather than stable technical fact. If it persists across regulatory shifts because network engineering supports it, the reading is more robust to challenge.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the prioritization reading's persistence depends on ISP power or on technical necessity."
+    },
+    {
+      "id": "suppression_mechanism_locus",
+      "question": "Is the suppression (0.72) primarily structural (market power, lack of viable alternatives) or internalized (unfunded services accept degradation as legitimate; users believe prioritization is necessary)?",
+      "resolution_mechanism": "Post-regulation trajectory: if suppression persists after jurisdictions prohibit differentiation (unfunded services remain degraded, users resist cost reductions), suppression is partly internalized; if suppression evaporates when prohibited, it was primarily structural.",
+      "impact": "If internalized, unfunded services carry the suppression across regulatory contexts and may not recover after prohibition. If structural, prohibition removes the suppression mechanism and recovery is possible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether measured suppression is structural market power or internalized acceptance of hierarchy."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "tcp_ip_interpretation__neutrality_reading",
+      "tcp_ip_interpretation__zero_rating_reading"
+    ],
+    "dual_formulation_note": "The tcp_ip_interpretation kernel decomposes into three structurally distinct constraint stories. The prioritization_reading (this file) asserts TCP/IP permits tiered quality and ISPs should implement fast lanes — ε=0.68, tangled_rope, beneficiaries: ISP operators and premium providers, victims: unfunded services and small providers. The neutrality_reading asserts strict non-discrimination — ε close to zero (coordination only), rope, beneficiaries: universal internet access. The zero_rating_reading asserts selective exemptions for sponsored content — ε intermediate (partial extraction through selective exemption), tangled_rope. Each reading instantiates a different constraint because the beneficiary sets, extraction targets, and enforcement mechanisms are distinct. The kernel itself (TCP/IP specification) is technically neutral; the contest is over interpretation. The three stories are linked via network.affects_constraints because regulatory adoption of one reading creates downstream pressure on the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "isp_managed_capacity_optimization",
+    "drift_state": {
+      "moment": "contemporary_net_neutrality_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "tcp_ip_interpretation__neutrality_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "tcp_ip_interpretation__zero_rating_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "isp_capacity_stewardship_authorized",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "market_negotiation_legitimate_allocation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

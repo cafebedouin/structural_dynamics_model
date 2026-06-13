@@ -1,0 +1,362 @@
+% ============================================================================
+% CONSTRAINT STORY: cultural_property_legal_corpus__sovereign_repatriation_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-12
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_cultural_property_sovereign_repatriation, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: cultural_property_legal_corpus__sovereign_repatriation_reading
+ *   human_readable: Sovereign Repatriation Right: State Authority Over Colonial-Era Cultural Property
+ *   domain: legal/international/post-colonial
+ *
+ * SUMMARY:
+ *   This constraint instantiates the sovereign repatriation reading of the
+ *   cultural property legal corpus—the kernel around legitimate authority
+ *   over colonial-era artifacts. The reading asserts that successor states
+ *   have sovereign rights to recover artifacts expropriated during
+ *   colonialism, and that holding institutions derived their authority
+ *   unlawfully from colonial possession. This reading is one of three
+ *   distinct and partially incompatible framings of the same artifact corpus.
+ *   The sovereign repatriation reading treats the state as the rightful
+ *   claimant and holding institutions as extractors of identity capital
+ *   (prestige, scholarly authority, and material control). The constraint
+ *   exhibits the structure of a tangled rope: genuine coordination problem
+ *   (legitimacy of artifacts' location and custody) plus asymmetric
+ *   extraction (states gain symbolic and material restoration; institutions
+ *   bear repatriation costs). The claimed_type and metrics are authored
+ *   independently—the constraint is claimed as tangled rope and the metrics
+ *   support that structural analysis. Seat divergence is expected and
+ *   substantial: from the successor state seat, the constraint is restoring
+ *   rightful sovereignty; from the holding institution seat, it is imposed
+ *   liability without corresponding benefit.
+ *
+ * KEY AGENTS:
+ *   - Successor states with repatriation claims: beneficiaries of the sovereignty framing; recovery of symbolic capital and material patrimony. Institutional power, generational time horizon, arbitrage-level exit options (can choose to claim or not, can negotiate terms).
+ *   - Holding institutions: payers bearing repatriation costs; legal defense, logistics, collection loss, prestige diminishment. Institutional power but constrained exit (reputational/legal pressure to comply once claims are filed). Biographical time horizon for individual staff; organizational persistence is generational.
+ *   - Source communities not aligned with state claims: excluded from the bilateral negotiation; their interests in community stewardship or direct return are displaced by the state-centric framing. Powerless position structurally trapped by the reading's assumption that the successor state speaks for the source.
+ *   - Universal heritage advocates: excluded; their argument for preservation and universal access is eclipsed by the sovereignty framing's priority on repatriation. Organized collectively but constrained by institutional embeddedness.
+ *   - International legal institutions: agenda-setters codifying and enforcing the sovereign repatriation principle. Their authority grows with the reading's adoption; they operate the procedural machinery that makes claims adjudicable.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(cultural_property_legal_corpus__sovereign_repatriation_reading, 0.58).
+domain_priors:suppression_score(cultural_property_legal_corpus__sovereign_repatriation_reading, 0.42).
+domain_priors:theater_ratio(cultural_property_legal_corpus__sovereign_repatriation_reading, 0.28).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(cultural_property_legal_corpus__sovereign_repatriation_reading, extractiveness, 0.58).
+narrative_ontology:constraint_metric(cultural_property_legal_corpus__sovereign_repatriation_reading, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(cultural_property_legal_corpus__sovereign_repatriation_reading, theater_ratio, 0.28).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(cultural_property_legal_corpus__sovereign_repatriation_reading, accessibility_collapse, 0.65).
+narrative_ontology:constraint_metric(cultural_property_legal_corpus__sovereign_repatriation_reading, resistance, 0.71).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(cultural_property_legal_corpus__sovereign_repatriation_reading, tangled_rope).
+narrative_ontology:human_readable(cultural_property_legal_corpus__sovereign_repatriation_reading, "Sovereign Repatriation Right: State Authority Over Colonial-Era Cultural Property").
+narrative_ontology:topic_domain(cultural_property_legal_corpus__sovereign_repatriation_reading, "legal/international/post-colonial").
+
+domain_priors:requires_active_enforcement(cultural_property_legal_corpus__sovereign_repatriation_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(cultural_property_legal_corpus__sovereign_repatriation_reading, '99a3780e-69f4-423a-ac5e-a227a314f6e9').
+narrative_ontology:cs_kernel_codification('99a3780e-69f4-423a-ac5e-a227a314f6e9', formalized).
+narrative_ontology:cs_authority_grounding('99a3780e-69f4-423a-ac5e-a227a314f6e9', lineage).
+narrative_ontology:cs_interpretation_layer_present('99a3780e-69f4-423a-ac5e-a227a314f6e9').
+narrative_ontology:cs_reading_relation('99a3780e-69f4-423a-ac5e-a227a314f6e9', cultural_property_legal_corpus__indigenous_stewardship_reading, coexists_with).
+narrative_ontology:cs_reading_relation('99a3780e-69f4-423a-ac5e-a227a314f6e9', cultural_property_legal_corpus__universal_heritage_reading, coexists_with).
+narrative_ontology:cs_axiom('99a3780e-69f4-423a-ac5e-a227a314f6e9', foundational, colonial_appropriation_wrongful).
+narrative_ontology:cs_axiom_status(colonial_appropriation_wrongful, holdable).
+narrative_ontology:cs_axiom_grounding('99a3780e-69f4-423a-ac5e-a227a314f6e9', colonial_appropriation_wrongful, deontological).
+narrative_ontology:cs_axiom('99a3780e-69f4-423a-ac5e-a227a314f6e9', foundational, state_sovereignty_extends_cultural_patrimony).
+narrative_ontology:cs_axiom_status(state_sovereignty_extends_cultural_patrimony, holdable).
+narrative_ontology:cs_axiom_grounding('99a3780e-69f4-423a-ac5e-a227a314f6e9', state_sovereignty_extends_cultural_patrimony, deontological).
+narrative_ontology:cs_reference_frame('99a3780e-69f4-423a-ac5e-a227a314f6e9', colonial_appropriation_illegitimacy).
+narrative_ontology:cs_drift_state('99a3780e-69f4-423a-ac5e-a227a314f6e9', contemporary_repatriation_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('99a3780e-69f4-423a-ac5e-a227a314f6e9', '').
+narrative_ontology:cs_kernel_id(cultural_property_legal_corpus__sovereign_repatriation_reading, cultural_property_legal_corpus).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(cultural_property_legal_corpus__sovereign_repatriation_reading, successor_states_with_repatriation_claims).
+narrative_ontology:constraint_victim(cultural_property_legal_corpus__sovereign_repatriation_reading, holding_institutions_bearing_repatriation_costs).
+narrative_ontology:constraint_vindicates(cultural_property_legal_corpus__sovereign_repatriation_reading, colonial_acquisition_illegitimate).
+narrative_ontology:constraint_vindicates(cultural_property_legal_corpus__sovereign_repatriation_reading, sovereignty_extends_cultural_property).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Nations claiming legal and historical continuity with peoples from whom artifacts were taken during colonialism. They assert sovereign authority over cultural property originating from their territory and use the repatriation framework to recover artifacts, restore national patrimony narratives, and exercise control over representation of their own histories. They can choose to file repatriation claims or not, and can negotiate terms of return (loan agreements, restricted access conditions, joint custody). Their benefit is the recovery of material and symbolic property they claim was wrongfully held abroad.
+narrative_ontology:constraint_stakeholder(cultural_property_legal_corpus__sovereign_repatriation_reading, successor_states_with_repatriation_claims, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Major museums, national collections, and private institutions holding colonial-era cultural artifacts. They face legal repatriation claims, diplomatic pressure, and reputational damage when refusing claims. They bear concrete costs: legal defense, conservation and documentation prior to return, shipping, loss of prestige and visitation revenue, and long-term loss of research access. They justify holding through arguments of superior conservation and preservation for universal benefit. Their exit options are constrained—refusing claims incurs escalating pressure and institutional reputation cost; complying costs resources and collection diminishment.
+narrative_ontology:constraint_stakeholder(cultural_property_legal_corpus__sovereign_repatriation_reading, holding_institutions_bearing_repatriation_costs, payer,
+    institutional, biographical, constrained, global).
+
+% Indigenous communities and descendants of colonized peoples whose cultural artifacts are the subject of repatriation claims, but whose interests may diverge from the successor state's repatriation agenda. They may seek direct return to community hands rather than state custody, or have no relationship to the current territorial state. The sovereign repatriation reading centers state authority, which can displace community-based claims from the negotiation frame. These communities are excluded from the bilateral repatriation process and have no structural exit—they must accept whatever outcome the state-institution negotiation produces.
+narrative_ontology:constraint_stakeholder(cultural_property_legal_corpus__sovereign_repatriation_reading, source_communities_not_state_aligned, excluded,
+    powerless, biographical, trapped, local).
+
+% Museums, scholars, preservation organizations, and UNESCO advisory bodies arguing that cultural artifacts are humanity's shared heritage and that centralized well-funded institutions serve universal access and scholarship better than dispersed national repositories. They oppose repatriation when it fragments collections, removes artifacts from research access, or transfers them to under-resourced institutions. This reading eclipses their position by asserting state sovereignty takes precedence over preservation and universal access. They are excluded from the repatriation bilateral and cannot shift the negotiation toward their conservation/access priorities.
+narrative_ontology:constraint_stakeholder(cultural_property_legal_corpus__sovereign_repatriation_reading, universal_heritage_advocates, excluded,
+    organized, biographical, constrained, global).
+
+% Nations without major repatriation claims who observe the precedent and strengthen of the sovereign repatriation framework. They assess whether this norm-building strengthens their own future claims (if they identify artifacts abroad and eventually file claims) or constrains their flexibility (if they prefer alternative readings). Some may eventually become claimants; others prefer to defend alternative readings that better fit their institutional interests.
+narrative_ontology:constraint_stakeholder(cultural_property_legal_corpus__sovereign_repatriation_reading, successor_states_lacking_claims, observer,
+    institutional, generational, analytical, global).
+
+% UNESCO, the International Court of Justice, UNIDROIT, treaty bodies, and international law commissions that codify and adjudicate repatriation claims. They define which states are legitimate claimants (successor states with historical continuity), which artifacts qualify (origin in colonized territory, wrongful appropriation), and what procedures holding institutions must follow (documentation, consultation, repatriation timelines). They operate the enforcement machinery through soft power (UNESCO recommendations, institutional compliance expectations) and harder mechanisms (treaty obligations, ICJ jurisdiction). Their authority and influence expand as the sovereign repatriation reading becomes law.
+narrative_ontology:constraint_stakeholder(cultural_property_legal_corpus__sovereign_repatriation_reading, international_legal_institutions, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(cultural_property_legal_corpus__sovereign_repatriation_reading, successor_states_with_repatriation_claims).
+narrative_ontology:fixing_cost_class(cultural_property_legal_corpus__sovereign_repatriation_reading, cheap).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a legal-procedural framework for successor states to recover cultural artifacts taken during colonialism. The coordination problem it solves is legitimacy: which party has rightful authority over an artifact whose appropriation was coercive or fraudulent, and under what procedures should its disposition be decided? The reading coordinates on the principle that historical continuity with the expropriated source entails legal authority to recover, and that procedures (documentation, verification of origin, negotiation timelines) should adjudicate claims consistently.
+% TRANSFER_FUNCTION: Transfers custody and control of artifacts from holding institutions to successor states (or their designated agents or national museums). Transfers symbolic capital, historical narrative authority, and prestige from holding institutions to successor states (the state becomes the authorized voice on its own heritage). Transfers material costs from states (who face no costs initially) to institutions (legal defense, repatriation logistics, conservation, shipping, collection loss). The mechanism is enforcement through international norms, treaty obligations, and reputational leverage.
+% ABSENT_VOICES: Indigenous communities and source peoples whose relationship to the current territorial state is contested or adversarial are structurally excluded. They would argue for community stewardship and direct return, not state custodianship. Universal heritage advocates and preservation institutions are also excluded—they would argue the framework sacrifices scholarship, conservation, and universal access for state symbolic interests. Both excluded groups have substantive objections to the reading's core assumption (state is the rightful beneficiary) but have no seat at the bilateral negotiation table.
+% DISAPPEARANCE_RATIONALE: If the sovereign repatriation reading and its enforcement machinery vanished overnight, holding institutions would retain their collections under existing national property law and colonial-era title doctrines. Successor states would lose the legal mechanism to recover artifacts; they would need to resort to purchase, extended negotiation, political pressure, or alternative claims (indigenous stewardship, community ownership). The prestige and symbolic authority institutions derive from holding would persist. Repatriation would become rare and driven by individual institutional choice rather than systematic legal obligation. The world reorganizes because the artifact distribution system (who controls what, what flows where) would revert to institutional/wealthy-state control, and successor states would lose a primary mechanism for symbolic restoration.
+% FOUNDING_PROBLEM: During the colonial period (roughly 1800–1950), metropolitan powers and their agents systematically removed cultural artifacts from colonized territories through conquest, purchase under duress, legal expropriation, and theft. These removals were accomplished by force or legal fictions, not consent. The artifacts were incorporated into metropolitan collections where they were displayed, studied, and used to assert imperial superiority and cultural dominance. Post-colonial states inherited territories but not the authority to recover their own patrimony—collections remained abroad under the legal control of institutions claiming continuous lawful possession. The founding problem is the legitimacy gap: how can artifacts whose removal was wrongful and coercive now be rightfully held in foreign institutions? How do post-colonial states recover the symbolic capital their own heritage embodies when that heritage is controlled abroad?
+% FOUNDING_PROBLEM_CORROBORATION: The successor states filing repatriation claims attest the founding problem remains live—colonial-era acquisitions lack legitimate title and repatriation is an ongoing obligation. International legal institutions (UNESCO, UNIDROIT, ICJ advisory opinions) have affirmed the legitimacy of repatriation claims and the wrongfulness of colonial appropriation. Independent historical scholarship using colonial archives confirms the coercive and deceptive character of colonial-era appropriations; museum provenance research documents the forced-acquisition histories of major collections. Holding institutions acknowledge the colonial context but dispute the remedy—they argue that continued institutional custody preserves artifacts and serves scholarship, and that repatriation should be negotiated rather than enforced. The corroboration comes from affected states, international legal bodies, and historical scholarship outside the benefiting institutions; the dispute is not about whether colonial acquisition was wrong but about what remedy (repatriation vs. continued collaboration) follows from that wrongness.
+narrative_ontology:disappearance_verdict(cultural_property_legal_corpus__sovereign_repatriation_reading, world_rearranges).
+narrative_ontology:founding_problem_status(cultural_property_legal_corpus__sovereign_repatriation_reading, live).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(cultural_property_legal_corpus__sovereign_repatriation_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
+    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
+    'no_scope_rebuild', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_seed(cultural_property_legal_corpus__sovereign_repatriation_reading, 'none', 1).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(cultural_property_legal_corpus__sovereign_repatriation_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(cultural_property_legal_corpus__sovereign_repatriation_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(cultural_property_legal_corpus__sovereign_repatriation_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   The extractiveness metric (0.58 at interval end) reflects that the constraint transfers material control and symbolic capital from institutions to states, and imposes bearing costs on institutions, but does not deprive them of all benefit—they retain research/preservation claims in many negotiated outcomes, and the repatriation process itself is often collaborative rather than punitive. The trajectory shows rising extractiveness over the interval (0.35 to 0.58), driven by accumulating legal precedent, UNESCO soft power, and expanding claims—the constraint's enforcement machinery solidified as more states filed claims and more institutions complied. Theater ratio is low-moderate (0.28 at interval end), meaning most activity serves the genuine coordination function (establishing legitimate custody) rather than theatrical compliance. Some theater emerges as institutions perform 'collaborative repatriation' while internally resisting (token loans, disputed ownership claims, restricted access provisions)—hence the rise in theater from 0.12 to 0.28 over 50 years. Suppression requirement is moderate (0.42 at interval end) and rising, reflecting growing institutional resistance and the need for legal/diplomatic pressure to sustain compliance. The constraint is not held in place by agreement—holding institutions must be pressured continuously, which is why suppression rises with extractiveness. The accessibility of alternatives (resistance: 0.71 in base_properties) is high: institutions have countervailing strategies (deny repatriation claims, assert superior conservation, litigate, lobby governments, claim immunity). The constraint persists despite this resistance because international law, UNESCO normative power, and successor state coalition pressure outweigh institutional countervailing. The one shared time grid means every metric value is authored at every time point, avoiding the OQ-105-style misalignment that injects end-state values into earlier periods.
+ *
+ * PERSPECTIVAL GAP:
+ *   From the successor state seat: the constraint is sovereignty restoration, a genuine coordination of rightful authority. From the holding institution seat: it is imposed liability motivated by post-colonial politics rather than custodial virtue. From the source community seat (excluded): it may be state extraction masquerading as community repatriation. From the universal heritage seat: it is parochial nationalism sacrificing global scholarship. These divergences are not errors in the constraint's classification—they are the structural reality the engine measures when it computes per-seat types. The sovereign repatriation reading structurally centers state authority and frames other seats accordingly. A different reading (indigenous stewardship) would reframe the coordination problem and reverse some beneficiary/victim relationships.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Successor states are beneficiaries (d near 0.0): they gain sovereignty restoration, symbolic capital, and material recovery. Institutions are targets/payers (d near 1.0): they bear costs and lose control. Source communities not state-aligned are victims of the state-centric frame (high d locally, but excluded from the bilateral so their d is not directly computed in the constraint's negotiation structure). International legal institutions are near-beneficiary and agenda-setter: they expand their authority as the reading is adopted, derive prestige from codifying sovereignty norms. No directionality overrides are required—the derivation from beneficiary/victim declarations plus institutional power and constrained/arbitrage exit produces the correct d values.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The constraint avoids false classification as pure rope (coordination only) precisely because it declares both beneficiaries (successor states) and victims (institutions). The asymmetry is structural: states solve a genuine legitimacy problem (what gives anyone the right to hold these artifacts) and gain material control; institutions solve no problem from their seat and bear costs. The coordination function is real (establishing legal procedures for legitimate custody) but is yoked to asymmetric extraction (institutions must surrender control and bear the cost). This is the defining structure of tangled rope. Without the victims declaration, the constraint would appear as beneficial coordination; the victims declaration reveals the extraction substrate. The measurement series tracks how extraction accumulates even as the coordination function persists—extractiveness rises from 0.35 to 0.58 as more claims are filed and more precedent hardens, but the coordination function (establishing legitimate procedure) remains stable. This is characteristic of a snare creeping: the genuine function is the cover story, and the extraction grows behind it. The theater ratio rise (0.12 to 0.28) indicates some share of activity is now defensive/performative rather than functional. An external observer monitoring this constraint would flag the rising theater + rising extraction as a snare-creep signal—the founding problem may be shifting from 'legitimacy of custody' to 'extraction of institutional costs' as successive claims are filed. That observation is what the measurements enable.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    successor_state_representation,
+    'Does the successor state legitimately represent the source communities from whom artifacts were taken, or does state sovereignty usurp indigenous/community stewardship claims?',
+    'Empirical: examine the alignment of successor state repatriation claims with the preferences of source communities as expressed through consultation, indigenous representation, and community documentation. Conceptual: determine whether the postcolonial state is the legitimate heir to the colonial-era expropriation or a distinct institution that may itself be extractive of indigenous authority.',
+    'If the successor state does NOT represent source communities or actively displaces them, the constraint becomes a snare where the state is the extractor rather than the beneficiary. The constraint''s coordinate structure (state-to-institution bilateral) would be revealed as hiding a three-way conflict (state vs. community vs. institution).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(successor_state_representation, empirical, 'Whether successor states represent expropriated source communities or displace their claims.').
+
+omega_variable(
+    institutional_custodianship_legitimacy,
+    'Under what conditions, if any, is institutional (museum/research) custodianship legitimate and beneficial to the source communities whose artifacts are held?',
+    'Empirical: assess conservation outcomes, access outcomes, research benefits, and source community satisfaction with institutional custodianship in specific cases. Conceptual: determine whether preservation and universal scholarship justify continued institutional hold given the colonial origin of the possession.',
+    'If institutional custodianship is shown to provide unique benefits that repatriation would forfeit (rare conservation expertise, global scholarship access), the extraction reading weakens and the constraint approaches pure coordination (institutional benefit to the source/source state through preservation + research). If institutional custodianship confers prestige and revenue on institutions without corresponding source benefit, the extraction reading solidifies.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(institutional_custodianship_legitimacy, empirical, 'Whether institutional preservation/scholarship justifies continued institutional control.').
+
+omega_variable(
+    reading_coexistence_vs_foreclosure,
+    'Are the sovereign repatriation reading and the indigenous stewardship reading logically incompatible (one forecloses the other), or do they coexist as different framings within a plural legal order?',
+    'Analyze whether the core claims of the readings contradict such that no legal framework could accommodate both. Examine case law and treaty language where the readings have collided; assess whether hybrid approaches (state custodianship with community consultation, community veto over repatriation destination) resolve the tension or mark a temporary truce.',
+    'If the readings foreclose each other, one must eventually dominate; if they coexist, the constraint lives in a contested plural regime where successive states, institutions, and communities negotiate overlapping claims. Coexistence implies higher ongoing friction and theater (repeated negotiation, symbolic compromise); foreclosure implies eventual winner-takes-all clarification.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(reading_coexistence_vs_foreclosure, conceptual, 'Whether this reading logically excludes indigenous stewardship or coexists with it.').
+
+omega_variable(
+    repatriation_cost_distribution,
+    'Who ultimately bears the cost of repatriation—the holding institution alone, or is it distributed across institutional, state, and source-community budgets through collaboration/negotiation?',
+    'Examine repatriation case studies: conservation costs, shipping, documentation, legal defense, risk of damage in transit, opportunity cost of museum display loss. Document who pays each line item and whether states/communities contribute resources or rely entirely on institutional funding.',
+    'If institutions bear nearly all costs, the extraction reading is strengthened (asymmetric burden). If costs are distributed, the constraint moves toward pure coordination (shared problem-solving). The metric base_extractiveness is sensitive to this: if institutions fund repatriation voluntarily as a coordination cost, ε drops; if they are coerced into bearing unilateral costs, ε rises.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(repatriation_cost_distribution, empirical, 'Distribution of repatriation costs across institutions, states, and communities.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(cultural_property_legal_corpus__sovereign_repatriation_reading, 0, 50).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(cpsr_tr_t0, cultural_property_legal_corpus__sovereign_repatriation_reading, theater_ratio, 0, 0.12).
+narrative_ontology:measurement_basis(cpsr_tr_t0, observed).
+narrative_ontology:measurement(cpsr_tr_t10, cultural_property_legal_corpus__sovereign_repatriation_reading, theater_ratio, 10, 0.16).
+narrative_ontology:measurement_basis(cpsr_tr_t10, observed).
+narrative_ontology:measurement(cpsr_tr_t20, cultural_property_legal_corpus__sovereign_repatriation_reading, theater_ratio, 20, 0.21).
+narrative_ontology:measurement_basis(cpsr_tr_t20, observed).
+narrative_ontology:measurement(cpsr_tr_t30, cultural_property_legal_corpus__sovereign_repatriation_reading, theater_ratio, 30, 0.25).
+narrative_ontology:measurement_basis(cpsr_tr_t30, observed).
+narrative_ontology:measurement(cpsr_tr_t40, cultural_property_legal_corpus__sovereign_repatriation_reading, theater_ratio, 40, 0.27).
+narrative_ontology:measurement_basis(cpsr_tr_t40, observed).
+narrative_ontology:measurement(cpsr_tr_t50, cultural_property_legal_corpus__sovereign_repatriation_reading, theater_ratio, 50, 0.28).
+narrative_ontology:measurement_basis(cpsr_tr_t50, projected).
+
+% Extraction over time
+narrative_ontology:measurement(cpsr_be_t0, cultural_property_legal_corpus__sovereign_repatriation_reading, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement_basis(cpsr_be_t0, observed).
+narrative_ontology:measurement(cpsr_be_t10, cultural_property_legal_corpus__sovereign_repatriation_reading, base_extractiveness, 10, 0.42).
+narrative_ontology:measurement_basis(cpsr_be_t10, observed).
+narrative_ontology:measurement(cpsr_be_t20, cultural_property_legal_corpus__sovereign_repatriation_reading, base_extractiveness, 20, 0.51).
+narrative_ontology:measurement_basis(cpsr_be_t20, observed).
+narrative_ontology:measurement(cpsr_be_t30, cultural_property_legal_corpus__sovereign_repatriation_reading, base_extractiveness, 30, 0.55).
+narrative_ontology:measurement_basis(cpsr_be_t30, observed).
+narrative_ontology:measurement(cpsr_be_t40, cultural_property_legal_corpus__sovereign_repatriation_reading, base_extractiveness, 40, 0.57).
+narrative_ontology:measurement_basis(cpsr_be_t40, observed).
+narrative_ontology:measurement(cpsr_be_t50, cultural_property_legal_corpus__sovereign_repatriation_reading, base_extractiveness, 50, 0.58).
+narrative_ontology:measurement_basis(cpsr_be_t50, projected).
+
+% Suppression requirement over time
+narrative_ontology:measurement(cpsr_su_t0, cultural_property_legal_corpus__sovereign_repatriation_reading, suppression_requirement, 0, 0.25).
+narrative_ontology:measurement_basis(cpsr_su_t0, observed).
+narrative_ontology:measurement(cpsr_su_t10, cultural_property_legal_corpus__sovereign_repatriation_reading, suppression_requirement, 10, 0.32).
+narrative_ontology:measurement_basis(cpsr_su_t10, observed).
+narrative_ontology:measurement(cpsr_su_t20, cultural_property_legal_corpus__sovereign_repatriation_reading, suppression_requirement, 20, 0.38).
+narrative_ontology:measurement_basis(cpsr_su_t20, observed).
+narrative_ontology:measurement(cpsr_su_t30, cultural_property_legal_corpus__sovereign_repatriation_reading, suppression_requirement, 30, 0.41).
+narrative_ontology:measurement_basis(cpsr_su_t30, observed).
+narrative_ontology:measurement(cpsr_su_t40, cultural_property_legal_corpus__sovereign_repatriation_reading, suppression_requirement, 40, 0.42).
+narrative_ontology:measurement_basis(cpsr_su_t40, observed).
+narrative_ontology:measurement(cpsr_su_t50, cultural_property_legal_corpus__sovereign_repatriation_reading, suppression_requirement, 50, 0.42).
+narrative_ontology:measurement_basis(cpsr_su_t50, projected).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(cultural_property_legal_corpus__sovereign_repatriation_reading, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(cultural_property_legal_corpus__sovereign_repatriation_reading, 0.12).
+narrative_ontology:affects_constraint(cultural_property_legal_corpus__sovereign_repatriation_reading, cultural_property_legal_corpus__indigenous_stewardship_reading).
+narrative_ontology:affects_constraint(cultural_property_legal_corpus__sovereign_repatriation_reading, cultural_property_legal_corpus__universal_heritage_reading).
+
+% DUAL FORMULATION NOTE:
+% This constraint is one of three structurally distinct instantiations of the cultural_property_legal_corpus kernel. The sovereign repatriation reading treats the state as the rightful claimant and holding institutions as extractors of symbolic capital. The indigenous_stewardship reading (affects_constraints dependency: influences) reframes legitimate authority to indigenous communities and would reclassify the state as a potential payer alongside institutions. The universal_heritage reading (affects_constraints dependency: influences) prioritizes preservation and universal access, reclassifying institutions as beneficiaries and repatriation as secondary to conservation. All three readings share the same underlying artifact corpus but arrive at opposite beneficiary/victim structures. They are linked as a constraint family via network.affects_constraints; each story must carry an omega documenting the kernel contest.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

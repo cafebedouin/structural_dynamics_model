@@ -1,0 +1,342 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__shared_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "43c9fcc9-c5ad-4e59-8dc6-4f618d28b3cb"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.55,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Joint Liability Attribution Along Value Chain",
+    "topic_domain": "legal/technological governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "liability_insurance_market",
+      "legal_intermediaries"
+    ],
+    "victims": [
+      "developers",
+      "deployers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "developers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Create software capabilities and distribute them to deployers. Under shared liability, they bear joint responsibility for harms from deployment even when they lack visibility into deployment context, configuration, or downstream use. They pay through liability exposure, insurance premiums, and indemnification obligations. They benefit from market access—deployers will adopt their product—but the liability framework introduces friction and uncertainty. Exit means not developing certain capabilities or not participating in jurisdictions that impose shared liability."
+    },
+    {
+      "name": "deployers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate systems using developer-created capabilities in specific contexts with direct control over deployment architecture, configuration, and operational decisions. Under shared liability, they bear joint responsibility for harms even where developer decisions or code defects contributed. They pay through liability exposure and insurance. They benefit from access to developer innovation and reduced total-system liability concentration. Exit means forgoing capability adoption or migrating to single-liability regimes."
+    },
+    {
+      "name": "liability_insurance_market",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Underwrites both developer and deployer liability exposure under shared liability regimes. The framework creates a coordination problem for insurers—they must assess causal contribution across the value chain, creating new underwriting categories, risk modeling, and premium structures. They benefit from expanded insurable populations and higher aggregate premiums (multiple seats paying insurance rather than single-party regimes). The indemnification and contractual allocation requirements create downstream insurance products and cross-policing mechanisms."
+    },
+    {
+      "name": "legal_intermediaries",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advise developers and deployers on liability allocation, indemnification clauses, and risk mitigation under shared liability. The framework's complexity—allocating causal contribution and control across contractual and operational boundaries—creates recurring demand for legal expertise. They benefit from higher transaction volumes and complexity-driven billable hours. Exit is uncompelled; they are mobile beneficiaries."
+    },
+    {
+      "name": "liability_claimants",
+      "role": "observer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Suffer harms from system failures and seek recovery through liability mechanisms. Under shared liability, they must identify and pursue multiple defendants (developers and deployers), creating litigation complexity. They benefit from expanded defendant pools—more parties to recover from—but bear the burden of proving causal contribution to establish claims against each. They have no role in setting the constraint; their observation seat notes the constraint's effects on their capacity to recover."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enact and enforce shared liability frameworks via statute, common law evolution, or regulatory guidance. They set the allocation rules, define causal contribution and control, and shape how disputes are adjudicated. They enforce through courts and administrative bodies. Their authority is exercised through jurisdictional law; exit is not an option within their territorial scope. They set the agenda because they define the liability attribution framework itself."
+    },
+    {
+      "name": "single_liability_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Argue for single-party (developer-only or deployer-only) liability regimes on grounds of clear incentive alignment, reduced transaction costs, and alignment with actual control. They are excluded from the shared liability design process because the constraint represents a rejection of their framing. They would restructure the liability framework if given design authority but are not party to the shared liability regime's governance."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Distributes liability exposure and responsibility across the value chain to align incentives: developers are exposed to harms from their code decisions; deployers are exposed to harms from their operational decisions and context control. The framework aims to incentivize both parties to exercise due care rather than concentrating liability in one party who cannot control the other's decisions.",
+    "transfer_function": "Moves liability exposure and insurance costs from concentrated parties (developers or deployers alone) to both, and simultaneously moves wealth to insurance and legal services providers through indemnification clauses, insurance premiums, and dispute resolution costs. Liability claimants gain expanded defendant pools but face increased litigation complexity.",
+    "absent_voices": "Single-liability advocates (developers and deployers who argue for regime change) and deployment contexts where opacity prevents meaningful causal attribution (embedded systems, supply-chain dependencies) are structurally excluded. They cannot participate in shared liability regime design and would argue the framework is unworkable without full transparency or clear control boundaries.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If joint liability attribution vanished, liability regimes would revert to single-party (developer or deployer) allocation, indemnification contract terms would collapse, liability insurance products would consolidate, and legal demand for causal-attribution disputes would fall sharply. The value chain would reorganize around whichever single party bears the liability burden.",
+    "founding_problem": "Early strict-liability or single-party regimes created perverse incentives: developer liability frameworks left deployers with no accountability for operational decisions; deployer liability frameworks left developers with no accountability for code defects or capabilities. Neither party could control the other; liability concentration in one party created systematic under-care incentives for the other.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Regulatory authorities and legal scholarship outside the benefiting parties (insurance, law firms) attest the founding problem was real in early regimes. However, whether shared liability actually solves it remains contested: developers and deployers argue the coordination overhead exceeds the incentive benefit; insurance carriers and legal services providers attest to market growth; empirical causal studies on incentive alignment remain sparse."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.55,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Joint liability frameworks distribute responsibility for harms across the developer-deployer value chain, allocating liability according to causal contribution and operational control. Developers are held liable for code defects and capability design choices; deployers are held liable for operational decisions, configuration, and context-specific deployment. The framework is presented as efficient incentive alignment—making each party responsible for harms they can influence. The claimed type is tangled_rope: genuine coordination problem (developers and deployers cannot independently control system safety) meets asymmetric extraction (insurance and legal intermediaries capture significant rents, while developers and deployers both bear expanded liability exposure and transaction costs). The claim/metric independence principle is applied: the constraint is CLAIMED as tangled_rope based on structural interdependence, while metrics describe moderately high extractiveness (0.68 at interval end) because coordination overhead (indemnification, insurance, dispute resolution) consumes significant value without corresponding harm reduction.",
+    "key_agents": [
+      "developers: creators of capability; bear joint liability for code defects and capability design; constrained exit (cannot serve markets enforcing shared liability)",
+      "deployers: operational decision-makers; bear joint liability for deployment context, configuration, and operational decisions; constrained exit (cannot adopt capabilities without accepting shared liability)",
+      "liability_insurance_market: benefits from bifurcated premium structures and expanded underwriting scope; mobile beneficiary position",
+      "legal_intermediaries: benefits from complexity of causal attribution disputes and indemnification contract negotiation; mobile beneficiary position",
+      "regulatory_authorities: set the allocation rules and define causal contribution; agenda_setter role; institutional power",
+      "single_liability_advocates: excluded from shared liability regime design; would restructure to single-party allocation"
+    ],
+    "logic_rationale": "Extractiveness rises over the interval (0.48 → 0.68) as indemnification contract markets mature and insurance carriers develop specialized products for shared liability regimes—the transaction-cost overhead grows without corresponding reduction in actual harm rates. Theater_ratio plateaus at 0.42 by t=20, indicating that causal attribution disputes and allocation mechanisms consume a stable but significant share of enforcement activity. Suppression_requirement climbs to 0.55 because regulatory authorities must actively enforce causal-contribution allocation rules against parties incentivized to shift liability unilaterally—deployers want developers to bear more; developers want deployers to bear more. The temporal pattern captures two dynamics: (1) early maturation of insurance and legal markets (t=0–10: rapid extractiveness growth), and (2) stabilization as liability-allocation norms ossify and transaction costs become predictable (t=15–25: slower growth, flattening theater ratio). The metrics do not reconcile with the claimed tangled_rope type by design—the claim rests on genuine coordination interdependence; the metrics capture the actual extraction overlay that markets and legal services impose.",
+    "perspectival_gap": "Developers and deployers experience this constraint differently due to opacity and control asymmetry. A developer with full visibility into all deployed instances has higher d (directionality toward target) than a deployer with full deployment context control but no visibility into code complexity. A developer operating open-source software with no contractual indemnification agreements is trapped; a developer with standard SaaS indemnification clauses is constrained but not trapped. A deployer with operational control but no ability to audit code is constrained; a deployer with contract-negotiated liability caps is less constrained. The engine computes per-seat directionality from these structural differences; from the regulatory perspective, the constraint is symmetric (both parties share liability); from the market-access perspective, developers bear higher structural exposure (they cannot see deployment choices) and deployers bear higher operational exposure (they cannot control code). This perspectival gap is the constraint's structural signature.",
+    "directionality_logic": "Developers: moderate power, constrained exit (cannot serve markets enforcing shared liability without accepting the framework), biographical time horizon. They are structurally targets because liability exposure exceeds their actual control over deployment outcomes. Without full visibility into deployment, they face open-ended liability for harms from deployer decisions. Directionality: ~0.68 (moderately toward target). Deployers: organized power (collectively), constrained exit (cannot adopt capabilities without accepting shared liability), biographical time horizon. They face symmetric structural exposure: operational control gives them accountability for deployment decisions, but they cannot control code quality or capability design. Directionality: ~0.55 (slightly toward target, balanced by operational control). Insurance carriers and legal services: institutional/powerful power, mobile exit (can enter/exit markets offering shared-liability products), generational/biographical time horizon. They are structurally beneficiaries—shared liability creates new risk categories, indemnification contracts, and dispute complexity. Directionality: ~0.15 (clearly toward beneficiary). Regulatory authorities: institutional power, analytical exit, set the rules. Directionality: ~0.5 (symmetric, or overridden by their agenda-setter role). The directionality chain derives from: (1) beneficiary/victim declarations in base_properties, (2) exit_options and power from stakeholders, (3) no overrides needed—structural derivation captures the asymmetries.",
+    "mandatrophy_analysis": "The founding problem (single-party liability created perverse incentives) was real but is now contested as solved. Developers and deployers argue the shared liability framework substitutes coordination overhead for actual harm reduction—they bear higher transaction costs without measurable improvement in safety outcomes. Regulatory authorities and insurance carriers attest the framework is working as designed and creates appropriate incentive alignment. The classification prevents the constraint from being misread as pure rope (genuine coordination) or pure snare (pure extraction): it is tangled_rope because genuine coordination interdependence exists (neither party can unilaterally ensure safety) AND extraction is substantial (insurance and legal services capture significant rents). The mandatrophy signal is the flattening theater_ratio after t=15—once indemnification contracts and insurance categories mature, the causal-attribution disputes become increasingly ritualized, suggesting the coordination function is atrophying while extraction persists. This is a leading indicator of potential mandatrophy: the founding problem (incentive misalignment) may be dead, but the constraint persists as institutional inertia because exit from shared liability regimes is too costly.",
+    "kernel_context": "This constraint is the SHARED_LIABILITY reading of the contested liability_attribution kernel. The kernel governs WHO BEARS PRIMARY LIABILITY for harms across the developer-deployer value chain. Three readings compete: DEVELOPER_LIABILITY (developers bear primary liability as creators), DEPLOYER_LIABILITY (deployers bear primary liability as operators with context control), and SHARED_LIABILITY (this reading: both parties bear joint liability proportional to causal contribution and control). The shared_liability reading rejects both single-party regimes as creating perverse incentives and allocates liability via a distributed function of causal contribution (code defects, capability design) and operational control (deployment decisions, configuration). The reading relations are: SHARED_LIABILITY INFLUENCES both DEVELOPER_LIABILITY and DEPLOYER_LIABILITY—a shared liability regime creates structural pressure on single-party regimes by expanding defendant pools and raising litigation costs for claimants, which shifts incentives for regulators to mandate single-party allocation. SHARED_LIABILITY COEXISTS_WITH both single-party readings across different jurisdictions—some regulators enforce developer_liability, others enforce deployer_liability, and some enforce shared_liability. No reading logically forecloses another within a single regulatory authority's framework; they are live policy choices."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.16
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__developer_liability",
+      "liability_attribution__deployer_liability"
+    ],
+    "dual_formulation_note": "The liability_attribution kernel decomposes into three structurally distinct constraints: developer_liability (developers bear primary responsibility), deployer_liability (deployers bear primary responsibility), and shared_liability (joint responsibility distributed by causal contribution and control). Each reading instantiates different beneficiary/victim structures, different ε values, and different enforcement mechanisms. The three readings coexist across different jurisdictions and regulatory regimes. Shared_liability is the upstream reading in the network: it influences and responds to both single-party readings because it occupies the structural middle ground—it creates pressure on single-party regimes to compete on efficiency but does not foreclose either single-party reading. The constraint family is linked via network.affects_constraints in all three files."
+  },
+  "omegas": [
+    {
+      "id": "causal_attribution_opacity",
+      "question": "Can causal contribution and operational control be reliably attributed across the value chain when code complexity, supply-chain dependencies, and deployment architecture create irreducible opacity?",
+      "resolution_mechanism": "Empirical audits of liability dispute resolution: track what fraction of causal-attribution disputes can be adjudicated with high confidence vs. settle on indemnification defaults. Compare across jurisdictions with different opacity-handling rules (mandatory disclosure, presumptions, caps).",
+      "impact": "High opacity would suggest causal attribution is theatrical—disputes resolve via contract negotiation and insurance rather than genuine causal measurement—which would elevate theater_ratio closer to 0.6+ and reclassify toward piton. Low opacity would support the coordination claim and sustain tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether causal contribution can be reliably measured or defaults to contractual allocation."
+    },
+    {
+      "id": "extraction_vs_coordination_overhead",
+      "question": "Does the measured extractiveness (insurance premiums, legal fees, indemnification complexity) reflect genuine coordination costs (necessary to align incentives) or rent capture by intermediaries (insurance/legal services)?",
+      "resolution_mechanism": "Comparative study of liability dispute costs (legal time, insurance underwriting, settlement duration) across shared_liability, developer_liability, and deployer_liability regimes. Measure harm-reduction outcomes per unit cost invested.",
+      "impact": "If extractiveness scales with intermediary profits but NOT with harm reduction, the constraint is snare-flavored (coordination story is cover). If extractiveness scales with both, tangled_rope holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether transaction costs correspond to coordination value or intermediary rent-seeking."
+    },
+    {
+      "id": "reading_foreclosure_vs_coexistence",
+      "question": "Within a single regulatory jurisdiction, can shared_liability coexist with developer_liability or deployer_liability, or does one reading's adoption foreclose the others?",
+      "resolution_mechanism": "Regulatory history: jurisdictions that shifted from one reading to another; analysis of whether transition was mandated foreclosure or optional substitution.",
+      "impact": "If readings foreclose each other within a jurisdiction, the reading_relations should be 'forecloses'. If jurisdictions can adopt any reading independently, the relation is 'coexists_with' (which is the current omega's working assumption). Foreclosure would indicate strong normative commitment; coexistence would indicate reading choice is jurisdictional policy, not logical necessity.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether liability readings are mutually exclusive or policy choices."
+    },
+    {
+      "id": "mandatrophy_signal_validation",
+      "question": "Is the flattening theater_ratio (t=15–25) a sign that causal-attribution disputes have become ritualized (mandatrophy candidate), or a sign that norms have stabilized and transaction costs have become predictable (healthy equilibrium)?",
+      "resolution_mechanism": "Time-series analysis of dispute outcomes: track variance in causal-attribution judgments over time. Declining variance would suggest ritualization (mandatrophy); stable variance would suggest equilibrium.",
+      "impact": "If mandatrophy is confirmed, the constraint should be reclassified as piton by t=25. If norms have simply stabilized, tangled_rope holds. The distinction is measurable via judgment variance, not via theater_ratio alone.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether theater-ratio plateau indicates normalization or atrophied function."
+    },
+    {
+      "id": "shared_liability_reading_identity",
+      "question": "Is the shared_liability reading a stable equilibrium interpretation of the liability_attribution kernel, or is it an unstable middle position that regulators use transitionally before settling on a single-party reading?",
+      "resolution_mechanism": "Regulatory longitudinal study: track how many jurisdictions adopt shared_liability and remain stable vs. revert to or pivot toward single-party readings over a 30+ year horizon.",
+      "impact": "Persistent adoption would support shared_liability as a legitimate reading coexisting with single-party alternatives. High reversion would suggest shared_liability is a transient policy experiment, not a stable reading of the kernel.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether shared liability is a stable reading or a transitional regime."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "liability_attribution__developer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "liability_attribution__deployer_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "joint_causal_accountability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "distributed_control_requires_distributed_liability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "proportional_causal_contribution_allocation",
+    "drift_state": {
+      "moment": "contemporary_transaction_cost_maturation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "liability_insurance_market",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
