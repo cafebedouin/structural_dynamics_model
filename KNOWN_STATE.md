@@ -45,8 +45,8 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-06-12 — OQ-78 evidence pass: ε clustering is two-layer (SCOPE bin quantization + model idiom); two bin boundaries EQUAL config thresholds; claim/metric circularity escalated to OQ-117
-**Files:** prompts/uke_scope_v2_json.md, prompts/constraint_story_generation_prompt_json.md, prolog/config.pl, ISSUES.md
+## 2026-06-12 — OQ-78 evidence pass: ε clustering two-layer; bin boundaries EQUAL config thresholds; circularity → OQ-117; THEN probe HALTED pre-spend — epsilon_bin channel DEAD at the generation interface (hypothesis is the live channel)
+**Files:** prompts/uke_scope_v2_json.md, prompts/constraint_story_generation_prompt_json.md, prolog/config.pl, agent/story_generator_base.py, agent/generate_kernel_corpus.py, agent/c-orchestrator.py, ISSUES.md
 **Tier:** correction-key
 
 - The ε↔claimed_type correlation (kernel_v2_test2 n=60: snare 0.68–0.78, mountain 0.02–0.15,
@@ -62,13 +62,29 @@ End-of-Session Documentation Review), not in CLAUDE.md.
   rail) OPEN, re-baselined on cohort zero, graduation = bin-withdrawal probe; independence
   circularity → OQ-117, whose decouple-vs-document design call is SEQUENCED AFTER the probe
   (decision logic recorded in OQ-117 ahead of the run).
-- Probe design PINNED, spend awaiting greenlight: 15/arm, topic-matched seeds; withheld arm
-  removes ONLY epsilon_bin (uke_scope block intact — full-block withdrawal confounds the
-  channel); endpoints = rail share (last-digit-8; baseline 86%/77%) and exact-0.68 share (~30%).
-- Free-gate residual (operator amendment, in OQ-117): the rope/snare split 0.45/0.46 is the
-  ONLY ε gate no bin edge touches — and the only place genuine divergences live (3
-  kernel-reading ropes). Divergence statistics are evidential in proportion to gate freedom;
-  the consumer inventory is a WEIGHTING, not a list.
+- Probe greenlit (15/arm), then HALTED PRE-SPEND in pre-flight recon (halt-and-escalate, not
+  inline-amended): NO production path feeds epsilon_bin to the authoring model — unified
+  backend / gkc kernel path / c-orchestrator inline all pass `Hypothesis type` only; sole bin
+  consumers are two streamlit display lines; the prompt's mapping table is
+  instruction-without-data. Historical numeric channel = the PRE-de-leak prompt's type-band
+  table (config thresholds verbatim), scrubbed at b6c4e113 (2026-06-05) — every post-reset
+  story authored with NO numeric ε instruction and NO bin token. Recorded uke_scope blocks
+  are MODEL-FABRICATED (no writer in code; free-text tokens; fabricated dates) ⇒ the 15/15
+  bin-conformance was self-labeling. Witnesses W1–W3:
+  `audits/2026-06-12_oq78_dead_bin_channel/`. epsilon_bin = Pattern-1 dangling wire;
+  disposition in OQ-117 (c), default NOT re-wire.
+- Fate-2 graduation RE-ROUTED, zero marginal spend: OQ-109 Phase C regen = withheld arm on
+  matched seeds by construction (seed spec is title/domain/summary only); kernel_v2_test2
+  archive (n=60) = fed arm and comparator (cross-arm is the test; archive shares are labeled
+  context: rail 86% n=91 / 77% n=60; exact-0.68 ~30%). Phase C withdraws MORE than hypothesis
+  (full-manifest withdrawal): persistence ⇒ idiom a fortiori; collapse ⇒ hypothesis-vs-rest
+  unresolved, finer hypothesis-only arm becomes the designed follow-up.
+- Free-gate residual (operator amendment, in OQ-117) — SUPERSEDED same day with the mechanism
+  correction: on the ε side ALL gates are numeric-instruction-free in the live pipeline; the
+  fed side is the CLAIM (hypothesis-echo), uniformly. Re-weighting principle survives
+  restated: discount divergence evidence by what the claim side was fed. OQ-117's live
+  mechanism = hypothesis-feeding; boundary disclosure (0.10/0.30) reaches generation only
+  indirectly (SCOPE co-authors bin + hypothesis; the hypothesis travels).
 - Reconciliations: the 60th story is regime_change_structural_break (sole claimed piton,
   ε=0.28); the live cohort-zero corpus already band-breaks (institutional_trust_erosion_c0,
   claim=mountain ε=0.68 — the OQ-116 MOUNTAIN_METRIC_CONFLICT firing) while LANDING on the rail
