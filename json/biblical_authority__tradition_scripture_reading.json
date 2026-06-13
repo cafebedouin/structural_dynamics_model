@@ -1,0 +1,265 @@
+{
+  "header": {
+    "constraint_id": "biblical_authority__tradition_scripture_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "6a76f326-aad2-4ddb-8cef-62db6819e8e6"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Scripture-Tradition-Magisterium Authority Structure",
+    "topic_domain": "theology/religious/institutional",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "clerical_hierarchy",
+      "magisterial_authority"
+    ],
+    "victims": [
+      "lay_faithful",
+      "independent_interpreters"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 2000
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 800,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1200,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1600,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 400,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 800,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1200,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1600,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 800,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1200,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1600,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.41
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The tradition-scripture-magisterium reading instantiates a specific authority structure for interpreting Christian Scripture. It claims that Scripture cannot be understood correctly without the living interpretive tradition (the consensus of the fathers, the teaching of the councils, the living magisterium) and that the magisterium (the teaching office of the Church) is the authorized guardian and authoritative interpreter of both Scripture and tradition. This reading emerged fully in the medieval period and was formally codified at the Council of Trent (1545-1563) in response to the Protestant Reformation's challenge via sola scriptura. The kernel — the contested claim about how Scripture, tradition, and authority relate — remains live: Catholic and Orthodox traditions maintain the tradition-magisterium reading; Protestant and evangelical traditions reject it in favor of sola scriptura; some liberal Protestant and Anglican traditions adopt a conciliar-patristic reading that emphasizes consensus and ecumenical continuity over magisterial decree. This constraint story captures ONLY the tradition-scripture-reading as a clean, ε-invariant constraint. The siblings (sola_scriptura_reading, conciliar_reading) are OTHER constraints, authoring their own ε, beneficiaries, and structural data. They are linked via network.affects_constraints.",
+    "key_agents": [
+      "magisterial_authority: institutional agenda-setter, powerful, civilizational horizon — sets/enforces the rules for legitimate scriptural interpretation, binds the faithful to magisterial pronouncements",
+      "clerical_hierarchy: institutional beneficiary + agenda-setter, identity-locked, civilizational horizon — mediates sacramental grace, interprets Scripture authoritatively under magisterial oversight, their status is constituted by the constraint",
+      "lay_faithful: organized payer + beneficiary, constrained exit, biographical horizon — receive sacraments and doctrine but are forbidden independent scriptural interpretation",
+      "independent_interpreters: moderate payer + excluded, trapped exit, biographical horizon — scholars and dissenting clergy suppressed by institutional mechanisms",
+      "lay_mystics_and_prophets: powerless excluded, trapped exit, local scope — lay charisms are subordinated to clerical discernment",
+      "rival_religious_communities: powerful excluded, trapped exit, global scope — Protestant, Orthodox, and other traditions rejected as illegitimate interpreters",
+      "analytical_observer: observer, analytical power — historians and scholars examining the constraint from outside"
+    ],
+    "logic_rationale": "Extractiveness (0.68 at interval end) reflects the substantial concentration of interpretive authority in the magisterium and the structural dependence of lay salvation on clerical mediation. This is not primarily economic extraction (though tithes and fees are present in historical practice) but interpretive and spiritual extraction: the lay faithful cannot directly read Scripture for truth; they must accept the magisterium's authoritative interpretation. Suppression (0.72) is correspondingly high because the constraint's persistence depends actively on excluding alternative readings — inquisitorial investigation, book bans, excommunication of dissenting theologians, and internal discipline of clergy who step out of line. Theater (0.41) is moderate-low because the constraint performs real coordination work (doctrinal unity is genuine) but an increasing share of enforcement activity from ~400 onward is devoted to defending magisterial authority itself rather than solving the original doctrinal fragmentation problem. The time series (0-2000) shows extraction accumulating from ~0.35 in the early apostolic period (when magisterial authority was minimal and tradition was living consensus) to 0.68 by the early modern period (after the full crystallization of the hierarchy and the Tridentine codification). Suppression grows steeper (0.28 to 0.72) as institutional mechanisms harden to defend against Protestant challenge. Theater rises gradually as the constraint becomes increasingly self-referential (defending magisterial authority as such, rather than solving doctrinal fragmentation). The coercion grid shows asymmetric pressure: suppression at the individual level stays lower (0.68 at t=2000) than at the structural level (0.78) because the constraint operates partly through internalization (the lay faithful internalize the teaching that they lack interpretive competence); resistance at the individual level (0.54 at t=2000) is lower than organizational resistance (0.58) because the powerless are harder to organize and the constraint locks identity. Accessibility collapse rises across all levels but highest at the structural and stakes-inflation levels (0.72-0.76 at t=2000) because the constraint closes off the entire alternative possibility-space (that a Christian could read Scripture faithfully without magisterial permission).",
+    "perspectival_gap": "The magisterial authority and clerical hierarchy seats should compute this as genuine coordination (rope) from their internal perspective: they truly believe they are guarding apostolic continuity and preventing doctrinal chaos. From the lay faithful's seat, it should compute as constrained but coordinated (partial beneficiary from sacramental access, partial payer for interpretive constraint). From the independent interpreter's seat, it should compute as snare (trapped, suppressed, excluded). From the analytical observer's seat, it computes as tangled_rope: real coordination benefit (doctrinal unity) yoked to real extraction (magisterial monopoly). The engine computes per-seat: the authored claim (tangled_rope) and the authored metrics should produce divergent seat classifications that the engine's per-seat logic reveals.",
+    "directionality_logic": "The magisterial authority and clerical hierarchy are clear beneficiaries: they collect interpretive authority, spiritual power, and institutional control. Their directionality (d) should be low — they benefit from the constraint (d near 0.0). The lay faithful are symmetric: they benefit from sacramental access and unified doctrine (low d) but pay through interpretive constraint (higher d) — net near 0.5 or slightly higher. Independent interpreters and lay prophets are clear targets: they are suppressed and excluded (d near 1.0). The analytical observer is unaffected (d = 0.5 analytic). This mixed directionality across seats is what the coercion grid captures: the constraint does different work for different levels and roles. A powerful institutional actor (magisterium) uses the constraint to consolidate power; a lay actor experiences it as coordination with a compliance tax; a powerless actor experiences it as pure suppression.",
+    "mandatrophy_analysis": "The founding problem was real: early Christian communities faced doctrinal fragmentation (Gnosticism, Arianism, Docetism) and needed a way to preserve apostolic continuity. The magisterium-tradition structure was designed to solve this. However, by ~1200 (time 1200 in the interval), the founding problem had substantially been solved: Christian doctrine was stabilized and widely accepted. Yet the constraint persisted and even intensified, as shown by rising extractiveness and suppression. The theater ratio rising from 0.22 to 0.41 indicates increasingly performative activity: defending magisterial authority as such, rather than solving doctrinal fragmentation. The constraint exhibits mandatrophy: the function that justified it (preventing fragmentation) is no longer the live problem, yet the authority structure persists by force and habit. The six_questions answers capture this: the founding_problem_status is 'contested' because the magisterium claims the problem (doctrinal drift, individual interpretation) remains live, while external observers note that the constraint now generates its own problems (suppression of theological development, resistance from educated lay believers). The constraint should be flagged for mandatrophy review: it persists not because the founding problem remains acute but because the beneficiary (clerical hierarchy) has structural interest in its continuance.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'biblical_authority' (kernel_id: biblical_authority). I am instantiating the reading: tradition_scripture_reading (the magisterium guards the living tradition and interprets Scripture authoritatively through it). The sibling readings are: (1) sola_scriptura_reading (Scripture alone is sufficient and self-interpreting for doctrine); (2) conciliar_reading (Scripture is interpreted through ecumenical councils and patristic consensus, not magisterial decree). These three readings have competed for dominance in Christian history and remain live positions held by different institutional traditions. The tradition_scripture_reading is the authoritative position within Roman Catholicism, Eastern Orthodoxy, and other hierarchical traditions. The sola_scriptura_reading dominates Protestant, evangelical, and independent churches. The conciliar_reading is emphasized in some Anglican, Orthodox, and liberal Protestant communities. The three readings are NOT just different opinions on the same constraint — they have structurally different ε values, beneficiary/victim structures, and enforcement mechanisms. This reading (tradition_scripture_reading) features high clerical extraction (sacramental mediation required), low doctrinal fragmentation (centralized adjudication), and institutional beneficiaries (magisterium, clerical hierarchy). The sola_scriptura_reading would feature low clerical extraction (every believer can read), higher doctrinal fragmentation (individuals may disagree), and lay beneficiaries (interpretive agency returned to readers). The conciliar_reading would feature moderate clerical extraction (councils bind, but are accountable to patristic consensus), moderate fragmentation (councils can disagree with each other), and diffuse beneficiaries (the tradition as living community). Because their ε values differ, each sibling instantiates a different constraint, and all three are linked via network.affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "tradition_continuity_vs_institutional_codification",
+      "question": "Is the living tradition a genuine continuous development of apostolic witness, or has it been captured by institutional self-interest and codified into texts (creeds, councils, magisterial decrees) that now represent only power rather than continuity?",
+      "resolution_mechanism": "Historical analysis of doctrinal development: did the fathers genuinely preserve apostolic teaching, or did they innovate under pressure? Do developments follow organic theological logic or institutional power accumulation? Textual comparison of patristic sources with later magisterial claims about what the tradition 'always held'. Empirical test: Did traditions that broke from magisterial authority (Reformation, schisms) preserve recognizable continuity, or did they fragment into unrecognizable forms?",
+      "impact": "If tradition represents genuine continuity, the magisterium's interpretation is binding and the constraint is valid coordination. If tradition has been captured by institutional power, the magisterium is a snare masquerading as rope. This is the key omega that distinguishes whether mandatrophy has occurred.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether tradition represents apostolic continuity or institutional consolidation of power."
+    },
+    {
+      "id": "sacramental_efficacy_independence",
+      "question": "Does sacramental grace depend on apostolic succession and magisterial authority, or would sacraments remain efficacious if administered outside the hierarchy?",
+      "resolution_mechanism": "Theological-empirical: If lay-administered or schismatic sacraments show the same fruits (genuine conversion, spiritual transformation, moral renewal) as hierarchical sacraments, the dependency claim is empirically falsified. If the difference in fruit is zero or unmeasurable, the extraction mechanism (sacramental mediation as the means of grace) loses its structural justification.",
+      "impact": "If sacraments work outside the hierarchy, the constraint loses its most powerful extraction mechanism: the lay faithful's dependence on ordained priests for access to grace. The constraint would downgrade from tangled_rope (coordination + extraction) to rope (pure coordination). Lay spiritual agency would be validated and clerical monopoly broken.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether sacramental grace depends on hierarchical mediation or is accessible outside it."
+    },
+    {
+      "id": "magisterial_accountability_mechanism",
+      "question": "Is the magisterium genuinely accountable to Scripture and tradition, or does it have unilateral authority to redefine both in light of its own pronouncements?",
+      "resolution_mechanism": "Institutional analysis: Can the magisterium be overruled? By whom? By what process? Does it claim infallibility in doctrinal judgment? Has it ever formally reversed its own teaching (not development, but reversal)? Is there an appeal mechanism external to it? Compare actual governance structures with the stated accountability narratives.",
+      "impact": "If magisterial authority is unilateral and unaccountable, the constraint is structurally a snare: the beneficiary (magisterium) controls the rules and cannot be overridden. If the magisterium is genuinely accountable to councils, Scripture, and tradition, the constraint is more defensibly tangled_rope (coordination with accountability). The difference determines whether the constraint can self-correct or is locked into perpetuating extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the magisterium is accountable to external authority or self-legitimating."
+    },
+    {
+      "id": "lay_interpreters_vs_clerical_monopoly",
+      "question": "Could the coordination benefit of doctrinal unity be preserved while breaking the clerical monopoly on authoritative interpretation?",
+      "resolution_mechanism": "Comparative institutional: How do traditions that emphasize lay interpretation (some Protestant communities, some Jewish and Muslim schools) handle doctrinal unity? Do they fragment catastrophically, or do they maintain coherence through different mechanisms (lay councils, scholarly consensus, community discernment)? Do schisms occur less frequently in hierarchical or in lay-inclusive systems?",
+      "impact": "If lay interpretation can preserve coordination without clerical monopoly, the current constraint is extractive by necessity and not by intrinsic requirement. The structure could be reformed to spread interpretive authority while keeping coordination. This would reframe the constraint as not merely tangled_rope but as possibly remediable through structural change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether clerical monopoly is structurally necessary for doctrinal coordination."
+    },
+    {
+      "id": "reading_premise_contest",
+      "question": "Which sibling reading (sola_scriptura or conciliar) most coherently instantiates apostolic continuity, and does this reading (tradition_scripture_reading) actually preserve what it claims to preserve?",
+      "resolution_mechanism": "Textual and historical: What did the earliest apostolic fathers actually claim about Scripture, tradition, and authority? Which sibling reading aligns better with patristic sources? Has this tradition_scripture_reading reading been retrospectively imposed on the fathers, or is there genuine continuity? Do the early councils invoke magisterial authority in the way the constraint claims?",
+      "impact": "If another reading aligns better with apostolic sources, this reading is a misappropriation of authority and a false summit. The constraint would lose its legitimacy and shift toward snare classification. If this reading does align, it gains support as genuinely coordinating. This omega captures the kernel-level uncertainty at which reading actually instantiates the kernel correctly.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which reading of biblical authority actually represents apostolic continuity."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.16
+  },
+  "network": {
+    "affects_constraints": [
+      "biblical_authority__sola_scriptura_reading",
+      "biblical_authority__conciliar_reading"
+    ],
+    "dual_formulation_note": "The biblical_authority kernel is instantiated in three separate constraint stories, one per reading, rather than authoring 'biblical authority' as a single constraint with three measurement observables. Each reading has a structurally distinct ε value, beneficiary/victim set, and claim-metric profile. The tradition_scripture_reading (this story) features institutional beneficiaries (magisterium, clerical hierarchy) and lay victims (restricted interpretive agency). The sola_scriptura_reading features lay beneficiaries (interpretive agency) and clerical victims (authority loss). The conciliar_reading features diffuse beneficiaries (ecumenical consensus) and concentrated victims (magisterial unilateral authority). These are not perspectives on one constraint; they are different constraints instantiated from one contested kernel. All three are linked via affects_constraints to enable kernel-family analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.78
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.52
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "biblical_authority__sola_scriptura_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "biblical_authority__conciliar_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "tradition_co_revelatory_with_scripture",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "magisterium_unilaterally_authoritative_interpreter",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "apostolic_continuity_via_magisterial_guardianship",
+    "drift_state": {
+      "moment": "post_reformation_and_modern_scholarship",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-13",
+    "source_essay": "no_scope_rebuild",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

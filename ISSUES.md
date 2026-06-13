@@ -3092,6 +3092,42 @@ regime, which is when OQ-109's homogeneity falsifier (item 6) becomes checkable.
 
 **Power tiers for the readouts (recorded 2026-06-05, before the data — pre-register criteria at each tier BEFORE looking):** Tier 1 machinery shakedown ~100 stories (~15 topics; pipeline-holds criterion only, no verdicts; e-digit grid needs >=5 expected/cell). Tier 2 diff-distribution verdicts ~250-300 stories (proportions to +-4-5pp; per-claimed-type cells need ~30+ each). Tier 3 cross-axis correlation ~100-150 KERNELS (~500-600 stories; r=0.3 at 80% power needs ~85 kernels, r=0.2 ~195; the unit is the kernel — only kernels carry the axiom axis and construction pair; bounding r away from 1 is cheap and lands by Tier 2). Tier 4 threshold recalibration (OQ-48) ~700+ (old calibration used 691). e-statistics stay scoped to this one generation regime (OQ-26); never mix archived corpora into denominators.
 
+**Pilot-increment log — never-generated reading-seeds recipe (2026-06-13, branch `corpus-rebuild-fresh`).**
+The per-increment rebuild recipe is witnessed end-to-end on the fixed pipeline (commit
+`2e3e1998`, cherry-picked onto `main` → cherry `dc12bf5a`; the five provenance/robustness defects).
+`pilot_01` = **30 stories / 10 whole kernels** (`constitutional_text_authority`, `biblical_authority`,
+`market_as_natural_default`, `acceptable_risk_for_energy`, `provincial_sovereignty_boundary`,
+`naskh_principle`, `abrahamic_covenant`, `federation_membership_obligations`, `kodashim_obligation`,
+`feud_obligation_kernel`), generated flat no-scope from `outputs/completion_seeds/chunks/pilot_01.json`.
+Witnesses (all same-turn): ladder pending 10→30 after OQ-121 fossil strip; provenance stamped from
+`result_model` (all 30 read `claude-haiku-4-5-20251001`, no fabricated Sonnet/Opus); corpus load 5→35,
+zero "Redefined static procedure" warnings (defect-3 multifile: story_provenance facts 1→5 across the
+pick, 35 after generation); `run_pipeline` manifest `n_constraints` 5→35; 30/30 generated (7 attempt-1
+failures all recovered in attempt 2, no `failures.json`); cost ~$0.87 (Haiku batch).
+- **Seed-pool correction:** `build_never_generated_seeds.py` (byte-identical on `main` and the 304
+  branch) now emits **1005 readings / 331 kernels**, NOT the plan's remembered 304/101 — the gap is
+  pure manifest-pool growth in gitignored `outputs/` since `corpus-rebuild-304` was cut, not a logic
+  change. So **remaining ≈ 975 readings / 321 kernels** (`pilot_02..`), NOT ~270. The seed pool is a
+  derived artifact of the gitignored manifest pool; a fresh worktree off `main` has zero manifests and
+  must regenerate the pool from a tree that has them (here: the `oq117-evidence-block` working tree's
+  690-manifest pool), then carve chunks.
+- **Quarantine (OQ-58, expected-and-caught, not failures):** the no-scope path SKIPS
+  `validate_reading_relation_integrity` — run it manually (done here). 3 dangling edges caught & written
+  to `prolog/cs_reading_relation_quarantine.json` (this overwrote 6 stale `employment_boundary` entries
+  orphaned on the fresh corpus — last-run-scoped by design): `abrahamic_covenant → christian_supersessionist_reading`
+  (the kernel's 4th reading is not in the seed pool — true closure gap, can't expand without authoring a
+  seed), and 2× `naskh_principle → {classical_abrogation,contextual_harmonization}_reading` — a
+  **generation-side naming drift**: the model appended `_reading` to sibling targets but the reading_ids
+  / files carry no suffix, so within-kernel edges that should resolve land in quarantine. Watch this at
+  scale; it inflates the dangling count for any kernel whose reading_ids lack a `_reading` suffix.
+- **Next step (gated on operator go — decision gate after the pilot):** operator decides scale/spend
+  (one more increment vs. full ~975-reading completion) BEFORE generating `pilot_02..`. To continue: in a
+  tree with the manifest pool, `python3 agent/build_never_generated_seeds.py`, carve the next N whole
+  kernels (kernels 11.. in builder file order) to `outputs/completion_seeds/chunks/pilot_NN.json`, strip
+  their ids from `prolog/beta_processed.txt` (OQ-121 before/after witness), generate with
+  `python3 -m agent.generate_kernel_corpus --seeds <chunk>`, run the OQ-58 sweep manually, then
+  `run_pipeline`. Do NOT auto-continue.
+
 ## OQ-76 — Kernel/flat gate is stochastic on a real boundary band: routing noise lands in Stage-2's cross-axis correlation
 
 **Ω-type:** Ω_E (the band is measured; the cause is K2-testable), with an Ω_P edge (which fix, and whether the interim hedge ships before Stage-2, are operator rulings).
