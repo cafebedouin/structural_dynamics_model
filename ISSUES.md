@@ -5514,6 +5514,31 @@ Cost (batch API, sonnet-4-5, priced off `dcfaea97`): **≈ $1 per 15-draw batch*
 change + analysis/witness time. Direction-of-fix discipline from OQ-78 still binds: no numeric
 disclosure to any authoring stage.
 
+**SPEND RESULTS (2026-06-13, both arms run — `audits/2026-06-13_oq117_within_arm_proxy/RESULTS.md`;
+freeze `9aa1c90e` preceded both batch IDs). Still NOT a ruling — escalated.**
+
+- **Spend A — Outcome A2 (STRUCTURE-TRACKING), conclusive. mountain 0/15.** Five non-naturalization
+  kernels (impositions/coerced-reversal/transition/decline) all authored their honest *non-mountain*
+  claim withheld (turkish/meiji→scaffold, gold_to_fiat→tangled_rope, mormon→snare/tangled_rope/rope,
+  dueling→rope). **The within-arm proxy's selection confound is KILLED:** "mountain 15/15" on the
+  naturalization kernels was **correct-read, not idiom** — the model authors `claimed_type` as a
+  structure-tracking read of the summary. (c)-implication, claim channel: honest/summary-reconstructed
+  → feeding the claim is redundant → **document-as-condition suffices on the claim side.**
+- **Spend B — Outcome B3 (AMBIGUOUS by the frozen headline), informative structure.** Fed claim =
+  mountain; ε is the measurement. **Headline free_market fed-arm mean ε = 0.427** (withheld was 0.68
+  dead-stable) — lands in the frozen 0.40–0.55 dead band → **B3, reported as ambiguous, NOT narrated
+  into B1 (≤0.40).** The structure: feeding moves ε **only at the divergent cell** — free_market
+  −0.25 and destabilizes 0.68→[0.42,0.18,0.68] (one draw collapses to the mountain floor), total_war
+  −0.10 to floor; inert where ε was already mountain-consistent (qwerty/zero Δ=0); printing_press
+  perversely +0.10. Set-mean Δ −0.05. **Partial, divergent-cell-localized manufactured concordance —
+  neither uniform (B1) nor inert (B2).**
+- **Combined (c) read, escalated (operator's floor):** document-as-condition is right for the
+  **claim** side (A2 conclusive); the **metric** side shows a **real but bounded** decouple rationale,
+  localized to cells where claim and metric honestly diverge, that did NOT clear the frozen B1 bar.
+  The call is genuinely **intermediate** — not a clean decouple, not a clean document. Per the freeze:
+  escalated, not narrated to a verdict. Discipline honored: freeze-before-draw, ambiguous-reported-as-
+  ambiguous, escalate-don't-redraw, no numeric disclosure to authoring.
+
 ---
 
 ## OQ-118 — Draw-stability tracks field-construction-type, not the σ/seat line: the cohort's analysis contract (successor to OQ-109's σ/seat residual)

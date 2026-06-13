@@ -79,7 +79,8 @@ def build_requests(seeds, draws, arm):
         static_prefix, dynamic_tail = build_prompt_parts(src)
         for draw in range(1, draws + 1):
             reqs.append({
-                "custom_id": f"{seed['kernel_id']}__{arm}__d{draw}"[:64],
+                # lowercase arm so header.constraint_id matches the schema's ^[a-z][a-z0-9_]*$
+                "custom_id": f"{seed['kernel_id']}__{arm.lower()}__d{draw}"[:64],
                 "params": {
                     "model": czr.MODEL, "max_tokens": MAX_TOKENS, "temperature": czr.TEMPERATURE,
                     "system": system,
@@ -138,7 +139,7 @@ def main():
     ok = fail = 0
     for result in client.messages.batches.results(batch.id):
         cid = result.custom_id
-        kid, arm, drawtok = cid.split("__")
+        kid, arm, drawtok = cid.split("__")  # arm now lowercase
         draw = int(drawtok[1:])
         if result.result.type != "succeeded":
             fail += 1
@@ -154,10 +155,9 @@ def main():
             print(f"FAIL {cid}: {errors}", file=log, flush=True)
             continue
         story.setdefault("header", {})["constraint_id"] = cid
+        # provenance schema is additionalProperties:false — arm/fed are encoded in the
+        # custom_id (…__a__ / …__b__) and the out_dir, not injected as extra story keys.
         story["provenance"] = czr.stamps(kid, draw)
-        story["provenance"]["oq117_arm"] = arm
-        if arm == "B":
-            story["provenance"]["fed_hypothesis"] = FED_HYPOTHESIS
         verrors = validate_json(story)
         if verrors:
             # record the failure but keep the raw story for inspection (fed-arm lint conflicts are a finding)
