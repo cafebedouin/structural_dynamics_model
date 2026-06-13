@@ -93,7 +93,8 @@
     founding_problem_status/2,     % founding_problem_status(+C, +S) — R5; S ∈ {live, dead, contested}; NEVER consumed as a claim, mismatch-only
     % OQ-92 receipt surface (step 3 Stage B; tri-valued: named-seat/diffuse/ABSENT-fail-closed)
     stakeholder_gain_flow/2,       % stakeholder_gain_flow(+C, +Receiver) — Receiver = seat name (capturer) | diffuse (authored no-capture). NEVER synthesized (fabrication ban, OQ-92 Rulings; data_repair.pl is the named door). Receipt ≠ beneficiary-role.
-    fixing_cost_class/2.           % fixing_cost_class(+C, +Class) — Class ∈ {cheap, prohibitive}; distinct field from gain_flow by ruling (b); cost never demotes capture
+    fixing_cost_class/2,           % fixing_cost_class(+C, +Class) — Class ∈ {cheap, prohibitive}; distinct field from gain_flow by ruling (b); cost never demotes capture
+    story_provenance/8, story_seed/3.  % Phase C provenance facts (compiler-emitted per story). MUST be multifile like every sibling above — declared dynamic-only, they loaded 1/N ("Redefined static procedure" on each testset consult, last-file-wins). Fixed 2026-06-13.
 
 :- dynamic
     attribute/3, has_mandatrophy_declaration/1,

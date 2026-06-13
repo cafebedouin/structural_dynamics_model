@@ -28,11 +28,14 @@ Usage:
 """
 
 import argparse
+import functools
 import json
 import re
+import subprocess
 import sys
 import time
 import uuid
+from datetime import date
 from pathlib import Path
 
 # Ensure repo root is on the path when invoked as a script
@@ -75,6 +78,42 @@ BATCH_POLL_INTERVAL = 30
 JSON_DIR = REPO_ROOT / "json"
 BETA_SEEDS = PROLOG_DIR / "beta_seeds.json"
 BETA_PROCESSED = PROLOG_DIR / "beta_processed.txt"
+
+
+@functools.lru_cache(maxsize=None)
+def _git_commit_of(rel_path):
+    """HEAD commit that last touched rel_path — provenance stamp. Cached per run so a
+    304-story batch makes two git calls, not 608."""
+    try:
+        out = subprocess.run(["git", "log", "-1", "--format=%H", "--", rel_path],
+                             capture_output=True, text=True, cwd=REPO_ROOT)
+        return out.stdout.strip() or "unknown"
+    except Exception:
+        return "unknown"
+
+
+def _provenance_stamp(model, sampling_params="unspecified", source_essay="unspecified",
+                      seeded_from="none", draw=1):
+    """Pipeline-authored top-level `provenance` block (schema-required since OQ-109
+    Phase C, 2026-06-11). Mirrors cohort_zero_regen.stamps: the content LLM cannot know
+    its own commits / model / sampling params and tends to copy the example's placeholder
+    block, so the pipeline stamps these and OVERWRITES any model-emitted copy — the same
+    rationale as the always-overwritten story_uid. `model` is the TRUE generation model
+    (read from the API result by the caller — this is shared across the no-scope and
+    c-orchestrator backends, which use different models). seeded_from='none': fresh
+    completion draws, not re-draws of a prior story (kernel lineage is carried separately
+    by the _kernel_id injection + the cs block). draw=1: single-draw rebuild."""
+    return {
+        "prompt_commit": _git_commit_of("prompts/constraint_story_generation_prompt_json.md"),
+        "schema_commit": _git_commit_of("schemas/constraint_story_schema.json"),
+        "generated_date": date.today().isoformat(),
+        "source_essay": source_essay,
+        "one_shot_example": str(EXAMPLE_PATH.relative_to(REPO_ROOT)),
+        "model": model,
+        "sampling_params": sampling_params,
+        "seeded_from": seeded_from,
+        "draw": draw,
+    }
 MAX_CUSTOM_ID = 64  # Anthropic batch custom_id pattern: ^[a-zA-Z0-9_-]{1,64}$
 
 
@@ -570,7 +609,8 @@ def strip_extra_properties(story: dict, schema: dict) -> tuple:
 
 def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_log,
                           gen_seeds_by_id=None, rejections_path=None, overwrite=False,
-                          id_map=None, token_acc=None):
+                          id_map=None, token_acc=None,
+                          provenance_source="unspecified", sampling_params="unspecified"):
     """Write each result to run-tagged dirs: json_dir/.json + testsets_dir/.pl.
 
     Error handling (two tracks):
@@ -619,6 +659,17 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
         if story.get("header", {}).get("constraint_id") != cid:
             story.setdefault("header", {})["constraint_id"] = cid
 
+        # Pipeline-stamp the schema-required `provenance` block BEFORE validation, always
+        # overwriting any model-emitted copy (same rationale as story_uid below). Without
+        # this the no-scope path fails "'provenance' is a required property" wholesale —
+        # the cohort path already stamps; this wires the same stamp into the primary
+        # rebuild path. Re-validate after stamping so a provenance-only failure clears.
+        # Model is read from the API result (this writer is shared with the c-orchestrator
+        # unified backend, which may use a different model than GEN_MODEL) — never hardcoded.
+        result_model = getattr(result.result.message, "model", None) or GEN_MODEL
+        story["provenance"] = _provenance_stamp(result_model, sampling_params, provenance_source)
+        errors = validate_json(story)
+
         if errors:
             # Deterministic repair, then re-validate: path-aware strip (additionalProperties)
             # + comprehensive repair_story (required defaults, id transliteration, null/clamp).
@@ -628,6 +679,11 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
             # which is correct: those are semantic, and clamping them would fabricate data.
             repaired, props_removed = strip_extra_properties(story, _schema)
             repaired = repair_story(repaired, _schema)
+            # Re-stamp: strip/repair drop the top-level provenance block (it is not in their
+            # preserved-field set), which would re-introduce a spurious "provenance required"
+            # error on top of the genuine one. Provenance is pipeline-authored — re-apply it
+            # so only REAL post-repair errors (grid misalignment, anyOf, etc.) survive.
+            repaired["provenance"] = _provenance_stamp(result_model, sampling_params, provenance_source)
             retry_errors = validate_json(repaired)
 
             if not retry_errors:
@@ -687,7 +743,17 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
         if manifest_fco:
             story["_flat_control_of"] = manifest_fco
 
-        pl_content = generate_pl(story)
+        # generate_pl RAISES (not returns errors) on referential-integrity violations the
+        # JSON schema can't express — e.g. OQ-92 ghost-seat: gain_flow names a stakeholder
+        # not in stakeholders[]. That is a genuine bad story, but an uncaught raise here
+        # crashes the WHOLE batch run (witnessed 2026-06-13: one ghost-seat story killed a
+        # 6-seed re-run mid-write). Catch it → count as FAIL, log, and continue.
+        try:
+            pl_content = generate_pl(story)
+        except (ValueError, KeyError) as e:
+            print(f"  FAIL {cid}: generate_pl rejected — {e}")
+            failed += 1
+            continue
 
         # Strip the ephemeral keys before writing the JSON (not schema fields)
         story.pop("_kernel_id", None)
@@ -1461,6 +1527,7 @@ def run_no_scope(args):
     client = get_client()
 
     remaining = final_seeds
+    token_acc = {"input_tokens": 0, "output_tokens": 0}  # OQ-80: per-run spend witness
     for attempt in range(1, 4):
         gen_by_id = {s["constraint_id"]: s for s in remaining}
         reqs, id_map = build_indexed_batch_requests(remaining)
@@ -1477,7 +1544,9 @@ def run_no_scope(args):
             # json-file existence. json/ still holds the PRE-REBUILD corpus (~4067 files),
             # so plain seeds reuse archive ids whose stale json/<id>.json exists — without
             # overwrite they hit the out_json.exists() SKIP and silently never save.
-            overwrite=True, id_map=id_map)
+            overwrite=True, id_map=id_map, token_acc=token_acc,
+            provenance_source="no_scope_rebuild",
+            sampling_params="max_tokens=16384,temperature=api_default")
         done = load_processed_log(processed_log)
         remaining = [s for s in remaining if s["constraint_id"] not in done]
         if not remaining:
@@ -1492,6 +1561,14 @@ def run_no_scope(args):
     succeeded = len(final_seeds) - len(remaining)
     print(f"\nNo-scope run complete: {succeeded}/{len(final_seeds)} generated into "
           f"{testsets_dir.relative_to(REPO_ROOT)} (ladder: {processed_log.name}).")
+    # OQ-80: surface this run's measured spend so per-increment cost can be summed
+    # (Haiku batch: $2.50/MTok out, $0.50/MTok in). Tokens summed at result receipt,
+    # so a save failure still counts spend; this is MEASURED usage, never a 0-default.
+    in_tok = token_acc["input_tokens"]
+    out_tok = token_acc["output_tokens"]
+    est_usd = in_tok / 1e6 * 0.50 + out_tok / 1e6 * 2.50
+    print(f"  token_acc (OQ-80): input={in_tok:,} output={out_tok:,} "
+          f"-> ~${est_usd:.4f} (Haiku batch $0.50/$2.50 per MTok)")
 
 
 def main():

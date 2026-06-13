@@ -144,6 +144,35 @@ def strip_json_fences(text):
 # ---------------------------------------------------------------------------
 # Prompt builder
 # ---------------------------------------------------------------------------
+def _strip_provenance_from_context(schema_text, example_text):
+    """Remove the `provenance` surface from the schema + example SHOWN to the model.
+
+    Provenance (prompt/schema commits, model, sampling params, seeded_from, draw) is
+    authored by the BUILD PIPELINE (process_batch_results / cohort stamps), never by the
+    content model — it cannot know its own commits/model/params and only fabricates them
+    (witnessed: 24/24 pilot stories claimed Sonnet/Opus; all were Haiku). Showing it in the
+    schema/example just solicits a discarded, confusing block. The schema/example FILES on
+    disk are UNCHANGED — validation still requires provenance, which the pipeline stamps
+    before validate_json. Fail-open: any parse error falls back to the raw text."""
+    import json as _json
+    try:
+        s = _json.loads(schema_text)
+        s.get("properties", {}).pop("provenance", None)
+        if isinstance(s.get("required"), list):
+            s["required"] = [r for r in s["required"] if r != "provenance"]
+        s.get("$defs", {}).pop("Provenance", None)
+        schema_text = _json.dumps(s, indent=2, ensure_ascii=False)
+    except Exception:
+        pass
+    try:
+        e = _json.loads(example_text)
+        e.pop("provenance", None)
+        example_text = _json.dumps(e, indent=2, ensure_ascii=False)
+    except Exception:
+        pass
+    return schema_text, example_text
+
+
 def build_prompt_parts(source_description, context_text=""):
     """Split prompt assembly: (static_prefix, dynamic_tail).
 
@@ -156,6 +185,9 @@ def build_prompt_parts(source_description, context_text=""):
     prompt_text = _load_context_file(PROMPT_PATH)
     schema_text = _load_context_file(SCHEMA_PATH)
     example_text = _load_context_file(EXAMPLE_PATH)
+    # Provenance is pipeline-authored, not model-authored — strip it from what the model
+    # sees so it is neither solicited nor fabricated (files unchanged; see helper docstring).
+    schema_text, example_text = _strip_provenance_from_context(schema_text, example_text)
 
     example_note = (
         "\n\nNOTE: The example above shows ONE structural position pattern "
@@ -163,6 +195,8 @@ def build_prompt_parts(source_description, context_text=""):
         "structural positions will differ. Refer to the Perspective Diversity "
         "section in the generation prompt for other archetypes. Do NOT copy "
         "the example's power/exit/directionality assignments.\n"
+        "\nDo NOT output a `provenance` field — it is added by the build pipeline "
+        "after generation. Omit it entirely from your JSON.\n"
    	)
     static_prefix = "".join([
         "=== GENERATION PROMPT ===\n",
