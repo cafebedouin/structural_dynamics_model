@@ -5539,6 +5539,27 @@ freeze `9aa1c90e` preceded both batch IDs). Still NOT a ruling — escalated.**
   escalated, not narrated to a verdict. Discipline honored: freeze-before-draw, ambiguous-reported-as-
   ambiguous, escalate-don't-redraw, no numeric disclosure to authoring.
 
+**ENGINE ADJUDICATION (2026-06-13, operator redirect — supersedes the hand-ε layer for the mountain
+case; `audits/2026-06-13_oq117_within_arm_proxy/ENGINE_ADJUDICATION.md`).** The spends measured
+authored `claimed_type`+ε by hand; the engine's *purpose* is to adjudicate the mountain claim. Ran
+the full pipeline on all 30 mountain-claiming stories (15 withheld + 15 fed) in an isolated worktree
+(live n=5 corpus untouched). **0/30 ratified as mountain** (`true_mountain_report`: Total Validated
+0; computed mountain 0/30). Three gates by ε band: false_natural_law + **Boltzmann non_compliant** +
+`! ALERT [severe]: type_1_false_summit` → tangled_rope (free_market, printing_press); false_ci_rope →
+tangled_rope/piton (qwerty); **coupling_invariant_rope** certified-genuine → rope but claim corrected
+mountain→rope (total_war, zero_as_number). **Feeding the claim does not change the verdict** —
+signature tally withheld {FNL 6,FCR 3,CIR 6} ≈ fed {FNL 5,FCR 4,CIR 6}, 0/30 both arms; the one mobile
+cell (free_market_fed_d2, ε wobbled to 0.18) moved between two *rejecting* gates (FNL→FCR), never to
+ratification. **Consequence for (c):** the manufactured-concordance worry does NOT occur for mountain
+claims at the layer the engine decides types → **strengthens document-as-condition, weakens the
+decouple rationale** I'd called real-but-bounded (it was an ε-layer artifact the engine catches on
+both arms). **Scope bound:** tested the fed claim=mountain only; the rope/snare free boundary is
+untested, so "robust to feeding" holds for the mountain case, not all claim types. Caveats:
+grid 32/32 absent (OQ-93, verdict rests on ε/χ/signature/Boltzmann not grid); FNL is OQ-70-lineage
+but the rejection is independent of it (Boltzmann + false_summit + computed-type are separate gates);
+homogeneous probe corpus inflates the borderline/confidence stats (per-constraint verdicts are the
+robust part).
+
 ---
 
 ## OQ-118 — Draw-stability tracks field-construction-type, not the σ/seat line: the cohort's analysis contract (successor to OQ-109's σ/seat residual)
