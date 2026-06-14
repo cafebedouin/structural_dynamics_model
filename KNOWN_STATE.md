@@ -62,7 +62,12 @@ embeddings the real instrument, lexical proxy a floor), OQ-130 (ranking gap name
 source content-hash not git HEAD). Caveats: probe 3 is a 30-omega sample (bounds, not proves); the one
 held-sample disagreement (id 20) is a hybrid `omega_variables.md` itself leaves open. `issues_status
 --check` green (129/0). **Citation rule:** cite "80% sound on a 30-omega sample," never "the corpus is
-80% sound."
+80% sound." **External adjudication (separate instance, `…poc/adjudication_external.md`):** probe-3
+independence was within-instance (executor sealed its own held key); the first separate read corrects
+id-20 → ≈77% (23/30), the only external look moving the rate *down*. Caveats it adds: probe 1b≡1a
+(ONE KIND surface, not "the KIND organs are orthogonal"); the unsound mass = the kernel-contest family
+whose noise-vs-legitimate-committer-Ω_P-frontier reading is **CONTESTED/OPEN** (Seat Theorem Cor 2b →
+likely sound-but-mistyped, not restatement). Not §8-class; push pre-condition holds.
 
 ## 2026-06-14 — omega-resolver pilot validated on ISSUES.md (OQ-130 minted); §8 landed into OQ-129 OPEN-A
 **Files:** python/omega_resolver.py, ISSUES.md, audits/2026-06-14_omega_resolver_pilot/, audits/2026-06-14_extraction_blindness_existential_label/

@@ -6601,7 +6601,26 @@ gate, else it launders artifactual omegas into a clean-looking catalog (the §1g
 layer defect-zero), OQ-70 (gap-Ω prevalence is bait-confounded — the agenda inherits the caveat),
 GAP-11 (the frontier-identity organ the POC's probe 1 showed is missing), Build Discipline Patterns
 1/5/6 (the four layers are instances of these).
-**Deps:** (soundness-spot-check discharged 2026-06-14 — POC ran, 80% sound, not §8-class)
+**External adjudication addendum (2026-06-14, separate instance — `adjudication_external.md`).**
+Probe-3 independence was *within-instance* (the executor sealed its own held key); the first
+genuinely-separate read corrects id-20 (`messianic_timeline_indeterminacy`) SOUND→TYPE_INCORRECT, so
+**≈77% sound (23/30) — and the only external look moved the rate DOWN**, i.e. the 80% was
+optimistically biased, not merely imprecise. Three caveats stand: (a) probe 1b came back ≡ 1a, so
+kind⊥topic is proven for **ONE** KIND surface — not "the KIND organs are orthogonal"; (b) the
+independent check *lowered* the number; (c) the unsound mass = the kernel-contest family (= probe-4
+dedup mass = probe-1c frontier family — three probes triangulate one culprit). **Interpretation
+CONTESTED / OPEN (operator):** whether that family is convention-noise to gate at the generator, OR a
+*legitimate committer-frame Ω_P frontier the design intends* — the Seat Theorem Cor 2b (the ruling
+that types OQ-56 Ω_P) holds "which reading/seat" to be a **declared, contestable premise, not a
+theorem**, i.e. an Ω_P frontier, and the generator+schema are built to have the LLM take an authorial
+stand on a reading. Under that reading the family is **sound-but-MISTYPED** (conceptual→Ω_P), not
+restatement, and its cross-kernel recurrence is the invariant-probe pattern, NOT duplication. **So
+the prior bullet's "restating ε/victim deltas (fails Irreducibility)" is the executor's reading, not
+a ruling.** Forward step (OQ-130 child, NOT a generator gate): (1) *uncontested* — retype the
+kernel-contest family Ω_P; (2) *settle first* — **local frontier vs template stamp** before any
+generation change. Push pre-condition (not §8-class) holds regardless.
+
+**Deps:** (soundness-spot-check discharged 2026-06-14 — POC ran, ≈77% sound external-adjudicated / 80% executor, not §8-class)
 
 ---
 
