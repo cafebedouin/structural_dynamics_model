@@ -9,7 +9,8 @@
     type_strategy/2,
     type_color/2,
     type_severity/2,
-    detect_gap_pattern/2
+    detect_gap_pattern/2,
+    gap_coverage/1
 ]).
 
 :- use_module(type_metadata).
@@ -200,63 +201,106 @@ assert_omegas_from_gaps(_IntervalID) :-
         )
     ).
 
-% detect_gap_pattern and omega_from_gap logic remains unchanged...
-% [Included below for completeness in your file]
+% ============================================================================
+% PERSPECTIVAL GAP DETECTION — rewired onto authored stakeholder seats
+% ============================================================================
+% Pre-2026-06-05 this read constraint_indexing:constraint_classification/3 — a
+% per-power-seat type STORED as a fact (powerless vs institutional cells). The
+% corpus rebuild + observer-authoring change retired that predicate (0 facts on
+% the live corpus bar one engine demo), stranding this feeder: 0 gaps, 0 omegas.
+% The same idea now lives in narrative_ontology:constraint_stakeholder/7 — each
+% authored seat carries its (Power,Time,Exit,Scope) context, with the type
+% COMPUTED on demand. We compute each seat's type through the CANONICAL seat path
+% (stakeholder_seats:dr_type_for_stakeholder/3 — the per-(C,Name) coordinate that
+% escapes the same-power atom collapse; role-d + exit modulation), and a gap is
+% plain type-divergence: >=2 distinct non-unknown computed types across the
+% authored seats. (Detection is type-inequality; LABELING which Ω uses the seat
+% power ordering + functional/extractive sort below.)
+%
+% Fail-closed (Build Discipline Pattern 5/6): <2 typeable seats, or <2 distinct
+% non-unknown types => detect_gap_pattern FAILS (mint nothing). An all-unknown
+% seated constraint is "couldn't type" (didn't-look), never "measured no gap" —
+% it does not fire here, and gap_coverage/1 reports it as unexaminable so the
+% serialization boundary can distinguish null from [].
 
-% Pattern 1: Snare masked as Rope - MOST CRITICAL (extraction blindness)
-detect_gap_pattern(C, gap(snare_masked_as_rope, TypeP, TypeI)) :-
-    constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)),
-    TypeP = snare, 
-    TypeI = rope, 
+% Functional vs extractive sort (OPEN-A; grounded: docs/logic.md §B.7 — naturalized
+% is the power-scaling cover side; deferential_realism_paper_v7.md Theorem-1 tie
+% names the raw orbit [naturalized,snare,rope,snare] as the snare_masked_as_rope
+% gap — the institutional/high-power seat sees rope|naturalized where the
+% powerless seat sees snare). Finer labels (cut_safety = mountain/rope,
+% learned_helplessness = snare/mountain) are DEFERRED to OPEN-A pending a grounded
+% partition — they currently route to general_type_mismatch.
+gap_functional_type(rope).
+gap_functional_type(naturalized).
+gap_functional_type(scaffold).
+gap_functional_type(mountain).
+gap_extractive_type(snare).
+gap_extractive_type(tangled_rope).
+
+%% seat_type_reading(+C, -reading(D, Power, Type, Name))
+%  One authored seat's computed type (non-unknown), with its authored power atom
+%  and the power-ordering key D (canonical d: HIGHER d = LOWER power).
+seat_type_reading(C, reading(D, Power, Type, Name)) :-
+    narrative_ontology:constraint_stakeholder(C, Name, _Role, Power, _T, _E, _S),
+    stakeholder_seats:dr_type_for_stakeholder(C, Name, Type),
+    Type \= unknown,
+    (   constraint_indexing:canonical_d_for_power(Power, D) -> true ; D = 0.5 ).
+
+%% gap_coverage(+C)
+%  The gap question is examinable iff >=1 authored seat computes a non-unknown
+%  type. Distinguishes null (didn't-look / unexaminable) from [] (looked, no gap)
+%  at the serialization boundary (Pattern 6 coverage bit).
+gap_coverage(C) :- seat_type_reading(C, _), !.
+
+%% detect_gap_pattern(+C, -gap(Pattern, LowPowerType, HighPowerType))
+%  Fires iff >=2 distinct non-unknown computed seat types. Deterministic (one
+%  solution): the trailing cut commits to the first labeling.
+detect_gap_pattern(C, gap(Pattern, TLo, THi)) :-
+    findall(R, seat_type_reading(C, R), Rs),
+    Rs = [_, _|_],                              % >=2 typeable seats
+    setof(T, D^P^N^member(reading(D,P,T,N), Rs), Types),
+    Types = [_, _|_],                           % >=2 distinct non-unknown types
+    % Compute the label into FRESH vars so the priority cascade is honoured even
+    % when the caller pre-binds Pattern (else head-unification on a pre-bound
+    % general_type_mismatch would bypass the extraction_blindness clause — the
+    % same leak drl_core:dr_type/3 guards against with FinalType). Unify after.
+    label_gap(Rs, P0, L0, H0),
+    !,
+    Pattern = P0, TLo = L0, THi = H0.
+
+%% label_gap(+Readings, -Pattern, -LowPowerType, -HighPowerType)
+%  Priority: extraction_blindness (an extractive-typed seat at LOWER power than a
+%  functional-typed seat — the cover-story structure, Theorem 1) outranks the
+%  general type-mismatch.
+label_gap(Rs, extraction_blindness, ExtT, FuncT) :-
+    member(reading(De, _, ExtT, _),  Rs), gap_extractive_type(ExtT),
+    member(reading(Df, _, FuncT, _), Rs), gap_functional_type(FuncT),
+    De > Df,                                     % extractive seat is lower-power
+    !.
+label_gap(Rs, general_type_mismatch, TLo, THi) :-
+    sort(Rs, Sorted),                            % ascending by D: head=highest power
+    last(Sorted, reading(_, _, TLo, _)),         % lowest-power seat type
+    member(reading(_, _, THi, _), Sorted),       % first differing type, high-power-ward
+    THi \= TLo,
     !.
 
-% Pattern 2: Snare/Mountain confusion - CRITICAL (learned helplessness)
-detect_gap_pattern(C, gap(snare_mountain_confusion, TypeP, TypeI)) :-
-    constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)),
-    TypeP = snare, 
-    TypeI = mountain, 
-    !.
-
-% Pattern 3: Mountain/Rope confusion - REQUIRES SCAFFOLD (catastrophic cut risk)
-detect_gap_pattern(C, gap(mountain_coordination_confusion, TypeP, TypeI)) :-
-    constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)),
-    TypeP = mountain, 
-    TypeI = rope, 
-    !.
-
-% Pattern 4: General catch-all - MUST BE LAST (any other mismatch)
-detect_gap_pattern(C, gap(general_type_mismatch, TypeP, TypeI)) :-
-    constraint_indexing:constraint_classification(C, TypeP, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(C, TypeI, context(agent_power(institutional), _, _, _)),
-    TypeP \= TypeI, 
-    TypeP \= none, 
-    TypeI \= none.
-
-omega_from_gap(C, gap(snare_masked_as_rope, snare, rope), OmegaID, conceptual, Question) :-
+% ----------------------------------------------------------------------------
+% omega_from_gap/5 — LABELING (not detection). Maps the constructed gap to its Ω.
+% ----------------------------------------------------------------------------
+omega_from_gap(C, gap(extraction_blindness, ExtT, FuncT), OmegaID, conceptual, Question) :-
     format(atom(OmegaID), 'omega_extraction_blindness_~w', [C]),
     % OQ-93 Stage D: when the authored grid witnesses the level-gradient
     % crossing, the omega carries the watched process (upgrade from
     % inferred-snapshot to witnessed process, ruling (b)); absent/partial
     % grid -> unchanged question (the signal is OPEN, never a gate).
     (   catch(signature_detection:level_gradient_divergence(C, divergence(GS, GI)), _, fail)
-    ->  format(atom(Question), 'Constraint ~w appears extractive (Snare) to individuals but functional (Rope) to institutions... [witnessed process — OQ-93 grid: structural gradient +~2f while individual gradient ~2f, the level-gradient crossing]', [C, GS, GI])
-    ;   format(atom(Question), 'Constraint ~w appears extractive (Snare) to individuals but functional (Rope) to institutions...', [C])
+    ->  format(atom(Question), 'Constraint ~w computes as extractive (~w) at lower-power seats but functional (~w) at higher-power seats — extraction masked by perspective. [witnessed process — OQ-93 grid: structural gradient +~2f while individual gradient ~2f, the level-gradient crossing]', [C, ExtT, FuncT, GS, GI])
+    ;   format(atom(Question), 'Constraint ~w computes as extractive (~w) at lower-power seats but functional (~w) at higher-power seats — extraction masked by perspective.', [C, ExtT, FuncT])
     ), !.
 
-omega_from_gap(C, gap(mountain_coordination_confusion, mountain, rope), OmegaID, conceptual, Question) :-
-    format(atom(OmegaID), 'omega_cut_safety_~w', [C]),
-    format(atom(Question), 'Constraint ~w appears unchangeable (Mountain) to individuals but optional (Rope) to institutions...', [C]), !.
-
-omega_from_gap(C, gap(snare_mountain_confusion, snare, mountain), OmegaID, conceptual, Question) :-
-    format(atom(OmegaID), 'omega_learned_helplessness_~w', [C]),
-    format(atom(Question), 'Constraint ~w appears extractive (Snare) to individuals but unchangeable (Mountain) to institutions...', [C]), !.
-
-omega_from_gap(C, gap(general_type_mismatch, TypeP, TypeI), OmegaID, conceptual, Question) :-
+omega_from_gap(C, gap(general_type_mismatch, TLo, THi), OmegaID, conceptual, Question) :-
     format(atom(OmegaID), 'omega_perspectival_~w', [C]),
-    format(atom(Question), 'Constraint ~w appears as ~w to individuals but ~w to institutions...', [C, TypeP, TypeI]), !.
+    format(atom(Question), 'Constraint ~w appears as ~w at lower-power seats but ~w at higher-power seats — perspectival type divergence.', [C, TLo, THi]), !.
 
 :- dynamic omega_source/3.  % omega_source(OmegaID, Constraint, GapPattern)
 

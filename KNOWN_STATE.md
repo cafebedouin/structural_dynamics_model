@@ -45,6 +45,31 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-14 — OQ-129: perspectival-gap feeder rewired onto authored stakeholder seats (was reading the retired constraint_classification)
+**Files:** prolog/report_generator.pl, prolog/json_report.pl, ISSUES.md, audits/2026-06-14_omega_gap_reconstruction/
+**Tier:** tripwire
+
+`omega_from_gap/5` had been silently dead corpus-wide since the 2026-06-05 rebuild — not broken,
+**stranded**: its feeder `report_generator:detect_gap_pattern/2` queried
+`constraint_indexing:constraint_classification/3`, the pre-rebuild per-power-seat stored-type surface
+that the rebuild retired (0 facts on live bar one engine demo). Rewired onto
+`narrative_ontology:constraint_stakeholder/7` via the canonical seat path
+`stakeholder_seats:dr_type_for_stakeholder/3` (per-`(C,Name)` d — escapes the same-power atom collapse;
+chosen over the plan's inline `dr_type/3`, witnessed verdict-equivalent: both → gap=20). Gap = ≥2
+distinct non-`unknown` seat types, fail-closed on <2. `omega_from_gap/5` is now **labeling** (computed
+into fresh vars then unified, so a pre-bound pattern can't bypass the priority — same leak `dr_type/3`
+guards): `extraction_blindness` → `omega_extraction_blindness_<C>` (critical), else
+`general_type_mismatch` → `omega_perspectival_<C>`. `json_report.pl` gaps-array guard moved off the dead
+`constraint_classification` to `report_generator:gap_coverage/1`.
+
+**Tripwire for a fresh agent:** before touching gap/omega code, know that `detect_gap_pattern/2` reads
+**authored stakeholder seats**, NOT `constraint_classification` (which is dead on the live corpus — a
+probe over it returns 0 and looks like "no gaps" when it means "no facts"). Live: 20 GAP / 17 no_gap /
+20 abstain; pipeline serializes 20 `omega_extraction_blindness_*`; check_stack clean, validation 0 errors.
+OPEN-A..D (labeling finer-partition, abstainer deliberate-vs-hole, all-`unknown` seats, dedup) carried on
+**OQ-129**. Gap-Ω prevalence inherits the OQ-70 authoring-convention caveat — do not cite gap counts as a
+detection result. Witnesses: `audits/2026-06-14_omega_gap_reconstruction/`.
+
 ## 2026-06-14 — OQ-50 closed (explainer rebased on dr_type + type_3/type_5 per-context); OQ-74 core ruled reading-relative; OQ-122 fixture-blocker found STALE; OQ-128 minted
 **Files:** prolog/report_generator.pl, prolog/drl_core.pl, ISSUES.md, docs/logic_extensions.md, audits/2026-06-14_oq122_fixture_triage/, audits/2026-06-14_oq49_remeasure/coord0_conjunction_positive_control.txt
 **Tier:** landed

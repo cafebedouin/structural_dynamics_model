@@ -304,11 +304,12 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     format(S, ',~n', []),
 
     % gaps — census A5 (OQ-109 B3, 2026-06-12): carry the coverage bit. A bare
-    % [] collapsed measured-no-gap with didn't-look (detect_gap_pattern reads
-    % powerless/institutional authored cells; a perspectives-free story can
-    % never produce a gap). null = no authored cells to examine; [] = cells
-    % examined, no gap found.
-    (   constraint_indexing:constraint_classification(C, _, _)
+    % [] collapsed measured-no-gap with didn't-look. Post-rebuild (2026-06-14)
+    % detect_gap_pattern reads authored stakeholder SEATS, not the retired
+    % constraint_classification cells; gap_coverage/1 is true iff >=1 seat
+    % computes a non-unknown type. null = no examinable seat (didn't-look);
+    % [] = seats examined, no gap found.
+    (   report_generator:gap_coverage(C)
     ->  findall(gap(GT, TP, TI),
                 report_generator:detect_gap_pattern(C, gap(GT, TP, TI)),
                 Gaps),
