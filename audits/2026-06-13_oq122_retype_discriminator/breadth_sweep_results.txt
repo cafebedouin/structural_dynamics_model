@@ -1,0 +1,68 @@
+OQ-122 breadth sweep — FSM footprint + victim split + adversarial cell across 5 corpora
+Script: twin_sweep.pl (CORPUS_DIR env var; asserta overlay; corpus_constraint count =
+overlay-took-effect witness). Run 2026-06-13. Archives are chimera-era (ID reuse) — counts
+are structural-sweep results, not live-corpus citations.
+
+corpus            size   mtn-claimers  FSM-fires  vic=0  vic>0  adversarial-cell
+testsets(live)      57   (cell=6)            2      2      0      0
+testsets_haiku     960   72                 10     10      0      1
+testsets_flash     960  104                 40     18     22     24
+kernel_v1         1106   41                 11     11      0      1
+original_v6       3380  430                 18     14      4      4
+                                          -----  -----  -----  -----
+                              TOTALS         81     55     26     30
+
+KEY:
+- vic=0 FSM-fires = author-tax candidates (no agent victim => no concealment possible =>
+  no-victim principle exempts). 55 across breadth.
+- vic>0 FSM-fires = the DECISIVE swap!=remove cases: victim present => no-victim exemption
+  does NOT apply => FSM firing is in-scope (concealment possible). Removal FORFEITS these;
+  victim-gate RETAINS them. 26 across breadth (22 in flash, 4 in original_v6).
+- adversarial cell {mountain, eps<=0.25, supp<=0.05, victim!=[]}: the perfectly-concealed-
+  extraction target. Non-empty in 4/5 corpora => AUTHORABLE, witnessed empirically (refutes
+  "empty by construction => remove correct"). 30 members across breadth.
+
+FLASH vic>0 FSM-firings (the 22 decisive cases — naturalization-concealment shapes):
+  ai_dignity_safeguarding__posthuman_continuity_reading      eps=0.1  supp=0.05 vic=2
+  beta_designation_doctrine__severity_carve_out_reading      eps=0.15 supp=0.05 vic=1
+  electronic_money_emergence__first_held_reading             eps=0.1  supp=0.05 vic=1
+  equal_protection_clause__colorblind_reading                eps=0.1  supp=0.05 vic=2
+  genesis_creation_cosmology__literary_framework             eps=0.1  supp=0.05 vic=2
+  hebrew_vitality__hybrid_continuity_reading                 eps=0.1  supp=0.05 vic=1
+  honor_satisfaction_mechanism__contraction_reading          eps=0.0  supp=0.0  vic=1
+  honor_satisfaction_substrate__cultural_contraction_reading eps=0.05 supp=0.02 vic=1
+  honor_violence_legitimacy__contraction_reading             eps=0.1  supp=0.05 vic=1
+  market_as_natural_default__lapsed_alternative_reading      eps=0.12 supp=0.05 vic=1
+  orthographic_legitimacy_kernel__continuity_reading         eps=0.15 supp=0.05 vic=1
+  press_reformation_causality__technological_determinism     eps=0.05 supp=0.02 vic=1
+  press_reformation_causation__technological_determinism     eps=0.05 supp=0.02 vic=1
+  quantum_formalism__copenhagen_reading                      eps=0.15 supp=0.05 vic=1
+  quran_9_5_scope__progressive_synthesis                     eps=0.1  supp=0.05 vic=2
+  reformation_composite__technological_mediation_reading     eps=0.05 supp=0.02 vic=1
+  sacrifice_obligation_kernel__symbolic_archive_reading      eps=0.0  supp=0.0  vic=1
+  statutory_debt_ceiling__constitutional_nullity_reading     eps=0.05 supp=0.02 vic=2
+  technology_reformation_causality__technological_determinism_reading eps=0.05 supp=0.02 vic=1
+  total_war_winnability_post1945__structural_contraction_reading eps=0.0 supp=0.0 vic=1
+  tsunami_stone_commitment__catastrophe_validation_axis      eps=0.05 supp=0.02 vic=1
+  war_winnability_post_1945__deterrence_unthinkable          eps=0.15 supp=0.05 vic=1
+
+HAIKU adversarial-cell member: monetary_anchor_principle__triffin_inevitability_reading
+  eps=0.05 supp=0.0 vic=1  (does not currently fire FSM — lacks emerges_naturally or
+  agent_beneficiary; witnesses cell authorability regardless).
+
+LOAD-BEARING EVIDENCE: the ruling rests on testsets_flash (a CLEAN de-leak twin, 960
+de-leaked draws) — its 22 vic>0 FSM-firings alone settle swap>remove. kernel_v1 and
+original_v6 are chimera-era (ID reuse, generation confounders per CLAUDE.md Critical
+Distinctions); their numbers (original_v6's 4 vic>0; the vic=0 author-tax counts) are
+confounder-discounted CORROBORATION, not load-bearing. testsets_haiku (clean twin) corroborates
+the vic=0 author-tax pattern (10/10). So: clean-corpus evidence is sufficient and decisive;
+archives only thicken it.
+
+RULING IMPACT: swap (victim-gate) DECISIVELY beats remove. The "swap==remove / lean remove"
+conclusion from the 57-corpus pass was a measured-empty-vs-didn't-look artifact: the 57-story
+testsets happened to contain zero vic>0 FSM-firings, so the gates looked equivalent. On breadth
+they differ on 26 live cases. The victim-discriminator partitions FSM firings into 55 exempt
+(vic=0) + 26 retained (vic>0) and does substantial, not marginal, work.
+NOTE (no over-claim): vic>0 = "no-victim exemption does not apply / concealment possible," NOT
+"confirmed genuine concealment" per case — that remains per-case adjudication. Sufficient to
+rule swap > remove (removal forfeits in-scope coverage).

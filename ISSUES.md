@@ -5848,31 +5848,40 @@ external (studying). A concealment detector firing where no agent victim can exi
 by definition (no victim ⇒ no extraction ⇒ nothing to conceal). The RED does NOT accurately report
 "shaped by coordination, not physics" for these.
 
-**Fix-witness run corrected two over-claims from the first pass (do not cite the superseded versions):**
-1. **"Refine beats remove" is UNSUPPORTED here.** The *proposed* gate's cell
-   `{mountain, ε≤0.25, supp≤0.05, victim≠∅}` is **EMPTY** on this corpus — victim-gated FSM fires on
-   nothing; both current FSM cases are `vic=0` ⇒ exempted ⇒ **swap ≡ remove observationally**. The
-   victim-gate is the correctly-scoped fix (no victim ⇒ no concealment possible) but is
-   indistinguishable from removal on available evidence (the discriminating low-supp∧victim case does
-   not exist here).
-2. **"Discriminating power is INVERTED" is RETRACTED.** The 3 social cell-members (`scale_ceiling_c0`,
-   `demographic_*`) are already RED-capped (`type1=4`, `dr_type=rope`, signature
-   `coupling_invariant_rope`, `fsm='.'`) by CIR + base `type_1` — NOT FSM. FSM abstaining on them
-   (supp>0.05) loses no signal; it is correctly scoped as a pristine-false-summit detector and the
-   `supp≤0.05` gate is legitimate "presents as undisturbed natural law" work.
+**Two over-claims from the first pass were corrected, then the FIX was settled by signature-ID +
+a breadth sweep (do not cite superseded versions; full trail in FINDINGS.md REVISION + REVISION 2):**
+- **"Discriminating power is INVERTED" — RETRACTED.** The 3 social cell-members are already RED-capped
+  (`coupling_invariant_rope` + base `type_1`), NOT by FSM; FSM abstaining on them (supp>0.05) loses no
+  signal. FSM is correctly scoped as a pristine-false-summit detector.
+- **neutron_star is NOT a third FSM/victim false-positive — RETRACTED.** Signature = `false_ci_rope`
+  (vic=0, ε=0.12). The FCR path also carries `superheavy` (FCR, vic=0, ε=0.68 — the genuine case), so
+  the no-victim principle does NOT reach FCR (it would falsely condemn superheavy). The victim-
+  discriminator is **FSM-local** (witnessed via the superheavy positive control). neutron_star's RED
+  is OPEN under the **FCR/OQ-70 bait-confound** thread, not the FSM author-tax. (Label was applied
+  before the signature was known — corrected.)
 
-**Overdetermination witnessed — clean-control problem is ≥3 cases / ≥3 dispositions, not 2.** FSM-off
-(beneficiaries retracted): `radiative`+`actinide` drop `type1 4→2`, survivors at moderate+institutional
-(`rope`) = OQ-50 power-scaling residue (drl_core.pl:605–612) — so the 2 FSM cases ARE the 2
-power-scaling survivors (doubly-hit; both fixes needed per-constraint). `neutron_star_bombardment_reading`
-(physics, `vic=0`) stays `type1=4 [TR×4]` UNCHANGED by beneficiary removal, `fsm='.'` — a **third**
-physics false-positive via NEITHER FSM nor power-scaling (distinct path, signature TBD). Turning the
-clean controls GREEN needs ≥3 independent dispositions.
+**SWAP (victim-gate) DECISIVELY beats remove — breadth-witnessed (`breadth_sweep_results.txt`).**
+The turn-1/2 "swap ≡ remove, lean remove" was a measured-empty-vs-didn't-look artifact: the 57-story
+`testsets/` happens to contain **zero** `vic>0` FSM-firings, so the gates looked equivalent. Two reads
+overturn it: (1) authoring-ontology check — the linter/validation machinery couples other fields
+(SCAFFOLD_DANGER_ZONE, tangled_rope-requires-victim, CS-ε) but **nothing couples `suppression` to
+`constraint_victim`** ⇒ `supp≤0.05 ∧ victim≠∅` is **authorable** (witnessed absence, positive control
+present); (2) breadth sweep over 5 corpora (overlay-witnessed) — the clean twin **`testsets_flash` has
+22 `vic>0` FSM-firings** (naturalization-concealment shapes: `market_as_natural_default`,
+`war_winnability_post1945__deterrence_unthinkable`, `statutory_debt_ceiling__constitutional_nullity`,
+the `technological_determinism` readings), each a live case where the victim-gate RETAINS and removal
+FORFEITS; the adversarial cell is non-empty in 4/5 corpora (Triffin-inevitability the cleanest). Across
+breadth the victim-gate partitions FSM firings into ~55 exempt (`vic=0`, author-tax) + ~26 retained
+(`vic>0`, in-scope). Archives (kernel_v1/original_v6) are chimera-confounded corroboration; the ruling
+rests on the clean twin. (No over-claim: `vic>0` = "no-victim exemption does not apply / concealment
+possible," not per-case "confirmed concealment.")
 
-**Open graduation steps:** (a) decide FSM victim-gate vs removal — needs a corpus with a low-supp∧victim
-mountain claim to distinguish them, else they are equivalent and removal is simpler; (b) OQ-50
-power-scaling residue (moderate/institutional mountain-claimers → `rope`); (c) diagnose neutron_star's
-non-FSM/non-power-scaling RED path. All output-changing; none executed.
+**Open graduation steps (all output-changing, none executed):** (a) **FSM victim-gate** — gate FSM on
+agent-victim presence; use `constraint_victim`, or add an `agent_victim/2` filter parallel to
+`agent_beneficiary` (does not exist yet) — RULED refine-not-remove, breadth-witnessed; (b) **OQ-50
+power-scaling residue** (moderate/institutional mountain-claimers → `rope`; still needed for
+radiative/actinide to reach GREEN); (c) **neutron_star / FCR** — adjudicate the low-ε FCR firing under
+**OQ-70** (bait-confound), separate from this OQ.
 
 **The witnessed inversion (two calibration controls land backwards):**
 - `actinide_replenishment_mechanism_flat_control` — purity **0.996** (pristine), independent,
