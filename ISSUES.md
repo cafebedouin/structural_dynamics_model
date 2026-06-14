@@ -6529,6 +6529,50 @@ this was) + Pattern 6 (the null/`[]` coverage bit).
 
 ---
 
+## OQ-130 — omega-resolver: pilot validated on ISSUES.md; scale to the corpus omega set (Ω_E)
+
+**Ω-type:** Ω_E (the scale claim — "computing over the access points routes the right few from the many" — is measurable; pilot done, corpus arm pending).
+
+**Status:** open — pilot RESOLVED + witnessed 2026-06-14; corpus scale arm carried below.
+**Origin:** the omega-resolver memo (`~/.claude/plans/brief-the-omega-glittery-wozniak.md`): one
+defect (absence-as-presence) read at four layers (wiring/evaluation/summary/relationship), at two
+scales — ISSUES.md (128 typed OQs) and the corpus (4,430 authored omegas, `outputs/dump_omega_haiku.md`).
+The resolver is the apparatus carrying the provenance/coverage/confidence bit to the read site.
+
+**Pilot (RESOLVED 2026-06-14, `audits/2026-06-14_omega_resolver_pilot/`):** read-only catalog views
+over ISSUES.md prose + one authored `Deps:` field (no `issues/` migration — Option 1). Apparatus:
+`python/omega_resolver.py` (loader / authority control / SCC-condensation frontier view §D / checker
+/ planted-fixture selftest). The only-claim-in-doubt test (§E): frontier view vs an independent
+naive cold-reader baseline → **57 confirm, 7 contradict, 0 standoff**, each contradict settled by an
+EXTERNAL fact (resolved-blocker status for OQ-37/41; own Ω_P type for OQ-03/56/58/69/82). Selftest
+8/8 (incl. §D 2-cycle→one standoff, over-fire negative control). Criterion met: checkable verdict +
+≥1 §A defect-OQ advanced (OQ-129 evaluation, OQ-37 wiring).
+
+**Refinement the pilot surfaced:** the OQ→OQ + Ω_P model mis-buckets active Ω_E entries blocked on
+an operator-spend-go / substrate gate (OQ-71/75/119) as workable_now; fixed with one authored
+relator `blocked_on_human <freetext>`. Add to the §2 access-point families if/when the catalog
+serialization is built (scale-time).
+
+**Scale arm (OPEN, gated on the validated pilot — now satisfied):** point the loader at a corpus
+omega record built from `dump_omega_haiku.md` (+ gap omegas), run §C's two gates before trusting an
+agenda — (1) dedup by frontier-identity (positive control: a planted known-duplicate pair must merge,
+a known-distinct sibling pair must stay apart), (2) carry each omega's `confidence_without_resolution`
+bit to the read site — then per-Ω-type finding aids (Ω_E measurement / Ω_C definitional / Ω_P
+stakeholder agenda). **Blocking precondition:** a §8-style "is this omega real?" soundness spot-check
+must run on a sample of the *authored* omegas first — the pilot's 128 records are human-authored and
+individually witnessed; the 4,430 are LLM-authored and §8 proved an omega class can be artifactual.
+
+**Why it matters / what resolution changes:** turns the 5.5 MB `dump_omega_haiku.md` from a dump into
+a deduplicated, confidence-carried, reachability-ranked research agenda — but only after the soundness
+gate, else it launders artifactual omegas into a clean-looking catalog (the §1g hole).
+
+**Cross-refs:** OQ-129 (the engine gap-omega surface this generalizes; OPEN-A is the §8 evaluation-
+layer defect-zero), OQ-70 (gap-Ω prevalence is bait-confounded — the agenda inherits the caveat),
+Build Discipline Patterns 1/5/6 (the four layers are instances of these).
+**Deps:** blocked_on_human corpus-omega-soundness-spot-check
+
+---
+
 *Last updated: 2026-06-14. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
