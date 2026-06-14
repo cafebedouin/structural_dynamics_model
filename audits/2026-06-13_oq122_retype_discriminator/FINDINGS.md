@@ -22,3 +22,26 @@ Web C proposed the re-type test (re-author `claim=mountain` → `rope`/`tangled_
 ## Settled vs. operator's ruling
 - **Settled (witnessed):** the cap is claim-driven via two mechanisms — agent-beneficiary presence on a pristine claim, AND a claim-independent mid-power-seat power-scaling residue — neither of which is extraction magnitude.
 - **Ω_C design ruling (operator, escalated):** engine doctrine is "genuine natural laws have zero agent beneficiaries" (`signature_detection.pl:1520`). Applied to real science (always funded), that flags all of it. Is RED-capping a pristine-metric mountain-claim-with-institutional-beneficiaries the intended concealment semantics, or an over-broad author-tax? Design judgment, not settleable by probe.
+
+## Cell sweep (2026-06-13) — the falsifier that converts "false positive found" into a ruling
+`cell_sweep.pl` / `cell_sweep_output.txt`. Enumerated the cell `{claim=mountain, base_extractiveness ≤ 0.25, agent_beneficiary ≠ ∅}` over the 57-corpus and hand-labelled each. Positive control: 5 mountain-claimers fall OUTSIDE the cell (all ε > 0.25) — membership is non-vacuous.
+
+| constraint | ε | supp | thtr | FSM fires? | payer/victim? | label |
+|---|---|---|---|---|---|---|
+| actinide_replenishment_mechanism_flat_control | 0.03 | 0.02 | 0.08 | **YES** | none | **false positive** (physics, external benefit) |
+| radiative_levitation_stratification | 0.03 | 0.02 | 0.05 | **YES** | none | **false positive** (physics, external benefit) |
+| neutron_star_bombardment_reading | 0.12 | 0.08 | 0.15 | no (supp>0.05) | none | physics, external benefit (not flagged) |
+| demographic_resource_allocation | 0.18 | 0.12 | 0.08 | no (supp>0.05) | payers + excluded | concealment candidate (NOT flagged) |
+| demographic_skill_mismatch_c0 | 0.18 | 0.22 | 0.12 | no (supp>0.05) | payers + excluded | concealment candidate (NOT flagged) |
+| scale_ceiling_c0 | 0.18 | 0.12 | 0.08 | no (supp>0.05) | payers (workers) + benef capital_holders/arbitrage | concealment candidate (NOT flagged) |
+
+**Falsifier result:** the FSM RED-capping footprint over the whole corpus is exactly 2 constraints (type_1 needs claim=mountain; FSM needs ε≤0.25 ∧ supp≤0.05 ∧ emerges_naturally ∧ benef≠∅), and **both are false positives.** No true positive in the firing set ⇒ the gate has no discriminating power in the cell it actually fires on ⇒ author-tax confirmed.
+
+**Stronger — discriminating power is INVERTED.** The `suppression ≤ 0.05` gate (intended: "confirm it looks like a mountain") makes FSM fire on exactly the 2 most-pristine cases and abstain on the 3 social cases that carry a real `payer`/`excluded` victim-set and capital/planning beneficiaries — i.e. the actual "coordination dressed as a mountain" candidates. The detector anti-correlates with concealment.
+
+## RULING (2026-06-13)
+For `radiative_levitation` / `actinide_flat_control`, the RED does **NOT** accurately report "shaped by coordination, not physics." It is an over-broad **author-tax** firing on benefit-*presence*. The discriminator that separates the false positives from the genuine-concealment cell members is **already authored**: the presence of an agent victim (`payer`/`constraint_victim`). No victim-set (a star) ⇒ ε is complete, no extraction to conceal, concealment threat model inapplicable. Victim-set present but ε low ⇒ the residual concealment signal the gate is *meant* to catch.
+
+**Fix (proposal, output-changing — operator to execute):** gate `false_summit_mountain` on agent-victim presence, not beneficiary-presence (FSM currently never reads victims, signature_detection.pl:1503–1543). Refine, not remove — the cell contains genuine-concealment candidates the current gate *misses*, so blanket removal would lose real signal.
+
+**Caveat (independent disposition):** this ruling is necessary but NOT sufficient to turn the clean controls GREEN. The RED is overdetermined — 2 `type_1` firings survive beneficiary/FSM removal via the power-scaling residue (moderate/institutional seats classify `rope`, OQ-50, drl_core.pl:605–612). That is a separate fix.

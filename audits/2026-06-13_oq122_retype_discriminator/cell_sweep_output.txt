@@ -1,0 +1,17 @@
+=== CELL: claim=mountain & base_extractiveness<=0.25 & agent_beneficiary!=[] ===
+constraint                                eps  supp  thtr  accC  resist  emrg  fsm  nB beneficiaries
+actinide_replenishment_mechanism_flat_control  0.03  0.02  0.08  0.92  0.04  yes  FSM-FIRES  2  [nuclear_astrophysics_research_programs,stellar_spectroscopy_observational_campaigns]
+demographic_resource_allocation           0.18  0.12  0.08  0.88  0.15  yes  .  2  [aging_cohort_services,central_planning_apparatus]
+demographic_skill_mismatch_c0             0.18  0.22  0.12  0.88  0.08  yes  .  3  [incumbent_blue_collar_workers,labor_intermediaries,vocational_training_institutions]
+neutron_star_bombardment_reading          0.12  0.08  0.15  0.72  0.35  yes  .  2  [binary_system_theorists,high_energy_astrophysics_programs]
+radiative_levitation_stratification       0.03  0.02  0.05  0.92  0.04  yes  FSM-FIRES  3  [atomic_physics_laboratories,high_resolution_spectroscopy_facilities,stellar_evolution_theorists]
+scale_ceiling_c0                          0.18  0.12  0.08  0.82  0.15  yes  .  4  [capital_holders,labor_organizers_small_polities,regulatory_arbitrage_firms,workers_small_polities]
+
+  cell size = 6
+
+=== positive control: mountain-claimers OUTSIDE the cell (eps>0.25 OR no agent benef) ===
+  animal_status_kernel__property_reading  eps=0.88  (eps>0.25)
+  institutional_trust_erosion_c0  eps=0.68  (eps>0.25)
+  jewish_self_determination__indigenous_return_reading  eps=0.78  (eps>0.25)
+  organization_floor_c0  eps=0.42  (eps>0.25)
+  secession_legitimacy_boundary__constitutional_impossibility_reading  eps=0.62  (eps>0.25)
