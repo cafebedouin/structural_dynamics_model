@@ -1912,7 +1912,8 @@ coupling is real but was not exercised by Move 1 — decouple moves from "deferr
 **Ω-type:** OPEN-1 is Ω_C (design choice — what "false summit" explains against). OPEN-2 is an
 engine-hardening question, not a design Omega.
 
-**Status:** partial — open (two follow-ups). The core detector bug is RESOLVED — see KNOWN_STATE.md
+**Status:** resolved — both follow-ups closed 2026-06-14 (OPEN-1 + OPEN-2; see RESOLUTION below).
+The core detector bug was RESOLVED earlier — see KNOWN_STATE.md
 2026-06-02 "False-summit forensic detector repaired." Summary of what was fixed (do not re-open):
 `drl_core.pl:548` `type_1_false_summit` used `is_mountain(C, Context, fail)`, which matches the
 unconditional catch-all clause `is_mountain(_,_,fail)` (`:123`) and never ran a test; with the cut it
@@ -1947,6 +1948,35 @@ rather than enumerate. Currently both are only reached with bound Context (via `
 resolution changes:** either give them the same `standard_context(Context)` enumeration `type_1` now
 has (so they locate the break per context and survive unbound-Ctx callers), or assert a bound-Context
 precondition. Decide alongside whether claim-mismatch detection is uniformly per-context.
+
+**RESOLUTION (2026-06-14, both follow-ups closed — engineering, no design ruling needed):**
+- **OPEN-1 CLOSED — explainer rebased on `dr_type`** (`report_generator.pl` `forensic_explain_false_mountain/2`,
+  commit on `oq122-oq50-oq74`). The FORENSIC VERDICT now headlines the post-signature `dr_type`
+  ActualType (the detector's own notion), and the suppression/extractiveness heuristic is relabeled a
+  non-headline **METRIC-LEVEL ANNOTATION** — took BOTH prongs of the fork (rebase + keep annotation),
+  so it removed a detector/explainer disagreement rather than adjudicating a live design choice (the
+  detector was already rebased on `dr_type` at the OQ-50 core repair; the explainer is downstream
+  coherence, evidence-settled). Fail-closed no-solution guard prints `dr_type: unbound` rather than
+  going silent; `dr_type/3` is **total** over the audit's reached set (0/44 reached (C,Ctx) pairs lack
+  a solution; returns `unknown` even on a malformed context), so the guard is defense-in-depth — the
+  comment forbids calcifying totality into an invariant. Witness: `actinide_…_flat_control` AMBIGUOUS →
+  `dr_type` tangled_rope/scaffold across its seats.
+- **OPEN-2 CLOSED — type_3/type_5 given the per-context enumeration** (`drl_core.pl:622,629`, same
+  commit cluster). Both now lead with `standard_context(Context)` and drop the trailing cut (matching
+  type_1 — answers the design micro-decision: **yes, uniformly per-context**). The bound-Context trap
+  is gone: an unbound-Ctx call previously mis-bound type_3 to a single non-standard context
+  (`time_horizon(immediate)`); it now returns the per-seat list (live: 1 phantom-context solution → 4
+  standard-seat solutions; type_5 0→0, no theater≥0.70 claimers). Multiplicity falsifier cleared by a
+  full caller census — every `dr_mismatch`/`dr_claim_mismatch` caller collects (setof/findall) or is
+  `\+`-negation: `report_generator.pl:72/480/520`, `genuine_findings_query.pl:157`,
+  `diagnostic_summary.pl:665`, `abductive_triggers.pl:296`; no first-solution/per-solution-side-effect
+  caller. The `/3` legacy path (Context=default_context == analytical seat) stays single-solution.
+  Regression: `test_contradiction_signatures` 5 fail/12 pass identical to baseline; `validation_suite` 57/0.
+
+**Out of OQ-50 scope (do NOT fold in):** the mid-power-mountain→`rope` power-scaling phenomenon
+(`drl_core.pl:605-613`) is **not** an OQ-50 item — it is a separate design-laden Ω_C minted as
+**OQ-128** and cross-referenced from OQ-122. Do not write "the OQ-50 power-scaling fix" anywhere; no
+such settled artifact exists.
 
 **Cross-refs:** the original `type_1` defect is a **Pattern-5 sibling** — a gate satisfied by
 *absence of a real test* via clause-head unification (the `(_,_,fail)` catch-all), distinct from
@@ -3095,7 +3125,7 @@ instruction is already live and is itself a frame-diversity lever.
 
 **Ω-type:** Ω_C (what KIND of fact coordination_type is), with an Ω_P edge (the ruling is the operator's, not the evidence's).
 
-**Status:** open — evidence re-witnessed 2026-06-05; ruling deliberately not made
+**Status:** resolved — core RULED reading-relative 2026-06-14; OQ-49 hand-up limb moot (positive-controlled)
 **Origin:** 2026-06-05 generation-pipeline audit (brief F9 + §3). Re-witnessed on the live corpus:
 158 of 286 kernels with ≥2 coordination-typed readings have siblings DISAGREEING on
 coordination_type (55%; e.g. `border_normative_status` spans enforcement_mechanism /
@@ -3111,6 +3141,15 @@ an authored input before this ruling** — it would add authored control over th
 canonical 6-value table + offset-active/floor-inactive asymmetry recorded in
 `docs/logic_extensions.md` (commit `29cd45d4`).
 
+**RULED 2026-06-14 (operator, Ω_C/Ω_P) — coordination_type is READING-RELATIVE.** It is a
+**seventh authored field**: each reading legitimately sees a different coordination function, so the
+158/286 (55%) sibling disagreement is **signal, not authored contradiction** — no adjudication of the
+disagreements is owed. **The standing guard HOLDS:** do NOT promote coordination_type into
+`classify_from_metrics` as an authored input (it would add authored control over the computed output —
+the de-leak principle in reverse). coordination_type stays signature-layer-active via the complexity
+offset (OQ-30), which is the reading-relative effect, not a metric-classification input. The
+`docs/logic_extensions.md` 6-value table + offset-active/floor-inactive note already frame it this way.
+
 **Hand-up FROM OQ-49 (2026-06-14, `audits/2026-06-14_oq49_remeasure/`) — characterized, not raw.**
 OQ-49's split-close re-measured the signature-override layer on live and dispositioned its residual
 here under the seat frame. The residual is the **full FNL override-effective union = 14** across the
@@ -3125,6 +3164,19 @@ omitted coordination-awareness. The clean-laundering coord=0 pure-extraction sub
 live (the human-stakes sub-population the (a)/(b) ruling was reserved for — there is none to rule).
 Carry the coord+asym tag across; do not re-derive it. *(Distinct from OQ-74's coordination_type
 core — shares the seat frame, lands as a metric/signature-seat residual.)*
+
+**OQ-49 hand-up limb — MOOT (positive-controlled 2026-06-14).** The "coord=0 clean-laundering subset
+is empty" claim drops a *reserved human-stakes (a)/(b) sub-ruling* on a 0-count, so it required a
+positive control before the limb could be tagged moot ("I didn't find it ≠ it isn't there"). The
+README's original control fired the coord=0 and asym arms *separately*; the **conjunction** probe
+(`clean_laundering(C) :- has_asymmetric_extraction(C), \+ has_coordination_function(C)`, asserting the
+base `constraint_victim`/`constraint_beneficiary` facts since the rule heads are static) is now
+positive-controlled on **both twins**: a synthetic coord=0+asym row **is returned** (PC ok), a
+coord+asym row is **excluded** (NC ok), and clean_laundering over the FNL override-effective union
+returns **0** (haiku 6 ids, flash 8 ids). The empty subset is a real fact about the corpus, not a dead
+probe ⇒ the (a)/(b) limb is **moot**. Witness:
+`audits/2026-06-14_oq49_remeasure/coord0_conjunction_positive_control.txt`. The 14 coord+asym
+override-effective readings remain two-seat metric/signature signal under the OQ-74 core ruling above.
 
 ## OQ-75 — Stage-2 corpus rebuild under the de-leaked pipeline: diff distribution + cross-axis invariance correlation
 
@@ -6070,6 +6122,32 @@ settled physics; exotic superheavy-decay carrying genuine foreclosure-plus-risin
 stories were *authored* to have it is not separable at report level — the pre-registered control
 above is the first thing that bears on it.
 
+**RULING (2026-06-14, operator-aligned) — author-tax is real but narrow; FSM victim-gate HELD,
+bundled with OQ-128, NOT standalone. OQ-122 stays OPEN.** The author-tax repudiation is scoped to
+signature-layer honesty only (a no-victim mountain-claim has nothing to conceal). The FSM victim-gate
+stays IMPLEMENTED-NOT-MERGED on `oq122-fsm-victim-gate` (`ab1e9b26`); land it **bundled with whatever
+resolves the physics-RED Ω_C — now tracked as OQ-128 — not standalone.** The residual is **OQ-128**
+(mid-power-mountain→rope power-scaling, `drl_core.pl:605-613` — the binding verdict-mover for the
+physics false-REDs; do NOT attribute this to "the OQ-50 power-scaling fix," which names a settled
+artifact that does not exist — the direction is an open Ω_C); neutron_star/FCR stays under **OQ-70**.
+
+**Fixture-blocker RE-MEASURED 2026-06-14 — blocker (i) is STALE on the live corpus
+(`audits/2026-06-14_oq122_fixture_triage/`).** The "breaks 36 unit-test fixtures (test_agent_beneficiary
+31, test_contradiction_signatures 5)" was measured 2026-06-13, before corpus drift. On HEAD `da0e88e2`
+the gate's diff over both suites introduces **zero new failures** (test_agent_beneficiary baseline 20
+unique ≡ gate 20, delta ∅; test_contradiction_signatures baseline 5 ≡ gate 5, delta ∅ — id-sets in the
+audit dir). The 20+5 failures are **pre-existing corpus drift**: 0 of 11 `fsm_agent_mountains` and
+`maxwell_demon_impossibility` survive the 2026-06-05 reset, so the agent-beneficiary fixtures fail
+regardless of the gate. The gate's ACTUAL live effect is a clean **2→0** on the two vic=0 physics
+false-positives (`actinide_…_flat_control`, `radiative_levitation`) with no regressions. **Consequence:**
+the fixture-cost half of the hold rationale no longer applies to the live corpus; the hold now rests
+solely on the OQ-128 physics-RED leg (FSM-exemption alone may not move those 2 verdicts to GREEN, their
+RED being overdetermined by power-scaling). A 36-row add-victim/flip-expectation triage is moot until the
+fixtures are rebuilt against the post-reset corpus (separate fixture-health task). The operator may
+re-rule the hold given the corrected (zero) cost — recorded as available, not actioned (engine merge =
+human call). Cross-refs: **OQ-128** (residual, minted this session), OQ-50 (false-summit detector this
+rides — OPEN-1/OPEN-2 closed 2026-06-14), OQ-70 (neutron_star/FCR), OQ-117 (false-foundational gates).
+
 **Origin:** 2026-06-13, Przybylski's-star engine stress test + web-Claude report read; structural
 claims re-witnessed against drl_core.pl:614, the five testsets' `constraint_claim/2`, and the report
 verdict boxes (this session).
@@ -6342,6 +6420,37 @@ co-authoring doctrine), `docs/design/design_discipline.md` (linter operator-vs-e
 
 **Provenance:** 2026-06-14 CC session implementing the OQ-116 close plan; the operator-only linter
 ruling and the split decision are the operator's.
+
+---
+
+## OQ-128 — mid-power-mountain→`rope`: power-scaling artifact or correct refusal to certify a false foundational claim? (Ω_C)
+
+**Ω-type:** Ω_C (design ruling — whether the mid-power decline is intended semantics).
+
+**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose)
+**Origin:** OQ-122 fixture/verdict work, 2026-06-14. `classify_from_metrics` (pre-signature) returns
+**non-mountain at the moderate/institutional power seats for ALL mountain-claimers** — a power-scaling
+effect of χ = ε·f(d)·σ(S) shifting the mid-power contexts off the mountain band
+(`drl_core.pl:605-613`, the comment above the `type_1_false_summit` clause). Witnesses: the false-RED
+physics controls `radiative_levitation_stratification`, `actinide_replenishment_mechanism_flat_control`
+(the two live `false_summit_mountain` firings, both vic=0).
+
+**Specific question:** is mid-power-mountain→`rope` an **artifact** to fix, or the engine **correctly
+declining** to certify a foundational claim that does not hold at mid-power seats? **The standing fact
+that makes it possibly-correct, not a bug:** the signature layer *restores* mountain at mid-power seats
+for **genuine** mountains in `dr_type`, so this only bites **non-restored** mountain-claimers — exactly
+the population whose foundational claim the engine has reason to refuse. The Ω_C is whether that
+refusal is intended. It is a **general engine phenomenon** (every mid-power mountain-claimer), broader
+than the physics-control story — hence its own number, not an OQ-122 sub-bullet.
+
+**Why it matters / what resolution changes:** it, not the FSM victim-gate, is the **binding
+verdict-mover** for the physics false-REDs to reach GREEN — so the FSM gate is held to land **bundled
+with this Ω_C's resolution** (OQ-122 ruling 2026-06-14). Do NOT call this "the OQ-50 power-scaling fix":
+the direction is unruled; no settled artifact exists.
+
+**Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here), OQ-50 (the
+false-summit detector this rides — both OPEN items closed 2026-06-14), OQ-117 (false-foundational
+rejection gates — Boltzmann non-compliance + type_1 + computed type), OQ-70 (neutron_star/FCR, separate).
 
 ---
 

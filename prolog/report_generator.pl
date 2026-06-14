@@ -572,11 +572,28 @@ forensic_explain_false_mountain(C, Context) :-
     -> format('  │  Resistance to Change: MISSING (using default 0.0)~n', [])
     ;  format('  │  Resistance to Change: ~2f~n', [Resist])),
 
-    % Provide forensic verdict
+    % Authoritative per-context verdict (OQ-50 OPEN-1): the detector flags via
+    % dr_type/3 (post-signature), so the explainer must report that same
+    % authoritative type, not a re-derived metric heuristic that can contradict a
+    % correct flag. Fail-closed fallback: if dr_type/3 has no solution at this
+    % seat, print an explicit unbound line rather than going silent (the seat was
+    % reached because the detector flagged it, so a solution is expected — but the
+    % guard, not that expectation, is what keeps AMBIGUOUS from collapsing to
+    % silence; do not calcify the totality argument into an invariant).
     format('  │~n', []),
-    format('  │  FORENSIC VERDICT:~n', []),
+    format('  │  FORENSIC VERDICT (authoritative — dr_type, post-signature):~n', []),
+    (   drl_core:dr_type(C, Context, ActualType)
+    ->  format('  │  → dr_type at this seat: ~w (departs from claimed mountain)~n', [ActualType])
+    ;   format('  │  → dr_type: unbound (no authoritative type at this seat)~n', [])
+    ),
+
+    % Metric-level annotation (OQ-50 OPEN-1): the suppression/extractiveness
+    % heuristic is downstream metric context, NOT the detector's reason — labeled
+    % as an annotation so it can no longer read as the headline verdict.
+    format('  │~n', []),
+    format('  │  METRIC-LEVEL ANNOTATION (not the detector''s reason):~n', []),
     determine_correct_classification(Supp, Extr, Ceil, Verdict, Rationale),
-    format('  │  → Should be classified as: ~w~n', [Verdict]),
+    format('  │  → Metric heuristic suggests: ~w~n', [Verdict]),
     format('  │  → Rationale: ~w~n', [Rationale]),
 
     % Check for mandatrophy (mountain that functions as trap)
