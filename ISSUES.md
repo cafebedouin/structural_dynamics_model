@@ -6034,6 +6034,113 @@ sharpening (colocation decomposition over residualization).
 
 ---
 
+## OQ-126 — Temporal accountability (commitment-systems T0→T1→T2→T3 / seat-theorem Cor 3): how much of the theory the engine can carry is UNKNOWN
+
+**Ω-type:** Ω_C (design — what an accountability surface should be) + Ω_E (the engine's current
+coverage is witnessable, and was witnessed below) + an **Ω_P core that does not reduce** (the
+honor/reabsorb verdict is seated, never engine-certifiable — Cor 2a/Cor 3). The entry's own claim
+is deliberately under-scoped: theory mapped, partial coverage witnessed, **full coverage not yet
+known and not settled here.**
+
+**Status:** open — filed 2026-06-13 (CC session; doctrine thread with web-Claude, two essays as
+worked instances). Theory↔engine map below is witnessed; the buildability of the two gaps is OPEN.
+
+**The theory (already present in the substrate, not invented here).** `commitment_systems_sketch_v5_2.md`
+§3 (the acknowledged-drift event) is a temporal-accountability structure:
+- **T0** — a kernel/commitment is issued from a seat (the prediction, the codification, the staked
+  claim).
+- **T1** — an authority interprets/operates it.
+- **T2** — drift: what actually happened, the kernel and its practice diverge over time.
+- **T3** — acknowledgment: does the seat **update** (honor the confrontation) or not (concealment /
+  reabsorption-as-retreat).
+
+This is seat-theorem **Corollary 3** (seats are non-interchangeable across time; the confronting
+seat is a *different*, later seat the t0-seat "could not author"; the discipline "secures that the
+price exists and is visible; it does not secure that anyone pays it"). It is also OQ-55's
+**B-historical** channel (= A-transition + Cor-3 accountability), distinct from B-structural
+(atemporal axiom-clash, ∥ A/C). The two essays are worked instances at opposite **external-anchoring**
+tiers: `essays/2026-05_or_before/columbia_falsification_matrix.md` (dated/numeric thresholds
+confronted by third-party market data — near-seat-invariant; honored RED at lines 81/89, and when a
+confrontation was ambiguous it staked a *further* dated test, lines 97–104 = the discipline working);
+`essays/2026-06/the_vote_market/the_vote_market_draft3.md` (a retained draft-vs-draft disposition log,
+lines 143–164 — record-membership is the author's seat to draw, hence Π-exposed: line 162 files a
+failed load-bearing test, "Branham rebuttal unfulfillable as posed," as "Accepted but modified").
+
+**Engine coverage — WITNESSED this session (grep, file:line pasted):**
+- **T2 is IN.** `cs_drift_trajectory/3` "computes t2 regardless of acknowledgment status"
+  (`cs_pattern_detection.pl:404–405`).
+- **T3 is IN, as routing.** `cs_drift_unacknowledged/2` reads the **authored** `Acknowledged` flag in
+  `narrative_ontology:cs_drift_state(UID,_,gap(Type,Mag,Ack))` (`cs_pattern_detection.pl:412`);
+  `cs_terminal_attractor/4` routes **acknowledged → revival/stable_pattern/framework-revision** vs
+  **unacknowledged → husk/extinction** (`cs_drift_engine.pl:70–84`). The honor/forget split is
+  already wired to outcomes.
+
+So the engine carries the full T0→T3 **vocabulary**. Two gaps remain, both familiar shapes:
+
+**Gap 1 — the acknowledgment bit is treated as the verdict (the cyclopean shape; same as
+OQ-49/50/116/122).** The `Acknowledged` flag is **authored**, and the engine consumes it as if it
+SETTLED honor-vs-reabsorb (terminal attractor). But honor/reabsorb is **seated and floats**:
+vote_market 162's "Accepted but modified" = the author's own call that the drift was acknowledged;
+a hostile reader reads the same edit as reabsorption-as-retreat. Reading an authored "acknowledged:
+true" as settling the seat-update is the same seated-verdict-scoped-as-engine-fact error the
+cyclopean cluster names. **Witness-not-verdict fix (UNKNOWN if buildable):** carry acknowledgment as
+a *witness* (drift authored? ack-bit set? by whom? confrontable against what?) and leave the
+honor/reabsorb verdict seated.
+
+**Gap 2 — no external confrontation, so it is self-consistency, not accountability (the bite; =
+OQ-107).** The acknowledgment is **self-reported**, not confronted against an external later state.
+`measurement/5` is authored/imputed (`data_repair.pl` is "an imputation engine"); there is no
+external-instrument adapter. The thing that makes Cor-3 *bite* — a pre-committed t0 confronted by an
+external later witness (the dated falsification matrix; columbia's third-party data) — has **no
+engine path.** That path is **OQ-107** (survey-wave witness adapter), UNBUILT. Until it exists, the
+engine's drift/acknowledgment is a within-story self-consistency check and **must not be cited as
+Cor-3 accountability.**
+
+**External-anchoring grade (the live correction this thread produced; the inert tail below it is
+named and declined).** B-historical accountability is **graded**, not binary-on-falsifier:
+- **Tier 1 — external/dated/numeric/third-party** (columbia): the staked confrontation reads
+  near-identically from any seat; strongest accountability. *A dated falsification matrix confronted
+  by external data is the gold standard — there is no "better"; the demand for one was a flinch.*
+- **Tier 2 — author's retained record** (vote_market Branham): Cor-2a-declared and legible, but the
+  **record-boundary Π** (which commitments count as live vs. superseded) is the author's seat to
+  draw, and it conceals a beneficiary (editorial privilege). Spec consequence: B-historical owes a
+  **declared record-boundary field** alongside the witness triple.
+- **Tier 3 — held-open** (no committed t0 / no falsifier): **no temporal handle**; honest router
+  output is "seated, no temporal handle."
+- **Stop, declared:** there is no σ-settled floor even at Tier 1 (columbia 97–104 shows residual Π in
+  what-the-data-meant), but descending to "therefore no floor in principle, add another declared-Π"
+  is **distributively inert** (it conceals no who-pays) — the halting-problem tail. Floor = Q1
+  (descend while a seat hides a distribution; stop when the next is inert). The record-boundary
+  (Tier 2) is the last live seat; below it is not written.
+
+**Why this is an artifact, not a self-correcting engine behavior.** Cor-3 accountability cannot live
+inside the generation step: no later seat confronts the earlier one within a single pass (the model
+authors prediction and confrontation together; it has no over-time). Accountability is therefore
+**installed in the artifact** — dated falsifiers, pasted witnesses, the disposition log — by the
+party that persists (`build_discipline.md`). So OQ-126's resolution is a property of what the engine
+**records and confronts**, never what it self-certifies.
+
+**What resolution would change / graduation (all OPEN, none scheduled):** (a) refactor the
+acknowledgment consumer to witness-not-verdict (Gap 1) — buildability unknown; (b) build the OQ-107
+external-witness adapter so a `witnessed` confrontation basis can exist (Gap 2); (c) grade
+B-historical accountability by external-anchoring tier and emit a declared record-boundary field
+(OQ-55 B-historical spec). The honest unknown stated as such: **whether (a) and (b) are buildable,
+and how much of the T0→T3 theory they would carry, is not settled by this entry.**
+
+**Cross-refs:** `commitment_systems_sketch_v5_2.md` §3 (the T0→T3 source); `seat-theorem-v1.md`
+Cor 3 (non-interchangeable temporal seats), Cor 2a (declared-not-σ-settled), §6 Q1/Q5 (the floor),
+§8 (record-boundary Π); OQ-55 (B-historical channel = this; B-structural ∥ A/C); OQ-74 (the
+reading-relative declaration is the operator's to make — declared seat, not foreclosed; **pending
+operator ruling**, not authored here); OQ-107 (Gap 2 adapter); OQ-49/50/116/122 (Gap 1 = the same
+seated-verdict-as-engine-fact error); OQ-83/OQ-102 (drift-series provenance). Worked instances:
+`columbia_falsification_matrix.md`, `the_vote_market/the_vote_market_draft3.md`.
+
+**Provenance:** 2026-06-13 CC session; engine coverage witnessed by grep this session
+(`cs_pattern_detection.pl:404–412`, `cs_drift_engine.pl:70–84`); the gold-standard-floor and
+stop-at-the-record-boundary rulings are the operator's (this thread).
+
+---
+
 *Last updated: 2026-06-13. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
