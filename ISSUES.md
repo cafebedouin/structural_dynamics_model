@@ -6452,6 +6452,52 @@ the direction is unruled; no settled artifact exists.
 false-summit detector this rides — both OPEN items closed 2026-06-14), OQ-117 (false-foundational
 rejection gates — Boltzmann non-compliance + type_1 + computed type), OQ-70 (neutron_star/FCR, separate).
 
+## OQ-129 — perspectival-gap feeder rewired onto authored seats; labeling partition + coverage calls OPEN (Ω_C)
+
+**Ω-type:** Ω_C (design ruling — the Ω labeling partition and the deliberate-vs-hole coverage calls).
+
+**Status:** partial — rewire RESOLVED + witnessed 2026-06-14; OPEN-A..D carried below.
+**Origin:** `omega_from_gap/5` stopped firing after the 2026-06-05 rebuild. Root cause: its feeder
+`report_generator:detect_gap_pattern/2` queried the **retired** `constraint_indexing:constraint_classification/3`
+(the pre-rebuild per-power-seat stored-type surface). The rebuild moved that idea to
+`narrative_ontology:constraint_stakeholder/7` (seat carries `(Power,Time,Exit,Scope)`; type computed
+on demand). Live corpus: 0 `constraint_classification` facts → 0 gaps → 0 omegas. One dead wire.
+
+**Resolved (the rewire):** `detect_gap_pattern/2` now computes each authored seat's type via the
+canonical seat path `stakeholder_seats:dr_type_for_stakeholder/3` (per-`(C,Name)` d — escapes the
+same-power atom collapse; chosen over the plan's inline `dr_type/3`, witnessed verdict-equivalent).
+Gap = ≥2 distinct non-`unknown` types; fail-closed on <2. `omega_from_gap/5` is now **labeling**:
+`extraction_blindness` (extractive seat lower-power than functional seat → `omega_extraction_blindness_<C>`,
+critical) and `general_type_mismatch` (→ `omega_perspectival_<C>`); label computed into fresh vars then
+unified so a pre-bound pattern cannot bypass the priority. `json_report.pl` gaps-array guard moved from
+the dead `constraint_classification` to `report_generator:gap_coverage/1` (keeps null/`[]` distinct).
+**Witnesses:** `audits/2026-06-14_omega_gap_reconstruction/` (per-item dump 20 GAP/17 no_gap/20 abstain;
+5/5 label controls incl. both-label positive + power-order negative; d-path equivalence; twin breadth
+flash 481/267/212, haiku 369/125/466; pipeline 20 `omega_extraction_blindness_*` serialized; check_stack
+clean; validation 0 errors).
+
+**OPEN-A (labeling partition).** extraction_blindness/general grounded (docs/logic.md §B.7 `naturalized`=
+cover side; v7 Theorem-1 raw orbit `[naturalized,snare,rope,snare]`). **Finer labels `cut_safety`
+(mountain/rope) and `learned_helplessness` (snare/mountain) are NOT yet grounded** — they currently fold
+into general/extraction_blindness. Resolution = ground or drop them.
+**OPEN-B (coverage map).** `coverage_map.md`: deliberate-vs-hole call per abstainer needs the PROSE (not
+done). `catastrophe_memory_kernel__boundary_maintenance_reading` is a strong HOLE candidate (six_questions
+authored, `stakeholders[]` empty). The two `*_contradictions` entries are pl-only (NO_JSON).
+**OPEN-C (`unknown` seats).** `livelihood_security_reading`: 8 authored seats all compute `unknown` (seat
+path) → `gaps:null`. Missing-metric hole vs genuinely untyped — unresolved.
+**OPEN-D (dedup).** Moot on live (20 gap-omega constraints, 0 authored-omega constraints; distinct ID
+prefixes; `collect_omegas` dedups by ID). Re-check when authored omegas co-occur with gaps.
+
+**Why it matters / what resolution changes:** the engine's whole perspectival-gap → Ω surface
+(`assert_omegas_from_gaps`, `collect_omegas`, validation `omega_count`) was silently empty corpus-wide;
+it now fires. The OPENs decide how many Ω *flavors* the surface carries and which abstentions are real
+holes to backfill in generation.
+
+**Cross-refs:** OQ-70 (FNL prevalence is bait-confounded — gap-Ω prevalence inherits the same authoring-
+convention caveat, do not cite gap counts as a detection result without ruling this), OQ-83/OQ-109
+(stakeholder-seat observer layer this feeder now rides), Build Discipline Pattern 1 (the dangling wire
+this was) + Pattern 6 (the null/`[]` coverage bit).
+
 ---
 
 *Last updated: 2026-06-14. Add new items with sequential OQ-NN labels. Mark
