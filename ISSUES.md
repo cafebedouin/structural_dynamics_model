@@ -3111,6 +3111,21 @@ an authored input before this ruling** — it would add authored control over th
 canonical 6-value table + offset-active/floor-inactive asymmetry recorded in
 `docs/logic_extensions.md` (commit `29cd45d4`).
 
+**Hand-up FROM OQ-49 (2026-06-14, `audits/2026-06-14_oq49_remeasure/`) — characterized, not raw.**
+OQ-49's split-close re-measured the signature-override layer on live and dispositioned its residual
+here under the seat frame. The residual is the **full FNL override-effective union = 14** across the
+twins (testsets 0 / haiku 6 / flash 8; snare→TR 0/4/4 + scaffold→TR 0/2/4; ids in
+`fnl_survivor_coordination.txt`). It arrives **already characterized: 14/14 carry coord+asym**
+(coordination-function AND asymmetric-extraction present), positive-controlled (the coord=0 arm fires
+elsewhere — haiku 18 `no_coord` — so the empty coord=0 subset is a fact about the union, not a dead
+probe). **What the tag means for the witness-not-verdict pass: these are genuine metric-vs-signature
+seat divergence, not laundering** — the structure (coord+asym) is present, the metric clause labeled
+it lower (snare/scaffold) by cascade precedence + coordination-blindness, and FNL→TR supplies the
+omitted coordination-awareness. The clean-laundering coord=0 pure-extraction subset is **empty** on
+live (the human-stakes sub-population the (a)/(b) ruling was reserved for — there is none to rule).
+Carry the coord+asym tag across; do not re-derive it. *(Distinct from OQ-74's coordination_type
+core — shares the seat frame, lands as a metric/signature-seat residual.)*
+
 ## OQ-75 — Stage-2 corpus rebuild under the de-leaked pipeline: diff distribution + cross-axis invariance correlation
 
 **Ω-type:** Ω_E (the staked prediction is measurable).
