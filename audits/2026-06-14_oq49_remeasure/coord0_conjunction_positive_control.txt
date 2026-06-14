@@ -1,0 +1,36 @@
+# OQ-74 hand-up gate — coord=0 clean-laundering CONJUNCTION positive control (2026-06-14)
+
+Gates the mootness of the OQ-49 hand-up (a)/(b) limb in OQ-74. The README's original
+control fired the two arms SEPARATELY (coord=0 arm: 18 no_coord; asym arm: 119 no_asym).
+This addendum positive-controls the CONJUNCTION probe that actually defines the
+clean-laundering subset:
+
+    clean_laundering(C) :- has_asymmetric_extraction(C), \+ has_coordination_function(C).
+    % has_asymmetric_extraction(C) :- constraint_victim(C, _).        (narrative_ontology.pl:366)
+    % has_coordination_function(C) :- constraint_beneficiary(C, _).   (narrative_ontology.pl:357)
+
+Probes: /tmp/cl_probe2.pl (haiku), /tmp/cl_probe_flash.pl (flash) — one swipl process
+each, corpus overlaid with asserta. Synthetic control asserts the BASE facts
+(constraint_victim/constraint_beneficiary), not the rule heads (the rule heads are static
+and throw on assertz).
+
+## Result (both twins)
+
+| corpus | FNL override-effective ids | clean_laundering ∩ union | PC_CONJUNCTION | NC_CONJUNCTION |
+|---|---|---|---|---|
+| testsets_haiku | 6 | **0** (empty) | ok (synthetic coord=0+asym row RETURNED) | ok (coord+asym row excluded) |
+| testsets_flash | 8 | **0** (empty) | ok (synthetic coord=0+asym row RETURNED) | ok |
+
+PC_CONJUNCTION: a synthetic row with `constraint_victim` present and NO
+`constraint_beneficiary` (= asym present, coord=0) IS returned by clean_laundering/1 —
+the probe fires on a true clean-laundering row.
+NC_CONJUNCTION: adding a `constraint_beneficiary` (coord present) correctly excludes it —
+the probe discriminates, it is not stuck-true-empty.
+
+## Disposition
+
+The empty coord=0 clean-laundering subset over the FNL override-effective union is a REAL
+fact about both live twins (the probe demonstrably returns a member when one exists), not
+"I didn't find it." The human-stakes (a)/(b) sub-ruling the OQ-49 hand-up reserved has no
+population to rule → the hand-up limb is MOOT, recorded under OQ-74. The 14 coord+asym
+override-effective readings remain two-seat metric/signature signal (OQ-74 core).

@@ -45,6 +45,38 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-14 — OQ-50 closed (explainer rebased on dr_type + type_3/type_5 per-context); OQ-74 core ruled reading-relative; OQ-122 fixture-blocker found STALE; OQ-128 minted
+**Files:** prolog/report_generator.pl, prolog/drl_core.pl, ISSUES.md, docs/logic_extensions.md, audits/2026-06-14_oq122_fixture_triage/, audits/2026-06-14_oq49_remeasure/coord0_conjunction_positive_control.txt
+**Tier:** landed
+
+Closed OQ-50's two follow-ups (engineering, no design ruling): **OPEN-1** —
+`forensic_explain_false_mountain/2` now headlines the post-signature `dr_type` ActualType (the
+detector's own notion) with the suppression/extractiveness heuristic relabeled a non-headline
+METRIC-LEVEL ANNOTATION; fail-closed `dr_type: unbound` guard, `dr_type/3` total over the reached
+set (0/44 no-solution; comment forbids calcifying totality). **OPEN-2** — `type_3_snare_as_rope` /
+`type_5_piton_as_snare` (`drl_core.pl:622,629`) lead with `standard_context(Context)` + drop the cut
+(matching type_1): the unbound-Ctx trap is gone (type_3 live: 1 phantom-context solution → 4
+standard-seat solutions; type_5 0→0). Full caller census clears the multiplicity falsifier (all
+setof/findall/`\+`); `/3` legacy path single-solution preserved. Regression: contradiction-sig 5/12
+identical to baseline, validation_suite 57/0.
+
+**OQ-74 core RULED reading-relative** (operator, Ω_C/Ω_P): coordination_type is a seventh authored
+field, the 55% sibling disagreement is signal; guard holds (no promotion into classify_from_metrics).
+**OQ-49 hand-up limb MOOT** — the coord=0 clean-laundering subset is positive-controlled empty on both
+twins via the *conjunction* probe (synthetic coord=0+asym row returned; coord+asym excluded), witness
+in the oq49 audit dir.
+
+**OQ-122 fixture-blocker is STALE (correction):** re-measured on live HEAD, the FSM victim-gate
+(`oq122-fsm-victim-gate`, NOT merged) introduces **zero** new test failures — test_agent_beneficiary
+baseline 20≡gate 20, test_contradiction_signatures 5≡5 (delta ∅ both). The "36 fixtures" fail from
+2026-06-05 corpus drift (0/11 fsm_agent_mountains + maxwell absent), not the gate; gate's live effect
+is a clean 2→0 on the vic=0 physics false-positives. The fixture-cost half of the hold rationale no
+longer applies; hold now rests on OQ-128 (physics-RED). A 36-row triage is moot until fixtures are
+rebuilt. Evidence: `audits/2026-06-14_oq122_fixture_triage/`. **OQ-128 minted** (mid-power-mountain→rope
+power-scaling Ω_C, `drl_core.pl:605-613`). OQ-122 stays open; gate held for bundled landing.
+
+---
+
 ## 2026-06-14 — OQ-116 split-closed: de-leak lint chokepoint (linter.py SSOT); MMC = non-collapsing seat divergence; SDZ → OQ-127
 **Files:** python/linter.py, python/regenerate_stories.py, agent/cohort_zero_regen.py, python/tests/test_deleak_chokepoint.py, audits/2026-06-12_cohort_zero/pilot_witness.py, docs/design/design_discipline.md, ISSUES.md
 **Tier:** tripwire

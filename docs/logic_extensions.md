@@ -214,6 +214,13 @@ effective_threshold = base_threshold + complexity_offset(coordination_type)
 (The generator prompt's coordination-type selection table is derived from this one; one
 constraint declares exactly ONE coordination_type — decompose multi-function constraints.)
 
+**coordination_type is READING-RELATIVE (RULED 2026-06-14, OQ-74).** It is a *seventh authored
+field*: each reading of a kernel legitimately sees a different coordination function, so sibling
+readings disagreeing on coordination_type (158/286 kernels, 55%) is **signal, not authored
+contradiction**. Standing guard: do NOT promote coordination_type into `classify_from_metrics` as an
+authored classification input — its only sanctioned classification effect is the signature-layer
+offset above (de-leak principle in reverse).
+
 Values live in `config.pl:362-383` (`complexity_offset_*`, `boltzmann_floor_*`); floors are
 provisional pending calibration, overridable per-testset via `boltzmann_floor_override/2`.
 
