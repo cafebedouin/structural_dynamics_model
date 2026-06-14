@@ -2,6 +2,45 @@ import os
 import re
 import sys
 
+# --- Threshold-coupled lint: the operator-only / de-leak chokepoint ---------
+# These codes predict the engine's classification bands: they compare authored
+# metrics against type thresholds, or disclose threshold values in their text.
+# They are valid OFFLINE operator diagnostics — their corpus firing rate is the
+# authored-claim-vs-authored-metric divergence readout — but they must NEVER
+# reach the authoring LLM: feeding them back teaches the model the decision
+# boundary and collapses the authored-vs-computed diff (orchestrated bias /
+# de-leak-in-reverse; de-leak 2026-06-05; OQ-116; see
+# docs/the_perturbation_principle.md and docs/design/design_discipline.md).
+# This module is the SINGLE SOURCE OF TRUTH for the set and the strip — every
+# feedback->authoring-prompt path imports build_author_feedback from here so the
+# guard covers one surface, not N asserted-safe ones (Build Discipline Pattern 2).
+THRESHOLD_COUPLED_LINT = (
+    "SCAFFOLD_DANGER_ZONE",
+    "LOW_THEATER_RATIO",
+    "MOUNTAIN_METRIC_CONFLICT",
+)
+
+
+def is_threshold_coupled(code):
+    """True if a lint error string is (or starts with) a threshold-coupled code."""
+    return any(code.startswith(c) for c in THRESHOLD_COUPLED_LINT)
+
+
+def strip_threshold_coupled(errors):
+    """Drop threshold-coupled lint codes from a list of author-facing errors."""
+    if not errors:
+        return errors
+    return [e for e in errors if not is_threshold_coupled(e)]
+
+
+def build_author_feedback(errors):
+    """Single chokepoint every feedback->authoring-prompt path must run errors
+    through before embedding them in a generation prompt. Strips threshold-coupled
+    codes so the engine's decision boundary never reaches the generating LLM.
+    Returns the filtered error list (preserving the input's falsy value)."""
+    return strip_threshold_coupled(errors)
+
+
 def get_metric_names_from_config(config_path):
     metric_names = {}
     try:
@@ -528,18 +567,24 @@ def lint_file(filepath):
             if ext_val is not None and ext_val > mountain_extractiveness_max:
                 errors.append(
                     f"MOUNTAIN_METRIC_CONFLICT: constraint_claim is mountain but "
-                    f"base_extractiveness={ext_val} exceeds mountain threshold ({mountain_extractiveness_max}). "
-                    f"The engine's mountain gate will reject this, producing coupling "
-                    f"violations and a false_natural_law signature. Either reduce "
-                    f"extractiveness or reclassify the constraint."
+                    f"base_extractiveness={ext_val} exceeds the mountain threshold ({mountain_extractiveness_max}). "
+                    f"Operator readout, NOT an authoring error to collapse: the authored mountain "
+                    f"claim and the engine's metric-seat reading DIVERGE here — high authored ε makes "
+                    f"the metric seat read snare/rope/tangled_rope, and the false_natural_law signature "
+                    f"routes to tangled_rope where Boltzmann non-compliance is present. These readings "
+                    f"need not collapse to one true type (OQ-74 / seat theorem); the divergence is "
+                    f"itself the authored signal the engine measures."
                 )
             if supp_val is not None and supp_val > mountain_suppression_ceiling:
                 errors.append(
                     f"MOUNTAIN_METRIC_CONFLICT: constraint_claim is mountain but "
-                    f"suppression_score={supp_val} exceeds mountain suppression ceiling "
-                    f"({mountain_suppression_ceiling}). The engine's mountain gate will reject this, producing "
-                    f"coupling violations and a false_natural_law signature. Either "
-                    f"reduce suppression or reclassify the constraint."
+                    f"suppression_score={supp_val} exceeds the mountain suppression ceiling "
+                    f"({mountain_suppression_ceiling}). Operator readout, NOT an authoring error to "
+                    f"collapse: the authored mountain claim and the engine's metric-seat reading DIVERGE "
+                    f"here — high authored suppression makes the metric seat read snare/rope/tangled_rope, "
+                    f"and the false_natural_law signature routes to tangled_rope where Boltzmann "
+                    f"non-compliance is present. These readings need not collapse to one true type "
+                    f"(OQ-74 / seat theorem); the divergence is itself the authored signal the engine measures."
                 )
 
     # 24. CONTEXT_ARITY CHECK
