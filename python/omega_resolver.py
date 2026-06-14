@@ -53,7 +53,12 @@ ACTIVE = {"open", "investigating", "partial"}
 # relators whose edge BLOCKS (contributes to reachability); others are grouping.
 BLOCKING_RELATORS = {"blocked_on", "gates"}
 GROUPING_RELATORS = {"bundled_with", "splits_from"}
-ALL_RELATORS = BLOCKING_RELATORS | GROUPING_RELATORS
+# blocked_on_human: a live human/operator/substrate gate that is NOT an OQ edge
+# (e.g. "gated on operator spend-go", "blocked on substrate"). Surfaced by the
+# pilot: active Ω_E entries can be human-gated without any Ω_P blocker OQ, which
+# the OQ->OQ model alone mis-buckets as workable_now. Target is free text.
+HUMAN_RELATOR = "blocked_on_human"
+ALL_RELATORS = BLOCKING_RELATORS | GROUPING_RELATORS | {HUMAN_RELATOR}
 
 OQREF = re.compile(r"OQ-\d+")
 COMMIT = re.compile(r"\b[0-9a-f]{8,40}\b")
@@ -133,10 +138,15 @@ def _parse_deps(oq, s):
             problems.append(f"{oq}: malformed Deps chunk {chunk!r}")
             continue
         relator = parts[0]
-        target_m = OQREF.search(chunk)
         if relator not in ALL_RELATORS:
             problems.append(f"{oq}: unknown relator {relator!r} in {chunk!r}")
             continue
+        if relator == HUMAN_RELATOR:
+            # free-text target (a human/external gate, not an OQ)
+            target = " ".join(parts[1:]) or "<unspecified>"
+            deps.append((relator, target))
+            continue
+        target_m = OQREF.search(chunk)
         if not target_m:
             problems.append(f"{oq}: Deps chunk has no OQ target: {chunk!r}")
             continue
@@ -166,6 +176,8 @@ def authority_report(entries):
     dep_bad = []
     for e in entries.values():
         for relator, target in e.deps:
+            if relator == HUMAN_RELATOR:
+                continue                         # free-text human gate, not an OQ
             if target not in oqset:
                 dep_bad.append(f"{e.oq}: dangling Deps target {target} ({relator})")
     rep["deps_target"] = {"authority_size": len(oqset), "bad": dep_bad}
@@ -194,17 +206,25 @@ def _commit_exists(h):
 
 
 def witness_status(entry):
-    """Scan an entry body for witness tokens and whether each resolves.
-    Returns list of (token, kind, resolves: bool). Only meaningful kinds."""
+    """Scan an entry body for DURABLE witness tokens (the ones a fresh clone
+    can verify) and whether each resolves. Returns list of (token, kind, ok).
+
+    Durable = audit dirs (`audits/DATE_slug/`) and git commit hashes. Crucially
+    NOT `outputs/*.json`: those are gitignored/regenerable (gone on a fresh
+    clone), which is the whole reason audit dirs carry evidence — so an outputs/
+    path is never the durable witness and must not flag a resolved entry. The
+    entry-level rule (in check()) is `>=1 durable witness resolves`, not
+    `every token resolves`: a stray truncated prose fragment must not fail an
+    entry that also cites a real audit dir (the OQ-92 over-fire, witnessed)."""
     out = []
     body = "\n".join(entry.body)
-    # audit dirs
     for m in re.finditer(r"audits/(\d{4}-\d{2}-\d{2}_[A-Za-z0-9_]+)/?", body):
         d = ROOT / "audits" / m.group(1)
         out.append((m.group(0), "audit_dir", d.is_dir()))
-    # backtick'd output/json files
-    for m in re.finditer(r"`(outputs/[^`]+\.json)`", body):
-        out.append((m.group(1), "output_file", (ROOT / m.group(1)).exists()))
+    for m in re.finditer(COMMIT, body):
+        h = m.group(0)
+        if _commit_exists(h):
+            out.append((h, "commit", True))
     return out
 
 
@@ -295,11 +315,17 @@ def frontier(entries):
     buckets = {"workable_now": [], "blocked_on_human": [], "blocked": [],
                "standoff": []}
 
+    def human_gated(oq):
+        return any(rel == HUMAN_RELATOR for rel, _ in entries[oq].deps)
+
     for i, comp in enumerate(sccs):
         if i in nontrivial:
             buckets["standoff"].append(sorted(comp))
             continue
         oq = comp[0]
+        if human_gated(oq):                          # authored live human gate
+            buckets["blocked_on_human"].append(oq)
+            continue
         blockers = cond_adj[i]                       # super-nodes this waits on
         if not blockers:
             # leaf: workable now, unless it is itself an Ω_P (routes to a human)
@@ -337,13 +363,19 @@ def check(entries):
     problems = []
     auth = authority_report(entries)
     problems += auth["deps_target"]["bad"]
-    # resolved-with-rotted-witness
+    # resolved-with-rotted-witness, entry-level: flag only when the entry CITES
+    # a durable audit-dir witness and NONE of its durable witnesses resolve.
     for e in entries.values():
-        if e.status in ("resolved", "disposed"):
-            for tok, kind, ok in witness_status(e):
-                if not ok:
-                    problems.append(
-                        f"{e.oq} ({e.status}): witness does not resolve: {tok} [{kind}]")
+        if e.status not in ("resolved", "disposed"):
+            continue
+        ws = witness_status(e)
+        audit_toks = [t for t, k, ok in ws if k == "audit_dir"]
+        if not audit_toks:
+            continue                              # no durable audit witness cited (advisory only)
+        if not any(ok for _, _, ok in ws):        # cited audit dir(s) but nothing resolves
+            problems.append(
+                f"{e.oq} ({e.status}): rotted witness — cites {audit_toks} but no "
+                f"durable witness (audit dir / commit) resolves")
     return problems
 
 
@@ -384,6 +416,18 @@ witness audits/2026-06-14_extraction_blindness_existential_label/ should resolve
 **Status:** resolved
 **Ω-type:** Ω_C (test)
 see audits/2026-01-01_this_dir_does_not_exist/ for proof
+
+## OQ-9008 planted human-gated Ω_E (no Ω_P blocker OQ)
+**Status:** open
+**Ω-type:** Ω_E (test)
+**Deps:** blocked_on_human operator-spend-go
+
+## OQ-9009 resolved with one real + one truncated/fake audit dir (must NOT flag)
+**Status:** resolved
+**Ω-type:** Ω_C (test)
+real witness audits/2026-06-14_extraction_blindness_existential_label/ plus a
+stray truncated mention audits/2026-06-14_extraction_blindness_existential_ that
+formatting clipped — the entry IS witnessed by the first, must not flag.
 """
 
 
@@ -413,16 +457,25 @@ def selftest():
     if not any("OQ-9999" in b for b in auth["deps_target"]["bad"]):
         fails.append("dangling-dep control FAILED: OQ-9999 not flagged")
 
-    # control 5: rotted witness flagged; live witness NOT flagged
+    # control 5: rotted witness flagged; live witness NOT flagged; and the
+    # over-fire negative control (one real + one truncated audit dir) NOT flagged.
     probs = check(entries)
     if not any("OQ-9007" in p for p in probs):
         fails.append("rotted-witness control FAILED: OQ-9007 not flagged")
     if any("OQ-9002" in p for p in probs):
         fails.append("witness false-positive: live OQ-9002 witness flagged as rotted")
+    if any("OQ-9009" in p for p in probs):
+        fails.append("over-fire control FAILED: OQ-9009 (has a real audit dir) flagged as rotted")
 
     # control 6: authority lists non-empty (Pattern 5)
     if auth["deps_target"]["authority_size"] < 1:
         fails.append("authority-nonempty control FAILED: OQ set empty")
+
+    # control 7: human-gated Ω_E (no Ω_P blocker) -> blocked_on_human, NOT workable_now
+    if "OQ-9008" not in buckets["blocked_on_human"]:
+        fails.append(f"human-gate control FAILED: OQ-9008 not blocked_on_human ({_where(buckets,'OQ-9008')})")
+    if "OQ-9008" in buckets["workable_now"]:
+        fails.append("human-gate control FAILED: OQ-9008 mis-bucketed workable_now")
 
     return fails, parse_probs
 
@@ -467,7 +520,7 @@ def main():
         if fails:
             print(f"selftest: {len(fails)} FAILED")
             sys.exit(1)
-        print("selftest: all positive controls fired (6/6)")
+        print("selftest: all positive controls fired (8/8)")
         return
     entries, problems = parse_entries()
     for p in problems:
