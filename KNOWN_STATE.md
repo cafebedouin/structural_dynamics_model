@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-14 — OQ-49 SPLIT-CLOSE: signature-override re-measure on live corpora; FNL collapse witnessed by source-attribution
+**Files:** python/audits/oq49_override_remeasure.py, audits/2026-06-14_oq49_remeasure/, ISSUES.md, prolog/signature_detection.pl
+**Tier:** landed
+
+Plan `review-oq-49-in-issues-md-twinkly-mochi.md`. OQ-49's (a)/(b) laundering-vs-load-bearing
+ruling was un-answerable as posed — the substrate is gone twice over: `testsets_3000` is a dead
+corpus (reset 2026-06-05) and the FNL bait driver was deleted (OQ-70, `72ec2cdd`). Re-measured
+read-only on the live corpora (`testsets` 57, `testsets_haiku` 960, `testsets_flash` 960) with a
+reconstructed probe (the ad-hoc 2026-06-01 probe was never saved); resolved as a SPLIT-CLOSE under
+OQ-74's seat frame. No engine/corpus write; no clause removed.
+
+**The collapse witness is structural, not numeric:** every FNL firing on all three corpora tags
+source-1 (`constraint_claim(_,mountain)`); zero source-2, zero unaccounted. Kill condition (any FNL
+firing tagged neither = a third path) NOT triggered. The 827/1106 pre-reset bait firings are gone
+*by construction*; the raw `1661 → ≤8` count drop is size-confounded (3380 vs 960) and is color,
+not the witness. FNL override-effective is now 0/6/8 (was 1661). The override layer's dominant
+effect on live is `false_ci_rope → tangled_rope`, not FNL. Inert on live: `:867` natural_law→mountain
+(0 firings) and `:877` FNL-unknown-fill (0). Residual = 8 FNL snare→TR overwrites, all coord+asym →
+the clean-laundering coord=0 subset is EMPTY, escalation dissolves to zero; the 8 are two-seat signal
+handed to OQ-74. Twin paired diff (generator-convention signal, analogue-not-witness): 81 shared /
+87 haiku-only / 100 flash-only override-effective ids.
+
+**Citation qualifier (correction-key):** do NOT cite OQ-49's `testsets_3000` 1730/1661 numbers as a
+live result — that corpus is dead and pre-OQ-70. The live re-measure is `audits/2026-06-14_oq49_remeasure/`.
+OQ-49 status is now `resolved`; any witness-not-verdict engine change is OQ-74's gated pass, not OQ-49's.
+
 ## 2026-06-13 — Twin cross-model comparison harness + two generation-quality fixes (classify_corpus driver; Fix A axiom-status, Fix B sibling snap)
 **Files:** python/run_pipeline.py, python/story_repair.py, agent/generate_kernel_corpus.py, python/audits/twin_comparison.py, audits/2026-06-13_twin_comparison/
 **Tier:** landed

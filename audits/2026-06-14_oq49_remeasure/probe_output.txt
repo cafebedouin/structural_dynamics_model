@@ -1,0 +1,114 @@
+
+==============================================================================
+CORPUS: testsets
+==============================================================================
+LOADCOUNT          57
+CLAIMUNIVERSE      11  (constraint_claim(_,mountain) carriers)
+PC_CLAUSE878       ok   (FNL->TR override clause reachable)
+PC_SOURCE1         ok   (source-1 claimed_natural reachable)
+PC_LIVECHANGE      17  (MT!=FT registered on corpus)
+
+  signatures present (all 57 readings):
+    constructed_high_extraction      33
+    false_ci_rope                    15
+    coupling_invariant_rope          3
+    unknown                          2
+    false_summit_mountain            2
+    constructed_low_extraction       1
+    false_natural_law                1
+
+  override effective (MT!=FT): 17
+    confident-overwrite (MT!=unknown): 14
+    unknown-fill        (MT==unknown): 3
+
+  per-transition (sig | MT->FT | N | sample):
+    false_ci_rope                scaffold  ->tangled_rope     5  basic_law_interpretive_boundary__parliamentary_sovereignty_reading, divine_legitimacy_substrate__folk_syncretistic_reading
+    coupling_invariant_rope      scaffold  ->rope             3  demographic_resource_allocation, demographic_skill_mismatch_c0
+    constructed_high_extraction  unknown   ->snare            3  equal_protection_kernel__colorblind_reading, institutional_trust_erosion_c0
+    false_ci_rope                scaffold  ->piton            3  press_reformation_causation__mutual_shaping, refugee_convention_text__expansive_humanitarian_reading
+    false_summit_mountain        mountain  ->tangled_rope     2  actinide_replenishment_mechanism_flat_control, radiative_levitation_stratification
+    false_ci_rope                snare     ->tangled_rope     1  press_reformation_causation__strategic_deployment
+
+  FNL firings (all): 1  | FNL override-effective: 0
+    source split (all FNL firings): {'source1': 1}
+    every FNL firing tags source-1 or source-2 (collapse witness holds).
+
+==============================================================================
+CORPUS: testsets_haiku
+==============================================================================
+LOADCOUNT          960
+CLAIMUNIVERSE      72  (constraint_claim(_,mountain) carriers)
+PC_CLAUSE878       ok   (FNL->TR override clause reachable)
+PC_SOURCE1         ok   (source-1 claimed_natural reachable)
+PC_LIVECHANGE      168  (MT!=FT registered on corpus)
+
+  signatures present (all 960 readings):
+    constructed_high_extraction      659
+    false_ci_rope                    234
+    coupling_invariant_rope          18
+    ambiguous                        13
+    constructed_low_extraction       13
+    false_natural_law                13
+    false_summit_mountain            10
+
+  override effective (MT!=FT): 168
+    confident-overwrite (MT!=unknown): 98
+    unknown-fill        (MT==unknown): 70
+
+  per-transition (sig | MT->FT | N | sample):
+    constructed_high_extraction  unknown   ->snare           63  aneyoshi_land_use_prohibition__commemorative_husk_reading, article17_erasure_right__competitive_moat_reading
+    false_ci_rope                scaffold  ->tangled_rope    52  ai_dignity_safeguarding__posthuman_continuity_reading, ai_governance_legitimacy__market_libertarian_reading
+    coupling_invariant_rope      scaffold  ->rope            18  aneyoshi_land_use_prohibition__behavioral_competence_reading, church_turing_thesis__mathematical_definition_reading
+    false_summit_mountain        mountain  ->tangled_rope    10  honor_satisfaction_mechanism__contraction_reading, kodashim_commandment_status__study_as_performance
+    false_ci_rope                unknown   ->piton            7  ai_human_relationship__incarnational_humanism, article17_erasure_right__privacy_fundamental_reading
+    false_ci_rope                scaffold  ->piton            7  income_support_commitment__freedom_floor_reading, kodashim_obligation__study_as_preparation
+    false_natural_law            snare     ->tangled_rope     4  first_amendment_speech_protection__absolutist_reading, quantum_formalism__copenhagen_reading
+    false_ci_rope                rope      ->tangled_rope     3  orthographic_legitimacy_kernel__continuity_reading, quran_9_5_scope__progressive_synthesis
+    false_natural_law            scaffold  ->tangled_rope     2  beta_designation_doctrine__severity_carve_out_reading, magna_carta_1215__universal_rights_reading
+    false_ci_rope                tangled_rope->piton            1  honor_settlement_legitimacy__drop_reading
+    false_ci_rope                snare     ->tangled_rope     1  unsc_242_withdrawal_clause__maximal_withdrawal_reading
+
+  FNL firings (all): 13  | FNL override-effective: 6
+    source split (all FNL firings): {'source1': 13}
+    every FNL firing tags source-1 or source-2 (collapse witness holds).
+
+==============================================================================
+CORPUS: testsets_flash
+==============================================================================
+LOADCOUNT          960
+CLAIMUNIVERSE      104  (constraint_claim(_,mountain) carriers)
+PC_CLAUSE878       ok   (FNL->TR override clause reachable)
+PC_SOURCE1         ok   (source-1 claimed_natural reachable)
+PC_LIVECHANGE      181  (MT!=FT registered on corpus)
+
+  signatures present (all 960 readings):
+    constructed_high_extraction      504
+    false_ci_rope                    357
+    false_summit_mountain            38
+    coupling_invariant_rope          35
+    ambiguous                        11
+    false_natural_law                8
+    constructed_low_extraction       7
+
+  override effective (MT!=FT): 181
+    confident-overwrite (MT!=unknown): 167
+    unknown-fill        (MT==unknown): 14
+
+  per-transition (sig | MT->FT | N | sample):
+    false_ci_rope                scaffold  ->tangled_rope    78  acceptable_risk_for_energy__expected_value_dominant, basic_law_interpretive_authority__popular_constitutionalism_reading
+    false_summit_mountain        mountain  ->tangled_rope    38  ai_dignity_safeguarding__posthuman_continuity_reading, ai_human_relationship__incarnational_humanism
+    coupling_invariant_rope      scaffold  ->rope            34  ai_governance_legitimacy__market_libertarian_reading, anthropological_record__indigenous_epistemology_reading
+    constructed_high_extraction  unknown   ->snare           11  ai_governance_legitimacy__magisterial_subsidiarity_reading, aneyoshi_land_use_prohibition__commemorative_husk_reading
+    false_natural_law            scaffold  ->tangled_rope     4  commerce_clause_text__originalist_narrow_reading, honor_settlement_legitimacy__composite_reading
+    false_natural_law            snare     ->tangled_rope     4  competence_occupation__real_incident_necessity, monopoly_rulebook__extraction_demo_reading
+    false_ci_rope                unknown   ->piton            3  basic_law_interpretive_boundary__balanced_contestation_reading, ost_article_ii_non_appropriation__international_regime
+    false_ci_rope                scaffold  ->piton            3  catastrophe_proxy_sufficiency__simulation_as_proxy_catastrophe_reading, dignity_kernel__imago_dei_reading
+    false_ci_rope                tangled_rope->piton            3  federation_membership_treaty__subsidiarity_balance, honor_satisfaction_mechanism__decline_reading
+    false_ci_rope                rope      ->piton            3  magna_carta_1215__universal_rights_reading, notability_guidelines__deletionist_reading
+
+  FNL firings (all): 8  | FNL override-effective: 8
+    source split (all FNL firings): {'source1': 8}
+    every FNL firing tags source-1 or source-2 (collapse witness holds).
+
+==============================================================================
+ALL POSITIVE CONTROLS + KILL CONDITION: PASS
