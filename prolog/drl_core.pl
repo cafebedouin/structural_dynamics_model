@@ -618,18 +618,25 @@ dr_claim_mismatch(C, Context, type_1_false_summit, severe) :-
     ActualType \= mountain.
 
 % Type 3: Snare Misidentified as Rope (Indexed)
-% Claimed as Rope but is actually Snare from this context
+% Claimed as Rope but is actually Snare from this context.
+% OQ-50 OPEN-2: enumerate standard_context/1 (like type_1) and drop the cut, so
+% the break is located per observer seat and an unbound-Context caller gets the
+% per-seat list instead of a mis-bound single solution at a non-standard context.
+% The legacy dr_mismatch/3 path binds Context=default_context (== the analytical
+% standard_context), so standard_context(Context) there succeeds exactly once and
+% the /3 path stays single-solution.
 dr_claim_mismatch(C, Context, type_3_snare_as_rope, severe) :-
     narrative_ontology:constraint_claim(C, rope),
-    is_snare(C, Context, snare),
-    !.
+    standard_context(Context),
+    is_snare(C, Context, snare).
 
 % Type 5: Piton Misidentified as Snare (Indexed)
-% Claimed as Snare but is actually Piton from this context
+% Claimed as Snare but is actually Piton from this context. OQ-50 OPEN-2: same
+% per-context enumeration as type_3 (lead with standard_context(Context), drop the cut).
 dr_claim_mismatch(C, Context, type_5_piton_as_snare, moderate) :-
     narrative_ontology:constraint_claim(C, theater_ratio, TR), TR >= 0.70,
-    is_piton(C, Context, piton),
-    !.
+    standard_context(Context),
+    is_piton(C, Context, piton).
 
 % ----------------------------------------------------------------------------
 % Legacy dr_mismatch/3 - Defaults to Analytical Context
