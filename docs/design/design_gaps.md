@@ -508,3 +508,42 @@ Tri-valued provenance design (authored-gain-to-named-seat / explicit-diffuse / a
 the malformed-gain runtime default, and the step-3 generated-diffuse audit gate: see OQ-92 Rulings
 block (single tracking surface). The gap closes when the surface lands; step-2 prototype:
 `audits/2026-06-10_gain_flow_prototype/`.
+
+---
+
+## GAP-11 — No frontier-identity organ: omega-question identity is neither structural-kind nor topic
+
+**The capability:** The omega corpus (4,430 authored `omega_variable` facts over 960 stories) needs a
+way to ask *"which omegas are the same reasoning frontier?"* — the dedup operation any omega agenda
+depends on, and the third of three identity axes the omega-resolver work (OQ-130) showed are distinct:
+**Kind** (structural type — `constraint_signature`/orbit/`logical_fingerprint`), **Topic** (authored
+subject — `cs_kernel_id`), **Frontier** (the recurring *question*). The engine has organs for the first
+two and **none aimed at the frontier axis.**
+
+**Why it is absent:** the corpus organs were built for constraints, not for the omega questions attached
+to them. Frontier-identity is question-semantic; the engine machinery is structure-semantic; they are
+witnessed-orthogonal (see Evidence). Name-keyed dedup overstates distinct frontiers (one frontier recurs
+under many lexically-distinct names).
+
+**Evidence (POC, `audits/2026-06-14_corpus_omega_soundness_poc/`, read-only over `testsets_haiku/`,
+2026-06-14):** three recovered surfaces scored against the `cs_kernel_id` partition (331 kernels):
+- **KIND ⊥ topic** — `logical_fingerprint`-shift and `gauge_orbit` both give **ARI ≈ −0.0004** vs the
+  kernel partition (same-kernel→same-cluster 7.65% ≈ chance). The two KIND surfaces came out *identical*
+  (orbit and fingerprint-shift encode the same structure) — one KIND organ, not two.
+- **frontier ⊥ topic** — the `suppression_*structural_vs_internalized*` frontier family spans **225–264
+  distinct kernels** (333 omegas / 333 stories, adjudicator-recomputed), far above its ~85 top-name
+  count; ARI ≈ −0.001 vs kernel. The same family is *also* the unsound class probe 3 flagged (restating
+  authored deltas, fails Irreducibility) — so the dedup organ and the soundness gate are coupled.
+- Name-keyed "unique" = 3,755; semantic-dedup **lower bound = 2,901** distinct frontiers (6 families
+  absorb 1,485). The lexical clustering used is a LOWER BOUND (misses synonyms).
+
+**What closing the gap would require:** a **semantic clustering organ over the omega question text** —
+embeddings are the real instrument (the POC's lexical proxy is a floor); positive control = a planted
+known-duplicate omega pair must merge and a known-distinct sibling pair must stay apart (OQ-130 §C gate
+(1)). Distinct from GAP-04/05/06 (those are the kernel/reading *topic* axis). The same three-axis
+structure recurs at ISSUES.md scale: the missing axis *there* is **kind made computable** — §A (the
+defect-pattern taxonomy) is hand-authored, not a queryable `kind` field on OQs (carried in OQ-130 as a
+resolver refinement, distinct from `concerns_predicate`/topic and the per-OQ frontier).
+
+**Status:** Deferred. Whether to *build* the organ or log-and-stop is itself an Ω_C/Ω_P the POC informs
+but does not rule (OQ-130). Named here on first measurement of the orthogonality (2026-06-14).

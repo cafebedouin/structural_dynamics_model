@@ -1,0 +1,47 @@
+{
+  "reference_partition": "cs_kernel_id (authored) \u2014 960 stories, 331 kernels, mean size 2.90, max 5, 3 singletons",
+  "join_check": "engine constraint id == kernel key for 960/960 (clean join)",
+  "positive_control": "logical_fingerprint fired on abrahamic_covenant__isaac_covenant_reading -> shift(tangled_rope,snare,rope,snare); 0/960 OPEN on all three engine surfaces",
+  "surfaces": {
+    "1a_signature_fingerprint": {
+      "n": 960,
+      "n_clusters": 61,
+      "ARI_vs_kernel": -0.0004,
+      "homogeneity_vs_kernel": 0.35,
+      "same_kernel_same_cluster_rate": 0.0765,
+      "same_kernel_pairs": 954,
+      "recovered_pairs": 73,
+      "prereg_verdict": "CROSS-CUT (predicted): ARI~0, same-kernel-rate 7.65% => engine structural organ is NOT the frontier-identity organ",
+      "surprise_align": false
+    },
+    "1b_orbit_classification": {
+      "n": 960,
+      "n_clusters": 61,
+      "ARI_vs_kernel": -0.0004,
+      "homogeneity_vs_kernel": 0.35,
+      "same_kernel_same_cluster_rate": 0.0765,
+      "same_kernel_pairs": 954,
+      "recovered_pairs": 73,
+      "note": "IDENTICAL to 1a (orbit & fingerprint-shift encode the same KIND structure; drtype prefix added no resolution) \u2014 NOT marked OPEN, computed cleanly",
+      "prereg_verdict": "CROSS-CUT (predicted), same numbers as 1a",
+      "surprise_align": false
+    },
+    "1c_lexical_frontier": {
+      "n_omegas": 4430,
+      "n_lexical_clusters": 2901,
+      "ARI_vs_kernel": -0.001,
+      "homogeneity_vs_kernel": 0.6945,
+      "same_kernel_same_frontier_rate": 0.0205,
+      "suppression_family_kernel_span": 264,
+      "kernel_reading_family_kernel_span": 258,
+      "interpretation": "frontier<->kernel MISALIGNMENT (low ARI, families span many kernels) = positive evidence of a third frontier axis; lexical proxy is a LOWER BOUND on frontier-merging"
+    }
+  },
+  "frontier_vs_kernel_number": {
+    "ARI": -0.001,
+    "same_kernel_same_frontier_rate": 0.0205,
+    "suppression_family_kernel_span": 264,
+    "verdict": "frontier<->kernel MISALIGNED (ARI~0; suppression family spans 264 kernels) = POSITIVE evidence of a distinct third (frontier) axis. Lexical proxy is a LOWER BOUND."
+  },
+  "homogeneity_caveat": "1c homogeneity (0.6945) is inflated by 2901 near-singleton lexical clusters (sklearn warned clusters>50% of samples); ARI and family-span are load-bearing, homogeneity is NOT meaningful for 1c. For 1a/1b homogeneity (0.35) is over 61 clusters and is meaningful."
+}

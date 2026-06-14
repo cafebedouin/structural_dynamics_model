@@ -6553,14 +6553,45 @@ an operator-spend-go / substrate gate (OQ-71/75/119) as workable_now; fixed with
 relator `blocked_on_human <freetext>`. Add to the §2 access-point families if/when the catalog
 serialization is built (scale-time).
 
-**Scale arm (OPEN, gated on the validated pilot — now satisfied):** point the loader at a corpus
-omega record built from `dump_omega_haiku.md` (+ gap omegas), run §C's two gates before trusting an
-agenda — (1) dedup by frontier-identity (positive control: a planted known-duplicate pair must merge,
-a known-distinct sibling pair must stay apart), (2) carry each omega's `confidence_without_resolution`
-bit to the read site — then per-Ω-type finding aids (Ω_E measurement / Ω_C definitional / Ω_P
-stakeholder agenda). **Blocking precondition:** a §8-style "is this omega real?" soundness spot-check
-must run on a sample of the *authored* omegas first — the pilot's 128 records are human-authored and
-individually witnessed; the 4,430 are LLM-authored and §8 proved an omega class can be artifactual.
+**Scale-arm POC (DONE 2026-06-14, `audits/2026-06-14_corpus_omega_soundness_poc/`).** Ran the §C
+soundness gate as a proof-of-concept under a two-party independence protocol (sealed adjudicator
+held-sample key committed `acc27d22` BEFORE a blind executor subagent ran probes 1–4), read-only over
+`prolog/testsets_haiku/*.pl`. **The blocking precondition is discharged: the authored omegas are NOT
+§8-class.** Measured results:
+- **Soundness 24/30 = 80%** (Ω_E 86.7% / Ω_C 75% / Ω_P 66.7%); held-sample blind agreement 9/10.
+  Content-templating LOW (probe 2: combined q+approach prefix max-dup=1) ⇒ the corpus artifact is
+  **identity-overstatement, not fabrication.** The unsound omegas are a *class* — the kernel-contest
+  family (`kernel_reading_contest`/`contestation_space`/`committer_frame__*`) restating authored
+  ε/victim deltas (fails Irreducibility), not random noise.
+- **Identity is three orthogonal axes, MEASURED (probe 1, converting the memo's assertion to result):
+  KIND ⊥ topic** (signature/orbit ARI≈0 vs the `cs_kernel_id` partition; same-kernel→same-cluster
+  7.65%≈chance — and `gauge_orbit`==`fingerprint-shift`, ONE KIND organ not two) **and frontier ⊥
+  topic** (the suppression frontier family spans 225–264 kernels, far above its ~85 top-name count).
+  The engine's existing organs **cannot** serve as the frontier-identity organ.
+- **The two defects coincide:** the unsound kernel-contest family IS the semantic near-dup family that
+  drives the frontier collapse, so a semantic-frontier dedup organ would simultaneously dedup AND
+  quarantine the unsound class — dedup and the soundness gate are not independent passes.
+- **Aspirational agenda shape (probe 4):** ~2,901 distinct frontiers (semantic-dedup lower bound,
+  from 3,755 name-keyed), 61.9% Ω_E / 35.8% Ω_C / 2.3% Ω_P — measurement-dominated.
+- **One disagreement unsettleable by the external authority:** id 20 (`messianic_timeline_indeterminacy`)
+  is a frame-question with an empirical-historical resolution — an apparent *hybrid*, which
+  `omega_variables.md` itself lists as an open question. Ω-type scoring reliability is limited exactly
+  at the hybrid boundary.
+
+**Fold-backs (the actual POC deliverable):** (#1) the frontier-identity organ neither signature nor
+kernel provides is logged as **GAP-11**; at ISSUES.md scale the missing axis is *kind made computable*
+(§A is hand-authored — a `kind` field for the resolver). (#2) ranking among same-bucket frontiers is
+still unproven and the corpus is where it bites; probe 3's soundness share is the first ranking
+ingredient (down-rank kernel-contest-restatement omegas before ranking). (#3) the §1b freshness key
+must stamp a *source content-hash*, not git HEAD (carried below).
+
+**Scale arm (still OPEN — the build, now de-risked by the POC):** point the loader at a corpus omega
+record built from `dump_omega_haiku.md` (+ gap omegas), run §C's two gates before trusting an agenda —
+(1) dedup by frontier-identity (positive control: a planted known-duplicate pair must merge, a known-
+distinct sibling pair must stay apart; the POC's lexical clustering is a LOWER BOUND — embeddings the
+real organ, see GAP-11), (2) carry each omega's `confidence_without_resolution` bit to the read site —
+then per-Ω-type finding aids. The POC validated the *gate*; the *build* (serialized catalog + ranking)
+is the remaining work.
 
 **Why it matters / what resolution changes:** turns the 5.5 MB `dump_omega_haiku.md` from a dump into
 a deduplicated, confidence-carried, reachability-ranked research agenda — but only after the soundness
@@ -6568,8 +6599,9 @@ gate, else it launders artifactual omegas into a clean-looking catalog (the §1g
 
 **Cross-refs:** OQ-129 (the engine gap-omega surface this generalizes; OPEN-A is the §8 evaluation-
 layer defect-zero), OQ-70 (gap-Ω prevalence is bait-confounded — the agenda inherits the caveat),
-Build Discipline Patterns 1/5/6 (the four layers are instances of these).
-**Deps:** blocked_on_human corpus-omega-soundness-spot-check
+GAP-11 (the frontier-identity organ the POC's probe 1 showed is missing), Build Discipline Patterns
+1/5/6 (the four layers are instances of these).
+**Deps:** (soundness-spot-check discharged 2026-06-14 — POC ran, 80% sound, not §8-class)
 
 ---
 
