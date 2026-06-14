@@ -75,9 +75,19 @@ def main():
                 facts.append(f"own Ω-type={e.omega} (routes out to a human; may never resolve)")
             contradicts.append((oq, base[oq], view[oq], "; ".join(facts)))
 
-    print(f"# §E adjudication — view vs naive cold-reader baseline")
-    print(f"# active OQs: {len(base)}  confirms: {len(confirms)}  contradicts: {len(contradicts)}")
-    print(f"# standoff (live): {len(nontrivial)}\n")
+    edged_confirms = sum(1 for oq, v in confirms if entries[oq].deps)
+    meaningful = len(contradicts) + edged_confirms
+    print(f"# §E adjudication — view vs a synthetic edge-ablation baseline (status/Ω-blind)")
+    print(f"# active OQs: {len(base)}")
+    print(f"# MEANINGFUL comparisons: {meaningful}  = {len(contradicts)} contradict + {edged_confirms} substantive confirm")
+    print(f"#   ({len(confirms) - edged_confirms} of the {len(confirms)} confirms are EDGE-FREE OQs where baseline AND")
+    print(f"#    view both apply the workable_now default — a shared default, NOT corroboration.")
+    print(f"#    Do NOT headline the raw confirm count.)")
+    print(f"# raw: confirms {len(confirms)} / contradicts {len(contradicts)} / standoff {len(nontrivial)}")
+    print(f"# CAVEAT: this baseline is derived from the SAME authored Deps as the view (an ablation of")
+    print(f"#   status-check + Ω-routing), NOT an independent prioritization. The independent")
+    print(f"#   adjudication (held cold-reader baseline: OQ-44 hub, OQ-56 keystone) is the separate")
+    print(f"#   adjudicator's — README → 'Adjudicator's independent verdict'.\n")
     print("## CONTRADICT (view overturns the cold-reader's prose-surface call — routing earning its keep)")
     for oq, b, v, fact in contradicts:
         print(f"  {oq}: baseline={b:8s} -> view={v:18s} | settled by: {fact}")

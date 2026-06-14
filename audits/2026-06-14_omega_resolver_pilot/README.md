@@ -25,17 +25,22 @@ SCC-condensation frontier view (§D), checker (§3), and a planted-fixture selft
 3. **16 `Deps:` edges authored by hand** from each entry's own prose (§1e — values authored, not
    extracted), `issues_status.py --check` still passes (128 parsed, 0 malformed; pipeline gate
    intact). 1 authored field, no migration.
-4. **Frontier view renders all 64 active OQs** (`frontier_view.json`): 50 workable_now /
-   11 blocked_on_human / 3 blocked / **0 standoff**. The live blocking graph is acyclic — the §D
+4. **Frontier view renders all 65 active OQs** (`frontier_view.json`, regenerated at HEAD
+   7cc79689 so `store_version == HEAD` — the §1b freshness control passing): 50 workable_now /
+   12 blocked_on_human / 3 blocked / **0 standoff**. The live blocking graph is acyclic — the §D
    machinery is proven by the planted control, and the plan's hypothesised OQ-50↔OQ-122 cycle is
    moot (OQ-50 resolved). Checker: **0 problems** on real data (measured-clean: the OQ-9007
-   positive control proves the probe fires).
+   positive control proves the probe fires). *(The first-committed artifact read 64, stamped one
+   commit before OQ-130 was minted; the manifest exposed the lag, regenerated — see adjudicator
+   note below.)*
 
 ## Step-5 §E verdict — the only claim in doubt (`adjudication.txt`)
 
-View vs an independent naive cold-reader baseline (prose-surface; status-blind, Ω-blind):
-**57 confirm, 7 contradict, 0 standoff.** Each CONTRADICT — the view overturning the flat read —
-is settled by an EXTERNAL fact, not preference:
+**Corrected headline (do not quote "57/7").** The ablation baseline is status/Ω-blind over the
+*same* authored `Deps:` the view reads, so its agreement on the 43 edge-free OQs (both default to
+`workable_now`) is a shared default, **not corroboration**. The honest result is **22 meaningful
+comparisons = 7 contradict + 15 substantive confirm** (raw confirms 58/65). The 7 contradicts —
+the view overturning the flat read — are each settled by an EXTERNAL fact, not preference:
 
 | OQ | baseline | view | settled by (external fact) |
 |---|---|---|---|
@@ -53,6 +58,40 @@ Two refinements the resolver adds that a flat read cannot cheaply make:
 step 1 and routes to workable_now; OQ-37 (Wiring-layer "dead feeder" §A defect) is one of the
 two status-check wins. **Pilot success criterion met: a checkable confirm/contradict verdict AND
 ≥1 §A defect-OQ advanced.**
+
+## Adjudicator's independent verdict (held baseline — the real independence test)
+
+The `adjudicate.py` baseline above is an *ablation*, not independent. The independent test is the
+separate adjudicator's held baseline (a cold instance's prose-only prioritization of `ISSUES.md`,
+withheld from the executor per §E). Its two sharpest predictions, adjudicated against the entries:
+
+- **"OQ-44 is a hidden hub behind {35,37,41,36,43}" → correct-but-stale; view earns its keep.**
+  OQ-44 is *resolved* (policy ruled 2026-06-11). The authored `Deps:` for OQ-37/41 (`blocked_on
+  OQ-90`/`OQ-46`) are faithful to their own prose ("now UNBLOCKED: OQ-90 RESOLVED"; "stopgap until
+  OQ-46 (resolved)"); the view routes both `workable_now`, overturning the cold reader's "blocked"
+  (read from blocking language without seeing the blockers resolve — Pattern 5 in the baseline).
+- **"OQ-56 is the keystone of {53,55,56}" → structure confirmed, reachability corrected.**
+  53 and 55 are authored `blocked_on OQ-56` (faithful). But OQ-56 is genuinely **Ω_P** ("the
+  taxonomy is the user's to rule, not the engine's"), so the view correctly routes it
+  `blocked_on_human`, overturning the baseline's "workable keystone."
+- **"OQ-122↔128↔129 SCC, rule together"** is honored as *grouping* relators (not blocking), so no
+  blocking cycle — `standoff=0` live, the SCC machinery proven by the planted control.
+
+Every contradiction resolved against an external fact (resolved-status or authored Ω_P), never
+preference. **The view earns its keep against the independent baseline too.**
+
+## What the verdict does NOT prove (the ceiling, named so the scale arm isn't over-trusted)
+
+The proven claim is narrow: **the view computes reachability correctly where reachability is a
+function of facts** — mechanical propagation of resolved-status and Ω-type that a prose-reader
+misses. Every one of the 7 contradictions was of that kind. **Not tested:** where the *judgment*
+lives — the *ranking* among workable-now items ("which of 50 to do first"), as opposed to the
+bucketing. Standoff is proven by the planted fixture, not live data (0 live). For ISSUES.md the
+ranking gap is small (65 readable entries, eyeball-able); **for the 4,430-omega corpus it is the
+whole game** — that is where "right" is a priority judgment, most omegas carry no external fact to
+settle their order, and the eyeball check is unavailable. **The pilot validated the apparatus,
+which was never the doubt for the corpus; the corpus doubt (are the authored omegas real, and can
+the routing rank them) is untouched and is OQ-130's burden, not this pilot's result.**
 
 ## A model gap the pilot surfaced (the pilot earning its keep)
 

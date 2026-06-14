@@ -1,6 +1,14 @@
-# §E adjudication — view vs naive cold-reader baseline
-# active OQs: 64  confirms: 57  contradicts: 7
-# standoff (live): 0
+# §E adjudication — view vs a synthetic edge-ablation baseline (status/Ω-blind)
+# active OQs: 65
+# MEANINGFUL comparisons: 22  = 7 contradict + 15 substantive confirm
+#   (43 of the 58 confirms are EDGE-FREE OQs where baseline AND
+#    view both apply the workable_now default — a shared default, NOT corroboration.
+#    Do NOT headline the raw confirm count.)
+# raw: confirms 58 / contradicts 7 / standoff 0
+# CAVEAT: this baseline is derived from the SAME authored Deps as the view (an ablation of
+#   status-check + Ω-routing), NOT an independent prioritization. The independent
+#   adjudication (held cold-reader baseline: OQ-44 hub, OQ-56 keystone) is the separate
+#   adjudicator's — README → 'Adjudicator's independent verdict'.
 
 ## CONTRADICT (view overturns the cold-reader's prose-surface call — routing earning its keep)
   OQ-03: baseline=workable -> view=blocked_on_human   | settled by: own Ω-type=Ω_P (routes out to a human; may never resolve)
@@ -11,7 +19,7 @@
   OQ-69: baseline=workable -> view=blocked_on_human   | settled by: own Ω-type=Ω_P (routes out to a human; may never resolve)
   OQ-82: baseline=workable -> view=blocked_on_human   | settled by: own Ω-type=Ω_P (routes out to a human; may never resolve)
 
-## CONFIRM (view and baseline agree): 57 OQs
+## CONFIRM (view and baseline agree): 58 OQs
   OQ-10: agree -> blocked
   OQ-22: agree -> workable_now
   OQ-53: agree -> blocked_on_human
@@ -26,4 +34,5 @@
   OQ-122: agree -> workable_now
   OQ-127: agree -> workable_now
   OQ-128: agree -> workable_now
+  OQ-130: agree -> blocked_on_human
   (+ 43 edge-free OQs both call workable_now)
