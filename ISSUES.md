@@ -5870,11 +5870,15 @@ present); (2) breadth sweep over 5 corpora (overlay-witnessed) — the clean twi
 22 `vic>0` FSM-firings** (naturalization-concealment shapes: `market_as_natural_default`,
 `war_winnability_post1945__deterrence_unthinkable`, `statutory_debt_ceiling__constitutional_nullity`,
 the `technological_determinism` readings), each a live case where the victim-gate RETAINS and removal
-FORFEITS; the adversarial cell is non-empty in 4/5 corpora (Triffin-inevitability the cleanest). Across
-breadth the victim-gate partitions FSM firings into ~55 exempt (`vic=0`, author-tax) + ~26 retained
-(`vic>0`, in-scope). Archives (kernel_v1/original_v6) are chimera-confounded corroboration; the ruling
-rests on the clean twin. (No over-claim: `vic>0` = "no-victim exemption does not apply / concealment
-possible," not per-case "confirmed concealment.")
+FORFEITS; the adversarial cell is non-empty in 4/5 corpora (Triffin-inevitability the cleanest). **The
+load-bearing partition is EXACT (the discriminator's value = the cardinality):** `testsets_flash` =
+40 FSM-firings = **18 `vic=0` + 22 `vic>0`** (all 22 enumerated in `breadth_sweep_results.txt`). The
+cross-corpus aggregate (~55 `vic=0` / ~26 `vic>0`) is an exact sum of per-corpus integers carrying a
+tilde for **cross-corpus identity only** (ID reuse in chimera archives + same-kernel readings across
+twins ⇒ firings ≠ distinct stories), NOT un-run computation — corroboration, not the witness. Archives
+(kernel_v1/original_v6) are chimera-confounded corroboration; the ruling rests on the clean twin's exact
+22. (No over-claim: `vic>0` = "no-victim exemption does not apply / concealment possible," not per-case
+"confirmed concealment.")
 
 **Open graduation steps (all output-changing, none executed):** (a) **FSM victim-gate** — gate FSM on
 agent-victim presence; use `constraint_victim`, or add an `agent_victim/2` filter parallel to
