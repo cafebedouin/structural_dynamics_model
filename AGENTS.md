@@ -410,6 +410,21 @@ Single-writer convention (2026-06-04): the swipl export writes
 `outputs/pipeline_output.raw.json`; `run_pipeline.py` alone writes the canonical
 manifest-bearing `pipeline_output.json`. A direct swipl re-export cannot clobber it.
 
+### Classify a NON-default corpus (twin / comparison runs)
+
+```python
+from run_pipeline import classify_corpus
+classify_corpus('testsets_haiku', 'pipeline_output.haiku.json', 'claude-haiku-4-5')
+```
+
+`classify_corpus(corpus_path, output_name, expected_model)` classifies an alternate
+corpus into its OWN `outputs/<output_name>` without running the full pipeline and without
+touching the canonical `pipeline_output.json`. Overlays `config:param(corpus_path)` with a
+single deterministic clause and refuses on swap/zero-glob/load-incomplete/seen≠classified
+(`expected_model` is a `story_provenance` model prefix every loaded story must match;
+`None` for mixed-model corpora). Used by `python/audits/twin_comparison.py`. Serial only
+(one classify run at a time — OQ-77).
+
 ### Stack consistency check (wrong-qualifier / undefined-predicate detection)
 
 ```bash

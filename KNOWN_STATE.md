@@ -91,9 +91,10 @@ band for all 5 (consistent with continuous invariance), but the lower tail was
 pre-registered only to be REPORTED, carries no pre-committed falsifier, and may be partly
 ENTAILED by H1 (perspective_chi feeds the χ-classification) — so it is EXPLORATORY, needs
 its own registered test, NOT a second confirmation. (Earlier draft over-claimed
-"invariance fired"; corrected.) Forward work (in FINDINGS.md, not promoted to an OQ to avoid
-a concurrent-writer label collision): seated follow-up on the powerless-seat
-model-sensitivity and the signature lean.
+"invariance fired"; corrected.) Forward work promoted to OQ-123 (powerless-seat
+model-sensitivity), OQ-124 (the constructed_high_extraction↔false_ci_rope signature lean),
+OQ-125 (the pre-registered H2-independence colocation test) — filed once the concurrent
+OQ-122 writer finished, clearing the label-collision risk.
 
 ## 2026-06-13 — Branch cleanup: merged oq117-evidence-block into main; landed the China-legitimacy topic-run artifacts; gitignored *.pdf
 **Files:** KNOWN_STATE.md, ISSUES.md (merge), .gitignore, prolog/testsets/{demographic_resource_allocation,livelihood_security_reading,performance_legitimacy_contradictions,performance_legitimacy_flat_control,property_sector_overhang,qualitative_development_reading,quantitative_growth_reading,techno_nationalist_reading}.pl, json/ (7 matching), essays/2026-06/captive_on_both_ends_v3.md

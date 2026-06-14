@@ -13,10 +13,15 @@ permute band (95th pct). The same constraint-id is typed the same across haiku a
 flash markedly more often than chance re-pairing would produce — structural
 classification carries a model-invariant signal, field by field.
 
-This is **not** an aggregate "the engine is model-invariant" claim. The six type
-fields are non-independent (`verdict_join` folds the perspectives via
-`compute_verdict/4`), so verdict-agreement and perspective-agreement are the same
-signal reported at two altitudes, never two confirmations.
+This is **not** an aggregate "the engine is model-invariant" claim. `PRE_REGISTRATION.md`
+set **per-field 95% adjudication with NO multiplicity correction** (it explicitly declines
+a family-wise roll-up: "a plain Bonferroni would be conservative-but-wrong on dependent
+rows"). So **"7/7 hold" reads as seven *local* per-field results, nothing stronger** — not a
+family-wise "H1 confirmed." And the seven are not even mutually independent: the type fields
+are non-independent (`verdict_join` folds the perspectives via `compute_verdict/4`), so
+verdict-agreement and perspective-agreement are the same signal reported at two altitudes,
+never two confirmations. Each row is its own CI-vs-band verdict; the conjunction is not a
+new inference.
 
 **Seat gradient (a hypothesis the shape generates, not a settled measurement):**
 
@@ -35,11 +40,11 @@ disagree on the powerless reading more often than they agree). The **institution
 seat has the highest raw agreement (0.672) but the narrowest margin** over chance
 (its chance band is also high, 0.610) — institutional typing is the least
 *discriminating* invariance even though it looks the most agreed. Both are worth a
-seated follow-up; neither is a closed result on one witness (under-claim per the
-synthesis-side discipline: one twin pair earns "separable here," not "orthogonal
+seated follow-up (**OQ-123**); neither is a closed result on one witness (under-claim per
+the synthesis-side discipline: one twin pair earns "separable here," not "orthogonal
 everywhere").
 
-**A model-characteristic signature lean (hypothesis):** the recurring `signature`
+**A model-characteristic signature lean (hypothesis, OQ-124):** the recurring `signature`
 disparity is `constructed_high_extraction` (haiku) ↔ `false_ci_rope` (flash), in both
 directions across many ids. The two models systematically foreground different
 structural codings of the same substrate. Per OQ-70 this is STRUCTURAL-coding
@@ -67,15 +72,26 @@ fired") — it carries **no pre-committed falsifier**. It is therefore an **expl
 finding requiring its own registered test on a fresh corpus** before it counts as a result.
 It is **not** a second confirmation alongside H1.
 
-**[EDGE] The invariance tail may not be independent of H1.** `perspective_chi` feeds the
-structural classification (the dual-threshold χ AND ε path), so type is partly a *function*
-of χ. If structural type is invariant (H1 holds), the χ values that determine it are
-mechanically dragged toward non-random paired-similarity — the H2 lower tail could be
-**partly entailed by H1 rather than separate evidence about models.** The uniform 5/5 is
-exactly the pattern a near-tautology against a loose threshold would produce. Before the
-invariance tail counts as evidence *about models*, the H1-entailed portion must be carved
-out (e.g. a registered test that residualizes χ against type, or conditions on
-H1-disagreeing ids). Until then it is reported, not claimed.
+**[EDGE] The invariance tail may not be independent of H1 — and the entailed part is
+narrower than "residualize χ against type."** `perspective_chi` feeds the dual-threshold
+(χ AND ε) classification, so type is partly a function of χ. But the *binding* H1
+constraint is specific: type-invariance forces the haiku/flash χ pair onto the **same side
+of the decision threshold**, NOT to the **same value**. The H2 below-band finding is a
+**value-proximity** claim (|Δχ| smaller than chance) — strictly *stronger* than
+co-classification. So the mechanically-entailed component is **threshold-colocation**, and
+the discriminating test is:
+
+> **condition on same-side-of-threshold pairs and ask whether the below-band |Δχ| survives
+> within that conditioned set.** If it does, the value-proximity is real continuous
+> invariance beyond what H1 forces; if |Δχ| relaxes to the chance band once colocation is
+> held fixed, the tail was H1-entailed (threshold-colocation dressed as value-invariance).
+
+The uniform 5/5 is exactly the pattern a near-tautology against a loose threshold would
+produce, which is why this carve-out is load-bearing. **Rejected alternative:** conditioning
+on H1-*disagreeing* ids has a power trap — if H1 holds as strongly as reported, that subset
+is tiny and a null there is *underpowered*, not *independent*. The colocation decomposition
+is the pre-registered test (**OQ-125**); until it runs, the tail is
+exploratory and must not inherit H1's credibility.
 
 `chi:institutional` is the field closest to chance (obs 0.0746 vs a very tight band
 0.0793–0.0802) — i.e. its below-tail margin is the slimmest, echoing the institutional
@@ -99,9 +115,26 @@ seat's narrow structural margin in H1. (Descriptive only; same exploratory cavea
 
 - **Part A is irrelevant to this comparison — WITNESSED, not inferred.** Census of every
   authored `cs_axiom_status` across both twin corpora: `holdable` ×3885, `overridden` ×55,
-  nothing else. Positive control: the same grep pattern *does* flag `foreclosed`/`banana`
-  when seeded into a test file, so the empty out-of-enum result is a real absence, not a
-  blind grep. The Fix A repair path therefore could not have altered either built corpus.
+  nothing else. Positive control over the **actual corpus layout** (not a synthetic test
+  file): seeding `banana` into ONE real haiku testset makes the census selector report
+  `banana ×1` (and `holdable` 3885→3884); `git checkout` restores 3885. So the census over
+  the real layout *would* catch a live out-of-enum status — the empty result is a real
+  absence, not a read that never looked. The Fix A repair path could not have altered
+  either built corpus.
+- **The classify path computes, it does not echo a cached output — WITNESSED with a
+  negative control.** Cold(-ish) reproduce: deleting the cached `pipeline_output.haiku.json`
+  + raw and re-running `classify_corpus` recomputed it byte-for-byte (0/960 per_constraint
+  diff vs the committed reference) — the result is computed from the testset files in a
+  fresh swipl subprocess, not read back from the cached artifact. Negative control:
+  corrupting one constraint's extractiveness (0.68→0.05) flipped that id's signature
+  (`constructed_high_extraction`→`constructed_low_extraction`) and moved its χ, AND rippled
+  to all 960 entries (corpus-relative ensemble refit, per CLAUDE.md) — proving the path
+  computes globally; `git checkout` + re-run returned to 0/960 diff. (Scope honesty: this is
+  a cached-output-deleted + fresh-subprocess reproduce, NOT a literal fresh-clone — the
+  driver needs `abductive_data.json`, a pipeline precompute, so a bare checkout can't run it.
+  The negative control is the decisive compute-not-echo evidence regardless.)
+  *Aside diagnosed in passing:* the engine reads ε from `constraint_metric(_,extractiveness,_)`,
+  not `domain_priors:base_extractiveness/2` — corrupting only the latter moved nothing.
 - **The tree moving under the run did not contaminate the classify path.** `34481f4b`
   (the concurrent OQ-122 commit that landed mid-session, and an ancestor of the classify
   commit `8126231`) touched only `ISSUES.md` and an audit directory — **zero classify-path

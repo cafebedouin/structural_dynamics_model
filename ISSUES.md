@@ -5919,6 +5919,67 @@ verdict boxes (this session).
 
 ---
 
+## OQ-123 — Powerless-seat χ-typing is the most model-sensitive surface in the twin comparison — is it noise, a real seat-localized model divergence, or a generation artifact?
+
+**Ω-type:** Ω_E (a measurable per-seat agreement-rate gap, testable on any twin pair).
+
+**Status:** open — filed 2026-06-13 from the twin cross-model comparison
+(`audits/2026-06-13_twin_comparison/`, n=960, haiku vs gemini-flash at commit 8126231). H1
+(structural type model-invariance) HELD per-field for all 7 fields, but with a steep **seat
+gradient**: `persp:powerless` agreement-rate 0.397 (the two models disagree on the powerless
+reading more often than they agree; just above its 0.308 chance band), vs `persp:institutional`
+0.672 and `verdict` 0.749. The powerless seat is where model choice moves classification most.
+Open question: is this (a) the seat with the least authored signal so it floats, (b) a real
+divergence in how the two models render powerless-perspective extraction/coercion, or (c) a
+generation-template artifact? Discriminating handle: condition the powerless disparity on
+authored-vs-imputed powerless metrics; compare against a third model when available. Under-claim:
+one twin pair earns "model-sensitive here," not "the powerless seat is model-dependent in general."
+
+**Origin:** 2026-06-13 twin-comparison audit (FINDINGS.md "seat gradient"); RESULTS.md H1 table.
+
+---
+
+## OQ-124 — Systematic signature lean `constructed_high_extraction` (haiku) ↔ `false_ci_rope` (gemini-flash): two models coding the same substrate's structure differently
+
+**Ω-type:** Ω_E (a measurable directional disparity in the `signature` field across a twin pair).
+
+**Status:** open — filed 2026-06-13 from the twin comparison
+(`audits/2026-06-13_twin_comparison/`). The recurring `signature` disparity over matched ids is
+`constructed_high_extraction` (haiku side) ↔ `false_ci_rope` (flash side), in BOTH directions
+across many constraints — the two models systematically foreground different structural codings of
+the same authored substrate. Per OQ-70 this is STRUCTURAL-coding disagreement, NOT a detection
+claim (signature prevalence is bait-confounded). Open question: which authored fields drive the
+fork (extractiveness magnitude? the CI-rope gate inputs?), and is the lean a stable model
+fingerprint (re-test on a third model / a fresh twin draw). Cross-ref OQ-70.
+
+**Origin:** 2026-06-13 twin-comparison audit (FINDINGS.md "model-characteristic signature lean";
+RESULTS.md `signature` disparity exemplars).
+
+---
+
+## OQ-125 — H2 continuous-invariance tail: is the below-band |Δχ| real value-invariance, or threshold-colocation entailed by H1? (pre-registered colocation test)
+
+**Ω-type:** Ω_E (a pre-registered conditional-permutation test with a named decision rule).
+
+**Status:** open — filed 2026-06-13 from the twin comparison. The pre-registered H2 DRIFT test
+(observed mean|Δχ| > permute band95) FAILED for all 5 continuous fields (H2-drift FALSIFIED). The
+opposite tail fired instead — observed mean|Δχ| BELOW band5 for all 5 (true pairs more similar than
+chance re-pairing) — but that tail was pre-registered only to be REPORTED, carries no committed
+falsifier, and is **exploratory**. The load-bearing concern: the below-band tail may be **entailed
+by H1**, not separate evidence about models. The binding H1 constraint forces the haiku/flash χ pair
+onto the **same side of the decision threshold**, not to the **same value**; below-band similarity is
+a stronger value-proximity claim. **Pre-registered discriminating test:** condition on
+same-side-of-threshold pairs and ask whether the below-band |Δχ| SURVIVES within that conditioned
+set — survives ⇒ real continuous invariance beyond H1; relaxes to chance ⇒ the tail was
+threshold-colocation (H1-entailed). REJECTED alternative: conditioning on H1-disagreeing ids
+(underpowered, not independent, if H1 holds strongly). Until this runs on a fresh corpus, the
+invariance tail must not inherit H1's credibility.
+
+**Origin:** 2026-06-13 twin-comparison audit (FINDINGS.md "[EDGE]" H2 disposition); operator review
+sharpening (colocation decomposition over residualization).
+
+---
+
 *Last updated: 2026-06-13. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
