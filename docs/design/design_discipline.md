@@ -382,6 +382,41 @@ ISSUES.md OQ-69). Essay → constraint hypothesis → formalization → engine r
 next essay: the writing is the corpus's generation mechanism, and the engine is its immune
 system.
 
+### 4a — The linter is an operator instrument, not an engine input (the de-leak chokepoint)
+
+**The linter is for the operator, not the engine. Linting stories would be orchestrated bias**
+(operator ruling, 2026-06-14; OQ-116). The linter is an offline diagnostic the operator reads;
+it **never gates generation** (lint is non-blocking by pipeline contract), and a specific
+class of lint codes — the **threshold-coupled** codes, which compare authored metrics against
+classifier thresholds or disclose threshold values — **must never reach the authoring LLM**.
+Feeding them back teaches the model the decision boundary and collapses the authored-vs-computed
+diff: it is **the de-leak principle in reverse** (OQ-74's "do not promote an authored field into
+the computed output"), and the same orchestrated-bias hazard the 2026-06-05 de-leak exists to
+prevent. The ideal is that lint never reaches the model at all; the one accepted non-ideal
+(`regenerate_stories.py` feeds lint back only when the *API* rejects a story) is mitigated by the
+threshold-coupled strip, not exempted from it.
+
+Mechanism (so the rule is structural, not a memory): one source of truth
+(`linter.THRESHOLD_COUPLED_LINT` + `build_author_feedback`), and **every** feedback→prompt path
+routes through that single chokepoint — covering one surface, not N asserted-safe ones (Build
+Discipline Pattern 2). A `lint_file`-output that flows into a generation prompt without the
+chokepoint is the defect; `python/tests/test_deleak_chokepoint.py` is the standing guard
+(end-to-end present-in-lint/absent-in-prompt + a census tripwire that fails when a new module
+joins the {builds-prompt ∧ touches-lint} set).
+
+The corollary that distinguishes the two OQ-116 rules: a threshold-coupled lint code is a
+*harmless* operator readout only when the engine itself has a **correction-grade** route for the
+divergence it flags — then the lint merely notices, offline, an authored signal the engine
+already measures from another seat (and per S1 / OQ-74 those seats need not collapse to one true
+type). `MOUNTAIN_METRIC_CONFLICT` qualifies (the metric classifier reads high-ε mountain claims
+as snare/rope/tangled_rope; FNL is a Boltzmann-gated additional override — engine-witnessed 9/9
+seat divergence, FNL 1/9, `audits/2026-06-14_oq116_mmc_engine_witness/`). `SCAFFOLD_DANGER_ZONE`
+does **not** (no `false_scaffold` signature of any family; `coordination_scaffold` is a positive
+classifier, not an override), so its de-leak membership is correct but its *calibration* — the
+5/7 fire rate on legitimately-authored shapes — is a separate, still-open operator call
+(**OQ-127**). De-leak membership and calibration are orthogonal: a code stays stripped from
+author prompts regardless of whether its trigger is well-tuned.
+
 ---
 
 ## 5. Classification is routing, not truth (consequence of S1)
