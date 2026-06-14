@@ -1,0 +1,9 @@
+# extraction_blindness mirror-condition re-witness (2026-06-14)
+# code: prolog/report_generator.pl label_gap/4 lines 275-279 (existential member/member + cut)
+# commit: 4d25cd8b
+
+## live corpus (positive control vs memo §8: expect 16/20, 80%)
+=== corpus=live total=57 extraction_blindness=20 mirror_also=16 (80.0%%) avg_distinct_types=2.85 ===
+
+## testsets_haiku twin (vs memo §8: expect 258/358, 72.1%, avg 2.73)
+=== corpus=testsets_haiku total=960 extraction_blindness=358 mirror_also=258 (72.1%%) avg_distinct_types=2.73 ===

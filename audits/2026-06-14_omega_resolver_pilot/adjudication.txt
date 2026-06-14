@@ -1,0 +1,29 @@
+# §E adjudication — view vs naive cold-reader baseline
+# active OQs: 64  confirms: 57  contradicts: 7
+# standoff (live): 0
+
+## CONTRADICT (view overturns the cold-reader's prose-surface call — routing earning its keep)
+  OQ-03: baseline=workable -> view=blocked_on_human   | settled by: own Ω-type=Ω_P (routes out to a human; may never resolve)
+  OQ-37: baseline=blocked  -> view=workable_now       | settled by: OQ-90 status=resolved, Ω-type=Ω_C
+  OQ-41: baseline=blocked  -> view=workable_now       | settled by: OQ-46 status=resolved, Ω-type=None
+  OQ-56: baseline=workable -> view=blocked_on_human   | settled by: own Ω-type=Ω_P (routes out to a human; may never resolve)
+  OQ-58: baseline=workable -> view=blocked_on_human   | settled by: own Ω-type=Ω_P (routes out to a human; may never resolve)
+  OQ-69: baseline=workable -> view=blocked_on_human   | settled by: own Ω-type=Ω_P (routes out to a human; may never resolve)
+  OQ-82: baseline=workable -> view=blocked_on_human   | settled by: own Ω-type=Ω_P (routes out to a human; may never resolve)
+
+## CONFIRM (view and baseline agree): 57 OQs
+  OQ-10: agree -> blocked
+  OQ-22: agree -> workable_now
+  OQ-53: agree -> blocked_on_human
+  OQ-55: agree -> blocked_on_human
+  OQ-71: agree -> blocked_on_human
+  OQ-73: agree -> blocked
+  OQ-75: agree -> blocked_on_human
+  OQ-94: agree -> blocked_on_human
+  OQ-108: agree -> blocked
+  OQ-113: agree -> workable_now
+  OQ-119: agree -> blocked_on_human
+  OQ-122: agree -> workable_now
+  OQ-127: agree -> workable_now
+  OQ-128: agree -> workable_now
+  (+ 43 edge-free OQs both call workable_now)

@@ -241,6 +241,7 @@ The shift was corpus-snapshot drift (original range computed on an earlier snaps
 ## OQ-10 — Cross-reading comparison: no tooling to compare engine output across readings of the same kernel
 
 **Status:** open
+**Deps:** blocked_on OQ-04
 **Origin:** User-identified capability gap, May 2026; architectural context in
 `docs/unknown_reading_review.md` §4 and §5.  
 **Files:** `prolog/testsets/autonomy_reading.pl` (template with cs_reading_relation);
@@ -628,6 +629,7 @@ load multi-reading data and incidentally validate the branch.
 ## OQ-22 — Hub 1 / Hub 2 fall-through behavior at threshold starvation
 
 **Status:** open
+**Deps:** bundled_with OQ-01
 **Origin:** alt_power_transform first T2 run (compressed variants), May 2026. Diagnosed
 during the H1 investigation but not pursued as a separate item once the corrected Arm A/B
 sweep resolved H1.
@@ -1294,6 +1296,7 @@ delete `intent_engine` and its readers. **High-judgment.**
 **Ω-type:** Ω_E (design-relevant — taxonomy-coverage; χ-partition closed structurally, suppression-floor recalibration deferred to OQ-48).
 
 **Status:** open — Census rows 8–12. `inevitability` (`constraint_bridge.pl:22`),
+**Deps:** blocked_on OQ-90
 `internalization_depth` (`psych_bridge.pl:19`), `resistance_to_change`
 (`data_validation`/`json_report`/`utils`), `accumulation_speed` (`utils.pl:211`, explicit 0.0
 default) — all 0/0 both corpora, none compiler-emitted. Plus compound measurement metrics
@@ -1422,6 +1425,7 @@ The `extractiveness`/`base_extractiveness` sub-splits (rows 19–20) remain open
 **Ω-type:** Ω_C (design choice — fail-closed vs impute; subsumed by the OQ-44 satisfy-on-absence policy).
 
 **Status:** partial — row 23 MITIGATED (2026-05-31, Commit A); rows 24–27 open (row 26 NEUTRAL for 3 of 6 sites — 4 OPEN, see coverage correction below). Census rows 23–27. A silent
+**Deps:** blocked_on OQ-46
 fixed default (`0.5`, `0.0`) substitutes for absent authored data, so the engine computes on a value
 nobody authored — distinct from G5 (this is fail-closed-vs-impute, not representation choice).
 - **Row 23 `drl_composition.pl` `classify_at_time` `Supp=0.5` — FIXED via scalar-fallback STOPGAP.**
@@ -2090,6 +2094,7 @@ explained), so the prior "do not scope until OQ-51 settled" gate is lifted.
 **Ω-type:** Ω_C (design choice — is the kernel/reading axis first-class?).
 
 **Status:** open
+**Deps:** blocked_on OQ-56
 **Origin:** Kernel/reading review, 2026-06-02 (first kernel/reading corpus landed this day).
 **Files:** `cs_kernel_registry.pl`, `logical_fingerprint.pl`, `json_report.pl`; readings as
 `kernel__reading_name` sibling files.
@@ -2157,6 +2162,7 @@ or a third axis?
 **Ω-type:** Ω_C (design — adopt the debugging-philosophy trifurcation as the disagreement router).
 
 **Status:** open
+**Deps:** blocked_on OQ-56
 **Origin:** Kernel/reading review, 2026-06-02.
 **Files:** `sheaf_status`/`h1_band`, `cs_pattern`, `cs_axiom_foreclosed`, `drift_events.pl`;
 spec in `docs/debugging_philosophy.md` §6.
@@ -3050,6 +3056,7 @@ prevalence at 3000-scale).
 **Ω-type:** Ω_E (corpus measurement — falsification probe aimed at `docs/design/a_hypothesis_about_corpus_size.md` §3).
 
 **Status:** partial — scale run complete 2026-06-04 (438/449 stories): H1 and H3 falsifiers FIRED beyond resampling noise, H2 mixed; attribution between nesting-depth and seed-authorship awaits the authorship-controlled breadth arm (the named discriminating experiment at the end of this entry)
+**Deps:** blocked_on_human operator-spend-go
 **Origin:** 2026-06-04 session: kernel/reading recursion thought experiment (constitutional_government ⊃ us_constitution ⊃ amendments ⊃ doctrines, and upward toward `government`). Plan: `~/.claude/plans/virtual-inventing-allen.md` (mirror the operative content here as steps complete).
 
 **Specific question:** The corpus-size hypothesis claims the structural-class vocabulary is a bounded attractor. Depth-correlated authoring (a designed kernel-nesting lineage, ~600 stories) is the hardest test: does a depth arm mint new 5-dim structural classes (props, voids, actors, drift, zone — shift tracked separately) at a rate exceeding a breadth control at matched n? Pre-registered: H1 excess-over-control ≤ 0 (cumulative + rarefaction slope at n=300); H2 within-level saturation (L2/L3/L4 only, n≥100 each) with persisting ε/χ spread; H3 MI couplings ≈ live-recomputed corpus baseline.
@@ -3110,6 +3117,7 @@ would put all three axes (observer/axiom/time) on the same discovered footing.
 **Ω-type:** Ω_E (one controlled generation run answers it).
 
 **Status:** open — deferred out of the 2026-06-05 de-leak work item (verification hygiene: a second change variable; the de-leak's Stage-1/Stage-2 must read clean first)
+**Deps:** blocked_on OQ-75
 **Origin:** 2026-06-05 generation-pipeline audit (brief F6). Reading-sets inherit one jurisprudential
 tradition's dialectic (the originalist/positivist/realist kit); the framework claims the
 site/reference frame is normative and chooseable (v7 Axiom 7).
@@ -3183,6 +3191,7 @@ override-effective readings remain two-seat metric/signature signal under the OQ
 **Ω-type:** Ω_E (the staked prediction is measurable).
 
 **Status:** open — gated on operator go; Stage-1 single-example gate passed 2026-06-05 (KNOWN_STATE.md 2026-06-05)
+**Deps:** blocked_on_human operator-go
 **Origin:** 2026-06-05 de-leak work item (audit brief §4 Stage 2). The generation pipeline no
 longer hands the author the engine's decision boundaries (schema bands stripped `9f2d050a`, prompt
 de-leaked `b6c4e113`, retry-path scrub `07f7b1c0`, axes cap optional `7ad86c5a`); the
@@ -4371,6 +4380,7 @@ construction, so it cannot create that misalignment class), OQ-106.
 receipt surface exists; operator's ruling).
 
 **Status:** open — homed 2026-06-10; known-interference item for the OQ-92 step-3
+**Deps:** blocked_on_human operator-benignity-certification
 preregistration. Per-site decision rule RULED 2026-06-10 (Read-site pass block below).
 **Read-site pass COMPLETE 2026-06-10** (`audits/2026-06-10_oq94_readsite_pass/`): 12 consumer
 files (the prior "seven-consumer list" was `head -15`-TRUNCATED — concealed `drl_core.pl:346,373`,
@@ -4899,6 +4909,7 @@ report this adapter would feed), OQ-83 (drift-event consumers).
 2026-06-11 review-exchange improvements).
 
 **Status:** open — filed 2026-06-11 (Pew political-typology review exchange).
+**Deps:** blocked_on OQ-107
 
 **The gap.** Survey instruments sample the powerless and moderate positions densely and the
 institutional position almost not at all — which is exactly why the parent essay's
@@ -5400,6 +5411,7 @@ OQ-43 (A6 semantics), OQ-93/OQ-96 (pattern provenance), OQ-110 (A4 lineage).
 **Ω-type:** Ω_E (witnessed, mechanical; Pattern-5 absence-gate stack).
 
 **Status:** open — filed 2026-06-12 by the OQ-109 unanimity adjudication (candidate-B gauntlet).
+**Deps:** bundled_with OQ-43, bundled_with OQ-44
 
 **The witness.** `signature_detection:has_viable_alternatives/2` has exactly two clauses:
 `true` (an `intent_viable_alternative` fact exists) and `unknown` (catch-all) — `false` is
@@ -5858,6 +5870,7 @@ OQ-118 (cast-instability — printing_press's metric-side ε wobble), `docs/seat
 **Ω-type:** Ω_E (engine-characterization; measurable once the substrate instruments all three axes).
 
 **Status:** open — blocked on substrate. Filed 2026-06-13 from the OQ-117 (c) ruling.
+**Deps:** blocked_on_human substrate-instrumentation
 
 **The question (engine-characterization, NOT a (c) gate — (c) is resolved).** OQ-117 showed feeding
 the mountain claim does not change the engine's *type* verdict (0/30 both arms). A sharper question
@@ -5968,6 +5981,7 @@ verdict-stability demoted to confounded-half; discharge-to-successor).
 claim-only RED-capping is the intended semantics is a design ruling).
 
 **Status:** investigating — filed 2026-06-13 from the Przybylski's-star stress run
+**Deps:** bundled_with OQ-128
 (`agent/analysis/originals/przybylskis_star.md`; testsets `actinide_replenishment_mechanism_*`,
 `neutron_star_bombardment_reading`, `radiative_levitation_stratification`, `superheavy_decay_reading`,
 `performance_legitimacy_flat_control`; reports in `outputs/constraint_reports/`). Surfaced by a
@@ -6378,6 +6392,7 @@ stop-at-the-record-boundary rulings are the operator's (this thread).
 **Ω-type:** Ω_E (advisory-lint calibration; witnessed on the cohort-zero pilot).
 
 **Status:** open — split-refiled from OQ-116 on 2026-06-14 when the MMC half resolved. The
+**Deps:** splits_from OQ-116
 operator-only linter ruling (OQ-116: the linter is an operator diagnostic, lint never gates
 generation, threshold-coupled codes never reach the authoring LLM) **was applied here and
 explicitly did NOT settle SDZ** — do not re-derive the MMC reasoning and extend it to SDZ; the
@@ -6428,6 +6443,7 @@ ruling and the split decision are the operator's.
 **Ω-type:** Ω_C (design ruling — whether the mid-power decline is intended semantics).
 
 **Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose)
+**Deps:** splits_from OQ-122, bundled_with OQ-122
 **Origin:** OQ-122 fixture/verdict work, 2026-06-14. `classify_from_metrics` (pre-signature) returns
 **non-mountain at the moderate/institutional power seats for ALL mountain-claimers** — a power-scaling
 effect of χ = ε·f(d)·σ(S) shifting the mid-power contexts off the mountain band
@@ -6480,6 +6496,19 @@ clean; validation 0 errors).
 cover side; v7 Theorem-1 raw orbit `[naturalized,snare,rope,snare]`). **Finer labels `cut_safety`
 (mountain/rope) and `learned_helplessness` (snare/mountain) are NOT yet grounded** — they currently fold
 into general/extraction_blindness. Resolution = ground or drop them.
+**OPEN-A advance (2026-06-14, witnessed): `extraction_blindness` is substantially an existential-labeling
+artifact.** `label_gap/4` (report_generator.pl:275–279) fires `extraction_blindness` whenever *one*
+(extractive seat lower-power, functional seat higher-power) pair exists (`member/member`, `De>Df`, cut) —
+it never checks the relationship is monotone or dominant. So the same constraint's seats frequently
+co-license the **mirror** reading (extractive seat at *higher* power than a functional seat) at once,
+making the templated headline false to its own data. Witness: `audits/2026-06-14_extraction_blindness_existential_label/`
+(`mirror_metric.txt`) — live **16/20 (80%)** mirror (corpus-independent positive control), `testsets_haiku`
+**258/358 (72.1%)**, avg **2.73–2.85** distinct types/constraint (of ~6: non-monotone). Resolution = gate
+the label on a monotonicity/dominance check, or demote the headline to "type-divergence across power,
+direction non-monotone" when the mirror also holds. **Until ruled, gap-omega `extraction_blindness`
+instances stay instances of this open Ω_C — never promoted to an asserted per-record field** (a clean
+authority-controlled value can be uniformly false-to-its-data; the contested bit is sourced from this
+record's open status).
 **OPEN-B (coverage map).** `coverage_map.md`: deliberate-vs-hole call per abstainer needs the PROSE (not
 done). `catastrophe_memory_kernel__boundary_maintenance_reading` is a strong HOLE candidate (six_questions
 authored, `stakeholders[]` empty). The two `*_contradictions` entries are pl-only (NO_JSON).
@@ -6497,6 +6526,50 @@ holes to backfill in generation.
 convention caveat, do not cite gap counts as a detection result without ruling this), OQ-83/OQ-109
 (stakeholder-seat observer layer this feeder now rides), Build Discipline Pattern 1 (the dangling wire
 this was) + Pattern 6 (the null/`[]` coverage bit).
+
+---
+
+## OQ-130 — omega-resolver: pilot validated on ISSUES.md; scale to the corpus omega set (Ω_E)
+
+**Ω-type:** Ω_E (the scale claim — "computing over the access points routes the right few from the many" — is measurable; pilot done, corpus arm pending).
+
+**Status:** open — pilot RESOLVED + witnessed 2026-06-14; corpus scale arm carried below.
+**Origin:** the omega-resolver memo (`~/.claude/plans/brief-the-omega-glittery-wozniak.md`): one
+defect (absence-as-presence) read at four layers (wiring/evaluation/summary/relationship), at two
+scales — ISSUES.md (128 typed OQs) and the corpus (4,430 authored omegas, `outputs/dump_omega_haiku.md`).
+The resolver is the apparatus carrying the provenance/coverage/confidence bit to the read site.
+
+**Pilot (RESOLVED 2026-06-14, `audits/2026-06-14_omega_resolver_pilot/`):** read-only catalog views
+over ISSUES.md prose + one authored `Deps:` field (no `issues/` migration — Option 1). Apparatus:
+`python/omega_resolver.py` (loader / authority control / SCC-condensation frontier view §D / checker
+/ planted-fixture selftest). The only-claim-in-doubt test (§E): frontier view vs an independent
+naive cold-reader baseline → **57 confirm, 7 contradict, 0 standoff**, each contradict settled by an
+EXTERNAL fact (resolved-blocker status for OQ-37/41; own Ω_P type for OQ-03/56/58/69/82). Selftest
+8/8 (incl. §D 2-cycle→one standoff, over-fire negative control). Criterion met: checkable verdict +
+≥1 §A defect-OQ advanced (OQ-129 evaluation, OQ-37 wiring).
+
+**Refinement the pilot surfaced:** the OQ→OQ + Ω_P model mis-buckets active Ω_E entries blocked on
+an operator-spend-go / substrate gate (OQ-71/75/119) as workable_now; fixed with one authored
+relator `blocked_on_human <freetext>`. Add to the §2 access-point families if/when the catalog
+serialization is built (scale-time).
+
+**Scale arm (OPEN, gated on the validated pilot — now satisfied):** point the loader at a corpus
+omega record built from `dump_omega_haiku.md` (+ gap omegas), run §C's two gates before trusting an
+agenda — (1) dedup by frontier-identity (positive control: a planted known-duplicate pair must merge,
+a known-distinct sibling pair must stay apart), (2) carry each omega's `confidence_without_resolution`
+bit to the read site — then per-Ω-type finding aids (Ω_E measurement / Ω_C definitional / Ω_P
+stakeholder agenda). **Blocking precondition:** a §8-style "is this omega real?" soundness spot-check
+must run on a sample of the *authored* omegas first — the pilot's 128 records are human-authored and
+individually witnessed; the 4,430 are LLM-authored and §8 proved an omega class can be artifactual.
+
+**Why it matters / what resolution changes:** turns the 5.5 MB `dump_omega_haiku.md` from a dump into
+a deduplicated, confidence-carried, reachability-ranked research agenda — but only after the soundness
+gate, else it launders artifactual omegas into a clean-looking catalog (the §1g hole).
+
+**Cross-refs:** OQ-129 (the engine gap-omega surface this generalizes; OPEN-A is the §8 evaluation-
+layer defect-zero), OQ-70 (gap-Ω prevalence is bait-confounded — the agenda inherits the caveat),
+Build Discipline Patterns 1/5/6 (the four layers are instances of these).
+**Deps:** blocked_on_human corpus-omega-soundness-spot-check
 
 ---
 

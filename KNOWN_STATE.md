@@ -45,6 +45,25 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-14 — omega-resolver pilot validated on ISSUES.md (OQ-130 minted); §8 landed into OQ-129 OPEN-A
+**Files:** python/omega_resolver.py, ISSUES.md, audits/2026-06-14_omega_resolver_pilot/, audits/2026-06-14_extraction_blindness_existential_label/
+**Tier:** landed
+
+Ran the omega-resolver memo's pilot (read-only catalog views over ISSUES.md prose + one authored
+`Deps:` field; no `issues/` migration). New apparatus `python/omega_resolver.py`: loader / authority
+control / SCC-condensation frontier view (§D) / checker / planted-fixture selftest (8/8 controls).
+- **§8 re-witnessed** (not transcribed): `extraction_blindness` is an existential-labeling artifact —
+  live 16/20 (80%) mirror, haiku 258/358 (72.1%), avg 2.73–2.85 types. Landed into OQ-129 OPEN-A.
+  `audits/2026-06-14_extraction_blindness_existential_label/` (probe_mirror.pl reproduces).
+- **§E verdict** (the only claim in doubt): frontier view vs independent naive cold-reader baseline →
+  57 confirm, 7 contradict, 0 standoff; each contradict settled by an external fact (resolved-blocker
+  status for OQ-37/41; own Ω_P type for OQ-03/56/58/69/82). Pilot success criterion met.
+- **Model gap surfaced + fixed:** active Ω_E entries blocked on operator-spend-go/substrate are a human
+  gate that is not an OQ edge → added relator `blocked_on_human <freetext>` (OQ-71/75/119).
+- 16 `Deps:` edges authored by hand in ISSUES.md (values from prose, §1e). `issues_status --check`
+  intact (129 parsed). OQ-130 minted for the corpus scale arm (gated on a §8-style omega-soundness
+  spot-check before any agenda is trusted). `omega_resolver.py` is read-only, NOT a pipeline gate.
+
 ## 2026-06-14 — OQ-129: perspectival-gap feeder rewired onto authored stakeholder seats (was reading the retired constraint_classification)
 **Files:** prolog/report_generator.pl, prolog/json_report.pl, ISSUES.md, audits/2026-06-14_omega_gap_reconstruction/
 **Tier:** tripwire
