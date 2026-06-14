@@ -6105,8 +6105,24 @@ threshold-colocation (H1-entailed). REJECTED alternative: conditioning on H1-dis
 (underpowered, not independent, if H1 holds strongly). Until this runs on a fresh corpus, the
 invariance tail must not inherit H1's credibility.
 
+**Precondition — `abductive_data.json` provenance (settled 2026-06-14):** it is
+**committed-derivable**, not a carried-with-no-generator artifact — generator is
+`abductive_report.pl` (`run_abductive_report`), run as the `_prolog_abductive` pipeline step
+(`run_pipeline.py:469`), computed from the corpus. CAVEAT for "fresh corpus": `classify_corpus`
+runs only `_json_report`, which READS `abductive_data.json` on-disk and does NOT regenerate it
+for the target corpus — so a classify-only reproduce carries whatever corpus last ran the full
+pipeline. **This does NOT affect OQ-125:** the file's `abd_triggers/2` are read only by
+`diagnostic_summary.pl:191` (→ `verdict`) and `post_synthesis.pl:37` (→ flags); χ
+(`perspective_chi`), signature, perspectives, and claimed_type are computed independently of it
+(witnessed: the `drl_core`/`signature_detection` "abductive" hits are comments + a *different*
+static helper `abductive_helpers:known_override_signature`, not `abd_triggers`). Since OQ-125
+conditions on χ thresholds, the carried file is irrelevant to this test. (It can perturb the
+`verdict` field, but both twins read the SAME on-disk copy, so that comparison stays symmetric.)
+If a future fresh-corpus run wants `verdict` to be target-matched too, regenerate
+`abductive_data.json` against the target corpus first (full pipeline with `corpus_path` overlaid).
+
 **Origin:** 2026-06-13 twin-comparison audit (FINDINGS.md "[EDGE]" H2 disposition); operator review
-sharpening (colocation decomposition over residualization).
+sharpening (colocation decomposition over residualization; abductive-provenance precondition).
 
 ---
 

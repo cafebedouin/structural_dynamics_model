@@ -45,6 +45,24 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-14 — Engine reads ε from constraint_metric, NOT the testset's domain_priors:base_extractiveness (corrupt-test / ε-trace tripwire)
+**Files:** prolog/drl_core.pl, prolog/constraint_data.pl, prolog/domain_priors.pl
+**Tier:** tripwire
+
+Surfaced while building the twin-comparison negative control (`audits/2026-06-13_twin_comparison/`):
+corrupting a testset's `domain_priors:base_extractiveness(C, 0.68)` changed **nothing** in
+classification; corrupting `narrative_ontology:constraint_metric(C, extractiveness, 0.68)` flipped
+the signature and moved χ. The verified ε path for classification is:
+`drl_core:base_extractiveness/2` (drl_core.pl:85) → `constraint_data:base_extractiveness/2`
+(constraint_data.pl:11–13) → `config:param(extractiveness_metric_name, N)` →
+`narrative_ontology:constraint_metric(C, N, V)` (N = `extractiveness`). The
+`domain_priors:base_extractiveness/2` fact authored in a testset is a SEPARATE domain-prior path
+the classifier does not read for corpus constraints (`drl_core:base_extractiveness(_,_):-fail` is
+the domain_priors default, domain_priors.pl:33). **Silent-mistake guard:** anyone corrupt-testing
+or tracing ε who edits `base_extractiveness` will see no effect and wrongly conclude ε is inert —
+edit `constraint_metric(_, extractiveness, _)` (the authoritative source). This is the
+"base_extractiveness bridge" the memory index references, now witnessed.
+
 ## 2026-06-14 — OQ-49 SPLIT-CLOSE: signature-override re-measure on live corpora; FNL collapse witnessed by source-attribution
 **Files:** python/audits/oq49_override_remeasure.py, audits/2026-06-14_oq49_remeasure/, ISSUES.md, prolog/signature_detection.pl
 **Tier:** landed
