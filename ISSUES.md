@@ -6480,6 +6480,19 @@ clean; validation 0 errors).
 cover side; v7 Theorem-1 raw orbit `[naturalized,snare,rope,snare]`). **Finer labels `cut_safety`
 (mountain/rope) and `learned_helplessness` (snare/mountain) are NOT yet grounded** — they currently fold
 into general/extraction_blindness. Resolution = ground or drop them.
+**OPEN-A advance (2026-06-14, witnessed): `extraction_blindness` is substantially an existential-labeling
+artifact.** `label_gap/4` (report_generator.pl:275–279) fires `extraction_blindness` whenever *one*
+(extractive seat lower-power, functional seat higher-power) pair exists (`member/member`, `De>Df`, cut) —
+it never checks the relationship is monotone or dominant. So the same constraint's seats frequently
+co-license the **mirror** reading (extractive seat at *higher* power than a functional seat) at once,
+making the templated headline false to its own data. Witness: `audits/2026-06-14_extraction_blindness_existential_label/`
+(`mirror_metric.txt`) — live **16/20 (80%)** mirror (corpus-independent positive control), `testsets_haiku`
+**258/358 (72.1%)**, avg **2.73–2.85** distinct types/constraint (of ~6: non-monotone). Resolution = gate
+the label on a monotonicity/dominance check, or demote the headline to "type-divergence across power,
+direction non-monotone" when the mirror also holds. **Until ruled, gap-omega `extraction_blindness`
+instances stay instances of this open Ω_C — never promoted to an asserted per-record field** (a clean
+authority-controlled value can be uniformly false-to-its-data; the contested bit is sourced from this
+record's open status).
 **OPEN-B (coverage map).** `coverage_map.md`: deliberate-vs-hole call per abstainer needs the PROSE (not
 done). `catastrophe_memory_kernel__boundary_maintenance_reading` is a strong HOLE candidate (six_questions
 authored, `stakeholders[]` empty). The two `*_contradictions` entries are pl-only (NO_JSON).
