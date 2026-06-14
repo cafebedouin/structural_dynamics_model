@@ -16,7 +16,7 @@ import sys
 
 sys.path.insert(0, "python")
 from generate_constraint_pl import validate_json, generate_pl  # noqa: E402
-from linter import lint_file  # noqa: E402
+from linter import lint_file, strip_threshold_coupled  # noqa: E402
 
 ARCHIVE = "prolog/archives/datasets/kernel_v2_test2/json"
 
@@ -59,7 +59,12 @@ def main():
             lint = lint_file(tmp)
             os.unlink(tmp)
             rows.append(("compiles + story_seed emitted", "story_seed(" in pl))
-            rows.append(("lint clean", not lint))
+            # Threshold-coupled lint codes (SCAFFOLD_DANGER_ZONE / MOUNTAIN_METRIC_CONFLICT /
+            # LOW_THEATER_RATIO) are OPERATOR readouts of authored claim/metric divergence,
+            # not authoring failures — they must not flip the witness bar (OQ-116 amendment,
+            # 2026-06-14). Filter through the linter's centralized de-leak set before asserting.
+            blocking_lint = strip_threshold_coupled(lint)
+            rows.append(("lint clean", not blocking_lint))
         except Exception as e:
             rows.append(("compiles", False))
             lint = [str(e)]

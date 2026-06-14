@@ -41,7 +41,7 @@ from story_generator_base import (  # noqa: E402
 )
 import llm_call  # noqa: E402
 from generate_constraint_pl import validate_json, generate_pl  # noqa: E402
-from linter import lint_file  # noqa: E402
+from linter import lint_file, build_author_feedback  # noqa: E402
 
 ARCHIVE = REPO_ROOT / "prolog/archives/datasets/kernel_v2_test2/json"
 STAGE_JSON = REPO_ROOT / "json_cohort0"
@@ -105,8 +105,13 @@ def generate_one(seed_id, title, domain, summary, draw):
         temperature=TEMPERATURE, max_tokens=16384)
     story, errors = process_response(text)
     if story is None or errors:
+        # Route author-facing feedback through the de-leak chokepoint: strip any
+        # threshold-coupled lint code before it can reach the generating LLM
+        # (latent hardening — process_response returns validate_json errors only
+        # today, but the guard must cover this path too; OQ-116 Part C).
+        feedback_errors = build_author_feedback(errors) or ["unparseable output"]
         feedback = ("\nYour previous attempt had these validation errors:\n"
-                    + "".join(f"  - {e}\n" for e in (errors or ["unparseable output"]))
+                    + "".join(f"  - {e}\n" for e in feedback_errors)
                     + "Fix these while keeping the rest correct.\n")
         text, tin2, tout2 = llm_call.call(
             build_prompt(source_desc(title, domain, summary) + feedback), MODEL,

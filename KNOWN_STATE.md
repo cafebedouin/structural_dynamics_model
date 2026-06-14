@@ -45,6 +45,37 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-14 — OQ-116 split-closed: de-leak lint chokepoint (linter.py SSOT); MMC = non-collapsing seat divergence; SDZ → OQ-127
+**Files:** python/linter.py, python/regenerate_stories.py, agent/cohort_zero_regen.py, python/tests/test_deleak_chokepoint.py, audits/2026-06-12_cohort_zero/pilot_witness.py, docs/design/design_discipline.md, ISSUES.md
+**Tier:** tripwire
+
+OQ-116 resolution (operator ruling: *the linter is for the operator, not the engine; linting
+stories would be orchestrated bias*). Threshold-coupled lint codes (`SCAFFOLD_DANGER_ZONE`,
+`LOW_THEATER_RATIO`, `MOUNTAIN_METRIC_CONFLICT`) must never reach the authoring LLM —
+de-leak-in-reverse (OQ-74). The set + strip now live in `linter.py` as the single source of
+truth (`THRESHOLD_COUPLED_LINT`, `build_author_feedback`); `regenerate_stories.py` imports it
+(was a Pattern-2 fork); `cohort_zero_regen.py` routed through it (latent — its feedback is
+validate_json errors, not lint). MMC messages reworded: dropped the authoring imperative, framed
+as a claim-vs-metric **seat divergence that need not collapse to one true type** (OQ-74 / seat
+theorem) — NOT "the engine corrects the claim."
+
+Engine witness (`audits/2026-06-14_oq116_mmc_engine_witness/`): all 9 live-corpus MMC firings run
+through the engine — metric seat diverges from the mountain claim 9/9 (snare/rope/tangled_rope/
+unknown), FNL fires only 1/9 (Boltzmann-gated). Corrects OQ-116's own premise: "FSM exists for
+it" was WRONG (FSM needs ε ≤ 0.25; firings have ε > 0.25); the analog is the metric classifier
+(primary) + FNL (secondary). `institutional_trust_erosion_c0` → snare, FNL=no. (Consistent with
+the sibling 2026-06-14 entry: linter reads ε from the authored `domain_priors:base_extractiveness`
+regex; the engine classifies on `constraint_metric` — different ε sources, which is *why* MMC is a
+coarse proxy.) SDZ half (5/7 calibration) refiled as **OQ-127** (open); de-leak membership correct,
+calibration is the open operator call.
+
+**Promotion test (applied, two-pass):** a fresh agent could re-add a lint→prompt loop or
+re-declare the tuple. But that mistake is now made **loud, not silent** — `test_deleak_chokepoint.py`
+has a census tripwire that fails when a new module joins the {builds-prompt ∧ touches-lint} set,
+and `design_discipline.md` §4a states the principle. Per the roll-off rule ("loud failures stay
+history, not promoted"), this does **not** graduate to an always-loaded CLAUDE.md section — the
+guard + §4a are the durable substrate. Kept here as `tripwire` provenance.
+
 ## 2026-06-14 — Engine reads ε from constraint_metric, NOT the testset's domain_priors:base_extractiveness (corrupt-test / ε-trace tripwire)
 **Files:** prolog/drl_core.pl, prolog/constraint_data.pl, prolog/domain_priors.pl
 **Tier:** tripwire

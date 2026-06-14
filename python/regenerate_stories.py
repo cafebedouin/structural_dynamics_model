@@ -52,7 +52,7 @@ OUTPUTS_DIR = ROOT_DIR / "outputs"
 # Imports from sibling modules
 # ---------------------------------------------------------------------------
 sys.path.insert(0, str(SCRIPT_DIR))
-from linter import lint_file
+from linter import lint_file, build_author_feedback
 from duplicate_checker import check_incoming_file
 from generate_constraint_pl import validate_json, generate_pl
 
@@ -405,33 +405,15 @@ def lint_temp(basename, content):
     return errors, tmp_path
 
 
-# Lint codes that predict the engine's classification bands (they compare authored
-# metrics against type thresholds, or disclose threshold values in their message).
-# They stay valid as OFFLINE diagnostics — their corpus firing rate is the
-# authored-claim-vs-authored-metric divergence readout — but they must never reach
-# the authoring LLM: feeding them back teaches the model the decision boundary and
-# collapses the authored-vs-computed diff (de-leak 2026-06-05; see
-# docs/the_perturbation_principle.md). Filtered at this single choke point so every
-# path through the prompt constructor is covered.
-THRESHOLD_COUPLED_LINT = (
-    "SCAFFOLD_DANGER_ZONE",
-    "LOW_THEATER_RATIO",
-    "MOUNTAIN_METRIC_CONFLICT",
-)
-
-
-def _strip_threshold_coupled(errors):
-    """Drop threshold-coupled lint codes from author-facing error feedback."""
-    if not errors:
-        return errors
-    return [e for e in errors
-            if not any(e.startswith(code) for code in THRESHOLD_COUPLED_LINT)]
-
-
+# Threshold-coupled lint codes (the set + the strip) are owned by linter.py — the
+# single source of truth. Every feedback->prompt path runs errors through
+# linter.build_author_feedback so the de-leak guard covers one surface, not N
+# (de-leak 2026-06-05; OQ-116; Build Discipline Pattern 2). Do NOT re-declare the
+# tuple here.
 def build_user_prompt(basename, original_content, known_errors, retry_errors=None):
     """Build the prompt sent to Gemini for (re)generation."""
-    known_errors = _strip_threshold_coupled(known_errors)
-    retry_errors = _strip_threshold_coupled(retry_errors)
+    known_errors = build_author_feedback(known_errors)
+    retry_errors = build_author_feedback(retry_errors)
     parts = [
         f"Produce the JSON representation of this constraint story: {basename}\n",
         "Follow the schema exactly. Output ONLY valid JSON — no markdown fences, no commentary.\n",
