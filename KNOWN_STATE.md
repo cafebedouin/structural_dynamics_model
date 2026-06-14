@@ -61,11 +61,13 @@ source-1 (`constraint_claim(_,mountain)`); zero source-2, zero unaccounted. Kill
 firing tagged neither = a third path) NOT triggered. The 827/1106 pre-reset bait firings are gone
 *by construction*; the raw `1661 → ≤8` count drop is size-confounded (3380 vs 960) and is color,
 not the witness. FNL override-effective is now 0/6/8 (was 1661). The override layer's dominant
-effect on live is `false_ci_rope → tangled_rope`, not FNL. Inert on live: `:867` natural_law→mountain
-(0 firings) and `:877` FNL-unknown-fill (0). Residual = 8 FNL snare→TR overwrites, all coord+asym →
-the clean-laundering coord=0 subset is EMPTY, escalation dissolves to zero; the 8 are two-seat signal
-handed to OQ-74. Twin paired diff (generator-convention signal, analogue-not-witness): 81 shared /
-87 haiku-only / 100 flash-only override-effective ids.
+effect on live is `false_ci_rope → tangled_rope` (override-effective 6/56/78, ~10× FNL→TR's 0/6/8),
+not FNL. Inert on live: `:867` natural_law→mountain (0 firings) and `:877` FNL-unknown-fill (0).
+Residual = the FULL FNL override-effective union (0/6/8 = 14 across both twins; snare→TR 0/4/4 +
+scaffold→TR 0/2/4): **14/14 carry coord+asym**, coord=0 arm positive-controlled (fires elsewhere:
+haiku 18 no_coord) → the clean-laundering coord=0 subset is EMPTY on live, escalation dissolves to
+zero; the 14 are two-seat signal handed to OQ-74. Twin paired diff (generator-convention signal,
+analogue-not-witness): 81 shared / 87 haiku-only / 100 flash-only override-effective ids.
 
 **Citation qualifier (correction-key):** do NOT cite OQ-49's `testsets_3000` 1730/1661 numbers as a
 live result — that corpus is dead and pre-OQ-70. The live re-measure is `audits/2026-06-14_oq49_remeasure/`.

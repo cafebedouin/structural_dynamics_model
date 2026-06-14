@@ -1763,15 +1763,20 @@ FT=`dr_type/3`, Sig=`constraint_signature/2`; override-effective iff MT≠FT; po
 2. **Inert clauses — CLOSED working-as-designed.** `natural_law → mountain` (`signature_detection.pl:867`)
    fires 0 (no `natural_law` signature on live); `unknown, false_natural_law → unknown` (`:877`) fires
    0 (every live FNL firing has a definite metric, never unknown). Witnessed by the live tables.
-   FNL is no longer the override layer's dominant effect — that is now `false_ci_rope → tangled_rope`
-   (scaffold→TR 5/52/78) and `coupling_invariant_rope → rope` (3/18/34), distinct signatures.
-3. **Residual — DISPOSITIONED, not ruled.** The FNL snare→TR overwrites (the pre-reset dominant case)
-   are now 0/4/4. **8/8 carry both coordination AND asymmetric extraction** (`fnl_survivor_coordination.txt`).
-   Under the pre-reset partition (coord=0 = clean laundering candidate; coord+asym =
+   FNL is no longer the override layer's dominant effect — override-effective (eff=1):
+   `false_ci_rope → tangled_rope` = 6/56/78 and `coupling_invariant_rope → rope` = 3/18/34, distinct
+   signatures, vs `false_natural_law → tangled_rope` = 0/6/8 (FCR→TR leads FNL→TR ~10× on the twins).
+3. **Residual — DISPOSITIONED, not ruled.** The full FNL override-effective union is **0/6/8 = 14**
+   across both twins (snare→TR 0/4/4 — the pre-reset dominant case — plus scaffold→TR 0/2/4). Coord
+   crossed over **all 14**, not just the snare→TR 8: **14/14 carry both coordination AND asymmetric
+   extraction** (`fnl_survivor_coordination.txt`). **Positive control:** the coord=0 arm fires on the
+   corpus (haiku 18 `no_coord`, 119 `no_asym`) → all-14-coord+asym is a real finding, not a stuck-true
+   predicate. Under the pre-reset partition (coord=0 = clean laundering candidate; coord+asym =
    override-supplies-omitted-structure, correction-leaning) the **clean-laundering coord=0
-   pure-extraction subset is EMPTY on live** — the human-stakes escalation **dissolves to zero**. The
-   8 coord+asym readings are two-seat signal (the snare clause is coordination-blind; FNL→TR supplies
-   the omitted coordination-awareness) → handed to **OQ-74**, not ruled here.
+   pure-extraction subset is EMPTY on live, both twins** — the human-stakes escalation **dissolves to
+   zero**. The 14 coord+asym readings are two-seat signal (the snare/scaffold clause is
+   coordination-blind; FNL→TR supplies the omitted coordination-awareness) → handed to **OQ-74**, not
+   ruled here.
 4. **Twin paired check.** Model-invariance (real second witness): FNL collapse holds on **both**
    twins. Generator-convention signal (analogue, NOT a seat-frame witness): per-id override-effective
    sets diverge — **81 shared, 87 haiku-only, 100 flash-only** — two models authoring the same id

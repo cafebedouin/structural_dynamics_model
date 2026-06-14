@@ -47,24 +47,27 @@ so FNL fires only via source-1 (explicit `constraint_claim(_,mountain)`) or sour
 (`natural_law_signature` profile). The raw "1661 → ≤8" drop is size-confounded (3380 vs 960) and is
 **color, not the witness.**
 
-**FNL is no longer the override layer's dominant effect.** The live override layer is led by
-`false_ci_rope → tangled_rope` (scaffold→TR: 5 / 52 / 78) and `coupling_invariant_rope → rope`
-(scaffold→rope: 3 / 18 / 34) — distinct signatures, not the OQ-49 FNL focus. The
-`false_natural_law → tangled_rope` line is now 0 / 6 / 8 effective.
+**FNL is no longer the override layer's dominant effect.** Override-effective counts (eff=1):
+`false_ci_rope → tangled_rope` = **6 / 56 / 78** and `coupling_invariant_rope → rope` = 3 / 18 / 34
+— distinct signatures, not the OQ-49 FNL focus — vs `false_natural_law → tangled_rope` = **0 / 6 / 8**.
+FCR→TR now leads FNL→TR by ~10× on the twins.
 
 **Inert clauses (working-as-designed on live):** the `natural_law → mountain` clause
 (`:867`) fires 0 times — `natural_law` appears in no signature distribution. The
 `unknown, false_natural_law → unknown` clause (`:877`) fires 0 — every live FNL firing has a
 definite metric (snare/scaffold), never unknown.
 
-**Residual = FNL snare→TR overwrites (the pre-reset dominant case), now 0 / 4 / 4.**
-`fnl_survivor_coordination.txt`: **8/8 of these carry both coordination AND asymmetric extraction**
-(coord+asym). Under the pre-reset OQ-49 partition — coord=0 = clean laundering candidate;
-coord+asym = override-supplies-omitted-structure (correction-leaning) — the **clean-laundering
-coord=0 pure-extraction subset is EMPTY on live.** The human-stakes escalation the (a)/(b) ruling
-was reserved for **dissolves to zero** on these corpora. The 8 correction-leaning readings are
-two-seat signal (metric snare-clause is coordination-blind; FNL→TR supplies the omitted
-coordination-awareness) — handed to **OQ-74**, not ruled here.
+**Residual = the full FNL override-effective union, 0 / 6 / 8 = 14 across both twins**
+(snare→TR 0/4/4 — the pre-reset dominant case — plus scaffold→TR 0/2/4). `fnl_survivor_coordination.txt`
+crosses coordination/asymmetry over **all 14** (not just the snare→TR 8): **14/14 carry both
+coordination AND asymmetric extraction** (coord+asym). **Positive control:** the probe's coord=0 arm
+demonstrably fires on the corpus (haiku: 18 `no_coord`, 119 `no_asym`), so "all 14 coord+asym" is a
+real finding, not a stuck-true predicate. Under the pre-reset OQ-49 partition — coord=0 = clean
+laundering candidate; coord+asym = override-supplies-omitted-structure (correction-leaning) — the
+**clean-laundering coord=0 pure-extraction subset is EMPTY on live, both twins.** The human-stakes
+escalation the (a)/(b) ruling was reserved for **dissolves to zero**. The 14 correction-leaning
+readings are two-seat signal (metric snare/scaffold clause is coordination-blind; FNL→TR supplies the
+omitted coordination-awareness) — handed to **OQ-74**, not ruled here.
 
 ## Twin paired check (model-invariance + generator-convention signal)
 
