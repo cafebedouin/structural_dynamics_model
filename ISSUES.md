@@ -5880,12 +5880,24 @@ twins ⇒ firings ≠ distinct stories), NOT un-run computation — corroboratio
 22. (No over-claim: `vic>0` = "no-victim exemption does not apply / concealment possible," not per-case
 "confirmed concealment.")
 
-**Open graduation steps (all output-changing, none executed):** (a) **FSM victim-gate** — gate FSM on
-agent-victim presence; use `constraint_victim`, or add an `agent_victim/2` filter parallel to
-`agent_beneficiary` (does not exist yet) — RULED refine-not-remove, breadth-witnessed; (b) **OQ-50
+**Open graduation steps (all output-changing):** (a) **FSM victim-gate — IMPLEMENTED on branch
+`oq122-fsm-victim-gate` (`ab1e9b26`), NOT merged.** Gate diff on `testsets_flash` is a clean partition
+(FSM-firing 40→22: 18 `vic=0` exempted, 22 `vic>0` retained, 0 leakage, 22 untouched) ⇒ `constraint_victim`
+is the sufficient FSM filter, `agent_victim/2` is a later refactor not a blocker. **Merge is BLOCKED on two
+findings (FINDINGS.md GATE IMPLEMENTATION):** (i) breaks **36 unit-test fixtures** (`test_agent_beneficiary`
+31, `test_contradiction_signatures` 5) that encode the **pre-victim FSM contract** — 0 `constraint_victim`
+facts in either; they author the very mountain+beneficiary-no-victim author-tax the ruling repudiates.
+Migration is per-fixture intent judgment (add-victim vs flip-expectation) = **operator's call**;
+`agent_victim/2` does NOT help (no victims of any kind in the fixtures). (ii) **near-zero standalone verdict
+impact on flash** — 16/18 exempted stay `t1=4` (RED) via `type_1`-over-`coupling_invariant_rope`
+overdetermination; the FSM author-tag was seldom the SOLE cap. The CIR residual is a SEPARATE, plausibly
+legitimate phenomenon (vic=0 contested-concept-as-mountain → rope; the no-victim principle does NOT extend
+to the cap level — FCR/superheavy control). Gate's verdict benefit is concentrated on the physics cases
+whose residual is OQ-50, not CIR. **Operator to rule: migrate fixtures + merge, or hold.** (b) **OQ-50
 power-scaling residue** (moderate/institutional mountain-claimers → `rope`; still needed for
-radiative/actinide to reach GREEN); (c) **neutron_star / FCR** — adjudicate the low-ε FCR firing under
-**OQ-70** (bait-confound), separate from this OQ.
+radiative/actinide to reach GREEN — and it, not the FSM gate, is the binding verdict-mover for the physics
+cases); (c) **neutron_star / FCR** — adjudicate the low-ε FCR firing under **OQ-70** (bait-confound),
+separate from this OQ.
 
 **The witnessed inversion (two calibration controls land backwards):**
 - `actinide_replenishment_mechanism_flat_control` — purity **0.996** (pristine), independent,
