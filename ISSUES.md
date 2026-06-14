@@ -1728,7 +1728,63 @@ convention (CLAUDE.md) is the mechanism for citing *which* corpus a future recal
 
 **Ω-type:** Ω_C (design choice — is the override layer laundering or correction; FNL→tangled_rope correction RESOLVED v6.13.2). The coupling-score-validity sub-question is Ω_P (constitutively open).
 
-**Status:** open — escalated for (a)/(b) ruling. Read-only audit; no clause removed.
+**Status:** resolved — SPLIT-CLOSE on the live corpora (2026-06-14, `audits/2026-06-14_oq49_remeasure/`).
+The (a)/(b) escalation dissolves: the dominant FNL→tangled_rope effect collapsed by construction
+(OQ-70) and the residual is two-seat signal handed to OQ-74. Read-only; no clause removed or edited.
+
+---
+
+### RE-MEASURE / SPLIT-CLOSE (2026-06-14, live corpora — supersedes the testsets_3000 analysis below)
+
+The original (a)/(b) ruling was un-answerable as posed: the substrate is gone twice over — (1)
+`testsets_3000` (`original_v6`) is a dead corpus (reset 2026-06-05); (2) the FNL driver was deleted
+(OQ-70, commit `72ec2cdd` — removed `claimed_natural`'s bait source that read any single authored
+mountain *perspective* as a story-level *claim*, 827/1106 pre-reset firings). So OQ-49 closes by
+**re-measuring on live** (`testsets` 57, `testsets_haiku` 960, `testsets_flash` 960 — twins are exact
+base-name mirrors, a matched paired design) and dispositioning under OQ-74's seat frame — **not** by
+ruling clauses. Probe: `python/audits/oq49_override_remeasure.py` (read-only; MT=`metric_based_type_indexed/3`,
+FT=`dr_type/3`, Sig=`constraint_signature/2`; override-effective iff MT≠FT; positive controls
+`PC_CLAUSE878`/`PC_SOURCE1`/`PC_LIVECHANGE` passed in every process).
+
+**Live results (manifest-matched 57/960/960):**
+
+| corpus | FNL firings | FNL src split | FNL override-effective | total override-effective |
+|---|---|---|---|---|
+| testsets | 1 | source1:1 | 0 | 17 |
+| testsets_haiku | 13 | source1:13 | 6 | 168 |
+| testsets_flash | 8 | source1:8 | 8 | 181 |
+
+1. **Obsolete-prevalence half — CLOSED on source-attribution (the witness is structural, not numeric).**
+   **Every FNL firing on all three corpora tags source-1** (`constraint_claim(_,mountain)`); zero
+   source-2, zero unaccounted. **Kill condition** = any surviving FNL firing tagged *neither* (a
+   third, unaccounted path) — **not triggered**. The 827 bait-driven firings are gone *by
+   construction* (the bait path is unreachable), corpus size irrelevant. The raw `1661 → ≤8` drop is
+   size-confounded (3380 vs 960) and is **color, not the witness.** Cite `72ec2cdd` + the reset.
+2. **Inert clauses — CLOSED working-as-designed.** `natural_law → mountain` (`signature_detection.pl:867`)
+   fires 0 (no `natural_law` signature on live); `unknown, false_natural_law → unknown` (`:877`) fires
+   0 (every live FNL firing has a definite metric, never unknown). Witnessed by the live tables.
+   FNL is no longer the override layer's dominant effect — that is now `false_ci_rope → tangled_rope`
+   (scaffold→TR 5/52/78) and `coupling_invariant_rope → rope` (3/18/34), distinct signatures.
+3. **Residual — DISPOSITIONED, not ruled.** The FNL snare→TR overwrites (the pre-reset dominant case)
+   are now 0/4/4. **8/8 carry both coordination AND asymmetric extraction** (`fnl_survivor_coordination.txt`).
+   Under the pre-reset partition (coord=0 = clean laundering candidate; coord+asym =
+   override-supplies-omitted-structure, correction-leaning) the **clean-laundering coord=0
+   pure-extraction subset is EMPTY on live** — the human-stakes escalation **dissolves to zero**. The
+   8 coord+asym readings are two-seat signal (the snare clause is coordination-blind; FNL→TR supplies
+   the omitted coordination-awareness) → handed to **OQ-74**, not ruled here.
+4. **Twin paired check.** Model-invariance (real second witness): FNL collapse holds on **both**
+   twins. Generator-convention signal (analogue, NOT a seat-frame witness): per-id override-effective
+   sets diverge — **81 shared, 87 haiku-only, 100 flash-only** — two models authoring the same id
+   differently (OQ-26/OQ-78-analog), logged as such.
+5. **Hand-off.** Any witness-not-verdict engine change is **OQ-74's** gated pass (the cyclopean
+   cluster OQ-50/116/122), not OQ-49's. No clause removed or edited; no engine write performed.
+
+*Cross-refs: OQ-70 (bait deletion, `72ec2cdd`), OQ-74 (two-seat / witness-not-verdict), the
+cyclopean cluster (OQ-50/116/122). Full evidence: `audits/2026-06-14_oq49_remeasure/`.*
+
+---
+
+### Archived analysis — testsets_3000 (dead corpus; pre-OQ-70; retained for provenance)
 
 **Corpus:** `testsets_3000` (3380 readings; `[corpus] Loaded 3380 testsets successfully`). Replaces
 the toy-derived 96/56/40 — that did not carry; prevalence re-established at scale.
