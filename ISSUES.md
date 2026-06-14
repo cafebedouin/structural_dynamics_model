@@ -5840,29 +5840,39 @@ beneficiary toggle (hold `claim=mountain`, retract `constraint_beneficiary`):
    type-claim" instinct is *more* right than "it's the beneficiaries," for a second reason neither read
    isolated.
 
-**RULED author-tax (2026-06-13) by the cell sweep** (`audits/2026-06-13_oq122_retype_discriminator/`
-cell_sweep.pl + cell_sweep_output.txt; FINDINGS.md RULING). Enumerated the cell
-`{claim=mountain, ε≤0.25, agent_beneficiary≠∅}` (6 members; positive control: 5 mountain-claimers
-fall outside, all ε>0.25). The FSM RED-capping footprint over the whole corpus is exactly **2**
-constraints (`radiative_levitation`, `actinide_flat_control`) and **both are false positives** —
-pristine astrophysics, no `payer`, benefit external (studying). No true positive in the firing set ⇒
-no discriminating power ⇒ author-tax. **Stronger: discriminating power is INVERTED** — the
-`suppression≤0.05` gate makes FSM fire on the 2 most-pristine cases and abstain on the 3 social
-cell-members (`scale_ceiling_c0`, `demographic_*`) that carry a real `payer`/`excluded` victim-set and
-capital/planning beneficiaries (the actual coordination-dressed-as-mountain candidates). So the RED
-does NOT accurately report "shaped by coordination, not physics" for the astrophysics controls.
+**Core diagnosis RULED false-positive (2026-06-13)** by the cell sweep + fix-witness run
+(`audits/2026-06-13_oq122_retype_discriminator/`: cell_sweep + fix_witness; FINDINGS.md RULING+REVISION).
+FSM's RED-capping footprint over the whole corpus is exactly **2** (`radiative_levitation`,
+`actinide_flat_control`), both pristine astrophysics with **zero `constraint_victim`** — benefit is
+external (studying). A concealment detector firing where no agent victim can exist is a false positive
+by definition (no victim ⇒ no extraction ⇒ nothing to conceal). The RED does NOT accurately report
+"shaped by coordination, not physics" for these.
 
-**Fix (proposal, output-changing — operator to execute):** gate `false_summit_mountain` on agent-victim
-presence (`payer`/`constraint_victim`), NOT beneficiary-presence — the discriminator is already
-authored; FSM never reads victims (signature_detection.pl:1503–1543). No victim-set (a star) ⇒ ε is
-complete, nothing to conceal; victim-set present + low ε ⇒ the residual concealment signal FSM is meant
-to catch. **Refine, not remove** — the cell contains genuine-concealment candidates the current gate
-*misses*, so blanket removal loses real signal.
+**Fix-witness run corrected two over-claims from the first pass (do not cite the superseded versions):**
+1. **"Refine beats remove" is UNSUPPORTED here.** The *proposed* gate's cell
+   `{mountain, ε≤0.25, supp≤0.05, victim≠∅}` is **EMPTY** on this corpus — victim-gated FSM fires on
+   nothing; both current FSM cases are `vic=0` ⇒ exempted ⇒ **swap ≡ remove observationally**. The
+   victim-gate is the correctly-scoped fix (no victim ⇒ no concealment possible) but is
+   indistinguishable from removal on available evidence (the discriminating low-supp∧victim case does
+   not exist here).
+2. **"Discriminating power is INVERTED" is RETRACTED.** The 3 social cell-members (`scale_ceiling_c0`,
+   `demographic_*`) are already RED-capped (`type1=4`, `dr_type=rope`, signature
+   `coupling_invariant_rope`, `fsm='.'`) by CIR + base `type_1` — NOT FSM. FSM abstaining on them
+   (supp>0.05) loses no signal; it is correctly scoped as a pristine-false-summit detector and the
+   `supp≤0.05` gate is legitimate "presents as undisturbed natural law" work.
 
-**Independent residue (NOT closed by the above):** the RED is overdetermined — 2 `type_1` firings
-survive beneficiary/FSM removal via the power-scaling residue (moderate/institutional seats → `rope`,
-OQ-50 comment drl_core.pl:605–612). Necessary-but-not-sufficient: turning the clean controls GREEN
-needs BOTH the FSM victim-gate AND the OQ-50 residue addressed. Two separate dispositions.
+**Overdetermination witnessed — clean-control problem is ≥3 cases / ≥3 dispositions, not 2.** FSM-off
+(beneficiaries retracted): `radiative`+`actinide` drop `type1 4→2`, survivors at moderate+institutional
+(`rope`) = OQ-50 power-scaling residue (drl_core.pl:605–612) — so the 2 FSM cases ARE the 2
+power-scaling survivors (doubly-hit; both fixes needed per-constraint). `neutron_star_bombardment_reading`
+(physics, `vic=0`) stays `type1=4 [TR×4]` UNCHANGED by beneficiary removal, `fsm='.'` — a **third**
+physics false-positive via NEITHER FSM nor power-scaling (distinct path, signature TBD). Turning the
+clean controls GREEN needs ≥3 independent dispositions.
+
+**Open graduation steps:** (a) decide FSM victim-gate vs removal — needs a corpus with a low-supp∧victim
+mountain claim to distinguish them, else they are equivalent and removal is simpler; (b) OQ-50
+power-scaling residue (moderate/institutional mountain-claimers → `rope`); (c) diagnose neutron_star's
+non-FSM/non-power-scaling RED path. All output-changing; none executed.
 
 **The witnessed inversion (two calibration controls land backwards):**
 - `actinide_replenishment_mechanism_flat_control` — purity **0.996** (pristine), independent,

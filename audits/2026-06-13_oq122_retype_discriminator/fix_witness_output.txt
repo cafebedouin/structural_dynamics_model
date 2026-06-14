@@ -1,0 +1,32 @@
+==== (1) PROPOSED gate cell  {mountain, eps<=0.25, supp<=0.05, victim!=[]} ====
+  EMPTY — victim-gated FSM fires on NOTHING in this corpus
+
+==== (2) CURRENT FSM-firing set (what RED-caps today) + victim count ====
+  actinide_replenishment_mechanism_flat_controleps=0.03 supp=0.02 vic=0 ben=2 type1=4
+  radiative_levitation_stratification         eps=0.03 supp=0.02 vic=0 ben=3 type1=4
+  -> victim-gate would EXEMPT every member with vic=0 (FSM stops firing there)
+
+==== (3) OVERDETERMINATION: type_1 with beneficiaries retracted corpus-wide (FSM off) ====
+  (only low-eps mountain claims shown: eps<=0.25 — the clean-control region)
+  BASELINE:
+    actinide_replenishment_mechanism_flat_controltype1=4 vic=0 FSM  [powerless-tangled_rope,moderate-scaffold,institutional-scaffold,analytical-tangled_rope]
+    demographic_resource_allocation             type1=4 vic=2 .  [powerless-rope,moderate-rope,institutional-rope,analytical-rope]
+    demographic_skill_mismatch_c0               type1=4 vic=2 .  [powerless-rope,moderate-rope,institutional-rope,analytical-rope]
+    neutron_star_bombardment_reading            type1=4 vic=0 .  [powerless-tangled_rope,moderate-tangled_rope,institutional-tangled_rope,analytical-tangled_rope]
+    radiative_levitation_stratification         type1=4 vic=0 FSM  [powerless-tangled_rope,moderate-scaffold,institutional-scaffold,analytical-tangled_rope]
+    scale_ceiling_c0                            type1=4 vic=2 .  [powerless-rope,moderate-rope,institutional-rope,analytical-rope]
+  WITH ALL BENEFICIARIES RETRACTED (no FSM, no benef-signature can fire):
+    actinide_replenishment_mechanism_flat_controltype1=2  [powerless-mountain,moderate-rope,institutional-rope,analytical-mountain]
+    demographic_resource_allocation             type1=4  [powerless-rope,moderate-rope,institutional-rope,analytical-rope]
+    demographic_skill_mismatch_c0               type1=4  [powerless-rope,moderate-rope,institutional-rope,analytical-rope]
+    neutron_star_bombardment_reading            type1=4  [powerless-tangled_rope,moderate-tangled_rope,institutional-tangled_rope,analytical-tangled_rope]
+    radiative_levitation_stratification         type1=2  [powerless-mountain,moderate-rope,institutional-rope,analytical-mountain]
+    scale_ceiling_c0                            type1=4  [powerless-rope,moderate-rope,institutional-rope,analytical-rope]
+
+==== (4) Do the social cell-cases already get flagged? (signature + type_1 + seats) ====
+  scale_ceiling_c0                            sig=coupling_invariant_rope type1=4 vic=2
+      [powerless-rope,moderate-rope,institutional-rope,analytical-rope]
+  demographic_resource_allocation             sig=coupling_invariant_rope type1=4 vic=2
+      [powerless-rope,moderate-rope,institutional-rope,analytical-rope]
+  demographic_skill_mismatch_c0               sig=coupling_invariant_rope type1=4 vic=2
+      [powerless-rope,moderate-rope,institutional-rope,analytical-rope]
