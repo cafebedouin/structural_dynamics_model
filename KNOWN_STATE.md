@@ -45,6 +45,25 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-14 — corpus omega soundness POC (OQ-130 scale arm): authored omegas 80% sound, NOT §8-class; identity is three orthogonal axes
+**Files:** audits/2026-06-14_corpus_omega_soundness_poc/, ISSUES.md, docs/design/design_gaps.md, prolog/testsets_haiku/
+**Tier:** correction-key
+Ran §C soundness gate as a POC under a two-party independence protocol (sealed adjudicator held-sample
+key committed `acc27d22` BEFORE a blind executor subagent ran probes 1–4; read-only over `testsets_haiku`,
+no shared `outputs/` written, no `run_pipeline`). Results: (1) soundness 24/30 = 80% (Ω_E 86.7/Ω_C 75/Ω_P
+66.7); content-templating LOW ⇒ the corpus artifact is **identity-overstatement, not fabrication** — so
+the OQ-130 blocking precondition is discharged (the authored 4,430 are NOT §8-class; OQ-130 scale-arm
+build is de-risked). (2) **Identity is three orthogonal axes, MEASURED:** KIND (signature/orbit) ⊥ topic
+(`cs_kernel_id`) at ARI≈0 / same-kernel-cluster 7.65%≈chance — and `gauge_orbit`==`fingerprint-shift`
+(one KIND organ, not two); frontier (omega question) ⊥ topic (suppression family spans 225–264 kernels).
+(3) The unsound class = kernel-contest family = the same family driving the frontier collapse → dedup
+organ and soundness gate are coupled. Fold-backs landed: **GAP-11** (frontier-identity organ missing;
+embeddings the real instrument, lexical proxy a floor), OQ-130 (ranking gap named; §1b freshness key =
+source content-hash not git HEAD). Caveats: probe 3 is a 30-omega sample (bounds, not proves); the one
+held-sample disagreement (id 20) is a hybrid `omega_variables.md` itself leaves open. `issues_status
+--check` green (129/0). **Citation rule:** cite "80% sound on a 30-omega sample," never "the corpus is
+80% sound."
+
 ## 2026-06-14 — omega-resolver pilot validated on ISSUES.md (OQ-130 minted); §8 landed into OQ-129 OPEN-A
 **Files:** python/omega_resolver.py, ISSUES.md, audits/2026-06-14_omega_resolver_pilot/, audits/2026-06-14_extraction_blindness_existential_label/
 **Tier:** landed
