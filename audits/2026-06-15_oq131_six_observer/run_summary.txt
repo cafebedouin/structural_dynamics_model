@@ -1,0 +1,68 @@
+
+========================================================================
+OQ-131 SIX-OBSERVER PROBE — SUMMARY (adjudicate vs PRE_REGISTRATION.md)
+========================================================================
+
+[live]  n=57  hash=27fb6031e58f
+  fallback len6 violations : 0 (ok)
+  exchangeability gate     : PASS (mismatches=0)
+  9-pair basis             : PASS (57/57)
+  HEADLINE (H1_6-H1_4)/9   : 0.44639376218323584  (mean raw delta=4.017543859649122, range=[0, 8])
+  liveness (new type @5/6) : 10 (PASS)  seat5=6 seat6=7 echoes_both=47
+  orbit splits / H0 4->6   : splits=10  H0 16->16
+  seat5 entropy(norm)      : 0.7357 (k=7)   seat6: 0.7647 (k=7)  ok
+  permutation null         : observed=0.4464  band=[0.7407,0.8246]  => below_band__consonant_suppressing
+  power_only control       : mean(delta/9)=0.45419103313840153 (n=57)
+  per-seat sweep (mean delta/9):
+      realistic_joint(canonical_6)             0.44639376218323584  (n=57)
+      sweep_organized_analytical_global        0.44639376218323584  (n=57)
+      sweep_organized_mobile_global            0.442495126705653  (n=57)
+      sweep_organized_trapped_local            0.4658869395711501  (n=57)
+      sweep_powerful_analytical_global         0.4502923976608187  (n=57)
+      sweep_powerful_mobile_national           0.47173489278752434  (n=57)
+      sweep_powerful_trapped_local             0.4775828460038986  (n=57)
+
+[haiku]  n=960  hash=6a00db754df3
+  fallback len6 violations : 0 (ok)
+  exchangeability gate     : PASS (mismatches=0)
+  9-pair basis             : PASS (960/960)
+  HEADLINE (H1_6-H1_4)/9   : 0.561574074074074  (mean raw delta=5.054166666666666, range=[0, 9])
+  liveness (new type @5/6) : 293 (PASS)  seat5=209 seat6=229 echoes_both=667
+  orbit splits / H0 4->6   : splits=293  H0 139->117
+  seat5 entropy(norm)      : 0.5648 (k=7)   seat6: 0.7109 (k=7)  ok
+  permutation null         : observed=0.5616  band=[0.7383,0.7553]  => below_band__consonant_suppressing
+  power_only control       : mean(delta/9)=0.5710648148148149 (n=960)
+  per-seat sweep (mean delta/9):
+      realistic_joint(canonical_6)             0.561574074074074  (n=960)
+      sweep_organized_analytical_global        0.5434027777777778  (n=960)
+      sweep_organized_mobile_global            0.5417824074074074  (n=960)
+      sweep_organized_trapped_local            0.591550925925926  (n=960)
+      sweep_powerful_analytical_global         0.5631944444444444  (n=960)
+      sweep_powerful_mobile_national           0.5732638888888889  (n=960)
+      sweep_powerful_trapped_local             0.5854166666666667  (n=960)
+
+[flash]  n=960  hash=3ac23952cd03
+  fallback len6 violations : 0 (ok)
+  exchangeability gate     : PASS (mismatches=0)
+  9-pair basis             : PASS (960/960)
+  HEADLINE (H1_6-H1_4)/9   : 0.5503472222222222  (mean raw delta=4.953125, range=[0, 8])
+  liveness (new type @5/6) : 367 (PASS)  seat5=210 seat6=343 echoes_both=593
+  orbit splits / H0 4->6   : splits=367  H0 146->144
+  seat5 entropy(norm)      : 0.7637 (k=6)   seat6: 0.6607 (k=7)  ok
+  permutation null         : observed=0.5503  band=[0.7537,0.7747]  => below_band__consonant_suppressing
+  power_only control       : mean(delta/9)=0.5671296296296297 (n=960)
+  per-seat sweep (mean delta/9):
+      realistic_joint(canonical_6)             0.5503472222222222  (n=960)
+      sweep_organized_analytical_global        0.5386574074074074  (n=960)
+      sweep_organized_mobile_global            0.5336805555555555  (n=960)
+      sweep_organized_trapped_local            0.5987268518518518  (n=960)
+      sweep_powerful_analytical_global         0.5553240740740741  (n=960)
+      sweep_powerful_mobile_national           0.5802083333333333  (n=960)
+      sweep_powerful_trapped_local             0.622800925925926  (n=960)
+
+[model comparison]  haiku_grid=87 flash_grid=0 matched=960 non_grid=873
+  haiku non-grid headline  : 0.5498281786941631 (n=873)
+  flash non-grid headline  : 0.5374824996818172 (n=873)
+  residual gap (haiku-flash): 0.012345679012345956
+  haiku grid substratum     : 0.6794380587484029 (n=87)
+========================================================================
