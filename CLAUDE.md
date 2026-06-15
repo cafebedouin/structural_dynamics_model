@@ -56,6 +56,21 @@ paper-synchronization issues with status, evidence, and what resolution would ch
 before touching drl_core.pl, product_site_export.pl, or the rope gate — OQ-01 and OQ-02 are
 directly relevant.
 
+**The `[NEXT]` activation — "what should I work on?"** When the operator sends **`[NEXT]`** (or
+asks what to work on / for sequencing), **run `python3 python/omega_resolver.py menu`** and present
+its **WORKABLE NOW** list (sorted by authored `Priority:`, 1=highest) as the options for the
+operator to pick, plus the **BLOCKED ON YOU** items that need a ruling/spend-go. **Do NOT read
+`ISSUES.md` whole** — it is 6,700+ lines; reading it leads to a faked query and *prose-guessed*
+dependency edges (a witnessed failure mode). The menu is the queryable surface: it computes
+reachability from the authored `**Deps:**` edges (typed relators `blocked_on`/`gates`/`bundled_with`
+/`splits_from`/`blocked_on_human`) over an SCC condensation, and surfaces the authored `**Priority:**`
+hint — *priority/value is the operator's declared seat, surfaced, never computed.* The menu's
+coverage footer states how trustworthy the frontier is (how many active OQs have authored Deps);
+edge-free OQs default `workable_now` and may overstate until their `Deps:` are authored. When you
+mint or touch an OQ, author its `**Priority:**` (and `**Deps:**` if it blocks/awaits another) so the
+frontier stays honest. `omega_resolver.py check` is the authority-control gate (dangling Deps,
+rotted witnesses); `selftest` runs its 8 positive controls.
+
 **Implementation wiring notes:** `docs/technical/` holds file-level notes on non-obvious wiring,
 operator-precedence bugs, fact-adapter patterns, and query gotchas — things that caused real bugs,
 not general architecture. Read the relevant file before modifying `config_validation.pl`,

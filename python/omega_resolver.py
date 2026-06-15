@@ -27,7 +27,8 @@ What it does (all READ-ONLY; never writes ISSUES.md):
 Every view stamps a manifest (§1b): store git HEAD, schema_version, generated_at.
 
 Usage:
-    python3 python/omega_resolver.py frontier     # the routing view
+    python3 python/omega_resolver.py menu         # ← "what should I work on next" (run THIS, not the file)
+    python3 python/omega_resolver.py frontier     # the routing view as JSON (machine artifact)
     python3 python/omega_resolver.py check        # checker (exit 1 on problems)
     python3 python/omega_resolver.py selftest     # positive controls (exit 1 on fail)
     python3 python/omega_resolver.py dump         # parsed access points, per OQ
@@ -48,6 +49,11 @@ STATUS = re.compile(r"^\*\*Status:\*\* (\w+)(?: — .*)?$")
 OMEGA = re.compile(r"^\*\*Ω-type:\*\* (Ω_[ECP])\b")
 FILES = re.compile(r"^\*\*Files?:\*\*\s*(.+)$")
 DEPS = re.compile(r"^\*\*Deps:\*\*\s*(.+)$")
+# Authored priority hint (1-10, 1 = highest). The OQ's author declares it to help
+# the operator judge; it is a DECLARED estimate surfaced by `menu`, never a computed
+# value (priority/value is the operator's seat — see OQ-130 #1). Absent => unranked.
+PRIORITY = re.compile(r"^\*\*Priority:\*\*\s*(\d{1,2})\b")
+WHATCHANGES = re.compile(r"^\*\*What resolution (?:would )?changes?:\*\*\s*(.+)$", re.I)
 
 ACTIVE = {"open", "investigating", "partial"}
 # relators whose edge BLOCKS (contributes to reachability); others are grouping.
@@ -65,11 +71,14 @@ COMMIT = re.compile(r"\b[0-9a-f]{8,40}\b")
 
 
 class Entry:
-    def __init__(self, oq, lineno):
+    def __init__(self, oq, lineno, title=""):
         self.oq = oq
         self.lineno = lineno
+        self.title = title       # the header text after "OQ-NN —"
         self.status = None
         self.omega = None
+        self.priority = None     # authored 1-10 hint (1=highest); None => unranked
+        self.whatchanges = None  # first "what resolution changes" line (menu context)
         self.files = []          # raw file/line ref strings
         self.deps = []           # list of (relator, target_oq)
         self.body = []           # all body lines (for witness scan)
@@ -90,7 +99,8 @@ def parse_entries(text=None):
     for lineno, line in enumerate(text.splitlines(), 1):
         m = HEADER.match(line)
         if m:
-            cur = Entry(m.group(1), lineno)
+            title = m.group(2).strip().lstrip("—-").strip()
+            cur = Entry(m.group(1), lineno, title=title)
             if cur.oq in entries:
                 problems.append(f"{cur.oq} (line {lineno}): duplicate OQ label")
             entries[cur.oq] = cur
@@ -114,6 +124,14 @@ def parse_entries(text=None):
             deps, dp = _parse_deps(cur.oq, dm.group(1))
             cur.deps.extend(deps)
             problems.extend(dp)
+        if cur.priority is None:
+            pm = PRIORITY.match(line)
+            if pm:
+                cur.priority = int(pm.group(1))
+        if cur.whatchanges is None:
+            wm = WHATCHANGES.match(line)
+            if wm:
+                cur.whatchanges = wm.group(1).strip()
     return entries, problems
 
 
@@ -508,6 +526,67 @@ def cmd_frontier(entries):
     print(json.dumps(out, indent=2, ensure_ascii=False))
 
 
+def _pri(e):
+    return e.priority if e.priority is not None else 99
+
+
+def _by_pri(entries):
+    return lambda oq: (_pri(entries[oq]), int(oq.split("-")[1]))
+
+
+def cmd_menu(entries):
+    """Human-readable 'what should I work on next' surface. Run THIS instead of
+    reading ISSUES.md whole. Workable items are sorted by AUTHORED Priority
+    (1=highest); the ranking is the operator's declared seat, surfaced — not
+    computed. The coverage footer states how trustworthy the frontier is."""
+    buckets, sccs, nontrivial = frontier(entries)
+    man = manifest()
+    n_active = sum(1 for e in entries.values() if e.active)
+    print("# Omega frontier — what's workable now  (authored Priority; 1=highest)")
+    print(f"# store={man['store_version'][:8]} generated={man['generated_at']} "
+          f"active={n_active}\n")
+
+    wk = sorted(buckets["workable_now"], key=_by_pri(entries))
+    print(f"## WORKABLE NOW ({len(wk)}) — pick from these")
+    for oq in wk:
+        e = entries[oq]
+        pri = f"P{e.priority}" if e.priority is not None else "P–"
+        print(f"  [{pri:>3}] {oq}  {e.title[:72]}")
+        wc = (e.whatchanges or "").split(". ")[0][:96]
+        line = f"         {e.omega or 'Ω?'}"
+        if wc:
+            line += f" · changes: {wc}"
+        print(line)
+
+    if buckets["blocked_on_human"]:
+        b = sorted(buckets["blocked_on_human"], key=_by_pri(entries))
+        print(f"\n## BLOCKED ON YOU ({len(b)}) — needs a ruling / spend-go / Ω_P decision")
+        for oq in b:
+            e = entries[oq]
+            gate = next((t for r, t in e.deps if r == HUMAN_RELATOR), e.omega or "")
+            print(f"  {oq}  {e.title[:58]}  ({gate})")
+
+    if buckets["standoff"]:
+        print(f"\n## STANDOFFS ({len(buckets['standoff'])}) — mutually-blocked; you cut the cycle")
+        for grp in buckets["standoff"]:
+            print(f"  {' ↔ '.join(grp)}")
+
+    if buckets["blocked"]:
+        print(f"\n## BLOCKED ({len(buckets['blocked'])}) — waiting on another OQ")
+        for oq in sorted(buckets["blocked"], key=lambda o: int(o.split("-")[1])):
+            e = entries[oq]
+            waits = [t for r, t in e.deps if r in BLOCKING_RELATORS]
+            print(f"  {oq}  {e.title[:52]}  → waits on {', '.join(waits) or '?'}")
+
+    n_dep = sum(1 for e in entries.values() if e.active and e.deps)
+    n_pri = sum(1 for e in entries.values() if e.active and e.priority is not None)
+    print(f"\n# coverage: {n_dep}/{n_active} active OQs have authored Deps · "
+          f"{n_pri}/{n_active} have a Priority.")
+    print("# Unranked sort last (P–); edge-free OQs default workable_now and may "
+          "overstate workability until Deps are authored. Frontier is only as good "
+          "as the authored edges — this footer is the honesty check.")
+
+
 def main():
     args = sys.argv[1:]
     cmd = args[0] if args else "frontier"
@@ -535,6 +614,8 @@ def main():
         sys.exit(1 if probs else 0)
     elif cmd == "frontier":
         cmd_frontier(entries)
+    elif cmd == "menu":
+        cmd_menu(entries)
     else:
         print(__doc__)
         sys.exit(2)

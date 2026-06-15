@@ -13,6 +13,7 @@ Statuses: **open** | **investigating** | **mitigated** | **resolved**
 **Ω-type:** Ω_C (design choice — modeling decision to ratify, guard, or record in logic.md).
 
 **Status:** open
+**Priority:** 1
 **Origin:** alt_power_transform corrected T2 run, Arm A/B range sweep, May 2026.  
 **File:** `prolog/drl_core.pl:356`
 
@@ -86,6 +87,7 @@ first solution is always correct.
 **Ω-type:** Ω_P (constitutively-open design choice — the engine witnesses, a declared seat settles).
 
 **Status:** open
+**Priority:** 1
 **Origin:** `docs/deferential_realism_paper_v6.13.md` §6 open questions; reinforced by
 `docs/seat-theorem-v1.md` §7–§8.  
 **File:** `prolog/tests/test_forecloses_fpn_injection.pl` (closest precedent)
@@ -117,6 +119,7 @@ framework itself and running the pipeline.
 **Ω-type:** Ω_C (design choice — schema-expressiveness cut: add a 1:N predicate or accept 1:1).
 
 **Status:** open
+**Priority:** 1
 **Origin:** `docs/unknown_reading_review.md` audit; `docs/altar-to-the-unknown-reading.md`;
 `agent/analysis/essays/cyclopean_point_epistemic_synthesis.md` [path corrected — item
 originally cited docs/; file is in agent/analysis/essays/].  
@@ -167,6 +170,7 @@ load-bearing only in tangled_rope (T4 gap +0.21 vs +0.014 in snare+rope, 14.6×)
 ## OQ-06 — cs_drift_unacknowledged / cs_axiom_foreclosed: off-case fixtures missing
 
 **Status:** open
+**Priority:** 1
 **Origin:** Tranche 2 correctness pass, Phase 1 audit, May 2026.  
 **Files:** `prolog/cs_drift_engine.pl` (predicates); `prolog/cs_corpus_analysis.pl:158–162`
 (callers); `prolog/json_report.pl:531–533` (report emission)
@@ -241,6 +245,7 @@ The shift was corpus-snapshot drift (original range computed on an earlier snaps
 ## OQ-10 — Cross-reading comparison: no tooling to compare engine output across readings of the same kernel
 
 **Status:** open
+**Priority:** 1
 **Deps:** blocked_on OQ-04
 **Origin:** User-identified capability gap, May 2026; architectural context in
 `docs/unknown_reading_review.md` §4 and §5.  
@@ -351,6 +356,7 @@ phrasing; the mediator added to "Open by deferral" with OQ-08/OQ-17 cross-refs.
 **Ω-type:** Ω_C (design choice — architecture decided, build deferred).
 
 **Status:** open
+**Priority:** 1
 **Origin:** Tranche 2 cross-axis surface inventory, May 2026.  
 **Files:** `prolog/cs_drift_mismatch.pl`, `prolog/cs_kernel_registry.pl`,
 `prolog/cs_pattern_detection.pl`, `prolog/cs_axiom_engine.pl`,
@@ -397,6 +403,7 @@ keystone is the mediator design itself.
 ## OQ-16 — Temporal vocabulary rename pass deferred
 
 **Status:** open
+**Priority:** 1
 **Origin:** Temporal excavation audit, May 2026.  
 **Files:** `prolog/drift_events.pl`, `prolog/drift_report.pl`,
 `prolog/trajectory_mining.pl`, `prolog/trajectory_report.pl`,
@@ -478,6 +485,7 @@ should be on the record; "sitting there ignored" is the unmarked state.
 ## OQ-18 — `metric_delta/5` first/last reduction: safe-as-event-gate, latent if reused
 
 **Status:** open
+**Priority:** 1
 **Origin:** Temporal wiring spike, faithfulness audit, May 2026.  
 **File:** `prolog/drift_events.pl:72-79`
 
@@ -518,6 +526,7 @@ becoming an unmarked assumption.
 ## OQ-19 — Temporal-shape trigger thresholds are corpus-specific magic numbers
 
 **Status:** open
+**Priority:** 1
 **Origin:** Temporal-shape report section build, May 2026.  
 **File:** `python/enhanced_report.py` (build_drift_trajectory section,
 trigger logic)
@@ -556,6 +565,7 @@ recalibrate" marker.
 ## OQ-20 — DR-regression baseline diff against `v3-dev-baseline` tag never run
 
 **Status:** open
+**Priority:** 1
 **Origin:** Tranche 2 correctness pass, May 2026.  
 **Files:** git tag `v3-dev-baseline` (pre-CS-work); current DR pipeline
 output
@@ -591,6 +601,7 @@ output, return to HEAD, run again, byte-diff.
 ## OQ-21 — A12 multi-instance render branch never exercised on pipeline data
 
 **Status:** open
+**Priority:** 1
 **Origin:** UUID surrogate migration, May 2026.  
 **File:** `prolog/json_report.pl` (A12 per-constraint CS block,
 `cs_instance_count` > 1 branch)
@@ -629,6 +640,7 @@ load multi-reading data and incidentally validate the branch.
 ## OQ-22 — Hub 1 / Hub 2 fall-through behavior at threshold starvation
 
 **Status:** open
+**Priority:** 1
 **Deps:** bundled_with OQ-01
 **Origin:** alt_power_transform first T2 run (compressed variants), May 2026. Diagnosed
 during the H1 investigation but not pursued as a separate item once the corrected Arm A/B
@@ -675,6 +687,7 @@ only when that range was deliberately altered.
 **Ω-type:** Ω_C (design choice — loud documentation vs mechanical guard).
 
 **Status:** open
+**Priority:** 1
 **Origin:** FPN convergence-test run, Branch E verdict, May 2026.  
 **Files:** `prolog/drl_purity_network.pl` (constraint_neighbors/3, compute_edge_contamination/7); `prolog/test_forecloses_fpn_injection.pl` (Case 2 — coexists_with_label_blindness)
 
@@ -741,6 +754,7 @@ yields genuinely different readings with different ε under different SCOPE deco
 **Ω-type:** Ω_C (design choice — definitional: which orbit H¹ measures).
 
 **Status:** open
+**Priority:** 1
 **Origin:** Theorem 7 anchor verification, May 2026 (the precision note that changed v7's H¹=0 phrasing).  
 **Files:** `prolog/cohomological_obstruction.pl` (or wherever orbit_vector is constructed); `prolog/drl_core.pl` (dr_type, integrate_signature_with_modal); `docs/deferential_realism_paper_v6.13.md` (theorem 2 statement)
 
@@ -771,6 +785,7 @@ asymmetry being named. *(body compressed at close per footer rule)*
 ## OQ-29 — Results stale against a moved corpus (general form of OQ-25 §5.11 scope)
 
 **Status:** open
+**Priority:** 1
 **Origin:** Sweep-consolidation audit, 2026-05-29.
 **Files:** `python/bifurcation_results.json` (confirmed stale instance); 19 `*_results.json` files total (full list below).
 
@@ -1257,6 +1272,7 @@ decision; the row references map all 27 census rows so nothing is unrouted.
 ## OQ-35 — G1: authored fields the engine never consumes (or consumes only inertly)
 
 **Status:** open — Census rows 1–6.
+**Priority:** 1
 - Row 1 `mandatrophy_resolved`: schema requires `=true` at ε>0.70; compiler emits no fact; engine
   uses a *separate hardcoded* `is_mandatrophy_resolved/1` (2 names, `narrative_ontology.pl:317-318`).
   **DECISION (D6, 2026-05-31): document and defer — do NOT wire.** Read-only count is near-zero: the
@@ -1296,6 +1312,7 @@ delete `intent_engine` and its readers. **High-judgment.**
 **Ω-type:** Ω_E (design-relevant — taxonomy-coverage; χ-partition closed structurally, suppression-floor recalibration deferred to OQ-48).
 
 **Status:** open — Census rows 8–12. `inevitability` (`constraint_bridge.pl:22`),
+**Priority:** 1
 **Deps:** blocked_on OQ-90
 `internalization_depth` (`psych_bridge.pl:19`), `resistance_to_change`
 (`data_validation`/`json_report`/`utils`), `accumulation_speed` (`utils.pl:211`, explicit 0.0
@@ -1376,6 +1393,7 @@ changes"; scoped output-changing task, not yet built.
 ## OQ-38 — G3: dead-code / orphan triage (export-vs-caller)
 
 **Status:** open — Census rows 13, 4 + §5. **Confirmed dead:** `predict_transformation/3`
+**Priority:** 1
 (`drl_composition.pl`, 0 callers anywhere), `cs_reference_frame/2`. The exhaustive sweep yields
 528 exports → 422 zero-external-caller → {65 `/0` CLI, 114 meta-called, 26 ext-only, **217 candidate**}.
 The 217 is an **upper bound**, not an orphan list — it conflates genuinely-dead with
@@ -1389,6 +1407,7 @@ read-vs-declare canary).
 **Ω-type:** Ω_C (design choice — where the prompt/engine enforcement boundary sits).
 
 **Status:** open — Census rows 14–18.
+**Priority:** 1
 - Row 14 scaffold "suppression must decline over time": **no trajectory check** exists; scaffold
   uses scalar `Chi` + `has_sunset_clause`. **Decision:** add a trajectory gate or drop the rule.
 - Row 15 "final measurement = base extractiveness": unenforced (no validator). **Low-stakes.**
@@ -1402,6 +1421,7 @@ read-vs-declare canary).
 **Ω-type:** Ω_C (design choice — authoritative representation per metric, or document the axis split as intended).
 
 **Status:** open — Census rows 19–22. `extractiveness`, `base_extractiveness`,
+**Priority:** 1
 `suppression_requirement` each read as scalar `constraint_metric` (observer `drl_core`) **and** as
 `measurement/5` (committer `drl_composition`/`drift_events`) — the two representations can carry
 different values per axis. Plus `compute_temporal_stability` (`signature_detection`) folds scalar
@@ -1425,6 +1445,7 @@ The `extractiveness`/`base_extractiveness` sub-splits (rows 19–20) remain open
 **Ω-type:** Ω_C (design choice — fail-closed vs impute; subsumed by the OQ-44 satisfy-on-absence policy).
 
 **Status:** partial — row 23 MITIGATED (2026-05-31, Commit A); rows 24–27 open (row 26 NEUTRAL for 3 of 6 sites — 4 OPEN, see coverage correction below). Census rows 23–27. A silent
+**Priority:** 1
 **Deps:** blocked_on OQ-46
 fixed default (`0.5`, `0.0`) substitutes for absent authored data, so the engine computes on a value
 nobody authored — distinct from G5 (this is fail-closed-vs-impute, not representation choice).
@@ -1601,6 +1622,7 @@ the dead intent top verdict moved to OQ-106. Witnesses:
 ## OQ-45 — Content audit: do any of the 404 NL constraints hide asymmetric winners?
 
 **Status:** open — (corpus-quality audit, NOT engine maintenance). Spun off from the D3 ruling so the
+**Priority:** 1
 wiring fix (NL beneficiary gate fail-close, Commit B1) and the content question stay separate. The
 gate fail-close makes "no beneficiary authored" honestly-conditional rather than a vacuous pass; it
 does **not** decide whether any of the 404 natural-law certifications are *mis-authored* false-naturals
@@ -1694,6 +1716,7 @@ Connects to OQ-46 (the regen that retires the row-23 stopgap) and D7/D5 (the pro
 **Ω-type:** Ω_E (design-relevant — closeable by recalibration; deferred by policy until the corpus is worth calibrating against).
 
 **Status:** open — (table-setting for the rebuild). The χ / ε / suppression classification
+**Priority:** 1
 thresholds (`config.pl` §5B + §5) are documented as **"Calibrated: Derived from 691-constraint
 corpus analysis (2024–2026)"** (`logic_thresholds.md:15`), with the known limitation that the
 calibration corpus is **Western/WEIRD** and needs non-WEIRD validation (`logic_thresholds.md:58–59`,
@@ -2032,6 +2055,7 @@ beneficiary channel is the right disqualifier). Related: OQ-43 (NL certification
 at scale).
 
 **Status:** partial — core question resolved (provisional, type-vector based, 2026-06-02); W1-magnitude ranking
+**Priority:** 1
 deferred behind the OQ-51 W1 rebuild. **Result:** of the 98 `manifest_presheaf`, **16 are
 false-mountain-shaped** (13 strict: powerless=`naturalized` ∧ analytical=`snare`; 3 loose:
 `naturalized`+`snare` both present), and **all 16 carry both an authored beneficiary AND an authored
@@ -2094,6 +2118,7 @@ explained), so the prior "do not scope until OQ-51 settled" gate is lifted.
 **Ω-type:** Ω_C (design choice — is the kernel/reading axis first-class?).
 
 **Status:** open
+**Priority:** 1
 **Deps:** blocked_on OQ-56
 **Origin:** Kernel/reading review, 2026-06-02 (first kernel/reading corpus landed this day).
 **Files:** `cs_kernel_registry.pl`, `logical_fingerprint.pl`, `json_report.pl`; readings as
@@ -2162,6 +2187,7 @@ or a third axis?
 **Ω-type:** Ω_C (design — adopt the debugging-philosophy trifurcation as the disagreement router).
 
 **Status:** open
+**Priority:** 1
 **Deps:** blocked_on OQ-56
 **Origin:** Kernel/reading review, 2026-06-02.
 **Files:** `sheaf_status`/`h1_band`, `cs_pattern`, `cs_axiom_foreclosed`, `drift_events.pl`;
@@ -2188,6 +2214,7 @@ drift, or a genuine fracture — the operational core of the kernel/reading engi
 **Ω-type:** Ω_P (preference/stakeholder — a declared, contestable selection premise, not derivable).
 
 **Status:** open
+**Priority:** 1
 **Origin:** Kernel/reading review, 2026-06-02.
 **Files:** readings (`kernel__reading_name`), `cs_kernel_registry.pl`.
 
@@ -2254,6 +2281,7 @@ Witnesses: `audits/2026-06-10_oq57_live_rewitness/` (FINDINGS.md + raw probe out
 missing-vs-typo-vs-noise sort is a later narrative-read pass, not a mechanical rule.**
 
 **Status:** partial — policy ruled; narrative-read pass run on the 13 forecloses (6 repaired); the residue is a
+**Priority:** 1
 **kernel-completeness** problem, not edge-patching — see the finding below.
 **Origin:** Reading-axis obstruction build (OQ-54), 2026-06-02. Surfaced by the independent
 must-flag oracle when partitioning non-canonical `cs_reading_relation` targets.
@@ -2456,6 +2484,7 @@ pairs are cross-kernel probes; OQ-58 repair progress that was logged here (2 del
 **Ω-type:** Ω_E (empirical — mechanism witnessed by synthetic probe; zero current corpus victims).
 
 **Status:** open — (log-only by ruling — do NOT fix in auto; see "What resolution changes")
+**Priority:** 1
 **Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §3, K5).
 **Files:** `purity_scoring.pl:62-71` (scope_invariance_subscore), `boltzmann_compliance.pl`
 (`scope_invariance_test` — `variant([])` case; `compute_cross_index_coupling` — `GridSize < 2 ->
@@ -2493,6 +2522,7 @@ applies: a surprising-*clean* reading on a sparse-data story is suspect-by-const
 **Ω-type:** Ω_C (conceptual/design — three operator rulings, none resolvable from code).
 
 **Status:** open — awaiting operator ruling on three linked questions
+**Priority:** 1
 **Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §6, K1/K2/K7).
 **Files:** `json_report.pl:1244,1267-1273` (producers), `network_dynamics.pl:197-255`
 (`network_stability_assessment`, `ep_base_severity`), `config.pl:483`
@@ -2527,6 +2557,7 @@ text/aggregation only — no classification path is touched.
 **Ω-type:** Ω_C (conceptual — which vocabulary wins is a design ruling; the guard is mechanical).
 
 **Status:** open — do NOT auto-unify (choice of which range wins is the units-fork resurfacing as
+**Priority:** 1
 an implementation decision)
 **Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §4, K4/K6).
 **Files:** `abductive_helpers.pl:97-103` (`fpn_zone`: pure/clean/contaminated/compromised/critical
@@ -2804,6 +2835,7 @@ expectation-authored buckets.
 **Ω-type:** Ω_C (taxonomy/ruling record).
 
 **Status:** open — (ledger — items graduate individually)
+**Priority:** 1
 **Origin:** FSM agency-gate session 2026-06-03; rulings recorded in KNOWN_STATE same date.
 **Files:** `narrative_ontology.pl` (registry + two-gate principle comment block),
 `prolog/tests/test_agent_beneficiary.pl` (the :287 inertness tripwire), `drl_core.pl:284-287/:333/:362`,
@@ -2845,6 +2877,7 @@ AND gate 2 host-deserves-the-released-certification; AGENT tags need gate 1 only
 **Ω-type:** Ω_C (design ruling — one classification formula, or a declared-separate audit path).
 
 **Status:** open
+**Priority:** 1
 **Origin:** TODO.md item 1 ("Kill the Legacy Chi Path"), inherited at tracking-surface
 consolidation 2026-06-04; the in-code TODO predates it.
 **Files:** `drl_audit_core.pl:18` ("TODO: Migrate to sigmoid pipeline. See issue:
@@ -2869,6 +2902,7 @@ either way — verify, don't assume.
 **Ω-type:** Ω_C (API-boundary design), with the load-path gotcha as context.
 
 **Status:** open
+**Priority:** 1
 **Origin:** AGENDA.md Item I-3 (2026-05-18, then about `maxent_profile/3`), inherited at
 tracking-surface consolidation 2026-06-04 and re-verified against the live tree.
 **Files:** `maxent_diagnostic.pl:129,137,183` (reads `maxent_classifier:maxent_dist/3`),
@@ -2896,6 +2930,7 @@ other stateful modules: purity caches, fingerprint stores).
 **Ω-type:** Ω_P (research program — items graduate to their own OQ or work package when picked up).
 
 **Status:** open — ledger; items graduate individually
+**Priority:** 1
 **Origin:** Tracking-surface consolidation 2026-06-04: AGENDA.md, AUDIT.md, TODO.md reviewed
 item-by-item against the substrate and deleted (Pattern 2: ISSUES.md is the single tracker).
 Items below were verified STILL UNTRACKED and still live at consolidation; everything else in
@@ -3056,6 +3091,7 @@ prevalence at 3000-scale).
 **Ω-type:** Ω_E (corpus measurement — falsification probe aimed at `docs/design/a_hypothesis_about_corpus_size.md` §3).
 
 **Status:** partial — scale run complete 2026-06-04 (438/449 stories): H1 and H3 falsifiers FIRED beyond resampling noise, H2 mixed; attribution between nesting-depth and seed-authorship awaits the authorship-controlled breadth arm (the named discriminating experiment at the end of this entry)
+**Priority:** 1
 **Deps:** blocked_on_human operator-spend-go
 **Origin:** 2026-06-04 session: kernel/reading recursion thought experiment (constitutional_government ⊃ us_constitution ⊃ amendments ⊃ doctrines, and upward toward `government`). Plan: `~/.claude/plans/virtual-inventing-allen.md` (mirror the operative content here as steps complete).
 
@@ -3095,6 +3131,7 @@ prevalence at 3000-scale).
 **Ω-type:** Ω_C (what counts as "the same axiom" across readings is a conceptual ruling), with an engineering build once ruled.
 
 **Status:** open — evidence witnessed; design not started (deferred out of the 2026-06-05 de-leak work item by user ruling)
+**Priority:** 1
 **Origin:** 2026-06-05 generation-pipeline audit (brief F5). Evidence: `axiom_diff.pl:49-72` —
 `exact_name` alignment is structurally all-blind (0 of 935 within-kernel reading-pairs share an
 axiom NAME; see the OQ-59 axiom-diff demo), so all non-trivial alignment requires the hand-authored
@@ -3117,6 +3154,7 @@ would put all three axes (observer/axiom/time) on the same discovered footing.
 **Ω-type:** Ω_E (one controlled generation run answers it).
 
 **Status:** open — deferred out of the 2026-06-05 de-leak work item (verification hygiene: a second change variable; the de-leak's Stage-1/Stage-2 must read clean first)
+**Priority:** 1
 **Deps:** blocked_on OQ-75
 **Origin:** 2026-06-05 generation-pipeline audit (brief F6). Reading-sets inherit one jurisprudential
 tradition's dialectic (the originalist/positivist/realist kit); the framework claims the
@@ -3191,6 +3229,7 @@ override-effective readings remain two-seat metric/signature signal under the OQ
 **Ω-type:** Ω_E (the staked prediction is measurable).
 
 **Status:** open — gated on operator go; Stage-1 single-example gate passed 2026-06-05 (KNOWN_STATE.md 2026-06-05)
+**Priority:** 1
 **Deps:** blocked_on_human operator-go
 **Origin:** 2026-06-05 de-leak work item (audit brief §4 Stage 2). The generation pipeline no
 longer hands the author the engine's decision boundaries (schema bands stripped `9f2d050a`, prompt
@@ -3392,6 +3431,7 @@ the computed layer (tangled_rope ×4 seats, both constructions), divergent at th
 **Ω-type:** Ω_E (a measurement caveat on the corpus, quantifiable and trackable as it grows).
 
 **Status:** partial — three-fate split RATIFIED 2026-06-12 (one amendment: free-gate residual →
+**Priority:** 1
 OQ-117 at filing): quantization half CLOSED working-as-designed for SCOPE-stage statistics
 (ε-bin is 4-level by construction THERE); idiom half OPEN, re-baselined on cohort zero;
 independence circularity ESCALATED to OQ-117. **Probe HALTED pre-spend same day (greenlit, then
@@ -3618,6 +3658,7 @@ absence presenting as a measured zero (Build-Discipline spine).
 **Ω-type:** Ω_P (cleanliness/one-path design) + Ω_E (the gkc-kernel wave change is witnessable).
 
 **Status:** open — the BUG (c-orch dropping kernels) is fixed (OQ-79 mech-1); this is the remaining
+**Priority:** 1
 cleanliness/enhancement step, deliberately NOT rushed at the end of the merge session.
 **Origin:** 2026-06-06 backend merge. P3 routed c-orchestrator through `generate_from_manifests`
 (the unified backend). gkc's `--scope` flow (`main()`, the legacy run-tagged path) still runs its
@@ -3860,6 +3901,7 @@ Gemini-conditional (single-model pilot; the 2×2 model×framing Ω under OQ-83 i
 **Ω-type:** Ω_C (a reporting/annotation feature; commentary-grade, never classification).
 
 **Status:** open — standalone, no migration dependency; do-whenever. Filed from the OQ-85 audit's
+**Priority:** 1
 one live residual (operator, 2026-06-07).
 **Origin:** 2026-06-07, OQ-85 decomposition audit.
 
@@ -3882,6 +3924,7 @@ discipline).
 proven) + Ω_P (whether to fund a larger de-leaked study — operator's, fresh decision).
 
 **Status:** partial — **BANKED/PARKED 2026-06-08.** Cold-read entry point:
+**Priority:** 1
 `audits/2026-06-07_stakeholder_layer_migration/COMMITTER_THREAD_HANDOFF.md`. Sub-questions answered;
 the overarching detection-independence existence proof is **UNPROVEN** and its next move is a
 fresh-decision larger study (NOT a parameter change). **Banked verdicts:** two-axis architecture
@@ -3996,6 +4039,7 @@ inevitability/"mountain"/"irreducible" framing as a kernel trigger — seat nece
 operator's, fresh decision).
 
 **Status:** open — candidate detector, N=2 witnessed instances; the positive/negative control sweep
+**Priority:** 1
 that would license it as a gate signal has NOT been run.
 
 **Origin:** 2026-06-08, World3 essay comparison. A thesis-driven critique of the Nebel et al. 2024
@@ -4135,6 +4179,7 @@ FNL=0 on kernel_v1 corroborates the OQ-70 bait-removal. Matrix:
 **Ω-type:** Ω_C (design choice — what the type dynamics is for; whether to model repair as well as decay).
 
 **Status:** open — finding recorded (verified asymmetry); design/build not started. Theory note: `docs/repair_dynamics.md`.
+**Priority:** 1
 
 **Finding (verified this session).** The type space is a dynamics, not a static taxonomy
 (coordination is maintained, not achieved — same content as commitment-systems' "drift is
@@ -4380,6 +4425,7 @@ construction, so it cannot create that misalignment class), OQ-106.
 receipt surface exists; operator's ruling).
 
 **Status:** open — homed 2026-06-10; known-interference item for the OQ-92 step-3
+**Priority:** 1
 **Deps:** blocked_on_human operator-benignity-certification
 preregistration. Per-site decision rule RULED 2026-06-10 (Read-site pass block below).
 **Read-site pass COMPLETE 2026-06-10** (`audits/2026-06-10_oq94_readsite_pass/`): 12 consumer
@@ -4772,6 +4818,7 @@ BFS nodes = node membership; this is edge provenance + salience). Cross-refs: OQ
 ## OQ-104 — Audit-citation integrity has no checker: paths cited from audit writeups can be untracked, gitignored, or nonexistent with nothing failing
 
 **Status:** open — filed 2026-06-11 (OQ-33 close session; operator-flagged class)
+**Priority:** 1
 **Origin:** Two same-class instances in one session: `tripwire_fabricated_defaults_results.json`
 cited by its 2026-05-30 audit from gitignored `outputs/` (relocated at the OQ-33 close), and
 `audits/2026-02-25_spectral_laplacian/outputs/` — 25 evidence files cited by that audit's
@@ -4871,6 +4918,7 @@ producer → threshold re-derivation → wiring), OQ-44 fail-closed on the table
 improvements in the operator's 2026-06-11 Pew-typology review exchange).
 
 **Status:** open — filed 2026-06-11 (Pew political-typology review exchange; source instrument
+**Priority:** 1
 `agent/analysis/originals/Pew_2026.5.10_political-typology_topline.txt`; the four story files it
 grounded — `institutional_trust_erosion`, `representation_legitimacy_gap`,
 `intra_party_fragmentation`, `generational_value_divergence` — untracked as of filing).
@@ -4909,6 +4957,7 @@ report this adapter would feed), OQ-83 (drift-event consumers).
 2026-06-11 review-exchange improvements).
 
 **Status:** open — filed 2026-06-11 (Pew political-typology review exchange).
+**Priority:** 1
 **Deps:** blocked_on OQ-107
 
 **The gap.** Survey instruments sample the powerless and moderate positions densely and the
@@ -5288,6 +5337,7 @@ spin-off; the Phase B/C half is OQ-109).
 **Ω-type:** Ω_E (witnessed, mechanical; zero output impact on the live corpus today).
 
 **Status:** open — filed 2026-06-11 by the OQ-99 close-out sweep (the wrong-module premise that
+**Priority:** 1
 OQ-99 hit and fixed in `report_generator.pl`, searched for elsewhere).
 
 **The witness (probe, 2026-06-11).** After `user:consult('testsets/scale_ceiling.pl')`:
@@ -5342,6 +5392,7 @@ single finding.
 **Ω-type:** Ω_E (sites enumerated with read witnesses; per-member verdicts and fixes pending).
 
 **Status:** open — filed 2026-06-11 at OQ-97 close. Full class tables with member lists:
+**Priority:** 1
 `audits/2026-06-11_oq97_pattern6_census/WRITEUP.md` §4–§5.
 
 **The batch (priority order, per OQ-44's common-law prioritize-by-success-shapedness;
@@ -5411,6 +5462,7 @@ OQ-43 (A6 semantics), OQ-93/OQ-96 (pattern provenance), OQ-110 (A4 lineage).
 **Ω-type:** Ω_E (witnessed, mechanical; Pattern-5 absence-gate stack).
 
 **Status:** open — filed 2026-06-12 by the OQ-109 unanimity adjudication (candidate-B gauntlet).
+**Priority:** 1
 **Deps:** bundled_with OQ-43, bundled_with OQ-44
 
 **The witness.** `signature_detection:has_viable_alternatives/2` has exactly two clauses:
@@ -5564,6 +5616,7 @@ un-fire reverts at Phase C re-witness.
 **Ω-type:** Ω_E (witnessed, mechanical, OQ-57 class).
 
 **Status:** open — filed 2026-06-12 by the B4 gauntlet reconciliation (the one check_stack
+**Priority:** 1
 divergence not on the expected-divergence manifest; investigated to attribution).
 
 **The witness.** check_stack reports `abductive_helpers:known_override_signature/1`
@@ -5870,6 +5923,7 @@ OQ-118 (cast-instability — printing_press's metric-side ε wobble), `docs/seat
 **Ω-type:** Ω_E (engine-characterization; measurable once the substrate instruments all three axes).
 
 **Status:** open — blocked on substrate. Filed 2026-06-13 from the OQ-117 (c) ruling.
+**Priority:** 1
 **Deps:** blocked_on_human substrate-instrumentation
 
 **The question (engine-characterization, NOT a (c) gate — (c) is resolved).** OQ-117 showed feeding
@@ -5897,6 +5951,7 @@ a corpus where observer + axiom + temporal are each witnessed non-vacuous** (aut
 **Ω-type:** Ω_E (measurable; lower-stakes than the mountain case).
 
 **Status:** open — filed 2026-06-13 from the OQ-117 (c) ruling (scope bound).
+**Priority:** 1
 
 OQ-117's engine run tested the fed claim = **mountain** only and ruled (c) document-as-condition for
 the false-foundational case. OQ-78's actual free ε decision boundary is the **rope/snare** split
@@ -5914,6 +5969,7 @@ numeric disclosure to authoring).
 **Ω-type:** Ω_E (the re-tests are measurable) + Ω_P (where the seat boundary sits is a theory ruling).
 
 **Status:** open — filed 2026-06-13, successor to OQ-109's σ/seat residual (discharged here, not
+**Priority:** 1
 answered). The frozen σ/seat prediction (`audits/2026-06-12_cohort_zero/SIGMA_SEAT_PREDICTION.md`,
 committed `5f2a626c`) was tested on the replicate spend and **falsified-as-tested**; this entry
 carries the structured finding and its open graduation conditions.
@@ -5981,6 +6037,7 @@ verdict-stability demoted to confounded-half; discharge-to-successor).
 claim-only RED-capping is the intended semantics is a design ruling).
 
 **Status:** investigating — filed 2026-06-13 from the Przybylski's-star stress run
+**Priority:** 1
 **Deps:** bundled_with OQ-128
 (`agent/analysis/originals/przybylskis_star.md`; testsets `actinide_replenishment_mechanism_*`,
 `neutron_star_bombardment_reading`, `radiative_levitation_stratification`, `superheavy_decay_reading`,
@@ -6173,6 +6230,7 @@ verdict boxes (this session).
 **Ω-type:** Ω_E (a measurable per-seat agreement-rate gap, testable on any twin pair).
 
 **Status:** open — filed 2026-06-13 from the twin cross-model comparison
+**Priority:** 1
 (`audits/2026-06-13_twin_comparison/`, n=960, haiku vs gemini-flash at commit 8126231). H1
 (structural type model-invariance) HELD per-field for all 7 fields, but with a steep **seat
 gradient**: `persp:powerless` agreement-rate 0.397 (the two models disagree on the powerless
@@ -6193,6 +6251,7 @@ one twin pair earns "model-sensitive here," not "the powerless seat is model-dep
 **Ω-type:** Ω_E (a measurable directional disparity in the `signature` field across a twin pair).
 
 **Status:** open — filed 2026-06-13 from the twin comparison
+**Priority:** 1
 (`audits/2026-06-13_twin_comparison/`). The recurring `signature` disparity over matched ids is
 `constructed_high_extraction` (haiku side) ↔ `false_ci_rope` (flash side), in BOTH directions
 across many constraints — the two models systematically foreground different structural codings of
@@ -6211,6 +6270,7 @@ RESULTS.md `signature` disparity exemplars).
 **Ω-type:** Ω_E (a pre-registered conditional-permutation test with a named decision rule).
 
 **Status:** open — filed 2026-06-13 from the twin comparison. The pre-registered H2 DRIFT test
+**Priority:** 1
 (observed mean|Δχ| > permute band95) FAILED for all 5 continuous fields (H2-drift FALSIFIED). The
 opposite tail fired instead — observed mean|Δχ| BELOW band5 for all 5 (true pairs more similar than
 chance re-pairing) — but that tail was pre-registered only to be REPORTED, carries no committed
@@ -6254,6 +6314,7 @@ is deliberately under-scoped: theory mapped, partial coverage witnessed, **full 
 known and not settled here.**
 
 **Status:** open — filed 2026-06-13 (CC session; doctrine thread with web-Claude, two essays as
+**Priority:** 1
 worked instances). Theory↔engine map below is witnessed. **CORRECTED same day — see below;
 "Gap 2" is retracted.**
 
@@ -6392,6 +6453,7 @@ stop-at-the-record-boundary rulings are the operator's (this thread).
 **Ω-type:** Ω_E (advisory-lint calibration; witnessed on the cohort-zero pilot).
 
 **Status:** open — split-refiled from OQ-116 on 2026-06-14 when the MMC half resolved. The
+**Priority:** 1
 **Deps:** splits_from OQ-116
 operator-only linter ruling (OQ-116: the linter is an operator diagnostic, lint never gates
 generation, threshold-coupled codes never reach the authoring LLM) **was applied here and
@@ -6443,6 +6505,7 @@ ruling and the split decision are the operator's.
 **Ω-type:** Ω_C (design ruling — whether the mid-power decline is intended semantics).
 
 **Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose)
+**Priority:** 1
 **Deps:** splits_from OQ-122, bundled_with OQ-122
 **Origin:** OQ-122 fixture/verdict work, 2026-06-14. `classify_from_metrics` (pre-signature) returns
 **non-mountain at the moderate/institutional power seats for ALL mountain-claimers** — a power-scaling
@@ -6473,6 +6536,7 @@ rejection gates — Boltzmann non-compliance + type_1 + computed type), OQ-70 (n
 **Ω-type:** Ω_C (design ruling — the Ω labeling partition and the deliberate-vs-hole coverage calls).
 
 **Status:** partial — rewire RESOLVED + witnessed 2026-06-14; OPEN-A..D carried below.
+**Priority:** 1
 **Origin:** `omega_from_gap/5` stopped firing after the 2026-06-05 rebuild. Root cause: its feeder
 `report_generator:detect_gap_pattern/2` queried the **retired** `constraint_indexing:constraint_classification/3`
 (the pre-rebuild per-power-seat stored-type surface). The rebuild moved that idea to
@@ -6534,6 +6598,7 @@ this was) + Pattern 6 (the null/`[]` coverage bit).
 **Ω-type:** Ω_E (the scale claim — "computing over the access points routes the right few from the many" — is measurable; pilot done, corpus arm pending).
 
 **Status:** open — pilot RESOLVED + witnessed 2026-06-14; corpus scale arm carried below.
+**Priority:** 1
 **Origin:** the omega-resolver memo (`~/.claude/plans/brief-the-omega-glittery-wozniak.md`): one
 defect (absence-as-presence) read at four layers (wiring/evaluation/summary/relationship), at two
 scales — ISSUES.md (128 typed OQs) and the corpus (4,430 authored omegas, `outputs/dump_omega_haiku.md`).
