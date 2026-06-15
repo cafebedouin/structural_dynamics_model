@@ -906,7 +906,7 @@ def run_pipeline(
     # Rationale: the status ledger is the repo's open-question census; a
     # checker that isn't run isn't checking, and an unparseable ledger
     # silently corrupts the next census. Grammar: `**Status:** <token>` with
-    # token in {open, investigating, mitigated, partial, resolved, disposed},
+    # token in {open, investigating, mitigated, partial, resolved, disposed, future},
     # optionally ` — detail` — see the ISSUES.md footer.
     from issues_status import scan as _issues_scan
     _, _issues_problems = _issues_scan()

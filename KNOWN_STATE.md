@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-15 — OQ-108 resolved: per-position witness coverage shipped; OQ-107 closed `future`; new `future` status token
+**Files:** prolog/stakeholder_seats.pl, prolog/json_report.pl, python/tensions_ledger.py, python/issues_status.py, ISSUES.md
+**Tier:** landed
+
+Witness coverage over the **6-atom authoring power vocabulary** (powerless/moderate/powerful/
+organized/institutional/analytical, `docs/logic.md:293`) — distinct from the **4-position
+observer fingerprint** (`logical_fingerprint:fingerprint_shift/2`; `powerful`/`organized` have
+π and canonical-d but no `standard_context_for_power`, hence no perspective column). New:
+`stakeholder_seats:power_witness_count/3` + `power_witness_map/2` (reuse
+`constraint_indexing:canonical_d_for_power/2` as the 6-atom enumerator, no forked list);
+serialized as `perspective_witness` in `json_report.pl` (64/64 constraints); rendered in the
+tensions ledger. A 0 = that perspective is inference-only, NOT measured-absent (Pattern 6: zeros
+SHOWN). Witnessed: `geopolitical_settlement_competition` types `powerless=tangled_rope
+moderate=snare` but authored `powerless=0 moderate=0` — argued-not-evidenced legs made visible.
+
+Also: tensions ledger now SUPPRESSES the `grid coverage` line when fully absent (only 3/64 live
+constraints author a grid; was noise on every block) — grid line prints only when
+authored+injected+imputed>0; report `.md` generators deliberately unchanged (their grid lines are
+load-bearing CONDITIONAL/OPEN captions + the OQ-98 always-print banner).
+
+New status token **`future`** (operator ruling 2026-06-15): closes a REAL question deliberately
+not slated for work but keeps it searchable + full-bodied; NOT in `omega_resolver`'s ACTIVE set,
+so it drops out of the workable frontier; carries no resolution witness, so the rotted-witness
+check skips it. Added to `issues_status.py` TOKENS + the ISSUES.md footer grammar +
+`run_pipeline.py` comment. OQ-107 (survey-wave/external-instrument adapter) closed `future` —
+operator does not see it getting done; OQ-108 was `blocked_on OQ-107` but the witness is the
+authored stakeholder (no survey wave needed), so that dep was wrong and is dropped.
+
 ## 2026-06-14 — corpus omega soundness POC (OQ-130 scale arm): authored omegas 80% sound, NOT §8-class; identity is three orthogonal axes
 **Files:** audits/2026-06-14_corpus_omega_soundness_poc/, ISSUES.md, docs/design/design_gaps.md, prolog/testsets_haiku/
 **Tier:** correction-key

@@ -27,6 +27,11 @@ OUTPUTS = ROOT / "outputs"
 REPORTS = OUTPUTS / "constraint_reports"
 
 POSITIONS = ("powerless", "moderate", "institutional", "analytical")
+# OQ-108: the full 6-atom authoring vocabulary (docs/logic.md:293), distinct
+# from the 4-position observer fingerprint above. Witness coverage is reported
+# over all six — powerful/organized have no perspective column but are staffed.
+POWER_ATOMS = ("powerless", "moderate", "powerful", "organized",
+               "institutional", "analytical")
 
 
 def _fmt_alert(a):
@@ -90,6 +95,21 @@ def build_block(entry, report_dir=REPORTS):
     if persp:
         lines.append("- per-position types: " +
                      " ".join(f"{p}={persp.get(p, '?')}" for p in POSITIONS))
+
+    # witness coverage (OQ-108): authored stakeholders per power atom. A 0 means
+    # any perspective computed at that power is inference-only, not measured-
+    # absent — so zeros are SHOWN (unlike the all-absent grid line). The authoring
+    # axis (6 atoms) is distinct from the 4-position observer fingerprint above.
+    pw = entry.get("perspective_witness")
+    if isinstance(pw, dict):
+        total = sum(int(pw.get(p, 0) or 0) for p in POWER_ATOMS)
+        if total > 0:
+            cells = " ".join(f"{p}={pw.get(p, 0)}" for p in POWER_ATOMS)
+            lines.append("- witness coverage (authored stakeholders per power; "
+                         f"0 = perspective inference-only): {cells}")
+        else:
+            lines.append("- witness coverage: no authored stakeholders "
+                         "(all perspectives inference-only)")
     gaps = entry.get("gaps") or []
     if gaps:
         lines.append("- index mismatches: " + "; ".join(

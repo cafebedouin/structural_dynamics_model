@@ -228,6 +228,11 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     write_perspective_chi(S, C),
     format(S, '      },~n', []),
 
+    % perspective_witness (OQ-108: authored stakeholders per power atom)
+    format(S, '      "perspective_witness": {~n', []),
+    write_perspective_witness(S, C),
+    format(S, '      },~n', []),
+
     % base_extractiveness
     (   catch(drl_core:base_extractiveness(C, BaseEps), _, fail)
     ->  true
@@ -945,6 +950,31 @@ write_one_perspective_chi(S, C, Power, Comma) :-
     format(S, ', "scope_mod": ', []), write_json_number(S, ScopeMod),
     format(S, '}', []),
     (Comma == true -> format(S, ',~n', []) ; format(S, '~n', [])).
+
+/* ================================================================
+   PERSPECTIVE WITNESS (OQ-108: authored-stakeholder coverage per power)
+   ================================================================
+   How many named stakeholders the story authored at each of the 6 power
+   atoms (docs/logic.md:293) — the AUTHORING axis, distinct from the 4-position
+   observer fingerprint above. A 0 means any perspective computed at that power
+   is inference-only, not measured-absent. Source: stakeholder_seats:
+   power_witness_map/2. Independent of external instruments (OQ-107).
+   ================================================================ */
+
+%% write_perspective_witness(+Stream, +Constraint)
+write_perspective_witness(S, C) :-
+    (   catch(stakeholder_seats:power_witness_map(C, Pairs), _, fail)
+    ->  true
+    ;   Pairs = []
+    ),
+    write_witness_pairs(S, Pairs).
+
+write_witness_pairs(_, []).
+write_witness_pairs(S, [P-N]) :- !,
+    format(S, '        "~w": ~w~n', [P, N]).
+write_witness_pairs(S, [P-N|T]) :-
+    format(S, '        "~w": ~w,~n', [P, N]),
+    write_witness_pairs(S, T).
 
 /* ================================================================
    COUPLING OBJECT

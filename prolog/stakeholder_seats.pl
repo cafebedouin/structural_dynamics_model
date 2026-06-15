@@ -30,7 +30,9 @@
     in_contention/3,
     seat_perceived_vs_real/4,
     consensus_provenance/2,
-    zombie_piton_crosscheck/2
+    zombie_piton_crosscheck/2,
+    power_witness_count/3,
+    power_witness_map/2
 ]).
 
 :- use_module(config).
@@ -69,6 +71,30 @@ role_base_d(beneficiary,   D) :- config:param(stakeholder_role_d_beneficiary, D)
 role_base_d(payer,         D) :- config:param(stakeholder_role_d_payer, D).
 role_base_d(excluded,      D) :- config:param(stakeholder_role_d_excluded, D).
 role_base_d(observer,      D) :- config:param(stakeholder_role_d_observer, D).
+
+%% power_witness_count(+C, ?Power, -N)
+%  OQ-108: per-power-atom AUTHORED-witness coverage — how many named
+%  stakeholders the story actually staffed at each power level. Power ranges
+%  over the full 6-atom vocabulary (docs/logic.md:293), enumerated by reusing
+%  constraint_indexing:canonical_d_for_power/2 (no forked list — Pattern 2).
+%  This is the authoring axis and is DISTINCT from the 4-position observer
+%  fingerprint (logical_fingerprint:fingerprint_shift/2): the report probes 4
+%  canonical observer seats, but stories author agents across all 6 levels.
+%  N=0 means any perspective the engine computes at that power is inference-only
+%  (no authored agent grounds it) — NOT measured-absent (Build Discipline P6).
+%  Does not need external instrument data (OQ-107), so OQ-108 is independent of
+%  it: the witness is the authored stakeholder, not a survey wave.
+power_witness_count(C, Power, N) :-
+    constraint_indexing:canonical_d_for_power(Power, _),   % the 6 canonical atoms
+    aggregate_all(count,
+        narrative_ontology:constraint_stakeholder(C, _, _, Power, _, _, _),
+        N).
+
+%% power_witness_map(+C, -Pairs)
+%  Pairs = [Power-N, ...] over all 6 atoms in canonical order — the serialized
+%  shape consumed by json_report:write_perspective_witness/2.
+power_witness_map(C, Pairs) :-
+    findall(P-N, power_witness_count(C, P, N), Pairs).
 
 %% chi_for_stakeholder(+C, +Name, -Chi)
 chi_for_stakeholder(C, Name, Chi) :-

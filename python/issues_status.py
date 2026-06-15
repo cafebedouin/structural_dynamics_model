@@ -3,7 +3,10 @@
 
 Canonical grammar (one line per OQ, first Status line of the section):
     **Status:** <token>[ — <free-text detail>]
-    token ∈ {open, investigating, mitigated, partial, resolved, disposed}
+    token ∈ {open, investigating, mitigated, partial, resolved, disposed, future}
+    (future = closed-but-searchable: a real question deliberately not slated for
+     work — won't realistically get done — kept full-bodied so it can be revived;
+     not in omega_resolver's ACTIVE set, so it drops out of the workable frontier)
 
 Usage:
     python3 python/issues_status.py            # table + counts
@@ -23,7 +26,8 @@ import re
 import sys
 from pathlib import Path
 
-TOKENS = {"open", "investigating", "mitigated", "partial", "resolved", "disposed"}
+TOKENS = {"open", "investigating", "mitigated", "partial", "resolved", "disposed",
+          "future"}
 ISSUES = Path(__file__).resolve().parents[1] / "ISSUES.md"
 
 HEADER = re.compile(r"^## (OQ-\d+) ")

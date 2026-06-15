@@ -4917,7 +4917,10 @@ producer → threshold re-derivation → wiring), OQ-44 fail-closed on the table
 **Ω-type:** Ω_C (design choice — a new ingestion surface; ranked first of the three engine
 improvements in the operator's 2026-06-11 Pew-typology review exchange).
 
-**Status:** open — filed 2026-06-11 (Pew political-typology review exchange; source instrument
+**Status:** future — operator ruling 2026-06-15: a real ingestion gap, but the
+external-instrument adapter is work the operator does not see ever getting done; closed as
+`future` (closed-but-searchable, revive if the substrate changes — full body kept below for
+that reviver). Originally filed 2026-06-11 (Pew political-typology review exchange; source instrument
 **Priority:** 1
 `agent/analysis/originals/Pew_2026.5.10_political-typology_topline.txt`; the four story files it
 grounded — `institutional_trust_erosion`, `representation_legitimacy_gap`,
@@ -4956,25 +4959,24 @@ report this adapter would feed), OQ-83 (drift-event consumers).
 **Ω-type:** Ω_C (design choice — a reporting surface over existing grid data; second of the three
 2026-06-11 review-exchange improvements).
 
-**Status:** open — filed 2026-06-11 (Pew political-typology review exchange).
-**Priority:** 1
-**Deps:** blocked_on OQ-107
+**Status:** resolved — 2026-06-15: shipped the standalone authored-witness version (the
+"full" OQ-107-dependent version is moot now that OQ-107 is `future`; the witness is the authored
+stakeholder, not a survey wave, so OQ-107 dependence was wrong — dep dropped). `stakeholder_seats:
+power_witness_count/3` + `power_witness_map/2` count named stakeholders authored at each power
+atom; serialized as `perspective_witness` in `json_report.pl` (pipeline output, 64/64) and
+rendered in `python/tensions_ledger.py`. A 0 = that perspective is inference-only, NOT
+measured-absent — zeros are SHOWN with coverage carried to the read site (Pattern 6). Witnessed:
+`geopolitical_settlement_competition` reports `powerless=tangled_rope moderate=snare` with
+`powerless=0 moderate=0` authored — the argued-not-evidenced legs made visible. Originally filed
+2026-06-11 (Pew political-typology review exchange). Evidence: KNOWN_STATE 2026-06-15.
 
-**The gap.** Survey instruments sample the powerless and moderate positions densely and the
-institutional position almost not at all — which is exactly why the parent essay's
-chokepoint-coordination-story passage had to be *argued* rather than *evidenced*. The engine
-computes per-position classifications across the grid but carries no per-position
-witness-coverage bit, so an essay author cannot know in advance which legs of a piece will be
-inference. Note the interaction with design_discipline §4: the institutional seat is the *most*
-meaningful seat for the extractive-from-every-position test — and it is precisely the seat
-external instruments least often sample, so its legs are systematically the argued ones.
-
-**Shape of the build.** Full version depends on OQ-107's `witnessed` basis bucket (coverage =
-witnessed evidence per position); a cruder standalone version — authored-evidence density per
-position from existing story fields — is possible first and already useful as a pre-drafting
-report ("these positions will be inference"). Pattern 6 rule applies: the report must carry
-coverage to the read site, never collapse sparse-position aggregates into confident-looking
-verdicts. Cross-refs: OQ-107, OQ-101 (the tensions ledger is the natural place to surface it).
+**Key finding (why coverage is over 6, not the 4 perspective columns).** The witness axis is the
+full 6-atom power vocabulary (powerless/moderate/powerful/organized/institutional/analytical,
+docs/logic.md:293) — the AUTHORING vocabulary — which is DISTINCT from the 4-position observer
+fingerprint (`logical_fingerprint:fingerprint_shift/2` probes 4 canonical observer seats;
+`powerful`/`organized` have π and canonical-d but no `standard_context_for_power`, so no
+perspective column). Reporting witness over the 6 needs no seat-decision collapse and loses no
+stakeholders. Cross-ref: OQ-101 (the ledger surface), OQ-107 (the dropped dep, now `future`).
 
 ---
 
@@ -6809,11 +6811,19 @@ closed entry carrying a still-operative ruling or build spec (e.g. OQ-51's ruled
 yet-built 4th sheaf value) keeps that block intact. Entries are compressed in place,
 never moved to a second file (single-tracker rule, Build Discipline Pattern 2), so
 `grep OQ-NN ISSUES.md` keeps resolving every cross-reference. mitigated/partial
-entries stay full-bodied — they are semi-live.*
+entries stay full-bodied — they are semi-live. `future` entries also stay full-bodied:
+there is no resolution narrative to drop, and the full problem statement is exactly what a
+reviver would need.*
 
 *Status grammar (normalized 2026-06-04, machine-readable): each entry's first
 Status line is exactly `**Status:** <token>` optionally followed by ` — <detail>`,
-with token ∈ {open, investigating, mitigated, partial, resolved, disposed}.
+with token ∈ {open, investigating, mitigated, partial, resolved, disposed, future}.
+`future` (operator ruling 2026-06-15) is a closing token for a REAL question that is
+deliberately not slated for work — realistically won't get done — but is kept searchable
+(`grep OQ-NN ISSUES.md` still resolves) and full-bodied so it can be revived if the
+substrate changes. It is NOT in `omega_resolver.py`'s ACTIVE set, so a `future` entry drops
+out of the workable frontier and the active counts; unlike resolved/disposed it carries no
+resolution witness, so the rotted-witness check skips it.
 Census: `python3 python/issues_status.py` (table + counts; pass a token to filter);
 `--check` exits 1 on any malformed entry — run it after editing this file, and ALWAYS after
 merging a worktree branch that touches it: since 2026-06-10 it also fails on duplicate OQ
