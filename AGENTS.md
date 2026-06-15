@@ -96,7 +96,7 @@ structural_dynamics_model/
 │   ├── sweeps/                       # parameter variation scripts (12 files)
 │   └── audits/                       # audit, diagnostic, probe scripts (19 files)
 ├── agent/
-│   ├── c-orchestrator.py         # Primary authoring entry point (6-step chain)
+│   ├── c-orchestrator.py         # Primary authoring entry point (7-step chain; step 7 = gated auto-commit)
 │   ├── llm_call.py               # Canonical Anthropic call path (ModelCallError, count_tokens) —
 │   │                             #   import this, NOT c-orchestrator (its hyphen blocks import)
 │   ├── make_brief.py             # Compress oversized/refusing sources → NEUTRAL structural brief
@@ -532,7 +532,7 @@ The primary authoring command:
 python3 agent/c-orchestrator.py "some topic"
 ```
 
-This chains six steps automatically:
+This chains seven steps automatically:
 
 | Step | What it does | Writes to |
 |---|---|---|
@@ -541,7 +541,8 @@ This chains six steps automatically:
 | 3 Generate | Sonnet generates one constraint story per axis. NOTE: resolves only flat `manifest["axes"]`; kernel-reading entries are skipped — kernel topics go through `agent/generate_kernel_corpus.py`, which since 2026-06-05 ALSO auto-generates a forced-flat control per kernel (`<kernel_id>_flat_control`, alignment key `narrative_ontology:flat_control_of/2`; OQ-76 — do not remove, and do not generalize to kernel-on-every-flat) | `json/`, `prolog/testsets/` |
 | 4 Corpus update | Runs `python/run_pipeline.py` to re-classify full corpus | `outputs/pipeline_output.json` |
 | 5 Reports | `python/enhanced_report.py` writes per-constraint reports | `outputs/constraint_reports/<id>_report.md` |
-| 6 Essay | Sonnet synthesizes draft essay from constraint reports | `outputs/essays/`, `agent/analysis/essays/` |
+| 6 Tensions ledger | Deterministic extraction (`python/tensions_ledger.py`) — NOT an essay (OQ-101, 2026-06-10) | `outputs/tensions_ledger.md` |
+| 7 Commit | `_step_commit` git-commits this run's `json/<cid>.json` + `prolog/testsets/<cid>.pl`. GATED (skips on `--no-commit`, run-tag, or failed corpus update) and SCOPED to the run's cids — never `git add -A`, refuses if the index already holds unrelated staged changes; local commit only, never pushes | git (local) |
 
 **Big or refusing source files** (e.g. a 1.6 MB S-1, a paper the safety classifier refuses):
 the orchestrator auto-compresses to a NEUTRAL brief only when the topic exceeds its MEASURED

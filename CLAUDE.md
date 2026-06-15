@@ -114,7 +114,7 @@ here.
 
 ## Typical Workflow
 
-Primary authoring loop: `python3 agent/c-orchestrator.py "some topic"` — chains six steps:
+Primary authoring loop: `python3 agent/c-orchestrator.py "some topic"` — chains seven steps:
 
 1. **Research** — web search grounding via Haiku
 2. **Decompose** — UKE_SCOPE protocol selects every §3-distinct axis (no fixed count; `--axes N`
@@ -124,8 +124,12 @@ Primary authoring loop: `python3 agent/c-orchestrator.py "some topic"` — chain
 4. **Corpus update** — `python/run_pipeline.py` re-classifies the full corpus
 5. **Reports** — `python/enhanced_report.py` writes `outputs/constraint_reports/<id>_report.md`
    per new constraint
-6. **Essay** — Sonnet drafts an essay from the reports; saved to `outputs/essays/` and
-   `agent/analysis/essays/`
+6. **Tensions ledger** — deterministic extraction (`python/tensions_ledger.py`), NOT an essay
+   (OQ-101: the essay FORM collapses plurality; auto-essay removed 2026-06-10)
+7. **Commit** — `_step_commit` commits the new `json/<cid>.json` + `prolog/testsets/<cid>.pl`,
+   GATED (skips on `--no-commit`, run-tag, or a failed corpus update) and SCOPED to this run's
+   cids (never `git add -A`; refuses if the index already holds unrelated staged changes); local
+   commit only, never pushes
 
 After the run, take `outputs/constraint_reports/*.md` and the draft to a model for final essay
 synthesis. Finished essays are posted to cafebedouin.org, not committed beyond what the pipeline

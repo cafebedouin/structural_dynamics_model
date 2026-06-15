@@ -141,6 +141,7 @@ class DRAuditOrchestrator:
         source_name: str = "",
         brief_mode: str = "auto",          # auto | force | never  (size-driven briefing)
         auto_bypass_refusal: bool = False,  # opt-in, logged bypass of a content refusal
+        no_commit: bool = False,            # opt-out of the gated auto-commit of new stories
     ):
         self.axes = axes
         self.serial_generate = serial_generate
@@ -155,6 +156,7 @@ class DRAuditOrchestrator:
         self._source_path = Path(source_name) if (source_name and Path(source_name).is_file()) else None
         self.brief_mode = brief_mode
         self.auto_bypass_refusal = auto_bypass_refusal
+        self.no_commit = no_commit
         # Optional explicit token cap on the raw topic (env override). When unset,
         # the ingest ceiling is MEASURED per-step (see _ingest_decision).
         import os as _os
@@ -324,6 +326,7 @@ class DRAuditOrchestrator:
         # Step 4: Corpus update
         step = self._step_corpus_update()
         result.steps.append(step)
+        corpus_update_ok = (step.status == "success")
 
         # Step 5: Enhanced reports
         step = self._step_reports(generated_ids)
@@ -339,6 +342,12 @@ class DRAuditOrchestrator:
         step = self._step_ledger(generated_ids)
         result.steps.append(step)
         result.essay = ""
+
+        # Step 7: Commit the new stories (gated + scoped). Locks the determinism
+        # frontier and prevents the untracked-story drift that excluded 7 stories
+        # from a worktree-run probe (OQ-131, 2026-06-15).
+        step = self._step_commit(generated_ids, manifest, corpus_update_ok)
+        result.steps.append(step)
 
         result.total_duration_s = time.time() - t0
         self._tally_tokens(result)
@@ -861,6 +870,90 @@ class DRAuditOrchestrator:
         )
 
     # ------------------------------------------------------------------
+    # Step 7: Commit the new constraint stories (gated + scoped)
+    # ------------------------------------------------------------------
+
+    def _step_commit(self, constraint_ids: list[str], manifest: dict,
+                     corpus_update_ok: bool) -> StepResult:
+        """Commit the json + testset files this run created. Gated + SCOPED —
+        never `git add -A`:
+          * skip on --no-commit, run-tag (output not promoted), or a
+            corpus_update that did not succeed (a story that broke classification
+            must not be committed — run_pipeline's gates are the quality bar);
+          * stage ONLY json/<cid>.json + testsets/<cid>.pl for this run's cids;
+          * multi-writer safety: refuse if the index already holds unrelated
+            staged changes (its witness would be an unattributable count);
+          * commit locally with provenance; NEVER push (that stays manual).
+        """
+        t0 = time.time()
+        if self.no_commit:
+            return StepResult(step="commit", status="skipped", data="--no-commit")
+        if self._run_tag:
+            return StepResult(step="commit", status="skipped",
+                              data="run-tagged output not promoted to json/ — nothing to commit")
+        if not corpus_update_ok:
+            return StepResult(step="commit", status="skipped",
+                              data="corpus_update did not succeed — refusing to commit unvalidated stories")
+        if not constraint_ids:
+            return StepResult(step="commit", status="skipped", data="no stories generated")
+
+        rels: list[str] = []
+        for cid in constraint_ids:
+            for p in (self._json_dir / f"{cid}.json", self._testsets_dir / f"{cid}.pl"):
+                if p.exists():
+                    rels.append(str(p.relative_to(REPO_ROOT)))
+        if not rels:
+            return StepResult(step="commit", status="skipped", data="no story files on disk")
+
+        def _git(*a, **kw):
+            return subprocess.run(["git", *a], cwd=REPO_ROOT, capture_output=True,
+                                  text=True, **kw)
+
+        # Multi-writer safety: do not fold someone else's already-staged work in.
+        pre = _git("diff", "--cached", "--name-only")
+        if pre.stdout.strip():
+            return StepResult(step="commit", status="skipped",
+                              data=f"index not clean ({len(pre.stdout.split())} staged) — not committing")
+
+        _git("add", "--", *rels, check=True)
+        staged = _git("diff", "--cached", "--name-only").stdout.split()
+        if not staged:
+            return StepResult(step="commit", status="skipped",
+                              data="no changes to commit (re-run produced identical bytes)")
+
+        msg = self._commit_message(constraint_ids, manifest, len(staged))
+        try:
+            _git("commit", "-q", "-m", msg, check=True)
+        except subprocess.CalledProcessError as e:
+            # Leave the index as-is for the operator to inspect; report loudly.
+            return StepResult(step="commit", status="error",
+                              error=f"git commit failed: {e.stderr or e}",
+                              duration_s=time.time() - t0)
+        sha = _git("rev-parse", "--short", "HEAD").stdout.strip()
+        self._progress("commit",
+                       f"committed {len(staged)} files for {len(constraint_ids)} stories ({sha}); "
+                       f"push stays manual")
+        return StepResult(step="commit", status="success",
+                          data={"sha": sha, "files": len(staged)},
+                          duration_s=time.time() - t0)
+
+    def _commit_message(self, constraint_ids: list[str], manifest: dict,
+                        n_files: int) -> str:
+        fam = manifest.get("family_id", "")
+        domain = manifest.get("domain", "")
+        shown = ", ".join(constraint_ids[:8]) + ("..." if len(constraint_ids) > 8 else "")
+        head = f"corpus: add {len(constraint_ids)} constraint stories" + (f" ({fam})" if fam else "")
+        return (
+            f"{head}\n\n"
+            f"Generated by agent/c-orchestrator.py" + (f" — domain {domain}" if domain else "") + ".\n"
+            f"Committed after a successful corpus_update (run_pipeline + its gates); "
+            f"scoped to the {n_files} files this run created. The committed JSON is the "
+            f"determinism frontier (re-runs are new draws, never re-measurements).\n\n"
+            f"Stories: {shown}\n\n"
+            f"Generated-by: c-orchestrator.py\n"
+        )
+
+    # ------------------------------------------------------------------
     # Size-driven briefing (the LOSSY fallback for inputs that won't fit)
     # ------------------------------------------------------------------
 
@@ -975,6 +1068,9 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Run SCOPE only, print manifest")
     parser.add_argument("--manifest-file", default=None,
                         help="Load frozen SCOPE manifest from file, skip decompose step")
+    parser.add_argument("--no-commit", action="store_true",
+                        help="Skip the gated auto-commit of new stories (default: commit "
+                             "json/<cid>.json + testsets/<cid>.pl after a successful corpus update)")
     parser.add_argument("--auto-bypass-refusal", action="store_true",
                         help="On a content safety-refusal, attempt an opt-in, fully-logged "
                              "bypass (brief via permissive model + analytical-intent reframe) "
@@ -1024,6 +1120,7 @@ def main():
         source_name=source_name,
         brief_mode=args.brief_mode,
         auto_bypass_refusal=args.auto_bypass_refusal,
+        no_commit=args.no_commit,
     )
     result = orch.run(topic)
 
