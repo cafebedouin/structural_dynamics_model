@@ -6649,6 +6649,19 @@ the **ε-invariance define-vs-restatement** call (the `kernel_reading_distinctio
 not ruled); (iii) whether confirmed Ω_E-as-status **edits `omega_variables.md`** (an Ω_E status-line);
 (iv) wiring **diagnose-then-stamp into the generator** is a deferred generator change gated on (i).
 
+**Restatement-gate no-op FIXED (2026-06-14, `…/restatement_gate_fix.md`).** The build defect behind
+metric (c) — the gate missed 2/2 seeded restatements — is repaired: the gate now consults the entry's
+`declared_fields`, so re-deriving the constraint's own authored fields (ε-invariance / comparing
+authored ε·base-properties·victim-sets across **declared** readings) is RESTATEMENT, on whichever
+signature fired. **Two witnesses:** (1) `deterministic_baseline.py` has a runnable `seed_control()`
+that is now **GREEN** (id20/id27 caught; KNOWN_EXTERNAL pass; UNDER_DECLARATION external; two-sided
+commit control holds; exit 1 on RED); (2) a **blind LLM** under the fixed protocol independently typed
+id20/id27 restatement and id1/id30 external — refuting regex-overfit. Both prior gates on (iv) are now
+clear (#1 declared 2026-06-14; gate works), **but (iv) stays deferred for a different reason:**
+deterministic typing alone is ~half judgment (`unknown_rate` 0.10; the family split rides the
+operation-locus seat), so a generator stamp would need the LLM-judge in the loop — a cost decision,
+not a build-blocker. The historical `judge_results.json` is kept as the POC's as-run artifact.
+
 **Evidence follow-up (2026-06-14, adjudicator, read-only — discharges #2, advances #1/#3).**
 - **#2 RULED → restatement.** `metrics_as_routing.md` + `when_metrics_arent_measurement.md` (foundation
   docs) establish **ε is ROUTING, not measurement**. So the ε-invariance test (`kernel_reading_distinction`

@@ -1,7 +1,7 @@
 {
   "n": 40,
-  "unknown_count": 5,
-  "unknown_rate": 0.125,
+  "unknown_count": 4,
+  "unknown_rate": 0.1,
   "commit_control": {
     "under_commit": {
       "input": "KNOWN-DEFINITIONAL (biotech define)",
@@ -34,6 +34,53 @@
       "pass": true
     },
     "both_pass": true
+  },
+  "seed_control": {
+    "rows": [
+      {
+        "sample_id": "1",
+        "role": "KNOWN_EXTERNAL",
+        "diagnosis": "hybrid(define+measure)",
+        "pass": true
+      },
+      {
+        "sample_id": "14",
+        "role": "KNOWN_EXTERNAL",
+        "diagnosis": "empirical",
+        "pass": true
+      },
+      {
+        "sample_id": "20",
+        "role": "KNOWN_RESTATEMENT",
+        "diagnosis": "restatement",
+        "pass": true
+      },
+      {
+        "sample_id": "24",
+        "role": "KNOWN_EXTERNAL",
+        "diagnosis": "hybrid(decide+define)",
+        "pass": true
+      },
+      {
+        "sample_id": "25",
+        "role": "UNDER_DECLARATION",
+        "diagnosis": "conceptual",
+        "pass": true
+      },
+      {
+        "sample_id": "27",
+        "role": "KNOWN_RESTATEMENT",
+        "diagnosis": "restatement",
+        "pass": true
+      },
+      {
+        "sample_id": "30",
+        "role": "KNOWN_EXTERNAL",
+        "diagnosis": "conceptual",
+        "pass": true
+      }
+    ],
+    "green": true
   },
   "biotech_triple": {
     "Ω_C (race vs supply-chain frame)": {
@@ -432,13 +479,11 @@
         "measure"
       ],
       "gates": {
-        "measure": "external"
+        "measure": "restate"
       },
-      "externals": [
-        "measure"
-      ],
-      "diagnosis": "empirical",
-      "reason": "single external: measure"
+      "externals": [],
+      "diagnosis": "restatement",
+      "reason": "all signatures internal"
     },
     {
       "sample_id": 21,
@@ -559,15 +604,13 @@
         "measure"
       ],
       "gates": {
-        "decide": "ambiguous",
-        "define": "external",
+        "decide": "restate",
+        "define": "restate",
         "measure": "restate"
       },
-      "externals": [
-        "define"
-      ],
-      "diagnosis": "unknown",
-      "reason": "ambiguous gate on ['decide']"
+      "externals": [],
+      "diagnosis": "restatement",
+      "reason": "all signatures internal"
     },
     {
       "sample_id": 28,
@@ -635,15 +678,14 @@
       ],
       "gates": {
         "decide": "external",
-        "define": "external",
+        "define": "restate",
         "measure": "restate"
       },
       "externals": [
-        "decide",
-        "define"
+        "decide"
       ],
-      "diagnosis": "hybrid(decide+define)",
-      "reason": "2 externals"
+      "diagnosis": "preference",
+      "reason": "single external: decide"
     },
     {
       "sample_id": 32,

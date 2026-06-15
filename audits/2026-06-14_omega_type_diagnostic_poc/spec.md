@@ -84,3 +84,28 @@ There is **NO first-fires-wins ladder.** Report signatures as a SET; the gate cl
   Its `unknown`-rate is the determinism-boundary number — trustworthy only under a two-sided
   commit control (it must commit on a KNOWN-definitional case and refuse on a GENUINELY
   ambiguous case).
+
+## No-op fix (2026-06-14) — the gate MUST consult `declared_fields`
+
+The first run's restatement limb was a **no-op**: it missed both seeded restatements (id20, id27).
+Root cause — **the gate ignored `declared_fields`** and so could never tell a *declared* reading
+from an *open* term. The judge typed id20 (`generate the homoiousios sibling and compare base
+properties / ε`) as Ω_C, reasoning "the alternative reading is the open term" — but `homoiousios`
+is in this constraint's `cs_reading_relation`, so the comparison **re-derives declared fields →
+restatement**. With every signature defaulting to "external," restatement (which requires ALL
+signatures internal) was structurally unreachable.
+
+**The rule, made operative:** for each fired signature, check its target **against the entry's own
+`declared_fields`**. An operation that re-derives the constraint's **authored fields** (ε-invariance;
+comparing authored ε / base properties / beneficiary–victim sets across readings *named in
+`cs_reading_relation`/`cs_kernel_id`*) is **RESTATEMENT**, on whichever signature it fired (define,
+measure, *and* an incidental decide). Treating a *declared* sibling as an "open term" is the no-op;
+a reading or kernel **not** in the declared set is a real external term (→ Ω_C / Ω_E / Ω_P).
+Distinguish from an **open conceptual criterion** over declared readings (does X *foreclose or
+coexist with* Y — the criterion "what foreclose requires" is open → Ω_C), which is *not* restatement.
+
+**Witness:** `deterministic_baseline.py` now wires `declared_fields` through the gate
+(`re_derives_authored`); its runnable `seed_control()` is **GREEN** (KNOWN_RESTATEMENT id20/id27
+caught; KNOWN_EXTERNAL pass; UNDER_DECLARATION routes external; two-sided commit control holds;
+exit 1 on RED). The historical `judge_results.json` records the *pre-fix* judge and is left as the
+POC's as-run artifact; a full judge re-run under this fixed rule would refresh the headline metrics.

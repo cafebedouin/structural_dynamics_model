@@ -100,9 +100,64 @@ EXTERNAL_DECIDE = [
     r"\bequit", r"\bprioritize\b", r"\bvalue judgment\b",
 ]
 
-def gate(sig, qac):
+# ---------------------------------------------------------------------------
+# Authored-field re-derivation = RESTATEMENT (the no-op fix, 2026-06-14).
+# The gate previously defaulted every fired signature to "external" and so could
+# never reach "all internal" -> restatement (it missed both seeded restatements,
+# id20/id27). Root cause: the locus test ignored the entry's `declared_fields`.
+# Restatement's canonical form is an operation that RE-DERIVES the constraint's OWN
+# authored fields (ε / base properties / beneficiary-victim) across its DECLARED
+# readings — distinct from an open conceptual criterion (foreclose/coexist -> Ω_C)
+# or a world-observation (-> Ω_E). This is now detected against declared_fields and
+# applied to BOTH the measure and define signatures.
+REDERIVE_CUES = [
+    r"\bε-invariance\b", r"\bepsilon-invariance\b", r"\binvariance test\b", r"\bre-?deriv",
+    r"\bcompare .{0,90}\b(base propert|authored ε|authored epsilon|extraction coefficient|"
+    r"beneficiary[/ ]?(and )?victim|victim sets?|ε across)\b",
+    r"\bgenerate .{0,110}\b(reading|sibling|parallel constraint|constraint story)\b.{0,110}\bcompare\b",
+    r"\bmeasuring .{0,50}\bone way\b.{0,110}\b(another|other) way\b",
+]
+
+def declared_reading_stems(declared_fields):
+    """Short stems of the constraint's DECLARED readings (from cs_reading_relation +
+    cs_kernel_id), e.g. {'homoiousios_reading','homoiousios','behavioral_competence'}.
+    declared_fields may be a dict or a repr-string; regex the `__<stem>_reading` tokens."""
+    s = str(declared_fields).lower()
+    stems = set()
+    for full in re.findall(r"__([a-z0-9_]+?_reading)\b", s):
+        stems.add(full)
+        stems.add(full[: -len("_reading")])
+    return {x for x in stems if len(x) > 3}
+
+def re_derives_authored(qac, declared_fields):
+    """True iff the resolution re-derives the constraint's OWN authored fields over its
+    DECLARED readings (the restatement form). Non-vacuous in declared_fields: a generic
+    'compare' restates only when it references a declared reading; ε-invariance (DP-001)
+    is inherently over the declared readings, so it qualifies directly."""
+    t = qac.lower()
+    if not any(re.search(c, t) for c in REDERIVE_CUES):
+        return False
+    if re.search(r"\b(ε|epsilon)-invariance\b|\binvariance test\b", t):
+        return True  # DP-001: ε-invariance is by construction over the declared readings
+    stems = declared_reading_stems(declared_fields)
+    return any(stem in t for stem in stems)
+
+def gate(sig, qac, declared):
     """Return 'external' | 'restate' | 'ambiguous' for one fired signature."""
     t = qac.lower()
+    rederive = re_derives_authored(qac, declared)
+    # decide: a GENUINE external decider (value/should/legitimacy cue) routes Ω_P even
+    # when the omega also re-derives fields. Otherwise an *incidental* decide cue (a
+    # passing "stakeholder" mention inside an authored-field re-derivation) is itself
+    # internal -> restate, so it can't fail-close the whole diagnosis to unknown.
+    if sig == "decide":
+        if any(re.search(c, t) for c in EXTERNAL_DECIDE):
+            return "external"
+        return "restate" if rederive else "ambiguous"
+    # measure/define: re-derivation of authored fields over declared readings restates
+    # both signatures alike (restatement is the failure mode of EACH operation).
+    if sig in ("measure", "define") and rederive:
+        return "restate"
     if sig == "measure":
         if any(re.search(c, t) for c in RESTATE_MEASURE):
             return "restate"
@@ -112,20 +167,16 @@ def gate(sig, qac):
         if any(re.search(c, t) for c in RESTATE_DEFINE):
             return "ambiguous"   # fail closed: looks like re-label of enumerated reading
         return "external"
-    if sig == "decide":
-        if any(re.search(c, t) for c in EXTERNAL_DECIDE):
-            return "external"
-        return "ambiguous"       # decide fired weakly; cannot site the decider -> unknown
     return "ambiguous"
 
 SIG_TO_TYPE = {"define": "conceptual", "decide": "preference", "measure": "empirical"}
 
-def diagnose(qac):
+def diagnose(qac, declared=""):
     sigs = fired_signatures(qac)
     if not sigs:
         return {"fired": [], "gates": {}, "externals": [], "diagnosis": "unknown",
                 "reason": "no signature fired"}
-    gates = {s: gate(s, qac) for s in sorted(sigs)}
+    gates = {s: gate(s, qac, declared) for s in sorted(sigs)}
     externals = sorted([s for s, g in gates.items() if g == "external"])
     ambiguous = [s for s, g in gates.items() if g == "ambiguous"]
     # Fail-closed: if any fired signature gate is ambiguous AND it could change the
@@ -157,7 +208,7 @@ def run_sample():
     results = []
     n_unknown = 0
     for r in data:
-        d = diagnose(qac_of(r))
+        d = diagnose(qac_of(r), r.get("declared_fields", ""))
         if d["diagnosis"] == "unknown":
             n_unknown += 1
         results.append({
@@ -212,10 +263,38 @@ def biotech_triple():
     }
     return {k: diagnose(v) for k, v in cases.items()}
 
+# ---- Seed control (the restatement-gate witness, 2026-06-14) ---------------
+#  Two-sided: KNOWN_RESTATEMENT seeds MUST diagnose `restatement` (catch); KNOWN_EXTERNAL
+#  seeds MUST NOT (`external`/typed, never restatement/unknown); UNDER_DECLARATION MUST
+#  route external (a not-declared term is a real frontier, not a re-derivation). This is
+#  the control that was written-and-failing before the declared-field gate fix; it is now
+#  a standing, runnable assertion (exit 1 on RED).
+HELD = os.path.join(HERE, "adjudicator_held_key.json")
+
+def seed_control():
+    held = [h for h in json.load(open(HELD, encoding="utf-8"))["held"]
+            if h.get("control_role", "none") != "none"]
+    by_q = {str(r["sample_id"]): r for r in json.load(open(SAMPLE, encoding="utf-8"))}
+    rows, ok = [], True
+    for h in sorted(held, key=lambda x: int(x["sample_id"])):
+        sid = str(h["sample_id"]); r = by_q.get(sid, {})
+        dd = diagnose(qac_of(r), r.get("declared_fields", ""))["diagnosis"]
+        role = h["control_role"]
+        if role == "KNOWN_RESTATEMENT":
+            good = dd == "restatement"
+        elif role == "KNOWN_EXTERNAL":
+            good = dd not in ("restatement", "unknown")
+        else:  # UNDER_DECLARATION
+            good = dd != "restatement"
+        ok = ok and good
+        rows.append({"sample_id": sid, "role": role, "diagnosis": dd, "pass": good})
+    return rows, ok
+
 if __name__ == "__main__":
     data, results, n_unknown, rate = run_sample()
     under, over = commit_control()
     triple = biotech_triple()
+    seed_rows, seed_ok = seed_control()
 
     payload = {
         "n": len(data),
@@ -223,10 +302,17 @@ if __name__ == "__main__":
         "unknown_rate": round(rate, 4),
         "commit_control": {"under_commit": under, "over_commit": over,
                            "both_pass": under["pass"] and over["pass"]},
+        "seed_control": {"rows": seed_rows, "green": seed_ok},
         "biotech_triple": triple,
         "results": results,
     }
     json.dump(payload, open(OUT, "w"), indent=2, ensure_ascii=False)
+    for r in seed_rows:
+        print(f"  {r['role']:16} id{r['sample_id']:>2} -> {r['diagnosis']:14} "
+              f"{'PASS' if r['pass'] else 'FAIL'}")
+    print(f"SEED CONTROL: {'GREEN' if seed_ok else 'RED'} | "
+          f"commit-control both_pass={under['pass'] and over['pass']} | unknown_rate={rate:.3f}")
+    sys.exit(0 if (seed_ok and under["pass"] and over["pass"]) else 1)
 
     print(f"n={len(data)}  unknown={n_unknown}  unknown_rate={rate:.3f}")
     print("\n-- two-sided commit control --")
