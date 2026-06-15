@@ -1,0 +1,791 @@
+{
+  "n": 40,
+  "unknown_count": 5,
+  "unknown_rate": 0.125,
+  "commit_control": {
+    "under_commit": {
+      "input": "KNOWN-DEFINITIONAL (biotech define)",
+      "result": {
+        "fired": [
+          "define"
+        ],
+        "gates": {
+          "define": "external"
+        },
+        "externals": [
+          "define"
+        ],
+        "diagnosis": "conceptual",
+        "reason": "single external: define"
+      },
+      "expect": "commit to conceptual",
+      "pass": true
+    },
+    "over_commit": {
+      "input": "GENUINELY-AMBIGUOUS (no sitable locus)",
+      "result": {
+        "fired": [],
+        "gates": {},
+        "externals": [],
+        "diagnosis": "unknown",
+        "reason": "no signature fired"
+      },
+      "expect": "unknown (no guess)",
+      "pass": true
+    },
+    "both_pass": true
+  },
+  "biotech_triple": {
+    "Ω_C (race vs supply-chain frame)": {
+      "fired": [
+        "define"
+      ],
+      "gates": {
+        "define": "external"
+      },
+      "externals": [
+        "define"
+      ],
+      "diagnosis": "conceptual",
+      "reason": "single external: define"
+    },
+    "Ω_E (supply-chain %)": {
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    "Ω_P (security vs progress)": {
+      "fired": [
+        "decide"
+      ],
+      "gates": {
+        "decide": "external"
+      },
+      "externals": [
+        "decide"
+      ],
+      "diagnosis": "preference",
+      "reason": "single external: decide"
+    }
+  },
+  "results": [
+    {
+      "sample_id": 0,
+      "name": "reading_committer_ambiguity",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "define",
+        "measure"
+      ],
+      "gates": {
+        "define": "external",
+        "measure": "external"
+      },
+      "externals": [
+        "define",
+        "measure"
+      ],
+      "diagnosis": "hybrid(define+measure)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 1,
+      "name": "medical_materiality_of_sex",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "define",
+        "measure"
+      ],
+      "gates": {
+        "define": "external",
+        "measure": "external"
+      },
+      "externals": [
+        "define",
+        "measure"
+      ],
+      "diagnosis": "hybrid(define+measure)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 2,
+      "name": "domain_partition_coherence",
+      "authored_type": "conceptual",
+      "is_family": false,
+      "fired": [],
+      "gates": {},
+      "externals": [],
+      "diagnosis": "unknown",
+      "reason": "no signature fired"
+    },
+    {
+      "sample_id": 3,
+      "name": "plural_wives_excluded_voice",
+      "authored_type": "preference",
+      "is_family": false,
+      "fired": [
+        "decide",
+        "measure"
+      ],
+      "gates": {
+        "decide": "external",
+        "measure": "external"
+      },
+      "externals": [
+        "decide",
+        "measure"
+      ],
+      "diagnosis": "hybrid(decide+measure)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 4,
+      "name": "textual_ambiguity_vs_institutional_choice",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 5,
+      "name": "alternative_security_arrangements",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 6,
+      "name": "suppression_mechanism_internalized",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "decide",
+        "measure"
+      ],
+      "gates": {
+        "decide": "external",
+        "measure": "external"
+      },
+      "externals": [
+        "decide",
+        "measure"
+      ],
+      "diagnosis": "hybrid(decide+measure)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 7,
+      "name": "kernel_reading_alternative_framing",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [],
+      "gates": {},
+      "externals": [],
+      "diagnosis": "unknown",
+      "reason": "no signature fired"
+    },
+    {
+      "sample_id": 8,
+      "name": "women_voice_absent",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 9,
+      "name": "committer_frame__biomedical_vs_critical_foreclosure",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "define",
+        "measure"
+      ],
+      "gates": {
+        "define": "external",
+        "measure": "external"
+      },
+      "externals": [
+        "define",
+        "measure"
+      ],
+      "diagnosis": "hybrid(define+measure)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 10,
+      "name": "kernel_reading_foreclosure",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "define"
+      ],
+      "gates": {
+        "define": "external"
+      },
+      "externals": [
+        "define"
+      ],
+      "diagnosis": "conceptual",
+      "reason": "single external: define"
+    },
+    {
+      "sample_id": 11,
+      "name": "kernel_reading_foreclosure_test",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "define"
+      ],
+      "gates": {
+        "define": "external"
+      },
+      "externals": [
+        "define"
+      ],
+      "diagnosis": "conceptual",
+      "reason": "single external: define"
+    },
+    {
+      "sample_id": 12,
+      "name": "institutional_identity_lock_depth",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 13,
+      "name": "natural_change_vs_corruption_framing",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 14,
+      "name": "technological_carbon_removal_feasibility",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 15,
+      "name": "victim_vindication_mechanism",
+      "authored_type": "preference",
+      "is_family": false,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 16,
+      "name": "bodily_autonomy_categorical_vs_prima_facie",
+      "authored_type": "conceptual",
+      "is_family": false,
+      "fired": [
+        "decide",
+        "define"
+      ],
+      "gates": {
+        "decide": "external",
+        "define": "external"
+      },
+      "externals": [
+        "decide",
+        "define"
+      ],
+      "diagnosis": "hybrid(decide+define)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 17,
+      "name": "kernel_reading_plurality",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "decide",
+        "define"
+      ],
+      "gates": {
+        "decide": "external",
+        "define": "external"
+      },
+      "externals": [
+        "decide",
+        "define"
+      ],
+      "diagnosis": "hybrid(decide+define)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 18,
+      "name": "founding_problem_as_cover_story",
+      "authored_type": "conceptual",
+      "is_family": false,
+      "fired": [],
+      "gates": {},
+      "externals": [],
+      "diagnosis": "unknown",
+      "reason": "no signature fired"
+    },
+    {
+      "sample_id": 19,
+      "name": "kernel_reading_contest",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "define",
+        "measure"
+      ],
+      "gates": {
+        "define": "external",
+        "measure": "external"
+      },
+      "externals": [
+        "define",
+        "measure"
+      ],
+      "diagnosis": "hybrid(define+measure)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 20,
+      "name": "kernel_reading_alternative_framing",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 21,
+      "name": "reading_boundary_vs_sibling_readings",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "decide",
+        "define",
+        "measure"
+      ],
+      "gates": {
+        "decide": "external",
+        "define": "external",
+        "measure": "external"
+      },
+      "externals": [
+        "decide",
+        "define",
+        "measure"
+      ],
+      "diagnosis": "hybrid(decide+define+measure)",
+      "reason": "3 externals"
+    },
+    {
+      "sample_id": 22,
+      "name": "exorbitant_privilege_necessity",
+      "authored_type": "conceptual",
+      "is_family": false,
+      "fired": [],
+      "gates": {},
+      "externals": [],
+      "diagnosis": "unknown",
+      "reason": "no signature fired"
+    },
+    {
+      "sample_id": 23,
+      "name": "alternative_governance_counterfactual",
+      "authored_type": "conceptual",
+      "is_family": false,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 24,
+      "name": "committer_structure__liturgical_vs_native_reading_contest",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "decide",
+        "define"
+      ],
+      "gates": {
+        "decide": "external",
+        "define": "external"
+      },
+      "externals": [
+        "decide",
+        "define"
+      ],
+      "diagnosis": "hybrid(decide+define)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 25,
+      "name": "kernel_reading_underdetermination",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "define"
+      ],
+      "gates": {
+        "define": "external"
+      },
+      "externals": [
+        "define"
+      ],
+      "diagnosis": "conceptual",
+      "reason": "single external: define"
+    },
+    {
+      "sample_id": 26,
+      "name": "succession_fragility",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "decide",
+        "measure"
+      ],
+      "gates": {
+        "decide": "external",
+        "measure": "external"
+      },
+      "externals": [
+        "decide",
+        "measure"
+      ],
+      "diagnosis": "hybrid(decide+measure)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 27,
+      "name": "kernel_reading_distinction",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "decide",
+        "define",
+        "measure"
+      ],
+      "gates": {
+        "decide": "ambiguous",
+        "define": "external",
+        "measure": "restate"
+      },
+      "externals": [
+        "define"
+      ],
+      "diagnosis": "unknown",
+      "reason": "ambiguous gate on ['decide']"
+    },
+    {
+      "sample_id": 28,
+      "name": "reading_committer_frame_dependence",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "define",
+        "measure"
+      ],
+      "gates": {
+        "define": "external",
+        "measure": "external"
+      },
+      "externals": [
+        "define",
+        "measure"
+      ],
+      "diagnosis": "hybrid(define+measure)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 29,
+      "name": "founding_problem_obsolescence",
+      "authored_type": "conceptual",
+      "is_family": false,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 30,
+      "name": "martens_clause_scope",
+      "authored_type": "conceptual",
+      "is_family": false,
+      "fired": [
+        "define"
+      ],
+      "gates": {
+        "define": "external"
+      },
+      "externals": [
+        "define"
+      ],
+      "diagnosis": "conceptual",
+      "reason": "single external: define"
+    },
+    {
+      "sample_id": 31,
+      "name": "kernel_reading_alternative_framing",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "decide",
+        "define",
+        "measure"
+      ],
+      "gates": {
+        "decide": "external",
+        "define": "external",
+        "measure": "restate"
+      },
+      "externals": [
+        "decide",
+        "define"
+      ],
+      "diagnosis": "hybrid(decide+define)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 32,
+      "name": "exclusivity_vs_pluralism_in_the_reading",
+      "authored_type": "conceptual",
+      "is_family": false,
+      "fired": [
+        "decide",
+        "define"
+      ],
+      "gates": {
+        "decide": "external",
+        "define": "external"
+      },
+      "externals": [
+        "decide",
+        "define"
+      ],
+      "diagnosis": "hybrid(decide+define)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 33,
+      "name": "global_south_development_path_constraint",
+      "authored_type": "preference",
+      "is_family": false,
+      "fired": [
+        "decide"
+      ],
+      "gates": {
+        "decide": "external"
+      },
+      "externals": [
+        "decide"
+      ],
+      "diagnosis": "preference",
+      "reason": "single external: decide"
+    },
+    {
+      "sample_id": 34,
+      "name": "suppression_mechanism_internalized_vs_structural",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 35,
+      "name": "rights_boundary_expansion",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "define"
+      ],
+      "gates": {
+        "define": "external"
+      },
+      "externals": [
+        "define"
+      ],
+      "diagnosis": "conceptual",
+      "reason": "single external: define"
+    },
+    {
+      "sample_id": 36,
+      "name": "suppression_mechanism_internalized_structural",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 37,
+      "name": "beneficiary_consciousness_authenticity",
+      "authored_type": "empirical",
+      "is_family": false,
+      "fired": [
+        "measure"
+      ],
+      "gates": {
+        "measure": "external"
+      },
+      "externals": [
+        "measure"
+      ],
+      "diagnosis": "empirical",
+      "reason": "single external: measure"
+    },
+    {
+      "sample_id": 38,
+      "name": "kernel_reading_contest",
+      "authored_type": "conceptual",
+      "is_family": true,
+      "fired": [
+        "decide",
+        "define"
+      ],
+      "gates": {
+        "decide": "external",
+        "define": "external"
+      },
+      "externals": [
+        "decide",
+        "define"
+      ],
+      "diagnosis": "hybrid(decide+define)",
+      "reason": "2 externals"
+    },
+    {
+      "sample_id": 39,
+      "name": "priority_as_ontological_marker_vs_historical_fact",
+      "authored_type": "preference",
+      "is_family": false,
+      "fired": [
+        "define"
+      ],
+      "gates": {
+        "define": "external"
+      },
+      "externals": [
+        "define"
+      ],
+      "diagnosis": "conceptual",
+      "reason": "single external: define"
+    }
+  ]
+}

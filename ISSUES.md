@@ -6620,7 +6620,38 @@ a ruling.** Forward step (OQ-130 child, NOT a generator gate): (1) *uncontested*
 kernel-contest family Ω_P; (2) *settle first* — **local frontier vs template stamp** before any
 generation change. Push pre-condition (not §8-class) holds regardless.
 
-**Deps:** (soundness-spot-check discharged 2026-06-14 — POC ran, ≈77% sound external-adjudicated / 80% executor, not §8-class)
+**Ω-type diagnostic POC addendum (2026-06-14, separate-instance cross-read —
+`audits/2026-06-14_omega_type_diagnostic_poc/`).** Ported `debugging_philosophy.md` §6.1 ("the fix
+that works reveals the type") to Ω-vars: type each omega by **which resolution operation discharges
+it** (define→Ω_C / decide→Ω_P / measure→Ω_E, external-at-own-locus else **restatement**). Adjudicator
+sealed a 14-omega held key (`94c7346e`, BEFORE the blind executor ran), anchored to the substrate
+question not §6.1. **The settle-first ruling above is now answered, and step (1) is REFUTED: the
+kernel_reading/committer family does NOT retype uniformly Ω_P — it SPLITS per-omega by mechanism**:
+Ω_C (genuine criterion frontiers), **Ω_P** (committer-position frontiers, e.g.
+`reading_committer_frame_dependence` — the Seat-Theorem Cor-2b case, real-and-mistyped), **Ω_E**
+(observable suppression, e.g. the Hanafi `kernel_reading_contest`), **restatement** (generate-and-
+compare artifact, e.g. the Nicene `kernel_reading_alternative_framing`). Two omegas named
+`kernel_reading_contest` discharge differently (Ω_P+Ω_E vs Ω_E) ⇒ **mechanism ≠ name; any name-keyed
+retype is unsound.** Cross-instance: 9/14 held agree, 5/14 the adjudicator types differently — **all 5
+in the family**, because the executor's LLM-judge **collapsed decide/measure into define and re-stamped
+the authored `conceptual` label** (so its 82.5% agree-with-authored is inflated on the family;
+adjudicated ≈72.5%, mislabeling moved UP under independence). Self-label unreliable **both directions**
+(conceptual→empirical off-family too: cover-story/historical-necessity/counterfactual omegas) ⇒
+**diagnostic is load-bearing.** Two-sided gate control **fired**: executor's restatement limb MISSED
+both seeded restatements (false-neg) ⇒ `restatement-rate=0` is partly gate-no-op (Pattern 5/6), not
+measured-empty — **sharpen the restatement gate before any corpus-wide restatement count.** "Ω_E is a
+status" **HOLDS** (1/14 falsifier, rare, directional). Deterministic baseline `unknown`=12.5% but
+agrees with judge only 47.5% ⇒ true determinism boundary ≈53% (commits-wrong 40%) — typing needs
+judgment at the omega layer. **Forward (per-omega retype + gate-sharpen) folded into OPEN below;
+ESCALATED to operator** (genuine framework calls, not adjudicable from evidence): (i) the **decider-
+locus vs define-dominant cut** — the whole family split rides it, and two instances split on it; (ii)
+the **ε-invariance define-vs-restatement** call (the `kernel_reading_distinction` subfamily, contested,
+not ruled); (iii) whether confirmed Ω_E-as-status **edits `omega_variables.md`** (an Ω_E status-line);
+(iv) wiring **diagnose-then-stamp into the generator** is a deferred generator change gated on (i).
+
+**Deps:** (soundness-spot-check discharged 2026-06-14 — POC ran, ≈77% sound external-adjudicated / 80%
+executor, not §8-class. Ω-type diagnostic POC discharged 2026-06-14 — family splits per-omega, wholesale-
+Ω_P-retype refuted, self-label load-bearing-to-fix; 4 operator escalations open above.)
 
 ---
 
