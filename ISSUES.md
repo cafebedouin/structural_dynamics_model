@@ -6790,7 +6790,7 @@ not a build-blocker. The historical `judge_results.json` is kept as the POC's as
   determinism boundary is the seat, and the seat is irreducibly declared, never computed. Family retypes
   per-omega **under this declared seat, revisable** if the seat is ever re-declared.
 
-**Deps:** (soundness-spot-check discharged 2026-06-14 — POC ran, ≈77% sound external-adjudicated / 80%
+**Discharge:** (soundness-spot-check discharged 2026-06-14 — POC ran, ≈77% sound external-adjudicated / 80%
 executor, not §8-class. Ω-type diagnostic POC discharged 2026-06-14 — family splits per-omega, wholesale-
 Ω_P-retype refuted, self-label load-bearing-to-fix; 4 operator escalations open above.)
 
