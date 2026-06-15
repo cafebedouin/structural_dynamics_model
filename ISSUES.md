@@ -6682,6 +6682,14 @@ not ruled); (iii) whether confirmed Ω_E-as-status **edits `omega_variables.md`*
   from resolution text + **both** locus rules stated neutrally, **without** the held key; ratify only on two
   independent reads. (Decider-locus is probably right — the resolution text does say *values decide* — but
   "evidence-supported by independent read-back" overstated it by one full instance.)
+  **Second blind read DONE (2026-06-14, `…/second_blind_read.md`): define-dominant REJECTED on two
+  independent reads.** Fresh instance, define-dominant a live neutral option, no held key — typed NONE of the
+  5 as Ω_C: id19 Ω_P, 27/31 restatement, 38 Ω_E, 28 Ω_E(Ω_P-shadow); **3/3 exact** with the hand key on the
+  overlap, id28 a fine Ω_E-vs-Ω_P split (both agree the decider is external/committer). It **sharpens** the
+  cut: rule = **"type by the named resolution operation, not option-locus"** (decider-locus→Ω_P is the special
+  case; Ω_E where the operation is a world-observation; ε-invariance 27/31 = restatement under both rules).
+  **#1 ratifiable on two independent reads — operator's signature is the only remaining step;** on signing,
+  the rule lands as *operation-locus* and the family retypes per-omega (Ω_P/Ω_E/restatement, NOT wholesale).
 
 **Deps:** (soundness-spot-check discharged 2026-06-14 — POC ran, ≈77% sound external-adjudicated / 80%
 executor, not §8-class. Ω-type diagnostic POC discharged 2026-06-14 — family splits per-omega, wholesale-
