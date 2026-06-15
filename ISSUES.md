@@ -6796,9 +6796,59 @@ not a build-blocker. The historical `judge_results.json` is kept as the POC's as
 executor, not §8-class. Ω-type diagnostic POC discharged 2026-06-14 — family splits per-omega, wholesale-
 Ω_P-retype refuted, self-label load-bearing-to-fix; 4 operator escalations open above.)
 
+## OQ-131 — Six observer positions vs four: what a 6-point observer site does to the cohomology, and whether a future corpus should adopt it
+
+**Ω-type:** Ω_C (design choice — whether a future corpus widens the observer fingerprint to 6
+positions) with an Ω_E measurement arm (what the widening does to H⁰/H¹ on the existing corpus).
+
+**Status:** future — operator ruling 2026-06-15: a real question worth recording, not slated for
+work now; closed `future` (searchable, full-bodied, revive if a future corpus is built). Arose
+from OQ-108's witness-coverage finding (the 6-vs-4 split below).
+
+**The setup (from OQ-108).** Authoring uses the **6-atom power vocabulary** (powerless, moderate,
+powerful, organized, institutional, analytical; `docs/logic.md:293`), but the observer fingerprint
+is a **discrete 4-point site**: `logical_fingerprint:fingerprint_shift/2` probes only the four
+power atoms that have a `standard_context_for_power/2` (powerless/moderate/institutional/
+analytical). `powerful` and `organized` carry π (`config.pl:57-62`) and canonical-d
+(`:142-143`) but have **no standard observer context**, so they never appear as a perspective
+column or a site point. The cohomology rests on that 4-point cover: `grothendieck_cohomology.pl:10,17`
+defines U = {U₁..U₄}; **H¹ = count of disagreeing context-pairs across the observer site**
+(`:115`); the hub-conflict trigger fires at H¹ ≥ 4 (`abductive_hub_conflict_h1_threshold`,
+`abductive_triggers.pl:816-820`); the Python proxy `compute_h1` is distinct-types / total-
+perspectives over the 4 (`python/boolean_independence.py:370`).
+
+**Q1 (Ω_E — measurable NOW, no new corpus).** Give `powerful` and `organized` standard contexts →
+a **6-point site**. H¹ (disagreeing pairs) now ranges over C(6,2)=15 pairs vs C(4,2)=6; the
+`shift/4` fingerprint becomes a 6-tuple, re-identifying orbits and H⁰ (singleton-orbit count)
+corpus-wide; the h1_band thresholds (hub_conflict ≥4) need recalibration against the larger pair
+space; the subobject-classifier picture (currently trivially Boolean on the 4-point discrete site)
+changes. The mechanism already exists: `constraint_indexing:site_contexts/1` defaults to the 4
+canonical contexts and is switchable (it is how the product site is selected — `grothendieck_-
+cohomology.pl:111-113`), and the engine can already classify the existing constraints at
+powerful/organized seats (π and canonical-d exist). So this arm is a **cheap pre-registered probe
+on the current corpus** if ever revived: add the 2 contexts, switch `site_contexts/1`, recompute
+H⁰/H¹, diff the bands — pre-register what a band shift vs no-shift would mean before running.
+
+**Q2 (Ω_C — the genuinely deferred part).** Should a *future* corpus adopt 6 observer positions —
+aligning the observer axis with the 6-atom authoring axis (so witness coverage and fingerprint
+share a vocabulary)? Trade-off: finer observer resolution and a witness/observer axis that lines
+up, against recalibrating every H¹-keyed threshold, re-identifying all fingerprints/orbits, and
+losing comparability with the current 4-position corpus. Generation is the determinism frontier
+(CLAUDE.md Critical Distinctions): a 6-position corpus is a NEW corpus, not a re-measurement of
+this one, so Q2 cannot be answered by back-fitting — it is a build-the-corpus decision.
+
+**What resolution would change.** `standard_context_for_power/2` gains 2 clauses (powerful,
+organized context bundles); `site_contexts/1` enumerates 6; `fingerprint_shift/2` becomes 6-wide;
+`config:abductive_hub_conflict_h1_threshold` and the h1_band cuts recalibrate; downstream: orbit
+identity, MaxEnt over the type vector, the abductive hub_conflict gate. Cross-refs: OQ-108 (the
+witness-coverage feature and the 4-vs-6 finding), OQ-107 (`future`, sibling deferral), the
+subobject-classifier audit (4-point discrete site is trivially Boolean; non-linear/larger site is
+the open question), `constraint_indexing:site_contexts_product/1` (the existing site-switch
+precedent and its scope-exclusion calibration).
+
 ---
 
-*Last updated: 2026-06-14. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-06-15. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
