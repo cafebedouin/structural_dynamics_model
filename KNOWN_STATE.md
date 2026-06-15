@@ -45,6 +45,37 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-15 — OQ-131 Q1 (Ω_E) measured: 6-vs-4 observer site is consonant-suppressing, NOT a combinatorial artifact
+**Files:** prolog/constraint_indexing.pl, prolog/config.pl, prolog/config_schema.pl, prolog/config_validation.pl, python/audits/oq131_six_observer_probe.py, audits/2026-06-15_oq131_six_observer/, ISSUES.md
+**Tier:** landed
+
+Added three **additive** observer site modes to `constraint_indexing:site_contexts_for_mode/2`
+(commit `a06b5c7f`): `canonical_6` (canonical 4 + powerful/organized seats), `power_only_4`,
+`power_only_6`. First-arg indexed, **no catch-all**, so `canonical`/`product` resolve byte-for-byte
+as before. New seats are appended AFTER the canonical four ⇒ the 6 canonical observer-pairs stay
+positional and the entire 4→6 H¹ delta is the 9 new pairs. **Tripwire:** the canonical-first
+ordering is load-bearing — it is what makes the `(H¹₆−H¹₄)/9` headline conditioning valid and was
+witnessed (9-pair basis PASS for every constraint, all three corpora). Don't reorder.
+
+Seat bundles are **declared-revisable** `config.pl` params (`observer_bundle_powerful` =
+logic.md:530 elite perspective; `observer_bundle_organized` revisable; `observer_baseline_tes` =
+moderate canonical coords for the single-coordinate control). These are **compound** terms — I added
+a `type_ok(compound, V)` clause to `config_validation.pl` and `compound` to the `config_schema.pl`
+type vocabulary + three `param_spec`s; **every config param needs a schema spec or `[stack]` halts
+at load** (witnessed: 3 "no schema spec" errors before I registered them).
+
+**Finding (`audits/2026-06-15_oq131_six_observer/`, pre-registered):** observed `(H¹₆−H¹₄)/9` falls
+BELOW the permutation band (N=1000, seed=20260615) on live (0.446 vs [0.741,0.825]), haiku (0.562 vs
+[0.738,0.755]), flash (0.550 vs [0.754,0.775]) → **consonant-suppressing**; the new seats echo the
+canonical four more than chance (`echoes_both` 82/69/62%). The combinatorial artifact is FALSIFIED.
+Power-atom-driven (power_only ≈ headline), bundle-robust within the sweep envelope; twin model gap
+0.012 on the 873 non-grid matched stratum (grid census 87/0). Exchangeability gate PASS (dr_type pure
+fn of C). ISSUES.md OQ-131 stays `future` (Q2/Ω_C corpus-adoption deferred); Q1/Ω_E folded in.
+**Scope walls:** H⁰/H¹ only (subobject-classifier on a larger site stays OPEN); finding is
+seat-bundle-dependent, not "the 6-point cohomology of this corpus."
+
+---
+
 ## 2026-06-15 — OQ-108 resolved: per-position witness coverage shipped; OQ-107 closed `future`; new `future` status token
 **Files:** prolog/stakeholder_seats.pl, prolog/json_report.pl, python/tensions_ledger.py, python/issues_status.py, ISSUES.md
 **Tier:** landed

@@ -6803,7 +6803,10 @@ positions) with an Ω_E measurement arm (what the widening does to H⁰/H¹ on t
 
 **Status:** future — operator ruling 2026-06-15: a real question worth recording, not slated for
 work now; closed `future` (searchable, full-bodied, revive if a future corpus is built). Arose
-from OQ-108's witness-coverage finding (the 6-vs-4 split below).
+from OQ-108's witness-coverage finding (the 6-vs-4 split below). **Q1 (Ω_E) MEASURED 2026-06-15**
+(operator confirmed arm (a)): consonant-suppressing on live + both twins, see the Q1-measured
+block below and `audits/2026-06-15_oq131_six_observer/`. Entry **stays `future`** because **Q2
+(Ω_C corpus-adoption) is the deferred part** — the Ω_E arm is resolved, the Ω_C arm is not.
 
 **The setup (from OQ-108).** Authoring uses the **6-atom power vocabulary** (powerless, moderate,
 powerful, organized, institutional, analytical; `docs/logic.md:293`), but the observer fingerprint
@@ -6828,6 +6831,39 @@ cohomology.pl:111-113`), and the engine can already classify the existing constr
 powerful/organized seats (π and canonical-d exist). So this arm is a **cheap pre-registered probe
 on the current corpus** if ever revived: add the 2 contexts, switch `site_contexts/1`, recompute
 H⁰/H¹, diff the bands — pre-register what a band shift vs no-shift would mean before running.
+
+**Q1 — MEASURED 2026-06-15 (Ω_E arm RESOLVED; `audits/2026-06-15_oq131_six_observer/`).** Ran the
+pre-registered probe across the live corpus + both committed twins (`testsets_haiku`,
+`testsets_flash`, 960 each, fixed substrate ⇒ deterministic) under additive six-observer site
+modes `canonical_6` / `power_only_4` / `power_only_6` (engine commit `a06b5c7f`; new
+`site_contexts_for_mode/2` clauses, first-arg indexed, no catch-all; default `canonical` witnessed
+unperturbed; new seats appended AFTER the canonical four so the 6 canonical pairs stay positional).
+Headline = mean over constraints of **(H¹₆−H¹₄)/9** (the 9 = C(6,2)−C(4,2) movable new pairs,
+conditioned on the fixed 4-seat config; **9-pair basis PASS for every constraint** — the byte-
+identity is witnessed, not assumed). Gates all PASS: zero len-6 fallbacks, exchangeability gate
+PASS (re-run orbit-identical ⇒ `dr_type` pure fn of C ⇒ permutation valid), seat-marginal entropy
+non-degenerate, liveness PASS.
+
+**Finding (all three corpora, same sign): observed (H¹₆−H¹₄)/9 falls BELOW the pre-registered
+permutation band → `consonant_suppressing`.** live 0.446 vs [0.741, 0.825]; haiku 0.562 vs
+[0.738, 0.755]; flash 0.550 vs [0.754, 0.775] (N=1000, seed=20260615). Widening 4→6 does **not**
+manufacture disagreement — the new `powerful`/`organized` seats echo the canonical four **more than
+chance** (`echoes_both` 82/69/62%; `echoes_both + new_type_either == n` exactly). The combinatorial
+artifact (mechanical H¹ inflation from more pairs) is **FALSIFIED** — it would have read within/above
+band. Co-outputs: orbit splits 10/293/367; H⁰ singletons can only drop (haiku 139→117, the
+comparability-with-the-4-position-corpus boundary). The effect is **power-atom-driven, not bundle-
+driven** (`power_only` control ≈ realistic headline) and **bundle-robust within the §3 sweep
+envelope** (every per-seat ladder point still below band; highest 0.62 on flash, still < 0.754).
+Twin model gap **0.012** on the **873 non-grid matched stratum** (basename key; grid census 87/0
+reproduces the plan exactly) ⇒ composition, not model. Full writeup + raw cells + `analysis.json`:
+`audits/2026-06-15_oq131_six_observer/FINDINGS.md`.
+
+**Two scope walls on this Q1 result (no silent narrowing):** (i) **H⁰/H¹ ONLY** — the subobject-
+classifier / topos-structure effects this entry records on a larger site remain **OUT OF SCOPE and
+OPEN**; (ii) the result is **"at these declared seat-bundles, within this sensitivity envelope,"
+NOT "the 6-point cohomology of this corpus"** — the sweep *bounds* robustness, it does not make the
+finding bundle-independent, and does not eliminate the seat-bundle as a parameter. This measures
+*this* corpus under a wider probe, **not** a forecast of a natively-6-authored corpus (that is Q2).
 
 **Q2 (Ω_C — the genuinely deferred part).** Should a *future* corpus adopt 6 observer positions —
 aligning the observer axis with the 6-atom authoring axis (so witness coverage and fingerprint
