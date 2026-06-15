@@ -104,6 +104,7 @@ config_violation(Msg) :-
 type_ok(number, V)  :- number(V).
 type_ok(integer, V) :- integer(V).
 type_ok(atom, V)    :- atom(V).
+type_ok(compound, V) :- compound(V).
 
 % ============================================================
 % 4. Constraint violation

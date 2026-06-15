@@ -982,6 +982,45 @@ site_contexts_for_mode(canonical, Contexts) :-
 site_contexts_for_mode(product, Contexts) :-
     site_contexts_product(Contexts).
 
+% --- OQ-131 six-observer probe modes (additive; default canonical unperturbed) ---
+%  These clauses are first-argument indexed on the mode atom and carry NO
+%  catch-all, so the canonical/product branches above resolve byte-for-byte as
+%  before (the default-invariance claim is then witnessed by a control run, not
+%  assumed). Each six-point mode appends the new seats AFTER the canonical four,
+%  so the 6 canonical observer-pairs are positionally identical to the 4-seat
+%  mode and the entire 4->6 H1 delta lives in the 9 new pairs (= C(6,2)-C(4,2)).
+%  The seat bundles are declared-revisable config params (config.pl), so a
+%  per-seat sensitivity sweep overlays them without touching this clause.
+
+%% site_contexts_for_mode(canonical_6, -Contexts)
+%  The 4 canonical contexts, THEN the powerful and organized observer seats
+%  built from observer_bundle_powerful / observer_bundle_organized = bundle(T,E,S).
+site_contexts_for_mode(canonical_6, Contexts) :-
+    site_contexts_canonical(Canon4),
+    config:param(observer_bundle_powerful, bundle(TP, EP, SP)),
+    config:param(observer_bundle_organized, bundle(TO, EO, SO)),
+    append(Canon4,
+        [ context(agent_power(powerful),  time_horizon(TP), exit_options(EP), spatial_scope(SP)),
+          context(agent_power(organized), time_horizon(TO), exit_options(EO), spatial_scope(SO)) ],
+        Contexts).
+
+%% site_contexts_for_mode(power_only_4, -Contexts)
+%% site_contexts_for_mode(power_only_6, -Contexts)
+%  Single-coordinate control: every seat shares one fixed observer_baseline_tes
+%  = bundle(T,E,S), so the only thing that widens 4->6 is the power vocabulary
+%  (powerful/organized appended LAST, keeping the 4-seat sub-vector positional).
+%  Isolates pure power-vocabulary widening from bundle-coordinate choice.
+site_contexts_for_mode(power_only_4, Contexts) :-
+    config:param(observer_baseline_tes, bundle(T, E, S)),
+    findall(context(agent_power(P), time_horizon(T), exit_options(E), spatial_scope(S)),
+            member(P, [powerless, moderate, institutional, analytical]),
+            Contexts).
+site_contexts_for_mode(power_only_6, Contexts) :-
+    config:param(observer_baseline_tes, bundle(T, E, S)),
+    findall(context(agent_power(P), time_horizon(T), exit_options(E), spatial_scope(S)),
+            member(P, [powerless, moderate, institutional, analytical, powerful, organized]),
+            Contexts).
+
 %% site_contexts_canonical(-Contexts) is det.
 %  The 4 canonical observer contexts. This predicate never changes.
 site_contexts_canonical([

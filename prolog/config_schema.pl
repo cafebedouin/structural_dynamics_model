@@ -8,7 +8,7 @@
    ================================================================
 
    param_spec(+Name, +Type, +Constraint, +Description)
-     Type:       number | integer | atom
+     Type:       number | integer | atom | compound
      Constraint: range(Lo, Hi) | positive | non_positive | oneof(List) | any
 
    param_relationship(+Name, +ViolationGoal, +Description)
@@ -389,7 +389,12 @@ param_spec(trajectory_coupling_band_width,      number,  range(0.0, 1.0), "Coupl
 % ============================================================
 
 param_spec(cohomology_enabled, integer, oneof([0, 1]), "0=disabled, 1=enabled").
-param_spec(site_mode, atom, oneof([canonical, product]), "canonical=4-context site (default); product=156-point curated site").
+param_spec(site_mode, atom, oneof([canonical, product, canonical_6, power_only_4, power_only_6]), "canonical=4-context site (default); product=156-point curated site; canonical_6/power_only_* = OQ-131 six-observer probe sites").
+%% OQ-131 six-observer probe seat bundles — bundle(TimeHorizon, ExitOptions, SpatialScope);
+%% declared-revisable, read only by the canonical_6 / power_only_* site modes.
+param_spec(observer_bundle_powerful,  compound, any, "OQ-131: powerful observer seat T/E/S bundle (elite perspective, logic.md:530)").
+param_spec(observer_bundle_organized, compound, any, "OQ-131: organized observer seat T/E/S bundle (collective seat, revisable)").
+param_spec(observer_baseline_tes,     compound, any, "OQ-131: fixed T/E/S baseline for the power_only_* single-coordinate control").
 
 
 /* ================================================================

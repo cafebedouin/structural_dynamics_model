@@ -593,6 +593,18 @@ param(cohomology_enabled,                  1).       % Graduated Phase 7-T1: com
 %% Use 'canonical' for routine classification and sheaf_status checks.
 param(site_mode, canonical).
 
+%% OQ-131 six-observer probe seats (declared-revisable; read only by the
+%% canonical_6 / power_only_* site modes — inert at the default site_mode).
+%% bundle(TimeHorizon, ExitOptions, SpatialScope); the power atom is the seat.
+%%   observer_bundle_powerful : the "elite perspective" of docs/logic.md:530
+%%     (powerful, generational, mobile, global).
+%%   observer_bundle_organized: reasoned collective seat — REVISABLE, no doc anchor.
+%%   observer_baseline_tes    : moderate's canonical coordinates, held fixed across
+%%     all power atoms for the single-coordinate power_only_* control.
+param(observer_bundle_powerful,  bundle(generational, mobile, global)).
+param(observer_bundle_organized, bundle(generational, constrained, national)).
+param(observer_baseline_tes,     bundle(biographical, mobile, national)).
+
 /* ================================================================
    ENABLE-FLAG SEMANTICS
    ================================================================
