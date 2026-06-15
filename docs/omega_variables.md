@@ -27,6 +27,20 @@ Omega Variables come in three forms, each requiring different resolution strateg
 **Resolution:** Measurement, experiment, or calculation  
 **Example:** Does treatment A produce clinically meaningful improvement in population B?
 
+**Status, not defect-kind — a declared reading (cafebedouin, 2026-06-14; operation-locus seat, `ISSUES.md` OQ-130 #1).**
+I read Ω_E as the type assigned when an omega's **named resolution operation is an external world-observation** — the
+frontier awaits input not yet gathered. That makes Ω_E a **status** (awaits-external-input), distinct from Ω_C (named
+resolution = specify a definition/framework) and Ω_P (named resolution = a value-decision by those bearing the cost),
+whose operations are acts of declaration available now rather than a gathering of fact. I type by the *named operation*,
+not by any property of the question itself — that is what makes this seat-explicit.
+- *Evidence (directional, not a census):* an over-sampled stratum of N=24 authored-Ω_E omegas found ~22–23 resolving by
+  genuine world-observation (ethnography / longitudinal / historical-textual / survey), none by an internal engine
+  metric. N=24, one stratum (±~18pp) — directional support for the status reading, not a measured property of the corpus.
+- *Boundary:* "world-observation" excludes computing or comparing a framework **routing** value (ε, π, purity — see
+  `metrics_as_routing.md`); re-deriving a routed value the constraint already carries is *restatement*, not Ω_E.
+- *Seat:* this is read under the operation-locus seat — a declared governance stand, not a property of the questions
+  themselves. A differently-declared seat may read it otherwise; revisable with the seat.
+
 ### Ω_C: Conceptual Dependencies  
 **Structure:** Ambiguous terms that admit multiple coherent interpretations  
 **Block:** "We're comparing apples and oranges without realizing it"  

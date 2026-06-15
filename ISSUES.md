@@ -6664,7 +6664,12 @@ not ruled); (iii) whether confirmed Ω_E-as-status **edits `omega_variables.md`*
   false-precision %). All resolve by genuine world-observation (ethnography / longitudinal / historical-textual
   / survey), **none by engine-metric**; falsifier ~1–2/24 (`documentation_sufficiency` = define-a-standard).
   The omega_variables.md status-line edit is now **supported but still a framework-doc change** — operator's
-  design call, **revisit after #1 is ruled** ("supported" ≠ "do it").
+  design call, **revisit after #1 is ruled** ("supported" ≠ "do it"). **#3 LANDED 2026-06-14** (operator
+  approved): `omega_variables.md` Ω_E block now carries a first-person **declared-reading** status-line —
+  Ω_E = type assigned when the *named resolution* is a world-observation (status: awaits-external-input),
+  evidence marked **directional (N=24, ±~18pp), not a census**, with the ε-routing boundary and an explicit
+  operation-locus **seat** caveat. Declared as a governance stand, revisable with the seat — not a metaphysical
+  claim that Ω_E "is" a status.
 - **Number hygiene — quarantine the 40-sample judge numbers.** 82.5% agree / 47.5% det-vs-judge / "≈53%
   boundary" all ride the **disqualified no-op judge**. Trustworthy figures are on the 14-omega hand key:
   judge-vs-handkey **9/14**; the deterministic baseline (re-checked vs the hand key, define→C/decide→P/
