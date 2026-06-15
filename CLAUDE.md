@@ -69,7 +69,11 @@ coverage footer states how trustworthy the frontier is (how many active OQs have
 edge-free OQs default `workable_now` and may overstate until their `Deps:` are authored. When you
 mint or touch an OQ, author its `**Priority:**` (and `**Deps:**` if it blocks/awaits another) so the
 frontier stays honest. `omega_resolver.py check` is the authority-control gate (dangling Deps,
-rotted witnesses); `selftest` runs its 8 positive controls.
+rotted witnesses); `selftest` runs its 8 positive controls. **Read
+`docs/technical/omega_resolver.md` before modifying `omega_resolver.py`, the `ISSUES.md` authored
+fields (`Status`/`Ω-type`/`Deps`/`Priority`), or the hooks** — it carries the command table, the
+reachability/SCC model, the determinism-boundary "floor" (priority/type stay a declared seat, never
+computed), and the gotchas (output-shape coupling, the §1b freshness key).
 
 **More activations** (same convention — recognize the exact bracketed token and act):
 - **`[GATE]`** — run `./scripts/gate.sh` and report the green/red summary (issues_status,
