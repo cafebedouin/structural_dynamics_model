@@ -1,0 +1,92 @@
+{
+  "_meta": {
+    "role": "adjudicator sealed key — Ω-type diagnostic POC (OQ-130 child)",
+    "sealed_by": "adjudicator instance, SEALED before the blind executor ran (committed at the SHA recorded in README)",
+    "anchor": "the SUBSTRATE question, NOT debugging_philosophy §6.1: 'does resolving this omega require going OUTSIDE the constraint's declared fields (declared reading set + relations + v/b + ε), and if so to WHAT — a criterion (define->Ω_C), a decider (decide->Ω_P), or an observation (measure->Ω_E)? Or is it re-derivable from the declared fields (restatement)?' §6.1 used only as a sanity prior.",
+    "sample": "/tmp/sample_40.json drawn by sampler.py seed 20260614 (committed)",
+    "legend": {
+      "fired": "which resolution-operation signatures I judge present (define/decide/measure); >=2 = hybrid",
+      "external_to": "the LOCUS that is outside the declared fields: criterion | decider | observation | none(restatement)",
+      "diagnosis": "Ω_C | Ω_P | Ω_E | hybrid(...) | restatement",
+      "vs_authored": "agree | mistyped->X (sound but wrong type) | restatement-mislabel (authored a type but routes nowhere external)",
+      "control_role": "KNOWN_EXTERNAL (gate must PASS) | KNOWN_RESTATEMENT (gate must CATCH) | UNDER_DECLARATION (gate must NOT call external-via-missing-reading a restatement) | none"
+    }
+  },
+  "held": [
+    {"sample_id": 1, "name": "medical_materiality_of_sex", "authored": "empirical",
+     "fired": ["measure"], "external_to": "observation", "diagnosis": "Ω_E", "vs_authored": "agree",
+     "control_role": "KNOWN_EXTERNAL", "confidence": "high",
+     "rationale": "Systematic medical evidence review of causal mechanisms — an unobserved external fact, not re-derivable from declared fields. Clean measure-external."},
+
+    {"sample_id": 14, "name": "technological_carbon_removal_feasibility", "authored": "empirical",
+     "fired": ["measure"], "external_to": "observation", "diagnosis": "Ω_E", "vs_authored": "agree",
+     "control_role": "KNOWN_EXTERNAL", "confidence": "high",
+     "rationale": "Real-world deployment data by 2030 (Mt/yr, $/ton, EROI) — a future external observation. Textbook Ω_E."},
+
+    {"sample_id": 16, "name": "bodily_autonomy_categorical_vs_prima_facie", "authored": "conceptual",
+     "fired": ["define", "decide"], "external_to": "criterion", "diagnosis": "hybrid(Ω_C+Ω_P)", "vs_authored": "agree",
+     "control_role": "none", "confidence": "medium",
+     "rationale": "Specify which concept of the right (categorical vs prima facie) — define-external criterion (the axiom distinguishing this reading from proportionality, not declared). Shades into a value choice (decide). Authored conceptual is among fired -> agree."},
+
+    {"sample_id": 30, "name": "martens_clause_scope", "authored": "conceptual",
+     "fired": ["define"], "external_to": "criterion", "diagnosis": "Ω_C", "vs_authored": "agree",
+     "control_role": "KNOWN_EXTERNAL", "confidence": "high",
+     "rationale": "Specify the scope/interpretation of a clause (binds content vs permits evolution) — a criterion genuinely open, external to declared fields. Clean define-external."},
+
+    {"sample_id": 33, "name": "global_south_development_path_constraint", "authored": "preference",
+     "fired": ["decide", "measure"], "external_to": "decider", "diagnosis": "hybrid(Ω_P+Ω_E)", "vs_authored": "agree",
+     "control_role": "none", "confidence": "medium",
+     "rationale": "Legitimate-vs-illegitimate burden-sharing turns on which allocation principle is just — an external decider (whose values). Approach also imports negotiation outcomes (measure). Authored preference among fired -> agree."},
+
+    {"sample_id": 9, "name": "committer_frame__biomedical_vs_critical_foreclosure", "authored": "conceptual",
+     "fired": ["define"], "external_to": "criterion", "diagnosis": "Ω_C", "vs_authored": "agree",
+     "control_role": "none", "confidence": "medium",
+     "rationale": "Conceptual analysis of whether 'discovery shaped by incentives' is compatible with 'genuine discovery' — a definitional/compatibility frontier. The declared relation STATES forecloses but does not ESTABLISH it, so the criterion is genuinely open (not restatement). CONTESTABLE: a strict reader could call the declared 'forecloses' relation a re-derivation."},
+
+    {"sample_id": 10, "name": "kernel_reading_foreclosure", "authored": "conceptual",
+     "fired": ["define", "decide"], "external_to": "decider", "diagnosis": "hybrid(Ω_C+Ω_P)", "vs_authored": "agree",
+     "control_role": "none", "confidence": "medium",
+     "rationale": "ON-TRIAL. 'Foreclose vs genuinely-irreconcilable normative commitments held by different parties' — the decider (different parties' normative commitments) is external to the declared set (decide->Ω_P), AND the approach establishes the foreclosure relation jurisprudentially (define->Ω_C). Genuine hybrid; authored conceptual among fired -> agreement (hybrid-aware)."},
+
+    {"sample_id": 19, "name": "kernel_reading_contest", "authored": "conceptual",
+     "fired": ["decide", "measure"], "external_to": "decider", "diagnosis": "Ω_P", "vs_authored": "mistyped->Ω_P",
+     "control_role": "none", "confidence": "medium",
+     "rationale": "ON-TRIAL CRUX. 'Which reading is structurally defensible' resolves by (c) normative political shift / which faction gains power = an external decider, plus (a) empirical falsification (measure). The deciding commitment is NOT in the constraint. Mistyped conceptual->Ω_P. Soundness-soft flag: consequence says 'not resolvable empirically; coexist indefinitely' — but a real external decider keeps it a frontier, not restatement."},
+
+    {"sample_id": 20, "name": "kernel_reading_alternative_framing", "authored": "conceptual",
+     "fired": [], "external_to": "none", "diagnosis": "restatement", "vs_authored": "restatement-mislabel",
+     "control_role": "KNOWN_RESTATEMENT", "confidence": "medium",
+     "rationale": "ON-TRIAL. Resolution = 'generate the homoiousios sibling as a separate constraint story and compare authored ε / v / b'. The sibling is a DECLARED reading (homoiousios_reading forecloses); comparing its AUTHORED ε is re-derivation from declared fields, not an external observation. Consequence: 'documents the committer frame' — meta-commentary, fails Unlockability. Restatement / not-a-frontier."},
+
+    {"sample_id": 24, "name": "committer_structure__liturgical_vs_native_reading_contest", "authored": "conceptual",
+     "fired": ["define"], "external_to": "criterion", "diagnosis": "Ω_C", "vs_authored": "agree",
+     "control_role": "KNOWN_EXTERNAL", "confidence": "high",
+     "rationale": "ON-TRIAL. Resolution = 'clarify what \"living\" means in each framework' — explicit define operation; the criterion ('living' definition) is genuinely open and not declared. Clean Ω_C-define. A family member that is correctly conceptual -> proves the family is NOT uniformly mistyped."},
+
+    {"sample_id": 25, "name": "kernel_reading_underdetermination", "authored": "conceptual",
+     "fired": ["define"], "external_to": "criterion", "diagnosis": "Ω_C", "vs_authored": "agree",
+     "control_role": "UNDER_DECLARATION", "confidence": "medium",
+     "rationale": "ON-TRIAL + control. Asks whether the declared 3-reading set is exhaustive — by construction depends on readings the constraint NEVER enumerated (libertarian/communitarian/ecological). The gate must route this EXTERNAL (criterion: complete the framework set), NOT call it restatement merely because 3 options are enumerated. Weak-Unlockability flag (consequence: 'does not change THIS classification')."},
+
+    {"sample_id": 27, "name": "kernel_reading_distinction", "authored": "conceptual",
+     "fired": [], "external_to": "none", "diagnosis": "restatement", "vs_authored": "restatement-mislabel",
+     "control_role": "KNOWN_RESTATEMENT", "confidence": "medium",
+     "rationale": "ON-TRIAL. Resolution = ε-invariance test across the husk and behavioral-competence readings — but both are DECLARED (behavioral_competence coexists_with) and ε is AUTHORED, not externally measured. Re-derivation of declared values -> restatement. CONTESTABLE: a reader who treats ε-measurement as a genuine external operation would call this measure-external Ω_E."},
+
+    {"sample_id": 28, "name": "reading_committer_frame_dependence", "authored": "conceptual",
+     "fired": ["decide", "measure"], "external_to": "decider", "diagnosis": "Ω_P", "vs_authored": "mistyped->Ω_P",
+     "control_role": "none", "confidence": "high",
+     "rationale": "ON-TRIAL, strongest legitimate-committer-frontier case (Seat Theorem Cor 2b). 'Does choosing this reading depend on the reader's theological/institutional position (committer frame)?' — the decider (the committer's position) is external to declared structure (decide->Ω_P), surveyed empirically (measure). Mistyped conceptual->Ω_P. This is 'sound-but-mistyped', the legitimate frontier reading."},
+
+    {"sample_id": 38, "name": "kernel_reading_contest", "authored": "conceptual",
+     "fired": ["measure"], "external_to": "observation", "diagnosis": "Ω_E", "vs_authored": "mistyped->Ω_E",
+     "control_role": "none", "confidence": "medium",
+     "rationale": "ON-TRIAL, family-SPLIT evidence. 'Is Hanafi coexistent or does ascendance foreclose alternatives' resolves by an OBSERVABLE: are Hanbali/Maliki texts available, taught, suppressed. External fact -> measure -> Ω_E. Mistyped conceptual->Ω_E. Same NAME as id 19 (kernel_reading_contest) but diagnoses DIFFERENTLY (Ω_E vs Ω_P) -> the family is NOT one mechanism; per-omega resolution governs."}
+  ],
+  "_sealed_predictions": {
+    "family_splits": "The on-trial kernel_reading/committer family does NOT diagnose to one type. Held family calls: Ω_C-define (9,24,25), Ω_P-decide (19,28), Ω_E-measure (38), hybrid (10), restatement (20,27). The PER-OMEGA verdict (plan metric d) is the headline; an aggregate family rate would hide this split.",
+    "kernel_reading_contest_name_is_not_one_type": "ids 19 and 38 share the name kernel_reading_contest yet diagnose Ω_P vs Ω_E. Mechanism != name.",
+    "two_sided_gate": "Gate must PASS externals {1,14,24,28,30} and CATCH restatements {20,27}; must NOT call under-declaration {25} a restatement.",
+    "omega_E_status_falsifier": "Among authored-Ω_E in the full sample, any whose resolution routes external via define/decide (no observation) is a counterexample to 'Ω_E is a status'. Held authored-Ω_E (1,14) both route via measure -> consistent with status-reading; the corpus rate is the real test."
+  }
+}
