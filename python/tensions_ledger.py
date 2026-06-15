@@ -66,10 +66,20 @@ def build_block(entry, report_dir=REPORTS):
                 f"OQ-102(a))")
         gp = vj.get("grid_provenance")
         if isinstance(gp, dict):
-            lines.append(
-                f"- grid coverage: authored {gp.get('authored', '?')}"
-                f"/{gp.get('total', '?')} (injected {gp.get('injected', '?')}, "
-                f"imputed {gp.get('imputed', '?')}, absent {gp.get('absent', '?')})")
+            # Only surface grid coverage when SOMETHING is present (authored/
+            # injected/imputed). A fully-absent grid (the corpus-wide default —
+            # the optional coercion_grid block is rarely authored) would print
+            # "authored 0/32" on every constraint as noise. The machine-readable
+            # grid_provenance stays in pipeline_output.json regardless; this only
+            # trims the human-facing ledger. no_interval is a distinct state and
+            # is kept visible.
+            present = sum(int(gp.get(k, 0) or 0)
+                          for k in ("authored", "injected", "imputed"))
+            if present > 0:
+                lines.append(
+                    f"- grid coverage: authored {gp.get('authored', '?')}"
+                    f"/{gp.get('total', '?')} (injected {gp.get('injected', '?')}, "
+                    f"imputed {gp.get('imputed', '?')}, absent {gp.get('absent', '?')})")
         elif gp == "no_interval":
             lines.append("- grid coverage: no interval")
     else:
