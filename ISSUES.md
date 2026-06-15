@@ -6690,6 +6690,22 @@ not ruled); (iii) whether confirmed Ω_E-as-status **edits `omega_variables.md`*
   case; Ω_E where the operation is a world-observation; ε-invariance 27/31 = restatement under both rules).
   **#1 ratifiable on two independent reads — operator's signature is the only remaining step;** on signing,
   the rule lands as *operation-locus* and the family retypes per-omega (Ω_P/Ω_E/restatement, NOT wholesale).
+  **#1 DECLARED (operator, 2026-06-14) — as a SEAT, not a truth claim.** The ruling is not "operation-locus
+  is correct" (no seat-free adjudication exists — Hume: reason serves the selection; Seat Theorem Cor 2b: a
+  declared, contestable premise; `metrics_as_routing.md`: a governance stand, not a truth claim). The ruling
+  is a **declaration of seat**: *we occupy operation-locus.* define-dominant is **one** alternative seat,
+  named and **declined — not refuted** (a seat cannot be refuted, only declined; the two blind reads showed
+  our seat is *stable/reproducible*, not that the rival is false). Per `docs/altar-to-the-unknown-reading.md`:
+  there are **other seats we could have occupied and did not, including a sixth-seat class we cannot name**
+  (typing-rules that would not register as typing-rules to us); we **reserve that seat unfilled** — "naming
+  the sixth seat reserved-but-unfilled is what prevents the map from claiming to be the territory." **We are
+  obligated to declare OURS, not to enumerate theirs** (a completeness-census would be the cyclopean move one
+  level up). Carried risk, declared (altar §86 Ω_P): the reservation itself may be acknowledgment *or*
+  sophisticated status — undecidable from inside; left reserved because pretending the two named seats are
+  exhaustive is the visible trap. **Recursion noted:** the resolver, asked how it types omegas, declares a
+  seat and builds an altar to the typing-rule it cannot name — it instantiates the structure it routes; the
+  determinism boundary is the seat, and the seat is irreducibly declared, never computed. Family retypes
+  per-omega **under this declared seat, revisable** if the seat is ever re-declared.
 
 **Deps:** (soundness-spot-check discharged 2026-06-14 — POC ran, ≈77% sound external-adjudicated / 80%
 executor, not §8-class. Ω-type diagnostic POC discharged 2026-06-14 — family splits per-omega, wholesale-
