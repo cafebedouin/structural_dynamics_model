@@ -587,6 +587,37 @@ def cmd_menu(entries):
           "as the authored edges — this footer is the honesty check.")
 
 
+def cmd_activations(entries):
+    """SessionStart-hook output: emit JSON whose `additionalContext` injects the
+    activation menu (with LIVE state) into Claude's context, so Claude opens the
+    session by showing the user their options. Always emits valid JSON (a broken
+    hook must not break session start)."""
+    live = "[NEXT] — what to work on next (run `python3 python/omega_resolver.py menu`)"
+    try:
+        buckets, _sccs, _nt = frontier(entries)
+        wk = sorted(buckets["workable_now"], key=_by_pri(entries))
+        n_wk, n_h = len(wk), len(buckets["blocked_on_human"])
+        top = ""
+        if wk:
+            e = entries[wk[0]]
+            top = f"; top: {wk[0]} {e.title[:48]}"
+        live = (f"[NEXT] — what to work on next: {n_wk} workable now, {n_h} blocked on "
+                f"you{top}  (runs `python3 python/omega_resolver.py menu`)")
+    except Exception:
+        pass
+    ctx = (
+        "Open this session by showing the user the ACTIVATION MENU below, then wait "
+        "for their pick (do not start work unprompted).\n\n"
+        "Activations — the user types one of these (exact, case-sensitive, with brackets):\n"
+        f"  {live}\n\n"
+        "When the user sends [NEXT], run the menu command and present WORKABLE NOW for "
+        "them to pick. The flow is sequential: after they finish an item, [NEXT] again "
+        "gives the next. More activations are documented in CLAUDE.md as they are created."
+    )
+    print(json.dumps({"hookSpecificOutput": {
+        "hookEventName": "SessionStart", "additionalContext": ctx}}, ensure_ascii=False))
+
+
 def main():
     args = sys.argv[1:]
     cmd = args[0] if args else "frontier"
@@ -616,6 +647,8 @@ def main():
         cmd_frontier(entries)
     elif cmd == "menu":
         cmd_menu(entries)
+    elif cmd == "activations":
+        cmd_activations(entries)
     else:
         print(__doc__)
         sys.exit(2)
