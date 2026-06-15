@@ -6846,11 +6846,21 @@ non-degenerate, liveness PASS.
 
 **Finding (all three corpora, same sign): observed (H¹₆−H¹₄)/9 falls BELOW the pre-registered
 permutation band → `consonant_suppressing`.** live 0.446 vs [0.741, 0.825]; haiku 0.562 vs
-[0.738, 0.755]; flash 0.550 vs [0.754, 0.775] (N=1000, seed=20260615). Widening 4→6 does **not**
-manufacture disagreement — the new `powerful`/`organized` seats echo the canonical four **more than
-chance** (`echoes_both` 82/69/62%; `echoes_both + new_type_either == n` exactly). The combinatorial
-artifact (mechanical H¹ inflation from more pairs) is **FALSIFIED** — it would have read within/above
-band. Co-outputs: orbit splits 10/293/367; H⁰ singletons can only drop (haiku 139→117, the
+[0.738, 0.755]; flash 0.550 vs [0.754, 0.775] (N=1000, seed=20260615). **Two distinct facts, two
+witnesses (the design's permutation-vs-redundancy decomposition, kept separate):** (1) *permutation
+(load-bearing null)* — the new seats disagree with the fixed 4-seat config **below chance**: less
+than random reassignment of the *same* seat-type marginal would, so they are anti-correlated with
+disagreement (this is the `consonant_suppressing` label; it speaks to disagreement-vs-chance, **not**
+redundancy). (2) *co-classification (arm 6, NOT the null)* — `echoes_both` = **neither new seat
+introduces a type absent from the 4-seat orbit** (witnessed defn, `oq131_six_observer_probe.py:335-342`:
+`s5 not in four`/`s6 not in four`), holding in 82/69/62% (`echoes_both + new_type_either == n`
+exactly). `echoes_both` is a **type-novelty** measure (membership in the 4-type set) — it is **not**
+per-seat redundancy (echoing one *specific* canonical seat, which the probe does not measure) and
+**not** modal consonance; do not read the echo % as the cause of the permutation result. The two
+reinforce here but remain two facts. Net for the resolution question: the new seats add a novel type
+in only 18/31/38% of constraints **and** their disagreement is below chance — modest added
+resolution, fracture suppressed not manufactured. The combinatorial artifact (mechanical H¹ inflation
+from more pairs) is **FALSIFIED** — it would have read within/above band. Co-outputs: orbit splits 10/293/367; H⁰ singletons can only drop (haiku 139→117, the
 comparability-with-the-4-position-corpus boundary). The effect is **power-atom-driven, not bundle-
 driven** (`power_only` control ≈ realistic headline) and **bundle-robust within the §3 sweep
 envelope** (every per-seat ladder point still below band; highest 0.62 on flash, still < 0.754).

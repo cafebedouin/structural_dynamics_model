@@ -39,29 +39,44 @@ haiku `6a00db754df3` (n=960), flash `3ac23952cd03` (n=960).
 
 (N=1000 shuffles, seed=20260615 — pinned pre-run; band re-witnessable on the fixed substrate.)
 
-**Reading.** The two new observer seats (`powerful`, `organized`) disagree with each
-constraint's fixed 4-seat configuration **less than chance** reassignment of the *same* seat-type
-marginal would produce. Because the permutation holds the seat-5/6 marginal exact by construction,
-"a new type appeared" is constant across null and observed — so **below-band cannot be the
-type-appearance / combinatorial artifact** the design was built to defeat. The widening does **not**
-manufacture disagreement; the new positions largely **echo** the existing site.
+**Reading — two facts, two witnesses (kept separate per the pre-registered decomposition; one
+number must not do both jobs).**
 
-This is mechanistically explained by the co-classification arm (§6): in every corpus
-`echoes_both + new_type_either == n` exactly (live 47+10=57; haiku 667+293=960; flash 593+367=960).
-The **majority** of constraints have *both* new seats reproducing a type already in the 4-seat
-vector (live 82%, haiku 69%, flash 62%) — direct redundancy, which the below-band consonance
-quantifies as *more* than chance.
+*Finding 1 — permutation (load-bearing null).* The two new seats (`powerful`, `organized`) disagree
+with each constraint's fixed 4-seat configuration **below chance**: less than random reassignment of
+the *same* seat-type marginal would produce. Because the permutation holds the seat-5/6 marginal
+exact by construction, "a new type appeared" is constant across null and observed — so **below-band
+cannot be the type-appearance / combinatorial artifact** the design was built to defeat. This finding
+is about *disagreement vs chance*; it is the `consonant_suppressing` label and **does not, by itself,
+speak to redundancy.**
+
+*Finding 2 — co-classification / type-novelty (arm §6, routed here NOT to the null).* `echoes_both`
+is defined in code (`oq131_six_observer_probe.py:335-342`: `n5 = s5 not in four`, `n6 = s6 not in
+four`, `echoes_both += (not n5) and (not n6)`) as **both new seats' types already appearing somewhere
+in the 4-seat orbit** — i.e. the new seats **introduce no type the canonical four lack**. It holds in
+82/69/62% (`echoes_both + new_type_either == n` exactly: live 47+10=57; haiku 667+293=960; flash
+593+367=960).
+
+**They reinforce here but are not the same fact, and `echoes_both` is neither structure the words
+might suggest:** it is **type-novelty** (membership in the 4-type set) — **not** per-seat redundancy
+(echoing one *specific* canonical seat; the probe does not measure that) and **not** modal consonance
+(agreeing with the majority canonical type). So: Finding 1 = disagreement-below-chance; Finding 2 =
+no-novel-type in the majority; the echo % is **not** the cause of the below-band permutation value.
+Net for OQ-131's resolution question: the new seats add a novel type in only **18/31/38%** of
+constraints **and** their disagreement is below chance — modest added resolution, fracture suppressed
+not manufactured.
 
 ## Two-findings decomposition (PRE_REGISTRATION §4c / §5)
 
 - The permutation verdict is **below-band**, not above-band, so the "structured constraint-
   correlated fracture" reading does **not** apply on any corpus.
-- The redundancy arm (#6, routed here **not** to the null per §4c) shows the new seats are
-  **largely redundant**: 62–82% echo both, and where they do add a type (orbit splits: live 10,
-  haiku 293, flash 367) the addition is consonant enough that the aggregate still sits below the
-  null band.
-- Net: under these declared seats, widening 4→6 **adds positions that mostly co-classify with the
-  canonical four**; it does not expose hidden axiom-level fracture.
+- The co-classification arm (#6, routed here **not** to the null per §4c) shows the new seats are
+  **largely type-non-novel**: in 62–82% neither introduces a type the 4-seat orbit lacks, and where
+  they do add a type (orbit splits: live 10, haiku 293, flash 367) the aggregate still sits below the
+  null band. ("Type-non-novel," not "redundant" — the probe does not test whether a new seat echoes
+  one *specific* canonical seat.)
+- Net: under these declared seats, widening 4→6 **adds positions that introduce no new type in the
+  majority and disagree below chance**; it does not expose hidden axiom-level fracture.
 
 ## Co-outputs (arm #6)
 
@@ -109,6 +124,33 @@ non-grid matched stratum **873**.
    does not eliminate the seat-bundle as a parameter. The Ω_E finding is **not bundle-independent**.
 3. **This corpus, wider probe — not a forecast.** Measures the committed corpus under a 6-point
    site, **not** a natively-6-authored corpus. **The Ω_C adoption arm stays `future`.**
+
+## Post-adjudication witnesses (2026-06-15, parent-instance review)
+
+**(a) Grid stratum 87/0 — per-source check (not just the aggregate).** The probe detects grid
+stories via leveled metric measurements (`oq131_six_observer_probe.py:70`, `GRID_METRICS` regex
+requiring `metric(` — the *leveled* form, not the unleveled Surface-1 field). Per-metric haiku counts:
+`accessibility_collapse 87, stakes_inflation 87, suppression 87, resistance 87` — the four **fully
+co-occur** (every grid story authors all four; they do not partition, they overlap), **union = 87**,
+and **union == the `coercion_grid` JSON-block set (87)** (`comm -12` = 87 identical basenames). Flash
+= 0. So the 873 non-grid matched stratum is exact. (The relayed "coercion_grid only 8" does not
+reproduce on the substrate — `coercion_grid` key in `json_haiku` = 87; immaterial, the number used is
+right.)
+
+**(b) Live n=57 vs corpus 64 — not a probe drop.** With `catch/3` all 64 live constraints pass
+`orbit_vector`+`atom_string`+`cohomological_obstruction`; the 7 absent ids are **exactly** the 7
+*untracked* testsets (the money/CBDC stories), which a worktree off the committed tree did not
+contain. The live arm faithfully measured the **57 committed** stories; adding 7 to a 57-vs-960-vs-960
+result agreeing in sign would not move the verdict.
+
+**(c) Schema-validator addition — positive control (rejects what it should; its limit stated).**
+Feeding `config_validation` a malformed `observer_bundle_powerful`: a **non-compound** (`5`) is
+**REJECTED** (`wrong type (expected compound)`); a **malformed-content compound**
+(`bundle(garbage_time, not_an_exit, nowhere)`) **PASSES** — the `any` constraint does not validate
+bundle *contents*. So the addition is not blindly permissive at the type level, but a garbage T/E/S
+triplet loads silently and surfaces only as junk observer types downstream. Acceptable for a
+probe-scoped, operator-declared param; if the six-observer modes ever graduate past probe status, the
+bundle slots should get `oneof`-per-coordinate validation against the T/E/S vocabularies.
 
 ## Bottom line (committed, with its falsifier)
 
