@@ -6649,6 +6649,29 @@ the **ε-invariance define-vs-restatement** call (the `kernel_reading_distinctio
 not ruled); (iii) whether confirmed Ω_E-as-status **edits `omega_variables.md`** (an Ω_E status-line);
 (iv) wiring **diagnose-then-stamp into the generator** is a deferred generator change gated on (i).
 
+**Evidence follow-up (2026-06-14, adjudicator, read-only — discharges #2, advances #1/#3).**
+- **#2 RULED → restatement.** `metrics_as_routing.md` + `when_metrics_arent_measurement.md` (foundation
+  docs) establish **ε is ROUTING, not measurement**. So the ε-invariance test (`kernel_reading_distinction`
+  27/31) re-derives a *routed* value the constraint already carries ⇒ **restatement, not Ω_E**. Corollary
+  that sharpens the gate: the diagnostic's "measure" = a **world** observation, never computing/comparing
+  an engine metric (ε/π/purity).
+- **#3 — under-powered objection removed.** Ω_E stratum re-run, **N=24 over-sampled authored-Ω_E** (the
+  POC's "1/14" was mis-framed — falsifier lives over authored-Ω_E, not all 14): **status HOLDS ≈92–96%
+  (~22–23/24)** — all resolve by genuine world-observation (ethnography / longitudinal / historical-textual
+  / survey), **none by engine-metric**; falsifier ~1–2/24 (`documentation_sufficiency` = define-a-standard).
+  The omega_variables.md status-line edit is now **supported**, operator's design call (no longer premature).
+- **Number hygiene — quarantine the 40-sample judge numbers.** 82.5% agree / 47.5% det-vs-judge / "≈53%
+  boundary" all ride the **disqualified no-op judge**. Trustworthy figures are on the 14-omega hand key:
+  judge-vs-handkey **9/14**; the deterministic baseline (re-checked vs the hand key, define→C/decide→P/
+  measure→E) fails the **same committer-frame decider-locus cases (19/28/38) + restatement (20)** the judge
+  does ⇒ both automated layers fail exactly where judgment is required; boundary is partial-credit-soft
+  (~36–71%), not a clean 53%.
+- **#1 — evidence-supported (operator's signature pending).** Read-back of the held key: the committer-frame
+  Ω_P calls ground in each omega's *own* resolution text ("resolves by which faction/commitment" = the
+  omega_variables values-vs-definition criterion), which **define-dominant would have to override**. So
+  decider-locus *tracks* the framework's Ω_C-vs-Ω_P line; it was not merely imported. Single-instance; the
+  ruling remains the operator's.
+
 **Deps:** (soundness-spot-check discharged 2026-06-14 — POC ran, ≈77% sound external-adjudicated / 80%
 executor, not §8-class. Ω-type diagnostic POC discharged 2026-06-14 — family splits per-omega, wholesale-
 Ω_P-retype refuted, self-label load-bearing-to-fix; 4 operator escalations open above.)
