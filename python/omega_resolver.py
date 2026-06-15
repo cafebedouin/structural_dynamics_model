@@ -605,14 +605,30 @@ def cmd_activations(entries):
                 f"you{top}  (runs `python3 python/omega_resolver.py menu`)")
     except Exception:
         pass
+    # Monthly-consolidation reminder: deterministic date-check against CLAUDE.md's
+    # declared due date (no reliance on the model noticing the date itself).
+    consolidation = ""
+    try:
+        import datetime as _dt
+        cm = (ROOT / "CLAUDE.md").read_text()
+        m = re.search(r"on or after \*\*(\d{4}-\d{2}-\d{2})\*\*", cm)
+        if m and _dt.date.today().isoformat() >= m.group(1):
+            consolidation = (f"\n⚠ MONTHLY CONSOLIDATION DUE (since {m.group(1)}): before other "
+                             "work, prompt the operator to run the memory / KNOWN_STATE roll-off / "
+                             "ISSUES compress pass (CLAUDE.md → Memory Consolidation Review).\n")
+    except Exception:
+        pass
     ctx = (
         "Open this session by showing the user the ACTIVATION MENU below, then wait "
         "for their pick (do not start work unprompted).\n\n"
         "Activations — the user types one of these (exact, case-sensitive, with brackets):\n"
-        f"  {live}\n\n"
+        f"  {live}\n"
+        "  [GATE] — run all project gate checks (./scripts/gate.sh), report green/red.\n"
+        "  [PUSH] — pre-push ritual: [GATE] green + docs current, then push (see CLAUDE.md).\n"
+        f"{consolidation}\n"
         "When the user sends [NEXT], run the menu command and present WORKABLE NOW for "
         "them to pick. The flow is sequential: after they finish an item, [NEXT] again "
-        "gives the next. More activations are documented in CLAUDE.md as they are created."
+        "gives the next. Full activation docs are in CLAUDE.md."
     )
     print(json.dumps({"hookSpecificOutput": {
         "hookEventName": "SessionStart", "additionalContext": ctx}}, ensure_ascii=False))

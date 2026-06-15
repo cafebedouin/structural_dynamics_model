@@ -71,6 +71,15 @@ mint or touch an OQ, author its `**Priority:**` (and `**Deps:**` if it blocks/aw
 frontier stays honest. `omega_resolver.py check` is the authority-control gate (dangling Deps,
 rotted witnesses); `selftest` runs its 8 positive controls.
 
+**More activations** (same convention — recognize the exact bracketed token and act):
+- **`[GATE]`** — run `./scripts/gate.sh` and report the green/red summary (issues_status,
+  omega_resolver check + selftest, known_state). Do not fix anything; just report. Use before
+  committing anything that touches `ISSUES.md`/`KNOWN_STATE.md`.
+- **`[PUSH]`** — the pre-push ritual: (1) run `[GATE]` — must be GREEN; (2) confirm
+  `ISSUES.md`, `KNOWN_STATE.md`, and `AGENTS.md` reflect the changes being pushed (the
+  documentation-currency check); (3) if both hold, `git push origin main`, else report what is
+  blocking. Always show the gate output as the witness — never push on an unverified claim.
+
 **Implementation wiring notes:** `docs/technical/` holds file-level notes on non-obvious wiring,
 operator-precedence bugs, fact-adapter patterns, and query gotchas — things that caused real bugs,
 not general architecture. Read the relevant file before modifying `config_validation.pl`,
