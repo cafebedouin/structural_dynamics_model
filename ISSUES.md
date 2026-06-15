@@ -6655,22 +6655,33 @@ not ruled); (iii) whether confirmed Ω_E-as-status **edits `omega_variables.md`*
   27/31) re-derives a *routed* value the constraint already carries ⇒ **restatement, not Ω_E**. Corollary
   that sharpens the gate: the diagnostic's "measure" = a **world** observation, never computing/comparing
   an engine metric (ε/π/purity).
-- **#3 — under-powered objection removed.** Ω_E stratum re-run, **N=24 over-sampled authored-Ω_E** (the
-  POC's "1/14" was mis-framed — falsifier lives over authored-Ω_E, not all 14): **status HOLDS ≈92–96%
-  (~22–23/24)** — all resolve by genuine world-observation (ethnography / longitudinal / historical-textual
+- **#2 seam (one-line flag).** This makes the define/measure boundary depend on the ε-is-routing claim: if
+  an omega's "measure" genuinely needs observing something **ε only proxies** (routed value and world value
+  diverge), it is mis-routed to restatement. Probably rare; the seam #2 introduces, not a blocker.
+- **#3 — under-powered objection removed; doc-edit WAITS on #1.** Ω_E stratum re-run, **N=24 over-sampled
+  authored-Ω_E** (the POC's "1/14" was mis-framed — falsifier lives over authored-Ω_E, not all 14): **status
+  holds, ~22–23/24 adjudicator-typed** (a hand-read band, directional — not a measured point; don't quote a
+  false-precision %). All resolve by genuine world-observation (ethnography / longitudinal / historical-textual
   / survey), **none by engine-metric**; falsifier ~1–2/24 (`documentation_sufficiency` = define-a-standard).
-  The omega_variables.md status-line edit is now **supported**, operator's design call (no longer premature).
+  The omega_variables.md status-line edit is now **supported but still a framework-doc change** — operator's
+  design call, **revisit after #1 is ruled** ("supported" ≠ "do it").
 - **Number hygiene — quarantine the 40-sample judge numbers.** 82.5% agree / 47.5% det-vs-judge / "≈53%
   boundary" all ride the **disqualified no-op judge**. Trustworthy figures are on the 14-omega hand key:
   judge-vs-handkey **9/14**; the deterministic baseline (re-checked vs the hand key, define→C/decide→P/
   measure→E) fails the **same committer-frame decider-locus cases (19/28/38) + restatement (20)** the judge
   does ⇒ both automated layers fail exactly where judgment is required; boundary is partial-credit-soft
   (~36–71%), not a clean 53%.
-- **#1 — evidence-supported (operator's signature pending).** Read-back of the held key: the committer-frame
-  Ω_P calls ground in each omega's *own* resolution text ("resolves by which faction/commitment" = the
-  omega_variables values-vs-definition criterion), which **define-dominant would have to override**. So
-  decider-locus *tracks* the framework's Ω_C-vs-Ω_P line; it was not merely imported. Single-instance; the
-  ruling remains the operator's.
+- **#1 — HELD OPEN (operator ruling 2026-06-14); the read-back is NOT independent confirmation.** Correction
+  to an earlier overstatement: the held key was sealed before the **executor** ran (independence from *it*),
+  but the read-back was performed by the **same adjudicator who proposes decider-locus**, asking the
+  decider-locus question of their own sealed types — *"one mind, twice,"* not the text independently grounding
+  the cut. And **define-dominant was never faithfully tested**: the executor's gate that emitted "uniform Ω_C"
+  was a **no-op** (missed 2/2 seeded restatements), gate-silence not a faithful define-dominant read. So the
+  cut was ratified by its proponent against a broken opponent. **Forward (the unspent unit of independence):**
+  a **second blind instance** types the contested committer-frame omegas (19/28/38) + ε-invariance (27/31)
+  from resolution text + **both** locus rules stated neutrally, **without** the held key; ratify only on two
+  independent reads. (Decider-locus is probably right — the resolution text does say *values decide* — but
+  "evidence-supported by independent read-back" overstated it by one full instance.)
 
 **Deps:** (soundness-spot-check discharged 2026-06-14 — POC ran, ≈77% sound external-adjudicated / 80%
 executor, not §8-class. Ω-type diagnostic POC discharged 2026-06-14 — family splits per-omega, wholesale-
