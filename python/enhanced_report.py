@@ -419,6 +419,40 @@ def extract_q6_crosscheck(prolog_output, constraint_id):
     return None
 
 
+def extract_extraction_reading(prolog_output, constraint_id):
+    """Extract the OQ-86 extraction reading from Prolog output, if present.
+
+    The line is printed by report_generator:extraction_reading_line/1 (Section 7),
+    which is SILENT unless the constraint computes an extractive constraint-level
+    type (snare/tangled_rope) AND authors no constraint_victim — so the common
+    case yields None here (absence, not a fabricated value), mirroring
+    extract_q6_crosscheck.
+
+    COMMENTARY-GRADE ONLY (R3): extraction_reading never feeds classification
+    (dr_type is byte-identical with or without it). It surfaces, for the rare
+    no-victim blindspot, the beneficiary-side seats (the extractors) and flags the
+    cost-bearer as named only in the authored situation/transfer prose — the
+    who-extracts-from-whom that the type+roles otherwise leave implicit. Per-seat
+    extractive typing is deliberately NOT the key (it names the victim, not the
+    extractor; W1/W2 of the OQ-86 plan).
+
+    The line is anchored to constraint_id (the output carries a "<CID>:" prefix),
+    so it picks the right verdict regardless of how many constraints loaded.
+
+    Returns dict {extractors: [...], cost_bearer: "unnamed"} or None on absence.
+    """
+    m = re.search(
+        re.escape(constraint_id)
+        + r":\s*EXTRACTION READING:.*?beneficiary-side seats = \[([^\]]*)\]",
+        prolog_output,
+    )
+    if m:
+        inner = m.group(1).strip()
+        extractors = [s.strip() for s in inner.split(",") if s.strip()] if inner else []
+        return {"extractors": extractors, "cost_bearer": "unnamed"}
+    return None
+
+
 # --- Sidecar Builder ---
 
 logger = logging.getLogger(__name__)
@@ -543,6 +577,13 @@ def build_sidecar_data(constraint_id, entry, prolog_output, iteration_round=None
     # --- Q6 sixth-question crosscheck (from Prolog output; commentary-grade, never
     #     classification — see extract_q6_crosscheck docstring and OQ-133) ---
     sidecar["q6_crosscheck"] = extract_q6_crosscheck(prolog_output, constraint_id)
+
+    # --- Extraction reading (OQ-86; from Prolog output; commentary-grade, never
+    #     classification — the no-authored-victim blindspot: names the
+    #     beneficiary-side seats, flags the cost-bearer as prose-only) ---
+    sidecar["extraction_reading"] = extract_extraction_reading(
+        prolog_output, constraint_id
+    )
 
     # --- Structural signature ---
     sidecar["structural_signature"] = entry.get("signature") if entry else None

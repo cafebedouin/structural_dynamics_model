@@ -30,6 +30,8 @@
     seat_perceived_vs_real/4,
     consensus_provenance/2,
     q6_crosscheck/3,
+    extraction_reading/2,
+    extractive_type/1,
     power_witness_count/3,
     power_witness_map/2
 ]).
@@ -258,3 +260,55 @@ q6_daylight(C, Class) :-
     ->  true
     ;   Class = unstated
     ).
+
+% ============================================================================
+% EXTRACTION READING (OQ-86) — R3 commentary on the no-victim blindspot
+% ============================================================================
+% Commentary-grade (R3): NEVER a classifier input; reads the COMPUTED
+% constraint-level type + AUTHORED roles; never directs generation. Mirrors the
+% q6_crosscheck channel (anchored line -> Python extractor -> sidecar field).
+%
+% The blindspot it surfaces: a constraint that computes an EXTRACTIVE type at
+% the analytical default context but authors NO cost-bearer (constraint_victim).
+% Then who-extracts-from-whom lives only in the authored situation/transfer
+% prose; this names the beneficiary-side seats and flags the unnamed cost-bearer
+% as a pointer. SILENT when a victim IS authored (the asymmetric case the engine
+% already names) and when the type is non-extractive.
+%
+% WHY NOT per-seat extractive typing (the move a reviewer reaches for): the
+% per-seat dr_type_for_stakeholder of an EXTRACTOR is predominantly rope/mountain
+% (low d), while the seats that COMPUTE extractive are the high-d snared VICTIMS
+% (W1/W2, OQ-86 plan). Keying the guard on per-seat-extractive would name the
+% victim, not the extractor, and go silent on the very case this exists for.
+% Extraction is encoded RELATIONALLY (situation/transfer prose + roles), not as a
+% per-seat type — so the guard reads the CONSTRAINT-level type and the roles.
+
+extractive_type(snare).
+extractive_type(tangled_rope).
+
+%% authored_victim(+C)  — a cost-bearer the STORY authored, not a repair sentinel.
+%  Guard B must read AUTHORED absence, not DB absence. The OQ-93 shim-family
+%  bridge (data_repair.pl:153, "do not extend it") FABRICATES
+%  constraint_victim(C, inferred_subject) whenever E>0.46 ∧ S>0.40 and no victim
+%  is authored — i.e. on the EXACT metric profile of the blindspot. So by report
+%  time the DB always holds a victim for the very case OQ-86 exists for, and a
+%  naive `\+ constraint_victim(C,_)` guard is INERT on every real report (the
+%  fabricated success-shaped token fills the no-victim hole — Build Discipline
+%  P5/P6). `inferred_subject` is the bridge's fixed sentinel; excluding it
+%  recovers the authored-absence signal. (Verified this session: without the
+%  exclusion the end-to-end channel witness is silent on the blindspot fixture.)
+authored_victim(C) :-
+    narrative_ontology:constraint_victim(C, V),
+    V \== inferred_subject.
+
+%% extraction_reading(+C, -Reading)  [R3 commentary — NEVER a classifier input]
+%  Reading = extraction(Extractors, cost_bearer_unnamed), Extractors a non-empty
+%  sorted list of beneficiary-side agent seats. Fires only on the blindspot shape
+%  (guards A/B/C below); fails (silent) otherwise.
+extraction_reading(C, extraction(Extractors, cost_bearer_unnamed)) :-
+    drl_core:dr_type(C, T), extractive_type(T),          % constraint-level extractive  (guard A)
+    \+ authored_victim(C),                               % no AUTHORED cost-bearer       (guard B)
+    findall(N, ( narrative_ontology:constraint_stakeholder(C, N, _, _, _, _, _),
+                 \+ narrative_ontology:stakeholder_non_agent(C, N),
+                 role_of(C, N, R), beneficiary_side(R) ), Es0),
+    sort(Es0, Extractors), Extractors \= [].             % non-vacuity                    (guard C)

@@ -3918,21 +3918,37 @@ Gemini-conditional (single-model pilot; the 2×2 model×framing Ω under OQ-83 i
 
 **Ω-type:** Ω_C (a reporting/annotation feature; commentary-grade, never classification).
 
-**Status:** open — standalone, no migration dependency; do-whenever. Filed from the OQ-85 audit's
+**Status:** resolved — (2026-06-16) shipped as R3 commentary: `stakeholder_seats:extraction_reading/2`
 **Priority:** 1
-one live residual (operator, 2026-06-07).
+(+ `extractive_type/1`, `authored_victim/1`), the CID-anchored `report_generator:extraction_reading_line/1`
+(Section 7, beside the q6 crosscheck line), and the `extraction_reading` sidecar field
+(`enhanced_report:extract_extraction_reading`). Mirrors the q6 anchored-line→extractor→sidecar shape.
+Guard = constraint-level `dr_type(C) ∈ {snare,tangled_rope}` ∧ no **authored** victim ∧ ≥1
+beneficiary-side agent seat; names the beneficiary-side seats, flags the cost-bearer as prose-only.
+Per-seat-extractive deliberately NOT the key (it names the victim, not the extractor — plan W1/W2).
 **Origin:** 2026-06-07, OQ-85 decomposition audit.
 
-In the rare case of two co-equal agents with NO powerless anchor where one co-equal is the
-unnamed victim (constructed: `oq85_blindspot`), the constraint correctly computes `snare` from
-metrics but the engine names no victim and `in_contention` is silent (correctly — it feeds no
-classifier, OQ-85). For a human reading the report, the pairwise who-extracts-from-whom (today in
-`situation`/`transfer_function` prose) could be surfaced as explicit COMMENTARY. Hard constraints:
-commentary-grade only (R3 — never a classification input; OQ-85 established the type is
-metric-driven and correct without it); authoring-side, never an opposition-directive (the OQ-83
-4b neutrality pin holds). This is a reporting feature, not a classification fix, and carries no
-dependency on the stakeholder migration — explicitly NOT folded into OQ-83/Phase A (scope
-discipline).
+**Witnesses & findings (plunit + cross-corpus census this session):**
+- **Calibration measured, not inherited:** ε=0.82/supp=0.91 + blindspot structure → `dr_type=snare`
+  (derived, not stubbed). Controls in `prolog/tests/test_oq86_extraction_commentary.pl` (24/24): positive
+  fires with both co-equals; channel-line witness; three single-variable negatives (type/victim/non-vacuity).
+- **Plan correction #1 — the data-repair bridge defeats a naive guard.** `data_repair.pl:153` (OQ-93
+  shim-family) FABRICATES `constraint_victim(C, inferred_subject)` whenever E>0.46 ∧ S>0.40 and no victim
+  is authored — i.e. on the EXACT blindspot metric profile. A literal `\+ constraint_victim(C,_)` guard is
+  therefore INERT on every real report (Build Discipline P5/P6: a success-shaped fabricated token fills the
+  no-victim hole). Fix: `authored_victim/1` excludes the fixed sentinel `inferred_subject`. Locked by a
+  regression test + an end-to-end channel witness (real `enhanced_report.run_prolog_report` path emits the
+  line + sidecar only WITH the exclusion).
+- **Plan correction #2 — NOT silent on the live corpus (plan predicted 0).** Fires on **3 live** constraints
+  (all `tangled_rope`, all no authored victim) — genuine blindspots, the feature working. Cross-corpus census:
+  testsets_haiku 10/960, testsets_flash 34/960 (all `tangled_rope`, all `[]`); **0** across kernel_v1/v5/v6/sotu
+  (~5,377 stories) — guard C correctly fail-closes there (those pre-stakeholder archives have 0 seat facts; 62
+  kernel_v1 constraints pass guards A+B but cannot name extractors → silence, not a fabricated value). EVERY
+  real firing is `tangled_rope`; omitting it from `extractive_type/1` would make the feature 100% inert on real
+  corpora.
+- **OQ-134 table-setting:** emitted through the same anchored-line→extractor→sidecar shape as q6_crosscheck,
+  so a future corpus-wide census (its `bundled_with` sibling) can aggregate it with one generic
+  per-constraint-commentary-sidecar exporter (coverage/denominator; buckets separate per P6), not a special one.
 
 ---
 

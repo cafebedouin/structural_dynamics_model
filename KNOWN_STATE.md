@@ -45,6 +45,33 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-16 — OQ-86 RESOLVED: `extraction_reading/2` R3 commentary (no-authored-victim blindspot)
+**Files:** prolog/stakeholder_seats.pl, prolog/report_generator.pl, python/enhanced_report.py, prolog/tests/test_oq86_extraction_commentary.pl, prolog/data_repair.pl
+**Tier:** tripwire
+
+Shipped the OQ-86 reporting feature: `stakeholder_seats:extraction_reading/2` (+ `extractive_type/1`,
+`authored_victim/1`), `report_generator:extraction_reading_line/1` (Section 7, beside the q6 crosscheck),
+and the `extraction_reading` sidecar (`enhanced_report:extract_extraction_reading`). R3 commentary —
+NEVER a classifier input. Fires on the blindspot shape: constraint-level `dr_type ∈ {snare,tangled_rope}`
+∧ no **authored** victim ∧ ≥1 beneficiary-side agent seat; names the beneficiary-side seats, flags the
+cost-bearer as prose-only. 24/24 plunit (positive + channel + 3 single-var negatives + bridge regression).
+
+**TRIPWIRE (the silent mistake a fresh agent makes):** the data-repair bridge `data_repair.pl:153`
+(OQ-93 shim-family) FABRICATES `constraint_victim(C, inferred_subject)` whenever E>0.46 ∧ S>0.40 and no
+victim is authored — i.e. on the EXACT blindspot metric profile. So by report time the DB ALWAYS holds a
+victim for the very case OQ-86 exists for; a naive `\+ constraint_victim(C,_)` guard is INERT on every
+real report (Build Discipline P5/P6 — a fabricated success-shaped token fills the no-victim hole). Any
+predicate that means "the STORY authored no victim" must exclude the `inferred_subject` sentinel
+(`authored_victim/1` is the template). Witnessed: without the exclusion the end-to-end channel witness on
+the blindspot fixture was silent; with it, the line + sidecar emit.
+
+**Empirical (cross-corpus census, witnessed):** fires on 3 live testsets (plan predicted 0 — wrong),
+10/960 testsets_haiku, 34/960 testsets_flash — ALL `tangled_rope`, ALL no authored victim. **0** across
+kernel_v1/v5/v6/sotu (~5,377 stories): guard C fail-closes (those pre-stakeholder archives have 0 seat
+facts; 62 kernel_v1 constraints pass guards A+B but cannot name extractors → silence, correct). EVERY real
+firing is `tangled_rope` — omitting it from `extractive_type/1` would make the feature 100% inert on real
+corpora (snare never fires outside the constructed fixture). Sets the table for OQ-134 (uniform sidecar shape).
+
 ## 2026-06-16 — Seat/orientation invariant audit + v8 "seat/gauge/orientation" design spec (engine votes one-seat)
 **Files:** docs/design/v8_seat_gauge_orientation_design_spec.md, audits/2026-06-16_seat_invariant_vs_prolog/, docs/seat-theorem-v1.md, docs/deferential_realism_paper_v7.md
 **Tier:** landed

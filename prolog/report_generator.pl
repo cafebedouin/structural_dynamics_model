@@ -345,7 +345,25 @@ mandatrophy_only_report(C) :-
     % consumer the mandatrophy apparatus lost at the format migration (OQ-83 A7):
     % authored genealogy (founding_problem_status) cross-checked against the
     % computed present structure (dr_type at the default analytical context).
-    r5_zombie_crosscheck_line(C).
+    r5_zombie_crosscheck_line(C),
+    % OQ-86 extraction reading: the no-authored-victim blindspot. Silent unless
+    % the constraint computes an extractive type with no cost-bearer authored;
+    % then names the beneficiary-side seats and flags the unnamed cost-bearer.
+    % R3 commentary (never classification); same anchored-line -> extractor ->
+    % sidecar shape as the q6 crosscheck above.
+    extraction_reading_line(C).
+
+%% extraction_reading_line(+C)
+%  CID-anchored R3 commentary line (OQ-85/OQ-86). Carries the non-classifying
+%  caveat to the read site. Silent when not the blindspot shape (extraction_
+%  reading/2 fails) — absence is silence, never a fabricated value.
+extraction_reading_line(C) :-
+    (   stakeholder_seats:extraction_reading(C, extraction(Es, cost_bearer_unnamed))
+    ->  format('  ~w: EXTRACTION READING: extractive constraint-level type with no authored \c
+victim; beneficiary-side seats = ~q; cost-bearer named only in the authored situation/transfer \c
+narrative (commentary, non-classifying; OQ-85/OQ-86).~n', [C, Es])
+    ;   true   % silent: not the blindspot shape
+    ).
 
 %% r5_zombie_crosscheck_line(+C)
 %  TIER LIMIT carried to the read site (defense-in-depth; the load-bearing copy
