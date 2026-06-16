@@ -1,0 +1,36 @@
+================ R3 PRESENTATION-vs-STRUCTURE PROBE ================
+
+## ARM 1  ai_governance_legitimacy__market_libertarian_reading
+  BASELINE                        | cs_pattern=natural_law_constraint | cs_verdict=false_natural_law_constraint
+
+  (P) vary PRESENTATION authority_grounding, hold structure fixed:
+   AG:=lineage
+        ->                        | cs_pattern=no_pattern_match       | cs_verdict=none
+   AG:=extraction
+        ->                        | cs_pattern=no_pattern_match       | cs_verdict=none
+   AG:=practice
+        ->                        | cs_pattern=implicit_practice      | cs_verdict=false_implicit_practice
+   AG:=diffuse_epistemic
+        ->                        | cs_pattern=epistemic_consensus    | cs_verdict=none
+
+  (S) vary STRUCTURE (remove beneficiary), hold presentation (AG=self_enforcing) fixed:
+   beneficiary:=ABSENT
+        ->                        | cs_pattern=natural_law_constraint | cs_verdict=none
+
+## ARM 2  abrahamic_covenant__land_promise_constraint
+  BASELINE                        | cs_pattern=interpretive_accretion | cs_verdict=none
+
+  (S) vary STRUCTURE suppression_requirement, hold presentation (AG) fixed:
+   suppression_requirement:=0.05
+        ->                        | cs_pattern=interpretive_accretion | cs_verdict=false_interpretive_accretion
+   suppression_requirement:=0.5
+        ->                        | cs_pattern=interpretive_accretion | cs_verdict=none
+
+  (P) vary PRESENTATION authority_grounding, hold structure fixed:
+   AG:=self_enforcing
+        ->                        | cs_pattern=natural_law_constraint | cs_verdict=false_natural_law_constraint
+
+-- restore witness (must equal ARM 1 baseline) --
+  RESTORED                        | cs_pattern=natural_law_constraint | cs_verdict=false_natural_law_constraint
+
+================ END PROBE ================

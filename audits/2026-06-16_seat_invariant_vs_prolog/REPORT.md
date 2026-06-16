@@ -293,3 +293,55 @@ question, and pre-register what "they conflict about the same content" (→ orie
 R1, R2, R4 all carry operator leans toward HOLD and R2 is additionally defused on the code-fact. If **R3 = orientation-face**, the
 invariant **holds** across all joints on this substrate. If **R3 = second seat**, the invariant **falls at P4**, and P2/Killer-1 become
 the secondary repair question. The audit does not rule R3 — it is a declared seat, the operator's to own.
+
+---
+
+## 6. R3 follow-up — presentation-vs-structure probe (operator pre-registered, 2026-06-16)
+
+The §5 "highest-value next query" was a discriminating case for R3 that the read-only sweep could not manufacture. The operator
+pre-registered a sharper one and ran it: **hold the constraint's structural reality fixed and vary only the *presentation*
+(`authority_grounding`) — can `cs_pattern` be moved without changing what actually binds?** Pre-registered mapping:
+re-presenting-alone-moves-it → tracks presentation → **orientation (one-seat holds)**; moves-only-when-binding-structure-moves →
+tracks structure → **content (one-seat falls at P4)**. Operator staked prediction: **content**. Operator falsifier: if the per-type
+false-X checks are authored-vs-authored with no independent substrate, grounding is encoded legitimation → **orientation**.
+
+**Witness** (`evidence/probe_r3_presentation_vs_structure.pl`, `evidence/out_r3_presentation_vs_structure_flash.txt`; flash;
+`with_overlay` verified-restore; throwaway process; corpus untouched):
+```
+ARM 1  ai_governance… (natural_law_constraint, AG=self_enforcing, beneficiary present)
+  (P) vary PRESENTATION (AG), hold structure:  cs_pattern MOVES
+      self_enforcing→natural_law_constraint | lineage→no_pattern_match | practice→implicit_practice | diffuse_epistemic→epistemic_consensus
+  (S) vary STRUCTURE (remove beneficiary), hold AG=self_enforcing:  cs_pattern FROZEN at natural_law_constraint; only cs_verdict drops (FNL→none)
+ARM 2  abrahamic_covenant… (interpretive_accretion, no baseline verdict)
+  (S) vary STRUCTURE (suppression_requirement 0.05↔0.50), hold AG:  cs_pattern FROZEN at interpretive_accretion; cs_verdict toggles (false_interpretive_accretion↔none)
+  (P) vary PRESENTATION (AG:=self_enforcing), hold structure:  cs_pattern MOVES (interpretive_accretion→natural_law_constraint)
+RESTORED == baseline (restore verified).
+```
+
+**Code-fact established (settled, not awaiting a ruling):**
+1. `cs_pattern`/`cs_classify` (cs_pattern_detection.pl:108–169) is a **pure function of the authored presentation labels** (`cs_kernel_codification`, `cs_authority_grounding`) and is **structurally blind to what binds** (metrics, beneficiary, coordination). Re-presenting alone moves it; varying the binding reality does not.
+2. The thing that tracks structure is the **`cs_verdict` (false-X) layer**, which **audits the presentation-pattern against an authored structural datum** — and the cross-check is **directional**: grounding-claim is audited against the metric/beneficiary reality, **never the reverse**. The engine treats the metric axis as the *reference reality* and the grounding axis as the *audited claim*.
+3. Every input to the false-X layer is **authored** — `constraint_metric`, `coordination_type`, `constraint_beneficiary`, and the `domain_priors:requires_active_enforcement`/`emerges_naturally` flags (witnessed as per-constraint authored facts in the testset `.pl` files, e.g. `testsets_flash/climate_mitigation_…:115`). No false-X path consults the computed `constraint_signature/2`.
+
+**What the pre-registered mapping returns:** `cs_pattern` moves under presentation-only variation and is frozen under
+structure-only variation → **tracks presentation → ORIENTATION → one-seat holds.** The operator's staked "content" prediction is
+**falsified**; the per-type false-X falsifiability that was cited as content-evidence is, by fact (2), the **external-face
+honesty-check** (offered legitimation audited against the binding reality) — observationally the same firing, but its role is
+pose-detection, not content-classification. This is the wedge §5 said was *not* in the 2×2 or any single clause: it lives in the
+**cross-check direction + the classifier's blindness to structure**, which the 2×2 (input-independence only) could not see.
+
+**Residuals preserved (NOT resolved here):**
+- **R1-coupling stands, but does not rescue content.** The structural reality the false-X audits against is itself authored, so the
+  *strength* of the external-face check is governed by R1 (role-level-independent vs authored-is-authored). But the classifier-layer
+  result (fact 1) holds **regardless of R1**: `cs_pattern` is presentation-tracking whether or not the audited metric counts as
+  independent substrate. So R3 leans orientation *independent of* R1; R1 only sets how trustworthy the pose-detector is.
+- **v7 tension is the operator's to reconcile.** `deferential_realism_paper_v7.md` Axiom 7 / Theorem 7 declare the committer a
+  **co-equal second axis with detection independence**. The engine here treats the grounding/committer axis as a **subordinated,
+  audited presentation**, not a co-equal content reference. Either v7's "second axis" *is* the orientation face formalized (→ no
+  conflict, one-seat holds) or the engine under-implements the paper (→ a build gap, not a falsifier). This is a denotation/declaration
+  call about what v7 means, not a code-fact — left to the operator.
+
+**R3 remains the operator's declared seat.** This probe supplies the discriminating *evidence* the tree was missing; it does not
+take the seat. On the evidence, the **engine architecture votes orientation (one-seat holds)** — the grounding axis is encoded as the
+audited claim, the metric/beneficiary reality as the seat. The corrected R3 statement, and the v7 reconciliation, are the operator's
+to author against this return.
