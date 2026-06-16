@@ -45,6 +45,39 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-16 — Orientation is a deferred Ω_E, NOT Ω_P (OQ-133 relabel) + verification-depth discipline
+**Files:** ISSUES.md, docs/technical/build_discipline.md, CLAUDE.md
+**Tier:** correction-key
+
+**The relabel.** OQ-133 was filed `Ω-type: Ω_P (orientation)`. Resolved against
+`docs/omega_variables.md`'s own definitions, that is wrong: Ω_P is a value judgment that differs
+*legitimately across stakeholders* (resolved by those bearing the cost deciding); **orientation**
+(a concealment's enclosure vs survival vs defense) is a **fact about the actor's actual stance** —
+observers differ in *access*, not legitimately in *values* — whose named resolution operation is
+*world-observation* (the longitudinal Cor-3 confrontation-response signature = the paradigm Ω_E
+operation). So orientation is a **deferred Ω_E**, status: awaits the t0-anchor tier (OQ-133 itself).
+**Why it was load-bearing, not taxonomic:** the Ω-type field routes resolution — `Ω_P` routes to
+"someone bearing the cost declares it," which licenses the encloser to **self-certify as a defender
+by fiat** (the concealment move blessed by the routing); `Ω_E` withholds that license, forcing the
+verdict to be earned from the honor/reabsorb pattern. **Boundary (the Ω_E claim's falsifier):** the
+signature tracks orientation only absent strategic gaming (a sophisticated encloser can *perform*
+honoring, forging the longitudinal witness); under gaming it falls **outside the framework entirely**
+(`omega_variables.md` Mechanism Boundaries exclude strategic gaming) — Ω_E in the non-gaming regime,
+out-of-framework under gaming, **never Ω_P.** Do NOT collapse this with `contested_open` (rule 11),
+which IS a genuine Ω_P/Ω_C (legitimate dispute about the founding problem; engine abstains): same
+surface OPEN, opposite type/operation (route-to-deferred-measurement vs abstain-as-preference).
+
+**The discipline added (CLAUDE.md synthesis-list (5) + `build_discipline.md` → *When to stop
+verifying*).** "Verified enough" is a seat with no floor (`seat-theorem-v1.md` §8); the checkable
+substitute is the conceal-an-open check: for each verdict/name, name a tier-available falsifier or
+**downgrade to OPEN = route to a typed Ω**. This is `omega_variables.md`'s structural-convergence
+stopping rule — but cite its **cost-benefit** line, not the stable-marriage terminus, because the
+verification regress is *generative* (manufactures new dials), which the doc's Mechanism Boundary
+excludes. Provenance: the `q6_crosscheck` review arc; the confident "Ω_P" was itself a concealed
+open this check would have caught.
+
+---
+
 ## 2026-06-16 — R5 Q6 synchronic crosscheck completed: `q6_crosscheck/3` replaces `zombie_piton_crosscheck/2`
 **Files:** prolog/stakeholder_seats.pl, prolog/report_generator.pl, prolog/narrative_ontology.pl, python/generate_constraint_pl.py, python/linter.py, ISSUES.md
 **Tier:** landed

@@ -6939,10 +6939,24 @@ fork is fully retired (not just for new code). Cross-ref: AGENTS.md §3 (the doc
 
 ---
 
-## OQ-133 — Confrontation-response signature: the diachronic tier that gives Ω_P (orientation) its only traction
+## OQ-133 — Confrontation-response signature: the diachronic tier that gives orientation (a deferred Ω_E) its only traction
 
-**Ω-type:** Ω_P (orientation — out-of-band of the artifact, self-opaque to the holder; the synchronic
-crosscheck establishes the footprint but cannot orient it).
+**Ω-type:** Ω_E — deferred (orientation: cover vs survival vs defense). **Corrected 2026-06-16 from a
+prior Ω_P mislabel** (resolved against `docs/omega_variables.md`'s own definitions, not the loose
+uke_think Ω_P). Orientation is NOT Ω_P: Ω_P is a value judgment that differs *legitimately across
+stakeholders* (resolved by those bearing the cost deciding), whereas orientation is a **fact about the
+concealer's actual stance** — observers differ in *access*, not legitimately in *values*. Its named
+resolution operation is *world-observation* (the longitudinal confrontation-response signature below =
+the paradigm Ω_E operation), so it is a deferred Ω_E, status: awaits the t0-anchor tier. **The
+mislabel was load-bearing:** routing orientation to Ω_P makes its resolution "someone bearing the cost
+declares it" — which licenses the encloser to self-certify as a defender by fiat (the concealment move
+blessed by the routing); the Ω_E routing withholds that license, forcing the verdict to be earned from
+the honor/reabsorb pattern. **Boundary (the Ω_E claim's falsifier):** the signature tracks orientation
+only absent strategic gaming — a sophisticated encloser can *perform* honoring (forge the longitudinal
+witness as a deepfake forges the index); under gaming the operation fails and orientation falls
+**outside the framework entirely** (`omega_variables.md` Mechanism Boundaries exclude strategic gaming)
+— Ω_E in the non-gaming regime, out-of-framework under gaming, **never Ω_P.** Full typing rationale:
+`docs/technical/build_discipline.md` → *When to stop verifying*.
 
 **Status:** future — filed 2026-06-16. Deferred tier; gated behind the decay-only / off-live-path
 problems in `docs/repair_dynamics.md` §6 and the temporal-series threads (OQ-83/OQ-109/OQ-110). Not
@@ -6963,7 +6977,8 @@ reabsorption is enclosure; drift + honoring is a seat correcting itself — same
 orientation. The signal that actually discriminates orientation is the **response to confrontation**
 (Corollary 3 — the t3 honor-vs-reabsorb move), one layer PAST trajectory. So the deferred tier's
 target is the **confrontation-response signature**, NOT the trajectory. Naming it this way makes the
-deferral principled (it is the only tier where Ω_P gets any traction) and tells the t0-anchor /
+deferral principled (it is the only tier where orientation — the deferred Ω_E, see Ω-type above —
+gets any traction: the tier where it is *witnessed* rather than *declared*) and tells the t0-anchor /
 `transition_paths` machinery what it is FOR. A trajectory tier built without this would reach movement
 and falsely believe it reached orientation.
 

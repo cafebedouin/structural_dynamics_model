@@ -389,8 +389,24 @@ hedging-as-rigor: "held open / both readings possible" is earned only when no fa
 specified; if a kill condition is available, COMMIT and attach the kill condition** (prose commits,
 uncertainty lives in the falsification apparatus). Generation-time trigger: drafting a
 both-readings passage IS the cue to check whether commitment-plus-falsifier is available — don't
-wait for review to catch the flinch. Full version:
-`docs/technical/build_discipline.md` → *Over-confident moves on the synthesis side*.
+wait for review to catch the flinch. **(5) When to stop verifying — this is the Omega framework's
+structural-convergence rule (`docs/omega_variables.md`), not a new one. "Verified enough" is a seat
+with no floor (Seat-Theorem §8), so the stopping rule is not "stop when verified" but "stop when the
+next pass costs more than being wrong, AND every open is DECLARED not concealed." The second clause
+is the only checkable one: for each verdict/name you (or the engine) emit, name a tier-available
+falsifier or downgrade it to OPEN — which is "route it to a typed Ω", and TYPE IT AGAINST
+`omega_variables.md`'s definitions, not loosely: an *orientation* gloss (enclosure vs defense) is a
+**deferred Ω_E** — a fact about the actor's stance you can't yet witness, resolved by longitudinal
+world-observation (the OQ-133 confrontation-response signature), NOT an Ω_P; calling it Ω_P would let
+the actor self-certify its own orientation by fiat (the concealment move blessed by the routing). A
+genuinely *contested origin* IS Ω_P/Ω_C (legitimate cross-stakeholder dispute; engine abstains) — do
+not collapse the two: same surface OPEN, opposite type (route-to-deferred-measurement vs
+abstain-as-preference). An undefined *tier-boundary* is Ω_C. A name that claims more than its tier can
+witness (an orientation gloss on a structural mismatch; a trajectory word on a synchronic read) is a
+concealed open, not a finding. Pass-count is not the
+variable; whether the stopping point is declared is. One pass with opens marked beats eight that ship
+a confident gloss over the unwitnessable.** Full version: `docs/technical/build_discipline.md` →
+*Over-confident moves on the synthesis side* and *When to stop verifying*.
 
 ## Critical Distinctions
 

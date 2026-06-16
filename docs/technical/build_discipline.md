@@ -250,6 +250,113 @@ line edits** — edits propose substitutions inside your frame; questions force 
 
 ---
 
+## When to stop verifying: the verification-depth seat and the conceal-an-open check
+
+**"Verified enough" has no seat-free answer — so the honest stopping rule is not "stop when
+verified" but "stop when the next pass costs more than being wrong about what it would catch, *and*
+every still-open thing is declared rather than concealed."** Verification depth is a seat
+(`docs/seat-theorem-v1.md` §8: no level is innocent; climbing buys a new σ with the same defect, not
+neutrality). There is no depth the facts *themselves* tell you to stop at, so a run of rewrites is
+**not** convergence toward a correct stopping point that one-more-pass would reach. Each pass moves
+the boundary between "live dial I'm still deciding" and "background I now treat as settled" — it is
+the framing seat being **reoccupied**, and it can be reoccupied again (there is always a next pass
+that notices a thing the last one had bundled into background). The regress is real; do not narrate
+it as progress toward closure.
+
+**This is the Omega framework's stopping rule, not a new one — cite it, do not fork it
+(`docs/omega_variables.md`).** Clause 1 is the **cost-benefit** line of "When Reasoning Stops" — *"the
+next possible refinement would cost more than it gains"* — **not** the stable-marriage
+*structural-convergence* terminus in the same paragraph: that terminus assumes a fixed option set
+(the doc's own Mechanism Boundaries: "no dynamic generation of new options mid-process"), and the
+verification-depth regress is **generative** — each pass manufactures a *new* dial (orientation was
+not among pass seven's options; the regress is `seat-theorem` §8's framing-regress, which generates).
+Cite the cost line, which survives generativity; the structural-convergence terminus does not apply.
+
+**"downgrade to OPEN" is literally "route to a typed Ω", and the Ω-type must be read against the
+doc's definitions, not assigned loosely** (the load-bearing classification, corrected 2026-06-16):
+- An unwitnessable **orientation** gloss (enclosure vs defense vs survival-frame) is a **deferred Ω_E**,
+  **not Ω_P.** Ω_P is a value judgment that differs *legitimately across stakeholders* (resolved by
+  those bearing the cost deciding). Orientation is a **fact about the concealer's actual stance** —
+  observers differ in *access*, not legitimately in *values* — and its named resolution operation is
+  *world-observation*: the Corollary-3 honor-vs-reabsorb confrontation signature over time
+  (longitudinal — the paradigm Ω_E operation per `omega_variables.md`'s operation-locus annotation;
+  filed as **OQ-133**, deps-linked to the diachronic tier OQ-83/109/110). **The stake is not
+  taxonomic:** routing orientation to Ω_P would make its resolution "someone bearing the cost
+  declares it," which hands the encloser the right to **self-certify as a defender by fiat** — the
+  no-seat pose, the concealment move blessed by the routing. The Ω_E routing is exactly what
+  *withholds* that license: orientation cannot be declared, it must earn its verdict from the
+  honor/reabsorb pattern. *Falsifier (the Ω_E claim is hostage to it):* the signature tracks
+  orientation only absent strategic gaming — a sophisticated encloser can **perform** honoring (drop
+  the cover theatrically, keep extracting), forging the longitudinal witness the way a deepfake forges
+  the index. Under gaming the operation fails and orientation falls **outside the framework entirely**
+  (Mechanism Boundaries exclude "strategic gaming between components") — Ω_E in the non-gaming regime,
+  out-of-framework under gaming, **never Ω_P in either case.**
+- A genuinely **contested origin** (`contested_open`, rule 11) *is* an Ω_P/Ω_C — a real
+  cross-stakeholder dispute about what the founding problem was; the engine correctly **abstains**. Do
+  **not** collapse it with the orientation case: same surface ("OPEN"), opposite type, opposite
+  operation — *abstain-as-preference* (a question that is preference/framing-shaped) vs
+  *route-to-deferred-measurement* (a question with a fact and a witness not yet reachable).
+- An undefined **tier boundary** is an **Ω_C**.
+
+Three things this section adds *on top of* the framework, so the cross-reference is not pure
+restatement: (a) the **seat-theorem layer** — the stopping point is *itself* a seat, so clause 2
+("declared not concealed", Cor 2a) is forced, which the structural-convergence reading does not
+frame; (b) the **mechanization** — run classify-and-route as a check on the engine's *own emitted
+verdicts*, not only on stalled reasoning; (c) the **generativity boundary** — the regress manufactures
+options, so the cross-reference holds only at the cost-benefit reading and the build-side case sits
+*at/past* the doc's declared mechanism boundary, a sharper scoping than "it was already in the doc."
+
+**The second clause is the whole difference, and unlike the first it is *checkable*.** The
+cost/benefit half of the rule is itself a seat (you are estimating the cost of being wrong about an
+unknown). But "are the opens declared or concealed" terminates: **for each verdict the engine — or
+the synthesis — emits, name the tier-available falsifier, and check whether the name claims more
+than the tier can witness. No tier-available falsifier ⇒ the name asserts an unfalsifiable-at-this-
+tier claim ⇒ downgrade it to OPEN** (= route it to a typed Ω; `docs/omega_variables.md`). "Name a
+falsifier or downgrade to OPEN" is decidable; "is this verified enough" is not. The depth seat does
+not close, but the **did-I-conceal-an-open** seat does — it is checkable the way the seat
+*declaration* law is checkable while the honoring downstream of it is not (`docs/seat-theorem-v1.md`,
+Cor 2a). Run this single pass with a falsifier pointed at the engine's own outputs and it terminates;
+it is cheaper than another rewrite and catches the defect class that rewrites chase by hand.
+
+**Witnessed instance (this document's own build, the `q6_crosscheck` plan).** The cell
+`live_claim_vs_snare_present` was glossed "cover-story — the highest-value case." "Cover-story" is an
+*orientation* claim — a **deferred Ω_E**, not Ω_P (there is a fact of the concealer's stance; the
+synchronic tier just cannot *reach* it), and the synchronic tier has **no** fact distinguishing a
+cover story from a survival frame or a defensive concealment — the structural footprint is identical
+across all three. So the gloss asserted an unfalsifiable-at-this-tier claim: the engine claiming to
+witness a seat it cannot occupy (and, worse than mere absence, an orientation it could only have by
+*declaring* it — the encloser's self-certification, see the Ω-typing above). It took
+eight review passes to pull "orientation" back out of background into a live dial. A single
+falsifier-per-verdict pass at pass five would have caught it: run "what would falsify this name?" on
+"cover-story" and it fails immediately. **The defect that would have shipped was not the missing
+orientation layer — that is genuinely hard and correctly deferred. It was the *concealment* of the
+missing layer: a confident gloss where an OPEN belonged.** The conversation's yield was not a ninth
+rewrite's worth of correctness; it was converting one *concealed* seat into a *declared* one
+("orientation is not witnessed at this tier") — a thing pass five could have written down with no new
+machinery, had the question been live.
+
+**The two failure modes are symmetric, and pass-count is not the variable.** *Shallow concealment:*
+"looks done" sets the verification threshold at the first green with no marker that a threshold was
+set — the output ships as fact-decided when it was depth-decided at the shallowest setting. *Deep
+concealment:* "I'm still verifying" becomes the story that defers a declaration you could already
+make — depth as its own flinch (drafting another both-readings-safe pass instead of committing the
+claim-plus-falsifier and shipping). Not every pass in a long run is load-bearing; some are the seat
+declining to declare itself done. **The honest position is not "go deeper" — it is "declare the
+stopping point."** One pass with the opens marked beats eight passes that ship a confident gloss over
+the one thing the system cannot see. Triage test for a run of rewrites: did each pass catch a
+*concealed-seat* defect (earning its cost) or merely tighten an already-correct claim (cost outran
+catch)? If a conversation finally worked, it usually changed *what you were looking for* — from "is
+this right" to "is this claiming more than it witnesses" — not how deep you went.
+
+**Forward step (load-bearing, not yet built): make the check mechanical.** The falsifier-per-verdict
+test is not a thing you do *to* a plan; it is a **lint the engine should run on itself** — every
+emitted verdict name carries, or fails to carry, a tier-available falsifier, and the ones that cannot
+get **auto-downgraded to OPEN**. That closes the conceal-an-open question for the whole verdict class
+by making it mechanical, leaving the genuinely uncheckable part (orientation; the honoring) declared
+and deferred instead of silently shipped. This is a declared absence (a capability the engine does
+not yet have) → log it in `docs/design/design_gaps.md` and/or mint an OQ; do not treat the absence as
+done because the principle is written here.
+
 ## Pattern 2 — One-canonical-thing-became-two (the silent fork)
 
 **Shape:** a file or record is copied to a scratch/test location, possibly edited, and now
