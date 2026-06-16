@@ -6892,9 +6892,36 @@ subobject-classifier audit (4-point discrete site is trivially Boolean; non-line
 the open question), `constraint_indexing:site_contexts_product/1` (the existing site-switch
 precedent and its scope-exclusion calibration).
 
+## OQ-132 — Python path consolidation: finish the migration + settle package-vs-`paths.py`
+
+**Ω-type:** Ω_C (design choice — import ergonomics / repo structure).
+
+**Status:** open — filed 2026-06-16. Phase 1 LANDED: `python/paths.py` is the canonical
+source of truth (depth-agnostic `pyproject.toml`-marker root finder), the 3 hardcoded-`/home/scott`
+absolute-path files fixed onto it, AGENTS.md §3 documents it + the byte-identical nested-script
+bootstrap. Witnessed: paths.py resolves == the old hardcoded values; bootstrap finds the same root
+from python/, audits/, sweeps/, tests/, a/b/c/, agent/.
+
+**Priority:** 4
+
+**The remaining work (held pending a ruling).** ~69 scripts still re-derive the root inline under
+4 names (`REPO_ROOT`/`ROOT`/`REPO`/`BASE_DIR`) × 4 depth-dependent expressions. **Do not migrate
+them yet** — the migration TARGET depends on an unsettled decision:
+- **(A) Keep `paths.py` + the sentinel bootstrap** (current Phase-1 path). The bootstrap is
+  depth-agnostic and copy-safe, so the fork is already killed for new code; migration is mechanical.
+- **(B) Go full-package** (`pyproject.toml` currently has `[tool.poetry] package-mode = false`;
+  flip it, add a package layout, `pip install -e .`) → `from rootpkg.paths import …` with **no
+  bootstrap anywhere**. Dissolves the trap instead of relocating it, but changes how every script is
+  invoked. The reviewer's load-bearing flag (2026-06-16): migrating 69 files onto a bootstrap you'd
+  later delete under (B) is throwaway churn — settle A-vs-B FIRST.
+
+**What resolution would change:** the ~69 inline derivations migrate to one import; the 4-name/4-depth
+fork is fully retired (not just for new code). Cross-ref: AGENTS.md §3 (the documented canonical),
+`python/paths.py`.
+
 ---
 
-*Last updated: 2026-06-15. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-06-16. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

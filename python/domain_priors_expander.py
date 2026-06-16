@@ -17,12 +17,13 @@ from collections import defaultdict
 from pathlib import Path
 
 from shared.loader import read_config
+from paths import PROLOG_DIR, OUTPUTS
 
-BASE_DIR = Path("/home/scott/bin/structural_dynamics_model/prolog")
+BASE_DIR = PROLOG_DIR
 TESTSETS_DIR = BASE_DIR / 'testsets'
 DOMAIN_REGISTRY = BASE_DIR / 'domain_registry.pl'
 OUTPUT_FILE = BASE_DIR / 'domain_priors_expanded.pl'
-STATS_OUTPUT = Path("/home/scott/bin/structural_dynamics_model/outputs/domain_corpus_stats.json")
+STATS_OUTPUT = OUTPUTS / "domain_corpus_stats.json"
 
 _config = read_config()
 ROPE_EXTRACTION_CEILING = _config.get('rope_extraction_ceiling', 0.15)

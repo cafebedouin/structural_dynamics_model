@@ -210,6 +210,29 @@ The linter must be imported as a library — it cannot be run directly as
 `python3 python/linter.py`; it exposes `lint_file(filepath)` and
 `lint_dir(directory)`.
 
+**Filesystem paths — import from `python/paths.py`, never re-derive.** It is the
+single source of truth: `REPO_ROOT, PROLOG_DIR, TESTSETS_DIR, JSON_DIR, OUTPUTS,
+SCHEMAS, PROMPTS, DOCS, AUDITS, AGENT_DIR, PYTHON_DIR`. Do **not** write
+`Path(__file__).resolve().parents[N]` (depth-fragile — the wrong N silently yields
+the wrong root) and never hardcode an absolute `/home/...` path. Root detection
+walks up to the `pyproject.toml` marker, so it is depth-agnostic and survives
+worktrees/tarball checkouts (unlike `.git`).
+
+- Top-level `python/foo.py` (run as `python3 python/foo.py`): `from paths import REPO_ROOT, PROLOG_DIR, OUTPUTS`.
+- Nested `python/audits|sweeps|tests/foo.py` (any depth): prepend the **byte-identical, depth-agnostic** bootstrap — copy it from any neighbor at any depth and it still resolves correctly (there is no `parents[N]` to copy wrong):
+
+  ```python
+  import sys
+  from pathlib import Path
+  _here = Path(__file__).resolve()
+  _root = next(c for c in (_here, *_here.parents) if (c / "pyproject.toml").is_file())
+  sys.path.insert(0, str(_root / "python"))
+  from paths import REPO_ROOT, PROLOG_DIR, OUTPUTS
+  ```
+
+(~69 older scripts still re-derive the root inline; migrating them — and the
+package-vs-`paths.py` question that decides the target — is tracked as OQ-132.)
+
 ---
 
 ## 4. Architectural Rules and Invariants

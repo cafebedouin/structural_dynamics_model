@@ -7,8 +7,13 @@ Runs A2, A3, B1, B2, B3 and produces the full 6-variant comparison table.
 import subprocess, json, sys, os, tempfile, time, math
 from pathlib import Path
 
-PROLOG_DIR = Path('/home/scott/bin/structural_dynamics_model/prolog')
-OUT_DIR    = Path('/home/scott/bin/structural_dynamics_model/outputs')
+# repo-root bootstrap (depth-agnostic; byte-identical in every nested script)
+_here = Path(__file__).resolve()
+_root = next(c for c in (_here, *_here.parents) if (c / "pyproject.toml").is_file())
+sys.path.insert(0, str(_root / "python"))
+from paths import PROLOG_DIR, OUTPUTS
+
+OUT_DIR    = OUTPUTS
 BASELINE   = OUT_DIR / 'alt3k_sigmoid.json'
 
 OVERLAY_TEMPLATE = """\

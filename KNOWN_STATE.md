@@ -45,6 +45,20 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-16 — `python/paths.py` is the canonical path source (depth-agnostic); 3 absolute-path bugs fixed
+**Files:** python/paths.py, python/domain_priors_expander.py, python/sweeps/range_sweep.py, python/tests/diff_cut_proof.py, AGENTS.md, ISSUES.md
+**Tier:** tripwire
+
+New code MUST import filesystem roots from `python/paths.py` (`REPO_ROOT, PROLOG_DIR, TESTSETS_DIR,
+JSON_DIR, OUTPUTS, SCHEMAS, PROMPTS, ...`) — never re-derive with `Path(__file__).parents[N]`
+(depth-fragile) or hardcode `/home/...`. Root detection walks up to the `pyproject.toml` marker
+(depth-agnostic; survives worktrees where `.git` is a file, and tarball/CI). Nested scripts use the
+byte-identical bootstrap in AGENTS.md §3 (same sentinel walk → copy-safe from any depth). Fixed the
+3 files that hardcoded `/home/scott/...` (domain_priors_expander, sweeps/range_sweep,
+tests/diff_cut_proof). Witnessed: paths.py resolves == the old hardcoded values; bootstrap finds the
+same root from 6 depths. ~69 scripts still re-derive inline — migrating them + the
+package-vs-`paths.py` decision is OQ-132 (held; do not bulk-migrate before A-vs-B is ruled).
+
 ## 2026-06-15 — OQ-131 Q1 (Ω_E) measured: 6-vs-4 observer site is consonant-suppressing, NOT a combinatorial artifact
 **Files:** prolog/constraint_indexing.pl, prolog/config.pl, prolog/config_schema.pl, prolog/config_validation.pl, python/audits/oq131_six_observer_probe.py, audits/2026-06-15_oq131_six_observer/, ISSUES.md
 **Tier:** landed

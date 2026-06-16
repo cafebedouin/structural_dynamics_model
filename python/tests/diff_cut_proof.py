@@ -6,8 +6,13 @@ Compares sheaf/presheaf classification vector (h0 field) constraint-by-constrain
 import subprocess, json, sys, os, tempfile, time
 from pathlib import Path
 
-PROLOG_DIR = Path('/home/scott/bin/structural_dynamics_model/prolog')
-OUT_DIR    = Path('/home/scott/bin/structural_dynamics_model/outputs')
+# repo-root bootstrap (depth-agnostic; byte-identical in every nested script)
+_here = Path(__file__).resolve()
+_root = next(c for c in (_here, *_here.parents) if (c / "pyproject.toml").is_file())
+sys.path.insert(0, str(_root / "python"))
+from paths import PROLOG_DIR, OUTPUTS
+
+OUT_DIR    = OUTPUTS
 
 # Identical overlay to test_battery.py but with sigmoid (default, no retract needed)
 OVERLAY = """\
