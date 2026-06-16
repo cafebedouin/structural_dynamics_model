@@ -337,21 +337,29 @@ mandatrophy_only_report(C) :-
         format_mandatrophy_gap(C, powerless, institutional)
     ;   true
     ),
-    % R5 zombie-flag crosscheck (OQ-109 B3, 2026-06-12 — A7 RECOVERY, extends
-    % this surface; the Phase-A primitive stakeholder_seats:zombie_piton_crosscheck/2
-    % is the single source, no parallel path). Prints on the three non-neither
-    % verdicts; silent on neither. This is the consumer the mandatrophy
-    % apparatus lost at the format migration (OQ-83 A7): authored genealogy
-    % (founding_problem_status=dead /\ disappearance_verdict=world_rearranges)
-    % cross-checked against the computed piton read.
+    % R5 Q6 synchronic crosscheck (OQ-83 crosscheck-completion, 2026-06-16 —
+    % extends the OQ-109 B3 A7-RECOVERY surface; the Phase-A primitive
+    % stakeholder_seats:q6_crosscheck/3 is the single source, no parallel path).
+    % Prints the (status × computed-signature) Cell + the daylight qualifier;
+    % silent only when the authored side is absent (q6_unmeasured). This is the
+    % consumer the mandatrophy apparatus lost at the format migration (OQ-83 A7):
+    % authored genealogy (founding_problem_status) cross-checked against the
+    % computed present structure (dr_type at the default analytical context).
     r5_zombie_crosscheck_line(C).
 
 %% r5_zombie_crosscheck_line(+C)
+%  TIER LIMIT carried to the read site (defense-in-depth; the load-bearing copy
+%  is the doc-comment on q6_crosscheck/3): a Cell is a STRUCTURAL MISMATCH, not a
+%  verdict. live_claim_vs_snare_present must not be read downstream as a
+%  cover-story finding — orientation (cover / survival / defense) is NOT witnessed
+%  at this tier. In the merge window daylight ships unstated, so this label stands
+%  in for the absent qualifier on the highest-value cell.
 r5_zombie_crosscheck_line(C) :-
-    stakeholder_seats:zombie_piton_crosscheck(C, V),
-    (   V == neither
-    ->  true
-    ;   format('  ~w: R5 ZOMBIE CROSSCHECK: ~w~n', [C, V])
+    stakeholder_seats:q6_crosscheck(C, Cell, Daylight),
+    (   Cell == q6_unmeasured
+    ->  true   % authored side absent — nothing to crosscheck
+    ;   format('  ~w: R5 Q6 CROSSCHECK: ~w ~w  (structural mismatch; orientation not witnessed at this tier)~n',
+               [C, Cell, Daylight])
     ).
 
 perspectival_gap_audit(C) :-

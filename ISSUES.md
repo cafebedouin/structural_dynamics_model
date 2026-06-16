@@ -3782,6 +3782,24 @@ role-derived beneficiary/victim, excluded derives NOTHING); step 3 engine layer
 resolved silence-is-correct → 4c pilot partition (above). OQ-84 resolved in-pass. Stage C
 (OQ-92) made the live prompt dual-surface additively; the R4 control arm stayed intact.
 
+**Follow-through landing (2026-06-16): R5 Q6 synchronic crosscheck COMPLETED.** The A7-recovered
+`zombie_piton_crosscheck/2` (dead × piton only, single confrontation) was replaced by
+`stakeholder_seats:q6_crosscheck/3` — the full status×computed-signature matrix, commentary-grade
+(NEVER overrides dr_type; sole caller `report_generator.pl:r5_zombie_crosscheck_line/1`). Four
+distinct non-verdict buckets kept separate (`q6_unmeasured` authored-absent / `q6_signature_unknown`
+computed-absent / `q6_unclassified` present-fell-through / out-of-domain → lint fail-loud). Cell
+names commit only to the synchronic mismatch — no trajectory or orientation vocabulary (the
+tier cannot witness Ω_P). Daylight qualifier axis (`founding_problem_corroboration_class/2`,
+authored atom; lint-gated) SHIPS INERT — all with-block stories read `daylight(unstated)` until a
+bounded R5 backfill authors the class; **the backfill is the OPEN graduation step for the daylight
+axis** (the status×signature matrix is fully live without it). Load-bearing witness settled:
+`dr_type/2` resolves at `default_context` = analytical perspective (constraint_indexing.pl:156–161),
+closing the proxy gap — `q6_unclassified` is WITNESSED 0 on the live corpus (no mountain/scaffold/
+naturalized at analytical) but corpus-REACHABLE on the twins (haiku=1, flash=5, all `live × mountain`)
+so the catch-all is real, not synthetic-only. Determinism (1 solution/story) + mode-robustness
+(bound-Cell census returns the genuine set, not all stories) witnessed on all 3 corpora.
+Audit + witnesses: `audits/2026-06-16_q6_crosscheck_completion/`. Deferred diachronic tier → **OQ-133**.
+
 **Origin:** 2026-06-06/07 (feasibility → five-model review → operator mountain-and-frame
 re-read → audit-then-plan). Closed 2026-06-11.
 
@@ -6918,6 +6936,42 @@ them yet** — the migration TARGET depends on an unsettled decision:
 **What resolution would change:** the ~69 inline derivations migrate to one import; the 4-name/4-depth
 fork is fully retired (not just for new code). Cross-ref: AGENTS.md §3 (the documented canonical),
 `python/paths.py`.
+
+---
+
+## OQ-133 — Confrontation-response signature: the diachronic tier that gives Ω_P (orientation) its only traction
+
+**Ω-type:** Ω_P (orientation — out-of-band of the artifact, self-opaque to the holder; the synchronic
+crosscheck establishes the footprint but cannot orient it).
+
+**Status:** future — filed 2026-06-16. Deferred tier; gated behind the decay-only / off-live-path
+problems in `docs/repair_dynamics.md` §6 and the temporal-series threads (OQ-83/OQ-109/OQ-110). Not
+slated for near-term work, kept searchable + full-bodied so it can be revived when the t0-anchor
+machinery is ready.
+
+**Priority:** 5
+
+**Deps:** blocked_on OQ-109, blocked_on OQ-110 (the temporal series / snapshot_type / transition_paths
+machinery this tier would wire `founding_problem_status` into as the `t0` anchor); bundled_with OQ-83
+(the synchronic `q6_crosscheck/3` establishes the `live × snare` structural footprint this tier would
+then try to orient).
+
+**The question.** The synchronic Q6 crosscheck (OQ-83 follow-through, landed 2026-06-16) sees
+status × present-type but NOT the path and NOT why the mismatch exists. The tempting next tier is the
+**trajectory** (origin→present movement) — but trajectory STILL underdetermines orientation: drift +
+reabsorption is enclosure; drift + honoring is a seat correcting itself — same trajectory, opposite
+orientation. The signal that actually discriminates orientation is the **response to confrontation**
+(Corollary 3 — the t3 honor-vs-reabsorb move), one layer PAST trajectory. So the deferred tier's
+target is the **confrontation-response signature**, NOT the trajectory. Naming it this way makes the
+deferral principled (it is the only tier where Ω_P gets any traction) and tells the t0-anchor /
+`transition_paths` machinery what it is FOR. A trajectory tier built without this would reach movement
+and falsely believe it reached orientation.
+
+**What resolution would change.** Gives the engine a witnessed handle on orientation (cover vs survival
+vs defense) that the synchronic tier is forbidden by construction from delivering — converting
+`live_claim_vs_snare_present` from "structural mismatch, orientation unwitnessed" into a tier that can
+actually orient it via the confrontation response. Cross-ref: `docs/repair_dynamics.md` §6, the OQ-83
+follow-through landing note, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 ---
 

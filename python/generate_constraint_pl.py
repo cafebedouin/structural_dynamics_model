@@ -251,6 +251,8 @@ def _build_multifile_declarations(data):
         decls.append("narrative_ontology:disappearance_verdict/2")
     if sq_decl.get("founding_problem_status"):
         decls.append("narrative_ontology:founding_problem_status/2")
+    if sq_decl.get("founding_problem_corroboration_class"):
+        decls.append("narrative_ontology:founding_problem_corroboration_class/2")
     # OQ-92 receipt surface (step 3 Stage B)
     if data.get("gain_flow"):
         decls.append("narrative_ontology:stakeholder_gain_flow/2")
@@ -817,6 +819,14 @@ def generate_pl(data):
                 emit(f"narrative_ontology:disappearance_verdict({cid}, {sq['disappearance_verdict']}).")
             if sq.get("founding_problem_status"):
                 emit(f"narrative_ontology:founding_problem_status({cid}, {sq['founding_problem_status']}).")
+            # R5 daylight axis (q6 crosscheck qualifier). AUTHORED atom only —
+            # the founding_problem_corroboration PROSE above stays the human-readable
+            # basis; prolog reads this atom, never the prose. Conditional on authored
+            # presence (fail-closed): absent ⇒ stakeholder_seats:q6_daylight reports
+            # daylight(unstated). Populated by a bounded R5 backfill (human/interview
+            # judgment, NOT an automated parse).
+            if sq.get("founding_problem_corroboration_class"):
+                emit(f"narrative_ontology:founding_problem_corroboration_class({cid}, {sq['founding_problem_corroboration_class']}).")
             emit()
 
     # ------------------------------------------------------------------

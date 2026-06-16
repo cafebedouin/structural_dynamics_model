@@ -45,6 +45,30 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-16 — R5 Q6 synchronic crosscheck completed: `q6_crosscheck/3` replaces `zombie_piton_crosscheck/2`
+**Files:** prolog/stakeholder_seats.pl, prolog/report_generator.pl, prolog/narrative_ontology.pl, python/generate_constraint_pl.py, python/linter.py, ISSUES.md
+**Tier:** landed
+
+`stakeholder_seats:zombie_piton_crosscheck/2` (single dead×piton cell) is GONE — replaced by
+`q6_crosscheck(C, Cell, Daylight)`, the full status×computed-signature matrix. Commentary-grade
+(NEVER overrides `dr_type`; sole caller `report_generator.pl:r5_zombie_crosscheck_line/1`, NOT in
+json_report's per_constraint path so classification is byte-identical by construction). A fresh
+agent grepping for the old name or the old `corroborated_zombie` verdict will not find them —
+loud failure (predicate absent), so this is history, not a CLAUDE.md tripwire. Four non-verdict
+buckets kept distinct: `q6_unmeasured` (authored absent) / `q6_signature_unknown` (computed
+absent) / `q6_unclassified` (present, fell through — mountain/scaffold/naturalized × live/dead) /
+out-of-domain → lint fail-loud. `q6_cell` is a mode-robust if-then-else (computes into a fresh var,
+unifies last) — a multi-clause first-match with an unguarded catch-all let `q6_crosscheck(C,
+q6_unclassified, _)` spuriously match all 71 (caught by its own positive control). Witness:
+`dr_type/2` = `default_context` = analytical (constraint_indexing.pl:156–161); `q6_unclassified`
+WITNESSED 0 on live corpus but reachable on twins (haiku=1, flash=5, all `live × mountain`).
+Daylight axis (`founding_problem_corroboration_class/2`, authored atom, lint-gated) SHIPS INERT —
+all stories `daylight(unstated)` until a bounded R5 backfill lands (OPEN graduation step). Audit:
+`audits/2026-06-16_q6_crosscheck_completion/`. Tracking: OQ-83 follow-through; deferred diachronic
+(confrontation-response) tier → OQ-133.
+
+---
+
 ## 2026-06-16 — `python/paths.py` is the canonical path source (depth-agnostic); 3 absolute-path bugs fixed
 **Files:** python/paths.py, python/domain_priors_expander.py, python/sweeps/range_sweep.py, python/tests/diff_cut_proof.py, AGENTS.md, ISSUES.md
 **Tier:** tripwire

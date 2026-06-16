@@ -15,10 +15,9 @@
 % (declared simplification; secondary_role feeds contention + the compiler's
 % beneficiary/victim derivation, not d).
 %
-% Commentary-grade outputs (R3): consensus_provenance/2, zombie_piton_-
-% crosscheck/2, seat_perceived_vs_real/4 annotate; NOTHING here overrides
-% classification — an authored absence (excluded seats, missing genealogy)
-% never drives a type.
+% Commentary-grade outputs (R3): consensus_provenance/2, q6_crosscheck/3,
+% seat_perceived_vs_real/4 annotate; NOTHING here overrides classification —
+% an authored absence (excluded seats, missing genealogy) never drives a type.
 % ============================================================================
 
 :- module(stakeholder_seats, [
@@ -30,7 +29,7 @@
     in_contention/3,
     seat_perceived_vs_real/4,
     consensus_provenance/2,
-    zombie_piton_crosscheck/2,
+    q6_crosscheck/3,
     power_witness_count/3,
     power_witness_map/2
 ]).
@@ -165,24 +164,97 @@ consensus_provenance(C, Verdict) :-
     ;   Verdict = plural(UniqueTypes)
     ).
 
-%% zombie_piton_crosscheck(+C, -Verdict)
-%  R5 mismatch x computed piton, four-cell verdict (commentary-grade).
-%  The authored half reads ONLY the two atoms (mismatch-only consumption —
-%  the founding-problem narrative is never read); the computed half is the
-%  engine's dead-coordination detector at the default analytical context.
-zombie_piton_crosscheck(C, Verdict) :-
-    (   narrative_ontology:founding_problem_status(C, dead),
-        narrative_ontology:disappearance_verdict(C, world_rearranges)
-    ->  Authored = zombie
-    ;   Authored = no_zombie_flag
-    ),
-    (   drl_core:dr_type(C, piton)
-    ->  Computed = piton
-    ;   Computed = not_piton
-    ),
-    crosscheck_verdict(Authored, Computed, Verdict).
+%% q6_crosscheck(+C, -Cell, -Daylight)
+%  R5 Q6 SYNCHRONIC crosscheck (commentary-grade — NEVER overrides dr_type):
+%  the confrontation between the authored origin-claim (founding_problem_status,
+%  read mismatch-only — the founding-problem narrative is never read as a claim)
+%  and the engine's PRESENT computed structure (dr_type/2 at the default
+%  analytical context). Cell = the (status × signature) cell; Daylight = a
+%  SEPARATE qualifier axis carrying the authored corroboration class.
+%
+%  TIER LIMIT — read before using a Cell name downstream. This tier sees
+%  status=dead (authored, t-UNKNOWN) × piton (present); it does NOT see the
+%  path (origin→present movement — deferred to OQ-83/109/110) and it does NOT
+%  see WHY the mismatch exists. So the Cell names are the MISMATCH, never the
+%  movement and never the orientation:
+%    - NO trajectory vocabulary (drift/zombie) — that imports the origin→present
+%      computation this tier does not perform.
+%    - NO orientation vocabulary (cover-story/concealment/racket) — orientation
+%      is Ω_P (out-of-band of the artifact, self-opaque to the holder), hence
+%      UNWITNESSABLE at this tier by construction. live_claim_vs_snare_present
+%      is the structural footprint EQUALLY of a cover story, a survival/livability
+%      frame, or a defensive concealment; the Cell states the structural mismatch
+%      and its compatibility set, never which member produced it. A consumer that
+%      reads it as a cover-story VERDICT counterfeits a witness the engine cannot
+%      give. (This caveat lives HERE, at the clause, because q6_crosscheck/3 is
+%      exported — a direct querier bypasses the report's read-site label.)
+%
+%  UNIFORM-ARITY EDGE: q6_unmeasured (authored side absent) and
+%  q6_signature_unknown (computed side absent) still bind Daylight =
+%  daylight(unstated). That pairs an authored-absent verdict with an
+%  authored-absent qualifier — correct (both are absences), not a bug.
+%
+%  DAYLIGHT SHIPS INERT (paste-or-untag): the corroboration atom is authored by
+%  a bounded R5 backfill that has NOT landed; on merge no story has it, so every
+%  with-block story reads daylight(unstated). The status×signature matrix is fully
+%  live on merge and does NOT depend on the backfill.
+q6_crosscheck(C, Cell, daylight(Class)) :-
+    q6_cell(C, Cell),
+    q6_daylight(C, Class).
 
-crosscheck_verdict(zombie,         piton,     corroborated_zombie).
-crosscheck_verdict(zombie,         not_piton, authored_zombie_uncorroborated).
-crosscheck_verdict(no_zombie_flag, piton,     computed_piton_unflagged).
-crosscheck_verdict(no_zombie_flag, not_piton, neither).
+%% q6_cell(+C, -Cell)
+%  Ordered dispatch — ORDER IS LOAD-BEARING (two conditions can match one story;
+%  the earlier is the truer one). Precedence rule: SIDE-ABSENT dominates the
+%  contested collapse — a missing authored block or a missing computed side
+%  (unknown) is reported as such BEFORE contested_open, so a contested×unknown
+%  story reports q6_signature_unknown ("nothing to confront against"), never
+%  contested_open (which would falsely imply a computed side existed to decline
+%  on).
+%
+%  MODE-ROBUST by construction: the cell is computed into a FRESH variable and
+%  unified with the caller's Cell only at the end. This is deliberate — a single
+%  ordered if-then-else (not a multi-clause first-match) so that an unguarded
+%  catch-all cannot spuriously succeed when Cell is PRE-BOUND. q6_crosscheck/3 is
+%  exported; a consumer filtering for a specific cell (e.g. q6_crosscheck(C,
+%  q6_unclassified, _) to census the fallthrough) must NOT get every story back.
+%  Positive control: that very query must return exactly the genuine-fallthrough
+%  set (witnessed 0 on the live corpus, 2026-06-16), not all 71.
+q6_cell(C, Cell) :-
+    (   \+ narrative_ontology:founding_problem_status(C, _)
+    ->  Cell0 = q6_unmeasured                       % authored side absent
+    ;   drl_core:dr_type(C, unknown)
+    ->  Cell0 = q6_signature_unknown                % computed side absent (dominates contested)
+    ;   narrative_ontology:founding_problem_status(C, Status),
+        drl_core:dr_type(C, Sig),
+        q6_named_cell(Status, Sig, Named)
+    ->  Cell0 = Named
+    ;   Cell0 = q6_unclassified                     % synthetic catch-all (mountain/scaffold/naturalized
+    ),                                              % × live/dead). WITNESSED 0 on the live corpus (no
+    Cell = Cell0.                                   % story computes those types at the analytical
+                                                    % context, 2026-06-16) — fail-closed guard, kept so a
+                                                    % present row that fell through never reads as absence.
+
+% Named (status × computed signature) cells. dead/live rows are split by
+% signature; the contested row DELIBERATELY collapses all remaining signatures
+% (a seat-ruling asymmetry: splitting contested by signature = the engine taking
+% a position on a contested origin). contested×unknown never reaches here — the
+% q6_signature_unknown guard above fires first.
+q6_named_cell(dead,      piton,        dead_claim_vs_piton_present).
+q6_named_cell(dead,      rope,         dead_claim_vs_rope_present).
+q6_named_cell(dead,      snare,        dead_claim_vs_snare_present).
+q6_named_cell(dead,      tangled_rope, dead_claim_vs_tangled_present).
+q6_named_cell(live,      snare,        live_claim_vs_snare_present).
+q6_named_cell(live,      piton,        live_claim_vs_piton_present).
+q6_named_cell(live,      rope,         live_claim_vs_rope_present).
+q6_named_cell(live,      tangled_rope, live_claim_vs_tangled_present).
+q6_named_cell(contested, _,            contested_open).
+
+%% q6_daylight(+C, -Class)
+%  The authored corroboration class — a separate qualifier axis. Absent atom ⇒
+%  unstated (axis inert until the R5 backfill lands). NEVER parsed from prose;
+%  reads the authored atom only.
+q6_daylight(C, Class) :-
+    (   narrative_ontology:founding_problem_corroboration_class(C, Class)
+    ->  true
+    ;   Class = unstated
+    ).

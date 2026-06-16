@@ -188,6 +188,26 @@ def lint_file(filepath):
     if invalid_scopes:
         errors.append(f"INVALID_SCOPE: spatial_scope values {sorted(invalid_scopes)} not in valid set {sorted(valid_scopes)}.")
 
+    # 3b. R5 Q6 GENEALOGY DOMAIN VALIDATION (fail-loud on out-of-domain atoms —
+    # the q6 crosscheck reads these mismatch-only; a corrupt status/class is a
+    # DATA DEFECT, never folded into any crosscheck cell). Present-clean today;
+    # this guards against future corruption.
+    valid_fp_status = {'live', 'dead', 'contested'}
+    found_fp_status = set(re.findall(r'founding_problem_status\(\s*\w+\s*,\s*(\w+)\s*\)', content))
+    invalid_fp_status = found_fp_status - valid_fp_status
+    if invalid_fp_status:
+        errors.append(
+            f"INVALID_FOUNDING_PROBLEM_STATUS: founding_problem_status values "
+            f"{sorted(invalid_fp_status)} not in valid set {sorted(valid_fp_status)}.")
+    valid_corrob_class = {'independent', 'interested', 'ambiguous'}
+    found_corrob_class = set(re.findall(
+        r'founding_problem_corroboration_class\(\s*\w+\s*,\s*(\w+)\s*\)', content))
+    invalid_corrob_class = found_corrob_class - valid_corrob_class
+    if invalid_corrob_class:
+        errors.append(
+            f"INVALID_CORROBORATION_CLASS: founding_problem_corroboration_class values "
+            f"{sorted(invalid_corrob_class)} not in valid set {sorted(valid_corrob_class)}.")
+
     # 4. TYPE VARIANCE CHECK (Updated for v3.4 Categories; legacy surface only —
     # OQ-109 B3: variance on stakeholder-surface stories is COMPUTED by the
     # engine per seat, not authored, so an authored-variance lint has no input)

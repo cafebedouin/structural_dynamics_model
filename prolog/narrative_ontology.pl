@@ -91,6 +91,7 @@
     stakeholder_non_agent/2,       % stakeholder_non_agent(+C, +Name) — excluded from beneficiary/victim derivation and d
     disappearance_verdict/2,       % disappearance_verdict(+C, +V) — Q5; V ∈ {world_rearranges, world_unchanged, contested}
     founding_problem_status/2,     % founding_problem_status(+C, +S) — R5; S ∈ {live, dead, contested}; NEVER consumed as a claim, mismatch-only
+    founding_problem_corroboration_class/2, % founding_problem_corroboration_class(+C, +Class) — R5 "survives daylight" axis; Class ∈ {independent, interested, ambiguous}; an AUTHORED atom (human/R5-interview judgment, NEVER parsed from the corroboration prose); absent ⇒ daylight(unstated). A SEPARATE qualifier axis: never changes the q6 crosscheck Cell (stakeholder_seats:q6_crosscheck/3).
     % OQ-92 receipt surface (step 3 Stage B; tri-valued: named-seat/diffuse/ABSENT-fail-closed)
     stakeholder_gain_flow/2,       % stakeholder_gain_flow(+C, +Receiver) — Receiver = seat name (capturer) | diffuse (authored no-capture). NEVER synthesized (fabrication ban, OQ-92 Rulings; data_repair.pl is the named door). Receipt ≠ beneficiary-role.
     fixing_cost_class/2,           % fixing_cost_class(+C, +Class) — Class ∈ {cheap, prohibitive}; distinct field from gain_flow by ruling (b); cost never demotes capture
@@ -124,6 +125,7 @@
     stakeholder_non_agent/2,
     disappearance_verdict/2,
     founding_problem_status/2,
+    founding_problem_corroboration_class/2,
     stakeholder_gain_flow/2,
     fixing_cost_class/2.
 
@@ -443,9 +445,9 @@ agent_beneficiary(ConstraintID, Beneficiary) :-
 % audits/2026-06-11_oq109_phase_b/), and their exemption legs read dead inputs
 % (hardcoded is_mandatrophy_resolved/1 facts for two non-corpus ids;
 % attribute/3 lifecycle facts nothing produces). Successors on surviving
-% inputs: claimed-mountain-but-extractive → FSM + T17 + the R5 zombie
-% crosscheck (stakeholder_seats:zombie_piton_crosscheck/2, consumed by
-% report_generator since 2026-06-12); 3-pillar/coverage validation → the
+% inputs: claimed-mountain-but-extractive → FSM + T17 + the R5 Q6 synchronic
+% crosscheck (stakeholder_seats:q6_crosscheck/3, consumed by report_generator;
+% completed to the full status×signature matrix 2026-06-16); 3-pillar/coverage validation → the
 % linter role-coverage rules (B3).
 
 /* ==========================================================================
