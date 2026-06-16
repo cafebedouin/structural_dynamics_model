@@ -6067,6 +6067,26 @@ verdict-stability demoted to confounded-half; discharge-to-successor).
 
 ---
 
+## OQ-121 — Commentary-census coverage decidability: rule each source's absence semantics (the `extraction_silent` present-vs-out-of-domain split) so coverage is a ratio, not N/A
+
+**Ω-type:** Ω_C (a declared-seat ruling — what "the side was not measured / not in domain" MEANS for a given commentary reading is the operator's frame, not computed) + Ω_E (one sub-question is witnessable: whether `extraction_silent` decomposes cleanly by the guard that suppressed it).
+
+**Status:** open — standalone, unblocked, do-whenever. Surfaced by OQ-134's generic census; not blocking it (the census ships and is correct with coverage `null` for undecided sources).
+
+**Priority:** 4
+
+**Deps:** bundled_with OQ-134 (the generic census that needs this ruling to emit a defensible coverage ratio); bundled_with OQ-86 (the `extraction_reading` source whose `silent` bucket is the first undecided case).
+
+**Origin:** 2026-06-16, building OQ-134. The census computes `coverage = (n_corpus − Σ absence) / n_corpus`, but ONLY for sources declared `commentary_coverage_decidable/1` (absence-set RULED complete). q6 is decidable (`q6_unmeasured` / `q6_signature_unknown` are authored/computed-side-absent; `q6_unclassified` is a present residual). `extraction_reading` is NOT — so it ships `coverage: null` rather than a default 1.0 (Pattern 6: a 1.0 we cannot defend is success-shaped absence).
+
+**The question.** `extraction_reading` fires only on the blindspot shape (extractive constraint-level type ∧ no AUTHORED victim ∧ ≥1 beneficiary-side seat) and is SILENT otherwise. But "silent" lumps THREE distinct cases: (a) **in-domain, measured clear** — extractive type, but a victim IS authored or no beneficiary seat to name (the reading ran and found no blindspot); (b) **out-of-domain** — non-extractive type, where the blindspot question does not apply (closest to "didn't look"); (c) the genuine fire. Until the (a)/(b) split is ruled, `extraction_silent` cannot be partitioned into "covered" vs "absent," so no honest coverage ratio exists. **The ruling needed:** does `extraction_silent` get split — e.g. `extraction_clear` (in-domain, covered) vs `extraction_out_of_domain` (absence bucket) — keyed on whether the constraint-level type is extractive? If so, register the new buckets + `commentary_absence_bucket(extraction_reading, extraction_out_of_domain)` + `commentary_coverage_decidable(extraction_reading)` and the census emits a ratio. The Ω_E sub-part: confirm the guard-decomposition is clean (each silent constraint attributable to exactly one suppressing guard — a per-guard census, the OQ-86 single-variable-negative pattern at corpus scale) before the split is trusted.
+
+**The general form (why this is a standing OQ, not a one-off).** Every future `commentary_cell/3` source faces the same fork: a silent/fallthrough bucket is "measured clear" or "out of domain," and only a ruling settles which. The census makes the cost of getting it wrong visible (a fabricated coverage ratio) and the mechanism enforces honesty (no `commentary_coverage_decidable/1` ⇒ N/A). So this OQ is the **per-source decidability gate** that any new commentary source must pass before its coverage number is reported — the rest of the R3 family (`consensus_provenance/2`, `seat_perceived_vs_real/4`, `mandatrophy_gap`) inherits it when added.
+
+**What resolution changes.** `extraction_reading` coverage flips from `null` to a defended ratio in `outputs/commentary_census.json`; the bucket set gains the in-domain/out-of-domain split (with a positive control that the guard-decomposition is exhaustive and disjoint); and the per-source decidability convention is documented as the gate for future commentary sources. Cross-ref: OQ-134, OQ-86, `prolog/commentary_census.pl` (`commentary_coverage_decidable/1`), `audits/2026-06-16_oq134_commentary_census/`.
+
+---
+
 ## OQ-122 — Control inversion: `type_1_false_summit` RED-caps on the type-CLAIM alone, independent of extraction magnitude — does RED track concealment or tax every authored hypothesis?
 
 **Ω-type:** Ω_E (the discriminating test is a measurable single-field intervention) + Ω_C (whether
@@ -7046,7 +7066,7 @@ source this would aggregate).
   no verdict from absence (Pattern 6 honored).
 - **Pipeline integration:** `python3 python/run_pipeline.py` → `commentary_census` task `ok`,
   `outputs/commentary_census.{json,md}` written; q6 coverage=0.611 (44/72), extraction_reading
-  coverage=`null` (N/A — absence semantics UNRULED, never a defaulted 1.0). Classification
+  coverage=`null` (N/A — absence semantics UNRULED → spun out as **OQ-121**; never a defaulted 1.0). Classification
   byte-identical by construction: the census runs as its own swipl process, reads only, asserts
   nothing — not on the `dr_type`/json_report path (structural witness, same grade as the q6 audit).
 
