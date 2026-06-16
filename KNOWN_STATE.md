@@ -45,6 +45,42 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-16 — OQ-121 RESOLVED: totalize the commentary family + domain-relative census coverage
+**Files:** prolog/stakeholder_seats.pl, prolog/commentary_census.pl, prolog/tests/test_commentary_census.pl, python/run_pipeline.py, outputs/commentary_census.json
+**Tier:** tripwire
+
+A closer look at OQ-121 (operator asked) found a structural issue bigger than the missing coverage
+ruling. **The engine already has a never-fail discipline** — correction-grade `constraint_signature/2`
+(`signature_detection.pl:136`, explicit `unknown` fallback "instead of a default-fabricated verdict")
+and `q6_crosscheck/3` (explicit absence buckets) always return an EXPLICIT token, never fail silently.
+The rest of the R3 commentary family never got it: `extraction_reading/2` **failed silently**,
+destroying the provenance bit at the source so no aggregate could reconstruct it (Pattern 6 in its
+purest form).
+
+**Built:**
+- `stakeholder_seats:extraction_state/2` — TOTAL (mirrors `q6_cell/2`): every constraint reaches
+  exactly one of `out_of_domain` / `extraction_clear` / `extraction_unnameable` / `extraction_fired(Es)`.
+  `extraction_reading/2` now rides on `extraction_fired`, so its fire-or-silent report contract is
+  UNCHANGED (oq86 14/14 green; report/sidecar output identical).
+- `extraction_unnameable` (extractive ∧ no victim ∧ no nameable extractor) is its own bucket —
+  **5 live constraints surfaced that the silent failure had hidden entirely.**
+- `commentary_census.pl`: three bucket KINDS (out-of-domain / absence / measured), `coverage` is now
+  **domain-relative** (`(n_in_domain − Σabsence)/n_in_domain`), `prevalence` (`fired/n_in_domain`) is a
+  DISTINCT number. q6 unchanged (universal domain → 0.611); extraction `coverage 1.0`/50, `prevalence 0.06`.
+
+**TRIPWIRE (the silent mistake a fresh agent makes):** when adding a new `commentary_cell/3` source to
+the census, (1) make the per-constraint hook a TOTAL function (return an explicit out-of-domain/absence/
+measured bucket — NEVER let it fail; a bare failure collapses out-of-domain, measured-clear, and absent
+into one token); (2) declare its out-of-domain buckets — census `coverage` is DOMAIN-relative
+(`n_in_domain = n_corpus − Σood`), NOT corpus-relative; a corpus-relative coverage silently claims
+coverage of constraints the reading never applied to; (3) coverage ≠ prevalence ≠ corpus-fraction —
+keep them separate; (4) a source ships a coverage ratio ONLY if `commentary_coverage_decidable/1` flags
+its bucket sets ruled-complete. The full convention + rationale is in `commentary_census.pl`'s header.
+`consensus_provenance/2` and `seat_perceived_vs_real/4` are still partial-silent but NOT census sources,
+so not a live defect — bring them up to the total shape if/when censused.
+
+Witnesses: `audits/2026-06-16_oq121_totalization/`; plunit 40/40; full resolution in ISSUES.md OQ-121.
+
 ## 2026-06-16 — OQ-134 RESOLVED: generic commentary-grade corpus census (`commentary_census.pl` + pipeline wire)
 **Files:** prolog/commentary_census.pl, prolog/tests/test_commentary_census.pl, python/run_pipeline.py, outputs/commentary_census.json, outputs/commentary_census.md
 **Tier:** landed
@@ -71,7 +107,8 @@ process, reads only, never on the classification path.
 - **`extraction_reading` coverage ships `null`/N/A, NOT a default 1.0** — whether `extraction_silent`
   is present-residual or didn't-look is UNRULED; a 1.0 we cannot defend is the exact Pattern-6 absence.
   Honesty wired structurally: a source ships a coverage ratio ONLY if `commentary_coverage_decidable/1`
-  declares it (empty absence-set ≠ ruled-none).
+  declares it (empty absence-set ≠ ruled-none). **[SUPERSEDED same day by OQ-121 — see below: extraction
+  was totalized, coverage is now 1.0 over its 50-constraint domain, prevalence 0.06.]**
 - **Absence buckets are load-bearing (fail-closed control):** pre-stakeholder archives
   (kernel_v1/v5/v6/sotu) route 100% to `q6_unmeasured`, ZERO named cells — the census never fabricates
   a verdict from absence. `q6_unclassified` is `0` on live but corpus-reachable on twins (haiku=1,
