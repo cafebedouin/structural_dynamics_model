@@ -45,6 +45,29 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-16 — Partial-silent commentary predicates totalized (`consensus_provenance/2`, `seat_perceived_vs_real/4`) + OQ-136 minted
+**Files:** prolog/stakeholder_seats.pl, prolog/tests/test_seat_totality.pl, ISSUES.md
+**Tier:** landed
+
+OQ-121 follow-up: the two remaining partial-silent R3 commentary predicates brought up to the
+never-fail convention. Neither has any consumer outside the module (verified — no callers, no tests,
+no negation-as-failure), so zero blast radius.
+- `consensus_provenance/2`: was silent on `Ns=[]`; now TOTAL with explicit `no_agent_seats`
+  (out-of-domain) and `seats_untyped` (absence). Live: plural 37 / no_agent_seats 21 / manufactured 8
+  / unanimous 6 (Σ=72) — the 21 no_agent_seats silently failed before.
+- `seat_perceived_vs_real/4`: was silent when the per-seat type couldn't derive on an existing seat;
+  now returns `Computed = untyped`. Total over 370 live seats; `untyped` branch is a defensive guard
+  (0 live triggers). Non-existent seat still correctly has no reading (domain boundary, not silence).
+- Regression `prolog/tests/test_seat_totality.pl` 8/8; commentary_census 40/40, oq86 14/14 unaffected.
+  Commentary-grade — not on the dr_type path. `mandatrophy_gap` is the last unconverted member.
+
+**OQ-136 minted** (investigation): now that the census reports honestly, its absence/out-of-domain/
+unnameable buckets are the first corpus measurements to interpret — 5 `extraction_unnameable`, 20
+`q6_unmeasured`, 8 `q6_signature_unknown`, 21 `no_agent_seats`, 8 `manufactured_consensus_candidate`.
+Pre-registered test: cluster by generation provenance/run-tag/topic ⇒ authoring artifact (generation
+fix); spread + genuinely diffuse on hand-read ⇒ real category (keep/report). Witnesses:
+`audits/2026-06-16_partial_silent_totalization/`.
+
 ## 2026-06-16 — OQ-121 RESOLVED: totalize the commentary family + domain-relative census coverage
 **Files:** prolog/stakeholder_seats.pl, prolog/commentary_census.pl, prolog/tests/test_commentary_census.pl, python/run_pipeline.py, outputs/commentary_census.json
 **Tier:** tripwire

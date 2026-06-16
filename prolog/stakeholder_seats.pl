@@ -138,13 +138,23 @@ beneficiary_side(beneficiary).
 %  authored. Perceived immutability from the Axiom-2 (TIME x EXIT) table;
 %  Computed from the per-stakeholder path. Perceived=immutable with an
 %  extractive Computed is the seat-level false mountain.
+%
+%  TOTAL ON ITS DOMAIN (OQ-121 convention): keyed on an EXISTING (C,Name)
+%  stakeholder (a non-existent seat correctly has no reading — that is the
+%  domain, not partial silence). Within the domain it NEVER fails: when the
+%  per-seat type cannot be derived (dr_type_for_stakeholder fails on a seat that
+%  exists), Computed = untyped — an EXPLICIT absence token, not a silent failure
+%  that a census/aggregate read site would conflate with "no such seat".
 seat_perceived_vs_real(C, Name, Perceived, Computed) :-
     narrative_ontology:constraint_stakeholder(C, Name, _, _, T, E, _),
     (   constraint_indexing:effective_immutability(T, E, mountain)
     ->  Perceived = immutable
     ;   Perceived = changeable
     ),
-    dr_type_for_stakeholder(C, Name, Computed).
+    (   dr_type_for_stakeholder(C, Name, Computed0)
+    ->  Computed = Computed0
+    ;   Computed = untyped                          % explicit absence, not silence
+    ).
 
 %% consensus_provenance(+C, -Verdict)
 %  R3 consumer (commentary-grade ONLY): did unanimity arise because the
@@ -152,15 +162,27 @@ seat_perceived_vs_real(C, Name, Perceived, Computed) :-
 %  the room? Unanimous computed types across non-excluded agent seats + a
 %  non-empty excluded set => manufactured-consensus candidate, naming the
 %  absent seats. Never feeds classification.
+%
+%  TOTAL (OQ-121 convention): ALWAYS succeeds with exactly one explicit Verdict,
+%  so a census/aggregate read site can distinguish the genuine outcomes from the
+%  two boundary cases a silent failure used to swallow:
+%    - no_agent_seats : no non-excluded agent seat exists — the consensus
+%                       question does not APPLY (out-of-domain), distinct from a
+%                       constraint with seats that simply agree.
+%    - seats_untyped  : agent seats exist but NONE derives a per-seat type — an
+%                       explicit absence, never read as unanimous.
 consensus_provenance(C, Verdict) :-
     findall(N, ( narrative_ontology:constraint_stakeholder(C, N, R, _, _, _, _),
                  R \= excluded,
                  \+ narrative_ontology:stakeholder_non_agent(C, N) ), Ns),
-    Ns \= [],
     findall(T, ( member(N, Ns), dr_type_for_stakeholder(C, N, T) ), Ts),
     sort(Ts, UniqueTypes),
     findall(X, narrative_ontology:constraint_stakeholder(C, X, excluded, _, _, _, _), Excl),
-    (   UniqueTypes = [_], Excl \= []
+    (   Ns == []
+    ->  Verdict = no_agent_seats                    % out-of-domain (no seats to compare)
+    ;   UniqueTypes == []
+    ->  Verdict = seats_untyped                     % seats present, none typed (absence)
+    ;   UniqueTypes = [_], Excl \= []
     ->  Verdict = manufactured_consensus_candidate(Excl)
     ;   UniqueTypes = [_]
     ->  Verdict = unanimous_no_excluded_seats
