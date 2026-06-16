@@ -45,6 +45,43 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-16 — OQ-134 RESOLVED: generic commentary-grade corpus census (`commentary_census.pl` + pipeline wire)
+**Files:** prolog/commentary_census.pl, prolog/tests/test_commentary_census.pl, python/run_pipeline.py, outputs/commentary_census.json, outputs/commentary_census.md
+**Tier:** landed
+
+New read-only aggregator automating the by-hand q6 census as a kept-fresh pipeline artifact.
+`prolog/commentary_census.pl`: a GENERIC commentary census (operator ruling — build the generic
+exporter, not a q6-special one). Multifile `commentary_cell(+Source,+C,-Bucket)` hook (one clause
+per source), `commentary_absence_bucket/2` (didn't-look buckets), `commentary_coverage_decidable/1`
+(absence set RULED-complete → coverage ratio allowed), `commentary_census/2`, `run_commentary_census/0`.
+Sources: `q6` (= `stakeholder_seats:q6_crosscheck/3`) and `extraction_reading` (= OQ-86, fired/silent).
+`python/run_pipeline.py:_prolog_commentary_census` (Phase-2 task `commentary_census`,
+`_PREAMBLE_MARKERS['commentary_census']`) parses the `CENSUS*` lines → `outputs/commentary_census.{json,md}`
+with a corpus-identity manifest (n_constraints, corpus_hash, commit). Commentary-grade — own swipl
+process, reads only, never on the classification path.
+
+**Key design facts (carried so a fresh agent extending it stays honest):**
+- **Sum invariant is the contract enforcer.** Census tallies via `findall` over the BUCKETS (not
+  per-constraint `once`), so Python asserts `Σ buckets == n_corpus` AND `n_corpus > 0` per source.
+  A non-deterministic `commentary_cell` over-counts (caught), a failing one under-counts (caught) —
+  "exactly one bucket per (source, constraint)" is a CONSEQUENCE of the check, not a trusted property.
+  The `n>0` clause closes the vacuous `0==0` that a forgot-to-load run would pass.
+- **Coverage = "both sides MEASURED," not "landed in a named cell"** — so `q6_unclassified` counts as
+  covered (q6 coverage=0.611=44/72; the 28 absent = `q6_unmeasured`(20)+`q6_signature_unknown`(8)).
+- **`extraction_reading` coverage ships `null`/N/A, NOT a default 1.0** — whether `extraction_silent`
+  is present-residual or didn't-look is UNRULED; a 1.0 we cannot defend is the exact Pattern-6 absence.
+  Honesty wired structurally: a source ships a coverage ratio ONLY if `commentary_coverage_decidable/1`
+  declares it (empty absence-set ≠ ruled-none).
+- **Absence buckets are load-bearing (fail-closed control):** pre-stakeholder archives
+  (kernel_v1/v5/v6/sotu) route 100% to `q6_unmeasured`, ZERO named cells — the census never fabricates
+  a verdict from absence. `q6_unclassified` is `0` on live but corpus-reachable on twins (haiku=1,
+  flash=5) — the manifest's corpus identity makes the live `0` self-labeling, never hardcoded.
+
+**Extension point:** a new commentary source is a one-clause `commentary_cell/3` add (+ source/absence/
+decidability decls). Future-cheap family: `consensus_provenance/2`, `seat_perceived_vs_real/4`,
+`mandatrophy_gap` — no open OQ requests them yet. Witnesses + raw output:
+`audits/2026-06-16_oq134_commentary_census/`; full resolution in ISSUES.md OQ-134.
+
 ## 2026-06-16 — OQ-86 RESOLVED: `extraction_reading/2` R3 commentary (no-authored-victim blindspot)
 **Files:** prolog/stakeholder_seats.pl, prolog/report_generator.pl, python/enhanced_report.py, prolog/tests/test_oq86_extraction_commentary.pl, prolog/data_repair.pl
 **Tier:** tripwire
