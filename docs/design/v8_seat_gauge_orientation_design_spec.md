@@ -1,10 +1,11 @@
 # v8 Design Spec — Seat / Gauge / Orientation (the worked one-seat ontology)
 
-**Status:** DESIGN SPEC (draft for review), **rev2** — incorporates the first review pass. Not the
+**Status:** DESIGN SPEC (draft for review), **rev3** — incorporates two review passes. Not the
 v8 paper, the precursor to it.
 **Authored:** 2026-06-16 (Claude Code), from the seat/orientation invariant audit + the R3
-presentation-vs-structure probe (`audits/2026-06-16_seat_invariant_vs_prolog/`); rev2 folds in the
-reviewer's taint-property catch and three sharpenings (see §10).
+presentation-vs-structure probe (`audits/2026-06-16_seat_invariant_vs_prolog/`); rev2 folded in the
+reviewer's taint-property catch; **rev3** makes the invariant *transitive* (the reviewer's check-1
+catch), dissolving the A/B-boundary open question (see §10).
 **Intended handoff:** review by the originating reasoning instance → a new Claude Code instance
 drafts an implementation plan from §8.
 **Supersedes:** nothing on disk yet — it *unifies* three existing artifacts under one vocabulary
@@ -15,8 +16,11 @@ drafts an implementation plan from §8.
 > taint property**, not a count: v7 line 109 carries *two* "nothing else"s — a disowned
 > total-surface one and a surviving payload one — and the live guard is the surviving payload claim
 > (the one (A) bridge carries entailment "and nothing else"). Rev1 dropped both and stated a count;
-> rev2 restates the taint property (§3/§8.1, §10). The discriminator (§2) is scoped to the
-> per-constraint surface; the ε world-anchor question is settled by the Coupling Theorem (§7).
+> rev3 makes it **transitive** (§3/§8.1, §10): no committer field reaches observer computation by
+> *any* path except as entailment-typed payload on the single forward bridge — a reachability check
+> over the whole cross-axis surface, not a payload check on one named edge. The discriminator (§2) is
+> scoped to the per-constraint surface; the ε world-anchor question is settled by the Coupling
+> Theorem (§7).
 
 ---
 
@@ -143,19 +147,34 @@ witness, and an earlier draft of this very spec trusted the aggregate. The compl
 
 > **(i)** committer→observer *computation dependency* = exactly **one** bridge (count + forward
 > direction); **AND**
-> **(ii)** that one bridge's **payload is entailment-typed only** — no grounding / foreclosure /
-> drift content crosses into observer computation.
+> **(ii) (transitive, label-agnostic):** **no committer field reaches observer computation by *any*
+> path except as entailment-typed payload on that single forward bridge.**
 
-**Standing kill-condition (the falsifier for any successor version) — now with a count-silent
-path:** one-seat **falls** if *either* (a) a **reverse (A)-type data bridge** appears (observer
-computation consuming grounding to **override the metric verdict** — the audit-reversal path), *or*
-(b) **`influences` widens its payload** to carry grounding / foreclosure / drift content that
-observer computation consumes — **the count stays 1, no reverse bridge is added, no metric verdict
-need be overridden, yet committer-commitment data now flows into observer computation,** precisely
-the coupling Theorem 7 forbids. Path (b) is invisible to a count check; it is the hole the payload
-taint property closes. *Precision (unchanged):* this is **not** "any reverse read" — (B) read-only
-seams are permitted and plural and cannot couple the axes. The invariant is on the **(A) dependency
-and its payload-type**, not on reads. (This two-part form sharpens v7, which states only the count.)
+**Why transitive, not per-bridge (rev3 correction).** An earlier form anchored (ii) to *"that one
+bridge's payload,"* which is the count-in-disguise for everything that is not that bridge: it watches
+`influences` and is blind to commitment data arriving by another route. The complete property does
+not care whether an edge is currently labelled (A) or (B) — only whether committer content **reaches
+observer computation**. So the guard is a **reachability/taint property over the whole cross-axis
+surface**, not a payload check on one named edge.
+
+**Standing kill-condition (the falsifier for any successor version):** one-seat **falls** the moment
+**any** committer→observer *computation* path exists other than the single entailment-typed forward
+bridge. Three concrete forms, all caught by the transitive guard and *only* the transitive guard:
+- **(a) reverse (A) bridge** — observer computation consuming grounding to **override the metric
+  verdict** (audit-reversal).
+- **(b) payload widening** — `influences` carrying grounding / foreclosure / drift content past
+  entailment: **count stays 1, no reverse bridge, no metric override, yet commitment data flows into
+  observer computation.** Invisible to a count check.
+- **(c) (B)-seam promotion** — a read-only seam later wired to *feed* computation, a **new forward
+  path that never touches `influences`.** Invisible to *both* a count check **and** a per-bridge
+  payload check on `influences` — this is the path the earlier per-bridge form (and §9-Q2) left open;
+  the transitive form closes it.
+
+*Precision (unchanged):* this is **not** "any reverse read" — (B) read-only seams that merely *read*
+observer output and feed nothing back are permitted and plural and cannot couple the axes. The
+invariant is on whether committer content **reaches observer computation**, by any path. (This
+transitive form sharpens v7, which states only the count, and a per-bridge form, which states only
+one edge's payload.)
 
 ---
 
@@ -259,25 +278,38 @@ v8 hands forward — a design task, not an in-principle one.
 falsifiable, §6); item 4 is large and low-stakes. Plan accordingly, and do **not** optimize for the
 migration at the guard's expense.
 
-1. **[LOAD-BEARING — priority 1] Promote the §3 *two-part* invariant to a guard.** Not a count
-   check — a **dataflow / taint check on the (A) bridge's payload**: assert (i) committer→observer
-   computation dependency = exactly one bridge, forward, **and** (ii) that bridge (`influences` →
-   `detect_necessity_inheritance`) carries **entailment-typed content only** — no grounding /
-   foreclosure / drift field reaches observer computation. **Positive control (required): inject a
-   grounding field into the `influences` payload and confirm the guard *fires*** — a count check
-   would pass this injection (count still 1), which is exactly the §3 path-(b) hole. This is the one
-   genuinely new engineering artifact and the entire reason v8 is falsifiable rather than tautological
-   (§6). Candidate home: a stack-consistency-style check or a `plunit` test over the cross-axis
-   surface payloads, not just the edge count.
+1. **[LOAD-BEARING — priority 1] Promote the §3 *transitive* invariant to a guard.** Not a count
+   check, and **not a per-bridge payload check** — a **reachability / taint check over the whole
+   cross-axis surface**: assert (i) committer→observer computation dependency = exactly one bridge,
+   forward, **and** (ii) **no committer field reaches observer computation by any path except as
+   entailment-typed payload on that single forward bridge** (`influences` →
+   `detect_necessity_inheritance`). **Two positive controls (both required), each firing on a path a
+   weaker guard would miss:**
+   - inject a grounding field into the `influences` payload → guard fires *(a count check passes
+     this: count still 1 — §3 path b)*;
+   - wire a (B) read-only seam to feed an observer computation, by a route that never touches
+     `influences` → guard fires *(both a count check **and** a per-bridge payload check on
+     `influences` pass this — §3 path c)*.
+   **Feasibility note (was §9-Q2's open sub-question):** "reaches observer computation" is a
+   reachability property, so the guard likely needs a **dataflow trace over the cross-axis call
+   surface**, not a static per-edge type check — scope the plan for the trace, and treat
+   "entailment-typed" as the taint label that must not propagate into observer computation. This is
+   the one genuinely new engineering artifact and the entire reason v8 is falsifiable rather than
+   tautological (§6). Candidate home: a stack-consistency-style check or a `plunit` test over the
+   cross-axis surface.
 2. **Fold v7 + the engine in as worked realization** — cite, do not re-derive; Axioms 1–6 /
    Theorems 1–4 / the observer engine are untouched (v7 line 13: "strictly additive").
 3. **Retire the conversational two-seat / lattice hypothesis** (in prose only — no file exists to
    delete; just ensure no doc asserts it).
 4. **[LOW-STAKES BULK] Documentation / vocabulary migration.** Introduce seat / gauge / orientation;
-   carry the §4 bridge table; update cross-references in `seat-theorem-v1.md`,
-   `design_discipline.md`, `metrics_as_routing`, and the memories that use "seat" loosely. Author
-   `docs/deferential_realism_paper_v8.md` from this spec (or rename/extend v7 → v8 per operator
-   choice). This is the most *work* and the least *stakes*; finish it after the guard, not before.
+   carry the §4 bridge table; update cross-references in `seat-theorem-v1.md`, the One-Seat
+   verification corollary (`one_seat_audited.md`), `design_discipline.md`, `metrics_as_routing`, and
+   the memories that use "seat" loosely. Author `docs/deferential_realism_paper_v8.md` from this spec
+   (or rename/extend v7 → v8 per operator choice). This is the most *work* and the least *stakes*;
+   finish it after the guard, not before. **Caution if material is drawn from
+   `provenance_is_not_proof.md`:** that essay names a living person and was written under a
+   defamation check — only the *structural* claim may migrate (provenance-vs-correspondence,
+   forgery-cost), **never the intent imputation**, and the intent-humility framing must travel with it.
 
 **Out of scope / behavior-preserving:** no change to `classify_from_metrics`, the signature layer,
 the contamination network, or any verdict threshold. If the plan proposes one, it has left v8's
@@ -287,16 +319,12 @@ remit (ontology + the one guard) and should be split out.
 
 ## 9. What review should pressure-test (open questions for the reviewer)
 
-*(Two questions from the prior draft are now resolved in the body: discriminator completeness is
-declared as a scoped limit in §2; the ε world-anchor question is settled by the Coupling Theorem in
-§7. They are no longer open.)*
+*(Three questions from prior drafts are now resolved in the body: discriminator completeness is a
+declared scoped limit (§2); the ε world-anchor question is settled by the Coupling Theorem (§7); and
+the A/B-boundary-stability question (rev2's Q2) is **dissolved by the transitive guard** (§3/§8.1) —
+a reachability check does not trust the (A)/(B) labels, so "can a (B) seam be promoted" stops being a
+threat the guard can miss. One open question remains.)*
 
-- **Q2 — Is the A/B boundary stable under refactor, and does the taint guard (§3/§8.2) actually
-  catch payload widening?** Two sub-threats: (a) a (B) read-only seam later *promoted* to feed
-  computation (becomes an unwatched (A) bridge); (b) the existing `influences` (A) bridge widening
-  its payload past entailment. The §8.1 guard is specified to catch (b) via the injection positive
-  control — pressure-test whether it also catches (a), and whether "entailment-typed only" is
-  decidable as a static check or needs a dataflow trace.
 - **Q4 — Vocabulary:** adopt seat/gauge/orientation wholesale, or keep v7's "seat" with a
   disambiguating qualifier? (This spec recommends wholesale; the bridge table is the migration.)
 
@@ -314,8 +342,16 @@ declared as a scoped limit in §2; the ε world-anchor question is settled by th
   **survives** and is the actual content-guard. Rev1 dropped both and stated the invariant as a
   **count**; the reviewer caught this (the distrust-the-aggregate failure, in the spec's own
   vocabulary), and rev2's §3/§8.1 restate it as the **two-part taint property** with a payload
-  injection positive control. The correction made in (1) is precisely what opened the gap closed in
+  injection positive control. (Rev3 makes this transitive — see below.) The correction made in (1) is precisely what opened the gap closed in
   (2) — recorded as such.
+- **A third correction, rev2 → rev3 (review pass).** Rev2 fixed the payload-widening hole (path b)
+  but **anchored the property to the named `influences` bridge** — a per-bridge form blind to a
+  promoted-(B)-seam path (path c) reaching observer computation by another route. The reviewer's
+  pre-registered check 1 caught it (per-bridge = count-in-disguise for everything off-bridge). Rev3
+  makes §3(ii) and §8.1 **transitive / label-agnostic** (reachability over the whole cross-axis
+  surface) and adds the path-(c) positive control. This **dissolves** rev2's Q2 (A/B-boundary
+  stability) — a label-agnostic guard cannot be evaded by relabelling — taking the open-question
+  count to one (vocabulary). Checks 2/3/4 passed on the rev2 text unchanged.
 - **The method note worth keeping** (v7 §6, l.151, and this conversation): the framework, the
   theory, and both author-sets have each run the same staking discipline and *lost* the productive
   round — v7's drafted Theorem 7 falsified by its own `hanbali` anchor; the audit's content-stake
