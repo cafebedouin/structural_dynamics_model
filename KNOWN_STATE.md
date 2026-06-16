@@ -45,6 +45,33 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-16 — `census_sweep.py`: commentary census as a perturb measurement surface + denominator caveat
+**Files:** python/sweeps/census_sweep.py, ISSUES.md (OQ-136)
+**Tier:** correction-key
+
+New tool pairing the perturb.py overlay method (retract/asserta a `config:param`, run a goal, diff vs
+baseline) with the commentary census as the MEASUREMENT SURFACE. Diffs per-source bucket histograms +
+`n_in_domain` / `coverage` / `prevalence`. Has a built-in positive control: the null perturbation
+(re-apply the baseline value) MUST be inert, else it fails loud (overlay/parse bug). Commentary-grade,
+so the sweep is pure observation (never feeds classification). `--param/--to` for one-offs, `--corpus`
+to overlay a twin.
+
+**Findings (live corpus, n=72):**
+- **CORRECTION-KEY — a census RATE can move purely by domain-shrink.** `tangled_rope_chi_floor`
+  0.35→0.85 raised extraction `prevalence` 0.060→0.067 (+12%) while `extraction_blindspot_fired` held
+  at **3** — 5 extractive constraints fell out of the domain (`n_in_domain` 50→45). A single
+  "prevalence" number reads this as a signal; it is a denominator artifact. **Rule: report raw `fired`
+  + `n_in_domain` alongside any rate, or hold the domain fixed — esp. across config/schema-refit/corpus
+  comparisons (the OQ-136 clustering test must use raw counts, not rates).**
+- q6 `coverage` decomposes: `q6_unmeasured` (authoring) is config-INVARIANT; `q6_signature_unknown`
+  (computational, dr_type→unknown) is config-VARIANT (8→10 under the same perturbation). Not one figure.
+- The two census surfaces have ORTHOGONAL config-sensitivity: snare ε/χ-floor moves q6 (snare↔tangled,
+  both extractive) but leaves extraction inert; only the extractive↔non-extractive boundary moves
+  extraction. On this corpus the extractive domain's binding edge is the χ-floor, not the ε-floor.
+- `config_validation` bounds the reachable sweep surface: single thresholds can't cross their neighbor
+  (`snare_epsilon_floor`<`rope_epsilon_ceiling`; `tangled_rope_extraction_floor`<`…_ceil`). The tool
+  records the rejection and continues. Witnesses: `audits/2026-06-16_census_sweep/`.
+
 ## 2026-06-16 — Partial-silent commentary predicates totalized (`consensus_provenance/2`, `seat_perceived_vs_real/4`) + OQ-136 minted
 **Files:** prolog/stakeholder_seats.pl, prolog/tests/test_seat_totality.pl, ISSUES.md
 **Tier:** landed
