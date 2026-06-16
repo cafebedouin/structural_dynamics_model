@@ -45,6 +45,42 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-16 — Seat/orientation invariant audit + v8 "seat/gauge/orientation" design spec (engine votes one-seat)
+**Files:** docs/design/v8_seat_gauge_orientation_design_spec.md, audits/2026-06-16_seat_invariant_vs_prolog/, docs/seat-theorem-v1.md, docs/deferential_realism_paper_v7.md
+**Tier:** landed
+
+Read-only seat/orientation invariant audit ran (REPORT.md + evidence; merges `c58611a8`/`864c961d`):
+per-prediction verdicts P1–P9 + theory-killers, conditional-decision-tree synthesis (no net vote).
+Headline R3 ("genuine second seat?") settled by a pre-registered **presentation-vs-structure** probe
+(`evidence/probe_r3_presentation_vs_structure.pl`, merge `77e33bca`): `cs_pattern`/`cs_classify`
+(cs_pattern_detection.pl:108–169) is a **pure function of authored presentation** (`cs_kernel_codification`
++ `cs_authority_grounding`), **blind to binding structure**; the `cs_verdict` false-X layer audits the
+presentation against authored metric/beneficiary reality, **one-directionally**. → **engine votes ONE
+seat**; the committer/CS axis is the **orientation (showing) face**, not a second content-seat. The R3
+*declaration* is the operator's seat — evidence supplied, not ruled.
+
+**v8 design spec** drafted through rev3 (`docs/design/v8_seat_gauge_orientation_design_spec.md`; merges
+`403375e4`/`f6c22b81`/`1e81bc0f`): unifies `seat-theorem-v1` (law) + v7 (two-axis realization) + the CS
+engine (mechanism) under **seat / gauge / orientation**; seat/face line drawn by **audit direction**;
+standing invariant = a **transitive cross-axis taint property** (no committer field reaches observer
+computation by *any* path except entailment-typed payload on the single forward `influences` bridge);
+kill-condition = any other committer→observer *computation* path (reverse bridge / payload widening /
+(B)-seam promotion). **Spec is a draft FOR REVIEW, pre-implementation.**
+
+**TRIPWIRE (soft now; hard on v8 adoption):** v7's word **"seat" = v8's "gauge"** (an observer position);
+v8's **"seat" = v7's ε-invariant content**. Reading "seat" across v7 and the v8 spec without the spec's §4
+bridge table miscounts them as two content-seats (the error that produced the discarded two-seat hypothesis).
+
+Two related docs added by the operator (web instance), **untracked**: `docs/one_seat_audited.md` (the
+One-Seat *verification corollary*; superseded the two-seat draft) and `docs/provenance_is_not_proof.md`
+(investigative essay — **NOT for commit** per the finished-essay convention; names a living person under a
+defamation check → only *structural* claims may migrate to v8, with the intent-humility framing).
+
+**NEXT STEP (needs an operator-authored OQ — `Priority:` is the operator's seat):** adopt v8 (rule the spec's
+Q4 vocabulary) → a fresh CC instance plans implementation from spec §8 (priority-1 = promote the transitive
+taint guard to a checkable **dataflow** guard with the two positive controls; then the low-stakes vocab
+migration). Blocked on operator adoption + web review.
+
 ## 2026-06-16 — Orientation is a deferred Ω_E, NOT Ω_P (OQ-133 relabel) + verification-depth discipline
 **Files:** ISSUES.md, docs/technical/build_discipline.md, CLAUDE.md
 **Tier:** correction-key
