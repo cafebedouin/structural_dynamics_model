@@ -1,0 +1,44 @@
+[census_sweep] corpus=testsets hash=790de8638207
+  baseline[q6] n_corpus=72 n_in_domain=72 coverage=0.6111111111111112 prevalence=None
+  baseline[extraction_reading] n_corpus=72 n_in_domain=50 coverage=1.0 prevalence=0.06
+
+=== null_control  (snare_epsilon_floor -> 0.46) ===
+  [q6] inert
+  [extraction_reading] inert
+
+=== snare_eps_floor_up  (snare_epsilon_floor -> 0.85) ===
+  [q6] MOVED
+      dead_claim_vs_snare_present: 6 -> 0  (Δ-6)
+      dead_claim_vs_tangled_present: 0 -> 6  (Δ+6)
+      live_claim_vs_snare_present: 8 -> 2  (Δ-6)
+      live_claim_vs_tangled_present: 6 -> 12  (Δ+6)
+  [extraction_reading] inert
+
+=== snare_eps_floor_down  (snare_epsilon_floor -> 0.2) ===
+  CONFIG-REJECTED (relational invariant): ERROR: CONFIG ERROR: relationship violated: rope_epsilon_ceiling must be < snare_epsilon_floor; 1 config violation(s) after corpus load. See config_violations.log. Halting.
+
+=== snare_chi_floor_up  (snare_chi_floor -> 0.9) ===
+  [q6] MOVED
+      dead_claim_vs_snare_present: 6 -> 5  (Δ-1)
+      dead_claim_vs_tangled_present: 0 -> 1  (Δ+1)
+      live_claim_vs_snare_present: 8 -> 6  (Δ-2)
+      live_claim_vs_tangled_present: 6 -> 8  (Δ+2)
+  [extraction_reading] inert
+
+=== tangled_eps_floor_up  (tangled_rope_extraction_floor -> 0.5) ===
+  [q6] inert
+  [extraction_reading] inert
+
+=== tangled_eps_floor_max  (tangled_rope_extraction_floor -> 0.95) ===
+  CONFIG-REJECTED (relational invariant): ERROR: CONFIG ERROR: relationship violated: tangled_rope_extraction_floor must be < tangled_rope_extraction_ceil; 1 config violation(s) after corpus load. See config_violations.log. Halting.
+
+=== tangled_chi_floor_up  (tangled_rope_chi_floor -> 0.85) ===
+  [q6] MOVED  coverage 0.611->0.583 (Δ-0.028)
+      contested_open: 18 -> 17  (Δ-1)
+      live_claim_vs_tangled_present: 6 -> 5  (Δ-1)
+      q6_signature_unknown: 8 -> 10  (Δ+2)
+  [extraction_reading] MOVED  n_in_domain 50->45 (Δ-5); prevalence 0.060->0.067 (Δ+0.007)
+      extraction_clear: 42 -> 37  (Δ-5)
+      extraction_out_of_domain: 22 -> 27  (Δ+5)
+
+[census_sweep] wrote audits/2026-06-16_census_sweep/census_sweep.json
