@@ -485,6 +485,25 @@ is error, and it is the **liveness test** (the seat theorem's Q5 / the seed's in
 a thing whose removal rearranges nothing is fixed-by-situation; a thing whose asserted property is
 absent fails the test, and claiming it is concealment.
 
+### Typed absence — a reading's silence is itself a declaration (corollary of S2 / Corollary 2a)
+
+A reading is a **total function over its domain**: it returns a typed token — `out_of_domain`
+(the question does not apply here) / `absence` (in domain, but the side it reads was not authored
+or could not be computed) / a measured verdict — and **never fails silently**. This is Corollary 2a
+applied to the predicate layer: the only coherent residue of "no verdict here" is a *declaration* of
+which no-verdict it is, not the absence of a token. A silently-failing predicate is the engine
+*declining to declare* — and that forfeits the provenance any aggregate needs, collapsing "didn't
+apply," "measured clear," and "absent" into one missing token at every read site (Build Discipline
+Pattern 6, but at the source: the bare failure is total, so no downstream instrument can reconstruct
+the distinction). The discipline is not "every predicate is total" — genuinely relational lookups
+(`in_contention/3`, a per-seat type keyed on an existing seat) correctly have no reading off their
+domain. It is **every predicate an aggregate could read as a measurement must carry its absence as a
+type, not a failure.** Templates already in the engine: `constraint_signature/2` (explicit `unknown`
+fallback "instead of a default-fabricated verdict") and `q6_cell/2` (explicit `q6_unmeasured` /
+`q6_signature_unknown` buckets); the commentary family (`extraction_state/2`, `consensus_provenance/2`,
+`seat_perceived_vs_real/4`) was brought to this shape in OQ-121. A census over the reading layer to
+confirm the convention holds everywhere is OQ-137.
+
 ### The override layer corrects metric blindness — mostly *(audit finding; predicate identity now resolved)*
 
 The signature-override layer is the **correction-grade** half of the verdict-layer pattern
