@@ -7010,13 +7010,51 @@ follow-through landing note, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Ω-type:** Ω_C (a reporting/annotation feature; commentary-grade, never classification — same genre as OQ-86).
 
-**Status:** open — standalone, unblocked, do-whenever. No migration dependency.
+**Status:** resolved — 2026-06-16. Built as a GENERIC commentary census (operator ruling:
+build the generic exporter + wire it into `run_pipeline.py`, not a q6-special one).
+`prolog/commentary_census.pl` (module + multifile `commentary_cell/3` hook + absence-bucket +
+coverage-decidability declarations + `run_commentary_census/0`) computes per-source bucket
+histograms over `corpus_loader:corpus_constraint/1`; `python/run_pipeline.py`
+(`_prolog_commentary_census`, registered in the Phase-2 `tasks`) transports the `CENSUS*` lines
+into `outputs/commentary_census.{json,md}` with a corpus-identity manifest. q6 is source #1; the
+OQ-86 `extraction_reading` census is source #2 (delivers OQ-86's noted census follow-on in the
+same mechanism). Witnesses: see RESOLUTION below.
 
 **Priority:** 3
 
 **Deps:** bundled_with OQ-86 (sibling commentary-reporting feature: surface an existing engine
 computation as report commentary, never a classifier input); bundled_with OQ-83 (the `q6_crosscheck/3`
 source this would aggregate).
+
+**RESOLUTION (2026-06-16, witnesses).** Audit + raw output:
+`audits/2026-06-16_oq134_commentary_census/`.
+- **Hand-census cross-check (multiset, not byte):** automated q6 histogram matches the by-hand
+  census in `audits/2026-06-16_q6_crosscheck_completion/WRITEUP.md` on EVERY named cell; the only
+  diff is `q6_unmeasured` 19→20 and `n_corpus` 71→72 — exactly the +1 corpus growth since
+  2026-06-16 (the new story authors no `founding_problem_status` → unmeasured; verified
+  corpus_constraint=72, with_founding_status=52, without=20). `q6_unclassified=0` confirmed-empty
+  on live.
+- **plunit `tests/test_commentary_census.pl`: 20/20 pass** (`run_tests(commentary_census)`) — sum
+  invariant Σ buckets == n_corpus AND n_corpus>0 (both sources); `q6_unclassified` ≠
+  `q6_signature_unknown` (distinct keys, side-absent precedence); per-cell positive controls
+  (fixtures land in dead/live/contested cells + both absence buckets); `commentary_cell` is
+  deterministic; absence-bucket + coverage-decidability declarations; extraction_reading bivalues.
+- **Cross-corpus self-labeling (fresh swipl/process per corpus):** twins reach `q6_unclassified`
+  (haiku=1, flash=5, n=960 each) — the live 0 is corpus-specific, not universal; pre-stakeholder
+  archives are the fail-closed control: `kernel_v1`(1106), `original_v5`(702), `original_v6`(3380),
+  `testsets_sotu`(189) route 100% to `q6_unmeasured`, **zero named cells** — the census fabricates
+  no verdict from absence (Pattern 6 honored).
+- **Pipeline integration:** `python3 python/run_pipeline.py` → `commentary_census` task `ok`,
+  `outputs/commentary_census.{json,md}` written; q6 coverage=0.611 (44/72), extraction_reading
+  coverage=`null` (N/A — absence semantics UNRULED, never a defaulted 1.0). Classification
+  byte-identical by construction: the census runs as its own swipl process, reads only, asserts
+  nothing — not on the `dr_type`/json_report path (structural witness, same grade as the q6 audit).
+
+**Extension point (for the OQ-86 census sibling and beyond).** A new commentary source is a
+one-clause add to multifile `commentary_cell/3` (+ `commentary_source/1`, optionally
+`commentary_absence_bucket/2` and `commentary_coverage_decidable/1`). The rest of the R3
+commentary-grade family (`consensus_provenance/2`, `seat_perceived_vs_real/4`,
+`mandatrophy_gap`) is future-cheap but no open OQ requests aggregating them today.
 
 **Origin:** 2026-06-16, the Q6 sidecar wiring (`extract_q6_crosscheck` landed in `enhanced_report.py`
 the same day).

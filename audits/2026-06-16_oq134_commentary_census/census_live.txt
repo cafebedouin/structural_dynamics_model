@@ -1,0 +1,51 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+CENSUS_META q6 n_corpus 72
+CENSUS q6 q6_unmeasured 20
+CENSUS q6 contested_open 18
+CENSUS q6 q6_signature_unknown 8
+CENSUS q6 live_claim_vs_snare_present 8
+CENSUS q6 live_claim_vs_tangled_present 6
+CENSUS q6 dead_claim_vs_snare_present 6
+CENSUS q6 live_claim_vs_rope_present 2
+CENSUS q6 live_claim_vs_piton_present 2
+CENSUS q6 dead_claim_vs_rope_present 1
+CENSUS q6 dead_claim_vs_piton_present 1
+CENSUS_ABSENCE q6 q6_signature_unknown
+CENSUS_ABSENCE q6 q6_unmeasured
+CENSUS_COVERAGE q6 decidable
+CENSUS_META extraction_reading n_corpus 72
+CENSUS extraction_reading extraction_silent 69
+CENSUS extraction_reading extraction_blindspot_fired 3
+<!-- COMMENTARY_CENSUS_START -->
+# Commentary-Grade Corpus Census (OQ-134)
+
+*Commentary-grade only — reads engine predicates, never feeds classification.*
+
+## q6  (n_corpus = 72; coverage ratio reported)
+
+| bucket | count | absence? |
+|--------|-------|----------|
+| q6_unmeasured | 20 | absent-side |
+| contested_open | 18 |  |
+| q6_signature_unknown | 8 | absent-side |
+| live_claim_vs_snare_present | 8 |  |
+| live_claim_vs_tangled_present | 6 |  |
+| dead_claim_vs_snare_present | 6 |  |
+| live_claim_vs_rope_present | 2 |  |
+| live_claim_vs_piton_present | 2 |  |
+| dead_claim_vs_rope_present | 1 |  |
+| dead_claim_vs_piton_present | 1 |  |
+
+## extraction_reading  (n_corpus = 72; coverage N/A (absence unruled))
+
+| bucket | count | absence? |
+|--------|-------|----------|
+| extraction_silent | 69 |  |
+| extraction_blindspot_fired | 3 |  |
+

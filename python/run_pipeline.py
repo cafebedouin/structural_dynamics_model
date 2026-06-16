@@ -318,6 +318,7 @@ _PREAMBLE_MARKERS = {
     "maxent":     "<!-- MAXENT_REPORT_START -->",
     "abductive":  "<!-- ABDUCTIVE_REPORT_START -->",
     "trajectory": "<!-- TRAJECTORY_REPORT_START -->",
+    "commentary_census": "<!-- COMMENTARY_CENSUS_START -->",
 }
 
 
@@ -553,6 +554,91 @@ def _prolog_maxent_diag():
     (OUTPUTS_DIR / "maxent_diagnostic_report.md").write_text(result.stdout, encoding="utf-8")
 
 
+def _prolog_commentary_census():
+    """Run commentary_census → commentary_census.json + commentary_census.md (OQ-134).
+
+    Corpus-wide commentary-grade census (q6_crosscheck + extraction_reading).
+    Prolog computes the per-source bucket histograms (single source of truth);
+    this transports the CENSUS* machine lines into a manifest-bearing JSON + the
+    human table. COMMENTARY-GRADE: reads engine predicates only, never feeds
+    classification — nothing touched here is on the dr_type path.
+
+    Self-checking invariants (fail-loud, never under-report):
+      - Σ buckets == n_corpus per source (a dropped/double-counted constraint
+        breaks it — structurally enforces commentary_cell's one-bucket contract).
+      - n_corpus > 0 (a 0==0 sum would pass vacuously if the corpus didn't load).
+    Coverage is computed ONLY for sources whose absence buckets are RULED
+    (CENSUS_COVERAGE decidable); undecided sources (extraction_reading) ship
+    coverage null, never a default 1.0 (Build Discipline Pattern 6).
+    """
+    result = run_prolog(
+        ["stack.pl", "commentary_census.pl"],
+        "run_commentary_census",
+    )
+    raw = result.stdout
+
+    # Parse the machine block (by line prefix — robust to interleaved load noise).
+    sources: dict = {}
+
+    def _src(name):
+        return sources.setdefault(
+            name, {"n_corpus": None, "buckets": {}, "absence_buckets": [],
+                   "coverage_decidable": False})
+
+    for line in raw.splitlines():
+        parts = line.split()
+        if not parts:
+            continue
+        if parts[0] == "CENSUS_META" and len(parts) == 4 and parts[2] == "n_corpus":
+            _src(parts[1])["n_corpus"] = int(parts[3])
+        elif parts[0] == "CENSUS" and len(parts) == 4:
+            _src(parts[1])["buckets"][parts[2]] = int(parts[3])
+        elif parts[0] == "CENSUS_ABSENCE" and len(parts) == 3:
+            _src(parts[1])["absence_buckets"].append(parts[2])
+        elif parts[0] == "CENSUS_COVERAGE" and len(parts) == 3 and parts[2] == "decidable":
+            _src(parts[1])["coverage_decidable"] = True
+
+    if not sources:
+        raise PrologError(
+            "commentary_census: no CENSUS* lines parsed from Prolog output — "
+            "the census did not run (corpus not loaded?).")
+
+    for src, d in sources.items():
+        n = d["n_corpus"]
+        total = sum(d["buckets"].values())
+        if n is None:
+            raise PrologError(f"commentary_census[{src}]: no CENSUS_META n_corpus line.")
+        if n <= 0:
+            raise PrologError(
+                f"commentary_census[{src}]: n_corpus={n} (corpus did not load) — refusing "
+                "(a 0==0 sum would pass the invariant vacuously).")
+        if total != n:
+            raise PrologError(
+                f"commentary_census[{src}]: Σ buckets ({total}) != n_corpus ({n}) — a "
+                "constraint was dropped or double-counted (commentary_cell is not "
+                "one-solution-per-constraint).")
+        # Coverage = (n − Σ absence)/n, ONLY where the absence set is RULED complete.
+        # An undecided source ships null — never a defaulted 1.0 (Pattern 6).
+        if d["coverage_decidable"]:
+            absent = sum(d["buckets"].get(b, 0) for b in d["absence_buckets"])
+            d["coverage"] = (n - absent) / n
+        else:
+            d["coverage"] = None  # "N/A" — absence semantics unruled
+
+    # Manifest carries corpus identity so live-vs-twin is self-labeling (never a
+    # hardcoded 0 for an empty cell — the cell is empty FOR THIS corpus).
+    run_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    manifest = build_manifest(run_at)
+    manifest["corpus_hash"] = _compute_corpus_hash(TESTSETS_DIR)
+    out = {"manifest": manifest, "sources": sources}
+    (OUTPUTS_DIR / "commentary_census.json").write_text(
+        json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    cleaned = strip_preamble(raw, _PREAMBLE_MARKERS["commentary_census"])
+    (OUTPUTS_DIR / "commentary_census.md").write_text(
+        cleaned if cleaned.strip() else "# Commentary Census (empty)\n", encoding="utf-8")
+
+
 def _phase_prolog(progress, parallel):
     """Phase 2: run all Prolog analyses in parallel."""
     # Diagnostic — remove after debugging
@@ -578,6 +664,7 @@ def _phase_prolog(progress, parallel):
         ("giant_comp",  _prolog_giant_comp),
         ("coupling",    _prolog_coupling),
         ("maxent_diag", _prolog_maxent_diag),
+        ("commentary_census", _prolog_commentary_census),
     ]
     results = _run_parallel(tasks, progress, parallel)
 
