@@ -1,0 +1,13 @@
+=== TIER testsets_flash (corpus_constraint=960) ===
+--- FNL condition-false control: each natural_law_constraint pattern ---
+  ai_governance_legitimacy__market_libertarian_reading | natural_law_constraint | beneficiary=yes | FNL=fires
+  article_27_veto_power__sovereignty_reading | natural_law_constraint | beneficiary=no | FNL=silent
+  monetary_anchor_principle__triffin_inevitability_reading | natural_law_constraint | beneficiary=no | FNL=silent
+  nuclear_impossibility_kernel__structural_contraction_reading | natural_law_constraint | beneficiary=yes | FNL=fires
+  technology_reformation_causality__technological_determinism_reading | natural_law_constraint | beneficiary=yes | FNL=fires
+  total_war_reachability_boundary__contraction_reading | natural_law_constraint | beneficiary=no | FNL=silent
+  total_war_winnability_post1945__structural_contraction_reading | natural_law_constraint | beneficiary=yes | FNL=fires
+--- Killer-1 positive control: trace surfaces the computed dep where one EXISTS ---
+  example firing constraint: ai_governance_legitimacy__market_libertarian_reading
+    cs_verdict FNL inputs  : cs_pattern_is(natural_law_constraint) [authored AG=self_enforcing] + constraint_beneficiary=entrepreneurs [authored]
+    signature FNL          : silent; but computed path REACHED -> claimed_natural=explicit_mountain_claim, boltzmann_compliant=compliant(0)

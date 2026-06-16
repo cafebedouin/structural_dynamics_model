@@ -1,0 +1,25 @@
+
+
+=== P4 SEAT-TEST on ai_governance_legitimacy__market_libertarian_reading ===
+baseline authored: eps=0.25 KC=implicit AG=self_enforcing
+
+  BASELINE                  | dr_type=rope    | cs_pattern=natural_law_constraint
+
+-- vary OBSERVER-axis input (extractiveness) --
+  eps:=0.02
+     ->                     | dr_type=rope    | cs_pattern=natural_law_constraint
+  eps:=0.95
+     ->                     | dr_type=unknown | cs_pattern=natural_law_constraint
+
+-- vary CS-axis input (authority_grounding) --
+  AG:=lineage
+     ->                     | dr_type=rope    | cs_pattern=no_pattern_match
+  AG:=extraction
+     ->                     | dr_type=rope    | cs_pattern=no_pattern_match
+  AG:=practice
+     ->                     | dr_type=rope    | cs_pattern=implicit_practice
+
+-- restore witness (must equal baseline) --
+  RESTORED                  | dr_type=rope    | cs_pattern=natural_law_constraint
+
+=== END SEAT-TEST ===
