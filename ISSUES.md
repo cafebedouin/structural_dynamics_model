@@ -7020,6 +7020,24 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 ---
 
+## OQ-135 — Adopt v8 (seat/gauge/orientation) + machine-enforce the one-seat invariant
+
+**Ω-type:** Ω_C (design-boundary / declared-seat — what the engine's ontology *is*; the adoption call and the spec's Q4 vocabulary are the operator's seat, not computed).
+
+**Status:** open — blocked on operator (v8 adoption + spec Q4 vocabulary ruling) and the in-flight review of the design spec. Not workable until unblocked.
+
+**Priority:** 3
+
+**Deps:** blocked_on_human (operator must adopt v8 and rule the spec Q4 vocabulary question); bundled_with OQ-15
+
+**Origin:** 2026-06-16, the seat/orientation invariant audit + R3 presentation-vs-structure probe (`audits/2026-06-16_seat_invariant_vs_prolog/`); design spec drafted rev1–rev3 (`docs/design/v8_seat_gauge_orientation_design_spec.md`).
+
+**The work.** The audit concluded the engine **votes one seat** (R3 probe: `cs_pattern` tracks authored presentation, blind to binding structure; the `cs_verdict` false-X layer audits presentation against the metric reality, one-directionally). The v8 design spec states the resulting ontology (seat / gauge / orientation), draws the seat/face line by **audit direction**, and gives the standing invariant as a **transitive cross-axis taint property** (no committer field reaches observer computation by any path except entailment-typed payload on the single forward `influences` bridge). Spec §8 scopes the implementation; **priority-1 there is the one new artifact**: promote that invariant to a checkable **dataflow taint guard** with two positive controls (payload-injection on `influences`; (B)-seam-promotion off `influences`). The rest is low-stakes vocabulary migration. **NOT an engine rebuild — behavior-preserving** (the seat, gauge, and orientation machinery already exist; only the guard is new). See GAP-12 for the declared absence this closes (the invariant is prose-only today).
+
+**What resolution changes.** The one-seat invariant goes from a v7 *prose* invariant (v7 §4.5; recorded as a decision in `docs/design/two_axis_architecture_v7.md`, OQ-14 resolved) to *machine-enforced*; and the v7→v8 "seat"="gauge" vocabulary becomes canonical (the spec §4 bridge table). Vocabulary migration must reconcile with **OQ-27** (H¹ signature-resolved-vs-raw phrasing) and **OQ-28** (seat-theorem-v1 honesty edits not all witnessed). Cross-ref: `audits/2026-06-16_seat_invariant_vs_prolog/REPORT.md`, KNOWN_STATE 2026-06-16 (seat/orientation audit + v8 spec).
+
+---
+
 *Last updated: 2026-06-16. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

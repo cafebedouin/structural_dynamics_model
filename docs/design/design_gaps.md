@@ -547,3 +547,29 @@ resolver refinement, distinct from `concerns_predicate`/topic and the per-OQ fro
 
 **Status:** Deferred. Whether to *build* the organ or log-and-stop is itself an Ω_C/Ω_P the POC informs
 but does not rule (OQ-130). Named here on first measurement of the orthogonality (2026-06-14).
+
+---
+
+## GAP-12 — The observer/committer one-seat invariant is not machine-enforced
+
+**The capability that is absent:** a guard that *enforces* cross-axis non-coupling — the property that
+detection-independence (v7 Theorem 7) and the v8 seat/gauge/orientation ontology rest on: **no committer
+field reaches observer computation by any path except entailment-typed payload on the single forward
+`influences` → `detect_necessity_inheritance` bridge.**
+
+**Why it is absent:** the invariant holds today by **prose + manual review only**. v7 §4.5 states it as
+"the count of data bridges is the invariant"; the decision is recorded in `docs/design/two_axis_architecture_v7.md`
+(OQ-14, resolved). Nothing in the engine *checks* it. A refactor that widened the `influences` payload past
+entailment, or wired a (B) read-only seam to *feed* observer computation, would pass silently — the count
+stays 1 and no per-edge check on `influences` sees the second path (the v8 spec §3 paths (b)/(c)).
+
+**The mis-citation this prevents:** do **not** read v7's/v8's "(A)-bridge invariant" or "detection
+independence" as something the engine enforces. It is a documented design commitment, not a checked fact.
+
+**Distinct from GAP-04/05/06** (kernel/reading *topic* axis) and from **OQ-15** (cross-axis comparison/
+mediator layer — that *surfaces* disagreement; this would *enforce* non-coupling).
+
+**What closing the gap would require:** the v8 spec §8 priority-1 artifact — a **dataflow/taint guard** over
+the whole cross-axis surface (label-agnostic reachability, not a per-edge type check) with two positive
+controls (payload-injection on `influences`; (B)-seam-promotion off `influences`). Tracked: **OQ-135**.
+Named here 2026-06-16 (seat/orientation audit; `docs/design/v8_seat_gauge_orientation_design_spec.md`).
