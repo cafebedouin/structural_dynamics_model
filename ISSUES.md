@@ -3280,7 +3280,7 @@ The per-increment rebuild recipe is witnessed end-to-end on the fixed pipeline (
 `market_as_natural_default`, `acceptable_risk_for_energy`, `provincial_sovereignty_boundary`,
 `naskh_principle`, `abrahamic_covenant`, `federation_membership_obligations`, `kodashim_obligation`,
 `feud_obligation_kernel`), generated flat no-scope from `outputs/completion_seeds/chunks/pilot_01.json`.
-Witnesses (all same-turn): ladder pending 10→30 after OQ-121 fossil strip; provenance stamped from
+Witnesses (all same-turn): ladder pending 10→30 after the ladder/fossil strip; provenance stamped from
 `result_model` (all 30 read `claude-haiku-4-5-20251001`, no fabricated Sonnet/Opus); corpus load 5→35,
 zero "Redefined static procedure" warnings (defect-3 multifile: story_provenance facts 1→5 across the
 pick, 35 after generation); `run_pipeline` manifest `n_constraints` 5→35; 30/30 generated (7 attempt-1
@@ -3303,7 +3303,7 @@ failures all recovered in attempt 2, no `failures.json`); cost ~$0.87 (Haiku bat
   scale; it inflates the dangling count for any kernel whose reading_ids lack a `_reading` suffix.
 - **FULL COMPLETION RUN — DONE (operator ruled full completion, 2026-06-13).** The remaining pool was
   carved into 7 chunks (`pilot_02..08`, 50 kernels each except 08's 21) and generated serially (one batch
-  at a time, OQ-77), each chunk: ladder-strip (OQ-121 before/after witnessed) → generate → manual OQ-58
+  at a time, OQ-77), each chunk: ladder-strip (before/after witnessed) → generate → manual OQ-58
   sweep → `run_pipeline` → commit. **Final corpus: n_constraints 5 → 993** (commits `e0a58643`,
   `5a541468`, `615c4445`, `647ba9f2`, `f4c7b13d`, `837723c8`, `441bdbad`, + pilot_08). Of 1005 readings
   attempted: **988 generated, 17 failed** (3-attempt retry exhausted, all NAMED — graceful, defect #1/#5
@@ -3331,7 +3331,7 @@ failures all recovered in attempt 2, no `failures.json`); cost ~$0.87 (Haiku bat
      (`dueling_disappearance_mechanism__contraction_reading`, indicator `C-dir`, pilot_04) — REGENERATED
      per the increment-0 operator ruling (not waived); the fresh draw passed. Expect occasional firings on
      redraws/new chunks; regenerate, don't waive.
-  - Throwaway driver `agent/_pilot_ladder_strip.py` (OQ-121 strip + witness) is committed for reuse; not
+  - Throwaway driver `agent/_pilot_ladder_strip.py` (ladder strip + witness) is committed for reuse; not
     pipeline-wired. Branch `corpus-rebuild-fresh` is UNMERGED to `main` per operator ruling (2026-06-13).
 
 **TWO-MODEL TWIN CORPUS — Haiku + Gemini Flash (2026-06-13, operator-ruled).** The same 1005-seed pool
