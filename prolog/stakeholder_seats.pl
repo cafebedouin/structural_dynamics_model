@@ -31,6 +31,7 @@
     consensus_provenance/2,
     q6_crosscheck/3,
     extraction_reading/2,
+    extraction_state/2,
     extractive_type/1,
     power_witness_count/3,
     power_witness_map/2
@@ -301,14 +302,51 @@ authored_victim(C) :-
     narrative_ontology:constraint_victim(C, V),
     V \== inferred_subject.
 
-%% extraction_reading(+C, -Reading)  [R3 commentary — NEVER a classifier input]
-%  Reading = extraction(Extractors, cost_bearer_unnamed), Extractors a non-empty
-%  sorted list of beneficiary-side agent seats. Fires only on the blindspot shape
-%  (guards A/B/C below); fails (silent) otherwise.
-extraction_reading(C, extraction(Extractors, cost_bearer_unnamed)) :-
-    drl_core:dr_type(C, T), extractive_type(T),          % constraint-level extractive  (guard A)
-    \+ authored_victim(C),                               % no AUTHORED cost-bearer       (guard B)
+%% extraction_state(+C, -State)  [TOTAL — the never-fail census surface; OQ-121]
+%  Mirrors the q6_cell/2 and constraint_signature/2 discipline: ALWAYS succeeds
+%  with exactly one explicit State, so an aggregate read site (commentary_census)
+%  can distinguish out-of-domain from measured-clear from the blindspot — none of
+%  which a silently-failing predicate can carry (Build Discipline Pattern 6: a
+%  bare failure collapses "didn't apply", "measured clear", and "shape present
+%  but unnameable" into one absent token). States (ordered, mutually exclusive):
+%    - out_of_domain         : constraint-level type is NOT extractive — the
+%                              no-cost-bearer blindspot question does not apply.
+%    - extraction_clear      : extractive AND an authored victim exists (the
+%                              asymmetric case the engine already names) —
+%                              MEASURED, no blindspot.
+%    - extraction_fired(Es)  : extractive, no authored victim, >=1 beneficiary-
+%                              side seat — the named blindspot (Es a non-empty
+%                              sorted list of extractor seats).
+%    - extraction_unnameable : extractive, no authored victim, but NO beneficiary
+%                              seat to name — the blindspot shape is PRESENT yet
+%                              both sides are unnamed (the starkest case). Counts
+%                              as MEASURED/covered (the question was answered),
+%                              kept a SEPARATE bucket so it is never read as
+%                              "clear" (operator seat, 2026-06-16; revisable).
+%  Domain gate = extractive_type(dr_type) — already computed, just no longer
+%  thrown away on non-fire.
+extraction_state(C, State) :-
+    (   \+ ( drl_core:dr_type(C, T0), extractive_type(T0) )
+    ->  State0 = out_of_domain                           % domain gate (guard A)
+    ;   authored_victim(C)
+    ->  State0 = extraction_clear                        % victim authored (¬guard B)
+    ;   extraction_extractor_seats(C, Es), Es \= []
+    ->  State0 = extraction_fired(Es)                    % nameable blindspot (guard C)
+    ;   State0 = extraction_unnameable                   % blindspot present, unnameable
+    ),
+    State = State0.
+
+%% extraction_extractor_seats(+C, -Sorted)  — beneficiary-side agent seats.
+extraction_extractor_seats(C, Extractors) :-
     findall(N, ( narrative_ontology:constraint_stakeholder(C, N, _, _, _, _, _),
                  \+ narrative_ontology:stakeholder_non_agent(C, N),
                  role_of(C, N, R), beneficiary_side(R) ), Es0),
-    sort(Es0, Extractors), Extractors \= [].             % non-vacuity                    (guard C)
+    sort(Es0, Extractors).
+
+%% extraction_reading(+C, -Reading)  [R3 commentary — NEVER a classifier input]
+%  Reading = extraction(Extractors, cost_bearer_unnamed). Fire-or-silent surface
+%  for the per-constraint report (silence = nothing to print). Defined ON TOP of
+%  the total extraction_state/2: it fires exactly on the named-blindspot state, so
+%  its contract (and report_generator:extraction_reading_line/1) is UNCHANGED.
+extraction_reading(C, extraction(Extractors, cost_bearer_unnamed)) :-
+    extraction_state(C, extraction_fired(Extractors)).

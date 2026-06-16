@@ -1,0 +1,42 @@
+CENSUS_META q6 n_corpus 72
+CENSUS_META q6 n_in_domain 72
+CENSUS q6 q6_unmeasured 20
+CENSUS q6 contested_open 18
+CENSUS q6 q6_signature_unknown 8
+CENSUS q6 live_claim_vs_snare_present 8
+CENSUS q6 live_claim_vs_tangled_present 6
+CENSUS q6 dead_claim_vs_snare_present 6
+CENSUS q6 live_claim_vs_rope_present 2
+CENSUS q6 live_claim_vs_piton_present 2
+CENSUS q6 dead_claim_vs_rope_present 1
+CENSUS q6 dead_claim_vs_piton_present 1
+CENSUS_ABSENCE q6 q6_signature_unknown
+CENSUS_ABSENCE q6 q6_unmeasured
+CENSUS_COVERAGE q6 decidable
+CENSUS_META extraction_reading n_corpus 72
+CENSUS_META extraction_reading n_in_domain 50
+CENSUS extraction_reading extraction_clear 42
+CENSUS extraction_reading extraction_out_of_domain 22
+CENSUS extraction_reading extraction_unnameable 5
+CENSUS extraction_reading extraction_blindspot_fired 3
+CENSUS_OOD extraction_reading extraction_out_of_domain
+CENSUS_PREVALENCE extraction_reading extraction_blindspot_fired 3
+CENSUS_COVERAGE extraction_reading decidable
+## q6  (n_corpus = 72; coverage 0.611 (72 in-domain))
+| bucket | count | kind |
+| q6_unmeasured | 20 | absence (didn't look) |
+| contested_open | 18 | measured |
+| q6_signature_unknown | 8 | absence (didn't look) |
+| live_claim_vs_snare_present | 8 | measured |
+| live_claim_vs_tangled_present | 6 | measured |
+| dead_claim_vs_snare_present | 6 | measured |
+| live_claim_vs_rope_present | 2 | measured |
+| live_claim_vs_piton_present | 2 | measured |
+| dead_claim_vs_rope_present | 1 | measured |
+| dead_claim_vs_piton_present | 1 | measured |
+## extraction_reading  (n_corpus = 72; coverage 1.000 (50 in-domain); prevalence 0.060)
+| bucket | count | kind |
+| extraction_clear | 42 | measured |
+| extraction_out_of_domain | 22 | out-of-domain |
+| extraction_unnameable | 5 | measured |
+| extraction_blindspot_fired | 3 | measured (prevalence) |

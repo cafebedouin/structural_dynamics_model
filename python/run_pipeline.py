@@ -555,7 +555,7 @@ def _prolog_maxent_diag():
 
 
 def _prolog_commentary_census():
-    """Run commentary_census → commentary_census.json + commentary_census.md (OQ-134).
+    """Run commentary_census → commentary_census.json + commentary_census.md (OQ-134/OQ-121).
 
     Corpus-wide commentary-grade census (q6_crosscheck + extraction_reading).
     Prolog computes the per-source bucket histograms (single source of truth);
@@ -563,13 +563,18 @@ def _prolog_commentary_census():
     human table. COMMENTARY-GRADE: reads engine predicates only, never feeds
     classification — nothing touched here is on the dr_type path.
 
+    Three bucket kinds (OQ-121): out-of-domain (reading doesn't apply — excluded
+    from the coverage denominator), absence (in-domain, didn't-look — subtracted
+    from the numerator), measured. Three distinct quantities:
+      coverage   = (n_in_domain − Σ absence) / n_in_domain   [domain-relative]
+      prevalence = fired / n_in_domain                       [a different number]
     Self-checking invariants (fail-loud, never under-report):
       - Σ buckets == n_corpus per source (a dropped/double-counted constraint
         breaks it — structurally enforces commentary_cell's one-bucket contract).
       - n_corpus > 0 (a 0==0 sum would pass vacuously if the corpus didn't load).
-    Coverage is computed ONLY for sources whose absence buckets are RULED
-    (CENSUS_COVERAGE decidable); undecided sources (extraction_reading) ship
-    coverage null, never a default 1.0 (Build Discipline Pattern 6).
+      - n_in_domain == n_corpus − Σ out-of-domain (the domain split is consistent).
+    Coverage is computed ONLY for sources flagged CENSUS_COVERAGE decidable;
+    undecided sources ship coverage null, never a default 1.0 (Pattern 6).
     """
     result = run_prolog(
         ["stack.pl", "commentary_census.pl"],
@@ -582,8 +587,9 @@ def _prolog_commentary_census():
 
     def _src(name):
         return sources.setdefault(
-            name, {"n_corpus": None, "buckets": {}, "absence_buckets": [],
-                   "coverage_decidable": False})
+            name, {"n_corpus": None, "n_in_domain": None, "buckets": {},
+                   "absence_buckets": [], "out_of_domain_buckets": [],
+                   "prevalence_bucket": None, "coverage_decidable": False})
 
     for line in raw.splitlines():
         parts = line.split()
@@ -591,10 +597,16 @@ def _prolog_commentary_census():
             continue
         if parts[0] == "CENSUS_META" and len(parts) == 4 and parts[2] == "n_corpus":
             _src(parts[1])["n_corpus"] = int(parts[3])
+        elif parts[0] == "CENSUS_META" and len(parts) == 4 and parts[2] == "n_in_domain":
+            _src(parts[1])["n_in_domain"] = int(parts[3])
         elif parts[0] == "CENSUS" and len(parts) == 4:
             _src(parts[1])["buckets"][parts[2]] = int(parts[3])
         elif parts[0] == "CENSUS_ABSENCE" and len(parts) == 3:
             _src(parts[1])["absence_buckets"].append(parts[2])
+        elif parts[0] == "CENSUS_OOD" and len(parts) == 3:
+            _src(parts[1])["out_of_domain_buckets"].append(parts[2])
+        elif parts[0] == "CENSUS_PREVALENCE" and len(parts) == 4:
+            _src(parts[1])["prevalence_bucket"] = parts[2]
         elif parts[0] == "CENSUS_COVERAGE" and len(parts) == 3 and parts[2] == "decidable":
             _src(parts[1])["coverage_decidable"] = True
 
@@ -617,13 +629,26 @@ def _prolog_commentary_census():
                 f"commentary_census[{src}]: Σ buckets ({total}) != n_corpus ({n}) — a "
                 "constraint was dropped or double-counted (commentary_cell is not "
                 "one-solution-per-constraint).")
-        # Coverage = (n − Σ absence)/n, ONLY where the absence set is RULED complete.
-        # An undecided source ships null — never a defaulted 1.0 (Pattern 6).
-        if d["coverage_decidable"]:
+        # Domain split: n_in_domain = n_corpus − Σ out-of-domain, cross-checked.
+        n_ood = sum(d["buckets"].get(b, 0) for b in d["out_of_domain_buckets"])
+        n_in_domain = n - n_ood
+        if d["n_in_domain"] is not None and d["n_in_domain"] != n_in_domain:
+            raise PrologError(
+                f"commentary_census[{src}]: n_in_domain mismatch (Prolog "
+                f"{d['n_in_domain']} != n_corpus−ood {n_in_domain}).")
+        d["n_in_domain"] = n_in_domain
+        # Coverage = (n_in_domain − Σ absence)/n_in_domain — DOMAIN-relative, not
+        # corpus-relative. Only where decidable; else null (never a defaulted 1.0).
+        if d["coverage_decidable"] and n_in_domain > 0:
             absent = sum(d["buckets"].get(b, 0) for b in d["absence_buckets"])
-            d["coverage"] = (n - absent) / n
+            d["coverage"] = (n_in_domain - absent) / n_in_domain
         else:
-            d["coverage"] = None  # "N/A" — absence semantics unruled
+            d["coverage"] = None  # "N/A" — decidability unruled (or empty domain)
+        # Prevalence = fired / n_in_domain — a DISTINCT quantity from coverage.
+        if d["prevalence_bucket"] is not None and n_in_domain > 0:
+            d["prevalence"] = d["buckets"].get(d["prevalence_bucket"], 0) / n_in_domain
+        else:
+            d["prevalence"] = None
 
     # Manifest carries corpus identity so live-vs-twin is self-labeling (never a
     # hardcoded 0 for an empty cell — the cell is empty FOR THIS corpus).
