@@ -6990,6 +6990,36 @@ follow-through landing note, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 ---
 
+## OQ-134 — Corpus-wide Q6 crosscheck census (cell distribution as report commentary)
+
+**Ω-type:** Ω_C (a reporting/annotation feature; commentary-grade, never classification — same genre as OQ-86).
+
+**Status:** open — standalone, unblocked, do-whenever. No migration dependency.
+
+**Priority:** 3
+
+**Deps:** bundled_with OQ-86 (sibling commentary-reporting feature: surface an existing engine
+computation as report commentary, never a classifier input); bundled_with OQ-83 (the `q6_crosscheck/3`
+source this would aggregate).
+
+**Origin:** 2026-06-16, the Q6 sidecar wiring (`extract_q6_crosscheck` landed in `enhanced_report.py`
+the same day).
+
+**The question.** Per-constraint `q6_crosscheck` now reaches the report as a structured sidecar field
+(`extract_q6_crosscheck`, `python/enhanced_report.py`). What is still missing is a **corpus-wide
+census**: counts per named cell (`live_claim_vs_snare_present`, `dead_claim_vs_piton_present`, …) plus
+the four non-verdict buckets kept SEPARATE (`q6_unmeasured` / `q6_signature_unknown` / `q6_unclassified`
+/ out-of-domain), each with its denominator (N authored / with-block / corpus). This is the synchronic
+plan's step-4 "coverage to the read site" at corpus scale; `report_generator` only does a per-constraint
+`forall`, so a corpus-level aggregator/exporter is needed. **Hard constraints:** commentary-grade only
+(never a classification input); report `q6_unclassified` and `q6_signature_unknown` as separate counts
+(do not collapse — Build Discipline Pattern 6); `q6_unclassified: 0` on the live corpus is witnessed-0
+(dr_type default_context = analytical surfaces no mountain/scaffold/naturalized) but corpus-reachable on
+the twins — label it confirmed-empty for live only. Cross-ref: OQ-86 (sibling), OQ-83, the q6 sidecar
+commit, `audits/2026-06-16_q6_crosscheck_completion/`.
+
+---
+
 *Last updated: 2026-06-16. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

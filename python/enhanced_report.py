@@ -380,6 +380,45 @@ def extract_mandatrophy_gap(prolog_output):
     return None
 
 
+def extract_q6_crosscheck(prolog_output, constraint_id):
+    """Extract the Q6 (sixth-question) crosscheck verdict from Prolog output, if present.
+
+    The line is printed by report_generator:r5_zombie_crosscheck_line/1 (Section 7),
+    which is SILENT when the cell is q6_unmeasured — so a story with no six_questions
+    block yields None here (absence, not a fabricated value), mirroring
+    extract_mandatrophy_gap.
+
+    COMMENTARY-GRADE ONLY: q6_crosscheck never feeds classification (dr_type is
+    byte-identical with or without it); this surfaces it for the per-constraint report
+    sidecar, NOT the classification JSON. The line is anchored to constraint_id (the
+    output carries a "<CID>:" prefix) so it picks the right verdict regardless of how
+    many constraints the scenario loaded — strictly more robust than the unanchored
+    mandatrophy extractor above.
+
+    Two caveats carried in the returned dict (Pattern 6 — don't let absence read as a
+    measured value):
+      - daylight_inert: the corroboration axis ships inert (unstated) until the R5
+        backfill authors founding_problem_corroboration_class; unstated != measured.
+      - orientation_witnessed: always False — the synchronic tier cannot witness
+        orientation (cover vs survival vs defense); that is the deferred Ω_E of OQ-133.
+
+    Returns dict {cell, daylight, daylight_inert, orientation_witnessed} or None.
+    """
+    m = re.search(
+        re.escape(constraint_id) + r':\s*R5 Q6 CROSSCHECK:\s+(\w+)\s+daylight\((\w+)\)',
+        prolog_output,
+    )
+    if m:
+        daylight = m.group(2)
+        return {
+            "cell": m.group(1),
+            "daylight": daylight,
+            "daylight_inert": daylight == "unstated",
+            "orientation_witnessed": False,
+        }
+    return None
+
+
 # --- Sidecar Builder ---
 
 logger = logging.getLogger(__name__)
@@ -500,6 +539,10 @@ def build_sidecar_data(constraint_id, entry, prolog_output, iteration_round=None
 
     # --- Mandatrophy gap (from Prolog output) ---
     sidecar["mandatrophy_gap"] = extract_mandatrophy_gap(prolog_output)
+
+    # --- Q6 sixth-question crosscheck (from Prolog output; commentary-grade, never
+    #     classification — see extract_q6_crosscheck docstring and OQ-133) ---
+    sidecar["q6_crosscheck"] = extract_q6_crosscheck(prolog_output, constraint_id)
 
     # --- Structural signature ---
     sidecar["structural_signature"] = entry.get("signature") if entry else None
