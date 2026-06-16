@@ -4,6 +4,11 @@ Generated 2026-05-29 during Step 2/3 implementation. Documents three failure mod
 each caused a session-critical wrong result. Scope: things that look plausible from the
 code but are wrong in practice.
 
+> **Companion:** the same overlay method can drive the **commentary census** as the
+> measurement surface instead of the chi export — see `census_perturbation_sweep.md`
+> (`python/sweeps/census_sweep.py`), which also documents the rate-vs-domain denominator
+> trap that the census's coverage/prevalence/domain split exists to catch.
+
 ---
 
 ## 1. Corpus loading and CWD dependency — probes return wrong results without it
