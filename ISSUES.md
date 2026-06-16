@@ -7148,6 +7148,26 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 ---
 
+## OQ-137 — Census the reading layer for the typed-absence convention (does every aggregatable predicate carry its absence as a type, not a silent failure?)
+
+**Ω-type:** Ω_E (a mechanical audit — enumerate the reading/verdict predicates, test each for the never-fail-on-domain property with a positive control) + a small Ω_C tail (classifying a predicate as "aggregatable reading" vs "genuinely relational lookup" is a judgment, recorded per predicate).
+
+**Status:** open — standalone, unblocked, do-whenever. Generalizes the OQ-121 ad-hoc fixes (3 predicates by hand) into a systematic sweep + (ideally) a standing check.
+
+**Priority:** 3
+
+**Deps:** bundled_with OQ-121 (which fixed `extraction_state`/`consensus_provenance`/`seat_perceived_vs_real` by hand and named the convention); bundled_with OQ-134 (the census surface that consumes total readings). Sibling-in-spine (not a dep): OQ-44, the engine-wide authored-zero/absent gate audit — same fail-closed-on-absence principle, different layer (gates over facts vs readings over a domain).
+
+**Origin:** 2026-06-16. OQ-121 established the typed-absence convention (now `docs/design/design_discipline.md` §5, "Typed absence"): a reading an aggregate could consume must return a typed token (`out_of_domain` / `absence` / measured), never fail silently — a bare failure collapses didn't-apply / measured-clear / absent into one missing token at every read site (Build Discipline Pattern 6 at the source). Three predicates were brought to that shape one at a time. **What is missing is the census proving the convention holds across the WHOLE reading layer** — and surfacing the silently-failing ones we have not looked at.
+
+**Scope (the discriminator — not "every predicate").** Many predicates are genuinely RELATIONAL and correctly partial off their domain (`in_contention/3`; a per-seat lookup keyed on an existing seat). The convention binds only **predicates an aggregate could read as a measurement** — verdict/reading predicates over a corpus-enumerable key (a constraint, a seat). For each such predicate classify it into exactly one of: **total-on-domain** (returns a typed token — compliant) / **partial-by-design** (relational; off-domain silence is correct — record why) / **silently-failing-defect** (fails on its own domain where an aggregate would misread the silence — FIX to typed absence). Candidate inventory to start from: the `stakeholder_seats` exports, `signature_detection` verdicts, `report_generator` reading lines, the `cs_*` pattern/verdict predicates, and the commentary family already converted.
+
+**Method (pre-registered, with the controls).** (1) Enumerate the candidate predicates (exports + the reading lines). (2) For each, construct its boundary case — the input where it could fall through — and check whether it returns a typed token or fails. (3) **Positive control on the DIAGNOSTIC itself:** it must (a) pass a predicate known-total (`q6_cell/2`, `constraint_signature/2`) and (b) flag a deliberately-silent stub — else the probe is not discriminating and "found no silent failures" is unfalsified (the standing build-discipline rule: a "nothing there" needs a control that fires). (4) Fix every defect to typed absence; record every partial-by-design with its justification.
+
+**What resolution changes.** A one-time audit table (compliant / by-design / fixed) + the defects fixed, AND ideally a standing guard so a NEW reading predicate cannot regress: a registry of "aggregatable readings" + a test that each returns a token (never fails) over a corpus enumeration plus boundary fixtures — the `test_seat_totality.pl` pattern generalized. Without the standing check this re-rots the moment someone adds a silently-failing reading. Cross-ref: OQ-121, `prolog/tests/test_seat_totality.pl` (the per-predicate template), `docs/design/design_discipline.md` §5 (Typed absence), Build Discipline Pattern 6.
+
+---
+
 *Last updated: 2026-06-16. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

@@ -45,6 +45,20 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-16 — Typed-absence corollary added to design canon + OQ-137 (reading-layer census)
+**Files:** docs/design/design_discipline.md, ISSUES.md (OQ-137)
+**Tier:** landed
+
+Promoted the OQ-121 typed-absence convention from tooling notes to design canon:
+`docs/design/design_discipline.md` §5 gains "Typed absence — a reading's silence is itself a
+declaration" (corollary of S2/Corollary 2a). A reading an aggregate could consume must return a
+typed token (`out_of_domain`/`absence`/measured), never fail silently — NOT "every predicate is
+total" (genuinely relational lookups like `in_contention/3` correctly have no reading off-domain).
+Templates: `constraint_signature/2`, `q6_cell/2`. **OQ-137 minted** to census the whole reading
+layer against the convention (classify each aggregatable predicate total-on-domain / partial-by-
+design / silently-failing-defect; fix defects; ideally a standing guard generalizing
+`test_seat_totality.pl`). Scope discriminator + diagnostic positive-control requirement are in the OQ.
+
 ## 2026-06-16 — `census_sweep.py`: commentary census as a perturb measurement surface + denominator caveat
 **Files:** python/sweeps/census_sweep.py, ISSUES.md (OQ-136)
 **Tier:** correction-key
