@@ -1078,6 +1078,17 @@ self-execute. Verify the reviewer's check against substrate (run the grep, read 
 against the first agent's report — otherwise the second pass just ratifies the first and the
 separation buys nothing.
 
+**Prose-right ≠ artifact-right (recap-as-witness, sharpened).** A correct *understanding* stated in
+the recap is not evidence the *artifact* matches it — you can grasp the right form and still write the
+weaker one into the file by habit. Witnessed 2026-06-16 (v8 spec review): the recap said "taint
+property," the prose *reasoning* was correct, yet the committed §3 operationalized a **count**; a
+later pass said "transitive," and the committed text was still anchored **per-bridge**. Both times the
+divergence was real and only the *pasted committed text* exposed it — the reviewer was right to refuse
+to certify against the summary and demand the file. The discipline: **verify the artifact, not your
+understanding of it.** When a load-bearing claim is "the doc/code now says X," the witness is the
+quoted committed lines, never the recap of them — even, especially, when the recap is correct, because
+a correct recap is exactly what makes the unverified artifact feel safe to ship.
+
 ---
 
 ## Commit-as-you-go: a witnessed unit of work is committed when witnessed, not at session end
