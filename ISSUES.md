@@ -6609,12 +6609,31 @@ delta-control + joint-witness + payer-read control; every probe carries a positi
 - **No metric relaxation isolates the physics cases** (delta-exactly-two): radiative/actinide are
   metrically identical to social naturalization readings (`price_formation__naturalist`, money-emergence,
   zero-as-discovered); every relaxation over-restores on the live twins — a gate relaxation is refuted.
-- **The candidate fix is an authored surface, not a relaxation** (drafted default-off on the branch,
-  NOT merged): a config-gated `no_viable_alternatives/1` flag feeding the `HasAlternatives` discriminator.
-  `logic.md:695` already *requires* a "no viable alternatives" NL condition the engine has no input path
-  to satisfy — so the surface is a **spec-forced GAP-08 fill**, not a free design choice; only its
-  **authoring criterion** is escalable (and "delta-exactly-two holds" witnessed a 2-element hand-authored
-  set, not a validated criterion).
+- **The authoring surface already exists — it is the GAP-08 `intent_*` layer, not a new flag (2026-06-16
+  finding; supersedes the branch draft).** `logic.md:695` requires a "no viable alternatives" NL condition
+  the engine has no input path to satisfy. That input path is the declared-but-unfed
+  **`intent_viable_alternative/3`** (per-stakeholder — arg 2 is the asserting entity), already wired to
+  `has_viable_alternatives/2` (the GAP-08 gate, `signature_detection.pl:241`). The operator's sheaf criterion
+  maps onto it directly: *no stakeholder asserts a viable alternative* = `\+ intent_viable_alternative(I,_,_)`;
+  the social-naturalization twins fail by construction (some position names the gift-economy/central-planning
+  alternative). The branch's drafted `no_viable_alternatives/1` flag is therefore a **Pattern-2 duplicate** of
+  this richer per-stakeholder layer AND bypasses GAP-08's declared revival protocol — **A′-as-drafted should
+  not land; it reinvents.** ("delta-exactly-two holds" witnessed a 2-element hand-authored set, not a
+  validated criterion.)
+- **Both pre-ruling checks resolved (read-only, 2026-06-16):** (1) *fill vs regression?* — **neither: a
+  declared gap.** `intent_viable_alternative` was authored in the EARLY corpora (original_v1 43/43, v3 14/18,
+  v4 23/39) then abandoned from v5 (1/702) onward — before the 2026-06-05 reset, so NOT a rebuild regression;
+  the absence is **GAP-08**, declared+ruled 2026-06-05 with a revival protocol (doc-correction filed there:
+  its "0 in every corpus ever generated" is imprecise — revival is restore-shaped, not greenfield). (2)
+  *consumer scope?* — the bulk verdict consumer (`intent_engine:structural_coercive_intent`) was already
+  RETIRED (OQ-106, 2026-06-12); the remaining live reader is the fail-closed `has_viable_alternatives/2`
+  signature gate (→ natural_law / coordination_scaffold / successful_coordination, + `dirac_classification`)
+  — not gate-local to NL, but not the retired verdict-wide breadth either.
+- **So the surface decision is not a free ruling — it is "arm GAP-08 revival,"** a staged/preregistered work
+  item (schema block + prompt + compiler emission + threshold re-derivation, fail-closed per OQ-44) the
+  operator already declared and **deferred** ("armed-not-scheduled explicitly declined"). GAP-08 also carries
+  a standing caution bearing on the witness-set authoring (decision 2): *do NOT add authoring surface
+  mid-baseline — the rebuild's ε-idiom and diff baselines are forming.* The decision lives on **GAP-08**.
 - **The payer-read disposition** (swap `BeneficiaryCount==0` → `\+ constraint_victim`) is **refuted as a
   *cleaner* gate** (`payer_read_control.pl`, 7 corpora, ~6,400 stories): `R_payer ≥ R_ha` everywhere
   (strictly greater on all 5 non-empty), excess dominated by social-naturalization readings on the live

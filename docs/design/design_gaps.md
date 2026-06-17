@@ -407,6 +407,24 @@ guidance + compiler emission + threshold re-derivation as its own staged work it
 fresh preregistration, fail-closed over these tables per OQ-44 (do NOT add authoring
 surface mid-baseline — the rebuild's ε-idiom and diff baselines are forming).
 
+**Amended 2026-06-16 (provenance correction + a candidate consuming research question arrived):**
+- **Provenance correction (finding, witnessed).** "Zero facts in every corpus ever generated"
+  above is imprecise. By-corpus count of `intent_viable_alternative`: **original_v1 43/43, v3 14/18,
+  v4 23/39**, then **v5 1/702, v6 0, kernel_v1 0, live 0**. The layer was *fed in the early corpora
+  and abandoned from v5 onward* — not never-fed, and the drop predates the 2026-06-05 reset (so it is
+  NOT a de-leak-rebuild regression). Revival is therefore **restore-shaped**: an early authoring pattern
+  exists to seed the schema block + prompt.
+- **Candidate consuming research question: OQ-128.** Gating `natural_law` on *no stakeholder asserts a
+  viable alternative* (`\+ intent_viable_alternative(I,_,_)` — the per-stakeholder sheaf criterion for
+  `HasAlternatives==false`) is exactly the "research question that consumes intent evidence" this gap
+  names as the revival trigger. Recorded as a **finding, not a scheduling**: arming revival remains the
+  staged, preregistered, fail-closed work item above, and the mid-baseline caution still governs the
+  OQ-128 witness-set authoring. Evidence + checks: ISSUES.md OQ-128 + `audits/2026-06-13_oq50_power_scaling_residue/`.
+- **Retire the Pattern-2 duplicate.** The archival `oq50-power-scaling-residue` branch drafted a standalone
+  `no_viable_alternatives/1` flag as the GAP-08 fill; it duplicates this declared `intent_*` layer and
+  bypasses the revival protocol. The declared surface should be revived, not paralleled — the flag should
+  be retired, not landed (OQ-128 records this).
+
 ---
 
 ## GAP-09 — No kernel-dominance stage: the kernel set is unfiltered for dominance (by ruling, not accident)
