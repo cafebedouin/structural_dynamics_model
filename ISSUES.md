@@ -7019,6 +7019,20 @@ remain the operator's.**
     load-bearing for the worst-case authoring style** (~half of type_1-RED on v5) and zero-impact on others;
     since the engine runs heterogeneous corpora, naive type_1 routing is unsafe **for the corpora that need it**.
     Seat: withhold (RED, always) vs route+flag (accept green-over-severe wherever the authoring produces it).
+    **v5 SAMPLE CHARACTERIZED (2026-06-17) — the 60 are TWO clean sub-populations, not noise; discriminant =
+    `base_extractiveness` / analytical reading.** Of the 60: analytical dr_type **rope-51 / snare-9**. The
+    **rope-51 are genuine low-ε math/physics mountains** (`halting_problem_undecidability` ε=0.2,
+    `heisenberg_uncertainty`, `prime_number_theorem`, `church_turing_thesis`, `noethers_theorem`, …) the engine
+    degrades to rope at the analytical seat — i.e. the arc's OWN universal/non-diagnostic degradation, now at the
+    analytical seat; **State 2 over-alert** (green base correct, the cap launders an engine artifact into RED).
+    The **snare-9 are high-ε coercive claims dressed as mountains** (`china_taiwan_reunification_mandate` ε=0.8,
+    "[RESOLVED MANDATROPHY] High-extraction Mountain"; `cia_fbi_legal_wall`; `ancient_grudge_verona`) — **State 1
+    real false summits** (green base wrong, the cap correctly catches). ⇒ the type_1 `severe` is **overloaded**:
+    it fires identically on the non-diagnostic artifact (85%) and on real false summits (15%). This re-shapes the
+    seat beyond binary withhold-vs-route: a discriminated severity (high-ε snare-at-analytical = real;
+    low-ε rope-at-analytical = the artifact) would route the 51 and withhold the 9. **Operator's seat** —
+    drawn from evidence, not ruled here. (Aside: the snare-9 having a GREEN *base* despite ε=0.8 is itself a
+    base-verdict blind spot, separate from the cap.)
   - **(b) the resolver family — `resolve_modal_signature_conflict` (lines 885–932 are ALL overwrites).** Unlike
     natural_law (0 fires), these fire and the signature layer changes `dr_type` at **66/288 live seats** (live
     firings: constructed_high 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 /
