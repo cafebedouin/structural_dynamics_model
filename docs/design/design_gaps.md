@@ -424,6 +424,12 @@ surface mid-baseline — the rebuild's ε-idiom and diff baselines are forming).
   is the *correct, structural* discriminator — `thermodynamics_entropy` (authored no-alternative) is wrongly
   exit-degraded and *should* restore via the dead `natural_law` override; `radiative` (authored competing
   mechanisms) correctly stays non-mountain. Not a candidate anymore — a real consuming research question.
+  **CAVEAT (2026-06-17b, `audits/2026-06-17_mountain_authoring_sweep/`):** the trigger must be read from
+  CONTENT-STRUCTURAL signal (authored per-seat type-diversity + contingency/false-summit omega), NOT prose
+  framing — 370/627 engine-declared mountains carry "impossible alternative"-style prose AND a contested
+  reading, so a prose-sourced override would re-certify them. The mid-seat degradation is universal (hits
+  clean `fermats_last_theorem` identically to contested `axiom_of_choice`), so revival rescues only the
+  ~166 content-clean mountains; the 370 contested are an upstream authoring question (operator's seat).
 - **Retire the Pattern-2 duplicate.** The archival `oq50-power-scaling-residue` branch drafted a standalone
   `no_viable_alternatives/1` flag as the GAP-08 fill; it duplicates this declared `intent_*` layer and
   bypasses the revival protocol. The declared surface should be revived, not paralleled — the flag should

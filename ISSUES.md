@@ -6569,7 +6569,7 @@ ruling and the split decision are the operator's.
 
 **Ω-type:** Ω_C (design ruling — whether the mid-power decline is intended semantics).
 
-**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift; VALIDATED 2026-06-17 as confirmed ARTIFACT (converged control `thermodynamics_entropy` is exit-degraded too) — see VALIDATION block**
+**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift; VALIDATED 2026-06-17 then CORRECTED 2026-06-17b: the mid-seat degradation is UNIVERSAL/non-diagnostic (hits clean `fermats_last_theorem` identically to contested `axiom_of_choice`); "confirmed artifact" RETRACTED; 370/627 engine mountains are contested-by-own-content (authoring question, operator's seat) — see VALIDATION + CORRECTION blocks**
 **Priority:** 1
 **Deps:** splits_from OQ-122, bundled_with OQ-122
 **Origin:** OQ-122 fixture/verdict work, 2026-06-14. `classify_from_metrics` (pre-signature) returns
@@ -6701,6 +6701,41 @@ GAP-08 `intent_viable_alternative` layer), authored honestly from story framing 
 probe expecting `thermodynamics_entropy` → mountain across all seats while `radiative` stays non-mountain.
 Sheaf-H¹ is NOT the trigger (it is downstream of the artifact). NOT-yet-run follow-up: the thermodynamics
 restoration witness (author no-alternative for `thermodynamics_entropy`, confirm it glues to mountain).
+
+**CORRECTION (2026-06-17b — SUPERSEDES the "confirmed ARTIFACT" verdict above; it was built on a
+contaminated cohort).** Evidence: `audits/2026-06-17_mountain_authoring_sweep/` (sweep + positive control)
+and the per-seat witness below.
+- **The cohort was contaminated.** The 12 "converged controls" were selected on the metric box-set
+  (ε/accessibility/resistance + `claim(mountain)` + `emerges_naturally`) — the *exact* selector the Boltzmann
+  probe proved cannot separate physics from naturalization — and `converged_control_probe.pl` had **no
+  positive control**, took first-match `dr_type`, and never saw that `topological_invariant_universality`
+  authors the *same* `context(analytical,civilizational,analytical,universal)` seat as **mountain** (perspective 2)
+  AND **rope** (perspective 5, *"the community has agreed to use… the mountain as a rope"*), or that
+  `axiom_of_choice_consequence` carries a `mountain_false_summit_candidate` omega (*"naturaliz[ing] what is
+  actually a chosen axiom"*). Two of the three readable "siblings" are contested-by-own-content.
+- **Proper sweep (positive-controlled: topological→CONTESTED via perspective, AC→via omega, thermo→CLEAN
+  with 4 seats actually read):** of **627** engine-declared mountains across testsets+archives, **370 (59%)
+  are CONTESTED by their own content** (author a non-mountain seat OR a contingency/false-summit omega),
+  **166 genuinely CLEAN**, 91 UNREAD (live-testsets schema authors no `constraint_classification`).
+- **WITNESSED: the mid-seat degradation is UNIVERSAL and therefore NON-DIAGNOSTIC.** Genuinely-clean
+  mountains (`fermats_last_theorem`, `godel_incompleteness`, `energy_conservation`, `central_limit_theorem`,
+  `law_of_large_numbers`, `halting_problem`, `galois_theory`, `kolmogorov_complexity`) all read
+  `[mountain,rope,rope,mountain]` — **byte-identical to contested `topological`/`axiom_of_choice`**.
+  Degradation does not separate clean from contested.
+- **So the verdict sign-flips on content the engine never consults:** for the 166 CLEAN, degrade = ARTIFACT
+  (Fermat's Last Theorem must not become a rope because an agent has arbitrage exit); for the 370 CONTESTED,
+  degrade = plausibly CORRECT (own content carries the rope reading). Same mechanism (effective_immutability
+  exit-escape + dead restoration), opposite correctness. **"Confirmed artifact" RETRACTED** — it averaged the
+  two. What stands: the degradation is real and universal; it is an artifact *only on the content-clean set*.
+- **The queued fix would re-leak (operator's earlier warning, now witnessed).** Reviving the override off
+  PROSE framing ("impossible alternative"/"no meaningful challenge") re-certifies the 370 — they carry that
+  framing as strongly as thermo. The discriminator must be **content-structural** (authored type-diversity +
+  contingency-omega — the sweep classifier), not prose; and even then it rescues only the 166 clean.
+- **Upstream — the operator's seat, not the agent's.** 370 mountains are authored `constraint_claim(mountain)`
+  while their own narratives carry the rope/coordination reading (or a false-summit omega): the
+  "story claims X, content says ¬X" contradiction class. Whether those are **mis-authored** or the engine is
+  **correct to degrade them** is the ruling that decides whether OQ-128 is an artifact-fix (revive override
+  for the clean 166) or a relabeling job (re-author/demote the 370). Not self-resolvable.
 
 **Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
 is **prose-consistent** with this audit's §5 (both say the residue is OVERDETERMINED and the FSM gate is
