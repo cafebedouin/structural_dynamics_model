@@ -339,12 +339,26 @@ fire after metric-based classification via
 `integrate_signature_with_modal(C, MetricType, FinalType)` in `dr_type/3`.
 
 Override hierarchy:
-1. **NL (Natural Law) + `emerges_naturally`:** forces mountain regardless of metrics.
+1. ~~**NL (Natural Law) + `emerges_naturally`:** forces mountain regardless of metrics.~~
+   **RETIRED 2026-06-17 (OQ-128).** The natural_law overwrite
+   (`resolve_modal_signature_conflict(_, natural_law, mountain)`, `signature_detection.pl:867`) is gone —
+   the engine ROUTES disagreement, it does not RECLASSIFY (only review reclassifies). The DETECTOR
+   (`natural_law_signature`/`constraint_signature(C,natural_law)`) survives as a router input.
 2. **Constructed sub-signatures:** three variants keyed by ε level.
 3. Metric type passes through unchanged if no signature fires.
 
 Signatures override; they do not replace the metric path. `dr_type/3` always
 runs `metric_based_type_indexed/3` first.
+
+**Engine ROUTES, never RECLASSIFIES (OQ-128, 2026-06-17) — `prolog/routing_sink.pl`.** Do NOT add a new
+signature *overwrite* (a clause that rewrites `dr_type` to manufacture a verdict) and do NOT revive `:867`.
+The author↔engine `dr_type` disagreement is the PRODUCT, routed per-SEAT to a review address by
+`routing_sink:seat_diff/7` (addresses: `generation_gap` / `authoring_review` / `engine_exit_table_review` /
+`no_route` / `unrouted_residual`). It taps `dr_claim_mismatch/4` UNMODIFIED, emits `outputs/routing_sink.json`
+(wired into `run_pipeline.py` Phase 2). **Tripwire:** the leaf record is per-SEAT — never collapse seats into
+one constraint verdict (KILL §9b.4; the aggregate-merge recurred 3× in the OQ-128 arc). Author side: per-seat
+`constraint_classification` keyed by `agent_power` (archives) else the seat-blind `constraint_claim` (live
+corpus authors one claim, not per-seat). Detail: `audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md`.
 
 **Piton is an FCR-branch refinement (OQ-90, 2026-06-11):** `piton` is NOT a signature;
 `dr_signature` stays `false_ci_rope` while `dr_type` becomes `piton`. The refinement fires inside

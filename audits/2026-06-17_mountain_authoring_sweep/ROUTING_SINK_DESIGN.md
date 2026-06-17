@@ -1,8 +1,16 @@
 # Routing Sink Design — the natural_law author↔engine diff
 
-**Status:** DESIGN ONLY (no code). Authorized by operator 2026-06-17, scoped to the **natural_law diff**.
-Explicitly NOT in scope (drawn, not built): type_1's RED-cap, the other `resolve_modal_signature_conflict`
-clauses, FNL/FCR/FSM — each a separate ruling.
+**Status:** **BUILT 2026-06-17** (operator ruling "go on the build, scope as the spec reads"). Implementation:
+`prolog/routing_sink.pl` (the sink) + `:867` retired in `prolog/signature_detection.pl` + wired into
+`python/run_pipeline.py` Phase 2 (`routing_sink:run_routing_sink` → `outputs/routing_sink.json`). Build commits
+on branch `oq128-routing-sink`. STILL NOT in scope (drawn, not built — each a separate ruling): type_1's
+RED-cap (left ON, permanent-safe), the other `resolve_modal_signature_conflict` clauses, FNL/FCR/FSM.
+**Build note:** the live corpus's `unknown`-heavy engine readings forced one honest address beyond §4's four —
+`unrouted_residual` carrying its reason (`both_silent` / `engine_abstained` / `author_engine_divergence`),
+because collapsing an engine abstain into `no_route` would fake agreement (Pattern 6). Flagged for operator
+ratification. Witnesses: thermo (clean) → `engine_exit_table_review` at degraded seats; topological (contested)
+→ `generation_gap` (moderate) + `authoring_review` (analytical) — the router differentiates the two cases the
+arc was about.
 
 ## 0. The principle (operator architecture)
 The engine **routes** disagreement; it **never reclassifies**. Only review reclassifies. The author↔engine

@@ -6569,7 +6569,7 @@ ruling and the split decision are the operator's.
 
 **Ω-type:** Ω_C (design ruling — whether the mid-power decline is intended semantics).
 
-**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift; VALIDATED 2026-06-17 then CORRECTED 2026-06-17b: the mid-seat degradation is UNIVERSAL/non-diagnostic (hits clean `fermats_last_theorem` identically to contested `axiom_of_choice`); "confirmed artifact" RETRACTED; 370/627 engine mountains are contested-by-own-content (authoring question, operator's seat) — see VALIDATION + CORRECTION blocks; SUPERSEDED 2026-06-17f/g: engine ROUTES not reclassifies — fix is a routing SINK over the per-SEAT author↔engine diff (not an `effective_immutability` gate); `natural_law` is diagnostic (comment+route, don't revive the override) — see SUPERSESSION block; RESTATED 2026-06-17i: design-spec tightened to TWO live inputs + a socketed-pending third (detector 0/3098, unpowered) + cap permanent-safe — engine side is NOT "specified," three rulings + the build remain the operator's; `:867` retirement WITNESSED behavior-neutral (resolver fires 0/3843, witness-then-retire); see DESIGN-SPEC TIGHTENED block**
+**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift; VALIDATED 2026-06-17 then CORRECTED 2026-06-17b: the mid-seat degradation is UNIVERSAL/non-diagnostic (hits clean `fermats_last_theorem` identically to contested `axiom_of_choice`); "confirmed artifact" RETRACTED; 370/627 engine mountains are contested-by-own-content (authoring question, operator's seat) — see VALIDATION + CORRECTION blocks; SUPERSEDED 2026-06-17f/g: engine ROUTES not reclassifies — fix is a routing SINK over the per-SEAT author↔engine diff (not an `effective_immutability` gate); `natural_law` is diagnostic (comment+route, don't revive the override) — see SUPERSESSION block; RESTATED 2026-06-17i: design-spec tightened to TWO live inputs + a socketed-pending third (detector 0/3098, unpowered) + cap permanent-safe — engine side is NOT "specified," three rulings + the build remain the operator's; `:867` retirement WITNESSED behavior-neutral (resolver fires 0/3843, witness-then-retire); **BUILT 2026-06-17 — routing_sink.pl live, :867 retired, wired into run_pipeline; dr_type/dr_claim_mismatch byte-identical, per-seat invariant holds, pipeline exit 0; one spec-extension address (unrouted_residual) OPEN for ratification; type_1-cap / FNL-FCR-FSM / socket-powering remain next rulings — see BUILT block**; see DESIGN-SPEC TIGHTENED block**
 **Priority:** 1
 **Deps:** splits_from OQ-122, bundled_with OQ-122
 **Origin:** OQ-122 fixture/verdict work, 2026-06-14. `classify_from_metrics` (pre-signature) returns
@@ -6970,6 +6970,30 @@ remain the operator's.**
   detector is the sole blocker. Structural, not corpus-luck (the detector's `false` is out-of-range for every
   constraint). **KILL:** if a schema/corpus change makes the detector reachable, re-run before retiring; non-zero
   ⇒ not neutral, scope changes. ⇒ retiring `:867` changes no `dr_type`; the build scope is unchanged.
+
+**BUILT 2026-06-17 (operator ruling "go on the build, scope as the spec reads"). The routing sink is live.**
+- **Implementation** (branch `oq128-routing-sink`): (1) `:867` natural_law overwrite RETIRED with a provenance
+  tombstone in `signature_detection.pl` (detector `constraint_signature(C,natural_law)` LEFT INTACT as a
+  socketed router input); (2) `prolog/routing_sink.pl` — the sink: per-SEAT `seat_diff/7` over the author↔engine
+  diff, addresses = the four §4 labels + one honest `unrouted_residual` (reason ∈ {both_silent, engine_abstained,
+  author_engine_divergence}); taps `dr_claim_mismatch/4` UNMODIFIED; emits `outputs/routing_sink.json` with a
+  coverage manifest; (3) wired into `run_pipeline.py` Phase 2 (Pattern-1 freshness).
+- **Witnessed (all §9b acceptance conditions):** `:867` retirement → `dr_type` byte-identical (288 rows) +
+  `dr_claim_mismatch` byte-identical (52 rows) ⇒ existing RED verdicts unchanged (type_1 cap UNTOUCHED, left ON);
+  per-seat invariant `manifest.per_seat_invariant_holds=true` (288 = 72×4; KILL §9b.4 = any per-constraint
+  keying); test_agent_beneficiary failing-set byte-identical main-vs-worktree (32 pre-existing, not a regression),
+  test_cs_pattern_detection all pass; full pipeline run exit 0, step `routing_sink ok`. **Targeted controls
+  reproduce the arc's witness files:** thermo (clean uniform-mountain) → `engine_exit_table_review` at
+  moderate/institutional; topological (contested) → `no_route` (powerless) / `generation_gap` (moderate,
+  the spec's literal example) / `authoring_review` (analytical [mountain,rope]). The router DIFFERENTIATES
+  clean from contested — the whole point of the arc.
+- **OPEN for operator ratification (a spec extension, flagged not smuggled):** the `unrouted_residual` address
+  is beyond §4's four — forced by the live corpus's `unknown`-heavy engine readings (187/288 live seats), since
+  collapsing an engine abstain into `no_route` would fake agreement (Pattern 6). It carries its reason, never a
+  plausible default. Ratify, rename, or split as you see fit.
+- **NEXT RULINGS (drawn, still not built):** type_1 RED-cap route-vs-adjudicate (own kill condition); the other
+  `resolve_modal_signature_conflict` clauses + FNL/FCR/FSM family generalization; powering the detector socket
+  (§7 / §9a(iii), unreachable-by-range — author a provably-no-alternatives signal, or retire the dead gate leg).
 
 **Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
 is **prose-consistent** with this audit's §5 (both say the residue is OVERDETERMINED and the FSM gate is

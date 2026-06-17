@@ -45,6 +45,30 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-17 — OQ-128 routing sink BUILT (engine ROUTES the author↔engine diff, never reclassifies)
+**Files:** prolog/routing_sink.pl, prolog/signature_detection.pl, python/run_pipeline.py, ISSUES.md (OQ-128), audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md
+**Tier:** landed
+
+The routing-sink design (ROUTING_SINK_DESIGN.md) was built. Three changes:
+1. `:867` `resolve_modal_signature_conflict(_, natural_law, mountain)` RETIRED (tombstoned) in
+   `signature_detection.pl` — the overwrite that manufactured mountain verdicts. The DETECTOR
+   (`natural_law_signature` / `constraint_signature(C,natural_law)`) is LEFT INTACT as a socketed
+   router input (unpowered: `HasAlternatives==false` is builder-unreachable). Witnessed behavior-neutral:
+   `dr_type` byte-identical (288 rows), `dr_claim_mismatch` byte-identical (52 rows).
+2. `prolog/routing_sink.pl` — per-SEAT `seat_diff/7` router. Addresses = §4's four (generation_gap /
+   authoring_review / engine_exit_table_review / no_route) + one honest `unrouted_residual` carrying its
+   reason (both_silent / engine_abstained / author_engine_divergence). Taps `dr_claim_mismatch/4`
+   UNMODIFIED. Emits `outputs/routing_sink.json` with a coverage manifest. **Tripwire:** the leaf is
+   per-SEAT — any predicate collapsing seats to one constraint verdict is the KILL condition (§9b.4), the
+   aggregate-merge that recurred 3× in the arc.
+3. Wired into `run_pipeline.py` Phase 2 (`routing_sink:run_routing_sink`).
+
+Controls reproduced the arc's witness files exactly: thermo (clean uniform-mountain) →
+`engine_exit_table_review` at moderate/institutional; topological (contested) → `generation_gap`
+(moderate, the spec's literal example) + `authoring_review` (analytical [mountain,rope]). OPEN for
+operator ratification: the `unrouted_residual` spec-extension address. Next rulings (not built):
+type_1 RED-cap route-vs-adjudicate, FNL/FCR/FSM family, powering the detector socket (§7).
+
 ## 2026-06-16 — Typed-absence corollary added to design canon + OQ-137 (reading-layer census)
 **Files:** docs/design/design_discipline.md, ISSUES.md (OQ-137)
 **Tier:** landed
