@@ -6569,7 +6569,7 @@ ruling and the split decision are the operator's.
 
 **Ω-type:** Ω_C (design ruling — whether the mid-power decline is intended semantics).
 
-**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose)
+**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift**
 **Priority:** 1
 **Deps:** splits_from OQ-122, bundled_with OQ-122
 **Origin:** OQ-122 fixture/verdict work, 2026-06-14. `classify_from_metrics` (pre-signature) returns
@@ -6580,11 +6580,17 @@ physics controls `radiative_levitation_stratification`, `actinide_replenishment_
 (the two live `false_summit_mountain` firings, both vic=0).
 
 **Specific question:** is mid-power-mountain→`rope` an **artifact** to fix, or the engine **correctly
-declining** to certify a foundational claim that does not hold at mid-power seats? **The standing fact
-that makes it possibly-correct, not a bug:** the signature layer *restores* mountain at mid-power seats
-for **genuine** mountains in `dr_type`, so this only bites **non-restored** mountain-claimers — exactly
-the population whose foundational claim the engine has reason to refuse. The Ω_C is whether that
-refusal is intended. It is a **general engine phenomenon** (every mid-power mountain-claimer), broader
+declining** to certify a foundational claim that does not hold at mid-power seats? **The premise that
+made it possibly-correct, not a bug, is FALSIFIED corpus-wide (2026-06-16 audit — Evidence below).**
+The rationale was that the signature layer *restores* mountain at mid-power seats for **genuine**
+mountains in `dr_type`, so the residue would only bite **non-restored** claimers — "exactly the
+population whose foundational claim the engine has reason to refuse." But `natural_law_signature` (the
+restoration gate) passes **0** constraints on all three live corpora — restoration has been DEAD since
+the OQ-44 fail-close made `HasAlternatives==false` unauthorable (GAP-08). So the residue bites **every**
+mountain-claimer **including genuine no-alternative physics** (radiative/actinide are themselves the
+un-restored witnesses), NOT a curated population the engine "has reason to refuse." The Ω_C is therefore
+re-opened sharper (see Disposition shift): whether that refusal is intended **given that nothing
+restores the genuine cases.** It is a **general engine phenomenon** (every mid-power mountain-claimer), broader
 than the physics-control story — hence its own number, not an OQ-122 sub-bullet.
 
 **Why it matters / what resolution changes:** it, not the FSM victim-gate, is the **binding
@@ -6592,9 +6598,51 @@ verdict-mover** for the physics false-REDs to reach GREEN — so the FSM gate is
 with this Ω_C's resolution** (OQ-122 ruling 2026-06-14). Do NOT call this "the OQ-50 power-scaling fix":
 the direction is unruled; no settled artifact exists.
 
-**Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here), OQ-50 (the
-false-summit detector this rides — both OPEN items closed 2026-06-14), OQ-117 (false-foundational
-rejection gates — Boltzmann non-compliance + type_1 + computed type), OQ-70 (neutron_star/FCR, separate).
+**Evidence (folded in from the `oq50-power-scaling-residue` branch audit, 2026-06-13/16 — branch now
+archival, dir copied to main): `audits/2026-06-13_oq50_power_scaling_residue/`** (census + Phase-2 +
+delta-control + joint-witness + payer-read control; every probe carries a positive control).
+- **Restoration is dead corpus-wide.** `natural_law_signature` passes **0** on
+  `testsets`/`testsets_flash`/`testsets_haiku`; the block is *solely* `HasAlternatives` (fails 11/11,
+  104/104, 72/72) — unauthorable-false since the OQ-44 fail-close (GAP-08). Unit positive control: a
+  synthetic `ha=false` profile DOES pass and restores rope→mountain, so the probe sees restoration when
+  it fires; it simply never fires on the corpus.
+- **No metric relaxation isolates the physics cases** (delta-exactly-two): radiative/actinide are
+  metrically identical to social naturalization readings (`price_formation__naturalist`, money-emergence,
+  zero-as-discovered); every relaxation over-restores on the live twins — a gate relaxation is refuted.
+- **The candidate fix is an authored surface, not a relaxation** (drafted default-off on the branch,
+  NOT merged): a config-gated `no_viable_alternatives/1` flag feeding the `HasAlternatives` discriminator.
+  `logic.md:695` already *requires* a "no viable alternatives" NL condition the engine has no input path
+  to satisfy — so the surface is a **spec-forced GAP-08 fill**, not a free design choice; only its
+  **authoring criterion** is escalable (and "delta-exactly-two holds" witnessed a 2-element hand-authored
+  set, not a validated criterion).
+- **The payer-read disposition** (swap `BeneficiaryCount==0` → `\+ constraint_victim`) is **refuted as a
+  *cleaner* gate** (`payer_read_control.pl`, 7 corpora, ~6,400 stories): `R_payer ≥ R_ha` everywhere
+  (strictly greater on all 5 non-empty), excess dominated by social-naturalization readings on the live
+  twins — the victim-read is the *looser* gate, contributing zero discriminating power; isolation rests
+  entirely on the authored HA leg. This refutes the **consequentialist** case for payer-read; it does
+  **NOT** adjudicate `logic.md` vs `six_questions.md` — that doc-authority governance call remains the
+  operator's seat. (The branch tracked this as a candidate "OQ-126"; per operator ruling 2026-06-16 it
+  folds here — no renumber; main's Temporal OQ-126 is untouched.)
+
+**Disposition shift (operator's Ω_C ruling — SURFACED, not decided here):** correcting the premise
+removes the support from OQ-128's "possibly-correct, not a bug" reading. The refusal cannot be the
+*principled* "engine declines non-restored false foundations," because the restoration that would
+separate genuine from false never runs, so genuine no-alternative physics is caught identically.
+Candidate dispositions for the operator: (1) **confirmed defect** — restore via the authored
+`no_viable_alternatives` surface (the spec-forced GAP-08 fill); (2) **stays open** pending the
+authoring-criterion ruling (who earns the flag, by what test — shared with OQ-50 OPEN-3); (3) the residue
+is **correct for genuinely contested** mid-power claims and only pristine-no-alternative cases route
+through the surface. The 'restoration restores genuine mountains' rationale is off the table either way.
+Witnessable item before the surface is landable: re-run `joint_witness.pl` with the BENEF leg sourced
+from the authored flag (not the hand-retraction overlay), confirming a single authored fact clears both
+legs and holds delta-exactly-two.
+
+**Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
+is consistent with this audit's §5: it already treats the FSM gate as not the residue fix, so no revision
+needed), OQ-50 (the false-summit detector this rides — OPEN-1/OPEN-2 closed 2026-06-14; the residue thread
+is OQ-50 OPEN-3 on the archival branch), OQ-44/GAP-08 (the fail-close that made `HasAlternatives==false`
+unauthorable — the root of the dead restoration), OQ-117 (false-foundational rejection gates), OQ-70
+(neutron_star/FCR, separate).
 
 ## OQ-129 — perspectival-gap feeder rewired onto authored seats; labeling partition + coverage calls OPEN (Ω_C)
 

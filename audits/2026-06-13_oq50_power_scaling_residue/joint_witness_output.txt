@@ -1,0 +1,38 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+
+================ OQ-50 JOINT WITNESS (corpus=testsets) ================
+Authoring no_viable_alternatives for: [radiative_levitation_stratification,actinide_replenishment_mechanism_flat_control]
+
+-- CELL {HA off, BENEF off}  (baseline) --
+    [RED] radiative_levitation_stratification  type1=4 {HA off,BENEF off}  ha=unknown sig=false_summit_mountain
+      [powerless-tangled_rope,moderate-scaffold,institutional-scaffold,analytical-tangled_rope]
+    [RED] actinide_replenishment_mechanism_flat_control  type1=4 {HA off,BENEF off}  ha=unknown sig=false_summit_mountain
+      [powerless-tangled_rope,moderate-scaffold,institutional-scaffold,analytical-tangled_rope]
+
+-- CELL {HA on,  BENEF off}  (HA leg only) --
+    [RED] radiative_levitation_stratification  type1=4 {HA on, BENEF off}  ha=false sig=false_summit_mountain
+      [powerless-tangled_rope,moderate-scaffold,institutional-scaffold,analytical-tangled_rope]
+    [RED] actinide_replenishment_mechanism_flat_control  type1=4 {HA on, BENEF off}  ha=false sig=false_summit_mountain
+      [powerless-tangled_rope,moderate-scaffold,institutional-scaffold,analytical-tangled_rope]
+
+-- CELL {HA off, BENEF on}   (BENEF leg only) --
+    [RED] radiative_levitation_stratification  type1=2 {HA off,BENEF on}  ha=unknown sig=ambiguous
+      [powerless-mountain,moderate-rope,institutional-rope,analytical-mountain]
+    [RED] actinide_replenishment_mechanism_flat_control  type1=2 {HA off,BENEF on}  ha=unknown sig=ambiguous
+      [powerless-mountain,moderate-rope,institutional-rope,analytical-mountain]
+
+-- CELL {HA on,  BENEF on}   (both) --
+    [GREEN] radiative_levitation_stratification  type1=0 {HA on, BENEF on}  ha=false sig=natural_law
+      [powerless-mountain,moderate-mountain,institutional-mountain,analytical-mountain]
+    [GREEN] actinide_replenishment_mechanism_flat_control  type1=0 {HA on, BENEF on}  ha=false sig=natural_law
+      [powerless-mountain,moderate-mountain,institutional-mountain,analytical-mountain]
+
+-- DELTA-EXACTLY-TWO (both legs on; no_viable_alternatives authored only for the 2) --
+    natural_law-pass set = [actinide_replenishment_mechanism_flat_control,radiative_levitation_stratification]
+    => EXACTLY {radiative,actinide} — delta-exactly-two HOLDS

@@ -1,0 +1,44 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+
+======== OQ-50 PHASE 2  corpus=testsets ========
+
+(a) natural_law_signature PASSES corpus-wide: 0  -> []
+    per-field FAIL counts over [actinide_replenishment_mechanism_flat_control,animal_status_kernel__property_reading,demographic_resource_allocation,demographic_skill_mismatch_c0,institutional_trust_erosion_c0,jewish_self_determination__indigenous_return_reading,neutron_star_bombardment_reading,organization_floor_c0,radiative_levitation_stratification,scale_ceiling_c0,secession_legitimacy_boundary__constitutional_impossibility_reading] mountain-claimers:
+      ac fails: 6
+      su fails: 6
+      re fails: 6
+      bc fails: 11
+      ha fails: 11
+      ts fails: 0
+    fail ONLY on subset of {bc,ha} (pristine on ac/su/re/ts): [actinide_replenishment_mechanism_flat_control,demographic_resource_allocation,radiative_levitation_stratification]
+
+(b) radiative/actinide failing natural_law conditions:
+    radiative_levitation_stratification  baseline fail-set = [bc,ha]
+    actinide_replenishment_mechanism_flat_control  baseline fail-set = [bc,ha]
+    -- BENEFICIARY-FREE (all constraint_beneficiary retracted) --
+    radiative_levitation_stratification  beneficiary-free fail-set = [ha]
+    actinide_replenishment_mechanism_flat_control  beneficiary-free fail-set = [ha]
+
+(c) mid-seat (moderate/institutional) dr_type by victim presence:
+    actinide_replenishment_mechanism_flat_control         vic=0(novictim) mod=scaffold inst=scaffold
+    animal_status_kernel__property_reading                vic=0(novictim) mod=snare inst=scaffold
+    demographic_resource_allocation                       vic=2(victim) mod=rope inst=rope
+    demographic_skill_mismatch_c0                         vic=2(victim) mod=rope inst=rope
+    institutional_trust_erosion_c0                        vic=2(victim) mod=snare inst=snare
+    jewish_self_determination__indigenous_return_reading  vic=0(novictim) mod=snare inst=scaffold
+    neutron_star_bombardment_reading                      vic=0(novictim) mod=tangled_rope inst=tangled_rope
+    organization_floor_c0                                 vic=3(victim) mod=unknown inst=tangled_rope
+    radiative_levitation_stratification                   vic=0(novictim) mod=scaffold inst=scaffold
+    scale_ceiling_c0                                      vic=2(victim) mod=rope inst=rope
+    secession_legitimacy_boundary__constitutional_impossibility_readingvic=0(novictim) mod=snare inst=scaffold
+
+(d) UNIT POSITIVE CONTROL — restoration logic on a synthetic passing profile:
+    natural_law_signature(HA=false pristine) = PASS
+    override resolve(rope, natural_law) -> mountain (expect mountain)
+    natural_law_signature(HA=unknown pristine) = FAIL <- this is the corpus-wide blocker
