@@ -178,6 +178,7 @@ PIPELINE_FIELDS = [
     ("id",                          str,          False),
     ("perspectives",                dict,         False),
     ("perspective_chi",             dict,         False),
+    ("perspective_witness",         dict,         False),  # OQ-108: authored stakeholders per power atom (json_report:write_perspective_witness/2)
     ("suppression",                 (int, float), True),    # null = no authored scalar (OQ-44 fail-close 2026-06-11; was a fabricated 0). Expected null only for non-story cs_axiom_contradiction files; null on a story constraint is an authoring defect.
     ("signature",                   str,          False),
     ("coupling",                    dict,         False),
