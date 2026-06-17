@@ -7004,18 +7004,21 @@ remain the operator's.**
   ARE is **drawn-not-decided** — same status as type_1 and the §7 socket, not closed. See NEXT RULINGS.
 - **NEXT RULINGS (drawn, still not built) — with the witnesses each needs (none retires free; natural_law
   retired free ONLY because it fired 0, so its byte-identical diff was guaranteed pre-run).**
-  - **(a) type_1 RED-cap — route-vs-withhold. WITNESSED across THREE corpora (W1/W2 over `verdict_join`, control
-    built in); the live-only read was a SMALL-SAMPLE ARTIFACT — corrected by the twins.** Suppress the cap, what
-    the type_1-RED verdicts become: **live (72): 11 yellow / 1 red / 0 green** — looked like RED-vs-YELLOW, OQ-98
-    safe. **testsets_haiku (960): 57 yellow / 7 red / 4 GREEN. testsets_flash (960): 92 yellow / 0 red /
-    7 GREEN.** So on both 960-constraint twins, routing-instead-of-capping type_1 **DOES** produce
-    green-over-severe (4 / 7) — the exact OQ-98 defect (a false-summit the engine flagged headlining clean
-    GREEN). The live corpus was too small (72) to surface it. **Controls pass on all three:** probe computed
-    every report (72/72, 960/960, 960/960); non-type_1 severe alerts exist and are detected (live 1, haiku 11,
-    flash 1) but none co-occur with type_1, so the greens are real, not masked. ⇒ **the cap is load-bearing
-    against OQ-98 at scale; naive type_1 routing is NOT safe.** Seat now informed by the real risk: withhold
-    (RED) vs flag (route) trades a green-over-severe for 4–7 per 960. The seat stands, but with the cost the
-    live sample hid.
+  - **(a) type_1 RED-cap — route-vs-withhold. WITNESSED across SIX corpora (W1/W2 over `verdict_join`, control
+    built in). The risk is real but AUTHORING-STYLE-DEPENDENT, NOT sample-size — the two earlier reads were both
+    too simple.** Suppress the cap, count of type_1-RED verdicts that headline GREEN (the OQ-98 defect — a
+    false-summit the engine flagged reading clean):
+    **live (72): 0/12 · original_v6 (3380): 0/15 · kernel_v1 (1106): 0/11 · testsets_haiku (960): 4/68 ·
+    testsets_flash (960): 7/99 · original_v5 (702): 60/127 (~47%)**. So "zero green" is NOT a small-sample
+    artifact (original_v6 at 3380 has 0); and it is NOT universally load-bearing (three corpora show 0). The real
+    variable is **authoring style** — a corpus produces green-over-severe to the extent it authors mountain-claims
+    the engine degrades that also carry a *clean green base + no other alert* (`original_v5`, chimera-era, does
+    this heavily; `original_v6`/`kernel_v1` not at all). **Controls pass on all six** (every report computed:
+    72/72 … 3380/3380; non-type_1 severe alerts exist where present — live 1, haiku 11, v5 14 — and are detected,
+    none co-occur with type_1, so the greens are real, not masked). ⇒ the cap is a **safety net that is
+    load-bearing for the worst-case authoring style** (~half of type_1-RED on v5) and zero-impact on others;
+    since the engine runs heterogeneous corpora, naive type_1 routing is unsafe **for the corpora that need it**.
+    Seat: withhold (RED, always) vs route+flag (accept green-over-severe wherever the authoring produces it).
   - **(b) the resolver family — `resolve_modal_signature_conflict` (lines 885–932 are ALL overwrites).** Unlike
     natural_law (0 fires), these fire and the signature layer changes `dr_type` at **66/288 live seats** (live
     firings: constructed_high 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 /
@@ -7030,9 +7033,10 @@ remain the operator's.**
     Per-conjunct decomposition (W1, over 72 live): the detector needs all six conjuncts; pass-counts are
     `accessibility≥0.85: 7 · supp≤0.15: 13 · res≤0.15: 10 · BC==0: 5 · HasAlternatives==false: 0 · stable: 68`.
     So the detector is **multiply-dead** (HA is the absolute zero, but BC==0 and accessibility are near-dead
-    too). **Twin-confirmed:** HA==false **0/960 in both** twins; BC==0 stays near-dead (18/960 haiku, 16/960
-    flash); `stable` near-universal (960/960 both); detector fires **0** in both. The multiply-dead pattern is
-    robust across models. **Fork (c) RE-DRAWN:** "retire the dead leg" must mean **retire the ENTIRE dead detector gate** —
+    too). **Confirmed across SIX corpora (~7,000 constraints):** HA==false **0 everywhere** (incl. original_v6 at
+    **3380**); detector fires **0 everywhere**; BC==0 stays narrow (haiku 18/960, flash 16/960, v6 470/3380);
+    original_v5 is even deader (acc 0/702, res 0/702). The multiply-dead / unreachable-by-range pattern is as
+    robust as a finding in this repo gets. **Fork (c) RE-DRAWN:** "retire the dead leg" must mean **retire the ENTIRE dead detector gate** —
     retiring the `==false` conjunct alone is a no-op (the other narrow gates still fire ~nothing). Forks: (a)
     author a real immovability signal AND open the metric gate (bigger than HA), (b) leave dark, (c) retire the
     whole gate. (a) needs a candidate + a PRE-REGISTERED discriminating control (physics fires, naturalized snare
