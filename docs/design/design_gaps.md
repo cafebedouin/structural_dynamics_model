@@ -430,6 +430,15 @@ surface mid-baseline — the rebuild's ε-idiom and diff baselines are forming).
   reading, so a prose-sourced override would re-certify them. The mid-seat degradation is universal (hits
   clean `fermats_last_theorem` identically to contested `axiom_of_choice`), so revival rescues only the
   ~166 content-clean mountains; the 370 contested are an upstream authoring question (operator's seat).
+  **DISCRIMINATOR LIMIT (2026-06-17c):** the content-classifier has two legs of unequal trust. The
+  **type-diversity leg** (story authors a non-mountain `constraint_classification` seat) is a *fact* — gate
+  on it (161/370 contested were caught here, 10 with same-seat contradictions). The **contingency-omega
+  leg** is author self-report and misfires both ways: false-positive (witnessed — `radiative`/`actinide`
+  trip the "false summit" keyword on omegas that resolve to *"still Mountain"*) and false-negative
+  (all-mountain seats + genuinely contingent substance + no confessing omega passes as clean = the AC case
+  minus its omega). Do not gate the engine on the omega leg; treat it as advisory review-flagging only. Also:
+  the live-testsets schema authors **no** per-seat types, so the strong leg is unavailable there — those
+  mountains (incl. the original `radiative`/`actinide`) cannot be hard-classified and stay an authoring call.
 - **Retire the Pattern-2 duplicate.** The archival `oq50-power-scaling-residue` branch drafted a standalone
   `no_viable_alternatives/1` flag as the GAP-08 fill; it duplicates this declared `intent_*` layer and
   bypasses the revival protocol. The declared surface should be revived, not paralleled — the flag should

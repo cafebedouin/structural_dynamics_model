@@ -6737,6 +6737,32 @@ and the per-seat witness below.
   **correct to degrade them** is the ruling that decides whether OQ-128 is an artifact-fix (revive override
   for the clean 166) or a relabeling job (re-author/demote the 370). Not self-resolvable.
 
+**RESIDUALS GROUNDED (2026-06-17c — the three the operator flagged after the correction).**
+- **R1 — the verdict-flipping reversal was UNGROUNDED; by the content method it cannot be confirmed.** The
+  late pivot ("`radiative`/`actinide` aren't pristine physics, they're contested science — the wrong
+  control") was a prose call, never run through the classifier, and the two live-testsets subjects author
+  **zero** per-seat types — UNREAD on the hard leg. Ran the classifier on them: `npersp=0`, **no authored
+  non-mountain seat**, contested **only** via the O-leg keyword "false summit" — which fires on omegas that
+  **self-resolve to Mountain** (`radiative` `beneficiary_structure_ambiguity`: *"beneficiaries do not
+  compromise Mountain status"*; `actinide` `false_summit_research_framing`: *"still Mountain… reclassify the
+  discourse"*). So radiative/actinide are CONTESTED-by-keyword-misfire, **not** hard-contested like
+  `topological`. They are **author-ambiguous** (Mountain-claimed + contingency-documented-then-self-resolved;
+  radiative additionally marks its axioms `cs_axiom_grounding(_, empirically_contingent)`). The
+  pristine-vs-contested question the whole arc pivoted on reverts, **ungrounded either way**, to the operator's
+  authoring seat — the reversal was a flinch under pressure, not a witnessed relabel.
+- **R2 — the 370 is two evidence strengths; rule them apart.** Partition (sweep): **HARD** (authored a
+  non-mountain seat — the `topological` class) = **161** (of which **10** same-seat contradictions, the
+  strongest); **OMEGA/KEYWORD-ONLY** (all-mountain seats, caught only by omega — the `axiom_of_choice`
+  class, plus radiative/actinide) = **209**. Demoting a story that authored its own rope seat is strongly
+  supported; demoting an all-mountain story on one omega is closer to trusting the author's self-report —
+  different rulings. radiative/actinide are at the weakest end of the 209.
+- **R3 — the engine gate must ride the HARD leg only; the omega leg is advisory.** Witnessed both error
+  directions: false positive (radiative/actinide — keyword on Mountain-resolving omegas) and the operator's
+  false negative (all-mountain + genuinely contingent + no confessing omega ⇒ passes "clean" — the AC case
+  minus its omega). So "validated content discriminator" = the **type-diversity (authored non-mountain seat)**
+  leg, which is a fact; the contingency-omega leg is author self-report and is **not** authoritative. Limit
+  recorded in GAP-08.
+
 **Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
 is **prose-consistent** with this audit's §5 (both say the residue is OVERDETERMINED and the FSM gate is
 not the residue fix), but that is doc-agrees-with-doc: whether main's bundled FSM-victim-gate ruling HELD
