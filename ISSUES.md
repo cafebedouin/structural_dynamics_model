@@ -6634,6 +6634,12 @@ delta-control + joint-witness + payer-read control; every probe carries a positi
   operator already declared and **deferred** ("armed-not-scheduled explicitly declined"). GAP-08 also carries
   a standing caution bearing on the witness-set authoring (decision 2): *do NOT add authoring surface
   mid-baseline — the rebuild's ε-idiom and diff baselines are forming.* The decision lives on **GAP-08**.
+- **Decision-2 discipline (if/when revival is armed) — authoring must be BLIND to the target verdict.** The
+  witness-set authoring (the 6 cases: radiative/actinide + the social-naturalization twins) must apply the
+  *same* alternative-authoring rule to each case in isolation, then read whether physics came out empty —
+  never author radiative empty *because* it must pass. Outcome-referencing authoring is counterfeit (the
+  `R_scoped` small-corpus trap recurring as an authoring trap); the kill condition only bites if the author
+  cannot see which way it must fall.
 - **The payer-read disposition** (swap `BeneficiaryCount==0` → `\+ constraint_victim`) is **refuted as a
   *cleaner* gate** (`payer_read_control.pl`, 7 corpora, ~6,400 stories): `R_payer ≥ R_ha` everywhere
   (strictly greater on all 5 non-empty), excess dominated by social-naturalization readings on the live
