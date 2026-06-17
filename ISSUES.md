@@ -6569,7 +6569,7 @@ ruling and the split decision are the operator's.
 
 **Ω-type:** Ω_C (design ruling — whether the mid-power decline is intended semantics).
 
-**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift; VALIDATED 2026-06-17 then CORRECTED 2026-06-17b: the mid-seat degradation is UNIVERSAL/non-diagnostic (hits clean `fermats_last_theorem` identically to contested `axiom_of_choice`); "confirmed artifact" RETRACTED; 370/627 engine mountains are contested-by-own-content (authoring question, operator's seat) — see VALIDATION + CORRECTION blocks; SUPERSEDED 2026-06-17f/g: engine ROUTES not reclassifies — fix is a routing SINK over the per-SEAT author↔engine diff (not an `effective_immutability` gate); `natural_law` is diagnostic (comment+route, don't revive the override) — see SUPERSESSION block; RESTATED 2026-06-17i: design-spec tightened to TWO live inputs + a socketed-pending third (detector 0/3098, unpowered) + cap permanent-safe — engine side is NOT "specified," three rulings + the build remain the operator's; see DESIGN-SPEC TIGHTENED block**
+**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift; VALIDATED 2026-06-17 then CORRECTED 2026-06-17b: the mid-seat degradation is UNIVERSAL/non-diagnostic (hits clean `fermats_last_theorem` identically to contested `axiom_of_choice`); "confirmed artifact" RETRACTED; 370/627 engine mountains are contested-by-own-content (authoring question, operator's seat) — see VALIDATION + CORRECTION blocks; SUPERSEDED 2026-06-17f/g: engine ROUTES not reclassifies — fix is a routing SINK over the per-SEAT author↔engine diff (not an `effective_immutability` gate); `natural_law` is diagnostic (comment+route, don't revive the override) — see SUPERSESSION block; RESTATED 2026-06-17i: design-spec tightened to TWO live inputs + a socketed-pending third (detector 0/3098, unpowered) + cap permanent-safe — engine side is NOT "specified," three rulings + the build remain the operator's; `:867` retirement WITNESSED behavior-neutral (resolver fires 0/3843, witness-then-retire); see DESIGN-SPEC TIGHTENED block**
 **Priority:** 1
 **Deps:** splits_from OQ-122, bundled_with OQ-122
 **Origin:** OQ-122 fixture/verdict work, 2026-06-14. `classify_from_metrics` (pre-signature) returns
@@ -6910,7 +6910,8 @@ retirement, a socketed-pending third input, and a cap left on. Three drawn-but-u
 remain the operator's.**
 - **Honest engine-side status:** (a) **ONE LIVE diff** — the per-seat author↔engine `dr_type` disagreement
   (`dr_claim_mismatch`/`authvseng`), the only thing the sink routes today; (b) a **dead override**
-  `resolve_modal_signature_conflict(_, natural_law, mountain)` (`:867`) **marked for retirement, not retired**;
+  `resolve_modal_signature_conflict(_, natural_law, mountain)` (`:867`) **marked for retirement — witnessed
+  behavior-neutral (fires 0/3843, see `:867` block), not yet retired (build action)**;
   (c) a **third input SOCKETED-pending-§7** — the `natural_law` detector is wired into the leaf type but
   UNPOWERED (witness below); (d) a **type_1 RED-cap left ON, permanent-safe** — the sink is COMPLETE with the
   cap on forever, no wiring assumes it routes. The "three readings" language is corrected to **two live inputs +
@@ -6959,6 +6960,16 @@ remain the operator's.**
   design surface); build-time re-read over sink code = acceptance condition. (2) §9a(i) reframed
   **unreachable-by-range** (`false` ∉ `{true,unknown}`), making fork (c) legible as dead-code removal. (3)
   §9a(ii) marked **decorative w.r.t. liveness** (input-disjointness ⊬ output-divergence; kill stays on (iii)).
+- **`:867` retirement WITNESSED behavior-neutral (witness-then-retire, 2026-06-17i) — build-time debt DISCHARGED.**
+  The resolver's *own* run, not inferred from the detector: `resolve_modal_signature_conflict(_, natural_law,
+  mountain)` (`:867`) fires **0/3843** across six corpora (live 72 + kernel_v1 1106 + haiku 960 + flash 960 + v1
+  43 + v5 702), measured as `constraint_signature(C, natural_law)` — the sole producer of `Signature=natural_law`
+  reaching the resolver (`integrate_signature_with_modal/3` `:776`→`:778`→`:822`). Controls discriminate the 0
+  from a dead probe: (0) resolver clause live (`resolve(rope, natural_law, R)` → `R=mountain`); (a) `any_signature`
+  = N in every corpus; (b) `emerges_naturally(C)` (first conjunct) holds for 12/42/72/106/0/173 — path reached,
+  detector is the sole blocker. Structural, not corpus-luck (the detector's `false` is out-of-range for every
+  constraint). **KILL:** if a schema/corpus change makes the detector reachable, re-run before retiring; non-zero
+  ⇒ not neutral, scope changes. ⇒ retiring `:867` changes no `dr_type`; the build scope is unchanged.
 
 **Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
 is **prose-consistent** with this audit's §5 (both say the residue is OVERDETERMINED and the FSM gate is

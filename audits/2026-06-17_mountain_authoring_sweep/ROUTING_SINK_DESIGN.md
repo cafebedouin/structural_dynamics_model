@@ -190,6 +190,18 @@ if the input that powers it does not exist.
 2. `resolve_modal_signature_conflict(_, natural_law, mountain)` (`:867`) retired; `natural_law_signature`
    still fires (detector lives) — witness: a natural_law-detected constraint no longer reads mountain via
    overwrite, but appears as a router input.
+   **Retirement is WITNESSED behavior-neutral (witness-then-retire, not retire-then-witness).** The resolver's
+   *own* run, not inferred from the detector: `:867` fires **0/3843** across six corpora (live 72 + kernel_v1
+   1106 + haiku 960 + flash 960 + v1 43 + v5 702) — measured as `constraint_signature(C, natural_law)`, the
+   sole producer of `Signature = natural_law` reaching the resolver via `integrate_signature_with_modal/3`
+   (`:776`→`:778`→`:822`). **Controls that make the 0 real, not a dead probe:** (0) the resolver clause is live —
+   `resolve_modal_signature_conflict(rope, natural_law, R)` → `R = mountain`; (a) `any_signature` = N in every
+   corpus (the probe enumerates `constraint_signature/2` correctly); (b) `emerges_naturally(C)` — the *first*
+   conjunct of the natural_law signature — holds for **12/42/72/106/0/173** constraints, so the path is reached
+   and the **sole** blocker is the detector (unreachable-by-range, (i)). The neutrality is structural, not
+   corpus-luck: `:867` is gated on a detector whose `false` requirement is outside the builder's range for
+   *every* constraint. **KILL (if a future corpus or schema change makes the detector reachable):** re-run this
+   count before retiring; non-zero ⇒ retirement is NOT neutral and scope changes.
 3. type_1's RED-cap behavior **UNCHANGED** this pass (regression: existing RED verdicts byte-identical).
    **Permanent-safe — falsifier discharged by EXHAUSTIVE READ (not a token-grep).** A token-grep would only
    prove the *string* absent, not the *dependency* absent — a cap-dependence phrased without the grepped token
