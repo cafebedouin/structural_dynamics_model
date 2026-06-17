@@ -6775,6 +6775,9 @@ and the per-seat witness below.
   But **sparse** (41/1106 kernel_v1, 0/72 live) and **gameable**: `axiom_of_choice` PASSES it (3 agreeing
   mountain seats) while its omega flags a *negotiable chosen axiom*. So it is a *probe*, better than
   seat-count, but **only an authored non-mountain seat is fully hard**; absence-of-divergence stays soft.
+  *(NB — these `41/1106, 0/72` figures are `test(invariance_check)`, NOT the `natural_law_signature` detector;
+  the detector fires 0 on kernel_v1 too. Do not cross-reference this count onto OQ-128's detector findings —
+  witnessed 2026-06-17i, OQ-128 DESIGN-SPEC TIGHTENED block.)*
 - **thermo is the clean artifact:** MOUNTAIN-PROBED-HARD (its own `invariance_check` asserts+tests
   institutional==mountain, authored prose *"institutional power does not exempt the constraint"*) **and the
   engine degrades its institutional seat to rope** — `effective_immutability` overrides the story's
@@ -6913,15 +6916,27 @@ remain the operator's.**
   cap on forever, no wiring assumes it routes. The "three readings" language is corrected to **two live inputs +
   a socketed third**.
 - **Detector findings, freshly witnessed this turn (cite count AND control):**
-  - **(i) UNPOWERED:** `natural_law_signature` fires **0/72 live**, and **0/3098** across four
-    independently-generated corpora (live 72 + `testsets_haiku` 960 + `testsets_flash` 960 + `kernel_v1` 1106),
-    with `HasAlternatives = unknown` at **100% (3098/3098)** in every one. **Positive control fires:**
-    `natural_law_signature(profile(0.92,0.02,0.04,0,false,stable,_))` → succeeds, so `0` is a *real absence*.
-    Overdetermined — the gate requires `HasAlternatives == false`; live profiles arrive `unknown`, so the gate
-    shuts *before* the discriminating content is consulted. The signal is authored by **no** generation pipeline
-    (two distinct twin models agree). *NB:* the `41/1106 kernel_v1, 0/72 live` on the OQ-50 RE-PARTITION line is
-    `test(invariance_check)`, a **different** probe — do not conflate with the detector (which fires 0 on
-    kernel_v1 too).
+  - **(i) UNPOWERED — and the gate value is BUILDER-UNREACHABLE, not merely unauthored.**
+    `natural_law_signature` fires **0/72 live**, **0/3098** across four corpora (live 72 + `testsets_haiku` 960 +
+    `testsets_flash` 960 + `kernel_v1` 1106), `HasAlternatives = unknown` at **100% (3098/3098)** in every one.
+    **Positive control fires** (`profile(0.92,0.02,0.04,0,false,stable,_)` → succeeds), **slot-mapping checked**
+    (head arg5 `:359` = gate slot `:382`). **Deeper mechanism:** the slot is built by `has_viable_alternatives/2`
+    (`:251–254`), two clauses → emits **`true` or `unknown`, NEVER `false`** (`grep -c …false)` → 0). So
+    `HasAlternatives == false` is **unsatisfiable from the builder in every corpus** — *unreachable*, not
+    *dropped*. The v1/v5 `intent_viable_alternative` layer (106 archived stories) feeds the **`true`** branch
+    ("alternatives exist → *not* natural law"), the OPPOSITE of what the gate needs — witnessed: original_v1 (43)
+    + original_v5 (702) fire **0**, ha=false **0**, ha=unknown **100%**. The detector was **never powered via
+    natural_law**, in any corpus. *NB:* the `41/1106 kernel_v1, 0/72 live` on the OQ-50 RE-PARTITION line is
+    `test(invariance_check)`, a **different** probe (detector fires 0 on kernel_v1 too) — do not conflate.
+  - **ESCALATED (substrate contradicts an instructed record edit, 2026-06-17i).** The operator's review asked to
+    restate (i) as "no *current* pipeline authors it; the v1 intent layer did and was dropped — powering it =
+    revive a retired signal." The substrate falsifies the premise: `has_viable_alternatives/2` has no `false`
+    clause, and the v1 layer feeds the `true` branch, so the gate was **never** powered via natural_law. Per
+    house discipline (resolve against code, not the more confident document; contradictions between sources are
+    escalated, not self-resolved) the v1-dropped phrasing was **NOT written**; (i) records the unreachable-gate
+    mechanism instead. **OPEN RULING (operator's):** powering the socket is §7's "author a *provably-no-
+    alternatives* structural value" (new invention), not a revival — and whether to add a `…(C,false)` path,
+    leave the socket dark, or retire the unreachable gate leg is the operator's call. Bears on (i) only.
   - **(ii) INPUT-INDEPENDENT of the exit-table:** detector inputs (`signature_detection.pl:359`)
     `{accessibility_collapse, suppression, resistance, beneficiary_count, HasAlternatives, temporal_stability}`
     are **disjoint** from `effective_immutability`'s `{time_horizon, exit_options}` (`constraint_indexing.pl:195+`).

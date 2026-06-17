@@ -136,20 +136,39 @@ Three findings, each with its own witness; together they say *socketed, not live
 detector's **inputs**, not its firing pattern — co-firing or co-disagreement with another reading is irrelevant
 if the input that powers it does not exist.
 
-- **(i) UNPOWERED — witnessed.** `natural_law_signature` fires **0/72 on the live corpus** — and **0/3098**
-  across four independently-generated corpora (live 72 + testsets_haiku 960 + testsets_flash 960 + kernel_v1
-  1106), with `HasAlternatives = unknown` at **100% (3098/3098)** in every one. The **positive control fires**:
-  `natural_law_signature(profile(0.92,0.02,0.04,0,false,stable,_))` → succeeds, so `0` is a *real absence*, not a
-  dead/malformed read. **Overdetermined:** the clause requires `HasAlternatives == false`; live profiles arrive
-  `unknown`, so the gate shuts *before* any discriminating content is consulted — 0 fires no matter how good the
-  reading is. The signal it needs is authored by **no generation pipeline** (all four corpora, two distinct
-  twin models, agree). Cite the count *and* the control.
+- **(i) UNPOWERED — witnessed; and the gate value is BUILDER-UNREACHABLE, not merely unauthored.**
+  `natural_law_signature` fires **0/72 live**, **0/3098** across four independently-generated corpora (live 72 +
+  testsets_haiku 960 + testsets_flash 960 + kernel_v1 1106), `HasAlternatives = unknown` at **100% (3098/3098)**
+  in every one. **Positive control fires:** `natural_law_signature(profile(0.92,0.02,0.04,0,false,stable,_))` →
+  succeeds, so `0` is a *real absence*. **Slot-mapping checked** (so the control exercises the right clause): the
+  detector head is `profile(AccessCollapse, Suppression, Resistance, BeneficiaryCount, HasAlternatives,
+  TemporalStability, _)` (`:359`) and the gate is `HasAlternatives == false` (`:382`) — the control profile's 5th
+  arg `false` lands in exactly that slot.
+  - **The deeper mechanism (this is the gate, NOT the discriminator — keep them apart):** the profile builder
+    derives the slot via `has_viable_alternatives/2` (`:251–254`), which has exactly two clauses —
+    `…(C, true) :- intent_viable_alternative(I,_,_)…` and `…(_, unknown)`. It emits **`true` or `unknown`, never
+    `false`** (`grep -c 'has_viable_alternatives(.*false)'` → 0). So `HasAlternatives == false` is **unsatisfiable
+    from the builder in every corpus** — not a *dropped* signal but an *unreachable* gate value. NB the v1/v5
+    `intent_viable_alternative` layer (106 archived stories) feeds the **`true`** branch ("alternatives exist →
+    *not* natural law"), the OPPOSITE of the `false` the gate needs — witnessed: original_v1 (43) and original_v5
+    (702) fire **0**, ha=false **0**, ha=unknown **100%**. So the detector was **never powered via natural_law**,
+    in any corpus including the ones with the intent layer.
+  - **OPEN RULING (operator's — the socket's status):** powering the socket is therefore **not** "revive a
+    retired signal" — it is §7's unsolved "author a structural value that reads *provably no alternatives*,"
+    nearer "new invention" than "dropped." Whether to (a) add a `…(C, false)` author-path, (b) leave the socket
+    dark, or (c) retire the unreachable gate leg entirely, is the operator's ruling, not asserted here.
+    This bears on (i) only; it touches (ii)/(iii) not at all.
 - **(ii) INPUT-INDEPENDENT of the exit-table — witnessed.** Detector inputs `{accessibility_collapse,
   suppression, resistance, beneficiary_count, HasAlternatives, temporal_stability}`
   (`signature_detection.pl:359`) are **disjoint** from the exit-table's `{time_horizon, exit_options}`
   (`effective_immutability`, `constraint_indexing.pl:195+`). So the detector is **not** the exit-table's second
   opinion by provenance — co-firing/co-disagreement is irrelevant. Independence is a property of *inputs*,
   witnessed against `effective_immutability`'s inputs, not of firing pattern.
+  **This earns NOTHING toward "live third reading" and must not be read as partial credit.** Input-disjointness
+  is consistent with total *output*-redundancy — two functions on disjoint inputs can still produce perfectly
+  correlated verdicts. Liveness is an *output-divergence* question, and that is unobservable while the detector
+  fires nowhere (i). (ii) is a true finding about **plumbing** (the slot, when powered, would be a genuine third
+  reading rather than the exit-table relabeled); the kill stays strictly on (iii).
 - **(iii) DISCRIMINATING CONTENT — UNSOLVED, ≡ §7.** The detector's only *discriminating* leg is
   `HasAlternatives` (the §7 dead signal); its other conditions are the burned metrics
   (accessibility/suppression/resistance) the delta-control/Boltzmann probes already showed cannot separate
@@ -168,7 +187,11 @@ if the input that powers it does not exist.
    still fires (detector lives) — witness: a natural_law-detected constraint no longer reads mountain via
    overwrite, but appears as a router input.
 3. type_1's RED-cap behavior **UNCHANGED** this pass (regression: existing RED verdicts byte-identical).
-   **Permanent-safe:** the sink is COMPLETE with the cap left on forever; no wiring assumes it ever routes (§6).
+   **Permanent-safe — falsifier discharged at spec level:** "nothing assumes the cap routes" is checkable, not
+   asserted. Grep this spec for any clause whose correctness depends on the cap lifting/routing; positive
+   control = `type_1` appears (8×, grep shown to fire), and the *only* cap-routing match is the §6 sentence
+   asserting the independence itself — no clause makes correctness depend on the cap. **Build-time re-test:** the
+   same grep over the actual sink code is a build acceptance condition (spec-level pass ≠ code-level pass).
 4. **Sink unit is per-seat at emission.** KILL: if any routed item is keyed per-constraint, the build is wrong.
 5. Transparency: every item states author/engine/detector state; silence typed, never blank.
 ```
