@@ -7002,9 +7002,32 @@ remain the operator's.**
   author↔engine relationship on the live corpus is *understood*: `author_engine_divergence` at **148/288** is
   the *majority* of live seats, and "they disagree" is a named category, not a characterization. What those 148
   ARE is **drawn-not-decided** — same status as type_1 and the §7 socket, not closed. See NEXT RULINGS.
-- **NEXT RULINGS (drawn, still not built):** type_1 RED-cap route-vs-adjudicate (own kill condition); the other
-  `resolve_modal_signature_conflict` clauses + FNL/FCR/FSM family generalization; powering the detector socket
-  (§7 / §9a(iii), unreachable-by-range — author a provably-no-alternatives signal, or retire the dead gate leg).
+- **NEXT RULINGS (drawn, still not built) — with the witnesses each needs (none retires free; natural_law
+  retired free ONLY because it fired 0, so its byte-identical diff was guaranteed pre-run).**
+  - **(a) type_1 RED-cap — route-vs-withhold.** WITNESSED 2026-06-17 (W1/W2 over `verdict_join`, control built
+    in): **12/13 RED headlines carry a type_1 severe alert**; suppressing the cap, **11 → YELLOW, 1 → RED
+    (base-red), ZERO → green**. **Control satisfied:** a non-type_1 severe alert exists (`type_3_snare_as_rope`
+    ×1) and is detected, but none co-occurs with type_1 — so no masked second floor, the OQ-98 green-over-severe
+    trap does NOT bite. ⇒ the cap's real stake is **RED vs YELLOW** (not RED vs GREEN), and those seats are
+    already routed to `engine_exit_table_review`. Seat: headline RED (withhold) vs YELLOW+routed-to-review
+    (flag). Now an informed seat.
+  - **(b) the resolver family — `resolve_modal_signature_conflict` (lines 885–932 are ALL overwrites).** Unlike
+    natural_law (0 fires), these fire and the signature layer changes `dr_type` at **66/288 live seats** (live
+    firings: constructed_high 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 /
+    false_natural_law 1). Each needs its own before/after `dr_type` + headline diff (NOT byte-identical) and a
+    routing-adequacy positive control. **SPLIT the row:** FCR/FSM/constructed are **rulable-once-witnessed**
+    (mechanical gathering); **`false_natural_law` is DEFERRABLE-pending-OQ-70** (its firing rides the
+    `claimed_natural` source-2 bait — measures authoring convention until OQ-70 rules; no W1–W5 gathering
+    resolves that gate), the same shape as the socket below.
+  - **(c) socket-powering — DEFERRABLE-not-rulable (gated on a candidate signal that does not exist, §7).**
+    Per-conjunct decomposition (W1, over 72 live): the detector needs all six conjuncts; pass-counts are
+    `accessibility≥0.85: 7 · supp≤0.15: 13 · res≤0.15: 10 · BC==0: 5 · HasAlternatives==false: 0 · stable: 68`.
+    So the detector is **multiply-dead** (HA is the absolute zero, but BC==0 and accessibility are near-dead
+    too). **Fork (c) RE-DRAWN:** "retire the dead leg" must mean **retire the ENTIRE dead detector gate** —
+    retiring the `==false` conjunct alone is a no-op (the other narrow gates still fire ~nothing). Forks: (a)
+    author a real immovability signal AND open the metric gate (bigger than HA), (b) leave dark, (c) retire the
+    whole gate. (a) needs a candidate + a PRE-REGISTERED discriminating control (physics fires, naturalized snare
+    doesn't) — until a candidate exists there is nothing to witness.
 - **THE FOUNDATIONAL OPEN (named, not a stopgap — the routing only made it legible).** Once the routing is
   worked out across the diagnostic modes, the real question is **how to CHARACTERIZE author↔engine disagreement
   per diagnostic mode** — `author_engine_divergence` (148/288 live, the majority) is the live instance: the
