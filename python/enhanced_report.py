@@ -162,6 +162,46 @@ def _authored_vs_computed(claimed, live_perspectives):
     ]
 
 
+_ROUTING_INDEX_CACHE = {}
+
+
+def _routing_index(routing_data):
+    """Lazy constraint→{seat: record} index over routing_sink.json (cached by object id)."""
+    key = id(routing_data)
+    if key not in _ROUTING_INDEX_CACHE:
+        idx = {}
+        for rec in (routing_data or {}).get("records", []):
+            idx.setdefault(rec.get("constraint"), {})[rec.get("seat")] = rec
+        _ROUTING_INDEX_CACHE[key] = idx
+    return _ROUTING_INDEX_CACHE[key]
+
+
+def _routing_addresses(constraint_id, routing_data):
+    """Per-SEAT router address from the OQ-128 routing sink (routing_sink.json). The
+    engine ROUTES the author↔engine diff to a review address; it certifies nothing,
+    and this readout is PER-SEAT by construction — never a single per-constraint
+    routing verdict (the KILL collapse, ROUTING_SINK_DESIGN.md §9b.4). Fail-soft:
+    returns [] when routing_sink.json is absent or the constraint is not in it
+    (typed absence, never a fabricated default)."""
+    if not routing_data:
+        return []
+    idx = _routing_index(routing_data)
+    seats = idx.get(constraint_id) or idx.get(constraint_id.lower())
+    if not seats:
+        return []
+    lines = ["    Routing (per-seat author↔engine diff — OQ-128 sink; a review label, certifies nothing):"]
+    for seat in ("powerless", "moderate", "institutional", "analytical"):
+        rec = seats.get(seat)
+        if not rec:
+            continue
+        addr = rec.get("address", "?")
+        reason = (rec.get("provenance") or {}).get("residual_reason", "none")
+        suffix = (f" ({reason})"
+                  if addr == "unrouted_residual" and reason not in (None, "none") else "")
+        lines.append(f"      {seat + ':':<15}{addr}{suffix}")
+    return lines
+
+
 def _compact_types(perspectives):
     """Summarize perspectives as 'type1 (ctx1), type2 (ctx2)' — one ctx per unique type."""
     type_to_ctx = {}
@@ -697,7 +737,7 @@ def build_verdict_banner(constraint_id, pipeline_data):
 
 # --- Level 1: CONSTRAINT IDENTITY (from old Section A "This Constraint" L1 fields) ---
 
-def build_level1_identity(constraint_id, pipeline_data, prolog_output):
+def build_level1_identity(constraint_id, pipeline_data, prolog_output, routing_data=None):
     """L1: Self-consistency identity — claimed/live type, signature, purity,
     coupling, Boltzmann, drift events, tangled fields."""
     lines = ["", "--- CONSTRAINT IDENTITY ---", ""]
@@ -727,6 +767,7 @@ def build_level1_identity(constraint_id, pipeline_data, prolog_output):
             if live_str:
                 lines.append(f"    Live Type:        {live_str}")
         lines.extend(_authored_vs_computed(claimed, live_perspectives))
+        lines.extend(_routing_addresses(constraint_id, routing_data))
 
         lines.append(f"    Signature:        {signature}")
 
@@ -786,6 +827,7 @@ def build_level1_identity(constraint_id, pipeline_data, prolog_output):
             if live_str:
                 lines.append(f"    Live Type:        {live_str}")
         lines.extend(_authored_vs_computed(live_claimed, live_perspectives))
+        lines.extend(_routing_addresses(constraint_id, routing_data))
         lines.append("    Signature:        [from Prolog output above]")
         lines.append("    Purity:           [not yet in batch]")
         lines.append("    Coupling:         [not yet in batch]")
@@ -2857,7 +2899,8 @@ def generate_report(constraint_id, data, iteration_round=None):
     banner = build_verdict_banner(constraint_id, data["pipeline"])
 
     # Level 1: Self-Consistency
-    l1_identity = build_level1_identity(constraint_id, data["pipeline"], prolog_output)
+    l1_identity = build_level1_identity(constraint_id, data["pipeline"], prolog_output,
+                                        data.get("routing"))
     l1_trajectory = build_drift_trajectory_section(constraint_id, data["pipeline"])
     l1_orbit = build_level1_orbit(constraint_id, data["orbit"])
     l1_omega = build_omega_section(constraint_id, data["omega"])
@@ -3062,6 +3105,7 @@ def main():
                                  "scenario_convergence.json"),
         "omega_xcon":  load_json(OUTPUTS_DIR / "omega_cross_constraint.json",
                                  "omega_cross_constraint.json"),
+        "routing":     load_json(OUTPUTS_DIR / "routing_sink.json", "routing_sink.json"),
     }
 
     # Generate reports
