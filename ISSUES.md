@@ -6763,6 +6763,66 @@ and the per-seat witness below.
   leg, which is a fact; the contingency-omega leg is author self-report and is **not** authoritative. Limit
   recorded in GAP-08.
 
+**RE-PARTITION on the right primitive + the GENERATOR-SIDE ROOT FIX (2026-06-17d, operator).**
+- **The clean/unread boundary was on SEAT-COUNT — wrong primitive.** thermo (4 agreeing seats) and radiative
+  (0 seats) are identical on *authored divergence* (both zero); seat-count carries no contingency signal.
+  Re-partition of 627 mountains on divergence: **357** author the in-substrate invariance probe
+  `test(invariance_check)`; **161** CONTESTED-HARD (authored a non-mountain seat); **91** genuinely bare
+  (no seat, no invariance_check, no omega = real UNREAD); 18 soft. The 166-clean + probed-91 mostly collapse
+  into one no-divergence set — the operator's point holds.
+- **`test(invariance_check)` IS the in-substrate invariant test** (thermo 158–163: powerless-seat-type ==
+  institutional-seat-type == mountain) — exactly the earlier "reads the same across observers → invariant."
+  But **sparse** (41/1106 kernel_v1, 0/72 live) and **gameable**: `axiom_of_choice` PASSES it (3 agreeing
+  mountain seats) while its omega flags a *negotiable chosen axiom*. So it is a *probe*, better than
+  seat-count, but **only an authored non-mountain seat is fully hard**; absence-of-divergence stays soft.
+- **thermo is the clean artifact:** MOUNTAIN-PROBED-HARD (its own `invariance_check` asserts+tests
+  institutional==mountain, authored prose *"institutional power does not exempt the constraint"*) **and the
+  engine degrades its institutional seat to rope** — `effective_immutability` overrides the story's
+  authored-and-tested invariance. radiative/actinide land SOFT (no divergence, resolving omega).
+- **GENERATOR ROOT FIX (operator proposal — candidate; dissolves the primitive problem).** Guide the
+  generator (`agent/c-orchestrator.py` decompose step / `agent/generate_kernel_corpus.py`) to **author
+  invariance as a TYPED fact**: emit an explicit invariant marker *with its probe* when the constraint reads
+  the same across positions, do **not** author redundant agreeing seats, and never leave a mountain bare.
+  Then the discriminator is a hard authored fact (not an inference), and "bare" becomes a flaggable
+  generation defect rather than ambiguous-UNREAD. Connects to **OQ-137** (typed-absence: carry absence as a
+  type, not a silent gap). **Condition (the positive control one level up):** authored-invariant must mean
+  "probed and found none," not "author skipped" — the marker must carry the probe, else `axiom_of_choice`
+  games it exactly as it games `invariance_check`. **Caution:** new authoring surface mid-baseline — GAP-08's
+  "do NOT add authoring surface mid-baseline" applies; stage it. Generation-pipeline change ⇒ operator's
+  seat; agent can draft the prompt guidance on ruling.
+
+**OPERATOR RULING (2026-06-17e) — the engine is COMMENTARY; degrading authored classification is a BUG.**
+This subsumes the whole OQ-128 apparatus and answers its "artifact or correct refusal?" question: **artifact.**
+- **Stance (operator's seat):** the authored `constraint_classification` is the authority; the engine's
+  `dr_type` *annotates* it. When the engine computes a classification that **contradicts** the authored one
+  — degrades an authored `mountain` to `rope` — the commentary is overriding its authority, which is a bug.
+- **Witnessed (kernel_v1, `/tmp/authvseng.pl` comparison):** at the **institutional** seat,
+  authored=mountain / engine=rope for `thermodynamics_entropy`, `topological`, AND `axiom_of_choice`; thermo
+  also at **moderate**. The `effective_immutability` exit-escape (mobile/arbitrage → rope) overrides the
+  author at the mid seats — **universally**. For thermo it overrides a classification the story both authored
+  AND tested (`test(invariance_check)`, *"institutional power does not exempt the constraint"*) — the
+  cleanest, hedge-free instance.
+- **The discriminator is now hard and simple — retires seat-count/omega/invariance_check inference:** compare
+  engine `dr_type` vs authored `constraint_classification` per power level; **engine=non-mountain where
+  author=mountain = the bug.** No prose reading.
+- **Reconciliation with the presheaf core (not a conflict):** for a genuinely contested constraint the author
+  *authors the divergence* (a non-mountain seat), and the engine reproducing it MATCHES — no bug, real
+  presheaf. The mismatch arises only when the engine degrades an author-*uniform* mountain — which is exactly
+  the `effective_immutability` bug, not a finding. Engine and author should agree; disagreement localizes the
+  defect.
+- **Residual at the operator's seat (unchanged):** where the author contradicts *themselves* — `topological`
+  authoring both mountain (persp 2) and rope (persp 5) at the analytical seat; `axiom_of_choice` authoring
+  uniform-mountain seats AND a "negotiable axiom" omega — the engine-vs-author comparison is muddied by
+  author-vs-author. That is the 161-hard / omega-only mis-authoring question, not the engine bug.
+- **Scope + the fix:** the comparison needs authored seats; the live-testsets schema authors none (radiative/
+  actinide) so it is undefined there — which is precisely what the generator typed-invariance fix above would
+  close. **Fix locus: `effective_immutability` must not degrade a seat the author classified mountain** (the
+  dead `natural_law`/exit-immunity override is the existing mechanism; the trigger is author-uniformity, a
+  hard fact, not the unauthorable `HasAlternatives`). **NB — pipeline-wide stance worth the operator
+  confirming:** "engine annotates, author authorities" makes authored classification dominant over computed
+  `dr_type` wherever they disagree; consistent with CS-commentary-grade vs correction-grade (FNL/FCR/FSM), but
+  state it as the engine's declared role before it is leaned on past OQ-128.
+
 **Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
 is **prose-consistent** with this audit's §5 (both say the residue is OVERDETERMINED and the FSM gate is
 not the residue fix), but that is doc-agrees-with-doc: whether main's bundled FSM-victim-gate ruling HELD
