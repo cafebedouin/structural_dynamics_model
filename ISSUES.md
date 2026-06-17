@@ -6922,8 +6922,9 @@ remain the operator's.**
     **Positive control fires** (`profile(0.92,0.02,0.04,0,false,stable,_)` → succeeds), **slot-mapping checked**
     (head arg5 `:359` = gate slot `:382`). **Deeper mechanism:** the slot is built by `has_viable_alternatives/2`
     (`:251–254`), two clauses → emits **`true` or `unknown`, NEVER `false`** (`grep -c …false)` → 0). So
-    `HasAlternatives == false` is **unsatisfiable from the builder in every corpus** — *unreachable*, not
-    *dropped*. The v1/v5 `intent_viable_alternative` layer (106 archived stories) feeds the **`true`** branch
+    `HasAlternatives == false` is **unsatisfiable from the builder in every corpus** — *unreachable-by-RANGE*
+    (`false` ∉ the predicate's range `{true, unknown}`; a gate leg testing for an unemittable value), NOT merely
+    *unpowered/dropped*. The v1/v5 `intent_viable_alternative` layer (106 archived stories) feeds the **`true`** branch
     ("alternatives exist → *not* natural law"), the OPPOSITE of what the gate needs — witnessed: original_v1 (43)
     + original_v5 (702) fire **0**, ha=false **0**, ha=unknown **100%**. The detector was **never powered via
     natural_law**, in any corpus. *NB:* the `41/1106 kernel_v1, 0/72 live` on the OQ-50 RE-PARTITION line is
@@ -6936,7 +6937,8 @@ remain the operator's.**
     escalated, not self-resolved) the v1-dropped phrasing was **NOT written**; (i) records the unreachable-gate
     mechanism instead. **OPEN RULING (operator's):** powering the socket is §7's "author a *provably-no-
     alternatives* structural value" (new invention), not a revival — and whether to add a `…(C,false)` path,
-    leave the socket dark, or retire the unreachable gate leg is the operator's call. Bears on (i) only.
+    leave the socket dark, or retire the unreachable gate leg (defensible as **dead-code removal**, not
+    capability loss — it never fired) is the operator's call. Bears on (i) only.
   - **(ii) INPUT-INDEPENDENT of the exit-table:** detector inputs (`signature_detection.pl:359`)
     `{accessibility_collapse, suppression, resistance, beneficiary_count, HasAlternatives, temporal_stability}`
     are **disjoint** from `effective_immutability`'s `{time_horizon, exit_options}` (`constraint_indexing.pl:195+`).
@@ -6950,6 +6952,13 @@ remain the operator's.**
   UNPOWERED / DEFERRED, no reused dash); §9a → input-provenance three-way split (unpowered /
   powered-but-non-discriminating / powered-and-discriminating). **DESIGN ONLY — no code touched; the build is
   the next ruling, not this one.**
+- **Review-driven precision closes (2026-06-17i, 2nd pass):** (1) §9b "permanent-safe" discharged by
+  **exhaustive read of all 10 `type_1`/`cap` references** (a token-grep proves only the *string* absent, not the
+  *dependency* — so enumeration, not pattern): each is scope-exclusion / deferred-and-"not relied on" / or the
+  §1 confirmations asserting the router taps the diff *pre-cap*; bound stated (sound iff the spec is the whole
+  design surface); build-time re-read over sink code = acceptance condition. (2) §9a(i) reframed
+  **unreachable-by-range** (`false` ∉ `{true,unknown}`), making fork (c) legible as dead-code removal. (3)
+  §9a(ii) marked **decorative w.r.t. liveness** (input-disjointness ⊬ output-divergence; kill stays on (iii)).
 
 **Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
 is **prose-consistent** with this audit's §5 (both say the residue is OVERDETERMINED and the FSM gate is

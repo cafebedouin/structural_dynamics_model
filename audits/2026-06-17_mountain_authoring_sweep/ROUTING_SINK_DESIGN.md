@@ -144,20 +144,24 @@ if the input that powers it does not exist.
   detector head is `profile(AccessCollapse, Suppression, Resistance, BeneficiaryCount, HasAlternatives,
   TemporalStability, _)` (`:359`) and the gate is `HasAlternatives == false` (`:382`) — the control profile's 5th
   arg `false` lands in exactly that slot.
-  - **The deeper mechanism (this is the gate, NOT the discriminator — keep them apart):** the profile builder
-    derives the slot via `has_viable_alternatives/2` (`:251–254`), which has exactly two clauses —
-    `…(C, true) :- intent_viable_alternative(I,_,_)…` and `…(_, unknown)`. It emits **`true` or `unknown`, never
-    `false`** (`grep -c 'has_viable_alternatives(.*false)'` → 0). So `HasAlternatives == false` is **unsatisfiable
-    from the builder in every corpus** — not a *dropped* signal but an *unreachable* gate value. NB the v1/v5
-    `intent_viable_alternative` layer (106 archived stories) feeds the **`true`** branch ("alternatives exist →
-    *not* natural law"), the OPPOSITE of the `false` the gate needs — witnessed: original_v1 (43) and original_v5
-    (702) fire **0**, ha=false **0**, ha=unknown **100%**. So the detector was **never powered via natural_law**,
-    in any corpus including the ones with the intent layer.
-  - **OPEN RULING (operator's — the socket's status):** powering the socket is therefore **not** "revive a
-    retired signal" — it is §7's unsolved "author a structural value that reads *provably no alternatives*,"
-    nearer "new invention" than "dropped." Whether to (a) add a `…(C, false)` author-path, (b) leave the socket
-    dark, or (c) retire the unreachable gate leg entirely, is the operator's ruling, not asserted here.
-    This bears on (i) only; it touches (ii)/(iii) not at all.
+  - **The deeper mechanism — UNREACHABLE-BY-RANGE, a stronger claim than "unpowered" (this is the gate, NOT the
+    discriminator — keep them apart):** the slot is built by `has_viable_alternatives/2` (`:251–254`), exactly two
+    clauses — `…(C, true) :- intent_viable_alternative(I,_,_)…` and `…(_, unknown)`. Its **range is `{true,
+    unknown}`; `false` is unrepresentable in it** (`grep -c 'has_viable_alternatives(.*false)'` → 0). The claim is
+    therefore not "no pipeline authors the signal" (*unpowered* — a `false` could in principle arrive) but "the
+    value the gate tests for is **outside the predicate's range**" (*unreachable* — no input makes it arrive). So
+    `HasAlternatives == false` is a **gate leg testing for a value the builder cannot emit** — dead by range, in
+    every corpus, regardless of authoring. NB the v1/v5 `intent_viable_alternative` layer (106 archived stories)
+    feeds the **`true`** branch ("alternatives exist → *not* natural law"), the OPPOSITE of the `false` the gate
+    needs — witnessed: original_v1 (43) + original_v5 (702) fire **0**, ha=false **0**, ha=unknown **100%**. The
+    detector was **never powered via natural_law**, in any corpus including the ones with the intent layer.
+  - **OPEN RULING (operator's — the socket's status), the three forks made legible by the range reading:**
+    powering the socket is **not** "revive a retired signal" — it is §7's unsolved "author a structural value
+    reading *provably no alternatives*," nearer new-invention than dropped. (a) **Extend the range** — add a
+    `…(C, false)` author-path so the gate becomes satisfiable; (b) **leave the socket dark** — keep the leg, no
+    input; (c) **retire the dead gate leg** — since it tests for an unemittable value, removing the
+    `HasAlternatives == false` conjunct is defensible *as dead-code removal*, not capability loss (it never
+    fired). The operator's ruling, not asserted here. Bears on (i) only; touches (ii)/(iii) not at all.
 - **(ii) INPUT-INDEPENDENT of the exit-table — witnessed.** Detector inputs `{accessibility_collapse,
   suppression, resistance, beneficiary_count, HasAlternatives, temporal_stability}`
   (`signature_detection.pl:359`) are **disjoint** from the exit-table's `{time_horizon, exit_options}`
@@ -187,11 +191,16 @@ if the input that powers it does not exist.
    still fires (detector lives) — witness: a natural_law-detected constraint no longer reads mountain via
    overwrite, but appears as a router input.
 3. type_1's RED-cap behavior **UNCHANGED** this pass (regression: existing RED verdicts byte-identical).
-   **Permanent-safe — falsifier discharged at spec level:** "nothing assumes the cap routes" is checkable, not
-   asserted. Grep this spec for any clause whose correctness depends on the cap lifting/routing; positive
-   control = `type_1` appears (8×, grep shown to fire), and the *only* cap-routing match is the §6 sentence
-   asserting the independence itself — no clause makes correctness depend on the cap. **Build-time re-test:** the
-   same grep over the actual sink code is a build acceptance condition (spec-level pass ≠ code-level pass).
+   **Permanent-safe — falsifier discharged by EXHAUSTIVE READ (not a token-grep).** A token-grep would only
+   prove the *string* absent, not the *dependency* absent — a cap-dependence phrased without the grepped token
+   would hide. So the discharge is by enumeration: all **10** `type_1`/`cap` references in this spec read
+   individually (lines 4, 14, 16, 18, 84, 86–91, 121, 129, 189–193). Each is one of — (a) scope-exclusion (4,
+   84, 86–87); (b) diagram/legend marking the cap **deferred and "not relied on"** (121, 129, 88–91); or (c)
+   the strongest, the §1 confirmations (14, 16, 18) asserting the router taps the `:614` diff **pre-cap, without
+   triggering the cap** — the *opposite* dependency direction. **No reference makes the sink's correctness
+   depend on the cap lifting/routing.** Coverage bound stated honestly: this discharges the *design text*; it is
+   sound only insofar as the spec is the whole design surface. **Build-time re-test (acceptance condition):**
+   re-read every cap reference in the actual sink code — spec-level pass ≠ code-level pass.
 4. **Sink unit is per-seat at emission.** KILL: if any routed item is keyed per-constraint, the build is wrong.
 5. Transparency: every item states author/engine/detector state; silence typed, never blank.
 ```
