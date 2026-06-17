@@ -7056,6 +7056,15 @@ remain the operator's.**
     third path (discriminated severity: withhold high-ε snare-at-analytical, route low-ε rope-at-analytical)
     **ships clean**; the type_1 ruling is no longer blocked — it is the operator's seat with a validated
     discriminant.
+    **RULED + BUILT (operator, 2026-06-17): discriminated severity.** `drl_core.pl` type_1 clause split — degrade
+    →snare = `severe` (withhold, RED floor stays); degrade→other = `informational` (routes via the sink, no
+    headline floor). **Acceptance witness** (before/after headline, six corpora, ~7180 rows): RED **389→102**;
+    **287 flipped RED→non-RED** (all red→yellow/green, none reverse); **safety: all 10 v5 mountain-claimed
+    snare-at-analytical STAY RED** (china_taiwan / cia_fbi_legal_wall / ancient_grudge_verona red; halting_problem
+    / heisenberg / prime_number_theorem → green). `dr_type` byte-identical (288 rows — only the alert severity
+    changed); validation_suite 72/0/0; test_snapshot_migration 10/10; sole consumer `report_generator:590`
+    abstracts over severity. **KILL (attached, not a hedge):** a future corpus authoring a mountain-claimed
+    snare-at-analytical at 0.25<ε<0.50 breaks the clean gap — re-run the χ-decomposition when a new corpus lands.
   - **(b) the resolver family — `resolve_modal_signature_conflict` (lines 885–932 are ALL overwrites).** Unlike
     natural_law (0 fires), these fire and the signature layer changes `dr_type` at **66/288 live seats** (live
     firings: constructed_high 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 /

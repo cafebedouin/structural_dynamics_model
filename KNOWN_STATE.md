@@ -45,6 +45,23 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-17 — OQ-128 type_1 cap RULED + BUILT: discriminated severity (withhold high-ε snare, route low-ε artifact)
+**Files:** prolog/drl_core.pl, ISSUES.md (OQ-128)
+**Tier:** landed
+
+The type_1 RED-cap ruling (a NEXT RULING after the sink). The type_1 `severe` alert was OVERLOADED:
+it fired identically on (a) a mountain-claim the engine degrades to SNARE (high-ε real false summit, a
+defect) and (b) degrading to rope/other (the arc's universal non-diagnostic degradation of genuine low-ε
+mountains — the same artifact that made natural_law a free retirement). Witnessed clean ε gap in the
+mountain-claimed population (snare-at-seat ε≥0.50, rope-at-seat ε≤0.25, nothing between, KILL=0 across six
+corpora ~7000). Operator ruled **discriminated severity**: the `dr_claim_mismatch` type_1 clause
+(`drl_core.pl`) is split — degrade→snare = `severe` (withhold, RED floor); degrade→other = `informational`
+(routes via the sink, no headline floor). **Tripwire:** do NOT collapse it back to a single `severe` — that
+re-overloads the alert and re-launders genuine math/physics mountains into RED. Acceptance witness: RED
+389→102 across six corpora (287 RED→non-RED), all 10 v5 mountain-claimed snare-at-analytical STAY RED,
+`dr_type` byte-identical. **KILL:** a future corpus authoring a mountain-claimed snare-at-analytical at
+0.25<ε<0.50 breaks the clean gap → re-run the χ-decomposition. The `severe` of type_3/type_5 is untouched.
+
 ## 2026-06-17 — OQ-128 routing sink BUILT (engine ROUTES the author↔engine diff, never reclassifies)
 **Files:** prolog/routing_sink.pl, prolog/signature_detection.pl, python/run_pipeline.py, python/enhanced_report.py, ISSUES.md (OQ-128), audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md
 **Tier:** landed
