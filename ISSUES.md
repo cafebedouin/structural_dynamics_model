@@ -6996,10 +6996,21 @@ remain the operator's.**
   **SPLIT into first-class typed addresses, not ratify a catch-all** — `both_silent` (16) / `engine_abstained`
   (23) / `author_engine_divergence` (148). Seven typed MECE addresses total; `unrouted_residual` and its
   `residual_reason` field removed; controls re-witnessed unchanged (thermo, topological). `enhanced_report.py`
-  updated to render the self-describing addresses.
+  updated to render the self-describing addresses. **What RESOLVED covers (altitude pin, so a cold reader does
+  not overclaim):** the routing *architecture* is specified, built, and witnessed — every seat lands in a typed
+  address, the former catch-all decomposed exactly (148+16+23=187, nothing lost). It does **NOT** mean the
+  author↔engine relationship on the live corpus is *understood*: `author_engine_divergence` at **148/288** is
+  the *majority* of live seats, and "they disagree" is a named category, not a characterization. What those 148
+  ARE is **drawn-not-decided** — same status as type_1 and the §7 socket, not closed. See NEXT RULINGS.
 - **NEXT RULINGS (drawn, still not built):** type_1 RED-cap route-vs-adjudicate (own kill condition); the other
   `resolve_modal_signature_conflict` clauses + FNL/FCR/FSM family generalization; powering the detector socket
   (§7 / §9a(iii), unreachable-by-range — author a provably-no-alternatives signal, or retire the dead gate leg).
+- **THE FOUNDATIONAL OPEN (named, not a stopgap — the routing only made it legible).** Once the routing is
+  worked out across the diagnostic modes, the real question is **how to CHARACTERIZE author↔engine disagreement
+  per diagnostic mode** — `author_engine_divergence` (148/288 live, the majority) is the live instance: the
+  routing names it, nothing yet says what *kind* of disagreement each is (sub-type by claim type? by which seat
+  degrades? by mode?). Distinct from the routing rulings above: those decide *where a diff goes*; this decides
+  *what a diff means*. Drawn-not-decided; the largest live bucket is its evidence base.
 
 **Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
 is **prose-consistent** with this audit's §5 (both say the residue is OVERDETERMINED and the FSM gate is
