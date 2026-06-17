@@ -6633,13 +6633,18 @@ Candidate dispositions for the operator: (1) **confirmed defect** — restore vi
 authoring-criterion ruling (who earns the flag, by what test — shared with OQ-50 OPEN-3); (3) the residue
 is **correct for genuinely contested** mid-power claims and only pristine-no-alternative cases route
 through the surface. The 'restoration restores genuine mountains' rationale is off the table either way.
-Witnessable item before the surface is landable: re-run `joint_witness.pl` with the BENEF leg sourced
-from the authored flag (not the hand-retraction overlay), confirming a single authored fact clears both
-legs and holds delta-exactly-two.
+**Prerequisite to the disposition being *rulable* (not merely to landing the surface) — NEXT AGENT TASK:**
+re-run `joint_witness.pl` with the BENEF leg sourced from the **authored flag** (not the hand-retraction
+overlay), confirming a single authored fact clears both legs and holds delta-exactly-two. Until that path
+is witnessed, dispositions (1) [confirmed defect → authored surface] and (2) [stays open] are **not
+distinguishable by evidence**, only by how long one holds it open — so the forward order is: flag-sourced
+`joint_witness` re-run **first**, *then* the disposition is a real choice. Agent task, not the operator's seat.
 
 **Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
-is consistent with this audit's §5: it already treats the FSM gate as not the residue fix, so no revision
-needed), OQ-50 (the false-summit detector this rides — OPEN-1/OPEN-2 closed 2026-06-14; the residue thread
+is **prose-consistent** with this audit's §5 (both say the residue is OVERDETERMINED and the FSM gate is
+not the residue fix), but that is doc-agrees-with-doc: whether main's bundled FSM-victim-gate ruling HELD
+for a reason **independent of restoration firing** is NOT yet witnessed against substrate — **mechanical
+re-check deferred**; do not read OQ-122 as a verified leg on this point), OQ-50 (the false-summit detector this rides — OPEN-1/OPEN-2 closed 2026-06-14; the residue thread
 is OQ-50 OPEN-3 on the archival branch), OQ-44/GAP-08 (the fail-close that made `HasAlternatives==false`
 unauthorable — the root of the dead restoration), OQ-117 (false-foundational rejection gates), OQ-70
 (neutron_star/FCR, separate).
