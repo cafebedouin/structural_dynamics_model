@@ -194,11 +194,8 @@ def _routing_addresses(constraint_id, routing_data):
         rec = seats.get(seat)
         if not rec:
             continue
-        addr = rec.get("address", "?")
-        reason = (rec.get("provenance") or {}).get("residual_reason", "none")
-        suffix = (f" ({reason})"
-                  if addr == "unrouted_residual" and reason not in (None, "none") else "")
-        lines.append(f"      {seat + ':':<15}{addr}{suffix}")
+        # Address is self-describing (seven typed, MECE addresses — no catch-all).
+        lines.append(f"      {seat + ':':<15}{rec.get('address', '?')}")
     return lines
 
 

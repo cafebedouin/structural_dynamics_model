@@ -23,21 +23,21 @@
 %                currently unpowered (HasAlternatives==false is builder-unreachable,
 %                §9a(i)); records nl_fired|nl_absent, never used to reclassify.
 %
-% ADDRESSES (§4) — the four named buckets, plus one HONEST residual:
+% ADDRESSES — SEVEN typed, MECE buckets, no catch-all (operator ruling 2026-06-17:
+% split the former unrouted_residual reasons into first-class addresses). The four
+% §4 buckets:
 %   generation_gap          : AUTHOR_SILENT at a seat the engine classified.
 %   authoring_review        : author self-contradicts at the seat ([mountain,rope]).
 %   engine_exit_table_review: author uniform-mountain + engine degrades (= the
-%                             dr_claim_mismatch type_1 seats).
+%                             dr_claim_mismatch type_1 seats with a real engine type).
 %   no_route                : author's single reading == engine's reading (agreement /
 %                             presheaf reproducing authored divergence).
-%   unrouted_residual       : everything the four named buckets do not cover, with
-%                             provenance.residual_reason in {engine_abstained,
-%                             author_engine_divergence, both_silent}. This is an
-%                             HONEST extension beyond §4's mountain-centric four: the
-%                             live corpus is unknown-heavy, and collapsing an engine
-%                             abstain into no_route would fake agreement (Pattern 6).
-%                             Flagged for operator ratification; carries its reason,
-%                             never a plausible default.
+% Plus three the §4 mountain-sweep didn't name but the (unknown-heavy) live corpus
+% needs — collapsing an engine abstain into no_route would fake agreement (Pattern 6):
+%   both_silent             : neither author nor engine has a reading at the seat.
+%   engine_abstained        : author has a reading; engine produced unknown (≠ agreement).
+%   author_engine_divergence: both speak and disagree, but not a uniform-mountain degrade.
+% Each address is self-describing; there is no provenance.residual_reason.
 % ============================================================================
 
 :- module(routing_sink, [
@@ -137,23 +137,29 @@ seat_mismatch(C, Seat, ErrorType-Severity) :-
 seat_mismatch(_, _, none).
 
 % ---------------------------------------------------------------------------
-% The router address (a LABEL — certifies nothing).
+% The router address (a LABEL — certifies nothing). SEVEN typed, MECE addresses;
+% no catch-all (operator ruling 2026-06-17: split the former unrouted_residual
+% reasons into first-class addresses rather than bless a fourth-and-a-half
+% category). The four §4 buckets + three that the §4 mountain-sweep didn't name
+% but the live corpus needs (an engine abstain must NOT collapse into no_route —
+% that would fake agreement, Pattern 6): both_silent / engine_abstained /
+% author_engine_divergence. Each address is self-describing; no residual_reason.
 % ---------------------------------------------------------------------------
-route_address(C, _Seat, Author, Engine, Address, ResidualReason) :-
+route_address(C, _Seat, Author, Engine, Address) :-
     (   Author == author_silent, Engine \== engine_silent
-    ->  Address = generation_gap, ResidualReason = none
+    ->  Address = generation_gap            % author silent; engine classified
     ;   Author == author_silent, Engine == engine_silent
-    ->  Address = unrouted_residual, ResidualReason = both_silent
+    ->  Address = both_silent               % neither side has a reading
     ;   is_list(Author), length(Author, NA), NA >= 2
-    ->  Address = authoring_review, ResidualReason = none
+    ->  Address = authoring_review          % author self-contradicts at the seat
     ;   Author = [A], Engine == A
-    ->  Address = no_route, ResidualReason = none
+    ->  Address = no_route                  % author reading == engine reading
     ;   Author == [mountain], Engine \== mountain, Engine \== engine_silent,
         author_uniform_mountain(C)
-    ->  Address = engine_exit_table_review, ResidualReason = none
+    ->  Address = engine_exit_table_review  % uniform-mountain author, engine degrades
     ;   Engine == engine_silent
-    ->  Address = unrouted_residual, ResidualReason = engine_abstained
-    ;   Address = unrouted_residual, ResidualReason = author_engine_divergence
+    ->  Address = engine_abstained          % author claims; engine unknown (≠ agreement)
+    ;   Address = author_engine_divergence  % both speak, disagree, not a uniform-mtn degrade
     ).
 
 % ---------------------------------------------------------------------------
@@ -166,14 +172,13 @@ seat_diff(C, Seat, Author, Engine, Detector, Address, Provenance) :-
     author_reading_at(C, Seat, Author, AuthorMode),
     engine_reading_at(C, Seat, Engine),
     detector_state(C, Detector),
-    route_address(C, Seat, Author, Engine, Address, ResidualReason),
+    route_address(C, Seat, Author, Engine, Address),
     seat_mismatch(C, Seat, Mismatch),
     ( author_uniform_mountain(C) -> UnifMtn = true ; UnifMtn = false ),
     Provenance = provenance{
         author_mode: AuthorMode,
         mismatch: Mismatch,
-        author_uniform_mountain: UnifMtn,
-        residual_reason: ResidualReason
+        author_uniform_mountain: UnifMtn
     }.
 
 % ---------------------------------------------------------------------------
@@ -197,8 +202,7 @@ seat_diff_record(C, Dict) :-
             engine_state: EngineField,
             detector: Detector,
             mismatch: MismatchField,
-            author_uniform_mountain: Prov.author_uniform_mountain,
-            residual_reason: Prov.residual_reason
+            author_uniform_mountain: Prov.author_uniform_mountain
         }
     }.
 

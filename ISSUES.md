@@ -6569,7 +6569,7 @@ ruling and the split decision are the operator's.
 
 **Ω-type:** Ω_C (design ruling — whether the mid-power decline is intended semantics).
 
-**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift; VALIDATED 2026-06-17 then CORRECTED 2026-06-17b: the mid-seat degradation is UNIVERSAL/non-diagnostic (hits clean `fermats_last_theorem` identically to contested `axiom_of_choice`); "confirmed artifact" RETRACTED; 370/627 engine mountains are contested-by-own-content (authoring question, operator's seat) — see VALIDATION + CORRECTION blocks; SUPERSEDED 2026-06-17f/g: engine ROUTES not reclassifies — fix is a routing SINK over the per-SEAT author↔engine diff (not an `effective_immutability` gate); `natural_law` is diagnostic (comment+route, don't revive the override) — see SUPERSESSION block; RESTATED 2026-06-17i: design-spec tightened to TWO live inputs + a socketed-pending third (detector 0/3098, unpowered) + cap permanent-safe — engine side is NOT "specified," three rulings + the build remain the operator's; `:867` retirement WITNESSED behavior-neutral (resolver fires 0/3843, witness-then-retire); **BUILT 2026-06-17 — routing_sink.pl live, :867 retired, wired into run_pipeline; dr_type/dr_claim_mismatch byte-identical, per-seat invariant holds, pipeline exit 0; one spec-extension address (unrouted_residual) OPEN for ratification; type_1-cap / FNL-FCR-FSM / socket-powering remain next rulings — see BUILT block**; see DESIGN-SPEC TIGHTENED block**
+**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift; VALIDATED 2026-06-17 then CORRECTED 2026-06-17b: the mid-seat degradation is UNIVERSAL/non-diagnostic (hits clean `fermats_last_theorem` identically to contested `axiom_of_choice`); "confirmed artifact" RETRACTED; 370/627 engine mountains are contested-by-own-content (authoring question, operator's seat) — see VALIDATION + CORRECTION blocks; SUPERSEDED 2026-06-17f/g: engine ROUTES not reclassifies — fix is a routing SINK over the per-SEAT author↔engine diff (not an `effective_immutability` gate); `natural_law` is diagnostic (comment+route, don't revive the override) — see SUPERSESSION block; RESTATED 2026-06-17i: design-spec tightened to TWO live inputs + a socketed-pending third (detector 0/3098, unpowered) + cap permanent-safe — engine side is NOT "specified," three rulings + the build remain the operator's; `:867` retirement WITNESSED behavior-neutral (resolver fires 0/3843, witness-then-retire); **BUILT 2026-06-17 — routing_sink.pl live, :867 retired, wired into run_pipeline; dr_type/dr_claim_mismatch byte-identical, per-seat invariant holds, pipeline exit 0; address-extension RESOLVED 2026-06-17 (operator: SPLIT into 7 typed MECE addresses, not a catch-all); type_1-cap / FNL-FCR-FSM / socket-powering remain next rulings — see BUILT block**; see DESIGN-SPEC TIGHTENED block**
 **Priority:** 1
 **Deps:** splits_from OQ-122, bundled_with OQ-122
 **Origin:** OQ-122 fixture/verdict work, 2026-06-14. `classify_from_metrics` (pre-signature) returns
@@ -6975,9 +6975,13 @@ remain the operator's.**
 - **Implementation** (branch `oq128-routing-sink`): (1) `:867` natural_law overwrite RETIRED with a provenance
   tombstone in `signature_detection.pl` (detector `constraint_signature(C,natural_law)` LEFT INTACT as a
   socketed router input); (2) `prolog/routing_sink.pl` — the sink: per-SEAT `seat_diff/7` over the author↔engine
-  diff, addresses = the four §4 labels + one honest `unrouted_residual` (reason ∈ {both_silent, engine_abstained,
-  author_engine_divergence}); taps `dr_claim_mismatch/4` UNMODIFIED; emits `outputs/routing_sink.json` with a
-  coverage manifest; (3) wired into `run_pipeline.py` Phase 2 (Pattern-1 freshness).
+  diff, **seven typed MECE addresses** = the four §4 labels (`generation_gap` / `authoring_review` /
+  `engine_exit_table_review` / `no_route`) + `both_silent` / `engine_abstained` / `author_engine_divergence`
+  (operator ruling 2026-06-17: split, not a catch-all — no `unrouted_residual`, each address self-describing);
+  taps `dr_claim_mismatch/4` UNMODIFIED; emits `outputs/routing_sink.json` with a
+  coverage manifest; (3) wired into `run_pipeline.py` Phase 2 (Pattern-1 freshness). **Consumers:**
+  `routing_sink.json` itself, AND `enhanced_report.py` (CONSTRAINT IDENTITY section shows each seat's
+  router address per-seat, after "Authored vs Computed" — never a per-constraint routing verdict).
 - **Witnessed (all §9b acceptance conditions):** `:867` retirement → `dr_type` byte-identical (288 rows) +
   `dr_claim_mismatch` byte-identical (52 rows) ⇒ existing RED verdicts unchanged (type_1 cap UNTOUCHED, left ON);
   per-seat invariant `manifest.per_seat_invariant_holds=true` (288 = 72×4; KILL §9b.4 = any per-constraint
@@ -6987,10 +6991,12 @@ remain the operator's.**
   moderate/institutional; topological (contested) → `no_route` (powerless) / `generation_gap` (moderate,
   the spec's literal example) / `authoring_review` (analytical [mountain,rope]). The router DIFFERENTIATES
   clean from contested — the whole point of the arc.
-- **OPEN for operator ratification (a spec extension, flagged not smuggled):** the `unrouted_residual` address
-  is beyond §4's four — forced by the live corpus's `unknown`-heavy engine readings (187/288 live seats), since
-  collapsing an engine abstain into `no_route` would fake agreement (Pattern 6). It carries its reason, never a
-  plausible default. Ratify, rename, or split as you see fit.
+- **RESOLVED — address-extension ruling (operator, 2026-06-17):** the live corpus's `unknown`-heavy engine
+  readings (was 187/288 live seats in the catch-all) needed addresses beyond §4's four. Operator ruled
+  **SPLIT into first-class typed addresses, not ratify a catch-all** — `both_silent` (16) / `engine_abstained`
+  (23) / `author_engine_divergence` (148). Seven typed MECE addresses total; `unrouted_residual` and its
+  `residual_reason` field removed; controls re-witnessed unchanged (thermo, topological). `enhanced_report.py`
+  updated to render the self-describing addresses.
 - **NEXT RULINGS (drawn, still not built):** type_1 RED-cap route-vs-adjudicate (own kill condition); the other
   `resolve_modal_signature_conflict` clauses + FNL/FCR/FSM family generalization; powering the detector socket
   (§7 / §9a(iii), unreachable-by-range — author a provably-no-alternatives signal, or retire the dead gate leg).

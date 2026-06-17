@@ -353,9 +353,11 @@ runs `metric_based_type_indexed/3` first.
 **Engine ROUTES, never RECLASSIFIES (OQ-128, 2026-06-17) — `prolog/routing_sink.pl`.** Do NOT add a new
 signature *overwrite* (a clause that rewrites `dr_type` to manufacture a verdict) and do NOT revive `:867`.
 The author↔engine `dr_type` disagreement is the PRODUCT, routed per-SEAT to a review address by
-`routing_sink:seat_diff/7` (addresses: `generation_gap` / `authoring_review` / `engine_exit_table_review` /
-`no_route` / `unrouted_residual`). It taps `dr_claim_mismatch/4` UNMODIFIED, emits `outputs/routing_sink.json`
-(wired into `run_pipeline.py` Phase 2). **Tripwire:** the leaf record is per-SEAT — never collapse seats into
+`routing_sink:seat_diff/7` (seven typed MECE addresses: `generation_gap` / `authoring_review` /
+`engine_exit_table_review` / `no_route` / `both_silent` / `engine_abstained` / `author_engine_divergence` —
+no catch-all). It taps `dr_claim_mismatch/4` UNMODIFIED, emits `outputs/routing_sink.json`
+(wired into `run_pipeline.py` Phase 2) — consumed by `enhanced_report.py` (per-seat, in CONSTRAINT IDENTITY).
+**Tripwire:** the leaf record is per-SEAT — never collapse seats into
 one constraint verdict (KILL §9b.4; the aggregate-merge recurred 3× in the OQ-128 arc). Author side: per-seat
 `constraint_classification` keyed by `agent_power` (archives) else the seat-blind `constraint_claim` (live
 corpus authors one claim, not per-seat). Detail: `audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md`.

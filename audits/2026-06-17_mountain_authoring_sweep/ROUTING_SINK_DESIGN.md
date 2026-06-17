@@ -5,12 +5,15 @@
 `python/run_pipeline.py` Phase 2 (`routing_sink:run_routing_sink` → `outputs/routing_sink.json`). Build commits
 on branch `oq128-routing-sink`. STILL NOT in scope (drawn, not built — each a separate ruling): type_1's
 RED-cap (left ON, permanent-safe), the other `resolve_modal_signature_conflict` clauses, FNL/FCR/FSM.
-**Build note:** the live corpus's `unknown`-heavy engine readings forced one honest address beyond §4's four —
-`unrouted_residual` carrying its reason (`both_silent` / `engine_abstained` / `author_engine_divergence`),
-because collapsing an engine abstain into `no_route` would fake agreement (Pattern 6). Flagged for operator
-ratification. Witnesses: thermo (clean) → `engine_exit_table_review` at degraded seats; topological (contested)
-→ `generation_gap` (moderate) + `authoring_review` (analytical) — the router differentiates the two cases the
-arc was about.
+**Build note + ratification ruling (2026-06-17).** The live corpus's `unknown`-heavy engine readings need
+addresses beyond §4's four (collapsing an engine abstain into `no_route` would fake agreement, Pattern 6).
+**Operator ruling: split into first-class typed addresses, NOT a catch-all** — so the address set is **seven
+typed, MECE** buckets: the four §4 (`generation_gap` / `authoring_review` / `engine_exit_table_review` /
+`no_route`) + `both_silent` / `engine_abstained` / `author_engine_divergence`. No `unrouted_residual`; each
+address is self-describing (no `residual_reason` field). Witnesses: thermo (clean) → `engine_exit_table_review`
+at degraded seats; topological (contested) → `generation_gap` (moderate) + `author_engine_divergence`
+(institutional) + `authoring_review` (analytical) — the router differentiates the two cases the arc was about.
+Consumers: `outputs/routing_sink.json` + `enhanced_report.py` (per-seat in the CONSTRAINT IDENTITY section).
 
 ## 0. The principle (operator architecture)
 The engine **routes** disagreement; it **never reclassifies**. Only review reclassifies. The author↔engine
@@ -71,6 +74,14 @@ diff(Constraint, Seat) = {
 - **generation-gap** — AUTHOR_SILENT at a seat the engine classified (topological moderate).
 - **no route** — author authored divergence and the engine reproduces it (presheaf working), or all readings
   agree.
+
+**Three more typed addresses (BUILT — operator ruling 2026-06-17, split not catch-all).** §4's four are
+mountain-sweep-centric; the live corpus's `unknown`-heavy engine readings need three more first-class addresses
+(an engine abstain must not collapse into `no route` — that fakes agreement, Pattern 6):
+- **both_silent** — neither author nor engine has a reading at the seat.
+- **engine_abstained** — author has a reading; the engine produced `unknown` (≠ agreement, ≠ degradation).
+- **author_engine_divergence** — both speak and disagree, but it is not a uniform-mountain degradation.
+Seven typed, MECE addresses total; no `unrouted_residual` catch-all.
 
 **Why a noisy detector is now usable (the unlock):** routing ≠ certifying. The GAP-08 re-leak (the natural_law
 detector firing on `price_formation__naturalist`) produces a review **item**, not a miscertification — volume
