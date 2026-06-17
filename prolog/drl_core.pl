@@ -611,11 +611,31 @@ dr_mismatch(C, perspectival_gap(Type1, Ctx1, Type2, Ctx2),
 % Negating is_mountain therefore flags every claimer, including genuine mountains; negating
 % dr_type flags only constraints whose authoritative classification actually departs from
 % the mountain claim. dr_type does not depend on dr_mismatch, so there is no recursion.
+% DISCRIMINATED SEVERITY (OQ-128, 2026-06-17). The type_1 `severe` was OVERLOADED:
+% it fired identically on (a) the engine degrading a mountain-claim to SNARE — a
+% high-extraction false summit, a real defect — and (b) degrading it to rope/other
+% — the arc's UNIVERSAL non-diagnostic degradation of genuine low-ε mountains (the
+% same artifact that made natural_law a free retirement). Witnessed clean ε gap in
+% the mountain-claimed population: snare-at-seat ε≥0.50, rope-at-seat ε≤0.25, nothing
+% between, KILL=0 across six corpora (~7,000 constraints). So discriminate:
+%   degrade→snare  : SEVERE  (withhold — real false summit, RED floor stays)
+%   degrade→other  : informational (routes via the sink, NO headline floor — the
+%                    non-diagnostic artifact is flagged for review, not certified RED).
+% Kill condition for this split: a future corpus authoring a mountain-claimed
+% snare-at-seat at 0.25 < ε < 0.50 (a middle-ε case) breaks the clean gap and the
+% discriminant needs a judgment call — re-run the χ-decomposition when a new corpus
+% lands (OQ-128 record). `informational` raises no floor (severity_floor/2 is closed
+% on severe→red, moderate→yellow); the sink still records the diff in provenance.
 dr_claim_mismatch(C, Context, type_1_false_summit, severe) :-
     narrative_ontology:constraint_claim(C, mountain),
     standard_context(Context),
+    dr_type(C, Context, snare).
+dr_claim_mismatch(C, Context, type_1_false_summit, informational) :-
+    narrative_ontology:constraint_claim(C, mountain),
+    standard_context(Context),
     dr_type(C, Context, ActualType),
-    ActualType \= mountain.
+    ActualType \= mountain,
+    ActualType \= snare.
 
 % Type 3: Snare Misidentified as Rope (Indexed)
 % Claimed as Rope but is actually Snare from this context.
