@@ -7031,8 +7031,19 @@ remain the operator's.**
     it fires identically on the non-diagnostic artifact (85%) and on real false summits (15%). This re-shapes the
     seat beyond binary withhold-vs-route: a discriminated severity (high-ε snare-at-analytical = real;
     low-ε rope-at-analytical = the artifact) would route the 51 and withhold the 9. **Operator's seat** —
-    drawn from evidence, not ruled here. (Aside: the snare-9 having a GREEN *base* despite ε=0.8 is itself a
-    base-verdict blind spot, separate from the cap.)
+    drawn from evidence, not ruled here.
+    **DISCRIMINANT VALIDATED + base-verdict "blind spot" CORRECTED (2026-06-17, the third-path acceptance test).**
+    Witnessed on the snare-9 vs a rope-51 sample: base verdict **green for BOTH** populations, but `dr_type` at
+    analytical separates **cleanly** — snare ↔ ε 0.7–0.8, rope ↔ ε 0.15–0.2, no overlap. So (i) the discriminant
+    the third path reads is `dr_type` (from χ=ε·f(d)·σ), which reads the TRUE ε — it does **not** inherit the base
+    verdict's behavior, so the third path is SAFE (the high-ε snares are caught reading the real 0.8). (ii) My
+    earlier "base-verdict blind spot" aside was **WRONG**: `compute_verdict` aggregates *subsystem tension/
+    disagreement* (green = subsystems AGREE), it was never an extraction gate; a cleanly-classified snare yields
+    agreement → green base **by design** (verdict_join: base=consistency, alert floors=severity, OQ-98). ε is not
+    "dropped" anywhere — it reaches `dr_type` and the type_1 alert; the base verdict simply measures consistency.
+    ⇒ (c) is NOT structural rot — it is a *labeling* question (green-base reads as "safe" but means "consistent"),
+    a separate/smaller thread. The snare-9's only severity signal IS the type_1 floor (no other alert), so under
+    routing they need the discriminated floor to KEEP withholding — which the validated discriminant supports.
   - **(b) the resolver family — `resolve_modal_signature_conflict` (lines 885–932 are ALL overwrites).** Unlike
     natural_law (0 fires), these fire and the signature layer changes `dr_type` at **66/288 live seats** (live
     firings: constructed_high 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 /
