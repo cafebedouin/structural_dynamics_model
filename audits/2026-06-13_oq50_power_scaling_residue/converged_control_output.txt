@@ -1,0 +1,89 @@
+
+[corpus] Loaded 1106 testsets successfully.
+
+==== archives/datasets/kernel_v1 : converged-control validation (_48140/_48146 targets present) ====
+  thermodynamics_entropy
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  weak_law_large_numbers
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  well_ordering_theorem
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  maxwell_demon_impossibility
+     claim=mountain  seats=[rope,rope,rope,rope]  varies
+     sig=coupling_invariant_rope  descent=descends(rope)  boltzmann=compliant
+  axiom_of_choice_consequence
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  busy_beaver_noncomputability
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  finite_group_classification
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  topological_invariant_universality
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=false_ci_rope  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  planar_graph_embeddability
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  newtons_method_convergence
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  lagrange_multipliers
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  maximum_entropy_principle
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  (absent from this corpus: [thermodynamic_arrow,conservation_of_energy,second_law_thermodynamics,speed_of_light_invariance])
+
+[corpus] Loaded 3380 testsets successfully.
+
+==== archives/datasets/original_v6 : converged-control validation (_81434/_81440 targets present) ====
+  thermodynamics_entropy
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  weak_law_large_numbers
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  well_ordering_theorem
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  maxwell_demon_impossibility
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  axiom_of_choice_consequence
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  busy_beaver_noncomputability
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  finite_group_classification
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  topological_invariant_universality
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  planar_graph_embeddability
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  newtons_method_convergence
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  lagrange_multipliers
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  maximum_entropy_principle
+     claim=mountain  seats=[mountain,rope,rope,mountain]  varies
+     sig=ambiguous  descent=fails_descent(4,[mountain,rope])  boltzmann=compliant
+  (absent from this corpus: [thermodynamic_arrow,conservation_of_energy,second_law_thermodynamics,speed_of_light_invariance])
+
+=== LABELED SEATS (witness for the exit-axis diagnosis) ===
+thermodynamics_entropy (converged):  powerless/trapped=mountain  moderate/mobile=rope  institutional/arbitrage=rope  analytical/analytical=mountain
+weak_law_large_numbers (converged):  same pattern (mountain at trapped+analytical, rope at mobile+arbitrage)
+radiative (contested, testsets):     powerless=tangled_rope  moderate=scaffold  institutional=scaffold  analytical=tangled_rope
+
+READING: converged controls reach mountain at the NON-MOBILE seats (trapped, analytical) but are exit-degraded to rope at mobile/arbitrage => effective_immutability artifact, NOT correct refusal. Contested controls (radiative) never reach mountain at any seat. Discriminator = the non-mobile/analytical seat reading; sheaf-over-all-seats fails because the mobile-seat artifact breaks gluing for both.

@@ -420,6 +420,10 @@ surface mid-baseline — the rebuild's ε-idiom and diff baselines are forming).
   names as the revival trigger. Recorded as a **finding, not a scheduling**: arming revival remains the
   staged, preregistered, fail-closed work item above, and the mid-baseline caution still governs the
   OQ-128 witness-set authoring. Evidence + checks: ISSUES.md OQ-128 + `audits/2026-06-13_oq50_power_scaling_residue/`.
+  **VINDICATED 2026-06-17 (converged-control validation, OQ-128 VALIDATION block):** alternative-existence
+  is the *correct, structural* discriminator — `thermodynamics_entropy` (authored no-alternative) is wrongly
+  exit-degraded and *should* restore via the dead `natural_law` override; `radiative` (authored competing
+  mechanisms) correctly stays non-mountain. Not a candidate anymore — a real consuming research question.
 - **Retire the Pattern-2 duplicate.** The archival `oq50-power-scaling-residue` branch drafted a standalone
   `no_viable_alternatives/1` flag as the GAP-08 fill; it duplicates this declared `intent_*` layer and
   bypasses the revival protocol. The declared surface should be revived, not paralleled — the flag should

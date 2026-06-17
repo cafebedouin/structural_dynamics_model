@@ -6569,7 +6569,7 @@ ruling and the split decision are the operator's.
 
 **Ω-type:** Ω_C (design ruling — whether the mid-power decline is intended semantics).
 
-**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift**
+**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift; VALIDATED 2026-06-17 as confirmed ARTIFACT (converged control `thermodynamics_entropy` is exit-degraded too) — see VALIDATION block**
 **Priority:** 1
 **Deps:** splits_from OQ-122, bundled_with OQ-122
 **Origin:** OQ-122 fixture/verdict work, 2026-06-14. `classify_from_metrics` (pre-signature) returns
@@ -6664,6 +6664,43 @@ overlay), confirming a single authored fact clears both legs and holds delta-exa
 is witnessed, dispositions (1) [confirmed defect → authored surface] and (2) [stays open] are **not
 distinguishable by evidence**, only by how long one holds it open — so the forward order is: flag-sourced
 `joint_witness` re-run **first**, *then* the disposition is a real choice. Agent task, not the operator's seat.
+
+**VALIDATION against an actually-converged control (2026-06-17) — OQ-128's own question ANSWERED: ARTIFACT.**
+Evidence: `audits/2026-06-13_oq50_power_scaling_residue/converged_control_probe.pl` (+`_output.txt`), run on
+kernel_v1 + original_v6. The contested "physics controls" `radiative`/`actinide` were mis-specified — their
+stories author *competing mechanisms with no consensus* (radiative: rival explanations; actinide: *"the
+physical puzzle remains unsolved… no proposed mechanism has achieved consensus"*, `omega(mechanism_identity)`),
+so they are contested science, correctly never reaching mountain at **any** seat. The proper control is a
+GENUINELY-converged claim — `thermodynamics_entropy` (authored *"impossible alternative… no meaningful
+challenge exists"*) and 11 converged math/physics siblings (`weak_law_large_numbers`, `well_ordering_theorem`,
+`axiom_of_choice_consequence`, `maximum_entropy_principle`, …).
+- **Witnessed (both archives):** the converged controls read **mountain at the non-mobile seats**
+  (powerless/**trapped**, analytical/**analytical**) but are degraded to **rope at the mobile + arbitrage
+  seats** → `fails_descent(4)`, presheaf. Labeled-seat table in `_output.txt`. You cannot arbitrage out of the
+  second law: that mid-seat `rope` is **wrong**. ⇒ the mid-power-mountain→`rope` residue is an **ARTIFACT**
+  (the `effective_immutability` exit-escape, `constraint_indexing.pl`), not the engine correctly refusing —
+  and it hits genuinely-converged physics, so OQ-128 is **not** empty/"engine-working."
+- **The discriminator that WORKS is the non-mobile/analytical seat, not sheaf-over-all-seats.** At the
+  analytical seat: converged = `mountain`, contested (`radiative`) = `tangled_rope` — clean separation. The
+  whole-orbit sheaf/H¹ test FAILS to discriminate (the mobile-seat artifact makes *both* presheaves — this is
+  why §"the H¹ route" earlier couldn't separate them). The analytical seat is the `one_seat_audited`
+  correspondence-proxy; the mobile/arbitrage seats inject the exit-table artifact (a face-distortion).
+- **The alternative-existence discriminator is VINDICATED, not retired.** `thermodynamics_entropy` authors
+  *no* alternative ⇒ the dead `natural_law` override *should* fire and restore it to mountain; `radiative`
+  authors competing mechanisms ⇒ override correctly does not. Both stories carry the fact in their own
+  framing, so it is **structural, not speculative intent**. Correction to the 2026-06-16 framing: the branch's
+  `no_viable_alternatives` flag is wrong on its *value for radiative* (which HAS alternatives) and as a
+  Pattern-2 duplicate of `intent_viable_alternative` — but the *mechanism* (gate the override on authored
+  alternative-existence) is correct. Authoring that correspondence-fact is legitimate seat-content;
+  what would be the `one_seat_audited` fraud is using `constraint_claim` (the showing-face) directly.
+
+**Disposition (witnessed-update):** OQ-128 = **confirmed ARTIFACT** (the exit-escape degrades converged
+immovables). Fix direction (the witnessed part is the bug + the discriminator; the *fix* is INFERRED, not yet
+run): revive the `natural_law` exit-immunity override, triggered on authored **alternative-existence** (the
+GAP-08 `intent_viable_alternative` layer), authored honestly from story framing — *then* re-run the converged
+probe expecting `thermodynamics_entropy` → mountain across all seats while `radiative` stays non-mountain.
+Sheaf-H¹ is NOT the trigger (it is downstream of the artifact). NOT-yet-run follow-up: the thermodynamics
+restoration witness (author no-alternative for `thermodynamics_entropy`, confirm it glues to mountain).
 
 **Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
 is **prose-consistent** with this audit's §5 (both say the residue is OVERDETERMINED and the FSM gate is
