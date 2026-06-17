@@ -6567,541 +6567,22 @@ ruling and the split decision are the operator's.
 
 ## OQ-128 — mid-power-mountain→`rope`: power-scaling artifact or correct refusal to certify a false foundational claim? (Ω_C)
 
-**Ω-type:** Ω_C (design ruling — whether the mid-power decline is intended semantics).
+**Ω-type:** Ω_C (was the engine's mid-seat degradation of an authored mountain a diagnostic signal or a power-scaling artifact — a seat-indexed reading question).
 
-**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift; VALIDATED 2026-06-17 then CORRECTED 2026-06-17b: the mid-seat degradation is UNIVERSAL/non-diagnostic (hits clean `fermats_last_theorem` identically to contested `axiom_of_choice`); "confirmed artifact" RETRACTED; 370/627 engine mountains are contested-by-own-content (authoring question, operator's seat) — see VALIDATION + CORRECTION blocks; SUPERSEDED 2026-06-17f/g: engine ROUTES not reclassifies — fix is a routing SINK over the per-SEAT author↔engine diff (not an `effective_immutability` gate); `natural_law` is diagnostic (comment+route, don't revive the override) — see SUPERSESSION block; RESTATED 2026-06-17i: design-spec tightened to TWO live inputs + a socketed-pending third (detector 0/3098, unpowered) + cap permanent-safe — engine side is NOT "specified," three rulings + the build remain the operator's; `:867` retirement WITNESSED behavior-neutral (resolver fires 0/3843, witness-then-retire); **BUILT 2026-06-17 — routing_sink.pl live, :867 retired, wired into run_pipeline; dr_type/dr_claim_mismatch byte-identical, per-seat invariant holds, pipeline exit 0; address-extension RESOLVED 2026-06-17 (operator: SPLIT into 7 typed MECE addresses, not a catch-all); type_1-cap / FNL-FCR-FSM / socket-powering remain next rulings — see BUILT block**; see DESIGN-SPEC TIGHTENED block**
-**Priority:** 1
-**Deps:** splits_from OQ-122, bundled_with OQ-122
-**Origin:** OQ-122 fixture/verdict work, 2026-06-14. `classify_from_metrics` (pre-signature) returns
-**non-mountain at the moderate/institutional power seats for ALL mountain-claimers** — a power-scaling
-effect of χ = ε·f(d)·σ(S) shifting the mid-power contexts off the mountain band
-(`drl_core.pl:605-613`, the comment above the `type_1_false_summit` clause). Witnesses: the false-RED
-physics controls `radiative_levitation_stratification`, `actinide_replenishment_mechanism_flat_control`
-(the two live `false_summit_mountain` firings, both vic=0).
+**Status:** resolved — 2026-06-17 (ANSWERED = artifact; FIXED + BUILT via the routing architecture). Compressed on close per the footer rule; the full 538-line arc is in git history (commits cited below; `git log --oneline --grep OQ-128`).
 
-**Specific question:** is mid-power-mountain→`rope` an **artifact** to fix, or the engine **correctly
-declining** to certify a foundational claim that does not hold at mid-power seats? **The premise that
-made it possibly-correct, not a bug, is FALSIFIED corpus-wide (2026-06-16 audit — Evidence below).**
-The rationale was that the signature layer *restores* mountain at mid-power seats for **genuine**
-mountains in `dr_type`, so the residue would only bite **non-restored** claimers — "exactly the
-population whose foundational claim the engine has reason to refuse." But `natural_law_signature` (the
-restoration gate) passes **0** constraints on all three live corpora — restoration has been DEAD since
-the OQ-44 fail-close made `HasAlternatives==false` unauthorable (GAP-08). So the residue bites **every**
-mountain-claimer **including genuine no-alternative physics** (radiative/actinide are themselves the
-un-restored witnesses), NOT a curated population the engine "has reason to refuse." The Ω_C is therefore
-re-opened sharper (see Disposition shift): whether that refusal is intended **given that nothing
-restores the genuine cases.** It is a **general engine phenomenon** (every mid-power mountain-claimer), broader
-than the physics-control story — hence its own number, not an OQ-122 sub-bullet.
+**Origin:** 2026-06-14, split from OQ-122's residual (so it stopped floating in prose). The engine degrades authored mid-power mountains to `rope`; the question was whether that flags a false foundational claim (diagnostic) or is a χ = ε·f(d)·σ artifact.
 
-**Why it matters / what resolution changes:** it, not the FSM victim-gate, is the **binding
-verdict-mover** for the physics false-REDs to reach GREEN — so the FSM gate is held to land **bundled
-with this Ω_C's resolution** (OQ-122 ruling 2026-06-14). Do NOT call this "the OQ-50 power-scaling fix":
-the direction is unruled; no settled artifact exists.
+**ANSWER (witnessed): ARTIFACT, non-diagnostic.** Mid-seat degradation is UNIVERSAL — it hits clean `thermodynamics_entropy` / `fermats_last_theorem` identically to contested `axiom_of_choice`. (The "confirmed artifact" was retracted mid-arc as over-claimed, then re-validated against converged controls.) Degrading an authored classification is the engine producing a DIFF — its job — not a verdict to be manufactured.
 
-**Evidence (folded in from the `oq50-power-scaling-residue` branch audit, 2026-06-13/16 — branch now
-archival, dir copied to main): `audits/2026-06-13_oq50_power_scaling_residue/`** (census + Phase-2 +
-delta-control + joint-witness + payer-read control; every probe carries a positive control).
-- **Restoration is dead corpus-wide.** `natural_law_signature` passes **0** on
-  `testsets`/`testsets_flash`/`testsets_haiku`; the block is *solely* `HasAlternatives` (fails 11/11,
-  104/104, 72/72) — unauthorable-false since the OQ-44 fail-close (GAP-08). Unit positive control: a
-  synthetic `ha=false` profile DOES pass and restores rope→mountain, so the probe sees restoration when
-  it fires; it simply never fires on the corpus.
-- **No metric relaxation isolates the physics cases** (delta-exactly-two): radiative/actinide are
-  metrically identical to social naturalization readings (`price_formation__naturalist`, money-emergence,
-  zero-as-discovered); every relaxation over-restores on the live twins — a gate relaxation is refuted.
-- **The authoring surface already exists — it is the GAP-08 `intent_*` layer, not a new flag (2026-06-16
-  finding; supersedes the branch draft).** `logic.md:695` requires a "no viable alternatives" NL condition
-  the engine has no input path to satisfy. That input path is the declared-but-unfed
-  **`intent_viable_alternative/3`** (per-stakeholder — arg 2 is the asserting entity), already wired to
-  `has_viable_alternatives/2` (the GAP-08 gate, `signature_detection.pl:241`). The operator's sheaf criterion
-  maps onto it directly: *no stakeholder asserts a viable alternative* = `\+ intent_viable_alternative(I,_,_)`;
-  the social-naturalization twins fail by construction (some position names the gift-economy/central-planning
-  alternative). The branch's drafted `no_viable_alternatives/1` flag is therefore a **Pattern-2 duplicate** of
-  this richer per-stakeholder layer AND bypasses GAP-08's declared revival protocol — **A′-as-drafted should
-  not land; it reinvents.** ("delta-exactly-two holds" witnessed a 2-element hand-authored set, not a
-  validated criterion.)
-- **Both pre-ruling checks resolved (read-only, 2026-06-16):** (1) *fill vs regression?* — **neither: a
-  declared gap.** `intent_viable_alternative` was authored in the EARLY corpora (original_v1 43/43, v3 14/18,
-  v4 23/39) then abandoned from v5 (1/702) onward — before the 2026-06-05 reset, so NOT a rebuild regression;
-  the absence is **GAP-08**, declared+ruled 2026-06-05 with a revival protocol (doc-correction filed there:
-  its "0 in every corpus ever generated" is imprecise — revival is restore-shaped, not greenfield). (2)
-  *consumer scope?* — the bulk verdict consumer (`intent_engine:structural_coercive_intent`) was already
-  RETIRED (OQ-106, 2026-06-12); the remaining live reader is the fail-closed `has_viable_alternatives/2`
-  signature gate (→ natural_law / coordination_scaffold / successful_coordination, + `dirac_classification`)
-  — not gate-local to NL, but not the retired verdict-wide breadth either.
-- **So the surface decision is not a free ruling — it is "arm GAP-08 revival,"** a staged/preregistered work
-  item (schema block + prompt + compiler emission + threshold re-derivation, fail-closed per OQ-44) the
-  operator already declared and **deferred** ("armed-not-scheduled explicitly declined"). GAP-08 also carries
-  a standing caution bearing on the witness-set authoring (decision 2): *do NOT add authoring surface
-  mid-baseline — the rebuild's ε-idiom and diff baselines are forming.* The decision lives on **GAP-08**.
-- **Decision-2 discipline (if/when revival is armed) — authoring must be BLIND to the target verdict.** The
-  witness-set authoring (the 6 cases: radiative/actinide + the social-naturalization twins) must apply the
-  *same* alternative-authoring rule to each case in isolation, then read whether physics came out empty —
-  never author radiative empty *because* it must pass. Outcome-referencing authoring is counterfeit (the
-  `R_scoped` small-corpus trap recurring as an authoring trap); the kill condition only bites if the author
-  cannot see which way it must fall.
-- **The payer-read disposition** (swap `BeneficiaryCount==0` → `\+ constraint_victim`) is **refuted as a
-  *cleaner* gate** (`payer_read_control.pl`, 7 corpora, ~6,400 stories): `R_payer ≥ R_ha` everywhere
-  (strictly greater on all 5 non-empty), excess dominated by social-naturalization readings on the live
-  twins — the victim-read is the *looser* gate, contributing zero discriminating power; isolation rests
-  entirely on the authored HA leg. This refutes the **consequentialist** case for payer-read; it does
-  **NOT** adjudicate `logic.md` vs `six_questions.md` — that doc-authority governance call remains the
-  operator's seat. (The branch tracked this as a candidate "OQ-126"; per operator ruling 2026-06-16 it
-  folds here — no renumber; main's Temporal OQ-126 is untouched.)
+**FIX (operator architecture: the engine ROUTES disagreement, it NEVER reclassifies; only review reclassifies). Three builds, all witnessed:**
+1. **Routing sink** — `prolog/routing_sink.pl`: per-SEAT author↔engine diff → seven typed MECE addresses; taps `dr_claim_mismatch/4` UNMODIFIED; wired into `run_pipeline.py` Phase 2; consumed by `enhanced_report.py`. Design: `audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md`. (commits `e2de9b7b` sink, `77364550` wire, `63f6b6b3` address split)
+2. **natural_law overwrite RETIRED** — `:867` `resolve_modal_signature_conflict(_, natural_law, mountain)` removed; the detector lives as a socketed (unpowered) router input. Witnessed behavior-neutral: the resolver fired **0/3843** across six corpora, `dr_type` byte-identical. (commit `9211be01` build, `057b8adb` witness)
+3. **type_1 cap DISCRIMINATED** — the `severe` floor was OVERLOADED (fired identically on the non-diagnostic artifact AND on real false summits). Split so degrade→snare = `severe` (withhold) and degrade→other = `informational` (routes, no headline floor). Discriminant validated: clean ε gap in the mountain-claimed population (snare ε≥0.50 / rope ε≤0.25, nothing between, KILL=0 across six corpora ~7,000). Acceptance: RED **389→102**, all 10 v5 mountain-claimed snare-at-analytical STAY RED, `dr_type` byte-identical. (commits `0a629077` build, `f6da1063` record). **KILL:** a mountain-claimed snare-at-analytical authored at 0.25<ε<0.50 breaks the gap — re-run the χ-decomposition when a new corpus lands.
 
-**Disposition shift (operator's Ω_C ruling — SURFACED, not decided here):** correcting the premise
-removes the support from OQ-128's "possibly-correct, not a bug" reading. The refusal cannot be the
-*principled* "engine declines non-restored false foundations," because the restoration that would
-separate genuine from false never runs, so genuine no-alternative physics is caught identically.
-Candidate dispositions for the operator: (1) **confirmed defect** — restore via the authored
-`no_viable_alternatives` surface (the spec-forced GAP-08 fill); (2) **stays open** pending the
-authoring-criterion ruling (who earns the flag, by what test — shared with OQ-50 OPEN-3); (3) the residue
-is **correct for genuinely contested** mid-power claims and only pristine-no-alternative cases route
-through the surface. The 'restoration restores genuine mountains' rationale is off the table either way.
-**Prerequisite to the disposition being *rulable* (not merely to landing the surface) — NEXT AGENT TASK:**
-re-run `joint_witness.pl` with the BENEF leg sourced from the **authored flag** (not the hand-retraction
-overlay), confirming a single authored fact clears both legs and holds delta-exactly-two. Until that path
-is witnessed, dispositions (1) [confirmed defect → authored surface] and (2) [stays open] are **not
-distinguishable by evidence**, only by how long one holds it open — so the forward order is: flag-sourced
-`joint_witness` re-run **first**, *then* the disposition is a real choice. Agent task, not the operator's seat.
+**Residuals SPLIT OUT (so this entry CLOSES rather than floats):** **OQ-138** (the rest of the `resolve_modal_signature_conflict` overwrite family — route vs reclassify per clause), **OQ-139** (green-base reads "safe" but means "consistent" — a labeling thread), **OQ-140** (characterize author↔engine divergence — what a routed diff MEANS, not where it goes). **Socket-powering = GAP-08** (the disposed `intent_*` declared-absence; the §7 author-independent immovability signal does not exist — detector multiply-dead, fires 0/~7,000).
 
-**VALIDATION against an actually-converged control (2026-06-17) — OQ-128's own question ANSWERED: ARTIFACT.**
-Evidence: `audits/2026-06-13_oq50_power_scaling_residue/converged_control_probe.pl` (+`_output.txt`), run on
-kernel_v1 + original_v6. The contested "physics controls" `radiative`/`actinide` were mis-specified — their
-stories author *competing mechanisms with no consensus* (radiative: rival explanations; actinide: *"the
-physical puzzle remains unsolved… no proposed mechanism has achieved consensus"*, `omega(mechanism_identity)`),
-so they are contested science, correctly never reaching mountain at **any** seat. The proper control is a
-GENUINELY-converged claim — `thermodynamics_entropy` (authored *"impossible alternative… no meaningful
-challenge exists"*) and 11 converged math/physics siblings (`weak_law_large_numbers`, `well_ordering_theorem`,
-`axiom_of_choice_consequence`, `maximum_entropy_principle`, …).
-- **Witnessed (both archives):** the converged controls read **mountain at the non-mobile seats**
-  (powerless/**trapped**, analytical/**analytical**) but are degraded to **rope at the mobile + arbitrage
-  seats** → `fails_descent(4)`, presheaf. Labeled-seat table in `_output.txt`. You cannot arbitrage out of the
-  second law: that mid-seat `rope` is **wrong**. ⇒ the mid-power-mountain→`rope` residue is an **ARTIFACT**
-  (the `effective_immutability` exit-escape, `constraint_indexing.pl`), not the engine correctly refusing —
-  and it hits genuinely-converged physics, so OQ-128 is **not** empty/"engine-working."
-- **The discriminator that WORKS is the non-mobile/analytical seat, not sheaf-over-all-seats.** At the
-  analytical seat: converged = `mountain`, contested (`radiative`) = `tangled_rope` — clean separation. The
-  whole-orbit sheaf/H¹ test FAILS to discriminate (the mobile-seat artifact makes *both* presheaves — this is
-  why §"the H¹ route" earlier couldn't separate them). The analytical seat is the `one_seat_audited`
-  correspondence-proxy; the mobile/arbitrage seats inject the exit-table artifact (a face-distortion).
-- **The alternative-existence discriminator is VINDICATED, not retired.** `thermodynamics_entropy` authors
-  *no* alternative ⇒ the dead `natural_law` override *should* fire and restore it to mountain; `radiative`
-  authors competing mechanisms ⇒ override correctly does not. Both stories carry the fact in their own
-  framing, so it is **structural, not speculative intent**. Correction to the 2026-06-16 framing: the branch's
-  `no_viable_alternatives` flag is wrong on its *value for radiative* (which HAS alternatives) and as a
-  Pattern-2 duplicate of `intent_viable_alternative` — but the *mechanism* (gate the override on authored
-  alternative-existence) is correct. Authoring that correspondence-fact is legitimate seat-content;
-  what would be the `one_seat_audited` fraud is using `constraint_claim` (the showing-face) directly.
-
-**Disposition (witnessed-update):** OQ-128 = **confirmed ARTIFACT** (the exit-escape degrades converged
-immovables). Fix direction (the witnessed part is the bug + the discriminator; the *fix* is INFERRED, not yet
-run): revive the `natural_law` exit-immunity override, triggered on authored **alternative-existence** (the
-GAP-08 `intent_viable_alternative` layer), authored honestly from story framing — *then* re-run the converged
-probe expecting `thermodynamics_entropy` → mountain across all seats while `radiative` stays non-mountain.
-Sheaf-H¹ is NOT the trigger (it is downstream of the artifact). NOT-yet-run follow-up: the thermodynamics
-restoration witness (author no-alternative for `thermodynamics_entropy`, confirm it glues to mountain).
-
-**CORRECTION (2026-06-17b — SUPERSEDES the "confirmed ARTIFACT" verdict above; it was built on a
-contaminated cohort).** Evidence: `audits/2026-06-17_mountain_authoring_sweep/` (sweep + positive control)
-and the per-seat witness below.
-- **The cohort was contaminated.** The 12 "converged controls" were selected on the metric box-set
-  (ε/accessibility/resistance + `claim(mountain)` + `emerges_naturally`) — the *exact* selector the Boltzmann
-  probe proved cannot separate physics from naturalization — and `converged_control_probe.pl` had **no
-  positive control**, took first-match `dr_type`, and never saw that `topological_invariant_universality`
-  authors the *same* `context(analytical,civilizational,analytical,universal)` seat as **mountain** (perspective 2)
-  AND **rope** (perspective 5, *"the community has agreed to use… the mountain as a rope"*), or that
-  `axiom_of_choice_consequence` carries a `mountain_false_summit_candidate` omega (*"naturaliz[ing] what is
-  actually a chosen axiom"*). Two of the three readable "siblings" are contested-by-own-content.
-- **Proper sweep (positive-controlled: topological→CONTESTED via perspective, AC→via omega, thermo→CLEAN
-  with 4 seats actually read):** of **627** engine-declared mountains across testsets+archives, **370 (59%)
-  are CONTESTED by their own content** (author a non-mountain seat OR a contingency/false-summit omega),
-  **166 genuinely CLEAN**, 91 UNREAD (live-testsets schema authors no `constraint_classification`).
-- **WITNESSED: the mid-seat degradation is UNIVERSAL and therefore NON-DIAGNOSTIC.** Genuinely-clean
-  mountains (`fermats_last_theorem`, `godel_incompleteness`, `energy_conservation`, `central_limit_theorem`,
-  `law_of_large_numbers`, `halting_problem`, `galois_theory`, `kolmogorov_complexity`) all read
-  `[mountain,rope,rope,mountain]` — **byte-identical to contested `topological`/`axiom_of_choice`**.
-  Degradation does not separate clean from contested.
-- **So the verdict sign-flips on content the engine never consults:** for the 166 CLEAN, degrade = ARTIFACT
-  (Fermat's Last Theorem must not become a rope because an agent has arbitrage exit); for the 370 CONTESTED,
-  degrade = plausibly CORRECT (own content carries the rope reading). Same mechanism (effective_immutability
-  exit-escape + dead restoration), opposite correctness. **"Confirmed artifact" RETRACTED** — it averaged the
-  two. What stands: the degradation is real and universal; it is an artifact *only on the content-clean set*.
-- **The queued fix would re-leak (operator's earlier warning, now witnessed).** Reviving the override off
-  PROSE framing ("impossible alternative"/"no meaningful challenge") re-certifies the 370 — they carry that
-  framing as strongly as thermo. The discriminator must be **content-structural** (authored type-diversity +
-  contingency-omega — the sweep classifier), not prose; and even then it rescues only the 166 clean.
-- **Upstream — the operator's seat, not the agent's.** 370 mountains are authored `constraint_claim(mountain)`
-  while their own narratives carry the rope/coordination reading (or a false-summit omega): the
-  "story claims X, content says ¬X" contradiction class. Whether those are **mis-authored** or the engine is
-  **correct to degrade them** is the ruling that decides whether OQ-128 is an artifact-fix (revive override
-  for the clean 166) or a relabeling job (re-author/demote the 370). Not self-resolvable.
-
-**RESIDUALS GROUNDED (2026-06-17c — the three the operator flagged after the correction).**
-- **R1 — the verdict-flipping reversal was UNGROUNDED; by the content method it cannot be confirmed.** The
-  late pivot ("`radiative`/`actinide` aren't pristine physics, they're contested science — the wrong
-  control") was a prose call, never run through the classifier, and the two live-testsets subjects author
-  **zero** per-seat types — UNREAD on the hard leg. Ran the classifier on them: `npersp=0`, **no authored
-  non-mountain seat**, contested **only** via the O-leg keyword "false summit" — which fires on omegas that
-  **self-resolve to Mountain** (`radiative` `beneficiary_structure_ambiguity`: *"beneficiaries do not
-  compromise Mountain status"*; `actinide` `false_summit_research_framing`: *"still Mountain… reclassify the
-  discourse"*). So radiative/actinide are CONTESTED-by-keyword-misfire, **not** hard-contested like
-  `topological`. They are **author-ambiguous** (Mountain-claimed + contingency-documented-then-self-resolved;
-  radiative additionally marks its axioms `cs_axiom_grounding(_, empirically_contingent)`). The
-  pristine-vs-contested question the whole arc pivoted on reverts, **ungrounded either way**, to the operator's
-  authoring seat — the reversal was a flinch under pressure, not a witnessed relabel.
-- **R2 — the 370 is two evidence strengths; rule them apart.** Partition (sweep): **HARD** (authored a
-  non-mountain seat — the `topological` class) = **161** (of which **10** same-seat contradictions, the
-  strongest); **OMEGA/KEYWORD-ONLY** (all-mountain seats, caught only by omega — the `axiom_of_choice`
-  class, plus radiative/actinide) = **209**. Demoting a story that authored its own rope seat is strongly
-  supported; demoting an all-mountain story on one omega is closer to trusting the author's self-report —
-  different rulings. radiative/actinide are at the weakest end of the 209.
-- **R3 — the engine gate must ride the HARD leg only; the omega leg is advisory.** Witnessed both error
-  directions: false positive (radiative/actinide — keyword on Mountain-resolving omegas) and the operator's
-  false negative (all-mountain + genuinely contingent + no confessing omega ⇒ passes "clean" — the AC case
-  minus its omega). So "validated content discriminator" = the **type-diversity (authored non-mountain seat)**
-  leg, which is a fact; the contingency-omega leg is author self-report and is **not** authoritative. Limit
-  recorded in GAP-08.
-
-**RE-PARTITION on the right primitive + the GENERATOR-SIDE ROOT FIX (2026-06-17d, operator).**
-- **The clean/unread boundary was on SEAT-COUNT — wrong primitive.** thermo (4 agreeing seats) and radiative
-  (0 seats) are identical on *authored divergence* (both zero); seat-count carries no contingency signal.
-  Re-partition of 627 mountains on divergence: **357** author the in-substrate invariance probe
-  `test(invariance_check)`; **161** CONTESTED-HARD (authored a non-mountain seat); **91** genuinely bare
-  (no seat, no invariance_check, no omega = real UNREAD); 18 soft. The 166-clean + probed-91 mostly collapse
-  into one no-divergence set — the operator's point holds.
-- **`test(invariance_check)` IS the in-substrate invariant test** (thermo 158–163: powerless-seat-type ==
-  institutional-seat-type == mountain) — exactly the earlier "reads the same across observers → invariant."
-  But **sparse** (41/1106 kernel_v1, 0/72 live) and **gameable**: `axiom_of_choice` PASSES it (3 agreeing
-  mountain seats) while its omega flags a *negotiable chosen axiom*. So it is a *probe*, better than
-  seat-count, but **only an authored non-mountain seat is fully hard**; absence-of-divergence stays soft.
-  *(NB — these `41/1106, 0/72` figures are `test(invariance_check)`, NOT the `natural_law_signature` detector;
-  the detector fires 0 on kernel_v1 too. Do not cross-reference this count onto OQ-128's detector findings —
-  witnessed 2026-06-17i, OQ-128 DESIGN-SPEC TIGHTENED block.)*
-- **thermo is the clean artifact:** MOUNTAIN-PROBED-HARD (its own `invariance_check` asserts+tests
-  institutional==mountain, authored prose *"institutional power does not exempt the constraint"*) **and the
-  engine degrades its institutional seat to rope** — `effective_immutability` overrides the story's
-  authored-and-tested invariance. radiative/actinide land SOFT (no divergence, resolving omega).
-- **GENERATOR ROOT FIX (operator proposal — candidate; dissolves the primitive problem).** Guide the
-  generator (`agent/c-orchestrator.py` decompose step / `agent/generate_kernel_corpus.py`) to **author
-  invariance as a TYPED fact**: emit an explicit invariant marker *with its probe* when the constraint reads
-  the same across positions, do **not** author redundant agreeing seats, and never leave a mountain bare.
-  Then the discriminator is a hard authored fact (not an inference), and "bare" becomes a flaggable
-  generation defect rather than ambiguous-UNREAD. Connects to **OQ-137** (typed-absence: carry absence as a
-  type, not a silent gap). **Condition (the positive control one level up):** authored-invariant must mean
-  "probed and found none," not "author skipped" — the marker must carry the probe, else `axiom_of_choice`
-  games it exactly as it games `invariance_check`. **Caution:** new authoring surface mid-baseline — GAP-08's
-  "do NOT add authoring surface mid-baseline" applies; stage it. Generation-pipeline change ⇒ operator's
-  seat; agent can draft the prompt guidance on ruling.
-
-**OPERATOR RULING (2026-06-17e) — the engine is COMMENTARY; degrading authored classification is a BUG.**
-This subsumes the whole OQ-128 apparatus and answers its "artifact or correct refusal?" question: **artifact.**
-- **Stance (operator's seat):** the authored `constraint_classification` is the authority; the engine's
-  `dr_type` *annotates* it. When the engine computes a classification that **contradicts** the authored one
-  — degrades an authored `mountain` to `rope` — the commentary is overriding its authority, which is a bug.
-- **Witnessed (kernel_v1, `/tmp/authvseng.pl` comparison):** at the **institutional** seat,
-  authored=mountain / engine=rope for `thermodynamics_entropy`, `topological`, AND `axiom_of_choice`; thermo
-  also at **moderate**. The `effective_immutability` exit-escape (mobile/arbitrage → rope) overrides the
-  author at the mid seats — **universally**. For thermo it overrides a classification the story both authored
-  AND tested (`test(invariance_check)`, *"institutional power does not exempt the constraint"*) — the
-  cleanest, hedge-free instance.
-- **The discriminator is now hard and simple — retires seat-count/omega/invariance_check inference:** compare
-  engine `dr_type` vs authored `constraint_classification` per power level; **engine=non-mountain where
-  author=mountain = the bug.** No prose reading.
-- **Reconciliation with the presheaf core (not a conflict):** for a genuinely contested constraint the author
-  *authors the divergence* (a non-mountain seat), and the engine reproducing it MATCHES — no bug, real
-  presheaf. The mismatch arises only when the engine degrades an author-*uniform* mountain — which is exactly
-  the `effective_immutability` bug, not a finding. Engine and author should agree; disagreement localizes the
-  defect.
-- **Residual at the operator's seat (unchanged):** where the author contradicts *themselves* — `topological`
-  authoring both mountain (persp 2) and rope (persp 5) at the analytical seat; `axiom_of_choice` authoring
-  uniform-mountain seats AND a "negotiable axiom" omega — the engine-vs-author comparison is muddied by
-  author-vs-author. That is the 161-hard / omega-only mis-authoring question, not the engine bug.
-- **Scope + the fix:** the comparison needs authored seats; the live-testsets schema authors none (radiative/
-  actinide) so it is undefined there — which is precisely what the generator typed-invariance fix above would
-  close. **Fix locus: `effective_immutability` must not degrade a seat the author classified mountain** (the
-  dead `natural_law`/exit-immunity override is the existing mechanism; the trigger is author-uniformity, a
-  hard fact, not the unauthorable `HasAlternatives`). **NB — pipeline-wide stance worth the operator
-  confirming:** "engine annotates, author authorities" makes authored classification dominant over computed
-  `dr_type` wherever they disagree; consistent with CS-commentary-grade vs correction-grade (FNL/FCR/FSM), but
-  state it as the engine's declared role before it is leaned on past OQ-128.
-
-**SUPERSESSION (2026-06-17f/g) — the engine ROUTES, it does not RECLASSIFY; the RULING block above (and its
-`effective_immutability` fix) is corrected. Operator architecture.**
-- **Witness correction (the recurring failure mode, named).** The RULING block's witness ("authored=mountain
-  / engine=rope for thermo, topological, AND AC, every time") conflated opposite verdicts; my `authvseng`
-  probe first-matched and reported topological's analytical seat as authored=mountain, never seeing the
-  authored `rope` (persp 5, line 152). Re-witnessed per-SEAT (`per_seat_routing_witness.txt`): `thermo`
-  authored=[mountain] all 4 seats (uniform, *tested*), engine degrades moderate+institutional — clean.
-  `topological` cannot take one verdict — analytical authored=**[mountain,rope]** (self-contradicts →
-  authoring review), institutional authored=[mountain]/engine=rope (engine-degrade), moderate
-  **author-silent**. `axiom_of_choice` uniform-mtn seats + "negotiable axiom" omega. **The unit is the
-  per-SEAT diff, not the constraint.** The per-constraint-aggregate reflex is the recurring failure of this
-  whole arc (confirmed-artifact → the 370 union → this three-constraint witness — *three times*).
-  [build_discipline.md candidate.]
-- **The architecture (operator).** Three layers: **Author** asserts the per-seat claim (authority on the
-  claim); **Engine** computes `dr_type`, reports the author↔engine diff, **routes** — authority only on
-  "these disagree," none on the claim, **never reclassifies**; **Operator/review** rules the diff (the only
-  reclassifier). The degradation was never the bug — it is the engine producing a diff (its job). **The bug
-  is that nothing consumes the diff.**
-- **The diff is already computed.** `dr_claim_mismatch(C, Ctx, type_1_false_summit, severe)`
-  (`drl_core.pl:614`) IS the author↔engine mismatch — but it **adjudicates** (severe → RED-cap, OQ-122)
-  instead of routing. Missing piece = a SINK, not a computation.
-- **OQ-128 relocates:** not "should the engine degrade thermo" (under routing it *should* — that's the
-  signal) but "**the diff is computed and discarded.**" Fix = a routing sink over the
-  `dr_claim_mismatch`/`authvseng` diffs, **partitioned by author-uniformity as the router's ADDRESS field**
-  (uniform-author + engine-degrades → engine/exit-table review; author-self-contradicts → authoring review;
-  author-silent → generation-gap; contested-author + engine-matches the authored seat → no route, presheaf
-  working). The uniformity test built above is the router's address, **not a gate on degradation** — right
-  primitive, wrong verb.
-- **DECLINED: the `effective_immutability` fix.** Gating exit-degradation on uniformity *suppresses a true
-  routing signal* to make one number look right — adjudication again, the move that re-leaks. Build the sink.
-- **`natural_law` is DIAGNOSTIC (operator ruling 2026-06-17g): it should NOT reclassify — comment and route.**
-  So the restoration override (the GAP-08 corpse) is **not to be revived** — reviving it = the engine
-  overruling its own degradation back to mountain = reclassification, the thing the architecture removes.
-  `natural_law` becomes a diagnostic that annotates "author claims foundational" and routes the diff. ⇒ the
-  GAP-08 intent-layer-revival-to-trigger-the-override thread is **dead** (the override was the wrong design,
-  not an under-fed one). type_1's RED-cap (OQ-122) likewise should **route, not adjudicate**.
-- **Seat-items corrected:** (1) stance to confirm is narrower/safer — **"the engine never reclassifies; it
-  routes disagreement"** (not "authored dominant over computed"); nothing goes blind (review catches
-  mis-authoring via the routed diff). (2) the 161 self-contradictions route to authoring review **by
-  construction**. (3) build the **sink**, not the gate.
-- **Open (operator to confirm):** does "comment+route, never reclassify" generalize from `natural_law`/
-  `type_1` to the other correction-grade verdicts (FNL/FCR/FSM)? The ruling named `natural_law`; the
-  architecture implies the family. Not assumed.
-
-**DEMOTE (not delete) + SINK DESIGN authorized (2026-06-17h). `natural_law` = detector + resolver, welded;
-only the resolver adjudicates.**
-- **Correction to "delete."** Detector = `natural_law_signature` (`signature_detection.pl:359`) — a computed
-  reading, "immovable-by-structure." Resolver = `resolve_modal_signature_conflict(_, natural_law, mountain)`
-  (`:867`, called `:823`) — the overwrite rope→mountain (the adjudication). Under routing the **resolver
-  dies; the detector LIVES as a third router input** (author-independent reading — the one thing not written
-  by the seat-blind authoring agent, so the one that can disagree with a *flattened* authoring and route it).
-  Deleting the organ to remove one function was wrong.
-- **Author-uniformity is CONTAMINATED as an immovability signal** — the authoring agent writes
-  uniform-mountain because it can't see that mountain is seat-relative, not because the thing is immovable.
-  So uniformity is the router's *address label*, NOT a certification; the detector is what would disambiguate
-  uniform-immovable from uniform-flattened. (This also retro-kills the uniformity-*gate* idea: a gate on
-  uniformity launders the author's seatlessness into the engine as structure.)
-- **The unlock:** as a *router* the detector tolerates the input that killed it as a *gate* — firing on
-  `price_formation__naturalist` yields a review item, not a miscertification (volume in the queue, not a
-  wrong answer in the substrate). The GAP-08 prose-trust/unauthorable problems were fatal only to certifying.
-- **Pre-build confirmations PASS (witnessed):** (1) `:614` diff tappable pre-cap (`severe` is a returned
-  field, RED-cap is a downstream consumer); (2) detector/resolver separable (retire `:867`, detector still
-  fires). So "verb change, not new machinery" is load-bearing.
-- **Design authored (DESIGN ONLY):** `audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md` —
-  three readings → per-SEAT diff (the leaf TYPE, never per-constraint) → router (address = label) → review
-  (only reclassifier). **STOP held:** type_1's RED-cap is **left ON**, drawn as a routed-but-not-disabled box
-  (separate ruling — a cap *withholds* certification; the overwrite *manufactured* it; opposite verbs, own
-  kill condition: what gets certified in the route-and-review window the cap blocks). Other resolvers /
-  FNL/FCR/FSM likewise next-ruling. **Transparency add-on (operator):** each routed item states author /
-  engine / detector state, with silence TYPED (AUTHOR_SILENT / ENGINE_SILENT), never blank — for the
-  adjudicating consumer and for troubleshooting (OQ-137).
-- **Item 1 RATIFIED with the narrowing:** "the engine never reclassifies; it routes disagreement" — a ruling
-  about `natural_law` and the routing mechanism; it does **not** license retiring any other adjudicator. The
-  stance is the floor the family-generalization would stand on, not the generalization.
-- **Named OPEN (non-fatal now):** the detector still needs an author-independent immovability reading;
-  author-uniformity (contaminated), exit-table (the checkee), Boltzmann (orthogonal) are all burned. GAP-08
-  in new clothes — shades into the generator typed-invariance guidance.
-
-**DESIGN-SPEC TIGHTENED + TWO-INPUT HONESTY (2026-06-17i). This is a RESTATEMENT (overwrites framing), not
-additive: the engine side is NOT "specified/resolved" — it is ONE live diff, a dead override marked for
-retirement, a socketed-pending third input, and a cap left on. Three drawn-but-undecided rulings + the build
-remain the operator's.**
-- **Honest engine-side status:** (a) **ONE LIVE diff** — the per-seat author↔engine `dr_type` disagreement
-  (`dr_claim_mismatch`/`authvseng`), the only thing the sink routes today; (b) a **dead override**
-  `resolve_modal_signature_conflict(_, natural_law, mountain)` (`:867`) **marked for retirement — witnessed
-  behavior-neutral (fires 0/3843, see `:867` block), not yet retired (build action)**;
-  (c) a **third input SOCKETED-pending-§7** — the `natural_law` detector is wired into the leaf type but
-  UNPOWERED (witness below); (d) a **type_1 RED-cap left ON, permanent-safe** — the sink is COMPLETE with the
-  cap on forever, no wiring assumes it routes. The "three readings" language is corrected to **two live inputs +
-  a socketed third**.
-- **Detector findings, freshly witnessed this turn (cite count AND control):**
-  - **(i) UNPOWERED — and the gate value is BUILDER-UNREACHABLE, not merely unauthored.**
-    `natural_law_signature` fires **0/72 live**, **0/3098** across four corpora (live 72 + `testsets_haiku` 960 +
-    `testsets_flash` 960 + `kernel_v1` 1106), `HasAlternatives = unknown` at **100% (3098/3098)** in every one.
-    **Positive control fires** (`profile(0.92,0.02,0.04,0,false,stable,_)` → succeeds), **slot-mapping checked**
-    (head arg5 `:359` = gate slot `:382`). **Deeper mechanism:** the slot is built by `has_viable_alternatives/2`
-    (`:251–254`), two clauses → emits **`true` or `unknown`, NEVER `false`** (`grep -c …false)` → 0). So
-    `HasAlternatives == false` is **unsatisfiable from the builder in every corpus** — *unreachable-by-RANGE*
-    (`false` ∉ the predicate's range `{true, unknown}`; a gate leg testing for an unemittable value), NOT merely
-    *unpowered/dropped*. The v1/v5 `intent_viable_alternative` layer (106 archived stories) feeds the **`true`** branch
-    ("alternatives exist → *not* natural law"), the OPPOSITE of what the gate needs — witnessed: original_v1 (43)
-    + original_v5 (702) fire **0**, ha=false **0**, ha=unknown **100%**. The detector was **never powered via
-    natural_law**, in any corpus. *NB:* the `41/1106 kernel_v1, 0/72 live` on the OQ-50 RE-PARTITION line is
-    `test(invariance_check)`, a **different** probe (detector fires 0 on kernel_v1 too) — do not conflate.
-  - **ESCALATED (substrate contradicts an instructed record edit, 2026-06-17i).** The operator's review asked to
-    restate (i) as "no *current* pipeline authors it; the v1 intent layer did and was dropped — powering it =
-    revive a retired signal." The substrate falsifies the premise: `has_viable_alternatives/2` has no `false`
-    clause, and the v1 layer feeds the `true` branch, so the gate was **never** powered via natural_law. Per
-    house discipline (resolve against code, not the more confident document; contradictions between sources are
-    escalated, not self-resolved) the v1-dropped phrasing was **NOT written**; (i) records the unreachable-gate
-    mechanism instead. **OPEN RULING (operator's):** powering the socket is §7's "author a *provably-no-
-    alternatives* structural value" (new invention), not a revival — and whether to add a `…(C,false)` path,
-    leave the socket dark, or retire the unreachable gate leg (defensible as **dead-code removal**, not
-    capability loss — it never fired) is the operator's call. Bears on (i) only.
-  - **(ii) INPUT-INDEPENDENT of the exit-table:** detector inputs (`signature_detection.pl:359`)
-    `{accessibility_collapse, suppression, resistance, beneficiary_count, HasAlternatives, temporal_stability}`
-    are **disjoint** from `effective_immutability`'s `{time_horizon, exit_options}` (`constraint_indexing.pl:195+`).
-    Not the exit-table's second opinion by provenance — co-firing/co-disagreement is irrelevant.
-  - **(iii) DISCRIMINATING CONTENT — UNSOLVED ≡ §7:** the detector's only discriminating leg is
-    `HasAlternatives` (the dead signal); its other conditions are the burned metrics. It earns "live third
-    input" **only** when §7's author-independent immovability signal replaces `HasAlternatives`. **KILL:** do
-    not count the detector a live input until (iii).
-- **Spec edits applied** to `audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md`: §2 → two live
-  inputs + a socketed third; §6 + §9b → type_1 cap permanent-safe; §8 → three distinct glyphs + legend (LIVE /
-  UNPOWERED / DEFERRED, no reused dash); §9a → input-provenance three-way split (unpowered /
-  powered-but-non-discriminating / powered-and-discriminating). **DESIGN ONLY — no code touched; the build is
-  the next ruling, not this one.**
-- **Review-driven precision closes (2026-06-17i, 2nd pass):** (1) §9b "permanent-safe" discharged by
-  **exhaustive read of all 10 `type_1`/`cap` references** (a token-grep proves only the *string* absent, not the
-  *dependency* — so enumeration, not pattern): each is scope-exclusion / deferred-and-"not relied on" / or the
-  §1 confirmations asserting the router taps the diff *pre-cap*; bound stated (sound iff the spec is the whole
-  design surface); build-time re-read over sink code = acceptance condition. (2) §9a(i) reframed
-  **unreachable-by-range** (`false` ∉ `{true,unknown}`), making fork (c) legible as dead-code removal. (3)
-  §9a(ii) marked **decorative w.r.t. liveness** (input-disjointness ⊬ output-divergence; kill stays on (iii)).
-- **`:867` retirement WITNESSED behavior-neutral (witness-then-retire, 2026-06-17i) — build-time debt DISCHARGED.**
-  The resolver's *own* run, not inferred from the detector: `resolve_modal_signature_conflict(_, natural_law,
-  mountain)` (`:867`) fires **0/3843** across six corpora (live 72 + kernel_v1 1106 + haiku 960 + flash 960 + v1
-  43 + v5 702), measured as `constraint_signature(C, natural_law)` — the sole producer of `Signature=natural_law`
-  reaching the resolver (`integrate_signature_with_modal/3` `:776`→`:778`→`:822`). Controls discriminate the 0
-  from a dead probe: (0) resolver clause live (`resolve(rope, natural_law, R)` → `R=mountain`); (a) `any_signature`
-  = N in every corpus; (b) `emerges_naturally(C)` (first conjunct) holds for 12/42/72/106/0/173 — path reached,
-  detector is the sole blocker. Structural, not corpus-luck (the detector's `false` is out-of-range for every
-  constraint). **KILL:** if a schema/corpus change makes the detector reachable, re-run before retiring; non-zero
-  ⇒ not neutral, scope changes. ⇒ retiring `:867` changes no `dr_type`; the build scope is unchanged.
-
-**BUILT 2026-06-17 (operator ruling "go on the build, scope as the spec reads"). The routing sink is live.**
-- **Implementation** (branch `oq128-routing-sink`): (1) `:867` natural_law overwrite RETIRED with a provenance
-  tombstone in `signature_detection.pl` (detector `constraint_signature(C,natural_law)` LEFT INTACT as a
-  socketed router input); (2) `prolog/routing_sink.pl` — the sink: per-SEAT `seat_diff/7` over the author↔engine
-  diff, **seven typed MECE addresses** = the four §4 labels (`generation_gap` / `authoring_review` /
-  `engine_exit_table_review` / `no_route`) + `both_silent` / `engine_abstained` / `author_engine_divergence`
-  (operator ruling 2026-06-17: split, not a catch-all — no `unrouted_residual`, each address self-describing);
-  taps `dr_claim_mismatch/4` UNMODIFIED; emits `outputs/routing_sink.json` with a
-  coverage manifest; (3) wired into `run_pipeline.py` Phase 2 (Pattern-1 freshness). **Consumers:**
-  `routing_sink.json` itself, AND `enhanced_report.py` (CONSTRAINT IDENTITY section shows each seat's
-  router address per-seat, after "Authored vs Computed" — never a per-constraint routing verdict).
-- **Witnessed (all §9b acceptance conditions):** `:867` retirement → `dr_type` byte-identical (288 rows) +
-  `dr_claim_mismatch` byte-identical (52 rows) ⇒ existing RED verdicts unchanged (type_1 cap UNTOUCHED, left ON);
-  per-seat invariant `manifest.per_seat_invariant_holds=true` (288 = 72×4; KILL §9b.4 = any per-constraint
-  keying); test_agent_beneficiary failing-set byte-identical main-vs-worktree (32 pre-existing, not a regression),
-  test_cs_pattern_detection all pass; full pipeline run exit 0, step `routing_sink ok`. **Targeted controls
-  reproduce the arc's witness files:** thermo (clean uniform-mountain) → `engine_exit_table_review` at
-  moderate/institutional; topological (contested) → `no_route` (powerless) / `generation_gap` (moderate,
-  the spec's literal example) / `authoring_review` (analytical [mountain,rope]). The router DIFFERENTIATES
-  clean from contested — the whole point of the arc.
-- **RESOLVED — address-extension ruling (operator, 2026-06-17):** the live corpus's `unknown`-heavy engine
-  readings (was 187/288 live seats in the catch-all) needed addresses beyond §4's four. Operator ruled
-  **SPLIT into first-class typed addresses, not ratify a catch-all** — `both_silent` (16) / `engine_abstained`
-  (23) / `author_engine_divergence` (148). Seven typed MECE addresses total; `unrouted_residual` and its
-  `residual_reason` field removed; controls re-witnessed unchanged (thermo, topological). `enhanced_report.py`
-  updated to render the self-describing addresses. **What RESOLVED covers (altitude pin, so a cold reader does
-  not overclaim):** the routing *architecture* is specified, built, and witnessed — every seat lands in a typed
-  address, the former catch-all decomposed exactly (148+16+23=187, nothing lost). It does **NOT** mean the
-  author↔engine relationship on the live corpus is *understood*: `author_engine_divergence` at **148/288** is
-  the *majority* of live seats, and "they disagree" is a named category, not a characterization. What those 148
-  ARE is **drawn-not-decided** — same status as type_1 and the §7 socket, not closed. See NEXT RULINGS.
-- **NEXT RULINGS (drawn, still not built) — with the witnesses each needs (none retires free; natural_law
-  retired free ONLY because it fired 0, so its byte-identical diff was guaranteed pre-run).**
-  - **(a) type_1 RED-cap — route-vs-withhold. WITNESSED across SIX corpora (W1/W2 over `verdict_join`, control
-    built in). The risk is real but AUTHORING-STYLE-DEPENDENT, NOT sample-size — the two earlier reads were both
-    too simple.** Suppress the cap, count of type_1-RED verdicts that headline GREEN (the OQ-98 defect — a
-    false-summit the engine flagged reading clean):
-    **live (72): 0/12 · original_v6 (3380): 0/15 · kernel_v1 (1106): 0/11 · testsets_haiku (960): 4/68 ·
-    testsets_flash (960): 7/99 · original_v5 (702): 60/127 (~47%)**. So "zero green" is NOT a small-sample
-    artifact (original_v6 at 3380 has 0); and it is NOT universally load-bearing (three corpora show 0). The real
-    variable is **authoring style** — a corpus produces green-over-severe to the extent it authors mountain-claims
-    the engine degrades that also carry a *clean green base + no other alert* (`original_v5`, chimera-era, does
-    this heavily; `original_v6`/`kernel_v1` not at all). **Controls pass on all six** (every report computed:
-    72/72 … 3380/3380; non-type_1 severe alerts exist where present — live 1, haiku 11, v5 14 — and are detected,
-    none co-occur with type_1, so the greens are real, not masked). ⇒ the cap is a **safety net that is
-    load-bearing for the worst-case authoring style** (~half of type_1-RED on v5) and zero-impact on others;
-    since the engine runs heterogeneous corpora, naive type_1 routing is unsafe **for the corpora that need it**.
-    Seat: withhold (RED, always) vs route+flag (accept green-over-severe wherever the authoring produces it).
-    **v5 SAMPLE CHARACTERIZED (2026-06-17) — the 60 are TWO clean sub-populations, not noise; discriminant =
-    `base_extractiveness` / analytical reading.** Of the 60: analytical dr_type **rope-51 / snare-9**. The
-    **rope-51 are genuine low-ε math/physics mountains** (`halting_problem_undecidability` ε=0.2,
-    `heisenberg_uncertainty`, `prime_number_theorem`, `church_turing_thesis`, `noethers_theorem`, …) the engine
-    degrades to rope at the analytical seat — i.e. the arc's OWN universal/non-diagnostic degradation, now at the
-    analytical seat; **State 2 over-alert** (green base correct, the cap launders an engine artifact into RED).
-    The **snare-9 are high-ε coercive claims dressed as mountains** (`china_taiwan_reunification_mandate` ε=0.8,
-    "[RESOLVED MANDATROPHY] High-extraction Mountain"; `cia_fbi_legal_wall`; `ancient_grudge_verona`) — **State 1
-    real false summits** (green base wrong, the cap correctly catches). ⇒ the type_1 `severe` is **overloaded**:
-    it fires identically on the non-diagnostic artifact (85%) and on real false summits (15%). This re-shapes the
-    seat beyond binary withhold-vs-route: a discriminated severity (high-ε snare-at-analytical = real;
-    low-ε rope-at-analytical = the artifact) would route the 51 and withhold the 9. **Operator's seat** —
-    drawn from evidence, not ruled here.
-    **DISCRIMINANT VALIDATED + base-verdict "blind spot" CORRECTED (2026-06-17, the third-path acceptance test).**
-    Witnessed on the snare-9 vs a rope-51 sample: base verdict **green for BOTH** populations, but `dr_type` at
-    analytical separates **cleanly** — snare ↔ ε 0.7–0.8, rope ↔ ε 0.15–0.2, no overlap. So (i) the discriminant
-    the third path reads is `dr_type` (from χ=ε·f(d)·σ), which reads the TRUE ε — it does **not** inherit the base
-    verdict's behavior, so the third path is SAFE (the high-ε snares are caught reading the real 0.8). (ii) My
-    earlier "base-verdict blind spot" aside was **WRONG**: `compute_verdict` aggregates *subsystem tension/
-    disagreement* (green = subsystems AGREE), it was never an extraction gate; a cleanly-classified snare yields
-    agreement → green base **by design** (verdict_join: base=consistency, alert floors=severity, OQ-98). ε is not
-    "dropped" anywhere — it reaches `dr_type` and the type_1 alert; the base verdict simply measures consistency.
-    ⇒ (c) is NOT structural rot — it is a *labeling* question (green-base reads as "safe" but means "consistent"),
-    a separate/smaller thread. The snare-9's only severity signal IS the type_1 floor (no other alert), so under
-    routing they need the discriminated floor to KEEP withholding — which the validated discriminant supports.
-    **(b) PROTOTYPE + χ-DECOMPOSITION at scale (2026-06-17) — KILL=0 in the discriminant's domain; type_1 now
-    RULABLE.** ε-distribution within the mountain-claimed→snare-at-analytical population (the exact cases a
-    discriminated cap withholds), across all six corpora: ε-min 0.50–0.85, **0 below the snare floor (0.46) in
-    every corpus**; the mountain-claimed→rope side (the route bucket) has ε-max ≤ 0.25 everywhere. **A clean ε
-    gap (≤0.25 route / ≥0.50 withhold, nothing between) earned empirically across ~7,000 constraints.** Counts:
-    27 mountain-claimed snares (withhold) vs 102 mountain-claimed ropes (route). **Honest nuance:** the *full*
-    snare population (not just mountain-claimed) has **2 low-ε exceptions** in v5 (`starwars_evolutionary_mutation`
-    authored-snare ε=0.2; `taiwan_existential_sovereignty` authored-rope/false_ci_rope ε=0.3) — but neither is
-    mountain-claimed, so neither enters the type_1 cap; the discriminant is clean **for its actual scope**. ⇒ the
-    third path (discriminated severity: withhold high-ε snare-at-analytical, route low-ε rope-at-analytical)
-    **ships clean**; the type_1 ruling is no longer blocked — it is the operator's seat with a validated
-    discriminant.
-    **RULED + BUILT (operator, 2026-06-17): discriminated severity.** `drl_core.pl` type_1 clause split — degrade
-    →snare = `severe` (withhold, RED floor stays); degrade→other = `informational` (routes via the sink, no
-    headline floor). **Acceptance witness** (before/after headline, six corpora, ~7180 rows): RED **389→102**;
-    **287 flipped RED→non-RED** (all red→yellow/green, none reverse); **safety: all 10 v5 mountain-claimed
-    snare-at-analytical STAY RED** (china_taiwan / cia_fbi_legal_wall / ancient_grudge_verona red; halting_problem
-    / heisenberg / prime_number_theorem → green). `dr_type` byte-identical (288 rows — only the alert severity
-    changed); validation_suite 72/0/0; test_snapshot_migration 10/10; sole consumer `report_generator:590`
-    abstracts over severity. **KILL (attached, not a hedge):** a future corpus authoring a mountain-claimed
-    snare-at-analytical at 0.25<ε<0.50 breaks the clean gap — re-run the χ-decomposition when a new corpus lands.
-  - **(b) the resolver family — `resolve_modal_signature_conflict` (lines 885–932 are ALL overwrites).** Unlike
-    natural_law (0 fires), these fire and the signature layer changes `dr_type` at **66/288 live seats** (live
-    firings: constructed_high 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 /
-    false_natural_law 1). Each needs its own before/after `dr_type` + headline diff (NOT byte-identical) and a
-    routing-adequacy positive control. **Twin-confirmed (none retires free):** the signature layer changes
-    `dr_type` at **524/3840 (haiku)** and **637/3840 (flash)** seats, ~14–17% (live 66/288 ≈ 23%); `false_ci_rope`
-    fires 234 (haiku) / 357 (flash), `false_natural_law` 13 / 8. **SPLIT the row:** FCR/FSM/constructed are
-    **rulable-once-witnessed** (mechanical gathering); **`false_natural_law` is DEFERRABLE-pending-OQ-70** (its
-    firing rides the `claimed_natural` source-2 bait — measures authoring convention until OQ-70 rules; no W1–W5
-    gathering resolves that gate), the same shape as the socket below.
-  - **(c) socket-powering — DEFERRABLE-not-rulable (gated on a candidate signal that does not exist, §7).**
-    Per-conjunct decomposition (W1, over 72 live): the detector needs all six conjuncts; pass-counts are
-    `accessibility≥0.85: 7 · supp≤0.15: 13 · res≤0.15: 10 · BC==0: 5 · HasAlternatives==false: 0 · stable: 68`.
-    So the detector is **multiply-dead** (HA is the absolute zero, but BC==0 and accessibility are near-dead
-    too). **Confirmed across SIX corpora (~7,000 constraints):** HA==false **0 everywhere** (incl. original_v6 at
-    **3380**); detector fires **0 everywhere**; BC==0 stays narrow (haiku 18/960, flash 16/960, v6 470/3380);
-    original_v5 is even deader (acc 0/702, res 0/702). The multiply-dead / unreachable-by-range pattern is as
-    robust as a finding in this repo gets. **Fork (c) RE-DRAWN:** "retire the dead leg" must mean **retire the ENTIRE dead detector gate** —
-    retiring the `==false` conjunct alone is a no-op (the other narrow gates still fire ~nothing). Forks: (a)
-    author a real immovability signal AND open the metric gate (bigger than HA), (b) leave dark, (c) retire the
-    whole gate. (a) needs a candidate + a PRE-REGISTERED discriminating control (physics fires, naturalized snare
-    doesn't) — until a candidate exists there is nothing to witness.
-- **THE FOUNDATIONAL OPEN (named, not a stopgap — the routing only made it legible).** Once the routing is
-  worked out across the diagnostic modes, the real question is **how to CHARACTERIZE author↔engine disagreement
-  per diagnostic mode** — `author_engine_divergence` (148/288 live, the majority) is the live instance: the
-  routing names it, nothing yet says what *kind* of disagreement each is (sub-type by claim type? by which seat
-  degrades? by mode?). Distinct from the routing rulings above: those decide *where a diff goes*; this decides
-  *what a diff means*. Drawn-not-decided; the largest live bucket is its evidence base.
-
-**Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
-is **prose-consistent** with this audit's §5 (both say the residue is OVERDETERMINED and the FSM gate is
-not the residue fix), but that is doc-agrees-with-doc: whether main's bundled FSM-victim-gate ruling HELD
-for a reason **independent of restoration firing** is NOT yet witnessed against substrate — **mechanical
-re-check deferred**; do not read OQ-122 as a verified leg on this point), OQ-50 (the false-summit detector this rides — OPEN-1/OPEN-2 closed 2026-06-14; the residue thread
-is OQ-50 OPEN-3 on the archival branch), OQ-44/GAP-08 (the fail-close that made `HasAlternatives==false`
-unauthorable — the root of the dead restoration), OQ-117 (false-foundational rejection gates), OQ-70
-(neutron_star/FCR, separate).
+**Cross-refs:** OQ-122 (parent residual), OQ-50 (false-summit detector), OQ-98 (verdict_join base/floor split), OQ-70 (FNL bait — blocks OQ-138's `false_natural_law` member), GAP-08 (socket signal), OQ-138 / OQ-139 / OQ-140 (children).
 
 ## OQ-129 — perspectival-gap feeder rewired onto authored seats; labeling partition + coverage calls OPEN (Ω_C)
 
@@ -7673,9 +7154,51 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **What resolution changes.** A one-time audit table (compliant / by-design / fixed) + the defects fixed, AND ideally a standing guard so a NEW reading predicate cannot regress: a registry of "aggregatable readings" + a test that each returns a token (never fails) over a corpus enumeration plus boundary fixtures — the `test_seat_totality.pl` pattern generalized. Without the standing check this re-rots the moment someone adds a silently-failing reading. Cross-ref: OQ-121, `prolog/tests/test_seat_totality.pl` (the per-predicate template), `docs/design/design_discipline.md` §5 (Typed absence), Build Discipline Pattern 6.
 
+## OQ-138 — `resolve_modal_signature_conflict` family: which signature OVERWRITES should route, not reclassify? (Ω_C + Ω_E)
+
+**Ω-type:** Ω_C (per-clause ruling: is each overwrite a load-bearing correction or a manufacturing reclassification the router should replace?) over an Ω_E base (a mechanical before/after `dr_type`+headline diff per clause).
+
+**Status:** open — split from OQ-128 (2026-06-17). The `natural_law` overwrite (`:867`) was retired and type_1's cap discriminated; the REST of the `resolve_modal_signature_conflict` table (`signature_detection.pl:885–932`) is UN-RULED.
+
+**Priority:** 3
+
+**Deps:** splits_from OQ-128; blocked_on_human. (Per-clause route-vs-reclassify is a declared seat. NB the `false_natural_law` MEMBER is gated on OQ-70 — see Origin — but that does not block FCR/FSM/constructed, so it is not an OQ-138-level dep.)
+
+**Origin:** 2026-06-17, OQ-128 residual. The whole `resolve_modal_signature_conflict` table (lines 885–932) is OVERWRITES (rewrite `dr_type` by signature) — the same architecture as the retired `:867` and the discriminated type_1 cap. Unlike natural_law (0 fires → free retirement), these FIRE and CHANGE `dr_type`: witnessed on current main the signature layer changes the metric type at **66/288 live seats** (524/3840 haiku, 637/3840 flash); per-signature firing `constructed_high_extraction 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 / false_natural_law 1`. So NONE retires free — each needs its own before/after diff and a routing-adequacy positive control. **SPLIT:** FCR / FSM / constructed are rulable-once-witnessed (mechanical gathering); `false_natural_law` is deferrable-pending-OQ-70.
+
+**What resolution changes.** A per-clause ruling (route / discriminate / keep-as-correction) with each clause's before/after verdict diff as the witness, consistent with the engine-ROUTES-never-RECLASSIFIES architecture (AGENTS.md). The type_1 discriminated-severity build (`drl_core.pl` `dr_claim_mismatch`) is the precedent pattern. Cross-ref: OQ-128 (parent), OQ-70 (FNL gate), OQ-98.
+
+## OQ-139 — `green` base verdict reads "safe" but means "consistent": a labeling thread (Ω_C)
+
+**Ω-type:** Ω_C (a labeling/semantics decision — relabel, annotate, or leave; no structural defect to fix).
+
+**Status:** open — split from OQ-128 (2026-06-17); small, not urgent (by-design, not rot).
+
+**Priority:** 4
+
+**Deps:** splits_from OQ-128.
+
+**Origin:** 2026-06-17, OQ-128 residual. `compute_verdict` aggregates SUBSYSTEM TENSION/disagreement (green = the subsystems AGREE), NOT extraction. So a cleanly-classified high-ε snare (e.g. `china_taiwan_reunification_mandate` ε=0.8) carries a GREEN *base* — correct BY DESIGN (verdict_join: base=consistency, alert floors=severity, OQ-98), with the type_1 floor supplying the severity that reddens the headline. Witnessed: the v5 snare-9 all green base at ε 0.5–0.8; the discriminant (`dr_type`) reads ε true, independently of the base. So this is NOT structural rot — it is that a reader may misread "green base" as "safe" when it means "consistent."
+
+**What resolution changes.** A decision on whether to relabel/annotate the base verdict so a cold reader cannot read green-base as safe (the headline is `verdict_join`, which already floors on severity; this is purely about the base INPUT's presentation). Cross-ref: OQ-128 (parent), OQ-98 (verdict_join base/floor split).
+
+## OQ-140 — Characterize author↔engine disagreement per diagnostic mode: what a routed diff MEANS, not where it goes (Ω_C + Ω_E)
+
+**Ω-type:** Ω_C (what KIND of disagreement each routed diff is — a typing judgment) over an Ω_E base (sub-classify the population by claim type / degrading seat / diagnostic mode).
+
+**Status:** open — split from OQ-128 (2026-06-17). The foundational open the routing only made LEGIBLE: the sink NAMES disagreement; nothing yet says what KIND each is.
+
+**Priority:** 2
+
+**Deps:** splits_from OQ-128. (Its substrate, the routing sink, is already BUILT — so this is unblocked, not waiting on it.)
+
+**Origin:** 2026-06-17, OQ-128 residual. The routing sink's `author_engine_divergence` address is **148/288 live seats — the MAJORITY** — and "they disagree" is a named category, not a characterization. Distinct from the routing rulings (which decide WHERE a diff goes); this decides WHAT a diff means (sub-type by claim type? by which seat degrades? by diagnostic mode?). The largest live bucket is its evidence base.
+
+**What resolution changes.** A sub-typing of the `author_engine_divergence` population that turns "they disagree" into named kinds, each with a witness — the substantive research the routing made possible. Cross-ref: OQ-128 (parent), `prolog/routing_sink.pl` (the substrate), OQ-133 (orientation signature, a sibling diachronic-tier question).
+
 ---
 
-*Last updated: 2026-06-16. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-06-17. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
