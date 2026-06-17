@@ -740,6 +740,19 @@ def _phase_post_prolog(progress):
         progress("pipeline", "[JSON] Generating structured JSON report...")
     results.append(_run_step("json_report", _json_report, progress))
 
+    # Routing sink (OQ-128): per-seat author↔engine diff router → routing_sink.json.
+    # The engine ROUTES the diff (it does not reclassify); this keeps the sink's
+    # output fresh with the corpus (Build Discipline Pattern 1: wire the consumer).
+    def _routing_sink():
+        run_prolog(
+            ["stack.pl", "routing_sink.pl"],
+            "routing_sink:run_routing_sink",
+        )
+
+    if progress:
+        progress("pipeline", "[SINK] Generating routing_sink.json (per-seat author↔engine diff)...")
+    results.append(_run_step("routing_sink", _routing_sink, progress))
+
     return results
 
 
