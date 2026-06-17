@@ -6569,7 +6569,7 @@ ruling and the split decision are the operator's.
 
 **Ω-type:** Ω_C (design ruling — whether the mid-power decline is intended semantics).
 
-**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift; VALIDATED 2026-06-17 then CORRECTED 2026-06-17b: the mid-seat degradation is UNIVERSAL/non-diagnostic (hits clean `fermats_last_theorem` identically to contested `axiom_of_choice`); "confirmed artifact" RETRACTED; 370/627 engine mountains are contested-by-own-content (authoring question, operator's seat) — see VALIDATION + CORRECTION blocks**
+**Status:** open — minted 2026-06-14 (split out of OQ-122's residual so it stops floating in prose); **premise FALSIFIED 2026-06-16 (restoration dead corpus-wide — GAP-08); Ω_C re-opened sharper, see Evidence + Disposition shift; VALIDATED 2026-06-17 then CORRECTED 2026-06-17b: the mid-seat degradation is UNIVERSAL/non-diagnostic (hits clean `fermats_last_theorem` identically to contested `axiom_of_choice`); "confirmed artifact" RETRACTED; 370/627 engine mountains are contested-by-own-content (authoring question, operator's seat) — see VALIDATION + CORRECTION blocks; SUPERSEDED 2026-06-17f/g: engine ROUTES not reclassifies — fix is a routing SINK over the per-SEAT author↔engine diff (not an `effective_immutability` gate); `natural_law` is diagnostic (comment+route, don't revive the override) — see SUPERSESSION block**
 **Priority:** 1
 **Deps:** splits_from OQ-122, bundled_with OQ-122
 **Origin:** OQ-122 fixture/verdict work, 2026-06-14. `classify_from_metrics` (pre-signature) returns
@@ -6822,6 +6822,50 @@ This subsumes the whole OQ-128 apparatus and answers its "artifact or correct re
   confirming:** "engine annotates, author authorities" makes authored classification dominant over computed
   `dr_type` wherever they disagree; consistent with CS-commentary-grade vs correction-grade (FNL/FCR/FSM), but
   state it as the engine's declared role before it is leaned on past OQ-128.
+
+**SUPERSESSION (2026-06-17f/g) — the engine ROUTES, it does not RECLASSIFY; the RULING block above (and its
+`effective_immutability` fix) is corrected. Operator architecture.**
+- **Witness correction (the recurring failure mode, named).** The RULING block's witness ("authored=mountain
+  / engine=rope for thermo, topological, AND AC, every time") conflated opposite verdicts; my `authvseng`
+  probe first-matched and reported topological's analytical seat as authored=mountain, never seeing the
+  authored `rope` (persp 5, line 152). Re-witnessed per-SEAT (`per_seat_routing_witness.txt`): `thermo`
+  authored=[mountain] all 4 seats (uniform, *tested*), engine degrades moderate+institutional — clean.
+  `topological` cannot take one verdict — analytical authored=**[mountain,rope]** (self-contradicts →
+  authoring review), institutional authored=[mountain]/engine=rope (engine-degrade), moderate
+  **author-silent**. `axiom_of_choice` uniform-mtn seats + "negotiable axiom" omega. **The unit is the
+  per-SEAT diff, not the constraint.** The per-constraint-aggregate reflex is the recurring failure of this
+  whole arc (confirmed-artifact → the 370 union → this three-constraint witness — *three times*).
+  [build_discipline.md candidate.]
+- **The architecture (operator).** Three layers: **Author** asserts the per-seat claim (authority on the
+  claim); **Engine** computes `dr_type`, reports the author↔engine diff, **routes** — authority only on
+  "these disagree," none on the claim, **never reclassifies**; **Operator/review** rules the diff (the only
+  reclassifier). The degradation was never the bug — it is the engine producing a diff (its job). **The bug
+  is that nothing consumes the diff.**
+- **The diff is already computed.** `dr_claim_mismatch(C, Ctx, type_1_false_summit, severe)`
+  (`drl_core.pl:614`) IS the author↔engine mismatch — but it **adjudicates** (severe → RED-cap, OQ-122)
+  instead of routing. Missing piece = a SINK, not a computation.
+- **OQ-128 relocates:** not "should the engine degrade thermo" (under routing it *should* — that's the
+  signal) but "**the diff is computed and discarded.**" Fix = a routing sink over the
+  `dr_claim_mismatch`/`authvseng` diffs, **partitioned by author-uniformity as the router's ADDRESS field**
+  (uniform-author + engine-degrades → engine/exit-table review; author-self-contradicts → authoring review;
+  author-silent → generation-gap; contested-author + engine-matches the authored seat → no route, presheaf
+  working). The uniformity test built above is the router's address, **not a gate on degradation** — right
+  primitive, wrong verb.
+- **DECLINED: the `effective_immutability` fix.** Gating exit-degradation on uniformity *suppresses a true
+  routing signal* to make one number look right — adjudication again, the move that re-leaks. Build the sink.
+- **`natural_law` is DIAGNOSTIC (operator ruling 2026-06-17g): it should NOT reclassify — comment and route.**
+  So the restoration override (the GAP-08 corpse) is **not to be revived** — reviving it = the engine
+  overruling its own degradation back to mountain = reclassification, the thing the architecture removes.
+  `natural_law` becomes a diagnostic that annotates "author claims foundational" and routes the diff. ⇒ the
+  GAP-08 intent-layer-revival-to-trigger-the-override thread is **dead** (the override was the wrong design,
+  not an under-fed one). type_1's RED-cap (OQ-122) likewise should **route, not adjudicate**.
+- **Seat-items corrected:** (1) stance to confirm is narrower/safer — **"the engine never reclassifies; it
+  routes disagreement"** (not "authored dominant over computed"); nothing goes blind (review catches
+  mis-authoring via the routed diff). (2) the 161 self-contradictions route to authoring review **by
+  construction**. (3) build the **sink**, not the gate.
+- **Open (operator to confirm):** does "comment+route, never reclassify" generalize from `natural_law`/
+  `type_1` to the other correction-grade verdicts (FNL/FCR/FSM)? The ruling named `natural_law`; the
+  architecture implies the family. Not assumed.
 
 **Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
 is **prose-consistent** with this audit's §5 (both say the residue is OVERDETERMINED and the FSM gate is

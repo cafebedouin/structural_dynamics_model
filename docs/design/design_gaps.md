@@ -439,6 +439,14 @@ surface mid-baseline — the rebuild's ε-idiom and diff baselines are forming).
   minus its omega). Do not gate the engine on the omega leg; treat it as advisory review-flagging only. Also:
   the live-testsets schema authors **no** per-seat types, so the strong leg is unavailable there — those
   mountains (incl. the original `radiative`/`actinide`) cannot be hard-classified and stay an authoring call.
+  **SUPERSEDED 2026-06-17g (operator — routing architecture; see ISSUES.md OQ-128 SUPERSESSION):** this whole
+  GAP-08 thread was framed as "revive the intent layer to FEED the `natural_law` exit-immunity OVERRIDE." That
+  override is now ruled the wrong design: **`natural_law` is diagnostic — it comments and routes, it does not
+  reclassify.** The engine never overrules its own degradation back to mountain; the author↔engine diff is the
+  product, consumed by a routing sink, ruled by review. So GAP-08's restoration corpse is to be **deleted, not
+  revived**, and the intent-layer-as-override-trigger consuming-research-question is **dead** — the override
+  was wrong, not under-fed. The `intent_*` layer absence stands as a declared gap on its own terms (other
+  consumers), but its OQ-128 motivation is withdrawn.
 - **Retire the Pattern-2 duplicate.** The archival `oq50-power-scaling-residue` branch drafted a standalone
   `no_viable_alternatives/1` flag as the GAP-08 fill; it duplicates this declared `intent_*` layer and
   bypasses the revival protocol. The declared surface should be revived, not paralleled — the flag should
