@@ -7004,26 +7004,35 @@ remain the operator's.**
   ARE is **drawn-not-decided** — same status as type_1 and the §7 socket, not closed. See NEXT RULINGS.
 - **NEXT RULINGS (drawn, still not built) — with the witnesses each needs (none retires free; natural_law
   retired free ONLY because it fired 0, so its byte-identical diff was guaranteed pre-run).**
-  - **(a) type_1 RED-cap — route-vs-withhold.** WITNESSED 2026-06-17 (W1/W2 over `verdict_join`, control built
-    in): **12/13 RED headlines carry a type_1 severe alert**; suppressing the cap, **11 → YELLOW, 1 → RED
-    (base-red), ZERO → green**. **Control satisfied:** a non-type_1 severe alert exists (`type_3_snare_as_rope`
-    ×1) and is detected, but none co-occurs with type_1 — so no masked second floor, the OQ-98 green-over-severe
-    trap does NOT bite. ⇒ the cap's real stake is **RED vs YELLOW** (not RED vs GREEN), and those seats are
-    already routed to `engine_exit_table_review`. Seat: headline RED (withhold) vs YELLOW+routed-to-review
-    (flag). Now an informed seat.
+  - **(a) type_1 RED-cap — route-vs-withhold. WITNESSED across THREE corpora (W1/W2 over `verdict_join`, control
+    built in); the live-only read was a SMALL-SAMPLE ARTIFACT — corrected by the twins.** Suppress the cap, what
+    the type_1-RED verdicts become: **live (72): 11 yellow / 1 red / 0 green** — looked like RED-vs-YELLOW, OQ-98
+    safe. **testsets_haiku (960): 57 yellow / 7 red / 4 GREEN. testsets_flash (960): 92 yellow / 0 red /
+    7 GREEN.** So on both 960-constraint twins, routing-instead-of-capping type_1 **DOES** produce
+    green-over-severe (4 / 7) — the exact OQ-98 defect (a false-summit the engine flagged headlining clean
+    GREEN). The live corpus was too small (72) to surface it. **Controls pass on all three:** probe computed
+    every report (72/72, 960/960, 960/960); non-type_1 severe alerts exist and are detected (live 1, haiku 11,
+    flash 1) but none co-occur with type_1, so the greens are real, not masked. ⇒ **the cap is load-bearing
+    against OQ-98 at scale; naive type_1 routing is NOT safe.** Seat now informed by the real risk: withhold
+    (RED) vs flag (route) trades a green-over-severe for 4–7 per 960. The seat stands, but with the cost the
+    live sample hid.
   - **(b) the resolver family — `resolve_modal_signature_conflict` (lines 885–932 are ALL overwrites).** Unlike
     natural_law (0 fires), these fire and the signature layer changes `dr_type` at **66/288 live seats** (live
     firings: constructed_high 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 /
     false_natural_law 1). Each needs its own before/after `dr_type` + headline diff (NOT byte-identical) and a
-    routing-adequacy positive control. **SPLIT the row:** FCR/FSM/constructed are **rulable-once-witnessed**
-    (mechanical gathering); **`false_natural_law` is DEFERRABLE-pending-OQ-70** (its firing rides the
-    `claimed_natural` source-2 bait — measures authoring convention until OQ-70 rules; no W1–W5 gathering
-    resolves that gate), the same shape as the socket below.
+    routing-adequacy positive control. **Twin-confirmed (none retires free):** the signature layer changes
+    `dr_type` at **524/3840 (haiku)** and **637/3840 (flash)** seats, ~14–17% (live 66/288 ≈ 23%); `false_ci_rope`
+    fires 234 (haiku) / 357 (flash), `false_natural_law` 13 / 8. **SPLIT the row:** FCR/FSM/constructed are
+    **rulable-once-witnessed** (mechanical gathering); **`false_natural_law` is DEFERRABLE-pending-OQ-70** (its
+    firing rides the `claimed_natural` source-2 bait — measures authoring convention until OQ-70 rules; no W1–W5
+    gathering resolves that gate), the same shape as the socket below.
   - **(c) socket-powering — DEFERRABLE-not-rulable (gated on a candidate signal that does not exist, §7).**
     Per-conjunct decomposition (W1, over 72 live): the detector needs all six conjuncts; pass-counts are
     `accessibility≥0.85: 7 · supp≤0.15: 13 · res≤0.15: 10 · BC==0: 5 · HasAlternatives==false: 0 · stable: 68`.
     So the detector is **multiply-dead** (HA is the absolute zero, but BC==0 and accessibility are near-dead
-    too). **Fork (c) RE-DRAWN:** "retire the dead leg" must mean **retire the ENTIRE dead detector gate** —
+    too). **Twin-confirmed:** HA==false **0/960 in both** twins; BC==0 stays near-dead (18/960 haiku, 16/960
+    flash); `stable` near-universal (960/960 both); detector fires **0** in both. The multiply-dead pattern is
+    robust across models. **Fork (c) RE-DRAWN:** "retire the dead leg" must mean **retire the ENTIRE dead detector gate** —
     retiring the `==false` conjunct alone is a no-op (the other narrow gates still fire ~nothing). Forks: (a)
     author a real immovability signal AND open the metric gate (bigger than HA), (b) leave dark, (c) retire the
     whole gate. (a) needs a candidate + a PRE-REGISTERED discriminating control (physics fires, naturalized snare
