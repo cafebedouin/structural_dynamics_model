@@ -7044,6 +7044,18 @@ remain the operator's.**
     ⇒ (c) is NOT structural rot — it is a *labeling* question (green-base reads as "safe" but means "consistent"),
     a separate/smaller thread. The snare-9's only severity signal IS the type_1 floor (no other alert), so under
     routing they need the discriminated floor to KEEP withholding — which the validated discriminant supports.
+    **(b) PROTOTYPE + χ-DECOMPOSITION at scale (2026-06-17) — KILL=0 in the discriminant's domain; type_1 now
+    RULABLE.** ε-distribution within the mountain-claimed→snare-at-analytical population (the exact cases a
+    discriminated cap withholds), across all six corpora: ε-min 0.50–0.85, **0 below the snare floor (0.46) in
+    every corpus**; the mountain-claimed→rope side (the route bucket) has ε-max ≤ 0.25 everywhere. **A clean ε
+    gap (≤0.25 route / ≥0.50 withhold, nothing between) earned empirically across ~7,000 constraints.** Counts:
+    27 mountain-claimed snares (withhold) vs 102 mountain-claimed ropes (route). **Honest nuance:** the *full*
+    snare population (not just mountain-claimed) has **2 low-ε exceptions** in v5 (`starwars_evolutionary_mutation`
+    authored-snare ε=0.2; `taiwan_existential_sovereignty` authored-rope/false_ci_rope ε=0.3) — but neither is
+    mountain-claimed, so neither enters the type_1 cap; the discriminant is clean **for its actual scope**. ⇒ the
+    third path (discriminated severity: withhold high-ε snare-at-analytical, route low-ε rope-at-analytical)
+    **ships clean**; the type_1 ruling is no longer blocked — it is the operator's seat with a validated
+    discriminant.
   - **(b) the resolver family — `resolve_modal_signature_conflict` (lines 885–932 are ALL overwrites).** Unlike
     natural_law (0 fires), these fire and the signature layer changes `dr_type` at **66/288 live seats** (live
     firings: constructed_high 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 /
