@@ -843,12 +843,19 @@ has_metric_perspectival_variance(C) :-
     N > 1.
 
 % -----------------------------------------------------------------------
-% SIGNATURE OVERRIDE RULE (logic.md §III-A, Rule NL):  [ACTIVE, unconditional]
-%   NL(C) → Mountain (▪) regardless of metric-based classification.
-%   Natural Law is the strongest structural signal. If a constraint
-%   passes the NL signature test (extreme collapse, zero enforcement,
-%   no alternatives, no beneficiaries, temporally stable), it IS a
-%   Mountain no matter what the metric classifier says.
+% SIGNATURE OVERRIDE RULE (logic.md §III-A, Rule NL):  [RETIRED 2026-06-17, OQ-128]
+%   FORMERLY: NL(C) → Mountain (▪) regardless of metric-based classification.
+%   RETIRED under the routing-sink architecture (the engine ROUTES, it does not
+%   RECLASSIFY — only review reclassifies). This clause was the natural_law
+%   OVERWRITE (rope→mountain); it manufactured a verdict rather than flagging a
+%   disagreement. The DETECTOR (`natural_law_signature`/`constraint_signature(C,
+%   natural_law)`) LIVES — demoted from override-trigger to a router input
+%   (currently unpowered: HasAlternatives==false is builder-unreachable, see
+%   ROUTING_SINK_DESIGN.md §9a(i)). Retirement is WITNESSED behavior-neutral: the
+%   clause fired 0/3843 across six corpora (the detector that gated it never
+%   succeeds), so removing it changes no dr_type — see §9b.2 and the OQ-128 record.
+%   The retired clause was:
+%       resolve_modal_signature_conflict(_, natural_law, Result) :- !, Result = mountain.
 % -----------------------------------------------------------------------
 % -----------------------------------------------------------------------
 % BINDING-SAFE OVERRIDE RULES
@@ -863,8 +870,9 @@ has_metric_perspectival_variance(C) :-
 %   correctly returns false (the constraint is NOT that type)
 % -----------------------------------------------------------------------
 
-% Categorical: Priority resolution on type space — structural signal overrides metric classification
-resolve_modal_signature_conflict(_, natural_law, Result) :- !, Result = mountain.
+% Categorical: natural_law resolver RETIRED 2026-06-17 (OQ-128) — see the retirement
+% tombstone above. The detector survives; the overwrite does not. The other
+% resolve_modal_signature_conflict clauses (false_natural_law, ...) are UNTOUCHED.
 
 % FNL OVERRIDE RULE (v5.1, §III-A extension):  [ACTIVE]
 %   FNL(C) → tangled_rope regardless of metric-based classification — EXCEPT an
