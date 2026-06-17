@@ -6867,6 +6867,40 @@ This subsumes the whole OQ-128 apparatus and answers its "artifact or correct re
   `type_1` to the other correction-grade verdicts (FNL/FCR/FSM)? The ruling named `natural_law`; the
   architecture implies the family. Not assumed.
 
+**DEMOTE (not delete) + SINK DESIGN authorized (2026-06-17h). `natural_law` = detector + resolver, welded;
+only the resolver adjudicates.**
+- **Correction to "delete."** Detector = `natural_law_signature` (`signature_detection.pl:359`) — a computed
+  reading, "immovable-by-structure." Resolver = `resolve_modal_signature_conflict(_, natural_law, mountain)`
+  (`:867`, called `:823`) — the overwrite rope→mountain (the adjudication). Under routing the **resolver
+  dies; the detector LIVES as a third router input** (author-independent reading — the one thing not written
+  by the seat-blind authoring agent, so the one that can disagree with a *flattened* authoring and route it).
+  Deleting the organ to remove one function was wrong.
+- **Author-uniformity is CONTAMINATED as an immovability signal** — the authoring agent writes
+  uniform-mountain because it can't see that mountain is seat-relative, not because the thing is immovable.
+  So uniformity is the router's *address label*, NOT a certification; the detector is what would disambiguate
+  uniform-immovable from uniform-flattened. (This also retro-kills the uniformity-*gate* idea: a gate on
+  uniformity launders the author's seatlessness into the engine as structure.)
+- **The unlock:** as a *router* the detector tolerates the input that killed it as a *gate* — firing on
+  `price_formation__naturalist` yields a review item, not a miscertification (volume in the queue, not a
+  wrong answer in the substrate). The GAP-08 prose-trust/unauthorable problems were fatal only to certifying.
+- **Pre-build confirmations PASS (witnessed):** (1) `:614` diff tappable pre-cap (`severe` is a returned
+  field, RED-cap is a downstream consumer); (2) detector/resolver separable (retire `:867`, detector still
+  fires). So "verb change, not new machinery" is load-bearing.
+- **Design authored (DESIGN ONLY):** `audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md` —
+  three readings → per-SEAT diff (the leaf TYPE, never per-constraint) → router (address = label) → review
+  (only reclassifier). **STOP held:** type_1's RED-cap is **left ON**, drawn as a routed-but-not-disabled box
+  (separate ruling — a cap *withholds* certification; the overwrite *manufactured* it; opposite verbs, own
+  kill condition: what gets certified in the route-and-review window the cap blocks). Other resolvers /
+  FNL/FCR/FSM likewise next-ruling. **Transparency add-on (operator):** each routed item states author /
+  engine / detector state, with silence TYPED (AUTHOR_SILENT / ENGINE_SILENT), never blank — for the
+  adjudicating consumer and for troubleshooting (OQ-137).
+- **Item 1 RATIFIED with the narrowing:** "the engine never reclassifies; it routes disagreement" — a ruling
+  about `natural_law` and the routing mechanism; it does **not** license retiring any other adjudicator. The
+  stance is the floor the family-generalization would stand on, not the generalization.
+- **Named OPEN (non-fatal now):** the detector still needs an author-independent immovability reading;
+  author-uniformity (contaminated), exit-table (the checkee), Boltzmann (orthogonal) are all burned. GAP-08
+  in new clothes — shades into the generator typed-invariance guidance.
+
 **Cross-refs:** OQ-122 (residual this splits from; the held FSM gate bundles here — its 2026-06-14 ruling
 is **prose-consistent** with this audit's §5 (both say the residue is OVERDETERMINED and the FSM gate is
 not the residue fix), but that is doc-agrees-with-doc: whether main's bundled FSM-victim-gate ruling HELD

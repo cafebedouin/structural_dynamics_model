@@ -447,6 +447,15 @@ surface mid-baseline — the rebuild's ε-idiom and diff baselines are forming).
   revived**, and the intent-layer-as-override-trigger consuming-research-question is **dead** — the override
   was wrong, not under-fed. The `intent_*` layer absence stands as a declared gap on its own terms (other
   consumers), but its OQ-128 motivation is withdrawn.
+  **REFINED 2026-06-17h (demote, not delete):** precisely, the *resolver overwrite*
+  `resolve_modal_signature_conflict(_, natural_law, mountain)` (signature_detection.pl:867) dies; the
+  *detector* `natural_law_signature` (:359) LIVES, demoted to a router input (a third, author-independent
+  reading). So GAP-08's true residual is **not** "feed the override" — it is the still-open
+  **author-independent immovability signal**: what structural fact, written by neither the author (uniformity
+  is contaminated — the seat-blind agent flattens) nor the degradation (the exit-table is the checkee) nor
+  Boltzmann (orthogonal), reads "immovable"? Routing makes a *weak* detector usable (flag, don't certify), so
+  this is non-fatal — but unsolved, and it shades into what the generator should emit (typed-invariance).
+  Design: `audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md`.
 - **Retire the Pattern-2 duplicate.** The archival `oq50-power-scaling-residue` branch drafted a standalone
   `no_viable_alternatives/1` flag as the GAP-08 fill; it duplicates this declared `intent_*` layer and
   bypasses the revival protocol. The declared surface should be revived, not paralleled — the flag should
