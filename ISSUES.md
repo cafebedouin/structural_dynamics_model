@@ -6101,9 +6101,34 @@ verdict-stability demoted to confounded-half; discharge-to-successor).
 **Ω-type:** Ω_E (the discriminating test is a measurable single-field intervention) + Ω_C (whether
 claim-only RED-capping is the intended semantics is a design ruling).
 
-**Status:** investigating — filed 2026-06-13 from the Przybylski's-star stress run
+**Status:** resolved — 2026-06-18 (physics-RED fixed by OQ-128; FSM victim-discriminant handed to OQ-138; the `oq122-fsm-victim-gate` branch is DROPPED, not merged)
 **Priority:** 1
 **Deps:** bundled_with OQ-128
+
+**RESOLUTION (2026-06-18) — the bundled OQ-128 resolution discharged this entry; the FSM gate is superseded, NOT merged.**
+- **Physics-RED FIXED by OQ-128, not by the FSM gate.** The type_1 cap was *discriminated*
+  (degrade→snare = severe / degrade→other = informational; `drl_core.pl:629–638`). On live (commit
+  `2172d55`, manifest 2026-06-18) both physics false-positives now read
+  `verdict_join.verdict = yellow`, `cap_applied: none`, `type_1_false_summit = informational` at every
+  seat. The RED that filed this OQ is gone. OQ-122's graduation step (b) named "OQ-50 power-scaling
+  residue … the binding verdict-mover" — that became **OQ-128**, now resolved; the (b) text below is
+  superseded.
+- **FSM victim-gate (`oq122-fsm-victim-gate`, `ab1e9b26`) — DROPPED, superseded by the engine-ROUTES-
+  never-RECLASSIFIES architecture (OQ-128/AGENTS.md).** The gate is a *suppress-the-detector*
+  reclassification — exactly the shape OQ-128 removed. Its verdict benefit is now ≈0: the RED is
+  already cleared, and `false_summit_mountain` only contributes a `signature_correction/moderate`
+  alert while `base_verdict` is *independently* yellow (`cap_applied: none`), so suppressing FSM cannot
+  recover GREEN here either. (The "36-fixture cost" was already shown stale corpus-drift,
+  `audits/2026-06-14_oq122_fixture_triage/`.) The branch's single-clause diff lives at commit
+  `ab1e9b26` (recoverable) and the gate's load-bearing witness — the clean `testsets_flash` partition
+  **40 FSM-firings = 18 `vic=0` + 22 `vic>0`** (`audits/2026-06-13_oq122_retype_discriminator/breadth_sweep_results.txt`)
+  — is **handed to OQ-138** as the discriminant for the FSM clause.
+- **The victim INSIGHT survives, re-shaped for OQ-138.** "A mountain-claim with no victim has nothing
+  to conceal" is correct; apply it the OQ-128 way — **discriminate the FSM signature's severity**
+  (`false_summit_mountain ∧ vic=0 → informational/route`; `∧ vic>0 → moderate/floor`), the exact
+  analogue of the type_1 ε-split, NOT a detector gate. Recorded as the proposed FSM disposition in **OQ-138**.
+- **neutron_star / FCR** stays under **OQ-70** (bait-confound), as graduation step (c) already routed it.
+
 (`agent/analysis/originals/przybylskis_star.md`; testsets `actinide_replenishment_mechanism_*`,
 `neutron_star_bombardment_reading`, `radiative_levitation_stratification`, `superheavy_decay_reading`,
 `performance_legitimacy_flat_control`; reports in `outputs/constraint_reports/`). Surfaced by a
@@ -6171,7 +6196,10 @@ twins ⇒ firings ≠ distinct stories), NOT un-run computation — corroboratio
 22. (No over-claim: `vic>0` = "no-victim exemption does not apply / concealment possible," not per-case
 "confirmed concealment.")
 
-**Open graduation steps (all output-changing):** (a) **FSM victim-gate — IMPLEMENTED on branch
+**Open graduation steps (all output-changing) — SUPERSEDED 2026-06-18, see RESOLUTION above:** (a)
+branch DROPPED (suppress-the-detector shape rejected by OQ-128; discriminant → OQ-138); (b) the
+power-scaling residue became OQ-128, RESOLVED; (c) neutron_star/FCR → OQ-70. Original text retained for
+provenance: (a) **FSM victim-gate — IMPLEMENTED on branch
 `oq122-fsm-victim-gate` (`ab1e9b26`), NOT merged.** Gate diff on `testsets_flash` is a clean partition
 (FSM-firing 40→22: 18 `vic=0` exempted, 22 `vic>0` retained, 0 leakage, 22 untouched) ⇒ `constraint_victim`
 is the sufficient FSM filter, `agent_victim/2` is a later refactor not a blocker. **Merge is BLOCKED on two
@@ -7167,6 +7195,8 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 **Origin:** 2026-06-17, OQ-128 residual. The whole `resolve_modal_signature_conflict` table (lines 885–932) is OVERWRITES (rewrite `dr_type` by signature) — the same architecture as the retired `:867` and the discriminated type_1 cap. Unlike natural_law (0 fires → free retirement), these FIRE and CHANGE `dr_type`: witnessed on current main the signature layer changes the metric type at **66/288 live seats** (524/3840 haiku, 637/3840 flash); per-signature firing `constructed_high_extraction 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 / false_natural_law 1`. So NONE retires free — each needs its own before/after diff and a routing-adequacy positive control. **SPLIT:** FCR / FSM / constructed are rulable-once-witnessed (mechanical gathering); `false_natural_law` is deferrable-pending-OQ-70.
 
 **What resolution changes.** A per-clause ruling (route / discriminate / keep-as-correction) with each clause's before/after verdict diff as the witness, consistent with the engine-ROUTES-never-RECLASSIFIES architecture (AGENTS.md). The type_1 discriminated-severity build (`drl_core.pl` `dr_claim_mismatch`) is the precedent pattern. Cross-ref: OQ-128 (parent), OQ-70 (FNL gate), OQ-98.
+
+**FSM clause — proposed disposition INHERITED from OQ-122 (closed 2026-06-18): DISCRIMINATE on victim presence, do not gate.** OQ-122's FSM victim-gate (suppress `false_summit_mountain` when `vic=0`) is superseded by this family's route-not-reclassify architecture, but its discriminant is sound and pre-witnessed. Apply the type_1 pattern: `false_summit_mountain ∧ vic=0 → informational` (route via the sink — a mountain-claim with no victim has nothing to conceal, the non-diagnostic case) / `∧ vic>0 → moderate` (concealment floor stays). Live now: FSM fires 2 seats, both `vic=0`, currently graded `signature_correction/moderate` (holds the two physics cases at YELLOW) — under the discriminant they would route as informational. **Pre-witnessed discriminant value (the gate's load-bearing partition):** `testsets_flash` 40 FSM-firings = **18 `vic=0` + 22 `vic>0`** (`audits/2026-06-13_oq122_retype_discriminator/breadth_sweep_results.txt`); the adversarial `vic>0` cell is non-empty in 4/5 corpora. Build = the discriminated-severity change + per-seat before/after `verdict_join` diff (expect the 2 physics YELLOWs to drop their signature floor; `vic>0` FSM-firings unchanged). Still `blocked_on_human` for the route-vs-keep go, but the discriminant and its witness are in hand. Cross-ref: OQ-122 (origin of the discriminant), OQ-50 (FSM detector).
 
 ## OQ-139 — `green` base verdict reads "safe" but means "consistent": a labeling thread (Ω_C)
 
