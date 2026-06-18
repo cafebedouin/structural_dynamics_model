@@ -221,40 +221,30 @@ bridge_constraint_claim_pure(IntervalID, AccIn, AccOut) :-
         )
     ).
 
-%% bridge_omega_variables_pure(+IntervalID, +AccIn, -AccOut)
-%  Pure version of bridge_omega_variables/1.
-%  Uses findall to collect omega_variable terms instead of forall+assertz.
-bridge_omega_variables_pure(IntervalID, AccIn, AccOut) :-
-    % Check for omega_variable/5 in the testset module
-    (   current_module(IntervalID),
-        predicate_property(IntervalID:omega_variable(_,_,_,_,_), defined)
-    ->  findall(
-            bridge_result(omega_variable(OID, empirical, Question)),
-            (   catch(IntervalID:omega_variable(OID, Question, _Measurement, _Resolution, _Conf), _, fail),
-                \+ acc_has(AccIn, omega_variable(OID, _, _))
-            ),
-            Omega5Results
-        ),
-        forall(member(bridge_result(omega_variable(OID5, _, _)), Omega5Results),
-               format('  [BRIDGE] Imported omega ~w from module ~w~n', [OID5, IntervalID]))
-    ;   Omega5Results = []
-    ),
-    append(Omega5Results, AccIn, Acc1),
-    % Also check for omega_variable/3 in the testset module
-    (   current_module(IntervalID),
-        predicate_property(IntervalID:omega_variable(_,_,_), defined)
-    ->  findall(
-            bridge_result(omega_variable(OID3, Type3, Desc3)),
-            (   catch(IntervalID:omega_variable(OID3, Type3, Desc3), _, fail),
-                \+ acc_has(Acc1, omega_variable(OID3, _, _))
-            ),
-            Omega3Results
-        ),
-        forall(member(bridge_result(omega_variable(OID3b, _, _)), Omega3Results),
-               format('  [BRIDGE] Imported omega ~w from module ~w~n', [OID3b, IntervalID]))
-    ;   Omega3Results = []
-    ),
-    append(Omega3Results, Acc1, AccOut).
+% TOMBSTONE — bridge_omega_variables_pure/3 RETIRED (OQ-111, 2026-06-18).
+%  This predicate tried to import a testset's authored omega_variable facts by
+%  querying module `IntervalID` (the bare interval id). But every testset
+%  declares its facts in module `constraint_<id>` (e.g. interval
+%  `border_control_legitimacy__freedom_of_movement_primary` lives in module
+%  `constraint_border_control_legitimacy__freedom_of_movement_primary`), so the
+%  `current_module(IntervalID)` guards ALWAYS missed and the predicate returned
+%  the input accumulator unchanged — it imported ZERO omegas on every report run
+%  (Build Discipline Pattern 6: success-shaped absence). Wrong-module premise =
+%  OQ-99's twin; OQ-99 fixed the same bug in report_generator.pl via
+%  atom_concat(constraint_, Id, Module).
+%
+%  NOT fixed — RETIRED. Authored omegas already reach reports without this
+%  bridge: testsets author `narrative_ontology:omega_variable/3` (3-arity,
+%  qualified — global) directly (report_generator.pl:709 enumerates them), and
+%  report_generator.pl:776-794 renders each matching 5-arity authored protocol.
+%  The bridge's only genuine purpose was v3.4-LEGACY *unpaired* testsets (5-arity
+%  omega authored in their own module with NO narrative_ontology 3-arity sibling).
+%  The live corpus is 100% paired; the only unpaired inputs live in
+%  prolog/archives/datasets/*, which the operator ruled OUT OF SCOPE
+%  (no backward-compatibility, 2026-06-18). Removal is behavior-preserving
+%  (zero-diff) precisely because the predicate already returned []. If
+%  archive v3.4-unpaired omega rendering is ever wanted again, see
+%  docs/design/design_gaps.md and re-key on `constraint_<id>` per OQ-99.
 
 /* ============================================================
    EXPORTED PURE API
@@ -262,15 +252,15 @@ bridge_omega_variables_pure(IntervalID, AccIn, AccOut) :-
 
 %% bridge_v34_data(+IntervalID, -Results)
 %  Pure bridge pipeline: derives constraint_claim, constraint_metric,
-%  beneficiary/victim, scaffold markers, and omega_variable facts from
-%  v3.4 indexed data. Returns bridge_result(...) terms without asserting.
-%  Bridge ordering preserved: metrics -> beneficiary/victim -> scaffold -> claim -> omega.
+%  beneficiary/victim, and scaffold markers from v3.4 indexed data. Returns
+%  bridge_result(...) terms without asserting. (Omega bridging was removed —
+%  OQ-111, 2026-06-18; see tombstone above.)
+%  Bridge ordering preserved: metrics -> beneficiary/victim -> scaffold -> claim.
 bridge_v34_data(IntervalID, Results) :-
     bridge_domain_metrics_pure(IntervalID, [], Acc1),
     bridge_beneficiary_victim_pure(IntervalID, Acc1, Acc2),
     bridge_scaffold_markers_pure(IntervalID, Acc2, Acc3),
-    bridge_constraint_claim_pure(IntervalID, Acc3, Acc4),
-    bridge_omega_variables_pure(IntervalID, Acc4, Results).
+    bridge_constraint_claim_pure(IntervalID, Acc3, Results).
 
 %% impute_missing_metrics(+IntervalID, -Results)
 %  OQ-93 ruling (b) (2026-06-10; imputation arm RETIRED 2026-06-11):
@@ -421,11 +411,11 @@ persist_single(has_sunset_clause(ID)) :-
     ->  true
     ;   assertz(narrative_ontology:has_sunset_clause(ID))
     ).
-persist_single(omega_variable(OID, Type, Desc)) :-
-    (   narrative_ontology:omega_variable(OID, _, _)
-    ->  true
-    ;   assertz(narrative_ontology:omega_variable(OID, Type, Desc))
-    ).
+% persist_single(omega_variable(...)) RETIRED with bridge_omega_variables_pure/3
+% (OQ-111, 2026-06-18): that predicate was the only producer of
+% bridge_result(omega_variable(...)) terms, so this dispatch clause is now
+% unreachable. Authored narrative_ontology:omega_variable/3 facts are asserted
+% at testset load, never through persist_single — they are unaffected.
 persist_single(measurement(SyntheticID, IntervalID, Metric, Time, Value)) :-
     (   narrative_ontology:measurement(_, _, Metric, Time, _)
     ->  true

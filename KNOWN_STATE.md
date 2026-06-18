@@ -45,6 +45,23 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-18 — OQ-111 RESOLVED: dead data_repair omega bridge retired (zero-diff removal)
+**Files:** prolog/data_repair.pl, ISSUES.md (OQ-111), docs/design/design_gaps.md (GAP-13)
+**Tier:** landed
+`bridge_omega_variables_pure/3` keyed its module lookup on the BARE interval id while testsets
+declare facts in module `constraint_<id>` — so it always missed and imported zero omegas on every
+report run (Pattern 6; OQ-99's wrong-module twin). RETIRED, not fixed: operator ruled
+`prolog/archives/datasets/*` out of scope, closing the bridge's only genuine consumer (v3.4-legacy
+UNPAIRED testsets; the live corpus is 100% paired and authored omegas already render via
+`report_generator.pl:709`/`:776-794`). Removed the predicate + its `bridge_v34_data/2` call + the
+now-dead `persist_single(omega_variable(...))` clause (tombstones in-file); also retired a secondary
+defect (the /5 branch fabricated type `empirical` for a typeless 5-arity fact). Deferred capability
+logged as GAP-13 with the re-introduction recipe. **Witness:** pre-removal probe on
+`border_control_legitimacy__freedom_of_movement_primary` confirmed the no-op fired (bare_module FALSE
+/ constraint_module TRUE / 5-arity present / 0 imported); removal is behavior-preserving — ZERO DIFF
+on three omega-authoring reports across raw `run_scenario` + `enhanced_report.py`; dynamic suite GREEN
+(80/0/0); [GATE] GREEN. No tripwire promoted (the bridge is gone; nothing silent remains).
+
 ## 2026-06-18 — OQ-48 recalibration-readiness audit: 0 thresholds recalibratable against the twins (all MODEL-CONFOUNDED)
 **Files:** ISSUES.md (OQ-48), audits/2026-06-18_oq48_recalibration/, python/audits/oq48_threshold_distributions.py, python/audits/oq48_analyze.py, python/audits/oq48_triangulate_kernel_v1.py
 **Tier:** landed

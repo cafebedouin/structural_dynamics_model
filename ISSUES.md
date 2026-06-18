@@ -5395,58 +5395,38 @@ spin-off; the Phase B/C half is OQ-109).
 
 ## OQ-111 — data_repair omega bridge queries module `IntervalID`; testsets declare `constraint_<id>` — guard fails silently, bridge imports zero (OQ-99's wrong-premise twin)
 
-**Ω-type:** Ω_E (witnessed, mechanical; zero output impact on the live corpus today).
+**Ω-type:** Ω_E (witnessed, mechanical; zero output impact on the live corpus).
 
-**Status:** open — filed 2026-06-11 by the OQ-99 close-out sweep (the wrong-module premise that
+**Status:** resolved — 2026-06-18. RETIRED (not fixed): operator ruled `prolog/archives/datasets/*`
+out of scope (no backward-compat), which closes the bridge's only genuine consumer.
+
 **Priority:** 1
-OQ-99 hit and fixed in `report_generator.pl`, searched for elsewhere).
 
-**The witness (probe, 2026-06-11).** After `user:consult('testsets/scale_ceiling.pl')`:
-`current_module(scale_ceiling)` FALSE / `current_module(constraint_scale_ceiling)` TRUE;
-`data_repair:bridge_omega_variables_pure(scale_ceiling, [], R)` imports **0** omegas while
-**4** five-arity facts sit in `constraint_scale_ceiling`. Both arity branches
-(`data_repair.pl:227–257`) guard on `current_module(IntervalID)` +
-`predicate_property(IntervalID:omega_variable(...), defined)` and fall to `Results = []` on
-miss — success-shaped absence (Build Discipline Pattern 6: measured-empty and didn't-look
-collapse to one token). Live on every report run: `scenario_manager.pl:114` →
-`repair_interval/1` → `bridge_v34_data/2` → `bridge_omega_variables_pure/3`.
+**Diagnosis (confirmed).** `data_repair:bridge_omega_variables_pure/3` guarded its module lookup on
+the BARE interval id, but testsets declare their facts in module `constraint_<id>`, so the guards
+always missed and the predicate returned `[]` — it imported zero omegas on every report run (Build
+Discipline Pattern 6: success-shaped absence; OQ-99's wrong-module twin). Live path:
+`scenario_manager.pl:114` → `repair_interval/1` → `bridge_v34_data/2` → the bridge. Authored omegas
+already reach reports WITHOUT it: testsets author `narrative_ontology:omega_variable/3` directly
+(`report_generator.pl:709`) and the 5-arity protocol renders at `:776-794` (the OQ-99 fix). The
+bridge's only genuine purpose — synthesizing the 3-arity fact for v3.4-legacy UNPAIRED testsets —
+has no in-scope input (live corpus 100% paired; unpaired inputs are archive-only).
 
-**Why zero bite today — fact vs prediction.** The pairing census is FACT: every 5-arity OID
-in the live corpus has a same-file `narrative_ontology:omega_variable/3` sibling (251/251,
-census 2026-06-11). "A working bridge would be duplicate-guarded into a no-op" is a
-PREDICTION about code that has never executed its success path — the duplicate guards
-(`acc_has/2` in the bridge; check-before-assert in `persist_bridge_results/1`) are as
-unexercised as the lookup they guard. Fine as triage justification; not a fix-time witness.
-The bridge exists for UNPAIRED (v3.4-legacy) testsets — exactly where it would silently
-fail. Secondary defect to not preserve blindly: a working /5 branch imports every omega as
-hardcoded type `empirical` (`data_repair.pl:232`), fabricating the type.
+**Resolution.** Removed `bridge_omega_variables_pure/3` + its `bridge_v34_data/2` call + the
+now-dead `persist_single(omega_variable(...))` dispatch clause, with tombstones in `data_repair.pl`.
+The deferred capability is logged as **GAP-13** (`docs/design/design_gaps.md`) with the
+re-introduction recipe (re-key on `constraint_<id>` per the OQ-99 template, both positive controls,
+a non-fabricated type). A secondary defect retired with it: the /5 branch fabricated type
+`empirical` for a typeless 5-arity fact.
 
-**Resolution shape.** Either key the lookup on `constraint_<id>` (`atom_concat/3`, as
-`report_generator.pl:661–664` now does — that fix is the template) with a positive-control
-probe, or retire the bridge with a tombstone if v3.4-unpaired testsets are out of scope
-(adjudicate by contribution, not wiring — Unwired ≠ worthless). **Fix-time witness set must
-include BOTH cases:** (a) an unpaired case showing new imports (the bridge's purpose), AND
-(b) a PAIRED case showing the duplicate guard actually fires on the now-working bridge — if
-the guard has its own bug, the fix turns a silent no-op into duplicated omegas, a worse
-defect than the one being fixed.
-
-**Output-changing — lands alone, with this baseline.** A working bridge changes which
-3-arity `narrative_ontology:omega_variable/3` facts exist at report time, and the OQ-99
-authored-protocol path (commit `6b1092c0`) joins 5-arity facts against exactly that
-enumeration — so this fix can change which omegas render and how, on every report run.
-Same discipline as OQ-99/OQ-100: output-changing commit lands alone. **Diff baseline for
-the fixer:** reports regenerated 2026-06-11 at code `04bf88ac` (post-OQ-99/100) —
-`scale_ceiling` (4 omegas, all AUTHORED RESOLUTION PROTOCOL boxes),
-`ai_governance_accountability` (authored boxes + 1 gap-derived `snare_masked_as_rope`),
-`employment_boundary_contradictions` (no omegas). Reports are gitignored; regenerate the
-baseline at the pre-fix commit via `python3 python/enhanced_report.py <ids>` before
-applying the fix, then diff. **Sweep closure note:** the
-census found `omega_variable/5` is the ONLY unqualified predicate testsets author (everything
-else is `narrative_ontology:`/`constraint_indexing:`-qualified or plunit `test/1`);
-`user:omega_variable` = zero hits in non-archive code (grep positive-controlled);
-all five `user:`-qualified goals in engine code are loaders (`user:consult` ×4) or the
-`user:file_search_path` hook; `current_predicate(user:` = zero. This entry is the sweep's
-single finding.
+**Witness (paste-or-untag).** Pre-removal probe on
+`border_control_legitimacy__freedom_of_movement_primary`: `bare_module_FALSE` /
+`constraint_module_TRUE` / `five_arity_in_constraint_module_TRUE` / `bridge imported 0 omegas` (the
+no-op fired — not a didn't-run zero). Removal is behavior-preserving: ZERO DIFF on three
+omega-authoring reports (border_control, catastrophe_memory_kernel__boundary_maintenance_reading,
+animal_status_kernel__property_reading) across both raw `run_scenario` output and
+`enhanced_report.py`. Dynamic suite GREEN (80 passed, 0 failed, 0 errors). Provenance:
+KNOWN_STATE 2026-06-18.
 
 ## OQ-112 — Pattern-6 confirmed-candidate batch from the OQ-97 census: 8 classes, member-level sort and per-class disposition
 

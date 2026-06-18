@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "b476eae63bb644db95da0cc276fba0d59752afa2",
+    "store_version": "602b5f7f58e1a6af3da253a77201a9e874525a34",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-18T11:45:00"
+    "generated_at": "2026-06-18T15:53:55"
   },
-  "issues_sha": "e9411822cae00382514723220ece16d84686f04a21727e1938ad5be6c783aafe",
+  "issues_sha": "6211ebdc0bb921c58251999005d8a3ac80a072777cd88fc2a069a0fb7df7d78f",
   "n_entries": 141,
   "active_token_set": [
     "investigating",
@@ -12,9 +12,9 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 63,
+    "resolved": 64,
     "mitigated": 6,
-    "open": 59,
+    "open": 58,
     "disposed": 3,
     "partial": 7,
     "future": 3
@@ -552,18 +552,6 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-33"
-      ]
-    },
-    {
-      "id": "OQ-111",
-      "status": "open",
-      "priority": 1,
-      "summary": "data_repair omega bridge queries module `IntervalID`; testsets declare `constraint_<id>` — guard fails silently, bridge imports zero (OQ-99's wrong-premise twin)",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-99",
-        "OQ-100"
       ]
     },
     {
@@ -1651,6 +1639,17 @@
         "OQ-83",
         "OQ-105",
         "OQ-109"
+      ]
+    },
+    {
+      "id": "OQ-111",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "data_repair omega bridge queries module `IntervalID`; testsets declare `constraint_<id>` — guard fails silently, bridge imports zero (OQ-99's wrong-premise twin)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-99"
       ]
     },
     {

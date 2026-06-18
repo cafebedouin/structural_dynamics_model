@@ -640,3 +640,34 @@ mediator layer — that *surfaces* disagreement; this would *enforce* non-coupli
 the whole cross-axis surface (label-agnostic reachability, not a per-edge type check) with two positive
 controls (payload-injection on `influences`; (B)-seam-promotion off `influences`). Tracked: **OQ-135**.
 Named here 2026-06-16 (seat/orientation audit; `docs/design/v8_seat_gauge_orientation_design_spec.md`).
+
+---
+
+## GAP-13 — No omega bridging for v3.4-legacy *unpaired* testsets (5-arity → 3-arity)
+
+**The capability:** synthesize a `narrative_ontology:omega_variable/3` (3-arity) fact from a testset's
+authored 5-arity `omega_variable(OID, Question, ResolutionMethod, Implications,
+confidence_without_resolution(_))` protocol, so an *unpaired* testset — one that authors the 5-arity
+protocol in its own module but NO matching 3-arity `narrative_ontology` sibling — still has its omegas
+enumerated in reports (report_generator.pl:709 reads the 3-arity; :776-794 renders the 5-arity protocol).
+
+**Why it is absent:** the engine has no v3.4-legacy inputs to serve. The live corpus
+(`prolog/testsets/*`) is 100% *paired* (every 5-arity OID has a same-file `narrative_ontology:omega_variable/3`
+sibling authored directly), so no synthesis is needed — authored omegas already reach reports without a
+bridge. The only unpaired inputs are in `prolog/archives/datasets/*`, which the operator ruled OUT OF SCOPE
+(no backward-compatibility, 2026-06-18).
+
+**What was built and removed (deferred):** `data_repair:bridge_omega_variables_pure/3` attempted exactly
+this synthesis but keyed its module lookup on the **bare** interval id while testsets live in module
+`constraint_<id>` — so it always missed and imported zero (OQ-99's wrong-module twin; Build Discipline
+Pattern 6). RETIRED 2026-06-18 (OQ-111) with a tombstone in `data_repair.pl`; the now-dead
+`persist_single(omega_variable(...))` dispatch clause was removed with it. Removal was behavior-preserving
+(zero-diff witnessed on three omega-authoring reports) precisely because the predicate already returned `[]`.
+A secondary defect was retired with it: the /5 branch fabricated type `empirical` for a 5-arity fact that
+carries no type field.
+
+**What closing the gap would require:** re-introduce the synthesis keyed on `atom_concat(constraint_, Id,
+Module)` per the OQ-99 template (`report_generator.pl:776-794`), with (a) an unpaired positive control showing
+a NEW 3-arity import, (b) a paired control showing the dedup guard suppresses duplicates, and (c) a principled
+type for the synthesized 3-arity fact (NOT a fabricated `empirical`). It is output-changing and lands alone.
+Named here 2026-06-18 (OQ-111 close).
