@@ -66,6 +66,15 @@ GROUPING_RELATORS = {"bundled_with", "splits_from"}
 HUMAN_RELATOR = "blocked_on_human"
 ALL_RELATORS = BLOCKING_RELATORS | GROUPING_RELATORS | {HUMAN_RELATOR}
 
+# Signature of ONE edge: `blocked_on_human` (free-text target) OR an OQ-relator
+# immediately followed by an OQ ref. Used to catch edges PACKED into a single
+# comma-chunk (e.g. `bundled_with OQ-1; bundled_with OQ-2`), which the comma-only
+# splitter silently DROPS to its first edge — the exact failure that let OQ-136/
+# 137/138 register fewer deps than authored with no error. `blocked_on_human`
+# first (it has no OQ ref) so it isn't shadowed by the alternation.
+_EDGE_SIG = re.compile(
+    r"\bblocked_on_human\b|\b(?:blocked_on|gates|bundled_with|splits_from)\b\s+OQ-\d+")
+
 OQREF = re.compile(r"OQ-\d+")
 COMMIT = re.compile(r"\b[0-9a-f]{8,40}\b")
 
@@ -159,6 +168,13 @@ def _parse_deps(oq, s):
         if relator not in ALL_RELATORS:
             problems.append(f"{oq}: unknown relator {relator!r} in {chunk!r}")
             continue
+        # Silent-drop guard: comma is the ONLY chunk delimiter, so >1 edge in a
+        # single chunk (typically `;`-joined) parses to the first and DROPS the
+        # rest with no error. Flag it — separate each edge with a comma.
+        if len(_EDGE_SIG.findall(chunk)) > 1:
+            problems.append(
+                f"{oq}: multiple edges packed in one comma-chunk (only the first "
+                f"registers; separate each with a comma): {chunk!r}")
         if relator == HUMAN_RELATOR:
             # free-text target (a human/external gate, not an OQ)
             target = " ".join(parts[1:]) or "<unspecified>"
@@ -377,8 +393,11 @@ def manifest():
 # --------------------------------------------------------------------------- #
 # checker (§3)
 # --------------------------------------------------------------------------- #
-def check(entries):
-    problems = []
+def check(entries, parse_problems=()):
+    # Parse-layer problems (unknown relator, no OQ target, malformed/packed Deps,
+    # duplicate OQ label) are real authority failures, not just stderr noise: a
+    # dropped/mis-typed edge silently corrupts the frontier. Fail the gate on them.
+    problems = list(parse_problems)
     auth = authority_report(entries)
     problems += auth["deps_target"]["bad"]
     # resolved-with-rotted-witness, entry-level: flag only when the entry CITES
@@ -446,6 +465,16 @@ see audits/2026-01-01_this_dir_does_not_exist/ for proof
 real witness audits/2026-06-14_extraction_blindness_existential_label/ plus a
 stray truncated mention audits/2026-06-14_extraction_blindness_existential_ that
 formatting clipped — the entry IS witnessed by the first, must not flag.
+
+## OQ-9010 planted prose-on-Deps (unknown relator after comma — must be flagged)
+**Status:** open
+**Ω-type:** Ω_C (test)
+**Deps:** splits_from OQ-9001, the rest of this line is prose not a typed relator
+
+## OQ-9011 planted packed edges (`;`-joined — silently drops, must be flagged)
+**Status:** open
+**Ω-type:** Ω_C (test)
+**Deps:** bundled_with OQ-9001; bundled_with OQ-9002
 """
 
 
@@ -477,12 +506,13 @@ def selftest():
 
     # control 5: rotted witness flagged; live witness NOT flagged; and the
     # over-fire negative control (one real + one truncated audit dir) NOT flagged.
-    probs = check(entries)
-    if not any("OQ-9007" in p for p in probs):
+    probs = check(entries, parse_probs)
+    rotted = [p for p in probs if "rotted" in p]   # scope to rotted-witness problems
+    if not any(p.startswith("OQ-9007") for p in rotted):
         fails.append("rotted-witness control FAILED: OQ-9007 not flagged")
-    if any("OQ-9002" in p for p in probs):
+    if any(p.startswith("OQ-9002") for p in rotted):
         fails.append("witness false-positive: live OQ-9002 witness flagged as rotted")
-    if any("OQ-9009" in p for p in probs):
+    if any(p.startswith("OQ-9009") for p in rotted):
         fails.append("over-fire control FAILED: OQ-9009 (has a real audit dir) flagged as rotted")
 
     # control 6: authority lists non-empty (Pattern 5)
@@ -494,6 +524,25 @@ def selftest():
         fails.append(f"human-gate control FAILED: OQ-9008 not blocked_on_human ({_where(buckets,'OQ-9008')})")
     if "OQ-9008" in buckets["workable_now"]:
         fails.append("human-gate control FAILED: OQ-9008 mis-bucketed workable_now")
+
+    # control 8: malformed Deps caught at BOTH layers, two-sided.
+    #  (a) prose-after-comma (unknown relator) surfaces as a parse problem;
+    #  (b) `;`-packed edges (the SILENT-drop case) surface as a parse problem;
+    #  (c) check() now FAILS on those parse problems (folded in, exit 1);
+    #  (d) negative side: no WELL-FORMED fixture entry (OQ-9001..9009) trips it.
+    # match on the problem's OWNING entry (prefix), not substring — a packed-edge
+    # problem quotes the chunk text, which contains other OQ refs that would
+    # collide with substring checks (this bit the first draft of this control).
+    if not any(p.startswith("OQ-9010") for p in parse_probs):
+        fails.append("malformed-Deps control FAILED: OQ-9010 prose-on-Deps not parse-flagged")
+    if not any(p.startswith("OQ-9011") and "packed" in p for p in parse_probs):
+        fails.append("packed-Deps control FAILED: OQ-9011 silent-drop not parse-flagged")
+    if not any(p.startswith("OQ-9010") for p in probs):
+        fails.append("malformed-Deps control FAILED: check() did not fail on OQ-9010")
+    wellformed = {f"OQ-900{n}" for n in range(1, 10)}   # 9001..9009 are all well-formed
+    overfire = [p for p in parse_probs if any(p.startswith(w) for w in wellformed)]
+    if overfire:
+        fails.append(f"malformed-Deps over-fire: well-formed entry parse-flagged: {overfire}")
 
     return fails, parse_probs
 
@@ -646,7 +695,7 @@ def main():
         if fails:
             print(f"selftest: {len(fails)} FAILED")
             sys.exit(1)
-        print("selftest: all positive controls fired (8/8)")
+        print("selftest: all positive controls fired (9/9)")
         return
     entries, problems = parse_entries()
     for p in problems:
@@ -654,7 +703,7 @@ def main():
     if cmd == "dump":
         cmd_dump(entries)
     elif cmd == "check":
-        probs = check(entries)
+        probs = check(entries, problems)
         for p in probs:
             print(f"PROBLEM: {p}")
         print(f"{len(probs)} problems")

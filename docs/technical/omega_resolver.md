@@ -14,8 +14,8 @@ Read this before modifying `omega_resolver.py`, the `ISSUES.md` authored fields,
 |---|---|
 | `menu` | **the front-end** — WORKABLE NOW sorted by authored `Priority:`, with Ω-type + what-resolution-changes, plus BLOCKED-ON-YOU / STANDOFFS / BLOCKED buckets and a coverage footer. Run this, not the file. |
 | `frontier` | the same buckets as **JSON** (machine artifact; the pilot stamped `frontier_view.json` from it). |
-| `check` | authority-control gate: dangling `Deps:` targets, `resolved` entries whose witness no longer resolves (git/audits/KNOWN_STATE). Exit 1 on problems. |
-| `selftest` | 8 planted positive controls (incl. the §D 2-cycle → one `standoff`). Exit 1 on fail. |
+| `check` | authority-control gate: dangling `Deps:` targets, `resolved` entries whose witness no longer resolves (git/audits/KNOWN_STATE), **and malformed/packed `Deps:` edges** (unknown relator, no OQ target, or >1 edge packed in one comma-chunk — the silent-drop case). Exit 1 on problems. |
+| `selftest` | 9 planted positive controls (incl. the §D 2-cycle → one `standoff`, and the two-sided malformed-Deps control). Exit 1 on fail. |
 | `activations` | emits the **SessionStart-hook JSON** (`hookSpecificOutput.additionalContext`) listing `[NEXT]/[GATE]/[PUSH]` with live counts + the monthly-consolidation date-check. |
 | `dump` | parsed access points per OQ. |
 

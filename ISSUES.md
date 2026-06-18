@@ -6075,7 +6075,7 @@ verdict-stability demoted to confounded-half; discharge-to-successor).
 
 **Priority:** 4
 
-**Deps:** bundled_with OQ-134 (the generic census this hardens); bundled_with OQ-86 (the `extraction_reading` source totalized here).
+**Deps:** bundled_with OQ-134 (the generic census this hardens), bundled_with OQ-86 (the `extraction_reading` source totalized here)
 
 **Origin:** 2026-06-16, building OQ-134 + a closer look the operator asked for. The census shipped `extraction_reading` coverage as `null` because its silence was unruled — but the closer look found a bigger, structural issue than a missing ruling.
 
@@ -7127,7 +7127,7 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Priority:** 3
 
-**Deps:** blocked_on_human (operator must adopt v8 and rule the spec Q4 vocabulary question); bundled_with OQ-15
+**Deps:** blocked_on_human (operator must adopt v8 and rule the spec Q4 vocabulary question), bundled_with OQ-15
 
 **Origin:** 2026-06-16, the seat/orientation invariant audit + R3 presentation-vs-structure probe (`audits/2026-06-16_seat_invariant_vs_prolog/`); design spec drafted rev1–rev3 (`docs/design/v8_seat_gauge_orientation_design_spec.md`).
 
