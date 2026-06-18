@@ -5683,30 +5683,31 @@ un-fire reverts at Phase C re-witness.
 
 **Ω-type:** Ω_E (witnessed, mechanical, OQ-57 class).
 
-**Status:** open — filed 2026-06-12 by the B4 gauntlet reconciliation (the one check_stack
+**Status:** resolved — fixed 2026-06-18 by side-loading `abductive_helpers` in `stack.pl`;
+check_stack returns to the 4-finding 2026-06-04 baseline (no abductive line). Filed
+2026-06-12 by the B4 gauntlet reconciliation (the one check_stack divergence not on the
+expected-divergence manifest).
+
 **Priority:** 1
-divergence not on the expected-divergence manifest; investigated to attribution).
 
-**The witness.** check_stack reports `abductive_helpers:known_override_signature/1`
-undefined, referenced by `signature_detection:signature_grade/2` (:1568). Under bare
-`[stack]`: `current_module(abductive_helpers)` TRUE but `module_property(_, file(_))` FAILS
-— a phantom module created by the qualified references; the call throws existence_error.
-The predicate IS defined+exported (`abductive_helpers.pl:22,60`). Three use_module sites
-exist (abductive_engine, abductive_triggers, diagnostic_summary) — NONE loaded by [stack].
-The PIPELINE chain loads it via json_report → diagnostic_summary, so signature_grade and
-the verdict_join alert path (diagnostic_summary:650) work where the pipeline runs —
-witnessed by the green B4 gauntlet. Present at pre-Phase-B `c22ec561` (temp-worktree
-witness, B4 reconciliation); NOT on the 2026-06-04 check_stack baseline (the OQ-98-era
-alert path created the reference after it). The in-file comment
-(signature_detection:1555–1559) claims the load is guaranteed — falsified for the [stack]
-chain.
+**The phantom.** Under bare `[stack]`, `signature_detection:signature_grade/2`
+(`signature_detection.pl:1624`) calls `abductive_helpers:known_override_signature/1` but the
+module was a phantom (`current_module` TRUE, `module_property(_, file(_))` FAILS) — the call
+threw existence_error. Pipeline unaffected (loads it via json_report → diagnostic_summary),
+so the green B4 gauntlet hid the gap.
 
-**Bite.** None in the pipeline today; real for any [stack]-only consumer of
-signature_grade/2 (probes, REPL diagnostics) — exactly the OQ-57 lesson: diagnose on the
-consumer's exact load chain. **Resolution shape:** import abductive_helpers in
-signature_detection (the referencing module owns its imports), or add it to stack.pl;
-either way update the check_stack baseline note and the :1555 comment. Engine-touching —
-lands outside B4.
+**Resolution.** Option 1 (import in signature_detection) REJECTED by evidence — it cycles
+tighter than the in-file comment documented: `abductive_helpers → maxent_classifier →
+signature_detection:constraint_signature/2` (`maxent_classifier.pl:60`) back into
+signature_detection, plus the grothendieck→drl_core arm. Option 2 (`stack.pl` side-load
+`use_module(abductive_helpers, [])`) is the safe fix; the falsified `:1611-1617` comment was
+corrected. **Witness (cold `[stack]`, corpus-free):** before → `THREW`
+(`existence_error(procedure, abductive_helpers:known_override_signature/1)`); after →
+`RETURNS`. check_stack before: 5 findings (incl. abductive); after: 4 (baseline). Provenance:
+KNOWN_STATE 2026-06-18; commit at close. The other 4 baseline findings → **OQ-142** (class
+sweep: one unguarded bite, OQ-115; the rest guarded/dead — phantom×guarded×reachable
+discriminator). Lineage: OQ-57 (wrong-qualifier class), OQ-98 (the alert path that minted
+the reference).
 
 ## OQ-116 — Two linter rules unmigrated for the cohort-zero authoring regime: SCAFFOLD_DANGER_ZONE calibration; MOUNTAIN_METRIC_CONFLICT contradicts the claim/metric-independence doctrine
 
@@ -7272,6 +7273,89 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 **Origin:** 2026-06-18, surfaced while building the derived router index (`issues/INDEX.md`). Two sources disagree on whether `mitigated` is a live status: `issues_status.TOKENS` (`python/issues_status.py:29`) and the ISSUES.md footer grammar list `mitigated` as a normal token alongside `open`/`partial`, and the footer narrates `mitigated`/`partial` as "semi-live", but `omega_resolver.ACTIVE` (`python/omega_resolver.py:58`) is exactly `{open, investigating, partial}` — it PARKS `mitigated`, so the 6 currently-`mitigated` entries drop out of the workable frontier, the `menu`/`activations` active counts, and the index's "current resolver-defined frontier" partition.
 
 **What resolution changes.** Whether the derived router index (and `menu`) surfaces the 6 `mitigated` entries in the active frontier. The index mirrors whatever the resolver settles on — it imports `ACTIVE` rather than re-encoding the set — so this is upstream of the index, not a property of it. Kill condition (checkable in-substrate): trace the consumers of `omega_resolver.ACTIVE` (the `.active` property → `frontier()` bucketing, `cmd_menu`, `cmd_activations`, and now `cmd_index`'s partition). If `mitigated` entries are deliberately parked out of the workable frontier (a `mitigated` issue is semi-live but not something to PICK UP now), the resolver is right and the footer prose is the stale source (fix: footer wording). If they belong in the pick-up rotation, `omega_resolver.py:58` is the bug (fix: add `mitigated` to `ACTIVE`; the index follows automatically by import). Either fix is upstream of and invisible to the index code. Cross-ref: `python/omega_resolver.py:58` (the parked set), `python/issues_status.py:29` (the broader token set), `issues/INDEX.md` (the derived consumer).
+
+## OQ-142 — check_stack baseline undefined-predicate references (the "baseline cleanup" deferred at KNOWN_STATE.md:3006)
+
+**Ω-type:** Ω_E (mechanical, witnessed per finding).
+
+**Status:** open — minted 2026-06-18 from the OQ-115 class sweep.
+
+**Priority:** 8
+
+**Deps:** bundled_with OQ-143
+
+**Origin:** the OQ-115 fix returned check_stack to its 4-finding 2026-06-04 baseline. This
+parent tracks those 4 references (3 distinct findings) so each is worked independently and
+records *why it doesn't bite today* — a witnessed dead-or-guarded reaching path, NOT
+"baseline-documented." The class-sweep discriminator is **phantom × guarded × reachable**: a
+reference bites only when its target is absent at the call's load chain AND the call is
+unguarded AND the path is reachable; OQ-115 was the one unguarded bite. Sub-findings split out
+as numeric OQs (the tracker's machine-readable label grammar is `OQ-\d+`; lettered sub-IDs are
+invisible to `issues_status`/`omega_resolver`, so the plan's `142a/b/c` became OQ-143/144/145):
+OQ-143 (validation_suite guarded phantom), OQ-144 (data_repair xref mis-attribution), OQ-145
+(drift_events:175 wrong-qualifier — the only one needing a code change). Lineage: OQ-115,
+OQ-57.
+
+## OQ-143 — `validation_suite:test_case/4` ← test_harness:26 (guarded phantom; check_stack baseline finding)
+
+**Ω-type:** Ω_E (mechanical, witnessed).
+
+**Status:** open — minted 2026-06-18 from the OQ-115 class sweep.
+
+**Priority:** 10
+
+**Deps:** splits_from OQ-142
+
+**Origin:** check_stack flags `validation_suite:test_case/4` (phantom under `[stack]`)
+referenced by `test_harness.pl:26`. **Non-bite (read-pass witness):** `test_harness.pl:23-35`
+calls `test_case/4` ONLY inside the `current_predicate(validation_suite:test_case/4) ->`
+then-arm; the `;` else-arm runs `run_all_tests('tax_code_section_469')` and does not reach
+`test_case/4`. Guarded — the negative control for the discriminator (phantom but guarded ⇒ no
+bite). **Resolution:** annotate as intentional `current_predicate` fallback; no code change.
+Re-witness the guard (re-paste the then/else arms) before closing.
+
+## OQ-144 — `data_repair:constraint_beneficiary/2` & `constraint_victim/2` (xref mis-attribution of a clean dynamic call; check_stack baseline finding)
+
+**Ω-type:** Ω_E (mechanical, witnessed).
+
+**Status:** open — minted 2026-06-18 from the OQ-115 class sweep.
+
+**Priority:** 10
+
+**Deps:** splits_from OQ-142
+
+**Origin:** check_stack flags `data_repair:constraint_beneficiary/2` and `constraint_victim/2`
+undefined, referenced from `data_repair.pl` (`bridge_beneficiary_victim_pure/3`,
+`bridge_scaffold_markers_pure/3`). **Non-bite (read-pass witness):** `acc_has/2`
+(`data_repair.pl:60`) goal-calls `narrative_ontology:Fact` (an indirection static xref cannot
+trace, so check_stack mis-attributes it to `data_repair:`). The real target is dynamic/multifile
+(`narrative_ontology.pl:100`), so absence fails clean — cold `[stack]` call
+`narrative_ontology:constraint_beneficiary(zzz_nonexistent,_)` → `fails_clean`, not a throw.
+**Resolution:** annotate the check_stack baseline that these are xref mis-attributions of a
+clean dynamic-predicate call; no code change. Re-witness the `fails_clean` call before closing.
+Cross-ref OQ-86 (the data_repair sentinel-minting bridge).
+
+## OQ-145 — `narrative_ontology:requires_active_enforcement/1` ← drift_events.pl:175 (latent wrong-qualifier; OQ-57-class the OQ-57 fix missed)
+
+**Ω-type:** Ω_E (mechanical, latent existence_error).
+
+**Status:** open — minted 2026-06-18 from the OQ-115 class sweep.
+
+**Priority:** 5
+
+**Deps:** splits_from OQ-142
+
+**Origin:** **NOT benign.** `detect_is_piton/1` (`drift_events.pl:175`) calls
+`\+ narrative_ontology:requires_active_enforcement(C)` with the WRONG qualifier — the predicate
+lives in `domain_priors` (`domain_priors.pl:30,139`). OQ-57 fixed the sibling `:236`
+(`domain_priors:`) but missed `:175`; inside `\+` it would THROW if `detect_is_piton/1` is ever
+reached. Doesn't bite today: a broadened grep (pl/py/sh) finds only the `drift_events.pl`
+definitions — no static caller/meta-call site anywhere; runtime-constructed invocation
+**unverified** (label it so, the OQ-115 REPL/external residual class). NB the positive control
+killed the "superseded by `detect_is_piton_event`" claim — that predicate is also dead.
+**Resolution:** one-token fix `narrative_ontology:` → `domain_priors:` at `:175`, mirroring the
+already-fixed `:236`; correct independent of reachability. Witness with a direct
+`detect_is_piton/1` call before (THREW) / after (clean). Lineage: OQ-57.
 
 ---
 

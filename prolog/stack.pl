@@ -18,6 +18,7 @@
 :- use_module(boltzmann_compliance, []).
 :- use_module(guard_exclusions, []).   % OQ-114 per-story guard exclusions (fail-closed contract)
 :- use_module(signature_detection, []).
+:- use_module(abductive_helpers, []).   % OQ-115: realize the module under [stack]; signature_grade/2 calls it qualified+unguarded
 :- use_module(cs_pattern_detection, []).
 :- use_module(cs_drift_engine, []).
 :- use_module(cs_axiom_engine, []).

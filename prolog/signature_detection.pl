@@ -1610,10 +1610,13 @@ false_summit_mountain(C, fsm_evidence(BeneficiaryCount, CouplingScore, LevelDiv)
 
    Load requirement: drl_core and abductive_helpers are called
    module-qualified at runtime (no use_module here — a static import
-   would cycle through grothendieck_cohomology back into drl_core).
-   The only consumer is diagnostic_summary:verdict_join/3, whose
-   module imports abductive_helpers, so both are loaded on every
-   chain that reaches these predicates. Load-path witnessed on the
+   would cycle: abductive_helpers -> maxent_classifier ->
+   signature_detection:constraint_signature/2 (maxent_classifier.pl:60)
+   back into this module, plus the grothendieck_cohomology -> drl_core
+   arm). stack.pl now side-loads abductive_helpers (OQ-115), so
+   [stack]-only consumers are covered as well; on the run_pipeline
+   chain it also arrives via diagnostic_summary:verdict_join/3, whose
+   module imports abductive_helpers. Load-path witnessed on the
    run_pipeline chain: audits/2026-06-11_oq98_verdict_join/p2.
    ================================================================ */
 

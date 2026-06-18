@@ -45,6 +45,38 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-18 — OQ-115 RESOLVED: abductive_helpers phantom under [stack] fixed; check_stack back to 4-finding baseline
+**Files:** prolog/stack.pl, prolog/signature_detection.pl, prolog/check_stack.pl, ISSUES.md (OQ-115, OQ-142/143/144/145)
+**Tier:** landed
+
+Under bare `[stack]`, `signature_detection:signature_grade/2` (`signature_detection.pl:1624`)
+called `abductive_helpers:known_override_signature/1` where the module was a phantom
+(`current_module` TRUE, `module_property(_,file(_))` FAILS) → existence_error. The pipeline
+was unaffected (loads it via json_report → diagnostic_summary), so the green B4 gauntlet hid
+it; the OQ-98 alert path minted the reference after the 2026-06-04 baseline, making it the one
+check_stack regression. **Fix:** `:- use_module(abductive_helpers, []).` in `stack.pl`
+(`check_stack.pl:27` is `:- [stack].`, so the checker's image picks it up). **Option 1
+rejected by evidence** — importing in signature_detection cycles tighter than the in-file
+comment said: `abductive_helpers → maxent_classifier → signature_detection:constraint_signature/2`
+(`maxent_classifier.pl:60`), plus the grothendieck→drl_core arm; the falsified `:1611-1617`
+comment was corrected. **Witnesses (cold `[stack]`, corpus-free):** bite-call before → `THREW`
+(`existence_error(procedure, abductive_helpers:known_override_signature/1)`); after →
+`RETURNS`. check_stack after: no abductive line; 4 documented baseline findings.
+
+**Class sweep (operator expansion):** partitioned all 4 remaining baseline findings, each with
+its own pasted non-bite witness (none inherits baseline-trust). Discriminator = **phantom ×
+guarded × reachable**: a reference bites only when target-absent at the call's load chain AND
+unguarded AND reachable. OQ-115 was the only unguarded bite. `validation_suite:test_case/4` =
+the guarded negative control (then-arm under `current_predicate/1`; else-arm doesn't reach it).
+`data_repair:constraint_{beneficiary,victim}/2` = xref mis-attribution of `acc_has/2`'s
+`narrative_ontology:Fact` goal-call into a dynamic/multifile target (`fails_clean`, not a
+throw). `drift_events.pl:175` = a real latent OQ-57-class wrong-qualifier (`narrative_ontology:`
+should be `domain_priors:`; the OQ-57 fix patched the sibling `:236`, missed `:175`) held off
+only by being unreached. Tracked as **OQ-142** (parent) + **OQ-143/144/145** (the plan's
+`142a/b/c`; renamed because the tracker label grammar is `OQ-\d+` — lettered sub-IDs are
+invisible to `issues_status`/`omega_resolver`, witnessed). **Promotion test:** stays history —
+the failure is a loud `existence_error`, not a silent miscompute.
+
 ## 2026-06-18 — OQ-111 RESOLVED: dead data_repair omega bridge retired (zero-diff removal)
 **Files:** prolog/data_repair.pl, ISSUES.md (OQ-111), docs/design/design_gaps.md (GAP-13)
 **Tier:** landed
@@ -2978,17 +3010,17 @@ four got standard-SWI fixes. Commit A (`1460e873`, behavior-preserving) + Commit
   module-qualification required. 10 plunit tests passing
   (`prolog/tests/test_probe_harness.pl`).
 - **check_stack.pl**: library(check) over the stack. **Baseline (2026-06-04, engine-only):
-  4 undefined-predicate references** — `data_repair:constraint_beneficiary/2` (:123, :163),
-  `data_repair:constraint_victim/2` (:136), `narrative_ontology:requires_active_enforcement/1`
+  4 undefined-predicate references** — `data_repair:constraint_beneficiary/2` (:134, :174),
+  `data_repair:constraint_victim/2` (:147), `narrative_ontology:requires_active_enforcement/1`
   (drift_events.pl:175), `validation_suite:test_case/4` (test_harness.pl:26) — plus load
   warnings (constraint_instances weak-import overrides, one singleton, one not-exported
   import in arakelov_height). Findings beyond this list = regressions. NOT wired as a
-  pipeline gate while the baseline is non-empty (cleanup tracked in OQ-69).
-  **EXPECTED +1 (added 2026-06-12, REMOVE WHEN OQ-115 CLOSES):**
-  `abductive_helpers:known_override_signature/1` referenced by
-  `signature_detection:signature_grade/2` — known, filed, attributed (OQ-115: phantom
-  module under the [stack] chain; pipeline chain healthy, no production no-op). Future
-  gauntlets reconcile this line instead of re-running the investigation.
+  pipeline gate while the baseline is non-empty. **Each of these 4 is now tracked with its
+  own non-bite witness under OQ-142** (parent; from the OQ-115 class sweep): OQ-143
+  (validation_suite guarded phantom), OQ-144 (data_repair xref mis-attribution of a clean
+  dynamic call), OQ-145 (drift_events:175 latent wrong-qualifier — the one real fix pending).
+  The OQ-115 +1 (`abductive_helpers:known_override_signature/1` ← signature_detection:1624)
+  was RESOLVED 2026-06-18 (loaded in stack.pl); the baseline is back to exactly these 4.
 
 **Commit B (output-affecting, witnessed by full pipeline run 2026-06-04T14:15:56Z):**
 - `run_json_report` enumerates `corpus_constraint/1` instead of

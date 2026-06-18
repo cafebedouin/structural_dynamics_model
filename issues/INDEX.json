@@ -1,20 +1,20 @@
 {
   "manifest": {
-    "store_version": "602b5f7f58e1a6af3da253a77201a9e874525a34",
+    "store_version": "3f6eb827d3093ac835c3aed44d18289af1807153",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-18T15:53:55"
+    "generated_at": "2026-06-18T18:13:57"
   },
-  "issues_sha": "6211ebdc0bb921c58251999005d8a3ac80a072777cd88fc2a069a0fb7df7d78f",
-  "n_entries": 141,
+  "issues_sha": "05ef2bfc1970aa2802d6736fee60c2f1c725f00326bff99981bce368992fccb6",
+  "n_entries": 145,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 64,
+    "resolved": 65,
     "mitigated": 6,
-    "open": 58,
+    "open": 61,
     "disposed": 3,
     "partial": 7,
     "future": 3
@@ -572,18 +572,6 @@
       ]
     },
     {
-      "id": "OQ-115",
-      "status": "open",
-      "priority": 1,
-      "summary": "signature_grade/2 references abductive_helpers under [stack] where the module is a PHANTOM (load-path-dependent; check_stack regression vs the 2026-06-04 baseline; pre-dates Phase B)",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-57",
-        "OQ-98"
-      ]
-    },
-    {
       "id": "OQ-118",
       "status": "open",
       "priority": 1,
@@ -837,6 +825,67 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
+    },
+    {
+      "id": "OQ-142",
+      "status": "open",
+      "priority": 8,
+      "summary": "check_stack baseline undefined-predicate references (the \"baseline cleanup\" deferred at KNOWN_STATE.md:3006)",
+      "deps": [
+        "bundled_with OQ-143"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-57",
+        "OQ-115",
+        "OQ-143",
+        "OQ-144",
+        "OQ-145"
+      ]
+    },
+    {
+      "id": "OQ-143",
+      "status": "open",
+      "priority": 10,
+      "summary": "`validation_suite:test_case/4` ← test_harness:26 (guarded phantom; check_stack baseline finding)",
+      "deps": [
+        "splits_from OQ-142"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-115",
+        "OQ-142"
+      ]
+    },
+    {
+      "id": "OQ-144",
+      "status": "open",
+      "priority": 10,
+      "summary": "`data_repair:constraint_beneficiary/2` & `constraint_victim/2` (xref mis-attribution of a clean dynamic call; check_stack baseline finding)",
+      "deps": [
+        "splits_from OQ-142"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-86",
+        "OQ-115",
+        "OQ-142"
+      ]
+    },
+    {
+      "id": "OQ-145",
+      "status": "open",
+      "priority": 5,
+      "summary": "`narrative_ontology:requires_active_enforcement/1` ← drift_events.pl:175 (latent wrong-qualifier; OQ-57-class the OQ-57 fix missed)",
+      "deps": [
+        "splits_from OQ-142"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-57",
+        "OQ-115",
+        "OQ-142"
+      ]
     }
   ],
   "archive": [
@@ -1680,6 +1729,19 @@
         "OQ-70",
         "OQ-89",
         "OQ-109"
+      ]
+    },
+    {
+      "id": "OQ-115",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "signature_grade/2 references abductive_helpers under [stack] where the module is a PHANTOM (load-path-dependent; check_stack regression vs the 2026-06-04 baseline; pre-dates Phase B)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-57",
+        "OQ-98",
+        "OQ-142"
       ]
     },
     {
