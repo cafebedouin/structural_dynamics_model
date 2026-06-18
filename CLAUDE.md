@@ -29,6 +29,28 @@ more confident document. Every Build Discipline pattern below is an instance of 
 an unintended consequence the user likely did not see, say so in one sentence before doing the
 work — then proceed. Do not withhold action pending approval.
 
+## Fix simple errors — fixing beats documenting (operator ruling, 2026-06-18)
+
+**You have standing permission to fix a simple, clear error the moment you find it, and doing so
+is ALWAYS in scope** — it does not need to be the assigned task, and you do not need to ask. When
+a defect can be *fixed* rather than *documented*, **fix it** — a parser that mis-splits, an
+off-by-one, a wrong qualifier, a footgun in a format. Turning a sharp edge into a warning comment
+is the worse outcome; removing the sharp edge is the better one. Documenting an error is the
+fallback for when you *can't* fix it (it needs a ruling, the fix is large, or the cause is
+unconfirmed), not the default.
+
+**Threshold (calibrated to the `blocked_on_human` comma fix, commit `3f7dc026`):** self-contained
+(roughly single-file core change), correctness witnessable *this turn* — by an existing test/gate
+or one positive control you add in the same change — reversible by a single revert, and requiring
+no judgment that is genuinely the user's. That comma fix (≈70 lines in one file + a new selftest
+control + a doc-count bump, all behavior-preserving for existing cases, gate GREEN) is the upper
+end of "just do it." The standing discipline still applies on top of this, not against it:
+**witness the fix** (paste the run/diff/control this turn — paste-or-untag), keep **output-changing
+changes split from behavior-preserving** ones, and **escalate genuine rulings** (human-ruled
+adjudication) rather than self-resolving them. Above the threshold — a multi-file refactor, an
+engine behavior change, anything needing a ruling — flag it in one sentence (or ask) before
+proceeding; do not silently undertake it.
+
 ## Context Window and File Size Constraints
 
 If a file or task is large enough that context limits would affect your ability to work with it
