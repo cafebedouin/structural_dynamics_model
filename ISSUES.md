@@ -7145,7 +7145,7 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Priority:** 3
 
-**Deps:** bundled_with OQ-121 (the totalized census that surfaces these buckets); bundled_with OQ-134 (the census mechanism); bundled_with OQ-83 (q6 source), OQ-86 (extraction source).
+**Deps:** bundled_with OQ-121 (totalized census surfacing these buckets), bundled_with OQ-134 (census mechanism), bundled_with OQ-83 (q6 source), bundled_with OQ-86 (extraction source)
 
 **Origin:** 2026-06-16, the totalized commentary census. Once the absence / out-of-domain / unnameable buckets stopped collapsing into silence, several became visible as findings ABOUT THE CORPUS, not census defects. Live-corpus measurements (n=72, manifest-dated — re-witness, do not cite frozen):
 - **`extraction_unnameable` = 5** — extractive constraint-level type, NO authored victim, AND no nameable extractor seat: BOTH sides of an extractive relation unnamed (the starkest blindspot, previously swallowed whole).
@@ -7172,7 +7172,8 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Priority:** 3
 
-**Deps:** bundled_with OQ-121 (which fixed `extraction_state`/`consensus_provenance`/`seat_perceived_vs_real` by hand and named the convention); bundled_with OQ-134 (the census surface that consumes total readings). Sibling-in-spine (not a dep): OQ-44, the engine-wide authored-zero/absent gate audit — same fail-closed-on-absence principle, different layer (gates over facts vs readings over a domain).
+**Deps:** bundled_with OQ-121 (fixed `extraction_state`/`consensus_provenance`/`seat_perceived_vs_real` by hand and named the convention), bundled_with OQ-134 (the census surface that consumes total readings)
+*(Sibling-in-spine, not a dep: OQ-44 — the engine-wide authored-zero/absent gate audit, same fail-closed-on-absence principle at a different layer: gates over facts vs readings over a domain.)*
 
 **Origin:** 2026-06-16. OQ-121 established the typed-absence convention (now `docs/design/design_discipline.md` §5, "Typed absence"): a reading an aggregate could consume must return a typed token (`out_of_domain` / `absence` / measured), never fail silently — a bare failure collapses didn't-apply / measured-clear / absent into one missing token at every read site (Build Discipline Pattern 6 at the source). Three predicates were brought to that shape one at a time. **What is missing is the census proving the convention holds across the WHOLE reading layer** — and surfacing the silently-failing ones we have not looked at.
 
@@ -7190,7 +7191,8 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Priority:** 3
 
-**Deps:** splits_from OQ-128; blocked_on_human. (Per-clause route-vs-reclassify is a declared seat. NB the `false_natural_law` MEMBER is gated on OQ-70 — see Origin — but that does not block FCR/FSM/constructed, so it is not an OQ-138-level dep.)
+**Deps:** splits_from OQ-128, blocked_on_human per-clause-route-vs-reclassify-ruling
+*(Per-clause route-vs-reclassify is a declared seat. NB the `false_natural_law` MEMBER is gated on OQ-70 — see Origin — but that does not block FCR/FSM/constructed, so it is not an OQ-138-level dep.)*
 
 **Origin:** 2026-06-17, OQ-128 residual. The whole `resolve_modal_signature_conflict` table (lines 885–932) is OVERWRITES (rewrite `dr_type` by signature) — the same architecture as the retired `:867` and the discriminated type_1 cap. Unlike natural_law (0 fires → free retirement), these FIRE and CHANGE `dr_type`: witnessed on current main the signature layer changes the metric type at **66/288 live seats** (524/3840 haiku, 637/3840 flash); per-signature firing `constructed_high_extraction 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 / false_natural_law 1`. So NONE retires free — each needs its own before/after diff and a routing-adequacy positive control. **SPLIT:** FCR / FSM / constructed are rulable-once-witnessed (mechanical gathering); `false_natural_law` is deferrable-pending-OQ-70.
 
@@ -7220,7 +7222,8 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Priority:** 2
 
-**Deps:** splits_from OQ-128. (Its substrate, the routing sink, is already BUILT — so this is unblocked, not waiting on it.)
+**Deps:** splits_from OQ-128
+*(Its substrate, the routing sink, is already BUILT — so this is unblocked, not waiting on it.)*
 
 **Origin:** 2026-06-17, OQ-128 residual. The routing sink's `author_engine_divergence` address is **148/288 live seats — the MAJORITY** — and "they disagree" is a named category, not a characterization. Distinct from the routing rulings (which decide WHERE a diff goes); this decides WHAT a diff means (sub-type by claim type? by which seat degrades? by diagnostic mode?). The largest live bucket is its evidence base.
 
