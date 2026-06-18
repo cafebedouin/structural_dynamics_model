@@ -907,6 +907,16 @@ The dual threshold ensures: "If it extracts heavily from ANYONE, it's not a Rope
   - Rationale: negative effective extraction means the constraint is experienced as coordination infrastructure regardless of how high the raw base extraction is
   - When Ï‡ > 0, the dual-threshold check applies: Îµ(C) â‰¤ 0.45 must also hold
   - Reference: logic_thresholds.md Â§3b, `rope_epsilon_ceiling`
+  - Boundary (grounded 2026-06-18, `audits/2026-06-18_oq01_rope_bypass_twins/`): the
+    dramatic presheaf collapse (Jaccard 0.319, ~1,417 spurious presheaves) once observed
+    under a compressed-ceiling sign-flipped transform (Arm A3) on the chimera-era
+    `prolog_v5` corpus does NOT reproduce on the post-reset live twins (`testsets_haiku`
+    Jaccard 0.904, `testsets_flash` 0.897 vs the sigmoid baseline, 960 stories each). On
+    `testsets_flash` the NO-sign-flip variant B3 (0.820) drifts MORE than the sign-flip
+    A3 (0.897), ruling out the sign-flip as the causal variable. The collapse was a
+    property of the `prolog_v5` eps/d distribution, not of the `Chi =< 0` clause. The
+    bypass is ratified as intentional modeling content with no guard (OQ-01 resolved
+    2026-06-18). Residual "which eps/d distributions re-enter the collapse band" = OQ-22.
 
 - **Changeable(C, I.T, I.E) âˆ¨ NaturalEmergence(C)**: Changeability or natural emergence
   - Primary path: `effective_immutability_for_context(Context, rope)` checks changeability

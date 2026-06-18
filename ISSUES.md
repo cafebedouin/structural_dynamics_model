@@ -12,41 +12,27 @@ Statuses: **open** | **investigating** | **mitigated** | **resolved**
 
 **Ω-type:** Ω_C (design choice — modeling decision to ratify, guard, or record in logic.md).
 
-**Status:** open
+**Status:** resolved — bypass ratified as intentional modeling content; no guard. Operator ruling 2026-06-18.
 **Priority:** 1
-**Origin:** alt_power_transform corrected T2 run, Arm A/B range sweep, May 2026.  
-**File:** `prolog/drl_core.pl:356`
+**Origin:** alt_power_transform corrected T2 run, Arm A/B range sweep, May 2026.
+**File:** `prolog/drl_core.pl:378–387` (rope clause; bypass at :384, `(Chi =< 0 -> true ; ... BaseEps =< EpsCeil)`).
 
-```prolog
-(Chi =< 0 -> true ; config:param(rope_epsilon_ceiling, EpsCeil), BaseEps =< EpsCeil),
-```
+**Question:** Is `Chi =< 0 → true` intentional modeling content (χ ≤ 0 ⇒ net beneficiary ⇒
+ε-magnitude no longer distinguishes rope from extraction, ceiling irrelevant) or an
+implementation artifact?
 
-**Specific question:** Does the `Chi =< 0 → true` branch encode intentional modeling
-content — i.e., when the experienced chi is negative the agent is a net beneficiary
-of the constraint and epsilon magnitude no longer distinguishes rope from extraction,
-so the ceiling is irrelevant — or is it an implementation artifact whose theoretical
-status was never isolated?
-
-**Evidence so far:** The bypass rarely triggers under the sigmoid baseline because
-the default transform spends little time at chi ≤ 0. Under the Arm A3 variant
-(L=−0.20, U=+0.65, span=0.85, snare gate unreachable), the bypass routes high-ε
-constraints to ROPE at low-d contexts while high-d contexts route to TANGLED_ROPE,
-producing 1,417 spurious presheaves and collapsing Jaccard from 0.864 (A2) to 0.319
-(A3). Arm B3 at matched span ([0.02, 0.87], no sign-flip) gives Jaccard 0.780 —
-confirming the A3 collapse is the bypass × sign-flip × compressed-ceiling interaction,
-not range alone. The v6.0 comment at drl_core.pl:353–355 asserts the bypass is
-intentional ("agent is a net beneficiary — skip base extraction gate"), but the
-comment predates the range-sweep evidence that reveals the bypass's behavioral
-consequences at compressed ceilings.
-
-**What resolution changes:** The v6 paper currently reads H0 as "sign-flip
-load-bearing when Hub 1 spans snare gate AND rope-gate bypass behavior is treated as
-given." Resolving the bypass either (a) justifies its current form (the AND clause
-becomes a documented modeling choice with a known boundary condition), (b) reveals it
-as an artifact requiring removal or guarding (a guard such as "only bypass when chi <
-−threshold_magnitude, not at all negative values" would change A3 behavior and the
-paper's conditional confirmation may strengthen), or (c) confirms it as defensible but
-requiring an explicit design-decision record in logic.md.
+**Resolution (2026-06-18):** Intentional. (1) Intent is recorded in `docs/logic.md` §rope
+("Negative-chi epsilon bypass (v6.0)") and `drl_core.pl:381`, both predating the sweep; the
+net-beneficiary theory is coherent. (2) The motivating worry — the Arm A3 presheaf collapse
+(Jaccard 0.864→0.319, ~1,417 spurious presheaves) — was **falsified as a property of the
+clause** by re-grounding on the post-reset live twins: A3 does NOT collapse on
+`testsets_haiku` (0.904) or `testsets_flash` (0.897), and on flash the no-sign-flip B3
+(0.820) drifts MORE than the sign-flip A3 — ruling out sign-flip as the causal variable. The
+collapse was a `prolog_v5` ε/d-distribution artifact. No guard added (path b rejected on
+evidence). Boundary note added to `logic.md`. Witness:
+`audits/2026-06-18_oq01_rope_bypass_twins/` (WRITEUP.md, evidence/summary.json,
+ground_rope_bypass.py). Residual ("which ε/d distributions re-enter the collapse band") →
+OQ-22.
 
 ---
 
@@ -679,6 +665,13 @@ bypass × sign-flip × compressed-ceiling interaction. The starvation regime is 
 phenomenon: not the bypass firing, but Hub 1 failing to discriminate at all. They share
 the property of being behaviors contingent on the default transform's range, surfaced
 only when that range was deliberately altered.
+
+**Update 2026-06-18 (OQ-01 resolved):** the A3 collapse described above turned out to be a
+`prolog_v5`-specific artifact — it does NOT reproduce on the post-reset live twins (Jaccard
+0.904 haiku / 0.897 flash; `audits/2026-06-18_oq01_rope_bypass_twins/`). So the residual
+inherited here is sharper: not "the bypass misbehaves at compressed ceilings" (it doesn't,
+on the live regime) but "which ε/d distributions re-enter the Hub-1 starvation/collapse band
+at all" — a corpus-distribution question, not a clause-behavior one.
 
 ---
 

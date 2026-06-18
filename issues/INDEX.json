@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "96b10ca6473560eae543114310d673ec2bb9056e",
+    "store_version": "ee248e28b14a9c0907f2b5bace53421633ce634f",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-18T03:10:25"
+    "generated_at": "2026-06-18T09:57:45"
   },
-  "issues_sha": "670d1b40352114415bc19a686a5a6a6c43682d10630430275df920d9dd9698a2",
+  "issues_sha": "d8d8410c0e6ceb6aad9876b83c26ed79796b842e5d2702c5f27f680f7b76143c",
   "n_entries": 141,
   "active_token_set": [
     "investigating",
@@ -12,23 +12,14 @@
     "partial"
   ],
   "per_status": {
-    "open": 61,
+    "resolved": 62,
     "mitigated": 6,
-    "resolved": 61,
+    "open": 60,
     "disposed": 3,
     "partial": 7,
     "future": 3
   },
   "active": [
-    {
-      "id": "OQ-01",
-      "status": "open",
-      "priority": 1,
-      "summary": "Rope gate Chi ≤ 0 bypass: intentional modeling or artifact?",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": []
-    },
     {
       "id": "OQ-03",
       "status": "open",
@@ -878,6 +869,17 @@
     }
   ],
   "archive": [
+    {
+      "id": "OQ-01",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Rope gate Chi ≤ 0 bypass: intentional modeling or artifact?",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-22"
+      ]
+    },
     {
       "id": "OQ-02",
       "status": "mitigated",
