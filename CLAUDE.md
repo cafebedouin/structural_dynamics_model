@@ -1,3 +1,17 @@
+## How the operator works (read first)
+
+- **One instance at a time; plans are staged.** No concurrent sessions by default — so work
+  directly on `main`, commit-as-you-go, branch for risky/multi-file code, and start a worktree
+  ONLY if asked (detail: *Git autonomy*).
+- **Iteration over correctness; everything is CC0; mistakes are recoverable.** Bias to action:
+  fix simple errors on sight and prefer fixing to documenting (*Fix simple errors*); flag a
+  better way in one sentence, then proceed (*One-sentence flag*). Reserve the *ask* for genuine
+  rulings (the operator's seat) and above-threshold changes.
+- **Lean docs.** Keep this file and the doc set tight: carry the tripwire + the pointer, not the
+  full exposition (linked docs hold the detail). Over-promotion defeats the purpose.
+- **But never trade away the witness.** The bias to action does not loosen the governing stance
+  below — every done/verified/fixed claim still carries its pasted witness the same turn.
+
 ## The governing stance
 
 **Distrust the aggregate, witness before claiming, and treat "I didn't find it" as different
@@ -31,25 +45,19 @@ work — then proceed. Do not withhold action pending approval.
 
 ## Fix simple errors — fixing beats documenting (operator ruling, 2026-06-18)
 
-**You have standing permission to fix a simple, clear error the moment you find it, and doing so
-is ALWAYS in scope** — it does not need to be the assigned task, and you do not need to ask. When
-a defect can be *fixed* rather than *documented*, **fix it** — a parser that mis-splits, an
-off-by-one, a wrong qualifier, a footgun in a format. Turning a sharp edge into a warning comment
-is the worse outcome; removing the sharp edge is the better one. Documenting an error is the
-fallback for when you *can't* fix it (it needs a ruling, the fix is large, or the cause is
-unconfirmed), not the default.
+**Standing permission to fix a simple, clear error the moment you find it — ALWAYS in scope, no
+ask needed**, even when it isn't the assigned task. When a defect can be *fixed* rather than
+*documented*, fix it (a parser that mis-splits, an off-by-one, a wrong qualifier, a format
+footgun): removing the sharp edge beats turning it into a warning comment. Documenting is the
+fallback for when you *can't* fix — it needs a ruling, the fix is large, or the cause is unconfirmed.
 
 **Threshold (calibrated to the `blocked_on_human` comma fix, commit `3f7dc026`):** self-contained
-(roughly single-file core change), correctness witnessable *this turn* — by an existing test/gate
-or one positive control you add in the same change — reversible by a single revert, and requiring
-no judgment that is genuinely the user's. That comma fix (≈70 lines in one file + a new selftest
-control + a doc-count bump, all behavior-preserving for existing cases, gate GREEN) is the upper
-end of "just do it." The standing discipline still applies on top of this, not against it:
-**witness the fix** (paste the run/diff/control this turn — paste-or-untag), keep **output-changing
-changes split from behavior-preserving** ones, and **escalate genuine rulings** (human-ruled
-adjudication) rather than self-resolving them. Above the threshold — a multi-file refactor, an
-engine behavior change, anything needing a ruling — flag it in one sentence (or ask) before
-proceeding; do not silently undertake it.
+(~single-file core), correctness witnessable *this turn* (an existing test/gate or one control you
+add), single-revert reversible, no judgment that is genuinely the user's. That fix (≈70 lines + a
+new selftest control + a doc bump, behavior-preserving, gate GREEN) is the upper end of "just do
+it." Discipline still rides on top: **witness the fix** (paste-or-untag), keep **output-changing
+split from behavior-preserving**, and **escalate genuine rulings**. Above the threshold (multi-file
+refactor, engine behavior change, anything needing a ruling) — flag in one sentence or ask first.
 
 ## Context Window and File Size Constraints
 
@@ -61,8 +69,8 @@ know what matters most.
 
 ## Project Context
 
-Prolog+Python research infrastructure implementing Deferential Realism (DR). 99 Prolog modules,
-100+ Python analysis scripts. The live corpus (`prolog/testsets/`) was RESET 2026-06-05 and is
+Prolog+Python research infrastructure implementing Deferential Realism (DR). ~110 Prolog modules,
+~110 Python analysis scripts. The live corpus (`prolog/testsets/`) was RESET 2026-06-05 and is
 being rebuilt from scratch under the de-leaked generation pipeline (KNOWN_STATE 2026-06-05) —
 cite the pipeline manifest for its size, never a memorized count. All previous corpora live under
 `prolog/archives/datasets/`. Correctness and reproducibility matter most; model provenance (which
@@ -78,32 +86,25 @@ paper-synchronization issues with status, evidence, and what resolution would ch
 before touching drl_core.pl, product_site_export.pl, or the rope gate — OQ-01 and OQ-02 are
 directly relevant.
 
-**The `[NEXT]` activation — "what should I work on?"** When the operator sends **`[NEXT]`** (or
-asks what to work on / for sequencing), **run `python3 python/omega_resolver.py menu`** and present
-its **WORKABLE NOW** list (sorted by authored `Priority:`, 1=highest) as the options for the
-operator to pick, plus the **BLOCKED ON YOU** items that need a ruling/spend-go. **Do NOT read
-`ISSUES.md` whole** — it is 6,700+ lines; reading it leads to a faked query and *prose-guessed*
-dependency edges (a witnessed failure mode). The menu is the queryable surface: it computes
-reachability from the authored `**Deps:**` edges (typed relators `blocked_on`/`gates`/`bundled_with`
-/`splits_from`/`blocked_on_human`) over an SCC condensation, and surfaces the authored `**Priority:**`
-hint — *priority/value is the operator's declared seat, surfaced, never computed.* The menu's
-coverage footer states how trustworthy the frontier is (how many active OQs have authored Deps);
-edge-free OQs default `workable_now` and may overstate until their `Deps:` are authored. When you
-mint or touch an OQ, author its `**Priority:**` (and `**Deps:**` if it blocks/awaits another) so the
-frontier stays honest. **To route an ARBITRARY question to its 2–3 relevant OQs (distinct from
-`menu`'s "what's workable next"), scan the derived router `issues/INDEX.md`** (compact: id · status ·
-priority · title · deps · cross-refs · mentioned-in) and then read the picks with `grep OQ-NN
-ISSUES.md` — this is the supported alternative to reading `ISSUES.md` whole. The router is GENERATED
-from `ISSUES.md` (`python3 python/omega_resolver.py index`; JSON twin `issues/INDEX.json`), never
-authoritative itself, and its Active/Archive partition imports `omega_resolver.ACTIVE` (so `mitigated`
-sits in Archive — OQ-141). **Regenerate it after ANY `ISSUES.md` edit** — `omega index --check` in
-`scripts/gate.sh` turns `[GATE]` red on a stale index (so a forgotten regen fails loud, not silent).
-`omega_resolver.py check` is the authority-control gate (dangling Deps,
-rotted witnesses, malformed/packed `Deps:` edges); `selftest` runs its 9 positive controls. **Read
-`docs/technical/omega_resolver.md` before modifying `omega_resolver.py`, the `ISSUES.md` authored
-fields (`Status`/`Ω-type`/`Deps`/`Priority`), or the hooks** — it carries the command table, the
-reachability/SCC model, the determinism-boundary "floor" (priority/type stay a declared seat, never
-computed), and the gotchas (output-shape coupling, the §1b freshness key).
+**The `[NEXT]` activation — "what should I work on?"** On **`[NEXT]`** (or any what-next /
+sequencing ask), **run `python3 python/omega_resolver.py menu`** and present its **WORKABLE NOW**
+list (sorted by authored `Priority:`, 1=highest) plus the **BLOCKED ON YOU** items needing a
+ruling/spend-go. **Do NOT read `ISSUES.md` whole** (7,300+ lines — whole-reads produce faked
+queries and prose-guessed Deps, a witnessed failure mode). The menu is the queryable surface:
+reachability over the authored `**Deps:**` edges (relators `blocked_on`/`gates`/`bundled_with`/
+`splits_from`/`blocked_on_human`) on an SCC condensation, surfacing the authored `**Priority:**`
+(*the operator's declared seat — surfaced, never computed*). Its coverage footer states frontier
+trust (how many active OQs have authored Deps); edge-free OQs default `workable_now` and may
+overstate. When you mint or touch an OQ, author its `**Priority:**` (and `**Deps:**`) so the
+frontier stays honest. **To route an ARBITRARY question to its 2–3 OQs** (distinct from "what's
+next"), scan the derived router `issues/INDEX.md` then `grep OQ-NN ISSUES.md` — the supported
+alternative to a whole-read. The router is GENERATED (`omega_resolver.py index`; JSON twin
+`issues/INDEX.json`), never authoritative; **regenerate after ANY `ISSUES.md` edit** — `omega index
+--check` in `scripts/gate.sh` turns `[GATE]` red on a stale index. `omega_resolver.py check` is the
+authority gate (dangling/malformed Deps, rotted witnesses); `selftest` runs 10 positive controls.
+**Read `docs/technical/omega_resolver.md` before modifying `omega_resolver.py`, the `ISSUES.md`
+authored fields, or the hooks** — it carries the command table, the SCC model, the
+determinism-boundary "floor" (priority/type stay a declared seat), and the gotchas.
 
 **More activations** (same convention — recognize the exact bracketed token and act):
 - **`[GATE]`** — run `./scripts/gate.sh` and report the green/red summary (issues_status,
@@ -395,48 +396,34 @@ unsure, preserve and adjudicate. Full version + instances (the 8 zero-firing sig
 `snapshot_type`/`degradation_chain` type-path vs `drift_trajectory` metric-series):
 `docs/technical/build_discipline.md` → *Unwired ≠ worthless*.
 
-**False-absence, false-unification, and the unguarded axis-swap — the over-confident moves on the
-synthesis side; each owes a witness before it ships.** Distinct from the build defects: these are
-errors of *claiming*. **(1) Before any "absent / can't / unrepresentable / no X," owe a positive
-control** — grep a name you KNOW exists to prove the search fires, or construct the case it must flag —
-else tag it **OPEN**, never a finding. Corollaries: the headline must carry the body's caveat ("proxy
-only" in the body ≠ "solved" in the title); control the claim at its altitude (a probe over predicate
-`f` licenses "absent in `f`," not "absent in the system"). **(2) Before merging two things that share a
-vocabulary or dynamics, owe a distinction-check** — verify the architecture doesn't *mandate* their
-separation, cite the ruling, before folding (observer/committer: `deferential_realism_paper_v7.md`
-Theorem 7 forbids the fold; shared dynamics across distinct objects is analogy, not a bridge;
-"scaffold = {splice,replace}" is a cross-metaphor weld). **(3) Introducing or relabeling an axis owes a
-PRE-REGISTERED discriminating control** — construct the case where the new axis and the nearest prior
-axis come apart, write what each outcome means *before* the run, then run it (the DMV: designed +
-*uncaptured* → snare falsified the design axis, established capture; pre-registered so it couldn't be
-narrated into agreement). Reaches the layer (1)/(2) don't — a quiet axis-relabel writes no file wrong
-and feels like no ruling. Standing risk, stated as such: the discriminating case has so far come from
-*outside* the loop; generating it for one's own synthesis before it lands is the unmet job. Under-claim:
-one witness earns "separable / prior label wrong here," not "orthogonal everywhere." All three collapse
-a distinction the material holds open; fix = name the witness (firing probe / separation ruling /
-pre-registered discriminating control) and produce it or stay OPEN. **(4) The under-confident dual —
-hedging-as-rigor: "held open / both readings possible" is earned only when no falsifier can be
-specified; if a kill condition is available, COMMIT and attach the kill condition** (prose commits,
-uncertainty lives in the falsification apparatus). Generation-time trigger: drafting a
-both-readings passage IS the cue to check whether commitment-plus-falsifier is available — don't
-wait for review to catch the flinch. **(5) When to stop verifying — this is the Omega framework's
-structural-convergence rule (`docs/omega_variables.md`), not a new one. "Verified enough" is a seat
-with no floor (Seat-Theorem §8), so the stopping rule is not "stop when verified" but "stop when the
-next pass costs more than being wrong, AND every open is DECLARED not concealed." The second clause
-is the only checkable one: for each verdict/name you (or the engine) emit, name a tier-available
-falsifier or downgrade it to OPEN — which is "route it to a typed Ω", and TYPE IT AGAINST
-`omega_variables.md`'s definitions, not loosely: an *orientation* gloss (enclosure vs defense) is a
-**deferred Ω_E** — a fact about the actor's stance you can't yet witness, resolved by longitudinal
-world-observation (the OQ-133 confrontation-response signature), NOT an Ω_P; calling it Ω_P would let
-the actor self-certify its own orientation by fiat (the concealment move blessed by the routing). A
-genuinely *contested origin* IS Ω_P/Ω_C (legitimate cross-stakeholder dispute; engine abstains) — do
-not collapse the two: same surface OPEN, opposite type (route-to-deferred-measurement vs
-abstain-as-preference). An undefined *tier-boundary* is Ω_C. A name that claims more than its tier can
-witness (an orientation gloss on a structural mismatch; a trajectory word on a synchronic read) is a
-concealed open, not a finding. Pass-count is not the
-variable; whether the stopping point is declared is. One pass with opens marked beats eight that ship
-a confident gloss over the unwitnessable.** Full version: `docs/technical/build_discipline.md` →
-*Over-confident moves on the synthesis side* and *When to stop verifying*.
+**Over-confident moves on the synthesis side — errors of *claiming*, each owes a witness before it
+ships** (full version + instances: `docs/technical/build_discipline.md` → *Over-confident moves on
+the synthesis side* and *When to stop verifying*):
+- **(1) False-absence.** Before any "absent / can't / unrepresentable / no X," owe a positive
+  control (grep a name you KNOW exists, or construct the case it must flag) — else tag it **OPEN**.
+  The headline carries the body's caveat ("proxy only" in the body ≠ "solved" in the title); control
+  the claim at its altitude (a probe over `f` licenses "absent in `f`," not "in the system").
+- **(2) False-unification.** Before merging two things that share a vocabulary or dynamics, owe a
+  distinction-check — verify the architecture doesn't *mandate* their separation and cite the ruling
+  (observer/committer: `deferential_realism_paper_v7.md` Theorem 7 forbids the fold). Shared dynamics
+  across distinct objects is analogy, not a bridge.
+- **(3) Unguarded axis-swap.** Introducing or relabeling an axis owes a PRE-REGISTERED discriminating
+  control: construct the case where the new and nearest-prior axis come apart, write what each
+  outcome means *before* the run, then run it. This is the silent one — a quiet relabel writes no
+  file wrong and feels like no ruling. Under-claim: one witness earns "separable here," not
+  "orthogonal everywhere."
+- **(4) Hedging-as-rigor (the under-confident dual).** "Held open / both readings possible" is earned
+  only when no falsifier can be specified; if a kill condition is available, COMMIT and attach it
+  (prose commits; uncertainty lives in the falsification apparatus). Trigger: drafting a
+  both-readings passage IS the cue to check for commitment-plus-falsifier — don't wait for review.
+- **(5) When to stop verifying** (the Omega structural-convergence rule, `docs/omega_variables.md`).
+  "Verified enough" is a seat with no floor (Seat-Theorem §8); stop when the next pass costs more
+  than being wrong **AND every open is DECLARED, not concealed.** The checkable clause: for each
+  verdict/name emitted, name a tier-available falsifier or downgrade to OPEN (= route to a typed Ω,
+  **typed against `omega_variables.md`, not loosely**). The trap: an *orientation* gloss (enclosure
+  vs defense) is a **deferred Ω_E** (witnessable later by world-observation), NOT Ω_P — typing it Ω_P
+  lets the actor self-certify by fiat; a genuinely *contested origin* IS Ω_P/Ω_C (engine abstains).
+  Same surface OPEN, opposite type. Pass-count is not the variable; whether the stop is declared is.
 
 ## Critical Distinctions
 
@@ -506,39 +493,28 @@ pipeline (χ = ε × f(d) × σ(S)). Callers `constraint_history/3` and `degrada
 appear in no canonical context and their scope_modifier values are unvalidated. σ(universal) =
 σ(national) = 1.0 (`config.pl:117,120`) — no differential χ effect.
 
-**Generation is stochastic; the committed story is the determinism frontier (operator
-ruling, 2026-06-12).** LLM generation NEVER reproduces: the same material re-run gets
-different scopings, kernel namings, readings, and ε — witnessed in-repo: OQ-26 (ε is
-generated, not observer-invariant; Axiom 2 was AMENDED for this, v6.13.1), the
-press/Reformation topic generating THREE kernel namings across three runs (9 files,
-kernel_v1), the naming-drift never-generated siblings (KNOWN_STATE 2026-06-03). Do not
-design, test, or reason as if same-prompt → same-story; backchecking a generation tells
-you nothing about the next run; re-generated stories are NEW DRAWS, never re-measurements
-— cross-run "same story" identity does not exist. What IS deterministic: the committed
-JSON onward — and that boundary is CHECKED, not assumed (hash inputs + manifest + output;
-same-code reruns witnessed byte-identical at single commits, but order-dependency is on
-record as the OQ-112 class). Three mechanisms produce "same material, different results"
-— generation stochasticity, ensemble refit (corpus-relative statistics; 3 signature
-changes refit 57 stories), pipeline non-determinism at fixed input (a bug) — attribute by
-the stage-hash diff, never by assumption: "it's the LLM" without the diff is a hypothesis
-sitting where a witness goes. Meta-analysis claims ride snapshot manifests + per-story
-provenance (model, sampling params, prompt/schema/example commits — schema-required).
-**The typing machinery (fingerprint/orbit/Boltzmann) carries KIND-level identity only:**
-`seeded_from` (authored at generation time) is provenance/coordination plumbing, never
-identity recovered backward by signature matching — witnessed both directions on the
-naming-drift triple (one same-material draw shared nothing positive with its siblings; a
-cross-topic pair matched 6/7; `audits/2026-06-12_signature_identity_witness/`). Never key
-an exclusion list, named re-witness, or any per-story mechanism on names or signatures
-across a regen boundary. **And a category shift on redraw is the mechanism WORKING, not
-identity decaying (operator ruling, 2026-06-12; `docs/seat-theorem-v1.md`):** verdicts
-are seat-indexed, a redraw occupies a new seat, and a classification that could not
-shift would be contentless (Coupling Theorem) — determinism-as-desideratum is part of
-the problem. The analysis product is the SHAPE (clusters, shifts, connections — judged
-by the hypotheses they generate, not by draw-invariant truth); read the replicate
-probe's stability table as an empirical σ/seat partition (draw-stable ≈ situation-fixed;
-draw-unstable ≈ seat-expressive — its distribution is analysis substrate), not a noise
-filter. What Corollary 3 keeps: pre-committed confrontations still bite — the witness
-discipline is untouched, only the determinism valence was wrong.
+**Generation is stochastic; the committed story is the determinism frontier (operator ruling,
+2026-06-12).** LLM generation NEVER reproduces — same material re-run gets different scopings,
+namings, readings, ε (OQ-26 / Axiom 2 amended in v6.13.1; the press/Reformation triple, kernel_v1).
+So do not design, test, or reason as if same-prompt → same-story: backchecking a generation says
+nothing about the next run, re-generated stories are NEW DRAWS not re-measurements, and cross-run
+"same story" identity does not exist. **Deterministic from the committed JSON onward — and that
+boundary is CHECKED, not assumed** (hash inputs + manifest + output; byte-identical at single
+commits, but order-dependency is the OQ-112 class). Three mechanisms make "same material, different
+results" — generation stochasticity, ensemble refit (corpus-relative stats), pipeline
+non-determinism at fixed input (a bug) — **attribute by the stage-hash diff, never by assumption**
+("it's the LLM" without the diff is a hypothesis where a witness goes). Meta-analysis rides snapshot
+manifests + per-story provenance (model, sampling params, prompt/schema/example commits). **The
+typing machinery (fingerprint/orbit/Boltzmann) is KIND-level only:** `seeded_from` is
+generation-time plumbing, never identity recovered backward by signature matching (witnessed both
+directions: `audits/2026-06-12_signature_identity_witness/`) — never key an exclusion list or any
+per-story mechanism on names/signatures across a regen boundary. **A category shift on redraw is the
+mechanism WORKING, not identity decaying** (`docs/seat-theorem-v1.md`): verdicts are seat-indexed, a
+redraw occupies a new seat, and a classification that *couldn't* shift would be contentless. The
+analysis product is the SHAPE (clusters, shifts, connections — judged by the hypotheses they
+generate); read the replicate stability table as a σ/seat partition (draw-stable ≈ situation-fixed,
+draw-unstable ≈ seat-expressive), not a noise filter. Corollary 3 unchanged: pre-committed
+confrontations still bite — only the determinism valence was wrong, the witness discipline holds.
 
 **Pre-computed values live in `outputs/pipeline_output.json`** (H¹, Arakelov heights, MaxEnt
 distributions, classifications). Read from there; do not recompute from scratch.
@@ -588,28 +564,19 @@ offer updates (as a diff or edit proposal, not a verbal summary) to:
 **Git autonomy (operator ruling, 2026-06-09).** Standing permission to commit without asking:
 when a coherent unit of work is witnessed, commit it then — do not batch a session into one
 end-commit; in-flight work is what compaction and harness outages destroy (full rationale:
-`docs/technical/build_discipline.md` → *Commit-as-you-go*). Everything here is CC0; the operator
-values iteration over correctness; mistakes are recoverable. Push is also permitted once the
-pre-push check below passes.
+`docs/technical/build_discipline.md` → *Commit-as-you-go*). Push is permitted once the pre-push
+check below passes.
 
-**Worktrees are OPT-IN, not default (operator ruling, 2026-06-18).** The operator runs ONE
-instance at a time and stages plans, so the sibling-collision risk that motivated the old
-"worktree before write — unconditionally" rule does not apply. **Default: work directly on
-`main`** — commit-as-you-go to keep the uncommitted window small, and use a feature branch
-(`git checkout -b <task>`) for risky or multi-file code changes (`prolog/*.pl`, `python/`,
-generators, schema) where cheap rollback matters. A branch gives the rollback safety a worktree
-would, without the 27k-file checkout, the cwd juggling, or the gitignored-`outputs/` trap (a
-fresh worktree has no `outputs/pipeline_output.json`, so probes honoring the "read pre-computed
-values from there" invariant read empty/stale and look like they worked — a Pattern-6 hazard).
-**Only start a worktree when the operator explicitly asks for one** (e.g. resuming concurrent
-instances). When you do, the original rationale still holds — siblings are undetectable from
-inside a session (no lock, no registry; a clean `git status` looks identical either way), and on
-2026-06-10 two instances each misread the rule as conditional and collided in the main tree.
-Merge the worktree branch back to main when its unit of work is witnessed; run
-`python3 python/issues_status.py --check` after any merge touching ISSUES.md (it fails on
-duplicate OQ labels — the clean-automerge artifact of two worktrees claiming the same next
-OQ-NN). Multi-writer corollary: a commit's witness is its DIFF or an entry-anchored check, never
-a global count delta — counts aggregate other writers' work and are no longer attributable
+**Worktrees are OPT-IN (operator ruling, 2026-06-18; single-instance operation).** Default: work
+on `main`, commit-as-you-go, feature branch (`git checkout -b <task>`) for risky/multi-file code —
+a branch gives the rollback safety without the 27k-file checkout, the cwd juggling, or the
+gitignored-`outputs/` trap (a fresh worktree lacks `outputs/pipeline_output.json`, so "read
+pre-computed values from there" probes read empty/stale and look fine — Pattern-6). **Start a
+worktree only when explicitly asked** (e.g. resuming concurrent instances); rationale + the
+2026-06-10 collision history in commit `b476eae6`. If you do: merge back when the unit is
+witnessed, and run `python3 python/issues_status.py --check` after any merge touching ISSUES.md
+(fails on duplicate OQ labels from two worktrees claiming the same next OQ-NN). Multi-writer
+corollary: a commit's witness is its DIFF or an entry-anchored check, never a global count delta
 (build_discipline → *Count-as-witness assumes a single writer*).
 
 **Before any `git push`:** verify the three files above are current with respect to the changes
@@ -635,6 +602,12 @@ resolved/stale items. The same monthly pass covers:
   `python3 python/known_state_status.py --check`.
 - **ISSUES.md compress-on-close check** — sweep for closed entries that escaped the footer rule's
   at-close compression.
+- **CLAUDE.md rule-freshness (premise rot)** — for each always-loaded rule, ask not just "is it
+  still true?" but "does its *premise* still match how the operator works?" A rule can stay
+  internally correct while its reason expires (the worktree rule outlived multi-instance operation
+  and sat stale until a session tripped over it, 2026-06-18). Demote or rewrite any rule whose
+  premise has changed; this is the symmetric counterpart to the promotion test (promotion adds,
+  this removes/refreshes).
 
 **Last review: 2026-06-04. Interval: monthly.** If today is on or after **2026-07-04**, prompt
 the user to run a consolidation pass before starting the requested work, then update both dates.
