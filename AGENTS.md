@@ -362,6 +362,16 @@ one constraint verdict (KILL §9b.4; the aggregate-merge recurred 3× in the OQ-
 `constraint_classification` keyed by `agent_power` (archives) else the seat-blind `constraint_claim` (live
 corpus authors one claim, not per-seat). Detail: `audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md`.
 
+**Suppression is reclassification too (OQ-122, 2026-06-18).** The forbidden move is not only an
+*overwrite* — *gating a detector OFF* on a condition is the same anti-pattern in disguise: the engine
+deciding not-to-flag instead of routing the flag. The dropped FSM victim-gate
+(`once(narrative_ontology:constraint_victim(C,_))` so `false_summit_mountain` stops firing on no-victim
+cases) reads as safe — `dr_type` byte-identical, no overwrite added — and that is the trap. The
+route-consistent fix is to **discriminate the signature's SEVERITY**, never suppress the detector: let
+it fire and route the non-diagnostic case as `informational` (no headline floor) while the diagnostic
+case keeps its floor. Template: the type_1 ε-split (`drl_core.pl:629–638`) and the proposed FSM
+victim-split (OQ-138). The price of doing this is a clean discriminant + a written KILL condition.
+
 **Piton is an FCR-branch refinement (OQ-90, 2026-06-11):** `piton` is NOT a signature;
 `dr_signature` stays `false_ci_rope` while `dr_type` becomes `piton`. The refinement fires inside
 `resolve_with_perspectival_check/4` (between the dead-coordination piton clause and the generic FCR
