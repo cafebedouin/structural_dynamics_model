@@ -5531,15 +5531,19 @@ defect. Compressed on close per the footer rule.
 **The witness (limb 1, detector dead-by-range).** `has_viable_alternatives/2`'s range is
 exactly `{true, unknown}`; `false` is builder-unreachable. `natural_law_signature/1`
 requires `HasAlternatives == false`, so the predicate is unsatisfiable on every corpus.
-Live probe (79 testsets, 2026-06-18): positive control `natural_law_signature(profile(0.92,
-0.02, 0.04, 0, false, stable, _))` → `control_fires`; live `natural_law_signature` →
-`live_firings=0`; `has_viable_alternatives` returning `false` → `hva_false_count=0`. Locked
-as regression: `prolog/tests/test_oq113_dead_natural_law.pl` (3/3 green).
+Probe (2026-06-18) across all three live-era corpora — live `testsets` (79) + twins
+`testsets_haiku` (960) + `testsets_flash` (960) = 1,999 stories, each loaded with the
+overlay-took-effect witness (`corpus_count` = 79/960/960, not silently the default):
+positive control `natural_law_signature(profile(0.92, 0.02, 0.04, 0, false, stable, _))` →
+`control_fires` on every corpus; live `natural_law_signature` → `live_firings=0` on every
+corpus; `has_viable_alternatives` returning `false` → `hva_false_count=0` on every corpus.
+Locked as regression: `prolog/tests/test_oq113_dead_natural_law.pl` (3/3 green).
 
 **The witness (limb 2, subtype unreachable).** `determine_pure_subtype/2`'s
 `pure_natural_law` branch gates on the dead detector → 0-firing. Converted to
 `throw(unreachable_pure_natural_law(C))` — behavior-neutral today (witnessed:
-`structural_purity` over all 79 live constraints → `structural_purity_all_ok_no_throw`),
+`structural_purity` over all 1,999 live-era constraints — `testsets` 79 + `testsets_haiku`
+960 + `testsets_flash` 960 — → `structural_purity_all_ok_no_throw` on every corpus),
 loud the day a corpus/schema powers the detector (doubles as the §9b.2 KILL).
 
 **Why (a) — extend the builder to emit `false` — is not available now (dissolves, by
