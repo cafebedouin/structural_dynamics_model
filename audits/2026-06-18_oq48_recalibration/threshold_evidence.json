@@ -1,0 +1,290 @@
+{
+  "audit": "OQ-48 recalibration-readiness",
+  "generated_for_corpus": "twins (testsets_haiku=960, testsets_flash=960)",
+  "metric_code_commit": "0a629077",
+  "content_hash_sha256": {
+    "testsets_haiku": "7039d37b09edc210dc9d22708fe33b95d43dc6447410d98491aef64a147a4d9a",
+    "testsets_flash": "3c24b1d2b877887f1c8a2f1779f2059e08606a9043901f20807634c4c2d70879"
+  },
+  "n_unknown_per_metric": {
+    "testsets_haiku": {
+      "eps": 0,
+      "supp": 0,
+      "tr": 0,
+      "chi": 0
+    },
+    "testsets_flash": {
+      "eps": 0,
+      "supp": 0,
+      "tr": 0,
+      "chi": 0
+    }
+  },
+  "positive_control": {
+    "passed": true,
+    "recovered_at": [
+      0.4506
+    ],
+    "n": 1200,
+    "dip_stat": 0.1260197197873955,
+    "dip_p": 0.0,
+    "multimodal": true,
+    "candidate_locs": [
+      0.4506
+    ],
+    "validated": [
+      {
+        "loc": 0.4506,
+        "depth": 2.7675
+      }
+    ]
+  },
+  "verdict_rule_params": {
+    "bw_variants": [
+      1.0,
+      0.8,
+      1.2
+    ],
+    "bw_tol": 0.02,
+    "lobe_ratio_max": 4.0,
+    "min_lobe_bins_count": 5,
+    "dip_alpha": 0.05,
+    "n_bins": 50,
+    "near_cut": 0.05,
+    "agree_tol": 0.05,
+    "bootstrap_n": 600,
+    "bootstrap_resamples": 20,
+    "bootstrap_sd_max": 0.03,
+    "rho_induced": 0.6,
+    "rng_seed": 20260618
+  },
+  "per_metric_diagnostics": {
+    "testsets_haiku": {
+      "eps": {
+        "n": 960,
+        "dip_stat": 0.05697916666666667,
+        "dip_p": 0.0,
+        "multimodal": true,
+        "candidate_locs": [
+          0.2028,
+          0.4839
+        ],
+        "validated": [
+          {
+            "loc": 0.4839,
+            "depth": 0.3915
+          }
+        ]
+      },
+      "supp": {
+        "n": 960,
+        "dip_stat": 0.08125,
+        "dip_p": 0.0,
+        "multimodal": true,
+        "candidate_locs": [
+          0.3006,
+          0.5078
+        ],
+        "validated": []
+      },
+      "tr": {
+        "n": 960,
+        "dip_stat": 0.08645833333333333,
+        "dip_p": 0.0,
+        "multimodal": true,
+        "candidate_locs": [
+          0.3277
+        ],
+        "validated": [
+          {
+            "loc": 0.3277,
+            "depth": 0.4184
+          }
+        ]
+      },
+      "chi": {
+        "n": 960,
+        "dip_stat": 0.05583333333333333,
+        "dip_p": 0.0,
+        "multimodal": true,
+        "candidate_locs": [
+          0.2733,
+          0.6662
+        ],
+        "validated": [
+          {
+            "loc": 0.6662,
+            "depth": 0.3258
+          }
+        ]
+      }
+    },
+    "testsets_flash": {
+      "eps": {
+        "n": 960,
+        "dip_stat": 0.0703125,
+        "dip_p": 0.0,
+        "multimodal": true,
+        "candidate_locs": [
+          0.2892,
+          0.5036,
+          0.7743
+        ],
+        "validated": []
+      },
+      "supp": {
+        "n": 960,
+        "dip_stat": 0.06302083333333333,
+        "dip_p": 0.0,
+        "multimodal": true,
+        "candidate_locs": [
+          0.4901
+        ],
+        "validated": [
+          {
+            "loc": 0.4901,
+            "depth": 0.5505
+          }
+        ]
+      },
+      "tr": {
+        "n": 960,
+        "dip_stat": 0.14166666666666666,
+        "dip_p": 0.0,
+        "multimodal": true,
+        "candidate_locs": [
+          0.1684,
+          0.3111,
+          0.5151
+        ],
+        "validated": []
+      },
+      "chi": {
+        "n": 960,
+        "dip_stat": 0.0703125,
+        "dip_p": 0.0,
+        "multimodal": true,
+        "candidate_locs": [
+          0.3967,
+          0.6893,
+          1.0606
+        ],
+        "validated": []
+      }
+    }
+  },
+  "threshold_verdicts": [
+    {
+      "label": "mountain_extractiveness_max",
+      "metric": "eps",
+      "current_value": 0.25,
+      "haiku_validated_breaks": [
+        0.48386386386386393
+      ],
+      "flash_validated_breaks": [],
+      "verdict": "MODEL-CONFOUNDED",
+      "proposed_value": null,
+      "possibly_induced": false,
+      "no_drift_haiku": null,
+      "no_drift_flash": null,
+      "drift_detail": {},
+      "notes": "cut in mass but at least one twin has no validated alternate break"
+    },
+    {
+      "label": "snare_epsilon_floor",
+      "metric": "eps",
+      "current_value": 0.46,
+      "haiku_validated_breaks": [
+        0.48386386386386393
+      ],
+      "flash_validated_breaks": [],
+      "verdict": "MODEL-CONFOUNDED",
+      "proposed_value": null,
+      "possibly_induced": false,
+      "no_drift_haiku": null,
+      "no_drift_flash": null,
+      "drift_detail": {},
+      "notes": "cut sits in a trough on one twin but in mass on the other (haiku in_trough=True, flash in_trough=False)"
+    },
+    {
+      "label": "tangled_rope_epsilon_floor",
+      "metric": "eps",
+      "current_value": 0.3,
+      "haiku_validated_breaks": [
+        0.48386386386386393
+      ],
+      "flash_validated_breaks": [],
+      "verdict": "MODEL-CONFOUNDED",
+      "proposed_value": null,
+      "possibly_induced": false,
+      "no_drift_haiku": null,
+      "no_drift_flash": null,
+      "drift_detail": {},
+      "notes": "cut in mass but at least one twin has no validated alternate break"
+    },
+    {
+      "label": "rope_chi_ceiling",
+      "metric": "chi",
+      "current_value": 0.35,
+      "haiku_validated_breaks": [
+        0.6662451939169727
+      ],
+      "flash_validated_breaks": [],
+      "verdict": "MODEL-CONFOUNDED",
+      "proposed_value": null,
+      "possibly_induced": false,
+      "no_drift_haiku": null,
+      "no_drift_flash": null,
+      "drift_detail": {},
+      "notes": "cut in mass but at least one twin has no validated alternate break"
+    },
+    {
+      "label": "snare_chi_floor",
+      "metric": "chi",
+      "current_value": 0.66,
+      "haiku_validated_breaks": [
+        0.6662451939169727
+      ],
+      "flash_validated_breaks": [],
+      "verdict": "MODEL-CONFOUNDED",
+      "proposed_value": null,
+      "possibly_induced": false,
+      "no_drift_haiku": null,
+      "no_drift_flash": null,
+      "drift_detail": {},
+      "notes": "cut sits in a trough on one twin but in mass on the other (haiku in_trough=True, flash in_trough=False)"
+    },
+    {
+      "label": "snare_suppression_floor",
+      "metric": "supp",
+      "current_value": 0.6,
+      "haiku_validated_breaks": [],
+      "flash_validated_breaks": [
+        0.4901101101101102
+      ],
+      "verdict": "MODEL-CONFOUNDED",
+      "proposed_value": null,
+      "possibly_induced": false,
+      "no_drift_haiku": null,
+      "no_drift_flash": null,
+      "drift_detail": {},
+      "notes": "cut in mass but at least one twin has no validated alternate break"
+    },
+    {
+      "label": "tangled_rope_suppression_floor",
+      "metric": "supp",
+      "current_value": 0.4,
+      "haiku_validated_breaks": [],
+      "flash_validated_breaks": [
+        0.4901101101101102
+      ],
+      "verdict": "MODEL-CONFOUNDED",
+      "proposed_value": null,
+      "possibly_induced": false,
+      "no_drift_haiku": null,
+      "no_drift_flash": null,
+      "drift_detail": {},
+      "notes": "cut in mass but at least one twin has no validated alternate break"
+    }
+  ]
+}
