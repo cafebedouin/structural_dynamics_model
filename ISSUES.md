@@ -1749,6 +1749,38 @@ to change a specific reading's type (that is curve-fitting to the holdout, not c
 likewise rests on the live sweep, the external ±25% harness withdrawn). The pipeline manifest
 convention (CLAUDE.md) is the mechanism for citing *which* corpus a future recalibration was fit to.
 
+### MEASUREMENT (2026-06-18, twins + confounded kernel_v1 arm — `audits/2026-06-18_oq48_recalibration/`)
+
+Audit + proposal only (no `config.pl` edit). Pre-registered distribution-break verdict rule
+(KDE antimode + bandwidth-robustness + lobe-mass + Hartigan Dip; cross-twin agreement as the
+validity gate) run on the twins (`testsets_haiku`=960, `testsets_flash`=960; the live `testsets`
+is below the bar). **Result: 0 thresholds recalibratable — all seven in-scope cuts MODEL-CONFOUNDED,
+zero proposed values.** Every metric is multimodal on both twins (Dip p=0), but the flash corpus's
+antimodes fail the pinned bandwidth-robustness gate *where their locations track haiku's* ("soft
+agreement, hard disagreement"), so no DRIFTED candidate arises and the validity gate licenses no
+move. Twin-swap falsification and the POSSIBLY-INDUCED cross-metric flag never fired (no candidate
+to filter). Two 691-era cuts are corroborated by haiku: `snare_chi_floor` 0.66 ≈ haiku trough 0.666,
+`snare_epsilon_floor` 0.46 ≈ haiku trough 0.484 — i.e. *not stale on haiku*, only unconfirmable on
+flash.
+
+**Confounded third arm (kernel_v1, 1106, pre-reset/pre-de-leak; corroboration-only, never pooled —
+OQ-26):** corroborates `snare_epsilon_floor` (0.46) across BOTH regimes (haiku break 0.484,
+kernel_v1 0.442) — external validity stronger than the seed-sharing twins; `snare_chi_floor` is a
+near-miss (kernel_v1 χ break 0.606, dist 0.054, just outside ±0.05). No verdict changes.
+
+Positive controls all pass: LOADCOUNT 960/960/1106 (`asserta` overlay; hard-stop armed at the
+on-disk file count), 0-unknown metric columns, byte-identical probe re-run, planted-gap break-finder
+recovers 0.4506. Provenance: twin TSV content sha256 haiku `7039d37b…` / flash `3c24b1d2…`;
+metric-code commit `0a629077`. Probe/analysis: `python/audits/oq48_threshold_distributions.py`,
+`oq48_analyze.py`, `oq48_triangulate_kernel_v1.py`.
+
+**Status unchanged: open.** No floor moved → not mitigated/resolved. **Closure waits on corpus
+regeneration beyond the twins** — either (recalibrate) a *same-regime* post-de-leak third corpus
+that breaks the haiku/flash tie, or the live `testsets/` rebuild reaching the ~700-story Tier-4 bar
+with a single-corpus break; or (vindicate-and-keep) accumulating trusted post-reset corroboration
+that the 691-era cuts still cleave, mitigating cut-by-cut (`snare_epsilon_floor` is the first such
+candidate). kernel_v1 is confounded and cannot promote a value.
+
 ---
 
 ## OQ-49 — Signature-override prevalence at 3000-scale: 1730 confident-overwrites, 0 unknown-fills (laundering vs load-bearing escalation)

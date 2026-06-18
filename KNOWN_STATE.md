@@ -45,6 +45,26 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-18 — OQ-48 recalibration-readiness audit: 0 thresholds recalibratable against the twins (all MODEL-CONFOUNDED)
+**Files:** ISSUES.md (OQ-48), audits/2026-06-18_oq48_recalibration/, python/audits/oq48_threshold_distributions.py, python/audits/oq48_analyze.py, python/audits/oq48_triangulate_kernel_v1.py
+**Tier:** landed
+
+Read-only distribution-break audit of the 7 in-scope χ/ε/suppression classification cuts (config.pl,
+691-corpus-provenanced) against the twins (`testsets_haiku`/`testsets_flash` = 960 each). Pre-registered
+verdict rule (KDE antimode + bandwidth-robustness + lobe-mass + Dip; cross-twin agreement = validity gate).
+**All 7 → MODEL-CONFOUNDED, 0 proposed values, no `config.pl` edit.** Every metric multimodal on both twins
+(Dip p=0), but flash's antimodes fail bandwidth-robustness where their locations track haiku's ("soft
+agreement, hard disagreement") → no DRIFTED candidate. Two cuts corroborated by haiku alone (`snare_chi_floor`
+0.66≈0.666, `snare_epsilon_floor` 0.46≈0.484). Confounded kernel_v1 arm (1106, pre-reset/pre-de-leak,
+corroboration-only, never pooled per OQ-26) cross-regime-corroborates `snare_epsilon_floor` (0.46); the rest
+uncorroborated. Controls pass (LOADCOUNT 960/960/1106 via asserta; 0 unknowns; byte-identical re-run;
+planted-gap recovered 0.4506). **OQ-48 stays open** — closure waits on corpus regeneration beyond the twins
+(same-regime third corpus breaking the tie, or the live rebuild reaching the ~700-story Tier-4 bar).
+Promotion test: NO — a result qualification, not a silent-edit tripwire; stays here. Provenance: twin TSV
+sha256 haiku `7039d37b…`/flash `3c24b1d2…`, metric-code commit `0a629077`.
+
+---
+
 ## 2026-06-18 — OQ-122 CLOSED: physics-RED fixed by OQ-128; FSM victim-gate DROPPED, discriminant handed to OQ-138
 **Files:** ISSUES.md, prolog/drl_core.pl (witness only, no edit), outputs/pipeline_output.json (witness)
 **Tier:** landed
