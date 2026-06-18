@@ -619,9 +619,28 @@ A gate whose source count is 0 is not a safety net and not a discriminator; it i
 that reads as a pass. Either author the table (so the gate discriminates) or make the gate
 fail-closed when the source is empty (so absence cannot certify).
 
+**Dead-by-range — the complement, and the fail-closed fix's own failure mode (OQ-113,
+2026-06-18).** Counting the source table catches *pass-on-absence*; it MISSES the dual case
+where a gate can *never pass* because the value it compares against is outside its builder's
+RANGE — dead even on a full table. Worked instance: OQ-43's fix (above) made
+`has_viable_alternatives/2`'s default the fail-closed sentinel `unknown` so `== false` could no
+longer pass by absence — but that very fix left the builder with range `{true, unknown}`, so
+`natural_law_signature`'s `HasAlternatives == false` leg became permanently UNSATISFIABLE
+(builder-unreachable), and with it the whole signature and the `pure_natural_law` purity subtype
+went 0-firing by construction on every corpus (live 79 + twins 960+960 = 1,999 witnessed). The
+fail-closed fix for one absence-gate manufactured a dead-by-range gate next door. **Diagnostic
+upgrade: when auditing a gate, don't only count the source table's facts (`0 ⇒ no-op`); also
+check the PRODUCER's range — enumerate the values the builder can actually emit. A comparison
+against a value outside that range is dead even on a full table.** Tell them apart by the
+positive control: an absence-gate fires once you author one row; a dead-by-range gate stays
+0-firing no matter what you author (the constructed-true positive control fires, the corpus
+sweep does not — exactly the OQ-113 witness pair). See OQ-113 (the close routes the residual
+capability to GAP-08 §7) for the full treatment.
+
 **Where it recurs:** any gate keyed on the sparse `intent_*` family or on an optional authored
 field; any quantifier (`forall`, negation-as-failure) over a table that the current corpus
-leaves empty. See OQ-44 for the engine-wide audit.
+leaves empty; any comparison `== V` / `=< V` where the producing predicate's range excludes the
+satisfying `V` (dead-by-range). See OQ-44 for the engine-wide audit.
 
 ---
 
