@@ -68,7 +68,15 @@ hint — *priority/value is the operator's declared seat, surfaced, never comput
 coverage footer states how trustworthy the frontier is (how many active OQs have authored Deps);
 edge-free OQs default `workable_now` and may overstate until their `Deps:` are authored. When you
 mint or touch an OQ, author its `**Priority:**` (and `**Deps:**` if it blocks/awaits another) so the
-frontier stays honest. `omega_resolver.py check` is the authority-control gate (dangling Deps,
+frontier stays honest. **To route an ARBITRARY question to its 2–3 relevant OQs (distinct from
+`menu`'s "what's workable next"), scan the derived router `issues/INDEX.md`** (compact: id · status ·
+priority · title · deps · cross-refs · mentioned-in) and then read the picks with `grep OQ-NN
+ISSUES.md` — this is the supported alternative to reading `ISSUES.md` whole. The router is GENERATED
+from `ISSUES.md` (`python3 python/omega_resolver.py index`; JSON twin `issues/INDEX.json`), never
+authoritative itself, and its Active/Archive partition imports `omega_resolver.ACTIVE` (so `mitigated`
+sits in Archive — OQ-141). **Regenerate it after ANY `ISSUES.md` edit** — `omega index --check` in
+`scripts/gate.sh` turns `[GATE]` red on a stale index (so a forgotten regen fails loud, not silent).
+`omega_resolver.py check` is the authority-control gate (dangling Deps,
 rotted witnesses, malformed/packed `Deps:` edges); `selftest` runs its 9 positive controls. **Read
 `docs/technical/omega_resolver.md` before modifying `omega_resolver.py`, the `ISSUES.md` authored
 fields (`Status`/`Ω-type`/`Deps`/`Priority`), or the hooks** — it carries the command table, the
@@ -77,7 +85,7 @@ computed), and the gotchas (output-shape coupling, the §1b freshness key).
 
 **More activations** (same convention — recognize the exact bracketed token and act):
 - **`[GATE]`** — run `./scripts/gate.sh` and report the green/red summary (issues_status,
-  omega_resolver check + selftest, known_state). Do not fix anything; just report. Use before
+  omega_resolver check + selftest + index, known_state). Do not fix anything; just report. Use before
   committing anything that touches `ISSUES.md`/`KNOWN_STATE.md`.
 - **`[PUSH]`** — the pre-push ritual: (1) run `[GATE]` — must be GREEN; (2) confirm
   `ISSUES.md`, `KNOWN_STATE.md`, and `AGENTS.md` reflect the changes being pushed (the
