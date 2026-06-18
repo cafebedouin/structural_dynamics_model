@@ -5570,7 +5570,7 @@ discipline — the sentinel works correctly; the consumer's `== false` test is w
 see it). Residual capability → GAP-08 §7 (author-independent immovability signal) +
 `audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md` §9a(i)/§7.
 
-**Deps:** blocked_on_human GAP-08 §7 author-independent immovability signal — residual capability gap routed to a design gap rather than an OQ edge
+**Deps:** blocked_on_human GAP-08 §7 author-independent immovability signal (a residual capability gap routed to a design gap, not an OQ edge)
 
 ## OQ-114 — Are the 3 bridge-extension stories genuine mountains? (FCR un-fire adjudication + archive divergence-rate probe)
 

@@ -166,11 +166,37 @@ def _split_file_refs(s):
     return [tok.strip() for tok in re.split(r"[,\s]+", s) if "/" in tok or "." in tok]
 
 
+def _chunk_deps(s):
+    """Split a `**Deps:**` value into per-edge chunks on commas, BUT keep commas
+    that belong to a `blocked_on_human` free-text target (its target is prose and
+    may legitimately contain commas). Rule: a comma starts a new edge only if the
+    text after it begins with a known relator keyword; otherwise the comma is
+    free text and is re-joined into the current (human) edge. This preserves the
+    unknown-relator / no-OQ-target / packed-edge detection below — a stray
+    non-relator chunk that does NOT follow a human edge is still passed through to
+    be flagged."""
+    chunks, prev_is_human = [], False
+    for raw in s.split(","):
+        toks = raw.split()
+        first = toks[0] if toks else ""
+        if first in ALL_RELATORS:
+            chunks.append(raw)
+            prev_is_human = (first == HUMAN_RELATOR)
+        elif prev_is_human and chunks:
+            # comma inside a blocked_on_human free-text target — re-join, stay human
+            chunks[-1] = chunks[-1] + "," + raw
+        else:
+            chunks.append(raw)   # let the parser flag malformed / unknown-relator
+            prev_is_human = False
+    return chunks
+
+
 def _parse_deps(oq, s):
-    """`**Deps:** blocked_on OQ-122, bundled_with OQ-50 (free text)`.
-    Returns (list[(relator, target)], problems)."""
+    """`**Deps:** blocked_on OQ-122, bundled_with OQ-50, blocked_on_human <prose>`.
+    Returns (list[(relator, target)], problems). A `blocked_on_human` free-text
+    target may contain commas (see _chunk_deps)."""
     deps, problems = [], []
-    for chunk in s.split(","):
+    for chunk in _chunk_deps(s):
         chunk = chunk.strip()
         if not chunk:
             continue
@@ -182,18 +208,19 @@ def _parse_deps(oq, s):
         if relator not in ALL_RELATORS:
             problems.append(f"{oq}: unknown relator {relator!r} in {chunk!r}")
             continue
-        # Silent-drop guard: comma is the ONLY chunk delimiter, so >1 edge in a
-        # single chunk (typically `;`-joined) parses to the first and DROPS the
-        # rest with no error. Flag it — separate each edge with a comma.
+        if relator == HUMAN_RELATOR:
+            # free-text target (a human/external gate, not an OQ); commas allowed
+            target = " ".join(parts[1:]) or "<unspecified>"
+            deps.append((relator, target))
+            continue
+        # Silent-drop guard (OQ-target relators only — a human target is prose and
+        # may legitimately mention a relator word or OQ ref): comma is the chunk
+        # delimiter, so >1 edge in a single chunk (typically `;`-joined) parses to
+        # the first and DROPS the rest with no error. Flag it — comma-separate.
         if len(_EDGE_SIG.findall(chunk)) > 1:
             problems.append(
                 f"{oq}: multiple edges packed in one comma-chunk (only the first "
                 f"registers; separate each with a comma): {chunk!r}")
-        if relator == HUMAN_RELATOR:
-            # free-text target (a human/external gate, not an OQ)
-            target = " ".join(parts[1:]) or "<unspecified>"
-            deps.append((relator, target))
-            continue
         target_m = OQREF.search(chunk)
         if not target_m:
             problems.append(f"{oq}: Deps chunk has no OQ target: {chunk!r}")
@@ -489,6 +516,11 @@ formatting clipped — the entry IS witnessed by the first, must not flag.
 **Status:** open
 **Ω-type:** Ω_C (test)
 **Deps:** bundled_with OQ-9001; bundled_with OQ-9002
+
+## OQ-9012 planted comma in blocked_on_human free text (must parse CLEAN, comma kept)
+**Status:** open
+**Ω-type:** Ω_E (test)
+**Deps:** blocked_on_human GAP-08 §7 immovability signal, routed to a design gap, not an OQ edge
 """
 
 
@@ -557,6 +589,18 @@ def selftest():
     overfire = [p for p in parse_probs if any(p.startswith(w) for w in wellformed)]
     if overfire:
         fails.append(f"malformed-Deps over-fire: well-formed entry parse-flagged: {overfire}")
+
+    # control 9: a blocked_on_human free-text target may contain commas — the
+    # comma is kept as free text, NOT mis-split into a new edge / unknown relator
+    # (the bug fixed 2026-06-18). Positive: OQ-9012 parses clean AND registers
+    # exactly one blocked_on_human edge whose target carries the comma'd prose.
+    if any(p.startswith("OQ-9012") for p in parse_probs):
+        bad = [p for p in parse_probs if p.startswith("OQ-9012")]
+        fails.append(f"human-comma control FAILED: OQ-9012 free-text comma parse-flagged: {bad}")
+    e12 = entries.get("OQ-9012")
+    human12 = [t for (r, t) in (e12.deps if e12 else []) if r == HUMAN_RELATOR]
+    if not (len(human12) == 1 and "," in human12[0]):
+        fails.append(f"human-comma control FAILED: OQ-9012 did not register one comma-bearing human edge ({human12})")
 
     return fails, parse_probs
 
@@ -930,7 +974,7 @@ def main():
         if fails:
             print(f"selftest: {len(fails)} FAILED")
             sys.exit(1)
-        print("selftest: all positive controls fired (9/9)")
+        print("selftest: all positive controls fired (10/10)")
         return
     entries, problems = parse_entries()
     for p in problems:
