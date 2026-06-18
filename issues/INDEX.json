@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "ee248e28b14a9c0907f2b5bace53421633ce634f",
+    "store_version": "1633c60bbf96b3e2e1bbc8d8404b93f8a7a36a4e",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-18T09:57:45"
+    "generated_at": "2026-06-18T11:27:38"
   },
-  "issues_sha": "d8d8410c0e6ceb6aad9876b83c26ed79796b842e5d2702c5f27f680f7b76143c",
+  "issues_sha": "264a5f2411eee2ccc0a4b950348e113d0645acdf090077b32c79d5f42d70baf3",
   "n_entries": 141,
   "active_token_set": [
     "investigating",
@@ -12,9 +12,9 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 62,
+    "resolved": 63,
     "mitigated": 6,
-    "open": 60,
+    "open": 59,
     "disposed": 3,
     "partial": 7,
     "future": 3
@@ -581,23 +581,6 @@
         "OQ-97",
         "OQ-98",
         "OQ-110"
-      ]
-    },
-    {
-      "id": "OQ-113",
-      "status": "open",
-      "priority": 1,
-      "summary": "natural_law_signature/1 is unsatisfiable by construction on the live corpus: has_viable_alternatives/2 never returns `false`; pure_natural_law subtype unreachable",
-      "deps": [
-        "bundled_with OQ-43",
-        "bundled_with OQ-44"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-37",
-        "OQ-43",
-        "OQ-44",
-        "OQ-109"
       ]
     },
     {
@@ -1668,6 +1651,22 @@
         "OQ-83",
         "OQ-105",
         "OQ-109"
+      ]
+    },
+    {
+      "id": "OQ-113",
+      "status": "resolved",
+      "priority": "–",
+      "summary": "natural_law_signature/1 is unsatisfiable by construction on the live corpus: has_viable_alternatives/2 never returns `false`; pure_natural_law subtype unreachable",
+      "deps": [
+        "blocked_on_human GAP-08 §7 author-independent immovability signal — residual capability gap routed to a design gap rather than an OQ edge"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-37",
+        "OQ-43",
+        "OQ-44",
+        "OQ-128"
       ]
     },
     {

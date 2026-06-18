@@ -456,6 +456,19 @@ surface mid-baseline — the rebuild's ε-idiom and diff baselines are forming).
   Boltzmann (orthogonal), reads "immovable"? Routing makes a *weak* detector usable (flag, don't certify), so
   this is non-fatal — but unsolved, and it shades into what the generator should emit (typed-invariance).
   Design: `audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md`.
+  **OQ-113 closed against this residual (2026-06-18).** OQ-113 settled the detector's gate leg
+  (`has_viable_alternatives/2` is range `{true, unknown}` — `false` builder-unreachable, fork (b))
+  AND its limb 2: `determine_pure_subtype/2`'s `pure_natural_law` subtype is provably unreachable
+  for the same reason and now `throw/1`s a tripwire if a future corpus/schema ever powers it (the
+  §9b.2 KILL, made loud). So this §7 residual is the SINGLE remaining capability gap for BOTH
+  limbs — the live marker that the author-independent immovability signal is unbuilt. Until it
+  exists, `natural_law_signature` and `pure_natural_law` both stay 0-firing by construction.
+  **Candidate substrate (logged as hypothesis, not asserted — cross-sibling discipline):** the
+  live corpus authors the CS/committer-axis schema (`narrative_ontology:cs_axiom_contradiction/2`,
+  reading-relation edges `forecloses`/`coexists_with`) instead of `constraint_classification`
+  seats. That schema is a *candidate* author-independent reading of foundational immovability —
+  but it needs its own validation (does a foreclosure structure separate immovable-by-structure
+  from flattened-uniform?) when §7 is actually worked; it is NOT a drop-in for `HasAlternatives`.
 - **Retire the Pattern-2 duplicate.** The archival `oq50-power-scaling-residue` branch drafted a standalone
   `no_viable_alternatives/1` flag as the GAP-08 fill; it duplicates this declared `intent_*` layer and
   bypasses the revival protocol. The declared surface should be revived, not paralleled — the flag should

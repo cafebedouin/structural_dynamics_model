@@ -248,6 +248,24 @@ count_power_beneficiaries(C, Count) :-
 %  certification is tolerated rather than undetected). The == true consumers
 %  (coordination_scaffold/successful_coordination) are unchanged: they never
 %  fired on the empty table and still don't.
+%
+%  OQ-113 (closed 2026-06-18, fork (b) — evidence-forced, not chosen): the
+%  RANGE of this builder is exactly {true, unknown}; `false` is
+%  BUILDER-UNREACHABLE (not merely unauthored — there is NO clause that can
+%  emit it). So natural_law_signature/1's `HasAlternatives == false` leg is
+%  DEAD-BY-RANGE on every corpus (0 firings, live-corpus witnessed
+%  has_viable_alternatives never returns false). Powering it is NOT "extend the
+%  builder to emit false" — that collapses into building the GAP-08 §7
+%  author-independent immovability signal (a structural fact written by neither
+%  the author nor the degradation that reads "immovable"), which does not yet
+%  exist. The remaining `false`-sources are falsified: prose/omega-`false` is
+%  the contaminated source GAP-08 rejects (370/627 engine-mountains carry
+%  "impossible alternative" prose AND a contested reading). Refs: OQ-113,
+%  docs/design/design_gaps.md GAP-08 (the §7 author-independent immovability
+%  residual), audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md
+%  §9a(i)/§7. The natural_law detector survives as a wired-but-dark router
+%  socket (OQ-128 retired its override; the gate leg stays documented, not
+%  revived).
 has_viable_alternatives(C, true) :-
     narrative_ontology:affects_constraint(I, C),
     narrative_ontology:intent_viable_alternative(I, _, _), !.
@@ -379,6 +397,10 @@ natural_law_signature(profile(AccessCollapse, Suppression, Resistance,
 
     % Structural conditions (CRITICAL for distinguishing from coordination)
     BeneficiaryCount == 0,  % No asymmetric winners
+    % DEAD-BY-RANGE (OQ-113): has_viable_alternatives/2's range is {true, unknown};
+    % `false` is builder-unreachable, so this leg makes the whole signature
+    % unsatisfiable on every corpus. Powering it = GAP-08 §7 author-independent
+    % immovability signal (unsolved). See has_viable_alternatives/2 header.
     HasAlternatives == false,  % Not a choice
     TemporalStability == stable.  % Doesn't evolve
 
@@ -1109,7 +1131,11 @@ coupling_invariant_rope(C, ci_rope_evidence(Compliance, ScopeResult,
      4. No excess extraction
 
    Purity classes:
-     pure_natural_law     — NL signature + all four tests pass
+     pure_natural_law     — NL signature + all four tests pass.
+                            UNREACHABLE pending GAP-08 §7 (OQ-113 limb 2):
+                            the NL signature is dead-by-range, so this subtype
+                            is never emitted; determine_pure_subtype throws if
+                            it ever becomes reachable (the §9b.2 KILL tripwire).
      pure_coordination    — CI_Rope signature + all four tests pass
      pure_scaffold        — has sunset clause + all four tests pass
      contaminated(Reasons) — one or more tests fail
@@ -1186,9 +1212,22 @@ purity_test_excess(C, Result) :-
 
 %% determine_pure_subtype(+C, -Subtype)
 %  Given that all purity tests pass, determines which "pure" class.
-determine_pure_subtype(C, pure_natural_law) :-
+%
+%  OQ-113 limb 2 (closed 2026-06-18): the pure_natural_law branch gates on
+%  natural_law_signature/1, which is DEAD-BY-RANGE (its HasAlternatives==false
+%  leg is builder-unreachable — see has_viable_alternatives/2 header). So this
+%  branch is provably 0-firing on every corpus: a documentation/ghost-behavior
+%  hazard, not a live one. Rather than a silent dead clause, it now THROWS — a
+%  tripwire that doubles as the §9b.2 KILL: if a future corpus or schema change
+%  ever powers the detector, this fires LOUD and forces re-derivation rather
+%  than silently emitting pure_natural_law off the burned (non-discriminating)
+%  accessibility/suppression/resistance metrics. Witness it stays unreached:
+%  the OQ-113 probe shows natural_law_signature 0-firing on the live corpus.
+determine_pure_subtype(C, _) :-
     get_constraint_profile(C, Profile),
-    natural_law_signature(Profile), !.
+    natural_law_signature(Profile),
+    !,
+    throw(unreachable_pure_natural_law(C)).
 determine_pure_subtype(C, pure_coordination) :-
     narrative_ontology:has_coordination_function(C),
     % OQ-94 row-3 gate (ruled 2026-06-10, riding with row 1): captured

@@ -5522,28 +5522,51 @@ OQ-43 (A6 semantics), OQ-93/OQ-96 (pattern provenance), OQ-110 (A4 lineage).
 
 **Ω-type:** Ω_E (witnessed, mechanical; Pattern-5 absence-gate stack).
 
-**Status:** open — filed 2026-06-12 by the OQ-109 unanimity adjudication (candidate-B gauntlet).
-**Priority:** 1
-**Deps:** bundled_with OQ-43, bundled_with OQ-44
+**Status:** resolved — 2026-06-18. Fork (b) ruled (document builder-unreachability;
+no logic change) — and (a)/(c) DISSOLVED by evidence, not preference (below). Limb-2
+honesty defect FIXED (silent dead clause → loud throw tripwire). The residual capability
+gap is routed to **GAP-08 §7 author-independent immovability signal**, not a standing
+defect. Compressed on close per the footer rule.
 
-**The witness.** `signature_detection:has_viable_alternatives/2` has exactly two clauses:
-`true` (an `intent_viable_alternative` fact exists) and `unknown` (catch-all) — `false` is
-never produced. `natural_law_signature/1` requires `HasAlternatives == false`, so the
-conjunction is unsatisfiable on any corpus authoring zero `intent_viable_alternative` facts
-(live corpus: zero). Live-62 probe: true-set = 0 including six authored-unanimous-mountain
-physics stories (`audits/2026-06-11_oq109_phase_b/unanimity_adjudication_probe.out`). This
-STACKS on OQ-43's leg (`BeneficiaryCount == 0` reads empty `intent_power_change` —
-vacuously true): one conjunct passes on absence, its sibling FAILS on absence, so the
-predicate is dead while looking profile-gated. Corollary:
-`determine_pure_subtype/2`'s `pure_natural_law` branch is UNREACHABLE — purity subtyping
-never emits it on the live corpus.
+**The witness (limb 1, detector dead-by-range).** `has_viable_alternatives/2`'s range is
+exactly `{true, unknown}`; `false` is builder-unreachable. `natural_law_signature/1`
+requires `HasAlternatives == false`, so the predicate is unsatisfiable on every corpus.
+Live probe (79 testsets, 2026-06-18): positive control `natural_law_signature(profile(0.92,
+0.02, 0.04, 0, false, stable, _))` → `control_fires`; live `natural_law_signature` →
+`live_firings=0`; `has_viable_alternatives` returning `false` → `hva_false_count=0`. Locked
+as regression: `prolog/tests/test_oq113_dead_natural_law.pl` (3/3 green).
 
-**Resolution shape.** Adjudicate by contribution (Unwired ≠ worthless): what should
-NL-profile certification require — an authored absence-of-alternatives datum (then
-fail-closed needs an authoring surface for it), or the OQ-43-class fix (gate on
-authored-presence before comparing)? Cross-refs: OQ-43 (sibling leg), OQ-44 (gate class
-audit), OQ-37 (`unknown` sentinel discipline — the sentinel here works correctly; the
-consumer's `== false` test is what can never see it).
+**The witness (limb 2, subtype unreachable).** `determine_pure_subtype/2`'s
+`pure_natural_law` branch gates on the dead detector → 0-firing. Converted to
+`throw(unreachable_pure_natural_law(C))` — behavior-neutral today (witnessed:
+`structural_purity` over all 79 live constraints → `structural_purity_all_ok_no_throw`),
+loud the day a corpus/schema powers the detector (doubles as the §9b.2 KILL).
+
+**Why (a) — extend the builder to emit `false` — is not available now (dissolves, by
+absence of signal).** (1) The metrics are non-diagnostic: clean and contested mountains
+degrade byte-identically `[mountain,rope,rope,mountain]`
+(`audits/2026-06-17_mountain_authoring_sweep/universal_degradation_witness.txt`), so an
+opened gate rides burned metrics (§9a(iii)). (2) The only reliable discriminator is absent
+live: the strong leg is a non-mountain `constraint_classification` seat (caught 161/370
+contested in v6); the **live corpus authors 0 `constraint_classification` facts**
+(it authors the CS/committer-axis schema instead — `cs_axiom_contradiction`,
+reading-relation edges), while kernel_v1 authors ~9,000. (3) The remaining `false`-sources
+are falsified — prose/omega-`false` is the contaminated source GAP-08 rejects (370/627
+engine-mountains carry "impossible alternative" prose AND a contested reading). So (a)
+collapses into "first build the GAP-08 §7 author-independent immovability signal," which
+does not exist. **(c) — retire the leg — is killed by §9a(iii):** removing the detector's
+only discriminating leg makes it fire non-discriminatingly on the burned metrics. **(b) is
+forced.**
+
+**Cross-refs / closure.** OQ-43 (sibling `BeneficiaryCount==0` leg) and OQ-44 (gate-class
+policy) are both **resolved** — the sibling/policy legs are closed. OQ-128 retired the
+`resolve_modal_signature_conflict(_, natural_law, mountain)` override (0/3843 behavior-
+neutral), demoting the detector to a wired-but-dark router socket. OQ-37 (`unknown` sentinel
+discipline — the sentinel works correctly; the consumer's `== false` test is what can never
+see it). Residual capability → GAP-08 §7 (author-independent immovability signal) +
+`audits/2026-06-17_mountain_authoring_sweep/ROUTING_SINK_DESIGN.md` §9a(i)/§7.
+
+**Deps:** blocked_on_human GAP-08 §7 author-independent immovability signal — residual capability gap routed to a design gap rather than an OQ edge
 
 ## OQ-114 — Are the 3 bridge-extension stories genuine mountains? (FCR un-fire adjudication + archive divergence-rate probe)
 
