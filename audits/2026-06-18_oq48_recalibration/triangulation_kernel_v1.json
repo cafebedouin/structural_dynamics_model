@@ -1,0 +1,128 @@
+{
+  "arm": "kernel_v1 (pre-reset, pre-de-leak archive; CONFOUNDED, corroboration-only)",
+  "n_readings": 1106,
+  "caveat": "template guidance + unknown model + regime confound; never pooled into the twin denominator (OQ-26). Corroborates but cannot adjudicate.",
+  "per_metric_diagnostics": {
+    "eps": {
+      "n": 1106,
+      "dip_stat": 0.07097649186256781,
+      "dip_p": 0.0,
+      "multimodal": true,
+      "candidate_locs": [
+        0.2309,
+        0.4422
+      ],
+      "validated": [
+        {
+          "loc": 0.4422,
+          "depth": 0.6197
+        }
+      ]
+    },
+    "supp": {
+      "n": 1106,
+      "dip_stat": 0.07730560578661845,
+      "dip_p": 0.0,
+      "multimodal": true,
+      "candidate_locs": [
+        0.233,
+        0.5328
+      ],
+      "validated": []
+    },
+    "tr": {
+      "n": 1106,
+      "dip_stat": 0.07703435804701628,
+      "dip_p": 0.0,
+      "multimodal": true,
+      "candidate_locs": [
+        0.2246,
+        0.4152,
+        0.6192,
+        0.7764
+      ],
+      "validated": []
+    },
+    "chi": {
+      "n": 1106,
+      "dip_stat": 0.0705244122965642,
+      "dip_p": 0.0,
+      "multimodal": true,
+      "candidate_locs": [
+        0.3186,
+        0.6059
+      ],
+      "validated": [
+        {
+          "loc": 0.6059,
+          "depth": 0.4502
+        }
+      ]
+    }
+  },
+  "corroboration_table": [
+    {
+      "label": "mountain_extractiveness_max",
+      "metric": "eps",
+      "current_value": 0.25,
+      "kernel_v1_nearest_break": 0.4422,
+      "dist_to_cut": 0.1922,
+      "kernel_v1_corroborates": false,
+      "haiku_validated_loc": null
+    },
+    {
+      "label": "snare_epsilon_floor",
+      "metric": "eps",
+      "current_value": 0.46,
+      "kernel_v1_nearest_break": 0.4422,
+      "dist_to_cut": 0.0178,
+      "kernel_v1_corroborates": true,
+      "haiku_validated_loc": 0.4839
+    },
+    {
+      "label": "tangled_rope_epsilon_floor",
+      "metric": "eps",
+      "current_value": 0.3,
+      "kernel_v1_nearest_break": 0.4422,
+      "dist_to_cut": 0.1422,
+      "kernel_v1_corroborates": false,
+      "haiku_validated_loc": null
+    },
+    {
+      "label": "rope_chi_ceiling",
+      "metric": "chi",
+      "current_value": 0.35,
+      "kernel_v1_nearest_break": 0.6059,
+      "dist_to_cut": 0.2559,
+      "kernel_v1_corroborates": false,
+      "haiku_validated_loc": null
+    },
+    {
+      "label": "snare_chi_floor",
+      "metric": "chi",
+      "current_value": 0.66,
+      "kernel_v1_nearest_break": 0.6059,
+      "dist_to_cut": 0.0541,
+      "kernel_v1_corroborates": false,
+      "haiku_validated_loc": 0.6662
+    },
+    {
+      "label": "snare_suppression_floor",
+      "metric": "supp",
+      "current_value": 0.6,
+      "kernel_v1_nearest_break": null,
+      "dist_to_cut": null,
+      "kernel_v1_corroborates": false,
+      "haiku_validated_loc": null
+    },
+    {
+      "label": "tangled_rope_suppression_floor",
+      "metric": "supp",
+      "current_value": 0.4,
+      "kernel_v1_nearest_break": null,
+      "dist_to_cut": null,
+      "kernel_v1_corroborates": false,
+      "haiku_validated_loc": null
+    }
+  ]
+}

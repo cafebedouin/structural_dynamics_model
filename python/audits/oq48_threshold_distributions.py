@@ -49,8 +49,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 PROLOG_DIR = ROOT / "prolog"
 
-TWINS = ["testsets_haiku", "testsets_flash"]
-EXPECTED_LOADCOUNT = 960
+# (out_name, corpus_path relative to prolog/). The expected LOADCOUNT is the on-disk
+# *.pl file count for that path — so an ignored overlay (loads the default `testsets`)
+# still trips the hard stop. kernel_v1 is a pre-reset, pre-de-leak archive: a CONFOUNDED
+# third arm (template guidance + unknown model + regime), corroboration-only — never
+# pooled into the twin denominator (OQ-26 single-regime scoping).
+CORPUS_SPECS = {
+    "testsets_haiku": "testsets_haiku",
+    "testsets_flash": "testsets_flash",
+    "kernel_v1": "archives/datasets/kernel_v1",
+}
+DEFAULT_RUN = ["testsets_haiku", "testsets_flash"]
 
 # ---------------------------------------------------------------------------
 # Prolog probe goal. Greppable token-prefixed lines on stdout:
@@ -84,10 +93,10 @@ run_probe :-
 """
 
 
-def run_twin(corpus):
-    """Run one swipl process for `corpus`; return (loadcount, rows, raw_stdout, stderr)."""
+def run_twin(corpus_path):
+    """Run one swipl process for `corpus_path`; return (loadcount, rows, error, stdout, stderr)."""
     with tempfile.NamedTemporaryFile("w", suffix=".pl", dir=PROLOG_DIR, delete=False) as tf:
-        tf.write(_GOAL_TMPL.format(corpus=corpus))
+        tf.write(_GOAL_TMPL.format(corpus=corpus_path))
         goal_path = tf.name
     try:
         proc = subprocess.run(
@@ -130,14 +139,16 @@ def corpus_hash(rows):
 
 
 def main(argv):
-    twins = argv[1:] if len(argv) > 1 else TWINS
+    names = argv[1:] if len(argv) > 1 else DEFAULT_RUN
     out_dir = ROOT / "audits" / "2026-06-18_oq48_recalibration"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     overall_ok = True
-    for corpus in twins:
-        print(f"\n{'='*78}\nTWIN: {corpus}\n{'='*78}")
-        loadcount, rows, probe_error, raw_stdout, stderr = run_twin(corpus)
+    for name in names:
+        corpus_path = CORPUS_SPECS.get(name, name)
+        expected = len(list((PROLOG_DIR / corpus_path).glob("*.pl")))
+        print(f"\n{'='*78}\nCORPUS: {name}  (path {corpus_path}, on-disk *.pl = {expected})\n{'='*78}")
+        loadcount, rows, probe_error, raw_stdout, stderr = run_twin(corpus_path)
 
         if probe_error:
             print(f"  !! {probe_error}")
@@ -148,17 +159,17 @@ def main(argv):
 
         print(f"LOADCOUNT {loadcount}")
         # ---- HARD STOP: wrong count never produces analysis output ----
-        if loadcount != EXPECTED_LOADCOUNT:
-            print(f"  !! HARD STOP: LOADCOUNT {loadcount} != {EXPECTED_LOADCOUNT} "
-                  f"(overlay likely ignored — must use asserta). Aborting this twin; "
+        if loadcount != expected:
+            print(f"  !! HARD STOP: LOADCOUNT {loadcount} != on-disk {expected} "
+                  f"(overlay likely ignored — must use asserta). Aborting this corpus; "
                   f"no rows written.")
             print("  stderr tail:")
             print("\n".join("    " + l for l in stderr.splitlines()[-15:]))
             overall_ok = False
             continue
 
-        if len(rows) != EXPECTED_LOADCOUNT:
-            print(f"  !! HARD STOP: {len(rows)} ROW lines != {EXPECTED_LOADCOUNT}. Aborting twin.")
+        if len(rows) != expected:
+            print(f"  !! HARD STOP: {len(rows)} ROW lines != {expected}. Aborting corpus.")
             overall_ok = False
             continue
 
@@ -166,14 +177,14 @@ def main(argv):
         print(f"ROWS {len(rows)}   corpus_hash(sha256) {chash}")
 
         # ---- write raw row TSV sidecar (per-id, the audit's reusable raw evidence) ----
-        tsv = out_dir / f"rows_{corpus}.tsv"
+        tsv = out_dir / f"rows_{name}.tsv"
         header = "id\teps\tsupp\ttr\tchi\tmt\tft\n"
         body = "\n".join(
             "\t".join((r["id"], r["eps"], r["supp"], r["tr"], r["chi"], r["mt"], r["ft"]))
             for r in rows
         )
         tsv.write_text(header + body + "\n")
-        (out_dir / f"corpus_hash_{corpus}.txt").write_text(chash + "\n")
+        (out_dir / f"corpus_hash_{name}.txt").write_text(chash + "\n")
         print(f"  wrote {tsv.relative_to(ROOT)}")
 
     print(f"\n{'='*78}")

@@ -2,7 +2,9 @@
 
 **Date:** 2026-06-18 · **Scope:** Audit + proposal only (no `config.pl` edit) · **Verdict: no
 threshold is safely recalibratable against the twins.** All seven in-scope calibrated thresholds
-return **MODEL-CONFOUNDED**; **zero proposed values**. OQ-48 stays **open**.
+return **MODEL-CONFOUNDED**; **zero proposed values**. OQ-48 stays **open**. A confounded
+third arm (kernel_v1, §7) adds **cross-regime corroboration for `snare_epsilon_floor` (0.46)** —
+feeding the vindicate-and-keep path, not licensing any move.
 
 ---
 
@@ -136,7 +138,42 @@ done to the four OQ-37 readings. (All four readings *are* present in both twins 
 `competence_reading` — but the check cannot run without a proposal, and per the pinned rule it
 could not have altered the verdict regardless.)
 
-## 7. What stays 691-provenanced
+## 7. Triangulation arm — kernel_v1 (confounded, corroboration-only)
+
+kernel_v1 (1,106 readings; pre-reset, pre-de-leak archive, generated 2026-02-26) was run as an
+**independent third point**, not a fourth twin. It is confounded three ways — the old generation
+template baked guidance into the prompt (the OQ-70 bait era), the model provenance is not stamped
+in the files (cannot confirm "haiku"), and it is a different generation regime — so per OQ-26 it
+is **never pooled into the twin denominator.** Probe loaded 1106 (hard-stop passed), **0 unknowns**
+(no schema drift). It can **corroborate but not adjudicate**: agreement is external-validity
+evidence *stronger* than haiku/flash agreement (the twins share prompts+seeds, so their agreement
+could be a prompt-structure artifact; kernel_v1 shares neither), but disagreement is uninformative
+(regime-confounded) and cannot break the twin tie or license a move.
+
+kernel_v1 validates two breaks: ε at **0.442**, χ at **0.606** (Supp, TR: no validated break).
+Corroboration against the in-scope cuts:
+
+| threshold | cut | haiku validated | kernel_v1 nearest break | dist | corroborates (±0.05)? |
+|---|---|---|---|---|---|
+| `snare_epsilon_floor` | 0.46 | **0.484** | **0.442** | 0.018 | **YES — both regimes** |
+| `snare_chi_floor` | 0.66 | **0.666** | 0.606 | 0.054 | no (near-miss, just outside) |
+| `mountain_extractiveness_max` | 0.25 | — | 0.442 | 0.192 | no |
+| `tangled_rope_epsilon_floor` | 0.30 | — | 0.442 | 0.142 | no |
+| `rope_chi_ceiling` | 0.35 | — | 0.606 | 0.256 | no |
+| `snare_suppression_floor` | 0.60 | — | (none) | — | no |
+| `tangled_rope_suppression_floor` | 0.40 | — | (none) | — | no |
+
+**The one robust cross-regime result is `snare_epsilon_floor` (0.46):** two independently-generated
+corpora (different model, different regime) both validate an ε break within ±0.05 of the cut, which
+sits between them (kernel_v1 0.442, cut 0.46, haiku 0.484). `snare_chi_floor` is a near-miss — its
+kernel_v1 χ break (0.606) sits ~0.054 below the cut, suggestive but outside the window, and the
+direction is itself regime-confounded (read no further into it). The five remaining cuts gain no
+corroboration. None of this changes a verdict (flash still does not validate any of these), so all
+seven remain MODEL-CONFOUNDED with zero proposed values; what kernel_v1 adds is a single
+cross-regime data point that the 0.46 ε cleavage is real independent of prompt structure. Evidence:
+`triangulation_kernel_v1.json`.
+
+## 7b. What stays 691-provenanced
 
 **All seven** in-scope thresholds remain 691-corpus-provenanced. None was recalibrated; none could
 be, under the cross-twin validity gate. The audit's positive contribution is the **negative
@@ -158,18 +195,28 @@ documented (flash antimodes are not bandwidth-robust where their locations track
 ## 9. Artifacts
 
 Scripts (per audit convention, in `python/audits/`):
-- `python/audits/oq48_threshold_distributions.py` — read-only probe (one swipl process per twin).
-- `python/audits/oq48_analyze.py` — break detection + verdict rule.
+- `python/audits/oq48_threshold_distributions.py` — read-only probe (one swipl process per corpus;
+  generalized to any `corpus_path`, hard-stops against the on-disk file count).
+- `python/audits/oq48_analyze.py` — break detection + twin verdict rule.
+- `python/audits/oq48_triangulate_kernel_v1.py` — confounded third-arm corroboration (kernel_v1).
 
 Evidence (this directory):
-- `rows_testsets_haiku.tsv`, `rows_testsets_flash.tsv` — raw per-reading metric dumps.
+- `rows_testsets_haiku.tsv`, `rows_testsets_flash.tsv`, `rows_kernel_v1.tsv` — raw per-reading dumps.
+- `triangulation_kernel_v1.json` — kernel_v1 corroboration table + diagnostics.
 - `corpus_hash_*.txt` — loaded-id-set hashes.
 - `verdict_table.csv`, `threshold_evidence.json` — machine-readable verdicts + raw evidence.
 
 ## 10. Graduation step (keeps OQ-48 open)
 
-No floor moved → **do not mark mitigated/resolved.** The remaining graduation step is unchanged in
-kind but now has an empirical floor under it: a recalibration becomes possible only when either
-(a) a third independently-generated corpus breaks the haiku/flash tie at a threshold, or (b) the
-live `testsets/` rebuild itself reaches the recalibration bar and supplies a single-corpus break.
-Until then every in-scope cut is correctly left at its 691-era value.
+No floor moved → **do not mark mitigated/resolved.** Two paths remain, now with an empirical floor
+under each:
+- **Recalibrate (produce new values):** needs a corpus we trust to give a clean break — either a
+  *same-regime* (post-de-leak) third corpus that breaks the haiku/flash tie, or the live
+  `testsets/` rebuild reaching the ~700-story Tier-4 bar with a single-corpus break. kernel_v1 does
+  **not** qualify (confounded — §7), so it cannot promote a value.
+- **Vindicate-and-keep (mitigate without moving):** if the 691-era cuts are shown to still cleave on
+  trusted post-reset data, they stay and the staleness/WEIRD worry is downgraded. `snare_epsilon_floor`
+  (0.46) is the first cut with evidence on this path — corroborated by haiku **and** the confounded
+  kernel_v1 arm. A future ruling could mitigate OQ-48 cut-by-cut along this path.
+
+Until either lands, every in-scope cut is correctly left at its 691-era value.
