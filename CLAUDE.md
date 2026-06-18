@@ -568,22 +568,22 @@ when a coherent unit of work is witnessed, commit it then — do not batch a ses
 end-commit; in-flight work is what compaction and harness outages destroy (full rationale:
 `docs/technical/build_discipline.md` → *Commit-as-you-go*). Everything here is CC0; the operator
 values iteration over correctness; mistakes are recoverable. Push is also permitted once the
-pre-push check below passes. **Start your own worktree before write work that is costly to
-unwind — code changes (`prolog/*.pl`, `python/`, generators, schema) or any multi-file/
-hard-to-rollback edit** (`git worktree add ../wt-<task> <branch>`, or the harness's worktree
-mechanism), **not only when you know another instance is running**: siblings are undetectable
-from inside a session (no lock, no registry; a clean `git status` looks identical either way),
-so insulation is the default for substantive work, not a response to detection. Two instances
-editing one working tree step on each other's uncommitted state — witnessed 2026-06-10, when two
-instances each misread this rule as conditional and collided in the main tree (operator
-clarification of intent, same day). **Exception — minor text edits left to instance judgment
-(operator ruling, 2026-06-18):** a single- or few-line change to `ISSUES.md`, `KNOWN_STATE.md`,
-`AGENTS.md`, or other prose/docs does NOT require a worktree — the collision blast radius is
-small and a git rollback is cheaper than re-spinning a 27k-file checkout. Edit main directly,
-commit promptly to shrink the uncommitted window. If it is unclear whether a change crosses into
-"costly to unwind" (e.g. a doc edit entangled with code, or a large multi-file doc refactor),
-ASK rather than guess. Merge
-the worktree branch back to main when its unit of work is witnessed; run
+pre-push check below passes.
+
+**Worktrees are OPT-IN, not default (operator ruling, 2026-06-18).** The operator runs ONE
+instance at a time and stages plans, so the sibling-collision risk that motivated the old
+"worktree before write — unconditionally" rule does not apply. **Default: work directly on
+`main`** — commit-as-you-go to keep the uncommitted window small, and use a feature branch
+(`git checkout -b <task>`) for risky or multi-file code changes (`prolog/*.pl`, `python/`,
+generators, schema) where cheap rollback matters. A branch gives the rollback safety a worktree
+would, without the 27k-file checkout, the cwd juggling, or the gitignored-`outputs/` trap (a
+fresh worktree has no `outputs/pipeline_output.json`, so probes honoring the "read pre-computed
+values from there" invariant read empty/stale and look like they worked — a Pattern-6 hazard).
+**Only start a worktree when the operator explicitly asks for one** (e.g. resuming concurrent
+instances). When you do, the original rationale still holds — siblings are undetectable from
+inside a session (no lock, no registry; a clean `git status` looks identical either way), and on
+2026-06-10 two instances each misread the rule as conditional and collided in the main tree.
+Merge the worktree branch back to main when its unit of work is witnessed; run
 `python3 python/issues_status.py --check` after any merge touching ISSUES.md (it fails on
 duplicate OQ labels — the clean-automerge artifact of two worktrees claiming the same next
 OQ-NN). Multi-writer corollary: a commit's witness is its DIFF or an entry-anchored check, never
