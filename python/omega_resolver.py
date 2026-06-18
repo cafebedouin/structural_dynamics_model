@@ -32,17 +32,31 @@ Usage:
     python3 python/omega_resolver.py check        # checker (exit 1 on problems)
     python3 python/omega_resolver.py selftest     # positive controls (exit 1 on fail)
     python3 python/omega_resolver.py dump         # parsed access points, per OQ
+    python3 python/omega_resolver.py index        # (re)write issues/INDEX.{md,json} router
+    python3 python/omega_resolver.py index --check # exit 1 if the router is stale vs ISSUES.md
+
+The `index` command derives a compact ROUTER over ISSUES.md (a scan surface +
+machine artifact under `issues/`) — generated FROM ISSUES.md, never authoritative
+itself. It mirrors current resolver/parser behavior; it does not adjudicate. The
+`index --check` line in scripts/gate.sh is the regenerate-after-edit hook: editing
+ISSUES.md without re-running `index` turns [GATE] red. This is the index-only path;
+the `issues/OQ-NN.md` per-entry split is deferred to scale-time (see OQ-141 note and
+the per-file split threshold in cmd_index).
 """
 import datetime
+import hashlib
 import json
 import re
 import subprocess
 import sys
 from pathlib import Path
 
+import issues_status  # canonical status authority (does NOT fork a third parser)
+
 SCHEMA_VERSION = "omega-resolver/1"
 ROOT = Path(__file__).resolve().parents[1]
 ISSUES = ROOT / "ISSUES.md"
+ISSUES_DIR = ROOT / "issues"
 
 HEADER = re.compile(r"^## (OQ-\d+)\b(.*)$")
 STATUS = re.compile(r"^\*\*Status:\*\* (\w+)(?: — .*)?$")
@@ -683,6 +697,227 @@ def cmd_activations(entries):
         "hookEventName": "SessionStart", "additionalContext": ctx}}, ensure_ascii=False))
 
 
+# --------------------------------------------------------------------------- #
+# index — derived router over ISSUES.md (index-only path; OQ-141)
+#
+# A compact scan surface (issues/INDEX.md) + machine artifact (issues/INDEX.json)
+# generated FROM ISSUES.md, regenerated after every edit, never authoritative
+# itself. INVARIANT: the index is a derived routing aid; it never resolves policy
+# disputes. It mirrors current resolver/parser behavior; it does not adjudicate.
+#
+# Status authority stays with issues_status.py (its token is canonical per row);
+# the partition mirrors omega_resolver.ACTIVE by IMPORT (this module's own
+# constant) so it cannot drift a third time. A dropped/malformed row can never
+# silently shrink the index — the join asserts the two parsers' ID sets are
+# identical and aborts loudly + classified on any mismatch (Build Discipline
+# Pattern 4/5).
+#
+# Per-file split threshold (when to revisit): this index-only path holds while one
+# agent can `grep OQ-NN ISSUES.md` cheaply. Revisit the `issues/OQ-NN.md` per-entry
+# split at SCALE-TIME — when a single grep body read is too large to scan, or when
+# parallel-worktree write contention on the one ISSUES.md recurs. Deferred per this
+# module's docstring; recorded in OQ-141.
+# --------------------------------------------------------------------------- #
+def _index_abort(kind, detail):
+    """Loud, named, classified abort — a repairable message, not a bare exit, so
+    the failure is fixable without weakening strictness (Pattern 4/5)."""
+    print(f"index: ABORT {kind}: {detail}", file=sys.stderr)
+    sys.exit(2)
+
+
+def _oqnum(oq):
+    return int(oq.split("-")[1])
+
+
+def _body_for_edges(body):
+    """parse_entries has NO footer-awareness: every line after the LAST `## OQ-NN`
+    header is appended to that trailing entry's body, so the trailing entry absorbs
+    the document footer (the `*Last updated:* …` block, which itself cites OQ refs —
+    e.g. OQ-51). Trim that footer here so the last entry's DERIVED edges don't
+    inherit footer OQ refs. Scoped to the index's edge view only; ISSUES.md and the
+    shared parser stay untouched. No-op on every non-trailing entry."""
+    out = []
+    for line in body:
+        if line.startswith("*Last updated:"):
+            while out and out[-1].strip() in ("", "---"):
+                out.pop()
+            break
+        out.append(line)
+    return out
+
+
+def _index_row(oq, entry, status):
+    """One canonical row dict (the JSON shape; markdown is rendered FROM this)."""
+    body = _body_for_edges(entry.body)
+    deps = [f"{rel} {tgt}" for rel, tgt in entry.deps]
+    # cross_refs: OQ-NN targets parsed from **Cross-refs:** lines (freeform; some
+    # carry no OQ target -> empty, which is fine), self-excluded, deduped.
+    cross = []
+    for line in body:
+        if line.startswith("**Cross-refs:**"):
+            cross.extend(OQREF.findall(line))
+    cross_refs = sorted(set(cross) - {oq}, key=_oqnum)
+    # mentioned_in: ALL inline OQ-NN in the body, deduped, self-excluded (keep
+    # simple — the derived secondary "mentioned-in" edge per the plan).
+    mentioned = sorted(set(OQREF.findall("\n".join(body))) - {oq}, key=_oqnum)
+    return {
+        "id": oq,
+        "status": status,
+        "priority": entry.priority if entry.priority is not None else "–",
+        "summary": entry.title,            # title verbatim (the heading after "OQ-NN —")
+        "deps": deps,                      # typed declared edges (Entry.deps)
+        "cross_refs": cross_refs,          # declared primary, from **Cross-refs:**
+        "mentioned_in": mentioned,         # derived secondary, inline body mentions
+    }
+
+
+def _index_rows(entries):
+    """JOIN omega_resolver's rich parse with issues_status's canonical status,
+    assert ID-set/count integrity, and build the canonical row list. Shared by the
+    write and --check paths so they cannot diverge.
+    Returns (rows_active, rows_archive, per_status_counts)."""
+    status_entries, status_problems = issues_status.scan()
+    # (1) malformed status -> abort named (first 1-3 OQ IDs)
+    if status_problems:
+        ids = []
+        for p in status_problems:
+            tok = p.split(":", 1)[0].split()[0]
+            if tok.startswith("OQ-") and tok not in ids:
+                ids.append(tok)
+        _index_abort("MALFORMED",
+                     f"{ids[:3] or status_problems[:1]} — fix ISSUES.md until "
+                     f"`issues_status.py --check` passes")
+    status_by_oq = dict(status_entries)
+    # (2) ID-set mismatch -> abort (never silently drop a row)
+    issues_ids, status_ids = set(entries), set(status_by_oq)
+    if issues_ids != status_ids:
+        _index_abort("ID-MISMATCH",
+                     f"in-issues-only={sorted(issues_ids - status_ids)}, "
+                     f"in-status-only={sorted(status_ids - issues_ids)}")
+    # build rows from the agreed-upon ID set
+    rows_active, rows_archive = [], []
+    per_status = {}
+    for oq in sorted(entries, key=_oqnum):
+        status = status_by_oq[oq]
+        per_status[status] = per_status.get(status, 0) + 1
+        row = _index_row(oq, entries[oq], status)
+        (rows_active if status in ACTIVE else rows_archive).append(row)
+    # (3) count integrity: headings vs status rows vs built rows must agree
+    n_headings, n_status = len(entries), len(status_entries)
+    n_rows = len(rows_active) + len(rows_archive)
+    if not (n_headings == n_status == n_rows):
+        _index_abort("COUNT-MISMATCH",
+                     f"headings={n_headings}, status={n_status}, rows={n_rows}")
+    return rows_active, rows_archive, per_status
+
+
+def _index_doc(entries):
+    """Full JSON document (the single source the markdown is rendered from)."""
+    rows_active, rows_archive, per_status = _index_rows(entries)
+    return {
+        "manifest": manifest(),
+        "issues_sha": hashlib.sha256(ISSUES.read_bytes()).hexdigest(),
+        "n_entries": len(rows_active) + len(rows_archive),
+        "active_token_set": sorted(ACTIVE),
+        "per_status": per_status,
+        "active": rows_active,
+        "archive": rows_archive,
+    }
+
+
+def _md_cell(s):
+    return str(s).replace("|", "\\|").replace("\n", " ")
+
+
+def _index_md(doc):
+    """Render the compact scan surface FROM the same row list. Intentionally
+    minimal: banner + two partition definitions + table. No prose adjudication of
+    the `mitigated` membership question — only a one-line linked OQ reference."""
+    sha = doc["issues_sha"][:12]
+    active_set = ", ".join(doc["active_token_set"])
+    n_a, n_b = len(doc["active"]), len(doc["archive"])
+    L = []
+    L.append("# OQ Router Index — DERIVED from ISSUES.md (do not edit by hand)")
+    L.append("")
+    L.append(f"Generated by `python3 python/omega_resolver.py index` (issues_sha "
+             f"`{sha}`). Regenerate after EVERY edit to ISSUES.md — the `omega index` "
+             f"check in `scripts/gate.sh` turns [GATE] red if this is stale. This "
+             f"index ROUTES (scan it, then read with `grep OQ-NN ISSUES.md`); it is a "
+             f"derived routing aid and never resolves policy disputes.")
+    L.append("")
+    L.append("**Partition** (descriptive, not normative):")
+    L.append(f"- **Active Frontier** — *current resolver-defined frontier*: status ∈ "
+             f"`omega_resolver.ACTIVE` (`{{{active_set}}}`), imported, not re-encoded.")
+    L.append(f"- **Archive** — every other status (resolved, disposed, future, "
+             f"mitigated, …).")
+    L.append(f"- Whether `mitigated` belongs in the active frontier is open: see OQ-141.")
+    L.append("")
+    L.append("Per-status counts: " +
+             ", ".join(f"`{t}`={n}" for t, n in sorted(doc["per_status"].items())) +
+             f" (total {doc['n_entries']}).")
+
+    def table(rows):
+        out = ["| OQ | P | status | summary | deps | cross-refs | mentioned-in |",
+               "|----|---|--------|---------|------|------------|--------------|"]
+        for r in rows:
+            out.append("| {id} | {p} | {st} | {summ} | {deps} | {cr} | {mi} |".format(
+                id=r["id"], p=_md_cell(r["priority"]), st=r["status"],
+                summ=_md_cell(r["summary"]),
+                deps=_md_cell("; ".join(r["deps"])),
+                cr=_md_cell(", ".join(r["cross_refs"])),
+                mi=_md_cell(", ".join(r["mentioned_in"]))))
+        return out
+
+    L.append("")
+    L.append(f"## Active Frontier (current resolver-defined frontier) — {n_a}")
+    L.append("")
+    L.extend(table(doc["active"]))
+    L.append("")
+    L.append(f"## Archive — {n_b}")
+    L.append("")
+    L.extend(table(doc["archive"]))
+    L.append("")
+    return "\n".join(L)
+
+
+def cmd_index(entries, check=False):
+    doc = _index_doc(entries)
+    md = _index_md(doc)
+    json_path = ISSUES_DIR / "INDEX.json"
+    md_path = ISSUES_DIR / "INDEX.md"
+    if check:
+        # Recompute and diff row content + issues_sha + schema_version against the
+        # on-disk files; generated_at (and the git-HEAD store_version) are EXCLUDED
+        # — they change without ISSUES.md changing and would false-fire.
+        drift = []
+        if not json_path.exists() or not md_path.exists():
+            drift.append("issues/INDEX.{json,md} missing — run `omega_resolver.py index`")
+        else:
+            on_disk = json.loads(json_path.read_text())
+            for key in ("issues_sha", "n_entries", "per_status", "active", "archive"):
+                if on_disk.get(key) != doc[key]:
+                    drift.append(f"INDEX.json {key} differs from current ISSUES.md")
+            if on_disk.get("manifest", {}).get("schema_version") != SCHEMA_VERSION:
+                drift.append("INDEX.json schema_version differs")
+            if md_path.read_text() != md:
+                drift.append("INDEX.md differs from re-render of current ISSUES.md")
+        if drift:
+            for d in drift:
+                print(f"index --check: STALE: {d}", file=sys.stderr)
+            print(f"index --check: {len(drift)} drift(s) — regenerate with "
+                  f"`python3 python/omega_resolver.py index`")
+            sys.exit(1)
+        print(f"index --check: fresh ({doc['n_entries']} rows, "
+              f"{len(doc['active'])} active / {len(doc['archive'])} archive)")
+        return
+    ISSUES_DIR.mkdir(exist_ok=True)
+    json_path.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n")
+    md_path.write_text(md)
+    print(f"index: wrote {json_path.relative_to(ROOT)} + {md_path.relative_to(ROOT)} "
+          f"({doc['n_entries']} rows: {len(doc['active'])} active / "
+          f"{len(doc['archive'])} archive)")
+
+
 def main():
     args = sys.argv[1:]
     cmd = args[0] if args else "frontier"
@@ -712,6 +947,8 @@ def main():
         cmd_frontier(entries)
     elif cmd == "menu":
         cmd_menu(entries)
+    elif cmd == "index":
+        cmd_index(entries, check=("--check" in args))
     elif cmd == "activations":
         cmd_activations(entries)
     else:

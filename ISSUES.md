@@ -7229,9 +7229,21 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **What resolution changes.** A sub-typing of the `author_engine_divergence` population that turns "they disagree" into named kinds, each with a witness — the substantive research the routing made possible. Cross-ref: OQ-128 (parent), `prolog/routing_sink.pl` (the substrate), OQ-133 (orientation signature, a sibling diachronic-tier question).
 
+## OQ-141 — Does `mitigated` belong in `omega_resolver.ACTIVE`? (footer-vs-code status-token conflict) (Ω_C)
+
+**Ω-type:** Ω_C (a tier/membership-boundary judgment: which status tokens count as "active" for the workable frontier — an undefined boundary between two sources, not a contested origin).
+
+**Status:** open
+
+**Priority:** 6
+
+**Origin:** 2026-06-18, surfaced while building the derived router index (`issues/INDEX.md`). Two sources disagree on whether `mitigated` is a live status: `issues_status.TOKENS` (`python/issues_status.py:29`) and the ISSUES.md footer grammar list `mitigated` as a normal token alongside `open`/`partial`, and the footer narrates `mitigated`/`partial` as "semi-live", but `omega_resolver.ACTIVE` (`python/omega_resolver.py:58`) is exactly `{open, investigating, partial}` — it PARKS `mitigated`, so the 6 currently-`mitigated` entries drop out of the workable frontier, the `menu`/`activations` active counts, and the index's "current resolver-defined frontier" partition.
+
+**What resolution changes.** Whether the derived router index (and `menu`) surfaces the 6 `mitigated` entries in the active frontier. The index mirrors whatever the resolver settles on — it imports `ACTIVE` rather than re-encoding the set — so this is upstream of the index, not a property of it. Kill condition (checkable in-substrate): trace the consumers of `omega_resolver.ACTIVE` (the `.active` property → `frontier()` bucketing, `cmd_menu`, `cmd_activations`, and now `cmd_index`'s partition). If `mitigated` entries are deliberately parked out of the workable frontier (a `mitigated` issue is semi-live but not something to PICK UP now), the resolver is right and the footer prose is the stale source (fix: footer wording). If they belong in the pick-up rotation, `omega_resolver.py:58` is the bug (fix: add `mitigated` to `ACTIVE`; the index follows automatically by import). Either fix is upstream of and invisible to the index code. Cross-ref: `python/omega_resolver.py:58` (the parked set), `python/issues_status.py:29` (the broader token set), `issues/INDEX.md` (the derived consumer).
+
 ---
 
-*Last updated: 2026-06-17. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-06-18. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

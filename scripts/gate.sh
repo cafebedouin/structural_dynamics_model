@@ -21,6 +21,7 @@ echo "# Gate checks"
 run "issues_status"  python3 python/issues_status.py --check
 run "omega check"    python3 python/omega_resolver.py check
 run "omega selftest" python3 python/omega_resolver.py selftest
+run "omega index"    python3 python/omega_resolver.py index --check
 run "known_state"    python3 python/known_state_status.py --check
 echo
 if [ "$fail" = 0 ]; then echo "GATE: GREEN"; else echo "GATE: RED"; fi
