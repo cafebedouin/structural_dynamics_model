@@ -45,6 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-18 — OQ-122 CLOSED: physics-RED fixed by OQ-128; FSM victim-gate DROPPED, discriminant handed to OQ-138
+**Files:** ISSUES.md, prolog/drl_core.pl (witness only, no edit), outputs/pipeline_output.json (witness)
+**Tier:** landed
+
+Closed OQ-122. The control-inversion / physics-false-RED that filed it is FIXED by OQ-128's type_1
+discrimination, NOT by the held FSM victim-gate: on live (commit `2172d55`, manifest 2026-06-18) both
+`radiative_levitation_stratification` and `actinide_replenishment_mechanism_flat_control` read
+`verdict_join.verdict=yellow`, `cap_applied:none`, `type_1_false_summit=informational` at every seat.
+`false_summit_mountain` still fires (vic=0) but only adds a `signature_correction/moderate` alert while
+`base_verdict` is independently yellow — so the gate's verdict benefit is now ≈0.
+
+**FSM victim-gate (`oq122-fsm-victim-gate`, `ab1e9b26`) DROPPED — superseded by the engine-ROUTES-never-
+RECLASSIFIES architecture (OQ-128).** The gate is a suppress-the-detector reclassification, the shape
+OQ-128 removed; the branch's single-clause diff is recoverable at `ab1e9b26`. Its INSIGHT survives,
+re-shaped for **OQ-138**: discriminate the FSM signature's severity (`vic=0→informational/route`,
+`vic>0→moderate/floor`) — the exact analogue of the type_1 ε-split — with the pre-witnessed discriminant
+(`testsets_flash` 18 vic=0 / 22 vic>0, `audits/2026-06-13_oq122_retype_discriminator/breadth_sweep_results.txt`)
+handed to OQ-138 as its FSM-clause build spec. neutron_star/FCR stays under OQ-70. Branch to be deleted
+after merge.
+
+---
+
 ## 2026-06-17 — OQ-128 type_1 cap RULED + BUILT: discriminated severity (withhold high-ε snare, route low-ε artifact)
 **Files:** prolog/drl_core.pl, ISSUES.md (OQ-128)
 **Tier:** landed
