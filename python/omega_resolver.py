@@ -726,8 +726,11 @@ def cmd_activations(entries):
     except Exception:
         pass
     ctx = (
-        "Open this session by showing the user the ACTIVATION MENU below, then wait "
-        "for their pick (do not start work unprompted).\n\n"
+        "Open EVERY session by showing the user the ACTIVATION MENU below FIRST, before any "
+        "other output — this comes first even when the user's opening message is already a "
+        "concrete task or plan. If that opening message IS a task, show the menu first, then "
+        "proceed with the task. If it is empty, a greeting, or just an activation token, show "
+        "the menu and wait for their pick (do not start work unprompted).\n\n"
         "Activations — the user types one of these (exact, case-sensitive, with brackets):\n"
         f"  {live}\n"
         "  [GATE] — run all project gate checks (./scripts/gate.sh), report green/red.\n"
