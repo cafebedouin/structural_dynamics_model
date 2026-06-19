@@ -69,18 +69,9 @@ def _git_dirty() -> bool:
         return False
 
 
-def _compute_corpus_hash(testsets_dir: Path) -> str:
-    """sha256 of sorted (filename, file_content) pairs — corpus identity fingerprint.
-
-    Detects membership changes (add/remove testset) AND in-place content edits.
-    Does not detect changes in subdirectories (testsets/<run_tag>/ archive).
-    See OQ-29 for known limits.
-    """
-    pairs = []
-    for p in sorted(testsets_dir.glob("*.pl")):
-        pairs.append(p.name + "\n" + p.read_text(encoding="utf-8", errors="replace"))
-    return hashlib.sha256("\n---\n".join(pairs).encode()).hexdigest()[:12]
-
+# Single source of truth for the corpus fingerprint (OQ-29). Kept importable as
+# the private name for back-compat with in-file callers.
+from corpus_hash import compute_corpus_hash as _compute_corpus_hash
 
 
 def check_orbits_corpus_hash(orbits_path: Path) -> None:

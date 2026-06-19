@@ -28,7 +28,6 @@ Usage (from repo root):
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import subprocess
 import sys
@@ -37,6 +36,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 PROLOG_DIR = ROOT / "prolog"
 OUTPUTS_DIR = ROOT / "outputs"
+
+# Single source of truth for the corpus fingerprint (OQ-29).
+if str(ROOT / "python") not in sys.path:
+    sys.path.insert(0, str(ROOT / "python"))
+from corpus_hash import compute_corpus_hash as _compute_corpus_hash
 
 # The curated default sweep. Each entry perturbs ONE config param; the null
 # control (same value) proves the diff machinery reports 0 when nothing moves.
@@ -49,13 +53,6 @@ DEFAULT_SWEEP = [
     ("tangled_eps_floor_max", "tangled_rope_extraction_floor", 0.95),  # above the ceil — domain hunt
     ("tangled_chi_floor_up",  "tangled_rope_chi_floor",       0.85),
 ]
-
-
-def _compute_corpus_hash(testsets_dir: Path) -> str:
-    pairs = []
-    for p in sorted(testsets_dir.glob("*.pl")):
-        pairs.append(p.name + "\n" + p.read_text(encoding="utf-8", errors="replace"))
-    return hashlib.sha256("\n---\n".join(pairs).encode()).hexdigest()[:12]
 
 
 def _run_census(overlay_goals: list[str], corpus: str | None) -> dict:

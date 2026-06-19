@@ -27,19 +27,11 @@ CI_PATH = PROLOG_DIR / "constraint_indexing.pl"
 ORBITS_PATH = ROOT / "outputs" / "product_site_orbits.json"
 PIPELINE_PATH = ROOT / "outputs" / "pipeline_output.json"
 
-
-def _compute_corpus_hash(testsets_dir: Path) -> str:
-    """sha256 of sorted (filename, file_content) pairs.
-
-    Detects both membership changes (add/remove testset) AND in-place content edits.
-    Filename-only would miss in-place edits; mtime is cheaper but not git-reproducible.
-    Known limit: does not detect changes in testsets/<run_tag>/ subdirs (not loaded by
-    corpus_loader). Documented in OQ-29.
-    """
-    pairs = []
-    for p in sorted(testsets_dir.glob("*.pl")):
-        pairs.append(p.name + "\n" + p.read_text(encoding="utf-8", errors="replace"))
-    return hashlib.sha256("\n---\n".join(pairs).encode()).hexdigest()[:12]
+# Single source of truth for the corpus fingerprint (OQ-29). Kept importable as
+# the private name for back-compat with callers that import it from here.
+if str(ROOT / "python") not in sys.path:
+    sys.path.insert(0, str(ROOT / "python"))
+from corpus_hash import compute_corpus_hash as _compute_corpus_hash
 
 # ---------------------------------------------------------------------------
 # Overlay template (A1 dialect: retract/assert param/2)

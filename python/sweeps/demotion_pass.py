@@ -595,7 +595,7 @@ def main() -> None:
 
     if a.json_out:
         sys.path.insert(0, str(ROOT / "python"))
-        from sweeps.perturb import _compute_corpus_hash
+        from corpus_hash import compute_corpus_hash as _compute_corpus_hash
         out = {
             "corpus_hash": _compute_corpus_hash(testsets_dir),
             "n_params": len(rows),

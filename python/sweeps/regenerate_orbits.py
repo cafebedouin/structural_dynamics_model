@@ -23,7 +23,7 @@ PROLOG_DIR = ROOT / "prolog"
 ORBITS_PATH = ROOT / "outputs" / "product_site_orbits.json"
 
 sys.path.insert(0, str(ROOT / "python"))
-from sweeps.perturb import _compute_corpus_hash
+from corpus_hash import compute_corpus_hash as _compute_corpus_hash
 
 
 def main() -> None:
