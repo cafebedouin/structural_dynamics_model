@@ -20,6 +20,7 @@ PROLOG_DIR = ROOT_DIR / "prolog"
 PIPELINE_JSON = OUTPUT_DIR / "pipeline_output.json"
 CORPUS_JSON = OUTPUT_DIR / "corpus_data.json"
 ORBIT_JSON = OUTPUT_DIR / "orbit_data.json"
+PRODUCT_ORBITS_JSON = OUTPUT_DIR / "product_site_orbits.json"
 ENRICHED_PIPELINE_JSON = OUTPUT_DIR / "enriched_pipeline.json"
 
 # ---------------------------------------------------------------------------
@@ -58,6 +59,55 @@ def load_json(path, label=None, schema=None):
             sys.exit(1)
 
     return data
+
+# ---------------------------------------------------------------------------
+# Orbits loader (partition-and-assert)
+# ---------------------------------------------------------------------------
+
+# Top-level non-constraint keys legitimately stamped into orbits files (OQ-29).
+_ORBITS_METADATA_KEYS = {"corpus_hash"}
+
+
+def load_orbits_constraints(path=None):
+    """Load an orbits JSON, returning ONLY the per-constraint entries.
+
+    Orbits files (product_site_orbits.json, orbit_data.json) are flat
+    {id: {..., "contexts": ...}} dicts that also carry top-level METADATA as
+    siblings (e.g. corpus_hash, OQ-29). A constraint entry is a dict with a
+    "contexts" key. Anything else must be a NAMED metadata key
+    (_ORBITS_METADATA_KEYS); an unrecognized leftover RAISES -- so a real
+    constraint with a malformed shape, or a new metadata key, fails loud
+    instead of being silently dropped (undercount). Use this anywhere you
+    iterate orbits as constraints -- never raw json.load + .items().
+
+    The allowlist (_ORBITS_METADATA_KEYS) is the PRIMARY guard; the "contexts"
+    shape predicate is a soft SECONDARY. A metadata *value* shaped like a
+    constraint (a dict that itself carries a "contexts" key) would misclassify
+    into constraints -- safe today because the only metadata is the str
+    corpus_hash, but the contract is "metadata values are assumed
+    non-constraint-shaped; classification is by allowlisted key name first."
+
+    Crash-over-drop is safe BY PRODUCER CONSTRUCTION: product_site_export.pl
+    write_one_entry emits "contexts" unconditionally for every constraint, and
+    the context key set is a static Cartesian product
+    (constraint_indexing.pl site_contexts_product/1) that never reads the
+    corpus -- so every entry in the live corpus and every archive carries
+    "contexts". A top-level entry LACKING it can only be post-export metadata
+    or file corruption -- exactly what should raise.
+    """
+    raw = load_json(path or PRODUCT_ORBITS_JSON, "orbits")
+    constraints, leftover = {}, {}
+    for k, v in raw.items():
+        (constraints if isinstance(v, dict) and "contexts" in v else leftover)[k] = v
+    unknown = set(leftover) - _ORBITS_METADATA_KEYS
+    if unknown:
+        raise ValueError(
+            f"{path}: top-level key(s) {sorted(unknown)} are neither a constraint entry "
+            f"(dict with 'contexts') nor known metadata {sorted(_ORBITS_METADATA_KEYS)}. "
+            "If new metadata, add to _ORBITS_METADATA_KEYS; if a constraint, its shape is wrong."
+        )
+    return constraints
+
 
 # ---------------------------------------------------------------------------
 # Config reader

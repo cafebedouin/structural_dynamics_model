@@ -47,6 +47,7 @@ RESULTS_PATH = Path(__file__).resolve().parent / "structural_config_sensitivity_
 # Corpus fingerprint for staleness stamping (OQ-29)
 sys.path.insert(0, str(ROOT / "python"))
 from corpus_hash import compute_corpus_hash
+from shared.loader import load_orbits_constraints
 
 
 # ---------------------------------------------------------------------------
@@ -523,8 +524,8 @@ def main():
         print(f"ERROR: baseline not found at {BASELINE_PATH}", file=sys.stderr)
         sys.exit(1)
     print(f"Loading baseline from {BASELINE_PATH.name}...", file=sys.stderr)
-    with open(BASELINE_PATH) as f:
-        _baseline = json.load(f)
+    # Partition out top-level metadata (corpus_hash, OQ-29); keeps constraints only.
+    _baseline = load_orbits_constraints(BASELINE_PATH)
     n_constraints = len(_baseline)
     n_presheaves = sum(1 for e in _baseline.values() if e["h1"] > 0)
     print(f"  {n_constraints} constraints, {n_presheaves} presheaves, "

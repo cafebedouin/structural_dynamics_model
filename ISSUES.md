@@ -7438,6 +7438,55 @@ close. Lineage: OQ-57, OQ-115.
 
 ---
 
+## OQ-146 — Orbits top-level metadata (`corpus_hash`) poisons consumers that iterate the file as constraints
+
+**Ω-type:** Ω_E (mechanical; latent type_error armed by an upstream stamp).
+
+**Status:** resolved — fixed 2026-06-18; single-source partition-and-assert loader + 6 consumers repointed.
+
+**Priority:** 4
+
+**Deps:** splits_from OQ-29
+
+**Origin:** OQ-29 made `corpus_hash` stamping standard, including a **top-level `corpus_hash` key
+inside `outputs/product_site_orbits.json`** (flat `{id: {h0,h1,contexts,…}}` dict, no namespace
+separating metadata from constraints). Any consumer iterating the top-level keys *as if each were a
+constraint* now hits `corpus_hash` (a `str`) and crashes — "worked before" because un-stamped orbits
+had no such key. Surfaced as the `oracle_gap_analysis.py:143` crash (`entry["contexts"]` on a str),
+first patched with an **inline** filter (`7b5801f0`). A set-level census found it systemic. **Census
++ positive control:** `git grep -ln product_site_orbits` → per file grep iteration idioms; the
+control re-found all five known exposures **and** surfaced `structural_config_sensitivity.py:529`
+(missed by an `.items()`-only grep) — so empty hits elsewhere are looked-and-absent, not never-looked.
+Exposed: `product_site_delta_sweep.py:117`, `structural_config_sensitivity.py:363/529`,
+`alt_power_transform_test{,_3k}.py:~96`, `game_theory_nash.py:158` (only `--input
+product_site_orbits.json`), `oracle_gap_analysis.py:143`.
+
+**Resolution.** One canonical, fail-loud predicate `shared.loader.load_orbits_constraints` —
+**partition-and-assert**: keep dict-with-`contexts` as constraints, drop only affirmatively-named
+metadata (`_ORBITS_METADATA_KEYS = {"corpus_hash"}`), **raise** on any unclassifiable top-level key
+(a malformed constraint or a new metadata key fails loud, never silent-undercount). Rejected: silent
+shape-filter (undercount reads as success), inline-per-consumer (forks the predicate — Pattern 2),
+schema re-namespace (breaks every OQ-29 guard + the swipl exporter), sidecar (re-adds drift surface).
+All 6 consumers repointed to the helper (the inline `7b5801f0` filter replaced too). **Crash-over-drop
+is safe by producer construction** (RULED, not empty-grepped): `product_site_export.pl:80–96`
+`write_one_entry` emits `"contexts"` **unconditionally** for every constraint, and the context key set
+is a static Cartesian product (`constraint_indexing.pl:1052 site_contexts_product/1`) that never reads
+the corpus → every entry in the live corpus **and every archive** carries `contexts`; a top-level
+entry lacking it can only be post-export metadata or corruption — exactly what should raise.
+
+**Witnesses (set-level, 2026-06-18).** (1) PRIMARY set-equality (RHS hardcodes the literal, NOT via
+`_ORBITS_METADATA_KEYS`): `set(load_orbits_constraints(P)) == set(json.load(P)) − {"corpus_hash"}` →
+True (75 vs raw 76). (2) Partition-assert RAISES naming `junk` on injected `{"junk":{"h1":0.5}}` (the
+dict-without-`contexts` shape a silent filter would have eaten). (3) `orbit_data.json` no-op witnessed
+directly: raw len 75, zero non-constraint-shaped keys, helper len 75. (4) Per-consumer two-sided: each
+of the 5 accesses RAISES on raw, yields exactly **75** via helper; `oracle_gap_analysis.py` completes;
+`game_theory_nash.py --input outputs/product_site_orbits.json` TypeError→completes (75). (5) All 6
+files resolve `from shared.loader import load_orbits_constraints`. Provenance: KNOWN_STATE 2026-06-18;
+commit at close. Out of scope (separate corpus-size bug, not this class): `sheaf_audit.py:515`
+ZeroDivisionError on the small post-reset corpus. Lineage: OQ-29.
+
+---
+
 *Last updated: 2026-06-18. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

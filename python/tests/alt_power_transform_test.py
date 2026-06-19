@@ -26,6 +26,9 @@ PROLOG_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'prolog')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'outputs')
 RESULTS_PATH = os.path.join(os.path.dirname(__file__), '..', 'alt_power_transform_results.json')
 
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from shared.loader import load_orbits_constraints
+
 # All variants in order: baseline first, then the 6 alternatives.
 # sign_flip=True means f(institutional_d=0.0) < 0.
 VARIANTS = [
@@ -86,9 +89,12 @@ def run_variant(variant_name: str, out_json: str) -> bool:
 
 
 def parse_orbits(json_path: str) -> dict:
-    """Parse product_site_orbits JSON. Returns {constraint_id: {'h0': int, 'h1': int}}."""
-    with open(json_path) as f:
-        return json.load(f)
+    """Parse product_site_orbits JSON. Returns {constraint_id: {'h0': int, 'h1': int}}.
+
+    Partitions out top-level metadata (corpus_hash, OQ-29) when reading the live
+    baseline; the alt_<variant>.json exports carry no metadata and are a no-op.
+    """
+    return load_orbits_constraints(json_path)
 
 
 def presheaf_set(orbits: dict) -> set:

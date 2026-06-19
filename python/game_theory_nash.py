@@ -37,7 +37,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from shared.loader import load_json, ORBIT_JSON, PIPELINE_JSON, OUTPUT_DIR
+from shared.loader import load_json, load_orbits_constraints, ORBIT_JSON, PIPELINE_JSON, OUTPUT_DIR
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -138,7 +138,9 @@ def main():
     )
     args = parser.parse_args()
 
-    orbit_data = load_json(args.input, "orbit_data")
+    # Partition out top-level metadata (corpus_hash, OQ-29) when --input is the
+    # product-site orbits file; orbit_data.json carries none and is a no-op.
+    orbit_data = load_orbits_constraints(args.input)
     pipeline_data = load_json(PIPELINE_JSON, "pipeline_output")
 
     if not orbit_data or not pipeline_data:

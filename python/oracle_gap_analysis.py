@@ -24,6 +24,7 @@ RESULTS_PATH = Path(__file__).resolve().parent / "oracle_gap_results.json"
 import sys
 sys.path.insert(0, str(ROOT / "python"))
 from corpus_hash import compute_corpus_hash
+from shared.loader import load_orbits_constraints
 
 POWERS = ["powerless", "moderate", "institutional", "analytical"]
 
@@ -36,13 +37,10 @@ CANONICAL_CONTEXTS = {
 
 
 def load_data():
-    with open(ORBITS_PATH) as f:
-        orbits = json.load(f)
     # The orbits file carries top-level metadata alongside per-constraint entries
-    # (e.g. corpus_hash, OQ-29). Keep only constraint-shaped entries (dict with
-    # "contexts") so the per-constraint iterations below don't choke on a string.
-    orbits = {cid: e for cid, e in orbits.items()
-              if isinstance(e, dict) and "contexts" in e}
+    # (e.g. corpus_hash, OQ-29); load_orbits_constraints partitions them out and
+    # fails loud on an unclassifiable key (single canonical predicate).
+    orbits = load_orbits_constraints(ORBITS_PATH)
     with open(PIPELINE_PATH) as f:
         pipeline = json.load(f)
     perspectives = {e["id"]: e["perspectives"] for e in pipeline["per_constraint"]}

@@ -24,6 +24,9 @@ PROLOG_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'prolog')
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'outputs')
 RESULTS_PATH = os.path.join(os.path.dirname(__file__), '..', 'alt_power_transform_results_3k.json')
 
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from shared.loader import load_orbits_constraints
+
 VARIANTS = [
     ('sigmoid',           True,  'baseline sigmoid'),
     ('piecewise_linear',  True,  'piecewise linear, sign-flip preserved'),
@@ -92,8 +95,9 @@ def run_variant(variant_name: str, out_json: str) -> bool:
 
 
 def parse_orbits(json_path: str) -> dict:
-    with open(json_path) as f:
-        return json.load(f)
+    # Partition out top-level metadata (corpus_hash, OQ-29); alt3k_<variant>.json
+    # exports carry none and are a no-op.
+    return load_orbits_constraints(json_path)
 
 
 def presheaf_set(orbits: dict) -> set:

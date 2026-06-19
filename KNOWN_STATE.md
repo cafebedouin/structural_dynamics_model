@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-18 — OQ-146: orbits metadata-key landmine — single-source `load_orbits_constraints`
+**Files:** python/shared/loader.py, python/oracle_gap_analysis.py, python/game_theory_nash.py, python/sweeps/product_site_delta_sweep.py, python/sweeps/structural_config_sensitivity.py, python/tests/alt_power_transform_test.py, python/tests/alt_power_transform_test_3k.py, ISSUES.md
+**Tier:** landed
+
+OQ-29 stamping put a top-level `corpus_hash` (a `str`) into `product_site_orbits.json`, a flat
+`{id:{…,contexts}}` dict with no metadata namespace. Every consumer iterating top-level keys as
+constraints crashed on it ("worked before" = un-stamped orbits had no such key). Census (`git grep
+-ln product_site_orbits` + iteration-idiom grep; positive control re-found all 5 known exposures
+**and** surfaced `structural_config_sensitivity.py:529`) → 6 exposed consumers. Fix: one fail-loud
+predicate `shared.loader.load_orbits_constraints` — **partition-and-assert**: keep dict-with-`contexts`,
+drop only allowlisted metadata (`_ORBITS_METADATA_KEYS={"corpus_hash"}`), **raise** on any
+unclassifiable top-level key (no silent undercount). All 6 consumers repointed (inline `7b5801f0`
+filter in oracle_gap replaced too). **Crash-over-drop ruled safe by producer construction:**
+`product_site_export.pl:80–96` emits `"contexts"` unconditionally; key set is a static Cartesian
+product (`constraint_indexing.pl:1052`) that never reads the corpus → every entry (live + every
+archive) has `contexts`; a top-level entry lacking it can only be metadata/corruption.
+
+**Tripwire (NOT promoted — distinct from a silent mistake; the failure is a loud crash):** anywhere
+you iterate an orbits file as constraints, use `load_orbits_constraints`, never raw `json.load` +
+`.items()`. When a new top-level metadata key is added, hand-bump `_ORBITS_METADATA_KEYS` AND the
+hardcoded literal in the loader's set-equality test (the deliberately-unshared literal is the
+tripwire proving the metadata set was consciously expanded). Witnesses: ISSUES.md OQ-146 (set-equality
+75 vs raw 76; partition-assert raises naming `junk`; orbit_data.json no-op 75; per-consumer two-sided
+all yield exactly 75; oracle_gap + game_theory_nash run end-to-end). Out of scope: `sheaf_audit.py:515`
+ZeroDivisionError (corpus-size bug, not this class).
+
 ## 2026-06-18 — OQ-104: audit_citation_status.py built (standing checker, ungated)
 **Files:** python/audit_citation_status.py, ISSUES.md, audits/2026-06-18_oq104_citation_checker/
 **Tier:** landed

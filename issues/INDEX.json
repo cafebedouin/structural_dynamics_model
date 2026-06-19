@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "7b5801f04cb30beb43dc03e89bcdb09f93288e40",
+    "store_version": "f84d732b05d1aad2d4dc6e08129c2b40282c1168",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-18T21:04:19"
+    "generated_at": "2026-06-18T21:19:42"
   },
-  "issues_sha": "c503e3c599b334bf94905e50192404cb22b2afe3659edadfd152e689c5f39196",
-  "n_entries": 145,
+  "issues_sha": "62eac91618bd3c617e69d5f2abf94ceeb0c63bc153e535e1f755df97b5c3df0a",
+  "n_entries": 146,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 67,
+    "resolved": 68,
     "mitigated": 6,
     "open": 59,
     "disposed": 3,
@@ -1881,6 +1881,19 @@
         "OQ-57",
         "OQ-115",
         "OQ-142"
+      ]
+    },
+    {
+      "id": "OQ-146",
+      "status": "resolved",
+      "priority": 4,
+      "summary": "Orbits top-level metadata (`corpus_hash`) poisons consumers that iterate the file as constraints",
+      "deps": [
+        "splits_from OQ-29"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-29"
       ]
     }
   ]

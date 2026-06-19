@@ -39,6 +39,7 @@ RESULTS_PATH = Path(__file__).resolve().parent / "product_site_delta_results.jso
 # Corpus fingerprint for staleness stamping (OQ-29)
 sys.path.insert(0, str(ROOT / "python"))
 from corpus_hash import compute_corpus_hash
+from shared.loader import load_orbits_constraints
 
 POWERS = ["powerless", "moderate", "institutional", "analytical"]
 
@@ -81,9 +82,9 @@ PRODUCT_OVERLAY = """\
 # ---------------------------------------------------------------------------
 
 def load_baseline():
-    """Load product_site_orbits.json as the δ=0 baseline."""
-    with open(ORBITS_PATH) as f:
-        return json.load(f)
+    """Load product_site_orbits.json as the δ=0 baseline (constraint entries only;
+    top-level metadata like corpus_hash partitioned out, OQ-29)."""
+    return load_orbits_constraints(ORBITS_PATH)
 
 
 def get_blocks(contexts: dict) -> dict:
