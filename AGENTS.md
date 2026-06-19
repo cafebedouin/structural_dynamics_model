@@ -567,6 +567,16 @@ finding (2026-02-28 audit) is **PRE-RESET / kernel_v1-regime** (measured before 
 treating it as current. If you change a param, re-run and confirm it is still inert;
 the result files now carry a `corpus_hash` (unstamped/mismatched ⇒ stale).
 
+**Convention (OQ-29): every result-`*.json` producer stamps `corpus_hash`, every consumer
+checks it.** Import the single source — `from corpus_hash import compute_corpus_hash,
+assert_corpus_current` (`python/corpus_hash.py`) — never re-define the sha256 body (it forked
+four ways before consolidation). A new sweep/producer stamps `compute_corpus_hash(<the corpus it
+actually loaded>)` into its output dict at write time; a producer running against an ARCHIVE corpus
+stamps the archive's testsets dir, not the live one (a wrong-corpus stamp is worse than none). A
+consumer guards its input with `assert_corpus_current(path, testsets_dir)` (raise) or surfaces a
+STALE banner for report-style output — fail-closed on absence/mismatch, never read a dead-corpus
+file as authoritative.
+
 ### No pytest setup
 
 There is no `pytest.ini`, `conftest.py`, or `setup.cfg`. Testing is Prolog-native

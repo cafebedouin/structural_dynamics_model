@@ -777,10 +777,10 @@ asymmetry being named. *(body compressed at close per footer rule)*
 
 ## OQ-29 — Results stale against a moved corpus (general form of OQ-25 §5.11 scope)
 
-**Status:** open
+**Status:** partial — 2026-06-18: single-source helper + 10 live producers stamp + match-based consumer guards + orbits residual closed (Threads A–D). Residual: 4 outputs/audits producers still unstamped (below).
 **Priority:** 1
 **Origin:** Sweep-consolidation audit, 2026-05-29.
-**Files:** `python/bifurcation_results.json` (confirmed stale instance); 19 `*_results.json` files total (full list below).
+**Files:** `python/corpus_hash.py` (single-source fingerprint, 2026-06-18); `python/run_pipeline.py` (match guard); `python/enhanced_report.py` (persistence consumer guard); the 10 stamped producers; `python/bifurcation_results.json` (confirmed stale instance); 19 `*_results.json` files total (full list below).
 
 **Specific question:** All 19 `*_results.json` files carry no record of which corpus they were computed against (no `corpus_hash` or `manifest.code_commit` field — grep confirmed: 0/19 have either). How many are stale against the current `testsets/` corpus (corpus_path='testsets', 223 constraints)? Is it possible to tell from the file contents alone?
 
@@ -804,25 +804,67 @@ This defect class is NOT produced-but-not-consumed (most files have consumers) a
 `representation_robustness_results.json`, `structural_config_sensitivity_results.json`,
 `structural_config_sensitivity_results_original.json`, `test_battery_results.json`.
 
+*Disposition update (2026-06-18): reconciled 19→14 on disk (2 in `outputs/` gitignored,
+2 relocated to `audits/`, `alt_power_transform_results.json` plain already deleted). Of the
+14, `config_sensitivity_results_test.json` and `structural_config_sensitivity_results_original.json`
+were **deleted** (dead orphans). The 12 in-tree result files now carry `corpus_hash` on next
+producer run; the 4 `outputs/`+`audits/` producers are the RESIDUAL above.*
+
 Confirmed stale: `bifurcation_results.json` (constraint-level grep). Others unverified — they may be stale (if run against testsets_3000/) or current, but the file itself cannot tell you which.
 
 **What resolution changes:** Every `*_results.json` producer stamps a `corpus_hash` field (sha256 of the sorted list of loaded `.pl` filenames, or the git HEAD of `prolog/testsets/` at run time). The new `perturb()` primitive (`python/sweeps/perturb.py`) stamps `baseline_hash` at the orbit level — extend this pattern to all producers. Consumers check staleness: if current testsets hash ≠ stored hash, flag stale rather than read as authoritative. This is the file-level analogue of the Step-2 coverage gate in the sweep-consolidation primitive: a result computed against a dead corpus is the file-level cousin of a verdict computed with zero coverage.
 
-**Partial resolution (2026-05-29):**
-- `python/sweeps/perturb.py` now stamps `corpus_hash` (sha256 of sorted filename+content pairs from `prolog/testsets/*.pl`) in its output dict and checks the orbits file's stored hash before running
-- `python/run_pipeline.py` now stamps `corpus_hash` into `outputs/product_site_orbits.json` in its `_manifest_step` (the step that also stamps pipeline_output.json)
-- `python/sweeps/demotion_pass.py` stamps `corpus_hash` in its output JSON
-- Guard is **dormant** for orbits files lacking a `corpus_hash` field (all files produced before 2026-05-29). Soft warning emitted, not hard error. Guard becomes active on the next orbits regeneration + pipeline run. Confirm engagement with: run perturb and check that no "corpus_hash" warning appears in stderr.
-- Remaining unstamped: 18 `*_results.json` producers (the 19 from above minus demotion_pass.py). Not closed.
-- Standalone swipl path (`run_product_export`) does NOT auto-stamp — user must run `python3 python/run_pipeline.py` or call `_stamp_orbits_corpus_hash` manually after regenerating orbits.
-- content hash (not filename-only): detects in-place edits; does NOT detect changes in `testsets/<run_tag>/` subdirs.
+**Resolution (2026-06-18) — Threads A–D (all witnessed; commits `b6aefb5a`, `4ab980ff`, `7b016978`):**
+- **Thread A (single-source):** the corpus fingerprint lived in **four** byte-identical copies
+  (`perturb.py`, `run_pipeline.py`, `census_sweep.py` + the perturb-imported copies in
+  `regenerate_orbits.py`/`demotion_pass.py`) — the Pattern-2 silent fork that lets stamp and check
+  drift. Consolidated into **`python/corpus_hash.py`** (`compute_corpus_hash` +
+  fail-closed `assert_corpus_current`); all callers repointed (private name kept as alias). Identity
+  witness: every path = `d2b3ec9429f1` on current `testsets/`, byte-identical to the pre-merge
+  baseline. (Plan said 2 copies; grep found the 3rd — `census_sweep.py`.)
+- **Thread B (producers self-stamp at write time):** `config_sensitivity_sweep`,
+  `directionality_sensitivity_sweep`, `cognitive_displacement_sweep`, `oracle_gap_analysis`,
+  `game_theory_stability`, `product_site_delta_sweep`, `representation_robustness_sweep`,
+  `structural_config_sensitivity`, `bifurcation_sweep` — **plus `persistence_sweep`** (a 10th the
+  plan's 9-list missed: it produces `persistence_results.json`, consumed by `enhanced_report`).
+  `perturb`/`demotion_pass`/`regenerate_orbits` already stamped. Witness: 10/10 carry the stamp
+  (static); runtime control `game_theory_stability.json` freshly written with `corpus_hash`.
+  (Also fixed `persistence_sweep.py:32` standalone-import crash — `parents[2]`→`parents[1]`.)
+- **Thread C (consumers fail-closed):** `assert_corpus_current` requires the field AND matches it;
+  raises on mismatch/absence (never pass-open on a possibly-dead corpus). The OLD known weakness —
+  `run_pipeline.check_orbits_corpus_hash` was **presence-only**, so a stale-but-stamped orbits file
+  passed — is **closed**: upgraded to a match-check (the `_stamp_orbits_corpus_hash` post-hoc stamp
+  is already gone; `regenerate_orbits.py` is atomic — swipl export + stamp in one invocation).
+  `enhanced_report.build_persistence_section` now surfaces STALE/WARNING instead of silently
+  rendering a dead-corpus persistence file; `persistence_sweep` warns when its bifurcation input is
+  stale. Three-sided witness: match=pass, mismatch=raise, absent=raise, no-file=pass.
+- **Thread D (existing data):** a **set-level** doc-citation probe (positive control: flags v3 +
+  bifurcation) corrected the plan's "5 dead orphans, none cited":
+  - **Deleted** (genuinely producerless + uncited beyond this list): `config_sensitivity_results_test.json`,
+    `structural_config_sensitivity_results_original.json`.
+  - **Kept, excluded as a class** — `alt_power_transform_results_3k.json`, `test_battery_results.json`
+    have LIVE test producers in `python/tests/` (write-only; no reader anywhere). They are test
+    artifacts, not authoritative analysis results. `alt_power_transform_test_3k` runs vs the **3k
+    archive**, so a testsets-keyed stamp would be **affirmatively wrong** — the named reason
+    blanket-stamping is unsound (a producer must stamp ITS OWN corpus, archive or live).
+  - **Kept + annotated** — `config_sensitivity_results_v3.json` is doc-cited (`config_sensitivity_v3.md`).
+  - **Pre-reset annotations** on the live-framed citations: `project_orientation.md`,
+    `config_sensitivity_v3.md`, `CONFIG_SENSITIVITY.md`, and **`AGENTS.md`** (the set-probe caught
+    this third live-framed site the plan's "only two" missed).
+- content hash (not filename-only): detects in-place edits; does NOT detect changes in
+  `testsets/<run_tag>/` subdirs (unchanged limit).
 
-**Known weakness in the stamp-then-check pattern (2026-05-29):**
-The guard's invariant requires stamp-happens-atomically-with-generation. `_stamp_orbits_corpus_hash` in `_manifest_step` post-processes whatever orbits file exists — it does NOT regenerate orbits. If the orbits file is stale and the user runs `python3 python/run_pipeline.py` without first regenerating orbits, the pipeline will stamp the stale file with the current corpus hash, causing Guard 2 to silently pass on a stale baseline. This is OQ-29 one layer in.
-
-The current `outputs/product_site_orbits.json` was stamped in place without regeneration (2026-05-29): it covers 191/223 current readings (all 191 are in current testsets; 32 current readings absent — produced from an earlier partial run). The corpus_hash check passes because the testset FILES haven't changed since the orbits were produced. The 32 missing readings are a coverage gap not detected by the hash guard.
-
-**Correct fix (not yet implemented):** Stamp must happen inside (or immediately after, in the same subprocess invocation as) the swipl step that produces the orbits. The Python-side `_stamp_orbits_corpus_hash` is only trustworthy when called directly after `run_product_export` in the same process — not as a separate pipeline step that runs regardless of whether orbits were regenerated.
+**RESIDUAL (why partial, not resolved):** four more LIVE producers write the staleness class but were
+scoped out of the plan's python/ population as "reconciled away" — they are NOT stamped:
+`python/axiom_reachability.py` → `outputs/axiom_reachability_results.json`;
+`python/sweeps/epsilon_sensitivity.py` → `outputs/epsilon_sensitivity_results.json` (**and
+`enhanced_report.py:1903` consumes it for the Fisher section** — an unguarded consumer);
+`python/audits/metric_audit.py` → `outputs/metric_audit_results.json`;
+`python/audits/sheaf_audit.py` → `outputs/sheaf_audit_results.json`. The two `audits/` scripts are
+one-shot audit producers (writeups move to dated subdirs), arguably a different class than re-run
+sweeps — a per-file ruling, not a blanket stamp. Next step: stamp axiom_reachability +
+epsilon_sensitivity (same Thread-B pattern) and guard the Fisher consumer; rule on the two audit
+scripts. (Test-artifact class above is closed, not residual.)
 
 ---
 

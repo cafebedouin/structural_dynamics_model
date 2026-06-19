@@ -45,6 +45,43 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-18 — OQ-29 PARTIAL: corpus_hash single-sourced; 10 producers stamp; consumer guards fail-closed
+**Files:** python/corpus_hash.py, python/run_pipeline.py, python/enhanced_report.py, python/sweeps/perturb.py, python/sweeps/census_sweep.py, python/sweeps/persistence_sweep.py, AGENTS.md, ISSUES.md
+**Tier:** landed
+
+The corpus staleness fingerprint was a **Pattern-2 silent fork** — four byte-identical
+`_compute_corpus_hash` copies (`perturb.py`, `run_pipeline.py`, `census_sweep.py`, + the
+perturb-imported copies). The plan's census found 2; grep found the 3rd (`census_sweep.py`).
+Consolidated into `python/corpus_hash.py` (`compute_corpus_hash` + fail-closed
+`assert_corpus_current`); identity witness = every path `d2b3ec9429f1` on current `testsets/`.
+Commits `b6aefb5a` (A), `4ab980ff` (B/C), `7b016978` (D).
+
+- **10 producers self-stamp** (Thread B): the 9 plan-listed sweeps + `persistence_sweep` (a 10th
+  the plan missed — it produces `persistence_results.json`, consumed by `enhanced_report`). Also
+  fixed `persistence_sweep.py:32` standalone-import crash (`parents[2]`→`parents[1]`).
+- **Consumer guards fail-closed** (Thread C): `run_pipeline.check_orbits_corpus_hash` upgraded
+  presence-only → match (closes the residual: a stale-but-stamped orbits file used to pass);
+  `enhanced_report.build_persistence_section` surfaces STALE/WARNING; `persistence_sweep` warns on a
+  stale bifurcation input. Three-sided witness: match=pass, mismatch/absent=raise, no-file=pass.
+- **Thread D, set-level discipline corrected the plan twice:** plan said "5 dead orphans, none
+  cited." A set-level doc-citation probe (positive control: flags v3 + bifurcation) showed only 2
+  are clean deletes (`config_sensitivity_results_test`, `structural_config_sensitivity_results_original`
+  — deleted). Two others (`alt_power_transform_results_3k`, `test_battery_results`) have LIVE
+  write-only test producers in `python/tests/` (no reader anywhere) → kept, excluded as a class
+  (one runs vs the 3k ARCHIVE, so a testsets-keyed stamp would be wrong). One
+  (`config_sensitivity_results_v3`) is doc-cited → kept + annotated. Pre-reset annotations added to
+  `project_orientation.md`, `config_sensitivity_v3.md`, `CONFIG_SENSITIVITY.md`, **AGENTS.md** (the
+  set-probe caught a third live-framed site the plan's "only two" missed).
+- **RESIDUAL (OQ-29 stays `partial`):** 4 more LIVE producers were scoped out as "reconciled away"
+  but still run unstamped — `axiom_reachability.py`, `epsilon_sensitivity.py` (consumed by
+  `enhanced_report.py:1903` for Fisher — unguarded), `audits/metric_audit.py`, `audits/sheaf_audit.py`.
+  Next: stamp the 2 sweeps + guard the Fisher consumer; rule on the 2 one-shot audit scripts.
+
+**Promotion test:** the standing convention ("new producers stamp `corpus_hash` via
+`corpus_hash.py`, never re-define the body; archive runs stamp the archive corpus") is promoted to
+AGENTS.md (Config sensitivity sweep §); not CLAUDE.md (not a silent-mistake tripwire before editing a
+named file — it's a build-time convention for NEW producers).
+
 ## 2026-06-18 — OQ-115 RESOLVED: abductive_helpers phantom under [stack] fixed; check_stack back to 4-finding baseline
 **Files:** prolog/stack.pl, prolog/signature_detection.pl, prolog/check_stack.pl, ISSUES.md (OQ-115, OQ-142/143/144/145)
 **Tier:** landed
