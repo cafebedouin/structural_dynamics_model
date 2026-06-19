@@ -647,7 +647,7 @@
     },
     "stakeholders": {
       "type": "array",
-      "description": "Phase-A stakeholder layer (OQ-83; optional alongside perspectives during the A/B perturbation pair — the four-tuple arm is the control arm and is NOT retired until the cross-framing diff is produced and preserved, R4). Named agents with declared roles from the StakeholderRole dial-set. AUTHORED-EMPTY RULE (Pattern-5 guard: absence must never satisfy a gate): an explicitly empty array asserts 'no entity's arrangements depend on this constraint' and REQUIRES six_questions.disappearance_verdict = world_unchanged (enforced below); omitting the field entirely means 'not authored under the stakeholder surface', which is a different fact.",
+      "description": "Named agents with declared roles from the StakeholderRole dial-set, plus the six-questions interview (the agent surface; the engine computes per-seat classifications). REQUIRED WHENEVER THE CONSTRAINT HAS PARTIES: if base_properties.beneficiaries or victims is non-empty, you MUST author the same agents here (enforced by the stakeholder-coverage rule in allOf). The agents you name in KEY AGENTS / beneficiaries / victims belong here as structured stakeholders. EXEMPT only for a genuine mountain with no beneficiaries/victims (e.g. gravity) — it has no parties to name. AUTHORED-EMPTY RULE (Pattern-5 guard: absence must never satisfy a gate): an explicitly empty array asserts 'no entity's arrangements depend on this constraint' and REQUIRES six_questions.disappearance_verdict = world_unchanged (enforced below) — and is only valid when there are no beneficiaries/victims; omitting the field entirely means 'not authored under the stakeholder surface', a different fact. (History: this layer was loosened to optional during the perspectives-vs-stakeholder A/B perturbation, OQ-83/R4; that 'optional' signal caused weaker generators to drop it even when parties existed — the coverage rule restores the contract without forcing it on gravity.)",
       "items": {
         "$ref": "#/$defs/Stakeholder"
       }
@@ -905,6 +905,26 @@
   },
   "additionalProperties": false,
   "allOf": [
+    {
+      "$comment": "Stakeholder-coverage rule (2026-06-19): a constraint that NAMED parties — non-empty base_properties.beneficiaries or victims — must also author them on the stakeholders[] agent surface (the same agents, with roles + the six-questions interview). A genuine mountain with NO beneficiaries/victims (gravity) is exempt: it has no parties to name. Closes the false-negative class where the weaker generator economized on the prose-required-but-schema-optional field: 423/466 haiku no-stakeholder stories had authored parties (OQ-149; audits/2026-06-18_oq56_twin_within_kernel_perturbation/). The authored-empty case (empty stakeholders + Q5 world_unchanged) is a different fact, governed by the Pattern-5 guard block below and disjoint from this one (a constraint with parties cannot also be authored-empty).",
+      "if": {
+        "properties": {
+          "base_properties": {
+            "anyOf": [
+              { "properties": { "beneficiaries": { "type": "array", "minItems": 1 } }, "required": ["beneficiaries"] },
+              { "properties": { "victims": { "type": "array", "minItems": 1 } }, "required": ["victims"] }
+            ]
+          }
+        },
+        "required": ["base_properties"]
+      },
+      "then": {
+        "required": ["stakeholders"],
+        "properties": {
+          "stakeholders": { "type": "array", "minItems": 1 }
+        }
+      }
+    },
     {
       "if": {
         "properties": {
