@@ -1,0 +1,268 @@
+{
+  "header": {
+    "constraint_id": "nad_precursor_bioavailability",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "3b435561-363d-4a3e-92c2-04b3654e42db"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "NAD+ Precursor Bioavailability Constraint",
+    "topic_domain": "biomedical/aging_biology/nutritional_biochemistry",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "supplement_manufacturers",
+      "longevity_influencers"
+    ],
+    "victims": [
+      "consumers_expecting_functional_improvement",
+      "aging_adults_with_limited_resources"
+    ],
+    "vindicated_propositions": [
+      "nad_decline_aging_hypothesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "supplement_manufacturers",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Manufacture and market NR (nicotinamide riboside) and NMN (nicotinamide mononucleotide) supplements at premium prices, citing published research showing circulating NAD+ elevation. Frame the products as anti-aging interventions targeting mitochondrial function and cellular energy. Control messaging through direct-to-consumer marketing, influencer partnerships, and selective citation of biomarker studies. Can pivot to alternative longevity compounds if market pressure mounts."
+    },
+    {
+      "name": "consumers_expecting_functional_improvement",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Purchase NAD+ precursors expecting cognitive enhancement, improved vascular function, or increased physical performance based on marketing claims and circulating NAD+ data. Pay premium prices for months or years. Functional outcomes remain subjective or absent; blood tests may show NAD+ elevation but no corresponding improvement in the outcomes that motivated purchase. Exit requires acknowledging sunk costs and abandoning hope in a widely-promoted intervention."
+    },
+    {
+      "name": "aging_adults_with_limited_resources",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Allocate limited discretionary income to NAD+ precursors based on fear of cognitive decline and promises of healthspan extension. Cannot afford comprehensive health interventions; the supplement represents a significant monthly expense. Lack resources to independently verify claims or access alternative interventions. Trapped by asymmetric information and the psychological cost of admitting the expenditure was ineffective."
+    },
+    {
+      "name": "longevity_influencers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Promote NAD+ precursors through affiliate relationships, sponsored content, and personal testimonials. Benefit from commission structures and audience growth. Cite circulating NAD+ studies as evidence while eliding the functional outcome gap. Can shift to promoting alternative compounds if NAD+ precursors lose credibility without reputational cost."
+    },
+    {
+      "name": "aging_biology_researchers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Conduct controlled trials measuring both circulating NAD+ and functional outcomes. Publish findings showing consistent biomarker elevation but minimal functional improvement in humans. Observe the gap between their published data and commercial claims. Some receive industry funding for biomarker studies; others pursue independent mechanistic research on tissue-specific NAD+ metabolism."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Classify NAD+ precursors as dietary supplements rather than drugs, exempting them from efficacy requirements. Monitor for safety signals but do not require demonstration of functional benefit. Could reclassify if sufficient adverse events accumulate or if manufacturers make explicit disease claims, but current regulatory framework treats biomarker elevation as sufficient for market access."
+    },
+    {
+      "name": "mitochondrial_biologists",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study tissue-specific NAD+ compartmentalization and the demand-signal mechanisms that regulate mitochondrial NAD+ utilization. Their research suggests circulating NAD+ elevation does not reliably translate to functional mitochondrial NAD+ availability without corresponding demand signals. This mechanistic understanding is largely absent from commercial messaging and consumer understanding."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a measurable intervention targeting a validated aging biomarker (NAD+ decline) with a clear mechanism of action (precursor supplementation) and objective verification (blood NAD+ testing).",
+    "transfer_function": "Moves money from consumers seeking healthspan extension to supplement manufacturers and affiliated marketers, in exchange for compounds that elevate circulating NAD+ without reliably producing the functional improvements that motivated purchase.",
+    "absent_voices": "Mitochondrial biologists studying tissue-specific NAD+ compartmentalization and demand-signal requirements are structurally excluded from the commercial conversation. Their mechanistic understanding of why circulating NAD+ elevation may not translate to functional benefit is not represented in marketing materials or consumer decision-making.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint vanished overnight and consumers had full access to the functional outcome data, the premium NAD+ precursor market would collapse within months. Consumers would reallocate spending to interventions with demonstrated functional benefits. Manufacturers would pivot to alternative longevity compounds. The research community would refocus on understanding tissue-specific NAD+ metabolism rather than measuring circulating levels.",
+    "founding_problem": "NAD+ levels decline with age across multiple tissues, and this decline correlates with mitochondrial dysfunction, cellular senescence, and age-related pathology in animal models. Early preclinical studies showed NAD+ precursor supplementation could reverse some age-related deficits in mice.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Supplement manufacturers and some aging biology researchers attest the problem is live and the intervention is effective, citing circulating NAD+ elevation and selected animal studies. Independent researchers conducting human trials with functional endpoints, mitochondrial biologists studying compartmentalization, and systematic reviews of human trial data attest that circulating NAD+ elevation does not reliably translate to functional improvement in humans. Multiple published meta-analyses from researchers without industry ties support the functional-outcome-gap reading."
+  },
+  "gain_flow": "supplement_manufacturers",
+  "fixing_cost": "cheap",
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "NAD+ precursor supplements (NR and NMN) are marketed as anti-aging interventions based on research showing age-related NAD+ decline and preclinical studies in animal models. Human trials consistently demonstrate circulating NAD+ elevation but minimal functional improvement in cognition, vascular function, or physical performance. The constraint operates through the gap between a measurable biomarker (blood NAD+) and the functional outcomes consumers seek. Manufacturers and influencers emphasize the biomarker data while eliding the functional outcome gap. The claim/metric independence is maintained: the constraint is claimed as snare (pure extraction with coordination cover story) while metrics describe the actual extractive operation and the enforcement required to maintain information asymmetry.",
+    "logic_rationale": "Extractiveness is substantial (0.68) because consumers pay premium prices for months or years without receiving the functional benefits that motivated purchase. The transfer is sustained by information asymmetry: circulating NAD+ data is widely cited while functional outcome data remains in specialist literature. Suppression is high (0.71) because the constraint's persistence depends on actively maintaining this information asymmetry through selective citation, influencer marketing, and regulatory classification that exempts supplements from efficacy requirements. Theater ratio is moderate (0.42): the biomarker elevation is real and the preclinical research is genuine, but an increasing share of the commercial apparatus exists to defend the biomarker-as-proxy-for-benefit framing rather than to deliver functional improvement. Accessibility collapse is moderate (0.48) because alternative interventions exist but require more effort or different framing. Resistance is substantial (0.58) as independent researchers publish functional outcome data and some consumers publicly document their null results.",
+    "directionality_logic": "Supplement manufacturers are the primary beneficiaries (d near 0.1): they collect revenue, control messaging, and can exit to alternative compounds without loss. Longevity influencers are secondary beneficiaries (d near 0.2): they profit from affiliate relationships and audience growth with minimal accountability for outcomes. Consumers expecting functional improvement are the primary targets (d near 0.85): they bear the financial cost and opportunity cost of foregone effective interventions, with constrained exit due to sunk costs and hope. Aging adults with limited resources are maximally extracted (d near 0.95): trapped by information asymmetry and resource constraints. Researchers and regulators occupy analytical positions (d near 0.5): they observe the structure but are not directly extracted from or benefiting.",
+    "perspectival_gap": "From the manufacturer seat, the constraint operates as legitimate commerce: they sell a compound that demonstrably raises circulating NAD+, cite published research, and make no explicit disease claims. From the constrained consumer seats, the same structure operates as extraction: they pay for functional improvement that does not materialize, sustained by selective presentation of biomarker data. The engine computes this divergence from the structural positions; the authored claim does not adjudicate between these framings.",
+    "mandatrophy_analysis": "The constraint is not mislabeled coordination. The coordination function (providing a measurable intervention targeting a validated biomarker) is real but minimal relative to the extraction. The functional outcome gap is not a coordination failure but the structural feature that enables extraction: if consumers had full access to functional outcome data, they would not purchase at current prices or volumes. The constraint persists not because it solves a coordination problem but because information asymmetry and regulatory classification suppress the functional outcome signal."
+  },
+  "omegas": [
+    {
+      "id": "tissue_specific_nad_compartmentalization",
+      "question": "Does circulating NAD+ elevation reliably translate to functional NAD+ availability in the tissue compartments (mitochondria, nucleus) where NAD+-dependent processes occur?",
+      "resolution_mechanism": "Tissue biopsy studies measuring compartment-specific NAD+ levels and NAD+-dependent enzyme activity in humans supplementing with precursors, correlated with functional outcomes. Mechanistic studies of NAD+ transport across mitochondrial membranes and demand-signal requirements.",
+      "impact": "If compartmentalization prevents functional NAD+ delivery, the entire precursor supplementation approach is mechanistically flawed and the constraint is pure extraction. If compartmentalization is overcome by higher doses or specific formulations, some functional benefit may be achievable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether circulating NAD+ reaches functional compartments in human tissues."
+    },
+    {
+      "id": "demand_signal_requirement",
+      "question": "Is NAD+ availability the rate-limiting factor for mitochondrial function in aging humans, or is the limitation in demand signals (exercise, metabolic stress) that drive NAD+ utilization?",
+      "resolution_mechanism": "Controlled trials comparing NAD+ precursors alone versus precursors combined with interventions that increase metabolic demand (exercise, caloric restriction). Mechanistic studies of AMPK and SIRT1 activation requirements.",
+      "impact": "If demand signals are rate-limiting, NAD+ precursors without corresponding lifestyle interventions will remain ineffective regardless of bioavailability. This would explain the functional outcome gap and suggest the constraint is extraction riding on a misidentified bottleneck.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether NAD+ supply or demand signals limit mitochondrial function in aging."
+    },
+    {
+      "id": "biomarker_proxy_validity",
+      "question": "Is circulating NAD+ a valid proxy for the functional outcomes consumers seek, or is the biomarker-outcome correlation weak enough that elevation without functional benefit is the expected result?",
+      "resolution_mechanism": "Systematic review of human trials measuring both circulating NAD+ and functional outcomes. Meta-analysis of correlation strength between biomarker change and functional change across studies.",
+      "impact": "If the biomarker-outcome correlation is weak, the commercial framing is fundamentally misleading and the constraint is extraction by design. If the correlation is strong but functional benefits require longer duration or higher doses, the constraint may be coordination with implementation failures.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether circulating NAD+ predicts functional improvement in humans."
+    },
+    {
+      "id": "regulatory_classification_lock_in",
+      "question": "Does the dietary supplement classification create a structural incentive to market biomarker elevation rather than pursue drug development with functional endpoints?",
+      "resolution_mechanism": "Economic analysis of development costs and market access timelines for supplement versus drug pathways. Historical analysis of compounds that transitioned from supplement to drug classification.",
+      "impact": "If supplement classification enables profitable marketing without efficacy demonstration, manufacturers have no incentive to pursue functional outcome trials and the constraint is sustained by regulatory arbitrage. If drug development is economically viable, the current state represents a transitional market failure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether regulatory structure incentivizes biomarker marketing over functional development."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of mitochondrial_demand_signal_deficiency. The upstream constraint describes the mechanistic gap (NAD+ supply without demand signals); this constraint describes the commercial extraction enabled by that gap. They form a constraint family where the mechanistic understanding (tangled_rope) enables the commercial structure (snare)."
+  },
+  "directionality_overrides": [],
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-18",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-4-5-20250929",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
