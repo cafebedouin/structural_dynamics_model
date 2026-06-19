@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "2c441ab9c39354136ed6c3dcae9e1c833ebe45f6",
+    "store_version": "4bcca495b704c7ffff5c56f6fcfb046d020d2e62",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-18T19:31:22"
+    "generated_at": "2026-06-18T19:35:37"
   },
-  "issues_sha": "9c5ca83acbb3adbbe6a53cc84765a0ebe5040e30c9d055d0a86df43d37b67b0f",
+  "issues_sha": "fb6295bfd728c9a5f8c30c2716dfe053e1cbe1e767e9e10ec70f550aba531e65",
   "n_entries": 145,
   "active_token_set": [
     "investigating",
@@ -12,9 +12,9 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 65,
+    "resolved": 66,
     "mitigated": 6,
-    "open": 61,
+    "open": 60,
     "disposed": 3,
     "partial": 7,
     "future": 3
@@ -868,21 +868,6 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-86",
-        "OQ-115",
-        "OQ-142"
-      ]
-    },
-    {
-      "id": "OQ-145",
-      "status": "open",
-      "priority": 5,
-      "summary": "`narrative_ontology:requires_active_enforcement/1` ← drift_events.pl:175 (latent wrong-qualifier; OQ-57-class the OQ-57 fix missed)",
-      "deps": [
-        "splits_from OQ-142"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-57",
         "OQ-115",
         "OQ-142"
       ]
@@ -1881,6 +1866,21 @@
         "OQ-83",
         "OQ-86",
         "OQ-121"
+      ]
+    },
+    {
+      "id": "OQ-145",
+      "status": "resolved",
+      "priority": 5,
+      "summary": "`narrative_ontology:requires_active_enforcement/1` ← drift_events.pl:175 (latent wrong-qualifier; OQ-57-class the OQ-57 fix missed)",
+      "deps": [
+        "splits_from OQ-142"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-57",
+        "OQ-115",
+        "OQ-142"
       ]
     }
   ]

@@ -77,6 +77,15 @@ only by being unreached. Tracked as **OQ-142** (parent) + **OQ-143/144/145** (th
 invisible to `issues_status`/`omega_resolver`, witnessed). **Promotion test:** stays history —
 the failure is a loud `existence_error`, not a silent miscompute.
 
+**OQ-145 RESOLVED same session (the one code change of the sweep):** `drift_events.pl:175`
+wrong qualifier `narrative_ontology:` → `domain_priors:` (mirrors the OQ-57 sibling fix at
+`:236`). Reachability control-backed before landing: static unreached (probe 0, positive control
+`drift_event`=19 fired), runtime-constructed path left explicitly unverified — fix correct
+regardless. **Witness (cold `[stack]`, synthetic constraint extractiveness 0.05 / theater_ratio
+0.80 to reach `:175`):** before → THREW `existence_error(procedure,
+narrative_ontology:requires_active_enforcement/1)` in `context(drift_events:detect_is_piton/1)`;
+after → `SUCCEEDED_CLEAN`. **check_stack baseline now 3** (was 4). OQ-143/144 remain annotate-only.
+
 ## 2026-06-18 — OQ-111 RESOLVED: dead data_repair omega bridge retired (zero-diff removal)
 **Files:** prolog/data_repair.pl, ISSUES.md (OQ-111), docs/design/design_gaps.md (GAP-13)
 **Tier:** landed
@@ -3009,18 +3018,19 @@ four got standard-SWI fixes. Commit A (`1460e873`, behavior-preserving) + Commit
   VERIFIED restore (throws `probe_restore_failed`), fact-only with rule-clause warning,
   module-qualification required. 10 plunit tests passing
   (`prolog/tests/test_probe_harness.pl`).
-- **check_stack.pl**: library(check) over the stack. **Baseline (2026-06-04, engine-only):
-  4 undefined-predicate references** — `data_repair:constraint_beneficiary/2` (:134, :174),
-  `data_repair:constraint_victim/2` (:147), `narrative_ontology:requires_active_enforcement/1`
-  (drift_events.pl:175), `validation_suite:test_case/4` (test_harness.pl:26) — plus load
-  warnings (constraint_instances weak-import overrides, one singleton, one not-exported
-  import in arakelov_height). Findings beyond this list = regressions. NOT wired as a
-  pipeline gate while the baseline is non-empty. **Each of these 4 is now tracked with its
-  own non-bite witness under OQ-142** (parent; from the OQ-115 class sweep): OQ-143
-  (validation_suite guarded phantom), OQ-144 (data_repair xref mis-attribution of a clean
-  dynamic call), OQ-145 (drift_events:175 latent wrong-qualifier — the one real fix pending).
-  The OQ-115 +1 (`abductive_helpers:known_override_signature/1` ← signature_detection:1624)
-  was RESOLVED 2026-06-18 (loaded in stack.pl); the baseline is back to exactly these 4.
+- **check_stack.pl**: library(check) over the stack. **Baseline (UPDATED 2026-06-18, engine-only):
+  3 undefined-predicate references** — `data_repair:constraint_beneficiary/2` (:134, :174),
+  `data_repair:constraint_victim/2` (:147), `validation_suite:test_case/4` (test_harness.pl:26)
+  — plus load warnings (constraint_instances weak-import overrides, one singleton, one
+  not-exported import in arakelov_height). Findings beyond this list = regressions. NOT wired as
+  a pipeline gate while the baseline is non-empty. **Each is tracked with its own non-bite
+  witness under OQ-142** (parent; from the OQ-115 class sweep): OQ-143 (validation_suite guarded
+  phantom), OQ-144 (data_repair xref mis-attribution of a clean dynamic call) — both
+  annotate-only. **Two findings removed 2026-06-18:** the OQ-115 +1
+  (`abductive_helpers:known_override_signature/1` ← signature_detection:1624; loaded in stack.pl),
+  and **OQ-145** (`narrative_ontology:requires_active_enforcement/1` ← drift_events.pl:175 — the
+  one real code fix, wrong qualifier → `domain_priors:`, dropping the prior 4-finding baseline
+  to 3).
 
 **Commit B (output-affecting, witnessed by full pipeline run 2026-06-04T14:15:56Z):**
 - `run_json_report` enumerates `corpus_constraint/1` instead of

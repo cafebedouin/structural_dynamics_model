@@ -7285,16 +7285,16 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 **Deps:** bundled_with OQ-143
 
 **Origin:** the OQ-115 fix returned check_stack to its 4-finding 2026-06-04 baseline. This
-parent tracks those 4 references (3 distinct findings) so each is worked independently and
-records *why it doesn't bite today* — a witnessed dead-or-guarded reaching path, NOT
-"baseline-documented." The class-sweep discriminator is **phantom × guarded × reachable**: a
-reference bites only when its target is absent at the call's load chain AND the call is
-unguarded AND the path is reachable; OQ-115 was the one unguarded bite. Sub-findings split out
-as numeric OQs (the tracker's machine-readable label grammar is `OQ-\d+`; lettered sub-IDs are
-invisible to `issues_status`/`omega_resolver`, so the plan's `142a/b/c` became OQ-143/144/145):
-OQ-143 (validation_suite guarded phantom), OQ-144 (data_repair xref mis-attribution), OQ-145
-(drift_events:175 wrong-qualifier — the only one needing a code change). Lineage: OQ-115,
-OQ-57.
+parent tracks those references so each is worked independently and records *why it doesn't bite
+today* — a witnessed dead-or-guarded reaching path, NOT "baseline-documented." The class-sweep
+discriminator is **phantom × guarded × reachable**: a reference bites only when its target is
+absent at the call's load chain AND the call is unguarded AND the path is reachable; OQ-115 was
+the one unguarded bite. Sub-findings split out as numeric OQs (the tracker's machine-readable
+label grammar is `OQ-\d+`; lettered sub-IDs are invisible to `issues_status`/`omega_resolver`,
+so the plan's `142a/b/c` became OQ-143/144/145): OQ-143 (validation_suite guarded phantom),
+OQ-144 (data_repair xref mis-attribution), OQ-145 (drift_events:175 wrong-qualifier — **RESOLVED
+2026-06-18**, the one code change; check_stack baseline now **3 findings**). Remaining annotate-only:
+OQ-143, OQ-144. Lineage: OQ-115, OQ-57.
 
 ## OQ-143 — `validation_suite:test_case/4` ← test_harness:26 (guarded phantom; check_stack baseline finding)
 
@@ -7339,35 +7339,29 @@ Cross-ref OQ-86 (the data_repair sentinel-minting bridge).
 
 **Ω-type:** Ω_E (mechanical, latent existence_error).
 
-**Status:** open — minted 2026-06-18 from the OQ-115 class sweep.
+**Status:** resolved — fixed 2026-06-18; one-token qualifier fix at `drift_events.pl:175`.
 
 **Priority:** 5
 
 **Deps:** splits_from OQ-142
 
-**Origin:** **NOT benign.** `detect_is_piton/1` (`drift_events.pl:175`) calls
+**Origin:** `detect_is_piton/1` (`drift_events.pl:175`) called
 `\+ narrative_ontology:requires_active_enforcement(C)` with the WRONG qualifier — the predicate
-lives in `domain_priors` (`domain_priors.pl:30,139`). OQ-57 fixed the sibling `:236`
-(`domain_priors:`) but missed `:175`; inside `\+` it would THROW if `detect_is_piton/1` is ever
-reached. **Reachability (witnessed 2026-06-18, with positive control — does NOT rest on a bare
-grep):**
-- *Static external:* `grep -rnE '\bdetect_is_piton\b'` over pl/py/sh excluding drift_events.pl
-  → **0 callers**. Positive control on the SAME grep: `drift_event` → **19** external references,
-  `detect_metric_substitution`/`detect_coordination_loss`/`detect_is_piton_event` → 0 each. The
-  control **fired** (drift_event=19) — the probe can find callers, so the 0 for `detect_is_piton`
-  is "none there," not "didn't look."
-- *Static internal:* inside drift_events.pl `detect_is_piton` appears ONLY at :14 (export), :168
-  (comment), :170 (clause head) — no goal-position call in any other predicate's body; the file
-  DOES dispatch detectors at goal position when it means to (`network_dynamics:detect_network_drift`
-  at :401,:407), so an internal call would have surfaced. **No internal caller.**
-- *Runtime-constructed* (`call/N` / meta-call with a constructed goal): invisible to static grep →
-  **UNVERIFIED, explicitly open** (the OQ-115 REPL/external residual class). **Priority 5 is
-  provisional on this one open path** — static reachability is control-backed unreached; only the
-  dynamic path keeps it from being demonstrably dead. NB the control also confirmed
-  `detect_is_piton_event` (the supposed superseding predicate) is itself dead (0 refs).
-**Resolution:** one-token fix `narrative_ontology:` → `domain_priors:` at `:175`, mirroring the
-already-fixed `:236`; correct independent of reachability. Witness with a direct
-`detect_is_piton/1` call before (THREW) / after (clean). Lineage: OQ-57.
+lives in `domain_priors` (`domain_priors.pl:30,139`). OQ-57 fixed the sibling `:236`, missed
+`:175`; inside `\+` it THREW if `detect_is_piton/1` was reached. **Reachability (witnessed, with
+positive control):** static external = 0 callers (control: `drift_event` → 19 refs, so the grep
+DOES find callers — the 0 is real); static internal = export/comment/head only, no goal-position
+call (file dispatches detectors elsewhere at `:401,:407`); runtime-constructed (`call/N`/meta-call)
+= unverified by static grep. So unreached on every checkable path, latent on the rest — the fix is
+correct regardless.
+
+**Resolution.** `narrative_ontology:` → `domain_priors:` at `:175`, mirroring `:236`. **Witness
+(cold `[stack]`, synthetic constraint with extractiveness 0.05 / theater_ratio 0.80 to reach
+`:175`):** before → THREW
+`error(existence_error(procedure, narrative_ontology:requires_active_enforcement/1), context(drift_events:detect_is_piton/1,_))`;
+after → `SUCCEEDED_CLEAN` (prints "Drift: Internalized Piton"). check_stack baseline drops 4 → 3
+(the `requires_active_enforcement` finding is gone). Provenance: KNOWN_STATE 2026-06-18; commit at
+close. Lineage: OQ-57, OQ-115.
 
 ---
 

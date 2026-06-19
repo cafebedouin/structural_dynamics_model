@@ -172,7 +172,7 @@ detect_is_piton(C) :-
     E < 0.10,
     safe_metric(C, theater_ratio, TR),
     TR > 0.70,
-    \+ narrative_ontology:requires_active_enforcement(C),
+    \+ domain_priors:requires_active_enforcement(C),   % OQ-145: predicate lives in domain_priors, not narrative_ontology (OQ-57 fixed sibling :236, missed this)
     format('  Drift: Internalized Piton in ~w~n', [C]),
     format('    Low extraction (~2f), high theater (~2f), no enforcement~n', [E, TR]).
 
