@@ -45,8 +45,8 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-06-18 — OQ-29 PARTIAL: corpus_hash single-sourced; 10 producers stamp; consumer guards fail-closed
-**Files:** python/corpus_hash.py, python/run_pipeline.py, python/enhanced_report.py, python/sweeps/perturb.py, python/sweeps/census_sweep.py, python/sweeps/persistence_sweep.py, AGENTS.md, ISSUES.md
+## 2026-06-18 — OQ-29 RESOLVED: corpus_hash single-sourced; 14 producers stamp; consumers fail-closed
+**Files:** python/corpus_hash.py, python/run_pipeline.py, python/enhanced_report.py, python/sweeps/perturb.py, python/sweeps/census_sweep.py, python/sweeps/persistence_sweep.py, python/axiom_reachability.py, python/sweeps/epsilon_sensitivity.py, python/audits/metric_audit.py, python/audits/sheaf_audit.py, AGENTS.md, ISSUES.md
 **Tier:** landed
 
 The corpus staleness fingerprint was a **Pattern-2 silent fork** — four byte-identical
@@ -72,10 +72,15 @@ Commits `b6aefb5a` (A), `4ab980ff` (B/C), `7b016978` (D).
   (`config_sensitivity_results_v3`) is doc-cited → kept + annotated. Pre-reset annotations added to
   `project_orientation.md`, `config_sensitivity_v3.md`, `CONFIG_SENSITIVITY.md`, **AGENTS.md** (the
   set-probe caught a third live-framed site the plan's "only two" missed).
-- **RESIDUAL (OQ-29 stays `partial`):** 4 more LIVE producers were scoped out as "reconciled away"
-  but still run unstamped — `axiom_reachability.py`, `epsilon_sensitivity.py` (consumed by
-  `enhanced_report.py:1903` for Fisher — unguarded), `audits/metric_audit.py`, `audits/sheaf_audit.py`.
-  Next: stamp the 2 sweeps + guard the Fisher consumer; rule on the 2 one-shot audit scripts.
+- **Residual CLEARED (→ resolved):** the 4 scoped-out producers now stamp (`axiom_reachability`,
+  `epsilon_sensitivity`, `metric_audit`, `sheaf_audit`; runtime control = `sheaf_audit_results.json`
+  freshly stamped). The Fisher consumer (`enhanced_report.py:1903`) is guarded — stale/absent-hash
+  `epsilon_sensitivity_results.json` surfaces STALE, never renders pre-reset numbers (four-sided
+  witness). Audit-script ruling settled by probe (NOT defaulted): both load live
+  `pipeline_output.json`/`orbit_data.json`, so a testsets-keyed stamp is the correct identity.
+- **Two pre-existing bugs surfaced while exercising (NOT OQ-29, not fixed here):**
+  `sheaf_audit.py:515` ZeroDivisionError (empty working set on the small post-reset corpus);
+  `oracle_gap_analysis.py:143` `entry["contexts"]` indexed on a string.
 
 **Promotion test:** the standing convention ("new producers stamp `corpus_hash` via
 `corpus_hash.py`, never re-define the body; archive runs stamp the archive corpus") is promoted to

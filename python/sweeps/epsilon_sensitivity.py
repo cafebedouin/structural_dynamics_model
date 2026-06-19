@@ -31,6 +31,7 @@ except ImportError:
     HAS_SCIPY = False
 
 from shared.loader import load_json, PIPELINE_JSON, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
+from corpus_hash import compute_corpus_hash  # single-source corpus fingerprint (OQ-29)
 from shared.maxent import (
     compute_profiles, compute_priors, gaussian_ll, boolean_ll,
     log_sum_exp_normalize, apply_signature_override,
@@ -411,6 +412,7 @@ def run_analysis(h=0.01, run_all=False):
         "per_constraint": results,
     }
 
+    output["corpus_hash"] = compute_corpus_hash(Path(__file__).resolve().parents[2] / "prolog" / "testsets")
     out_path = OUTPUT_DIR / "epsilon_sensitivity_results.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)

@@ -24,9 +24,14 @@ import ast
 import glob
 import json
 import math
+import sys
 from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
+
+# Single source of truth for the corpus fingerprint (OQ-29)
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from corpus_hash import compute_corpus_hash
 
 import numpy as np
 from scipy.linalg import lstsq
@@ -754,6 +759,7 @@ def main():
     print(f'\nVerdict: {verdict["reason"]}')
 
     result = {
+        'corpus_hash': compute_corpus_hash(Path(__file__).resolve().parents[2] / "prolog" / "testsets"),
         'metadata': {
             'n_slices': len(combined),
             'n_pairs': n_pairs,

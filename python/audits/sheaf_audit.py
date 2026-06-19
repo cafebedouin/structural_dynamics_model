@@ -34,6 +34,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from shared.loader import load_json, OUTPUT_DIR, PIPELINE_JSON, ORBIT_JSON
+from corpus_hash import compute_corpus_hash  # single-source corpus fingerprint (OQ-29)
 
 # ---------------------------------------------------------------------------
 # 10-slice family definition
@@ -330,6 +331,7 @@ def main():
 
     # --- Build JSON output ---------------------------------------------------
     results_json = {
+        'corpus_hash': compute_corpus_hash(Path(__file__).resolve().parents[2] / "prolog" / "testsets"),
         'generated': datetime.now().isoformat(),
         'corpus_total': len(constraints),
         'excluded_zero_contexts': n_excluded_zero,

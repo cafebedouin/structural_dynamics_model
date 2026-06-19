@@ -21,6 +21,7 @@ from pathlib import Path
 
 from sigmoid import sigmoid_f, CANONICAL_D
 from shared.loader import read_config, load_json, OUTPUT_DIR
+from corpus_hash import compute_corpus_hash  # single-source corpus fingerprint (OQ-29)
 
 # =============================================================================
 # CONFIG
@@ -666,6 +667,7 @@ def main():
         }
     }
 
+    results["corpus_hash"] = compute_corpus_hash(Path(__file__).resolve().parent.parent / "prolog" / "testsets")
     out_path = OUTPUT_DIR / "axiom_reachability_results.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, default=str)

@@ -777,7 +777,7 @@ asymmetry being named. *(body compressed at close per footer rule)*
 
 ## OQ-29 — Results stale against a moved corpus (general form of OQ-25 §5.11 scope)
 
-**Status:** partial — 2026-06-18: single-source helper + 10 live producers stamp + match-based consumer guards + orbits residual closed (Threads A–D). Residual: 4 outputs/audits producers still unstamped (below).
+**Status:** resolved — 2026-06-18: `corpus_hash` single-sourced (`python/corpus_hash.py`); 14 live producers self-stamp; consumers fail-closed (orbits match-guard, persistence + Fisher report guards); existing data dispositioned (2 deleted, test-artifacts excluded-as-class, pre-reset citations annotated). Threads A–E + the 4-producer residual, all witnessed. The audit-script ruling was settled by probe — `metric_audit`/`sheaf_audit` load live `pipeline_output.json`/`orbit_data.json`, so they stamp like any live producer (not the archive wrong-identity case).
 **Priority:** 1
 **Origin:** Sweep-consolidation audit, 2026-05-29.
 **Files:** `python/corpus_hash.py` (single-source fingerprint, 2026-06-18); `python/run_pipeline.py` (match guard); `python/enhanced_report.py` (persistence consumer guard); the 10 stamped producers; `python/bifurcation_results.json` (confirmed stale instance); 19 `*_results.json` files total (full list below).
@@ -854,17 +854,20 @@ Confirmed stale: `bifurcation_results.json` (constraint-level grep). Others unve
 - content hash (not filename-only): detects in-place edits; does NOT detect changes in
   `testsets/<run_tag>/` subdirs (unchanged limit).
 
-**RESIDUAL (why partial, not resolved):** four more LIVE producers write the staleness class but were
-scoped out of the plan's python/ population as "reconciled away" — they are NOT stamped:
-`python/axiom_reachability.py` → `outputs/axiom_reachability_results.json`;
-`python/sweeps/epsilon_sensitivity.py` → `outputs/epsilon_sensitivity_results.json` (**and
-`enhanced_report.py:1903` consumes it for the Fisher section** — an unguarded consumer);
-`python/audits/metric_audit.py` → `outputs/metric_audit_results.json`;
-`python/audits/sheaf_audit.py` → `outputs/sheaf_audit_results.json`. The two `audits/` scripts are
-one-shot audit producers (writeups move to dated subdirs), arguably a different class than re-run
-sweeps — a per-file ruling, not a blanket stamp. Next step: stamp axiom_reachability +
-epsilon_sensitivity (same Thread-B pattern) and guard the Fisher consumer; rule on the two audit
-scripts. (Test-artifact class above is closed, not residual.)
+**Residual CLEARED (2026-06-18, commit pending):** the four producers scoped out as "reconciled
+away" now stamp — `axiom_reachability.py`, `sweeps/epsilon_sensitivity.py`, `audits/metric_audit.py`,
+`audits/sheaf_audit.py` (runtime control: `sheaf_audit_results.json` freshly written with
+`corpus_hash=d2b3ec9429f1`). The **Fisher consumer** at `enhanced_report.py:1903` is now guarded —
+a stale/absent-hash `epsilon_sensitivity_results.json` surfaces STALE instead of rendering pre-reset
+Fisher numbers (four-sided witness: current+present→render, current+absent→"not computed",
+mismatch→STALE, absent-hash→STALE). The **audit-script ruling** was settled by probe, not defaulted:
+`metric_audit.py:115` and `sheaf_audit.py:146–147` load the LIVE `pipeline_output.json` /
+`orbit_data.json` (corpus-derived), so a `compute_corpus_hash(testsets)` stamp is the correct
+identity — they are live producers, not the archive wrong-identity case. (Surfaced separately while
+exercising: `sheaf_audit.py:515` ZeroDivisionError when the working set is empty on the small
+post-reset corpus, and `oracle_gap_analysis.py:143` `entry["contexts"]` on a string — pre-existing
+bugs, not OQ-29.) Test-artifact class (`alt_power_transform_results_3k`, `test_battery_results`)
+stays excluded-as-class.
 
 ---
 

@@ -1902,11 +1902,17 @@ def _run_stability_band(kernel_id: str) -> dict:
 
 _FISHER_RESULTS_PATH = PROJECT_ROOT / "outputs" / "epsilon_sensitivity_results.json"
 _fisher_cache: dict | None = None
+_fisher_stale: str | None = None  # OQ-29: reason string if the file is stale, else None
 
 
 def _load_fisher_results() -> dict:
-    """Load epsilon_sensitivity_results.json keyed by constraint id; cache on first call."""
-    global _fisher_cache
+    """Load epsilon_sensitivity_results.json keyed by constraint id; cache on first call.
+
+    OQ-29: if the file's corpus_hash is absent or != the current corpus, it describes a
+    corpus that has moved — do NOT render its Fisher numbers as live. Treat as stale
+    (return {}) and record why, so the section surfaces 'stale' instead of pre-reset data.
+    """
+    global _fisher_cache, _fisher_stale
     if _fisher_cache is not None:
         return _fisher_cache
     if not _FISHER_RESULTS_PATH.exists():
@@ -1914,6 +1920,12 @@ def _load_fisher_results() -> dict:
         return _fisher_cache
     import json as _json
     data = _json.loads(_FISHER_RESULTS_PATH.read_text())
+    stored = data.get("corpus_hash")
+    if stored is None or stored != _current_corpus_hash():
+        _fisher_stale = ("carries no corpus_hash" if stored is None
+                         else f"computed against corpus {stored}, current is {_current_corpus_hash()}")
+        _fisher_cache = {}
+        return _fisher_cache
     _fisher_cache = {e["id"]: e for e in data.get("per_constraint", [])}
     return _fisher_cache
 
@@ -1921,6 +1933,12 @@ def _load_fisher_results() -> dict:
 def _fisher_probe_lines(constraint_id: str) -> list[str]:
     """Fisher ε-sensitivity sub-section (fires on every E5 path)."""
     fisher_data = _load_fisher_results()
+    if _fisher_stale is not None:
+        return [
+            "",
+            f"  Fisher ε-sensitivity (MaxEnt): STALE (OQ-29) — {_fisher_stale};",
+            "  not rendered (would be pre-reset data); re-run python3 python/sweeps/epsilon_sensitivity.py",
+        ]
     if constraint_id in fisher_data:
         fish = fisher_data[constraint_id].get("fisher_analytical_raw")
         fish_str = f"{fish:.3f}" if fish is not None else "n/a"
