@@ -45,6 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-19 — schema: conditional stakeholder-coverage gate (the false-negative root cause)
+**Files:** schemas/constraint_story_schema.json, prompts/constraint_story_generation_prompt_json.md
+**Tier:** landed
+
+Diagnosis (OQ-149; audits/2026-06-18_oq56_*): 423/466 haiku no-stakeholder stories had authored
+beneficiaries/victims (obvious parties) yet emitted no `constraint_stakeholder`. Root cause =
+contradictory signals: the generation prompt prose marks stakeholders REQUIRED, but the schema
+omitted it from `required` AND its field description said "optional alongside perspectives during
+the A/B perturbation" — the proximate signal for structured generation, so the weaker model
+(haiku) dropped it; flash wrote it on 75% of the same slots. Not truncation (six_questions, a
+later field, survives more) and not surface-substitution (ben/vic co-occur with stakeholders).
+
+Fix (commit `becd0f87`): CONDITIONAL `allOf` gate — if `base_properties.beneficiaries` or
+`victims` non-empty → require `stakeholders` (minItems 1); a true mountain with no parties
+(gravity) stays EXEMPT. Description rewritten to state the contract. **Forward-only** — gates
+new/regenerated stories; existing corpus untouched (no consumer re-validates committed stories;
+no test validates `json/`). Witnessed Draft7 (the pipeline's validator): example still validates,
+example−stakeholders now CAUGHT, gravity exempt. **The prompt-prose reinforcement is the
+operator's edit** (driving the c-orchestrator loop). Schema is the binding gate.
+
+---
+
 ## 2026-06-19 — reading_diff un-stranded onto the live stakeholder-seat schema + stale test corpus
 **Files:** prolog/reading_diff.pl, prolog/tests/test_reading_diff.pl, ISSUES.md
 **Tier:** landed

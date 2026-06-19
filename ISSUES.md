@@ -7634,6 +7634,15 @@ in the audit dir. **Confound caveat (OQ-70):** signature/relation prevalence can
 authoring-template convention rather than detected structure — so this is a *coding-divergence*
 finding, not a detection claim, until the bait-confound counterfactual is run on these fields.
 
+**Stakeholder-coverage half — forward remedy LANDED (2026-06-19, commit `becd0f87`).** The
+stakeholder-authoring asymmetry (haiku 494 vs flash 748 readings) was a false-negative class, not
+a constraint property: 423/466 haiku no-stakeholder stories had authored beneficiaries/victims;
+flash wrote the field on 75% of those same slots. Root cause = the schema marked `stakeholders`
+optional (and its description said so) while the prompt said required → weaker model dropped it.
+Fixed with a conditional schema gate (require stakeholders iff parties present; gravity exempt) +
+KNOWN_STATE 2026-06-19. **Forward-only** (takes effect on the next rebuild; existing twins
+unchanged). The `reading_relation` 0.392 and `overridden` 51-vs-4 halves remain OPEN here.
+
 **What resolution changes:** If the divergence survives the OQ-70 control, the committer axis
 is the most seat-expressive layer the engine has (the place a model's "reading" of grounding/
 closure is least situation-fixed) — which would make any committer-axis invariant claim
