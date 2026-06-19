@@ -7349,10 +7349,22 @@ Cross-ref OQ-86 (the data_repair sentinel-minting bridge).
 `\+ narrative_ontology:requires_active_enforcement(C)` with the WRONG qualifier — the predicate
 lives in `domain_priors` (`domain_priors.pl:30,139`). OQ-57 fixed the sibling `:236`
 (`domain_priors:`) but missed `:175`; inside `\+` it would THROW if `detect_is_piton/1` is ever
-reached. Doesn't bite today: a broadened grep (pl/py/sh) finds only the `drift_events.pl`
-definitions — no static caller/meta-call site anywhere; runtime-constructed invocation
-**unverified** (label it so, the OQ-115 REPL/external residual class). NB the positive control
-killed the "superseded by `detect_is_piton_event`" claim — that predicate is also dead.
+reached. **Reachability (witnessed 2026-06-18, with positive control — does NOT rest on a bare
+grep):**
+- *Static external:* `grep -rnE '\bdetect_is_piton\b'` over pl/py/sh excluding drift_events.pl
+  → **0 callers**. Positive control on the SAME grep: `drift_event` → **19** external references,
+  `detect_metric_substitution`/`detect_coordination_loss`/`detect_is_piton_event` → 0 each. The
+  control **fired** (drift_event=19) — the probe can find callers, so the 0 for `detect_is_piton`
+  is "none there," not "didn't look."
+- *Static internal:* inside drift_events.pl `detect_is_piton` appears ONLY at :14 (export), :168
+  (comment), :170 (clause head) — no goal-position call in any other predicate's body; the file
+  DOES dispatch detectors at goal position when it means to (`network_dynamics:detect_network_drift`
+  at :401,:407), so an internal call would have surfaced. **No internal caller.**
+- *Runtime-constructed* (`call/N` / meta-call with a constructed goal): invisible to static grep →
+  **UNVERIFIED, explicitly open** (the OQ-115 REPL/external residual class). **Priority 5 is
+  provisional on this one open path** — static reachability is control-backed unreached; only the
+  dynamic path keeps it from being demonstrably dead. NB the control also confirmed
+  `detect_is_piton_event` (the supposed superseding predicate) is itself dead (0 refs).
 **Resolution:** one-token fix `narrative_ontology:` → `domain_priors:` at `:175`, mirroring the
 already-fixed `:236`; correct independent of reachability. Witness with a direct
 `detect_is_piton/1` call before (THREW) / after (clean). Lineage: OQ-57.
