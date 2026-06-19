@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "232a35a1e7267d5886ada4f41d1618be4cb9c2bf",
+    "store_version": "d84841761318b7446c0c03e11b3ab41a05e45ff3",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-18T21:28:34"
+    "generated_at": "2026-06-18T22:13:30"
   },
-  "issues_sha": "803513fd457ffb0080fc15b499ccc35321aba730d5685ecda7375ffe5df4df7e",
+  "issues_sha": "aff5f5d9989a637015a6e16b5ebf21e4442b4ffc4795e128ca40852a9d5d7f8c",
   "n_entries": 148,
   "active_token_set": [
     "investigating",
@@ -14,20 +14,24 @@
   "per_status": {
     "resolved": 69,
     "mitigated": 6,
-    "open": 60,
+    "partial": 8,
+    "open": 59,
     "disposed": 3,
-    "partial": 7,
     "future": 3
   },
   "active": [
     {
       "id": "OQ-03",
-      "status": "open",
-      "priority": 1,
+      "status": "partial",
+      "priority": 5,
       "summary": "Self-application: where does DR sit in its own ontology?",
-      "deps": [],
+      "deps": [
+        "blocked_on OQ-135"
+      ],
       "cross_refs": [],
-      "mentioned_in": []
+      "mentioned_in": [
+        "OQ-135"
+      ]
     },
     {
       "id": "OQ-04",
