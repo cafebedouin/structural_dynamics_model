@@ -4937,6 +4937,34 @@ seam. Open design point: citation-extraction grammar (backtick-quoted repo-relat
 probably enough; measure false-positive rate on the existing audits/ corpus before gating
 anything). Not wired into run_pipeline until its false-positive rate is witnessed.
 
+**Built 2026-06-18 (stays open, ungated) — `python/audit_citation_status.py`.** Standing,
+re-runnable, sibling of `issues_status.py`/`known_state_status.py`; **NOT in `scripts/gate.sh`**
+(ungated until the FP rate is ruled). Invariant: a cited path **exists AND is git-tracked, OR is
+allowlisted-ephemeral**; missing and untracked-not-allowlisted are one class. WARN stages by
+three sublabels, three destinies: `untracked-pending` (real `outputs/*` evidence ref;
+`--promote-untracked` lifts to ERROR when the set is empty-or-allowlisted on a fresh clone),
+`missing-pending-M` (`--promote-missing` lifts when every survivor is classified, not when the
+set is empty), `grammar-ambiguous` (globs/ellipsis/descriptive dir mentions — **never promotes**).
+A gitignored path inside the repo root is **never allowlisted** (it IS the OQ-104 signature);
+allowlist = `~/`, `/tmp/`, paths escaping repo root, decided AFTER normalization.
+
+**Witnessed census (`audits/2026-06-18_oq104_citation_checker/`):** 1224 path-citations over 85
+audit dirs. **untracked-pending = 35 distinct, ALL `outputs/*`** (plan projected ~32; +3 is
+witness-corrects-projection); reading every context, all 35 are **descriptive references to
+canonical regenerable `outputs/` artifacts** (schema docs, data-flow, CLI defaults, command
+lines), **none the dangerous frozen-evidence origin class** (those were remediated at the
+2026-06-11 anchor `09390f0f`). **Disposition (operator ruling 2026-06-18):** (i) copy-into-audit-dir
+inapplicable (`outputs/` is regenerated → today's file ≠ historical snapshot → copying = Pattern-3
+faith-merge); (ii) allowlist forbidden (OQ-104 signature); → **leave flagged, non-gating;
+`--promote-untracked` deferred.** **missing-pending-M = 66 distinct** (drove 278 plan-upper-bound →
+66 via the four-plus FP-class rules); every survivor classified — relocation/rename,
+illustrative/proposed-structure, archive-directory shorthand, deleted-gitignored-output — **no live
+broken citation hides in the bucket**, so `--promote-missing` stays deferred. Controls: `controls.py`
+23/23 (one positive control per new exclusion + a `/etc/passwd` field-list bug it caught),
+`controls_run.sh` idempotence + rot-sensitivity (tracked cited file → `git rm --cached` →
+flips pass→flag). **Two promotion conditions and the brace/glob + descriptive-outputs seats are
+recorded as the wiring triggers; `scripts/gate.sh` unchanged.**
+
 ## OQ-105 — Suppression grid-misalignment rows: the scalar substitution sets flip TIMING in classify_at_time timelines
 
 **Ω-type:** Ω_C (design choice — grid alignment at generation vs labeled interpolation at read; a narrow representation ruling spun off the OQ-46 close).

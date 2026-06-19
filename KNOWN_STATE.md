@@ -45,6 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-18 — OQ-104: audit_citation_status.py built (standing checker, ungated)
+**Files:** python/audit_citation_status.py, ISSUES.md, audits/2026-06-18_oq104_citation_checker/
+**Tier:** landed
+
+New `python/audit_citation_status.py` — sibling of `issues_status.py`/`known_state_status.py`;
+verifies every path cited from `audits/*.md` exists-AND-tracked OR is allowlisted-ephemeral
+(the fresh-clone invariant). **NOT in `scripts/gate.sh`** (ungated until FP rate is ruled).
+Three WARN sublabels, three destinies: `untracked-pending` (`--promote-untracked`),
+`missing-pending-M` (`--promote-missing`), `grammar-ambiguous` (never promotes). A gitignored
+path inside the repo root is **never** allowlisted — it IS the OQ-104 signature.
+
+Census: 1224 citations/85 dirs. **untracked-pending = 35 distinct, all `outputs/*`** — all
+descriptive references to canonical regenerable outputs (schema docs, CLI defaults, command
+lines), none the dangerous frozen-evidence class. **Operator ruling 2026-06-18:** leave
+flagged, non-gating; copy-into-audit-dir inapplicable (outputs/ regenerated → faith-merge),
+allowlist forbidden; `--promote-untracked` deferred. **missing-pending-M = 66 distinct** (drove
+278 plan-upper-bound → 66; every survivor classified as relocation/illustrative/archive-shorthand/
+deleted-output — no live broken citation). Controls: `controls.py` 23/23 (caught a `/etc/passwd`
+field-list bug), `controls_run.sh` idempotence + rot-sensitivity (pass→flag on `git rm --cached`).
+Promotion conditions + brace/glob + descriptive-outputs seats recorded as wiring triggers.
+Evidence: `audits/2026-06-18_oq104_citation_checker/FINDINGS.md`. OQ-104 stays **open**.
+
 ## 2026-06-18 — OQ-29 RESOLVED: corpus_hash single-sourced; 14 producers stamp; consumers fail-closed
 **Files:** python/corpus_hash.py, python/run_pipeline.py, python/enhanced_report.py, python/sweeps/perturb.py, python/sweeps/census_sweep.py, python/sweeps/persistence_sweep.py, python/axiom_reachability.py, python/sweeps/epsilon_sensitivity.py, python/audits/metric_audit.py, python/audits/sheaf_audit.py, AGENTS.md, ISSUES.md
 **Tier:** landed

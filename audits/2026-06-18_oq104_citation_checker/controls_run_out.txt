@@ -1,0 +1,9 @@
+=== idempotence ===
+PASS: two runs byte-identical (stdout+stderr)
+=== rot-sensitivity ===
+--- tracked: expect NO flag for audits/2026-06-18_oq104_rot_fixture/rot_evidence.txt
+PASS: tracked cited file passes (not flagged)
+--- untracked (git rm --cached): expect untracked-pending flag for audits/2026-06-18_oq104_rot_fixture/rot_evidence.txt
+untracked-pending	audits/2026-06-18_oq104_rot_fixture	1	audits/2026-06-18_oq104_rot_fixture/rot_evidence.txt
+PASS: pass -> flag flip witnessed (rot-sensitive)
+--- ALL whole-run controls passed
