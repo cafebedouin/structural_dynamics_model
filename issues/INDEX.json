@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "d84841761318b7446c0c03e11b3ab41a05e45ff3",
+    "store_version": "705a67a3db7178e3a4021ecbd2206c059f30f7c4",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-18T22:13:30"
+    "generated_at": "2026-06-18T22:33:03"
   },
-  "issues_sha": "aff5f5d9989a637015a6e16b5ebf21e4442b4ffc4795e128ca40852a9d5d7f8c",
-  "n_entries": 148,
+  "issues_sha": "8149645fd75e9e4b77fdf6378602d571074307294b6458ef33cf10be62a01635",
+  "n_entries": 150,
   "active_token_set": [
     "investigating",
     "open",
@@ -15,7 +15,7 @@
     "resolved": 69,
     "mitigated": 6,
     "partial": 8,
-    "open": 59,
+    "open": 61,
     "disposed": 3,
     "future": 3
   },
@@ -302,7 +302,13 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-53",
-        "OQ-55"
+        "OQ-55",
+        "OQ-59",
+        "OQ-72",
+        "OQ-118",
+        "OQ-123",
+        "OQ-149",
+        "OQ-150"
       ]
     },
     {
@@ -877,6 +883,38 @@
       "mentioned_in": [
         "OQ-29",
         "OQ-147"
+      ]
+    },
+    {
+      "id": "OQ-149",
+      "status": "open",
+      "priority": 2,
+      "summary": "The committer axis is the most model-divergent layer (reading_relation topology + axiom-override asymmetry)",
+      "deps": [
+        "bundled_with OQ-124"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-56",
+        "OQ-70",
+        "OQ-72",
+        "OQ-123",
+        "OQ-124"
+      ]
+    },
+    {
+      "id": "OQ-150",
+      "status": "open",
+      "priority": 2,
+      "summary": "Kernel orbits: group the kernels by reading-structure signature",
+      "deps": [
+        "gates OQ-56"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-56",
+        "OQ-72",
+        "OQ-118"
       ]
     }
   ],

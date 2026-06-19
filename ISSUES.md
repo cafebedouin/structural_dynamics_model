@@ -2324,6 +2324,23 @@ existed (landed 2026-06-02). Pairs **GAP-04** (step 2).
 **Sequencing:** the cross-kernel clustering analysis is the prerequisite step and is now possible; it
 should run before the taxonomy is declared, and the taxonomy is the user's to rule, not the engine's.
 
+**Prerequisite-clustering started (D1, 2026-06-18, twin corpora):**
+`audits/2026-06-18_oq56_twin_within_kernel_perturbation/`. Held model+observer-seat fixed,
+varied the reading within each kernel, on the live 4-perspective-seat schema. Findings that
+constrain the taxonomy:
+- The natural operator (`reading_diff`/census, OQ-59) is **schema-stranded** on the live corpus
+  — twins author 0 `constraint_classification` cells (witnessed 954/954 vacuous undersampled vs
+  pre-reset 39.5% binocular). Any clustering must use the perspective-seat schema, not OQ-59.
+- **Seat gradient (declarable invariant):** within-kernel reading depth is near-universal (98%
+  of kernels at some seat) but the **institutional seat flattens it** (0.64 haiku / 0.37 flash)
+  while powerless/moderate see it (~0.85). Composes with OQ-123.
+- **Per-kernel clustering is draw-sensitive (the key caveat for this Ω_P seat):** depth-vector
+  class agrees across models only 0.329, full orbit signature only 0.134. So the cross-kernel
+  clustering **cannot be read off one model's corpus as if discovered** — it is itself
+  seat/draw-expressive (OQ-118). The robust, declarable footing is the seat gradient + the
+  orbit-distribution shape (OQ-150), not per-kernel membership. Committer-axis dimensions of the
+  clustering are the most model-divergent (OQ-149) and need the OQ-72 alignment key first.
+
 ---
 
 ## OQ-57 — Drift report throws on a constraint missing `requires_active_enforcement/1`
@@ -7583,6 +7600,76 @@ signal.
 polaris_document_status [a freshly-untracked testset in git status], visual_evidentiary_authority).
 A producer fix that rewires `orbit_data → classifications` silently inherits a 5-constraint hole —
 surface it, don't assume a clean rewire covers the corpus. Lineage: OQ-29; OQ-147 ships independently.
+
+---
+
+## OQ-149 — The committer axis is the most model-divergent layer (reading_relation topology + axiom-override asymmetry)
+
+**Ω-type:** Ω_E (empirical — measurable cross-model agreement rates; interpretation may route to the OQ-70 authoring-convention confound).
+
+**Status:** open
+**Priority:** 2
+**Deps:** bundled_with OQ-124
+**Origin:** OQ-56 D1 recon census over the twin corpora, 2026-06-18
+(`audits/2026-06-18_oq56_twin_within_kernel_perturbation/`).
+
+**Specific question:** Why does the committer/CS axis disagree across models so much more than
+the observer axis, and is the disagreement seat-expressive signal or an OQ-70-class authoring
+convention? Two witnessed twin asymmetries (haiku vs flash, same 960 name-identical slots,
+classified at `8126231`):
+- **`cs_reading_relation` multiset agreement = 0.392** — far below `claimed_type` 0.721 and
+  `cs_kernel_id` 1.000. The `forecloses` (real closure, Theorem 8) vs `coexists_with` (licensed
+  plurality) call — the committer-axis state structure (v8 §5) — is where the two models split
+  ~60% of the time. This is the *committer-side analog* of the powerless-seat model-sensitivity
+  (OQ-123/124), on a different axis.
+- **`cs_axiom_status` `overridden`: 51 (haiku) vs 4 (flash)** — a 13× model asymmetry in how
+  often an axiom is authored as overridden (the keeping-face / `cs_drift` signal, v8 §5).
+
+**Evidence so far:** authored-fact census, positive-controlled (the parser's `claimed_type`
+agreement 0.7208 reproduces the engine-side 0.721 of `2026-06-13_twin_comparison`). Raw counts
+in the audit dir. **Confound caveat (OQ-70):** signature/relation prevalence can track an
+authoring-template convention rather than detected structure — so this is a *coding-divergence*
+finding, not a detection claim, until the bait-confound counterfactual is run on these fields.
+
+**What resolution changes:** If the divergence survives the OQ-70 control, the committer axis
+is the most seat-expressive layer the engine has (the place a model's "reading" of grounding/
+closure is least situation-fixed) — which would make any committer-axis invariant claim
+(v8 §3, OQ-72) carry a model index. If it is convention, the relation/override fields need a
+provenance bucket before they can be read as structure. Either way it gates how much weight
+v8's `forecloses`/`coexists_with` state structure can bear.
+
+---
+
+## OQ-150 — Kernel orbits: group the kernels by reading-structure signature
+
+**Ω-type:** Ω_E (empirical grouping; feeds the Ω_P taxonomy selection of OQ-56).
+
+**Status:** open
+**Priority:** 2
+**Deps:** gates OQ-56
+**Origin:** OQ-56 D1 (M3), 2026-06-18
+(`audits/2026-06-18_oq56_twin_within_kernel_perturbation/`).
+
+**Specific question:** Can the kernels be grouped into orbits by a reading-structure signature
+(n_readings, within-kernel depth-vector, claimed_type multiset across readings, relation
+topology), and how model-stable is that grouping? Distinct from the **observer-orbit**
+machinery (`orbit_characterization.py` / H¹ / `logical_fingerprint.pl`), which orbits
+*constraints by cross-slice stability*, not *kernels by reading structure*.
+
+**Evidence so far (D1 M3, twin outputs n=960):** kernels DO form real orbits — 125 (haiku) /
+111 (flash) distinct full signatures over 328 multi-reading kernels, largest single orbit = 29;
+the depth-vector class is dominated by `(1,1,1,1)` (all seats see depth) = 140/328 (43%). But
+**membership is draw-sensitive**: cross-model agreement is 0.134 on the full signature, 0.329
+on the coarse depth-vector class. Orbit *structure* (the distribution shape) is robust; per-
+kernel *membership* is largely model-relative.
+
+**What resolution changes:** Gives OQ-56 its prerequisite cross-kernel clustering on an honest
+footing: the declarable invariants are the **seat gradient** (institutional flattens within-
+kernel depth; powerless/moderate see it — D1 M1) and the **orbit-distribution shape**, NOT
+per-kernel membership (which is an Ω_P/Ω_E draw-property, OQ-118). A taxonomy keyed on per-
+kernel orbit membership would be model-relative and must not be read as discovered. Building a
+stable orbit key (model-robust signature) is the open work; needs the axiom-axis alignment of
+OQ-72 to include the committer-axis dimensions honestly.
 
 ---
 
