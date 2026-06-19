@@ -267,6 +267,11 @@ def main():
     n_p2s = sum(1 for r in per_constraint_results if r['crossing_type'] == 'presheaf_to_sheaf')
     n_total = len(per_constraint_results)
 
+    # Fail-closed predicate: empty working set means no H¹ measurement is possible.
+    # Defined ONCE here; reused on all three surfaces (JSON, markdown, console) so an
+    # empty set can never read as measured-flat (Build Discipline Pattern 5/6).
+    insufficient = (n_total == 0)
+
     crossing_rate = (n_s2p + n_p2s) / n_total if n_total else 0.0
 
     # Stratified by n_contexts
@@ -348,8 +353,9 @@ def main():
             'n_preserved': n_preserved,
             'n_sheaf_to_presheaf': n_s2p,
             'n_presheaf_to_sheaf': n_p2s,
-            'crossing_rate': round(crossing_rate, 6),
-            'preservation_rate': round(n_preserved / n_total, 6) if n_total else 0.0,
+            'crossing_rate': None if insufficient else round(crossing_rate, 6),
+            'preservation_rate': None if insufficient else round(n_preserved / n_total, 6),
+            'verdict': _verdict(crossing_rate, insufficient),
         },
         'stratified_by_n_contexts': {
             str(k): {
@@ -428,12 +434,17 @@ def main():
     print()
     print('=== SHEAF AUDIT SUMMARY ===')
     print(f'Working set: {n_total} constraints (≥2 10-slice contexts)')
-    print(f'Canonical sheaf (H¹=0): {n_canonical_sheaf} ({100*n_canonical_sheaf/n_total:.1f}%)')
-    print(f'10-slice sheaf (H¹=0):  {n_ten_slice_sheaf} ({100*n_ten_slice_sheaf/n_total:.1f}%)')
-    print(f'Binary preserved:       {n_preserved} ({100*n_preserved/n_total:.1f}%)')
-    print(f'Sheaf → presheaf:       {n_s2p} ({100*n_s2p/n_total:.2f}%)')
-    print(f'Presheaf → sheaf:       {n_p2s} ({100*n_p2s/n_total:.2f}%)')
-    print(f'Total crossing rate:    {100*crossing_rate:.2f}%')
+    if insufficient:
+        print(f'INSUFFICIENT DATA — empty working set. classifications is empty for all '
+              f'{len(constraints)} constraints (producer regression, not measured-flat; '
+              f'see OQ-147/OQ-148). No H¹ binary-preservation measurement is possible.')
+    else:
+        print(f'Canonical sheaf (H¹=0): {n_canonical_sheaf} ({100*n_canonical_sheaf/n_total:.1f}%)')
+        print(f'10-slice sheaf (H¹=0):  {n_ten_slice_sheaf} ({100*n_ten_slice_sheaf/n_total:.1f}%)')
+        print(f'Binary preserved:       {n_preserved} ({100*n_preserved/n_total:.1f}%)')
+        print(f'Sheaf → presheaf:       {n_s2p} ({100*n_s2p/n_total:.2f}%)')
+        print(f'Presheaf → sheaf:       {n_p2s} ({100*n_p2s/n_total:.2f}%)')
+        print(f'Total crossing rate:    {100*crossing_rate:.2f}%')
     print()
     print('Stratified by n_contexts:')
     for k in sorted(strata.keys()):
@@ -451,24 +462,77 @@ def main():
     print(f'  Remain distance-1:        {len(nash1_ten_distance1)}')
 
 
+def _verdict(crossing_rate, insufficient):
+    """Single-source the verdict string (JSON field + markdown render can't drift).
+
+    insufficient=True short-circuits to the fail-closed token regardless of crossing_rate —
+    an empty working set is never PRESERVED. The happy-path branches reproduce the original
+    464–471 strings byte-for-byte.
+    """
+    if insufficient:
+        return 'insufficient_data'
+    if crossing_rate == 0.0:
+        return 'PRESERVED (zero crossings)'
+    elif crossing_rate < 0.05:
+        return f'MOSTLY PRESERVED ({100*crossing_rate:.2f}% crossing rate)'
+    elif crossing_rate < 0.15:
+        return f'PARTIAL PRESERVATION ({100*crossing_rate:.2f}% crossing rate)'
+    else:
+        return f'NOT PRESERVED ({100*crossing_rate:.2f}% crossing rate)'
+
+
+def _insufficient_data_markdown(results):
+    """Fail-closed markdown for an empty working set. Zero arithmetic over corpus counts.
+
+    Renders the Coverage table from `results` only; emits NO binary-preservation, stratified,
+    crossing, or Nash sections (all would be vacuous/fabricated on an empty set).
+    """
+    corpus_total = results['corpus_total']
+    return f"""# Sheaf/Presheaf Binary Boundary Audit: 10-Slice Tier-1 Family
+
+Generated: {results['generated']}
+
+## Verdict
+
+**INSUFFICIENT DATA — empty working set.**
+
+`classifications` is empty for all {corpus_total} constraints: the field is **not being
+populated by the pipeline** (a producer regression — populated 2026-06-11, empty 2026-06-18;
+see OQ-147 / OQ-148), **not a measured-flat result**. No H¹ binary-preservation measurement
+is possible from this input.
+
+---
+
+## Coverage
+
+| Category | Count |
+|---|---|
+| Corpus total | {corpus_total} |
+| Excluded (0 contexts) | {results['excluded_zero_contexts']} |
+| Excluded (1 context, no H¹ possible) | {results['excluded_one_context']} |
+| **Working set (≥2 contexts)** | **{results['working_set_size']}** |
+
+No binary-preservation, stratified, crossing, or Nash results are computed: the working set
+is empty. This is a fail-closed floor, not a PRESERVED verdict.
+"""
+
+
 def build_markdown(results, strata, driving_slice_counts, s2p_entries, p2s_entries,
                    nash1_in_working_set, nash1_ten_stable, canon_nash1_ids):
-    bp = results['binary_preservation']
     n_total = results['working_set_size']
+    if n_total == 0:
+        # Fail closed ahead of all happy-path code; the early return self-witnesses
+        # non-regression for n_total > 0 (it cannot fire there).
+        return _insufficient_data_markdown(results)
+
+    bp = results['binary_preservation']
     n_s2p = bp['n_sheaf_to_presheaf']
     n_p2s = bp['n_presheaf_to_sheaf']
     crossing_rate = bp['crossing_rate']
     nash = results['nash_analysis']
 
-    # Verdict
-    if crossing_rate == 0.0:
-        verdict = 'PRESERVED (zero crossings)'
-    elif crossing_rate < 0.05:
-        verdict = f'MOSTLY PRESERVED ({100*crossing_rate:.2f}% crossing rate)'
-    elif crossing_rate < 0.15:
-        verdict = f'PARTIAL PRESERVATION ({100*crossing_rate:.2f}% crossing rate)'
-    else:
-        verdict = f'NOT PRESERVED ({100*crossing_rate:.2f}% crossing rate)'
+    # Verdict (single-sourced with the JSON field via _verdict; n_total>0 here so insufficient=False)
+    verdict = _verdict(crossing_rate, False)
 
     # U_3_civ attribution
     u3civ_count = results['crossing_characterization']['sheaf_to_presheaf']['u3civ_driven_count']

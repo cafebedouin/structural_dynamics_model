@@ -1,20 +1,20 @@
 {
   "manifest": {
-    "store_version": "f84d732b05d1aad2d4dc6e08129c2b40282c1168",
+    "store_version": "232a35a1e7267d5886ada4f41d1618be4cb9c2bf",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-18T21:19:42"
+    "generated_at": "2026-06-18T21:28:34"
   },
-  "issues_sha": "62eac91618bd3c617e69d5f2abf94ceeb0c63bc153e535e1f755df97b5c3df0a",
-  "n_entries": 146,
+  "issues_sha": "803513fd457ffb0080fc15b499ccc35321aba730d5685ecda7375ffe5df4df7e",
+  "n_entries": 148,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 68,
+    "resolved": 69,
     "mitigated": 6,
-    "open": 59,
+    "open": 60,
     "disposed": 3,
     "partial": 7,
     "future": 3
@@ -859,6 +859,20 @@
         "OQ-86",
         "OQ-115",
         "OQ-142"
+      ]
+    },
+    {
+      "id": "OQ-148",
+      "status": "open",
+      "priority": 4,
+      "summary": "pipeline stopped populating per_constraint.classifications corpus-wide (regression 2026-06-11→2026-06-18); consumer blast-radius — which absorbed `[]` as a measurement?",
+      "deps": [
+        "splits_from OQ-29"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-29",
+        "OQ-147"
       ]
     }
   ],
@@ -1894,6 +1908,20 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-29"
+      ]
+    },
+    {
+      "id": "OQ-147",
+      "status": "resolved",
+      "priority": 5,
+      "summary": "sheaf_audit.py:515 ZeroDivisionError on empty working set; fail closed (null rates + explicit verdict) across md/console/JSON, not fabricated PRESERVED",
+      "deps": [
+        "splits_from OQ-29"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-29",
+        "OQ-148"
       ]
     }
   ]

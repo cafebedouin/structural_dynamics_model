@@ -7487,6 +7487,84 @@ ZeroDivisionError on the small post-reset corpus. Lineage: OQ-29.
 
 ---
 
+## OQ-147 — sheaf_audit.py:515 ZeroDivisionError on empty working set; fail closed (null rates + explicit verdict) across md/console/JSON, not fabricated PRESERVED
+
+**Ω-type:** Ω_E (mechanical; latent arithmetic on an empty table; the fabricated-PRESERVED /
+false-flat-JSON risk is a Pattern-5/6 success-shaped-absorption instance).
+
+**Status:** resolved — fixed 2026-06-18; fail-closed floor on all three surfaces, fixture pass pasted.
+
+**Priority:** 5
+
+**Deps:** splits_from OQ-29
+
+**Origin.** `sheaf_audit.py:515` divides by `n_total` (working set = constraints with ≥2 of the 10
+Tier-1 slice contexts), which is **0** on the current corpus because `classifications` is empty
+corpus-wide (the *upstream* cause is OQ-148; the crash floor is correct regardless). A naive
+`if n_total else 0.0` is wrong: `crossing_rate = 0.0` hits the `== 0.0 → "PRESERVED (zero
+crossings)"` branch (sheaf_audit.py:464), making an empty set indistinguishable from measured-flat
+(Build Discipline Pattern 5/6).
+
+**Resolution.** One `insufficient = (working_set_size == 0)` predicate, reused on three surfaces:
+(1) markdown early-returns `_insufficient_data_markdown` (zero corpus-count arithmetic); (2) console
+prints a one-line INSUFFICIENT-DATA message instead of the rate block; (3) results JSON sets
+`crossing_rate`/`preservation_rate` to **null** (not 0.0) and adds `verdict: insufficient_data`.
+Verdict single-sourced via `_verdict(crossing_rate, insufficient)` (JSON + markdown can't drift;
+happy-path bands byte-identical to the old 464–471 strings). Exit 0 (an empty working set is not an
+error). **Witnesses (2026-06-18):** pre-fix `ZeroDivisionError` at :515; post-fix exit 0 with JSON
+`crossing_rate: null` / `verdict: insufficient_data`; fixture `python/audits/tests/test_sheaf_audit.py`
+4/4 PASS (covers the empty-case markdown + the non-self-witnessing `_verdict` string swap at line
+483). Provenance: KNOWN_STATE 2026-06-18; commit at close. Lineage: OQ-29; upstream OQ-148.
+
+---
+
+## OQ-148 — pipeline stopped populating per_constraint.classifications corpus-wide (regression 2026-06-11→2026-06-18); consumer blast-radius — which absorbed `[]` as a measurement?
+
+**Ω-type:** Ω_E (mechanical; producer dangling-wire, Pattern 1 + Pattern 5 blast radius).
+
+**Status:** open — outcome witnessed = regression (field populated then empty); mechanism NOT yet
+witnessed (see falsifier).
+
+**Priority:** 4
+
+**Deps:** splits_from OQ-29
+
+**Origin (regression witnessed).** `outputs/pipeline_output.json` carries `classifications: []` for
+**all 80** constraints (2026-06-18 run, `with >=1 classification: 0`). Committed post-reset snapshots
+prove it used to populate: `audits/2026-06-11_oq98_verdict_join/pipeline_output.baseline.json` →
+46/48 constraints, 287 entries (run 2026-06-11T07:13Z); `…oq90…refine1.json` → 50/52, 312 entries
+(2026-06-11T21:03Z). So `classifications` populated on 2026-06-11, empty on 2026-06-18 = **producer
+regression** in the intervening week. The data still exists in `orbit_data.json` (75 entries,
+4-context `contexts` dicts) — the 10-slice `classifications` producer specifically regressed.
+**Sparsity is ruled out** (data exists; this is a wiring break, not a small corpus).
+
+**Spine (the work).** NOT merely "rewire the producer" but a **consumer blast-radius audit**:
+`classifications` is a declared schema field (`python/shared/schemas.py:195`, default at :56)
+referenced across ~40 python files (`grep -rln classifications python/`), incl. `orbit_characterization`,
+`metric_audit`, `idea_site_exploration`, `sotu_mountain_decoupling`, `position_geometry_audit`,
+`bc_coupling_audit`, `audit3_*`. `sheaf_audit` is the only one that **crashed loudly** (OQ-147); the
+Pattern-5 risk is the quiet ones that absorbed `[]` into committed outputs that read as measurements.
+The audit's first deliverable is the **true consumer set** (which of the ~40 references read the
+field vs. name-match), then per consumer: did `[]` land in a committed output that reads as a
+measurement?
+
+**Mechanism — two candidates + falsifier (commit-plus-falsifier; don't presume code-commit).** The
+same snapshots show the corpus grew 48/52 → 80 across the window, i.e. a **reset/regrow happened**,
+so the break may live in the reset/regrow data path, not a code commit. Candidates: (1) a
+producer-touching code change between 06-11 and 06-18; (2) the reset/regrow changed the data path so
+the producer no longer receives its input. **Falsifier:** if `git log` over the producer wire finds
+**no** producer-touching commit in the window, the cause is the reset/regrow path and bisect was the
+wrong probe — pivot to the data path. Run the bisect, but pre-register that null result as the pivot
+signal.
+
+**[EDGE] the 75-vs-80 hole.** Exactly 5 `*_contradictions` ids in `pipeline_output` lack `orbit_data`
+(actinide_replenishment_mechanism, digital_money_legitimacy, performance_legitimacy,
+polaris_document_status [a freshly-untracked testset in git status], visual_evidentiary_authority).
+A producer fix that rewires `orbit_data → classifications` silently inherits a 5-constraint hole —
+surface it, don't assume a clean rewire covers the corpus. Lineage: OQ-29; OQ-147 ships independently.
+
+---
+
 *Last updated: 2026-06-18. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

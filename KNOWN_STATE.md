@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-18 — OQ-147 crash floor + OQ-148: classifications regression (corpus-wide producer break)
+**Files:** python/audits/sheaf_audit.py, python/audits/tests/test_sheaf_audit.py, ISSUES.md
+**Tier:** landed
+
+**OQ-147 (loud, resolved).** `sheaf_audit.py:515` raised `ZeroDivisionError` because its working set
+(constraints with ≥2 of the 10 Tier-1 slice contexts) is empty. Fixed with one `insufficient =
+(working_set_size == 0)` predicate reused on three surfaces (markdown early-return, console one-liner,
+JSON null rates + `verdict: insufficient_data`); verdict single-sourced via `_verdict()` so JSON and
+markdown can't drift, happy-path bands byte-identical to old 464–471. A naive `if n_total else 0.0`
+was rejected — it sets `crossing_rate=0.0` → the `== 0.0 → "PRESERVED (zero crossings)"` branch,
+making empty indistinguishable from measured-flat (Pattern 5/6). New fixture
+`python/audits/tests/test_sheaf_audit.py` (4/4 PASS) pins the empty-case markdown + the
+non-self-witnessing `_verdict` string swap. Witnesses: pre-fix crash at :515; post-fix exit 0, JSON
+`crossing_rate: null`. Loud crash → stays history (no tripwire).
+
+**OQ-148 (quiet, open — the real bug, candidate tripwire).** Root cause of the empty working set:
+`outputs/pipeline_output.json` carries `classifications: []` for **all 80** constraints (2026-06-18),
+but committed snapshots prove it populated on 2026-06-11 (46/48 @ 287 entries, 50/52 @ 312 entries) —
+a **producer regression** in the intervening week (corpus also reset/regrew 48/52→80, so the break
+may be in the data path, not a code commit — falsifier pre-registered in OQ-148). `classifications`
+is a declared schema field (`shared/schemas.py:195`) referenced across ~40 python files; `sheaf_audit`
+was the only one that crashed loudly. **The Pattern-5 risk is the quiet consumers that absorbed `[]`
+into committed outputs reading as measurements** — this blast radius is OQ-148's spine and a
+**candidate Critical-Distinctions tripwire** once the true consumer set is characterized. Pointer:
+ISSUES.md OQ-147/OQ-148; commit at close.
+
 ## 2026-06-18 — OQ-146: orbits metadata-key landmine — single-source `load_orbits_constraints`
 **Files:** python/shared/loader.py, python/oracle_gap_analysis.py, python/game_theory_nash.py, python/sweeps/product_site_delta_sweep.py, python/sweeps/structural_config_sensitivity.py, python/tests/alt_power_transform_test.py, python/tests/alt_power_transform_test_3k.py, ISSUES.md
 **Tier:** landed
