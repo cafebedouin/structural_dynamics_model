@@ -51,6 +51,7 @@
 
 :- use_module(constraint_indexing).
 :- use_module(narrative_ontology).
+:- use_module(stakeholder_seats, []).   % live-schema cell source (calls module-qualified)
 :- use_module(library(lists)).
 :- use_module(library(pairs)).
 :- use_module(library(apply)).
@@ -61,12 +62,29 @@
 % ----------------------------------------------------------------------------
 
 %% reading_cells(+Reading, -Cells) is det.
-%  The authored (P,T,E,S)->type map for one reading, deduped & sorted.
+%  The (P,T,E,S)->type map for one reading, deduped & sorted. SCHEMA-AGNOSTIC:
+%  unions the two cell sources, which are mutually exclusive across corpora
+%  (verified 2026-06-19: kernel_v1 authors constraint_classification + 0 stakeholders;
+%  the de-leak rebuild / twins author 0 constraint_classification + stakeholder seats —
+%  so the union is additive and NON-REGRESSIVE on archives):
+%    (1) old schema — authored constraint_classification/3 (archive corpora);
+%    (2) live schema — named-stakeholder seats, which emit the SAME context/4 tuple
+%        (stakeholder_seats:stakeholder_context/3) and a computed type
+%        (dr_type_for_stakeholder/3).
+%  A reading with NEITHER source yields [] — a genuine coverage gap that surfaces as
+%  robustly_undersampled, NOT a vacuous pass (the pre-fix failure mode: the rebuild
+%  authored no constraint_classification, so EVERY pair read undersampled; OQ-59 D1
+%  audits/2026-06-18_oq56_twin_within_kernel_perturbation/).
 reading_cells(Reading, Cells) :-
-    findall(cell(Type, Ctx),
-            constraint_indexing:constraint_classification(Reading, Type, Ctx),
-            Cells0),
+    findall(cell(Type, Ctx), reading_cell_source(Reading, Type, Ctx), Cells0),
     sort(Cells0, Cells).
+
+%% reading_cell_source(+Reading, -Type, -Ctx) : the two schema cell-sources, unioned.
+reading_cell_source(Reading, Type, Ctx) :-
+    constraint_indexing:constraint_classification(Reading, Type, Ctx).
+reading_cell_source(Reading, Type, Ctx) :-
+    stakeholder_seats:stakeholder_context(Reading, Name, Ctx),
+    stakeholder_seats:dr_type_for_stakeholder(Reading, Name, Type).
 
 ctx_args(context(agent_power(P), time_horizon(T), exit_options(E), spatial_scope(S)),
          P, T, E, S).
