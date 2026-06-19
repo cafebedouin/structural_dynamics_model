@@ -233,6 +233,12 @@ The reconciled corpus is **unconditionally stable** across all 150 config parame
 
 ## Raw Data
 
+> **PRE-RESET / kernel_v1-regime (OQ-29):** the figures in this report and the raw-data
+> file below were computed before the 2026-06-05 corpus reset. They are retained as a
+> historical record of the v3 sweep, not a current measurement. Re-run against the live
+> corpus before citing. (`config_sensitivity_results_v3.json` predates `corpus_hash`
+> stamping, so the file itself cannot tell you which corpus it describes.)
+
 Full results: `python/config_sensitivity_results_v3.json`
 Previous report: `docs/CONFIG_SENSITIVITY.md`
 Timeout diagnostic: `docs/timeout_diagnostic.md`

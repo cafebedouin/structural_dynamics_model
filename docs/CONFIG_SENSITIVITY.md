@@ -1,5 +1,11 @@
 # Config Sensitivity Sweep Results
 
+> **PRE-RESET / kernel_v1-regime (OQ-29):** this 2026-02-10 sweep and the
+> `config_sensitivity_results.json` / `bifurcation_results.json` it cites were computed
+> before the 2026-06-05 corpus reset. Treat the figures as a historical record, not a
+> current measurement; re-run the sweep against the live corpus before citing. Result
+> files now carry a `corpus_hash` (an unstamped/mismatched hash ⇒ stale).
+
 ## Overview
 
 - **Date**: 2026-02-10

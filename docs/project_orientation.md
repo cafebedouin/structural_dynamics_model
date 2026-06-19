@@ -139,7 +139,7 @@ The 156-point product site (`site_contexts_product/1` at line 956) expands to 4P
 
 ### 3.4 Configuration
 
-`prolog/config.pl` is the single source of truth. 178 `param/2` declarations, approximately 154 numeric (sweepable). All 154 numeric params are inert at ±25% (config sensitivity sweep). The 17 directionality constants (`power_role_heuristic/4`, `exit_modulation/2`) are also inert at ±25% (directionality sensitivity sweep). Sweep results: `python/config_sensitivity_results.json`, `python/directionality_sensitivity_results.json`.
+`prolog/config.pl` is the single source of truth. 178 `param/2` declarations, approximately 154 numeric (sweepable). All 154 numeric params are inert at ±25% (config sensitivity sweep). The 17 directionality constants (`power_role_heuristic/4`, `exit_modulation/2`) are also inert at ±25% (directionality sensitivity sweep). Sweep results: `python/config_sensitivity_results.json`, `python/directionality_sensitivity_results.json`. **(Both inertness figures are PRE-RESET / kernel_v1-regime — measured before the 2026-06-05 corpus reset, OQ-29; re-run the sweeps against the live corpus before citing as current. The result files now carry a `corpus_hash`; an unstamped or mismatched hash means stale.)**
 
 Key threshold params (in `config.pl`):
 - `snare_epsilon_floor` (ε lower bound for snare)

@@ -561,9 +561,11 @@ python3 python/directionality_sensitivity_sweep.py  # 17 directionality constant
 ```
 
 Results to `python/config_sensitivity_results.json` and
-`python/directionality_sensitivity_results.json`. All 154 params are inert at ±25%
-(established 2026-02-28 audit). If you change a param, re-run and confirm it is
-still inert.
+`python/directionality_sensitivity_results.json`. The "all 154 params inert at ±25%"
+finding (2026-02-28 audit) is **PRE-RESET / kernel_v1-regime** (measured before the
+2026-06-05 corpus reset, OQ-29) — re-run both sweeps against the live corpus before
+treating it as current. If you change a param, re-run and confirm it is still inert;
+the result files now carry a `corpus_hash` (unstamped/mismatched ⇒ stale).
 
 ### No pytest setup
 
