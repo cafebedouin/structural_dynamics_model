@@ -28,6 +28,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from shared.loader import load_json, PIPELINE_JSON, OUTPUT_DIR
+from corpus_hash import compute_corpus_hash  # single-source corpus fingerprint (OQ-29)
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -167,6 +168,7 @@ def main():
     }
 
     output = {
+        "corpus_hash": compute_corpus_hash(Path(__file__).resolve().parent.parent / "prolog" / "testsets"),
         "generated": datetime.now().isoformat(),
         "summary": summary,
         "per_constraint": per_constraint,

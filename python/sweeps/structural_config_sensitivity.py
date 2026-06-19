@@ -44,6 +44,10 @@ PROLOG_DIR = ROOT / "prolog"
 BASELINE_PATH = ROOT / "outputs" / "product_site_orbits.json"
 RESULTS_PATH = Path(__file__).resolve().parent / "structural_config_sensitivity_results.json"
 
+# Corpus fingerprint for staleness stamping (OQ-29)
+sys.path.insert(0, str(ROOT / "python"))
+from corpus_hash import compute_corpus_hash
+
 
 # ---------------------------------------------------------------------------
 # Parameter table
@@ -595,6 +599,7 @@ def main():
 
     # Save results
     output = {
+        "corpus_hash": compute_corpus_hash(PROLOG_DIR / "testsets"),
         "metadata": {
             "groups_run": sorted(selected_groups),
             "n_settings": len(selected),

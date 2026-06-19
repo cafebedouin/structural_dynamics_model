@@ -72,22 +72,25 @@ def _git_dirty() -> bool:
 # Single source of truth for the corpus fingerprint (OQ-29). Kept importable as
 # the private name for back-compat with in-file callers.
 from corpus_hash import compute_corpus_hash as _compute_corpus_hash
+from corpus_hash import assert_corpus_current
 
 
 def check_orbits_corpus_hash(orbits_path: Path) -> None:
-    """Raise RuntimeError if orbits file exists but lacks corpus_hash.
+    """Raise RuntimeError if the orbits file is missing corpus_hash OR is stale (OQ-29).
 
-    The corpus_hash must be stamped atomically with orbit generation
-    (via regenerate_orbits.py). A missing hash means the file was produced
-    by the old two-step path and is unverifiable for staleness.
+    The corpus_hash must be stamped atomically with orbit generation (via
+    regenerate_orbits.py). A missing hash means the file was produced by the old
+    two-step path; a mismatched hash means it was computed against a corpus that
+    has since moved. Both fail-closed via assert_corpus_current — closing the
+    residual presence-only gap (an orbits file left while the corpus moved used to
+    pass; now it raises). OQ-29 Thread C.
     """
-    if orbits_path.exists():
-        data = json.loads(orbits_path.read_text(encoding="utf-8"))
-        if "corpus_hash" not in data:
-            raise RuntimeError(
-                "product_site_orbits.json has no corpus_hash — "
-                "run 'python3 python/sweeps/regenerate_orbits.py' before the pipeline."
-            )
+    try:
+        assert_corpus_current(orbits_path, TESTSETS_DIR)
+    except RuntimeError as e:
+        raise RuntimeError(
+            f"{e} (run 'python3 python/sweeps/regenerate_orbits.py' before the pipeline.)"
+        ) from e
 
 
 def build_manifest(run_at: str, testsets_dir: Path = TESTSETS_DIR) -> dict:

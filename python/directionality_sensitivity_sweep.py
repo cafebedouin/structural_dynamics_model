@@ -35,6 +35,11 @@ import tempfile
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
+# Corpus fingerprint for staleness stamping (OQ-29)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from corpus_hash import compute_corpus_hash
+CORPUS_TESTSETS = Path(__file__).resolve().parent.parent / "prolog" / "testsets"
+
 # ---------------------------------------------------------------------------
 # 1. Parse hardcoded constants from constraint_indexing.pl
 # ---------------------------------------------------------------------------
@@ -458,6 +463,7 @@ def main():
     # Save results
     with open(output_path, "w") as f:
         json.dump({
+            "corpus_hash": compute_corpus_hash(CORPUS_TESTSETS),
             "baseline_pass": bp,
             "baseline_fail": bf,
             "summary": summary,

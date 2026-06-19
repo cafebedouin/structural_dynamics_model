@@ -63,6 +63,7 @@ from pathlib import Path
 # (verified: `if __name__ == "__main__"` at its tail), so this import
 # runs no pipeline code.
 from enrich_pipeline_json import BAND_DEEP, BAND_MODERATE
+from corpus_hash import compute_corpus_hash  # single-source corpus fingerprint (OQ-29)
 
 # --- Path Setup ---
 
@@ -1471,6 +1472,17 @@ _COVER_GLOSS = {
 
 # --- Section E4: PARAMETRIC PERSISTENCE ---
 
+_CURRENT_CORPUS_HASH = None
+
+
+def _current_corpus_hash():
+    """Current corpus fingerprint, computed once per report run (OQ-29)."""
+    global _CURRENT_CORPUS_HASH
+    if _CURRENT_CORPUS_HASH is None:
+        _CURRENT_CORPUS_HASH = compute_corpus_hash(PROLOG_DIR / "testsets")
+    return _CURRENT_CORPUS_HASH
+
+
 def build_persistence_section(constraint_id, persistence_data):
     """Section E4: PARAMETRIC PERSISTENCE -- bar durations from grid sweep."""
     lines = ["", "--- PARAMETRIC PERSISTENCE ---", ""]
@@ -1478,6 +1490,18 @@ def build_persistence_section(constraint_id, persistence_data):
     if persistence_data is None:
         lines.append("  [persistence_results.json not available — run persistence_sweep.py]")
         return "\n".join(lines)
+
+    # OQ-29: surface staleness rather than silently rendering a dead-corpus file.
+    stored_hash = persistence_data.get("corpus_hash")
+    if stored_hash is None:
+        lines.append("  [WARNING (OQ-29): persistence_results.json carries no corpus_hash — "
+                     "staleness unverifiable; re-run persistence_sweep.py to stamp it]")
+        lines.append("")
+    elif stored_hash != _current_corpus_hash():
+        lines.append(f"  [STALE (OQ-29): persistence_results.json computed against corpus "
+                     f"{stored_hash}, current is {_current_corpus_hash()} — data below may be "
+                     f"pre-reset; re-run persistence_sweep.py]")
+        lines.append("")
 
     results = persistence_data.get("results", {})
     if not results:

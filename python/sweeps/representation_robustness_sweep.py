@@ -25,6 +25,10 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 PROLOG_DIR = REPO_ROOT / "prolog"
+
+# Corpus fingerprint for staleness stamping (OQ-29)
+sys.path.insert(0, str(REPO_ROOT / "python"))
+from corpus_hash import compute_corpus_hash
 OUTPUTS_DIR = REPO_ROOT / "outputs"
 OUTPUT_JSON = REPO_ROOT / "python" / "representation_robustness_results.json"
 
@@ -317,6 +321,7 @@ def main():
     # Save JSON
     with open(OUTPUT_JSON, "w") as f:
         json.dump({
+            "corpus_hash": compute_corpus_hash(PROLOG_DIR / "testsets"),
             "settings_tested": len(results),
             "zero_crossing_settings": n_zero,
             "any_crossing_settings": n_any,

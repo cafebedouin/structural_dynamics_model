@@ -36,6 +36,10 @@ ORBITS_PATH = ROOT / "outputs" / "product_site_orbits.json"
 DISPLACEMENT_PATH = Path(__file__).resolve().parent / "cognitive_displacement_results.json"
 RESULTS_PATH = Path(__file__).resolve().parent / "product_site_delta_results.json"
 
+# Corpus fingerprint for staleness stamping (OQ-29)
+sys.path.insert(0, str(ROOT / "python"))
+from corpus_hash import compute_corpus_hash
+
 POWERS = ["powerless", "moderate", "institutional", "analytical"]
 
 # Spot-check delta values (uniform only for initial analysis)
@@ -440,6 +444,7 @@ def main():
     print_results(delta_results, presheaf_ids)
 
     output = {
+        "corpus_hash": compute_corpus_hash(ROOT / "prolog" / "testsets"),
         "metadata": {
             "delta_values": args.deltas,
             "n_presheaves": len(presheaf_ids),

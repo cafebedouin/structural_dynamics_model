@@ -35,6 +35,7 @@ from pathlib import Path
 # Import param parser from existing sweep
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from config_sensitivity_sweep import parse_config_params, EXCLUDE_PARAMS
+from corpus_hash import compute_corpus_hash  # single-source corpus fingerprint (OQ-29)
 
 # ---------------------------------------------------------------------------
 # 1. Prolog overlay template — runs classification export instead of test suite
@@ -399,6 +400,7 @@ def main():
     # Save results
     with open(output_path, "w") as f:
         json.dump({
+            "corpus_hash": compute_corpus_hash(Path(__file__).resolve().parents[2] / "prolog" / "testsets"),
             "baseline_count": len(baseline) if baseline else 0,
             "params_analyzed": len(results),
             "results": results,

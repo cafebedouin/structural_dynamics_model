@@ -30,6 +30,10 @@ from pathlib import Path
 PROLOG_DIR = Path(__file__).resolve().parents[2] / "prolog"
 RESULTS_PATH = Path(__file__).resolve().parent / "cognitive_displacement_results.json"
 
+# Corpus fingerprint for staleness stamping (OQ-29)
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "python"))
+from corpus_hash import compute_corpus_hash
+
 # Standard observer positions (must match drl_core:standard_context/1)
 STANDARD_POWERS = ["powerless", "moderate", "institutional", "analytical"]
 
@@ -403,6 +407,7 @@ def main():
             positional_results,
         )
 
+    output["corpus_hash"] = compute_corpus_hash(PROLOG_DIR / "testsets")
     with open(RESULTS_PATH, "w") as f:
         json.dump(output, f, indent=2)
     print(f"\nResults written to {RESULTS_PATH}")

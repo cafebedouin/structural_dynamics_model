@@ -20,6 +20,11 @@ ORBITS_PATH = ROOT / "outputs" / "product_site_orbits.json"
 PIPELINE_PATH = ROOT / "outputs" / "pipeline_output.json"
 RESULTS_PATH = Path(__file__).resolve().parent / "oracle_gap_results.json"
 
+# Corpus fingerprint for staleness stamping (OQ-29)
+import sys
+sys.path.insert(0, str(ROOT / "python"))
+from corpus_hash import compute_corpus_hash
+
 POWERS = ["powerless", "moderate", "institutional", "analytical"]
 
 CANONICAL_CONTEXTS = {
@@ -390,6 +395,7 @@ def main():
     print_results(r4pt, r1ctx, r4ctx, rmispred)
 
     results = {
+        "corpus_hash": compute_corpus_hash(ROOT / "prolog" / "testsets"),
         "4point_oracle_gap": r4pt,
         "1context_block_rule": r1ctx,
         "4canonical_block_rule": r4ctx,

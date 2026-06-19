@@ -29,8 +29,9 @@ import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # python/ (was parents[2]=repo root: import failed standalone)
 from config_sensitivity_sweep import parse_config_params, EXCLUDE_PARAMS
+from corpus_hash import compute_corpus_hash, assert_corpus_current  # single-source corpus fingerprint (OQ-29)
 
 # ---------------------------------------------------------------------------
 # 1. Prolog overlay template — calls persistence_export
@@ -579,6 +580,13 @@ def run_persistence_sweep(config_path, prolog_dir, param_filter=None,
     if param_filter is None:
         bif_params = set()
         if bifurcation_path.exists():
+            # OQ-29: surface staleness — these params decide what gets swept, so a
+            # bifurcation_results.json computed against a moved corpus would silently
+            # sweep the wrong set. Warn loudly (don't crash the sweep) and proceed.
+            try:
+                assert_corpus_current(bifurcation_path, base_dir / "prolog" / "testsets")
+            except RuntimeError as e:
+                print(f"WARNING (OQ-29): {e}", file=sys.stderr)
             try:
                 with open(bifurcation_path) as f:
                     bif_data = json.load(f)
@@ -743,6 +751,7 @@ def main():
 
     # Assemble output
     output = {
+        "corpus_hash": compute_corpus_hash(Path(__file__).resolve().parents[2] / "prolog" / "testsets"),
         "sweep_params": {
             "grid_points": args.grid_points,
             "w1_threshold": args.w1_threshold,
