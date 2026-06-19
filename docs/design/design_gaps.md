@@ -671,3 +671,44 @@ Module)` per the OQ-99 template (`report_generator.pl:776-794`), with (a) an unp
 a NEW 3-arity import, (b) a paired control showing the dedup guard suppresses duplicates, and (c) a principled
 type for the synthesized 3-arity fact (NOT a fabricated `empirical`). It is output-changing and lands alone.
 Named here 2026-06-18 (OQ-111 close).
+
+---
+
+## GAP-14 — No suppression-overreach dynamic: enforcement does not erode its own grip
+
+**The capability:** A temporal/drift law where *escalating suppression of dissent erodes the control it
+seeks* — the operator's principle (2026-06-19) and the Litany's "Enforcement draws on power and exhausts
+it; power revealed can be subverted." Suppression buys short-term compliance by spending three things at
+once: the power reserve (enforcement cost), naturalization (you cannot look natural while visibly
+suppressing), and quiescence (suppression breeds resistance). So escalation trades *cheap* grip
+(uncontested, naturalized) for *expensive* grip (visible coercion that depletes itself). The engine has
+no law expressing this.
+
+**Why it is absent:** `suppression_requirement` and `resistance` exist as metrics with temporal
+measurement series, but there is **no coupling** between them (grep 2026-06-19 for
+`suppression→resistance` / `grip` / `backfire` / `overreach` / `exhaust` found nothing). `resistance` is
+consumed only as a *static* signature/vector input and as classification caps
+(`coordination_resistance_max` etc.); nothing makes accumulating suppression drive a control variable
+down over time. Distinct from `mandatrophy` (`narrative_ontology.pl:157`), which is mandate-*atrophy* — a
+*state* (founding problem dead ∧ extraction persists), not this overreach *feedback*.
+
+**What was built and removed (deferred):** nothing — this was never built; it is a declared absence, not
+a retired apparatus.
+
+**What closing the gap would require (three pieces, hardest first):**
+1. **A declared "grip"/control variable** — there is no metric for it. Candidate proxies, each measuring
+   a different failure: `theater_ratio` rising (grip going *performative* — maintaining the show, not the
+   control) or `resistance` rising. Choosing/constructing it is the hard part.
+2. **An inverted-U / threshold law, not a monotone term** — *some* suppression maintains; *escalating*
+   suppression backfires. A single coefficient cannot express "works then backfires"; the law needs a
+   threshold past which ∂grip/∂suppression flips negative.
+3. **Validation on data already present** — the corpus carries temporal series for suppression, theater,
+   and extraction, so the hypothesis is testable *before* encoding: within constraints, does rising
+   suppression track rising theater (grip→performative) / rising resistance over time?
+
+The static cross-section of this dynamic is split out as ISSUES.md **OQ-152** — a *commentary-grade*
+diagnostic of the **per-seat naturalization-collapse** under suppression (at what suppression level each
+seat loses the cover story; the verdict is the ordering, beneficiary last). Note OQ-152 **annotates, never
+re-gates the type** — re-adding a suppression maximum to the classifier would undo the 2026-06-05 de-leak
+(metric/claim independence; divergence is the signal). This GAP is the full *temporal feedback*; OQ-152 is
+its seat-resolved static snapshot. Named here 2026-06-19.

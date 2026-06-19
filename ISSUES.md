@@ -7807,6 +7807,48 @@ Either is a real outcome; the kill condition (cochain reconstruction) decides wh
 
 ---
 
+## OQ-152 — Per-seat naturalization-collapse under suppression: a COMMENTARY diagnostic (beneficiary last to switch)
+
+**Ω-type:** Ω_C (design — a new commentary-grade diagnostic; **annotates, never overrides** the type).
+
+**Status:** open
+**Priority:** 3
+**Deps:** bundled_with GAP-14
+**Origin:** suppression/scaffold thread off OQ-56 (operator, 2026-06-19).
+
+**Specific question:** `naturalized` (`drl_core.pl:416`: `ε > rope_epsilon_ceiling(0.45) ∧ χ <
+tangled_rope_chi_floor(0.35)`) is the engine's cover-story type — high real extraction compressed
+below detection — and the seat-sweep (`SEAT_SWEEP.md`) shows it is structurally the *beneficiary*
+seat's reading. The Litany says visible suppression contradicts naturalness ("heavy enforcement →
+snare, not mountain"), and the sharp form (operator) is **per-seat and ordered**: as suppression
+rises, the cover story breaks seat by seat — payer/excluded first (they feel it), observer/analytical
+next, **beneficiary last, if ever.** The deliverable is a **diagnostic the engine runs and attaches
+as commentary**: for each seat, at what suppression level would its `naturalized` reading flip to a
+*visible* snare — and the verdict is the **ordering** (monotone, beneficiary highest/→∞).
+
+**Why COMMENTARY-grade, NOT a classification gate (the load-bearing correction, operator
+2026-06-19):** do **not** add a suppression term to `classify_from_metrics`. The de-leak of
+2026-06-05 *deliberately removed* the extractiveness/suppression maxima "so the authored claim and
+the authored metrics stay independent — the engine computes the type; **divergence is the signal**"
+(schema `allOf` block 0 comment). Re-gating `naturalized` on suppression would re-introduce exactly
+that removed maximum and suppress the signal. The right move is the opposite: leave the type alone
+and **surface the divergence** (type=`naturalized` while suppression is high, seat-resolved) as
+commentary — the cover-story-collapse ordering is the annotation. This joins the existing
+commentary-grade stakeholder diagnostics (`seat_perceived_vs_real`, `consensus_provenance`,
+`q6_crosscheck`, `cs_authority_masking`) — it does not touch `drl_core` classification (verdict-grade
+distinction: correction-grade overrides, commentary-grade annotates).
+
+**What resolution changes:** Adds the **per-seat suppression-collapse curve** as a reported
+diagnostic — the static cross-section of GAP-14's temporal grip-decay (over time, seats abandon the
+cover story one by one, beneficiary last). The finding *is* the ordering; the witness is a
+constraint where the payer-seat collapse-threshold is below the beneficiary's. No params on the
+classifier; a new commentary predicate + a per_constraint output field, with a positive control
+(a high-ε/χ-compressed/high-suppression constraint whose payer-seat reading is flagged collapsed
+while the beneficiary's is not) and the never-overrides invariant checked. The full temporal
+feedback stays in GAP-14.
+
+---
+
 *Last updated: 2026-06-18. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
