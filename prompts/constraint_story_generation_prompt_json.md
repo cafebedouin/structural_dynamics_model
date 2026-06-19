@@ -119,7 +119,7 @@ Your output is a JSON document validated against `constraint_story_schema.json`.
 | `network` | Structural influence edges, dual formulation notes | Optional |
 | `directionality_overrides` | Per-agent directionality corrections | Optional |
 | `uke_scope` | UKE_SCOPE manifest provenance (informational) | Optional |
-| `stakeholders` | Named agents with declared roles (see Stakeholders section below) | **Yes — the required authoring surface (R2 roles)** |
+| `stakeholders` | Named agents with declared roles (see Stakeholders section below) | **Required whenever the constraint has parties** — if you author any `base_properties.beneficiaries` or `victims`, you MUST list those same agents here (schema-enforced; generation fails closed otherwise). Exempt ONLY for a genuine mountain with no beneficiaries/victims (e.g. gravity) — it has no parties to name. |
 | `six_questions` | Story-level answers: coordination, transfer, absent voices, disappearance, founding problem | **Yes — five questions + the R5 genealogy interview (`founding_problem`/`_status`/`_corroboration`)** |
 | `gain_flow`, `fixing_cost` | The receipt surface: who receives the extraction; cost class of fixing (see Receipt Surface section below) | Optional; only with stakeholders |
 
@@ -475,7 +475,7 @@ For cases where the automatic derivation (beneficiary/victim + exit → d) would
 
 ---
 
-## Stakeholders, Six Questions, and the Receipt Surface (REQUIRED authoring surface)
+## Stakeholders, Six Questions, and the Receipt Surface (required when the constraint has parties)
 
 This is the story's authoring surface for agents (cutover 2026-06-11, OQ-109 Phase B; OQ-83
 rulings R1–R5 of record). There is no `perspectives[]` array — the engine computes per-seat
@@ -484,6 +484,14 @@ surface records where the gains actually go. The `base_properties.beneficiaries[
 arrays REMAIN required as before (the compiler and engine read them through Phase B).
 
 ### Stakeholders
+
+**Coverage rule (schema-enforced — generation fails closed if you break it):** if the constraint
+has parties — i.e. you authored any `base_properties.beneficiaries` or `victims`, or named agents
+in `commentary.key_agents` — you MUST author those same agents here as structured stakeholders.
+Naming an agent in prose or in the beneficiaries/victims arrays but omitting it from
+`stakeholders[]` is the common failure; do not do it. The ONLY exemption is a genuine mountain
+with no beneficiaries and no victims (e.g. gravity) — a constraint with no parties has no
+stakeholders to name, and the field may be omitted there.
 
 List every agent whose situation the constraint shapes. For each, author an object:
 
