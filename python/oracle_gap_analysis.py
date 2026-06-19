@@ -38,6 +38,11 @@ CANONICAL_CONTEXTS = {
 def load_data():
     with open(ORBITS_PATH) as f:
         orbits = json.load(f)
+    # The orbits file carries top-level metadata alongside per-constraint entries
+    # (e.g. corpus_hash, OQ-29). Keep only constraint-shaped entries (dict with
+    # "contexts") so the per-constraint iterations below don't choke on a string.
+    orbits = {cid: e for cid, e in orbits.items()
+              if isinstance(e, dict) and "contexts" in e}
     with open(PIPELINE_PATH) as f:
         pipeline = json.load(f)
     perspectives = {e["id"]: e["perspectives"] for e in pipeline["per_constraint"]}
