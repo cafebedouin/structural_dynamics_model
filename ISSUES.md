@@ -7722,6 +7722,20 @@ was never seated: `included-roles agree ∧ a genuinely-typed excluded seat diss
 more suspect than conflict; the ideological load of a constraint is measured by how empty the room
 had to be for it to look agreed.*
 
+**Corpus seat-sweep result (the OQ-56 question answered; `SEAT_SWEEP.md` in the audit dir,
+2026-06-19).** Holding each position fixed and sweeping the corpus (% extractive): beneficiary
+15.5/14.6 (haiku/flash) vs payer 90.0/81.0, excluded 80.9/72.2, observer 81.6/72.3, analytical
+82.6/71.7 — a **1-vs-4 geometry** (beneficiary vs a tight not-beneficiary cluster), not a spectrum.
+The benign↔extractive swing is **FORCED** by `role→d` (mechanism, not finding; twin-replication is
+only a stability check since both runs share the config), and **excluded≈payer is forced** (config
++ coverage dilution). **Two residuals survive substrate kill-conditions:** (1) `naturalized` is
+ε/χ-gated not d-fixed (`drl_core.pl:416`: ε>0.45 ∧ χ<0.35 — the cover-story type), so it is the
+beneficiary seat's reading of high-ε constraints; (2) the **analytical seat sits at the payer's
+pole** (82.6/71.7, exact, vs a ~53% midpoint) — it carries no `role→d`, only a declared
+`context→(d,σ)`, so **"no view from nowhere": the declared analytical seat is positioned at the
+extraction pole, beside the parties who pay.** That is the publishable claim (Seat Theorem as
+measurement); the cover-story result is forced/old.
+
 **FOUNDATIONAL CORRECTION — do not repeat the counterfeit rigor (witnessed 2026-06-19).** The
 engine's "H1" is NOT a cohomology rank. `grothendieck_cohomology:count_disagreeing_pairs` is, by
 its own comment, a *"Cech 1-cocycle proxy"* — a tally of disagreeing context-pairs (range 0..6).
