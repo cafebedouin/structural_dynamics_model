@@ -7813,8 +7813,8 @@ Either is a real outcome; the kill condition (cochain reconstruction) decides wh
 
 **Status:** open
 **Priority:** 3
-**Deps:** bundled_with GAP-14
-**Origin:** suppression/scaffold thread off OQ-56 (operator, 2026-06-19).
+**Origin:** suppression/scaffold thread off OQ-56 (operator, 2026-06-19); the temporal half is
+`design_gaps.md` GAP-14 (this OQ is its commentary-grade static cross-section).
 
 **Specific question:** `naturalized` (`drl_core.pl:416`: `ε > rope_epsilon_ceiling(0.45) ∧ χ <
 tangled_rope_chi_floor(0.35)`) is the engine's cover-story type — high real extraction compressed
