@@ -15,13 +15,21 @@ Adjudication of `results.json` against `PRE_REGISTRATION.md`. Substrate:
   PRE_REGISTRATION). The reading_diff trap is **not** silently repeated here.
 - **Null non-degeneracy:** permute band95 = 0.265 < 1.0.
 
-## The recorded blocker: `reading_diff` is schema-stranded (→ OQ-59 / design_gaps)
+## The recorded blocker: `reading_diff` was schema-stranded — FIXED 2026-06-19
 
 All 1106 pre-reset `kernel_v1` files author `constraint_classification/3`; the twins author
-**0**. The within-kernel census on the haiku twin returns **954/954 pairs
+**0**. The within-kernel census on the haiku twin returned **954/954 pairs
 `robustly_undersampled`, 0 disparities** — vacuous. The de-leak rebuild dropped the authored
-(P,T,E,S) cell map the operator consumes and replaced it with 4 computed perspective seats.
-The OQ-59 operator cannot run on the live corpus without a cell-source adapter.
+(P,T,E,S) cell map the operator consumes and replaced it with named stakeholder seats.
+
+**Resolved (commit `01cff6a7`):** `reading_cells/2` now unions the live stakeholder-seat schema
+(`stakeholder_seats:stakeholder_context/3` emits the same `context/4` tuple +
+`dr_type_for_stakeholder/3`), additive and non-regressive on archives. The haiku census now
+returns **136 robustly_binocular / 111 key_fragile / 707 robustly_undersampled** (191 exact
+disparities); the 707 are now MEASURED coverage gaps (a reading authored no stakeholders), not
+a vacuous no-cells pass — both-stakeholder pair coverage is 26% (haiku) / 61% (flash). So D1's
+perspective-seat analysis below can now be cross-checked against a working stakeholder-seat
+`reading_diff` (a follow-on, not re-run here).
 
 ## M1 — the seat-depth gradient (headline descriptive product)
 

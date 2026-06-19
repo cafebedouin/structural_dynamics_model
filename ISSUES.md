@@ -2328,9 +2328,12 @@ should run before the taxonomy is declared, and the taxonomy is the user's to ru
 `audits/2026-06-18_oq56_twin_within_kernel_perturbation/`. Held model+observer-seat fixed,
 varied the reading within each kernel, on the live 4-perspective-seat schema. Findings that
 constrain the taxonomy:
-- The natural operator (`reading_diff`/census, OQ-59) is **schema-stranded** on the live corpus
-  — twins author 0 `constraint_classification` cells (witnessed 954/954 vacuous undersampled vs
-  pre-reset 39.5% binocular). Any clustering must use the perspective-seat schema, not OQ-59.
+- The natural operator (`reading_diff`/census, OQ-59) was **schema-stranded** on the live corpus
+  (twins author 0 `constraint_classification` cells; witnessed 954/954 vacuous undersampled).
+  **FIXED 2026-06-19 (commit `01cff6a7`):** `reading_cells/2` now unions the stakeholder-seat
+  schema (`stakeholder_context/3` emits the same `context/4` tuple) — haiku census now
+  136 binocular / 111 fragile / 707 measured-coverage-gap. Both-stakeholder pair coverage is
+  26% (haiku) / 61% (flash), so the operator runs on that subset; the rest are real coverage gaps.
 - **Seat gradient (declarable invariant):** within-kernel reading depth is near-universal (98%
   of kernels at some seat) but the **institutional seat flattens it** (0.64 haiku / 0.37 flash)
   while powerless/moderate see it (~0.85). Composes with OQ-123.

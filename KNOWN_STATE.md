@@ -45,6 +45,30 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-19 — reading_diff un-stranded onto the live stakeholder-seat schema + stale test corpus
+**Files:** prolog/reading_diff.pl, prolog/tests/test_reading_diff.pl, ISSUES.md
+**Tier:** landed
+
+`reading_diff:reading_cells/2` read only authored `constraint_classification/3`, which the
+de-leak rebuild stopped authoring — every within-kernel pair on the live/twin corpus read a
+vacuous `robustly_undersampled` (OQ-56 D1). Fix (commit `01cff6a7`): `reading_cells/2` now
+UNIONS two cell-sources, mutually exclusive across corpora — authored
+`constraint_classification/3` (archives) and `stakeholder_seats:stakeholder_context/3` +
+`dr_type_for_stakeholder/3` (live; same `context/4` tuple, so alignment keys untouched).
+Witnessed: haiku census 0/0/954 → 136 binocular / 111 fragile / 707 (now MEASURED) coverage
+gaps; non-regressive on `kernel_v1` (0 stakeholders → clause inert; suite 10/10 pass with
+archive overlaid). Twin both-stakeholder pair coverage: 26% haiku / 61% flash (model-asymmetric
+stakeholder authoring — folds into OQ-149).
+
+**Tripwire:** `prolog/tests/test_reading_diff.pl` fixtures are **pre-reset westphalia readings**
+absent from the live `testsets/`; running it the documented way (default corpus) shows **7/10
+FAILED** — a corpus-overlay artifact, NOT a reading_diff bug. Run it with the archive overlaid:
+`swipl -g "asserta(config:param(corpus_path,'archives/datasets/kernel_v1')), [stack],
+corpus_loader:load_all_testsets, [tests/test_reading_diff], run_tests(reading_diff), halt"`
+→ 10/10 pass. (Stale-fixture repointing is unfiled — candidate OQ.)
+
+---
+
 ## 2026-06-18 — OQ-147 crash floor + OQ-148: classifications regression (corpus-wide producer break)
 **Files:** python/audits/sheaf_audit.py, python/audits/tests/test_sheaf_audit.py, ISSUES.md
 **Tier:** landed
