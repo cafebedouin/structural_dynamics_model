@@ -7652,7 +7652,7 @@ v8's `forecloses`/`coexists_with` state structure can bear.
 
 ---
 
-## OQ-150 — Kernel orbits: group the kernels by reading-structure signature
+## OQ-150 — Kernel and reading orbits: a variety of orbit-keys over the same data
 
 **Ω-type:** Ω_E (empirical grouping; feeds the Ω_P taxonomy selection of OQ-56).
 
@@ -7675,11 +7675,36 @@ the depth-vector class is dominated by `(1,1,1,1)` (all seats see depth) = 140/3
 on the coarse depth-vector class. Orbit *structure* (the distribution shape) is robust; per-
 kernel *membership* is largely model-relative.
 
+**Two grouping targets, not one (operator, 2026-06-19):**
+- **Kernel orbits** — group *kernels* by the structure of their reading-set (above).
+- **Reading orbits** — group *readings across kernels* by their seat-signature (which positions
+  see what). This is the unit OQ-56's reading-stance taxonomy actually needs: an orbit = a class
+  of readings that "see the same way" across the seat-gauge, comparable across kernels.
+
+**The variety of orbit-keys (surfaced by the seat-sweep, `SEAT_SWEEP.md`; pairs with OQ-151).**
+The same readings/kernels admit several quotients; pick the key per question:
+- **role-vector orbits** — the 4-seat reading `[beneficiary, payer, excluded, analytical]`. The
+  dominant class `[naturalized, snare, snare, snare]` is the **cover-story baseline** (= the
+  1-vs-4 geometry written as a vector); the *informative* orbits are the **departures**:
+  `[snare,snare,snare,snare]` (beneficiary in the cluster → extraction with no cover story) and
+  excluded-dissent (manufactured consensus).
+- **gap orbits** — magnitude of the beneficiary↔payer divergence (cover-story *intensity*).
+- **dissent-pattern orbits** — *which* seat breaks consensus (excluded-only / payer-only / all).
+- **structure-signature orbits** — (n_readings, depth-vector, claimed_type multiset) — the kernel
+  key above.
+
+**Evidence so far (D1 M3, twin outputs n=960):** kernels DO form real orbits — 125 (haiku) /
+111 (flash) distinct full signatures over 328 multi-reading kernels, largest single orbit = 29;
+the depth-vector class is dominated by `(1,1,1,1)` (all seats see depth) = 140/328 (43%). But
+**membership is draw-sensitive**: cross-model agreement is 0.134 on the full signature, 0.329
+on the coarse depth-vector class. Orbit *structure* (the distribution shape) is robust; per-
+kernel (and per-reading) *membership* is largely model-relative.
+
 **What resolution changes:** Gives OQ-56 its prerequisite cross-kernel clustering on an honest
 footing: the declarable invariants are the **seat gradient** (institutional flattens within-
 kernel depth; powerless/moderate see it — D1 M1) and the **orbit-distribution shape**, NOT
-per-kernel membership (which is an Ω_P/Ω_E draw-property, OQ-118). A taxonomy keyed on per-
-kernel orbit membership would be model-relative and must not be read as discovered. Building a
+per-kernel/per-reading membership (which is an Ω_P/Ω_E draw-property, OQ-118). A taxonomy keyed on
+per-item orbit membership would be model-relative and must not be read as discovered. Building a
 stable orbit key (model-robust signature) is the open work; needs the axiom-axis alignment of
 OQ-72 to include the committer-axis dimensions honestly.
 
