@@ -7685,6 +7685,89 @@ OQ-72 to include the committer-axis dimensions honestly.
 
 ---
 
+## OQ-151 — Role-projected ("six-questions") gauge + empty-chair detector — built on the honest primitive
+
+**Ω-type:** Ω_C (design — what to build + the declared slot definitions; a diagnostic method, NOT a theorem of social reality).
+
+**Status:** open
+**Priority:** 2
+**Deps:** bundled_with OQ-51
+**Origin:** stakeholder/cohomology thread off OQ-56 (2026-06-19), sharpened by a three-model
+review (Gemini / Perplexity / Claude Code web). Evidence: `outputs/pipeline_output.haiku.json`
+(n=960, `8126231`) + `grothendieck_cohomology.pl`; witnessed probes this session.
+
+**The instrument.** Re-base the per-constraint obstruction onto a **canonical 4-role site** —
+`[beneficiary, victim, excluded, analytical]` — instead of (or alongside) the fixed power-gauge
+`[powerless, moderate, institutional, analytical]`. The role site *is the six-questions made into
+a base space* (Q1 who-benefits/who-pays → beneficiary+victim; Q4 who's-not-in-the-room →
+excluded; the observer → analytical), so it is **cross-constraint comparable by construction** (same
+semantic axes every time) while reading the *authored parties*. Witnessed value: the role-gauge
+makes the cover story legible — `abrahamic_covenant__ishmael` reads
+`[ben:naturalized, pay:snare, excl:snare, obs:snare]` (beneficiary sees natural law, everyone else
+sees extraction); the power-gauge scrambles this across power positions.
+
+**Build = Option-2 hybrid + Option-3 dual-gauge diff.**
+- **Hybrid coverage:** synthesize `beneficiary`/`victim` slots from `base_properties` directionality
+  (low-d/high-d), near-universal (haiku 942/960, 841/960); `analytical` = the canonical analytical
+  context (100%); **`excluded` is stakeholder-only (~60%, coverage-carried).** The excluded seat is
+  the *irreducible* contribution — base_properties has no who's-not-in-the-room array, so it cannot
+  be synthesized. It is the entire information gain.
+- **Dual-gauge diff:** keep power-gauge AND role-gauge; the diff is signal — `power-H¹>0 ∧
+  role-H¹=0` = fracture is about authority/power-placement; `role-H¹>0 ∧ power-H¹=0` = fracture is
+  about who-benefits, invisible to the power orbit.
+
+**The headline value (the inversion):** the find is NOT visible disagreement (it documents itself).
+It is **manufactured consensus** — apparent agreement that holds only because the dissenting seat
+was never seated: `included-roles agree ∧ a genuinely-typed excluded seat dissents`. *Consensus is
+more suspect than conflict; the ideological load of a constraint is measured by how empty the room
+had to be for it to look agreed.*
+
+**FOUNDATIONAL CORRECTION — do not repeat the counterfeit rigor (witnessed 2026-06-19).** The
+engine's "H1" is NOT a cohomology rank. `grothendieck_cohomology:count_disagreeing_pairs` is, by
+its own comment, a *"Cech 1-cocycle proxy"* — a tally of disagreeing context-pairs (range 0..6).
+Witness: Abrahamic role-gauge `[naturalized,snare,snare,snare]` gives tally **3**, but the genuine
+first Betti number of that disagreement graph (star K₁,₃) is **E−V+C = 3−4+1 = 0**. Claude Code
+web's kill condition resolves: replacing "H1" with "count of seats differing from the modal" changes
+nothing downstream — because that IS what it computes. So **H⁰ (global section ⟺ all agree) is
+legitimate; "H1" is a contextuality/disagreement count, not dim H¹.** Build this detector on the
+honest primitive (H0 + disagreement tally + coverage); claim Grothendieck cohomology ONLY if a real
+nerve+cochain (overlapping cover, e.g. reading_diff's vantage alignment) is constructed. This also
+flags the *existing* engine naming (`cohomological_obstruction`, `contextuality_fraction`,
+`sheaf_status`) as overclaiming — pairs with **OQ-51**.
+
+**Set-valued aggregation (forced — never modal).** Modal-per-role silences the lone dissenter (it is
+exactly the signal). Define each role-slot's reading as the **SET** of its seats' types.
+`H0 = global section ⟺ the UNION of all seats' types (every role) is a singleton` — any single
+dissenter in any role breaks it and can never be averaged away. A non-singleton role-set is *intra-
+role fracture* (a lone dissenter inside a role), surfaced, not washed. Manufactured-consensus flag =
+included-roles' union is low-disagreement AND the excluded set carries a **genuinely-typed** type
+outside it.
+
+**FAIL-OPEN on absence (witnessed-necessary).** Per-item check of the 5 raw manufactured-consensus
+candidates found **4/5 were false positives**: the excluded seat was `unknown` (untyped), and
+counting `unknown ∉ included-types` as dissent is the Pattern-5 absence-as-presence trap one level
+up. Only `employment_boundary__substantive_employment_reading` was genuine (ben:naturalized /
+pay:snare / excl:tangled_rope). ⇒ the detector MUST require the excluded seat **genuinely typed**;
+absent/`unknown` excluded → `unknown`, never "consensus." And every count is per-item-verified
+before it ships (count-as-witness is the failure mode).
+
+**Failure modes to carry (method, not theorem — Perplexity):** (1) `unknown`-as-dissent (above);
+(2) modal-washes-the-dissenter (→ set-valued); (3) Option-2's high coverage is *partly synthetic* —
+beneficiary/victim are the analyst's directionality priors, not data density, so "comparable by
+construction" restates a declared seat (Seat Theorem); carry that caveat to the read site; (4)
+excluded coverage-gap (fail-open); (5) slot definitions must be defensible/stable, not post-hoc
+labels. **agenda_setter** (the 5th role, ~604 facts) is omitted by "exactly four" — fold into
+beneficiary (institutional-side) or keep as a 5th slot; dropping it loses the piton "administrator
+who profits" signal (a declared choice).
+
+**What resolution changes:** gives a comparable, party-aware obstruction with a built-in manufactured-
+consensus / no-seat-pose detector (pairs with the v8 showing-face guard) — OR concludes the honest
+instrument is "a four-seat empty-chair coverage check," with the cohomology dropped as decoration.
+Either is a real outcome; the kill condition (cochain reconstruction) decides which. Relates OQ-51
+(H1/W1 obstruction + the naming correction), OQ-150 (orbits could key on the role-vector), OQ-56.
+
+---
+
 *Last updated: 2026-06-18. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

@@ -45,6 +45,20 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-19 — the engine's "H1" is a disagreement tally, not a cohomology rank (citation correction)
+**Files:** prolog/grothendieck_cohomology.pl, ISSUES.md
+**Tier:** correction-key
+
+`cohomological_obstruction`'s H1 = `count_disagreeing_pairs` — by its own comment a *"Cech
+1-cocycle proxy"*, the count of disagreeing context-pairs (range 0..6 = C(4,2)). It is NOT
+dim H¹ / a Betti number. Witness: a role-gauge `[naturalized,snare,snare,snare]` gives tally 3,
+but the first Betti number of that disagreement graph (star K₁,₃) is E−V+C = 3−4+1 = 0. **H⁰
+(global section ⟺ all contexts agree) is legitimate; "H1" is a contextuality/disagreement count.**
+Caught by a three-model review (the counterfeit-rigor register). Do not cite `H1` /
+`contextuality_fraction` (=H1/6) / `sheaf_status` as cohomology results without that caveat — they
+are a disagreement tally over a 4-point site with no overlapping cover. A real Čech H¹ needs a
+nerve with overlaps (reading_diff's vantage alignment is the candidate). Lineage: OQ-151, OQ-51.
+
 ## 2026-06-19 — schema: conditional stakeholder-coverage gate (the false-negative root cause)
 **Files:** schemas/constraint_story_schema.json, prompts/constraint_story_generation_prompt_json.md
 **Tier:** landed
