@@ -1,0 +1,318 @@
+{
+  "header": {
+    "constraint_id": "knowledge_legitimacy_biomedicine_flat_control",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "c1a0f99f-1258-4cb3-8c48-dcc7ff8f442a"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Biomedical Knowledge Legitimacy Apparatus",
+    "topic_domain": "epistemology/institutional/scientific",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "elite_research_institutions",
+      "pharmaceutical_industry",
+      "high_impact_journals",
+      "credentialed_specialists"
+    ],
+    "victims": [
+      "independent_researchers",
+      "practitioners_without_institutional_affiliation",
+      "patient_advocacy_researchers",
+      "global_south_researchers"
+    ],
+    "vindicated_propositions": [
+      "peer_review_as_quality_guarantee",
+      "institutional_affiliation_as_competence_signal",
+      "publication_hierarchy_as_epistemic_hierarchy"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "elite_research_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Control the infrastructure that determines what counts as legitimate biomedical knowledge: they host the laboratories, employ the credentialed researchers, sit on editorial boards, and administer peer review. Their institutional prestige is both the input to and the output of the legitimacy apparatus — a claim gains authority from institutional origin, and the institution gains authority from producing validated claims. They can route research through multiple validation channels and have the resources to meet every procedural requirement."
+    },
+    {
+      "name": "pharmaceutical_industry",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Fund substantial biomedical research and benefit from a legitimacy apparatus that privileges large-scale randomized controlled trials, institutional review boards, and publication in high-impact journals — all of which require capital and infrastructure they possess. The apparatus validates the knowledge claims that support their products while creating barriers to evidence that challenges profitability. They can commission research, fund academic positions, and influence which questions get investigated."
+    },
+    {
+      "name": "high_impact_journals",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate as gatekeepers determining which knowledge claims achieve wide circulation and citation. Their impact factors depend on selectivity, which creates incentive to publish findings from elite institutions and reject work from unknown sources regardless of methodological quality. They collect subscription revenue, article processing charges, and prestige from their position as arbiters. Their editorial boards overlap heavily with elite research institutions."
+    },
+    {
+      "name": "credentialed_specialists",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold medical degrees, research doctorates, and institutional appointments that grant them authority to make knowledge claims. The legitimacy apparatus protects their professional jurisdiction by requiring credentials and institutional affiliation as prerequisites for being heard. They benefit from reduced competition and enhanced authority, but are also constrained by the apparatus — their claims must conform to institutional norms and methodological orthodoxy to maintain legitimacy."
+    },
+    {
+      "name": "independent_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Produce knowledge claims without institutional affiliation or credentialing. The legitimacy apparatus systematically discounts their work regardless of methodological rigor: peer reviewers reject submissions from unknown institutions, funding agencies require institutional overhead, and clinical practice guidelines ignore evidence not published in high-impact journals. They bear the cost of exclusion — their findings are treated as illegitimate by default, and they lack the resources to meet the procedural requirements that would grant legitimacy."
+    },
+    {
+      "name": "practitioners_without_institutional_affiliation",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Practice medicine or conduct clinical observation outside academic medical centers. They accumulate practical knowledge from patient care but lack the institutional position to have that knowledge recognized as legitimate. The apparatus requires them to defer to published research from elite institutions even when their clinical experience suggests different conclusions. Their professional identity depends on biomedical legitimacy structures, but those structures systematically devalue their epistemic contributions."
+    },
+    {
+      "name": "patient_advocacy_researchers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Investigate conditions affecting their communities, often with methodological sophistication but without institutional backing. The legitimacy apparatus treats patient-generated evidence as anecdotal regardless of sample size or rigor. They can organize to demand attention but cannot grant themselves legitimacy — that remains controlled by institutional gatekeepers. Their knowledge claims are systematically subordinated to institutional research even when institutional researchers have no lived experience of the conditions being studied."
+    },
+    {
+      "name": "global_south_researchers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Conduct biomedical research in institutions outside North America and Western Europe. The legitimacy apparatus privileges English-language publication, Global North institutional affiliations, and research questions relevant to wealthy populations. Their work is systematically undercited, their journals are excluded from major indexes, and their institutional affiliations carry less weight in peer review. They bear the cost of geographic and linguistic barriers that are presented as quality standards but function as extraction mechanisms."
+    },
+    {
+      "name": "patients_and_public",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Benefit from a system that filters out fraudulent medical claims and validates effective treatments through systematic evidence. They also bear costs when the legitimacy apparatus suppresses inconvenient findings, delays recognition of harms, or privileges profitable interventions over effective but unpatentable ones. They have no exit — they must trust the knowledge claims the apparatus validates because they lack the expertise and access to evaluate evidence themselves."
+    },
+    {
+      "name": "regulatory_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Determine which evidence counts for drug approval, clinical guidelines, and public health policy. They rely on the legitimacy apparatus to identify valid knowledge claims but also shape what the apparatus validates by setting evidentiary standards. Their institutional position gives them analytical distance, but they are also captured by the same legitimacy structures they regulate — their staff are drawn from elite institutions and their standards privilege the kinds of evidence those institutions produce."
+    },
+    {
+      "name": "epistemology_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study how knowledge claims gain legitimacy and how institutional structures shape what counts as evidence. They can see the full apparatus — the coordination function that filters noise from signal, and the extraction function that concentrates epistemic authority in institutions that benefit from that concentration. They document how methodological requirements that appear neutral systematically advantage well-resourced actors."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective problem of distinguishing reliable biomedical knowledge from noise, fraud, and error in a domain where false claims can kill. Peer review, replication requirements, methodological standards, and institutional credentialing create shared filters that prevent dangerous misinformation from being treated as medical fact.",
+    "transfer_function": "Moves epistemic authority and professional jurisdiction from independent researchers, practitioners, patient advocates, and Global South institutions to elite research institutions, pharmaceutical industry, high-impact journals, and credentialed specialists. The transfer is enforced through peer review rejection, funding denial, citation exclusion, and professional marginalization.",
+    "absent_voices": "Independent researchers without institutional affiliation, practitioners whose clinical knowledge is dismissed as anecdotal, patient communities whose lived experience is treated as epistemically inferior, and Global South researchers whose work is systematically undercited. They would argue that methodological requirements are calibrated to exclude their contributions rather than to ensure quality, but they are structurally prevented from participating in the standard-setting process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the legitimacy apparatus vanished overnight, biomedical knowledge production would reorganize around different validation mechanisms. Practitioners would rely more heavily on clinical experience, patient communities would generate and share evidence through alternative channels, independent researchers would publish without institutional gatekeeping, and the pharmaceutical industry would lose its ability to suppress inconvenient findings through journal control. The coordination function would need to be rebuilt, but the current distribution of epistemic authority would collapse.",
+    "founding_problem": "Early modern medicine lacked systematic methods to distinguish effective treatments from quackery, leading to widespread harm from unvalidated interventions. The apparatus was built to create shared standards for evidence evaluation and to concentrate expertise in institutions that could maintain those standards.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Elite institutions and regulatory agencies attest the founding problem remains live and the apparatus is necessary to prevent dangerous misinformation. Independent researchers, patient advocates, and science studies scholars attest the founding problem has been substantially solved but the apparatus persists as a mechanism for concentrating professional jurisdiction and suppressing challenges to institutional authority. Meta-research on publication bias, replication failures, and industry influence from outside the benefiting institutions supports the shifted-function reading."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The biomedical knowledge legitimacy apparatus determines which claims about health, disease, and treatment are accepted as valid. It coordinates through peer review, institutional credentialing, methodological standards, and publication hierarchies. The apparatus genuinely filters dangerous misinformation, but it also concentrates epistemic authority in elite institutions and suppresses knowledge claims from independent researchers, practitioners, patient advocates, and Global South institutions. The claim/metric independence is preserved: the constraint is claimed as tangled_rope (genuine coordination with asymmetric extraction) while the metrics describe substantial and rising extraction, high suppression, and moderate theatricality. The engine measures the divergence between structural claim and operational reality.",
+    "logic_rationale": "Extraction is high (0.68 at interval end) because methodological requirements and institutional gatekeeping systematically advantage well-resourced actors while excluding contributions from independent and non-Western researchers. Suppression is higher (0.72) because the apparatus actively enforces exclusion through peer review rejection, funding denial, and professional marginalization — alternatives to institutional validation are suppressed, not merely discouraged. Theater ratio is moderate (0.41): peer review and replication requirements perform real quality control functions, but a growing share of enforcement activity defends institutional jurisdiction rather than epistemic quality. Accessibility collapse is moderate (0.48) because alternative validation mechanisms exist but are systematically delegitimized. Resistance is substantial (0.58) because excluded groups actively contest the apparatus and document its biases. The measurement series shows extraction, theater, and suppression all rising over the interval as the apparatus has matured and hardened.",
+    "directionality_logic": "Elite research institutions, pharmaceutical industry, high-impact journals, and credentialed specialists are structural beneficiaries — they collect epistemic authority, professional jurisdiction, and economic rents from controlling legitimacy. Independent researchers, non-affiliated practitioners, patient advocates, and Global South researchers are targets — they bear the cost of exclusion and must defer to institutional knowledge claims even when their own evidence suggests different conclusions. Patients and public are near symmetric: genuine benefit from filtering misinformation, diffuse cost from suppressed inconvenient findings. Regulatory agencies have analytical distance but are partly captured by the structures they regulate.",
+    "perspectival_gap": "The agenda-setter seats (elite institutions, journals, regulatory agencies) should compute the constraint as coordination they maintain to ensure quality. The payer seats (independent researchers, patient advocates, Global South researchers) should compute it as enforced extraction that systematically excludes their contributions regardless of methodological rigor. The engine derives this divergence from the structural data — the beneficiary/victim declarations, exit options, and power differentials. The claim does not adjudicate between these perspectives; it states what the author believes is structurally true of the substrate as a single constraint.",
+    "mandatrophy_analysis": "The founding problem — distinguishing reliable biomedical knowledge from dangerous misinformation — was genuine and the apparatus initially solved it. The mandatrophy question is whether that function has been substantially solved while the apparatus persists as extraction. Evidence: systematic publication bias favoring industry-funded research, replication crisis in high-impact journals, geographic and linguistic barriers that function as quality proxies, and documented cases of institutional suppression of inconvenient findings. The apparatus still performs coordination, but extraction has accumulated as institutional actors have learned to game the legitimacy mechanisms. This is the tangled_rope signature: both functions are present, neither has fully displaced the other, and the constraint requires active enforcement to maintain both."
+  },
+  "omegas": [
+    {
+      "id": "methodological_standards_vs_institutional_barriers",
+      "question": "Are the methodological requirements that exclude non-institutional researchers calibrated to ensure epistemic quality, or to protect institutional jurisdiction?",
+      "resolution_mechanism": "Systematic comparison of methodological rigor between accepted institutional research and rejected independent research. If rejected work shows equal or superior rigor, the standards function as barriers rather than quality filters.",
+      "impact": "If standards are barriers, the apparatus is primarily extractive and the coordination function could be maintained with lower exclusion. If standards track quality, the extraction is the necessary cost of coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether methodological gatekeeping tracks epistemic quality or institutional advantage."
+    },
+    {
+      "id": "peer_review_as_quality_vs_jurisdiction",
+      "question": "Does peer review primarily filter for methodological quality, or does it primarily enforce conformity to institutional norms and protect established paradigms?",
+      "resolution_mechanism": "Analysis of peer review outcomes controlling for methodological rigor, institutional affiliation, and paradigm challenge. If affiliation and paradigm conformity predict acceptance independent of rigor, peer review functions as jurisdiction protection.",
+      "impact": "If peer review is jurisdiction protection, the legitimacy apparatus is substantially extractive. If it tracks quality independent of institutional origin, the coordination function is genuine.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether peer review filters quality or enforces institutional control."
+    },
+    {
+      "id": "replication_crisis_as_coordination_failure",
+      "question": "Does the replication crisis in high-impact biomedical journals indicate that the legitimacy apparatus is failing at its coordination function, or that it prioritizes institutional prestige over epistemic reliability?",
+      "resolution_mechanism": "Comparison of replication rates between high-impact institutional publications and lower-prestige independent publications. If replication rates are equal or higher outside elite journals, the apparatus privileges prestige over reliability.",
+      "impact": "If the apparatus privileges prestige, extraction has substantially displaced coordination. If replication failures are evenly distributed, the coordination function is intact but imperfect.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether replication crisis indicates coordination failure or extraction priority."
+    },
+    {
+      "id": "patient_knowledge_epistemic_status",
+      "question": "Is patient-generated evidence about treatment outcomes epistemically inferior to institutional research, or is it systematically devalued because it threatens institutional authority?",
+      "resolution_mechanism": "Comparison of patient-reported outcome data with institutional clinical trial data for the same interventions. If patient data shows equal or superior predictive validity, its exclusion is jurisdictional rather than epistemic.",
+      "impact": "If patient knowledge is systematically devalued for jurisdictional reasons, the apparatus extracts from patient communities by denying them epistemic standing. If it is genuinely inferior, the exclusion is coordination.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether patient knowledge exclusion is epistemic or jurisdictional."
+    },
+    {
+      "id": "global_south_research_quality",
+      "question": "Are Global South research institutions systematically excluded because their work is lower quality, or because the legitimacy apparatus privileges Global North institutional affiliations independent of quality?",
+      "resolution_mechanism": "Blinded review of research from Global South and Global North institutions controlling for methodological rigor. If Global South work is rejected at higher rates when institutional affiliation is visible, the apparatus extracts geographically.",
+      "impact": "If exclusion is geographic rather than quality-based, the apparatus concentrates epistemic authority in wealthy regions through mechanisms that appear neutral. If quality tracks geography, the coordination function justifies the distribution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Global South exclusion tracks quality or institutional geography."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "provenance": {
+    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
+    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
+    "generated_date": "2026-06-18",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-4-5-20250929",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
