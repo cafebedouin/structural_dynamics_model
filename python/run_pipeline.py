@@ -747,6 +747,20 @@ def _phase_post_prolog(progress):
         progress("pipeline", "[SINK] Generating routing_sink.json (per-seat author↔engine diff)...")
     results.append(_run_step("routing_sink", _routing_sink, progress))
 
+    # Kernel orbit export (OQ-150): the two orbit-keys pipeline_output.json does not
+    # serialise — per-kernel obstruction-class (Tier-1) + per-reading grounding-profile.
+    # Feeds the orbit_operator step (run after the manifest). Stamps n_constraints so the
+    # joiner can fail-closed on a stale file (Pattern 1: assert same-run before joining).
+    def _kernel_orbit_export():
+        run_prolog(
+            ["stack.pl", "kernel_orbit_export.pl"],
+            "kernel_orbit_export:run_kernel_orbit_export",
+        )
+
+    if progress:
+        progress("pipeline", "[ORBIT] Exporting kernel_obstruction.json (obstruction + grounding)...")
+    results.append(_run_step("kernel_orbit_export", _kernel_orbit_export, progress))
+
     return results
 
 
@@ -1159,6 +1173,20 @@ def run_pipeline(
         w1_sheaf_join.main()
 
     collect(_run_step("w1_sheaf_join", _w1_sheaf_join, progress))
+
+    # Orbit operator (OQ-150 → OQ-53 transpose surface): groups readings (across kernels)
+    # and kernels by each declared orbit-key → reading_orbits.json + kernel_orbits.json.
+    # Depends on the manifest step (reads pipeline_output.json) AND kernel_orbit_export
+    # (reads kernel_obstruction.json). Tier-1 keys are the declared surface; Tier-2 are
+    # reported model-relative with their twin-agreement numbers stamped inline per orbit
+    # (operator ruling 2026-06-20, OQ-56/OQ-53). Same-run guarded; non-critical (a guard
+    # failure is caught by _run_step). Note: the live corpus has few multi-reading kernels,
+    # so live orbits are sparse by design — the discovery substrate is the twins.
+    def _orbit_operator():
+        import orbit_operator
+        orbit_operator.build()
+
+    collect(_run_step("orbit_operator", _orbit_operator, progress))
 
     # Phase 5: PYTHON TIER 2 (parallel) — depends on corpus_data.json
     if (OUTPUTS_DIR / "corpus_data.json").exists():
