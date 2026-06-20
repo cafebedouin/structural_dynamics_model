@@ -43,7 +43,7 @@ engine-level issues.
 | Classification | `constraint_indexing`, `structural_signatures`, `drl_core` |
 | Composition | `drl_composition`, `drl_counterfactual`, `drl_fpn` |
 | Diagnostics | `drl_boltzmann_analysis`, `drl_purity_network`, `sheaf_analysis`, `arakelov_height` |
-| Commitment Systems | `cs_pattern_detection`, `cs_drift_engine`, `cs_axiom_engine`, `cs_kernel_registry`, `cs_drift_mismatch` |
+| Commitment Systems | `cs_pattern_detection`, `cs_drift_engine`, `cs_axiom_engine`, `cs_kernel_registry`, `cs_drift_mismatch`, `cs_trifurcation` (within-kernel A/B/C disagreement router, OQ-55) |
 | Management | `scenario_manager`, `data_repair`, `report_generator` |
 
 ### Python tooling
