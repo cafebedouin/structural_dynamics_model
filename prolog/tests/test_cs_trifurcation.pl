@@ -78,6 +78,16 @@ narrative_ontology:cs_story_uid(rn_b, 'uid-rn-b').
 % carries a drift_state, so "has a drift_state row" is not the discriminator.
 narrative_ontology:cs_drift_state('uid-rn-a', m_rn, gap(stable, minor, true)).
 
+% --- SINGLE-BIT twin of tk_drift: identical EXCEPT the acknowledged flag flips
+%     false→true. Direction (authority_erosion) and magnitude (substantial) are
+%     held identical to tk_drift's member; obstruction stays untyped. Isolates the
+%     unacknowledged bit as the discriminator (not direction/magnitude riding along). ---
+narrative_ontology:cs_kernel_id(rda2, tk_drift_ack).
+narrative_ontology:cs_kernel_id(rdb2, tk_drift_ack).
+narrative_ontology:cs_story_uid(rda2, 'uid-rda2').
+narrative_ontology:cs_story_uid(rdb2, 'uid-rdb2').
+narrative_ontology:cs_drift_state('uid-rda2', m_rda2, gap(authority_erosion, substantial, true)).
+
 % --- singleton → no verdict ---
 narrative_ontology:cs_kernel_id(rs_a, tk_singleton).
 narrative_ontology:cs_story_uid(rs_a, 'uid-rs-a').
@@ -144,6 +154,20 @@ test(type_a_discriminator_is_drift) :-
     cs_kernel_registry:cs_kernel_obstruction_status(tk_nodrift, untyped),
     cs_trifurcation:cs_reading_trifurcation(tk_drift, type_a_drift, _),
     cs_trifurcation:cs_reading_trifurcation(tk_nodrift, unknown, _).
+
+% --- SINGLE-BIT discriminator: only the `acknowledged` flag differs (false→true),
+% direction and magnitude held identical, obstruction held at untyped. Proves the
+% UNACKNOWLEDGED bit specifically carries Type A — not direction/magnitude. ---
+test(type_a_single_bit_is_acknowledged) :-
+    % obstruction identical
+    cs_kernel_registry:cs_kernel_obstruction_status(tk_drift, untyped),
+    cs_kernel_registry:cs_kernel_obstruction_status(tk_drift_ack, untyped),
+    % the two members agree on direction + magnitude, differ ONLY on the ack flag
+    narrative_ontology:cs_drift_state('uid-rd-a',  _, gap(Dir, Mag, false)),
+    narrative_ontology:cs_drift_state('uid-rda2', _, gap(Dir, Mag, true)),
+    % yet the verdict flips on that single bit
+    cs_trifurcation:cs_reading_trifurcation(tk_drift,     type_a_drift, _),
+    cs_trifurcation:cs_reading_trifurcation(tk_drift_ack, unknown,      _).
 
 % --- INPUT-BOUNDARY CONTROL: cross-kernel facts do not leak into a verdict ---
 % An unrelated kernel (tk_other) carries a forecloses edge in the SAME fact base.

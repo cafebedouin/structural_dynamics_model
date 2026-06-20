@@ -2348,8 +2348,11 @@ a soft block — OQ-56 vocabulary only gates *cross-kernel* disagreement-labelin
 Re-scope witness = input-boundary trace: every input is gated by `cs_kernel_id(_,K)`, no cross-kernel fact
 enters the verdict (`audits`/KNOWN_STATE 2026-06-20).
 
-**Witness.** Controls `test_cs_trifurcation.pl` 8/8 green, incl. the Type-A two-twin (obstruction held at
-`untyped`, drift proven the discriminator) and a cross-kernel-leak negative control. Live corpus: all four
+**Witness.** Controls `test_cs_trifurcation.pl` 9/9 green, incl. the Type-A two-twin (obstruction held at
+`untyped`, drift proven the discriminator), a **single-bit** twin (`tk_drift` vs `tk_drift_ack`: direction
++ magnitude held identical via in-test unification, only the `acknowledged` flag flips false→true →
+verdict flips `type_a_drift`→`unknown` — isolates the unacknowledged bit, not direction/magnitude), and a
+cross-kernel-leak negative control. Live corpus: all four
 branches fire (`type_a_drift`×5, `type_b_structure`×1, `type_c_ambiguity`×2, `unknown`×1 =
 `polaris_document_status`) — the fail-closed `unknown` fires on real data, not a synthetic case.
 

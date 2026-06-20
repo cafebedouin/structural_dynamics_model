@@ -83,8 +83,12 @@ classification). Wired into `stack.pl`.
 **§6 mapping confirmed against the definitions** (not the table paraphrase): Type B = "impossible by
 definition" = `forecloses`; Type C = stable coexisting frames = `coexists_with`; Type A = unmarked
 mutation treated-as-stable = the `false` (unacknowledged) flag in the drift gap. Type A is the **sole
-computed branch**; the two-twin control (`tk_drift` vs `tk_nodrift`, obstruction held at `untyped`)
-proves the drift signal is the discriminator, not the obstruction status riding along.
+computed branch**; two layered controls hold obstruction at `untyped` and vary only the drift signal:
+(1) two-twin (`tk_drift` vs `tk_nodrift`) — drift signal is the discriminator, not obstruction riding
+along; (2) **single-bit** (`tk_drift` vs `tk_drift_ack`) — direction + magnitude held identical (checked
+by in-test unification), only the `acknowledged` flag flips false→true, and the verdict flips
+`type_a_drift`→`unknown`. Isolates the unacknowledged bit specifically (side-by-side pasted in the OQ-55
+follow-up turn, 2026-06-20).
 
 **Re-scope ruling (operator, 2026-06-20):** OQ-55 was `blocked_on OQ-56` — a *soft* block. The
 within-kernel router needs no cross-kernel vocabulary; OQ-56 gates only OQ-53's transpose leg. Edge
