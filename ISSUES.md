@@ -7849,6 +7849,128 @@ feedback stays in GAP-14.
 
 ---
 
+## OQ-153 — Scaffold↔husk as the paired temporal axis: a husk is a naturalized scaffold that locked instead of dissolving
+
+**Ω-type:** Ω_C (design — whether to recognize a scaffold/husk temporal pairing as a first-class
+axis, and where husk lives relative to the existing `piton`/`naturalized` types and the committer
+attractor; a framework-direction question, not a code fix).
+
+**Status:** open
+**Priority:** 3
+**Deps:** bundled_with OQ-152
+**Origin:** operator framing, 2026-06-19 ("a husk is a naturalized scaffold that locked instead of
+dissolving"; the clarifier: scaffold and husk are the two *temporal* categories — scaffold on the
+way **up** (temporary, increasing coordination, meant to dissolve), husk on the way **down**
+(terminal, coordination hollowing, should have dissolved and couldn't)). Pairs with
+`design_gaps.md` GAP-02 (the removed observer-axis husk trajectory-shape read, born-vs-glide) and
+GAP-14 (temporal grip-decay); the static seat cross-section is OQ-152. **Sharpened 2026-06-19**
+(operator): the five-condition structural definition, the legitimacy-trap correction, the QWERTY/
+canon discriminating pair, the de-naturalization death mechanism, and the falsifier below.
+
+**The cut (corrects an earlier draft of this OQ): husk neighbors `naturalized`, not `piton`.** The
+discriminator between a constraint that can husk and one that cannot is *not* the piton-ness they
+may share — it is **naturalization plus a reading layer**. The canonical pair: QWERTY and a stale
+canon are *both* suboptimal Lindy-locked **pitons** (extracting below the fix-threshold), but they
+diverge precisely at the husk question. QWERTY **cannot husk** — a pure coordination lock with no
+interpretive layer (kernel = "this key layout," practice = typing, no reading between them), its
+suboptimality fully visible (everyone knows Dvorak exists), so it cannot naturalize and cannot rot;
+it sits as a stable piton until switching-cost falls or a coordinated jump fires. A canon **can
+husk**, because it has the reading layer QWERTY lacks — and that machinery is what kills it.
+
+**Five necessary conditions for husking (the structural test / the discriminating control):** (1) a
+**kernel**; (2) a **reading layer** thick enough to absorb drift; (3) **naturalization** staking
+legitimacy on the kernel's fixity; (4) a **frozen update-authority**; (5) a **moving world**. QWERTY
+has (1) and (5) only → stable piton, immune. A canon has all five → husks. The **reading layer is
+the pivot**: it simultaneously *enables* naturalization (treat the text as fixed while interpretation
+adapts), *absorbs* drift (practice changes, the reading reinterprets, the kernel is declared
+untouched), and *hides* drift (where the rot accumulates). No reading layer → no husk.
+
+**Sharpened definition of the husk:** *not* "a kernel that cannot be updated" (a logical lock) but
+**a kernel that cannot be updated without destroying the legitimacy the update was meant to serve**
+— a **legitimacy trap**. Internal structure is **three layers coming apart**, not two: the **kernel
+freezes** (naturalization forbids editing it), the **reading drifts** (the world moves, so it must),
+**practice rides the reading**. For a while the growing reading-layer bridges the kernel→practice
+gap — this is how every living tradition adapts, by reinterpreting rather than editing scripture.
+The husk is the **terminal state of that bridging**: when the kernel↔reading gap is total, the
+kernel constrains practice in *nothing* and is retained only as a **legitimacy-token** — pointed at,
+never load-bearing. A rope (or snare) wearing a mountain's costume, the costume now empty.
+
+**Placement, restated with the cut:** **husk ≈ scaffold-origin ∩ naturalized ∩ failed-sunset**, but
+the *discriminator from a plain piton* is the reading-layer-plus-naturalization, not the
+sunset-failure (which piton and husk share). The temporal pairing holds: **scaffold** (ascending —
+temporary, coordination rising, *meant* to dissolve) and **husk** (descending — terminal,
+coordination hollowing, *should have* dissolved and couldn't) are the two temporal categories; the
+husk is the **failed scaffold — the temporary that claimed to be eternal and then couldn't admit it
+was temporary.** QWERTY was literally a scaffold (it solved typebar-jamming) that should have
+dissolved when the constraint lifted and instead locked into a piton; it did *not* husk only because
+it never naturalized. The engine surfaces are: the cover-story type `naturalized` (`drl_core.pl:416`,
+high real ε compressed below the χ floor), FNL/`false_natural_law` (a constructed support reading a
+naturality claim — the likely witness surface), and the committer husk attractor
+(`cs_drift_engine.pl:64,70,80`). What the engine can *currently* witness of the five conditions is
+**partial** and itself a finding to map: kernel (`cs_kernel_id` ✓), reading layer
+(`cs_reading_relation` edges, multiple readings/kernel ✓ partial), naturalization (FNL / `naturalized`
+✓), moving world (`founding_problem_status` dead/live, `disappearance_verdict` ✓ partial), **frozen
+update-authority (no obvious authored field — a gap).**
+
+**How a husk ends (two refinements to "eventually disappears"):** husks do **not** die from drift —
+they can carry a total kernel↔reading gap for centuries looking healthy, because the reading absorbs
+everything and the token still clears. They die from **de-naturalization**: a *phase change* when
+enough observers stop reading the kernel as a mountain, at which point the empty costume is seen as
+empty and the legitimacy-token stops clearing (gradual hidden drift, *sudden* collapse — why husks
+look fine right up to the end). The second exit is not death but **schismatic re-anchoring**: the
+Reformation as husk-reversal (`sola scriptura` — drag practice back to the kernel, burn the drifted
+reading), reversible only by a new authority declaring the old one hollow, which de-naturalizes it
+for everyone watching and produces a fork. So: **a husk ends only by de-naturalization — collapse
+when belief is withdrawn, or re-anchoring by a schism that withdraws belief deliberately.**
+
+**The update theorem (no comfortable exit):** there is **no costless update of a naturalized
+kernel**. Three paths, two of which are the disease: **(i) override by authority fiat** reveals
+updatability and fractures the naturalization (deuterocanon/schism); **(ii) silent reading-drift**
+preserves the premium short-term and *is* the husking mechanism long-term; **(iii) relocate
+legitimacy from the kernel's fixity to the update-process's integrity** — the only non-husking path,
+but itself a one-time **de-naturalization** that costs the naturalization premium (the extra
+coordination from people believing it couldn't change). Survivors did (iii) *early*, building a
+**licensed, revisable interpretive authority into the kernel itself** so updating is canonical rather
+than betrayal (rabbinic interpretation, common law, openly-revisable science). The cure feels like
+the loss, so most systems keep the premium and husk.
+
+**Authored falsifier (commit-plus-falsifier):** a naturalized constraint that **edited its kernel by
+open fiat and *kept* its mountain-status** — observers watched it change and went on reading it as
+invariant. Claim: this does not happen; watching a mountain be edited converts it to a rope in the
+observer's eye, irreversibly. Test case to audit: **Vatican II** (open update, attempt to retain
+mountain-legitimacy, result a traditionalist fracture — reads as partial husking, not retained
+naturalization) — `[UNVERIFIED]`, asserted from memory by the operator, not yet audited.
+
+**Candidate live instances (authored, NOT yet witnessed against the corpus):** **IQ** — all five
+conditions, mid-husk now (kernel = fixed biological *g*; naturalized as culture-free natural measure;
+reading drifting via renorming + accreting caveats; practice riding the reading; frozen authority
+that cannot say "we are revising the construct" without forfeiting the natural-law claim sorting
+institutions bank on — the per-generation renorming *is* the silent reading-drift). **AI handed
+codifying authority while its outputs are presented as objective** = manufacturing naturalization at
+machine speed (= building husks fast; model-collapse is the fast death, husking the slow one; the
+non-husking path is the same — legitimacy in a transparent, Lindy-grounded, revisable *process*,
+never in claimed objectivity). These are authored exemplars motivating the type, not corpus results.
+
+**What resolution changes:** A ruling on whether the scaffold↔husk pairing is elevated to a named
+temporal axis, and which axis carries husk. Three options in increasing cost: **(a) commentary-only**
+— surface a `husk`-shaped *annotation* when the five-condition signature co-occurs (`naturalized`/FNL
+∧ scaffold-origin ∧ reading-layer present ∧ failed-sunset), mirroring OQ-152's commentary-grade move;
+**no** `classify_from_metrics` change, **no** re-introduction of the de-leaked suppression maximum.
+**(b) revive the observer trajectory-shape read** (GAP-02 born-vs-glide), disciplined to the committer
+axis per `two_axis_architecture_v7.md`'s no-cross-axis-reduction rule. **(c) decline** — rule that
+piton + the committer husk attractor already cover the space (then close `future` with the ruling
+recorded). The deliverable for (a) needs the **QWERTY/canon discriminating control made concrete**: a
+positive witness (all five conditions, flagged husk) separated from (i) a plain **piton** with a
+reading layer but no naturalization — the QWERTY case, must *not* flag — and (ii) a plain
+**naturalized** cover story with no scaffold origin/reading layer — must *not* flag. All three must
+come apart on real constraints before the annotation earns its name. **Do not** add a husk type to
+the priority cascade without that control; an undischarged axis-relabel is the silent failure mode
+(Build Discipline: unguarded axis-swap). A prerequisite sub-finding: **does the corpus author the
+frozen-update-authority condition at all?** If not, the five-condition signature is unfingerprintable
+as-is and (a) is itself blocked on a schema gap (route to `design_gaps.md`).
+
+---
+
 *Last updated: 2026-06-18. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
