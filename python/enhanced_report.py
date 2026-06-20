@@ -735,6 +735,29 @@ def build_verdict_banner(constraint_id, pipeline_data):
 
 # --- Level 1: CONSTRAINT IDENTITY (from old Section A "This Constraint" L1 fields) ---
 
+def _signature_robustness_tag():
+    """Draw-robustness annotation for the Signature field.
+
+    The report's `signature` IS orbit_operator's `observer_signature` key (same
+    `entry["signature"]` source) — the canonical, twin-reproducible cross-kernel
+    reading-stance vocabulary ruled at OQ-56 (2026-06-20). The bare label says
+    nothing about how much to trust it; this tag says it is draw-reproducible
+    (twin-agreement 0.722), i.e. a stable stance descriptor and not a single-draw
+    artifact. Metadata is read from orbit_operator.KEY_META (single source —
+    Build Discipline #2), so the tag tracks the ruling rather than a hardcoded number.
+    Returns "" if the key metadata is unavailable (fail-open on the annotation only)."""
+    try:
+        from orbit_operator import KEY_META
+    except Exception:
+        return ""
+    m = KEY_META.get("observer_signature") or {}
+    ta = m.get("twin_agreement")
+    if ta is None:
+        return ""
+    kind = "canonical stance" if m.get("canonical") else "model-relative"
+    return f"  ({kind} · twin-agreement {ta})"
+
+
 def build_level1_identity(constraint_id, pipeline_data, prolog_output, routing_data=None):
     """L1: Self-consistency identity — claimed/live type, signature, purity,
     coupling, Boltzmann, drift events, tangled fields."""
@@ -767,7 +790,8 @@ def build_level1_identity(constraint_id, pipeline_data, prolog_output, routing_d
         lines.extend(_authored_vs_computed(claimed, live_perspectives))
         lines.extend(_routing_addresses(constraint_id, routing_data))
 
-        lines.append(f"    Signature:        {signature}")
+        sig_tag = _signature_robustness_tag() if signature != "N/A" else ""
+        lines.append(f"    Signature:        {signature}{sig_tag}")
 
         if purity is not None:
             lines.append(f"    Purity:           {purity} ({purity_band})")

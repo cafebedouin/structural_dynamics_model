@@ -82,6 +82,14 @@ Promotion test: this is a one-time ruling, not a silent-mistake-before-editing-X
 CLAUDE.md tripwire. The one durable do-not (`canonical` is a checked set, don't re-derive from `tier`)
 lives at the code in `orbit_operator.py`'s docstring.
 
+**Downstream consumer wired (enhanced_report.py).** The cross-kernel orbit artifact has no per-constraint
+report consumer (and shouldn't — its product is the corpus-level transpose query). The one genuinely new
+per-constraint datum is a **draw-robustness tag on the Signature line**: the report's `Signature:` IS
+orbit_operator's `observer_signature` key, so it now reads `Signature: <label>  (canonical stance ·
+twin-agreement 0.722)`, reusing `orbit_operator.KEY_META` as the single source (not a hardcoded number —
+witnessed: flipping `canonical` in KEY_META flips the tag). It qualifies the *vocabulary's* draw-
+reproducibility, not the specific value. Helper `_signature_robustness_tag()` in `enhanced_report.py`.
+
 ---
 
 ## 2026-06-20 — orbit regeneration wired into the pipeline (was a manual pre-step; OQ-29 follow-up)
