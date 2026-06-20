@@ -45,6 +45,47 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-20 — orbit-key declarability: judge against the extraction baseline, NOT the permutation null
+**Files:** audits/2026-06-20_kernel_reading_orbits/, ISSUES.md
+**Tier:** correction-key
+
+OQ-150 cross-twin orbit measurement (8 keys, haiku/flash n=960; `phase1_orbit_keys.py` +
+`phase1b_agreement.py`; controls pass — `claimed_type` 0.7208, K1 reproduces 2026-06-18 M3
+0.134). **Citation correction:** a key clearing the permutation `band95` (`lo>band95`) means
+*beats random labels*, NOT *draw-robust enough to declare as a vocabulary*. All 8 keys beat
+chance; only 2 reproduce at the **extraction baseline (~0.72, the substrate's own
+reproducibility — the natural floor)**: `kernel-obstruction-class` (0.734) and
+`observer-signature` (0.722). The other 6 are above-chance but membership-fragile (0.13–0.57).
+Judge orbit-key declarability against the baseline, not the null. The plan's `lo>band95` gate
+under-operationalized the **reproducibility** filter the plan's own Context elected — applying
+the baseline honors that election, it is not a retroactive switch.
+
+Two substantive Ω_E findings: (1) **committer axis is fragile FINE but reproducible COARSE** —
+apparatus/grounding model-relative (0.49/0.27) yet the 4-way obstruction verdict reproduces
+(0.734); granularity governs declarability, not axis. (2) **apparatus orbit is gradient-orthogonal
+to observer** (normalized MI 0.063, Theorem 7) — genuine second axis, keep separate. OQ-53
+report-path witness: kernel is first-class in `cs_kernel_registry.pl` + `json_report.pl`
+(`cs_kernel_comparison`), prefix-opaque only in `logical_fingerprint.pl`. Two operator picks
+reserved (OQ-56 vocabulary; OQ-53 committer-transpose disposition); empty-menu kill did NOT fire.
+Commits `b07e84f1`, `17dba90e`, `0fdc9d7a`.
+
+## 2026-06-19 — the orbits-staleness warning is EXPECTED after every c-orchestrator run (not a bug)
+**Files:** python/run_pipeline.py, python/sweeps/regenerate_orbits.py, agent/c-orchestrator.py
+**Tier:** history
+
+A c-orchestrator topic run grows `prolog/testsets/`, so `outputs/product_site_orbits.json`
+(the perturbation-sweep baseline, regenerated only by `regenerate_orbits.py`) is stale by
+construction the moment generation finishes. The `manifest_inject` step's
+`check_orbits_corpus_hash` (`run_pipeline.py:1133`) then raises `RuntimeError: product_site_orbits.json
+is stale: corpus_hash … != current …` — this is **non-critical**: `_run_step` catches it, the
+manifest is already stamped (injected before the check), and the pipeline reports `42/43 steps OK`.
+Do NOT re-diagnose this as a pipeline failure. The live classification path is unaffected — it
+runs on `orbit_data.json`, which IS regenerated each pipeline run (`Matched orbit data for N/N`).
+Only the sweeps (`perturb.py`, `product_site_delta_sweep.py`, …) consume the stale `product_site_orbits.json`;
+run `python3 python/sweeps/regenerate_orbits.py` (atomic swipl export + hash stamp) before a sweep
+that needs it. Operator ruling 2026-06-19: keep orbits DECOUPLED, regen on demand — deliberately
+NOT wired into the orchestrator (the export is expensive and most topic runs never sweep). Lineage: OQ-29.
+
 ## 2026-06-19 — the engine's "H1" is a disagreement tally, not a cohomology rank (citation correction)
 **Files:** prolog/grothendieck_cohomology.pl, ISSUES.md
 **Tier:** correction-key
