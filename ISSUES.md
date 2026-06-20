@@ -2225,9 +2225,26 @@ multi-reading kernels; 231 standalone constraints. Readings differentiate within
 victim-set in 183/183, `claimed_type` in 113/183) but the kernel is only an implicit string prefix and
 the two axes are not distinguished by the classifier. Pairs **GAP-04**.
 
-**What resolution changes:** If first-class, the kernel becomes a queryable object with enumerable
-readings and the transpose query becomes available — but it is gated on a reading-stance vocabulary
-(OQ-56). If not, the kernel/reading structure stays a naming convention over independent constraints.
+**Report-path witness (2026-06-20, `audits/2026-06-20_kernel_reading_orbits/RECON.md`) — surprises
+the earlier assumption.** Code-read of the three conflation-locus files shows a SPLIT, not a flat
+prefix-opacity: the kernel is a **first-class queryable object** in `cs_kernel_registry.pl`
+(`cs_readings_for_kernel/2`, `cs_kernel_obstruction/4`) AND in `json_report.pl` (enumerates
+`cs_kernel_id(_,K)`, emits the `cs_kernel_comparison` C3 array + `cs_kernel_divergence_count` B3);
+it is **prefix-opaque only in `logical_fingerprint.pl`** (0 kernel mentions — a per-reading
+fingerprint is kernel-blind by design). Firing witnessed on the haiku twin: 328 multi-reading
+kernels feed `cs_kernel_comparison` (non-empty array; via the Phase-1b probe's 331
+`cs_readings_for_kernel` firings). So the same-kernel leg is best closed **(a-restricted):
+first-class in the registry/operator AND report layers; prefix-opaque only in the per-reading
+fingerprint** — not the flat "(b) report prefix-opaque" earlier expected.
+
+**What resolution changes:** The same-kernel leg is effectively built (registry + report
+first-class; same-kernel diff = `reading_diff`/`axiom_diff`, OQ-59). The **transpose leg**
+("hold a reading-stance fixed, sweep across kernels") is gated on the OQ-56 vocabulary pick. The
+OQ-150 measurement (2026-06-20) shows only the Tier-1 keys (observer-signature, obstruction-class)
+are draw-robust; a transpose over a Tier-2 key would be model-relative. **Reserved (operator's
+call, NOT pre-closed here):** whether to build a knowingly-model-relative committer-axis transpose
+or restrict the transpose to the draw-robust observer axis. The empty-menu kill did not fire
+(Tier 1 is non-empty), so this is present-and-escalate, not foreclosed-by-finding.
 
 ---
 
@@ -2305,10 +2322,26 @@ drift, or a genuine fracture — the operational core of the kernel/reading engi
 
 **Ω-type:** Ω_P (preference/stakeholder — a declared, contestable selection premise, not derivable).
 
-**Status:** open
+**Status:** open — the prerequisite cross-kernel clustering is delivered (OQ-150, 2026-06-20);
+the candidate stance-vocabulary menu is on the table; the **selection** of which orbits
+constitute the vocabulary is the operator's Ω_P ruling (Seat Theorem Cor 2b), now actionable.
 **Priority:** 1
+**Deps:** blocked_on_human oq56-vocabulary-pick-from-OQ-150-menu
 **Origin:** Kernel/reading review, 2026-06-02.
 **Files:** readings (`kernel__reading_name`), `cs_kernel_registry.pl`.
+
+**Candidate vocabulary menu (OQ-150 result, 2026-06-20 — the operator picks from this):**
+- **Tier 1 (membership-reproducible at the extraction baseline ~0.72):** observer-signature orbit
+  (R1, 0.722) and kernel-obstruction-class orbit (0.734). Evidence-settled as draw-robust.
+- **Tier 2 (above-chance but membership-fragile, numbers attached):** terminal-observer (0.566),
+  apparatus `cs_pattern` (0.487), terminal-committer (0.300), axiom-grounding-profile (0.272),
+  seat-role-vector (0.245), kernel structure-signature (0.134).
+
+**The reserved ruling (NOT pre-decided here):** whether the vocabulary is Tier-1-only, or also
+admits Tier-2 keys *knowing they are model-relative* (a model-relative axis is not disqualified
+from a model-relative use — that is the operator's call, informed by the numbers, not foreclosed
+by them). The role-vector (R5/seat-vector) the corpus seat-sweep foregrounded is in Tier 2:
+keying the taxonomy directly on it would be model-relative.
 
 **Specific question:** The transpose query (OQ-53) and any cross-kernel comparison need a reading-stance
 vocabulary *comparable across kernels* (e.g. every kernel's naturalizing vs. coordination vs.
@@ -7659,11 +7692,33 @@ v8's `forecloses`/`coexists_with` state structure can bear.
 
 **Ω-type:** Ω_E (empirical grouping; feeds the Ω_P taxonomy selection of OQ-56).
 
-**Status:** open
+**Status:** mitigated — the variety-of-orbit-keys discovery is measured (2026-06-20); the
+two-tier declarability menu is delivered to OQ-56. Residue: the Phase-3 operator + `run_pipeline`
+wiring for the Tier-1 reproducible keys (gated on the OQ-56 vocabulary pick).
 **Priority:** 2
 **Deps:** gates OQ-56
 **Origin:** OQ-56 D1 (M3), 2026-06-18
 (`audits/2026-06-18_oq56_twin_within_kernel_perturbation/`).
+
+**RESULT (2026-06-20, `audits/2026-06-20_kernel_reading_orbits/`).** Eight orbit-keys measured
+cross-twin (haiku/flash, n=960; per-id/per-kernel membership-agreement vs permutation band95,
+seed 20260620; positive controls pass — `claimed_type` 0.7208, `cs_kernel_id` sets identical, K1
+reproduces the 2026-06-18 M3 0.134 exactly). **All eight clear the chance floor (`lo>band95`),
+so the band95-keyed empty-menu kill did NOT fire** — but that floor only tests beats-chance, a
+weaker thing than the **reproducibility** filter the plan's Context elected. Judged against the
+extraction baseline (~0.72 — the substrate's own reproducibility), the keys split into two tiers:
+- **Tier 1 — membership-reproducible at baseline:** `kernel-obstruction-class` (0.734, coarse
+  4-way verdict) and `observer-signature` (R1, 0.722).
+- **Tier 2 — above-chance but membership-fragile (below baseline):** terminal-observer (0.566),
+  apparatus `cs_pattern` (0.487), terminal-committer (0.300), axiom-grounding-profile (0.272),
+  seat-role-vector (0.245), kernel structure-signature (0.134).
+
+**Two substantive Ω_E findings:** (1) **the committer axis is fragile in its FINE signatures but
+reproducible when COARSENED** — apparatus/grounding are model-relative, yet the 4-way obstruction
+verdict (`real_closure` 66% vs `licensed_plurality` 32%) reproduces at baseline; granularity, not
+axis, governs declarability. (2) **The apparatus orbit is gradient-orthogonal to the observer
+orbit** (normalized MI 0.063; Theorem 7 distinction-check) — a genuine second axis, keep
+separate, do not fold.
 
 **Specific question:** Can the kernels be grouped into orbits by a reading-structure signature
 (n_readings, within-kernel depth-vector, claimed_type multiset across readings, relation
@@ -7695,13 +7750,6 @@ The same readings/kernels admit several quotients; pick the key per question:
 - **dissent-pattern orbits** — *which* seat breaks consensus (excluded-only / payer-only / all).
 - **structure-signature orbits** — (n_readings, depth-vector, claimed_type multiset) — the kernel
   key above.
-
-**Evidence so far (D1 M3, twin outputs n=960):** kernels DO form real orbits — 125 (haiku) /
-111 (flash) distinct full signatures over 328 multi-reading kernels, largest single orbit = 29;
-the depth-vector class is dominated by `(1,1,1,1)` (all seats see depth) = 140/328 (43%). But
-**membership is draw-sensitive**: cross-model agreement is 0.134 on the full signature, 0.329
-on the coarse depth-vector class. Orbit *structure* (the distribution shape) is robust; per-
-kernel (and per-reading) *membership* is largely model-relative.
 
 **What resolution changes:** Gives OQ-56 its prerequisite cross-kernel clustering on an honest
 footing: the declarable invariants are the **seat gradient** (institutional flattens within-

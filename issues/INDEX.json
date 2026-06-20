@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "074014612adbaf37e5cdce829f1788859b9e11c0",
+    "store_version": "17dba90ed5aa58eb6f7c8b3d94c487d34cf3ab76",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-20T00:35:26"
+    "generated_at": "2026-06-20T02:14:34"
   },
-  "issues_sha": "58a4fe397ca9639a7dcf5f7dcf3fe8d35ee278f9098fd7aaa7e3262bb28f23fd",
+  "issues_sha": "7cc551ddd1512aad91bbd4c92bed424f87efb7bf0945fc53c44752f83c788ac9",
   "n_entries": 153,
   "active_token_set": [
     "investigating",
@@ -13,9 +13,9 @@
   ],
   "per_status": {
     "resolved": 69,
-    "mitigated": 6,
+    "mitigated": 7,
     "partial": 8,
-    "open": 64,
+    "open": 63,
     "disposed": 3,
     "future": 3
   },
@@ -276,7 +276,9 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-56"
+        "OQ-56",
+        "OQ-59",
+        "OQ-150"
       ]
     },
     {
@@ -298,7 +300,9 @@
       "status": "open",
       "priority": 1,
       "summary": "Reading-stance taxonomy: the selection-seat is blocked on cross-kernel clustering",
-      "deps": [],
+      "deps": [
+        "blocked_on_human oq56-vocabulary-pick-from-OQ-150-menu"
+      ],
       "cross_refs": [],
       "mentioned_in": [
         "OQ-53",
@@ -900,22 +904,6 @@
         "OQ-72",
         "OQ-123",
         "OQ-124"
-      ]
-    },
-    {
-      "id": "OQ-150",
-      "status": "open",
-      "priority": 2,
-      "summary": "Kernel and reading orbits: a variety of orbit-keys over the same data",
-      "deps": [
-        "gates OQ-56"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-56",
-        "OQ-72",
-        "OQ-118",
-        "OQ-151"
       ]
     },
     {
@@ -2008,6 +1996,22 @@
       "mentioned_in": [
         "OQ-29",
         "OQ-148"
+      ]
+    },
+    {
+      "id": "OQ-150",
+      "status": "mitigated",
+      "priority": 2,
+      "summary": "Kernel and reading orbits: a variety of orbit-keys over the same data",
+      "deps": [
+        "gates OQ-56"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-56",
+        "OQ-72",
+        "OQ-118",
+        "OQ-151"
       ]
     }
   ]
