@@ -885,9 +885,10 @@ mismatch→STALE, absent-hash→STALE). The **audit-script ruling** was settled 
 `metric_audit.py:115` and `sheaf_audit.py:146–147` load the LIVE `pipeline_output.json` /
 `orbit_data.json` (corpus-derived), so a `compute_corpus_hash(testsets)` stamp is the correct
 identity — they are live producers, not the archive wrong-identity case. (Surfaced separately while
-exercising: `sheaf_audit.py:515` ZeroDivisionError when the working set is empty on the small
-post-reset corpus, and `oracle_gap_analysis.py:143` `entry["contexts"]` on a string — pre-existing
-bugs, not OQ-29.) Test-artifact class (`alt_power_transform_results_3k`, `test_battery_results`)
+exercising: `sheaf_audit.py:515` ZeroDivisionError when the working set is empty — first read as
+"small post-reset corpus" but later WITNESSED (2026-06-18) to be the `classifications` producer
+regression, NOT corpus size: OQ-147 (crash floor, resolved) / OQ-148 (regression, open) — and
+`oracle_gap_analysis.py:143` `entry["contexts"]` on a string — pre-existing bugs, not OQ-29.) Test-artifact class (`alt_power_transform_results_3k`, `test_battery_results`)
 stays excluded-as-class.
 
 ---
@@ -7523,8 +7524,10 @@ directly: raw len 75, zero non-constraint-shaped keys, helper len 75. (4) Per-co
 of the 5 accesses RAISES on raw, yields exactly **75** via helper; `oracle_gap_analysis.py` completes;
 `game_theory_nash.py --input outputs/product_site_orbits.json` TypeError→completes (75). (5) All 6
 files resolve `from shared.loader import load_orbits_constraints`. Provenance: KNOWN_STATE 2026-06-18;
-commit at close. Out of scope (separate corpus-size bug, not this class): `sheaf_audit.py:515`
-ZeroDivisionError on the small post-reset corpus. Lineage: OQ-29.
+commit at close. Out of scope (separate bug, not this class): `sheaf_audit.py:515` ZeroDivisionError
+— first read as a corpus-size bug, actually the `classifications` producer regression (WITNESSED
+2026-06-18, sparsity ruled out): OQ-147 (crash floor, resolved) / OQ-148 (regression, open).
+Lineage: OQ-29.
 
 ---
 
