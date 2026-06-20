@@ -134,8 +134,18 @@ folded into the ranking and menu above.
 
 ## Still owed
 
-- **`cs_kernel_comparison` firing-witness** on the twins (RECON owe) — for the OQ-53 (a)/(b)
-  close. The report path is first-class by code-read; firing remains to be witnessed.
+- **`cs_kernel_comparison` firing-witness** on the twins — **DONE 2026-06-20.** Ran
+  `write_kernel_comparison_entry(user_output, ai_risk_prioritization, false)` on the haiku twin
+  (consult(stack) + load_all_testsets + consult(json_report)). Emitted a first-class kernel
+  object: `{"kernel_id":"ai_risk_prioritization","reading_count":2,"readings":[{"reading_id":
+  "ai_risk_prioritization__existential_risk_reading",...},{"reading_id":
+  "ai_risk_prioritization__near_term_harms_reading",...}]}`. The report path ENUMERATES a
+  kernel's reading-set (not a string prefix) ⇒ **OQ-53 same-kernel close is (a)-for-json_report**,
+  earned by witnessed query output, reversing the prior prefix-opaque expectation.
+- **Orthogonality positive control** — **DONE 2026-06-20.** apparatus is non-degenerate (8
+  classes, H=1.869 bits, largest cell 0.403); the same MI machinery returns high on
+  known-dependent pairs (observer vs claimed_type 0.515; R5-seat-vec vs R4-mode 1.000) and low
+  (0.063) on apparatus vs observer — so the orthogonality is real, not an imbalance artifact.
 - **Differing-commit confound** bound but not eliminated (extraction control caps its effect on
   `claimed_type`).
 - **Phase 3 operator + wiring** — build the Tier-1 reproducible keys (R1 reading-orbit +
