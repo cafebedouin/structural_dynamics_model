@@ -378,6 +378,43 @@ def _phase_prep(progress):
         progress("pipeline", "[PREP] Done.")
 
 
+def _regenerate_orbits(progress):
+    """Regenerate product_site_orbits.json + stamp corpus_hash, atomically, at the
+    front of the pipeline so the orbits the manifest_inject check (and the Tier-1
+    orbit consumers) read are always fresh against THIS run's corpus.
+
+    Previously a manual pre-pipeline step (OQ-29 left regeneration to
+    `regenerate_orbits.py` and made manifest_inject fail-closed on staleness).
+    Operator ruling 2026-06-20: run it WITH the pipeline — regeneration is cheap
+    (~1.3s on the live corpus) and the friction of the manual step was not worth
+    the stale-orbits error it caused. The manifest_inject corpus_hash check stays
+    as the fail-closed backstop (catches a regen that failed or was skipped).
+
+    Runs as a subprocess (the script sys.exit()s on failure, which _run_step does
+    not catch); a non-zero exit raises RuntimeError so it is recorded as a step
+    error and the manifest_inject guard still fires downstream.
+
+    NOTE: regenerate_orbits.py always exports the DEFAULT `testsets/` corpus, which
+    is exactly what manifest_inject checks (TESTSETS_DIR, unconditionally). A
+    non-default classify_corpus run is unchanged by this step (neither regenerates
+    against the non-default corpus — pre-existing, not made worse here).
+    """
+    if progress:
+        progress("pipeline", "[ORBITS] Regenerating product_site_orbits.json + corpus_hash...")
+    script = REPO_ROOT / "python" / "sweeps" / "regenerate_orbits.py"
+    result = subprocess.run(
+        [sys.executable, str(script)],
+        cwd=str(REPO_ROOT),
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(
+            f"regenerate_orbits.py exited {result.returncode}: "
+            f"{(result.stderr or result.stdout).strip()[-400:]}"
+        )
+
+
 # ---------------------------------------------------------------------------
 # Phase 2: PROLOG ANALYSES (parallel)
 # ---------------------------------------------------------------------------
@@ -1112,6 +1149,11 @@ def run_pipeline(
 
     # Phase 1: PREP
     collect(_run_step("prep", lambda: _phase_prep(progress), progress))
+
+    # Phase 1b: regenerate orbits (sequential — before the parallel Prolog phase,
+    # so no two swipl invocations race the shared product_site_orbits.json, and
+    # before manifest_inject's fail-closed corpus_hash check).
+    collect(_run_step("regenerate_orbits", lambda: _regenerate_orbits(progress), progress))
 
     # Phase 2: PROLOG ANALYSES (parallel)
     collect(_phase_prolog(progress, parallel))

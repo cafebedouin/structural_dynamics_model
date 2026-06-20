@@ -45,6 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-20 — orbit regeneration wired into the pipeline (was a manual pre-step; OQ-29 follow-up)
+**Files:** python/run_pipeline.py, python/sweeps/regenerate_orbits.py
+**Tier:** landed
+
+`run_pipeline.py` now runs `regenerate_orbits.py` as a sequential **Phase 1b** step (`regenerate_orbits`,
+after `prep`, before the parallel Prolog phase and before `manifest_inject`). Previously orbit
+regeneration was a MANUAL pre-pipeline step, and `manifest_inject`'s `check_orbits_corpus_hash` would
+fail-closed if you forgot it (the recurring "product_site_orbits.json is stale: corpus_hash … != …"
+error). Operator ruling 2026-06-20 (the regenerate-every-time vs on-demand tradeoff): regeneration is
+cheap (~1.3s on the live corpus) and the manual-step friction wasn't worth the stale-orbits error, so
+run it with the pipeline. The `manifest_inject` corpus_hash check is **kept as the fail-closed backstop**
+(catches a regen that failed or was skipped) — the OQ-29 Thread-C guard is unchanged.
+
+Sequential placement is deliberate: it must not race the shared `product_site_orbits.json` with the
+parallel Phase-2 swipl analyses (serialization rule). Runs as a subprocess because the script
+`sys.exit()`s on failure (a `SystemExit` that `_run_step` would not catch); non-zero exit → `RuntimeError`
+→ recorded step error, with the manifest_inject guard still firing downstream. Caveat:
+`regenerate_orbits.py` always exports the DEFAULT `testsets/` corpus (exactly what `manifest_inject`
+checks); a non-default `classify_corpus` run is unchanged (pre-existing, not made worse). Witness:
+pipeline now 0 errors (was 1 — `manifest_inject` stale), `regenerate_orbits ok [1.3s]`, total time ~8.8s
+(unchanged — the regen replaced the error, not added to it).
+
 ## 2026-06-20 — within-kernel trifurcation router built + wired (OQ-55 resolved; OQ-53 within-kernel leg closed)
 **Files:** prolog/cs_trifurcation.pl, prolog/json_report.pl, prolog/tests/test_cs_trifurcation.pl, prolog/stack.pl, ISSUES.md
 **Tier:** landed
