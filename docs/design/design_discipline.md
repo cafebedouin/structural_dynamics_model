@@ -68,6 +68,40 @@ they are closeable (more work resolves them) or constitutively open (undecidable
 engine — a chosen cut, not a pending answer). The separation is the point: it lets a reader
 reject an axiom and see exactly what falls, rather than having to reject or accept the whole.
 
+### 0.1 The declared cross-kernel reading-stance vocabulary (OQ-56, operator 2026-06-20)
+
+A second seat is declared here, narrower than §0's but of the same kind: it has no seat-free fact
+to ratify it, so I own it rather than claim to have found it. **The canonical cross-kernel
+reading-stance vocabulary — the names by which a stance is held fixed and swept across kernels —
+is the two draw-robust keys: `observer_signature` (reading-unit, twin-agreement 0.722) and
+`obstruction_class` (kernel-unit, 0.734).** These are reproducible at the ~0.72 extraction
+baseline across the haiku/flash twin; I declare them canonical and stamp that as a checked fact
+(`CANONICAL_VOCABULARY` in `python/orbit_operator.py`, surfaced as `canonical` on every orbit
+record), not a remembered convention.
+
+The seat is **owned, not neutral**, and it is **contestable**. The natural rival — making the
+semantically-aligned key `seat_role_vector` (the [beneficiary, payer, excluded, analytical]
+vector that SEAT_SWEEP foregrounds) canonical — is the one a reader who wants the vocabulary to
+*name the political stance directly* would prefer. I **decline it, I do not refute it.** It is
+declined on a stated ground: on this corpus that key is draw-fragile (twin-agreement 0.245, well
+below the baseline floor), so canonizing it would put a model-relative artifact at the center of
+a vocabulary meant to travel across kernels. The decline is conditional and carries its own kill
+condition (ISSUES OQ-56): **if a live downstream consumer ever *requires* the semantic stance
+label inside the canonical vocabulary to function** — not merely to display it — the ground for
+declining is gone and the seat flips to canonizing `seat_role_vector` despite its fragility, on
+the principle that a model-relative answer to the real question beats a robust answer to a
+different one. As of 2026-06-20 no such consumer exists (witnessed: two-pronged grep, named-key
+and generic-`canonical` passes, both with a positive control).
+
+This produces the honest empirical finding the vocabulary choice half-hides, recorded as the
+result and not buried under the ruling: **OQ-56's motivating question — name the semantic stances
+(naturalizing / coordination / power-revealing) comparably across kernels — has no draw-robust
+answer on this corpus.** The reproducible keys are structural and coarse; the one
+semantically-aligned key is draw-fragile. The semantic-stance transpose is therefore
+*foreclosed-as-draw-robust* — available model-relative only. That is a finding about this corpus
+(an Ω_E, witnessable later by a more reproducible extraction), not a permanent fact about the
+engine; a corpus or extraction that lifted the role-vector above the baseline would reopen it.
+
 ---
 
 ## 1. Provenance: engine first, theory second

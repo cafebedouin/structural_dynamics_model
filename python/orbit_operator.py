@@ -7,11 +7,17 @@ loaded corpus's readings (across kernels) and kernels by each declared orbit-key
 and materializes outputs/{reading,kernel}_orbits.json.
 
 DISPOSITION (operator ruling 2026-06-20, OQ-56 / OQ-53):
+  - The CANONICAL cross-kernel reading-stance vocabulary = observer_signature (reading-
+    unit) + obstruction_class (kernel-unit). This is a CHECKED FACT (CANONICAL_VOCABULARY
+    below, stamped as `canonical` on every key record), not "tier==1 remembered as
+    canonical" — Build Discipline Pattern 2 (canonicity is a checked fact, not a memory).
   - Tier 1 (membership-reproducible at the extraction baseline ~0.72) is the BUILT,
     DECLARED surface: observer-signature (reading) + obstruction-class (kernel).
   - Tier 2 (above-chance but membership-fragile) is REPORTED model-relative: every
     Tier-2 orbit record carries its own twin_agreement number INLINE (not a legend),
     per the operator's [EDGE] — the model-relative flag must not degrade to a heading.
+    The semantic-stance key (seat_role_vector) is draw-fragile (0.245) → NOT canonical;
+    OQ-56's semantic-stance transpose is foreclosed-as-draw-robust on this corpus.
 
 SOURCES (single-canonical, no re-derivation — Build Discipline Pattern 2):
   - outputs/pipeline_output.json : R1/R2/R3/R4/R5 + K1 (the keys the pipeline already
@@ -42,6 +48,11 @@ CASCADE = ["unknown", "naturalized", "piton", "tangled_rope", "rope", "scaffold"
 # carries inline. agreement = cross-twin per-unit membership agreement (haiku/flash,
 # n=960); baseline = extraction reproducibility ~0.721 (the declarability floor).
 BASELINE = 0.721
+# The canonical cross-kernel reading-stance vocabulary (OQ-56 operator ruling
+# 2026-06-20). A NAMED SET, not derived from tier — `canonical` is stamped on every
+# key record from membership here, so a consumer branches on a checked fact rather than
+# re-deriving "tier==1 means canonical" (Build Discipline Pattern 2).
+CANONICAL_VOCABULARY = {"observer_signature", "obstruction_class"}
 KEY_META = {
     # reading-orbit keys (unit = constraint id)
     "observer_signature":      dict(tier=1, twin_agreement=0.722, family="observer"),
@@ -54,9 +65,10 @@ KEY_META = {
     "obstruction_class":       dict(tier=1, twin_agreement=0.734, family="committer"),
     "kernel_structure_signature": dict(tier=2, twin_agreement=0.134, family="structure"),
 }
-for _m in KEY_META.values():
+for _name, _m in KEY_META.items():
     _m["declarable"] = _m["twin_agreement"] >= 0.70  # baseline floor
     _m["model_relative"] = not _m["declarable"]
+    _m["canonical"] = _name in CANONICAL_VOCABULARY
 
 
 def _cascade_rank(t):
@@ -151,7 +163,7 @@ def _orbit_records(orbits, meta, source_missing=False):
         recs.append({
             "label": lab, "size": len(ids), "members": sorted(ids),
             "tier": meta["tier"], "twin_agreement": meta["twin_agreement"],
-            "model_relative": meta["model_relative"],
+            "model_relative": meta["model_relative"], "canonical": meta["canonical"],
         })
     return recs
 
@@ -192,8 +204,12 @@ def build(twin=None):
         "source_n_constraints": manifest.get("n_constraints"),
         "code_commit_short": manifest.get("code_commit_short"),
         "baseline": BASELINE,
-        "disposition": "tier1=declared; tier2=reported model-relative (numbers inline) "
-                       "(operator ruling 2026-06-20, OQ-56/OQ-53)",
+        "canonical_vocabulary": sorted(CANONICAL_VOCABULARY),
+        "disposition": "canonical cross-kernel reading-stance vocabulary = "
+                       "observer_signature + obstruction_class (checked fact, per-key "
+                       "`canonical`); tier1=declared; tier2=reported model-relative "
+                       "(numbers inline); semantic stance (seat_role_vector) draw-fragile "
+                       "→ model-relative only (operator ruling 2026-06-20, OQ-56/OQ-53)",
     }
 
     # ---- reading orbits ----
@@ -204,12 +220,14 @@ def build(twin=None):
             reading["keys"][name] = {"tier": meta["tier"],
                                      "twin_agreement": meta["twin_agreement"],
                                      "model_relative": meta["model_relative"],
+                                     "canonical": meta["canonical"],
                                      "source_missing": obs_stale or "kernel_obstruction.json absent"}
             continue
         orbits, unkeyed = _group(rows, ext, obs)
         reading["keys"][name] = {
             "tier": meta["tier"], "twin_agreement": meta["twin_agreement"],
-            "model_relative": meta["model_relative"], "family": meta["family"],
+            "model_relative": meta["model_relative"], "canonical": meta["canonical"],
+            "family": meta["family"],
             "n_orbits": len(orbits), "unkeyed": unkeyed,
             "orbits": _orbit_records(orbits, meta),
         }
@@ -231,7 +249,8 @@ def build(twin=None):
         k1[str(sig)].append(k)
     kernel["keys"]["kernel_structure_signature"] = {
         "tier": meta["tier"], "twin_agreement": meta["twin_agreement"],
-        "model_relative": meta["model_relative"], "family": meta["family"],
+        "model_relative": meta["model_relative"], "canonical": meta["canonical"],
+        "family": meta["family"],
         "n_orbits": len(k1),
         "orbits": _orbit_records(k1, meta),
     }
@@ -241,7 +260,7 @@ def build(twin=None):
     if obs is None:
         kernel["keys"]["obstruction_class"] = {
             "tier": meta["tier"], "twin_agreement": meta["twin_agreement"],
-            "model_relative": meta["model_relative"],
+            "model_relative": meta["model_relative"], "canonical": meta["canonical"],
             "source_missing": obs_stale or "kernel_obstruction.json absent (run kernel_orbit_export.pl)"}
     else:
         oc = defaultdict(list)
@@ -249,7 +268,8 @@ def build(twin=None):
             oc[status].append(k)
         kernel["keys"]["obstruction_class"] = {
             "tier": meta["tier"], "twin_agreement": meta["twin_agreement"],
-            "model_relative": meta["model_relative"], "family": meta["family"],
+            "model_relative": meta["model_relative"], "canonical": meta["canonical"],
+            "family": meta["family"],
             "n_orbits": len(oc),
             "orbits": _orbit_records(oc, meta),
         }

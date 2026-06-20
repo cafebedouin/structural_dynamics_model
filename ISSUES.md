@@ -2209,9 +2209,11 @@ explained), so the prior "do not scope until OQ-51 settled" gate is lifted.
 
 **Ω-type:** Ω_C (design choice — is the kernel/reading axis first-class?).
 
-**Status:** open
+**Status:** resolved — 2026-06-20 — both legs closed. Within-kernel SATISFIED (OQ-55 router);
+transpose WITNESSED-LIVE on the OQ-56 canonical vocabulary. See resolution note.
 **Priority:** 1
-**Deps:** blocked_on OQ-56
+**Deps (dropped on close):** was `blocked_on OQ-56`; OQ-56 ruled 2026-06-20 — transpose runs on the
+canonical `observer_signature`/`obstruction_class` vocabulary.
 **Origin:** Kernel/reading review, 2026-06-02 (first kernel/reading corpus landed this day).
 **Files:** `cs_kernel_registry.pl`, `logical_fingerprint.pl`, `json_report.pl`; readings as
 `kernel__reading_name` sibling files.
@@ -2256,15 +2258,24 @@ keys are emitted as report-only with their twin-agreement numbers inline. The tr
 orbits are sparse (3 multi-reading kernels) — the discovery substrate is the twins. Same-kernel
 leg = (a)-for-json_report (witnessed).
 
-**Within-kernel consumer leg CLOSED (2026-06-20; OQ-55 resolved).** The disagreement-typing consumer
-— the last gate named above — now exists: `cs_trifurcation:cs_reading_trifurcation/3`, live in
-`json_report.pl`'s `cs_kernel_comparison` as the `reading_trifurcation` field (`scope:within_kernel`,
-commentary-grade), firing all four A/B/C/unknown branches on the live corpus. So the two OQ-53 legs
-split cleanly: **(within-kernel leg) SATISFIED** — kernel is first-class in registry + report, readings
-compared as a set, and *why* they disagree is now routed. **(transpose leg) STILL `blocked_on OQ-56`** —
-holding a reading-stance fixed and sweeping across kernels needs the cross-kernel stance vocabulary
-(Ω_P, OQ-56), which the within-kernel router deliberately does not touch. OQ-53 is NOT flatly resolved:
-status stays `open` on the transpose leg alone.
+**Resolution (2026-06-20) — both legs closed.**
+- **Within-kernel leg SATISFIED.** Kernel is first-class in `cs_kernel_registry.pl` + `json_report.pl`;
+  readings compared as a set; *why* they disagree routed by `cs_trifurcation:cs_reading_trifurcation/3`
+  (live in `cs_kernel_comparison` as `reading_trifurcation`, `scope:within_kernel`, commentary-grade,
+  all four A/B/C/unknown branches firing — OQ-55 resolved).
+- **Transpose leg WITNESSED-LIVE (Branch 1).** With OQ-56 ruled (canonical vocabulary =
+  `observer_signature` + `obstruction_class`), the transpose query — hold `observer_signature` fixed,
+  sweep across kernels — runs on the live corpus and finds multi-kernel orbits:
+  `constructed_high_extraction` spans **25 genuine multi-reading kernels**, `false_ci_rope` spans **11**
+  (positive control: 89 distinct kernels present across members, query detects 5 multi-kernel orbits —
+  not byte-identical to an empty read). The semantic-stance transpose (`seat_role_vector`) is
+  **model-relative only** (OQ-56 Ω_E foreclosure), not part of this close.
+- `logical_fingerprint.pl` stays prefix-opaque by design (per-reading fingerprint is kernel-blind), so
+  the close is **(a-restricted)**, not flat.
+
+**Evidence pointers:** `python/orbit_operator.py` + `prolog/kernel_orbit_export.pl` →
+`outputs/{reading,kernel}_orbits.json`; OQ-55 (`cs_trifurcation.pl`);
+`audits/2026-06-20_kernel_reading_orbits/`; KNOWN_STATE 2026-06-20; orbit canonical-fact commit (this session).
 
 ---
 
@@ -2366,66 +2377,40 @@ commentary-grade.**
 
 **Ω-type:** Ω_P (preference/stakeholder — a declared, contestable selection premise, not derivable).
 
-**Status:** open — the prerequisite cross-kernel clustering is delivered (OQ-150, 2026-06-20);
-the candidate stance-vocabulary menu is on the table; the **selection** of which orbits
-constitute the vocabulary is the operator's Ω_P ruling (Seat Theorem Cor 2b), now actionable.
+**Status:** resolved — 2026-06-20 — operator Ω_P ruling given; vocabulary pick made. Compress-on-close;
+the kill condition below stays OPERATIVE.
 **Priority:** 1
-**Deps:** blocked_on_human oq56-vocabulary-pick-from-OQ-150-menu
+**Deps (dropped on close):** was `blocked_on_human oq56-vocabulary-pick-from-OQ-150-menu`; the pick is made.
 **Origin:** Kernel/reading review, 2026-06-02.
-**Files:** readings (`kernel__reading_name`), `cs_kernel_registry.pl`.
+**Files:** `python/orbit_operator.py` (`CANONICAL_VOCABULARY`, `canonical` stamp),
+`docs/design/design_discipline.md` §0.1; readings (`kernel__reading_name`), `cs_kernel_registry.pl`.
 
-**Scope note (2026-06-20):** OQ-55 was re-scoped *off* this dependency — the within-kernel
-trifurcation router needs no cross-kernel vocabulary and is now resolved. OQ-56 gates only OQ-53's
-**cross-kernel transpose leg** (labeling reading-stances comparably across kernels), not within-kernel
-disagreement-typing.
+**The Ω_P ruling (operator, 2026-06-20).** The canonical cross-kernel reading-stance vocabulary =
+the two Tier-1 draw-robust keys: `observer_signature` (reading-unit, twin-agreement 0.722) +
+`obstruction_class` (kernel-unit, 0.734). The six Tier-2 keys (incl. `seat_role_vector`, 0.245) are
+carried **report-only, model-relative**, twin-agreement inline — NOT canonical. Recorded as a **checked
+fact, not a memory** (Build Discipline Pattern 2): `CANONICAL_VOCABULARY` in `orbit_operator.py`,
+surfaced as `canonical` on every orbit record (witness: `canonical=true` on exactly the 2 Tier-1 keys,
+false on the 6 others). Declared first-person, decline-not-refute the seat-role-vector rival, in
+`design_discipline.md` §0.1.
 
-**Candidate vocabulary menu (OQ-150 result, 2026-06-20 — the operator picks from this):**
-- **Tier 1 (membership-reproducible at the extraction baseline ~0.72):** observer-signature orbit
-  (R1, 0.722) and kernel-obstruction-class orbit (0.734). Evidence-settled as draw-robust.
-- **Tier 2 (above-chance but membership-fragile, numbers attached):** terminal-observer (0.566),
-  apparatus `cs_pattern` (0.487), terminal-committer (0.300), axiom-grounding-profile (0.272),
-  seat-role-vector (0.245), kernel structure-signature (0.134).
+**The Ω_E finding (recorded as the real result, not buried under the ruling).** OQ-56's motivating
+question — name the semantic stances (naturalizing / coordination / power-revealing) comparably across
+kernels — has **NO draw-robust answer on this corpus**: the reproducible keys are structural/coarse, and
+the one semantically-aligned key (`seat_role_vector`) is draw-fragile (0.245). The semantic-stance
+transpose is **foreclosed-as-draw-robust**, available model-relative only. This is an Ω_E
+(corpus-conditional), reopenable by a more reproducible extraction — not a permanent engine fact.
 
-**The reserved ruling (NOT pre-decided here):** whether the vocabulary is Tier-1-only, or also
-admits Tier-2 keys *knowing they are model-relative* (a model-relative axis is not disqualified
-from a model-relative use — that is the operator's call, informed by the numbers, not foreclosed
-by them). The role-vector (R5/seat-vector) the corpus seat-sweep foregrounded is in Tier 2:
-keying the taxonomy directly on it would be model-relative.
+**Kill condition (OPERATIVE — reopens as Option 2).** If a live downstream consumer ever *requires* the
+semantic-stance label (`seat_role_vector`) inside the *canonical* vocabulary to **function** (not merely
+to display it), the ruling flips to canonizing it despite its fragility ("a model-relative answer to the
+real question beats a robust answer to a different one"). As of 2026-06-20 no such consumer exists —
+witnessed two-pronged grep (named-key + generic-`canonical`, run both pre- and post-`canonical`-stamp),
+each with an `observer_signature` positive control proving the search fires.
 
-**Specific question:** The transpose query (OQ-53) and any cross-kernel comparison need a reading-stance
-vocabulary *comparable across kernels* (e.g. every kernel's naturalizing vs. coordination vs.
-power-revealing reading). What is that vocabulary?
-
-**Evidence so far:** Readings currently have free-form names (`isaac_covenant_reading`,
-`abolitionist_reading`) that do not align across kernels. Per Seat Theorem Cor 2b, the selection rule for
-*which* seats matter is a **declared, contestable premise, not a theorem** — so this is a human-ruled
-choice (Ω_P), not one the engine can derive. Critically, choosing it well requires first seeing **how
-readings actually cluster across kernels**, and that analysis was impossible until a kernel/reading corpus
-existed (landed 2026-06-02). Pairs **GAP-04** (step 2).
-
-**What resolution changes:** Unblocks OQ-53's transpose and OQ-55's cross-kernel reading comparison.
-**Sequencing:** the cross-kernel clustering analysis is the prerequisite step and is now possible; it
-should run before the taxonomy is declared, and the taxonomy is the user's to rule, not the engine's.
-
-**Prerequisite-clustering started (D1, 2026-06-18, twin corpora):**
-`audits/2026-06-18_oq56_twin_within_kernel_perturbation/`. Held model+observer-seat fixed,
-varied the reading within each kernel, on the live 4-perspective-seat schema. Findings that
-constrain the taxonomy:
-- The natural operator (`reading_diff`/census, OQ-59) was **schema-stranded** on the live corpus
-  (twins author 0 `constraint_classification` cells; witnessed 954/954 vacuous undersampled).
-  **FIXED 2026-06-19 (commit `01cff6a7`):** `reading_cells/2` now unions the stakeholder-seat
-  schema (`stakeholder_context/3` emits the same `context/4` tuple) — haiku census now
-  136 binocular / 111 fragile / 707 measured-coverage-gap. Both-stakeholder pair coverage is
-  26% (haiku) / 61% (flash), so the operator runs on that subset; the rest are real coverage gaps.
-- **Seat gradient (declarable invariant):** within-kernel reading depth is near-universal (98%
-  of kernels at some seat) but the **institutional seat flattens it** (0.64 haiku / 0.37 flash)
-  while powerless/moderate see it (~0.85). Composes with OQ-123.
-- **Per-kernel clustering is draw-sensitive (the key caveat for this Ω_P seat):** depth-vector
-  class agrees across models only 0.329, full orbit signature only 0.134. So the cross-kernel
-  clustering **cannot be read off one model's corpus as if discovered** — it is itself
-  seat/draw-expressive (OQ-118). The robust, declarable footing is the seat gradient + the
-  orbit-distribution shape (OQ-150), not per-kernel membership. Committer-axis dimensions of the
-  clustering are the most model-divergent (OQ-149) and need the OQ-72 alignment key first.
+**Evidence pointers:** OQ-150 measurement `audits/2026-06-18_oq56_twin_within_kernel_perturbation/` +
+`audits/2026-06-20_kernel_reading_orbits/`; orbit_operator canonical-fact commit (this session);
+KNOWN_STATE 2026-06-20. *(Body compressed 2026-06-20 per footer rule; menu/clustering history in git.)*
 
 ---
 

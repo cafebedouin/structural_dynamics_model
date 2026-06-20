@@ -45,6 +45,43 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-20 — OQ-56 + OQ-53 closed: canonical cross-kernel reading-stance vocabulary ruled
+**Files:** python/orbit_operator.py, docs/design/design_discipline.md, ISSUES.md
+**Tier:** landed
+
+The last two open items of the kernel/reading-axis thread are closed.
+
+**OQ-56 (Ω_P ruling — resolved).** Canonical cross-kernel reading-stance vocabulary = the two Tier-1
+draw-robust keys, `observer_signature` (reading-unit, twin-agreement 0.722) + `obstruction_class`
+(kernel-unit, 0.734). The six Tier-2 keys (incl. `seat_role_vector`, 0.245) are report-only,
+model-relative. Made a **checked fact, not a memory** (Build Discipline Pattern 2):
+`CANONICAL_VOCABULARY = {"observer_signature","obstruction_class"}` in `orbit_operator.py`, surfaced as
+`canonical` on every orbit record (witness: `canonical=true` on exactly the 2 Tier-1 keys / false on the
+6 others). Owned seat written first-person in `design_discipline.md` §0.1 (decline-not-refute the
+seat-role-vector rival). **OPERATIVE kill condition recorded** (ISSUES OQ-56): a live downstream consumer
+that *requires* `seat_role_vector` inside the canonical vocabulary to FUNCTION (not display) reopens it as
+Option 2. None exists as of 2026-06-20 — witnessed two-pronged grep (named-key + generic-`canonical`,
+pre- and post-`canonical`-stamp), each with an `observer_signature` positive control.
+
+**The headline Ω_E finding (recorded as the result, not buried).** OQ-56's motivating question — name the
+semantic stances (naturalizing / coordination / power-revealing) comparably across kernels — has **no
+draw-robust answer on this corpus**: reproducible keys are structural/coarse; the one semantically-aligned
+key (`seat_role_vector`) is draw-fragile. The semantic-stance transpose is **foreclosed-as-draw-robust**,
+model-relative only — an Ω_E, reopenable by a more reproducible extraction.
+
+**OQ-53 (transpose leg — resolved, Branch 1 witnessed-live).** Within-kernel leg already satisfied (OQ-55
+router). Transpose query — hold `observer_signature` fixed, sweep across kernels — runs live and finds
+multi-kernel orbits: `constructed_high_extraction` spans **25 genuine multi-reading kernels**,
+`false_ci_rope` spans **11** (positive control: 89 distinct kernels present, query detects 5 multi-kernel
+orbits — not byte-identical to an empty read). `logical_fingerprint.pl` stays prefix-opaque by design, so
+the close is (a-restricted).
+
+Promotion test: this is a one-time ruling, not a silent-mistake-before-editing-X trap → history-grade, no
+CLAUDE.md tripwire. The one durable do-not (`canonical` is a checked set, don't re-derive from `tier`)
+lives at the code in `orbit_operator.py`'s docstring.
+
+---
+
 ## 2026-06-20 — orbit regeneration wired into the pipeline (was a manual pre-step; OQ-29 follow-up)
 **Files:** python/run_pipeline.py, python/sweeps/regenerate_orbits.py
 **Tier:** landed

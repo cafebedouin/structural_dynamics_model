@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "39489f8345538f6013390df29462fe850fd4dd16",
+    "store_version": "79275e9cfccdecf13558f21f3679b0b4640b285f",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-20T15:36:15"
+    "generated_at": "2026-06-20T17:26:51"
   },
-  "issues_sha": "c60d9531344eae8606039254c694f06d1f752db34eaf484ba6655277a22e778b",
+  "issues_sha": "3415c4e64752e00dcfa971deb77ae09c04d8576811729892620a10669cf3cc4d",
   "n_entries": 153,
   "active_token_set": [
     "investigating",
@@ -12,10 +12,10 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 70,
+    "resolved": 72,
     "mitigated": 7,
     "partial": 8,
-    "open": 62,
+    "open": 60,
     "disposed": 3,
     "future": 3
   },
@@ -264,42 +264,6 @@
         "OQ-43",
         "OQ-50",
         "OQ-51"
-      ]
-    },
-    {
-      "id": "OQ-53",
-      "status": "open",
-      "priority": 1,
-      "summary": "Observer and reading axes are conflated in the classifier (no kernel-fixed reading comparison)",
-      "deps": [
-        "blocked_on OQ-56"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-55",
-        "OQ-56",
-        "OQ-59",
-        "OQ-150"
-      ]
-    },
-    {
-      "id": "OQ-56",
-      "status": "open",
-      "priority": 1,
-      "summary": "Reading-stance taxonomy: the selection-seat is blocked on cross-kernel clustering",
-      "deps": [
-        "blocked_on_human oq56-vocabulary-pick-from-OQ-150-menu"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-53",
-        "OQ-55",
-        "OQ-59",
-        "OQ-72",
-        "OQ-118",
-        "OQ-123",
-        "OQ-149",
-        "OQ-150"
       ]
     },
     {
@@ -1286,6 +1250,20 @@
       ]
     },
     {
+      "id": "OQ-53",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Observer and reading axes are conflated in the classifier (no kernel-fixed reading comparison)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-55",
+        "OQ-56",
+        "OQ-59",
+        "OQ-150"
+      ]
+    },
+    {
       "id": "OQ-54",
       "status": "mitigated",
       "priority": "–",
@@ -1308,6 +1286,17 @@
       "mentioned_in": [
         "OQ-53",
         "OQ-56"
+      ]
+    },
+    {
+      "id": "OQ-56",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Reading-stance taxonomy: the selection-seat is blocked on cross-kernel clustering",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-150"
       ]
     },
     {
