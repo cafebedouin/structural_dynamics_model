@@ -13,25 +13,30 @@ no engine re-run; permutation null N=1000, seed 20260620.
   **0.1341**, matching the 2026-06-18 M3 full-signature 0.134. The kernel-orbit machinery is
   wired correctly (independent cross-check on a different script).
 
-## The pre-registered verdict — and why it under-discriminates (FLAGGED)
+## Elected filter vs under-operationalized gate (the method gap, named correctly)
 
-The pre-registered rule (`Wilson-95 lo > permute band95`, non-degenerate) marks **all 5
-reading-orbit keys AND K1 DRAW_ROBUST** → non-empty menu. **But this rule only tests "agreement
-beats random label assignment," not "membership is reproducible enough to declare as a
-vocabulary."** It passes the very 0.134 kernel-membership the plan's own prose (and the
-2026-06-18 FINDINGS) calls *draw-sensitive / model-relative*. Per audit discipline a
-wrongly-specified pre-registered criterion is **halt-and-escalate, not inline-amended** — so the
-floor verdict stands as registered, and the substantive readout is the **absolute
-membership-reproducibility ranking**:
+The pre-registered rule (`Wilson-95 lo > permute band95`, non-degenerate) marks **all eight keys
+"pass"** → the band95-keyed empty-menu kill **did not fire**. But that gate tests *"agreement
+beats random label assignment,"* a different and weaker thing than the admissibility filter the
+plan's **Context already elected**: *"draw-robustness is an Ω_E property I am electing to impose
+as an admissibility filter on the seat"* — i.e. **reproducibility**, named up front. The
+pre-registration then operationalized that election as `lo>band95` (beats-chance), under-serving
+it. So applying reproducibility is **not a retroactive standard-switch**; it **honors the
+pre-committed election** the gate under-operationalized. The band95 passes are real but answer a
+question the plan didn't ask. The substantive readout is therefore the **absolute
+membership-reproducibility ranking, judged against the extraction baseline (~0.721 — the
+reproducibility of the substrate itself, the natural floor)**:
 
-| key | agreement | Wilson-lo | band95 | floor verdict | reproducibility |
+| key | agreement | Wilson-lo | band95 | beats-chance | reproducibility |
 |---|---|---|---|---|---|
-| **R1** observer_signature | **0.722** | 0.693 | 0.476 | ROBUST | **high — declarable** |
-| R4 terminal_observer | 0.566 | 0.534 | 0.348 | ROBUST | borderline |
-| R2 apparatus `cs_pattern` [axis 1] | 0.487 | 0.455 | 0.344 | ROBUST | fragile (~½ flip) |
-| R3 terminal_committer [axis 2] | 0.300 | 0.271 | 0.226 | ROBUST | fragile |
-| R5 seat_role_vector | 0.245 | 0.219 | 0.109 | ROBUST | fragile |
-| K1 kernel structure-signature | 0.134 | 0.102 | 0.027 | ROBUST | very fragile |
+| **kernel-obstruction-class** (Phase 1b) | **0.734** | 0.684 | 0.589 | yes | **at baseline** |
+| **R1** observer_signature | **0.722** | 0.693 | 0.476 | yes | **at baseline** |
+| R4 terminal_observer | 0.566 | 0.534 | 0.348 | yes | below baseline (highest fragile) |
+| R2 apparatus `cs_pattern` [axis 1] | 0.487 | 0.455 | 0.344 | yes | below baseline |
+| R3 terminal_committer [axis 2] | 0.300 | 0.271 | 0.226 | yes | below baseline |
+| axiom-grounding-profile (Phase 1b) | 0.272 | 0.245 | 0.107 | yes | below baseline |
+| R5 seat_role_vector | 0.245 | 0.219 | 0.109 | yes | below baseline |
+| K1 kernel structure-signature | 0.134 | 0.102 | 0.027 | yes | below baseline (very fragile) |
 
 **This ranking IS the substantive Ω_E finding**, and it confirms the plan's pre-stated
 expectations almost exactly:
@@ -52,6 +57,14 @@ expectations almost exactly:
    reading-stance taxonomy keyed directly on the 4-seat vector would be model-relative — the
    same conclusion the 2026-06-18 audit reached for kernel depth-vectors, now confirmed for the
    cross-kernel reading unit OQ-56 actually needs.
+5. **Coarsening the committer signal RECOVERS draw-stability (the Phase 1b surprise).** The
+   committer axis is not uniformly fragile: its fine signatures are model-relative
+   (axiom-grounding-profile 0.272, apparatus 0.487), but its **coarse 4-way obstruction verdict
+   reproduces at baseline (0.734)** — `real_closure` (66%) vs `licensed_plurality` (~32%) is a
+   draw-stable kernel property even though the fine reading-relations that compute it are the
+   most model-divergent layer (OQ-149). This is the key Decision-2 (run-the-probe) bought; the
+   JSON pass would have missed it and the "same-family ⇒ fragile" inference mis-predicted it.
+   **Granularity, not axis, is what governs declarability here.**
 
 ## Phase 2 — orthogonality (the mandated false-unification distinction-check)
 
@@ -78,22 +91,55 @@ condition on is **R1 (observer signature)** — so a defensible shared-invariant
 available only on the observer axis until/unless the operator rules a lower declarability cut
 (below). Deferred to Phase 3, gated on that ruling.
 
-## The ruling this surfaces (operator's Ω_P seat — escalated, not self-resolved)
+## The two-tier menu (operator ruling 2026-06-20: cut at R1, present two-tier)
 
-The menu is non-empty under the registered chance-floor, but **"non-empty" at the chance floor ≠
-"declarable as OQ-56's stance vocabulary."** Where the **declarability cut** sits — above-chance
-(all 6 keys) vs membership-reproducible (R1 only; R4 borderline) — is the operator's Ω_P
-selection seat (Seat Theorem Cor 2b; the plan: *"the selection of which orbits matter is the
-operator's Ω_P ruling — escalated, not self-resolved"*). The audit presents the ranked candidate
-menu; it does not pick the cut. See the escalation recorded in ISSUES.md OQ-150/OQ-56.
+The cut sits at the extraction baseline (operator Decision 1). The menu is presented in two
+tiers, labelled by the **measured property** so the labels do not smuggle the seat's answer:
 
-## Deferred / owed
+- **Tier 1 — membership-reproducible at extraction baseline (~0.72):**
+  - **R1 observer_signature** (0.722) — observer axis.
+  - **kernel-obstruction-class** (0.734) — coarse committer-derived kernel verdict.
+- **Tier 2 — above-chance but membership-fragile (below baseline; numbers attached):**
+  - R4 terminal_observer (0.566, the highest fragile), R2 apparatus (0.487),
+    R3 terminal_committer (0.300), axiom-grounding-profile (0.272), R5 seat_role_vector (0.245),
+    K1 kernel structure-signature (0.134).
 
-- **Phase 1b (Prolog probe, cost-gated):** `cs_axiom_grounding` profile orbit and
-  `cs_kernel_obstruction/4` class — not serialized in the twin JSON. Given the JSON pass already
-  shows only the observer axis is declarable, these two committer-side keys are *expected*
-  fragile (same family as R2/R3); run only if the operator wants the apparatus/obstruction axes
-  measured directly before ruling.
-- **`cs_kernel_comparison` firing-witness** on the twins (RECON owe) — for the OQ-53 (a)/(b) close.
+The band95-keyed empty-menu kill **did not fire** (Tier 1 cleared on reproducibility, not just
+chance) — so we are correctly in the **present-and-escalate** branch. The fragile keys are the
+**third state** the empty/non-empty binary never named; the Tier-2 list is its home.
+
+## Two Ω_P rulings remain reserved (escalated, NOT bundled into the evidence read)
+
+The engine settles robust-vs-fragile (above). It does **not** settle these two — both the
+operator's seat (Seat Theorem Cor 2b; the plan reserves them three times):
+
+1. **OQ-56 vocabulary selection** — which orbits "matter" as the stance vocabulary. Tier 1 is
+   the evidence-settled reproducible set; whether to *also* admit Tier-2 keys (knowingly
+   model-relative) is the operator's pick, informed by the 0.13–0.57 numbers, not foreclosed by
+   them.
+2. **OQ-53 committer-transpose disposition** — a model-relative axis is **not disqualified** from
+   a model-relative transpose. Whether to build a knowingly-model-relative committer transpose
+   anyway is the operator's call. The audit does **not** pre-close it as "foreclosed."
+
+The audit presents the ranked two-tier menu and escalates these two picks. It does not pick the
+vocabulary or rule the transpose.
+
+## Phase 1b — DONE (operator Decision 2: run the probe)
+
+Read-only `swipl` probe over each twin (`phase1b_probe.pl`, load witnessed = 960 both twins via
+`asserta` overlay; non-vacuity control `cs_axiom_grounding` facts = 2037/1903). Results
+(`phase1b_results.json`): axiom-grounding-profile **0.272** (fragile, as predicted);
+kernel-obstruction-class **0.734** (reproducible — the surprise the operator anticipated). Both
+folded into the ranking and menu above.
+
+## Still owed
+
+- **`cs_kernel_comparison` firing-witness** on the twins (RECON owe) — for the OQ-53 (a)/(b)
+  close. The report path is first-class by code-read; firing remains to be witnessed.
 - **Differing-commit confound** bound but not eliminated (extraction control caps its effect on
   `claimed_type`).
+- **Phase 3 operator + wiring** — build the Tier-1 reproducible keys (R1 reading-orbit +
+  obstruction-class kernel-orbit) as a reusable operator. Gated on the OQ-56 vocabulary pick
+  (whether Tier-2 keys are also materialized).
+- **Replication on a fresh twin pair** — the thin-margin R4 (0.566) and any Tier-2 key the
+  operator elects to admit warrant the registered replication the 2026-06-18 audit also owed.
