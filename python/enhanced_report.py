@@ -2501,6 +2501,17 @@ def build_kernel_reading_section(constraint_id, pipeline_data):
         f"{kernel_entry['diverging_pair_count']} diverging pairs | "
         f"{kernel_entry['axiom_conflict_count']} axiom conflicts"
     )
+    # OQ-55: within-kernel trifurcation verdict (commentary-grade — annotates, never
+    # overrides classification). scope:within_kernel is shown so a reader cannot mistake
+    # it for a cross-kernel verdict. Null (singleton) ⇒ no line; `unknown` IS shown
+    # (fail-closed verdict, not absence).
+    trif = kernel_entry.get("reading_trifurcation")
+    if isinstance(trif, dict):
+        lines.append(
+            f"  Reading disagreement: {trif.get('type')} "
+            f"[{trif.get('scope')}; obstruction={trif.get('obstruction_status')}, "
+            f"{trif.get('diagnostic')}]"
+        )
     any_mismatch = False
     for r in kernel_entry["readings"]:
         rid = r["reading_id"]

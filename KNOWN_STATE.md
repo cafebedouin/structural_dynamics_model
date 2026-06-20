@@ -76,9 +76,12 @@ into the `debugging_philosophy.md` §6 trifurcation, **within-kernel only**. Dis
 obstruction edge (`cs_kernel_obstruction_status/2`), refined by two computed within-kernel diagnostics:
 `real_closure`→Type B (confirmed/edge_only via `cs_axiom_foreclosed`), `licensed_plurality`→Type C,
 `untyped`+`cs_drift_unacknowledged`→Type A, `untyped`+no-drift→`unknown` (Pattern-5 fail-closed, NOT a
-default), `singleton`→no verdict. Live consumer = `reading_trifurcation` field in `json_report.pl`'s
+default), `singleton`→no verdict. Live consumers: (1) `reading_trifurcation` field in `json_report.pl`'s
 `cs_kernel_comparison` (`scope:within_kernel` stamped inline; **commentary-grade**, never overrides
-classification). Wired into `stack.pl`.
+classification) — survives the enrich step into `enriched_pipeline.json`; (2) `enhanced_report.py`'s
+`build_kernel_reading_section` renders a `Reading disagreement: <type> [within_kernel; obstruction=…, …]`
+line in the human report (added 2026-06-20 follow-up — the field reached enriched_pipeline.json but was
+unrendered; Pattern-1 second-wire closed). Wired into `stack.pl`.
 
 **§6 mapping confirmed against the definitions** (not the table paraphrase): Type B = "impossible by
 definition" = `forecloses`; Type C = stable coexisting frames = `coexists_with`; Type A = unmarked
