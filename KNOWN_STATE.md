@@ -45,6 +45,27 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-20 — kernel/reading orbit operator built + wired (OQ-150/OQ-53 Phase 3)
+**Files:** python/orbit_operator.py, prolog/kernel_orbit_export.pl, python/run_pipeline.py, outputs/reading_orbits.json, outputs/kernel_orbits.json
+**Tier:** landed
+
+The cross-kernel orbit operator (commit `0c488468`). `orbit_operator.py` reads the canonical
+`pipeline_output.json` (6 keys: observer-signature, terminal-observer/committer, apparatus,
+seat-vector, grounding) + `kernel_obstruction.json` (the 2 keys not serialised in
+pipeline_output: obstruction-class + grounding, produced by `kernel_orbit_export.pl`) → writes
+`outputs/{reading,kernel}_orbits.json`. Wired into `run_pipeline.py`: `kernel_orbit_export` in
+`_phase_post_prolog`, `orbit_operator` after `w1_sheaf_join` (dependency-ordered, non-critical).
+
+**Two tripwires for a fresh agent:** (1) the operator's LIVE output is **sparse by design** — the
+live corpus has ~3 multi-reading kernels, so `reading_orbits.json`/`kernel_orbits.json` on a live
+run look near-trivial; the meaningful orbit populations are on the TWINS (run
+`python3 python/orbit_operator.py --twin haiku`). Do NOT read sparse live orbits as a bug or as
+"orbits don't form." (2) Per operator ruling 2026-06-20, only Tier-1 keys (observer-signature
+0.722, obstruction-class 0.734) are declared draw-robust; Tier-2 keys carry their twin-agreement
+number INLINE on every orbit record and are model-relative — do not cite a Tier-2 orbit membership
+as a stable finding. Same-run guard: `orbit_operator` drops `kernel_obstruction.json` to
+`source_missing` if its `n_constraints` ≠ the pipeline manifest (fail-closed; positive-controlled).
+
 ## 2026-06-20 — orbit-key declarability: judge against the extraction baseline, NOT the permutation null
 **Files:** audits/2026-06-20_kernel_reading_orbits/, ISSUES.md
 **Tier:** correction-key

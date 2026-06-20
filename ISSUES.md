@@ -2246,6 +2246,17 @@ call, NOT pre-closed here):** whether to build a knowingly-model-relative commit
 or restrict the transpose to the draw-robust observer axis. The empty-menu kill did not fire
 (Tier 1 is non-empty), so this is present-and-escalate, not foreclosed-by-finding.
 
+**Transpose surface BUILT (operator ruling 2026-06-20; commit `0c488468`).** The cross-kernel
+orbit operator (`python/orbit_operator.py` + `prolog/kernel_orbit_export.pl`, wired into
+`run_pipeline.py`) materializes `outputs/{reading,kernel}_orbits.json`: readings grouped across
+kernels by each declared key, kernels grouped by structure/obstruction. Tier-1
+(observer-signature, obstruction-class) is the declared transpose surface; Tier-2 committer-side
+keys are emitted as report-only with their twin-agreement numbers inline. The transpose query
+("hold a reading-orbit fixed, sweep across kernels") is now answerable over these artifacts. Live
+orbits are sparse (3 multi-reading kernels) — the discovery substrate is the twins. Same-kernel
+leg = (a)-for-json_report (witnessed). Remaining gate on full OQ-53 closure: the OQ-55
+trifurcation router (the disagreement-typing consumer).
+
 ---
 
 ## OQ-54 — The reading axis has no cross-index gluing test; how to operationalize it (and keep it distinct from observer Boltzmann)
@@ -7693,8 +7704,13 @@ v8's `forecloses`/`coexists_with` state structure can bear.
 **Ω-type:** Ω_E (empirical grouping; feeds the Ω_P taxonomy selection of OQ-56).
 
 **Status:** mitigated — the variety-of-orbit-keys discovery is measured (2026-06-20); the
-two-tier declarability menu is delivered to OQ-56. Residue: the Phase-3 operator + `run_pipeline`
-wiring for the Tier-1 reproducible keys (gated on the OQ-56 vocabulary pick).
+two-tier menu is delivered AND the orbit operator is built + wired (`python/orbit_operator.py`,
+`prolog/kernel_orbit_export.pl` → `outputs/{reading,kernel}_orbits.json`, in `run_pipeline.py`;
+full run clean, gate GREEN, commit `0c488468`). Tier-1 keys are the declared surface; Tier-2 are
+emitted model-relative with twin-agreement numbers inline per orbit (operator ruling 2026-06-20).
+Residue: a model-ROBUST orbit *key* (a signature reproducible better than the observer baseline)
+is still open research — the built operator declares the reproducible keys, it does not invent a
+new more-robust one; needs OQ-72's committer-axis alignment.
 **Priority:** 2
 **Deps:** gates OQ-56
 **Origin:** OQ-56 D1 (M3), 2026-06-18
