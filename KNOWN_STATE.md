@@ -58,10 +58,12 @@ model-relative. Made a **checked fact, not a memory** (Build Discipline Pattern 
 `CANONICAL_VOCABULARY = {"observer_signature","obstruction_class"}` in `orbit_operator.py`, surfaced as
 `canonical` on every orbit record (witness: `canonical=true` on exactly the 2 Tier-1 keys / false on the
 6 others). Owned seat written first-person in `design_discipline.md` §0.1 (decline-not-refute the
-seat-role-vector rival). **OPERATIVE kill condition recorded** (ISSUES OQ-56): a live downstream consumer
-that *requires* `seat_role_vector` inside the canonical vocabulary to FUNCTION (not display) reopens it as
-Option 2. None exists as of 2026-06-20 — witnessed two-pronged grep (named-key + generic-`canonical`,
-pre- and post-`canonical`-stamp), each with an `observer_signature` positive control.
+seat-role-vector rival). **Kill condition recorded but NOT armed** (ISSUES OQ-56): a live downstream
+consumer that *requires* `seat_role_vector` inside the canonical vocabulary to FUNCTION (not display)
+reopens it as Option 2. None exists as of 2026-06-20 — witnessed two-pronged grep (named-key +
+generic-`canonical`, pre- and post-`canonical`-stamp), each with an `observer_signature` positive
+control. Detection is **manual, not automatic** — nothing trips if such a consumer is built later; the
+condition is a documented reopen trigger re-evaluated by hand (re-run Step 0 grep), not a live tripwire.
 
 **The headline Ω_E finding (recorded as the result, not buried).** OQ-56's motivating question — name the
 semantic stances (naturalizing / coordination / power-revealing) comparably across kernels — has **no

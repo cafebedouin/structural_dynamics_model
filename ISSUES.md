@@ -2378,7 +2378,8 @@ commentary-grade.**
 **Ω-type:** Ω_P (preference/stakeholder — a declared, contestable selection premise, not derivable).
 
 **Status:** resolved — 2026-06-20 — operator Ω_P ruling given; vocabulary pick made. Compress-on-close;
-the kill condition below stays OPERATIVE.
+the kill condition below is a recorded reopen condition (NOT an armed tripwire — re-evaluated by a human,
+not auto-detected).
 **Priority:** 1
 **Deps (dropped on close):** was `blocked_on_human oq56-vocabulary-pick-from-OQ-150-menu`; the pick is made.
 **Origin:** Kernel/reading review, 2026-06-02.
@@ -2401,12 +2402,16 @@ the one semantically-aligned key (`seat_role_vector`) is draw-fragile (0.245). T
 transpose is **foreclosed-as-draw-robust**, available model-relative only. This is an Ω_E
 (corpus-conditional), reopenable by a more reproducible extraction — not a permanent engine fact.
 
-**Kill condition (OPERATIVE — reopens as Option 2).** If a live downstream consumer ever *requires* the
-semantic-stance label (`seat_role_vector`) inside the *canonical* vocabulary to **function** (not merely
-to display it), the ruling flips to canonizing it despite its fragility ("a model-relative answer to the
-real question beats a robust answer to a different one"). As of 2026-06-20 no such consumer exists —
-witnessed two-pronged grep (named-key + generic-`canonical`, run both pre- and post-`canonical`-stamp),
-each with an `observer_signature` positive control proving the search fires.
+**Kill condition (reopen condition RECORDED, not automatically detected — reopens as Option 2).** If a
+live downstream consumer ever *requires* the semantic-stance label (`seat_role_vector`) inside the
+*canonical* vocabulary to **function** (not merely to display it), the ruling flips to canonizing it
+despite its fragility ("a model-relative answer to the real question beats a robust answer to a different
+one"). As of 2026-06-20 no such consumer exists — witnessed two-pronged grep (named-key +
+generic-`canonical`, run both pre- and post-`canonical`-stamp), each with an `observer_signature`
+positive control proving the search fires. **Detection is manual:** nothing arms this — a future session
+that builds such a consumer trips no check, so the condition must be re-evaluated by hand (re-run the
+Step 0 grep) when the orbit-artifact consumer surface changes. It is a documented reopen trigger, not a
+live tripwire; do not trust an automatic guard that was never built.
 
 **Evidence pointers:** OQ-150 measurement `audits/2026-06-18_oq56_twin_within_kernel_perturbation/` +
 `audits/2026-06-20_kernel_reading_orbits/`; orbit_operator canonical-fact commit (this session);
