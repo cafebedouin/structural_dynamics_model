@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "0c4884689848f7ae743a643749b45d39b470d7dc",
+    "store_version": "e9f1ad6ebc8006752aba133370e3b29c5f5429ed",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-20T08:39:33"
+    "generated_at": "2026-06-20T13:13:30"
   },
-  "issues_sha": "028372494827cb99c02105374ad2a5fd8c118389f499495cd9d3ddd7e1c8a78a",
+  "issues_sha": "b83756d528f9bac4a136baf2d11c0dcdb234f96a8da2980ababbfac4d741dace",
   "n_entries": 153,
   "active_token_set": [
     "investigating",
@@ -12,10 +12,10 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 69,
+    "resolved": 70,
     "mitigated": 7,
     "partial": 8,
-    "open": 63,
+    "open": 62,
     "disposed": 3,
     "future": 3
   },
@@ -280,20 +280,6 @@
         "OQ-56",
         "OQ-59",
         "OQ-150"
-      ]
-    },
-    {
-      "id": "OQ-55",
-      "status": "open",
-      "priority": 1,
-      "summary": "Reading-disagreement is not trifurcated (Type A/B/C router absent)",
-      "deps": [
-        "blocked_on OQ-56"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-54",
-        "OQ-56"
       ]
     },
     {
@@ -1310,6 +1296,18 @@
         "OQ-51",
         "OQ-55",
         "OQ-58"
+      ]
+    },
+    {
+      "id": "OQ-55",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Reading-disagreement is not trifurcated (Type A/B/C router absent)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-53",
+        "OQ-56"
       ]
     },
     {

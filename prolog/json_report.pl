@@ -1894,6 +1894,20 @@ write_kernel_comparison_entry(S, K, Comma) :-
     format(S, '        "reading_count": ~w,~n', [RCount]),
     format(S, '        "diverging_pair_count": ~w,~n', [NDivPairs]),
     format(S, '        "axiom_conflict_count": ~w,~n', [NConflPairs]),
+    % OQ-55: within-kernel trifurcation verdict (commentary-grade — annotates,
+    % never overrides classification). scope:within_kernel is mandatory so the
+    % verdict cannot be misread as a cross-kernel one (OQ-56 gates that). Fails
+    % (→ null) on singletons; `unknown` is an emitted fail-closed verdict, not null.
+    (   catch(cs_trifurcation:cs_reading_trifurcation(K, TrifType, TrifProv), _, fail)
+    ->  TrifProv = provenance(scope(TScope), obstruction(TObs), diagnostic(TDiag)),
+        format(S, '        "reading_trifurcation": {~n', []),
+        format(S, '          "type": "~w",~n', [TrifType]),
+        format(S, '          "scope": "~w",~n', [TScope]),
+        format(S, '          "obstruction_status": "~w",~n', [TObs]),
+        format(S, '          "diagnostic": "~w"~n', [TDiag]),
+        format(S, '        },~n', [])
+    ;   format(S, '        "reading_trifurcation": null,~n', [])
+    ),
     format(S, '        "readings": [~n', []),
     write_reading_comparison_list(S, Readings),
     format(S, '        ]~n', []),

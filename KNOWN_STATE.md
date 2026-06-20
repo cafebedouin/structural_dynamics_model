@@ -45,6 +45,45 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-20 — within-kernel trifurcation router built + wired (OQ-55 resolved; OQ-53 within-kernel leg closed)
+**Files:** prolog/cs_trifurcation.pl, prolog/json_report.pl, prolog/tests/test_cs_trifurcation.pl, prolog/stack.pl, ISSUES.md
+**Tier:** landed
+
+New module `cs_trifurcation.pl` (`cs_reading_trifurcation/3`) routes *why* a kernel's readings disagree
+into the `debugging_philosophy.md` §6 trifurcation, **within-kernel only**. Dispatch on the authored
+obstruction edge (`cs_kernel_obstruction_status/2`), refined by two computed within-kernel diagnostics:
+`real_closure`→Type B (confirmed/edge_only via `cs_axiom_foreclosed`), `licensed_plurality`→Type C,
+`untyped`+`cs_drift_unacknowledged`→Type A, `untyped`+no-drift→`unknown` (Pattern-5 fail-closed, NOT a
+default), `singleton`→no verdict. Live consumer = `reading_trifurcation` field in `json_report.pl`'s
+`cs_kernel_comparison` (`scope:within_kernel` stamped inline; **commentary-grade**, never overrides
+classification). Wired into `stack.pl`.
+
+**§6 mapping confirmed against the definitions** (not the table paraphrase): Type B = "impossible by
+definition" = `forecloses`; Type C = stable coexisting frames = `coexists_with`; Type A = unmarked
+mutation treated-as-stable = the `false` (unacknowledged) flag in the drift gap. Type A is the **sole
+computed branch**; the two-twin control (`tk_drift` vs `tk_nodrift`, obstruction held at `untyped`)
+proves the drift signal is the discriminator, not the obstruction status riding along.
+
+**Re-scope ruling (operator, 2026-06-20):** OQ-55 was `blocked_on OQ-56` — a *soft* block. The
+within-kernel router needs no cross-kernel vocabulary; OQ-56 gates only OQ-53's transpose leg. Edge
+dropped. **Re-scope witness = input-boundary trace:** every router input is gated by `cs_kernel_id(_,K)`,
+so no cross-kernel fact enters the verdict (traced on `tk_drift`).
+
+**Draw-robustness transfer caveat:** the 0.734 twin-agreement on the obstruction-class orbit was
+measured *cross-kernel* (OQ-150). Its transfer to within-kernel use here is **inferred**, and is
+discharged by the input-path trace (the router reads only per-kernel/per-member facts), NOT by that
+number — the number describes a different (cross-kernel) measurement.
+
+**Witnesses.** `test_cs_trifurcation.pl` 8/8 green (4 branches + singleton negative + two-twin
+discriminator + cross-kernel-leak control). Live corpus (`run_pipeline.py`, all 9 multi-reading kernels
+non-null): `type_a_drift`×5, `type_b_structure`×1 (`jewish_sovereignty_palestine`), `type_c_ambiguity`×2
+(`press_reformation_causation`, `zero_mathematical_status`), `unknown`×1 (`polaris_document_status` —
+fail-closed fires on real data). OQ-55 resolved; OQ-53 within-kernel leg closed, transpose leg stays
+`blocked_on OQ-56`.
+
+Note: the pipeline's `manifest_inject` step errors on `product_site_orbits.json` staleness (corpus_hash
+mismatch, OQ-29) — pre-existing, orthogonal to this change (neither modified file references it).
+
 ## 2026-06-20 — kernel/reading orbit operator built + wired (OQ-150/OQ-53 Phase 3)
 **Files:** python/orbit_operator.py, prolog/kernel_orbit_export.pl, python/run_pipeline.py, outputs/reading_orbits.json, outputs/kernel_orbits.json
 **Tier:** landed

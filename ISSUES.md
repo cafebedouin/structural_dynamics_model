@@ -2254,8 +2254,17 @@ kernels by each declared key, kernels grouped by structure/obstruction. Tier-1
 keys are emitted as report-only with their twin-agreement numbers inline. The transpose query
 ("hold a reading-orbit fixed, sweep across kernels") is now answerable over these artifacts. Live
 orbits are sparse (3 multi-reading kernels) — the discovery substrate is the twins. Same-kernel
-leg = (a)-for-json_report (witnessed). Remaining gate on full OQ-53 closure: the OQ-55
-trifurcation router (the disagreement-typing consumer).
+leg = (a)-for-json_report (witnessed).
+
+**Within-kernel consumer leg CLOSED (2026-06-20; OQ-55 resolved).** The disagreement-typing consumer
+— the last gate named above — now exists: `cs_trifurcation:cs_reading_trifurcation/3`, live in
+`json_report.pl`'s `cs_kernel_comparison` as the `reading_trifurcation` field (`scope:within_kernel`,
+commentary-grade), firing all four A/B/C/unknown branches on the live corpus. So the two OQ-53 legs
+split cleanly: **(within-kernel leg) SATISFIED** — kernel is first-class in registry + report, readings
+compared as a set, and *why* they disagree is now routed. **(transpose leg) STILL `blocked_on OQ-56`** —
+holding a reading-stance fixed and sweeping across kernels needs the cross-kernel stance vocabulary
+(Ω_P, OQ-56), which the within-kernel router deliberately does not touch. OQ-53 is NOT flatly resolved:
+status stays `open` on the transpose leg alone.
 
 ---
 
@@ -2306,26 +2315,47 @@ or a third axis?
 
 **Ω-type:** Ω_C (design — adopt the debugging-philosophy trifurcation as the disagreement router).
 
-**Status:** open
+**Status:** resolved — within-kernel A/B/C router built + wired 2026-06-20; controls 8/8 green; all
+four branches fire on the live corpus. Re-scoped off OQ-56 (within-kernel router needs no cross-kernel
+vocabulary). See resolution note.
 **Priority:** 1
-**Deps:** blocked_on OQ-56
+**Deps (dropped on close):** was `blocked_on OQ-56`, dropped on the 2026-06-20 re-scope; OQ-56 now
+gates only OQ-53's cross-kernel transpose leg, not this within-kernel router. No remaining dependency.
 **Origin:** Kernel/reading review, 2026-06-02.
-**Files:** `sheaf_status`/`h1_band`, `cs_pattern`, `cs_axiom_foreclosed`, `drift_events.pl`;
-spec in `docs/debugging_philosophy.md` §6.
+**Files:** `prolog/cs_trifurcation.pl` (`cs_reading_trifurcation/3`), `prolog/json_report.pl`
+(`write_kernel_comparison_entry` → `reading_trifurcation` field), `prolog/tests/test_cs_trifurcation.pl`;
+spec `docs/debugging_philosophy.md` §6.
 
-**Specific question:** When two readings of a kernel disagree, can the engine classify *why* per the
-three-stage diagnostic: **Type C** (index ambiguity — different declared seats, the correct case for
-genuine plurality → specify index, do not collapse), **Type A** (frame drift — criterion slides within
-one seat → frame-fix), **Type B** (structural — the kernel's commitments are inconsistent → fracture)?
+**Resolution (2026-06-20).** New module `cs_trifurcation.pl` maps a kernel's reading-set onto
+{Type A drift, Type B structure, Type C ambiguity, unknown} by dispatching on the authored obstruction
+edge (`cs_kernel_obstruction_status/2`) refined by two computed within-kernel diagnostics:
+- `real_closure` (a reading `forecloses` another) → **Type B**; `cs_axiom_foreclosed` on a member
+  confirms (`confirmed`) but does not gate (`edge_only`).
+- `licensed_plurality` (`coexists_with`) → **Type C**.
+- `untyped` + `cs_drift_unacknowledged` on a member → **Type A** (sole computed branch).
+- `untyped` + no drift → **`unknown`** — Pattern-5 fail-closed, an emitted verdict, NOT a default type.
+- `singleton` → no verdict (predicate fails → JSON `null`).
 
-**Evidence so far:** The raw diagnostics exist (`sheaf_status`, `cs_pattern`, `cs_axiom_foreclosed`,
-`drift_events`) but no predicate maps a kernel's reading-set onto {ambiguity, drift, structure}. Natural
-wiring: OQ-54's reading-axis gluing test feeds it (H¹≠0 with each reading internally coherent ⇒ Type C;
-internal incoherence ⇒ Type B; same-seat criterion drift ⇒ Type A). Pairs **GAP-06**.
+§6 mapping confirmed against the *definitions* (not the table paraphrase): Type B = "impossible by
+definition"/axiomatic inconsistency = `forecloses`; Type C = stable coexisting frames = `coexists_with`;
+Type A = unmarked mutation treated-as-stable = the `false` (unacknowledged) drift gap. **Commentary-grade**
+(annotates `cs_kernel_comparison`; never overrides `classify_from_metrics/6`); `scope:within_kernel`
+stamped inline so it cannot be misread cross-kernel.
 
-**What resolution changes:** Turns "the readings disagree" from an undifferentiated fact into a routed
-verdict that says whether the disagreement is a specification choice (most plural kernels), a fixable
-drift, or a genuine fracture — the operational core of the kernel/reading engine.
+**Re-scope (operator ruling 2026-06-20).** OQ-55's operational core is the *within-kernel* router; every
+input is per-kernel/per-member-reading and draw-robust within a kernel. The former `blocked_on OQ-56` was
+a soft block — OQ-56 vocabulary only gates *cross-kernel* disagreement-labeling (OQ-53's transpose leg).
+Re-scope witness = input-boundary trace: every input is gated by `cs_kernel_id(_,K)`, no cross-kernel fact
+enters the verdict (`audits`/KNOWN_STATE 2026-06-20).
+
+**Witness.** Controls `test_cs_trifurcation.pl` 8/8 green, incl. the Type-A two-twin (obstruction held at
+`untyped`, drift proven the discriminator) and a cross-kernel-leak negative control. Live corpus: all four
+branches fire (`type_a_drift`×5, `type_b_structure`×1, `type_c_ambiguity`×2, `unknown`×1 =
+`polaris_document_status`) — the fail-closed `unknown` fires on real data, not a synthetic case.
+
+**Canonical question (provenance):** When two readings of a kernel disagree, can the engine classify
+*why* (Type C index ambiguity / Type A frame drift / Type B structure)? **Answered: yes, within-kernel,
+commentary-grade.**
 
 ---
 
@@ -2340,6 +2370,11 @@ constitute the vocabulary is the operator's Ω_P ruling (Seat Theorem Cor 2b), n
 **Deps:** blocked_on_human oq56-vocabulary-pick-from-OQ-150-menu
 **Origin:** Kernel/reading review, 2026-06-02.
 **Files:** readings (`kernel__reading_name`), `cs_kernel_registry.pl`.
+
+**Scope note (2026-06-20):** OQ-55 was re-scoped *off* this dependency — the within-kernel
+trifurcation router needs no cross-kernel vocabulary and is now resolved. OQ-56 gates only OQ-53's
+**cross-kernel transpose leg** (labeling reading-stances comparably across kernels), not within-kernel
+disagreement-typing.
 
 **Candidate vocabulary menu (OQ-150 result, 2026-06-20 — the operator picks from this):**
 - **Tier 1 (membership-reproducible at the extraction baseline ~0.72):** observer-signature orbit
