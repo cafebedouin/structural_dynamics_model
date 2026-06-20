@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "haiku_n": 960,
+    "flash_n": 960,
+    "common": 960,
+    "permute_n": 1000,
+    "seed": 20260620
+  },
+  "control_claimed_type_agreement": 0.7208,
+  "control_kernel_set_identical": true,
+  "reading_orbits": {
+    "R1_observer_signature": {
+      "n_keyed": 960,
+      "observed_agreement": 0.7219,
+      "wilson95_lo": 0.6927,
+      "permute_band95": 0.476,
+      "permute_mean": 0.4535,
+      "distinct_labels_haiku": 7,
+      "distinct_labels_flash": 7,
+      "largest_orbit_frac_haiku": 0.6865,
+      "largest_orbit_frac_flash": 0.525,
+      "non_degenerate": true,
+      "verdict": "DRAW_ROBUST"
+    },
+    "R2_apparatus_cs_pattern": {
+      "n_keyed": 960,
+      "observed_agreement": 0.4865,
+      "wilson95_lo": 0.455,
+      "permute_band95": 0.3438,
+      "permute_mean": 0.3237,
+      "distinct_labels_haiku": 8,
+      "distinct_labels_flash": 9,
+      "largest_orbit_frac_haiku": 0.4031,
+      "largest_orbit_frac_flash": 0.5969,
+      "non_degenerate": true,
+      "verdict": "DRAW_ROBUST"
+    },
+    "R3_terminal_committer": {
+      "n_keyed": 955,
+      "observed_agreement": 0.2995,
+      "wilson95_lo": 0.2713,
+      "permute_band95": 0.2262,
+      "permute_mean": 0.209,
+      "distinct_labels_haiku": 6,
+      "distinct_labels_flash": 6,
+      "largest_orbit_frac_haiku": 0.533,
+      "largest_orbit_frac_flash": 0.5539,
+      "non_degenerate": true,
+      "verdict": "DRAW_ROBUST"
+    },
+    "R4_terminal_observer": {
+      "n_keyed": 960,
+      "observed_agreement": 0.5656,
+      "wilson95_lo": 0.5341,
+      "permute_band95": 0.3479,
+      "permute_mean": 0.3268,
+      "distinct_labels_haiku": 8,
+      "distinct_labels_flash": 7,
+      "largest_orbit_frac_haiku": 0.5188,
+      "largest_orbit_frac_flash": 0.4833,
+      "non_degenerate": true,
+      "verdict": "DRAW_ROBUST"
+    },
+    "R5_seat_role_vector": {
+      "n_keyed": 960,
+      "observed_agreement": 0.2448,
+      "wilson95_lo": 0.2186,
+      "permute_band95": 0.1094,
+      "permute_mean": 0.0942,
+      "distinct_labels_haiku": 61,
+      "distinct_labels_flash": 24,
+      "largest_orbit_frac_haiku": 0.1729,
+      "largest_orbit_frac_flash": 0.2281,
+      "non_degenerate": true,
+      "verdict": "DRAW_ROBUST"
+    }
+  },
+  "kernel_orbits": {
+    "K1_structure_signature": {
+      "n_kernels": 328,
+      "observed_agreement": 0.1341,
+      "wilson95_lo": 0.1015,
+      "permute_band95": 0.0274,
+      "distinct_signatures_haiku": 125,
+      "distinct_signatures_flash": 111,
+      "largest_orbit_haiku": 29,
+      "verdict": "DRAW_ROBUST"
+    }
+  },
+  "MENU": {
+    "draw_robust_reading_orbits": [
+      "R1_observer_signature",
+      "R2_apparatus_cs_pattern",
+      "R3_terminal_committer",
+      "R4_terminal_observer",
+      "R5_seat_role_vector"
+    ],
+    "empty_menu": false
+  }
+}
