@@ -926,15 +926,27 @@ resolve_modal_signature_conflict(ModalType, false_ci_rope, Result) :-
 % Coordination scaffolds should be ROPES not mountains
 resolve_modal_signature_conflict(mountain, coordination_scaffold, Result) :- !, Result = rope.
 
-% False Summit Mountain override (v6.9): mountain with beneficiary → tangled_rope
-% The config param allows ablation studies (set target to mountain to disable).
+% False Summit Mountain — OQ-138 (2026-06-21): CONVERTED from RECLASSIFY to ROUTE/COMMENT.
+% FSM no longer overwrites dr_type; it reverts to the metric type (mountain — the
+% authored claim) and its diagnostic rides a victim-discriminated severity
+% (signature_diagnostic_severity/3) that floors verdict_join only on the
+% concealment case (vic>0). The committed DEFAULT config param is `mountain`, so
+% Result = Target = mountain = ModalType (no overwrite). The hook stays a live
+% ablation lever: set false_summit_override_target=tangled_rope to RESTORE the
+% legacy v6.9 overwrite. FSM was also removed from abductive_helpers
+% known_override_signature/1 + override_target/2 (it no longer overrides) so the
+% probe_signature / P1 / P7 override-artifact consumers go cleanly vacuous.
 resolve_modal_signature_conflict(mountain, false_summit_mountain, Result) :-
     !,
     (   config:param(false_summit_override_target, Target)
     ->  Result = Target
-    ;   Result = tangled_rope
+    ;   Result = mountain
     ).
-resolve_modal_signature_conflict(unknown, false_summit_mountain, Result) :- !, Result = tangled_rope.
+% OQ-138: unknown-input FSM surfaces the honest abstain rather than laundering an
+% absent metric classification into tangled_rope (OQ-37 precedent, cf. the FNL
+% unknown clause above). NOTE: zero live fires — this arm rides the OQ-37 ruling,
+% not a diff; unverified-in-commit.
+resolve_modal_signature_conflict(unknown, false_summit_mountain, Result) :- !, Result = unknown.
 
 % Constructed constraints override mountain classification
 resolve_modal_signature_conflict(mountain, constructed_low_extraction, Result) :- !, Result = rope.
@@ -1620,8 +1632,44 @@ false_summit_mountain(C, fsm_evidence(BeneficiaryCount, CouplingScore, LevelDiv)
    run_pipeline chain: audits/2026-06-11_oq98_verdict_join/p2.
    ================================================================ */
 
+%% converted_signature(?Signature)
+%  OQ-138 (2026-06-21): signatures converted from RECLASSIFY (overwrite dr_type)
+%  to ROUTE/COMMENT. After conversion dr_type reverts to the metric type, so the
+%  legacy `MetricType \= FinalType` grade test is ALWAYS false for these — they
+%  would silently fall to commentary and drop their diagnostic (the trap). Instead
+%  they grade on their OWN discriminant (signature_diagnostic_severity/3), mirroring
+%  drl_core:dr_claim_mismatch/4 which grades on the metric outcome, never on whether
+%  a type was overwritten. FCR / constructed / coupling_invariant_rope are NOT here
+%  — they still overwrite and still grade via the legacy type-delta path (unchanged).
+converted_signature(false_summit_mountain).
+
+%% signature_diagnostic_severity(+C, +Signature, -Severity)
+%  Discriminated severity for a converted signature, decoupled from the type delta.
+%  false_summit_mountain (OQ-122 discriminant): an authored agent victim means
+%  concealment is possible => moderate (floors verdict_join yellow). No victim
+%  (vic=0) means nothing to conceal (the no-victim exemption) => informational,
+%  which routes (the alert is present and VISIBLE in verdict_join Alerts) but raises
+%  NO floor (severity_floor/2 is closed on severe->red, moderate->yellow). The
+%  informational alert is what keeps "routed" distinguishable from "dropped".
+signature_diagnostic_severity(C, false_summit_mountain, moderate) :-
+    once(narrative_ontology:constraint_victim(C, _)), !.
+signature_diagnostic_severity(_, false_summit_mountain, informational).
+
+alerting_severity(moderate).
+alerting_severity(severe).
+
 %% signature_grade(+Constraint, -Grade)
 %  Grade in {correction, commentary}. Fails if no signature detected.
+%  Converted signatures (OQ-138) project from their discriminated severity
+%  (alerting -> correction, informational -> commentary) so the serialized SigGrade
+%  field stays meaningful after dr_type reverts. Legacy override signatures grade on
+%  the type delta, unchanged.
+signature_grade(C, Grade) :-
+    constraint_signature(C, Sig),
+    converted_signature(Sig),
+    !,
+    signature_diagnostic_severity(C, Sig, Sev),
+    ( alerting_severity(Sev) -> Grade = correction ; Grade = commentary ).
 signature_grade(C, correction) :-
     constraint_signature(C, Sig),
     abductive_helpers:known_override_signature(Sig),
@@ -1634,7 +1682,14 @@ signature_grade(C, commentary) :-
     constraint_signature(C, _), !.
 
 %% signature_severity(+Constraint, -Severity)
-%  Only correction-grade signatures carry an alert severity.
-%  Commentary-grade gets NO alert (grade-determines-wiring).
+%  Converted signatures (OQ-138) carry their discriminated severity directly —
+%  including `informational`, which IS emitted as an alert (the visible route) but
+%  raises no floor. Legacy (still-overwriting) signatures keep the historical
+%  correction => moderate mapping; commentary-grade legacy gets NO alert.
+signature_severity(C, Sev) :-
+    constraint_signature(C, Sig),
+    converted_signature(Sig),
+    !,
+    signature_diagnostic_severity(C, Sig, Sev).
 signature_severity(C, moderate) :-
     signature_grade(C, correction).

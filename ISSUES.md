@@ -7404,7 +7404,7 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Ω-type:** Ω_C (per-clause ruling: is each overwrite a load-bearing correction or a manufacturing reclassification the router should replace?) over an Ω_E base (a mechanical before/after `dr_type`+headline diff per clause).
 
-**Status:** open — split from OQ-128 (2026-06-17). The `natural_law` overwrite (`:867`) was retired and type_1's cap discriminated; the REST of the `resolve_modal_signature_conflict` table (`signature_detection.pl:885–932`) is UN-RULED.
+**Status:** partial — FSM sub-part RESOLVED 2026-06-21 (witnessed; see FSM build record below + `audits/2026-06-21_oq138_fsm_route_conversion/FINDINGS.md`). FCR / constructed / coupling_invariant_rope still OPEN with named witnesses; `false_natural_law` deferred pending OQ-70. Split from OQ-128 (2026-06-17): the `natural_law` overwrite (`:867`) was retired and type_1's cap discriminated.
 
 **Priority:** 3
 
@@ -7416,6 +7416,40 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 **What resolution changes.** A per-clause ruling (route / discriminate / keep-as-correction) with each clause's before/after verdict diff as the witness, consistent with the engine-ROUTES-never-RECLASSIFIES architecture (AGENTS.md). The type_1 discriminated-severity build (`drl_core.pl` `dr_claim_mismatch`) is the precedent pattern. Cross-ref: OQ-128 (parent), OQ-70 (FNL gate), OQ-98.
 
 **FSM clause — proposed disposition INHERITED from OQ-122 (closed 2026-06-18): DISCRIMINATE on victim presence, do not gate.** OQ-122's FSM victim-gate (suppress `false_summit_mountain` when `vic=0`) is superseded by this family's route-not-reclassify architecture, but its discriminant is sound and pre-witnessed. Apply the type_1 pattern: `false_summit_mountain ∧ vic=0 → informational` (route via the sink — a mountain-claim with no victim has nothing to conceal, the non-diagnostic case) / `∧ vic>0 → moderate` (concealment floor stays). Live now: FSM fires 2 seats, both `vic=0`, currently graded `signature_correction/moderate` (holds the two physics cases at YELLOW) — under the discriminant they would route as informational. **Pre-witnessed discriminant value (the gate's load-bearing partition):** `testsets_flash` 40 FSM-firings = **18 `vic=0` + 22 `vic>0`** (`audits/2026-06-13_oq122_retype_discriminator/breadth_sweep_results.txt`); the adversarial `vic>0` cell is non-empty in 4/5 corpora. Build = the discriminated-severity change + per-seat before/after `verdict_join` diff (expect the 2 physics YELLOWs to drop their signature floor; `vic>0` FSM-firings unchanged). Still `blocked_on_human` for the route-vs-keep go, but the discriminant and its witness are in hand. Cross-ref: OQ-122 (origin of the discriminant), OQ-50 (FSM detector).
+
+**FSM BUILD RECORD (RESOLVED 2026-06-21, operator go).** Full witness:
+`audits/2026-06-21_oq138_fsm_route_conversion/FINDINGS.md`. Shipped: (a) FSM stops overwriting —
+`config:param(false_summit_override_target)` default `tangled_rope→mountain` (the mountain-input
+clause's `Result=Target=mountain=ModalType`, so the existing hook neutralizes the overwrite and stays
+an ablation lever); unknown-input clause `tangled_rope→unknown` (OQ-37 abstain, **0 live fires —
+unverified-in-commit**). (b) Shared template: `signature_detection:converted_signature/1` +
+`signature_diagnostic_severity/3`; `signature_grade/2`+`signature_severity/2` grade converted
+signatures on the victim discriminant (`vic>0→moderate/correction`, `vic=0→informational/commentary`),
+NOT on the (now-zero) type delta — the `dr_claim_mismatch/4` precedent. Legacy signatures
+byte-identical. (c) **Consumer fix found by code-read (not in the plan):** FSM removed from
+`abductive_helpers:known_override_signature/1`+`override_target/2`, else `probe_signature/3` emits a
+spurious `override_mismatch` tension post-revert; P1/P7 then go vacuous.
+**Two divergences from the plan, both material:** (1) the live corpus grew 57→**92**, so it now has
+**3** FSM seats incl. one **vic>0** (`protein_anabolic_resistance`) — the kill condition is on live
+main, not just flash. (2) At the report surface the 3 seats go **yellow→RED**, NOT the plan's expected
+green: the override was MASKING dirac(`second_class`)+cohomology(`fails_descent`)+abductive tensions by
+setting the type to tangled_rope (where they're "expected"); reverting to mountain unmasks them as
+genuine contradictions. **Operator ruling 2026-06-21:** *the engine adds commentary, does not change
+classifications, and it is OK for diagnostics to render different verdicts* — Position A (let the
+subsystems speak; red is honest) over Position B (suppress dirac/cohomology to force green base).
+`claimed_type=mountain` preserved (route ≠ reclassify); the victim discriminant lives in the
+commentary layer (`signature_grade`/alert severity, serialized). Evidence for the ruling:
+**82 FSM seats across 5 corpora** (≈6,500 stories) ALL carry cohomology/dirac → 0 where the discriminant
+would be headline-visible; the structural tensions are invariants of false summits, so Position B would
+blanket-suppress an always-firing signal. Witness: full-pipeline diff = **only the 3 FSM seats change,
+89 byte-identical**; `severity_floor/2` two-sided control discharged; trap (silent green) averted
+(headline red; protein keeps `correction` via the discriminant despite zero type-delta — a naive revert
+would have dropped it to commentary). `validation_suite` 92/0/0; `check_stack` baseline-clean;
+`test_contradiction_signatures` 5-fail is pre-existing CS-axis fixture (identical OLD vs NEW). Subtlety
+recorded: `constraint_signature/2` BOUND-arg query bypasses the cascade cuts (the build uses the unbound
+form, correct). **Remaining OPEN:** false_ci_rope (19, `fcr_override_enabled` ablation diff),
+constructed_* (41+, pipeline diff), coupling_invariant_rope (4, grep `dr_type='rope'` consumers + positive
+control), false_natural_law (OQ-70 gate).
 
 ## OQ-139 — `green` base verdict reads "safe" but means "consistent": a labeling thread (Ω_C)
 

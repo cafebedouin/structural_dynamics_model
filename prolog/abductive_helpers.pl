@@ -59,7 +59,13 @@
 %  Signatures that unconditionally override the metric-based type.
 known_override_signature(false_natural_law).
 known_override_signature(false_ci_rope).
-known_override_signature(false_summit_mountain).
+% false_summit_mountain REMOVED 2026-06-21 (OQ-138): converted from RECLASSIFY to
+% ROUTE/COMMENT — it no longer overrides dr_type, so it is no longer an override
+% signature. Leaving it here would make probe_signature/3 emit a spurious
+% override_mismatch tension (dr_type now = metric type, != the stale override
+% target) and keep P1/P7 expected_conflict_pattern arms live with nothing to
+% explain. FSM now grades via signature_detection:converted_signature/1 +
+% signature_diagnostic_severity/3.
 known_override_signature(coupling_invariant_rope).
 known_override_signature(natural_law).
 known_override_signature(coordination_scaffold).
@@ -71,7 +77,8 @@ known_override_signature(constructed_constraint).
 %  The type that a signature override forces.
 override_target(false_natural_law,          tangled_rope).
 override_target(false_ci_rope,              tangled_rope).
-override_target(false_summit_mountain,      tangled_rope).
+% override_target(false_summit_mountain, ...) REMOVED 2026-06-21 (OQ-138): FSM
+% converted to ROUTE/COMMENT, forces no type. See known_override_signature/1 above.
 override_target(coupling_invariant_rope,    rope).
 override_target(natural_law,                mountain).
 override_target(coordination_scaffold,      rope).

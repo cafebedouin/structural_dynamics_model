@@ -45,6 +45,41 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-21 — OQ-138 FSM sub-part RESOLVED: false_summit_mountain converted RECLASSIFY→ROUTE; routed false-summits read RED
+**Files:** prolog/signature_detection.pl, prolog/abductive_helpers.pl, prolog/config.pl, ISSUES.md, AGENTS.md, audits/2026-06-21_oq138_fsm_route_conversion/
+**Tier:** landed
+
+**What landed.** `false_summit_mountain` no longer overwrites `dr_type` (config
+`false_summit_override_target` default `tangled_rope→mountain`; existing hook neutralizes the overwrite
+and stays an ablation lever; unknown-input clause `→unknown`, 0 live fires/unverified-in-commit).
+Shared severity template: `signature_detection:converted_signature/1` + `signature_diagnostic_severity/3`;
+`signature_grade/2`+`signature_severity/2` grade converted signatures on the victim discriminant
+(`vic>0→moderate/correction`, `vic=0→informational/commentary`), NOT on the now-zero type delta
+(`dr_claim_mismatch/4` precedent). FSM removed from `abductive_helpers:known_override_signature/1`+
+`override_target/2` (else `probe_signature/3`/P1/P7 misfire post-revert).
+
+**Two divergences from the plan (both witnessed, both material).** (1) Live corpus grew **57→92**; it now
+has **3** FSM seats incl. one **vic>0** (`protein_anabolic_resistance`) — the kill condition is on live
+main. (2) **The report-surface verdict goes yellow→RED, not the plan's expected green.** The override was
+masking dirac(`second_class`)+cohomology(`fails_descent`)+abductive tensions by setting the type to
+tangled_rope (where they are "expected"); reverting to mountain unmasks them as genuine contradictions.
+`claimed_type=mountain` preserved (route ≠ reclassify). **Operator ruling 2026-06-21:** the engine adds
+commentary, does not change classifications, and it is OK for diagnostics to render different verdicts —
+**Position A** (let subsystems speak; red is honest) over Position B (suppress dirac/cohomology to force
+green). The victim discriminant lives in the commentary layer (`signature_grade`/alert severity).
+Evidence: **82 FSM seats across 5 corpora** (≈6,500 stories) ALL carry cohomology/dirac → 0 where the
+discriminant would be headline-visible (the tensions are structural invariants of false summits).
+
+**Witnesses.** Full-pipeline corpus diff = **only the 3 FSM seats change, 89 byte-identical**
+(`PIPELINE_OLD.txt` vs `PIPELINE_NEW.txt`). `severity_floor/2` two-sided positive control discharged.
+Trap (silent green) averted: headline RED; protein keeps `correction` via the discriminant despite zero
+type-delta (a naive revert drops it to commentary). `validation_suite` 92/0/0; `check_stack`
+baseline-clean; `test_contradiction_signatures` 5-fail is pre-existing CS-axis fixture (identical OLD vs
+NEW, confirmed by stashed-build run). **Subtlety:** `constraint_signature/2` is a cut-cascade returning
+ONE signature; a BOUND-arg query bypasses the cuts (the build uses the unbound form — correct).
+OQ-138 stays **partial**: FCR(19)/constructed(41+)/CI-rope(4) OPEN with named witnesses, FNL deferred
+(OQ-70). Full detail: `audits/2026-06-21_oq138_fsm_route_conversion/FINDINGS.md`.
+
 ## 2026-06-21 — OQ-119 RESOLVED: feeding moves the verdict layer, committer invariant (Theorem-7); + the cs_-facts generator tripwire
 **Files:** ISSUES.md, agent/cohort_replicate_batch.py, agent/generate_kernel_corpus.py, python/audits/oq119_spend_driver.py, python/audits/oq119_analyze.py, prolog/export_oq119_corpus_join.pl, audits/2026-06-21_oq119/, audits/2026-06-21_oq119_gate0/
 **Tier:** tripwire

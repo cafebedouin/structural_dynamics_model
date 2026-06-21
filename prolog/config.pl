@@ -485,7 +485,7 @@ param(fpn_max_iterations,                      20).    % Hard cap (2x theoretica
 param(fpn_enabled,                             1).     % Graduated Phase 7-T2: FPN iteration enabled
 param(fcr_override_enabled,                    1).     % 1=FCR overrides classification, 0=detection only (ablation)
 param(piton_refinement_enabled,                1).     % OQ-90: 1=capture-keyed piton refinement fires in the FCR branch, 0=kill-switch. Separate axis from fcr_override_enabled — fires even when that is 0 (intentional; the refinement is an authored-structure fact, not the metric-uniformity override).
-param(false_summit_override_target,    tangled_rope).  % v6.9: reclassification target for false summit mountains
+param(false_summit_override_target,    mountain).      % OQ-138 (2026-06-21): FSM ROUTES, does not RECLASSIFY. Default mountain = revert to the metric type (no overwrite); the discriminated severity (signature_diagnostic_severity/3) carries the diagnostic into verdict_join. Set to tangled_rope to RESTORE the legacy v6.9 overwrite (ablation lever).
 param(corpus_path,                       'testsets').   % Directory to load testsets from (relative to prolog/)
 
 /* ================================================================

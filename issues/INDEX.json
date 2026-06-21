@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "1313b67e9ee53ae2b1209448a49cb1c49d88c03b",
+    "store_version": "11c772a3feadd5af8cf17abefc278fd8a4fb5dcf",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-21T10:26:39"
+    "generated_at": "2026-06-21T12:04:42"
   },
-  "issues_sha": "fbdd804bfe4812a5d9b008631efb34e4c2a2ba827a3c42b34e7b2f4e8abe128f",
+  "issues_sha": "77831cb6c20c43b6f0167ee37760f8850773394898f6016d2f1ab0d68127ffc9",
   "n_entries": 172,
   "active_token_set": [
     "investigating",
@@ -14,8 +14,8 @@
   "per_status": {
     "resolved": 77,
     "mitigated": 9,
-    "partial": 6,
-    "open": 74,
+    "partial": 7,
+    "open": 73,
     "disposed": 3,
     "future": 3
   },
@@ -637,7 +637,7 @@
     },
     {
       "id": "OQ-138",
-      "status": "open",
+      "status": "partial",
       "priority": 3,
       "summary": "`resolve_modal_signature_conflict` family: which signature OVERWRITES should route, not reclassify? (Ω_C + Ω_E)",
       "deps": [
@@ -646,6 +646,7 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
+        "OQ-37",
         "OQ-50",
         "OQ-70",
         "OQ-98",

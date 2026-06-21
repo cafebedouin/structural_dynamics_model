@@ -369,8 +369,26 @@ deciding not-to-flag instead of routing the flag. The dropped FSM victim-gate
 cases) reads as safe — `dr_type` byte-identical, no overwrite added — and that is the trap. The
 route-consistent fix is to **discriminate the signature's SEVERITY**, never suppress the detector: let
 it fire and route the non-diagnostic case as `informational` (no headline floor) while the diagnostic
-case keeps its floor. Template: the type_1 ε-split (`drl_core.pl:629–638`) and the proposed FSM
-victim-split (OQ-138). The price of doing this is a clean discriminant + a written KILL condition.
+case keeps its floor. Template: the type_1 ε-split (`drl_core.pl:629–638`) and the FSM victim-split
+(OQ-138, **LANDED 2026-06-21**). The price of doing this is a clean discriminant + a written KILL condition.
+
+**FSM converted RECLASSIFY→ROUTE, the reusable severity template (OQ-138, 2026-06-21) —
+`signature_detection.pl`.** `false_summit_mountain` no longer overwrites `dr_type` (config default
+`false_summit_override_target` is now `mountain`; hook stays an ablation lever). The grade contract
+gained a **converted-signature path**: `converted_signature/1` + `signature_diagnostic_severity/3`
+grade a converted signature on its OWN discriminant (FSM: `vic>0→moderate/correction`,
+`vic=0→informational/commentary`), NOT on a `MetricType≠FinalType` delta (which is always zero once a
+signature reverts) — mirroring `dr_claim_mismatch/4`. **Contract change to note:** a converted
+signature's `informational` severity IS emitted as an alert (the visible route, distinct from
+"dropped"); the legacy "commentary-grade gets NO alert" rule holds only for still-overwriting
+signatures. When converting the next clause (FCR/constructed/CI-rope), add it to
+`converted_signature/1`, give it a `signature_diagnostic_severity/3` discriminant, AND remove it from
+`abductive_helpers:known_override_signature/1`+`override_target/2` (else `probe_signature/3`/P1/P7
+misfire). **Routed false-summits read RED at the report surface, not green** — reverting the type to
+mountain unmasks the dirac(`second_class`)+cohomology(`fails_descent`)+abductive tensions the override
+was hiding; that is honest commentary, classification unchanged (operator ruling 2026-06-21: the
+engine comments, does not reclassify, and diagnostics may render different verdicts). Witness:
+`audits/2026-06-21_oq138_fsm_route_conversion/`.
 
 **Piton is an FCR-branch refinement (OQ-90, 2026-06-11):** `piton` is NOT a signature;
 `dr_signature` stays `false_ci_rope` while `dr_type` becomes `piton`. The refinement fires inside
