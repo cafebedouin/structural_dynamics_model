@@ -45,6 +45,35 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-21 — OQ-119 RESOLVED: feeding moves the verdict layer, committer invariant (Theorem-7); + the cs_-facts generator tripwire
+**Files:** ISSUES.md, agent/cohort_replicate_batch.py, agent/generate_kernel_corpus.py, python/audits/oq119_spend_driver.py, python/audits/oq119_analyze.py, prolog/export_oq119_corpus_join.pl, audits/2026-06-21_oq119/, audits/2026-06-21_oq119_gate0/
+**Tier:** tripwire
+
+**Tripwire (the reusable, silent-mistake fact):** the **single-story generation path**
+(`cohort_replicate_batch.py` / `story_generator_base.build_prompt_parts`) authors **NO `cs_` facts** —
+a regenerated single story has observer + temporal but **no `cs_kernel_id` / `cs_reading_relation`**
+(witnessed: `audits/2026-06-13_oq117_within_arm_proxy/fed_arm/*.json`). The **committer/CS axis exists
+only on the kernel-generation path** (`generate_kernel_corpus` no-scope / `c-orchestrator` scope, which
+authors `cs_structure.reading_relations` → `generate_constraint_pl.py:666`). **Any fed/withheld or
+perturbation experiment that needs the committer axis MUST use the kernel-regen path**, or it silently
+measures ≤2.5 axes while looking complete (the exact vacuity OQ-119 forbids). Corollary: `GEN_MODEL` is
+**Haiku**, which intermittently drops the schema-required `stakeholders[]` (OQ-149 `allOf[0]` gate fires
+loud → coverage holes; a Haiku pass left 2/5 kernels at full coverage, Sonnet → 5/5). Override to Sonnet
+for precision fed/withheld spends; the bulk-build Haiku default stays.
+
+**Result (OQ-119, full detail in `audits/2026-06-21_oq119/WRITEUP.md`):** 96 Sonnet generations,
+parties-fixed fed framing, per-axis `median(D_A) > max(F_A)` against the measured generation-noise floor,
+observer de-weighted. **Feeding moves the DIAGNOSTIC VERDICT layer (4/5 kernels: false_natural_law
+escalates commentary→correction +1 alert) and leaves the COMMITTER obstruction/divergence INVARIANT
+(0/5 — Theorem-7 detection-independence holds, measured not assumed).** Observer + temporal-rate move
+softly. The verdict move is substantially the claim-gated FNL path (semi-expected); the committer
+invariance is the non-trivial result. Committer is generation-noisy (withheld redraws flip
+real_closure↔licensed_plurality) → routed to OQ-149.
+
+**Correction-key:** the schema's mountain no-parties `stakeholders` exemption (`allOf[0]`) is
+**deliberate** (OQ-149 2026-06-19 `becd0f87` + OQ-83 Pattern-5 omit-vs-authored-empty) — do NOT "tighten"
+it to rescue a weak generator; the fix is the model + a parties-fixed fed framing, not the schema.
+
 ## 2026-06-20 — OQ-71 depth-lineage: Phase A closes the design question (mitigated, no spend)
 **Files:** ISSUES.md, docs/design/a_hypothesis_about_corpus_size.md, python/audits/oq71_a2_richness_alldims.py, audits/2026-06-04_oq71_depth_lineage/, python/build_lineage_seeds.py, agent/generate_kernel_corpus.py
 **Tier:** correction-key
