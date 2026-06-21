@@ -7447,9 +7447,32 @@ blanket-suppress an always-firing signal. Witness: full-pipeline diff = **only t
 would have dropped it to commentary). `validation_suite` 92/0/0; `check_stack` baseline-clean;
 `test_contradiction_signatures` 5-fail is pre-existing CS-axis fixture (identical OLD vs NEW). Subtlety
 recorded: `constraint_signature/2` BOUND-arg query bypasses the cascade cuts (the build uses the unbound
-form, correct). **Remaining OPEN:** false_ci_rope (19, `fcr_override_enabled` ablation diff),
-constructed_* (41+, pipeline diff), coupling_invariant_rope (4, grep `dr_type='rope'` consumers + positive
-control), false_natural_law (OQ-70 gate).
+form, correct).
+
+**DEFERRED-CLAUSE EVIDENCE PASS 2026-06-21 (read-only; no conversion). Full:
+`audits/2026-06-21_oq138_fsm_route_conversion/DEFERRED_CLAUSE_EVIDENCE.md`.** True (unbound) cascade-winner
+counts on live (92) — the "N fires" framing overstated blast radius; most overrides are INERT or
+load-bearing-elsewhere. Each clause's diff is now IN HAND; the partition ruling is the operator's seat.
+- **coupling_invariant_rope — KEEP candidate.** 6 winners, all `scaffold→rope` (positive certification).
+  Consumer grep (positive-controlled: 131 type-branches found for known types, so it would find rope if
+  present) shows `dr_type='rope'` IS consumed: `dirac_classification.pl:287` rope⇒**first_class** (opposite of
+  the FSM `second_class`), `drl_purity_network.pl` immunity 1.0/contam 0.1, `grothendieck_cohomology.pl:432`,
+  boltzmann, maxent. NOT a free route — the rope cert propagates to the diagnostic subsystems; reverting
+  `rope→scaffold` flips their reading. Plan's "nothing reads rope" hypothesis FALSIFIED. Keep unless these 6
+  are coordination-washed (the genuine-vs-washed discriminant is the next evidence — not a type diff, not yet
+  gathered).
+- **false_ci_rope — route + victim-discriminate, SAME unmask story as FSM (milder).** 25 winners, 12 CHANGE
+  (scaffold→tangled_rope ×8, scaffold→piton ×3, snare→tangled_rope ×1), 13 inert. Hook ablation
+  (`fcr_override_enabled` 0): changed seats revert to scaffold, base green→YELLOW — routing ALSO unmasks
+  tensions (the "scaffold stays green" guess was refuted), so the discriminant lives in the commentary layer.
+  Victim split present (6 vic=0 + 6 vic>0). **Piton sub-case (3, scaffold→piton, all vic>0):** OQ-90
+  FCR-branch refinement — needs separate handling, cannot blind-revert to scaffold.
+- **constructed_* — override INERT on 94%; 3 real changes.** constructed_high 50 winners but only **3** CHANGE
+  (all `unknown→snare`); 47 inert (metric already snare). constructed_low 1 inert; constructed_constraint /
+  coordination_scaffold 0 live (fully shadowed). No config hook → diff via metric_based_type_indexed
+  comparison. Converting reverts the 3 to `unknown` (honest abstain, OQ-37); 47 inert unchanged. Blast radius
+  3, not 41.
+- **false_natural_law** — still deferred pending OQ-70 (FNL bait-confound).
 
 ## OQ-139 — `green` base verdict reads "safe" but means "consistent": a labeling thread (Ω_C)
 
