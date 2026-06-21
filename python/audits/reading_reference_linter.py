@@ -148,6 +148,45 @@ def incompleteness_rate(danglings, declared):
     return n_edges, n_missing, n_kernels, missing, sources_per
 
 
+def summarize(testsets_dir: pathlib.Path = TESTSETS) -> dict:
+    """Read-only referential-integrity summary for one corpus dir (no engine).
+
+    The callable surface consumed by the non-gating run_pipeline reporting step.
+    Returns the headline counts plus the in-degree>=2 DEFENSIBLE set (missing
+    readings corroborated by >=2 independent sibling edges). Scope is
+    cs_reading_relation only (affects_constraint is a causal-network predicate
+    whose targets need not be declared readings — reported apart in main()).
+
+    `rate_missing_pct` = distinct-missing / cs_reading_relation-edges (the census
+    table's "rate%" column); on a singleton working set this is large by
+    construction (each lone reading dangles edges to ungenerated siblings), which
+    is why the run_pipeline step is NON-GATING.
+    """
+    refs = census(testsets_dir)
+    declared = declared_set(testsets_dir)
+    csr = [r for r in refs if r.predicate == "cs_reading_relation"]
+    csr_dangling = rule_dangling(csr, declared)
+    csr_noncanon = rule_noncanonical(csr, declared)
+    dups = rule_duplication(declared)
+    n_edges, n_missing, n_kernels, missing, sources_per = incompleteness_rate(
+        csr_dangling, declared)
+    defensible = sorted(
+        ({"kernel": k, "missing": canon, "in_degree": len(srcs)}
+         for (k, canon), srcs in sources_per.items() if len(srcs) >= 2),
+        key=lambda d: (-d["in_degree"], d["missing"]))
+    return {
+        "n_files": len(declared),
+        "n_csr_edges": len(csr),
+        "n_dangling": len(csr_dangling),
+        "n_missing": n_missing,
+        "n_kernels_with_missing": n_kernels,
+        "n_noncanonical": len(csr_noncanon),
+        "n_duplicate_pairs": len(dups),
+        "rate_missing_pct": round(100.0 * n_missing / len(csr), 2) if csr else 0.0,
+        "defensible_ge2": defensible,
+    }
+
+
 # ---------------------------------------------------------------------------
 # Positive controls — synthetic fixtures each rule MUST flag (and must not over-flag)
 # ---------------------------------------------------------------------------

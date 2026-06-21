@@ -798,6 +798,41 @@ def _phase_post_prolog(progress):
         progress("pipeline", "[ORBIT] Exporting kernel_obstruction.json (obstruction + grounding)...")
     results.append(_run_step("kernel_orbit_export", _kernel_orbit_export, progress))
 
+    # OQ-58 referential-integrity census (NON-GATING). Pure read-only glob of
+    # testsets/*.pl — no engine, no classification. Reports dangling
+    # cs_reading_relation edges → distinct missing readings, with the in-degree>=2
+    # DEFENSIBLE set. NON-GATING by design: the live corpus is a singleton topical
+    # working set (~1 reading/kernel), so nearly every sibling edge dangles and a
+    # gate would red-line every run; the value is the standing CENSUS, not a pass/
+    # fail. This sidecar — reading_reference_census.json — is the LIVE backlog
+    # (Pattern 1: re-run in-pipeline so it can't go stale), NOT the per-generation-
+    # run cs_reading_relation_quarantine.json. See ISSUES.md OQ-58 / GAP-07.
+    def _reading_linter():
+        sys.path.insert(0, str(Path(__file__).resolve().parent / "audits"))
+        import reading_reference_linter as L
+        if not L.selftest():
+            # positive controls failed → rules not trusted; report, do not gate.
+            if progress:
+                progress("pipeline", "[LINTER] selftest FAILED — census not trusted this run")
+            return
+        summary = L.summarize(TESTSETS_DIR)
+        run_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        manifest = build_manifest(run_at)
+        manifest["corpus_hash"] = _compute_corpus_hash(TESTSETS_DIR)
+        (OUTPUTS_DIR / "reading_reference_census.json").write_text(
+            json.dumps({"manifest": manifest, "summary": summary},
+                       ensure_ascii=False, indent=2), encoding="utf-8")
+        if progress:
+            progress("pipeline",
+                     f"[LINTER] cs_reading_relation: {summary['n_dangling']} dangling → "
+                     f"{summary['n_missing']} missing readings / "
+                     f"{summary['n_kernels_with_missing']} kernels "
+                     f"({len(summary['defensible_ge2'])} id>=2 defensible) — NON-GATING")
+
+    if progress:
+        progress("pipeline", "[LINTER] OQ-58 referential-integrity census (non-gating)...")
+    results.append(_run_step("reading_linter", _reading_linter, progress))
+
     return results
 
 
