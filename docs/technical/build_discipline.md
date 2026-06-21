@@ -907,6 +907,67 @@ extraction works); the second sentence is not licensed by a propaganda transcrip
 
 ---
 
+## An introduced instrument is itself a claim (the recursion, generalized past diagnostics)
+
+The positive-control rule and its "one level up" sibling both say a probe's clean null is worthless
+until the probe is shown to fire. Generalize once more — past *diagnostics* to **any instrument you
+ADD to satisfy the witness discipline**: a positive control, a canary, a fallback branch, a
+perturbation harness, a verification step. Each is a new claim, and each inherits the discipline it
+was introduced to enforce. The confound you close at one level silently reopens at the level of the
+tool you closed it with.
+
+The OQ-69 ledger-drain plan (2026-06-20) supplied this across three review rounds; the operator
+named the class twice — *"a positive control that doesn't control the thing it stands in for"* and
+*"the plan's own rules turned on the instruments the revision introduced."* Every residue crack
+after round 1 was an added instrument escaping its own check:
+
+- **Same-sink control.** A perturbation positive control must move the *exact output the experiment
+  reads*, not merely move *something*. The δ-load-bearing probe's control had to route through
+  `derive_directionality`'s χ sink — a flip on any other sink proves "the harness perturbs path X"
+  while δ-no-change is read on path Y, reopening the confound one level down. (Resolved: neg control
+  `δ:=0.0` byte-identical, experiment `δ:=0.3` flips χ on its own sink ⇒ δ is **live-but-zeroed** —
+  wired and load-bearing when set, inert at the shipped `0.0`/uniform default.) This is the
+  oracle-must-differ-in-the-fallible-dimension rule, applied to the *experiment's* own output.
+- **Two-sided harness control.** Before trusting a "no change ⇒ null" perturbation, witness that a
+  *no-op* overlay leaves output byte-identical AND a *known-live* input flips it. Without the pair,
+  "no change" cannot distinguish a real null from a dead harness (wrong arity, cache not cleared via
+  `cache_registry:clear_all_caches/0`, predicate absent).
+- **Canary the riskiest shape, with its dependencies present.** A grammar canary on the *easy*
+  entry (a bare ISSUES.md OQ) leaves the *risky* shape (a `Deps`-bearing entry) first validated only
+  in the batch — the late reject the canary existed to kill. And a canary whose entry forward-refs an
+  unminted target false-rejects on a dangling edge unrelated to its own well-formedness: mint the
+  referenced pair (the `gates`/`blocked_on` pair) together.
+- **The control's own anchor must be substrate-confirmed.** "The closed OQ is gone from `omega
+  menu` ⇒ the close took" holds only if the menu *excludes* resolved items — so the witness needs a
+  known-resolved control absent from the *same* block, and that control's resolved status read from
+  ISSUES.md, not taken from the triage's word.
+- **A pre-write witness cannot require a write to observe.** "Run `omega check` to see whether a
+  resolved parent dangles" needs the close to already exist — making the keep-open fallback a
+  post-write revert, not a pre-write branch. Rule from the *source code's* dangling logic instead
+  (`omega_resolver.py`'s authority set); the post-write run confirms, never makes, the ruling. Keeps
+  the separated-passes stance: read-only deciding precedes the write.
+
+Two more from the same review, about plan *structure* rather than the instruments:
+- **A fallback gated on a condition the design avoids is dead code.** The first close-vs-keep-open
+  witness tested tolerance of a `Deps` edge the plan had already decided never to author — probing
+  an impossible condition while the real risk (pre-existing inbound refs to the closing OQ) went
+  dark. Probe the risk that can occur, not the one the design routes around.
+- **A remedy must not recreate its own target at reduced scale.** The drain existed to dissolve "~14
+  items share one buried `Priority`"; assigning priority *bands* without *distinct integers* would
+  reproduce a smaller tie-pile the resolver still cannot sequence — the failure mode surviving its
+  own fix. (Related: a triage verdict that sets a *scope floor* — a PARTIAL "what already shipped"
+  claim — corrupts the new work-item's **output**, not just its ranking; re-witness PARTIAL
+  boundaries against the file, while a STILL-LIVE misrank costs only a re-rule.)
+
+**The rule:** when a fix, plan, or audit introduces an instrument to discharge the witness
+discipline, treat that instrument as the next thing to witness — same-path, two-sided,
+riskiest-shape, substrate-anchored, write-free-if-pre-write. And when review keeps finding cracks of
+this one class with the count *dropping*, that is the floor: fix inline and ship — a further pass is
+convergence-softening, not signal (the operator's `[EDGE]` call). Worked instance with all witnesses:
+`audits/2026-06-20_oq69_ledger_drain/`.
+
+---
+
 ## A gating count is not a finding without its composition (compute the breakdown in the SAME pass)
 
 A count that is about to gate a decision (a corpus build, a verdict, a "build vs don't") is **not a

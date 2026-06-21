@@ -377,8 +377,11 @@ Concretely: wire-or-fail-loud, checked-canonicity, let the engine dispatch, retu
 of `[]`, a count of `0`, an "I found it nowhere" each can mean "nothing there" or "didn't
 dispatch / queried wrong / never ran." This holds for *reasoning*, not just shell: "X appears
 nowhere / is unique" is an unfalsified diagnostic until run against a case you know it must flag.
-Full table: `docs/technical/build_discipline.md` → *The spine* and *Every diagnostic needs a
-positive control*.
+**And the control you ADD is itself a claim:** a positive control, canary, fallback, or
+perturbation harness introduced to discharge this discipline inherits it — same-path, two-sided,
+riskiest-shape, substrate-anchored, write-free-if-pre-write (the confound reopens at the level of
+the tool you closed it with). Full table: `docs/technical/build_discipline.md` → *The spine*,
+*Every diagnostic needs a positive control*, and *An introduced instrument is itself a claim*.
 
 **Unwired ≠ worthless — judge a subsystem by its contribution, not its consumers.** Pattern 1 is a
 *build-time* rule (finish the wire you create); it does NOT license the audit reflex of calling an
