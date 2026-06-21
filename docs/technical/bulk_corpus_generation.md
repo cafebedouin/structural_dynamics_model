@@ -17,6 +17,20 @@ KNOWN_STATE 2026-06-13.
 
 ## 2. The seed pipeline
 
+**Two-phase by design — DECOMPOSE then GENERATE — and the split is what enables batch
+processing.** A kernel is not turned into stories in one pass. `generate_kernel_corpus.run_decompose`
+(and the `c-orchestrator.py` `decompose` step) first **batch-SCOPEs** every kernel into reading
+*seeds* — one Sonnet SCOPE request per kernel, all in one Anthropic batch (`build_scope_batch_requests`)
+— writing per-kernel manifests and appending the flattened reading-seeds to
+`prolog/kernel_readings_pool.json`. Only then does the **no-scope GENERATE** phase
+(`run_no_scope`, batched) turn those pooled reading-seeds into full stories. The pre-decomposition is
+the reason the pool exists as an intermediate artifact: decomposing all kernels up front yields a
+flat list of independent reading-seeds that one batch can generate in parallel, instead of a serial
+topic→scope→story chain per kernel. (It also means a reading-seed already carries its `kernel_id` +
+`sibling_reading_ids`, so the GENERATE phase can author `cs_reading_relation` edges and
+`stamp_kernel_linkage` can stamp `cs_kernel_id` — i.e. the committer axis is born at decompose time,
+not generate time.)
+
 `agent/build_never_generated_seeds.py` reads the SCOPE manifests in gitignored
 `outputs/**/*.manifest.json` (+ `outputs/**/manifests/*.json`) and emits one reading-seed per
 declared reading of every never-generated contested kernel. Each seed:
