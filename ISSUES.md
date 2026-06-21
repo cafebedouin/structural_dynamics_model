@@ -3887,47 +3887,40 @@ absence presenting as a measured zero (Build-Discipline spine).
 
 **Ω-type:** Ω_P (cleanliness/one-path design) + Ω_E (the gkc-kernel wave change is witnessable).
 
-**Status:** open — the BUG (c-orch dropping kernels) is fixed (OQ-79 mech-1); this is the remaining
-**Priority:** 1
-cleanliness/enhancement step, deliberately NOT rushed at the end of the merge session.
-**Origin:** 2026-06-06 backend merge. P3 routed c-orchestrator through `generate_from_manifests`
-(the unified backend). gkc's `--scope` flow (`main()`, the legacy run-tagged path) still runs its
-OWN generation: `flatten_manifests` → `build_batch_requests` (ONE batch, NO waves) →
-`process_batch_results` → grouping/stamp/integrity/contradictions. So two generation
-implementations still coexist; the silent-fork BUG is gone (both handle kernels), but the literal
-one-path goal is not yet met.
+**Status:** resolved — injection-governance premise falsified by code-read (2026-06-21); the
+remaining one-path/waves cleanliness is deferred-known, relocated to `design_gaps.md` GAP-15
+under the alpha→beta posture. NOT a `--scope` rewire — none was done; the disposition is "this is
+no longer an open question."
 
-**What the rewire does (a real behavior change to a WORKING path — witness, don't assume parity):**
-route gkc `--scope` through `generate_from_manifests(model=GEN_MODEL, system=<gkc list>, ...)`. Three
-deltas: (1) gkc kernel runs GAIN waves (supplementary axes with reading-deps move to a later wave —
-the 176/166 finding; the P4 mechanism is already witnessed deterministically, commit ed2ec212);
-(2) supplementary-axis framing shifts from gkc's `_axis_summary` to c-orch's `axis_source_desc`
-(intended consistency — flat axes get flat framing regardless of entry); (3) re-route through one
-backend.
+**Origin:** 2026-06-06 backend merge. The BUG (c-orch dropping kernels) was fixed (OQ-79 mech-1).
+Two manifest-capable generation paths still coexist: the unified backend `generate_from_manifests`
+(waves + the OQ-81 suppression `_flat_seeds_from_manifest`, called only by c-orchestrator) and the
+legacy `--scope` flow (gkc `main()` → `build_batch_requests` → one batch, no waves →
+`process_batch_results`). OQ-81 raised this to Priority 1 on the worry that `--scope` was the only
+generation route the injection-suppression predicate did not govern ("probably never injected
+verdicts… a code-read away from confirmed never").
 
-**Integration seams to handle cleanly (why it's its own pass, not a tail-of-session wire):**
-- `generate_from_manifests` already emits `emit_axiom_contradiction_facts`; the `--scope` flow emits
-  them separately AFTER `coherence_eyeball` → must remove the duplicate or double-emit.
-- `kernel_grouping.json` + `coherence_eyeball` wrap the generation block → keep them around the
-  `generate_from_manifests` call.
-- Witness: a small live kernel-seed run (1 kernel) → readings + flat controls + integrity sweep
-  produced, AND the wave change visible (supplementary axes after readings); framed as a CHANGE
-  from kernel_v1 (which had no waves), never "as before." Safe now: live corpus has zero kernels.
+**Resolution (the code-read, witnessed 2026-06-21):** the `--scope` path is **structurally
+injection-free** — confirmed never, not probably. `build_batch_requests`→`build_cached_messages`
+(gkc.py:419) never calls `upstream_context` (single call site :963, inside `_seed_messages` →
+invoked only at :1034 within `generate_from_manifests`); the injection-carrier dict
+`generated_by_id` is constructed only inside the unified backend (:1010, populated :1056) and the
+`--scope` `main()` never builds it; indirection ruled out (no `globals()`/dispatch/alias to
+`upstream_context`; the four `getattr` hits are jsonschema/usage/model/args). `build_cached_messages`
+injects only the kernel's own authored substrate (sibling reading IDs, structural delta), never a
+computed sibling verdict — exactly what OQ-81 rules safe ("kernel substrate reaches the prompt via
+CSR"). So the last injection-governance gap was never a gap; the urgency that raised this to P1 is
+gone.
 
-**Why deferred (operator-relevant):** the c-orchestrator fork — the actual defect — is healed and
-witnessed. gkc `--scope` was never broken (flatctl_probe/stage1_probe used it successfully). This
-step is cleanliness + an enhancement on a working path, which deserves a focused witnessed pass.
+**Disposition (operator ruling, 2026-06-21):** close. What remained after the premise died is not
+an open *question* but a backlog task with a known disposition — pure one-path cleanliness + a
+waves *enhancement* on a working, injection-safe, currently-dormant legacy path (live corpus has
+zero kernels; the rewire can't be witnessed end-to-end now). That work folds into the eventual
+rebuild and is recorded as a deferred-known design gap → **`design_gaps.md` GAP-15**. The genuinely
+still-open sliver — the Streamlit-era app orchestrators could re-inject if resurrected, since the
+suppression lives in the backend not the corpus — is carved out as its own entry → **OQ-172**.
 
-**Priority raised by the OQ-81 merge (operator, 2026-06-10):** the OQ-81 suppression of
-reading-typed wave-upstreams lives in the unified backend (`_flat_seeds_from_manifest`), which
-makes the unified backend the place where INJECTION POLICY lives — and gkc `--scope` is now the
-only generation route not through it, i.e. the only route the suppression predicate does not
-govern. Its wave-free design probably never injected verdicts, but "probably never" is a
-code-read away from "confirmed never"; the rewire closes the cleanliness goal AND the last
-injection-governance gap in one move. One ungoverned path is worth more than its size — take
-this next over other open items. (The serial escape hatch in c-orchestrator got the predicate
-directly, code-read-synced; the Streamlit-era app orchestrators remain out of scope and could
-re-inject if resurrected — the suppression lives in the backend, not the corpus.)
+**Deps:** splits_from OQ-79, splits_from OQ-81; spawned OQ-172.
 
 ---
 
@@ -8290,6 +8283,50 @@ from OQ-69 (**operator ruling 2026-06-20:** the cluster item splits F/G; minted 
 **The obstruction (A0 recurs, name it before any spend):** the variable you want to turn — realized depth / accumulated-context in the construction path — is not a clean input the SCOPE path exposes. Forcing SCOPE deep means either (a) feed deeper *topics* and hope it constructs nested structure → conflates topic-domain richness with nesting depth, or (b) inject parent-context into the SCOPE prompt → a third regime, no longer the path §3 is about. The context-controlled batch-of-one design above is the one framing that varies inline-context cleanly; whether even it is fully constructible at the corpus's real scale is open. The honest alternative outcome is to **register §3 as path-untestable-as-stated** and accept the substrate-level falsification OQ-71 already has as the most that is reachable.
 
 **What resolution changes:** this is the only experiment in the OQ-71 tree that re-engages §3 on its own turf with a clean falsifier. Either it shows the SCOPE path keeps discovering (boundedness genuinely weakens, not just within-regime) or it saturates (boundedness survives its own-path test) — or it proves non-constructible, which is itself a finding about §3's falsifiability. **Gated on:** an operator pricing confirmation (batch-of-one at corpus scale is many small API calls, a different cost shape than OQ-71's batch) + spend-go. Ranking if a graduation experiment is funded: SCOPE-depth-if-constructible (this) > OQ-71's Opus-flat reading-(b) > SCOPE-on-same-topics (cheapest, most confounded).
+
+---
+
+## OQ-172 — Injection-suppression lives in the backend, not the corpus: a resurrected orchestrator could re-inject
+
+**Ω-type:** Ω_P (one-path / where-policy-lives design) + Ω_E (witnessable by code-read of any orchestrator that gets resurrected).
+
+**Status:** open — carved out of OQ-82's close (2026-06-21) as the genuinely still-open sliver the OQ-82 close must not swallow.
+**Priority:** 3
+
+**Origin:** OQ-81 placed the reading-typed wave-upstream suppression in the unified backend
+(`generate_kernel_corpus._flat_seeds_from_manifest`), i.e. injection policy lives in the *backend
+predicate*, not in the corpus or schema. OQ-82's close (2026-06-21) confirmed by code-read that
+every CURRENTLY-LIVE generation route is injection-safe: c-orchestrator routes through the unified
+backend (governed); the legacy gkc `--scope` path is structurally injection-free (no waves, never
+calls `upstream_context`, never builds `generated_by_id` — witnessed in the OQ-82 entry). The
+sliver OQ-82 flagged and did not resolve, **now witnessed concrete (2026-06-21), not merely
+conditional:** the **legacy `agent/orchestrator.py`** (`DRAuditOrchestrator`, driven by the dormant
+Streamlit front-ends `agent/app.py` + `agent/c-app.py`, both of which `import` it) injects upstream
+verdicts inline. `_step_generate` (`orchestrator.py:343–358`) builds `upstream_context` by iterating
+**all** of an axis's `downstream_of` deps and threading the upstream story's `claimed_type` into the
+downstream `build_prompt` — the exact §5.1 channel OQ-81 found shifts an authored classification
+input toward one seat's verdict — with **no `_flat_seeds_from_manifest` filter** (no reading-typed
+suppression). The injection code is live in `orchestrator.py` *now*; only its drivers (the Streamlit
+apps) are dormant. Because the policy is a backend predicate and not a corpus/schema invariant,
+resurrecting `app.py`/`c-app.py` re-opens the OQ-81 channel with zero code change to the injection
+site.
+
+**Specific question:** Should injection-suppression be relocated from a backend predicate to an
+invariant no orchestrator can bypass (enforced at the seed-build boundary all routes must cross, or
+a generation-time gate that fails closed when an axis carries reading-typed upstream deps), OR —
+since `orchestrator.py` is legacy and the c-orchestrator superseded it — should `_step_generate`'s
+inline injection simply be deleted / the legacy orchestrator + Streamlit apps formally retired?
+Either kills the live injection site; the choice is hoist-the-policy vs retire-the-path.
+
+**Falsifier / what resolution changes:** resolution = either the suppression is hoisted to a
+bypass-proof boundary every generation route crosses (closes the gap structurally), or the legacy
+`orchestrator.py` injection path is retired/deleted (removes the site), or this entry stands as the
+documented gate every new or resurrected generation front-end must pass (code-read for: threads an
+upstream computed verdict into a downstream prompt ∧ does not route through
+`_flat_seeds_from_manifest`). Pre-registered check before reviving any front-end: grep its
+generation step for `claimed_type` / `downstream_of` injection without the suppression filter.
+
+**Deps:** splits_from OQ-82, blocked_on OQ-81 (the suppression predicate it governs).
 
 ---
 

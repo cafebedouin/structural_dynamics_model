@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "6ae51b27eddc3ee83b914e315ccc35b3cb08b3ee",
+    "store_version": "08e2a9810ccdfbd07d6d6c4aee4f3bd726d91472",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-21T07:34:27"
+    "generated_at": "2026-06-21T07:38:57"
   },
-  "issues_sha": "7498c26704e087a42c3878fabacbb437167b6385e92e6cd402f13703475bfacb",
-  "n_entries": 171,
+  "issues_sha": "fbc22c01f82feeec4e0c1266f4ed8739592f7756d6b8edf04025b522b4acb62c",
+  "n_entries": 172,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 74,
+    "resolved": 75,
     "mitigated": 9,
     "partial": 6,
     "open": 76,
@@ -384,18 +384,6 @@
         "OQ-109",
         "OQ-116",
         "OQ-117"
-      ]
-    },
-    {
-      "id": "OQ-82",
-      "status": "open",
-      "priority": 1,
-      "summary": "gkc --scope entry point not yet routed through the unified backend (partial unification)",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-79",
-        "OQ-81"
       ]
     },
     {
@@ -1046,6 +1034,21 @@
       "mentioned_in": [
         "OQ-71"
       ]
+    },
+    {
+      "id": "OQ-172",
+      "status": "open",
+      "priority": 3,
+      "summary": "Injection-suppression lives in the backend, not the corpus: a resurrected orchestrator could re-inject",
+      "deps": [
+        "splits_from OQ-82",
+        "blocked_on OQ-81"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-81",
+        "OQ-82"
+      ]
     }
   ],
   "archive": [
@@ -1646,6 +1649,22 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
+    },
+    {
+      "id": "OQ-82",
+      "status": "resolved",
+      "priority": "–",
+      "summary": "gkc --scope entry point not yet routed through the unified backend (partial unification)",
+      "deps": [
+        "splits_from OQ-79",
+        "splits_from OQ-81"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-79",
+        "OQ-81",
+        "OQ-172"
+      ]
     },
     {
       "id": "OQ-83",

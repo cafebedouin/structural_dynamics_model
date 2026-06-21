@@ -726,3 +726,45 @@ seat loses the cover story; the verdict is the ordering, beneficiary last). Note
 re-gates the type** — re-adding a suppression maximum to the classifier would undo the 2026-06-05 de-leak
 (metric/claim independence; divergence is the signal). This GAP is the full *temporal feedback*; OQ-152 is
 its seat-resolved static snapshot. Named here 2026-06-19.
+
+---
+
+## GAP-15 — gkc `--scope` is not routed through the unified generation backend (deferred one-path cleanliness)
+
+**The capability:** A single generation backend — `generate_kernel_corpus.generate_from_manifests`
+— that every manifest-capable generation route flows through, so wave-ordering, supplementary-axis
+framing, and injection policy live in exactly one place. Today the c-orchestrator routes through it;
+the legacy gkc `--scope` flow (`main()`, run-tagged) still runs its own path (`flatten_manifests` →
+`build_batch_requests` → one batch, no waves → `process_batch_results`). Two manifest-capable
+implementations coexist.
+
+**Why it is absent (deferred, not defective):** the silent-fork *bug* — c-orchestrator dropping
+recognized kernel readings — was fixed (OQ-79 mech-1); both paths now handle kernels. What remains
+is pure one-path cleanliness plus an *enhancement* (gkc kernel runs would gain waves: supplementary
+axes with reading-deps move to a later wave). The route is a working, currently-dormant legacy path
+(c-orchestrator is the live authoring loop; the live corpus has zero kernels, so the rewire cannot
+even be witnessed end-to-end now). Under the alpha→beta posture (operator ruling 2026-06-20: extract
+value from the corpus we have, defer cleanliness and rebuild), this is low-value to do now and folds
+into the eventual rebuild. **The injection-governance worry that once made this urgent is gone:** the
+`--scope` path was confirmed *structurally injection-free* by code-read (no waves, never calls
+`upstream_context`, never builds `generated_by_id`) — so the deferral costs no safety. (Full witness:
+ISSUES.md OQ-82, closed 2026-06-21.)
+
+**What was built and removed (deferred):** nothing removed — `generate_from_manifests` exists and is
+the polymorphic backend; the `--scope` path was simply never re-pointed at it. No half-built
+apparatus is left declared-but-unfed.
+
+**What closing the gap would require (the focused witnessed pass OQ-82 specified):**
+1. Route gkc `--scope` through `generate_from_manifests(model=GEN_MODEL, system=<gkc list>, ...)`.
+2. Handle the integration seams: `emit_axiom_contradiction_facts` is emitted by *both* the unified
+   backend and the `--scope` flow (after `coherence_eyeball`) → remove the duplicate or it
+   double-emits; keep `kernel_grouping.json` + `coherence_eyeball` wrapped around the new call.
+3. Witness it as a *behavior change*, not assumed parity: a small live kernel-seed run (1 kernel) →
+   readings + flat controls + integrity sweep produced, AND the wave change visible (supplementary
+   axes ordered after readings), framed as a CHANGE from kernel_v1 (which had no waves).
+
+The still-open *governance* sliver — that injection-suppression lives in a backend predicate rather
+than a bypass-proof invariant, so a resurrected legacy orchestrator (`orchestrator.py` via the
+dormant Streamlit `app.py`/`c-app.py`) could re-inject — is tracked separately as ISSUES.md
+**OQ-172** (a defect-class open question, distinct from this deferred cleanliness). Named here
+2026-06-21.
