@@ -6217,8 +6217,9 @@ resolution linear to ~5e-4. The binding floor is the **withheld-redraw generatio
 establish it.
 
 **Next move = the operator's spend-go.** The discriminating metric + per-axis prediction + spend
-spec are FROZEN pre-draw in `audits/2026-06-21_oq119_gate0/PREDICTION.md` (≈30 draws, ~$4–6, reuses
-the OQ-117 `oq117_spend_driver.py` structure; draws are probe artifacts, none join the live corpus).
+spec are FROZEN pre-draw in `audits/2026-06-21_oq119_gate0/PREDICTION.md` (≈30 draws, ~$2 — same
+draw count as the OQ-117 spend that ran; reuses the `oq117_spend_driver.py` structure; draws are
+probe artifacts, none join the live corpus).
 A notable frozen sub-prediction: `obstruction_status` moving under feeding would be a
 **detection-independence (Theorem 7) violation** and a finding in its own right. **Do not run the
 fed arm without the ruling.** The Ω_E question itself stays OPEN — this session opened the substrate

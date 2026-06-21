@@ -93,11 +93,15 @@ open here is the one permitted completion, and it must happen pre-draw.)
   prompt-cache). New output dir `audits/2026-06-21_oq119/{withheld,fed}/`. Draws are PROBE
   ARTIFACTS — none join the live corpus.
 - **Arms per story**: withheld ×3 (floor) + fed ×3 (effect + stability) = 6 draws/story × 5
-  stories = **30 draws**. At the OQ-117 cost model (~$2/arm-batch, prompt-cached), order
-  **~$4–6 total**. Confirm against the live OQ-117 batch log before quoting to the operator.
-- **Pipeline**: run each draw through `run_pipeline.py` (serialized — never concurrent, OQ-77),
-  export its join record via `prolog/export_oq119_join_records.pl`, feed pairs to
-  `python/audits/oq119_join_diff.py`.
+  stories = **30 draws** — the same draw count as the OQ-117 two-arm spend that ran (`dcfaea97`).
+  Priced off that empirical model (sonnet-4-5, Batch API $1.50/$7.50 per MTok, prompt-cached 19K
+  prefix, ~6K output/draw, output-dominated at ≈$0.045/draw): **≈$1.5 cached, ≈$2.6 cache-cold —
+  call it ~$2 total.** Dollars are negligible; the real costs are the small fed-arm seed-spec code
+  change and the analysis/witnessing time. Confirm against the live OQ-117 batch log before quoting.
+- **Pipeline**: a full `run_pipeline.py` per draw is NOT required for the join record — load each
+  draw's `.pl` as a `corpus_path` overlay and export directly via
+  `prolog/export_oq119_join_records.pl` (avoids 30 serialized OQ-77 pipeline passes). Feed pairs to
+  `python/audits/oq119_join_diff.py`. Run a full pipeline only if a downstream artifact needs it.
 - **Read-out**: `F` = the 3·(3 choose 2)=… withheld-pair distances per story; `d_fed` = each fed
   draw vs the withheld centroid. Apply the frozen table above. Write `RESULTS.md` citing the
   per-story per-axis distances; the engine adjudication is blind to this prediction file until
