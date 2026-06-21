@@ -6176,14 +6176,47 @@ verdict-stability demoted to confounded-half; discharge-to-successor).
 
 ---
 
-## OQ-119 — Join-structure fed-vs-withheld diff: does feeding move the cross-examination (not just the type)? — substrate gate witnessed OPEN; blocked on spend-go
+## OQ-119 — Join-structure fed-vs-withheld diff: does feeding move the cross-examination (not just the type)? — RESOLVED (2026-06-21): verdict layer moves, committer invariant (Theorem-7 holds)
 
-**Ω-type:** Ω_E (engine-characterization; substrate now witnessed non-vacuous, comparator validated; the Ω_E question stays open pending the spend).
+**Ω-type:** Ω_E (engine-characterization — answered by the three-axis fed-vs-withheld spend).
 
-**Status:** open — substrate gate discharged (2026-06-21), comparator built+validated; now blocked
-on the operator's spend-go. Filed 2026-06-13 from the OQ-117 (c) ruling.
+**Status:** resolved — 2026-06-21 (`audits/2026-06-21_oq119/WRITEUP.md` + RESULTS.md; Gate-0
+substrate witness `audits/2026-06-21_oq119_gate0/`). Filed 2026-06-13 from the OQ-117 (c) ruling.
 **Priority:** 1
 **Deps:** blocked_on_human spend-go
+
+**ANSWER (96 Sonnet generations, 5 kernels × 16 readings × {withheld,fed} × 3 draws; per-axis rule
+`median(D_A) > max(F_A)`, generation-stochasticity floor measured per axis, observer de-weighted):**
+**Feeding moves the join at the DIAGNOSTIC VERDICT layer and leaves the COMMITTER structure invariant.**
+- **verdict layer MOVES (4/5 kernels):** feeding the mountain claim — with parties held fixed, so the
+  authored ε/suppression stay high — forces the `MOUNTAIN_METRIC_CONFLICT` seat divergence and
+  escalates the `false_natural_law` signature from **commentary → correction** grade (+1 alert),
+  witnessed e.g. acceptable_risk withheld `yellow/commentary/1` → fed `yellow/correction/2`. The
+  cross-examination responds to the fed claim *without* moving the broad type (the sharper-than-OQ-117
+  effect). Honest caveat: this is substantially the *claim-gated* FNL path, so semi-expected.
+- **committer obstruction/divergence INVARIANT (0/5): Theorem-7 detection-independence HOLDS,
+  measured not assumed.** Feeding an observer-side claim does not re-author which sibling readings
+  foreclose. The honest form is "no effect beyond generation noise" — withheld redraws already flip
+  `real_closure↔licensed_plurality` (committer floor nonzero on 4/5); on the one clean-floor kernel
+  (ai_governance, F=[0,0,0]) feeding moves it exactly zero. NO violation.
+- **observer + temporal-rate move SOFTLY (2/5, 3/5):** labile, low-information, as predicted; the
+  de-weighting kept them from carrying the headline.
+
+**Method hardening that made the answer trustworthy** (all pre-draw, committed):
+- substrate re-witnessed open (Gate 0): 325 kernels clear all three axes on `testsets_haiku` — the
+  2026-06-13 blocker text was pinned to the stale 5-kernel OQ-117 probe corpus.
+- generator corrected: single-story `cohort_replicate_batch` authors NO `cs_` facts (committer dead);
+  the **kernel-regen path** (`generate_kernel_corpus` no-scope) authors `cs_reading_relation` —
+  committer axis live in both arms.
+- confound closed: bare "mountain" overlaps the schema's no-parties exemption (OQ-149 `allOf[0]`);
+  **fed framing holds parties fixed** so fed-arm coverage loss can't masquerade as the effect.
+- Sonnet override (Haiku dropped schema-required `stakeholders[]` → OQ-149 gate fired loud, 2/5
+  coverage; Sonnet → 5/5). Schema/prompt UNTOUCHED (OQ-149/OQ-83 exemption is deliberate).
+- k frozen pre-draw (median-vs-max), observer de-weighted (the headline cannot ride observer wobble).
+
+**Second-order thread (NOT resolved here):** the committer axis is **generation-noisy** (withheld
+obstruction flips across redraws) — consistent with **OQ-149** (committer/CS the most model-divergent
+layer). Whether a larger draw budget resolves a sub-noise committer effect is open; route to OQ-149.
 
 **The question (engine-characterization, NOT a (c) gate — (c) is resolved).** OQ-117 showed feeding
 the mountain claim does not change the engine's *type* verdict (0/30 both arms). A sharper question

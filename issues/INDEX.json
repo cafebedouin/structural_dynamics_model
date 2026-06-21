@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "aa367949534cda10d16c902f4e737ec4364797fc",
+    "store_version": "1313b67e9ee53ae2b1209448a49cb1c49d88c03b",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-21T08:08:40"
+    "generated_at": "2026-06-21T10:26:39"
   },
-  "issues_sha": "45140f410c437687a30f620c8e56d4ef2fcf1c5e2981483904ef8466689f1447",
+  "issues_sha": "fbdd804bfe4812a5d9b008631efb34e4c2a2ba827a3c42b34e7b2f4e8abe128f",
   "n_entries": 172,
   "active_token_set": [
     "investigating",
@@ -12,10 +12,10 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 76,
+    "resolved": 77,
     "mitigated": 9,
     "partial": 6,
-    "open": 75,
+    "open": 74,
     "disposed": 3,
     "future": 3
   },
@@ -464,22 +464,6 @@
         "OQ-26",
         "OQ-75",
         "OQ-109"
-      ]
-    },
-    {
-      "id": "OQ-119",
-      "status": "open",
-      "priority": 1,
-      "summary": "Join-structure fed-vs-withheld diff: does feeding move the cross-examination (not just the type)? — substrate gate witnessed OPEN; blocked on spend-go",
-      "deps": [
-        "blocked_on_human spend-go"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-26",
-        "OQ-33",
-        "OQ-93",
-        "OQ-117"
       ]
     },
     {
@@ -2069,6 +2053,24 @@
         "OQ-118",
         "OQ-119",
         "OQ-120"
+      ]
+    },
+    {
+      "id": "OQ-119",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Join-structure fed-vs-withheld diff: does feeding move the cross-examination (not just the type)? — RESOLVED (2026-06-21): verdict layer moves, committer invariant (Theorem-7 holds)",
+      "deps": [
+        "blocked_on_human spend-go"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-26",
+        "OQ-33",
+        "OQ-83",
+        "OQ-93",
+        "OQ-117",
+        "OQ-149"
       ]
     },
     {
