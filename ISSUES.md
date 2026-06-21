@@ -6220,61 +6220,16 @@ OQ-118 (cast-instability — printing_press's metric-side ε wobble), `docs/seat
 
 ---
 
-## OQ-119 — Join-structure fed-vs-withheld diff: does feeding move the cross-examination (not just the type)? — blocked on a three-axis-instrumented corpus
-
-**Ω-type:** Ω_E (engine-characterization; measurable once the substrate instruments all three axes).
-
-**Status:** open — blocked on substrate. Filed 2026-06-13 from the OQ-117 (c) ruling.
-**Priority:** 1
-**Deps:** blocked_on_human substrate-instrumentation
-
-**The question (engine-characterization, NOT a (c) gate — (c) is resolved).** OQ-117 showed feeding
-the mountain claim does not change the engine's *type* verdict (0/30 both arms). A sharper question
-remains: does feeding move the **join structure** — which observer seats disagree, which axioms
-dissent, how the drift trajectory runs — even when the final type holds? That is whether feeding
-shifts the cross-examination the engine performs (perspective × axiom × temporal), per the seat
-theorem (`docs/seat-theorem-v1.md`).
-
-**Why it is blocked (positive-control before spend).** On the OQ-117 probe corpus the join is
-instrumented on only ~1.5 of its 3 axes: **observer** axis live (four-seat χ spread witnessed,
-e.g. free_market institutional χ=−0.029 vs analytical 0.932); **axiom** axis partial — the
-committer/CS vantage no-opped (`cs_kernel_id` absent from the probe testsets); **temporal** axis
-thin-to-vacuous (grid 32/32 absent OQ-93; `classify_at_time` carries the OQ-33 fabricated-suppression
-issue; drift confidence "low"). A fed-vs-withheld join diff over that substrate would measure the one
-live axis with two underpowered axes adding noise — the grid-absent vacuity failure (a richer
-instrument computed over substrate that cannot support it is not a richer measurement). **Graduation:
-a corpus where observer + axiom + temporal are each witnessed non-vacuous** (authored grid, present
-`cs_kernel_id`, non-thin timelines) — then the diff is clean. Until then: do not run.
-
----
-
-## OQ-120 — Rope/snare ε boundary under feeding: the free decision boundary OQ-117 left untested
-
-**Ω-type:** Ω_E (measurable; lower-stakes than the mountain case).
-
-**Status:** open — filed 2026-06-13 from the OQ-117 (c) ruling (scope bound).
-**Priority:** 1
-
-OQ-117's engine run tested the fed claim = **mountain** only and ruled (c) document-as-condition for
-the false-foundational case. OQ-78's actual free ε decision boundary is the **rope/snare** split
-(0.45/0.46), the one ε gate no SCOPE bin edge touches. Feeding a rope or snare claim and reading
-whether the engine's seat-constituted type moves across that boundary is the remaining test — but it
-is **lower-stakes**: both rope and snare are non-mountain, and the dangerous concealment (a seat
-asserted as σ-fixed) is the mountain/false-foundational shape OQ-117 already covered. Pick up if a
-rope/snare concordance question arises; not gating anything. Direction-of-fix from OQ-78 binds (no
-numeric disclosure to authoring).
-
----
-
 ## OQ-118 — Draw-stability tracks field-construction-type, not the σ/seat line: the cohort's analysis contract (successor to OQ-109's σ/seat residual)
 
 **Ω-type:** Ω_E (the re-tests are measurable) + Ω_P (where the seat boundary sits is a theory ruling).
 
 **Status:** open — filed 2026-06-13, successor to OQ-109's σ/seat residual (discharged here, not
-**Priority:** 1
 answered). The frozen σ/seat prediction (`audits/2026-06-12_cohort_zero/SIGMA_SEAT_PREDICTION.md`,
 committed `5f2a626c`) was tested on the replicate spend and **falsified-as-tested**; this entry
 carries the structured finding and its open graduation conditions.
+
+**Priority:** 1
 
 **The replicate spend (settled substrate; `audits/2026-06-12_cohort_zero/`, commit `dcfaea97`):**
 15 draws = 5 contested kernels (`qwerty_path_naturalization`, `free_market_naturalization`,
@@ -6330,6 +6285,52 @@ gates), the signature-identity witness (KIND-not-story identity; the graded-metr
 
 **Origin:** 2026-06-13, OQ-109 Phase C σ/seat falsifier result + operator ruling (split, with
 verdict-stability demoted to confounded-half; discharge-to-successor).
+
+---
+
+## OQ-119 — Join-structure fed-vs-withheld diff: does feeding move the cross-examination (not just the type)? — blocked on a three-axis-instrumented corpus
+
+**Ω-type:** Ω_E (engine-characterization; measurable once the substrate instruments all three axes).
+
+**Status:** open — blocked on substrate. Filed 2026-06-13 from the OQ-117 (c) ruling.
+**Priority:** 1
+**Deps:** blocked_on_human substrate-instrumentation
+
+**The question (engine-characterization, NOT a (c) gate — (c) is resolved).** OQ-117 showed feeding
+the mountain claim does not change the engine's *type* verdict (0/30 both arms). A sharper question
+remains: does feeding move the **join structure** — which observer seats disagree, which axioms
+dissent, how the drift trajectory runs — even when the final type holds? That is whether feeding
+shifts the cross-examination the engine performs (perspective × axiom × temporal), per the seat
+theorem (`docs/seat-theorem-v1.md`).
+
+**Why it is blocked (positive-control before spend).** On the OQ-117 probe corpus the join is
+instrumented on only ~1.5 of its 3 axes: **observer** axis live (four-seat χ spread witnessed,
+e.g. free_market institutional χ=−0.029 vs analytical 0.932); **axiom** axis partial — the
+committer/CS vantage no-opped (`cs_kernel_id` absent from the probe testsets); **temporal** axis
+thin-to-vacuous (grid 32/32 absent OQ-93; `classify_at_time` carries the OQ-33 fabricated-suppression
+issue; drift confidence "low"). A fed-vs-withheld join diff over that substrate would measure the one
+live axis with two underpowered axes adding noise — the grid-absent vacuity failure (a richer
+instrument computed over substrate that cannot support it is not a richer measurement). **Graduation:
+a corpus where observer + axiom + temporal are each witnessed non-vacuous** (authored grid, present
+`cs_kernel_id`, non-thin timelines) — then the diff is clean. Until then: do not run.
+
+---
+
+## OQ-120 — Rope/snare ε boundary under feeding: the free decision boundary OQ-117 left untested
+
+**Ω-type:** Ω_E (measurable; lower-stakes than the mountain case).
+
+**Status:** open — filed 2026-06-13 from the OQ-117 (c) ruling (scope bound).
+**Priority:** 1
+
+OQ-117's engine run tested the fed claim = **mountain** only and ruled (c) document-as-condition for
+the false-foundational case. OQ-78's actual free ε decision boundary is the **rope/snare** split
+(0.45/0.46), the one ε gate no SCOPE bin edge touches. Feeding a rope or snare claim and reading
+whether the engine's seat-constituted type moves across that boundary is the remaining test — but it
+is **lower-stakes**: both rope and snare are non-mountain, and the dangerous concealment (a seat
+asserted as σ-fixed) is the mountain/false-foundational shape OQ-117 already covered. Pick up if a
+rope/snare concordance question arises; not gating anything. Direction-of-fix from OQ-78 binds (no
+numeric disclosure to authoring).
 
 ---
 
