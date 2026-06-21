@@ -2469,7 +2469,7 @@ wired as a non-gating run_pipeline step + backlog right-sized and generation def
 "CROSS-CORPUS CHARACTERIZATION" below). Residual is a deferred CONTENT decision + a standing-linter
 monitor (it's a kernel-completeness problem, not edge-patching), no longer awaiting a ruling.
 **Priority:** 3
-**Deps:** blocked_on_human oq58-corpus-identity-ruling
+**Deps (dropped on close):** was `blocked_on_human oq58-corpus-identity-ruling`; ruled 2026-06-20 (three-leg / beta posture, below).
 **Origin:** Reading-axis obstruction build (OQ-54), 2026-06-02. Surfaced by the independent
 must-flag oracle when partitioning non-canonical `cs_reading_relation` targets.
 **Files:** authored testset `.pl` files; emitter `python/generate_constraint_pl.py:482`;
@@ -2673,14 +2673,19 @@ artifact (last batch only), NOT the live backlog. The live, corpus-wide backlog 
 (`outputs/reading_reference_census.json`) / `cs_kernel_registry:cs_reading_relation_unresolved/4`.
 (Note also added at the writer, `agent/generate_kernel_corpus.py:validate_reading_relation_integrity`.)
 
-**CORPUS-IDENTITY FLAG (operator's to rule — `blocked_on_human`).** The reconciled 1000-file
-multi-reading corpus was moved OUT of `testsets/` into the twins at `0ccc03cf`; `testsets/` is now a
-singleton ingestion stream. The "accidental clobber" fear is falsified — the reconcile *preserved* the
-rebuild (twins byte-intact). The genuine open question is the FORWARD policy: is `testsets/` intended
-to be the active topical working set (twins = reconciled archive), or should the reconciled corpus be
-promoted back to "the live corpus"? This determines what "the live corpus" means for OQ-58 and other
-corpus-relative OQs. Flagged, NOT blocking (the plan is robust either way; the bound is witnessed in
-the twins).
+**CORPUS-IDENTITY — RULED (operator, 2026-06-20): three live legs, beta posture.** `testsets/` is
+the LIVE leg ON PURPOSE — a deliberately singleton topical working set that lets the operator
+exercise the engine while building it (and surface more live issues); `testsets_haiku/` +
+`testsets_flash/` are the reconciled multi-reading twins, kept as the comparison baseline. All three
+are live; the singleton sparsity is intended, not a clobber or a half-finished rebuild (the reconcile
+*preserved* the multi-reading corpus in the twins, byte-intact). **Currently ALPHA, working toward
+BETA:** extract maximum value from the current corpus so the work earns its way to beta before any
+rebuild; a fresh `testsets_*`-style rebuild comes only after schema/wiring/enough-of-ISSUES.md are
+worked out — with many OQs open, a ways off. A
+future instance may SUGGEST a rebuild when accumulated changes warrant it, not propose one lightly.
+Promoted to CLAUDE.md Critical Distinctions ("THREE LIVE LEGS, and the beta posture"). So for OQ-58:
+the deferred generation targets the live leg deliberately when kernel-completion is run there; there
+is no "wrong corpus" to resolve.
 
 ---
 

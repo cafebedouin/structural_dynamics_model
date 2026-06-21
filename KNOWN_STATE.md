@@ -45,6 +45,49 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-20 — OQ-58 cross-corpus census, non-gating linter wired, three-leg/beta corpus ruling
+**Files:** python/run_pipeline.py, python/audits/reading_reference_linter.py, agent/generate_kernel_corpus.py, ISSUES.md, docs/design/design_gaps.md, CLAUDE.md, audits/2026-06-20_oq58_cross_corpus_incompleteness/
+**Tier:** tripwire
+
+Re-measured OQ-58 after the 2026-06-05 reset stale-ified its counts; wired the
+referential-integrity linter as a non-gating `reading_linter` step in
+`run_pipeline.py` `_phase_post_prolog` (writes `outputs/reading_reference_census.json`,
+manifest+corpus_hash; `summarize()` added to the linter, behavior-preserving).
+Witness: pipeline 47/47 OK in 10.4s, step "163 dangling → 158 missing / 66 kernels
+(5 id≥2 defensible) — NON-GATING"; linter selftest PASS; gate GREEN.
+
+**Census (read-only, `audits/2026-06-20_oq58_cross_corpus_incompleteness/census_driver.py`):**
+LIVE testsets 92 files / 169 csr edges / 163 dangling / **93.5%**; testsets_haiku
+960/2004/127/**3.7%**; testsets_flash 960/2008/101/**2.3%**; kernel_v1 1106/1774/94/**4.8%**.
+LIVE 93.5% is a SPARSITY artifact (1.03 readings/kernel, 97% singletons), not a frontier.
+GAP-07 bounded-attractor answer (split): rate bounded ~2-5% across lineages; defensible
+id≥2 count ~40 reproducible WITHIN a lineage (haiku 39 ≈ flash 41, haiku∩flash 39), NOT
+tri-lineage (kernel_v1 8; common core 1).
+
+**Regime swap (git, corrects the planning note's direction):** the 06-13 rebuild pilots
+BUILT testsets/ to 1000 files / 2.92 r/kern (reconciled multi-reading corpus); commit
+`0ccc03cf` then moved it OUT to the twins (haiku/flash, byte-intact 960/960) and testsets/
+reverted to a singleton working set (51 → 92). The "accidental clobber" fear is falsified.
+
+**TRIPWIRE — three live legs, beta posture (operator ruling 2026-06-20; promoted to
+CLAUDE.md Critical Distinctions "THREE LIVE LEGS, and the beta posture").** `testsets/` is
+the live leg ON PURPOSE — a deliberately singleton topical working set to exercise the
+engine while building it and surface live issues; `testsets_haiku/`+`testsets_flash/` are
+the reconciled twins (comparison baseline). The singleton sparsity is INTENDED — do not
+complete/flatten/rebuild testsets/ on sight. Currently ALPHA, working toward BETA: extract
+maximum value from the current corpus so it earns its way to beta before any rebuild; a
+fresh `testsets_*` rebuild comes only after
+schema/wiring/enough-of-ISSUES.md are worked out (many OQs open → a ways off). A future
+instance MAY suggest a rebuild when accumulated changes warrant it, not propose one lightly.
+This resolves the OQ-58 corpus-identity flag (was `blocked_on_human`).
+
+OQ-58 downgraded partial → mitigated, Priority 1 → 3; generation deferred (two backlogs
+recorded: durable twin-reproducible 39; stream-relative live 5/3). Quarantine JSON
+documented as a per-run artifact, not the live backlog (note at the writer + ISSUES).
+Commits `1c5c97a7` (code), `9532ffe4` (docs).
+
+---
+
 ## 2026-06-20 — grid-diet display: one-informative-line-when-absent + stale "unauthorable" fixed (OQ-93)
 **Files:** prolog/report_generator.pl, prolog/data_repair.pl
 **Tier:** landed

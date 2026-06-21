@@ -441,6 +441,22 @@ While the live corpus is small post-reset, these archives are the breadth option
 sweeps via `corpus_path` overlay (the OQ-89 pattern; ~5,200 stories across kernel_v1 + v5 + v6) —
 all counts here are file counts verified on disk 2026-06-10.
 
+**THREE LIVE LEGS, and the beta posture (operator ruling, 2026-06-20).** `prolog/testsets/` is the
+LIVE leg — a small, **deliberately singleton topical working set** that lets the operator exercise
+the engine *while building it* (running it surfaces more live issues); `prolog/testsets_haiku/` +
+`prolog/testsets_flash/` are the reconciled multi-reading **twins**, kept as the comparison baseline.
+All three are live. **`testsets/`'s singleton sparsity is INTENDED, not a defect or a half-finished
+rebuild** — do not "complete," flatten, or rebuild it on sight; its high OQ-58 dangling rate is the
+expected sparsity artifact (each lone reading dangles edges to ungenerated siblings). **The project
+is currently ALPHA, working toward BETA: extract maximum value from the corpus we have so the work
+earns its way to beta before any rebuild.** The rebuild (a fresh `testsets_*`-style corpus) comes
+*after* schema, wiring, and enough of ISSUES.md are worked out — and with many OQs still open, that
+is a ways off. A future instance **may SUGGEST a
+rebuild** when accumulated schema/wiring changes seem to warrant it, but should not propose one
+lightly or treat the singleton working set as something to fix. (Resolves the OQ-58 corpus-identity
+flag; the regime swap that produced the three legs is witnessed in
+`audits/2026-06-20_oq58_cross_corpus_incompleteness/`.)
+
 **FNL prevalence is bait-confounded — do not cite it (or the FNL-driven tangled_rope dominance)
 as a detection result (OQ-70).** All FNL firings ride `claimed_natural/2` source 2, which reads
 ANY single authored mountain perspective as a naturality claim — a generation-template convention
