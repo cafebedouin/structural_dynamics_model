@@ -134,10 +134,11 @@ arm difference (regime otherwise identical: same model, temperature, prompt, sch
   fed-append, the 3-draw loop, and the `{withheld,fed}` output dirs differ). Anthropic Batch API +
   prompt-cache. Output `audits/2026-06-21_oq119/{withheld,fed}/`. Draws are PROBE ARTIFACTS — none
   join the live corpus.
-- **Draw count**: 16 readings × 2 arms × 3 draws = **96 generations**. Output-dominated
-  (~6K out/draw × $7.50/MTok ≈ $0.045/draw) → **≈ $4.3 + cached input ≈ $4.5–6 total.** ~2–3× the
-  retired single-story estimate because whole multi-reading kernels (16 readings, not 5 stories) are
-  regenerated — the price of a live committer axis. Confirm via `--dry-run` before submitting.
+- **Draw count**: 16 readings × 2 arms × 3 draws = **96 generations**. The kernel generator runs
+  **Haiku** (`GEN_MODEL`, batch $0.50/$2.50 per MTok), not Sonnet — output-dominated
+  (~6K out/draw × $2.50/MTok ≈ $0.015/draw) → **≈ $1.5 total** (`--dry-run` witnessed: $1.44 output
+  + ~$0.07 cached input, real lower under prompt-cache). Cheaper than a single-story Sonnet spend
+  despite 96 draws, because the kernel path is a Haiku model.
 - **Read-out**: per kernel, load each draw's regenerated reading set as a `corpus_path` overlay
   (no full `run_pipeline` needed), export join records, compute `F_A` / `D_A` and apply the frozen
   rule above per axis. Write `RESULTS.md` citing per-kernel per-axis `median(D_A)` vs `max(F_A)`; the
