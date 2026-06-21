@@ -281,10 +281,17 @@ number was read.
 - **H1 falsified, beyond noise at every matched n.** Distinct 5-dim structural classes at
   matched n in the powered (length-2+) stratum: depth 71.3/88.0/103.4 vs control
   47.8/58.7/68.7 at n=150/200/250 — 95% resample bands non-overlapping at all three; discovery
-  slope also higher (0.271 vs 0.192 at n=294). The depth arm realized 156 distinct classes in
-  438 stories — more than the entire 806-story live baseline's 118.
-- **Not list-inflation:** mean |props| 3.83 vs control 3.77, |voids| 1.98 vs 2.25 — the excess
-  is new *combinations* at matched richness, not richer fingerprints.
+  slope also higher (0.271 vs 0.192 at n=294). *(Color, not evidence: the depth arm realized 156
+  distinct classes in 438 stories vs the 806-story baseline's 118 — a non-matched-n, cross-regime
+  comparison; demoted 2026-06-20. The matched-n resample bands above are the witness.)*
+- **Not list-inflation — closed across all 5 dims (A2, 2026-06-20).** The original claim rested on
+  2 of 5 dims (mean |props| 3.83 vs 3.77, |voids| 1.98 vs 2.25). Re-run over all five at matched
+  n=294, K=2000: the JOINT distinct-class excess is **+38.7**, while every single dim's MARGINAL
+  distinct-value excess is tiny — props −2.0, voids −1.7, actors −2.3 (depth uses *fewer* values
+  in three dims), drift +2.7, zone +2.8 (largest = +2.8). Joint excess is ~14× any one dim's
+  marginal: the excess is new *combinations*, not cardinality proliferation in any dim
+  (positive-controlled — an inflated-props synthetic arm was flagged). Witness:
+  `audits/2026-06-04_oq71_depth_lineage/a2_richness_alldims_results.json`.
 - **H3 falsified — the coupling pattern reshaped, not dissolved.** Matched-n=300 plug-in MI:
   props↔actors 0.48±0.03 vs live 0.71±0.07 (weaker, ~5σ); voids↔zone 1.31±0.03 vs 1.05±0.05
   (stronger). §5's "generator-invariant coupling" is not depth-invariant.
@@ -305,8 +312,98 @@ writing into the same engine. The one §0 claim that needed revision either way:
 invariance, which held across two *breadth* generators, does not hold across this regime
 change.
 
-**The discriminating experiment (open, OQ-71):** an authorship-controlled breadth arm —
-~300 non-nested seeds authored by the same hand/model as the lineage, same template. If it
-also mints ~1.5×, authorship explains the excess and depth adds nothing; if it tracks the old
-control, depth itself re-opens discovery. Until that runs, cite this probe as falsifying
-*unconditional* boundedness and coupling-invariance, not as proving depth-specific discovery.
+### 10.1 Phase A resolution (2026-06-20) — the disjunction is a trichotomy, and the breadth arm cannot isolate depth
+
+The disjunction above is really a **trichotomy**: the 1.5× excess could be (1) **depth-realization**
+(the nesting *reaching the generator*), (2) **author-identity** (Opus vs the control's Haiku/SCOPE
+seeds — a §9 punctuation), or (3) **lineage-structured authoring** (designing seeds as a tree
+enriches them whether or not the nesting is realized). A zero-spend read-only pass (the feasibility
+gate for any breadth arm) settled which of these the instrument can even test.
+
+**A0 — the nesting never reaches the generator, by design (witnessed).** `build_lineage_seeds.py`
+forks two structures: the generation `seeds` (→ `lineage_seeds.json`, fed to the model) carry
+`constraint_id, kernel_id, reading_id, human_readable, topic_domain, family_id,
+sibling_reading_ids, expected_structural_delta, summary` and **no `parent_kernel`/`level`**; the
+parent pointer and level live only in a separate `lineage.json` sidecar consumed post-hoc by the
+fingerprint join (builder lines 114–134). The generator prompt
+(`generate_kernel_corpus.py:430–486`) reads only the flat seed fields — grep confirms it never
+touches `parent_kernel` or `lineage.json` (comment at `:104`: "kernel lineage is carried
+separately"). This was the **deliberate design, stated not inferred** — the origin plan
+`virtual-inventing-allen.md` lists *"Untouched by design: generation prompt/schema/example,
+GEN_MODEL"* and *"Generator held fixed… Only seed authoring and output routing differ from
+control,"* framing the whole manipulation as *"depth-correlated authoring."* The generation prompt
+was a frozen non-variable by design, so nesting could only ever act authoring-side — **not a wiring
+defect**, so the OQ closes *mitigated*, not *inconclusive-by-construction*. Consequence:
+the proposed breadth arm's reading-(a) ("design the tree, null `parent_kernel`, regenerate") is a
+**provable no-op** — nulling a field the generation seed never references cannot change one byte of
+generator input, so `depth − breadth ≈ 0` by construction. **Branch 1 (depth realized at the
+generator) was never instantiated in the experiment;** no seed manipulation in this instrument can
+isolate it.
+
+**Why no_scope is blind to nesting — the two-path architecture, and what the control shares with
+it (witnessed).** The deeper reason A0 holds is the **batch pipeline by design**, not where a field
+sits. The engine has two generation paths: the **SCOPE path** (`generate_kernel_corpus._scope_user_prompt`
+/ orchestrator `_step_decompose`) hands the *model* a raw topic and lets it **construct the kernel**
+— decide `is_contested_kernel`, emit the `readings` array; the **no_scope path** renders
+*pre-decomposed* readings handed in as flat seeds. Batch generation (the only economical way to
+make ~600 stories) forces **decompose-first**: the model cannot SCOPE-construct kernels inline
+across a batch, so the kernel decomposition is resolved *before* the batch and the per-reading
+prompt is necessarily blind to it. "The generator can't see/construct nesting" is therefore a
+structural property of the **no_scope/batch path**, and it applies identically to any breadth arm
+(which must also batch) — A0 is robust, not incidental. Crucially, the **control's** kernel/reading
+structure was itself *model-SCOPE-constructed* then harvested: `build_never_generated_seeds.py`
+pulls `is_contested_kernel` SCOPE manifests and emits their never-generated readings as flat
+no_scope seeds. So the depth-vs-control contrast is, at the structure level, **Opus-hand-designed
+nested tree vs the SCOPE model's flat decompositions** — both rendered identically at generation.
+This *sharpens* "author-identity" (branch 2): it is **who constructed the kernel structure** (Opus
+tree-design vs the SCOPE model), not merely who wrote the prose. (A SCOPE-path arm — let the model
+construct kernels from the same deep constitutional *topics* — is a different cut that varies the
+structure-author while holding the topic, but it conflates topic-domain richness with nesting
+depth, so it is not a cleaner substitute for the registered reading-(b) below.)
+
+**Sibling co-channel (witnessed narrowing — and the sign cuts toward mitigated).** One tree-derived
+field *does* reach the prompt — `sibling_reading_ids` — and its set-size covaries moderately with
+tree level (Pearson **r=−0.366**; per-level means L0≈3.0, L1≈4.0, falling to L7–L9≈2.0). So the
+claim is *not* "the generator never saw depth"; it is **"the generator never saw parent-nesting"**
+— it saw sibling-set *size* as a weak depth co-channel. **The negative sign disposes the hazard
+toward mitigated:** deeper nodes carry *fewer* siblings, so the channel transmits *less*
+contest-pressure at depth, not more — it cuts *against* sibling-mediated tree-position driving the
+excess. Two scoped bounds beyond the sign: (i) the sibling-*size* effect on novelty is
+witnessed-flat for lengths 2–4 by the pre-existing control-stratification (only length-1 slopes) —
+that bounds *size*, not *composition*; (ii) reading-(a)'s pointer-strip leaves the sibling block
+unchanged regardless. Sibling *composition* is not separately controlled — a residual the sign
+argument dispositions, not a control; naming it rather than burying it under "bounded."
+
+**The close, at its true width.** The 1.5× excess is **not attributable to generator-visible
+parent-nesting**; it is the **authorship-bundle — Opus identity and/or lineage-structured
+authoring, undistinguished** (with sibling-size a weak, bounded co-channel). The trichotomy is
+irreducible by the breadth-arm instrument as designed. *unconditional* boundedness and
+coupling-invariance remain falsified (within-regime survival of §0 unchanged); this probe still
+must **not** be cited as proving depth-specific discovery.
+
+**Construct-validity width — what OQ-71 falsified is NOT what §3 claims (one inferential step).**
+§3's bounded-attractor claim is about the **SCOPE construction path** — does the model, growing the
+corpus the way the corpus is actually grown (SCOPE constructs each kernel from a topic), exhaust the
+structural-class vocabulary (the generator-specific S_max). OQ-71 stressed boundedness with a regime
+the SCOPE path never enters: **Opus-hand-designed structure rendered through no_scope.** So the
+falsifier that fired falsified **boundedness of the rendering *substrate* under externally-authored
+structure** (the substrate can express more classes than the live corpus holds) — it did **not**
+test boundedness of the **SCOPE construction path itself**, which is §3's actual claim. The whole
+excess is consistent with "SCOPE is still a bounded attractor, and Opus-hand-design simply reaches
+richer structures than SCOPE-construction does." So cite the kill at substrate width, not path
+width: **§3's claim is left standing as within-regime** (§10's existing verdict), and OQ-71 does not
+re-engage it. Re-engaging §3 on its own turf is OQ-171 (the successor), which also inherits the A0
+obstruction — depth/accumulated-context is not a clean input the SCOPE path exposes without dragging
+a topic-domain or batch-size confound, so the construct-valid experiment may not be cleanly
+constructible. See OQ-171 for the context-controlled batch-of-one design.
+
+**Graduation step (what would move mitigated → resolved, deferred — spend declined 2026-06-20).**
+Under the design's own operationalization, "kernel-nesting depth" = depth-correlated *authoring*
+(branch 3). The origin plan's reading-(b) — **Opus authors ~300 *flat* (non-tree) seeds, same
+frozen generator** — holds author-identity constant and removes lineage-structure, cleanly
+splitting branch 2 from branch 3 (the only live question once branch 1 is out of scope). It still
+requires generating new stories (API spend), and the spend was declined at this juncture. A future
+instance may revive it; it is the registered discriminator, not a new OQ. **Drift cross-link:
+whoever runs it must key the control on `control_membership.json` (the 300 frozen ids), NOT the
+regenerated `never_generated_seeds.json` (drifted to 274 by 2026-06-13) — else the breadth arm
+compares against a 274-story control while believing it is 300.**

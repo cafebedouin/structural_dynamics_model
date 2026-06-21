@@ -45,6 +45,61 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-20 — OQ-71 depth-lineage: Phase A closes the design question (mitigated, no spend)
+**Files:** ISSUES.md, docs/design/a_hypothesis_about_corpus_size.md, python/audits/oq71_a2_richness_alldims.py, audits/2026-06-04_oq71_depth_lineage/, python/build_lineage_seeds.py, agent/generate_kernel_corpus.py
+**Tier:** correction-key
+
+Ran the OQ-71 plan's **Phase A (zero-spend, read-only)**; it closed the design question and
+demoted the spend, so OQ-71 → **mitigated** (not resolved; not the spend).
+
+- **A0 (the feasibility gate, witnessed):** the kernel-nesting relationship **never reaches the
+  Haiku generator**. `build_lineage_seeds.py:114–134` forks the generation `seeds`
+  (→ `lineage_seeds.json`, fed to the model — **no `parent_kernel`/`level`**) from a separate
+  `lineage.json` sidecar (parent/level, consumed only post-hoc by the fingerprint join). Generator
+  prompt `generate_kernel_corpus.py:430–486` reads only flat seed fields; grep finds no
+  `parent_kernel`/`lineage` read (`:104` comment "kernel lineage is carried separately"). Origin
+  plan `~/.claude/plans/virtual-inventing-allen.md` confirms this was **deliberate** ("only seed
+  authoring and output routing differ"; generator frozen) → mitigated, NOT
+  inconclusive-by-construction. **Consequence:** the plan's breadth arm reading-(a) ("strip
+  `parent_kernel`, regenerate") is a **provable no-op** — `depth − breadth ≈ 0` by construction —
+  so branch 1 (depth-realized-at-generator) was never in the experiment and the instrument can't
+  isolate it.
+- **Two-path architecture (why no_scope is blind to nesting — by design; operator-flagged).** SCOPE
+  path (`_scope_user_prompt`/orchestrator `_step_decompose`) hands the MODEL a topic and lets it
+  CONSTRUCT the kernel; no_scope renders PRE-DECOMPOSED readings. Batch generation forces
+  decompose-FIRST (can't SCOPE-construct inline across a batch) → per-reading prompt structurally
+  blind to nesting; inherited by any breadth arm. The CONTROL's structure was itself
+  model-SCOPE-constructed then harvested (`build_never_generated_seeds.py` pulls `is_contested_kernel`
+  SCOPE manifests). So depth-vs-control at the structure level = Opus-designed nested tree vs the
+  SCOPE model's flat decompositions → branch 2 ("author-identity") = *who constructed the kernel
+  structure*, not just prose.
+- **Correction-key — claim widths:** the 1.5× excess is **not generator-visible parent-nesting**;
+  it is the authorship-bundle (Opus identity and/or lineage-structured authoring, undistinguished).
+  Cite at THAT width — not "the excess IS authorship" (residual-elimination overclaim) and not
+  "depth re-opens discovery." "Generator never saw depth" is too strong: `sibling_reading_ids`
+  reaches the prompt and covaries with level (r=−0.366) — say "never saw **parent-nesting**,"
+  co-channel bounded by the length-stratification control. The "156>118" line is **color**
+  (non-matched-n, cross-regime), not evidence.
+- **A2 (list-inflation closed, all 5 dims):** matched n=294, K=2000 — JOINT distinct-class excess
+  +38.7 vs largest single-dim MARGINAL excess +2.8 (zone); depth uses *fewer* props/voids/actors
+  values → new combinations, not proliferation; positive-controlled. Closes the prior 2-of-5-dims
+  caveat. Witness: `audits/2026-06-04_oq71_depth_lineage/a2_richness_alldims_results.json`.
+- **Watch-out (witnessed):** `outputs/completion_seeds/never_generated_seeds.json` **drifted
+  2026-06-13** — missing 26 of the 300 frozen control ids, so it no longer reproduces the audit's
+  length-2+ stratum (294→268). `control_membership.json` (the 300 ids) is the durable authority;
+  A2 ran drift-immune on full frozen arms + the current stratum (same verdict both). Any OQ-71
+  re-run keying on that seed file inherits the drift.
+- **Graduation step (→ resolved, deferred):** Opus authors ~300 *flat* seeds, same frozen generator
+  (origin plan reading-(b)) — splits author-identity from lineage-structure (the only live question
+  once branch 1 is out of scope). Needs spend; declined this session; recorded in OQ-71 + §10.1 for
+  a future instance.
+- **Construct-validity gap → OQ-171 (minted this session).** §3's bounded-attractor claim is about
+  the SCOPE construction path; OQ-71 falsified only *substrate-level* boundedness (Opus/no_scope),
+  never the SCOPE path. Do NOT read mitigated as "§3 tested" — §3 stands within-regime. OQ-171
+  registers the context-controlled batch-of-one design (vary inline-context, hold topics) and
+  declines the naive small-batch proxy (inherits OQ-71's disjunction). May be non-constructible
+  (A0 obstruction recurs); spend + pricing = operator seat.
+
 ## 2026-06-20 — OQ-69 research-frontier ledger DRAINED → OQ-154–170; OQ-69 closed
 **Files:** ISSUES.md, issues/INDEX.md, issues/INDEX.json, CLAUDE.md, audits/2026-06-20_oq69_ledger_drain/
 **Tier:** landed

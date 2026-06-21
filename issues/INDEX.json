@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "ee37cbffbe527c48325cac3639b749911710c95d",
+    "store_version": "ccac1f5700dadbe6ca295f9b4676ede8c83b8a1c",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-20T23:04:03"
+    "generated_at": "2026-06-20T23:55:24"
   },
-  "issues_sha": "ce084b456fec6411bbf0e3b5ebb50f6989bad5db8aedeb55e42cbdb1dcc8acec",
-  "n_entries": 170,
+  "issues_sha": "a3b69965f0d4b089badbb567b5d3a4a51fc2983f1ba011fca9b11452f7adf515",
+  "n_entries": 171,
   "active_token_set": [
     "investigating",
     "open",
@@ -13,9 +13,9 @@
   ],
   "per_status": {
     "resolved": 73,
-    "mitigated": 8,
-    "partial": 7,
-    "open": 76,
+    "mitigated": 9,
+    "partial": 6,
+    "open": 77,
     "disposed": 3,
     "future": 3
   },
@@ -324,21 +324,6 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
-    },
-    {
-      "id": "OQ-71",
-      "status": "partial",
-      "priority": 1,
-      "summary": "Depth-lineage probe: does kernel-nesting depth re-open structural-class discovery, or saturate like breadth?",
-      "deps": [
-        "blocked_on_human operator-spend-go"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-26",
-        "OQ-58",
-        "OQ-70"
-      ]
     },
     {
       "id": "OQ-72",
@@ -1066,6 +1051,20 @@
         "OQ-69",
         "OQ-160"
       ]
+    },
+    {
+      "id": "OQ-171",
+      "status": "open",
+      "priority": 2,
+      "summary": "Does the SCOPE *construction path* saturate? (the construct-validity gap OQ-71 left standing)",
+      "deps": [
+        "splits_from OQ-71",
+        "blocked_on_human operator-spend-go"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-71"
+      ]
     }
   ],
   "archive": [
@@ -1583,6 +1582,22 @@
         "OQ-49",
         "OQ-65",
         "OQ-109"
+      ]
+    },
+    {
+      "id": "OQ-71",
+      "status": "mitigated",
+      "priority": 1,
+      "summary": "Depth-lineage probe: does kernel-nesting depth re-open structural-class discovery, or saturate like breadth?",
+      "deps": [
+        "blocked_on_human operator-spend-go"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-26",
+        "OQ-58",
+        "OQ-70",
+        "OQ-171"
       ]
     },
     {
