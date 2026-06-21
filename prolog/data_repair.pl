@@ -288,8 +288,9 @@ impute_missing_metrics(IntervalID, []) :-
    GRID PROVENANCE (OQ-93)
    ============================================================
    The leveled measurement grid (4 metrics x config:level x {T0,Tn})
-   is unauthorable under the live generation schema (empty vocabulary
-   intersection — census: audits/2026-06-09_imputation_shim_census/).
+   WAS unauthorable under the pre-OQ-93 generation schema (empty vocabulary
+   intersection — census: audits/2026-06-09_imputation_shim_census/); since
+   OQ-93 RESOLVED 2026-06-11 it is opt-in by story focus (authored-or-absent).
    Three distinct sources can populate a slot, and they must never
    collapse to one bucket at a read site:
      authored  — any source ID other than the two synthetic classes
@@ -353,7 +354,7 @@ report_grid_provenance(IntervalID) :-
     grid_provenance(IntervalID, prov(A, I, P, Abs, Total)),
     format('  [PROVENANCE] grid ~w = authored ~w + injected-0.5 ~w (m_gen) + imputed-from-priors ~w (repair_m_*)~n',
            [Total, A, I, P]),
-    format('  [PROVENANCE] leveled grid is unauthorable under the live generation schema — contract gap, see ISSUES.md OQ-93~n'),
+    format('  [PROVENANCE] leveled grid is opt-in by story focus (authored-or-absent; injection/imputation retired) — OQ-93 RESOLVED 2026-06-11, see ISSUES.md~n'),
     (   Abs > 0
     ->  format('  [WARN] ~w grid slots still absent after repair~n', [Abs])
     ;   true

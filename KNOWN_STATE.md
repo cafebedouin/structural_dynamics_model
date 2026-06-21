@@ -45,6 +45,37 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-20 — grid-diet display: terse-when-absent + stale "unauthorable" message fixed (OQ-93)
+**Files:** prolog/report_generator.pl, prolog/data_repair.pl
+**Tier:** landed
+
+Two separable display fixes to the OQ-93 grid-provenance surface (OQ-93 is RESOLVED; grid is
+opt-in by story focus, authored-or-absent — NOT a bug when 0/32).
+
+1. **Terse-when-absent** (`report_generator.pl`, the "Grid diet:" line). On a story that authored
+   no grid (authored+injected+imputed == 0) the line now reads `Grid diet: none authored
+   [CONDITIONAL: grid authored 0/N] (OQ-93)` instead of spelling out the zero buckets. **Preserves
+   OQ-98 ruling 1**: the CONDITIONAL warning still ALWAYS prints (does not gate on emptiness), so a
+   grid-fed Pattern/Confidence stays marked ungrounded. Grid stories print the full line unchanged
+   (witnessed: `sex_gender_category__identity_reading` → `authored 32/32 …`, Kappa 0.67, coverage
+   4/4; a 0/32 story → terse + `Pattern confidence: low` + `Kappa DATA_INSUFFICIENT`). The line is
+   surfaced inside enhanced_report.py via `run_prolog_report` (shells `report_generator.pl`).
+2. **Stale message fixed** (`data_repair.pl:356` print + `:291` comment). Both claimed the grid is
+   "unauthorable under the live generation schema" — false since OQ-93 resolved 2026-06-11 (3 live
+   testsets author grids). `report_grid_provenance/1` is REACHABLE (`repair_interval/1`, used by
+   scenario_manager/test_harness), so reworded, not deleted. Now: "opt-in by story focus
+   (authored-or-absent; injection/imputation retired)".
+
+Hinge witnessed (not assumed): `grid_provenance` reaches `pipeline_output.json` — 86/92 constraints
+carry it in `verdict_join`, 0/32 stories show `{authored:0,…,absent:32,total:32}`. So trimming a
+display surface cannot drop provenance; the machine-readable sink keeps it.
+
+NOT changed (flagged, sibling surfaces with the same verbose zero-buckets): `intent_engine.pl:75`
+`[grid diet: authored 0/32 …]`, and `enhanced_report.py`'s banner `_grid_line` (`Grid: authored
+0/32 …`). The banner is the OQ-98 headline — extending terse there is the operator's call.
+
+---
+
 ## 2026-06-20 — OQ-56 + OQ-53 closed: canonical cross-kernel reading-stance vocabulary ruled
 **Files:** python/orbit_operator.py, docs/design/design_discipline.md, ISSUES.md
 **Tier:** landed

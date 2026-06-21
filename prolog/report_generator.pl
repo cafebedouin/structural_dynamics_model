@@ -58,10 +58,19 @@ generate_full_report(IntervalID) :-
     % OQ-98 (operator ruling 1, per-question branch — P1 witnessed BRANCH A):
     % grid-fed findings carry a CONDITIONAL tag whenever authored < total.
     (   catch(data_repair:grid_provenance(IntervalID, prov(HA, HI, HP, _, HTotal)), _, fail)
-    ->  format('Grid diet:      authored ~w/~w, injected ~w, imputed ~w (OQ-93)', [HA, HTotal, HI, HP]),
-        (   HA < HTotal
-        ->  format(' [CONDITIONAL: grid authored ~w/~w]~n', [HA, HTotal])
-        ;   nl
+    ->  HPresent is HA + HI + HP,
+        (   HPresent =:= 0
+        ->  % Terse-when-absent (OQ-93 authored-or-absent regime): on a story that
+            % authored no grid the zero buckets (injected 0, imputed 0) carry no
+            % information. Compress them — but OQ-98 ruling 1's CONDITIONAL warning
+            % still ALWAYS prints (this does NOT gate on emptiness), so a grid-fed
+            % Pattern/Confidence above stays marked ungrounded.
+            format('Grid diet:      none authored [CONDITIONAL: grid authored 0/~w] (OQ-93)~n', [HTotal])
+        ;   format('Grid diet:      authored ~w/~w, injected ~w, imputed ~w (OQ-93)', [HA, HTotal, HI, HP]),
+            (   HA < HTotal
+            ->  format(' [CONDITIONAL: grid authored ~w/~w]~n', [HA, HTotal])
+            ;   nl
+            )
         )
     ;   true
     ),
