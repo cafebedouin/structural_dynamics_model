@@ -45,6 +45,36 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-20 — OQ-69 research-frontier ledger DRAINED → OQ-154–170; OQ-69 closed
+**Files:** ISSUES.md, issues/INDEX.md, issues/INDEX.json, CLAUDE.md, audits/2026-06-20_oq69_ledger_drain/
+**Tier:** landed
+
+OQ-69 was a backlog *ledger* (Ω_P), not a single question — it resolves by being **drained** (each
+live item promoted to its own OQ), not by executing its contents. Drained the 16 still-live bullets
+into **17 new OQs (OQ-154–170)** and closed OQ-69 `resolved` with a provenance map in its body. The
+16→17 expansion: the engine-hardening bullet is three legs (OQ-154/155/156) and the cluster bullet
+splits F/G (OQ-160 `gates` OQ-170). The prior check_stack item had already graduated → OQ-142–145.
+**No engine code changed** — tracking restructure + index regen + doc-currency only.
+
+Two operator rulings this session (both escalated, not self-resolved — genuine source conflicts in
+the plan): (1) **cluster splits F/G** → OQ-170 `blocked_on OQ-160` added (the ledger's "Pkg F then
+Pkg G after" is a real edge; the splitting rule + §5's BLOCKED-G witness outweighed the stale
+"count=16"); (2) **priority scheme = distinct-within-band, bands overlap 1–10** (Higher 1–3 / Medium
+1–5 / Lower 1–9). All 17 priorities are **provisional — operator to rule** (the declared seat).
+
+Correction (Pattern-5 premise rot): the priority parser is **not** capped at 10 — regex
+`^\*\*Priority:\*\*\s*(\d{1,2})\b` (omega_resolver.py:69) accepts 1–99; "1–10" in omega_resolver.md
+is doc convention only. δ correction (OQ-162): the ledger's "δ not load-bearing" was the stale half —
+witnessed perturbation probe shows δ is **live-but-zeroed** (wired `resolve_displacement →
+D_eff=clamp(D+δ) → χ`, flips at δ:=0.3, but config default 0.0/uniform makes it inert as shipped).
+
+Close-vs-keep-open ruled from code: `omega_resolver.py:244–258` authority set is all parsed OQs
+(resolved included) → a resolved parent doesn't dangle; no inbound Deps edge points at OQ-69 →
+**close** (not keep-open as a thin parent). Witnesses (all pasted at commit): `issues_status --check`
+170/0, `omega check` 0 problems, `selftest` 10/10, `menu` arrival of 154–170 (156+170 BLOCKED, 168
+BLOCKED-ON-YOU) + departure of OQ-69 **and control OQ-63** from WORKABLE (resolved items excluded),
+`gate.sh` GREEN. Full writeup + δ probe: `audits/2026-06-20_oq69_ledger_drain/`.
+
 ## 2026-06-20 — OQ-58 cross-corpus census, non-gating linter wired, three-leg/beta corpus ruling
 **Files:** python/run_pipeline.py, python/audits/reading_reference_linter.py, agent/generate_kernel_corpus.py, ISSUES.md, docs/design/design_gaps.md, CLAUDE.md, audits/2026-06-20_oq58_cross_corpus_incompleteness/
 **Tier:** tripwire

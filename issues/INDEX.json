@@ -1,21 +1,21 @@
 {
   "manifest": {
-    "store_version": "9532ffe43b88f3ccbb56e5a4198b905addc40c84",
+    "store_version": "ee37cbffbe527c48325cac3639b749911710c95d",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-20T20:10:10"
+    "generated_at": "2026-06-20T23:04:03"
   },
-  "issues_sha": "b8aa417e3b58af30a8713c8957b433e2ca6d861d49cf5ea532444c331ada56fe",
-  "n_entries": 153,
+  "issues_sha": "ce084b456fec6411bbf0e3b5ebb50f6989bad5db8aedeb55e42cbdb1dcc8acec",
+  "n_entries": 170,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 72,
+    "resolved": 73,
     "mitigated": 8,
     "partial": 7,
-    "open": 60,
+    "open": 76,
     "disposed": 3,
     "future": 3
   },
@@ -324,23 +324,6 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
-    },
-    {
-      "id": "OQ-69",
-      "status": "open",
-      "priority": 1,
-      "summary": "Research-frontier backlog inherited from retired AGENDA.md / TODO.md (ledger)",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-02",
-        "OQ-27",
-        "OQ-32",
-        "OQ-57",
-        "OQ-58",
-        "OQ-59",
-        "OQ-63"
-      ]
     },
     {
       "id": "OQ-71",
@@ -883,6 +866,206 @@
       "mentioned_in": [
         "OQ-152"
       ]
+    },
+    {
+      "id": "OQ-154",
+      "status": "open",
+      "priority": 1,
+      "summary": "Scope-design validator on `site_contexts/N` predicates (engine-hardening pair, leg a)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69",
+        "OQ-155"
+      ]
+    },
+    {
+      "id": "OQ-155",
+      "status": "open",
+      "priority": 4,
+      "summary": "MaxEnt parameterization for arbitrary sites (engine-hardening pair, leg b; gates OQ-156)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69",
+        "OQ-156"
+      ]
+    },
+    {
+      "id": "OQ-156",
+      "status": "open",
+      "priority": 5,
+      "summary": "Arakelov fragility on 10-slice contexts (engine-hardening pair, leg c)",
+      "deps": [
+        "blocked_on OQ-155"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69",
+        "OQ-155"
+      ]
+    },
+    {
+      "id": "OQ-157",
+      "status": "open",
+      "priority": 2,
+      "summary": "Spec-encoding unit tests for load-bearing measurement primitives (AGENDA D-1; remaining 4)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-27",
+        "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-158",
+      "status": "open",
+      "priority": 1,
+      "summary": "Cover-story detector enrichments (AGENDA Package B; drive-bys)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-159",
+      "status": "open",
+      "priority": 3,
+      "summary": "Scaffold/renewal audit (AGENDA Package D)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-160",
+      "status": "open",
+      "priority": 2,
+      "summary": "Cluster-level analysis wired into the report (AGENDA Package F; gates OQ-170)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69",
+        "OQ-170"
+      ]
+    },
+    {
+      "id": "OQ-161",
+      "status": "open",
+      "priority": 6,
+      "summary": "Empirical second/third cases (AGENDA Package C)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-162",
+      "status": "open",
+      "priority": 4,
+      "summary": "δ → baseline-deviation reframing (AGENDA Package E; description corrected)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-163",
+      "status": "open",
+      "priority": 1,
+      "summary": "Python toolset consolidation: single CLI entry point (TODO.md item 2)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-32",
+        "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-164",
+      "status": "open",
+      "priority": 3,
+      "summary": "Parameterize the remaining directionality constants (AUDIT W2/E1)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-63",
+        "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-165",
+      "status": "open",
+      "priority": 5,
+      "summary": "framing_notes invitation calibration",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-166",
+      "status": "open",
+      "priority": 2,
+      "summary": "Incremental tabling to replace hand-rolled memo caches",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-02",
+        "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-167",
+      "status": "open",
+      "priority": 3,
+      "summary": "Output write-path anchoring (complete swipl location-independence)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-168",
+      "status": "open",
+      "priority": 7,
+      "summary": "Author \"the mint\" as a testset (the essay→engine loop, first deliberate instance)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-169",
+      "status": "open",
+      "priority": 8,
+      "summary": "T4 (confirmed_liminal) one-case category (dormant; trigger-deferred)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-170",
+      "status": "open",
+      "priority": 9,
+      "summary": "Cluster-level systematic exploration (AGENDA Package G; blocked_on OQ-160)",
+      "deps": [
+        "blocked_on OQ-160"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-69",
+        "OQ-160"
+      ]
     }
   ],
   "archive": [
@@ -1354,6 +1537,36 @@
         "OQ-63",
         "OQ-64",
         "OQ-66"
+      ]
+    },
+    {
+      "id": "OQ-69",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Research-frontier backlog inherited from retired AGENDA.md / TODO.md (ledger)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-58",
+        "OQ-59",
+        "OQ-142",
+        "OQ-154",
+        "OQ-155",
+        "OQ-156",
+        "OQ-157",
+        "OQ-158",
+        "OQ-159",
+        "OQ-160",
+        "OQ-161",
+        "OQ-162",
+        "OQ-163",
+        "OQ-164",
+        "OQ-165",
+        "OQ-166",
+        "OQ-167",
+        "OQ-168",
+        "OQ-169",
+        "OQ-170"
       ]
     },
     {

@@ -573,7 +573,8 @@ offer updates (as a diff or edit proposal, not a verbal summary) to:
   future agent needs before touching the relevant files.
 - **ISSUES.md** — status changes (open → mitigated → resolved), new OQs, updated evidence.
   **ISSUES.md is the SINGLE tracking surface** (status grammar + checker in its footer); work
-  packages, priorities, and backlog live there as OQs (research-frontier backlog: OQ-69).
+  packages, priorities, and backlog live there as OQs (the research-frontier backlog OQ-69 was the
+  seed ledger — drained 2026-06-20 into individually-tracked OQ-154–170; provenance map in OQ-69).
   AGENDA.md, AUDIT.md, TODO.md, PRIORITIES.md were consolidated into it and deleted (2026-06-04)
   — do not recreate parallel trackers (Build Discipline Pattern 2).
 

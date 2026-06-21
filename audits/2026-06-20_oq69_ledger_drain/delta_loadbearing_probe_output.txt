@@ -1,0 +1,20 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+[corpus] Loading 92 testset files...
+[corpus] Loaded 92 testsets successfully.
+
+=== probe: δ load-bearing ===
+constraint: actinide_replenishment_mechanism_flat_control
+default config: cognitive_displacement=0.0 profile=uniform
+
+BASELINE χ           : [0.03343068707287455,0.030258424633875205,-0.001267559391024994,0.04109792043916187]
+NEG CTL  (δ:=0.0)    : [0.03343068707287455,0.030258424633875205,-0.001267559391024994,0.04109792043916187]
+  -> NEG CTL PASS: no-op overlay byte-identical (harness does not spuriously perturb)
+EXPERIMENT (δ:=0.3)  : [0.034065024374355275,0.04178835884109318,0.0134948583867683,0.05109753656153291]
+  -> δ LIVE: nonzero δ flips χ through its own sink => δ IS load-bearing when set
+RESTORE PASS         : [0.03343068707287455,0.030258424633875205,-0.001267559391024994,0.04109792043916187]

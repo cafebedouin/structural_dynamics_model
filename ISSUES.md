@@ -3172,75 +3172,52 @@ other stateful modules: purity caches, fingerprint stores).
 
 ## OQ-69 — Research-frontier backlog inherited from retired AGENDA.md / TODO.md (ledger)
 
-**Ω-type:** Ω_P (research program — items graduate to their own OQ or work package when picked up).
+**Ω-type:** Ω_P (research program — was a backlog ledger; items have graduated to their own OQs).
 
-**Status:** open — ledger; items graduate individually
+**Status:** resolved — ledger drained 2026-06-20; all still-live items now tracked individually as OQ-154–170 (plus the prior check_stack graduation OQ-142–145). A backlog ledger resolves by being *drained*, not by executing its contents.
+
 **Priority:** 1
-**Origin:** Tracking-surface consolidation 2026-06-04: AGENDA.md, AUDIT.md, TODO.md reviewed
-item-by-item against the substrate and deleted (Pattern 2: ISSUES.md is the single tracker).
-Items below were verified STILL UNTRACKED and still live at consolidation; everything else in
-those files was verified shipped (maxent_profile/4; OQ-59 #1–#4; never-generated #1), already
-tracked (regen-polish backlog + 4 hard-fails in OQ-58), or moot (UNRESOLVED_MANDATROPHY count
-from the pre-rebuild corpus; "scope has zero classification effect" — σ(S) is now in the
-canonical χ).
 
-- **Engine-hardening pair from the apparatus paper** (`when_apparatus_sharpens_taxonomy.md`,
-  "Two engine extensions… remain unimplemented"): (a) scope-design validator on
-  `site_contexts/N` predicates (catch the σ(universal)=1.0 class of site-design failure before
-  the next site is added); (b) MaxEnt parameterization for arbitrary sites — unlocks
-  (c) **Arakelov fragility on 10-slice contexts** (`project_orientation.md` §8.3, marked Open).
-- **Spec-encoding unit tests for load-bearing measurement primitives** (AGENDA D-1): encode
-  paper-documented behavior as assertions — χ argument structure (d, σ), entropy normalization,
-  H¹ (signature-resolved orbit — pairs with OQ-27), MaxEnt profile context-independence, purity
-  propagation rate. Two witnessed spec-vs-code drifts motivate it; drift detection moves to
-  commit-time.
-- **Cover-story detector enrichments** (AGENDA Package B): wire drift_event predicates into
-  `cs_pattern_detection.pl` verdict clauses (e.g. extraction_accumulation + coupling_drift →
-  anchored_fixity_with_accretion). One-clause additions + regression test each; ship as
-  drive-bys.
-- **Scaffold/renewal audit** (Package D): exercised renewal = scaffold without drift;
-  performative renewal = scaffold + extraction_accumulation + theater_rising. Testable with
-  existing predicates.
-- **Cluster-level analysis** (Package F): cluster-signature statistics + cluster-level CS
-  inference in `enhanced_report.py`; then Package G (systematic clustering exploration) after.
-- **Empirical second/third cases** (Package C): 2026 US midterm constitutional-legitimacy axes,
-  Colombia 2026; Roman Empire backtest queued for a dedicated session.
-- **δ → baseline-deviation reframing** (Package E): theory session first; δ not load-bearing in
-  current implementation.
-- **Python toolset consolidation** (TODO.md item 2): group `python/` scripts into
-  subdirectories + a single CLI entry point. Pure maintainability; note OQ-32's lesson (the
-  last reorg broke 6 scripts' path resolution — budget for the witness pass).
-- **Parameterize the 17 directionality constants** (AUDIT W2/E1): hardcoded in
-  `constraint_indexing.pl` (`power_role_heuristic/4`, `exit_modulation/2`); swept inert at
-  ±25%, so maintainability-only — but OQ-63's d-derivation work touches the same table, so do
-  them together if either is picked up.
-- **T4 (confirmed_liminal) one-case category**: re-examine when a second T4 case appears.
-- **framing_notes invitation calibration**: does it produce conceptual or empirical-leaning
-  omegas? Calibration signal for generation.
-- **check_stack baseline cleanup → then wire as pipeline gate** (infra hardening 2026-06-04,
-  KNOWN_STATE same date): `prolog/check_stack.pl` baseline holds 4 undefined-predicate refs —
-  `data_repair:constraint_beneficiary/2` + `data_repair:constraint_victim/2`
-  (data_repair.pl:123/136/163 — wrong-qualifier candidates, OQ-57 class; each needs a
-  per-call-site witness before fixing), `narrative_ontology:requires_active_enforcement/1`
-  (drift_events.pl:175 — verify against the resolved OQ-57 fix), `validation_suite:test_case/4`
-  (test_harness.pl:26 — generated-file coupling). When the baseline is empty, wire
-  `run_check_stack` next to the ISSUES status-grammar gate at run_pipeline entry.
-- **Incremental tabling to replace hand-rolled memo caches**: SWI `:- table ... as incremental`
-  with `as incremental` dynamics auto-invalidates on retract/assert, retiring the manual
-  `cache_registry:clear_all_caches/0` discipline. Output-affecting on the hottest path
-  (classify_at_context) — OQ-02's LCO history says zero-diff witness first.
-- **Output write-path anchoring**: exporters/probe scripts still write cwd-relative
-  `../outputs/...`; anchoring writes the way corpus reads are now anchored
-  (`resolve_corpus_dir/2`) would complete swipl location-independence and retire the
-  remaining `cd prolog/` requirement (gotchas §9).
-- **Author "the mint" as a testset** (2026-06-11 Pew-typology review exchange): the information
-  regime as a constraint in its own right — own beneficiaries, own suppression signature, own
-  perspectival split. It is a constraint hypothesis the corpus does not contain, generated *by*
-  the essay rather than by the engine — the first deliberate instance of the loop the exchange
-  named: essay → constraint hypothesis → formalization → engine resistance → sharper next essay
-  (the writing as the corpus's generation mechanism, the Prolog as its immune system; see
-  design_discipline §4, false-summit discipline). Author it with the essay's honest prior and
-  let the engine fight it the way it refused `institutional_trust_erosion`'s mountain claim.
+**Origin:** Tracking-surface consolidation 2026-06-04: AGENDA.md, AUDIT.md, TODO.md reviewed
+item-by-item against the substrate and deleted (Pattern 2: ISSUES.md is the single tracker). Items
+were verified STILL UNTRACKED and still live at consolidation; everything else in those files was
+verified shipped (maxent_profile/4; OQ-59 #1–#4; never-generated #1), already tracked (regen-polish
+backlog + 4 hard-fails in OQ-58), or moot (UNRESOLVED_MANDATROPHY count from the pre-rebuild corpus;
+"scope has zero classification effect" — σ(S) is now in the canonical χ).
+
+**Resolution — provenance map (each ledger item → its individually-tracked OQ).** Drain executed
+2026-06-20 with three pre-write witnesses: (1) δ load-bearing **perturbation probe** (no-op negative
+control + δ:=0.3 flip on δ's own sink → δ is live-but-zeroed, correcting OQ-162's inherited text);
+(2) close-vs-keep-open **ruled from `omega_resolver.py`'s dangling-detection source** (authority set
+is all parsed OQs incl. resolved, and no inbound Deps edge points at OQ-69 → safe to close, not keep
+open as a thin parent); (3) the four PARTIAL **scope floors re-witnessed against the files** (157,
+160, 163, 164). Splitting rule applied: split iff a real Deps edge exists between an item's parts.
+
+| Ledger item | Becomes | Note |
+|---|---|---|
+| Engine-hardening pair, leg a — scope-design validator on `site_contexts/N` | **OQ-154** | independent of b/c |
+| Engine-hardening pair, leg b — MaxEnt parameterization for arbitrary sites | **OQ-155** | gates OQ-156 |
+| Engine-hardening pair, leg c — Arakelov fragility on 10-slice contexts | **OQ-156** | blocked_on OQ-155 |
+| Spec-encoding D-1 tests | **OQ-157** | PARTIAL: 1/5 shipped (`test_maxent_profile_indexing.pl`); scopes remaining 4 |
+| Cover-story detector enrichments (Pkg B) | **OQ-158** | |
+| Scaffold/renewal audit (Pkg D) | **OQ-159** | |
+| Cluster-level analysis → report (Pkg F) | **OQ-160** | PARTIAL: computed in `cluster_space_phase*.py`, not wired into `enhanced_report.py`; gates OQ-170 |
+| Cluster systematic exploration (Pkg G) | **OQ-170** | blocked_on OQ-160 (the real F→G edge; split per operator ruling 2026-06-20) |
+| Empirical 2nd/3rd cases (Pkg C) | **OQ-161** | |
+| δ → baseline-deviation reframe (Pkg E) | **OQ-162** | description CORRECTED — δ is live-but-zeroed, not "not load-bearing" (witnessed) |
+| Python toolset consolidation | **OQ-163** | PARTIAL: subdirs exist, no single CLI |
+| Parameterize directionality constants | **OQ-164** | PARTIAL: 6 `canonical_d` done; `power_role_heuristic/4` + `exit_modulation/2` remain |
+| framing_notes invitation calibration | **OQ-165** | |
+| Incremental tabling (`as incremental`) | **OQ-166** | |
+| Output write-path anchoring | **OQ-167** | |
+| Author "the mint" testset | **OQ-168** | queued, not authored |
+| T4 confirmed_liminal 2nd-case | **OQ-169** | dormant; trigger-deferred |
+| check_stack baseline → pipeline gate | **OQ-142–145** | graduated earlier (2026-06-18) |
+
+The 16 ledger bullets became **17 new OQs** (154–170): the engine-hardening pair is three legs and
+the cluster item splits F/G. Provenance/witnesses: KNOWN_STATE 2026-06-20;
+`audits/2026-06-20_oq69_ledger_drain/`. Priorities on all 17 are **provisional — operator to rule**
+(the declared seat).
 
 ---
 
@@ -8127,7 +8104,274 @@ as-is and (a) is itself blocked on a schema gap (route to `design_gaps.md`).
 
 ---
 
-*Last updated: 2026-06-18. Add new items with sequential OQ-NN labels. Mark
+## OQ-154 — Scope-design validator on `site_contexts/N` predicates (engine-hardening pair, leg a)
+
+**Ω-type:** Ω_E (mechanical guard — witnessed by constructing a mis-designed site that must trip it).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 1
+
+**Origin:** First of the two engine extensions flagged "remain unimplemented" in
+`when_apparatus_sharpens_taxonomy.md`: a validator over `site_contexts/N` predicates that catches
+the **σ(universal)=1.0 class of site-design failure** (a scope atom whose `scope_modifier` is
+unvalidated / collides with `national` → no differential χ effect) *before* the next site is added.
+Cross-ref the calibration-based scope exclusion at `constraint_indexing.pl:954–955`
+(`regional`/`continental`/`universal` excluded from the product site because their scope_modifier
+values are unvalidated). **Nothing shipped** — no such validator exists. Independent of OQ-155/156
+(the splitting rule: no real Deps edge to its siblings). Drained from OQ-69 (was the engine-hardening
+pair, leg a). **Priority provisional — operator to rule** (Priority is the operator's declared seat).
+
+## OQ-155 — MaxEnt parameterization for arbitrary sites (engine-hardening pair, leg b; gates OQ-156)
+
+**Ω-type:** Ω_E (mechanical engine extension).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 4
+
+**Origin:** Second engine extension from `when_apparatus_sharpens_taxonomy.md`: generalize the MaxEnt
+parameterization (currently keyed to the canonical / 156-point product sites) so it accepts an
+**arbitrary site** of N contexts. This is the prerequisite that **unlocks Arakelov fragility on
+10-slice contexts** (OQ-156) — hence it `gates` OQ-156 (the edge is authored on OQ-156 as
+`blocked_on OQ-155`, once, to avoid a redundant reverse edge). **Nothing shipped.** Drained from
+OQ-69 (engine-hardening pair, leg b). **Priority provisional — operator to rule.**
+
+## OQ-156 — Arakelov fragility on 10-slice contexts (engine-hardening pair, leg c)
+
+**Ω-type:** Ω_E (measurement — fragility computed on a constructed 10-slice site).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 5
+
+**Deps:** blocked_on OQ-155
+
+**Origin:** Arakelov-height fragility analysis on a **10-slice context site** (`project_orientation.md`
+§8.3, marked **Open**). Genuinely **blocked on** OQ-155: the fragility measurement needs the MaxEnt
+parameterization to accept an arbitrary (10-context) site first — the real Deps edge the splitting
+rule requires, and the one that lets `menu` surface this as BLOCKED until OQ-155 lands. **Nothing
+shipped.** Drained from OQ-69 (engine-hardening pair, leg c). **Priority provisional — operator to
+rule.**
+
+## OQ-157 — Spec-encoding unit tests for load-bearing measurement primitives (AGENDA D-1; remaining 4)
+
+**Ω-type:** Ω_E (tests — assertions over documented behavior).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 2
+
+**Origin:** AGENDA D-1: encode paper-documented behavior of the load-bearing measurement primitives
+as plunit assertions so spec-vs-code drift is caught at commit-time (two witnessed drifts motivated
+it). **PARTIAL — 1/5 shipped:** `prolog/tests/test_maxent_profile_indexing.pl` (MaxEnt profile
+context-independence) is the *only* spec-encoding test present (witnessed 2026-06-20: `ls
+prolog/tests/` shows it and no χ-arg / entropy-norm / H¹ / purity test). **Scope = the remaining
+four:** χ argument structure (d, σ), entropy normalization (H/log N), H¹ (signature-resolved orbit —
+**pairs with OQ-27** in prose, not a blocking edge), purity propagation rate. Drained from OQ-69.
+**Priority provisional — operator to rule.**
+
+## OQ-158 — Cover-story detector enrichments (AGENDA Package B; drive-bys)
+
+**Ω-type:** Ω_E (wiring — one-clause additions, each witnessed by a regression test).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 1
+
+**Origin:** AGENDA Package B: wire `drift_event` predicates into `cs_pattern_detection.pl` verdict
+clauses (e.g. `extraction_accumulation` + `coupling_drift` → `anchored_fixity_with_accretion`).
+One-clause additions + a regression test each; ship as drive-bys. **Nothing shipped.** Drained from
+OQ-69. **Priority provisional — operator to rule.**
+
+## OQ-159 — Scaffold/renewal audit (AGENDA Package D)
+
+**Ω-type:** Ω_E (measurement with existing predicates).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 3
+
+**Origin:** AGENDA Package D: distinguish **exercised renewal** (= scaffold without drift) from
+**performative renewal** (= scaffold + `extraction_accumulation` + `theater_rising`). Testable with
+existing predicates. **Nothing shipped.** Drained from OQ-69. **Priority provisional — operator to
+rule.**
+
+## OQ-160 — Cluster-level analysis wired into the report (AGENDA Package F; gates OQ-170)
+
+**Ω-type:** Ω_E (wiring — connect computed analytics to the report surface).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 2
+
+**Origin:** AGENDA Package F: surface cluster-signature statistics + cluster-level CS inference in
+`enhanced_report.py`. **PARTIAL — analytics computed, not wired:** the cluster computation lives in
+`cluster_space_phase{3,4,5}.py` but `enhanced_report.py` has **no cluster section** (witnessed
+2026-06-20: the only "cluster" hit at `enhanced_report.py:2186` is prose inside a string, not a
+report section). **Scope = the wiring** (computation → `enhanced_report.py`), not re-deriving the
+analytics. Gates OQ-170 (Package G builds on F; edge authored on OQ-170 as `blocked_on OQ-160`).
+Drained from OQ-69. **Priority provisional — operator to rule.**
+
+## OQ-161 — Empirical second/third cases (AGENDA Package C)
+
+**Ω-type:** Ω_E (generation + measurement).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 6
+
+**Origin:** AGENDA Package C: author empirical second/third cases — 2026 US midterm
+constitutional-legitimacy axes, Colombia 2026; Roman Empire backtest queued for a dedicated session.
+**Queued, not authored.** Drained from OQ-69. **Priority provisional — operator to rule.**
+
+## OQ-162 — δ → baseline-deviation reframing (AGENDA Package E; description corrected)
+
+**Ω-type:** Ω_C (conceptual reframe — specify what baseline-deviation semantics δ carries).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 4
+
+**Origin:** AGENDA Package E: reframe δ (cognitive displacement) as a baseline-deviation quantity
+(theory session first). **Description corrected 2026-06-20 against a witnessed perturbation probe** —
+the ledger's "δ not load-bearing in current implementation" was the stale half. Witnessed: δ **IS
+wired and load-bearing WHEN SET** — `resolve_displacement/2` (`constraint_indexing.pl:543`) feeds
+`D_eff = clamp(D + δ, 0, 1)` (`:580`) into the sigmoid → χ; overlaying `cognitive_displacement :=
+0.3` (`probe_harness:with_overlay/3`, caches cleared) flips χ on all 4 canonical contexts, with a
+no-op (δ:=0.0) negative control byte-identical and a clean restore (the harness is positive-
+controlled on δ's *own* sink, not a proxy path). But δ is **inert at the default config**
+(`config.pl:171` cognitive_displacement=0.0; `:174` profile=uniform; all `positional_displacement`
+facts = 0.0), so `D_eff = D + 0.0 = D` and δ contributes nothing to live pipeline output as shipped.
+**So the reframe targets a parameter that is live-but-zeroed, not dead code.** Probe + witness:
+`audits/2026-06-20_oq69_ledger_drain/`. Drained from OQ-69. **Priority provisional — operator to rule.**
+
+## OQ-163 — Python toolset consolidation: single CLI entry point (TODO.md item 2)
+
+**Ω-type:** Ω_E (maintainability — witnessed by the OQ-32 path-resolution regression class).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 1
+
+**Origin:** TODO.md item 2: group `python/` scripts into subdirectories + a single CLI entry point.
+**PARTIAL — subdirs exist, no CLI:** `python/audits/`, `sweeps/`, `shared/`, `reports/`, `schemas/`,
+`tests/`, `docs/` exist (witnessed 2026-06-20), but most scripts remain at top level **and no single
+CLI entry point exists** (`cli.py` / `__main__.py` / `main.py` all absent). **Scope = the CLI
+dispatcher + finishing the grouping**, not re-doing the existing subdirs. Note OQ-32's lesson: the
+last reorg broke 6 scripts' path resolution — budget for the witness pass. Drained from OQ-69.
+**Priority provisional — operator to rule.**
+
+## OQ-164 — Parameterize the remaining directionality constants (AUDIT W2/E1)
+
+**Ω-type:** Ω_E (mechanical — config-extraction, swept inert).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 3
+
+**Origin:** AUDIT W2/E1: lift the hardcoded directionality constants in `constraint_indexing.pl`
+into config. **PARTIAL — 6 done:** the `canonical_d_*` constants are already param-specced
+(`config_schema.pl:83–88`, witnessed 2026-06-20). **Scope = the two predicates still hardcoded as
+facts:** `power_role_heuristic/4` (`constraint_indexing.pl:477+`) and `exit_modulation/2` (`:469`).
+Swept inert at ±25% → maintainability-only. **OQ-63's d-derivation work touches the same table** —
+do them together if either is picked up (prose lineage, not a blocking edge). Drained from OQ-69.
+**Priority provisional — operator to rule.**
+
+## OQ-165 — framing_notes invitation calibration
+
+**Ω-type:** Ω_C (calibration/design decision; fed by an Ω_E measurement input).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 5
+
+**Origin:** Does the `framing_notes` invitation produce conceptual- or empirical-leaning omegas? A
+calibration signal for generation. The named resolution is a **design/definition decision** about how
+the invitation is calibrated (Ω_C), fed by an Ω_E measurement arm (classify the omega distribution the
+current invitation produces). **Nothing shipped.** Drained from OQ-69. **Priority provisional —
+operator to rule.**
+
+## OQ-166 — Incremental tabling to replace hand-rolled memo caches
+
+**Ω-type:** Ω_E (engine change — output-affecting; zero-diff-witnessed).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 2
+
+**Origin:** Replace hand-rolled memo caches with SWI `:- table ... as incremental` — `as incremental`
+dynamics auto-invalidate on retract/assert, retiring the manual `cache_registry:clear_all_caches/0`
+discipline. **Output-affecting on the hottest path** (`classify_at_context`) — **OQ-02's LCO history
+says zero-diff witness first** (prose caution, not a blocking edge). **Nothing shipped.** Drained from
+OQ-69. **Priority provisional — operator to rule.**
+
+## OQ-167 — Output write-path anchoring (complete swipl location-independence)
+
+**Ω-type:** Ω_E (mechanical — anchor writes the way reads are anchored).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 3
+
+**Origin:** Exporters / probe scripts still write cwd-relative `../outputs/...`; anchoring writes the
+way corpus **reads** are now anchored (`resolve_corpus_dir/2`, 2026-06-04) would complete swipl
+location-independence and retire the remaining `cd prolog/` requirement
+(`swipl_load_path_and_probe_gotchas.md` §9). **Nothing shipped.** Drained from OQ-69. **Priority
+provisional — operator to rule.**
+
+## OQ-168 — Author "the mint" as a testset (the essay→engine loop, first deliberate instance)
+
+**Ω-type:** Ω_P (decide-to-author program act + the honest-prior seat; Ω_E discharge arm once authored).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 7
+
+**Origin:** 2026-06-11 Pew-typology review exchange: author the information regime ("the mint") as a
+constraint in its own right — own beneficiaries, own suppression signature, own perspectival split. A
+constraint hypothesis the corpus does **not** contain, generated *by* the essay rather than by the
+engine — the first deliberate instance of the loop the exchange named: essay → constraint hypothesis
+→ formalization → engine resistance → sharper next essay (`design_discipline.md` §4, false-summit
+discipline). Author it with the essay's honest prior and let the engine fight it the way it refused
+`institutional_trust_erosion`'s mountain claim. Typed Ω_P: the named resolution is a decide-to-author
+program act + a seat (the honest prior), with a measurable Ω_E discharge (engine resistance) once
+authored. **Queued, not authored.** Drained from OQ-69. **Priority provisional — operator to rule.**
+
+## OQ-169 — T4 (confirmed_liminal) one-case category (dormant; trigger-deferred)
+
+**Ω-type:** Ω_E (categorization measurement; awaits a second live case).
+
+**Status:** open — deferred (dormant): re-examine on a 2nd live `confirmed_liminal` case; trigger `abductive_triggers:trigger_confirmed_liminal/3`. Minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 8
+
+**Origin:** Re-examine the T4 (`confirmed_liminal`) category when a **second** live case appears;
+currently 1 live case (`crypto_permissionless_reading`). Minted **dormant** — it stays in the active
+frontier (edge-free) but at low Priority and the Status detail names its trigger, so a future instance
+re-examines only when the substrate produces a 2nd case. Drained from OQ-69. **Priority provisional —
+operator to rule.**
+
+## OQ-170 — Cluster-level systematic exploration (AGENDA Package G; blocked_on OQ-160)
+
+**Ω-type:** Ω_E (analysis — systematic clustering exploration).
+
+**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+
+**Priority:** 9
+
+**Deps:** blocked_on OQ-160
+
+**Origin:** AGENDA Package G: systematic clustering exploration, building on Package F (OQ-160). The
+ledger sequenced it "then Package G … after" Package F, so the F→G dependency is **real** — by the
+splitting rule the cluster item is two OQs, and this `blocked_on OQ-160` edge is what lets `menu`
+surface G as **BLOCKED** until F's cluster stats + report wiring land. **Nothing shipped.** Drained
+from OQ-69 (**operator ruling 2026-06-20:** the cluster item splits F/G; minted as OQ-170 because
+154–169 were already assigned when the split was ruled). **Priority provisional — operator to rule.**
+
+---
+
+*Last updated: 2026-06-20. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
