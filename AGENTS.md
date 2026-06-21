@@ -52,7 +52,7 @@ engine-level issues.
 - **Core dependencies:** `pandas`, `jinja2>=3.1.6`
 - **Optional stats:** `scipy`, `scikit-learn`, `statsmodels` (`pip install -e ".[stats]"`)
 - **Optional AI:** `anthropic`, `google-genai` (`pip install -e ".[ai]"`)
-- **Additional:** `streamlit`, `google-api-core` (from `requirements.txt`)
+- **Additional:** `google-api-core` (from `requirements.txt`)
 
 ### API keys (required for generation steps)
 

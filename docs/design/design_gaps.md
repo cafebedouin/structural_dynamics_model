@@ -763,8 +763,9 @@ apparatus is left declared-but-unfed.
    readings + flat controls + integrity sweep produced, AND the wave change visible (supplementary
    axes ordered after readings), framed as a CHANGE from kernel_v1 (which had no waves).
 
-The still-open *governance* sliver — that injection-suppression lives in a backend predicate rather
-than a bypass-proof invariant, so a resurrected legacy orchestrator (`orchestrator.py` via the
-dormant Streamlit `app.py`/`c-app.py`) could re-inject — is tracked separately as ISSUES.md
-**OQ-172** (a defect-class open question, distinct from this deferred cleanliness). Named here
-2026-06-21.
+The *governance* sliver — that injection-suppression lives in a backend predicate rather than a
+bypass-proof invariant — was tracked separately as ISSUES.md **OQ-172** and **resolved 2026-06-21**
+by retiring the live injection site: the legacy `agent/orchestrator.py` and its dormant Streamlit
+drivers (`app.py`/`c-app.py`) were deleted (`git rm`). OQ-172 leaves a standing tripwire — any new
+or revived generation front-end must route through `generate_from_manifests`, never a hand-rolled
+prompt-assembly loop that threads `claimed_type` over `downstream_of` deps. Named here 2026-06-21.

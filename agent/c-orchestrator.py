@@ -7,10 +7,10 @@ Chains: research → SCOPE → generate → corpus update → reports → tensio
 No Streamlit imports.  Pure Python with optional progress callback.
 
 Usage:
-    python3 agent/orchestrator.py "Alberta separatism"
-    python3 agent/orchestrator.py narrative_transform/originals/the_bridge.md
-    python3 agent/orchestrator.py --input-file topic.txt --axes 3
-    python3 agent/orchestrator.py --dry-run "Alberta separatism"
+    python3 agent/c-orchestrator.py "Alberta separatism"
+    python3 agent/c-orchestrator.py narrative_transform/originals/the_bridge.md
+    python3 agent/c-orchestrator.py --input-file topic.txt --axes 3
+    python3 agent/c-orchestrator.py --dry-run "Alberta separatism"
 """
 
 import argparse

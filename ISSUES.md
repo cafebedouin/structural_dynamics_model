@@ -8290,41 +8290,35 @@ from OQ-69 (**operator ruling 2026-06-20:** the cluster item splits F/G; minted 
 
 **Ω-type:** Ω_P (one-path / where-policy-lives design) + Ω_E (witnessable by code-read of any orchestrator that gets resurrected).
 
-**Status:** open — carved out of OQ-82's close (2026-06-21) as the genuinely still-open sliver the OQ-82 close must not swallow.
-**Priority:** 3
+**Status:** resolved — retire-the-path executed (operator ruling, 2026-06-21). The live injection
+site is deleted, not relocated.
 
-**Origin:** OQ-81 placed the reading-typed wave-upstream suppression in the unified backend
-(`generate_kernel_corpus._flat_seeds_from_manifest`), i.e. injection policy lives in the *backend
-predicate*, not in the corpus or schema. OQ-82's close (2026-06-21) confirmed by code-read that
-every CURRENTLY-LIVE generation route is injection-safe: c-orchestrator routes through the unified
-backend (governed); the legacy gkc `--scope` path is structurally injection-free (no waves, never
-calls `upstream_context`, never builds `generated_by_id` — witnessed in the OQ-82 entry). The
-sliver OQ-82 flagged and did not resolve, **now witnessed concrete (2026-06-21), not merely
-conditional:** the **legacy `agent/orchestrator.py`** (`DRAuditOrchestrator`, driven by the dormant
-Streamlit front-ends `agent/app.py` + `agent/c-app.py`, both of which `import` it) injects upstream
-verdicts inline. `_step_generate` (`orchestrator.py:343–358`) builds `upstream_context` by iterating
-**all** of an axis's `downstream_of` deps and threading the upstream story's `claimed_type` into the
-downstream `build_prompt` — the exact §5.1 channel OQ-81 found shifts an authored classification
-input toward one seat's verdict — with **no `_flat_seeds_from_manifest` filter** (no reading-typed
-suppression). The injection code is live in `orchestrator.py` *now*; only its drivers (the Streamlit
-apps) are dormant. Because the policy is a backend predicate and not a corpus/schema invariant,
-resurrecting `app.py`/`c-app.py` re-opens the OQ-81 channel with zero code change to the injection
-site.
+**Origin:** OQ-81 placed injection-suppression in a *backend predicate*
+(`generate_kernel_corpus._flat_seeds_from_manifest`), not a corpus/schema invariant. OQ-82's close
+confirmed every live generation route is injection-safe; the sliver was the **legacy
+`agent/orchestrator.py`** (`DRAuditOrchestrator`, driven by the dormant Streamlit apps
+`agent/app.py` + `agent/c-app.py`): its `_step_generate` (:343–358) threaded the upstream story's
+`claimed_type` into the downstream `build_prompt` over **all** `downstream_of` deps, with no
+suppression filter — the OQ-81 channel, live in code, only its drivers dormant.
 
-**Specific question:** Should injection-suppression be relocated from a backend predicate to an
-invariant no orchestrator can bypass (enforced at the seed-build boundary all routes must cross, or
-a generation-time gate that fails closed when an axis carries reading-typed upstream deps), OR —
-since `orchestrator.py` is legacy and the c-orchestrator superseded it — should `_step_generate`'s
-inline injection simply be deleted / the legacy orchestrator + Streamlit apps formally retired?
-Either kills the live injection site; the choice is hoist-the-policy vs retire-the-path.
+**Resolution (witnessed):** the operator chose **retire-the-path** over hoist-the-policy. The three
+files were deleted (`git rm agent/orchestrator.py agent/app.py agent/c-app.py`) — a closed,
+superseded cluster: `orchestrator.py` (the Gemini-era orchestrator, replaced by `c-orchestrator.py`)
+was imported only by the two Streamlit apps; the apps were imported by nothing; no test / shell
+script / packaging entry-point referenced any of the three (import grep cleared with a positive
+control on `story_generator_base`'s 10+ importers). Orphaned `streamlit` dep removed from
+`requirements.txt` + AGENTS.md (kept `google-*`, still used by ~8 live files); stale
+`agent/orchestrator.py` usage lines in `c-orchestrator.py`'s docstring fixed. The injection site no
+longer exists, so the policy-location question is moot for the retired path.
 
-**Falsifier / what resolution changes:** resolution = either the suppression is hoisted to a
-bypass-proof boundary every generation route crosses (closes the gap structurally), or the legacy
-`orchestrator.py` injection path is retired/deleted (removes the site), or this entry stands as the
-documented gate every new or resurrected generation front-end must pass (code-read for: threads an
-upstream computed verdict into a downstream prompt ∧ does not route through
-`_flat_seeds_from_manifest`). Pre-registered check before reviving any front-end: grep its
-generation step for `claimed_type` / `downstream_of` injection without the suppression filter.
+**Standing tripwire (the gate survives the close):** injection-suppression still lives in a backend
+predicate, not a bypass-proof invariant. **Before adding or reviving ANY generation front-end,
+code-read its generation step:** if it threads an upstream computed verdict (`claimed_type`) into a
+downstream prompt over `downstream_of` deps AND does not route through `_flat_seeds_from_manifest`,
+it re-opens the OQ-81 channel. Route every new generation path through the unified backend
+`generate_from_manifests`, never a hand-rolled prompt-assembly loop.
+
+**Deps:** splits_from OQ-82, blocked_on OQ-81 (the suppression predicate it governed).
 
 **Deps:** splits_from OQ-82, blocked_on OQ-81 (the suppression predicate it governs).
 
