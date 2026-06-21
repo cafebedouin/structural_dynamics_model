@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "2891d443b8d04aa46fca58d110dd222d3c8562fe",
+    "store_version": "1c5c97a763d35bf049d1bf8839c80b9eedd84e87",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-20T18:34:41"
+    "generated_at": "2026-06-20T19:59:49"
   },
-  "issues_sha": "e1f5eca54a9f540b6619452a2bce6ad94b9f8f7ba61c7914379ea061b96147d3",
+  "issues_sha": "5ed0d249d14f6685c3c16b948305aa56521db6e366616c6907e1e4c3a96d489b",
   "n_entries": 153,
   "active_token_set": [
     "investigating",
@@ -13,8 +13,8 @@
   ],
   "per_status": {
     "resolved": 72,
-    "mitigated": 7,
-    "partial": 8,
+    "mitigated": 8,
+    "partial": 7,
     "open": 60,
     "disposed": 3,
     "future": 3
@@ -264,18 +264,6 @@
         "OQ-43",
         "OQ-50",
         "OQ-51"
-      ]
-    },
-    {
-      "id": "OQ-58",
-      "status": "partial",
-      "priority": 1,
-      "summary": "Dangling cs_reading_relation targets: edges naming a reading that does not exist",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-54",
-        "OQ-59"
       ]
     },
     {
@@ -1307,6 +1295,20 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
+    },
+    {
+      "id": "OQ-58",
+      "status": "mitigated",
+      "priority": 3,
+      "summary": "Dangling cs_reading_relation targets: edges naming a reading that does not exist",
+      "deps": [
+        "blocked_on_human oq58-corpus-identity-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-54",
+        "OQ-59"
+      ]
     },
     {
       "id": "OQ-59",

@@ -1,0 +1,37 @@
+== Linter selftest (positive controls) ==
+  positive controls: PASS (R1 flags ghost, R2 flags short, R3 flags gradated/graduated, no over-flag)
+  -> PASS
+
+== Cross-corpus census (rate% = distinct-missing / cs_reading_relation edges) ==
+corpus                  files  cs_rr  dangl   miss  id>=2  r/kern   rate%
+-------------------------------------------------------------------------
+LIVE testsets              92    169    163    158      5    1.03    93.5
+testsets_haiku            960   2004    127     75     39    2.90     3.7
+testsets_flash            960   2008    101     47     41    2.90     2.3
+arch kernel_v1           1106   1774     94     86      8    2.13     4.8
+arch kernel_test          229    210     57     57      0    1.00    27.1
+arch kernel_v2_test       100     12     12     12      0    1.00   100.0
+arch original_v5          702      0      0      0      0    1.00     0.0
+arch original_v6         3380      0      0      0      0    1.00     0.0
+arch sotu                   0      0      0      0      0    0.00     0.0
+
+== LIVE defensible (id>=2) set ==
+  jewish_sovereignty_palestine__liberal_nationalist_reading  (x2)
+  jewish_sovereignty_palestine__post_zionist_reading  (x2)
+  jewish_sovereignty_palestine__religious_zionist_reading  (x2)
+  press_reformation_causation__technological_determinism  (x2)
+  zero_mathematical_status__number_reading  (x2)
+
+== Durable defensible set: twin-reproducible (haiku INT flash, id>=2) ==
+  haiku id>=2 = 39   flash id>=2 = 41   haiku INT flash = 39
+
+== Cross-lineage missing-set intersections (any in-degree) ==
+  missing(any): haiku=75 flash=47 kernel_v1=86
+  haiku INT flash               = 46
+  haiku INT flash INT kernel_v1 = 1   (kernel_v1 is a DIFFERENT kernel population)
+
+== Concrete per-edge witness: jewish_sovereignty_palestine__cultural_zionist_reading ==
+  coexists_with  -> jewish_sovereignty_palestine__liberal_nationalist_reading [dangling]
+  coexists_with  -> jewish_sovereignty_palestine__settler_colonial_reading  [exact]
+  coexists_with  -> jewish_sovereignty_palestine__religious_zionist_reading [dangling]
+  coexists_with  -> jewish_sovereignty_palestine__post_zionist_reading      [dangling]

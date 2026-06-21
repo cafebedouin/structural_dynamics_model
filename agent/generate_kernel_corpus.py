@@ -1229,6 +1229,13 @@ def validate_reading_relation_integrity(gen_seeds, json_dir, testsets_dir):
     the flow guard that stops the name-form / dangling under-count recurring at the
     source; the disposition policy is ISSUES.md OQ-58, the stock view is
     cs_kernel_registry:cs_reading_relation_unresolved/4.
+
+    NOTE — ``cs_reading_relation_quarantine.json`` is a PER-GENERATION-RUN ARTIFACT
+    (only the edges unresolved in THIS run's gen_seeds); it is overwritten each run
+    and is NOT the live OQ-58 backlog. The live, corpus-wide backlog is the standing
+    census written by ``python/audits/reading_reference_linter.py`` (the non-gating
+    ``reading_reference_census.json`` step in run_pipeline) and the stock view above.
+    Do not read this JSON as "the remaining dangling edges."
     """
     quarantine = []
     for s in gen_seeds:

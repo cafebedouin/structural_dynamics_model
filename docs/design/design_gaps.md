@@ -358,8 +358,22 @@ acceptable/robust, not a reason to drop dims. Witness: the 5-vs-6 singleton tabl
 fingerprint dump. Open
 questions: **OQ-58**, **OQ-59**; related untyped-edge gap: **GAP-01**.
 
+**Sibling-layer corroboration (`cs_reading_relation`, OQ-58 cross-corpus census, 2026-06-20).** The
+bounded-not-open verdict extends to the committer-edge layer, split into two distinct invariants:
+- **Dangling RATE is bounded ~2-5% across independent lineages** (testsets_haiku 3.7%, testsets_flash
+  2.3%, archives/datasets/kernel_v1 4.8%) — a cross-lineage invariant; absolute counts (94-127) do
+  NOT scale with 700->3380 corpus growth.
+- **Defensible (in-degree>=2) COUNT ~40 is reproducible within a lineage** (haiku 39 ~= flash 41,
+  haiku∩flash = 39; same kernel population, second-model twin) but is NOT universal (kernel_v1 = 8, a
+  different kernel population; the tri-lineage common core is 1).
+- ⇒ the dangling space is bounded, not an open frontier. The LIVE testsets/ rate of 93.5% is a
+  *sparsity* artifact (1.03 readings/kernel, 97% singletons), NOT a frontier — it tracks kernel
+  sparsity, not minting. Witness: `audits/2026-06-20_oq58_cross_corpus_incompleteness/` (read-only
+  `census_driver.py` + saved output; selftest PASS).
+
 **Status:** Partially closed. Bounded-attractor basis analyzed 2026-06-02; typo repair done and the
-resolver keying ruled 2026-06-03 (items 3-4 above). **Remaining to close:** the resolver itself
+resolver keying ruled 2026-06-03 (items 3-4 above); `cs_reading_relation` sibling layer
+characterized as bounded 2026-06-20 (above). **Remaining to close:** the resolver itself
 (item 1) and its fail-closed consumers (item 2). Scripts above re-runnable on a fingerprint dump.
 **Drift framing held deliberately:** the post-saturation corpus is a *bounded state
 set*; whether change over it has memory (Markov vs higher-order) is an **open measurement** pending

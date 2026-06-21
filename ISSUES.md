@@ -2464,9 +2464,12 @@ Witnesses: `audits/2026-06-10_oq57_live_rewitness/` (FINDINGS.md + raw probe out
 **Ω-type:** Ω_P (content decision). **Disposition policy ruled 2026-06-02 (below); the per-edge
 missing-vs-typo-vs-noise sort is a later narrative-read pass, not a mechanical rule.**
 
-**Status:** partial — policy ruled; narrative-read pass run on the 13 forecloses (6 repaired); the residue is a
-**Priority:** 1
-**kernel-completeness** problem, not edge-patching — see the finding below.
+**Status:** mitigated — policy ruled (2026-06-02); cross-corpus census re-measured + the instrument
+wired as a non-gating run_pipeline step + backlog right-sized and generation deferred (2026-06-20,
+"CROSS-CORPUS CHARACTERIZATION" below). Residual is a deferred CONTENT decision + a standing-linter
+monitor (it's a kernel-completeness problem, not edge-patching), no longer awaiting a ruling.
+**Priority:** 3
+**Deps:** blocked_on_human oq58-corpus-identity-ruling
 **Origin:** Reading-axis obstruction build (OQ-54), 2026-06-02. Surfaced by the independent
 must-flag oracle when partitioning non-canonical `cs_reading_relation` targets.
 **Files:** authored testset `.pl` files; emitter `python/generate_constraint_pl.py:482`;
@@ -2623,8 +2626,61 @@ rename/merge must update the SCOPE manifest too (the ∩-live-edges pass caught 
 LINTER'S STANDING JOB, not "ignore."** `python/audits/reading_reference_linter.py` is the recurring
 referential-integrity + incompleteness check: run it as the corpus grows to (a) catch new dangling /
 non-canonical refs at the source, and (b) keep the in-degree split current so newly-corroborated tail
-items graduate into the defensible backlog. *(Candidate: wire it as a non-gating reporting step in
-`run_pipeline.py`.)*
+items graduate into the defensible backlog. *(DONE 2026-06-20: wired as the non-gating `reading_linter`
+step in `run_pipeline.py` `_phase_post_prolog`; writes `outputs/reading_reference_census.json` with
+manifest+corpus_hash. Witness: pipeline 47/47 OK, "163 dangling → 158 missing / 66 kernels (5 id≥2
+defensible) — NON-GATING".)*
+
+**CROSS-CORPUS CHARACTERIZATION + DEFER RULING (2026-06-20).** Full audit:
+`audits/2026-06-20_oq58_cross_corpus_incompleteness/` (read-only `census_driver.py` + saved output;
+linter selftest PASS). The 2026-06-05 reset stale-ified every count above; re-measured live + twin +
+archived corpora.
+
+- **Census (rate% = distinct-missing / cs_reading_relation edges):** LIVE testsets 92 files / 169
+  edges / 163 dangling / 158 missing / **93.5%**; testsets_haiku 960 / 2004 / 127 / 75 / **3.7%**;
+  testsets_flash 960 / 2008 / 101 / 47 / **2.3%**; archives kernel_v1 1106 / 1774 / 94 / 86 /
+  **4.8%**. (original_v5/v6/sotu author 0 committer edges — observer-only regime.)
+- **Why LIVE is 93.5% — sparsity, not a frontier:** the live corpus is 97% singleton kernels (89
+  kernels / 92 files, **1.03 readings/kernel**); each lone reading dangles edges to its 2–5
+  ungenerated declared siblings. Mature corpora run 2.90 r/kern (~3% dangling). Concrete witness:
+  `jewish_sovereignty_palestine__cultural_zionist_reading` authors 4 `coexists_with` edges — 1
+  resolves (`settler_colonial`), 3 absent.
+- **Regime swap (git, witnessed — corrects the earlier "kernel-completeness in testsets/" framing):**
+  the 06-13 rebuild pilots BUILT `testsets/` to **1000 files / 2.92 r/kern / ~3% dangling**
+  (steady-state); commit `0ccc03cf` then moved that reconciled corpus OUT into the twins
+  (`testsets_haiku`/`testsets_flash`, byte-intact at 960/960 today) and `testsets/` reverted to a
+  singleton topical working set (51 → 92). So LIVE is NOT mid-convergence — the reconciled ~3% corpus
+  exists, preserved in the twins; the live dir is a different regime that won't converge by time.
+- **GAP-07 / bounded-attractor answer (split):** dangling RATE is bounded ~2–5% across independent
+  lineages (haiku/flash/kernel_v1); defensible (id≥2) COUNT ~40 is reproducible WITHIN a lineage
+  (haiku 39 ≈ flash 41, haiku∩flash = 39) but NOT universal (kernel_v1 = 8, different population;
+  tri-lineage common core = 1). The dangling space is bounded, not an open frontier; the census
+  right-sizes the work (158 panic → ~40 real) without dissolving it.
+
+**RULING: instrument + characterize, DEFER content generation** (downgrade is NOT permanent parking —
+the ~40 are real; the linter's "tail graduates as corroborated" must be read, not filed). Quarantine
+surface = leave + document (no new writer). Two generate-backlogs recorded, **generation deferred**
+(independently of the corpus-identity flag below):
+1. **Durable defensible set = twin-reproducible id≥2 = 39 readings** (haiku ∩ flash; same kernel
+   population) — the backlog the census proved real; lives in the reconciled archive (twins).
+2. **Stream-relative set = live id≥2 = 5 readings / 3 kernels**, explicitly stream-relative:
+   `jewish_sovereignty_palestine` (liberal_nationalist / post_zionist / religious_zionist),
+   `press_reformation_causation` (technological_determinism), `zero_mathematical_status`
+   (number_reading). For deliberate kernel-completion on the live corpus.
+
+**Quarantine-surface honesty:** `prolog/cs_reading_relation_quarantine.json` is a PER-GENERATION-RUN
+artifact (last batch only), NOT the live backlog. The live, corpus-wide backlog is the linter census
+(`outputs/reading_reference_census.json`) / `cs_kernel_registry:cs_reading_relation_unresolved/4`.
+(Note also added at the writer, `agent/generate_kernel_corpus.py:validate_reading_relation_integrity`.)
+
+**CORPUS-IDENTITY FLAG (operator's to rule — `blocked_on_human`).** The reconciled 1000-file
+multi-reading corpus was moved OUT of `testsets/` into the twins at `0ccc03cf`; `testsets/` is now a
+singleton ingestion stream. The "accidental clobber" fear is falsified — the reconcile *preserved* the
+rebuild (twins byte-intact). The genuine open question is the FORWARD policy: is `testsets/` intended
+to be the active topical working set (twins = reconciled archive), or should the reconciled corpus be
+promoted back to "the live corpus"? This determines what "the live corpus" means for OQ-58 and other
+corpus-relative OQs. Flagged, NOT blocking (the plan is robust either way; the bound is witnessed in
+the twins).
 
 ---
 
