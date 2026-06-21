@@ -4688,161 +4688,56 @@ construction, so it cannot create that misalignment class), OQ-106.
 **Ω-type:** Ω_C (design choice — what the legacy beneficiary fact may evidence once an authored
 receipt surface exists; operator's ruling).
 
-**Status:** open — homed 2026-06-10; known-interference item for the OQ-92 step-3
+**Status:** resolved — 2026-06-10/11. The fight is defused: the per-site decision rule was RULED
+(positive control passed — real sites sorted into BOTH buckets: `separability_factor` FORBIDDEN,
+`natural_law_without_beneficiary` + NL gates SOUND), and the escalated benignity family (Q2, three
+rows) was RULED **GATE** and the gates landed in live code with two-sided Stage-D controls. Closed
+via the OQ-92 Stage-D landing (OQ-92 resolved). The former `blocked_on_human`
+operator-benignity-certification gate is DISCHARGED — all three rows ruled. **Witnesses:**
+`audits/2026-06-10_oq92_step3_preregistration/` (Q2 ruling in `PREREGISTRATION.md:152-180`;
+`stage_d_controls.out`: CI_Rope certified → constructed_low_extraction under asserted capture →
+certified, verified restore = the row-2 captured-stops-certifying witness),
+`audits/2026-06-10_oq94_readsite_pass/` (12-file/33-site census + per-site sort),
+`audits/2026-06-10_oq94_row2_cirope_reachability/` (row-2 reachability control, 7/7 on a fully
+beneficiary-bearing live-corpus population — interception affirmatively killed). **Gates in code,
+each tagged to its OQ-94 row:** `drl_core.pl:373` (scaffold `\+ constraint_captured`),
+`signature_detection.pl:1112/1235/1334` (CI_Rope + `pure_coordination`),
+`maxent_classifier.pl:175/194` (`boolean_spec(scaffold, constraint_captured, forbidden)` mirror).
+The capture read consumes authored `gain_flow` (fabrication-banned, `data_repair.pl:122-131`,
+fail-closed), NOT the fabricated `constraint_beneficiary` — so the no-op-on-current-corpus state is
+the designed fail-closed behaviour (Pattern 5), not absence-satisfies-gate. Residual
+`data_repair.pl:140` beneficiary fabrication is OQ-93/OQ-86 shim-family ("do not extend it"), NOT
+OQ-94 debt. Compress-on-close: the operative per-site rule + benignity disposition are kept below;
+the investigation narrative (read-site pass mechanics, probe-scope truncation lesson, the
+witnessed-twice scaffold misfire) is in git history.
 **Priority:** 1
-**Deps:** blocked_on_human operator-benignity-certification
-preregistration. Per-site decision rule RULED 2026-06-10 (Read-site pass block below).
-**Read-site pass COMPLETE 2026-06-10** (`audits/2026-06-10_oq94_readsite_pass/`): 12 consumer
-files (the prior "seven-consumer list" was `head -15`-TRUNCATED — concealed `drl_core.pl:346,373`,
-the classification cascade itself, plus `maxent_classifier` and `omega1_audit`); rule sorted the
-live surface into SOUND (4 NL/FSM mountain-likeness sites) and FORBIDDEN (tangled_rope cell,
-decay detection, separability, NAF-voids) plus raw surfaces, and isolated ONE unsorted family →
-**ESCALATED to operator: benignity certification** (`drl_core:346` scaffold clause + maxent
-scaffold spec + `signature_detection:1019` CI_Rope gate + `:1122` subtype) — contains the
-prototype's witnessed wrong-direction mechanism; gate-on-not-captured there is plausibly correct
-but is a third question the rule doesn't decide. Step-3 preregistration therefore carries TWO
-operator questions: diffuse-gate tolerance + the benignity-family ruling — **presented as THREE
-evidenced rows permitting a split ruling (format note, operator 2026-06-10): the family is
-unified by its question, not its evidence — `drl_core:346` arrives with the prototype's witnessed
-misfire on the gate's side; the CI_Rope gate and pure_coordination subtype have no equivalent
-witness yet; the format must not prejudge family-atomicity.** Also found:
-`constraint_bridge.pl:96` is the first gain_flow-migration candidate (collects extraction actors
-via benefits-from); `data_repair.pl:124-168` FABRICATES beneficiary facts from metrics on the
-DR-AUDIT path (OQ-93 circularity hazard — high extraction manufactures a beneficiary which feeds
-the coordination read).
 
-**The behavior (witnessed twice).** `has_coordination_function/1` is one clause:
-`constraint_beneficiary(C, _)` (`narrative_ontology.pl:303-304`) — the fact that *names a
-beneficiary* is consumed as evidence of *benign coordination*. Witnessed pushing capturer seats
-the wrong direction: (1) the 06-09 capture control ("the only authored fact in the vicinity
-actively points the wrong direction for capture,"
-`audits/2026-06-09_capture_axis_cut_control/FINDINGS.md:83`); (2) the 2026-06-10 step-2 prototype:
-both capturer seats (cap_a/capturer_a, captured_cheap_f/capturer_f) computed
-final_type=**scaffold** (`audits/2026-06-10_gain_flow_prototype/gain_flow_prototype.out`) — the
-only production-engine behavior the prototype touched, and it opposes the capture surface's
-purpose (keeping captured constraints snare-flavored).
+**Operative ruling — the per-site decision rule (RULED 2026-06-10).** No global exclusion between
+capture and coordination. `has_coordination_function/1` (one clause: `constraint_beneficiary(C,_)`,
+`narrative_ontology.pl:303`) may be gated on not-captured WHERE the read's question is
+mountain-likeness ("holds without enforcement"); gating is FORBIDDEN where the read needs
+coordination-despite-extraction (the tangled_rope/snare-adjacent cell — `separability_factor`,
+`drl_boltzmann_analysis.pl:110-125`). The rule derives from tangled_rope's definition (capture and
+coordination co-occur by construction), independent of the inverted Boltzmann anchor that provoked
+it. Classification-path adjudication is RULE-APPLICATION over the read-site pass output, not open
+judgment.
 
-**Why this goes live as a fight at step 3, not later.** The consumer surface is wide:
-`drl_boltzmann_analysis.pl:111-123` (`separability_factor` inside `reformability_score` —
-reform-value scoring of coordination/extraction CO-OCCURRENCE; MISLABELED in this entry's first
-version as "the CI/coordination side of the Boltzmann test — the FCR axis," corrected 2026-06-10
-on read-site inspection — the true Boltzmann factorization module `boltzmann_compliance.pl`
-consumes NEITHER fact of this family, a meaningful absence: the probe positive-fired on 7 other
-files), `transition_paths.pl:35,82,164`, `drift_events.pl:125,203`,
-`logical_fingerprint.pl:176,226,444`, `invertibility_analysis.pl:120`, `gap_diagnostic.pl:135`,
-`cs_pattern_detection.pl:360`. And the collision is structural, not incidental: the OQ-83 Phase-A
-compiler derives `constraint_beneficiary/2` from stakeholder role `beneficiary`, so every
-generated capturer seat (role beneficiary + authored gain_flow) automatically also feeds the
-coordination read. Once step 3 wires `seat_captures` into classification, the same constraint
-carries a snare-direction capture call and a scaffold-direction coordination call from the same
-authored signal family — two live engine behaviors making opposite calls on the same constraints.
+**Operative disposition — the benignity family (Q2, three rows, all GATE).**
+- Row 1 `drl_core.pl` scaffold clause: GATE — misfire-witnessed (the step-2 prototype split
+  capturer seats to scaffold), two-sided control pinned, maxent mirror same-commit. The P≠NP
+  precedent does NOT apply: the gate reads authored `gain_flow` capture, not beneficiary presence.
+- Row 2 `signature_detection.pl:1019` CI_Rope: GATE after the reachability control — reachability
+  witnessed (gate runs on an all-beneficiary population, interception killed) + the misfire witness
+  produced in the Stage-D two-sided control. Fail-closed posture: gating now means the worst case is
+  a no-op clause; NOT gating would fail-open on the highest-stakes read during the least-trusted
+  data's first pass.
+- Row 3 `signature_detection.pl:1122` `pure_coordination` subtype: GATE, riding with row 1
+  (commentary-grade, consistency-with-row-1).
 
-**Probe scope (2026-06-10 — so the per-consumer-diffs obligation has a list it can be complete
-against; CORRECTED same day).** The seven-consumer list above = one grep for
-`has_coordination_function` over top-level `prolog/*.pl` (non-recursive; subdirs excluded) —
-**and `| head -15`, which this scope statement originally failed to name: the list was
-truncation-bounded, concealing `drl_core.pl:346,373` (the classification cascade), `maxent_
-classifier`, `omega1_audit`, and further sites. Untruncated census = 12 files / 33 sites
-(`audits/2026-06-10_oq94_readsite_pass/census_raw.txt`). Lesson: a probe-scope statement must
-name its output limits (head/-m/pagination), not only predicate and glob.** The deriving fact's own direct
-consumers are a SECOND, WIDER surface, enumerated separately: `constraint_beneficiary` hits 15
-engine files (`data_repair` 10, `tangled_rope_examples` 8, `signature_detection` 5 — the FSM
-agent-beneficiary gate, `constraint_indexing` 4, `logical_fingerprint` 3, `drl_purity_network` 3,
-`global_delta_report` 2, `cs_pattern_detection` 2, plus 1 each: `report_generator`, `json_report`,
-`invertibility_analysis`, `drl_core`, `drl_boltzmann_analysis`, `constraint_instances`,
-`constraint_bridge`) and two test files (`tests/test_agent_beneficiary.pl`,
-`tests/test_cs_pattern_detection.pl`). These are file-level hit counts including declarations and
-comments, NOT verified read-sites — read-site verification is owed at adjudication time. Any
-predicate derived from either surface beyond `has_coordination_function` is unenumerated.
-Breadth option (operator in-session note, 2026-06-10 CC session — NOT a review-thread item; the
-review flagged this provenance distinction explicitly): if adjudication evidence needs more than
-the live corpus (n per manifest, currently small), `prolog/archives/datasets/` can be overlaid
-via `corpus_path` for cross-corpus sweeps (the OQ-89 liveness sweep pattern, ~5,200 stories) —
-fit for measuring coordination-read liveness/scaffold-push prevalence and for per-consumer
-behavioral diffs on the LEGACY side, and for a mass absent-register witness (archive stories
-predate the stakeholder layer: no `stakeholders[]`, no `gain_flow`, so the entire archive must
-land fail-closed). NOT fit for exercising the new surface itself — pre-reset regime, OQ-70
-bait-confound caveats apply to any signature-prevalence read. Spike requirement (the case-7-via-
-case-2 rule at scale): a mass-silence sweep witnesses fail-closed ONLY if something in the SAME
-run demonstrably fires through the IDENTICAL read — a spiked story with an injected `gain_flow`
-fact, or live-corpus constraints run through the same harness; without the in-run positive,
-"entire archive lands absent" is byte-identical to a sweep that never looked.
-
-**Read-site pass — first results (2026-06-10, witnessed; provoked by a review premise that
-inverted on inspection).** A per-site decision rule was proposed in review: sort each read-site by
-*which question the read asks* — mountain-likeness ("holds without enforcement") → capture-gating
-sound, arguably correct semantics; coordination-despite-extraction (the tangled_rope/snare-adjacent
-cell) → gating forbidden, split signal required. The rule is OPERATIVE — the first site sorted by
-its intent-label flipped when the clauses were read:
-- `drl_boltzmann_analysis.pl:110-125` (`separability_factor`): asks whether coordination and
-  extraction CO-OCCUR (reform value). Clause 1 fires exactly on the captured-coordination cell
-  (coordination + extraction + beneficiary + victim → 0.9 "separable, worth reform"); gating
-  `has_coordination_function` on not-captured would demote captured constraints to clause 2
-  ("only extraction, nothing to preserve," 0.3). Sorts **FORBIDDEN** — the opposite of what the
-  module name suggests. (Off the dr_type path: reformability is consumed at scaffold-need /
-  surgical-reform sites and `dirac_classification.pl`.)
-- `drl_core.pl:285-288` (`natural_law_without_beneficiary`): literally `emerges_naturally` +
-  `\+ requires_active_enforcement` + `\+ constraint_beneficiary` — the holds-without-enforcement
-  read; beneficiary-existence already disqualifies mountain certification. Strengthening to
-  capture sorts **SOUND**.
-- `signature_detection.pl` NL gates (`count_power_beneficiaries` :211-223, the OQ-43 fail-close):
-  mountain-likeness, same sort. And :102-108 is an IN-ENGINE witness that benefits-from ≠
-  receives-extraction: P≠NP carries incidental `constraint_beneficiary` facts (authored for
-  perspectival analysis) and needed a special natural-law-via-emergence interception to avoid
-  CI_Rope misclassification — the engine already met the conflation and coded around it ad hoc.
-- The CLASSIFICATION-PATH consumer is witnessed live in the step-2 prototype output
-  (`gain_flow_prototype.out`): seats identical in metrics, role, and power split **scaffold**
-  (capturer_a, capturer_f — `constraint_beneficiary` present) vs **naturalized** (bystander_b,
-  bystander_g, capturer_h — absent). That scaffold-direction read on the dr_type path is the
-  fight's live site and the preregistration's classification-path slice.
-**RULED (2026-06-10; recording delegated by operator to CC after the review's discharge
-argument, and exercised):** the per-site decision rule IS the adjudication frame — no global
-exclusion between capture and coordination; per-site gating permitted (and may be correct) where
-the read's question is mountain-likeness, forbidden where the read needs
-coordination-despite-extraction. The hold was discharged because the rule's justification never
-rested on the inverted Boltzmann anchor: it derives from tangled_rope's definition (capture and
-coordination co-occur by construction), which is untouched, and the anchor's inversion was
-produced BY the rule operating on corrected facts — a site's bucket flipped, not the buckets.
-Positive control passed: the rule has sorted real sites into BOTH buckets (separability_factor →
-forbidden; natural_law_without_beneficiary + the NL gates → sound) — a criterion sorting
-everything one way would be doing no work. Consequence: the classification-path adjudication
-becomes RULE-APPLICATION over the read-site pass's output, not open judgment; the step-3
-preregistration carries ONE question-to-operator (the diffuse-gate tolerance), plus escalation of
-only those sites the rule does not cleanly sort. Under the rule the
-two resolution options below stop being rivals: per-site sorting likely yields the gate at
-mountain-likeness sites and the split where coordination-despite-extraction is at stake, which
-shrinks the `gain_flow` load-bearing surface relative to all-split — relevant to how tight the
-diffuse tolerance must be.
-
-**Resolution question (unruled).** What may `constraint_beneficiary/2` evidence once `gain_flow`
-exists? Candidate shapes (sketched, not asserted): gate the coordination read on not-captured (a
-beneficiary that *receives the extraction* is not coordination evidence); or split
-benefits-from-coordination vs receives-the-extraction into distinct reads. Adjudication is the
-operator's; the distinction-check discipline (build_discipline rule #2) applies before any fold,
-and the wide consumer surface means any change owes per-consumer diffs (rule #3).
-**Cost asymmetry the step-3 preregistration drafter must know (operator note, 2026-06-10): the
-two options do not cost the same and do not expose the same surface area.** The split option is
-half-built — beneficiary-role already encodes benefits-from-coordination and authored `gain_flow`
-encodes receives-the-extraction, so the authored fact exists and the question reduces to which
-consumers read which. That makes it cheaper than it looks AND higher-stakes: choosing it makes
-`gain_flow` load-bearing across the consumer surface above instead of one capture read, raising
-the diffuse-audit gate's stakes proportionally. The gate-on-not-captured option touches one
-clause but folds capture into a coordination read.
-
-**Sequencing (operator ruling, 2026-06-10):** homed BEFORE the OQ-92 step-3 build proceeds; the
-step-3 preregistration must name this OQ as a known-interference item so the first corpus run
-does not "discover" a fight the prototype already witnessed. Cross-refs: OQ-92 (Rulings block +
-step-3 preconditions), OQ-90 (snare/piton capture split), GAP-10, OQ-83 (role-derived
-beneficiary emission).
-
-**Cross-ref note (2026-06-10, second external-review batch).** The XPrize reviewer's "snare,
-right verdict wrong wire" critique is the who-bears-vs-who-benefits axis homed here: the engine
-computed `competition_timeline_pressure` snare from authored `prize_pressure`/`no_exit`, but the
-$101M flows to teams while trial subjects bear the risk — coercion-borne and benefit-flow point
-at different parties. The critique is otherwise authoring/synthesis fidelity (the essay itself
-surfaced the better "right to try" mechanism the engine did not compute); the engine-relevant
-residue is exactly this who-bears/who-benefits separation. See
-`audits/2026-06-10_external_review_xprize/`.
+**Cross-refs:** OQ-92 (gain_flow build + Stage-D landing that closes this), OQ-90 (snare/piton
+capture split, unblocked on the built surface), OQ-93/OQ-86 (`data_repair` beneficiary fabrication
+— separate hazard), GAP-10 (closed), OQ-83 (role-derived beneficiary emission). XPrize who-bears-vs-
+who-benefits residue: `audits/2026-06-10_external_review_xprize/`.
 
 ## OQ-95 — giant_component network counts phantom nodes: dangling `affects_constraint/2` targets enter the component BFS (118.9% of network on the live corpus; 259.9% on original_v6)
 

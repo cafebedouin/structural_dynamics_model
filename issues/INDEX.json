@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "33fa5b63f8ae2da12c2c18b6e54c508d7186cdac",
+    "store_version": "6ae51b27eddc3ee83b914e315ccc35b3cb08b3ee",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-21T07:29:49"
+    "generated_at": "2026-06-21T07:34:27"
   },
-  "issues_sha": "662da2d673905c1f049639a5e79d4881ef4da4efd4e3366d9f59a5aa93d5506d",
+  "issues_sha": "7498c26704e087a42c3878fabacbb437167b6385e92e6cd402f13703475bfacb",
   "n_entries": 171,
   "active_token_set": [
     "investigating",
@@ -12,10 +12,10 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 73,
+    "resolved": 74,
     "mitigated": 9,
     "partial": 6,
-    "open": 77,
+    "open": 76,
     "disposed": 3,
     "future": 3
   },
@@ -432,25 +432,6 @@
       "mentioned_in": [
         "OQ-83",
         "OQ-90"
-      ]
-    },
-    {
-      "id": "OQ-94",
-      "status": "open",
-      "priority": 1,
-      "summary": "`constraint_beneficiary/2` reads as benign coordination engine-wide; once the gain-flow surface lands, the same fact-family makes opposite-direction calls on captured constraints",
-      "deps": [
-        "blocked_on_human operator-benignity-certification"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-43",
-        "OQ-70",
-        "OQ-83",
-        "OQ-89",
-        "OQ-90",
-        "OQ-92",
-        "OQ-93"
       ]
     },
     {
@@ -1775,6 +1756,24 @@
         "OQ-102",
         "OQ-105",
         "OQ-106"
+      ]
+    },
+    {
+      "id": "OQ-94",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "`constraint_beneficiary/2` reads as benign coordination engine-wide; once the gain-flow surface lands, the same fact-family makes opposite-direction calls on captured constraints",
+      "deps": [],
+      "cross_refs": [
+        "OQ-90",
+        "OQ-92"
+      ],
+      "mentioned_in": [
+        "OQ-83",
+        "OQ-86",
+        "OQ-90",
+        "OQ-92",
+        "OQ-93"
       ]
     },
     {
