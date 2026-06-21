@@ -1,8 +1,20 @@
 # OQ-119 — Frozen pre-registration: does feeding move the JOIN structure?
 
-**Status: FROZEN pre-spend. Committed 2026-06-21, before any fed-arm draw exists.**
-Edits after the first draw invalidate the pre-registration (escalate-don't-redraw: a graded
-re-test is a NEW pre-registered test with its own frozen prediction, never a retrofit).
+**Status: FROZEN pre-spend. Re-frozen 2026-06-21 for the THREE-AXIS generator, before any draw
+exists.** Edits after the first draw invalidate the pre-registration (escalate-don't-redraw: a
+graded re-test is a NEW pre-registered test with its own frozen prediction, never a retrofit).
+
+**Why re-frozen (the verification finding that reshaped the spec).** The first freeze specified the
+single-story `cohort_replicate_batch` generator. Verification (the operator's "if it passes, do the
+spend" gate) showed that path authors **no `cs_` facts** — a regenerated single story carries
+observer + temporal only (witnessed: `audits/2026-06-13_oq117_within_arm_proxy/fed_arm/*.json` have
+zero `cs_kernel_id` / `cs_reading_relation`). The committer axis — the HIGH-information axis where the
+Theorem-7 tripwire lives (Claude Web's point 2) — would be **structurally dead** in those arms,
+recreating the ≥1.5-axis vacuity OQ-119 forbids. The committer axis is born only on the
+**kernel-generation path** (`generate_kernel_corpus` no-scope / `c-orchestrator` scope), which authors
+`cs_structure.reading_relations` per reading (`generate_constraint_pl.py:666`; all 960 haiku + 69/92
+live `testsets/` carry the edges). This spec therefore regenerates **whole multi-reading kernels**, so
+all three axes — observer, committer, temporal — are live in BOTH arms.
 
 This file is the discriminating control for the spend that answers OQ-119. The substrate gate
 (Gate 0) is **witnessed open** (see `GATE0_FINDINGS.md`): observer + axiom + temporal are each
@@ -42,72 +54,96 @@ effect must clear it to count as "feeding moved the join."
 
 The Phase-1 controls bound only the comparator's *numerical* resolution (linear to ~5e-4) and its
 *between-reading* sensitivity (within-kernel, two different readings: scalar ≈ 0.27). Neither is
-the within-reading redraw floor. **Therefore the spend protocol MUST measure the floor**: for each
-story, draw the withheld arm **≥3 times** (gives a withheld-vs-withheld distance distribution) in
-addition to the fed arm. The threshold below is defined relative to that measured distribution —
-never a fabricated constant.
+the within-kernel redraw floor. **Therefore the spend protocol MUST measure the floor**: for each
+kernel, regenerate the withheld arm **3×** (gives a withheld-vs-withheld distance distribution per
+axis) in addition to the fed arm. The decision rule below is defined relative to that measured
+distribution (median fed-distance vs the floor's max) — never a fabricated constant.
 
-## Pre-registered discriminating prediction (per axis, frozen)
+## The frozen decision rule (k is fixed NOW — Claude Web point 1)
 
-Let `F` = the set of withheld-vs-withheld redraw join-distances (the floor distribution), and
-`d_fed` = join_distance(fed, withheld) for the same story.
+The measurement is **per axis, per kernel**. For each kernel and each axis A ∈ {observer, committer,
+temporal}:
+- regenerate the kernel **3× withheld** and **3× fed**; for each draw, export its three-axis join
+  record (`export_oq119_join_records.pl`) and aggregate to a kernel-level per-axis vector.
+- `F_A` = the **withheld-vs-withheld** pairwise axis-distances (3 draws → 3 pairs). This is the
+  generation-stochasticity floor for axis A.
+- `D_A` = the **fed-vs-withheld** pairwise axis-distances (3×3 = 9 pairs). Same metric as `F_A`
+  (both pairwise — NOT fed-vs-centroid; the earlier centroid framing is retired as a scale mismatch).
+
+**Frozen statistic, no floating multiplier:** axis A **moved** for a kernel iff
+> **median(D_A) > max(F_A)** — the typical fed-vs-withheld distance exceeds the *worst-case*
+> withheld noise. k is pinned: the comparison is median-vs-max, chosen now, n=3-robust, with no
+> constant to tune post hoc. (max(F_A) is the conservative floor at n=3 where a percentile is
+> fragile.) A categorical axis (committer `obstruction_status`) uses the same rule with distance =
+> "category differs" (1/0): it moved iff fed flips the category in the **majority** of fed-vs-withheld
+> pairs while the withheld draws agree among themselves (max(F)=0).
+
+## Per-axis verdict with observer DE-WEIGHTED (Claude Web point 2)
+
+A single summed scalar is **not** used for the headline — the labile observer axis (moves on
+ε/directionality with no re-authored stakeholder, per the Gate-0 stakeholder caveat) could carry a
+"join moved" that is only ε wobble. Instead:
+
+- **HIGH-information axes (can carry the headline):** committer `obstruction_status` / divergence-scope
+  set, temporal **slope-sign flips**, and verdict-join **grade/alert** changes.
+- **SOFT axis (reported, cannot carry the headline alone):** observer χ spread, and temporal rate
+  *magnitude* without a sign flip.
 
 | Outcome | Definition (frozen) | Reading |
 |---|---|---|
-| **JOIN MOVES** | `d_fed > P95(F)` AND the moved-field breakdown is non-empty and **stable across fed redraws** (same axis/field flagged ≥2/3 fed draws) | Feeding shifts the cross-examination even where type holds — OQ-119 answered YES; the seat theorem's "feeding re-seats the reading" is witnessed at the join. |
-| **JOIN INVARIANT** | `d_fed ≤ P95(F)` for ≥80% of stories | Feeding leaves the join within generation noise — OQ-119 answered NO; type-invariance (OQ-117) extends to the full join. |
-| **PARTIAL / per-axis** | `d_fed > P95(F)` on a *proper subset* of the three axes, stable across redraws | Feeding moves SOME axes (name them) and not others — the engine-characterization is the per-axis partition, reported as such, NOT collapsed to a single yes/no. |
+| **JOIN MOVES** | ≥1 **HIGH-information** axis moved (rule above), stable across the 3 fed draws | Feeding shifts the cross-examination even where type holds — OQ-119 = YES. |
+| **JOIN INVARIANT** | No HIGH-information axis moved on ≥80% of kernels | Feeding stays within generation noise on the axes that carry information — OQ-119 = NO; OQ-117 type-invariance extends to the informative join. |
+| **SOFT-ONLY / per-axis** | Only the observer/rate-magnitude SOFT axis moved | Feeding nudges ε but does not move the cross-examination — reported explicitly as soft, NOT as "join moved." |
 
-**Per-axis sub-predictions (stated before the run so each outcome has a meaning):**
-- **observer**: feeding a foundational/mountain claim is predicted to *compress* the high-power
-  seats toward the analytical seat (the claim's "this is how it is" pulls institutional χ up). A
-  significant move here = `d_fed.observer > P95(F.observer)`.
-- **axiom**: feeding is predicted to be MOST likely to move the **verdict-join alert set /
-  signature grade** (a fed claim can trip a false-foundational signature) and LEAST likely to move
-  the **obstruction status** (committer edges are authored `cs_reading_relation`, observer-blind by
-  construction — Theorem 7 / detection-independence; a fed observer-side claim should NOT re-author
-  sibling foreclosure edges). **If obstruction_status moves under feeding, that is a detection-
-  independence violation and a finding in its own right.**
-- **temporal**: feeding is predicted to move slope *magnitudes* (rates) more than slope *signs*
-  (a fed claim nudges ε but rarely reverses a trajectory's direction).
+**Per-axis sub-predictions (frozen before the run so each outcome has a meaning):**
+- **observer (soft)**: feeding a foundational claim is predicted to compress high-power seats toward
+  analytical (institutional χ up). Expected to move — and that movement is LOW-information by itself.
+- **committer (high-info)**: `cs_reading_relation` edges are observer-blind by construction (Theorem
+  7 / detection-independence). Prediction: feeding an observer-side foundational claim should **NOT**
+  move `obstruction_status`. **A committer move IS a Theorem-7 violation and a top-line finding** —
+  and it is now *measurable* because the whole kernel (its sibling edges) is regenerated in both arms.
+- **temporal (mixed)**: feeding predicted to move rate *magnitudes* (soft) more than slope *signs*
+  (high-info); a sign flip would be a genuine trajectory-direction change.
 
-## Pre-registered set (frozen)
+## Pre-registered set (FROZEN — all readings, no TBD)
 
-Drawn from the Gate-0 joint cell (`g00_roster_output.txt`), choosing kernels that span both
-obstruction statuses and a range of topics, matched to the OQ-117 fed-claim idiom (foundational/
-mountain claim is the injected hypothesis):
+Five kernels from the Gate-0 joint cell spanning both obstruction statuses; seeds frozen in
+`audits/2026-06-21_oq119_gate0/oq119_seed_subset.json` (16 reading seeds from the rebuild pool):
 
-1. `acceptable_risk_energy` (licensed_plurality, 3 readings) — fed reading: `__expected_value_dominant`
-2. `westphalia_sovereignty` (real_closure, 3 readings) — fed reading: `__absolute_non_intervention`
-3. `woman_category` (real_closure, 3 readings) — fed reading: `__sex_biology_reading`
-4. `ai_governance_legitimacy` (real_closure, 3 readings) — fed reading: TBD-frozen-at-spec-time
-5. `waitangi_sovereignty_allocation` (licensed_plurality, 3 readings) — fed reading: TBD-frozen-at-spec-time
+1. `acceptable_risk_energy` (licensed_plurality) — readings: catastrophic_tail_dominant,
+   expected_value_dominant, option_value_preserving
+2. `westphalia_sovereignty` (real_closure) — readings: absolute_non_intervention,
+   conditional_responsibility, graded_sovereignty
+3. `woman_category` (real_closure) — readings: gender_identity_reading,
+   intersex_accommodation_reading, sex_biology_reading
+4. `ai_governance_legitimacy` (real_closure) — readings: democratic_pluralist_reading,
+   magisterial_subsidiarity_reading, market_libertarian_reading, technocratic_optimization_reading
+5. `waitangi_sovereignty_allocation` (licensed_plurality) — readings: crown_sovereignty_reading,
+   partnership_reading, rangatiratanga_reading
 
-(The two TBD readings must be frozen into this file BEFORE the spec script is run; leaving them
-open here is the one permitted completion, and it must happen pre-draw.)
+**Fed injection (frozen idiom).** Whole-kernel regeneration; into EVERY reading's generation task,
+append the foundational claim in the OQ-117 idiom: *"AUTHORIAL FRAMING (fed hypothesis): the author
+asserts this constraint is a natural / foundational feature of the world (claim type: mountain).
+Author the story consistent with that framing."* The withheld arm appends nothing. This is the only
+arm difference (regime otherwise identical: same model, temperature, prompt, schema, seeds).
 
-## Spend specification (DO NOT RUN — awaits operator spend-go)
+## Spend specification
 
-- **Driver**: reuse `audits/2026-06-13_oq117_within_arm_proxy/oq117_spend_driver.py` structure
-  (imports `cohort_replicate_batch.py` / `story_generator_base.build_prompt_parts`; Batch API +
-  prompt-cache). New output dir `audits/2026-06-21_oq119/{withheld,fed}/`. Draws are PROBE
-  ARTIFACTS — none join the live corpus.
-- **Arms per story**: withheld ×3 (floor) + fed ×3 (effect + stability) = 6 draws/story × 5
-  stories = **30 draws** — the same draw count as the OQ-117 two-arm spend that ran (`dcfaea97`).
-  Priced off that empirical model (sonnet-4-5, Batch API $1.50/$7.50 per MTok, prompt-cached 19K
-  prefix, ~6K output/draw, output-dominated at ≈$0.045/draw): **≈$1.5 cached, ≈$2.6 cache-cold —
-  call it ~$2 total.** Dollars are negligible; the real costs are the small fed-arm seed-spec code
-  change and the analysis/witnessing time. Confirm against the live OQ-117 batch log before quoting.
-- **Pipeline**: a full `run_pipeline.py` per draw is NOT required for the join record — load each
-  draw's `.pl` as a `corpus_path` overlay and export directly via
-  `prolog/export_oq119_join_records.pl` (avoids 30 serialized OQ-77 pipeline passes). Feed pairs to
-  `python/audits/oq119_join_diff.py`. Run a full pipeline only if a downstream artifact needs it.
-- **Read-out**: `F` = the 3·(3 choose 2)=… withheld-pair distances per story; `d_fed` = each fed
-  draw vs the withheld centroid. Apply the frozen table above. Write `RESULTS.md` citing the
-  per-story per-axis distances; the engine adjudication is blind to this prediction file until
-  after the read (no post-hoc threshold tuning).
+- **Driver**: `python/audits/oq119_spend_driver.py` — reuses `generate_kernel_corpus`
+  `build_cached_messages` / `process_batch_results` / `stamp_kernel_linkage` (NOT a fork; only the
+  fed-append, the 3-draw loop, and the `{withheld,fed}` output dirs differ). Anthropic Batch API +
+  prompt-cache. Output `audits/2026-06-21_oq119/{withheld,fed}/`. Draws are PROBE ARTIFACTS — none
+  join the live corpus.
+- **Draw count**: 16 readings × 2 arms × 3 draws = **96 generations**. Output-dominated
+  (~6K out/draw × $7.50/MTok ≈ $0.045/draw) → **≈ $4.3 + cached input ≈ $4.5–6 total.** ~2–3× the
+  retired single-story estimate because whole multi-reading kernels (16 readings, not 5 stories) are
+  regenerated — the price of a live committer axis. Confirm via `--dry-run` before submitting.
+- **Read-out**: per kernel, load each draw's regenerated reading set as a `corpus_path` overlay
+  (no full `run_pipeline` needed), export join records, compute `F_A` / `D_A` and apply the frozen
+  rule above per axis. Write `RESULTS.md` citing per-kernel per-axis `median(D_A)` vs `max(F_A)`; the
+  adjudication is blind to this file until after the read (no post-hoc tuning).
 
-## STOP
+## STOP / GO
 
-This is the spend-go gate. The fed-arm LLM spend is the operator's seat. Phase 1 + Phase 2 are
-complete and witnessed; the next forward move is the operator's ruling to spend (or not).
+Spend-go is the operator's seat. This file is the frozen instrument; a `--dry-run` (no cost) confirms
+the 96-generation plan and price before any submission.
