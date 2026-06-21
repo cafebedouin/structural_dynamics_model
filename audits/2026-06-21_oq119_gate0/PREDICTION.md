@@ -121,11 +121,22 @@ Five kernels from the Gate-0 joint cell spanning both obstruction statuses; seed
 5. `waitangi_sovereignty_allocation` (licensed_plurality) — readings: crown_sovereignty_reading,
    partnership_reading, rangatiratanga_reading
 
-**Fed injection (frozen idiom).** Whole-kernel regeneration; into EVERY reading's generation task,
-append the foundational claim in the OQ-117 idiom: *"AUTHORIAL FRAMING (fed hypothesis): the author
-asserts this constraint is a natural / foundational feature of the world (claim type: mountain).
-Author the story consistent with that framing."* The withheld arm appends nothing. This is the only
-arm difference (regime otherwise identical: same model, temperature, prompt, schema, seeds).
+**Fed injection (frozen idiom — parties held fixed).** Whole-kernel regeneration; into EVERY
+reading's generation task, append the foundational claim AND an explicit instruction to still author
+all parties: *"AUTHORIAL FRAMING (fed hypothesis): the author asserts this constraint is a natural /
+foundational feature of the world (claim type: mountain). Author consistent with that framing.
+IMPORTANT: still author ALL affected parties — beneficiaries/victims and the matching stakeholders[]
+— exactly as the schema requires; do NOT invoke the mountain no-parties exemption."* The withheld arm
+appends nothing.
+
+**Why parties are held fixed (confound closure, 2026-06-21).** A bare "mountain" fed claim overlaps
+the schema's documented no-parties exemption (OQ-149 `allOf[0]`; gravity has no parties). Letting the
+fed arm shed parties would make fed-arm coverage loss *itself* the effect, and would change the join
+for reasons upstream of the engine. Holding parties fixed makes the ONLY arm difference the asserted
+claim, so the resulting authored-mountain-with-parties is exactly the seat divergence
+(`MOUNTAIN_METRIC_CONFLICT`) the join is meant to measure. The schema/prompt are UNCHANGED (the OQ-149
+exemption is deliberate and interlocks with OQ-83's omit-vs-authored-empty Pattern-5 guard — not
+touched).
 
 ## Spend specification
 
@@ -134,11 +145,12 @@ arm difference (regime otherwise identical: same model, temperature, prompt, sch
   fed-append, the 3-draw loop, and the `{withheld,fed}` output dirs differ). Anthropic Batch API +
   prompt-cache. Output `audits/2026-06-21_oq119/{withheld,fed}/`. Draws are PROBE ARTIFACTS — none
   join the live corpus.
-- **Draw count**: 16 readings × 2 arms × 3 draws = **96 generations**. The kernel generator runs
-  **Haiku** (`GEN_MODEL`, batch $0.50/$2.50 per MTok), not Sonnet — output-dominated
-  (~6K out/draw × $2.50/MTok ≈ $0.015/draw) → **≈ $1.5 total** (`--dry-run` witnessed: $1.44 output
-  + ~$0.07 cached input, real lower under prompt-cache). Cheaper than a single-story Sonnet spend
-  despite 96 draws, because the kernel path is a Haiku model.
+- **Draw count**: 16 readings × 2 arms × 3 draws = **96 generations**. Model overridden to **Sonnet**
+  (`claude-sonnet-4-5`, batch $1.50/$7.50 per MTok) for the duration of this run — the Haiku default
+  intermittently drops the schema-required `stakeholders[]` (OQ-149 gate fires loud → coverage holes;
+  a first Haiku pass left only 2 kernels at full 6-draw coverage). Output-dominated (~6K out/draw ×
+  $7.50/MTok ≈ $0.045/draw) → **≈ $4.5–6 total** (`--dry-run` witnessed). The bulk-generation Haiku
+  default is unchanged (process-local override in the driver).
 - **Read-out**: per kernel, load each draw's regenerated reading set as a `corpus_path` overlay
   (no full `run_pipeline` needed), export join records, compute `F_A` / `D_A` and apply the frozen
   rule above per axis. Write `RESULTS.md` citing per-kernel per-axis `median(D_A)` vs `max(F_A)`; the

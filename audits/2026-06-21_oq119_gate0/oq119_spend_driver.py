@@ -29,15 +29,30 @@ sys.path.insert(0, str(REPO / "python"))
 
 import generate_kernel_corpus as gkc  # noqa: E402
 
+# (b) Compliance: the kernel-gen default GEN_MODEL is Haiku, which intermittently drops the
+# schema-required stakeholders[] (OQ-149 gate fires loud). Override to Sonnet for THIS run only
+# (process-local; the bulk-generation Haiku default is unchanged). build_indexed_batch_requests
+# reads gkc.GEN_MODEL at request-build time, so setting it here is sufficient.
+gkc.GEN_MODEL = "claude-sonnet-4-5-20250929"
+
 SEED_SUBSET = REPO / "audits/2026-06-21_oq119_gate0/oq119_seed_subset.json"
 DRAWS = 3
 ARMS = ["withheld", "fed"]
 
-# FROZEN fed idiom (PREDICTION.md). Appended verbatim to every reading's task block.
+# (a) FROZEN fed idiom (PREDICTION.md), refined to HOLD PARTIES FIXED — closes the
+# fed-mountain/exemption confound: feeding "mountain" must NOT let the model invoke the
+# schema's no-parties exemption, or fed-arm coverage loss becomes the effect itself. Both
+# arms author parties; the only arm difference is the asserted foundational claim, so the
+# authored-mountain-with-parties yields the seat divergence (MOUNTAIN_METRIC_CONFLICT) the
+# join is meant to measure.
 FED_FRAMING = (
     "\n\n=== AUTHORIAL FRAMING (fed hypothesis) ===\n"
     "The author asserts this constraint is a natural / foundational feature of the world "
-    "(claim type: mountain). Author the story consistent with that framing."
+    "(claim type: mountain). Author the story consistent with that framing. IMPORTANT: still "
+    "author ALL affected parties — beneficiaries/victims and the matching stakeholders[] — "
+    "exactly as the schema requires; do NOT invoke the mountain no-parties exemption. The "
+    "foundational claim is asserted ALONGSIDE the real parties (the authored claim and the "
+    "engine's metric seats may legitimately diverge)."
 )
 
 # Capture the pristine builder once; the fed wrapper appends to its output.
@@ -76,11 +91,11 @@ def main():
         print(f"\narms={ARMS}  draws={DRAWS}  -> {n_gen} generations "
               f"({n_readings} readings x {len(ARMS)} x {DRAWS})")
         print(f"run-tags: " + ", ".join(f"oq119_{a}_d{d}" for a in ARMS for d in range(1, DRAWS + 1)))
-        # cost: Haiku batch $0.50/$2.50 per MTok; ~6K out/draw dominates, input cached.
-        out_usd = n_gen * 6000 / 1e6 * 2.50
-        in_usd = n_gen * 1500 / 1e6 * 0.50  # cached prefix ~free; conservative tail
-        print(f"\nmodel: {gkc.GEN_MODEL} (Haiku batch)")
-        print(f"cost est: output ~{n_gen}*6k*$2.50/M = ${out_usd:.2f}; input(cached) ~${in_usd:.2f} "
+        # cost: Sonnet batch $1.50/$7.50 per MTok; ~6K out/draw dominates, input cached.
+        out_usd = n_gen * 6000 / 1e6 * 7.50
+        in_usd = n_gen * 1500 / 1e6 * 1.50  # cached prefix ~free; conservative tail
+        print(f"\nmodel: {gkc.GEN_MODEL} (Sonnet batch — overridden for compliance)")
+        print(f"cost est: output ~{n_gen}*6k*$7.50/M = ${out_usd:.2f}; input(cached) ~${in_usd:.2f} "
               f"-> ~${out_usd + in_usd:.2f} total (real lower under prompt-cache)")
         # Witness the fed append actually attaches (no API): compare task blocks.
         s0 = seeds[0]
