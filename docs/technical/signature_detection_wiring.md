@@ -182,3 +182,18 @@ rule, not an edge case. Full witness: `audits/2026-06-21_oq138_fsm_route_convers
 **Contract note.** A converted signature's `informational` severity IS emitted as an alert (the visible
 route, distinct from "dropped" — `severity_floor/2` raises no floor for it). The legacy
 "commentary-grade gets NO alert" rule holds only for still-overwriting signatures.
+
+**Standing gate — decompose the override's full blast radius before converting (OQ-138, 2026-06-21).**
+An override's blast radius is everything downstream that reads the type it WRITES, not just the seat's own
+verdict. Before converting, decompose TWO things:
+1. **The seat's own floor after revert** (FSM lesson). A dropped floor reads as silent green/de-escalation.
+   Run the floor-source decomposition at the REPORT surface (incl. abductive — an [stack]-only probe misses it).
+2. **What OTHER diagnostics consume the manufactured type** (the constructed-#2 / CI-rope lesson). A different
+   alert or subsystem can ride the manufactured type and silently change when it reverts:
+   - constructed-#2 (alert side): a severe `type_1_false_summit` rode the override-manufactured `snare`
+     (mountain claim vs snare); reverting to `unknown` dropped it severe→informational (RED→yellow).
+   - CI-rope (consumer side): `dr_type='rope'` is read by ≥5 subsystems (dirac→first_class, purity immunity,
+     cohomology, boltzmann, maxent); reverting `rope→scaffold` flips all of their readings.
+   Method: positive-controlled grep for the manufactured type as a literal (`== <type>`, `dr_type(_,_,<type>)`,
+   `<type>` in type-keyed clauses) — confirm the grep finds branches for a known-consumed type first, then look
+   for the manufactured one. And check `dr_claim_mismatch/4` / alert predicates keyed on the post-override type.

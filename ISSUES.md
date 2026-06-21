@@ -7404,7 +7404,13 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Ω-type:** Ω_C (per-clause ruling: is each overwrite a load-bearing correction or a manufacturing reclassification the router should replace?) over an Ω_E base (a mechanical before/after `dr_type`+headline diff per clause).
 
-**Status:** partial — FSM sub-part RESOLVED 2026-06-21 (witnessed; see FSM build record below + `audits/2026-06-21_oq138_fsm_route_conversion/FINDINGS.md`). FCR / constructed / coupling_invariant_rope still OPEN with named witnesses; `false_natural_law` deferred pending OQ-70. Split from OQ-128 (2026-06-17): the `natural_law` overwrite (`:867`) was retired and type_1's cap discriminated.
+**Status:** partial — FSM sub-part RESOLVED 2026-06-21 (witnessed; FSM build record below +
+`audits/2026-06-21_oq138_fsm_route_conversion/FINDINGS.md`). **Per-clause RULINGS recorded 2026-06-21**
+(operator; see PER-CLAUSE RULINGS below): CI-rope KEEP (out of frame, evidence-settled); FCR-9 CONVERT on the
+FSM template + piton-3 carved out (OQ-90); constructed CONVERT-conditional (owes a claim-discriminant witnessed
+to keep seat #2's floor); CI-rope route-purity HOLD/OPEN (operator-merits); `false_natural_law` deferred (OQ-70).
+The two CONVERT rulings owe their build (conversion commit + post-build surface diff) — partition-witnessed, not
+yet conversion-witnessed. Split from OQ-128 (2026-06-17): `natural_law` overwrite (`:867`) retired, type_1 cap discriminated.
 
 **Priority:** 3
 
@@ -7486,6 +7492,46 @@ load-bearing-elsewhere. Each clause's diff is now IN HAND; the partition ruling 
   extraction" flag ⇒ constructed inherits the **FSM discriminated-severity template** (signature carries the
   diagnostic), NOT bare abstain. 47 inert seats byte-identical; behavior change is 3 (2 up, 1 down).
 - **false_natural_law** — still deferred pending OQ-70 (FNL bait-confound).
+
+**PER-CLAUSE RULINGS (operator, 2026-06-21).** Verdict → witness → kill condition. Two are evidence-settled
+(commitments); two are operator-merits seats (OPEN/conditional — the evidence frames but does not settle them,
+so phrasing them as ruled would counterfeit a witness).
+
+**STANDING GATE (record once; the arc's generalization).** Before converting ANY override, decompose TWO
+things, not one: (1) where the seat's OWN floor is sourced after revert (FSM lesson — a dropped floor reads as
+silent green); (2) what OTHER diagnostics consume the type the override manufactures (constructed-#2: a severe
+`type_1_false_summit` rode the manufactured snare and vanished on revert; CI-rope: a certified type is
+load-bearing for 5 downstream subsystems). An override's blast radius is everything downstream that reads the
+type it writes, not just the seat's own verdict. (Reusable form in `docs/technical/signature_detection_wiring.md` §4.)
+
+- **CI-rope — KEEP, out of conversion frame (evidence-settled).** CI-rope is the certification arm of the
+  FCR/CI-rope Boltzmann battery, not a manufacturing override: FCR fires on washed (fails ≥1 structural test),
+  CI-rope certifies what survives. Route-not-reclassify governs manufacturing; CI-rope writes a verdict the
+  structural tests EARNED, so it is mis-grouped by the inherited "N fires" framing. Witness: 6 uniform genuine
+  passes (excess 0.03–0.10, non-gating; positive control 52 live seats fail boltzmann, so the passes
+  discriminate); no sub-partition forced. **Kill:** a downstream consumer found to treat `dr_type='rope'` as
+  contested-rather-than-certified ⇒ CI-rope re-enters the frame.
+- **CI-rope route-purity — HOLD, lean KEEP-as-written (OPEN, operator's seat).** The 5 consumers
+  (dirac→first_class, purity immunity 1.0, cohomology, boltzmann, maxent) read `dr_type='rope'`; route-purity
+  would repoint them at the CI-rope signature. Lean: do not rewire — `dr_type='rope'` is the more stable
+  contract than a signature predicate's internal shape; the certification is correct either way. Convert only if
+  route-purity is enforced engine-wide for a reason beyond this clause. Architecture-aesthetics, not diagnostic.
+- **constructed — CONVERT the 3, gated on a claim-discriminant that keeps seat #2's floor (conditional).**
+  47/50 winners are snare→snare (inert; convert byte-identical). Behavior change is 3. Bare abstain-to-unknown
+  is refuted: it drops a severe `type_1_false_summit` on #2 (institutional_trust_erosion, RED→yellow) that
+  correctly rode the manufactured snare ⇒ constructed needs the FSM discriminated-severity template, not bare
+  abstain. Candidate discriminant: authored claim (mountain/contested keeps a floor). **Conditional** — the
+  discriminant ships only once WITNESSED to keep #2's floor while letting inert seats route free (the way FSM's
+  victim-discriminant was witnessed on protein, not argued). **Kill:** if the claim-discriminant cannot hold
+  #2's severe without also flooring genuinely-inert seats, it is the wrong discriminant and constructed
+  re-opens. Owes: conversion commit + post-build surface diff. Partition-witnessed only, not conversion-witnessed.
+- **FCR-9 — CONVERT on the FSM template; piton-3 carved out (evidence-settled for the 9).** 9 of 12 changers
+  are FSM's structural twin (scaffold revert, green→yellow unmask, clean 6/6 victim split) — inherit the
+  discriminated-severity template directly. The 3 `scaffold→piton` seats are the OQ-90 FCR-branch refinement and
+  are NOT in this ruling: blind-reverting them undoes an OQ-90 decision, so what piton reverts to is its own
+  question gated on OQ-90. Owes: conversion commit + surface witness on the 9; piton-3 held. **Kill (the 9):** a
+  converted seat whose unmasked verdict misfires (an unmask that is wrong rather than correct-RED) — decompose
+  each seat's floor source pre-commit per the standing gate.
 
 ## OQ-139 — `green` base verdict reads "safe" but means "consistent": a labeling thread (Ω_C)
 
