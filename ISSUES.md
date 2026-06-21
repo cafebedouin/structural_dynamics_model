@@ -7467,11 +7467,18 @@ load-bearing-elsewhere. Each clause's diff is now IN HAND; the partition ruling 
   tensions (the "scaffold stays green" guess was refuted), so the discriminant lives in the commentary layer.
   Victim split present (6 vic=0 + 6 vic>0). **Piton sub-case (3, scaffold→piton, all vic>0):** OQ-90
   FCR-branch refinement — needs separate handling, cannot blind-revert to scaffold.
-- **constructed_* — override INERT on 94%; 3 real changes.** constructed_high 50 winners but only **3** CHANGE
-  (all `unknown→snare`); 47 inert (metric already snare). constructed_low 1 inert; constructed_constraint /
-  coordination_scaffold 0 live (fully shadowed). No config hook → diff via metric_based_type_indexed
-  comparison. Converting reverts the 3 to `unknown` (honest abstain, OQ-37); 47 inert unchanged. Blast radius
-  3, not 41.
+- **constructed_* — override INERT on 94%; the 3 real changes are NON-uniform (bare abstain is wrong).**
+  constructed_high 50 winners but only **3** CHANGE (all `unknown→snare`); 47 inert (metric already snare).
+  constructed_low 1 inert; constructed_constraint / coordination_scaffold 0 live. No config hook → ablated via
+  a temporary one-clause edit + pipeline (floor-source decomposition, report surface incl. abductive;
+  `audits/2026-06-21_oq138_fsm_route_conversion/constructed3_floor_source.md`). **Refuted "convert + abstain,
+  no downstream change":** bare revert-to-unknown moves all 3 headlines in DIFFERENT directions — the 2
+  tangled_rope-claimed seats (equal_protection, shinbutsu) ESCALATE yellow→RED (cohomology unmask, the FSM
+  pattern); the mountain-claimed seat (institutional_trust_erosion_c0) DE-ESCALATES RED→yellow because its
+  `type_1_false_summit` SEVERE alert was riding on the override-manufactured snare and drops to informational
+  once dr_type=unknown. So a bare type-layer abstain silently drops #2's severe "mountain-claim over probable
+  extraction" flag ⇒ constructed inherits the **FSM discriminated-severity template** (signature carries the
+  diagnostic), NOT bare abstain. 47 inert seats byte-identical; behavior change is 3 (2 up, 1 down).
 - **false_natural_law** — still deferred pending OQ-70 (FNL bait-confound).
 
 ## OQ-139 — `green` base verdict reads "safe" but means "consistent": a labeling thread (Ω_C)
