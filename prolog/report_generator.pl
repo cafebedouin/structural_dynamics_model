@@ -60,12 +60,13 @@ generate_full_report(IntervalID) :-
     (   catch(data_repair:grid_provenance(IntervalID, prov(HA, HI, HP, _, HTotal)), _, fail)
     ->  HPresent is HA + HI + HP,
         (   HPresent =:= 0
-        ->  % Terse-when-absent (OQ-93 authored-or-absent regime): on a story that
-            % authored no grid the zero buckets (injected 0, imputed 0) carry no
-            % information. Compress them — but OQ-98 ruling 1's CONDITIONAL warning
-            % still ALWAYS prints (this does NOT gate on emptiness), so a grid-fed
-            % Pattern/Confidence above stays marked ungrounded.
-            format('Grid diet:      none authored [CONDITIONAL: grid authored 0/~w] (OQ-93)~n', [HTotal])
+        ->  % Absent grid: ONE informative line (operator ruling 2026-06-20). The
+            % ABSENCE is the signal — the story could author a leveled coercion grid
+            % and did not, so it is not a level-resolved-coercion story; the
+            % grid-dependent magnitude/coverage below are correspondingly not computed
+            % (expected, not a gap). Plain text carries OQ-98's "ungrounded" meaning
+            % without the Prolog jargon the report's downstream consumer does not need.
+            format('Leveled coercion grid: not authored (story not level-resolved-coercion focused); grid-dependent magnitude/coverage not computed - expected, not a gap (OQ-93)~n', [])
         ;   format('Grid diet:      authored ~w/~w, injected ~w, imputed ~w (OQ-93)', [HA, HTotal, HI, HP]),
             (   HA < HTotal
             ->  format(' [CONDITIONAL: grid authored ~w/~w]~n', [HA, HTotal])

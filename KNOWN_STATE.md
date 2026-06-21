@@ -45,21 +45,25 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-06-20 — grid-diet display: terse-when-absent + stale "unauthorable" message fixed (OQ-93)
+## 2026-06-20 — grid-diet display: one-informative-line-when-absent + stale "unauthorable" fixed (OQ-93)
 **Files:** prolog/report_generator.pl, prolog/data_repair.pl
 **Tier:** landed
 
-Two separable display fixes to the OQ-93 grid-provenance surface (OQ-93 is RESOLVED; grid is
-opt-in by story focus, authored-or-absent — NOT a bug when 0/32).
+Two display fixes to the OQ-93 grid-provenance surface (OQ-93 is RESOLVED; grid is opt-in by story
+focus, authored-or-absent — NOT a bug when 0/32). Consumer of these reports is a MODEL doing essay
+synthesis; operator ruling 2026-06-20: it needs relevant outputs, not Prolog internals.
 
-1. **Terse-when-absent** (`report_generator.pl`, the "Grid diet:" line). On a story that authored
-   no grid (authored+injected+imputed == 0) the line now reads `Grid diet: none authored
-   [CONDITIONAL: grid authored 0/N] (OQ-93)` instead of spelling out the zero buckets. **Preserves
-   OQ-98 ruling 1**: the CONDITIONAL warning still ALWAYS prints (does not gate on emptiness), so a
-   grid-fed Pattern/Confidence stays marked ungrounded. Grid stories print the full line unchanged
-   (witnessed: `sex_gender_category__identity_reading` → `authored 32/32 …`, Kappa 0.67, coverage
-   4/4; a 0/32 story → terse + `Pattern confidence: low` + `Kappa DATA_INSUFFICIENT`). The line is
-   surfaced inside enhanced_report.py via `run_prolog_report` (shells `report_generator.pl`).
+1. **One informative line when absent** (`report_generator.pl`, the report-body grid line). The
+   ABSENCE is itself the signal — a story that could author a leveled coercion grid and didn't is
+   not level-resolved-coercion focused. So on `authored+injected+imputed == 0` the body now prints a
+   single plain line: `Leveled coercion grid: not authored (story not level-resolved-coercion
+   focused); grid-dependent magnitude/coverage not computed - expected, not a gap (OQ-93)`.
+   (Superseded the same-day "terse + [CONDITIONAL] token" form, commit 5c23830e — the operator ruled
+   the model doesn't need the Prolog `[CONDITIONAL]` jargon; the plain text carries the same
+   "ungrounded" meaning.) **OQ-98 ruling 1 preserved for PARTIAL grids** (0<authored<total still
+   prints `[CONDITIONAL: grid authored X/Y]`); only the fully-absent case went plain. Grid stories
+   print the full verbose line unchanged (witnessed: `sex_gender_category__identity_reading` →
+   `authored 32/32`, Kappa 0.67, coverage 4/4). Surfaced in the .md via `run_prolog_report`.
 2. **Stale message fixed** (`data_repair.pl:356` print + `:291` comment). Both claimed the grid is
    "unauthorable under the live generation schema" — false since OQ-93 resolved 2026-06-11 (3 live
    testsets author grids). `report_grid_provenance/1` is REACHABLE (`repair_interval/1`, used by
@@ -70,9 +74,12 @@ Hinge witnessed (not assumed): `grid_provenance` reaches `pipeline_output.json` 
 carry it in `verdict_join`, 0/32 stories show `{authored:0,…,absent:32,total:32}`. So trimming a
 display surface cannot drop provenance; the machine-readable sink keeps it.
 
-NOT changed (flagged, sibling surfaces with the same verbose zero-buckets): `intent_engine.pl:75`
-`[grid diet: authored 0/32 …]`, and `enhanced_report.py`'s banner `_grid_line` (`Grid: authored
-0/32 …`). The banner is the OQ-98 headline — extending terse there is the operator's call.
+STILL OPEN (the bigger half): `assemble_report` embeds the FULL Prolog stdout into the model-facing
+.md (witnessed: `header + prolog_output`), so a 0/32 story still carries ~12 grid-absent DEV-preamble
+lines the model doesn't need (`[SHIM]`, `[REPAIR]`, `[OPEN] N/N grid components absent` ×8,
+`[PROVENANCE]` ×2, `[WARN]`, `[INTENT] OPEN (no_gradient_data) [grid diet:…]`), plus the banner
+`_grid_line` (`Grid: authored 0/32 …`). Decluttering these is content-removal from the model artifact
+— pending operator go (show-before-delete). Sibling: `intent_engine.pl:75`.
 
 ---
 
