@@ -6176,13 +6176,14 @@ verdict-stability demoted to confounded-half; discharge-to-successor).
 
 ---
 
-## OQ-119 — Join-structure fed-vs-withheld diff: does feeding move the cross-examination (not just the type)? — blocked on a three-axis-instrumented corpus
+## OQ-119 — Join-structure fed-vs-withheld diff: does feeding move the cross-examination (not just the type)? — substrate gate witnessed OPEN; blocked on spend-go
 
-**Ω-type:** Ω_E (engine-characterization; measurable once the substrate instruments all three axes).
+**Ω-type:** Ω_E (engine-characterization; substrate now witnessed non-vacuous, comparator validated; the Ω_E question stays open pending the spend).
 
-**Status:** open — blocked on substrate. Filed 2026-06-13 from the OQ-117 (c) ruling.
+**Status:** open — substrate gate discharged (2026-06-21), comparator built+validated; now blocked
+on the operator's spend-go. Filed 2026-06-13 from the OQ-117 (c) ruling.
 **Priority:** 1
-**Deps:** blocked_on_human substrate-instrumentation
+**Deps:** blocked_on_human spend-go
 
 **The question (engine-characterization, NOT a (c) gate — (c) is resolved).** OQ-117 showed feeding
 the mountain claim does not change the engine's *type* verdict (0/30 both arms). A sharper question
@@ -6191,16 +6192,43 @@ dissent, how the drift trajectory runs — even when the final type holds? That 
 shifts the cross-examination the engine performs (perspective × axiom × temporal), per the seat
 theorem (`docs/seat-theorem-v1.md`).
 
-**Why it is blocked (positive-control before spend).** On the OQ-117 probe corpus the join is
-instrumented on only ~1.5 of its 3 axes: **observer** axis live (four-seat χ spread witnessed,
-e.g. free_market institutional χ=−0.029 vs analytical 0.932); **axiom** axis partial — the
-committer/CS vantage no-opped (`cs_kernel_id` absent from the probe testsets); **temporal** axis
-thin-to-vacuous (grid 32/32 absent OQ-93; `classify_at_time` carries the OQ-33 fabricated-suppression
-issue; drift confidence "low"). A fed-vs-withheld join diff over that substrate would measure the one
-live axis with two underpowered axes adding noise — the grid-absent vacuity failure (a richer
-instrument computed over substrate that cannot support it is not a richer measurement). **Graduation:
-a corpus where observer + axiom + temporal are each witnessed non-vacuous** (authored grid, present
-`cs_kernel_id`, non-thin timelines) — then the diff is clean. Until then: do not run.
+**Substrate gate — WITNESSED OPEN on `testsets_haiku` (2026-06-21, `audits/2026-06-21_oq119_gate0/`).**
+The original blocker text below was pinned to the stale 5-kernel OQ-117 probe corpus; the haiku twin
+moved past it. Witnessed (engine queries, not greps):
+- **observer** — live; 4-seat χ spreads non-degenerate; `extractiveness_for_agent` fails to
+  `null`, no 0.5 fabrication path. *Caveat:* per-power stakeholder authoring is sparse
+  (`power_witness_map` ≈ 0 on many roster stories) — the spread is a real engine computation
+  (context-driven) but not per-seat authored; a moved seat = moved ε/directionality, not a
+  re-authored stakeholder (recorded for the spend).
+- **axiom** — DISCHARGED. The "`cs_kernel_id` absent" claim is stale: 327/328 multi-reading kernels
+  carry a typed obstruction status (220 real_closure / 107 licensed_plurality / 1 untyped);
+  `cs_kernel_divergence` fires (readings classify differently at some context); status is
+  fail-closed on absence (no agreement fabrication).
+- **temporal** — DISCHARGED. Its cited sub-blockers **OQ-93** (grid) and **OQ-33** (fabricated
+  suppression) are both **resolved (2026-06-11)**. The `Backed` bit separates known-rich (pass) from
+  known-thin (fail) and is reachable in both states (positive control). NB: the engine reads
+  `measurement/5` series, NOT the prose token `coercion_grid` (not a predicate).
+- **joint cell**: **325 kernels** clear all three axes simultaneously (kill condition was <3).
+
+**Comparator built + validated (Phase 1, `python/audits/oq119_join_diff.py`).** Self-diff=0,
+cross-kernel-diff>0 with named moved fields, within-kernel shift resolvable (≈0.27), numerical
+resolution linear to ~5e-4. The binding floor is the **withheld-redraw generation-variance floor**
+(OQ-26), measurable only with spend — the pre-registration mandates ≥3 withheld redraws/story to
+establish it.
+
+**Next move = the operator's spend-go.** The discriminating metric + per-axis prediction + spend
+spec are FROZEN pre-draw in `audits/2026-06-21_oq119_gate0/PREDICTION.md` (≈30 draws, ~$4–6, reuses
+the OQ-117 `oq117_spend_driver.py` structure; draws are probe artifacts, none join the live corpus).
+A notable frozen sub-prediction: `obstruction_status` moving under feeding would be a
+**detection-independence (Theorem 7) violation** and a finding in its own right. **Do not run the
+fed arm without the ruling.** The Ω_E question itself stays OPEN — this session opened the substrate
+gate and built the instrument; it did not answer whether feeding moves the join.
+
+**Original blocker text (superseded 2026-06-21, kept for provenance):** *"On the OQ-117 probe corpus
+the join is instrumented on only ~1.5 of its 3 axes … committer/CS vantage no-opped (`cs_kernel_id`
+absent) … temporal thin-to-vacuous (grid 32/32 absent OQ-93; `classify_at_time` carries the OQ-33
+fabricated-suppression issue). Graduation: a corpus where observer + axiom + temporal are each
+witnessed non-vacuous — then the diff is clean."*
 
 ---
 

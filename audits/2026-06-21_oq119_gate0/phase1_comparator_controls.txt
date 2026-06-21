@@ -1,0 +1,32 @@
+=== OQ-119 join-diff comparator — Phase 1 controls ===
+loaded 4 join records
+
+-- NEGATIVE control (self-diff, expect scalar=0 every record) --
+   acceptable_risk_energy__catastrophic_tail_domina  scalar=0.0  by_axis={'observer': 0.0, 'temporal': 0.0, 'axiom': 0.0}  OK
+   acceptable_risk_energy__expected_value_dominant   scalar=0.0  by_axis={'observer': 0.0, 'temporal': 0.0, 'axiom': 0.0}  OK
+   westphalia_sovereignty__absolute_non_interventio  scalar=0.0  by_axis={'observer': 0.0, 'temporal': 0.0, 'axiom': 0.0}  OK
+   woman_category__sex_biology_reading               scalar=0.0  by_axis={'observer': 0.0, 'temporal': 0.0, 'axiom': 0.0}  OK
+   NEGATIVE CONTROL: PASS
+
+-- POSITIVE control (cross-KERNEL diff, expect scalar>0 + named fields) --
+   westphalia_sovereignty__absolute_non vs woman_category__sex_biology_reading
+   scalar=0.62934  by_axis={'observer': 0.6233, 'temporal': 0.00604, 'axiom': 0.0}
+   moved_fields=['observer.powerless', 'observer.moderate', 'observer.institutional', 'observer.analytical', 'temporal.base_extractiveness', 'temporal.suppression_requirement', 'temporal.theater_ratio']
+   POSITIVE CONTROL: PASS
+
+-- SAME-KERNEL sensitivity (within-kernel shift, the fed-vs-withheld scale) --
+   acceptable_risk_energy__expected_value_d vs acceptable_risk_energy__catastrophic_tai (same kernel)
+   scalar=0.27373  by_axis={'observer': 0.2712, 'temporal': 0.00253, 'axiom': 0.0}
+   moved_fields=['observer.institutional', 'temporal.base_extractiveness', 'temporal.suppression_requirement', 'temporal.theater_ratio']
+   -> within-kernel join motion is RESOLVABLE (>0)
+
+-- SYNTHETIC micro-perturbation (instrument numerical-resolution floor) --
+   Δχ(powerless)=+0.05 -> join scalar=0.05 (observer=0.05)
+   Δχ(powerless)=+0.005 -> join scalar=0.005 (observer=0.005)
+   Δχ(powerless)=+0.0005 -> join scalar=0.0005 (observer=0.0005)
+   -> comparator tracks small input changes linearly down to ~1e-3; the
+      numerical floor is ~0. The BINDING floor is the substrate redraw floor
+      (withheld-vs-withheld generation variance), measurable only with spend.
+
+=== COMPARATOR VALIDATED: YES (negative=True, positive=True) ===
+=== within-kernel sensitivity floor witnessed at scalar=0.27373 (any fed-vs-withheld effect must clear this) ===
