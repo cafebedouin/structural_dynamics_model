@@ -132,3 +132,53 @@ A constraint with `constraint_beneficiary` facts but no `intent_power_change` (e
 `disparity_as_depth_signal`) passed the natural_law BC gate while `Beneficiaries \= []` triggered
 false_summit_mountain, so FSM (checked first in the cascade) fired and the NL pass was masked. B1
 removed the vacuity by reading the authored table directly.
+
+---
+
+## 4. Converting a signature from RECLASSIFY to ROUTE/COMMENT (OQ-138, 2026-06-21)
+
+`false_summit_mountain` was the first `resolve_modal_signature_conflict` overwrite converted from
+RECLASSIFY (rewrite `dr_type`) to ROUTE/COMMENT (leave the metric type; carry the diagnostic on a
+discriminated severity). The recipe and its two non-obvious tripwires, for the next clause
+(FCR / constructed / coupling_invariant_rope):
+
+**The recipe.**
+1. Stop the overwrite. FSM did this via the existing config hook: `false_summit_override_target`
+   default flipped `tangled_rope→mountain` (the mountain-input clause head binds `ModalType=mountain`,
+   so `Result=Target=mountain=ModalType`). The hook stays a live ablation lever (set the old target to
+   restore the legacy overwrite). A clause without such a hook collapses its body to `Result=ModalType`.
+2. Add the signature to `signature_detection:converted_signature/1` and give it a
+   `signature_diagnostic_severity/3` clause keyed on its OWN discriminant (FSM: victim presence →
+   `vic>0`=moderate / `vic=0`=informational). `signature_grade/2` + `signature_severity/2` already
+   dispatch converted signatures through this path and project the grade
+   (alerting→correction, informational→commentary). **Grade on the discriminant, never on
+   `MetricType≠FinalType`** — that delta is always zero once the type reverts, so a type-delta grade
+   silently falls to commentary and drops the diagnostic (the trap). This mirrors
+   `drl_core:dr_claim_mismatch/4`.
+
+**Tripwire A — remove it from the override tables or downstream consumers misfire.** A converted
+signature must be removed from `abductive_helpers:known_override_signature/1` AND `override_target/2`.
+If left in: post-revert `dr_type` = the metric type, which no longer equals the stale `override_target`,
+so `diagnostic_summary:probe_signature/3` (wired into `collect_signals`) emits a spurious
+`disagrees(override_mismatch(Sig, MetricType))` — an unexplained tension that floors the verdict. The
+`expected_conflict_pattern` arms P1 (`signature_override_artifact`) and P7
+(`pre_post_override_divergence`) are also keyed on `known_override_signature/1`; with the signature
+removed they go cleanly vacuous (there is no override to explain).
+
+**Tripwire B — routed false-summits read RED at the report surface, not green.** Intuition says
+"stop overwriting → the manufactured verdict disappears → green." Wrong. The override was *masking*
+the structural tensions by setting the type to one where they are "expected": with `dr_type=tangled_rope`,
+`constructed_type(tangled_rope)` explained the cohomology `fails_descent`, and the override-keyed P7
+explained the dirac `dirac_mismatch(second_class,_)`. Reverting to `mountain` unmasks both as genuine
+raw tensions (a mountain claim contradicted by second-class Dirac structure + descent failure + abductive
+hub_conflict IS a false summit), so the verdict goes **yellow→red**. This is honest commentary, not a
+misfire: `claimed_type` is unchanged (route ≠ reclassify). **Operator ruling 2026-06-21:** the engine
+adds commentary, does not change classifications, and it is OK for diagnostics to render different
+verdicts — so the structural tensions are allowed to speak; the victim discriminant lives in the
+commentary layer (`signature_grade` commentary/correction + alert severity), not on the headline color.
+Across 5 corpora (~6,500 stories) all 82 FSM-detected seats carry cohomology/dirac, so this red is the
+rule, not an edge case. Full witness: `audits/2026-06-21_oq138_fsm_route_conversion/`.
+
+**Contract note.** A converted signature's `informational` severity IS emitted as an alert (the visible
+route, distinct from "dropped" — `severity_floor/2` raises no floor for it). The legacy
+"commentary-grade gets NO alert" rule holds only for still-overwriting signatures.

@@ -46,7 +46,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 ---
 
 ## 2026-06-21 — OQ-138 FSM sub-part RESOLVED: false_summit_mountain converted RECLASSIFY→ROUTE; routed false-summits read RED
-**Files:** prolog/signature_detection.pl, prolog/abductive_helpers.pl, prolog/config.pl, ISSUES.md, AGENTS.md, audits/2026-06-21_oq138_fsm_route_conversion/
+**Files:** prolog/signature_detection.pl, prolog/abductive_helpers.pl, prolog/config.pl, ISSUES.md, AGENTS.md, docs/technical/signature_detection_wiring.md, audits/2026-06-21_oq138_fsm_route_conversion/
 **Tier:** landed
 
 **What landed.** `false_summit_mountain` no longer overwrites `dr_type` (config
