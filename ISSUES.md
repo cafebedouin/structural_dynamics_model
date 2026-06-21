@@ -7453,14 +7453,20 @@ form, correct).
 `audits/2026-06-21_oq138_fsm_route_conversion/DEFERRED_CLAUSE_EVIDENCE.md`.** True (unbound) cascade-winner
 counts on live (92) — the "N fires" framing overstated blast radius; most overrides are INERT or
 load-bearing-elsewhere. Each clause's diff is now IN HAND; the partition ruling is the operator's seat.
-- **coupling_invariant_rope — KEEP candidate.** 6 winners, all `scaffold→rope` (positive certification).
-  Consumer grep (positive-controlled: 131 type-branches found for known types, so it would find rope if
-  present) shows `dr_type='rope'` IS consumed: `dirac_classification.pl:287` rope⇒**first_class** (opposite of
-  the FSM `second_class`), `drl_purity_network.pl` immunity 1.0/contam 0.1, `grothendieck_cohomology.pl:432`,
-  boltzmann, maxent. NOT a free route — the rope cert propagates to the diagnostic subsystems; reverting
-  `rope→scaffold` flips their reading. Plan's "nothing reads rope" hypothesis FALSIFIED. Keep unless these 6
-  are coordination-washed (the genuine-vs-washed discriminant is the next evidence — not a type diff, not yet
-  gathered).
+- **coupling_invariant_rope — KEEP on the merits; NOT a partition the evidence settles**
+  (`audits/2026-06-21_oq138_fsm_route_conversion/cirope_genuine_vs_washed.md`). The genuine-vs-washed
+  discriminant is the CI-rope detector ITSELF, already run: FCR (`appears_as_rope` ∧ fails ≥1 Boltzmann test
+  = WASHED) fires first in the cascade; CI-rope (Boltzmann-compliant ∧ scope-invariant ∧
+  has_coordination_function ∧ `\+ constraint_captured`, OQ-94 gate = GENUINE) certifies what survives. The 6
+  winners are uniform genuine passes (all compliant/invariant/coord/uncaptured; excess 0.03–0.10, non-gating
+  by design; **positive control: 52 live seats FAIL boltzmann** so the test discriminates). No sub-partition —
+  forcing one would convert a test-backed cert on a distinction the engine already ruled. Companion gate
+  (constructed-#2 lesson, consumer side): `dr_type='rope'` is load-bearing downstream — `dirac:287`
+  rope⇒**first_class**, purity immunity 1.0, cohomology rank, boltzmann, maxent — so reverting `rope→scaffold`
+  would make the engine read genuinely-coordinating seats as constructed scaffold. CI-rope is categorically
+  unlike FSM/FCR/constructed (which MANUFACTURE a contested verdict): it is a CORRECT certification. **Operator's
+  seat:** keep, or pay the consumer-rewire cost (5 consumers read `dr_type='rope'`, not the signature) for
+  route-purity. Evidence frames it; the merits ruling is the operator's.
 - **false_ci_rope — route + victim-discriminate, SAME unmask story as FSM (milder).** 25 winners, 12 CHANGE
   (scaffold→tangled_rope ×8, scaffold→piton ×3, snare→tangled_rope ×1), 13 inert. Hook ablation
   (`fcr_override_enabled` 0): changed seats revert to scaffold, base green→YELLOW — routing ALSO unmasks
