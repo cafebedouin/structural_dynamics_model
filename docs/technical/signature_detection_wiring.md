@@ -197,3 +197,20 @@ verdict. Before converting, decompose TWO things:
    Method: positive-controlled grep for the manufactured type as a literal (`== <type>`, `dr_type(_,_,<type>)`,
    `<type>` in type-keyed clauses) — confirm the grep finds branches for a known-consumed type first, then look
    for the manufactured one. And check `dr_claim_mismatch/4` / alert predicates keyed on the post-override type.
+
+**Tripwire C — the MaxEnt boost is a THIRD seat-aware surface (OQ-173, 2026-06-21).** Beyond `dr_type`
+and the diagnostic consumers, `maxent_classifier.pl` `apply_override_for_sig/4` carries a PARALLEL
+override: it boosts the MaxEnt distribution toward the same target (`false_ci_rope→tangled_rope ×3` at
+:342, `constructed_high_extraction→tangled_rope ×3` at :355). It is signature-level by default, so it
+still boosts the **routed** seats unless made seat-aware too. Recipe: thread `C` into the converted
+clause and skip the boost (`DistOut = DistIn`) at the routed seats via the SAME `*_routed/1` predicate
+the type layer uses (`signature_detection:fcr_routed/1` / `constructed_routed/1`) — reuse verbatim, do
+not re-implement (they re-key on the unbound cascade winner, avoiding the §1 bound-arg trap). The skip
+reverts the seat to its pre-override raw distribution (`maxent_dist_raw`). One edit covers both
+serialized surfaces (classical `maxent_top_type`/`maxent_probs` and `maxent_indexed`) — both classify
+paths call the same `apply_signature_override/3`. **Note the asymmetry the OQ-173 witness found:** the
+conditional ×3 boost rarely flips the CLASSICAL argmax (it moves mass; the raw argmax usually already
+wins), so the visible flip tends to land on the INDEXED top or in the full `maxent_probs` mass, not on
+`maxent_top_type`. Don't assume "boost off → classical top reverts"; witness the actual deltas (the
+unconditional overrides `false_natural_law`/`coupling_invariant_rope` are the ones that flip classical
+tops). Full witness: `audits/2026-06-21_maxent_seat_aware/`.

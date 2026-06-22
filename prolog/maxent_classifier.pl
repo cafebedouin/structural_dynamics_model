@@ -315,36 +315,54 @@ set_uniform(U, Type-_, Type-U).
 
 apply_signature_override(C, DistIn, DistOut) :-
     (   catch(signature_detection:constraint_signature(C, Sig), _, fail)
-    ->  apply_override_for_sig(Sig, DistIn, DistOut)
+    ->  apply_override_for_sig(C, Sig, DistIn, DistOut)
     ;   DistOut = DistIn
     ).
 
-%% Unconditional overrides: set target to 0.95, redistribute 0.05
-apply_override_for_sig(natural_law, DistIn, DistOut) :-
+%% apply_override_for_sig(+C, +Sig, +DistIn, -DistOut)
+%  OQ-138/OQ-171 (2026-06-21): C threaded through so the two CONVERTED signatures
+%  (false_ci_rope, constructed_high_extraction) can skip the MaxEnt boost at their
+%  ROUTED seats, mirroring the type-layer's per-seat routing (dr_type no longer
+%  overwrites at fcr_routed/1 + constructed_routed/1 seats). At a routed seat the boost
+%  is skipped (DistOut = DistIn → the pre-override distribution passes through, so the
+%  seat's maxent reverts to its raw argmax). Non-converted clauses ignore C (byte-identical
+%  behavior). The skip guards re-key on their own UNBOUND cascade calls (fcr_routed/1 /
+%  constructed_routed/1), so no bound-arg mis-key is reintroduced here (§1 wiring gotcha).
+
+%% Unconditional overrides: set target to 0.95, redistribute 0.05 (NOT converted — keep)
+apply_override_for_sig(_, natural_law, DistIn, DistOut) :-
     !, override_unconditional(mountain, DistIn, DistOut).
-apply_override_for_sig(false_natural_law, DistIn, DistOut) :-
+apply_override_for_sig(_, false_natural_law, DistIn, DistOut) :-
     !, override_unconditional(tangled_rope, DistIn, DistOut).
-apply_override_for_sig(coupling_invariant_rope, DistIn, DistOut) :-
+apply_override_for_sig(_, coupling_invariant_rope, DistIn, DistOut) :-
     !, override_unconditional(rope, DistIn, DistOut).
 
 %% Conditional overrides: boost target by factor of 3
-apply_override_for_sig(false_ci_rope, DistIn, DistOut) :-
+%% false_ci_rope — CONVERTED (FCR-9): skip boost at fcr_routed/1 seats
+apply_override_for_sig(C, false_ci_rope, DistIn, DistOut) :-
     !,
-    (   config:param(fcr_override_enabled, 1)
+    (   signature_detection:fcr_routed(C)
+    ->  DistOut = DistIn                % Routed seat: skip boost (seat-aware, OQ-138)
+    ;   config:param(fcr_override_enabled, 1)
     ->  override_conditional(tangled_rope, 3.0, DistIn, DistOut)
     ;   DistOut = DistIn                % Ablation: no boost
     ).
-apply_override_for_sig(coordination_scaffold, DistIn, DistOut) :-
+apply_override_for_sig(_, coordination_scaffold, DistIn, DistOut) :-
     !, override_conditional(rope, 3.0, DistIn, DistOut).
-apply_override_for_sig(constructed_low_extraction, DistIn, DistOut) :-
+apply_override_for_sig(_, constructed_low_extraction, DistIn, DistOut) :-
     !, override_conditional(rope, 3.0, DistIn, DistOut).
-apply_override_for_sig(constructed_high_extraction, DistIn, DistOut) :-
-    !, override_conditional(tangled_rope, 3.0, DistIn, DistOut).
-apply_override_for_sig(constructed_constraint, DistIn, DistOut) :-
+%% constructed_high_extraction — CONVERTED (constructed-3): skip boost at constructed_routed/1 seats
+apply_override_for_sig(C, constructed_high_extraction, DistIn, DistOut) :-
+    !,
+    (   signature_detection:constructed_routed(C)
+    ->  DistOut = DistIn                % Routed seat: skip boost (seat-aware, OQ-138)
+    ;   override_conditional(tangled_rope, 3.0, DistIn, DistOut)
+    ).
+apply_override_for_sig(_, constructed_constraint, DistIn, DistOut) :-
     !, override_conditional(tangled_rope, 3.0, DistIn, DistOut).
 
 %% No override for other signatures
-apply_override_for_sig(_, Dist, Dist).
+apply_override_for_sig(_, _, Dist, Dist).
 
 override_unconditional(TargetType, DistIn, DistOut) :-
     config:param(maxent_signature_override_strength, Strength),
@@ -871,7 +889,7 @@ maxent_indexed_run(Context, Summary) :-
 
     % Summary statistics
     findall(HN, (
-        maxent_indexed_dist(C2, Context, Dist),
+        maxent_indexed_dist(_, Context, Dist),
         shannon_entropy(Dist, H),
         maxent_n_types(N),
         HMax is log(N),

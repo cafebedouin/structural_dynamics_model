@@ -770,7 +770,28 @@ drivers (`app.py`/`c-app.py`) were deleted (`git rm`). OQ-172 leaves a standing 
 or revived generation front-end must route through `generate_from_manifests`, never a hand-rolled
 prompt-assembly loop that threads `claimed_type` over `downstream_of` deps. Named here 2026-06-21.
 
-## GAP-16 — The MaxEnt signature-override boost is not seat-aware (a converted override still fires on its routed seats in the MaxEnt layer)
+## GAP-16 — The MaxEnt signature-override boost is not seat-aware (a converted override still fires on its routed seats in the MaxEnt layer) — **CLOSED 2026-06-21**
+
+**CLOSED (OQ-173 resolved, witnessed).** The MaxEnt boost is now the third seat-aware layer.
+`apply_override_for_sig/3→/4`: `C` threaded from `apply_signature_override/3` (maxent_classifier.pl:318);
+the two converted signatures skip the boost at their routed seats — `false_ci_rope` ∧
+`signature_detection:fcr_routed/1`, `constructed_high_extraction` ∧ `constructed_routed/1` (reused
+verbatim; `DistOut = DistIn` reverts the seat to its pre-override raw distribution). One edit covers
+both serialized surfaces (classical `maxent_top_type`/`maxent_probs` and `maxent_indexed`). Witness
+(`audits/2026-06-21_maxent_seat_aware/diff_witness.out`): exactly the 12 routed seats revert to raw;
+**0** non-routed seats move; **1** indexed-top flip (`shinbutsu` tangled_rope→snare, the one
+genuinely-manufactured verdict); **0** verdict_join changes. 21-corpus generality sweep clean
+(`routed_STILL_boosted=0` everywhere; `original_v5` partial via a pre-existing `maxent_run` failure,
+stash-confirmed not a regression); `validation_suite` 92/0/0; `check_stack` baseline-clean; `gate.sh`
+GREEN. **Correction to the declaration below:** the boost does NOT flip the routed seats' CLASSICAL
+`maxent_top` (the conditional ×3 boost never flips a classical argmax — positive control: only 2
+corpus-wide flips, both non-converted UNCONDITIONAL overrides); the constructed-3 "flip to tangled_rope
+at the pipeline surface" was the classical raw argmax already being tangled_rope plus the indexed-path
+boost — the real manufactured flip was the indexed top, now corrected. The deferred design question
+("should the MaxEnt override mechanism exist at all for converted signatures") was settled by the
+operator's OQ-173 ruling in favor of the **minimal seat-aware skip** (mirror the type layer's per-seat
+routing, do not delete the mechanism — it stays live for piton/inert/future callers). Original
+declaration kept below for provenance.
 
 **The capability:** A signature override that has been converted from RECLASSIFY to ROUTE/COMMENT
 (OQ-138: `false_summit_mountain`, `false_ci_rope`/FCR-9, `constructed_high_extraction`/constructed-3)

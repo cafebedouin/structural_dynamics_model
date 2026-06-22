@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "9bce5afc3ce4edc1a79b866bb90ff08e661e49b9",
+    "store_version": "ab8d1d798b32c32b7197330ba0927a0e709e1aae",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-21T20:27:04"
+    "generated_at": "2026-06-21T21:12:07"
   },
-  "issues_sha": "344b2ae6f5853912396b63eea411486b4b4fd2c67b36723f0595bfa104fd235a",
-  "n_entries": 172,
+  "issues_sha": "642fea2cf7b77f7594728c35d5abeac09b5284f4314d6c06a3b92cab4c68f0e2",
+  "n_entries": 173,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 77,
+    "resolved": 78,
     "mitigated": 9,
     "partial": 7,
     "open": 73,
@@ -653,7 +653,8 @@
         "OQ-94",
         "OQ-98",
         "OQ-122",
-        "OQ-128"
+        "OQ-128",
+        "OQ-173"
       ]
     },
     {
@@ -2254,6 +2255,19 @@
       "mentioned_in": [
         "OQ-81",
         "OQ-82"
+      ]
+    },
+    {
+      "id": "OQ-173",
+      "status": "resolved",
+      "priority": 4,
+      "summary": "MaxEnt signature-override boost made seat-aware (the OQ-138 maxent residual) (Ω_E)",
+      "deps": [
+        "splits_from OQ-138"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-138"
       ]
     }
   ]

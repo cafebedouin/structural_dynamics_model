@@ -1,0 +1,59 @@
+======================================================================
+ROUTED SEATS (12) — expected: classical top unchanged; maxent_probs==raw; verdict_join unchanged
+======================================================================
+  basic_law_interpretive_boundary__parliamentary_sovereignty_reading
+     classical top: rope -> rope | maxent_probs==raw(post): True | was_boosted(base): False
+     indexed top: rope -> rope | verdict_join: yellow/yellow -> yellow/yellow
+  conceptual_framework_reading
+     classical top: rope -> rope | maxent_probs==raw(post): True | was_boosted(base): False
+     indexed top: rope -> rope | verdict_join: yellow/yellow -> yellow/yellow
+  divine_legitimacy_substrate__folk_syncretistic_reading
+     classical top: scaffold -> scaffold | maxent_probs==raw(post): True | was_boosted(base): True
+     indexed top: scaffold -> scaffold | verdict_join: yellow/yellow -> yellow/yellow
+  equal_protection_kernel__colorblind_reading
+     classical top: tangled_rope -> tangled_rope | maxent_probs==raw(post): True | was_boosted(base): True
+     indexed top: tangled_rope -> tangled_rope | verdict_join: yellow/yellow -> yellow/yellow
+  fictional_construct_reading
+     classical top: scaffold -> scaffold | maxent_probs==raw(post): True | was_boosted(base): True
+     indexed top: scaffold -> scaffold | verdict_join: yellow/yellow -> yellow/yellow
+  institutional_trust_erosion_c0
+     classical top: snare -> snare | maxent_probs==raw(post): True | was_boosted(base): True
+     indexed top: snare -> snare | verdict_join: red/yellow -> red/yellow
+  jewish_sovereignty_palestine__cultural_zionist_reading
+     classical top: rope -> rope | maxent_probs==raw(post): True | was_boosted(base): False
+     indexed top: rope -> rope | verdict_join: yellow/yellow -> yellow/yellow
+  lausanne_minority_protections__guarantor_reading
+     classical top: rope -> rope | maxent_probs==raw(post): True | was_boosted(base): False
+     indexed top: rope -> rope | verdict_join: yellow/yellow -> yellow/yellow
+  llm_synthesis_capacity
+     classical top: scaffold -> scaffold | maxent_probs==raw(post): True | was_boosted(base): False
+     indexed top: scaffold -> scaffold | verdict_join: red/red -> red/red
+  neutron_star_bombardment_reading
+     classical top: rope -> rope | maxent_probs==raw(post): True | was_boosted(base): False
+     indexed top: rope -> rope | verdict_join: yellow/yellow -> yellow/yellow
+  press_reformation_causation__strategic_deployment
+     classical top: snare -> snare | maxent_probs==raw(post): True | was_boosted(base): True
+     indexed top: snare -> snare | verdict_join: red/yellow -> red/yellow
+  shinbutsu_ontological_commitment__incoherence_reading
+     classical top: tangled_rope -> tangled_rope | maxent_probs==raw(post): True | was_boosted(base): True
+     indexed top: tangled_rope -> snare | verdict_join: yellow/yellow -> yellow/yellow
+
+======================================================================
+PRE-REGISTRATION CHECKS
+======================================================================
+[movers] routed maxent_probs now == raw (boost removed): 12/12
+[movers] routed seats that WERE boosted in baseline (maxent_probs!=raw): 6/12
+         -> ['divine_legitimacy_substrate__folk_syncretistic_reading', 'equal_protection_kernel__colorblind_reading', 'fictional_construct_reading', 'institutional_trust_erosion_c0', 'press_reformation_causation__strategic_deployment', 'shinbutsu_ontological_commitment__incoherence_reading']
+[movers] routed indexed-top flips: [('shinbutsu_ontological_commitment__incoherence_reading', 'tangled_rope', 'snare')]
+[non-movers] routed CLASSICAL top changed (expect 0): []
+[non-movers] routed verdict_join changed (expect 0): []
+
+[NEG HALF] non-routed seats with raw_maxent_probs MOVED (MUST be 0 — else too-wide): 0
+           -> []
+[NEG HALF] non-routed maxent_probs moved (ensemble ripple allowed IF raw stable): 0
+           -> []
+[NEG HALF] non-routed classical top moved: []
+[NEG HALF] non-routed indexed top moved: []
+[NEG HALF] non-routed verdict_join moved: []
+
+WITNESS RESULT: PASS

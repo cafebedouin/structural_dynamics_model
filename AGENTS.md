@@ -396,7 +396,9 @@ even when a higher-priority signature shadows it, §1 gotcha; it wrongly caught 
 (`abductive_helpers`) threaded through `probe_signature/3`+P1/P7 instead of removing the row from
 `known_override_signature/1`. **Standing gate before converting any override:** decompose BOTH the seat's
 own floor after revert AND what OTHER consumers read the manufactured type (the maxent distribution boost
-`maxent_classifier.pl:331/341` is signature-level with no `C` — a latent seat-awareness gap; and the
+`maxent_classifier.pl` `apply_override_for_sig/4` is now ALSO seat-aware — OQ-173, 2026-06-21: thread `C`,
+skip the boost at `fcr_routed/1`/`constructed_routed/1`, the third surface after `dr_type` + the
+override-artifact consumers; recipe in `signature_detection_wiring.md §4` Tripwire C; and the
 corpus-relative maxent ENSEMBLE can ripple a multi-seat reroute to a carved-out seat, so a seat-split
 carve-out is "TYPES unchanged", not "verdict byte-identical"). **Routed false-summits read RED at the report surface, not green** — reverting the type to
 mountain unmasks the dirac(`second_class`)+cohomology(`fails_descent`)+abductive tensions the override

@@ -45,6 +45,39 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-21 — OQ-173 RESOLVED: MaxEnt signature-override boost made seat-aware (OQ-138 maxent residual)
+**Files:** prolog/maxent_classifier.pl, prolog/load_warning_allowlist.txt, ISSUES.md, docs/design/design_gaps.md, docs/technical/signature_detection_wiring.md, audits/2026-06-21_maxent_seat_aware/FINDINGS.md
+**Tier:** landed
+
+`apply_override_for_sig/3→/4`: `C` threaded from the single call site (maxent_classifier.pl:318); the
+two converted signatures skip the MaxEnt boost at routed seats — `false_ci_rope` at
+`signature_detection:fcr_routed/1`, `constructed_high_extraction` at `constructed_routed/1` (reused
+verbatim, unbound-cascade keyed; `DistOut = DistIn` reverts the seat to its pre-override raw dist).
+Non-converted clauses ignore `C` (byte-identical). Covers BOTH serialized surfaces (`maxent_top_type`/
+classical `maxent_probs` and `maxent_indexed`) — both classify paths call the same
+`apply_signature_override/3`.
+
+**Witness** (`audits/2026-06-21_maxent_seat_aware/diff_witness.out`): exactly the 12 routed seats
+(9 fcr + 3 constructed) revert to raw; **0** non-routed seats move on any maxent surface (negative-half
+byte-clean via the raw-probs discriminator); **1** categorical flip — `shinbutsu` indexed top
+tangled_rope→snare (the one genuinely-manufactured verdict); **0** `verdict_join` changes.
+**Premise refinement (correction-key):** OQ-138 framed the residual as the boost flipping
+`maxent_top` to tangled_rope; substrate shows the conditional ×3 boost **never flips a CLASSICAL top**
+(positive control: only 2 corpus-wide flips, both non-converted UNCONDITIONAL overrides
+`false_natural_law`/`coupling_invariant_rope`) — the manufacturing was classical-mass + the indexed
+top, not a classical-argmax flip. 21-corpus generality sweep: `routed_STILL_boosted=0` everywhere,
+non-converted boosts intact; `original_v5` PARTIAL (pre-existing `maxent_run` failure, stash-confirmed
+NOT a regression — recorded as partial, not swept-clean). `validation_suite` 92/0/0; `check_stack`
+baseline-clean; `gate.sh` GREEN. Incidental: renamed a pre-existing `[C2]` singleton → `_` and pruned
+the now-stale `maxent_classifier.pl:852` load-warning allowlist line.
+
+**Tripwire (promotion candidate — held to history, loud-not-silent):** when converting a future
+signature override RECLASSIFY→ROUTE, the MaxEnt boost in `apply_override_for_sig` is a THIRD surface
+to make seat-aware (after `dr_type` and the diagnostic consumers) — skip-guard it on the same
+`*_routed/1` predicate. NOT promoted to CLAUDE.md: the omission fails loudly (the next conversion's
+pipeline diff shows the routed seat still at the override target), and the recipe now lives in
+`signature_detection_wiring.md §4`.
+
 ## 2026-06-21 — OQ-138 constructed-3 sub-part RESOLVED: claim-discriminant conversion (keeps #2's floor)
 **Files:** prolog/signature_detection.pl, prolog/abductive_helpers.pl, ISSUES.md, AGENTS.md, audits/2026-06-21_oq138_fsm_route_conversion/CONSTRUCTED3_FINDINGS.md
 **Tier:** landed

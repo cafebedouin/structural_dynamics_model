@@ -7491,11 +7491,14 @@ load-bearing-elsewhere. Each clause's diff is now IN HAND; the partition ruling 
   47 inert + all non-constructed byte-identical; 5-corpus `mountain-routed→severe` holds (mtn-no-severe=0
   everywhere). `constructed_routed/1` keyed on the UNBOUND cascade winner + dr_type=unknown outcome (a bound-arg
   query tripped on the detector and wrongly caught `superheavy_decay`, an FCR seat — §1 gotcha; **same
-  bound→unbound fix applied to `fcr_routed/1`, behavior-preserving**). **Residual (operator's warning
-  confirmed):** the maxent boost (`maxent_classifier:341`) flips #1/#3's maxent_top to tangled_rope at the
-  pipeline surface (unlike FCR's top=rope) — benign (headline yellow, subsumed; #2 red via severe), but
-  seat-aware maxent (plumb C) is a tracked GAP. Scope: constructed_high unknown-input only; mountain-input +
-  constructed_low/constraint have 0 live changers (sub-item).
+  bound→unbound fix applied to `fcr_routed/1`, behavior-preserving**). **Residual RESOLVED → OQ-173 (2026-06-21):**
+  the maxent boost (`maxent_classifier:341`) was made seat-aware (skip at `constructed_routed/1`). NB the
+  "flips #1/#3's maxent_top to tangled_rope" framing was imprecise: on the CLASSICAL path #1/#3's
+  maxent_top was already the raw argmax (the ×3 boost never flips a classical top — positive control:
+  only 2 corpus-wide flips, both non-converted unconditional overrides); the real boost-driven flip lived
+  on the INDEXED path (#3 `shinbutsu` tangled_rope→snare, now corrected). Benign by outcome (headline
+  yellow, subsumed; #2 red via severe) — verdict_join byte-identical. `audits/2026-06-21_maxent_seat_aware/`.
+  Scope was constructed_high unknown-input only; mountain-input + constructed_low/constraint have 0 live changers (sub-item).
   ORIGINAL EVIDENCE — **constructed_* override INERT on 94%; the 3 real changes are NON-uniform (bare abstain was wrong).**
   constructed_high 50 winners but only **3** CHANGE (all `unknown→snare`); 47 inert (metric already snare).
   constructed_low 1 inert; constructed_constraint / coordination_scaffold 0 live. No config hook → ablated via
@@ -7553,10 +7556,11 @@ type it writes, not just the seat's own verdict. (Reusable form in `docs/technic
   commentary/informational, sig=AGREE, milder than FSM — mostly yellow), piton-3 TYPES unchanged + 13 inert +
   all non-FCR byte-identical; 5-corpus invariants pass; validation_suite 92/0/0. **Carve-out relaxed:**
   `statutory_debt` (piton) shifts yellow→red via the corpus-relative maxent ENSEMBLE (entropy_flag) — type
-  unchanged, OQ-90 not relitigated (Position-A-acceptable). **Residual (tracked):** the maxent FCR boost
-  (`maxent_classifier.pl:331`) is still signature-level (no C) — empirically benign for the 9 (maxent top=rope,
-  not tangled_rope), logged for the constructed conversion which hits the same shape at :341. piton-3 still held
-  on OQ-90.
+  unchanged, OQ-90 not relitigated (Position-A-acceptable). **Residual RESOLVED → OQ-173 (2026-06-21):** the maxent FCR boost
+  (`maxent_classifier.pl:331`) was made seat-aware (skip at `fcr_routed/1`) — confirmed benign for the 9
+  (all classical tops already == raw argmax; the indexed boost had no tangled_rope mass to amplify at these
+  seats; verdict_join byte-identical). Same fix covers the constructed shape at :341.
+  `audits/2026-06-21_maxent_seat_aware/`. piton-3 still held on OQ-90.
 
 ## OQ-139 — `green` base verdict reads "safe" but means "consistent": a labeling thread (Ω_C)
 
@@ -8527,7 +8531,44 @@ it re-opens the OQ-81 channel. Route every new generation path through the unifi
 
 ---
 
-*Last updated: 2026-06-20. Add new items with sequential OQ-NN labels. Mark
+## OQ-173 — MaxEnt signature-override boost made seat-aware (the OQ-138 maxent residual) (Ω_E)
+
+**Ω-type:** Ω_E (mechanical before/after diff: does the MaxEnt boost still fire at routed seats?).
+
+**Status:** resolved — 2026-06-21 (seat-aware skip shipped + witnessed; 21-corpus generality sweep;
+`audits/2026-06-21_maxent_seat_aware/FINDINGS.md`). Repoints the two OQ-138 maxent residuals
+(constructed-3 `:341`, FCR-9 `:331`).
+
+**Origin:** OQ-138's type-layer conversions (FSM/FCR-9/constructed-3) made `dr_type` and the
+diagnostic consumers seat-aware, but `maxent_classifier.pl`'s parallel override
+(`apply_override_for_sig`, signature-level, no `C`) still boosted the **routed** seats toward the
+override target — the MaxEnt layer manufacturing where the type layer stopped. Verdict-capable
+(feeds `probe_maxent`), so treated as an output-changing conversion with its own witness.
+
+**Resolution (witnessed).** Threaded `C` through `apply_override_for_sig/3→/4` (single call site,
+maxent_classifier.pl:318); skip the boost at routed seats reusing the existing
+`signature_detection:fcr_routed/1` + `constructed_routed/1` (verbatim, unbound-cascade keyed — no
+new predicate, no bound-arg mis-key). Non-converted clauses ignore `C` (byte-identical). FSM has no
+MaxEnt boost path (catch-all no-op — confirmed against substrate, scope holds). Witness
+(`diff_witness.out`): exactly the **12 routed seats** (9 fcr + 3 constructed) revert to their raw
+distribution; **0** non-routed seats move on any maxent surface (negative half byte-clean — raw-probs
+discriminator); **1** categorical flip — `shinbutsu` indexed top tangled_rope→snare (the one
+genuinely-manufactured verdict; classical tops unchanged because the conditional boost never flipped
+a classical argmax — refines OQ-138's "flips maxent_top" framing); **0** `verdict_join` changes.
+21-corpus sweep: `routed_STILL_boosted=0` everywhere; non-converted boosts intact;
+`original_v5` PARTIAL (pre-existing `maxent_run` failure, NOT a regression — stash-confirmed).
+`validation_suite` 92/0/0; `check_stack` baseline-clean; `gate.sh` GREEN. Incidental: pruned a stale
+`maxent_classifier.pl:852 [C2]` load-warning allowlist entry (singleton renamed `_`).
+
+**Priority:** 4
+
+**Deps:** splits_from OQ-138
+*(Workable-now at mint — `fcr_routed`/`constructed_routed` already existed; no human ruling owed,
+the design seat was ruled with OQ-138. Resolved same day.)*
+
+---
+
+*Last updated: 2026-06-21. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
