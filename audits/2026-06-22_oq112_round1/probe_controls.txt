@@ -1,0 +1,6 @@
+# OQ-112 Round-1 two-sided constructed positive controls (post-fix)
+# run: cd prolog && swipl ../audits/2026-06-22_oq112_round1/probe_controls.pl
+CTRL :198 no_abd_fact            -> unavailable  (expect unavailable: didnt-look fails closed)
+CTRL :198 abd_triggers([])        -> unavailable  (now unavailable; conservative — producer-side enhancement would restore agrees)
+CTRL :198 genuine trigger         -> disagrees(abductive_tension([trigger(some_class,0.9,some_anomaly,genuine)]))  (nonempty path intact)
+CTRL :212 constraint_signature(fake) = unknown  (TOTAL: metric-less id -> unknown clause :136; :212 unreachable)

@@ -45,6 +45,38 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-22 — OQ-112 item-1 (C4a) RESOLVED: diagnostic_summary data-absence else-branches fail closed
+**Files:** prolog/diagnostic_summary.pl, ISSUES.md, audits/2026-06-22_oq112_round1/
+**Tier:** landed
+
+Round 1 of OQ-112 (Pattern-6 census batch). Corpus pinned self-witnessing: **LIVE=92**
+(membership emitted + manifest + negative control: bad `corpus_path`→`corpus_empty`,
+`testsets_haiku`→960; consumer-predicate check: diagnostic path enumerates
+`corpus_constraint/1` at `json_report.pl:64`). C4a = 13 `; Signal = agrees` else-branches in
+`diagnostic_summary.pl`; member sort: **10 sound · 3 defects**. Discriminator: `agrees` is sound
+after the probe predicate *succeeded* with a positive no-tension result (`none`/`[]`/`H1=0`/
+no-override/good-zone), a defect when reached from the `catch(_,_,fail)` else (data-absence).
+Fixed (commit `4e6cf6e9`): `:198`/`:212`/`:163` `agrees`→`unavailable` (dropped identically with
+`inconclusive` at `classify_signals_acc:359–362`).
+
+- **`:198` (`probe_abductive`) is the only LIVE site:** 13/92 constraints have no `abd_triggers`
+  fact (producer `abductive_report.pl:401–404` enumerates only ≥1-hypothesis constraints; loader
+  asserts no fact for the rest). Was counted as agreement; now dropped. **Output-changing at the
+  agreements list, HEADLINE-NEUTRAL** — join verdict identical for all 92 (witness
+  `probe_before.tsv`/`probe_after.tsv`; the join is driven by tensions, not the agreement count).
+- **`:212` unreachable:** `constraint_signature/2` is total (metric-less id → `unknown` clause
+  `:136`; metric-bearing → `classify_by_signature(_,_,ambiguous)` catch-all `:353`). 0 live
+  firings; fixed as fail-closed hardening per the operator guardrail.
+- **`:163` unreachable:** `classify_disagreement/7` is total over 5 shapes; `probe_maxent` handles
+  all 5 by name. Fixed so a future 6th shape reports uninterpretable, not agree.
+
+Tripwire (don't make this mistake): the Python enrich side already distinguishes file-absent
+(`None`→unavailable) from cid-not-in-file (`[]`→measured-empty) at `enrich_pipeline_json.py:164–169`;
+the Prolog consumer was the only site collapsing absence→agreement, and `abd_triggers/2` is
+`:- dynamic`, so a *missing* `abductive_data.json` would leave the subsystem "available" and route
+every constraint to `:198`→agrees (file-missing = universal agreement). Items 2–8 staged in ISSUES.md
+with corpus-re-witness obligations (inherited 62/194-row verdicts are not standing on 92).
+
 ## 2026-06-22 — OQ-20 + OQ-174 RESOLVED: DR baseline code/data diff (PERTURBED, stable core)
 **Files:** ISSUES.md, prolog/json_report.pl, prolog/drl_purity_network.pl, python/audits/oq20_strip_cs.py, python/audits/oq20_dr_diff.py, python/audits/oq20_make_rekey.py, python/audits/oq20_analyze.py, audits/2026-06-22_oq20_dr_baseline_diff/
 **Tier:** correction-key

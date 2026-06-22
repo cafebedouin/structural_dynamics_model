@@ -5602,20 +5602,28 @@ KNOWN_STATE 2026-06-18.
 
 ## OQ-112 — Pattern-6 confirmed-candidate batch from the OQ-97 census: 8 classes, member-level sort and per-class disposition
 
-**Ω-type:** Ω_E (sites enumerated with read witnesses; per-member verdicts and fixes pending).
+**Ω-type:** Ω_E (sites enumerated with read witnesses; C4a sorted+fixed Round 1; items 2–8 pending).
 
-**Status:** open — filed 2026-06-11 at OQ-97 close. Full class tables with member lists:
+**Status:** open — filed 2026-06-11 at OQ-97 close; **item 1 (C4a) RESOLVED 2026-06-22**
+(Round 1, witness `audits/2026-06-22_oq112_round1/`); items 2–8 staged with corrected designs.
 **Priority:** 1
-`audits/2026-06-11_oq97_pattern6_census/WRITEUP.md` §4–§5.
+Full class tables with member lists: `audits/2026-06-11_oq97_pattern6_census/WRITEUP.md` §4–§5.
 
 **The batch (priority order, per OQ-44's common-law prioritize-by-success-shapedness;
 re-ranked 2026-06-11 after the item-4 trace — see update below):**
 
-1. **C4a — `; Signal = agrees` on absent probe input** (`diagnostic_summary.pl`, 13 sites; read
-   witness `probe_abductive` :190–199: no `abd_triggers` fact → `agrees`). Vacuous agreement
-   feeds the OQ-98 verdict join as absence-of-alert — green-over-absence one level below the
-   fixed banner. Honest tokens (`inconclusive`/`unavailable`) already in the file's vocabulary.
-   First job: sort each else-branch as data-absence (defect) vs conflict-absence (sound).
+1. **C4a — `; Signal = agrees` on absent probe input** (`diagnostic_summary.pl`, 13 sites).
+   **RESOLVED 2026-06-22 (Round 1).** Member sort (read witness, all 12 probes): 10 sound · 3
+   defects. Discriminator: `agrees` is sound after the probe predicate *succeeded* with a positive
+   no-tension result (`none`/`[]`/`H1=0`/no-override/good-zone); a defect when reached from the
+   `catch(_,_,fail)` else (data-absence). Fixed (commit `4e6cf6e9`): `:198`/`:212`/`:163`
+   `agrees`→`unavailable`. `:198` (`probe_abductive`) is the only LIVE site — 13/92 constraints
+   have no `abd_triggers` fact (producer `abductive_report.pl:401–404` omits no-hypothesis
+   constraints; loader asserts no fact); was counted as agreement, now dropped. Output-changing at
+   the agreements list, **headline-neutral** (join verdict identical for all 92). `:212`
+   (`constraint_signature` total → unreachable) and `:163` (`classify_disagreement` total over 5
+   shapes → unreachable) fixed as fail-closed hardening. The 10 sound sites
+   (`:154,:173,:179,:196,:210,:234,:237,:268,:272,:274`) are left as-is.
 2. **A10 widened — exception/failure absorbed at consumer boundary** (elevated from old item 7
    by the item-4 trace). Stage-level `catch(_, true)` (`json_report.pl:72,76`;
    `trajectory_mining.pl:912`) absorbs EVERY maxent failure mode — witnessed vacuously
@@ -5664,6 +5672,43 @@ row drop). **Hazard is latent, not live:** the first claim-bearing story missing
 Method note kept in the writeup: two probe iterations returned success-shaped non-witnesses
 (LL=-10.0 with the dynamic profile table empty) — profile-present must be witnessed before
 trusting any sink result.
+
+**Update 2026-06-22 — Round 1: corpus pinned, item 1 (C4a) resolved, items 2–8 re-staged.**
+Evidence: `audits/2026-06-22_oq112_round1/WRITEUP.md` (+ `pinned_corpus.txt`, `probe_before.tsv`/
+`probe_after.tsv`, `probe_controls.txt`, `diagnostic_summary_fix.diff`).
+
+- **Corpus pin (self-witnessing): LIVE=92** (membership emitted, not just a count; manifest
+  `pipeline_run_at=2026-06-22T02:03:39Z`, `ab8d1d7`). Negative control: bad `corpus_path` throws
+  `corpus_empty`, `testsets_haiku` overlay → 960 (overlay-took ≠ default-fallback). Consumer-
+  predicate check: the diagnostic path enumerates `corpus_constraint/1` (`json_report.pl:64`), not
+  a sibling table. **The inherited 62-row (item-4 SILENT) and 194-row (item-3 NEUTRAL) verdicts
+  are facts about THOSE sets — they re-anchor to 92 in their own rounds before being cited.**
+- **Item 1 fix witness:** probe reproduces the real diagnostic path; deterministic within harness;
+  85/92 join verdicts match the committed snapshot (the 7 that differ are bidirectional pre-existing
+  non-determinism / stale `abductive_data.json`, not introduced here). Before→after: exactly the 13
+  `has_abd=no` rows flip `agrees`→`unavailable`; join column identical for all 92.
+- **`:198` producer-side follow-up (recorded, not in scope):** the fix also routes the
+  *measured-empty* case (`abd_triggers(C,[])`, currently never produced) to `unavailable`. The fully
+  Pattern-6-correct form carries the provenance bit at authoring time — producer emits `[]` for every
+  corpus constraint + an `abductive_loaded` witness fact; consumer returns `agrees` on `[]` vs
+  `unavailable` on missing-fact. Producer+loader+consumer, output-changing; folded into item-2's
+  completion-fact design (same shape: positive completion witness + fail-closed on its absence).
+
+**Corrected staged designs (each carries its 92-corpus re-witness obligation):**
+- **Item 2 (A10-widened, channel absorbers) — CORRECTED.** Do NOT ship `catch(Goal,E,assert_failure)`
+  alone: `catch/3` is blind to *failure* (W12a clause-failure before arithmetic, catch-free; W12b
+  `catch(_,fail)` error→dropped row). Invert the default: emit `maxent_completed(N, witness)` on
+  genuine completion and **fail-closed in `verdict_join` on its absence** (subsumes the loud-channel
+  option). Item-2 positive control must **force a clause failure**, not just a `type_error`.
+  Re-witness item-4 SILENT on 92 first. One deferred ruling (`blocked_on_human`): may a maxent stage
+  ever legitimately emit zero constraints?
+- **Item 3 (A6, 5 unmeasured sites)** `purity_scoring.pl:71,80,88`, `drl_boltzmann_analysis.pl:302`,
+  `drl_fpn.pl:206`, `covering_analysis.pl:137`, `signature_detection.pl:1090`: tripwire measurement
+  on the pinned 92 ("NEUTRAL on 194" is not standing), then fail-closed per statute on any live site.
+- **Item 4 (A3 idiom cleanup):** dead branches confirmed / live firing empty on 62; re-witness on 92,
+  then the idiom cleanup.
+- **Items 5 (C4b blind=stable), 6 (A2 statistic-on-empty), 7 (A10 catch→0.0 — folds into item-2's
+  completion-fact design), 8 (low: C4c/A7/B2):** report-grade; staged per success-shapedness order.
 
 Disposition per class follows the OQ-44 statute for any site touched (fail-closed on absence,
 pass carries witness); output-changing fixes land alone per the established commit discipline.
