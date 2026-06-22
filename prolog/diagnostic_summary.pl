@@ -160,7 +160,7 @@ probe_maxent(C, Ctx, _DetType, Signal) :-
         ->  Signal = disagrees(entropy_flag(H))
         ;   DisInfo = residual_override(Shadow, Det)
         ->  Signal = disagrees(residual_override(Shadow, Det))
-        ;   Signal = agrees
+        ;   Signal = unavailable   % OQ-112 item-1: unreachable catch-all (classify_disagreement is total over 5 shapes) — uninterpretable DisInfo fails closed, was: agrees
         )
     ;   Signal = inconclusive
     ).
@@ -195,7 +195,7 @@ probe_abductive(C, _Ctx, DetType, Signal) :-
         ->  Signal = disagrees(abductive_tension(Triggers))
         ;   Signal = agrees
         )
-    ;   Signal = agrees
+    ;   Signal = unavailable   % OQ-112 item-1: no abd_triggers fact (didn't-look) — fail closed, was: agrees
     ).
 
 %% probe_signature(+C, +DetType, -Signal)
@@ -209,7 +209,7 @@ probe_signature(C, DetType, Signal) :-
             )
         ;   Signal = agrees
         )
-    ;   Signal = agrees
+    ;   Signal = unavailable   % OQ-112 item-1: no constraint_signature (absence) — fail closed, was: agrees
     ).
 
 %% probe_boltzmann(+C, +DetType, -Signal)
