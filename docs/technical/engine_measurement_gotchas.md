@@ -115,3 +115,18 @@ they differ, the comparison is confounded by corpus growth, not just the fix.
 `constraint_beneficiary`. The first pre-NL-gate run returned a wrong-looking signature
 census *because `domain_registry.pl` was missing* — caught by the load ERROR, fixed by the
 `cp`, re-run to the trustworthy value.
+
+## 4. MaxEnt `maxent_top_type` differs between `[stack]` and the full pipeline — decompose at the pipeline surface
+
+`maxent_classifier:maxent_top_type/3` (and the MaxEnt distribution generally) is **corpus-relative
+and run-state-dependent**: the value computed in a bare `[stack]` probe is NOT the value the pipeline
+records in `outputs/pipeline_output.json`, because the pipeline carries MaxEnt ensemble run-data
+(`maxent_dist_raw`/`maxent_indexed_dist` asserted during the run) that a fresh `[stack]` load does
+not. **Witnessed (2026-06-21, OQ-138 constructed-3):** an `[stack]` generality sweep read `0` routed
+seats with `maxent_top=tangled_rope` while the pipeline surface showed `4` — the `[stack]` reading
+under-reported the very MaxEnt-boost residual being audited (GAP-16). So when a finding turns on
+MaxEnt (`maxent_top_type`, `maxent_disagreement`, the distribution), decompose it from
+`pipeline_output.json` (the surface the verdict actually consumes), not an in-session `[stack]` call.
+`[stack]` is fine for structural predicates (types, signatures, claims) that don't depend on ensemble
+run-state; it is NOT fine for MaxEnt. (Same family as the corpus-relative-ensemble ripple that moves
+a carved-out seat's verdict when an unrelated reroute shifts the ensemble — Pattern-6-adjacent.)

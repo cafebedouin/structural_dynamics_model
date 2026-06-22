@@ -576,6 +576,44 @@ method, not optional rigor. This is the build-discipline rule (an empty/clean re
 about the probe until the probe is shown to discriminate) at the design level — and this very
 document violated it twice (§6, the δ double-miss), which is why it is stated this sharply.
 
+### Route-not-reclassify is a layer-sweep, not a single-site edit *(OQ-138 arc, 2026-06-21)*
+
+§5 says the engine routes; OQ-128/OQ-138 operationalized it by converting signature overrides from
+RECLASSIFY (overwrite `dr_type`) to ROUTE/COMMENT (leave the metric type standing, carry the finding
+as a discriminated severity). Converting three of them in sequence — `false_summit_mountain`,
+`false_ci_rope`, `constructed_high_extraction` — surfaced a design fact the principle did not, on its
+face, contain: **an override signature is not a single site. It manifests at every layer that reads
+the type it forces, and the conversion is true only when each of those layers routes.**
+
+A converted override touches at least three layers:
+
+1. **Type dispatch** (`resolve_modal_signature_conflict` / `resolve_with_perspectival_check`) —
+   manufactures the categorical type. The obvious site, the one "convert the override" first reads as.
+2. **The MaxEnt distribution boost** (`maxent_classifier:apply_override_for_sig`) — manufactures the
+   same type *independently*, in the probabilistic layer. A type-layer conversion that leaves this in
+   place produces a seat whose `dr_type` routed to scaffold while its MaxEnt top is still boosted to
+   tangled_rope: half-routed. (Left seat-unaware and benign-for-now — GAP-16.)
+3. **The override-artifact consumers** (`probe_signature`, the P1/P7 `expected_conflict_pattern`
+   arms) — these *explain away* the cross-subsystem divergences the override creates, so the verdict
+   stays quiet. Left keyed on the signature, a routed seat is treated as still-overriding: it emits a
+   spurious override-mismatch, or its honest unmask stays suppressed.
+
+The failure mode of converting one and not the others is the **build-discipline spine at the design
+level — an absence that presents as a presence**: the headline (`dr_type`) routes and reads as done
+while a different layer silently still reclassifies. "The engine routes, it does not reclassify" is
+then true at the surface and false in the substrate — a slogan, not a property. The principle has
+teeth only as a *quantifier over layers*: for every layer that reads the override target, that layer
+routes — or the residue is a declared gap, not a silent one.
+
+So the operational form of §5 for any override conversion is a **sweep, not an edit**: enumerate every
+site that reads the forced type — positive-controlled grep for the type as a literal, plus the alert
+predicates keyed on it (`dr_claim_mismatch/4` and kin) — and make each seat-aware, or record the
+residue where a cold read finds it (GAP-16 records the MaxEnt layer rather than leaving it
+half-occupied). The blast-radius gate in `signature_detection_wiring.md` §4 is the checklist; this is
+why it exists. It is the same "finish the wire" rule as `build_discipline.md` Pattern 1, raised from
+build-time to design intent: **a routing claim that holds at one layer and not the rest is not a
+smaller version of route-not-reclassify — it is reclassification wearing the headline of routing.**
+
 ---
 
 ## 6. The open questions, sorted by kind

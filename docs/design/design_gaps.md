@@ -769,3 +769,47 @@ by retiring the live injection site: the legacy `agent/orchestrator.py` and its 
 drivers (`app.py`/`c-app.py`) were deleted (`git rm`). OQ-172 leaves a standing tripwire — any new
 or revived generation front-end must route through `generate_from_manifests`, never a hand-rolled
 prompt-assembly loop that threads `claimed_type` over `downstream_of` deps. Named here 2026-06-21.
+
+## GAP-16 — The MaxEnt signature-override boost is not seat-aware (a converted override still fires on its routed seats in the MaxEnt layer)
+
+**The capability:** A signature override that has been converted from RECLASSIFY to ROUTE/COMMENT
+(OQ-138: `false_summit_mountain`, `false_ci_rope`/FCR-9, `constructed_high_extraction`/constructed-3)
+should stop acting as an override at *every* layer for its routed seats — not only at the type
+dispatch. Today the conversion is seat-aware at two of the three layers an override lives in: the
+**type layer** (`resolve_modal_signature_conflict` / `resolve_with_perspectival_check`) and the
+**override-artifact consumers** (`diagnostic_summary` `probe_signature/3` + the P1/P7
+`expected_conflict_pattern` arms, via `abductive_helpers:seat_overrides/2`). The third layer — the
+**MaxEnt distribution boost** (`maxent_classifier.pl` `apply_override_for_sig/3`, e.g. `false_ci_rope`
+→ tangled_rope ×3 at `:331`, `constructed_high_extraction` → tangled_rope ×3 at `:341`) — is
+**signature-level and still boosts the routed seats** toward their old override target. So a routed
+seat whose `dr_type` reverted to scaffold/unknown can still have its MaxEnt distribution pushed toward
+tangled_rope, leaving the MaxEnt layer asserting a type the rest of the engine no longer routes to.
+
+**Why it is absent (deferred, not defective — and benign at the moment):** `apply_override_for_sig/3`
+takes only the signature and the distribution, not the constraint `C`, so it cannot consult the
+seat-level routed predicates (`signature_detection:fcr_routed/1`, `constructed_routed/1`) that the
+other two layers use. Witnessed effect (2026-06-21): for FCR-9 the boost did not change the routed
+seats' MaxEnt top (it stayed `rope`, not `tangled_rope`) — benign by luck, not design; for
+constructed-3 it *did* flip the routed tangled_rope-claimed seats' `maxent_top` to `tangled_rope` at
+the pipeline surface, but the headline verdict was unchanged (yellow, the boost-driven MaxEnt
+disagreement subsumed by the honest base; the mountain-claimed seat is red via its severe signature
+floor regardless). So the inconsistency is real but currently changes no verdict — an admitted
+absence, not a defect that reads as working.
+
+**What was built and removed:** nothing removed. The seat-aware infrastructure the fix would reuse
+(`fcr_routed/1`, `constructed_routed/1`, `seat_overrides/2`, `converted_at_seat/2`) all exist and are
+live for the other two layers; the MaxEnt layer was simply not threaded. No half-built apparatus is
+left declared-but-unfed.
+
+**What closing the gap would require:** thread `C` from `apply_signature_override(C, …)`
+(`maxent_classifier.pl:316`, where `C` is already in scope) into `apply_override_for_sig`, and skip
+the boost for routed seats (`false_ci_rope` ∧ `fcr_routed(C)`; `constructed_high_extraction` ∧
+`constructed_routed(C)`). Treat it as an output-changing conversion with its own witness (removing the
+boost changes `probe_maxent` → possibly base verdicts): full-pipeline before/after diff + the 5-corpus
+generality sweep + decompose MaxEnt at the **pipeline surface** (the `[stack]` `maxent_top_type`
+diverges from the pipeline's — see `engine_measurement_gotchas.md`). Open design question to surface
+first: whether the MaxEnt override mechanism should exist *at all* for converted signatures under
+route-not-reclassify (the type layer no longer manufactures, so should the MaxEnt layer?) — an
+operator-seat call, not the minimal seat-aware skip. **Currently tracked as a residual under OQ-138**
+(the FCR-9 / constructed-3 build records, `audits/2026-06-21_oq138_fsm_route_conversion/`); the
+next-instance build prompt is drafted there. Named here 2026-06-21.
