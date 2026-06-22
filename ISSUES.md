@@ -571,37 +571,41 @@ recalibrate" marker.
 
 ## OQ-20 — DR-regression baseline diff against `v3-dev-baseline` tag never run
 
-**Status:** open
+**Status:** resolved — PERTURBED with a stable core. Audit
+`audits/2026-06-22_oq20_dr_baseline_diff/` (2026-06-22).
 **Priority:** 1
-**Origin:** Tranche 2 correctness pass, May 2026.  
-**Files:** git tag `v3-dev-baseline` (pre-CS-work); current DR pipeline
-output
+**Origin:** Tranche 2 correctness pass, May 2026.
+**Files:** git tag `v3-dev-baseline` (`3e75f90b`); `prolog/json_report.pl`
 
-**Specific question:** All CS-era work (the original CS wiring, the kernel_id
-keystone, the UUID surrogate migration, the temporal wiring) landed on top of
-mature DR code. The audit confirmed a pre-CS DR baseline exists as the git tag
-`v3-dev-baseline`. A byte-diff of current DR output against the baseline would
-establish whether any of the CS-era work perturbed DR. This has never been
-run. Did the CS-era work leave DR output byte-identical to the pre-CS
-baseline, or are there perturbations?
+**Question (answered):** Did CS-era code perturb DR output vs the pre-CS tag?
+The literal mechanism in the original entry (checkout tag, byte-diff) is
+confounded — the tag carries a different corpus (corpus reset 2026-06-05). The
+audit instead held the **corpus fixed** and varied **only code** (cells A/B on
+`original_json`, C/D on `original_v6_csfree`; cross-code within corpus), with an
+empty noise floor (all cells byte-identical across repeats).
 
-**Evidence so far:** The audit confirmed the tag's existence. Test suite
-passes after each phase (zero errors, zero warnings as of last run), which
-establishes that DR didn't *break*. It does not establish that DR output is
-unchanged — multifile clause additions, new `stack.pl` imports, and shared
-predicate-resolution-order changes could shift DR output without breaking it.
-The before/after for the original CS imports is no longer recoverable
-(everything is now committed on top of those changes), so this is not a clean
-"before vs after a specific change" diff — it's "compare current DR to the
-pre-CS-era tag."
+**Verdict: PERTURBED — and replicated across both pre-CS corpora.** CS-era code
+*did* change DR output, with a sharp structure:
+- **Core classification BYTE-STABLE** (identical 13-field zero-diff set on both
+  corpora): `claimed_type`, `classifications`, `base_extractiveness`,
+  `suppression`, `theater_ratio`, `victims`, `beneficiaries`, `topic_domain`,
+  `human_readable`, `emerges_naturally`, `requires_active_enforcement`,
+  `resistance`, `resolution_strategy`. The χ/ε/d/f_d metric *values* are also
+  identical (`perspective_chi` "changes" only by adding `f1_d`/`f2_d` sub-keys).
+- **Per-constraint `id` relabeled** (132/1151), commit `801390a5` swapped
+  enumeration `known_constraint/1` (in-file id) → `corpus_constraint/1`
+  (filename base) — near-bijective relabel + two correctness gains
+  (digit-leading-atom recovery `8k_tv_limit_2026`; demo exclusion
+  `catholic_church_1200`). NOT the UUID migration.
+- **Genuinely changed**: `signature` (~85%), MaxEnt distribution
+  (`raw_maxent_probs`/`maxent_probs`; argmax mostly stable), and added/auxiliary
+  fields (`domain` null→computed, `coupling` +violations, `gaps` list→null — a
+  flagged candidate regression). Each changed field is a candidate child-OQ
+  (intentional shared-predicate evolution vs accidental); mint individually if a
+  specific field's change is questioned.
 
-**What resolution changes:** Either confirms DR was untouched by all CS work
-(strong evidence the axis separation held in practice, not just in
-architecture), or surfaces specific DR outputs that shifted (each shift becomes
-its own investigation: intentional consequence of a shared-predicate change,
-or accidental perturbation needing tracing). Either result is informative.
-Required mechanism: check out `v3-dev-baseline`, run the DR pipeline, capture
-output, return to HEAD, run again, byte-diff.
+Witness/evidence: `audits/2026-06-22_oq20_dr_baseline_diff/{WRITEUP.md,analysis.json,corpus_hashes.json}`;
+raw cell outputs in `outputs/oq20/` (gitignored, reproducible from pinned corpora + commit).
 
 ---
 
@@ -8607,7 +8611,44 @@ the design seat was ruled with OQ-138. Resolved same day.)*
 
 ---
 
-*Last updated: 2026-06-21. Add new items with sequential OQ-NN labels. Mark
+## OQ-174 — `cs_reading_relation` feeds `contamination_network` explicit edges: designed committer→observer coupling (Ω_C)
+
+**Status:** open
+**Priority:** 3
+**Origin:** OQ-20 audit Arm 2, 2026-06-22 (`audits/2026-06-22_oq20_dr_baseline_diff/`).
+**Files:** `prolog/drl_purity_network.pl` (`constraint_neighbors/3`, lines ~67/92/257);
+`prolog/json_report.pl` (`write_contamination_network`)
+
+**Specific question:** Arm 2 of the OQ-20 audit stripped all `cs_*` facts from
+`kernel_v1` (HEAD code, E=as-is vs F=stripped, empty noise floor) to test v7
+Theorem 7 (detection-independence). The DR **observer core is fully
+detection-independent** — `claimed_type`, `perspective_chi`, `signature`,
+`maxent_*`, `classifications`, `purity` scalars do **not** change when cs is
+stripped. The sole DR-axis field that moves is **`contamination_network`** (180
+stories: 152 cs-bearing + 28 cs-free neighbours). Mechanism is in code, not
+inferred: `constraint_neighbors/3` reads `cs_reading_relation` edges and emits
+them as `explicit` contamination neighbours (source comment confirms this was an
+intentional modification). Stripping `cs_reading_relation` removes those edges,
+changing network topology for cs-bearing stories *and* their cs-free neighbours
+(diffs are semantic neighbour-set changes, 0/180 ordering-only).
+
+This is a **designed** committer→observer coupling, not an accidental Theorem-7
+violation. The open question is a design ruling: is routing a committer-axis fact
+(`cs_reading_relation`) into an observer-axis structural field
+(`contamination_network`) consistent with the detection-independence claim, or
+should the contamination network gate/exclude cs-derived edges? (The plan's
+"200 cs-free files byte-identical" negative control "fails" here precisely
+because of this coupling — a feature of the finding, not a strip bug.)
+
+**What resolution changes:** Either ratifies the coupling as intended FPN
+topology (detection-independence is scoped to the *classification* axis, not the
+network-analysis layer) — or rules it a leak and gates the explicit-edge source.
+Either way the boundary between the two axes at the FPN layer gets a declared
+seat.
+
+---
+
+*Last updated: 2026-06-22. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

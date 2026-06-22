@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "ff7eb90e8304d3efcc554d12fa509d6a0076ef6d",
+    "store_version": "b32989a9a5b5adbc6eb36a9499ca81f06bddd480",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-22T02:07:43"
+    "generated_at": "2026-06-22T12:28:44"
   },
-  "issues_sha": "2c3d18d71219ed9bc641c3f5cebd38945df86abfed0d6fb976c352e01db10ded",
-  "n_entries": 173,
+  "issues_sha": "0d69fbcf4b0177cf88e384b36659fe3972ce65f0428daaa79307910be390020e",
+  "n_entries": 174,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 79,
+    "resolved": 80,
     "mitigated": 9,
     "partial": 7,
     "open": 72,
@@ -100,15 +100,6 @@
       "status": "open",
       "priority": 1,
       "summary": "Temporal-shape trigger thresholds are corpus-specific magic numbers",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": []
-    },
-    {
-      "id": "OQ-20",
-      "status": "open",
-      "priority": 1,
-      "summary": "DR-regression baseline diff against `v3-dev-baseline` tag never run",
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
@@ -1017,6 +1008,17 @@
       "mentioned_in": [
         "OQ-71"
       ]
+    },
+    {
+      "id": "OQ-174",
+      "status": "open",
+      "priority": 3,
+      "summary": "`cs_reading_relation` feeds `contamination_network` explicit edges: designed committer→observer coupling (Ω_C)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-20"
+      ]
     }
   ],
   "archive": [
@@ -1126,6 +1128,15 @@
       "status": "disposed",
       "priority": "–",
       "summary": "`testsets_3000/` quarantined from loader: abandoned or unwired?",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": []
+    },
+    {
+      "id": "OQ-20",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "DR-regression baseline diff against `v3-dev-baseline` tag never run",
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []

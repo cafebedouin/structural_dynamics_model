@@ -45,6 +45,44 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-22 — OQ-20 RESOLVED + OQ-174 minted: DR baseline code/data diff (PERTURBED, stable core)
+**Files:** ISSUES.md, prolog/json_report.pl, prolog/drl_purity_network.pl, python/audits/oq20_strip_cs.py, python/audits/oq20_dr_diff.py, python/audits/oq20_make_rekey.py, python/audits/oq20_analyze.py, audits/2026-06-22_oq20_dr_baseline_diff/
+**Tier:** correction-key
+
+Corpus-fixed / code-varied diff of DR output, tag `v3-dev-baseline` (`3e75f90b`)
+vs HEAD, via `run_json_report` only (bypasses the diverged `run_pipeline.py`).
+Cells A/B (original_json), C/D (original_v6_csfree), E/F (kernel_v1 cs-strip);
+all cells byte-identical across repeats (empty noise floor). Full method +
+controls: `audits/2026-06-22_oq20_dr_baseline_diff/WRITEUP.md`.
+
+**Arm 1 (OQ-20) = PERTURBED, replicated on both corpora.** Core classification
+BYTE-STABLE (identical 13-field zero-diff set incl. `claimed_type`,
+`classifications`, `base_extractiveness`, `suppression`, `theater_ratio`,
+`victims`, `beneficiaries`, and the χ/ε/d/f_d values). Changed: `signature`
+(~85%), MaxEnt distribution (argmax mostly stable), added fields (`domain`,
+`f1_d/f2_d`, coupling violations), `gaps` regressed list→null (flagged).
+
+**Correction-key items (how to cite):**
+- The original OQ-20 mechanism ("checkout tag, byte-diff") is CONFOUNDED — the
+  tag swaps the corpus (reset 2026-06-05). Hold corpus fixed, vary only code.
+- The per-constraint `id` relabeling (tag in-file id → HEAD filename base) is
+  commit **`801390a5`** (`known_constraint/1`→`corpus_constraint/1`), **not** the
+  UUID migration. Do not attribute on the ratio alone.
+- **Tripwire:** running HEAD on a legacy/archive corpus whose **filename ≠ in-file
+  constraint id** yields **null DR output for those stories** (HEAD enumerates the
+  filename, queries facts under it, finds none — no error). 133/1151 in
+  original_json; 0 in original_v6 and the live corpus (filename==internal there).
+  Re-key by in-file `constraint_metric` subject before any cross-id comparison.
+
+**Arm 2 → OQ-174 (Ω_C, open).** Stripping all `cs_*` from kernel_v1 leaves the DR
+observer core fully detection-independent (Theorem 7 holds) EXCEPT
+`contamination_network`: `constraint_neighbors/3` reads `cs_reading_relation`
+into `explicit` edges *by design* (`drl_purity_network.pl:67,92,257`), so cs
+presence moves the network for 180 stories (incl. 28 cs-free neighbours). A
+designed committer→observer coupling needing a design ruling, not a bug.
+
+---
+
 ## 2026-06-21 — OQ-35 RESOLVED: wiring-gap census rows 1–6 adjudicated (cruft-vs-wire)
 **Files:** ISSUES.md, docs/design/design_gaps.md, prolog/probe_oq35_field_counterfactual.pl, python/audits/oq35_field_counterfactual.py, prolog/narrative_ontology.pl, audits/2026-06-21_oq35_field_counterfactual/
 **Tier:** correction-key

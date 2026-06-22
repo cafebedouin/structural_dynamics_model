@@ -1,0 +1,127 @@
+{
+  "arm1_AB": {
+    "label": "A<->B (original_json)",
+    "intersection_n": 30,
+    "common": 1150,
+    "null_artifact_n": 133,
+    "clean": 1017,
+    "mask_n": 0,
+    "id_only_tag": [
+      "catholic_church_1200"
+    ],
+    "id_only_head": [
+      "8k_tv_limit_2026"
+    ],
+    "zero_diff_fields": [
+      "base_extractiveness",
+      "beneficiaries",
+      "claimed_type",
+      "classifications",
+      "emerges_naturally",
+      "human_readable",
+      "requires_active_enforcement",
+      "resistance",
+      "resolution_strategy",
+      "suppression",
+      "theater_ratio",
+      "topic_domain",
+      "victims"
+    ],
+    "changed_fields_over_clean": {
+      "raw_maxent_probs": 1017,
+      "coupling": 1017,
+      "perspective_chi": 1017,
+      "gaps": 1017,
+      "domain": 1017,
+      "maxent_probs": 1004,
+      "maxent_entropy": 1004,
+      "diagnostic_verdict": 908,
+      "signature": 870,
+      "omegas": 810,
+      "maxent_top_type": 297,
+      "perspectives": 269,
+      "h1_band": 159,
+      "purity_score": 66,
+      "purity_band": 46,
+      "drift_events": 42,
+      "post_synthesis_flags": 11
+    },
+    "PERTURBED_nonid_n": 10571
+  },
+  "arm1_CD": {
+    "label": "C<->D (original_v6)",
+    "intersection_n": 30,
+    "common": 3373,
+    "null_artifact_n": 0,
+    "clean": 3373,
+    "mask_n": 0,
+    "id_only_tag": [
+      "catholic_church_1200"
+    ],
+    "id_only_head": [],
+    "zero_diff_fields": [
+      "base_extractiveness",
+      "beneficiaries",
+      "claimed_type",
+      "classifications",
+      "emerges_naturally",
+      "human_readable",
+      "requires_active_enforcement",
+      "resistance",
+      "resolution_strategy",
+      "suppression",
+      "theater_ratio",
+      "topic_domain",
+      "victims"
+    ],
+    "changed_fields_over_clean": {
+      "raw_maxent_probs": 3373,
+      "coupling": 3373,
+      "perspective_chi": 3373,
+      "gaps": 3373,
+      "domain": 3373,
+      "maxent_probs": 3368,
+      "maxent_entropy": 3368,
+      "diagnostic_verdict": 3319,
+      "signature": 3269,
+      "omegas": 2899,
+      "perspectives": 2722,
+      "h1_band": 2543,
+      "maxent_top_type": 2448,
+      "drift_events": 596,
+      "purity_score": 519,
+      "purity_band": 106,
+      "post_synthesis_flags": 81
+    },
+    "PERTURBED_nonid_n": 42103
+  },
+  "arm2_EF": {
+    "label": "E<->F (kernel_v1 cs-strip)",
+    "common": 1106,
+    "cs_bearing": 906,
+    "cs_free": 200,
+    "mask_n": 0,
+    "cs_axis_fields_changed": {
+      "cs_pattern": 906,
+      "cs_pattern_signals": 906,
+      "cs_instance_count": 906,
+      "cs_reference_frame": 879,
+      "cs_drift_gap": 875,
+      "cs_drift_moment": 875,
+      "cs_drift_terminal": 875,
+      "cs_drift_unacknowledged": 697,
+      "cs_verdicts": 385,
+      "cs_axiom_foreclosed": 129
+    },
+    "DR_fields_changed_cs_bearing": {
+      "contamination_network": 152,
+      "diagnostic_verdict": 2,
+      "drift_events": 1,
+      "verdict_join": 1
+    },
+    "DR_fields_changed_cs_free_NEGCTRL": {
+      "contamination_network": 28
+    },
+    "negctrl_pass": false
+  }
+}
