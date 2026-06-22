@@ -45,7 +45,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-06-22 — OQ-20 RESOLVED + OQ-174 minted: DR baseline code/data diff (PERTURBED, stable core)
+## 2026-06-22 — OQ-20 + OQ-174 RESOLVED: DR baseline code/data diff (PERTURBED, stable core)
 **Files:** ISSUES.md, prolog/json_report.pl, prolog/drl_purity_network.pl, python/audits/oq20_strip_cs.py, python/audits/oq20_dr_diff.py, python/audits/oq20_make_rekey.py, python/audits/oq20_analyze.py, audits/2026-06-22_oq20_dr_baseline_diff/
 **Tier:** correction-key
 
@@ -59,8 +59,15 @@ controls: `audits/2026-06-22_oq20_dr_baseline_diff/WRITEUP.md`.
 BYTE-STABLE (identical 13-field zero-diff set incl. `claimed_type`,
 `classifications`, `base_extractiveness`, `suppression`, `theater_ratio`,
 `victims`, `beneficiaries`, and the χ/ε/d/f_d values). Changed: `signature`
-(~85%), MaxEnt distribution (argmax mostly stable), added fields (`domain`,
-`f1_d/f2_d`, coupling violations), `gaps` regressed list→null (flagged).
+(~85%), MaxEnt distribution; the argmax `maxent_top_type` is a *separate*
+classification surface and is NOT mostly stable (29% flips original_json, **73%
+original_v6**, dominated by `tangled_rope→snare`). `gaps` list→null is **NOT a
+regression** — it's OQ-109 B3's coverage-bit + the 2026-06-14 detect_gap_pattern
+rebuild (null=didn't-look vs []=examined). Code-vs-noise attribution is
+witnessed: the empty noise floor is positive-controlled (fresh-process repeats
+independently recompute; warm in-process 2nd run byte-identical to cold), so it's
+real, not a cache shadow — #5's non-determinism (session-overlay memos, Python
+phases) is bypassed by the `run_json_report`-only path.
 
 **Correction-key items (how to cite):**
 - The original OQ-20 mechanism ("checkout tag, byte-diff") is CONFOUNDED — the
@@ -74,12 +81,17 @@ BYTE-STABLE (identical 13-field zero-diff set incl. `claimed_type`,
   original_json; 0 in original_v6 and the live corpus (filename==internal there).
   Re-key by in-file `constraint_metric` subject before any cross-id comparison.
 
-**Arm 2 → OQ-174 (Ω_C, open).** Stripping all `cs_*` from kernel_v1 leaves the DR
-observer core fully detection-independent (Theorem 7 holds) EXCEPT
-`contamination_network`: `constraint_neighbors/3` reads `cs_reading_relation`
-into `explicit` edges *by design* (`drl_purity_network.pl:67,92,257`), so cs
-presence moves the network for 180 stories (incl. 28 cs-free neighbours). A
-designed committer→observer coupling needing a design ruling, not a bug.
+**Arm 2 → OQ-174 (Ω_C, RESOLVED — benign carve-out).** Stripping all `cs_*` from
+kernel_v1 leaves the DR observer core fully detection-independent (Theorem 7
+holds) EXCEPT `contamination_network` (180 stories incl. 28 cs-free neighbours),
+where `constraint_neighbors/3` reads `cs_reading_relation` into `explicit` edges
+(`drl_purity_network.pl:67,92,257`). Crux settled by substrate:
+`cs_reading_relation` is an **authored corpus fact** (written into testsets,
+never asserted by code — read-only in `once`/`\+` guards), so this is a
+**shared-input dependency, not detection-dependence** — Theorem 7 (which forbids
+detection output feeding detection) is intact. The "200 cs-free byte-identical"
+negative control "fails" because the authored edge couples cs-free neighbours —
+a feature, not a bug.
 
 ---
 

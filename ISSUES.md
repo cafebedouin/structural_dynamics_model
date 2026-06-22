@@ -585,7 +585,12 @@ audit instead held the **corpus fixed** and varied **only code** (cells A/B on
 empty noise floor (all cells byte-identical across repeats).
 
 **Verdict: PERTURBED — and replicated across both pre-CS corpora.** CS-era code
-*did* change DR output, with a sharp structure:
+*did* change DR output, with a sharp structure. (Code-vs-noise attribution is
+witnessed: noise floor empty AND positive-controlled — repeats are fresh
+processes that independently recompute, and a warm in-process 2nd run is
+byte-identical to cold, so the empty floor is real, not a cache shadow; #5's
+non-determinism is session-overlay/Python-phase, both bypassed by the
+`run_json_report`-only path. Buckets exhaust the 30-field intersection.)
 - **Core classification BYTE-STABLE** (identical 13-field zero-diff set on both
   corpora): `claimed_type`, `classifications`, `base_extractiveness`,
   `suppression`, `theater_ratio`, `victims`, `beneficiaries`, `topic_domain`,
@@ -597,12 +602,19 @@ empty noise floor (all cells byte-identical across repeats).
   (filename base) — near-bijective relabel + two correctness gains
   (digit-leading-atom recovery `8k_tv_limit_2026`; demo exclusion
   `catholic_church_1200`). NOT the UUID migration.
-- **Genuinely changed**: `signature` (~85%), MaxEnt distribution
-  (`raw_maxent_probs`/`maxent_probs`; argmax mostly stable), and added/auxiliary
-  fields (`domain` null→computed, `coupling` +violations, `gaps` list→null — a
-  flagged candidate regression). Each changed field is a candidate child-OQ
-  (intentional shared-predicate evolution vs accidental); mint individually if a
-  specific field's change is questioned.
+- **Genuinely changed**: `signature` (~85%); MaxEnt distribution recalibrated
+  (`raw_maxent_probs`/`maxent_probs`). The MaxEnt argmax (`maxent_top_type`) is a
+  separate classification surface and is NOT mostly stable — flips 297/1017 (29%)
+  on original_json, **2448/3373 (73%)** on original_v6, dominated by
+  `tangled_rope→snare` (enumerated in `analysis.json`); the priority-cascade
+  verdict (`claimed_type`) stays stable while the MaxEnt top-type recalibrates.
+- **Intentional/added (not regressions)**: `domain` null→computed, `coupling`
+  +violations, and **`gaps` list→null = OQ-109 B3 coverage-bit (2026-06-12) +
+  the 2026-06-14 `detect_gap_pattern` rebuild** (probed: `gap_coverage/1` emits
+  null=didn't-look vs []=examined-no-gap; the predicate still fires — Pattern-6
+  fix, not dark code). Other downstream fields (`diagnostic_verdict`, `omegas`,
+  `perspectives`, `h1_band`, `purity_*`) trail the signature/maxent changes.
+  Mint a child-OQ only if a specific field's change is later questioned.
 
 Witness/evidence: `audits/2026-06-22_oq20_dr_baseline_diff/{WRITEUP.md,analysis.json,corpus_hashes.json}`;
 raw cell outputs in `outputs/oq20/` (gitignored, reproducible from pinned corpora + commit).
@@ -8611,40 +8623,36 @@ the design seat was ruled with OQ-138. Resolved same day.)*
 
 ---
 
-## OQ-174 — `cs_reading_relation` feeds `contamination_network` explicit edges: designed committer→observer coupling (Ω_C)
+## OQ-174 — `cs_reading_relation` feeds `contamination_network` explicit edges: shared-input, Theorem-7 intact (Ω_C)
 
-**Status:** open
+**Status:** resolved — benign carve-out (shared authored input, not
+detection-dependence). OQ-20 audit Arm 2, 2026-06-22.
 **Priority:** 3
-**Origin:** OQ-20 audit Arm 2, 2026-06-22 (`audits/2026-06-22_oq20_dr_baseline_diff/`).
-**Files:** `prolog/drl_purity_network.pl` (`constraint_neighbors/3`, lines ~67/92/257);
+**Files:** `prolog/drl_purity_network.pl` (`constraint_neighbors/3`, ~67/92/257);
 `prolog/json_report.pl` (`write_contamination_network`)
 
-**Specific question:** Arm 2 of the OQ-20 audit stripped all `cs_*` facts from
-`kernel_v1` (HEAD code, E=as-is vs F=stripped, empty noise floor) to test v7
-Theorem 7 (detection-independence). The DR **observer core is fully
-detection-independent** — `claimed_type`, `perspective_chi`, `signature`,
-`maxent_*`, `classifications`, `purity` scalars do **not** change when cs is
-stripped. The sole DR-axis field that moves is **`contamination_network`** (180
-stories: 152 cs-bearing + 28 cs-free neighbours). Mechanism is in code, not
-inferred: `constraint_neighbors/3` reads `cs_reading_relation` edges and emits
-them as `explicit` contamination neighbours (source comment confirms this was an
-intentional modification). Stripping `cs_reading_relation` removes those edges,
-changing network topology for cs-bearing stories *and* their cs-free neighbours
-(diffs are semantic neighbour-set changes, 0/180 ordering-only).
+**Finding:** Arm 2 (strip all `cs_*` from kernel_v1, HEAD code, E vs F, empty
+floor) found the DR observer core fully detection-independent (`claimed_type`,
+`perspective_chi`, `signature`, `maxent_*`, `classifications`, `purity` all
+unchanged) — the sole moving DR field is `contamination_network` (180 stories:
+152 cs-bearing + 28 cs-free neighbours, semantic neighbour-set changes, 0/180
+ordering-only), because `constraint_neighbors/3` reads `cs_reading_relation` into
+its `explicit` edges.
 
-This is a **designed** committer→observer coupling, not an accidental Theorem-7
-violation. The open question is a design ruling: is routing a committer-axis fact
-(`cs_reading_relation`) into an observer-axis structural field
-(`contamination_network`) consistent with the detection-independence claim, or
-should the contamination network gate/exclude cs-derived edges? (The plan's
-"200 cs-free files byte-identical" negative control "fails" here precisely
-because of this coupling — a feature of the finding, not a strip bug.)
-
-**What resolution changes:** Either ratifies the coupling as intended FPN
-topology (detection-independence is scoped to the *classification* axis, not the
-network-analysis layer) — or rules it a leak and gates the explicit-edge source.
-Either way the boundary between the two axes at the FPN layer gets a declared
-seat.
+**Ruling (the crux was empirical, settled by substrate):** `cs_reading_relation`
+is an **authored corpus fact** — `narrative_ontology:cs_reading_relation('uuid',
+other_reading, coexists_with|forecloses)` written into the testset files at
+generation time, **never asserted by any engine pass** (no `assert`/`dynamic`;
+cs-analysis files use it only inside `once(...)`/`\+(...)` read guards). It exists
+independent of whether anything was *classified* cs. So contamination_network
+reading it is a **shared-input dependency**, the same pattern as its
+`shared_victim`/`shared_beneficiary` edges — **not** detection output feeding
+back into detection. Theorem 7 forbids the latter; the former is intact. The
+plan's "200 cs-free byte-identical" negative control "fails" precisely because
+the authored relational edge couples cs-free neighbours — a feature of the
+finding, not a strip bug or a leak. Residual design note (optional): the FPN
+could gate `cs_`-prefixed authored edges for axis tidiness; not a correctness
+issue. Witness: `audits/2026-06-22_oq20_dr_baseline_diff/WRITEUP.md` §Arm 2.
 
 ---
 

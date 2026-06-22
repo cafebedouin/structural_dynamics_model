@@ -18,7 +18,38 @@ in `outputs/oq20/` (cells) and `outputs/oq20/reports/analysis.json` (per-field t
   edges *by design* (`drl_purity_network.pl`), propagating even to cs-free neighbours.
 
 Both arms ran with an **empty noise floor** (every cell byte-identical across repeats;
-`mask_n = 0`), so every reported diff is a real code/data effect, not non-determinism.
+`mask_n = 0`) — **and the empty floor is witnessed real, not a cache shadow** (see §Floor below),
+so every reported cross-code diff is a real code/data effect, not non-determinism.
+
+### The empty floor is witnessed, not assumed (the code-vs-noise split)
+
+An empty floor cuts two ways. For the **stable core** (13 zero-diff fields), empty is pure good
+news — nothing was subtracted, so byte-stability is raw, not laundered by over-masking. For the
+**PERTURBED** fields, the code-attribution ("this 85% signature change is *code*, not noise")
+depends on the floor genuinely characterizing the pipeline's non-determinism. Design premise #5
+says the pipeline *is* non-deterministic (OQ-112 order-dependence; "maxent cache reads read stale
+unless cleared"), so the empty floor had to be reconciled, not asserted:
+
+- **Each cell repeat is a fresh OS process.** Prolog `nb_global` caches do not survive process
+  exit, and stderr confirms **every repeat independently recomputes** maxent/FPN/cohomology from
+  scratch (the precompute banners print per run). So repeat-2 did **not** ride repeat-1's cache —
+  byte-identity across repeats is *independent recomputation converging*, which rules out a
+  cross-process cache shadow.
+- **Floor positive control (warm vs cold).** In a single process, `run_json_report` was called
+  **twice**; the 2nd run executes with run-1 state/caches resident (witnessed: corpus load reused,
+  precomputes recompute). Its output is **byte-identical** to a cold single-run (`B_1`). So even an
+  in-process warm/dirty state does not perturb output — the within-run cache-read hazard does not
+  bite this export path.
+- **Premise #5 reconciled.** #5's non-determinism sources are: (a) generation stochasticity —
+  N/A (no generation); (b) ensemble refit — same corpus, same refit; (c) pipeline/cache — the
+  non-deterministic Python phases of `run_pipeline.py` are **bypassed by design** (we run only the
+  swipl `run_json_report` export), and the "stale memo unless cleared" hazard is a *session-overlay
+  counterfactual* hazard (changing the corpus mid-session without clearing), which **single-corpus
+  fresh-process runs do not exercise**. Load order is the deterministic sorted glob, so OQ-112
+  order-dependence is fixed across runs.
+
+Conclusion: the floor is empty because this export path is deterministic, not because the repeats
+were blind. The PERTURBED *fact* (cross-code diffs are real) and its *code attribution* both hold.
 
 ---
 
@@ -74,21 +105,32 @@ Over those 1017 clean stories (evidence: `analysis.json::arm1_AB`):
 Additionally, the **χ/ε/d/f_d metric values inside `perspective_chi` are identical to the digit**
 (the field "changes" on all 1017 stories only because HEAD *adds* `f1_d`/`f2_d` sub-keys).
 
-**Changed — added structure (new capability, not reclassification):**
+**Changed — added structure / intentional changes (not reclassification):**
 `domain` (tag always `null` → HEAD computes a value), `perspective_chi` (+`f1_d`/`f2_d`),
 `coupling` (category & score identical; +`scope_violations`/`power_violations`/`live_index`,
-and `boltzmann` newly wired), `gaps` (tag computes a list → HEAD emits `null`: a regression to
-investigate).
+and `boltzmann` newly wired), `gaps` (tag computes a list → HEAD emits `null`). **`gaps` is NOT a
+regression** (an earlier draft mis-flagged it): it is the intentional OQ-109 B3 coverage-bit change
+(`json_report.pl:311–323`, 2026-06-12) plus the 2026-06-14 `detect_gap_pattern` input rebuild —
+`gap_coverage/1` now emits `null` when no seat is examinable (didn't-look) vs `[]` when examined-
+no-gap, the Build-Discipline Pattern-6 fix. The predicate still fires; the input source moved from
+the retired `constraint_classification` cells to authored stakeholder seats.
 
 **Changed — genuine value changes (the substantive code effect):**
 - `signature` (870/1017) — the signature-detection layer evolved heavily (e.g. `false_ci_rope`
   → `unknown`, `natural_law` → `unknown`).
 - `raw_maxent_probs` / `maxent_probs` (≈1017/1004) — the MaxEnt distribution was recalibrated
-  (different probabilities), though the **argmax is mostly stable** (`maxent_top_type` differs
-  only 297/1017).
+  (different probabilities). The **argmax (`maxent_top_type`) is a separate classification-layer
+  surface and is NOT mostly stable across corpora**: it flips **297/1017 (29%) on original_json
+  but 2448/3373 (73%) on original_v6**, dominated by `tangled_rope → snare` (116 of the AB flips;
+  **2261 of the CD flips**). Full flip enumeration: `analysis.json` / `oq20_analyze.py`. Note this
+  is the MaxEnt *probabilistic* top-type; the **priority-cascade verdict (`claimed_type`,
+  `classifications`) is byte-stable** — the two classification surfaces diverge under the recal.
 - `diagnostic_verdict` (908), `omegas` (810), `perspectives` (269), `h1_band` (159),
   `purity_score`/`purity_band` (66/46), `drift_events` (42) — downstream of the signature/maxent
   changes and added subsystems.
+
+**Completeness:** on both corpora `{13 stable} ∪ {17 changed} = the full 30-field tag-era
+intersection` (id excluded); zero unaccounted fields (`oq20_analyze.py` asserts this).
 
 **Verdict (Arm 1): PERTURBED.** CS-era code changed DR output. The change is concentrated in the
 signature layer, the MaxEnt distribution, and added auxiliary fields; the **core type verdict and
@@ -138,11 +180,19 @@ The diffs are **semantic** (neighbour set / scalar changes, not list re-ordering
 were ordering-only). A small tail (`diagnostic_verdict` 2, `verdict_join` 1, `drift_events` 1)
 is downstream of cs by design.
 
-**Verdict (Arm 2): detection-independence holds for the DR observer core; one *designed*
-cross-axis coupling** routes `cs_reading_relation` into `contamination_network`. This is a
-characterized design coupling, **not** an accidental Theorem-7 violation — but whether an
-intentional committer→observer edge is consistent with the detection-independence claim is a
-design question (new OQ, Ω_C, for operator ruling).
+**Verdict (Arm 2): detection-independence (Theorem 7) holds.** The DR observer core is unchanged
+by cs-stripping; the sole coupling, `contamination_network`, reads `cs_reading_relation` — and
+that is a **shared-input dependency, not a detection-dependence**: `cs_reading_relation` is an
+**authored corpus fact** (`narrative_ontology:cs_reading_relation('uuid', other_reading,
+coexists_with|forecloses)` written into the testset files at generation time), **never asserted by
+any code** (no `assert`/`dynamic`; the cs-analysis files use it only inside `once(...)`/`\+(...)`
+guards). It exists independent of whether anything was *classified* cs, so
+`constraint_neighbors/3` reading it is the same shared-input pattern as its `shared_victim` /
+`shared_beneficiary` edges. The strip removes it only because it carries the `cs_` prefix. **This
+is the benign carve-out, not a Theorem-7 violation** — Theorem 7 forbids detection output feeding
+back into detection, and no detection output is involved. Recorded as **OQ-174 (resolved)**; the
+residual design note (should the FPN gate cs-prefixed authored edges for tidiness) is logged there,
+not a correctness issue.
 
 ---
 
@@ -159,8 +209,11 @@ design question (new OQ, Ω_C, for operator ruling).
   is the resolved orphan, not the 1150/1151 ratio.
 - **Re-key applied before mask construction** so noise-floor self-diffs and cross-code diffs share
   one canonical id-space.
-- **Empty noise floor** (`mask_n = 0`, every cell byte-identical across repeats) — every diff is a
-  real effect.
+- **Empty noise floor, witnessed real** (`mask_n = 0`, every cell byte-identical across repeats) —
+  and positive-controlled, not assumed: repeats are fresh processes that independently recompute
+  (no shared cache), and a warm in-process 2nd `run_json_report` is byte-identical to a cold run
+  (§Floor). The diff-script selftest proves the *diff* can see differences; this floor control
+  proves the *run harness* produces independent repeats — distinct instruments, both controlled.
 - **Load-path equivalence**: tag `testsets/` ≡ archived `original_json` byte-identical (1151 names,
   0 content diffs); both eras enumerate via SWI `expand_file_name` (sorted glob) → identical load
   order by construction.
