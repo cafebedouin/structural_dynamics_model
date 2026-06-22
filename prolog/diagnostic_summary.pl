@@ -47,7 +47,7 @@
 :- use_module(maxent_classifier).
 :- use_module(dirac_classification).
 
-:- use_module(abductive_helpers, [known_override_signature/1, override_target/2]).
+:- use_module(abductive_helpers, [known_override_signature/1, seat_overrides/2, override_target/2]).
 :- use_module(data_repair, [grid_provenance/2]).  % OQ-98 verdict_join; source_class/2 called module-qualified (unexported; load-path witnessed, p2 probe)
 
 :- use_module(library(lists)).
@@ -201,7 +201,7 @@ probe_abductive(C, _Ctx, DetType, Signal) :-
 %% probe_signature(+C, +DetType, -Signal)
 probe_signature(C, DetType, Signal) :-
     (   catch(signature_detection:constraint_signature(C, Sig), _, fail)
-    ->  (   known_override_signature(Sig)
+    ->  (   seat_overrides(C, Sig)          % OQ-138: seat-aware — routed FCR-9 are non-override here
         ->  (   override_target(Sig, Target),
                 Target = DetType
             ->  Signal = agrees_via_override(Sig)
@@ -384,7 +384,7 @@ expected_conflict_pattern(C, maxent, hard(_Shadow, Det), Det,
     signature_override_artifact,
     'MaxEnt disagrees because signature override forces type') :-
     catch(signature_detection:constraint_signature(C, Sig), _, fail),
-    known_override_signature(Sig),
+    seat_overrides(C, Sig),                % OQ-138: seat-aware (routed FCR-9 excluded)
     override_target(Sig, Det).
 
 % --- P2: fcr_gate_deferral ---
@@ -457,13 +457,13 @@ expected_conflict_pattern(C, context_gap, restricted_mismatch(_, DetType), DetTy
     pre_post_override_divergence,
     'Restricted classifier sees pre-override metric-based type') :-
     catch(signature_detection:constraint_signature(C, Sig), _, fail),
-    known_override_signature(Sig).
+    seat_overrides(C, Sig).                % OQ-138: seat-aware (routed FCR-9 excluded — they unmask honestly)
 
 expected_conflict_pattern(C, dirac, dirac_mismatch(_, DetType), DetType,
     pre_post_override_divergence,
     'Dirac class reflects metric-layer type, not override type') :-
     catch(signature_detection:constraint_signature(C, Sig), _, fail),
-    known_override_signature(Sig).
+    seat_overrides(C, Sig).                % OQ-138: seat-aware (routed FCR-9 excluded)
 
 % --- P8: tangled_rope_mixed_dirac ---
 % Tangled rope is defined as mixed first-class/second-class.

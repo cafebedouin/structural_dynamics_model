@@ -837,7 +837,11 @@ resolve_with_perspectival_check(C, ModalType, false_ci_rope, AdjustedType) :-
         ->  AdjustedType = ModalType    % Preserve: indexical differentiation detected
         ;   ModalType == unknown
         ->  AdjustedType = unknown       % Surface: honest unknown is not a metric result (OQ-37, 2026-06-01)
-        ;   AdjustedType = tangled_rope % Override: uniform classification
+        ;   AdjustedType = ModalType    % OQ-138 (2026-06-21): ROUTE — was `tangled_rope`. FCR no longer
+                                        % overwrites; the diagnostic rides the victim-discriminated severity
+                                        % on fcr_routed/1 seats (the "FCR-9"). Piton (clause 2 above) and
+                                        % inert seats (unknown / perspectival-preserved) are unaffected.
+                                        % Restore the legacy override by reverting this branch to tangled_rope.
         )
     ;   AdjustedType = ModalType        % Ablation: preserve metric-based type
     ).
@@ -1639,9 +1643,40 @@ false_summit_mountain(C, fsm_evidence(BeneficiaryCount, CouplingScore, LevelDiv)
 %  would silently fall to commentary and drop their diagnostic (the trap). Instead
 %  they grade on their OWN discriminant (signature_diagnostic_severity/3), mirroring
 %  drl_core:dr_claim_mismatch/4 which grades on the metric outcome, never on whether
-%  a type was overwritten. FCR / constructed / coupling_invariant_rope are NOT here
-%  — they still overwrite and still grade via the legacy type-delta path (unchanged).
+%  a type was overwritten. constructed / coupling_invariant_rope are NOT here — they
+%  still overwrite and still grade via the legacy type-delta path (unchanged).
+%  false_ci_rope is SEAT-split (converted only at fcr_routed/1 seats — the FCR-9), so it
+%  is keyed via converted_at_seat/2, not here (a signature-level entry would wrongly
+%  convert the inert + piton false_ci_rope seats). See OQ-138 deferred-clause ruling.
 converted_signature(false_summit_mountain).
+
+%% fcr_routed(+C)
+%  OQ-138 (2026-06-21): the false_ci_rope seats actually ROUTED by the conversion
+%  (the "FCR-9") — those whose post-conversion dr_type is NOT an FCR override target
+%  (tangled_rope), NOT the honest-abstain (unknown), and NOT piton. Keyed on the dispatch
+%  OUTCOME (dr_type) rather than mirroring clause 3's guard conditions, so it cannot drift
+%  from the dispatch (an earlier metric_based_type_indexed proxy diverged from the live
+%  ModalType on 2 haiku + 4 flash seats — caught by the cross-corpus generality sweep).
+%  NON-CIRCULAR: dr_type/3 is the TYPE dispatch (resolve_with_perspectival_check), which
+%  does not consult converted_at_seat/2 or the severity machinery; only the grade/severity
+%  side reads fcr_routed. Piton/inert/no-op (metric==tangled_rope) seats are excluded.
+fcr_routed(C) :-
+    constraint_signature(C, false_ci_rope),
+    \+ narrative_ontology:piton_candidate(C),       % clause 2 piton refinement (OQ-90)   } stable dispatch
+    \+ drl_core:coordination_dead(C),               % clause 1 dead-coordination piton    } GATE predicates
+    \+ has_metric_perspectival_variance(C),         % indexical-preserved (override defers)} (no proxy divergence)
+    constraint_indexing:default_context(Ctx),
+    drl_core:dr_type(C, Ctx, DT),                   % OUTCOME (robust; replaces the metric_based_type_indexed
+    DT \== tangled_rope,                            % proxy that diverged from ModalType): routed away from the
+    DT \== unknown.                                 % override target, and not the honest-abstain inert case
+
+%% converted_at_seat(+C, +Signature)
+%  Seat-level "this seat is converted to route". Signature-level for false_summit_mountain
+%  (all its cascade-winners are genuinely overridden); seat-level for false_ci_rope
+%  (only the fcr_routed/1 subset). The grade/severity dispatch uses THIS, not
+%  converted_signature/1, so a seat-split signature converts only its routed seats.
+converted_at_seat(_, false_summit_mountain).
+converted_at_seat(C, false_ci_rope) :- fcr_routed(C).
 
 %% signature_diagnostic_severity(+C, +Signature, -Severity)
 %  Discriminated severity for a converted signature, decoupled from the type delta.
@@ -1654,6 +1689,11 @@ converted_signature(false_summit_mountain).
 signature_diagnostic_severity(C, false_summit_mountain, moderate) :-
     once(narrative_ontology:constraint_victim(C, _)), !.
 signature_diagnostic_severity(_, false_summit_mountain, informational).
+% false_ci_rope (OQ-138 FCR-9): same victim discriminant as FSM — an authored victim
+% => concealment possible => moderate (floor); none => informational (route, no floor).
+signature_diagnostic_severity(C, false_ci_rope, moderate) :-
+    once(narrative_ontology:constraint_victim(C, _)), !.
+signature_diagnostic_severity(_, false_ci_rope, informational).
 
 alerting_severity(moderate).
 alerting_severity(severe).
@@ -1666,7 +1706,7 @@ alerting_severity(severe).
 %  the type delta, unchanged.
 signature_grade(C, Grade) :-
     constraint_signature(C, Sig),
-    converted_signature(Sig),
+    converted_at_seat(C, Sig),
     !,
     signature_diagnostic_severity(C, Sig, Sev),
     ( alerting_severity(Sev) -> Grade = correction ; Grade = commentary ).
@@ -1688,7 +1728,7 @@ signature_grade(C, commentary) :-
 %  correction => moderate mapping; commentary-grade legacy gets NO alert.
 signature_severity(C, Sev) :-
     constraint_signature(C, Sig),
-    converted_signature(Sig),
+    converted_at_seat(C, Sig),
     !,
     signature_diagnostic_severity(C, Sig, Sev).
 signature_severity(C, moderate) :-

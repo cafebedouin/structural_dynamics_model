@@ -20,6 +20,7 @@
 
     % Override tables
     known_override_signature/1,
+    seat_overrides/2,
     override_target/2,
 
     % Fingerprint void classification
@@ -72,6 +73,19 @@ known_override_signature(coordination_scaffold).
 known_override_signature(constructed_low_extraction).
 known_override_signature(constructed_high_extraction).
 known_override_signature(constructed_constraint).
+
+%% seat_overrides(+C, +Signature)
+%  OQ-138: seat-level "this signature overrides dr_type AT THIS SEAT". Signature-level
+%  for every override signature EXCEPT false_ci_rope, which is SEAT-split: it is converted
+%  to ROUTE at fcr_routed/1 seats (the FCR-9) and so NO LONGER overrides there, while its
+%  piton (OQ-90) and inert seats keep override semantics. The override-artifact consumers
+%  (diagnostic_summary probe_signature/3 + the P1/P7 expected_conflict_pattern arms) call
+%  THIS instead of known_override_signature/1, so the routed FCR-9 are treated as
+%  non-override (their subsystem divergences surface honestly, like FSM) while piton/inert
+%  FCR seats are byte-identical. fcr_routed/1 is called module-qualified at runtime (same
+%  cycle-avoidance as signature_grade's known_override_signature call — no load cycle).
+seat_overrides(C, false_ci_rope) :- !, \+ signature_detection:fcr_routed(C).
+seat_overrides(_, Sig) :- known_override_signature(Sig).
 
 %% override_target(+Signature, -TargetType)
 %  The type that a signature override forces.

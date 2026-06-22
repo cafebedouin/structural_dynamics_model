@@ -45,6 +45,30 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-21 — OQ-138 FCR-9 sub-part RESOLVED: false_ci_rope SEAT-AWARE conversion (template didn't transfer)
+**Files:** prolog/signature_detection.pl, prolog/abductive_helpers.pl, prolog/diagnostic_summary.pl, ISSUES.md, AGENTS.md, audits/2026-06-21_oq138_fsm_route_conversion/FCR9_FINDINGS.md
+**Tier:** landed
+
+**The FSM template did NOT transfer directly — false_ci_rope is SEAT-SPLIT** (9 routed / 3 piton / 13 inert,
+one signature). FSM had no inert/piton, so its signature-level mechanism worked; for FCR, signature-level
+keying would flip the 13 inert seats' grade and (witnessed by ablation) disturb the 12 already-mismatched
+piton+inert seats. Built **seat-aware**: type route (resolve_with_perspectival_check clause 3 else
+tangled_rope→ModalType); `fcr_routed/1` keyed on the stable dispatch GATES + the dr_type OUTCOME (NOT a
+`metric_based_type_indexed` proxy — that proxy diverged from the live ModalType on 2 haiku+4 flash seats,
+**caught by the 5-corpus generality sweep** before shipping, then replaced by the outcome check which also
+removed the dispatch-mirror fragility); `converted_at_seat/2` (signature-level FSM, seat-level FCR);
+`seat_overrides/2` (abductive_helpers, exported) threaded through diagnostic_summary `probe_signature/3` + P1/P7
+so the routed-9 are non-override (honest unmask) while piton/inert keep override semantics.
+
+**Witness:** 9 seats route tangled_rope→scaffold/snare; 6 verdicts change (vic>0 correction/moderate, vic=0
+commentary/informational, sig=AGREE — no spurious override_mismatch; milder than FSM, mostly yellow); piton-3
+TYPES unchanged + 13 inert FCR + all non-FCR byte-identical. **Carve-out relaxed:** statutory_debt (piton)
+shifts yellow→red via the corpus-relative maxent ENSEMBLE (entropy_flag) — type unchanged, OQ-90 not
+relitigated (Position-A). 5-corpus invariants pass (routed∩piton=0, routed-still-tangled_rope=0,
+piton-not-piton=0); validation_suite 92/0/0; check_stack clean. **Residual:** maxent FCR boost
+(maxent_classifier:331) still signature-level (no C) — benign for the 9 (maxent top=rope), logged for
+constructed (same shape at :341). Full: FCR9_FINDINGS.md.
+
 ## 2026-06-21 — OQ-138 FSM sub-part RESOLVED: false_summit_mountain converted RECLASSIFY→ROUTE; routed false-summits read RED
 **Files:** prolog/signature_detection.pl, prolog/abductive_helpers.pl, prolog/config.pl, ISSUES.md, AGENTS.md, docs/technical/signature_detection_wiring.md, audits/2026-06-21_oq138_fsm_route_conversion/
 **Tier:** landed

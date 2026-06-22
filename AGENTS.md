@@ -381,10 +381,21 @@ grade a converted signature on its OWN discriminant (FSM: `vic>0→moderate/corr
 signature reverts) — mirroring `dr_claim_mismatch/4`. **Contract change to note:** a converted
 signature's `informational` severity IS emitted as an alert (the visible route, distinct from
 "dropped"); the legacy "commentary-grade gets NO alert" rule holds only for still-overwriting
-signatures. When converting the next clause (FCR/constructed/CI-rope), add it to
+signatures. **For a NON-seat-split signature** (all its cascade-winners genuinely overridden, like FSM): add it to
 `converted_signature/1`, give it a `signature_diagnostic_severity/3` discriminant, AND remove it from
 `abductive_helpers:known_override_signature/1`+`override_target/2` (else `probe_signature/3`/P1/P7
-misfire). **Routed false-summits read RED at the report surface, not green** — reverting the type to
+misfire). **For a SEAT-SPLIT signature** (FCR, OQ-138 2026-06-21 — false_ci_rope is 9 routed / 3 piton /
+13 inert on ONE signature): the signature-level mechanism does NOT transfer — it would convert the inert
+seats and disturb the carve-out. Build seat-aware instead: a `*_routed/1` predicate keyed on the stable
+dispatch GATES + the dr_type OUTCOME (NOT a `metric_based_type_indexed` proxy — it diverges from the live
+ModalType; the cross-corpus generality sweep catches this); `converted_at_seat/2` (signature-level for
+non-split, seat-level for split) feeding `signature_grade`/`signature_severity`; and `seat_overrides/2`
+(`abductive_helpers`) threaded through `probe_signature/3`+P1/P7 instead of removing the row from
+`known_override_signature/1`. **Standing gate before converting any override:** decompose BOTH the seat's
+own floor after revert AND what OTHER consumers read the manufactured type (the maxent distribution boost
+`maxent_classifier.pl:331/341` is signature-level with no `C` — a latent seat-awareness gap; and the
+corpus-relative maxent ENSEMBLE can ripple a multi-seat reroute to a carved-out seat, so a seat-split
+carve-out is "TYPES unchanged", not "verdict byte-identical"). **Routed false-summits read RED at the report surface, not green** — reverting the type to
 mountain unmasks the dirac(`second_class`)+cohomology(`fails_descent`)+abductive tensions the override
 was hiding; that is honest commentary, classification unchanged (operator ruling 2026-06-21: the
 engine comments, does not reclassify, and diagnostics may render different verdicts). Witness:

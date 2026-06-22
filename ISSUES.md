@@ -7404,8 +7404,10 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Ω-type:** Ω_C (per-clause ruling: is each overwrite a load-bearing correction or a manufacturing reclassification the router should replace?) over an Ω_E base (a mechanical before/after `dr_type`+headline diff per clause).
 
-**Status:** partial — FSM sub-part RESOLVED 2026-06-21 (witnessed; FSM build record below +
-`audits/2026-06-21_oq138_fsm_route_conversion/FINDINGS.md`). **Per-clause RULINGS recorded 2026-06-21**
+**Status:** partial — FSM sub-part RESOLVED 2026-06-21; **FCR-9 sub-part RESOLVED 2026-06-21** (seat-aware,
+witnessed + 5-corpus generality sweep; `audits/2026-06-21_oq138_fsm_route_conversion/FCR9_FINDINGS.md`).
+Remaining: constructed (CONVERT-conditional, owes build), CI-rope (KEEP), CI-rope route-purity (OPEN), piton-3
+(OQ-90), false_natural_law (OQ-70). **Per-clause RULINGS recorded 2026-06-21**
 (operator; see PER-CLAUSE RULINGS below): CI-rope KEEP (out of frame, evidence-settled); FCR-9 CONVERT on the
 FSM template + piton-3 carved out (OQ-90); constructed CONVERT-conditional (owes a claim-discriminant witnessed
 to keep seat #2's floor); CI-rope route-purity HOLD/OPEN (operator-merits); `false_natural_law` deferred (OQ-70).
@@ -7525,13 +7527,21 @@ type it writes, not just the seat's own verdict. (Reusable form in `docs/technic
   victim-discriminant was witnessed on protein, not argued). **Kill:** if the claim-discriminant cannot hold
   #2's severe without also flooring genuinely-inert seats, it is the wrong discriminant and constructed
   re-opens. Owes: conversion commit + post-build surface diff. Partition-witnessed only, not conversion-witnessed.
-- **FCR-9 — CONVERT on the FSM template; piton-3 carved out (evidence-settled for the 9).** 9 of 12 changers
-  are FSM's structural twin (scaffold revert, green→yellow unmask, clean 6/6 victim split) — inherit the
-  discriminated-severity template directly. The 3 `scaffold→piton` seats are the OQ-90 FCR-branch refinement and
-  are NOT in this ruling: blind-reverting them undoes an OQ-90 decision, so what piton reverts to is its own
-  question gated on OQ-90. Owes: conversion commit + surface witness on the 9; piton-3 held. **Kill (the 9):** a
-  converted seat whose unmasked verdict misfires (an unmask that is wrong rather than correct-RED) — decompose
-  each seat's floor source pre-commit per the standing gate.
+- **FCR-9 — CONVERTED (RESOLVED 2026-06-21, seat-aware); piton-3 carved out.** Build record:
+  `audits/2026-06-21_oq138_fsm_route_conversion/FCR9_FINDINGS.md`. The FSM template did NOT transfer directly:
+  false_ci_rope is seat-split (9 routed / 3 piton / 13 inert, one signature), so signature-level keying would
+  flip the inert seats' grade and disturb the piton-3. Built seat-aware: `fcr_routed/1` (keyed on the stable
+  dispatch gates + the dr_type OUTCOME, NOT a metric proxy — an earlier proxy diverged from ModalType on 2
+  haiku+4 flash seats, caught by the 5-corpus generality sweep), `converted_at_seat/2` (signature-level FSM,
+  seat-level FCR), `seat_overrides/2` threaded through `probe_signature`/P1/P7. Witness: 9 seats route
+  tangled_rope→scaffold/snare, 6 verdicts change (discriminated: vic>0 correction/moderate, vic=0
+  commentary/informational, sig=AGREE, milder than FSM — mostly yellow), piton-3 TYPES unchanged + 13 inert +
+  all non-FCR byte-identical; 5-corpus invariants pass; validation_suite 92/0/0. **Carve-out relaxed:**
+  `statutory_debt` (piton) shifts yellow→red via the corpus-relative maxent ENSEMBLE (entropy_flag) — type
+  unchanged, OQ-90 not relitigated (Position-A-acceptable). **Residual (tracked):** the maxent FCR boost
+  (`maxent_classifier.pl:331`) is still signature-level (no C) — empirically benign for the 9 (maxent top=rope,
+  not tangled_rope), logged for the constructed conversion which hits the same shape at :341. piton-3 still held
+  on OQ-90.
 
 ## OQ-139 — `green` base verdict reads "safe" but means "consistent": a labeling thread (Ω_C)
 
