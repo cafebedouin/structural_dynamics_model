@@ -7406,8 +7406,9 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Status:** partial — FSM sub-part RESOLVED 2026-06-21; **FCR-9 sub-part RESOLVED 2026-06-21** (seat-aware,
 witnessed + 5-corpus generality sweep; `audits/2026-06-21_oq138_fsm_route_conversion/FCR9_FINDINGS.md`).
-Remaining: constructed (CONVERT-conditional, owes build), CI-rope (KEEP), CI-rope route-purity (OPEN), piton-3
-(OQ-90), false_natural_law (OQ-70). **Per-clause RULINGS recorded 2026-06-21**
+**constructed-3 sub-part RESOLVED 2026-06-21** (seat-aware + CLAIM discriminant; `CONSTRUCTED3_FINDINGS.md`).
+Remaining: CI-rope (KEEP), CI-rope route-purity (OPEN), constructed_high mountain-input + constructed_low/
+constraint (0 live changers, sub-item), piton-3 (OQ-90), false_natural_law (OQ-70). **Per-clause RULINGS recorded 2026-06-21**
 (operator; see PER-CLAUSE RULINGS below): CI-rope KEEP (out of frame, evidence-settled); FCR-9 CONVERT on the
 FSM template + piton-3 carved out (OQ-90); constructed CONVERT-conditional (owes a claim-discriminant witnessed
 to keep seat #2's floor); CI-rope route-purity HOLD/OPEN (operator-merits); `false_natural_law` deferred (OQ-70).
@@ -7481,7 +7482,21 @@ load-bearing-elsewhere. Each clause's diff is now IN HAND; the partition ruling 
   tensions (the "scaffold stays green" guess was refuted), so the discriminant lives in the commentary layer.
   Victim split present (6 vic=0 + 6 vic>0). **Piton sub-case (3, scaffold→piton, all vic>0):** OQ-90
   FCR-branch refinement — needs separate handling, cannot blind-revert to scaffold.
-- **constructed_* — override INERT on 94%; the 3 real changes are NON-uniform (bare abstain is wrong).**
+- **constructed-3 — CONVERTED (RESOLVED 2026-06-21, seat-aware + CLAIM discriminant).** Build record:
+  `audits/2026-06-21_oq138_fsm_route_conversion/CONSTRUCTED3_FINDINGS.md`. Routed the 3 constructed_high
+  unknown→snare seats to the honest abstain `unknown`; the NEW **claim discriminant** (mountain→severe,
+  else→informational; victim doesn't distinguish — all 3 vic>0) keeps #2's floor by replacing the lost
+  `type_1_false_summit(severe)` with the signature severe. **Kill condition MET (witnessed):** #2
+  (institutional_trust_erosion, claimed mountain) keeps RED byte-identical; #1/#3 route to yellow/commentary;
+  47 inert + all non-constructed byte-identical; 5-corpus `mountain-routed→severe` holds (mtn-no-severe=0
+  everywhere). `constructed_routed/1` keyed on the UNBOUND cascade winner + dr_type=unknown outcome (a bound-arg
+  query tripped on the detector and wrongly caught `superheavy_decay`, an FCR seat — §1 gotcha; **same
+  bound→unbound fix applied to `fcr_routed/1`, behavior-preserving**). **Residual (operator's warning
+  confirmed):** the maxent boost (`maxent_classifier:341`) flips #1/#3's maxent_top to tangled_rope at the
+  pipeline surface (unlike FCR's top=rope) — benign (headline yellow, subsumed; #2 red via severe), but
+  seat-aware maxent (plumb C) is a tracked GAP. Scope: constructed_high unknown-input only; mountain-input +
+  constructed_low/constraint have 0 live changers (sub-item).
+  ORIGINAL EVIDENCE — **constructed_* override INERT on 94%; the 3 real changes are NON-uniform (bare abstain was wrong).**
   constructed_high 50 winners but only **3** CHANGE (all `unknown→snare`); 47 inert (metric already snare).
   constructed_low 1 inert; constructed_constraint / coordination_scaffold 0 live. No config hook → ablated via
   a temporary one-clause edit + pipeline (floor-source decomposition, report surface incl. abductive;

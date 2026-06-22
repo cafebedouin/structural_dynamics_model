@@ -85,6 +85,7 @@ known_override_signature(constructed_constraint).
 %  FCR seats are byte-identical. fcr_routed/1 is called module-qualified at runtime (same
 %  cycle-avoidance as signature_grade's known_override_signature call — no load cycle).
 seat_overrides(C, false_ci_rope) :- !, \+ signature_detection:fcr_routed(C).
+seat_overrides(C, constructed_high_extraction) :- !, \+ signature_detection:constructed_routed(C).
 seat_overrides(_, Sig) :- known_override_signature(Sig).
 
 %% override_target(+Signature, -TargetType)

@@ -388,8 +388,11 @@ misfire). **For a SEAT-SPLIT signature** (FCR, OQ-138 2026-06-21 — false_ci_ro
 13 inert on ONE signature): the signature-level mechanism does NOT transfer — it would convert the inert
 seats and disturb the carve-out. Build seat-aware instead: a `*_routed/1` predicate keyed on the stable
 dispatch GATES + the dr_type OUTCOME (NOT a `metric_based_type_indexed` proxy — it diverges from the live
-ModalType; the cross-corpus generality sweep catches this); `converted_at_seat/2` (signature-level for
-non-split, seat-level for split) feeding `signature_grade`/`signature_severity`; and `seat_overrides/2`
+ModalType; the cross-corpus generality sweep catches this) AND keyed on the **UNBOUND cascade winner**
+(`constraint_signature(C,Sig), Sig==<sig>` — a bound-arg `constraint_signature(C,<sig>)` trips on the DETECTOR
+even when a higher-priority signature shadows it, §1 gotcha; it wrongly caught an FCR seat in
+`constructed_routed`); `converted_at_seat/2` (signature-level for non-split, seat-level for split) feeding
+`signature_grade`/`signature_severity`; and `seat_overrides/2`
 (`abductive_helpers`) threaded through `probe_signature/3`+P1/P7 instead of removing the row from
 `known_override_signature/1`. **Standing gate before converting any override:** decompose BOTH the seat's
 own floor after revert AND what OTHER consumers read the manufactured type (the maxent distribution boost

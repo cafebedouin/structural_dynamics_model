@@ -45,6 +45,24 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-21 — OQ-138 constructed-3 sub-part RESOLVED: claim-discriminant conversion (keeps #2's floor)
+**Files:** prolog/signature_detection.pl, prolog/abductive_helpers.pl, ISSUES.md, AGENTS.md, audits/2026-06-21_oq138_fsm_route_conversion/CONSTRUCTED3_FINDINGS.md
+**Tier:** landed
+
+Routed the 3 live `constructed_high_extraction` unknown→snare seats to the honest abstain `unknown`. NEW
+**claim discriminant** (mountain→severe, else→informational — victim doesn't distinguish, all 3 vic>0): a
+mountain claim over high-extraction is the concealment, kept at severe, REPLACING the floor the manufactured
+snare used to carry via `type_1_false_summit` (which now reads informational at dr_type=unknown). **Kill
+condition MET:** #2 (institutional_trust_erosion, claimed mountain) keeps RED byte-identical (floor source
+moved type_1→signature); #1/#3 route to yellow/commentary; 47 inert + all non-constructed byte-identical;
+5-corpus `mountain-routed→severe` holds everywhere. Reused the seat-aware template (`constructed_routed/1`,
+`converted_at_seat/2`, `seat_overrides/2`). **`constructed_routed`/`fcr_routed` keyed on the UNBOUND cascade
+winner** — a bound-arg query trips on the detector even when shadowed (caught `superheavy_decay`, an FCR seat,
+in constructed_routed; §1 gotcha; the fcr_routed fix was behavior-preserving). **Maxent residual confirmed
+(operator's warning):** the boost (`maxent_classifier:341`) flips #1/#3's maxent_top→tangled_rope at the
+pipeline surface (unlike FCR top=rope) — benign (headline yellow; #2 red via severe), seat-aware maxent (plumb
+C) tracked as a shared GAP. validation_suite 92/0/0; check_stack clean. Full: CONSTRUCTED3_FINDINGS.md.
+
 ## 2026-06-21 — OQ-138 FCR-9 sub-part RESOLVED: false_ci_rope SEAT-AWARE conversion (template didn't transfer)
 **Files:** prolog/signature_detection.pl, prolog/abductive_helpers.pl, prolog/diagnostic_summary.pl, ISSUES.md, AGENTS.md, audits/2026-06-21_oq138_fsm_route_conversion/FCR9_FINDINGS.md
 **Tier:** landed

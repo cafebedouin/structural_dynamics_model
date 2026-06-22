@@ -960,7 +960,14 @@ resolve_modal_signature_conflict(mountain, constructed_constraint, Result) :- !,
 % When metrics fail (unknown), signature provides extraction-aware classification
 resolve_modal_signature_conflict(unknown, coordination_scaffold, Result) :- !, Result = rope.
 resolve_modal_signature_conflict(unknown, constructed_low_extraction, Result) :- !, Result = rope.
-resolve_modal_signature_conflict(unknown, constructed_high_extraction, Result) :- !, Result = snare.
+% OQ-138 (2026-06-21): constructed_high_extraction unknown-input CONVERTED RECLASSIFY→ROUTE.
+% Was `snare` (manufactured a type from unknown metrics, against which type_1_false_summit then
+% fired severe on a mountain-claim). Now routes to the honest abstain (unknown); the diagnostic
+% rides the CLAIM-discriminated severity (signature_diagnostic_severity/3: mountain-claim => severe
+% floor, preserving the concealment flag that the manufactured snare used to carry via type_1).
+% Seat-aware via constructed_routed/1. Mountain-input constructed + constructed_low/constraint are
+% NOT converted here (0 live changers — separate sub-item). Restore by reverting to `snare`.
+resolve_modal_signature_conflict(unknown, constructed_high_extraction, Result) :- !, Result = unknown.
 resolve_modal_signature_conflict(unknown, constructed_constraint, Result) :- !, Result = tangled_rope.
 % superseded by OQ-90 FCR refinement; unreachable from profile path (dispatch retired 2026-06-11).
 resolve_modal_signature_conflict(unknown, piton_signature, Result) :- !, Result = piton.
@@ -1661,7 +1668,9 @@ converted_signature(false_summit_mountain).
 %  does not consult converted_at_seat/2 or the severity machinery; only the grade/severity
 %  side reads fcr_routed. Piton/inert/no-op (metric==tangled_rope) seats are excluded.
 fcr_routed(C) :-
-    constraint_signature(C, false_ci_rope),
+    constraint_signature(C, Sig0), Sig0 == false_ci_rope,  % TRUE cascade winner (unbound; a bound-arg
+                                                            % query trips on the detector even when FNL/FCR
+                                                            % shadows it upstream — §1 wiring gotcha)
     \+ narrative_ontology:piton_candidate(C),       % clause 2 piton refinement (OQ-90)   } stable dispatch
     \+ drl_core:coordination_dead(C),               % clause 1 dead-coordination piton    } GATE predicates
     \+ has_metric_perspectival_variance(C),         % indexical-preserved (override defers)} (no proxy divergence)
@@ -1670,13 +1679,30 @@ fcr_routed(C) :-
     DT \== tangled_rope,                            % proxy that diverged from ModalType): routed away from the
     DT \== unknown.                                 % override target, and not the honest-abstain inert case
 
+%% constructed_routed(+C)
+%  OQ-138 (2026-06-21): the constructed_high_extraction seats ROUTED by the conversion
+%  (the "constructed-3" on live) — the unknown-input seats the override used to lift to snare,
+%  now reverted to the honest abstain `unknown`. Outcome-keyed (dr_type == unknown), the same
+%  robust pattern as fcr_routed/1: a constructed_high cascade-winner whose post-conversion dr_type
+%  is `unknown` is exactly one whose ModalType was unknown (the override fired the unknown-input
+%  clause). The 47 inert seats (metric already snare) keep dr_type=snare and are excluded.
+constructed_routed(C) :-
+    constraint_signature(C, Sig0), Sig0 == constructed_high_extraction,  % TRUE cascade winner (unbound;
+                                                            % a bound-arg query trips on the constructed_high
+                                                            % DETECTOR even when false_ci_rope shadows it —
+                                                            % e.g. superheavy_decay, an FCR inert seat — §1 gotcha)
+    constraint_indexing:default_context(Ctx),
+    drl_core:dr_type(C, Ctx, unknown).
+
 %% converted_at_seat(+C, +Signature)
 %  Seat-level "this seat is converted to route". Signature-level for false_summit_mountain
 %  (all its cascade-winners are genuinely overridden); seat-level for false_ci_rope
-%  (only the fcr_routed/1 subset). The grade/severity dispatch uses THIS, not
-%  converted_signature/1, so a seat-split signature converts only its routed seats.
+%  (fcr_routed/1) and constructed_high_extraction (constructed_routed/1). The grade/severity
+%  dispatch uses THIS, not converted_signature/1, so a seat-split signature converts only its
+%  routed seats.
 converted_at_seat(_, false_summit_mountain).
 converted_at_seat(C, false_ci_rope) :- fcr_routed(C).
+converted_at_seat(C, constructed_high_extraction) :- constructed_routed(C).
 
 %% signature_diagnostic_severity(+C, +Signature, -Severity)
 %  Discriminated severity for a converted signature, decoupled from the type delta.
@@ -1694,6 +1720,15 @@ signature_diagnostic_severity(_, false_summit_mountain, informational).
 signature_diagnostic_severity(C, false_ci_rope, moderate) :-
     once(narrative_ontology:constraint_victim(C, _)), !.
 signature_diagnostic_severity(_, false_ci_rope, informational).
+% constructed_high_extraction (OQ-138 constructed-3): CLAIM discriminant, not victim (all 3 routed
+% seats are vic>0, so victim does not distinguish; the authored claim does). A MOUNTAIN claim over a
+% high-extraction finding is the concealment (a false-summit shape) — keep its floor at `severe`,
+% replacing the floor the manufactured snare used to carry via type_1_false_summit (which now reads
+% informational at dr_type=unknown). Non-mountain claims already admit structure => informational
+% (route; their headline, if red, comes from the honest base unmask, not the signature).
+signature_diagnostic_severity(C, constructed_high_extraction, severe) :-
+    narrative_ontology:constraint_claim(C, mountain), !.
+signature_diagnostic_severity(_, constructed_high_extraction, informational).
 
 alerting_severity(moderate).
 alerting_severity(severe).
