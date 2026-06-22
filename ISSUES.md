@@ -571,8 +571,8 @@ recalibrate" marker.
 
 ## OQ-20 — DR-regression baseline diff against `v3-dev-baseline` tag never run
 
-**Status:** resolved — PERTURBED with a stable core. Audit
-`audits/2026-06-22_oq20_dr_baseline_diff/` (2026-06-22).
+**Status:** resolved — PERTURBED; priority-cascade classification stable, MaxEnt
+top-type moved. Audit `audits/2026-06-22_oq20_dr_baseline_diff/` (2026-06-22).
 **Priority:** 1
 **Origin:** Tranche 2 correctness pass, May 2026.
 **Files:** git tag `v3-dev-baseline` (`3e75f90b`); `prolog/json_report.pl`
@@ -591,8 +591,9 @@ processes that independently recompute, and a warm in-process 2nd run is
 byte-identical to cold, so the empty floor is real, not a cache shadow; #5's
 non-determinism is session-overlay/Python-phase, both bypassed by the
 `run_json_report`-only path. Buckets exhaust the 30-field intersection.)
-- **Core classification BYTE-STABLE** (identical 13-field zero-diff set on both
-  corpora): `claimed_type`, `classifications`, `base_extractiveness`,
+- **Priority-cascade classification BYTE-STABLE** (identical 13-field zero-diff
+  set on both corpora; this is the cascade surface, NOT the MaxEnt top-type
+  below): `claimed_type`, `classifications`, `base_extractiveness`,
   `suppression`, `theater_ratio`, `victims`, `beneficiaries`, `topic_domain`,
   `human_readable`, `emerges_naturally`, `requires_active_enforcement`,
   `resistance`, `resolution_strategy`. The χ/ε/d/f_d metric *values* are also
@@ -8653,6 +8654,46 @@ the authored relational edge couples cs-free neighbours — a feature of the
 finding, not a strip bug or a leak. Residual design note (optional): the FPN
 could gate `cs_`-prefixed authored edges for axis tidiness; not a correctness
 issue. Witness: `audits/2026-06-22_oq20_dr_baseline_diff/WRITEUP.md` §Arm 2.
+
+**Reopen condition (kill-switch):** this resolution holds *because*
+`cs_reading_relation` is authored, not detected. If any future commit makes a
+pass **assert/asserta/assertz `cs_reading_relation`** (produce it from the
+cs-detection pass rather than load it from testsets), the shared-input argument
+collapses into detection→detection feedback — reopen and re-rule.
+
+---
+
+## OQ-175 — MaxEnt `maxent_top_type` shifted `tangled_rope → snare` on ~2261 constraints across the CS window (Ω_E)
+
+**Status:** open
+**Priority:** 3
+**Origin:** OQ-20 audit Arm 1, 2026-06-22 (`audits/2026-06-22_oq20_dr_baseline_diff/`).
+**Files:** `prolog/maxent_classifier.pl`, `prolog/config.pl` (snare/tangled_rope
+MaxEnt thresholds/features); diff evidence
+`audits/2026-06-22_oq20_dr_baseline_diff/analysis.json`
+
+**Specific question:** OQ-20 found the MaxEnt argmax (`maxent_top_type`) flips
+across the tag→HEAD CS window — 297/1017 (29%) on original_json, **2448/3373
+(73%) on original_v6** — and the flips are **not scattered** (which recalibration
+would be): **2261 of the 2448 original_v6 flips are the single ordered pair
+`tangled_rope → snare`**. A flip that concentrated along one classification edge
+is a *boundary that moved in one direction*, not diffuse noise — either the
+snare/tangled_rope MaxEnt decision threshold shifted, or a feature feeding that
+one contrast changed somewhere in the 707-commit window. This is a single
+bisectable cause, the way the OQ-20 id change pinned to `801390a5`.
+
+Note this is the **MaxEnt probabilistic** type surface, distinct from the
+priority-cascade `claimed_type` (which is byte-stable across the same window —
+OQ-20). The two classification surfaces disagree on these constraints; that
+disagreement is itself the interest (does the recalibrated MaxEnt top-type still
+track the cascade verdict, or has it drifted off it?).
+
+**What resolution changes:** Bisect the `tangled_rope→snare` boundary move to a
+commit/threshold change; decide whether the shift is an intended recalibration
+(then document it) or an accidental drift in the snare/tangled_rope contrast
+(then assess whether HEAD's MaxEnt top-type is better or worse calibrated than
+the tag's). Measured on archive corpora (original_v6 chimera-era); re-witness on
+the live corpus before citing magnitude.
 
 ---
 

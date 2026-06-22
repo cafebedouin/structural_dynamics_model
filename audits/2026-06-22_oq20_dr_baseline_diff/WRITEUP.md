@@ -7,15 +7,20 @@ in `outputs/oq20/` (cells) and `outputs/oq20/reports/analysis.json` (per-field t
 
 ## Headline verdicts
 
-- **Arm 1 (CS-era code effect on DR): PERTURBED.** CS-era code *did* change DR output — but
-  with a sharp internal structure: the **core type classification is byte-stable**, while the
-  **signature layer, MaxEnt distribution, and several auxiliary/added fields changed**, and the
-  per-constraint **`id` was relabeled** (enumeration source swap).
-- **Arm 2 (CS-era data effect on DR / Theorem-7 detection-independence): MOSTLY INERT, ONE
-  DESIGNED COUPLING.** Stripping all `cs_*` facts leaves the entire DR *observer* core unchanged
-  (claimed_type, χ/ε, signature, MaxEnt, classifications, purity scalars) — **except
-  `contamination_network`**, which changes because `cs_reading_relation` feeds its `explicit`
-  edges *by design* (`drl_purity_network.pl`), propagating even to cs-free neighbours.
+- **Arm 1 (CS-era code effect on DR): PERTURBED.** CS-era code *did* change DR output, with a
+  sharp internal structure. DR has **two type-classification surfaces and they disagree across the
+  window**: the **priority-cascade `claimed_type`/`classifications` is byte-stable**, but the
+  **MaxEnt `maxent_top_type` is not** (argmax flips 29% on original_json, **73% on original_v6**,
+  concentrated as `tangled_rope→snare` → OQ-175). Also moved: the **signature layer** and the
+  **MaxEnt distribution**; **auxiliary/added fields** (`domain`, `f1_d/f2_d`, coupling violations);
+  and the per-constraint **`id` relabeling** (enumeration source swap). "Core classification
+  byte-stable" speaks for the cascade verdict only — *not* for the MaxEnt top-type, which moved.
+- **Arm 2 (CS-era data effect on DR / Theorem-7 detection-independence): HOLDS.** Stripping all
+  `cs_*` facts leaves the entire DR *observer* core unchanged (claimed_type, χ/ε, signature,
+  MaxEnt, classifications, purity scalars) — **except `contamination_network`**, which reads
+  `cs_reading_relation` into its `explicit` edges. That relation is an **authored corpus fact**
+  (never asserted by code), so it is a **shared-input dependency, not detection-dependence** —
+  Theorem 7 intact (OQ-174 resolved, benign carve-out, reopen-condition attached).
 
 Both arms ran with an **empty noise floor** (every cell byte-identical across repeats;
 `mask_n = 0`) — **and the empty floor is witnessed real, not a cache shadow** (see §Floor below),

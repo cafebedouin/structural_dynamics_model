@@ -55,13 +55,14 @@ Cells A/B (original_json), C/D (original_v6_csfree), E/F (kernel_v1 cs-strip);
 all cells byte-identical across repeats (empty noise floor). Full method +
 controls: `audits/2026-06-22_oq20_dr_baseline_diff/WRITEUP.md`.
 
-**Arm 1 (OQ-20) = PERTURBED, replicated on both corpora.** Core classification
-BYTE-STABLE (identical 13-field zero-diff set incl. `claimed_type`,
-`classifications`, `base_extractiveness`, `suppression`, `theater_ratio`,
-`victims`, `beneficiaries`, and the χ/ε/d/f_d values). Changed: `signature`
-(~85%), MaxEnt distribution; the argmax `maxent_top_type` is a *separate*
-classification surface and is NOT mostly stable (29% flips original_json, **73%
-original_v6**, dominated by `tangled_rope→snare`). `gaps` list→null is **NOT a
+**Arm 1 (OQ-20) = PERTURBED, replicated on both corpora.** Two type surfaces, one
+moved: the **priority-cascade** classification is BYTE-STABLE (identical 13-field
+zero-diff set incl. `claimed_type`, `classifications`, `base_extractiveness`,
+`suppression`, `theater_ratio`, `victims`, `beneficiaries`, and the χ/ε/d/f_d
+values), but the **MaxEnt `maxent_top_type` is NOT** (29% flips original_json,
+**73% original_v6**, concentrated as `tangled_rope→snare` ≈2261 → minted OQ-175
+to bisect that boundary move). Also changed: `signature` (~85%), MaxEnt
+distribution. `gaps` list→null is **NOT a
 regression** — it's OQ-109 B3's coverage-bit + the 2026-06-14 detect_gap_pattern
 rebuild (null=didn't-look vs []=examined). Code-vs-noise attribution is
 witnessed: the empty noise floor is positive-controlled (fresh-process repeats
