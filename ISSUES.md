@@ -1331,9 +1331,9 @@ decision; the row references map all 27 census rows so nothing is unrouted.
 
 ## OQ-35 — G1: authored fields the engine never consumes (or consumes only inertly)
 
-**Status:** mitigated — adjudicated 2026-06-21 (`audits/2026-06-21_oq35_field_counterfactual/`).
-Rows 2–3, 4, 5–6 resolved with witnesses below; row 1's fact-strip is gathered-and-staged on the
-operator's seat (revive-vs-strip is roadmap), so the entry stays `mitigated` until that go.
+**Status:** resolved — adjudicated 2026-06-21 (`audits/2026-06-21_oq35_field_counterfactual/`).
+All 6 rows ruled with witnesses below; row 1's fact-strip executed on the operator's go
+(2026-06-21, output-neutral diff-proven).
 **Priority:** 1
 
 - **Rows 2–3 `accessibility_collapse`/`resistance` — RETAIN (load-bearing router inputs), committed.**
@@ -1352,8 +1352,11 @@ operator's seat (revive-vs-strip is roadmap), so the entry stays `mitigated` unt
   the full observation tuple in *every corpus where presence>0 AND the positive control passes there*
   (presence==0 corpora cannot witness "cosmetic" — recorded "field absent here"). Not met anywhere.
 
-- **Row 1 `is_mandatrophy_resolved/1` (`narrative_ontology.pl:458-459`) — dead facts → STRIP, staged on
-  operator go.** Zero goal-body/meta-call readers anywhere in non-archive code (grep witness). The only
+- **Row 1 `is_mandatrophy_resolved/1` — dead facts → STRIPPED (operator go, 2026-06-21).** The 2 facts
+  + their comment were removed from `narrative_ontology.pl` (retirement note left in place); the strip is
+  output-neutral, **diff-proven** (validation-suite output byte-identical bar `[ELAPSED]` timing jitter;
+  pre-existing lycurgan interval warning unchanged). Zero goal-body/meta-call readers in non-archive code
+  (grep witness) made this safe. The only
   mandatrophy analytical surface, `format_mandatrophy_gap/3` → `compute_chi_v6/6`
   (`report_generator.pl:476`), computes `delta_chi` from base_extractiveness·f(d)·scope and is
   **independent** of the facts (code-read) — so the strip is output-neutral by construction. That surface
@@ -1361,7 +1364,7 @@ operator's seat (revive-vs-strip is roadmap), so the entry stays `mitigated` unt
   via `constraint_classification/3`, which holds 0 powerless facts live) → logged as a dangling consumer
   in `design_gaps.md`, separate from the fact strip. D6's escape hatch partly collapsed: OQ-109 retired
   `detect_omega`, so revival now also requires rebuilding the consumer — higher revival cost favors
-  strip-now. **The strip edit to `narrative_ontology.pl` is the operator's seat and is NOT auto-executed.**
+  strip-now. (The strip was the operator's seat — executed on the 2026-06-21 go.)
 
 - **Row 4 `cs_reference_frame/2` — RETAIN on the OQ-133 bet, kill condition attached.** NOT a clean
   RETAIN: it is **inert consumption** — serialized to committer JSON at `json_report.pl:590` but **no

@@ -45,7 +45,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-06-21 — OQ-35 MITIGATED: wiring-gap census rows 1–6 adjudicated (cruft-vs-wire)
+## 2026-06-21 — OQ-35 RESOLVED: wiring-gap census rows 1–6 adjudicated (cruft-vs-wire)
 **Files:** ISSUES.md, docs/design/design_gaps.md, prolog/probe_oq35_field_counterfactual.pl, python/audits/oq35_field_counterfactual.py, prolog/narrative_ontology.pl, audits/2026-06-21_oq35_field_counterfactual/
 **Tier:** correction-key
 
@@ -60,19 +60,20 @@ Adjudicated the 6 authored-field wiring gaps (`audits/2026-06-21_oq35_field_coun
   testsets 55/92, haiku 691/960, flash 537/960, kernel_v1 26/44, original_v6 421/3380. **Citation
   caveat:** "cosmetic" must NOT be cited for these fields — the diff variable is the routing observable
   (signature/verdict/alerts/grade), not `dr_type`.
-- **Row 1 `is_mandatrophy_resolved/1` (`narrative_ontology.pl:458-459`) — dead facts, STRIP STAGED ON
-  OPERATOR.** Zero goal-body/meta-call readers (grep). The only mandatrophy surface
-  (`format_mandatrophy_gap/3`→`compute_chi_v6/6`) is independent of the facts → strip is output-neutral
-  by construction. That surface is itself dead on the live corpus (0 GAP lines; gate needs
-  `constraint_classification/3` powerless≠institutional, 0 powerless facts live) → logged as a dangling
-  consumer (`design_gaps.md` GAP-18). The fact strip is the operator's seat — NOT auto-executed.
+- **Row 1 `is_mandatrophy_resolved/1` — dead facts, STRIPPED (operator go).** The 2 facts + comment
+  removed from `narrative_ontology.pl` (retirement note left); output-neutral, **diff-proven**
+  (validation-suite output byte-identical bar `[ELAPSED]` jitter; pre-existing lycurgan interval warning
+  unchanged). Zero goal-body/meta-call readers (grep). The only mandatrophy surface
+  (`format_mandatrophy_gap/3`→`compute_chi_v6/6`) is independent of the facts → strip safe. That surface
+  is itself dead on the live corpus (0 GAP lines; gate needs `constraint_classification/3`
+  powerless≠institutional, 0 powerless facts live) → logged as a dangling consumer (`design_gaps.md` GAP-18).
 - **Row 4 `cs_reference_frame/2` — RETAIN on the OQ-133 bet** (inert consumption: serialized at
   `json_report.pl:590`, no join). `design_gaps.md` GAP-17 + kill condition. **OQ-38 corrected:** its
   "confirmed dead `cs_reference_frame/2`" was stale (`:590` is a real read site).
 - **Rows 5–6 `uke_scope.*`, `commentary.*` — by-design, no action.**
 
-OQ-35 status open→mitigated (resolved bar pending the operator's row-1 strip go). No engine behavior
-changed; probe is pure evidence; no `narrative_ontology.pl` edit made yet.
+OQ-35 status open→resolved. No engine behavior changed (probe is pure evidence; the row-1 strip is
+output-neutral, diff-proven).
 
 ## 2026-06-21 — OQ-173 RESOLVED: MaxEnt signature-override boost made seat-aware (OQ-138 maxent residual)
 **Files:** prolog/maxent_classifier.pl, prolog/load_warning_allowlist.txt, ISSUES.md, docs/design/design_gaps.md, docs/technical/signature_detection_wiring.md, audits/2026-06-21_maxent_seat_aware/FINDINGS.md

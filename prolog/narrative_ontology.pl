@@ -454,9 +454,17 @@ agent_beneficiary(ConstraintID, Beneficiary) :-
    MANDATROPHY RECONCILIATION (v3.1)
    ========================================================================== */
 
-% is_mandatrophy_resolved/1: Explicitly standardizes the 2 residual Omegas.
-is_mandatrophy_resolved(gale_shapley).        % The Algorithm is the Mandate.
-is_mandatrophy_resolved(planetary_boundaries). % The Biological Limit is the Mandate.
+% RETIRED (OQ-35, 2026-06-21 — wiring-gap census row 1; adjudicated by
+% contribution): is_mandatrophy_resolved/1 held 2 hardcoded facts (gale_shapley,
+% planetary_boundaries) for non-corpus ids. ZERO goal-body/meta-call readers
+% anywhere in non-archive code (grep witness, audits/2026-06-21_oq35_field_counterfactual/);
+% their only would-be consumers (detect_omega/count_unresolved_omegas/
+% detect_mandatrophy_omega) were already retired by OQ-109 B3 (below). The
+% surviving mandatrophy analytical surface (report_generator:format_mandatrophy_gap/3
+% -> compute_chi_v6/6) computes delta_chi independently of these facts, so removing
+% them is output-neutral by construction. Revival cost rose post-OQ-109 (would need
+% rebuilding the consumer, not just re-emitting the fact). See design_gaps.md GAP-18
+% for the separate dangling-consumer note on the gap surface itself.
 
 % RETIRED (OQ-109 B3, 2026-06-12 — empty-table census A4; same adjudication
 % as above): detect_omega(_, mandatrophy), count_unresolved_omegas/1, and
