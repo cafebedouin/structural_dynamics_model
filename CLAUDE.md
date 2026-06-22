@@ -442,7 +442,12 @@ live count); `original_v5/` is its 702-story predecessor (same chimera-era cavea
 flat .pl files — overlay `testsets_sotu` for sotu analyses; run_pipeline reports n_sotu=0 now).
 While the live corpus is small post-reset, these archives are the breadth option for legacy-side
 sweeps via `corpus_path` overlay (the OQ-89 pattern; ~5,200 stories across kernel_v1 + v5 + v6) —
-all counts here are file counts verified on disk 2026-06-10.
+all counts here are file counts verified on disk 2026-06-10. **Tripwire: HEAD enumerates the
+corpus by FILENAME (`corpus_constraint/1`), so a legacy corpus whose filename ≠ its in-file
+`constraint_metric` subject yields *null DR output* for those stories silently (no error) — 89/702
+in v5, 133/1151 in original_json; 0 in v6/kernel_v1. Re-key by the in-file subject (or verify
+filename==subject) before trusting a legacy-corpus DR sweep. Provenance: OQ-20 audit, KNOWN_STATE
+2026-06-22.**
 
 **THREE LIVE LEGS, and the beta posture (operator ruling, 2026-06-20).** `prolog/testsets/` is the
 LIVE leg — a small, **deliberately singleton topical working set** that lets the operator exercise

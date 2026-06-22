@@ -946,6 +946,20 @@ after round 1 was an added instrument escaping its own check:
   post-write revert, not a pre-write branch. Rule from the *source code's* dangling logic instead
   (`omega_resolver.py`'s authority set); the post-write run confirms, never makes, the ruling. Keeps
   the separated-passes stance: read-only deciding precedes the write.
+- **A noise floor used for attribution is itself a claim — and it's directional.** When you subtract
+  a same-condition noise floor (byte-identical repeats ⇒ empty mask) and attribute the surviving
+  cross-condition diffs to *the condition* ("this changed because of the code, not noise"), the
+  floor's emptiness is load-bearing in exactly one direction. For the *unchanged* set, an empty floor
+  is pure good news (nothing was subtracted, so stability is raw). For the *changed* set, the
+  attribution silently assumes the floor *could* have detected non-determinism if present — which an
+  all-cold-repeat floor cannot witness on its own. Positive-control it: show the repeats are
+  independent (fresh processes that recompute, not a shared cache) **and** that a deliberately
+  different cache/order state (warm vs cold) still produces identical output. Reconcile against any
+  standing non-determinism premise (the OQ-112 / "stale memo unless cleared" class): name *why* the
+  floor is empty (the path doesn't touch those sources) rather than rationalizing an empty result
+  after the fact. The diff tool seeing a planted difference proves the *diff*; it does not prove the
+  *run harness* yields independent repeats — distinct instruments, control both. (OQ-20 baseline
+  diff, `audits/2026-06-22_oq20_dr_baseline_diff/`.)
 
 Two more from the same review, about plan *structure* rather than the instruments:
 - **A fallback gated on a condition the design avoids is dead code.** The first close-vs-keep-open
