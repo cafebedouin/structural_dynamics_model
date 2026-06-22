@@ -1331,24 +1331,52 @@ decision; the row references map all 27 census rows so nothing is unrouted.
 
 ## OQ-35 — G1: authored fields the engine never consumes (or consumes only inertly)
 
-**Status:** open — Census rows 1–6.
+**Status:** mitigated — adjudicated 2026-06-21 (`audits/2026-06-21_oq35_field_counterfactual/`).
+Rows 2–3, 4, 5–6 resolved with witnesses below; row 1's fact-strip is gathered-and-staged on the
+operator's seat (revive-vs-strip is roadmap), so the entry stays `mitigated` until that go.
 **Priority:** 1
-- Row 1 `mandatrophy_resolved`: schema requires `=true` at ε>0.70; compiler emits no fact; engine
-  uses a *separate hardcoded* `is_mandatrophy_resolved/1` (2 names, `narrative_ontology.pl:317-318`).
-  **DECISION (D6, 2026-05-31): document and defer — do NOT wire.** Read-only count is near-zero: the
-  two hardcoded names (`gale_shapley`, `planetary_boundaries`) appear in **0 live testsets**, and only
-  ~7 live constraints sit in the ε>0.70 schema-gate zone (none of them the hardcoded pair). The
-  machinery is dormant on the live corpus — wiring earns nothing now. Revisit only if a corpus with
-  authored `mandatrophy_resolved` + ε>0.70 arrives (then: emit the fact, have `detect_omega` read it,
-  retire the hardcoded list).
-- Rows 2–3 `accessibility_collapse`/`resistance`: emitted, consumed only by the cosmetic NL
-  signature (T.1: removing NL override = 0 mountain-count change). Decision: strip from
-  classification intent or retain as NL-profile documentation. **Low-stakes.**
-- Row 4 `cs_reference_frame/2`: emitted (`generate_constraint_pl.py:500`), zero readers. Strip
-  emission or wire a committer-drift reader. **Low-stakes.**
-- Rows 5–6 `uke_scope.*`, `commentary.*`: provenance / documentation by design — likely no action.
 
-**Resolution would change:** which authored fields are load-bearing vs vestigial.
+- **Rows 2–3 `accessibility_collapse`/`resistance` — RETAIN (load-bearing router inputs), committed.**
+  The census's "cosmetic (T.1)" was NL-override-specific and was superseded by the routing-sink
+  conversion (OQ-128/OQ-138): these fields feed `false_summit_mountain`/`false_ci_rope`@routed/
+  `constructed_high_extraction` (`signature_detection.pl:155,157,180,182,1462,1466`), which post-OQ-138
+  **route** — they revert `dr_type` to the metric type and carry their effect in
+  `verdict_join.{verdict,alerts,signature_grade}`. So `dr_type` alone is the WRONG diff variable (it
+  shows a false 0-diff). Counterfactual probe (`probe_oq35_field_counterfactual.pl`, full observation
+  tuple `obs(dr_type, signatures, verdict, alerts, signature_grade)`, three controls — presence /
+  routing-aware positive / null) over 5 corpora: **load-bearing in every presence>0 corpus** (treatment
+  diff: testsets 55/92, haiku 691/960, flash 537/960, kernel_v1 26/44, original_v6 421/3380; null
+  control clean=0 everywhere; positive control passes everywhere). Witness example (live): a constraint
+  whose `dr_type` stays `snare` in both arms while its signature flips `constructed_high_extraction →
+  unknown` and verdict drops `yellow → green`. **Kill condition (single statement):** a clean 0-diff on
+  the full observation tuple in *every corpus where presence>0 AND the positive control passes there*
+  (presence==0 corpora cannot witness "cosmetic" — recorded "field absent here"). Not met anywhere.
+
+- **Row 1 `is_mandatrophy_resolved/1` (`narrative_ontology.pl:458-459`) — dead facts → STRIP, staged on
+  operator go.** Zero goal-body/meta-call readers anywhere in non-archive code (grep witness). The only
+  mandatrophy analytical surface, `format_mandatrophy_gap/3` → `compute_chi_v6/6`
+  (`report_generator.pl:476`), computes `delta_chi` from base_extractiveness·f(d)·scope and is
+  **independent** of the facts (code-read) — so the strip is output-neutral by construction. That surface
+  is *itself* dead on the live corpus (0 `MANDATROPHY GAP` lines; its gate needs powerless≠institutional
+  via `constraint_classification/3`, which holds 0 powerless facts live) → logged as a dangling consumer
+  in `design_gaps.md`, separate from the fact strip. D6's escape hatch partly collapsed: OQ-109 retired
+  `detect_omega`, so revival now also requires rebuilding the consumer — higher revival cost favors
+  strip-now. **The strip edit to `narrative_ontology.pl` is the operator's seat and is NOT auto-executed.**
+
+- **Row 4 `cs_reference_frame/2` — RETAIN on the OQ-133 bet, kill condition attached.** NOT a clean
+  RETAIN: it is **inert consumption** — serialized to committer JSON at `json_report.pl:590` but **no
+  join is computed** (offline t0→t1→t2 reconciliation deferred to OQ-133). Retain as the authored t0
+  anchor the deferred tier needs; **kill condition:** when OQ-133 ships, the join either materializes
+  (vindicates retain) or is cut (then strip the emission). Stripping now would destroy the t0 anchor and
+  remove it from the serialized committer output. Cross-link: OQ-133.
+
+- **Rows 5–6 `uke_scope.*`, `commentary.*` — by-design, no action.** `uke_scope.*` is schema-only
+  provenance (`schema:719-737`, not emitted/read); `commentary.*` is `.pl` comment text + a
+  `perspectival_gap` plunit (no facts read). Confirmed; closed.
+
+**Resolution changed:** rows 2–3 are now recorded **load-bearing** (not cosmetic — census reversed);
+row 4 is **inert-consumption-retained-on-bet** (not "zero readers" — `json_report.pl:590` is a real
+read site); row 1 facts are **dead** with the strip staged on the operator. See OQ-38 correction below.
 
 ## OQ-36 — G2: the `intent_*` subsystem (7 predicates) is read but never authored
 
@@ -1454,7 +1482,10 @@ changes"; scoped output-changing task, not yet built.
 
 **Status:** open — Census rows 13, 4 + §5. **Confirmed dead:** `predict_transformation/3`
 **Priority:** 1
-(`drl_composition.pl`, 0 callers anywhere), `cs_reference_frame/2`. The exhaustive sweep yields
+(`drl_composition.pl`, 0 callers anywhere). **CORRECTION (OQ-35, 2026-06-21): `cs_reference_frame/2`
+is NOT dead** — `json_report.pl:590` is a real read site (serializes committer t0 to JSON). The
+census's "zero readers" was stale; code-read beats the stale document. It is inert *consumption*
+(serialized, not joined — OQ-133), retained on the OQ-133 bet, not an orphan. The exhaustive sweep yields
 528 exports → 422 zero-external-caller → {65 `/0` CLI, 114 meta-called, 26 ext-only, **217 candidate**}.
 The 217 is an **upper bound**, not an orphan list — it conflates genuinely-dead with
 over-exported-but-internally-called; separating them needs clause-head-vs-body parsing per
@@ -7247,6 +7278,11 @@ machinery is ready.
 machinery this tier would wire `founding_problem_status` into as the `t0` anchor); bundled_with OQ-83
 (the synchronic `q6_crosscheck/3` establishes the `live × snare` structural footprint this tier would
 then try to orient).
+
+**Cross-link (OQ-35, 2026-06-21):** `cs_reference_frame/2` is the authored committer t0 anchor this
+tier needs. It is currently inert consumption (serialized at `json_report.pl:590`, no join). OQ-35
+RETAINs it **on this OQ's bet**, with the kill condition: when this tier ships, the t0→t1→t2 join
+either materializes (vindicates the retain) or is cut (then OQ-35 strips the emission).
 
 **The question.** The synchronic Q6 crosscheck (OQ-83 follow-through, landed 2026-06-16) sees
 status × present-type but NOT the path and NOT why the mismatch exists. The tempting next tier is the

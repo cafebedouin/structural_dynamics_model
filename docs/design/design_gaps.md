@@ -834,3 +834,49 @@ route-not-reclassify (the type layer no longer manufactures, so should the MaxEn
 operator-seat call, not the minimal seat-aware skip. **Currently tracked as a residual under OQ-138**
 (the FCR-9 / constructed-3 build records, `audits/2026-06-21_oq138_fsm_route_conversion/`); the
 next-instance build prompt is drafted there. Named here 2026-06-21.
+
+---
+
+## GAP-17 — The committer t0 anchor (`cs_reference_frame`) is serialized but never joined (the deferred t0→t1→t2 tier is unbuilt)
+
+**The capability:** an offline committer-drift reconciliation that joins the authored t0 reference
+frame (`cs_reference_frame/2`) against the computed t1/t2 present structure — the diachronic tier that
+would give a committer-axis verdict its traction (OQ-133).
+
+**Why it is absent (deferred, not defective):** `cs_reference_frame/2` is **emitted** by the generator
+and **read** at `json_report.pl:590`, where it is serialized into the committer JSON — but **no join is
+computed**. The t0→t1→t2 reconciliation is blocked behind the temporal-series machinery
+(OQ-109/OQ-110). So the field is inert *consumption*: present in the serialized output, consumed by no
+analysis. This is the honest form of the absence — the authored anchor is preserved so the tier *can*
+be built, not silently dropped.
+
+**Adjudication (OQ-35, 2026-06-21):** RETAIN on the OQ-133 bet (the "unwired ≠ worthless" rule —
+unfinished value, not cruft). **Kill condition:** when OQ-133's t0-anchor tier ships, the join either
+materializes (vindicates the retain → close this gap) or is cut (then strip the `cs_reference_frame`
+emission). Do not strip now: it would destroy the t0 anchor the deferred tier needs and remove it from
+the serialized committer output. Cross-link: OQ-133, OQ-35. Named here 2026-06-21.
+
+---
+
+## GAP-18 — The `mandatrophy_gap` analytical surface is a dangling consumer (its gate cannot fire on the live corpus)
+
+**The capability:** the mandatrophy `delta_chi` gap analysis — `report_generator.pl:476
+format_mandatrophy_gap/3`, scraped by `enhanced_report.py:407 extract_mandatrophy_gap` into
+`sidecar["mandatrophy_gap"]` — reports the extraction gap between the powerless and institutional
+power positions for constraints where those positions disagree on type.
+
+**Why it is absent (dangling consumer, Pattern 1):** the producer's gate
+(`mandatrophy_only_report/1`) requires `constraint_indexing:constraint_classification/3` to hold for
+*both* a powerless and an institutional context with differing types. On the live corpus
+`constraint_classification/3` holds **0 powerless facts** (1 fact total, a demo constraint) — so the
+gate cannot fire and the surface produces **0** `MANDATROPHY GAP` lines (witnessed full-corpus and via
+the real `run_scenario` path, 2026-06-21). The consumer `extract_mandatrophy_gap` therefore always
+returns `None`. The producer is independent of the (separately dead) hardcoded `is_mandatrophy_resolved/1`
+facts (OQ-35 row 1) — this gap is about the *gap surface*, not those facts.
+
+**What closing the gap would require:** establish whether `constraint_classification/3` is meant to be
+populated post-reset (it appears to be a legacy stored-classification predicate the live pipeline no
+longer feeds — the engine classifies via `dr_type/3`). Either wire the gap surface onto the live
+classification path (`dr_type/3` at powerless/institutional contexts), or retire the
+`format_mandatrophy_gap`/`extract_mandatrophy_gap` pair. Surfaced by OQ-35; tracked there. Named here
+2026-06-21.
