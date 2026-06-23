@@ -5602,10 +5602,12 @@ KNOWN_STATE 2026-06-18.
 
 ## OQ-112 — Pattern-6 confirmed-candidate batch from the OQ-97 census: 8 classes, member-level sort and per-class disposition
 
-**Ω-type:** Ω_E (sites enumerated with read witnesses; C4a sorted+fixed Round 1; items 2–8 pending).
+**Ω-type:** Ω_E (sites enumerated with read witnesses; C4a + item 2 fixed; item 4 → Round 3; items 3,5,6,7,8 pending).
 
 **Status:** open — filed 2026-06-11 at OQ-97 close; **item 1 (C4a) RESOLVED 2026-06-22**
-(Round 1, witness `audits/2026-06-22_oq112_round1/`); items 2–8 staged with corrected designs.
+(Round 1, witness `audits/2026-06-22_oq112_round1/`); **item 2 (A10-widened + completion gate)
+RESOLVED 2026-06-23** (Round 2, commits `4ee4ce08`+`0ef5bf6d`, witness
+`audits/2026-06-22_oq112_round2/`); **item 4 (A3) → Round 3**; items 3,5,6,7,8 staged.
 **Priority:** 1
 Full class tables with member lists: `audits/2026-06-11_oq97_pattern6_census/WRITEUP.md` §4–§5.
 
@@ -5714,6 +5716,67 @@ Disposition per class follows the OQ-44 statute for any site touched (fail-close
 pass carries witness); output-changing fixes land alone per the established commit discipline.
 Cross-refs: OQ-97 (census), OQ-44 (statute + common-law queue), OQ-98 (C4a feeds its join),
 OQ-43 (A6 semantics), OQ-93/OQ-96 (pattern provenance), OQ-110 (A4 lineage).
+
+**Update 2026-06-23 — Round 2: Round 0 re-witness on 92 + item 2 RESOLVED + the zero-legal ruling.**
+Evidence: `audits/2026-06-22_oq112_round2/` (`WRITEUP.md` Round 0, `INDEXED_ASSERT.md`, `GATE.md`,
+probes + outputs). Three commits: `d69d5d39` (Round 0 + the witness-truth controls), `4ee4ce08`
+(indexed completion assert), `0ef5bf6d` (the verdict_join gate + widened absorbers + invariant).
+
+- **Round 0 re-witness on 92** (the inherited 62-row item-4 verdict re-anchored): the sink throw
+  `type_error(evaluable, unknown/0)` is REAL — witnessed isolated AND profile-present (not the
+  LL=−10.0 empty-table non-witness) — but LATENT: all 6 unknown-suppression constraints on 92 are
+  claim-less, so maxent discovery drops them (N=86 enter) and the throw is unreachable via the live
+  driver. Zero-with-witness count = 0 across `:555`/`:734`.
+
+- **Deferred zero-legal ruling — RULED (B) defer; falsifier SUPERSEDED (two conditions, two probes).**
+  The Round-1 wording above recorded ONE condition —
+  > "One deferred ruling (`blocked_on_human`): may a maxent stage ever legitimately emit zero
+  > constraints? … falsifier = any stage emitting `maxent_run_info(_,0,_)`."
+
+  W2 proved that single condition INSUFFICIENT: the only path to a zero-output stage on 92 is
+  upstream-pruned (the claim-less exclusion), and that pruning is *itself* the latent hazard item 2
+  exists to gate. Ruling: **(B) defer** the zero-with-witness producer/loader/consumer handshake,
+  under **TWO falsifiers**:
+  1. any maxent stage emits `maxent_run_info(_,0,_)` on a live corpus → fork (A) forced; re-check
+     via Round-0 **W3** (`probe_reachability_and_zero_92.pl`).
+  2. any **claim-bearing** story lacking `suppression_requirement` appears (count 0, W2) → the sink
+     fires, the stage voids, `run_info` is **absent** (NOT zero-with-witness, so the gate catches it
+     by absence); re-check via the **item-4 reachability probe** (`probe_reachability_and_zero_92.pl`
+     W2b), **NOT W3** — W3 counts zero-with-witness and is blind to the claim-less→claim-bearing
+     transition.
+
+  [EDGE] "defer-B safe" ≠ "hazard absent": defer-B rides on the upstream pruning that is the hazard;
+  two different claims, two different falsifiers (above).
+
+- **Item 2 (A10-widened + completion gate) — RESOLVED.** Distinct per-stage completion witnesses
+  (`maxent_run_info` classical; the NEW `maxent_indexed_run_info` for the indexed stage, asserted
+  strictly after `maxent_classify_all_indexed`); attempt markers `diagnostic_summary:maxent_attempted/1`
+  set at the json_report stage boundary before the absorbing catch; `verdict_join` fails closed via
+  `maxent_void_alerts/1` — **per-attempted-stage, at the consumed (default) context**, never "any
+  completion present" (so classical's present fact cannot mask an indexed void — the cross-term);
+  absorbers widened to `( catch(G,_,fail) -> true ; true )` so a stage FAILURE continues the run
+  (catch/3 is blind to plain failure). Severity **moderate/yellow** (operator ruling 2026-06-23: a
+  void is absence-of-measurement, not a measured-severe finding). AGENTS.md "completion-witness-or-
+  fail-closed" invariant landed in the gate commit. The distinct-fact decision is load-bearing:
+  the throw-arm witness shows classical `run_info` PRESENT while indexed ABSENT — a shared fact would
+  read clean.
+
+- **Gate status — forced-witnessed, live-UNEXERCISED (recorded at true strength).** The gate is
+  witnessed against FORCED throw + FORCED plain-fail (the `:871-874` no-priors guard, the catch-blind
+  channel the inverted default exists for) + N=0-legal-passes + the classical/indexed cross-term
+  (`GATE.md` matrix). `LATENCY/92` = 0 of 92 voided under normal completion → the gate's LIVE-fire
+  behaviour is unexercised **by construction** (the live corpus produces no void). This is "verified
+  against forced controls", NOT "verified live on 92"; the live trigger is falsifier (2) — the item-4
+  reachability probe — not a re-run on today's 92.
+
+- **Item 4 (A3 idiom cleanup) → ROUND 3.** Its 23-site breadth + the dead-branch/`unknown`-sentinel
+  subtlety warrant a land-alone pass once item 2's discipline is established; deferred from Round 2.
+
+- **Item 7 (wasserstein `catch→0.0`, `json_report.pl:428-431`) — staged, lands ALONE next.** Unlike
+  the maxent gate, `0.0` is a *legal measured value* here, so emitting `null`/`errored` for the
+  catch/fail arms changes the consumer **contract** (schema-level, not just value); enumerate the
+  float-readers before landing. The completion-fact SHAPE folds in (Round-1 note), but the COMMIT is
+  separate (different consumer surface).
 
 ## OQ-113 — natural_law_signature/1 is unsatisfiable by construction on the live corpus: has_viable_alternatives/2 never returns `false`; pure_natural_law subtype unreachable
 

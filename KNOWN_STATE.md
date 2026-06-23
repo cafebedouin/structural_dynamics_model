@@ -45,6 +45,31 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-23 — OQ-112 item 2 RESOLVED: completion-witness-or-fail-closed gate (maxent stages)
+**Files:** prolog/diagnostic_summary.pl, prolog/json_report.pl, prolog/maxent_classifier.pl, AGENTS.md, ISSUES.md, audits/2026-06-22_oq112_round2/
+**Tier:** landed
+
+Round 2 of OQ-112. A voided maxent stage previously read GREEN (probe_maxent → inconclusive,
+dropped; the indexed stage is read by nothing in the verdict path = fully silent). Fix, three
+commits: `d69d5d39` (Round 0 re-witness on 92 + witness-truth controls), `4ee4ce08` (the
+**distinct** `maxent_indexed_run_info/3` completion fact — NOT shared with `maxent_run_info`,
+because indexed needs a prior classical run so a shared fact couldn't distinguish "indexed done"
+from "classical done, indexed voided"), `0ef5bf6d` (the gate: `maxent_attempted/1` markers +
+`maxent_void_alerts/1` per-attempted-stage fail-closed in `verdict_join` + absorbers widened to
+`( catch(G,_,fail) -> true ; true )` so a stage FAILURE continues the run). Severity moderate/
+yellow (operator ruling — a void is absence-of-measurement, not measured-severe). Invariant
+**promoted to AGENTS.md** ("completion-witness-or-fail-closed"); provenance here.
+
+**Gate status — forced-witnessed, live-UNEXERCISED.** Matrix (`GATE.md`): COMPLETE→green no-op;
+THROW-indexed & FAIL-indexed (the `:871-874` no-priors `failed_plain`, catch-blind) → yellow
+void[indexed]; THROW-classical → yellow void[classical]; N0-legal (fact present, N=0) → green;
+cross-term classical-present+indexed-void → void[classical=no, indexed=yes]. `LATENCY/92` = 0 of
+92 voided → live-fire unexercised by construction. **Do not cite as "verified live on 92"** — the
+live trigger is the first claim-bearing story missing `suppression_requirement` (count 0, W2),
+re-checked via the item-4 reachability probe, NOT a re-run on today's 92. Deferred zero-legal
+ruling: (B) defer, TWO falsifiers (zero-with-witness via W3; claim-less→claim-bearing via item-4
+probe). Items remaining: 4 → Round 3; 3,5,6,7,8 staged (7 = wasserstein, lands alone, schema-level).
+
 ## 2026-06-22 — OQ-112 item-1 (C4a) RESOLVED: diagnostic_summary data-absence else-branches fail closed
 **Files:** prolog/diagnostic_summary.pl, ISSUES.md, audits/2026-06-22_oq112_round1/
 **Tier:** landed
