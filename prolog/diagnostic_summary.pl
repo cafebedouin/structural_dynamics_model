@@ -617,6 +617,39 @@ compute_verdict(_, _, _, green).
    alongside diagnostic_verdict, never instead.
    ================================================================ */
 
+%% maxent_attempted(?Stage)  (Stage = classical | indexed)
+%  Set at the json_report stage boundary (before the absorbing catch) to record that a
+%  maxent stage was ATTEMPTED this run — distinguishing "maxent not in this pipeline"
+%  (no marker -> gate inert) from "maxent attempted but voided" (marker present,
+%  completion fact absent -> gate fires). Cleared at run_json_report start.
+:- dynamic maxent_attempted/1.
+
+%% maxent_void_alerts(-Alerts)
+%  OQ-112 item 2 — per-attempted-stage fail-closed completion gate. A maxent stage
+%  ATTEMPTED this run whose OWN completion witness is ABSENT for the consumed (default)
+%  context is VOIDED -> a moderate alert so verdict_join routes to not-clean (yellow),
+%  never green-over-absence. Each stage checks its OWN distinct fact at the consumed
+%  context — never "any completion present" — so classical's present fact cannot mask an
+%  indexed void (the cross-term). ABSENCE (not a caught exception) is the test: it catches
+%  BOTH a throw AND a plain clause-failure (e.g. the no-priors guard at
+%  maxent_classifier.pl:871-874), which catch/3 is blind to. Severity is moderate, not
+%  severe: a void is absence-of-measurement, not a measured severe finding (operator ruling
+%  2026-06-23) — red stays reserved for >=3 tensions / convergent-rejection. The alert Type
+%  maxent_voided(Stage) is machine-legible: a consumer keying on severity may branch on void
+%  specifically rather than treating it as a generic moderate degrade.
+maxent_void_alerts(Alerts) :-
+    constraint_indexing:default_context(Ctx),
+    findall(alert(maxent_voided(Stage), moderate, maxent_completion),
+            maxent_stage_attempted_but_void(Stage, Ctx),
+            Alerts).
+
+maxent_stage_attempted_but_void(classical, Ctx) :-
+    maxent_attempted(classical),
+    \+ maxent_classifier:maxent_run_info(Ctx, _, _).
+maxent_stage_attempted_but_void(indexed, Ctx) :-
+    maxent_attempted(indexed),
+    \+ maxent_classifier:maxent_indexed_run_info(Ctx, _, _).
+
 %% verdict_join(+C, +Summary, -Join)
 %  Join = verdict_join(Joined, Base, CapApplied, Alerts, GridProv, MeasProv,
 %                      SigGrade)
@@ -631,7 +664,9 @@ compute_verdict(_, _, _, green).
 %    SigGrade   — correction | commentary | none
 verdict_join(C, Summary, Join) :-
     Summary = diagnostic_summary(Base, _, _, _, _, _, _),
-    join_alerts(C, Alerts),
+    join_alerts(C, Alerts0),
+    maxent_void_alerts(VoidAlerts),          % OQ-112 item 2: per-attempted-stage fail-closed
+    append(VoidAlerts, Alerts0, Alerts),     % void alerts flow into BOTH floors and the serialized Alerts
     findall(F, ( member(alert(_, Sev, _), Alerts),
                  severity_floor(Sev, F) ), Floors),
     max_badness([Base|Floors], Joined),

@@ -458,6 +458,35 @@ summary recreates the GREEN-over-severe-alerts defect. Producer:
 `diagnostic_summary:verdict_join/3`; serialization: `json_report.pl`; contract:
 `python/shared/schemas.py`. Evidence: `audits/2026-06-11_oq98_verdict_join/`.
 
+### Completion-witness-or-fail-closed (OQ-112 item 2, 2026-06-23)
+
+A pipeline stage that can be **absent or voided** must emit a **positive completion
+witness** at genuine completion, and the consumer must **fail closed on its absence** —
+never read green/clean over a stage that was attempted but did not complete. This is the
+inverted default: a positive "I finished" fact, not a caught exception. `catch/3` is blind
+to plain failure (it absorbs throws only), so absence-of-witness — not a recorded exception
+— is the test; it catches throw AND clause-failure alike. **Per stage, its OWN distinct
+fact:** sharing one witness across stages lets a completed stage mask a voided sibling.
+
+- Witnesses (maxent): `maxent_classifier:maxent_run_info/3` (classical, `:555`/`:734`) and
+  the **distinct** `maxent_indexed_run_info/3` (indexed, asserted after
+  `maxent_classify_all_indexed`). Each asserted STRICTLY AFTER its per-constraint loop, so
+  a mid-loop throw leaves it absent.
+- Attempt markers: `diagnostic_summary:maxent_attempted/1` (`classical`|`indexed`), set at
+  the `json_report.pl` stage boundary BEFORE the absorbing catch — distinguishing "not in
+  this pipeline" (no marker → gate inert) from "attempted but voided" (marker present,
+  witness absent → fail closed).
+- Gate: `diagnostic_summary:maxent_void_alerts/1` injects `alert(maxent_voided(Stage),
+  moderate, maxent_completion)` into `verdict_join` when a marked stage's own witness is
+  absent for the consumed (default) context → headline floors to **yellow** (a void is
+  absence-of-measurement, not a measured-severe finding; red stays reserved for genuine
+  structure). The alert Type is machine-legible so a consumer keying on severity may branch
+  on void specifically.
+- Absorbers widened to `( catch(G,_,fail) -> true ; true )` so a stage failure continues
+  the run (not a mid-pipeline crash) and the gate surfaces the void.
+- **Any new stage that the report relies on must add its own completion witness + attempt
+  marker + the void-alert clause.** Evidence: `audits/2026-06-22_oq112_round2/`.
+
 ### Network existence contract (OQ-95, 2026-06-10)
 
 `drl_purity_network:constraint_neighbors/3` is **fail-closed on zero-fact atoms**

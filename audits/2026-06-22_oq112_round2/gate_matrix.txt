@@ -1,0 +1,10 @@
+TARGET = nicene_creed_authority__liturgical_habituation_reading
+COMPLETE              J=greenB=green  void[classical=no indexed=no]
+  (indexed_run_info after throw: absent)
+THROW-indexed         J=yellowB=green  void[classical=no indexed=yes]
+  (no-priors indexed_run -> failed_plain ; indexed_run_info: absent)
+FAIL-indexed          J=yellowB=green  void[classical=no indexed=yes]
+  (classical run_info after throw: absent)
+THROW-classical       J=yellowB=green  void[classical=yes indexed=no]
+N0-legal              J=greenB=green  void[classical=no indexed=no]
+LATENCY/92: constraints with a maxent_voided alert under COMPLETE state = 0  (expect 0)
