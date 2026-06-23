@@ -5602,7 +5602,7 @@ KNOWN_STATE 2026-06-18.
 
 ## OQ-112 — Pattern-6 confirmed-candidate batch from the OQ-97 census: 8 classes, member-level sort and per-class disposition
 
-**Ω-type:** Ω_E (sites enumerated with read witnesses; C4a + item 2 + item 7 fixed; item 4 → Round 3; items 3,5,6,8 pending).
+**Ω-type:** Ω_E (sites enumerated with read witnesses; C4a + item 2 + item 7 + item 4 fixed; items 3,5,6,8 pending).
 
 **Status:** open — filed 2026-06-11 at OQ-97 close; **item 1 (C4a) RESOLVED 2026-06-22**
 (Round 1, witness `audits/2026-06-22_oq112_round1/`); **item 2 (A10-widened + completion gate)
@@ -5616,7 +5616,16 @@ round level; at the gate level the item-2 maxent completion gate is **live-fire 
 misreads as "gate proven live," which the 0-of-92 line specifically denies. Item-7 is likewise
 output-identical on the live 92 (absent/errored arms 0-firing; 344/344 cells genuine float incl.
 measured 0.0) — the contract widening is forced-witnessed (4-state control), live-UNEXERCISED.
-**item 4 (A3) → Round 3**; items 3,5,6,8 staged.
+**item 4 (A3) RESOLVED 2026-06-23** (Round 3, witness `audits/2026-06-23_oq112_round3/`; Commit 1
+landed alone — Commit 2 DROPPED and Commit 3 DISSOLVED into Commit 1, both premises falsified by
+Round 0, see Round 3 update below); items 3,5,6,8 staged.
+**Round-4 gate (the arc's own kill-question, 2026-06-23):** before spinning up Round 4 on items
+3/5/6/8, point to **one verdict a user actually saw change** across everything OQ-112 shipped
+(items 1/2/4/7) — or declare the arc **latent-hardening** (Pattern-6 hazards closed before they
+went live) and stop. Items 2 and 4 both gate on an absence condition that does not occur on the 92
+corpus (every claim-bearing constraint carries all metrics; maxent always completes), so the honest
+preliminary read is latent-hardening pending that positive control. Naming the question, not
+resolving it by producing more rounds.
 **Priority:** 1
 Full class tables with member lists: `audits/2026-06-11_oq97_pattern6_census/WRITEUP.md` §4–§5.
 
@@ -5778,8 +5787,33 @@ probes + outputs). Three commits: `d69d5d39` (Round 0 + the witness-truth contro
   against forced controls", NOT "verified live on 92"; the live trigger is falsifier (2) — the item-4
   reachability probe — not a re-run on today's 92.
 
-- **Item 4 (A3 idiom cleanup) → ROUND 3.** Its 23-site breadth + the dead-branch/`unknown`-sentinel
-  subtlety warrant a land-alone pass once item 2's discipline is established; deferred from Round 2.
+- **Item 4 (A3 idiom cleanup) — RESOLVED 2026-06-23 (Round 3, Commit 1 landed alone).** The
+  maxent-local accessors (`get_constraint_metrics/4`, `metric_value/3`,
+  `get_constraint_metrics_indexed/5`, `metric_value_indexed/4` in `maxent_classifier.pl`) now return
+  the `unknown` sentinel (OQ-44 pattern) on absence of base_extractiveness / extractiveness_for_agent
+  / theater, instead of a fabricated `0.0`; the two dead `;Supp=0.0` branches removed (Round-2 W3:
+  `get_raw_suppression` always returns its sentinel). `maxent_threshold_proximity/4` gains a
+  `number/1` fail-closed guard. **Blast radius contained to `maxent_classifier.pl`** (Round-0 recon:
+  the local accessors have no cross-file consumers). Witnesses (`audits/2026-06-23_oq112_round3/`):
+  WA — 0 sentinels produced over the 86 claim constraints on 92 (else-branches unreached → genuine
+  values byte-identical, **live-unexercised on 92**); WC — constructed theater-absent claim
+  constraint → `maxent_indexed_run` throws → `run_info` absent → **item-2's completion gate fires**
+  (indexed void alert → verdict_join caps headline).
+  - **Round 0 falsified two of the three pre-registered commits, so they did NOT land:**
+    - **Commit 2 (findall silent-drop) DROPPED.** Its premise — a silent findall-drop that "item-2's
+      gate structurally cannot catch" — is contradicted. `sum_list` is OUTSIDE the findall and
+      *throws* on `unknown` (MECH witness); the throw aborts `maxent_compute_profiles_indexed`
+      (`:897`) BEFORE `maxent_indexed_run_info` is asserted (`:905`), so item-2's gate already floors
+      it (WC proves this end-to-end). The only genuinely-silent path is the benign ≥2-sample
+      `default_profile` fallback. No separate fix warranted.
+    - **Commit 3 (boundary external-crash) DISSOLVED into Commit 1.** Its premise — an un-wrapped
+      external caller of `maxent_boundary_analysis` crashes — is false: that predicate has **zero
+      callers**, and `maxent_threshold_proximity`'s only two live callers (`maxent_report.pl:211`,
+      `maxent_diagnostic.pl:395`) are already `catch`-wrapped. The fail-closed `number/1` guard is
+      folded into Commit 1 (the commit that introduces the `unknown`) as hardening-at-point-of-
+      introduction; `boundary_analysis` adjudicated **unfinished value, not cruft** (per-constraint
+      nearest-edge fragility view; the dual of the live per-boundary report) → wire-it opportunity
+      logged as **GAP-19**, not retired.
 
 - **Item 7 (wasserstein `catch→0.0`, `json_report.pl:438–442`) — RESOLVED 2026-06-23 (Round 2,
   landed alone).** Replaced the 4 `catch(_,0.0)->true;0.0` arms with `wm_token/3` (float | absent |

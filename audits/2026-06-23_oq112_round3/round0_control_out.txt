@@ -1,0 +1,17 @@
+control constraint C0 = actinide_replenishment_mechanism_flat_control (baseline dr_type = mountain)
+baseline get_constraint_metrics(actinide_replenishment_mechanism_flat_control): eps=0.03 supp=0.02 theater=0.08
+PC1: theater retracted -> get_constraint_metrics: eps=0.03 supp=0.02 theater=0.0
+PC1 verdict: theater else-branch 0.0==0.0->FIRED (fabricated 0.0 — item-4 firing reproduced);did NOT fire
+PC2: dr_type(theater-absent actinide_replenishment_mechanism_flat_control) -> mountain
+PC2 verdict: theater-absence mountain==failed->BLOCKS;does NOT block dr_type (constraint mountain==failed->is dropped from;ENTERS the theater findall)
+PC3: base_extractiveness retracted -> get_constraint_metrics: eps=0.03 supp=0.02 theater=0.08
+PC3: dr_type(eps-absent actinide_replenishment_mechanism_flat_control) -> mountain
+PC3 verdict: eps-absence mountain==failed->BLOCKS;does NOT block dr_type (eps/chi drop at dr_type; only theater survives)
+MECH: compute_type_profile structure — sum_list is OUTSIDE the findall.
+MECH: sum_list([0.1, unknown, 0.2]) -> error(error(type_error(evaluable,unknown/0),context(system:(is)/2,_93868)))
+MECH verdict: an unknown reaching the theater findall makes sum_list compound(error(error(type_error(evaluable,unknown/0),context(system:(is)/2,_93868)))),error(error(type_error(evaluable,unknown/0),context(system:(is)/2,_93868)))=error(_93924)->THROW (LOUD, propagates out of compute_type_profile -> crashes maxent_precompute; NOT a silent drop);succeed
+PC3 constraint C0 = actinide_replenishment_mechanism_flat_control (baseline dr_type = mountain, ext_metric = extractiveness)
+PC3: base_extractiveness(eps-fact retracted actinide_replenishment_mechanism_flat_control) -> absent
+PC3: get_constraint_metrics: eps=0.0 supp=0.02 theater=0.08 (maxent fabricates eps if absent)
+PC3: dr_type(eps-absent actinide_replenishment_mechanism_flat_control) -> unknown
+PC3 verdict: eps-absence unknown==failed->BLOCKS (eps/chi drop at dr_type; theater is the unique residual);does NOT block — REVISIT dr_type

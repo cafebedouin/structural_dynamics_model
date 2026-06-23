@@ -45,6 +45,54 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-23 — OQ-112 item 4 RESOLVED (Round 3, Commit 1 alone): maxent-local accessors fail-closed; Commits 2/3 falsified
+**Files:** prolog/maxent_classifier.pl, docs/design/design_gaps.md, ISSUES.md, audits/2026-06-23_oq112_round3/
+**Tier:** landed
+
+The A3 metric-fallback-`0.0` idiom in the four maxent-local accessors
+(`get_constraint_metrics/4`, `metric_value/3`, `get_constraint_metrics_indexed/5`,
+`metric_value_indexed/4`) now returns the `unknown` sentinel on absence of
+base_extractiveness / extractiveness_for_agent / theater instead of a fabricated `0.0`; the two
+dead `;Supp=0.0` branches removed; `maxent_threshold_proximity/4` gained a `number/1` fail-closed
+guard. **Blast radius is contained to `maxent_classifier.pl`** — Round-0 recon found the local
+accessors have no cross-file consumers (the shared sources `base_extractiveness` etc. are
+untouched; the hybrid fixes the *local accessor*, not the shared predicate).
+
+**Live-unexercised on 92 (do not read as a live catch).** WA witness: 0 sentinels are produced
+over the 86 claim-bearing constraints (all carry every metric), so every new else-branch is
+unreached and genuine values are byte-identical to pre-edit. Item 4 is LATENT on 92, same as the
+item-2 case.
+
+**Round 0 falsified Commits 2 and 3 — they did NOT land** (the read pass killing the write,
+escalated and re-ruled by operator):
+- *Commit 2 (findall silent-drop) DROPPED.* The mechanism is a LOUD throw, not a silent drop:
+  `sum_list` is OUTSIDE the findall and throws on `unknown`; the throw aborts precompute
+  (`maxent_classifier.pl:897`) BEFORE `maxent_indexed_run_info` is asserted (`:905`), so item-2's
+  completion gate already floors it. WC witnessed this end-to-end (constructed theater-absent claim
+  constraint → throw → run_info absent → indexed void alert). Item-2 is NOT blind to it.
+- *Commit 3 (boundary external-crash) DISSOLVED into Commit 1.* `maxent_boundary_analysis/3` has
+  zero callers; `maxent_threshold_proximity`'s only live callers (`maxent_report.pl:211`,
+  `maxent_diagnostic.pl:395`) are already `catch`-wrapped. The `number/1` guard is folded into the
+  commit that introduces the `unknown` (hardening-at-point-of-introduction). `boundary_analysis`
+  adjudicated unfinished-value (not cruft) → **GAP-19** logged (wire-it opportunity: per-constraint
+  nearest-edge fragility view, the dual of the live per-boundary report).
+
+**Tripwire candidate? NO** — the contained-blast-radius and the latent status are stable facts but
+produce no *silent* mistake for a fresh agent before editing a file; they live as history here.
+The general rule (maxent absence → `unknown` sentinel → item-2 gate) is already covered by the
+AGENTS.md completion-witness invariant from item 2.
+
+**Round-4 gate installed in the OQ-112 entry:** before any further round on items 3/5/6/8, point
+to one verdict a user saw change across the arc (items 1/2/4/7) or declare it latent-hardening and
+stop. Preliminary read: latent-hardening, pending that positive control.
+
+**The cross-file diag-site idiom instances are NOT swept in** (deliberately): `constraint_indexing.pl:860/892/895/898`
+and `invertibility_analysis.pl:111–115` carry the same `->;=0.0` idiom on the *shared* sources, but
+each is outside the contained blast radius with its own consumers and its own live-bite/latent
+question — a per-site adjudication deferred to the operator, not a blanket conversion.
+
+---
+
 ## 2026-06-23 — OQ-112 item 7 RESOLVED → ROUND 2 COMPLETE: wasserstein incomparable-mass provenance tokens
 **Files:** prolog/json_report.pl, python/shared/schemas.py, ISSUES.md, audits/2026-06-22_oq112_round2/
 **Tier:** landed

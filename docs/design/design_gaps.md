@@ -880,3 +880,34 @@ longer feeds — the engine classifies via `dr_type/3`). Either wire the gap sur
 classification path (`dr_type/3` at powerless/institutional contexts), or retire the
 `format_mandatrophy_gap`/`extract_mandatrophy_gap` pair. Surfaced by OQ-35; tracked there. Named here
 2026-06-21.
+
+---
+
+## GAP-19 — `maxent_boundary_analysis/3` is built but unwired (the per-constraint nearest-edge fragility view has no consumer)
+
+**The capability:** `maxent_classifier:maxent_boundary_analysis(C, Context, Analysis)`
+(`maxent_classifier.pl:544`) returns, per constraint, an `msort`ed list of
+`Distance-Boundary` pairs over the 7 classification thresholds (ε/suppression/χ —
+`threshold_boundary/5`). It is the **per-constraint dual** of the live per-boundary
+"Threshold Proximity Analysis" report section: a fragility/robustness profile —
+"for *this* constraint, which classification edge is it nearest to, and how near"
+(a small metric perturbation away from a type flip = fragile; far = robust).
+
+**Why it is absent (dangling producer, Pattern 1 — unwired ≠ worthless):** the predicate
+has **zero callers** anywhere in the codebase (full grep, 2026-06-23). Its underlying
+`maxent_threshold_proximity/4` *is* live — consumed by `maxent_report.pl:211` and
+`maxent_diagnostic.pl:395` — but both consume it in the **per-boundary** orientation
+("near `snare_chi_floor`, who is borderline?"). The **per-constraint** orientation
+(`boundary_analysis`) is produced by no live subsystem. Adjudicated **unfinished value, not
+cruft** (the three-part test: yields a per-constraint nearest-edge view; not a duplicate of
+the per-boundary report; interpretable as a fragility score). Witnessed in
+`audits/2026-06-23_oq112_round3/`.
+
+**What closing the gap would require:** wire `boundary_analysis` into a per-constraint surface
+(natural homes: `enhanced_report.py`'s per-constraint section as a "nearest classification edge
+/ type-flip margin" field, or `json_report.pl` per-constraint output). Cheap — one `msort` over
+data the threshold layer already computes and ships. **Hardening already landed (OQ-112 item 4,
+2026-06-23):** `maxent_threshold_proximity/4` now carries a `number/1` fail-closed guard so the
+`unknown` metric sentinel (introduced by the same commit at `get_constraint_metrics/4`) fails
+closed instead of throwing `abs(unknown - Thresh)` — so a future wire does not inherit a crash.
+Named here 2026-06-23.

@@ -260,10 +260,16 @@ continuous_log_likelihood(C, Type, Context, ContLL) :-
 %% get_constraint_metrics(+C, -Eps, -Supp, -Theater)
 %  Retrieves the three continuous metrics for a constraint.
 get_constraint_metrics(C, Eps, Supp, Theater) :-
-    (drl_core:base_extractiveness(C, Eps0) -> Eps = Eps0 ; Eps = 0.0),
-    (drl_core:get_raw_suppression(C, Supp0) -> Supp = Supp0 ; Supp = 0.0),
+    % OQ-112 item 4 (2026-06-23): absence -> `unknown` sentinel (OQ-44 pattern), not a
+    % fabricated 0.0. A non-number then throws in the Gaussian-LL / sum_list / threshold
+    % arithmetic downstream, aborting the run before maxent_(indexed_)run_info is asserted,
+    % so item-2's completion gate floors the verdict (witnessed: audits/2026-06-23_oq112_round3).
+    % get_raw_suppression already returns the sentinel — its `;0.0` was DEAD (Round-2 W3) —
+    % so call it directly.
+    (drl_core:base_extractiveness(C, Eps0) -> Eps = Eps0 ; Eps = unknown),
+    drl_core:get_raw_suppression(C, Supp),
     config:param(theater_metric_name, TheaterName),
-    (narrative_ontology:constraint_metric(C, TheaterName, Theater0) -> Theater = Theater0 ; Theater = 0.0).
+    (narrative_ontology:constraint_metric(C, TheaterName, Theater0) -> Theater = Theater0 ; Theater = unknown).
 
 /* ================================================================
    PER-TYPE LOG-LIKELIHOOD (COMBINED)
@@ -533,6 +539,11 @@ maxent_threshold_proximity(C, Context, Boundary, Distance) :-
     constraint_indexing:extractiveness_for_agent(C, Context, Chi),
     threshold_boundary(Boundary, MetricName, Thresh, _, _),
     metric_value_for_name(MetricName, Eps, Supp, Chi, Val),
+    number(Val),   % OQ-112 item 4 (Commit-3 dissolved, 2026-06-23): fail closed on the
+                   % `unknown` sentinel rather than throw in abs/2. Hardens the (currently
+                   % unwired) maxent_boundary_analysis aggregator so a future wire does not
+                   % inherit the crash that get_constraint_metrics' `unknown` would plant.
+                   % See design_gaps.md (wire-it opportunity).
     Distance is abs(Val - Thresh).
 
 metric_value_for_name(extractiveness, Eps, _Supp, _Chi, Eps).
@@ -602,7 +613,7 @@ metric_value(C, suppression, Val) :-
     drl_core:get_raw_suppression(C, Val).
 metric_value(C, theater, Val) :-
     config:param(theater_metric_name, TheaterName),
-    (narrative_ontology:constraint_metric(C, TheaterName, Val) -> true ; Val = 0.0).
+    (narrative_ontology:constraint_metric(C, TheaterName, Val) -> true ; Val = unknown).  % OQ-112 item 4: sentinel, not fabricated 0.0
 
 %% maxent_compute_priors(+Constraints)
 %  Count constraint types in corpus, normalize to priors.
@@ -784,20 +795,22 @@ maxent_multi_run_contexts([Ctx|Rest], Constraints, NTotal, [Summary|RestSummarie
 %% get_constraint_metrics_indexed(+C, +Context, -Chi, -Supp, -Theater)
 %  Like get_constraint_metrics/3 but uses power-scaled χ instead of raw ε.
 get_constraint_metrics_indexed(C, Context, Chi, Supp, Theater) :-
-    (constraint_indexing:extractiveness_for_agent(C, Context, Chi0) -> Chi = Chi0 ; Chi = 0.0),
-    (drl_core:get_raw_suppression(C, Supp0) -> Supp = Supp0 ; Supp = 0.0),
+    % OQ-112 item 4 (2026-06-23): `unknown` sentinel on absence, not fabricated 0.0 (see
+    % get_constraint_metrics/4). Dead `;0.0` on get_raw_suppression removed.
+    (constraint_indexing:extractiveness_for_agent(C, Context, Chi0) -> Chi = Chi0 ; Chi = unknown),
+    drl_core:get_raw_suppression(C, Supp),
     config:param(theater_metric_name, TheaterName),
-    (narrative_ontology:constraint_metric(C, TheaterName, Theater0) -> Theater = Theater0 ; Theater = 0.0).
+    (narrative_ontology:constraint_metric(C, TheaterName, Theater0) -> Theater = Theater0 ; Theater = unknown).
 
 %% metric_value_indexed(+C, +Context, +MetricName, -Val)
 %  Retrieves an indexed metric value. Extractiveness uses χ; others unchanged.
 metric_value_indexed(C, Context, extractiveness, Val) :-
-    (constraint_indexing:extractiveness_for_agent(C, Context, Val) -> true ; Val = 0.0).
+    (constraint_indexing:extractiveness_for_agent(C, Context, Val) -> true ; Val = unknown).  % OQ-112 item 4: sentinel
 metric_value_indexed(C, _, suppression, Val) :-
     drl_core:get_raw_suppression(C, Val).
 metric_value_indexed(C, _, theater, Val) :-
     config:param(theater_metric_name, TheaterName),
-    (narrative_ontology:constraint_metric(C, TheaterName, Val) -> true ; Val = 0.0).
+    (narrative_ontology:constraint_metric(C, TheaterName, Val) -> true ; Val = unknown).  % OQ-112 item 4: sentinel
 
 %% continuous_log_likelihood_indexed(+C, +Type, +Context, -ContLL)
 %  Gaussian log-likelihood using indexed profiles and power-scaled metrics.
