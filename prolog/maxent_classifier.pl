@@ -75,6 +75,14 @@
 % Indexed MaxEnt dynamic facts (power-scaled χ instead of raw ε)
 :- dynamic maxent_indexed_dist/3.   % maxent_indexed_dist(C, Context, TypeProbList)
 :- dynamic maxent_indexed_profile/3. % maxent_indexed_profile(Type, MetricName, params(Mu, Sigma))
+:- dynamic maxent_indexed_run_info/3. % maxent_indexed_run_info(Context, NConstraints, Timestamp)
+                                      % OQ-112 item 2: DISTINCT completion witness for the INDEXED
+                                      % stage. NOT shared with maxent_run_info/3 — indexed requires a
+                                      % prior maxent_run (priors), so the classical witness is always
+                                      % present here; a shared fact could not distinguish "indexed
+                                      % completed" from "classical completed, indexed voided" (the very
+                                      % Pattern 6 the gate exists to catch). Asserted ONLY after
+                                      % maxent_classify_all_indexed (genuine completion), per :555/:734.
 
 /* ================================================================
    CONFIGURATION
@@ -105,7 +113,8 @@ maxent_cleanup :-
     retractall(maxent_prior(_, _)),
     retractall(maxent_run_info(_, _, _)),
     retractall(maxent_indexed_dist(_, _, _)),
-    retractall(maxent_indexed_profile(_, _, _)).
+    retractall(maxent_indexed_profile(_, _, _)),
+    retractall(maxent_indexed_run_info(_, _, _)).
 
 /* ================================================================
    GAUSSIAN LOG-LIKELIHOOD
@@ -884,8 +893,16 @@ maxent_indexed_run(Context, Summary) :-
 
     retractall(maxent_indexed_dist(_, _, _)),
     retractall(maxent_indexed_profile(_, _, _)),
+    retractall(maxent_indexed_run_info(Context, _, _)),
     maxent_compute_profiles_indexed(Constraints, Context),
     maxent_classify_all_indexed(Constraints, Context),
+
+    % OQ-112 item 2: genuine-completion witness for the indexed stage. Asserted ONLY
+    % here — strictly AFTER the per-constraint classify loop — so a mid-loop throw
+    % (e.g. the `unknown`-suppression Gaussian-LL sink) leaves it ABSENT, exactly as
+    % maxent_run_info is protected at :555/:734. Distinct fact (see dynamic decl).
+    get_time(TIdx),
+    assertz(maxent_indexed_run_info(Context, NTotal, TIdx)),
 
     % Summary statistics
     findall(HN, (

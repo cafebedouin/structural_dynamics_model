@@ -1,0 +1,9 @@
+CLEAN: maxent_run -> success ; maxent_indexed_run -> success
+CLEAN: indexed_run_info PRESENT? ctx==input=context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))==context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))->yes;context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))  N=86  count=1  (expect yes / 86 / 1)
+THROW: priors run -> success ; discovery N=87 ; THROWER at K=52
+THROW: indexed_run -> error(error(type_error(evaluable,unknown/0),context(system:(is)/2,_119628))) ; indexed_run_info ABSENT, count=0  <-- GOOD
+THROW why-distinct: classical maxent_run_info count=1 (PRESENT) while indexed ABSENT
+THROW why-distinct: a SHARED fact would read PRESENT here -> indexed void undetectable
+PHASE A compute_profiles_indexed(incl thrower) -> success
+PHASE B classify_all_indexed([thrower], profiles present) -> error(error(type_error(evaluable,unknown/0),context(system:(is)/2,_30052)))  (throw IS in the loop)
+POST: polaris_document_status_contradictions claim-less again -- cleanup OK
