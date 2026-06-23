@@ -1,0 +1,25 @@
+====================================================
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+=== ITEM 3 (A6) LIVE REACHABILITY ===
+  actinide_replenishment_mechanism_contradictions: purity_score=-1.0 (epistemic_access=false)
+  digital_money_legitimacy_contradictions: purity_score=-1.0 (epistemic_access=false)
+  knowledge_legitimacy_biomedicine_contradictions: purity_score=-1.0 (epistemic_access=false)
+  performance_legitimacy_contradictions: purity_score=-1.0 (epistemic_access=false)
+  polaris_document_status_contradictions: purity_score=-1.0 (epistemic_access=false)
+  visual_evidentiary_authority_contradictions: purity_score=-1.0 (epistemic_access=false)
+  NOTE: purity_deficit/reform_urgency are NOT per-constraint json fields (py check); aggregate use checked in py.
+=== ITEM 8 (C4c) LIVE REACHABILITY ===
+  actinide_replenishment_mechanism_contradictions: boltzmann_compliant = inconclusive(insufficient_classifications)
+  digital_money_legitimacy_contradictions: boltzmann_compliant = inconclusive(insufficient_classifications)
+  knowledge_legitimacy_biomedicine_contradictions: boltzmann_compliant = inconclusive(insufficient_classifications)
+  performance_legitimacy_contradictions: boltzmann_compliant = inconclusive(insufficient_classifications)
+  polaris_document_status_contradictions: boltzmann_compliant = inconclusive(insufficient_classifications)
+  visual_evidentiary_authority_contradictions: boltzmann_compliant = inconclusive(insufficient_classifications)
+  CONTROL actinide_..._flat_control: boltzmann_compliant = compliant(0)
+=== ITEM 5 (C4b) stable-is-measured-not-blind ===
+  metric_trend(base_extractiveness) over corpus: total=86 stable=14 increasing=69 decreasing=3
+  of 14 stable, metric_delta SUCCEEDS (measured small-delta, NOT blind) for 14
+  ITEM5 VERDICT: every `stable` is a MEASURED small-delta (metric_delta requires non-empty series + T2>T1) -> drift_events:92 is SOUND, no blind=stable on 92

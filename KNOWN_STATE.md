@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-23 — OQ-112 RESOLVED (close-out): arc is latent-hardening, structurally latent across all three live legs
+**Files:** ISSUES.md, audits/2026-06-23_oq112_closeout/
+**Tier:** landed
+
+Combined witness pass closing OQ-112 (no engine `.pl` edits). Under a pre-registered **field-level**
+bite-definition: only **item 1** touched live output on the 92 (13/92 abductive `agrees`→`unavailable`,
+**headline-neutral**); items 2/4/7 latent-hardened; items 3/5/6/8 do **NOT** fire as live bites.
+
+**The reusable finding (two tripwires for a future instance):**
+1. **A guard-predicate count over-reports a Pattern-6 firing.** The v1 item-3 sweep said "6 of 92
+   hit the absence branch"; the v2 **consumed-output reachability** pass showed those 6 short-circuit
+   at `epistemic_access_check=false` → `purity_score: null` — the absence value never reaches a
+   reader. Witness "does the absence value survive the upstream gate into a consumed field," not
+   "does the guard fire."
+2. **"Latent on the live 92" is not "latent engine-wide" until checked on a denser corpus.** The
+   A6/C4c gates were re-checked on both live twins (`testsets_haiku` 960, `testsets_flash` 960,
+   overlay-took witnessed): **0 live bites on all three legs.** The masking is **structural** —
+   `epistemic_access_check` / the compliance-sufficiency guard require the same metric family the
+   downstream absence-gate needs, so absence of the datum implies failure of the upstream gate (same
+   mechanism as the claim-less maxent exclusion that makes items 2/4 latent). Archives NOT swept
+   (declared scope boundary; retrospective-audit breadth, OQ-89 pattern).
+
+Items 3/5/6/8 fix-shapes recorded in the writeup, **declared-not-landed** (latent-hardening judged
+not to earn its spend pre-rebuild). The arc hardened against absence-defects but caught no live
+user-facing defect — a reasonable stop under imminent rebuild, recorded as dual-status not papered over.
+
+---
+
 ## 2026-06-23 — OQ-112 item 4 RESOLVED (Round 3, Commit 1 alone): maxent-local accessors fail-closed; Commits 2/3 falsified
 **Files:** prolog/maxent_classifier.pl, docs/design/design_gaps.md, ISSUES.md, audits/2026-06-23_oq112_round3/
 **Tier:** landed

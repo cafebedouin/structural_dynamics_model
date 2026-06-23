@@ -1,0 +1,27 @@
+ITEM3 (A6 absence-certifies-clean), corpus N=92
+ITEM3   excess_extraction ABSENT (-> EX=1.0 clean-on-absence) = 6 of 92
+ITEM3   excess_extraction PRESENT (measured)                  = 86 of 92
+ITEM3   coupling-clean via ABSENCE (no nonsensical coupling)  = 40 of 92
+ITEM3 LIVE-FIRE: YES on excess_extraction_subscore -- 6 constraints get EX=1.0 from ABSENCE, feeding purity_score
+ITEM3 CONTROL: actinide_replenishment_mechanism_flat_control has MEASURED excess=0.0100 -> excess_extraction_subscore EX=0.9800 (measured branch, EX<1.0 when Ex>0)
+ITEM3 CONTROL VERDICT: probe distinguishes measured (Ex present) from absence (EX=1.0) -> detector LIVE
+ITEM5 (C4b blind=stable trend family)
+ITEM5   narrative_ontology:measurement/5 facts (any subject) = 1569
+ITEM5   (corpus-constraint, metric) pairs with >=1 measurement = 303
+ITEM5   drift_events:metric_trend(C,base_extractiveness,_) succeeds for = 86 corpus constraints
+ITEM5 LIVE-FIRE: series present -> inspect trend results above
+ITEM5 CONTROL: injected rising series [t0=0.10, t5=0.40] -> metric_trend = increasing (ok)
+ITEM5 CONTROL VERDICT: detector fires `increasing` on real trend -> NO-FIRE on 92 is real absence, not a dead probe
+ITEM6 (A2 statistic-on-empty -> 0.0; canonical = system_gradient twin)
+ITEM6   coercion intervals on live corpus = 0 (no_pred)
+ITEM6   system_gradient_for(<absent interval>, 0, [], R) -> R=open(no_gradient_data) (ok)
+ITEM6 LIVE-FIRE (canonical): system_gradient returns open/fail on empty (Pattern-6 FIXED) -> no measured-flat 0.0
+ITEM6 CONTROL: mean-of-empty idiom -> 0.0000 (the measured-flat collapse shape); mean-of-[0.2,0.4,0.6] -> 0.4000
+ITEM6 CONTROL VERDICT: empty->0.0 vs nonempty->0.4000 are distinguishable -> detector LIVE (the A2 shape is real; question is whether any 92 site receives [])
+ITEM8 (low: C4c pass(no_*_data) / A7 zero-contamination / B2)
+ITEM8 C4c   pass(no_extraction_data) [ABSENCE]      = 6 of 92
+ITEM8 C4c   pass(no_excess_extraction) [measured 0] = 0 of 92
+ITEM8 C4c   measured_excess(>0)                     = 86 of 92
+ITEM8 C4c LIVE-FIRE: YES -- 6 constraints hit pass(no_extraction_data) (provenance present; pass(_) read sites would collapse it)
+ITEM8 CONTROL: actinide_replenishment_mechanism_flat_control -> measured_excess(0.0100) (token carries data, != pass(no_*_data))
+ITEM8 CONTROL VERDICT: pass(no_extraction_data) vs measured_excess are distinct functors -> a pass(_)-matching read collapses them; detector LIVE

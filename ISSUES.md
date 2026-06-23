@@ -5602,9 +5602,21 @@ KNOWN_STATE 2026-06-18.
 
 ## OQ-112 — Pattern-6 confirmed-candidate batch from the OQ-97 census: 8 classes, member-level sort and per-class disposition
 
-**Ω-type:** Ω_E (sites enumerated with read witnesses; C4a + item 2 + item 7 + item 4 fixed; items 3,5,6,8 pending).
+**Ω-type:** Ω_E (sites enumerated with read witnesses; C4a + item 2 + item 7 + item 4 fixed; items 3,5,6,8 witnessed-latent across all three live legs, declared-not-landed).
 
-**Status:** open — filed 2026-06-11 at OQ-97 close; **item 1 (C4a) RESOLVED 2026-06-22**
+**Status:** resolved — 2026-06-23 (close-out, witness `audits/2026-06-23_oq112_closeout/`).
+Combined witness pass (Part A bite-check on 1/2/4/7 + Part B kill-conditions on 3/5/6/8 +
+cross-corpus check on both twins) → **DECLARE-AND-STOP**: only item 1 touched live output
+(13/92 abductive `agrees`→`unavailable`, **headline-neutral**); items 2/4/7 latent-hardened;
+items 3/5/6/8 do NOT fire as live bites on `testsets` (92), `testsets_haiku` (960), or
+`testsets_flash` (960) — the absence-gates are masked **upstream** (epistemic/sufficiency guards
+require the same metric family the downstream gate needs; structural, not 92-sparsity). No headline
+ever flipped on any live leg from any OQ-112 fix. Fix-shapes for 3/5/6/8 recorded in the writeup,
+not landed (latent-hardening judged not to earn its spend pre-rebuild). **Declared scope boundary:**
+the pre-de-leak archives (`kernel_v1`/`original_v6`/…) were not swept (retrospective-audit breadth,
+OQ-89 pattern; re-runnable). Resolution history below.
+
+**Status (historical):** open — filed 2026-06-11 at OQ-97 close; **item 1 (C4a) RESOLVED 2026-06-22**
 (Round 1, witness `audits/2026-06-22_oq112_round1/`); **item 2 (A10-widened + completion gate)
 RESOLVED 2026-06-23** (Round 2, commits `4ee4ce08`+`0ef5bf6d`, witness
 `audits/2026-06-22_oq112_round2/`); **item 7 (wasserstein incomparable-mass provenance)
@@ -5834,6 +5846,40 @@ probes + outputs). Three commits: `d69d5d39` (Round 0 + the witness-truth contro
   `0.0` stays a *legal measured value*. The realized in-repo numeric-reader set was empty (grep
   bounded to in-repo; out-of-repo/notebook float-readers are unwitnessed — a per-context value read
   as a float now gets `null`/`"errored"` where the state was absent/errored).
+
+**Update 2026-06-23 — CLOSE-OUT (combined witness pass + cross-corpus check → DECLARE-AND-STOP).**
+Evidence: `audits/2026-06-23_oq112_closeout/` (`BITE_RULING.md` pre-registered, `WRITEUP.md`,
+`repin_92.txt`, `partA_*.txt`, `partB*.txt`, `crosscorpus_{twin,flash}.txt` + probes). Resolves the
+Round-4 gate above: the demanded "one verdict a user actually saw change" does **not** exist on any
+live leg → the arc is **latent-hardening**, confirmed (not asserted).
+
+- **Re-pin:** LIVE=92, membership byte-identical to Round-1 pin, 86 claim subjects; negative
+  control overlay-took (haiku→960).
+- **Part A (bite-check, field-level ruling recorded pre-data):** item 1 = the only live-touching
+  fix — **13/92** abductive `agrees`→`unavailable`, **HEADLINE-NEUTRAL** (join identical for all
+  92); items 2 (0/92 void alerts under completed run), 4 (0 sentinels), 7 (344/344 wm_emit cells
+  genuine float; the 18 top-level nulls are the PRE-EXISTING outer else `json_report.pl:452-454`,
+  not item-7-produced) = **latent**. Positive control: forced indexed void on a green constraint →
+  headline green→yellow, flagged by the comparison (the "no headline bite" claim is falsifiable).
+- **Part B (kill-conditions, 4 items / 4 distinct controls):** 3/5/6/8 do **NOT** fire as live
+  bites. The v1 guard-predicate sweep over-counts; **consumed-output reachability** is the witness:
+  item 3 (A6) — the 6 excess-absent constraints short-circuit at `epistemic_access_check=false` →
+  `purity_score: null` (value never reaches a consumer); item 5 (C4b) — corpus is NOT synchronic
+  (1569 series) but all 14 `stable` trends are MEASURED small-deltas (absence FAILS, not reads
+  stable); item 6 (A2) — canonical `system_gradient`→`open` (Pattern-6-fixed), cohomology empty-
+  fallbacks don't fire (N=92>0), `contextuality_fraction`=0.0 is measured H¹=0; item 8 (C4c) — the
+  6 are `boltzmann_compliant=inconclusive(insufficient_classifications)`, never false-clean. A7
+  needs a design ruling; B2 benign in pipeline order.
+- **Cross-corpus (the scope-widening that turned "latent on 92" into "structurally latent"):** the
+  A6/C4c gates re-checked on both denser live twins — `testsets_haiku` (960: 494 epistemic-true, **0**
+  excess-absent-reaching-purity, 129... 43 compliant, **0** rode pass(no_extraction_data)) and
+  `testsets_flash` (960: 748 epistemic-true, **0**; 129 compliant, **0**). **0 live bites on all
+  three live legs.** Masking is **structural** (epistemic/sufficiency guards require the metric
+  family the downstream gate needs). Archives NOT swept (declared boundary, OQ-89-pattern breadth).
+- **Disposition:** items 3/5/6/8 **witnessed-latent, fix-shapes recorded (WRITEUP §Disposition),
+  NOT landed** — latent-hardening judged not to earn its spend pre-rebuild. No engine `.pl` edits
+  this round. **Methodological yield:** a guard-predicate count over-reports a Pattern-6 firing;
+  consumed-output reachability — and checking it on more than the sparsest corpus — is the witness.
 
 ## OQ-113 — natural_law_signature/1 is unsatisfiable by construction on the live corpus: has_viable_alternatives/2 never returns `false`; pure_natural_law subtype unreachable
 

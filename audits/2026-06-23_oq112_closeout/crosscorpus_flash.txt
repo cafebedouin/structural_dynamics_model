@@ -1,0 +1,9 @@
+TWIN testsets_flash LIVE=960 (overlay-took witness; expect 960, not 44/92)
+TWIN constraints with NO constraint_metric (filename!=subject re-key risk) = 0
+ITEM3 TWIN: epistemic_access=true = 748 of 960
+ITEM3 TWIN: epistemic=true AND excess_extraction ABSENT (EX=1.0 reaches non-null purity_score) = 0
+ITEM3 TWIN LIVE-FIRE: NO -- every excess-absent twin constraint also fails epistemic gate (same masking as 92)
+ITEM8 TWIN: boltzmann_compliant=compliant = 129 of 960
+ITEM8 TWIN: compliant AND excess_extraction ABSENT (compliance rode pass(no_extraction_data)) = 0
+ITEM8 TWIN C4c LIVE-FIRE: NO
+ITEM5 TWIN: measurement/5 facts = 13055
