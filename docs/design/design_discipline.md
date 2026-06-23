@@ -394,6 +394,20 @@ snare, check reading-multiplicity. A *single-reading* kernel extractive from eve
 position (institutional ceiling included) is a genuine cross-seat snare. A *multi-reading* kernel
 where readings diverge is a plurality, routed to committer machinery, not collapsed.
 
+**The engine reads effect and self-declaration, never imputed intent (operator, 2026-06-23).**
+The two axes above exhaust what the engine is permitted to read: *structural effect* (the observer
+axis, computed from the situation) and *authored self-declaration* (the committer axis — the author
+committing their *own* reading, the CS structure). Neither attributes a mental state to a third
+party. A logic engine cannot know another agent's intent; only an agent can declare its own, and
+the only self-declaration channel in this system is the authored commitment structure. So "did this
+actor *intend* to extract / suppress / reject the alternative" is **out of scope by construction —
+not a missing feature.** This retroactively explains why the `intent_*` evidence layer (GAP-08) was
+never fed and should not be: its predicates impute intended power gain, intended suppression,
+intended beneficiary to actors the author is not, which is exactly the mens-rea attribution the
+engine must not perform. The designed-vs-decayed distinction that layer was reaching for survives
+where it belongs — in *structural* form (the piton `constraint_captured/1` axis, computed from
+effect over time), never as an attributed intention.
+
 **Author against the engine, not toward it (the false-summit discipline; operator,
 2026-06-11).** Testsets are authored with the author's *honest prior* — including priors the
 engine will refuse — and the engine fights them. The temptation as the corpus matures is the

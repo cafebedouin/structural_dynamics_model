@@ -488,6 +488,24 @@ surface mid-baseline — the rebuild's ε-idiom and diff baselines are forming).
   bypasses the revival protocol. The declared surface should be revived, not paralleled — the flag should
   be retired, not landed (OQ-128 records this).
 
+**DECLINED ON PRINCIPLE 2026-06-23 (operator ruling — supersedes the "deferred revival" posture for the
+intent-attribution predicates).** The layer's six imputed-intent predicates — `intent_power_change`,
+`intent_suppression_level`, `intent_resistance_level`, `intent_norm_strength`, `intent_beneficiary_class`,
+`intent_alternative_rejected` — attribute a *mental state to a third party* (what some actor *intended*).
+A logic engine cannot know another agent's intent; only an agent can declare its own, and this system's
+sole self-declaration channel is the authored commitment/CS structure (committer axis). So these predicates
+are **out of scope by construction, not unscheduled** — revival is ruled out and the empty tables are
+correct, not unfinished. **Retire rather than revive.** The principle is promoted to
+`docs/design/design_discipline.md` §4 ("reads effect and self-declaration, never imputed intent"). What the
+layer was *reaching for* — the designed-vs-decayed distinction — survives in structural form (the piton
+`constraint_captured/1` axis, computed from effect over time) and as the still-open author-independent
+immovability signal (§7 residual / CS committer axis), neither of which imputes intent. Carve-out:
+`intent_viable_alternative/3` is arguably *not* an intent attribution — an alternative's *existence* is a
+fact about the world, not a mental state — but its consuming motivation is already withdrawn by the
+routing-not-override supersession above (2026-06-17g) and its surviving need points at the CS axis, so it
+needs no intent layer either. Net: the `intent_*` surface is to be **deleted, not fed**; only `data_verification.pl`
+referencing diagnostics and the fail-closed `has_viable_alternatives/2` gate remain to clean up at rebuild.
+
 ---
 
 ## GAP-09 — No kernel-dominance stage: the kernel set is unfiltered for dominance (by ruling, not accident)
