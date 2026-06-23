@@ -225,7 +225,7 @@ PIPELINE_FIELDS = [
     # --- Wasserstein transport (continuous perspectival fracture) ---
     ("wasserstein_profile",         dict,         True),   # null if MaxEnt multi-context unavailable
     ("wasserstein_total_fracture",  (int, float), True),   # null if MaxEnt multi-context unavailable
-    ("wasserstein_incomparable_mass", dict,       True),   # null if MaxEnt multi-context unavailable
+    ("wasserstein_incomparable_mass", dict,       True),   # null if MaxEnt multi-context unavailable; inner per-context values are float | null (no distribution for that context) | "errored" (producer threw) — OQ-112 item 7. Field-level type unchanged (dict-or-null); inner values are not type-checked here.
     # --- Contextuality & monotonicity (cohomological geometry) ---
     ("contextuality_fraction",  (int, float), True),   # H1/6, null if obstruction unavailable
     ("orbit_monotonicity",      str,          True),   # constant|monotone_ascending|monotone_descending|non_monotone|incomparable

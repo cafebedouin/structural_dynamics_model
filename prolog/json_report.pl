@@ -435,11 +435,20 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
         format(S, '      "wasserstein_profile": {"u1_u2": ~6f, "u2_u3": ~6f, "u3_u4": ~6f},~n', [W12, W23, W34]),
         format(S, '      "wasserstein_total_fracture": ~6f,~n', [WTotal]),
         measurement_layer:wasserstein_contexts([WCtx1, WCtx2, WCtx3, WCtx4]),
-        (catch(measurement_layer:wasserstein_incomparable_mass(C, WCtx1, WM1), _, (WM1 = 0.0)) -> true ; WM1 = 0.0),
-        (catch(measurement_layer:wasserstein_incomparable_mass(C, WCtx2, WM2), _, (WM2 = 0.0)) -> true ; WM2 = 0.0),
-        (catch(measurement_layer:wasserstein_incomparable_mass(C, WCtx3, WM3), _, (WM3 = 0.0)) -> true ; WM3 = 0.0),
-        (catch(measurement_layer:wasserstein_incomparable_mass(C, WCtx4, WM4), _, (WM4 = 0.0)) -> true ; WM4 = 0.0),
-        format(S, '      "wasserstein_incomparable_mass": {"u1": ~6f, "u2": ~6f, "u3": ~6f, "u4": ~6f},~n', [WM1, WM2, WM3, WM4])
+        % OQ-112 item 7: carry the provenance bit per context. The old `catch(_, 0.0) -> true ; 0.0`
+        % collapsed three distinct states — genuine measured 0.0, no-distribution (predicate fails),
+        % and thrown — into one `0.0`. wm_token/3 keeps them distinct (float | absent | errored) and
+        % wm_emit/3 serializes them as float | null | "errored" at the channel boundary.
+        wm_token(C, WCtx1, WMT1),
+        wm_token(C, WCtx2, WMT2),
+        wm_token(C, WCtx3, WMT3),
+        wm_token(C, WCtx4, WMT4),
+        format(S, '      "wasserstein_incomparable_mass": {', []),
+        wm_emit(S, u1, WMT1), format(S, ', ', []),
+        wm_emit(S, u2, WMT2), format(S, ', ', []),
+        wm_emit(S, u3, WMT3), format(S, ', ', []),
+        wm_emit(S, u4, WMT4),
+        format(S, '},~n', [])
     ;   format(S, '      "wasserstein_profile": null,~n', []),
         format(S, '      "wasserstein_total_fracture": null,~n', []),
         format(S, '      "wasserstein_incomparable_mass": null,~n', [])
@@ -870,6 +879,36 @@ write_num_or_null(S, _) :- format(S, 'null', []).
 
 %% mono_status_to_string(+Status, -String)
 %  Converts orbit_monotonicity/2 term to a JSON-safe string.
+% ----------------------------------------------------------------------------
+% OQ-112 item 7: wasserstein_incomparable_mass provenance tokens
+%
+% wm_token(+C, +Ctx, -Tok)  Tok = <a float> | absent | errored
+%   genuine success → the float Mass;
+%   producer fails (no maxent_distribution for Ctx) → absent;
+%   producer throws → errored;
+%   succeed-with-unbound-Mass (FOURTH state — currently unreachable through the
+%     real producer, whose terminal `is/2` always binds, but a future producer
+%     change could introduce it) → errored, fail-closed, so no malformed JSON hole.
+wm_token(C, Ctx, Tok) :-
+    (   catch(measurement_layer:wasserstein_incomparable_mass(C, Ctx, M), _E, Tok = errored)
+    ->  ( nonvar(Tok)            % catch recovery bound Tok = errored (producer threw)
+        ->  true
+        ; var(M)                 % succeeded with Mass unbound → NOT a float; fail closed
+        ->  Tok = errored
+        ;   Tok = M              % genuine success → float Mass
+        )
+    ;   Tok = absent             % producer failed → no distribution for this context
+    ).
+
+% wm_emit(+Stream, +Key, +Tok)  serialize one token as JSON: float | null | "errored"
+wm_emit(S, Key, Tok) :-
+    (   number(Tok)
+    ->  format(S, '"~w": ~6f', [Key, Tok])
+    ;   Tok == absent
+    ->  format(S, '"~w": null', [Key])
+    ;   format(S, '"~w": "errored"', [Key])
+    ).
+
 mono_status_to_string(constant(_), constant).
 mono_status_to_string(monotone_ascending, monotone_ascending).
 mono_status_to_string(monotone_descending, monotone_descending).

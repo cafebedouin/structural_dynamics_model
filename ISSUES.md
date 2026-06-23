@@ -5602,12 +5602,21 @@ KNOWN_STATE 2026-06-18.
 
 ## OQ-112 — Pattern-6 confirmed-candidate batch from the OQ-97 census: 8 classes, member-level sort and per-class disposition
 
-**Ω-type:** Ω_E (sites enumerated with read witnesses; C4a + item 2 fixed; item 4 → Round 3; items 3,5,6,7,8 pending).
+**Ω-type:** Ω_E (sites enumerated with read witnesses; C4a + item 2 + item 7 fixed; item 4 → Round 3; items 3,5,6,8 pending).
 
 **Status:** open — filed 2026-06-11 at OQ-97 close; **item 1 (C4a) RESOLVED 2026-06-22**
 (Round 1, witness `audits/2026-06-22_oq112_round1/`); **item 2 (A10-widened + completion gate)
 RESOLVED 2026-06-23** (Round 2, commits `4ee4ce08`+`0ef5bf6d`, witness
-`audits/2026-06-22_oq112_round2/`); **item 4 (A3) → Round 3**; items 3,5,6,7,8 staged.
+`audits/2026-06-22_oq112_round2/`); **item 7 (wasserstein incomparable-mass provenance)
+RESOLVED 2026-06-23** (Round 2, witness `audits/2026-06-22_oq112_round2/item7_*`); **ROUND 2
+COMPLETE**.
+**Dual-status (both true; the second is NOT subsumed by "COMPLETE"):** "Round 2 COMPLETE" is the
+round level; at the gate level the item-2 maxent completion gate is **live-fire UNEXERCISED on the
+92-corpus (0/92 latency), live trigger named as the falsifier** — without this line "COMPLETE"
+misreads as "gate proven live," which the 0-of-92 line specifically denies. Item-7 is likewise
+output-identical on the live 92 (absent/errored arms 0-firing; 344/344 cells genuine float incl.
+measured 0.0) — the contract widening is forced-witnessed (4-state control), live-UNEXERCISED.
+**item 4 (A3) → Round 3**; items 3,5,6,8 staged.
 **Priority:** 1
 Full class tables with member lists: `audits/2026-06-11_oq97_pattern6_census/WRITEUP.md` §4–§5.
 
@@ -5772,11 +5781,25 @@ probes + outputs). Three commits: `d69d5d39` (Round 0 + the witness-truth contro
 - **Item 4 (A3 idiom cleanup) → ROUND 3.** Its 23-site breadth + the dead-branch/`unknown`-sentinel
   subtlety warrant a land-alone pass once item 2's discipline is established; deferred from Round 2.
 
-- **Item 7 (wasserstein `catch→0.0`, `json_report.pl:428-431`) — staged, lands ALONE next.** Unlike
-  the maxent gate, `0.0` is a *legal measured value* here, so emitting `null`/`errored` for the
-  catch/fail arms changes the consumer **contract** (schema-level, not just value); enumerate the
-  float-readers before landing. The completion-fact SHAPE folds in (Round-1 note), but the COMMIT is
-  separate (different consumer surface).
+- **Item 7 (wasserstein `catch→0.0`, `json_report.pl:438–442`) — RESOLVED 2026-06-23 (Round 2,
+  landed alone).** Replaced the 4 `catch(_,0.0)->true;0.0` arms with `wm_token/3` (float | absent |
+  errored) + `wm_emit/3` (serializes float | null | `"errored"`). The helper carries a fourth-state
+  guard (succeed-with-unbound-M → `errored`, fail-closed against a malformed JSON hole); that state
+  is unreachable through the STATIC producer, whose `extract_chain_probs` terminal `is/2` always
+  binds Mass on success — the guard is defensive against a future producer change.
+  `schemas.py:228` inner-value contract widened in-comment (the `(…, dict, True)` tuple is
+  unchanged and still validates: 0 errors over the regenerated output). **Witnesses**
+  (`audits/2026-06-22_oq112_round2/`): `item7_wm_token_controls.txt` — 4-state forced control, all
+  PASS (genuine 0.0→`0.000000`; nonzero→`0.400000`; absent→`null`; errored→`"errored"`;
+  unbound-M→`"errored"` via the guard, with the shipped clause pasted so the control goal is
+  diff-able against the guard subterm). `item7_before_after_diff.txt` — item-7-isolated diff (clean
+  BEFORE regenerated at HEAD `a5593f7` with item-7 reverted vs AFTER): **ZERO other top-level fields
+  moved, ZERO wasserstein cell flips**; 344/344 live cells are genuine float (incl. measured 0.0,
+  correctly NOT collapsed to null), absent/errored arms 0-firing on the live 92 → output-identical,
+  contract widening **live-UNEXERCISED**. `item7_schema_validation.txt` — 0 schema errors.
+  `0.0` stays a *legal measured value*. The realized in-repo numeric-reader set was empty (grep
+  bounded to in-repo; out-of-repo/notebook float-readers are unwitnessed — a per-context value read
+  as a float now gets `null`/`"errored"` where the state was absent/errored).
 
 ## OQ-113 — natural_law_signature/1 is unsatisfiable by construction on the live corpus: has_viable_alternatives/2 never returns `false`; pure_natural_law subtype unreachable
 

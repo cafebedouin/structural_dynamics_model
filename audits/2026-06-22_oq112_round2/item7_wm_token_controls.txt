@@ -1,0 +1,28 @@
+=== producer property ===
+  producer wasserstein_incomparable_mass/3: STATIC (state 4 unreachable via real producer; guard is defensive)
+=== shipped wm_token/3 clause (guard subterm must match the state-4 control goal) ===
+wm_token('C', 'Ctx', 'Tok') :-
+    (   catch(measurement_layer:wasserstein_incomparable_mass(_, _, A),
+              _,
+              B=errored)
+    ->  (   nonvar(B)
+        ->  true
+        ;   var(A)
+        ->  B=errored
+        ;   B=A
+        )
+    ;   B=absent
+    ).
+=== STATE 1: genuine measured 0.0 ===
+  token=0.0  json="u1": 0.000000   (expect: float, 0.000000)
+=== STATE 1b: genuine nonzero float ===
+  token=0.4  json="u1": 0.400000   (expect: float, 0.400000)
+=== STATE 2: absent (producer fails) ===
+  token=absent  json="u1": null   (expect: absent, null)
+=== STATE 3: errored (producer throws) ===
+  token=errored  json="u1": "errored"   (expect: errored, "errored")
+=== STATE 4: succeed-with-unbound-M (defensive guard control) ===
+  unreachability witness: producer STATIC + extract_chain_probs ends in `is/2` (binds or throws)
+  guard goal with Tok,M both unbound -> token=errored  json="u1": "errored"   (expect: errored, "errored")
+=== VERDICT ===
+  ALL FOUR STATES ROUTED CORRECTLY — PASS

@@ -45,6 +45,52 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-23 — OQ-112 item 7 RESOLVED → ROUND 2 COMPLETE: wasserstein incomparable-mass provenance tokens
+**Files:** prolog/json_report.pl, python/shared/schemas.py, ISSUES.md, audits/2026-06-22_oq112_round2/
+**Tier:** landed
+
+Last staged Round-2 piece (different surface from the item-2 gate). `json_report.pl:438–442` had
+four per-context arms `(catch(measurement_layer:wasserstein_incomparable_mass(C,Ctx,WM),_,(WM=0.0))
+-> true ; WM=0.0)` collapsing THREE states into `0.0`: genuine measured zero, no-distribution
+(producer fails), thrown (producer throws). Replaced with `wm_token/3` (float | absent | errored)
++ `wm_emit/3` (serializes float | `null` | `"errored"`). Helper carries a **fourth-state guard**
+(`var(M) -> Tok = errored`): a succeed-with-unbound-M would emit a malformed JSON hole; routed
+fail-closed. That state is **unreachable through the real producer** — it is STATIC (cannot be
+extended at runtime) and its only success path runs `extract_chain_probs/3`, whose terminal
+`IncompMass is max(0.0,…)` always binds or throws — so the guard is defensive against a future
+producer change. `schemas.py:228` inner-value contract widened **in-comment only** (the
+`(…, dict, True)` tuple is unchanged; the validator never type-checked inner values, so mixed
+float/null/"errored" passes).
+
+**Output-changing at the schema → landed ALONE.** Witnesses (`audits/2026-06-22_oq112_round2/`):
+- `item7_wm_token_controls.txt` — 4-state forced control, all PASS. genuine 0.0→`0.000000`;
+  nonzero→`0.400000`; absent→`null`; errored→`"errored"`; unbound-M→`"errored"` (guard). The shipped
+  `wm_token/3` clause is pasted via `clause/2` so the state-4 guard-decision control goal is
+  diff-able against the shipped guard subterm; states 1–3 run the REAL shipped helper via a
+  `probe_harness:with_overlay` of the dynamic `maxent_dist/3`.
+- `item7_before_after_diff.txt` — item-7-ISOLATED diff (clean BEFORE regenerated at HEAD `a5593f7`
+  with item-7 reverted, vs AFTER): **ZERO other top-level fields moved, ZERO wasserstein cell flips.**
+  On the live 92: 86/92 fire the section as a dict (6/92 whole-field `null` = the unchanged outer
+  transport-profile failure branch), **344/344 cells genuine float** incl. measured `0.0` correctly
+  kept as float (NOT collapsed to null); absent/errored arms **0-firing**. So the fix is
+  **output-identical on the live corpus** — contract widening is **forced-witnessed, live-UNEXERCISED**
+  (the item-2 posture applied to a contract surface).
+- `item7_schema_validation.txt` — 0 schema errors over the regenerated `pipeline_output.json`.
+
+`0.0` stays a *legal measured value* here (unlike `N=0`), so emitting `null`/`"errored"` is a
+consumer-CONTRACT change, not a value change. Realized in-repo numeric-reader set was **empty**
+(grep bounded to in-repo: `w1_sheaf_join.py` reads other wasserstein fields; `audit3_synthesis.py`
+parses a different predicate's source; `test_harness.pl` `catch(_,fail)`). Out-of-repo / notebook
+float-readers are genuinely out of reach and **unwitnessed** — a per-context value read as a float
+now gets `null`/`"errored"` where the state was absent/errored.
+
+**ROUND 2 COMPLETE.** Dual-status (both true, the second NOT subsumed by COMPLETE): round-level
+"Round 2 COMPLETE" AND gate-level "item-2 maxent completion gate live-fire UNEXERCISED on 92 (0/92
+latency), live trigger named as falsifier" — COMPLETE ≠ gate-proven-live. item 4 (A3) → Round 3;
+items 3,5,6,8 staged.
+
+---
+
 ## 2026-06-23 — OQ-112 item 2 RESOLVED: completion-witness-or-fail-closed gate (maxent stages)
 **Files:** prolog/diagnostic_summary.pl, prolog/json_report.pl, prolog/maxent_classifier.pl, AGENTS.md, ISSUES.md, audits/2026-06-22_oq112_round2/
 **Tier:** landed
