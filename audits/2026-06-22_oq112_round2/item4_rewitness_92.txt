@@ -1,0 +1,13 @@
+suppression_metric_name = suppression_requirement
+W1: corpus=92, absent-suppression=6: [actinide_replenishment_mechanism_contradictions,digital_money_legitimacy_contradictions,knowledge_legitimacy_biomedicine_contradictions,performance_legitimacy_contradictions,polaris_document_status_contradictions,visual_evidentiary_authority_contradictions]
+W2: get_raw_suppression(actinide_replenishment_mechanism_contradictions) = unknown
+W2 control: get_raw_suppression(actinide_replenishment_mechanism_flat_control) = 0.02 (number: number(0.02)->yes;no)
+W3: get_constraint_metrics(actinide_replenishment_mechanism_contradictions): eps=0.0 supp=unknown theater=0.0
+W3 verdict: "; Supp = 0.0" branch unknown==unknown->DEAD (sentinel arrived);ALIVE (default fired)
+W4 context used: none
+W4: maxent_type_log_likelihood(actinide_replenishment_mechanism_contradictions, snare) -> success (LL=-10.0)
+W5a: metric_value_indexed suppression -> success (V=unknown)
+W5b: maxent_type_log_likelihood_indexed(actinide_replenishment_mechanism_contradictions, snare) -> success (LL=-10.0)
+W6: maxent_run(none) -> success (summary=maxent_summary(86,0.2748402588294247,10,0,0))
+W6b: maxent_dist for actinide_replenishment_mechanism_contradictions ABSENT after maxent_run
+W7 control: maxent_type_log_likelihood(actinide_replenishment_mechanism_flat_control, snare) -> success (LL=-22.138481252367015)

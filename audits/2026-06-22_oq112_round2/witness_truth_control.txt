@@ -1,0 +1,9 @@
+CTRL clean: maxent_run -> success ; run_info_count=1  (expect success / >=1)
+CTRL clean: summary=maxent_summary(86,0.11423000109303073,3,8,0)
+PRE: actinide_replenishment_mechanism_contradictions is claim-less (excluded from discovery) -- as expected
+FORCED: discovery N=87 ; THROWER actinide_replenishment_mechanism_contradictions at index K=1 of N
+FORCED: maxent_run -> error(error(type_error(evaluable,unknown/0),context(system:(is)/2,_73488))) ; run_info FOR Ctx ABSENT  <-- GOOD
+FORCED: total run_info_count=0 (expect 0 if throw precedes the assert)
+FORCED: error term = error(error(type_error(evaluable,unknown/0),context(system:(is)/2,_73488)))
+FORCED multi_run -> error(error(type_error(evaluable,unknown/0),context(system:(is)/2,_73430))) ; run_info ABSENT <-- GOOD
+POST: actinide_replenishment_mechanism_contradictions claim-less again -- cleanup OK

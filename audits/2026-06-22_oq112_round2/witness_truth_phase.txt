@@ -1,0 +1,5 @@
+PHASE: discovery N=87 ; THROWER at index K=52 (mid-list)
+PHASE A maxent_compute_profiles(full list incl thrower) -> success
+PHASE B profiles PRESENT before classify (good setup)
+PHASE B maxent_classify_all([thrower], profiles present) -> error(error(type_error(evaluable,unknown/0),context(system:(is)/2,_115056)))
+PHASE C real maxent_run (thrower at K=52) -> error(error(type_error(evaluable,unknown/0),context(system:(is)/2,_28540))) ; run_info ABSENT, count=0 <-- GOOD
