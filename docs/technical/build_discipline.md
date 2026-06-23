@@ -357,6 +357,35 @@ and deferred instead of silently shipped. This is a declared absence (a capabili
 not yet have) → log it in `docs/design/design_gaps.md` and/or mint an OQ; do not treat the absence as
 done because the principle is written here.
 
+### Don't answer "does the apparatus pay for itself?" by producing more apparatus
+
+A sibling of the verification-depth seat, on the meta level. When the question on the table is
+whether the *audit arc / apparatus* is worth its weight, the failure mode is to resolve it by
+producing more well-formed apparatus-output — a clean cruft test, an asymmetry rule, a new
+`design_gaps.md` filing. That answers whether one *predicate or site* is worth keeping: a different,
+lower question than whether the *arc caught a defect a user would have hit*. Producing more of the
+thing being questioned, *well*, is the swap to watch for (witnessed OQ-112 Round 3, 2026-06-23:
+asked "does the arc pay for itself," answered with a predicate-worth adjudication).
+
+Why the two don't substitute: "unwired but worth keeping" and "premise falsified, commit dropped"
+are both **latent** findings — value or hazard conditional on an input the system does not currently
+produce (a future caller; an absent metric that doesn't occur on the live corpus). An arc that finds
+mostly latent hazards plus unfinished value in a healthy codebase is reporting *good news*
+("hardened before it went live") — but that is a **different claim** than "this arc catches live
+defects," and the apparatus's weight is justified by the second, not the first.
+
+The honest moves: (1) hold the two threads apart — settle the local decision, but **name** the
+meta-question and leave it open rather than answering it with output; (2) run the **one-fix-bite
+check** — pick one shipped fix and ask whether it changed a verdict a user actually saw, vs. closed a
+latent-on-every-corpus branch; (3) treat "no live bite across the arc" as itself needing a positive
+control — don't assert it (false-absence) or bury it; (4) **install the kill-question in substrate**
+(the OQ entry) as the gate on the next round, so a future instance can't spin up Round N+1 without
+facing it; (5) watch for **converging-to-approval** — repeatedly landing on "approve + two
+sharpenings" is the affirm-bias, sharpening at the margin while never asking whether the margin is
+where the value lives. The **read pass killing a write** before it touches the engine (a Round-0
+recon falsifying a pre-registered commit) is the arc's real transferable product — escalate the
+premise-falsification, don't build around it.
+
 ## Pattern 2 — One-canonical-thing-became-two (the silent fork)
 
 **Shape:** a file or record is copied to a scratch/test location, possibly edited, and now
