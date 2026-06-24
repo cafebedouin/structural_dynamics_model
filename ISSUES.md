@@ -187,6 +187,9 @@ acknowledged) and is closed via a transient `with_asserted` single-conjunct prob
 synthetic fixture written to `testsets/`. Phase C matched-pair matrix: all 8 SILENT/FIRED
 rows PASS, plus real-corpus fire controls (drift 46, axiom 12/182). Evidence:
 `audits/2026-06-23_oq06_offcase_fixtures/` (search.pl, probe.pl, raw outputs, WRITEUP.md).
+Scoped to the four named conjuncts; the presumed off-cases for the remaining conjuncts
+(drift C1/C2, axiom C1/C3) are tracked as **OQ-177** (`splits_from` OQ-06). drift-C3 re-open
+trigger: a future authored unacknowledged stable non-minor drift.
 **Priority:** 1
 **Origin:** Tranche 2 correctness pass, Phase 1 audit, May 2026.
 **Files:** `prolog/cs_pattern_detection.pl:412–416` (`cs_drift_unacknowledged/2`) and
@@ -8912,6 +8915,37 @@ pre-validate membership" contract — plus a consumer sweep (6+ callsites: `json
 `corpus_cohomology`, `descent_status`, `subobject_classifier`, the orbit reporters) confirming
 none rely on absent→0. Engine-behavior change to a core widely-consumed predicate; above the
 fix-on-sight threshold (needs the ruling + the sweep), hence logged not patched.
+
+---
+
+## OQ-177 — OQ-06's presumed off-cases for the NON-target drift/axiom conjuncts are unwitnessed (Ω_E)
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-06
+**Origin:** Flagged during the OQ-06 resolution (2026-06-23,
+`audits/2026-06-23_oq06_offcase_fixtures/`). OQ-06 scoped to four conjuncts
+(`cs_drift_unacknowledged` C3/C4, `cs_axiom_foreclosed` C2/C4) and **presumed** the
+remaining conjuncts already had live off-cases — asserted without a visible witness:
+
+- `cs_drift_unacknowledged` C1 — `cs_drift_state(UID,_,_)` absent (UID has no drift state at all)
+- `cs_drift_unacknowledged` C2 — `acknowledged=true` (an acknowledged gap, off the `false` slot)
+- `cs_axiom_foreclosed` C1 — `cs_axiom(UID,_,Atom)` absent
+- `cs_axiom_foreclosed` C3 — drift direction ≠ `axiom_overriding`
+
+**Why it matters / scope:** same half-spec-tested logic OQ-06 closed for its four conjuncts —
+a conjunct never observed to stay silent when it should has only half its spec exercised. These
+were left out of OQ-06 deliberately (the operator's scope call) to keep what OQ-06 certified
+crisp; they are a *separate* presumption, not a silent expansion of OQ-06. Low priority: the
+OQ-06 Phase-A scan already passes over these same facts, so witnessing their off-cases is nearly
+free (reuse `search.pl`'s bucket pattern + two-sided planted controls). The axiom-C1/drift-C1
+"fact-absent" cases are Pattern-5-shaped (a gate over a possibly-empty table) and worth a
+fail-closed check specifically.
+
+**What resolution changes:** extends the OQ-06 both-directions witness to the full conjunct set
+of both predicates — closes the last "asserted absent, never searched" gaps in
+`cs_drift_unacknowledged/2` and `cs_axiom_foreclosed/2`. No engine change expected; a search +
+matched-pair probe in the same audit style.
 
 ---
 

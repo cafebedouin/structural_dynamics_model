@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "6ea8966990b5298ea99e0796172b679907e6865e",
+    "store_version": "9171dccf0e81fd874db48eab629465d076a4cbfb",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-23T23:18:39"
+    "generated_at": "2026-06-23T23:26:33"
   },
-  "issues_sha": "ffebb3519933fda266a31525cbec911e7cfb753936bbb777c5ae47cc80d999d7",
-  "n_entries": 176,
+  "issues_sha": "d1d1282da93c925e3c154bfc3b6616477dce7e9f91cc9b322c69d074caea79cb",
+  "n_entries": 177,
   "active_token_set": [
     "investigating",
     "open",
@@ -15,7 +15,7 @@
     "resolved": 85,
     "mitigated": 9,
     "partial": 7,
-    "open": 69,
+    "open": 70,
     "disposed": 3,
     "future": 3
   },
@@ -982,6 +982,19 @@
       "mentioned_in": [
         "OQ-10"
       ]
+    },
+    {
+      "id": "OQ-177",
+      "status": "open",
+      "priority": 4,
+      "summary": "OQ-06's presumed off-cases for the NON-target drift/axiom conjuncts are unwitnessed (Ω_E)",
+      "deps": [
+        "splits_from OQ-06"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-06"
+      ]
     }
   ],
   "archive": [
@@ -1032,7 +1045,9 @@
       "summary": "cs_drift_unacknowledged / cs_axiom_foreclosed: off-case fixtures missing",
       "deps": [],
       "cross_refs": [],
-      "mentioned_in": []
+      "mentioned_in": [
+        "OQ-177"
+      ]
     },
     {
       "id": "OQ-07",

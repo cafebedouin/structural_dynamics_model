@@ -58,13 +58,23 @@ for the control process only — this does not change how the filter *reads* `cs
 | axiom C2 (grounding≠ec) | 9 | 253 | 28 | 212 | **real UID** `e0fb873f…` (testsets) |
 | axiom C4 (Mag=minor+ec) | 0 | 1 | 3 | 0 | **real UID** `b65e1d35…` (haiku) |
 
-**drift-C3 is a structural absence, not a coverage gap.** Stable-direction drifts: testsets
-7 (all minor), flash 280 (all minor), haiku 37 (35 minor + 2 non-minor). The 2 haiku
-stable+non-minor drifts are **both `acknowledged=true`**. So the off-case (stable +
-non-minor + *unacknowledged*) cannot occur in the authored corpus: unacknowledged stable
-drifts are always minor; non-minor stable drifts are always acknowledged. The transient
-probe is the appropriate **permanent** witness for this conjunct — no synthetic fixture is
-written to `testsets/` (THREE-LIVE-LEGS: singleton sparsity is intended).
+**drift-C3 closes as: no live off-case in the current four corpuses + transient probe.**
+Stable-direction drifts: testsets 7 (all minor), flash 280 (all minor), haiku 37 (35 minor
++ 2 non-minor). The 2 haiku stable+non-minor drifts are **both `acknowledged=true`**. So in
+the corpus **as authored today**, the off-case (stable + non-minor + *unacknowledged*) does
+not occur: unacknowledged stable drifts are always minor; non-minor stable drifts are always
+acknowledged.
+
+**This "stable ⟹ minor-or-acknowledged" regularity is a CORPUS OBSERVATION over the current
+four legs, NOT a proven invariant.** Nothing in the engine forbids a future authored
+`cs_drift_state(_, _, gap(stable, substantial, false))`; if one is added, drift-C3 gains a
+live off-case and this conjunct's "absence" silently reopens. The closure does not depend on
+the regularity holding forever — the transient `with_asserted` probe is the **permanent**
+witness that the conjunct stays silent when its off-condition holds, and the two-sided planted
+control (`bucket_c3_off base=0 sens=1[PASS] spec=0[PASS]`) is the permanent witness that the
+search *would* have found a violation. No synthetic fixture is written to `testsets/`
+(THREE-LIVE-LEGS: singleton sparsity is intended). A future unacknowledged-stable-non-minor
+drift is the explicit re-open trigger — tracked as the widening item (see WRITEUP close).
 
 The other three conjuncts have genuine live off-cases, so they are closed on real data
 (gold standard). `cs_axiom_foreclosed`'s C4 off-case is absent on `testsets`/`kernel_v1` but
@@ -82,7 +92,23 @@ control that licenses the two zeros as genuine absence.
    is what blocks, and the sibling-satisfied firing path works.
 3. **Real off-case silence** on genuine UIDs: drift-C4 `0b5146c6…` SILENT, axiom-C2
    `e0fb873f…/state_racial_classification_…` SILENT (testsets), axiom-C4 `b65e1d35…/
-   verifiable_significance_…` SILENT (haiku). The `with_asserted` restore-verify never threw.
+   verifiable_significance_…` SILENT (haiku).
+4. **Restore / no-residual witness** (positive, post-matrix): zero residual synthetic `SX-*`
+   facts in any of `cs_axiom/3`, `cs_drift_state/3`, `cs_axiom_grounding/3` — the
+   `with_asserted` auto-retract + `verify_restore` held even across the process-local
+   `dynamic/1` swap on `cs_axiom/3`, so no transient fixture leaked into a later count.
+
+## Close — scope, re-open trigger, and the widening item
+
+- **Scope certified:** the four named OQ-06 conjuncts, witnessed both directions. Nothing wider.
+- **drift-C3 re-open trigger:** a future authored `cs_drift_state(_, _, gap(stable, <non-minor>, false))`
+  gives drift-C3 a live off-case and reopens it. The "stable ⟹ minor-or-acknowledged" regularity
+  is a corpus observation over the current four legs, **not a proven invariant** — the closure
+  rests on the transient probe + planted control, which stay valid regardless.
+- **Widening tracked as OQ-177** (`splits_from` OQ-06, Priority 4): OQ-06 *presumed* the
+  remaining conjuncts (drift C1/C2, axiom C1/C3) already had live off-cases without searching
+  for them. Left out of OQ-06 deliberately to keep what it certified crisp; OQ-177 carries the
+  unwitnessed presumption rather than letting it ride inside this resolution.
 
 ## Files
 

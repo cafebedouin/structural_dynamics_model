@@ -123,12 +123,30 @@ real_silence_haiku :-
     ;   format("  [PASS] axiom-C4 real ~w / ~w SILENT (Mag=minor blocks)~n", [AxC4UID, AxC4Atom])
     ).
 
+% ---- Restore / no-residual witness (post-matrix) ----
+% with_asserted auto-retracts and verify_restore throws probe_restore_failed on a
+% bad restore. A dynamic/1 swap on cs_axiom/3 is exactly the kind of change that could
+% silently defeat that, so witness it POSITIVELY: after the full matrix, NO synthetic
+% SX-* fact may survive in any of the three fact predicates the fixtures touched.
+restore_witness :-
+    format("~n[4] RESTORE / NO-RESIDUAL WITNESS (post-matrix)~n"),
+    findall(U,   (narrative_ontology:cs_axiom(U,_,_),           sub_atom(U,0,3,_,'SX-')), AxR),
+    findall(U,   (narrative_ontology:cs_drift_state(U,_,_),      sub_atom(U,0,3,_,'SX-')), DrR),
+    findall(U-A, (narrative_ontology:cs_axiom_grounding(U,A,_),  sub_atom(U,0,3,_,'SX-')), GrR),
+    length(AxR, NA), length(DrR, ND), length(GrR, NG),
+    (   NA =:= 0, ND =:= 0, NG =:= 0
+    ->  format("  [PASS] zero residual synthetic facts: cs_axiom=0 cs_drift_state=0 cs_axiom_grounding=0~n"),
+        format("         with_asserted restore-verify clean even after the dynamic/1 swap on cs_axiom/3~n")
+    ;   format("  [FAIL] residual SX-* facts leaked: cs_axiom=~w cs_drift_state=~w cs_axiom_grounding=~w~n", [NA,ND,NG])
+    ).
+
 probe_testsets :-
     format("OQ-06 PHASE C — witness matrix (testsets)~n"),
     load(testsets),
     fire_control(testsets),
     transient_matrix,
     real_silence_testsets,
+    restore_witness,
     format("~n==== probe_testsets COMPLETE ====~n").
 
 probe_haiku :-
