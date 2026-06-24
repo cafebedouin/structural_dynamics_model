@@ -280,11 +280,18 @@ a single run." It is not an architectural impossibility — it requires authorin
 multiple readings and a comparison tool.
 
 **Precondition:** OQ-04 is closed (1:1 ruling, 2026-06-23) — OQ-10 does **not** wait on a
-1:N schema. Its remaining precondition is a loadable kernel with ≥2 `cs_reading_relation`-
-linked readings, available today in `prolog/archives/datasets/kernel_test/`:
-`end_of_life_decision_authority` carries `autonomy_reading` + `sanctity_reading` +
-`vulnerability_protection_reading`, linked via `cs_reading_relation` (target files on disk,
-edges non-dangling), loadable via a `corpus_path` overlay (CLAUDE.md → Corpus Loading).
+1:N schema. OQ-10's own sketch (below) discovers readings via `cs_reading_relation` and runs
+`dr_type/3` on each — it consumes the 1:1 sibling structure the ruling keeps, never a
+covers-predicate; so it is satisfiable under 1:1 (kill condition retired 2026-06-23). Its
+remaining precondition — a loadable kernel with ≥2 `cs_reading_relation`-linked readings —
+is satisfied **on a live leg**: `end_of_life_decision_authority` exists in both twins
+(`prolog/testsets_haiku/`, `prolog/testsets_flash/`) carrying `autonomy_reading` +
+`sanctity_reading` + `vulnerability_protection_reading`, all sharing `cs_kernel_id` and
+cross-linked via `cs_reading_relation`. Witnessed 2026-06-23: a `corpus_path` overlay onto
+`testsets_haiku` (CLAUDE.md → Corpus Loading; `asserta`/`retractall`, *not* plain `assertz`)
+loaded 960 testsets, the kernel resolved with all 3 readings, and an edge resolved in the
+loaded engine. (The archived `kernel_test/` copy also exists but is not needed — the live
+twin makes OQ-10 workable without any archive revival.)
 
 **What resolution changes:** Reading robustness becomes a first-class output. A finding
 currently reported as "the engine classifies X as snare (analytical)" becomes "X is
