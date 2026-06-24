@@ -23,6 +23,7 @@ run "omega check"    python3 python/omega_resolver.py check
 run "omega selftest" python3 python/omega_resolver.py selftest
 run "omega index"    python3 python/omega_resolver.py index --check
 run "known_state"    python3 python/known_state_status.py --check
+run "axis boundary"  python3 python/check_axis_boundary.py --selftest
 echo
 if [ "$fail" = 0 ]; then echo "GATE: GREEN"; else echo "GATE: RED"; fi
 exit "$fail"

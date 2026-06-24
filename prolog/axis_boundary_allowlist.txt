@@ -1,0 +1,33 @@
+# Sanctioned committer→observer boundary edges (OQ-15 / OQ-135 / v8 §8 item 1).
+# Each line is a normalized boundary edge emitted by check_axis_boundary.pl:
+#   <SrcModule>:<Name>/<Arity> -> <cs_Callee>/<Arity>
+# The guard (python/check_axis_boundary.py) fires on ANY edge NOT listed here
+# (a new committer→observer read must be consciously classified) and notes any
+# listed edge that has DISAPPEARED (stale — prune it). This file IS the OQ-15
+# cross-axis read census made a checked fact (Build-Discipline Pattern 2:
+# canonicity is a checked fact, not a memory).
+#
+# ROLE TAGS (the comment on each entry) carry the Phase-2 adjudication input:
+#   VERDICT edges are the only ones v8's invariant governs; TOOLING edges are
+#   the mediator-class comparison/validation layer (v7 would relocate them into
+#   the named mediator; v8 leaves them isolated). Witnessed 2026-06-23,
+#   audits/2026-06-23_oq15_crossaxis_witnesses/.
+
+# --- VERDICT pipeline (v8-governed; "exactly one forward bridge" + the bucket-3 exclusion) ---
+# SANCTIONED-BRIDGE: v8's single committer→observer forward bridge, carrying the
+#   entailment-typed `influences` payload into necessity-inheritance derivation.
+drl_composition:detect_necessity_inheritance/2 -> cs_reading_relation/3
+# BUCKET-3-EXCLUSION: cs_kernel_id used to keep same-kernel readings out of the DR
+#   contamination network (OQ-15 bucket 3, "defensible as-is, named for decision").
+drl_purity_network:constraint_neighbors_existing/2 -> cs_kernel_id/2
+
+# --- COMPARISON / VALIDATION TOOLING (mediator-class; not observer-verdict computation) ---
+# OQ-59 cyclopean disparity operator at the AXIOM layer (reads committer axioms to DIFF them).
+axiom_diff:axioms_of/2 -> cs_axiom/3
+axiom_diff:axioms_of/2 -> cs_axiom_grounding/3
+axiom_diff:axioms_of/2 -> cs_story_uid/2
+axiom_diff:report_ax_header/2 -> cs_kernel_id/2
+# OQ-59 cyclopean disparity operator at the READING layer (reads cs_kernel_id to group readings).
+reading_diff:report_header/2 -> cs_kernel_id/2
+# Config validation: reads cs_story_uid to validate identity-map consistency (a checker).
+config_validation:config_violation/1 -> cs_story_uid/2
