@@ -651,6 +651,15 @@ but does not rule (OQ-130). Named here on first measurement of the orthogonality
 
 ## GAP-12 — The observer/committer one-seat invariant is not machine-enforced
 
+**CLOSED 2026-06-23 (commit `fd1ee561`, OQ-15 Phase 1).** The dataflow/taint guard now exists:
+`prolog/check_axis_boundary.pl` (reachability over the loaded call graph) + `python/check_axis_boundary.py`
+(allowlist diff, `--selftest`), gate-wired in `scripts/gate.sh`. Both required positive controls fire
+(payload-widening / non-influences seam). The invariant is machine-enforced; the census confirmed only the
+sanctioned `influences` bridge + the bucket-3 `cs_kernel_id` exclusion as observer-verdict reads. The
+*adoption* of v8 over v7 and the vocabulary migration remain open (OQ-135 / OQ-15 Phase 2) — but the
+*enforcement* absence this gap names is filled. Witnesses: `audits/2026-06-23_oq15_crossaxis_witnesses/`.
+The original absence is preserved below for provenance.
+
 **The capability that is absent:** a guard that *enforces* cross-axis non-coupling — the property that
 detection-independence (v7 Theorem 7) and the v8 seat/gauge/orientation ontology rest on: **no committer
 field reaches observer computation by any path except entailment-typed payload on the single forward

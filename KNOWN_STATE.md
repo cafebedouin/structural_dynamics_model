@@ -45,6 +45,41 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-23 — OQ-15 Phase 0–1: cross-axis taint guard LANDED (GAP-12 closed); Phase 2 = operator ruling
+**Files:** prolog/check_axis_boundary.pl, prolog/axis_boundary_allowlist.txt, python/check_axis_boundary.py, prolog/tests/axis_boundary_ctl_run1.pl, prolog/tests/axis_boundary_ctl_run2.pl, prolog/tests/axis_boundary_ctl_payload_widen.pl, prolog/tests/axis_boundary_ctl_nonbridge_seam.pl, scripts/gate.sh, ISSUES.md, docs/design/design_gaps.md
+**Tier:** landed
+
+Resolved the load-bearing half of OQ-15 (= v8 §8 item 1 / OQ-135 priority-1 artifact;
+closes GAP-12). Commits `c6fe7edb` (Phase 0a/0b), `fd1ee561` (guard).
+
+- **Phase 0a witnesses** (`audits/2026-06-23_oq15_crossaxis_witnesses/`, read-only):
+  W1 MIXED (cs_drift_mismatch reaches observer machinery *transitively* via
+  cs_is_metric_stable → grep is blind → guard load-bearing); W2 the `influences`
+  bridge is the *unique committer→observer* dataflow (bucket-1 comparisons run the
+  other direction) → v8's single-bridge whitelist is principled; BC zero-back-channel
+  holds by inspection only (no cs_ runtime assert; only observer-internal fpn_ caches);
+  XR/SA confirmed. **constraint_bridge.pl `compute_veto_actors` is NOT cross-axis**
+  (reads dr_type + authored `constraint_beneficiary` substrate, no cs_) — the plan's
+  "reverse DR→CS read" hypothesis was *false*; NOT added to Files, NOT whitelisted.
+- **The guard** (`check_axis_boundary.pl`): reachability over the LOADED call graph
+  (clause/2, descends control constructs + meta-calls + **nested module qualifiers** —
+  a missing-recursion blindness the positive controls caught before landing). Python
+  harness diffs edges vs `axis_boundary_allowlist.txt` (load_warning_gate pattern,
+  fail-closed); `--selftest` runs negative + 2 required controls (path-b payload widen,
+  path-c non-influences seam — both fire). Wired into `scripts/gate.sh` (static check,
+  no corpus). GATE GREEN; behavior-preserving (no engine file touched; guard absent
+  from stack.pl/run_pipeline/corpus_loader load path).
+- **Census beat the hand inventory:** 8 boundary edges; only 2 are observer-VERDICT
+  reads (sanctioned `influences` bridge + bucket-3 `cs_kernel_id` exclusion → "exactly
+  one forward bridge" confirmed in place). The other 6 are comparison/validation tooling
+  (`axiom_diff`, `reading_diff`, `config_validation`) — modules OQ-15's `Files:` OMITTED.
+- **OPEN — Phase 2 (operator's value ruling, NOT recency):** structural=mechanically-
+  enforced (guard IS the resolution; v8 governing) vs structural=relocated (schedule the
+  v7 mediator code-move) vs synthesis (v7 layer enforced by v8 guard). Shipping the guard
+  makes policed-in-place the de-facto interim. Bundled OQ-15 ↔ OQ-135.
+
+---
+
 ## 2026-06-23 — OQ-06 RESOLVED: off-case fixtures witnessed for cs_drift_unacknowledged / cs_axiom_foreclosed
 **Files:** prolog/cs_pattern_detection.pl, prolog/cs_axiom_engine.pl, prolog/narrative_ontology.pl, ISSUES.md
 **Tier:** correction-key

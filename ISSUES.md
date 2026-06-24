@@ -413,6 +413,29 @@ Read-only census of the cross-axis surface, every find line-witnessed:
   exists yet). The "(OQ-17)" pointer above was a misattribution → repointed to **OQ-40** (the
   scalar-vs-temporal `classify_at_time` split; OQ-17 is the disposed testsets_3000 quarantine).
 
+**Phase 1 — transitive taint guard LANDED (2026-06-23, commit `fd1ee561`).** The architecture-neutral,
+load-bearing half (v8 §8 item 1) is built and gate-wired: `prolog/check_axis_boundary.pl` walks the
+*loaded call graph* (clause/2 over every engine predicate, descending control constructs + meta-calls +
+nested module qualifiers) and emits each committer→observer boundary edge; `python/check_axis_boundary.py`
+diffs them against `prolog/axis_boundary_allowlist.txt` (load_warning_gate pattern, fail-closed on any
+un-allowlisted edge) and `--selftest` runs the negative case + two required positive controls (path-b
+payload widening, path-c non-influences seam — both fire; they caught a real nested-qualifier blindness in
+the guard before it landed). Wired into `scripts/gate.sh`; GATE GREEN; behavior-preserving (no engine
+predicate touched; guard absent from the live load path).
+- **The reachability census beats OQ-15's hand inventory:** 8 boundary edges, of which only **two are
+  observer-VERDICT reads** — the sanctioned `influences` bridge and the bucket-3 `cs_kernel_id` exclusion
+  — so **v8's "exactly one forward bridge" is confirmed in place**. The other 6 are comparison/validation
+  *tooling* (`axiom_diff`, `reading_diff`, `config_validation`), modules **the original `Files:` inventory
+  omitted**. (cs_drift_mismatch/cs_kernel_registry are observer→committer — the *other* direction — and
+  correctly do not appear as guarded-direction edges.)
+- **What remains = Phase 2, the operator's value ruling (NOT recency):** *structural = mechanically
+  enforced* (the guard IS the resolution; record v8 governing, close this OQ's load-bearing core, leave
+  vocabulary migration to OQ-135) **vs** *structural = relocated* (schedule the v7 code-move: extract a
+  named mediator, relocate the comparison reads, unbless `influences`; the taint machinery is reusable but
+  the into-mediator whitelist is gated behind the move) **vs** *synthesis* (v7's named layer enforced by
+  v8's guard). W2 (the bridge is categorically the unique committer→observer dataflow) *informs* but does
+  not decide it. Until ruled, shipping the guard makes policed-in-place the de-facto interim state.
+
 ---
 
 ## OQ-16 — Temporal vocabulary rename pass deferred
@@ -7626,6 +7649,8 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 **The work.** The audit concluded the engine **votes one seat** (R3 probe: `cs_pattern` tracks authored presentation, blind to binding structure; the `cs_verdict` false-X layer audits presentation against the metric reality, one-directionally). The v8 design spec states the resulting ontology (seat / gauge / orientation), draws the seat/face line by **audit direction**, and gives the standing invariant as a **transitive cross-axis taint property** (no committer field reaches observer computation by any path except entailment-typed payload on the single forward `influences` bridge). Spec §8 scopes the implementation; **priority-1 there is the one new artifact**: promote that invariant to a checkable **dataflow taint guard** with two positive controls (payload-injection on `influences`; (B)-seam-promotion off `influences`). The rest is low-stakes vocabulary migration. **NOT an engine rebuild — behavior-preserving** (the seat, gauge, and orientation machinery already exist; only the guard is new). See GAP-12 for the declared absence this closes (the invariant is prose-only today).
 
 **What resolution changes.** The one-seat invariant goes from a v7 *prose* invariant (v7 §4.5; recorded as a decision in `docs/design/two_axis_architecture_v7.md`, OQ-14 resolved) to *machine-enforced*; and the v7→v8 "seat"="gauge" vocabulary becomes canonical (the spec §4 bridge table). Vocabulary migration must reconcile with **OQ-27** (H¹ signature-resolved-vs-raw phrasing) and **OQ-28** (seat-theorem-v1 honesty edits not all witnessed). Cross-ref: `audits/2026-06-16_seat_invariant_vs_prolog/REPORT.md`, KNOWN_STATE 2026-06-16 (seat/orientation audit + v8 spec).
+
+**Spec §8 item 1 (the priority-1 artifact) BUILT — invariant is now machine-enforced (2026-06-23, commit `fd1ee561`).** The transitive taint guard landed via OQ-15's Phase 1 (`prolog/check_axis_boundary.pl` + `python/check_axis_boundary.py`, gate-wired; two required positive controls fire). **This closes GAP-12** (the invariant was prose-only) and confirms the spec's "exactly one forward bridge" *empirically in place* (the reachability census found only the sanctioned `influences` bridge + the bucket-3 `cs_kernel_id` exclusion as observer-verdict reads). **Still blocked_on_human:** the v8 *adoption* call and the §8 item-4 / Q4 *vocabulary* migration remain the operator's seat — the guard is architecture-neutral and does NOT itself adopt v8 over v7 (that is OQ-15 Phase 2). See `audits/2026-06-23_oq15_crossaxis_witnesses/`.
 
 ---
 

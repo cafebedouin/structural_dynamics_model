@@ -106,3 +106,44 @@ constraint_bridge.pl from the plan's "Critical files / cross-axis surface" list.
 - Phase 1 whitelist drops `compute_veto_actors`; cross-axis surface = the four genuine sites +
   json_report aggregator.
 - BC positive control is deferred into Phase 1's guard acceptance test (no probe exists in 0a).
+
+## Phase 1 — the transitive taint guard (built; commit `fd1ee561`)
+
+`prolog/check_axis_boundary.pl` walks the LOADED call graph (clause/2 over every engine predicate,
+descending control constructs, meta-calls, and nested module qualifiers) and emits each
+committer→observer boundary edge; `python/check_axis_boundary.py` diffs them against
+`prolog/axis_boundary_allowlist.txt` (load_warning_gate pattern). `--selftest` runs the negative case
++ both required positive controls; wired into `scripts/gate.sh`.
+
+**Reachability census — 8 boundary edges (the hand inventory was incomplete):**
+
+| Edge | Role |
+|---|---|
+| `drl_composition:detect_necessity_inheritance/2 → cs_reading_relation/3` | SANCTIONED-BRIDGE (observer-verdict) |
+| `drl_purity_network:constraint_neighbors_existing/2 → cs_kernel_id/2` | BUCKET-3-EXCLUSION (observer-verdict) |
+| `axiom_diff:axioms_of/2 → cs_axiom/3, cs_axiom_grounding/3, cs_story_uid/2` | COMPARISON-TOOLING (OQ-59) |
+| `axiom_diff:report_ax_header/2 → cs_kernel_id/2` | COMPARISON-TOOLING (OQ-59) |
+| `reading_diff:report_header/2 → cs_kernel_id/2` | COMPARISON-TOOLING (OQ-59) |
+| `config_validation:config_violation/1 → cs_story_uid/2` | VALIDATION-TOOLING |
+
+Only the first two are observer-VERDICT reads ⇒ **v8's "exactly one forward bridge" (plus the bucket-3
+exclusion OQ-15 already flagged) is confirmed in place.** The other six are comparison/validation
+tooling in modules (`axiom_diff`, `reading_diff`, `config_validation`) **absent from OQ-15's `Files:`
+inventory** — the reachability check found cross-axis reads the hand census missed. (The bucket-1
+`cs_drift_mismatch`/`cs_kernel_registry` sites are observer→committer — the *other* direction — and
+correctly do not appear among the guarded-direction edges.)
+
+**Positive controls (both fire; v8 §8 item 1):**
+- path-b payload widening → `detect_necessity_inheritance → cs_axiom_foreclosed` (bridge count stays 1,
+  so a count check passes; guard fires). exit 1.
+- path-c non-influences seam → `drl_core:axis_control_seam → cs_kernel_id` (never touches `influences`,
+  so a per-bridge payload check passes; guard fires). exit 1.
+
+The controls **caught a real guard defect before it landed**: `body_calls/2` took `functor/3` of a
+double-qualified `user:(narrative_ontology:cs_X(..))` body and yielded `(:)/2`, missing the cs_ sink;
+fixed by recursing through `M:Goal`. The clean negative pass is trusted only because the controls show
+the guard would flag a planted read.
+
+**Net:** the architecture-neutral, load-bearing half of OQ-15 / v8 §8 item 1 is built and gate-wired;
+GAP-12 closed. **Phase 2 — relocate (v7) vs policed-in-place (v8) vs synthesis — is the operator's
+value ruling, staged behind these witnesses, not decided here.**
