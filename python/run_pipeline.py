@@ -1156,6 +1156,28 @@ def run_pipeline(
             "`python3 python/load_warning_gate.py`, then re-run the pipeline."
         )
 
+    # --- AXIS-BOUNDARY GATE (OQ-15 / OQ-135; sibling of the load-warning gate) ---
+    # The committer→observer one-seat invariant is convention-not-theorem in its
+    # CARDINALITY ("exactly one forward bridge") — the type system privileges the
+    # entailment relation `influences` by KIND, but nothing forbids a second
+    # crossing. After OQ-15's core was ruled closed (policed-in-place), this guard
+    # is the SOLE enforcement of that boundary, so its positive controls must be
+    # shown-firing on every run, not assumed: --selftest asserts BOTH planted
+    # violations (path-b payload widening, path-c non-influences seam) still fire
+    # AND the clean corpus passes. A new un-allowlisted cross-axis read, or a guard
+    # that has silently stopped discriminating, HALTS the run. Do NOT remove or
+    # bypass; to accept a new boundary edge, add it to
+    # prolog/axis_boundary_allowlist.txt deliberately with its role tag.
+    from check_axis_boundary import selftest as _axis_selftest
+    if _axis_selftest() != 0:
+        _msg = ("[AXIS-GATE] selftest failed — a new committer→observer read, or a "
+                "guard that stopped discriminating. Verify with "
+                "`python3 python/check_axis_boundary.py --selftest`.")
+        if progress:
+            progress("pipeline", _msg)
+        print(_msg, file=sys.stderr)
+        raise SystemExit("axis-boundary gate failed; see [AXIS-GATE] above.")
+
     # --- GRID FIRST-CONTACT GATE (OQ-93 flip ruling, 2026-06-11) ----------
     # Every grid-authoring story gets the three-indicator plausibility audit
     # ONCE before any consumer read (ledger: python/grid_audit_ledger.json).

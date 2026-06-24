@@ -344,7 +344,7 @@ phrasing; the mediator added to "Open by deferral" with OQ-08/OQ-17 cross-refs.
 
 **Ω-type:** Ω_C (design choice — architecture decided, build deferred).
 
-**Status:** open
+**Status:** resolved — load-bearing core, 2026-06-24: Phase 2 ruled **policed-in-place (v8)**; the taint guard is the structure. Synthesis (v7 named mediator) preserved as a triggered upgrade (see ruling note). Residual vocabulary migration lives in OQ-135 (human-gated).
 **Priority:** 1
 **Deps:** bundled_with OQ-135 (machine-enforced one-seat invariant; the v8-§8 reading of this layer)
 **Origin:** Tranche 2 cross-axis surface inventory, May 2026.  
@@ -446,6 +446,26 @@ predicate touched; guard absent from the live load path).
   the into-mediator whitelist is gated behind the move) **vs** *synthesis* (v7's named layer enforced by
   v8's guard). W2 (the bridge is categorically the unique committer→observer dataflow) *informs* but does
   not decide it. Until ruled, shipping the guard makes policed-in-place the de-facto interim state.
+
+**Phase 2 — RULED policed-in-place (v8); load-bearing core CLOSED (2026-06-24).** Operator ruling on the
+named reading of "structural": **a green gate is sufficient — the boundary need not be legible in the
+source tree today.** The taint guard *is* the resolution; v8 (policed-in-place) governs. W1 made the guard
+mandatory under *every* architecture (transitive reads ⇒ relocation buys legibility, NOT
+grep-checkability), so building the architecture-neutral guard first was correct regardless; that is
+banked. The W2 kind-witness (entailment-typed `influences` is the structurally privileged carrier;
+cardinality "exactly one" is convention-not-theorem) is why the guard polices the *contingent* half.
+- **Synthesis (v7 named mediator enforced by the guard) is PRESERVED, not foreclosed — v7 is
+  unbuilt-but-available.** The upgrade trigger is **falsifiable and witness-tied: a SECOND
+  committer→observer bridge is proposed** (the cardinality-convention breaking — the one event under which
+  the type-segregation principle must be re-argued and a named layer earns its cost). NOT the
+  unfalsifiable "first legibility failure." The trigger is **mechanically wired**: such a bridge makes the
+  guard fire RED (a new un-allowlisted edge), routing the contributor to `axis_boundary_allowlist.txt` →
+  this OQ → the synthesis decision. The guard firing IS the trigger event.
+- **The guard is now the SOLE enforcement of a convention-not-theorem, so its positive controls are
+  load-bearing and run in BOTH recurring gates** (shown-firing, not assumed): `scripts/gate.sh`
+  (`--selftest`, ritual) AND `python/run_pipeline.py` (axis-boundary gate beside the load-warning gate,
+  automatic every pipeline). A guard that silently stopped discriminating turns both RED.
+- Vocabulary/seat-gauge migration (v8 §8 item 4) remains human-gated under OQ-135.
 
 ---
 

@@ -45,8 +45,8 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-06-23 — OQ-15 Phase 0–1: cross-axis taint guard LANDED (GAP-12 closed); Phase 2 = operator ruling
-**Files:** prolog/check_axis_boundary.pl, prolog/axis_boundary_allowlist.txt, python/check_axis_boundary.py, prolog/tests/axis_boundary_ctl_run1.pl, prolog/tests/axis_boundary_ctl_run2.pl, prolog/tests/axis_boundary_ctl_payload_widen.pl, prolog/tests/axis_boundary_ctl_nonbridge_seam.pl, scripts/gate.sh, ISSUES.md, docs/design/design_gaps.md
+## 2026-06-23 — OQ-15 RESOLVED (core): cross-axis taint guard LANDED, Phase 2 ruled policed-in-place
+**Files:** prolog/check_axis_boundary.pl, prolog/axis_boundary_allowlist.txt, python/check_axis_boundary.py, python/run_pipeline.py, prolog/tests/axis_boundary_ctl_run1.pl, prolog/tests/axis_boundary_ctl_run2.pl, prolog/tests/axis_boundary_ctl_payload_widen.pl, prolog/tests/axis_boundary_ctl_nonbridge_seam.pl, scripts/gate.sh, ISSUES.md, docs/design/design_gaps.md
 **Tier:** landed
 
 Resolved the load-bearing half of OQ-15 (= v8 §8 item 1 / OQ-135 priority-1 artifact;
@@ -73,10 +73,21 @@ closes GAP-12). Commits `c6fe7edb` (Phase 0a/0b), `fd1ee561` (guard).
   reads (sanctioned `influences` bridge + bucket-3 `cs_kernel_id` exclusion → "exactly
   one forward bridge" confirmed in place). The other 6 are comparison/validation tooling
   (`axiom_diff`, `reading_diff`, `config_validation`) — modules OQ-15's `Files:` OMITTED.
-- **OPEN — Phase 2 (operator's value ruling, NOT recency):** structural=mechanically-
-  enforced (guard IS the resolution; v8 governing) vs structural=relocated (schedule the
-  v7 mediator code-move) vs synthesis (v7 layer enforced by v8 guard). Shipping the guard
-  makes policed-in-place the de-facto interim. Bundled OQ-15 ↔ OQ-135.
+- **W2 corrected (kind vs cardinality):** the relation-atom type system axis-segregates —
+  `influences` (entailment, 38) read ONLY at the observer derivation; `forecloses` (47) /
+  `coexists_with` (104) committer-modal, never cross. So single-bridge is principled-IN-KIND
+  but "exactly one" is convention-not-theorem, guard-enforced-in-CARDINALITY. The earlier
+  "principled" gloss asserted the conclusion W2 was scoped to test — dropped. Guard is
+  corpus-INDEPENDENT (live/haiku/flash all → same 8 edges, byte-identical sets).
+- **Phase 2 RULED policed-in-place (v8); core CLOSED (2026-06-24).** Operator's named reading:
+  a green gate is sufficient; the boundary need not be source-legible today. The guard IS the
+  resolution. **Synthesis (v7 named mediator) PRESERVED, not foreclosed** — v7 unbuilt-but-
+  available; trigger = **a SECOND committer→observer bridge is proposed** (falsifiable,
+  witness-tied; NOT "first legibility failure"), mechanically wired (such a bridge fires the
+  guard RED → allowlist header → OQ-15 synthesis decision). The guard is now SOLE enforcement
+  of a convention, so its two positive controls run in BOTH recurring gates (shown-firing):
+  `scripts/gate.sh --selftest` AND `run_pipeline.py` (axis-boundary gate beside load-warning).
+  Vocabulary migration remains human-gated under OQ-135. Bundled OQ-15 ↔ OQ-135.
 
 ---
 
