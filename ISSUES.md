@@ -175,32 +175,25 @@ load-bearing only in tangled_rope (T4 gap +0.21 vs +0.014 in snare+rope, 14.6×)
 
 ## OQ-06 — cs_drift_unacknowledged / cs_axiom_foreclosed: off-case fixtures missing
 
-**Status:** open
+**Status:** resolved — (2026-06-23, off-case absence witness + matched-pair matrix). All
+four conjuncts now witnessed in BOTH directions. Phase A searched all four real corpuses
+(`testsets`, `testsets_haiku`, `testsets_flash`, `archives/datasets/kernel_v1`), each
+off-bucket gated by a two-sided planted control (sensitivity+specificity, all PASS) and a
+per-corpus overlay fingerprint. Result: drift-C4, axiom-C2, axiom-C4 have **live** corpus
+off-cases (closed on real UIDs `0b5146c6…`, `e0fb873f…`, `b65e1d35…`); drift-C3
+(stable+non-minor+unacknowledged) is a **structural absence** in all four corpuses
+(unacknowledged stable drifts are always minor; non-minor stable drifts are always
+acknowledged) and is closed via a transient `with_asserted` single-conjunct probe — no
+synthetic fixture written to `testsets/`. Phase C matched-pair matrix: all 8 SILENT/FIRED
+rows PASS, plus real-corpus fire controls (drift 46, axiom 12/182). Evidence:
+`audits/2026-06-23_oq06_offcase_fixtures/` (search.pl, probe.pl, raw outputs, WRITEUP.md).
 **Priority:** 1
-**Origin:** Tranche 2 correctness pass, Phase 1 audit, May 2026.  
-**Files:** `prolog/cs_drift_engine.pl` (predicates); `prolog/cs_corpus_analysis.pl:158–162`
-(callers); `prolog/json_report.pl:531–533` (report emission)
-
-**Specific question:** Four conjuncts of `cs_drift_unacknowledged/2` and
-`cs_axiom_foreclosed/2` have no live disconfirming UID in the corpus — they have only
-been tested in the on-case direction. Specifically:
-
-- `cs_drift_unacknowledged` C3 (direction=stable): no live off-case UID
-- `cs_drift_unacknowledged` C4 (magnitude=minor): no live off-case UID
-- `cs_axiom_foreclosed` C2 (grounding ≠ empirically_contingent): no live off-case UID
-- `cs_axiom_foreclosed` C4 (magnitude=minor + empirically_contingent): no live off-case UID
-
-**Evidence so far:** Phase 1 audit identified the four missing off-cases. The
-predicates succeed on known on-cases and the engine produces correct on-case output.
-Whether the conjuncts correctly stay silent when the off-case condition holds has not
-been tested with live corpus data.
-
-**What resolution changes:** A predicate that has never been observed to stay silent
-when it should has only half its specification tested. Authoring off-case fixtures
-would close this. Caveat (raised in audit): purely synthetic fixtures are
-kernel-without-reading and should be marked as such if added to the testset corpus.
-An alternative is to author a real constraint story that genuinely has
-direction=stable or magnitude=minor and observe that the predicate stays silent.
+**Origin:** Tranche 2 correctness pass, Phase 1 audit, May 2026.
+**Files:** `prolog/cs_pattern_detection.pl:412–416` (`cs_drift_unacknowledged/2`) and
+`prolog/cs_axiom_engine.pl:137–141` (`cs_axiom_foreclosed/2`) — predicates (the original
+`cs_drift_engine.pl` pointer was **stale**: that file only references the predicate in a
+comment at lines 34–35); `prolog/cs_corpus_analysis.pl:158–162` (callers);
+`prolog/json_report.pl:531–533` (report emission).
 
 ---
 

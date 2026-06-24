@@ -1,0 +1,66 @@
+OQ-06 PHASE A — off-case absence witness (run 2026-06-23)
+Driver: 5 fresh swipl processes (one corpus per process; load_all_testsets is corpus_loaded-guarded and consult accumulates facts).
+
+
+==== TWO-SIDED PLANTED CONTROLS (on live testsets) ====
+    bucket_c3_off       base=0 sens=1[PASS] spec=0[PASS]
+    bucket_c4_off       base=3 sens=4[PASS] spec=3[PASS]
+    bucket_axiom_c2_off base=9 sens=10[PASS] spec=9[PASS]
+    bucket_axiom_c4_off base=0 sens=1[PASS] spec=0[PASS]
+
+
+==== CORPUS: testsets ====
+  OVERLAY-FINGERPRINT: requested=testsets active=testsets  cs_drift_state/3=70  cs_axiom/3=150
+  -- cs_drift_unacknowledged buckets --
+    C3-off (Dir=stable)     count=0         sample=none
+    C4-off (Mag=minor)      count=3         sample=0b5146c6-c6af-448f-90aa-0fe49c99350f-gap(authority_erosion,minor,false)
+    on-case (fires)         count=46        sample=b5354922-58f5-4b42-b88b-f2df1ad54765-gap(authority_erosion,substantial,false)
+  -- cs_axiom_foreclosed buckets --
+    C2-off (grounding\=ec)  count=9         sample=e0fb873f-3ba6-4786-86e3-6756def171ff-state_racial_classification_categorically_prohibited
+    C4-off (Mag=minor)      count=0         sample=none
+    on-case (fires)         count=12        sample=d6aae3e9-a090-4fec-b5db-3c8e36ef9b70-demographic_structure_determines_resource_allocation
+
+
+==== CORPUS: testsets_haiku ====
+  OVERLAY-FINGERPRINT: requested=testsets_haiku active=testsets_haiku  cs_drift_state/3=955  cs_axiom/3=2037
+  -- cs_drift_unacknowledged buckets --
+    C3-off (Dir=stable)     count=0         sample=none
+    C4-off (Mag=minor)      count=10        sample=1d2355f2-a293-4b45-ab32-2a6dbd931a87-gap(authority_erosion,minor,false)
+    on-case (fires)         count=743       sample=715317f5-4458-4259-a8ee-1899475206e6-gap(axiom_overriding,substantial,false)
+  -- cs_axiom_foreclosed buckets --
+    C2-off (grounding\=ec)  count=253       sample=715317f5-4458-4259-a8ee-1899475206e6-isaac_exclusive_covenant_inheritance
+    C4-off (Mag=minor)      count=1         sample=b65e1d35-366b-423e-a27f-23349c61da90-verifiable_significance_distinguishes_legitimate_from_promotional
+    on-case (fires)         count=182       sample=ba1aaa7c-c183-4d97-a46f-97d258d6d8db-decision_lock_cost_exceeds_path_selection_cost
+
+
+==== CORPUS: testsets_flash ====
+  OVERLAY-FINGERPRINT: requested=testsets_flash active=testsets_flash  cs_drift_state/3=960  cs_axiom/3=1903
+  -- cs_drift_unacknowledged buckets --
+    C3-off (Dir=stable)     count=0         sample=none
+    C4-off (Mag=minor)      count=41        sample=093a8d43-e73c-4246-a231-86135edb7967-gap(revival_pressure,minor,false)
+    on-case (fires)         count=269       sample=5513a504-f897-4242-a6f3-994e64ab9055-gap(authority_erosion,substantial,false)
+  -- cs_axiom_foreclosed buckets --
+    C2-off (grounding\=ec)  count=28        sample=c7a17d64-ef0d-463a-b5bb-f01601a6df9e-divine_causation_of_life
+    C4-off (Mag=minor)      count=3         sample=13ddde51-ed53-4b0b-a2a9-f8814dc267c7-simulation_is_functionally_equivalent_to_reality
+    on-case (fires)         count=24        sample=6f75f350-c3fa-451c-9112-3a72571289d6-grid_stability_requires_dispatchable_baseload
+
+
+==== CORPUS: archives/datasets/kernel_v1 ====
+  OVERLAY-FINGERPRINT: requested=archives/datasets/kernel_v1 active=archives/datasets/kernel_v1  cs_drift_state/3=875  cs_axiom/3=1860
+  -- cs_drift_unacknowledged buckets --
+    C3-off (Dir=stable)     count=0         sample=none
+    C4-off (Mag=minor)      count=8         sample=9080e82f-da0b-4ca9-bb2e-78eb0e61e5ba-gap(authority_erosion,minor,false)
+    on-case (fires)         count=697       sample=2a83a5a9-f003-4719-bd80-6cd4e6cb9082-gap(axiom_overriding,substantial,false)
+  -- cs_axiom_foreclosed buckets --
+    C2-off (grounding\=ec)  count=212       sample=2a83a5a9-f003-4719-bd80-6cd4e6cb9082-covenant_transmissible_through_isaac_lineage_only
+    C4-off (Mag=minor)      count=0         sample=none
+    on-case (fires)         count=173       sample=2a83a5a9-f003-4719-bd80-6cd4e6cb9082-isaac_alone_receives_covenant_berith
+
+==== drift-C3 absence anatomy (why no live off-case anywhere) ====
+stable-direction drift counts:  testsets 7 (all minor) | flash 280 (all minor) | haiku 37 (35 minor, 2 non-minor)
+the 2 haiku stable+non-minor drifts are BOTH acknowledged=true:
+  bf30a24d-e26f-4707-891d-2138fb9d8cc0  mag=substantial  ack=true
+  432c367d-76fb-4062-a5a2-4c9787fdba69  mag=severe        ack=true
+=> drift-C3 off-case (stable + non-minor + UNACKNOWLEDGED) is a structural absence:
+   unacknowledged stable drifts are always minor; non-minor stable drifts are always acknowledged.
+   The transient with_asserted probe is the appropriate PERMANENT witness for this conjunct.

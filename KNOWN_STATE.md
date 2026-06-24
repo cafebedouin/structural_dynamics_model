@@ -45,6 +45,39 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-23 — OQ-06 RESOLVED: off-case fixtures witnessed for cs_drift_unacknowledged / cs_axiom_foreclosed
+**Files:** prolog/cs_pattern_detection.pl, prolog/cs_axiom_engine.pl, prolog/narrative_ontology.pl, ISSUES.md
+**Tier:** correction-key
+
+All four off-case conjuncts now witnessed in BOTH directions (fires-when-it-should AND
+stays-silent-when-it-should). Method: search all four real corpuses with a two-sided
+planted control per off-bucket + per-corpus overlay fingerprint (Phase A), then a transient
+matched-pair matrix (Phase C). Evidence: `audits/2026-06-23_oq06_offcase_fixtures/`.
+
+Findings worth carrying:
+- **Stale `Files:` corrected.** ISSUES.md OQ-06 pointed at `cs_drift_engine.pl` for the
+  predicates; that file only *mentions* `cs_drift_unacknowledged/2` in a comment (lines
+  34–35). The real definitions are `cs_pattern_detection.pl:412–416`
+  (`cs_drift_unacknowledged/2`) and `cs_axiom_engine.pl:137–141` (`cs_axiom_foreclosed/2`).
+- **`cs_axiom/3` is multifile-but-STATIC** in `narrative_ontology.pl` (NOT in the `:- dynamic`
+  block, unlike `cs_drift_state/3` and `cs_axiom_grounding/3` which ARE dynamic). So
+  `probe_harness:with_asserted` on `cs_axiom/3` throws `No permission to modify static
+  procedure` — declare `dynamic(narrative_ontology:cs_axiom/3)` in the probe process first
+  (does not change how readers see it; the process halts, no leak).
+- **drift-C3 (Dir=stable + non-minor + unacknowledged) is a structural absence**, not a
+  coverage gap: across all four corpuses, unacknowledged stable drifts are always minor and
+  non-minor stable drifts are always acknowledged. The transient probe is its permanent
+  witness — no synthetic fixture belongs in `testsets/` (THREE-LIVE-LEGS sparsity is intended).
+- **Sequential multi-corpus scans must be one-corpus-per-process.** `load_all_testsets/0` is
+  `corpus_loaded`-guarded (no-op after first load) and `consult` accumulates
+  `narrative_ontology` facts — a one-process 4-corpus loop loads only corpus #1 and pollutes
+  counts. (Already in CLAUDE.md Corpus Loading for the count-mismatch case; reinforced here.)
+
+Promotion test: the stale-`Files:` correction is local to OQ-06 (now fixed in place, won't
+re-mislead). The `cs_axiom/3` static-procedure gotcha is the candidate tripwire — but it is
+narrow (only bites a probe that asserts `cs_axiom/3`) and fails LOUDLY (immediate permission
+error, not silent), so it stays history here rather than promoting to an always-loaded section.
+
 ## 2026-06-23 — OQ-10 RESOLVED: reading-robustness as first-class report output (+ OQ-176 spawned)
 **Files:** prolog/cs_kernel_registry.pl, prolog/json_report.pl, python/enhanced_report.py, prolog/tests/test_cs_kernel_registry.pl, ISSUES.md
 **Tier:** landed

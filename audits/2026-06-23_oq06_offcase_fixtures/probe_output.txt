@@ -1,0 +1,37 @@
+OQ-06 PHASE C — witness matrix (run 2026-06-23)
+
+OQ-06 PHASE C — witness matrix (testsets)
+
+[1] REAL-CORPUS FIRE CONTROL  (corpus=testsets)
+  [PASS] cs_drift_unacknowledged fires on 46 real UID(s)
+  [PASS] cs_axiom_foreclosed fires on 12 real UID(s)
+
+[2] TRANSIENT MATCHED-PAIR MATRIX (synthetic UIDs, single-conjunct isolation)
+ drift C3 (Dir=stable):
+  SILENT [PASS] gap(stable, substantial, false)  [C3 off, C4 ok]
+  FIRED  [PASS] gap(authority_erosion, substantial, false)  [C3 flipped on]
+ drift C4 (Mag=minor):
+  SILENT [PASS] gap(authority_erosion, minor, false)  [C4 off, C3 ok]
+  FIRED  [PASS] gap(authority_erosion, substantial, false)  [C4 flipped on]
+ axiom C2 (grounding \= empirically_contingent):
+  SILENT [PASS] grounding=deontological  [C2 off, C1/C3/C4 ok]
+  FIRED  [PASS] grounding=empirically_contingent  [C2 flipped on]
+ axiom C4 (Mag=minor):
+  SILENT [PASS] gap(axiom_overriding, minor, false)  [C4 off, C1/C2/C3 ok]
+  FIRED  [PASS] gap(axiom_overriding, substantial, false)  [C4 flipped on]
+
+[3] REAL OFF-CASE SILENCE (genuine corpus UIDs, testsets)
+  [PASS] drift-C4 real UID 0b5146c6-c6af-448f-90aa-0fe49c99350f SILENT (Mag=minor blocks)
+  [PASS] axiom-C2 real e0fb873f-3ba6-4786-86e3-6756def171ff / state_racial_classification_categorically_prohibited SILENT (grounding\=ec blocks)
+
+==== probe_testsets COMPLETE ====
+
+OQ-06 PHASE C — axiom-C4 real off-case (testsets_haiku)
+
+[1b] FIRE CONTROL (axiom, testsets_haiku)
+  [PASS] cs_axiom_foreclosed fires on 182 real UID(s)
+
+[3b] REAL OFF-CASE SILENCE (axiom-C4, testsets_haiku)
+  [PASS] axiom-C4 real b65e1d35-366b-423e-a27f-23349c61da90 / verifiable_significance_distinguishes_legitimate_from_promotional SILENT (Mag=minor blocks)
+
+==== probe_haiku COMPLETE ====
