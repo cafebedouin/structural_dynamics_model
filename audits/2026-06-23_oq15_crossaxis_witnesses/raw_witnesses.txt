@@ -1,0 +1,70 @@
+######## W1 — form of each cross-axis call site ########
+==== cs_drift_mismatch.pl: transitive via cs_is_metric_stable -> network_dynamics ====
+23:%   at the analytical context) AND network_drift_velocity is below threshold.
+51:%  DR metric stability (cs_is_metric_stable remains C-keyed: DR is instance-blind;
+69:    cs_is_metric_stable(C).
+87:%% cs_is_metric_stable(+C)
+92:cs_is_metric_stable(C) :-
+94:    \+ catch(network_dynamics:detect_network_drift(C, Ctx, _), _, fail),
+96:            (network_dynamics:network_drift_velocity(C, Ctx, V, _),
+97:             config:param(network_drift_velocity_threshold, Thresh),
+
+==== drl_composition.pl: detect_necessity_inheritance STATIC (dr_type + cs_reading_relation) ====
+12:    detect_necessity_inheritance/2,
+75:    drl_core:dr_type(C1, Context, T1),
+76:    drl_core:dr_type(C2, Context, T2),
+127:    drl_core:dr_type(Component, snare),
+133:%% detect_necessity_inheritance(+Source, -Derived)
+135:% (derivation/entailment edge). Uses the typed cs_reading_relation/3 with
+139:detect_necessity_inheritance(Source, Derived) :-
+140:    drl_core:dr_type(Source, mountain),
+141:    narrative_ontology:cs_reading_relation(Source, Derived, influences),
+423:    drl_core:dr_type(C, Ctx, rope).
+
+==== cs_kernel_registry.pl: cs_kernel_divergence/compare_kernel_readings STATIC (classify_at_time) ====
+12:%   cs_kernel_divergence/4     — cs_kernel_divergence(+K, -Ctx, -UID1-C1, -UID2-C2)
+14:% cs_kernel_divergence/4 is the CS-layer analogue of perspectival_incoherence:
+16:% First-class diagnostic — not hedged. Uses classify_at_time/4 (canonical
+18:% DR/CS invariant: classify_at_time calls use C (name-keyed); DR is instance-blind.
+25:    cs_kernel_divergence/4,
+26:    compare_kernel_readings/3,
+55:%% cs_kernel_divergence(+K, -Ctx, -UID1-C1, -UID2-C2)
+59:%  sharing a name (different re-runs). DR classify_at_time calls remain C-keyed
+62:cs_kernel_divergence(K, Ctx, UID1-C1, UID2-C2) :-
+67:    once(drl_composition:classify_at_time(C1, 0, Ctx, Type1)),
+
+==== drl_purity_network.pl: constraint_neighbors cs_kernel_id exclusion STATIC ====
+105:              \+ (narrative_ontology:cs_kernel_id(C, K), narrative_ontology:cs_kernel_id(Other, K)),
+
+######## W2 — direction of detect_necessity_inheritance vs bucket-1 comparisons ########
+detect_necessity_inheritance: committer->observer (influences edge -> entailment); bucket-1: observer->committer.
+(see W1 line-witnesses above)
+
+######## BC — back-channel (runtime assert) surface ########
+==== cs_ modules asserting runtime facts (expect none) ====
+  (none)
+==== drl_ modules asserting runtime facts (expect only fpn_* caches) ====
+drl_fpn.pl:111:    assertz(fpn_intrinsic(C, IP)),
+drl_fpn.pl:114:    ->  assertz(fpn_type_cache(C, Context, Type))
+drl_fpn.pl:119:    ->  assertz(fpn_neighbors_cache(C, Context, Neighbors))
+drl_fpn.pl:120:    ;   assertz(fpn_neighbors_cache(C, Context, []))
+drl_fpn.pl:123:    assertz(fpn_ep(C, Context, IP)),
+drl_fpn.pl:174:    ->  assertz(fpn_iteration_info(Context, K, MaxDelta, true))
+drl_fpn.pl:176:    ->  assertz(fpn_iteration_info(Context, K, MaxDelta, false))
+drl_fpn.pl:287:    assertz(fpn_ep(C, Context, NewEP)),
+
+######## reverse-read claim — constraint_bridge.pl ########
+==== ANY cs_ committer read in constraint_bridge.pl (expect none) ====
+  (none — compute_veto_actors is observer-internal: dr_type + authored constraint_beneficiary)
+
+######## json_report.pl — both-axis aggregator (mediator-output role) ########
+575:        format(S, '      "cs_axiom_foreclosed": null,~n', []),
+599:        % cs_axiom_foreclosed (UID-keyed; first matching atom)
+600:        (   catch(cs_axiom_engine:cs_axiom_foreclosed(UID, AxAtom), _, fail)
+601:        ->  format(S, '      "cs_axiom_foreclosed": "~w",~n', [AxAtom])
+602:        ;   format(S, '      "cs_axiom_foreclosed": null,~n', [])
+955:    (   catch(drl_core:dr_type(C, Ctx, Type), _, fail)
+1177:    (   catch(drl_core:dr_type(Other, Context, NType), _, fail)
+1669:                catch(cs_axiom_engine:cs_axiom_foreclosed(U, _), _, fail)), FcUs),
+1672:    format(S, '    "cs_axiom_foreclosed_count": ~w,~n', [FcCount]),
+1675:    % K must be bound before calling cs_kernel_divergence to avoid

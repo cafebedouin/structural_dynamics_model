@@ -346,6 +346,7 @@ phrasing; the mediator added to "Open by deferral" with OQ-08/OQ-17 cross-refs.
 
 **Status:** open
 **Priority:** 1
+**Deps:** bundled_with OQ-135 (machine-enforced one-seat invariant; the v8-§8 reading of this layer)
 **Origin:** Tranche 2 cross-axis surface inventory, May 2026.  
 **Files:** `prolog/cs_drift_mismatch.pl`, `prolog/cs_kernel_registry.pl`,
 `prolog/cs_pattern_detection.pl`, `prolog/cs_axiom_engine.pl`,
@@ -384,8 +385,33 @@ behaviorally clean. A named mediator layer with prefix-enforceable invariants
 converts "currently clean" to "mechanically guaranteed clean." Also closes
 OQ-08 (the DR/CS Π-difference annotation lives naturally in the mediator's
 output, not bolted onto `cs_drift_mismatch`). The unbuilt comparison layer is
-also where `classify_at_time` would split (OQ-17) — the keystone-within-the-
+also where `classify_at_time` would split (OQ-40) — the keystone-within-the-
 keystone is the mediator design itself.
+
+**Phase 0a substrate witnesses (2026-06-23, `audits/2026-06-23_oq15_crossaxis_witnesses/`).**
+Read-only census of the cross-axis surface, every find line-witnessed:
+- **Two live target architectures, reconciled by an operator value ruling — not recency.**
+  `docs/design/two_axis_architecture_v7.md` (mediator layer = *relocate* all cross-axis reads into a
+  sole-reader third layer; `influences`→`detect_necessity_inheritance` unblessed) vs.
+  `v8_seat_gauge_orientation_design_spec.md` §8 (*keep* `influences` as the one sanctioned forward
+  bridge, *police in place* with a transitive dataflow taint guard). `bundled_with OQ-135`. "Structural"
+  = relocated (v7) vs. mechanically-policed (v8) is the operator's named-reading call (Phase 2).
+- **Call-site form is MIXED:** `cs_drift_mismatch/2` reaches observer machinery *transitively* (via
+  `cs_is_metric_stable/1`→`network_dynamics`); `detect_necessity_inheritance`, `cs_kernel_divergence`,
+  `compare_kernel_readings`, `constraint_neighbors/3`, and the `json_report` aggregators are static. ⇒
+  grep/import checks are blind under either architecture; the **taint guard is load-bearing**.
+- **`detect_necessity_inheritance` is the unique committer→observer dataflow** (`influences` edge →
+  entailment); the bucket-1 comparisons run observer→committer. v8's directional invariant (ii) ⇒ its
+  single-bridge whitelist is a principle, not an arbitrary exception (informs but does not decide Phase 2).
+- **`constraint_bridge.pl` is NOT a cross-axis surface** — `compute_veto_actors` reads `dr_type` +
+  authored `constraint_beneficiary` (a substrate/observer-input field), **no `cs_` read**. The earlier
+  "reverse DR→CS read" hypothesis is *false*; it is correctly absent from `Files:` and must not enter the
+  guard whitelist. (The "two DR→CS reads" above = `detect_necessity_inheritance` + `constraint_neighbors/3`.)
+- **Zero back-channel holds by inspection only:** no `cs_` module asserts any runtime fact; the only
+  runtime asserts are observer-internal `fpn_*` caches (drl_fpn.pl), read by no CS predicate. The
+  plant-and-flag positive control is deferred into the Phase 1 guard's acceptance test (no dataflow probe
+  exists yet). The "(OQ-17)" pointer above was a misattribution → repointed to **OQ-40** (the
+  scalar-vs-temporal `classify_at_time` split; OQ-17 is the disposed testsets_3000 quarantine).
 
 ---
 
