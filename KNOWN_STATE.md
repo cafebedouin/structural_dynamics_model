@@ -45,6 +45,40 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-23 — OQ-10 RESOLVED: reading-robustness as first-class report output (+ OQ-176 spawned)
+**Files:** prolog/cs_kernel_registry.pl, prolog/json_report.pl, python/enhanced_report.py, prolog/tests/test_cs_kernel_registry.pl, ISSUES.md
+**Tier:** landed
+
+Added the summary/verdict layer OQ-10 needed. The comparison ENGINE already fired live
+(`cs_kernel_divergence/4` + `write_kernel_comparison_entry` + `build_kernel_reading_section`);
+the "no predicate/script/report section performs this comparison" premise was stale. New:
+- `compare_kernel_readings/3` (cs_kernel_registry.pl, exported): per-context
+  `agree(Type)`/`diverge(TypeMap)` profile over the SAME `classify_at_time/4` evaluations the
+  divergence engine walks — a JOIN, not new compute (it makes FEWER classify_at_time calls than
+  cs_kernel_divergence, which re-evals per pair). Invariant: Σ per-pair DivergeN ==
+  #cs_kernel_divergence solutions (166==166 on the live twin; unit test
+  `compare_join_consistency_with_divergence_engine`, corpus-independent).
+- `pipeline_output.json` `validation.cs_kernel_comparison[].reading_robustness` object (NEW
+  fields a consumer can now read): `total_contexts`, `robust_context_count`,
+  `specific_context_count`, `h1_band_robust` (true/false/null — null = fail-closed on missing
+  H¹), `per_reading_h1[]`, `pairwise_jaccard[]`. Jaccard is CONTEXT-ALIGNED over presheaf section
+  graphs `AgreeN/(2*NCtx-AgreeN)` (global-vocabulary Jaccard rejected — scores ~1 on type
+  permutations).
+- `enhanced_report.build_kernel_reading_section` renders the robustness summary + Jaccard table.
+
+Witness: `classify_corpus('testsets_haiku', …)` (full-pipeline load route) → twin
+`end_of_life_decision_authority`, 156 ctx → 73 robust / 83 specific; H¹ all band 5; Jaccard
+0.63/0.53/0.31. Two-sided control passed (known-divergence ctx→diverge; agree ctx→0 divergence
+solutions). H¹ instance-blindness UNCHANGED (per-reading H¹ is a join: each reading is its own
+`per_constraint` entry with its own `h1_band`). Commit `d2cb9bb7`.
+
+OQ-176 spawned: `cohomological_obstruction/3` returns `H1=0` for an ABSENT constraint
+(`orbit_vector/2` yields a uniform all-`unknown` vector) — Pattern-5 measured-flat-vs-didn't-look.
+Latent for any consumer reading H¹=0 on an unvalidated id as "measured flat"; does not affect OQ-10
+(readings always real). Engine-behavior change to a 6+-consumer core predicate → logged, not patched.
+
+---
+
 ## 2026-06-23 — OQ-112 RESOLVED (close-out): arc is latent-hardening, structurally latent across all three live legs
 **Files:** ISSUES.md, audits/2026-06-23_oq112_closeout/
 **Tier:** landed
