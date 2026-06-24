@@ -499,6 +499,28 @@ also assert a `constraint_claim/2` (see `tests/test_forecloses_fpn_injection.pl`
 setup). This is an existence test, not corpus membership — engine demos and
 probsets pass. Regression suite: `tests/test_phantom_neighbor_filter.pl`.
 
+### Cross-axis one-seat invariant — machine-enforced (OQ-15, 2026-06-24)
+
+The two axes — DR/observer (`drl_*`, `dr_type`, `constraint_metric`) and CS/committer
+(`cs_*`) — have a **machine-enforced boundary**: *no committer field reaches observer
+computation except as the entailment-typed payload on the single forward bridge
+`influences` → `detect_necessity_inheritance`.* The guard `prolog/check_axis_boundary.pl`
+walks the loaded call graph and emits each committer→observer edge; `python/check_axis_boundary.py`
+diffs them against `prolog/axis_boundary_allowlist.txt` (fail-closed on any un-allowlisted
+edge). It runs in **both** `scripts/gate.sh` (`--selftest`) and `python/run_pipeline.py`
+(beside the load-warning gate). **If you add a read of a `cs_` predicate from an
+observer-side module, the gate goes RED** — that is by design.
+- A new **tooling** edge (comparison/validation, not feeding an observer verdict) is
+  allowlistable with its role tag.
+- A new **verdict** edge (a genuine *second* committer→observer bridge) is the **OQ-15
+  synthesis trigger** — the cardinality convention is breaking, so re-open the OQ-15
+  Phase-2 decision (relocate to a v7 named mediator) before allowlisting. Do not just
+  add it. (Single-bridge is principled in KIND — `influences` is the entailment carrier;
+  `forecloses`/`coexists_with` are committer-modal and never cross — but "exactly one"
+  in CARDINALITY is convention-not-theorem, which is why the guard polices it.)
+- The guard is corpus-independent (it walks code, not data; live/haiku/flash all → the
+  same 8 edges). Provenance: `audits/2026-06-23_oq15_crossaxis_witnesses/`, OQ-15/OQ-135.
+
 ---
 
 ## 5. Testing Requirements
