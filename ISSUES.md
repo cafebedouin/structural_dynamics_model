@@ -125,39 +125,38 @@ not a resolution.
 
 **Ω-type:** Ω_C (design choice — schema-expressiveness cut: add a 1:N predicate or accept 1:1).
 
-**Status:** open
+**Status:** resolved — (2026-06-23, design-cut ruling)
 **Priority:** 1
 **Origin:** `docs/unknown_reading_review.md` audit; `docs/altar-to-the-unknown-reading.md`;
 `agent/analysis/essays/cyclopean_point_epistemic_synthesis.md` [path corrected — item
-originally cited docs/; file is in agent/analysis/essays/].  
-**Files:** `prolog/testsets/disparity_as_depth_signal.pl`,
-`prolog/testsets/cyclopean_point_as_manufactured_center.pl`,
-`prolog/testsets/power_asymmetry_in_legibility.pl`;
-`prolog/testsets/autonomy_reading.pl` (template)
+originally cited docs/; file is in agent/analysis/essays/].
+**Files (archive-only — corrected 2026-06-23):**
+`prolog/archives/datasets/kernel_test/disparity_as_depth_signal.pl`,
+`prolog/archives/datasets/kernel_test/cyclopean_point_as_manufactured_center.pl`,
+`prolog/archives/datasets/kernel_test/power_asymmetry_in_legibility.pl`;
+`prolog/archives/datasets/kernel_test/autonomy_reading.pl` (template). All four are
+kernel_v1-regime and were dropped from the live `prolog/testsets/` by the 2026-06-05 reset
+(witness: `ls prolog/testsets/<each>` → no such file; `git ls-files | grep` → only
+`archives/` paths). The original `prolog/testsets/...` `Files:` paths were stale.
 
-**Specific question:** How should the three cyclopean-point constraints be encoded as
-CS facts? They are ONE reading (the analytical-observer reading per the altar essay)
-of one kernel, expressed through three constraints — not three sibling readings as the
-autonomy_reading template assumes. The schema currently encodes 1:1
-reading-to-constraint. The cyclopean-point case is 1:N (one reading, N=3 constraints).
+**Resolution (schema cut — defer 1:N, accept 1:1):** Decline the 1:N reading-object
+predicate (`cs_reading_covers/2` and `cs_reading_enumeration_status/2` — both ABSENT,
+`grep -rn` empty; positive control: `cs_reading_relation` found in 5 files, so the
+absence is real). The schema stays 1:1. Grounded on **reversibility + N=1 + asymmetry**:
+a 1:N predicate justified by a single archived case is a predicate with exactly one user
+woven through four surfaces (ontology decls, generator emission, registry validation,
+report rendering) that cannot be cheaply un-shipped; the cost is asymmetric — 1:1→1:N is a
+clean promotion when a *second* case appears, but un-weaving schema is not. The existing
+`cs_kernel_id/2` + `cs_reading_relation/3` apparatus already expresses "N constraints of
+one kernel" as sibling readings, adequate for any case the live (singleton) corpus carries.
+The deferred 1:N capability is logged as a **trigger** in `docs/design/design_gaps.md`
+(promote to a gap when a SECOND kernel needs it).
 
-**Evidence so far:** `docs/altar-to-the-unknown-reading.md` §"The diptych" explicitly
-states "the engine evaluated one kernel under one reading" and names the
-analytical-observer reading. The autonomy_reading template has no predicate for "this
-constraint is part of reading X along with these other constraints." The UUID surrogate
-identity work (Phase A+B, May 2026) re-keyed readings to UUID surrogates but did not
-add a 1:N predicate.
-
-**Related schema gaps:** `cs_reading_enumeration_status(kernel, closed|open)` — the
-cyclopean-point kernel positions its readings as open by the kernel's own content; the
-autonomy template assumes closed enumeration.
-
-**What resolution changes:** Enables authoring CS facts for the cyclopean-point
-constraints without flattening them into the autonomy template's structure. Required
-before re-running c-orchestrator.py on those testsets in a way that produces honest
-kernel-reading sections. The 1:N predicate (`cs_reading_covers/2` or similar) would
-also apply to any future kernel where a single reading produces multiple constraint
-stories.
+**Left open by design (NOT adjudicated):** the one-reading-vs-three *ontology*. The two
+source docs contradict — `docs/altar-to-the-unknown-reading.md` reads the three constraints
+as ONE analytical-observer reading (→ would want 1:N); `docs/unknown_reading_review.md`
+Gap A reads them as THREE sibling readings (→ 1:1, already expressible). This closure rules
+only the *schema* cut; it does not pick a side on the ontology, which stays explicitly open.
 
 ---
 
@@ -253,7 +252,8 @@ The shift was corpus-snapshot drift (original range computed on an earlier snaps
 
 **Status:** open
 **Priority:** 1
-**Deps:** blocked_on OQ-04
+**Deps (dropped on close):** was blocked_on OQ-04; discharged 2026-06-23 — OQ-04 ruled
+1:1, which is exactly what OQ-10's comparison operates on (`cs_reading_relation` siblings).
 **Origin:** User-identified capability gap, May 2026; architectural context in
 `docs/unknown_reading_review.md` §4 and §5.  
 **Files:** `prolog/testsets/autonomy_reading.pl` (template with cs_reading_relation);
@@ -279,9 +279,12 @@ The review document (`docs/unknown_reading_review.md` §4) notes this explicitly
 a single run." It is not an architectural impossibility — it requires authoring
 multiple readings and a comparison tool.
 
-**Precondition:** Gap A (OQ-04) must be closed first — the
-cyclopean-point testsets need `cs_kernel_id` and `cs_reading_relation` populated before
-the comparison tool has a real multi-reading kernel to operate on.
+**Precondition:** OQ-04 is closed (1:1 ruling, 2026-06-23) — OQ-10 does **not** wait on a
+1:N schema. Its remaining precondition is a loadable kernel with ≥2 `cs_reading_relation`-
+linked readings, available today in `prolog/archives/datasets/kernel_test/`:
+`end_of_life_decision_authority` carries `autonomy_reading` + `sanctity_reading` +
+`vulnerability_protection_reading`, linked via `cs_reading_relation` (target files on disk,
+edges non-dangling), loadable via a `corpus_path` overlay (CLAUDE.md → Corpus Loading).
 
 **What resolution changes:** Reading robustness becomes a first-class output. A finding
 currently reported as "the engine classifies X as snare (analytical)" becomes "X is

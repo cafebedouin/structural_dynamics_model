@@ -929,3 +929,29 @@ data the threshold layer already computes and ships. **Hardening already landed 
 `unknown` metric sentinel (introduced by the same commit at `get_constraint_metrics/4`) fails
 closed instead of throwing `abs(unknown - Thresh)` — so a future wire does not inherit a crash.
 Named here 2026-06-23.
+
+---
+
+## Deferred triggers (not yet gaps)
+
+A trigger is a capability that is **not** committed future work — it has too few real users to
+justify a gap entry, which would read as planned work. It is recorded here so that if the
+triggering condition is met, a cold read finds the prior reasoning rather than re-deriving it.
+Promote a trigger to a full GAP-NN only when its condition fires.
+
+### TRIGGER — 1:N reading-object layer (one reading covers N constraints)
+
+**Deferred per OQ-04 (2026-06-23, design-cut ruling).** A predicate (`cs_reading_covers/2` and
+`cs_reading_enumeration_status/2`) that would let a single reading own N constraints, instead of
+the current 1:1 reading-to-constraint schema. **Declined, not gapped:** currently N=1 — the only
+case is the archived cyclopean-point kernel (`prolog/archives/datasets/kernel_test/`), dropped
+from the live corpus by the 2026-06-05 reset. A 1:N predicate justified by one archived case would
+be woven through four surfaces (ontology decls, generator emission, registry validation, report
+rendering) that cannot be cheaply un-shipped; 1:1→1:N is a clean promotion when a *second* case
+appears, but un-weaving schema is not. The existing `cs_kernel_id/2` + `cs_reading_relation/3`
+apparatus already expresses "N constraints of one kernel" as sibling readings.
+
+**Promotion condition:** a SECOND kernel (live corpus, not archive) genuinely needs one reading to
+own multiple constraints. When that fires, promote to a GAP-NN. Until then this stays a trigger.
+The one-reading-vs-three *ontology* question (whether the cyclopean constraints are one reading or
+three) is left open by OQ-04 and is orthogonal to this schema deferral.

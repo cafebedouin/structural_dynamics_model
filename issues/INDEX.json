@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "a0934726e09fdb513866a1939b5e58e36f2ac05e",
+    "store_version": "89252c109718bea10211723a9ba0b546ca29669e",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-23T14:41:06"
+    "generated_at": "2026-06-23T21:46:25"
   },
-  "issues_sha": "7764f435785ede7a7832f644c6203e2feff30b8000e0e7693be3645c75158042",
+  "issues_sha": "37423bf68df74a3421fe70307018184ed8c908ba109ef47bd8c534100dbfedf3",
   "n_entries": 175,
   "active_token_set": [
     "investigating",
@@ -12,10 +12,10 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 82,
+    "resolved": 83,
     "mitigated": 9,
     "partial": 7,
-    "open": 71,
+    "open": 70,
     "disposed": 3,
     "future": 3
   },
@@ -34,15 +34,6 @@
       ]
     },
     {
-      "id": "OQ-04",
-      "status": "open",
-      "priority": 1,
-      "summary": "Cyclopean-point kernel: 1:N reading structure not encodable in current schema",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": []
-    },
-    {
       "id": "OQ-06",
       "status": "open",
       "priority": 1,
@@ -56,9 +47,7 @@
       "status": "open",
       "priority": 1,
       "summary": "Cross-reading comparison: no tooling to compare engine output across readings of the same kernel",
-      "deps": [
-        "blocked_on OQ-04"
-      ],
+      "deps": [],
       "cross_refs": [],
       "mentioned_in": [
         "OQ-04"
@@ -1021,6 +1010,15 @@
       "status": "mitigated",
       "priority": "–",
       "summary": "write_entries choice-point accumulation: cut hides symptom",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": []
+    },
+    {
+      "id": "OQ-04",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Cyclopean-point kernel: 1:N reading structure not encodable in current schema",
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
