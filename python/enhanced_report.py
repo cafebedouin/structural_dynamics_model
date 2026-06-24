@@ -2536,6 +2536,31 @@ def build_kernel_reading_section(constraint_id, pipeline_data):
             f"[{trif.get('scope')}; obstruction={trif.get('obstruction_status')}, "
             f"{trif.get('diagnostic')}]"
         )
+    # OQ-10: reading-robustness summary — per-context robust-vs-specific verdict,
+    # H1-across-readings join, and the per-pair context-aligned Jaccard. Null
+    # (singleton or unavailable) ⇒ no block. h1_band_robust None ⇒ "unknown"
+    # (fail-closed on a missing H1, not a defaulted verdict).
+    rr = kernel_entry.get("reading_robustness")
+    if isinstance(rr, dict):
+        lines.append(
+            f"  Reading robustness: {rr.get('robust_context_count')}/{rr.get('total_contexts')} "
+            f"contexts robust (all readings agree) | "
+            f"{rr.get('specific_context_count')} reading-specific"
+        )
+        h1r = rr.get("h1_band_robust")
+        h1label = {True: "robust", False: "reading-specific", None: "unknown (missing H1)"}.get(
+            h1r, str(h1r))
+        h1vals = ", ".join(
+            f"{h['reading_id'].split('__')[-1]}={h['h1_band']}"
+            for h in rr.get("per_reading_h1", []))
+        lines.append(f"  H1 across readings: {h1label} [{h1vals}]")
+        for pj in rr.get("pairwise_jaccard", []):
+            a = pj["reading_a"].split("__")[-1]
+            b = pj["reading_b"].split("__")[-1]
+            lines.append(
+                f"    Jaccard({a}, {b}) = {pj['jaccard']:.3f}  "
+                f"[agree {pj['agree_contexts']}, diverge {pj['diverge_contexts']}]")
+
     any_mismatch = False
     for r in kernel_entry["readings"]:
         rid = r["reading_id"]

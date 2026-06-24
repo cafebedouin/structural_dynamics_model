@@ -1,13 +1,18 @@
 % ============================================================================
 % TEST: cs_kernel_registry.pl
 % ============================================================================
-% Run from prolog/ directory:
+% Run from prolog/ directory. NOTE: the abolition/retributive/deterrence triplet
+% was removed from the live corpus in the 2026-06-05 reset; it survives in archive
+% snapshots, so this test loads the triplet from one of them:
 %   swipl -l stack.pl \
-%         -l testsets/abolition_reading.pl \
-%         -l testsets/retributive_reading.pl \
-%         -l testsets/deterrence_reading.pl \
-%         -l test_cs_kernel_registry.pl \
+%         -l archives/datasets/kernel_test/abolition_reading.pl \
+%         -l archives/datasets/kernel_test/retributive_reading.pl \
+%         -l archives/datasets/kernel_test/deterrence_reading.pl \
+%         -l tests/test_cs_kernel_registry.pl \
 %         -g "run_cs_kernel_tests, halt." -t "halt(1)"
+% (The divergence_fires_abolition_deterrence case is data-fragile across snapshots —
+% the pair happens to agree everywhere in some draws; the structural compare_*
+% invariants below are corpus-independent.)
 % ============================================================================
 
 :- use_module(cs_kernel_registry).
@@ -131,6 +136,41 @@ cs_kernel_test("agreement_calls_succeed_at_observed_context",
         drl_composition:classify_at_time(deterrence_reading,  0, AgreementCtx, T1),
         drl_composition:classify_at_time(retributive_reading, 0, AgreementCtx, T2),
         T1 == T2
+    ),
+    success).
+
+/* ================================================================
+   READING-ROBUSTNESS TESTS (OQ-10) — compare_kernel_readings/3.
+   Corpus-INDEPENDENT structural invariants (no fixed counts, so they
+   do not go data-fragile across snapshots like the divergence-fire tests).
+   ================================================================ */
+
+% Profile covers every context of the product site (one verdict per context).
+cs_kernel_test("compare_profile_covers_site_contexts",
+    (   compare_kernel_readings(state_execution_authority, Profile, _),
+        constraint_indexing:site_contexts_product(All),
+        length(Profile, N), length(All, N)
+    ),
+    success).
+
+% Every profile entry is a well-formed agree(_) or diverge(_) verdict (no third token).
+cs_kernel_test("compare_profile_verdicts_wellformed",
+    (   compare_kernel_readings(state_execution_authority, Profile, _),
+        forall(member(_-V, Profile), (V = agree(_) ; V = diverge(_)))
+    ),
+    success).
+
+% THE JOIN-CONSISTENCY INVARIANT: compare_kernel_readings/3 generalizes
+% cs_kernel_divergence/4 without losing or inventing a divergence — the sum of
+% per-pair DivergeN must equal the number of cs_kernel_divergence/4 solutions.
+% This is the positive control that the agree/diverge split is faithful to the
+% divergence engine (build_discipline: every probe needs a positive control).
+cs_kernel_test("compare_join_consistency_with_divergence_engine",
+    (   compare_kernel_readings(state_execution_authority, _, PairStats),
+        aggregate_all(sum(D), member(_-stats(_,_,D), PairStats), SumDiv),
+        aggregate_all(count,
+            cs_kernel_divergence(state_execution_authority, _, _, _), NEngine),
+        SumDiv =:= NEngine
     ),
     success).
 

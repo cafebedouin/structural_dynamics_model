@@ -23,6 +23,7 @@
     cs_readings_for_kernel/2,
     cs_kernel_coverage/2,
     cs_kernel_divergence/4,
+    compare_kernel_readings/3,
     cs_kernel_obstruction/4,
     cs_kernel_obstruction_status/2,
     cs_kernel_obstruction_report/0,
@@ -66,6 +67,66 @@ cs_kernel_divergence(K, Ctx, UID1-C1, UID2-C2) :-
     once(drl_composition:classify_at_time(C1, 0, Ctx, Type1)),
     once(drl_composition:classify_at_time(C2, 0, Ctx, Type2)),
     Type1 \= Type2.
+
+%% compare_kernel_readings(+K, -Profile, -PairStats)
+%  GENERALIZES cs_kernel_divergence/4 (OQ-10 reading-robustness): from "emit only
+%  diverging (pair, context) tuples" to a FULL per-context agreement profile.
+%
+%  JOIN, NOT NEW COMPUTE. It reads the SAME classify_at_time/4 evaluations the
+%  divergence engine walks — identical readings, identical site_contexts_product
+%  contexts, identical Time=0 — and merely records the AGREEMENTS the divergence
+%  engine discards. Each (reading, context) type is evaluated ONCE here (then
+%  pairwise agreement is derived combinatorially), so this makes FEWER
+%  classify_at_time calls than cs_kernel_divergence/4 (which re-evaluates per pair).
+%  If this ever reaches a context outside site_contexts_product or a reading outside
+%  cs_readings_for_kernel/2, that is the join->compute line crossing — it does not.
+%
+%  Profile  = list of Ctx-Verdict, one per context:
+%    agree(Type)      — every reading classifies Type at Ctx (reading-ROBUST finding)
+%    diverge(TypeMap) — readings differ; TypeMap = list of (UID-C)-Type (reading-SPECIFIC)
+%  PairStats = list of pair(UID1-C1, UID2-C2)-stats(Jaccard, AgreeN, DivergeN):
+%    context-aligned Jaccard over the presheaf SECTION GRAPH —
+%    Jaccard = AgreeN / (2*NCtx - AgreeN). (Two readings with an identical global
+%    type vocabulary but disagreeing at every context score 0, not ~1 — the global-
+%    vocabulary Jaccard would mislabel that as robust. OQ-10 ruling 2026-06-23.)
+%    INTERNAL CONSISTENCY: sum of DivergeN over PairStats == count of
+%    cs_kernel_divergence/4 solutions for K (both are pairwise context divergences).
+compare_kernel_readings(K, Profile, PairStats) :-
+    cs_readings_for_kernel(K, Readings),
+    constraint_indexing:site_contexts_product(AllContexts),
+    findall(Ctx-TypeMap,
+        ( member(Ctx, AllContexts),
+          findall(UIDC-Type,
+              ( member(UIDC, Readings), UIDC = _UID-C,
+                once(drl_composition:classify_at_time(C, 0, Ctx, Type)) ),
+              TypeMap) ),
+        CtxTypeMaps),
+    findall(Ctx-Verdict,
+        ( member(Ctx-TypeMap, CtxTypeMaps), ctx_reading_verdict(TypeMap, Verdict) ),
+        Profile),
+    length(CtxTypeMaps, NCtx),
+    findall(pair(R1, R2)-stats(J, AgreeN, DivergeN),
+        ( member(R1, Readings), member(R2, Readings), R1 @< R2,
+          pair_reading_agreement(R1, R2, CtxTypeMaps, NCtx, AgreeN, DivergeN, J) ),
+        PairStats).
+
+%% ctx_reading_verdict(+TypeMap, -Verdict)
+%  agree(Type) iff every reading shares one Type at this context; else diverge(TypeMap).
+ctx_reading_verdict(TypeMap, agree(Type)) :-
+    TypeMap = [_-Type|_],
+    forall(member(_-T, TypeMap), T == Type), !.
+ctx_reading_verdict(TypeMap, diverge(TypeMap)).
+
+%% pair_reading_agreement(+R1, +R2, +CtxTypeMaps, +NCtx, -AgreeN, -DivergeN, -J)
+pair_reading_agreement(R1, R2, CtxTypeMaps, NCtx, AgreeN, DivergeN, J) :-
+    findall(eq,
+        ( member(_-TypeMap, CtxTypeMaps),
+          memberchk(R1-T1, TypeMap), memberchk(R2-T2, TypeMap), T1 == T2 ),
+        Eqs),
+    length(Eqs, AgreeN),
+    DivergeN is NCtx - AgreeN,
+    Denom is 2*NCtx - AgreeN,
+    ( Denom =:= 0 -> J = 1.0 ; J is AgreeN / Denom ).
 
 % ============================================================================
 % READING-AXIS STRUCTURAL OBSTRUCTION (committer-axis analog of observer H¹)

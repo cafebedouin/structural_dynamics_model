@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "8cc3f6359e70dc9629829831963d2b131d896a17",
+    "store_version": "20fab78279cd4312e4b6e70a2255cbba611309ea",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-23T22:28:28"
+    "generated_at": "2026-06-23T23:04:35"
   },
-  "issues_sha": "f56017469e7fb16b2c40a45dcabe1afe1ff2a39af7a3422d9ae0a606bf7164eb",
-  "n_entries": 175,
+  "issues_sha": "005cbcde05b7d931c0d8725f2c68356185af5a7759c161ceec69ab3411ffb360",
+  "n_entries": 176,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 83,
+    "resolved": 84,
     "mitigated": 9,
     "partial": 7,
     "open": 70,
@@ -41,17 +41,6 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
-    },
-    {
-      "id": "OQ-10",
-      "status": "open",
-      "priority": 1,
-      "summary": "Cross-reading comparison: no tooling to compare engine output across readings of the same kernel",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-04"
-      ]
     },
     {
       "id": "OQ-15",
@@ -991,6 +980,17 @@
       "mentioned_in": [
         "OQ-20"
       ]
+    },
+    {
+      "id": "OQ-176",
+      "status": "open",
+      "priority": 4,
+      "summary": "`cohomological_obstruction/3` returns H¹=0 for an absent constraint (Pattern-5 measured-flat vs didn't-look) (Ω_E)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-10"
+      ]
     }
   ],
   "archive": [
@@ -1063,6 +1063,17 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
+    },
+    {
+      "id": "OQ-10",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Cross-reading comparison: no tooling to compare engine output across readings of the same kernel",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-176"
+      ]
     },
     {
       "id": "OQ-11",

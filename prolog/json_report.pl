@@ -1957,6 +1957,11 @@ write_kernel_comparison_entry(S, K, Comma) :-
         format(S, '        },~n', [])
     ;   format(S, '        "reading_trifurcation": null,~n', [])
     ),
+    % OQ-10: reading-robustness join (robust-vs-specific verdict + context-aligned
+    % Jaccard + per-reading H1). Generalizes diverging_pair_count (a collapsed count)
+    % to per-context agree/diverge + the H1-across-readings join. Headlines the JOIN
+    % (robust/specific counts, h1_band_robust), not a raw input.
+    write_reading_robustness(S, K),
     format(S, '        "readings": [~n', []),
     write_reading_comparison_list(S, Readings),
     format(S, '        ]~n', []),
@@ -2005,6 +2010,82 @@ write_reading_comparison_entry(S, UID-C, Comma) :-
     ;   format(S, '            "cs_drift_mismatch": false~n', [])
     ),
     (Comma == true -> format(S, '          },~n', []) ; format(S, '          }~n', [])).
+
+%% write_reading_robustness(+Stream, +K)  (OQ-10)
+%  Emits the reading_robustness object: per-context robust-vs-specific counts (from
+%  compare_kernel_readings/3 — a JOIN over the same classify_at_time evaluations the
+%  divergence engine walks), the per-pair context-aligned Jaccard, and the per-reading
+%  H1 join with a headline h1_band_robust verdict. Fail-closed on absent H1
+%  (build_discipline Pattern 5): any reading with a null H1 -> h1_band_robust=null
+%  (cannot judge), never a defaulted true/false.
+write_reading_robustness(S, K) :-
+    (   catch(cs_kernel_registry:compare_kernel_readings(K, Profile, PairStats), _, fail)
+    ->  length(Profile, NCtx),
+        aggregate_all(count, member(_-agree(_), Profile), RobustN),
+        SpecificN is NCtx - RobustN,
+        cs_kernel_registry:cs_readings_for_kernel(K, Readings),
+        reading_h1_list(Readings, H1List, H1Robust),
+        format(S, '        "reading_robustness": {~n', []),
+        format(S, '          "total_contexts": ~w,~n', [NCtx]),
+        format(S, '          "robust_context_count": ~w,~n', [RobustN]),
+        format(S, '          "specific_context_count": ~w,~n', [SpecificN]),
+        (   H1Robust == unknown
+        ->  format(S, '          "h1_band_robust": null,~n', [])
+        ;   format(S, '          "h1_band_robust": ~w,~n', [H1Robust])
+        ),
+        format(S, '          "per_reading_h1": [', []),
+        write_h1_pairs(S, H1List),
+        format(S, '],~n', []),
+        format(S, '          "pairwise_jaccard": [', []),
+        write_jaccard_pairs(S, PairStats),
+        format(S, ']~n', []),
+        format(S, '        },~n', [])
+    ;   format(S, '        "reading_robustness": null,~n', [])
+    ).
+
+%% reading_h1_list(+Readings, -H1List, -H1Robust)
+%  H1List = list of C-H1 (H1 = null when cohomology is unavailable for that reading).
+%  H1Robust: true (all present and equal) | false (all present, differ) |
+%  unknown (any reading lacks H1 — fail-closed, cannot judge).
+reading_h1_list(Readings, H1List, H1Robust) :-
+    findall(C-H1,
+        (   member(_UID-C, Readings),
+            (   catch(grothendieck_cohomology:cohomological_obstruction(C, _, H1c), _, fail)
+            ->  H1 = H1c
+            ;   H1 = null
+            )
+        ),
+        H1List),
+    (   member(_-null, H1List)
+    ->  H1Robust = unknown
+    ;   H1List = [_-First|_],
+        (   forall(member(_-H, H1List), H == First)
+        ->  H1Robust = true
+        ;   H1Robust = false
+        )
+    ).
+
+%% write_h1_pairs(+Stream, +H1List)  — [{"reading_id":C,"h1_band":H1}, ...]
+write_h1_pairs(_, []).
+write_h1_pairs(S, [C-H1]) :-
+    !, write_h1_pair(S, C, H1).
+write_h1_pairs(S, [C-H1|Rest]) :-
+    write_h1_pair(S, C, H1), format(S, ', ', []), write_h1_pairs(S, Rest).
+write_h1_pair(S, C, null) :-
+    !, format(S, '{"reading_id": "~w", "h1_band": null}', [C]).
+write_h1_pair(S, C, H1) :-
+    format(S, '{"reading_id": "~w", "h1_band": ~w}', [C, H1]).
+
+%% write_jaccard_pairs(+Stream, +PairStats)
+%  PairStats entries: pair(UID1-C1, UID2-C2)-stats(Jaccard, AgreeN, DivergeN).
+write_jaccard_pairs(_, []).
+write_jaccard_pairs(S, [P]) :-
+    !, write_jaccard_pair(S, P).
+write_jaccard_pairs(S, [P|Rest]) :-
+    write_jaccard_pair(S, P), format(S, ', ', []), write_jaccard_pairs(S, Rest).
+write_jaccard_pair(S, pair(_U1-C1, _U2-C2)-stats(J, AgreeN, DivergeN)) :-
+    format(S, '{"reading_a": "~w", "reading_b": "~w", "jaccard": ~6f, "agree_contexts": ~w, "diverge_contexts": ~w}',
+           [C1, C2, J, AgreeN, DivergeN]).
 
 /* ================================================================
    TIER 3 — JSON PRIMITIVES

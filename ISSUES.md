@@ -250,69 +250,45 @@ The shift was corpus-snapshot drift (original range computed on an earlier snaps
 
 ## OQ-10 — Cross-reading comparison: no tooling to compare engine output across readings of the same kernel
 
-**Status:** open
+**Status:** resolved — (2026-06-23) reading-robustness is now a first-class report output on
+any ≥2-reading kernel; demonstrated on the live twin `end_of_life_decision_authority`.
 **Priority:** 1
-**Deps (dropped on close):** was blocked_on OQ-04; discharged 2026-06-23 — OQ-04 ruled
-1:1, which is exactly what OQ-10's comparison operates on (`cs_reading_relation` siblings).
-**Origin:** User-identified capability gap, May 2026; architectural context in
-`docs/unknown_reading_review.md` §4 and §5.  
-**Files:** `prolog/testsets/autonomy_reading.pl` (template with cs_reading_relation);
-`prolog/cs_kernel_registry.pl`; `python/enhanced_report.py`
+**Origin:** User-identified capability gap, May 2026; `docs/unknown_reading_review.md` §4–5.
+**Files:** `prolog/cs_kernel_registry.pl` (`compare_kernel_readings/3`), `prolog/json_report.pl`
+(`reading_robustness` object), `python/enhanced_report.py` (`build_kernel_reading_section`),
+`prolog/tests/test_cs_kernel_registry.pl`.
 
-**Specific question:** Given two or more authored readings of the same kernel (linked via
-`cs_reading_relation/3`), can the engine run both and report which findings are
-reading-robust (same classification, H¹, CS verdicts across readings) vs reading-specific
-(only appears in one reading)? Currently there is no predicate, script, or report
-section that performs this comparison.
+**Resolution.** The "no predicate, script, or report section performs this comparison" premise
+was STALE. The comparison *engine* already fired live: `cs_kernel_divergence/4` runs
+`classify_at_time/4` across the 156 product-site contexts per reading pair, and
+`write_kernel_comparison_entry` / `build_kernel_reading_section` already rendered a per-kernel
+comparison block (reading_count, diverging_pair_count, axiom conflicts, trifurcation verdict,
+per-reading CS metadata). Step-1 evidence pass (full-pipeline load via
+`classify_corpus('testsets_haiku',…)`): the engine yields **166 context-level divergences** on
+this kernel, matching the direct probe; each of the 3 readings carries its **own** `h1_band` in
+`per_constraint`, so H¹-across-readings is a data join, not an engine change (Step-1(b)
+falsifier did not fire; H¹ instance-blindness UNCHANGED).
 
-**Evidence so far:** The infrastructure required for comparison exists:
-- `cs_kernel_id/2` identifies which kernel a reading belongs to
-- `cs_reading_relation/3` links readings of the same kernel (`coexists_with`, etc.)
-- `dr_type/3` can be called on any constraint at any context
-- The product-site export already runs 156 contexts per constraint
+What was MISSING — and what this change ADDED — is the summary/verdict layer:
+- `compare_kernel_readings/3` (generalizes `cs_kernel_divergence/4`, kept as-is): a per-context
+  `agree(Type)` / `diverge(TypeMap)` profile over the SAME `classify_at_time/4` evaluations
+  (join, not new compute) + per-pair stats. Positive control (also a corpus-independent unit
+  test `compare_join_consistency_with_divergence_engine`): Σ per-pair DivergeN ==
+  #`cs_kernel_divergence` solutions — witnessed 166==166 on the twin, and again on the archived
+  `state_execution_authority` triplet.
+- JSON `reading_robustness` object: robust/specific context counts; per-pair **context-aligned
+  Jaccard** `AgreeN/(2·NCtx−AgreeN)` over presheaf section graphs (global-vocabulary Jaccard was
+  rejected — it scores ~1 when two readings merely permute which type lands where, mislabeling
+  divergence as robustness); per-reading H¹ + headline `h1_band_robust` (fail-closed to `null`
+  on a missing H¹).
+- `enhanced_report.py`: robustness summary + Jaccard table in the existing kernel section.
 
-What does not exist: a tool that (1) discovers all readings of a kernel via
-`cs_reading_relation`, (2) runs the engine on each, (3) computes agreement/disagreement
-per context and per finding type, (4) reports which findings are reading-invariant.
-The review document (`docs/unknown_reading_review.md` §4) notes this explicitly:
-"the engine provides the infrastructure for this comparison but cannot perform it in
-a single run." It is not an architectural impossibility — it requires authoring
-multiple readings and a comparison tool.
-
-**Precondition:** OQ-04 is closed (1:1 ruling, 2026-06-23) — OQ-10 does **not** wait on a
-1:N schema. OQ-10's own sketch (below) discovers readings via `cs_reading_relation` and runs
-`dr_type/3` on each — it consumes the 1:1 sibling structure the ruling keeps, never a
-covers-predicate; so it is satisfiable under 1:1 (kill condition retired 2026-06-23). Its
-remaining precondition — a loadable kernel with ≥2 `cs_reading_relation`-linked readings —
-is satisfied **on a live leg**: `end_of_life_decision_authority` exists in both twins
-(`prolog/testsets_haiku/`, `prolog/testsets_flash/`) carrying `autonomy_reading` +
-`sanctity_reading` + `vulnerability_protection_reading`, all sharing `cs_kernel_id` and
-cross-linked via `cs_reading_relation`. Witnessed 2026-06-23: a `corpus_path` overlay onto
-`testsets_haiku` (CLAUDE.md → Corpus Loading; `asserta`/`retractall`, *not* plain `assertz`)
-loaded 960 testsets, the kernel resolved with all 3 readings, and an edge resolved in the
-loaded engine. (The archived `kernel_test/` copy also exists but is not needed — the live
-twin makes OQ-10 workable without any archive revival.)
-
-**What resolution changes:** Reading robustness becomes a first-class output. A finding
-currently reported as "the engine classifies X as snare (analytical)" becomes "X is
-classified as snare (analytical) in reading R1; in reading R2, the same context gives
-rope — this finding is reading-specific." The altar essay's Ω_E (whether the
-cyclopean-point verdicts are reading-robust) becomes answerable. Reports gain a
-"reading robustness" section alongside the existing theorem instantiation and orbit
-analysis. This is the engine practicing what the kernel-reading architecture requires:
-showing what it cannot say about readings it was not asked to run.
-
-**Implementation sketch:**
-- Prolog: `compare_kernel_readings/3` — given a kernel_id and context list, finds all
-  readings via cs_reading_relation, runs dr_type/3 on each, returns agreement map
-- Python: a script or enhanced_report.py extension that calls compare_kernel_readings,
-  computes Jaccard similarity between reading pairs' presheaf sets, and emits a
-  reading-comparison section
-- Smallest useful version: a standalone Python script that takes a kernel_id, finds its
-  readings from the loaded corpus, runs the product-site export on each, and diffs the
-  H¹ and orbit_signature outputs
-
----
+Witness (twin `end_of_life_decision_authority`, 3 readings): 156 contexts → **73 reading-robust
+/ 83 reading-specific**; H¹ robust (all band 5); Jaccard sanctity↔autonomy 0.63, autonomy↔vuln
+0.53, sanctity↔vuln 0.31. Two-sided control passed (known-divergence ctx → diverge bucket; agree
+ctx → 0 divergence solutions). Spawned **OQ-176** (`cohomological_obstruction/3` returns H¹=0 for
+an absent constraint — Pattern-5 measured-flat-vs-didn't-look; out of scope here, readings are
+always real).
 
 ---
 
@@ -8918,7 +8894,35 @@ the live corpus before citing magnitude.
 
 ---
 
-*Last updated: 2026-06-22. Add new items with sequential OQ-NN labels. Mark
+## OQ-176 — `cohomological_obstruction/3` returns H¹=0 for an absent constraint (Pattern-5 measured-flat vs didn't-look) (Ω_E)
+
+**Status:** open
+**Priority:** 4
+**Origin:** Witnessed 2026-06-23 during OQ-10 build. Calling
+`grothendieck_cohomology:cohomological_obstruction(no_such_reading_xyz, H0, H1)` on a
+non-existent constraint SUCCEEDS with `H0=1, H1=0` rather than failing: `orbit_vector/2`
+returns a uniform all-`unknown` vector for the absent constraint → `UniqueTypes=[_]` →
+global-section/no-obstruction verdict (`grothendieck_cohomology.pl:158–169`). So a genuinely
+flat constraint (perspectives agree, H¹=0) and an absent/perspective-less one collapse to the
+same `0` token — build_discipline Pattern 5/6 (absence satisfies the gate; measured-empty vs
+didn't-look).
+
+**Why it matters / scope:** does NOT affect OQ-10 — `reading_robustness` only ever calls this on
+readings drawn from `cs_readings_for_kernel/2`, which are always registered, so H¹ is always a
+real numeric (the `h1_band_robust=null` fail-closed branch is consequently exception-guard only,
+never absence-triggered). The defect is latent for any future consumer that calls
+`cohomological_obstruction/3` on an unvalidated constraint id and reads `H1=0` as "measured flat."
+
+**What resolution changes:** a ruling on the return contract for an absent/perspective-less
+constraint — fail, an `unknown` sentinel, or keep `0` with a documented "callers must
+pre-validate membership" contract — plus a consumer sweep (6+ callsites: `json_report` `h1_band`,
+`corpus_cohomology`, `descent_status`, `subobject_classifier`, the orbit reporters) confirming
+none rely on absent→0. Engine-behavior change to a core widely-consumed predicate; above the
+fix-on-sight threshold (needs the ruling + the sweep), hence logged not patched.
+
+---
+
+*Last updated: 2026-06-23. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
