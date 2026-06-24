@@ -147,3 +147,49 @@ the guard would flag a planted read.
 **Net:** the architecture-neutral, load-bearing half of OQ-15 / v8 §8 item 1 is built and gate-wired;
 GAP-12 closed. **Phase 2 — relocate (v7) vs policed-in-place (v8) vs synthesis — is the operator's
 value ruling, staged behind these witnesses, not decided here.**
+
+## W2 corrected — the KIND-comparison witness (principle vs. cardinality)
+
+The Phase-1 summary above said "v8's single-bridge whitelist is principled" — but that asserted the
+conclusion W2 was scoped to *test*, and conflated **cardinality** ("one bridge today") with **kind**
+("structurally privileged"). The in-file kind-comparison, witnessed:
+
+- `detect_necessity_inheritance/2` (drl_composition:139) is a **committer→observer ENTAILMENT-DERIVATION**:
+  it reads the *typed* edge `cs_reading_relation(Source, Derived, influences)` and uses it to *derive* an
+  observer relation (necessity inheritance, gated on `suppression_requirement =< 0.05`). The committer
+  datum is an entailment-typed payload; it flows *into* observer logical structure.
+- `cs_drift_mismatch/2` (cs_drift_mismatch:56) is an **observer→committer COMPARISON**: a CS predicate
+  reads committer foreclosure facts (`cs_axiom_foreclosed`, `cs_drift_trajectory`) and *consumes an
+  observer verdict* (`network_dynamics:detect_network_drift` stability via `cs_is_metric_stable`) to test
+  coincidence. No committer field reaches observer computation; an observer *result* is contrasted.
+
+Different **direction** AND different **kind** (derivation vs. comparison).
+
+**Is "exactly one bridge" principle or coincidence?** The deciding fact is the relation-atom type system.
+`cs_reading_relation` carries three typed relations, **axis-segregated by where they are read**:
+
+| Relation | corpus count | read by |
+|---|---|---|
+| `influences` | 38 | **only** drl_composition:141 (the observer derivation) |
+| `forecloses` | 47 | only committer modules (cs_pattern_detection, cs_corpus_analysis, cs_kernel_registry) + json_report (mediator) |
+| `coexists_with` | 104 | only committer modules + json_report |
+
+So single-bridge is **principled in KIND**: `influences` is the entailment relation and the structurally
+privileged carrier into observer derivation; `forecloses` (foreclosure) and `coexists_with` (licensed
+plurality) are committer-modal relations that **never** cross into observer computation. It is *not*
+"only one authored so far." **But "exactly one forever" is convention, not theorem** — nothing in the
+type system *forbids* a future second entailment-routing (e.g. routing `forecloses` into an observer
+derivation, or a second reader of `influences`). That would be legitimate-in-kind yet break the count —
+and **the guard is precisely what makes such a crossing loud** (fail-closed; a new edge fires), forcing a
+conscious re-ratification rather than a silent second bridge. Corrected status: **principled-in-kind,
+guard-enforced-in-cardinality.** This strengthens the warrant for *keeping the guard under any
+architecture* (the contingent part — cardinality — is exactly what it polices).
+
+## Corpus-independence of the guard (the twins)
+
+The guard runs on `[stack]` (engine modules, zero testsets) by design. Witnessed that the boundary is a
+**code property**, invariant to corpus DATA: re-running the probe with the live `testsets/`, the
+`testsets_haiku/` twin, and the `testsets_flash/` twin loaded all yield **8 edges**, and the edge *set*
+(not just the count) is **byte-identical** (`diff` empty, engine-only vs. +flash-twin). Loading a corpus
+adds story facts, not call edges. The twins therefore need no separate guard run. (Residual, out of
+scope: a testset could in principle author a cross-axis *rule* body — none of the three live corpora do.)

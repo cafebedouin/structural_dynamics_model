@@ -400,9 +400,20 @@ Read-only census of the cross-axis surface, every find line-witnessed:
   `cs_is_metric_stable/1`→`network_dynamics`); `detect_necessity_inheritance`, `cs_kernel_divergence`,
   `compare_kernel_readings`, `constraint_neighbors/3`, and the `json_report` aggregators are static. ⇒
   grep/import checks are blind under either architecture; the **taint guard is load-bearing**.
-- **`detect_necessity_inheritance` is the unique committer→observer dataflow** (`influences` edge →
-  entailment); the bucket-1 comparisons run observer→committer. v8's directional invariant (ii) ⇒ its
-  single-bridge whitelist is a principle, not an arbitrary exception (informs but does not decide Phase 2).
+- **`detect_necessity_inheritance` is a committer→observer ENTAILMENT-DERIVATION** (reads the *typed*
+  `influences` edge → derives an observer relation); `cs_drift_mismatch` is an observer→committer
+  COMPARISON (consumes an observer verdict). Different direction AND kind. **Single-bridge is principled
+  in KIND, guard-enforced in CARDINALITY** (corrected from an earlier "principled" that conflated the
+  two): the relation-atom type system axis-segregates — `influences` (entailment, 38) is read ONLY at
+  the observer derivation; `forecloses` (47) / `coexists_with` (104) are committer-modal, never crossing.
+  So the bridge is the structurally privileged entailment carrier, not "only one authored." But "exactly
+  one forever" is convention-not-theorem — a future second entailment-routing is legitimate-in-kind yet
+  breaks the count; the guard makes that crossing LOUD (fail-closed), which is the warrant for keeping it
+  under any architecture. Informs but does not decide Phase 2.
+- **The guard is corpus-INDEPENDENT (witnessed):** it walks the engine call graph; re-running with the
+  live `testsets/`, `testsets_haiku/`, and `testsets_flash/` twins loaded all yield the SAME 8 edges,
+  byte-identical sets. The boundary is a code property — loading a corpus adds facts, not call edges — so
+  the twins need no separate guard run.
 - **`constraint_bridge.pl` is NOT a cross-axis surface** — `compute_veto_actors` reads `dr_type` +
   authored `constraint_beneficiary` (a substrate/observer-input field), **no `cs_` read**. The earlier
   "reverse DR→CS read" hypothesis is *false*; it is correctly absent from `Files:` and must not enter the
