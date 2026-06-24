@@ -418,11 +418,16 @@ Read-only census of the cross-axis surface, every find line-witnessed:
   authored `constraint_beneficiary` (a substrate/observer-input field), **no `cs_` read**. The earlier
   "reverse DR→CS read" hypothesis is *false*; it is correctly absent from `Files:` and must not enter the
   guard whitelist. (The "two DR→CS reads" above = `detect_necessity_inheritance` + `constraint_neighbors/3`.)
-- **Zero back-channel holds by inspection only:** no `cs_` module asserts any runtime fact; the only
-  runtime asserts are observer-internal `fpn_*` caches (drl_fpn.pl), read by no CS predicate. The
-  plant-and-flag positive control is deferred into the Phase 1 guard's acceptance test (no dataflow probe
-  exists yet). The "(OQ-17)" pointer above was a misattribution → repointed to **OQ-40** (the
-  scalar-vs-temporal `classify_at_time` split; OQ-17 is the disposed testsets_3000 quarantine).
+- **No runtime back-channel — re-witnessed engine-wide 2026-06-24 (`bc_rewitness.txt`), corrected from
+  the original inspection-only read** (which swept only `cs_*.pl`/`drl_*.pl`): a non-vacuous engine-wide
+  grep (flags a planted `cs_` assert) finds NONE, and the complete enumeration of every assert target
+  shows zero `cs_` committer facts written at runtime (only observer substrate + observer-internal
+  caches; the one `=..` site, `data_repair.pl:107`, calls a metric prior, not an assert). **Honest
+  residual:** this is a STATIC witness over source ("found none," not a runtime snapshot-diff proof), and
+  it is a separate surface from the guard — the guard covers static READS (observer clause calling `cs_`),
+  runtime WRITES (`assertz` of a `cs_` term) are covered by this enumeration, not by the guard. The
+  "(OQ-17)" pointer above was a misattribution → repointed to **OQ-40** (the scalar-vs-temporal
+  `classify_at_time` split; OQ-17 is the disposed testsets_3000 quarantine).
 
 **Phase 1 — transitive taint guard LANDED (2026-06-23, commit `fd1ee561`).** The architecture-neutral,
 load-bearing half (v8 §8 item 1) is built and gate-wired: `prolog/check_axis_boundary.pl` walks the

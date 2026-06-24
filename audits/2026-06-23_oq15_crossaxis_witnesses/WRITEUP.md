@@ -47,13 +47,31 @@ OQ-15 asserts "no module asserts facts the other axis reads at runtime." **How i
   `fpn_type_cache`, `fpn_neighbors_cache`, `fpn_ep`, `fpn_iteration_info`, :111–287); **no CS
   predicate reads `fpn_*`.**
 
-So the claim is **borne out by inspection** — but inspection is exactly the method v8 calls a trap. A
-planted `assertz(narrative_ontology:cs_drift_state(...))` inside a drl_ module, later read by a CS
-predicate, would be a genuine back-channel that an assert-grep or a count does **not** distinguish
-from a benign cache write. **There is no existing runtime/dataflow probe** that could flag it. The
-plant-and-flag positive control therefore **cannot be discharged in 0a** — it is precisely what Phase
-1's taint guard must provide, and is the BC acceptance test for that guard (clean corpus → silent;
-planted cross-read → flagged).
+So the claim is **borne out by inspection** — but inspection is exactly the method v8 calls a trap,
+and the 0a sweep covered only `cs_*.pl` + `drl_*.pl` (too narrow a denominator) with no positive
+control. **RE-WITNESSED engine-wide and two-sided 2026-06-24** (`bc_rewitness.txt`), correcting the
+record:
+- **Non-vacuous probe:** an engine-wide grep for assert/retract of a `cs_` committer fact finds
+  NONE, and the *same* grep FLAGS a planted `assertz(narrative_ontology:cs_reading_relation(...))` —
+  the probe is not vacuous. (The earlier `cs_[a-z]` hits on `scs_*.pl` were filename false-positives
+  — scenario config overlays, not committer facts.)
+- **Complete enumeration:** every distinct assert target in the engine, listed — the only
+  `narrative_ontology` writes are `constraint_beneficiary/claim/metric/victim/interval/measurement/
+  omega_variable/veto_actor/has_sunset_clause` (all observer-substrate); the rest are observer-
+  internal caches + bookkeeping. **Zero `cs_` committer facts.** The one dynamic-term site
+  (`data_repair.pl:107`, `Goal =.. [PriorPred,...]`) *calls* a metric prior, does not assert, and
+  binds `PriorPred` to metric names.
+
+**Corrected status — and the honest residual.** This is a **static** witness over the source (the
+assert surface is finite and fully enumerated), **not a runtime snapshot-diff**: the plan's literal
+BC control (assert mid-run, diff a before/after `cs_` snapshot) was **not built** — "none found by
+complete enumeration" is stronger than the original inspection but is not a dynamic-execution proof,
+so a back-channel via a runtime-constructed assert is *not proven absent*, only shown to have no
+construction site. **And this write surface is NOT what the Phase-1 guard covers:** the guard polices
+static READS (an observer clause calling a `cs_` predicate); runtime WRITES (`assertz` of a `cs_`
+term) are this distinct surface, covered here by enumeration, not by the guard. The earlier writeup's
+claim that BC's control was "deferred into Phase 1's guard acceptance test" was wrong on this point —
+the guard does not flag a write.
 
 ## XR — Cross-ref witness (gates 0b's repoint)
 
@@ -105,7 +123,10 @@ constraint_bridge.pl from the plan's "Critical files / cross-axis surface" list.
   constraint_bridge.pl to Files (reverse-read false).
 - Phase 1 whitelist drops `compute_veto_actors`; cross-axis surface = the four genuine sites +
   json_report aggregator.
-- BC positive control is deferred into Phase 1's guard acceptance test (no probe exists in 0a).
+- BC re-witnessed engine-wide 2026-06-24 (non-vacuous probe + complete assert enumeration): no `cs_`
+  committer fact asserted at runtime. STATIC witness only (not a runtime snapshot-diff); this WRITE
+  surface is separate from the guard, which covers READS. ("found none," not "proven absent" for a
+  runtime-constructed assert — no construction site exists.)
 
 ## Phase 1 — the transitive taint guard (built; commit `fd1ee561`)
 

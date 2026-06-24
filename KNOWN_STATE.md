@@ -56,9 +56,12 @@ closes GAP-12). Commits `c6fe7edb` (Phase 0a/0b), `fd1ee561` (guard).
   W1 MIXED (cs_drift_mismatch reaches observer machinery *transitively* via
   cs_is_metric_stable → grep is blind → guard load-bearing); W2 the `influences`
   bridge is the *unique committer→observer* dataflow (bucket-1 comparisons run the
-  other direction) → v8's single-bridge whitelist is principled; BC zero-back-channel
-  holds by inspection only (no cs_ runtime assert; only observer-internal fpn_ caches);
-  XR/SA confirmed. **constraint_bridge.pl `compute_veto_actors` is NOT cross-axis**
+  other direction); BC no runtime back-channel — re-witnessed engine-wide 2026-06-24
+  (`bc_rewitness.txt`): non-vacuous probe (flags a planted cs_ assert) + complete
+  assert-target enumeration → zero cs_ committer facts written at runtime. STATIC
+  witness only ("found none," not a runtime snapshot-diff), and a SEPARATE surface
+  from the guard (guard = static reads; writes = this enumeration). Corrected from the
+  original inspection-only read (which swept only cs_*/drl_*). XR/SA confirmed. **constraint_bridge.pl `compute_veto_actors` is NOT cross-axis**
   (reads dr_type + authored `constraint_beneficiary` substrate, no cs_) — the plan's
   "reverse DR→CS read" hypothesis was *false*; NOT added to Files, NOT whitelisted.
 - **The guard** (`check_axis_boundary.pl`): reachability over the LOADED call graph

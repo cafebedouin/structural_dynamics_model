@@ -1,0 +1,36 @@
+BC RE-WITNESS (2026-06-24) — runtime back-channel claim, corrected from inspection-only.
+Operator note: the original BC rested on a clean grep of cs_*.pl + drl_*.pl only (denominator
+too narrow) with no positive control — an empty result standing in as proof of absence. Redone
+engine-wide, two-sided, and honestly scoped.
+
+(1) NON-VACUOUS PROBE. Engine-wide grep for assert/retract of a cs_ committer fact:
+    grep -rnE "(assert[az]|asserta|retractall|retract)\([^.]*cs_(reading_relation|kernel_id|story_uid|axiom|drift_state|drift_trajectory)" *.pl
+    -> NONE.
+    Positive control (planted line `assertz(narrative_ontology:cs_reading_relation(a,b,influences))`)
+    -> the same regex FLAGS it. The probe is not vacuous.
+    (The earlier `cs_[a-z]` hits on scs_*.pl were FILENAME false-positives: scenario config
+     overlays asserting config:param, not committer facts.)
+
+(2) COMPLETE ENUMERATION of every distinct assert/asserta target in the engine. The only
+    narrative_ontology writes are: constraint_beneficiary, constraint_claim, constraint_metric,
+    constraint_victim, has_sunset_clause, interval, measurement, omega_variable, veto_actor —
+    ALL observer-substrate, ZERO cs_ committer facts. The remainder are observer-internal caches
+    (fpn_*, cached_*, maxent_*, gc_*, trajectory_*, inv_*, gap_*, cluster_*) + analysis
+    bookkeeping (run_info, test_passed/failed, validation_*). No cs_ committer fact is a target.
+
+(3) THE ONE DYNAMIC-CONSTRUCTION SITE. data_repair.pl:107 builds `Goal =.. [PriorPred, IntervalID,
+    Value]` — but CALLS it (`domain_priors:call(Goal)`), does not assert it, and PriorPred binds to
+    METRIC names (theater_metric_name etc.). Its product is a constraint_metric (observer
+    substrate). Not a cs_ assert. grep for `assertz(Var)` (bare-variable assert) -> NONE.
+
+VERDICT. No module asserts a cs_ committer fact at runtime — witnessed by a non-vacuous engine-wide
+probe + complete assert-target enumeration + resolution of the single dynamic-construction site.
+
+SCOPE / RESIDUAL (the honest hedge). This is a STATIC witness over source (the assert surface is
+finite and fully enumerated), NOT a runtime snapshot-diff. The plan's literal BC control (assert a
+fact mid-run, diff a before/after cs_ snapshot) was NOT built; no construction site for such a
+back-channel exists, so it is "none found by complete enumeration," which is stronger than the
+original inspection but is not a dynamic-execution proof. SEPARATELY: this write surface is NOT what
+the Phase-1 guard covers — the guard polices static READS (an observer clause calling a cs_
+predicate); runtime WRITES (assertz of a cs_ term) are this distinct surface. Both are now covered:
+reads by the guard, writes by this enumeration.
