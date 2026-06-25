@@ -1629,6 +1629,17 @@ it is not removed, so the split stays closed. (`snapshot_type`/`degradation_chai
 have zero consumers — witnessed grep with positive control, `audits/2026-06-11_oq46_close/`.)
 The `extractiveness`/`base_extractiveness` sub-splits (rows 19–20) remain open.
 
+**Rows 19–20 `base_extractiveness` — split RULED INTENDED, with a live correctness edge
+(2026-06-24).** The scalar-vs-temporal split is the v7 two-axis design: the observer axis
+(`drl_core`) reads scalar `constraint_metric`; the committer/temporal axis (`classify_at_time`,
+`drift_events`) reads `measurement/5`. NOT a defect — document as intended. **But the same
+audit (`audits/2026-06-24_oq41_basex_t0/`) showed the edge has teeth:** 15 live constraints
+author `base_extractiveness` TEMPORALLY ONLY (no scalar), so the temporal series is their *only*
+authoritative ε. Off-grid temporal queries are therefore not an edge case but the **main path**
+for the whole temporal-only family — a live correctness surface, tracked in **OQ-178** (the
+`cs_kernel_registry` Time=0 probe lands off every such grid). So the doc records both halves:
+split is intended AND temporal-only authoring makes off-grid reads a correctness obligation.
+
 ## OQ-41 — G6: fabricated defaults for absent data (fail-closed vs impute)
 
 **Ω-type:** Ω_C (design choice — fail-closed vs impute; subsumed by the OQ-44 satisfy-on-absence policy).

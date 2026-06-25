@@ -464,6 +464,14 @@ rebuild** when accumulated schema/wiring changes seem to warrant it, but should 
 lightly or treat the singleton working set as something to fix. (Resolves the OQ-58 corpus-identity
 flag; the regime swap that produced the three legs is witnessed in
 `audits/2026-06-20_oq58_cross_corpus_incompleteness/`.)
+**Test bed, not backfill target (operator clarification, 2026-06-24).** `testsets/` is the
+**evolving-schema test bed**: schema/prompt/scope changes are *encouraged* pre-rebuild and
+exercised HERE (the twins stay the stable matched-pair baseline). A change that breaks a
+`testsets/` result is fine — the twins are the comparison, not `testsets/`. We do **not**
+backfill any leg (all three are for testing); "hold off until rebuild" is the WRONG posture.
+So an OQ-37-style "does this metric earn its keep" call is settled by *does it provide (or might
+it provide) useful analysis?* — make the schema/prompt change and test it on `testsets/` — never
+by "defer to the rebuild."
 
 **FNL prevalence is bait-confounded — do not cite it (or the FNL-driven tangled_rope dominance)
 as a detection result (OQ-70).** All FNL firings ride `claimed_natural/2` source 2, which reads
