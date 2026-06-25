@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "359d64540ad8aeea2e69046a3d19df5272b21cee",
+    "store_version": "1bcc07c533f541c742b18c222ea5593a1b236060",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-25T14:18:11"
+    "generated_at": "2026-06-25T14:50:52"
   },
-  "issues_sha": "991a2c1420b6a781dd5dd511aba40eacb8d250f208436969dae1217f19093b14",
+  "issues_sha": "e209a915fc901d204d42563b7fd9ccf2d906f3150969c3a8073653b0fff65b5a",
   "n_entries": 179,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 89,
+    "resolved": 90,
     "mitigated": 9,
     "partial": 7,
-    "open": 68,
     "disposed": 3,
+    "open": 67,
     "future": 3
   },
   "active": [
@@ -32,15 +32,6 @@
       "mentioned_in": [
         "OQ-135"
       ]
-    },
-    {
-      "id": "OQ-16",
-      "status": "open",
-      "priority": 1,
-      "summary": "Temporal vocabulary rename pass deferred",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": []
     },
     {
       "id": "OQ-18",
@@ -1126,6 +1117,20 @@
         "OQ-14",
         "OQ-17",
         "OQ-40",
+        "OQ-135"
+      ]
+    },
+    {
+      "id": "OQ-16",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Temporal vocabulary rename pass deferred",
+      "deps": [
+        "splits_from OQ-15"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-15",
         "OQ-135"
       ]
     },

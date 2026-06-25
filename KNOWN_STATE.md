@@ -45,6 +45,44 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-25 — OQ-16 RESOLVED: temporal vocabulary rename pass (name-only, 5 renames, 3 commits)
+**Files:** prolog/metric_drift_events.pl, prolog/metric_drift_report.pl, prolog/context_profile_mining.pl, prolog/context_profile_report.pl, prolog/network_dynamics.pl, prolog/stack.pl, prolog/drl_lifecycle.pl, prolog/transition_paths.pl, prolog/cs_pattern_detection.pl, prolog/cache_registry.pl, python/run_pipeline.py, scripts/pipeline_dashboard.sh, ISSUES.md
+**Tier:** landed
+
+Executed the deferred "drift"/"trajectory" rename pass — the words each named two
+different concepts on opposite axes (metric/network drift ≠ CS commitment-drift;
+observer-context "trajectory" ≠ CS commitment-trajectory). Name-only, no logic/threshold
+moved. Five renames in three commits:
+
+- `0a204af1` — predicate `detect_network_drift/3 → detect_network_contamination/3`
+  (network_dynamics.pl + all qualified callers + the `drl_lifecycle` facade call).
+- `1d861cee` — file+module renames `drift_events→metric_drift_events`,
+  `drift_report→metric_drift_report`, `trajectory_mining→context_profile_mining`,
+  `trajectory_report→context_profile_report` (file only, no module decl); imports/reexports/
+  load order; `run_pipeline.py` + dashboard + `.legacy` output paths
+  `trajectory_report.md → context_profile_report.md`.
+- `1bcc07c5` — genuine code-pointer tokens across 15 live reference/implementation/design docs.
+
+**Operator rulings:** `metric_*` over `dr_*` (no `dr_` scheme exists today; `cs_` is a concept
+marker, not a file-prefix convention) — so `dr_` would be a lone scheme splitting the cluster.
+One complete pass (sources + generated `.md` + genuine doc refs) so no half-renamed mismatch is
+manufactured. **Left out of scope (logged, not missed):** JSON output field `drift_events`
+(`json_report.pl`, python schemas), internal predicate `run_trajectory_report`, doc *filenames*,
+and dated recon/essay docs (`recon_2_scope*.md`, `when_frame_isnt_foreground.md`) where the old
+name is the subject of a historical narrative.
+
+**Witness:** `[stack]` loads ok; `detect_network_contamination/3` present, `detect_network_drift/3`
+absent; `[abductive_triggers]` loads through the reexport facade; `check_stack.pl` clean (positive
+control for a missed qualifier); full `run_pipeline.py` exit 0 writing `context_profile_report.md`;
+dashboard reads the renamed path. **Promotion test:** no tripwire — a missed reference fails
+*loudly* at load (existence_error) or is caught by `check_stack.pl`, so this stays history, not a
+promoted warning. **Side-finding (rename-independent, not fixed):** `context_profile_mining.pl:104`
+calls `dirac_classification:standard_context/1`, which `dirac_classification.pl` deliberately
+removed (comment :115) — a pre-existing dangling call in the production-disabled
+(`trajectory_enabled=0`) trajectory path; byte-identical pre/post rename, so not an OQ-16 regression.
+
+---
+
 ## 2026-06-25 — OQ-39 RESOLVED: scaffold rising-suppression gets a COMMENTARY verdict (rows 14–18 disposed)
 **Files:** prolog/cs_pattern_detection.pl, prolog/tests/test_oq39_scaffold_escalation.pl, ISSUES.md
 **Tier:** tripwire

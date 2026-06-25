@@ -476,12 +476,15 @@ cardinality "exactly one" is convention-not-theorem) is why the guard polices th
 
 ## OQ-16 — Temporal vocabulary rename pass deferred
 
-**Status:** open
+**Ω-type:** Ω_C (design choice — naming-convention cut: self-identifying `metric_*`/`context_profile_*` names over `dr_*`/status-quo; ruled this session 2026-06-25).
+
+**Status:** resolved — 2026-06-25: all five renames executed name-only across three commits (predicate `0a204af1`; file/module + pipeline/dashboard `1d861cee`; doc references `1bcc07c5`). No logic, algorithm, or threshold moved.
 **Priority:** 1
+**Deps:** splits_from OQ-15 (sequenced out of the May 2026 temporal excavation as a separate name-only pass; independent of the human-gated OQ-135 v8 vocabulary wave)
 **Origin:** Temporal excavation audit, May 2026.  
-**Files:** `prolog/drift_events.pl`, `prolog/drift_report.pl`,
-`prolog/trajectory_mining.pl`, `prolog/trajectory_report.pl`,
-`prolog/network_dynamics.pl` (`detect_network_drift/3`)
+**Files:** `prolog/metric_drift_events.pl`, `prolog/metric_drift_report.pl`,
+`prolog/context_profile_mining.pl`, `prolog/context_profile_report.pl`,
+`prolog/network_dynamics.pl` (`detect_network_contamination/3`)
 
 **Specific question:** The temporal excavation found that "drift" and
 "trajectory" name two structurally different concepts on opposite axes
@@ -513,6 +516,34 @@ disambiguating naming is the same hygiene that the UUID surrogate work applied
 to identity collisions — the analog at the vocabulary layer. Low risk, ~30
 minutes per module if done deliberately (one rename + load-check at a time, per
 the `stack.pl` discipline established during Phase A of the UUID work).
+
+**Resolution (2026-06-25):** All five renames landed (name-only):
+
+| Old | New | Kind |
+|-----|-----|------|
+| `drift_events.pl` (mod `drift_events`) | `metric_drift_events.pl` (mod `metric_drift_events`) | file + module |
+| `drift_report.pl` (mod `drift_report`) | `metric_drift_report.pl` (mod `metric_drift_report`) | file + module |
+| `trajectory_mining.pl` (mod `trajectory_mining`) | `context_profile_mining.pl` (mod `context_profile_mining`) | file + module |
+| `trajectory_report.pl` (no module decl) | `context_profile_report.pl` | file only |
+| `network_dynamics:detect_network_drift/3` | `network_dynamics:detect_network_contamination/3` | predicate only (file unchanged) |
+
+Operator rulings folded in: `metric_*` over `dr_*` (no `dr_` scheme exists today; `cs_` is a
+concept marker, not a general file-prefix convention); one complete pass (`.pl` sources +
+generated `.md` output + genuine doc references) to avoid manufacturing a fresh half-renamed
+mismatch. Witness: `[stack]` loads ok; `current_predicate(detect_network_contamination/3)` true
+and `detect_network_drift/3` absent; `[abductive_triggers]` loads through the `drl_lifecycle`
+reexport facade; `check_stack.pl` clean (no renamed-module qualifier in its undefined-predicate
+set — positive control for a missed call site); full `run_pipeline.py` exit 0 writing
+`outputs/context_profile_report.md` (old `trajectory_report.md` gone); dashboard reads the
+renamed path. Left untouched (out of scope, logged not missed): JSON output field `drift_events`
+(`json_report.pl`, python schemas), internal predicate `run_trajectory_report`, doc *filenames*
+(e.g. `trajectory_implementation_notes.md` keeps its name though its body now describes
+`context_profile_mining`), and dated recon/essay docs where the old filename is the subject of a
+historical narrative (`recon_2_scope*.md`, `when_frame_isnt_foreground.md`). The plan
+under-enumerated both the predicate call sites (completed in `1d861cee`) and the doc set
+(completed in `1bcc07c5`). Pre-existing latent `dirac_classification:standard_context/1` error in
+the production-disabled (`trajectory_enabled=0`) report path is rename-independent (usage
+byte-identical pre/post) — tracked separately if it surfaces.
 
 ---
 
