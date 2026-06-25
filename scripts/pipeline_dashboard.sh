@@ -247,11 +247,11 @@ echo ""
 # Trajectory mining
 # --------------------------------------------------------------------------
 echo -e "${BOLD}  TRAJECTORY MINING${NC}"
-if [ -f "$OUTPUT_DIR/trajectory_report.md" ] && [ -s "$OUTPUT_DIR/trajectory_report.md" ]; then
-    TM_TRAJECTORIES=$(grep -oP 'Total trajectories\*\* \| \K\d+' "$OUTPUT_DIR/trajectory_report.md" 2>/dev/null || echo "?")
-    TM_FAMILIES=$(grep -oP 'Structural families\*\* \| \K\d+' "$OUTPUT_DIR/trajectory_report.md" 2>/dev/null || echo "?")
-    TM_TWINS=$(grep -oP 'Cross-domain twins\*\* \| \K\d+' "$OUTPUT_DIR/trajectory_report.md" 2>/dev/null || echo "?")
-    TM_SINGLETONS=$(grep -oP 'Singletons \(anomalies\)\*\* \| \K\d+' "$OUTPUT_DIR/trajectory_report.md" 2>/dev/null || echo "?")
+if [ -f "$OUTPUT_DIR/context_profile_report.md" ] && [ -s "$OUTPUT_DIR/context_profile_report.md" ]; then
+    TM_TRAJECTORIES=$(grep -oP 'Total trajectories\*\* \| \K\d+' "$OUTPUT_DIR/context_profile_report.md" 2>/dev/null || echo "?")
+    TM_FAMILIES=$(grep -oP 'Structural families\*\* \| \K\d+' "$OUTPUT_DIR/context_profile_report.md" 2>/dev/null || echo "?")
+    TM_TWINS=$(grep -oP 'Cross-domain twins\*\* \| \K\d+' "$OUTPUT_DIR/context_profile_report.md" 2>/dev/null || echo "?")
+    TM_SINGLETONS=$(grep -oP 'Singletons \(anomalies\)\*\* \| \K\d+' "$OUTPUT_DIR/context_profile_report.md" 2>/dev/null || echo "?")
     echo "  Trajectories: $TM_TRAJECTORIES"
     echo "  Structural Families: $TM_FAMILIES"
     echo "  Cross-Domain Twins: $TM_TWINS"
@@ -288,7 +288,7 @@ for report in \
     "fpn_report.md" \
     "maxent_report.md" \
     "abductive_report.md" \
-    "trajectory_report.md" \
+    "context_profile_report.md" \
     "covering_analysis.md" \
     "giant_component_analysis.md" \
     "coupling_protocol.md" \

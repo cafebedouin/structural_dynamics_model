@@ -17,11 +17,11 @@
 %
 % Standalone run:
 %   swipl -l stack.pl -l covering_analysis.pl -l dirac_classification.pl \
-%         -l maxent_classifier.pl -l trajectory_mining.pl \
-%         -g "trajectory_mining:trajectory_selftest, halt."
+%         -l maxent_classifier.pl -l context_profile_mining.pl \
+%         -g "context_profile_mining:trajectory_selftest, halt."
 % ============================================================================
 
-:- module(trajectory_mining, [
+:- module(context_profile_mining, [
     % Configuration
     trajectory_enabled/0,
 

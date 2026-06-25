@@ -18,7 +18,7 @@
 :- use_module(constraint_indexing).
 :- use_module(purity_scoring, [purity_score/2]).
 :- use_module(drl_purity_network, [effective_purity/4, constraint_neighbors/3, type_contamination_strength/2, type_immunity/2]).
-:- use_module(drift_events).
+:- use_module(metric_drift_events).
 
 /* ================================================================
    NETWORK DRIFT DYNAMICS (v5.2)
@@ -88,7 +88,7 @@ network_drift_contagion(C, Context, ContagionList) :-
             (   member(neighbor(Other, EdgeStrength, _Src), Neighbors),
                 compute_neighbor_contamination(MyPurity, Other, EdgeStrength, Context, EdgeContam),
                 EdgeContam > 0.0,
-                drift_events:collect_purity_decline_signals(Other, DriftSignals),
+                metric_drift_events:collect_purity_decline_signals(Other, DriftSignals),
                 DriftSignals \= []
             ),
             ContagionList)
@@ -134,7 +134,7 @@ network_drift_velocity(C, Context, Velocity, Contributors) :-
         findall(
             contributor(Other, Rate, Sensitivity, Contribution),
             (   member(neighbor(Other, EdgeStrength, _Src), Neighbors),
-                drift_events:drift_velocity(Other, base_extractiveness, Rate),
+                metric_drift_events:drift_velocity(Other, base_extractiveness, Rate),
                 Rate > 0,
                 config:param(purity_attenuation_factor, AttFactor),
                 (   drl_core:dr_type(Other, Context, OtherType)

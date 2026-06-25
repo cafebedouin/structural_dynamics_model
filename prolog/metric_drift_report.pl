@@ -3,7 +3,7 @@
 % Split from drl_lifecycle.pl
 % ============================================================================
 
-:- module(drift_report, [
+:- module(metric_drift_report, [
     scan_constraint_drift/2,
     scan_constraint_drift/3,
     scan_all_drift/1,
@@ -14,7 +14,7 @@
 :- use_module(narrative_ontology).
 :- use_module(config).
 :- use_module(constraint_indexing).
-:- use_module(drift_events).
+:- use_module(metric_drift_events).
 :- use_module(transition_paths).
 :- use_module(network_dynamics).
 :- use_module(drl_composition, [non_monotonic_trajectory/2]).
@@ -29,8 +29,8 @@
 scan_constraint_drift(C, Events) :-
     findall(
         drift(EventType, Evidence, Severity),
-        (   drift_events:drift_event(C, EventType, Evidence),
-            drift_events:drift_severity(C, EventType, Severity)
+        (   metric_drift_events:drift_event(C, EventType, Evidence),
+            metric_drift_events:drift_severity(C, EventType, Severity)
         ),
         Events
     ).
@@ -40,10 +40,10 @@ scan_constraint_drift(C, Events) :-
 scan_constraint_drift(C, Context, Events) :-
     findall(
         drift(EventType, Evidence, Severity),
-        (   (   drift_events:drift_event(C, EventType, Evidence)
-            ;   drift_events:drift_event(C, Context, EventType, Evidence)
+        (   (   metric_drift_events:drift_event(C, EventType, Evidence)
+            ;   metric_drift_events:drift_event(C, Context, EventType, Evidence)
             ),
-            drift_events:drift_severity(C, EventType, Severity)
+            metric_drift_events:drift_severity(C, EventType, Severity)
         ),
         Events
     ).
@@ -156,7 +156,7 @@ generate_drift_report(C) :-
     ;   format('  No degradation trajectory detected.~n')
     ),
     % Velocity
-    (   drift_events:drift_velocity(C, base_extractiveness, Rate)
+    (   metric_drift_events:drift_velocity(C, base_extractiveness, Rate)
     ->  format('  Extraction drift velocity: ~4f/year~n', [Rate])
     ;   true
     ),

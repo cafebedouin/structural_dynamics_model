@@ -514,7 +514,7 @@ def _prolog_abductive():
 
 
 def _prolog_trajectory():
-    """Run trajectory_report (conditional) → trajectory_report.md."""
+    """Run context_profile_report (conditional) → context_profile_report.md."""
     # Check if trajectory is enabled
     try:
         check = subprocess.run(
@@ -530,20 +530,20 @@ def _prolog_trajectory():
         enabled = False
 
     if not enabled:
-        (OUTPUTS_DIR / "trajectory_report.md").write_text("", encoding="utf-8")
+        (OUTPUTS_DIR / "context_profile_report.md").write_text("", encoding="utf-8")
         return
 
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "dirac_classification.pl",
-         "maxent_classifier.pl", "trajectory_mining.pl", "trajectory_report.pl"],
+         "maxent_classifier.pl", "context_profile_mining.pl", "context_profile_report.pl"],
         "run_trajectory_report",
     )
     raw = result.stdout
     if raw.strip():
         cleaned = strip_preamble(raw, _PREAMBLE_MARKERS["trajectory"])
-        (OUTPUTS_DIR / "trajectory_report.md").write_text(cleaned, encoding="utf-8")
+        (OUTPUTS_DIR / "context_profile_report.md").write_text(cleaned, encoding="utf-8")
     else:
-        (OUTPUTS_DIR / "trajectory_report.md").write_text("", encoding="utf-8")
+        (OUTPUTS_DIR / "context_profile_report.md").write_text("", encoding="utf-8")
 
 
 def _prolog_covering():

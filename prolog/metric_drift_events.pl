@@ -3,7 +3,7 @@
 % Split from drl_lifecycle.pl
 % ============================================================================
 
-:- module(drift_events, [
+:- module(metric_drift_events, [
     % Individual Drift Event Detectors
     detect_metric_substitution/1,
     detect_extraction_accumulation/1,
@@ -32,7 +32,7 @@
     % Purity Drift (v5.1)
     detect_purity_drift/1,
 
-    % Shared utilities (needed by transition_paths, network_dynamics, drift_report)
+    % Shared utilities (needed by transition_paths, network_dynamics, metric_drift_report)
     safe_metric/3,
     metric_trend/3,
     metric_at/4,

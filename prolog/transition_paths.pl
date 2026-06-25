@@ -14,7 +14,7 @@
 :- use_module(config).
 :- use_module(drl_core).
 :- use_module(constraint_indexing).
-:- use_module(drift_events).
+:- use_module(metric_drift_events).
 
 /* ================================================================
    TRANSITION PATH DETECTION
@@ -29,45 +29,45 @@
 transition_path(C, rope, tangled_rope, evidence(extraction_rising, E, has_coordination, true)) :-
     drl_core:dr_type(C, Type),
     Type = rope,
-    drift_events:safe_metric(C, extractiveness, E),
+    metric_drift_events:safe_metric(C, extractiveness, E),
     config:param(rope_epsilon_ceiling, Ceil),
     E > Ceil * 0.7,
     narrative_ontology:has_coordination_function(C),
-    drift_events:metric_trend(C, base_extractiveness, increasing).
+    metric_drift_events:metric_trend(C, base_extractiveness, increasing).
 
 % Tangled Rope -> Snare (coordination dying while extraction grows)
 transition_path(C, tangled_rope, snare, evidence(coordination_declining, true, extraction, E)) :-
     drl_core:dr_type(C, Type),
     Type = tangled_rope,
-    drift_events:safe_metric(C, extractiveness, E),
+    metric_drift_events:safe_metric(C, extractiveness, E),
     config:param(snare_epsilon_floor, Floor),
     E > Floor * 0.8,
-    (   drift_events:drift_event(C, coordination_loss, _)
-    ;   drift_events:metric_trend(C, coordination_effectiveness, decreasing)
+    (   metric_drift_events:drift_event(C, coordination_loss, _)
+    ;   metric_drift_events:metric_trend(C, coordination_effectiveness, decreasing)
     ).
 
 % Rope -> Piton (direct obsolescence, no extraction phase)
 transition_path(C, rope, piton, evidence(function_obsolete, true, theater_high, TR)) :-
     drl_core:dr_type(C, Type),
     Type = rope,
-    drift_events:safe_metric(C, theater_ratio, TR),
+    metric_drift_events:safe_metric(C, theater_ratio, TR),
     TR > 0.5,
-    drift_events:drift_event(C, function_obsolescence, _).
+    metric_drift_events:drift_event(C, function_obsolescence, _).
 
 % Scaffold -> Piton (sunset violation)
 transition_path(C, scaffold, piton, evidence(sunset_violated, true)) :-
     drl_core:dr_type(C, Type),
     Type = scaffold,
-    drift_events:drift_event(C, sunset_violation, _).
+    metric_drift_events:drift_event(C, sunset_violation, _).
 
 % Scaffold -> Snare (calcification with extraction)
 transition_path(C, scaffold, snare, evidence(extraction_added, E, sunset_violated, Violated)) :-
     drl_core:dr_type(C, Type),
     Type = scaffold,
-    drift_events:safe_metric(C, extractiveness, E),
+    metric_drift_events:safe_metric(C, extractiveness, E),
     config:param(snare_epsilon_floor, Floor),
     E > Floor * 0.7,
-    (   drift_events:drift_event(C, sunset_violation, _)
+    (   metric_drift_events:drift_event(C, sunset_violation, _)
     ->  Violated = true
     ;   Violated = false
     ).
@@ -76,7 +76,7 @@ transition_path(C, scaffold, snare, evidence(extraction_added, E, sunset_violate
 transition_path(C, scaffold, tangled_rope, evidence(extraction_emerging, E, coordination_intact, true)) :-
     drl_core:dr_type(C, Type),
     Type = scaffold,
-    drift_events:safe_metric(C, extractiveness, E),
+    metric_drift_events:safe_metric(C, extractiveness, E),
     config:param(tangled_rope_epsilon_floor, Floor),
     E > Floor * 0.7,
     narrative_ontology:has_coordination_function(C).
@@ -85,7 +85,7 @@ transition_path(C, scaffold, tangled_rope, evidence(extraction_emerging, E, coor
 transition_path(C, snare, piton, evidence(internalized, true)) :-
     drl_core:dr_type(C, Type),
     Type = snare,
-    drift_events:drift_event(C, internalized_piton, _).
+    metric_drift_events:drift_event(C, internalized_piton, _).
 
 % Snare -> False Mountain (naturalization)
 transition_path(C, snare, false_mountain, evidence(naturalized, true, claimed, mountain)) :-
@@ -123,15 +123,15 @@ snapshot_type(C, Time, Type) :-
     % Witnesses: audits/2026-06-11_oq83_close/STEP1_REPORT.md.
     nb_setval(classify_at_time_theater, none),
     nb_setval(classify_at_time_eps, none),
-    (   drift_events:metric_at(C, base_extractiveness, Time, E)
+    (   metric_drift_events:metric_at(C, base_extractiveness, Time, E)
     ->  true
-    ;   drift_events:safe_metric(C, extractiveness, E)
+    ;   metric_drift_events:safe_metric(C, extractiveness, E)
     ->  true
     ;   config:param(default_extractiveness, E)
     ),
-    (   drift_events:metric_at(C, suppression_requirement, Time, S)
+    (   metric_drift_events:metric_at(C, suppression_requirement, Time, S)
     ->  true
-    ;   drift_events:safe_metric(C, suppression_requirement, S)
+    ;   metric_drift_events:safe_metric(C, suppression_requirement, S)
     ->  true
     ;   config:param(default_suppression, S)
     ),
@@ -152,27 +152,27 @@ snapshot_type(C, Time, Type) :-
 
 %% predicted_terminal_state(+ConstraintID, -State, -Confidence)
 predicted_terminal_state(C, piton, high) :-
-    drift_events:drift_event(C, function_obsolescence, _),
-    drift_events:drift_event(C, extraction_dried_up, _), !.
+    metric_drift_events:drift_event(C, function_obsolescence, _),
+    metric_drift_events:drift_event(C, extraction_dried_up, _), !.
 
 predicted_terminal_state(C, piton, high) :-
-    drift_events:drift_event(C, internalized_piton, _), !.
+    metric_drift_events:drift_event(C, internalized_piton, _), !.
 
 predicted_terminal_state(C, piton, medium) :-
-    drift_events:drift_event(C, sunset_violation, _), !.
+    metric_drift_events:drift_event(C, sunset_violation, _), !.
 
 predicted_terminal_state(C, snare, high) :-
     transition_path(C, tangled_rope, snare, _), !.
 
 predicted_terminal_state(C, snare, medium) :-
-    drift_events:drift_event(C, extraction_accumulation, _),
-    drift_events:drift_event(C, coordination_loss, _), !.
+    metric_drift_events:drift_event(C, extraction_accumulation, _),
+    metric_drift_events:drift_event(C, coordination_loss, _), !.
 
 predicted_terminal_state(C, tangled_rope, medium) :-
     transition_path(C, rope, tangled_rope, _), !.
 
 predicted_terminal_state(C, tangled_rope, low) :-
-    drift_events:drift_event(C, extraction_accumulation, _),
+    metric_drift_events:drift_event(C, extraction_accumulation, _),
     narrative_ontology:has_coordination_function(C), !.
 
 predicted_terminal_state(_, stable, low).

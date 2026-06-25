@@ -46,11 +46,11 @@
 :- use_module(data_verification, []).
 :- use_module(pattern_analysis, []).
 :- use_module(intent_engine, []).
-:- use_module(drift_events, []).
+:- use_module(metric_drift_events, []).
 :- use_module(transition_paths, []).
 :- use_module(temporal_residual, []).   % Type-A observer residual detector (OQ-83; category-B, read-only)
 :- use_module(network_dynamics, []).
-:- use_module(drift_report, []).
+:- use_module(metric_drift_report, []).
 :- use_module(drl_lifecycle, []).       % facade — reexports from above
 
 % 4. Load Diagnostic & UI

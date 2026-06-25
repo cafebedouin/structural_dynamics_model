@@ -18,7 +18,7 @@
 % Registered (2026-06-04): boltzmann_compliance (cached_classification/3,
 % cached_coupling/2), covering_analysis (cached_grid_sig/2),
 % grothendieck_cohomology (cached_obstruction/3 + run info), drl_fpn (fpn_*
-% caches, all contexts), trajectory_mining (trajectory_cached/3),
+% caches, all contexts), context_profile_mining (trajectory_cached/3),
 % arakelov_height (arakelov_threshold_cache global — nb_delete, because a
 % sentinel VALUE would be read back as a real threshold).
 %

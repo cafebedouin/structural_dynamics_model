@@ -18,7 +18,7 @@ Reconciliation with prior session:
   or boltzmann_floor_for, so perturbing any boltzmann param produces zero change
   in the product-site re-export (the Surface-1 observable). The control break holds.
   On Surface 2, boltzmann_floor_for/2's output IS consumed by excess_extraction/2
-  and 14+ callers in drift_events.pl, drl_boltzmann_analysis.pl, etc. The surface
+  and 14+ callers in metric_drift_events.pl, drl_boltzmann_analysis.pl, etc. The surface
   is live for its own observable. Both claims are true; they operate at different
   surface granularities.
 

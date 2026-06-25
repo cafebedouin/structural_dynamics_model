@@ -207,7 +207,7 @@ cs_pattern_is(C, Expected) :-
 cs_verdict(C, scaffold_suppression_escalating) :-
     once(( drl_core:standard_context(Ctx),
            drl_core:dr_type(C, Ctx, scaffold),
-           drift_events:metric_trend(C, suppression_requirement, increasing) )).
+           metric_drift_events:metric_trend(C, suppression_requirement, increasing) )).
 
 % false_marked_revision
 % Fires when marked_revision is claimed but signals show suppression or enforcement.

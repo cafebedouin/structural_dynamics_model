@@ -3,8 +3,8 @@
 % ============================================================================
 % Standalone script. Run from prolog/ directory:
 %   swipl -l stack.pl -l covering_analysis.pl -l dirac_classification.pl \
-%         -l maxent_classifier.pl -l trajectory_mining.pl \
-%         -l trajectory_report.pl -g "run_trajectory_report, halt."
+%         -l maxent_classifier.pl -l context_profile_mining.pl \
+%         -l context_profile_report.pl -g "run_trajectory_report, halt."
 %
 % Orchestrates trajectory mining prerequisites and outputs a structured
 % markdown report with family census, cross-domain isomorphisms,
@@ -23,20 +23,20 @@
 :- use_module(maxent_classifier).
 :- use_module(drl_lifecycle).
 :- use_module(logical_fingerprint).
-:- use_module(trajectory_mining).
+:- use_module(context_profile_mining).
 
 :- use_module(library(lists)).
 
 %% run_trajectory_report
 %  Main entry point. Loads corpus, runs trajectory mining, outputs markdown.
 run_trajectory_report :-
-    format(user_error, '[trajectory_report] Starting trajectory mining analysis...~n', []),
+    format(user_error, '[context_profile_report] Starting trajectory mining analysis...~n', []),
     corpus_loader:load_all_testsets,
     constraint_indexing:default_context(Context),
 
     % Run trajectory mining
-    format(user_error, '[trajectory_report] Running trajectory mining...~n', []),
-    trajectory_mining:trajectory_run(Context, Summary),
+    format(user_error, '[context_profile_report] Running trajectory mining...~n', []),
+    context_profile_mining:trajectory_run(Context, Summary),
     Summary = trajectory_summary(
         total_constraints(NTrajectories),
         families(NFamilies),
@@ -47,7 +47,7 @@ run_trajectory_report :-
     % Write markdown report
     format('<!-- TRAJECTORY_REPORT_START -->~n'),
     format('# Trajectory Mining Report~n~n'),
-    format('*Generated: structural family analysis via trajectory_mining:trajectory_run/2*~n~n'),
+    format('*Generated: structural family analysis via context_profile_mining:trajectory_run/2*~n~n'),
 
     report_summary(NTrajectories, NFamilies, NTwins, NSingletons, Context),
     report_family_census(Context),
@@ -57,7 +57,7 @@ run_trajectory_report :-
 
     format('---~n'),
     format('*End of trajectory mining report*~n'),
-    format(user_error, '[trajectory_report] Done.~n', []).
+    format(user_error, '[context_profile_report] Done.~n', []).
 
 /* ================================================================
    SECTION 1: SUMMARY
@@ -81,7 +81,7 @@ report_summary(NTrajectories, NFamilies, NTwins, NSingletons, _Context) :-
 
     % Largest / smallest families
     findall(Size-FID, (
-        trajectory_mining:cluster_members(FID, Members),
+        context_profile_mining:cluster_members(FID, Members),
         length(Members, Size)
     ), SizePairs),
     (   SizePairs \= []
@@ -103,7 +103,7 @@ report_family_census(_Context) :-
     format('Each structural family with member count, representative constraint, and dominant features.~n~n'),
 
     findall(Size-FID, (
-        trajectory_mining:cluster_members(FID, Members),
+        context_profile_mining:cluster_members(FID, Members),
         length(Members, Size)
     ), SizePairs),
     msort(SizePairs, SortedAsc),
@@ -113,7 +113,7 @@ report_family_census(_Context) :-
     format('|-----------|------|---------------|----------------|-------------|~n'),
 
     forall(member(Size-FID, SortedDesc), (
-        trajectory_mining:cluster_members(FID, Members),
+        context_profile_mining:cluster_members(FID, Members),
         Members = [Rep|_],
         get_family_shift(Members, DomShift),
         get_family_feature(Members, Feature),
@@ -171,7 +171,7 @@ report_cross_domain_isomorphisms(Context) :-
     format('Constraint pairs from different domains sharing the same structural family.~n~n'),
 
     config:param(trajectory_isomorphism_threshold, Thresh),
-    trajectory_mining:cross_domain_twins(Context, Thresh, Twins),
+    context_profile_mining:cross_domain_twins(Context, Thresh, Twins),
     length(Twins, NTwins),
 
     (   NTwins =:= 0
@@ -187,8 +187,8 @@ report_cross_domain_isomorphisms(Context) :-
         format('| Constraint 1 | Domain 1 | Constraint 2 | Domain 2 | Distance | Family |~n'),
         format('|--------------|----------|--------------|----------|----------|--------|~n'),
         forall(member(twin(C1, C2, Dist, F), ShowTwins), (
-            trajectory_mining:constraint_domain(C1, D1),
-            trajectory_mining:constraint_domain(C2, D2),
+            context_profile_mining:constraint_domain(C1, D1),
+            context_profile_mining:constraint_domain(C2, D2),
             format('| ~w | ~w | ~w | ~w | ~4f | ~w |~n', [C1, D1, C2, D2, Dist, F])
         )),
         format('~n')
@@ -229,8 +229,8 @@ report_phase_a_validation(Context) :-
     % Cross-family check
     format('### Cross-Family Separation~n~n'),
     (   FamilyA = [FA1|_], FamilyB = [FB1|_],
-        trajectory_mining:family_assignment(FA1, FIDA),
-        trajectory_mining:family_assignment(FB1, FIDB)
+        context_profile_mining:family_assignment(FA1, FIDA),
+        context_profile_mining:family_assignment(FB1, FIDB)
     ->  (   FIDA \= FIDB
         ->  format('**PASS**: Family A (ID: ~w) and Family B (ID: ~w) are in different structural families.~n~n', [FIDA, FIDB])
         ;   format('**NOTE**: Family A and Family B share the same structural family ID: ~w~n~n', [FIDA])
@@ -239,7 +239,7 @@ report_phase_a_validation(Context) :-
     ).
 
 report_constraint_family_row(C, _Context) :-
-    (   trajectory_mining:family_assignment(C, FID) -> true ; FID = '(not found)' ),
+    (   context_profile_mining:family_assignment(C, FID) -> true ; FID = '(not found)' ),
     (   catch(dirac_classification:gauge_orbit(C, OrbitPoints), _, fail)
     ->  findall(T, member(orbit_point(T, _), OrbitPoints), Ts),
         sort(Ts, Orbit)
@@ -258,7 +258,7 @@ report_constraint_family_row(C, _Context) :-
 check_same_family(Members, Label) :-
     findall(FID, (
         member(C, Members),
-        trajectory_mining:family_assignment(C, FID)
+        context_profile_mining:family_assignment(C, FID)
     ), FIDs),
     sort(FIDs, Unique),
     length(Unique, N),
@@ -279,7 +279,7 @@ report_orbit_refinement(_Context) :-
 
     % For each orbit family, count how many structural families it maps to
     findall(OrbitFamily-FID, (
-        trajectory_mining:family_assignment(C, FID),
+        context_profile_mining:family_assignment(C, FID),
         catch(dirac_classification:gauge_orbit(C, OrbitPoints), _, fail),
         findall(T, member(orbit_point(T, _), OrbitPoints), Ts),
         sort(Ts, OrbitFamily)
@@ -310,7 +310,7 @@ report_orbit_refinement(_Context) :-
         format('**Summary**: ~w / ~w orbit families were split by trajectory mining.~n', [NSplit, NTotal]),
 
         % Count total structural families
-        findall(FID, trajectory_mining:family_assignment(_, FID), AllFIDs),
+        findall(FID, context_profile_mining:family_assignment(_, FID), AllFIDs),
         sort(AllFIDs, UniqueFIDs),
         length(UniqueFIDs, NFamilies),
         format('**Total structural families**: ~w (vs ~w orbit families)~n~n', [NFamilies, NTotal])
