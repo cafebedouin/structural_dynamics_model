@@ -9434,14 +9434,37 @@ loaded-but-non-executing Pattern-2 fork (all 4 call sites dead) — log-only, de
   `topic_domain`. Ruling: KEEP name-prefix (do not edit mid-validation); **C2 = mechanism-test only**,
   **C2-value OPEN** (closer = rebuilt corpus with a real authored domain field). **Families and twins
   are DISTINCT products:** the 448 twins over a near-vacuous gate make the **TWIN product OPEN**
-  (deferred to rebuild); only the **FAMILY product** is being validated this round. KNOWN_STATE scope
-  must say "families validated (pending C-null); twins OPEN."
-- **Family product witnessed (committed `e4eb7646`/`9833847e`):** C1 PASS (11 families, sizes
-  [1,2,3,4,4,8,8,9,13,21,24], non-degenerate); C3 PASS (identity byte-identical across processes +
-  permutation invariant under reversed input, positive-controlled).
-- **NEXT (gated, in order):** (1) **C-null** — the scope-setter; build the chimera-trajectory
-  per-component-independent shuffle harness (joint shuffle = false pass) per `c_null_protocol_FROZEN.md`,
-  N=200, 95th pct; also report the twin-pair count/gate-vacuity in parallel. (2) **C0** pipeline-diff
+  (deferred to rebuild).
+- **Family STABILITY witnessed — but NOT family MEANING (committed `e4eb7646`/`9833847e`).** C1 PASS
+  (11 families, sizes [1,2,3,4,4,8,8,9,13,21,24], non-degenerate) and C3 PASS (identity byte-identical
+  across processes + permutation invariant under reversed input, positive-controlled) establish that the
+  partition is a **stable, well-defined, reproducible function of the data** — they do NOT establish it
+  **tracks signal**. A fixed-seed clustering of pure noise clears C1+C3 (non-degenerate sizes,
+  byte-identical, reorder-invariant). C1 is a RAW size distribution (`NFam>=2, MaxSz<NClustered`), not a
+  null-relative non-degeneracy test. **The gate that separates "stable function of the data" from "real
+  structure in the data" is C-null, which is UNRUN.** So the family-side scope is SYMMETRIC with the
+  twin-side: do not let C1+C3 green read as "family product validated" over an unrun meaning-gate, exactly
+  as the twin-vacuity refusal forbids reading 448 twins as "twin validated" over a vacuous gate. Banked =
+  family **stability**; family **meaning** is OPEN pending C-null.
+- **NEXT (gated, in order):** (1) **C-null** — the scope-setter and the family **meaning** gate.
+  **STEP ONE of the C-null pass is the POSITIVE CONTROL, pasted, gating the null — not the null itself**
+  (C-null is an absence claim; an un-controlled "families survive the shuffle" decodes to "my null had no
+  teeth," not "families are real"). The control must DISTINGUISH the per-component (destroying) shuffle
+  from the joint (toothless) shuffle, and that distinction appears **only under RE-CLUSTERING**: scoring
+  the real partition under shuffled distances collapses for *both* shuffles, so it cannot tell them apart.
+  So the control = re-cluster under each shuffle and show **per-component silhouette collapses below real
+  while joint silhouette ≈ real** (joint = the false-pass demonstrated). Only then run the real null:
+  N=200 per-component shuffles, re-cluster at the same cut, **the 95th-pct quantile computed over the
+  per-component (destroying) shuffle draws — NOT joint draws** (else the quantile inherits the toothless
+  null and the threshold is counterfeit one level up). Also report the twin-pair count/gate-vacuity in
+  parallel. **Chimera surgery map (derived 2026-06-25):** the 4 components do NOT map to separable
+  trajectory sub-terms — `shift_distance`+`metric_distance` both read `Points` (types vs
+  chi/entropy/confidence per point), `stability_distance`+`pathology_distance` both read `Summary`
+  (`trajectory_summary/12`: preservation/coupling/purity/boltzmann vs signature/drift/voids/severity). A
+  per-component chimera `trajectory_cached` needs FIELD-level reassembly (Points' type-fields from
+  π_shift, metric-fields from π_metric; Summary's stability-fields from π_stab, pathology-fields from
+  π_path), so `group_by_shift` sees shuffled shift patterns AND within-group HAC sees shuffled distances.
+  (2) **C0** pipeline-diff
   corroboration (structural primary already holds — trajectory stage writes only
   `context_profile_report.md`, never `pipeline_output.json`). (3) **C-gen** (haiku↔flash same-kernel
   family recovery — a distinct cross-generation invariance witness, NOT C2). (4) Re-checkpoint, then the

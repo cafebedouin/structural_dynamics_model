@@ -75,7 +75,11 @@ near-vacuous gate (constraint_domain `D1\=D2` ≈ `true`, 86/104 distinct) is it
 that the **twin product may be near-meaningless as currently gated** — structure produced from a vacuous
 predicate. Therefore **families and twins are DISTINCT products**:
 - A clean C0/C1/C3/C-null sweep validates **the FAMILY product** (safe + stable + structure-bearing),
-  and says **nothing** about the twin product.
+  and says **nothing** about the twin product. **NB (2026-06-25):** "structure-bearing" requires
+  **C-null** — C1+C3 alone witness only **stability** (well-defined, reproducible partition), NOT
+  **meaning**. A fixed-seed clustering of pure noise clears C1+C3. C1 is a raw size distribution, not
+  null-relative. So with C-null unrun, family **meaning is OPEN**, symmetric with twin meaning — do not
+  read C1+C3 green as "family validated."
 - **Twins = OPEN this round** — gate found vacuous, value deferred to the rebuild. Open question:
   should twins ship at all this round, or stay dormant pending the rebuild while only families ship?
 - When C-null runs on families, **also report the twin-pair count + gate vacuity** as a parallel

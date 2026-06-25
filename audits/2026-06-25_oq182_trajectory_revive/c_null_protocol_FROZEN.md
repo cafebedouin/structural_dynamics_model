@@ -72,4 +72,39 @@ partitions are even comparable in family-count to the real partition. Report-onl
   *"validated = safe + stable, NOT semantically verified; family meaning OPEN,"* recorded with this
   shuffle test named as exactly what would close it.
 
-**Frozen by:** OQ-182 cheap tier, 2026-06-25. Spend tier runs this verbatim.
+---
+
+## ADDENDUM — POSITIVE CONTROL IS STEP ONE (added 2026-06-25, operator-driven; strengthening, not a change)
+
+C-null is an **absence claim** ("structure is gone after the shuffle"), so by the project's
+positive-control rule it is a fact about the *probe* until the probe is shown to *find*. A joint-shuffle
+false-pass is a probe that cannot find: it preserves the within-component correlation it is meant to
+destroy, so "families survive the null" decodes to "my null had no teeth," not "families are real."
+**Therefore the FIRST witnessed step of the C-null pass is the positive control, pasted, gating the
+null — before any survival number is trusted.** This does NOT change the statistic, null model, N, or
+threshold above; it gates whether they may be reported.
+
+**The control must distinguish per-component (destroying) from joint (toothless) — and that distinction
+appears ONLY under re-clustering.** Derived 2026-06-25: scoring the *real partition* under shuffled
+distances (no re-cluster) collapses the silhouette for BOTH shuffles (relabeling breaks the i↔family
+correspondence either way), so it cannot tell per-component from joint. So the control re-clusters under
+each shuffle and shows:
+- **per-component** re-clustered silhouette **collapses below** the real silhouette (teeth), AND
+- **joint** re-clustered silhouette **≈ real** silhouette (the false-pass, demonstrated).
+
+Only with that pasted does the real null run. **Quantile flag (load-bearing):** the 95th-percentile
+threshold must be computed over the family-quality statistic under the **per-component (destroying)**
+shuffle draws — NOT joint draws — or the whole quantile inherits the toothless null and the threshold is
+counterfeit one level up.
+
+**Chimera surgery map (for the harness).** The 4 components do not map to separable trajectory sub-terms:
+`shift_distance`+`metric_distance` both read `Points` (per-point types vs chi/entropy/confidence);
+`stability_distance`+`pathology_distance` both read `Summary` = `trajectory_summary/12`
+(preservation/coupling/purity/boltzmann vs signature/drift_count/drift_max_severity/voids). A per-component
+chimera `trajectory_cached(C, Ctx, trajectory(C, Points', Summary'))` needs FIELD-level reassembly so that
+`group_by_shift` sees the π_shift-shuffled shift patterns AND the within-group HAC sees the fully
+component-shuffled distances. Build the chimera, re-assert `trajectory_cached`, then call
+`run_hierarchical_clustering/1` (it re-reads `trajectory_cached` + `pair_dist`; recompute `pair_dist` from
+the chimera too).
+
+**Frozen by:** OQ-182 cheap tier, 2026-06-25; positive-control addendum same day. Spend tier runs this verbatim.
