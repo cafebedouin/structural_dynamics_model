@@ -25,7 +25,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from shared.loader import load_json, read_config, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
+from shared.loader import load_json, read_config, h1_band_or_raise, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
 from shared.constants import MAXENT_TYPES, compute_psi, classify_band
 from shared.schemas import validate_enriched_pipeline
 
@@ -252,7 +252,8 @@ def cross_reference(constraint, subtype):
     return {
         "tangled_psi": constraint.get("tangled_psi"),
         "tangled_band": constraint.get("tangled_band"),
-        "h1_band": constraint.get("h1_band"),
+        "h1_band": h1_band_or_raise(constraint, "tangled_gradient"),  # OQ-51: loud on null
+
         "signature": constraint.get("signature"),
         "coalition_type": constraint.get("coalition_type"),
     }

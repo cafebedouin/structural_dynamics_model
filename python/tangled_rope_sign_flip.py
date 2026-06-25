@@ -16,7 +16,7 @@ from pathlib import Path
 
 # ── loader ───────────────────────────────────────────────────────────────────
 sys.path.insert(0, str(Path(__file__).parent))
-from shared.loader import load_json, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
+from shared.loader import load_json, h1_band_or_raise, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
 
 # ── constants ────────────────────────────────────────────────────────────────
 POSITIONS = ["powerless", "moderate", "institutional", "analytical"]
@@ -152,7 +152,7 @@ def filter_populations(pc):
     """Return dict of reference population subsets."""
     return {
         "tangled_rope": [c for c in pc if c.get("claimed_type") == "tangled_rope"],
-        "manifest_presheaves": [c for c in pc if (c.get("h1_band") or 0) > 0],
+        "manifest_presheaves": [c for c in pc if h1_band_or_raise(c, "tangled_rope_sign_flip") > 0],
         "rope": [c for c in pc if c.get("claimed_type") == "rope"],
         "snare": [c for c in pc if c.get("claimed_type") == "snare"],
     }
@@ -232,8 +232,8 @@ def run_gate1(pc):
     print(f"\nN tangled_rope = {len(tr)}")
 
     # H1 distribution for tangled_rope
-    h1_counts = Counter(c.get("h1_band", 0) for c in tr)
-    manifest = [c for c in tr if (c.get("h1_band") or 0) > 0]
+    h1_counts = Counter(h1_band_or_raise(c, "tangled_rope_sign_flip") for c in tr)
+    manifest = [c for c in tr if h1_band_or_raise(c, "tangled_rope_sign_flip") > 0]
     print(f"\nH¹ distribution within tangled_rope (N={len(tr)}):")
     for h1, cnt in sorted(h1_counts.items()):
         print(f"  H¹={h1}: {cnt:>5}  ({100*cnt/len(tr):.1f}%)")
@@ -256,7 +256,7 @@ def run_gate1(pc):
         print(f"  {t:<20} {cnt:>6}")
 
     # Reference populations
-    all_manifest = [c for c in pc if (c.get("h1_band") or 0) > 0]
+    all_manifest = [c for c in pc if h1_band_or_raise(c, "tangled_rope_sign_flip") > 0]
     rope_pop = [c for c in pc if c.get("claimed_type") == "rope"]
     snare_pop = [c for c in pc if c.get("claimed_type") == "snare"]
     print(f"\nReference populations:")

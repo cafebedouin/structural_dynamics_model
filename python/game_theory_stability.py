@@ -27,7 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from shared.loader import load_json, PIPELINE_JSON, OUTPUT_DIR
+from shared.loader import load_json, h1_band_or_raise, PIPELINE_JSON, OUTPUT_DIR
 from corpus_hash import compute_corpus_hash  # single-source corpus fingerprint (OQ-29)
 
 # ---------------------------------------------------------------------------
@@ -55,7 +55,7 @@ def main():
     # Build H¹ lookup
     h1_lookup = {}
     for c in pipeline.get("per_constraint", []):
-        h1_lookup[c["id"]] = c.get("h1_band", 0)
+        h1_lookup[c["id"]] = h1_band_or_raise(c, "game_theory_stability")  # OQ-51: loud on null
 
     # Extract bars and grid data from first (and currently only) swept param
     results_dict = persistence.get("results", {})

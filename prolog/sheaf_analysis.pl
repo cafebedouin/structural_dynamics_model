@@ -19,8 +19,9 @@
 % ============================================================================
 
 :- module(sheaf_analysis, [
-    sheaf_status/2,       % sheaf_status(C, Status)
-    block_consistency/2   % block_consistency(C, Result)
+    sheaf_status/2,              % sheaf_status(C, Status)
+    sheaf_undetermined_reason/2, % sheaf_undetermined_reason(C, Reason)
+    block_consistency/2          % block_consistency(C, Result)
 ]).
 
 :- use_module(grothendieck_cohomology).
@@ -34,13 +35,22 @@
    ================================================================ */
 
 %% sheaf_status(+Constraint, -Status) is det.
-%% Classifies a constraint into one of three regimes based on
-%% cohomological obstruction and Arakelov height.
+%% Classifies a constraint into one of FOUR regimes based on cohomological
+%% obstruction and Arakelov height.
 %%
 %% Status is one of:
 %%   genuine_sheaf    — H¹ = 0, Arakelov height below corpus threshold
 %%   fragile_presheaf — H¹ = 0, Arakelov height above corpus threshold
 %%   manifest_presheaf — H¹ > 0
+%%   undetermined     — N/A (OQ-51): EITHER <2 real seats (H¹ = null, the
+%%                      obstruction cannot be computed) OR H¹ = 0 but the
+%%                      Arakelov height that distinguishes genuine from fragile
+%%                      is uncomputable (unauthored ε / missing MaxEnt). NOT
+%%                      genuine_sheaf by absence — that was the Pattern-5 trap.
+%%
+%% The two undetermined ROUTES carry distinct provenance and resolve under
+%% different added data (more real seats vs. an authored height); the sibling
+%% predicate sheaf_undetermined_reason/2 names which. Do not collapse them.
 %%
 %% The binary distinction (genuine_sheaf + fragile_presheaf vs. manifest_presheaf)
 %% is site-invariant: it produces the same result on the 4-point canonical site
@@ -51,16 +61,37 @@
 %% site-dependent (heights can only increase with more contexts). For the
 %% fragile/genuine distinction, use the site appropriate to the analysis.
 
-sheaf_status(C, manifest_presheaf) :-
+sheaf_status(C, Status) :-
     grothendieck_cohomology:cohomological_obstruction(C, _, H1),
-    H1 > 0, !.
-sheaf_status(C, fragile_presheaf) :-
-    grothendieck_cohomology:cohomological_obstruction(C, _, 0),
-    arakelov_height:arakelov_height(C, H),
-    arakelov_height:arakelov_threshold(Thresh),
-    H > Thresh, !.
-sheaf_status(C, genuine_sheaf) :-
-    grothendieck_cohomology:cohomological_obstruction(C, _, 0).
+    (   \+ number(H1)               % H¹ = null → route 1: <2 real seats (N/A)
+    ->  Status = undetermined
+    ;   H1 > 0
+    ->  Status = manifest_presheaf
+    ;   % H¹ = 0: genuine vs fragile — but only if the height is computable.
+        (   arakelov_height:arakelov_height(C, H)
+        ->  (   arakelov_height:arakelov_threshold(Thresh), H > Thresh
+            ->  Status = fragile_presheaf
+            ;   Status = genuine_sheaf
+            )
+        ;   Status = undetermined   % route 2: uncomputable height (NOT genuine by absence)
+        )
+    ).
+
+%% sheaf_undetermined_reason(+Constraint, -Reason) is semidet.
+%% Names WHICH undetermined route a constraint took; FAILS when the constraint
+%% is determined (genuine/fragile/manifest) so json_report serializes null.
+%%   insufficient_seats  — <2 real seats; H¹ = null (route 1)
+%%   uncomputable_height — H¹ = 0 but arakelov_height/2 fails (route 2)
+%% Carries the provenance bit so the two N/A causes (resolved by seats vs by ε)
+%% stay distinguishable in the output — the carry-the-provenance-bit spine.
+sheaf_undetermined_reason(C, Reason) :-
+    grothendieck_cohomology:cohomological_obstruction(C, _, H1),
+    (   \+ number(H1)
+    ->  Reason = insufficient_seats
+    ;   H1 =:= 0,
+        \+ arakelov_height:arakelov_height(C, _)
+    ->  Reason = uncomputable_height
+    ).
 
 /* ================================================================
    BLOCK CONSISTENCY — Product-site power-level invariant

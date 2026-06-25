@@ -170,7 +170,9 @@ _TANGLED_BANDS = {"rope_leaning", "genuinely_tangled", "snare_leaning"}
 _STRATEGIC_STABILITY_VALUES = {"vulnerable", "latent_vulnerable", "resistant", "not_applicable"}
 _MIXED_EQ_QUALITY_VALUES = {"dominant_strategy", "no_equilibrium", "loose"}
 _COVER_STORY_TYPES = {"no_cover", "nash_forced", "type_relabeled", "fcr_no_structural_effect"}
-_SHEAF_STATUS_VALUES = {"genuine_sheaf", "fragile_presheaf", "manifest_presheaf"}
+_SHEAF_STATUS_VALUES = {"genuine_sheaf", "fragile_presheaf", "manifest_presheaf", "undetermined"}
+# OQ-51: when sheaf_status == "undetermined", sheaf_undetermined_reason names the route.
+_SHEAF_UNDETERMINED_REASONS = {"insufficient_seats", "uncomputable_height"}
 
 PIPELINE_FIELDS = [
     # (field_name, expected_type, nullable)
@@ -200,8 +202,9 @@ PIPELINE_FIELDS = [
     ("maxent_top_type",             str,          True),   # null for constraints without MaxEnt data
     ("maxent_indexed",              dict,         True),   # null when indexed run unavailable
     ("maxent_divergence",           dict,         True),   # null when either mode missing
-    ("h1_band",                     int,          False),
+    ("h1_band",                     int,          True),   # OQ-51: null = undetermined (<2 real seats; the obstruction is N/A, not 0)
     ("sheaf_status",                str,          True),   # null if sheaf_analysis:sheaf_status/2 fails
+    ("sheaf_undetermined_reason",   str,          True),   # OQ-51: insufficient_seats|uncomputable_height; null unless sheaf_status==undetermined
     ("drift_events",                list,         False),
     # --- Nullable: incomplete entries (1-2 constraints) ---
     ("human_readable",              str,          True),
@@ -345,10 +348,25 @@ def _check_structure(entry, cid):
             if abs(total - 1.0) > 0.01:
                 errors.append(f"[{cid}] {fname} sum={total:.6f}, expected ~1.0")
 
-    # sheaf_status must be a known regime (genuine_sheaf / fragile_presheaf / manifest_presheaf)
+    # sheaf_status must be a known regime (genuine_sheaf / fragile_presheaf /
+    # manifest_presheaf / undetermined)
     ss = entry.get("sheaf_status")
     if ss is not None and isinstance(ss, str) and ss not in _SHEAF_STATUS_VALUES:
         errors.append(f"[{cid}] sheaf_status '{ss}' not in {sorted(_SHEAF_STATUS_VALUES)}")
+
+    # sheaf_undetermined_reason: a known route, and present IFF status==undetermined
+    # (OQ-51 — the provenance bit must travel with, and only with, the undetermined verdict).
+    sur = entry.get("sheaf_undetermined_reason")
+    if sur is not None:
+        if not isinstance(sur, str) or sur not in _SHEAF_UNDETERMINED_REASONS:
+            errors.append(f"[{cid}] sheaf_undetermined_reason '{sur}' not in "
+                          f"{sorted(_SHEAF_UNDETERMINED_REASONS)}")
+        elif ss != "undetermined":
+            errors.append(f"[{cid}] sheaf_undetermined_reason '{sur}' set but "
+                          f"sheaf_status is '{ss}' (expected 'undetermined')")
+    elif ss == "undetermined":
+        errors.append(f"[{cid}] sheaf_status=='undetermined' but "
+                      f"sheaf_undetermined_reason is null (the route must be named)")
 
     # coupling must have {category, score, boltzmann}
     coupling = entry.get("coupling")

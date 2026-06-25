@@ -117,6 +117,33 @@ def main():
     n_manifest = sum(1 for v in sheaf_vals.values() if v == "manifest_presheaf")
     emit_sane = (n_manifest == len(h1_gt0))
 
+    # Control 3b (OQ-51): the sheaf_status / H1 partition. manifest ⟺ h1>0 stays
+    # exact, but `undetermined` is NOT iff h1==null — route 2 (uncomputable height)
+    # yields h1==0 WITH sheaf_status==undetermined. So the partition is asserted on
+    # sheaf_status, not on h1-value alone:
+    #   manifest_presheaf                ⟺ h1 is not None and h1 > 0
+    #   genuine_sheaf | fragile_presheaf ⟹ h1 == 0
+    #   undetermined                     ⟹ h1 is None (route 1) or h1 == 0 (route 2)
+    # A null sheaf_status is a separate predicate-failed path, excluded here.
+    n_undetermined = sum(1 for v in sheaf_vals.values() if v == "undetermined")
+    partition_violations = []
+    for cid, s in sheaf_vals.items():
+        if s is None:
+            continue
+        h = h1_vals.get(cid)
+        pos = (h is not None and h > 0)
+        if s == "manifest_presheaf":
+            ok = pos
+        elif s in ("genuine_sheaf", "fragile_presheaf"):
+            ok = (h == 0)
+        elif s == "undetermined":
+            ok = (h is None or h == 0)
+        else:
+            ok = False  # unrecognized status atom
+        if not ok:
+            partition_violations.append({"id": cid, "sheaf_status": s, "h1_band": h})
+    partition_ok = (not partition_violations)
+
     # Control 4: W1-max reconciliation — prove field identity for the argmax.
     # wasserstein_total_fracture must equal the sum of the 3 wasserstein_profile edges.
     argmax_entry = by_id[argmax_id]
@@ -204,6 +231,9 @@ def main():
             "w1_argmax_id": argmax_id, "w1_argmax": argmax_w1,
             "h1_gt0_count": len(h1_gt0), "manifest_example": manifest_example,
             "manifest_count": n_manifest, "emit_sane": emit_sane,
+            "undetermined_count": n_undetermined,
+            "sheaf_h1_partition_ok": partition_ok,
+            "sheaf_h1_partition_violations": partition_violations[:20],
             "w1_max_field_identity_ok": field_identity_ok,
             "w1_argmax_edge_sum": edge_sum,
         },
@@ -274,6 +304,10 @@ def main():
     lines.append(f"3. **Emit sanity:** manifest_presheaf count = {n_manifest}, "
                  f"H1>0 count = {len(h1_gt0)} → "
                  f"{'CONSISTENT' if emit_sane else 'MISMATCH'}.")
+    lines.append(f"3b. **Sheaf/H1 partition (OQ-51):** {n_undetermined} undetermined; "
+                 f"partition (manifest⟺h1>0; genuine/fragile⟹h1==0; "
+                 f"undetermined⟹h1∈{{null,0}}) → "
+                 f"{'HOLDS' if partition_ok else f'VIOLATED ({len(partition_violations)})'}.")
     edge_sum_str = f"{edge_sum:.6f}" if isinstance(edge_sum, (int, float)) else str(edge_sum)
     lines.append(f"4. **W1-max reconciliation (verdict (a) field-identity):** argmax W1 = "
                  f"{argmax_w1:.6f}; sum of its 3 canonical edges = "
@@ -349,6 +383,8 @@ def main():
           f"H1={h1_vals[manifest_example]}")
     print(f"[C3] emit sanity: manifest={n_manifest} vs h1>0={len(h1_gt0)} "
           f"-> {'CONSISTENT' if emit_sane else 'MISMATCH'}")
+    print(f"[C3b] sheaf/H1 partition (OQ-51): undetermined={n_undetermined} "
+          f"-> {'HOLDS' if partition_ok else f'VIOLATED {partition_violations[:5]}'}")
     print(f"[C4] W1-max field-identity: argmax_w1={argmax_w1:.6f} edge_sum={edge_sum} "
           f"-> {'CONFIRMED (wasserstein_total_fracture = 3-edge sum)' if field_identity_ok else 'NOT CONFIRMED'}")
     print(f"sheaf_status counts: {dict(sheaf_counts)}")

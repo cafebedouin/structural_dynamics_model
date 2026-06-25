@@ -16,6 +16,8 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from shared.loader import h1_band_or_raise
+
 REPO_ROOT = Path(__file__).parent.parent
 PROLOG_DIR = REPO_ROOT / "prolog"
 PIPELINE_OUTPUT = REPO_ROOT / "outputs" / "pipeline_output.json"
@@ -25,7 +27,8 @@ def load_h1_bands():
     with open(PIPELINE_OUTPUT) as f:
         data = json.load(f)
     manifest = data.get("manifest", {})
-    h1 = {item["id"]: item.get("h1_band", 0) for item in data["per_constraint"]}
+    # OQ-51: loud on null h1_band, never silent 0
+    h1 = {item["id"]: h1_band_or_raise(item, "run_drift_mismatch") for item in data["per_constraint"]}
     drift_detected = {
         item["id"]: any(
             e.get("type") == "network_drift"

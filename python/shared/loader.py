@@ -110,6 +110,50 @@ def load_orbits_constraints(path=None):
 
 
 # ---------------------------------------------------------------------------
+# h1_band loud guard (OQ-51 N/A containment)
+# ---------------------------------------------------------------------------
+
+class MissingH1(Exception):
+    """Raised when an h1_band reader meets a null/absent value instead of a number."""
+
+
+def h1_band_or_raise(entry, source=None):
+    """Return entry['h1_band'] as a number, or raise MissingH1 — never coerce to 0.
+
+    OQ-51 made h1_band nullable: null = UNDETERMINED (the cohomological obstruction
+    is N/A — <2 real seats or uncomputable height — NOT zero). A reader that does
+    `.get("h1_band", 0)` / `.get("h1_band") or 0` silently reads an undetermined (or
+    manifest) constraint as 'no obstruction' = genuine, on exactly the constraints
+    OQ-51 corrects. This guard makes that coercion LOUD.
+
+    It is the PER-SITE containment (each reader calls it explicitly on its own
+    per_constraint entry), NOT the deferred load_per_constraint load-path refactor.
+    What 'undetermined' should MEAN at each read site is the deferred
+    13-site-semantics OQ; until then the reader fails loud rather than lies.
+
+    The message distinguishes the two null causes (same loud stop, different cause —
+    the message is the witness that tells them apart at 2am):
+      - key ABSENT → stale/partial pipeline artifact (re-run run_pipeline.py)
+      - value null → undetermined (OQ-51): <2 real seats or uncomputable height
+    """
+    loc = f" [{source}]" if source else ""
+    cid = entry.get("id", "<unknown-id>")
+    if "h1_band" not in entry:
+        raise MissingH1(
+            f"h1_band ABSENT for '{cid}'{loc} — stale/partial pipeline artifact "
+            f"(key missing, not undetermined; re-run python/run_pipeline.py)."
+        )
+    v = entry["h1_band"]
+    if v is None:
+        raise MissingH1(
+            f"h1_band is null (UNDETERMINED, OQ-51) for '{cid}'{loc} — <2 real seats "
+            f"or uncomputable height. Handle undetermined explicitly; do not coerce "
+            f"to 0 (the per-site semantics is the deferred 13-site OQ)."
+        )
+    return v
+
+
+# ---------------------------------------------------------------------------
 # Config reader
 # ---------------------------------------------------------------------------
 

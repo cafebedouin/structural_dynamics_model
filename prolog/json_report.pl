@@ -422,10 +422,18 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     ;   format(S, '      "h1_band": null,~n', [])
     ),
 
-    % sheaf_status (discrete gluing regime: genuine_sheaf / fragile_presheaf / manifest_presheaf)
+    % sheaf_status (discrete gluing regime: genuine_sheaf / fragile_presheaf /
+    % manifest_presheaf / undetermined — OQ-51 N/A)
     (   catch(sheaf_analysis:sheaf_status(C, SheafStatus), _, fail)
     ->  format(S, '      "sheaf_status": "~w",~n', [SheafStatus])
     ;   format(S, '      "sheaf_status": null,~n', [])
+    ),
+
+    % sheaf_undetermined_reason — provenance bit for the undetermined route
+    % (insufficient_seats | uncomputable_height); null when status ≠ undetermined.
+    (   catch(sheaf_analysis:sheaf_undetermined_reason(C, SheafReason), _, fail)
+    ->  format(S, '      "sheaf_undetermined_reason": "~w",~n', [SheafReason])
+    ;   format(S, '      "sheaf_undetermined_reason": null,~n', [])
     ),
 
     % wasserstein transport (continuous complement to H1)

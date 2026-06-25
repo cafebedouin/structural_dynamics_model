@@ -2,6 +2,8 @@
 
 from collections import Counter
 
+from shared.loader import h1_band_or_raise
+
 
 def modal_type(perspectives):
     """Return the most common non-null type across perspectives."""
@@ -22,7 +24,7 @@ def build_profile(data):
 
     n_false_ci_rope = sum(1 for c in constraints if c.get("signature") == "false_ci_rope")
     n_h1_gt_0 = sum(1 for c in constraints
-                    if (c.get("h1_band") or 0) > 0)
+                    if h1_band_or_raise(c, "corpus_profile") > 0)  # OQ-51: loud on null
     n_with_drift = sum(1 for c in constraints
                        if c.get("drift_events"))
     n_critical_drift = sum(1 for c in constraints
