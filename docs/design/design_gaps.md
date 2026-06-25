@@ -941,6 +941,38 @@ Named here 2026-06-23.
 
 ---
 
+## GAP-20 — Two cross-domain-twin producers exist; `isomorphism_engine.pl` is a loaded-but-dead fork (deletion deferred)
+
+**The canonical capability (live):** `context_profile_mining:cross_domain_twins/3` — integrated
+cross-domain structural twins, produced inside the HAC trajectory subsystem and reached via
+`context_profile_report:run_trajectory_report`. This is the producer to keep (OQ-182; the subsystem
+itself is being revived + validated as commentary-grade).
+
+**The fork (loaded but non-executing, Pattern 2):** `isomorphism_engine.pl` is a *second*
+cross-domain-isomorphism producer. It is **loaded** — `constraint_bridge.pl:11` and
+`report_generator.pl:31` both `use_module(isomorphism_engine)`, and both are in `stack.pl` — but every
+one of its 4 call sites is dead, so it never executes on any live path (full grep, 2026-06-25):
+- `constraint_bridge:check_for_social_twins/2` — NOT in the `constraint_bridge` export list
+  (`constraint_bridge.pl:2–5`) and never called.
+- `report_generator:cross_domain_audit/0` (`report_generator.pl:1018`) — defined, never called.
+- `isomorphism_report:generate_isomorphism_report/0` — `isomorphism_report.pl` is NOT in `stack.pl`
+  (unwired); its `isomorphism_engine:generate_cross_domain_index/1` therefore has no live caller.
+
+**Why this is a gap, not a defect to fix now:** the fork is harmless (it computes nothing on the live
+path) but is genuine duplicate clutter — two producers for one capability, with canonicity now a
+*checked fact* (this entry + KNOWN_STATE 2026-06-25) rather than a memory. **Deleting it is NOT a
+one-line behavior-preserving cleanup:** it touches 2 `use_module` directives + 3 dead call sites across
+3 files, so it needs its own old-vs-new diff-witness (Build Discipline Pattern 3). Per operator ruling
+(OQ-182 plan, Step 2) the fork is **log-only** here, not bundled onto the OQ-182 gate-flip commit.
+
+**What closing the gap would require:** mint a dedicated output-neutral cleanup OQ that removes
+`isomorphism_engine.pl` + `isomorphism_report.pl` + the 3 dead call sites, witnessed by a
+`pipeline_output.json` byte-identical diff (the fork firing nowhere ⇒ removal must be a no-op).
+Until then, the duplicate stays declared here so no future agent revives the dead path as if it were
+the canonical twin-finder. Named here 2026-06-25.
+
+---
+
 ## Deferred triggers (not yet gaps)
 
 A trigger is a capability that is **not** committed future work — it has too few real users to

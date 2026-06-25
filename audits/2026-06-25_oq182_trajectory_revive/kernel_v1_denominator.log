@@ -1,0 +1,21 @@
+=== OQ-182 kernel_v1 denominator — 2026-06-25 ===
+
+Overlay (asserta, per Corpus Loading — assertz is silently ignored):
+  asserta(config:param(corpus_path, 'archives/datasets/kernel_v1')),
+  [stack], corpus_loader:load_all_testsets.
+
+kernel_v1 .pl files on disk : 1106
+corpus_constraint/1 facts   : 1106   (1:1 with files — engine keys one constraint per file by name)
+
+[corpus] Loading 1106 testset files...
+[corpus] Loaded 1106 testsets successfully.
+KERNEL_V1_DENOMINATOR: 1106 corpus_constraint/1 facts
+
+Notes:
+- The HAC O(n^2) cost and the C-null silhouette scale on constraints-that-yield-trajectories
+  (<= 1106), NOT raw files. On testsets/, 104 corpus_constraint -> 97 trajectories (7 lack metrics).
+  The exact kernel_v1 trajectory count is produced by a full trajectory_run in the spend tier.
+  Upper bound: 1106 trajectories -> ~611k pairwise pair_dist/3 facts (n*(n-1)/2).
+- This re-witnesses the stale docs/trajectory_implementation_notes.md:34
+  "26-families-from-24-orbits / ~1021-constraint" claim: 1106 is close to ~1021, confirming that
+  figure was measured on a kernel_v1 ancestor. The spend-tier C1 must cite 1106 (constraints), not 1021.

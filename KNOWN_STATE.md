@@ -45,6 +45,37 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-25 — OQ-182 minted: revive + validate the dormant HAC trajectory-mining subsystem (cheap tier)
+**Files:** prolog/context_profile_mining.pl, prolog/config.pl, prolog/isomorphism_engine.pl, prolog/constraint_bridge.pl, prolog/report_generator.pl, ISSUES.md, audits/2026-06-25_oq182_trajectory_revive/
+**Tier:** landed
+
+Cheap tier of the OQ-182 plan (`~/.claude/plans/fancy-splashing-pancake.md`). The plan was authored
+naming "OQ-180"; that label was already taken by the OQ-51 build (commit `cef5dc6e`), so this work is
+**OQ-182** (highest pre-existing was OQ-181). Audit dir: `audits/2026-06-25_oq182_trajectory_revive/`.
+
+- **C-prov PASS (testsets/ leg, witnessed).** `prolog/context_profile_mining:trajectory_run/2` on
+  `testsets/` (104 `corpus_constraint/1`; 97 yield trajectories → 11 families, 448 twins) leaves BOTH
+  `classify_at_time_eps` and `classify_at_time_theater` globals **unset** — so the 2 passive
+  `nb_getval` leaf reads (`drl_core.pl:306`, `boltzmann_compliance.pl:510`) fall back to authored
+  `constraint_metric`, no imputed `BaseX=0.5`/`0.10` coupling. Excluded-constraint count = 0. Positive
+  control (separate process): `classify_at_time/4` on an **on-grid** constraint+Time DOES set
+  `classify_at_time_eps = eps(...,0.03)` — the probe is sensitive. **Note (OQ-178 trap, hit live):** the
+  first positive-control draw at `Time=0` on an off-grid constraint returned `unknown` and bailed before
+  the `nb_setval`; the control only proves sensitivity when fed a Time on the constraint's authored
+  suppression grid. Witness: `c_prov_runtime.log`. **The same global-unset check re-runs on `kernel_v1`
+  in the spend tier — C-prov gates both corpora, not just the narrow one.**
+- **Cross-domain-twin fork verdict (Step 2, log-only, behavior-preserving).**
+  `context_profile_mining:cross_domain_twins/3` is the **canonical** producer (live via
+  `context_profile_report`, reachable). `isomorphism_engine.pl` is a **loaded-but-non-executing**
+  Pattern-2 fork: loaded via `constraint_bridge.pl:11` + `report_generator.pl:31` (both in `stack.pl`),
+  but all callers dead — `constraint_bridge:check_for_social_twins/2` (NOT in the export list at
+  `constraint_bridge.pl:2–5`, never called), `report_generator:cross_domain_audit/0` (defined, never
+  called), `isomorphism_report.pl` (NOT in `stack.pl`, unwired) → its `generate_cross_domain_index/1`
+  has no live caller. Positive control: the grep DID find these sites, so a live caller would have
+  surfaced. **NOT deleted** — deletion is a separate multi-file output-neutral cleanup (2 `use_module` +
+  3 dead call sites) with its own diff-witness; mint as its own OQ if wanted. See `design_gaps.md` GAP-20.
+- **Spend tier (C0/C1/C2/C3/C-null, gate flip) is gated behind an operator checkpoint** — not yet run.
+
 ## 2026-06-25 — OQ-51 main build: `unknown` is N/A on the canonical sheaf/H1 path (commits `f8ae0c9c` + `15cca7ed`)
 **Files:** prolog/grothendieck_cohomology.pl, prolog/sheaf_analysis.pl, prolog/json_report.pl, prolog/product_site_export.pl, python/shared/schemas.py, python/shared/loader.py, python/w1_sheaf_join.py, python/enhanced_report.py, python/orbit_characterization.py, python/run_drift_mismatch.py, python/sweeps/epsilon_sensitivity.py, python/sweeps/range_sweep.py, python/sweeps/product_site_delta_sweep.py
 **Tier:** tripwire

@@ -1880,8 +1880,11 @@ inside the dormant trajectory classifier (`snapshot_type`/`degradation_chain` co
 nothing, positive-controlled). These are the same fail-closed-vs-impute decision as the live
 sites; reviving the surface that would make them live is the coupled rebuild ruling (KNOWN_STATE
 2026-06-08 "three deferred temporal threads = one ruling"; since adjudicated in part — OQ-83
-resolved 2026-06-11, D-fork ruled NO-OPEN at OQ-110; revive-or-gap of the dormant trajectory
-classifier is OQ-91's candidate-home question).
+resolved 2026-06-11, D-fork ruled NO-OPEN at OQ-110; revive-or-gap of the dormant
+`transition_paths`/`snapshot_type` repair-direction classifier is OQ-91's candidate-home
+question — the *separate* dormant HAC structural-family / cross-domain-twin module
+`context_profile_mining.pl` is owned by **OQ-182** (revive + validate as commentary-grade), bundled
+with this thread but not gated by it).
 
 **Origin (compressed; full audit scaffolding, gate-shape taxonomy, instance #1/#2 texts in git
 history).** Premise: zero-because-measured and zero-because-missing collapse to one value at a
@@ -9365,6 +9368,62 @@ scoped).
 
 **What resolution changes:** replaces 13 loud-stops with correct per-site `undetermined` handling, so
 the H1-bearing analyses run (rather than crash) on an undetermined-bearing corpus.
+
+## OQ-182 — Revive + validate the dormant HAC structural-family / cross-domain-twin commentary subsystem
+
+**Ω-type:** Ω_C (design choice — what the diagnostic organ is for; commentary-grade annotation, never reclassification).
+
+**Status:** investigating — cheap tier (mint + C-prov + fork-log + denominator + frozen C-null protocol) in progress; spend-tier validation gated behind an operator checkpoint.
+**Priority:** 2
+**Deps:** bundled_with OQ-91
+
+**Recon verdict (2026-06-25).** `prolog/context_profile_mining.pl` (the HAC structural-family /
+cross-domain-twin module, formerly `trajectory_mining.pl`) is dormant
+(`config:param(trajectory_enabled, 0)`, `config.pl:571`). Its crash was fixed during the OQ-16 rename
+(commit `fc9b4688`), but fixing the crash did not validate the subsystem. Adjudicated by *value* per
+build_discipline's "Unwired ≠ worthless": it yields **UNIQUE** products no *live* subsystem produces —
+metric-enriched structural families via hierarchical agglomerative clustering (the live `orbit_report.pl`
+produces only type-only orbit families by exact signature match), plus integrated cross-domain structural
+twins. Unique-but-unwired = *unfinished value* ⇒ ruling is **revive + validate**.
+
+**Governing invariant.** Commentary-grade, never correction-grade. Enabling the subsystem may ADD
+`outputs/context_profile_report.md` and nothing else — it must not change `dr_type`, purity, signature
+verdicts, `verdict_join`, or any classification field in `pipeline_output.json`. The primary witness is
+structural (C0 layers 1+2: encapsulation read-scan + write-scan, gathered this session); the corpus diff
+is corroboration over tested inputs only. Nothing downstream consumes `context_profile_report.md` — the
+nothing-reads-it property is part of the invariant, not a gap.
+
+**Why `bundled_with OQ-91`, not `blocked_on OQ-91`.** OQ-91 is the sibling dormant observer-trajectory
+thread (`transition_paths`/`snapshot_type` repair). The original plan speculated a `blocked_on OQ-91`
+impute-site edge, but the C-prov static trace (this session) shows the four `trajectory_distance`
+components do **not** consume OQ-91's impute sites (`snapshot_type`, `classify_at_time`,
+`constraint_history`, `degradation_chain`): of 9 leaf-source modules, 7 are fully clean and the 2 hits
+(`drl_core.pl:306`, `boltzmann_compliance.pl:510`) are passive `nb_getval` fallback reads of the
+`classify_at_time_*` globals, which `trajectory_run` never sets. The dependency is not live; the threads
+are siblings, not gated.
+
+**Resolution criteria (gate controls).**
+- **C-prov** — no imputed/fabricated value reaches the clustering. Primary witness is corpus-independent
+  (the call-graph fact: nothing in `trajectory_run`'s tree calls `classify_at_time`); per-corpus
+  confirmation is the runtime `classify_at_time_*` global-unset check, run on BOTH `testsets/` and
+  `kernel_v1`, with a positive control showing a global *does* set when `classify_at_time/4` is called.
+- **C0** — commentary-only. Structural primary (C0 layers 1+2) + corroborating overlay-0-vs-1
+  `pipeline_output.json` diff with zero deltas in every classification field (exit 0 + mtime advanced),
+  plus an adjacent-field positive control.
+- **C1** — HAC families non-degenerate (neither all-singletons nor one giant cluster); cut-height
+  escalation pre-registered, re-tuning surfaced not auto-absorbed.
+- **C2** — cross-domain twin two-sided control, positive case identified by an *independent* signal
+  (anti-circularity); absence-as-finding if no real pair exists; synthetic pair = mechanism-test only.
+- **C3** — determinism + permutation-stable partition (ship-blocking; HAC tie-breaking can flip the
+  partition under benign reordering).
+- **C-null** — scope-setter (not flip-blocker): frozen protocol (mean silhouette from the precomputed
+  distance matrix; per-component-independent shuffle; N=200; real mean `s` must exceed the 95th
+  percentile of the null). Pass ⇒ close as "validated meaning-bearing product"; fail ⇒ "validated = safe
+  + stable, NOT semantically verified; family meaning OPEN," with the shuffle test named as what closes it.
+
+**Evidence dir:** `audits/2026-06-25_oq182_trajectory_revive/`. Cross-domain-twin fork verdict (Step 2):
+`context_profile_mining:cross_domain_twins/3` is canonical; `isomorphism_engine.pl` is a
+loaded-but-non-executing Pattern-2 fork (all 4 call sites dead) — log-only, deletion deferred as its own item.
 
 ---
 

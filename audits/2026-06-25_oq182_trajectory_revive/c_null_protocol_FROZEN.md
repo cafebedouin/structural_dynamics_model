@@ -1,0 +1,75 @@
+# C-null protocol — FROZEN (pre-registered 2026-06-25, before any spend-tier separation number is seen)
+
+**Purpose.** C-null is the OQ-182 **scope-setter**, not a flip-blocker. It answers: do the HAC
+structural families MEAN anything, or could a shuffle produce equally "tight" families? It sets
+OQ-182's close verdict — *validated meaning-bearing* (pass) vs *validated safe+stable, meaning OPEN*
+(fail). This file is frozen BEFORE the spend tier runs; pre-registration only counts if it precedes
+the data. Do not edit the statistic, null model, N, or threshold after a separation number is seen.
+
+---
+
+## Statistic — mean silhouette over the HAC family partition
+
+Distance-matrix-native (no coordinate re-derivation), bounded `[-1, 1]`. Computed directly from the
+precomputed pairwise distance facts `pair_dist/3` over the HAC family partition (`family_assignment/2`):
+
+For each constraint `c`:
+- `a(c)` = mean distance from `c` to every OTHER member of `c`'s own family (intra-family).
+  (Singleton family ⇒ `a(c)` undefined; exclude singletons from the mean, and report the count
+  excluded — singletons are anomalies, not silhouette-scorable.)
+- `b(c)` = min over other families `F` of [mean distance from `c` to all members of `F`]
+  (nearest-other-family).
+- `s(c) = (b(c) - a(c)) / max(a(c), b(c))`.
+
+**Report: mean `s` over all non-singleton constraints** (the real statistic), per corpus
+(`testsets/` and `kernel_v1`).
+
+---
+
+## Null model — per-component-independent permutation
+
+The 4 `trajectory_distance` components (weights `config.pl:572–575`):
+1. **shift** (type-sequence) — weight 0.35
+2. **metric** (chi / entropy / conf sequence) — weight 0.25
+3. **stability** (coupling, purity tuple) — weight 0.25
+4. **pathology** (drift, voids tuple) — weight 0.15
+
+Export each constraint's 4 component feature-bundles. For each of N permutations:
+- **Independently** permute the constraint→bundle map FOR EACH of the 4 components SEPARATELY
+  (4 independent shuffles per permutation, not one joint shuffle).
+  - *Why per-component, not joint:* a joint shuffle merely relabels intact feature-vectors —
+    distances are preserved up to relabeling and the silhouette is unchanged ⇒ a false PASS. The
+    per-component shuffle destroys the cross-component co-occurrence structure that is exactly what a
+    "structural family" claims to capture, while preserving each component's marginal distribution.
+- Recompute the weighted distance matrix from the shuffled bundles (same 4 weights).
+- Re-run HAC at the **SAME cut height** (`trajectory_family_cut_level = 0.30`, `config.pl:576`).
+- Recompute mean `s` (same statistic, same singleton-exclusion rule).
+
+---
+
+## N and threshold (frozen)
+
+- **N = 200** permutations.
+- **Threshold (one-sided):** real mean `s` must **exceed the 95th percentile** of the null mean-`s`
+  distribution. Chosen now; NOT after seeing the first shuffle.
+
+## Mandatory reporting add (does not change the threshold)
+
+**Report the null FAMILY-COUNT distribution alongside null `s`.** Silhouette is not scale-invariant
+across cluster counts: a shuffled (less-structured) input at a *fixed* cut tends to produce more,
+smaller families, which can inflate the mean nearest-other-family distance `b` and thus inflate null
+`s` — biasing **toward a false FAIL** (real families real, but scoped to "meaning OPEN"), never a
+false PASS. Reporting the null partition granularity lets a fail be read against whether the null
+partitions are even comparable in family-count to the real partition. Report-only; threshold unchanged.
+
+---
+
+## Outcome rule (frozen)
+
+- **C-null PASS** (real mean `s` > null 95th pct): OQ-182 may close as
+  *"validated meaning-bearing product."*
+- **C-null FAIL**: do NOT ship families as meaning-bearing. OQ-182's close scopes to
+  *"validated = safe + stable, NOT semantically verified; family meaning OPEN,"* recorded with this
+  shuffle test named as exactly what would close it.
+
+**Frozen by:** OQ-182 cheap tier, 2026-06-25. Spend tier runs this verbatim.

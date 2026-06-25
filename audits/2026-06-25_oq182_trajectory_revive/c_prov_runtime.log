@@ -1,0 +1,19 @@
+=== OQ-182 C-prov runtime witness — 2026-06-25T21:45:35Z ===
+corpus: prolog/testsets/ (104 .pl files = 104 corpus_constraint/1; 97 yield trajectories)
+
+### GOAL cprov_main: trajectory_run then assert classify_at_time_* globals UNSET
+CORPUS: 104 constraints loaded
+SUMMARY: trajectory_summary(total_constraints(97),families(11),cross_domain_twins(448),anomalies(1))
+PASS: classify_at_time_eps UNSET after trajectory_run
+PASS: classify_at_time_theater UNSET after trajectory_run
+EXCLUDED_CONSTRAINTS: 0 (no global set => no impute coupling => nothing excluded)
+
+### GOAL cprov_poscontrol (SEPARATE PROCESS): classify_at_time/4 DOES set the global
+POSCTRL_CONSTRAINT: actinide_replenishment_mechanism_flat_control (temporal grid Time=0)
+PRE: eps unset before classify_at_time (expected)
+classify_at_time(actinide_replenishment_mechanism_flat_control, 0) => Type=mountain
+PASS_POSCTRL: classify_at_time_eps SET = eps(actinide_replenishment_mechanism_flat_control,0.03) (probe CAN detect a set global)
+
+VERDICT: C-prov PASS (testsets/ leg). Both globals unset after trajectory_run;
+positive control confirms the probe detects a set global. Excluded count = 0.
+NOTE: same global-unset check re-runs on kernel_v1 in the spend tier (gates both corpora).
