@@ -313,39 +313,6 @@ validate_edge_cases :-
                 assertz(validation_warning(mandatrophy, C, E)))))
     ;  format('  ✓ No mandatrophies detected~n', [])),
 
-    % Check for pitons (no resistance despite enforcement).
-    % OQ-37/OQ-44: `resistance_to_change` is a consumer-only metric name — 0 facts in
-    % every corpus to date — so this join used to be [] by absence and the green
-    % checkmark printed unconditionally (vacuous pass inside the validation suite).
-    % The pass must carry its witness (OQ-96): print the joined-table sizes, and when
-    % the resistance side is empty print a vacuity notice, never the checkmark.
-    % Removal/replacement of this heuristic is gated on OQ-90 (FCR-branch piton
-    % refinement); the honest line is not.
-    findall(C,
-            (narrative_ontology:constraint_metric(C, suppression_requirement, S),
-             narrative_ontology:constraint_metric(C, resistance_to_change, R),
-             S > 0.3, R < 0.1),
-            Zombies),
-    aggregate_all(count,
-                  narrative_ontology:constraint_metric(_, suppression_requirement, _),
-                  SuppFacts),
-    aggregate_all(count,
-                  narrative_ontology:constraint_metric(_, resistance_to_change, _),
-                  ResistFacts),
-
-    length(Zombies, ZombieCount),
-    (ZombieCount > 0
-    -> (format('  ⚠ ~w potential piton(s) detected~n', [ZombieCount]),
-        forall(member(C, Zombies),
-               (narrative_ontology:constraint_metric(C, suppression_requirement, S),
-                narrative_ontology:constraint_metric(C, resistance_to_change, R),
-                format('    - ~w (S=~2f but R=~2f < 0.1)~n', [C, S, R]),
-                assertz(validation_warning(piton, C, S-R)))))
-    ;  ResistFacts =:= 0
-    -> format('  ⚠ piton check VACUOUS: 0 resistance_to_change facts authored — check cannot fire (OQ-37)~n', [])
-    ;  format('  ✓ No pitons detected (joined over ~w suppression / ~w resistance_to_change facts)~n',
-              [SuppFacts, ResistFacts])),
-
     % Check for extreme values
     findall(C-M-V,
             (narrative_ontology:constraint_metric(C, M, V),

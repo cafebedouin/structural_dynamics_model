@@ -17,7 +17,6 @@
     transformation_detected/5,
     transformation_type/6,
     canonical_transformation/6,
-    predict_transformation/3,
 
     % Stage 4: Audit
     possibly/1,
@@ -311,40 +310,13 @@ check_capture_between(C, T1, T2) :-
     config:param(snare_epsilon_floor, Floor),
     X2 >= Floor.
 
-%% predict_transformation(+C, +CurrentType, -LikelyFutureType)
-%  Predicts likely future transformation based on trajectory.
-%  Uses least-squares slope on time-sorted measurements (N >= 3)
-%  to detect genuine trends, avoiding false positives from noise
-%  or V-shaped recoveries that a first-vs-last comparison would miss.
-predict_transformation(C, rope, snare) :-
-    findall(T-X, narrative_ontology:measurement(_, C, extractiveness, T, X), Pairs),
-    length(Pairs, N), N >= 3,
-    msort(Pairs, Sorted),
-    linear_slope(Sorted, Slope),
-    Slope > 0,
-    last(Sorted, _-X_latest),
-    X_latest > 0.5,
-    config:param(snare_epsilon_floor, Floor),
-    X_latest < Floor.
-
-predict_transformation(C, rope, piton) :-
-    findall(T-E, narrative_ontology:measurement(_, C, suppression_requirement, T, E), Pairs),
-    length(Pairs, N), N >= 3,
-    msort(Pairs, Sorted),
-    linear_slope(Sorted, Slope),
-    Slope > 0,
-    last(Sorted, _-E_latest),
-    E_latest > 0.3,
-    narrative_ontology:constraint_metric(C, extractiveness, X),
-    X < 0.35.
-
-predict_transformation(C, tangled_rope, snare) :-
-    narrative_ontology:constraint_metric(C, extractiveness, X),
-    X > 0.5.
-
 /* ----------------------------------------------------------------
    STATISTICAL HELPERS: Slope and Monotonicity
-   Used by predict_transformation and drift report.
+   monotonic_increasing, monotonic_decreasing and non_monotonic_trajectory
+   feed the drift report. linear_slope and slope_accum are now UNUSED:
+   predict_transformation/3, their sole caller, was stripped (OQ-38,
+   2026-06-24). Kept pending the OQ-38 clause-level orphan sweep (Pass 2)
+   rather than cascade-removed.
    ---------------------------------------------------------------- */
 
 %% linear_slope(+TimeSortedPairs, -Slope)
