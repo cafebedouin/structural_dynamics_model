@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-25 — fix: OQ-57-class wrong-qualifier in the dormant trajectory-mining path (commit `fc9b4688`)
+**Files:** prolog/context_profile_mining.pl
+**Tier:** landed
+
+Surfaced during the OQ-16 rename (rename-independent — byte-identical pre/post). `standard_contexts/1`
+called `dirac_classification:standard_context/1`, removed 2026-06-02 (dirac kept `gauge_orbit/2`,
+`preserved_under_context_shift/2` — both still valid — but deleted its local `standard_context/1`;
+see `dirac_classification.pl:115`). Re-qualified to `drl_core:standard_context/1`, which retains the
+identical 4-context generator (verified to enumerate the same 4 canonical contexts as
+`constraint_indexing:site_contexts/1`). It was the **only** rotted call in the file.
+
+**Witness:** the report generator (run_pipeline's exact load chain + `run_trajectory_report`) now
+exits 0 with no existence/unknown-procedure errors, all 4 contexts processed, **135-line report
+produced** (was crash → empty). Production path unchanged (`trajectory_enabled=0`); fix only bites
+when enabled. **Why it sat unnoticed:** `context_profile_mining.pl` is NOT loaded by `[stack]` (only
+in the separate trajectory chain), so `check_stack.pl`'s undefined-predicate scan never saw it — a
+reminder that the OQ-57 qualifier control only covers what `[stack]` loads.
+
+**Forward (not done here):** the crash is gone, but *validating* the now-runnable trajectory-mining
+(HAC structural-family) output / deciding whether to revive the subsystem is the revive-or-gap design
+call — OQ-91-adjacent (OQ-91 itself is the sibling `transition_paths`/repair-transition thread, a
+distinct dormant module). No new defect OQ minted; the fix removed the sharp edge per the
+fix-simple-errors ruling.
+
+---
+
 ## 2026-06-25 — OQ-16 RESOLVED: temporal vocabulary rename pass (name-only, 5 renames, 3 commits)
 **Files:** prolog/metric_drift_events.pl, prolog/metric_drift_report.pl, prolog/context_profile_mining.pl, prolog/context_profile_report.pl, prolog/network_dynamics.pl, prolog/stack.pl, prolog/drl_lifecycle.pl, prolog/transition_paths.pl, prolog/cs_pattern_detection.pl, prolog/cache_registry.pl, python/run_pipeline.py, scripts/pipeline_dashboard.sh, ISSUES.md
 **Tier:** landed
