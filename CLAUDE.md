@@ -309,6 +309,14 @@ meaningful only relative to a timestamp. See `when_apparatus_sharpens_taxonomy.m
   provenance) and serialized as a sibling of `diagnostic_verdict` — any new report/consumer
   surface must headline the join; rendering `diagnostic_verdict.verdict` as a summary recreates
   the GREEN-over-severe-alerts defect. Provenance: KNOWN_STATE 2026-06-11.
+- **`h1_band` is NULLABLE; null = UNDETERMINED, never 0 (OQ-51, 2026-06-25).** A null `h1_band`
+  (in `pipeline_output.json`, and the product-site `"h1"`/`"h0"` in `product_site_orbits.json`)
+  means the cohomological obstruction is N/A — `<2` real (non-`unknown`) seats. A new reader that
+  does `.get("h1_band", 0)` / `... or 0` silently reads undetermined/manifest as genuine (`None > 0`
+  on the product site CRASHES). Use `shared.loader.h1_band_or_raise` (fails loud) or handle null
+  explicitly. `sheaf_status` has a 4th value `undetermined` (sibling `sheaf_undetermined_reason`:
+  `insufficient_seats`/`uncomputable_height`); the partition is manifest⟺h1>0, genuine/fragile⟹h1==0,
+  undetermined⟹h1∈{null,0} — NOT an iff on null (route 2 is h1==0). Provenance: KNOWN_STATE 2026-06-25.
 
 ## Build Discipline (recurring failure modes — check before declaring work done)
 
