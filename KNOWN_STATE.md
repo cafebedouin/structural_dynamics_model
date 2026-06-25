@@ -83,9 +83,19 @@ report falsely read 117 reading-specific); JSP report enumerates settler=snare/c
 **Note:** robust_context_count can RISE on abstention-heavy real-agreement kernels (performance_legitimacy
 21→147) — the lenient rule reclassifying real-agree-with-abstention from specific→robust; this is the
 RULING applied (Blast-radius prose under-predicted the direction; the output is the authority).
-**Note:** no live kernel currently has a zero-comparable pair, so the null-Jaccard path is witnessed
-by the synthetic unit test + direct writer/guard probes, not live data. Scope: only
-`cs_kernel_comparison`; the original OQ-51 `count_disagreeing_pairs`/`sheaf_status`/H1 sites remain
+**Note (dormant in serialized output — do not misread a no-op diff):** the all-unknown→`agree(unknown)`
+robust-INFLATION case (the OQ-178 motivator) fires on **0 of the 9 serialized kernels** — each has 0
+all-unknown contexts, so no serialized `robust_context_count` drops via this path; a `pipeline_output.json`
+diff shows the inflation correction NOWHERE. It is witnessed by the synthetic control
+`na_rule_all_unknown_is_undetermined` and in-predicate on 13 NON-serialized singleton kernels
+(`doomsday_clock_metric` 120 all-unknown ctxs, `maat_order_principle` 126, `gita_kurukshetra` 76 …),
+which the `L>=2` filter (`json_report.pl:1734`) excludes from output. The OQ-178 witnessed `robust 0→156`
+required JSP's two readings to fail-close to `unknown`; live they are real-typed (snare/scaffold), so the
+live serialized robust effect is the abstention-tolerant RISE (performance_legitimacy 21→147), not a drop.
+Join invariant Σ DivergeN == #cs_kernel_divergence holds **9/9 live** serialized kernels (the plan's 42/42
+was the `testsets_haiku` twin corpus, not this leg). **Note:** no live kernel currently has a zero-comparable
+pair, so the null-Jaccard path is witnessed by the synthetic unit test + direct writer/guard probes, not live
+data. Scope: only `cs_kernel_comparison`; the original OQ-51 `count_disagreeing_pairs`/`sheaf_status`/H1 sites remain
 OQ-51's separate open item. Console drift: `cs_corpus_analysis.pl:110` divergence count drops
 (expected). OQ-119 probes/exports see fewer divergences (expected).
 
