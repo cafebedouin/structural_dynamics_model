@@ -81,6 +81,22 @@ calls `dirac_classification:standard_context/1`, which `dirac_classification.pl`
 removed (comment :115) — a pre-existing dangling call in the production-disabled
 (`trajectory_enabled=0`) trajectory path; byte-identical pre/post rename, so not an OQ-16 regression.
 
+**Doc-scope refinement (commit `76eae0c1`, operator ruling 2026-06-25):** the 4 dated
+recon/essay docs (`recon_2_scope.md`, `recon_2_scope_v2.md`, `when_frame_isnt_foreground.md`,
+`commitment_systems/construction_over_inspection.md`) are NOT untouched — their **bodies are
+preserved** as dated records, but each got a **per-doc end-note** pointing at the OQ-16 rename
+table (only the renames appearing in that doc). Confirmed narrative-only first (no live
+`see prolog/X` pointer) before preserving. **Final-grep exclusion (record so a future run reads
+remaining hits as intentional-preserved, not a missed rename):** old tokens still legitimately
+appear in (a) the JSON output field `drift_events` — `json_report.pl`, ~10 python files,
+`report_sidecar_schema.json`, `diagnostic_integration_architecture.md:42`; (b) the 4 historical
+docs above (body + end-note); (c) verbatim external review transcripts `docs/review/expansions.txt`
++ `docs/review/jaynesian-gemini.txt` (quoted `detect_network_drift/3`). A correct
+"no dangling refs" grep excludes these basenames; every other old-token site is gone. **Note:**
+this pass interleaved on `main` with a concurrent instance that committed the live docs (`1bcc07c5`)
+and the close-out (`fb45c0e3`) — outcomes converged (it referenced these same hashes), but 6 claude
+instances were running; multi-writer hazard per CLAUDE.md.
+
 ---
 
 ## 2026-06-25 — OQ-39 RESOLVED: scaffold rising-suppression gets a COMMENTARY verdict (rows 14–18 disposed)
