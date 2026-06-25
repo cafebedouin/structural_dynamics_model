@@ -9425,6 +9425,29 @@ are siblings, not gated.
 `context_profile_mining:cross_domain_twins/3` is canonical; `isomorphism_engine.pl` is a
 loaded-but-non-executing Pattern-2 fork (all 4 call sites dead) — log-only, deletion deferred as its own item.
 
+**Progress (2026-06-25, testsets/ leg; operator chose testsets-first with a re-checkpoint before kernel_v1).**
+- **Cheap tier DONE + committed** (`fc4cadbf`): C-prov PASS (`c_prov_runtime.log`), fork-log/GAP-20,
+  kernel_v1 denominator = 1,106 (`kernel_v1_denominator.log`), frozen C-null protocol
+  (`c_null_protocol_FROZEN.md`).
+- **C2 domain ruling (operator, `c2_domain_finding.md`).** `cross_domain_twins/3`'s "domain" is a
+  name-prefix heuristic (`constraint_domain/2` = id before first `_`; 86/104 distinct), NOT authored
+  `topic_domain`. Ruling: KEEP name-prefix (do not edit mid-validation); **C2 = mechanism-test only**,
+  **C2-value OPEN** (closer = rebuilt corpus with a real authored domain field). **Families and twins
+  are DISTINCT products:** the 448 twins over a near-vacuous gate make the **TWIN product OPEN**
+  (deferred to rebuild); only the **FAMILY product** is being validated this round. KNOWN_STATE scope
+  must say "families validated (pending C-null); twins OPEN."
+- **Family product witnessed (committed `e4eb7646`/`9833847e`):** C1 PASS (11 families, sizes
+  [1,2,3,4,4,8,8,9,13,21,24], non-degenerate); C3 PASS (identity byte-identical across processes +
+  permutation invariant under reversed input, positive-controlled).
+- **NEXT (gated, in order):** (1) **C-null** — the scope-setter; build the chimera-trajectory
+  per-component-independent shuffle harness (joint shuffle = false pass) per `c_null_protocol_FROZEN.md`,
+  N=200, 95th pct; also report the twin-pair count/gate-vacuity in parallel. (2) **C0** pipeline-diff
+  corroboration (structural primary already holds — trajectory stage writes only
+  `context_profile_report.md`, never `pipeline_output.json`). (3) **C-gen** (haiku↔flash same-kernel
+  family recovery — a distinct cross-generation invariance witness, NOT C2). (4) Re-checkpoint, then the
+  kernel_v1 leg, then Step 4 gate flip (only if all family gates pass) + Step 5 docs. Gate is NOT yet
+  flipped (`config.pl trajectory_enabled` stays 0; all validation in-session, no engine changes).
+
 ---
 
 *Last updated: 2026-06-25. Add new items with sequential OQ-NN labels. Mark
