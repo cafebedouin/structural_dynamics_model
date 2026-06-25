@@ -44,6 +44,22 @@ the tell.
   undefined-predicate references of exactly this class as a command instead of forensics.
   Compare against the recorded baseline (KNOWN_STATE.md 2026-06-04) — new findings are
   regressions.
+- **Coverage is bounded to the LOADED IMAGE — a clean run is not "no wrong-qualifier rot
+  anywhere" (silent over-trust trap).** library(check) only inspects modules present in the
+  image, so any module `run_pipeline.py` loads in a SEPARATE process *outside* `[stack]` escapes
+  the check entirely. Witnessed 2026-06-25: `context_profile_mining.pl` called the removed
+  `dirac_classification:standard_context/1` for an unknown duration — the production path is
+  disabled (`trajectory_enabled=0`) and the module isn't in `[stack]`, so neither the pipeline nor
+  check_stack ever exercised it (fix `fc9b4688`). **Now covered:** check_stack loads the
+  trajectory-mining chain before `check/0` (commit `a82d7ed0`; positive-controlled — reintroducing
+  the bug makes it fire; baseline unchanged). **Still uncovered (honest boundary):** the other
+  standalone report scripts (`abductive_report`, `orbit_report`, `fingerprint_report`,
+  `isomorphism_report`, `maxent_report`, `global_delta_report`, `fpn_report`,
+  `quantum_verification_report`, …) — several consult into `user`, so co-loading them into one
+  image cross-contaminates with redefinition false-positives that never occur in production (one
+  process each). A faithful per-chain check needs a fresh process per chain (shell loop). So:
+  before trusting a clean check_stack for a side-chain script, confirm that script is actually in
+  the loaded image — `current_predicate(M:P)` for one of its predicates.
 
 ---
 
