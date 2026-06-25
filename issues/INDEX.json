@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "982f59a1bbdd8f6ed23732737ccb46727f10f0c7",
+    "store_version": "9fde36c91b535c9182e86bd11a3e251d06983ba0",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-24T22:21:56"
+    "generated_at": "2026-06-25T01:22:43"
   },
-  "issues_sha": "4830f32acae06f120a667be81cfc9779b6da40a28e604c2accda9485619203b5",
-  "n_entries": 178,
+  "issues_sha": "3329069709a93c3ecc6c42d2286740efb4e9a318b689ccd6dbaa0b64111d3516",
+  "n_entries": 179,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 86,
+    "resolved": 87,
     "mitigated": 9,
     "partial": 7,
     "open": 70,
@@ -170,7 +170,8 @@
       "mentioned_in": [
         "OQ-44",
         "OQ-46",
-        "OQ-178"
+        "OQ-178",
+        "OQ-179"
       ]
     },
     {
@@ -990,20 +991,17 @@
       ]
     },
     {
-      "id": "OQ-178",
+      "id": "OQ-179",
       "status": "open",
-      "priority": 1,
-      "summary": "Off-grid Time=0 probing in cs_kernel_registry mis-classifies temporal-series readings",
+      "priority": 2,
+      "summary": "cs_kernel_divergence is a single-snapshot comparison; a trajectory-aware measure is more faithful",
       "deps": [
-        "blocked_on_human oq178-probe-fix-vs-classifier-semantics-ruling"
+        "blocked_on OQ-178"
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-39",
-        "OQ-41",
-        "OQ-44",
-        "OQ-51",
-        "OQ-105"
+        "OQ-105",
+        "OQ-178"
       ]
     }
   ],
@@ -2355,6 +2353,23 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-20"
+      ]
+    },
+    {
+      "id": "OQ-178",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Off-grid Time=0 probing in cs_kernel_registry mis-classifies temporal-series readings",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-39",
+        "OQ-41",
+        "OQ-44",
+        "OQ-51",
+        "OQ-105",
+        "OQ-119",
+        "OQ-179"
       ]
     }
   ]

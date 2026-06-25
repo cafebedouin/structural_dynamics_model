@@ -1678,8 +1678,10 @@ nobody authored — distinct from G5 (this is fail-closed-vs-impute, not represe
   `unknown`/false-agreement (`robust_context_count` 0→156, a success-shaped absorption). The
   real fix is a probe/classifier off-grid ruling → **OQ-178** (gated falsifier resolved: the
   `cs_kernel_registry` Time=0 is a synthetic "baseline comparison" sentinel, not a shared-origin
-  semantic — code comment line 61). Rows 24–25 stay **open**, re-pointed at OQ-178; NOT an
-  OQ-44 fail-closed site.
+  semantic — code comment line 61). **RESOLVED via OQ-178 (commit `9fde36c9`, 2026-06-25):** the
+  probe now reads each reading at its latest authored time, so the `BaseX=0.5` arm is no longer
+  reached from `cs_kernel_registry` (0/15 off-grid). NOT an OQ-44 fail-closed site. Residual
+  trajectory-faithfulness → OQ-179.
 - **Row 26 analysis-path `0.5` cluster — MEASURED NEUTRAL (`outputs/tripwire_row26_results.json`).**
   Direct branch-reachability tripwire (patch `0.5→999.9`, count constraints that emit 999.9):
   `purity_scoring:57`, `drl_boltzmann_analysis:135`, `:154` all **default_fired=0/194** (branch
@@ -9086,9 +9088,25 @@ matched-pair probe in the same audit style.
 
 **Ω-type:** Ω_C (design choice — where to fix an ill-posed off-grid query: the probe or the classifier).
 
-**Status:** open — finding witnessed, fix is an operator design seat (split below).
+**Status:** resolved — latest-snapshot probe-fix landed (operator ruling 2026-06-25, commit
+`9fde36c9`). Successor (trajectory-aware comparison) tracked as OQ-179.
 **Priority:** 1
-**Deps:** blocked_on_human oq178-probe-fix-vs-classifier-semantics-ruling
+**Deps (dropped on close):** was `blocked_on_human oq178-probe-fix-vs-classifier-semantics-ruling`;
+ruled 2026-06-25 (probe-fix, latest snapshot).
+
+**Resolution (2026-06-25).** Falsifier resolved against a shared probe time: `cs_kernel_divergence`'s
+output carries **no time field** and **no consumer keys on time** (counts → `json_report` only;
+OQ-119 exports key on `spatial_scope`; `cross_reading_diff`/`enhanced_report` on kernel/context) —
+so the comparison is per-CONTEXT, not time-aligned, and each reading may be read at its OWN valid
+time (no common-floor needed). New `reading_snapshot_time/2` = max authored `base_extractiveness`
+time (fallback 0); applied to BOTH `cs_kernel_divergence/4` and the `compare_kernel_readings/3`
+JOIN (invariant preserved 42/42). **Operator ruling: LATEST authored time** (current/most-developed
+state; earliest under-detects divergence, which accretes along the trajectory). Witness:
+`cs_kernel_divergence_count` 17→20, JSP divergence preserved (1→1, now correct types), all 15
+off-grid readings on-grid (0 hit the 0.5 default), 32 readings re-based T=0→latest ALL from authored
+ε (no fabrication by construction), validation 0/1/1. NB the single-snapshot is lossy (9/15 readings
+change type across grids; `shinbutsu` de-differentiates) and `max(T)` is chronologically-earliest for
+BC-encoded stories (`lycurgan`; OQ-105) — both carried into **OQ-179**.
 
 **Finding (2026-06-24, audit `audits/2026-06-24_oq41_basex_t0/`).** `cs_kernel_registry`
 (`cs_kernel_divergence/4`, `compare_kernel_readings/3`) classifies every reading at a fixed
@@ -9120,7 +9138,40 @@ OQ-51 build-extension (independent, can land in parallel).
 
 ---
 
-*Last updated: 2026-06-24. Add new items with sequential OQ-NN labels. Mark
+## OQ-179 — cs_kernel_divergence is a single-snapshot comparison; a trajectory-aware measure is more faithful
+
+**Ω-type:** Ω_C (design choice — point comparison vs trajectory comparison for kernel divergence).
+
+**Status:** open — successor to OQ-178; motivated by a witnessed type-instability finding.
+**Priority:** 2
+**Deps:** blocked_on OQ-178
+
+**Origin (OQ-178 close, 2026-06-25).** OQ-178 fixed the off-grid bug by reading each kernel reading
+at its LATEST authored time. But that is still a SINGLE snapshot, and the same audit witnessed that
+the snapshot is lossy by construction: **9 of the 15 off-grid readings change type across their own
+grids** (e.g. `settler_colonial` tangled_rope@1917→snare@2024; `shinbutsu` tangled_rope@1603→rope@1868
+— **de-differentiating**, the opposite direction), and corpus-wide **32 readings shift type T=0→latest**.
+Two readings identical at their latest time can diverge for the entire prior century; a latest-snapshot
+reports them as agreeing. The honest signal is "do the readings' TRAJECTORIES ever diverge," not "do
+they classify differently at one chosen moment."
+
+**The design question.** Is `cs_kernel_divergence` a *point* comparison or a *trajectory* comparison?
+The 9/15 (and 32 corpus-wide) type-instability is affirmative evidence for trajectory: a kernel could
+diverge if its readings classify differently at any shared/overlapping authored time, or over the
+union of their trajectories. Larger redesign of `cs_kernel_divergence`/`compare_kernel_readings` than
+the OQ-178 probe-time swap — its own produce-then-gate.
+
+**Also fold in here:** the `max(T)`-is-chronologically-earliest issue for **BC-encoded stories**
+(`lycurgan` 480..330 positive-descending; OQ-105 encoding family) — a trajectory measure that reads
+the authored series in order sidesteps the numeric-vs-chronological-time mismatch a single `max(T)`
+snapshot inherits.
+
+**What resolution changes:** replaces a lossy single-moment divergence verdict with one faithful to
+the temporal model the corpus authors; removes the inherited BC-encoding snapshot artifact.
+
+---
+
+*Last updated: 2026-06-25. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
