@@ -52,3 +52,45 @@ c3_partition_signature :-
     run_and_partition(Partition, _, _, _),
     term_to_atom(Partition, A),
     format("PARTITION_SIG: ~w~n", [A]).
+
+% canonical partition from current cluster state (no re-run)
+current_partition(Partition) :-
+    findall(FID-C, context_profile_mining:family_assignment(C, FID), Pairs0),
+    keysort(Pairs0, Sorted),
+    group_pairs_by_key(Sorted, Grouped),
+    findall(SMembers, (member(_-Ms, Grouped), sort(Ms, SMembers)), Fams0),
+    sort(Fams0, Partition).
+
+% --- C3-permutation: genuine perturbation. Compute trajectories+distances once,
+%     cluster, snapshot partition P1; then re-assert trajectory_cached in REVERSED
+%     order and re-cluster -> P2; assert P1 == P2 (HAC order-invariance witness). ---
+c3_permutation :-
+    corpus_loader:load_all_testsets,
+    constraint_indexing:default_context(Context),
+    context_profile_mining:ensure_maxent(Context),
+    context_profile_mining:compute_all_trajectories(Context),
+    context_profile_mining:compute_pairwise_distances(Context),
+    % First clustering
+    context_profile_mining:run_hierarchical_clustering(Context),
+    current_partition(P1),
+    length(P1, NF1),
+    % Snapshot trajectory_cached, reverse, re-assert; clear clustering outputs only
+    findall(tc(C,Ctx,T), context_profile_mining:trajectory_cached(C,Ctx,T), TCs),
+    reverse(TCs, TCsRev),
+    retractall(context_profile_mining:trajectory_cached(_,_,_)),
+    retractall(context_profile_mining:cluster_member(_,_)),
+    retractall(context_profile_mining:cluster_merge(_,_,_,_)),
+    retractall(context_profile_mining:family_assignment(_,_)),
+    forall(member(tc(C,Ctx,T), TCsRev),
+           assertz(context_profile_mining:trajectory_cached(C,Ctx,T))),
+    % positive control: confirm the re-assertion order is actually reversed
+    ( context_profile_mining:trajectory_cached(FirstC,_,_), TCsRev = [tc(FirstC,_,_)|_]
+      -> format("PERM-CONTROL: trajectory_cached re-asserted in reversed order (first now ~w)~n", [FirstC])
+      ;  format("PERM-CONTROL: WARN reversal not confirmed~n", []) ),
+    % Second clustering on reversed input
+    context_profile_mining:run_hierarchical_clustering(Context),
+    current_partition(P2),
+    length(P2, NF2),
+    ( P1 == P2
+      -> format("C3-PERMUTATION: PASS (partition invariant under reversed input; ~w vs ~w families)~n", [NF1, NF2])
+      ;  format("C3-PERMUTATION: FAIL (partition changed under reorder; ~w vs ~w families) -- BLOCKS FLIP~n", [NF1, NF2]) ).
