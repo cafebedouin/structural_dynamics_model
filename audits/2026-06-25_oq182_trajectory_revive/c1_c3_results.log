@@ -1,0 +1,24 @@
+=== OQ-182 C1 + C3-identity (testsets/ leg) — 2026-06-25 ===
+corpus: testsets/ (104 corpus_constraint; 97 yield trajectories)
+
+### C1 — family non-degeneracy
+C1 family count        : 11
+C1 clustered constraints: 97
+C1 family sizes (sorted): [1,2,3,4,4,8,8,9,13,21,24]
+C1 max family size      : 24  (min 1)
+C1 singletons           : 1
+C1 VERDICT: NON-DEGENERATE (not all-singletons, not one giant cluster)
+TWIN-VACUITY OBSERVATION (parallel; NOT a family gate):
+  cross_domain_twins      : 448
+  total clustered pairs   : 4656
+  twin fraction of pairs  : 0.0962
+  distinct name-prefix domains: 86 (gate D1\=D2 near-vacuous => twin product OPEN)
+
+### C3-identity — partition stable across 2 separate processes
+(byte-identical PARTITION_SIG; 3785 chars each) => PASS
+
+VERDICTS: C1 PASS (non-degenerate, 11 families sizes [1,2,3,4,4,8,8,9,13,21,24]).
+          C3-identity PASS (deterministic partition; same committed corpus).
+REMAINING (family product): C3-permutation (order-shuffle), C-null (silhouette/shuffle scope-setter),
+          C0 pipeline-diff corroboration (structural primary already holds), C-gen (haiku<->flash).
+TWIN PRODUCT: OPEN (gate near-vacuous; 448 twins ~= 67% of within-family pairs). Deferred to rebuild.
