@@ -522,6 +522,23 @@ readings the model will accept). One caveat, or this becomes a single-seat error
 a problem), so these are heuristics read from a seat, not a context-free dashboard. The drift
 machinery flags the approach; a human reads the flag from a declared seat.
 
+**Two temporal elements, never folded (OQ-178/179, 2026-06-25).** The engine carries two distinct
+temporal constructs, and a predicate must belong to one or neither — never silently cross them. The
+**DR/observer measurement series** (`measurement/5` historical-year ε, read via `classify_at_time/4`)
+tracks how a constraint's *structural effect* moves over real time. The **CS lifecycle trajectory**
+above (`cs_reference_frame`→`cs_drift_state`→`cs_drift_trajectory`, role-indexed, computed not
+authored) tracks how a *committed reading approaches sealing*. A `cs_*` **cross-reading comparator**
+(`cs_kernel_divergence`, `compare_kernel_readings`) belongs to **neither**: its moving axis is
+*reading/perspective*, so it classifies **time-neutrally** with static `dr_type/3`, mirroring
+`perspectival_incoherence` (which varies perspective, not time). Binding any DR measurement time into
+such a comparator is a category intrusion — and a *latest*-snapshot is doubly wrong: it reads a
+collapsing constraint at its ε=0 terminus, where the type degrades to `unknown` and `unknown==unknown`
+masks a real divergence as agreement. OQ-179 ("make `cs_kernel_divergence` trajectory-aware over the
+measurement series") *was* this confusion and was closed mis-premised; the genuine question it gestured
+at — do sibling readings' DR-trajectories diverge across their own grids? — is a **DR-temporal-subsystem**
+feature (`drift_trajectory`/`temporal_residual`), measured on the DR axis, never bolted into the CS
+comparator. Provenance: KNOWN_STATE 2026-06-25, commit `5b069ae1`.
+
 **Fudge factor compounds — the §2 distinction applied to slack.** The engine tolerates real
 calibration slack where a structural marker is genuinely present (line-drawing at the margins is
 seat-relative and approximate). But slack on slack produces *wrong intuitions*, the opposite of
