@@ -115,8 +115,10 @@ def compute_minority_fraction(block_ctxs: dict) -> float:
 
 def build_subsample(baseline: dict) -> tuple[set, set]:
     """Return (presheaf_ids, sheaf_ids) for subsample."""
-    presheaves = {cid for cid, e in baseline.items() if e["h1"] > 0}
-    sheaves = [cid for cid, e in baseline.items() if e["h1"] == 0]
+    # OQ-51: product "h1" is null for UNDETERMINED orbits (<2 real seats — N/A);
+    # exclude them from both partitions (null is neither presheaf nor sheaf).
+    presheaves = {cid for cid, e in baseline.items() if e["h1"] is not None and e["h1"] > 0}
+    sheaves = [cid for cid, e in baseline.items() if e["h1"] == 0]  # None == 0 is False ⇒ excluded
     rng = random.Random(RANDOM_SEED)
     sampled_sheaves = set(rng.sample(sheaves, min(N_RANDOM_SHEAVES, len(sheaves))))
     return presheaves, sampled_sheaves
@@ -217,6 +219,10 @@ def analyze_delta(
             continue
 
         base_entry = baseline[cid]
+        # OQ-51: an UNDETERMINED baseline (null h1, <2 real seats) has no defined
+        # sheaf status — exclude it from the sheaf↔presheaf crossing analysis.
+        if base_entry["h1"] is None:
+            continue
         pert_ctxs = perturbed[cid]
         base_ctxs = base_entry["contexts"]
         was_sheaf = base_entry["h1"] == 0

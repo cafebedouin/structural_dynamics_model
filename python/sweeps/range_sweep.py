@@ -75,7 +75,10 @@ def run_variant(prolog_name, out_json):
 def load_presheaf_set(path):
     with open(path) as f:
         d = json.load(f)
-    return {c for c, v in d.items() if isinstance(v, dict) and v.get('h0', 0) == 0}
+    # OQ-51: product "h0"/"h1" is null for UNDETERMINED orbits (<2 real seats — N/A).
+    # Exclude them from the presheaf set (null is neither h0==0 nor a global section).
+    return {c for c, v in d.items()
+            if isinstance(v, dict) and isinstance(v.get('h0'), int) and v['h0'] == 0}
 
 
 def jaccard_stats(base_set, var_set):
