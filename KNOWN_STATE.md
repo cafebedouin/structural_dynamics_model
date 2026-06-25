@@ -63,8 +63,12 @@ rows 24–25 `BaseX=0.5` site is live at Time=0. Fail-closing it (the OQ-44 refl
 REVERTED) is output-changing (`cs_kernel_divergence_count` 17→16) and WRONG: all 15 affected
 constraints author `base_extractiveness` as a temporal series at real years (none at the synthetic
 Time=0) — 0/15 genuinely absent. The default is OFF-GRID PROBING, not absence; fail-closing erases
-a real `snare`-vs-`scaffold` divergence (`jewish_sovereignty_palestine`). Real fix → **OQ-178**
-(probe-fix vs classifier off-grid semantics; blocked_on_human). OQ-39 row 14 reopened (same
+a real `snare`-vs-`scaffold` divergence (`jewish_sovereignty_palestine`). **Fix RESOLVED via
+OQ-178 (2026-06-25, commit `9fde36c9`):** `cs_kernel_registry` now reads each reading at its LATEST
+authored time (`reading_snapshot_time/2`), not the synthetic Time=0 — falsifier resolved (output
+not time-aligned → per-reading-own-time). Witness: divergence count 17→20, JSP preserved, 0/15 still
+off-grid, invariant 42/42, 32 readings re-based from authored ε. Single-snapshot is lossy (9/15
+readings change type across grids) → trajectory successor **OQ-179**. OQ-39 row 14 reopened (same
 premise); OQ-51 build-extension logged (cs_kernel_comparison counts unknown==unknown as agreement).
 Audit: `audits/2026-06-24_oq41_basex_t0/`.
 
