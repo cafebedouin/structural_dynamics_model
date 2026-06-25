@@ -27,6 +27,31 @@
 :- [stack].
 :- use_module(library(check)).
 
+% ---- Side-chain coverage (OQ-57 gap fix, 2026-06-25; KNOWN_STATE same date) ----
+% library(check) only sees modules present in the loaded image. run_pipeline.py
+% loads several standalone report scripts in SEPARATE swipl processes, OUTSIDE
+% [stack], so their qualified calls escape this check unless loaded here too.
+% The trajectory-mining chain is loaded faithfully below (mirrors run_pipeline.py
+% `_prolog_trajectory`'s module list) so wrong-qualifier rot in
+% context_profile_mining.pl / context_profile_report.pl is caught. Witnessed gap:
+% the `dirac_classification:standard_context` dangling call that sat unnoticed for
+% exactly this reason — those two files are not in [stack] (fix `fc9b4688`).
+% Loading the chain adds NO new baseline findings (verified 2026-06-25).
+%
+% STILL UNCOVERED (honest boundary — extend the same way if one rots): the other
+% standalone report scripts run_pipeline loads in their own processes
+% (abductive_report, orbit_report, fingerprint_report, isomorphism_report,
+% maxent_report, global_delta_report, fpn_report, quantum_verification_report, …).
+% Not loaded here because several are non-module scripts that consult into `user`;
+% loading them all into one image would cross-contaminate and emit redefinition
+% false-positives that never occur in production (one process each). A faithful
+% per-chain check needs a fresh process per chain (shell-level loop) — a larger item.
+:- use_module(covering_analysis).
+:- use_module(dirac_classification).
+:- use_module(maxent_classifier).
+:- use_module(context_profile_mining).
+:- [context_profile_report].
+
 run_check_stack :-
     check.
 
