@@ -99,9 +99,11 @@ trajectory_cleanup :-
    ================================================================ */
 
 %% standard_contexts(-Contexts)
-%  The 4 standard contexts from dirac_classification, as context terms.
+%  The 4 standard contexts, as context terms. dirac_classification removed its
+%  local standard_context/1 (2026-06-02; see dirac_classification.pl:115); drl_core
+%  retains the identical 4-context generator for classification semantics.
 standard_contexts(Contexts) :-
-    findall(Ctx, dirac_classification:standard_context(Ctx), Contexts).
+    findall(Ctx, drl_core:standard_context(Ctx), Contexts).
 
 %% context_label(+Context, -Label)
 %  Human-readable label for a standard context.
