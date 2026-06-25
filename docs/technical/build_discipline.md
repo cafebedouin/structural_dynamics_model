@@ -604,6 +604,26 @@ tell them apart is testing nothing whenever its source table is empty. A gate ov
 that can be empty must first establish the datum was authored (the table is non-empty for
 this constraint), then check the condition — fail-closed on absence, not pass-open.
 
+**The dual — fail-closing on a NON-genuine absence (OQ-178, 2026-06-24).** Pattern 5 and the OQ-44
+policy say *fail-closed on absence*. The symmetric failure is to apply that reflexively to an
+absence that is not genuine: the datum IS authored, the **probe just landed off its grid**. Witnessed:
+`cs_kernel_registry` classified each reading at a synthetic `Time=0` ("baseline comparison"), but
+15 live constraints author `base_extractiveness` only as a temporal series at real years (1900,
+1450, 480 BC…), none at `Time=0`. So `classify_at_time` hit the `BaseX=0.5` fabricated-default
+branch and read "absent" — when the value existed on a different grid. The OQ-44 reflex (fail-close
+to `unknown`) was *worse* than the fabrication: it **discarded the authored series and erased a real
+`snare`-vs-`scaffold` kernel divergence**, reporting fully-robust agreement where two readings
+genuinely disagree (`robust_context_count` 0→156). Neither impute-0.5 nor fail-closed-unknown was
+right; the bug was the **off-grid probe**. **Rule: before fail-closing on absence, establish the
+absence is GENUINE — would a probe ON the authored grid (the story's own time-points / scalar)
+find the datum? If yes, fix the probe (read it on its grid), do not fail-close.** Diagnostic: for
+the constraints the gate calls "absent," enumerate the source predicate's facts at *any* key, not
+just the queried one; if they exist elsewhere, the absence is off-grid, not real. The deeper spine
+is the same as Pattern 5 proper — *genuine* vs *apparent* absence collapse at the read site — but
+the corrective is the opposite direction: Pattern 5 says don't let absence *pass*; its dual says
+don't let off-grid-ness *fail-close real data away*. (Provenance: `audits/2026-06-24_oq41_basex_t0/`,
+OQ-178; the off-grid family is OQ-105.)
+
 **Sibling of Pattern 4 (fabricated default):** Pattern 4 invents a *value* and feeds it to a
 downstream computation; Pattern 5 lets *absence itself* pass a *condition*. Both conflate
 missing with measured. Pattern 4 manufactures a number; Pattern 5 manufactures a satisfied

@@ -111,6 +111,18 @@ still returns a plausible value (the session-scope version of §2's trap).
   `per_constraint` (witnessed 2026-06-03: 0/1107 rows differ). Use this as the attribution
   probe: if old-vs-new differs but new-vs-rerun doesn't, the drift is a real effect of your
   change, not noise.
+- **The diff is only valid if the run REWROTE the file — the aborted-gate stale-output false pass.**
+  `run_pipeline.py` runs its gates (load-warning gate, ISSUES status-grammar gate) and aborts
+  *non-zero BEFORE* the json write. On an abort, `outputs/pipeline_output.json` keeps its PRIOR
+  contents — so a before/after diff compares the baseline against itself and reads **byte-identical,
+  a false "behavior-preserving" pass**. Witnessed 2026-06-24: a `*/` inside a `/* … */` Prolog block
+  comment (closes the comment early → a clause syntax error swipl tolerates on load but the
+  load-warning gate flags) aborted the pipeline; the json was stale and the diff read "identical"
+  while the change was actually broken. **Before trusting a byte-identical pipeline diff: assert
+  exit code 0 AND that the output mtime advanced** (`stat -c %Y outputs/pipeline_output.json`
+  before/after). This is the file-boundary instance of the success-shaped-absorption pattern — a
+  write that did not happen is indistinguishable from a write that produced identical output unless
+  you check the run actually completed.
 - **Corpus-fitted fields ripple corpus-wide on ANY single reclassification**: changing one
   constraint's type moved `raw_maxent_probs` / `arakelov_height` / `wasserstein_*` on all 1106
   rows (max |Δ| ~0.036, zero top-type flips). Diff at TWO levels and report both: the
@@ -238,3 +250,32 @@ the previous call.
 0-file glob throws `corpus_empty` instead of silently proceeding). Output WRITES are still
 cwd-relative (`../outputs/...` in exporters and probe scripts) — keep `cd prolog/` for
 anything that writes; full write-path anchoring is a recorded follow-up (ISSUES.md OQ-69).
+
+---
+
+## 10. Changing a term's (or predicate's) ARITY fails consumers SILENTLY — the fail-don't-error trap
+
+Clause-head unification is the franchise hazard of this whole codebase: a consumer matching
+`agree(_)` does **not** match `agree(_, _)` — it **fails**, it does not raise. So adding an argument
+to a returned compound term (or to a predicate) makes every *unenumerated* pattern-match consumer
+silently yield nothing: a `findall` returns `[]`, an `aggregate_all(count, member(_-agree(_), …))`
+returns `0`, a guard quietly skips — and nothing errors, nothing warns. It reads exactly like
+"there are no agreements," which is the Pattern-5/Pattern-6 spine (absence presents as presence) at
+the term level. This is distinct from §1 (wrong *module qualifier*, also load-path-dependent); here
+the qualifier is right and the *shape* is wrong.
+
+**Witnessed (OQ-51 build-extension, 2026-06-25):** enriching the kernel-comparison verdict tokens
+`agree(Type) → agree(Type, NUnk)` and `diverge(TypeMap) → diverge(TypeMap, NUnk)` would have left
+`json_report.pl:2024`'s `member(_-agree(_), Profile)` matching nothing → `robust_context_count`
+silently 0 on every kernel, with a green test suite and a clean pipeline (the exact signature an
+arity-fail-match produces).
+
+**Rule — same desync discipline as a renamed JSON key, but invisible because it fails-closed not
+loud:** before changing an arity, `grep -rn 'theterm(\|otherterm('` across `prolog/` and update
+every pattern-match consumer in the SAME commit; paste the grep as the witness. Watch for
+**same-named terms in different modules** (`reading_diff.pl` and `axiom_diff.pl` each have their own
+`agree(_, _)` — unrelated to the kernel verdict) — confirm each match reads the structure you are
+changing, not a homonym. The wellformed/positive-control test that pins the term shape
+(`tests/test_cs_kernel_registry.pl` `compare_profile_verdicts_wellformed`) must move to the new
+arity in lockstep, or it's the first thing that goes red — which here is the *good* case, the loud
+one.

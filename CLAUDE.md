@@ -199,6 +199,21 @@ one pipeline at a time.
     aborts naming malformed entries). **Do not remove or bypass the gate — it is NOT dead code,
     including during refactors of run_pipeline.py.** If it fires, fix ISSUES.md until
     `python3 python/issues_status.py --check` passes. Grammar is in the ISSUES.md footer.
+- **Testing an ENGINE change: exercise it across ALL the corpora, not just `testsets/`.** The live
+  `testsets/` is a deliberately sparse singleton (~small N) and will NOT exercise every branch or
+  surface corpus-sensitive behavior — an engine change "witnessed" only there is under-witnessed.
+  Run it against all three live legs (`testsets/`, `testsets_haiku/`, `testsets_flash/`) AND the
+  breadth archive `archives/datasets/kernel_v1/` (~1,106 stories) by overlaying `corpus_path` (use
+  `asserta`, not plain `assertz` — see Corpus Loading). Corpus *content* changes are testset-local;
+  *engine* changes are not. (Witnessed why it matters: OQ-178/OQ-51 `cs_kernel_divergence` behavior
+  depends on the corpus's reading-sets and `unknown` distribution — a 97-story corpus leaves branches
+  unexercised.)
+- **A pipeline-diff is a valid behavior-preservation witness ONLY if the run rewrote the file.**
+  `run_pipeline.py` aborts (non-zero) on its gates BEFORE writing `outputs/pipeline_output.json`, so
+  a before/after diff then compares the baseline against *itself* and reads byte-identical — a false
+  pass (witnessed 2026-06-24: a `*/`-in-comment syntax error aborted the gate; the diff read
+  "identical" on a stale file). Confirm **exit 0 AND output mtime advanced** before trusting a
+  byte-identical pipeline diff. Detail: `swipl_load_path_and_probe_gotchas.md` §5.
 - Prolog tests (corpus validation): `cd prolog && swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t "halt(1)"`
 - Prolog unit tests (engine): `cd prolog && swipl -g "[stack], [tests/test_snapshot_migration], run_tests, halt" -t "halt(1)"` — substitute any file in `prolog/tests/` (except `test_battery_variants.pl`, a variant harness, not a plunit test)
 - Stack consistency check (OQ-57-class wrong-qualifier detection): `cd prolog && swipl -l check_stack.pl -g "run_check_stack, halt" -t "halt(1)"` — compare against the recorded baseline (KNOWN_STATE.md 2026-06-04); new findings are regressions. Not a pipeline gate while the baseline is non-empty.
@@ -342,7 +357,12 @@ on a fabricated default. Instance: `natural_law_signature`'s `BeneficiaryCount =
 *authored*," not "none *exists*" (OQ-43). **Rule: a gate over a possibly-empty table must
 establish the datum was authored before it may pass — fail-closed on absence, not pass-open.**
 Diagnostic: count the source predicate's facts on the corpus; 0 ⇒ the gate is a no-op.
-Engine-wide audit: OQ-44.
+Engine-wide audit: OQ-44. **The dual (OQ-178): before fail-closing on an absence, confirm it is
+GENUINE, not a probe landing off the authored grid.** A query at a synthetic key (e.g.
+`classify_at_time` at `Time=0`) against data authored on a *different* grid (a story whose ε series
+starts at 1900) reads as "absent" while the datum exists — fail-closing there *discards* authored
+data and can erase real signal (witnessed: erased a true snare/scaffold kernel divergence). If a
+probe ON the authored grid would find it, the fix is the probe, not the fail-close.
 
 **6. Success-shaped absorption (measured-empty vs didn't-look collapse at aggregation/channel
 boundaries).** An aggregation or channel that cannot distinguish *measured-empty* from
