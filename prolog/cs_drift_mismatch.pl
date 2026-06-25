@@ -19,7 +19,7 @@
 %       — empirically_contingent axiom + axiom_overriding + non-minor +
 %         unacknowledged (strict subset of trajectory-foreclosure set)
 %
-% Metric-stable: detect_network_drift is silent (fails for this constraint
+% Metric-stable: detect_network_contamination is silent (fails for this constraint
 %   at the analytical context) AND network_drift_velocity is below threshold.
 %   Infrastructure failures are treated as stable (no evidence of drift).
 %
@@ -91,7 +91,7 @@ cs_any_foreclosed(UID, Traj, AxFc) :-
 %  evidence of drift.
 cs_is_metric_stable(C) :-
     constraint_indexing:default_context(Ctx),
-    \+ catch(network_dynamics:detect_network_drift(C, Ctx, _), _, fail),
+    \+ catch(network_dynamics:detect_network_contamination(C, Ctx, _), _, fail),
     (   catch(
             (network_dynamics:network_drift_velocity(C, Ctx, V, _),
              config:param(network_drift_velocity_threshold, Thresh),

@@ -398,13 +398,13 @@ purity_decline_signal(C, excess_above_floor(Excess)) :-
 %% drift_event/3 — non-indexed (uses default context)
 drift_event(C, network_drift, Evidence) :-
     constraint_indexing:default_context(Ctx),
-    network_dynamics:detect_network_drift(C, Ctx, Evidence).
+    network_dynamics:detect_network_contamination(C, Ctx, Evidence).
 
 %% drift_event/4 — context-indexed
 drift_event(C, Context, network_drift_indexed,
             evidence(drifting_neighbors, ContagionList, effective_purity, EP, velocity, V)) :-
     constraint_indexing:valid_context(Context),
-    network_dynamics:detect_network_drift(C, Context, evidence(drifting_neighbors, ContagionList, effective_purity, EP, _, _)),
+    network_dynamics:detect_network_contamination(C, Context, evidence(drifting_neighbors, ContagionList, effective_purity, EP, _, _)),
     network_dynamics:network_drift_velocity(C, Context, V, _).
 
 /* ================================================================

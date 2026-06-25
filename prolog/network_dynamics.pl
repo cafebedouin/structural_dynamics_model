@@ -4,7 +4,7 @@
 % ============================================================================
 
 :- module(network_dynamics, [
-    detect_network_drift/3,
+    detect_network_contamination/3,
     network_drift_contagion/3,
     network_drift_velocity/4,
     cascade_prediction/3,
@@ -36,7 +36,7 @@
        ∧ EffectivePurity(C) < IntrinsicPurity(C)
 
    Key predicates:
-   A. detect_network_drift/3       — Top-level detection
+   A. detect_network_contamination/3       — Top-level detection
    B. network_drift_contagion/3    — Identify contaminating drifting neighbors
    C. network_drift_velocity/4     — Derived EP change rate from network
    D. cascade_prediction/3         — Threshold crossing time predictions
@@ -53,15 +53,15 @@
    ================================================================ */
 
 /* ----------------------------------------------------------------
-   A. detect_network_drift/3
+   A. detect_network_contamination/3
    Top-level: detects when C's effective purity is declining
    due to contamination from drifting neighbors.
    ---------------------------------------------------------------- */
 
-%% detect_network_drift(+C, +Context, -Evidence)
+%% detect_network_contamination(+C, +Context, -Evidence)
 %  Succeeds if at least one neighbor is both contaminating C
 %  and showing purity decline signals.
-detect_network_drift(C, Context, evidence(drifting_neighbors, ContagionList, effective_purity, EP, intrinsic_purity, IP)) :-
+detect_network_contamination(C, Context, evidence(drifting_neighbors, ContagionList, effective_purity, EP, intrinsic_purity, IP)) :-
     constraint_indexing:valid_context(Context),
     drl_purity_network:effective_purity(C, Context, EP, _Components),
     purity_scoring:purity_score(C, IP),
@@ -200,7 +200,7 @@ network_stability_assessment(Context, Assessment) :-
     findall(C, (
         narrative_ontology:constraint_claim(C, _),
         \+ is_list(C),
-        detect_network_drift(C, Context, _)
+        detect_network_contamination(C, Context, _)
     ), DriftingCs),
     length(DriftingCs, NumDrifting),
     (   NumDrifting =:= 0
@@ -237,7 +237,7 @@ network_drift_severity(C, Context, Severity) :-
     config:param(network_hub_degree_threshold, HubThresh),
     config:param(network_drift_hub_escalation, HubEnabled),
     (   HubEnabled =:= 1, Degree >= HubThresh,
-        detect_network_drift(C, Context, _)
+        detect_network_contamination(C, Context, _)
     ->  escalate_severity(BaseSeverity, HubEscalated)
     ;   HubEscalated = BaseSeverity
     ),

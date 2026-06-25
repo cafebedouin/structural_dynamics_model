@@ -118,7 +118,7 @@ generate_drift_report :-
     forall(
         (   narrative_ontology:constraint_claim(C4, _),
             \+ is_list(C4),
-            network_dynamics:detect_network_drift(C4, DefaultCtx, evidence(drifting_neighbors, CList, effective_purity, EP4, intrinsic_purity, IP4))
+            network_dynamics:detect_network_contamination(C4, DefaultCtx, evidence(drifting_neighbors, CList, effective_purity, EP4, intrinsic_purity, IP4))
         ),
         (   network_dynamics:network_drift_severity(C4, DefaultCtx, NDSev),
             format('  ~w [~w]: EP=~3f (intrinsic=~3f)~n', [C4, NDSev, EP4, IP4]),
@@ -167,7 +167,7 @@ generate_drift_report(C) :-
     ),
     % Network drift (v5.2)
     constraint_indexing:default_context(DCtx),
-    (   network_dynamics:detect_network_drift(C, DCtx, evidence(drifting_neighbors, CL, effective_purity, CEP, intrinsic_purity, CIP))
+    (   network_dynamics:detect_network_contamination(C, DCtx, evidence(drifting_neighbors, CL, effective_purity, CEP, intrinsic_purity, CIP))
     ->  format('  Network drift: EP=~3f (intrinsic=~3f)~n', [CEP, CIP]),
         forall(member(contagion(Nbr, ECont, _), CL),
                format('    <- ~w (edge_contam=~4f)~n', [Nbr, ECont])),

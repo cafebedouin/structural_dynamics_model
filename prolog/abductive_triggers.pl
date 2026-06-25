@@ -579,7 +579,7 @@ trigger_contamination_cascade(C, Context, Hypothesis) :-
     config:param(abductive_fpn_divergence_threshold, DivThresh),
     Divergence > DivThresh,
     % Network drift detected for this constraint
-    catch(drl_lifecycle:detect_network_drift(C, Context, NetworkEvidence), _, fail),
+    catch(drl_lifecycle:detect_network_contamination(C, Context, NetworkEvidence), _, fail),
     % Collect evidence
     EvidenceLines = [
         evidence_line(fpn, fpn_ep, FPNEP),
