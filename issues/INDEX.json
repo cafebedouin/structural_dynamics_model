@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "be62f7efc58c6c9adf7f9b0c9478f10cfd274b5e",
+    "store_version": "5b069ae1444b66d6ac5529faf3f4c1ccf92e097a",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-25T03:12:25"
+    "generated_at": "2026-06-25T11:23:41"
   },
-  "issues_sha": "871c6b88bf1ed4476a42091eecff6a2787560a8711d8be02c777997d9c030a7b",
+  "issues_sha": "b7edbd7877c77dba0cc69cb462a51c6c6b09e3c06385b0c7fd154b91bc61d289",
   "n_entries": 179,
   "active_token_set": [
     "investigating",
@@ -12,10 +12,10 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 87,
+    "resolved": 88,
     "mitigated": 9,
     "partial": 7,
-    "open": 70,
+    "open": 69,
     "disposed": 3,
     "future": 3
   },
@@ -141,8 +141,7 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-41",
-        "OQ-178"
+        "OQ-83"
       ]
     },
     {
@@ -155,7 +154,7 @@
       "mentioned_in": [
         "OQ-41",
         "OQ-46",
-        "OQ-178"
+        "OQ-83"
       ]
     },
     {
@@ -988,20 +987,6 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-06"
-      ]
-    },
-    {
-      "id": "OQ-179",
-      "status": "open",
-      "priority": 2,
-      "summary": "cs_kernel_divergence is a single-snapshot comparison; a trajectory-aware measure is more faithful",
-      "deps": [
-        "blocked_on OQ-178"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-105",
-        "OQ-178"
       ]
     }
   ],
@@ -2362,6 +2347,7 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": [
+        "OQ-37",
         "OQ-39",
         "OQ-41",
         "OQ-44",
@@ -2369,6 +2355,19 @@
         "OQ-105",
         "OQ-119",
         "OQ-179"
+      ]
+    },
+    {
+      "id": "OQ-179",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "cs_kernel_divergence is a single-snapshot comparison; a trajectory-aware measure is more faithful",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-105",
+        "OQ-110",
+        "OQ-178"
       ]
     }
   ]

@@ -1595,10 +1595,12 @@ read-vs-declare canary).
   uses scalar `Chi` + `has_sunset_clause`. **Decision:** add a trajectory gate or drop the rule.
   **REOPENED (2026-06-24):** a prior framing held this non-enforceable because a trajectory gate
   would ride `classify_at_time`, "reached only via dormant `constraint_history`" → fires 0× live.
-  That premise is **false** — `classify_at_time` fires live (`cs_kernel_registry` at Time=0; see
-  OQ-41 rows 24–25 / OQ-178). So gate-vs-drop is a **real engine-behavior choice**, not a doc
-  no-op, and it shares OQ-178's off-grid wrinkle (a trajectory gate over off-grid temporal series
-  hits the same Time=0-vs-authored-grid question). Genuine design seat; operator ruling pending.
+  That premise is **false** — `classify_at_time` fires live via the DR temporal subsystem
+  (`drift_trajectory`/`degradation_chain`, OQ-83 family). (It NO LONGER fires from
+  `cs_kernel_registry`: that caller reverted to static `dr_type/3`, commit `5b069ae1` — so the
+  off-grid wrinkle it once shared is moot there.) So gate-vs-drop is still a **real engine-behavior
+  choice**, not a doc no-op, and the off-grid Time-vs-authored-grid question persists for the genuine
+  DR-temporal callers. Genuine design seat; operator ruling pending.
 - Row 15 "final measurement = base extractiveness": unenforced (no validator). **Low-stakes.**
 - Rows 16–18 (piton atrophy / Goodhart / perspective-min): narrative-only, committer-only, or
   schema/linter-enforced respectively — likely no engine action.
@@ -1636,8 +1638,10 @@ The `extractiveness`/`base_extractiveness` sub-splits (rows 19–20) remain open
 audit (`audits/2026-06-24_oq41_basex_t0/`) showed the edge has teeth:** 15 live constraints
 author `base_extractiveness` TEMPORALLY ONLY (no scalar), so the temporal series is their *only*
 authoritative ε. Off-grid temporal queries are therefore not an edge case but the **main path**
-for the whole temporal-only family — a live correctness surface, tracked in **OQ-178** (the
-`cs_kernel_registry` Time=0 probe lands off every such grid). So the doc records both halves:
+for the whole temporal-only family — a live correctness surface. (Its original instance, the
+`cs_kernel_registry` Time=0 probe, is now moot: that comparator reverted to static `dr_type/3`,
+commit `5b069ae1`. The off-grid obligation persists for genuine DR-temporal callers —
+`drift_trajectory`/`degradation_chain`, OQ-83 family.) So the doc records both halves:
 split is intended AND temporal-only authoring makes off-grid reads a correctness obligation.
 
 ## OQ-41 — G6: fabricated defaults for absent data (fail-closed vs impute)
@@ -1678,10 +1682,11 @@ nobody authored — distinct from G5 (this is fail-closed-vs-impute, not represe
   `unknown`/false-agreement (`robust_context_count` 0→156, a success-shaped absorption). The
   real fix is a probe/classifier off-grid ruling → **OQ-178** (gated falsifier resolved: the
   `cs_kernel_registry` Time=0 is a synthetic "baseline comparison" sentinel, not a shared-origin
-  semantic — code comment line 61). **RESOLVED via OQ-178 (commit `9fde36c9`, 2026-06-25):** the
-  probe now reads each reading at its latest authored time, so the `BaseX=0.5` arm is no longer
-  reached from `cs_kernel_registry` (0/15 off-grid). NOT an OQ-44 fail-closed site. Residual
-  trajectory-faithfulness → OQ-179.
+  semantic — code comment line 61). **RESOLVED, then SUPERSEDED (commit `5b069ae1`, 2026-06-25):**
+  `cs_kernel_divergence` now classifies with static `dr_type/3` and calls `classify_at_time` not at
+  all, so the `BaseX=0.5` off-grid arm is no longer reached from `cs_kernel_registry` — more cleanly
+  than the interim latest-snapshot fix (`9fde36c9`). NOT an OQ-44 fail-closed site. OQ-178 and OQ-179
+  both dissolved at the root (the off-grid question persists only for genuine DR-temporal callers).
 - **Row 26 analysis-path `0.5` cluster — MEASURED NEUTRAL (`outputs/tripwire_row26_results.json`).**
   Direct branch-reachability tripwire (patch `0.5→999.9`, count constraints that emit 999.9):
   `purity_scoring:57`, `drl_boltzmann_analysis:135`, `:154` all **default_fired=0/194** (branch
@@ -9094,13 +9099,36 @@ matched-pair probe in the same audit style.
 
 **Ω-type:** Ω_C (design choice — where to fix an ill-posed off-grid query: the probe or the classifier).
 
-**Status:** resolved — latest-snapshot probe-fix landed (operator ruling 2026-06-25, commit
-`9fde36c9`). Successor (trajectory-aware comparison) tracked as OQ-179.
+**Status:** resolved — SUPERSEDED. The latest-snapshot probe-fix (`9fde36c9`) was itself reverted
+to static `dr_type/3` (operator ruling 2026-06-25, commit `5b069ae1`); the static path dissolves
+both OQ-178 and OQ-179 at the root. See **Supersession** below; the interim resolution is kept for
+provenance.
 **Priority:** 1
 **Deps (dropped on close):** was `blocked_on_human oq178-probe-fix-vs-classifier-semantics-ruling`;
-ruled 2026-06-25 (probe-fix, latest snapshot).
+ruled 2026-06-25 — first the latest-snapshot probe-fix, then superseded by static `dr_type/3`
+(same seat, re-ruled the same day on the principle below).
 
-**Resolution (2026-06-25).** Falsifier resolved against a shared probe time: `cs_kernel_divergence`'s
+**Supersession (2026-06-25, commit `5b069ae1`).** `cs_kernel_divergence/4` and the
+`compare_kernel_readings/3` JOIN now classify with static `dr_type/3` (time-neutral), mirroring
+`perspectival_incoherence`. **The principle (independent of any one constraint):** binding ANY DR
+measurement time into a `cs_*` cross-reading comparator is a category intrusion — the moving axis is
+reading/perspective, not time. And *latest*-snapshot specifically reads a COLLAPSING constraint at
+its terminus, where the latest authored ε can be 0 → DR-type `unknown`; `unknown==unknown` then
+reads as agreement and MASKS a real divergence. Static reads the representative authored ε. The
+`reading_snapshot_time/2` helper is dropped (no external users); the OQ-51 `is_real_type` N/A filter
+is preserved (load-bearing for the join invariant). **Output-changing, witnessed against regenerated
+`json_report`** (probe == json: 16/8 before, 18/8 after): live corpus (n=97)
+`cs_kernel_divergence_count` 16→18, kernels 8→8; the +2 recovered pairs are both
+`visual_evidentiary_authority` (`post_evidentiary` × `indexical_realism` / × `distributed_verification`),
+genuine type≠type (`snare ≠ tangled_rope`/`naturalized`), **zero unknown-pairings** (the OQ-37
+artifact did NOT occur). Twin corpora corroborate the recovery direction at scale: `testsets_haiku`
+861→893 pairs (+32, +3 kernels), `testsets_flash` 813→846 (+33, +4). **NB:** `shinbutsu` — the
+motivating collapse exemplar that drove the interim audit's larger numbers — is now a SINGLETON
+reading in the live corpus and produces no live pair; the reversal stands on the principle, not on
+that constraint's ε=0. (The plan predicted 22/9 on an earlier corpus snapshot; corpus drift since
+makes it 18/8.)
+
+**Resolution — INTERIM, now superseded (2026-06-25).** Falsifier resolved against a shared probe time: `cs_kernel_divergence`'s
 output carries **no time field** and **no consumer keys on time** (counts → `json_report` only;
 OQ-119 exports key on `spatial_scope`; `cross_reading_diff`/`enhanced_report` on kernel/context) —
 so the comparison is per-CONTEXT, not time-aligned, and each reading may be read at its OWN valid
@@ -9148,9 +9176,28 @@ OQ-51 build-extension (independent, can land in parallel).
 
 **Ω-type:** Ω_C (design choice — point comparison vs trajectory comparison for kernel divergence).
 
-**Status:** open — successor to OQ-178; motivated by a witnessed type-instability finding.
+**Status:** resolved — MIS-PREMISED (operator ruling 2026-06-25). Its "trajectory" conflated two
+distinct temporal elements; `cs_kernel_divergence` reverted to static `dr_type/3` (commit
+`5b069ae1`, the OQ-178 supersession), removing the snapshot entirely and dissolving the question at
+the root.
 **Priority:** 2
-**Deps:** blocked_on OQ-178
+**Deps (dropped on close):** was `blocked_on OQ-178` (OQ-178 superseded; this OQ dissolved with it).
+
+**Resolution — mis-premised (2026-06-25).** OQ-179 asked `cs_kernel_divergence` to become
+trajectory-aware over the DR `measurement/5` series. That conflates **two distinct temporal
+elements**: the DR measurement series (`classify_at_time`) and the CS lifecycle trajectory
+(`cs_reference_frame`→`cs_drift_state`→`cs_drift_trajectory`, role-indexed). A `cs_*` cross-reading
+comparator should be NEITHER — its moving axis is reading, not time (see OQ-178 Supersession). The
+revert to static `dr_type/3` removes the single snapshot, so there is no chosen moment left to make
+"trajectory-aware." **Re-homing the genuine signal:** the affirmative observation — sibling readings
+can classify to different DR-types at different points of their OWN measurement grids (9/15 in the
+old audit) — is a real question, but it belongs to the **DR temporal subsystem**
+(`drift_trajectory`/`temporal_residual`/`degradation_chain`; OQ-110 family), measured on the DR
+axis, NOT bolted into the CS-layer comparator. It is deferred there: the live corpus is
+singleton-sparse (no kernel has two temporal-series sibling readings), so sibling-trajectory
+divergence is only measurable on the twin corpora. **OQ-105 BC-encoding fold is now moot for this
+path** — static `dr_type/3` never takes `max(T)`, so the numeric-vs-chronological-time mismatch does
+not arise here.
 
 **Origin (OQ-178 close, 2026-06-25).** OQ-178 fixed the off-grid bug by reading each kernel reading
 at its LATEST authored time. But that is still a SINGLE snapshot, and the same audit witnessed that

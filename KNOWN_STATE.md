@@ -45,6 +45,37 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-25 — OQ-178/179 SUPERSEDED/RESOLVED: cs_kernel_divergence reverts to static `dr_type/3` (time-neutral)
+**Files:** prolog/cs_kernel_registry.pl, prolog/json_report.pl, ISSUES.md
+**Tier:** tripwire
+
+`cs_kernel_divergence/4` and the `compare_kernel_readings/3` JOIN now classify with static
+`dr_type/3` (time-neutral), mirroring `perspectival_incoherence` — reverting the interim OQ-178
+latest-snapshot probe-fix (`9fde36c9`). Commit `5b069ae1`.
+
+**Tripwire:** a `cs_*` cross-reading comparator uses static `dr_type/3` — its moving axis is
+reading/perspective, NOT time. Do NOT wire it to the DR `measurement/5` series / `classify_at_time`:
+that crosses the DR temporal element into a CS-layer predicate. *Latest*-snapshot specifically reads
+a COLLAPSING constraint at its terminus (latest authored ε can be 0 → `unknown`; `unknown==unknown`
+reads as agreement, masking real divergence). The CS lifecycle trajectory
+(`cs_reference_frame`→`cs_drift_state`→`cs_drift_trajectory`) is a SEPARATE temporal element.
+*(Promotion test: NOT promoted to CLAUDE.md — the `cs_kernel_registry.pl` header (lines ~14-23) now
+carries this warning in-code, so a fresh editor sees it before touching the predicate; the
+silent-mistake risk is covered at the edit site.)*
+
+**Witness (probe == regenerated `json_report`):** live corpus n=97, `cs_kernel_divergence_count`
+16→18, kernels 8→8. The +2 recovered pairs are both `visual_evidentiary_authority`
+(`post_evidentiary` × `indexical_realism` / × `distributed_verification`), genuine type≠type
+(`snare ≠ tangled_rope`/`naturalized`), zero unknown-pairings (OQ-37 artifact did NOT occur). Twin
+corpora corroborate the direction: `testsets_haiku` 861→893 (+32, +3 kernels), `testsets_flash`
+813→846 (+33, +4). `shinbutsu` (the interim audit's collapse exemplar) is now a SINGLETON live
+reading → no live pair; the reversal stands on the principle. OQ-179 closed mis-premised; its genuine
+DR-axis observation (sibling readings change DR-type across their own grids) re-homed to the DR
+temporal subsystem (`drift_trajectory`/`temporal_residual`, OQ-110 family). OQ-105 BC-encoding fold
+moot for this path (static `dr_type` never takes `max(T)`).
+
+---
+
 ## 2026-06-25 — OQ-51 build-extension RESOLVED: `unknown` is N/A in cs_kernel_comparison (trichotomy + divergence enumeration)
 **Files:** prolog/cs_kernel_registry.pl, prolog/json_report.pl, python/enhanced_report.py, prolog/tests/test_cs_kernel_registry.pl
 **Tier:** landed
