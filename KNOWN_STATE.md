@@ -46,7 +46,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 ---
 
 ## 2026-06-25 — fix: OQ-57-class wrong-qualifier in the dormant trajectory-mining path (commit `fc9b4688`)
-**Files:** prolog/context_profile_mining.pl
+**Files:** prolog/context_profile_mining.pl, prolog/check_stack.pl
 **Tier:** landed
 
 Surfaced during the OQ-16 rename (rename-independent — byte-identical pre/post). `standard_contexts/1`
@@ -60,8 +60,14 @@ identical 4-context generator (verified to enumerate the same 4 canonical contex
 exits 0 with no existence/unknown-procedure errors, all 4 contexts processed, **135-line report
 produced** (was crash → empty). Production path unchanged (`trajectory_enabled=0`); fix only bites
 when enabled. **Why it sat unnoticed:** `context_profile_mining.pl` is NOT loaded by `[stack]` (only
-in the separate trajectory chain), so `check_stack.pl`'s undefined-predicate scan never saw it — a
-reminder that the OQ-57 qualifier control only covers what `[stack]` loads.
+in the separate trajectory chain), so `check_stack.pl`'s undefined-predicate scan never saw it.
+**Gap closed (commit `a82d7ed0`):** `check_stack.pl` now loads the trajectory chain faithfully
+(mirrors run_pipeline `_prolog_trajectory`) before `check/0`, so wrong-qualifier rot in
+`context_profile_mining.pl`/`context_profile_report.pl` is now caught — positive-controlled
+(reintroducing the bug makes check flag it), baseline unchanged (same 5 known undefineds). Honest
+boundary recorded in-file: the OTHER standalone report scripts (abductive/orbit/fingerprint/…
+report) remain uncovered — co-loading non-module scripts into one image cross-contaminates;
+a faithful per-chain check needs a fresh process per chain (larger item, not done).
 
 **Forward (not done here):** the crash is gone, but *validating* the now-runnable trajectory-mining
 (HAC structural-family) output / deciding whether to revive the subsystem is the revive-or-gap design
