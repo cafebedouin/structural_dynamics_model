@@ -13,9 +13,15 @@
 %
 % cs_kernel_divergence/4 is the CS-layer analogue of perspectival_incoherence:
 % same kernel, different readings, different DR-type at the same observer context.
-% First-class diagnostic — not hedged. Uses classify_at_time/4 (canonical
-% post-2026-05-17 sigmoid pipeline: χ = ε × f(d) × σ(S)).
-% DR/CS invariant: classify_at_time calls use C (name-keyed); DR is instance-blind.
+% First-class diagnostic — not hedged. Uses static dr_type/3 (time-neutral),
+% MIRRORING perspectival_incoherence (drl_core.pl:577-586): the moving axis is
+% reading/perspective, not time, so binding ANY DR time is a category intrusion
+% (OQ-178/OQ-179 resolution 2026-06-25). The temporal classify_at_time path it
+% replaced read collapsing constraints at their ε=0 terminus → `unknown`, masking
+% real divergences; static dr_type reads the representative authored ε. The CS
+% lifecycle trajectory (reference_frame→gap→terminal) is cs_drift_trajectory — a
+% SEPARATE temporal element; do not cross the DR measurement series into here.
+% DR/CS invariant: dr_type calls use C (name-keyed); DR is instance-blind.
 % Two instances sharing C will receive the same DR type — by design.
 % ============================================================================
 
@@ -56,47 +62,21 @@ cs_kernel_coverage(K, N) :-
     cs_readings_for_kernel(K, Pairs),
     length(Pairs, N).
 
-%% reading_snapshot_time(+C, -T)
-%  OQ-178 probe-fix (operator ruling 2026-06-25, latest-snapshot): the per-reading
-%  time at which to take a reading's canonical type for cross-reading comparison.
-%  Was the synthetic Time=0 sentinel ("baseline comparison"), but Time=0 lands OFF
-%  the grid of temporal-series readings (15 live constraints author base_extractiveness
-%  only at real years, none at 0) → `classify_at_time` fell to the BaseX=0.5 impute and
-%  fabricated a type (witnessed: erased a true snare/scaffold divergence on
-%  `jewish_sovereignty_palestine`; audit `audits/2026-06-24_oq41_basex_t0/`). The
-%  falsifier resolved against a shared time: `cs_kernel_divergence`'s output carries no
-%  time field and no consumer keys on time, so the comparison is per-CONTEXT, not
-%  time-aligned — each reading may be read at its OWN valid time. We take the LATEST
-%  authored base_extractiveness time = the reading's current/most-developed state
-%  (operator ruling: earliest systematically under-detects divergence, which accretes
-%  along the trajectory). Falls back to 0 when there is no temporal ε series (nothing to
-%  be off-grid of). CAVEAT: "latest" = max(T) in the engine's numeric time axis; for
-%  BC-encoded stories (positive descending years, e.g. lycurgan 480..330) max(T) is the
-%  chronologically-earliest point — a pre-existing OQ-105 encoding issue inherited, not
-%  introduced. 9/15 affected readings change type across their grids and 1 (shinbutsu)
-%  de-differentiates, so a single snapshot is lossy by construction: trajectory-aware
-%  divergence is the successor OQ-179.
-reading_snapshot_time(C, T) :-
-    findall(Tm, narrative_ontology:measurement(_, C, base_extractiveness, Tm, _), Ts),
-    (   Ts == [] -> T = 0 ; max_list(Ts, T) ).
-
 %% cs_kernel_divergence(+K, -Ctx, -UID1-C1, -UID2-C2)
 %  Fires when two reading instances of kernel K classify differently at the same
 %  observer context Ctx (a context/4 tuple from site_contexts_product/1).
 %  UID1 @< UID2 prevents symmetric duplicates and correctly distinguishes instances
-%  sharing a name (different re-runs). DR classify_at_time calls remain C-keyed
+%  sharing a name (different re-runs). DR dr_type calls remain C-keyed
 %  (DR is instance-blind by design: two instances sharing C see the same DR type).
-%  Each reading is read at its OWN latest-authored time (reading_snapshot_time/2),
-%  not the old shared Time=0 sentinel (OQ-178 probe-fix).
+%  Static dr_type/3 (time-neutral) — mirrors perspectival_incoherence; the moving
+%  axis is reading, not time (OQ-178/OQ-179 resolution 2026-06-25).
 cs_kernel_divergence(K, Ctx, UID1-C1, UID2-C2) :-
     cs_readings_for_kernel(K, Pairs),
     member(UID1-C1, Pairs), member(UID2-C2, Pairs), UID1 @< UID2,
     constraint_indexing:site_contexts_product(AllContexts),
     member(Ctx, AllContexts),
-    reading_snapshot_time(C1, T1),
-    reading_snapshot_time(C2, T2),
-    once(drl_composition:classify_at_time(C1, T1, Ctx, Type1)),
-    once(drl_composition:classify_at_time(C2, T2, Ctx, Type2)),
+    once(drl_core:dr_type(C1, Ctx, Type1)),
+    once(drl_core:dr_type(C2, Ctx, Type2)),
     % OQ-51 N/A rule: `unknown` is not a type that can agree OR disagree. A
     % divergence requires TWO real (non-unknown) types that differ. This
     % "both-real-different" definition is LOAD-BEARING for the join invariant
@@ -118,12 +98,12 @@ real_typemap(TypeMap, RealPairs) :-
 %  GENERALIZES cs_kernel_divergence/4 (OQ-10 reading-robustness): from "emit only
 %  diverging (pair, context) tuples" to a FULL per-context agreement profile.
 %
-%  JOIN, NOT NEW COMPUTE. It reads the SAME classify_at_time/4 evaluations the
+%  JOIN, NOT NEW COMPUTE. It reads the SAME static dr_type/3 evaluations the
 %  divergence engine walks — identical readings, identical site_contexts_product
-%  contexts, identical per-reading reading_snapshot_time/2 — and records the AGREEMENTS the divergence
+%  contexts — and records the AGREEMENTS the divergence
 %  engine discards. Each (reading, context) type is evaluated ONCE here (then
 %  pairwise agreement is derived combinatorially), so this makes FEWER
-%  classify_at_time calls than cs_kernel_divergence/4 (which re-evaluates per pair).
+%  dr_type calls than cs_kernel_divergence/4 (which re-evaluates per pair).
 %  If this ever reaches a context outside site_contexts_product or a reading outside
 %  cs_readings_for_kernel/2, that is the join->compute line crossing — it does not.
 %
@@ -148,8 +128,7 @@ compare_kernel_readings(K, Profile, PairStats) :-
         ( member(Ctx, AllContexts),
           findall(UIDC-Type,
               ( member(UIDC, Readings), UIDC = _UID-C,
-                reading_snapshot_time(C, T),
-                once(drl_composition:classify_at_time(C, T, Ctx, Type)) ),
+                once(drl_core:dr_type(C, Ctx, Type)) ),
               TypeMap) ),
         CtxTypeMaps),
     findall(Ctx-Verdict,
@@ -216,7 +195,7 @@ pair_reading_agreement(R1, R2, CtxTypeMaps, _NCtx, AgreeN, DivergeN, J) :-
 %  submap only (Fold B: keying on the unknowns would fragment one real divergence by
 %  abstention noise — exactly the count-inflation the N/A rule kills). Abstention is
 %  carried as a per-pattern sub-annotation, not part of the key. JOIN, not compute:
-%  reads the same Profile, never re-evaluates classify_at_time.
+%  reads the same Profile, never re-evaluates dr_type.
 %  Patterns = list of pattern(RealMap, Count, Abstained, Example), sorted by Count desc,
 %  capped at Cap; TotalKinds = total distinct kinds pre-cap (drives the truncation notice).
 %    RealMap   = sorted [C-Type] of the real-typed readings (the divergence itself)
