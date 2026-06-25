@@ -1567,9 +1567,14 @@ changes"; scoped output-changing task, not yet built.
 
 ## OQ-38 — G3: dead-code / orphan triage (export-vs-caller)
 
-**Status:** open — Census rows 13, 4 + §5. **Confirmed dead:** `predict_transformation/3`
+**Status:** open — Census rows 13, 4 + §5. **`predict_transformation/3` STRIPPED**
 **Priority:** 1
-(`drl_composition.pl`, 0 callers anywhere). **CORRECTION (OQ-35, 2026-06-21): `cs_reference_frame/2`
+(commit `1eacd2fc`, 2026-06-24; was 0 callers anywhere, positive control:
+`non_monotonic_trajectory/2` IS called from `drift_report.pl:164`). Its sole-use helpers
+**`linear_slope`/`slope_accum` are now orphaned** — left in place, ADDED to the clause-level
+orphan-pass candidate set (do not cascade-strip; false-orphan discipline). Same commit removed
+the vacuous `resistance_to_change`-keyed piton sub-check in `validate_edge_cases/0`
+(`data_validation.pl`), superseded by OQ-90. **CORRECTION (OQ-35, 2026-06-21): `cs_reference_frame/2`
 is NOT dead** — `json_report.pl:590` is a real read site (serializes committer t0 to JSON). The
 census's "zero readers" was stale; code-read beats the stale document. It is inert *consumption*
 (serialized, not joined — OQ-133), retained on the OQ-133 bet, not an orphan. The exhaustive sweep yields
@@ -1588,6 +1593,12 @@ read-vs-declare canary).
 **Priority:** 1
 - Row 14 scaffold "suppression must decline over time": **no trajectory check** exists; scaffold
   uses scalar `Chi` + `has_sunset_clause`. **Decision:** add a trajectory gate or drop the rule.
+  **REOPENED (2026-06-24):** a prior framing held this non-enforceable because a trajectory gate
+  would ride `classify_at_time`, "reached only via dormant `constraint_history`" → fires 0× live.
+  That premise is **false** — `classify_at_time` fires live (`cs_kernel_registry` at Time=0; see
+  OQ-41 rows 24–25 / OQ-178). So gate-vs-drop is a **real engine-behavior choice**, not a doc
+  no-op, and it shares OQ-178's off-grid wrinkle (a trajectory gate over off-grid temporal series
+  hits the same Time=0-vs-authored-grid question). Genuine design seat; operator ruling pending.
 - Row 15 "final measurement = base extractiveness": unenforced (no validator). **Low-stakes.**
 - Rows 16–18 (piton atrophy / Goodhart / perspective-min): narrative-only, committer-only, or
   schema/linter-enforced respectively — likely no engine action.
@@ -1640,21 +1651,24 @@ nobody authored — distinct from G5 (this is fail-closed-vs-impute, not represe
   **The scalar fallback was a labeled STOPGAP until OQ-46 (resolved 2026-06-11) ruled it
   SANCTIONED** — scalar-as-constant is legitimate authoring for static-enforcement stories;
   the clause is permanent.
-- Rows 24–25 `BaseX=0.5` (`drl_composition.pl:201`): **REACHABLE-BUT-LOCKED, not latent — the
-  prior "0 changes; extractiveness required-authored" reason is STALE** (corrected, witnessed
-  2026-06-08). Re-witness on the live corpus: the `; BaseX = 0.5` branch *would* fire at **11
-  (C,T) cells** (e.g. `attribution_erosion-3`) — constraints with an authored
-  `suppression_requirement` measurement at time T but no `base_extractiveness` at that T, so
-  extractiveness is NOT required-authored per-timepoint. What locks it is the **call path, not
-  authoring**: all 11 cells are at **non-zero times (3,5,8,10,16,19), 0 at t=0**, and the only
-  live caller (`cs_kernel_registry`, `classify_at_time(...,0,...)`) classifies at **t=0**; the
-  non-zero times are reached only via `constraint_history`, which is **dormant** (consumed by
-  nothing — positive-controlled: the same consumer-probe finds `classify_at_time`'s consumer
-  but none for `constraint_history`/`snapshot_type`/`degradation_chain`). So it does not touch
-  live classification today, but the fix is a member of the OQ-44 fail-closed-vs-impute class
-  (decide once for the class), not a free per-site hardening. (extractiveness→0.5 elsewhere:
-  required-authored at the static path; tracked under OQ-44. OQ-44 has since been resolved —
-  class policy ruled fail-closed-on-absence, operator 2026-06-11.)
+- Rows 24–25 `BaseX=0.5` (`drl_composition.pl` `classify_at_time_with_supp`): **the prior
+  "REACHABLE-BUT-LOCKED / dormant / 0 fires at t=0" characterization is FALSIFIED on the live
+  corpus (2026-06-24, n=97; audit `audits/2026-06-24_oq41_basex_t0/`).** It is LIVE at t=0:
+  `cs_kernel_registry` calls `classify_at_time/4` at **Time=0** (lines 67,68,101) → /5 →
+  `classify_at_time_with_supp` → the `BaseX=0.5` branch (same predicate path, no dormant
+  `constraint_history` between). **15 constraints** hit the t0 default; fail-closing them
+  (the OQ-44 reflex, attempted Pass-1B then REVERTED) is **output-changing**
+  (`cs_kernel_divergence_count` 17→16; `jewish_sovereignty_palestine` flips
+  `diverging_pair_count` 1→0). **OQ-44 does not apply: there is no absence.** All 15 author
+  `base_extractiveness` as a temporal SERIES at real historical years (1450, 1700, 480 BC…),
+  none at the synthetic Time=0 — **0/15 genuinely ε-absent**. So the t0 default is **off-grid
+  probing**, and fail-closing ERASES real signal: `settler_colonial`=snare vs
+  `cultural_zionist`=scaffold at every authored time (a true divergence) collapse to both-
+  `unknown`/false-agreement (`robust_context_count` 0→156, a success-shaped absorption). The
+  real fix is a probe/classifier off-grid ruling → **OQ-178** (gated falsifier resolved: the
+  `cs_kernel_registry` Time=0 is a synthetic "baseline comparison" sentinel, not a shared-origin
+  semantic — code comment line 61). Rows 24–25 stay **open**, re-pointed at OQ-178; NOT an
+  OQ-44 fail-closed site.
 - **Row 26 analysis-path `0.5` cluster — MEASURED NEUTRAL (`outputs/tripwire_row26_results.json`).**
   Direct branch-reachability tripwire (patch `0.5→999.9`, count constraints that emit 999.9):
   `purity_scoring:57`, `drl_boltzmann_analysis:135`, `:154` all **default_fired=0/194** (branch
@@ -2256,6 +2270,18 @@ n=771, an OQ-26 instance) — **never rank/select on inherited W1**; recompute o
 snapshot with a real threshold (≥~0.05), and state W1/H1 as readings of two different
 classifiers. Related: OQ-37 (do not re-suppress `unknown`), OQ-52 (false-mountain cross gated by
 the W1 rules above).
+
+**Build-extension — same ruling, unenumerated site (2026-06-24).** `cs_kernel_registry`'s
+`compare_kernel_readings/3` (`ctx_reading_verdict`, `pair_reading_agreement`) counts
+`unknown==unknown` as **agreement/robustness** (a kernel where every reading is `unknown` at a
+context scores `agree`, inflating `robust_context_count`). This is the SAME family as the ruled
+`count_disagreeing_pairs` defect — `unknown` is N/A, not a value that can agree with itself — at
+a site the OQ-51 build did not enumerate. NOT a new design question; the ruling already governs
+(`unknown` ⇒ N/A, neither agree nor diverge; <2 real-typed readings ⇒ verdict `undetermined`,
+not `agree`). Surfaced by the OQ-178 t0 audit (`audits/2026-06-24_oq41_basex_t0/`), where
+fail-closing JSP made `robust_context_count` 0→156 on two genuinely-divergent readings.
+Build-extension to `cs_kernel_comparison`, independent of the OQ-178 t0 fix (can land in
+parallel). Tracked here, not minted separately, per operator ruling.
 *(Investigation narratives compressed 2026-06-04 per footer rule; full probes in git history.)*
 ## OQ-52 — False-mountain cross: do the naturalized→snare manifest rows have an authored beneficiary?
 
@@ -9036,7 +9062,45 @@ matched-pair probe in the same audit style.
 
 ---
 
-*Last updated: 2026-06-23. Add new items with sequential OQ-NN labels. Mark
+## OQ-178 — Off-grid Time=0 probing in cs_kernel_registry mis-classifies temporal-series readings
+
+**Ω-type:** Ω_C (design choice — where to fix an ill-posed off-grid query: the probe or the classifier).
+
+**Status:** open — finding witnessed, fix is an operator design seat (split below).
+**Priority:** 1
+**Deps:** blocked_on_human oq178-probe-fix-vs-classifier-semantics-ruling
+
+**Finding (2026-06-24, audit `audits/2026-06-24_oq41_basex_t0/`).** `cs_kernel_registry`
+(`cs_kernel_divergence/4`, `compare_kernel_readings/3`) classifies every reading at a fixed
+**Time=0** to compare them ("baseline comparison across readings" — code comment line 61; a
+synthetic SENTINEL, not a shared historical origin — falsifier resolved). But 15 live-corpus
+constraints author `base_extractiveness` ONLY as a temporal `measurement/5` series at real years
+(1450, 1700, 480 BC…), none at Time=0 — so the Time=0 probe is **off every story's grid**. There
+`classify_at_time_with_supp` falls to the `BaseX=0.5` impute (OQ-41 rows 24–25) and classifies off
+a value nobody authored. This is NOT OQ-44 absence (0/15 genuinely ε-absent) — it is an ill-posed
+off-grid query. Witnessed harm: `jewish_sovereignty_palestine` reads `settler_colonial`=snare vs
+`cultural_zionist`=scaffold at every authored time (true divergence), but the Time=0 probe rode the
+0.5 accidentally-preserving it; fail-closing to `unknown` (OQ-44 reflex) instead ERASES it
+(both→unknown, `robust_context_count` 0→156). So both impute-0.5 and fail-closed-unknown are wrong
+at Time=0.
+
+**The design seat (split, operator recommendation 2026-06-24):**
+- **Probe fix (substrate correction, settle-now class):** `cs_kernel_registry` should probe at a
+  story-VALID time, not the synthetic Time=0. Wrinkle to rule: readings in one kernel can have
+  different grid starts (JSP: 1917 vs 1900), so no single on-grid time is shared — candidates are
+  *latest-common* (JSP: both have 2024) or per-reading-nearest. This is the small choice to settle.
+- **Classifier semantics (separate, genuine OQ-105 seat):** what should `classify_at_time(C, T, …)`
+  return for an off-grid `T`? (nearest-authored / constant-extrapolate / `unknown`). Recurs anywhere
+  off-grid times are queried, so do NOT fold it into the probe fix to paper over one caller.
+
+**What resolution changes:** restores correct kernel-divergence verdicts for temporal-series
+constraints; unblocks OQ-41 rows 24–25 (re-pointed here) and OQ-39 row 14 (trajectory gate shares
+the off-grid wrinkle). The `unknown==unknown`-as-agreement absorption it exposed is tracked as an
+OQ-51 build-extension (independent, can land in parallel).
+
+---
+
+*Last updated: 2026-06-24. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

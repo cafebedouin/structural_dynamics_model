@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "279d7c24fa55864bf051e04beb893f47307fdd53",
+    "store_version": "915f7f1a38313a2ff8d904ddad895828bf12fe21",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-24T01:42:34"
+    "generated_at": "2026-06-24T22:18:23"
   },
-  "issues_sha": "b34e057c158b664547809517cdeed7c22ec94c170c37876665bb45adc3277703",
-  "n_entries": 177,
+  "issues_sha": "bee757cde74fe0e26c89a496b5fad783b0904edde1c6134d95c2954787b98395",
+  "n_entries": 178,
   "active_token_set": [
     "investigating",
     "open",
@@ -15,7 +15,7 @@
     "resolved": 86,
     "mitigated": 9,
     "partial": 7,
-    "open": 69,
+    "open": 70,
     "disposed": 3,
     "future": 3
   },
@@ -129,6 +129,7 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-35",
+        "OQ-90",
         "OQ-133"
       ]
     },
@@ -139,7 +140,10 @@
       "summary": "G4: prompt rules with no engine enforcer",
       "deps": [],
       "cross_refs": [],
-      "mentioned_in": []
+      "mentioned_in": [
+        "OQ-41",
+        "OQ-178"
+      ]
     },
     {
       "id": "OQ-40",
@@ -164,7 +168,8 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-44",
-        "OQ-46"
+        "OQ-46",
+        "OQ-178"
       ]
     },
     {
@@ -982,6 +987,23 @@
       "mentioned_in": [
         "OQ-06"
       ]
+    },
+    {
+      "id": "OQ-178",
+      "status": "open",
+      "priority": 1,
+      "summary": "Off-grid Time=0 probing in cs_kernel_registry mis-classifies temporal-series readings",
+      "deps": [
+        "blocked_on_human oq178-probe-fix-vs-classifier-semantics-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-39",
+        "OQ-41",
+        "OQ-44",
+        "OQ-51",
+        "OQ-105"
+      ]
     }
   ],
   "archive": [
@@ -1407,7 +1429,8 @@
       "mentioned_in": [
         "OQ-26",
         "OQ-37",
-        "OQ-52"
+        "OQ-52",
+        "OQ-178"
       ]
     },
     {
