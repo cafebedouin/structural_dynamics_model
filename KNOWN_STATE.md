@@ -45,6 +45,37 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-24 — OQ-37..41 census Pass 1: 2 strips landed; OQ-41 BaseX=0.5 is off-grid, not absence; OQ-178 minted
+**Files:** prolog/data_validation.pl, prolog/drl_composition.pl, prolog/cs_kernel_registry.pl, ISSUES.md, CLAUDE.md, audits/2026-06-24_oq41_basex_t0/
+**Tier:** correction-key
+
+Implementing the OQ-37..41 census plan. **Landed (behavior-preserving, commit `1eacd2fc`):**
+stripped the vacuous `resistance_to_change`-keyed piton sub-check in `validate_edge_cases/0`
+(superseded by OQ-90) and `predict_transformation/3` (0 callers; helpers `linear_slope`/
+`slope_accum` now orphaned → OQ-38 clause-pass candidates). Item-3 `inevitability` read was
+already stripped in a prior session.
+
+**Correction-key — the temporal path is LIVE, not dormant (overturns prior OQ-41 text):**
+`classify_at_time` is consumed live by `cs_kernel_registry` (probes at **Time=0**, feeding
+pipeline `validation.cs_kernel_*`), `temporal_residual`, `boltzmann_compliance`, `drl_core` —
+NOT only via the dormant `constraint_history`/`snapshot_type`/`degradation_chain`. So the OQ-41
+rows 24–25 `BaseX=0.5` site is live at Time=0. Fail-closing it (the OQ-44 reflex, attempted then
+REVERTED) is output-changing (`cs_kernel_divergence_count` 17→16) and WRONG: all 15 affected
+constraints author `base_extractiveness` as a temporal series at real years (none at the synthetic
+Time=0) — 0/15 genuinely absent. The default is OFF-GRID PROBING, not absence; fail-closing erases
+a real `snare`-vs-`scaffold` divergence (`jewish_sovereignty_palestine`). Real fix → **OQ-178**
+(probe-fix vs classifier off-grid semantics; blocked_on_human). OQ-39 row 14 reopened (same
+premise); OQ-51 build-extension logged (cs_kernel_comparison counts unknown==unknown as agreement).
+Audit: `audits/2026-06-24_oq41_basex_t0/`.
+
+**Tripwire (reusable):** when witnessing behavior-preservation via a `pipeline_output.json` diff,
+a `run_pipeline.py` whose **load-warning-gate aborts** (e.g. a `*/` inside a `/* */` Prolog comment)
+exits non-zero and does NOT rewrite the output — so the diff reads FALSE-IDENTICAL against the
+stale file. Always check exit code AND the output mtime changed before trusting a "byte-identical"
+pipeline diff (Pattern 6).
+
+---
+
 ## 2026-06-23 — OQ-15 RESOLVED (core): cross-axis taint guard LANDED, Phase 2 ruled policed-in-place
 **Files:** prolog/check_axis_boundary.pl, prolog/axis_boundary_allowlist.txt, python/check_axis_boundary.py, python/run_pipeline.py, prolog/tests/axis_boundary_ctl_run1.pl, prolog/tests/axis_boundary_ctl_run2.pl, prolog/tests/axis_boundary_ctl_payload_widen.pl, prolog/tests/axis_boundary_ctl_nonbridge_seam.pl, scripts/gate.sh, ISSUES.md, docs/design/design_gaps.md
 **Tier:** landed
