@@ -2542,11 +2542,23 @@ def build_kernel_reading_section(constraint_id, pipeline_data):
     # (fail-closed on a missing H1, not a defaulted verdict).
     rr = kernel_entry.get("reading_robustness")
     if isinstance(rr, dict):
-        lines.append(
-            f"  Reading robustness: {rr.get('robust_context_count')}/{rr.get('total_contexts')} "
-            f"contexts robust (all readings agree) | "
-            f"{rr.get('specific_context_count')} reading-specific"
-        )
+        # OQ-51 trichotomy: render the DISTRIBUTION (agree / diverge / undetermined)
+        # that sums to total — NOT "X/total robust" (a percentage of total would treat
+        # undetermined contexts as not-robust, conflating abstention with divergence).
+        # Abstention is cross-cutting (a context can be agree AND abstaining), shown as
+        # a separate annotation, not a fourth partition cell.
+        tot = rr.get("total_contexts")
+        rob = rr.get("robust_context_count")
+        div = rr.get("divergent_context_count")
+        und = rr.get("undetermined_context_count")
+        abst = rr.get("abstaining_context_count")
+        robust_line = (
+            f"  Reading robustness: {rob} agree (real-typed) / {div} diverge / "
+            f"{und} undetermined  (of {tot} contexts")
+        if abst:
+            robust_line += f"; abstentions in {abst}"
+        robust_line += ")"
+        lines.append(robust_line)
         h1r = rr.get("h1_band_robust")
         h1label = {True: "robust", False: "reading-specific", None: "unknown (missing H1)"}.get(
             h1r, str(h1r))
@@ -2557,9 +2569,33 @@ def build_kernel_reading_section(constraint_id, pipeline_data):
         for pj in rr.get("pairwise_jaccard", []):
             a = pj["reading_a"].split("__")[-1]
             b = pj["reading_b"].split("__")[-1]
+            # HOLE B (OQ-51): jaccard is null when no comparable (both-real) context
+            # exists — `:.3f` throws on None. Guard and render "n/a".
+            jv = pj.get("jaccard")
+            jstr = f"{jv:.3f}" if isinstance(jv, (int, float)) else "n/a"
             lines.append(
-                f"    Jaccard({a}, {b}) = {pj['jaccard']:.3f}  "
+                f"    Jaccard({a}, {b}) = {jstr}  "
                 f"[agree {pj['agree_contexts']}, diverge {pj['diverge_contexts']}]")
+        # OQ-51 deliverable ii: ENUMERATE the divergences so the reader SEES what
+        # disagrees (settler=snare / cultural=scaffold), not just a count.
+        for pat in rr.get("divergence_patterns", []):
+            readings = pat.get("readings", {})
+            desc = " / ".join(
+                f"{rid.split('__')[-1]}={t}" for rid, t in readings.items())
+            cc = pat.get("context_count")
+            abstained = pat.get("abstained", {})
+            ann = ""
+            if abstained:
+                ann = "; " + ", ".join(
+                    f"{rid.split('__')[-1]} abstained in {n}"
+                    for rid, n in abstained.items())
+            lines.append(f"    diverges: {desc} ({cc} contexts{ann})")
+        # Fold C: truncation notice rendered in the report body, not only a console log.
+        trunc = rr.get("divergence_patterns_truncated")
+        if isinstance(trunc, dict):
+            lines.append(
+                f"    (showing {trunc.get('shown')} of {trunc.get('total')} "
+                f"divergence kinds)")
 
     any_mismatch = False
     for r in kernel_entry["readings"]:

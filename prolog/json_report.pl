@@ -2021,14 +2021,32 @@ write_reading_comparison_entry(S, UID-C, Comma) :-
 write_reading_robustness(S, K) :-
     (   catch(cs_kernel_registry:compare_kernel_readings(K, Profile, PairStats), _, fail)
     ->  length(Profile, NCtx),
-        aggregate_all(count, member(_-agree(_), Profile), RobustN),
-        SpecificN is NCtx - RobustN,
+        % OQ-51 trichotomy (2026-06-25): verdict tokens are now arity-2
+        % (agree/2, diverge/2, undetermined/2). The old member(_-agree(_), ...)
+        % match would SILENTLY fail under the new arity -> RobustN=0 (a silent zero,
+        % no error). All three counts are RECOMPUTED per token, never relabelled.
+        aggregate_all(count, member(_-agree(_, _), Profile), RobustN),
+        aggregate_all(count, member(_-diverge(_, _), Profile), DivergentN),
+        aggregate_all(count, member(_-undetermined(_, _), Profile), UndeterminedN),
+        % abstaining_context_count is CROSS-CUTTING (a context can be both agree and
+        % abstaining) — read off the carried NUnk slot, NOT a fourth partition cell.
+        aggregate_all(count,
+            ( member(_-V, Profile),
+              cs_kernel_registry:verdict_unknown_count(V, NUnk), NUnk >= 1 ),
+            AbstainingN),
+        cs_kernel_registry:divergence_pattern_list(Profile, 5, Patterns, TotalKinds),
         cs_kernel_registry:cs_readings_for_kernel(K, Readings),
         reading_h1_list(Readings, H1List, H1Robust),
         format(S, '        "reading_robustness": {~n', []),
         format(S, '          "total_contexts": ~w,~n', [NCtx]),
+        % robust_context_count is a DERIVED FOOTER: agree among real-typed readings,
+        % undetermined excluded. NOT a coverage % and NOT a selection/gate target
+        % (same standing posture as inherited W1). Partition: robust + divergent +
+        % undetermined == total_contexts.
         format(S, '          "robust_context_count": ~w,~n', [RobustN]),
-        format(S, '          "specific_context_count": ~w,~n', [SpecificN]),
+        format(S, '          "divergent_context_count": ~w,~n', [DivergentN]),
+        format(S, '          "undetermined_context_count": ~w,~n', [UndeterminedN]),
+        format(S, '          "abstaining_context_count": ~w,~n', [AbstainingN]),
         (   H1Robust == unknown
         ->  format(S, '          "h1_band_robust": null,~n', [])
         ;   format(S, '          "h1_band_robust": ~w,~n', [H1Robust])
@@ -2036,12 +2054,56 @@ write_reading_robustness(S, K) :-
         format(S, '          "per_reading_h1": [', []),
         write_h1_pairs(S, H1List),
         format(S, '],~n', []),
+        format(S, '          "divergence_patterns": [', []),
+        write_divergence_patterns(S, Patterns),
+        format(S, '],~n', []),
+        (   TotalKinds > 5
+        ->  format(S, '          "divergence_patterns_truncated": {"shown": 5, "total": ~w},~n', [TotalKinds])
+        ;   format(S, '          "divergence_patterns_truncated": null,~n', [])
+        ),
         format(S, '          "pairwise_jaccard": [', []),
         write_jaccard_pairs(S, PairStats),
         format(S, ']~n', []),
         format(S, '        },~n', [])
     ;   format(S, '        "reading_robustness": null,~n', [])
     ).
+
+%% write_divergence_patterns(+Stream, +Patterns)  (OQ-51 deliverable ii)
+%  Patterns = list of pattern(RealMap, Count, Abstained, Example) from
+%  cs_kernel_registry:divergence_pattern_list/4. Each renders as
+%  {"readings": {C: Type, ...}, "context_count": N, "abstained": {C: N, ...},
+%   "example_context": "<ctx>"}.
+write_divergence_patterns(_, []).
+write_divergence_patterns(S, [P]) :-
+    !, write_divergence_pattern(S, P).
+write_divergence_patterns(S, [P|Rest]) :-
+    write_divergence_pattern(S, P), format(S, ', ', []), write_divergence_patterns(S, Rest).
+write_divergence_pattern(S, pattern(RealMap, Count, Abstained, Example)) :-
+    format(S, '{"readings": {', []),
+    write_kv_str_pairs(S, RealMap),       % values are Type atoms -> JSON strings
+    format(S, '}, "context_count": ~w, "abstained": {', [Count]),
+    write_kv_int_pairs(S, Abstained),     % values are abstention counts -> JSON numbers
+    format(atom(ExStr), '~w', [Example]),
+    json_escape_string(ExStr, ExEsc),
+    format(S, '}, "example_context": "~w"}', [ExEsc]).
+
+%% write_kv_str_pairs(+Stream, +Pairs)  — Pairs = [K-V] -> "K": "V" (V quoted as string).
+write_kv_str_pairs(_, []).
+write_kv_str_pairs(S, [K-V]) :-
+    !, json_escape_string(K, KEsc), json_escape_string(V, VEsc),
+    format(S, '"~w": "~w"', [KEsc, VEsc]).
+write_kv_str_pairs(S, [K-V|Rest]) :-
+    json_escape_string(K, KEsc), json_escape_string(V, VEsc),
+    format(S, '"~w": "~w", ', [KEsc, VEsc]),
+    write_kv_str_pairs(S, Rest).
+
+%% write_kv_int_pairs(+Stream, +Pairs)  — Pairs = [K-V] -> "K": V (V raw number).
+write_kv_int_pairs(_, []).
+write_kv_int_pairs(S, [K-V]) :-
+    !, json_escape_string(K, KEsc), format(S, '"~w": ~w', [KEsc, V]).
+write_kv_int_pairs(S, [K-V|Rest]) :-
+    json_escape_string(K, KEsc), format(S, '"~w": ~w, ', [KEsc, V]),
+    write_kv_int_pairs(S, Rest).
 
 %% reading_h1_list(+Readings, -H1List, -H1Robust)
 %  H1List = list of C-H1 (H1 = null when cohomology is unavailable for that reading).
@@ -2084,8 +2146,12 @@ write_jaccard_pairs(S, [P]) :-
 write_jaccard_pairs(S, [P|Rest]) :-
     write_jaccard_pair(S, P), format(S, ', ', []), write_jaccard_pairs(S, Rest).
 write_jaccard_pair(S, pair(_U1-C1, _U2-C2)-stats(J, AgreeN, DivergeN)) :-
-    format(S, '{"reading_a": "~w", "reading_b": "~w", "jaccard": ~6f, "agree_contexts": ~w, "diverge_contexts": ~w}',
-           [C1, C2, J, AgreeN, DivergeN]).
+    % HOLE A (OQ-51): J is `null` (atom) when the pair has no comparable context
+    % (both-real overlap empty). `~6f` THROWS on a non-float and aborts the whole
+    % JSON write — branch it: emit the literal null, reserve ~6f for floats.
+    (   number(J) -> format(atom(JStr), '~6f', [J]) ; JStr = null ),
+    format(S, '{"reading_a": "~w", "reading_b": "~w", "jaccard": ~w, "agree_contexts": ~w, "diverge_contexts": ~w}',
+           [C1, C2, JStr, AgreeN, DivergeN]).
 
 /* ================================================================
    TIER 3 — JSON PRIMITIVES

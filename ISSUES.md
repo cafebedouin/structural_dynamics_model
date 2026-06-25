@@ -2293,17 +2293,23 @@ snapshot with a real threshold (≥~0.05), and state W1/H1 as readings of two di
 classifiers. Related: OQ-37 (do not re-suppress `unknown`), OQ-52 (false-mountain cross gated by
 the W1 rules above).
 
-**Build-extension — same ruling, unenumerated site (2026-06-24).** `cs_kernel_registry`'s
-`compare_kernel_readings/3` (`ctx_reading_verdict`, `pair_reading_agreement`) counts
-`unknown==unknown` as **agreement/robustness** (a kernel where every reading is `unknown` at a
-context scores `agree`, inflating `robust_context_count`). This is the SAME family as the ruled
-`count_disagreeing_pairs` defect — `unknown` is N/A, not a value that can agree with itself — at
-a site the OQ-51 build did not enumerate. NOT a new design question; the ruling already governs
-(`unknown` ⇒ N/A, neither agree nor diverge; <2 real-typed readings ⇒ verdict `undetermined`,
-not `agree`). Surfaced by the OQ-178 t0 audit (`audits/2026-06-24_oq41_basex_t0/`), where
-fail-closing JSP made `robust_context_count` 0→156 on two genuinely-divergent readings.
-Build-extension to `cs_kernel_comparison`, independent of the OQ-178 t0 fix (can land in
-parallel). Tracked here, not minted separately, per operator ruling.
+**Build-extension — RESOLVED 2026-06-25 (cs_kernel_comparison site).** `cs_kernel_registry`'s
+`compare_kernel_readings/3` (`ctx_reading_verdict`, `pair_reading_agreement`) counted
+`unknown==unknown` as agreement/robustness (an all-`unknown` context scored `agree`, inflating
+`robust_context_count`) — the SAME family as the ruled `count_disagreeing_pairs` defect, at a
+site the original OQ-51 build did not enumerate. **Applied the ruling:** `unknown` ⇒ N/A;
+verdict trichotomy `agree(Type,NUnk)`/`diverge(TypeMap,NUnk)`/`undetermined(NReal,NUnk)` (lenient
+— ≥2 real ⇒ verdict over the real readings); `cs_kernel_divergence/4` + `pair_reading_agreement/7`
+require both types real (join invariant preserved); Jaccard `null` on zero-comparable; JSON
+`specific_context_count`→`divergent_context_count` + new `undetermined`/`abstaining`/
+`divergence_patterns` (deliverable ii — the report now ENUMERATES the disagreement, not just
+counts). Two null-path footguns fixed (HOLE A `~6f`-on-null abort; HOLE B `:.3f`-on-None).
+**Witness:** unit 20/20 (6 synthetic N/A controls + join invariant), dynamic 0 errors, pipeline
+exit 0, partition invariant 9/9, `cs_kernel_divergence_count` 20→16, JSP report enumerates
+settler=snare/cultural=scaffold. Commit on branch `oq51-unknown-na-cs-kernel-comparison`;
+KNOWN_STATE 2026-06-25. **Scope:** ONLY `cs_kernel_comparison` — the original OQ-51 ruled-not-built
+spec for `count_disagreeing_pairs`/`sheaf_status` 4th value/H1-emits-null (lines above) **remains
+OPEN** as OQ-51's main build item.
 *(Investigation narratives compressed 2026-06-04 per footer rule; full probes in git history.)*
 ## OQ-52 — False-mountain cross: do the naturalized→snare manifest rows have an authored beneficiary?
 

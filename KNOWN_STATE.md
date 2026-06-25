@@ -45,6 +45,50 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-25 — OQ-51 build-extension RESOLVED: `unknown` is N/A in cs_kernel_comparison (trichotomy + divergence enumeration)
+**Files:** prolog/cs_kernel_registry.pl, prolog/json_report.pl, python/enhanced_report.py, prolog/tests/test_cs_kernel_registry.pl
+**Tier:** landed
+
+Applied OQ-51's N/A rule (`unknown` = not-agree, not-diverge) to the `cs_kernel_comparison`
+surface — the site the original OQ-51 build never enumerated, surfaced by the OQ-178 audit
+(all-`unknown` context was scored `agree(unknown)`, inflating robustness).
+
+- **Verdict trichotomy** (`ctx_reading_verdict/2`): `agree(Type,NUnk)` / `diverge(TypeMap,NUnk)` /
+  `undetermined(NReal,NUnk)`. Each carries `NUnk` = #unknown readings so abstention reads uniformly
+  off the verdict (`verdict_unknown_count/2`). LENIENT (operator ruling): ≥2 real readings ⇒ verdict
+  over the real ones; a lone unknown does NOT demote (strict = absence-as-presence reversed).
+- **`cs_kernel_divergence/4`** and **`pair_reading_agreement/7`** now require BOTH types real before
+  counting agree/diverge (shared `is_real_type/1`). Load-bearing for the join invariant
+  (Σ DivergeN == #cs_kernel_divergence) — must not refactor back to bare `\=`. Jaccard = `null` when
+  the pair has no comparable (both-real) context (was a misleading 1.0).
+- **JSON**: `specific_context_count` → `divergent_context_count` (recomputed as `#diverge`, NOT
+  relabelled NCtx−robust); new `undetermined_context_count`, `abstaining_context_count`
+  (cross-cutting — a context can be agree AND abstaining; NOT a 4th partition cell), and
+  `divergence_patterns` (deliverable ii: ENUMERATES the disagreement, keyed on the real-typed submap
+  — abstention carried as sub-annotation, never in the key — capped at top 5 with a
+  `divergence_patterns_truncated` notice). Partition: `robust + divergent + undetermined == total`.
+- **Report** (`build_kernel_reading_section`) now renders the distribution + the divergence
+  enumeration (`diverges: settler=snare / cultural=scaffold (117 contexts)`) instead of bare counts.
+
+**Two silent footguns fixed:** (HOLE A) `write_jaccard_pair`'s `~6f` threw on a null Jaccard and
+aborted the whole JSON write — now branches to literal `null`; (HOLE B) `enhanced_report`'s `:.3f`
+threw on `None` — now renders `n/a`. (Arity fold A) `json_report.pl:2024`'s `agree(_)` would
+SILENTLY fail-match the new `agree/2` token → RobustN=0; updated to arity-2.
+
+**Witnesses (this commit):** unit suite 20/20 (incl. 6 synthetic N/A controls + join invariant);
+dynamic suite 0 errors; pipeline exit 0, `pipeline_output.json` rewritten; partition invariant
+9/9 kernels; `cs_kernel_divergence_count` 20→16, `cs_kernels_with_divergence` 9→8 (actinide's only
+"divergence" was unknown-vs-real — now correctly 0 real divergences, 117 undetermined where the old
+report falsely read 117 reading-specific); JSP report enumerates settler=snare/cultural=scaffold.
+**Note:** robust_context_count can RISE on abstention-heavy real-agreement kernels (performance_legitimacy
+21→147) — the lenient rule reclassifying real-agree-with-abstention from specific→robust; this is the
+RULING applied (Blast-radius prose under-predicted the direction; the output is the authority).
+**Note:** no live kernel currently has a zero-comparable pair, so the null-Jaccard path is witnessed
+by the synthetic unit test + direct writer/guard probes, not live data. Scope: only
+`cs_kernel_comparison`; the original OQ-51 `count_disagreeing_pairs`/`sheaf_status`/H1 sites remain
+OQ-51's separate open item. Console drift: `cs_corpus_analysis.pl:110` divergence count drops
+(expected). OQ-119 probes/exports see fewer divergences (expected).
+
 ## 2026-06-24 — OQ-37..41 census Pass 1: 2 strips landed; OQ-41 BaseX=0.5 is off-grid, not absence; OQ-178 minted
 **Files:** prolog/data_validation.pl, prolog/drl_composition.pl, prolog/cs_kernel_registry.pl, ISSUES.md, CLAUDE.md, audits/2026-06-24_oq41_basex_t0/
 **Tier:** correction-key
@@ -169,18 +213,20 @@ error, not silent), so it stays history here rather than promoting to an always-
 Added the summary/verdict layer OQ-10 needed. The comparison ENGINE already fired live
 (`cs_kernel_divergence/4` + `write_kernel_comparison_entry` + `build_kernel_reading_section`);
 the "no predicate/script/report section performs this comparison" premise was stale. New:
-- `compare_kernel_readings/3` (cs_kernel_registry.pl, exported): per-context
-  `agree(Type)`/`diverge(TypeMap)` profile over the SAME `classify_at_time/4` evaluations the
-  divergence engine walks — a JOIN, not new compute (it makes FEWER classify_at_time calls than
-  cs_kernel_divergence, which re-evals per pair). Invariant: Σ per-pair DivergeN ==
-  #cs_kernel_divergence solutions (166==166 on the live twin; unit test
-  `compare_join_consistency_with_divergence_engine`, corpus-independent).
-- `pipeline_output.json` `validation.cs_kernel_comparison[].reading_robustness` object (NEW
-  fields a consumer can now read): `total_contexts`, `robust_context_count`,
-  `specific_context_count`, `h1_band_robust` (true/false/null — null = fail-closed on missing
-  H¹), `per_reading_h1[]`, `pairwise_jaccard[]`. Jaccard is CONTEXT-ALIGNED over presheaf section
-  graphs `AgreeN/(2*NCtx-AgreeN)` (global-vocabulary Jaccard rejected — scores ~1 on type
-  permutations).
+- `compare_kernel_readings/3` (cs_kernel_registry.pl, exported): per-context verdict profile over
+  the SAME `classify_at_time/4` evaluations the divergence engine walks — a JOIN, not new compute
+  (it makes FEWER classify_at_time calls than cs_kernel_divergence, which re-evals per pair).
+  Invariant: Σ per-pair DivergeN == #cs_kernel_divergence solutions (166==166 on the live twin;
+  unit test `compare_join_consistency_with_divergence_engine`, corpus-independent). **SUPERSEDED
+  2026-06-25 by the OQ-51 trichotomy** — verdict tokens are now `agree(Type,NUnk)` /
+  `diverge(TypeMap,NUnk)` / `undetermined(NReal,NUnk)`; see the 2026-06-25 entry.
+- `pipeline_output.json` `validation.cs_kernel_comparison[].reading_robustness` object fields:
+  `total_contexts`, `robust_context_count`, `divergent_context_count` (**renamed from
+  `specific_context_count` 2026-06-25**), `undetermined_context_count`/`abstaining_context_count`/
+  `divergence_patterns`/`divergence_patterns_truncated` (NEW 2026-06-25, OQ-51), `h1_band_robust`
+  (true/false/null — null = fail-closed on missing H¹), `per_reading_h1[]`, `pairwise_jaccard[]`.
+  Jaccard is CONTEXT-ALIGNED over presheaf section graphs (global-vocabulary Jaccard rejected —
+  scores ~1 on type permutations); `null` when the pair has no comparable (both-real) context.
 - `enhanced_report.build_kernel_reading_section` renders the robustness summary + Jaccard table.
 
 Witness: `classify_corpus('testsets_haiku', …)` (full-pipeline load route) → twin

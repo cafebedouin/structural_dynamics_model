@@ -24,6 +24,10 @@
     cs_kernel_coverage/2,
     cs_kernel_divergence/4,
     compare_kernel_readings/3,
+    ctx_reading_verdict/2,
+    pair_reading_agreement/7,
+    verdict_unknown_count/2,
+    divergence_pattern_list/4,
     cs_kernel_obstruction/4,
     cs_kernel_obstruction_status/2,
     cs_kernel_obstruction_report/0,
@@ -93,7 +97,22 @@ cs_kernel_divergence(K, Ctx, UID1-C1, UID2-C2) :-
     reading_snapshot_time(C2, T2),
     once(drl_composition:classify_at_time(C1, T1, Ctx, Type1)),
     once(drl_composition:classify_at_time(C2, T2, Ctx, Type2)),
-    Type1 \= Type2.
+    % OQ-51 N/A rule: `unknown` is not a type that can agree OR disagree. A
+    % divergence requires TWO real (non-unknown) types that differ. This
+    % "both-real-different" definition is LOAD-BEARING for the join invariant
+    % (sum of per-pair DivergeN == cs_kernel_divergence/4 count) — pair_reading_agreement/7
+    % counts DivergeN the same way. Must NOT be refactored back to bare `Type1 \= Type2`.
+    is_real_type(Type1), is_real_type(Type2), Type1 \= Type2.
+
+%% is_real_type(+T)  (OQ-51 build-extension, 2026-06-25)
+%  `unknown` is N/A — not a value that agrees with itself, not a disagreeing type.
+%  Shared filter for the three coupled cs_kernel_comparison predicates so the
+%  N/A rule is applied identically everywhere (DRY — the alignment is the invariant).
+is_real_type(T) :- T \== unknown.
+
+%% real_typemap(+TypeMap, -RealPairs)  — drop unknown-typed entries from a TypeMap.
+real_typemap(TypeMap, RealPairs) :-
+    include([_-T]>>is_real_type(T), TypeMap, RealPairs).
 
 %% compare_kernel_readings(+K, -Profile, -PairStats)
 %  GENERALIZES cs_kernel_divergence/4 (OQ-10 reading-robustness): from "emit only
@@ -108,9 +127,13 @@ cs_kernel_divergence(K, Ctx, UID1-C1, UID2-C2) :-
 %  If this ever reaches a context outside site_contexts_product or a reading outside
 %  cs_readings_for_kernel/2, that is the join->compute line crossing — it does not.
 %
-%  Profile  = list of Ctx-Verdict, one per context:
-%    agree(Type)      — every reading classifies Type at Ctx (reading-ROBUST finding)
-%    diverge(TypeMap) — readings differ; TypeMap = list of (UID-C)-Type (reading-SPECIFIC)
+%  Profile  = list of Ctx-Verdict, one per context (OQ-51 trichotomy, 2026-06-25 —
+%  `unknown` is N/A, neither agrees nor diverges; NUnk = #unknown readings at Ctx,
+%  carried in EVERY token so abstention reads uniformly off the verdict, never by
+%  unpacking a TypeMap):
+%    agree(Type, NUnk)       — every REAL-typed reading classifies Type at Ctx (≥2 real)
+%    diverge(TypeMap, NUnk)  — real-typed readings differ; TypeMap = (UID-C)-Type incl. unknowns
+%    undetermined(NReal, NUnk) — <2 real readings; not enough to agree OR diverge (N/A)
 %  PairStats = list of pair(UID1-C1, UID2-C2)-stats(Jaccard, AgreeN, DivergeN):
 %    context-aligned Jaccard over the presheaf SECTION GRAPH —
 %    Jaccard = AgreeN / (2*NCtx - AgreeN). (Two readings with an identical global
@@ -138,23 +161,115 @@ compare_kernel_readings(K, Profile, PairStats) :-
           pair_reading_agreement(R1, R2, CtxTypeMaps, NCtx, AgreeN, DivergeN, J) ),
         PairStats).
 
-%% ctx_reading_verdict(+TypeMap, -Verdict)
-%  agree(Type) iff every reading shares one Type at this context; else diverge(TypeMap).
-ctx_reading_verdict(TypeMap, agree(Type)) :-
-    TypeMap = [_-Type|_],
-    forall(member(_-T, TypeMap), T == Type), !.
-ctx_reading_verdict(TypeMap, diverge(TypeMap)).
+%% ctx_reading_verdict(+TypeMap, -Verdict)  (OQ-51 trichotomy, 2026-06-25)
+%  Applies the OQ-51 N/A rule: `unknown` readings are abstentions, excluded from the
+%  agree/diverge judgement and counted separately as NUnk. LENIENT is the ruling
+%  applied, not a choice (operator 2026-06-25): ≥2 real readings ⇒ a verdict over the
+%  real readings; a lone unknown does NOT demote (strict would reintroduce
+%  absence-as-presence). <2 real ⇒ undetermined (N/A, not agree, not diverge).
+ctx_reading_verdict(TypeMap, Verdict) :-
+    real_typemap(TypeMap, Reals),
+    length(Reals, NReal),
+    aggregate_all(count, (member(_-T, TypeMap), T == unknown), NUnk),
+    (   NReal < 2
+    ->  Verdict = undetermined(NReal, NUnk)
+    ;   Reals = [_-Type0|_], forall(member(_-T, Reals), T == Type0)
+    ->  Verdict = agree(Type0, NUnk)
+    ;   Verdict = diverge(TypeMap, NUnk)
+    ).
+
+%% verdict_unknown_count(+Verdict, -NUnk)
+%  Reads the carried abstention count off ANY verdict token uniformly. Lets the
+%  abstaining_context_count aggregate read NUnk without unpacking a TypeMap (symmetry).
+verdict_unknown_count(agree(_, N), N).
+verdict_unknown_count(diverge(_, N), N).
+verdict_unknown_count(undetermined(_, N), N).
 
 %% pair_reading_agreement(+R1, +R2, +CtxTypeMaps, +NCtx, -AgreeN, -DivergeN, -J)
-pair_reading_agreement(R1, R2, CtxTypeMaps, NCtx, AgreeN, DivergeN, J) :-
+%  (OQ-51 N/A rule) AgreeN / DivergeN count ONLY contexts where BOTH readings have a
+%  real type — unknown on either side is N/A (contributes to neither). comparable =
+%  AgreeN + DivergeN; a pair with no comparable context yields Jaccard = null (not 1.0 —
+%  vacuous-agreement is absence-as-presence). DivergeN stays "both-real-different" so
+%  sum DivergeN == cs_kernel_divergence/4 count still holds exactly (the join invariant).
+pair_reading_agreement(R1, R2, CtxTypeMaps, _NCtx, AgreeN, DivergeN, J) :-
     findall(eq,
         ( member(_-TypeMap, CtxTypeMaps),
-          memberchk(R1-T1, TypeMap), memberchk(R2-T2, TypeMap), T1 == T2 ),
+          memberchk(R1-T1, TypeMap), memberchk(R2-T2, TypeMap),
+          is_real_type(T1), is_real_type(T2), T1 == T2 ),
         Eqs),
     length(Eqs, AgreeN),
-    DivergeN is NCtx - AgreeN,
-    Denom is 2*NCtx - AgreeN,
-    ( Denom =:= 0 -> J = 1.0 ; J is AgreeN / Denom ).
+    findall(d,
+        ( member(_-TypeMap, CtxTypeMaps),
+          memberchk(R1-T1, TypeMap), memberchk(R2-T2, TypeMap),
+          is_real_type(T1), is_real_type(T2), T1 \== T2 ),
+        Ds),
+    length(Ds, DivergeN),
+    Comparable is AgreeN + DivergeN,
+    (   Comparable =:= 0
+    ->  J = null
+    ;   Denom is 2*Comparable - AgreeN, J is AgreeN / Denom
+    ).
+
+%% divergence_pattern_list(+Profile, +Cap, -Patterns, -TotalKinds)
+%  (OQ-51 deliverable ii — SHOW the divergences, 2026-06-25)
+%  Groups diverge(TypeMap,_) contexts into divergence KINDS keyed on the real-typed
+%  submap only (Fold B: keying on the unknowns would fragment one real divergence by
+%  abstention noise — exactly the count-inflation the N/A rule kills). Abstention is
+%  carried as a per-pattern sub-annotation, not part of the key. JOIN, not compute:
+%  reads the same Profile, never re-evaluates classify_at_time.
+%  Patterns = list of pattern(RealMap, Count, Abstained, Example), sorted by Count desc,
+%  capped at Cap; TotalKinds = total distinct kinds pre-cap (drives the truncation notice).
+%    RealMap   = sorted [C-Type] of the real-typed readings (the divergence itself)
+%    Abstained = sorted [C-NAbstain] for readings that were unknown in some of these contexts
+%    Example   = one example Ctx term
+divergence_pattern_list(Profile, Cap, Patterns, TotalKinds) :-
+    findall(Key-(Ctx-TypeMap),
+        ( member(Ctx-diverge(TypeMap, _), Profile),
+          real_submap_key(TypeMap, Key) ),
+        Keyed),
+    findall(K, member(K-_, Keyed), KeysDup),
+    sort(KeysDup, Keys),
+    findall(Count-pattern(Key, Count, Abstained, Example),
+        ( member(Key, Keys),
+          findall(Mctx-Mtm, member(Key-(Mctx-Mtm), Keyed), Members),
+          length(Members, Count),
+          Members = [Example-_|_],
+          abstained_summary(Members, Abstained) ),
+        CountedPatterns),
+    length(CountedPatterns, TotalKinds),
+    sort(1, @>=, CountedPatterns, SortedDesc),
+    take_prefix(SortedDesc, Cap, TopCounted),
+    findall(P, member(_-P, TopCounted), Patterns).
+
+%% real_submap_key(+TypeMap, -Key)  — canonical sorted [C-Type] over real types only.
+real_submap_key(TypeMap, Key) :-
+    findall(C-Type,
+        ( member((_UID-C)-Type, TypeMap), is_real_type(Type) ),
+        Pairs),
+    msort(Pairs, Key).
+
+%% abstained_summary(+Members, -Abstained)
+%  Members = list of Ctx-TypeMap. Abstained = sorted [C-NAbstain]: for each reading C
+%  that was `unknown` in any member context, how many of these contexts it abstained in.
+abstained_summary(Members, Abstained) :-
+    findall(C,
+        ( member(_-TM, Members), member((_UID-C)-unknown, TM) ),
+        Abs),
+    msort(Abs, Sorted),
+    runs(Sorted, Abstained).
+
+%% runs(+SortedList, -Counts)  — run-length count of a sorted list: [a,a,b] -> [a-2, b-1].
+runs([], []).
+runs([X|Xs], [X-N|Rest]) :-
+    take_run(X, Xs, 1, N, Tail),
+    runs(Tail, Rest).
+take_run(X, [X|Xs], Acc, N, Tail) :- !, Acc1 is Acc+1, take_run(X, Xs, Acc1, N, Tail).
+take_run(_, Xs, Acc, Acc, Xs).
+
+%% take_prefix(+List, +N, -Prefix)  — first N elements (or all if fewer).
+take_prefix(_, 0, []) :- !.
+take_prefix([], _, []) :- !.
+take_prefix([X|Xs], N, [X|Ys]) :- N > 0, N1 is N-1, take_prefix(Xs, N1, Ys).
 
 % ============================================================================
 % READING-AXIS STRUCTURAL OBSTRUCTION (committer-axis analog of observer H¹)
