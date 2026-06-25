@@ -192,3 +192,12 @@ Before drafting the Claude Code prompt:
 ---
 
 *Drafted for review prior to Claude Code handoff. The Claude Code prompt itself is a separate artifact, drafted after this scope document is approved.*
+
+---
+
+*Naming note (2026-06-25, OQ-16): modules named in this account were renamed after this was
+written — `drift_events.pl` → `metric_drift_events.pl`, `drift_report.pl` →
+`metric_drift_report.pl`, `trajectory_mining.pl` → `context_profile_mining.pl`,
+`trajectory_report.pl` → `context_profile_report.pl`. Names in the body reflect the
+pre-rename state and are left as a dated record; the rename was name-only (no logic change).
+Rename table: ISSUES.md OQ-16.*

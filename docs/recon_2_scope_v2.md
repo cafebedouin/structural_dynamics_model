@@ -224,3 +224,10 @@ Estimated Claude Code sessions: 1-2 for the merged extraction and analyses, 0.5 
 ---
 
 *Drafted for re-review prior to Claude Code handoff. The Claude Code prompt itself remains a separate artifact, drafted after this scope document is approved.*
+
+---
+
+*Naming note (2026-06-25, OQ-16): a module named in this account was renamed after this was
+written — `drift_events.pl` → `metric_drift_events.pl`. The name in the body reflects the
+pre-rename state and is left as a dated record; the rename was name-only (no logic change).
+Rename table: ISSUES.md OQ-16.*

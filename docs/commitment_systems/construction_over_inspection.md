@@ -71,3 +71,10 @@ The mode generalizes to any capable model working inside a system it did not bui
 The stakes are not only wasted effort. A redundant built capability is worse than wasted: it is a second implementation of something the system already does, which drifts from the original, accumulates its own bugs, and quietly forks the system's behavior — the exact spec-versus-code drift that this engine's own history is full of. Construction-over-inspection does not just fail to find the existing answer; it actively degrades the system by adding a competing one. The discipline is therefore not only an efficiency measure but a coherence measure: inspect-first keeps the system single-sourced, while build-first multiplies its answers and lets them diverge.
 
 The deepest version of the lesson is the one the worked case demonstrates rather than asserts: a model cannot be trusted to hold this discipline through vigilance, because the bias survives the model's explicit knowledge of it. It committed the error while naming the error. The discipline has to be built into the workflow as a step that executes regardless of what the model believes about its own carefulness — *look first, every time, and require an honest empty read before building* — because the alternative is a model that reaches to construct, sincerely believes it is being rigorous, and is reinventing column three of a report it already has open.
+
+---
+
+*Naming note (2026-06-25, OQ-16): the module referenced illustratively above as `drift_events`
+was renamed `metric_drift_events` after this was written. The name in the body reflects the
+pre-rename state and is left as a dated record; the rename was name-only. Rename table:
+ISSUES.md OQ-16.*

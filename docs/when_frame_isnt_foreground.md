@@ -112,3 +112,10 @@ External:
 ---
 
 *Working paper. Conceptual development in conversation with Claude (Anthropic). The architectural reframe — Type A as the apparatus's medium rather than one of three failure components — emerged from the recognition that the engine's primary work is inter-reasoner frame comparison, and that the audit's "Type A is thin" finding was itself an instance of the failure mode it was cataloging. The predicate-level investigation that grounds the empirical claim was conducted under a two-phase discipline (evidence collection before interpretation) designed to prevent the failure mode of writing conclusions before gathering data.*
+
+---
+
+*Naming note (2026-06-25, OQ-16): a module named in this account was renamed after this
+was written — `drift_events.pl` → `metric_drift_events.pl`. The name in the body reflects
+the pre-rename state and is left as a dated record; the rename was name-only (no logic
+change). Rename table: ISSUES.md OQ-16.*
