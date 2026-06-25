@@ -1705,6 +1705,15 @@ nobody authored — distinct from G5 (this is fail-closed-vs-impute, not represe
   (synthetic no-data constraint → `0.5`, positive-controlled). **First write-pass item to close
   this:** expand `ROW26_SITES` to the full 6 sites and re-run — flagged, not done (out of this audit's
   read/transcription scope).
+  - **Sites VERIFIED at HEAD (2026-06-24, re-witnessed for the expansion build):**
+    `covering_analysis.pl:490` (`BaseEps=0.5` in `classify_at_interpolated/4`; sibling `:497`
+    `Supp=0`), `gap_diagnostic.pl:120` (`BaseEps=0.5`; sibling `:127` `Supp=0`),
+    `omega1_audit.pl:102` (`BaseEps=0.5`; sibling `:115` `Theater=0.0`), `drl_fpn.pl:206`
+    (`Immunity=0.5`, a NEW site distinct from the already-classified `:197` LIVE-COSMETIC).
+    **Build note:** these enclosing predicates have DIFFERENT signatures than the 3 covered
+    `(C,V)` sites (e.g. `classify_at_interpolated/4` takes `(C,D,Sigma,Type)`), so the expansion
+    needs a per-site query, not a `ROW26_SITES` list-append — plus the planned synthetic-no-data
+    positive control that MUST fire. Produce-then-stop instrument; no apply.
 
 **Decision per remaining site:** fail-closed vs keep impute. Connects to the empty-table
 satisfy-on-absence pattern (`get_metric_average:169`).
