@@ -30,7 +30,7 @@ try:
 except ImportError:
     HAS_SCIPY = False
 
-from shared.loader import load_json, PIPELINE_JSON, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
+from shared.loader import load_json, h1_band_or_raise, PIPELINE_JSON, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
 from corpus_hash import compute_corpus_hash  # single-source corpus fingerprint (OQ-29)
 from shared.maxent import (
     compute_profiles, compute_priors, gaussian_ll, boolean_ll,
@@ -127,7 +127,7 @@ def select_arakelov_constraints(pipeline_entries, enriched_by_id):
     selected = []
     for e in pipeline_entries:
         ah = e.get("arakelov_height")
-        h1 = e.get("h1_band", -1)
+        h1 = h1_band_or_raise(e, "epsilon_sensitivity")  # OQ-51: loud on null, no silent -1
         ee = enriched_by_id.get(e["id"], {})
         nash = ee.get("nash_distance_structural", -1)
         if ah is not None and ah > p75 and h1 == 0 and nash == 0:

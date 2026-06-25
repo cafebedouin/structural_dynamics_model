@@ -22,6 +22,16 @@ from pathlib import Path
 import networkx as nx
 import numpy as np
 
+from shared.loader import h1_band_or_raise
+
+
+def _h1_or_loud(entry):
+    """OQ-51 containment: h1_band, loud on null, never silent 0. A constraint
+    entirely ABSENT from the index (entry == {}) keeps the pre-existing 0 (a
+    separate join concern); a PRESENT entry with a null h1_band raises loud."""
+    return h1_band_or_raise(entry, "orbit_characterization") if entry else 0
+
+
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
@@ -220,13 +230,13 @@ def pass1_extract_orbits(bimodal_pairs, constraints_idx, type_maps, explicit_adj
                 "stability": stab,
                 "degree": degrees[cid],
                 "neighbor_type_dist": dict(neigh_types),
-                "h1_band": entry.get("h1_band") or 0,
+                "h1_band": _h1_or_loud(entry),
                 "signature": entry.get("signature"),
                 "topic_domain": entry.get("topic_domain") or "",
                 "beneficiaries": entry.get("beneficiaries") or [],
                 "victims": entry.get("victims") or [],
                 "base_extractiveness": entry.get("base_extractiveness"),
-                "gauge_variant": (entry.get("h1_band") or 0) > 0,
+                "gauge_variant": _h1_or_loud(entry) > 0,
                 "multi_slice_typed": cid in multi_slice_typed_ids,
             })
 
@@ -368,11 +378,11 @@ def pass3_cross_slice_overlap(bimodal_pairs, constraints_idx):
                 result.append({
                     "id": cid,
                     "appearances": cnt,
-                    "h1_band": e.get("h1_band") or 0,
+                    "h1_band": _h1_or_loud(e),
                     "signature": e.get("signature"),
                     "topic_domain": e.get("topic_domain") or "",
                     "beneficiaries": e.get("beneficiaries") or [],
-                    "gauge_variant": (e.get("h1_band") or 0) > 0,
+                    "gauge_variant": _h1_or_loud(e) > 0,
                 })
         return result
 
@@ -507,7 +517,7 @@ def pass5_detectors(bimodal_pairs, constraints_idx, multi_slice_typed_ids):
             orbit_appearance[c["id"]] += 1
 
     detectors = {
-        "h1_band_gt0":       lambda e: (e.get("h1_band") or 0) > 0,
+        "h1_band_gt0":       lambda e: _h1_or_loud(e) > 0,
         "fcr_signature":     lambda e: e.get("signature") == "false_ci_rope",
         "fsm_signature":     lambda e: e.get("signature") == "false_summit_mountain",
         "has_beneficiaries": lambda e: bool(e.get("beneficiaries")),
@@ -570,7 +580,7 @@ def pass5_detectors(bimodal_pairs, constraints_idx, multi_slice_typed_ids):
         unflagged_orbits.append({
             "id": cid,
             "appearances_in_orbit_lists": orbit_appearance[cid],
-            "h1_band": e.get("h1_band") or 0,
+            "h1_band": _h1_or_loud(e),
             "signature": e.get("signature"),
             "topic_domain": e.get("topic_domain") or "",
             "beneficiaries": e.get("beneficiaries") or [],

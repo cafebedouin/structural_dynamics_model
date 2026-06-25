@@ -177,7 +177,11 @@ def main():
     pc = data.get("per_constraint", [])
     print(f"Loaded {len(pc)} constraints.")
 
-    corpus_h1 = Counter(c["h1_band"] for c in pc)
+    # OQ-51: h1_band is null for UNDETERMINED constraints (<2 real seats — N/A,
+    # not 0). Exclude them from the H¹-shape distribution (they have no H¹ value)
+    # but COUNT them so the population stays visible (carry-the-coverage).
+    n_undetermined = sum(1 for c in pc if c.get("h1_band") is None)
+    corpus_h1 = Counter(c["h1_band"] for c in pc if c.get("h1_band") is not None)
     total = len(pc)
     manifest = {k: v for k, v in corpus_h1.items() if k > 0}
     manifest_total = sum(manifest.values())
@@ -186,6 +190,7 @@ def main():
     for k in sorted(corpus_h1):
         print(f"  H¹={k}: {corpus_h1[k]:5d}  ({100*corpus_h1[k]/total:.1f}%)")
     print(f"  Manifest presheaves (H¹>0): {manifest_total}")
+    print(f"  Undetermined (h1_band=null, OQ-51 N/A): {n_undetermined} ({100*n_undetermined/total:.1f}%)")
 
     # ── Note on H¹=6 ─────────────────────────────────────────────────────────
     h6 = corpus_h1.get(6, 0)

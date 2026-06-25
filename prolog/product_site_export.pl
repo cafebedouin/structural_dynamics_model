@@ -80,11 +80,19 @@ write_entries(S, [C|Rest], Ctxs, CtxKeys) :-
 write_one_entry(S, C, Ctxs, CtxKeys, Comma) :-
     % Classify at all site contexts
     maplist(type_at(C), Ctxs, Types),
-    % Compute H0/H1
-    sort(Types, UniqueTypes),
-    (   UniqueTypes = [_]
-    ->  H0 = 1, H1 = 0
-    ;   H0 = 0, count_disagreeing_pairs(Types, H1)
+    sort(Types, UniqueTypes),                  % full signature, incl unknown (unchanged)
+    % Compute H0/H1 under the OQ-51 N/A rule: `unknown` is N/A — count only real
+    % (non-unknown) seats. <2 real seats ⇒ UNDETERMINED (h0/h1 = null), not 0; an
+    % all-`unknown` product orbit must NOT read genuine by absence (Pattern 5).
+    include(is_real_type, Types, RealTypes),
+    length(RealTypes, NReal),
+    (   NReal < 2
+    ->  H0 = null, H1 = null
+    ;   sort(RealTypes, UniqueReal),
+        (   UniqueReal = [_]
+        ->  H0 = 1, H1 = 0
+        ;   H0 = 0, count_disagreeing_pairs(RealTypes, H1)
+        )
     ),
     % Write entry
     format(S, '  "~w": {~n', [C]),
@@ -119,9 +127,16 @@ context_key(
 ) :-
     atomic_list_concat([P, T, E, S], '_', Key).
 
+%% is_real_type(+T)  (OQ-51 N/A rule)
+%  `unknown` is N/A — not a value that agrees with itself, not a disagreeing type.
+is_real_type(T) :- T \== unknown.
+
 %% count_disagreeing_pairs(+TypeVector, -Count)
-%  Counts unordered pairs (i,j) with i < j where TypeVector[i] \= TypeVector[j].
-%  O(n²) without findall overhead.
+%  Counts unordered pairs (i,j) with i < j where BOTH TypeVector[i] and
+%  TypeVector[j] are real and differ (OQ-51 N/A rule — an `unknown` on either
+%  side is an abstention, in neither agree nor disagree). O(n²) without findall.
+%  Callers pre-filter to real seats; the in-pair guard is defensive (do NOT
+%  refactor count_differs back to a bare `T \= H`).
 count_disagreeing_pairs([], 0).
 count_disagreeing_pairs([_], 0).
 count_disagreeing_pairs([T|Rest], Count) :-
@@ -132,7 +147,10 @@ count_disagreeing_pairs([T|Rest], Count) :-
 count_differs(_, [], 0).
 count_differs(T, [H|Rest], N) :-
     count_differs(T, Rest, N0),
-    (T \= H -> N is N0 + 1 ; N = N0).
+    (   is_real_type(T), is_real_type(H), T \= H
+    ->  N is N0 + 1
+    ;   N = N0
+    ).
 
 %% write_string_list(+Stream, +List)
 %  Writes a JSON string array body (no brackets): "a", "b", ...

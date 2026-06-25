@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "1bcc07c533f541c742b18c222ea5593a1b236060",
+    "store_version": "15cca7ed367d91b61f1f63217b460d25f5930e7d",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-25T14:50:52"
+    "generated_at": "2026-06-25T16:08:04"
   },
-  "issues_sha": "e209a915fc901d204d42563b7fd9ccf2d906f3150969c3a8073653b0fff65b5a",
-  "n_entries": 179,
+  "issues_sha": "fbe075fac907a77def2fe9f409f35c234ce2647b49dd80ae393abb76ea9a07e2",
+  "n_entries": 181,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 9,
     "partial": 7,
     "disposed": 3,
-    "open": 67,
+    "open": 69,
     "future": 3
   },
   "active": [
@@ -968,6 +968,32 @@
       "mentioned_in": [
         "OQ-06"
       ]
+    },
+    {
+      "id": "OQ-180",
+      "status": "open",
+      "priority": 3,
+      "summary": "Sibling bare-`\\=` diagnostic surfaces + audit-dir silent h1_band sites (residual OQ-51 N/A)",
+      "deps": [
+        "splits_from OQ-51"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-51"
+      ]
+    },
+    {
+      "id": "OQ-181",
+      "status": "open",
+      "priority": 2,
+      "summary": "Per-site `undetermined` semantics for the 13 canonical h1_band readers (OQ-51 follow-up)",
+      "deps": [
+        "splits_from OQ-51"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-51"
+      ]
     }
   ],
   "archive": [
@@ -1419,7 +1445,9 @@
       "mentioned_in": [
         "OQ-26",
         "OQ-37",
-        "OQ-52"
+        "OQ-52",
+        "OQ-180",
+        "OQ-181"
       ]
     },
     {

@@ -34,7 +34,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from shared.loader import load_json, ENRICHED_PIPELINE_JSON, ORBIT_JSON, OUTPUT_DIR
+from shared.loader import load_json, h1_band_or_raise, ENRICHED_PIPELINE_JSON, ORBIT_JSON, OUTPUT_DIR
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -93,7 +93,10 @@ def main():
         is_constant = len(set(type_vector)) == 1
 
         maxent = enriched_c.get("maxent_probs", {})
-        h1 = enriched_c.get("h1_band", 0)
+        # OQ-51: loud on a null h1_band when the constraint IS in enriched; a cid
+        # entirely absent from enriched is a separate (pre-existing) join-coverage
+        # concern, left at 0 so this change is scoped to the null-coercion bug.
+        h1 = h1_band_or_raise(enriched_c, "game_theory_mixed_strategy") if enriched_c else 0
 
         if is_constant:
             results.append({

@@ -37,7 +37,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from shared.loader import load_json, load_orbits_constraints, ORBIT_JSON, PIPELINE_JSON, OUTPUT_DIR
+from shared.loader import load_json, load_orbits_constraints, h1_band_or_raise, ORBIT_JSON, PIPELINE_JSON, OUTPUT_DIR
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -152,7 +152,7 @@ def main():
     sig_lookup = {}
     for c in pipeline_data.get("per_constraint", []):
         cid = c["id"]
-        h1_lookup[cid] = c.get("h1_band", 0)
+        h1_lookup[cid] = h1_band_or_raise(c, "game_theory_nash")  # OQ-51: loud on null, no silent 0
         sig_lookup[cid] = c.get("signature", "")
 
     # Process each constraint

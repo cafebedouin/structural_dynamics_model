@@ -44,6 +44,8 @@
 
     % Core API
     cohomological_obstruction/3,    % cohomological_obstruction(C, H0, H1)
+    obstruction_from_vector/3,      % obstruction_from_vector(TypeVector, H0, H1) — pure, synthetic-testable
+    is_real_type/1,                 % is_real_type(T) — OQ-51 N/A filter (T \== unknown)
     descent_status/2,               % descent_status(C, Status)
 
     % Corpus-level analysis
@@ -155,28 +157,56 @@ type_at_context(C, Ctx, Type) :-
 %  H0 = 0 otherwise.
 %  H1 = number of disagreeing context-pairs (0..6). Range reflects C(4,2) = 6.
 %  H0 and H1 are complementary: H0=1 implies H1=0; H1>0 implies H0=0.
+%  OQ-51 N/A rule (2026-06-25): `unknown` is N/A — an untypeable seat that can
+%  neither agree nor disagree. Fewer than two REAL seats can form no pair, so the
+%  obstruction is UNDETERMINED, serialized as H0 = null, H1 = null (the single
+%  source of truth for "H1 is N/A"). This is the canonical-path twin of the
+%  cs_kernel_registry build; it kills the Pattern-5 trap where an all-`unknown`
+%  constraint read genuine_sheaf by absence. Mirrors cs_kernel_registry:is_real_type/1.
 cohomological_obstruction(C, H0, H1) :-
     (   cached_obstruction(C, CH0, CH1)
     ->  H0 = CH0, H1 = CH1
     ;   orbit_vector(C, TypeVector),
-        sort(TypeVector, UniqueTypes),
-        (   UniqueTypes = [_]
-        ->  H0 = 1, H1 = 0
-        ;   H0 = 0,
-            count_disagreeing_pairs(TypeVector, H1)
-        ),
+        obstruction_from_vector(TypeVector, H0, H1),
         assertz(cached_obstruction(C, H0, H1))
     ).
 
+%% obstruction_from_vector(+TypeVector, -H0, -H1)
+%  Pure H0/H1 over a type vector under the OQ-51 N/A rule (no corpus, no cache —
+%  synthetic-testable). <2 real seats ⇒ H0=null, H1=null (UNDETERMINED). Else the
+%  real seats either all agree (H0=1, H1=0) or disagree (H0=0, H1=#real pairs).
+obstruction_from_vector(TypeVector, H0, H1) :-
+    include(is_real_type, TypeVector, RealVector),
+    length(RealVector, NReal),
+    (   NReal < 2
+    ->  H0 = null, H1 = null   % N/A: <2 real seats can neither agree nor disagree
+    ;   sort(RealVector, UniqueReal),
+        (   UniqueReal = [_]
+        ->  H0 = 1, H1 = 0
+        ;   H0 = 0,
+            count_disagreeing_pairs(RealVector, H1)
+        )
+    ).
+
+%% is_real_type(+T)  (OQ-51 N/A rule)
+%  `unknown` is N/A — not a value that agrees with itself, not a disagreeing type.
+%  A real (typeable) seat is anything else. Shared filter; "both-real-different" is
+%  the disagreement definition, applied identically wherever pairs are counted.
+is_real_type(T) :- T \== unknown.
+
 % Categorical: Cech 1-cocycle proxy — counts disagreeing pairs in the orbit vector
 %% count_disagreeing_pairs(+TypeVector, -Count)
-%  For a 4-element vector, counts unordered pairs (i,j) with i < j
-%  where TypeVector[i] \= TypeVector[j]. Range: 0..6.
+%  For a vector of length L, counts unordered pairs (i,j) with i < j where both
+%  TypeVector[i] and TypeVector[j] are REAL and differ. The both-real requirement
+%  is the OQ-51 N/A rule (an `unknown` on either side contributes to neither agree
+%  nor disagree); do NOT refactor back to a bare `T1 \= T2`, which would count an
+%  `unknown`-vs-real pair as disagreement and inflate H1.
 count_disagreeing_pairs(TypeVector, Count) :-
     findall(1,
         (   nth1(I, TypeVector, T1),
             nth1(J, TypeVector, T2),
             I < J,
+            is_real_type(T1), is_real_type(T2),
             T1 \= T2
         ),
         Ones),
@@ -192,6 +222,9 @@ count_disagreeing_pairs(TypeVector, Count) :-
 %    classified as Type from every context).
 %  Status = fails_descent(H1, UniqueTypes) if H0=0 (gluing fails, H1
 %    measures the degree of failure, UniqueTypes lists the distinct types).
+descent_status(C, undetermined) :-
+    cohomological_obstruction(C, H0, _),
+    H0 == null, !.   % OQ-51: <2 real seats — neither descends nor fails, it is N/A
 descent_status(C, descends(Type)) :-
     cohomological_obstruction(C, 1, 0),
     orbit_vector(C, [Type|_]), !.
@@ -266,6 +299,7 @@ corpus_cohomology(Summary) :-
                                piton, naturalized, unknown]),
             findall(H1Val,
                 (   cached_obstruction(Cx, _, H1Val),
+                    number(H1Val),   % OQ-51: skip undetermined (null H1) — sum_list throws on the atom
                     analytical_type(Cx, AnalType)
                 ),
                 TypeH1s),
@@ -324,21 +358,35 @@ analytical_type(C, Type) :-
    ================================================================ */
 
 %% constraint_contextuality(+Constraint, -CF)
-%  Per-constraint contextuality fraction: CF = H1 / 6.
-%  CF = 0.0 means non-contextual (global section exists).
-%  CF = 1.0 means maximally contextual (all 6 pairs disagree).
+%  Per-constraint contextuality fraction: CF = H1 / comparable_pairs, where
+%  comparable_pairs = C(NReal, 2) counts only REAL-REAL seat pairs (the OQ-51
+%  N/A rule — `unknown` seats are abstentions, in neither numerator nor
+%  denominator). On a fully-real 4-seat orbit this is the old H1/6.
+%  FAILS (→ JSON null) when the constraint is undetermined (null H1, <2 real
+%  seats) — undetermined is N/A, not CF=0.
 %  Works without corpus precomputation.
 constraint_contextuality(C, CF) :-
     cohomological_obstruction(C, _, H1),
-    CF is H1 / 6.
+    number(H1),                       % fail-closed on undetermined (null H1)
+    orbit_vector(C, TypeVector),
+    include(is_real_type, TypeVector, RealVector),
+    length(RealVector, NReal),
+    Comparable is NReal * (NReal - 1) // 2,
+    Comparable > 0,
+    CF is H1 / Comparable.
 
 %% contextuality_fraction(-CF)
-%  Corpus-level binary contextuality fraction: CF = 1 - descent_rate.
+%  Corpus-level binary contextuality fraction over DETERMINED constraints only:
+%  CF = |{C : H0(C)=0}| / |{C : C determined}|. Undetermined constraints (null
+%  H0, <2 real seats — OQ-51 N/A) are excluded from BOTH numerator and
+%  denominator; counting them would be the absence-as-presence trap one level up
+%  (a vacuous denominator inflation). Equals 1 - descent_rate when descent_rate
+%  is itself taken over the determined set.
 %  Requires cached_obstruction/3 to be populated (calls corpus_cohomology
 %  if cache is empty).
 contextuality_fraction(CF) :-
     ensure_corpus_computed,
-    findall(C, cached_obstruction(C, _, _), AllCs),
+    findall(C, (cached_obstruction(C, H0, _), number(H0)), AllCs),  % determined only
     length(AllCs, N),
     (   N > 0
     ->  findall(C, cached_obstruction(C, 0, _), CtxCs),
@@ -355,7 +403,7 @@ contextuality_by_type(TypeCFs) :-
     findall(AnalType-CF,
         (   member(AnalType, [mountain, rope, tangled_rope, snare, scaffold,
                                piton, naturalized, unknown]),
-            findall(C, (cached_obstruction(C, _, _), analytical_type(C, AnalType)), AllOfType),
+            findall(C, (cached_obstruction(C, H0, _), number(H0), analytical_type(C, AnalType)), AllOfType),  % determined only (OQ-51)
             AllOfType \= [],
             length(AllOfType, NType),
             findall(C, (cached_obstruction(C, 0, _), analytical_type(C, AnalType)), CtxOfType),
@@ -373,8 +421,10 @@ contextuality_by_type(TypeCFs) :-
 contextuality_summary(Summary) :-
     contextuality_fraction(CF),
     contextuality_by_type(TypeCFs),
-    % Graded mean: mean(H1_i / 6) over all constraints
-    findall(H1, cached_obstruction(_, _, H1), AllH1),
+    % Graded mean: mean(H1_i / 6) over DETERMINED constraints (OQ-51: skip null
+    % H1 — undetermined constraints carry no graded CF, and sum_list throws on the
+    % atom). Keeps the corpus-shape /6 normalization (fraction of C(4,2)).
+    findall(H1, (cached_obstruction(_, _, H1), number(H1)), AllH1),
     length(AllH1, N),
     (   N > 0
     ->  sum_list(AllH1, SumH1),

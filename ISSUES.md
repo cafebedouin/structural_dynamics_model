@@ -2373,8 +2373,35 @@ counts). Two null-path footguns fixed (HOLE A `~6f`-on-null abort; HOLE B `:.3f`
 exit 0, partition invariant 9/9, `cs_kernel_divergence_count` 20→16, JSP report enumerates
 settler=snare/cultural=scaffold. Commit on branch `oq51-unknown-na-cs-kernel-comparison`;
 KNOWN_STATE 2026-06-25. **Scope:** ONLY `cs_kernel_comparison` — the original OQ-51 ruled-not-built
-spec for `count_disagreeing_pairs`/`sheaf_status` 4th value/H1-emits-null (lines above) **remains
-OPEN** as OQ-51's main build item.
+spec for `count_disagreeing_pairs`/`sheaf_status` 4th value/H1-emits-null (lines above) was the
+main build item, **now BUILT 2026-06-25** (next paragraph).
+
+**Main build — RESOLVED 2026-06-25 (canonical sheaf/H1 path + product-site H1).** The ruled spec
+(lines above) is built. `grothendieck_cohomology`: `is_real_type/1`; `count_disagreeing_pairs`
+counts only both-real-different pairs; `obstruction_from_vector/3` (pure, synthetic-testable) emits
+**H0=null, H1=null** on <2 real seats; `contextuality_*` exclude undetermined from numerator AND
+denominator (`number/1` guards stop `sum_list` throwing on the null atom); `descent_status` gains an
+`undetermined` clause. `sheaf_analysis:sheaf_status/2` gains the 4th regime `undetermined` via BOTH
+ruled routes — route 1 (<2 real seats) and route 2 (H1=0 but `arakelov_height/2` uncomputable, the
+second absence route) — and a sibling `sheaf_undetermined_reason/2` carries
+`insufficient_seats|uncomputable_height` (the provenance bit; the two routes resolve under different
+added data — do not collapse). JSON/schema: `h1_band` nullable, `sheaf_status` enum + `undetermined`,
+new `sheaf_undetermined_reason` field with the present-IFF-undetermined cross-field invariant.
+Containment (operator-ruled loud, in core commit): per-site `h1_band_or_raise` guard
+(`shared/loader.py`) on the 13 live `h1_band` readers — a null read silently-as-0 now fails LOUD,
+distinguishing key-absent (stale artifact) from null (undetermined). Commit 2 applied the same N/A
+rule to `product_site_export.pl`'s own H1 (separate file `product_site_orbits.json`, disjoint
+consumers `range_sweep`/`product_site_delta_sweep` made null-aware). **Witness:** `test_sheaf_na`
+10/10 synthetic controls + live route-1=15; dynamic suite 0 errors; pipeline exit 0 + mtime advanced;
+schema gate green; per-constraint diff 26 h1_band / 22 sheaf_status moves, 15 undetermined
+(insufficient_seats), 0 null-h1-not-undetermined; w1 `partition_ok=True`; containment trips loud on
+`run_drift_mismatch`+`game_theory_nash`; None-aware readers stay green; cold==warm cache null. **Cross-
+corpus (engine change):** 0 partition violations on `testsets_haiku`(960), `testsets_flash`(960),
+`kernel_v1`(1106). Route 2 is **live-dormant in the pipeline** (witnessed synthetically; `arakelov`
+needs MaxEnt absent in a bare load). Commits `f8ae0c9c` (core) + `15cca7ed` (product) on branch
+`oq51-sheaf-na-canonical`; KNOWN_STATE 2026-06-25. **Priority:** 1. Residual surfaces minted as
+**OQ-180** (sibling bare-`\=` diagnostics + 3 audit-dir silent h1_band sites) and **OQ-181** (per-site
+undetermined *semantics* for the 13 readers — containment makes them loud, OQ-181 makes them correct).
 *(Investigation narratives compressed 2026-06-04 per footer rule; full probes in git history.)*
 ## OQ-52 — False-mountain cross: do the naturalized→snare manifest rows have an authored beneficiary?
 
@@ -9281,6 +9308,63 @@ snapshot inherits.
 
 **What resolution changes:** replaces a lossy single-moment divergence verdict with one faithful to
 the temporal model the corpus authors; removes the inherited BC-encoding snapshot artifact.
+
+## OQ-180 — Sibling bare-`\=` diagnostic surfaces + audit-dir silent h1_band sites (residual OQ-51 N/A)
+
+**Ω-type:** Ω_C (design choice — same N/A rule, separate diagnostic surfaces).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-51
+
+**Origin (2026-06-25, OQ-51 main build).** The OQ-51 main build (commits `f8ae0c9c`/`15cca7ed`)
+applied the `unknown`-is-N/A rule to the canonical H1/sheaf path and the product-site H1, but two
+sibling diagnostic surfaces use the **same bare-`\=`** pattern and were deliberately NOT folded in
+(separate-surface ⇒ separate change):
+- `drl_core.pl:586` `perspectival_incoherence` — bare `\=` over seat type pairs.
+- `grothendieck_cohomology.pl:504` `find_boundaries`/`transition_boundaries` — `T1 \= T2` counts an
+  `unknown`→real transition as a boundary.
+Each computes a *diagnostic* (not a headline verdict), so the impact is annotation-level, but the rule
+is the same: an `unknown`-involving pair is N/A, not a disagreement/boundary. **Also fold in here:** the
+**3 audit-dir silent `h1_band` readers** the main build's containment deliberately did NOT guard (they
+are retrospective tooling, not the live analysis surface, and one already has an `isinstance` null-guard):
+`python/audits/cc_diagnostic.py:1226`, `python/audits/sheaf_audit.py:171`, `python/audits/audit3_synthesis.py:138`
+(each `.get('h1_band', 0)` — silently coerces a null undetermined to 0). **Witness carried:** the grep
+of the bare-`\=` at each Prolog site + the 3 audit-dir `.get('h1_band',0)` sites above.
+
+**What resolution changes:** extends the N/A rule to the sibling diagnostics and makes the audit-dir
+readers null-aware, closing the last silent `unknown`-as-disagreement / null-as-0 surfaces.
+
+## OQ-181 — Per-site `undetermined` semantics for the 13 canonical h1_band readers (OQ-51 follow-up)
+
+**Ω-type:** Ω_C (design choice — what `undetermined` MEANS at each consumer, per-site judgment).
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-51
+
+**Origin (2026-06-25, OQ-51 main build).** OQ-51 made `h1_band` nullable (null = undetermined). The
+main build's containment (`shared/loader.py:h1_band_or_raise`) makes a null read fail **loud** at the 13
+live readers — but loud is a stopgap: each site needs a *per-site semantic* decision (exclude / bucket /
+report) for what `undetermined` means there. That is per-site judgment, deliberately kept OUT of the
+output-changing core commit. The 13 readers had **inconsistent null-defaults** (this table is the
+witness):
+
+| default pattern | files |
+|---|---|
+| `or 0` | `orbit_characterization.py` (×6) |
+| `.get("h1_band", 0)` | `game_theory_nash.py`, `game_theory_cover_story.py`, `game_theory_stability.py`, `game_theory_mixed_strategy.py`, `run_drift_mismatch.py`, `tangled_rope_sign_flip.py`, `corpus_profile.py` |
+| `.get("h1_band", -1)` | `sweeps/epsilon_sensitivity.py` |
+| `.get("h1_band")` raw | `tangled_gradient.py` |
+| already None-aware (correct) | `w1_sheaf_join.py`, `enhanced_report.py`, `h1_distribution_shape_test.py` (fixed in main build) |
+
+**Also mint here (refactor, separate from semantics):** centralize the per-site guard into a
+`load_per_constraint(path)` loader helper that materializes the sentinel once, and migrate the readers
+to it (the main build chose per-site `h1_band_or_raise` calls over this refactor to keep the core commit
+scoped).
+
+**What resolution changes:** replaces 13 loud-stops with correct per-site `undetermined` handling, so
+the H1-bearing analyses run (rather than crash) on an undetermined-bearing corpus.
 
 ---
 

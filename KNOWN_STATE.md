@@ -45,6 +45,39 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-25 — OQ-51 main build: `unknown` is N/A on the canonical sheaf/H1 path (commits `f8ae0c9c` + `15cca7ed`)
+**Files:** prolog/grothendieck_cohomology.pl, prolog/sheaf_analysis.pl, prolog/json_report.pl, prolog/product_site_export.pl, python/shared/schemas.py, python/shared/loader.py, python/w1_sheaf_join.py, python/enhanced_report.py, python/orbit_characterization.py, python/run_drift_mismatch.py, python/sweeps/epsilon_sensitivity.py, python/sweeps/range_sweep.py, python/sweeps/product_site_delta_sweep.py
+**Tier:** tripwire
+
+OQ-51's main build item landed (the cs_kernel_comparison site was f456896b; this is the
+canonical path). `unknown` is N/A — not a disagreeing type, not a value that agrees with itself.
+
+**Standing tripwires for a fresh agent:**
+- **`h1_band` in `pipeline_output.json` is now NULLABLE.** null = UNDETERMINED (`<2` real seats —
+  the obstruction is N/A, NOT 0). Any new reader MUST handle null, never `.get("h1_band", 0)` /
+  `... or 0` — that silently reads undetermined/manifest as genuine. Use
+  `shared.loader.h1_band_or_raise(entry, source)` (fails loud, distinguishing key-absent=stale
+  artifact from null=undetermined). Same for the **product-site `"h1"`/`"h0"`** in
+  `product_site_orbits.json` (separate file; `None > 0` CRASHES — null-guard it).
+- **`sheaf_status` gains a 4th value `undetermined`** via TWO routes with distinct provenance in the
+  sibling field `sheaf_undetermined_reason` (`insufficient_seats` | `uncomputable_height`). Route 2
+  is **h1==0 AND undetermined** (height uncomputable) — so `undetermined ⟺ h1==null` is NOT an iff.
+  The true partition (asserted by `w1_sheaf_join`): manifest⟺h1>0; genuine/fragile⟹h1==0;
+  undetermined⟹h1∈{null,0}.
+- **`arakelov_height/2` needs MaxEnt that a bare `[stack]` load does NOT populate** (computes for
+  0/104 in a bare context). So a bare-context probe of route 2 (`uncomputable_height`) is an
+  ARTIFACT — every h1=0 reads route-2. Route-2 liveness is **pipeline-authoritative**
+  (`pipeline_output.json`); in the live pipeline it is dormant (route 1=15, route 2=0). Any future
+  route-2 census needs the arakelov-computable positive control (see `tests/test_sheaf_na.pl`).
+
+Witness: test_sheaf_na 10/10 + live route-1=15; dynamic suite 0 errors; pipeline exit 0 + mtime
+advanced; schema gate green; diff 26 h1_band / 22 sheaf_status moves, 15 undetermined; w1
+partition_ok; containment trips loud; 0 partition violations on testsets_haiku(960)/flash(960)/
+kernel_v1(1106). Branch `oq51-sheaf-na-canonical`. Residual: OQ-180 (sibling `\=` + 3 audit-dir
+silent sites), OQ-181 (per-site undetermined semantics for the 13 readers + `load_per_constraint`).
+
+---
+
 ## 2026-06-25 — fix: OQ-57-class wrong-qualifier in the dormant trajectory-mining path (commit `fc9b4688`)
 **Files:** prolog/context_profile_mining.pl, prolog/check_stack.pl
 **Tier:** landed

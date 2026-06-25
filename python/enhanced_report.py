@@ -274,16 +274,25 @@ _SHEAF_STATUS_EXPLAIN = {
     "genuine_sheaf": "local readings glue — global section exists (H^1=0, height below corpus p75)",
     "fragile_presheaf": "readings glue but high Arakelov complexity (H^1=0, height above corpus p75)",
     "manifest_presheaf": "no global section — observers disagree (H^1>0)",
+    "undetermined": "N/A (OQ-51) — the gluing regime cannot be computed",
+}
+
+# Provenance gloss for the two undetermined routes (sheaf_undetermined_reason).
+_SHEAF_UNDETERMINED_REASON_EXPLAIN = {
+    "insufficient_seats": "fewer than two real (non-unknown) seats — no pair to glue",
+    "uncomputable_height": "H^1=0 but Arakelov height is uncomputable (unauthored ε / missing MaxEnt), "
+                           "so genuine vs fragile cannot be told apart",
 }
 
 
-def _render_sheaf_status(status, threshold=None):
+def _render_sheaf_status(status, threshold=None, reason=None):
     """Render sheaf_status. Renders explicitly when null/absent (do not silently
     omit — a missing value must be visible, not invisible) and when unrecognized.
 
     threshold: diagnostic.arakelov_threshold from the same pipeline run — the
     actual p75 value that governed the genuine/fragile split. Cited on the two
-    height-dependent regimes so the split is auditable from the report alone."""
+    height-dependent regimes so the split is auditable from the report alone.
+    reason: sheaf_undetermined_reason (OQ-51) — names which undetermined route."""
     if status is None:
         return "null — not computed (sheaf_status absent from pipeline output)"
     expl = _SHEAF_STATUS_EXPLAIN.get(status)
@@ -292,6 +301,9 @@ def _render_sheaf_status(status, threshold=None):
     out = f"{status} — {expl}"
     if threshold is not None and status in ("genuine_sheaf", "fragile_presheaf"):
         out += f" [p75 this run: {threshold:.4f}]"
+    if status == "undetermined":
+        rexpl = _SHEAF_UNDETERMINED_REASON_EXPLAIN.get(reason)
+        out += f": {rexpl}" if rexpl else f" (route: {reason})"
     return out
 
 
@@ -1204,7 +1216,7 @@ def build_level2_convergence(constraint_id, pipeline_data):
     # Rendered unconditionally incl. null: a missing value must be seen, not omitted.
     # Threshold provenance: diagnostic.arakelov_threshold (same run as the regimes).
     arak_thresh = (pipeline_data.get("diagnostic") or {}).get("arakelov_threshold")
-    lines.append(f"    Sheaf status:     {_render_sheaf_status(entry.get('sheaf_status'), arak_thresh)}")
+    lines.append(f"    Sheaf status:     {_render_sheaf_status(entry.get('sheaf_status'), arak_thresh, entry.get('sheaf_undetermined_reason'))}")
 
     return "\n".join(lines)
 
