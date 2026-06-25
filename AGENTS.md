@@ -458,6 +458,24 @@ summary recreates the GREEN-over-severe-alerts defect. Producer:
 `diagnostic_summary:verdict_join/3`; serialization: `json_report.pl`; contract:
 `python/shared/schemas.py`. Evidence: `audits/2026-06-11_oq98_verdict_join/`.
 
+### `cs_verdict/2` clause placement — the orthogonal-guard cut trap (OQ-39, 2026-06-25)
+
+Adding a new `cs_verdict(C, …)` clause to `cs_pattern_detection.pl`: **every existing clause ends
+in `!`.** Those cuts are harmless *among themselves* only because each is gated on a DISTINCT,
+single-valued `cs_pattern` (the clauses are mutually exclusive, so the cut prunes nothing
+reachable). A clause gated on anything ORTHOGONAL to `cs_pattern` (e.g. `dr_type=scaffold`, as
+`scaffold_suppression_escalating` is) is NOT mutually exclusive with the family — so on a
+constraint that matches both, **placed below the family an earlier clause's `!` silently prunes the
+new verdict; given a trailing `!` of its own it prunes the others.** Either way `findall(V,
+cs_verdict(C,V), Vs)` drops a verdict, with no error. **Rule: a new orthogonally-gated clause MUST
+be the FIRST `cs_verdict/2` clause and commit with `once/1` (a local cut over its inner goals only —
+NO trailing `!`)**, leaving sibling clauses reachable on backtracking. The consumer
+(`json_report.pl:562`, `findall` over `catch(cs_verdict(C,V),_,fail)`) gathers this verdict PLUS any
+`cs_pattern` verdict. Mode caveat: such a clause needs **C bound** (it calls `dr_type(C,…)`); the
+consumer always binds C, but a probe must iterate `corpus_constraint/1` — `cs_verdict(C, …)` with C
+unbound returns 0, not the real set. Regression control: `tests/test_oq39_scaffold_escalation.pl`
+(dual-verdict case proves BOTH verdicts survive). Provenance: KNOWN_STATE 2026-06-25.
+
 ### Completion-witness-or-fail-closed (OQ-112 item 2, 2026-06-23)
 
 A pipeline stage that can be **absent or voided** must emit a **positive completion

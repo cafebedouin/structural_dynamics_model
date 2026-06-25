@@ -187,6 +187,28 @@ cs_pattern_is(C, Expected) :-
     once(cs_pattern(C, Actual, _)),
     Actual == Expected.
 
+% scaffold_suppression_escalating  (OQ-39 row 14) — COMMENTARY, annotate-only.
+% Fires when the constraint certifies scaffold at any standard context AND its authored
+% suppression_requirement SERIES is rising — contradicting the scaffold "suppression
+% declines over time" expectation. Records the rule-break WITHOUT reclassifying (rising
+% suppression != coercion; reclassifying would assert a coercion the evidence does not show).
+%
+% PLACEMENT/CUT GOTCHA (operator-flagged): this clause MUST be the FIRST cs_verdict/2 clause.
+% Every existing cs_verdict clause ends in `!`; those cuts are harmless among themselves
+% because each is gated on a DISTINCT cs_pattern (single-valued, mutually exclusive). This
+% clause is gated on dr_type=scaffold, which is ORTHOGONAL to cs_pattern, so it is NOT
+% mutually exclusive with the others. If it sat BELOW any of them, an earlier clause's `!`
+% would silently prune it on a constraint that matches both. Placed FIRST and committed with
+% once/1 (a LOCAL cut over the inner goals only — NO trailing `!`), it leaves every sibling
+% clause reachable on backtracking, so findall gathers this verdict PLUS any cs_pattern verdict.
+% metric_trend reads the measurement series directly (earliest->latest delta), so this check is
+% time-independent and moot to OQ-178's off-grid Time=0 wrinkle. Explicit module qualification
+% avoids a use_module load cycle (drl_core must not depend on cs_pattern_detection).
+cs_verdict(C, scaffold_suppression_escalating) :-
+    once(( drl_core:standard_context(Ctx),
+           drl_core:dr_type(C, Ctx, scaffold),
+           drift_events:metric_trend(C, suppression_requirement, increasing) )).
+
 % false_marked_revision
 % Fires when marked_revision is claimed but signals show suppression or enforcement.
 cs_verdict(C, false_marked_revision) :-

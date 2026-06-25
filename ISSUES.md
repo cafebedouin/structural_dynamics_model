@@ -1589,23 +1589,52 @@ read-vs-declare canary).
 
 **Ω-type:** Ω_C (design choice — where the prompt/engine enforcement boundary sits).
 
-**Status:** open — Census rows 14–18.
+**Status:** resolved — Census rows 14–18 all disposed (2026-06-25). Row 14 via a commentary verdict
+(NOT a gate/drop); rows 15–18 closed with witnessed dispositions.
 **Priority:** 1
-- Row 14 scaffold "suppression must decline over time": **no trajectory check** exists; scaffold
-  uses scalar `Chi` + `has_sunset_clause`. **Decision:** add a trajectory gate or drop the rule.
-  **REOPENED (2026-06-24):** a prior framing held this non-enforceable because a trajectory gate
-  would ride `classify_at_time`, "reached only via dormant `constraint_history`" → fires 0× live.
-  That premise is **false** — `classify_at_time` fires live via the DR temporal subsystem
-  (`drift_trajectory`/`degradation_chain`, OQ-83 family). (It NO LONGER fires from
-  `cs_kernel_registry`: that caller reverted to static `dr_type/3`, commit `5b069ae1` — so the
-  off-grid wrinkle it once shared is moot there.) So gate-vs-drop is still a **real engine-behavior
-  choice**, not a doc no-op, and the off-grid Time-vs-authored-grid question persists for the genuine
-  DR-temporal callers. Genuine design seat; operator ruling pending.
-- Row 15 "final measurement = base extractiveness": unenforced (no validator). **Low-stakes.**
-- Rows 16–18 (piton atrophy / Goodhart / perspective-min): narrative-only, committer-only, or
-  schema/linter-enforced respectively — likely no engine action.
+- **Row 14 scaffold "suppression must decline over time" — RESOLVED via COMMENTARY (operator ruling,
+  2026-06-25; NOT gate-vs-drop).** Reclassifying a rising-suppression scaffold to rope/tangled_rope
+  would assert *coercion* the evidence does not show — it only shows the decline rule is violated. So
+  the engine annotates instead: new clause `cs_verdict(C, scaffold_suppression_escalating)` in
+  `cs_pattern_detection.pl` (commentary-grade, annotate-only — flows to the `cs_verdicts` output field,
+  touches no classification/override path). Fires when a constraint certifies `scaffold` at any standard
+  context AND its authored `suppression_requirement` *series* is rising (`drift_events:metric_trend`).
+  **14 live constraints fire.** **Cross-leg finding:** rising:falling ≈ 5–6:1 in every leg
+  (testsets/ 13:2, haiku 53:7, flash 43:9 @ institutional) — the two reconciled legs share one
+  generation prompt, so this rules out one model's idiosyncrasy (not prompt-independence). Since the
+  rule *is* a generation-prompt rule, the sharp reading is: **the prompt's own "suppression declines"
+  instruction is systematically not honored by generation**, which strengthens the commentary case
+  (the engine annotates exactly where the prompt contradicts its own output). A strict "require
+  decline" gate would deny 18/20 institutional scaffolds; "deny on rising" 13–14/20 — both large
+  reclassifications the ruling rejects. **Doc-conflict resolved:** `metric_trend/3` reads the
+  `measurement/5` series directly via `metric_delta` (earliest→latest); its consumers
+  (`drift_events`, `transition_paths`, `logical_fingerprint`) do **not** route through
+  `classify_at_time`, so the commentary check is time-independent and **moot to OQ-178's off-grid
+  Time=0 wrinkle**. Cut/placement gotcha: the clause MUST be the first `cs_verdict/2` clause and use
+  `once/1` (no trailing `!`) — it is gated on `dr_type=scaffold`, orthogonal to the `cs_pattern`-gated
+  siblings, so a trailing cut or below-placement would silently prune a co-firing verdict (cut-regression
+  control in `tests/test_oq39_scaffold_escalation.pl` proves a dual-verdict constraint carries BOTH).
+- **Row 15 "final measurement = base extractiveness" — CLOSE, no engine action.** No validator checks
+  latest-time extractiveness == authored `base_extractiveness` scalar (`drl_composition.pl:235–237`
+  reads temporal-else-flagged-0.5; no equality check). Negative claim positive-controlled: grep for an
+  equality validator surfaced `linter.py:227` (metric *extraction* for mandatrophy `ext_val > 0.7`, not
+  an equality validator) and DID match real validators — absence witnessed, not a blind miss. The scalar
+  is the authored baseline (OQ-46 sanctioned). **Low-stakes.**
+- **Row 16 "piton atrophy" — CLOSE, enforcer exists.** `coordination_dead/1` (`drl_core.pl:317–320`)
+  wired into the piton pre-check of `classify_from_metrics/6` (`:344–351`), fired by authored
+  `coordination_vitality(C, dead|degrading)`.
+- **Row 17 "Goodhart / metric substitution" — CLOSE, leave diagnostic-only** (operator confirmed).
+  `detect_metric_substitution/1` (`drift_events.pl:103–110`) is report-path only (`drift_report.pl`,
+  `transition_paths.pl`), not a classification gate — by design.
+- **Row 18 "perspective-min" — CLOSE, no engine action.** Linter `MISSING_PERSPECTIVE`/`ROLE_COVERAGE`
+  (`linter.py:144–181`). Per operator: the linter is an *operator-evaluation* tool, not an authoring
+  gate constraints must pass and not an engine enforcer — the rule lives correctly at the eval surface.
 
-**Resolution would change:** whether the prompt's temporal rules are real engine constraints.
+**Resolution:** the prompt's temporal/structural rules are dispositioned per row — row 14 gets engine
+*commentary* (not enforcement, not a drop); rows 15–18 need no engine action (the enforcer already
+exists, or the rule correctly lives at the linter/report surface). Code: `cs_pattern_detection.pl`
+(new `scaffold_suppression_escalating` clause), `tests/test_oq39_scaffold_escalation.pl` (3-case
+positive control). See KNOWN_STATE 2026-06-25.
 
 ## OQ-40 — G5: scalar-vs-temporal representation splits
 

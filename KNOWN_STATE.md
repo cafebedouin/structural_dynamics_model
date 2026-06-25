@@ -45,6 +45,48 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-25 — OQ-39 RESOLVED: scaffold rising-suppression gets a COMMENTARY verdict (rows 14–18 disposed)
+**Files:** prolog/cs_pattern_detection.pl, prolog/tests/test_oq39_scaffold_escalation.pl, ISSUES.md
+**Tier:** tripwire
+
+OQ-39 row 14 (scaffold "suppression must decline over time", no engine enforcer) resolved **by
+commentary, not gate-vs-drop** (operator ruling). Reclassifying a rising-suppression scaffold to
+rope/tangled_rope would assert *coercion* the evidence doesn't show — it only shows the decline rule
+is violated. New clause `cs_verdict(C, scaffold_suppression_escalating)` (commentary-grade,
+annotate-only; flows to the `cs_verdicts` output field, touches no classification/override path)
+fires when a constraint certifies `scaffold` at any standard context AND its authored
+`suppression_requirement` *series* is rising (`drift_events:metric_trend`). **14 live constraints
+fire** (witnessed; cross-checked against an independent inline probe — same 14).
+
+**Cross-leg finding:** rising:falling ≈ 5–6:1 in every leg (testsets/ 13:2, haiku 53:7, flash 43:9
+@ institutional). The two reconciled legs share one generation prompt → this rules out one model's
+idiosyncrasy (NOT prompt-independence). Since the rule *is* a generation-prompt rule, the sharp
+reading: the prompt's own "suppression declines" instruction is systematically not honored by
+generation — which strengthens the commentary case. (A strict "require decline" gate would deny
+18/20 institutional scaffolds; "deny on rising" 13–14/20 — both large reclassifications the ruling
+rejects.) `metric_trend/3` reads the `measurement/5` series directly (earliest→latest delta); its
+consumers do not route through `classify_at_time`, so the check is time-independent and **moot to
+OQ-178's off-grid Time=0 wrinkle**.
+
+Rows 15–18 closed: 15 (final-measurement==base_extractiveness) no validator, low-stakes,
+positive-controlled absence; 16 (piton atrophy) enforcer exists (`coordination_dead/1` wired into
+`classify_from_metrics/6`); 17 (Goodhart) leave diagnostic-only (`detect_metric_substitution/1`
+report-path only); 18 (perspective-min) lives correctly at the linter eval surface, not an engine
+enforcer.
+
+**Tripwire — `cs_verdict/2` clause placement/cut gotcha.** Every existing `cs_verdict` clause ends
+in `!`, harmless among themselves because each is gated on a DISTINCT single-valued `cs_pattern`
+(mutually exclusive). A NEW clause gated on something ORTHOGONAL to `cs_pattern` (here
+`dr_type=scaffold`) is NOT mutually exclusive: placed BELOW the family, an earlier clause's `!`
+silently prunes it on a constraint that matches both; given a trailing `!`, it prunes the others.
+**Rule: a new orthogonally-gated `cs_verdict` clause MUST be the FIRST clause and commit with
+`once/1` (local cut over inner goals only — NO trailing `!`)**, leaving sibling clauses reachable so
+`findall` gathers this verdict PLUS any `cs_pattern` verdict. Proven by the cut-regression control in
+`tests/test_oq39_scaffold_escalation.pl` (a dual-verdict constraint carries BOTH). Mode note: the
+clause needs C BOUND (it calls `dr_type(C,...)`); the production consumer (`json_report.pl:562`)
+always binds C, but a `findall(C, cs_verdict(C, scaffold_suppression_escalating), _)` with C unbound
+returns 0 — query by iterating `corpus_constraint/1`.
+
 ## 2026-06-25 — OQ-178/179 SUPERSEDED/RESOLVED: cs_kernel_divergence reverts to static `dr_type/3` (time-neutral)
 **Files:** prolog/cs_kernel_registry.pl, prolog/json_report.pl, ISSUES.md
 **Tier:** tripwire
