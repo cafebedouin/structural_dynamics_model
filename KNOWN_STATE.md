@@ -65,10 +65,14 @@ canonical path). `unknown` is N/A — not a disagreeing type, not a value that a
   The true partition (asserted by `w1_sheaf_join`): manifest⟺h1>0; genuine/fragile⟹h1==0;
   undetermined⟹h1∈{null,0}.
 - **`arakelov_height/2` needs MaxEnt that a bare `[stack]` load does NOT populate** (computes for
-  0/104 in a bare context). So a bare-context probe of route 2 (`uncomputable_height`) is an
-  ARTIFACT — every h1=0 reads route-2. Route-2 liveness is **pipeline-authoritative**
-  (`pipeline_output.json`); in the live pipeline it is dormant (route 1=15, route 2=0). Any future
-  route-2 census needs the arakelov-computable positive control (see `tests/test_sheaf_na.pl`).
+  0/104 in a bare context; `arakelov_height.pl:16-18` "pipeline diagnostic only"). So a bare-context
+  probe of route 2 (`uncomputable_height`) is an ARTIFACT — every h1=0 reads route-2. Route-2
+  liveness is **pipeline-authoritative** (`pipeline_output.json`); in the live pipeline it is dormant
+  (route 1=15, route 2=0). Any future route-2 census needs the arakelov-computable positive control
+  (see `tests/test_sheaf_na.pl`). **A pipeline reorder that serializes `sheaf_status` before
+  `maxent_run` would silently turn EVERY h1=0 constraint undetermined** — guarded by `w1_sheaf_join`
+  Control 2b (dies if no h1=0 constraint is genuine/fragile); two-sided witnessed. Full mechanism +
+  the ordering hazard: `docs/technical/sheaf_status_maxent_ordering.md`.
 
 Witness: test_sheaf_na 10/10 + live route-1=15; dynamic suite 0 errors; pipeline exit 0 + mtime
 advanced; schema gate green; diff 26 h1_band / 22 sheaf_status moves, 15 undetermined; w1

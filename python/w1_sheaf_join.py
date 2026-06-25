@@ -113,6 +113,30 @@ def main():
         die("H1 vacuous (all h1_band==0 / None) — cohomology analogue of vacuity.")
     manifest_example = next(iter(h1_gt0))
 
+    # Control 2b (OQ-51): MaxEnt-ran positive control. sheaf_status route 2
+    # (undetermined / uncomputable_height) fires when arakelov_height/2 fails, which
+    # happens for EVERY constraint when maxent_run has not populated
+    # maxent_distribution_raw before json_report serializes sheaf_status (a pipeline
+    # ORDERING inversion — arakelov is a "pipeline diagnostic only" per
+    # arakelov_height.pl:16-18). The signature of that inversion: every h1_band==0
+    # constraint reads undetermined, none genuine_sheaf/fragile_presheaf. So: when any
+    # h1_band==0 constraint exists, at least one must have a COMPUTABLE height
+    # (genuine/fragile) — else MaxEnt did not run and the undetermined verdicts are an
+    # artifact, not the data. Fail loud here rather than ship a corrupt mass-undetermined
+    # output. Detail: docs/technical/sheaf_status_maxent_ordering.md.
+    h1_zero = {cid for cid, v in h1_present.items() if v == 0}
+    if h1_zero:
+        computable_height = [cid for cid in h1_zero
+                             if sheaf_vals.get(cid) in ("genuine_sheaf", "fragile_presheaf")]
+        if not computable_height:
+            n_uncomp = sum(1 for cid in h1_zero if sheaf_vals.get(cid) == "undetermined")
+            die(f"MaxEnt positive control FAILED: of {len(h1_zero)} h1_band==0 constraints, "
+                f"NONE is genuine_sheaf/fragile_presheaf ({n_uncomp} undetermined) — "
+                "arakelov_height computed for none, the signature of maxent_run not having "
+                "populated maxent_distribution_raw before sheaf_status serialization "
+                "(pipeline ordering inversion). The undetermined verdicts are an artifact. "
+                "See docs/technical/sheaf_status_maxent_ordering.md.")
+
     # Control 3: emit sanity — manifest_presheaf count == h1>0 count
     n_manifest = sum(1 for v in sheaf_vals.values() if v == "manifest_presheaf")
     emit_sane = (n_manifest == len(h1_gt0))
