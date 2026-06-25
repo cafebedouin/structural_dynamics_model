@@ -64,12 +64,12 @@ These gates distinguish static from drifting from expiring.
 | `has_sunset_clause` | /1 | Constraint has an explicit expiration mechanism | `narrative_ontology.pl:326` (dynamic, default fail) | Scaffold temporality (`drl_core.pl:274`), void checks |
 | `has_temporal_data` | — | Measurement data exists for this constraint | `logical_fingerprint.pl:186` | Fingerprint construction |
 | `drifting_without_limit` | void | Temporal data + no sunset + ε > rope ceiling | `logical_fingerprint.pl:250` | Structural void diagnostic |
-| `detect_metric_substitution` | /1 | Drift: original metric replaced by proxy | `drift_events.pl:103` | Standalone detector; parallel clause in `drift_event/3` (`:186`) |
-| `detect_extraction_accumulation` | /1 | Drift: extraction increasing over time | `drift_events.pl:114` | Standalone detector; parallel clause in `drift_event/3` (`:194`) |
-| `detect_coordination_loss` | /1 | Drift: coordination function degrading | `drift_events.pl:124` | Standalone detector; parallel clause in `drift_event/3` (`:202`) |
-| `detect_function_obsolescence` | /1 | Drift: original function no longer served | `drift_events.pl:138` | Standalone detector; parallel clause in `drift_event/3` (`:212`) |
-| `detect_sunset_violation` | /1 | Drift: constraint persists past its sunset clause | `drift_events.pl:150` | Standalone detector; parallel clause in `drift_event/3` (`:217`) |
-| `detect_extraction_dried_up` | /1 | Drift: extraction dropped to near-zero | `drift_events.pl:160` | Standalone detector; parallel clause in `drift_event/3` (`:223`) |
+| `detect_metric_substitution` | /1 | Drift: original metric replaced by proxy | `metric_drift_events.pl:103` | Standalone detector; parallel clause in `drift_event/3` (`:186`) |
+| `detect_extraction_accumulation` | /1 | Drift: extraction increasing over time | `metric_drift_events.pl:114` | Standalone detector; parallel clause in `drift_event/3` (`:194`) |
+| `detect_coordination_loss` | /1 | Drift: coordination function degrading | `metric_drift_events.pl:124` | Standalone detector; parallel clause in `drift_event/3` (`:202`) |
+| `detect_function_obsolescence` | /1 | Drift: original function no longer served | `metric_drift_events.pl:138` | Standalone detector; parallel clause in `drift_event/3` (`:212`) |
+| `detect_sunset_violation` | /1 | Drift: constraint persists past its sunset clause | `metric_drift_events.pl:150` | Standalone detector; parallel clause in `drift_event/3` (`:217`) |
+| `detect_extraction_dried_up` | /1 | Drift: extraction dropped to near-zero | `metric_drift_events.pl:160` | Standalone detector; parallel clause in `drift_event/3` (`:223`) |
 
 The six `detect_*` predicates are simple boolean detectors. Each has a parallel `drift_event/3` clause that tests the same drift pattern but returns structured evidence. The `drift_event/3` and `drift_event/4` (context-indexed) variants feed into severity classification (`drift_severity/3`) and drift velocity/acceleration computations.
 

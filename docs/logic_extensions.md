@@ -1087,7 +1087,7 @@ network_drift(C) ←
 **Implementation:**
 ```prolog
 % network_dynamics.pl (via drl_lifecycle.pl facade)
-detect_network_drift/3
+detect_network_contamination/3
 network_drift_velocity/4
 cascade_prediction/3
 ```
@@ -1178,7 +1178,7 @@ Not all coupling is extractive (complexity can increase legitimately). We only f
 
 **Implementation:**
 ```prolog
-% drift_events.pl (via drl_lifecycle.pl facade)
+% metric_drift_events.pl (via drl_lifecycle.pl facade)
 % Uses boltzmann_coupling_threshold (0.25) as the coupling gate
 detect_coupling_drift(C)
 ```
@@ -1233,7 +1233,7 @@ The grid got more complex (floor rose), but it's not more extractive (excess unc
 
 **Implementation:**
 ```prolog
-% drift_events.pl (via drl_lifecycle.pl facade)
+% metric_drift_events.pl (via drl_lifecycle.pl facade)
 detect_boltzmann_floor_drift(C) :-
     boltzmann_compliance:excess_extraction(C, Excess),
     boltzmann_compliance:boltzmann_floor_for(C, Floor),
@@ -1280,7 +1280,7 @@ Any **one** of the four signals triggers the event. Severity based on:
 
 **Implementation:**
 ```prolog
-% drift_events.pl (via drl_lifecycle.pl facade)
+% metric_drift_events.pl (via drl_lifecycle.pl facade)
 detect_purity_drift(C) :-
     purity_score(C, Purity),
     collect_purity_decline_signals(C, Signals),
@@ -1311,7 +1311,7 @@ ND(C, t_drift) ≡
 **Implementation:**
 ```prolog
 % network_dynamics.pl (via drl_lifecycle.pl facade)
-detect_network_drift/3
+detect_network_contamination/3
 network_drift_contagion/3
 network_drift_velocity/4
 ```
@@ -1658,10 +1658,10 @@ Currently, FNL/CI_Rope/FCR are already active (they fire in `constraint_signatur
 6. drl_purity_network.pl — Network contamination, effective_purity
 7. structural_signatures.pl — Wrapper (re-exports from 3-5)
 8. drl_lifecycle.pl — Facade; re-exports from:
-   - drift_events.pl — Event detection, severity, velocity
+   - metric_drift_events.pl — Event detection, severity, velocity
    - transition_paths.pl — Degradation path detection & terminal states
    - network_dynamics.pl — Network drift, contagion, cascades
-   - drift_report.pl — Unified scan & report generation
+   - metric_drift_report.pl — Unified scan & report generation
 9. drl_modal_logic.pl — Facade; re-exports from drl_composition.pl, drl_counterfactual.pl, drl_boltzmann_analysis.pl, drl_purity_network.pl, drl_fpn.pl
 10. logical_fingerprint.pl — Fingerprints
 11. [+20 more modules for supporting infrastructure]

@@ -271,7 +271,7 @@ declared seats; the common, correct case for genuine plurality like natural/posi
 index, do not collapse); **Type A** (frame drift — a criterion slides within what should be one seat →
 frame-fix); **Type B** (structural — the kernel's own commitments are inconsistent → genuine fracture).
 The engine has the raw pieces (`sheaf_status`, `h1_band`, `cs_pattern`, `cs_axiom_foreclosed`,
-`drift_events`) but no predicate that takes a kernel's reading-set and returns {ambiguity, drift,
+`metric_drift_events`) but no predicate that takes a kernel's reading-set and returns {ambiguity, drift,
 structure}.
 
 **Why it is absent:** Same root — no kernel/reading corpus to test a disagreement router against until

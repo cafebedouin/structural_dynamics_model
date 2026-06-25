@@ -370,7 +370,7 @@ Galois Lattice (per-constraint — which coalitions are structurally closed)
     ↓ refined by
 Full Trajectory (per-constraint — continuous metrics at each context)
     ↓ refined by
-Structural Family (26 families, from trajectory_mining — HAC clusters)
+Structural Family (26 families, from context_profile_mining — HAC clusters)
 ```
 
 Each level adds resolution. Galois sits between shift patterns and full trajectories: it extracts the combinatorial structure of observer agreement from the shift, without requiring the continuous metrics of the trajectory.

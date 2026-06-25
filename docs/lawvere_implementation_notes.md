@@ -64,7 +64,7 @@ Consistently uses information-theoretic vocabulary: `maxent_distribution/3`, `ma
 
 Uses Peircean terminology: `abductive_run/2`, `abductive_hypotheses/3`, `abductive_genuine/2`, `abductive_artifacts/2`. Trigger names describe the phenomenon: `trigger_signature_override_artifact`, `trigger_deep_deception`, `trigger_confirmed_liminal`.
 
-### 1.7 trajectory_mining.pl — Mathematical
+### 1.7 context_profile_mining.pl — Mathematical
 
 The most mathematical naming in the codebase: `constraint_trajectory/3`, `trajectory_distance/4`, `structural_isomorphism/4`, `structural_family/2`, `cross_domain_twins/3`. Uses hierarchical agglomerative clustering (HAC) terminology correctly.
 
@@ -245,15 +245,15 @@ The artifact/genuine distinction is itself categorically meaningful: artifacts a
 
 ### 3.3 Trajectory Mining as Natural Transformation Families — [STRUCTURAL]
 
-**Predicate:** `constraint_trajectory/3` (`trajectory_mining.pl:106`)
+**Predicate:** `constraint_trajectory/3` (`context_profile_mining.pl:106`)
 
 A trajectory collects the presheaf evaluation of a constraint across all 4 standard contexts, producing a vector of (type, chi, entropy, confidence) tuples. Two constraints with the same trajectory exhibit the same natural transformation behavior — they transform identically under context shifts.
 
-`structural_isomorphism/4` (`trajectory_mining.pl:737`) tests whether two constraints are naturally isomorphic — same transformation behavior across the site. The isomorphism evidence checks shift matching, zone matching, void matching, coupling band matching, and trajectory distance.
+`structural_isomorphism/4` (`context_profile_mining.pl:737`) tests whether two constraints are naturally isomorphic — same transformation behavior across the site. The isomorphism evidence checks shift matching, zone matching, void matching, coupling band matching, and trajectory distance.
 
-`structural_family/2` (`trajectory_mining.pl:721`) groups constraints into equivalence classes under trajectory similarity via HAC clustering. These families are analogous to equivalence classes of natural transformations.
+`structural_family/2` (`context_profile_mining.pl:721`) groups constraints into equivalence classes under trajectory similarity via HAC clustering. These families are analogous to equivalence classes of natural transformations.
 
-The 4-component weighted distance metric (`trajectory_mining.pl:313–325`) with shift, metric, stability, and pathology components provides a principled similarity measure that respects the categorical structure (shift distance measures type consistency, stability distance measures naturality health).
+The 4-component weighted distance metric (`context_profile_mining.pl:313–325`) with shift, metric, stability, and pathology components provides a principled similarity measure that respects the categorical structure (shift distance measures type consistency, stability distance measures naturality health).
 
 **Rigor: STRUCTURAL.** Trajectories genuinely capture transformation behavior across the site. The "natural transformation equivalence" framing is productive but not formally constructed as a functor category.
 

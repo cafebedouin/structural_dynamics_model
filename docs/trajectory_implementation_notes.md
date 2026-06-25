@@ -12,8 +12,8 @@
 | `prolog/config.pl` | Modified | Added Section 13: 8 trajectory mining parameters |
 | `prolog/config_validation.pl` | Modified | Added `trajectory_enabled` binary flag + 7 range-bounded params |
 | `prolog/maxent_classifier.pl` | Modified | Added `maxent_multi_run/2` for multi-context MaxEnt |
-| `prolog/trajectory_mining.pl` | Created (~1000 lines) | Full 4-phase trajectory mining module |
-| `prolog/trajectory_report.pl` | Created (~320 lines) | Markdown report generator (5 sections) |
+| `prolog/context_profile_mining.pl` | Created (~1000 lines) | Full 4-phase trajectory mining module |
+| `prolog/context_profile_report.pl` | Created (~320 lines) | Markdown report generator (5 sections) |
 | `scripts/run_full_pipeline.sh` | Modified | Added step 8f + dashboard section |
 
 ## 2. Architecture Decisions
@@ -117,8 +117,8 @@ The family count exceeds the design estimate because the two-stage approach crea
 Step 8f runs after abductive analysis (8e), gated on `trajectory_enabled=1`:
 ```
 swipl -l stack.pl -l covering_analysis.pl -l dirac_classification.pl \
-      -l maxent_classifier.pl -l trajectory_mining.pl \
-      -l trajectory_report.pl -g "run_trajectory_report, halt."
+      -l maxent_classifier.pl -l context_profile_mining.pl \
+      -l context_profile_report.pl -g "run_trajectory_report, halt."
 ```
 
 Dashboard section shows: trajectories, structural families, cross-domain twins, singletons.

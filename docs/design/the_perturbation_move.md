@@ -107,7 +107,7 @@ and the divergence legible as their disparity.
 The object is a constraint; the perturbed axis is the time index. The authored cells are the temporal
 measurements (`narrative_ontology:measurement/5`, `interval/3`); the value is the classification (or
 the metric) at each t. The same partition appears as **stable-across-time vs drifting**, computed by
-`transition_paths.pl` / `drift_events.pl` (drift velocity = first-order rate, acceleration =
+`transition_paths.pl` / `metric_drift_events.pl` (drift velocity = first-order rate, acceleration =
 second-order), with the variant resolving toward **terminal attractors** (`husk`,
 `axiom_foreclosure`) — the temporal disparity's structure. `classify_at_time/4` /
 `snapshot_type/3` give the per-t value the diff reads.

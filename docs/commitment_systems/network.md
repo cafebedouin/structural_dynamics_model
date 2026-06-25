@@ -29,7 +29,7 @@ Network Properties That Will Need Revisiting
 
   3. CS Drift State is Invisible to the Purity Network
 
-  network_drift_velocity/4 in network_dynamics.pl reads drift signals exclusively from drift_events:drift_velocity(C,
+  network_drift_velocity/4 in network_dynamics.pl reads drift signals exclusively from metric_drift_events:drift_velocity(C,
   base_extractiveness, Rate) — that is, from the metric-level temporal drift system (extractiveness changing over time).
    The CS-layer drift (cs_drift_state/3) is an entirely separate mechanism: gap(axiom_overriding, substantial, false) in
    a constraint heading toward axiom_foreclosure (via cs_drift_engine.pl) generates no purity decline signal visible to
@@ -70,7 +70,7 @@ Network Properties That Will Need Revisiting
   7. network_stability_assessment Scope
 
   network_dynamics.pl:network_stability_assessment/2 enumerates all loaded constraint_claim facts and counts how many
-  are actively drifting via detect_network_drift. CS reading constraints will be counted here, but their drift signals
+  are actively drifting via detect_network_contamination. CS reading constraints will be counted here, but their drift signals
   come only from the metric drift system. So a corpus heavy with kernel readings will have many "stable" readings (no
   metric drift) even when they're in axiom-foreclosure territory. The assessment could be misleading — a reading the CS
   engine identifies as foreclosed will register as stable in the network layer.

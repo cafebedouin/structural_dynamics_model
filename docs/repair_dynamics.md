@@ -28,7 +28,7 @@ a coordination-quality ordering unless something acts to hold or lift them.
 or a slide sideways-into-worse — none upward** **[verified this session: full enumeration of the
 predicate's heads]**: rope→tangled_rope, tangled_rope→snare, rope→piton, scaffold→{piton, snare,
 tangled_rope}, snare→{piton, false_mountain}. There is no `X→rope`, no `→scaffold`-as-improvement:
-the transition *detector* is decay-only. It is consumed by `drift_report.pl` (a lifecycle/diagnostic
+the transition *detector* is decay-only. It is consumed by `metric_drift_report.pl` (a lifecycle/diagnostic
 consumer) and **zero times by `run_pipeline.py`** **[verified]** — so the live classification path
 carries no transition concept at all; it classifies each constraint statically. The degradation
 dynamics is thus encoded but off the live path, not dead.

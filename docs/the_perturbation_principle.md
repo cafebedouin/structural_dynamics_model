@@ -94,7 +94,7 @@ unmarked perturbation. The method is the same perturbation run *on purpose*.
 
 | Axis | Trifurcation type | What you vary | What a careless variation looks like | The instrument |
 |------|-------------------|---------------|--------------------------------------|----------------|
-| **A — time** | Type A: drift (unmarked state mutation across stages) | the time index t | a reference frame mutating unmarked between t0 and t1 (drift read as paradox) | the lifecycle / drift machinery (`transition_paths.pl`, `drift_events.pl`): drift velocity, acceleration, terminal attractors |
+| **A — time** | Type A: drift (unmarked state mutation across stages) | the time index t | a reference frame mutating unmarked between t0 and t1 (drift read as paradox) | the lifecycle / drift machinery (`transition_paths.pl`, `metric_drift_events.pl`): drift velocity, acceleration, terminal attractors |
 | **B — axiom** | Type B: structure (axiomatic inconsistency) | the kernel's foundational commitments / which reading's axioms | two incompatible axiom sets treated as one position | `axiom_diff.pl` (cs_axiom + grounding); cross-kernel diff (the Westphalia near-kernels, OQ-58/59) |
 | **C — observer** | Type C: ambiguity (indexical underspecification) | the observer position (P,T,E,S) | one question packing many indexed queries (a perspectival gap read as a single verdict) | `reading_diff.pl` (the authored (P,T,E,S) cells); the observer axis / Hub 1 + Hub 2 |
 

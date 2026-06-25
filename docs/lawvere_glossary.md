@@ -149,15 +149,15 @@ Each entry maps a predicate or concept across three vocabularies:
 
 | Categorical Concept | Code (file:line) | Domain Term | Rigor | Notes |
 |---------------------|-------------------|-------------|-------|-------|
-| Natural transformation representative | `constraint_trajectory/3` — trajectory_mining.pl:106 | Constraint trajectory | STRUCTURAL | Full presheaf evaluation across 4 contexts |
-| Trajectory metric | `trajectory_distance/4` — trajectory_mining.pl:313 | 4-component distance | STRUCTURAL | shift + metric + stability + pathology |
-| Type distance matrix | `type_distance/3` — trajectory_mining.pl:276 | Pairwise type distance | STRUCTURAL | Domain-aware distance between types |
-| Natural isomorphism test | `structural_isomorphism/4` — trajectory_mining.pl:737 | Structural isomorphism | STRUCTURAL | strict / trajectory / family / none |
-| Equivalence class | `structural_family/2` — trajectory_mining.pl:721 | Structural family | STRUCTURAL | HAC cluster membership |
-| Cluster members | `cluster_members/2` — trajectory_mining.pl:727 | Family members | STRUCTURAL | All constraints in a family |
-| HAC clustering | `trajectory_cluster/3` — trajectory_mining.pl:712 | Trajectory clustering | STRUCTURAL | Hierarchical agglomerative clustering |
-| Cross-domain twins | `cross_domain_twins/3` — trajectory_mining.pl:810 | Cross-domain twins | STRUCTURAL | Same family, different domains |
-| Main pipeline | `trajectory_run/2` — trajectory_mining.pl:844 | Trajectory mining | STRUCTURAL | Compute → distance → cluster → assign |
+| Natural transformation representative | `constraint_trajectory/3` — context_profile_mining.pl:106 | Constraint trajectory | STRUCTURAL | Full presheaf evaluation across 4 contexts |
+| Trajectory metric | `trajectory_distance/4` — context_profile_mining.pl:313 | 4-component distance | STRUCTURAL | shift + metric + stability + pathology |
+| Type distance matrix | `type_distance/3` — context_profile_mining.pl:276 | Pairwise type distance | STRUCTURAL | Domain-aware distance between types |
+| Natural isomorphism test | `structural_isomorphism/4` — context_profile_mining.pl:737 | Structural isomorphism | STRUCTURAL | strict / trajectory / family / none |
+| Equivalence class | `structural_family/2` — context_profile_mining.pl:721 | Structural family | STRUCTURAL | HAC cluster membership |
+| Cluster members | `cluster_members/2` — context_profile_mining.pl:727 | Family members | STRUCTURAL | All constraints in a family |
+| HAC clustering | `trajectory_cluster/3` — context_profile_mining.pl:712 | Trajectory clustering | STRUCTURAL | Hierarchical agglomerative clustering |
+| Cross-domain twins | `cross_domain_twins/3` — context_profile_mining.pl:810 | Cross-domain twins | STRUCTURAL | Same family, different domains |
+| Main pipeline | `trajectory_run/2` — context_profile_mining.pl:844 | Trajectory mining | STRUCTURAL | Compute → distance → cluster → assign |
 
 ## 13. Gauge Orbits
 

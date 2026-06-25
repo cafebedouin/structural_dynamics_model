@@ -21,11 +21,11 @@ one behavior. It has (at least) two, selected by which files happen to be loaded
 
 **Why this matters here:** every pipeline report entry point is a non-module file —
 `json_report.pl`, `orbit_report.pl`, `fpn_report.pl`, `maxent_report.pl`,
-`fingerprint_report.pl`, `trajectory_report.pl`, `abductive_report.pl` (census 2026-06-04;
+`fingerprint_report.pl`, `context_profile_report.pl`, `abductive_report.pl` (census 2026-06-04;
 `grep -L "^:- module" prolog/*.pl`). So the pipeline phases run with a richly-populated `user`
 module, and **REPL behavior is NOT pipeline behavior** for wrong-qualifier bugs.
 
-**Witnessed instance (OQ-57, resolved 2026-06-04):** `drift_events.pl:230` called
+**Witnessed instance (OQ-57, resolved 2026-06-04):** `metric_drift_events.pl:230` called
 `narrative_ontology:requires_active_enforcement/1` (predicate lives in `domain_priors`). The
 suite path threw and aborted the whole drift scan; the pipeline path silently resolved to
 `drl_core`'s bridge via `json_report.pl`'s user-imports and produced CORRECT drift events for
@@ -190,7 +190,7 @@ Rules that make it faithful:
 `boltzmann_compliance` memoizes per-constraint results in two dynamic predicates:
 `cached_classification/3` (12 grid cells per constraint) and `cached_coupling/2` — and five
 other modules carry memo caches of their own (covering_analysis, grothendieck_cohomology,
-drl_fpn, trajectory_mining, arakelov_height). Any in-session retract/assertz overlay that
+drl_fpn, context_profile_mining, arakelov_height). Any in-session retract/assertz overlay that
 should change a memoized result **silently reads the pre-overlay cache** unless cleared.
 
 **Smoothed (2026-06-04):** clear them ALL with one call —

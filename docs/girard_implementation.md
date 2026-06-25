@@ -208,7 +208,7 @@ Gemini's formula `SufficientPurity ⊗ SufficientReformability ⊗ ReformAction 
 
 A thorough search of the codebase reveals that all `retract`/`retractall`/`assertz` patterns fall into three categories:
 
-1. **Cache management.** `clear_classification_cache/0` (`structural_signatures.pl:51`), `trajectory_cleanup/0` (`trajectory_mining.pl:83`), `maxent_cleanup/0` (`maxent_classifier.pl:88`), `fpn_cleanup/1` (`drl_modal_logic.pl`). These clear precomputed results between test runs. The pattern is: `retractall(cache(...))` at the start of a computation, `assertz(cache(...))` to store results, repeat. This is memoization, not resource consumption.
+1. **Cache management.** `clear_classification_cache/0` (`structural_signatures.pl:51`), `trajectory_cleanup/0` (`context_profile_mining.pl:83`), `maxent_cleanup/0` (`maxent_classifier.pl:88`), `fpn_cleanup/1` (`drl_modal_logic.pl`). These clear precomputed results between test runs. The pattern is: `retractall(cache(...))` at the start of a computation, `assertz(cache(...))` to store results, repeat. This is memoization, not resource consumption.
 
 2. **Precomputation.** MaxEnt profiles, trajectory distances, FPN equilibrium purities. Facts are asserted once during a computation phase and read multiple times during reporting. The pattern is write-once, read-many — the opposite of linear (use-once).
 

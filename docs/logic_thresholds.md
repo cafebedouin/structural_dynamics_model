@@ -385,7 +385,7 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 > **Note (February 2026):** `coupling_drift_threshold` (0.10) was removed â€" it was an orphan parameter never wired into any code. `detect_coupling_drift` uses `boltzmann_coupling_threshold` (0.25) as the actual coupling gate.
 
-**Implementation:** `drift_events.pl` (via `drl_lifecycle.pl` facade) `detect_coupling_drift/1`, `detect_boltzmann_floor_drift/1`
+**Implementation:** `metric_drift_events.pl` (via `drl_lifecycle.pl` facade) `detect_coupling_drift/1`, `detect_boltzmann_floor_drift/1`
 
 **Purpose:** Distinguish necessary complexity increase from extractive complexity increase.
 
@@ -699,7 +699,7 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 | `trajectory_isomorphism_threshold` | **0.15** | 9 | Max distance for trajectory isomorphism |
 | `trajectory_coupling_band_width` | **0.15** | 9 | Coupling match tolerance for isomorphism |
 
-**Implementation:** `trajectory_mining.pl`
+**Implementation:** `context_profile_mining.pl`
 
 **Key Notes:**
 - Currently disabled (`trajectory_enabled = 0`) — checked at pipeline level (run_pipeline.py), entire trajectory mining step is skipped
