@@ -584,7 +584,10 @@ cd prolog && swipl -l check_stack.pl -g "run_check_stack, halt" -t "halt(1)"
 ```
 
 Compare against the recorded baseline (KNOWN_STATE.md 2026-06-04); new findings are
-regressions introduced by your change.
+regressions introduced by your change. As of 2026-06-25 it also loads the trajectory-mining
+chain (`context_profile_mining`/`context_profile_report`, loaded by run_pipeline outside
+`[stack]`) so their wrong-qualifier calls are covered too; baseline unchanged. Other standalone
+report scripts remain uncovered (honest boundary noted in `check_stack.pl`).
 
 ### In-session overlay probes
 
