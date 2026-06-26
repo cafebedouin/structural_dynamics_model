@@ -104,7 +104,8 @@ metric_at(C, Metric, Time, Value) :-
 %  REACHES A SERIALIZED VERDICT: metric_trend(C, suppression_requirement, increasing)
 %  gates cs_verdict(C, scaffold_suppression_escalating) (json_report.pl:570,
 %  "cs_verdicts" → pipeline_output.json). FALSIFIER (witnessed, probe
-%  oq18_metric_trend_flip.pl, control live): net-change and regression-trend
+%  audits/2026-06-25_oq18_temporal_reduction/oq18_metric_trend_flip.pl, control
+%  live): net-change and regression-trend
 %  diverge for 0 / 1 / 17 serialized verdicts on testsets/haiku/flash (haiku:
 %  nicene_creed Δ=0.08 vs fit 0.0207; flash cases hairline at the ±0.05 cut).
 %  Behavior is unchanged, but whether "escalating" should mean net-higher
@@ -466,7 +467,8 @@ drift_event(C, Context, network_drift_indexed,
 %     series would not).
 %
 %  CURRENTLY-UNCORRUPTING, WITH THIS FALSIFIER (re-witnessed 2026-06-25, probes
-%  oq18_flipped_probe.pl + oq18_divergence_probe.pl, live control on every leg):
+%  in audits/2026-06-25_oq18_temporal_reduction/ — oq18_flipped_probe.pl +
+%  oq18_divergence_probe.pl, live control on every leg):
 %  0 serialized cs_drift_mismatch verdicts flip under the faithful least-squares
 %  velocity on any live leg (max faithful SUM 0.006745/0.007851/0.004333 < Thresh
 %  0.01; closest headroom Thresh−Vf = 0.00215 on testsets_haiku — a SUM-level
