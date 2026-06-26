@@ -641,6 +641,34 @@ def _by_pri(entries):
     return lambda oq: (_pri(entries[oq]), int(oq.split("-")[1]))
 
 
+def bundled_components(entries):
+    """Union-find over the UNDIRECTED `bundled_with` graph across ALL entries.
+    Returns {oq -> root_oq}. `bundled_with` is a symmetric family relator (often
+    authored on one side only), so we union both directions and let two workable
+    items group via a shared hub even if the hub is itself blocked/resolved.
+    `splits_from` is deliberately NOT folded in here — this prototype groups the
+    `bundled_with` family only (the question asked)."""
+    parent = {}
+
+    def find(x):
+        parent.setdefault(x, x)
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    def union(a, b):
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[max(ra, rb)] = min(ra, rb)  # deterministic root
+
+    for e in entries.values():
+        for rel, tgt in e.deps:
+            if rel == "bundled_with":
+                union(e.oq, tgt)
+    return {oq: find(oq) for oq in parent}
+
+
 def cmd_menu(entries):
     """Human-readable 'what should I work on next' surface. Run THIS instead of
     reading ISSUES.md whole. Workable items are sorted by AUTHORED Priority
@@ -654,16 +682,48 @@ def cmd_menu(entries):
           f"active={n_active}\n")
 
     wk = sorted(buckets["workable_now"], key=_by_pri(entries))
-    print(f"## WORKABLE NOW ({len(wk)}) — pick from these")
-    for oq in wk:
+
+    def _print_item(oq, indent="  "):
         e = entries[oq]
         pri = f"P{e.priority}" if e.priority is not None else "P–"
-        print(f"  [{pri:>3}] {oq}  {e.title[:72]}")
+        print(f"{indent}[{pri:>3}] {oq}  {e.title[:72]}")
         wc = (e.whatchanges or "").split(". ")[0][:96]
-        line = f"         {e.omega or 'Ω?'}"
+        line = f"{indent}       {e.omega or 'Ω?'}"
         if wc:
             line += f" · changes: {wc}"
         print(line)
+
+    # group workable items by bundled_with family (connected component over the
+    # bundled_with graph). Items sharing a component print together under a ⧉
+    # header; singletons fall through to a flat unbundled list.
+    comp_of = bundled_components(entries)
+    fams = {}
+    for oq in wk:
+        root = comp_of.get(oq)
+        if root is not None:
+            fams.setdefault(root, []).append(oq)
+    multi = {r: m for r, m in fams.items() if len(m) >= 2}   # >=2 WORKABLE members
+    grouped = {oq for m in multi.values() for oq in m}
+    singles = [oq for oq in wk if oq not in grouped]
+    n_fam = len(multi)
+
+    print(f"## WORKABLE NOW ({len(wk)}) — pick from these"
+          + (f"; ⧉ = bundled family ({n_fam})" if n_fam else ""))
+    # families first, ordered by their best (lowest) member priority
+    for root in sorted(multi, key=lambda r: _by_pri(entries)(
+            min(multi[r], key=_by_pri(entries)))):
+        members = sorted(multi[root], key=_by_pri(entries))
+        # surface non-workable siblings in the same family for context
+        sibs = sorted(o for o, r in comp_of.items()
+                      if r == root and o not in set(members))
+        sib_note = f"  (+ {', '.join(sibs)})" if sibs else ""
+        print(f"  ⧉ family {', '.join(members)}{sib_note}")
+        for oq in members:
+            _print_item(oq, indent="    ")
+    if multi and singles:
+        print("  · unbundled")
+    for oq in singles:
+        _print_item(oq, indent="  ")
 
     if buckets["blocked_on_human"]:
         b = sorted(buckets["blocked_on_human"], key=_by_pri(entries))
