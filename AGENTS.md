@@ -193,6 +193,22 @@ Do not add extra arguments. Linter rule `CONTEXT_ARITY` rejects any other arity.
 
 **Classification type atoms**: `mountain | rope | tangled_rope | snare | scaffold | piton | naturalized`
 
+### Prolog engine / infrastructure modules
+
+**Prefix scheme (ratified by the OQ-16 rename, 2026-06-25):** file prefixes are
+*concept markers*, not arbitrary. A new engine module reuses an existing concept
+prefix; do **not** invent a new family.
+
+- `cs_*` — the CS (commitment-systems) subsystem (e.g. `cs_drift_engine`,
+  `cs_pattern_detection`). `cs_` marks the *concept*, not "a Prolog file."
+- `metric_*` / `context_profile_*` — self-identifying names on the metric/observer
+  side, kept deliberately distinct from the CS-side concepts they used to collide with
+  (`metric_drift_events` ≠ CS commitment-drift; `context_profile_mining` ≠ CS
+  commitment-trajectory). This is why the OQ-16 rename chose `metric_*`, **not** `dr_*`.
+- **There is no `dr_` file-prefix scheme** — no file carries it. Naming a new module
+  `dr_foo.pl` would create a lone one-member family that splits an existing cluster.
+  Pick the concept prefix the module's behavior belongs to.
+
 ### JSON constraint specs
 
 **File name:** same `snake_case.json` as the Prolog counterpart.

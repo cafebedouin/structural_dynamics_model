@@ -900,6 +900,21 @@ directions of the absence-as-value sin and that it composes on itself:
    recursion this section names, executed against substrate rather than asserted. The check checked
    the check.
 
+**The inverse shape: a verification grep where the old token is a substring of the new one fires on
+*correct* work and reads it as broken.** The section above is about clean nulls (a probe that didn't
+fire reading as "nothing there"); the dual is a probe that fires on the wrong thing, reporting
+success-shaped work as a failure. Witnessed OQ-16 (2026-06-25): the rename `drift_events →
+metric_drift_events` was complete, but the "no dangling refs" check `grep 'drift_events\.pl'` matched
+every *correctly-renamed* `metric_drift_events.pl` site (old ⊂ new) and read as "the rename failed" —
+nearly sending the run to re-edit already-correct files. Whenever old ⊂ new (`drift_events ⊂
+metric_drift_events`, `drift_report ⊂ metric_drift_report`), the survivor-grep **must** anchor:
+`grep -nE '\bdrift_events\.pl'` (the `_` in `metric_drift` is a word char, so `\b` excludes the
+prefixed form). The mirror failure — counting *new-name* hits as the witness — is equally blind: a
+high count can't distinguish a real survivor from a renamed site. The discipline is the same as the
+oracle rule: the probe must discriminate on the exact dimension it could be wrong on (here, the prefix
+boundary), or its verdict (pass *or* fail) carries no information. Forward-relevant to any future
+rename wave (the OQ-135 v8 seat/gauge/orientation vocabulary migration will hit this directly).
+
 ---
 
 ## Instrument richness is gated on substrate instrumentation (the positive control, one level up)
