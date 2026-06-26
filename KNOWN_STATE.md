@@ -45,6 +45,37 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-25 — OQ-21(a) RESOLVED: A12 multi-instance selector — dead recency clause fixed, @< pinned
+**Files:** prolog/json_report.pl, prolog/tests/test_a12_multi_instance_render.pl, ISSUES.md
+**Tier:** landed
+
+The positive control written to close OQ-21(a) found a real defect instead of confirming
+correctness. In `write_per_constraint_entry/4` the multi-instance branch's documented "pick
+latest instance by `cs_created_at`" path was DEAD: `aggregate_all(max(T-U), …, max(_-UID))`
+evaluates `T-U` as **arithmetic**, and UIDs are atoms (UUIDs), so it throws
+`type_error(evaluable, …)`, is swallowed by the surrounding `catch(_, fail)`, and *always*
+falls through to the `msort/last` `@<` fallback. Selection has been by `@<` UID-order, never
+by timestamp, for the branch's whole life. "Verified by manual dual-consult" read the comment's
+intent, not the code's behavior.
+
+**Reusable Prolog tripwire:** `aggregate_all(max(Key-Val), …, max(_-Witness))` — the common
+argmax idiom — **evaluates `Key-Val` arithmetically** and throws on non-numeric (atom) keys. A
+`catch/…fail` around it then silently degrades to whatever the fallback is. Witness both the
+firing AND the fallback before trusting such a selector.
+
+**Ruling (operator): `@<` is canonical; recency is the WRONG selector** — instances of one name
+are parallel draws, not versions (determinism frontier), so there is no canonical-latest. Only
+live correctness-bearing consumer of the selected fields is `orbit_operator.py`'s committer
+terminal-projection orbit (via `cs_drift_terminal`); it needs determinism+stability, which
+standard order of UID atoms supplies (never reads timestamps). Dead clause removed; `@<` is the
+sole selector; in-code comment now carries the parallel-draws reason so the bug can't grow back.
+Behavior-preserving on the live corpus (81 names / 81 `cs_story_uid` facts — branch never fires).
+Test pins `@<` with bundle coherence + a recency-pin; positive control witnessed t1 RED under
+reintroduced recency selection. (a) resolved; (b) pipeline-firing open, gated on a future
+multi-instance load (OQ-17 pointer is stale — disposed). Commit `cfb5fa03`; `[GATE]` GREEN.
+
+---
+
 ## 2026-06-25 — OQ-19 RESOLVED: drift-trajectory trigger thresholds made durable + fail-loud
 **Files:** python/enhanced_report.py, python/tests/test_drift_trajectory_granularity.py, ISSUES.md
 **Tier:** landed
