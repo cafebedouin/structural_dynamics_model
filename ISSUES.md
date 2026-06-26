@@ -9497,6 +9497,29 @@ loaded-but-non-executing Pattern-2 fork (all 4 call sites dead) — log-only, de
 
 ---
 
+## OQ-185 — Generation does not honor the scaffold "suppression declines over time" expectation (5–6:1 rising:falling, all three legs)
+
+**Ω-type:** Ω_C (design choice — which generation-fidelity remedy: make the rule explicit, gate at authoring, accept-and-annotate, or drop the expectation).
+
+**Status:** open
+**Priority:** 2
+**Origin:** OQ-39 row-14 close (2026-06-25). The engine-side disposition (a commentary verdict that annotates the rule-break post-hoc) surfaced the generation-side question OQ-39 did not own. KNOWN_STATE 2026-06-25.
+**File:** `agent/uke_write_v2.1.md:173` (scaffold prompt definition — qualitative only); generation step `agent/c-orchestrator.py` `_step_generate`; post-hoc detector `prolog/cs_pattern_detection.pl` `cs_verdict(C, scaffold_suppression_escalating)` + control `prolog/tests/test_oq39_scaffold_escalation.pl`.
+**Deps:** splits_from OQ-39
+
+**Specific question.** Scaffold's analytical signature includes *suppression declines over time* (the "temporary framework / sunset" reading — census G4 row 14). Generation produces the opposite at scale: among scaffold-certified constraints with an authored `suppression_requirement` series, **rising beats falling ≈ 5–6:1 in every leg** (testsets/ 13:2, testsets_haiku 53:7, testsets_flash 43:9 @ institutional context). The two reconciled twins share one generation prompt, so this is not one model's idiosyncrasy. **Crux (witnessed):** the prompt never actually asks for a declining suppression series — `uke_write_v2.1.md:173` defines Scaffold only qualitatively ("transitional arrangement," "temporary framework"), with no `suppression_requirement`-series instruction anywhere in the prompt. So the "rule" is an analytical inference from the *type definition*, not an authored generation instruction generation could honor. The decision: which remedy, given the engine already annotates the gap (OQ-39)?
+
+- **(a) Make it explicit** — add a series-level instruction to the scaffold generation guidance ("a scaffold's `suppression_requirement` series should trend down toward sunset"). Tests on `testsets/` per the test-bed posture; risks over-fitting generation to the engine's expectation.
+- **(b) Gate at authoring** — a linter/validator check that flags a rising-suppression scaffold at generation time (operator-eval surface, like the row-18 perspective checks), not an engine enforcer.
+- **(c) Accept-and-annotate (status quo)** — OQ-39's `scaffold_suppression_escalating` verdict already records the break post-hoc; do nothing at the generation surface and read the verdict as a fidelity signal.
+- **(d) Drop the expectation** — rule that a scaffold may legitimately *tighten* before it sunsets (rising suppression is not anti-scaffold), retiring census row 14 as a non-rule. If so, the OQ-39 verdict becomes a neutral descriptor, not a rule-break flag.
+
+**Evidence so far (witnessed 2026-06-25).** The cross-leg counts above (OQ-39 implementation; cross-checked against an independent inline probe — same 14 firings on `testsets/`). The prompt-locus negative (no series instruction) is a read-witness, not a memory: `grep suppression_requirement agent/uke_write_v2.1.md` is empty; the scaffold row is qualitative-only. Positive-control lesson carried from OQ-39/OQ-183: bind `C` from `corpus_loader:corpus_constraint/1` before any `cs_verdict(C, scaffold_suppression_escalating)` re-census (an unbound query returns a false 0).
+
+**What resolution changes.** Picks the generation-fidelity remedy and either (a/b) tightens the generation surface so future corpora honor the rule, (c) ratifies post-hoc annotation as sufficient, or (d) reclassifies the finding as a non-violation — which would re-grade OQ-39's verdict from rule-break to descriptor. Not a live correctness bug (the engine annotates, does not mis-classify); a generation-quality + rule-realism decision best ruled before the next bulk rebuild, since (a)/(b) only bind corpora generated after the change.
+
+---
+
 *Last updated: 2026-06-25. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
