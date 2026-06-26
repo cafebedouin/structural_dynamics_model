@@ -108,3 +108,29 @@ component-shuffled distances. Build the chimera, re-assert `trajectory_cached`, 
 the chimera too).
 
 **Frozen by:** OQ-182 cheap tier, 2026-06-25; positive-control addendum same day. Spend tier runs this verbatim.
+
+---
+
+## ERRATUM — Chimera surgery map is mechanically wrong (2026-06-25, at spend-tier execution)
+
+The "Chimera surgery map" above is **incorrect** and the harness (`c_null_harness.pl`) deviates from it.
+The **frozen quantities are untouched** (statistic = mean silhouette; per-component-independent shuffle;
+N=200; threshold = real mean silhouette > 95th pct of the per-component null). Only the *mechanism* changed.
+
+**Why the map fails.** `group_by_shift/2` (`context_profile_mining.pl:559`) recomputes the shift
+pre-grouping key via `logical_fingerprint:fingerprint_shift/2`, which classifies from the **constraint
+identity** (`logical_fingerprint.pl:113`, `dr_type` at four standard power levels) and **ignores
+`trajectory_cached` entirely**. So building a chimera `trajectory_cached` and calling
+`run_hierarchical_clustering/1` leaves the shift pre-grouping pinned to the *real* shift boundaries
+regardless of σ_shift — a toothless / false-PASS bias, and it breaks the joint control's validity.
+
+**What the harness does instead.** It builds the shift-groups itself (`make_groups/4`, keyed on
+`fingerprint_shift(C[σ_shift(i)])` so σ_shift actually moves the grouping) and reuses only
+`cluster_all_groups/2` + `assign_families/1`. No chimera `trajectory_cached` is constructed: the four
+component distances are precomputed ONCE over the real trajectories into symmetric matrices, and each
+draw is a pure index recombination `Σ_k w_k·comp_k(σ_k(i), σ_k(j))` (FIDELITY at identity reproduces the
+engine `pair_dist` to 0.0; GROUPING-FIDELITY at identity reproduces `group_by_shift` exactly).
+
+**Result (testsets/ leg, 2026-06-25):** PASS. RealSil 0.161119 > P95(null) −0.026436; standardized gap
++5.01σ; 0/200 null draws reach real; null family-count centers at 15 vs real 11 (conservative direction).
+Reproducible under seed 20260625 (SWI 9.2.9). Full record: `c_null_results.log`, `c_null_distribution.json`.

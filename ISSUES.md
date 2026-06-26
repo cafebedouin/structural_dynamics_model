@@ -9373,7 +9373,7 @@ the H1-bearing analyses run (rather than crash) on an undetermined-bearing corpu
 
 **Ω-type:** Ω_C (design choice — what the diagnostic organ is for; commentary-grade annotation, never reclassification).
 
-**Status:** investigating — cheap tier (mint + C-prov + fork-log + denominator + frozen C-null protocol) in progress; spend-tier validation gated behind an operator checkpoint.
+**Status:** investigating — testsets/ leg: C-prov + C1 + C3 + **C-null PASS** (family product validated meaning-bearing, 2026-06-25); remaining: C0 corroboration, C-gen, kernel_v1 re-checkpoint, then gate flip. Twin product OPEN (deferred to rebuild).
 **Priority:** 2
 **Deps:** bundled_with OQ-91
 
@@ -9446,24 +9446,33 @@ loaded-but-non-executing Pattern-2 fork (all 4 call sites dead) — log-only, de
   twin-side: do not let C1+C3 green read as "family product validated" over an unrun meaning-gate, exactly
   as the twin-vacuity refusal forbids reading 448 twins as "twin validated" over a vacuous gate. Banked =
   family **stability**; family **meaning** is OPEN pending C-null.
-- **NEXT (gated, in order):** (1) **C-null** — the scope-setter and the family **meaning** gate.
-  **STEP ONE of the C-null pass is the POSITIVE CONTROL, pasted, gating the null — not the null itself**
-  (C-null is an absence claim; an un-controlled "families survive the shuffle" decodes to "my null had no
-  teeth," not "families are real"). The control must DISTINGUISH the per-component (destroying) shuffle
-  from the joint (toothless) shuffle, and that distinction appears **only under RE-CLUSTERING**: scoring
-  the real partition under shuffled distances collapses for *both* shuffles, so it cannot tell them apart.
-  So the control = re-cluster under each shuffle and show **per-component silhouette collapses below real
-  while joint silhouette ≈ real** (joint = the false-pass demonstrated). Only then run the real null:
-  N=200 per-component shuffles, re-cluster at the same cut, **the 95th-pct quantile computed over the
-  per-component (destroying) shuffle draws — NOT joint draws** (else the quantile inherits the toothless
-  null and the threshold is counterfeit one level up). Also report the twin-pair count/gate-vacuity in
-  parallel. **Chimera surgery map (derived 2026-06-25):** the 4 components do NOT map to separable
-  trajectory sub-terms — `shift_distance`+`metric_distance` both read `Points` (types vs
-  chi/entropy/confidence per point), `stability_distance`+`pathology_distance` both read `Summary`
-  (`trajectory_summary/12`: preservation/coupling/purity/boltzmann vs signature/drift/voids/severity). A
-  per-component chimera `trajectory_cached` needs FIELD-level reassembly (Points' type-fields from
-  π_shift, metric-fields from π_metric; Summary's stability-fields from π_stab, pathology-fields from
-  π_path), so `group_by_shift` sees shuffled shift patterns AND within-group HAC sees shuffled distances.
+- **C-null PASS — family MEANING now validated (testsets/ leg; `c_null_harness.pl`, `c_null_results.log`,
+  `c_null_distribution.json`).** Standalone control-first Prolog harness, no engine edits
+  (`trajectory_enabled` stays 0; `git status` shows only the audit dir). **RealSil = 0.161119** (97
+  clustered constraints, 11 families) vs **P95(null) = −0.026436** over **200 per-component draws**
+  (0 degenerate). All four positive controls pasted BEFORE the verdict and gating it: INTERNAL-CHECK
+  (Σ w_k·comp_k == engine `pair_dist`, max-diff 0.0), GROUPING-FIDELITY (`make_groups@identity` ==
+  engine `group_by_shift`, 26 groups), FIDELITY (`P0 == RealPartition`, |S0−RealSil|=0, 11 families),
+  JOINT-TOOTHLESS (S_joint = RealSil to 1e-16, relabel-match=yes — the false-PASS demonstrated),
+  TIE-BREAK (overlay regime σ-pure). **TEETH PASS** (null_median −0.0945 < RealSil; standardized gap
+  **+5.01σ**); **0/200 null draws reach RealSil** — real lies beyond the *entire* null. Null family-count
+  centers at **15 (real 11)** — the frozen doc's predicted false-FAIL-leaning direction — and real still
+  clears, so the PASS is conservative. Reproducible under pinned seed `20260625` (run-twice → identical
+  P95; SWI 9.2.9; Python percentile cross-check matches every statistic). **⇒ OQ-182 family product
+  VALIDATED as meaning-bearing.** Twin product remains OPEN (parallel report: 448 twins / 4656 pairs,
+  gate near-vacuous) — unchanged by this leg.
+- **MECHANISM CORRECTION (flagged; frozen *quantities* untouched).** The frozen "Chimera surgery map"
+  was mechanically wrong: `group_by_shift/2` recomputes the shift pre-grouping via
+  `logical_fingerprint:fingerprint_shift/2` from the **constraint identity**, ignoring `trajectory_cached`
+  entirely — so a chimera `trajectory_cached` + `run_hierarchical_clustering/1` pins shift grouping to the
+  *real* boundaries regardless of σ_shift (toothless / false-PASS; breaks the joint control). The harness
+  instead builds shift-groups itself (`make_groups/4`, keyed on `fingerprint_shift(C[σ_shift(i)])`) and
+  reuses only `cluster_all_groups/2` + `assign_families/1`. The per-component shuffle is a pure index
+  recombination over precomputed real component matrices — no chimera trajectory needed. Erratum recorded
+  in `c_null_protocol_FROZEN.md` (statistic / null model / N / threshold unchanged).
+- **NEXT (gated, in order):** (1) ~~**C-null**~~ **DONE (PASS, 2026-06-25)** — family meaning validated;
+  the family **meaning** gate is closed (control-first harness; per-component shuffle destroys, joint
+  shuffle demonstrated toothless, real beyond the entire null; see the C-null PASS bullet above).
   (2) **C0** pipeline-diff
   corroboration (structural primary already holds — trajectory stage writes only
   `context_profile_report.md`, never `pipeline_output.json`). (3) **C-gen** (haiku↔flash same-kernel

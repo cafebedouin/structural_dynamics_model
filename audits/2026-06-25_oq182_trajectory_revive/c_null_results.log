@@ -1,0 +1,48 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+================================================================
+OQ-182 C-NULL HARNESS (testsets/ leg) — family-meaning scope-setter
+================================================================
+seed=20260625  SWI-Prolog version=90209  (PRNG version-stable, not cross-version)
+weights: shift=0.35 metric=0.25 stab=0.25 path=0.15  cut=0.3
+
+REAL: n_index=97  families=11  mean_silhouette=0.161119
+
+INTERNAL CHECK: max |sum_k w_k*comp_k(a,b) - engine pair_dist| = 0.000000e+00
+  => PASS (component matrices reproduce the engine distance)
+
+---- STAGE A: deterministic controls (gating, printed BEFORE the null) ----
+GROUPING-FIDELITY: PASS (make_groups@identity == engine group_by_shift: 26 shift groups, same keys+members)
+FIDELITY: PASS (P0 == RealPartition; |S0-RealSil|=0.000000e+00; families=11)
+JOINT-TOOTHLESS: PASS (S_joint=0.161119 ~= RealSil; |diff|=1.110223e-16; families=11; relabel-match=yes)
+  => joint shuffle relabels intact vectors => the false-PASS the per-component design avoids
+
+TIE-BREAK CONFIRM: PASS (overlay regime sigma-pure; 15 families both runs)
+
+---- STAGE B: per-component null, N=200 ----
+null draws: 200 total, 200 defined, 0 degenerate (single-family)
+null silhouette (defined): min=-0.245510  mean=-0.096472  median=-0.094514  max=0.040692  sd=0.051380
+null family-count: min=11  mean=14.715  median=15.000  max=18   (real=11)
+
+TEETH (per-component null, read off the full distribution):
+  RealSil=0.161119  null_mean=-0.096472  null_median=-0.094514  standardized_gap=(RealSil-mean)/sd=5.0134
+  => TEETH PASS (null_median < RealSil: per-component shuffle centered the null BELOW real => teeth)
+
+degenerate draws: 0/200 (0.000) <= 5%% threshold
+
+================================================================
+VERDICT
+  RealSil = 0.161119    P95(null, per-component) = -0.026436
+  RealSil > P95 AND TEETH passed => PASS.
+  OQ-182: family product VALIDATED as meaning-bearing.
+
+TWIN-VACUITY PARALLEL (NOT a family gate; twin product stays OPEN regardless):
+  cross_domain_twins=448  clustered_pairs=4656  twin_fraction=0.0962
+================================================================
+wrote c_null_distribution.json (200 null draws + real)
+VERDICT_TOKEN: pass

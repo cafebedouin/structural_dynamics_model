@@ -94,3 +94,27 @@ predicate. Therefore **families and twins are DISTINCT products**:
 **cross-generation stability** control — does a kernel land in the same structural family across models?
 Worth running as its own invariance witness. It is NOT C2 (same id ⇒ same-domain ⇒ rejected by the
 cross-domain gate; same id ⇒ cannot co-load in one run). Do not relabel C-gen as C2.
+
+---
+
+## FAMILY-MEANING RESULT — C-null PASS (2026-06-25, testsets/ leg)
+
+The C-null scope-setter has **run and PASSED**. The earlier "family meaning is OPEN pending C-null"
+caveat above is now **resolved on the family side**: the family product is **validated as
+meaning-bearing**, not merely safe + stable.
+
+- **Verdict:** RealSil = **0.161119** (97 clustered constraints, 11 families) > **P95(null) = −0.026436**
+  over 200 per-component-shuffle draws; **0/200** null draws reach RealSil; TEETH PASS (null_median
+  −0.0945 < RealSil; standardized gap **+5.01σ**). Reproducible under seed 20260625 (SWI 9.2.9; Python
+  cross-check matches). Harness + log + distribution: `c_null_harness.pl`, `c_null_results.log`,
+  `c_null_distribution.json`. Control-first: INTERNAL-CHECK / GROUPING-FIDELITY / FIDELITY / JOINT-TOOTHLESS
+  / TIE-BREAK all pasted *before* the verdict and gating it; the joint shuffle was demonstrated toothless
+  (S_joint = RealSil) exactly as the per-component design predicts.
+- **Twin product UNCHANGED — still OPEN.** As required, the family C-null reported the twin-pair
+  count/gate-vacuity in parallel (448 twins / 4656 pairs; near-vacuous cross-domain gate). The family
+  meaning result says **nothing** about twins. Twin meaning stays OPEN, deferred to the rebuilt corpus
+  with a real authored domain field. **The precise scope is now: families validated (safe + stable +
+  meaning-bearing); twins OPEN.**
+- **Mechanism note:** the frozen "Chimera surgery map" was mechanically wrong (`group_by_shift` keys on
+  constraint identity, not `trajectory_cached`); the harness builds shift-groups itself under σ_shift.
+  Quantities unchanged — erratum in `c_null_protocol_FROZEN.md`.

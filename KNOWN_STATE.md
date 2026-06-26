@@ -45,6 +45,40 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-25 — OQ-182 C-null PASS: HAC structural families validated as MEANING-bearing (testsets/ leg)
+**Files:** audits/2026-06-25_oq182_trajectory_revive/c_null_harness.pl, audits/2026-06-25_oq182_trajectory_revive/c_null_results.log, audits/2026-06-25_oq182_trajectory_revive/c_null_distribution.json, audits/2026-06-25_oq182_trajectory_revive/c_null_protocol_FROZEN.md, audits/2026-06-25_oq182_trajectory_revive/c2_domain_finding.md, ISSUES.md
+**Tier:** landed
+
+Spend-tier C-null leg of OQ-182 (plan `~/.claude/plans/bright-jumping-cocke.md`). Standalone control-first
+Prolog harness in the audit dir; **no engine edits** (`config.pl trajectory_enabled` stays `0`; `git status`
+shows only the audit dir + docs). Commentary-only invariant intact.
+
+- **VERDICT: PASS — family product validated meaning-bearing.** RealSil = **0.161119** (97 clustered
+  constraints, 11 families) > **P95(null) = −0.026436** over **200 per-component-independent shuffle draws**
+  (0 degenerate). **0/200 null draws reach RealSil** — real lies beyond the *entire* null. TEETH PASS
+  (null_median −0.0945 < RealSil; standardized gap **+5.01σ**). Null family-count centers at **15 vs real
+  11** — the frozen doc's predicted false-FAIL-leaning direction, so the PASS is conservative. Reproducible
+  under seed `20260625` (run-twice → identical P95; SWI 9.2.9; Python percentile cross-check matches every
+  statistic).
+- **Control-first, all pasted BEFORE the verdict and gating it:** INTERNAL-CHECK (Σ w_k·comp_k == engine
+  `pair_dist`, max-diff 0.0), GROUPING-FIDELITY (`make_groups@identity` == engine `group_by_shift`, 26
+  groups), FIDELITY (`P0 == RealPartition`, |S0−RealSil|=0), JOINT-TOOTHLESS (S_joint = RealSil to 1e-16,
+  relabel-match=yes — the false-PASS the per-component design avoids, demonstrated), TIE-BREAK (overlay
+  regime σ-pure). The per-component-vs-joint contrast is the teeth-witness.
+- **MECHANISM CORRECTION (frozen quantities unchanged).** The frozen "Chimera surgery map" was
+  mechanically wrong: `group_by_shift/2` keys the shift pre-grouping via
+  `logical_fingerprint:fingerprint_shift/2` on the **constraint identity**, ignoring `trajectory_cached` —
+  so a chimera `trajectory_cached` + `run_hierarchical_clustering/1` pins shift grouping to real boundaries
+  regardless of σ_shift (toothless / false-PASS). The harness builds shift-groups itself (`make_groups/4`,
+  keyed on `fingerprint_shift(C[σ_shift(i)])`) and reuses only `cluster_all_groups/2` + `assign_families/1`;
+  the per-component shuffle is a pure index recombination over precomputed real component matrices. Erratum
+  in `c_null_protocol_FROZEN.md`.
+- **Scope:** families = safe + stable + **meaning-bearing**; **twins remain OPEN** (parallel report: 448
+  twins / 4656 pairs, near-vacuous cross-domain gate; deferred to rebuild). Remaining OQ-182 legs: C0
+  pipeline-diff corroboration, C-gen (haiku↔flash), kernel_v1 re-checkpoint, then the gate flip.
+
+---
+
 ## 2026-06-25 — OQ-182 minted: revive + validate the dormant HAC trajectory-mining subsystem (cheap tier)
 **Files:** prolog/context_profile_mining.pl, prolog/config.pl, prolog/isomorphism_engine.pl, prolog/constraint_bridge.pl, prolog/report_generator.pl, ISSUES.md, audits/2026-06-25_oq182_trajectory_revive/
 **Tier:** landed
