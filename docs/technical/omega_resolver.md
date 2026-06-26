@@ -12,7 +12,7 @@ Read this before modifying `omega_resolver.py`, the `ISSUES.md` authored fields,
 
 | command | what |
 |---|---|
-| `menu` | **the front-end** — WORKABLE NOW sorted by authored `Priority:`, with Ω-type + what-resolution-changes, plus BLOCKED-ON-YOU / STANDOFFS / BLOCKED buckets and a coverage footer. Run this, not the file. |
+| `menu` | **the front-end** — WORKABLE NOW sorted by authored `Priority:`, with Ω-type + what-resolution-changes, plus BLOCKED-ON-YOU / STANDOFFS / BLOCKED buckets and a coverage footer. WORKABLE NOW items that share a `bundled_with` family (connected component over the undirected `bundled_with` graph) print together under a `⧉ family …` header — priority-sorted within, families ordered by best member, with non-workable siblings surfaced as `(+ OQ-…)` context; singletons fall through to a flat `· unbundled` list. `splits_from` is NOT folded into the grouping. The grouping is human-surface only — `frontier`/`activations` JSON shapes are unchanged. Run this, not the file. |
 | `frontier` | the same buckets as **JSON** (machine artifact; the pilot stamped `frontier_view.json` from it). |
 | `check` | authority-control gate: dangling `Deps:` targets, `resolved` entries whose witness no longer resolves (git/audits/KNOWN_STATE), **and malformed/packed `Deps:` edges** (unknown relator, no OQ target, or >1 edge packed in one comma-chunk — the silent-drop case). Exit 1 on problems. |
 | `selftest` | 10 planted positive controls (incl. the §D 2-cycle → one `standoff`, the two-sided malformed-Deps control, and the comma-in-`blocked_on_human`-free-text control — OQ-9012, locking the 2026-06-18 fix that a human free-text target may contain commas). Exit 1 on fail. |
