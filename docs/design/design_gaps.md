@@ -973,6 +973,43 @@ the canonical twin-finder. Named here 2026-06-25.
 
 ---
 
+## GAP-21 — No faithful full-series acceleration (the endpoint/first-3-points reductions were removed, not replaced)
+
+**Declared:** 2026-06-25 (OQ-18 close).
+
+**The capability:** a *series-faithful* acceleration read over a full `measurement/5` time series —
+the second derivative (rate-of-change-of-rate) of an extraction/purity trajectory, computed over all
+timepoints, not a fixed-window endpoint reduction. The diachronic question "is the drift speeding up
+or settling?" needs every point: a three-point window cannot distinguish a genuine acceleration from
+noise at the chosen sample points.
+
+**Why it is absent:** the only implementation, `metric_drift_events:drift_acceleration/3`
+(+ `compute_acceleration/2`), reduced the whole series to its **first three points**
+(`Sorted = [T1-V1, T2-V2, T3-V3|_]`, comparing only the first two inter-point rates) and was
+**removed 2026-06-25** (OQ-18): it had **zero callers** anywhere (witnessed), the first-3-points
+reduction was a trajectory-faithfulness hazard, and the name `drift_acceleration` actively invited
+the silent misuse OQ-18 exists to prevent. Deleting the misleading export removed the hazard; nothing
+consumed it, so removal was behavior-preserving (`pipeline_output.json` byte-identical).
+
+**The capability the deleted code did NOT provide (so this is a genuine gap, not a relocation):** a
+full-series acceleration. The removed predicate only ever looked at three points; even its intended
+read was unfaithful. The faithful version does not exist anywhere in the engine — `drift_velocity/3`
+is endpoint-only too (OQ-18), and the live faithful primitive `drl_composition:linear_slope/2` is a
+*first* derivative (velocity), not a second.
+
+**What closing the gap would require:** (1) a full-series second-derivative computation (e.g. a
+least-squares fit of the per-interval slopes, reusing `linear_slope/2` as the inner velocity
+primitive); (2) a **consumer** that reads it (per `build_discipline.md` Pattern 1 — otherwise it
+returns to being the unfed placeholder this ledger guards against); (3) most cheaply, fold it into the
+faithful-velocity rebuild **OQ-184**, which already replaces the endpoint `drift_velocity` with a
+least-squares slope and is the natural home for its acceleration sibling. Until a consumer wants it,
+the gap stays deferred — the deletion was the honest move, not a regression.
+
+**Status:** Deferred. Apparatus removed (OQ-18, 2026-06-25); gap recorded here; faithful rebuild
+folded into OQ-184's migration list.
+
+---
+
 ## Deferred triggers (not yet gaps)
 
 A trigger is a capability that is **not** committed future work — it has too few real users to

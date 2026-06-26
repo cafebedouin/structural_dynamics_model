@@ -19,7 +19,6 @@
 
     % Drift Velocity
     drift_velocity/3,
-    drift_acceleration/3,
 
     % Severity Classification
     drift_severity/3,
@@ -69,6 +68,15 @@ safe_metric(C, Metric, Value) :-
 
 %% metric_delta(+C, +Metric, -T1, -T2, -Delta)
 %  Finds the earliest and latest measurements and computes the change.
+%
+%  REDUCTION = ENDPOINT-ONLY (first/last of the sorted series; all intermediate
+%  timepoints discarded). Module-PRIVATE (not exported), event-gate use only —
+%  a spike-and-recover series (V=0.35→0.68→0.58) yields the same Delta as a
+%  monotone climb to the same endpoint. NOT A TRAJECTORY SOURCE. For a faithful
+%  full-series reading use raw narrative_ontology:measurement/5,
+%  drl_composition:non_monotonic_trajectory/2, or the drift_trajectory subsystem
+%  (OQ-83). (OQ-18; private so no serialized consumer reads the thrown-away
+%  resolution — the only collapsing predicate here with no marked falsifier.)
 metric_delta(C, Metric, T1, T2, Delta) :-
     findall(T-V, narrative_ontology:measurement(_, C, Metric, T, V), Pairs),
     Pairs = [_|_],
@@ -85,6 +93,30 @@ metric_at(C, Metric, Time, Value) :-
 
 %% metric_trend(+C, +Metric, -Trend)
 %  Determines if a metric is increasing, decreasing, or stable.
+%
+%  SEMANTICS = NET-CHANGE DIRECTION: Trend buckets metric_delta's endpoint
+%  Delta (= V_last − V_first) at ±0.05. Net change IS correctly the endpoints
+%  (a series ending higher rose net, whatever the path), so this is NOT a
+%  velocity-style reduction defect — it does, however, NOT measure *sustained*
+%  trend: a spike-and-recede series with net Δ>0.05 reads `increasing` while a
+%  least-squares fit is flat.
+%
+%  REACHES A SERIALIZED VERDICT: metric_trend(C, suppression_requirement, increasing)
+%  gates cs_verdict(C, scaffold_suppression_escalating) (json_report.pl:570,
+%  "cs_verdicts" → pipeline_output.json). FALSIFIER (witnessed, probe
+%  oq18_metric_trend_flip.pl, control live): net-change and regression-trend
+%  diverge for 0 / 1 / 17 serialized verdicts on testsets/haiku/flash (haiku:
+%  nicene_creed Δ=0.08 vs fit 0.0207; flash cases hairline at the ±0.05 cut).
+%  Behavior is unchanged, but whether "escalating" should mean net-higher
+%  (endpoints correct) or sustained-trend (LSQ more faithful) is a semantic seat
+%  routed to OQ-183 (cross-linked to OQ-19, the ±0.05 magic-number adjacency).
+%  NOT "safe / no resolution to corrupt."
+%
+%  Output vocabulary {increasing,decreasing,stable} (no `unknown`) collides with
+%  logical_fingerprint:metric_trend/3's {rising,falling,stable,unknown} — see
+%  OQ-183 limb (i). Positive-control lesson for any re-run: bind C from
+%  corpus_loader:corpus_constraint/1 BEFORE cs_verdict/2 — an unbound query
+%  returns a false 0 (dr_type/3 cannot generate C).
 metric_trend(C, Metric, Trend) :-
     metric_delta(C, Metric, _, _, Delta),
     (   Delta > 0.05  -> Trend = increasing
@@ -408,34 +440,48 @@ drift_event(C, Context, network_drift_indexed,
     network_dynamics:network_drift_velocity(C, Context, V, _).
 
 /* ================================================================
-   5. DRIFT VELOCITY AND ACCELERATION
+   5. DRIFT VELOCITY
+   (drift_acceleration/3 + compute_acceleration/2 removed 2026-06-25, OQ-18:
+    zero callers, first-3-points reduction, name actively misleading. Faithful
+    full-series acceleration logged as a declared absence in design_gaps.md.)
    ================================================================ */
 
 %% drift_velocity(+ConstraintID, +Metric, -RatePerYear)
+%
+%  REDUCTION = ENDPOINT RATE (Delta/Duration, first/last only — via metric_delta).
+%  Diverges from the faithful least-squares slope (drl_composition:linear_slope/2)
+%  on most live series: per-neighbor |Δrate| up to 0.0011 / 0.0057 / 0.0067 on
+%  86/97, 890/954, 639/949 series (testsets/haiku/flash).
+%
+%  CONSUMERS — magnitude vs gate split (do NOT call this "render-only" or
+%  "safe-as-gate"; both were witnessed false):
+%   * MAGNITUDE is read only by render-only sites (metric_drift_report.pl:160/:174,
+%     cascade_prediction — printed, never serialized).
+%   * The RATE ALSO FEEDS A SERIALIZED VERDICT: drift_velocity →
+%     network_dynamics:network_drift_velocity/4 (sum over Rate>0 contributors) →
+%     cs_drift_mismatch:cs_is_metric_stable/1 (gate V >= network_drift_velocity_threshold)
+%     → cs_drift_mismatch/2 → json_report.pl:2015 → pipeline_output.json. So the
+%     endpoint reduction reaches a machine-consumed CS field, and it is FLIPPABLE
+%     in principle (a spike-and-recover neighbor contributes 0 where a faithful
+%     series would not).
+%
+%  CURRENTLY-UNCORRUPTING, WITH THIS FALSIFIER (re-witnessed 2026-06-25, probes
+%  oq18_flipped_probe.pl + oq18_divergence_probe.pl, live control on every leg):
+%  0 serialized cs_drift_mismatch verdicts flip under the faithful least-squares
+%  velocity on any live leg (max faithful SUM 0.006745/0.007851/0.004333 < Thresh
+%  0.01; closest headroom Thresh−Vf = 0.00215 on testsets_haiku — a SUM-level
+%  margin, the gate's exact quantity).
+%
+%  KILL CONDITION: any serialized cs_drift_mismatch verdict whose FAITHFUL
+%  network_drift_velocity sum crosses network_drift_velocity_threshold — at which
+%  point this endpoint reduction is producing a wrong verdict and the faithful
+%  least-squares replacement (OQ-184, with the sum-level tripwire) must land. The
+%  0.00215 haiku headroom is the reason to PRIORITIZE OQ-184, not to guard now.
 drift_velocity(C, Metric, Rate) :-
     metric_delta(C, Metric, T1, T2, Delta),
     Duration is T2 - T1,
     Duration > 0,
     Rate is Delta / Duration.
-
-%% drift_acceleration(+ConstraintID, +Metric, -Acceleration)
-drift_acceleration(C, Metric, Acceleration) :-
-    findall(T-V, narrative_ontology:measurement(_, C, Metric, T, V), Pairs),
-    sort(Pairs, Sorted),
-    length(Sorted, N), N >= 3,
-    compute_acceleration(Sorted, Acceleration).
-
-compute_acceleration(Sorted, Acceleration) :-
-    Sorted = [T1-V1, T2-V2, T3-V3|_],
-    D1 is T2 - T1, D1 > 0,
-    D2 is T3 - T2, D2 > 0,
-    R1 is (V2 - V1) / D1,
-    R2 is (V3 - V2) / D2,
-    RateDelta is R2 - R1,
-    (   RateDelta > 0.01  -> Acceleration = accelerating
-    ;   RateDelta < -0.01 -> Acceleration = decelerating
-    ;   Acceleration = constant
-    ).
 
 /* ================================================================
    6. SEVERITY CLASSIFICATION

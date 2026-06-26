@@ -1,22 +1,22 @@
 {
   "manifest": {
-    "store_version": "3d016f116b8b2df1b6425d2b79f74854a7ef18bc",
+    "store_version": "66a29a854f00e575eb132916cb45e167c7752c54",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-25T19:36:03"
+    "generated_at": "2026-06-25T19:46:27"
   },
-  "issues_sha": "6cb575c479894c5766e9b793430fe85443981c1c96f0828369eb15c1340d8615",
-  "n_entries": 182,
+  "issues_sha": "b54f7cdd6aef0a0625d06ef0718b15e39f5dfa7c7dcb5257e66f5faebb1ef8a4",
+  "n_entries": 184,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 90,
+    "resolved": 91,
     "mitigated": 9,
     "partial": 7,
     "disposed": 3,
-    "open": 69,
+    "open": 70,
     "future": 3,
     "investigating": 1
   },
@@ -33,15 +33,6 @@
       "mentioned_in": [
         "OQ-135"
       ]
-    },
-    {
-      "id": "OQ-18",
-      "status": "open",
-      "priority": 1,
-      "summary": "`metric_delta/5` first/last reduction: safe-as-event-gate, latent if reused",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": []
     },
     {
       "id": "OQ-19",
@@ -1009,6 +1000,35 @@
         "OQ-16",
         "OQ-91"
       ]
+    },
+    {
+      "id": "OQ-183",
+      "status": "open",
+      "priority": 2,
+      "summary": "`metric_trend/3`: cross-module name collision + serialized-verdict net-change-vs-trend seat",
+      "deps": [
+        "splits_from OQ-18",
+        "bundled_with OQ-19"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-18",
+        "OQ-19",
+        "OQ-184"
+      ]
+    },
+    {
+      "id": "OQ-184",
+      "status": "open",
+      "priority": 2,
+      "summary": "Faithful least-squares `drift_velocity` replacement (+ series-acceleration rebuild), with sum-level kill-condition tripwire",
+      "deps": [
+        "splits_from OQ-18"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-18"
+      ]
     }
   ],
   "archive": [
@@ -1183,6 +1203,20 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
+    },
+    {
+      "id": "OQ-18",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "`metric_delta/5` first/last reduction: safe-as-event-gate, latent if reused",
+      "deps": [
+        "bundled_with OQ-184"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-183",
+        "OQ-184"
+      ]
     },
     {
       "id": "OQ-20",

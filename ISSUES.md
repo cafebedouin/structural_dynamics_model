@@ -589,42 +589,17 @@ should be on the record; "sitting there ignored" is the unmarked state.
 
 ## OQ-18 — `metric_delta/5` first/last reduction: safe-as-event-gate, latent if reused
 
-**Status:** open
+**Status:** resolved — behavior-preserving annotate-with-falsifier + delete dead predicate + route the fix. 2026-06-25.
 **Priority:** 1
 **Origin:** Temporal wiring spike, faithfulness audit, May 2026.  
-**File:** `prolog/drift_events.pl:72-79`
+**File:** `prolog/metric_drift_events.pl:72-79` (path corrected — original cited `drift_events.pl`, which exists only in a worktree).
+**Deps:** bundled_with OQ-184 (faithful least-squares `drift_velocity` rebuild — the deferred output-changing fix); see also OQ-183 (`metric_trend` net-change-vs-trend seat).
 
-**Specific question:** `metric_delta/5` reads the full `measurement/5` time
-series, sorts it, and returns *only the first and last* T-V pair's delta —
-discarding all intermediate timepoints. This is currently safe because
-`metric_delta`'s output is only used as a boolean threshold gate (delta >
-threshold → fire event). It is silently wrong if ever reused as a trajectory
-source: a series that spikes and recovers (V(0)=0.35, V(peak)=0.68,
-V(end)=0.58) produces the same delta as a monotone climb to the same endpoint.
-Should the predicate be renamed, deprecated, or annotated to prevent this
-reuse?
+**Premise correction (the OQ's "safe because output is only a boolean gate" was *partly false*, witnessed):** of the four collapsing predicates, `metric_delta/5` is genuinely private/gate-only, but two reach a SERIALIZED verdict. `drift_velocity/3` (endpoint rate) → `network_dynamics:network_drift_velocity/4` (sum over `Rate>0` contributors) → `cs_drift_mismatch:cs_is_metric_stable/1` (gate `V >= network_drift_velocity_threshold`) → `cs_drift_mismatch/2` → `json_report.pl:2015` → `pipeline_output.json`. Magnitude reads are render-only (`metric_drift_report.pl:160/:174`, `cascade_prediction`); the gate is machine-consumed. `metric_trend/3` (net-change bucket) → `cs_verdict(scaffold_suppression_escalating)` (`json_report.pl:570`).
 
-**Evidence so far:** The faithfulness audit during the temporal spike found
-this and three other temporal predicates (`metric_trend/3`, `drift_velocity/3`,
-`drift_acceleration/3`) all use first/last or first-3-points reductions. They
-are all event-gates, all safely-reductive *for their current use*, and all
-hazardous as trajectory sources. The temporal wiring deliberately sourced from
-raw `measurement/5` rather than any of these collapsing predicates. The
-hazard is structural: a future developer (or a future Claude) looking for "the
-predicate that gives me drift velocity" will find `drift_velocity/3` and use
-it, getting silently wrong answers on any non-monotone series. The temporal
-wiring code excluded these predicates explicitly with a do-not-use comment,
-but the predicates themselves carry no such marking.
+**Settled empirical finding (re-witnessed 2026-06-25, all three live legs; probes `oq18_flipped_probe.pl` + `oq18_divergence_probe.pl` + `oq18_metric_trend_flip.pl` + `oq18_realized_probe3.pl`, live positive control on every leg):** the endpoint reduction genuinely diverges from the faithful least-squares slope (86/97 · 890/954 · 639/949 series; per-neighbor max |Δrate| 0.0011/0.0057/0.0067), and the `cs_drift_mismatch` gate consults non-monotone contributors (gate-live 3/56/10; realized-flippable 0/29/6) — **but 0 serialized `cs_drift_mismatch` verdicts actually flip** under the faithful velocity on any leg (max faithful SUM 0.006745/0.007851/0.004333 < Thresh 0.01; closest headroom = `0.01 − 0.007851 = 0.00215` on `testsets_haiku`). `metric_trend`→`scaffold_suppression_escalating` diverges on 0/1/17 serialized verdicts (haiku: `nicene_creed` Δ=0.08 vs fit 0.0207). So the gates are **exposed but not currently corrupting**.
 
-**What resolution changes:** Either rename to make the collapse explicit
-(e.g. `drift_velocity_endpoint/3` instead of `drift_velocity/3`), add a
-docstring/comment at each predicate marking the reduction as event-gate-only
-and pointing to the faithful source, or deprecate in favor of series-faithful
-replacements. Lowest cost: comment annotation. Highest robustness: rename so
-the limitation is in the call site every time the predicate is invoked. The
-current state (no marking, current use safe, latent hazard on reuse) is the
-exact "currently-true-by-accident" pattern ISSUES.md exists to prevent
-becoming an unmarked assumption.
+**Resolution (behavior-preserving):** (1) `metric_delta/5`, `metric_trend/3`, `drift_velocity/3` annotated at their definitions with reduction-kind + faithful-source pointer + the witnessed flip-status/falsifier (NOT "safe-as-gate" — that label was falsified). (2) `drift_acceleration/3` + `compute_acceleration/2` deleted (zero callers, first-3-points reduction, misleading name); faithful full-series acceleration logged as a declared absence in `docs/design/design_gaps.md`. (3) Deferred items routed: OQ-184 (faithful-velocity rebuild, output-changing, carries the sum-level kill-condition tripwire) and OQ-183 (the net-change-vs-sustained-trend semantic seat). **Falsifier (carried, not closed-over):** the first serialized `cs_drift_mismatch` verdict whose faithful `network_drift_velocity` sum crosses `network_drift_velocity_threshold` — at which point OQ-184 must land; the 0.00215 haiku headroom is the reason to prioritize it. Witness: load+positive-control, pipeline byte-identical, report renders, probe re-runs (this session).
 
 ---
 
@@ -9479,6 +9454,46 @@ loaded-but-non-executing Pattern-2 fork (all 4 call sites dead) — log-only, de
   family recovery — a distinct cross-generation invariance witness, NOT C2). (4) Re-checkpoint, then the
   kernel_v1 leg, then Step 4 gate flip (only if all family gates pass) + Step 5 docs. Gate is NOT yet
   flipped (`config.pl trajectory_enabled` stays 0; all validation in-session, no engine changes).
+
+---
+
+## OQ-183 — `metric_trend/3`: cross-module name collision + serialized-verdict net-change-vs-trend seat
+
+**Ω-type:** Ω_C (declared-seat — the "escalating" semantics is the operator's ruling, not a correctness fact).
+
+**Status:** open
+**Priority:** 2
+**Origin:** OQ-18 close (sequenced out 2026-06-25); faithfulness audit of the temporal predicates.  
+**File:** `prolog/metric_drift_events.pl:86-93`; `prolog/logical_fingerprint.pl:329`; gate at `prolog/json_report.pl:570`.
+**Deps:** splits_from OQ-18, bundled_with OQ-19 (the ±0.05 magic-number adjacency this seat sits on)
+
+**Specific question (two limbs on the same predicate):**
+**(i) Name collision (Build Discipline Pattern 2).** `metric_drift_events:metric_trend/3` returns `{increasing, decreasing, stable}` (no `unknown`); `logical_fingerprint:metric_trend/3` returns `{rising, falling, stable, unknown}` — same predicate name, different output vocabulary, different modules. Cross-module clash with no queryable fact saying which vocabulary a caller expects.
+**(ii) Semantic seat (operator's ruling).** `metric_drift_events:metric_trend/3` measures *net change* (`V_last − V_first` bucketed at ±0.05), which gates the serialized `cs_verdict(scaffold_suppression_escalating)`. Net change *is* correctly the endpoints, but it is NOT *sustained* trend: a spike-and-recede series with net Δ>0.05 reads `increasing` while a least-squares fit is flat. Should "escalating" mean *net-higher* (endpoints correct) or *sustained-trend* (LSQ more faithful)?
+
+**Evidence so far (witnessed 2026-06-25, probe `oq18_metric_trend_flip.pl`, live flip control):** net-change and regression-trend diverge for **0 / 1 / 17** serialized `scaffold_suppression_escalating` verdicts on testsets/haiku/flash (haiku: `nicene_creed` Δ=0.08 vs fit 0.0207; most flash cases hairline at the ±0.05 cut → OQ-19 adjacency). Positive-control lesson (mandatory for any re-run): bind `C` from `corpus_loader:corpus_constraint/1` BEFORE `cs_verdict(C, scaffold_suppression_escalating)` — an unbound query returns a false 0 (`dr_type/3` cannot generate `C`).
+
+**What resolution changes:** Limb (i) is a correctness/clarity fix (rename one of the two `metric_trend/3` or namespace the vocabulary). Limb (ii) is a declared seat: ruling *net-higher* keeps current behavior (annotation already in place); ruling *sustained-trend* makes OQ-184's least-squares slope the gate source for `scaffold_suppression_escalating` too (output-changing — fold into OQ-184's recalibration). Neither is a correctness bug today (0 flips reach a wrong verdict on testsets; the haiku/flash divergences are at the semantic boundary, not errors).
+
+---
+
+## OQ-184 — Faithful least-squares `drift_velocity` replacement (+ series-acceleration rebuild), with sum-level kill-condition tripwire
+
+**Ω-type:** Ω_E (empirically/computationally resolvable — a faithful full-series velocity is a measurement question, not a seat).
+
+**Status:** open
+**Priority:** 2
+**Origin:** OQ-18 close (the deferred output-changing fix; 2026-06-25).  
+**File:** `prolog/metric_drift_events.pl` (`drift_velocity/3`); `prolog/network_dynamics.pl:126` (`network_drift_velocity/4`); `prolog/cs_drift_mismatch.pl:92-97` (`cs_is_metric_stable/1`).
+**Deps:** splits_from OQ-18
+
+**Specific question:** Replace the endpoint `drift_velocity/3` (`metric_delta`-based, first/last only) with a least-squares slope over the full series (the engine already has the slope primitive `drl_composition:linear_slope/2`). The deleted `drift_acceleration/3` faithful rebuild (full-series, `design_gaps.md` declared absence) folds in here.
+
+**Why deferred / output-changing (witnessed):** the swap changes which constraints flag `"cs_drift_mismatch"` in `pipeline_output.json` (gate source changes) and shifts `cascade_prediction` timings — so it needs its own commit + manual approval and recalibration. **Migration list:** `cascade_prediction` + `metric_drift_report` prints (render), **and `cs_drift_mismatch:96` `cs_is_metric_stable` (machine-consumed).** Before the swap, **snapshot the current serialized `cs_drift_mismatch` set as the diff baseline** so the output-change is witnessed as a specific membership delta, not "numbers shifted."
+
+**Kill condition (carry as a CHECKABLE tripwire, not prose):** a recurring assertion that, per endpoint-serialized `cs_drift_mismatch` verdict, recomputes the **faithful `network_drift_velocity` SUM** (`sum_list` over `Rate>0` contributors with `linear_slope` rates — mirror the gate's exact conjunct 2, `sum >= network_drift_velocity_threshold`, NOT a per-series `Vf` proxy) and fails on any crossing. **As of 2026-06-25 the witnessed headroom is sum-level `Thresh − max faithful sum = 0.01 − 0.007851 = 0.00215` on `testsets_haiku`** (`oq18_flipped_probe.pl`; `faithful_ndv` does `sum_list`). The thin margin means the tripwire catches BOTH likely failure modes: a new high-`Vf` series AND an existing verdict gaining a contributor as the corpus grows. Prototype: `oq18_flipped_probe.pl`.
+
+**What resolution changes:** lands the faithful velocity, recalibrates the `cs_drift_mismatch` membership and cascade timings against the snapshot baseline, retires the OQ-18 falsifier (the endpoint reduction stops being a latent corruption source), and wires the sum-level tripwire into the recurring gate so a future corpus crossing the 0.00215 headroom fails loud instead of silently emitting a wrong verdict.
 
 ---
 
