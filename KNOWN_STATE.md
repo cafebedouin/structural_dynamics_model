@@ -45,6 +45,35 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-26 — OQ-104 resolved (scoped): gate.sh gains a 7th check (audit-citation frozen-evidence)
+**Files:** scripts/gate.sh, python/audit_citation_status.py, audits/2026-06-18_oq104_citation_checker/controls.py, audits/2026-06-18_oq104_citation_checker/controls_run.sh, ISSUES.md
+**Tier:** landed
+
+Operator ruling: **gate the OQ-104 danger class.** The frozen-evidence danger (a unique evidence
+file a fresh clone needs and lacks — the spectral_laplacian origin) is distinguishable from benign
+descriptive refs by **regenerability**: an untracked cited path is dangerous **iff it is not under
+top-level `outputs/`** (repo-root `outputs/` is rebuilt by every `run_pipeline`).
+
+Changes:
+- `audit_citation_status.py:classify()` — split the single `untracked-pending` sublabel by
+  `c.startswith("outputs/")` into `untracked-frozen-evidence` (**GATING** — intrinsic ERROR, no
+  flag) and `untracked-regenerable` (non-gating WARN). `--check` exits 1 iff frozen-evidence
+  non-empty OR parse `problems`. `--promote-untracked` now lifts `untracked-regenerable`.
+- `scripts/gate.sh` — new 7th `run` line `audit cites` (`audit_citation_status.py --check`).
+- controls.py 23/23 → **25/25**: matched-pair (identical fixture content; frozen-arm in an audit
+  dir vs regenerable-arm under `outputs/`) isolating the **prefix** as the deciding variable, plus
+  a dotted `./outputs/` post-normalization control. controls_run.sh rot-fixture (non-`outputs/`)
+  now flips pass→frozen-evidence (gating).
+
+Witnessed: all **39** distinct untracked paths under `outputs/` → `untracked-frozen-evidence:0` →
+gate GREEN; end-to-end RED-on-frozen-citation / GREEN-on-removal; full `./scripts/gate.sh` GREEN
+(7/7). **Scope (do not over-read "resolved"):** one of two origin routes mechanized. Two residuals
+stay non-gating with kill conditions (ISSUES.md OQ-104): a **typo'd** path lands in
+`missing-pending-M` (gating `missing` would FP on all 70); a frozen artifact **parked under
+top-level `outputs/`** reads `untracked-regenerable` (the prefix is a convention, not an invariant).
+Promotion test: a new gate check fails LOUDLY (gate prints RED) → no silent mistake → no CLAUDE.md
+promotion needed.
+
 ## 2026-06-26 — GAP-04/OQ-53 increment: cross-kernel reading-stance transpose (fingerprint_shift spine)
 **Files:** prolog/cs_kernel_registry.pl, prolog/json_report.pl, python/cross_kernel_stance_report.py, prolog/tests/test_cs_kernel_registry.pl, docs/design/design_gaps.md, ISSUES.md
 **Tier:** landed

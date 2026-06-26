@@ -123,6 +123,28 @@ glob-star `*.pl` = **illustrative / dir-has-match**, not a hard per-file citatio
 descriptive references to canonical regenerable `outputs/` artifacts → flagged-but-non-gating
 (operator, 2026-06-18).
 
+## Update 2026-06-26 — gating decision (OQ-104 resolved, scoped)
+
+Operator ruled **gate the danger class.** The single `untracked-pending` sublabel above was
+split by **regenerability**: an untracked cited path is the OQ-104 danger **iff it is not under
+top-level `outputs/`** (repo-root `outputs/` is rebuilt by every `run_pipeline`; an
+`audits/.../outputs/` evidence file or any other gitignored frozen ref is not). New sublabels in
+`audit_citation_status.py:classify()`:
+- `untracked-frozen-evidence` — untracked, exists, **not** under `outputs/`. **GATING** (intrinsic
+  ERROR; `--check` exits 1 with no flag). The spectral_laplacian origin class.
+- `untracked-regenerable` — untracked, exists, under `outputs/`. **Non-gating WARN**;
+  `--promote-untracked` lifts it. (The 2026-06-18 descriptive-`outputs/` ruling, unchanged.)
+
+Wired as the 7th `run` line in `scripts/gate.sh` (`audit cites`). Witnessed base rate **zero**:
+all 39 distinct untracked paths under `outputs/` → `untracked-frozen-evidence:0` → gate GREEN;
+fires only on recurrence. Controls upgraded 23/23 → **25/25** as a **discriminator-isolation
+matched pair** (identical fixture content, frozen-arm in an audit dir vs regenerable-arm under
+`outputs/` — isolates the prefix as the cause) + a dotted `./outputs/` post-normalization control;
+the rot-fixture (non-`outputs/`) now flips pass→frozen-evidence (gating). End-to-end RED-on-frozen
+/ GREEN-on-removal witnessed. **Scope:** one of two origin routes mechanized; two residuals
+(typo'd→`missing-pending-M`; frozen-parked-under-`outputs/`→`untracked-regenerable`) stay
+non-gating with kill conditions — see ISSUES.md OQ-104 and KNOWN_STATE 2026-06-26.
+
 ## Artifacts in this dir
 - `run_table.txt` / `run_summary.txt` — full per-citation table + census.
 - `table2_untracked_35.txt` / `table1_missing_66.txt` — the two distinct-path tables.

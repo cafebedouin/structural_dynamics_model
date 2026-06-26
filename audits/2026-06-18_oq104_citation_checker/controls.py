@@ -69,13 +69,31 @@ check("glob-star -> grammar-ambiguous",
 brace = expand_classify("prolog/arakelov_height.{pl,json}")
 check("brace expands to 2 members", len(brace), 2)
 check("brace member .pl -> tracked", brace[0], (A.PASS_TRACKED, "prolog/arakelov_height.pl"))
-check("brace member .json -> not pass", brace[1][0] in (A.UNTRACKED, A.MISSING), True)
+check("brace member .json -> not pass",
+      brace[1][0] in (A.UNTRACKED_FROZEN, A.UNTRACKED_REGEN, A.MISSING), True)
 
-# 4. writeup-relative: evidence/summary.json exists in THIS audit dir but is untracked ->
-#    untracked-pending (NOT pass-on-existence).
-check("writeup-relative untracked -> untracked-pending",
+# 4. DISCRIMINATOR-ISOLATION MATCHED PAIR (the redesign's core claim: startswith("outputs/")
+#    decides). Hold fixture content CONSTANT, vary only the location — so the test reads
+#    "the prefix is the deciding variable," not "two unrelated fixtures both pass."
+#    frozen arm: writeup-relative evidence/summary.json inside an audit dir (NOT under
+#    outputs/) -> untracked-frozen-evidence -> GATING (gate RED on recurrence).
+check("matched-pair FROZEN arm -> untracked-frozen-evidence (gating)",
       classify("evidence/summary.json"),
-      (A.UNTRACKED, f"{AUDIT_DIR}/evidence/summary.json"))
+      (A.UNTRACKED_FROZEN, f"{AUDIT_DIR}/evidence/summary.json"))
+#    regenerable arm: IDENTICAL content placed under top-level outputs/, cited untracked ->
+#    untracked-regenerable -> non-gating (gate GREEN).
+_regen_fixture = REPO / "outputs" / "_oq104_control_fixture.json"
+_regen_fixture.parent.mkdir(parents=True, exist_ok=True)
+if not _regen_fixture.exists():
+    _regen_fixture.write_text('{"control":"writeup-relative untracked fixture"}\n')
+check("matched-pair REGENERABLE arm -> untracked-regenerable (non-gating)",
+      classify("outputs/_oq104_control_fixture.json"),
+      (A.UNTRACKED_REGEN, "outputs/_oq104_control_fixture.json"))
+# 4a. post-normalization (5a): a dotted './outputs/...' spelling collapses to 'outputs/...'
+#     BEFORE the prefix test, so it must land regenerable, not a spurious frozen RED.
+check("dotted ./outputs/ collapses -> untracked-regenerable",
+      classify("./outputs/_oq104_control_fixture.json"),
+      (A.UNTRACKED_REGEN, "outputs/_oq104_control_fixture.json"))
 
 # 5. home-dir -> allowlist (by-design external), NOT missing-flagged.
 check("home-dir -> allowlist",
@@ -95,12 +113,14 @@ check("whitespace command -> grammar-ambiguous",
 check("leading ../ -> grammar-ambiguous",
       classify("../outputs/pipeline_output.json")[0], A.AMBIG)
 
-# 7. absolute-inside-repo normalizes to repo-relative and is FLAGGED (not pass).
+# 7. absolute-inside-repo normalizes to repo-relative and is FLAGGED (not pass). Because
+#    it normalizes UNDER outputs/, it lands untracked-regenerable — proving the prefix test
+#    runs POST-normalization (the abs '<REPO>/outputs/...' spelling reaches it as 'outputs/...').
 abs_in = classify(f"{REPO}/outputs/pipeline_output.json")
 check("abs-in-repo normalizes to outputs/pipeline_output.json",
       abs_in[1], "outputs/pipeline_output.json")
-check("abs-in-repo is flagged (untracked, not pass)",
-      abs_in[0], A.UNTRACKED)
+check("abs-in-repo is flagged regenerable (post-normalization, not pass)",
+      abs_in[0], A.UNTRACKED_REGEN)
 # 7b. absolute OUTSIDE repo -> allowlist.
 check("abs-outside-repo -> allowlist",
       classify("/etc/passwd")[0], A.PASS_ALLOWLIST)
@@ -108,15 +128,16 @@ check("/tmp -> allowlist", classify("/tmp/recon.py")[0], A.PASS_ALLOWLIST)
 
 # 8. rot-sensitivity (in-memory twin of controls_run.sh): hold existence constant, drop
 #    the file from the tracked set -> a previously-PASS cited file must FLIP to flagged.
-#    A checker that "stopped looking" would still return pass here.
+#    A checker that "stopped looking" would still return pass here. rot_file is NOT under
+#    outputs/, so the flip lands in the GATING frozen-evidence class (pass -> RED, not -> WARN).
 rot_file = "prolog/arakelov_height.pl"
 before = A.classify(rot_file, AUDIT_DIR, HEADS, FILES, DIRS)
 files_minus = set(FILES); files_minus.discard(rot_file)
 dirs_minus = set(DIRS)  # parent dirs stay; only the exact file untracked
 after = A.classify(rot_file, AUDIT_DIR, HEADS, files_minus, dirs_minus)
 check("rot: tracked cited file PASSES", before, (A.PASS_TRACKED, rot_file))
-check("rot: same file untracked-on-disk FLIPS to untracked-pending",
-      after, (A.UNTRACKED, rot_file))
+check("rot: same file untracked-on-disk FLIPS to untracked-frozen-evidence (gating)",
+      after, (A.UNTRACKED_FROZEN, rot_file))
 
 
 def main():

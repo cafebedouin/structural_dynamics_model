@@ -40,9 +40,11 @@ else
 fi
 
 git rm -q --cached "$CITE"   # now untracked, still on disk
-echo "--- untracked (git rm --cached): expect untracked-pending flag for $CITE"
-if $CHK --file "$FIX" 2>/dev/null | grep -E "^untracked-pending.*$CITE" ; then
-  echo "PASS: pass -> flag flip witnessed (rot-sensitive)"
+# $CITE is NOT under top-level outputs/ -> the flip lands in the GATING frozen-evidence
+# class (pass -> RED), the OQ-104 danger route now wired into scripts/gate.sh.
+echo "--- untracked (git rm --cached): expect untracked-frozen-evidence flag for $CITE"
+if $CHK --file "$FIX" 2>/dev/null | grep -E "^untracked-frozen-evidence.*$CITE" ; then
+  echo "PASS: pass -> gating flag flip witnessed (rot-sensitive)"
 else
   echo "FAIL: rot NOT detected — checker stopped looking"; exit 1
 fi
