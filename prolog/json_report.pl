@@ -587,16 +587,21 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
         format(S, '      "cs_drift_unacknowledged": false~n', [])
     ;   length(UIDs, NInst),
         format(S, '      "cs_instance_count": ~w,~n', [NInst]),
-        % Pick latest instance by created_at, UID-tiebroken; fallback to @< UID ordering
+        % Multi-instance selection (OQ-21, 2026-06-25): pick the @<-maximal UID atom.
+        % Instances of one constraint name are PARALLEL DRAWS, not versions
+        % (determinism frontier, CLAUDE.md Critical Distinctions): there is no
+        % canonical-latest, so RECENCY IS THE WRONG SELECTOR. The only live
+        % consumer (orbit_operator's committer terminal-projection orbit, via
+        % cs_drift_terminal) needs determinism + stability across runs, which
+        % standard order of UID atoms supplies. cs_created_at is deliberately
+        % ignored. Do NOT "restore" a timestamp comparison: the prior
+        % aggregate_all(max(T-U)) form evaluated T-U ARITHMETICALLY, threw on
+        % atom UIDs, was swallowed by a catch, and silently fell through to this
+        % same @< path for the branch's entire life — a dead clause, never a
+        % working recency rule. (Branch fires only on a multi-instance corpus;
+        % OQ-17-gated. Test: tests/test_a12_multi_instance_render.pl.)
         (   NInst > 1
-        ->  (   catch(aggregate_all(max(T-U),
-                          (member(U, UIDs),
-                           narrative_ontology:cs_created_at(U, T)),
-                          max(_-UID)),
-                _, fail)
-            ->  true
-            ;   msort(UIDs, Sorted), last(Sorted, UID)  % @< fallback: no timestamps
-            )
+        ->  msort(UIDs, Sorted), last(Sorted, UID)  % @<-maximal UID; deterministic
         ;   UIDs = [UID]
         ),
         % cs_drift_terminal (UID-keyed)

@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "32a4181ba1d61cfdac498677894880464af9d9e2",
+    "store_version": "b9ae8b4f59a531837d787a14934c328ca869985a",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-25T20:42:53"
+    "generated_at": "2026-06-25T22:32:01"
   },
-  "issues_sha": "b9ad269cf7f782322a15630b8d56487265657b8d81c2013f4b98aa19d834e7f8",
+  "issues_sha": "d390d0eb5e272039c555f5984ab08b6dae545f96ee295a0bbca5b38cbd0b1a3d",
   "n_entries": 185,
   "active_token_set": [
     "investigating",
@@ -13,10 +13,10 @@
   ],
   "per_status": {
     "resolved": 92,
-    "mitigated": 9,
+    "mitigated": 10,
     "partial": 7,
     "disposed": 3,
-    "open": 70,
+    "open": 69,
     "future": 3,
     "investigating": 1
   },
@@ -32,18 +32,6 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-135"
-      ]
-    },
-    {
-      "id": "OQ-21",
-      "status": "open",
-      "priority": 1,
-      "summary": "A12 multi-instance render branch never exercised on pipeline data",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-10",
-        "OQ-17"
       ]
     },
     {
@@ -1244,6 +1232,18 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-109"
+      ]
+    },
+    {
+      "id": "OQ-21",
+      "status": "mitigated",
+      "priority": 1,
+      "summary": "A12 multi-instance render branch never exercised on pipeline data",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-10",
+        "OQ-17"
       ]
     },
     {

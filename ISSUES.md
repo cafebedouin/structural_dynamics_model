@@ -743,7 +743,7 @@ raw cell outputs in `outputs/oq20/` (gitignored, reproducible from pinned corpor
 
 ## OQ-21 — A12 multi-instance render branch never exercised on pipeline data
 
-**Status:** open
+**Status:** mitigated — (a) correctness RESOLVED: an executed positive control found and fixed a real defect (the "latest by `cs_created_at`" path was dead — `aggregate_all(max(T-U))` evaluated `T-U` arithmetically, threw on atom UIDs, was swallowed by `catch/3`, and always fell to the `@<` fallback). Dead clause removed; `@<` ruled canonical; pinned by `prolog/tests/test_a12_multi_instance_render.pl`. (b) pipeline-firing remains open, gated on a future multi-instance load. 2026-06-25.
 **Priority:** 1
 **Origin:** UUID surrogate migration, May 2026.  
 **File:** `prolog/json_report.pl` (A12 per-constraint CS block,
@@ -777,6 +777,41 @@ co-load, or OQ-17 resolving toward "wire `testsets_3000`") would exercise the
 branch as a side effect. The branch is also the natural exercise vehicle for
 OQ-10's cross-reading comparison work — building that comparison tool would
 load multi-reading data and incidentally validate the branch.
+
+**Update (2026-06-25) — the dual-consult claim was wrong; (a) resolved with a fix.**
+The "verified by manual dual-consult" above read the comment's *intent*, not the
+code's behavior. A positive control (`prolog/tests/test_a12_multi_instance_render.pl`)
+drove the real `write_per_constraint_entry/4` render path with a synthetic
+multi-instance constraint and witnessed that the documented "pick latest by
+`cs_created_at`" selection **never executes**: `aggregate_all(max(T-U), …, max(_-UID))`
+evaluates `T-U` as *arithmetic*, and UIDs are atoms (UUIDs), so it throws
+`type_error(evaluable, …)`, is swallowed by the surrounding `catch(_, fail)`, and
+*always* falls through to the `msort/last` `@<` UID-ordering fallback. The timestamp
+comparison was dead for the branch's entire life.
+
+**Ruling (operator, 2026-06-25): `@<` is canonical; recency is the WRONG selector.**
+Instances of one constraint name are *parallel draws, not versions* (determinism
+frontier, CLAUDE.md Critical Distinctions) — there is no canonical-latest, so
+selecting by recency is incoherent with the model's own semantics. The only live
+correctness-bearing consumer of a selected instance's fields is `orbit_operator.py`'s
+committer terminal-projection orbit (via `cs_drift_terminal`); it needs a
+*deterministic, stable* canonical, which standard order of UID atoms supplies — it
+never reads timestamps. (Grep: the other selected fields have no live consumer —
+`cs_reference_frame` is emitted-but-never-read; `cs_drift_moment`/`cs_drift_gap` feed
+only the one-off `oq110_residual_join.py` audit.) **Fix:** the dead `aggregate_all`
+clause is removed; `@<`-maximal-UID is the sole multi-instance selector; the in-code
+comment now states the parallel-draws reason so the bug can't grow back (a
+mechanism-only comment would invite a "helpful" revert toward timestamps).
+
+**(a) is therefore RESOLVED** (witnessed defect → fixed → pinned), not merely
+verified-by-reading. The test pins `@<` selection with **bundle coherence** (≥2
+distinguishable fields track the same winner) and a **deadness/recency pin** (the
+`@<`-max UID is given the *older* timestamp and must still win); a positive control
+confirmed t1 goes RED if recency selection is reintroduced. **(b) — does the branch
+fire on real pipeline data — remains open**, gated on a future multi-instance load
+(a deliberate two-run co-load or a multi-run-merge feature). NOTE: the original
+"natural unblock" pointer to OQ-17 (`testsets_3000` wiring) is stale — OQ-17 is
+`disposed` (that corpus was archived 2026-06-05); (b) has no active gating OQ today.
 
 ---
 
