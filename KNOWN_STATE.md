@@ -210,10 +210,14 @@ absent; `[abductive_triggers]` loads through the reexport facade; `check_stack.p
 control for a missed qualifier); full `run_pipeline.py` exit 0 writing `context_profile_report.md`;
 dashboard reads the renamed path. **Promotion test:** no tripwire — a missed reference fails
 *loudly* at load (existence_error) or is caught by `check_stack.pl`, so this stays history, not a
-promoted warning. **Side-finding (rename-independent, not fixed):** `context_profile_mining.pl:104`
-calls `dirac_classification:standard_context/1`, which `dirac_classification.pl` deliberately
-removed (comment :115) — a pre-existing dangling call in the production-disabled
-(`trajectory_enabled=0`) trajectory path; byte-identical pre/post rename, so not an OQ-16 regression.
+promoted warning. **Side-finding (rename-independent — surfaced here, FIXED separately):**
+`context_profile_mining.pl` called `dirac_classification:standard_context/1`, which
+`dirac_classification.pl` deliberately removed (comment :115) — a pre-existing dangling call in the
+production-disabled (`trajectory_enabled=0`) trajectory path, byte-identical pre/post rename, so not
+an OQ-16 regression. Resolved by a concurrent instance (`fc9b4688`): re-qualified to
+`drl_core:standard_context/1`, and `check_stack.pl` extended to load the trajectory chain so the
+class is caught going forward (`a82d7ed0`). Authoritative entry: the standard_context fix entry above
+(KNOWN_STATE 2026-06-25) + `swipl_load_path_and_probe_gotchas.md` §1 (loaded-image coverage boundary).
 
 **Doc-scope refinement (commit `76eae0c1`, operator ruling 2026-06-25):** the 4 dated
 recon/essay docs (`recon_2_scope.md`, `recon_2_scope_v2.md`, `when_frame_isnt_foreground.md`,
