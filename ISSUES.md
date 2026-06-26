@@ -605,7 +605,10 @@ should be on the record; "sitting there ignored" is the unmarked state.
 
 ## OQ-19 — Temporal-shape trigger thresholds are corpus-specific magic numbers
 
-**Status:** open
+**Status:** resolved — thresholds hoisted to named `_DRIFT_*` constants keyed to
+`_DRIFT_MEASUREMENT_GRANULARITY`; runtime guard `_series_granularity` flags
+finer-than-floor series at the read site; positive-control test added
+(`python/tests/test_drift_trajectory_granularity.py`). Witness below (2026-06-25).
 **Priority:** 1
 **Origin:** Temporal-shape report section build, May 2026.  
 **File:** `python/enhanced_report.py` (build_drift_trajectory section,
@@ -639,6 +642,49 @@ measurement precision changes. The recurring pattern from this engagement —
 justified it changes" — applies. Cheap insurance: each threshold carries its
 own rationale in code, with a one-line "if measurement granularity changes,
 recalibrate" marker.
+
+**Resolution (2026-06-25, `python/enhanced_report.py`):** The defect was never
+the *values* (calibration witnessed sound for this corpus) — it was that the
+granularity assumption was silent. Fix, single-file, behavior-preserving:
+1. Hoisted the 6 thresholds (7 occurrences) into a documented module-constant
+   block above `build_drift_trajectory_section`, keyed to
+   `_DRIFT_MEASUREMENT_GRANULARITY = 0.01`. Trigger A is encoded *derived*
+   (`_DRIFT_REVERSAL_FLOOR = 4 * _DRIFT_MEASUREMENT_GRANULARITY`) so it auto-
+   rescales; B/C stay literals with rationale (they are empirically tuned, not
+   granularity-derived) and the guard is their backstop.
+2. Added `_series_granularity(dt)` (str-repr decimal-count, not arithmetic) and a
+   `[CALIBRATION WARNING]` line prepended to the section when the actual series
+   are finer than the floor. Prose commits only to "re-run the floor sweep" (a
+   premise moved, not a measured miscalibration).
+
+**Premise correction (the finding that contradicts the original entry):** the live
+corpus is *no longer uniformly 2-decimal*. 4 constraints carry **authored**
+3-decimal values (`longevity_mismatch` 0.115, `propagation_speed_asymmetry`,
+`protein_anabolic_resistance`, `validation_judgment_separation`; measurement_
+provenance authored, not projected). **None of the 4 currently fire a trigger**, so
+the section never renders for them and the guard stays **inert on rendered output**
+— but the guarded-against finer-granularity regime is already partly present in
+authored data, which strengthens, not weakens, the case for making the assumption
+loud. If a 3-decimal constraint ever fires a trigger, the warning fires with it.
+
+**Witnesses (2026-06-25):**
+- Float kill-condition: `4*0.01==0.04` and `5*0.01==0.05` both `True` (IEEE-754) —
+  derived form byte-identical to the literal, behavior-preserving to the last ULP.
+- Grep completeness: pre-refactor function body holds all 7 bare literals (positive
+  control); post-refactor holds **0** (every site migrated, not just exercised ones).
+- Behavior-preserving per-trigger diff (HEAD vs working tree, live pipeline data):
+  Trigger A `doomsday_clock_metric__hybrid_legitimacy_reading`, B
+  `jewish_sovereignty_palestine__settler_colonial_reading`, C
+  `animal_status_kernel__property_reading` — all three render and are **byte-identical**.
+- Guard alive + inert: positive-control test renders `[CALIBRATION WARNING]` on a
+  synthetic 3-decimal firing section and none on the 2-decimal one; full live corpus
+  = 29 sections rendered, **0** warnings.
+- Test: `python3 python/tests/test_drift_trajectory_granularity.py` → ALL PASS.
+
+**Out of scope (stays open):** OQ-18/OQ-183 (`metric_drift_events:metric_trend/3`
+net-change-vs-trend seat, the ±0.05 cut) is `bundled_with` OQ-19 only by magic-number
+adjacency; it is a Prolog-engine seat (operator ruling, output-changing) and this
+close does not touch it.
 
 ---
 

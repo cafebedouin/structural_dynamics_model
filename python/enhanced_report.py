@@ -871,15 +871,60 @@ def build_level1_identity(constraint_id, pipeline_data, prolog_output, routing_d
 
 # --- Level 1 (cont): TEMPORAL TRAJECTORY ---
 
-def build_drift_trajectory_section(constraint_id, pipeline_data):
-    """L1: Temporal shape — only fires for non-trivial series (48/190 constraints).
+# OQ-19: drift-trajectory trigger thresholds (build_drift_trajectory_section).
+# _DRIFT_MEASUREMENT_GRANULARITY is the load-bearing assumption these triggers
+# were calibrated against: the authored series are 2-decimal (0.01 floor).
+# Trigger A is DERIVED from it (4x the floor) and rescales automatically if the
+# granularity constant changes. Triggers B and C are EMPIRICALLY TUNED (B: the
+# 0.04-0.10 floor sweep; C: ceiling-approach spot-checks) and only *described*
+# relative to granularity — a granularity change does NOT auto-fix them; the
+# runtime guard (_series_granularity below) flags that case at the read site.
+#
+# NOTE (witnessed 2026-06-25): the live corpus is no longer uniformly 2-decimal.
+# 4 constraints carry authored 3-decimal values (e.g. longevity_mismatch 0.115),
+# but none currently fire a trigger, so the guard stays inert on rendered output.
+# This is the guarded-against regime arriving in authored data — which is exactly
+# why the assumption must be loud, not silent.
+_DRIFT_MEASUREMENT_GRANULARITY = 0.01                                # 2-decimal calibration floor
+_DRIFT_REVERSAL_FLOOR          = 4 * _DRIFT_MEASUREMENT_GRANULARITY  # A: derived, == 0.04
+_DRIFT_DIVERGENCE_FLOOR        = 0.06   # B: tuned (floor sweep), both metrics; ~6x floor
+_DRIFT_PLATEAU_REVERSAL_CEIL   = 0.025  # C: exclude non-monotone (A's domain)
+_DRIFT_RATE_NOISE_FLOOR        = 0.001  # C: ignore first-rate at noise level
+_DRIFT_RATE_DECAY_FRAC         = 0.20   # C: last rate < 20% of first
+_DRIFT_PLATEAU_RISE_FLOOR      = 0.05   # C: total rise; ~5x floor
 
-    Triggers (any one sufficient; corrected dominant-direction logic):
-      A: reversal >= 0.04 in any metric (magnitude-weighted dominant direction)
-      B: cross-metric divergence — both metrics move >= 0.06 in opposite directions
+
+def _series_granularity(dt):
+    """OQ-19: finest decimal granularity actually present across all
+    drift_trajectory series values (str-repr decimal-count). Returns the
+    smallest place value seen, e.g. 0.001 if any value has 3 decimals.
+
+    str-repr, not arithmetic: for JSON-sourced floats repr(v) is the shortest
+    round-tripping decimal, so the decimal-place count is the authored precision.
+    (An arithmetic probe like v/granularity integrality is unsound: 0.07/0.01
+    is 6.999... in IEEE-754.)
+    """
+    max_places = 2  # the assumed 2-decimal floor
+    for info in dt.values():
+        for pt in info["series"]:
+            s = repr(float(pt["v"]))
+            if "." in s:
+                max_places = max(max_places, len(s.split(".", 1)[1]))
+    return 10 ** (-max_places)
+
+
+def build_drift_trajectory_section(constraint_id, pipeline_data):
+    """L1: Temporal shape — only fires for non-trivial series.
+
+    Triggers (any one sufficient; corrected dominant-direction logic). Thresholds
+    are the named _DRIFT_* constants above, keyed to _DRIFT_MEASUREMENT_GRANULARITY
+    (the 0.01 calibration floor); see that block + the _series_granularity guard
+    for the OQ-19 rationale, do not re-inline the literals here.
+      A: reversal >= _DRIFT_REVERSAL_FLOOR in any metric (magnitude-weighted dominant direction)
+      B: cross-metric divergence — both metrics move >= _DRIFT_DIVERGENCE_FLOOR in opposite directions
       C: plateau/ceiling — monotone, all accelerations negative, last rate < 20% of first
 
-    Silent for the 142/190 constraints with fully monotone, non-divergent series.
+    Silent for constraints with fully monotone, non-divergent series.
     Source data: drift_trajectory field in pipeline JSON (raw measurement/5 series).
     """
     if pipeline_data is None:
@@ -909,7 +954,7 @@ def build_drift_trajectory_section(constraint_id, pipeline_data):
             return max(abs(d) for d in deltas if d > 0)
 
     # --- Trigger A: non-monotone with magnitude floor ---
-    trigger_a_metrics = [m for m in dt if reversal_mag(get_vals(m)) >= 0.04]
+    trigger_a_metrics = [m for m in dt if reversal_mag(get_vals(m)) >= _DRIFT_REVERSAL_FLOOR]
 
     # --- Trigger B: cross-metric divergence ---
     trigger_b = False
@@ -919,7 +964,7 @@ def build_drift_trajectory_section(constraint_id, pipeline_data):
         tr_vals = get_vals("theater_ratio")
         be_d = be_vals[-1] - be_vals[0]
         tr_d = tr_vals[-1] - tr_vals[0]
-        if be_d * tr_d < 0 and abs(be_d) >= 0.06 and abs(tr_d) >= 0.06:
+        if be_d * tr_d < 0 and abs(be_d) >= _DRIFT_DIVERGENCE_FLOOR and abs(tr_d) >= _DRIFT_DIVERGENCE_FLOOR:
             trigger_b = True
 
     # --- Trigger C: plateau/ceiling (monotone, sustained deceleration) ---
@@ -930,20 +975,33 @@ def build_drift_trajectory_section(constraint_id, pipeline_data):
         accels = get_accels(m)
         if len(rates) < 2:
             continue
-        if reversal_mag(vals) >= 0.025:
+        if reversal_mag(vals) >= _DRIFT_PLATEAU_REVERSAL_CEIL:
             continue  # non-monotone: covered by A
         r_first, r_last = rates[0], rates[-1]
-        if r_first <= 0.001:
+        if r_first <= _DRIFT_RATE_NOISE_FLOOR:
             continue
         if not accels or not all(a <= 0 for a in accels):
             continue
-        if r_last < 0.20 * r_first and (max(vals) - min(vals)) >= 0.05:
+        if r_last < _DRIFT_RATE_DECAY_FRAC * r_first and (max(vals) - min(vals)) >= _DRIFT_PLATEAU_RISE_FLOOR:
             trigger_c_metrics.append(m)
 
     if not trigger_a_metrics and not trigger_b and not trigger_c_metrics:
         return ""
 
     lines = ["", "--- TEMPORAL TRAJECTORY ---", ""]
+
+    # OQ-19: carry the granularity assumption to the read site. If the actual
+    # series are FINER than the calibration floor, the triggers above may be
+    # miscalibrated — say so loudly rather than emit confident output. The guard
+    # witnessed a *premise move*, not a measured miscalibration, so the prose
+    # commits only to "re-run the floor sweep," not "thresholds are wrong."
+    detected = _series_granularity(dt)
+    if detected < _DRIFT_MEASUREMENT_GRANULARITY:
+        lines.append(
+            f"    [CALIBRATION WARNING: series granularity {detected:g} is finer than "
+            f"the {_DRIFT_MEASUREMENT_GRANULARITY:g} floor these triggers were calibrated "
+            f"against (OQ-19) — re-run the trigger floor sweep before trusting the "
+            f"trajectory readings below.]")
 
     # OQ-98/OQ-102: the trajectory eats measurement/5 — carry its provenance
     # here. Per-time-point basis (rider (a)) surfaces as the projected bucket:

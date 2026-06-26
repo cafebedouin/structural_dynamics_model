@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-25 — OQ-19 RESOLVED: drift-trajectory trigger thresholds made durable + fail-loud
+**Files:** python/enhanced_report.py, python/tests/test_drift_trajectory_granularity.py, ISSUES.md
+**Tier:** landed
+
+Closed OQ-19 (temporal-shape trigger magic numbers). Single-file, behavior-preserving:
+hoisted the 6 `build_drift_trajectory_section` thresholds (7 occurrences) into a named
+`_DRIFT_*` constant block keyed to `_DRIFT_MEASUREMENT_GRANULARITY = 0.01`; Trigger A is
+encoded *derived* (`4 * _DRIFT_MEASUREMENT_GRANULARITY == 0.04`, IEEE-754 byte-identical
+to the literal — witnessed), B/C stay literals (empirically tuned, not granularity-
+derived). Added `_series_granularity` guard that prepends `[CALIBRATION WARNING]` when a
+rendered constraint's series are finer than the floor.
+
+**Correction-to-the-OQ-premise (worth a cold read):** the original OQ-19 entry and the
+plan both assumed "live data is 2-decimal today." FALSE as of this corpus — 4 constraints
+(`longevity_mismatch`, `propagation_speed_asymmetry`, `protein_anabolic_resistance`,
+`validation_judgment_separation`) carry **authored** (not projected) 3-decimal values.
+None currently fire a trigger, so the guard is inert on rendered output (29 live sections,
+0 warnings), but the feared finer-granularity regime is already partly present in authored
+data — making the guard more valuable, not less. Witnesses (float kill-condition, grep
+completeness 7→0, byte-identical per-trigger A/B/C diff vs HEAD, positive-control test) in
+ISSUES.md OQ-19 resolution block.
+
+**Promotion test:** history-only. A future agent editing the trajectory section now sees
+named constants + an in-code guard + a granularity NOTE comment, so the silent-
+miscalibration trap is structurally removed — no CLAUDE.md promotion needed.
+
+---
+
 ## 2026-06-25 — OQ-182 C-null PASS: HAC structural families validated as MEANING-bearing (testsets/ leg)
 **Files:** audits/2026-06-25_oq182_trajectory_revive/c_null_harness.pl, audits/2026-06-25_oq182_trajectory_revive/c_null_results.log, audits/2026-06-25_oq182_trajectory_revive/c_null_distribution.json, audits/2026-06-25_oq182_trajectory_revive/c_null_protocol_FROZEN.md, audits/2026-06-25_oq182_trajectory_revive/c2_domain_finding.md, ISSUES.md
 **Tier:** landed
