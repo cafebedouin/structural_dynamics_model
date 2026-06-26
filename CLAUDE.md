@@ -212,8 +212,11 @@ one pipeline at a time.
   `run_pipeline.py` aborts (non-zero) on its gates BEFORE writing `outputs/pipeline_output.json`, so
   a before/after diff then compares the baseline against *itself* and reads byte-identical — a false
   pass (witnessed 2026-06-24: a `*/`-in-comment syntax error aborted the gate; the diff read
-  "identical" on a stale file). Confirm **exit 0 AND output mtime advanced** before trusting a
-  byte-identical pipeline diff. Detail: `swipl_load_path_and_probe_gotchas.md` §5.
+  "identical" on a stale file). Confirm **exit 0 AND output mtime advanced** before trusting it. The
+  diff is byte-identical only at `per_constraint` — the manifest re-stamps `pipeline_run_at` every
+  run, so a whole-file cross-run diff always differs even when behavior is preserved (normalize it, or
+  use a same-session clean-vs-edited diff, never a prior-run baseline). Detail:
+  `swipl_load_path_and_probe_gotchas.md` §5.
 - Prolog tests (corpus validation): `cd prolog && swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t "halt(1)"`
 - Prolog unit tests (engine): `cd prolog && swipl -g "[stack], [tests/test_snapshot_migration], run_tests, halt" -t "halt(1)"` — substitute any file in `prolog/tests/` (except `test_battery_variants.pl`, a variant harness, not a plunit test)
 - Stack consistency check (OQ-57-class wrong-qualifier detection): `cd prolog && swipl -l check_stack.pl -g "run_check_stack, halt" -t "halt(1)"` — compare against the recorded baseline (KNOWN_STATE.md 2026-06-04); new findings are regressions. Not a pipeline gate while the baseline is non-empty.

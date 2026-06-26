@@ -127,6 +127,17 @@ still returns a plausible value (the session-scope version of §2's trap).
   `per_constraint` (witnessed 2026-06-03: 0/1107 rows differ). Use this as the attribution
   probe: if old-vs-new differs but new-vs-rerun doesn't, the drift is a real effect of your
   change, not noise.
+- **The complement: a behavior-PRESERVING change never reads byte-identical whole-file — the manifest
+  defeats it.** `inject_manifest` stamps `pipeline_run_at` (and flips `code_dirty` on any uncommitted
+  edit) every run, so a whole-file SHA/diff across two runs ALWAYS differs even when nothing behavioral
+  changed (witnessed 2026-06-25, OQ-18: clean and edited runs differed *only* in `pipeline_run_at`).
+  `outputs/` is gitignored, so you cannot diff against a committed baseline, and a baseline from a
+  PRIOR run is not a valid comparand (its timestamp/commit differ for reasons unrelated to your
+  change). To prove an uncommitted change is behavior-preserving, use **same-session clean-vs-edited**:
+  `git show HEAD:path > path` (or move the edit aside) → run → capture; restore the edit → run →
+  capture; diff the two with `pipeline_run_at` normalized, or diff `per_constraint` only (the manifest
+  does not touch it). This is the symmetric twin of the next bullet's false-PASS: there a real change
+  reads identical (stale file); here a behavior-preserving change reads different (live manifest).
 - **The diff is only valid if the run REWROTE the file — the aborted-gate stale-output false pass.**
   `run_pipeline.py` runs its gates (load-warning gate, ISSUES status-grammar gate) and aborts
   *non-zero BEFORE* the json write. On an abort, `outputs/pipeline_output.json` keeps its PRIOR
@@ -295,3 +306,32 @@ changing, not a homonym. The wellformed/positive-control test that pins the term
 (`tests/test_cs_kernel_registry.pl` `compare_profile_verdicts_wellformed`) must move to the new
 arity in lockstep, or it's the first thing that goes red — which here is the *good* case, the loud
 one.
+
+## 11. Querying a CLASSIFICATION predicate with the key UNBOUND returns a false empty set
+
+`drl_core:dr_type(C, Ctx, _)`, and everything that wraps it (`cs_pattern_detection:cs_verdict(C, V)`,
+`drl_composition:classify_at_time/4`, the `transition_path`/`drift_event` clauses that gate on a
+type), **classify a bound `C` — they do not GENERATE constraints.** So a probe that leaves `C`
+unbound,
+
+```prolog
+findall(C, cs_pattern_detection:cs_verdict(C, scaffold_suppression_escalating), Cs).   % WRONG
+```
+
+backtracks into `dr_type(C, Ctx, scaffold)` with `C` a fresh variable, finds no solution, and returns
+`[]` — which reads exactly like "this verdict never fires / is dormant." This is the Pattern-5 spine
+(absence presents as presence) at the query level: the empty result is a fact about your *binding*,
+not about the corpus. Always bind the key from the authoritative membership first:
+
+```prolog
+findall(C, ( corpus_loader:corpus_constraint(C),
+             cs_pattern_detection:cs_verdict(C, scaffold_suppression_escalating) ), Cs).   % RIGHT
+```
+
+This is the silent failure mode behind CLAUDE.md's "enumerate `corpus_constraint/1` in probes" rule —
+stated here as the concrete trap. **Positive control for any "verdict X never fires / is dormant"
+claim:** count some *other* verdict on the identical query shape; if that is also `0`, your query is
+dead, not the verdict. **Witnessed (OQ-18 probe, 2026-06-25):** `cs_verdict(C, scaffold_suppression_escalating)`
+unbound returned `0` (read as dormant); bound from `corpus_constraint/1` returned `14` on `testsets`
+(52 on `testsets_haiku`, 43 on `testsets_flash`) — a false-dormancy conclusion that a one-line
+positive-control count reversed.
