@@ -1046,6 +1046,45 @@ convergence-softening, not signal (the operator's `[EDGE]` call). Worked instanc
 
 ---
 
+## Shuffle-test / permutation-null discipline (the control's precision must match what it gates)
+
+A permutation null ("real structure beats shuffled structure") is an absence claim about the
+*shuffle* — worthless until the shuffle is shown to *destroy*. OQ-182's C-null (the HAC
+family-meaning gate, `audits/2026-06-25_oq182_trajectory_revive/`) added four rules to the
+positive-control discipline above, each a place a clean-looking null lies:
+
+- **Match the control's precision to what it gates.** A single shuffle draw is the *same epistemic
+  object* as one null draw — it can land high by luck. So do not gate a precise N-draw null with one
+  fragile draw: read the stochastic control off *the distribution you are already computing* (the
+  teeth-witness `null median < real` over all N draws), and print it *before* the percentile verdict
+  to keep control-first. A deterministic control (identity → byte-equal partition) is correctly a
+  single draw; a stochastic one never is.
+- **The positive control must distinguish the *destroying* shuffle from a *toothless* one, and that
+  distinction appears only under re-clustering.** The intended (per-component-independent) shuffle
+  breaks cross-component co-occurrence; a *joint* shuffle merely relabels intact vectors and
+  re-clusters to the same partition (silhouette unchanged) — a false PASS. Scoring the *real*
+  partition under shuffled distances collapses for *both* shuffles, so it cannot tell them apart;
+  only **re-clustering** each shuffle shows per-component-collapses-while-joint-holds. And the
+  threshold quantile must be computed over the *destroying* draws, never the toothless ones, or the
+  whole threshold inherits the toothless null one level up.
+- **A correction that ADDS a code path is the least-witnessed surface — the control suite predates
+  it.** The C-null harness's surgery-map correction introduced `make_groups` (re-derives the shift
+  pre-grouping under σ); the end-to-end FIDELITY control, run at identity σ, is a *no-op on the
+  regrouping* and cannot see a `make_groups` that mis-keys under permutation. The added path needs
+  its own positive control at the point it must agree with what it replaced (`make_groups(identity)`
+  == engine `group_by_shift`). This is *an introduced instrument is itself a claim*, specialized: the
+  instrument is a corrected mechanism, and the existing suite was shaped for the old one.
+- **A FAIL must name which gate failed — same word, opposite next-actions.** Under a conjunctive
+  verdict (`real > P95` AND teeth-passed), a TEETH-fail (toothless null) means the *instrument is
+  void* — redesign, do not defer; a percentile-only fail (real signal, sub-threshold) means
+  *real-but-weak* — defer with the test named as the closer. A bare "FAIL" collapses "the test didn't
+  run validly" into "the thing isn't there."
+
+(Witnessed PASS, testsets/: real silhouette 0.161 vs null P95 −0.026, 0/200 draws reach real, +5.0σ;
+controls all pasted before the verdict. `c_null_harness.pl` + `c_null_results.log`.)
+
+---
+
 ## A gating count is not a finding without its composition (compute the breakdown in the SAME pass)
 
 A count that is about to gate a decision (a corpus build, a verdict, a "build vs don't") is **not a

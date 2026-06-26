@@ -5,6 +5,60 @@
 
 ---
 
+## 0. Current state — corpus reset, C-null validation, wiring gotchas (2026-06-25, OQ-182)
+
+**The §4 Validation numbers below are kernel_v1-era and STALE for citation.** The live corpus was
+reset 2026-06-05 (de-leak rebuild); §4's "1021 trajectories / 26 families / 75,129 twins / Family
+A/B (`decentralized_infrastructure_rope`, …)" were measured on a kernel_v1 ancestor and survive
+below only as history. Current **testsets/** leg: 104 `corpus_constraint` → **97 trajectories → 11
+families** (sizes `[1,2,3,4,4,8,8,9,13,21,24]`, 1 singleton). Cite the manifest/run, never these
+frozen figures.
+
+**C-null PASS — families are validated MEANING-bearing (not merely stable).** OQ-182 added the
+scope-setter the original build never ran: a per-component-independent permutation null over the
+silhouette statistic. C1 (non-degenerate sizes) + C3 (determinism + reorder-invariance) establish
+only *stability* — a fixed-seed clustering of pure noise clears them; **C-null is the gate that
+separates "stable function of the data" from "real structure."** Witnessed (testsets/): real
+silhouette **0.161** > null **P95 −0.026** over 200 destroying-shuffle draws, **0/200** reach real,
+teeth gap **+5.0σ**; reproducible under seed `20260625` (SWI 9.2.9). Harness + protocol + erratum:
+`audits/2026-06-25_oq182_trajectory_revive/` (`c_null_harness.pl`, `c_null_results.log`,
+`c_null_protocol_FROZEN.md`). Methodology promoted to `docs/technical/build_discipline.md` →
+*Shuffle-test / permutation-null discipline*.
+
+**The gate is STILL `trajectory_enabled=0` — the subsystem is validated-but-not-live.** C0
+(commentary-only pipeline diff) and C-gen (cross-generation family recovery) and the Step-4 gate
+flip remain. Do not describe trajectory as live.
+
+**FAMILIES and TWINS are distinct products; the TWIN product is OPEN.** `cross_domain_twins/3` gates
+on `constraint_domain/2`, which is a **name-prefix heuristic** (the constraint id before the first
+`_`), NOT the authored `topic_domain` — 86/104 distinct on testsets, so the `D1 \= D2` gate is
+near-vacuous and the 448 "twins" are mostly same-family pairs with different first name-tokens. The
+twin product's meaning is OPEN (value deferred to the rebuild; ruling in
+`audits/2026-06-25_oq182_trajectory_revive/c2_domain_finding.md`). **Never cite a twin count as a
+finding.** (This is the §7-#1 limitation, now scoped: not "tunable," but unwitnessable on this
+substrate.)
+
+**Wiring gotchas (each a silent-bug source — read before modifying the subsystem):**
+- **`group_by_shift/2` recomputes the shift pre-grouping via `logical_fingerprint:fingerprint_shift(C)`
+  from the constraint IDENTITY, ignoring `trajectory_cached` entirely.** So you CANNOT override or
+  shuffle the shift pre-grouping by building a chimera `trajectory_cached` and re-running
+  `run_hierarchical_clustering/1` — the grouping stays pinned to the real shift boundaries. (This
+  invalidated the C-null protocol's original "chimera surgery map"; the harness builds the groups
+  itself via `make_groups`, keyed on `fingerprint_shift(C[σ(i)])`.)
+- **The 4 component distances (`shift/metric/stability/pathology_distance`) each take WHOLE
+  trajectories and read only their own fields** (shift=Point types; metric=Point chi/entropy/conf;
+  stability=Summary preservation/coupling/purity/boltzmann; pathology=Summary
+  signature/drift/voids/severity). So a per-component recombination is just calling each predicate on
+  *different source trajectories* — no term surgery needed.
+- **`get_pair_dist/3` silently returns `1.0` for a missing pair** — any overlay/recompute of
+  `pair_dist` must cover every intra-group pair or it corrupts distances silently.
+- **`trajectory_selftest/0` is STALE** — it hard-codes kernel_v1-era family names
+  (`decentralized_infrastructure_rope`, `moltbook_agent_theater`, …) and expects `>1000`
+  trajectories, so on testsets/ it WARNs/SKIPs rather than gates. Treat it as a smoke test, not a
+  validation gate, until the Step-4 extension.
+
+---
+
 ## 1. Files Modified / Created
 
 | File | Action | Purpose |
