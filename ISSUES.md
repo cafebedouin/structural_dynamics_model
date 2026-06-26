@@ -743,7 +743,7 @@ raw cell outputs in `outputs/oq20/` (gitignored, reproducible from pinned corpor
 
 ## OQ-21 — A12 multi-instance render branch never exercised on pipeline data
 
-**Status:** mitigated — (a) correctness RESOLVED: an executed positive control found and fixed a real defect (the "latest by `cs_created_at`" path was dead — `aggregate_all(max(T-U))` evaluated `T-U` arithmetically, threw on atom UIDs, was swallowed by `catch/3`, and always fell to the `@<` fallback). Dead clause removed; `@<` ruled canonical; pinned by `prolog/tests/test_a12_multi_instance_render.pl`. (b) pipeline-firing remains open, gated on a future multi-instance load. 2026-06-25.
+**Status:** mitigated — (a) correctness RESOLVED: an executed positive control found and fixed a real defect (the "latest by `cs_created_at`" path was dead — `aggregate_all(max(T-U))` evaluated `T-U` arithmetically, threw on atom UIDs, was swallowed by `catch/3`, and always fell to the `@<` fallback). Dead clause removed; `@<` ruled canonical; pinned by `prolog/tests/test_a12_multi_instance_render.pl`. (b) CLOSED as a recorded design absence (2026-06-26): A12's render branch is correct (shipped test) but its trigger — shared-ε / multi-committer-UID replicate sets — has **no demonstrated populator** (stochastic generation yields conflicting-ε draws DP-001 rightly rejects); reopens only if an ε-canonicalizing-per-reading generation mode is named. 2026-06-26.
 **Priority:** 1
 **Origin:** UUID surrogate migration, May 2026.  
 **File:** `prolog/json_report.pl` (A12 per-constraint CS block,
@@ -829,6 +829,37 @@ it: the draws share a basename). Archives without the CS layer (`original_v6`/ex
 `testsets_3000`, `original_v5`, `testsets_sotu`) have 0 `cs_story_uid` and cannot fire
 it regardless. The multi-UID-per-name case is N parallel draws of one reading type —
 exactly the "parallel draws, not versions" the `@<` ruling rests on.
+
+**Closing (b) — the operative barrier is WITNESSED to be the module-collision, not a
+merge abstraction nor DP-001; A12's trigger has no populator (2026-06-26).** The prior
+"the gate is the MERGE MECHANISM" framing was directionally right but unwitnessed and
+under-specified; a session hypothesis that "DP-001 is the single-instance barrier" was
+*falsified* by running both. Two real `abolition_reading` draws (ε=0.88 and ε=0.68, from
+`archives/datasets/kernel_test/{,kernel_run_02/}abolition_reading.pl`) co-loaded through
+`corpus_loader`:
+  - **The operative single-instance barrier is the per-story `:- module(constraint_<name>,[])`
+    collision.** With both files carrying the same module declaration, the second file throws
+    `permission_error(redefine,module,constraint_abolition_reading)`, is SKIPPED by
+    `load_testset_list`, and the load survives: **1 testset loaded, only ε=0.88 present, one
+    `corpus_constraint`, DP-001 silent, exit 0.** The collision — not DP-001 — is what keeps any
+    single flat `corpus_path` load single-instance-per-name.
+  - **DP-001 is the correct *complementary* backstop on the observer axis, not an obstacle.**
+    Renaming only the second file's module (`constraint_abolition_reading_b`) so both files
+    actually load yields a fact-level chimera; DP-001 fires exactly as designed:
+    `CS ERROR (OQ-25): reading abolition_reading has conflicting ε values [0.68,0.88] … chimera
+    load detected`, **exit 1**. A12 (committer multi-UID) and DP-001 (observer one-ε) are the two
+    halves of the intended two-axis model, not a tension.
+  - **No populator exists for A12's trigger.** A legitimate multi-instance set (one name → N UIDs)
+    requires **shared-ε, committer-varied** draws; stochastic generation gives each draw a
+    *different* ε (OQ-26 / Axiom 2), i.e. exactly the conflicting-ε chimera DP-001 rejects. So (b)
+    is not a pending witness — it is a **declared design absence**: the branch is correct code for
+    a load the discipline does not produce.
+  - **Reopen condition.** A generation mode that *canonicalizes ε per reading* (making committer
+    variation the only multi-instance axis) would produce the shared-ε replicate set A12 needs.
+    The operator flagged that reproduced kernels exist / could be made. If such a populator is
+    named, OQ-21(b) reopens and Option 2 (replicate multi-instance loader — UUID-ending-key
+    filenames + decouple `register_corpus_constraint` from the basename + per-name-ε handling)
+    becomes the build. Witnesses pasted in KNOWN_STATE 2026-06-26 (correction-key entry).
 
 ---
 

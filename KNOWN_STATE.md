@@ -45,6 +45,55 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-26 — OQ-21(b) CLOSED as a recorded design absence: the single-instance barrier is the module-collision, not DP-001
+**Files:** ISSUES.md, prolog/corpus_loader.pl, prolog/config_validation.pl, prolog/json_report.pl
+**Tier:** correction-key
+
+Corrects two prior framings of OQ-21(b) ("does A12's multi-instance render branch fire on
+real pipeline data?"). The committed "the gate is the MERGE MECHANISM, not the data" framing
+(2026-06-26) was directionally right but unwitnessed and under-specified; a session-internal
+hypothesis that **DP-001 is the single-instance barrier was falsified by running it**. Two
+real `abolition_reading` draws (ε=0.88, ε=0.68) from
+`archives/datasets/kernel_test/abolition_reading.pl` and
+`archives/datasets/kernel_test/kernel_run_02/abolition_reading.pl`, co-loaded through
+`corpus_loader` with `corpus_path` overlaid at a scratch dir:
+
+**Witness 1 — the operative single-instance barrier is the per-story
+`:- module(constraint_<name>,[])` collision (load survives, exit 0).** Both files carrying the
+same module declaration → the second throws on consult and is silently dropped; only one ε loads:
+
+```
+[corpus] Loading 2 testset files...
+[corpus] WARNING: Failed to load …/abolition_reading_b.pl: error(permission_error(redefine,module,constraint_abolition_reading),context(module/2,…))
+[corpus] SKIPPED: …/abolition_reading_b.pl
+[corpus] Loaded 1 testsets successfully.
+[witness1] abolition_reading epsilon values loaded: [0.88]
+[witness1] corpus_constraint ids: [abolition_reading]
+=== EXIT CODE: 0 ===
+(no config_violations.log written)        % DP-001 did NOT fire
+```
+
+**Witness 2 — DP-001 is the correct *complementary* observer-axis backstop (exit 1).** Renaming
+only the second file's module (`constraint_abolition_reading_b`) so both files actually load
+produces a fact-level chimera; DP-001 fires as designed:
+
+```
+[corpus] Loaded 2 testsets successfully.
+ERROR: CS ERROR (OQ-25): reading abolition_reading has conflicting ε values [0.68,0.88] (must be single-valued per reading — DP-001); chimera load detected — see docs/cs_load_discipline.md
+1 config violation(s) after corpus load. See config_violations.log. Halting.
+=== EXIT CODE: 1 ===
+```
+
+**Close.** A12 (committer multi-UID render) and DP-001 (observer one-ε seal) are the two halves
+of the intended two-axis model, not a tension. A12's render branch is **correct** (shipped test
+`prolog/tests/test_a12_multi_instance_render.pl`), but its trigger — a shared-ε, committer-varied
+replicate set (one name → N UIDs, one ε) — **has no demonstrated populator**: stochastic
+generation gives each draw a *different* ε (OQ-26 / Axiom 2), i.e. exactly the conflicting-ε
+chimera DP-001 rejects. So (b) is a **declared design absence**, not a pending witness.
+**Reopen condition:** a generation mode that canonicalizes ε per reading (committer variation as
+the only multi-instance axis) would produce the set A12 needs; if such a populator is named,
+OQ-21(b) reopens and Option 2 (replicate multi-instance loader) becomes the build. No code change.
+
 ## 2026-06-25 — OQ-21(a) RESOLVED: A12 multi-instance selector — dead recency clause fixed, @< pinned
 **Files:** prolog/json_report.pl, prolog/tests/test_a12_multi_instance_render.pl, ISSUES.md
 **Tier:** landed
