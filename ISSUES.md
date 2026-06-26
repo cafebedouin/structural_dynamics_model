@@ -813,6 +813,23 @@ fire on real pipeline data — remains open**, gated on a future multi-instance 
 "natural unblock" pointer to OQ-17 (`testsets_3000` wiring) is stale — OQ-17 is
 `disposed` (that corpus was archived 2026-06-05); (b) has no active gating OQ today.
 
+**The colliding DATA already exists; the gate is the MERGE MECHANISM, not the data
+(2026-06-26).** The same reading name drawn across runs is precisely why the
+`cs_story_uid` UUID layer was introduced — `(kernel_id, reading_name)` is a *type
+label, not a key*, and the UUID is the per-draw surrogate. The pre-reset multi-run
+archives carry real collisions (e.g. `archives/datasets/kernel_test/`: 147 names
+appearing in `kernel_run_01/02/03` with distinct UIDs; `abolition_reading.pl` lives
+in two run-dirs). But name == filename and `corpus_loader` globs ONE dir
+non-recursively, so any single flat `corpus_path` load collapses each name to one
+file = one UID (witnessed: every live CS-layer corpus is single-instance-per-name —
+`testsets/` 81/81, `testsets_haiku` & `testsets_flash` 960 facts / 0 collisions each,
+`kernel_v1` 906/0). Firing A12 needs co-loading multiple draws of one name into a
+single image — a multi-run merge the loader structurally lacks (flattening can't do
+it: the draws share a basename). Archives without the CS layer (`original_v6`/ex-
+`testsets_3000`, `original_v5`, `testsets_sotu`) have 0 `cs_story_uid` and cannot fire
+it regardless. The multi-UID-per-name case is N parallel draws of one reading type —
+exactly the "parallel draws, not versions" the `@<` ruling rests on.
+
 ---
 
 ## OQ-22 — Hub 1 / Hub 2 fall-through behavior at threshold starvation
