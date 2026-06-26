@@ -7173,6 +7173,16 @@ claim (signature prevalence is bait-confounded). Open question: which authored f
 fork (extractiveness magnitude? the CI-rope gate inputs?), and is the lean a stable model
 fingerprint (re-test on a third model / a fresh twin draw). Cross-ref OQ-70.
 
+**Instance (essay-review triage 2026-06-26, `moral_causation_locus` twin).** The
+dispositional/situational reading pair both carry `structural_signature:
+constructed_high_extraction` at borderline confidence (~0.0097) with
+`override_mismatch(constructed_high_extraction, snare)` — a witnessed case of the haiku-side
+extraction lean firing uniformly at near-zero confidence (the reviewer also reports
+F006 / coordination_washing / T1–T6 uniform; signature + confidence witnessed here, the T-code
+detail not re-verified). Reinforces the "detector disposed to produce extraction" reading; the
+uniform institutional=rope "convergence" the report reads as coordination is partly a config
+artifact — see OQ-188. Reports: `outputs/constraint_reports/{dispositional,situational}_reading_report.{md,json}`.
+
 **Origin:** 2026-06-13 twin-comparison audit (FINDINGS.md "model-characteristic signature lean";
 RESULTS.md `signature` disparity exemplars).
 
@@ -9670,7 +9680,58 @@ loaded-but-non-executing Pattern-2 fork (all 4 call sites dead) — log-only, de
 
 ---
 
-*Last updated: 2026-06-25. Add new items with sequential OQ-NN labels. Mark
+## OQ-186 — Contamination-network convergence does not distinguish independent constraints from common-cause re-descriptions: a clique of co-authored slices reads as mutual corroboration
+
+**Ω-type:** Ω_C (design choice — what an independence/common-cause caveat on convergence should be, and where it lands). The empirical leg (does the machinery in fact ignore node independence?) is Ω_E, witnessable by the positive control below.
+
+**Status:** open
+**Priority:** 2
+**Origin:** essay-review triage 2026-06-26 (gray_divorce draft, comment #5). Sibling of the contamination-edge work OQ-103 (salience floor) / OQ-174 (cs-edge shared-input) — both addressed edge STRENGTH and PROVENANCE; neither addresses node INDEPENDENCE.
+**File:** `prolog/drl_purity_network.pl` (`constraint_neighbors/3`, contamination cascade); `prolog/json_report.pl` (`write_contamination_network`); read site `python/tensions_ledger.py` / `python/enhanced_report.py`.
+
+**Specific question.** When several constraints in one topic are re-descriptions of a single underlying fact (the reviewer's instance: "gray divorce costs the lower-earning spouse," sliced into ~four extractive constraints — third-act, gendered-outcome, etc.), the contamination network builds edges among them (`shared_beneficiary`/`shared_victim`/`inferred_coupling`) and the resulting clique reads as convergence — i.e. as mutual corroboration. But N descriptions of one common cause agreeing is NOT N independent witnesses. The machinery has no notion of node independence: it cannot tell a clique of co-authored slices from a clique of genuinely distinct constraints that happen to point the same way. Decision: should convergence carry a common-cause / independence caveat to the read site (cf. OQ-108's witness-coverage pattern — carry the provenance bit, do not collapse), and if so what is the discriminator?
+
+**Evidence so far (review-raised, UNWITNESSED on substrate).** The gray_divorce instance is the reviewer's read, not yet a run. **Graduation / positive control (riskiest-shape test):** construct two synthetic topics — (A) N constraints that are deliberate slices of one authored fact (shared victim+beneficiary, near-duplicate ε), (B) N constraints with genuinely distinct victims/beneficiaries that nonetheless type extractive — run both through `constraint_neighbors/3` and confirm the network/convergence read treats A and B identically (the defect) vs differently (no defect). Only the run licenses "the machinery ignores independence." Cross-refs: OQ-103, OQ-174, OQ-101 (synthesis-read enforcement).
+
+**What resolution changes.** Either (a) the read site gains an independence/common-cause caveat so a co-authored clique stops reading as corroboration, (b) the discriminator is ruled un-computable from authored fields and the caveat becomes a synthesis-checklist item (OQ-101 family), or (c) the run shows the machinery already separates A from B and the concern is essay-side only. Bears directly on any essay that cites contamination convergence as evidence.
+
+**Witnessed instance (2026-06-26).** The `moral_causation_locus` reports' `convergent_institutional` reasoning (`outputs/constraint_reports/dispositional_reading_report.md:396,428`) rules a coordinated-cartel reading on the grounds that all readings "share the same institutional observer type [rope] … indicating coordinated rather than independent operation." But that uniform institutional=rope is a generic consequence of low-d institutional seats sitting below the f(d) root (**OQ-188**), not coordination — a concrete case of convergence-as-config-artifact, distinct from the shared-agent-edge route. Two independent artifact channels now feed the false-cartel read.
+
+---
+
+## OQ-187 — A directional extraction verdict (RED, extraction-masked-as-rope) may headline a contestable moral direction as seat-free: is verdict directionality surfaced as a declared, seat-indexed premise?
+
+**Ω-type:** Ω_C (a reporting surface, like OQ-108) over an Ω_P core (the moral direction of a RED extraction verdict is a declared, contestable premise — trap vs cost-of-freedom — on which the engine should abstain, not self-certify; CLAUDE.md orientation-gloss / contested-origin rule).
+
+**Status:** open
+**Priority:** 3
+**Origin:** essay-review triage 2026-06-26 (gray_divorce draft, comment #4). Filed into the OQ-108/OQ-102 read-site family so it gets checked when that surface is next touched.
+**File:** read sites `python/tensions_ledger.py` / `python/enhanced_report.py`; verdict join `prolog/diagnostic_summary.pl` (`verdict_join/3`); cf. authored-vs-measured basis spine OQ-102(a).
+
+**Specific question (a one-output check).** The engine reads women's-financial-autonomy / the 41% income drop as extraction-masked-as-rope and emits a RED verdict. The inverse reading — the income drop is the freely-chosen price of exit, and naming it "extraction" re-imposes the paternalist frame — is equally licensed, and the engine's own resolution scenario raises it. The directionality is therefore a contested origin (Ω_P), not a result. Check: does the output MARK the verdict's moral direction as seat-indexed / authored-not-measured (the way OQ-108 marks `powerless=0` as inference-only and OQ-102 joins `confidence: low` to "critical"), or does it headline RED as if seat-free? If marked → essay-side over-read only. If unmarked → small read-site surface to add a directionality caveat, in the OQ-108/OQ-102 idiom.
+
+**Graduation.** Pull the gray_divorce constraint's serialized verdict surface and inspect whether the RED directionality carries a seat / contestable-premise tag. Downstream of OQ-102(a) (the direction was authored into ε/victim/beneficiary, not measured), so the caveat may reduce to surfacing the `basis=projected` bit at the verdict altitude. Cross-refs: OQ-102, OQ-108, OQ-56 (Ω_P seat declaration).
+
+---
+
+## OQ-188 — Low-d institutional seats sit just below the f(d) sign-change root, so the OQ-01 rope-gate bypass that makes them "see rope" is knife-edge on an authored stakeholder-role choice
+
+**Ω-type:** Ω_C (read-site surface — whether root-proximity is flagged where a classification is read) over a witnessed Ω_E core (the straddle below is computed, not argued).
+
+**Status:** open
+**Priority:** 2
+**Origin:** essay-review triage 2026-06-26 (`moral_causation_locus` twin; the reviewer's "softest load-bearing spot"). The graduation question raised at the OQ-187 filing (canonical-config vs story-authored `d`) is settled empirically here.
+**File:** `prolog/config.pl` (`canonical_d_institutional` :144, `stakeholder_role_d_*` :156–160, sigmoid params :130–133); χ path `prolog/drl_core.pl` / `prolog/drl_composition.pl`; rope-gate bypass (OQ-01); read sites `python/enhanced_report.py` / `python/tensions_ledger.py`.
+
+**The witnessed mechanism.** f(d) (sigmoid L=−0.20, U=1.50, d0=0.50, k=6.00) changes sign at **d=0.1642**. In `outputs/constraint_reports/dispositional_reading_report.md:80,243` the institutional seat sits at **d=0.120** — which is `stakeholder_role_d_agenda_setter` (a config constant **selected by an authored role**, NOT the canonical institutional fallback 0.00) — giving f=−0.042 → χ = 0.68 × −0.042 = **−0.029**. χ ≤ 0 trips the rope-gate bypass (OQ-01); that bypass IS "institution sees rope." The two commonest institutional roles **straddle the root**: agenda_setter d=0.12 → f=−0.042 (rope) vs beneficiary d=0.25 → f=+0.110 → χ=+0.075 (**not** rope). A SINGLE authored role change crosses the root and flips the institutional verdict. The report's own decomposition confirms f(d) is **101.2%** of cross-seat χ variance (ε constant 0.68 contributes ~0) — which is *why* root-proximity is load-bearing. Witness: config greps + `python3` sigmoid root/straddle computation (conversation 2026-06-26); report lines cited.
+
+**Scope (graduation question answered): SYSTEMIC, with a story-level trigger.** The role→d mapping is a config constant, so ANY story authoring an institutional `agenda_setter` lands at d=0.12, generically ~0.044 below the root — institutional-seat rope verdicts are knife-edge corpus-wide, not a one-twin fluke. The trigger is which role got authored. Direction matters: moving toward canonical 0.00 makes it MORE robustly rope (f=−0.119); the flip requires moving UP past 0.164. The lever is the DISCRETE authored role, not a continuous "nudge the observer."
+
+**Specific question / what resolution changes.** Should a read site flag when a seat's classification rests within ε of the f(d) root (so an authored-d-fragile verdict stops reading as solid), and/or should the agenda_setter/beneficiary straddle of the root carry a config note? Bears on every essay leaning on an institutional rope / extraction-blindness result, and partly explains the "uniform institutional=rope convergence" that reports read as coordination (OQ-186) — that uniformity is a generic consequence of this mechanism, not a cartel. Cross-refs: OQ-01 (the bypass), OQ-78 (f(d) dominates variance), OQ-123 (seat model-sensitivity), OQ-186 (convergence-as-artifact).
+
+---
+
+*Last updated: 2026-06-26. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
