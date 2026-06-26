@@ -2648,6 +2648,27 @@ leg = (a)-for-json_report (witnessed).
 `outputs/{reading,kernel}_orbits.json`; OQ-55 (`cs_trifurcation.pl`);
 `audits/2026-06-20_kernel_reading_orbits/`; KNOWN_STATE 2026-06-20; orbit canonical-fact commit (this session).
 
+**Addendum (2026-06-26) — the RESERVED semantic-stance transpose is now built, with its
+model-relativity surfaced (not claimed away).** The 2026-06-20 close ran the transpose on the
+draw-robust *observer-signature* key and explicitly RESERVED the semantic-stance/seat-role
+transpose as "model-relative only." That reserved surface is now built as a GAP-04 increment:
+`cs_kernel_registry:cross_kernel_stance_profile/2` (+ `reading_stance/2`, `stance_cohort/2` over
+the `declared_stance/2` seat) holds a declared reading-STANCE fixed and sweeps it across kernels,
+keyed on the kernel-independent `logical_fingerprint:fingerprint_shift/2` (now serialized into
+`pipeline_output.json`). Consumer: `python/cross_kernel_stance_report.py` →
+`outputs/cross_kernel_stance.{json,md}` over the live twins. It does NOT violate the model-relativity
+ruling — it READS the result as a σ/seat partition (draw-stable vs draw-variant), not a fixed label,
+and surfaces it: abolition converges on `shift(*,snare,rope,snare)` 5/7 on BOTH twins (draw-stable),
+deterrence flips convergent(haiku 4/1)↔divergent(flash 2/3) (draw-variant), originalist is
+kernel-divergent. The cohort is a DECLARED seat (Seat-Theorem Cor 2b): morphology only suggests
+candidates (witnessed: exact-stem catches 4/7 of the abolition cohort; a substring rule over-admits
+the anti-abolition `dharmasastra_corpus__abolitionist_rejection`), so each member + the verdict carry
+morphology-suggested-vs-hand-declared provenance. **Remaining under GAP-04/here:** kernel as a
+first-class queryable object, the kernel-fixed↔transpose pair as a formal paired operation, and the
+FULL curated stance vocabulary (this increment seeds an initial declared table for the exercised
+stances only). Pins: `prolog/tests/test_cs_kernel_registry.pl` (transpose_* consensus-spine tests);
+KNOWN_STATE 2026-06-26.
+
 ---
 
 ## OQ-54 — The reading axis has no cross-index gluing test; how to operationalize it (and keep it distinct from observer Boltzmann)

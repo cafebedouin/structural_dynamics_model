@@ -289,6 +289,22 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     write_json_string(S, Sig),
     format(S, ',~n', []),
 
+    % fingerprint_shift (OQ-53/GAP-04): the kernel-independent 4-seat classification
+    % vector [powerless, moderate, institutional, analytical]. This is the structural
+    % signature the cross-kernel stance transpose reads (cross_kernel_stance_report.py)
+    % so the consumer never recomputes classify_at_power. null if uncomputable;
+    % element atoms may be "unknown" (a seat the engine abstains on — OQ-51 N/A).
+    (   catch(logical_fingerprint:fingerprint_shift(C, shift(FsP, FsM, FsI, FsA)), _, fail)
+    ->  FsList = [FsP, FsM, FsI, FsA]
+    ;   FsList = null
+    ),
+    format(S, '      "fingerprint_shift": ', []),
+    (   FsList == null
+    ->  format(S, 'null', [])
+    ;   write_json_string_array(S, FsList)
+    ),
+    format(S, ',~n', []),
+
     % purity_score + purity_band
     (   catch(purity_scoring:purity_score(C, PScore), _, fail),
         PScore \= -1.0

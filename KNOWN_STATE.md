@@ -45,6 +45,47 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-26 — GAP-04/OQ-53 increment: cross-kernel reading-stance transpose (fingerprint_shift spine)
+**Files:** prolog/cs_kernel_registry.pl, prolog/json_report.pl, python/cross_kernel_stance_report.py, prolog/tests/test_cs_kernel_registry.pl, docs/design/design_gaps.md, ISSUES.md
+**Tier:** landed
+
+Built the **reading-stance transpose** GAP-04 names absent and OQ-53's 2026-06-20 close RESERVED
+(it shipped the draw-robust *observer-signature* orbit and explicitly deferred the semantic-stance
+one as "model-relative only"). New in `cs_kernel_registry.pl`:
+- `declared_stance/2` — THE SEAT (hand-declared cohort table; initial, for the exercised stances).
+- `reading_stance/2` — authority = declared only (morphology is never a query-time fallback).
+- `stance_cohort/2` — readings of a stance across kernels (transpose of `cs_readings_for_kernel/2`).
+- `cross_kernel_stance_profile/2` — gathers each member's `(kernel, fingerprint_shift)`, derives a
+  per-position majority **consensus** pattern (`$wild` = no majority), partitions convergent vs
+  divergent, and reports the verdict WITH cohort provenance (morphology-suggested vs hand-declared).
+- `cross_kernel_stance_report/0` + `cross_kernel_stance_export/1` (JSON).
+
+`json_report.pl` now serializes `fingerprint_shift` per `per_constraint` entry (was absent: grep=0
+pre-change; 104 entries post-run, pipeline exit 0 + mtime advanced) so the Python consumer reads
+COMPUTED shifts, never recomputing `classify_at_power`. Consumer
+`python/cross_kernel_stance_report.py` runs the transpose over both live twins →
+`outputs/cross_kernel_stance.{json,md}`.
+
+**Why the cohort is DECLARED, not derived (Seat-Theorem Cor 2b).** Morphology is unreliable both
+ways, witnessed on the 7-member abolition cohort: an exact-stem rule (stem `abolitionist`) catches
+only **4/7** (the stems fragment to {abolitionist, abolition, categorical_abolition,
+abolitionist_rejection}); a substring rule over-admits `dharmasastra_corpus__abolitionist_rejection`
+— a *rejection* of abolitionism. So a human curates `declared_stance/2`; the profile carries each
+member's provenance and the verdict inherits it.
+
+**Witnessed results (both twins).** abolition → convergent on `shift(*,snare,rope,snare)` **5/7 on
+BOTH twins** (draw-stable / situation-fixed); the 2 outliers are genuine structural divergences (one
+of them, `animal_status__abolitionist_reading`, is morphology-*suggested* yet structurally divergent
+— morphology ≠ structure). deterrence flips convergent(haiku 4/1)↔divergent(flash 2/3) — draw-variant
+/ seat-expressive. originalist is kernel-divergent (5/11). property has no shared signature. Read the
+convergent/divergent split as a σ/seat partition, NOT a fixed label (determinism frontier).
+
+Pinned by `prolog/tests/test_cs_kernel_registry.pl` (5 new corpus-free `transpose_*` tests on the
+consensus spine — robust where the file's divergence cases are snapshot-fragile). NOTE: the
+pre-existing `divergence_silent_at_observed_agreement_context` failure (19→24 of 25 pass) is the
+documented archive-draw data-fragility, NOT caused by this change (the edit is purely additive; the
+`cs_kernel_divergence/4` body is untouched). Provenance: ISSUES.md OQ-53 addendum, GAP-04 status.
+
 ## 2026-06-26 — OQ-21(b) CLOSED as a recorded design absence: the single-instance barrier is the module-collision, not DP-001
 **Files:** ISSUES.md, prolog/corpus_loader.pl, prolog/config_validation.pl, prolog/json_report.pl
 **Tier:** correction-key

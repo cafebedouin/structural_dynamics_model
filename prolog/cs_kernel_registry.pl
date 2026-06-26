@@ -37,12 +37,22 @@
     cs_kernel_obstruction/4,
     cs_kernel_obstruction_status/2,
     cs_kernel_obstruction_report/0,
-    cs_reading_relation_unresolved/4
+    cs_reading_relation_unresolved/4,
+    % Cross-kernel reading-stance transpose (GAP-04/OQ-53 increment)
+    declared_stance/2,
+    reading_stance/2,
+    stance_cohort/2,
+    stance_member_provenance/3,
+    cross_kernel_stance_profile/2,
+    cross_kernel_stance_report/0,
+    cross_kernel_stance_export/1
 ]).
 
 :- use_module(narrative_ontology).
 :- use_module(drl_composition).
 :- use_module(constraint_indexing).
+:- use_module(library(lists)).
+:- use_module(library(http/json)).
 
 % Declare cs_kernel_id/2 multifile in narrative_ontology so testsets can extend it.
 :- multifile narrative_ontology:cs_kernel_id/2.
@@ -345,3 +355,329 @@ cs_reading_relation_unresolved(K, SrcC, T, Rel) :-
     cs_readings_for_kernel(K, Pairs),
     \+ memberchk(_-T, Pairs),
     \+ ( atom_concat(K, '__', P), atom_concat(P, T, Canon), memberchk(_-Canon, Pairs) ).
+
+% ============================================================================
+% CROSS-KERNEL READING-STANCE TRANSPOSE (GAP-04 / OQ-53, first increment)
+% ============================================================================
+% The within-kernel half above (cs_readings_for_kernel/2, cs_kernel_divergence/4,
+% compare_kernel_readings/3) holds a KERNEL fixed and sweeps its readings. This is
+% the TRANSPOSE: hold a reading STANCE fixed and sweep it ACROSS kernels, then
+% report whether the stance has a kernel-independent structural signature
+% (convergent) or is kernel-dependent (divergent — the analytical finding).
+%
+% DECLARED, NOT DERIVED (Seat-Theorem Cor 2b / GAP-04 / OQ-56 seat). The cohort is
+% the declared mapping declared_stance/2 — NOT a morphology rule. Morphology (a
+% shared name stem) is only a candidate-SUGGESTER for building that table, because
+% it is unreliable BOTH ways (witnessed on the testsets_haiku abolition cohort):
+%   (1) stems FRAGMENT: the 7 abolition readings strip to four stems
+%       {abolitionist, abolition, categorical_abolition, abolitionist_rejection},
+%       so an exact-stem rule catches only 4/7;
+%   (2) substring/kernel-name matches OVER-ADMIT:
+%       `dharmasastra_corpus__abolitionist_rejection` is a *rejection* of
+%       abolitionism (engages the stance, opposite valence), and the
+%       `cultural_property_legal_corpus__*` readings match "property" on the KERNEL
+%       name, not the reading stance.
+% So a human confirms/corrects the candidate list into declared_stance/2, and the
+% cross_kernel_stance_profile/2 verdict carries cohort PROVENANCE (morphology-
+% suggested vs hand-declared per member): if the cohort is partly curated,
+% "convergent" is partly a finding about which readings were admitted, not purely
+% about structure.
+%
+% The signature is logical_fingerprint:fingerprint_shift/2 (the kernel-independent
+% 4-seat classification vector [powerless, moderate, institutional, analytical]),
+% read as a σ/seat partition (draw-stable vs draw-variant), NOT a fixed label — the
+% same reading's shift varies by draw (determinism frontier, CLAUDE.md).
+%
+% NOTE (scope): this is an INITIAL declared seat for the stances the OQ-53 transpose
+% increment exercises, not the full curated stance vocabulary (that stays OQ-53).
+% ============================================================================
+
+%% declared_stance(?Reading, ?Stance)  — THE SEAT (hand-declared cohort table).
+%  Reading is the kernel-qualified constraint atom (== corpus_constraint id ==
+%  testset file base name). Stance is the declared stance label. Membership across
+%  kernels is the cross-kernel cohort. Provenance (which members a bare-stem rule
+%  would have suggested) is recovered mechanically by stance_member_provenance/3 —
+%  not stored here — so the declared table stays a clean seat.
+:- discontiguous declared_stance/2.
+
+% -- abolition (7): all four animal-rights/death-penalty/caste/NPT readings that
+%    engage the abolish-the-institution stance. dharmasastra_corpus__abolitionist_rejection
+%    is a CONTESTED inclusion (a rejection of abolitionism); declared in per the manual
+%    probe's 7-member cohort, and it surfaces in the transpose as a structural member to
+%    be judged on its shift, not its name.
+declared_stance(animal_moral_status__abolitionist_reading,        abolition).
+declared_stance(animal_status__abolitionist_reading,              abolition).
+declared_stance(animal_status_kernel__abolitionist_reading,       abolition).
+declared_stance(dharmasastra_corpus__abolitionist_rejection,      abolition).
+declared_stance(npt_article_iv_vi_pairing__abolitionist,          abolition).
+declared_stance(state_killing_authority__categorical_abolition,   abolition).
+declared_stance(state_execution_authority__abolition_reading,     abolition).
+
+% -- originalist (11): constitutional/legal-text originalist readings across kernels.
+declared_stance(all_men_created_equal__originalist_reading,                 originalist).
+declared_stance(commerce_clause_scope__narrow_originalist,                  originalist).
+declared_stance(commerce_clause_text__originalist_narrow_reading,           originalist).
+declared_stance(constitutional_text_authority__originalist_reading,         originalist).
+declared_stance(equality_clause_scope__restrictive_originalist,             originalist).
+declared_stance(magna_carta_clause_39__originalist_limitation_reading,      originalist).
+declared_stance(second_amendment_text__originalist_civic_virtue_reading,    originalist).
+declared_stance(us_constitution_1787__originalist_reading,                  originalist).
+declared_stance(us_constitution_interpretive__originalist_reading,          originalist).
+declared_stance(us_constitution_meaning__originalist_reading,               originalist).
+declared_stance(us_constitution_text__originalist_reading,                  originalist).
+
+% -- property (4): genuine property-RIGHTS-stance readings. The three
+%    `cultural_property_legal_corpus__*` readings are DELIBERATELY EXCLUDED: they match
+%    "property" on the KERNEL name only (their stances are stewardship/repatriation/
+%    heritage), the over-admission failure mode the declared seat exists to correct.
+declared_stance(animal_moral_status__property_reading,             property).
+declared_stance(animal_status__property_reading,                   property).
+declared_stance(software_control_legitimacy__property_rights_reading, property).
+declared_stance(software_source_status__property_rights_reading,   property).
+
+% -- welfare (4): welfare-stance readings across kernels.
+declared_stance(animal_moral_status__welfare_reading,              welfare).
+declared_stance(animal_status__welfare_reading,                    welfare).
+declared_stance(animal_status_kernel__welfare_reading,             welfare).
+declared_stance(federation_membership_kernel__welfare_coordination_reading, welfare).
+
+% -- deterrence (5): deterrence-stance readings across kernels.
+declared_stance(state_execution_authority__deterrence_reading,         deterrence).
+declared_stance(state_killing_authority__deterrence_instrument,        deterrence).
+declared_stance(state_killing_legitimacy__deterrence_reading,          deterrence).
+declared_stance(total_war_possibility_space__deterrence_equilibrium_reading, deterrence).
+declared_stance(war_winnability_post_1945__deterrence_unthinkable,      deterrence).
+
+%% stance_stem(?Stance, ?Stem)  — declared canonical morphological stem per stance.
+%  Used ONLY by the morphology candidate-suggester (provenance + catch-rate witness).
+stance_stem(abolition,   abolitionist).
+stance_stem(originalist, originalist).
+stance_stem(property,    property).
+stance_stem(welfare,     welfare).
+stance_stem(deterrence,  deterrence).
+
+%% reading_stance(+C, -Stance)  — the authority. Declared seat ONLY; morphology is
+%  never a query-time fallback (that would re-derive the cohort it must not derive).
+reading_stance(C, Stance) :- declared_stance(C, Stance).
+
+%% reading_local_stem(+C, -Stem)  — the reading's local name (the segment after the
+%  last '__' kernel prefix) with a trailing '_reading' stripped. Pure morphology.
+reading_local_stem(C, Stem) :-
+    atomic_list_concat(Parts, '__', C),
+    last(Parts, Local0),
+    ( atom_concat(Stem, '_reading', Local0) -> true ; Stem = Local0 ).
+
+%% stance_morphology_candidate(+Stance, -C)  — readings a bare exact-stem rule WOULD
+%  catch over the loaded corpus. The witness that morphology fragments/over-admits;
+%  feeds provenance, NOT the cohort.
+stance_morphology_candidate(Stance, C) :-
+    stance_stem(Stance, Stem),
+    corpus_loader:corpus_constraint(C),
+    reading_local_stem(C, Stem).
+
+%% stance_member_provenance(+C, +Stance, -Prov)  — morphology_suggested | hand_declared.
+%  morphology_suggested iff a bare exact-stem rule (the canonical stem) would have
+%  surfaced C; else the human had to hand-declare it (a fragment the stem rule missed).
+stance_member_provenance(C, Stance, morphology_suggested) :-
+    stance_morphology_candidate(Stance, C), !.
+stance_member_provenance(_, _, hand_declared).
+
+%% stance_cohort(+Stance, -Readings)  — sorted declared readings of Stance present in
+%  the loaded corpus (corpus_constraint denominator). TRANSPOSE of cs_readings_for_kernel/2.
+stance_cohort(Stance, Readings) :-
+    findall(C,
+            ( reading_stance(C, Stance),
+              corpus_loader:corpus_constraint(C) ),
+            Cs),
+    sort(Cs, Readings).
+
+%% cross_kernel_stance_profile(+Stance, -Profile)
+%  Profile = stance_profile(Stance, N,
+%               members([member_info(C, Kernel, Shift, Prov) ...]),
+%               consensus(ConsensusShift, NFixed),   % '$wild' = unconstrained position
+%               verdict(Label, Reason),              % convergent|divergent|undetermined
+%               convergent(NConv, ConvMembers),
+%               divergent(NDiv, DivMembers),         % the cross-kernel outliers
+%               provenance(NMorphologySuggested, NHandDeclared),
+%               histogram([Shift-Count ...]))        % exact-tuple histogram
+%  Shift is shift(P,M,I,A) or the atom no_shift (uncomputable — counts as divergent).
+cross_kernel_stance_profile(Stance, Profile) :-
+    stance_cohort(Stance, Readings),
+    findall(member_info(C, K, Shift, Prov),
+            ( member(C, Readings),
+              ( narrative_ontology:cs_kernel_id(C, K0) -> K = K0 ; K = no_kernel ),
+              ( catch(logical_fingerprint:fingerprint_shift(C, Sh), _, fail)
+                -> Shift = Sh ; Shift = no_shift ),
+              stance_member_provenance(C, Stance, Prov) ),
+            Members),
+    length(Members, N),
+    consensus_shift(Members, Consensus, NFixed),
+    % NFixed =:= 0 ⇒ no position holds a majority ⇒ the all-wildcard pattern matches
+    % everyone vacuously; that is NOT convergence. Report no convergent core so the
+    % counts align with the divergent/no_shared_signature verdict (Build-Discipline:
+    % an aggregate must not read success-shaped on an absence).
+    (   NFixed =:= 0
+    ->  Convergent = [], Divergent = Members
+    ;   partition_by_pattern(Members, Consensus, Convergent, Divergent)
+    ),
+    length(Convergent, NConv),
+    length(Divergent, NDiv),
+    stance_verdict(N, NFixed, NConv, Label, Reason),
+    aggregate_all(count,
+        member(member_info(_,_,_,morphology_suggested), Members), NMorph),
+    NHand is N - NMorph,
+    shift_histogram(Members, Hist),
+    Profile = stance_profile(Stance, N,
+                  members(Members),
+                  consensus(Consensus, NFixed),
+                  verdict(Label, Reason),
+                  convergent(NConv, Convergent),
+                  divergent(NDiv, Divergent),
+                  provenance(NMorph, NHand),
+                  histogram(Hist)).
+
+%% consensus_shift(+Members, -shift(P,M,I,A), -NFixed)
+%  Per position: the modal REAL (non-unknown) type IF it holds a strict majority of
+%  the cohort (2*count > N) and is the unique mode; else '$wild'. NFixed = #fixed.
+consensus_shift(Members, shift(P,M,I,A), NFixed) :-
+    length(Members, N),
+    position_consensus(Members, 1, N, P, F1),
+    position_consensus(Members, 2, N, M, F2),
+    position_consensus(Members, 3, N, I, F3),
+    position_consensus(Members, 4, N, A, F4),
+    NFixed is F1 + F2 + F3 + F4.
+
+position_consensus(Members, Pos, N, Type, Fixed) :-
+    findall(T,
+            ( member(member_info(_,_,Shift,_), Members),
+              Shift = shift(_,_,_,_),
+              arg(Pos, Shift, T),
+              T \== unknown ),
+            Ts),
+    ( modal_majority(Ts, N, Modal)
+    ->  Type = Modal, Fixed = 1
+    ;   Type = '$wild', Fixed = 0 ).
+
+%% modal_majority(+Types, +N, -Modal)  — unique strict-majority type, else fail.
+modal_majority(Ts, N, Modal) :-
+    Ts \= [],
+    msort(Ts, Sorted),
+    runs(Sorted, Counts),
+    findall(Cnt, member(_-Cnt, Counts), Cnts),
+    max_list(Cnts, Max),
+    findall(T, member(T-Max, Counts), Tops),
+    Tops = [Modal],
+    Max * 2 > N.
+
+%% partition_by_pattern(+Members, +Pattern, -Convergent, -Divergent)
+partition_by_pattern([], _, [], []).
+partition_by_pattern([Mi|Ms], Pattern, Conv, Div) :-
+    ( shift_matches_pattern(Mi, Pattern)
+    ->  Conv = [Mi|C1], Div = D1
+    ;   Conv = C1, Div = [Mi|D1] ),
+    partition_by_pattern(Ms, Pattern, C1, D1).
+
+shift_matches_pattern(member_info(_,_,Shift,_), shift(CP,CM,CI,CA)) :-
+    Shift = shift(P,M,I,A),
+    pos_match(CP,P), pos_match(CM,M), pos_match(CI,I), pos_match(CA,A).
+
+pos_match('$wild', _) :- !.
+pos_match(T, T).
+
+%% stance_verdict(+N, +NFixed, +NConv, -Label, -Reason)
+stance_verdict(N, NFixed, NConv, Label, Reason) :-
+    (   N < 2
+    ->  Label = undetermined, Reason = insufficient_cohort
+    ;   NFixed =:= 0
+    ->  Label = divergent,    Reason = no_shared_signature
+    ;   NConv * 2 > N
+    ->  Label = convergent,   Reason = majority_shares_consensus
+    ;   Label = divergent,    Reason = no_majority_on_consensus
+    ).
+
+%% shift_histogram(+Members, -[Shift-Count])  — exact-tuple histogram, sorted.
+shift_histogram(Members, Hist) :-
+    findall(Shift, member(member_info(_,_,Shift,_), Members), Shifts),
+    msort(Shifts, Sorted),
+    runs(Sorted, Hist).
+
+%% cross_kernel_stance_report  — human-readable witness over every declared stance
+%  with ≥1 member present in the loaded corpus.
+cross_kernel_stance_report :-
+    present_declared_stances(Stances),
+    format("== Cross-kernel stance transpose (~w stances present) ==~n", [Stances]),
+    forall(member(St, Stances),
+           ( cross_kernel_stance_profile(St, P),
+             P = stance_profile(_, N, members(_), consensus(Cons, NFixed),
+                                verdict(Label, Reason),
+                                convergent(NC, _), divergent(ND, Div),
+                                provenance(NM, NH), histogram(_)),
+             format("~n-- ~w  (N=~w; ~w morph-suggested, ~w hand-declared)~n",
+                    [St, N, NM, NH]),
+             format("   consensus: ~w  (~w fixed positions)~n", [Cons, NFixed]),
+             format("   verdict:   ~w/~w  convergent=~w divergent=~w~n",
+                    [Label, Reason, NC, ND]),
+             forall(member(member_info(C, K, Shift, Prov), Div),
+                    format("   divergent: ~w  [~w]  ~w  (~w)~n",
+                           [C, K, Shift, Prov])) )).
+
+%% present_declared_stances(-Stances)  — sorted declared stances with a loaded member.
+present_declared_stances(Stances) :-
+    findall(St,
+            ( declared_stance(C, St), corpus_loader:corpus_constraint(C) ),
+            Sts0),
+    sort(Sts0, Stances).
+
+% ----------------------------------------------------------------------------
+% JSON export — consumed by python/cross_kernel_stance_report.py. The Python
+% consumer reads these COMPUTED shifts; it never recomputes classify_at_power
+% (Build-Discipline Pattern 1: wire the consumer to the producer's output).
+% ----------------------------------------------------------------------------
+
+%% cross_kernel_stance_export(+File)
+cross_kernel_stance_export(File) :-
+    present_declared_stances(Stances),
+    findall(D, ( member(St, Stances), stance_profile_dict(St, D) ), Dicts),
+    setup_call_cleanup(
+        open(File, write, S),
+        json_write_dict(S, _{stances: Dicts}, [width(80)]),
+        close(S)).
+
+stance_profile_dict(St, Dict) :-
+    cross_kernel_stance_profile(St, stance_profile(St, N,
+        members(Members), consensus(Cons, NFixed), verdict(Label, Reason),
+        convergent(NC, _ConvM), divergent(ND, DivM),
+        provenance(NMorph, NHand), histogram(Hist))),
+    maplist(member_info_dict, Members, MemberDicts),
+    maplist(member_info_dict, DivM, OutlierDicts),
+    pattern_to_list(Cons, ConsList),
+    maplist(hist_dict, Hist, HistDicts),
+    Dict = _{
+        stance: St,
+        n: N,
+        consensus: ConsList,
+        n_fixed: NFixed,
+        verdict: Label,
+        verdict_reason: Reason,
+        n_convergent: NC,
+        n_divergent: ND,
+        provenance: _{ morphology_suggested: NMorph, hand_declared: NHand },
+        members: MemberDicts,
+        outliers: OutlierDicts,
+        histogram: HistDicts
+    }.
+
+member_info_dict(member_info(C, K, Shift, Prov),
+                 _{ reading: C, kernel: K, shift: ShiftList, provenance: Prov }) :-
+    shift_to_list(Shift, ShiftList).
+
+shift_to_list(shift(P,M,I,A), [P,M,I,A]) :- !.
+shift_to_list(_, @(null)).
+
+pattern_to_list(shift(P,M,I,A), [PP,MM,II,AA]) :-
+    wild_or(P, PP), wild_or(M, MM), wild_or(I, II), wild_or(A, AA).
+wild_or('$wild', '*') :- !.
+wild_or(X, X).
+
+hist_dict(Shift-Count, _{ shift: ShiftList, count: Count }) :-
+    shift_to_list(Shift, ShiftList).

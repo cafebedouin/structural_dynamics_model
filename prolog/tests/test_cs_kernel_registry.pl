@@ -244,6 +244,74 @@ cs_kernel_test("na_rule_pair_zero_comparable_null_jaccard",
     success).
 
 /* ================================================================
+   CROSS-KERNEL STANCE TRANSPOSE — consensus spine (GAP-04 / OQ-53)
+   ================================================================
+   Corpus-FREE pins on the novel convergence logic (consensus_shift /
+   partition_by_pattern / stance_verdict / reading_local_stem). These do not
+   load a corpus, so they are robust where the divergence cases above are
+   snapshot-fragile. They pin the LOAD-BEARING 2a/2b spine: the consensus
+   pattern is derived per-position by majority, not hardcoded; a wildcard
+   position lets a seat vary while the rest agree (the shift(_,snare,rope,snare)
+   shape the abolition cohort exhibits). Module-qualified because these helpers
+   are internal to cs_kernel_registry. */
+
+% consensus_shift: per-position strict-majority modal; tie/no-majority -> '$wild'.
+% Synthetic 4-member cohort mirrors the abolition shape (powerless seat varies,
+% the other three agree) -> shift('$wild', snare, rope, snare), 3 fixed positions.
+cs_kernel_test("transpose_consensus_majority_per_position",
+    (   M = [member_info(a, k1, shift(snare,       snare, rope, snare), hand_declared),
+             member_info(b, k2, shift(tangled_rope, snare, rope, snare), hand_declared),
+             member_info(c, k3, shift(rope,        rope,  rope, rope),  hand_declared),
+             member_info(d, k4, shift(snare,       snare, rope, snare), hand_declared)],
+        cs_kernel_registry:consensus_shift(M, Cons, NFixed),
+        Cons == shift('$wild', snare, rope, snare),
+        NFixed =:= 3
+    ),
+    success).
+
+% partition_by_pattern + convergent verdict: 3 match the consensus, the all-rope
+% reading is the lone divergent; 3 of 4 is a majority -> convergent.
+cs_kernel_test("transpose_partition_and_convergent_verdict",
+    (   M = [member_info(a, k1, shift(snare,       snare, rope, snare), hand_declared),
+             member_info(b, k2, shift(tangled_rope, snare, rope, snare), hand_declared),
+             member_info(c, k3, shift(rope,        rope,  rope, rope),  hand_declared),
+             member_info(d, k4, shift(snare,       snare, rope, snare), hand_declared)],
+        cs_kernel_registry:consensus_shift(M, Cons, _),
+        cs_kernel_registry:partition_by_pattern(M, Cons, Conv, Div),
+        length(Conv, 3), length(Div, 1),
+        Div = [member_info(c, _, _, _)],
+        cs_kernel_registry:stance_verdict(4, 3, 3, Label, _),
+        Label == convergent
+    ),
+    success).
+
+% No fixed position (NFixed=0) is divergent/no_shared_signature — the all-wildcard
+% pattern must NOT read as convergence (absence-as-presence guard).
+cs_kernel_test("transpose_no_shared_signature_is_divergent",
+    (   cs_kernel_registry:stance_verdict(4, 0, 4, Label, Reason),
+        Label == divergent, Reason == no_shared_signature
+    ),
+    success).
+
+% A fixed consensus that only a minority shares is divergent/no_majority.
+cs_kernel_test("transpose_minority_consensus_is_divergent",
+    (   cs_kernel_registry:stance_verdict(11, 3, 5, Label, Reason),
+        Label == divergent, Reason == no_majority_on_consensus
+    ),
+    success).
+
+% reading_local_stem strips the kernel '__' prefix and a trailing '_reading' — the
+% morphology basis whose fragmentation (4 stems over 7 abolition readings) is why
+% the cohort is declared, not derived.
+cs_kernel_test("transpose_reading_local_stem",
+    (   cs_kernel_registry:reading_local_stem(animal_status__abolitionist_reading, S1),
+        S1 == abolitionist,
+        cs_kernel_registry:reading_local_stem(state_killing_authority__categorical_abolition, S2),
+        S2 == categorical_abolition
+    ),
+    success).
+
+/* ================================================================
    STRUCTURAL NOTE (not a test — for future audit reference):
    abolition_reading produces type 'naturalized' at some contexts.
    This is a real structural finding: the analytical-observer mountain

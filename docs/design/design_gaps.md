@@ -225,7 +225,20 @@ Theorem Cor 2b — a declared, contestable premise, not derivable, and blocked o
 clustering analysis only now possible); (3) a kernel-fixed reading-comparison predicate and its
 transpose, each with a consumer. Open question + resolution criteria: **OQ-53**.
 
-**Status:** Deferred. Named here on first availability of a corpus that exercises it (2026-06-02).
+**Status:** Partially built (transpose increment, 2026-06-26). The **reading-stance transpose**
+— requirement (3)'s second half, "hold a reading-stance fixed and sweep it across kernels, with a
+consumer" — is now live: `cs_kernel_registry:cross_kernel_stance_profile/2` (+ `reading_stance/2`,
+`stance_cohort/2`) over the `declared_stance/2` seat, grounded in the kernel-independent
+`logical_fingerprint:fingerprint_shift/2` signature (now serialized into `pipeline_output.json`),
+with consumer `python/cross_kernel_stance_report.py` (writes `outputs/cross_kernel_stance.{json,md}`).
+The cohort is **declared, not derived** (requirement (2)'s seat, partial): morphology only suggests
+candidates — witnessed on the abolition cohort, an exact-stem rule catches 4/7 (stems fragment) and a
+substring rule over-admits an anti-abolition reading — so each cohort member carries
+morphology-suggested-vs-hand-declared provenance, and the verdict carries it too. Witnessed result:
+abolition converges on `shift(*,snare,rope,snare)` (5/7) on both live twins; originalist is
+kernel-divergent. **Still open under OQ-53:** requirement (1) (kernel as a first-class queryable
+object), the kernel-fixed↔transpose pair as a formal paired operation, and the full curated stance
+vocabulary (this build seeds an initial declared table for the exercised stances only).
 
 ---
 
