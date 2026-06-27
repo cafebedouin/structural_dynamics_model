@@ -9571,7 +9571,7 @@ the H1-bearing analyses run (rather than crash) on an undetermined-bearing corpu
 
 **Ω-type:** Ω_C (design choice — what the diagnostic organ is for; commentary-grade annotation, never reclassification).
 
-**Status:** investigating — testsets/ leg C-prov+C1+C3+C-null PASS; **C0 PASS, kernel_v1 C-prov PASS, C-gen FAILED→generation-EXPRESSIVE (2026-06-26)**. **A4 gate flip is the OPERATOR's seat — NOT flipped** (`trajectory_enabled` stays 0); kernel_v1 C-null deferred (cost). Twin product OPEN (deferred to rebuild).
+**Status:** mitigated — **family product CLOSED as a scoped finding (validated meaning-bearing + generation-expressive), kept DORMANT (operator ruling 2026-06-26).** Validated two ways (C-null +5.01σ single-corpus; C-gen substrate TRACK=162/162=1.000 local-invariance); A1 C0 PASS, kernel_v1 C-prov PASS. **Flip is BLOCKED — not by doubt but by an unwitnessed/negative freshness criterion** (the flag=1 run stalled; see Close). Twin product OPEN (deferred to rebuild).
 **Priority:** 2
 **Deps:** bundled_with OQ-91
 
@@ -9684,11 +9684,30 @@ loaded-but-non-executing Pattern-2 fork (all 4 call sites dead) — log-only, de
   `c_gen_finding.md`, `c_gen_successor_PREREGISTRATION.md`, `c_gen_successor_finding.md`. (4) **kernel_v1
   re-checkpoint:** C-prov **PASS** (1106; classify_at_time globals unset post trajectory_run,
   positive-controlled, `c_prov_kernel_v1_finding.md`); **C-null DEFERRED** (cost; cannot unblock a flip
-  the C-gen result already gates). (5) **A4 gate flip = OPERATOR STOP** — given the now-complete Part-A
-  evidence, whether to flip `trajectory_enabled` 0→1, close the family product as a scoped finding
-  (meaning-bearing single-corpus + generation-expressive), or hold is the operator's seat. NOT flipped.
-  Caveat for A4: one flag=1 run stalled (likely `giant_comp` under added parallel pressure); a second
-  completed in 12.6s — enabling the flag for every run may want the trajectory stage serialized.
+  the C-gen result already gates).
+  (5) **A4 — CLOSED by operator ruling (2026-06-26): close the family product as a scoped
+  finding, keep it DORMANT; do NOT flip.**
+
+**CLOSE (operator ruling, 2026-06-26).** The family product is **validated** — meaning-bearing
+(C-null +5.01σ, single corpus) and **locally generation-invariant** (C-gen substrate
+TRACK=162/162=1.000: every same-kernel reading-pair that should co-track does, across the
+haiku/flash boundary). Its global cross-generation partition is **generation-EXPRESSIVE, not
+noise** (ARI 0.117 / TRACK 1.000 — the ARI measures the thing that is legitimately expressive).
+**Validity and shippability are orthogonal, and only validity is witnessed-positive.** The flip
+is **blocked by a witnessed-NEGATIVE freshness criterion, not by doubt:** A4 requires "the stage
+runs and the report regenerates each pipeline run" (Pattern 1) — but the one flag=1 pipeline run
+that tested it **stalled** (>10 min, likely `giant_comp` under the added parallel-clustering
+pressure; a second run completed in 12.6s, so it is intermittent). A stage seen to hang cannot be
+tagged freshness-witnessed this turn; flipping would ship a pipeline that intermittently hangs and
+claim a witness that actually failed. So the product is kept **dormant** (`trajectory_enabled`
+stays 0).
+- **Two preconditions for any future flip (gated, in order):** (a) a `giant_comp` /
+  trajectory-stage **serialization or isolation fix** so a flag=1 pipeline completes deterministically,
+  with a green freshness run as the witness; (b) optional — a kernel_v1 **C-null breadth leg** appended
+  for the record (does NOT gate the close; free Prolog rerun).
+- **Twin product** remains OPEN (448 twins over a near-vacuous name-prefix gate; deferred to a rebuild
+  with a real authored `topic_domain`). Evidence: `audits/2026-06-25_oq182_trajectory_revive/`
+  (`c0_finding.md`, `c_gen_finding.md`, `c_gen_successor_finding.md`, `c_prov_kernel_v1_finding.md`).
 
 ---
 

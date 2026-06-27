@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "e2885852778cb27393fb31cc185c9d6700c304e5",
+    "store_version": "ab08f791b4f32c3238d058d23a26b98228627155",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-26T19:35:37"
+    "generated_at": "2026-06-26T23:53:19"
   },
-  "issues_sha": "d203ff1c13e94828daceb9beec55f776e0704219df1347fa11855b9ee07afa35",
+  "issues_sha": "8365a47b5ee122161df299b9004bc4999348aaa533763ec1a5f789368280bd32",
   "n_entries": 188,
   "active_token_set": [
     "investigating",
@@ -13,12 +13,11 @@
   ],
   "per_status": {
     "resolved": 94,
-    "mitigated": 10,
+    "mitigated": 11,
     "partial": 7,
     "disposed": 3,
     "open": 70,
-    "future": 3,
-    "investigating": 1
+    "future": 3
   },
   "active": [
     {
@@ -942,20 +941,6 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-51"
-      ]
-    },
-    {
-      "id": "OQ-182",
-      "status": "investigating",
-      "priority": 2,
-      "summary": "Revive + validate the dormant HAC structural-family / cross-domain-twin commentary subsystem",
-      "deps": [
-        "bundled_with OQ-91"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-16",
-        "OQ-91"
       ]
     },
     {
@@ -2516,6 +2501,20 @@
         "OQ-105",
         "OQ-110",
         "OQ-178"
+      ]
+    },
+    {
+      "id": "OQ-182",
+      "status": "mitigated",
+      "priority": 2,
+      "summary": "Revive + validate the dormant HAC structural-family / cross-domain-twin commentary subsystem",
+      "deps": [
+        "bundled_with OQ-91"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-16",
+        "OQ-91"
       ]
     }
   ]
