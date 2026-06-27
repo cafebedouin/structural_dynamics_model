@@ -9703,8 +9703,11 @@ claim a witness that actually failed. So the product is kept **dormant** (`traje
 stays 0).
 - **Two preconditions for any future flip (gated, in order):** (a) a `giant_comp` /
   trajectory-stage **serialization or isolation fix** so a flag=1 pipeline completes deterministically,
-  with a green freshness run as the witness; (b) optional — a kernel_v1 **C-null breadth leg** appended
-  for the record (does NOT gate the close; free Prolog rerun).
+  with a green freshness run as the witness; (b) optional — a kernel_v1 **C-null breadth leg**
+  appended for the record (does NOT gate the close). **Attempted 2026-06-26 — did NOT complete:**
+  the frozen testsets/-leg harness (N≈97) ran setup (611k pairs, 53 shift groups) but produced no
+  null distribution on the 1106-story corpus; adapting/sampling the harness for breadth is a separate
+  optional task (`c_null_kernel_v1_addendum.md`).
 - **Twin product** remains OPEN (448 twins over a near-vacuous name-prefix gate; deferred to a rebuild
   with a real authored `topic_domain`). Evidence: `audits/2026-06-25_oq182_trajectory_revive/`
   (`c0_finding.md`, `c_gen_finding.md`, `c_gen_successor_finding.md`, `c_prov_kernel_v1_finding.md`).

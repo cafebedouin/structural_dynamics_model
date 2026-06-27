@@ -1,0 +1,24 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+================================================================
+OQ-182 C-NULL HARNESS (testsets/ leg) — family-meaning scope-setter
+================================================================
+seed=20260625  SWI-Prolog version=90209  (PRNG version-stable, not cross-version)
+weights: shift=0.35 metric=0.25 stab=0.25 path=0.15  cut=0.3
+
+REAL: n_index=1106  families=30  mean_silhouette=0.312602
+
+INTERNAL CHECK: max |sum_k w_k*comp_k(a,b) - engine pair_dist| = 0.000000e+00
+  => PASS (component matrices reproduce the engine distance)
+
+---- STAGE A: deterministic controls (gating, printed BEFORE the null) ----
+GROUPING-FIDELITY: PASS (make_groups@identity == engine group_by_shift: 53 shift groups, same keys+members)
+FIDELITY: PASS (P0 == RealPartition; |S0-RealSil|=0.000000e+00; families=30)
+JOINT-TOOTHLESS: PASS (S_joint=0.312602 ~= RealSil; |diff|=4.440892e-16; families=30; relabel-match=yes)
+  => joint shuffle relabels intact vectors => the false-PASS the per-component design avoids
+
