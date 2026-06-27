@@ -1,0 +1,16 @@
+shared clustered: 960
+  PC1 haiku: families=34, families spanning >1 shift = 11
+  PC1 flash: families=20, families spanning >1 shift = 3
+PC1 (same-family => same-shift): NOTE — families CAN span shifts (analysis still valid, see below)
+PC3 (generation changed structure): 720/960 readings have different fingerprint_shift across legs
+
+# multi-reading-kernel reading-pairs: 954
+# SPLIT pairs (co-familial in exactly one leg): 162
+# SPLIT that TRACK-STRUCTURE (shifts differ in split leg): 162
+# SPLIT that are GRANULARITY-NOISE (shifts identical): 0
+
+=== TRACK = 162/162 = 1.0000 ===
+=== LOCKED GATE: TRACK >= 0.70 ===
+=== VERDICT: GENERATION-EXPRESSIVE (real structure) ===
+
+sample GRANULARITY-NOISE pairs (identical shift, different family):
