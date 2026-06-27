@@ -1,0 +1,15 @@
+haiku: 960 clustered, 960 kernel-tagged
+flash: 960 clustered, 960 kernel-tagged
+shared clustered set: 960
+
+=== HEADLINE ARI (all shared clustered, n=960): 0.1171 ===
+haiku family sizes: [1, 1, 1, 1, 1, 2, 4, 4, 5, 6, 6, 8, 11, 12, 13, 14, 15, 17, 18, 18, 18, 20, 21, 25, 26, 30, 34, 46, 47, 56, 68, 99, 146, 166] (34 families)
+flash family sizes: [1, 1, 1, 1, 1, 4, 7, 10, 12, 23, 24, 25, 38, 41, 53, 85, 105, 155, 166, 207] (20 families)
+
+multi-reading kernels (>=2 readings co-clustered): 328, covering 957 constraints
+=== ROBUSTNESS ARI (multi-reading kernels only, n=957): 0.1173 ===
+
+PRES (within-kernel reading-pair co-familiality preserved): 792/954 = 0.8302
+
+=== VERDICT (against locked pre-registration) ===
+FAIL — headline ARI 0.1171 < 0.50

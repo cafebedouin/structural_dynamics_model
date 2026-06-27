@@ -1,0 +1,23 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+CORPUS: 1106 constraints loaded
+SUMMARY: trajectory_summary(total_constraints(1106),families(30),cross_domain_twins(68730),anomalies(6))
+PASS: classify_at_time_eps UNSET after trajectory_run
+PASS: classify_at_time_theater UNSET after trajectory_run
+EXCLUDED_CONSTRAINTS: 0 (no global set => no impute coupling => nothing excluded)
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+POSCTRL_CONSTRAINT: abrahamic_covenant__isaac_covenant_reading (temporal grid Time=0)
+PRE: eps unset before classify_at_time (expected)
+classify_at_time(abrahamic_covenant__isaac_covenant_reading, 0) => Type=tangled_rope
+PASS_POSCTRL: classify_at_time_eps SET = eps(abrahamic_covenant__isaac_covenant_reading,0.45) (probe CAN detect a set global)

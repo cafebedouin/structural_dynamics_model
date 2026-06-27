@@ -1,0 +1,24 @@
+baseline top keys: ['config', 'diagnostic', 'manifest', 'per_constraint', 'type_hierarchy', 'validation']
+enabled  top keys: ['config', 'diagnostic', 'manifest', 'per_constraint', 'type_hierarchy', 'validation']
+manifest baseline: {'n_constraints': 104, 'n_sotu_constraints': 0, 'code_commit': '06f91febbeba228656b47d3174bdfc139f5eea51', 'code_commit_short': '06f91fe', 'code_dirty': True, 'schema_version': 2}
+manifest enabled : {'n_constraints': 104, 'n_sotu_constraints': 0, 'code_commit': '06f91febbeba228656b47d3174bdfc139f5eea51', 'code_commit_short': '06f91fe', 'code_dirty': True, 'schema_version': 2}
+
+=== WHOLE-OBJECT EQUAL (run_at normalized):  False ===
+n per_constraint baseline: 104  enabled: 104
+per_constraint entries differing: 0
+
+=== C0 RESULT: PASS — zero classification deltas ===
+config: equal=False
+   config.trajectory_enabled: base=0  enabled=1
+diagnostic: equal=True
+validation: equal=True
+type_hierarchy: equal=True
+planted change: per_constraint[actinide_replenishment_mechanism_contradictions].human_readable: None -> 'PLANTED_SENTINEL'
+CONTROL deltas detected: 1 -> [('actinide_replenishment_mechanism_contradictions', ['human_readable'])]
+=== POSITIVE CONTROL: PASS — diff has teeth (flags planted change) ===
+per_constraint[0] keys: ['arakelov_height', 'arakelov_height_context', 'base_extractiveness', 'beneficiaries', 'claimed_type', 'classifications', 'contamination_network', 'contextuality_fraction', 'coupling', 'cs_axiom_foreclosed', 'cs_drift_gap', 'cs_drift_moment', 'cs_drift_terminal', 'cs_drift_unacknowledged', 'cs_instance_count', 'cs_pattern', 'cs_pattern_signals', 'cs_reference_frame', 'cs_verdicts', 'diagnostic_verdict', 'domain', 'drift_events', 'emerges_naturally', 'fingerprint_shift', 'gaps', 'h1_band', 'human_readable', 'id', 'maxent_divergence', 'maxent_entropy', 'maxent_indexed', 'maxent_probs', 'maxent_top_type', 'omegas', 'orbit_monotonicity', 'perspective_chi', 'perspective_witness', 'perspectives', 'post_synthesis_flags', 'purity_band', 'purity_score', 'raw_maxent_probs', 'requires_active_enforcement', 'resistance', 'resolution_strategy', 'sheaf_status', 'sheaf_undetermined_reason', 'signature', 'signature_pressure', 'suppression', 'theater_ratio', 'topic_domain', 'transition_boundaries', 'verdict_join', 'victims', 'wasserstein_incomparable_mass', 'wasserstein_profile', 'wasserstein_total_fracture']
+classification-bearing keys present: ['claimed_type', 'signature', 'purity_score', 'purity_band', 'classifications', 'maxent_top_type', 'signature_pressure', 'diagnostic_verdict', 'verdict_join', 'cs_verdicts']
+
+planted: per_constraint[actinide_replenishment_mechanism_contradictions].claimed_type: None -> 'PLANTED_TYPE'
+CONTROL deltas detected: [('actinide_replenishment_mechanism_contradictions', ['claimed_type'])]
+=== POSITIVE CONTROL (classification field): PASS — teeth ===
