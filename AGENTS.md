@@ -448,6 +448,22 @@ semantics, clears the temporal nb-globals at entry) and diverges from `classify_
 at points where temporal and static metrics differ; see
 `audits/2026-06-11_oq83_close/STEP1_REPORT.md` before comparing their outputs.
 
+### Repair transitions (OQ-91, commentary-grade)
+
+`transition_paths.pl:repair_transition/4` is the **upward dual** of the decay-only
+`transition_path/4` (the 8 heads are all downward). It reuses `degradation_chain/3` (the
+`snapshot_type` series) as its source — "upward" = the transitive closure of the 8 decay
+edges read backwards (`unknown` excluded). 4th arg = the named repair op
+(`maintain`/`splice`/`replace` rope line-ops; `scaffold_struck` the held-apart construction
+op), a deterministic function of from/to + chain prefix. **It is COMMENTARY-GRADE: never wire
+it into `classify_from_metrics/6`, the signature layer, or `verdict_join`** — it comments on
+the authored numbers, it does not reclassify. Serialized as the additive `repair_transitions`
+per-constraint field in `json_report.pl` (inside `preserve_classify_globals/1` so the
+snapshot_type nb-globals cannot leak into later classification reads), rendered by
+`enhanced_report.py:build_repair_section` (single data direction Prolog→field→Python; silent
+on decay-only constraints = honest absence). If you extend the op map, keep clause selection
+keyed on from/to/pre (NOT a bound 4th arg) so it stays correct under bound queries.
+
 ### Product site scope exclusion
 
 `constraint_indexing.pl:954–955` excludes `regional`, `continental`, `universal`

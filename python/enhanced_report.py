@@ -1079,6 +1079,61 @@ def build_drift_trajectory_section(constraint_id, pipeline_data):
     return "\n".join(lines)
 
 
+# --- Level 1 (cont): REPAIR / UPGRADE (OQ-91, commentary-grade) ---
+
+# Repair-op glosses (repair_dynamics.md §3). The rope/rigging line-ops
+# maintain/splice/replace are cost-graded; scaffold_struck is the distinct
+# construction-metaphor op (held apart — the vocabulary does not compose).
+_REPAIR_OP_GLOSS = {
+    "maintain":        "maintain — continuous upkeep; the line was kept through a dip back to a type it held before",
+    "splice":          "splice — local in-place mend of a fouled-but-intact line",
+    "replace":         "replace — the line had become a trap / dead-anchor, swapped for a better one",
+    "scaffold_struck": "scaffold struck — temporary construction removed on success, not ossified into a piton",
+}
+
+
+def build_repair_section(constraint_id, pipeline_data):
+    """L1: Repair / upgrade — COMMENTARY-GRADE (OQ-91).
+
+    The additive dual of the decay surfaces: surfaces upward (repair) runs in the
+    authored snapshot_type series, read from the repair_transitions field
+    (Prolog transition_paths:repair_transition/4). The engine does NOT reclassify
+    — this comments on what the authored numbers say is happening. Silent for
+    decay-only / flat constraints (the honest empty case; an absent section IS the
+    absence-finding, for free).
+
+    Single data direction: Prolog detects -> repair_transitions field ->
+    this consumer. No Python recompute (that would leave the predicate dormant).
+    """
+    if pipeline_data is None:
+        return ""
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if not entry:
+        return ""
+    repairs = entry.get("repair_transitions") or []
+    if not repairs:
+        return ""
+    lines = ["", "--- REPAIR / UPGRADE (commentary) ---", ""]
+    lines.append("  The authored measurement series shows this constraint LIFTING up the")
+    lines.append("  type ordering (not only decaying) — a repair run. Commentary only: the")
+    lines.append("  engine does not change the classification; it reports what the numbers")
+    lines.append("  say the author believes is happening.")
+    lines.append("")
+    for rt in repairs:
+        frm = rt.get("from", "?")
+        to = rt.get("to", "?")
+        op = rt.get("op", "?")
+        gloss = _REPAIR_OP_GLOSS.get(op, op)
+        lines.append(f"  - {frm} -> {to}   [{gloss}]")
+    lines.append("")
+    lines.append("  Q6 (six_questions.md): why was this built, and is the reason still live?")
+    lines.append("  A repair is evidence the reason is still live — the arrangement was")
+    lines.append("  mended/kept rather than abandoned. The op is the cost grade:")
+    lines.append("  maintain < splice < replace (rope line-ops); scaffold_struck = a")
+    lines.append("  temporary structure that did its job and was struck.")
+    return "\n".join(lines)
+
+
 # --- Level 1 (cont): CONTAMINATION NETWORK (FPN topology) ---
 
 
@@ -3107,6 +3162,7 @@ def generate_report(constraint_id, data, iteration_round=None):
     l1_identity = build_level1_identity(constraint_id, data["pipeline"], prolog_output,
                                         data.get("routing"))
     l1_trajectory = build_drift_trajectory_section(constraint_id, data["pipeline"])
+    l1_repair = build_repair_section(constraint_id, data["pipeline"])
     l1_orbit = build_level1_orbit(constraint_id, data["orbit"])
     l1_omega = build_omega_section(constraint_id, data["omega"])
 
@@ -3159,7 +3215,7 @@ def generate_report(constraint_id, data, iteration_round=None):
         l2_cs_kernel,    # kernel cross-reading panel — first (Phase 2: kernel-terminal)
         xcon_synthesis,
         build_level_header(1, "SELF-CONSISTENCY"),
-        l1_identity, l1_trajectory, l1_contamination, l1_orbit, l1_omega,
+        l1_identity, l1_trajectory, l1_repair, l1_contamination, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
         l2_convergence, l2_maxent, l2_persistence, l2_stability, l2_abductive,
         l2_axiom2, l2_verdict, l2_theorems, l2_cs_pattern, l2_cs_extended,

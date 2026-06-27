@@ -531,6 +531,21 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     ;   true
     ),
 
+    % repair_transitions (OQ-91): COMMENTARY-GRADE upward/repair runs in the
+    % authored snapshot_type series — the additive-only dual of the decay surfaces.
+    % NEVER feeds classification (the report is its sole consumer). repair_transition
+    % reaches snapshot_type, which resets the classify_at_time_* nb-globals, so the
+    % findall is run inside preserve_classify_globals/1 — the commentary cannot
+    % perturb any later classification read (diagnostic_verdict / verdict_join below).
+    % An empty array is the honest absence-finding (decay-only / flat constraint).
+    preserve_classify_globals(
+        findall(rt(RFrom, RTo, ROp),
+                transition_paths:repair_transition(C, RFrom, RTo, ROp),
+                RepairTs)),
+    format(S, '      "repair_transitions": [', []),
+    write_repair_array(S, RepairTs),
+    format(S, '],~n', []),
+
     % temporal_residual (Type-A observer residual: per-context flip-events; OQ-83).
     % Gated on measurement presence (same as drift_trajectory; absent = no temporal
     % data, distinct from times_examined>0/flips=0). OBSERVER-ONLY — committer drift
@@ -789,6 +804,33 @@ write_drift_array(S, [drift(DType, DSev)]) :-
 write_drift_array(S, [drift(DType, DSev)|Rest]) :-
     format(S, '{"type": "~w", "severity": "~w"}, ', [DType, DSev]),
     write_drift_array(S, Rest).
+
+%% write_repair_array(+Stream, +RepairTransitions)
+%  Writes repair_transition commentary objects (OQ-91):
+%  [{"from": ..., "to": ..., "op": ...}, ...]. Empty list => [] (honest absence).
+write_repair_array(_, []).
+write_repair_array(S, [rt(From, To, Op)]) :-
+    !,
+    format(S, '{"from": "~w", "to": "~w", "op": "~w"}', [From, To, Op]).
+write_repair_array(S, [rt(From, To, Op)|Rest]) :-
+    format(S, '{"from": "~w", "to": "~w", "op": "~w"}, ', [From, To, Op]),
+    write_repair_array(S, Rest).
+
+%% preserve_classify_globals(:Goal)
+%  Runs Goal once, restoring the classify_at_time_* nb-globals to their exact
+%  pre-call state afterward. snapshot_type (reached via repair_transition) resets
+%  these globals; this guard keeps the OQ-91 repair commentary from perturbing any
+%  later classification read in the per-constraint block (additive-only invariant).
+preserve_classify_globals(Goal) :-
+    ( catch(nb_getval(classify_at_time_theater, T0), _, fail) -> Tsav = set(T0) ; Tsav = unset ),
+    ( catch(nb_getval(classify_at_time_eps, E0), _, fail)     -> Esav = set(E0) ; Esav = unset ),
+    setup_call_cleanup(
+        true,
+        once(Goal),
+        ( ( Tsav = set(Tv) -> nb_setval(classify_at_time_theater, Tv)
+          ;                    nb_setval(classify_at_time_theater, none) ),
+          ( Esav = set(Ev) -> nb_setval(classify_at_time_eps, Ev)
+          ;                    nb_setval(classify_at_time_eps, none) ) )).
 
 %% write_drift_trajectory(+Stream, +Constraint)
 %  Emits full ordered measurement series per metric, per-interval rates, and

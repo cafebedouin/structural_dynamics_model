@@ -4827,7 +4827,7 @@ FNL=0 on kernel_v1 corroborates the OQ-70 bait-removal. Matrix:
 
 **Ω-type:** Ω_C (design choice — what the type dynamics is for; whether to model repair as well as decay).
 
-**Status:** open — finding recorded (verified asymmetry); design/build not started. Theory note: `docs/repair_dynamics.md`.
+**Status:** resolved — built + witnessed 2026-06-26 (close-state 1: repair observed in real corpus, commentary-grade detector + report surface landed, asymmetry closed). Theory note: `docs/repair_dynamics.md` §8.
 **Priority:** 1
 
 **Finding (verified this session).** The type space is a dynamics, not a static taxonomy
@@ -4863,10 +4863,34 @@ heads. So whether to extend a decay-*named* detector or build a dedicated upward
 design decision, not a settled home — unfinished, not cruft (build_discipline "Unwired ≠ worthless").
 Sub-question: do `maintain`/`splice`/`replace` warrant named engine operations or stay descriptive?
 
-**What resolution would change:** the engine could register repair (a constraint lifted back up the
-ordering), not only decay — and the asymmetry that currently makes the type dynamics a one-way
-ratchet would close. Cross-refs: OQ-90 (piton fixing_cost), OQ-83 (committer axis), v7 Theorem 7,
-`docs/repair_dynamics.md`, `docs/six_questions.md` (Q6), build_discipline "Unwired ≠ worthless".
+**Resolution (operator-ruled + built + witnessed, 2026-06-26; evidence
+`audits/2026-06-26_oq91_repair/`, theory `docs/repair_dynamics.md` §8).**
+- **Close-branch = state 1** (operator-approved after the read-only B1-scan): real
+  corpora DO contain upward runs surfaced by the existing direction-neutral
+  `degradation_chain`/`snapshot_type` instrument — testsets/ 2, kernel_v1 30 (incl.
+  multi-step homoousios/versailles snare→tangled_rope→rope); scan logic
+  positive-controlled (`b1scan_finding.md`). **No new authored atom needed** ⇒
+  repair value is NOT rebuild-deferred (close-state 3 did not fire).
+- **Operative rulings (kept):** (1) structural home = dedicated repair-named
+  `repair_transition/4` in `transition_paths.pl`, separate from decay-only
+  `transition_path/4` (metaphors unwelded); reuses `degradation_chain/3` as the
+  series source. (2) **commentary-grade, never correction-grade** — must not feed
+  `classify_from_metrics/6`, the signature layer, or `verdict_join`. (3)
+  `maintain/splice/replace` ARE named ops (4th arg), `scaffold_struck` the distinct
+  construction-metaphor op; selection is a function of from/to + chain prefix.
+- **Witnesses:** B2 standalone (lycurgan→replace, shinbutsu→replace; decay-only
+  apoe4 yields none); op tally on kernel_v1 maintain-11/splice-1/replace-18 (a
+  bound-Op clause-selection bug found + fixed — `repair_op` now a true function).
+  B3 report surface (`enhanced_report.py:build_repair_section`, single data
+  direction Prolog→field→Python). **B4 invariant PASS**: `pipeline_output.json`
+  classification fields byte-identical with vs without the surface (only the new
+  `repair_transitions` field added; `b4_invariant_diff.log`). Suite green (0 errors),
+  snapshot-migration 10/10, warning gate 3/3 allowlisted.
+- **What changed:** the engine now registers repair (a constraint lifted back up the
+  ordering), not only decay — the one-way ratchet is closed. Cross-refs: OQ-90 (piton
+  fixing_cost, still open), OQ-83 (committer axis), v7 Theorem 7, `docs/six_questions.md`
+  (Q6). OQ-182 (bundled sibling) is independent — its A4 gate-flip remains the operator's
+  call and is not affected by this close.
 
 ## OQ-92 — No authored gain-flow / receipt surface: capture is not computed-representable (gates OQ-90)
 

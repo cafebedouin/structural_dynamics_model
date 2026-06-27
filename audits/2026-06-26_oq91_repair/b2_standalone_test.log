@@ -1,0 +1,6 @@
+--- all repair_transition solutions on testsets/ ---
+  lycurgan_laws__demographic_trap_reading : snare -> tangled_rope  [replace]
+  shinbutsu_ontological_commitment__incoherence_reading : snare -> rope  [replace]
+--- NEGATIVE control: a decay-only constraint must yield NONE ---
+  apoe4 chain = [tangled_rope,snare]
+  PASS: apoe4 (decay-only) yields NO repair_transition

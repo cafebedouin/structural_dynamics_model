@@ -5,6 +5,7 @@
 
 :- module(transition_paths, [
     transition_path/4,
+    repair_transition/4,
     degradation_chain/3,
     predicted_terminal_state/3
 ]).
@@ -149,6 +150,83 @@ snapshot_type(C, Time, Type) :-
     constraint_indexing:scope_modifier(Scope, ScopeMod),
     Chi is E * PowerMod * ScopeMod,
     drl_core:classify_from_metrics(C, E, Chi, S, Context, Type).
+
+/* ================================================================
+   REPAIR TRANSITIONS (OQ-91) — the UPWARD dual of transition_path/4.
+
+   COMMENTARY-GRADE, additive-only. Detects upward (repair) runs in the
+   authored snapshot_type series and names the repair operation. It comments
+   on the authored numbers; it does NOT reclassify. It must NEVER feed
+   classify_from_metrics/6, the signature layer, or verdict_join — its sole
+   consumer is the report surface (json_report -> enhanced_report.py).
+
+   Source: reuses the direction-neutral degradation_chain/3 reporter (the
+   snapshot_type series), NOT a re-derived series. "Upward" = the transitive
+   closure of the 8 transition_path/4 decay edges, read backwards; `unknown`
+   is off the health ordering (OQ-37) and excluded.
+
+   Metaphors held APART (repair_dynamics.md §3, §7): the rope/rigging line
+   ops maintain | splice | replace are distinct from the scaffold
+   construction op scaffold_struck; the type vocabulary does not compose.
+   ================================================================ */
+
+% Decay edges = the 8 transition_path/4 heads, as bare type pairs. Used ONLY to
+% define the upward direction (kept local + auditable; if a decay head is added
+% to transition_path/4, mirror it here).
+repair_decay_edge(rope, tangled_rope).
+repair_decay_edge(tangled_rope, snare).
+repair_decay_edge(rope, piton).
+repair_decay_edge(scaffold, piton).
+repair_decay_edge(scaffold, snare).
+repair_decay_edge(scaffold, tangled_rope).
+repair_decay_edge(snare, piton).
+repair_decay_edge(snare, false_mountain).
+
+repair_decays_to(X, Y) :- repair_decay_edge(X, Y).
+repair_decays_to(X, Y) :- repair_decay_edge(X, Z), repair_decays_to(Z, Y).
+
+%% repair_upward(+From, +To)
+%  To is healthier than From: From can decay down to To. `unknown` excluded.
+repair_upward(From, To) :-
+    From \== unknown, To \== unknown,
+    repair_decays_to(To, From).
+
+%% repair_step(+Chain, -Prefix, -A, -B)
+%  Consecutive pair A->B in Chain, with the prefix of types seen BEFORE A
+%  (used for round-trip / "maintain" detection).
+repair_step([A,B|_], [], A, B).
+repair_step([H|T], [H|Pre], A, B) :- repair_step(T, Pre, A, B).
+
+%% repair_op(+From, +To, +Prefix, -Op)
+%  Names the repair operation. A lift that RESTORES a type held earlier in the
+%  series is continuous upkeep -> `maintain`; otherwise by the metaphor of the
+%  state being repaired: scaffold -> scaffold_struck (construction, struck on
+%  success); trap/dead-anchor (snare/piton/false_mountain) -> replace (swap the
+%  line); fouled-but-intact rope (tangled_rope) -> splice (local in-place mend).
+% Clause selection is driven ENTIRELY by From/To/Pre (the cut fires before Op is
+% unified), so repair_op is a true function of its inputs and stays correct when
+% Op is QUERIED bound (e.g. a consumer filtering by operation) — not only when
+% enumerated unbound. (Guarding on a bound 4th arg would let the default clause
+% mislabel a snare lift as `splice`; witnessed and fixed.)
+repair_op(_From, To, Pre, Op) :- memberchk(To, Pre), !, Op = maintain.
+repair_op(scaffold, _, _, Op)       :- !, Op = scaffold_struck.
+repair_op(snare, _, _, Op)          :- !, Op = replace.
+repair_op(piton, _, _, Op)          :- !, Op = replace.
+repair_op(false_mountain, _, _, Op) :- !, Op = replace.
+repair_op(tangled_rope, _, _, Op)   :- !, Op = splice.
+repair_op(_, _, _, splice).
+
+%% repair_transition(+ConstraintID, -FromType, -ToType, -RepairOp)
+%  Enumerates each upward (repair) step in the constraint's snapshot_type
+%  series, with the named repair operation. Multiple solutions for a multi-step
+%  repair (e.g. snare->tangled_rope and tangled_rope->rope). Fails (no solution)
+%  for a decay-only / flat constraint — the honest empty case (commentary-grade
+%  makes an empty repair section the absence-finding for free).
+repair_transition(C, From, To, Op) :-
+    degradation_chain(C, Chain, _),
+    repair_step(Chain, Pre, From, To),
+    repair_upward(From, To),
+    repair_op(From, To, Pre, Op).
 
 %% predicted_terminal_state(+ConstraintID, -State, -Confidence)
 predicted_terminal_state(C, piton, high) :-

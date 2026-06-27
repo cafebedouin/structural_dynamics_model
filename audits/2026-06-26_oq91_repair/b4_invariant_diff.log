@@ -1,0 +1,14 @@
+top-level diagnostic: equal=True
+top-level validation: equal=True
+top-level config: equal=True
+top-level type_hierarchy: equal=True
+repair_transitions in repair output: True
+repair_transitions in baseline output: False
+
+per_constraint entries differing (after removing repair_transitions): 0
+
+constraints with non-empty repair_transitions: 2
+  REPAIR lycurgan_laws__demographic_trap_reading [{'from': 'snare', 'to': 'tangled_rope', 'op': 'replace'}]
+  REPAIR shinbutsu_ontological_commitment__incoherence_reading [{'from': 'snare', 'to': 'rope', 'op': 'replace'}]
+
+=== B4 INVARIANT: PASS — additive-only, classification byte-identical ===

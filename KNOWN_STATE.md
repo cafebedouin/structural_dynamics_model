@@ -45,6 +45,55 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-26 — OQ-91 resolved: commentary-grade repair-transition detector + report surface
+**Files:** prolog/transition_paths.pl, prolog/json_report.pl, python/enhanced_report.py, docs/repair_dynamics.md, ISSUES.md
+**Tier:** landed
+
+Closed the observer-axis one-way ratchet (engine encoded decay, not repair). New
+`repair_transition/4` in `transition_paths.pl` — the upward dual of the 8 decay
+heads, **reusing** `degradation_chain/3` (the snapshot_type series) as source,
+"upward" = transitive closure of the 8 `transition_path/4` decay edges read
+backwards (`unknown` excluded). 4th arg = named op (`maintain`/`splice`/`replace`
+rope line-ops; `scaffold_struck` construction op), a function of from/to + chain
+prefix. **COMMENTARY-GRADE** — must never feed `classify_from_metrics/6`, the
+signature layer, or `verdict_join`. Serialized as the `repair_transitions`
+per-constraint field (`json_report.pl`, hermetic `preserve_classify_globals/1`
+wrapper around the snapshot_type nb-globals), rendered by
+`enhanced_report.py:build_repair_section` (single data direction; silent on
+decay-only = honest absence).
+
+Witnessed (`audits/2026-06-26_oq91_repair/`): real-corpus B1-scan non-empty
+(testsets/ 2, kernel_v1 30, incl. multi-step homoousios/versailles
+snare->tangled_rope->rope) => close-state 1, no new authored atom. B4 invariant
+PASS (pipeline_output.json classification fields byte-identical with/without the
+surface; only the new field added). Bug found+fixed: `repair_op` clause selection
+must key on from/to/pre, not a bound 4th arg (else a bound-Op query mislabels via
+the default clause). Suite 0 errors, snapshot-migration 10/10, warning gate 3/3.
+Promotion test: wiring repair into classification would be LOUD (output changes,
+caught by the diff) -> no silent-mistake tripwire -> no CLAUDE.md promotion.
+
+## 2026-06-26 — OQ-182 C-gen: family product is generation-EXPRESSIVE (A4 flip still operator-gated)
+**Files:** prolog/config.pl, prolog/context_profile_mining.pl, ISSUES.md, audits/2026-06-25_oq182_trajectory_revive/
+**Tier:** correction-key
+
+Part-A progress toward the OQ-182 trajectory gate flip. **A1/C0 PASS** (flag 0->1
+changes only `config.trajectory_enabled` in pipeline_output.json; all
+classification fields byte-identical; positive-controlled). **A3 C-prov PASS on
+kernel_v1** (1106; classify_at_time globals unset post trajectory_run). **A2 C-gen
+FAILED at its locked bar** (haiku<->flash family ARI=0.117 < 0.50) — a live
+falsifier, treated as the finding. Operator ruled option-2 (re-specify, no
+laundering): a freshly pre-registered, granularity-insensitive **substrate read**
+(which constraints split, do splits track real fingerprint_shift differences) gives
+**TRACK=162/162=1.000** — every inter-leg family split is backed by a real
+per-reading shift difference, ZERO cut-height artifact. Dual finding (both stand):
+global partition does NOT recover across generation (ARI fail) AND that failure is
+**generation-EXPRESSIVE, not clustering noise** (locally stable PRES=0.83
+descriptive-only; globally expressive). **A4 gate flip remains the operator's seat
+— NOT flipped** (`config.pl trajectory_enabled` stays 0); kernel_v1 C-null deferred
+(cost; cannot unblock a flip A2 already gates). Caveat for A4: one flag=1 run
+stalled (likely giant_comp under added parallel pressure); a second completed in
+12.6s.
+
 ## 2026-06-26 — OQ-104 resolved (scoped): gate.sh gains a 7th check (audit-citation frozen-evidence)
 **Files:** scripts/gate.sh, python/audit_citation_status.py, audits/2026-06-18_oq104_citation_checker/controls.py, audits/2026-06-18_oq104_citation_checker/controls_run.sh, ISSUES.md
 **Tier:** landed

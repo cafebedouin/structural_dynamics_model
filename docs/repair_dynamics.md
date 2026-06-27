@@ -140,7 +140,8 @@ type-trajectory *reporter* `degradation_chain`/`snapshot_type` is **direction-ne
 *detector* `transition_path/4`, by contrast, is decay-only and would need upward heads added. So
 whether to extend a decay-*named* detector or build a dedicated upward-transition structure is a
 design decision, not a settled "home." Either way the machinery is unfinished, not cruft (`CLAUDE.md`
-"Unwired ≠ worthless").
+"Unwired ≠ worthless"). **[RULED + BUILT 2026-06-26 — see §8: a dedicated `repair_transition/4`,
+commentary-grade, surfaced in `enhanced_report.py`; this asymmetry is now closed.]**
 
 ## 7. The three separations (held as constraints, not preferences)
 
@@ -151,13 +152,52 @@ design decision, not a settled "home." Either way the machinery is unfinished, n
 3. **Persistence mechanisms distinct** — scaffold-cost (load-bearing, high-Supp, snare/rope) ≠
    piton persistence (diffuse benefit, low-Supp). Do not collapse them.
 
+## 8. Resolution (OQ-91, 2026-06-26) — built, commentary-grade
+
+The home question of §6 is **ruled** (operator, this session) and built:
+
+1. **Structural home = a dedicated repair-named predicate `repair_transition/4`**
+   (`transition_paths.pl`), separate from the decay-only `transition_path/4`. Honors
+   "metaphors unwelded" — the decay detector is not relabelled to carry repair.
+   It **reuses** the direction-neutral `degradation_chain/3` (the `snapshot_type`
+   series) as its source rather than re-deriving one; "upward" = the transitive
+   closure of the eight `transition_path/4` decay edges, read backwards
+   (`unknown` excluded, OQ-37). 4th arg = the named repair operation.
+2. **Commentary-grade, never correction-grade** — same governing invariant as
+   OQ-182. `repair_transition/4` must NEVER feed `classify_from_metrics/6`, the
+   signature layer, or `verdict_join`. It comments on the authored numbers; it does
+   not reclassify. Witnessed additive-only: `pipeline_output.json` classification
+   fields are byte-identical with vs without the surface (only the new
+   `repair_transitions` field is added; `audits/2026-06-26_oq91_repair/`).
+3. **`maintain / splice / replace` ARE named operations** (the §7-(1) sub-question,
+   answered): the 4th argument is `maintain` (round-trip upkeep — the line restored
+   to a type it held before a dip) | `splice` (local in-place mend of a
+   fouled-but-intact line) | `replace` (the line had become a trap/dead-anchor —
+   swapped) | `scaffold_struck` (the construction-metaphor op, held apart — struck
+   on success, else ossifies to a piton). Selection is a true function of the
+   from/to types + chain prefix.
+4. **Report surface** = a "Repair / upgrade (commentary)" L1 section in
+   `python/enhanced_report.py` (`build_repair_section`), consuming the
+   `repair_transitions` field via a single data direction (Prolog detects →
+   non-classification sibling field → Python renders; no Python recompute, so the
+   predicate is not born dormant). Empty section = honest absence-finding (decay-only
+   / flat constraints render nothing). Q6-framed (`six_questions.md`): a repair is
+   evidence the reason is still live.
+
+**The one-way ratchet of §6 is closed:** the engine now registers repair (a
+constraint lifted back up the ordering), not only decay — witnessed on real corpus
+stories (testsets/ lycurgan snare→tangled_rope, shinbutsu snare→rope; kernel_v1: 30
+upward runs incl. multi-step homoousios/versailles snare→tangled_rope→rope). No new
+authored atom was needed (the existing measurement series suffices), so the repair
+value is NOT rebuild-deferred.
+
 ## OPEN / next
 
-- Build the **upgrade transitions** (observer-axis terms) so the engine can register repair, not
-  only decay — see the OQ.
+- ~~Build the **upgrade transitions**~~ — done 2026-06-26 (§8 above; `repair_transition/4`,
+  commentary-grade, report surface).
 - Represent piton `fixing_cost` (diffuse benefit vs fixing cost), distinct from scaffold-cost
   (OQ-90).
-- Decide whether **maintain / splice / replace** warrant explicit named operations in the engine,
-  or remain descriptive.
+- ~~Decide whether **maintain / splice / replace** warrant explicit named operations~~ — done
+  2026-06-26: named (§8-3); `scaffold_struck` is the distinct construction-metaphor op.
 - ~~Whether to retire `five_questions.md`~~ — done 2026-06-10: retired to a redirect tombstone;
   Q1–5 preserved verbatim in `six_questions.md`.
