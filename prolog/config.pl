@@ -568,7 +568,7 @@ param(post_synthesis_green_trigger_threshold, 2).     % Case 2: min genuine trig
    under observer shift.
    ================================================================ */
 
-param(trajectory_enabled,                  0).       % 0=disabled, 1=enabled
+param(trajectory_enabled,                  1).       % 0=disabled, 1=enabled
 param(trajectory_distance_shift_weight,    0.35).    % Weight for shift (type sequence) distance
 param(trajectory_distance_metric_weight,   0.25).    % Weight for metric (chi, entropy) distance
 param(trajectory_distance_stability_weight, 0.25).   % Weight for stability (coupling, purity) distance

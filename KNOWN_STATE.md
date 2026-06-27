@@ -45,6 +45,40 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-27 — OQ-182 family product SHIPPED: trajectory serialized + trajectory_enabled 0→1
+**Files:** python/run_pipeline.py, prolog/config.pl, CLAUDE.md, AGENTS.md, ISSUES.md
+**Tier:** landed
+
+Flipped `config.pl:571 trajectory_enabled` 0→1, unblocking the OQ-182 family-product flip
+that was held by a witnessed-NEGATIVE freshness criterion (a flag=1 run intermittently
+stalled). Root cause: **concurrency memory pressure** — the `trajectory` stage (HAC
+clustering, O(N²)) ran in the 4-worker Phase-2 thread pool **co-resident** with `giant_comp`
+(also O(N²)); the two heavy swipl subprocesses overlapped. NOT a giant_comp bug (OQ-77:
+serially fine at 87× the corpus).
+
+**Fix (surgical, Python-only, no engine/classification change):** `run_pipeline.py`
+`_phase_prolog` pulls `trajectory` out of the parallel `tasks` list and runs it
+**sequentially after** `_run_parallel` returns — the `with ThreadPoolExecutor` joins
+giant_comp's worker (and its synchronous swipl child) before returning, so the two heavy
+stages never co-reside. Order is correctness-irrelevant: trajectory's only output
+`context_profile_report.md` has no downstream consumer (C0 invariant). The 11 remaining real
+stages stay parallel (the proven-fine pre-trajectory pool).
+
+**Witnessed** (`audits/2026-06-27_oq182_trajectory_serialization/`): mechanism witness via a
+~0.1s ps/RSS sampler over flag=1 pipelines — PRE-FIX arm captures co-residency (0.64s window
+overlap, deterministic run-1 positive control); CURED arm shows disjoint windows (trajectory's
+swipl starts 0.79s after giant_comp's exits). N=10 liveness battery 10/10 GREEN. Freshness
+positive control PASS (non-vacuous). C0 re-witness zero classification diff (positive-controlled).
+Measured trajectory alive-window 1.5s ⇒ 300s timeout held (≥175× margin, not bumped to 900).
+`validate_config` PASS at flag=1; `trajectory_weights_sum` gate active+satisfied (sum=1.0).
+
+**Promotion test → tripwire promoted to CLAUDE.md (Running the System):** a fresh agent could
+silently re-fold `trajectory` into the parallel `tasks` list and reintroduce the intermittent
+stall — the two O(N²) stages must never run concurrently. Tripwire lives in CLAUDE.md; full
+provenance here.
+
+---
+
 ## 2026-06-26 — OQ-91 resolved: commentary-grade repair-transition detector + report surface
 **Files:** prolog/transition_paths.pl, prolog/json_report.pl, python/enhanced_report.py, docs/repair_dynamics.md, ISSUES.md
 **Tier:** landed

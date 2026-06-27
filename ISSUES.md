@@ -9571,7 +9571,7 @@ the H1-bearing analyses run (rather than crash) on an undetermined-bearing corpu
 
 **Ω-type:** Ω_C (design choice — what the diagnostic organ is for; commentary-grade annotation, never reclassification).
 
-**Status:** mitigated — **family product CLOSED as a scoped finding (validated meaning-bearing + generation-expressive), kept DORMANT (operator ruling 2026-06-26).** Validated two ways (C-null +5.01σ single-corpus; C-gen substrate TRACK=162/162=1.000 local-invariance); A1 C0 PASS, kernel_v1 C-prov PASS. **Flip is BLOCKED — not by doubt but by an unwitnessed/negative freshness criterion** (the flag=1 run stalled; see Close). Twin product OPEN (deferred to rebuild).
+**Status:** mitigated — **family product SHIPPED: `trajectory_enabled=1` (2026-06-27).** Precondition (a) SATISFIED — the giant_comp/trajectory serialization fix landed and was witnessed at the mechanism level (pre-fix co-residency captured, cured arm disjoint), N=10 freshness battery 10/10 GREEN, C0 re-witnessed zero-diff. Validated two ways (C-null +5.01σ single-corpus; C-gen substrate TRACK=162/162=1.000 local-invariance); A1 C0 PASS, kernel_v1 C-prov PASS. Precondition (b) (kernel_v1 C-null breadth addendum) remains optional/non-gating. Twin product OPEN (deferred to rebuild).
 **Priority:** 2
 **Deps:** bundled_with OQ-91
 
@@ -9708,6 +9708,27 @@ stays 0).
   the frozen testsets/-leg harness (N≈97) ran setup (611k pairs, 53 shift groups) but produced no
   null distribution on the 1106-story corpus; adapting/sampling the harness for breadth is a separate
   optional task (`c_null_kernel_v1_addendum.md`).
+
+**FLIP (2026-06-27) — precondition (a) SATISFIED; `trajectory_enabled` 0→1.** Root cause confirmed:
+the stall was **concurrency memory pressure from the trajectory×giant_comp overlap** (both O(N²),
+memory-heavy, co-resident in the 4-worker Phase-2 pool), NOT a giant_comp bug (OQ-77 established
+giant_comp is serially fine at 87× the corpus). **Fix (surgical, Python-only):** `run_pipeline.py`
+`_phase_prolog` pulls `trajectory` out of the parallel `tasks` list and runs it **sequentially after**
+`_run_parallel` returns (the `with ThreadPoolExecutor` has joined giant_comp before returning).
+Order is correctness-irrelevant (trajectory's only output `context_profile_report.md` has no
+downstream consumer — the C0 invariant). **Witnessed (`audits/2026-06-27_oq182_trajectory_serialization/`):**
+(1) **mechanism witness** (the licensing witness, not the run count) — a ~0.1s `ps`/RSS sampler over
+flag=1 pipelines: PRE-FIX arm captures giant_comp's swipl window **co-resident** inside trajectory's
+(0.64s overlap, deterministic on run 1 — the positive control proving the battery scale exercises the
+failure path); CURED arm shows trajectory's swipl starts **0.79s after** giant_comp's swipl exits
+(disjoint, zero RSS co-residency — the direct subprocess-level proof). (2) **N=10 liveness battery
+10/10 GREEN** (`battery_n10.log`): exit 0, every Phase-2 stage ok, giant_comp 0.6–0.8s (serial band),
+`context_profile_report.md` regenerated (mtime advanced + size>0 — the literal A4 criterion). (3)
+**freshness-detector positive control PASS** (real seeded stale report flagged; non-vacuous). (4)
+**C0 re-witness PASS** — zero classification-field diff flag=0 vs flag=1, planted-field positive
+control caught. Trajectory measured alive-window 1.5s at n≈104 ⇒ the held 300s `run_prolog` timeout
+is a ≥175× margin (NOT bumped to 900). `validate_config` PASS at flag=1, `trajectory_weights_sum`
+gate active+satisfied (0.35+0.25+0.25+0.15=1.0). Revert path (revert-on-red) unused.
 - **Twin product** remains OPEN (448 twins over a near-vacuous name-prefix gate; deferred to a rebuild
   with a real authored `topic_domain`). Evidence: `audits/2026-06-25_oq182_trajectory_revive/`
   (`c0_finding.md`, `c_gen_finding.md`, `c_gen_successor_finding.md`, `c_prov_kernel_v1_finding.md`).
