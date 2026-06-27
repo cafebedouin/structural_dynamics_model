@@ -594,6 +594,10 @@ Single-writer convention (2026-06-04): the swipl export writes
 `outputs/pipeline_output.raw.json`; `run_pipeline.py` alone writes the canonical
 manifest-bearing `pipeline_output.json`. A direct swipl re-export cannot clobber it.
 
+The `trajectory` stage (HAC clustering, O(N²)) runs **sequentially after** the parallel
+Phase-2 Prolog block, not within it — it must never co-reside with `giant_comp` (also O(N²));
+co-residency intermittently stalled the pipeline (OQ-182, 2026-06-27, `_phase_prolog`).
+
 ### Classify a NON-default corpus (twin / comparison runs)
 
 ```python

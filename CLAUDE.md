@@ -191,8 +191,13 @@ scripts), so keep `cd prolog/` for any command that writes. Python scripts enfor
 `outputs/` — serialize them (generate-only first, then one `run_pipeline`).** Concurrent runs
 race the shared corpus and outputs: witnessed giant_comp SIGSEGV + per-run manifests that are
 not coherent snapshots (OQ-77, resolved 2026-06-10; `audits/2026-06-10_oq77_serial_kill_condition/`).
-Within-pipeline parallelism (the 11 analyses in one `run_pipeline`) is fine — the rule is
-one pipeline at a time.
+Within-pipeline parallelism (the parallel Phase-2 analyses in one `run_pipeline`) is fine — the
+rule is one pipeline at a time. **One caveat (OQ-182, 2026-06-27):** the two O(N²) memory-heavy
+stages — `trajectory` (HAC clustering, enabled by `trajectory_enabled=1`) and `giant_comp` — must
+NOT run concurrently (co-residency intermittently stalled the pipeline). `trajectory` is therefore
+pulled out of the parallel Phase-2 set and run **sequentially after** the parallel Prolog block
+(`run_pipeline.py` `_phase_prolog`); the 11 remaining real stages stay parallel. Keep it that way —
+do not fold `trajectory` back into the parallel `tasks` list.
 
 - Full pipeline (analysis only, no generation): `python3 python/run_pipeline.py`
   - `run_pipeline()` opens with the **ISSUES.md status-grammar gate** (`issues_status.scan()`,

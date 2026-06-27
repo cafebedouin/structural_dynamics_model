@@ -1,0 +1,6 @@
+freshness predicate non-vacuity (real seeded stale report + planted stall):
+  report_size>0                    -> FLAGGED stale (PASS)
+  report_mtime_advanced            -> FLAGGED stale (PASS)
+  giant_comp_serial_band(<60s)     -> FLAGGED stale (PASS)
+
+FRESHNESS CONTROL: PASS

@@ -715,7 +715,6 @@ def _phase_prolog(progress, parallel):
         ("fpn",         _prolog_fpn),
         ("maxent",      _prolog_maxent),
         ("abductive",   _prolog_abductive),
-        ("trajectory",  _prolog_trajectory),
         ("covering",    _prolog_covering),
         ("giant_comp",  _prolog_giant_comp),
         ("coupling",    _prolog_coupling),
@@ -723,6 +722,14 @@ def _phase_prolog(progress, parallel):
         ("commentary_census", _prolog_commentary_census),
     ]
     results = _run_parallel(tasks, progress, parallel)
+
+    # OQ-182: trajectory (HAC clustering) is O(N^2) and memory-heavy like giant_comp;
+    # running both concurrently in the thread pool intermittently stalled the pipeline.
+    # _run_parallel's `with ThreadPoolExecutor` has joined giant_comp before returning,
+    # so running trajectory here guarantees the two heavy stages never co-reside.
+    # Order is correctness-irrelevant: trajectory's only output (context_profile_report.md)
+    # has no downstream consumer (C0 invariant).
+    results.append(_run_step("trajectory", _prolog_trajectory, progress))
 
     if progress:
         ok = sum(1 for r in results if r.status == "ok")

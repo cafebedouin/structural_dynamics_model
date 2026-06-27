@@ -1,0 +1,1523 @@
+[AXIS-SELFTEST] PASS  negative (clean corpus): exit 0 (want 0)
+[AXIS-SELFTEST] PASS  control1 payload-widen (path b): exit 1 (want 1) :: drl_composition:detect_necessity_inheritance/2 -> cs_axiom_foreclosed/2
+[AXIS-SELFTEST] PASS  control2 nonbridge-seam (path c): exit 1 (want 1) :: drl_core:axis_control_seam/2 -> cs_kernel_id/2
+[AXIS-SELFTEST] ALL PASS
+[GRID-GATE] 102 grid stories: 102 previously ledgered, 0 newly passed.
+[pipeline] [PREP] Preparing test suite...
+Found 104 .pl files in /home/scott/bin/structural_dynamics_model/prolog/testsets
+✓ Generated /home/scott/bin/structural_dynamics_model/prolog/validation_suite.pl with 104 tests
+[pipeline] [PREP] Done.
+[pipeline] [ORBITS] Regenerating product_site_orbits.json + corpus_hash...
+[pipeline] PROLOG_DIR = /home/scott/bin/structural_dynamics_model/prolog
+[pipeline] PROLOG_DIR exists = True
+[pipeline] swipl path = /usr/bin/swipl
+[pipeline] testsets count = 104
+[pipeline] [PROLOG] Running analyses...
+[pipeline] [PROLOG] Done (12/12 succeeded).
+[pipeline] [NORM] Normalizing orbit data IDs...
+Normalized orbit_data.json: 0 renamed, 97 unchanged, 0 collisions
+[pipeline] [NORM] Generating fingerprint_data.json...
+fingerprint_data.json: 26 families, 98 constraints
+[pipeline] [JSON] Generating structured JSON report...
+[pipeline] [SINK] Generating routing_sink.json (per-seat author↔engine diff)...
+[pipeline] [ORBIT] Exporting kernel_obstruction.json (obstruction + grounding)...
+[pipeline] [LINTER] OQ-58 referential-integrity census (non-gating)...
+  positive controls: PASS (R1 flags ghost, R2 flags short, R3 flags gradated/graduated, no over-flag)
+[pipeline] [LINTER] cs_reading_relation: 173 dangling → 168 missing readings / 71 kernels (5 id>=2 defensible) — NON-GATING
+[pipeline] [MANIFEST] Stamped pipeline_output.json + orbit_data.manifest.json: run_at=2026-06-27T05:59:01Z, commit=0a7d241, n=104, dirty=True
+[pipeline] [TIER1] Running Python tier 1...
+Found 4 validated Ropes.
+Generating report at /home/scott/bin/structural_dynamics_model/outputs/rope_report.md...
+Report generated successfully.
+Found 10 unique Snares.
+Generating report at /home/scott/bin/structural_dynamics_model/outputs/snare_report.md...
+Report generated successfully.
+Found 3 unique Pitons.
+Generating report at /home/scott/bin/structural_dynamics_model/outputs/piton_report.md...
+Report generated successfully.
+No validated True Mountains found.
+Found 5 unique Scaffolds.
+Generating report at /home/scott/bin/structural_dynamics_model/outputs/scaffold_report.md...
+Report generated successfully.
+Found 40 constraints classified as Tangled Ropes.
+Generating report at /home/scott/bin/structural_dynamics_model/outputs/tangled_rope_report.md...
+Report generated successfully.
+Found 47 unique False Mountains.
+Generating report at /home/scott/bin/structural_dynamics_model/outputs/false_mountain_report.md...
+Report generated successfully.
+Step 1: Parsing pipeline_output.json...
+Step 2: Calculating derived metrics...
+Step 3: Inferring missing data...
+Step 4: Loading orbit data...
+  Matched orbit data for 97/97 constraints
+
+Saved to /home/scott/bin/structural_dynamics_model/outputs/corpus_data.json
+Summary:
+  total_constraints: 104 (100.0%)
+  with_extractiveness: 97 (93.3%)
+  with_suppression: 97 (93.3%)
+  with_classifications: 0 (0.0%)
+  with_domain: 104 (100.0%)
+  with_orbit_data: 97 (93.3%)
+[pipeline] [TIER1] Done (10/10 succeeded).
+false_mountain_data.json: 47 entries
+=== w1_sheaf_join — witnesses ===
+manifest: run_at=2026-06-27T05:59:01Z n=104 commit=0a7d241 dirty=True
+same-run guard: PASS
+[C1] W1 sum=98.1902 nonzero=88/97 argmax=animal_status_kernel__property_reading W1=3.999535
+[C2] H1>0 count=61 example_manifest=actinide_replenishment_mechanism_flat_control H1=4
+[C3] emit sanity: manifest=61 vs h1>0=61 -> CONSISTENT
+[C3b] sheaf/H1 partition (OQ-51): undetermined=15 -> HOLDS
+[C4] W1-max field-identity: argmax_w1=3.999535 edge_sum=3.9995350000000003 -> CONFIRMED (wasserstein_total_fracture = 3-edge sum)
+sheaf_status counts: {'manifest_presheaf': 61, 'undetermined': 15, 'genuine_sheaf': 28}
+[2x2] H1=0&W1~0=16  H1=0&W1>0=27  H1>0&W1~0=0  H1>0&W1>0=61
+off-diagonal rows: 27
+    OFF  institutional_trust_erosion_c0  W1=3.439601  H1=None  undetermined
+    OFF  crypto_permissionless_reading  W1=3.392763  H1=None  undetermined
+    OFF  empty_shell_tolerance  W1=2.828166  H1=0  genuine_sheaf
+    OFF  superheavy_decay_reading  W1=2.718551  H1=None  undetermined
+    OFF  interactionist_reading  W1=2.314845  H1=0  genuine_sheaf
+    OFF  pre_public_initiative_reading  W1=2.314845  H1=0  genuine_sheaf
+    OFF  womens_financial_autonomy  W1=2.191952  H1=0  genuine_sheaf
+    OFF  behavioral_adoption_friction  W1=2.060106  H1=0  genuine_sheaf
+    OFF  visual_evidentiary_authority_flat_control  W1=2.060106  H1=0  genuine_sheaf
+    OFF  pragmatic_action_reading  W1=1.975218  H1=None  undetermined
+    OFF  doomsday_clock_metric__hybrid_legitimacy_reading  W1=1.921235  H1=None  undetermined
+    OFF  conceptual_framework_reading  W1=1.860516  H1=0  genuine_sheaf
+    OFF  neutron_star_bombardment_reading  W1=1.634744  H1=0  genuine_sheaf
+    OFF  livelihood_security_reading  W1=1.041678  H1=None  undetermined
+    OFF  maat_order_principle__reciprocity_reading  W1=0.998501  H1=None  undetermined
+    OFF  fictional_construct_reading  W1=0.814111  H1=0  genuine_sheaf
+    OFF  jewish_sovereignty_palestine__cultural_zionist_reading  W1=0.501243  H1=0  genuine_sheaf
+    OFF  press_reformation_causation__mutual_shaping  W1=0.197285  H1=0  genuine_sheaf
+    OFF  press_reformation_causation__strategic_deployment  W1=0.101653  H1=0  genuine_sheaf
+    OFF  historical_treaty_substrate__stewardship_reading  W1=0.045439  H1=0  genuine_sheaf
+    OFF  statutory_debt_ceiling__coordination_scaffold_reading  W1=0.029023  H1=0  genuine_sheaf
+    OFF  divine_legitimacy_substrate__folk_syncretistic_reading  W1=0.006229  H1=0  genuine_sheaf
+    OFF  refugee_convention_text__expansive_humanitarian_reading  W1=0.002145  H1=0  genuine_sheaf
+    OFF  gita_kurukshetra_discourse__gandhian_allegorical_reading  W1=0.002059  H1=0  genuine_sheaf
+    OFF  basic_law_interpretive_boundary__parliamentary_sovereignty_reading  W1=0.000087  H1=0  genuine_sheaf
+    OFF  llm_synthesis_capacity  W1=0.000007  H1=0  genuine_sheaf
+    OFF  lausanne_minority_protections__guarantor_reading  W1=0.000003  H1=0  genuine_sheaf
+join coverage: only_pipeline=7 only_orbit=0 dups=0
+
+wrote /home/scott/bin/structural_dynamics_model/outputs/w1_sheaf_join.json
+wrote /home/scott/bin/structural_dynamics_model/outputs/w1_sheaf_join.md
+
+=== top 15 rows (rank | id | W1 | H1 | sheaf | shift) ===
+  1 | animal_status_kernel__property_reading | 3.999535 | 3 | manifest_presheaf | [snare, snare, scaffold, snare]
+  2 | jewish_self_determination__indigenous_return_reading | 3.999352 | 3 | manifest_presheaf | [snare, snare, scaffold, snare]
+  3 | border_control_legitimacy__freedom_of_movement_primary | 3.970547 | 2 | manifest_presheaf | [unknown, snare, rope, snare]
+  4 | epistemic_collapse | 3.479585 | 5 | manifest_presheaf | [tangled_rope, snare, rope, snare]
+  5 | institutional_trust_erosion_c0 | 3.439601 | None | undetermined | [unknown, unknown, unknown, unknown]
+  6 | crypto_permissionless_reading | 3.392763 | None | undetermined | [unknown, unknown, scaffold, unknown]
+  7 | lycurgan_laws__demographic_trap_reading | 3.336459 | 5 | manifest_presheaf | [tangled_rope, snare, rope, snare]
+  8 | jewish_sovereignty_palestine__settler_colonial_reading | 2.871638 | 3 | manifest_presheaf | [snare, snare, rope, snare]
+  9 | empty_shell_tolerance | 2.828166 | 0 | genuine_sheaf | [scaffold, scaffold, scaffold, scaffold]
+ 10 | state_killing_legitimacy__abolition_reading | 2.823671 | 3 | manifest_presheaf | [snare, snare, rope, snare]
+ 11 | superheavy_decay_reading | 2.718551 | None | undetermined | [unknown, unknown, scaffold, unknown]
+ 12 | performance_legitimacy_flat_control | 2.689151 | 5 | manifest_presheaf | [naturalized, snare, rope, snare]
+ 13 | adjunctification_of_university_teaching_c0 | 2.635950 | 5 | manifest_presheaf | [tangled_rope, snare, rope, snare]
+[ENRICH] Loading pipeline_output.json...
+Schema drift warnings (pipeline_output.json):
+  [WARN] [actinide_replenishment_mechanism_contradictions] unexpected field: fingerprint_shift
+  [WARN] [actinide_replenishment_mechanism_contradictions] unexpected field: repair_transitions
+  [WARN] [actinide_replenishment_mechanism_flat_control] unexpected field: fingerprint_shift
+  [WARN] [actinide_replenishment_mechanism_flat_control] unexpected field: repair_transitions
+  [WARN] [adjunctification_of_university_teaching_c0] unexpected field: fingerprint_shift
+  [WARN] [adjunctification_of_university_teaching_c0] unexpected field: repair_transitions
+  [WARN] [animal_status_kernel__property_reading] unexpected field: fingerprint_shift
+  [WARN] [animal_status_kernel__property_reading] unexpected field: repair_transitions
+  [WARN] [apoe4_mitochondrial_vulnerability] unexpected field: fingerprint_shift
+  [WARN] [apoe4_mitochondrial_vulnerability] unexpected field: repair_transitions
+  [WARN] [architectural_pattern_validity] unexpected field: fingerprint_shift
+  [WARN] [architectural_pattern_validity] unexpected field: repair_transitions
+  [WARN] [authoritative_specification_reading] unexpected field: fingerprint_shift
+  [WARN] [authoritative_specification_reading] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_authority__parliamentary_sovereignty_reading] unexpected field: fingerprint_shift
+  [WARN] [basic_law_interpretive_authority__parliamentary_sovereignty_reading] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_boundary__parliamentary_sovereignty_reading] unexpected field: fingerprint_shift
+  [WARN] [basic_law_interpretive_boundary__parliamentary_sovereignty_reading] unexpected field: repair_transitions
+  [WARN] [behavioral_adoption_friction] unexpected field: fingerprint_shift
+  [WARN] [behavioral_adoption_friction] unexpected field: repair_transitions
+  [WARN] [bitcoin_whitepaper_purpose__nakamoto_oracle_opacity] unexpected field: fingerprint_shift
+  [WARN] [bitcoin_whitepaper_purpose__nakamoto_oracle_opacity] unexpected field: repair_transitions
+  [WARN] [border_control_legitimacy__freedom_of_movement_primary] unexpected field: fingerprint_shift
+  [WARN] [border_control_legitimacy__freedom_of_movement_primary] unexpected field: repair_transitions
+  [WARN] [catastrophe_memory_kernel__boundary_maintenance_reading] unexpected field: fingerprint_shift
+  [WARN] [catastrophe_memory_kernel__boundary_maintenance_reading] unexpected field: repair_transitions
+  [WARN] [conceptual_framework_reading] unexpected field: fingerprint_shift
+  [WARN] [conceptual_framework_reading] unexpected field: repair_transitions
+  [WARN] [crypto_permissionless_reading] unexpected field: fingerprint_shift
+  [WARN] [crypto_permissionless_reading] unexpected field: repair_transitions
+  [WARN] [demographic_resource_allocation] unexpected field: fingerprint_shift
+  [WARN] [demographic_resource_allocation] unexpected field: repair_transitions
+  [WARN] [demographic_skill_mismatch_c0] unexpected field: fingerprint_shift
+  [WARN] [demographic_skill_mismatch_c0] unexpected field: repair_transitions
+  [WARN] [digital_money_legitimacy_contradictions] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_contradictions] unexpected field: repair_transitions
+  [WARN] [digital_money_legitimacy_flat_control] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_flat_control] unexpected field: repair_transitions
+  [WARN] [dispositional_reading] unexpected field: fingerprint_shift
+  [WARN] [dispositional_reading] unexpected field: repair_transitions
+  [WARN] [distributed_verification] unexpected field: fingerprint_shift
+  [WARN] [distributed_verification] unexpected field: repair_transitions
+  [WARN] [divine_legitimacy_substrate__folk_syncretistic_reading] unexpected field: fingerprint_shift
+  [WARN] [divine_legitimacy_substrate__folk_syncretistic_reading] unexpected field: repair_transitions
+  [WARN] [doomsday_clock_metric__hybrid_legitimacy_reading] unexpected field: fingerprint_shift
+  [WARN] [doomsday_clock_metric__hybrid_legitimacy_reading] unexpected field: repair_transitions
+  [WARN] [dueling_disappearance_mechanism__overdetermined_composite_reading] unexpected field: fingerprint_shift
+  [WARN] [dueling_disappearance_mechanism__overdetermined_composite_reading] unexpected field: repair_transitions
+  [WARN] [empty_shell_tolerance] unexpected field: fingerprint_shift
+  [WARN] [empty_shell_tolerance] unexpected field: repair_transitions
+  [WARN] [epistemic_collapse] unexpected field: fingerprint_shift
+  [WARN] [epistemic_collapse] unexpected field: repair_transitions
+  [WARN] [equal_protection_kernel__colorblind_reading] unexpected field: fingerprint_shift
+  [WARN] [equal_protection_kernel__colorblind_reading] unexpected field: repair_transitions
+  [WARN] [fictional_construct_reading] unexpected field: fingerprint_shift
+  [WARN] [fictional_construct_reading] unexpected field: repair_transitions
+  [WARN] [fourteenth_amendment_equal_protection__formal_equality_reading] unexpected field: fingerprint_shift
+  [WARN] [fourteenth_amendment_equal_protection__formal_equality_reading] unexpected field: repair_transitions
+  [WARN] [gendered_outcome_asymmetry] unexpected field: fingerprint_shift
+  [WARN] [gendered_outcome_asymmetry] unexpected field: repair_transitions
+  [WARN] [geopolitical_settlement_competition] unexpected field: fingerprint_shift
+  [WARN] [geopolitical_settlement_competition] unexpected field: repair_transitions
+  [WARN] [gita_kurukshetra_discourse__gandhian_allegorical_reading] unexpected field: fingerprint_shift
+  [WARN] [gita_kurukshetra_discourse__gandhian_allegorical_reading] unexpected field: repair_transitions
+  [WARN] [historical_treaty_substrate__stewardship_reading] unexpected field: fingerprint_shift
+  [WARN] [historical_treaty_substrate__stewardship_reading] unexpected field: repair_transitions
+  [WARN] [indexical_realism] unexpected field: fingerprint_shift
+  [WARN] [indexical_realism] unexpected field: repair_transitions
+  [WARN] [institutional_barrier_structure] unexpected field: fingerprint_shift
+  [WARN] [institutional_barrier_structure] unexpected field: repair_transitions
+  [WARN] [institutional_trust_erosion_c0] unexpected field: fingerprint_shift
+  [WARN] [institutional_trust_erosion_c0] unexpected field: repair_transitions
+  [WARN] [institutional_validation_reading] unexpected field: fingerprint_shift
+  [WARN] [institutional_validation_reading] unexpected field: repair_transitions
+  [WARN] [institutional_verification_collapse] unexpected field: fingerprint_shift
+  [WARN] [institutional_verification_collapse] unexpected field: repair_transitions
+  [WARN] [interactionist_reading] unexpected field: fingerprint_shift
+  [WARN] [interactionist_reading] unexpected field: repair_transitions
+  [WARN] [intervention_target_selection] unexpected field: fingerprint_shift
+  [WARN] [intervention_target_selection] unexpected field: repair_transitions
+  [WARN] [jewish_self_determination__indigenous_return_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_self_determination__indigenous_return_reading] unexpected field: repair_transitions
+  [WARN] [jewish_sovereignty_palestine__cultural_zionist_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__cultural_zionist_reading] unexpected field: repair_transitions
+  [WARN] [jewish_sovereignty_palestine__settler_colonial_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__settler_colonial_reading] unexpected field: repair_transitions
+  [WARN] [jewish_territorial_claim__labor_zionism_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_territorial_claim__labor_zionism_reading] unexpected field: repair_transitions
+  [WARN] [john_1_1_logos__non_incarnational_monotheist] unexpected field: fingerprint_shift
+  [WARN] [john_1_1_logos__non_incarnational_monotheist] unexpected field: repair_transitions
+  [WARN] [knowledge_legitimacy_biomedicine_contradictions] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_contradictions] unexpected field: repair_transitions
+  [WARN] [knowledge_legitimacy_biomedicine_flat_control] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_flat_control] unexpected field: repair_transitions
+  [WARN] [lausanne_minority_protections__guarantor_reading] unexpected field: fingerprint_shift
+  [WARN] [lausanne_minority_protections__guarantor_reading] unexpected field: repair_transitions
+  [WARN] [livelihood_security_reading] unexpected field: fingerprint_shift
+  [WARN] [livelihood_security_reading] unexpected field: repair_transitions
+  [WARN] [llm_synthesis_capacity] unexpected field: fingerprint_shift
+  [WARN] [llm_synthesis_capacity] unexpected field: repair_transitions
+  [WARN] [longevity_mismatch] unexpected field: fingerprint_shift
+  [WARN] [longevity_mismatch] unexpected field: repair_transitions
+  [WARN] [lycurgan_laws__demographic_trap_reading] unexpected field: fingerprint_shift
+  [WARN] [lycurgan_laws__demographic_trap_reading] unexpected field: repair_transitions
+  [WARN] [maat_order_principle__reciprocity_reading] unexpected field: fingerprint_shift
+  [WARN] [maat_order_principle__reciprocity_reading] unexpected field: repair_transitions
+  [WARN] [marriage_authority__judicial_harmonization_reading] unexpected field: fingerprint_shift
+  [WARN] [marriage_authority__judicial_harmonization_reading] unexpected field: repair_transitions
+  [WARN] [mitochondrial_demand_signal_deficiency] unexpected field: fingerprint_shift
+  [WARN] [mitochondrial_demand_signal_deficiency] unexpected field: repair_transitions
+  [WARN] [moral_causation_locus_contradictions] unexpected field: fingerprint_shift
+  [WARN] [moral_causation_locus_contradictions] unexpected field: repair_transitions
+  [WARN] [moral_causation_locus_flat_control] unexpected field: fingerprint_shift
+  [WARN] [moral_causation_locus_flat_control] unexpected field: repair_transitions
+  [WARN] [nad_precursor_bioavailability] unexpected field: fingerprint_shift
+  [WARN] [nad_precursor_bioavailability] unexpected field: repair_transitions
+  [WARN] [neutron_star_bombardment_reading] unexpected field: fingerprint_shift
+  [WARN] [neutron_star_bombardment_reading] unexpected field: repair_transitions
+  [WARN] [nicene_creed_authority__liturgical_habituation_reading] unexpected field: fingerprint_shift
+  [WARN] [nicene_creed_authority__liturgical_habituation_reading] unexpected field: repair_transitions
+  [WARN] [organization_floor_c0] unexpected field: fingerprint_shift
+  [WARN] [organization_floor_c0] unexpected field: repair_transitions
+  [WARN] [performance_legitimacy_contradictions] unexpected field: fingerprint_shift
+  [WARN] [performance_legitimacy_contradictions] unexpected field: repair_transitions
+  [WARN] [performance_legitimacy_flat_control] unexpected field: fingerprint_shift
+  [WARN] [performance_legitimacy_flat_control] unexpected field: repair_transitions
+  [WARN] [polaris_document_status_contradictions] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_contradictions] unexpected field: repair_transitions
+  [WARN] [polaris_document_status_flat_control] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_flat_control] unexpected field: repair_transitions
+  [WARN] [post_evidentiary] unexpected field: fingerprint_shift
+  [WARN] [post_evidentiary] unexpected field: repair_transitions
+  [WARN] [pragmatic_action_reading] unexpected field: fingerprint_shift
+  [WARN] [pragmatic_action_reading] unexpected field: repair_transitions
+  [WARN] [pre_public_initiative_reading] unexpected field: fingerprint_shift
+  [WARN] [pre_public_initiative_reading] unexpected field: repair_transitions
+  [WARN] [press_reformation_causality__strategic_deployment] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causality__strategic_deployment] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__mutual_shaping] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causation__mutual_shaping] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__strategic_deployment] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causation__strategic_deployment] unexpected field: repair_transitions
+  [WARN] [propagation_speed_asymmetry] unexpected field: fingerprint_shift
+  [WARN] [propagation_speed_asymmetry] unexpected field: repair_transitions
+  [WARN] [property_sector_overhang] unexpected field: fingerprint_shift
+  [WARN] [property_sector_overhang] unexpected field: repair_transitions
+  [WARN] [protein_anabolic_resistance] unexpected field: fingerprint_shift
+  [WARN] [protein_anabolic_resistance] unexpected field: repair_transitions
+  [WARN] [qualitative_development_reading] unexpected field: fingerprint_shift
+  [WARN] [qualitative_development_reading] unexpected field: repair_transitions
+  [WARN] [quantitative_growth_reading] unexpected field: fingerprint_shift
+  [WARN] [quantitative_growth_reading] unexpected field: repair_transitions
+  [WARN] [radiative_levitation_stratification] unexpected field: fingerprint_shift
+  [WARN] [radiative_levitation_stratification] unexpected field: repair_transitions
+  [WARN] [reading_acquisition_legitimacy__whole_language_meaning_primacy] unexpected field: fingerprint_shift
+  [WARN] [reading_acquisition_legitimacy__whole_language_meaning_primacy] unexpected field: repair_transitions
+  [WARN] [refugee_convention_text__expansive_humanitarian_reading] unexpected field: fingerprint_shift
+  [WARN] [refugee_convention_text__expansive_humanitarian_reading] unexpected field: repair_transitions
+  [WARN] [regulated_stablecoin_reading] unexpected field: fingerprint_shift
+  [WARN] [regulated_stablecoin_reading] unexpected field: repair_transitions
+  [WARN] [responsibility_preservation_mechanism] unexpected field: fingerprint_shift
+  [WARN] [responsibility_preservation_mechanism] unexpected field: repair_transitions
+  [WARN] [scale_ceiling_c0] unexpected field: fingerprint_shift
+  [WARN] [scale_ceiling_c0] unexpected field: repair_transitions
+  [WARN] [secession_legitimacy_boundary__constitutional_impossibility_reading] unexpected field: fingerprint_shift
+  [WARN] [secession_legitimacy_boundary__constitutional_impossibility_reading] unexpected field: repair_transitions
+  [WARN] [sex_gender_category__identity_reading] unexpected field: fingerprint_shift
+  [WARN] [sex_gender_category__identity_reading] unexpected field: repair_transitions
+  [WARN] [shinbutsu_ontological_commitment__incoherence_reading] unexpected field: fingerprint_shift
+  [WARN] [shinbutsu_ontological_commitment__incoherence_reading] unexpected field: repair_transitions
+  [WARN] [situational_reading] unexpected field: fingerprint_shift
+  [WARN] [situational_reading] unexpected field: repair_transitions
+  [WARN] [sovereign_cbdc_reading] unexpected field: fingerprint_shift
+  [WARN] [sovereign_cbdc_reading] unexpected field: repair_transitions
+  [WARN] [specification_binding_authority] unexpected field: fingerprint_shift
+  [WARN] [specification_binding_authority] unexpected field: repair_transitions
+  [WARN] [speech_protection_kernel__absolutist_reading] unexpected field: fingerprint_shift
+  [WARN] [speech_protection_kernel__absolutist_reading] unexpected field: repair_transitions
+  [WARN] [state_killing_legitimacy__abolition_reading] unexpected field: fingerprint_shift
+  [WARN] [state_killing_legitimacy__abolition_reading] unexpected field: repair_transitions
+  [WARN] [statutory_debt_ceiling__coordination_scaffold_reading] unexpected field: fingerprint_shift
+  [WARN] [statutory_debt_ceiling__coordination_scaffold_reading] unexpected field: repair_transitions
+  [WARN] [superheavy_decay_reading] unexpected field: fingerprint_shift
+  [WARN] [superheavy_decay_reading] unexpected field: repair_transitions
+  [WARN] [synthesis_infrastructure_gap] unexpected field: fingerprint_shift
+  [WARN] [synthesis_infrastructure_gap] unexpected field: repair_transitions
+  [WARN] [techno_nationalist_reading] unexpected field: fingerprint_shift
+  [WARN] [techno_nationalist_reading] unexpected field: repair_transitions
+  [WARN] [third_act_arbitrage] unexpected field: fingerprint_shift
+  [WARN] [third_act_arbitrage] unexpected field: repair_transitions
+  [WARN] [udhr_article_3__negative_liberty_reading] unexpected field: fingerprint_shift
+  [WARN] [udhr_article_3__negative_liberty_reading] unexpected field: repair_transitions
+  [WARN] [validation_judgment_separation] unexpected field: fingerprint_shift
+  [WARN] [validation_judgment_separation] unexpected field: repair_transitions
+  [WARN] [vedic_corpus_social_prescription__colonial_orientalist_reading] unexpected field: fingerprint_shift
+  [WARN] [vedic_corpus_social_prescription__colonial_orientalist_reading] unexpected field: repair_transitions
+  [WARN] [visual_evidentiary_authority_contradictions] unexpected field: fingerprint_shift
+  [WARN] [visual_evidentiary_authority_contradictions] unexpected field: repair_transitions
+  [WARN] [visual_evidentiary_authority_flat_control] unexpected field: fingerprint_shift
+  [WARN] [visual_evidentiary_authority_flat_control] unexpected field: repair_transitions
+  [WARN] [womens_financial_autonomy] unexpected field: fingerprint_shift
+  [WARN] [womens_financial_autonomy] unexpected field: repair_transitions
+  [WARN] [zero_mathematical_status__parmenidean_rejection] unexpected field: fingerprint_shift
+  [WARN] [zero_mathematical_status__parmenidean_rejection] unexpected field: repair_transitions
+  [WARN] [zero_mathematical_status__placeholder_reading] unexpected field: fingerprint_shift
+  [WARN] [zero_mathematical_status__placeholder_reading] unexpected field: repair_transitions
+  [WARN] [zionist_legitimacy_basis__national_liberation_reading] unexpected field: fingerprint_shift
+  [WARN] [zionist_legitimacy_basis__national_liberation_reading] unexpected field: repair_transitions
+[ENRICH] Loading orbit_data.json...
+[ENRICH] Loading abductive_data.json...
+[ENRICH] Loading game-theory data...
+[ENRICH] Enriching 104 constraints...
+Schema drift warnings (enriched_pipeline.json):
+  [WARN] [actinide_replenishment_mechanism_contradictions] unexpected field: fingerprint_shift
+  [WARN] [actinide_replenishment_mechanism_contradictions] unexpected field: repair_transitions
+  [WARN] [actinide_replenishment_mechanism_flat_control] unexpected field: fingerprint_shift
+  [WARN] [actinide_replenishment_mechanism_flat_control] unexpected field: repair_transitions
+  [WARN] [adjunctification_of_university_teaching_c0] unexpected field: fingerprint_shift
+  [WARN] [adjunctification_of_university_teaching_c0] unexpected field: repair_transitions
+  [WARN] [animal_status_kernel__property_reading] unexpected field: fingerprint_shift
+  [WARN] [animal_status_kernel__property_reading] unexpected field: repair_transitions
+  [WARN] [apoe4_mitochondrial_vulnerability] unexpected field: fingerprint_shift
+  [WARN] [apoe4_mitochondrial_vulnerability] unexpected field: repair_transitions
+  [WARN] [architectural_pattern_validity] unexpected field: fingerprint_shift
+  [WARN] [architectural_pattern_validity] unexpected field: repair_transitions
+  [WARN] [authoritative_specification_reading] unexpected field: fingerprint_shift
+  [WARN] [authoritative_specification_reading] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_authority__parliamentary_sovereignty_reading] unexpected field: fingerprint_shift
+  [WARN] [basic_law_interpretive_authority__parliamentary_sovereignty_reading] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_boundary__parliamentary_sovereignty_reading] unexpected field: fingerprint_shift
+  [WARN] [basic_law_interpretive_boundary__parliamentary_sovereignty_reading] unexpected field: repair_transitions
+  [WARN] [behavioral_adoption_friction] unexpected field: fingerprint_shift
+  [WARN] [behavioral_adoption_friction] unexpected field: repair_transitions
+  [WARN] [bitcoin_whitepaper_purpose__nakamoto_oracle_opacity] unexpected field: fingerprint_shift
+  [WARN] [bitcoin_whitepaper_purpose__nakamoto_oracle_opacity] unexpected field: repair_transitions
+  [WARN] [border_control_legitimacy__freedom_of_movement_primary] unexpected field: fingerprint_shift
+  [WARN] [border_control_legitimacy__freedom_of_movement_primary] unexpected field: repair_transitions
+  [WARN] [catastrophe_memory_kernel__boundary_maintenance_reading] unexpected field: fingerprint_shift
+  [WARN] [catastrophe_memory_kernel__boundary_maintenance_reading] unexpected field: repair_transitions
+  [WARN] [conceptual_framework_reading] unexpected field: fingerprint_shift
+  [WARN] [conceptual_framework_reading] unexpected field: repair_transitions
+  [WARN] [crypto_permissionless_reading] unexpected field: fingerprint_shift
+  [WARN] [crypto_permissionless_reading] unexpected field: repair_transitions
+  [WARN] [demographic_resource_allocation] unexpected field: fingerprint_shift
+  [WARN] [demographic_resource_allocation] unexpected field: repair_transitions
+  [WARN] [demographic_skill_mismatch_c0] unexpected field: fingerprint_shift
+  [WARN] [demographic_skill_mismatch_c0] unexpected field: repair_transitions
+  [WARN] [digital_money_legitimacy_contradictions] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_contradictions] unexpected field: repair_transitions
+  [WARN] [digital_money_legitimacy_flat_control] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_flat_control] unexpected field: repair_transitions
+  [WARN] [dispositional_reading] unexpected field: fingerprint_shift
+  [WARN] [dispositional_reading] unexpected field: repair_transitions
+  [WARN] [distributed_verification] unexpected field: fingerprint_shift
+  [WARN] [distributed_verification] unexpected field: repair_transitions
+  [WARN] [divine_legitimacy_substrate__folk_syncretistic_reading] unexpected field: fingerprint_shift
+  [WARN] [divine_legitimacy_substrate__folk_syncretistic_reading] unexpected field: repair_transitions
+  [WARN] [doomsday_clock_metric__hybrid_legitimacy_reading] unexpected field: fingerprint_shift
+  [WARN] [doomsday_clock_metric__hybrid_legitimacy_reading] unexpected field: repair_transitions
+  [WARN] [dueling_disappearance_mechanism__overdetermined_composite_reading] unexpected field: fingerprint_shift
+  [WARN] [dueling_disappearance_mechanism__overdetermined_composite_reading] unexpected field: repair_transitions
+  [WARN] [empty_shell_tolerance] unexpected field: fingerprint_shift
+  [WARN] [empty_shell_tolerance] unexpected field: repair_transitions
+  [WARN] [epistemic_collapse] unexpected field: fingerprint_shift
+  [WARN] [epistemic_collapse] unexpected field: repair_transitions
+  [WARN] [equal_protection_kernel__colorblind_reading] unexpected field: fingerprint_shift
+  [WARN] [equal_protection_kernel__colorblind_reading] unexpected field: repair_transitions
+  [WARN] [fictional_construct_reading] unexpected field: fingerprint_shift
+  [WARN] [fictional_construct_reading] unexpected field: repair_transitions
+  [WARN] [fourteenth_amendment_equal_protection__formal_equality_reading] unexpected field: fingerprint_shift
+  [WARN] [fourteenth_amendment_equal_protection__formal_equality_reading] unexpected field: repair_transitions
+  [WARN] [gendered_outcome_asymmetry] unexpected field: fingerprint_shift
+  [WARN] [gendered_outcome_asymmetry] unexpected field: repair_transitions
+  [WARN] [geopolitical_settlement_competition] unexpected field: fingerprint_shift
+  [WARN] [geopolitical_settlement_competition] unexpected field: repair_transitions
+  [WARN] [gita_kurukshetra_discourse__gandhian_allegorical_reading] unexpected field: fingerprint_shift
+  [WARN] [gita_kurukshetra_discourse__gandhian_allegorical_reading] unexpected field: repair_transitions
+  [WARN] [historical_treaty_substrate__stewardship_reading] unexpected field: fingerprint_shift
+  [WARN] [historical_treaty_substrate__stewardship_reading] unexpected field: repair_transitions
+  [WARN] [indexical_realism] unexpected field: fingerprint_shift
+  [WARN] [indexical_realism] unexpected field: repair_transitions
+  [WARN] [institutional_barrier_structure] unexpected field: fingerprint_shift
+  [WARN] [institutional_barrier_structure] unexpected field: repair_transitions
+  [WARN] [institutional_trust_erosion_c0] unexpected field: fingerprint_shift
+  [WARN] [institutional_trust_erosion_c0] unexpected field: repair_transitions
+  [WARN] [institutional_validation_reading] unexpected field: fingerprint_shift
+  [WARN] [institutional_validation_reading] unexpected field: repair_transitions
+  [WARN] [institutional_verification_collapse] unexpected field: fingerprint_shift
+  [WARN] [institutional_verification_collapse] unexpected field: repair_transitions
+  [WARN] [interactionist_reading] unexpected field: fingerprint_shift
+  [WARN] [interactionist_reading] unexpected field: repair_transitions
+  [WARN] [intervention_target_selection] unexpected field: fingerprint_shift
+  [WARN] [intervention_target_selection] unexpected field: repair_transitions
+  [WARN] [jewish_self_determination__indigenous_return_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_self_determination__indigenous_return_reading] unexpected field: repair_transitions
+  [WARN] [jewish_sovereignty_palestine__cultural_zionist_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__cultural_zionist_reading] unexpected field: repair_transitions
+  [WARN] [jewish_sovereignty_palestine__settler_colonial_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__settler_colonial_reading] unexpected field: repair_transitions
+  [WARN] [jewish_territorial_claim__labor_zionism_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_territorial_claim__labor_zionism_reading] unexpected field: repair_transitions
+  [WARN] [john_1_1_logos__non_incarnational_monotheist] unexpected field: fingerprint_shift
+  [WARN] [john_1_1_logos__non_incarnational_monotheist] unexpected field: repair_transitions
+  [WARN] [knowledge_legitimacy_biomedicine_contradictions] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_contradictions] unexpected field: repair_transitions
+  [WARN] [knowledge_legitimacy_biomedicine_flat_control] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_flat_control] unexpected field: repair_transitions
+  [WARN] [lausanne_minority_protections__guarantor_reading] unexpected field: fingerprint_shift
+  [WARN] [lausanne_minority_protections__guarantor_reading] unexpected field: repair_transitions
+  [WARN] [livelihood_security_reading] unexpected field: fingerprint_shift
+  [WARN] [livelihood_security_reading] unexpected field: repair_transitions
+  [WARN] [llm_synthesis_capacity] unexpected field: fingerprint_shift
+  [WARN] [llm_synthesis_capacity] unexpected field: repair_transitions
+  [WARN] [longevity_mismatch] unexpected field: fingerprint_shift
+  [WARN] [longevity_mismatch] unexpected field: repair_transitions
+  [WARN] [lycurgan_laws__demographic_trap_reading] unexpected field: fingerprint_shift
+  [WARN] [lycurgan_laws__demographic_trap_reading] unexpected field: repair_transitions
+  [WARN] [maat_order_principle__reciprocity_reading] unexpected field: fingerprint_shift
+  [WARN] [maat_order_principle__reciprocity_reading] unexpected field: repair_transitions
+  [WARN] [marriage_authority__judicial_harmonization_reading] unexpected field: fingerprint_shift
+  [WARN] [marriage_authority__judicial_harmonization_reading] unexpected field: repair_transitions
+  [WARN] [mitochondrial_demand_signal_deficiency] unexpected field: fingerprint_shift
+  [WARN] [mitochondrial_demand_signal_deficiency] unexpected field: repair_transitions
+  [WARN] [moral_causation_locus_contradictions] unexpected field: fingerprint_shift
+  [WARN] [moral_causation_locus_contradictions] unexpected field: repair_transitions
+  [WARN] [moral_causation_locus_flat_control] unexpected field: fingerprint_shift
+  [WARN] [moral_causation_locus_flat_control] unexpected field: repair_transitions
+  [WARN] [nad_precursor_bioavailability] unexpected field: fingerprint_shift
+  [WARN] [nad_precursor_bioavailability] unexpected field: repair_transitions
+  [WARN] [neutron_star_bombardment_reading] unexpected field: fingerprint_shift
+  [WARN] [neutron_star_bombardment_reading] unexpected field: repair_transitions
+  [WARN] [nicene_creed_authority__liturgical_habituation_reading] unexpected field: fingerprint_shift
+  [WARN] [nicene_creed_authority__liturgical_habituation_reading] unexpected field: repair_transitions
+  [WARN] [organization_floor_c0] unexpected field: fingerprint_shift
+  [WARN] [organization_floor_c0] unexpected field: repair_transitions
+  [WARN] [performance_legitimacy_contradictions] unexpected field: fingerprint_shift
+  [WARN] [performance_legitimacy_contradictions] unexpected field: repair_transitions
+  [WARN] [performance_legitimacy_flat_control] unexpected field: fingerprint_shift
+  [WARN] [performance_legitimacy_flat_control] unexpected field: repair_transitions
+  [WARN] [polaris_document_status_contradictions] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_contradictions] unexpected field: repair_transitions
+  [WARN] [polaris_document_status_flat_control] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_flat_control] unexpected field: repair_transitions
+  [WARN] [post_evidentiary] unexpected field: fingerprint_shift
+  [WARN] [post_evidentiary] unexpected field: repair_transitions
+  [WARN] [pragmatic_action_reading] unexpected field: fingerprint_shift
+  [WARN] [pragmatic_action_reading] unexpected field: repair_transitions
+  [WARN] [pre_public_initiative_reading] unexpected field: fingerprint_shift
+  [WARN] [pre_public_initiative_reading] unexpected field: repair_transitions
+  [WARN] [press_reformation_causality__strategic_deployment] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causality__strategic_deployment] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__mutual_shaping] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causation__mutual_shaping] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__strategic_deployment] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causation__strategic_deployment] unexpected field: repair_transitions
+  [WARN] [propagation_speed_asymmetry] unexpected field: fingerprint_shift
+  [WARN] [propagation_speed_asymmetry] unexpected field: repair_transitions
+  [WARN] [property_sector_overhang] unexpected field: fingerprint_shift
+  [WARN] [property_sector_overhang] unexpected field: repair_transitions
+  [WARN] [protein_anabolic_resistance] unexpected field: fingerprint_shift
+  [WARN] [protein_anabolic_resistance] unexpected field: repair_transitions
+  [WARN] [qualitative_development_reading] unexpected field: fingerprint_shift
+  [WARN] [qualitative_development_reading] unexpected field: repair_transitions
+  [WARN] [quantitative_growth_reading] unexpected field: fingerprint_shift
+  [WARN] [quantitative_growth_reading] unexpected field: repair_transitions
+  [WARN] [radiative_levitation_stratification] unexpected field: fingerprint_shift
+  [WARN] [radiative_levitation_stratification] unexpected field: repair_transitions
+  [WARN] [reading_acquisition_legitimacy__whole_language_meaning_primacy] unexpected field: fingerprint_shift
+  [WARN] [reading_acquisition_legitimacy__whole_language_meaning_primacy] unexpected field: repair_transitions
+  [WARN] [refugee_convention_text__expansive_humanitarian_reading] unexpected field: fingerprint_shift
+  [WARN] [refugee_convention_text__expansive_humanitarian_reading] unexpected field: repair_transitions
+  [WARN] [regulated_stablecoin_reading] unexpected field: fingerprint_shift
+  [WARN] [regulated_stablecoin_reading] unexpected field: repair_transitions
+  [WARN] [responsibility_preservation_mechanism] unexpected field: fingerprint_shift
+  [WARN] [responsibility_preservation_mechanism] unexpected field: repair_transitions
+  [WARN] [scale_ceiling_c0] unexpected field: fingerprint_shift
+  [WARN] [scale_ceiling_c0] unexpected field: repair_transitions
+  [WARN] [secession_legitimacy_boundary__constitutional_impossibility_reading] unexpected field: fingerprint_shift
+  [WARN] [secession_legitimacy_boundary__constitutional_impossibility_reading] unexpected field: repair_transitions
+  [WARN] [sex_gender_category__identity_reading] unexpected field: fingerprint_shift
+  [WARN] [sex_gender_category__identity_reading] unexpected field: repair_transitions
+  [WARN] [shinbutsu_ontological_commitment__incoherence_reading] unexpected field: fingerprint_shift
+  [WARN] [shinbutsu_ontological_commitment__incoherence_reading] unexpected field: repair_transitions
+  [WARN] [situational_reading] unexpected field: fingerprint_shift
+  [WARN] [situational_reading] unexpected field: repair_transitions
+  [WARN] [sovereign_cbdc_reading] unexpected field: fingerprint_shift
+  [WARN] [sovereign_cbdc_reading] unexpected field: repair_transitions
+  [WARN] [specification_binding_authority] unexpected field: fingerprint_shift
+  [WARN] [specification_binding_authority] unexpected field: repair_transitions
+  [WARN] [speech_protection_kernel__absolutist_reading] unexpected field: fingerprint_shift
+  [WARN] [speech_protection_kernel__absolutist_reading] unexpected field: repair_transitions
+  [WARN] [state_killing_legitimacy__abolition_reading] unexpected field: fingerprint_shift
+  [WARN] [state_killing_legitimacy__abolition_reading] unexpected field: repair_transitions
+  [WARN] [statutory_debt_ceiling__coordination_scaffold_reading] unexpected field: fingerprint_shift
+  [WARN] [statutory_debt_ceiling__coordination_scaffold_reading] unexpected field: repair_transitions
+  [WARN] [superheavy_decay_reading] unexpected field: fingerprint_shift
+  [WARN] [superheavy_decay_reading] unexpected field: repair_transitions
+  [WARN] [synthesis_infrastructure_gap] unexpected field: fingerprint_shift
+  [WARN] [synthesis_infrastructure_gap] unexpected field: repair_transitions
+  [WARN] [techno_nationalist_reading] unexpected field: fingerprint_shift
+  [WARN] [techno_nationalist_reading] unexpected field: repair_transitions
+  [WARN] [third_act_arbitrage] unexpected field: fingerprint_shift
+  [WARN] [third_act_arbitrage] unexpected field: repair_transitions
+  [WARN] [udhr_article_3__negative_liberty_reading] unexpected field: fingerprint_shift
+  [WARN] [udhr_article_3__negative_liberty_reading] unexpected field: repair_transitions
+  [WARN] [validation_judgment_separation] unexpected field: fingerprint_shift
+  [WARN] [validation_judgment_separation] unexpected field: repair_transitions
+  [WARN] [vedic_corpus_social_prescription__colonial_orientalist_reading] unexpected field: fingerprint_shift
+  [WARN] [vedic_corpus_social_prescription__colonial_orientalist_reading] unexpected field: repair_transitions
+  [WARN] [visual_evidentiary_authority_contradictions] unexpected field: fingerprint_shift
+  [WARN] [visual_evidentiary_authority_contradictions] unexpected field: repair_transitions
+  [WARN] [visual_evidentiary_authority_flat_control] unexpected field: fingerprint_shift
+  [WARN] [visual_evidentiary_authority_flat_control] unexpected field: repair_transitions
+  [WARN] [womens_financial_autonomy] unexpected field: fingerprint_shift
+  [WARN] [womens_financial_autonomy] unexpected field: repair_transitions
+  [WARN] [zero_mathematical_status__parmenidean_rejection] unexpected field: fingerprint_shift
+  [WARN] [zero_mathematical_status__parmenidean_rejection] unexpected field: repair_transitions
+  [WARN] [zero_mathematical_status__placeholder_reading] unexpected field: fingerprint_shift
+  [WARN] [zero_mathematical_status__placeholder_reading] unexpected field: repair_transitions
+  [WARN] [zionist_legitimacy_basis__national_liberation_reading] unexpected field: fingerprint_shift
+  [WARN] [zionist_legitimacy_basis__national_liberation_reading] unexpected field: repair_transitions
+[ENRICH] Writing enriched_pipeline.json...
+[ENRICH] Done. Bands: {'deep': 21, 'borderline': 74, 'moderate': 2}, tangled_psi computed: 44, game_theory: 75
+[BOOL] Loading data...
+Schema drift warnings (enriched_pipeline.json):
+  [WARN] [actinide_replenishment_mechanism_contradictions] unexpected field: fingerprint_shift
+  [WARN] [actinide_replenishment_mechanism_contradictions] unexpected field: repair_transitions
+  [WARN] [actinide_replenishment_mechanism_flat_control] unexpected field: fingerprint_shift
+  [WARN] [actinide_replenishment_mechanism_flat_control] unexpected field: repair_transitions
+  [WARN] [adjunctification_of_university_teaching_c0] unexpected field: fingerprint_shift
+  [WARN] [adjunctification_of_university_teaching_c0] unexpected field: repair_transitions
+  [WARN] [animal_status_kernel__property_reading] unexpected field: fingerprint_shift
+  [WARN] [animal_status_kernel__property_reading] unexpected field: repair_transitions
+  [WARN] [apoe4_mitochondrial_vulnerability] unexpected field: fingerprint_shift
+  [WARN] [apoe4_mitochondrial_vulnerability] unexpected field: repair_transitions
+  [WARN] [architectural_pattern_validity] unexpected field: fingerprint_shift
+  [WARN] [architectural_pattern_validity] unexpected field: repair_transitions
+  [WARN] [authoritative_specification_reading] unexpected field: fingerprint_shift
+  [WARN] [authoritative_specification_reading] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_authority__parliamentary_sovereignty_reading] unexpected field: fingerprint_shift
+  [WARN] [basic_law_interpretive_authority__parliamentary_sovereignty_reading] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_boundary__parliamentary_sovereignty_reading] unexpected field: fingerprint_shift
+  [WARN] [basic_law_interpretive_boundary__parliamentary_sovereignty_reading] unexpected field: repair_transitions
+  [WARN] [behavioral_adoption_friction] unexpected field: fingerprint_shift
+  [WARN] [behavioral_adoption_friction] unexpected field: repair_transitions
+  [WARN] [bitcoin_whitepaper_purpose__nakamoto_oracle_opacity] unexpected field: fingerprint_shift
+  [WARN] [bitcoin_whitepaper_purpose__nakamoto_oracle_opacity] unexpected field: repair_transitions
+  [WARN] [border_control_legitimacy__freedom_of_movement_primary] unexpected field: fingerprint_shift
+  [WARN] [border_control_legitimacy__freedom_of_movement_primary] unexpected field: repair_transitions
+  [WARN] [catastrophe_memory_kernel__boundary_maintenance_reading] unexpected field: fingerprint_shift
+  [WARN] [catastrophe_memory_kernel__boundary_maintenance_reading] unexpected field: repair_transitions
+  [WARN] [conceptual_framework_reading] unexpected field: fingerprint_shift
+  [WARN] [conceptual_framework_reading] unexpected field: repair_transitions
+  [WARN] [crypto_permissionless_reading] unexpected field: fingerprint_shift
+  [WARN] [crypto_permissionless_reading] unexpected field: repair_transitions
+[CONFIDENCE] Loading data...
+  [WARN] [demographic_resource_allocation] unexpected field: fingerprint_shift
+  [WARN] [demographic_resource_allocation] unexpected field: repair_transitions
+  [WARN] [demographic_skill_mismatch_c0] unexpected field: fingerprint_shift
+  [WARN] [demographic_skill_mismatch_c0] unexpected field: repair_transitions
+  [WARN] [digital_money_legitimacy_contradictions] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_contradictions] unexpected field: repair_transitions
+  [WARN] [digital_money_legitimacy_flat_control] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_flat_control] unexpected field: repair_transitions
+  [WARN] [dispositional_reading] unexpected field: fingerprint_shift
+  [WARN] [dispositional_reading] unexpected field: repair_transitions
+  [WARN] [distributed_verification] unexpected field: fingerprint_shift
+  [WARN] [distributed_verification] unexpected field: repair_transitions
+  [WARN] [divine_legitimacy_substrate__folk_syncretistic_reading] unexpected field: fingerprint_shift
+  [WARN] [divine_legitimacy_substrate__folk_syncretistic_reading] unexpected field: repair_transitions
+  [WARN] [doomsday_clock_metric__hybrid_legitimacy_reading] unexpected field: fingerprint_shift
+  [WARN] [doomsday_clock_metric__hybrid_legitimacy_reading] unexpected field: repair_transitions
+  [WARN] [dueling_disappearance_mechanism__overdetermined_composite_reading] unexpected field: fingerprint_shift
+  [WARN] [dueling_disappearance_mechanism__overdetermined_composite_reading] unexpected field: repair_transitions
+  [WARN] [empty_shell_tolerance] unexpected field: fingerprint_shift
+  [WARN] [empty_shell_tolerance] unexpected field: repair_transitions
+  [WARN] [epistemic_collapse] unexpected field: fingerprint_shift
+  [WARN] [epistemic_collapse] unexpected field: repair_transitions
+  [WARN] [equal_protection_kernel__colorblind_reading] unexpected field: fingerprint_shift
+  [WARN] [equal_protection_kernel__colorblind_reading] unexpected field: repair_transitions
+  [WARN] [fictional_construct_reading] unexpected field: fingerprint_shift
+  [WARN] [fictional_construct_reading] unexpected field: repair_transitions
+  [WARN] [fourteenth_amendment_equal_protection__formal_equality_reading] unexpected field: fingerprint_shift
+  [WARN] [fourteenth_amendment_equal_protection__formal_equality_reading] unexpected field: repair_transitions
+  [WARN] [gendered_outcome_asymmetry] unexpected field: fingerprint_shift
+  [WARN] [gendered_outcome_asymmetry] unexpected field: repair_transitions
+  [WARN] [geopolitical_settlement_competition] unexpected field: fingerprint_shift
+  [WARN] [geopolitical_settlement_competition] unexpected field: repair_transitions
+  [WARN] [gita_kurukshetra_discourse__gandhian_allegorical_reading] unexpected field: fingerprint_shift
+  [WARN] [gita_kurukshetra_discourse__gandhian_allegorical_reading] unexpected field: repair_transitions
+  [WARN] [historical_treaty_substrate__stewardship_reading] unexpected field: fingerprint_shift
+  [WARN] [historical_treaty_substrate__stewardship_reading] unexpected field: repair_transitions
+  [WARN] [indexical_realism] unexpected field: fingerprint_shift
+  [WARN] [indexical_realism] unexpected field: repair_transitions
+  [WARN] [institutional_barrier_structure] unexpected field: fingerprint_shift
+  [WARN] [institutional_barrier_structure] unexpected field: repair_transitions
+  [WARN] [institutional_trust_erosion_c0] unexpected field: fingerprint_shift
+  [WARN] [institutional_trust_erosion_c0] unexpected field: repair_transitions
+  [WARN] [institutional_validation_reading] unexpected field: fingerprint_shift
+  [WARN] [institutional_validation_reading] unexpected field: repair_transitions
+  [WARN] [institutional_verification_collapse] unexpected field: fingerprint_shift
+  [WARN] [institutional_verification_collapse] unexpected field: repair_transitions
+  [WARN] [interactionist_reading] unexpected field: fingerprint_shift
+  [WARN] [interactionist_reading] unexpected field: repair_transitions
+  [WARN] [intervention_target_selection] unexpected field: fingerprint_shift
+  [WARN] [intervention_target_selection] unexpected field: repair_transitions
+  [WARN] [jewish_self_determination__indigenous_return_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_self_determination__indigenous_return_reading] unexpected field: repair_transitions
+  [WARN] [jewish_sovereignty_palestine__cultural_zionist_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__cultural_zionist_reading] unexpected field: repair_transitions
+  [WARN] [jewish_sovereignty_palestine__settler_colonial_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__settler_colonial_reading] unexpected field: repair_transitions
+  [WARN] [jewish_territorial_claim__labor_zionism_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_territorial_claim__labor_zionism_reading] unexpected field: repair_transitions
+  [WARN] [john_1_1_logos__non_incarnational_monotheist] unexpected field: fingerprint_shift
+  [WARN] [john_1_1_logos__non_incarnational_monotheist] unexpected field: repair_transitions
+[CONFIDENCE] Loaded 104 constraints.
+  [WARN] [knowledge_legitimacy_biomedicine_contradictions] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_contradictions] unexpected field: repair_transitions
+[TANGLED] Loading data...
+  [WARN] [knowledge_legitimacy_biomedicine_flat_control] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_flat_control] unexpected field: repair_transitions
+  [WARN] [lausanne_minority_protections__guarantor_reading] unexpected field: fingerprint_shift
+  [WARN] [lausanne_minority_protections__guarantor_reading] unexpected field: repair_transitions
+  [WARN] [livelihood_security_reading] unexpected field: fingerprint_shift
+  [WARN] [livelihood_security_reading] unexpected field: repair_transitions
+Schema drift warnings (enriched_pipeline.json):
+  [WARN] [llm_synthesis_capacity] unexpected field: fingerprint_shift
+  [WARN] [llm_synthesis_capacity] unexpected field: repair_transitions
+  [WARN] [actinide_replenishment_mechanism_contradictions] unexpected field: fingerprint_shift
+  [WARN] [actinide_replenishment_mechanism_contradictions] unexpected field: repair_transitions
+[TANGLED] Loaded 104 constraints.
+[TANGLED] Running MaxEnt classifier...
+  [WARN] [longevity_mismatch] unexpected field: fingerprint_shift
+  [WARN] [longevity_mismatch] unexpected field: repair_transitions
+[TANGLED] Computed 104 distributions.
+  [WARN] [lycurgan_laws__demographic_trap_reading] unexpected field: fingerprint_shift
+  [WARN] [lycurgan_laws__demographic_trap_reading] unexpected field: repair_transitions
+  [WARN] [actinide_replenishment_mechanism_flat_control] unexpected field: fingerprint_shift
+  [WARN] [actinide_replenishment_mechanism_flat_control] unexpected field: repair_transitions
+  [WARN] [maat_order_principle__reciprocity_reading] unexpected field: fingerprint_shift
+  [WARN] [maat_order_principle__reciprocity_reading] unexpected field: repair_transitions
+  [WARN] [adjunctification_of_university_teaching_c0] unexpected field: fingerprint_shift
+  [WARN] [adjunctification_of_university_teaching_c0] unexpected field: repair_transitions
+Schema drift warnings (enriched_pipeline.json):
+  [WARN] [marriage_authority__judicial_harmonization_reading] unexpected field: fingerprint_shift
+  [WARN] [marriage_authority__judicial_harmonization_reading] unexpected field: repair_transitions
+  [WARN] [actinide_replenishment_mechanism_contradictions] unexpected field: fingerprint_shift
+  [WARN] [actinide_replenishment_mechanism_contradictions] unexpected field: repair_transitions
+  [WARN] [mitochondrial_demand_signal_deficiency] unexpected field: fingerprint_shift
+  [WARN] [mitochondrial_demand_signal_deficiency] unexpected field: repair_transitions
+  [WARN] [actinide_replenishment_mechanism_flat_control] unexpected field: fingerprint_shift
+  [WARN] [actinide_replenishment_mechanism_flat_control] unexpected field: repair_transitions
+  [WARN] [animal_status_kernel__property_reading] unexpected field: fingerprint_shift
+  [WARN] [animal_status_kernel__property_reading] unexpected field: repair_transitions
+  [WARN] [moral_causation_locus_contradictions] unexpected field: fingerprint_shift
+  [WARN] [moral_causation_locus_contradictions] unexpected field: repair_transitions
+  [WARN] [apoe4_mitochondrial_vulnerability] unexpected field: fingerprint_shift
+  [WARN] [apoe4_mitochondrial_vulnerability] unexpected field: repair_transitions
+  [WARN] [moral_causation_locus_flat_control] unexpected field: fingerprint_shift
+  [WARN] [moral_causation_locus_flat_control] unexpected field: repair_transitions
+  [WARN] [adjunctification_of_university_teaching_c0] unexpected field: fingerprint_shift
+  [WARN] [architectural_pattern_validity] unexpected field: fingerprint_shift
+  [WARN] [architectural_pattern_validity] unexpected field: repair_transitions
+  [WARN] [adjunctification_of_university_teaching_c0] unexpected field: repair_transitions
+  [WARN] [animal_status_kernel__property_reading] unexpected field: fingerprint_shift
+  [WARN] [animal_status_kernel__property_reading] unexpected field: repair_transitions
+  [WARN] [nad_precursor_bioavailability] unexpected field: fingerprint_shift
+  [WARN] [nad_precursor_bioavailability] unexpected field: repair_transitions
+  [WARN] [authoritative_specification_reading] unexpected field: fingerprint_shift
+  [WARN] [authoritative_specification_reading] unexpected field: repair_transitions
+  [WARN] [neutron_star_bombardment_reading] unexpected field: fingerprint_shift
+  [WARN] [apoe4_mitochondrial_vulnerability] unexpected field: fingerprint_shift
+  [WARN] [neutron_star_bombardment_reading] unexpected field: repair_transitions
+  [WARN] [apoe4_mitochondrial_vulnerability] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_authority__parliamentary_sovereignty_reading] unexpected field: fingerprint_shift
+  [WARN] [basic_law_interpretive_authority__parliamentary_sovereignty_reading] unexpected field: repair_transitions
+  [WARN] [architectural_pattern_validity] unexpected field: fingerprint_shift
+  [WARN] [architectural_pattern_validity] unexpected field: repair_transitions
+  [WARN] [nicene_creed_authority__liturgical_habituation_reading] unexpected field: fingerprint_shift
+  [WARN] [nicene_creed_authority__liturgical_habituation_reading] unexpected field: repair_transitions
+  [WARN] [authoritative_specification_reading] unexpected field: fingerprint_shift
+  [WARN] [authoritative_specification_reading] unexpected field: repair_transitions
+  [WARN] [organization_floor_c0] unexpected field: fingerprint_shift
+  [WARN] [organization_floor_c0] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_authority__parliamentary_sovereignty_reading] unexpected field: fingerprint_shift
+  [WARN] [basic_law_interpretive_boundary__parliamentary_sovereignty_reading] unexpected field: fingerprint_shift
+  [WARN] [basic_law_interpretive_boundary__parliamentary_sovereignty_reading] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_authority__parliamentary_sovereignty_reading] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_boundary__parliamentary_sovereignty_reading] unexpected field: fingerprint_shift
+  [WARN] [behavioral_adoption_friction] unexpected field: fingerprint_shift
+  [WARN] [behavioral_adoption_friction] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_boundary__parliamentary_sovereignty_reading] unexpected field: repair_transitions
+  [WARN] [performance_legitimacy_contradictions] unexpected field: fingerprint_shift
+  [WARN] [performance_legitimacy_contradictions] unexpected field: repair_transitions
+  [WARN] [bitcoin_whitepaper_purpose__nakamoto_oracle_opacity] unexpected field: fingerprint_shift
+  [WARN] [behavioral_adoption_friction] unexpected field: fingerprint_shift
+  [WARN] [behavioral_adoption_friction] unexpected field: repair_transitions
+  [WARN] [bitcoin_whitepaper_purpose__nakamoto_oracle_opacity] unexpected field: repair_transitions
+  [WARN] [border_control_legitimacy__freedom_of_movement_primary] unexpected field: fingerprint_shift
+  [WARN] [border_control_legitimacy__freedom_of_movement_primary] unexpected field: repair_transitions
+  [WARN] [performance_legitimacy_flat_control] unexpected field: fingerprint_shift
+  [WARN] [performance_legitimacy_flat_control] unexpected field: repair_transitions
+  [WARN] [catastrophe_memory_kernel__boundary_maintenance_reading] unexpected field: fingerprint_shift
+  [WARN] [bitcoin_whitepaper_purpose__nakamoto_oracle_opacity] unexpected field: fingerprint_shift
+  [WARN] [catastrophe_memory_kernel__boundary_maintenance_reading] unexpected field: repair_transitions
+  [WARN] [bitcoin_whitepaper_purpose__nakamoto_oracle_opacity] unexpected field: repair_transitions
+  [WARN] [conceptual_framework_reading] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_contradictions] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_contradictions] unexpected field: repair_transitions
+  [WARN] [conceptual_framework_reading] unexpected field: repair_transitions
+  [WARN] [border_control_legitimacy__freedom_of_movement_primary] unexpected field: fingerprint_shift
+  [WARN] [border_control_legitimacy__freedom_of_movement_primary] unexpected field: repair_transitions
+  [WARN] [polaris_document_status_flat_control] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_flat_control] unexpected field: repair_transitions
+  [WARN] [crypto_permissionless_reading] unexpected field: fingerprint_shift
+  [WARN] [catastrophe_memory_kernel__boundary_maintenance_reading] unexpected field: fingerprint_shift
+  [WARN] [catastrophe_memory_kernel__boundary_maintenance_reading] unexpected field: repair_transitions
+  [WARN] [post_evidentiary] unexpected field: fingerprint_shift
+  [WARN] [post_evidentiary] unexpected field: repair_transitions
+  [WARN] [crypto_permissionless_reading] unexpected field: repair_transitions
+  [WARN] [conceptual_framework_reading] unexpected field: fingerprint_shift
+  [WARN] [demographic_resource_allocation] unexpected field: fingerprint_shift
+  [WARN] [demographic_resource_allocation] unexpected field: repair_transitions
+  [WARN] [conceptual_framework_reading] unexpected field: repair_transitions
+  [WARN] [crypto_permissionless_reading] unexpected field: fingerprint_shift
+  [WARN] [demographic_skill_mismatch_c0] unexpected field: fingerprint_shift
+  [WARN] [crypto_permissionless_reading] unexpected field: repair_transitions
+  [WARN] [demographic_skill_mismatch_c0] unexpected field: repair_transitions
+  [WARN] [demographic_resource_allocation] unexpected field: fingerprint_shift
+  [WARN] [demographic_resource_allocation] unexpected field: repair_transitions
+  [WARN] [pragmatic_action_reading] unexpected field: fingerprint_shift
+  [WARN] [pragmatic_action_reading] unexpected field: repair_transitions
+  [WARN] [demographic_skill_mismatch_c0] unexpected field: fingerprint_shift
+  [WARN] [demographic_skill_mismatch_c0] unexpected field: repair_transitions
+  [WARN] [digital_money_legitimacy_contradictions] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_contradictions] unexpected field: repair_transitions
+  [WARN] [digital_money_legitimacy_contradictions] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_contradictions] unexpected field: repair_transitions
+  [WARN] [pre_public_initiative_reading] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_flat_control] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_flat_control] unexpected field: repair_transitions
+  [WARN] [pre_public_initiative_reading] unexpected field: repair_transitions
+  [WARN] [press_reformation_causality__strategic_deployment] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_flat_control] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_flat_control] unexpected field: repair_transitions
+  [WARN] [press_reformation_causality__strategic_deployment] unexpected field: repair_transitions
+  [WARN] [dispositional_reading] unexpected field: fingerprint_shift
+  [WARN] [dispositional_reading] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__mutual_shaping] unexpected field: fingerprint_shift
+  [WARN] [dispositional_reading] unexpected field: fingerprint_shift
+  [WARN] [dispositional_reading] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__mutual_shaping] unexpected field: repair_transitions
+  [WARN] [distributed_verification] unexpected field: fingerprint_shift
+  [WARN] [distributed_verification] unexpected field: repair_transitions
+  [WARN] [distributed_verification] unexpected field: fingerprint_shift
+  [WARN] [distributed_verification] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__strategic_deployment] unexpected field: fingerprint_shift
+  [WARN] [divine_legitimacy_substrate__folk_syncretistic_reading] unexpected field: fingerprint_shift
+  [WARN] [divine_legitimacy_substrate__folk_syncretistic_reading] unexpected field: repair_transitions
+  [WARN] [divine_legitimacy_substrate__folk_syncretistic_reading] unexpected field: fingerprint_shift
+  [WARN] [divine_legitimacy_substrate__folk_syncretistic_reading] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__strategic_deployment] unexpected field: repair_transitions
+  [WARN] [doomsday_clock_metric__hybrid_legitimacy_reading] unexpected field: fingerprint_shift
+  [WARN] [doomsday_clock_metric__hybrid_legitimacy_reading] unexpected field: repair_transitions
+  [WARN] [propagation_speed_asymmetry] unexpected field: fingerprint_shift
+  [WARN] [dueling_disappearance_mechanism__overdetermined_composite_reading] unexpected field: fingerprint_shift
+  [WARN] [dueling_disappearance_mechanism__overdetermined_composite_reading] unexpected field: repair_transitions
+  [WARN] [doomsday_clock_metric__hybrid_legitimacy_reading] unexpected field: fingerprint_shift
+  [WARN] [propagation_speed_asymmetry] unexpected field: repair_transitions
+  [WARN] [doomsday_clock_metric__hybrid_legitimacy_reading] unexpected field: repair_transitions
+  [WARN] [property_sector_overhang] unexpected field: fingerprint_shift
+  [WARN] [dueling_disappearance_mechanism__overdetermined_composite_reading] unexpected field: fingerprint_shift
+  [WARN] [empty_shell_tolerance] unexpected field: fingerprint_shift
+  [WARN] [property_sector_overhang] unexpected field: repair_transitions
+  [WARN] [dueling_disappearance_mechanism__overdetermined_composite_reading] unexpected field: repair_transitions
+  [WARN] [empty_shell_tolerance] unexpected field: repair_transitions
+  [WARN] [empty_shell_tolerance] unexpected field: fingerprint_shift
+  [WARN] [protein_anabolic_resistance] unexpected field: fingerprint_shift
+  [WARN] [protein_anabolic_resistance] unexpected field: repair_transitions
+  [WARN] [epistemic_collapse] unexpected field: fingerprint_shift
+  [WARN] [epistemic_collapse] unexpected field: repair_transitions
+  [WARN] [empty_shell_tolerance] unexpected field: repair_transitions
+  [WARN] [qualitative_development_reading] unexpected field: fingerprint_shift
+  [WARN] [qualitative_development_reading] unexpected field: repair_transitions
+  [WARN] [equal_protection_kernel__colorblind_reading] unexpected field: fingerprint_shift
+  [WARN] [epistemic_collapse] unexpected field: fingerprint_shift
+  [WARN] [epistemic_collapse] unexpected field: repair_transitions
+  [WARN] [equal_protection_kernel__colorblind_reading] unexpected field: repair_transitions
+  [WARN] [quantitative_growth_reading] unexpected field: fingerprint_shift
+  [WARN] [fictional_construct_reading] unexpected field: fingerprint_shift
+  [WARN] [fictional_construct_reading] unexpected field: repair_transitions
+  [WARN] [equal_protection_kernel__colorblind_reading] unexpected field: fingerprint_shift
+  [WARN] [equal_protection_kernel__colorblind_reading] unexpected field: repair_transitions
+  [WARN] [fourteenth_amendment_equal_protection__formal_equality_reading] unexpected field: fingerprint_shift
+  [WARN] [fourteenth_amendment_equal_protection__formal_equality_reading] unexpected field: repair_transitions
+  [WARN] [quantitative_growth_reading] unexpected field: repair_transitions
+  [WARN] [radiative_levitation_stratification] unexpected field: fingerprint_shift
+  [WARN] [radiative_levitation_stratification] unexpected field: repair_transitions
+  [WARN] [fictional_construct_reading] unexpected field: fingerprint_shift
+  [WARN] [fictional_construct_reading] unexpected field: repair_transitions
+  [WARN] [gendered_outcome_asymmetry] unexpected field: fingerprint_shift
+  [WARN] [gendered_outcome_asymmetry] unexpected field: repair_transitions
+  [WARN] [reading_acquisition_legitimacy__whole_language_meaning_primacy] unexpected field: fingerprint_shift
+  [WARN] [reading_acquisition_legitimacy__whole_language_meaning_primacy] unexpected field: repair_transitions
+  [WARN] [geopolitical_settlement_competition] unexpected field: fingerprint_shift
+  [WARN] [geopolitical_settlement_competition] unexpected field: repair_transitions
+  [WARN] [refugee_convention_text__expansive_humanitarian_reading] unexpected field: fingerprint_shift
+  [WARN] [fourteenth_amendment_equal_protection__formal_equality_reading] unexpected field: fingerprint_shift
+  [WARN] [fourteenth_amendment_equal_protection__formal_equality_reading] unexpected field: repair_transitions
+  [WARN] [refugee_convention_text__expansive_humanitarian_reading] unexpected field: repair_transitions
+  [WARN] [gendered_outcome_asymmetry] unexpected field: fingerprint_shift
+  [WARN] [gita_kurukshetra_discourse__gandhian_allegorical_reading] unexpected field: fingerprint_shift
+  [WARN] [gita_kurukshetra_discourse__gandhian_allegorical_reading] unexpected field: repair_transitions
+  [WARN] [regulated_stablecoin_reading] unexpected field: fingerprint_shift
+  [WARN] [gendered_outcome_asymmetry] unexpected field: repair_transitions
+  [WARN] [regulated_stablecoin_reading] unexpected field: repair_transitions
+  [WARN] [geopolitical_settlement_competition] unexpected field: fingerprint_shift
+  [WARN] [geopolitical_settlement_competition] unexpected field: repair_transitions
+  [WARN] [responsibility_preservation_mechanism] unexpected field: fingerprint_shift
+  [WARN] [responsibility_preservation_mechanism] unexpected field: repair_transitions
+  [WARN] [historical_treaty_substrate__stewardship_reading] unexpected field: fingerprint_shift
+  [WARN] [scale_ceiling_c0] unexpected field: fingerprint_shift
+  [WARN] [gita_kurukshetra_discourse__gandhian_allegorical_reading] unexpected field: fingerprint_shift
+  [WARN] [gita_kurukshetra_discourse__gandhian_allegorical_reading] unexpected field: repair_transitions
+  [WARN] [scale_ceiling_c0] unexpected field: repair_transitions
+  [WARN] [historical_treaty_substrate__stewardship_reading] unexpected field: repair_transitions
+  [WARN] [secession_legitimacy_boundary__constitutional_impossibility_reading] unexpected field: fingerprint_shift
+  [WARN] [secession_legitimacy_boundary__constitutional_impossibility_reading] unexpected field: repair_transitions
+  [WARN] [indexical_realism] unexpected field: fingerprint_shift
+  [WARN] [historical_treaty_substrate__stewardship_reading] unexpected field: fingerprint_shift
+  [WARN] [indexical_realism] unexpected field: repair_transitions
+  [WARN] [historical_treaty_substrate__stewardship_reading] unexpected field: repair_transitions
+  [WARN] [institutional_barrier_structure] unexpected field: fingerprint_shift
+  [WARN] [indexical_realism] unexpected field: fingerprint_shift
+  [WARN] [indexical_realism] unexpected field: repair_transitions
+  [WARN] [sex_gender_category__identity_reading] unexpected field: fingerprint_shift
+  [WARN] [sex_gender_category__identity_reading] unexpected field: repair_transitions
+  [WARN] [institutional_barrier_structure] unexpected field: repair_transitions
+  [WARN] [institutional_barrier_structure] unexpected field: fingerprint_shift
+  [WARN] [institutional_barrier_structure] unexpected field: repair_transitions
+  [WARN] [shinbutsu_ontological_commitment__incoherence_reading] unexpected field: fingerprint_shift
+  [WARN] [shinbutsu_ontological_commitment__incoherence_reading] unexpected field: repair_transitions
+  [WARN] [institutional_trust_erosion_c0] unexpected field: fingerprint_shift
+  [WARN] [institutional_trust_erosion_c0] unexpected field: repair_transitions
+  [WARN] [institutional_trust_erosion_c0] unexpected field: fingerprint_shift
+  [WARN] [institutional_trust_erosion_c0] unexpected field: repair_transitions
+  [WARN] [situational_reading] unexpected field: fingerprint_shift
+  [WARN] [institutional_validation_reading] unexpected field: fingerprint_shift
+  [WARN] [situational_reading] unexpected field: repair_transitions
+  [WARN] [institutional_validation_reading] unexpected field: repair_transitions
+  [WARN] [sovereign_cbdc_reading] unexpected field: fingerprint_shift
+  [WARN] [institutional_validation_reading] unexpected field: fingerprint_shift
+  [WARN] [sovereign_cbdc_reading] unexpected field: repair_transitions
+  [WARN] [institutional_validation_reading] unexpected field: repair_transitions
+  [WARN] [institutional_verification_collapse] unexpected field: fingerprint_shift
+  [WARN] [institutional_verification_collapse] unexpected field: repair_transitions
+  [WARN] [specification_binding_authority] unexpected field: fingerprint_shift
+  [WARN] [specification_binding_authority] unexpected field: repair_transitions
+  [WARN] [interactionist_reading] unexpected field: fingerprint_shift
+  [WARN] [interactionist_reading] unexpected field: repair_transitions
+  [WARN] [institutional_verification_collapse] unexpected field: fingerprint_shift
+  [WARN] [institutional_verification_collapse] unexpected field: repair_transitions
+  [WARN] [speech_protection_kernel__absolutist_reading] unexpected field: fingerprint_shift
+  [WARN] [speech_protection_kernel__absolutist_reading] unexpected field: repair_transitions
+  [WARN] [interactionist_reading] unexpected field: fingerprint_shift
+  [WARN] [interactionist_reading] unexpected field: repair_transitions
+  [WARN] [intervention_target_selection] unexpected field: fingerprint_shift
+  [WARN] [intervention_target_selection] unexpected field: repair_transitions
+  [WARN] [state_killing_legitimacy__abolition_reading] unexpected field: fingerprint_shift
+  [WARN] [state_killing_legitimacy__abolition_reading] unexpected field: repair_transitions
+  [WARN] [jewish_self_determination__indigenous_return_reading] unexpected field: fingerprint_shift
+  [WARN] [intervention_target_selection] unexpected field: fingerprint_shift
+  [WARN] [intervention_target_selection] unexpected field: repair_transitions
+  [WARN] [jewish_self_determination__indigenous_return_reading] unexpected field: repair_transitions
+  [WARN] [statutory_debt_ceiling__coordination_scaffold_reading] unexpected field: fingerprint_shift
+  [WARN] [statutory_debt_ceiling__coordination_scaffold_reading] unexpected field: repair_transitions
+  [WARN] [jewish_self_determination__indigenous_return_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__cultural_zionist_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__cultural_zionist_reading] unexpected field: repair_transitions
+  [WARN] [jewish_self_determination__indigenous_return_reading] unexpected field: repair_transitions
+  [WARN] [jewish_sovereignty_palestine__settler_colonial_reading] unexpected field: fingerprint_shift
+  [WARN] [superheavy_decay_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__settler_colonial_reading] unexpected field: repair_transitions
+  [WARN] [superheavy_decay_reading] unexpected field: repair_transitions
+  [WARN] [jewish_sovereignty_palestine__cultural_zionist_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__cultural_zionist_reading] unexpected field: repair_transitions
+  [WARN] [jewish_territorial_claim__labor_zionism_reading] unexpected field: fingerprint_shift
+  [WARN] [synthesis_infrastructure_gap] unexpected field: fingerprint_shift
+  [WARN] [jewish_territorial_claim__labor_zionism_reading] unexpected field: repair_transitions
+  [WARN] [synthesis_infrastructure_gap] unexpected field: repair_transitions
+  [WARN] [john_1_1_logos__non_incarnational_monotheist] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__settler_colonial_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__settler_colonial_reading] unexpected field: repair_transitions
+  [WARN] [john_1_1_logos__non_incarnational_monotheist] unexpected field: repair_transitions
+  [WARN] [techno_nationalist_reading] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_contradictions] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_contradictions] unexpected field: repair_transitions
+  [WARN] [techno_nationalist_reading] unexpected field: repair_transitions
+  [WARN] [jewish_territorial_claim__labor_zionism_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_territorial_claim__labor_zionism_reading] unexpected field: repair_transitions
+  [WARN] [knowledge_legitimacy_biomedicine_flat_control] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_flat_control] unexpected field: repair_transitions
+  [WARN] [third_act_arbitrage] unexpected field: fingerprint_shift
+  [WARN] [third_act_arbitrage] unexpected field: repair_transitions
+  [WARN] [john_1_1_logos__non_incarnational_monotheist] unexpected field: fingerprint_shift
+  [WARN] [john_1_1_logos__non_incarnational_monotheist] unexpected field: repair_transitions
+  [WARN] [udhr_article_3__negative_liberty_reading] unexpected field: fingerprint_shift
+  [WARN] [udhr_article_3__negative_liberty_reading] unexpected field: repair_transitions
+  [WARN] [knowledge_legitimacy_biomedicine_contradictions] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_contradictions] unexpected field: repair_transitions
+  [WARN] [lausanne_minority_protections__guarantor_reading] unexpected field: fingerprint_shift
+  [WARN] [validation_judgment_separation] unexpected field: fingerprint_shift
+  [WARN] [validation_judgment_separation] unexpected field: repair_transitions
+  [WARN] [knowledge_legitimacy_biomedicine_flat_control] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_flat_control] unexpected field: repair_transitions
+  [WARN] [lausanne_minority_protections__guarantor_reading] unexpected field: repair_transitions
+  [WARN] [vedic_corpus_social_prescription__colonial_orientalist_reading] unexpected field: fingerprint_shift
+  [WARN] [vedic_corpus_social_prescription__colonial_orientalist_reading] unexpected field: repair_transitions
+  [WARN] [livelihood_security_reading] unexpected field: fingerprint_shift
+  [WARN] [livelihood_security_reading] unexpected field: repair_transitions
+  [WARN] [visual_evidentiary_authority_contradictions] unexpected field: fingerprint_shift
+  [WARN] [lausanne_minority_protections__guarantor_reading] unexpected field: fingerprint_shift
+  [WARN] [lausanne_minority_protections__guarantor_reading] unexpected field: repair_transitions
+  [WARN] [visual_evidentiary_authority_contradictions] unexpected field: repair_transitions
+  [WARN] [llm_synthesis_capacity] unexpected field: fingerprint_shift
+  [WARN] [visual_evidentiary_authority_flat_control] unexpected field: fingerprint_shift
+  [WARN] [visual_evidentiary_authority_flat_control] unexpected field: repair_transitions
+  [WARN] [llm_synthesis_capacity] unexpected field: repair_transitions
+  [WARN] [livelihood_security_reading] unexpected field: fingerprint_shift
+  [WARN] [livelihood_security_reading] unexpected field: repair_transitions
+  [WARN] [womens_financial_autonomy] unexpected field: fingerprint_shift
+  [WARN] [womens_financial_autonomy] unexpected field: repair_transitions
+  [WARN] [longevity_mismatch] unexpected field: fingerprint_shift
+  [WARN] [longevity_mismatch] unexpected field: repair_transitions
+  [WARN] [llm_synthesis_capacity] unexpected field: fingerprint_shift
+  [WARN] [llm_synthesis_capacity] unexpected field: repair_transitions
+  [WARN] [lycurgan_laws__demographic_trap_reading] unexpected field: fingerprint_shift
+  [WARN] [longevity_mismatch] unexpected field: fingerprint_shift
+  [WARN] [longevity_mismatch] unexpected field: repair_transitions
+  [WARN] [lycurgan_laws__demographic_trap_reading] unexpected field: repair_transitions
+  [WARN] [zero_mathematical_status__parmenidean_rejection] unexpected field: fingerprint_shift
+  [WARN] [zero_mathematical_status__parmenidean_rejection] unexpected field: repair_transitions
+  [WARN] [lycurgan_laws__demographic_trap_reading] unexpected field: fingerprint_shift
+  [WARN] [lycurgan_laws__demographic_trap_reading] unexpected field: repair_transitions
+  [WARN] [maat_order_principle__reciprocity_reading] unexpected field: fingerprint_shift
+  [WARN] [maat_order_principle__reciprocity_reading] unexpected field: repair_transitions
+  [WARN] [zero_mathematical_status__placeholder_reading] unexpected field: fingerprint_shift
+  [WARN] [zero_mathematical_status__placeholder_reading] unexpected field: repair_transitions
+  [WARN] [marriage_authority__judicial_harmonization_reading] unexpected field: fingerprint_shift
+  [WARN] [marriage_authority__judicial_harmonization_reading] unexpected field: repair_transitions
+  [WARN] [zionist_legitimacy_basis__national_liberation_reading] unexpected field: fingerprint_shift
+  [WARN] [zionist_legitimacy_basis__national_liberation_reading] unexpected field: repair_transitions
+  [WARN] [maat_order_principle__reciprocity_reading] unexpected field: fingerprint_shift
+  [WARN] [maat_order_principle__reciprocity_reading] unexpected field: repair_transitions
+  [WARN] [mitochondrial_demand_signal_deficiency] unexpected field: fingerprint_shift
+  [WARN] [mitochondrial_demand_signal_deficiency] unexpected field: repair_transitions
+  [WARN] [marriage_authority__judicial_harmonization_reading] unexpected field: fingerprint_shift
+  [WARN] [marriage_authority__judicial_harmonization_reading] unexpected field: repair_transitions
+  [WARN] [moral_causation_locus_contradictions] unexpected field: fingerprint_shift
+  [WARN] [moral_causation_locus_contradictions] unexpected field: repair_transitions
+  [WARN] [mitochondrial_demand_signal_deficiency] unexpected field: fingerprint_shift
+  [WARN] [mitochondrial_demand_signal_deficiency] unexpected field: repair_transitions
+  [WARN] [moral_causation_locus_flat_control] unexpected field: fingerprint_shift
+  [WARN] [moral_causation_locus_flat_control] unexpected field: repair_transitions
+[BOOL] Loaded 97 constraints.
+[BOOL] Phase 1: Extracting boolean feature values...
+  [WARN] [moral_causation_locus_contradictions] unexpected field: fingerprint_shift
+  [WARN] [moral_causation_locus_contradictions] unexpected field: repair_transitions
+[BOOL]   emerges_naturally: 16 true, 81 false
+[BOOL]   requires_active_enforcement: 61 true, 36 false
+  [WARN] [moral_causation_locus_flat_control] unexpected field: fingerprint_shift
+  [WARN] [moral_causation_locus_flat_control] unexpected field: repair_transitions
+  [WARN] [nad_precursor_bioavailability] unexpected field: fingerprint_shift
+  [WARN] [nad_precursor_bioavailability] unexpected field: repair_transitions
+[BOOL]   has_coordination_function: 96 true, 1 false
+  [WARN] [neutron_star_bombardment_reading] unexpected field: fingerprint_shift
+  [WARN] [neutron_star_bombardment_reading] unexpected field: repair_transitions
+[BOOL]   has_asymmetric_extraction: 81 true, 16 false
+[BOOL]   natural_law_without_beneficiary: 0 true, 97 false
+  [WARN] [nad_precursor_bioavailability] unexpected field: fingerprint_shift
+  [WARN] [nicene_creed_authority__liturgical_habituation_reading] unexpected field: fingerprint_shift
+  [WARN] [nad_precursor_bioavailability] unexpected field: repair_transitions
+  [WARN] [nicene_creed_authority__liturgical_habituation_reading] unexpected field: repair_transitions
+  [WARN] [neutron_star_bombardment_reading] unexpected field: fingerprint_shift
+  [WARN] [neutron_star_bombardment_reading] unexpected field: repair_transitions
+  [WARN] [organization_floor_c0] unexpected field: fingerprint_shift
+  [WARN] [organization_floor_c0] unexpected field: repair_transitions
+[BOOL]   is_constructed: 97 true, 0 false
+[BOOL] Phase 2: Computing independence metrics...
+  [WARN] [nicene_creed_authority__liturgical_habituation_reading] unexpected field: fingerprint_shift
+  [WARN] [nicene_creed_authority__liturgical_habituation_reading] unexpected field: repair_transitions
+  [WARN] [performance_legitimacy_contradictions] unexpected field: fingerprint_shift
+  [WARN] [performance_legitimacy_contradictions] unexpected field: repair_transitions
+[BOOL]   emerges_naturally: independence = 0.000
+[BOOL]   requires_active_enforcement: independence = 0.116
+  [WARN] [organization_floor_c0] unexpected field: fingerprint_shift
+  [WARN] [organization_floor_c0] unexpected field: repair_transitions
+[BOOL]   has_coordination_function: independence = 0.020
+  [WARN] [performance_legitimacy_flat_control] unexpected field: fingerprint_shift
+[BOOL]   has_asymmetric_extraction: independence = 0.200
+  [WARN] [performance_legitimacy_flat_control] unexpected field: repair_transitions
+[BOOL]   natural_law_without_beneficiary: independence = 0.000
+  [WARN] [performance_legitimacy_contradictions] unexpected field: fingerprint_shift
+[BOOL]   is_constructed: independence = 0.000
+  [WARN] [performance_legitimacy_contradictions] unexpected field: repair_transitions
+  [WARN] [polaris_document_status_contradictions] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_contradictions] unexpected field: repair_transitions
+  [WARN] [performance_legitimacy_flat_control] unexpected field: fingerprint_shift
+  [WARN] [performance_legitimacy_flat_control] unexpected field: repair_transitions
+  [WARN] [polaris_document_status_flat_control] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_flat_control] unexpected field: repair_transitions
+[BOOL] Phase 3-4: Identifying candidates and computing diagnostics...
+  [WARN] [post_evidentiary] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_contradictions] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_contradictions] unexpected field: repair_transitions
+  [WARN] [post_evidentiary] unexpected field: repair_transitions
+[BOOL]   Near-candidate: has_asymmetric_extraction (independence=0.200, NMI=0.358)
+  [WARN] [pragmatic_action_reading] unexpected field: fingerprint_shift
+  [WARN] [pragmatic_action_reading] unexpected field: repair_transitions
+  [WARN] [polaris_document_status_flat_control] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_flat_control] unexpected field: repair_transitions
+  [WARN] [pre_public_initiative_reading] unexpected field: fingerprint_shift
+  [WARN] [pre_public_initiative_reading] unexpected field: repair_transitions
+  [WARN] [post_evidentiary] unexpected field: fingerprint_shift
+  [WARN] [post_evidentiary] unexpected field: repair_transitions
+  [WARN] [press_reformation_causality__strategic_deployment] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causality__strategic_deployment] unexpected field: repair_transitions
+  [WARN] [pragmatic_action_reading] unexpected field: fingerprint_shift
+  [WARN] [pragmatic_action_reading] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__mutual_shaping] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causation__mutual_shaping] unexpected field: repair_transitions
+  [WARN] [pre_public_initiative_reading] unexpected field: fingerprint_shift
+  [WARN] [pre_public_initiative_reading] unexpected field: repair_transitions
+  [WARN] [press_reformation_causality__strategic_deployment] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causality__strategic_deployment] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__strategic_deployment] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causation__mutual_shaping] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causation__mutual_shaping] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__strategic_deployment] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__strategic_deployment] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causation__strategic_deployment] unexpected field: repair_transitions
+  [WARN] [propagation_speed_asymmetry] unexpected field: fingerprint_shift
+  [WARN] [propagation_speed_asymmetry] unexpected field: repair_transitions
+  [WARN] [propagation_speed_asymmetry] unexpected field: fingerprint_shift
+  [WARN] [propagation_speed_asymmetry] unexpected field: repair_transitions
+  [WARN] [property_sector_overhang] unexpected field: fingerprint_shift
+  [WARN] [property_sector_overhang] unexpected field: repair_transitions
+  [WARN] [property_sector_overhang] unexpected field: fingerprint_shift
+  [WARN] [property_sector_overhang] unexpected field: repair_transitions
+  [WARN] [protein_anabolic_resistance] unexpected field: fingerprint_shift
+  [WARN] [protein_anabolic_resistance] unexpected field: repair_transitions
+  [WARN] [protein_anabolic_resistance] unexpected field: fingerprint_shift
+  [WARN] [protein_anabolic_resistance] unexpected field: repair_transitions
+  [WARN] [qualitative_development_reading] unexpected field: fingerprint_shift
+  [WARN] [qualitative_development_reading] unexpected field: repair_transitions
+  [WARN] [qualitative_development_reading] unexpected field: fingerprint_shift
+  [WARN] [qualitative_development_reading] unexpected field: repair_transitions
+  [WARN] [quantitative_growth_reading] unexpected field: fingerprint_shift
+  [WARN] [quantitative_growth_reading] unexpected field: repair_transitions
+  [WARN] [quantitative_growth_reading] unexpected field: fingerprint_shift
+  [WARN] [quantitative_growth_reading] unexpected field: repair_transitions
+  [WARN] [radiative_levitation_stratification] unexpected field: fingerprint_shift
+  [WARN] [radiative_levitation_stratification] unexpected field: repair_transitions
+  [WARN] [radiative_levitation_stratification] unexpected field: fingerprint_shift
+  [WARN] [radiative_levitation_stratification] unexpected field: repair_transitions
+  [WARN] [reading_acquisition_legitimacy__whole_language_meaning_primacy] unexpected field: fingerprint_shift
+  [WARN] [reading_acquisition_legitimacy__whole_language_meaning_primacy] unexpected field: repair_transitions
+  [WARN] [reading_acquisition_legitimacy__whole_language_meaning_primacy] unexpected field: fingerprint_shift
+  [WARN] [reading_acquisition_legitimacy__whole_language_meaning_primacy] unexpected field: repair_transitions
+  [WARN] [refugee_convention_text__expansive_humanitarian_reading] unexpected field: fingerprint_shift
+  [WARN] [refugee_convention_text__expansive_humanitarian_reading] unexpected field: repair_transitions
+  [WARN] [refugee_convention_text__expansive_humanitarian_reading] unexpected field: fingerprint_shift
+  [WARN] [refugee_convention_text__expansive_humanitarian_reading] unexpected field: repair_transitions
+  [WARN] [regulated_stablecoin_reading] unexpected field: fingerprint_shift
+  [WARN] [regulated_stablecoin_reading] unexpected field: repair_transitions
+  [WARN] [regulated_stablecoin_reading] unexpected field: fingerprint_shift
+  [WARN] [regulated_stablecoin_reading] unexpected field: repair_transitions
+  [WARN] [responsibility_preservation_mechanism] unexpected field: fingerprint_shift
+  [WARN] [responsibility_preservation_mechanism] unexpected field: repair_transitions
+  [WARN] [responsibility_preservation_mechanism] unexpected field: fingerprint_shift
+  [WARN] [responsibility_preservation_mechanism] unexpected field: repair_transitions
+  [WARN] [scale_ceiling_c0] unexpected field: fingerprint_shift
+  [WARN] [scale_ceiling_c0] unexpected field: repair_transitions
+  [WARN] [scale_ceiling_c0] unexpected field: fingerprint_shift
+  [WARN] [scale_ceiling_c0] unexpected field: repair_transitions
+  [WARN] [secession_legitimacy_boundary__constitutional_impossibility_reading] unexpected field: fingerprint_shift
+  [WARN] [secession_legitimacy_boundary__constitutional_impossibility_reading] unexpected field: repair_transitions
+  [WARN] [secession_legitimacy_boundary__constitutional_impossibility_reading] unexpected field: fingerprint_shift
+  [WARN] [secession_legitimacy_boundary__constitutional_impossibility_reading] unexpected field: repair_transitions
+  [WARN] [sex_gender_category__identity_reading] unexpected field: fingerprint_shift
+  [WARN] [sex_gender_category__identity_reading] unexpected field: repair_transitions
+  [WARN] [sex_gender_category__identity_reading] unexpected field: fingerprint_shift
+  [WARN] [sex_gender_category__identity_reading] unexpected field: repair_transitions
+  [WARN] [shinbutsu_ontological_commitment__incoherence_reading] unexpected field: fingerprint_shift
+  [WARN] [shinbutsu_ontological_commitment__incoherence_reading] unexpected field: repair_transitions
+  [WARN] [shinbutsu_ontological_commitment__incoherence_reading] unexpected field: fingerprint_shift
+  [WARN] [shinbutsu_ontological_commitment__incoherence_reading] unexpected field: repair_transitions
+  [WARN] [situational_reading] unexpected field: fingerprint_shift
+  [WARN] [situational_reading] unexpected field: repair_transitions
+  [WARN] [situational_reading] unexpected field: fingerprint_shift
+  [WARN] [situational_reading] unexpected field: repair_transitions
+  [WARN] [sovereign_cbdc_reading] unexpected field: fingerprint_shift
+  [WARN] [sovereign_cbdc_reading] unexpected field: repair_transitions
+  [WARN] [sovereign_cbdc_reading] unexpected field: fingerprint_shift
+  [WARN] [sovereign_cbdc_reading] unexpected field: repair_transitions
+  [WARN] [specification_binding_authority] unexpected field: fingerprint_shift
+  [WARN] [specification_binding_authority] unexpected field: repair_transitions
+  [WARN] [specification_binding_authority] unexpected field: fingerprint_shift
+  [WARN] [specification_binding_authority] unexpected field: repair_transitions
+  [WARN] [speech_protection_kernel__absolutist_reading] unexpected field: fingerprint_shift
+  [WARN] [speech_protection_kernel__absolutist_reading] unexpected field: repair_transitions
+  [WARN] [state_killing_legitimacy__abolition_reading] unexpected field: fingerprint_shift
+  [WARN] [state_killing_legitimacy__abolition_reading] unexpected field: repair_transitions
+  [WARN] [speech_protection_kernel__absolutist_reading] unexpected field: fingerprint_shift
+  [WARN] [statutory_debt_ceiling__coordination_scaffold_reading] unexpected field: fingerprint_shift
+  [WARN] [statutory_debt_ceiling__coordination_scaffold_reading] unexpected field: repair_transitions
+  [WARN] [speech_protection_kernel__absolutist_reading] unexpected field: repair_transitions
+  [WARN] [superheavy_decay_reading] unexpected field: fingerprint_shift
+  [WARN] [superheavy_decay_reading] unexpected field: repair_transitions
+  [WARN] [state_killing_legitimacy__abolition_reading] unexpected field: fingerprint_shift
+  [WARN] [state_killing_legitimacy__abolition_reading] unexpected field: repair_transitions
+  [WARN] [synthesis_infrastructure_gap] unexpected field: fingerprint_shift
+  [WARN] [synthesis_infrastructure_gap] unexpected field: repair_transitions
+  [WARN] [statutory_debt_ceiling__coordination_scaffold_reading] unexpected field: fingerprint_shift
+  [WARN] [statutory_debt_ceiling__coordination_scaffold_reading] unexpected field: repair_transitions
+  [WARN] [techno_nationalist_reading] unexpected field: fingerprint_shift
+  [WARN] [techno_nationalist_reading] unexpected field: repair_transitions
+  [WARN] [superheavy_decay_reading] unexpected field: fingerprint_shift
+  [WARN] [superheavy_decay_reading] unexpected field: repair_transitions
+  [WARN] [third_act_arbitrage] unexpected field: fingerprint_shift
+  [WARN] [third_act_arbitrage] unexpected field: repair_transitions
+  [WARN] [synthesis_infrastructure_gap] unexpected field: fingerprint_shift
+  [WARN] [synthesis_infrastructure_gap] unexpected field: repair_transitions
+  [WARN] [udhr_article_3__negative_liberty_reading] unexpected field: fingerprint_shift
+  [WARN] [udhr_article_3__negative_liberty_reading] unexpected field: repair_transitions
+  [WARN] [techno_nationalist_reading] unexpected field: fingerprint_shift
+  [WARN] [techno_nationalist_reading] unexpected field: repair_transitions
+  [WARN] [validation_judgment_separation] unexpected field: fingerprint_shift
+  [WARN] [validation_judgment_separation] unexpected field: repair_transitions
+  [WARN] [third_act_arbitrage] unexpected field: fingerprint_shift
+  [WARN] [third_act_arbitrage] unexpected field: repair_transitions
+  [WARN] [vedic_corpus_social_prescription__colonial_orientalist_reading] unexpected field: fingerprint_shift
+  [WARN] [vedic_corpus_social_prescription__colonial_orientalist_reading] unexpected field: repair_transitions
+  [WARN] [udhr_article_3__negative_liberty_reading] unexpected field: fingerprint_shift
+  [WARN] [udhr_article_3__negative_liberty_reading] unexpected field: repair_transitions
+  [WARN] [visual_evidentiary_authority_contradictions] unexpected field: fingerprint_shift
+  [WARN] [visual_evidentiary_authority_contradictions] unexpected field: repair_transitions
+  [WARN] [validation_judgment_separation] unexpected field: fingerprint_shift
+  [WARN] [validation_judgment_separation] unexpected field: repair_transitions
+  [WARN] [visual_evidentiary_authority_flat_control] unexpected field: fingerprint_shift
+  [WARN] [visual_evidentiary_authority_flat_control] unexpected field: repair_transitions
+  [WARN] [vedic_corpus_social_prescription__colonial_orientalist_reading] unexpected field: fingerprint_shift
+  [WARN] [vedic_corpus_social_prescription__colonial_orientalist_reading] unexpected field: repair_transitions
+  [WARN] [womens_financial_autonomy] unexpected field: fingerprint_shift
+  [WARN] [womens_financial_autonomy] unexpected field: repair_transitions
+  [WARN] [visual_evidentiary_authority_contradictions] unexpected field: fingerprint_shift
+  [WARN] [visual_evidentiary_authority_contradictions] unexpected field: repair_transitions
+  [WARN] [zero_mathematical_status__parmenidean_rejection] unexpected field: fingerprint_shift
+  [WARN] [zero_mathematical_status__parmenidean_rejection] unexpected field: repair_transitions
+  [WARN] [zero_mathematical_status__placeholder_reading] unexpected field: fingerprint_shift
+  [WARN] [zero_mathematical_status__placeholder_reading] unexpected field: repair_transitions
+[BOOL] Phase 5: Pairwise boolean interactions...
+[BOOL] Generating report...
+  [WARN] [visual_evidentiary_authority_flat_control] unexpected field: fingerprint_shift
+  [WARN] [visual_evidentiary_authority_flat_control] unexpected field: repair_transitions
+  [WARN] [zionist_legitimacy_basis__national_liberation_reading] unexpected field: fingerprint_shift
+  [WARN] [zionist_legitimacy_basis__national_liberation_reading] unexpected field: repair_transitions
+  [WARN] [womens_financial_autonomy] unexpected field: fingerprint_shift
+  [WARN] [womens_financial_autonomy] unexpected field: repair_transitions
+[TANGLED] Found maxent_probs in pipeline_output.json for 97 constraints.
+  [WARN] [zero_mathematical_status__parmenidean_rejection] unexpected field: fingerprint_shift
+  [WARN] [zero_mathematical_status__parmenidean_rejection] unexpected field: repair_transitions
+[TANGLED] Cross-validation: 4 discrepancies, max deviation 0.266718.
+[BOOL] Wrote /home/scott/bin/structural_dynamics_model/outputs/boolean_independence_report.md
+[BOOL] Writing JSON data...
+[TANGLED] Using pipeline_output.json distributions as primary source.
+[TANGLED] Parsing known distributions from maxent_report.md...
+  [WARN] [zero_mathematical_status__placeholder_reading] unexpected field: fingerprint_shift
+  [WARN] [zero_mathematical_status__placeholder_reading] unexpected field: repair_transitions
+  [WARN] [zionist_legitimacy_basis__national_liberation_reading] unexpected field: fingerprint_shift
+  [WARN] [zionist_legitimacy_basis__national_liberation_reading] unexpected field: repair_transitions
+[CONFIDENCE] Override distributions: 97, Raw distributions: 97.
+[CONFIDENCE] Building per-constraint confidence metrics...
+[CONFIDENCE] Built metrics for 97 constraints.
+[CONFIDENCE] Computing override vs raw comparison...
+[CONFIDENCE] Override impact: 0 band changes, 3 top-type changes.
+[CONFIDENCE] Generating report...
+[BOOL] Wrote /home/scott/bin/structural_dynamics_model/outputs/boolean_independence_data.json
+[BOOL] Done.
+[TANGLED] Found 8 known distributions.
+[CONFIDENCE] Wrote /home/scott/bin/structural_dynamics_model/outputs/classification_confidence_report.md
+[CONFIDENCE] Done.
+[TANGLED] Validation: 8/8 passed (tolerance 0.05).
+[TANGLED] Building tangled_rope data from enriched pipeline...
+[TANGLED] 44 tangled_rope constraints decomposed:
+  rope_leaning: 5
+  genuinely_tangled: 0
+  snare_leaning: 39
+[TANGLED] Wrote /home/scott/bin/structural_dynamics_model/outputs/tangled_rope_decomposition_report.md
+[TANGLED] Done.
+[BOUNDARY] Loading data...
+[BOUNDARY] Loaded 104 constraints.
+[BOUNDARY] Reading raw distributions from enriched_pipeline.json...
+Schema drift warnings (enriched_pipeline.json):
+  [WARN] [actinide_replenishment_mechanism_contradictions] unexpected field: fingerprint_shift
+  [WARN] [actinide_replenishment_mechanism_contradictions] unexpected field: repair_transitions
+  [WARN] [actinide_replenishment_mechanism_flat_control] unexpected field: fingerprint_shift
+  [WARN] [actinide_replenishment_mechanism_flat_control] unexpected field: repair_transitions
+  [WARN] [adjunctification_of_university_teaching_c0] unexpected field: fingerprint_shift
+  [WARN] [adjunctification_of_university_teaching_c0] unexpected field: repair_transitions
+  [WARN] [animal_status_kernel__property_reading] unexpected field: fingerprint_shift
+  [WARN] [animal_status_kernel__property_reading] unexpected field: repair_transitions
+  [WARN] [apoe4_mitochondrial_vulnerability] unexpected field: fingerprint_shift
+  [WARN] [apoe4_mitochondrial_vulnerability] unexpected field: repair_transitions
+  [WARN] [architectural_pattern_validity] unexpected field: fingerprint_shift
+  [WARN] [architectural_pattern_validity] unexpected field: repair_transitions
+  [WARN] [authoritative_specification_reading] unexpected field: fingerprint_shift
+  [WARN] [authoritative_specification_reading] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_authority__parliamentary_sovereignty_reading] unexpected field: fingerprint_shift
+  [WARN] [basic_law_interpretive_authority__parliamentary_sovereignty_reading] unexpected field: repair_transitions
+  [WARN] [basic_law_interpretive_boundary__parliamentary_sovereignty_reading] unexpected field: fingerprint_shift
+  [WARN] [basic_law_interpretive_boundary__parliamentary_sovereignty_reading] unexpected field: repair_transitions
+  [WARN] [behavioral_adoption_friction] unexpected field: fingerprint_shift
+  [WARN] [behavioral_adoption_friction] unexpected field: repair_transitions
+  [WARN] [bitcoin_whitepaper_purpose__nakamoto_oracle_opacity] unexpected field: fingerprint_shift
+  [WARN] [bitcoin_whitepaper_purpose__nakamoto_oracle_opacity] unexpected field: repair_transitions
+  [WARN] [border_control_legitimacy__freedom_of_movement_primary] unexpected field: fingerprint_shift
+  [WARN] [border_control_legitimacy__freedom_of_movement_primary] unexpected field: repair_transitions
+  [WARN] [catastrophe_memory_kernel__boundary_maintenance_reading] unexpected field: fingerprint_shift
+  [WARN] [catastrophe_memory_kernel__boundary_maintenance_reading] unexpected field: repair_transitions
+  [WARN] [conceptual_framework_reading] unexpected field: fingerprint_shift
+  [WARN] [conceptual_framework_reading] unexpected field: repair_transitions
+  [WARN] [crypto_permissionless_reading] unexpected field: fingerprint_shift
+  [WARN] [crypto_permissionless_reading] unexpected field: repair_transitions
+  [WARN] [demographic_resource_allocation] unexpected field: fingerprint_shift
+  [WARN] [demographic_resource_allocation] unexpected field: repair_transitions
+  [WARN] [demographic_skill_mismatch_c0] unexpected field: fingerprint_shift
+  [WARN] [demographic_skill_mismatch_c0] unexpected field: repair_transitions
+  [WARN] [digital_money_legitimacy_contradictions] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_contradictions] unexpected field: repair_transitions
+  [WARN] [digital_money_legitimacy_flat_control] unexpected field: fingerprint_shift
+  [WARN] [digital_money_legitimacy_flat_control] unexpected field: repair_transitions
+  [WARN] [dispositional_reading] unexpected field: fingerprint_shift
+  [WARN] [dispositional_reading] unexpected field: repair_transitions
+  [WARN] [distributed_verification] unexpected field: fingerprint_shift
+  [WARN] [distributed_verification] unexpected field: repair_transitions
+  [WARN] [divine_legitimacy_substrate__folk_syncretistic_reading] unexpected field: fingerprint_shift
+  [WARN] [divine_legitimacy_substrate__folk_syncretistic_reading] unexpected field: repair_transitions
+  [WARN] [doomsday_clock_metric__hybrid_legitimacy_reading] unexpected field: fingerprint_shift
+  [WARN] [doomsday_clock_metric__hybrid_legitimacy_reading] unexpected field: repair_transitions
+  [WARN] [dueling_disappearance_mechanism__overdetermined_composite_reading] unexpected field: fingerprint_shift
+  [WARN] [dueling_disappearance_mechanism__overdetermined_composite_reading] unexpected field: repair_transitions
+  [WARN] [empty_shell_tolerance] unexpected field: fingerprint_shift
+  [WARN] [empty_shell_tolerance] unexpected field: repair_transitions
+  [WARN] [epistemic_collapse] unexpected field: fingerprint_shift
+  [WARN] [epistemic_collapse] unexpected field: repair_transitions
+  [WARN] [equal_protection_kernel__colorblind_reading] unexpected field: fingerprint_shift
+  [WARN] [equal_protection_kernel__colorblind_reading] unexpected field: repair_transitions
+  [WARN] [fictional_construct_reading] unexpected field: fingerprint_shift
+  [WARN] [fictional_construct_reading] unexpected field: repair_transitions
+  [WARN] [fourteenth_amendment_equal_protection__formal_equality_reading] unexpected field: fingerprint_shift
+  [WARN] [fourteenth_amendment_equal_protection__formal_equality_reading] unexpected field: repair_transitions
+  [WARN] [gendered_outcome_asymmetry] unexpected field: fingerprint_shift
+  [WARN] [gendered_outcome_asymmetry] unexpected field: repair_transitions
+  [WARN] [geopolitical_settlement_competition] unexpected field: fingerprint_shift
+  [WARN] [geopolitical_settlement_competition] unexpected field: repair_transitions
+  [WARN] [gita_kurukshetra_discourse__gandhian_allegorical_reading] unexpected field: fingerprint_shift
+  [WARN] [gita_kurukshetra_discourse__gandhian_allegorical_reading] unexpected field: repair_transitions
+  [WARN] [historical_treaty_substrate__stewardship_reading] unexpected field: fingerprint_shift
+  [WARN] [historical_treaty_substrate__stewardship_reading] unexpected field: repair_transitions
+  [WARN] [indexical_realism] unexpected field: fingerprint_shift
+  [WARN] [indexical_realism] unexpected field: repair_transitions
+  [WARN] [institutional_barrier_structure] unexpected field: fingerprint_shift
+  [WARN] [institutional_barrier_structure] unexpected field: repair_transitions
+  [WARN] [institutional_trust_erosion_c0] unexpected field: fingerprint_shift
+  [WARN] [institutional_trust_erosion_c0] unexpected field: repair_transitions
+  [WARN] [institutional_validation_reading] unexpected field: fingerprint_shift
+  [WARN] [institutional_validation_reading] unexpected field: repair_transitions
+  [WARN] [institutional_verification_collapse] unexpected field: fingerprint_shift
+  [WARN] [institutional_verification_collapse] unexpected field: repair_transitions
+  [WARN] [interactionist_reading] unexpected field: fingerprint_shift
+  [WARN] [interactionist_reading] unexpected field: repair_transitions
+  [WARN] [intervention_target_selection] unexpected field: fingerprint_shift
+  [WARN] [intervention_target_selection] unexpected field: repair_transitions
+  [WARN] [jewish_self_determination__indigenous_return_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_self_determination__indigenous_return_reading] unexpected field: repair_transitions
+  [WARN] [jewish_sovereignty_palestine__cultural_zionist_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__cultural_zionist_reading] unexpected field: repair_transitions
+  [WARN] [jewish_sovereignty_palestine__settler_colonial_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_sovereignty_palestine__settler_colonial_reading] unexpected field: repair_transitions
+  [WARN] [jewish_territorial_claim__labor_zionism_reading] unexpected field: fingerprint_shift
+  [WARN] [jewish_territorial_claim__labor_zionism_reading] unexpected field: repair_transitions
+  [WARN] [john_1_1_logos__non_incarnational_monotheist] unexpected field: fingerprint_shift
+  [WARN] [john_1_1_logos__non_incarnational_monotheist] unexpected field: repair_transitions
+  [WARN] [knowledge_legitimacy_biomedicine_contradictions] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_contradictions] unexpected field: repair_transitions
+  [WARN] [knowledge_legitimacy_biomedicine_flat_control] unexpected field: fingerprint_shift
+  [WARN] [knowledge_legitimacy_biomedicine_flat_control] unexpected field: repair_transitions
+  [WARN] [lausanne_minority_protections__guarantor_reading] unexpected field: fingerprint_shift
+  [WARN] [lausanne_minority_protections__guarantor_reading] unexpected field: repair_transitions
+  [WARN] [livelihood_security_reading] unexpected field: fingerprint_shift
+  [WARN] [livelihood_security_reading] unexpected field: repair_transitions
+  [WARN] [llm_synthesis_capacity] unexpected field: fingerprint_shift
+  [WARN] [llm_synthesis_capacity] unexpected field: repair_transitions
+  [WARN] [longevity_mismatch] unexpected field: fingerprint_shift
+  [WARN] [longevity_mismatch] unexpected field: repair_transitions
+  [WARN] [lycurgan_laws__demographic_trap_reading] unexpected field: fingerprint_shift
+  [WARN] [lycurgan_laws__demographic_trap_reading] unexpected field: repair_transitions
+  [WARN] [maat_order_principle__reciprocity_reading] unexpected field: fingerprint_shift
+  [WARN] [maat_order_principle__reciprocity_reading] unexpected field: repair_transitions
+  [WARN] [marriage_authority__judicial_harmonization_reading] unexpected field: fingerprint_shift
+  [WARN] [marriage_authority__judicial_harmonization_reading] unexpected field: repair_transitions
+  [WARN] [mitochondrial_demand_signal_deficiency] unexpected field: fingerprint_shift
+  [WARN] [mitochondrial_demand_signal_deficiency] unexpected field: repair_transitions
+  [WARN] [moral_causation_locus_contradictions] unexpected field: fingerprint_shift
+  [WARN] [moral_causation_locus_contradictions] unexpected field: repair_transitions
+  [WARN] [moral_causation_locus_flat_control] unexpected field: fingerprint_shift
+  [WARN] [moral_causation_locus_flat_control] unexpected field: repair_transitions
+  [WARN] [nad_precursor_bioavailability] unexpected field: fingerprint_shift
+  [WARN] [nad_precursor_bioavailability] unexpected field: repair_transitions
+  [WARN] [neutron_star_bombardment_reading] unexpected field: fingerprint_shift
+  [WARN] [neutron_star_bombardment_reading] unexpected field: repair_transitions
+  [WARN] [nicene_creed_authority__liturgical_habituation_reading] unexpected field: fingerprint_shift
+  [WARN] [nicene_creed_authority__liturgical_habituation_reading] unexpected field: repair_transitions
+  [WARN] [organization_floor_c0] unexpected field: fingerprint_shift
+  [WARN] [organization_floor_c0] unexpected field: repair_transitions
+  [WARN] [performance_legitimacy_contradictions] unexpected field: fingerprint_shift
+  [WARN] [performance_legitimacy_contradictions] unexpected field: repair_transitions
+  [WARN] [performance_legitimacy_flat_control] unexpected field: fingerprint_shift
+  [WARN] [performance_legitimacy_flat_control] unexpected field: repair_transitions
+  [WARN] [polaris_document_status_contradictions] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_contradictions] unexpected field: repair_transitions
+  [WARN] [polaris_document_status_flat_control] unexpected field: fingerprint_shift
+  [WARN] [polaris_document_status_flat_control] unexpected field: repair_transitions
+  [WARN] [post_evidentiary] unexpected field: fingerprint_shift
+  [WARN] [post_evidentiary] unexpected field: repair_transitions
+  [WARN] [pragmatic_action_reading] unexpected field: fingerprint_shift
+  [WARN] [pragmatic_action_reading] unexpected field: repair_transitions
+  [WARN] [pre_public_initiative_reading] unexpected field: fingerprint_shift
+  [WARN] [pre_public_initiative_reading] unexpected field: repair_transitions
+  [WARN] [press_reformation_causality__strategic_deployment] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causality__strategic_deployment] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__mutual_shaping] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causation__mutual_shaping] unexpected field: repair_transitions
+  [WARN] [press_reformation_causation__strategic_deployment] unexpected field: fingerprint_shift
+  [WARN] [press_reformation_causation__strategic_deployment] unexpected field: repair_transitions
+  [WARN] [propagation_speed_asymmetry] unexpected field: fingerprint_shift
+  [WARN] [propagation_speed_asymmetry] unexpected field: repair_transitions
+  [WARN] [property_sector_overhang] unexpected field: fingerprint_shift
+  [WARN] [property_sector_overhang] unexpected field: repair_transitions
+  [WARN] [protein_anabolic_resistance] unexpected field: fingerprint_shift
+  [WARN] [protein_anabolic_resistance] unexpected field: repair_transitions
+  [WARN] [qualitative_development_reading] unexpected field: fingerprint_shift
+  [WARN] [qualitative_development_reading] unexpected field: repair_transitions
+  [WARN] [quantitative_growth_reading] unexpected field: fingerprint_shift
+  [WARN] [quantitative_growth_reading] unexpected field: repair_transitions
+  [WARN] [radiative_levitation_stratification] unexpected field: fingerprint_shift
+  [WARN] [radiative_levitation_stratification] unexpected field: repair_transitions
+  [WARN] [reading_acquisition_legitimacy__whole_language_meaning_primacy] unexpected field: fingerprint_shift
+  [WARN] [reading_acquisition_legitimacy__whole_language_meaning_primacy] unexpected field: repair_transitions
+  [WARN] [refugee_convention_text__expansive_humanitarian_reading] unexpected field: fingerprint_shift
+  [WARN] [refugee_convention_text__expansive_humanitarian_reading] unexpected field: repair_transitions
+  [WARN] [regulated_stablecoin_reading] unexpected field: fingerprint_shift
+  [WARN] [regulated_stablecoin_reading] unexpected field: repair_transitions
+  [WARN] [responsibility_preservation_mechanism] unexpected field: fingerprint_shift
+  [WARN] [responsibility_preservation_mechanism] unexpected field: repair_transitions
+  [WARN] [scale_ceiling_c0] unexpected field: fingerprint_shift
+  [WARN] [scale_ceiling_c0] unexpected field: repair_transitions
+  [WARN] [secession_legitimacy_boundary__constitutional_impossibility_reading] unexpected field: fingerprint_shift
+  [WARN] [secession_legitimacy_boundary__constitutional_impossibility_reading] unexpected field: repair_transitions
+  [WARN] [sex_gender_category__identity_reading] unexpected field: fingerprint_shift
+  [WARN] [sex_gender_category__identity_reading] unexpected field: repair_transitions
+  [WARN] [shinbutsu_ontological_commitment__incoherence_reading] unexpected field: fingerprint_shift
+  [WARN] [shinbutsu_ontological_commitment__incoherence_reading] unexpected field: repair_transitions
+  [WARN] [situational_reading] unexpected field: fingerprint_shift
+  [WARN] [situational_reading] unexpected field: repair_transitions
+  [WARN] [sovereign_cbdc_reading] unexpected field: fingerprint_shift
+  [WARN] [sovereign_cbdc_reading] unexpected field: repair_transitions
+  [WARN] [specification_binding_authority] unexpected field: fingerprint_shift
+  [WARN] [specification_binding_authority] unexpected field: repair_transitions
+  [WARN] [speech_protection_kernel__absolutist_reading] unexpected field: fingerprint_shift
+  [WARN] [speech_protection_kernel__absolutist_reading] unexpected field: repair_transitions
+  [WARN] [state_killing_legitimacy__abolition_reading] unexpected field: fingerprint_shift
+  [WARN] [state_killing_legitimacy__abolition_reading] unexpected field: repair_transitions
+  [WARN] [statutory_debt_ceiling__coordination_scaffold_reading] unexpected field: fingerprint_shift
+  [WARN] [statutory_debt_ceiling__coordination_scaffold_reading] unexpected field: repair_transitions
+  [WARN] [superheavy_decay_reading] unexpected field: fingerprint_shift
+  [WARN] [superheavy_decay_reading] unexpected field: repair_transitions
+  [WARN] [synthesis_infrastructure_gap] unexpected field: fingerprint_shift
+  [WARN] [synthesis_infrastructure_gap] unexpected field: repair_transitions
+  [WARN] [techno_nationalist_reading] unexpected field: fingerprint_shift
+  [WARN] [techno_nationalist_reading] unexpected field: repair_transitions
+  [WARN] [third_act_arbitrage] unexpected field: fingerprint_shift
+  [WARN] [third_act_arbitrage] unexpected field: repair_transitions
+  [WARN] [udhr_article_3__negative_liberty_reading] unexpected field: fingerprint_shift
+  [WARN] [udhr_article_3__negative_liberty_reading] unexpected field: repair_transitions
+  [WARN] [validation_judgment_separation] unexpected field: fingerprint_shift
+  [WARN] [validation_judgment_separation] unexpected field: repair_transitions
+  [WARN] [vedic_corpus_social_prescription__colonial_orientalist_reading] unexpected field: fingerprint_shift
+  [WARN] [vedic_corpus_social_prescription__colonial_orientalist_reading] unexpected field: repair_transitions
+  [WARN] [visual_evidentiary_authority_contradictions] unexpected field: fingerprint_shift
+  [WARN] [visual_evidentiary_authority_contradictions] unexpected field: repair_transitions
+  [WARN] [visual_evidentiary_authority_flat_control] unexpected field: fingerprint_shift
+  [WARN] [visual_evidentiary_authority_flat_control] unexpected field: repair_transitions
+  [WARN] [womens_financial_autonomy] unexpected field: fingerprint_shift
+  [WARN] [womens_financial_autonomy] unexpected field: repair_transitions
+  [WARN] [zero_mathematical_status__parmenidean_rejection] unexpected field: fingerprint_shift
+  [WARN] [zero_mathematical_status__parmenidean_rejection] unexpected field: repair_transitions
+  [WARN] [zero_mathematical_status__placeholder_reading] unexpected field: fingerprint_shift
+  [WARN] [zero_mathematical_status__placeholder_reading] unexpected field: repair_transitions
+  [WARN] [zionist_legitimacy_basis__national_liberation_reading] unexpected field: fingerprint_shift
+  [WARN] [zionist_legitimacy_basis__national_liberation_reading] unexpected field: repair_transitions
+[BOUNDARY] Raw distributions: 97.
+[BOUNDARY] Identifying boundary populations...
+[BOUNDARY]   tangled_rope->snare: 42 constraints
+[BOUNDARY]   rope->scaffold: 14 constraints
+[BOUNDARY]   mountain->rope: 10 constraints
+[BOUNDARY]   snare->tangled_rope: 10 constraints
+[BOUNDARY] Running statistical tests...
+[BOUNDARY] Running override sub-analysis for tangled_rope->snare...
+[BOUNDARY]   Override-affected: 42, Non-affected: 0
+[BOUNDARY] Loading coalition map for cross-tabulation...
+[BOUNDARY]   Coalition map: 104 entries
+[BOUNDARY]   Matched: 42, Unmatched: 0
+[BOUNDARY] Writing JSON output...
+[BOUNDARY] Wrote /home/scott/bin/structural_dynamics_model/outputs/boundary_normality_data.json
+[BOUNDARY] Generating report...
+[BOUNDARY] Wrote /home/scott/bin/structural_dynamics_model/outputs/boundary_normality_report.md
+[BOUNDARY] Done.
+ 14 | institutional_barrier_structure | 2.585147 | 5 | manifest_presheaf | [tangled_rope, snare, rope, snare]
+ 15 | zero_mathematical_status__parmenidean_rejection | 2.585147 | 5 | manifest_presheaf | [tangled_rope, snare, rope, snare]
+[pipeline] [TIER2] Running Python tier 2...
+Report generated: /home/scott/bin/structural_dynamics_model/outputs/variance_analysis.md
+Report generated: /home/scott/bin/structural_dynamics_model/outputs/pattern_mining.md
+Report generated: /home/scott/bin/structural_dynamics_model/outputs/index_sufficiency.md
+[pipeline] [TIER2] Done (3/3 succeeded).
+[pipeline] [ENRICH] Producing enriched_pipeline.json...
+[pipeline] [TIER3] Running Python tier 3...
+[pipeline] [TIER3] Done (5/5 succeeded).
+[pipeline] [ENRICH] Enriching omega report...
+[pipeline] [XCON] Running cross-constraint analyses...
+[scenario_convergence] 9 groups with convergence flags written to /home/scott/bin/structural_dynamics_model/outputs/scenario_convergence.json
+[omega_cross_constraint] 6 beneficiary groups, 11 omega narrowings written to /home/scott/bin/structural_dynamics_model/outputs/omega_cross_constraint.json
+[pipeline] [XCON] Done (2/2 succeeded).
+[pipeline] [EVAL] Running evaluative convergence synthesis...
+[evaluative_convergence] 15 constraint sets written to /home/scott/bin/structural_dynamics_model/outputs/evaluative_convergence.json
+[pipeline] Pipeline complete: 47/47 steps OK in 14.1s
+
+============================================================
+PIPELINE SUMMARY
+============================================================
+  prep                           ok       [0.0s]
+  regenerate_orbits              ok       [1.6s]
+  orbit                          ok       [0.7s]
+  fpn                            ok       [0.7s]
+  fingerprint                    ok       [0.8s]
+  validation                     ok       [1.4s]
+  maxent                         ok       [0.9s]
+  covering                       ok       [0.9s]
+  abductive                      ok       [1.3s]
+  giant_comp                     ok       [0.6s]
+  coupling                       ok       [0.6s]
+  maxent_diag                    ok       [0.9s]
+  commentary_census              ok       [0.6s]
+  trajectory                     ok       [1.7s]
+  orbit_norm                     ok       [0.0s]
+  fingerprint_json               ok       [0.0s]
+  json_report                    ok       [4.2s]
+  routing_sink                   ok       [0.6s]
+  kernel_orbit_export            ok       [0.5s]
+  reading_linter                 ok       [0.1s]
+  manifest_inject                ok       [0.2s]
+  type_rope                      ok       [0.0s]
+  type_snare                     ok       [0.0s]
+  type_piton                     ok       [0.0s]
+  type_mountain                  ok       [0.0s]
+  type_scaffold                  ok       [0.0s]
+  type_tangled_rope              ok       [0.0s]
+  type_false_mountain            ok       [0.0s]
+  corpus_extract                 ok       [0.0s]
+  omega                          ok       [0.5s]
+  meta_report                    ok       [0.5s]
+  false_mountain_json            ok       [0.0s]
+  w1_sheaf_join                  ok       [0.0s]
+  orbit_operator                 ok       [0.0s]
+  variance                       ok       [0.0s]
+  pattern                        ok       [0.0s]
+  sufficiency                    ok       [0.0s]
+  enrich_pipeline                ok       [0.1s]
+  boolean_independence           ok       [0.3s]
+  classification_confidence      ok       [0.3s]
+  tangled_decomposition          ok       [0.3s]
+  institutional_dissent          ok       [0.1s]
+  boundary_normality             ok       [0.8s]
+  omega_enrich                   ok       [0.0s]
+  scenario_convergence           ok       [0.0s]
+  omega_cross_constraint         ok       [0.0s]
+  evaluative_convergence         ok       [0.0s]
+
+  Total time: 14.1s
