@@ -9571,7 +9571,7 @@ the H1-bearing analyses run (rather than crash) on an undetermined-bearing corpu
 
 **Ω-type:** Ω_C (design choice — what the diagnostic organ is for; commentary-grade annotation, never reclassification).
 
-**Status:** investigating — testsets/ leg: C-prov + C1 + C3 + **C-null PASS** (family product validated meaning-bearing, 2026-06-25); remaining: C0 corroboration, C-gen, kernel_v1 re-checkpoint, then gate flip. Twin product OPEN (deferred to rebuild).
+**Status:** investigating — testsets/ leg C-prov+C1+C3+C-null PASS; **C0 PASS, kernel_v1 C-prov PASS, C-gen FAILED→generation-EXPRESSIVE (2026-06-26)**. **A4 gate flip is the OPERATOR's seat — NOT flipped** (`trajectory_enabled` stays 0); kernel_v1 C-null deferred (cost). Twin product OPEN (deferred to rebuild).
 **Priority:** 2
 **Deps:** bundled_with OQ-91
 
@@ -9671,12 +9671,24 @@ loaded-but-non-executing Pattern-2 fork (all 4 call sites dead) — log-only, de
 - **NEXT (gated, in order):** (1) ~~**C-null**~~ **DONE (PASS, 2026-06-25)** — family meaning validated;
   the family **meaning** gate is closed (control-first harness; per-component shuffle destroys, joint
   shuffle demonstrated toothless, real beyond the entire null; see the C-null PASS bullet above).
-  (2) **C0** pipeline-diff
-  corroboration (structural primary already holds — trajectory stage writes only
-  `context_profile_report.md`, never `pipeline_output.json`). (3) **C-gen** (haiku↔flash same-kernel
-  family recovery — a distinct cross-generation invariance witness, NOT C2). (4) Re-checkpoint, then the
-  kernel_v1 leg, then Step 4 gate flip (only if all family gates pass) + Step 5 docs. Gate is NOT yet
-  flipped (`config.pl trajectory_enabled` stays 0; all validation in-session, no engine changes).
+  (2) ~~**C0**~~ **DONE (PASS, 2026-06-26)** — flag 0→1 changes only `config.trajectory_enabled`
+  in `pipeline_output.json`; all classification fields byte-identical, positive-controlled
+  (`audits/2026-06-25_oq182_trajectory_revive/c0_finding.md`). (3) ~~**C-gen**~~ **DONE — FAILED at
+  the locked bar, then characterized (2026-06-26).** haiku↔flash family-partition ARI=0.117 (< 0.50
+  fail bar). Operator ruled option-2 (re-specify, no laundering): a freshly pre-registered,
+  granularity-insensitive **substrate read** gives TRACK=162/162=1.000 — every inter-leg family split
+  is backed by a real per-reading `fingerprint_shift` difference, zero cut-height artifact. **Dual
+  finding (both stand):** global partition does NOT recover across generation (ARI fail) AND that
+  failure is **generation-EXPRESSIVE, not clustering noise** (locally stable PRES=0.83 descriptive-only;
+  globally expressive — consistent with the draw-stable/draw-expressive posture). Evidence:
+  `c_gen_finding.md`, `c_gen_successor_PREREGISTRATION.md`, `c_gen_successor_finding.md`. (4) **kernel_v1
+  re-checkpoint:** C-prov **PASS** (1106; classify_at_time globals unset post trajectory_run,
+  positive-controlled, `c_prov_kernel_v1_finding.md`); **C-null DEFERRED** (cost; cannot unblock a flip
+  the C-gen result already gates). (5) **A4 gate flip = OPERATOR STOP** — given the now-complete Part-A
+  evidence, whether to flip `trajectory_enabled` 0→1, close the family product as a scoped finding
+  (meaning-bearing single-corpus + generation-expressive), or hold is the operator's seat. NOT flipped.
+  Caveat for A4: one flag=1 run stalled (likely `giant_comp` under added parallel pressure); a second
+  completed in 12.6s — enabling the flag for every run may want the trajectory stage serialized.
 
 ---
 
