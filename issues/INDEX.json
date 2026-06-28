@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "bc8b004950457d515bbcbef57ffd5f34a3f2e8dd",
+    "store_version": "fc57e833546d8596fab5fc60bc21f2a5cc050e2d",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-27T21:45:53"
+    "generated_at": "2026-06-27T21:57:25"
   },
-  "issues_sha": "0d68586390e2d23c15a96da9dc41393bfa13e265d90ab40cf1bb3a49efd7c5e6",
-  "n_entries": 188,
+  "issues_sha": "74d545a0bd4e748c969cd55fe1d0745ea5c3079801c3f75845034dcf1d97cfdc",
+  "n_entries": 189,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 95,
+    "resolved": 96,
     "mitigated": 11,
     "partial": 7,
     "disposed": 3,
@@ -991,19 +991,6 @@
       ]
     },
     {
-      "id": "OQ-187",
-      "status": "open",
-      "priority": 3,
-      "summary": "A directional extraction verdict (RED, extraction-masked-as-rope) may headline a contestable moral direction as seat-free: is verdict directionality surfaced as a declared, seat-indexed premise?",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-56",
-        "OQ-102",
-        "OQ-108"
-      ]
-    },
-    {
       "id": "OQ-188",
       "status": "open",
       "priority": 2,
@@ -1015,6 +1002,21 @@
         "OQ-78",
         "OQ-123",
         "OQ-186",
+        "OQ-187"
+      ]
+    },
+    {
+      "id": "OQ-189",
+      "status": "open",
+      "priority": 4,
+      "summary": "Per-report enrichment lifting the authored preference-omega beside a RED verdict: net-negative by default, gated on an undone render-read",
+      "deps": [
+        "splits_from OQ-187"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-101",
+        "OQ-108",
         "OQ-187"
       ]
     }
@@ -2514,6 +2516,29 @@
         "OQ-16",
         "OQ-77",
         "OQ-91"
+      ]
+    },
+    {
+      "id": "OQ-187",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "A directional extraction verdict (RED, extraction-masked-as-rope) may headline a contestable moral direction as seat-free: is verdict directionality surfaced as a declared, seat-indexed premise?",
+      "deps": [
+        "bundled_with OQ-78",
+        "bundled_with OQ-188",
+        "bundled_with OQ-186",
+        "splits_from OQ-189"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-56",
+        "OQ-78",
+        "OQ-102",
+        "OQ-108",
+        "OQ-128",
+        "OQ-186",
+        "OQ-188",
+        "OQ-189"
       ]
     }
   ]

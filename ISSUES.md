@@ -9828,16 +9828,19 @@ gate active+satisfied (0.35+0.25+0.25+0.15=1.0). Revert path (revert-on-red) unu
 
 ## OQ-187 — A directional extraction verdict (RED, extraction-masked-as-rope) may headline a contestable moral direction as seat-free: is verdict directionality surfaced as a declared, seat-indexed premise?
 
-**Ω-type:** Ω_C (a reporting surface, like OQ-108) over an Ω_P core (the moral direction of a RED extraction verdict is a declared, contestable premise — trap vs cost-of-freedom — on which the engine should abstain, not self-certify; CLAUDE.md orientation-gloss / contested-origin rule).
+**Ω-type:** Ω_C (a reporting surface, like OQ-108). The Ω_P core (moral direction of a RED — trap vs cost-of-exit) is real but, per the resolution, is NOT per-constraint discriminable; the engine declares non-adjudication at type level rather than abstaining case-by-case.
 
-**Status:** open
+**Status:** resolved — standing read-site legend note (thesis downgraded surface-not-abstain); render enrichment split to OQ-189.
 **Priority:** 3
-**Origin:** essay-review triage 2026-06-26 (gray_divorce draft, comment #4). Filed into the OQ-108/OQ-102 read-site family so it gets checked when that surface is next touched.
-**File:** read sites `python/tensions_ledger.py` / `python/enhanced_report.py`; verdict join `prolog/diagnostic_summary.pl` (`verdict_join/3`); cf. authored-vs-measured basis spine OQ-102(a).
+**Origin:** essay-review triage 2026-06-26 (gray_divorce draft, comment #4). Resolved 2026-06-27 (conversation; witnesses below).
+**Deps:** bundled_with OQ-78 (Var_fd-dominance is OQ-78), bundled_with OQ-188 (authored-d fragility), bundled_with OQ-186 (convergence-as-artifact), splits_from OQ-189 (render enrichment OPEN)
+**File:** read site `python/enhanced_report.py` (`build_verdict_banner` / `_red_direction_caveat`); verdict join `prolog/diagnostic_summary.pl` (`verdict_join/3`); deferral gate `prolog/signature_detection.pl:851` (`has_metric_perspectival_variance`).
 
-**Specific question (a one-output check).** The engine reads women's-financial-autonomy / the 41% income drop as extraction-masked-as-rope and emits a RED verdict. The inverse reading — the income drop is the freely-chosen price of exit, and naming it "extraction" re-imposes the paternalist frame — is equally licensed, and the engine's own resolution scenario raises it. The directionality is therefore a contested origin (Ω_P), not a result. Check: does the output MARK the verdict's moral direction as seat-indexed / authored-not-measured (the way OQ-108 marks `powerless=0` as inference-only and OQ-102 joins `confidence: low` to "critical"), or does it headline RED as if seat-free? If marked → essay-side over-read only. If unmarked → small read-site surface to add a directionality caveat, in the OQ-108/OQ-102 idiom.
+**The one-output check, answered: UNMARKED.** The serialized verdict surface for `womens_financial_autonomy` headlines RED seat-free — `verdict_join.verdict=red`, the moral direction carried only by the `false_ci_rope` signature label ("hides extraction", confidence high). Witnesses: `verdict_join` red with `measurement_provenance.projected=0` (so the OQ-102 `basis=projected` caveat the filing hypothesized does NOT apply — direction is `authored`, the most authoritative basis, not projected); the authored Ω_P `coordination_vs_destabilization_framing` (type `preference`, confidence low) appears **0 times** in `pipeline_output.json` (serialized `omegas` field is a disjoint engine-detected `conceptual`-only population — positive control: 50/109 populated, all `conceptual`).
 
-**Graduation.** Pull the gray_divorce constraint's serialized verdict surface and inspect whether the RED directionality carries a seat / contestable-premise tag. Downstream of OQ-102(a) (the direction was authored into ε/victim/beneficiary, not measured), so the caveat may reduce to surfacing the `basis=projected` bit at the verdict altitude. Cross-refs: OQ-102, OQ-108, OQ-56 (Ω_P seat declaration).
+**No per-constraint discriminator exists — all three candidate triggers are dead** (witnessed base rate, live 109-corpus): (1) **honor-the-deferral** — `fcr_deferred_signature_mismatch` gates on `has_metric_perspectival_variance` = ≥2 distinct *types* across power seats (Axis 1); for this constraint it fires because analytical=`unknown`, NOT a direction split. (2) **Var_fd-dominance** — `dominant==directionality` in **97/101 (96%)** of constraints and **16/17 (94%)** of REDs; this is OQ-78 restated (f(d) structurally dominates χ-variance), so a caveat keyed on it is an always-on disclaimer = noise. (3) **authored preference-omega** — fires only **2/17** REDs (`llm_synthesis_capacity`, `womens_financial_autonomy`), blind on the 15/17 author-forgot cases (where self-certification does the damage), and serializes nowhere (would need new producer plumbing, not a join).
+
+**Resolution (ruling 2026-06-27).** Thesis downgraded from "abstain on direction" to "**surface that direction is authored-not-adjudicated**" — OQ-108's precedent is **cosmetic** (`verdict_join/3` reads its Cap/Alerts from `join_alerts`+`maxent_void_alerts` only; `perspective_witness` gates nothing), so "abstain" exceeded the cited precedent. Because direction-dependence is universal (OQ-78) and d is always authored (victim/beneficiary/ε), the marker is **standing, not per-constraint**: a one-line type-level legend note on every RED — *"RED extraction = a statement about AUTHORED directionality d, not a seat-free moral verdict; the engine does not adjudicate the contested direction (trap vs cost-of-exit)."* This DEFINES RED so the over-read is impossible, discharging the path-4 essay-warning at the legend instead of as standing advisory. **No verdict-state change** (no substrate signal supports per-constraint RED→deferred; applying to all REDs would neuter RED). Witness: `_red_direction_caveat` in `enhanced_report.py`; two-sided positive control run 2026-06-27 — note present on RED (`womens_financial_autonomy`), absent on YELLOW/GREEN. Cross-refs: OQ-102, OQ-108, OQ-56, OQ-78, OQ-128 (routing-sink), OQ-186, OQ-188, OQ-189.
 
 ---
 
@@ -9858,7 +9861,23 @@ gate active+satisfied (0.35+0.25+0.25+0.15=1.0). Revert path (revert-on-red) unu
 
 ---
 
-*Last updated: 2026-06-26. Add new items with sequential OQ-NN labels. Mark
+## OQ-189 — Per-report enrichment lifting the authored preference-omega beside a RED verdict: net-negative by default, gated on an undone render-read
+
+**Ω-type:** Ω_C (read-site render surface). Splits from OQ-187 (the standing legend note shipped; this is the per-constraint enrichment OQ-187's ruling explicitly deferred).
+
+**Status:** open
+**Priority:** 4
+**Origin:** OQ-187 resolution 2026-06-27 (operator ruling). Held OPEN, not shipped, because the enrichment is net-negative by default for a reason worth a dedicated read.
+**Deps:** splits_from OQ-187 (note shipped; this enrichment deferred)
+**File:** read site `python/enhanced_report.py` (verdict banner / omega render); authored omega source is the embedded-Prolog report path (NOT `pipeline_output.json` — authored omegas serialize nowhere there, OQ-187 witness).
+
+**The proposal and why it is net-negative by default.** Lift the authored `preference`-type omega (e.g. `coordination_vs_destabilization_framing`) next to the verdict in the report, where it exists. It fires only **2/17** REDs and is authoring-blind on the 15/17 author-forgot cases — so it decorates exactly the two cases where the author already did the right thing and stays dark where OQ-187's damage lives. Worse, sitting beside the standing note that says "all REDs rest on authored d," its per-constraint presence/absence becomes legible as a contrast it does not mean: a reader sees the omega lifted on `womens_financial_autonomy` and absent on the other 15 REDs and may infer those 15 are *less* contestable — when all are constitutively authored-direction. That is an anti-signal pulling against the note it is meant to support.
+
+**Kill condition (the gating read — NOT YET DONE).** The anti-signal dissolves IF the render labels the lift "author-logged here, not engine-flagged-as-worse" (or equivalent) so absence ≠ "less contestable." Whether that label lands cleanly in the report idiom is a read nobody has done. Do NOT draft the enrichment until that read is in. **Second OPEN (also unverified):** the 2/17 counts authored `preference`-type omegas, but not every preference-omega is a *direction-of-RED* contest — `llm_synthesis_capacity`'s may not be. So on-topic firing is ≤2/17, possibly 1; confirm by reading that constraint's omega before treating 2 as the enrichment's reach. Cross-refs: OQ-187 (parent), OQ-108 (cosmetic-marker precedent), OQ-101 (synthesis-checklist family).
+
+---
+
+*Last updated: 2026-06-27. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

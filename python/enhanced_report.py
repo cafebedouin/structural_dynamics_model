@@ -742,7 +742,33 @@ def build_verdict_banner(constraint_id, pipeline_data):
             f" ({a.get('source', '?')})"
         )
     lines.append(_grid_line(vj))
-    return _banner_box(lines)
+    banner = _banner_box(lines)
+    if joined == "red":
+        banner += _red_direction_caveat()
+    return banner
+
+
+def _red_direction_caveat():
+    """Standing read-site note for RED verdicts (OQ-187, ruled 2026-06-27).
+
+    A RED extraction verdict is constitutively a statement about AUTHORED
+    directionality d, not a seat-free moral verdict. Witnessed base rate:
+    96% of constraints (97/101) and 16/17 REDs are directionality-dominant in
+    chi-variance (= OQ-78, f(d) dominates), and d is authored into victim/
+    beneficiary/epsilon — never measured. So RED carries no engine adjudication
+    of the contested direction (extraction-trap vs freely-chosen cost-of-exit);
+    the engine ROUTES, it does not rule the moral valence of d (OQ-128 routing-
+    sink). The note is STANDING, not per-constraint: there is no discriminator
+    separating 'contestable-direction' REDs from the rest — the deferral gate
+    keys on type-variance not direction, Var_fd-dominance is ~universal, and an
+    authored preference-omega fires only 2/17 and serializes nowhere. Provenance:
+    OQ-187 resolution, this idiom mirrors the FNL bait-confound standing caveat."""
+    return (
+        "  ⓘ RED extraction = a statement about AUTHORED directionality d "
+        "(victim/beneficiary/ε), not a seat-free moral verdict; the engine "
+        "does not adjudicate the contested direction (trap vs cost-of-exit). "
+        "Standing note — OQ-187.\n"
+    )
 
 
 # --- Level 1: CONSTRAINT IDENTITY (from old Section A "This Constraint" L1 fields) ---
