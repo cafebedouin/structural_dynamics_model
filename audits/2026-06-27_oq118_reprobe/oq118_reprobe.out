@@ -1,0 +1,57 @@
+=== Probe 1: is `suppression` model-emitted (authored) or computed? ===
+  raw draw top-level keys: ['header', 'base_properties', 'stakeholders', 'six_questions', 'interval', 'measurements', 'commentary', 'omegas', 'boltzmann', 'network', 'cs_structure', 'provenance']
+  base_properties.suppression = 0.12 (authored scalar, present in raw pre-pipeline draw)
+  positive control — computed fields (chi/dr_type) present in raw draw?: False (False => probe discriminates authored from computed)
+  schemas.py says: ("suppression",                 (int, float), True),    # null = no authored scalar (OQ-44 fail-close 2026-06-11; was a fabricated 0). Expected null only for non-story cs_axiom_contradiction files; null on a story constraint is an authoring defect.
+  -> VERDICT: suppression is AUTHORED (in raw draw + required by generation schema).
+
+=== Probe 2: emerges_naturally / requires_active_enforcement / suppression, all draws ===
+  story                              draw  emerges_nat  req_enforce  suppression
+  free_market_naturalization         d1    True         False        0.71
+  free_market_naturalization         d2    True         False        0.71
+  free_market_naturalization         d3    True         False        0.71
+  organization_floor_c0              d2    True         ABS          0.38
+  organization_floor_c0              d3    True         ABS          0.38
+  printing_press_reformation         d1    True         ABS          0.42
+  printing_press_reformation         d2    True         ABS          0.38
+  printing_press_reformation         d3    True         False        0.72
+  qwerty_path_naturalization         d1    True         ABS          0.22
+  qwerty_path_naturalization         d2    True         ABS          0.22
+  qwerty_path_naturalization         d3    True         ABS          0.22
+  total_war_unthinkability           d1    True         False        0.22
+  total_war_unthinkability           d2    True         False        0.22
+  total_war_unthinkability           d3    True         False        0.22
+  zero_as_number                     d1    True         ABS          0.12
+  zero_as_number                     d2    True         False        0.12
+  zero_as_number                     d3    True         ABS          0.12
+  -> emerges_naturally constant True 18/18 (degenerate); suppression varies between stories yet reproduces within-story 5/6.
+
+=== Probe 3: sigma/seat Fisher partition (replication self-check + content-only) ===
+  [A REPLICATION  hollow IN,  known out  (must match 58/62|36/32 p=0.6490)] n=188: sigma 58/62  seat 36/32  consistent 90/188=47.9%  Fisher p=0.6490
+  [B CONTENT-ONLY hollow OUT, known out] n=126: sigma 26/58  seat 18/24  consistent 50/126=39.7%  Fisher p=0.2348
+  [C CONTENT-ONLY hollow OUT, known in ] n=138: sigma 31/59  seat 24/24  consistent 55/138=39.9%  Fisher p=0.1002
+  -> B inverts vs A (47.9%->39.7%): the sigma side decontaminates toward the unstable cast multisets. sigma/seat is not the stability partition.
+
+=== Probe 4: between-story variance sweep (degeneracy positive-control, STABLE side) ===
+  -- authored scalars --
+  base_properties.suppression                stable 5/6  between-story range 0.59     -> ok
+  base_properties.theater_ratio              stable 3/6  between-story range 0.37     -> ok
+  base_properties.accessibility_collapse     stable 4/6  between-story range 0.14     -> ok
+  base_properties.resistance                 stable 3/6  between-story range 0.28     -> ok
+  base_properties.extractiveness             stable 5/6  between-story range 0.60     -> ok
+  -- authored categoricals / verdicts --
+  base_properties.emerges_naturally          stable 6/6  between-story 1 distinct     -> DEGENERATE
+  base_properties.requires_active_enforcement stable 4/6  between-story 2 distinct     -> ok
+  base_properties.has_sunset_clause          stable 6/6  between-story 1 distinct     -> DEGENERATE
+  base_properties.claimed_type               stable 6/6  between-story 1 distinct     -> DEGENERATE
+  six_questions.disappearance_verdict        stable 4/6  between-story 2 distinct     -> ok
+  six_questions.founding_problem_status      stable 4/6  between-story 3 distinct     -> ok
+  -- structural counts --
+  omegas.count                               stable 5/6  between-story range 0.00     -> DEGENERATE
+  measurements.count                         stable 1/6  between-story range 0.00     -> DEGENERATE
+  -- known-flag confirmation (cohort_stability.py FIELDS source) --
+  base_properties.extractiveness             known-flagged: True
+  base_properties.claimed_type               known-flagged: True
+  base_properties.suppression                known-flagged: False
+  -> extractiveness IS known-flagged (input, no blind credit) => OUT of the generated witness set, same as claimed_type. Generated authored-scalar witnesses: suppression, accessibility_collapse, theater_ratio, resistance.
+
