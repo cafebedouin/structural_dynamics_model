@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "ab1b18adce0ab9ee5fcd4ec9409558c0b63cae10",
+    "store_version": "db1423643da2b294523333adf317b35d5c97d61f",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-27T22:26:50"
+    "generated_at": "2026-06-27T22:48:32"
   },
-  "issues_sha": "9429e5b2e4746f6b9fe9561515b7fa93a64a690d2f23d5b229197f5616465fde",
-  "n_entries": 189,
+  "issues_sha": "a1740de2896165a1915dbb8b0d7564236c6bb2fa388bddf793ddd74b04c94a54",
+  "n_entries": 190,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 11,
     "partial": 7,
     "disposed": 4,
-    "open": 68,
+    "open": 69,
     "future": 3
   },
   "active": [
@@ -321,7 +321,8 @@
         "OQ-26",
         "OQ-75",
         "OQ-109",
-        "OQ-119"
+        "OQ-119",
+        "OQ-190"
       ]
     },
     {
@@ -1004,6 +1005,25 @@
         "OQ-123",
         "OQ-186",
         "OQ-187"
+      ]
+    },
+    {
+      "id": "OQ-190",
+      "status": "open",
+      "priority": 2,
+      "summary": "Blast-radius enumeration: which live claims rest on cast-field draw-stability (the OQ-118 corpus-grep that also prices the reserved verdict spend)",
+      "deps": [
+        "splits_from OQ-118",
+        "gates OQ-75"
+      ],
+      "cross_refs": [
+        "OQ-75",
+        "OQ-118"
+      ],
+      "mentioned_in": [
+        "OQ-75",
+        "OQ-109",
+        "OQ-118"
       ]
     }
   ],

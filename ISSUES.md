@@ -6830,7 +6830,7 @@ class is treated as temperature-confounded **by declaration, not measured**; the
 (~$1.5–2: 30–45 draws = the 5 cohort-zero kernels × 3 × {2–3 added temps} @ ~$0.045/draw Sonnet
 batch, OQ-119 rate) is **held in reserve**, not spent. **Marked-unknown dependency:** *does any
 live claim need the verdicts ACTUALLY stable, or only the confound acknowledged?* — a corpus
-question cross-linked to the blast-radius enumeration below. The verdict class is the content class
+question cross-linked to the blast-radius enumeration (**OQ-190**). The verdict class is the content class
 cross-story claims (OQ-75) lean on; **if that enumeration finds an OQ-75 claim resting on verdict
 stability being real, the reserved sweep becomes load-bearing and runs then** — cheaper before the
 claim hardens than after.
@@ -6849,8 +6849,8 @@ cheap win. Frozen prediction + control spec: `audits/2026-06-27_oq118_reprobe/HA
 **Blast radius (the invalidation — named, not enumerated):** accepting Limbs 1–2 retroactively
 suspects any claim resting on cast-field stability — the `reading_diff` re-point (cohort-one-gated),
 OQ-75 cross-story claims, per-story roster/beneficiary/vindicated mechanisms. *Suspects named from
-memory, not from a corpus sweep — the enumeration is itself an open item.* **This enumeration also
-prices the Limb-3 reserved spend** (it is the same corpus-grep wearing two hats: the agent who runs
+memory, not from a corpus sweep — the enumeration is itself an open item, now tracked as **OQ-190**.*
+**This enumeration also prices the Limb-3 reserved spend** (it is the same corpus-grep wearing two hats: the agent who runs
 it must check both whether a claim leans on cast-field stability *and* whether one needs verdict
 stability real — the second answer is what un-reserves the temp sweep).
 
@@ -9903,6 +9903,52 @@ gate active+satisfied (0.35+0.25+0.25+0.15=1.0). Revert path (revert-on-red) unu
 **File:** read site `python/enhanced_report.py`; authored omega source is the embedded-Prolog report path (authored omegas serialize nowhere in `pipeline_output.json`, OQ-187 witness).
 
 **Disposition (witnessed read 2026-06-27): the trigger fires on the WRONG AXIS.** Gate (a) keys on `preference`-*typing*, which is orthogonal to direction-contestability — and the one case that could have vindicated it proves the orthogonality. `llm_synthesis_capacity` HAS a genuine direction-contest (`synthesis_legitimacy_boundary`: legitimate-knowledge vs speculative-extraction) but it is typed `conceptual`, so gate (a) is **blind to it**; the `preference`-omega that DOES fire there (`institutional_adaptation_pathway`) is off-topic — it contests a future institutional trajectory (adapt vs entrench), not the RED's extraction valence, failing the bar (`coordination_vs_destabilization_framing`: two named seats, opposed valence, same quantity). So on-topic direction-contest firing = **1/17** (`womens_financial_autonomy` alone), and that 1 is an accident of which omega the author happened to type `preference`, not the gate selecting *for* direction — the gate doesn't track the thing OQ-187 cared about. **Secondary** (would have disposed it anyway): even on that 1, the product is already delivered twice — the OQ-187 standing note (universal, no anti-signal) and the OMEGA RESOLUTION SCENARIO (same omega, in-report) — so the kill-condition label, though expressible in the report idiom, is moot. **Revival is TWO-clause, not one:** a future corpus must make on-topic direction-contests common AND the trigger must select them by **direction-typing, not omega-type** (the orthogonality this read exposed). A one-clause "if direction-omegas become common" revival would re-make the wrong-axis error. Cross-refs: OQ-187 (parent), OQ-108, OQ-101.
+
+---
+
+## OQ-190 — Blast-radius enumeration: which live claims rest on cast-field draw-stability (the OQ-118 corpus-grep that also prices the reserved verdict spend)
+
+**Ω-type:** Ω_E (a corpus + codebase census — enumerable by query/grep/read; no theory ruling).
+
+**Status:** open — filed 2026-06-27, split from OQ-118's blast-radius open item.
+**Priority:** 2
+**Deps:** splits_from OQ-118, gates OQ-75
+
+**Origin:** OQ-118 (2026-06-27). The four-limb ruling named a blast radius "from memory, not from a
+corpus sweep" — accepting OQ-118 Limbs 1–2 (σ/seat is not the stability partition; free-composed
+cast fields are draw-UNSTABLE, 0/6) retroactively suspects any live claim that leans on cast-field
+draw-stability. The enumeration was left as an open item; this OQ carries it. It is the unblocking
+item for OQ-118's two remaining substantive limbs (broad-A's relevance, the reserved verdict spend).
+
+**The question (two answers from one grep).** Sweep the live corpus + analysis code for claims,
+report surfaces, and per-story mechanisms that depend on a field being draw-stable, bucketing each
+by the field-construction-type it rests on:
+1. **Cast-field dependents.** Anything keyed on the draw-stability of free-composed cast fields
+   (stakeholder multisets, beneficiaries/victims, vindicated_propositions). OQ-118 named suspects
+   to CONFIRM or CLEAR (not assume): the `reading_diff` re-point (cohort-one-gated), OQ-75
+   cross-story claims, per-story roster/beneficiary/vindicated mechanisms. Each found dependent is
+   SUSPECT — its stability premise is falsified by OQ-118 Limb 2 (cast = 0/6 draw-stable).
+2. **Verdict-stability dependents (this prices the OQ-118 Limb-3 reserved spend).** Does any live
+   claim need the verdict class (`disappearance_verdict`, `founding_problem_status`) ACTUALLY
+   draw-stable, or only the temp-confound acknowledged? OQ-118 ruled the verdict class
+   accept-as-confounded and held its ~$1.5–2 temp sweep in reserve; **a YES here un-reserves that
+   spend** (it becomes load-bearing — cheaper before the dependent claim hardens than after). Same
+   grep, two hats.
+
+**What resolves it.** A census artifact (`audits/<date>_oq190_blast_radius/`) listing every
+dependent found, tagged {cast-field | verdict | both} × {SUSPECT-confirmed | cleared}, each with a
+per-finding disposition: re-witness the claim under the OQ-118 finding (does it survive cast/verdict
+instability?) or mark it for repair. The verdict-bucket answer routes back to OQ-118 Limb 3 (spend
+or stay-reserved).
+
+**Discipline (the enumeration is itself a probe — it owes a positive control).** "I found no
+dependents" is a fact about the search until the search is shown to find: grep a name you KNOW
+depends on stability and confirm the sweep flags it BEFORE any "blast radius is empty/small" claim.
+Fail-closed on absence — a not-yet-witnessed dependent stays SUSPECT, not cleared.
+
+**Cross-refs:** OQ-118 (parent; the finding that creates the blast radius), OQ-75 (the cross-story
+consumer this protects), OQ-109 (cohort lineage), re-probe witness
+`audits/2026-06-27_oq118_reprobe/`.
 
 ---
 
