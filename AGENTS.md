@@ -583,6 +583,17 @@ cd prolog && swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t 
 
 Expect: all tests pass, 0 failures. Any failure blocks merging.
 
+### Discover and run python tools (single entry point)
+
+```bash
+python3 python/cli.py list                  # grouped tree of every tool + summaries
+python3 python/cli.py <group> <name> [args] # run a tool (argv forwarded verbatim)
+```
+
+`cli.py` (OQ-163) is a transparent subprocess dispatcher — logical command groups point at scripts
+wherever they physically sit (no file moves). `cli.py report ...` delegates to the reports package;
+`cli.py menu` delegates to `omega_resolver.py menu`. `cli selftest` is wired into `scripts/gate.sh`.
+
 ### Run the full analysis pipeline
 
 ```bash

@@ -3597,7 +3597,7 @@ open as a thin parent); (3) the four PARTIAL **scope floors re-witnessed against
 | Cluster systematic exploration (Pkg G) | **OQ-170** | blocked_on OQ-160 (the real F→G edge; split per operator ruling 2026-06-20) |
 | Empirical 2nd/3rd cases (Pkg C) | **OQ-161** | |
 | δ → baseline-deviation reframe (Pkg E) | **OQ-162** | description CORRECTED — δ is live-but-zeroed, not "not load-bearing" (witnessed) |
-| Python toolset consolidation | **OQ-163** | PARTIAL: subdirs exist, no single CLI |
+| Python toolset consolidation | **OQ-163** | RESOLVED: `cli.py` dispatcher shipped (1-prime, no moves); physical move → OQ-191 |
 | Parameterize directionality constants | **OQ-164** | PARTIAL: 6 `canonical_d` done; `power_role_heuristic/4` + `exit_modulation/2` remain |
 | framing_notes invitation calibration | **OQ-165** | |
 | Incremental tabling (`as incremental`) | **OQ-166** | |
@@ -9068,17 +9068,36 @@ facts = 0.0), so `D_eff = D + 0.0 = D` and δ contributes nothing to live pipeli
 
 **Ω-type:** Ω_E (maintainability — witnessed by the OQ-32 path-resolution regression class).
 
-**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+**Status:** resolved — 1-prime shipped 2026-06-27 (operator ruling); discoverability value
+delivered, physical move deferred to OQ-191.
 
 **Priority:** 1
 
-**Origin:** TODO.md item 2: group `python/` scripts into subdirectories + a single CLI entry point.
-**PARTIAL — subdirs exist, no CLI:** `python/audits/`, `sweeps/`, `shared/`, `reports/`, `schemas/`,
-`tests/`, `docs/` exist (witnessed 2026-06-20), but most scripts remain at top level **and no single
-CLI entry point exists** (`cli.py` / `__main__.py` / `main.py` all absent). **Scope = the CLI
-dispatcher + finishing the grouping**, not re-doing the existing subdirs. Note OQ-32's lesson: the
-last reorg broke 6 scripts' path resolution — budget for the witness pass. Drained from OQ-69.
-**Priority provisional — operator to rule.**
+**Resolution (1-prime — dispatcher, no file moves).** Shipped `python/cli.py`: one discoverable
+entry point (`python3 python/cli.py list` to discover, `<group> <name> [args]` to run) that groups
+every tool logically (grouping is a property of the command tree, not the directory layout) and
+dispatches by subprocess everywhere — own interpreter, own `sys.path[0]`, forwarded argv, propagated
+exit code, so it cannot change any script's behavior. Positive-controlled `cli selftest` wired into
+`scripts/gate.sh` (N>0 per physical group, known-path resolution, synthetic ambiguity catch, misc-
+count visibility); gate GREEN. Witness: this section + `cli.py` + gate row.
+
+**Why the move was NOT needed (carry the paths.py finding).** OQ-163's Ω_E justification rested on
+the **OQ-32 path-resolution regression class** (the last reorg silently broke 6 scripts' path
+resolution). That risk class is **already dead at the root:** `paths.py` provides a depth-agnostic,
+`pyproject.toml`-marker-based repo-root finder, ending the inline-root-derivation fork OQ-32 was
+about. So moving ~73 files would re-incur that risk to buy only discoverability — which the
+dispatcher already delivers. The move is therefore deferred (OQ-191), not abandoned.
+
+**Kill condition (recorded in the weaker-true wording, NOT "genuine zero").** The operator condition
+was: 1-prime substitutes for the move only if nothing consumes the directory structure itself. Honest
+reading of the probe (2026-06-27): the condition strictly **fired** — one genuine consumer exists,
+`verify_reorg.py`, which globs `python/{tests,sweeps,audits}/*.py`. It is **inert under deferral**:
+1-prime moves no paths, so it stays green on the status quo and would only need its `DIRS` list
+updated *if the physical move ever ran*. Probe sensitivity was shown **independently** (a synthetic
+`glob.glob("python/audits/*.py")` line fires; a corpus-dir glob does not — specific, not a catch-all).
+Every other glob/walk enumerates corpus/data dirs, not python *script* subdirs. So the discharge is
+the sufficient weaker claim — the move buys nothing **now** — not a false "nothing consumes the
+structure." Drained from OQ-69.
 
 ## OQ-164 — Parameterize the remaining directionality constants (AUDIT W2/E1)
 
@@ -9949,6 +9968,39 @@ Fail-closed on absence — a not-yet-witnessed dependent stays SUSPECT, not clea
 **Cross-refs:** OQ-118 (parent; the finding that creates the blast radius), OQ-75 (the cross-story
 consumer this protects), OQ-109 (cohort lineage), re-probe witness
 `audits/2026-06-27_oq118_reprobe/`.
+
+## OQ-191 — Python toolset physical regrouping (deferred from OQ-163)
+
+**Ω-type:** Ω_E (maintainability — directory layout; trigger-deferred).
+
+**Status:** future — deferred from OQ-163 (2026-06-27); dormant, revival is trigger-gated.
+
+**Priority:** 8
+
+**Deps:** splits_from OQ-163.
+
+**Origin.** OQ-163 shipped the discoverability half via `python/cli.py` (1-prime: logical command
+groups, no file moves). The remaining half — physically moving ~73 top-level scripts into
+subdirectories — is deferred here because **it buys nothing now and carries real risk:**
+
+- **paths.py already drained the OQ-32 path-fragility class** (depth-agnostic, `pyproject.toml`-marker
+  repo-root finder) — the original Ω_E justification for the move is dead at the root.
+- **The CLI already delivers discoverability** (`python3 python/cli.py list`), so the move's only
+  remaining payoff is already banked.
+- Moving now would re-incur the OQ-32 risk class for ~73 files: 50+ `shared/` importers, 22
+  `corpus_hash` importers, `run_pipeline.py`'s 20+ sibling imports, ~414 doc references, and a
+  hardcoded `scripts/gate.sh`.
+
+**Revival trigger (tightened — NOT "a directory-structure consumer appears").** A directory-structure
+consumer *already* exists — `verify_reorg.py` globs `python/{tests,sweeps,audits}/*.py` — and is
+**inert** under deferral (1-prime moves no paths). Revive only when a consumer appears that the move
+would **break**, or when an independent reason to move the files (not discoverability, which is
+solved) arises. Note: if the move ever runs, `verify_reorg.py`'s `DIRS` list must be extended to the
+new subdirs. Probe = the OQ-163 kill-condition grep (one consumer found, sensitivity shown with an
+independent synthetic control).
+
+**Cross-refs:** OQ-163 (parent; discoverability half shipped), OQ-32 (the path-resolution regression
+class, drained by `paths.py`).
 
 ---
 

@@ -1,23 +1,23 @@
 {
   "manifest": {
-    "store_version": "db1423643da2b294523333adf317b35d5c97d61f",
+    "store_version": "8b0b924e95219cedb283eaed264b41168400a5f0",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-27T22:48:32"
+    "generated_at": "2026-06-27T22:59:12"
   },
-  "issues_sha": "a1740de2896165a1915dbb8b0d7564236c6bb2fa388bddf793ddd74b04c94a54",
-  "n_entries": 190,
+  "issues_sha": "7a717345085e8fc37c18818093782df594135bad06867884fd4592c55c081a7f",
+  "n_entries": 191,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 96,
+    "resolved": 97,
     "mitigated": 11,
     "partial": 7,
     "disposed": 4,
-    "open": 69,
-    "future": 3
+    "open": 68,
+    "future": 4
   },
   "active": [
     {
@@ -773,18 +773,6 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-69"
-      ]
-    },
-    {
-      "id": "OQ-163",
-      "status": "open",
-      "priority": 1,
-      "summary": "Python toolset consolidation: single CLI entry point (TODO.md item 2)",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-32",
         "OQ-69"
       ]
     },
@@ -1668,7 +1656,8 @@
         "OQ-167",
         "OQ-168",
         "OQ-169",
-        "OQ-170"
+        "OQ-170",
+        "OQ-191"
       ]
     },
     {
@@ -2429,6 +2418,19 @@
       ]
     },
     {
+      "id": "OQ-163",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Python toolset consolidation: single CLI entry point (TODO.md item 2)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-32",
+        "OQ-69",
+        "OQ-191"
+      ]
+    },
+    {
       "id": "OQ-168",
       "status": "resolved",
       "priority": "–",
@@ -2560,6 +2562,23 @@
         "OQ-101",
         "OQ-108",
         "OQ-187"
+      ]
+    },
+    {
+      "id": "OQ-191",
+      "status": "future",
+      "priority": 8,
+      "summary": "Python toolset physical regrouping (deferred from OQ-163)",
+      "deps": [
+        "splits_from OQ-163"
+      ],
+      "cross_refs": [
+        "OQ-32",
+        "OQ-163"
+      ],
+      "mentioned_in": [
+        "OQ-32",
+        "OQ-163"
       ]
     }
   ]

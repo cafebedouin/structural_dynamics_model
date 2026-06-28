@@ -199,6 +199,10 @@ pulled out of the parallel Phase-2 set and run **sequentially after** the parall
 (`run_pipeline.py` `_phase_prolog`); the 11 remaining real stages stay parallel. Keep it that way —
 do not fold `trajectory` back into the parallel `tasks` list.
 
+- **Discover/run any python tool:** `python3 python/cli.py list` (grouped tree of every tool with
+  one-line summaries) / `python3 python/cli.py <group> <name> [args]` (run; argv forwarded verbatim).
+  Single subprocess pass-through dispatcher (OQ-163); no file moves — grouping is in the command tree,
+  not the directory layout.
 - Full pipeline (analysis only, no generation): `python3 python/run_pipeline.py`
   - `run_pipeline()` opens with the **ISSUES.md status-grammar gate** (`issues_status.scan()`,
     aborts naming malformed entries). **Do not remove or bypass the gate — it is NOT dead code,
