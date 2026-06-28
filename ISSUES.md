@@ -9125,6 +9125,49 @@ discipline). Author it with the essay's honest prior and let the engine fight it
 program act + a seat (the honest prior), with a measurable Ω_E discharge (engine resistance) once
 authored. **Queued, not authored.** Drained from OQ-69. **Priority provisional — operator to rule.**
 
+**Witness (2026-06-27, run `21:04:40Z`, commit bbbf2c6):** the precedent premise holds — the engine
+DOES refuse an authored `mountain` claim. `institutional_trust_erosion_c0` (authored
+`constraint_claim(mountain)` + `emerges_naturally`) lands `verdict_join=red`, alert
+`type_1_false_summit` + **severe** `signature_correction`, signature `constructed_high_extraction`,
+abductive `epistemic_trap(0.78)`. **But that constraint was BUILT to be refused** (narrative
+pre-argues false-summit; ε rises 0.38→0.68): it witnesses "engine CAN fight a mountain claim the
+*data* contradicts," NOT "engine verdict is informative on an HONEST prior" — which is exactly what
+OQ-168 must establish and trust_erosion cannot. Do NOT import the trust_erosion template; copying it
+makes the first loop instance a demonstration, not a test. Absence also witnessed: corpus n=109 holds
+6 information-themed constraints, **none** the mint (positive control passed); closest are
+`press_reformation_*` (causal attribution) + `epistemic_collapse`/`knowledge_legitimacy_*` (authority
+breakdown).
+
+**Authoring protocol (operator-set — the honest-prior seat; type-call + go still OPEN):**
+1. **Pre-register the believed type — COMMIT it (git) before `run_pipeline`**, not a working-tree
+   note. *Witnessed why (2026-06-27):* the orchestrator commits AFTER the run
+   (`c-orchestrator.py` step order generate `:320` → run_pipeline `:327/:768` → commit `:349`), so an
+   uncommitted believed-type is retro-editable once the verdict lands — a *claimed* prior, not a
+   *witnessed* one. Committing first makes the run manifest's `corpus_hash` (`run_pipeline.py:688`) +
+   `code_commit` fingerprint the prediction immutably. This is **pre-registration of a prediction.**
+   The honest prior is *what you genuinely believe the mint's type is* — including `mountain`, if you
+   believe the attention/legitimacy regime is a real constraint — NOT ε-neutrality. The committed
+   pre-run type is what makes the "would I accept EITHER verdict before running?" check verifiable
+   instead of retrospectively asserted.
+2. **Novel-vs-reskin is MEASURED, not ruled — two gates:** (a) *pre-authoring smell test (soft):*
+   skip authoring if every beneficiary + suppression mechanism is obviously phraseable in
+   `press_reformation_*` / `epistemic_collapse` / `knowledge_legitimacy_*` — but "expressible"
+   rationalizes either way, so this only screens *obvious* re-skins, it is not the kill condition.
+   (b) **The real kill condition (post-run, Ω_E):** the mint is a re-skin IFF its *signature
+   collapses onto an adjacent kernel's signature class*; distinct signature ⇒ genuinely novel. This
+   is an engine measurement after the run, not an operator pre-judgment.
+3. **Echo vs loop:** the loop closes only if engine resistance is independent of the essay's framing;
+   the essay authors both constraint and prior, so resistance must come from structural fields
+   (ε-series, signature) set from the honest read, not tendentiously. Tell: pre-run certainty of the
+   verdict = the prior wasn't honest.
+4. **What the verdict IS — do not over-read it (the loop's actual promise):** the signature classifier
+   is corpus-learned and the essay authors both the constraint and its fields, so a `red` is a
+   *coherence audit* — "your authored fields contradict your type-claim, read through the
+   corpus-calibrated classifier" — NOT an oracle that "the attention regime is really constructed
+   extraction." The loop owns **encoding-incoherence, not thesis-falsity.** The sharper next essay
+   comes from the operator's type-intuition surviving (or failing) a corpus-calibrated consistency
+   check, not from external validation.
+
 ## OQ-169 — T4 (confirmed_liminal) one-case category (dormant; trigger-deferred)
 
 **Ω-type:** Ω_E (categorization measurement; awaits a second live case).
