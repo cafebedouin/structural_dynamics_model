@@ -6778,10 +6778,12 @@ OQ-118 (cast-instability — printing_press's metric-side ε wobble), `docs/seat
 
 **Ω-type:** Ω_E (the re-tests are measurable) + Ω_P (where the seat boundary sits is a theory ruling).
 
-**Status:** open — filed 2026-06-13, successor to OQ-109's σ/seat residual (discharged here, not
-answered). The frozen σ/seat prediction (`audits/2026-06-12_cohort_zero/SIGMA_SEAT_PREDICTION.md`,
-committed `5f2a626c`) was tested on the replicate spend and **falsified-as-tested**; this entry
-carries the structured finding and its open graduation conditions.
+**Status:** open — filed 2026-06-13 (successor to OQ-109's σ/seat residual, discharged here not
+answered). The **2026-06-27 re-probe** (`audits/2026-06-27_oq118_reprobe/`, commit `fc57e833`,
+re-runnable `oq118_reprobe.py`) **discharges narrow-A** (σ/seat is not the stability partition) and
+re-scopes the rest into the four limbs below; **broad-A, the verdict temp sweep, and the cast
+graded re-test remain open.** The frozen σ/seat prediction
+(`audits/2026-06-12_cohort_zero/SIGMA_SEAT_PREDICTION.md`, `5f2a626c`) was **falsified-as-tested**.
 
 **Priority:** 1
 
@@ -6793,41 +6795,59 @@ carries the structured finding and its open graduation conditions.
 applies. Instruments: `python/cohort_stability.py` + `python/cohort_sigma_seat_eval.py` (Fisher
 exact validated vs scipy to 6 sig figs).
 
-**Settled now (robust, recorded):**
-- **Apparatus-presence mis-bucketing (firmest — no naming confound):** `boltzmann`/`network`/
-  `interval` presence are draw-STABLE 6/6, but the frozen prediction bucketed them **seat**. They
-  are prompt/schema-determined — a fourth bucket the prediction folded into seat. This is a
-  classification error IN THE PREDICTION, witnessed (presence is binary; nothing to conflate).
-- **Null partition (scoped):** the σ/seat split does NOT beat chance on exact-match over these
-  schema fields — predicted-σ 58 stable / 62 unstable, predicted-seat 36 / 32, 47.87% consistent,
-  **Fisher two-sided p=0.649**. The noise hypothesis the prediction pre-registered as its own
-  falsifier was NOT rejected.
+**The finding, in four limbs (2026-06-27 re-probe; witness `audits/2026-06-27_oq118_reprobe/`):**
 
-**The actual subject (meta-finding):** draw-stability is an **artifact of field-construction-type**
-— free-authored "cast" fields (stakeholder multisets, beneficiaries/victims, vindicated_propositions)
-are draw-unstable; schema-mandated/computed fields (apparatus presence, omega count, verdicts) are
-draw-stable — **not** the theorem's σ/seat line. This is a property the meta-analysis corpus needs
-characterized BEFORE any cross-story claim trusts a field's stability (it gates the analysis
-contract: which fields are comparable across n=1-per-story draws). NOT a vindication of the noise
-model over the seat model — the two confounded halves below cannot adjudicate between them.
+**Limb 1 — narrow-A: DISCHARGED. σ/seat falsified as a *stability predictor* (not as theory).**
+Stripping presence-hollow fields (apparatus + prose-presence — the comparator sees only PRESENT vs
+EMPTY) from both arms does not rescue the partition; it **inverts** it. Replication arm (hollow IN)
+reproduces the instrument's original 58/62 | 36/32, 47.9%, p=0.6490 — validating the comparator map
+by reproduction — while the content-only arm (hollow OUT) drops to 26/58 | 18/24, 39.7%, p=0.2348,
+the σ side decontaminating *toward* the unstable cast multisets. The inversion, not the bare p, is
+the witness. (Corrects the prior text: apparatus-presence's 6/6 is presence-trivial, not "firmest.")
 
-**Two confounded halves — the OQ's opening work (graduation conditions):**
-1. **Cast/σ re-test with GRADED similarity (no new instrument):** exact set-match scores "invented a
-   fresh cast" identically to "renamed the same cast" — the naming-drift mechanism the
-   signature-identity witness documented (`audits/2026-06-12_signature_identity_witness/`). Re-test
-   the cast fields with the within-vs-between DISTANCE metric (already built + witnessed this
-   session, `cohort_stability.pair_distance`) applied at field level, splitting positive-agreement
-   from agreement-in-absence. This is a NEW pre-registered test, NOT a redraw of `5f2a626c`.
-2. **Verdict-stability disentangled from temperature:** `disappearance_verdict` (4 stable/2),
-   `founding_problem_status` (3/3) look more draw-stable than "seat-expressive" predicts, but at
-   n=6 and temp 0.2 this is suggestive-confounded, not a finding — temp 0.2 + a strong situation
-   summary may over-determine the verdict (a generation-regime cause, not σ). Graduation: a temp
-   sweep, or an explicit accept-as-confounded ruling.
+**Limb 2 — broad-A: OPEN (hypothesis carried by a floor contrast).** Construction-type, not
+generation-regime, governs the stability of *generated* fields. Positive witness: four generated
+authored scalars — `suppression` 5/6, `accessibility_collapse` 4/6, `theater_ratio` 3/6,
+`resistance` 3/6 — all non-degenerate (between-story variance > 0, Probe 4) and all clearing the
+free-composed cast multisets at 0/6. The contrast is a **floor** (every authored scalar reproduces
+above the cast's zero), **not** a within-class gradient — stability and spread do not co-vary
+(`accessibility_collapse`, smallest spread 0.14, sits mid-stability). `extractiveness` is
+known-flagged (`cohort_stability.py:186`) and excluded from the witness set (sanity row only). Not
+discharged: three "stable" fields are degenerate constants witnessing nothing (`emerges_naturally`,
+`claimed_type`, `has_sunset_clause`; `omegas.count` likewise degenerate — correcting the prior
+"omega count … draw-stable"), and "authored scalars reproduce as a class" is an unrun positive test.
+**Graduation (b):** a pre-registered construction-type partition whose positive-control burden
+includes the variance/degeneracy sweep (Probe 4 is the template), resolved **together with the
+Limb-3 verdict sweep — the same spend, not a second authorization.**
 
-**Discipline carried forward:** the escalate-don't-redraw clause is inherited — a graded re-test is
-a new pre-registered test with its own frozen prediction, never a retrofit of the prediction that
-just failed. Mismatch = finding about where the seat boundary sits, escalated, never an inline
-redraw.
+**Limb 3 — verdict class → temp sweep (the one priority spend; OQ-75-load-bearing).**
+`disappearance_verdict` (4/6, 2 distinct) and `founding_problem_status` (4/6, 3 distinct) are the
+seat-predicted *content* class, non-degenerate (Probe 4) but confounded with temp 0.2 — a strong
+summary may over-determine the verdict (generation-regime cause, not σ). This is the content class
+cross-story claims (OQ-75) lean on. **Graduation:** a temperature sweep, or an explicit
+accept-as-confounded ruling. **One spend, cited by both this limb and Limb 2(b).**
+
+**Limb 4 — cast graded re-test: cheap on spend, NOT on instrument.** The 17 raw draws are on disk
+(`audits/2026-06-12_cohort_zero/replicates/`), so re-analysis needs no spend — but the field-level
+graded distance metric does not yet exist and owes its OWN positive control (renamed-same-cast near
+/ fresh-cast far, τ calibrated against OBSERVED drift not synthetic permutation) before any read
+counts; exact set-match conflates "fresh cast" with "renamed cast"
+(`audits/2026-06-12_signature_identity_witness/`). Story-level ranges already overlap (within max
+0.543 ≥ between min 0.500), so the field-level metric may return ambiguous *by construction* at n=6
+— honest framing: "cheap re-analysis that will probably report it needs spend," not a guaranteed
+cheap win. Frozen prediction + control spec: `audits/2026-06-27_oq118_reprobe/HALF1_PREDICTION.md`
+(commit `e9efbacd`; a NEW test, never a retrofit of `5f2a626c`).
+
+**Blast radius (the invalidation — named, not enumerated):** accepting Limbs 1–2 retroactively
+suspects any claim resting on cast-field stability — the `reading_diff` re-point (cohort-one-gated),
+OQ-75 cross-story claims, per-story roster/beneficiary/vindicated mechanisms. *Suspects named from
+memory, not from a corpus sweep — the enumeration is itself an open item.*
+
+**Successor fork (parked):** a σ/seat partition with apparatus/presence pulled out as its own
+declared bucket, re-run fresh, is a legitimate pre-registerable test (not a retrofit) — out of scope.
+
+**Discipline carried forward:** escalate-don't-redraw — every re-probe this session was a fresh read
+of the frozen draws, never a retrofit of the failed prediction.
 
 **Related cohort-one item (carried from OQ-109):** the `reading_diff` re-point is COHORT-ONE-gated
 — `constraint_stakeholder/7` is Unknown procedure on the live corpus, so it has no live positive
