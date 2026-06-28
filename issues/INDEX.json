@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "fc57e833546d8596fab5fc60bc21f2a5cc050e2d",
+    "store_version": "331990511bf84b941a739645d2319c678e4ba919",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-27T21:57:25"
+    "generated_at": "2026-06-27T22:03:02"
   },
-  "issues_sha": "74d545a0bd4e748c969cd55fe1d0745ea5c3079801c3f75845034dcf1d97cfdc",
+  "issues_sha": "ad47565abea29ccfb3992d29599e413bd1585da982635bfdb6b959e950ea5aad",
   "n_entries": 189,
   "active_token_set": [
     "investigating",
@@ -15,8 +15,8 @@
     "resolved": 96,
     "mitigated": 11,
     "partial": 7,
-    "disposed": 3,
-    "open": 69,
+    "disposed": 4,
+    "open": 68,
     "future": 3
   },
   "active": [
@@ -1002,21 +1002,6 @@
         "OQ-78",
         "OQ-123",
         "OQ-186",
-        "OQ-187"
-      ]
-    },
-    {
-      "id": "OQ-189",
-      "status": "open",
-      "priority": 4,
-      "summary": "Per-report enrichment lifting the authored preference-omega beside a RED verdict: net-negative by default, gated on an undone render-read",
-      "deps": [
-        "splits_from OQ-187"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-101",
-        "OQ-108",
         "OQ-187"
       ]
     }
@@ -2539,6 +2524,21 @@
         "OQ-186",
         "OQ-188",
         "OQ-189"
+      ]
+    },
+    {
+      "id": "OQ-189",
+      "status": "disposed",
+      "priority": 4,
+      "summary": "Per-report enrichment lifting the authored preference-omega beside a RED verdict: net-negative by default, gated on an undone render-read",
+      "deps": [
+        "splits_from OQ-187"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-101",
+        "OQ-108",
+        "OQ-187"
       ]
     }
   ]

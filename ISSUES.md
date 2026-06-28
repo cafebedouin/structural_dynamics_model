@@ -9863,17 +9863,15 @@ gate active+satisfied (0.35+0.25+0.25+0.15=1.0). Revert path (revert-on-red) unu
 
 ## OQ-189 — Per-report enrichment lifting the authored preference-omega beside a RED verdict: net-negative by default, gated on an undone render-read
 
-**Ω-type:** Ω_C (read-site render surface). Splits from OQ-187 (the standing legend note shipped; this is the per-constraint enrichment OQ-187's ruling explicitly deferred).
+**Ω-type:** Ω_C (read-site render surface). Splits from OQ-187 (the standing legend note shipped; this was the per-constraint enrichment OQ-187's ruling deferred).
 
-**Status:** open
+**Status:** disposed — won't-build; the gating read (2026-06-27) collapsed the value while the standing note already covers the case.
 **Priority:** 4
-**Origin:** OQ-187 resolution 2026-06-27 (operator ruling). Held OPEN, not shipped, because the enrichment is net-negative by default for a reason worth a dedicated read.
-**Deps:** splits_from OQ-187 (note shipped; this enrichment deferred)
-**File:** read site `python/enhanced_report.py` (verdict banner / omega render); authored omega source is the embedded-Prolog report path (NOT `pipeline_output.json` — authored omegas serialize nowhere there, OQ-187 witness).
+**Origin:** OQ-187 resolution 2026-06-27. The proposal: lift the authored `preference`-type direction-omega (e.g. `coordination_vs_destabilization_framing`) beside the verdict where it exists.
+**Deps:** splits_from OQ-187
+**File:** read site `python/enhanced_report.py`; authored omega source is the embedded-Prolog report path (authored omegas serialize nowhere in `pipeline_output.json`, OQ-187 witness).
 
-**The proposal and why it is net-negative by default.** Lift the authored `preference`-type omega (e.g. `coordination_vs_destabilization_framing`) next to the verdict in the report, where it exists. It fires only **2/17** REDs and is authoring-blind on the 15/17 author-forgot cases — so it decorates exactly the two cases where the author already did the right thing and stays dark where OQ-187's damage lives. Worse, sitting beside the standing note that says "all REDs rest on authored d," its per-constraint presence/absence becomes legible as a contrast it does not mean: a reader sees the omega lifted on `womens_financial_autonomy` and absent on the other 15 REDs and may infer those 15 are *less* contestable — when all are constitutively authored-direction. That is an anti-signal pulling against the note it is meant to support.
-
-**Kill condition (the gating read — NOT YET DONE).** The anti-signal dissolves IF the render labels the lift "author-logged here, not engine-flagged-as-worse" (or equivalent) so absence ≠ "less contestable." Whether that label lands cleanly in the report idiom is a read nobody has done. Do NOT draft the enrichment until that read is in. **Second OPEN (also unverified):** the 2/17 counts authored `preference`-type omegas, but not every preference-omega is a *direction-of-RED* contest — `llm_synthesis_capacity`'s may not be. So on-topic firing is ≤2/17, possibly 1; confirm by reading that constraint's omega before treating 2 as the enrichment's reach. Cross-refs: OQ-187 (parent), OQ-108 (cosmetic-marker precedent), OQ-101 (synthesis-checklist family).
+**Disposition (witnessed read 2026-06-27).** Two findings settled it. **(1) On-topic count = 1/17, not 2/17.** Against the bar (`coordination_vs_destabilization_framing`: two named seats holding opposed valence on the *same* quantity), `llm_synthesis_capacity`'s only `preference`-omega (`institutional_adaptation_pathway`) comes back **no** — it contests a future institutional trajectory (adapt vs entrench), not the valence of the RED's extraction; its actual direction-contest (`synthesis_legitimacy_boundary`) is typed `conceptual`, so gate (a) wouldn't fire it anyway. So the enrichment would decorate a single constraint (`womens_financial_autonomy`). **(2) Kill condition satisfiable but moot.** The "author-logged here, absence ≠ less-contestable" label IS expressible in the report idiom (it already speaks authored-vs-engine-detected), so the proposal was not a dead prediction — but the enrichment's unique product (the specific authored direction-omega *at verdict altitude*) is already delivered twice: the OQ-187 standing note gives the universal abstention with no anti-signal, and the OMEGA RESOLUTION SCENARIO already renders that exact omega in-report. Net: duplicate product, fires once, carries an anti-signal — won't-build. Revivable if a future corpus makes on-topic direction-omegas common enough that at-verdict proximity adds reach the standing note can't. Cross-refs: OQ-187 (parent), OQ-108, OQ-101.
 
 ---
 

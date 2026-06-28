@@ -58,6 +58,18 @@ def build_block(entry, report_dir=REPORTS):
         lines.append(
             f"- headline verdict: {vj.get('verdict', '?')} "
             f"(base {vj.get('base_verdict', '?')}, cap {vj.get('cap_applied', '?')})")
+        if vj.get("verdict") == "red":
+            # Standing type-level note (OQ-187): a RED extraction verdict IS a
+            # statement about AUTHORED directionality d, not a seat-free moral
+            # verdict — the engine does not adjudicate the contested direction
+            # (trap vs cost-of-exit). Must hold wherever the RED verdict is
+            # headlined, or the type-fact contradicts itself across surfaces;
+            # the report banner carries the same note (enhanced_report.py).
+            lines.append(
+                "- ⓘ RED extraction = a statement about AUTHORED directionality d "
+                "(victim/beneficiary/ε), not a seat-free moral verdict; the engine "
+                "does not adjudicate the contested direction (trap vs cost-of-exit). "
+                "Standing note — OQ-187.")
         alerts = vj.get("alerts") or []
         lines.append("- alerts: " + ("; ".join(_fmt_alert(a) for a in alerts)
                                      if alerts else "none"))
