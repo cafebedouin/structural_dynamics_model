@@ -45,7 +45,31 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-06-27 — Comparator-semantics: a per-field stability/agreement aggregate is only as meaningful as each field's comparator (OQ-118)
+## 2026-06-27 — OQ-124/OQ-149 committer-axis convention control: A=SIGNAL, B=CONVENTION, C=OPEN
+**Files:** ISSUES.md, prolog/signature_detection.pl, python/story_repair.py, agent/run_no_scope_gemini.py
+**Tier:** landed
+
+Ran the OQ-70 bait-confound control on the three cross-model-divergent fields, per-field
+pre-registered (`audits/2026-06-27_oq124_oq149_committer_convention_control/`). Twins re-classified
+at one commit `bbf5c92` (the on-disk outputs were at 20fab78/8126231, straddling the OQ-138 ROUTE
+conversion of `false_ci_rope`+`constructed_high_extraction` — non-comparable for Field A). Positive
+controls held (claimed_type 0.7208, cs_kernel_id 1.000). Verdicts:
+- **Field A (signature fork) = SIGNAL.** The CHE↔FCR fork is ~13:1 asymmetric (157 haiku-CHE/flash-FCR
+  vs 12 reverse), and the dominant lean is a continuous extraction-magnitude difference (0/157 ride
+  the `constraint_claim(rope)` template alone; all 157 have flash ε below the rope ceiling / haiku
+  above the snare floor; cross-twin ext Spearman 0.86, flash systematically lower). Two-sided
+  `with_retracted` control discharged. → signature lean carries a model index (v8 §3/OQ-72).
+- **Field B (`cs_reading_relation`) = CONVENTION.** Flash leans more foreclosing (p=0.020) but the
+  call fails to covary with the settled substrate on disagreeing slots (Spearman 0.156/0.162 < 0.20;
+  agreeing-slot control 0.256/0.258). → needs a provenance bucket (precedent `becd0f87`).
+- **Field C (`overridden` 51-vs-4) = OPEN-pending-instrumentation.** Per-slot coercion witness
+  unrecoverable. *Enrichment (tripwire-adjacent):* `overridden` is **coercion-invariant** — a missing
+  `cs_axiom_status` makes `generate_pl` KeyError → the story FAILS generation (generate_constraint_pl.py:672),
+  it is NOT silently defaulted to `holdable`; and the `contested/foreclosed→holdable` remap
+  (story_repair.py:89-90) is silent. So `overridden` counts are real authored values; only flash's
+  `holdable` splits authored-vs-coerced, and that needs raw pre-repair capture (instrument
+  `story_repair._normalize_axiom_status` to log `cid`). Third-model spend now warranted (A=signal),
+  operator-gated.
 **Files:** python/cohort_stability.py, python/cohort_sigma_seat_eval.py
 **Tier:** tripwire
 

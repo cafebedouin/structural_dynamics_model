@@ -1,0 +1,14 @@
+# Field A bidirectional retraction control — 2026-06-28T04:29:27Z
+# commit 1beebc67; probe_harness:with_retracted/2
+########## CONTROL 1: haiku SOURCE1_ONLY (predicted DROP) ##########
+=== CONTROL testsets_haiku / human_dignity_ai_governance__techno_optimist_reading ===
+BEFORE: claim_rope=yes  appears_as_rope=[explicit_rope_claim]  false_ci_rope=yes
+AFTER : claim_rope=no  appears_as_rope=[]  false_ci_rope=no
+RESULT: appears_as_rope dropped on retraction
+RESTORE: claim_rope=yes  appears_as_rope=[explicit_rope_claim]
+########## CONTROL 2: flash BOTH (predicted SURVIVE) ##########
+=== CONTROL testsets_flash / acceptable_risk_for_energy__expected_value_dominant ===
+BEFORE: claim_rope=yes  appears_as_rope=[explicit_rope_claim]  false_ci_rope=yes
+AFTER : claim_rope=no  appears_as_rope=[low_extraction_profile]  false_ci_rope=yes
+RESULT: appears_as_rope survived on retraction
+RESTORE: claim_rope=yes  appears_as_rope=[explicit_rope_claim]

@@ -1,0 +1,53 @@
+{
+  "fieldA": {
+    "haiku_CHE_flash_FCR": {
+      "fcr_twin": "flash",
+      "n_fork": 157,
+      "classes": {
+        "SOURCE2_ONLY": 92,
+        "BOTH": 65
+      },
+      "source1_only_share": 0.0,
+      "che_ext_gt_fcr_ext_share": 1.0,
+      "verdict": "SIGNAL",
+      "anomalies": []
+    },
+    "haiku_FCR_flash_CHE": {
+      "fcr_twin": "haiku",
+      "n_fork": 12,
+      "classes": {
+        "SOURCE2_ONLY": 5,
+        "SOURCE1_ONLY": 5,
+        "BOTH": 2
+      },
+      "source1_only_share": 0.4167,
+      "che_ext_gt_fcr_ext_share": 0.6667,
+      "verdict": "MIXED_OPEN",
+      "anomalies": []
+    }
+  },
+  "fieldB": {
+    "n_slots": 960,
+    "directionality_flash_minus_haiku": {
+      "mean_diff": 0.0334,
+      "pos": 185,
+      "neg": 142,
+      "n": 327,
+      "z": 2.323,
+      "p_approx": 0.0202,
+      "marginal_forecloses_frac_haiku": 0.206,
+      "marginal_forecloses_frac_flash": 0.2394
+    },
+    "covariation_disagreeing": {
+      "n": 584,
+      "spearman_haiku": 0.1559,
+      "spearman_flash": 0.1624
+    },
+    "covariation_agreeing_control": {
+      "n": 376,
+      "spearman_haiku": 0.2559,
+      "spearman_flash": 0.2582
+    },
+    "verdict": "CONVENTION"
+  }
+}

@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "8b0b924e95219cedb283eaed264b41168400a5f0",
+    "store_version": "1beebc6746cde4d026a690d5584d33920f6d684c",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-27T22:59:12"
+    "generated_at": "2026-06-27T23:33:02"
   },
-  "issues_sha": "7a717345085e8fc37c18818093782df594135bad06867884fd4592c55c081a7f",
+  "issues_sha": "cb12ed507494770c852e05ef1e13e89b7334e5ccabbca2045c7dfea66c637e13",
   "n_entries": 191,
   "active_token_set": [
     "investigating",
@@ -13,10 +13,10 @@
   ],
   "per_status": {
     "resolved": 97,
-    "mitigated": 11,
-    "partial": 7,
+    "mitigated": 12,
+    "partial": 8,
     "disposed": 4,
-    "open": 68,
+    "open": 66,
     "future": 4
   },
   "active": [
@@ -347,18 +347,6 @@
       "mentioned_in": []
     },
     {
-      "id": "OQ-124",
-      "status": "open",
-      "priority": 1,
-      "summary": "Systematic signature lean `constructed_high_extraction` (haiku) ↔ `false_ci_rope` (gemini-flash): two models coding the same substrate's structure differently",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-70",
-        "OQ-188"
-      ]
-    },
-    {
       "id": "OQ-125",
       "status": "open",
       "priority": 1,
@@ -616,7 +604,7 @@
     },
     {
       "id": "OQ-149",
-      "status": "open",
+      "status": "partial",
       "priority": 2,
       "summary": "The committer axis is the most model-divergent layer (reading_relation topology + axiom-override asymmetry)",
       "deps": [
@@ -2286,6 +2274,20 @@
         "OQ-117",
         "OQ-128",
         "OQ-138"
+      ]
+    },
+    {
+      "id": "OQ-124",
+      "status": "mitigated",
+      "priority": 1,
+      "summary": "Systematic signature lean `constructed_high_extraction` (haiku) ↔ `false_ci_rope` (gemini-flash): two models coding the same substrate's structure differently",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-70",
+        "OQ-72",
+        "OQ-138",
+        "OQ-188"
       ]
     },
     {

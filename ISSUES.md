@@ -7257,7 +7257,9 @@ one twin pair earns "model-sensitive here," not "the powerless seat is model-dep
 
 **Ω-type:** Ω_E (a measurable directional disparity in the `signature` field across a twin pair).
 
-**Status:** open — filed 2026-06-13 from the twin comparison
+**Status:** mitigated — dominant lean ruled SIGNAL against a pre-registered, positive-controlled
+convention control (2026-06-27, `audits/2026-06-27_oq124_oq149_committer_convention_control/`);
+minority counter-direction + the third-model spend remain open.
 **Priority:** 1
 (`audits/2026-06-13_twin_comparison/`). The recurring `signature` disparity over matched ids is
 `constructed_high_extraction` (haiku side) ↔ `false_ci_rope` (flash side), in BOTH directions
@@ -7266,6 +7268,22 @@ the same authored substrate. Per OQ-70 this is STRUCTURAL-coding disagreement, N
 claim (signature prevalence is bait-confounded). Open question: which authored fields drive the
 fork (extractiveness magnitude? the CI-rope gate inputs?), and is the lean a stable model
 fingerprint (re-test on a third model / a fresh twin draw). Cross-ref OQ-70.
+
+**RESOLUTION — Field A ruled SIGNAL (2026-06-27, convention control).** Both twins re-classified at
+one commit (`bbf5c92`; the existing outputs straddled the OQ-138 ROUTE conversion of `false_ci_rope`
++ `constructed_high_extraction`, so were non-comparable). Positive controls held (claimed_type
+0.7208, cs_kernel_id 1.000). The fork is **strongly asymmetric**, not "both directions" —
+`haiku=CHE / flash=FCR` 157 vs `haiku=FCR / flash=CHE` 12 (~13:1). Decomposition + a two-sided
+`with_retracted` control (`retraction_control.log`) show the dominant lean is **continuous
+extraction-magnitude signal, not template convention**: 0/157 dominant forks ride the
+`constraint_claim(rope)` template slot alone (all have min ε ≤ 0.45 rope ceiling → FCR via
+`low_extraction_profile`), and on all 157 the haiku side authored higher `base_extractiveness`
+(flash authors systematically lower ε: 0.508 vs 0.565, cross-twin Spearman 0.86). So the fork is a
+threshold-crossing of a model-characteristic extraction calibration → **the signature lean carries a
+model index** (flag for v8 §3 / OQ-72 invariant claims). The 12-slot minority direction carries a
+real template component (5/12 source-1-only) and is **OPEN** (meets neither pinned bar). **Third-model
+spend now WARRANTED** (the convention branch did NOT fire) — gated follow-up, spend-go stays the
+operator's. Per-field detail in the audit `FINDINGS.md`.
 
 **Instance (essay-review triage 2026-06-26, `moral_causation_locus` twin).** The
 dispositional/situational reading pair both carry `structural_signature:
@@ -8541,7 +8559,8 @@ surface it, don't assume a clean rewire covers the corpus. Lineage: OQ-29; OQ-14
 
 **Ω-type:** Ω_E (empirical — measurable cross-model agreement rates; interpretation may route to the OQ-70 authoring-convention confound).
 
-**Status:** open
+**Status:** partial — Field B (`reading_relation`) ruled CONVENTION; Field C (`overridden`)
+OPEN-pending-instrumentation (2026-06-27, `audits/2026-06-27_oq124_oq149_committer_convention_control/`).
 **Priority:** 2
 **Deps:** bundled_with OQ-124
 **Origin:** OQ-56 D1 recon census over the twin corpora, 2026-06-18
@@ -8580,6 +8599,32 @@ closure is least situation-fixed) — which would make any committer-axis invari
 (v8 §3, OQ-72) carry a model index. If it is convention, the relation/override fields need a
 provenance bucket before they can be read as structure. Either way it gates how much weight
 v8's `forecloses`/`coexists_with` state structure can bear.
+
+**RESOLUTION (2026-06-27, convention control — `audits/2026-06-27_oq124_oq149_committer_convention_control/`).**
+Substrate pinned: twins re-classified at `bbf5c92` (Field A) + corpus content-hashes (B/C). Raw
+divergences reproduced (B 0.3917, C 51-vs-4). Per the operator ruling, ruled per field:
+
+- **Field B (`cs_reading_relation` 0.392) = CONVENTION.** With Field C pulled (below), B rested on
+  its settled covariate alone (authored `base_extractiveness`, cross-twin Spearman 0.86, outside the
+  OQ-70 slot set). Flash leans systematically more foreclosing (forecloses_fraction 0.239 vs 0.206,
+  sign-test p=0.020), but the relation call **fails to covary with the closure-degree substrate on
+  the disagreeing slots** (Spearman 0.156/0.162 < the pinned 0.20) while the agreeing-slot positive
+  control reproduces it (0.256/0.258). So the ~60% disagreement is a model authoring **default**, not
+  detected structure → the `forecloses`/`coexists_with` field needs a **provenance bucket** before
+  per-slot values can be read as structure (precedent: stakeholder fix `becd0f87`). Not built this pass.
+- **Field C (`overridden` 51-vs-4) = OPEN-pending-instrumentation.** The per-slot coercion witness
+  (split flash `holdable` into authored vs coerced) does NOT survive the original flash generation
+  run (no raw responses saved; `repair_stats` aggregate; `contested/foreclosed→holdable` remap
+  silent; `json_flash/` post-repair). Recovering it ⇒ re-generation with instrumentation = the spend
+  the operator ruled out. **Not ruled; no weaker proxy substituted.** Decidable enrichment:
+  `overridden` is **coercion-invariant** (missing status → generation FAIL, not silent `holdable`),
+  so the 51-vs-4 asymmetry is a **real authoring difference**, not the optional-drop artifact
+  hypothesized — only flash's `holdable` fine-structure is undecidable. **Graduation step:**
+  instrument `story_repair._normalize_axiom_status` to log `cid` in the next flash(-class) generation
+  run, then re-run the C decision rule. Gated follow-up; spend stays the operator's.
+
+Field-A half is on OQ-124 (ruled SIGNAL). Bundle (`bundled_with OQ-124`) stays: the three fields
+were one census and the third-model spend is gated on A's signal verdict.
 
 ---
 
