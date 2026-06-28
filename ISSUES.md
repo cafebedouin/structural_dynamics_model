@@ -9109,64 +9109,30 @@ provisional — operator to rule.**
 
 ## OQ-168 — Author "the mint" as a testset (the essay→engine loop, first deliberate instance)
 
-**Ω-type:** Ω_P (decide-to-author program act + the honest-prior seat; Ω_E discharge arm once authored).
+**Ω-type:** Ω_P (decide-to-author program act) — **resolved as not-actionable**; the imagined Ω_E
+discharge ("engine resistance") reduces to a consistency check, below.
 
-**Status:** open — minted 2026-06-20 from the OQ-69 ledger drain.
+**Status:** resolved — closed 2026-06-27 (operator ruling). Nothing to author. The "essay → engine
+resistance → sharper essay" loop over-described what the engine does: it evaluates an LLM-authored
+constraint story and reports whether the authored fields are internally consistent with the authored
+type-claim. There is no oracle on whether a real-world regime "is" a mountain — only contradiction
+detection. So "let the engine fight an honest prior" has no content beyond "the engine flags when
+your numbers contradict your label," and there is no further work item here.
 
-**Priority:** 7
+**Origin (kept for trace):** 2026-06-11 Pew-typology exchange proposed authoring the information
+regime ("the mint") as its own constraint and letting the engine "fight" an honest `mountain` prior
+the way it refused `institutional_trust_erosion`'s mountain claim (`design_discipline.md` §4).
 
-**Origin:** 2026-06-11 Pew-typology review exchange: author the information regime ("the mint") as a
-constraint in its own right — own beneficiaries, own suppression signature, own perspectival split. A
-constraint hypothesis the corpus does **not** contain, generated *by* the essay rather than by the
-engine — the first deliberate instance of the loop the exchange named: essay → constraint hypothesis
-→ formalization → engine resistance → sharper next essay (`design_discipline.md` §4, false-summit
-discipline). Author it with the essay's honest prior and let the engine fight it the way it refused
-`institutional_trust_erosion`'s mountain claim. Typed Ω_P: the named resolution is a decide-to-author
-program act + a seat (the honest prior), with a measurable Ω_E discharge (engine resistance) once
-authored. **Queued, not authored.** Drained from OQ-69. **Priority provisional — operator to rule.**
-
-**Witness (2026-06-27, run `21:04:40Z`, commit bbbf2c6):** the precedent premise holds — the engine
-DOES refuse an authored `mountain` claim. `institutional_trust_erosion_c0` (authored
-`constraint_claim(mountain)` + `emerges_naturally`) lands `verdict_join=red`, alert
-`type_1_false_summit` + **severe** `signature_correction`, signature `constructed_high_extraction`,
-abductive `epistemic_trap(0.78)`. **But that constraint was BUILT to be refused** (narrative
-pre-argues false-summit; ε rises 0.38→0.68): it witnesses "engine CAN fight a mountain claim the
-*data* contradicts," NOT "engine verdict is informative on an HONEST prior" — which is exactly what
-OQ-168 must establish and trust_erosion cannot. Do NOT import the trust_erosion template; copying it
-makes the first loop instance a demonstration, not a test. Absence also witnessed: corpus n=109 holds
-6 information-themed constraints, **none** the mint (positive control passed); closest are
-`press_reformation_*` (causal attribution) + `epistemic_collapse`/`knowledge_legitimacy_*` (authority
-breakdown).
-
-**Authoring protocol (operator-set — the honest-prior seat; type-call + go still OPEN):**
-1. **Pre-register the believed type — COMMIT it (git) before `run_pipeline`**, not a working-tree
-   note. *Witnessed why (2026-06-27):* the orchestrator commits AFTER the run
-   (`c-orchestrator.py` step order generate `:320` → run_pipeline `:327/:768` → commit `:349`), so an
-   uncommitted believed-type is retro-editable once the verdict lands — a *claimed* prior, not a
-   *witnessed* one. Committing first makes the run manifest's `corpus_hash` (`run_pipeline.py:688`) +
-   `code_commit` fingerprint the prediction immutably. This is **pre-registration of a prediction.**
-   The honest prior is *what you genuinely believe the mint's type is* — including `mountain`, if you
-   believe the attention/legitimacy regime is a real constraint — NOT ε-neutrality. The committed
-   pre-run type is what makes the "would I accept EITHER verdict before running?" check verifiable
-   instead of retrospectively asserted.
-2. **Novel-vs-reskin is MEASURED, not ruled — two gates:** (a) *pre-authoring smell test (soft):*
-   skip authoring if every beneficiary + suppression mechanism is obviously phraseable in
-   `press_reformation_*` / `epistemic_collapse` / `knowledge_legitimacy_*` — but "expressible"
-   rationalizes either way, so this only screens *obvious* re-skins, it is not the kill condition.
-   (b) **The real kill condition (post-run, Ω_E):** the mint is a re-skin IFF its *signature
-   collapses onto an adjacent kernel's signature class*; distinct signature ⇒ genuinely novel. This
-   is an engine measurement after the run, not an operator pre-judgment.
-3. **Echo vs loop:** the loop closes only if engine resistance is independent of the essay's framing;
-   the essay authors both constraint and prior, so resistance must come from structural fields
-   (ε-series, signature) set from the honest read, not tendentiously. Tell: pre-run certainty of the
-   verdict = the prior wasn't honest.
-4. **What the verdict IS — do not over-read it (the loop's actual promise):** the signature classifier
-   is corpus-learned and the essay authors both the constraint and its fields, so a `red` is a
-   *coherence audit* — "your authored fields contradict your type-claim, read through the
-   corpus-calibrated classifier" — NOT an oracle that "the attention regime is really constructed
-   extraction." The loop owns **encoding-incoherence, not thesis-falsity.** The sharper next essay
-   comes from the operator's type-intuition surviving (or failing) a corpus-calibrated consistency
-   check, not from external validation.
+**Witness that closes it (2026-06-27, `enhanced_report.py institutional_trust_erosion_c0`):** the
+"refusal" is just a claim/data contradiction, and mountains are invariant by definition.
+`institutional_trust_erosion_c0` claims `mountain` (`:118` + `emerges_naturally` `:122`) while
+authoring non-invariant data: `base_extractiveness 0.68` (`:104`), `suppression_score 0.52` (`:105`,
+vs the 0.05 mountain ceiling), and a **rising** ε-series 0.38→0.68 over t=0..60 (`:315–:327`). The
+report's FALSE-MOUNTAINS forensic fires (`dr_type: unknown` at all 4 seats; signature
+`constructed_high_extraction`; MaxEnt favors `snare` 0.64; `verdict_join=red`,
+`type_1_false_summit`). The engine did not adjudicate the world — it caught a mislabeled story. That
+is the whole mechanism, and it needs no new constraint to demonstrate. Corollary: the essay→engine
+loop's value, if any, is bounded to coherence-auditing an authored encoding, never thesis-validation.
 
 ## OQ-169 — T4 (confirmed_liminal) one-case category (dormant; trigger-deferred)
 
