@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-27 — Comparator-semantics: a per-field stability/agreement aggregate is only as meaningful as each field's comparator (OQ-118)
+**Files:** python/cohort_stability.py, python/cohort_sigma_seat_eval.py
+**Tier:** tripwire
+
+A `stable`/`match` verdict in a per-field comparison table can mean three structurally different
+things, two of them hollow: (1) **content reproduced** — the real signal (`scalar`/`cat`/`nameset`
+comparing values); (2) **presence-only matched** — the comparator sees only PRESENT vs EMPTY
+(`prose_presence`/`list_presence`; apparatus `*.presence`), so the field reads "stable" whenever
+the model emitted anything non-empty; (3) **the field is a constant** — zero between-item variance,
+so it *cannot* be unstable (`emerges_naturally` True 18/18; `claimed_type`, `has_sunset_clause`;
+`omegas.count` range 0.00). Aggregating across fields without splitting these silently inflates the
+"stable" side and can **invert** a partition statistic, not merely soften it.
+
+**Rule:** before trusting any aggregate over per-field comparisons, witness what each field's
+comparator actually compares (read the extractor, not the column name), and run a between-item
+(cross-story) variance check to flag degenerate constants. Worked instance — the OQ-118 re-probe:
+removing presence-hollow fields from a σ/seat partition dropped consistency 47.9%→39.7% (an
+inversion toward the unstable cast multisets), and the degeneracy sweep caught four constant
+"stable" fields. Witness + re-runnable probe: `audits/2026-06-27_oq118_reprobe/` (commit
+`fc57e833`); ruling landed `82c0693c`.
+
+This is the per-comparator face of CLAUDE.md Build Discipline **Pattern 6** (measured-empty vs
+didn't-look) and a sibling of **Pattern 5** (absence satisfies the gate) — the abstract tripwire
+lives there; this is the worked instance, **not** promoted (the always-loaded form already exists;
+over-promotion defeats the token-saving purpose). Cross-ref OQ-118.
+
+---
+
 ## 2026-06-27 — OQ-182 family product SHIPPED: trajectory serialized + trajectory_enabled 0→1
 **Files:** python/run_pipeline.py, prolog/config.pl, CLAUDE.md, AGENTS.md, ISSUES.md
 **Tier:** landed
