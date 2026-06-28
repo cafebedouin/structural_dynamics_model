@@ -6781,8 +6781,9 @@ OQ-118 (cast-instability — printing_press's metric-side ε wobble), `docs/seat
 **Status:** open — filed 2026-06-13 (successor to OQ-109's σ/seat residual, discharged here not
 answered). The **2026-06-27 re-probe** (`audits/2026-06-27_oq118_reprobe/`, commit `fc57e833`,
 re-runnable `oq118_reprobe.py`) **discharges narrow-A** (σ/seat is not the stability partition) and
-re-scopes the rest into the four limbs below; **broad-A, the verdict temp sweep, and the cast
-graded re-test remain open.** The frozen σ/seat prediction
+re-scopes the rest into the four limbs below; **broad-A and the cast graded re-test remain open;
+the verdict class is RULED accept-as-confounded (2026-06-27), its one temp sweep held in reserve.**
+The frozen σ/seat prediction
 (`audits/2026-06-12_cohort_zero/SIGMA_SEAT_PREDICTION.md`, `5f2a626c`) was **falsified-as-tested**.
 
 **Priority:** 1
@@ -6817,15 +6818,22 @@ discharged: three "stable" fields are degenerate constants witnessing nothing (`
 `claimed_type`, `has_sunset_clause`; `omegas.count` likewise degenerate — correcting the prior
 "omega count … draw-stable"), and "authored scalars reproduce as a class" is an unrun positive test.
 **Graduation (b):** a pre-registered construction-type partition whose positive-control burden
-includes the variance/degeneracy sweep (Probe 4 is the template), resolved **together with the
-Limb-3 verdict sweep — the same spend, not a second authorization.**
+includes the variance/degeneracy sweep (Probe 4 is the template). The verdict class is **bracketed
+as temp-confounded by the Limb-3 ruling** — broad-A's positive test rests on the authored-scalar
+floor contrast, not on the verdicts as a clean member.
 
-**Limb 3 — verdict class → temp sweep (the one priority spend; OQ-75-load-bearing).**
+**Limb 3 — verdict class → RULED accept-as-confounded (2026-06-27, operator).**
 `disappearance_verdict` (4/6, 2 distinct) and `founding_problem_status` (4/6, 3 distinct) are the
 seat-predicted *content* class, non-degenerate (Probe 4) but confounded with temp 0.2 — a strong
-summary may over-determine the verdict (generation-regime cause, not σ). This is the content class
-cross-story claims (OQ-75) lean on. **Graduation:** a temperature sweep, or an explicit
-accept-as-confounded ruling. **One spend, cited by both this limb and Limb 2(b).**
+summary may over-determine the verdict (generation-regime cause, not σ). **Ruling:** the verdict
+class is treated as temperature-confounded **by declaration, not measured**; the one temp sweep
+(~$1.5–2: 30–45 draws = the 5 cohort-zero kernels × 3 × {2–3 added temps} @ ~$0.045/draw Sonnet
+batch, OQ-119 rate) is **held in reserve**, not spent. **Marked-unknown dependency:** *does any
+live claim need the verdicts ACTUALLY stable, or only the confound acknowledged?* — a corpus
+question cross-linked to the blast-radius enumeration below. The verdict class is the content class
+cross-story claims (OQ-75) lean on; **if that enumeration finds an OQ-75 claim resting on verdict
+stability being real, the reserved sweep becomes load-bearing and runs then** — cheaper before the
+claim hardens than after.
 
 **Limb 4 — cast graded re-test: cheap on spend, NOT on instrument.** The 17 raw draws are on disk
 (`audits/2026-06-12_cohort_zero/replicates/`), so re-analysis needs no spend — but the field-level
@@ -6841,7 +6849,10 @@ cheap win. Frozen prediction + control spec: `audits/2026-06-27_oq118_reprobe/HA
 **Blast radius (the invalidation — named, not enumerated):** accepting Limbs 1–2 retroactively
 suspects any claim resting on cast-field stability — the `reading_diff` re-point (cohort-one-gated),
 OQ-75 cross-story claims, per-story roster/beneficiary/vindicated mechanisms. *Suspects named from
-memory, not from a corpus sweep — the enumeration is itself an open item.*
+memory, not from a corpus sweep — the enumeration is itself an open item.* **This enumeration also
+prices the Limb-3 reserved spend** (it is the same corpus-grep wearing two hats: the agent who runs
+it must check both whether a claim leans on cast-field stability *and* whether one needs verdict
+stability real — the second answer is what un-reserves the temp sweep).
 
 **Successor fork (parked):** a σ/seat partition with apparatus/presence pulled out as its own
 declared bucket, re-run fresh, is a legitimate pre-registerable test (not a retrofit) — out of scope.
