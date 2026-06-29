@@ -865,53 +865,49 @@ under-specified; a session hypothesis that "DP-001 is the single-instance barrie
 
 ## OQ-22 — Hub 1 / Hub 2 fall-through behavior at threshold starvation
 
-**Status:** open
+**Status:** resolved — Verdict B (2026-06-28): starvation DOES occur under the default sigmoid; the
+starved subset is Hub-2 decisions reported as two-hub. Follow-up provenance field minted as OQ-192.
 **Priority:** 1
 **Deps:** bundled_with OQ-01
-**Origin:** alt_power_transform first T2 run (compressed variants), May 2026. Diagnosed
-during the H1 investigation but not pursued as a separate item once the corrected Arm A/B
-sweep resolved H1.
+**Ω-type:** Ω_E (empirical corpus-distribution question)
+**Origin:** alt_power_transform first T2 run (compressed variants), May 2026 — diagnosed during the
+H1 investigation, deferred once the corrected Arm A/B sweep resolved H1. Original question: under what
+conditions does Hub-1 (χ-gates) disengage and classification fall through to Hub-2 (effective
+immutability), for which constraints/contexts, under the default transform; is there a boundary?
 
-**Specific question:** When chi values compress below the classification threshold spacing,
-Hub 1 (chi-driven gates) effectively disengages and classification falls through to Hub 2
-(effective immutability). This is a regime change in the engine's classification mechanism.
-Under what conditions, if any, does this fall-through occur in normal operation across the
-existing corpus — for which constraints, in which contexts, under the default transform?
-Is there a documented boundary at which Hub 1 stops contributing meaningfully?
-
-**Evidence so far:** The starvation regime was entered accidentally in the first T2 run
-(compressed-flip variant, chi span 0.20, ceiling 0.15). Under that configuration, presheaf
-classifications were being decided by Hub 2 alone because Hub 1 had no dynamic range to
-discriminate across thresholds. The corrected Arm A/B sweep explicitly avoided this region
-by keeping all variants chi-spanning the gates (verified against rope floor, snare gate,
-tangled_rope gate, mountain ceiling from `prolog/config.pl`). The two-hub architecture
-comment in `drl_core.pl:160–210` describes the hubs as independent contributors driving
-classification variation across observers; the starvation finding indicates they can also
-substitute under degenerate transforms, which the architecture comment does not address.
-
-**What resolution changes:** If no real corpus configuration ever enters the starvation
-region under the default sigmoid, this is a non-issue for current operation but a
-constraint on what alternative transforms can safely be tested. If any subset of
-constraints or contexts does enter starvation under the default transform (e.g.,
-constraints with very low ε producing chi values that crowd the rope/tangled_rope
-boundary), then classifications in that subset are Hub 2 decisions reported as if they
-were two-hub decisions, and the framework should distinguish them. Resolution likely also
-affects how OQ-01 is read: the rope-gate bypass surfaces at compressed ceilings, but the
-broader question of when Hub 1 is meaningfully contributing is upstream of that specific
-clause.
-
-**Related:** OQ-01 (rope-gate bypass) — the A3 collapse at compressed ceilings was the
-bypass × sign-flip × compressed-ceiling interaction. The starvation regime is the adjacent
-phenomenon: not the bypass firing, but Hub 1 failing to discriminate at all. They share
-the property of being behaviors contingent on the default transform's range, surfaced
-only when that range was deliberately altered.
-
-**Update 2026-06-18 (OQ-01 resolved):** the A3 collapse described above turned out to be a
-`prolog_v5`-specific artifact — it does NOT reproduce on the post-reset live twins (Jaccard
-0.904 haiku / 0.897 flash; `audits/2026-06-18_oq01_rope_bypass_twins/`). So the residual
-inherited here is sharper: not "the bypass misbehaves at compressed ceilings" (it doesn't,
-on the live regime) but "which ε/d distributions re-enter the Hub-1 starvation/collapse band
-at all" — a corpus-distribution question, not a clause-behavior one.
+**Resolution (audit `audits/2026-06-28_oq22_hub_starvation/`, FINDINGS.md; read-only, no engine
+behavior change).** 4-leg census + (observer×immutability) grid under the DEFAULT sigmoid.
+**Verdict B — starvation IS present:** a constraint is starved when its observer-χ span sits within
+ONE same-type band of its realized per-constraint χ→type map, so Hub-1 cannot move the type by
+changing observer and any cross-observer type variation is Hub-2-sourced. Grid-confirmed Hub-2-sourced
+(subset a — every member carries a grid witness; the immutability pin collapses its cross-observer
+variation; **zero** reclassified to Hub-1): **testsets 5/109, haiku 23/960, flash 100/960, kernel_v1
+49/1106** (band-screen starved 26/148/233/145; the larger non-starved type-varying "contrast" set is
+normal two-hub with Hub-1 range, and matches the grid's persists-under-pin count exactly — the
+false-halt guard routed persistence to Hub-1, never halt).
+- **Scope:** the stamped per-leg CONTENT hashes (`content_hash_*.txt`: testsets f50cf9b, haiku
+  b9cf33c, flash 74bf36b, kernel_v1 a5e9bae — the id-set `corpus_hash` collides across the matched
+  twins, so cite content_hash). Counts are per-generation, NOT claimed as expected prevalence.
+- **B kill condition:** a re-generation in which a flagged member STOPS starving falsifies that member
+  (B is an existence claim, discharged by ≥1 witnessed instance; four legs witnessed — re-generation
+  cannot unmake the measured counts). The symmetric Verdict-A falsifier ("a clean corpus flips to
+  starved") is moot — A did not hold.
+- **Boundary (gate geometry).** Min non-degenerate single-type χ-band over swept configs ≈ 0.099 (the
+  piton band (0.35,0.45]); realized bands run far wider per constraint, and although band cutpoints sit
+  AT the config values {0.35,0.45,0.66,0.90}, a single threshold owns 4–5 different types across
+  constraints — so the χ→type map is per-constraint, never the config partition. This floor is
+  **sigmoid-driven Hub-1 disengagement only**: χ = ε·f(d)·σ(scope) has a SECOND, compression-immune
+  span source σ(scope) (observers span local 0.8 / national 1.0 / global 1.2) — sigmoid-only
+  compression starved 46/109, +σ-flat 101/109 (Phase-3). Positive controls both fired (global
+  compression → widespread; single injected ε=0.02 member individually resolved). The originally-
+  witnessed extreme regime (χ ceiling 0.15) is now VALIDATOR-FORBIDDEN (`config_schema.pl:74`
+  `sigmoid_upper∈[0.5,3.0]` + `L<midpoint<U`).
+- **Engine doc fix (comment-only):** mountain is a PURE Hub-2 type (no χ gate) — code + canonical spec
+  `docs/logic.md:644` agree; the stale inline comment `drl_core.pl:205` ("requires BOTH low χ AND
+  immutability") was corrected to match. No other engine change (audit pre-committed to none).
+- **OQ-01 link:** the A3 collapse was a `prolog_v5` artifact (resolved 2026-06-18, does not reproduce
+  on live twins); this resolves the sharpened residual — *which ε/d distributions enter the band* — as
+  Verdict B with the subset enumerated above.
 
 ---
 
@@ -10049,7 +10045,41 @@ class, drained by `paths.py`).
 
 ---
 
-*Last updated: 2026-06-27. Add new items with sequential OQ-NN labels. Mark
+## OQ-192 — Deciding-hub provenance field (carry the Hub-1/Hub-2 bit to the read site)
+
+**Ω-type:** Ω_C (design choice — add a per-context provenance field vs leave the hub implicit).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-22
+
+**Specific question:** OQ-22 (resolved Verdict B, 2026-06-28) established that a starved subset of
+constraints are Hub-2 decisions (`effective_immutability`) reported as if they were two-hub (Hub-1
+χ-gates + Hub-2) decisions — the cross-observer type variation is entirely Hub-2-sourced, Hub-1
+contributing no dynamic range. Per Build Discipline (carry the provenance bit to the read site so
+*decided-by-Hub-2* and *genuine-two-hub* don't collapse to one token), should the engine emit a
+per-context "deciding hub" field (e.g. `deciding_hub ∈ {hub1_chi, hub2_immutability, both}`) on each
+presheaf classification, so a consumer can tell a Hub-2-decided type from a genuine two-hub decision?
+Or is documenting the distinction (now in OQ-22 + the corrected `drl_core.pl:205` two-hub comment)
+sufficient?
+
+**What resolution changes:** Option (a) — add the field: per (constraint, context) decide whether the
+type would change if χ were swept across the constraint's observed span at fixed immutability (Hub-1
+contributes) vs only when immutability changes (Hub-2-decided); serialize as a sibling of
+`perspective_chi` in `pipeline_output.json` and surface in `enhanced_report`. The audit's
+`oq22_grid.py` is a working prototype of the discriminator ((observer×immutability) grid:
+vanish-under-pin = Hub-2, persist-under-pin = Hub-1). Option (b) — leave documented-only (consistent
+with mark-drift-not-armor). The starved counts (testsets 5/109 … flash 100/960) are large on the
+twins, so a consumer reading per-observer type variation as two-hub signal is a live mis-read (argues
+for (a)); against, no current consumer keys on the hub.
+
+**Evidence / reuse:** `audits/2026-06-28_oq22_hub_starvation/` (`grid_*.tsv` = the per-constraint
+discriminator output; `FINDINGS.md`). The discriminator is O(observers × {mountain,rope}) per
+constraint — cheap enough to wire into `run_pipeline` if (a) is chosen.
+
+---
+
+*Last updated: 2026-06-29. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

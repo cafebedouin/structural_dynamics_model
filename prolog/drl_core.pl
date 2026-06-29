@@ -202,11 +202,17 @@ is_piton(_C, _Context, fail).
 %     mutability perceptions, independently of power-scaling.
 %
 %   Hub interaction points:
-%     - Mountain gate: requires BOTH low χ (Hub 1) AND immutability = mountain (Hub 2)
+%     - Mountain gate: a PURE Hub-2 type — requires immutability = mountain (Hub 2) plus the RAW
+%       ε/suppression gates (ε ≤ mountain_extractiveness_max, Supp ≤ mountain_suppression_ceiling,
+%       emerges_naturally).  It does NOT check χ (Hub 1): clause classify_from_metrics/6 mountain
+%       ignores _Chi.  This is intended — canonical spec docs/logic.md:644 "Mountains don't check χ …
+%       they use raw ε and Supp directly" (natural laws affect everyone equally, so a power-indexed χ
+%       is the wrong instrument).  [Corrected 2026-06-28, OQ-22: the prior text "requires BOTH low χ
+%       AND immutability" forked from logic.md; code+spec agree, the comment was the stale fork.]
 %     - snare_immutability_check/1: crosses stalk boundaries via Hub 2 to verify
 %       that at least one standard context perceives changeability (rope)
-%     - Constraints where Hub 1 and Hub 2 give conflicting signals
-%       (e.g., high χ but immutability = mountain) are exactly the false mountains
+%     - False mountains are excluded by the RAW ε/suppression gates (a heavily-extracting or
+%       enforcement-requiring constraint fails ε ≤ max / Supp ≤ ceiling), NOT by a χ gate
 %
 %   Outside both hubs:
 %     - Piton: uses theater_ratio, which is structurally fixed (not power-indexed).

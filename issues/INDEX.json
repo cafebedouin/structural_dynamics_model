@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "1beebc6746cde4d026a690d5584d33920f6d684c",
+    "store_version": "7773afdc9f8da739c037773dd3334d4d4ed5b33c",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-27T23:33:02"
+    "generated_at": "2026-06-29T01:25:57"
   },
-  "issues_sha": "cb12ed507494770c852e05ef1e13e89b7334e5ccabbca2045c7dfea66c637e13",
-  "n_entries": 191,
+  "issues_sha": "022d54f6da69fccbec7257789b96769cb6e1179796866fa0293134cc098789e1",
+  "n_entries": 192,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 97,
+    "resolved": 98,
     "mitigated": 12,
     "partial": 8,
     "disposed": 4,
@@ -31,19 +31,6 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-135"
-      ]
-    },
-    {
-      "id": "OQ-22",
-      "status": "open",
-      "priority": 1,
-      "summary": "Hub 1 / Hub 2 fall-through behavior at threshold starvation",
-      "deps": [
-        "bundled_with OQ-01"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-01"
       ]
     },
     {
@@ -1001,6 +988,19 @@
         "OQ-109",
         "OQ-118"
       ]
+    },
+    {
+      "id": "OQ-192",
+      "status": "open",
+      "priority": 3,
+      "summary": "Deciding-hub provenance field (carry the Hub-1/Hub-2 bit to the read site)",
+      "deps": [
+        "splits_from OQ-22"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-22"
+      ]
     }
   ],
   "archive": [
@@ -1225,6 +1225,20 @@
         "OQ-17",
         "OQ-25",
         "OQ-26"
+      ]
+    },
+    {
+      "id": "OQ-22",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Hub 1 / Hub 2 fall-through behavior at threshold starvation",
+      "deps": [
+        "bundled_with OQ-01"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-01",
+        "OQ-192"
       ]
     },
     {

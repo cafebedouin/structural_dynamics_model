@@ -643,6 +643,21 @@ Truth conditions (from constraint_indexing.pl):
 
 Mountains **don't check Ï‡** (power-scaled extraction). They use raw Îµ and Supp directly. Why? Because natural laws affect everyone equally. Thermodynamics doesn't care about your power position. If a constraint's burden varies dramatically by power, it's not a Mountainâ€”it's constructed.
 
+**Hub-1 dynamic-range boundary (OQ-22, 2026-06-28).** Classification has two independent hubs: Hub 1
+(the χ-gates in the priority cascade) and Hub 2 (`effective_immutability`, observer-indexed). Hub 1
+can only move a constraint across a type boundary by changing observer if the constraint's observer-χ
+span crosses a band edge of its *own* realized χ→type map. That map is **per-constraint** — its band
+cutpoints sit at the config gate values {0.35, 0.45, 0.66, 0.90}, but a single threshold owns 4–5
+different types across constraints (priority resolves the tangled_rope/scaffold/snare overlaps), so a
+constraint's bands are generally *wider* than the config gaps and the config partition is NOT the
+type partition. The minimum non-degenerate single-type band width observed over swept configs is
+≈ **0.099** (the piton band (0.35, 0.45]). When the observer-χ span sits within one band ("starvation"),
+the final type and all cross-observer variation are decided by Hub 2 alone. This floor characterizes
+**sigmoid-driven** Hub-1 disengagement only: χ = ε·f(d)·σ(scope) has a second, compression-immune
+span source σ(scope) (observers span local 0.8 / national 1.0 / global 1.2), so a constraint can be
+sigmoid-starved yet still scope-span a band edge. Full audit + per-constraint census:
+`audits/2026-06-28_oq22_hub_starvation/`.
+
 ##### Implementation
 
 ```prolog

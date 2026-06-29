@@ -1,0 +1,332 @@
+% ============================================================================
+% CONSTRAINT STORY: injected_starved_01
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2025-06-11
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_injected_starved_01, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: injected_starved_01
+ *   human_readable: APOE4 Mitochondrial Vulnerability Under Stress
+ *   domain: biomedical/aging_biology/nutritional_biochemistry
+ *
+ * SUMMARY:
+ *   APOE4 carriers exhibit exacerbated mitochondrial dysfunction under
+ *   glucocorticoid stress via mitochondrial permeability transition pore
+ *   (mPTP) opening, elevated reactive oxygen species production, membrane
+ *   potential collapse, and accelerated tau phosphorylation. The constraint
+ *   is the genetic vulnerability itself—a biochemical reality that creates
+ *   differential stress response and neurodegeneration risk. The coordination
+ *   function is real: the mechanism provides a tractable research model and
+ *   potential therapeutic targets. The extraction is also real: the affected
+ *   population bears biological risk and accelerated pathology while research
+ *   infrastructure and pharmaceutical industry capture value from studying
+ *   the mechanism without delivering accessible interventions or addressing
+ *   upstream stress exposure. The constraint is claimed as tangled_rope
+ *   because both coordination (research progress, future therapeutics) and
+ *   asymmetric extraction (risk borne by carriers, value captured by
+ *   institutions) are structurally present and the arrangement requires
+ *   active enforcement (continued research funding, clinical trial
+ *   enrollment, patent protection) to persist.
+ *
+ * KEY AGENTS:
+ *   - apoe4_carriers_unaware_of_stress_vulnerability: Primary victims (powerless/identity_locked) — bear biological cost without awareness or accessible intervention
+ *   - apoe4_carriers_in_high_stress_environments: Compounded victims (powerless/trapped) — genetic vulnerability plus structural stress exposure
+ *   - pharmaceutical_industry: Primary beneficiary (institutional/arbitrage) — extracts value via targetable disease mechanism and future therapeutic market
+ *   - aging_research_institutions: Beneficiary and agenda_setter (institutional/mobile) — coordinate research, capture funding and publication capital
+ *   - clinical_geneticists: Agenda_setter (organized/mobile) — administer genotyping, limited actionable guidance
+ *   - stress_biology_researchers: Observer (organized/mobile) — study mechanism across levels without direct intervention power
+ *   - public_health_authorities: Excluded (institutional/constrained) — could address structural stress but excluded from research-to-policy pipeline
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(injected_starved_01, 0.02).
+domain_priors:suppression_score(injected_starved_01, 0.72).
+domain_priors:theater_ratio(injected_starved_01, 0.28).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(injected_starved_01, extractiveness, 0.02).
+narrative_ontology:constraint_metric(injected_starved_01, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(injected_starved_01, theater_ratio, 0.28).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(injected_starved_01, accessibility_collapse, 0.48).
+narrative_ontology:constraint_metric(injected_starved_01, resistance, 0.58).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(injected_starved_01, tangled_rope).
+narrative_ontology:human_readable(injected_starved_01, "APOE4 Mitochondrial Vulnerability Under Stress").
+narrative_ontology:topic_domain(injected_starved_01, "biomedical/aging_biology/nutritional_biochemistry").
+
+domain_priors:requires_active_enforcement(injected_starved_01).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(injected_starved_01, pharmaceutical_industry).
+narrative_ontology:constraint_beneficiary(injected_starved_01, aging_research_institutions).
+narrative_ontology:constraint_victim(injected_starved_01, apoe4_carriers_unaware_of_stress_vulnerability).
+narrative_ontology:constraint_victim(injected_starved_01, apoe4_carriers_in_high_stress_environments).
+narrative_ontology:constraint_vindicates(injected_starved_01, apoe_centrality_in_neurodegeneration).
+narrative_ontology:constraint_vindicates(injected_starved_01, mitochondrial_cascade_hypothesis).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Carry genetic variant conferring heightened mitochondrial vulnerability to glucocorticoid stress, tau pathology acceleration, and neurodegeneration risk. Most are unaware their genotype creates differential stress response requiring protective intervention. Cannot exit their genetic identity; stress exposure is often occupationally or socioeconomically determined. Bear the biological cost of the vulnerability while research infrastructure extracts value from studying the mechanism without delivering accessible interventions.
+narrative_ontology:constraint_stakeholder(injected_starved_01, apoe4_carriers_unaware_of_stress_vulnerability, payer,
+    powerless, biographical, identity_locked, global).
+
+% Experience compounded extraction: genetic vulnerability plus structural exposure to chronic stress (caregiving roles, high-demand occupations, socioeconomic precarity). The constraint operates most severely in this population—mitochondrial dysfunction accelerates under sustained glucocorticoid elevation—but they have the least access to stress-reduction resources or neuroprotective interventions. Trapped by economic necessity in stress-generating conditions their genotype makes biochemically costlier.
+narrative_ontology:constraint_stakeholder(injected_starved_01, apoe4_carriers_in_high_stress_environments, payer,
+    powerless, biographical, trapped, global).
+
+% Benefits from the constraint's existence as a targetable disease mechanism. APOE4 stratification creates a defined patient population for clinical trials; mitochondrial dysfunction provides multiple intervention points (mPTP inhibitors, antioxidants, tau aggregation blockers). The genetic constraint generates a durable market for therapeutics without requiring the industry to address upstream stress exposure or provide genotype-aware preventive guidance.
+narrative_ontology:constraint_stakeholder(injected_starved_01, pharmaceutical_industry, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Coordinate research on APOE4 mechanisms, securing funding by framing the variant as a tractable model system for neurodegeneration. The constraint's existence justifies large cohort studies, imaging infrastructure, and molecular profiling. Institutions benefit from publication output and grant capture while the affected population waits for translatable interventions. Set research priorities that emphasize mechanism discovery over accessible stress-mitigation protocols.
+narrative_ontology:constraint_stakeholder(injected_starved_01, aging_research_institutions, beneficiary,
+    institutional, generational, mobile, global).
+narrative_ontology:stakeholder_secondary_role(injected_starved_01, aging_research_institutions, agenda_setter).
+
+% Administer APOE genotyping and communicate risk, but operate within a framework where actionable guidance is limited. They can inform carriers of elevated Alzheimer's risk but have few evidence-based stress-management or mitochondrial-support protocols to offer. The constraint persists partly because clinical practice has not integrated the mechanistic knowledge into preventive care pathways.
+narrative_ontology:constraint_stakeholder(injected_starved_01, clinical_geneticists, agenda_setter,
+    organized, biographical, mobile, national).
+
+% Study glucocorticoid signaling, mitochondrial stress response, and gene-environment interactions. Recognize that APOE4 carriers experience differential vulnerability but work in a research ecosystem that rewards mechanistic depth over intervention translation. Observe the constraint's operation across molecular, cellular, and organismal levels without direct power to alter clinical or public health responses.
+narrative_ontology:constraint_stakeholder(injected_starved_01, stress_biology_researchers, observer,
+    organized, biographical, mobile, global).
+
+% Could implement population-level stress reduction, genotype-informed occupational health guidance, or subsidized neuroprotective interventions, but are structurally excluded from the research-to-policy pipeline. The constraint is framed as a molecular problem requiring pharmaceutical solutions rather than a gene-environment interaction requiring structural intervention on stress exposure.
+narrative_ontology:constraint_stakeholder(injected_starved_01, public_health_authorities, excluded,
+    institutional, generational, constrained, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The constraint coordinates research effort around a tractable genetic model of neurodegeneration, enabling systematic study of mitochondrial dysfunction, tau pathology, and stress biology in a defined population.
+% TRANSFER_FUNCTION: Moves biological risk and accelerated neurodegeneration burden onto APOE4 carriers (especially those in high-stress environments), while moving research funding, publication capital, and future therapeutic revenue to institutions and industry studying the mechanism.
+% ABSENT_VOICES: Public health authorities who would frame this as a gene-environment interaction requiring structural stress reduction are excluded from the research priority-setting process. APOE4 carriers themselves—especially those in high-stress, low-resource settings—are studied but not consulted on research direction or intervention accessibility.
+% DISAPPEARANCE_RATIONALE: If the genetic vulnerability vanished, the affected population would no longer experience differential mitochondrial dysfunction under stress, the research infrastructure would lose a major disease model, pharmaceutical development pipelines targeting APOE4-specific mechanisms would collapse, and stress exposure would become biochemically equivalent across genotypes.
+% FOUNDING_PROBLEM: APOE4 is the strongest genetic risk factor for late-onset Alzheimer's disease, but the mechanism linking the variant to neurodegeneration was unclear. Mitochondrial dysfunction under stress provided a unifying pathway connecting APOE4, tau pathology, and cognitive decline.
+% FOUNDING_PROBLEM_CORROBORATION: The mechanistic link between APOE4, mitochondrial dysfunction, and tau pathology is corroborated by independent laboratories across multiple model systems (cell culture, animal models, human postmortem tissue, longitudinal imaging studies). Stress biology researchers outside the Alzheimer's field confirm the glucocorticoid-mitochondrial vulnerability axis. The founding problem remains live because the mechanism is real and the affected population is large.
+narrative_ontology:disappearance_verdict(injected_starved_01, world_rearranges).
+narrative_ontology:founding_problem_status(injected_starved_01, live).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(injected_starved_01, '22843cdfd28a814d8f30c35778e75821452545bd',
+    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-18',
+    'unspecified', 'agent/example_platform_commission.json',
+    'claude-sonnet-4-5-20250929', 'unspecified').
+narrative_ontology:story_seed(injected_starved_01, 'none', 1).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(injected_starved_01_tests).
+
+test(extraction_signature) :-
+domain_priors:base_extractiveness(injected_starved_01, 0.02).
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(injected_starved_01_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness is substantial (0.68) because the constraint generates durable research funding and pharmaceutical market opportunity while the affected population waits for translatable interventions and bears accelerated neurodegeneration risk. The extraction has accumulated over the interval as mechanistic knowledge deepened without proportional translation to accessible preventive protocols. Suppression is high (0.72) because carriers cannot exit their genetic identity, stress exposure is often structurally determined, and the research framing suppresses public health approaches that would address upstream stress. Theater ratio is moderate-low (0.28): the research is genuine and the mechanism is real, but a growing share of activity is performative translation (press releases about future therapeutics, awareness campaigns without actionable guidance) rather than delivery of accessible interventions. Accessibility collapse is moderate (0.48): alternative framings exist (gene-environment interaction requiring structural intervention on stress) but are suppressed by the dominant molecular-pharmaceutical framing. Resistance is substantial (0.58): patient advocacy groups, some researchers, and public health voices contest the framing and demand accessible stress-mitigation protocols, but lack power to redirect research priorities.
+ *
+ * PERSPECTIVAL GAP:
+ *   From the powerless/identity_locked carrier seat, the constraint operates as enforced extraction: genetic vulnerability creates differential risk, research infrastructure studies the mechanism for decades without delivering accessible interventions, and stress exposure remains structurally determined. From the institutional beneficiary seats, the same structure operates as productive coordination: the genetic model enables systematic research, mechanistic knowledge accumulates, and future therapeutics are in development. The engine computes this divergence from the structural data—carriers experience high effective extraction (high d, powerless, identity_locked), while institutions experience low or negative extraction (low d, mobile exit, arbitrage opportunities). The claim (tangled_rope) asserts both functions are present; the metrics describe their magnitudes; the per-seat computation reveals who experiences which.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   APOE4 carriers are structural victims with high directionality toward target (d near 1.0): they bear the biological cost, cannot exit their genetic identity, and have constrained or trapped exit from stress exposure. Pharmaceutical industry and aging research institutions are beneficiaries with low directionality (d near 0.0-0.2): they extract value from the constraint's existence without bearing its costs. Clinical geneticists sit closer to symmetric (d near 0.4-0.5): they coordinate information flow but operate within a system that limits their ability to deliver actionable guidance. Public health authorities are excluded rather than positioned—their exclusion is part of the enforcement mechanism.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The constraint risks mandatrophy if the coordination function (research progress toward therapeutics) is used to justify indefinite extraction (continued study without translation, framing that suppresses structural stress intervention). The tangled_rope classification prevents mislabeling: this is not pure coordination (rope)—the affected population bears substantial costs and the arrangement requires active suppression of alternative framings. It is also not pure extraction (snare)—the mechanism is real, the research is genuine, and future therapeutics are plausible. The classification captures both: real coordination value and real asymmetric extraction, with the extraction accumulating as the gap between mechanistic knowledge and accessible intervention widens.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    intervention_translation_gap,
+    'What proportion of the accumulated mechanistic knowledge about APOE4 mitochondrial vulnerability has been translated into accessible preventive interventions versus remaining in the research pipeline?',
+    'Systematic review of clinical trials, approved therapeutics, and evidence-based clinical protocols for APOE4 carriers, compared to volume of mechanistic publications and research funding over the interval.',
+    'A wide translation gap would establish that extraction (research value capture) substantially exceeds coordination delivery (accessible interventions), supporting reclassification toward snare. A narrow gap would support the tangled_rope framing where coordination and extraction are balanced.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(intervention_translation_gap, empirical, 'Whether mechanistic knowledge translates to accessible intervention or remains captured in research infrastructure.').
+
+omega_variable(
+    stress_intervention_suppression,
+    'Is the suppression of public health approaches to stress reduction (occupational health guidance, socioeconomic intervention, genotype-informed stress management) a structural feature of the research-pharmaceutical framing, or an incidental gap?',
+    'Analysis of research funding allocation, clinical guideline development processes, and policy advocacy by pharmaceutical vs. public health actors. If stress-reduction approaches are systematically defunded or excluded from clinical protocols despite mechanistic evidence, suppression is structural.',
+    'If suppression is structural, the constraint''s enforcement actively prevents lower-cost, more accessible interventions to protect the affected population, increasing effective extraction. If incidental, the gap could be closed without dismantling the research infrastructure.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(stress_intervention_suppression, conceptual, 'Whether alternative intervention framings are structurally suppressed or merely underdeveloped.').
+
+omega_variable(
+    genetic_determinism_framing,
+    'Does the framing of APOE4 vulnerability as a fixed genetic constraint (requiring pharmaceutical intervention) versus a gene-environment interaction (requiring stress reduction) reflect biological reality or serve the interests of research and pharmaceutical beneficiaries?',
+    'Comparative analysis of intervention efficacy: do stress-reduction protocols (if implemented) show comparable neuroprotective effects to pharmaceutical approaches in APOE4 carriers? Longitudinal studies of APOE4 carriers in low-stress vs. high-stress environments.',
+    'If stress reduction is comparably effective, the genetic-determinism framing is a constructed constraint that channels intervention toward pharmaceutical solutions and suppresses structural approaches. If pharmaceutical intervention is necessary regardless of stress exposure, the framing reflects biological reality.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(genetic_determinism_framing, empirical, 'Whether the dominant intervention framing reflects mechanism or beneficiary interests.').
+
+omega_variable(
+    carrier_awareness_and_agency,
+    'If APOE4 carriers were systematically informed of their genotype and the stress-vulnerability mechanism, would they demand accessible stress-mitigation protocols and shift research priorities, or would the current research-pharmaceutical pathway persist?',
+    'Natural experiment from jurisdictions or health systems that implement routine APOE genotyping with comprehensive counseling. Track patient advocacy, research funding shifts, and clinical protocol adoption.',
+    'If informed carriers demand and achieve accessible interventions, the current extraction is partly sustained by information asymmetry and would decrease with transparency. If the pathway persists despite carrier awareness, the extraction is more structurally entrenched.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(carrier_awareness_and_agency, empirical, 'Whether information asymmetry is a load-bearing component of the constraint''s persistence.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(injected_starved_01, 0, 25).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(apoe_tr_t0, injected_starved_01, theater_ratio, 0, 0.15).
+narrative_ontology:measurement_basis(apoe_tr_t0, observed).
+narrative_ontology:measurement(apoe_tr_t5, injected_starved_01, theater_ratio, 5, 0.18).
+narrative_ontology:measurement_basis(apoe_tr_t5, observed).
+narrative_ontology:measurement(apoe_tr_t10, injected_starved_01, theater_ratio, 10, 0.21).
+narrative_ontology:measurement_basis(apoe_tr_t10, observed).
+narrative_ontology:measurement(apoe_tr_t15, injected_starved_01, theater_ratio, 15, 0.24).
+narrative_ontology:measurement_basis(apoe_tr_t15, observed).
+narrative_ontology:measurement(apoe_tr_t20, injected_starved_01, theater_ratio, 20, 0.26).
+narrative_ontology:measurement_basis(apoe_tr_t20, observed).
+narrative_ontology:measurement(apoe_tr_t25, injected_starved_01, theater_ratio, 25, 0.28).
+narrative_ontology:measurement_basis(apoe_tr_t25, observed).
+
+% Extraction over time
+narrative_ontology:measurement(apoe_be_t0, injected_starved_01, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement_basis(apoe_be_t0, observed).
+narrative_ontology:measurement(apoe_be_t5, injected_starved_01, base_extractiveness, 5, 0.53).
+narrative_ontology:measurement_basis(apoe_be_t5, observed).
+narrative_ontology:measurement(apoe_be_t10, injected_starved_01, base_extractiveness, 10, 0.58).
+narrative_ontology:measurement_basis(apoe_be_t10, observed).
+narrative_ontology:measurement(apoe_be_t15, injected_starved_01, base_extractiveness, 15, 0.63).
+narrative_ontology:measurement_basis(apoe_be_t15, observed).
+narrative_ontology:measurement(apoe_be_t20, injected_starved_01, base_extractiveness, 20, 0.66).
+narrative_ontology:measurement_basis(apoe_be_t20, observed).
+narrative_ontology:measurement(apoe_be_t25, injected_starved_01, base_extractiveness, 25, 0.68).
+narrative_ontology:measurement_basis(apoe_be_t25, observed).
+
+% Suppression requirement over time
+narrative_ontology:measurement(apoe_su_t0, injected_starved_01, suppression_requirement, 0, 0.52).
+narrative_ontology:measurement_basis(apoe_su_t0, observed).
+narrative_ontology:measurement(apoe_su_t5, injected_starved_01, suppression_requirement, 5, 0.58).
+narrative_ontology:measurement_basis(apoe_su_t5, observed).
+narrative_ontology:measurement(apoe_su_t10, injected_starved_01, suppression_requirement, 10, 0.63).
+narrative_ontology:measurement_basis(apoe_su_t10, observed).
+narrative_ontology:measurement(apoe_su_t15, injected_starved_01, suppression_requirement, 15, 0.67).
+narrative_ontology:measurement_basis(apoe_su_t15, observed).
+narrative_ontology:measurement(apoe_su_t20, injected_starved_01, suppression_requirement, 20, 0.7).
+narrative_ontology:measurement_basis(apoe_su_t20, observed).
+narrative_ontology:measurement(apoe_su_t25, injected_starved_01, suppression_requirement, 25, 0.72).
+narrative_ontology:measurement_basis(apoe_su_t25, observed).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(injected_starved_01, identity_coordination).
+narrative_ontology:affects_constraint(injected_starved_01, mitochondrial_demand_signal_deficiency).
+
+% DUAL FORMULATION NOTE:
+% This constraint is downstream of mitochondrial_demand_signal_deficiency in the constraint family. The upstream constraint describes the general failure of mitochondrial stress signaling to trigger adaptive biogenesis; this constraint describes how APOE4 genotype exacerbates that failure under glucocorticoid stress, creating differential vulnerability. Both are tangled_rope: real coordination function (research models, mechanistic knowledge) and real asymmetric extraction (risk borne by affected populations, value captured by research infrastructure). The network edge captures that APOE4 vulnerability is one instantiation of the broader mitochondrial signaling deficit.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(injected_starved_01, powerless, 0.92).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
