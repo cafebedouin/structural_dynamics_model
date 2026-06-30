@@ -45,6 +45,35 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-29 — OQ-23 canary: coexists_with FPN exclusion is ACTIVELY VIOLATED (RED), escalated
+**Files:** prolog/tests/test_coexists_fpn_canary.pl, prolog/drl_purity_network.pl, ISSUES.md, audits/2026-06-29_oq23_coexists_fpn_canary/
+**Tier:** correction-key
+
+Built the OQ-23 positive-controlled canary (`prolog/tests/test_coexists_fpn_canary.pl`) under
+operator ruling (a+). The canary FALSIFIED the premise it was meant to backstop: the
+`coexists_with` "zero contamination by definition" exclusion is **not latent — it is already
+violated on the corpus** via the authored `affects_constraint` side channel between sibling
+readings (`constraint_neighbors_existing/2` admits it as `explicit`; the line-105 intra-kernel
+filter covers only shared-agent edges). Census (leaked = `effective_purity` Contam>0):
+testsets/ 2/2 eligible, haiku 178/181, flash 361/461, kernel_v1 662/676 — every populated leg.
+testsets/ pairs: `press_reformation_causation`, `jewish_sovereignty_palestine` (same-kernel,
+edge `source=explicit`). forecloses ALSO leaks (testsets/ 1) → OQ-24 reopening candidate.
+
+**Why correction-key:** the OQ-23 entry's "held on testsets/ by sparsity" recon was a one-kernel
+sample; the live exclusion holds (where it does) only by singleton sparsity + the `-1.0` purity
+sentinel — NEITHER is a coexists_with filter. Do not cite "coexists_with carries zero contamination
+weight" as a settled engine property; it is an open Ω_C ruling (close the side channel by extending
+the intra-kernel filter to `affects_constraint` between same-kernel typed siblings, vs accept
+dual-channel authoring and retire the claim). Per Step-3 RED: NOT self-resolved; escalated. OQ-23
+stays open. Measurement is `run_coexists_census/0` under corpus_path overlay (NOT a plunit
+green — the suite holds the instrument controls only). The 4 controls (positive fact-level inject,
+equal-purity, sentinel-donor, direct-typed-edge tripwire) are pair-specific and corpus-independent;
+all green.
+
+**Promotion test:** the tripwire (the side-channel leak + "don't cite zero-by-definition") is in the
+`drl_purity_network.pl:59-67` header comment and the OQ-23 entry, where an editor of that file will
+see it — not promoted to CLAUDE.md (file-local, the canary self-flags).
+
 ## 2026-06-27 — OQ-124/OQ-149 committer-axis convention control: A=SIGNAL, B=CONVENTION, C=OPEN
 **Files:** ISSUES.md, prolog/signature_detection.pl, python/story_repair.py, agent/run_no_scope_gemini.py
 **Tier:** landed

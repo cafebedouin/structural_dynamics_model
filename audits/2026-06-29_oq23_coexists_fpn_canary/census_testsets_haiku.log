@@ -1,0 +1,77 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+[corpus] Loading 960 testset files...
+[corpus] Loaded 960 testsets successfully.
+
+== coexists_with census (corpus=testsets_haiku) ==
+  1. denominator  (co-present pairs)      = 770
+  2. eligible     (purity>=0 both, dlt>0) = 181
+  3. coupled      (affects_constraint)    = 762
+  4. leaked       (effective_purity>0)    = 178
+  5. coupled-but-INELIGIBLE (funnel grd)  = 584
+  -- suppressed (denom - eligible)        = 589
+  LEAKED PAIRS (Contam>0), 142 total — showing up to 25 by Contam:
+    war_winnability_post_1945__countervailing_thinkable <-> war_winnability_post_1945__deterrence_unthinkable  Contam=0.300000
+    simultaneous_veneration__domain_partition_reading <-> simultaneous_veneration__pragmatic_incoherence_reading  Contam=0.300000
+    lycurgan_laws__adaptive_fiction_reading <-> lycurgan_laws__sacral_fidelity_reading  Contam=0.300000
+    kodashim_corpus__study_as_exercise <-> kodashim_corpus__substitution_archive  Contam=0.300000
+    kodashim_commandment_status__performance_only <-> kodashim_commandment_status__study_as_performance  Contam=0.300000
+    ietf_openness_commitment__commons_stewardship_reading <-> ietf_openness_commitment__legitimacy_erosion_reading  Contam=0.300000
+    ietf_openness_commitment__capture_substrate_reading <-> ietf_openness_commitment__commons_stewardship_reading  Contam=0.300000
+    hoa_covenant_scope__coordination_reading <-> hoa_covenant_scope__extraction_reading  Contam=0.300000
+    vedic_dharmic_corpus__hereditary_monopoly_reading <-> vedic_dharmic_corpus__reformist_egalitarian_reading  Contam=0.256917
+    combatant_status_definition__functional_protection_reading <-> combatant_status_definition__national_liberation_reading  Contam=0.254667
+    constitutional_authority_boundary__judicial_supremacy_reading <-> constitutional_authority_boundary__parliamentary_primacy_reading  Contam=0.246667
+    shinbutsu_ontological_commitment__partition_reading <-> shinbutsu_ontological_commitment__syncretic_reading  Contam=0.234667
+    ost_article_ii_non_appropriation__commons_conservation <-> ost_article_ii_non_appropriation__international_regime  Contam=0.222917
+    deferential_realism_ontology__immutable_diagnostic_reading <-> deferential_realism_ontology__rhetorical_scaffold_reading  Contam=0.222917
+    honor_settlement_legitimacy__contraction_reading <-> honor_settlement_legitimacy__drop_reading  Contam=0.215800
+    derivative_work_statutory_boundary__coordination_reading <-> derivative_work_statutory_boundary__hybrid_carveout_reading  Contam=0.212667
+    sacrifice_obligation_kernel__performance_only_reading <-> sacrifice_obligation_kernel__study_as_exercise_reading  Contam=0.212500
+    kodashim_corpus__performance_only <-> kodashim_corpus__study_as_exercise  Contam=0.212500
+    second_amendment_text__individual_right_reading <-> second_amendment_text__originalist_civic_virtue_reading  Contam=0.208667
+    legitimacy_of_practice_standardization__endogenous_displacement_reading <-> legitimacy_of_practice_standardization__exogenous_override_reading  Contam=0.207833
+    wto_dsb_authority__advisory_coordination_reading <-> wto_dsb_authority__judicial_activism_reading  Contam=0.205833
+    wto_dsb_authority__advisory_coordination_reading <-> wto_dsb_authority__binding_referee_reading  Contam=0.205833
+    qwerty_persistence__incumbent_preservation_reading <-> qwerty_persistence__lapsed_alternatives_reading  Contam=0.205833
+    income_support_commitment__freedom_floor_reading <-> income_support_commitment__targeting_efficiency_reading  Contam=0.200500
+    udhr_authority__aspirational_sovereignty_reading <-> udhr_authority__binding_universalism_reading  Contam=0.199833
+
+== forecloses census (corpus=testsets_haiku) ==
+  1. denominator  (co-present pairs)      = 306
+  2. eligible     (purity>=0 both, dlt>0) = 90
+  3. coupled      (affects_constraint)    = 302
+  4. leaked       (effective_purity>0)    = 89
+  5. coupled-but-INELIGIBLE (funnel grd)  = 213
+  -- suppressed (denom - eligible)        = 216
+  LEAKED PAIRS (Contam>0), 79 total — showing up to 25 by Contam:
+    war_winnability_post_1945__countervailing_thinkable <-> war_winnability_post_1945__deterrence_unthinkable  Contam=0.300000
+    simultaneous_veneration__domain_partition_reading <-> simultaneous_veneration__pragmatic_incoherence_reading  Contam=0.300000
+    lycurgan_laws__adaptive_fiction_reading <-> lycurgan_laws__sacral_fidelity_reading  Contam=0.300000
+    kodashim_corpus__study_as_exercise <-> kodashim_corpus__substitution_archive  Contam=0.300000
+    kodashim_commandment_status__performance_only <-> kodashim_commandment_status__study_as_performance  Contam=0.300000
+    hebrew_living_language__liturgical_continuity_reading <-> hebrew_living_language__native_generation_reading  Contam=0.300000
+    vedic_dharmic_corpus__hereditary_monopoly_reading <-> vedic_dharmic_corpus__reformist_egalitarian_reading  Contam=0.256917
+    herem_command_dt7__allegorical_displacement_reading <-> herem_command_dt7__durable_separation_reading  Contam=0.250000
+    constitutional_authority_boundary__judicial_supremacy_reading <-> constitutional_authority_boundary__parliamentary_primacy_reading  Contam=0.246667
+    shinbutsu_ontological_commitment__partition_reading <-> shinbutsu_ontological_commitment__syncretic_reading  Contam=0.234667
+    deferential_realism_ontology__immutable_diagnostic_reading <-> deferential_realism_ontology__rhetorical_scaffold_reading  Contam=0.222917
+    derivative_work_statutory_boundary__coordination_reading <-> derivative_work_statutory_boundary__hybrid_carveout_reading  Contam=0.212667
+    kodashim_corpus__performance_only <-> kodashim_corpus__study_as_exercise  Contam=0.212500
+    legitimacy_of_practice_standardization__endogenous_displacement_reading <-> legitimacy_of_practice_standardization__exogenous_override_reading  Contam=0.207833
+    wto_dsb_authority__advisory_coordination_reading <-> wto_dsb_authority__judicial_activism_reading  Contam=0.205833
+    wto_dsb_authority__advisory_coordination_reading <-> wto_dsb_authority__binding_referee_reading  Contam=0.205833
+    humane_treatment_standard__absolute_prohibition <-> humane_treatment_standard__contextual_necessity  Contam=0.200500
+    udhr_authority__aspirational_sovereignty_reading <-> udhr_authority__binding_universalism_reading  Contam=0.199833
+    sacrifice_obligation_kernel__messianic_suspension_reading <-> sacrifice_obligation_kernel__performance_only_reading  Contam=0.198500
+    animal_moral_status__abolitionist_reading <-> animal_moral_status__property_reading  Contam=0.186500
+    church_turing_thesis__mathematical_definition_reading <-> church_turing_thesis__physical_claim_reading  Contam=0.163875
+    constitutional_authority_boundary__coordinate_construction_reading <-> constitutional_authority_boundary__judicial_supremacy_reading  Contam=0.162417
+    performance_legitimacy__livelihood_security_reading <-> performance_legitimacy__techno_nationalist_reading  Contam=0.143250
+    jurisprudential_method_kernel__hanbali_reading <-> jurisprudential_method_kernel__maliki_reading  Contam=0.138417
+    divine_legitimacy_substrate__amun_polytheistic_reading <-> divine_legitimacy_substrate__atenist_monotheistic_reading  Contam=0.131250

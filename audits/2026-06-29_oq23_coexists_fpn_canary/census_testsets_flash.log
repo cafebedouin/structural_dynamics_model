@@ -1,0 +1,77 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+[corpus] Loading 960 testset files...
+[corpus] Loaded 960 testsets successfully.
+
+== coexists_with census (corpus=testsets_flash) ==
+  1. denominator  (co-present pairs)      = 776
+  2. eligible     (purity>=0 both, dlt>0) = 461
+  3. coupled      (affects_constraint)    = 590
+  4. leaked       (effective_purity>0)    = 361
+  5. coupled-but-INELIGIBLE (funnel grd)  = 229
+  -- suppressed (denom - eligible)        = 315
+  LEAKED PAIRS (Contam>0), 310 total — showing up to 25 by Contam:
+    wto_dsb_authority__advisory_coordination_reading <-> wto_dsb_authority__judicial_activism_reading  Contam=0.300000
+    war_winnability_post_1945__deterrence_unthinkable <-> war_winnability_post_1945__rhetorical_contraction  Contam=0.300000
+    war_winnability_post_1945__countervailing_thinkable <-> war_winnability_post_1945__deterrence_unthinkable  Contam=0.300000
+    transition_causality__hybrid_trigger_reading <-> transition_causality__overdetermined_collapse_reading  Contam=0.300000
+    temple_sacrifice_commitment__study_as_exercise <-> temple_sacrifice_commitment__symbolic_transformation  Contam=0.300000
+    statute_of_anne_ip_foundation__conceptual_emergence_reading <-> statute_of_anne_ip_foundation__institutional_reallocation_reading  Contam=0.300000
+    software_source_status__pragmatic_development_reading <-> software_source_status__property_rights_reading  Contam=0.300000
+    shinbutsu_ontological_commitment__partition_reading <-> shinbutsu_ontological_commitment__syncretic_reading  Contam=0.300000
+    shinbutsu_coexistence_commitment__domain_partition_reading <-> shinbutsu_coexistence_commitment__incoherent_bundle_reading  Contam=0.300000
+    second_amendment_text__individual_right_reading <-> second_amendment_text__originalist_civic_virtue_reading  Contam=0.300000
+    script_as_identity__ottoman_continuity_reading <-> script_as_identity__phonetic_instrumentalism_reading  Contam=0.300000
+    rfc9293_tcp_specification__middlebox_realism_reading <-> rfc9293_tcp_specification__optimization_latitude_reading  Contam=0.300000
+    qwerty_persistence_inevitability__path_dependency_reading <-> qwerty_persistence_inevitability__strategic_lock_in_reading  Contam=0.300000
+    qwerty_persistence__incumbent_preservation_reading <-> qwerty_persistence__lapsed_alternatives_reading  Contam=0.300000
+    preparedness_persistence__competence_reading <-> preparedness_persistence__husk_reading  Contam=0.300000
+    permissive_license_text__commons_coordination_reading <-> permissive_license_text__corporate_moat_reading  Contam=0.300000
+    permissive_license_text__commons_coordination_reading <-> permissive_license_text__copyleft_counterfactual_reading  Contam=0.300000
+    nuclear_impossibility_kernel__credibility_paradox_reading <-> nuclear_impossibility_kernel__structural_contraction_reading  Contam=0.300000
+    nuclear_impossibility_kernel__credibility_paradox_reading <-> nuclear_impossibility_kernel__rational_dropout_reading  Contam=0.300000
+    market_naturalization__hybrid_reading <-> market_naturalization__lapsed_alternative_reading  Contam=0.300000
+    kami_buddha_ontology__honji_suijaku_monism <-> kami_buddha_ontology__incoherent_bundle  Contam=0.300000
+    kami_buddha_ontology__domain_partition <-> kami_buddha_ontology__incoherent_bundle  Contam=0.300000
+    imposition_pathway_kernel__endogenous_climb_reading <-> imposition_pathway_kernel__hybrid_cascade_reading  Contam=0.300000
+    human_dignity_ai_safeguarding__imago_dei_reading <-> human_dignity_ai_safeguarding__posthumanist_reading  Contam=0.300000
+    honor_settlement_legitimacy__contraction_reading <-> honor_settlement_legitimacy__drop_reading  Contam=0.300000
+
+== forecloses census (corpus=testsets_flash) ==
+  1. denominator  (co-present pairs)      = 333
+  2. eligible     (purity>=0 both, dlt>0) = 188
+  3. coupled      (affects_constraint)    = 261
+  4. leaked       (effective_purity>0)    = 156
+  5. coupled-but-INELIGIBLE (funnel grd)  = 105
+  -- suppressed (denom - eligible)        = 145
+  LEAKED PAIRS (Contam>0), 140 total — showing up to 25 by Contam:
+    war_winnability_post_1945__countervailing_thinkable <-> war_winnability_post_1945__deterrence_unthinkable  Contam=0.300000
+    transition_causality__hybrid_trigger_reading <-> transition_causality__overdetermined_collapse_reading  Contam=0.300000
+    transition_causality__contingent_choice_reading <-> transition_causality__overdetermined_collapse_reading  Contam=0.300000
+    state_killing_authority__categorical_abolition <-> state_killing_authority__deterrence_instrument  Contam=0.300000
+    shinbutsu_ontological_commitment__partition_reading <-> shinbutsu_ontological_commitment__syncretic_reading  Contam=0.300000
+    shinbutsu_coexistence_commitment__domain_partition_reading <-> shinbutsu_coexistence_commitment__incoherent_bundle_reading  Contam=0.300000
+    price_formation_kernel__institutional_reading <-> price_formation_kernel__naturalist_reading  Contam=0.300000
+    price_formation_kernel__georgist_reading <-> price_formation_kernel__naturalist_reading  Contam=0.300000
+    kami_buddha_ontology__honji_suijaku_monism <-> kami_buddha_ontology__incoherent_bundle  Contam=0.300000
+    imposition_pathway_kernel__endogenous_climb_reading <-> imposition_pathway_kernel__exogenous_override_reading  Contam=0.300000
+    human_dignity_ai_safeguarding__imago_dei_reading <-> human_dignity_ai_safeguarding__posthumanist_reading  Contam=0.300000
+    honor_settlement_legitimacy__contraction_reading <-> honor_settlement_legitimacy__drop_reading  Contam=0.300000
+    genesis_creation_cosmology__theistic_evolution <-> genesis_creation_cosmology__young_earth_literal  Contam=0.300000
+    genesis_creation_cosmology__literary_framework <-> genesis_creation_cosmology__young_earth_literal  Contam=0.300000
+    dignity_kernel__imago_dei_reading <-> dignity_kernel__posthumanist_reading  Contam=0.300000
+    decalogue_image_prohibition__iconoclast_reading <-> decalogue_image_prohibition__iconodule_reading  Contam=0.300000
+    correct_latin_kernel__continuity_reading <-> correct_latin_kernel__discontinuity_reading  Contam=0.300000
+    legitimacy_of_practice_standardization__endogenous_displacement_reading <-> legitimacy_of_practice_standardization__exogenous_override_reading  Contam=0.298917
+    jati_practice_norm__colonial_census_reading <-> jati_practice_norm__localized_practice_reading  Contam=0.298917
+    statutory_debt_ceiling__constitutional_nullity_reading <-> statutory_debt_ceiling__extraction_snare_reading  Contam=0.270833
+    price_formation_kernel__financialization_reading <-> price_formation_kernel__naturalist_reading  Contam=0.270833
+    market_naturalization__beneficiary_maintained_reading <-> market_naturalization__lapsed_alternative_reading  Contam=0.270833
+    vedic_corpus_social_prescription__orthodox_varna_reading <-> vedic_corpus_social_prescription__reformist_spiritual_reading  Contam=0.266833
+    shinbutsu_coexistence_commitment__incoherent_bundle_reading <-> shinbutsu_coexistence_commitment__syncretic_fusion_reading  Contam=0.263500
+    latin_correctness__continuity_reading <-> latin_correctness__rupture_reading  Contam=0.256833

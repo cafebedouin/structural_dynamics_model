@@ -915,16 +915,30 @@ false-halt guard routed persistence to Hub-1, never halt).
 
 **Ω-type:** Ω_C (design choice — loud documentation vs mechanical guard).
 
-**Status:** open
+**Status:** open — **escalated to operator (Ω_C ruling required); premise REVISED 2026-06-29: NOT latent, ALREADY VIOLATED**
 **Priority:** 1
 **Origin:** FPN convergence-test run, Branch E verdict, May 2026.  
-**Files:** `prolog/drl_purity_network.pl` (constraint_neighbors/3, compute_edge_contamination/7); `prolog/test_forecloses_fpn_injection.pl` (Case 2 — coexists_with_label_blindness)
+**Files:** `prolog/drl_purity_network.pl` (`constraint_neighbors_existing/2` — the real side-channel admission point, line 91–110; tripwire comment 59–67); `prolog/tests/test_forecloses_fpn_injection.pl` (Case 2 — coexists_with_label_blindness); `prolog/tests/test_coexists_fpn_canary.pl` (the OQ-23 canary + controls, 2026-06-29)
 
-**Specific question:** The architecture note's claim that coexists_with's contamination weight is "zero by definition" is — per the run — an unimplemented design intent, not a mathematical property. The FPN is label-blind; injecting coexists_with as an affects_constraint fact produces non-zero contamination identical to any other edge with the same purity delta. Unlike forecloses (which is structurally inert in its semantically correct direction, gradient-orthogonal to the network — genuinely unrepresentable regardless of code), coexists_with is structurally admissible (just a scalar) and excluded only by the fact that nothing currently routes it into constraint_neighbors/3. Should the exclusion remain documented-only, or should an edge-type guard be added so the decoupling is enforced rather than incidental?
+**Specific question:** The architecture note's claim that coexists_with's contamination weight is "zero by definition" is an unimplemented design intent, not a mathematical property. The FPN is label-blind. ~~excluded only by the fact that nothing currently routes it into constraint_neighbors/3~~ — **FALSE premise, retired 2026-06-29 (see Evidence).** The exclusion is *not* latent: the generation template authors an `affects_constraint` edge between sibling readings, that edge IS routed into `constraint_neighbors_existing/2`, and the intra-kernel filter (`drl_purity_network.pl:105`) covers only shared-agent edges — so coexists_with siblings already contaminate each other via the parallel `affects_constraint` side channel. The decision is no longer "loud documentation vs guard" but "**close the active leak vs accept dual-channel authoring and retire the claim**."
 
-**Evidence so far:** The FPN injection test (Case 2) ran an identical injection to forecloses_1b and got identical scalar flow. The architecture note has been rewritten to claim only what each edge earned: forecloses excluded structurally (gradient-orthogonality demonstrated), coexists_with excluded by unenforced design intent with constraint_neighbors/3 named as the actual gap. No live code path currently routes a coexists_with edge into the network, so the gap is latent — but the next code change that does will inject as a label-blind scalar and nothing will catch it. This is the same shape as the chimera latency (OQ-related — pre-cleanup, the chimera was inert until the next cs_kernel_id addition would have made it live): documented-and-inert versus enforced-by-code.
+**Evidence:**
+- (May 2026) The FPN injection test (Case 2) ran an identical injection to forecloses_1b and got identical scalar flow — label-blindness confirmed at the predicate level.
+- **(2026-06-29) Positive-controlled canary measures the leak as ACTIVE on the corpus, not latent** (`audits/2026-06-29_oq23_coexists_fpn_canary/`). Census of co-present coexists_with sibling pairs, leak = `effective_purity` attributes Contam>0 via the `affects_constraint` edge:
 
-**What resolution changes:** Either (a) the architecture note's open-item clause is made loud enough that any future edit routing coexists_with into constraint_neighbors/3 cannot proceed without first reading the warning (self-flagging documented gap), or (b) an edge-type guard is added in compute_edge_contamination/7 that returns zero contamination when the underlying cs_reading_relation is coexists_with, converting "currently unenforced" to "mechanically enforced." Option (a) is consistent with the build's mark-drift-rather-than-armor discipline; option (b) closes the latent leak. The decision is "loud documentation versus actual guard," and either should be on the record rather than left as ambient.
+  | leg | denom | eligible (purity≥0, Δ>0) | coupled (affects_constraint) | **leaked** |
+  |---|---|---|---|---|
+  | `testsets/` (live) | 3 | 2 | 3 | **2** |
+  | `testsets_haiku/` | 770 | 181 | 762 | **178** |
+  | `testsets_flash/` | 776 | 461 | 590 | **361** |
+  | `kernel_v1` | 695 | 676 | 680 | **662** |
+
+  Every populated leg leaks. testsets/ leaking pairs: `press_reformation_causation` (mutual_shaping↔strategic_deployment, Contam=0.256) and `jewish_sovereignty_palestine` (cultural_zionist↔settler_colonial, Contam=0.199) — both same-kernel siblings, contaminating edge `source=explicit` (the authored `affects_constraint` side channel; shared-agent edges correctly stripped by the line-105 intra-kernel filter). Positive control (fact-level injection), two negative controls (equal-purity; sentinel-donor short-circuit), and a direct-typed-edge tripwire all green — the probe SEES leaks (Pattern 5 discharged).
+- The OQ-23 entry's earlier "held on testsets/ by sparsity" recon sampled ONE kernel (`basic_law…parliamentary_sovereignty`, sibling ungenerated); other live kernels DO have co-present siblings and leak. The exclusion held only by two Pattern-5 absences (singleton sparsity, `-1.0` purity sentinel) — neither is a coexists_with filter.
+
+**What resolution changes (operator's Ω_C ruling):** Either **(1)** extend the intra-kernel filter in `constraint_neighbors_existing/2` to strip `affects_constraint` edges between same-kernel typed-relation siblings (a real engine change with its own old-vs-new pipeline diff; makes "zero by definition" true and flips the canary green), or **(2)** accept dual-channel authoring — siblings DO contaminate via authored `affects_constraint` — and retire the "zero contamination weight by definition" language from the architecture as wrong. The canary (`run_coexists_census/0` + the saved census logs) is the standing witness either way. Ruling (a+) [documented-only] is NOT available: the gap is active, not latent, so "documented-only" would assert a false world-fact.
+
+**Cross-link (OQ-24 reopening candidate, flag-don't-fix):** the same `affects_constraint` side channel is label-blind to `forecloses` too — on `testsets/` the forecloses census is denom=1/eligible=1/coupled=1/**leaked=1**. OQ-24's doc-only close ("forecloses excluded by gradient-orthogonality") protects only the *typed* channel; the authored side door carries contamination in the causation-inverted direction the OQ-24 argument relied on being inert. Logged as an OQ-24 reopening candidate; not folded into the OQ-23 change.
 
 ---
 
@@ -941,6 +955,14 @@ written EARLIER without the comment it cited — a dangling doc-pointer (produce
 in documentation form); the comment now makes the pointer true. Module load verified post-edit.
 **Origin:** FPN convergence-test run, May 2026.
 *(Body compressed 2026-06-04 per footer rule.)*
+
+**Reopening candidate (2026-06-29):** the OQ-23 canary found `forecloses` siblings ALSO leak
+via the authored `affects_constraint` side channel (testsets/ forecloses census: denom=1/eligible=1/
+coupled=1/leaked=1). Gradient-orthogonality protects only the *typed* channel; the resolved close
+did not consider the parallel side door (causation-inverted contamination the OQ-24 argument relied
+on being inert). Evidence: `audits/2026-06-29_oq23_coexists_fpn_canary/`. Operator to decide whether
+to reopen; the OQ-23 option-1 filter (strip same-kernel typed-sibling affects_constraint edges) would
+also close this.
 
 ---
 

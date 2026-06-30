@@ -56,15 +56,24 @@
    effective_purity equals intrinsic purity and network_qualified_action
    delegates to purity_qualified_action.
 
-   Open item (OQ-23): coexists_with edges are excluded from constraint_neighbors/3
-   by unenforced design intent, not by a runtime guard. The FPN is label-blind —
-   injecting a coexists_with edge as an affects_constraint fact would produce
-   non-zero contamination identical to any other edge with the same purity delta.
-   Unlike forecloses (gradient-orthogonal; see OQ-24 comment at compute_edge_contamination),
-   coexists_with is structurally admissible and excluded only because nothing currently
-   routes it into constraint_neighbors/3. A future edit that does so will inject as a
-   label-blind scalar with no guard to catch it. Enforce or loudly document before
-   modifying constraint_neighbors/3 to read cs_reading_relation edges.
+   OQ-23 (premise REVISED 2026-06-29 — the gap is ACTIVE, not latent):
+   coexists_with edges carry no runtime guard, and the FPN is label-blind. The
+   earlier note claimed the exclusion held because "nothing currently routes
+   coexists_with into the network" — FALSE. The generation template authors an
+   `affects_constraint` edge between sibling readings, constraint_neighbors_existing/2
+   admits it as an `explicit` edge, and the intra-kernel filter just below (the
+   shared_agent clause's `\+ cs_kernel_id` guard) covers ONLY shared-agent edges,
+   NOT explicit affects_constraint. So coexists_with siblings ALREADY contaminate
+   each other via the parallel affects_constraint side channel whenever both are
+   co-present with non-sentinel, differing purity. Measured live: testsets/ leaks
+   2/2 eligible pairs; haiku 178, flash 361, kernel_v1 662. Witness + census:
+   prolog/tests/test_coexists_fpn_canary.pl (run_coexists_census/0) and
+   audits/2026-06-29_oq23_coexists_fpn_canary/. The "zero contamination by
+   definition" claim does not hold. Resolution is an open operator Ω_C ruling
+   (close the side channel by extending the intra-kernel filter to affects_constraint
+   between same-kernel typed siblings, vs accept dual-channel authoring and retire
+   the claim) — see ISSUES.md OQ-23. Keep the canary green/measured before and after
+   any edit here. (forecloses leaks the same way — OQ-24 reopening candidate.)
    ================================================================ */
 
 /* ----------------------------------------------------------------

@@ -1,0 +1,77 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+[corpus] Loading 1106 testset files...
+[corpus] Loaded 1106 testsets successfully.
+
+== coexists_with census (corpus=archives/datasets/kernel_v1) ==
+  1. denominator  (co-present pairs)      = 695
+  2. eligible     (purity>=0 both, dlt>0) = 676
+  3. coupled      (affects_constraint)    = 680
+  4. leaked       (effective_purity>0)    = 662
+  5. coupled-but-INELIGIBLE (funnel grd)  = 18
+  -- suppressed (denom - eligible)        = 19
+  LEAKED PAIRS (Contam>0), 645 total — showing up to 25 by Contam:
+    zero_mathematical_status__number_reading <-> zero_mathematical_status__parmenidean_rejection  Contam=0.300000
+    vedic_corpus_social_prescription__orthodox_varna_reading <-> vedic_corpus_social_prescription__reformist_spiritual_reading  Contam=0.300000
+    unconditional_income_support__dependency_trap_reading <-> unconditional_income_support__freedom_floor_reading  Contam=0.300000
+    tsunami_stone_commitment__behavioral_competence_reading <-> tsunami_stone_commitment__commemorative_husk_reading  Contam=0.300000
+    total_war_reachability_boundary__contraction_reading <-> total_war_reachability_boundary__dropping_reading  Contam=0.300000
+    tenure_contract__academic_freedom_reading <-> tenure_contract__institutional_extraction_reading  Contam=0.300000
+    state_killing_authority__abolition_reading <-> state_killing_authority__retributive_reading  Contam=0.300000
+    simultaneous_veneration__domain_partition_reading <-> simultaneous_veneration__pragmatic_incoherence_reading  Contam=0.300000
+    simultaneous_veneration__domain_partition_reading <-> simultaneous_veneration__ontological_fusion_reading  Contam=0.300000
+    shinbutsu_coexistence_commitment__domain_partition_reading <-> shinbutsu_coexistence_commitment__syncretic_fusion_reading  Contam=0.300000
+    shinbutsu_coexistence_commitment__domain_partition_reading <-> shinbutsu_coexistence_commitment__incoherent_bundle_reading  Contam=0.300000
+    sacrifice_commandment__performance_only <-> sacrifice_commandment__study_as_performance  Contam=0.300000
+    rfc9293_tcp_specification__middlebox_realism_reading <-> rfc9293_tcp_specification__strict_invariance_reading  Contam=0.300000
+    rfc9293_tcp_specification__middlebox_realism_reading <-> rfc9293_tcp_specification__optimization_latitude_reading  Contam=0.300000
+    preparedness_transmission__competence_reading <-> preparedness_transmission__husk_reading  Contam=0.300000
+    preparedness_retention__competence_reading <-> preparedness_retention__husk_reading  Contam=0.300000
+    preparedness_commitment__competence_reading <-> preparedness_commitment__husk_reading  Contam=0.300000
+    permissive_license_text__commons_coordination_reading <-> permissive_license_text__corporate_moat_reading  Contam=0.300000
+    permissive_license_text__commons_coordination_reading <-> permissive_license_text__copyleft_counterfactual_reading  Contam=0.300000
+    nicene_creed_authority__strict_orthodox_reading <-> nicene_creed_authority__symbolic_confessional_reading  Contam=0.300000
+    nicene_creed_authority__liturgical_habituation_reading <-> nicene_creed_authority__strict_orthodox_reading  Contam=0.300000
+    nicene_creed_authority__confessional_reading <-> nicene_creed_authority__imperial_uniformity_reading  Contam=0.300000
+    monopoly_rulebook__extraction_demo_reading <-> monopoly_rulebook__tournament_orthodoxy_reading  Contam=0.300000
+    manifesto_revolutionary_method__council_communist_reading <-> manifesto_revolutionary_method__vanguard_rupture_reading  Contam=0.300000
+    maat_order_principle__distributed_maintenance_reading <-> maat_order_principle__divine_mandate_reading  Contam=0.300000
+
+== forecloses census (corpus=archives/datasets/kernel_v1) ==
+  1. denominator  (co-present pairs)      = 212
+  2. eligible     (purity>=0 both, dlt>0) = 203
+  3. coupled      (affects_constraint)    = 206
+  4. leaked       (effective_purity>0)    = 198
+  5. coupled-but-INELIGIBLE (funnel grd)  = 8
+  -- suppressed (denom - eligible)        = 9
+  LEAKED PAIRS (Contam>0), 196 total — showing up to 25 by Contam:
+    zero_mathematical_status__number_reading <-> zero_mathematical_status__parmenidean_rejection  Contam=0.300000
+    total_war_reachability_boundary__contraction_reading <-> total_war_reachability_boundary__dropping_reading  Contam=0.300000
+    statutory_debt_ceiling__constitutional_nullity_reading <-> statutory_debt_ceiling__extraction_snare_reading  Contam=0.300000
+    state_killing_authority__abolition_reading <-> state_killing_authority__retributive_reading  Contam=0.300000
+    state_killing_authority__abolition_reading <-> state_killing_authority__deterrence_reading  Contam=0.300000
+    shinbutsu_coexistence_commitment__domain_partition_reading <-> shinbutsu_coexistence_commitment__syncretic_fusion_reading  Contam=0.300000
+    sacrifice_commandment__performance_only <-> sacrifice_commandment__study_as_performance  Contam=0.300000
+    rfc9293_tcp_specification__middlebox_realism_reading <-> rfc9293_tcp_specification__strict_invariance_reading  Contam=0.300000
+    preparedness_transmission__competence_reading <-> preparedness_transmission__husk_reading  Contam=0.300000
+    preparedness_commitment__competence_reading <-> preparedness_commitment__husk_reading  Contam=0.300000
+    nicene_creed_authority__strict_orthodox_reading <-> nicene_creed_authority__symbolic_confessional_reading  Contam=0.300000
+    nicene_creed_authority__liturgical_habituation_reading <-> nicene_creed_authority__strict_orthodox_reading  Contam=0.300000
+    manifesto_revolutionary_method__council_communist_reading <-> manifesto_revolutionary_method__vanguard_rupture_reading  Contam=0.300000
+    latin_correctness__continuity_reading <-> latin_correctness__rupture_reading  Contam=0.300000
+    kodashim_commandment_status__performance_only <-> kodashim_commandment_status__study_as_performance  Contam=0.300000
+    income_support_conditionality__dependency_trap_reading <-> income_support_conditionality__freedom_floor_reading  Contam=0.300000
+    humane_treatment_standard__absolute_prohibition <-> humane_treatment_standard__contextual_necessity  Contam=0.300000
+    fisa_702_statutory_text__constitutional_floor_reading <-> fisa_702_statutory_text__foreign_target_strict_reading  Contam=0.300000
+    basic_law_interpretive_boundary__judicial_supremacy_reading <-> basic_law_interpretive_boundary__parliamentary_sovereignty_reading  Contam=0.300000
+    article_27_veto_power__oligopoly_reading <-> article_27_veto_power__sovereignty_reading  Contam=0.300000
+    tenure_contract__academic_freedom_reading <-> tenure_contract__demographic_reproduction_reading  Contam=0.293750
+    correct_latin_kernel__continuity_reading <-> correct_latin_kernel__reoccupation_reading  Contam=0.285000
+    jati_practice_norm__colonial_census_reading <-> jati_practice_norm__localized_practice_reading  Contam=0.277000
+    nuclear_impossibility_kernel__credibility_paradox_reading <-> nuclear_impossibility_kernel__structural_contraction_reading  Contam=0.273417
+    technology_reformation_causality__beneficiary_agency_reading <-> technology_reformation_causality__technological_determinism_reading  Contam=0.267000
