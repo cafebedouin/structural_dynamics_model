@@ -45,6 +45,35 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-30 — detector self-assessment: Slice A (author×engine cross-tab) LANDED; Slice B (calibration omega) proposal awaiting ruling
+**Files:** prolog/routing_sink.pl, docs/design/detector_calibration_omega_proposal.md, outputs/routing_sink.json
+**Tier:** landed
+
+From the Elias-Thorne report review: web-Claude asked whether Prolog can address the
+"is the snare/rope detector calibrated" question. Answer split three ways — (A) computable
+seat-agreement aggregate, (B) an authored apparatus-directed omega, (C) auto-closing the
+verdict = category error (no ground truth in the testset; authored type is a seat, seat theorem).
+
+**Slice A LANDED** (`routing_sink.pl`, commit `f6921ac1`): added `author_engine_crosstab` +
+`author_engine_crosstab_summary` to `routing_sink.json`'s manifest — a (authored_type ×
+engine_type) confusion cross-tab over the existing per-seat `seat_diff` records. Diagonal =
+agreement (`no_route`), off-diagonal = divergence by type-pair (tangled_rope→snare=106 dominant).
+**Hard label: SEAT-AGREEMENT, NOT calibration** — `divergence_rate` (0.77) is a two-seat
+disagreement rate, never a detector false-positive rate (convergence is stable, not correct).
+Positive control reconciled: diagonal 91==no_route 91; off-diagonal 305==author_engine_divergence
+(255)+engine_exit_table_review(50); both_speak 396 + both_silent 36 + engine_abstained 44 = 476 =
+119×4. (Caught a self-inflicted A-E-vs-A-Engine template typo — unbound key, Pattern-5 vacuous
+guard — via that control before shipping; added nonvar/2 guard.)
+
+**Slice B PROPOSAL, awaiting operator ruling** (`docs/design/detector_calibration_omega_proposal.md`,
+commit `c4864999`): a `detector_calibration` omega the engine MINTS OPEN (computable firing
+condition: computed snare/rope ∧ hidden-extraction shape — theater∨coupling-masked∨no-exit-victim;
+all fields verified present) but does NOT close. Typed as an Ω_E (hit rate, awaits external labeled
+data) + Ω_P (acceptable FP rate, a value-decision) PAIR — conflation is the "when to stop verifying"
+trap. NOT wired/fired: R1 threshold, R2 typing, R3 engine-minted-vs-authored, R4 mint+wire are the
+operator's seat. Generalizes the existing story-local detector-doubt convention
+(press_reformation_causality omega).
+
 ## 2026-06-30 — perspective_chi d/f_d fork fixed (resolved-context derivation); report frame added
 **Files:** prolog/constraint_indexing.pl, prolog/json_report.pl, python/enhanced_report.py
 **Tier:** landed
