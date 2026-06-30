@@ -161,3 +161,67 @@ relatedness.** The decision space the operator now has, with evidence:
   constraints via affects_constraint/2") STALE now that typed `cs_reading_relation`
   exists? If so the fix is upstream in the generation template / DP-001 doc, and the
   engine stays honest. This is the template-side option the hold asked to expose.
+
+---
+
+## INVESTIGATION (operator ruled option 4: witness "redundant" before ruling 1′)
+
+Reversible load-time strip of same-kernel typed-sibling `affects_constraint`
+edges; per-consumer old-vs-new diff. Probe: `scratchpad/strip_probe.pl`; logs
+`strip_probe_testsets.log`, `strip_probe_kernel_v1.log`.
+
+### The "redundant" claim is FALSE — stripping changes 4 of 5 reachable consumers
+
+| consumer | testsets (3 pairs) | kernel_v1 (859 endpoints) | reads sibling edge as |
+|---|---|---|---|
+| FPN effective_purity | CHANGED −2/+2 | CHANGED −522/+522 | contamination conduit (the leak) |
+| composition `detect_extraction_dominance` | CHANGED −3 | CHANGED **−737** | composite→component ("embedded snare") |
+| counterfactual `dependency_chain` | CHANGED −6 | CHANGED **−1516** | ordered dependency |
+| inferred_coupling baseline | CHANGED −6 | CHANGED −1516 | coupling edge (reads it directly) |
+| signature `has_viable_alternatives` | NO DIFF | NO DIFF | (unaffected — gated on intent_viable_alternative) |
+| constraint_bridge / uke_dr_bridge | n/a | n/a | recommendation-source-gated; sibling sources are constraints → structurally unreachable (0 reachable) |
+
+Concrete conflations (not just the FPN): on kernel_v1, composition flags **737**
+sibling pairs as "a Rope corrupted by an embedded Snare"
+(e.g. `abrahamic_covenant__ishmael_covenant_reading` carrying
+`embedded_snare(…isaac_covenant_reading, 0.58)`) — a sibling reading read as an
+embedded component. Counterfactual treats all **1516** sibling edges as dependency
+chains. **These are the SAME sibling-as-X conflation as the FPN leak, surfacing in
+3 more consumers.** So `cs_reading_relation` does NOT carry what these consumers
+read from `affects_constraint`: they read directed graph STRUCTURE
+(component-embedding, dependency-ordering, contamination), not a relatedness label.
+
+### The discriminant is corpus-dependent (imprecise on the live leg)
+
+- **kernel_v1:** 1516 same-kernel edges, **all 1516 typed-sibling** (0 untyped).
+  Clean: `same-kernel + typed-sibling` == `same-kernel`.
+- **testsets:** 64 same-kernel edges, only **6 typed-sibling**; the other **58 are
+  same-kernel UNTYPED** — and all 58 connect two readings (both `cs_story_uid`),
+  i.e. they ARE sibling pairs whose `cs_reading_relation` does not resolve (OQ-58
+  dangling: 146 source-has-relation-but-name-mismatched). For those 58 the
+  `affects_constraint` edge is the SOLE structural encoding — `cs_reading_relation`
+  covers only 6/64 same-kernel sibling pairs on the live leg.
+
+So a `same-kernel + typed-sibling` strip is clean on the archive but **misses
+58/64 sibling edges on testsets** (under-strips). A `same-kernel` strip (here
+== sibling, since 0 same-kernel non-sibling edges found) is complete but, for the
+58, removes the only sibling-relatedness record present.
+
+### Verdict for the re-ruling
+
+The witness came back **not clean** (the operator's flip condition). "Redundant /
+no info loss" is falsified: stripping changes FPN + composition + counterfactual +
+coupling. The new subjects are `detect_extraction_dominance` (737 sibling
+embedded-snare flags) and `dependency_chain` (1516 sibling "dependencies") — both
+reading sibling edges as structure `cs_reading_relation` does not carry.
+
+This reframes the question one more layer: **should sibling readings carry
+`affects_constraint` at all for the mechanical consumers?** All four diffs are
+arguably the same error (a parallel sibling reading is not a contamination source,
+not an embedded component, not a dependency) — which would make the fix "siblings
+don't get `affects_constraint`; sibling relatedness lives in `cs_reading_relation`
+(and OQ-58 coverage must be completed so that's not lossy)." But whether each
+consumer's change is a CORRECTION (the conflation was wrong) or a LOSS (the
+consumer legitimately needs the edge) is a per-consumer design call — the operator's
+to make. What is now witnessed: it is NOT a localized FPN issue, and it is NOT
+free of information change.
