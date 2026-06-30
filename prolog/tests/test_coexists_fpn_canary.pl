@@ -357,15 +357,26 @@ test(tripwire_typed_relation_no_edge,
     \+ coexists_contamination_leak(tw_x-tw_y, _),
     format("~n[tripwire] typed coexists_with relation alone produced no contamination edge~n").
 
-% NOTE: there is intentionally NO plunit test asserting a corpus-wide
-% "leaked == 0" invariant. As measured 2026-06-29 the exclusion is RED on every
-% populated leg (testsets/ 2 leaks, haiku 178, flash 361, kernel_v1 662 — see
-% audits/2026-06-29_oq23_coexists_fpn_canary/census_*.log). The corpus-level
-% measurement is run_coexists_census/0 under a corpus_path overlay, not a plunit
-% assertion (there is no green to assert while RED, and a global-count assertion
-% mixed with the controls would conflate synthetic and real leaks). When the
-% operator rules option 1 (filter the side channel), add a plunit test here:
-%   test(no_coexists_leak, [setup(load_corpus_nonempty)]) :-
-%       coexists_census(_,_,_,Leaked,_), assertion(Leaked =:= 0).
+% --- THE INVARIANT on the loaded corpus (now GREEN; the regression gate) -------
+% OQ-23/OQ-24 resolved 2026-06-29 by the narrow same-kernel-donor guard in
+% compute_edge_contamination/7: same-kernel sibling affects_constraint edges no
+% longer contaminate. So NO co-present coexists_with OR forecloses pair leaks.
+% This was RED before the fix (testsets/ 2, haiku 178, flash 361, kernel_v1 662 —
+% census_*.log) and is the regression gate that keeps it fixed. Anti-vacuity:
+% load the corpus and PROVE membership>0 (a 0-member corpus would pass leaked==0
+% vacuously — Pattern 5, the failure this canary exists to catch); throw loudly
+% otherwise (no silent catch).
+test(no_coexists_or_forecloses_leak_on_loaded_corpus, [setup(load_corpus_nonempty)]) :-
+    coexists_census(DenomC, _, _, LeakedC, _),
+    forecloses_census(DenomF, _, _, LeakedF, _),
+    format("~n[regression] coexists denom=~w leaked=~w | forecloses denom=~w leaked=~w~n",
+           [DenomC, LeakedC, DenomF, LeakedF]),
+    assertion(LeakedC =:= 0),
+    assertion(LeakedF =:= 0).
+
+load_corpus_nonempty :-
+    ( corpus_loader:corpus_loaded -> true ; corpus_loader:load_all_testsets ),
+    aggregate_all(count, corpus_loader:corpus_constraint(_), N),
+    ( N > 0 -> true ; throw(error(canary_corpus_empty_would_pass_vacuously, load_corpus_nonempty)) ).
 
 :- end_tests(coexists_fpn_canary).

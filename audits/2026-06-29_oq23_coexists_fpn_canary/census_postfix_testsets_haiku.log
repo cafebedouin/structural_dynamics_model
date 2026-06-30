@@ -1,0 +1,27 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+[corpus] Loading 960 testset files...
+[corpus] Loaded 960 testsets successfully.
+
+== coexists_with census (corpus=testsets_haiku) ==
+  1. denominator  (co-present pairs)      = 770
+  2. eligible     (purity>=0 both, dlt>0) = 181
+  3. coupled      (affects_constraint)    = 762
+  4. leaked       (effective_purity>0)    = 0
+  5. coupled-but-INELIGIBLE (funnel grd)  = 584
+  -- suppressed (denom - eligible)        = 589
+  leaked pairs: none
+
+== forecloses census (corpus=testsets_haiku) ==
+  1. denominator  (co-present pairs)      = 306
+  2. eligible     (purity>=0 both, dlt>0) = 90
+  3. coupled      (affects_constraint)    = 302
+  4. leaked       (effective_purity>0)    = 0
+  5. coupled-but-INELIGIBLE (funnel grd)  = 213
+  -- suppressed (denom - eligible)        = 216
+  leaked pairs: none

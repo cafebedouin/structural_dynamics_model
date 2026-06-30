@@ -45,34 +45,43 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-06-29 — OQ-23 canary: coexists_with FPN exclusion is ACTIVELY VIOLATED (RED), escalated
-**Files:** prolog/tests/test_coexists_fpn_canary.pl, prolog/drl_purity_network.pl, ISSUES.md, audits/2026-06-29_oq23_coexists_fpn_canary/
-**Tier:** correction-key
+## 2026-06-29 — OQ-23/OQ-24 RESOLVED (narrow same-kernel contamination guard); OQ-193 deferred
+**Files:** prolog/drl_purity_network.pl, prolog/tests/test_coexists_fpn_canary.pl, prolog/giant_component_analysis.pl, ISSUES.md, audits/2026-06-29_oq23_coexists_fpn_canary/
+**Tier:** landed
 
-Built the OQ-23 positive-controlled canary (`prolog/tests/test_coexists_fpn_canary.pl`) under
-operator ruling (a+). The canary FALSIFIED the premise it was meant to backstop: the
-`coexists_with` "zero contamination by definition" exclusion is **not latent — it is already
-violated on the corpus** via the authored `affects_constraint` side channel between sibling
-readings (`constraint_neighbors_existing/2` admits it as `explicit`; the line-105 intra-kernel
-filter covers only shared-agent edges). Census (leaked = `effective_purity` Contam>0):
-testsets/ 2/2 eligible, haiku 178/181, flash 361/461, kernel_v1 662/676 — every populated leg.
-testsets/ pairs: `press_reformation_causation`, `jewish_sovereignty_palestine` (same-kernel,
-edge `source=explicit`). forecloses ALSO leaks (testsets/ 1) → OQ-24 reopening candidate.
+Full arc (operator-guided, multi-round): a positive-controlled canary
+(`prolog/tests/test_coexists_fpn_canary.pl`) FALSIFIED the premise it was built to backstop — the
+`coexists_with` "zero contamination by definition" exclusion was NOT latent but ALREADY VIOLATED on
+every populated leg (testsets/ 2, haiku 178, flash 361, kernel_v1 662) via the authored
+`affects_constraint` side channel between sibling readings (the DP-001 ε-invariance "link ε-distinct
+constraints via affects_constraint/2" instruction; `affects_constraint` is overloaded across
+ε-linkage / UKE-dependency / generic). forecloses leaked the same way (relation-agnostic).
+Per-consumer reachability witness: of 4 consumers reading the sibling edge, only **FPN
+`effective_purity`** (ships to `pipeline_output.json contamination_network`) and **coupling baseline**
+(ships to `coupling_protocol.md`) reach a product; composition `detect_extraction_dominance` (no
+callers) and counterfactual `dependency_chain` (`simulate_cut` has no live caller) are inert.
 
-**Why correction-key:** the OQ-23 entry's "held on testsets/ by sparsity" recon was a one-kernel
-sample; the live exclusion holds (where it does) only by singleton sparsity + the `-1.0` purity
-sentinel — NEITHER is a coexists_with filter. Do not cite "coexists_with carries zero contamination
-weight" as a settled engine property; it is an open Ω_C ruling (close the side channel by extending
-the intra-kernel filter to `affects_constraint` between same-kernel typed siblings, vs accept
-dual-channel authoring and retire the claim). Per Step-3 RED: NOT self-resolved; escalated. OQ-23
-stays open. Measurement is `run_coexists_census/0` under corpus_path overlay (NOT a plunit
-green — the suite holds the instrument controls only). The 4 controls (positive fact-level inject,
-equal-purity, sentinel-donor, direct-typed-edge tripwire) are pair-specific and corpus-independent;
-all green.
+**FIX (OQ-23 + OQ-24):** a same-kernel-donor guard as the first clause of
+`compute_edge_contamination/7` — a same-kernel sibling contributes ZERO contamination.
+Contamination-local by design (NOT `constraint_neighbors_existing/2`), so giant_comp topology is
+unchanged. Witnessed: canary census `leaked` 2→0 (forecloses 1→0) on testsets/; `effective_purity`
+returns to intrinsic for the leaking pairs; cross-leg post-fix census `leaked=0`; giant_comp
+connectivity zero-change control (testsets baseline 66/12 unchanged); plunit regression gate
+`no_coexists_or_forecloses_leak_on_loaded_corpus` GREEN.
 
-**Promotion test:** the tripwire (the side-channel leak + "don't cite zero-by-definition") is in the
-`drl_purity_network.pl:59-67` header comment and the OQ-23 entry, where an editor of that file will
-see it — not promoted to CLAUDE.md (file-local, the canary self-flags).
+**Why landed (tier):** the fix is committed and witnessed; the leak no longer ships. **Deferred:
+OQ-193** — stripping same-kernel sibling edges from giant_comp connectivity collapses the giant
+component 334→70 (kernel_v1); whether that is a correction (siblings aren't cross-kernel coupling, per
+the OQ-84 precedent) or a loss (legitimate topology) is an unsettled Ω_C ruling, NOT resolved by this
+fix (the contamination-local siting leaves giant_comp untouched precisely so OQ-193 can be ruled on
+its own evidence). The coupling-baseline ship (also wrong by the module's own OQ-84 logic) is a
+separate fix candidate noted in HOLD_FINDINGS.
+
+**Tripwires (promotion test → file-local, not CLAUDE.md):** `compute_edge_contamination/7` and the
+`drl_purity_network.pl` header comment both carry "do NOT extend a same-kernel guard into
+`constraint_neighbors_existing/2` without resolving OQ-193 (changes 5 contamination-topology
+consumers + a shipped headline metric)." An editor of that file sees it; the canary regression gate
+self-flags a reopened leak.
 
 ## 2026-06-27 — OQ-124/OQ-149 committer-axis convention control: A=SIGNAL, B=CONVENTION, C=OPEN
 **Files:** ISSUES.md, prolog/signature_detection.pl, python/story_repair.py, agent/run_no_scope_gemini.py

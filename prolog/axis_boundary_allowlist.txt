@@ -30,6 +30,14 @@ drl_composition:detect_necessity_inheritance/2 -> cs_reading_relation/3
 # BUCKET-3-EXCLUSION: cs_kernel_id used to keep same-kernel readings out of the DR
 #   contamination network (OQ-15 bucket 3, "defensible as-is, named for decision").
 drl_purity_network:constraint_neighbors_existing/2 -> cs_kernel_id/2
+# BUCKET-3-EXCLUSION (OQ-23/OQ-24, 2026-06-29): the SAME same-kernel contamination
+#   exclusion as the line above, applied at the per-edge contamination computation
+#   (the operator-chosen contamination-local site, so giant_comp topology stays
+#   untouched — OQ-193). NOT a new forward bridge: cs_kernel_id is used only to
+#   identify same-kernel sibling pairs and ZERO their contamination; it carries no
+#   committer semantics (foreclosure/H¹/axiom) into the observer verdict. Same
+#   bucket-3 kind, not the OQ-15 synthesis trigger.
+drl_purity_network:compute_edge_contamination/7 -> cs_kernel_id/2
 
 # --- COMPARISON / VALIDATION TOOLING (mediator-class; not observer-verdict computation) ---
 # OQ-59 cyclopean disparity operator at the AXIOM layer (reads committer axioms to DIFF them).

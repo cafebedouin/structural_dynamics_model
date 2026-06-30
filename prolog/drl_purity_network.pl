@@ -56,24 +56,25 @@
    effective_purity equals intrinsic purity and network_qualified_action
    delegates to purity_qualified_action.
 
-   OQ-23 (premise REVISED 2026-06-29 — the gap is ACTIVE, not latent):
-   coexists_with edges carry no runtime guard, and the FPN is label-blind. The
-   earlier note claimed the exclusion held because "nothing currently routes
-   coexists_with into the network" — FALSE. The generation template authors an
-   `affects_constraint` edge between sibling readings, constraint_neighbors_existing/2
-   admits it as an `explicit` edge, and the intra-kernel filter just below (the
-   shared_agent clause's `\+ cs_kernel_id` guard) covers ONLY shared-agent edges,
-   NOT explicit affects_constraint. So coexists_with siblings ALREADY contaminate
-   each other via the parallel affects_constraint side channel whenever both are
-   co-present with non-sentinel, differing purity. Measured live: testsets/ leaks
-   2/2 eligible pairs; haiku 178, flash 361, kernel_v1 662. Witness + census:
-   prolog/tests/test_coexists_fpn_canary.pl (run_coexists_census/0) and
-   audits/2026-06-29_oq23_coexists_fpn_canary/. The "zero contamination by
-   definition" claim does not hold. Resolution is an open operator Ω_C ruling
-   (close the side channel by extending the intra-kernel filter to affects_constraint
-   between same-kernel typed siblings, vs accept dual-channel authoring and retire
-   the claim) — see ISSUES.md OQ-23. Keep the canary green/measured before and after
-   any edit here. (forecloses leaks the same way — OQ-24 reopening candidate.)
+   OQ-23/OQ-24 (RESOLVED 2026-06-29): the FPN is label-blind, and the generation
+   template authors an `affects_constraint` edge between sibling readings (the
+   DP-001 ε-invariance "link ε-distinct constraints via affects_constraint/2"
+   instruction) which constraint_neighbors_existing/2 admits as `explicit`. Those
+   ε-linkage edges were treated as downward purity contamination, so co-present
+   sibling pairs (coexists_with AND forecloses) leaked Contam>0 — measured RED on
+   every populated leg (testsets/ 2, haiku 178, flash 361, kernel_v1 662; canary
+   prolog/tests/test_coexists_fpn_canary.pl, audits/2026-06-29_oq23_coexists_fpn_canary/).
+   FIX: the same-kernel-donor guard in compute_edge_contamination/7 (see its
+   comment) zeroes contamination from a same-kernel sibling — relation-agnostic, so
+   it covers both coexists_with and forecloses. Sited at the contamination
+   computation, NOT here: same-kernel edges REMAIN in the neighbor graph, so
+   giant_component_analysis topology is unchanged. Whether giant_comp SHOULD also
+   exclude same-kernel sibling edges (it inflates connectivity 334→70 if stripped)
+   is the deferred OQ-193 ruling — do NOT extend a same-kernel guard into
+   constraint_neighbors_existing/2 without resolving OQ-193 (it changes 5
+   contamination-topology consumers + a shipped headline metric). The canary
+   regression gate (test_coexists_fpn_canary: no_coexists_or_forecloses_leak_on_loaded_corpus)
+   keeps the FPN fix green — keep it passing.
    ================================================================ */
 
 /* ----------------------------------------------------------------
@@ -273,6 +274,28 @@ compute_total_contamination(C, MyPurity, [neighbor(Other, EdgeStrength, _Src)|Re
 %  Witness: prolog/tests/test_forecloses_fpn_injection.pl. Of the committer
 %  edge types, only `influences` is wired (via detect_necessity_inheritance);
 %  forecloses is absent BY THIS DECISION, not by omission. See ISSUES.md OQ-24.
+%
+%  OQ-23/OQ-24 RESOLUTION (2026-06-29, narrow contamination-local fix): a
+%  same-kernel sibling edge contributes ZERO contamination. Sibling readings of
+%  one kernel are linked by an authored `affects_constraint` edge purely to
+%  document ε-distinctness (the DP-001 ε-invariance instruction: "link
+%  ε-distinct constraints via affects_constraint/2") — NOT as a contamination
+%  conduit. The FPN was label-blind and treated those ε-linkage edges as
+%  downward purity contamination, so co-present sibling pairs leaked Contam>0
+%  (witnessed on every populated leg: audits/2026-06-29_oq23_coexists_fpn_canary/,
+%  canary prolog/tests/test_coexists_fpn_canary.pl). This guard fixes the leak
+%  for BOTH coexists_with and forecloses siblings (the side channel is
+%  relation-agnostic — OQ-24). It is sited HERE (contamination computation),
+%  NOT in constraint_neighbors_existing/2, deliberately: the same-kernel edges
+%  remain in the neighbor graph, so giant_component_analysis topology is
+%  UNCHANGED (the giant-component 334→70 reinterpretation is a separate, deferred
+%  ruling — OQ-193). The cs_kernel_id read here is the SAME bucket-3 contamination
+%  exclusion already sanctioned for constraint_neighbors_existing/2 in
+%  prolog/axis_boundary_allowlist.txt (not a new committer→observer bridge).
+compute_edge_contamination(C, _MyPurity, Other, _EdgeStrength, _Context, 0.0, edge(Other, 0.0, 0.0)) :-
+    narrative_ontology:cs_kernel_id(C, K),
+    narrative_ontology:cs_kernel_id(Other, K),
+    !.
 compute_edge_contamination(_C, MyPurity, Other, EdgeStrength, Context, Contam, edge(Other, Delta, Contam)) :-
     purity_scoring:purity_score(Other, OtherPurity),
     OtherPurity >= 0.0,

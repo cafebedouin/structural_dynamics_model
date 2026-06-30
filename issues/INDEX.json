@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "6319d6e50ab8202487716dc42dfe16df6a2824a2",
+    "store_version": "b056d4058a57367d478364174bba647b1c2ca27c",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-29T19:38:13"
+    "generated_at": "2026-06-29T20:01:54"
   },
-  "issues_sha": "a65581b670732075794a6ef7125cd96e3b32302e9a66ab1ea14ab2b5dbad82ca",
-  "n_entries": 192,
+  "issues_sha": "493174d198df290838bdde13b61ae68ffc2ad250f0b2971301619a8f8e4a45f8",
+  "n_entries": 193,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 98,
+    "resolved": 99,
     "mitigated": 12,
     "partial": 8,
     "disposed": 4,
@@ -31,19 +31,6 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-135"
-      ]
-    },
-    {
-      "id": "OQ-23",
-      "status": "open",
-      "priority": 1,
-      "summary": "coexists_with exclusion is unenforced design intent, not structural",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-24",
-        "OQ-58",
-        "OQ-84"
       ]
     },
     {
@@ -1005,6 +992,21 @@
       "mentioned_in": [
         "OQ-22"
       ]
+    },
+    {
+      "id": "OQ-193",
+      "status": "open",
+      "priority": 3,
+      "summary": "does giant_comp connectivity legitimately count same-kernel sibling edges? (deferred from OQ-23)",
+      "deps": [
+        "splits_from OQ-23",
+        "blocked_on_human operator-correction-vs-loss-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-23",
+        "OQ-84"
+      ]
     }
   ],
   "archive": [
@@ -1243,6 +1245,20 @@
       "mentioned_in": [
         "OQ-01",
         "OQ-192"
+      ]
+    },
+    {
+      "id": "OQ-23",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "coexists_with exclusion is unenforced design intent, not structural",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-24",
+        "OQ-58",
+        "OQ-84",
+        "OQ-193"
       ]
     },
     {

@@ -108,7 +108,7 @@ one design question.
 
 **The mechanism model is COMPLETE: every non-leaking eligible pair is explained by
 exactly the two predicted reasons; ZERO unexplained on both legs.** Categorizer:
-`scratchpad/nonleak.pl` (reasons: `not_coupled` = no affects_constraint edge;
+`probe_nonleak.pl` (reasons: `not_coupled` = no affects_constraint edge;
 `donor_zero_strength` = coupled but the lower-purity donor's dr_type has
 contamination strength 0 — mountain/unknown).
 
@@ -126,7 +126,7 @@ characterized as "eligible ∧ coupled ∧ contaminating-donor."
 cache-order-sensitive — non-deterministic across runs.** The census process
 reported flash leaked=361 / kernel_v1 leaked=662; the categorizer process (same
 code, same corpus) reported flash leaked=310 / kernel_v1 leaked=645. A direct
-in-process probe (`scratchpad/disc.pl`) found **0 leak-but-ineligible pairs** —
+in-process probe (`probe_disc.pl`) found **0 leak-but-ineligible pairs** —
 i.e. WITHIN any single run `leak ⟹ eligible` holds exactly and the census is
 self-consistent. The cross-run drift is `purity_score`/`dr_type` reading the
 Boltzmann memo cache in traversal-dependent order (the OQ-112 / "Boltzmann memo
@@ -167,7 +167,7 @@ relatedness.** The decision space the operator now has, with evidence:
 ## INVESTIGATION (operator ruled option 4: witness "redundant" before ruling 1′)
 
 Reversible load-time strip of same-kernel typed-sibling `affects_constraint`
-edges; per-consumer old-vs-new diff. Probe: `scratchpad/strip_probe.pl`; logs
+edges; per-consumer old-vs-new diff. Probe: `probe_strip.pl`; logs
 `strip_probe_testsets.log`, `strip_probe_kernel_v1.log`.
 
 ### The "redundant" claim is FALSE — stripping changes 4 of 5 reachable consumers

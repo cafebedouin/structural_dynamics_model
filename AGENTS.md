@@ -643,6 +643,18 @@ automatic cache clearing via `cache_registry:clear_all_caches/0`) instead of han
 retract/assert. Corpus membership/denominator: enumerate `corpus_loader:corpus_constraint/1`.
 Tests: `cd prolog && swipl -g "[stack], [tests/test_probe_harness], run_tests, halt" -t "halt(1)"`.
 
+### FPN sibling-contamination canary (OQ-23/OQ-24 regression)
+
+`compute_edge_contamination/7` zeroes contamination from a same-kernel sibling donor (sibling
+readings are linked by `affects_constraint` only to document ε-distinctness, not as a contamination
+conduit). The canary guards this:
+`cd prolog && swipl -g "[stack], [tests/test_coexists_fpn_canary], run_tests, halt" -t "halt(1)"`
+(positive/negative/sentinel controls + the `no_coexists_or_forecloses_leak_on_loaded_corpus`
+regression gate). Cross-leg measurement: `run_coexists_census/0` / `run_forecloses_census/0` under a
+`corpus_path` overlay (per-leg census logs in `audits/2026-06-29_oq23_coexists_fpn_canary/`). Do NOT
+extend the same-kernel guard into `constraint_neighbors_existing/2` (giant_comp topology) without
+resolving OQ-193.
+
 ### Run the linter on a testset
 
 The linter must be called as a library, not a script:

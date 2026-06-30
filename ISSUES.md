@@ -915,7 +915,7 @@ false-halt guard routed persistence to Hub-1, never halt).
 
 **Ω-type:** Ω_C (design choice — loud documentation vs mechanical guard).
 
-**Status:** open — **escalated to operator (Ω_C ruling required); premise REVISED 2026-06-29: NOT latent, ALREADY VIOLATED**
+**Status:** resolved — (2026-06-29). Narrow contamination-local fix: a same-kernel-donor guard added as the first clause of `compute_edge_contamination/7` (`drl_purity_network.pl`) — a same-kernel sibling edge contributes ZERO contamination. Sibling readings are linked by `affects_constraint` only to document ε-distinctness (DP-001), not as a contamination conduit; the FPN was label-blind and treated them as downward purity contamination. **Witness:** canary census `leaked` 2→0 on testsets/ (and 1→0 forecloses); `effective_purity` for the two testsets leaking pairs returns to intrinsic (press 0.851→0.928, jewish 0.793→0.972, totalContam→0); cross-leg post-fix census `leaked=0` (`census_postfix_*.log`); plunit regression gate `no_coexists_or_forecloses_leak_on_loaded_corpus` GREEN. Sited at the contamination computation (NOT `constraint_neighbors_existing/2`) deliberately, so giant_comp topology is UNCHANGED (zero-change control: testsets 66/12 baseline unchanged) — the giant-component 334→70 reinterpretation is **deferred to the OQ-193 child** (operator ruling option 3, 2026-06-29: narrow now, giant_comp later). Discriminant `same-kernel` (every same-kernel edge connects two readings empirically; 0 non-sibling). Provenance: `audits/2026-06-29_oq23_coexists_fpn_canary/` (WRITEUP + HOLD_FINDINGS); KNOWN_STATE 2026-06-29.
 **Priority:** 1
 **Origin:** FPN convergence-test run, Branch E verdict, May 2026.  
 **Files:** `prolog/drl_purity_network.pl` (`constraint_neighbors_existing/2` — the real side-channel admission point, line 91–110; tripwire comment 59–67); `prolog/tests/test_forecloses_fpn_injection.pl` (Case 2 — coexists_with_label_blindness); `prolog/tests/test_coexists_fpn_canary.pl` (the OQ-23 canary + controls, 2026-06-29)
@@ -944,6 +944,24 @@ false-halt guard routed persistence to Hub-1, never halt).
 
 ---
 
+## OQ-193 — does giant_comp connectivity legitimately count same-kernel sibling edges? (deferred from OQ-23)
+
+**Ω-type:** Ω_C (design choice — is within-kernel sibling connectivity inflation a correction to make or legitimate topology).
+
+**Status:** open
+**Priority:** 3
+**Origin:** OQ-23 giant-comp ripple witness, 2026-06-29 (operator ruling option 3: narrow-now-giant_comp-later).
+**Deps:** splits_from OQ-23, blocked_on_human operator-correction-vs-loss-ruling
+**Files:** `prolog/giant_component_analysis.pl`; `prolog/drl_purity_network.pl` (`constraint_neighbors_existing/2` lines 91–110); `audits/2026-06-29_oq23_coexists_fpn_canary/giant_ripple_*.log`
+
+**Specific question:** `giant_component_analysis` builds its contamination/coupling graph from `constraint_neighbors/3`, which admits same-kernel sibling `affects_constraint` edges (the DP-001 ε-linkage edges — see OQ-23). **Witnessed fact:** those sibling edges are heavily load-bearing for connectivity — stripping them collapses the giant component **334→70** and triples components **276→789** on kernel_v1 (testsets 66→87 / 12→9); positive control passed (raw `affects_constraint` dropped by exactly the strip count). So giant_comp's headline "the constraint network forms a giant component of N" currently counts within-kernel reading-plurality as cross-kernel coupling. Is that a **correction** to make (the true cross-kernel giant is ~70; same-kernel siblings are not a coupling signal — the engine already says so for shared-agent edges at `drl_purity_network.pl:105` and the `inferred_coupling` OQ-84 guard) or a **loss** to avoid (authored sibling edges are legitimate topology and 334 is intended)?
+
+**Why deferred, not folded into the OQ-23 fix:** the OQ-23 FPN purity leak was *witnessed wrong and shipping*; this giant_comp change is *not witnessed either way* (genuine correction-vs-loss). Resolving it by precedent-analogy (OQ-84 shared-agent → explicit) is the same analogy-across-consumers move that the OQ-23 per-consumer diff already falsified once. The OQ-23 fix was sited at `compute_edge_contamination/7` (contamination-local) precisely so giant_comp topology stays UNCHANGED (zero-change control witnessed) and this question can be ruled on its own evidence rather than as a side effect. A 334→70 reinterpretation of a shipped headline metric deserves its own witness + ruling.
+
+**What resolution changes:** if **correction** — extend the intra-kernel guard to the explicit-edge channel in the topology path (e.g. `constraint_neighbors_existing/2`, mirroring line 105), with an old-vs-new diff of every `constraint_neighbors` consumer (5 sites: fpn/network_dynamics/giant_comp/json_report) and the giant_comp headline restated to the cross-kernel value. If **loss** — document that giant_comp counts authored sibling edges as topology by design, and the OQ-84 shared-agent guard is NOT extended to explicit edges (record the asymmetry rationale).
+
+---
+
 ## OQ-24 — forecloses requires no FPN representation, but the absence is undocumented in the engine
 
 **Ω-type:** Ω_C (design choice — whether to record the structural-exclusion rationale in code).
@@ -958,13 +976,15 @@ in documentation form); the comment now makes the pointer true. Module load veri
 **Origin:** FPN convergence-test run, May 2026.
 *(Body compressed 2026-06-04 per footer rule.)*
 
-**Reopening candidate (2026-06-29):** the OQ-23 canary found `forecloses` siblings ALSO leak
-via the authored `affects_constraint` side channel (testsets/ forecloses census: denom=1/eligible=1/
-coupled=1/leaked=1). Gradient-orthogonality protects only the *typed* channel; the resolved close
-did not consider the parallel side door (causation-inverted contamination the OQ-24 argument relied
-on being inert). Evidence: `audits/2026-06-29_oq23_coexists_fpn_canary/`. Operator to decide whether
-to reopen; the OQ-23 option-1 filter (strip same-kernel typed-sibling affects_constraint edges) would
-also close this.
+**Reopened then re-resolved via the OQ-23 narrow fix (2026-06-29):** the OQ-23 canary found
+`forecloses` siblings ALSO leaked via the authored `affects_constraint` side channel (testsets/
+forecloses census: denom=1/eligible=1/coupled=1/leaked=1; kernel_v1 leaked 198/212).
+Gradient-orthogonality protects only the *typed* channel; the original close did not consider the
+parallel side door (causation-inverted contamination the OQ-24 argument relied on being inert).
+**Now fixed:** the same-kernel-donor guard in `compute_edge_contamination/7` is relation-agnostic, so
+it zeroes the forecloses side-channel leak too (forecloses census `leaked` 1→0 on testsets/ post-fix).
+OQ-24 stays resolved on this stronger basis (typed channel inert by gradient-orthogonality + side
+channel closed by the same-kernel guard). Evidence: `audits/2026-06-29_oq23_coexists_fpn_canary/`.
 
 ---
 
