@@ -225,3 +225,57 @@ consumer's change is a CORRECTION (the conflation was wrong) or a LOSS (the
 consumer legitimately needs the edge) is a per-consumer design call — the operator's
 to make. What is now witnessed: it is NOT a localized FPN issue, and it is NOT
 free of information change.
+
+---
+
+## REACHABILITY WITNESS (operator ruled option 2: per-consumer, first step = does each read SHIP)
+
+The "redundant" falsification disqualified uniform fixes (option 1) — the 4
+consumers read 4 *different* structures, and only the FPN read is witnessed-wrong;
+the others were asserted wrong by analogy. Per-row discriminator: **does each
+consumer's sibling-edge read reach a shipped product/verdict, or die internally?**
+Traced callers + output paths (no engine change).
+
+| consumer | reads sibling edge as | reaches a shipped product? | row ruling |
+|---|---|---|---|
+| FPN `effective_purity` | contamination | **YES** — `json_report.pl:321-323,1200` writes `contamination_network.effective_purity` into `pipeline_output.json`; also giant_comp, fpn_report, metric_drift, abductive | **ships + wrong → FIX (consumer-local)** |
+| composition `detect_extraction_dominance` | composite→component | **NO** — zero callers anywhere (.pl/.py) | **inert-wrong → log, no engine change** |
+| counterfactual `dependency_chain` | ordered dependency | **NO** — only caller is `simulate_cut`, which has no live caller (one comment) | **inert-wrong → log** |
+| coupling `inferred_coupling` baseline | coupling edge | **YES** — `inferred_coupling_protocol.pl:410` ships `BaseEdgeCount` (incl. sibling explicit edges) to `coupling_protocol.md` | **ships → wrong by the module's OWN OQ-84 logic** (it excludes same-kernel *shared-agent* as "not a coupling signal" but not same-kernel *explicit*) → fix candidate |
+| signature `has_viable_alternatives` | (no diff) | — | drop (inert) |
+
+So of the 4 diffing consumers, **2 ship (FPN, coupling) and 2 are inert
+(composition, counterfactual)**. The inert two are wrong-but-harmless (computed,
+never consumed) — log, don't engine-change (build_discipline: unwired ≠ worthless,
+but also unshipped ≠ urgent). OQ-58 is **decoupled**: completing typed-edge
+coverage makes `cs_reading_relation` a complete *label*, but these consumers read
+graph *structure* the label never carries — so OQ-58 is not on this critical path.
+
+### Fix scope refinement (flag before landing)
+
+The FPN row's fix site `constraint_neighbors_existing/2` is shared by **5
+contamination-topology consumers** (`drl_fpn`, `network_dynamics`×3,
+`giant_component_analysis`, `json_report`). So filtering same-kernel sibling
+`affects_constraint` edges there is *contamination-topology-local*, not FPN-only:
+it also changes giant-component connectivity. Coherent (all read
+`constraint_neighbors` as the contamination graph) but an output-changing engine
+change with a giant_comp ripple — wants the old-vs-new pipeline diff across legs
+and a manual go before landing.
+
+**Discriminant for the fix:** use `same-kernel` (not `same-kernel + typed-sibling`).
+Empirically every same-kernel `affects_constraint` edge connects two readings (0
+non-sibling found: testsets 64/64, kernel_v1 1516/1516), so `same-kernel` == sibling
+here; it is complete (catches the 58 testsets edges the typed discriminant misses),
+OQ-58-independent, and mirrors the existing line-105 shared-agent intra-kernel guard
+exactly.
+
+### Per-row forward plan
+- **FPN:** consumer-local fix in `constraint_neighbors_existing/2` (add the
+  same-kernel guard to the explicit-edge findalls, mirroring line 105). Output-changing
+  → old-vs-new pipeline diff + canary-census→0 witness, manual go. Covers OQ-24 (forecloses
+  rides the same FPN read).
+- **coupling:** parallel candidate — extend the OQ-84 intra-kernel guard in
+  `compute_baseline_edges` to explicit edges. Separate consumer-local fix.
+- **composition, counterfactual:** log as inert-wrong (sibling read is wrong but
+  unshipped); revisit only if a consumer is ever wired.
+- **OQ-58:** flag as its own coverage item; NOT a blocker here.
