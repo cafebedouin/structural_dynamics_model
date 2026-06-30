@@ -45,6 +45,33 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-30 — perspective_chi d/f_d fork fixed (resolved-context derivation); report frame added
+**Files:** prolog/constraint_indexing.pl, prolog/json_report.pl, python/enhanced_report.py
+**Tier:** landed
+
+`json_report:write_one_perspective_chi` exported `d`/`f_d` derived on the UNRESOLVED
+canonical power atom, while `chi` (via `extractiveness_for_agent/3`) resolves coalition
+power internally. For any perspective whose power coalition-resolves (`powerless→organized`),
+the exported `f_d` (from d=0.9) forked from `chi` (from d=0.5): **40/119 live constraints had a
+`powerless` row where `chi ≠ ε·f_d·σ`**. Surfaced by web-Claude reading the Elias-Thorne
+constraint reports (`f(d)=1.358606` appearing with `d=0.500`); its two hypotheses (f saturates;
+d-table reused) were both falsified — `f` is d-dependent and `d` is observer-position-keyed
+(`constraint_indexing.pl:478-487 power_role_heuristic/4`).
+
+Fix: factored resolve+derive into `constraint_indexing:agent_resolved_directionality/4`
+(exported), used by BOTH `extractiveness_for_agent/3` and the JSON writer so they cannot fork.
+Witness: model_collapse_feedback powerless before `chi=0.4056 d=0.9 f_d=1.358606` (0.78·1.3586·0.8=0.848≠chi)
+→ after `chi=0.4056 d=0.5 f_d=0.65` (=chi). Behavior-preserving: 0 type/classification changes,
+0 chi changes across 119 constraints (re-run pipeline exit 0, mtime advanced); forked rows 40→0/440.
+Commit `6d1df7d1`.
+
+Also (commit `5e5830df`): prepended a "HOW TO READ THIS REPORT" frame to `enhanced_report.build_header`
+— purpose is to surface SEATS, divergence (between seats / from authored commentary) is the finding,
+RED = authored victim/beneficiary direction (OQ-187) not a moral verdict, d is observer-position-derived.
+Tripwire for a future agent: any NEW consumer that reports `d`/`f(d)` alongside `chi` must derive them
+via `agent_resolved_directionality/4`, never `derive_directionality/3` on the raw canonical context —
+or the fork reopens silently for coalition-resolving perspectives.
+
 ## 2026-06-30 — OQ-38 RESOLVED: reproducible orphan-xref tool built; four calibration orphans stripped; OQ-196 minted
 **Files:** prolog/orphan_xref.pl, python/audits/oq38_orphan_sweep.py, prolog/drl_composition.pl, prolog/utils.pl, ISSUES.md, AGENTS.md, audits/2026-06-30_oq38_orphan_xref/
 **Tier:** landed
