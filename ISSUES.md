@@ -1831,23 +1831,56 @@ changes"; scoped output-changing task, not yet built.
 
 ## OQ-38 — G3: dead-code / orphan triage (export-vs-caller)
 
-**Status:** open — Census rows 13, 4 + §5. **`predict_transformation/3` STRIPPED**
+**Ω-type:** Ω_E (whether a predicate is statically dead is empirically witnessable by the tool).
+
+**Status:** resolved — reproducible orphan-xref tool built and the four calibration orphans
+stripped (2026-06-30; `audits/2026-06-30_oq38_orphan_xref/`). The discredited ad-hoc grep is
+replaced by a tool-native funnel; the held-out remainder is routed to **OQ-196**.
 **Priority:** 1
-(commit `1eacd2fc`, 2026-06-24; was 0 callers anywhere, positive control:
-`non_monotonic_trajectory/2` IS called from `drift_report.pl:164`). Its sole-use helpers
-**`linear_slope`/`slope_accum` are now orphaned** — left in place, ADDED to the clause-level
-orphan-pass candidate set (do not cascade-strip; false-orphan discipline). Same commit removed
-the vacuous `resistance_to_change`-keyed piton sub-check in `validate_edge_cases/0`
-(`data_validation.pl`), superseded by OQ-90. **CORRECTION (OQ-35, 2026-06-21): `cs_reference_frame/2`
-is NOT dead** — `json_report.pl:590` is a real read site (serializes committer t0 to JSON). The
-census's "zero readers" was stale; code-read beats the stale document. It is inert *consumption*
-(serialized, not joined — OQ-133), retained on the OQ-133 bet, not an orphan. The exhaustive sweep yields
-528 exports → 422 zero-external-caller → {65 `/0` CLI, 114 meta-called, 26 ext-only, **217 candidate**}.
-The 217 is an **upper bound**, not an orphan list — it conflates genuinely-dead with
-over-exported-but-internally-called; separating them needs clause-head-vs-body parsing per
-predicate. **Decision:** scope a clause-level dead-code pass to convert 217 → a real orphan list.
-Do **not** strip from the 217 directly — that is the false-orphan trap (cf. the `mandatrophy_resolved`
-read-vs-declare canary).
+**Deps:** splits_from OQ-37, gates OQ-196
+
+**What was built (commits `c9be12ca`/`736783e4`/`6a3acf1d`):**
+- `prolog/orphan_xref.pl` — `library(prolog_xref)` clause-head-vs-body separator, mirrors
+  `check_stack.pl` (load-path-independent diagnostic, NOT a pipeline gate). Per defined
+  `Name/Arity`: file, exported?, static-caller set (module-stripped), class (`LIVE` /
+  `ENTRYPOINT_CLI` / `STATIC_ORPHAN`). Caller matching is conservative (global `Name/Arity`,
+  biases LIVE — the only dangerous error for an orphan tool is a false orphan).
+- `python/audits/oq38_orphan_sweep.py` — runs the core, builds the dynamic-reachability surface
+  (Python/shell goal-strings + Prolog name-construction prefixes), masks static orphans, emits the
+  funnel.
+
+**Tool-native funnel** (`outputs/oq38_orphan_funnel.json`, 121 sources, pre-strip): tool exports
+**614** (prior grep claim 528, delta **+86 — a FINDING: the grep undercounted exports**) →
+zero-static-caller 255 (201 `STATIC_ORPHAN` + 54 `ENTRYPOINT_CLI`) → N = **201 `STATIC_ORPHAN`**
+(prior grep candidate 217, delta **−16**) → dynamic-masked 29 → **M = 172** real-orphan upper bound.
+**[EDGE]** M is still an upper bound: "statically uncalled" ≠ "dead" for anything reachable via a
+Python goal-string or Prolog name-construction (the axis `prolog_xref` is blind to).
+
+**Stage-1 hard gate PASSED** (the tool earned trust before any positive flag): `cs_reference_frame/2`
+reported `LIVE` (caller `json_report.pl:write_per_constraint_entry/4` — the adversarial OQ-35 case
+the stale grep blew); `non_monotonic_trajectory/2` reported `LIVE` (caller
+**`metric_drift_report.pl:generate_drift_report/1`** — confirming the prior cite `drift_report.pl:164`
+was stale; that file is absent). All five name-construction positive controls fire
+(`=..`, `atom_concat`, `atomic_list_concat`, `format(atom(...))`, `term_to_atom`).
+
+**The four calibration orphans stripped** (each `STATIC_ORPHAN` & absent from the dynamic surface,
+re-witnessed via the trusted tool; behavior-preserving witnesses — load gate exit 0, validation
+suite byte-identical timing-normalized, pipeline `per_constraint` sha256 unchanged `d9c85bec…` with
+mtime advanced):
+- **Commit A** `736783e4` — slope-pair `linear_slope/2` + `slope_accum/3` (`drl_composition.pl`);
+  cascade tail of the `1eacd2fc` `predict_transformation/3` strip. xref settled `slope_accum/3`'s
+  only caller was `linear_slope/2` itself.
+- **Commit B** `6a3acf1d` — safe_get-pair `safe_get_all_metrics/2` + `safe_get_profile_components/2`
+  (`utils.pl`). The "harvester invokes safe_get by name" worry was a labeled risk-flag, not a fact —
+  downgraded by witness: zero literal refs, no `safe_get_` construction across any class.
+- **Cascade finding:** Commit B newly orphaned **one** predicate — `safe_get_category/3` (its sole
+  caller `safe_get_all_metrics/2` is gone). Per the scope ruling it is NOT stripped here; it routes
+  to OQ-196 (with the pre-existing `safe_get_extractiveness/2` / `safe_get_suppression/2` orphans).
+
+**OQ-35 context retained:** `cs_reference_frame/2` is NOT dead — `json_report.pl:590` is a real
+read site (inert *consumption*, serialized not joined — OQ-133); the tool independently confirms it
+`LIVE`. Same `1eacd2fc` removed the vacuous `resistance_to_change`-keyed piton sub-check in
+`validate_edge_cases/0` (`data_validation.pl`), superseded by OQ-90.
 
 ## OQ-39 — G4: prompt rules with no engine enforcer
 
@@ -10233,7 +10266,44 @@ twin: **GAP-22** (`docs/design/design_gaps.md`).
 
 ---
 
-*Last updated: 2026-06-29. Add new items with sequential OQ-NN labels. Mark
+## OQ-196 — Value-adjudicate the held-out static-orphan remainder (M=170)
+
+**Ω-type:** Ω_C (design choice — each orphan is strip-as-cruft vs preserve-as-unfinished-value, a `design_gaps.md` GAP, not an empirical fact).
+
+**Status:** open
+**Priority:** 4
+**Origin:** OQ-38 resolution, 2026-06-30 (split out at Stage 4 of the OQ-38 plan: Option 1 strips
+only the four calibration orphans and routes the remainder, rather than mass-stripping a first-run
+analyzer's full list — which would trust exactly the aggregate green-check OQ-38 exists to distrust).
+**Deps:** splits_from OQ-38, blocked_on OQ-38
+**Files:** `audits/2026-06-30_oq38_orphan_xref/` (tool funnel + orphan list); `prolog/orphan_xref.pl`
+(re-run to refresh); `python/audits/oq38_orphan_sweep.py`; `docs/design/design_gaps.md` (GAP target
+for unfinished-value orphans).
+
+**Specific question:** OQ-38's tool reports **M = 170** static-orphan predicates (124 exported,
+spread across `utils.pl` (17), `abductive_triggers.pl` (16), `metric_drift_events.pl` (9),
+`narrative_ontology.pl` (9), …; `outputs/oq38_orphan_funnel.json`). This is an **upper bound**, not
+a strip list — `[EDGE]` "statically uncalled" ≠ "dead" for anything reachable via a Python
+goal-string or Prolog name-construction the static xref is blind to. Each of the 170 needs the
+**value adjudication** (CLAUDE.md *Unwired ≠ worthless*): (1) what product does it yield? (2) does a
+live subsystem already yield it → **duplicate** = strip; (3) else → **unfinished value** = wire it or
+log a `design_gaps.md` GAP, never retire on wiring grounds. The asymmetry holds: retiring a
+valuable-but-unwired predicate silently destroys a capability; keeping a duplicate is mild clutter —
+when unsure, preserve and adjudicate.
+
+**Known cascade seed (from OQ-38 Commit B):** the safe_get convenience wrappers
+`safe_get_category/3` (newly orphaned by the strip), `safe_get_extractiveness/2`,
+`safe_get_suppression/2`, `safe_get_metric/4` are in M — the now-dead tail of the
+`safe_get_all_metrics/2` batch wrapper. Likely a clean duplicate-of-live-/N-arity strip, but
+adjudicate per the rule, do not blind-strip (false-orphan discipline).
+
+**What resolution changes:** converts the 170-entry upper bound into a partitioned ledger
+(strip-list vs GAP-list), draining the last of the OQ-38 dead-code frontier. Re-run
+`oq38_orphan_sweep.py` first — the corpus and engine drift, so M rots; re-pin before adjudicating.
+
+---
+
+*Last updated: 2026-06-30. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

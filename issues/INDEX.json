@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "5b7a8b95e90cc7caa1755983bee872874014ad4c",
+    "store_version": "6a3acf1db29271423ff704f59c39ae142b4baa32",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-30T12:37:47"
+    "generated_at": "2026-06-30T13:35:32"
   },
-  "issues_sha": "f59c7910fdaac3598d63b56f796a4df8ee318b86607b0366ebe8f4008b012580",
-  "n_entries": 195,
+  "issues_sha": "93aa8cf29be303780916c0d5c6d4fa084c6b626ade8eb84096611a82fcb14bd6",
+  "n_entries": 196,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 103,
+    "resolved": 104,
     "mitigated": 12,
     "partial": 8,
     "disposed": 4,
@@ -31,19 +31,6 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-135"
-      ]
-    },
-    {
-      "id": "OQ-38",
-      "status": "open",
-      "priority": 1,
-      "summary": "G3: dead-code / orphan triage (export-vs-caller)",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-35",
-        "OQ-90",
-        "OQ-133"
       ]
     },
     {
@@ -985,6 +972,20 @@
         "OQ-51",
         "OQ-135"
       ]
+    },
+    {
+      "id": "OQ-196",
+      "status": "open",
+      "priority": 4,
+      "summary": "Value-adjudicate the held-out static-orphan remainder (M=170)",
+      "deps": [
+        "splits_from OQ-38",
+        "blocked_on OQ-38"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-38"
+      ]
     }
   ],
   "archive": [
@@ -1405,6 +1406,24 @@
         "OQ-90",
         "OQ-93",
         "OQ-96"
+      ]
+    },
+    {
+      "id": "OQ-38",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "G3: dead-code / orphan triage (export-vs-caller)",
+      "deps": [
+        "splits_from OQ-37",
+        "gates OQ-196"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-35",
+        "OQ-37",
+        "OQ-90",
+        "OQ-133",
+        "OQ-196"
       ]
     },
     {

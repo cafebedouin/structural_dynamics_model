@@ -45,6 +45,35 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-30 — OQ-38 RESOLVED: reproducible orphan-xref tool built; four calibration orphans stripped; OQ-196 minted
+**Files:** prolog/orphan_xref.pl, python/audits/oq38_orphan_sweep.py, prolog/drl_composition.pl, prolog/utils.pl, ISSUES.md, AGENTS.md, audits/2026-06-30_oq38_orphan_xref/
+**Tier:** landed
+
+Replaced the discredited 2026-05-31 ad-hoc grep sweep (`217-candidate upper bound`,
+hand-transcribed into ISSUES.md) with a reproducible **tool-native funnel**.
+
+- **New tool `prolog/orphan_xref.pl`** — `library(prolog_xref)` clause-head-vs-body separator;
+  mirrors `check_stack.pl` (load-path-independent, **diagnostic NOT a pipeline gate**). Emits per
+  `Name/Arity`: file, exported?, static-caller set (module-stripped), class
+  (`LIVE`/`ENTRYPOINT_CLI`/`STATIC_ORPHAN`). Caller matching is global `Name/Arity` —
+  conservative-by-design (biases LIVE; a false orphan is the only dangerous error).
+- **Driver `python/audits/oq38_orphan_sweep.py`** — masks static orphans against the dynamic
+  surface (Python goal-strings + Prolog name-construction prefixes), emits the funnel.
+  *Self-exclusion gotcha:* the driver NAMES its strip targets in `CALIBRATION_FOUR`, so it must
+  exclude its own path from the Python-surface grep or it false-positives every target as
+  dynamically-reachable (witnessed + fixed this session).
+- **Funnel (121 sources):** 614 exports (grep claimed 528 — **+86, grep undercounted**), 201
+  STATIC_ORPHAN (grep 217 — −16), 29 dynamic-masked, **M=170 real-orphan upper bound** (post-strip).
+- **Stage-1 hard gate:** `cs_reference_frame/2` LIVE (the OQ-35 adversarial case), and
+  `non_monotonic_trajectory/2` LIVE with caller in **`metric_drift_report.pl`** — the OQ census's
+  `drift_report.pl:164` cite was stale (file absent); corrected in ISSUES.md.
+- **Four stripped** (commits A `736783e4` slope-pair, B `6a3acf1d` safe_get-pair; tool +
+  `c9be12ca`). Behavior-preserving witnesses: load gate exit 0, validation suite byte-identical
+  (timing-normalized), pipeline `per_constraint` sha256 unchanged `d9c85bec…` mtime advanced.
+- **Cascade:** Commit B newly orphaned `safe_get_category/3` (sole caller removed) — routed to
+  **OQ-196** (value-adjudicate the M=170 remainder), NOT stripped (scope ruling = strip only the
+  four). Full writeup: `audits/2026-06-30_oq38_orphan_xref/WRITEUP.md`.
+
 ## 2026-06-30 — OQ-37 RESOLVED (read-but-unauthored metric census re-dispositioned); GAP-23 minted
 **Files:** ISSUES.md, docs/design/design_gaps.md, prolog/data_validation.pl, python/generate_constraint_pl.py
 **Tier:** landed

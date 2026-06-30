@@ -1,0 +1,16 @@
+# OQ-38 Stage-1 hard-gate witnesses
+# Re-runnable: cd prolog && swipl -l orphan_xref.pl -g 'run_orphan_xref, halt' -t 'halt(1)'
+#             python3 python/audits/oq38_orphan_sweep.py
+
+## Negative controls (MUST be LIVE — else the tool is byte-identical to the broken grep):
+  drl_composition.pl	non_monotonic_trajectory/2	LIVE	caller=metric_drift_report.pl:generate_drift_report/1
+  narrative_ontology.pl	cs_reference_frame/2	LIVE	caller=json_report.pl:write_per_constraint_entry/4
+
+## The four calibration orphans (stripped this OQ; absent from post-strip census):
+  drl_composition.pl  linear_slope/2          STATIC_ORPHAN  -> stripped Commit A 736783e4
+  drl_composition.pl  slope_accum/3           LIVE-via-linear_slope only (cascade tail) -> Commit A
+  utils.pl            safe_get_all_metrics/2  STATIC_ORPHAN  -> stripped Commit B 6a3acf1d
+  utils.pl            safe_get_profile_components/2  STATIC_ORPHAN  -> stripped Commit B 6a3acf1d
+
+## Cascade revealed by Commit B (routed to OQ-196, NOT stripped here):
+  utils.pl	safe_get_category/3	STATIC_ORPHAN  (sole caller safe_get_all_metrics/2 removed)

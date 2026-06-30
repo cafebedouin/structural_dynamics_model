@@ -636,6 +636,21 @@ chain (`context_profile_mining`/`context_profile_report`, loaded by run_pipeline
 `[stack]`) so their wrong-qualifier calls are covered too; baseline unchanged. Other standalone
 report scripts remain uncovered (honest boundary noted in `check_stack.pl`).
 
+### Orphan / dead-code census (export-vs-caller; OQ-38)
+
+```bash
+cd prolog && swipl -l orphan_xref.pl -g "run_orphan_xref, halt" -t "halt(1)"   # static census -> outputs/oq38_orphan_xref.tsv
+python3 python/audits/oq38_orphan_sweep.py                                      # + dynamic-surface mask + funnel
+```
+
+`orphan_xref.pl` is a `library(prolog_xref)` clause-head-vs-body separator (sibling of
+`check_stack.pl`: load-path-independent, **diagnostic NOT a pipeline gate**). It classes each
+defined predicate `LIVE`/`ENTRYPOINT_CLI`/`STATIC_ORPHAN`; caller matching is global `Name/Arity`,
+conservative-by-design (biases LIVE — a false orphan is the only dangerous error). The Python driver
+masks static orphans against the dynamic surface (Python goal-strings + Prolog name-construction)
+and emits the tool-native funnel. **`STATIC_ORPHAN` is an upper bound on "dead", never a strip list**
+— value-adjudicate each (CLAUDE.md *Unwired ≠ worthless*). Provenance: `audits/2026-06-30_oq38_orphan_xref/`.
+
 ### In-session overlay probes
 
 Use `probe_harness:with_retracted/2` / `with_overlay/3` (snapshot-first, verified restore,
