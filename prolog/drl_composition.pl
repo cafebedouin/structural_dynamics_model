@@ -311,32 +311,14 @@ check_capture_between(C, T1, T2) :-
     X2 >= Floor.
 
 /* ----------------------------------------------------------------
-   STATISTICAL HELPERS: Slope and Monotonicity
+   STATISTICAL HELPERS: Monotonicity
    monotonic_increasing, monotonic_decreasing and non_monotonic_trajectory
-   feed the drift report. linear_slope and slope_accum are now UNUSED:
-   predict_transformation/3, their sole caller, was stripped (OQ-38,
-   2026-06-24). Kept pending the OQ-38 clause-level orphan sweep (Pass 2)
-   rather than cascade-removed.
+   feed the drift report. linear_slope/2 and slope_accum/3 were REMOVED
+   2026-06-30 (OQ-38 orphan sweep): confirmed static-orphan by the trusted
+   orphan_xref tool — their sole caller predict_transformation/3 was stripped
+   2026-06-24 (1eacd2fc), and xref settled that slope_accum/3's only remaining
+   caller was linear_slope/2 itself (the Commit-A cascade tail).
    ---------------------------------------------------------------- */
-
-%% linear_slope(+TimeSortedPairs, -Slope)
-%  Least-squares slope from a list of T-V pairs (sorted by T).
-%  Slope = (N*Sum(T*V) - Sum(T)*Sum(V)) / (N*Sum(T^2) - Sum(T)^2)
-linear_slope(Pairs, Slope) :-
-    length(Pairs, N),
-    N >= 2,
-    foldl(slope_accum, Pairs, 0.0-0.0-0.0-0.0, SumT-SumV-SumTV-SumT2),
-    Denom is N * SumT2 - SumT * SumT,
-    (   abs(Denom) > 1.0e-12
-    ->  Slope is (N * SumTV - SumT * SumV) / Denom
-    ;   Slope = 0.0
-    ).
-
-slope_accum(T-V, ST-SV-STV-ST2, NST-NSV-NSTV-NST2) :-
-    NST is ST + T,
-    NSV is SV + V,
-    NSTV is STV + T * V,
-    NST2 is ST2 + T * T.
 
 %% monotonic_increasing(+TimeSortedPairs)
 %  True if values are non-decreasing when sorted by time.
