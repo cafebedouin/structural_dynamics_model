@@ -962,6 +962,23 @@ false-halt guard routed persistence to Hub-1, never halt).
 
 ---
 
+## OQ-194 — 21 embedded validation tests fail on the tracked corpus (meant-to-pass or WIP?)
+
+**Ω-type:** Ω_E (empirical — what is the actual intended-green state of these validation units; witnessable by inspecting validation intent + history).
+
+**Status:** open
+**Priority:** 3
+**Origin:** surfaced incidentally during the OQ-23 fix (2026-06-29), while regression-checking `tests/test_phantom_neighbor_filter`.
+**Files:** `prolog/tests/test_phantom_neighbor_filter.pl`; the tracked testset files carrying the failing embedded `begin_tests` units (e.g. `animal_status_kernel__property_reading.pl`, `architectural_pattern_validity.pl`, `demographic_resource_allocation*.pl`, …)
+
+**Specific question:** Running `cd prolog && swipl -g "[stack], [tests/test_phantom_neighbor_filter], run_tests, halt"` loads the corpus and runs every embedded test unit; **21 fail / 93 pass**. The failing assertions are `mountain_threshold_validation` / `nl_profile_validation` across many tracked testset-embedded units (plus the `phantom_neighbor_filter` unit itself). Are these validations **meant to be green on the current corpus** (so the 21 are genuine regressions/defects to diagnose) or are they **aspirational / WIP units that have never passed** on this corpus (so "21 failing" is a not-yet-implemented status, not a defect)? — the first read must distinguish those two objects before treating it as a defect.
+
+**Evidence (the falsified positive control that makes this OQ-worthy, not ambient):** the failures are **NOT** caused by the concurrent-instance corpus churn — moving the 5 untracked `*_contradictions.pl` files aside left the count **unchanged at 21/93**. They are also NOT caused by the OQ-23 fix — they fail on a clean HEAD without the contamination guard. So the 21 are a **standalone, pre-existing condition in the tracked corpus**, independent of both the concurrent write and this session's change. Not in any gate (`gate.sh` does not run embedded testset validations); does not affect the OQ-23 census (those validate classification thresholds, orthogonal to contamination).
+
+**What resolution changes:** either (a) the validations are meant-green → each failing unit is a classification/threshold regression to diagnose and fix (or the testset to re-author); or (b) they are WIP/aspirational → document that status (and consider gating them out of `run_tests` discovery so "21 failing" stops reading as a defect). Resolution starts with the meant-to-pass-vs-WIP read, then per-unit triage.
+
+---
+
 ## OQ-24 — forecloses requires no FPN representation, but the absence is undocumented in the engine
 
 **Ω-type:** Ω_C (design choice — whether to record the structural-exclusion rationale in code).
