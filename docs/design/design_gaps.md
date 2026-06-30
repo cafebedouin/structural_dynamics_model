@@ -1023,6 +1023,39 @@ folded into OQ-184's migration list.
 
 ---
 
+## GAP-22 — The engine surfaces per-observer classification variation but not its deciding hub
+
+**Declared:** 2026-06-28 (OQ-22 resolved Verdict B; follow-up OQ-192).
+
+**The absence:** classification has two independent hubs — Hub 1 (the χ-gates, power-scaled) and
+Hub 2 (`effective_immutability`, observer-indexed). `pipeline_output.json` serializes the per-observer
+outcome (`perspectives`, `perspective_chi`) but NOT which hub decided it. OQ-22 measured that a real
+subset of constraints are "starved": their observer-χ span sits within one band of their realized
+per-constraint χ→type map, so Hub 1 cannot move the type by changing observer, and the ENTIRE
+cross-observer type variation is Hub-2-sourced (grid-witnessed Hub-2, every member with a grid
+witness: testsets 5/109, haiku 23/960, flash 100/960, kernel_v1 49/1106;
+`audits/2026-06-28_oq22_hub_starvation/`). A consumer reading per-observer type variation as two-hub /
+χ-discrimination signal therefore mis-reads a Hub-2-only decision — the absence reads as a presence
+(the per-observer disagreement *looks like* χ-discrimination it isn't).
+
+**Why it is absent:** the engine was never asked to carry the bit. The two-hub structure is documented
+(`drl_core.pl` two-hub comment; `docs/logic.md`) but per-classification hub-provenance is neither
+computed nor serialized. No current consumer keys on the deciding hub, so nothing forced the field
+into being — the standard "absence reads as presence" shape this ledger guards.
+
+**What closing the gap would require (OQ-192):** per (constraint, context) decide whether the type
+changes when χ is swept across the constraint's observed span at fixed immutability (Hub-1 contributes)
+vs only when immutability changes (Hub-2-decided); serialize a `deciding_hub ∈ {hub1_chi,
+hub2_immutability, both}` sibling of `perspective_chi`, and surface it in `enhanced_report`. The audit's
+`oq22_grid.py` is a working prototype of the discriminator (the (observer × immutability) grid:
+vanish-under-pin = Hub-2, persist-under-pin = Hub-1), O(observers × {mountain,rope}) per constraint —
+cheap enough to wire into `run_pipeline` per Pattern 1 if a consumer wants it.
+
+**Status:** Deferred. Tracked as OQ-192 (Ω_C, documented-only vs add-the-field is an open design
+choice, not foreclosed); recorded here so a future provenance/tracking-surface proposal finds it.
+
+---
+
 ## Deferred triggers (not yet gaps)
 
 A trigger is a capability that is **not** committed future work — it has too few real users to

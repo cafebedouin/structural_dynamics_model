@@ -335,3 +335,39 @@ dead, not the verdict. **Witnessed (OQ-18 probe, 2026-06-25):** `cs_verdict(C, s
 unbound returned `0` (read as dormant); bound from `corpus_constraint/1` returned `14` on `testsets`
 (52 on `testsets_haiku`, 43 on `testsets_flash`) — a false-dormancy conclusion that a one-line
 positive-control count reversed.
+
+---
+
+## 12. Overlay gotchas hit in the OQ-22 audit (static predicates; validated config params)
+
+Two ways an in-session override fails, both witnessed building the OQ-22 Hub-1/Hub-2 grid
+(`audits/2026-06-28_oq22_hub_starvation/`; `python/audits/oq22_grid.py`, `oq22_controls.py`):
+
+- **`probe_harness:with_overlay/3` cannot pin a STATIC predicate.** It retracts, and SWI throws
+  `permission_error(modify, static_procedure, …)` on a non-dynamic predicate — e.g.
+  `constraint_indexing:effective_immutability/3`, the immutability lookup table. Two escapes: (i) the
+  §3 `abolish + assertz` swap (makes it dynamic for the rest of the process); or (ii) — cleaner when
+  the static predicate is a LOOKUP TABLE feeding a computation you can re-enter with chosen inputs —
+  do NOT pin the table at all; pin its **effect** by constructing the caller's inputs. The grid pins
+  immutability not by overlaying `effective_immutability/3` but by passing `classify_from_metrics/6`
+  a context whose `(time_horizon, exit_options)` force the perception (mountain ← `(immediate,
+  trapped)`, rope ← `(immediate, mobile)`), holding the observer's `agent_power`+`spatial_scope` (hence
+  the natural χ) fixed. No retract, no permission_error, and the immutability axis stays cleanly
+  orthogonal to the χ axis. **Verify the construction reproduces reality:** the natural-input cell
+  (observer's real T,E) must equal the unpinned classification — the grid's diagonal self-consistency
+  check, which also catches a mis-constructed context.
+
+- **Overriding a config:param that has a VALIDATOR + RELATIONSHIP needs `retractall`+`assertz`
+  POST-`[stack]`, not `asserta` pre-`[stack]`.** The corpus_path silent-ignore trap (CLAUDE.md Corpus
+  Loading) says asserta-prepend wins the first-solution race — true for a *bare* param. But for a
+  param the config validator constrains — the sigmoid has both a range (`config_schema.pl:73–75`:
+  `sigmoid_upper ∈ [0.5,3.0]`, …) and an ordering RELATIONSHIP (`L < midpoint < U`) — asserta-prepend
+  LEAVES the default clause, and the relationship validator backtracks over ALL clauses, finding a
+  violating CROSS-combination (your new lower with the *stale default* upper) and aborting the load
+  LOUDLY (`CONFIG ERROR: relationship violated`). Fix: load `[stack]` first (validation passes on the
+  clean defaults), THEN `retractall(config:param(K,_)), assertz(config:param(K,V))` so exactly one
+  clause exists per key — validation is a load-time gate, not re-run on the post-load override. Keep
+  each override value individually in-bounds so you are re-seating the param, not bypassing the
+  validator. (Corollary finding: the validator forecloses the most degenerate transforms — the
+  originally-witnessed OQ-22 starvation regime, χ ceiling 0.15, is no longer reachable through a valid
+  config, since it needs `sigmoid_upper < 0.5`.)

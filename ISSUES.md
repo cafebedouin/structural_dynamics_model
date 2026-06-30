@@ -10136,7 +10136,8 @@ for (a)); against, no current consumer keys on the hub.
 
 **Evidence / reuse:** `audits/2026-06-28_oq22_hub_starvation/` (`grid_*.tsv` = the per-constraint
 discriminator output; `FINDINGS.md`). The discriminator is O(observers × {mountain,rope}) per
-constraint — cheap enough to wire into `run_pipeline` if (a) is chosen.
+constraint — cheap enough to wire into `run_pipeline` if (a) is chosen. Declared-absence twin:
+**GAP-22** (`docs/design/design_gaps.md`) — check there before proposing any hub/provenance surface.
 
 ---
 
