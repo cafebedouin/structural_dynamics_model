@@ -193,34 +193,15 @@ safe_get_suppression(Constraint, Suppression, Default, Warn) :-
     safe_get_metric(Constraint, suppression_requirement, Suppression, Default, Warn).
 
 /* ============================================================================
-   5. BATCH OPERATIONS WITH SAFE RETRIEVAL
+   5. BATCH OPERATIONS WITH SAFE RETRIEVAL — REMOVED 2026-06-30 (OQ-38)
+   safe_get_all_metrics/2 and safe_get_profile_components/2 were confirmed
+   STATIC_ORPHAN by the orphan_xref tool (zero static callers; absent from the
+   Python/shell dynamic surface and from any safe_get_ name-construction site —
+   the labeled "harvester invokes safe_get wrappers by name" risk was a flag,
+   not a fact, and was downgraded by witness). The per-metric safe_get_*
+   wrappers they composed (safe_get_metric, safe_get_extractiveness, …) remain
+   LIVE and exported.
    ============================================================================ */
-
-%% safe_get_all_metrics(+Constraint, -Metrics)
-%  Retrieves all standard metrics for a constraint.
-%  Returns metrics(Extr, Supp, Resist, Category) structure.
-safe_get_all_metrics(Constraint, metrics(Extr, Supp, Resist, Category)) :-
-    safe_get_extractiveness(Constraint, Extr, 0.0, false),
-    safe_get_suppression(Constraint, Supp, 0.0, false),
-    safe_get_metric(Constraint, resistance_to_change, Resist, 0.0, false),
-    safe_get_category(Constraint, Category, unknown).
-
-%% safe_get_profile_components(+Constraint, -Components)
-%  Safely retrieves all components needed for structural signature.
-safe_get_profile_components(Constraint, components(Accum, Supp, Resist, BenefDelta, AltPresent)) :-
-    safe_get_metric(Constraint, accumulation_speed, Accum, 0.0, false),
-    safe_get_metric(Constraint, suppression_requirement, Supp, 0.0, false),
-    safe_get_metric(Constraint, resistance_to_change, Resist, 0.0, false),
-
-    % Calculate beneficiary delta safely
-    (findall(B, narrative_ontology:veto_actor(B), Beneficiaries)
-    -> length(Beneficiaries, BenefDelta)
-    ;  BenefDelta = 0),
-
-    % Check for alternatives safely
-    (narrative_ontology:intent_viable_alternative(_, _, _)
-    -> AltPresent = present
-    ;  AltPresent = absent).
 
 /* ============================================================================
    6. DEFENSIVE CONFIG RETRIEVAL
