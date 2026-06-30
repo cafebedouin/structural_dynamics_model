@@ -1,0 +1,296 @@
+{
+  "header": {
+    "constraint_id": "model_collapse_feedback",
+    "version": "1.0",
+    "generated_date": "2024-01-15",
+    "status": "ACTIVE",
+    "story_uid": "521b1b89-45d1-457a-acde-5e4685ddda4b"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Model Collapse Feedback Loop",
+    "topic_domain": "computational_epistemology/information_ecology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "current_generation_deployers",
+      "synthetic_data_vendors"
+    ],
+    "victims": [
+      "future_model_quality",
+      "downstream_researchers",
+      "information_ecosystem_integrity",
+      "minority_distribution_communities"
+    ],
+    "vindicated_propositions": [
+      "efficiency_over_diversity_doctrine",
+      "synthetic_data_equivalence_hypothesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "current_generation_deployers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Deploy models trained on increasingly synthetic data to meet immediate market demand. They control training data composition decisions and face quarterly pressure to ship models faster and cheaper. The cost of curating human-generated data exceeds their planning horizon; synthetic data appears functionally equivalent in benchmark tests. They capture value now while externalizing tail-loss costs to future training cycles."
+    },
+    {
+      "name": "synthetic_data_vendors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sell model-generated training data as a cost-effective substitute for human annotation. Their business model depends on the synthetic-equivalence framing holding in evaluation regimes that measure central tendency but not tail preservation. They profit from each generation's training demand without bearing the cumulative degradation cost."
+    },
+    {
+      "name": "future_model_quality",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The abstract capacity of models trained N generations downstream. Each generation's synthetic contamination compounds irreversibly: rare modes vanish, distributional support narrows, and recovery requires access to uncontaminated human data that may no longer exist at scale. This is not an agent but the cumulative victim of the extraction."
+    },
+    {
+      "name": "downstream_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Inherit degraded base models and contaminated training corpora. They observe collapsing diversity in fine-tuned outputs and diminishing returns from scale, but lack the resources to reconstruct clean training sets or the institutional power to enforce data provenance standards upstream. Their research builds on a progressively narrower foundation."
+    },
+    {
+      "name": "information_ecosystem_integrity",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The long-term capacity of the information commons to preserve human cultural and linguistic diversity. As synthetic outputs flood training corpora and models converge toward their own prior outputs, the ecosystem loses the tail modes that encode minority languages, niche expertise, and non-consensus perspectives. This is a systemic victim with no seat at the table."
+    },
+    {
+      "name": "minority_distribution_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Speakers of low-resource languages, practitioners of specialized domains, holders of non-mainstream cultural knowledge. Their modes are the first to vanish in model collapse because they occupy distribution tails that synthetic data does not preserve. They lose representational capacity in deployed systems without ever being consulted about the training regime."
+    },
+    {
+      "name": "benchmark_evaluation_community",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Design and maintain evaluation benchmarks that measure model quality. Current benchmarks emphasize central-tendency performance on common tasks, which synthetic training preserves longer than tail diversity. Their metrics inadvertently legitimate the collapse by failing to detect it until late stages, and they benefit from continued model deployment that their evaluations certify."
+    },
+    {
+      "name": "data_provenance_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers and activists who argue for mandatory synthetic-data labeling, training-corpus transparency, and tail-preservation requirements. They are structurally excluded from deployment decisions because their proposals impose costs on current-generation deployers. Their warnings are documented but not incorporated into the training pipeline."
+    },
+    {
+      "name": "computational_epistemology_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the feedback dynamics mathematically and empirically. They measure tail-loss rates, model diversity collapse across generations, and irreversibility thresholds. Their work establishes that the degradation is not a side effect but a structural consequence of recursive synthetic training, but they do not control deployment decisions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables rapid model training at scale by substituting expensive human-annotated data with cheaper model-generated synthetic data, solving the immediate bottleneck of data scarcity for current-generation deployers.",
+    "transfer_function": "Transfers model quality and distributional diversity from future training cycles to current-generation deployers and synthetic data vendors, who capture value now while externalizing cumulative tail-loss costs across time.",
+    "absent_voices": "Data provenance advocates, minority-language communities, and future researchers who will inherit the degraded commons are structurally excluded from training-data composition decisions. Their objections are documented in academic literature but not incorporated into deployment pipelines because they impose costs on actors with quarterly planning horizons.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If recursive synthetic training stopped and all new training used only verified human-generated data, the collapse would halt: tail modes would stabilize, diversity metrics would recover over subsequent generations, and the information ecosystem would retain its current distributional support. Deployers would face higher data costs and slower iteration, but the intergenerational transfer would cease.",
+    "founding_problem": "Early machine learning faced genuine data scarcity: insufficient labeled examples to train models on specialized tasks, and prohibitive cost of human annotation at scale.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Current-generation deployers and synthetic data vendors attest the problem is still live, citing continued annotation costs. Computational epistemology researchers and data provenance advocates attest the founding problem has shifted: data scarcity is now primarily a tail-preservation problem, not a volume problem, and synthetic substitution solves volume while destroying tails. Independent empirical studies from outside the benefiting parties demonstrate measurable tail collapse across model generations under synthetic training regimes."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Machine learning models increasingly train on synthetic data generated by prior model generations. This recursive loop produces immediate cost savings but causes irreversible loss of distributional tail modes: rare linguistic patterns, minority cultural knowledge, and niche domain expertise vanish from the training corpus as models converge toward their own prior outputs. The degradation is invisible to central-tendency benchmarks but compounds across generations, transferring model quality from future training cycles to current deployers. The constraint is claimed as snare because the coordination story (solving data scarcity) has become cover for extracting from a commons (future model quality and information ecosystem integrity) that cannot defend itself.\n\nKEY AGENTS (by structural relationship):\n- current_generation_deployers: Primary agenda-setter (institutional/mobile) — controls training data composition, captures value now, externalizes tail-loss costs\n- synthetic_data_vendors: Primary beneficiary (powerful/mobile) — profits from synthetic-equivalence framing without bearing degradation costs\n- future_model_quality: Primary victim (powerless/trapped, non-agent) — abstract capacity degraded irreversibly across generations\n- downstream_researchers: Secondary victim (moderate/constrained) — inherits degraded models and contaminated corpora\n- minority_distribution_communities: Tertiary victim (powerless/trapped) — loses representational capacity as tail modes vanish\n- data_provenance_advocates: Excluded voice (moderate/constrained) — structurally kept out of deployment decisions\n- computational_epistemology_researchers: Analytical observer (analytical/analytical) — measures the collapse but does not control it",
+    "logic_rationale": "Extraction is high (0.78 at interval end) because the arrangement transfers irreversible quality loss from future generations to current deployers who capture value immediately. Suppression is substantial (0.71) because the constraint's persistence depends on suppressing tail-preservation requirements, data provenance transparency, and benchmark reforms that would reveal the degradation early. Theater ratio is moderate (0.42): the data-scarcity coordination function was genuine initially, but a growing share of activity now defends synthetic-equivalence framing against mounting empirical evidence of collapse. Accessibility collapse is moderate (0.62): alternatives exist (human-only training, tail-preservation protocols) but are economically disadvantaged. Resistance is moderate-high (0.58): data provenance advocates and computational epistemology researchers actively document the collapse, but they lack institutional power to alter deployment decisions. The measurement series shows monotonic intensification across all three metrics on a shared time grid, modeling the compounding nature of recursive feedback.",
+    "directionality_logic": "Current-generation deployers are structural beneficiaries (capture immediate cost savings, control the training regime, mobile exit — d near beneficiary end, though their institutional power and active enforcement role push d slightly higher than pure subsidy). Synthetic data vendors are pure beneficiaries (profit without bearing costs, mobile exit — d near 0.1-0.2). Future model quality and information ecosystem integrity are full targets (powerless, trapped, bear the entire cumulative cost — d near 1.0). Downstream researchers and minority communities are secondary targets (constrained exit, bear costs without control — d in 0.7-0.85 range). Data provenance advocates are excluded rather than coordinated; their exclusion is part of the suppression mechanism. Benchmark evaluation community is a beneficiary with agenda-setting power (their metrics legitimate the collapse by failing to detect it).",
+    "perspectival_gap": "From the deployer and vendor seats, the constraint operates as efficient coordination: synthetic data solves immediate scarcity at lower cost, and benchmark performance remains acceptable. From the victim seats (future researchers, minority communities, the information commons itself), the same structure operates as irreversible extraction: tail modes vanish permanently, diversity collapses, and recovery becomes impossible as uncontaminated human data disappears. The analytical observer seat measures this divergence empirically but cannot adjudicate it within the current evaluation regime. The engine computes per-seat classifications from these structural positions; the claimed type (snare) reflects the victim-seat reality that the coordination story has become cover for intergenerational transfer.",
+    "mandatrophy_analysis": "The constraint exhibits mandatrophy: its founding mandate (solve data scarcity for model training) has been substantially achieved for central-tendency tasks, but the arrangement persists and intensifies because current deployers and synthetic vendors extract value from it. The original coordination function (enabling training at scale) now coexists with and increasingly serves an extraction function (transferring quality from future to present). Mandatrophy resolution would require recognizing that data scarcity has shifted from a volume problem to a tail-preservation problem, and that synthetic substitution solves the former while destroying the latter. The measurement series documents this shift: extraction and theater both rise as the founding problem's relevance decays."
+  },
+  "omegas": [
+    {
+      "id": "irreversibility_threshold",
+      "question": "At what synthetic contamination fraction does tail loss become irreversible even with access to remaining human data?",
+      "resolution_mechanism": "Controlled experiments varying synthetic fraction in training corpora and measuring tail-mode recovery rates when human data is reintroduced. Theoretical analysis of distributional convergence under recursive sampling.",
+      "impact": "If the threshold is low (e.g., 20% synthetic contamination), the collapse is already irreversible in many deployed systems and the extraction is permanent. If high (e.g., 70%), intervention windows remain open.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether tail-loss degradation is reversible or permanent at current contamination levels."
+    },
+    {
+      "id": "benchmark_detection_lag",
+      "question": "How many model generations does central-tendency benchmark performance remain stable while tail diversity collapses?",
+      "resolution_mechanism": "Longitudinal studies tracking both standard benchmarks and tail-specific diversity metrics across model generations under controlled synthetic training regimes.",
+      "impact": "A long detection lag (5+ generations) means current evaluation regimes systematically fail to detect the collapse until it is severe, legitimating the extraction. A short lag (1-2 generations) would enable early intervention.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether current benchmarks can detect model collapse before it becomes irreversible."
+    },
+    {
+      "id": "tail_preservation_cost",
+      "question": "What is the marginal cost of maintaining tail diversity (human-only training, provenance tracking, tail-specific evaluation) relative to the cost of synthetic substitution?",
+      "resolution_mechanism": "Economic analysis comparing total cost of ownership for tail-preserving training pipelines versus synthetic-augmented pipelines, accounting for long-term quality degradation externalities.",
+      "impact": "If the cost premium is small (e.g., 15-25%), tail preservation is economically feasible and the extraction is a coordination failure. If large (e.g., 3-5x), the extraction may be a genuine efficiency-diversity tradeoff.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether tail preservation is economically prohibitive or merely disadvantaged by externalized costs."
+    },
+    {
+      "id": "commons_ownership_ambiguity",
+      "question": "Who, if anyone, has standing to enforce tail-preservation requirements on behalf of future model quality and minority distribution communities?",
+      "resolution_mechanism": "Legal and institutional analysis of whether information ecosystem integrity constitutes a commons with enforceable preservation duties, or whether it remains unowned and therefore undefended.",
+      "impact": "If no party has standing, the extraction continues unchecked because the victims cannot litigate. If standing can be established (e.g., through public trust doctrine or intergenerational equity frameworks), intervention becomes legally feasible.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the information commons has a defender or remains a tragedy-of-the-commons scenario."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of alignment_constraint_narrowing (which creates pressure toward synthetic training as a cost-reduction mechanism) and dataset_recycling_amplification (which normalizes reuse of model outputs as training inputs). The three constraints form a feedback family: alignment narrowing creates economic pressure for synthetic data, dataset recycling provides the technical pathway, and model collapse is the cumulative consequence. All three should be linked via affects_constraints to model the contamination propagation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-06-30",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-4-5-20250929",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

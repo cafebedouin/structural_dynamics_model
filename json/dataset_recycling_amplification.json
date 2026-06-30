@@ -1,0 +1,261 @@
+{
+  "header": {
+    "constraint_id": "dataset_recycling_amplification",
+    "version": "1.0",
+    "generated_date": "2025-01-09",
+    "status": "ACTIVE",
+    "story_uid": "50d3e77c-7b39-4f33-b176-ab3d393efe45"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.51,
+    "resistance": 0.47,
+    "claimed_type": "rope",
+    "human_readable": "Dataset Recycling Amplification in ML Training Pipelines",
+    "topic_domain": "computational_epistemology/information_ecology",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "model_training_organizations",
+      "dataset_aggregators"
+    ],
+    "victims": [
+      "downstream_model_users",
+      "epistemic_diversity_researchers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "model_training_organizations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Train foundation models on large-scale datasets that include synthetic outputs from prior models. Benefit from reduced data collection costs and faster iteration cycles. WildChat and similar datasets provide ready-made conversational data at scale without human annotation overhead. The practice is economically rational given competitive pressure to ship models quickly."
+    },
+    {
+      "name": "dataset_aggregators",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Curate and distribute training datasets by scraping model outputs, user interactions, and synthetic conversations. Set the composition and filtering criteria that determine what statistical patterns propagate. Operate under open-data norms and academic sharing conventions. Can choose to filter model-generated content but face no strong incentive to do so when such content is high-volume and grammatically clean."
+    },
+    {
+      "name": "downstream_model_users",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Deploy models in production systems and discover unexpected correlations or statistical quirks that propagate across model families. Bear the cost of debugging spurious patterns, retraining on cleaner data, or working around amplified biases. Exit options are constrained because the recycling pattern is industry-wide and not disclosed in model cards."
+    },
+    {
+      "name": "epistemic_diversity_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Study distributional shift, model collapse, and epistemic monoculture in ML systems. Document cases like Elias frequency correlation across unrelated model families. Their research reveals the constraint's operation but they lack institutional power to change training practices. Constrained exit because the phenomenon is systemic and affects the entire research domain."
+    },
+    {
+      "name": "human_data_contributors",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Generate original conversational data through platform interactions, which gets scraped and mixed with synthetic outputs in training sets. Their contributions are diluted by model-generated content and they have no visibility into or control over how their data is recycled. Structurally excluded from decisions about dataset composition."
+    },
+    {
+      "name": "ml_safety_auditors",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Audit training pipelines for data provenance, distributional integrity, and collapse risks. Can observe the recycling pattern through statistical forensics and cross-model correlation analysis. Produce recommendations but lack enforcement power over industry training practices."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the data scarcity and annotation cost problem for training large language models: synthetic and model-generated conversational data provides high-volume, grammatically fluent training signal without expensive human labeling.",
+    "transfer_function": "Moves statistical quirks and distributional artifacts from early-generation models into later training sets, then into downstream models and production systems. The cost is borne by users debugging spurious correlations and researchers tracking epistemic collapse.",
+    "absent_voices": "Human data contributors whose original interactions are diluted by synthetic content, and future model developers who will inherit increasingly homogenized training distributions. Neither group participates in current dataset curation decisions.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If dataset recycling stopped overnight, training organizations would face immediate data scarcity and higher annotation costs, forcing either smaller models or investment in human data pipelines. Cross-model statistical correlations would decay over subsequent training generations as fresh human data diluted inherited quirks.",
+    "founding_problem": "Early foundation model training faced a genuine data bottleneck: human-generated conversational data at the scale needed for billion-parameter models did not exist in clean, accessible form.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Training organizations attest the data scarcity problem remains live and recycling is necessary for competitive model development. ML safety researchers and epistemic diversity auditors attest that the founding problem has shifted: the bottleneck is now data quality and diversity, not volume, and recycling exacerbates the new problem while solving the old one. Independent analysis from academic ML conferences supports the shifted-bottleneck reading."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Machine learning training pipelines increasingly rely on datasets derived from prior model outputs. WildChat, a widely-used conversational dataset, contains substantial synthetic content from earlier language models. When this dataset trains new models, statistical quirks from the source models propagate and amplify. The Elias frequency correlation—an unexpected statistical pattern appearing across unrelated model families—exemplifies this amplification. The constraint is claimed as rope (genuine coordination solving data scarcity) while metrics describe rising extraction (downstream costs of debugging spurious patterns) and suppression (industry-wide practice limiting access to clean human data). The claim/metric divergence is deliberate and measures whether coordination has drifted toward extraction.",
+    "key_agents": [
+      "model_training_organizations: Primary beneficiaries (institutional/mobile) — reduce data costs by training on recycled outputs",
+      "dataset_aggregators: Agenda setters (organized/mobile) — curate and distribute datasets containing model outputs",
+      "downstream_model_users: Payers (organized/constrained) — debug spurious correlations inherited from training data",
+      "epistemic_diversity_researchers: Payers (moderate/constrained) — document collapse but lack power to change practices",
+      "human_data_contributors: Excluded (powerless/trapped) — original data diluted by synthetic content",
+      "ml_safety_auditors: Observers (organized/analytical) — audit pipelines and document recycling patterns"
+    ],
+    "logic_rationale": "Extraction is moderate (0.38) because the practice imposes real costs on downstream users and researchers who must work around amplified artifacts, but the cost is diffuse and not concentrated on powerless agents. Suppression is moderate (0.42) because the industry-wide adoption of recycling makes clean human data increasingly scarce, but alternatives still exist for well-resourced actors. Theater ratio is low-moderate (0.28) because data provenance documentation exists but often omits the extent of model-generated content in training sets. Accessibility collapse is just above neutral (0.51) because alternatives to recycled data remain available but require significant additional investment. Resistance is moderate (0.47) because epistemic diversity researchers actively document the problem and some organizations are beginning to filter synthetic content, but industry momentum favors the status quo. All measurements use a shared time grid covering the 24-month interval from early adoption to current widespread practice.",
+    "directionality_logic": "Training organizations and dataset aggregators are structural beneficiaries: they collect cost savings and faster iteration cycles from recycling, with mobile exit options allowing them to choose cleaner data if the costs of amplification exceed benefits. Downstream users and epistemic researchers are targets: they bear the debugging costs and epistemic collapse risks with constrained exit because the practice is industry-wide. Human contributors are excluded entirely from the coordination function. The divergence between beneficiary and payer seats drives the perspectival gap: from the training organization's position this is efficient resource use; from the researcher's position it is epistemic pollution.",
+    "perspectival_gap": "The agenda-setter and beneficiary seats (training organizations, dataset aggregators) should compute as rope or low-extraction tangled_rope: they experience genuine coordination benefits and can exit to cleaner data if needed. The payer seats (downstream users, epistemic researchers) should compute as higher-extraction tangled_rope or snare: they experience the constraint as imposed cost with limited alternatives. The engine computes this divergence from the structural data; the authored claim does not adjudicate it.",
+    "mandatrophy_analysis": "The constraint's mandate was solving data scarcity for foundation model training. That function remains partially live: high-quality human conversational data at billion-example scale is still expensive to collect. But the constraint now also produces a secondary effect not part of its original mandate: amplification of statistical quirks across model families, creating epistemic monoculture risk. The measurements show extraction and suppression rising over time as the practice becomes entrenched and clean alternatives become scarcer. This is not yet resolved mandatrophy—the founding problem is contested, not clearly dead—but the trajectory suggests drift toward a state where the coordination function is overshadowed by extractive side effects."
+  },
+  "omegas": [
+    {
+      "id": "amplification_threshold",
+      "question": "At what concentration of model-generated content in training data does statistical amplification become detectable in downstream model behavior?",
+      "resolution_mechanism": "Controlled experiments varying the ratio of human to synthetic data in training sets, measuring cross-model correlation of known statistical quirks like Elias frequency.",
+      "impact": "A low threshold would establish that even modest recycling produces measurable amplification, supporting stricter filtering. A high threshold would suggest current practices are within safe bounds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Concentration threshold for detectable statistical amplification"
+    },
+    {
+      "id": "epistemic_collapse_timeline",
+      "question": "How many training generations can recycle model outputs before distributional collapse makes models unusable for novel tasks?",
+      "resolution_mechanism": "Longitudinal study tracking model performance on out-of-distribution tasks across successive training generations using increasingly recycled data.",
+      "impact": "A short timeline would establish urgent need for intervention; a long timeline would suggest the practice is sustainable with current filtering.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Number of recycling generations before epistemic collapse"
+    },
+    {
+      "id": "coordination_extraction_separability",
+      "question": "Can the data scarcity coordination function be preserved while eliminating the amplification extraction, or are they structurally inseparable?",
+      "resolution_mechanism": "Development and adoption of synthetic data generation methods that preserve distributional diversity while providing training volume, or dataset filtering techniques that remove model-generated content without losing scale.",
+      "impact": "If separable, the constraint can be reformed to preserve coordination while eliminating extraction. If inseparable, the trade-off is fundamental and requires choosing between data volume and epistemic diversity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether coordination and extraction functions are structurally separable"
+    },
+    {
+      "id": "disclosure_sufficiency",
+      "question": "Would full disclosure of dataset provenance (percentage model-generated, source model families) in model cards be sufficient to shift the constraint's operation, or is the problem structural regardless of transparency?",
+      "resolution_mechanism": "Natural experiment from organizations that adopt comprehensive provenance disclosure: measure whether downstream users change deployment decisions and whether training organizations change data sourcing in response to user pressure.",
+      "impact": "If disclosure shifts behavior, the constraint is partly a transparency failure and can be addressed through documentation norms. If disclosure has no effect, the problem is structural and requires intervention in training practices themselves.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transparency alone can address amplification costs"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of alignment_constraint_narrowing: the upstream constraint's narrowing of acceptable model outputs creates the statistical quirks that this constraint then amplifies through recycling. The two constraints form a feedback loop where alignment filtering produces distinctive patterns and dataset recycling propagates those patterns across model families."
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-06-30",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-4-5-20250929",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
