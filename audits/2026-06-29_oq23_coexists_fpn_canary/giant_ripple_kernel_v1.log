@@ -1,0 +1,70 @@
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+[corpus] Loading 1106 testset files...
+[corpus] Loaded 1106 testsets successfully.
+[giant] Pre-computing edges for 1106 constraints (threshold=0.01)...
+[giant]   50/1106 nodes processed
+[giant]   100/1106 nodes processed
+[giant]   150/1106 nodes processed
+[giant]   200/1106 nodes processed
+[giant]   250/1106 nodes processed
+[giant]   300/1106 nodes processed
+[giant]   350/1106 nodes processed
+[giant]   400/1106 nodes processed
+[giant]   450/1106 nodes processed
+[giant]   500/1106 nodes processed
+[giant]   550/1106 nodes processed
+[giant]   600/1106 nodes processed
+[giant]   650/1106 nodes processed
+[giant]   700/1106 nodes processed
+[giant]   750/1106 nodes processed
+[giant]   800/1106 nodes processed
+[giant]   850/1106 nodes processed
+[giant]   900/1106 nodes processed
+[giant]   950/1106 nodes processed
+[giant]   1000/1106 nodes processed
+[giant]   1050/1106 nodes processed
+[giant]   1100/1106 nodes processed
+[giant] Found 0 constraints with gradient data for inferred coupling.
+[giant] Pre-computed 1438 non-inferred + 0 inferred edge records.
+[giant] Pre-computing edges for 1106 constraints (threshold=0.01)...
+[giant]   50/1106 nodes processed
+[giant]   100/1106 nodes processed
+[giant]   150/1106 nodes processed
+[giant]   200/1106 nodes processed
+[giant]   250/1106 nodes processed
+[giant]   300/1106 nodes processed
+[giant]   350/1106 nodes processed
+[giant]   400/1106 nodes processed
+[giant]   450/1106 nodes processed
+[giant]   500/1106 nodes processed
+[giant]   550/1106 nodes processed
+[giant]   600/1106 nodes processed
+[giant]   650/1106 nodes processed
+[giant]   700/1106 nodes processed
+[giant]   750/1106 nodes processed
+[giant]   800/1106 nodes processed
+[giant]   850/1106 nodes processed
+[giant]   900/1106 nodes processed
+[giant]   950/1106 nodes processed
+[giant]   1000/1106 nodes processed
+[giant]   1050/1106 nodes processed
+[giant]   1100/1106 nodes processed
+[giant] Found 0 constraints with gradient data for inferred coupling.
+[giant] Pre-computed 607 non-inferred + 0 inferred edge records.
+
+===== GIANT-COMPONENT RIPPLE (corpus, 1106 constraints) =====
+  same-kernel affects_constraint edges to strip : 1516
+  -- POSITIVE CONTROL (strip reached graph layer) --
+  raw affects_constraint: 3585 -> 2069  (dropped 1516; expected 1516)
+  [ok] strip applied to substrate
+  -- giant_comp topology old -> new --
+  gc edges (at threshold)   : 1438 -> 607  (delta 607-1438)
+  connected components      : 276 -> 789  (delta 789-276)
+  giant component size      : 334 -> 70  (delta 70-334)
+  => RIPPLE PRESENT: connectivity changed — correction-vs-loss call needed

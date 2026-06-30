@@ -279,3 +279,43 @@ exactly.
 - **composition, counterfactual:** log as inert-wrong (sibling read is wrong but
   unshipped); revisit only if a consumer is ever wired.
 - **OQ-58:** flag as its own coverage item; NOT a blocker here.
+
+---
+
+## GIANT-COMPONENT RIPPLE WITNESS (operator ruled option 2: read the ripple before picking the site)
+
+The FPN-fix site `constraint_neighbors_existing/2` is shared by giant_comp. Reversible
+strip + giant_comp connectivity diff, with a positive control that the strip reaches the
+topology layer (raw `affects_constraint` count must drop by the stripped count). Logs:
+`giant_ripple_testsets.log`, `giant_ripple_kernel_v1.log`.
+
+| leg | strip count | raw affects (pos. control) | components old→new | giant size old→new |
+|---|---|---|---|---|
+| testsets (107) | 64 | 228→164 (−64 ✓) | 66 → **87** | 12 → 9 |
+| kernel_v1 (1106) | 1516 | 3585→2069 (−1516 ✓) | 276 → **789** | 334 → **70** |
+
+**Positive control passed on both legs** (raw count dropped by exactly the strip count → the
+strip reached the topology layer; a zero-change would have been real, not a missed plumbing).
+
+**RIPPLE IS LARGE, especially on kernel_v1: the giant component collapses 334→70 and components
+triple 276→789.** Same-kernel sibling `affects_constraint` edges are heavily load-bearing for
+giant_comp connectivity. So the shared-site fix is NOT a quiet FPN-only change — it would
+transform giant_comp's headline finding ("the constraint network forms a giant component of N").
+
+### Correction or loss? (the giant_comp row's ruling)
+
+- **Correction reading:** same-kernel siblings aren't a cross-kernel coupling signal — the engine
+  ALREADY says so in two places (`drl_purity_network.pl:105` shared-agent intra-kernel guard;
+  `inferred_coupling_protocol` OQ-84 guard). By that precedent the TRUE cross-kernel giant is ~70,
+  and 334 was inflated by within-kernel sibling clustering. Extending the guard to explicit edges
+  removes an existing inconsistency (shared-agent guarded, explicit not).
+- **Loss reading:** giant_comp legitimately counts authored `affects_constraint` (incl. sibling)
+  as network structure, and 334 is the intended answer; the strip would erase real topology.
+
+The OQ-84 precedent leans **correction**, but (a) extending an OQ-84-shared-agent guard to the
+explicit-edge channel is a design choice the evidence does not settle (the engine currently does
+NOT guard explicit edges), and (b) the magnitude (334→70) makes this a consequential
+reinterpretation of a shipped headline metric — not a side effect to land silently under an FPN
+fix. So per the option-2 branching this is **significant ripple → operator rules correction-vs-loss**:
+- correction → option 1 (shared site) lands; giant_comp 334→70 logged as a second intended correction.
+- loss → option 4 (narrower contamination-only site, leaving giant_comp topology untouched) required.
