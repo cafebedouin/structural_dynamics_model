@@ -23,6 +23,15 @@
 %
 % Setup asserts synthetic affects_constraint facts; cleanup retracts them.
 %
+% NOTE (OQ-194): the run command below loads the whole corpus, which also
+% registers every testset's embedded validation units. ~20 of those
+% (mountain_threshold_validation / nl_profile_validation) FAIL by design —
+% they are diagnostic probes asserting that a story CLAIMING mountain has
+% true-mountain metrics, and claim != actual is the DR core. Those failures
+% are correct apparatus commentary, not regressions; see OQ-194 (close) and
+% OQ-48 (deferred threshold recalibration). Only the phantom_neighbor_filter
+% unit here is a real pass/fail gate.
+%
 % Run: cd prolog && swipl -g "[stack], [tests/test_phantom_neighbor_filter], run_tests, halt" -t "halt(1)"
 % ============================================================================
 
@@ -30,19 +39,32 @@
 
 :- begin_tests(phantom_neighbor_filter).
 
-% Two real corpus constraints (loaded testsets, have claims + metrics) and
-% one atom with zero facts of any kind.
-real_a(ai_governance_accountability).
-real_b(retirement_security_deficit).
+% Two real corpus constraints (loaded testsets, surviving the phantom filter)
+% and one atom with zero facts of any kind. OQ-194: the two "real" targets are
+% SELF-SELECTED from the live corpus at setup time, NOT hardcoded. The prior
+% hardcoded names (ai_governance_accountability, retirement_security_deficit)
+% rotted out of the corpus at the 2026-06-05 reset, turning the positive
+% control into a phantom and making the exclusion tests (b) pass VACUOUSLY —
+% the OQ-95 guard guarded nothing, and only real_target_edge_fires surfaced it.
+% The selector picks any constraint the filter would NOT drop (the negation of
+% the property under test, phantom_subject/1) and THROWS on under-supply, so a
+% future corpus either makes the controls non-vacuous or fails loud — silent
+% rot is unreachable.
+two_real_targets(A, B) :-
+    findall(C, ( corpus_loader:corpus_constraint(C),
+                 \+ drl_purity_network:phantom_subject(C) ), Reals),
+    (   Reals = [A, B | _] -> true
+    ;   throw(error(insufficient_real_targets(Reals), test_phantom_neighbor_filter))
+    ).
 phantom(oq95_test_phantom_target__does_not_exist).
 
 setup_edges :-
-    real_a(A), real_b(B), phantom(P),
+    two_real_targets(A, B), phantom(P),
     assertz(narrative_ontology:affects_constraint(A, P)),
     assertz(narrative_ontology:affects_constraint(A, B)).
 
 cleanup_edges :-
-    real_a(A), real_b(B), phantom(P),
+    two_real_targets(A, B), phantom(P),
     retractall(narrative_ontology:affects_constraint(A, P)),
     retractall(narrative_ontology:affects_constraint(A, B)),
     cache_registry:clear_all_caches.
@@ -52,7 +74,7 @@ cleanup_edges :-
 % the neighbor list — so test (b)'s absence is the filter, not a dead probe.
 test(real_target_edge_fires,
      [ setup(setup_edges), cleanup(cleanup_edges) ]) :-
-    real_a(A), real_b(B),
+    two_real_targets(A, B),
     constraint_indexing:default_context(Ctx),
     drl_purity_network:constraint_neighbors(A, Ctx, Ns),
     memberchk(neighbor(B, _, _), Ns).
@@ -60,7 +82,7 @@ test(real_target_edge_fires,
 % (b) Phantom exclusion, forward: the zero-fact target is not a neighbor.
 test(phantom_target_excluded,
      [ setup(setup_edges), cleanup(cleanup_edges) ]) :-
-    real_a(A), phantom(P),
+    two_real_targets(A, _), phantom(P),
     constraint_indexing:default_context(Ctx),
     drl_purity_network:constraint_neighbors(A, Ctx, Ns),
     \+ memberchk(neighbor(P, _, _), Ns).
