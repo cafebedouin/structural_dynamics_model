@@ -10110,34 +10110,21 @@ class, drained by `paths.py`).
 
 **Ω-type:** Ω_C (design choice — add a per-context provenance field vs leave the hub implicit).
 
-**Status:** open
+**Status:** resolved — document-only (operator ruling, 2026-06-29). Option (b): no field built.
 **Priority:** 3
 **Deps:** splits_from OQ-22
 
-**Specific question:** OQ-22 (resolved Verdict B, 2026-06-28) established that a starved subset of
-constraints are Hub-2 decisions (`effective_immutability`) reported as if they were two-hub (Hub-1
-χ-gates + Hub-2) decisions — the cross-observer type variation is entirely Hub-2-sourced, Hub-1
-contributing no dynamic range. Per Build Discipline (carry the provenance bit to the read site so
-*decided-by-Hub-2* and *genuine-two-hub* don't collapse to one token), should the engine emit a
-per-context "deciding hub" field (e.g. `deciding_hub ∈ {hub1_chi, hub2_immutability, both}`) on each
-presheaf classification, so a consumer can tell a Hub-2-decided type from a genuine two-hub decision?
-Or is documenting the distinction (now in OQ-22 + the corrected `drl_core.pl:205` two-hub comment)
-sufficient?
-
-**What resolution changes:** Option (a) — add the field: per (constraint, context) decide whether the
-type would change if χ were swept across the constraint's observed span at fixed immutability (Hub-1
-contributes) vs only when immutability changes (Hub-2-decided); serialize as a sibling of
-`perspective_chi` in `pipeline_output.json` and surface in `enhanced_report`. The audit's
-`oq22_grid.py` is a working prototype of the discriminator ((observer×immutability) grid:
-vanish-under-pin = Hub-2, persist-under-pin = Hub-1). Option (b) — leave documented-only (consistent
-with mark-drift-not-armor). The starved counts (testsets 5/109 … flash 100/960) are large on the
-twins, so a consumer reading per-observer type variation as two-hub signal is a live mis-read (argues
-for (a)); against, no current consumer keys on the hub.
-
-**Evidence / reuse:** `audits/2026-06-28_oq22_hub_starvation/` (`grid_*.tsv` = the per-constraint
-discriminator output; `FINDINGS.md`). The discriminator is O(observers × {mountain,rope}) per
-constraint — cheap enough to wire into `run_pipeline` if (a) is chosen. Declared-absence twin:
-**GAP-22** (`docs/design/design_gaps.md`) — check there before proposing any hub/provenance surface.
+**Resolution:** The OQ-22-witnessed distinction (Hub-2-decided vs genuine two-hub) is carried by
+documentation, not a new engine field: OQ-22's resolution note + the corrected two-hub comment at
+`drl_core.pl:205–211` ("a PURE Hub-2 type … does NOT check χ", cites `logic.md:644`). No current
+consumer keys on the hub, and document-only is consistent with mark-drift-not-armor. The
+discriminator stays available as a prototype (`python/audits/oq22_grid.py`) for any future audit.
+**Reopen condition:** if a downstream consumer ever reads per-observer type variation AS two-hub
+signal (a live mis-read at flash 100/960 ≈ 10%, kernel_v1 49/1106, testsets 5/109), revisit option
+(a) — emit per-observer `deciding_hub ∈ {hub1_chi, hub2_immutability, both, neither}` as a
+`perspective_chi` sibling, anchored to the audit's grid-confirmed per-leg counts.
+**Evidence:** `audits/2026-06-28_oq22_hub_starvation/` (`grid_*.tsv`, `FINDINGS.md`). Declared-absence
+twin: **GAP-22** (`docs/design/design_gaps.md`).
 
 ---
 

@@ -1051,8 +1051,13 @@ hub2_immutability, both}` sibling of `perspective_chi`, and surface it in `enhan
 vanish-under-pin = Hub-2, persist-under-pin = Hub-1), O(observers × {mountain,rope}) per constraint —
 cheap enough to wire into `run_pipeline` per Pattern 1 if a consumer wants it.
 
-**Status:** Deferred. Tracked as OQ-192 (Ω_C, documented-only vs add-the-field is an open design
-choice, not foreclosed); recorded here so a future provenance/tracking-surface proposal finds it.
+**Status:** Declared-acceptable absence (operator ruling, 2026-06-29; OQ-192 resolved document-only).
+The add-the-field option (a) was considered and DECLINED in favour of documentation (OQ-22 note +
+the corrected `drl_core.pl:205–211` two-hub comment); no current consumer keys on the hub, so the
+absence is deliberate, not pending work. Recorded here so a future provenance/tracking-surface
+proposal finds it. **Reopen condition (= OQ-192's):** a downstream consumer that reads per-observer
+type variation AS two-hub / χ-discrimination signal revives option (a) — the prototype
+(`oq22_grid.py`) and per-leg anchor counts above are ready to wire.
 
 ---
 

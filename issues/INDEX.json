@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "2ad08ed1dce3f11732cb20a5af1360ce2e54bb8a",
+    "store_version": "8317d286e01f300debbcff1f8cd8083d5ec48d85",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-29T23:28:45"
+    "generated_at": "2026-06-29T23:33:01"
   },
-  "issues_sha": "ba6875ee9b290688f93d97d73422414143411a5c1555aca3a4798915ca897318",
+  "issues_sha": "0e515025cf1113e2d42f28528996e41b2909ea1e92b2ad3803a52c79b90fe4ac",
   "n_entries": 194,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 99,
+    "resolved": 100,
     "mitigated": 12,
     "partial": 8,
     "disposed": 4,
-    "open": 67,
+    "open": 66,
     "future": 4
   },
   "active": [
@@ -978,19 +978,6 @@
         "OQ-75",
         "OQ-109",
         "OQ-118"
-      ]
-    },
-    {
-      "id": "OQ-192",
-      "status": "open",
-      "priority": 3,
-      "summary": "Deciding-hub provenance field (carry the Hub-1/Hub-2 bit to the read site)",
-      "deps": [
-        "splits_from OQ-22"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-22"
       ]
     },
     {
@@ -2628,6 +2615,19 @@
       "mentioned_in": [
         "OQ-32",
         "OQ-163"
+      ]
+    },
+    {
+      "id": "OQ-192",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "Deciding-hub provenance field (carry the Hub-1/Hub-2 bit to the read site)",
+      "deps": [
+        "splits_from OQ-22"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-22"
       ]
     }
   ]
