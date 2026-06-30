@@ -193,6 +193,10 @@ narrative_ontology:story_seed(scale_ceiling_c0, 'scale_ceiling', 1).
 
 :- begin_tests(scale_ceiling_c0_tests).
 
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
 test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(scale_ceiling_c0, ExtMetricName, E),

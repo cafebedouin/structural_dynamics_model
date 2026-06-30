@@ -372,6 +372,10 @@ def _generate_tests(data):
                 f"    TypeTarget == mountain."
             )
         tests.append(
+            f"% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored\n"
+            f"% mountain claim diverges from the story's computed metrics (claim != actual\n"
+            f"% is the DR core) -- contested/extractive territory, not a regression. Bars\n"
+            f"% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.\n"
             f"test(mountain_threshold_validation) :-\n"
             f"    config:param(extractiveness_metric_name, ExtMetricName),\n"
             f"    narrative_ontology:constraint_metric({cid}, ExtMetricName, E),\n"

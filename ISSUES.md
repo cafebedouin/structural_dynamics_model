@@ -966,17 +966,33 @@ false-halt guard routed persistence to Hub-1, never halt).
 
 **Ω-type:** Ω_E (empirical — what is the actual intended-green state of these validation units; witnessable by inspecting validation intent + history).
 
-**Status:** open
+**Status:** resolved — meant-to-pass-vs-WIP answered (operator ruling, 2026-06-30): the 20
+embedded failures are **neither** — they are **correct apparatus commentary**, conditional on the
+embedded tests staying **non-gating** (not in `gate.sh`). The 21st failure was an unrelated
+fixture-rot defect (fixed, separate commit).
 **Priority:** 3
 **Origin:** surfaced incidentally during the OQ-23 fix (2026-06-29), while regression-checking `tests/test_phantom_neighbor_filter`.
-**Files:** `prolog/tests/test_phantom_neighbor_filter.pl`; the tracked testset files carrying the failing embedded `begin_tests` units (e.g. `animal_status_kernel__property_reading.pl`, `architectural_pattern_validity.pl`, `demographic_resource_allocation*.pl`, …)
+**Files:** `prolog/tests/test_phantom_neighbor_filter.pl`; the 16 tracked claim=mountain testsets carrying the embedded `mountain_threshold_validation` / `nl_profile_validation` units (e.g. `animal_status_kernel__property_reading.pl`).
 
-**Specific question:** Running `cd prolog && swipl -g "[stack], [tests/test_phantom_neighbor_filter], run_tests, halt"` loads the corpus and runs every embedded test unit; **21 fail / 93 pass**. The failing assertions are `mountain_threshold_validation` / `nl_profile_validation` across many tracked testset-embedded units (plus the `phantom_neighbor_filter` unit itself). Are these validations **meant to be green on the current corpus** (so the 21 are genuine regressions/defects to diagnose) or are they **aspirational / WIP units that have never passed** on this corpus (so "21 failing" is a not-yet-implemented status, not a defect)? — the first read must distinguish those two objects before treating it as a defect.
+**Resolution.** Live run (verbatim, 2026-06-29): `cd prolog && swipl -g "[stack], [tests/test_phantom_neighbor_filter], run_tests, halt"` → **21 fail / 93 pass**. The 21 are two unrelated things:
 
-**Evidence (the falsified positive control that makes this OQ-worthy, not ambient):** the failures are **NOT** caused by the concurrent-instance corpus churn — moving the 5 untracked `*_contradictions.pl` files aside left the count **unchanged at 21/93**. They are also NOT caused by the OQ-23 fix — they fail on a clean HEAD without the contamination guard. So the 21 are a **standalone, pre-existing condition in the tracked corpus**, independent of both the concurrent write and this session's change. Not in any gate (`gate.sh` does not run embedded testset validations); does not affect the OQ-23 census (those validate classification thresholds, orthogonal to contamination).
+- **20 embedded failures** = 13 `mountain_threshold_validation` + 7 `nl_profile_validation` (the 7 files are a strict subset of the 13). These are the apparatus **correctly commenting** that stories which *claim* mountain (`constraint_claim(C, mountain)` — the SURFACE claim; `data_verification.pl:178` labels it "Claimed type") do **not** have true-mountain metrics. DR's core is claim ≠ actual, so a mountain-claim with extractive/contested metrics is the disguised-constraint phenomenon working as designed. **Not regressions, not WIP**; the tight bars are intentional (failure marks contention). **Conditional on staying non-gating:** a failing *assertion* conventionally reads as defect, so the red-as-signal interpretation holds only because these are not wired into `gate.sh` — it breaks the moment anything gates on them.
+- **1 `phantom_neighbor_filter:real_target_edge_fires` failure** — an unrelated **fixture-rot defect** (the OQ-95 harness's own positive control); fixed in a separate commit (self-selecting fixture + loud throw).
 
-**What resolution changes:** either (a) the validations are meant-green → each failing unit is a classification/threshold regression to diagnose and fix (or the testset to re-author); or (b) they are WIP/aspirational → document that status (and consider gating them out of `run_tests` discovery so "21 failing" stops reading as a defect). Resolution starts with the meant-to-pass-vs-WIP read, then per-unit triage.
+**Structural evidence (self-contained; holds even if no OQ existed).** The generator (`python/generate_constraint_pl.py`, `_generate_tests`, the `if bp["claimed_type"]=="mountain"` block) emits both embedded tests **only** on claim=mountain, with **hardcoded** bars (E≤0.25, S≤0.05, AC≥0.85, R≤0.15) — not derived from the story. 12 of the 32 embedded assertions PASS (3 mountain + 9 nl; protein/radiative/actinide are clean mountains) — green-by-design probes, not all-fail WIP. **OQ-116 corroborates** with a prior ruling on the same shape: its `MOUNTAIN_METRIC_CONFLICT` linter's claim-vs-metric divergence "is authored signal the engine measures by computing a different SEATED reading — and per OQ-74 / the seat theorem these readings need not collapse to one true type (the mountain claim and the metric reading both stand; the divergence is the signal)." The embedded `mountain_threshold_validation` test is the test-form analog. (Quoting OQ-116's body, re-read this session; OQ-74 / the seat theorem are cited only as OQ-116 invokes them, not independently.)
 
+**3-bucket triage (evidence):**
+- **A — claim=mountain but extractive:** animal_status (E=0.88), jewish (0.78), institutional_trust (0.68), secession (0.62), organization_floor (0.42); 4 of 5 also carry the contradictory `extraction_signature` test (E≥0.46). → engine correctly says "not a mountain."
+- **B — low-E but contested/near-miss:** neutron_star, demographic_resource, architectural, longevity, validation_judgment, scale_ceiling, propagation_speed, demographic_skill (E≤0.25 but S≈0.08–0.22, or AC just under 0.85). → tight thresholds intentionally fail contested stories.
+- **C — phantom:** the rotted fixture, split out (the code fix).
+
+**Per-item commitment witness (live run, 2026-06-29 / re-confirmed 2026-06-30).** All 20 embedded failures are plunit `: failed` assertions, **zero `: error`** exceptions (no crash hiding in the bucket); and all 13 failing units' files declare `constraint_claim(_, mountain)` (verified by grep against the live run's failing-unit list).
+
+**Landing (so the failures don't re-read as defects).** Explanatory one-line comment emitted from the generator (every future mountain testset carries it) **and** backfilled into all **16** current claim=mountain testsets (`grep -lE 'constraint_claim\([a-z0-9_]+, mountain\)' testsets/*.pl` → 16, all carry the embedded test; empty `comm -3` diff); a signpost note in the `test_phantom_neighbor_filter.pl` header; a dated KNOWN_STATE.md entry.
+
+**Deferred calibration → OQ-48 (no new OQ minted).** The hardcoded embedded-test bars (E≤0.25, S≤0.05, AC≥0.85, R≤0.15) are added to **OQ-48** (the standing post-rebuild recalibration ledger) as additional deferred targets — the Bucket-B near-misses are genuine low-E mountains failing only the tight `S≤0.05`/`AC≥0.85` bars. Revisit lands on the queryable frontier at regen time, not in a human's memory.
+
+**Evidence:** live `run_tests` output (2026-06-29; re-run 2026-06-30); `python/generate_constraint_pl.py` `_generate_tests`; KNOWN_STATE 2026-06-30; OQ-116 (corroborating authority); OQ-48 (calibration deferral); phantom fix in `prolog/tests/test_phantom_neighbor_filter.pl` (code commit).
 ---
 
 ## OQ-24 — forecloses requires no FPN representation, but the absence is undocumented in the engine
@@ -2223,6 +2239,21 @@ that breaks the haiku/flash tie, or the live `testsets/` rebuild reaching the ~7
 with a single-corpus break; or (vindicate-and-keep) accumulating trusted post-reset corroboration
 that the 691-era cuts still cleave, mitigating cut-by-cut (`snare_epsilon_floor` is the first such
 candidate). kernel_v1 is confounded and cannot promote a value.
+
+### Additional deferred recalibration targets: embedded mountain-test bars (from OQ-194, 2026-06-30)
+
+The generator (`python/generate_constraint_pl.py`, `_generate_tests`) emits, for every
+claim=mountain story, two embedded validation tests with **hardcoded** bars:
+`mountain_threshold_validation` (E≤0.25, S≤0.05) and `nl_profile_validation` (AC≥0.85, R≤0.15).
+These bars are not derived from the corpus and were never recalibrated against the post-rebuild
+corpus, so they belong on this ledger. OQ-194 ruled the resulting failures **correct apparatus
+commentary** (claim ≠ actual), but flagged a calibration question for regen: the Bucket-B
+near-misses (`neutron_star_bombardment`, `demographic_resource_allocation`, `architectural_pattern_validity`,
+`longevity_mismatch`, `validation_judgment_separation`, `scale_ceiling_c0`, `propagation_speed_asymmetry`,
+`demographic_skill_mismatch_c0`) are genuine low-E mountains failing **only** the tight `S≤0.05` /
+`AC≥0.85` cuts — exactly the "is this bar stale?" question this OQ exists to answer at rebuild time.
+Recalibrate these alongside the `config.pl` cuts; do not move them now to rescue specific stories
+(curve-fitting to the holdout, the same error this OQ warns against for `tangled_rope_*`).
 
 ---
 

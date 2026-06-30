@@ -45,6 +45,39 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-30 — OQ-194 RESOLVED: embedded mountain/nl "failures" are correct commentary; one rotted phantom fixture fixed
+**Files:** ISSUES.md, prolog/tests/test_phantom_neighbor_filter.pl, python/generate_constraint_pl.py, prolog/testsets/*.pl (16 claim=mountain files), KNOWN_STATE.md
+**Tier:** correction-key
+
+Running `cd prolog && swipl -g "[stack], [tests/test_phantom_neighbor_filter], run_tests, halt"`
+loads the whole corpus and registers every testset's embedded validation units → **21 fail / 93
+pass** (live, 2026-06-29). The 21 are two unrelated things:
+
+- **20 embedded** = 13 `mountain_threshold_validation` + 7 `nl_profile_validation` (the 7 a strict
+  subset of the 13). These are the apparatus **correctly commenting** that stories which *claim*
+  mountain (`constraint_claim(C, mountain)`, the SURFACE claim) lack true-mountain metrics —
+  claim ≠ actual is the DR core. **Not regressions, not WIP.** Tight bars intentional (failure
+  marks contention). **The red-as-signal reading is conditional on these tests staying NON-GATING**
+  (not in `gate.sh`): a failing *assertion* conventionally means defect; the analogy to a neutral
+  linter (OQ-116's `MOUNTAIN_METRIC_CONFLICT`) breaks the moment anything gates on them. Structural
+  evidence (holds even if no OQ existed): generator emits both tests ONLY on claim=mountain with
+  hardcoded bars (E≤0.25, S≤0.05, AC≥0.85, R≤0.15); 12 of 32 embedded assertions PASS on clean
+  mountains (protein/radiative/actinide). All 20 are plunit `: failed`, **zero `: error`**; all 13
+  failing files declare `constraint_claim(_, mountain)`.
+- **1 `phantom_neighbor_filter:real_target_edge_fires`** = a genuine **fixture-rot defect**. The two
+  hardcoded positive-control names (`ai_governance_accountability`, `retirement_security_deficit`)
+  rotted out of the corpus at the 2026-06-05 reset (sole archive holder: `kernel_v2_test2`), turning
+  the control into a phantom and making the exclusion tests pass **VACUOUSLY** — the OQ-95 guard
+  guarded nothing. **Fix:** `two_real_targets/2` self-selects two constraints the filter would NOT
+  drop (`\+ drl_purity_network:phantom_subject/1`) and **throws** `insufficient_real_targets` on
+  under-supply. Witnessed: 4/4 phantom-filter green on live corpus; loud-failure control on a
+  1-constraint overlay throws (setup error, not vacuous pass). Silent rot is now unreachable.
+
+**Landing:** explanatory comment emitted from the generator + backfilled into all 16 current
+claim=mountain testsets (`grep -lE 'constraint_claim\([a-z0-9_]+, mountain\)' testsets/*.pl` → 16);
+header signpost in `test_phantom_neighbor_filter.pl`. **Deferred calibration → OQ-48** (the hardcoded
+bars added as recalibration targets; no new OQ). OQ-194 closed. Two commits (docs ruling / code fix).
+
 ## 2026-06-29 — OQ-23/OQ-24 RESOLVED (narrow same-kernel contamination guard); OQ-193 deferred
 **Files:** prolog/drl_purity_network.pl, prolog/tests/test_coexists_fpn_canary.pl, prolog/giant_component_analysis.pl, ISSUES.md, audits/2026-06-29_oq23_coexists_fpn_canary/
 **Tier:** landed

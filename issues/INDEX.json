@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "8317d286e01f300debbcff1f8cd8083d5ec48d85",
+    "store_version": "83068c97859396f80f4e8e30e18607a2cf18079a",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-29T23:33:01"
+    "generated_at": "2026-06-30T00:23:09"
   },
-  "issues_sha": "0e515025cf1113e2d42f28528996e41b2909ea1e92b2ad3803a52c79b90fe4ac",
+  "issues_sha": "37c6efe36000782f5e56177760d4e4f4f5e7356017f9194e13c8cce521c71fbc",
   "n_entries": 194,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 100,
+    "resolved": 101,
     "mitigated": 12,
     "partial": 8,
     "disposed": 4,
-    "open": 66,
+    "open": 65,
     "future": 4
   },
   "active": [
@@ -125,7 +125,8 @@
       "mentioned_in": [
         "OQ-26",
         "OQ-30",
-        "OQ-37"
+        "OQ-37",
+        "OQ-194"
       ]
     },
     {
@@ -993,17 +994,6 @@
       "mentioned_in": [
         "OQ-23",
         "OQ-84"
-      ]
-    },
-    {
-      "id": "OQ-194",
-      "status": "open",
-      "priority": 3,
-      "summary": "21 embedded validation tests fail on the tracked corpus (meant-to-pass or WIP?)",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-23"
       ]
     }
   ],
@@ -2628,6 +2618,21 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-22"
+      ]
+    },
+    {
+      "id": "OQ-194",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "21 embedded validation tests fail on the tracked corpus (meant-to-pass or WIP?)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-23",
+        "OQ-48",
+        "OQ-74",
+        "OQ-95",
+        "OQ-116"
       ]
     }
   ]
