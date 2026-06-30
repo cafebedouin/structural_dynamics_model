@@ -239,6 +239,50 @@ take_run(A, [A|Xs], [A|Run], Tail) :- !, take_run(A, Xs, Run, Tail).
 take_run(_, Xs, [], Xs).
 
 % ---------------------------------------------------------------------------
+% Author×Engine agreement cross-tab (Slice A — SEAT-AGREEMENT, NOT calibration).
+% For every seat where BOTH sides speak exactly one reading, tabulate the
+% (authored_type, engine_type) pair. The diagonal is agreement (the no_route
+% address); the off-diagonal is author_engine_divergence resolved by type-pair
+% — i.e. WHERE the engine-seat and the author-seat systematically diverge.
+%
+% This certifies NOTHING about which side is correct. The seat theorem holds
+% convergence to be "stable, not correct," and the testset carries no external
+% ground truth — so the divergence_rate below is the rate at which two SEATS
+% disagree, never a detector false-positive rate. It is a descriptive surface
+% that INFORMS, but does not answer, the detector-calibration question (held
+% OPEN as a typed Ω_E/Ω_P pair — see ISSUES.md detector-calibration OQ).
+% ---------------------------------------------------------------------------
+author_engine_crosstab(Pairs) :-
+    findall(A-Engine,
+            ( seat_diff(_, _, Author, Engine, _, _, _),
+              Author = [A],                 % author speaks exactly one reading
+              nonvar(Engine),               % defensive: never key on an unbound engine
+              Engine \== engine_silent       % engine speaks too (excludes the honest abstain)
+            ),
+            Raw),
+    msort(Raw, Sorted),
+    address_counts(Sorted, Pairs).           % reuse run-length counter (ground A-Engine keys)
+
+crosstab_to_dict((A-E)-N, _{author: A, engine: E, count: N, agreement: Agree}) :-
+    ( A == E -> Agree = true ; Agree = false ).
+
+%% crosstab_summary(+XtabPairs, -Summary)
+%  Diagonal (agreement) vs off-diagonal (divergence) totals over the both-speak
+%  denominator. divergence_rate is a SEAT-disagreement rate, never a hit rate.
+crosstab_summary(XtabPairs, Summary) :-
+    findall(N, member(_-N, XtabPairs), Ns), sum_list(Ns, Total),
+    findall(N, member((A-A)-N, XtabPairs), DiagNs), sum_list(DiagNs, Agree),
+    Disagree is Total - Agree,
+    ( Total > 0 -> Rate is Disagree / Total ; Rate = null ),
+    Summary = _{
+        both_speak_seats: Total,
+        agreement_seats: Agree,
+        divergence_seats: Disagree,
+        divergence_rate: Rate,
+        note: "SEAT-AGREEMENT rate (engine-seat vs author-seat); NOT detector calibration vs ground truth"
+    }.
+
+% ---------------------------------------------------------------------------
 % Emit. Manifest carries coverage so a read site can never mistake didn't-look
 % for measured-empty (Pattern 6).
 % ---------------------------------------------------------------------------
@@ -250,6 +294,9 @@ routing_sink_emit_to(Path) :-
     length(Records, NRecords),
     routing_sink_address_counts(AddrPairs),
     maplist(pair_to_dict, AddrPairs, AddrDicts),
+    author_engine_crosstab(XtabPairs),
+    maplist(crosstab_to_dict, XtabPairs, XtabDicts),
+    crosstab_summary(XtabPairs, XtabSummary),
     ( NRecords =:= NConstraints * NSeats -> Invariant = true ; Invariant = false ),
     Out = _{
         manifest: _{
@@ -257,7 +304,9 @@ routing_sink_emit_to(Path) :-
             n_seats: NSeats,
             n_records: NRecords,
             per_seat_invariant_holds: Invariant,
-            address_counts: AddrDicts
+            address_counts: AddrDicts,
+            author_engine_crosstab: XtabDicts,
+            author_engine_crosstab_summary: XtabSummary
         },
         records: Records
     },
