@@ -344,6 +344,18 @@ def build_header(pipeline_data):
             type_parts.append(f"{count} {t}")
 
     lines = [
+        "HOW TO READ THIS REPORT",
+        "  Purpose: surface the SEATS a constraint is read from — not to issue a verdict.",
+        "  The engine classifies the SAME constraint from multiple observer positions",
+        "  (powerless / moderate / institutional / analytical) and contrasts those readings",
+        "  with what the story AUTHORS in commentary. Divergence — between seats, or between",
+        "  a seat and the authored claim — IS the finding; a per-seat type is that seat's",
+        "  structural reading, not a ranking.",
+        "  A RED verdict (e.g. dataset_recycling) flags the AUTHORED victim/beneficiary",
+        "  DIRECTION (OQ-187), not a seat-free moral judgment. χ = ε × f(d) × σ(S) is computed",
+        "  per seat; d is a function of the observer POSITION (a config lookup), not authored",
+        "  per story — identical d across constraints for the same position is by design.",
+        "",
         f"CORPUS CONTEXT: {corpus_size} constraints",
         f"  Types: {', '.join(type_parts)}",
         f"  Network stability: {network} | {omega_count} omegas ({critical} critical)",
