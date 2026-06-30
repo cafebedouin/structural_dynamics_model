@@ -134,6 +134,18 @@ ordered_contexts(Contexts) :-
 %% orbit_vector(+Constraint, -TypeVector)
 %  Returns the 4-element list of types in canonical context order.
 %  TypeVector = [T_powerless, T_moderate, T_institutional, T_analytical]
+%
+%  OQ-27 (signature-resolved orbit disclosure): the per-context type here is the
+%  SIGNATURE-RESOLVED `dr_type`, NOT the raw metric type. Outer chain:
+%    cohomological_obstruction -> orbit_vector -> type_at_context -> drl_core:dr_type.
+%  Inside dr_type: metric_based_type_indexed (raw classify_from_metrics) THEN
+%    signature_detection:integrate_signature_with_modal.
+%  The raw classify_from_metrics type is only the intermediate fed to the signature
+%  layer; H¹ counts disagreements over the POST-signature orbit. So H¹ = 0 means the
+%  resolved orbit is a global section — the raw per-context metric types may still be
+%  maximally heterogeneous (the signature is the cover story, Theorem 1). Reproduce H¹
+%  over signature-resolved dr_type, never raw classify_from_metrics. (Paper: v7 §Thm 7;
+%  v6.13.1 amendment.)
 orbit_vector(C, TypeVector) :-
     ordered_contexts(Contexts),
     maplist(type_at_context(C), Contexts, TypeVector).
@@ -141,6 +153,7 @@ orbit_vector(C, TypeVector) :-
 %% type_at_context(+C, +Context, -Type)
 %  Evaluates the presheaf at a single context. Falls back to unknown
 %  if classification fails (should not happen for well-formed constraints).
+%  Type is the signature-resolved dr_type (see orbit_vector/2 above, OQ-27).
 type_at_context(C, Ctx, Type) :-
     (   drl_core:dr_type(C, Ctx, T)
     ->  Type = T
@@ -156,6 +169,10 @@ type_at_context(C, Ctx, Type) :-
 %  H0 = 1 if the constraint has a global section (all contexts agree on type).
 %  H0 = 0 otherwise.
 %  H1 = number of disagreeing context-pairs (0..6). Range reflects C(4,2) = 6.
+%  STALE-RANGE FLAG (OQ-27): "0..6" assumes |real seats| = 4. Under the OQ-51 N/A
+%  rule (below), fewer real seats give a SMALLER reachable spectrum (n=3 -> {0,2,3};
+%  n=2 -> {0,1}); the general-n gap spectrum is unproven. See OQ-195
+%  (general-n H1 gap spectrum under the OQ-51 variable-real-seat regime).
 %  H0 and H1 are complementary: H0=1 implies H1=0; H1>0 implies H0=0.
 %  OQ-51 N/A rule (2026-06-25): `unknown` is N/A — an untypeable seat that can
 %  neither agree nor disagree. Fewer than two REAL seats can form no pair, so the

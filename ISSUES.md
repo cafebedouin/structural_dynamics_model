@@ -1059,16 +1059,21 @@ yields genuinely different readings with different ε under different SCOPE deco
 
 **Ω-type:** Ω_C (design choice — definitional: which orbit H¹ measures).
 
-**Status:** open
-**Priority:** 1
-**Origin:** Theorem 7 anchor verification, May 2026 (the precision note that changed v7's H¹=0 phrasing).  
-**Files:** `prolog/cohomological_obstruction.pl` (or wherever orbit_vector is constructed); `prolog/drl_core.pl` (dr_type, integrate_signature_with_modal); `docs/deferential_realism_paper_v6.13.md` (theorem 2 statement)
-
-**Specific question:** H¹ in this framework is computed over the signature-resolved dr_type orbit — the path cohomological_obstruction → orbit_vector → type_at_context → dr_type applies the structural signature before H¹ counts disagreement. Raw classify_from_metrics types may be — and for the prohibition anchor are — maximally heterogeneous ([naturalized, snare, rope, snare]) while signature-resolved types are uniform ([tangled_rope × 4]), yielding H¹=0. The v6.13 paper describes H¹ as "a partition functional over the classifications assigned by the observer positions" without specifying which classification — raw or signature-resolved. The v7 draft was loose at exactly the same point and had to be corrected. Does the v6.13 statement need a precision amendment to make the signature-resolution explicit?
-
-**Evidence so far:** The verification run for the prohibition anchor produced the precision note: H¹ measures coherence of the signature-resolved orbit, not raw-type uniformity. v7 was revised to state both orbits explicitly (raw and signature-resolved), report them together as the corpus confirmation, and tie the result to Theorem 1 (the signature is the cover story). v6.13's Theorem 2 statement and the surrounding orientation prose use "classification orbit" without disambiguation; a careful reader running classify_at_time directly would get raw types and not know they don't match what H¹ counts. This is the same kind of silent precondition the FPN convergence proof carried before the run (an assumption stated in prose, never made code-visible).
-
-**What resolution changes:** Either (a) v6.13 Theorem 2 is amended to specify "signature-resolved classification orbit" wherever "classification orbit" currently appears, and the engine carries a comment at cohomological_obstruction confirming the path goes through dr_type (signature-resolved), not classify_from_metrics (raw); or (b) the paper stands with the looser phrasing and v7 carries the precision as a v7-specific clarification. Option (a) eliminates the ambiguity at the source; option (b) leaves the source loose and patches it downstream. The latter is the pattern that produced the hanbali misattribution (v7 inherited v6.13's loose phrasing, then I wrote a theorem on top of it).
+**Status:** resolved — 2026-06-30: **DISCLOSURE, not redefinition.** The engine already
+computes H¹ over the signature-resolved `dr_type` orbit; the only gap was that no doc/comment
+said so. **Append-versioning ruling:** `v6.13.md` + v6.8–v6.12 left frozen; precision landed in
+`docs/deferential_realism_paper_v6.13.1.md` (dated OQ-27 amendment + two inline "signature-resolved"
+qualifications at the intro and §5.1) and an engine comment at `prolog/grothendieck_cohomology.pl`
+(`orbit_vector/2` + `type_at_context/3`). v7 §Thm 7 already carried the precision (no-op). Path
+disclosed: `cohomological_obstruction → orbit_vector → type_at_context → dr_type`; inside `dr_type`,
+`metric_based_type_indexed` (raw `classify_from_metrics`) **then** `integrate_signature_with_modal`.
+**Witnesses (manifest `2026-06-30T00:08:22Z`, n=116), distinct denominators:** 65 of 86 four-real-seat
+constraints at H¹>0 (discrimination witness); *separately* 116/116 reproduction of stored `h1_band`
+from the serialized `perspectives` orbit (orbit-reproduction control). The unproven **general-n** gap
+spectrum (W4 surfaced it) split out as **OQ-195** so it does not gate this close.
+**Origin:** Theorem 7 anchor verification, May 2026 (the precision note that changed v7's H¹=0 phrasing).
+**Files:** `prolog/grothendieck_cohomology.pl` (orbit_vector/type_at_context comment + :158 stale-range
+flag → OQ-195); `docs/deferential_realism_paper_v6.13.1.md` (OQ-27 amendment); `docs/deferential_realism_paper_v7.md` (already correct). Successor: **OQ-195**.
 
 ---
 
@@ -8168,7 +8173,7 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **The work.** The audit concluded the engine **votes one seat** (R3 probe: `cs_pattern` tracks authored presentation, blind to binding structure; the `cs_verdict` false-X layer audits presentation against the metric reality, one-directionally). The v8 design spec states the resulting ontology (seat / gauge / orientation), draws the seat/face line by **audit direction**, and gives the standing invariant as a **transitive cross-axis taint property** (no committer field reaches observer computation by any path except entailment-typed payload on the single forward `influences` bridge). Spec §8 scopes the implementation; **priority-1 there is the one new artifact**: promote that invariant to a checkable **dataflow taint guard** with two positive controls (payload-injection on `influences`; (B)-seam-promotion off `influences`). The rest is low-stakes vocabulary migration. **NOT an engine rebuild — behavior-preserving** (the seat, gauge, and orientation machinery already exist; only the guard is new). See GAP-12 for the declared absence this closes (the invariant is prose-only today).
 
-**What resolution changes.** The one-seat invariant goes from a v7 *prose* invariant (v7 §4.5; recorded as a decision in `docs/design/two_axis_architecture_v7.md`, OQ-14 resolved) to *machine-enforced*; and the v7→v8 "seat"="gauge" vocabulary becomes canonical (the spec §4 bridge table). Vocabulary migration must reconcile with **OQ-27** (H¹ signature-resolved-vs-raw phrasing) and **OQ-28** (seat-theorem-v1 honesty edits not all witnessed). Cross-ref: `audits/2026-06-16_seat_invariant_vs_prolog/REPORT.md`, KNOWN_STATE 2026-06-16 (seat/orientation audit + v8 spec).
+**What resolution changes.** The one-seat invariant goes from a v7 *prose* invariant (v7 §4.5; recorded as a decision in `docs/design/two_axis_architecture_v7.md`, OQ-14 resolved) to *machine-enforced*; and the v7→v8 "seat"="gauge" vocabulary becomes canonical (the spec §4 bridge table). Vocabulary migration must reconcile with **OQ-27** (resolved 2026-06-30: H¹ is over the signature-resolved orbit; the general-n |real-seat| caveat propagation to v8 is the open **OQ-195**) and **OQ-28** (seat-theorem-v1 honesty edits not all witnessed). Cross-ref: `audits/2026-06-16_seat_invariant_vs_prolog/REPORT.md`, KNOWN_STATE 2026-06-16 (seat/orientation audit + v8 spec).
 
 **Spec §8 item 1 (the priority-1 artifact) BUILT — invariant is now machine-enforced (2026-06-23, commit `fd1ee561`).** The transitive taint guard landed via OQ-15's Phase 1 (`prolog/check_axis_boundary.pl` + `python/check_axis_boundary.py`, gate-wired; two required positive controls fire). **This closes GAP-12** (the invariant was prose-only) and confirms the spec's "exactly one forward bridge" *empirically in place* (the reachability census found only the sanctioned `influences` bridge + the bucket-3 `cs_kernel_id` exclusion as observer-verdict reads). **Still blocked_on_human:** the v8 *adoption* call and the §8 item-4 / Q4 *vocabulary* migration remain the operator's seat — the guard is architecture-neutral and does NOT itself adopt v8 over v7 (that is OQ-15 Phase 2). See `audits/2026-06-23_oq15_crossaxis_witnesses/`.
 
@@ -10156,6 +10161,24 @@ signal (a live mis-read at flash 100/960 ≈ 10%, kernel_v1 49/1106, testsets 5/
 `perspective_chi` sibling, anchored to the audit's grid-confirmed per-leg counts.
 **Evidence:** `audits/2026-06-28_oq22_hub_starvation/` (`grid_*.tsv`, `FINDINGS.md`). Declared-absence
 twin: **GAP-22** (`docs/design/design_gaps.md`).
+
+---
+
+## OQ-195 — General-n H¹ gap spectrum under the OQ-51 variable-real-seat regime (the unwritten induction)
+
+**Ω-type:** Ω_C (definitional completion — the general-n form of Theorem 2's gap, a proof obligation rather than a contested seat).
+
+**Status:** open
+**Priority:** 3
+**Origin:** OQ-27 resolution, 2026-06-30 (split out at W5 of the OQ-27 plan so OQ-27 could close clean on the signature-resolved *disclosure* without gating on an unproven general law).
+**Deps:** splits_from OQ-27 (the general-n gap proof seam; OQ-27 closed clean on the signature-resolved disclosure). Caveat-propagation touches OQ-135 (v8 adoption) and rests on OQ-51 (the N/A rule that makes real-seat count variable).
+**Files:** `docs/deferential_realism_paper_v6.13.1.md` (Theorem 2 + the OQ-27 amendment, §4–5); `prolog/grothendieck_cohomology.pl:158` (the stale-range flag referencing this OQ); `docs/deferential_realism_paper_v7.md` / future v8 (caveat propagation target).
+
+**Specific question:** Theorem 2's H¹ gap {0,3,4,5,6} and forbidden {1,2} are proven for **|real seats| = 4** (the proof invokes C(4,2) − Σ C(nᵢ,2); an n=5 corollary exists). The OQ-51 N/A rule (2026-06-25, post-dating Theorem 2) makes an `unknown` seat N/A, so the *real-seat count* varies per constraint and the reachable spectrum varies with it. The n=3 case ({0,2,3}) and n=2 case ({0,1}) are **already proven** by the same partition enumeration — this OQ does NOT inherit "n=3/n=2 unproven." What is open is only the **general-n** (arbitrary cardinality) statement: write the partition proof for arbitrary n and state the general gap/forbidden structure.
+
+**Evidence so far (pinned to manifest `2026-06-30T00:08:22Z`, n=116):** band-by-real-seat census — n=4: {0:21,3:26,4:3,5:35,6:1}; n=3: {0:5,2:4}; n=2: {0:3}; n≤1: null. No corpus counterexample (no n=3 at band 1, no n=2 outside {0,1}). The four `h1_band=2` constraints are all **three-real-seat** (`border_control_legitimacy__freedom_of_movement_primary`, `equal_protection_kernel__colorblind_reading`, `secession_legitimacy_boundary__constitutional_impossibility_reading`, `shinbutsu_ontological_commitment__incoherence_reading`; contextuality_fraction 0.667 = 2/C(3,2)) — NOT counterexamples to the n=4 forbidden-{1,2}. This 4-name census rots if the corpus regenerates: re-pin by manifest before reuse.
+
+**What resolution changes:** A general-n partition proof closes the induction and lets the |real seats|=4 caveat be propagated cleanly to v7/v8 and the `grothendieck_cohomology.pl:158` range comment (currently flagged stale, referencing this OQ). Until then, the n=4 spectrum is the only one stated in the published theorem; the small-n rows live in the v6.13.1 OQ-27 amendment as proven-by-enumeration but not theorem-promoted.
 
 ---
 

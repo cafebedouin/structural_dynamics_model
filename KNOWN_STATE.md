@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-30 — OQ-27 RESOLVED (signature-resolved H¹ disclosure); OQ-195 minted (general-n gap)
+**Files:** prolog/grothendieck_cohomology.pl, docs/deferential_realism_paper_v6.13.1.md, ISSUES.md, issues/INDEX.*, CLAUDE.md, KNOWN_STATE.md
+**Tier:** correction-key
+
+**Ruling: disclosure, not redefinition; no engine behavior change.** The engine already computes H¹
+over the **signature-resolved** `dr_type` orbit; OQ-27's gap was that no doc/comment said so. Under
+**append-versioning**, `v6.13.md` + v6.8–v6.12 stay frozen — precision landed only in
+`v6.13.1.md` (dated OQ-27 amendment + two inline "signature-resolved" qualifications at the intro and
+§5.1) and an engine comment at `grothendieck_cohomology.pl` (`orbit_vector/2` + `type_at_context/3`).
+v7 §Thm 7 already carried it (no-op; v7 untouched, confirmed by `git diff --stat`).
+
+Path disclosed: `cohomological_obstruction → orbit_vector → type_at_context → dr_type`; inside
+`dr_type`, `metric_based_type_indexed` (raw `classify_from_metrics`) **then**
+`integrate_signature_with_modal`. So H¹=0 means the *signature-resolved* orbit is a global section —
+raw per-context metric types may be maximally heterogeneous (the signature is the cover story, Thm 1).
+
+**Witnesses (manifest `2026-06-30T00:08:22Z`, n=116), denominators kept distinct:** 65 of 86
+four-real-seat constraints at H¹>0 (discrimination); *separately* 116/116 reproduction of stored
+`h1_band` from the serialized `perspectives` orbit (orbit-reproduction control). GATE GREEN.
+
+**Discovery → OQ-195:** Theorem 2's gap {0,3,4,5,6}/forbidden {1,2} is proven only for **|real
+seats|=4**; under the OQ-51 N/A rule the real-seat count varies. Reachable spectra (proven by
+enumeration) are n=3→{0,2,3}, n=2→{0,1}; the four `h1_band=2` constraints are 3-real-seat, NOT
+counterexamples. The unwritten **general-n** induction is **OQ-195** (P3); the `grothendieck_cohomology.pl:158`
+range comment carries a stale-range flag pointing to it.
+
 ## 2026-06-30 — OQ-194 RESOLVED: embedded mountain/nl "failures" are correct commentary; one rotted phantom fixture fixed
 **Files:** ISSUES.md, prolog/tests/test_phantom_neighbor_filter.pl, python/generate_constraint_pl.py, prolog/testsets/*.pl (16 claim=mountain files), KNOWN_STATE.md
 **Tier:** correction-key

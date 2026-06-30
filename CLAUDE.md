@@ -329,6 +329,15 @@ meaningful only relative to a timestamp. See `when_apparatus_sharpens_taxonomy.m
   explicitly. `sheaf_status` has a 4th value `undetermined` (sibling `sheaf_undetermined_reason`:
   `insufficient_seats`/`uncomputable_height`); the partition is manifest⟺h1>0, genuine/fragile⟹h1==0,
   undetermined⟹h1∈{null,0} — NOT an iff on null (route 2 is h1==0). Provenance: KNOWN_STATE 2026-06-25.
+  **H¹ is over the SIGNATURE-RESOLVED orbit, and the gap spectrum is |real-seat| indexed (OQ-27
+  resolved / OQ-195 open, 2026-06-30).** `h1_band` counts disagreements over the post-signature
+  `dr_type` orbit (`cohomological_obstruction → orbit_vector → type_at_context → dr_type`; inside
+  `dr_type`, `metric_based_type_indexed` raw `classify_from_metrics` THEN
+  `integrate_signature_with_modal`) — recomputing H¹ from raw `classify_from_metrics` types gives
+  wrong values silently (H¹=0 means signature-resolved global section, raw types may be maximally
+  heterogeneous). The forbidden-{1,2} gap `{0,3,4,5,6}` holds for **|real seats|=4 only**; under the
+  OQ-51 N/A rule fewer real seats give a smaller spectrum (n=3→{0,2,3}, n=2→{0,1}), so band 2 is the
+  3-seat signature, not a 4-seat counterexample. General-n proof is OQ-195. Provenance: KNOWN_STATE 2026-06-30.
 
 ## Build Discipline (recurring failure modes — check before declaring work done)
 

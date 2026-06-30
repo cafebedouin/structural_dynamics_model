@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "83068c97859396f80f4e8e30e18607a2cf18079a",
+    "store_version": "eaf1116358b105b5f9f7c9fa092c11229c97e85b",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-30T00:23:09"
+    "generated_at": "2026-06-30T10:43:57"
   },
-  "issues_sha": "37c6efe36000782f5e56177760d4e4f4f5e7356017f9194e13c8cce521c71fbc",
-  "n_entries": 194,
+  "issues_sha": "744c1f7150e0038129142e9f915f38e9a37397903988a8b31dc1fe29ecc2a684",
+  "n_entries": 195,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 101,
+    "resolved": 102,
     "mitigated": 12,
     "partial": 8,
     "disposed": 4,
@@ -32,15 +32,6 @@
       "mentioned_in": [
         "OQ-135"
       ]
-    },
-    {
-      "id": "OQ-27",
-      "status": "open",
-      "priority": 1,
-      "summary": "H¹ definition: signature-resolved vs raw-type orbit is not stated in the engine",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": []
     },
     {
       "id": "OQ-37",
@@ -424,7 +415,8 @@
         "OQ-14",
         "OQ-15",
         "OQ-27",
-        "OQ-28"
+        "OQ-28",
+        "OQ-195"
       ]
     },
     {
@@ -995,6 +987,21 @@
         "OQ-23",
         "OQ-84"
       ]
+    },
+    {
+      "id": "OQ-195",
+      "status": "open",
+      "priority": 3,
+      "summary": "General-n H¹ gap spectrum under the OQ-51 variable-real-seat regime (the unwritten induction)",
+      "deps": [
+        "splits_from OQ-27"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-27",
+        "OQ-51",
+        "OQ-135"
+      ]
     }
   ],
   "archive": [
@@ -1279,6 +1286,17 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
+    },
+    {
+      "id": "OQ-27",
+      "status": "resolved",
+      "priority": "–",
+      "summary": "H¹ definition: signature-resolved vs raw-type orbit is not stated in the engine",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-195"
+      ]
     },
     {
       "id": "OQ-28",
