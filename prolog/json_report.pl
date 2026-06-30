@@ -1053,7 +1053,11 @@ write_one_perspective_chi(S, C, Power, Comma) :-
     Ctx = context(_, _, _, spatial_scope(Scope)),
     (   catch(constraint_indexing:extractiveness_for_agent(C, Ctx, Chi), _, fail)
     ->  (catch(drl_core:base_extractiveness(C, Epsilon), _, fail) -> true ; Epsilon = null),
-        (catch(constraint_indexing:derive_directionality(C, Ctx, D), _, fail) -> true ; D = null),
+        % d/f_d MUST come from the coalition-RESOLVED context so they stay
+        % consistent with Chi (which resolves internally). Deriving on the raw
+        % Ctx reports the unresolved-atom d and forks f(d) from Chi for any
+        % perspective whose power coalition-resolves (powerless→organized, 2026-06-30).
+        (catch(constraint_indexing:agent_resolved_directionality(C, Ctx, _RCtx, D), _, fail) -> true ; D = null),
         (D \= null -> constraint_indexing:sigmoid_f(D, Fd) ; Fd = null),
         (D \= null -> (catch(constraint_indexing:sigmoid_d1(D, F1d), _, fail) -> true ; F1d = null) ; F1d = null),
         (D \= null -> (catch(constraint_indexing:sigmoid_d2(D, F2d), _, fail) -> true ; F2d = null) ; F2d = null),

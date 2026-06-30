@@ -26,6 +26,7 @@
     effective_immutability_for_context/2,
     extractiveness_for_agent/3,
     extractiveness_for_agent_d/4,   % OQ-83: chi with explicit d (per-stakeholder path)
+    agent_resolved_directionality/4, % coalition-resolved d for χ AND reported d/f_d (single source)
     power_modifier/2,
     scope_modifier/2,
 
@@ -559,13 +560,23 @@ resolve_displacement(Power, Delta) :-
 % byte-identical on the A1 capture harness (canonical-4 + product-156), see
 % audits/2026-06-07_stakeholder_layer_migration/.
 extractiveness_for_agent(Constraint, Context, Score) :-
-    Context = context(agent_power(Power), _, _, _),
-    resolve_coalition_power(Power, Constraint, ResolvedPower),
-    % Build resolved context with coalition-adjusted power
-    Context = context(_, T, E, S),
-    ResolvedContext = context(agent_power(ResolvedPower), T, E, S),
-    derive_directionality(Constraint, ResolvedContext, D),
+    agent_resolved_directionality(Constraint, Context, ResolvedContext, D),
     extractiveness_for_agent_d(Constraint, ResolvedContext, D, Score).
+
+%% agent_resolved_directionality(+Constraint, +Context, -ResolvedContext, -D)
+%  Coalition-resolve the context's power atom, then derive directionality on the
+%  RESOLVED context. This is the single source for the d that χ uses, so any
+%  consumer that reports d / f(d) alongside χ (json_report:write_one_perspective_chi)
+%  must derive them HERE, not from the unresolved canonical atom — otherwise χ
+%  (resolved d) and the reported f(d) (unresolved d) fork. Witnessed fork:
+%  powerless→organized coalition gave χ from d=0.5 but reported f_d from d=0.9
+%  (model_collapse_feedback, 2026-06-30). Scope/temporal/env are preserved by
+%  resolution; only the power atom (hence displacement and d) changes.
+agent_resolved_directionality(Constraint, Context, ResolvedContext, D) :-
+    Context = context(agent_power(Power), T, E, S),
+    resolve_coalition_power(Power, Constraint, ResolvedPower),
+    ResolvedContext = context(agent_power(ResolvedPower), T, E, S),
+    derive_directionality(Constraint, ResolvedContext, D).
 
 %% extractiveness_for_agent_d(+Constraint, +Context, +D, -Score)
 %  χ with EXPLICIT directionality (OQ-83: per-stakeholder d enters here).
