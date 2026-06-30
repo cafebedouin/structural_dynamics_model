@@ -85,6 +85,28 @@ mis-listed AC/resistance as "emitted but never read."
 `^measurement(` returns 0 — a false negative. Count facts with the qualified form and filter out
 `:- dynamic` / `:- multifile` / `:- module` declarations.
 
+**`affects_constraint` is overloaded — one relation, three authoring intents, seven consumers
+(OQ-23/OQ-24).** `network.affects_constraints[]` is emitted for ≥3 intents the engine cannot tell
+apart: (1) **DP-001 ε-invariance linkage** between *sibling* readings of one kernel ("link
+ε-distinct constraints via affects_constraint/2" — every story's header comment, from
+`generate_constraint_pl.py`); (2) the **UKE upstream→downstream dependency** graph
+(`uke_write_v2.1.md`, `stage0.md` — "downstream constraints reference upstream ids"); (3) generic
+network edges. Seven consumers read the *same* edge as different structure — the FPN
+`compute_edge_contamination` as contamination, `drl_composition:detect_extraction_dominance` as
+composite→component, `drl_counterfactual:dependency_chain` as ordered dependency,
+`inferred_coupling_protocol` as coupling, `signature_detection:has_viable_alternatives`, plus the
+two recommendation-gated bridges (`constraint_bridge`, `uke_dr_bridge`). The sibling (intent-1)
+edges leaked into FPN purity (RED on every populated leg) until the OQ-23 **same-kernel guard**
+zeroed them (first clause of `compute_edge_contamination/7`, relation-agnostic — covers `forecloses`
+too, closing OQ-24). Before adding a consumer of `affects_constraint` — or removing a sibling edge as
+"redundant" — note that same-kernel siblings are **not** a coupling/contamination signal (guarded in
+three places: `constraint_neighbors_existing/2`'s shared-agent clause, `compute_edge_contamination/7`
+OQ-23, `inferred_coupling_protocol` OQ-84) and that **giant_comp connectivity still counts them**
+(stripping them collapses the giant component 334→70 on kernel_v1 — the OQ-193 deferred ruling). The
+typed `cs_reading_relation` edge encodes sibling *relatedness* (a label) but NOT the directed graph
+*structure* these consumers read, so it is not a drop-in substitute. Witness:
+`audits/2026-06-29_oq23_coexists_fpn_canary/`.
+
 ## See also
 
 - `audits/2026-05-31_wiring_gap_census/wiring_gap_census.md` + ISSUES.md **OQ-35–OQ-44** — the prompt↔schema↔engine

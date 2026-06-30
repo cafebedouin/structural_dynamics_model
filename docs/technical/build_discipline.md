@@ -1024,6 +1024,20 @@ after round 1 was an added instrument escaping its own check:
   after the fact. The diff tool seeing a planted difference proves the *diff*; it does not prove the
   *run harness* yields independent repeats — distinct instruments, control both. (OQ-20 baseline
   diff, `audits/2026-06-22_oq20_dr_baseline_diff/`.)
+- **A comparator's control must use a data shape on which the two quantities CAN differ.** When a
+  probe compares an endpoint reduction (`V_last − V_first`, or `Delta/Duration`) against a "faithful"
+  full-series measure (`drl_composition:linear_slope/2`), the positive control must witness that the
+  two *can* diverge — and on the dominant data shape they may not. **For ≤3 evenly-spaced points the
+  least-squares slope equals the endpoint slope exactly** (the interior point cancels: slope =
+  `(V₃ − V₁)/(t₃ − t₁)` either way). A control built from a symmetric 3-point spike therefore shows
+  endpoint ≡ LSQ and the comparator reads dead/safe when it simply cannot discriminate on that shape —
+  a positive control that doesn't control the thing it stands in for. Build the control with **≥4
+  points or uneven spacing**, confirm it *exhibits* the divergence (ideally a sign flip), and only
+  then trust a "0 divergence" census over real series. (Witnessed OQ-18, 2026-06-25: a symmetric
+  spike control read endpoint≡LSQ and would have validated a faithful-velocity flip-probe that could
+  not tell the two apart; replaced with an uneven-spacing control — endpoint `+0.0005` vs LSQ
+  `−0.0035`, opposite sign — after which the corpus census, with the comparator proven live, was a
+  trustworthy measured zero.)
 
 Two more from the same review, about plan *structure* rather than the instruments:
 - **A fallback gated on a condition the design avoids is dead code.** The first close-vs-keep-open
@@ -1112,6 +1126,43 @@ the count, in the same pass. "N cases of X" is never the finding; "N cases, of w
 content-driven and N−k are one convention" is the finding. This is the positive-control discipline
 applied to your own headline: the breakdown is the control that catches the count standing in for
 the substrate.
+
+---
+
+## "Redundant / safe to remove" on a shared edge or field needs a per-consumer reachability witness
+
+When a datum (an edge type, an authored field) is read by N consumers and you want to remove it,
+guard it away, or call it redundant, the claim that decides safety is *per-consumer* — and the
+shape of that claim is the same aggregate-vs-composition trap as the section above, one level up.
+Four moves, none skippable:
+
+1. **Consumer-count is not the witness.** "Redundant over the set" ≠ "redundant per consumer." The
+   same datum is usually read as *different structure* by each consumer (one reads an `affects_constraint`
+   edge as contamination, another as composite→component, another as ordered dependency), so a
+   single "it's redundant" cannot hold across the set. Enumerate the consumers and decide each.
+2. **Per consumer, ask: does its read reach a shipped product/verdict, or die internally?** This
+   splits *ships-and-wrong* (fix it) from *inert-wrong* (log it, no engine change). A consumer with
+   no live caller, or whose output is never serialized/reported, is inert — its wrong read is real
+   but harmless, and "fixing" it is unwitnessable churn. Trace callers + output paths; do not assume.
+3. **A substitute must carry what each consumer READS, not merely a shared label.** "Both edges mean
+   *these are siblings*" is a claim about a *label*; the consumers read directed graph *structure*
+   (embedding, dependency, contamination). A label-equivalent twin is not a structure-equivalent
+   substitute. Witness that each consumer's computed output is reconstructible from the substitute —
+   per consumer — before banking "no information lost."
+4. **A fix at a SHARED site owes a zero-change control on the layers it must NOT touch** — the
+   symmetric image of the positive control. The positive control proves your change *reached* the
+   thing it targets; the zero-change control proves it *did not reach* the things it must leave
+   alone. (Run the untouched consumer old-vs-new and confirm byte-identical.)
+
+Instance (OQ-23, `audits/2026-06-29_oq23_coexists_fpn_canary/`): "the typed `cs_reading_relation`
+makes the sibling `affects_constraint` edge redundant, so strip it" was **falsified per-consumer** —
+under a reversible strip, 4 of 5 consumers' outputs changed, and only 2 reached a shipped product
+(FPN purity → `pipeline_output.json`; coupling baseline → `coupling_protocol.md`); the other two
+were inert (no live caller). That moved the fix from the shared neighbor-construction site to a
+narrow contamination-local site (zero-change control: giant_comp connectivity 276/334 unchanged),
+and deferred the one genuinely-open consumer question (giant_comp's 334→70 reinterpretation) to its
+own ruling (OQ-193) rather than landing it as a side effect. The discipline that caught it: witness
+per-consumer reachability **before** the removal, not a set-level "redundant."
 
 ---
 
@@ -1369,6 +1420,7 @@ premise here may not be cited as settled without re-witnessing at its rung at po
 | The de-leak holds (no engine band reaches the authoring LLM) | state | **4** | dump `story_generator_base.build_prompt(...)` and grep for band values near type names (AGENTS.md Rule 3b) — currently a note; **candidate to promote to a test** |
 | Validation / tests pass (before a push or a decision that acts on them) | event | **3 min** | re-run against current HEAD; cite with commit, never a prior turn's green |
 | The ruled structural invariants (perception ≠ claim, OQ-70; agency-filtered d, OQ-63) | structural | **2** | `grep` the clause in current source — pointer suffices; reading the file *is* the witness |
+| An **approved plan's** empirical premises (corpus content/shape, named witness cids, line anchors) | state | **2–3** | re-witness each load-bearing premise against the live substrate at execution — approval does not refresh it. A plan is a bundle of citations authored at time N, executed at N+k; the corpus rebuild can silently invalidate one. Witnessed: the OQ-19 plan asserted "live data is 2-decimal," but a rebuild had made 4 constraints authored-3-decimal between authoring and execution (KNOWN_STATE 2026-06-25) — caught only by re-probing, not by reading the plan |
 
 ---
 
