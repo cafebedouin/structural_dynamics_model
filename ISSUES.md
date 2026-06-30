@@ -1699,16 +1699,67 @@ delete `intent_engine` and its readers. **High-judgment.**
 
 **Ω-type:** Ω_E (design-relevant — taxonomy-coverage; χ-partition closed structurally, suppression-floor recalibration deferred to OQ-48).
 
-**Status:** open — Census rows 8–12. `inevitability` (`constraint_bridge.pl:22`),
+**Status:** resolved — Census re-disposition 2026-06-30 (`audits/2026-06-30_oq37_census_redispose/`); every read-but-unauthored name dispositioned, no OQ-37-local engine work remains. Deferred capability livens → GAP-23; supp/ε-floor recalibration → OQ-48; dead-code orphan → OQ-38.
 **Priority:** 1
-**Deps:** blocked_on OQ-90
-`internalization_depth` (`psych_bridge.pl:19`), `resistance_to_change`
-(`data_validation`/`json_report`/`utils`), `accumulation_speed` (`utils.pl:211`, explicit 0.0
-default) — all 0/0 both corpora, none compiler-emitted. Plus compound measurement metrics
-`accessibility_collapse(Level)`/`stakes_inflation(Level)`/`suppression(Level)` read by
-`coercion_projection.pl:15` but never emitted (compiler emits `measurement/5` only for
-theater_ratio/base_extractiveness/suppression_requirement). **Decision per metric:** author it,
-or remove the dead read. **Low-stakes each.**
+**Deps:** bundled_with OQ-48
+
+**Original census (rows 8–12).** `inevitability`, `internalization_depth`, `resistance_to_change`,
+`accumulation_speed` + compound `accessibility_collapse(Level)`/`stakes_inflation(Level)`/
+`suppression(Level)` — read by the engine but 0/0 authored, none compiler-emitted. Decision per
+metric: author or remove. **Re-disposition settled the root:** all trace to the fixed compiler emit
+set (`generate_constraint_pl.py:608-635`); "author" = add to compiler+schema+validator+prompt,
+"remove" = strip a consumer of a never-emitted name. The confound (forgot-to-wire vs
+deliberately-scoped-out) lives at the generation front, not the read site.
+
+**RESOLUTION — per-name disposition (2026-06-30).** Authoritative cross-corpus census
+(`constraint_metric(_, Name, _)` FACT pattern, not bare name): all 6 target names **0 facts** on
+testsets/haiku/flash/kernel_v1 = 3,142 stories; positive controls `resistance`/`extractiveness`
+fire on every leg. Witness: `audits/2026-06-30_oq37_census_redispose/recon_evidence.md`.
+- `inevitability` — **read ALREADY REMOVED** (D2 strip, `constraint_bridge.pl:20-25`; the
+  `constraint_status/3` `binding_limit` consumer is gone). Capability (inevitability/no-alternative
+  fraud) **superseded structurally by `false_natural_law`** (`signature_detection.pl:1018,1040`;
+  gate `claimed_natural + boltzmann_compliant(non_compliant)`) — scalar metric off the FNL path,
+  unneeded. → GAP-23 (not-a-gap note).
+- `resistance_to_change` — never emitted; the live sibling `resistance` is a **distinct referent**
+  (OQ-64: NL/coercion-grid metric vs drift-domain resistance-to-abolition — shared stem, not shared
+  meaning). 8 reads dispositioned: the vacuous `validate_edge_cases` piton check **already removed**
+  (`1eacd2fc`, per OQ-38 — the prior "can now be removed" line was stale); the `data_validation.pl:320`
+  extreme-value member **dropped** 2026-06-30 (behavior-preserving, commit `5b7a8b95`); honest
+  print/null/label sites (`report_generator.pl:650,818`, `json_report.pl:265`, `utils.pl:346`) **ruled
+  KEEP** (honest by design); `utils.pl:205,213` sit in zero-caller helpers (→ OQ-38);
+  `metric_drift_events.pl:174,247` (`function_obsolescence`) → GAP-23 liven-unit. **Repoint
+  resistance_to_change→resistance DECLINED** (OQ-64 morphology trap; the detector is already dead at
+  its first goal `alternatives_available`, so the repoint buys zero behavior while baking a latent
+  wrong-metric identification).
+- `accumulation_speed` — sole read inside zero-caller `safe_get_profile_components/2`
+  (`utils.pl:210-211`) → **OQ-38 dead-code** (not author/strip; false-orphan discipline — do not blind-strip).
+- `sunset_time` — never emitted; `detect_sunset_violation` (`metric_drift_events.pl:182,250`) cannot
+  fire. The self-supplied falsification tell (declared expiry, then violated); **non-redundant** with
+  `scaffold_suppression_escalating` (a metric-TREND verdict, orthogonal to a declared-EXPIRY
+  violation — probe b). → **GAP-23 liven (highest priority)**, operator seat.
+- `internalization_depth` — two breaks: home module `psych_bridge.pl` **never loaded** (absent from
+  `stack.pl`; `drl_core.pl:129`/`data_repair.pl:69` refs are comments) + input never emitted.
+  Manufactured-consent quadrant `suppression_requirement` cannot separate. → **GAP-23 liven (highest
+  cost)**, operator seat; kill-condition: dies if `suppression_requirement` alone separates
+  manufactured from genuine consent.
+- compound `accessibility_collapse(Level)`/`stakes_inflation(Level)`/`suppression(Level)` —
+  **RESOLVED by OQ-93** (2026-06-11): the leveled grid was made authorable (32 facts testsets, 696
+  haiku via `measurement/5`); `coercion_projection.pl:25-27` reads them live. The census "never
+  emitted" was **stale**.
+- **Anchor drift corrected:** the census's `drift_events.pl:141,214` is now
+  `metric_drift_events.pl:174,247`; `constraint_bridge.pl:22` read is removed (comment `:20-25`).
+
+**Opened-by-this-work residuals (routed, not OQ-37-local):**
+1. χ-partition gap — **CLOSED** (`3ab3ace4`, `tangled_rope_chi_floor` 0.40→0.35). supp/ε-floor
+   recalibration residual → **OQ-48**.
+2. Part D masked-unknowns (`constitutional_supremacy_reading`, `hybrid_atrophy_reading`,
+   `relational_autonomy`) — **MOOT post-reset**: absent from live `testsets/` (reset 2026-06-05);
+   twin occurrences are independent redraws (OQ-26), not the pre-reset instances. Cannot re-witness;
+   a current-corpus masked-unknown sweep would be fresh work, not this diagnosis.
+
+---
+
+**Historical body (pre-resolution; retained searchable).**
 
 **`resistance_to_change` row update (2026-06-11, OQ-44 evidence pass).** Re-witnessed never-authored
 on the live corpus AND kernel_v1 (0 facts; positive control: sibling name `resistance` fires, 34

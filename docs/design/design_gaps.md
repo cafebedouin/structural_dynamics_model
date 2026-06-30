@@ -1061,6 +1061,83 @@ type variation AS two-hub / χ-discrimination signal revives option (a) — the 
 
 ---
 
+## GAP-23 — The generation schema does not author three structural-contradiction tells (the OQ-37 read-but-unauthored metrics)
+
+**Declared:** 2026-06-30 (OQ-37 census re-disposition; evidence
+`audits/2026-06-30_oq37_census_redispose/`).
+
+**The absence:** the json→prolog compiler `python/generate_constraint_pl.py:608-635` emits a
+**fixed** `constraint_metric` set (extractiveness, suppression_requirement, theater_ratio always;
+accessibility_collapse + resistance for mountains; `has_sunset_clause` when flagged). Several engine
+predicates *read* metric names the compiler **never emits** — authored-zero across all four corpora
+(testsets/haiku/flash/kernel_v1 = 3,142 stories; positive controls resistance/extractiveness fire
+everywhere; census in the audit dir). Each names an on-target extraction tell (a place where
+structure could contradict the cover story) that the generation front does not yet supply. The
+absence reads as a presence: the detector exists and looks live, but its `safe_metric/3` lookup
+fails silently on the never-authored input, so it can never fire — measured-empty is
+indistinguishable from never-asked at the read site.
+
+**Why it is absent:** these tells were scoped out of the emit set at the generation front, not at
+the read site — the confound OQ-37 names (forgot-to-wire vs deliberately-scoped-out) lives in the
+compiler, and the compiler simply never grew the field. No consumer forced the field into being.
+
+**The three deferred tells (priced; each an operator-seat liven, output-changing):**
+
+1. **`sunset_time` — the self-supplied falsification tell.** A constraint declares "expires at year
+   Y" (`has_sunset_clause`, already live and emitted), Y passes, extraction continues →
+   `detect_sunset_violation` / `drift_event(sunset_violation)` (`metric_drift_events.pl:182,250`).
+   `sunset_time` is the second input and is **never emitted**, so the detector cannot fire even when
+   a story wants it. **Non-redundant** (probe b): `scaffold_suppression_escalating`
+   (`cs_pattern_detection.pl:207`) fires on a rising suppression *series* — a metric-TREND verdict
+   orthogonal to a declared-EXPIRY violation. **Price:** add `sunset_time` to the schema + compiler
+   emission + generation prompt; the validator already requires `has_sunset_clause` for enforced
+   scaffolds. **Positive control on liven:** the previously-dark `sunset_violation` fires on a
+   constructed story (declared Y in the past, still extracting). *Highest-priority of the three.*
+
+2. **`internalization_depth` — the manufactured-consent quadrant.** Names the structure that
+   `suppression_requirement` alone cannot separate: consent that was *manufactured* (high
+   internalization, low overt suppression) from consent that is *genuine*. **Two wiring breaks**
+   (both confirmed): (i) the home module `psych_bridge.pl` is **never loaded** — not in `stack.pl`,
+   and the `drl_core.pl:129`/`data_repair.pl:69` references are comments, not `use_module`; (ii) the
+   input is never emitted. **Price:** wire `psych_bridge` into `stack.pl` + add the field to schema +
+   compiler emission + prompt. **Kill-condition (run before livening):** dies if
+   `suppression_requirement` alone already separates manufactured-consent from genuine-consent on a
+   constructed pair — if so, log scope-out instead of wiring. *Highest cost.*
+
+3. **`function_obsolescence` — a two-input dead detector, not a one-line repoint.**
+   `detect_function_obsolescence` (`metric_drift_events.pl:170`) reads `alternatives_available`
+   (never emitted) **and** `resistance_to_change` (never emitted) **and** theater_ratio. It dies at
+   its FIRST goal (`safe_metric(C, alternatives_available, _)` — `safe_metric/3` has no default,
+   `metric_drift_events.pl:66`). Livening needs **both** unauthored inputs supplied. **A
+   `resistance_to_change → resistance` repoint was considered and DECLINED (OQ-64 morphology trap):**
+   `resistance` is the NL/coercion-grid metric (`grid_first_contact_gate.py:48`; mountain-signature
+   feature), a *distinct referent* from drift-domain `resistance_to_change` (resistance-to-abolition)
+   — the shared stem is not a shared meaning. The repoint buys zero behavior (detector dead at the
+   prior goal) while baking a latent wrong-metric identification that would activate the moment
+   `alternatives_available` is livened. **Price:** add `alternatives_available` + `resistance_to_change`
+   to schema/compiler/prompt as a unit. *Lower priority than `sunset_time`.*
+
+**Not gaps (recorded so the next reader doesn't re-open them):**
+- **`inevitability` (scalar) — superseded, not deferred.** Its sole consumer (`constraint_status/3`
+  `binding_limit`) was already removed (D2 strip, `constraint_bridge.pl:20-25`); the *capability*
+  (detect "there is no alternative" inevitability fraud) is carried **structurally** by
+  `false_natural_law` (`signature_detection.pl:1018` documents exactly this; gate
+  `claimed_natural + boltzmann_compliant(non_compliant)`, `:1040`). The scalar metric is off the FNL
+  path and unneeded. Reviving a scalar "inevitable" authoring cue that *feeds FNL confidence* would
+  be a fresh, low-priority capability — not a re-instatement of the removed read.
+- **`accumulation_speed` — OQ-38 dead-code, not OQ-37.** Sole read `utils.pl:211` sits inside
+  `safe_get_profile_components/2` which has **zero callers** — a dead orphan helper, routed to the
+  OQ-38 clause-level orphan pass (do not blind-strip; false-orphan discipline).
+
+**Status:** Declared-deferred absences (operator-seat livens, staged post-rebuild per the
+"extract value from the corpus we have before any rebuild" posture). **Reopen condition:** an
+analytical product needs declared-expiry-violation (→ liven `sunset_time`) or manufactured-vs-genuine
+consent separation (→ wire `internalization_depth`/`psych_bridge`). Each liven is output-changing —
+land separately under manual approval, split from behavior-preserving work, with the detector's own
+firing as the positive control.
+
+---
+
 ## Deferred triggers (not yet gaps)
 
 A trigger is a capability that is **not** committed future work — it has too few real users to

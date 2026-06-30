@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "eaf1116358b105b5f9f7c9fa092c11229c97e85b",
+    "store_version": "5b7a8b95e90cc7caa1755983bee872874014ad4c",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-06-30T10:43:57"
+    "generated_at": "2026-06-30T12:37:47"
   },
-  "issues_sha": "744c1f7150e0038129142e9f915f38e9a37397903988a8b31dc1fe29ecc2a684",
+  "issues_sha": "f59c7910fdaac3598d63b56f796a4df8ee318b86607b0366ebe8f4008b012580",
   "n_entries": 195,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 102,
+    "resolved": 103,
     "mitigated": 12,
     "partial": 8,
     "disposed": 4,
-    "open": 65,
+    "open": 64,
     "future": 4
   },
   "active": [
@@ -31,23 +31,6 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-135"
-      ]
-    },
-    {
-      "id": "OQ-37",
-      "status": "open",
-      "priority": 1,
-      "summary": "G2: engine-read `constraint_metric` names with no author and empty corpus",
-      "deps": [
-        "blocked_on OQ-90"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-44",
-        "OQ-48",
-        "OQ-51",
-        "OQ-90",
-        "OQ-96"
       ]
     },
     {
@@ -1401,6 +1384,27 @@
       "mentioned_in": [
         "OQ-43",
         "OQ-44"
+      ]
+    },
+    {
+      "id": "OQ-37",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "G2: engine-read `constraint_metric` names with no author and empty corpus",
+      "deps": [
+        "bundled_with OQ-48"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-26",
+        "OQ-38",
+        "OQ-44",
+        "OQ-48",
+        "OQ-51",
+        "OQ-64",
+        "OQ-90",
+        "OQ-93",
+        "OQ-96"
       ]
     },
     {

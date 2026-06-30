@@ -45,6 +45,39 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-30 — OQ-37 RESOLVED (read-but-unauthored metric census re-dispositioned); GAP-23 minted
+**Files:** ISSUES.md, docs/design/design_gaps.md, prolog/data_validation.pl, python/generate_constraint_pl.py
+**Tier:** landed
+
+OQ-37's read-but-unauthored `constraint_metric` census re-dispositioned at its root: all six target
+names (inevitability, internalization_depth, resistance_to_change, accumulation_speed, sunset_time,
+alternatives_available) trace to the **fixed compiler emit set** (`generate_constraint_pl.py:608-635`)
+— "author" = grow compiler+schema+validator+prompt, "remove" = strip a consumer. Authoritative
+cross-corpus census (FACT pattern `constraint_metric(_,Name,_)`, not bare name): **all 6 are 0 on
+testsets/haiku/flash/kernel_v1 = 3,142 stories**; controls resistance/extractiveness fire on every
+leg. Witness + per-probe evidence: `audits/2026-06-30_oq37_census_redispose/`.
+
+Dispositions: `inevitability` read already removed (D2 strip, `constraint_bridge.pl:20-25`),
+capability superseded structurally by `false_natural_law` (`signature_detection.pl:1018,1040`);
+compound grid metrics resolved by OQ-93; χ-partition closed (`3ab3ace4`); Part D masked-unknowns
+moot post-reset; `accumulation_speed`/zero-caller helpers → OQ-38; supp/ε-floor → OQ-48. The two
+genuine deferred capability livens (`sunset_time` self-supplied falsification tell;
+`internalization_depth` manufactured-consent quadrant + `psych_bridge` never loaded) → **GAP-23**
+(priced, operator-seat, reopen on analytical-product demand).
+
+One behavior-preserving engine edit (commit `5b7a8b95`): dropped never-authored
+`resistance_to_change` from `data_validation.pl:320` extreme-value monitor. Witness: validation
+suite `✓ No extreme values`, 0/1/1 identical before/after; provably byte-identical (0 facts → member
+never matches); validation-channel only, does not touch `pipeline_output.json`.
+
+**Correction-key (OQ-64 instance):** `resistance` ≠ `resistance_to_change` — `resistance` is the
+NL/coercion-GRID metric (`grid_first_contact_gate.py:48`, mountain-signature feature), a distinct
+referent from drift-domain resistance-to-abolition. The proposed `metric_drift_events.pl:174,247`
+repoint (resistance_to_change→resistance) was **DECLINED**: `safe_metric/3` fails silently
+(`:66`), so `function_obsolescence` dies at its first goal (`alternatives_available`) — the repoint
+buys zero behavior while baking a latent wrong-metric identification. Liven the detector's two inputs
+together (GAP-23) or leave it dark; never repoint by name-stem.
+
 ## 2026-06-30 — OQ-27 RESOLVED (signature-resolved H¹ disclosure); OQ-195 minted (general-n gap)
 **Files:** prolog/grothendieck_cohomology.pl, docs/deferential_realism_paper_v6.13.1.md, ISSUES.md, issues/INDEX.*, CLAUDE.md, KNOWN_STATE.md
 **Tier:** correction-key
