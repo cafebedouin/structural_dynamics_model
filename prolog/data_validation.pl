@@ -317,7 +317,11 @@ validate_edge_cases :-
     findall(C-M-V,
             (narrative_ontology:constraint_metric(C, M, V),
              (V > 0.95 ; V < 0.05),
-             member(M, [extractiveness, suppression_requirement, resistance_to_change])),
+             % OQ-37: resistance_to_change dropped — never compiler-emitted, 0 facts on every
+             % corpus (testsets/haiku/flash/kernel_v1), so it could never contribute an extreme
+             % value. Behavior-preserving (the findall is identical). The live grid metric is
+             % `resistance` (distinct referent, OQ-64) — adding it here is output-changing, deferred.
+             member(M, [extractiveness, suppression_requirement])),
             ExtremeValues),
 
     length(ExtremeValues, ExtCount),
