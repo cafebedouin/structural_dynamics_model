@@ -265,3 +265,8 @@ threshold") without checking what it was calibrated against. #6 read stakeholder
 clean from outside and failed only where they diverge. **Standing guard for this process: when a check
 gates a decision, verify it tests the actual precondition, not a nearby observable that usually tracks
 it — and construct the case where they come apart before trusting the check.**
+
+> **Promoted (2026-07-01):** this standing guard now lives in the always-consulted
+> `docs/technical/build_discipline.md` → *The gate that keys on a present-but-wrong proxy (the spine's
+> mirror)*, since this proposal doc is CLOSED and a live process rule must not rot in a frozen doc. The
+> five instances above remain the provenance.

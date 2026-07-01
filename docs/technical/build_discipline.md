@@ -1467,3 +1467,19 @@ whether it is. Make the absence representable and branch the consumer on it:
 The shared invariant: *a value and "no value" must never be the same token where someone reads them.*
 Where they are, that read is unfalsified — and somewhere downstream, absence is being reported as
 presence.
+
+**The gate that keys on a present-but-wrong proxy (the spine's mirror).** The spine is *absent input
+read as present*; this is its mirror — a **present, plausible input that is adjacent to the real
+precondition, not the precondition itself**. When a check gates a decision, verify it tests the actual
+precondition, not a nearby observable that *usually* co-varies with it — and construct the case where
+the two come apart **before** trusting the check. This is not Pattern 5 (there the input is absent);
+here the input is present and clean-looking, so it never trips a missing-data guard — it fails only
+where proxy and precondition diverge, which is exactly the case the decision turns on. Witnessed
+recurring across unrelated surfaces in one session (OQ-197/detector_calibration, 2026-07-01): a
+type-binary reused as a proxy for "the calibration-relevant axis"; a `piton_theater_floor` borrowed as
+a proxy for "a calibrated cover-story threshold"; a stakeholder *count* read as a proxy for
+"`extraction_blindness` is operative"; a bound-mode predicate that *reads as* the property but is a
+proxy under its default binding; a grep for a `"gaps"` render used as a proxy for "distinguishes
+undetermined at a human surface." Each looked clean from outside; each was caught by attention, not a
+control. Provenance and the five instances: `docs/design/detector_calibration_omega_proposal.md`
+(Corrections log → *Named failure mode* / *Standing guard*).
