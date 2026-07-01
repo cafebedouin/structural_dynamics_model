@@ -1,0 +1,100 @@
+# OQ-41 row-26 — Step 0 grep witness at HEAD 27afde7a (2026-07-01)
+
+## covering_analysis.pl — classify_at_interpolated/4
+classify_at_interpolated(C, D, Sigma, Type) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    (   narrative_ontology:constraint_metric(C, ExtMetricName, BaseEps)
+    ->  true
+    ;   BaseEps = 0.5
+    ),
+    constraint_indexing:sigmoid_f(D, FD),
+    Chi is BaseEps * FD * Sigma,
+    config:param(suppression_metric_name, SuppMetricName),
+    (   narrative_ontology:constraint_metric(C, SuppMetricName, Supp)
+    ->  true
+    ;   Supp = 0
+    ),
+    nearest_power_level(D, Power),
+    sigma_to_scope_atom(Sigma, ScopeAtom),
+    boltzmann_compliance:coupling_test_context(Power, ScopeAtom, BaseCtx),
+    BaseCtx = context(AP, TH, EO, _),
+    Context = context(AP, TH, EO, spatial_scope(ScopeAtom)),
+    (   catch(
+            drl_core:classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type0),
+            _,
+            Type0 = unknown
+        )
+    ->  Type = Type0
+    ;   Type = unknown
+
+## gap_diagnostic.pl — cache_gap_profile/4
+cache_gap_profile(C, MidD, InstTypes, ModTypes) :-
+    % Get base metrics
+    config:param(extractiveness_metric_name, ExtName),
+    (   narrative_ontology:constraint_metric(C, ExtName, BaseEps)
+    ->  true
+    ;   BaseEps = 0.5
+    ),
+    constraint_indexing:sigmoid_f(MidD, FD),
+    Chi323 is BaseEps * FD * 1.0,  % at national scope (sigma=1.0)
+    config:param(suppression_metric_name, SuppName),
+    (   narrative_ontology:constraint_metric(C, SuppName, Supp)
+    ->  true
+    ;   Supp = 0
+    ),
+    % Canonical types (use national scope = 2nd element)
+    nth1(2, InstTypes, InstType),
+    nth1(2, ModTypes, ModType),
+    assertz(gap_profile(C, BaseEps, Chi323, Supp, InstType, ModType)),
+
+## omega1_audit.pl — compute_one_profile/2
+compute_one_profile(C, Ctx) :-
+    % BaseEps
+    config:param(extractiveness_metric_name, ExtName),
+    (   narrative_ontology:constraint_metric(C, ExtName, BaseEps0)
+    ->  BaseEps = BaseEps0
+    ;   BaseEps = 0.5
+    ),
+    % Chi
+    (   catch(constraint_indexing:extractiveness_for_agent(C, Ctx, Chi0), _, fail)
+    ->  Chi = Chi0
+    ;   Chi = -999.0
+    ),
+    % Supp
+    drl_core:get_raw_suppression(C, Supp),
+    % Theater
+    config:param(theater_metric_name, TheaterName),
+    (   narrative_ontology:constraint_metric(C, TheaterName, Theater0)
+    ->  Theater = Theater0
+    ;   Theater = 0.0
+    ),
+    % Structural signature
+    (   catch(signature_detection:constraint_signature(C, Sig0), _, Sig0 = error)
+    ->  Sig = Sig0
+    ;   Sig = no_signature
+    ),
+    assertz(omega1_profile(C, BaseEps, Chi, Supp, Theater, Sig)),
+
+## drl_fpn.pl — fpn_compute_ep/3 (:191-212)
+fpn_compute_ep(C, Context, NewEP) :-
+    (   fpn_intrinsic(C, IP)
+    ->  true
+    ;   IP = -1.0
+    ),
+    (   IP < 0.0
+    ->  NewEP = IP                     % Sentinel: no purity data
+    ;   (   fpn_neighbors_cache(C, Context, Neighbors)
+        ->  true
+        ;   Neighbors = []
+        ),
+        (   Neighbors = []
+        ->  NewEP = IP                 % Isolated: no contamination
+        ;   (   fpn_type_cache(C, Context, Type)
+            ->  drl_purity_network:type_immunity(Type, Immunity)
+            ;   Immunity = 0.5         % Default immunity if no type cached
+            ),
+            fpn_total_contamination(C, IP, Neighbors, Context, TotalContam),
+            RawEP is IP - Immunity * TotalContam,
+            NewEP is max(0.0, RawEP)
+        )
+    ).

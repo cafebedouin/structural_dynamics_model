@@ -58,6 +58,19 @@ These are different questions about different things. The observer axis holds th
 
 ---
 
+## Representation grounding: which store is authoritative per metric (OQ-40)
+
+The two axes are not only conceptually distinct; they read *different Prolog stores* for the same metric, and this is by design. A single metric — `extractiveness`, `base_extractiveness`, `suppression_requirement` — is authored in two representations that can legitimately carry different values:
+
+- **`constraint_metric/3` is the authoritative scalar / observer representation.** It is the single per-constraint scalar the observer-axis machinery reads: `drl_core` consumes it (e.g. `base_extractiveness/2` at `drl_core.pl:85`, which delegates to `constraint_data:base_extractiveness/2`), and the static classification path (`classify_from_metrics/6` and everything routing through it) is grounded on it. When the observer axis asks "how does this fixed constraint classify from each seat," the fixed value it holds is the `constraint_metric` scalar.
+- **`measurement/5` is the temporal / committer representation.** It is the time-indexed series `measurement(MeasId, Constraint, Metric, Time, Value)` that the temporal machinery reads: `classify_at_time` (`drl_composition`) and the metric-drift/`drift_events` path consume it to answer "where is this reading at time t, and which way is it drifting." When the committer axis asks about drift, the object it varies over is the `measurement/5` series.
+
+**The split is intended, per metric — not a defect to reconcile.** The scalar and the temporal series answer different questions (a seat-invariant level vs. a trajectory), and forcing one representation to serve both would flatten exactly the distinction the two-axis architecture exists to preserve. This records the 2026-06-24 ruling on OQ-40 census rows 19–20 (`audits/2026-06-24_oq41_basex_t0/`): the `base_extractiveness` scalar-vs-temporal split is the two-axis design working as intended.
+
+**The live correctness obligation that rides with the split.** Because the representations are independent, a constraint may author a metric in the temporal store *only* — with no scalar counterpart. The 2026-06-24 audit found ~15 live constraints that author `base_extractiveness` as a `measurement/5` series at real historical times with **no scalar `constraint_metric`**, so their series is their *only* authoritative ε. For that temporal-only family, an off-grid temporal query (asking `classify_at_time` at a synthetic time like `Time=0`, before the story's authored grid) is not an edge case but the main path — and answering it with a fabricated default *or* a fail-closed `unknown` both destroy authored signal (the reverted rows 24–25 fail-close erased a real `settler_colonial`/`cultural_zionist` divergence). So any temporal consumer must resolve an off-grid `Time` to an on-grid value rather than impute or fail-close. This obligation is tracked in the OQ-83 / OQ-195 temporal-grid family; a second instance — a temporal *gate* (`compute_temporal_stability`) that reads the *scalar* store instead of `measurement/5`, so it never sees the series at all — is spun out as OQ-201.
+
+---
+
 ## Why they must not be unified
 
 The instinct — the same instinct the two-hub note had to argue against one level down — is to fold the committer axis into the observer axis: to treat the typed reading-relations as edges in the purity-contamination network, so that the whole system is one connected graph with one notion of structural influence. This would be wrong, and the reason is the same reason the two hubs of the observer axis should not be merged: **the mechanisms have incompatible mathematical characters, and their independence is what produces the diagnostics.**

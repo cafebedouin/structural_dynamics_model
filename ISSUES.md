@@ -1937,13 +1937,24 @@ positive control). See KNOWN_STATE 2026-06-25.
 
 **Ω-type:** Ω_C (design choice — authoritative representation per metric, or document the axis split as intended).
 
-**Status:** open — Census rows 19–22. `extractiveness`, `base_extractiveness`,
+**Status:** resolved — (2026-07-01) representation split RULED INTENDED (2026-06-24) and now
+LIFTED into a canonical design doc (`docs/design/two_axis_architecture_v7.md` §"Representation
+grounding: which store is authoritative per metric (OQ-40)"): `constraint_metric/3` = authoritative
+scalar/observer store (read by `drl_core`, e.g. `base_extractiveness/2` at `drl_core.pl:85`);
+`measurement/5` = temporal/committer store (read by `classify_at_time`/`drift_events`); split
+intended per metric, with the temporal-only-authoring off-grid correctness obligation recorded
+(OQ-83/OQ-195). Census row-22 (`compute_temporal_stability` reads the scalar store, not
+`measurement/5`) SPUN OUT to **OQ-201** with its coverage witness
+(`audits/2026-07-01_oq41_row26_expansion/probe_row22_coverage.pl`), per operator ruling (close on the
+doc lift; do NOT repoint row-22 now — that would repeat the rows 24–25 off-grid trap inverted).
+Rows 19–20 origin below.
 **Priority:** 1
+Census rows 19–22. `extractiveness`, `base_extractiveness`,
 `suppression_requirement` each read as scalar `constraint_metric` (observer `drl_core`) **and** as
 `measurement/5` (committer `drl_composition`/`drift_events`) — the two representations can carry
 different values per axis. Plus `compute_temporal_stability` (`signature_detection`) folds scalar
-`constraint_metric` as a pseudo-time-series instead of `measurement/5`. **Decision:** pick the
-authoritative representation per metric, or document the axis split as intended.
+`constraint_metric` as a pseudo-time-series instead of `measurement/5` (→ OQ-201). **Decision (taken):**
+document the axis split as intended.
 **Cross-axis-live — see census cross-axis subset.**
 
 **`suppression_requirement` sub-split CLOSED (2026-05-31, side-effect of Commit A / OQ-41 row 23).**
@@ -1974,9 +1985,9 @@ split is intended AND temporal-only authoring makes off-grid reads a correctness
 
 **Ω-type:** Ω_C (design choice — fail-closed vs impute; subsumed by the OQ-44 satisfy-on-absence policy).
 
-**Status:** partial — row 23 MITIGATED (2026-05-31, Commit A); rows 24–27 open (row 26 NEUTRAL for 3 of 6 sites — 4 OPEN, see coverage correction below). Census rows 23–27. A silent
+**Status:** resolved — (2026-07-01, row-26 expansion, `audits/2026-07-01_oq41_row26_expansion/`) row 23 FIXED (Commit A); rows 24–25 SUPERSEDED (commit `5b069ae1`); **row 26 CLOSED** with the five sites' per-site verdicts (below); row 27 by-design. All census rows 23–27 disposed. (Prior `partial`: row 26 NEUTRAL for 3 of 6 sites, 4 OPEN.)
 **Priority:** 1
-**Deps:** blocked_on OQ-46
+A silent
 fixed default (`0.5`, `0.0`) substitutes for absent authored data, so the engine computes on a value
 nobody authored — distinct from G5 (this is fail-closed-vs-impute, not representation choice).
 - **Row 23 `drl_composition.pl` `classify_at_time` `Supp=0.5` — FIXED via scalar-fallback STOPGAP.**
@@ -2047,6 +2058,35 @@ nobody authored — distinct from G5 (this is fail-closed-vs-impute, not represe
     `(C,V)` sites (e.g. `classify_at_interpolated/4` takes `(C,D,Sigma,Type)`), so the expansion
     needs a per-site query, not a `ROW26_SITES` list-append — plus the planned synthetic-no-data
     positive control that MUST fire. Produce-then-stop instrument; no apply.
+- **Row 26 CLOSED — five-site expansion (2026-07-01, `audits/2026-07-01_oq41_row26_expansion/`,
+  HEAD `27afde7a`).** Step-0 grep confirmed every 2026-06-24 line cite is exact at HEAD (no drift),
+  and resolved the two flagged unknowns against substrate. Five sites, none LIVE-CLASSIFYING ⇒ **no
+  fail-close landed** (behavior-preserving):
+  - `covering_analysis:490` (+`:497` `Supp` sib), `gap_diagnostic:120` (+`:127`), `omega1_audit:102`
+    (+`:115` `Theater`): **DORMANT/LOCKED**. All three are metric-absence guards
+    (`constraint_metric(...) -> true ; X=Default`); reject-guard confirmed; must-fire control fires
+    (`classify_at_interpolated` succeeds on a metric-absent atom ⇒ 0.5 default fired, returns
+    `unknown`). Enclosing predicates have **0 pipeline callers** (`classify_at_interpolated` reachable
+    only via dormant `gap_diagnostic`; `cache_gap_profile`/`compute_one_profile` have zero callers).
+    Would-fire (genuine scalar absence — no rows-24/25 off-grid confound, `constraint_metric` has no
+    grid): **9/119 testsets/, 0/1106 kernel_v1** (the 9 is a testsets/ sparsity artifact). Covered by
+    the **OQ-44 once-for-class** dormant ruling (same as rows 24–25), not fixed per-site.
+    **[NB: the plan's step-3 "interpolation off-grid" class turned out to have zero members — the
+    `covering:490` 0.5 branch is gated on `constraint_metric` presence, not `D`/`Sigma`, so it takes
+    the metric-absence bogus-atom pre-test like the others. Corrected against substrate.]**
+  - `drl_fpn:206` `Immunity=0.5`: **NEUTRAL-by-corpus (cosmetic-if-fired)**. Compute-failed fallback
+    (fires only when `dr_type` fails in precompute ⇒ no `fpn_type_cache`). Firing-marker patch:
+    **0 natural fires** over testsets/(119) AND kernel_v1(1106), both converged; positive control
+    (forced type-cache miss on a neighboured IP≥0 constraint) **FIRES** both runs ⇒ 0 is
+    measured-empty, not didn't-look. `dr_type` is total on both corpora. Sink: `fpn_ep` feeds only
+    diagnostic/report/abductive-evidence, **never `dr_type`** ⇒ cosmetic even if it fired.
+  - `drl_fpn:197` `NewEP=IP`: **CARVED OUT of row-26 — not a fabricated default, out of OQ-41 scope**
+    (no row-26 verdict assigned). Grep resolved the contested mechanism: branch is `IP < 0.0 ->
+    NewEP = IP`, `IP` = `-1.0` sentinel set upstream when `fpn_intrinsic` absent, commented
+    `% Sentinel: no purity data` — it propagates a negative sentinel, it does not fabricate a
+    mid-value. **This also corrects the prior row-26 note (lines above), which described `:206`'s
+    trigger ("fires when `dr_type` fails in precompute") under the `:197` label — a conflation:
+    `:197` = intrinsic-purity-absent sentinel, `:206` = type-cache-absent Immunity default.**
 
 **Decision per remaining site:** fail-closed vs keep impute. Connects to the empty-table
 satisfy-on-absence pattern (`get_metric_average:169`).
@@ -10597,6 +10637,49 @@ the implementation exists if Ω_E ever gets a ground-truth answer that would mak
 revisiting; until then this OQ is the carrier. **What would change the ruling toward wiring:** an external
 calibration answer (Ω_E) plus an accepted FP-rate (Ω_P), OR evidence that the `tangled_rope→rope` residual carries
 per-constraint signal a reviewer needs at the row level rather than the aggregate.
+
+---
+
+## OQ-201 — Temporal gate consumes non-temporal data: `compute_temporal_stability` folds scalar `constraint_metric` instead of `measurement/5`
+
+**Ω-type:** Ω_C (design choice — repoint the temporal gate to the temporal store, or give it a different closed-form treatment). Pattern-5/6 (a gate reads the wrong store; on the current corpora the variance path is dead, so the gate reduces to a presence-check that is vacuously `stable`).
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-40
+**Origin:** OQ-40 census row-22, spun out per operator ruling 2026-07-01 (close OQ-40 on the doc lift only; do NOT repoint now — repointing into corpus-wide temporal absence would repeat the rows 24–25 off-grid trap inverted). Coverage witness run this session, `audits/2026-07-01_oq41_row26_expansion/probe_row22_coverage.pl`.
+**Files:** `prolog/signature_detection.pl` (`compute_temporal_stability/3` at `:277–291`; caller binds `SuppMetricName` at `:177→:191`; gate `TemporalStability == stable` at `:405` inside `natural_law_signature/1`), `prolog/config.pl:23` (`suppression_metric_name`).
+
+**The defect.** `compute_temporal_stability(C, MetricName, Stability)` does
+`findall(Val, narrative_ontology:constraint_metric(C, MetricName, Val), Vals)` — it reads the **scalar
+observer store `constraint_metric/3`**, never the **temporal committer store `measurement/5`** — then
+computes variance and feeds `natural_law_signature`'s `TemporalStability == stable` gate (`:405`,
+comment "Doesn't evolve"). So the gate that claims to test temporal evolution consults a non-temporal
+representation.
+
+**Witness (this session, HEAD `27afde7a`; testsets/ n=119 and kernel_v1 n=1106):**
+- **(a) folded metric identity = `suppression_requirement`** (via `SuppMetricName`, `:177→:191`) — NOT
+  `extractiveness`/`base_extractiveness`. The coverage rides on counting the right metric.
+- **(b) coverage over the non-circular reach-the-gate denominator** (= authors the gate-feeding scalar
+  metric, regardless of resulting class — NOT "currently classified `natural_law`," which is circular):
+  reach-the-gate **110 (testsets) / 1106 (kernel_v1)**; of those, **WITH a `measurement/5` temporal
+  series: 107 / 934** (85–97%); scalar-only **3 / 172**. Coverage is **SUBSTANTIAL** — the gate ignores a
+  temporal series that most reach-the-gate constraints actually author.
+- **(b') positive control** catches a known `measurement/5` series on both corpora
+  (`ability_ceiling_reading` @T=0=0.58; `abrahamic_covenant__isaac_covenant_reading` @T=0=0.6) — so the
+  near-zero scalar-only count is measured, not a byte-broken query.
+- **Sharper than the census framing:** **0 constraints author >1 scalar `suppression_requirement` value**
+  on either corpus, so the `findall` is always a singleton → `compute_temporal_stability` returns via the
+  `[_SingleVal] -> Stability = stable` branch (`:284–285`) universally and the **variance path (`:286–290`)
+  is dead**. The gate is currently a degenerate presence-check (author the scalar ⇒ `stable`; don't ⇒
+  `unknown`) — it measures neither temporal evolution *nor* cross-level dispersion.
+
+**Verdict / disposition.** SUBSTANTIAL coverage ⇒ **repoint-to-`measurement/5` is the eventual
+safe-and-cheap fix** (per the plan's verdict rule), but **NOT now** (operator ruling): repointing must
+resolve the off-grid-vs-genuine-absence question first (OQ-83/OQ-178 family) so it does not erase authored
+signal the way the rows 24–25 fail-close would have. Route: `drift_events`/`measurement/5` temporal read
+gated on on-grid coverage. First future witness before any repoint: confirm the `measurement/5` series is
+queried on its authored grid (not a synthetic time).
 
 ---
 

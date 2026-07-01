@@ -1,20 +1,20 @@
 {
   "manifest": {
-    "store_version": "862e50c267acbe1fe56077e346d252ecff231167",
+    "store_version": "27afde7a00ad25b54059bc934dc957b6664729bd",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-01T02:43:01"
+    "generated_at": "2026-07-01T03:11:22"
   },
-  "issues_sha": "451acca26bd9ecad199a427ae62a2f4a60f4c196670fbee5a75d4e2bcfc1f3b5",
-  "n_entries": 200,
+  "issues_sha": "1ec10865eafa7b6dce1f9d234848293b04b89999f528a044e909288547c4da84",
+  "n_entries": 201,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 104,
+    "resolved": 106,
     "mitigated": 13,
-    "partial": 8,
+    "partial": 7,
     "disposed": 4,
     "open": 67,
     "future": 4
@@ -31,35 +31,6 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-135"
-      ]
-    },
-    {
-      "id": "OQ-40",
-      "status": "open",
-      "priority": 1,
-      "summary": "G5: scalar-vs-temporal representation splits",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-41",
-        "OQ-46",
-        "OQ-83"
-      ]
-    },
-    {
-      "id": "OQ-41",
-      "status": "partial",
-      "priority": 1,
-      "summary": "G6: fabricated defaults for absent data (fail-closed vs impute)",
-      "deps": [
-        "blocked_on OQ-46"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-44",
-        "OQ-46",
-        "OQ-178",
-        "OQ-179"
       ]
     },
     {
@@ -1029,6 +1000,21 @@
         "OQ-197",
         "OQ-199"
       ]
+    },
+    {
+      "id": "OQ-201",
+      "status": "open",
+      "priority": 2,
+      "summary": "Temporal gate consumes non-temporal data: `compute_temporal_stability` folds scalar `constraint_metric` instead of `measurement/5`",
+      "deps": [
+        "splits_from OQ-40"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-40",
+        "OQ-83",
+        "OQ-178"
+      ]
     }
   ],
   "archive": [
@@ -1479,6 +1465,35 @@
       "mentioned_in": [
         "OQ-46",
         "OQ-178"
+      ]
+    },
+    {
+      "id": "OQ-40",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "G5: scalar-vs-temporal representation splits",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-41",
+        "OQ-46",
+        "OQ-83",
+        "OQ-195",
+        "OQ-201"
+      ]
+    },
+    {
+      "id": "OQ-41",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "G6: fabricated defaults for absent data (fail-closed vs impute)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-44",
+        "OQ-46",
+        "OQ-178",
+        "OQ-179"
       ]
     },
     {

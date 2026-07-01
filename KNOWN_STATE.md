@@ -45,6 +45,27 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-01 — OQ-41 RESOLVED (row-26 five-site expansion) + OQ-40 RESOLVED (doc lift) + OQ-201 minted (row-22 spin-out)
+**Files:** ISSUES.md, docs/design/two_axis_architecture_v7.md, audits/2026-07-01_oq41_row26_expansion/, prolog/signature_detection.pl, prolog/drl_fpn.pl, prolog/covering_analysis.pl, prolog/gap_diagnostic.pl, prolog/omega1_audit.pl
+**Tier:** landed
+Row-26 five-site expansion (HEAD `27afde7a`; no engine change — behavior-preserving; gate GREEN,
+validation 0 errors). Step-0 grep: all 2026-06-24 cites exact at HEAD (no drift). Two flagged unknowns
+resolved against substrate: **(1) `drl_fpn:197` is a sentinel pass-through (`IP<0.0 -> NewEP=IP`, `IP=-1.0`
+when `fpn_intrinsic` absent), NOT a fabricated default → CARVED OUT of row-26**, no verdict assigned; the
+prior entry had conflated `:197`'s label with `:206`'s trigger. **(2) `covering:490`'s `0.5` branch is a
+`constraint_metric`-presence guard, NOT "interpolation off-grid" — the plan's off-grid trigger-class had
+zero members.** Verdicts: `covering:490`, `gap:120`, `omega1:102` (+ Supp/Theater sibs) = **DORMANT/LOCKED**
+(reject-guard + must-fire control fires + 0 pipeline callers; OQ-44 once-for-class); `drl_fpn:206`
+`Immunity=0.5` = **NEUTRAL-by-corpus (cosmetic-if-fired)** — firing-marker patch shows 0 natural fires over
+testsets/(119) AND kernel_v1(1106), positive control fires (measured-empty, not didn't-look), sink is
+`fpn_ep`→diagnostic only, never `dr_type`. OQ-40 rows 19–20 split RULED-INTENDED lifted into
+`two_axis_architecture_v7.md` §"Representation grounding" (`constraint_metric/3`=scalar/observer,
+`measurement/5`=temporal/committer). Row-22 → **OQ-201**: `compute_temporal_stability` reads the scalar
+store not `measurement/5`; coverage witness — folded metric=`suppression_requirement`, 107/110 (testsets) &
+934/1106 (kernel_v1) reach-the-gate constraints author an ignored temporal series (SUBSTANTIAL → repoint is
+eventual fix, deferred per off-grid trap), and **>1 scalar level = 0 on both corpora → variance path dead,
+gate is a degenerate presence-check**. Positive control catches a known series on both corpora.
+
 ## 2026-07-01 — R4 RULED → OQ-200: detector_calibration carried as corpus-level OQ, NOT wired; module now TRACKED-but-unwired
 **Files:** ISSUES.md, docs/design/detector_calibration_omega_proposal.md, prolog/detector_calibration.pl, audits/2026-07-01_oq197_r4_recompute/
 **Tier:** tripwire
