@@ -10573,6 +10573,16 @@ thing into 39 instances.)
   (loud-but-narrow, ~2.8 seats × 13 constraints); per-CONSTRAINT `tangled_rope→rope` dominates (quiet-but-broad,
   ~1 seat × 21). Both recorded; the residual is the constraint-majority, refining the earlier "small residual"
   expectation.
+  **Note for whoever picks up Ω_E (build-time, not to act on now):** the residual is not just "the leftover," it is
+  the *specifically-informative* leftover. Its DIRECTION is the opposite of false-summit and of most of what this
+  thread circled — here the **engine reads LESS extractive than the author** (author says contested `tangled_rope`,
+  engine says clean `rope`), whereas false-summit and the snare cases are the engine reading *more*. "Engine
+  under-reads the author's contestation claim" and "engine over-reads into extraction" are different failure modes
+  with different costs. Because the residual is entirely the former AND is the one bucket NOT confounded by a known
+  corpus pattern (false-summit already belongs to OQ-70), it is the **cleanest available signal on whether the
+  detector's directionality is calibrated at all** — so if OQ-200 ever gets the independent structural check its Ω_E
+  needs (one that scores divergences against something OTHER than the authored inputs that produced them), the
+  `tangled_rope→rope` residual is the bucket to score first.
 - **severity + singleton tail — ~5–7 constraints** (`tangled_rope→snare`, `rope→tangled_rope`, `snare→rope`,
   `rope→snare`): the small genuinely-diverse remainder.
 
