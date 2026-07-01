@@ -10,7 +10,9 @@
     type_color/2,
     type_severity/2,
     detect_gap_pattern/2,
-    gap_coverage/1
+    gap_coverage/1,
+    gap_status/2,
+    gap_seat_source/1
 ]).
 
 :- use_module(type_metadata).
@@ -247,20 +249,74 @@ gap_functional_type(mountain).
 gap_extractive_type(snare).
 gap_extractive_type(tangled_rope).
 
+%% gap_seat_source(-Source)  [OQ-197]
+%  The seat-typing source for gap detection and operability. This single fact is
+%  the (a)/(b) ruling seam: `stakeholder` types from authored constraint_stakeholder/7
+%  facts (ruling (a) — the current/default source); `canonical` types the six
+%  canonical power seats from constraint_classification/3 (ruling (b)). BOTH
+%  detect_gap_pattern/2 and gap_status/2 read through it, so switching the ruling is
+%  a one-line change here — nothing downstream is source-specific. Default stakeholder
+%  pending the OQ-197 (a)/(b) ruling (see docs/design/detector_calibration_omega_proposal.md).
+gap_seat_source(stakeholder).
+
 %% seat_type_reading(+C, -reading(D, Power, Type, Name))
-%  One authored seat's computed type (non-unknown), with its authored power atom
-%  and the power-ordering key D (canonical d: HIGHER d = LOWER power).
-seat_type_reading(C, reading(D, Power, Type, Name)) :-
+%  One seat's computed type (non-unknown), with its power atom and the power-ordering
+%  key D (canonical d: HIGHER d = LOWER power). Dispatches on gap_seat_source/1 so the
+%  firing path and the operability path share one source of truth.
+seat_type_reading(C, R) :-
+    gap_seat_source(Source),
+    seat_type_reading(C, Source, R).
+
+%% seat_type_reading(+C, +Source, -reading(D, Power, Type, Name))
+seat_type_reading(C, stakeholder, reading(D, Power, Type, Name)) :-
     narrative_ontology:constraint_stakeholder(C, Name, _Role, Power, _T, _E, _S),
     stakeholder_seats:dr_type_for_stakeholder(C, Name, Type),
     Type \= unknown,
     (   constraint_indexing:canonical_d_for_power(Power, D) -> true ; D = 0.5 ).
+seat_type_reading(C, canonical, reading(D, Power, Type, Power)) :-
+    member(Power, [powerless, moderate, powerful, organized, institutional, analytical]),
+    constraint_indexing:canonical_d_for_power(Power, D),
+    constraint_indexing:constraint_classification(C, Type, context(agent_power(Power), _, _, _)),
+    Type \= unknown.
 
-%% gap_coverage(+C)
-%  The gap question is examinable iff >=1 authored seat computes a non-unknown
-%  type. Distinguishes null (didn't-look / unexaminable) from [] (looked, no gap)
-%  at the serialization boundary (Pattern 6 coverage bit).
-gap_coverage(C) :- seat_type_reading(C, _), !.
+%% gap_status(+C, -Status)  [OQ-197 — three-valued gap operability]
+%  Closes the Build-Discipline Pattern-6 collapse where measured-no-gap and
+%  didn't-look both emitted a success-shaped empty. Status is exactly one of:
+%    gap(Pattern, TLo, THi)         — a cover-story / type-divergence gap was detected
+%                                     (SAME condition as detect_gap_pattern/2 — firing
+%                                     behaviour is unchanged; this branch just wraps it)
+%    no_gap                         — enough operable seats to compare (>=2 spanning >=2
+%                                     distinct power positions) and no gap fired
+%    undetermined(Reason)           — too few operable seats to pose the question
+%  Reason in {no_seats, single_seat, single_power_position}. The operability
+%  precondition (>=2 seats at >=2 distinct power positions) is the thing R4 turned on:
+%  a proxy for it (any typeable seat) let present-but-insufficient read as measured-empty.
+gap_status(C, Status) :-
+    (   detect_gap_pattern(C, Gap)          % firing logic UNCHANGED (behaviour-preserving)
+    ->  Status = Gap
+    ;   gap_nonfire_status(C, Status)       % split the non-firing outcome, do not fabricate one
+    ).
+
+%% gap_nonfire_status(+C, -Status)  Status in {no_gap, undetermined(Reason)}.
+gap_nonfire_status(C, Status) :-
+    findall(R, seat_type_reading(C, R), Rs),
+    nonfire_reason(Rs, Status).
+
+nonfire_reason([], undetermined(no_seats)) :- !.
+nonfire_reason([_], undetermined(single_seat)) :- !.
+nonfire_reason(Rs, Status) :-
+    setof(P, D^T^N^member(reading(D,P,T,N), Rs), Powers),
+    (   Powers = [_]                        % all seats at one power: no gradient to compare
+    ->  Status = undetermined(single_power_position)
+    ;   Status = no_gap                     % >=2 power positions examined, detector did not fire
+    ).
+
+%% gap_coverage(+C)  [OQ-197: lifted from the >=1-seat proxy to the operability precondition]
+%  The gap question is EXAMINABLE iff gap_status/2 is not undetermined. This lifts the
+%  old >=1-typeable-seat threshold up to the detector's own comparison threshold so
+%  present-but-insufficient (e.g. single_power_position) reads null (didn't-look) at the
+%  serialization boundary, not [] (looked, no gap). null = unexaminable; [] = examined, no gap.
+gap_coverage(C) :- gap_status(C, S), S \= undetermined(_).
 
 %% detect_gap_pattern(+C, -gap(Pattern, LowPowerType, HighPowerType))
 %  Fires iff >=2 distinct non-unknown computed seat types. Deterministic (one
