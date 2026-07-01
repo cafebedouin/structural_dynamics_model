@@ -57,9 +57,15 @@ The engine cannot *close* either limb (Slice C category error). It CAN detect th
 
 The three ways a both-speak seat can disagree, and how each is handled:
 
-- **FC1 — boundary escalation.** author ∈ genuinely-functional `{rope, scaffold, mountain}`, engine ∈
-  extractive `{snare, tangled_rope}`. The engine calls extraction where the author saw legitimate
-  coordination. **Fires.**
+- **FC1 — boundary crossing (SYMMETRIC).** A both-speak seat where one side is genuinely-functional
+  `{rope, scaffold, mountain}` and the other is extractive `{snare, tangled_rope}` — **either
+  direction**. `functional→extractive` is a candidate engine false-positive (precision); its mirror
+  `extractive→functional` is a candidate engine false-negative / miss (recall). Both are
+  calibration-relevant and which side is right is unknown, so FC1 fires symmetrically — same reason as
+  FC2, NOT because a direction was chosen. (The earlier name "boundary escalation" was itself a
+  directional carryover of the retracted premise — see Corrections log #4. A recall-over-precision
+  *policy*, if ever adopted, is a separate explicitly-labeled decision and would weight
+  `extractive→functional` (misses), the opposite of what "escalation" named.) **Fires.**
 - **FC2 — severity-within-extraction** (the largest single bucket, ~⅓ of the off-diagonal:
   `tangled_rope↔snare`). Both sides are extractive, so a boundary axis drops this on the floor as
   "lateral" — but author=`tangled_rope` (contested/hedged extraction) vs engine=`snare` (clean,
@@ -75,9 +81,10 @@ The three ways a both-speak seat can disagree, and how each is handled:
   Type 1). **Routed there, not double-handled here** (R4 guard).
 
 **Consequence gate** (keeps it from firing on every mismatch — narrowness is R1): the seat's
-constraint must be hard-to-externally-check *and* consequential — `theater_ratio ≥ floor` (cover-story
-machinery) ∨ coupling-masked (`coupling.boltzmann = non_compliant`) ∨ an authored no-exit (`trapped`)
-victim bears the call.
+constraint must be hard-to-externally-check *and* consequential. Two **categorical** limbs need no
+scalar and are safe now — coupling-masked (`coupling.boltzmann = non_compliant`) ∨ an authored no-exit
+(`trapped`) victim bears the call. A third **scalar** limb — `theater_ratio ≥ floor` (cover-story
+machinery) — is held pending R1 (no honest borrow exists for the floor; see R1 sub-decisions).
 
 Draft clause (illustrative; the `{}` type-sets and `TheaterFloor` are R1, not settled here):
 
@@ -105,10 +112,16 @@ The engine supplies only the firing + the typed slots.
 
 ## 5. Rulings
 
-- **R1 — firing (OPEN).** The three-class structure above (FC1 boundary, FC2 within-extraction split
-  out, naturalized routed away) + the consequence gate. Open sub-decisions: exact type-sets, the
-  `TheaterFloor` value, and whether FC2 fires both directions (`tangled_rope→snare` and
-  `snare→tangled_rope`) or only the "hardening" direction.
+- **R1 — firing (nearly closed).** The three-class structure above + the consequence gate. **Ruled:**
+  type-sets = engine's own axis minus naturalized-routing (settled by code, no new seat); FC2 fires
+  **both directions** (`tangled_rope↔snare`); FC1 fires **both directions** (symmetric — pending
+  operator confirm, recommended). **Still open — the `theater_ratio` floor.** No honest borrow exists:
+  `piton_theater_floor` (0.70) is calibrated for *piton classification* (`config_schema.pl:171`), a
+  different axis; `audit_theater_naturalization_threshold` (0.50) has *no consumer* — a nominal default,
+  never calibrated (naming ≠ calibration — this doc's standing convention applies to threshold reuse).
+  So the theater limb is one of: **(a)** operator declares a value (a seat), **(b)** calibrate against
+  corpus fire-behavior, or **(c)** drop it and rely on the two categorical limbs (coupling-masked ∨
+  no-exit victim), which need no scalar. Recommendation: (c) unless the theater signal proves load-bearing.
 - **R2 — typing (RULED: keep the pair).** Ω_E hit-rate + Ω_P acceptable-FP-rate; do not collapse.
 - **R3 — scope (RULED: narrow, and enforce in code not intent).** Ship as a **single named minter
   predicate** (`mint_detector_calibration_omega/N`) that is the *only* caller of the assert path — NOT
@@ -149,3 +162,12 @@ The engine supplies only the firing + the typed slots.
    explicitly (§3) and routes it to the false-summit apparatus.
 3. **"Fold `tangled_rope↔snare` into lateral/ignore" — CORRECTED.** It is the largest bucket and a
    real within-extraction severity disagreement; split out as FC2 (§3).
+4. **"Fire FC1 on escalation (functional→extractive) preferentially" — CORRECTED to symmetric.** The
+   name "boundary escalation" and its stated justification ("cost of missing extraction > cost of false
+   flag") were incoherent: `functional→extractive` catches engine *false positives* (precision), while
+   "missing extraction" is the `extractive→functional` (recall) direction. Firing preferentially on the
+   named direction would protect precision under a recall argument. FC1 is symmetric; any directional
+   weighting is a separate labeled policy pointing the *other* way.
+5. **"Borrow `piton_theater_floor` for the theater gate" — CORRECTED.** It is calibrated for piton
+   classification, not cover-story/hidden-extraction; borrowing it is a fabricated default under a
+   borrowed name. No calibrated theater floor for this axis exists (see R1).
