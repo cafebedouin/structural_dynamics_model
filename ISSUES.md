@@ -10349,6 +10349,38 @@ stakeholder facts" without patching "facts present but not the ones `detect_gap_
 and silently fails (ii) — which would let this OQ resolve as fixed, R4 reopen on it, and the ~3× net-new
 inflation reappear under a different flavor of insufficient annotation nobody tested against.
 
+**Progress (2026-07-01, branch `oq197-three-valued-gap-operability`):** the three-valued CONTRACT landed
+(commit `b616e625`), built source-agnostic per operator ruling so it survives whichever way (a)/(b) lands.
+`report_generator:gap_status/2` returns `gap(...)` | `no_gap` | `undetermined(no_seats|single_seat|single_power_position)`;
+`detect_gap_pattern/2` firing logic UNCHANGED (byte-identical firing set on testsets, 57=57) — the split is
+additive. `gap_seat_source/1` (default `stakeholder`; `canonical` via `constraint_classification/3` already
+written) is the one-line (a)/(b) seam feeding both firing and operability. `gap_coverage/1` lifted from the
+≥1-seat proxy to the operability precondition (= case-(ii) fix at the `"gaps"` field: insufficient → null).
+Witnessed: `gap_status` total/deterministic (119/119; dist gap=57 no_gap=32 **undetermined=30** — the
+surfaced Pattern-6 population); `dataset_recycling_amplification → no_gap`; 9 two-sided plunit controls
+(`prolog/tests/test_gap_operability.pl`) pass; 0 new corpus-suite failures.
+
+**Consumer map — SIX sites, not five (blast radius, `Files:` for the wiring unit):** (1) `json_report.pl:343`
+`"gaps"` field — now honest via lifted `gap_coverage` (null for undetermined); (2) `json_report.pl:1291`
+`collect_omegas`, (3) `:1669` `constraints_with_gaps`, (4) `:1678` `omega_count` — all still **unguarded →
+silent 0**, must consume `gap_status` and emit a companion undetermined/coverage count; (5)
+`detector_calibration.pl:88` `covers_via_extraction_blindness` — unguarded; (6) **NEWLY FOUND —
+`python/tensions_ledger.py:131`** computes its OWN index-mismatch from `perspectives`, NOT from the `gaps`
+field, and has an independent Pattern-6-adjacent bug: `{v for v in persp.values() if v}` counts `unknown` as
+a diverging value, so `dataset_recycling_amplification` reads "perspectives diverge (no gap pattern matched)"
+purely because analytical is untyped (scaffold-vs-unknown, not a real type gap). The OQ-197 detector fix does
+NOT touch this site; it needs its own repoint to `gap_status` (or at minimum an `unknown` filter). Python
+null→[]/0 collapses also at `query.py:444`, `tensions_ledger.py:125`, `enhanced_report.py:336`.
+
+**Remaining graduation steps (sequenced per operator ruling 2026-07-01):** (1) wire the 6 consumers to the
+three-valued result + assembled-interface witness that `"gaps":null` emits for an undetermined constraint;
+(2) run the two positive controls (kernel_v1 total-absence + twins present-but-insufficient) with their
+negative controls; (3) the **h1_band cross-tab** — on the stakeholder-covered subset (testsets/ + twins),
+cross-tab what source (b) would fire against what `h1_band` already fires; near-identical ⇒ (b) is h1_band
+re-named and (a) is right; divergence ⇒ (b) tracks something distinct — this computation feeds the (a)/(b)
+ruling writeup rather than the writeup arguing from priors; (4) the ruling itself (operator's seat); (5) R4
+net-new recompute on the fixed detector — HELD until (1)–(4) land.
+
 ---
 
 *Last updated: 2026-06-30. Add new items with sequential OQ-NN labels. Mark

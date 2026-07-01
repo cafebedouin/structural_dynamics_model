@@ -45,6 +45,33 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-01 — OQ-197 three-valued gap operability CONTRACT landed (branch, behavior-preserving); 6th consumer found
+**Files:** prolog/report_generator.pl, prolog/tests/test_gap_operability.pl, python/tensions_ledger.py, python/json_report.pl, prolog/detector_calibration.pl
+**Tier:** landed
+
+Branch `oq197-three-valued-gap-operability`, commit `b616e625`. Added `report_generator:gap_status/2`
+→ `gap(...)` | `no_gap` | `undetermined(no_seats|single_seat|single_power_position)`, closing the
+Pattern-6 collapse in the gap detector. Built **source-parameterized** per operator ruling (2026-07-01):
+`gap_seat_source/1` (default `stakeholder`; `canonical` via `constraint_classification/3` written) feeds
+BOTH `detect_gap_pattern/2` and `gap_status/2` through `seat_type_reading/2-3`, so the OQ-197 (a)/(b)
+ruling is a one-line change. `detect_gap_pattern/2` firing logic UNCHANGED — the split is additive.
+`gap_coverage/1` lifted from ≥1-seat proxy to the operability precondition (case-(ii) fix at the `"gaps"`
+field). Witnessed: firing byte-identical (57=57 diff-empty on testsets); `gap_status` total/deterministic
+(119/119; gap=57 no_gap=32 undetermined=30); `dataset_recycling_amplification → no_gap`; 9 two-sided
+plunit controls pass; 0 new corpus-suite failures (20 pre-existing mountain/nl drift, baseline-confirmed
+old==new).
+
+**Finding — the ledger "no gap pattern matched" line is a SIXTH consumer with its own bug.**
+`tensions_ledger.py:131` computes index-mismatch from `perspectives`, not the `gaps` field, and
+`{v for v in persp.values() if v}` counts `unknown` as a diverging value — so
+`dataset_recycling_amplification` reads "perspectives diverge" purely because `analytical` is untyped
+(scaffold-vs-unknown, not a real gap). OQ-197's detector fix does not reach it; it needs repointing to
+`gap_status` or an `unknown` filter. Remaining OQ-197 graduation steps + full 6-site consumer map are in
+ISSUES.md OQ-197 (Progress 2026-07-01). Sequenced: wire consumers → two positive controls → h1_band
+cross-tab → (a)/(b) ruling → R4 recompute (held).
+
+---
+
 ## 2026-06-30 — detector self-assessment: Slice A (author×engine cross-tab) LANDED; Slice B (calibration omega) proposal awaiting ruling
 **Files:** prolog/routing_sink.pl, docs/design/detector_calibration_omega_proposal.md, outputs/routing_sink.json
 **Tier:** landed
