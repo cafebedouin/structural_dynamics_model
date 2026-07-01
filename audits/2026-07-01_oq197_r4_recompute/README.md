@@ -52,6 +52,36 @@ external, no corpus ground truth) and what false-positive rate is *acceptable* (
 Those are the proposal's declared open seats. The recompute removes the retracted-inflation confound so
 the ruling turns on calibration, not on a bad number.
 
+## Per-firing diversity — for the wire-as-instrument vs corpus-level-OQ call (does NOT make it)
+
+The operator's decision criterion: do per-constraint firings tell a reviewer more than one aggregate
+caveat, or do they all carry the identical "calibration open" caveat differing only in which
+constraint? Measured the distinct `(Class, author-type→engine-type)` signatures over the determinable
+firings:
+
+```
+                determinable firings   distinct signatures   dominant
+testsets_haiku          39                     5             boundary mountain→tangled_rope ×36
+testsets_flash          41                     6             boundary mountain→tangled_rope ×32
+                                                             (2nd: tangled_rope→rope ×23 / ×27)
+```
+
+- **Low diversity: 5–6 signatures, dominated by 1–2.** The firings are NOT 39/41 distinct kinds of
+  disagreement — ~90% are two directional patterns. A reviewer triaging the per-constraint firings
+  would see the same handful repeated; the per-constraint specificity is mostly "which constraint,"
+  not "which kind."
+- **The dominant signature is the false-summit direction** (author claims `mountain`, engine computes
+  `tangled_rope`) — already a known corpus-level phenomenon (OQ-70 FNL/bait-confound, the false_summit
+  apparatus). So detector_calibration's net-new is largely re-surfacing a systematic pattern that is
+  itself corpus-level, not 39 novel per-constraint findings.
+- **Reading (for the operator, not a ruling):** this leans toward the **corpus-level-OQ carrier** — a
+  handful of "author→engine directional disagreement patterns, calibration open (Ω_E), FP-rate unset
+  (Ω_P)" summaries capture most of the information; 39 per-constraint firings would be ~90% repetition
+  of two patterns. If the operator wants per-constraint drill-down (which constraints carry the
+  false-summit direction) the firing adds that, but the KIND-level content is low-entropy. The
+  wire-as-declared-open option remains coherent; the diversity just shifts the balance toward the
+  aggregate carrier being the honest one.
+
 ## Caveats
 
 - `detector_calibration.pl` loaded READ-ONLY to measure; not wired, not committed. The wire/no-wire
