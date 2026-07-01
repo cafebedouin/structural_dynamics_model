@@ -10375,11 +10375,17 @@ null→[]/0 collapses also at `query.py:444`, `tensions_ledger.py:125`, `enhance
 **Remaining graduation steps (sequenced per operator ruling 2026-07-01):** (1) wire the 6 consumers to the
 three-valued result + assembled-interface witness that `"gaps":null` emits for an undetermined constraint;
 (2) run the two positive controls (kernel_v1 total-absence + twins present-but-insufficient) with their
-negative controls; (3) the **h1_band cross-tab** — on the stakeholder-covered subset (testsets/ + twins),
-cross-tab what source (b) would fire against what `h1_band` already fires; near-identical ⇒ (b) is h1_band
-re-named and (a) is right; divergence ⇒ (b) tracks something distinct — this computation feeds the (a)/(b)
-ruling writeup rather than the writeup arguing from priors; (4) the ruling itself (operator's seat); (5) R4
-net-new recompute on the fixed detector — HELD until (1)–(4) land.
+negative controls; (3) the **h1_band cross-tab** — **DONE for testsets (2026-07-01, `audits/2026-07-01_oq197_source_h1_crosstab/`),
+points toward (a):** on the both-sources-determinate subset (n=84) canonical (b) firing is EXACTLY coextensive
+with `h1_band>0` (58/58 fire↔pos, 26/26 no_gap↔zero, zero off-diagonal — (b) is `h1_band`'s construction, a
+redundant recomputation), while stakeholder (a) is DISTINCT from `h1_band` on 3/84 (authored-stakeholder
+disagreement `h1_band` does not carry). Source-explicit `gap_status/3`/`detect_gap_pattern/3` landed to run it
+(commit `6bda83ec`), which also caught+fixed a bug: the b616e625 canonical clause used
+`constraint_classification/3` with an unbound context (mode `+Context`) → 0 seats; fixed to `dr_type/3` via
+`standard_context_for_power/2`. **PENDING: the twins extension** (`testsets_haiku/`+`testsets_flash/` need
+their own pipeline `h1_band` + a both-source `gap_status` pass under a `corpus_path` overlay) before
+(a)-is-distinct generalizes past n=84/3-divergences. (4) the ruling itself (operator's seat — now evidence-fed,
+not prior-argued); (5) R4 net-new recompute on the fixed detector — HELD until (1)–(4) land.
 
 ---
 

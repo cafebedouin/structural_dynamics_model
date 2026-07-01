@@ -45,6 +45,24 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-01 — OQ-197 (a)/(b) cross-tab: canonical (b) ≡ h1_band, stakeholder (a) distinct; canonical-source bug fixed
+**Files:** prolog/report_generator.pl, audits/2026-07-01_oq197_source_h1_crosstab/
+**Tier:** correction-key
+
+Commit `6bda83ec`. Made `gap_status`/`detect_gap_pattern` source-explicit (`/3`) to evaluate both (a)/(b)
+sources per constraint; firing under default byte-identical (57=57). Cross-tab on the both-sources-determinate
+testsets subset (n=84): canonical (b) firing EXACTLY coextensive with `h1_band>0` (58/58, 26/26, zero
+off-diagonal — definitional, same orbit) ⇒ (b) is a redundant recomputation of `h1_band`; stakeholder (a)
+distinct on 3/84 (authored-stakeholder disagreement `h1_band` lacks). Evidence points toward ruling (a); ruling
+stays operator's seat, now evidence-fed. **Correction to b616e625:** its canonical (b) seat clause used
+`constraint_classification/3` with an UNBOUND context (mode `+Context`) → 0 seats for every constraint (a dead,
+unwitnessed branch — my contract witnesses were all stakeholder-path). Fixed to `drl_core:dr_type/3` via
+`logical_fingerprint:standard_context_for_power/2` over the 4 canonical positions (the `write_perspectives`/
+`h1_band` source). Lesson: a branch dead under the default config still needs its own witness — the cross-tab
+was the first thing to exercise it. Twins extension pending (see ISSUES.md OQ-197 step 3).
+
+---
+
 ## 2026-07-01 — OQ-197 three-valued gap operability CONTRACT landed (branch, behavior-preserving); 6th consumer found
 **Files:** prolog/report_generator.pl, prolog/tests/test_gap_operability.pl, python/tensions_ledger.py, python/json_report.pl, prolog/detector_calibration.pl
 **Tier:** landed
