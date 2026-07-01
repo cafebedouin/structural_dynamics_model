@@ -78,6 +78,14 @@ four. The engine supplies only the firing + the typed slots.
 - **R1 — firing threshold.** Snare/rope only? Keep the theater∨coupling∨no-exit disjunction,
   or narrow it? `TheaterFloor` value? (A too-loose gate mints OPEN omegas everywhere — the
   "scope creep / Omegas everywhere" Ω_C in `omega_variables.md`.)
+  - *Empirical input (Slice A, 2026-06-30):* the seat-divergence is **directional**, not
+    symmetric. Under an extraction-severity banding of the off-diagonal (a declared seat;
+    robust across two bandings), the engine ranks the constraint **more** extractive than the
+    author **2.3–3.1× more often** than **less** (escalate 199/65% vs de-escalate 65/21% with
+    scaffold=MIXED; 147/48% vs 64/21% with scaffold=LEGIT). So a firing condition keyed on the
+    **escalation transitions specifically** (author ≤ mixed, engine ≥ extractive) is both
+    narrower and better-targeted than general type-mismatch. NB this is a *seat-disagreement
+    direction*, NOT "the detector over-calls" — which side is right is the open Ω_E.
 - **R2 — the Ω_E/Ω_P split.** Confirm the pair, or rule it a single type.
 - **R3 — engine-minted vs authoring-convention.** Should the engine **auto-mint** this OPEN
   omega (a new pattern: engine-minted omega, vs today's per-story authored `omega_variable/3`),
