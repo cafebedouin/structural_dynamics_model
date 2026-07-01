@@ -78,14 +78,29 @@ four. The engine supplies only the firing + the typed slots.
 - **R1 — firing threshold.** Snare/rope only? Keep the theater∨coupling∨no-exit disjunction,
   or narrow it? `TheaterFloor` value? (A too-loose gate mints OPEN omegas everywhere — the
   "scope creep / Omegas everywhere" Ω_C in `omega_variables.md`.)
-  - *Empirical input (Slice A, 2026-06-30):* the seat-divergence is **directional**, not
-    symmetric. Under an extraction-severity banding of the off-diagonal (a declared seat;
-    robust across two bandings), the engine ranks the constraint **more** extractive than the
-    author **2.3–3.1× more often** than **less** (escalate 199/65% vs de-escalate 65/21% with
-    scaffold=MIXED; 147/48% vs 64/21% with scaffold=LEGIT). So a firing condition keyed on the
-    **escalation transitions specifically** (author ≤ mixed, engine ≥ extractive) is both
-    narrower and better-targeted than general type-mismatch. NB this is a *seat-disagreement
-    direction*, NOT "the detector over-calls" — which side is right is the open Ω_E.
+  - *Empirical input (Slice A, 2026-06-30) — CORRECTED same day:* an earlier draft here
+    claimed the seat-divergence is **directional** (engine escalates 2.3–3.1× more than it
+    de-escalates). **That claim was under-witnessed and is retracted.** The direction is entirely
+    an artifact of where `tangled_rope` sits on the extraction axis — the load-bearing placement,
+    which the original sensitivity check (varying only `scaffold`) failed to test. Under the
+    **engine's own declared gap taxonomy** (`report_generator.pl:243-248`: extractive =
+    {snare, tangled_rope}; functional = {rope, naturalized, scaffold, mountain}), the split is
+    **symmetric — escalate 69 vs de-escalate 75 (0.92:1)**; the 106-seat `tangled_rope→snare`
+    bucket that carried the "escalation" story is *lateral* there (both extractive). So the only
+    robust facts are the **77% seat-disagreement** and its concentration at the `tangled_rope↔snare`
+    boundary — NOT a direction. **Implication for R1:** do NOT key firing on "escalation direction"
+    (it depends on a contested banding). Key it on the engine's own extractive/functional axis +
+    the hidden-extraction shape, which is a declared engine seat rather than an imposed one.
+
+### R4-guard — avoid double-minting with `omega_extraction_blindness`
+
+`omega_extraction_blindness` (`report_generator.pl:285`) already fires on 56 constraints, keyed
+on a DIFFERENT axis: *intra-engine, cross-seat* — an extractive-typed seat at LOWER power beside a
+functional-typed seat at HIGHER power (the cover-story structure). `detector_calibration`'s axis is
+*engine-vs-author*. They are largely disjoint (partial overlap only), but they CAN co-fire on the
+same constraint. **R4 must gate `detector_calibration_due/1` to NOT mint where `extraction_blindness`
+already fired** — a structural guard that prevents double-minting on one gap under two names without
+needing an exact overlap count.
 - **R2 — the Ω_E/Ω_P split.** Confirm the pair, or rule it a single type.
 - **R3 — engine-minted vs authoring-convention.** Should the engine **auto-mint** this OPEN
   omega (a new pattern: engine-minted omega, vs today's per-story authored `omega_variable/3`),
