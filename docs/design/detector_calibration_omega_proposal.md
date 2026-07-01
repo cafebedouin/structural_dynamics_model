@@ -138,23 +138,33 @@ The engine supplies only the firing + the typed slots.
   cover-story), (2) naturalized/false_summit routing (handled structurally by the type-sets), (3) FC2
   re-collision (covered by (1) at constraint granularity). Implemented in `detector_calibration.pl`.
 
-  **Witnessed overlap finding (2026-06-30) — bears on whether to wire at all.** With the module built
-  and run on the live corpus (119), the firing funnel is: **72** have an FC1/FC2 firing seat → **58**
-  pass the consequence gate (coupling-masked 58 ∨ no-exit-victim 38; both limbs active, not a silent
-  no-op) → **2** survive the R4 guard. **56 of 58 (~97%) are already covered by `extraction_blindness`.**
-  The two omegas are near-coextensional on this corpus — the calibration-worthy disagreement population
-  is almost exactly the population the cover-story detector already flags. Net-new firings:
-  `doomsday_clock_metric__hybrid_legitimacy_reading`, `organization_floor_c0`.
+  **Witnessed CROSS-CORPUS finding (2026-06-30) — the singleton corpus misled; measured on all legs.**
+  Per the "exercise an engine change across ALL corpora" rule, the funnel was run on the four corpora
+  (fresh process + `corpus_path` overlay each; totals verified so the overlay took effect):
 
-  So R4 is a *value* call (operator's seat; "judge a subsystem by its contribution"): **same coverage,
-  different question.** detector_calibration asks a calibration Ω_E/Ω_P that `extraction_blindness` (a
-  conceptual cross-seat gap) does not — but it adds only 2 constraints of firing surface beyond it.
-  Options: **(a)** ship it (2 net + the distinct calibration framing surfaced per-constraint); **(b)**
-  record the ~97%-coextension as the deliverable and do NOT add a near-duplicate firing surface (keep
-  the module unwired, log the finding); **(c)** revisit guard granularity (seat-level not constraint-
-  level) to surface more net-new — reopens the double-mint question. Recommendation: **(b)** — the
-  coextension IS the result; a 2-firing near-duplicate is clutter for marginal coverage, and the distinct
-  question is better carried by the finding + one OQ than by a near-redundant per-constraint omega.
+  | corpus | N | firing_seat | gated | eb-overlap | **net-new** | overlap % |
+  |---|---|---|---|---|---|---|
+  | `testsets/` (singleton) | 119 | 72 | 58 | 56 | **2** | 97% |
+  | `testsets_haiku/` | 960 | 694 | 362 | 319 | **43** | 88% |
+  | `testsets_flash/` | 960 | 639 | 487 | 434 | **53** | 89% |
+  | `kernel_v1/` (archive) | 1106 | 984 | 929 | 0 | **929** | N/A |
+
+  **The 97% "near-redundant" was a singleton-`testsets/` artifact.** On the reconciled twins (the real
+  comparison baseline) the overlap is 88–89% with **43–53 net-new** firings (~12% of gated) — a real,
+  non-trivial contribution, not clutter. **Recommendation flips from (b) toward (a): ship it.**
+
+  `kernel_v1`'s row is **not comparable**: `extraction_blindness` is stakeholder-keyed
+  (`seat_type_reading/2` reads `constraint_stakeholder/7`) and kernel_v1 has **0 stakeholder facts**, so
+  the baseline omega is structurally inoperative there and the guard is vacuous (the 929 is unguarded, not
+  "uncovered value"). `detector_calibration` still fires there via canonical-seat readings + the
+  coupling-masked limb (its no-exit-victim limb is also stakeholder-dependent, so 0 on kernel_v1).
+
+  **Incidental finding (separate OQ candidate):** on any corpus lacking authored `constraint_stakeholder`
+  facts, `extraction_blindness` (and all gap omegas via `seat_type_reading`) read **silently empty** —
+  even though `dr_type` produces the cover-story structure (944/1106 kernel_v1 constraints have ≥2 distinct
+  cross-seat engine types; `isaac_covenant` = `[naturalized,tangled_rope,rope,snare]`). A legacy-corpus
+  audit relying on gap omegas would see 0 and could conclude "no cover-story" when it's "didn't look"
+  (Pattern 6). This is upstream of detector_calibration and worth its own OQ.
 
 ## 6. Apparatus-first recon (what already exists — so this extends, not duplicates)
 
