@@ -10409,7 +10409,23 @@ there; left an R4-site note on disk (its `already_covered` treating undetermined
 inflation mechanism — changing it = the held recompute). Witnessed at the JSON boundary (pipeline exit 0, mtime
 advanced): behavior preserved (`constraints_with_gaps`=57, `omega_count`=57), companions examined=89/undetermined=30,
 0 gap_status↔gaps consistency violations, schema 0 errors, human labels distinguish all three (query + ledger),
-gate GREEN. Remaining: (2) the two positive controls (kernel_v1 + twins), (5) R4 net-new recompute — HELD until (2).
+gate GREEN.
+
+**(2) positive controls DONE (2026-07-01, `audits/2026-07-01_oq197_acceptance_controls/`) — acceptance MET, with
+a refinement.** Counts reproduced FROM SUBSTRATE (not the doc): kernel_v1 canonical-varying = **944** exactly
+(stakeholder_facts=0 confirmed); twin `detector_calibration` net-new = **43/53** and net-new ∩ stakeholders-present
+∩ `detect_gap_pattern`-fails = **29/41** exactly (read-only load of the untracked `detector_calibration.pl` to
+reproduce its net-new set). **Case (i):** all 944 read `undetermined(no_seats)` under source (a), never silent 0;
+NEGATIVE control same run — canonical (b) discriminates (gap=944, no_gap=152), so not a stuck probe. **Case (ii)
+REFINEMENT:** the 29/41 are NOT monolithically undetermined — under the three-valued contract they split (haiku
+29 = 4 undetermined + 25 no_gap; flash 41 = 12 undetermined + 29 no_gap). The 4/12 (`<2` power positions) are the
+genuinely-inexaminable ones the old `gap_coverage`≥1 emitted as FALSE `[]`, now correctly `undetermined`; the
+25/29 have ≥2 seats spanning ≥2 powers that genuinely AGREE → real `no_gap`. None silent 0 (all labeled). Honest:
+the doc's premise that the 29/41 were uniformly "insufficient" was imprecise — most were present-AND-sufficient-
+but-agreeing; the literal "29/41 read undetermined" is refuted for the majority BY the fix being more precise.
+NEGATIVE control same run — source (a) produces gap+no_gap+undetermined on both twins (haiku 365/114; flash
+480/232), not vacuously undetermined. Remaining: (5) R4 net-new recompute — HELD (it is the `detector_calibration`
+`already_covered` change, itself gated on that module's proposal ruling).
 
 ---
 

@@ -45,6 +45,24 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-01 — OQ-197 acceptance controls PASS (kernel_v1 944 + twins 29/41 reproduced from substrate); case-(ii) refinement
+**Files:** audits/2026-07-01_oq197_acceptance_controls/, prolog/report_generator.pl
+**Tier:** landed
+
+The graduation witness for the OQ-197 chain. Counts reproduced from substrate, not the doc:
+kernel_v1 canonical-varying=944 exactly (stakeholder_facts=0); twin detector_calibration net-new=43/53 and
+net-new ∩ stakeholders-present ∩ detect_gap_pattern-fails=29/41 exactly (read-only load of untracked
+detector_calibration.pl). **Case (i):** 944 read undetermined(no_seats) under source (a), never silent 0;
+negative control same run — canonical (b) discriminates gap=944/no_gap=152. **Case (ii) REFINEMENT:** the
+29/41 are NOT uniformly undetermined — three-valued split is haiku 4 undetermined + 25 no_gap, flash 12 + 29.
+The 4/12 (<2 power positions) are the genuinely-inexaminable false-`[]` rescues → now undetermined; the 25/29
+have ≥2 seats spanning ≥2 powers agreeing → genuine no_gap. None silent 0 (all labeled). The doc's premise
+that the 29/41 were uniformly "insufficient" was imprecise — the fix is more precise. Negative control same
+run — source (a) produces gap+no_gap+undetermined on both twins. OQ-197 fix witnessed end-to-end; only (5) R4
+recompute remains, held on the detector_calibration proposal ruling.
+
+---
+
 ## 2026-07-01 — OQ-197 consumer wiring landed (4 live sites, labeled); detector_calibration.pl is UNTRACKED/unwired WIP
 **Files:** prolog/json_report.pl, python/shared/schemas.py, python/query.py, python/tensions_ledger.py, prolog/detector_calibration.pl
 **Tier:** tripwire

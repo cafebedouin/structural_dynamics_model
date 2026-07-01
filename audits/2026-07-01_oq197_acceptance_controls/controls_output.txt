@@ -1,0 +1,53 @@
+==== kernel_v1 ====
+  corpus_constraints=1106  stakeholder_facts=0  canonical_cross_seat_varying=944
+  gap_status distribution:
+    source=stakeholder:
+      gap: 0
+      no_gap: 0
+      undet(no_seats): 1106
+      undet(single_seat): 0
+      undet(single_power_position): 0
+    source=canonical:
+      gap: 944
+      no_gap: 152
+      undet(no_seats): 0
+      undet(single_seat): 10
+      undet(single_power_position): 0
+  canonical-varying under source(a): undetermined=944 gap=0 no_gap=0  (sum must = 944)
+  case(ii) stakeholders-PRESENT under source(a): undetermined=0 (present-but-insufficient) | gap=0 | no_gap=0
+==== testsets_haiku ====
+  corpus_constraints=960  stakeholder_facts=3774  canonical_cross_seat_varying=687
+  gap_status distribution:
+    source=stakeholder:
+      gap: 365
+      no_gap: 114
+      undet(no_seats): 466
+      undet(single_seat): 8
+      undet(single_power_position): 7
+    source=canonical:
+      gap: 687
+      no_gap: 196
+      undet(no_seats): 6
+      undet(single_seat): 71
+      undet(single_power_position): 0
+  canonical-varying under source(a): undetermined=341 gap=342 no_gap=4  (sum must = 687)
+  case(ii) stakeholders-PRESENT under source(a): undetermined=15 (present-but-insufficient) | gap=365 | no_gap=114
+  testsets_haiku detector_calibration net-new=43 | net-new&detect_fails(=doc 29/41)=29 SPLIT-> undetermined=4 no_gap=25
+==== testsets_flash ====
+  corpus_constraints=960  stakeholder_facts=4144  canonical_cross_seat_varying=637
+  gap_status distribution:
+    source=stakeholder:
+      gap: 480
+      no_gap: 232
+      undet(no_seats): 214
+      undet(single_seat): 17
+      undet(single_power_position): 17
+    source=canonical:
+      gap: 637
+      no_gap: 232
+      undet(no_seats): 0
+      undet(single_seat): 91
+      undet(single_power_position): 0
+  canonical-varying under source(a): undetermined=152 gap=471 no_gap=14  (sum must = 637)
+  case(ii) stakeholders-PRESENT under source(a): undetermined=36 (present-but-insufficient) | gap=480 | no_gap=232
+  testsets_flash detector_calibration net-new=53 | net-new&detect_fails(=doc 29/41)=41 SPLIT-> undetermined=12 no_gap=29
