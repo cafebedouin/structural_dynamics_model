@@ -132,12 +132,29 @@ The engine supplies only the firing + the typed slots.
   a general `engine_mint_omega/…` facility with one current caller. The R3 boundary must be something
   the next agent hits **structurally** (there is no general minter to reuse), not a comment they have
   to remember was intended.
-- **R4 — mint + wire (OPEN, held for R1).** Wire `detector_calibration_due/2` into the pipeline +
-  reports and mint the OQ in ISSUES.md (Priority/Deps). **Three-branch overlap guard** — before
-  minting, verify the transition is not already covered by: (1) `extraction_blindness` (cross-seat
-  cover-story), (2) the naturalized/false_summit routing (FC-naturalized above), and (3) — if FC2
-  ships — that the `tangled_rope↔snare` firing does not itself re-collide with (1) or (2). One branch
-  per already-existing omega axis, so no gap is minted twice under two names.
+- **R4 — mint + wire (OPEN — now a value decision, see finding below).** Wire
+  `detector_calibration_due/2` into the pipeline + reports and mint the OQ in ISSUES.md. **Three-branch
+  overlap guard** — verify the firing is not already covered by: (1) `extraction_blindness` (cross-seat
+  cover-story), (2) naturalized/false_summit routing (handled structurally by the type-sets), (3) FC2
+  re-collision (covered by (1) at constraint granularity). Implemented in `detector_calibration.pl`.
+
+  **Witnessed overlap finding (2026-06-30) — bears on whether to wire at all.** With the module built
+  and run on the live corpus (119), the firing funnel is: **72** have an FC1/FC2 firing seat → **58**
+  pass the consequence gate (coupling-masked 58 ∨ no-exit-victim 38; both limbs active, not a silent
+  no-op) → **2** survive the R4 guard. **56 of 58 (~97%) are already covered by `extraction_blindness`.**
+  The two omegas are near-coextensional on this corpus — the calibration-worthy disagreement population
+  is almost exactly the population the cover-story detector already flags. Net-new firings:
+  `doomsday_clock_metric__hybrid_legitimacy_reading`, `organization_floor_c0`.
+
+  So R4 is a *value* call (operator's seat; "judge a subsystem by its contribution"): **same coverage,
+  different question.** detector_calibration asks a calibration Ω_E/Ω_P that `extraction_blindness` (a
+  conceptual cross-seat gap) does not — but it adds only 2 constraints of firing surface beyond it.
+  Options: **(a)** ship it (2 net + the distinct calibration framing surfaced per-constraint); **(b)**
+  record the ~97%-coextension as the deliverable and do NOT add a near-duplicate firing surface (keep
+  the module unwired, log the finding); **(c)** revisit guard granularity (seat-level not constraint-
+  level) to surface more net-new — reopens the double-mint question. Recommendation: **(b)** — the
+  coextension IS the result; a 2-firing near-duplicate is clutter for marginal coverage, and the distinct
+  question is better carried by the finding + one OQ than by a near-redundant per-constraint omega.
 
 ## 6. Apparatus-first recon (what already exists — so this extends, not duplicates)
 
