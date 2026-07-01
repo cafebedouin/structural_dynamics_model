@@ -61,11 +61,15 @@ The three ways a both-speak seat can disagree, and how each is handled:
   `{rope, scaffold, mountain}` and the other is extractive `{snare, tangled_rope}` — **either
   direction**. `functional→extractive` is a candidate engine false-positive (precision); its mirror
   `extractive→functional` is a candidate engine false-negative / miss (recall). Both are
-  calibration-relevant and which side is right is unknown, so FC1 fires symmetrically — same reason as
-  FC2, NOT because a direction was chosen. (The earlier name "boundary escalation" was itself a
-  directional carryover of the retracted premise — see Corrections log #4. A recall-over-precision
-  *policy*, if ever adopted, is a separate explicitly-labeled decision and would weight
-  `extractive→functional` (misses), the opposite of what "escalation" named.) **Fires.**
+  calibration-relevant and which side is right is unknown, so FC1 fires symmetrically. The *positive*
+  reason (not merely "no justification for asymmetry was supplied"): an asymmetric FC1 firing only on
+  `functional→extractive` would make the calibration omega **structurally blind to the engine's own
+  under-calling** — the `extractive→functional` case, where the engine clears what the author flagged
+  as extraction. That is a false negative in exactly the thing a hidden-extraction detector exists to
+  catch; a calibration mechanism must not be built unable to see it. Symmetric is the better design,
+  not just the cautious default. (A recall-over-precision *policy*, if ever adopted, is a separate
+  explicitly-labeled decision and would weight `extractive→functional`, the opposite of what the old
+  name "boundary escalation" implied — Corrections log #4.) **Fires.**
 - **FC2 — severity-within-extraction** (the largest single bucket, ~⅓ of the off-diagonal:
   `tangled_rope↔snare`). Both sides are extractive, so a boundary axis drops this on the floor as
   "lateral" — but author=`tangled_rope` (contested/hedged extraction) vs engine=`snare` (clean,
@@ -83,8 +87,11 @@ The three ways a both-speak seat can disagree, and how each is handled:
 **Consequence gate** (keeps it from firing on every mismatch — narrowness is R1): the seat's
 constraint must be hard-to-externally-check *and* consequential. Two **categorical** limbs need no
 scalar and are safe now — coupling-masked (`coupling.boltzmann = non_compliant`) ∨ an authored no-exit
-(`trapped`) victim bears the call. A third **scalar** limb — `theater_ratio ≥ floor` (cover-story
-machinery) — is held pending R1 (no honest borrow exists for the floor; see R1 sub-decisions).
+(`trapped`) victim bears the call. The scalar `theater_ratio ≥ floor`
+limb is **dropped** (R1 ruled): no honest borrow exists and an uncalibrated default is worse than
+relying on the two categorical limbs. If the theater signal later proves load-bearing, it returns only
+via calibration-against-corpus-fire-behavior carrying its own witness (a shown run), never a borrowed
+constant.
 
 Draft clause (illustrative; the `{}` type-sets and `TheaterFloor` are R1, not settled here):
 
@@ -112,16 +119,13 @@ The engine supplies only the firing + the typed slots.
 
 ## 5. Rulings
 
-- **R1 — firing (nearly closed).** The three-class structure above + the consequence gate. **Ruled:**
-  type-sets = engine's own axis minus naturalized-routing (settled by code, no new seat); FC2 fires
-  **both directions** (`tangled_rope↔snare`); FC1 fires **both directions** (symmetric — pending
-  operator confirm, recommended). **Still open — the `theater_ratio` floor.** No honest borrow exists:
-  `piton_theater_floor` (0.70) is calibrated for *piton classification* (`config_schema.pl:171`), a
-  different axis; `audit_theater_naturalization_threshold` (0.50) has *no consumer* — a nominal default,
-  never calibrated (naming ≠ calibration — this doc's standing convention applies to threshold reuse).
-  So the theater limb is one of: **(a)** operator declares a value (a seat), **(b)** calibrate against
-  corpus fire-behavior, or **(c)** drop it and rely on the two categorical limbs (coupling-masked ∨
-  no-exit victim), which need no scalar. Recommendation: (c) unless the theater signal proves load-bearing.
+- **R1 — firing (CLOSED, operator 2026-06-30).** Type-sets = engine's own axis minus naturalized-routing
+  (settled by code, no new seat); FC1 fires **both directions** (symmetric — so the omega is not blind to
+  the engine's own under-calling); FC2 fires **both directions** (`tangled_rope↔snare`); the
+  `theater_ratio` scalar limb is **dropped** (no honest borrow; `piton_theater_floor` 0.70 is calibrated
+  for piton classification per `config_schema.pl:171`, `audit_theater_naturalization_threshold` 0.50 has
+  no consumer). Consequence gate = the two **categorical** limbs only (coupling-masked ∨ no-exit victim).
+  Theater returns, if ever, only via calibration-with-witness, never a borrow.
 - **R2 — typing (RULED: keep the pair).** Ω_E hit-rate + Ω_P acceptable-FP-rate; do not collapse.
 - **R3 — scope (RULED: narrow, and enforce in code not intent).** Ship as a **single named minter
   predicate** (`mint_detector_calibration_omega/N`) that is the *only* caller of the assert path — NOT
@@ -162,12 +166,16 @@ The engine supplies only the firing + the typed slots.
    explicitly (§3) and routes it to the false-summit apparatus.
 3. **"Fold `tangled_rope↔snare` into lateral/ignore" — CORRECTED.** It is the largest bucket and a
    real within-extraction severity disagreement; split out as FC2 (§3).
-4. **"Fire FC1 on escalation (functional→extractive) preferentially" — CORRECTED to symmetric.** The
-   name "boundary escalation" and its stated justification ("cost of missing extraction > cost of false
-   flag") were incoherent: `functional→extractive` catches engine *false positives* (precision), while
-   "missing extraction" is the `extractive→functional` (recall) direction. Firing preferentially on the
-   named direction would protect precision under a recall argument. FC1 is symmetric; any directional
-   weighting is a separate labeled policy pointing the *other* way.
+4. **"Fire FC1 on escalation (functional→extractive) preferentially" — CORRECTED to symmetric.**
+   Precise statement of what was and wasn't established: no justification for an asymmetric FC1 was ever
+   *supplied* (the asymmetric case was raised as a question — "policy or carryover?" — not defended), so
+   "the justification turned out incoherent" would itself be asserting-without-showing. The reason FC1 is
+   symmetric is positive and design-level: an asymmetric FC1 (`functional→extractive` only) would make the
+   omega structurally blind to the engine's *under-calling* (`extractive→functional`), a false negative in
+   the very thing a hidden-extraction detector exists to catch. Separately, note for any future policy
+   proposal: `functional→extractive` is the precision (false-positive) direction, so a recall-motivated
+   ("missing extraction is costly") weighting would point at `extractive→functional`, not at what the old
+   "escalation" name implied.
 5. **"Borrow `piton_theater_floor` for the theater gate" — CORRECTED.** It is calibrated for piton
    classification, not cover-story/hidden-extraction; borrowing it is a fabricated default under a
    borrowed name. No calibrated theater floor for this axis exists (see R1).
