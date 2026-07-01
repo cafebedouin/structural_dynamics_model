@@ -159,12 +159,33 @@ The engine supplies only the firing + the typed slots.
   "uncovered value"). `detector_calibration` still fires there via canonical-seat readings + the
   coupling-masked limb (its no-exit-victim limb is also stakeholder-dependent, so 0 on kernel_v1).
 
-  **Incidental finding (separate OQ candidate):** on any corpus lacking authored `constraint_stakeholder`
-  facts, `extraction_blindness` (and all gap omegas via `seat_type_reading`) read **silently empty** —
-  even though `dr_type` produces the cover-story structure (944/1106 kernel_v1 constraints have ≥2 distinct
-  cross-seat engine types; `isaac_covenant` = `[naturalized,tangled_rope,rope,snare]`). A legacy-corpus
-  audit relying on gap omegas would see 0 and could conclude "no cover-story" when it's "didn't look"
-  (Pattern 6). This is upstream of detector_calibration and worth its own OQ.
+  **REFINEMENT (2026-06-30) — the twin net-new is mostly the same artifact; recommendation flips back
+  to HOLD.** Partitioning the twin net-new by whether `extraction_blindness` was even *operative* (its own
+  precondition: `seat_type_reading` yields ≥2 typeable seats with ≥2 distinct types):
+
+  | corpus | net-new | genuine (eb operative, didn't fire) | artifact (eb inoperative) | net-new w/ 0 stakeholders |
+  |---|---|---|---|---|
+  | haiku | 43 | **14** | 29 | 0 |
+  | flash | 53 | **12** | 41 | 0 |
+
+  Genuine calibration-only contribution is **14 / 12** (~3% of gated), not 43 / 53 (~12%) — the metric that
+  flipped the rec to (a) last step was inflated ~3× by Pattern-6. Note **every** net-new constraint HAS
+  stakeholders (range 4–10) — the artifact is *stakeholders-present-but-insufficient*, so a stakeholder-count
+  check would pass it; only the real `eb_operative` precondition catches it. Further, the 14/12 genuine ones
+  are `eb_operative` ⟹ they already carry the `general_type_mismatch`/`omega_perspectival` fallback omega
+  (just not `extraction_blindness`); the constraints where detector_calibration is the *sole* omega are the
+  29/41 Pattern-6 ones — coverage over a broken baseline, not orthogonal value. **Net: the recommendation
+  is HOLD (b-with-hold), not ship — detector_calibration's genuine incremental value cannot be estimated
+  until the baseline is fixed.**
+
+  **Incidental finding, now PROMOTED to the blocking issue (its own OQ, higher priority than this omega):**
+  `extraction_blindness` and all gap omegas (via `seat_type_reading → constraint_stakeholder/7`) read
+  **silently empty** whenever the stakeholder annotation is absent (kernel_v1: 0 facts → 0/1106 fire) OR
+  present-but-insufficient (twins: 29/41 of the net-new set) — even though `dr_type` produces the cover-story
+  structure (944/1106 kernel_v1 constraints have ≥2 cross-seat types; `isaac_covenant` =
+  `[naturalized,tangled_rope,rope,snare]`). **Every gap-omega read on every corpus is currently unfalsifiable
+  between "checked, found nothing" and "didn't check" unless stakeholder-operability is verified first.** That
+  is a corpus-integrity question larger than whether detector_calibration ships, and R4 is blocked on it.
 
 ## 6. Apparatus-first recon (what already exists — so this extends, not duplicates)
 
