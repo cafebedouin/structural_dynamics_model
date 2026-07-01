@@ -10396,9 +10396,15 @@ authored input). Evidence + corrected framing: `audits/2026-07-01_oq197_source_h
 **(4) RULING — (a), keep the stakeholder source (operator, 2026-07-01).** The cross-tab settles the redundancy
 question this OQ raised: (b) is a pure duplicate of `h1_band` (cruft); (a) is non-redundant. `gap_seat_source`
 stays `stakeholder` — no code change, the default already implements (a); the `canonical` source + `gap_status/3`
-stay as the tested (b) arm and the analysis seam. **Scope of the ruling:** it resolves *is the omega redundant*
-(no); it does NOT resolve *is authored-stakeholder disagreement reliable signal vs annotation noise* — that is
-**OQ-199** (minted 2026-07-01), open. **(1) consumer wiring DONE (2026-07-01, commit `fffca9d1`).** The 6-site consumer map resolved to **4 LIVE
+stay as the tested (b) arm and the analysis seam. **Scope of the ruling — non-redundancy established, reliability
+explicitly UNRESOLVED (NOT validation):** the ruling resolves *is the omega redundant* (no — (a)≠h1_band, 36/1197
+distinct). It does NOT resolve *is authored-stakeholder disagreement real signal or annotation noise* — the 36
+divergences could be (a) catching signal h1_band misses OR (a) surfacing noise h1_band correctly ignores, and the
+cross-tab cannot tell which. **CONDITION ON REPORTING (binding, not someday-nice):** while OQ-199 is open, every
+gap-omega firing sourced from (a) is reported as **"authored-stakeholder disagreement," NEVER as "validated
+cover-story detection"** — the unresolved reliability question travels with each firing rather than being dropped
+at this ruling boundary. OQ-199 is the condition that would lift that qualifier (an independent structural check,
+not the stakeholder facts scoring themselves). **(1) consumer wiring DONE (2026-07-01, commit `fffca9d1`).** The 6-site consumer map resolved to **4 LIVE
 sites** wired + 1 dormant + 1 already-fixed: json_report per-constraint `"gap_status"` + `"gap_undetermined_reason"`
 label (+schema); corpus-level `constraints_gap_examined`/`constraints_gap_undetermined` companions;
 `query.py --detail` (distinguishes UNDETERMINED, fixes a latent `len(None)` crash); `tensions_ledger.py`
@@ -10441,10 +10447,20 @@ NEGATIVE control same run — source (a) produces gap+no_gap+undetermined on bot
 drove the ~3× detector_calibration net-new inflation and withdrew the (a) ship-it rec — was measured under the
 PRE-FIX conflation (it counted all `detect_gap_pattern`-fails as insufficient). This run shows 25/29 haiku and
 29/41 flash of those were genuine `no_gap`, not insufficient — so the artifact was REAL but its 29/41 MAGNITUDE
-was itself overstated by the same conflation the fix removes. Do not cite 29/41 forward as the artifact size; the
-**R4 recompute on the fixed detector supersedes it** (the fixed-detector number is smaller and not yet computed).
-Remaining: (5) R4 net-new recompute — HELD (it is the `detector_calibration` `already_covered` change, itself
-gated on that module's proposal ruling).
+was itself overstated by the same conflation the fix removes. Do not cite 29/41 forward as the artifact size.
+
+**(5) R4 recompute DONE read-only (2026-07-01, `audits/2026-07-01_oq197_r4_recompute/`) — the ~3× inflation claim
+is RETRACTED.** Inverted the circular hold (the proposal ruling was starved for the number R4 produces): loaded
+`detector_calibration.pl` READ-ONLY (no wire, no commit) and split net-new by the extraction_blindness `gap_status`.
+On the fixed detector, guarding correctly on undetermined: net-new = **39/41 determinable** (haiku 43 = gap 14 +
+no_gap 25 + undet 4; flash 53 = gap 12 + no_gap 29 + undet 12). The genuine undetermined-inflation is only **4/12**
+(≈1.1–1.3×), NOT ~3×. The old "14/12 genuine" was the OPERATIVE (extraction_blindness-fires) bar; the ~3× came from
+mislabeling the `no_gap` bucket (25/29 — extraction_blindness examined-and-CLEARED, detector_calibration adds a
+distinct author-vs-engine axis) as artifact, the same no_gap↔undetermined conflation OQ-197 fixed. **Consequence for
+the proposal ruling:** net-new is SUBSTANTIAL (39/41), so the not-wire case can no longer rest on inflation/redundancy;
+it now turns on the module's own open axes (is it calibrated — Ω_E; acceptable false-positive rate — Ω_P). The
+COMMITTED `already_covered` change (wiring `detector_calibration` into the pipeline) stays HELD on the proposal ruling —
+but that ruling now has its witnessed number.
 
 ---
 

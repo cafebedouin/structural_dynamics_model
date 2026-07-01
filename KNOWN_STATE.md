@@ -45,6 +45,24 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-01 — OQ-197 ruling (a) bound to OQ-199 reporting-condition; R4 recompute retracts the ~3× inflation
+**Files:** ISSUES.md, audits/2026-07-01_oq197_r4_recompute/, prolog/detector_calibration.pl
+**Tier:** correction-key
+
+Ruling (a) (keep stakeholder source) finalized as non-redundancy-established / reliability-UNRESOLVED — bound to
+OQ-199 as a BINDING reporting condition: while OQ-199 open, (a)-sourced gap-omega firings are reported as
+"authored-stakeholder disagreement," never "validated cover-story detection." **R4 recompute done READ-ONLY**
+(inverting the circular hold — proposal ruling was starved for the number R4 produces; loaded detector_calibration.pl
+read-only, no wire/commit). On the fixed detector guarding on undetermined: net-new = **39/41 determinable** (not
+14/12, not 43/53); genuine undetermined-inflation = only **4/12** (≈1.1–1.3×). **The "~3× inflation" is RETRACTED** —
+it mislabeled the no_gap bucket (25/29: extraction_blindness examined-and-CLEARED, detector_calibration adds a distinct
+author-vs-engine axis) as artifact, the same no_gap↔undetermined conflation OQ-197 fixed. Consequence: the
+detector_calibration wire/no-wire proposal ruling can no longer rest on inflation/redundancy (net-new is substantial);
+it now turns on the module's own open axes (calibrated? — Ω_E; acceptable FP rate? — Ω_P). Ruling stays operator's seat,
+now fed a witnessed number. Do NOT cite the old 14/12-genuine or 3×-inflation forward — superseded by 39/41 + 4/12.
+
+---
+
 ## 2026-07-01 — OQ-197 acceptance controls PASS (kernel_v1 944 + twins 29/41 reproduced from substrate); case-(ii) refinement
 **Files:** audits/2026-07-01_oq197_acceptance_controls/, prolog/report_generator.pl
 **Tier:** landed
