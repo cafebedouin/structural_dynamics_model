@@ -10340,9 +10340,14 @@ apparent net-new ~3× (43/53 reported vs 14/12 genuine).
 `undetermined`/`insufficient_seats` rather than failing, so absence and didn't-look stop collapsing (the
 OQ-51 `h1_band`-null pattern); and/or (b) source `seat_type_reading` from the stakeholder-independent
 canonical-seat `dr_type/3` (which already produces the structure), deciding whether stakeholder-keying is
-by-design or an unintended coupling. **Positive control for any fix:** re-run on kernel_v1 (stakeholder-less)
-and confirm the 944 cross-seat-varying constraints are each flagged or explicitly `undetermined`, never
-silently 0.
+by-design or an unintended coupling. **Positive control for any fix — TWO cases, not one (the failure mode
+has two flavors):** (i) kernel_v1's **total-absence** case — the 944 cross-seat-varying constraints each
+flag or read `undetermined`, never silent 0; AND (ii) the twins' **present-but-insufficient** case — the
+specific 29 haiku + 41 flash constraints (stakeholders present, 4–10, but not spanning ≥2 power positions
+with ≥2 distinct types) must likewise flag or read `undetermined`, never silent 0. A fix that patches "zero
+stakeholder facts" without patching "facts present but not the ones `detect_gap_pattern` needs" passes (i)
+and silently fails (ii) — which would let this OQ resolve as fixed, R4 reopen on it, and the ~3× net-new
+inflation reappear under a different flavor of insufficient annotation nobody tested against.
 
 ---
 

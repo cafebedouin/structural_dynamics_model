@@ -227,3 +227,19 @@ The engine supplies only the firing + the typed slots.
 5. **"Borrow `piton_theater_floor` for the theater gate" — CORRECTED.** It is calibrated for piton
    classification, not cover-story/hidden-extraction; borrowing it is a fabricated default under a
    borrowed name. No calibrated theater floor for this axis exists (see R1).
+6. **"Read stakeholder COUNT to estimate net-new" — CORRECTED to the operability precondition.** The
+   twin net-new looked like genuine contribution (43/53, all constraints having 4–10 stakeholders) until
+   partitioned by whether `extraction_blindness` was actually *operative* (`seat_type_reading` yields ≥2
+   typeable seats with ≥2 distinct types) — genuine is 14/12; the rest is Pattern-6 hiding behind
+   present-but-insufficient annotation.
+
+**Named failure mode (the through-line of #2, #5, #6 — one thing, not three incidents):**
+**testing a proxy ADJACENT to the precondition instead of the precondition itself.** #2 reused
+report_generator's binary (a proxy for "the calibration-relevant axis") without checking it was built
+for a different question. #5 borrowed `piton_theater_floor` (a proxy for "a calibrated cover-story
+threshold") without checking what it was calibrated against. #6 read stakeholder *count* (a proxy for
+"`extraction_blindness` is operative here") when the precondition is stakeholders *sufficient for
+`detect_gap_pattern` to fire*. Each proxy usually co-varies with its precondition, so each looked
+clean from outside and failed only where they diverge. **Standing guard for this process: when a check
+gates a decision, verify it tests the actual precondition, not a nearby observable that usually tracks
+it — and construct the case where they come apart before trusting the check.**
