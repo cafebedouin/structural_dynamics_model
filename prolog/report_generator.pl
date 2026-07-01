@@ -10,8 +10,10 @@
     type_color/2,
     type_severity/2,
     detect_gap_pattern/2,
+    detect_gap_pattern/3,
     gap_coverage/1,
     gap_status/2,
+    gap_status/3,
     gap_seat_source/1
 ]).
 
@@ -274,10 +276,15 @@ seat_type_reading(C, stakeholder, reading(D, Power, Type, Name)) :-
     Type \= unknown,
     (   constraint_indexing:canonical_d_for_power(Power, D) -> true ; D = 0.5 ).
 seat_type_reading(C, canonical, reading(D, Power, Type, Power)) :-
-    member(Power, [powerless, moderate, powerful, organized, institutional, analytical]),
-    constraint_indexing:canonical_d_for_power(Power, D),
-    constraint_indexing:constraint_classification(C, Type, context(agent_power(Power), _, _, _)),
-    Type \= unknown.
+    % The canonical (b) source: stakeholder-independent dr_type/3 at the four
+    % canonical power seats — exactly what write_perspectives/2 (json_report) and the
+    % h1_band signature-resolved orbit are built over. Uses standard_context_for_power/2
+    % (not a bare context term: dr_type/3 needs a fully-instantiated context).
+    member(Power, [powerless, moderate, institutional, analytical]),
+    logical_fingerprint:standard_context_for_power(Power, Ctx),
+    catch(drl_core:dr_type(C, Ctx, Type), _, fail),
+    Type \= unknown, Type \= null,
+    (   constraint_indexing:canonical_d_for_power(Power, D) -> true ; D = 0.5 ).
 
 %% gap_status(+C, -Status)  [OQ-197 — three-valued gap operability]
 %  Closes the Build-Discipline Pattern-6 collapse where measured-no-gap and
@@ -292,14 +299,23 @@ seat_type_reading(C, canonical, reading(D, Power, Type, Power)) :-
 %  precondition (>=2 seats at >=2 distinct power positions) is the thing R4 turned on:
 %  a proxy for it (any typeable seat) let present-but-insufficient read as measured-empty.
 gap_status(C, Status) :-
-    (   detect_gap_pattern(C, Gap)          % firing logic UNCHANGED (behaviour-preserving)
+    gap_seat_source(Source),
+    gap_status(C, Source, Status).
+
+%% gap_status(+C, +Source, -Status)  [OQ-197: source-explicit — the (a)/(b) probe & ruling seam]
+%  Evaluates the three-valued status under an explicit seat-typing Source
+%  (stakeholder | canonical) without touching the gap_seat_source/1 default, so the
+%  (a)/(b) cross-tab can compare both sources per-constraint. gap_status/2 is this at
+%  the configured default.
+gap_status(C, Source, Status) :-
+    (   detect_gap_pattern(C, Source, Gap)  % firing logic UNCHANGED (behaviour-preserving)
     ->  Status = Gap
-    ;   gap_nonfire_status(C, Status)       % split the non-firing outcome, do not fabricate one
+    ;   gap_nonfire_status(C, Source, Status)   % split the non-firing outcome, do not fabricate one
     ).
 
-%% gap_nonfire_status(+C, -Status)  Status in {no_gap, undetermined(Reason)}.
-gap_nonfire_status(C, Status) :-
-    findall(R, seat_type_reading(C, R), Rs),
+%% gap_nonfire_status(+C, +Source, -Status)  Status in {no_gap, undetermined(Reason)}.
+gap_nonfire_status(C, Source, Status) :-
+    findall(R, seat_type_reading(C, Source, R), Rs),
     nonfire_reason(Rs, Status).
 
 nonfire_reason([], undetermined(no_seats)) :- !.
@@ -321,8 +337,13 @@ gap_coverage(C) :- gap_status(C, S), S \= undetermined(_).
 %% detect_gap_pattern(+C, -gap(Pattern, LowPowerType, HighPowerType))
 %  Fires iff >=2 distinct non-unknown computed seat types. Deterministic (one
 %  solution): the trailing cut commits to the first labeling.
-detect_gap_pattern(C, gap(Pattern, TLo, THi)) :-
-    findall(R, seat_type_reading(C, R), Rs),
+detect_gap_pattern(C, Gap) :-
+    gap_seat_source(Source),
+    detect_gap_pattern(C, Source, Gap).
+
+%% detect_gap_pattern(+C, +Source, -gap(...))  Source-explicit firing (see gap_status/3).
+detect_gap_pattern(C, Source, gap(Pattern, TLo, THi)) :-
+    findall(R, seat_type_reading(C, Source, R), Rs),
     Rs = [_, _|_],                              % >=2 typeable seats
     setof(T, D^P^N^member(reading(D,P,T,N), Rs), Types),
     Types = [_, _|_],                           % >=2 distinct non-unknown types
