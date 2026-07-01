@@ -45,6 +45,30 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-01 — OQ-197 consumer wiring landed (4 live sites, labeled); detector_calibration.pl is UNTRACKED/unwired WIP
+**Files:** prolog/json_report.pl, python/shared/schemas.py, python/query.py, python/tensions_ledger.py, prolog/detector_calibration.pl
+**Tier:** tripwire
+
+Commit `fffca9d1`. Wired the OQ-197 three-valued `gap_status` through every LIVE read site so undetermined
+never collapses into measured-no-gap (Pattern 6), carrying the human-readable LABEL not just the internal
+representation: json_report per-constraint `"gap_status"`+`"gap_undetermined_reason"` (schema-registered) and
+corpus-level `constraints_gap_examined`/`constraints_gap_undetermined`; `query.py --detail` (also fixes a
+latent `len(None)` crash — `.get("gaps",[])` returns None on present-null); `tensions_ledger.py` dedicated
+gap-operability line. Witnessed at the JSON boundary (pipeline exit 0, mtime advanced): behavior preserved
+(`constraints_with_gaps`=57, `omega_count`=57), companions examined=89/undetermined=30, 0 consistency
+violations, schema 0 errors, labels distinguish gap/no_gap/undetermined on both human surfaces.
+
+**TRIPWIRE — `prolog/detector_calibration.pl` is UNTRACKED and UNWIRED.** It is referenced by ISSUES.md
+OQ-197, `docs/design/detector_calibration_omega_proposal.md`, and the Slice-A/B KNOWN_STATE entries, so it
+READS as live — but `git log -- prolog/detector_calibration.pl` is empty (never committed) and nothing
+`use_module`s it (only a comment mention in report_generator.pl); it is not loaded by the stack or pipeline.
+It is Slice-B apparatus awaiting the proposal ruling. Do NOT assume its predicates run in the pipeline, and do
+NOT commit it as a side effect of an unrelated change — committing it is bundled with approving its proposal
+(operator's seat). Its `already_covered/1` (line ~88) treating undetermined as not-covered is the R4 inflation
+mechanism; the OQ-197 step-5 R4 recompute is where that changes.
+
+---
+
 ## 2026-07-01 — OQ-197 (a)/(b) cross-tab: canonical (b) ≡ h1_band, stakeholder (a) distinct; canonical-source bug fixed
 **Files:** prolog/report_generator.pl, audits/2026-07-01_oq197_source_h1_crosstab/
 **Tier:** correction-key

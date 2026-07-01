@@ -10398,8 +10398,18 @@ question this OQ raised: (b) is a pure duplicate of `h1_band` (cruft); (a) is no
 stays `stakeholder` — no code change, the default already implements (a); the `canonical` source + `gap_status/3`
 stay as the tested (b) arm and the analysis seam. **Scope of the ruling:** it resolves *is the omega redundant*
 (no); it does NOT resolve *is authored-stakeholder disagreement reliable signal vs annotation noise* — that is
-**OQ-199** (minted 2026-07-01), open. Remaining: (1) consumer wiring (the 5 silent-0 sites), (2) the two
-positive controls (kernel_v1 + twins), (5) R4 net-new recompute — HELD until (1) lands.
+**OQ-199** (minted 2026-07-01), open. **(1) consumer wiring DONE (2026-07-01, commit `fffca9d1`).** The 6-site consumer map resolved to **4 LIVE
+sites** wired + 1 dormant + 1 already-fixed: json_report per-constraint `"gap_status"` + `"gap_undetermined_reason"`
+label (+schema); corpus-level `constraints_gap_examined`/`constraints_gap_undetermined` companions;
+`query.py --detail` (distinguishes UNDETERMINED, fixes a latent `len(None)` crash); `tensions_ledger.py`
+dedicated gap-operability line. `collect_omegas` needs no change (undetermined mints no gap-omega, correct — the
+new per-constraint `gap_status` surfaces it). **Site 5 `detector_calibration.pl:88` is NOT a live consumer** —
+that module is UNTRACKED, UNWIRED WIP (Slice-B apparatus awaiting its proposal ruling), so no live silent-0
+there; left an R4-site note on disk (its `already_covered` treating undetermined as not-covered IS the R4
+inflation mechanism — changing it = the held recompute). Witnessed at the JSON boundary (pipeline exit 0, mtime
+advanced): behavior preserved (`constraints_with_gaps`=57, `omega_count`=57), companions examined=89/undetermined=30,
+0 gap_status↔gaps consistency violations, schema 0 errors, human labels distinguish all three (query + ledger),
+gate GREEN. Remaining: (2) the two positive controls (kernel_v1 + twins), (5) R4 net-new recompute — HELD until (2).
 
 ---
 
