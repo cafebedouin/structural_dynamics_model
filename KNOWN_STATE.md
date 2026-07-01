@@ -45,6 +45,23 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-01 — gate check added: human gap surfaces must distinguish no_gap from undetermined (Pattern-6 guard)
+**Files:** scripts/gate.sh, python/check_gap_status_surfaces.py, python/query.py
+**Tier:** tripwire
+
+New `scripts/gate.sh` check `gap surfaces` (`check_gap_status_surfaces.py`): a paired synthetic no_gap/
+undetermined fixture asserting the three human-facing gap renderers (`tensions_ledger.build_block`,
+`enhanced_report.build_omega_section`, `query.format_gaps_block`) produce DISTINGUISHABLE, correctly-labeled
+text — converting the Pattern-6-downstream class (undetermined reading as "no finding") from "caught if someone
+asks" to "fails red". Motivated by the enhanced_report catch running on a passing question, not a control, on the
+highest-propagation surface; this bug recurred at 4–5 sites in the OQ-197 work, each caught by attention. The check
+is positive-controlled (embedded self-test + external monkeypatch both confirm it goes RED on a collapsing renderer,
+so it is not vacuous). **When you add a NEW human-facing surface that renders gap/omega state, add it to this check's
+renderer list** — otherwise the guard silently under-covers (its own Pattern-1 risk). `query.py` gap block was
+extracted to `format_gaps_block/1` for testability.
+
+---
+
 ## 2026-07-01 — OQ-197 ruling (a) bound to OQ-199 reporting-condition; R4 recompute retracts the ~3× inflation
 **Files:** ISSUES.md, audits/2026-07-01_oq197_r4_recompute/, prolog/detector_calibration.pl
 **Tier:** correction-key
