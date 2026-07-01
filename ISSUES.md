@@ -10383,7 +10383,43 @@ net-new recompute on the fixed detector — HELD until (1)–(4) land.
 
 ---
 
-*Last updated: 2026-06-30. Add new items with sequential OQ-NN labels. Mark
+## OQ-198 — tensions ledger counts `unknown` as a diverging perspective (false-positive "perspectives diverge")
+
+**Ω-type:** Ω_E (empirical — a witnessable substrate defect; the minimal fix is a code change with a two-sided before/after witness).
+
+**Status:** mitigated
+**Priority:** 3
+**Deps:** splits_from OQ-197
+**Origin:** OQ-197 consumer inventory, 2026-07-01 — found by tracing the ledger's "no gap pattern
+matched" line; `dataset_recycling_amplification`'s ledger read "perspectives diverge" while its real types
+(scaffold×3) agree and only `analytical` is untyped. Split OFF OQ-197 rather than folded in because the
+failure DIRECTION is opposite — OQ-197 under-reports (false negative on the critical omega machinery); this
+over-reports (false positive on informational ledger display) — so it is tracked separately per operator
+ruling 2026-07-01, with the minimal filter now and the architectural repoint left open.
+**Files:** `python/tensions_ledger.py` (`build_block/2`, the index-mismatch `mism` heuristic ~line 131).
+
+**Defect (fixed):** `mism = (persp and len({v for v in persp.values() if v}) > 1)` — `if v` filters
+only falsy values, but `'unknown'` is a truthy sentinel for "didn't type this position." So a constraint
+whose REAL types agree but has one untyped position (scaffold, scaffold, scaffold, `unknown`) counted
+`{scaffold, unknown}` = 2 distinct → false "perspectives diverge." This is a Build-Discipline Pattern-6
+sibling (didn't-look `unknown` mistaken for a measured opinion) at the informational ledger level, and a
+SEPARATE code path from `report_generator:detect_gap_pattern` — the OQ-197 detector fix does not touch it.
+
+**Minimal fix landed (2026-07-01):** exclude `'unknown'` from the divergence set — `if v and v != "unknown"`.
+Two-sided witness (`build_block` before/after on synthetic entries): `dataset_recycling`-like scaffold×3+unknown
+`diverge → none` (fixed); scaffold+unknown `diverge → none` (fixed); genuine snare/scaffold/rope divergence
+`diverge → diverge` UNCHANGED (negative control — the fix does not over-correct into a false negative).
+
+**OPEN (deliberately not resolved by the minimal fix):** whether this display heuristic should instead
+consume `report_generator:gap_status/2` (the OQ-197 three-valued operability result) rather than compute its
+own parallel `perspectives`-divergence. Repointing would probably fix it as a side effect, but couples an
+informational display to an operability contract calibrated for a different consumer's comparison threshold —
+that architectural decision needs checking whether `gap_status` semantics even match what the ledger's
+divergence line is meant to convey. Left open; not gated on OQ-197.
+
+---
+
+*Last updated: 2026-07-01. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

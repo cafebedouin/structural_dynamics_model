@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "b616e6257d27ed107dd4fdfeedfcbf01c4022f2a",
+    "store_version": "794860b6cd8519b609946780b55f334fedefe8fd",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-01T01:16:39"
+    "generated_at": "2026-07-01T01:23:37"
   },
-  "issues_sha": "81e24712836e8cfe884ce7e1f4d60f2fa18774fefeb3611a36cb2732e9d0bef2",
-  "n_entries": 197,
+  "issues_sha": "221eeb970f7b49abe4b69458eebfd0ca7eea58bc00630748cf74276ffc68e3af",
+  "n_entries": 198,
   "active_token_set": [
     "investigating",
     "open",
@@ -13,7 +13,7 @@
   ],
   "per_status": {
     "resolved": 104,
-    "mitigated": 12,
+    "mitigated": 13,
     "partial": 8,
     "disposed": 4,
     "open": 65,
@@ -2686,6 +2686,19 @@
         "OQ-74",
         "OQ-95",
         "OQ-116"
+      ]
+    },
+    {
+      "id": "OQ-198",
+      "status": "mitigated",
+      "priority": 3,
+      "summary": "tensions ledger counts `unknown` as a diverging perspective (false-positive \"perspectives diverge\")",
+      "deps": [
+        "splits_from OQ-197"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-197"
       ]
     }
   ]

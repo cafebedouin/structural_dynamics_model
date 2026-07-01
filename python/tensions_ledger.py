@@ -128,7 +128,15 @@ def build_block(entry, report_dir=REPORTS):
             f"{g.get('gap_type', '?')} (powerless={g.get('powerless_type', '?')}, "
             f"institutional={g.get('institutional_type', '?')})" for g in gaps))
     else:
-        mism = (persp and len({v for v in persp.values() if v}) > 1)
+        # OQ-198: exclude 'unknown' from the divergence set. `if v` filters only
+        # falsy values, but 'unknown' is a truthy sentinel for "didn't type this
+        # position" — counting it as a distinct value produced a false "perspectives
+        # diverge" whenever real types AGREED but one position was untyped (the
+        # dataset_recycling scaffold×3 + analytical=unknown case). Divergence is over
+        # REAL (non-unknown) types only. NOTE: whether this display heuristic should
+        # instead consume report_generator:gap_status is left OPEN under OQ-198 — this
+        # is the minimal false-positive fix, not that architectural decision.
+        mism = (persp and len({v for v in persp.values() if v and v != "unknown"}) > 1)
         lines.append("- index mismatches: "
                      + ("perspectives diverge (no gap pattern matched)" if mism
                         else "none"))
