@@ -54,12 +54,17 @@ sources per constraint; firing under default byte-identical (57=57). Cross-tab o
 testsets subset (n=84): canonical (b) firing EXACTLY coextensive with `h1_band>0` (58/58, 26/26, zero
 off-diagonal — definitional, same orbit) ⇒ (b) is a redundant recomputation of `h1_band`; stakeholder (a)
 distinct on 3/84 (authored-stakeholder disagreement `h1_band` lacks). Evidence points toward ruling (a); ruling
-stays operator's seat, now evidence-fed. **Twins extension (2026-07-01) REPLICATES at scale:** across all
-three corpora (testsets/haiku/flash, 1197 eligible) canonical (b)↔`h1_band>0` has 0 off-diagonal (zero
-exceptions); stakeholder (a) distinct on 36/1197 (~2–4% each). Twin `h1` computed in Prolog
-(`cohomological_obstruction/3`), positive-controlled vs pipeline `h1_band` on testsets (0/119 mismatch)
-before use on the twins. (b)=duplicate-of-h1_band; (a)=irreducible authored-stakeholder signal. Evidence
-`audits/2026-07-01_oq197_source_h1_crosstab/` (twin tables + control). **Correction to b616e625:** its canonical (b) seat clause used
+stays operator's seat, now evidence-fed. **Twins extension (2026-07-01):** on the both-determinate subsets
+(testsets 84 + haiku 452 + flash 661 = 1197) canonical (b)↔`h1_band>0` has 0 off-diagonal (definitional —
+confirms wiring, not new evidence); stakeholder (a) distinct on 36/1197 (3/19/14). Twin `h1` computed in
+Prolog (`cohomological_obstruction/3`), positive-controlled vs pipeline `h1_band` on testsets (0/119) before
+use. **Corpus-independence caveat:** haiku+flash are TWINS (same seed, different backend → correlated), so
+this is ONE independent corpus + one correlated pair, NOT triple replication. Establishes non-redundancy
+ONLY — (a) irreducible to `h1_band` as a construction; whether the divergences are (a)-correct vs authoring
+noise is OQ-199 (open). **RULING (a) — keep the stakeholder source (operator, 2026-07-01):** (b)=duplicate
+of `h1_band` (cruft), (a)=non-redundant; `gap_seat_source` stays `stakeholder` (no code change — default
+already implements (a)). Ruling resolves redundancy, NOT reliability (OQ-199). Evidence
+`audits/2026-07-01_oq197_source_h1_crosstab/`. **Correction to b616e625:** its canonical (b) seat clause used
 `constraint_classification/3` with an UNBOUND context (mode `+Context`) → 0 seats for every constraint (a dead,
 unwitnessed branch — my contract witnesses were all stakeholder-path). Fixed to `drl_core:dr_type/3` via
 `logical_fingerprint:standard_context_for_power/2` over the 4 canonical positions (the `write_perspectives`/

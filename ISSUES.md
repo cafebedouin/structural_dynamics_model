@@ -10382,14 +10382,24 @@ redundant recomputation), while stakeholder (a) is DISTINCT from `h1_band` on 3/
 disagreement `h1_band` does not carry). Source-explicit `gap_status/3`/`detect_gap_pattern/3` landed to run it
 (commit `6bda83ec`), which also caught+fixed a bug: the b616e625 canonical clause used
 `constraint_classification/3` with an unbound context (mode `+Context`) → 0 seats; fixed to `dr_type/3` via
-`standard_context_for_power/2`. **Twins extension DONE (2026-07-01) — REPLICATES at scale:** across all three
-corpora (testsets 84, haiku 452, flash 661 eligible = 1197) canonical (b) is coextensive with `h1_band>0`
-with **0 off-diagonal, zero exceptions**; stakeholder (a) distinct from `h1_band` on **36/1197** (~2–4% each,
-nonzero everywhere). Twin `h1` computed in Prolog (`cohomological_obstruction/3`), positive-controlled against
-pipeline `h1_band` on testsets (0/119 mismatch) before use. So (b) is a pure duplicate of `h1_band` and (a)'s
-authored-stakeholder signal is irreducible to it — evidence robust past small-n. **(3) is now COMPLETE.**
-(4) the ruling itself (operator's seat — evidence-fed: (b)=duplicate/cruft vs (a)=non-redundant reading; NOT
-yet ruled); (5) R4 net-new recompute on the fixed detector — HELD until (1)–(4) land.
+`standard_context_for_power/2`. **Twins extension DONE (2026-07-01), with a corpus-independence correction:**
+on the both-determinate subsets (testsets 84 + haiku 452 + flash 661 = 1197) canonical (b) is coextensive with
+`h1_band>0` at **0 off-diagonal, zero exceptions** (definitional — confirms the (b)-wiring, NOT new evidence);
+stakeholder (a) distinct from `h1_band` on **36/1197** (3/19/14). Twin `h1` computed in Prolog
+(`cohomological_obstruction/3`), positive-controlled vs pipeline `h1_band` on testsets (0/119) before use.
+**NOT three independent corpora:** `testsets_haiku`+`testsets_flash` are TWINS (same seed, different backend →
+correlated), so this is one independent corpus (testsets, 3 distinct) + one correlated pair (19+14), not triple
+replication. Establishes **non-redundancy ONLY** — (a) is irreducible to `h1_band` as a construction; it does
+NOT establish the divergences are (a)-correct rather than authoring noise (stakeholder facts are single-pass
+authored input). Evidence + corrected framing: `audits/2026-07-01_oq197_source_h1_crosstab/`. **(3) COMPLETE.**
+
+**(4) RULING — (a), keep the stakeholder source (operator, 2026-07-01).** The cross-tab settles the redundancy
+question this OQ raised: (b) is a pure duplicate of `h1_band` (cruft); (a) is non-redundant. `gap_seat_source`
+stays `stakeholder` — no code change, the default already implements (a); the `canonical` source + `gap_status/3`
+stay as the tested (b) arm and the analysis seam. **Scope of the ruling:** it resolves *is the omega redundant*
+(no); it does NOT resolve *is authored-stakeholder disagreement reliable signal vs annotation noise* — that is
+**OQ-199** (minted 2026-07-01), open. Remaining: (1) consumer wiring (the 5 silent-0 sites), (2) the two
+positive controls (kernel_v1 + twins), (5) R4 net-new recompute — HELD until (1) lands.
 
 ---
 
@@ -10426,6 +10436,36 @@ own parallel `perspectives`-divergence. Repointing would probably fix it as a si
 informational display to an operability contract calibrated for a different consumer's comparison threshold —
 that architectural decision needs checking whether `gap_status` semantics even match what the ledger's
 divergence line is meant to convey. Left open; not gated on OQ-197.
+
+---
+
+## OQ-199 — is authored-stakeholder seat disagreement (the gap omega's (a) signal) reliable signal or annotation noise?
+
+**Ω-type:** Ω_E (empirical — answerable by a validation design that scores the divergences against an
+independent structural check; the design is not yet built, so the trust question is open, not the type).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-197
+**Origin:** OQ-197 (a)/(b) ruling, 2026-07-01. The `audits/2026-07-01_oq197_source_h1_crosstab/` cross-tab
+established that the gap omega's stakeholder source (a) is NOT redundant with `h1_band` — it diverges on
+36/1197 both-determinate constraints (one independent corpus + one correlated twin pair). Ruling (a) was made
+on that non-redundancy. But non-redundancy ≠ reliability.
+
+**The open question:** the cross-tab shows (a) carries signal `h1_band` structurally cannot, but NOT that the
+36 divergences are cases where (a) is *correct* and the canonical orbit is missing something — as opposed to
+cases where the authored `constraint_stakeholder/7` facts are themselves noisy, inconsistent, or wrong.
+Authored stakeholder facts are exactly the single-pass authored input this project treats as unverified by
+default (the same class as authored d-values and type claims — cf. the seat-disagreement-direction ≠
+detector-accuracy distinction). So the (a) signal's *worth* is unestablished: seat disagreement is a fact
+about the authoring, not yet a validated fact about the world.
+
+**What would resolve it:** a validation design that scores the divergence constraints against an independent
+structural check (not the stakeholder facts themselves) — e.g. do the (a)-only gaps correspond to authored
+directionality/beneficiary structure, or to grid-authoring artifacts? Until then, gap-omega firings sourced
+from (a) are reported as "authored-stakeholder disagreement," never as validated cover-story detection.
+**Files:** `prolog/report_generator.pl` (`seat_type_reading/2` stakeholder clause), `prolog/stakeholder_seats.pl`
+(`dr_type_for_stakeholder/3`), `narrative_ontology:constraint_stakeholder/7` authored facts.
 
 ---
 
