@@ -92,6 +92,28 @@ four. The engine supplies only the firing + the typed slots.
     (it depends on a contested banding). Key it on the engine's own extractive/functional axis +
     the hidden-extraction shape, which is a declared engine seat rather than an imposed one.
 
+### R1-refinement — `naturalized` is not the "safe" direction (do not reuse report_generator's binary verbatim)
+
+report_generator's extractive/functional binary was authored for `extraction_blindness`
+(cover-story detection), where `naturalized` belongs on the *functional* side precisely
+because "reads legitimate at the seat" is the disguise being detected. **That binary must
+NOT be reused verbatim as detector_calibration's firing axis** (the "binary built for one
+purpose, reused as if it settles another" trap). Reason, from the code: `naturalized`'s
+defining condition is `BaseEps > rope_epsilon_ceiling` (`drl_core.pl:422-426`) — HIGH real
+extraction compressed below the χ floor by power-scaling. It is the ONE "functional"-bucket
+type that is **extractive by construction** (operator: "looks like an invariant from a
+below-threshold, no-exit seat" — appears-invariant, is-extractive). So:
+
+- For calibration, transitions *into* `naturalized` (`tangled_rope→naturalized`,
+  `snare→naturalized`) are **not** de-escalation-toward-safe; naturalized is
+  appears-functional / is-extractive, its own cell.
+- But the engine **already** treats naturalized-masking specially: `extraction_blindness`
+  (cross-seat) + the false_summit signature / `dr_claim_mismatch/4` Type 1. So the clean
+  ruling is to **route naturalized-landing disagreements to that existing false-summit
+  apparatus** (via the R4-guard below) rather than add a redundant third tier inside
+  detector_calibration. (Reclassifying the ~8 →naturalized seats out of "de-escalation"
+  does not change the symmetric-direction finding: 69 vs ~67.)
+
 ### R4-guard — avoid double-minting with `omega_extraction_blindness`
 
 `omega_extraction_blindness` (`report_generator.pl:285`) already fires on 56 constraints, keyed
