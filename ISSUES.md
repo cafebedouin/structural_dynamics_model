@@ -10411,6 +10411,17 @@ advanced): behavior preserved (`constraints_with_gaps`=57, `omega_count`=57), co
 0 gap_status↔gaps consistency violations, schema 0 errors, human labels distinguish all three (query + ledger),
 gate GREEN.
 
+**(1b) enhanced_report.py wired (2026-07-01 follow-up) — a 5th LIVE site first cleared WRONG.** In the wiring pass
+I grepped enhanced_report for a `"gaps"` render, found none, and cleared it — checking a PROXY (does it render the
+gaps field) not the PROPERTY (does a human surface distinguish undetermined from no_gap). `build_omega_section`
+renders per-constraint "Enriched Omega Context" and collapsed no_gap AND undetermined into one "Not yet enriched"
+fallback — Pattern 6 at the PRIMARY human surface (`constraint_reports/*.md`, the essay-synthesis input). Caught by
+the operator's "does this reach enhanced_report" question. Fixed: `build_omega_section` leads with a `gap_status`
+operability line from `enriched_pipeline.json` (enrich already passes it through) and no longer says "not yet
+enriched" for a no-gap/undetermined constraint. Witnessed: renders "UNDETERMINED (reason) — NOT 'no gap'" /
+"no gap (examined…)" / "gap detected" for one of each; imports clean; gate GREEN. Live-consumer count is **5**, not 4
+— the proxy-check miss is itself the thread's recurring failure mode (a nearby observable instead of the property).
+
 **(2) positive controls DONE (2026-07-01, `audits/2026-07-01_oq197_acceptance_controls/`) — acceptance MET, with
 a refinement.** Counts reproduced FROM SUBSTRATE (not the doc): kernel_v1 canonical-varying = **944** exactly
 (stakeholder_facts=0 confirmed); twin `detector_calibration` net-new = **43/53** and net-new ∩ stakeholders-present
@@ -10424,8 +10435,16 @@ genuinely-inexaminable ones the old `gap_coverage`≥1 emitted as FALSE `[]`, no
 the doc's premise that the 29/41 were uniformly "insufficient" was imprecise — most were present-AND-sufficient-
 but-agreeing; the literal "29/41 read undetermined" is refuted for the majority BY the fix being more precise.
 NEGATIVE control same run — source (a) produces gap+no_gap+undetermined on both twins (haiku 365/114; flash
-480/232), not vacuously undetermined. Remaining: (5) R4 net-new recompute — HELD (it is the `detector_calibration`
-`already_covered` change, itself gated on that module's proposal ruling).
+480/232), not vacuously undetermined.
+
+**DO-NOT-CITE-FORWARD (record caveat):** the earlier "29/41 present-but-insufficient artifact" — the figure that
+drove the ~3× detector_calibration net-new inflation and withdrew the (a) ship-it rec — was measured under the
+PRE-FIX conflation (it counted all `detect_gap_pattern`-fails as insufficient). This run shows 25/29 haiku and
+29/41 flash of those were genuine `no_gap`, not insufficient — so the artifact was REAL but its 29/41 MAGNITUDE
+was itself overstated by the same conflation the fix removes. Do not cite 29/41 forward as the artifact size; the
+**R4 recompute on the fixed detector supersedes it** (the fixed-detector number is smaller and not yet computed).
+Remaining: (5) R4 net-new recompute — HELD (it is the `detector_calibration` `already_covered` change, itself
+gated on that module's proposal ruling).
 
 ---
 

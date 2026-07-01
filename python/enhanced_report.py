@@ -1536,12 +1536,33 @@ def build_maxent_section(constraint_id, pipeline_data):
 
 # --- Section D: ENRICHED OMEGA CONTEXT ---
 
-def build_omega_section(constraint_id, omega_data):
+def build_omega_section(constraint_id, omega_data, pipeline_data=None):
     """Section D: ENRICHED OMEGA CONTEXT from enriched_omega_data.json.
 
     Only shows enrichment-unique fields: severity_score, gap_class, gap_pattern, family.
+
+    OQ-197: leads with the gap-operability label (from enriched_pipeline.json gap_status)
+    so a constraint with no gap-omega is distinguished — undetermined (couldn't examine)
+    vs no_gap (examined, agree) — instead of both collapsing into the old "not yet
+    enriched" message (Pattern 6 at the primary human-facing report surface).
     """
     lines = ["", "--- ENRICHED OMEGA CONTEXT ---", ""]
+
+    gap_status = None
+    if pipeline_data is not None:
+        pentry = find_constraint_entry(pipeline_data, constraint_id)
+        if pentry is not None:
+            gap_status = pentry.get("gap_status")
+            if gap_status == "undetermined":
+                lines.append(
+                    "  Gap operability:   UNDETERMINED "
+                    f"({pentry.get('gap_undetermined_reason', '?')}) "
+                    "— too few operable seats to examine (NOT 'no gap')")
+            elif gap_status == "no_gap":
+                lines.append("  Gap operability:   no gap (seats examined, comparable, agree)")
+            elif gap_status == "gap":
+                lines.append("  Gap operability:   gap detected")
+            lines.append("")
 
     if omega_data is None:
         lines.append("  [enriched_omega_data.json not available]")
@@ -1554,10 +1575,16 @@ def build_omega_section(constraint_id, omega_data):
     ]
 
     if not matches:
-        lines.append(
-            "  Not yet enriched — see live omega results in report sections below.\n"
-            "  (Run full pipeline to include in severity scoring and family grouping.)"
-        )
+        # Distinguish "no gap-omega because undetermined/no_gap" (correct, labeled above)
+        # from "omega exists but not enriched" — the old message asserted the latter for both.
+        if gap_status in ("undetermined", "no_gap"):
+            lines.append(
+                "  No gap-omega for this constraint (see gap operability above — an "
+                "undetermined/no_gap constraint mints no gap-omega, by design).")
+        else:
+            lines.append(
+                "  Not yet enriched — see live omega results in report sections below.\n"
+                "  (Run full pipeline to include in severity scoring and family grouping.)")
         return "\n".join(lines)
 
     for i, omega in enumerate(matches):
@@ -3202,7 +3229,7 @@ def generate_report(constraint_id, data, iteration_round=None):
     l1_trajectory = build_drift_trajectory_section(constraint_id, data["pipeline"])
     l1_repair = build_repair_section(constraint_id, data["pipeline"])
     l1_orbit = build_level1_orbit(constraint_id, data["orbit"])
-    l1_omega = build_omega_section(constraint_id, data["omega"])
+    l1_omega = build_omega_section(constraint_id, data["omega"], data["pipeline"])
 
     # Level 2: Diagnostic Convergence
     l2_convergence = build_level2_convergence(constraint_id, data["pipeline"])

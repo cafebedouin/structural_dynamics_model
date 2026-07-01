@@ -72,7 +72,10 @@ never collapses into measured-no-gap (Pattern 6), carrying the human-readable LA
 representation: json_report per-constraint `"gap_status"`+`"gap_undetermined_reason"` (schema-registered) and
 corpus-level `constraints_gap_examined`/`constraints_gap_undetermined`; `query.py --detail` (also fixes a
 latent `len(None)` crash — `.get("gaps",[])` returns None on present-null); `tensions_ledger.py` dedicated
-gap-operability line. Witnessed at the JSON boundary (pipeline exit 0, mtime advanced): behavior preserved
+gap-operability line; `enhanced_report.py` `build_omega_section` (a 5TH live site first cleared WRONG — grepped
+for a "gaps" render, a proxy, not "distinguishes undetermined at a human surface"; it collapsed no_gap/undetermined
+into "not yet enriched" at the primary `constraint_reports/*.md` surface; caught by the operator's question, now
+leads with a gap_status line). Witnessed at the JSON boundary (pipeline exit 0, mtime advanced): behavior preserved
 (`constraints_with_gaps`=57, `omega_count`=57), companions examined=89/undetermined=30, 0 consistency
 violations, schema 0 errors, labels distinguish gap/no_gap/undetermined on both human surfaces.
 
