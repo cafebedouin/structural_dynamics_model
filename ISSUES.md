@@ -10303,6 +10303,49 @@ adjudicate per the rule, do not blind-strip (false-orphan discipline).
 
 ---
 
+## OQ-197 — Gap omegas read silently empty when stakeholder annotation is absent or insufficient (Pattern 6)
+
+**Ω-type:** Ω_E (empirical — a witnessable substrate defect; the fix is a code change, verifiable by a re-run with an operability control).
+
+**Status:** open
+**Priority:** 2
+**Origin:** detector_calibration (Slice-B) cross-corpus run, 2026-06-30 — surfaced while validating the
+proposed omega's net-new firing against `extraction_blindness` across all legs
+(`docs/design/detector_calibration_omega_proposal.md` §5/R4 finding + witness tables).
+**Files:** `prolog/report_generator.pl` (`seat_type_reading/2`, `detect_gap_pattern/2`, `label_gap/4`,
+`gap_coverage/1`); `docs/design/detector_calibration_omega_proposal.md` (R4 finding + cross-corpus witness).
+
+**Specific defect:** `detect_gap_pattern/2` — the sole detector for the `extraction_blindness` and
+`general_type_mismatch`/`omega_perspectival` gap omegas — reads its per-seat types from
+`seat_type_reading/2`, which is keyed on authored `constraint_stakeholder/7` facts (via
+`dr_type_for_stakeholder`), NOT on the canonical-seat `dr_type/3`. When stakeholder annotation is
+**absent** (kernel_v1: 0 facts → 0/1106 gap omegas fire) or **present-but-insufficient** (the twins:
+stakeholders don't span ≥2 power positions with ≥2 distinct computed types — 29/43 haiku + 41/53 flash
+of the detector_calibration net-new set), the `Rs=[_,_|_]` / `Types=[_,_|_]` precondition fails and
+`detect_gap_pattern` returns **nothing** — reading as "no cover-story / no gap" rather than "not
+measurable here." Meanwhile `dr_type/3` DOES produce the structure at the canonical seats (944/1106
+kernel_v1 constraints have ≥2 distinct cross-seat engine types; `isaac_covenant__boundary_maintenance_reading`
+= `[naturalized, tangled_rope, rope, snare]`, a textbook extraction_blindness shape the omega never sees).
+Build-Discipline Pattern 6: measured-empty and didn't-look collapse to one success-shaped token at the
+gap-detection boundary.
+
+**Why higher-priority than any single omega:** every gap-omega read on every corpus is currently
+unfalsifiable between "checked, found nothing" and "the detector was inoperative here" unless
+stakeholder-operability is verified per-constraint first. Any at-scale/legacy sweep that trusts
+`extraction_blindness` counts (e.g. OQ-89-class breadth over kernel_v1) silently reads 0 cover-story where
+the structure exists. It also corrupts downstream value estimates — it inflated detector_calibration's
+apparent net-new ~3× (43/53 reported vs 14/12 genuine).
+
+**Candidate fixes (adjudicate):** (a) carry operability provenance — `detect_gap_pattern` returns
+`undetermined`/`insufficient_seats` rather than failing, so absence and didn't-look stop collapsing (the
+OQ-51 `h1_band`-null pattern); and/or (b) source `seat_type_reading` from the stakeholder-independent
+canonical-seat `dr_type/3` (which already produces the structure), deciding whether stakeholder-keying is
+by-design or an unintended coupling. **Positive control for any fix:** re-run on kernel_v1 (stakeholder-less)
+and confirm the 944 cross-seat-varying constraints are each flagged or explicitly `undetermined`, never
+silently 0.
+
+---
+
 *Last updated: 2026-06-30. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
