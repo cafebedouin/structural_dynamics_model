@@ -441,17 +441,28 @@ def output_detail(df, constraint_id, pipeline_raw, omega_raw):
     # --- Gaps (from pipeline raw) ---
     pipeline_by_id = {e["id"]: e for e in pipeline_raw.get("per_constraint", [])}
     pdata = pipeline_by_id.get(constraint_id, {})
-    gaps = pdata.get("gaps", [])
+    # OQ-197: distinguish undetermined (too few operable seats) from no_gap (examined,
+    # no gap). `.get("gaps", [])` returns None when the key is present-but-null, so use
+    # `or []` to avoid len(None); and read the explicit gap_status label so undetermined
+    # never renders as "(none)"/"Gaps (0)" the way the old collapsed [] did.
+    gap_status = pdata.get("gap_status")
+    gaps = pdata.get("gaps") or []
     print()
-    print(f"  Gaps ({len(gaps)})")
-    print("  " + "-" * 40)
-    if gaps:
-        for g in gaps:
-            print(f"  - {g.get('gap_type', 'unknown')}: "
-                  f"powerless={g.get('powerless_type', '?')} / "
-                  f"institutional={g.get('institutional_type', '?')}")
+    if gap_status == "undetermined":
+        reason = pdata.get("gap_undetermined_reason", "?")
+        print(f"  Gaps: UNDETERMINED ({reason})")
+        print("  " + "-" * 40)
+        print("  (too few operable seats to examine — NOT 'no gap')")
     else:
-        print("  (none)")
+        print(f"  Gaps ({len(gaps)})")
+        print("  " + "-" * 40)
+        if gaps:
+            for g in gaps:
+                print(f"  - {g.get('gap_type', 'unknown')}: "
+                      f"powerless={g.get('powerless_type', '?')} / "
+                      f"institutional={g.get('institutional_type', '?')}")
+        else:
+            print("  (none — examined, seats comparable, no gap)")
 
     # --- Classifications (from pipeline raw) ---
     classifications = pdata.get("classifications", [])

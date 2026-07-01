@@ -141,6 +141,20 @@ def build_block(entry, report_dir=REPORTS):
                      + ("perspectives diverge (no gap pattern matched)" if mism
                         else "none"))
 
+    # gap operability (OQ-197): the authored-stakeholder gap detector's three-valued
+    # status, surfaced as its OWN line so undetermined never reads as "no gap". Kept
+    # separate from the "index mismatches" line above (a distinct perspectives-based
+    # heuristic — the OQ-198 boundary), not folded into it.
+    gap_status = entry.get("gap_status")
+    if gap_status == "undetermined":
+        lines.append(f"- gap operability: UNDETERMINED "
+                     f"({entry.get('gap_undetermined_reason', '?')}) — authored-stakeholder "
+                     "gap not examinable, NOT 'no gap'")
+    elif gap_status == "no_gap":
+        lines.append("- gap operability: no gap (seats examined, comparable, agree)")
+    elif gap_status == "gap":
+        lines.append("- gap operability: gap detected (see gaps above)")
+
     # signature + grade
     sig = entry.get("signature") or "none"
     grade = vj.get("signature_grade") if vj else None

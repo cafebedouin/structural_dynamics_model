@@ -190,6 +190,13 @@ PIPELINE_FIELDS = [
     # (didn't-look); [] = cells examined, no gap found (measured-empty). The
     # isinstance branch below still type-checks the list case.
     ("gaps",                        list,         True),
+    # gap_status (OQ-197): explicit three-valued operability label — "gap" | "no_gap" |
+    # "undetermined". Names the distinction "gaps" carries only structurally (null/[]/[...])
+    # so a consumer cannot collapse undetermined into measured-no-gap.
+    ("gap_status",                  str,          False),
+    # gap_undetermined_reason: no_seats | single_seat | single_power_position; null unless
+    # gap_status == "undetermined".
+    ("gap_undetermined_reason",     str,          True),
     ("beneficiaries",               list,         False),
     ("victims",                     list,         False),
     ("emerges_naturally",           bool,         False),

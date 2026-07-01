@@ -350,6 +350,26 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     ),
     format(S, ',~n', []),
 
+    % gap_status (OQ-197): the EXPLICIT three-valued operability label alongside
+    % "gaps", so a downstream/human read can never collapse undetermined into
+    % measured-no-gap (the Pattern-6 defect this whole chain fixed). "gaps" carries
+    % the same distinction structurally (null=undetermined, []=no_gap, [...]=gap) but
+    % that is easy to re-collapse (.get("gaps",[]) / `or []`); this field names it.
+    % gap = detected; no_gap = >=2 seats spanning >=2 power positions, examined, agree;
+    % undetermined = too few operable seats (reason: no_seats|single_seat|single_power_position).
+    ( report_generator:gap_status(C, GapStatus0) -> true ; GapStatus0 = undetermined(no_seats) ),
+    ( GapStatus0 = gap(_,_,_)        -> ( GSLabel = gap,          GSReason = null )
+    ; GapStatus0 == no_gap           -> ( GSLabel = no_gap,       GSReason = null )
+    ; GapStatus0 = undetermined(R0)  -> ( GSLabel = undetermined, GSReason = R0 )
+    ;                                    ( GSLabel = undetermined, GSReason = unknown_reason )
+    ),
+    format(S, '      "gap_status": ', []), write_json_string(S, GSLabel), format(S, ',~n', []),
+    (   GSReason == null
+    ->  format(S, '      "gap_undetermined_reason": null,~n', [])
+    ;   format(S, '      "gap_undetermined_reason": ', []),
+        write_json_string(S, GSReason), format(S, ',~n', [])
+    ),
+
     % beneficiaries
     findall(B, narrative_ontology:constraint_beneficiary(C, B), Bens),
     sort(Bens, UBens),
@@ -1664,13 +1684,28 @@ write_diagnostic_object(S, Constraints, CorpusSize) :-
 write_validation_object(S, Constraints) :-
     format(S, '{~n', []),
 
-    % constraints_with_gaps
+    % constraints_with_gaps — plus its COVERAGE companions (OQ-197 Pattern-6): a bare
+    % gap count cannot distinguish "0 gaps, all examined" from "0 gaps, most inexaminable".
+    % constraints_gap_undetermined = too few operable seats to pose the question;
+    % constraints_gap_examined = gap or no_gap (the denominator constraints_with_gaps is over).
     findall(C, (member(C, Constraints),
                 report_generator:detect_gap_pattern(C, _)),
             GapCs),
     sort(GapCs, UGapCs),
     length(UGapCs, GapCount),
+    findall(C, (member(C, Constraints),
+                report_generator:gap_status(C, undetermined(_))),
+            UndetCs),
+    sort(UndetCs, UUndetCs),
+    length(UUndetCs, GapUndetCount),
+    findall(C, (member(C, Constraints),
+                report_generator:gap_status(C, GS), GS \= undetermined(_)),
+            ExamCs),
+    sort(ExamCs, UExamCs),
+    length(UExamCs, GapExamCount),
     format(S, '    "constraints_with_gaps": ~w,~n', [GapCount]),
+    format(S, '    "constraints_gap_examined": ~w,~n', [GapExamCount]),
+    format(S, '    "constraints_gap_undetermined": ~w,~n', [GapUndetCount]),
 
     % omega_count
     findall(OID,
