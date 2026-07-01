@@ -1,146 +1,151 @@
 # Proposal (DRAFT — awaiting operator ruling): a `detector_calibration` omega
 
-**Status:** draft for ruling. Nothing here is wired or fired. The thresholds and
-the type assignment are a declared seat (the operator's), not something the engine
-self-resolves. Provenance: arose from the Elias-Thorne report review (2026-06-30),
-web-Claude's "author the omega aimed at the apparatus itself" suggestion, and the
-apparatus-first recon recorded below.
+**Status:** draft for ruling. Nothing is wired or fired. Firing thresholds and the type
+assignment are a declared seat (the operator's), not something the engine self-resolves.
+Provenance: Elias-Thorne report review (2026-06-30) → web-Claude's "author the omega aimed at
+the apparatus itself" → the apparatus-first recon in §6. R2 and R3 are ruled settled (operator,
+2026-06-30); R1 and R4 remain open.
+
+**Standing convention for this doc (adopt for every empirical claim below):** any claim about the
+author×engine cross-tab must state, *in the same sentence*, which axis its sensitivity check varied
+**and which it did not**. Four aggregate claims in this thread shipped on a check that skipped the
+load-bearing axis (caught only by going back to substrate); this convention makes the untested axis
+visible at claim time.
 
 ---
 
-## 1. The question this makes askable
+## 1. The question this makes askable — and its honest motivation
 
-The reports already carry four `AUTHORED RESOLUTION PROTOCOL` omegas per constraint
-(`irreversibility_threshold`, `benchmark_detection_lag`, …) — each a question the
-engine *cannot* settle, named and handed back. None of them is aimed at the
-**apparatus**. The missing one:
+The reports carry four `AUTHORED RESOLUTION PROTOCOL` omegas per constraint
+(`irreversibility_threshold`, `benchmark_detection_lag`, …), each a question the engine cannot
+settle, named and handed back. None is aimed at the **apparatus**. This one is:
 
-> Does the engine's snare/rope call track real (hidden) extraction better than chance,
-> and what false-positive rate is acceptable for acting on a consequential snare call?
+> Does the engine's extraction call track real (hidden) extraction better than chance, and what
+> false-positive rate is acceptable for acting on a consequential extraction verdict?
 
-This is the same *shape* of move the authors already make four times per constraint —
-just pointed at the detector instead of at the constraint.
+**Motivation (corrected — do not restore the earlier framing).** The premise is NOT "the detector
+over-calls / escalates." That directional claim was made and **retracted** (see Corrections log).
+The honest premise is narrower and is exactly what Ω_E exists for:
 
-## 2. The typing — it is a PAIR, not one omega (the correction to the naive proposal)
+> Engine and authors disagree at **77% of both-speak seats** (91/396 agree). The *direction* of that
+> disagreement is **not** determinable from the cross-tab — it is ~symmetric under the engine's own
+> extractive/functional axis (escalate 69 vs de-escalate ~67–75; *sensitivity varied the tangled_rope
+> and naturalized tier placements, which is where direction actually moves — not scaffold, which does
+> not move it*). Disagreement is real and large; which side is closer to truth is unknown and
+> externally-witnessable-in-principle. That gap is the omega.
 
-Conflating these is exactly the "when to stop verifying" trap (`docs/omega_variables.md`):
-an Ω_P mistyped as Ω_E lets the apparatus self-certify by fiat; an Ω_E mistyped as Ω_P
-invents a value-dispute where a measurement would settle it.
+## 2. Typing — a PAIR, not one omega (R2, ruled: keep the pair)
 
-- **Ω_E (empirical, `awaits-external-input`).** *Hit rate.* "Does the snare/rope detector
-  beat chance on hidden extraction?" Resolution operation = an **external validation study**
-  against labeled ground-truth extraction. The corpus carries no such labels (the authored
-  `claimed_type` is a seat, not truth — seat theorem), so this is genuinely deferred, not
-  computable now.
-- **Ω_P (preference, value-decision).** *Acceptable false-positive rate.* "What FP rate is
-  tolerable when acting on a snare call, given the cost of a wrong extraction verdict?"
-  Resolution operation = a **ruling by those bearing the cost**. The corpus already authors
-  this shape locally: `institutional_barrier_structure.pl` →
+Conflating the two is the "when to stop verifying" trap (`docs/omega_variables.md`): an Ω_P mistyped
+as Ω_E lets the apparatus self-certify by fiat; an Ω_E mistyped as Ω_P invents a value-dispute where
+a measurement would settle it.
+
+- **Ω_E (empirical, `awaits-external-input`).** *Hit rate.* "Does the extraction detector beat chance
+  on hidden extraction?" Resolution = an external validation study against labeled ground truth. The
+  corpus has no such labels (authored `claimed_type` is a seat, not truth — seat theorem), so this is
+  genuinely deferred, not computable now.
+- **Ω_P (preference, value-decision).** *Acceptable FP rate.* "What false-positive rate is tolerable
+  when acting on an extraction verdict, given the cost of a wrong call?" Resolution = a ruling by
+  those bearing the cost. Already authored locally: `institutional_barrier_structure.pl` →
   `false_negative_vs_false_positive_tradeoff, preference`.
 
-## 3. What Prolog CAN do now — the computable firing condition (Slice B core)
+## 3. The firing condition — THREE typed transition classes, one consequence gate (R1)
 
-The engine cannot *close* either limb (Slice C category error). It CAN detect the
-**precondition** — the constraints where a calibration miss would be load-bearing AND
-the call is hard to externally check — and **mint the omega OPEN**, with provenance.
-All inputs already exist per-constraint (verified 2026-06-30: `claimed_type`/computed
-type, `theater_ratio`, `coupling.boltzmann`, authored `victims` with exit mode).
+The engine cannot *close* either limb (Slice C category error). It CAN detect the precondition and
+**mint OPEN, with provenance**. All inputs exist per-constraint (verified 2026-06-30). Firing =
+`(FC1 ∨ FC2) ∧ consequence-gate ∧ ¬already-covered` (the guard is §5/R4).
 
-Draft clause (illustrative — thresholds are R1 below, NOT settled here):
+The three ways a both-speak seat can disagree, and how each is handled:
+
+- **FC1 — boundary escalation.** author ∈ genuinely-functional `{rope, scaffold, mountain}`, engine ∈
+  extractive `{snare, tangled_rope}`. The engine calls extraction where the author saw legitimate
+  coordination. **Fires.**
+- **FC2 — severity-within-extraction** (the largest single bucket, ~⅓ of the off-diagonal:
+  `tangled_rope↔snare`). Both sides are extractive, so a boundary axis drops this on the floor as
+  "lateral" — but author=`tangled_rope` (contested/hedged extraction) vs engine=`snare` (clean,
+  confirmed extraction) is a real and arguably *sharper* calibration disagreement than boundary-
+  crossing: is the extraction contested or settled? **Fires as its own condition** — not folded into
+  FC1, not silently excluded as lateral.
+- **naturalized-landing** (engine=`naturalized`). Does **NOT** fire here. `naturalized` is
+  extractive-by-construction (`drl_core.pl:422-426`: `BaseEps > rope_epsilon_ceiling` compressed below
+  the χ floor — "looks like an invariant from a below-threshold, no-exit seat"), so report_generator's
+  extractive/functional binary (authored for `extraction_blindness`, where naturalized-as-appearance
+  IS the signal) must not be reused verbatim to call →naturalized "de-escalation-toward-safe." It is
+  already the domain of `extraction_blindness` + the false_summit signature (`dr_claim_mismatch/4`
+  Type 1). **Routed there, not double-handled here** (R4 guard).
+
+**Consequence gate** (keeps it from firing on every mismatch — narrowness is R1): the seat's
+constraint must be hard-to-externally-check *and* consequential — `theater_ratio ≥ floor` (cover-story
+machinery) ∨ coupling-masked (`coupling.boltzmann = non_compliant`) ∨ an authored no-exit (`trapped`)
+victim bears the call.
+
+Draft clause (illustrative; the `{}` type-sets and `TheaterFloor` are R1, not settled here):
 
 ```prolog
-% MINTS an OPEN omega; never closes it. The engine names a boundary, it does not
-% rule on its own correctness.
-detector_calibration_due(C) :-
-    dr_type_dominant(C, T), member(T, [snare, rope]),     % a consequential extractive/coord call
-    (   theater_ratio(C, TR), TR >= TheaterFloor          % cover-story machinery (hidden), OR
-    ;   coupling(C, _, boltzmann(non_compliant), _)       % coupling-masked extraction, OR
-    ;   authored_victim_trapped(C)                          % a no-exit victim bears a wrong call
-    ).
+% MINTS an OPEN omega; never closes it. Names a boundary; does not rule on its own correctness.
+detector_calibration_due(C, Class) :-
+    both_speak_disagreement(C, Seat, AuthorT, EngineT),
+    (   fc1_boundary_escalation(AuthorT, EngineT), Class = boundary
+    ;   fc2_within_extraction(AuthorT, EngineT),   Class = severity     % tangled_rope <-> snare
+    ),
+    consequence_gate(C, Seat),
+    \+ already_covered_by_false_summit(C, Seat).       % R4 three-branch guard
 ```
 
-Resolution stays **authored**: the protocol text (what study closes the Ω_E, what
-ruling closes the Ω_P) is written by a human/essay-process, exactly like the existing
-four. The engine supplies only the firing + the typed slots.
+Resolution stays **authored** (the protocol text closing each limb), exactly like the existing four.
+The engine supplies only the firing + the typed slots.
 
 ## 4. Why this is honest (the boundary it respects)
 
-- It does **not** decide whether any snare call is correct (Slice C / seat theorem).
-- It does **not** read the Slice-A agreement cross-tab as calibration: that
-  `divergence_rate` (0.77) is a two-*seat* disagreement rate, never a hit rate. Slice A
-  *informs* this omega (it shows where engine and authors diverge, e.g. tangled_rope→snare);
-  it cannot resolve it.
-- The blind spot, if any, is upstream of Prolog: in whether this omega has been authored
-  at all. This proposal authors it.
+- It does **not** decide whether any extraction call is correct (Slice C / seat theorem).
+- It does **not** read the Slice-A cross-tab as calibration: `divergence_rate` (0.77) is a two-*seat*
+  disagreement rate, never a hit rate. Slice A *informs* the omega (where engine/authors diverge); it
+  cannot resolve it.
+- The only blind spot is upstream of Prolog: whether the omega was authored at all. This authors it.
 
-## 5. The rulings the operator owns (do not self-resolve)
+## 5. Rulings
 
-- **R1 — firing threshold.** Snare/rope only? Keep the theater∨coupling∨no-exit disjunction,
-  or narrow it? `TheaterFloor` value? (A too-loose gate mints OPEN omegas everywhere — the
-  "scope creep / Omegas everywhere" Ω_C in `omega_variables.md`.)
-  - *Empirical input (Slice A, 2026-06-30) — CORRECTED same day:* an earlier draft here
-    claimed the seat-divergence is **directional** (engine escalates 2.3–3.1× more than it
-    de-escalates). **That claim was under-witnessed and is retracted.** The direction is entirely
-    an artifact of where `tangled_rope` sits on the extraction axis — the load-bearing placement,
-    which the original sensitivity check (varying only `scaffold`) failed to test. Under the
-    **engine's own declared gap taxonomy** (`report_generator.pl:243-248`: extractive =
-    {snare, tangled_rope}; functional = {rope, naturalized, scaffold, mountain}), the split is
-    **symmetric — escalate 69 vs de-escalate 75 (0.92:1)**; the 106-seat `tangled_rope→snare`
-    bucket that carried the "escalation" story is *lateral* there (both extractive). So the only
-    robust facts are the **77% seat-disagreement** and its concentration at the `tangled_rope↔snare`
-    boundary — NOT a direction. **Implication for R1:** do NOT key firing on "escalation direction"
-    (it depends on a contested banding). Key it on the engine's own extractive/functional axis +
-    the hidden-extraction shape, which is a declared engine seat rather than an imposed one.
-
-### R1-refinement — `naturalized` is not the "safe" direction (do not reuse report_generator's binary verbatim)
-
-report_generator's extractive/functional binary was authored for `extraction_blindness`
-(cover-story detection), where `naturalized` belongs on the *functional* side precisely
-because "reads legitimate at the seat" is the disguise being detected. **That binary must
-NOT be reused verbatim as detector_calibration's firing axis** (the "binary built for one
-purpose, reused as if it settles another" trap). Reason, from the code: `naturalized`'s
-defining condition is `BaseEps > rope_epsilon_ceiling` (`drl_core.pl:422-426`) — HIGH real
-extraction compressed below the χ floor by power-scaling. It is the ONE "functional"-bucket
-type that is **extractive by construction** (operator: "looks like an invariant from a
-below-threshold, no-exit seat" — appears-invariant, is-extractive). So:
-
-- For calibration, transitions *into* `naturalized` (`tangled_rope→naturalized`,
-  `snare→naturalized`) are **not** de-escalation-toward-safe; naturalized is
-  appears-functional / is-extractive, its own cell.
-- But the engine **already** treats naturalized-masking specially: `extraction_blindness`
-  (cross-seat) + the false_summit signature / `dr_claim_mismatch/4` Type 1. So the clean
-  ruling is to **route naturalized-landing disagreements to that existing false-summit
-  apparatus** (via the R4-guard below) rather than add a redundant third tier inside
-  detector_calibration. (Reclassifying the ~8 →naturalized seats out of "de-escalation"
-  does not change the symmetric-direction finding: 69 vs ~67.)
-
-### R4-guard — avoid double-minting with `omega_extraction_blindness`
-
-`omega_extraction_blindness` (`report_generator.pl:285`) already fires on 56 constraints, keyed
-on a DIFFERENT axis: *intra-engine, cross-seat* — an extractive-typed seat at LOWER power beside a
-functional-typed seat at HIGHER power (the cover-story structure). `detector_calibration`'s axis is
-*engine-vs-author*. They are largely disjoint (partial overlap only), but they CAN co-fire on the
-same constraint. **R4 must gate `detector_calibration_due/1` to NOT mint where `extraction_blindness`
-already fired** — a structural guard that prevents double-minting on one gap under two names without
-needing an exact overlap count.
-- **R2 — the Ω_E/Ω_P split.** Confirm the pair, or rule it a single type.
-- **R3 — engine-minted vs authoring-convention.** Should the engine **auto-mint** this OPEN
-  omega (a new pattern: engine-minted omega, vs today's per-story authored `omega_variable/3`),
-  or should it stay a **template authors add** when relevant? This is the "5-arity omega_variable
-  protocol vs typed template clause" fork the report graduation lines already name.
-- **R4 — minting + wiring.** Whether to mint the OQ in ISSUES.md (with Priority/Deps) and wire
-  `detector_calibration_due/1` into the pipeline + reports, once R1–R3 are ruled.
+- **R1 — firing (OPEN).** The three-class structure above (FC1 boundary, FC2 within-extraction split
+  out, naturalized routed away) + the consequence gate. Open sub-decisions: exact type-sets, the
+  `TheaterFloor` value, and whether FC2 fires both directions (`tangled_rope→snare` and
+  `snare→tangled_rope`) or only the "hardening" direction.
+- **R2 — typing (RULED: keep the pair).** Ω_E hit-rate + Ω_P acceptable-FP-rate; do not collapse.
+- **R3 — scope (RULED: narrow, and enforce in code not intent).** Ship as a **single named minter
+  predicate** (`mint_detector_calibration_omega/N`) that is the *only* caller of the assert path — NOT
+  a general `engine_mint_omega/…` facility with one current caller. The R3 boundary must be something
+  the next agent hits **structurally** (there is no general minter to reuse), not a comment they have
+  to remember was intended.
+- **R4 — mint + wire (OPEN, held for R1).** Wire `detector_calibration_due/2` into the pipeline +
+  reports and mint the OQ in ISSUES.md (Priority/Deps). **Three-branch overlap guard** — before
+  minting, verify the transition is not already covered by: (1) `extraction_blindness` (cross-seat
+  cover-story), (2) the naturalized/false_summit routing (FC-naturalized above), and (3) — if FC2
+  ships — that the `tangled_rope↔snare` firing does not itself re-collide with (1) or (2). One branch
+  per already-existing omega axis, so no gap is minted twice under two names.
 
 ## 6. Apparatus-first recon (what already exists — so this extends, not duplicates)
 
-- **Computable agreement** already runs: per-seat `routing_sink:route_address/5` (the MECE
-  7-address taxonomy; `no_route`=agree, `author_engine_divergence`=both-speak-disagree) and now
-  the Slice-A `author_engine_crosstab` in `routing_sink.json`.
-- **`oracle_gap_analysis.py`** measures intra-orbit predictability — adjacent but NOT
-  detector-vs-truth; do not cite it as calibration.
-- **Authored detector-doubt already exists story-locally:** `press_reformation_causality.pl`
-  authors `'…if technological_determinism is correct, this constraint mis-classifies; the snare
-  classification should be weakened…'`. This proposal **generalizes that existing convention**
-  into a typed, apparatus-directed omega — it is not a new subsystem.
-- Taxonomy already contains calibration-shaped examples: `Ω_P03 (acceptable FP rate for
-  screening)`, `Misclassification cost (Ω_E)` — so the vocabulary is in place.
+- **Computable agreement already runs:** per-seat `routing_sink:route_address/5` (MECE 7-address
+  taxonomy; `no_route`=agree, `author_engine_divergence`=both-speak-disagree) + the Slice-A
+  `author_engine_crosstab` in `routing_sink.json`.
+- **`oracle_gap_analysis.py`** measures intra-orbit predictability — adjacent, NOT detector-vs-truth;
+  do not cite it as calibration.
+- **Authored detector-doubt already exists story-locally:** `press_reformation_causality.pl` authors
+  `'…if technological_determinism is correct, this constraint mis-classifies; the snare classification
+  should be weakened…'`. This **generalizes that convention** into a typed, apparatus-directed omega —
+  not a new subsystem.
+- Taxonomy already carries calibration-shaped examples: `Ω_P03 (acceptable FP rate for screening)`,
+  `Misclassification cost (Ω_E)`.
+
+---
+
+## Corrections log (kept so the walked-back premises don't get re-imported)
+
+1. **"Engine escalates 2.3–3.1×" — RETRACTED (2026-06-30).** Sensitivity varied `scaffold` (does not
+   move direction) not `tangled_rope` (does). Under the engine's own extractive/functional axis the
+   split is ~symmetric (69 vs 67–75). Direction is not a robust fact; 77% disagreement is.
+2. **"Reuse report_generator's extractive/functional binary as the firing axis" — CORRECTED.** That
+   binary was authored for `extraction_blindness` cover-story detection; reusing it verbatim mis-buckets
+   `naturalized` (extractive-by-construction) as the safe direction. Firing now handles naturalized
+   explicitly (§3) and routes it to the false-summit apparatus.
+3. **"Fold `tangled_rope↔snare` into lateral/ignore" — CORRECTED.** It is the largest bucket and a
+   real within-extraction severity disagreement; split out as FC2 (§3).
