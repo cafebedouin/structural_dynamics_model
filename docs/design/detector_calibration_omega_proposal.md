@@ -3,8 +3,9 @@
 **Status:** draft for ruling. Nothing is wired or fired. Firing thresholds and the type
 assignment are a declared seat (the operator's), not something the engine self-resolves.
 Provenance: Elias-Thorne report review (2026-06-30) → web-Claude's "author the omega aimed at
-the apparatus itself" → the apparatus-first recon in §6. R2 and R3 are ruled settled (operator,
-2026-06-30); R1 and R4 remain open.
+the apparatus itself" → the apparatus-first recon in §6. R1/R2/R3 ruled settled (operator,
+2026-06-30); **R4 ruled 2026-07-01 — carry as corpus-level OQ-200, do NOT wire; module stays
+tracked-but-unwired reference.** This proposal is now CLOSED; OQ-200 is the live carrier.
 
 **Standing convention for this doc (adopt for every empirical claim below):** any claim about the
 author×engine cross-tab must state, *in the same sentence*, which axis its sensitivity check varied
@@ -132,11 +133,32 @@ The engine supplies only the firing + the typed slots.
   a general `engine_mint_omega/…` facility with one current caller. The R3 boundary must be something
   the next agent hits **structurally** (there is no general minter to reuse), not a comment they have
   to remember was intended.
-- **R4 — mint + wire (OPEN — now a value decision, see finding below).** Wire
-  `detector_calibration_due/2` into the pipeline + reports and mint the OQ in ISSUES.md. **Three-branch
-  overlap guard** — verify the firing is not already covered by: (1) `extraction_blindness` (cross-seat
-  cover-story), (2) naturalized/false_summit routing (handled structurally by the type-sets), (3) FC2
-  re-collision (covered by (1) at constraint granularity). Implemented in `detector_calibration.pl`.
+- **R4 — mint + wire (CLOSED, operator 2026-07-01: carry as a corpus-level OQ, do NOT wire per-constraint;
+  see OQ-200).** The blocking baseline (`extraction_blindness`/gap omegas reading silently-empty on absent or
+  insufficient stakeholders) was fixed as OQ-197 (the three-valued gap-operability contract:
+  `gap`/`no_gap`/`undetermined(reason)`, source-parameterized on `gap_seat_source/1`), which unblocked R4.
+  The **R4 recompute on the FIXED detector** (`audits/2026-07-01_oq197_r4_recompute/`, read-only — the module
+  was loaded to measure, never wired) retracts the ~3× inflation this section's REFINEMENT reported: guarding
+  correctly on `undetermined`, net-new is **39/41 determinable** (twins), and the real undetermined-inflation is
+  only **4/12** — the earlier "14/12 genuine vs 43/53" split was measured under the PRE-fix conflation of
+  `no_gap` (examined, agree) with `undetermined` (couldn't examine) and is superseded (do not cite 43/53, 14/12,
+  or "~3×" forward). **But 39/41 is not 39/41 novel findings.** Per-firing KIND-diversity is low (5–6 distinct
+  `(Class, author→engine)` signatures, ~90% in two), and the per-CONSTRAINT decomposition shows net-new =
+  **false-summit re-surface (`mountain→tangled_rope`, 13/8 constraints = OQ-70/FNL through the author-engine
+  axis, not genuinely new)** + **a `tangled_rope→rope` author-over-claims-contestation residual (21/27
+  constraints, the module's genuinely-distinct signal)** + a small severity/singleton tail. The honest carrier
+  for a low-KIND-entropy signal is an **aggregate OQ naming the patterns**, not 39 near-repetitive per-constraint
+  omegas. **Ruling: mint OQ-200** (carries the author↔engine directional-disagreement question, the
+  decomposition, Ω_E-calibration + Ω_P-FP-rate open, and the binding reporting condition — firings are
+  "author↔engine directional disagreement, calibration open," never "miscalibration detected"). **Do NOT wire**
+  `detector_calibration_due/2` into the pipeline or reports. `detector_calibration.pl` stays
+  **tracked-but-unwired reference** (loaded by nothing), preserved so the implementation exists if Ω_E ever gets
+  a ground-truth answer. What would change the ruling toward wiring: an external calibration answer (Ω_E) + an
+  accepted FP-rate (Ω_P), or evidence the residual needs row-level (not aggregate) surfacing. **Three-branch
+  overlap guard** (built and used in the recompute) — verify the firing is not already covered by: (1)
+  `extraction_blindness` (cross-seat cover-story), (2) naturalized/false_summit routing (handled structurally by
+  the type-sets), (3) FC2 re-collision (covered by (1) at constraint granularity). Implemented in
+  `detector_calibration.pl`.
 
   **Witnessed CROSS-CORPUS finding (2026-06-30) — the singleton corpus misled; measured on all legs.**
   Per the "exercise an engine change across ALL corpora" rule, the funnel was run on the four corpora

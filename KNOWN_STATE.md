@@ -45,6 +45,31 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-01 — R4 RULED → OQ-200: detector_calibration carried as corpus-level OQ, NOT wired; module now TRACKED-but-unwired
+**Files:** ISSUES.md, docs/design/detector_calibration_omega_proposal.md, prolog/detector_calibration.pl, audits/2026-07-01_oq197_r4_recompute/
+**Tier:** tripwire
+
+Operator ruling closing R4 of the detector_calibration proposal. After OQ-197 unblocked the baseline and the R4
+recompute retracted the ~3× inflation (net-new = **39/41 determinable**, real undetermined-inflation only 4/12),
+the per-firing + per-constraint diversity measurement showed the net-new is **low-KIND-entropy** (5–6 distinct
+`(Class, author→engine)` signatures, ~90% two directional patterns). Decomposition: **false-summit re-surface**
+(`mountain→tangled_rope`, 13/8 constraints = OQ-70/FNL through the author-engine axis, not genuinely new) + a
+**`tangled_rope→rope` author-over-claims-contestation residual** (21/27 constraints, the constraint-majority and
+the module's genuinely-distinct signal) + a small severity/singleton tail. Volume-vs-breadth: per-SEAT-firing
+false-summit dominates (loud-narrow); per-CONSTRAINT `tangled_rope→rope` dominates (quiet-broad) — both correct,
+different denominators. **Ruling: carry as an aggregate corpus-level OQ (OQ-200), do NOT wire per-constraint** —
+39 near-repetitive firings each carrying the identical "calibration open" caveat is a query, not 39 findings. The
+binding reporting condition (same as OQ-199 for the gap omega): firings are "author↔engine directional
+disagreement, calibration open (Ω_E), FP-rate unset (Ω_P)," NEVER "miscalibration detected."
+
+**TRIPWIRE — `prolog/detector_calibration.pl` is now TRACKED but UNWIRED (supersedes the UNTRACKED tripwire
+below).** Committed this session as reference implementation; loaded by nothing, wired into no report. The
+question it computes is carried at corpus scope by OQ-200. Do NOT wire it (into `run_pipeline`, any report, or
+via `use_module`) without REOPENING R4 — that needs an external calibration answer (Ω_E) + an accepted FP-rate
+(Ω_P). The committed `already_covered/1` behavior (undetermined-aware post OQ-197) is measurement-only.
+
+---
+
 ## 2026-07-01 — gate check added: human gap surfaces must distinguish no_gap from undetermined (Pattern-6 guard)
 **Files:** scripts/gate.sh, python/check_gap_status_surfaces.py, python/query.py
 **Tier:** tripwire
@@ -114,14 +139,10 @@ leads with a gap_status line). Witnessed at the JSON boundary (pipeline exit 0, 
 (`constraints_with_gaps`=57, `omega_count`=57), companions examined=89/undetermined=30, 0 consistency
 violations, schema 0 errors, labels distinguish gap/no_gap/undetermined on both human surfaces.
 
-**TRIPWIRE — `prolog/detector_calibration.pl` is UNTRACKED and UNWIRED.** It is referenced by ISSUES.md
-OQ-197, `docs/design/detector_calibration_omega_proposal.md`, and the Slice-A/B KNOWN_STATE entries, so it
-READS as live — but `git log -- prolog/detector_calibration.pl` is empty (never committed) and nothing
-`use_module`s it (only a comment mention in report_generator.pl); it is not loaded by the stack or pipeline.
-It is Slice-B apparatus awaiting the proposal ruling. Do NOT assume its predicates run in the pipeline, and do
-NOT commit it as a side effect of an unrelated change — committing it is bundled with approving its proposal
-(operator's seat). Its `already_covered/1` (line ~88) treating undetermined as not-covered is the R4 inflation
-mechanism; the OQ-197 step-5 R4 recompute is where that changes.
+**TRIPWIRE — `prolog/detector_calibration.pl` — SUPERSEDED by the 2026-07-01 R4-ruling entry at the top of
+this file.** (At the time of this entry it was untracked and unwired, awaiting the proposal ruling.) It is now
+TRACKED-but-unwired reference by the R4 ruling; still loaded by nothing and wired into no report. See the top
+entry for the current disposition and the do-not-wire condition.
 
 ---
 

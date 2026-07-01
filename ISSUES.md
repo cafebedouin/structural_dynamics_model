@@ -10462,6 +10462,14 @@ it now turns on the module's own open axes (is it calibrated — Ω_E; acceptabl
 COMMITTED `already_covered` change (wiring `detector_calibration` into the pipeline) stays HELD on the proposal ruling —
 but that ruling now has its witnessed number.
 
+**R4 RULED 2026-07-01 → OQ-200 (carry as corpus-level OQ, do NOT wire).** The per-firing + per-constraint diversity
+measurement (appended to the same audit) showed the 39/41 determinable net-new is low-KIND-entropy (5–6 signatures,
+~90% two directional patterns), decomposing into false-summit re-surface (`mountain→tangled_rope`, 13/8 = OQ-70) + a
+`tangled_rope→rope` author-over-claims-contestation residual (21/27, the module's distinct signal) + a small tail. So
+the honest carrier is an aggregate OQ, not 39 per-constraint firings: **see OQ-200**. `detector_calibration.pl` stays
+tracked-but-unwired reference (never wired). This closes the OQ-197 side of the detector question; OQ-200 carries it
+forward.
+
 ---
 
 ## OQ-198 — tensions ledger counts `unknown` as a diverging perspective (false-positive "perspectives diverge")
@@ -10527,6 +10535,58 @@ directionality/beneficiary structure, or to grid-authoring artifacts? Until then
 from (a) are reported as "authored-stakeholder disagreement," never as validated cover-story detection.
 **Files:** `prolog/report_generator.pl` (`seat_type_reading/2` stakeholder clause), `prolog/stakeholder_seats.pl`
 (`dr_type_for_stakeholder/3`), `narrative_ontology:constraint_stakeholder/7` authored facts.
+
+---
+
+## OQ-200 — author-vs-engine directional disagreement (the detector_calibration question), carried as a corpus-level OQ not a wired per-constraint detector
+
+**Ω-type:** Ω_E (is the author↔engine directional call *calibrated* — external, no corpus ground truth) compounded with Ω_P (what false-positive rate is *acceptable* — a value decision no run produces). Both open by construction; no computation available today resolves either.
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-197
+**Origin:** detector_calibration Slice-B proposal ruling, 2026-07-01. The R4 recompute on the fixed detector
+(`audits/2026-07-01_oq197_r4_recompute/`) gave the module a real net-new figure (39/41 determinable, ~3× inflation
+retracted); the per-firing/per-constraint diversity measurement then answered the wire-vs-carry question.
+**Files:** `prolog/detector_calibration.pl` (the reference implementation — tracked but UNWIRED by this ruling),
+`docs/design/detector_calibration_omega_proposal.md`.
+
+**RULING (operator, 2026-07-01) — carry the question as this corpus-level OQ; do NOT wire per-constraint firings.**
+The module's value was always its distinct *question* (author-claimed type vs engine-computed type, a directional
+disagreement), never its per-constraint resolution. The evidence: on the twins the 39/41 determinable net-new
+firings carry only 5–6 distinct `(Class, author→engine)` signatures, and the two dominant ones account for ~90% of
+seat-firings — low KIND-entropy. A reviewer reading 39 per-constraint firings would mostly re-read two patterns,
+each carrying the identical "calibration open, FP-rate unset" caveat: that is a *query* ("which constraints carry
+the pattern"), not 39 *findings*. The honest carrier matches the entropy of the content — an aggregate OQ, not 39
+near-identical omegas. (R2 keep-the-pair logic at module scale: don't collapse distinct things, don't multiply one
+thing into 39 instances.)
+
+**Net-new DECOMPOSES — do not cite 39/41 forward as novel findings (constraint-level, both twins):**
+- **false-summit re-surface — `mountain→tangled_rope`, 13 haiku / 8 flash constraints.** Author claims `mountain`,
+  engine computes `tangled_rope`. This is OQ-70's false-summit / FNL-bait pattern seen through the author-engine
+  axis — **NOT genuinely net-new** (the apparatus already knows it via a different mechanism; same shape as the
+  (b)≡`h1_band` result — a "distinct" detector re-surfacing something computed elsewhere).
+- **the genuinely-distinct residual — `tangled_rope→rope`, 21 haiku / 27 flash constraints (the constraint
+  MAJORITY).** The mirror of false-summit: author claims contested `tangled_rope`, engine reads a clean `rope` —
+  author *over-claims* contestation. This is the module's real distinct signal, and it is a coherent nameable
+  phenomenon, not noise. NB the two diagnostics disagree by denominator: per-SEAT-firing false-summit dominates
+  (loud-but-narrow, ~2.8 seats × 13 constraints); per-CONSTRAINT `tangled_rope→rope` dominates (quiet-but-broad,
+  ~1 seat × 21). Both recorded; the residual is the constraint-majority, refining the earlier "small residual"
+  expectation.
+- **severity + singleton tail — ~5–7 constraints** (`tangled_rope→snare`, `rope→tangled_rope`, `snare→rope`,
+  `rope→snare`): the small genuinely-diverse remainder.
+
+**REPORTING CONDITION (binding).** Wherever this question is surfaced (this OQ, any future summary), a firing is
+reported as **"author↔engine directional disagreement, calibration open (Ω_E), FP-rate unset (Ω_P)"** — NEVER as
+"miscalibration detected." Same discipline as OQ-199 for the gap omega: the unresolved calibration question travels
+with the claim.
+
+**Disposition of the module.** `detector_calibration.pl` stays **tracked-but-unwired reference** (this ruling makes
+it tracked — no longer untracked WIP; nothing `use_module`s it, it is loaded by nothing in the pipeline). Kept so
+the implementation exists if Ω_E ever gets a ground-truth answer that would make per-constraint firing worth
+revisiting; until then this OQ is the carrier. **What would change the ruling toward wiring:** an external
+calibration answer (Ω_E) plus an accepted FP-rate (Ω_P), OR evidence that the `tangled_rope→rope` residual carries
+per-constraint signal a reviewer needs at the row level rather than the aggregate.
 
 ---
 

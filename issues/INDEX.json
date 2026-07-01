@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "72c129bc0ea5c20433be01b42ff3d068da34bd15",
+    "store_version": "35a149edf0d875e0d04988f0ae9384e054466674",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-01T02:18:44"
+    "generated_at": "2026-07-01T02:38:53"
   },
-  "issues_sha": "7f1a47f5c6a715b2b36a67a3ed8ca5f7334a6cd47090e2f0a4ed42129182ea02",
-  "n_entries": 199,
+  "issues_sha": "db53e4c7b14318ea11817677da49f7584369e771acf816ea57a668d7842ce6f3",
+  "n_entries": 200,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 13,
     "partial": 8,
     "disposed": 4,
-    "open": 66,
+    "open": 67,
     "future": 4
   },
   "active": [
@@ -996,8 +996,10 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-51",
+        "OQ-70",
         "OQ-89",
-        "OQ-199"
+        "OQ-199",
+        "OQ-200"
       ]
     },
     {
@@ -1011,6 +1013,21 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-197"
+      ]
+    },
+    {
+      "id": "OQ-200",
+      "status": "open",
+      "priority": 3,
+      "summary": "author-vs-engine directional disagreement (the detector_calibration question), carried as a corpus-level OQ not a wired per-constraint detector",
+      "deps": [
+        "splits_from OQ-197"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-70",
+        "OQ-197",
+        "OQ-199"
       ]
     }
   ],

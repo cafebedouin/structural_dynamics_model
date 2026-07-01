@@ -82,6 +82,40 @@ testsets_flash          41                     6             boundary mountain�
   wire-as-declared-open option remains coherent; the diversity just shifts the balance toward the
   aggregate carrier being the honest one.
 
+## Residual decomposition — constraint-level (refines the "small residual" premise)
+
+The per-seat-firing entropy (5–6 signatures, ~90% in two) suggested the false-summit pattern
+dominates and the genuine residual is small. The per-CONSTRAINT decomposition says otherwise —
+a second diagnostic arriving at a different result, which is the finding:
+
+```
+signature (author→engine)   haiku constraints   flash constraints   reading
+mountain→tangled_rope              13                  8             false-summit = OQ-70 (not net-new)
+tangled_rope→rope                  21                 27             author over-claims contestation, engine sees clean rope
+tangled_rope→snare (severity)       3                  2             within-extraction severity
+rope→tangled_rope / snare→rope /    2                  6             diverse singleton tail
+  rope→snare
+determinable net-new               39                 41
+```
+
+- **Volume vs breadth reconciliation.** false-summit is loud-but-narrow (36 seat-firings in 13
+  constraints, ~2.8 seats each); `tangled_rope→rope` is quiet-but-broad (23 seat-firings across 21
+  constraints, ~1 each). The per-seat tally is dominated by false-summit; the per-constraint tally is
+  dominated by `tangled_rope→rope`. Both correct — different denominators.
+- **The genuine residual is NOT small — it is the constraint majority (26/39 haiku, 33/41 flash)** —
+  and it is a SINGLE coherent phenomenon: `tangled_rope→rope` (21/27 constraints). This is the mirror
+  of false-summit: where false-summit is author-optimism (claims `mountain`, engine reads contested
+  extraction), `tangled_rope→rope` is author-pessimism (claims contested `tangled_rope`, engine reads
+  a clean `rope`). It is the module's genuinely-distinct-from-OQ-70 content, and it is nameable, not
+  noise.
+- **Consequence for the ruling (does not reverse it).** KIND-diversity is still low — TWO dominant
+  directional patterns + a ~5–7-constraint tail — so the corpus-level-OQ carrier remains the honest
+  one (an aggregate naming the two patterns captures more than 39/41 near-repetitive per-constraint
+  firings). But the decomposition the OQ must carry is: net-new = **false-summit re-surface (13/8, =
+  OQ-70)** + **a `tangled_rope→rope` author-over-claims-contestation residual (21/27, the module's real
+  distinct signal)** + a small tail — NOT "one known pattern + a small residual." The residual is the
+  headline, and it is a coherent phenomenon worth the OQ, not per-constraint triage.
+
 ## Caveats
 
 - `detector_calibration.pl` loaded READ-ONLY to measure; not wired, not committed. The wire/no-wire
