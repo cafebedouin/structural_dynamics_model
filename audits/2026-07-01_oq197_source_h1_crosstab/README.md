@@ -60,12 +60,44 @@ build-discipline "unwired ≠ worthless / duplicate = cruft" test lands on *dupl
 (a) is a non-redundant reading (authored-stakeholder axis, distinct from the canonical orbit
 `h1_band` already covers). The (a)/(b) ruling remains the operator's seat.
 
-## Caveats / next
+## Twin extension (2026-07-01) — the finding REPLICATES at scale
 
-- **`testsets/` only, n=84 eligible; 3 absolute divergences.** The operator's instruction
-  named `testsets/` + the twins. The twins (`testsets_haiku/`, `testsets_flash/`) need their
-  own pipeline run for `h1_band` + a `gap_status` both-source pass under a `corpus_path`
-  overlay (asserta, per Corpus Loading) before the (a)-is-distinct finding generalizes. Not
-  yet run.
-- The perfect (b)⟺h1 coincidence is definitional coextension (same orbit, two readings), so
-  it should be read as "(b) is redundant," NOT as "(b) is independently confirmed by h1."
+Run on both twins via `corpus_path` overlay (`asserta`, per Corpus Loading; 960 constraints
+each, twin-specific IDs confirm the overlay took effect, not the default `testsets`). `h1`
+computed in Prolog (`grothendieck_cohomology:cohomological_obstruction/3` after
+`corpus_cohomology/1`) — **positive-controlled against the pipeline `h1_band` on testsets: 0
+mismatches / 119** (`h1_testsets_prolog_control.tsv`), so the probe is validated before the
+twins where no pipeline `h1_band` exists. Full output: `twin_crosstab_output.txt`.
+
+| corpus          | eligible | (b)↔h1>0 off-diagonal | (a)↔h1>0 off-diagonal |
+|-----------------|----------|-----------------------|-----------------------|
+| testsets        | 84       | **0**                 | 3                     |
+| testsets_haiku  | 452      | **0**                 | 19                    |
+| testsets_flash  | 661      | **0**                 | 14                    |
+| **total**       | **1197** | **0**                 | **36**                |
+
+- **Canonical (b) ≡ `h1_band>0` on ALL THREE corpora — 0 off-diagonal across 1,197 eligible
+  constraints, zero exceptions.** The (b)=h1_band coextension is not a testsets small-n
+  artifact; it is definitional and holds at scale.
+- **Stakeholder (a) is consistently distinct from `h1_band`** — 36 divergences (~3.6% / 4.2% /
+  2.1%), small but nonzero on every corpus. Since (b)≡h1 exactly, the (a)/(b) disagreements ARE
+  the (a)/h1 divergences (19 and 14 on the twins). (a)'s independent authored-stakeholder
+  signal generalizes across three independently-generated corpora.
+
+## Reading (hardened) — for the ruling, not the ruling
+
+The evidence for **(a)** is now robust: (b) is a pure duplicate of `h1_band` (0/1197 exceptions
+→ "duplicate = cruft" per build-discipline), while (a) is a non-redundant reading distinct from
+`h1_band` on 36/1197 constraints across three corpora. The (a)/(b) ruling remains the operator's
+seat — now hardened past the testsets small-n.
+
+## Caveats
+
+- The perfect (b)⟺h1 coincidence is definitional coextension (same canonical `dr_type` orbit,
+  two readings), so it means "(b) is redundant," NOT "(b) is independently confirmed by h1."
+- The both-determinate restriction drops ~half of each twin (452/960, 661/960) — the excluded
+  constraints are exactly the present-but-insufficient / different-coverage population OQ-197 is
+  about, correctly held out of the overlap signal per the operator instruction.
+- (a)'s divergence rate is a minority (~2–4%); the claim is that (a) is *irreducible to*
+  `h1_band`, not that it diverges often. Even a few percent of genuine independent signal makes
+  (a) a distinct measurement — which is the question the ruling turns on.

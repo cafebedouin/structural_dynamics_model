@@ -54,7 +54,12 @@ sources per constraint; firing under default byte-identical (57=57). Cross-tab o
 testsets subset (n=84): canonical (b) firing EXACTLY coextensive with `h1_band>0` (58/58, 26/26, zero
 off-diagonal — definitional, same orbit) ⇒ (b) is a redundant recomputation of `h1_band`; stakeholder (a)
 distinct on 3/84 (authored-stakeholder disagreement `h1_band` lacks). Evidence points toward ruling (a); ruling
-stays operator's seat, now evidence-fed. **Correction to b616e625:** its canonical (b) seat clause used
+stays operator's seat, now evidence-fed. **Twins extension (2026-07-01) REPLICATES at scale:** across all
+three corpora (testsets/haiku/flash, 1197 eligible) canonical (b)↔`h1_band>0` has 0 off-diagonal (zero
+exceptions); stakeholder (a) distinct on 36/1197 (~2–4% each). Twin `h1` computed in Prolog
+(`cohomological_obstruction/3`), positive-controlled vs pipeline `h1_band` on testsets (0/119 mismatch)
+before use on the twins. (b)=duplicate-of-h1_band; (a)=irreducible authored-stakeholder signal. Evidence
+`audits/2026-07-01_oq197_source_h1_crosstab/` (twin tables + control). **Correction to b616e625:** its canonical (b) seat clause used
 `constraint_classification/3` with an UNBOUND context (mode `+Context`) → 0 seats for every constraint (a dead,
 unwitnessed branch — my contract witnesses were all stakeholder-path). Fixed to `drl_core:dr_type/3` via
 `logical_fingerprint:standard_context_for_power/2` over the 4 canonical positions (the `write_perspectives`/

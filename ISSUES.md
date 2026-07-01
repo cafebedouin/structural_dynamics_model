@@ -10382,10 +10382,14 @@ redundant recomputation), while stakeholder (a) is DISTINCT from `h1_band` on 3/
 disagreement `h1_band` does not carry). Source-explicit `gap_status/3`/`detect_gap_pattern/3` landed to run it
 (commit `6bda83ec`), which also caught+fixed a bug: the b616e625 canonical clause used
 `constraint_classification/3` with an unbound context (mode `+Context`) → 0 seats; fixed to `dr_type/3` via
-`standard_context_for_power/2`. **PENDING: the twins extension** (`testsets_haiku/`+`testsets_flash/` need
-their own pipeline `h1_band` + a both-source `gap_status` pass under a `corpus_path` overlay) before
-(a)-is-distinct generalizes past n=84/3-divergences. (4) the ruling itself (operator's seat — now evidence-fed,
-not prior-argued); (5) R4 net-new recompute on the fixed detector — HELD until (1)–(4) land.
+`standard_context_for_power/2`. **Twins extension DONE (2026-07-01) — REPLICATES at scale:** across all three
+corpora (testsets 84, haiku 452, flash 661 eligible = 1197) canonical (b) is coextensive with `h1_band>0`
+with **0 off-diagonal, zero exceptions**; stakeholder (a) distinct from `h1_band` on **36/1197** (~2–4% each,
+nonzero everywhere). Twin `h1` computed in Prolog (`cohomological_obstruction/3`), positive-controlled against
+pipeline `h1_band` on testsets (0/119 mismatch) before use. So (b) is a pure duplicate of `h1_band` and (a)'s
+authored-stakeholder signal is irreducible to it — evidence robust past small-n. **(3) is now COMPLETE.**
+(4) the ruling itself (operator's seat — evidence-fed: (b)=duplicate/cruft vs (a)=non-redundant reading; NOT
+yet ruled); (5) R4 net-new recompute on the fixed detector — HELD until (1)–(4) land.
 
 ---
 
