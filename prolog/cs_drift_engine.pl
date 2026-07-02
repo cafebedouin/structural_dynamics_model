@@ -53,11 +53,22 @@ cs_drift_trajectory(UID, Gap, Terminal) :-
 % Attractor table (Direction, Magnitude, Acknowledged → Terminal)
 % ---------------------------------------------------------------------------
 
+% ROW-DISJOINTNESS (OQ-137 fix, 2026-07-02): the table is consumed as a
+% function (one terminal per gap) but its rows used to overlap — (stable,
+% minor, _) matched both the stable row and the minor row (duplicate
+% stable_pattern, witnessed on 8 corpus UIDs), and (revival_pressure |
+% repudiation_pressure, minor, _) matched the minor row AND its pressure row
+% with DIFFERENT terminals (order-dependent for once/1 consumers, over-counted
+% by aggregates). Guards below make every (Direction, Magnitude, Acknowledged)
+% combination match exactly one row, preserving the pre-fix FIRST solution on
+% all 42 combinations (before/after enumeration diff in the fix commit).
+
 % No drift → stable regardless
 cs_terminal_attractor(stable, _, _, stable_pattern).
 
 % Minor drift → stable regardless (self-corrects under inertia)
-cs_terminal_attractor(_, minor, _, stable_pattern).
+cs_terminal_attractor(Direction, minor, _, stable_pattern) :-
+    Direction \= stable.
 
 % Authority erosion: medium survives, so acknowledgment can rescue substantial
 cs_terminal_attractor(authority_erosion, severe, _, repudiation).         % post-1945 total-war cases
@@ -80,6 +91,9 @@ cs_terminal_attractor(practice_drift, severe,       true,  revival).       % Heb
 cs_terminal_attractor(practice_drift, substantial,  false, husk).
 cs_terminal_attractor(practice_drift, substantial,  true,  stable_pattern).
 
-% Revival and repudiation pressures
-cs_terminal_attractor(revival_pressure,      _, _, revival).      % Hebrew revival; also: acknowledged codification rebuild reclassified here
-cs_terminal_attractor(repudiation_pressure,  _, _, repudiation).  % Nuremberg-type normative overturning
+% Revival and repudiation pressures (non-minor; a minor pressure gap is
+% absorbed by the minor→stable row above — the pre-fix first solution)
+cs_terminal_attractor(revival_pressure,      Magnitude, _, revival) :-      % Hebrew revival; also: acknowledged codification rebuild reclassified here
+    Magnitude \= minor.
+cs_terminal_attractor(repudiation_pressure,  Magnitude, _, repudiation) :-  % Nuremberg-type normative overturning
+    Magnitude \= minor.

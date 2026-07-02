@@ -56,10 +56,14 @@
    FIELD ACCESSORS
    ================================================================ */
 
-%% cs_has_axioms(+C)
-%  Succeeds iff constraint C has at least one cs_axiom/3 fact.
-cs_has_axioms(C) :-
-    narrative_ontology:cs_axiom(C, _, _), !.
+%% cs_has_axioms(+UID)
+%  Succeeds iff story UID has at least one cs_axiom/3 fact.
+%  KEY IS THE story_uid SURROGATE (UUIDv4), NOT the constraint name —
+%  cs_axiom/3 facts are UID-keyed (like cs_drift_state/3), so calling this
+%  with a constraint name never fires, SILENTLY (witnessed 0/119 at the
+%  constraint-name key while cs_axiom facts exist; OQ-137 sweep 2026-07-02).
+cs_has_axioms(UID) :-
+    narrative_ontology:cs_axiom(UID, _, _), !.
 
 /* ================================================================
    TYPE B FINDING: cs_axiom_inconsistent/2
@@ -70,11 +74,12 @@ cs_has_axioms(C) :-
    each inconsistency is reported once per constraint).
    ================================================================ */
 
-%% cs_axiom_inconsistent(+C, -Pair)
-%  C holds both sides of a declared contradiction.
-cs_axiom_inconsistent(C, Atom1-Atom2) :-
-    narrative_ontology:cs_axiom(C, _, Atom1),
-    narrative_ontology:cs_axiom(C, _, Atom2),
+%% cs_axiom_inconsistent(+UID, -Pair)
+%  Story UID holds both sides of a declared contradiction.
+%  UID-keyed like cs_has_axioms/1 above (same silent wrong-key trap).
+cs_axiom_inconsistent(UID, Atom1-Atom2) :-
+    narrative_ontology:cs_axiom(UID, _, Atom1),
+    narrative_ontology:cs_axiom(UID, _, Atom2),
     Atom1 @< Atom2,
     (   narrative_ontology:cs_axiom_contradiction(Atom1, Atom2)
     ;   narrative_ontology:cs_axiom_contradiction(Atom2, Atom1)
