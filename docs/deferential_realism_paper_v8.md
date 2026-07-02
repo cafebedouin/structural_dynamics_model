@@ -59,6 +59,10 @@ observer position), and the seat-theorem documents use "seat" in v8's sense (the
 content-position). The bridge table in §5.4 is the translation, and reading either ancestor
 without it reproduces a documented error.
 
+A reader who wants the current state of the project without any of the version history should
+read the closing **Appendix — The Project at v8, Stated Plainly** first; everything in it is
+restated with full provenance in §§3–9.
+
 ---
 
 ## 2. Origin and Method
@@ -1060,5 +1064,87 @@ handed-forward obligation (§6.4, §9.5). Not modified: Axioms 1–7, Theorems 1
 classification behavior, any threshold, any verdict computation. v7 remains the committer-axis
 record; v6.13.1 (internally v6.13.2) remains the observer-axis record; `docs/seat-theorem-v1.md`
 remains the law.
+
+---
+
+## Appendix — The Project at v8, Stated Plainly
+
+This appendix repeats nothing about how the framework got here. It states what the project is
+now, in one pass, for a reader who wants the current state without the version history. Every
+term is used only in its current sense; everything here is restated with provenance in the body.
+
+**What this is.** Deferential Realism is a philosophical framework with a working measurement
+engine (Prolog, with a Python orchestration layer). Its subject is constraints — the rules,
+arrangements, and structures that bind people, from labor law to doctrinal commitments to
+physical limits. The framework holds that constraints have objective structural properties, and
+that what a constraint *is* to you depends on where you stand — and it measures that dependence
+instead of resolving it.
+
+**The ontology.** For any contentful question about a constraint there are exactly three roles:
+
+- One **seat**: the reference reality the verdict is audited against — in the engine, the
+  authored metric reality of who benefits and what binds.
+- Many **gauges**: standpoints from which that one content is read. The engine uses four
+  canonical positions — powerless, moderate, institutional, analytical. Rotating the gauge
+  changes the reading, never the content.
+- An **orientation** per commitment-holder: the holder's relation to the seat, with two faces —
+  how the selection is *shown* (declared as a position, or posed as natural fact) and whether
+  it is *kept* honestly over time (drift acknowledged or not).
+
+The audit runs one direction only: presentation is checked against the metric reality, never
+the reverse. A machine-checked guard in the standing gate enforces that commitment data cannot
+reach observer computation except through one sanctioned, narrowly-typed bridge — if that ever
+fails, the ontology's central claim fails with it.
+
+**What the engine computes.** Input is a corpus of LLM-authored constraint stories, each one
+*reading* of a topic with authored metrics (base extractiveness ε among them). For each story
+and each gauge position the engine computes experienced extraction χ = ε × f(d) × σ(S) and
+classifies the constraint into one of six types — mountain (natural limit), rope
+(coordination), tangled_rope (coordination and extraction at once), snare (extraction),
+scaffold (temporary structure), piton (position-local anchor). It then measures how the four
+positions' classifications relate — agreement, quantized disagreement bands, transport and
+spectral structure — because disagreement is the signal, not an error to average away. A
+signature layer audits presented structure against authored structure and flags or corrects
+cover stories. A commitment layer takes contested topics (kernels) with rival readings, each
+declaring its reference frame, drift state, and the grounding of its foundational premises,
+and computes structural consequences: the terminal attractor of continued drift, the
+foreclosure of premises undermined by their own evidential commitments, and whether two
+contradictory readings are licensed plurality or real closure.
+
+**The main standing results, in plain terms.**
+
+- Extraction is never visible from every position; the beneficiary's position is structurally
+  the one it is invisible from. Cover stories are geometry, not conspiracy.
+- Cross-position disagreement comes in quantized blocks: with four real positions,
+  disagreement counts of 1 and 2 cannot occur; fewer real positions have smaller spectra; and
+  "undetermined" is a first-class outcome, never silently read as zero.
+- A commitment's perspectival health and its structural viability are independent
+  measurements: a reading can look coherent from every position while resting on a premise its
+  own evidential commitments have already foreclosed.
+
+**How to read the numbers.** The metrics are routing, not truth-measurement: thresholds are
+declared governance stands that make judgment explicit, consistent, and revisable. ε is
+authored per reading, so every corpus statistic is conditional on one generation run;
+regenerating a topic produces a new reading, not a re-measurement of the old one. The live
+corpus is deliberately small — a working test bed plus two stable twin baselines — and its
+size is whatever the pipeline manifest says at the time of reading. Prevalence of the
+false-natural-law signature currently reflects an authoring convention and may not be cited as
+a detection result.
+
+**What is running.** The classification pipeline and its standing gate (tracker checks,
+self-tests, the cross-axis guard); an essay pipeline (topic → readings → corpus →
+per-constraint reports → a deterministic tensions ledger, with final synthesis done live by
+the operator, not automated); and a narrative experiment that extracts a story's constraint
+topology, regenerates a new story from the formal skeleton behind an air gap, and re-measures
+it — the demonstration that the topology survives independent of its original body.
+
+**What is open.** Three named obligations: a general proof of the disagreement-spectrum law
+for any number of real positions (OQ-195); resolution of the authoring confound behind the
+false-natural-law signature (OQ-70); and a declaration discipline for ε — surfacing who
+authored each ε, from which reading, and how stable conclusions are under its perturbation —
+the framework's main owed artifact. The full open-questions ledger is `ISSUES.md`.
+
+**Status.** Alpha, working toward beta: the corpus stays small while schema and wiring evolve,
+and correctness and reproducibility are prioritized over growth. Everything is CC0.
 
 *CC0 Universal.*
