@@ -96,3 +96,4 @@ aggregatable_reading(stakeholder_seats:in_contention/3, corpus_constraint,
 % ----------------------------------------------------------------------------
 census_source_backing(q6,                 stakeholder_seats:q6_crosscheck/3).
 census_source_backing(extraction_reading, stakeholder_seats:extraction_state/2).
+census_source_backing(consensus,          stakeholder_seats:consensus_provenance/2).

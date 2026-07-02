@@ -76,6 +76,7 @@
 % ----------------------------------------------------------------------------
 commentary_source(q6).
 commentary_source(extraction_reading).
+commentary_source(consensus).
 
 % ----------------------------------------------------------------------------
 % PER-CONSTRAINT CELL HOOK  commentary_cell(+Source, +C, -Bucket)
@@ -107,6 +108,21 @@ extraction_state_bucket(extraction_clear,      extraction_clear).
 extraction_state_bucket(extraction_unnameable, extraction_unnameable).
 extraction_state_bucket(extraction_fired(_),   extraction_blindspot_fired).
 
+% consensus (OQ-136/OQ-137) — manufactured-consensus provenance. Reads the TOTAL
+% consensus_provenance/2 (OQ-121 totalization; registry-proven exactly-one,
+% tests/test_reading_totality.pl). The compound verdict is FLATTENED to its
+% functor: distinct Excl seat-lists would fragment the histogram into
+% one-member buckets (per-member Excl detail stays queryable on the predicate).
+commentary_cell(consensus, C, Bucket) :-
+    stakeholder_seats:consensus_provenance(C, Verdict),
+    consensus_bucket(Verdict, Bucket).
+
+consensus_bucket(no_agent_seats,                       no_agent_seats).
+consensus_bucket(seats_untyped,                        seats_untyped).
+consensus_bucket(manufactured_consensus_candidate(_),  manufactured_consensus_candidate).
+consensus_bucket(unanimous_no_excluded_seats,          unanimous_no_excluded_seats).
+consensus_bucket(plural(_),                            plural).
+
 % ----------------------------------------------------------------------------
 % OUT-OF-DOMAIN BUCKETS  commentary_out_of_domain_bucket(+Source, ?Bucket)
 %   Buckets meaning "the reading does not APPLY here". Excluded from the coverage
@@ -114,6 +130,14 @@ extraction_state_bucket(extraction_fired(_),   extraction_blindspot_fired).
 % ----------------------------------------------------------------------------
 commentary_out_of_domain_bucket(extraction_reading, extraction_out_of_domain).
 % q6: universal domain — no out-of-domain bucket.
+% consensus: PROVISIONAL SEAT (stamped 2026-07-02, pending the OQ-136 Phase-4
+% ruling). Follows the predicate's own documented semantics
+% (stakeholder_seats.pl:182 "out-of-domain (no seats to compare)") — but this
+% declaration pre-judges, at the census schema level, the very bucket OQ-136
+% adjudicates (authoring gap vs genuine category). If OQ-136 rules
+% no_agent_seats a genuine first-class category, flipping this line is part of
+% that output-changing follow-up; membership stays queryable either way.
+commentary_out_of_domain_bucket(consensus, no_agent_seats).
 
 % ----------------------------------------------------------------------------
 % ABSENCE BUCKETS  commentary_absence_bucket(+Source, ?Bucket)
@@ -127,6 +151,7 @@ commentary_absence_bucket(q6, q6_signature_unknown).  % computed side absent
 % extraction_reading: NO absence bucket — every in-domain constraint reaches a
 % measured state (clear / unnameable / fired); coverage is 1.0 over its domain by
 % construction (a total predicate has no "didn't look" gap on its domain).
+commentary_absence_bucket(consensus, seats_untyped).  % seats present, none typed
 
 % ----------------------------------------------------------------------------
 % PREVALENCE BUCKET  commentary_prevalence_bucket(+Source, ?Bucket)
@@ -136,6 +161,11 @@ commentary_absence_bucket(q6, q6_signature_unknown).  % computed side absent
 % ----------------------------------------------------------------------------
 commentary_prevalence_bucket(extraction_reading, extraction_blindspot_fired).
 % q6: no single prevalence notion.
+% consensus: NO prevalence bucket by default (declared choice, 2026-07-02):
+% manufactured_consensus_candidate is a CANDIDATE flag, not a positive finding
+% — headlining its in-domain rate as "prevalence" would counterfeit a verdict
+% the predicate does not give (it names a structural footprint, not manufactured
+% consensus). Revisable with the OQ-136 disposition ruling.
 
 % ----------------------------------------------------------------------------
 % COVERAGE DECIDABILITY  commentary_coverage_decidable(+Source)
@@ -145,6 +175,11 @@ commentary_prevalence_bucket(extraction_reading, extraction_blindspot_fired).
 % ----------------------------------------------------------------------------
 commentary_coverage_decidable(q6).
 commentary_coverage_decidable(extraction_reading).   % OQ-121: domain + states ruled.
+commentary_coverage_decidable(consensus).            % consensus_provenance/2 is TOTAL with
+                                                     % explicit ood/absence tokens (5-verdict
+                                                     % partition, test_seat_totality +
+                                                     % test_reading_totality) — the bucket
+                                                     % sets above are ruled complete.
 
 % ----------------------------------------------------------------------------
 % CENSUS  commentary_census(+Source, -Census)
