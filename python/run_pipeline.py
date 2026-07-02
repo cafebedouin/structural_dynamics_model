@@ -695,6 +695,38 @@ def _prolog_commentary_census():
         cleaned if cleaned.strip() else "# Commentary Census (empty)\n", encoding="utf-8")
 
 
+def _prolog_reading_totality_gate():
+    """OQ-137 standing guard: the reading-totality suite as a fail-fast gate.
+
+    Runs prolog/tests/test_reading_totality.pl (registry-driven: every
+    reading_registry:aggregatable_reading/3 entry classed total_on_domain is
+    proven exactly-one-solution over its declared domain, with its own fired
+    positive controls). Sequential and BEFORE the parallel Prolog analyses —
+    commentary_census presumes exactly the totality this suite proves (its
+    Σ==n_corpus invariant), so a silently-partial reading must stop the run
+    here, not surface as a census sum mismatch downstream.
+
+    Fail-closed by construction: run_tests failing (or the unit not loading)
+    makes the swipl -g goal fail -> non-zero exit -> PrologError. Deliberate-
+    break wiring control witnessed 2026-07-02 (scratch overlay registering an
+    always-failing reading turned this step red; clean run green) — see
+    KNOWN_STATE 2026-07-02.
+    """
+    try:
+        run_prolog(
+            ["stack.pl", "reading_registry.pl", "commentary_census.pl",
+             "tests/test_reading_totality.pl"],
+            "corpus_loader:load_all_testsets, run_tests(reading_totality)",
+        )
+    except PrologError as e:
+        raise SystemExit(
+            "OQ-137 reading-totality gate failed — a registered aggregatable "
+            "reading is not exactly-one on its declared domain (or the suite "
+            "did not run). Fix the reading to a typed token (design_discipline "
+            f"§5) or correct its registry entry, then re-run. Detail: {e}"
+        )
+
+
 def _phase_prolog(progress, parallel):
     """Phase 2: run all Prolog analyses in parallel."""
     # Diagnostic — remove after debugging
@@ -704,6 +736,12 @@ def _phase_prolog(progress, parallel):
         progress("pipeline", f"PROLOG_DIR exists = {PROLOG_DIR.exists()}")
         progress("pipeline", f"swipl path = {shutil.which('swipl')}")
         progress("pipeline", f"testsets count = {len(list(TESTSETS_DIR.glob('*.pl')))}")
+
+    # OQ-137 standing guard — sequential fail-fast, before the parallel set
+    # (which includes commentary_census). Raises SystemExit on red.
+    if progress:
+        progress("pipeline", "[PROLOG] reading-totality gate...")
+    _prolog_reading_totality_gate()
 
     if progress:
         progress("pipeline", "[PROLOG] Running analyses...")

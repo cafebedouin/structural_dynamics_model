@@ -566,8 +566,15 @@ domain. It is **every predicate an aggregate could read as a measurement must ca
 type, not a failure.** Templates already in the engine: `constraint_signature/2` (explicit `unknown`
 fallback "instead of a default-fabricated verdict") and `q6_cell/2` (explicit `q6_unmeasured` /
 `q6_signature_unknown` buckets); the commentary family (`extraction_state/2`, `consensus_provenance/2`,
-`seat_perceived_vs_real/4`) was brought to this shape in OQ-121. A census over the reading layer to
-confirm the convention holds everywhere is OQ-137.
+`seat_perceived_vs_real/4`) was brought to this shape in OQ-121. The census over the reading layer
+landed as OQ-137 (resolved 2026-07-02): the convention is now MACHINE-CHECKED — every aggregatable
+reading is classified in `prolog/reading_registry.pl` (`aggregatable_reading/3`: total_on_domain |
+partial_by_design(reason)), the registry-driven suite `prolog/tests/test_reading_totality.pl`
+proves exactly-one-solution per total entry over its declared domain (with fired positive
+controls), and `python/run_pipeline.py` runs that suite as a sequential fail-fast gate before the
+Prolog analyses. When you ADD a reading predicate, register it in the same change — registration
+is opt-in (the named residual risk in the OQ-137 close); the sweep evidence is
+`audits/2026-07-02_oq137_reading_totality/classification_table.md`.
 
 ### The override layer corrects metric blindness — mostly *(audit finding; predicate identity now resolved)*
 

@@ -594,6 +594,22 @@ python3 python/cli.py <group> <name> [args] # run a tool (argv forwarded verbati
 wherever they physically sit (no file moves). `cli.py report ...` delegates to the reports package;
 `cli.py menu` delegates to `omega_resolver.py menu`. `cli selftest` is wired into `scripts/gate.sh`.
 
+### Run the reading-totality suite (OQ-137 standing guard)
+
+```bash
+cd prolog && swipl -g "[stack], [reading_registry], [commentary_census], \
+  corpus_loader:load_all_testsets, [tests/test_reading_totality], \
+  run_tests(reading_totality), halt" -t "halt(1)"
+```
+
+Registry-driven: every `reading_registry:aggregatable_reading/3` entry classed
+`total_on_domain` is proven exactly-one-solution over its declared domain (typed-absence
+convention, `docs/design/design_discipline.md` §5). The SAME suite runs as a sequential
+fail-fast gate at the top of `run_pipeline.py`'s Prolog phase — a red suite stops the
+pipeline before the census. **When you add a reading predicate an aggregate could consume,
+register it in `prolog/reading_registry.pl` in the same change** (registration is opt-in —
+an unregistered reading escapes the guard; OQ-137 close, residual risk).
+
 ### Run the full analysis pipeline
 
 ```bash

@@ -45,9 +45,26 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-07-02 — OQ-137 enabling slice landed (reading registry + totality suite + consensus census source); OQ-136 evidence in (haiku/contradictions authoring artifact vs genuine mcc)
-**Files:** prolog/reading_registry.pl, prolog/tests/test_reading_totality.pl, prolog/commentary_census.pl, python/audits/oq136_bucket_provenance.py, audits/2026-07-02_oq136_census_bucket_provenance/
+## 2026-07-02 — OQ-137 RESOLVED (reading registry + totality suite + pipeline gate + sweep fixes); OQ-136 evidence in (haiku/contradictions authoring artifact vs genuine mcc)
+**Files:** prolog/reading_registry.pl, prolog/tests/test_reading_totality.pl, prolog/commentary_census.pl, prolog/signature_detection.pl, prolog/report_generator.pl, prolog/cs_drift_engine.pl, prolog/cs_axiom_engine.pl, prolog/tests/test_cs_drift_engine.pl, python/run_pipeline.py, python/audits/oq136_bucket_provenance.py, audits/2026-07-02_oq136_census_bucket_provenance/, audits/2026-07-02_oq137_reading_totality/
 **Tier:** landed
+
+**OQ-137 close (Phase 5+6, commits `486756fe`/`ed851eb7`+gate):** 41 predicates classified
+(classification_table.md); defects fixed: explain_signature missing `unknown` clause → the
+report signature section silently TRUNCATED on one claim-authoring unknown-signature constraint
+(planted witness 0/110 → 111/111; latent on live corpus — contradictions files author no claims);
+cs_terminal_attractor overlapping rows (dup + order-dependent terminals; row-disjoint, first
+solution preserved on all 42 combos); cs_has_axioms/cs_axiom_inconsistent doc key +C→+UID
+(constraint-name key never fires silently). test_cs_drift_engine was RED since the corpus reset
+(fixtures deleted) — rebuilt self-contained, 11/11. **Standing guard: `run_pipeline.py`
+`_phase_prolog` opens with the reading-totality suite as a sequential fail-fast gate** (first
+plunit gate in the pipeline; adds one corpus-loading swipl run to each pipeline invocation);
+wiring control witnessed: planted broken registry entry → SystemExit red; clean → green;
+per_constraint byte-identical. **Tripwires for future instances:** (1) `[C]-m:g(...)` and
+`V^m:g(...)` parse WRONG (`:` is priority 600, looser than `-`/`^`) — parenthesize `(m:g(...))`
+in templates/setof; the first OQ-137 sweep passed VACUOUSLY on this until its planted controls
+caught it. (2) When adding a reading predicate an aggregate could consume, register it in
+`reading_registry.pl` in the same change — registration is opt-in (named residual risk).
 
 **OQ-137 slice (commits `a81d4c83` behavior-preserving + `2453b922` output-changing):**
 `reading_registry.pl` (`aggregatable_reading/3`: 5 proven-total seeds + `in_contention/3`

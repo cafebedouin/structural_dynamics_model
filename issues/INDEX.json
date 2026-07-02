@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "2b66dedcf5d04ace868c7ab9a390cb8424ab6fb8",
+    "store_version": "ed851eb7938ef9dd5b6705b8586cbfb81fffa333",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-02T08:47:47"
+    "generated_at": "2026-07-02T09:14:13"
   },
-  "issues_sha": "2ddd65c14ae8978a714fe43298d666e9fd22c6c43354b94fab1a6992811ddad7",
+  "issues_sha": "2b56c48b2af21f4988976be3a5498aeceb5371fa7508844b08c3ff11397748c0",
   "n_entries": 201,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 108,
+    "resolved": 109,
     "mitigated": 13,
     "partial": 6,
     "disposed": 4,
-    "open": 66,
+    "open": 65,
     "future": 4
   },
   "active": [
@@ -352,22 +352,6 @@
       "mentioned_in": [
         "OQ-83",
         "OQ-86",
-        "OQ-121",
-        "OQ-134"
-      ]
-    },
-    {
-      "id": "OQ-137",
-      "status": "open",
-      "priority": 3,
-      "summary": "Census the reading layer for the typed-absence convention (does every aggregatable predicate carry its absence as a type, not a silent failure?)",
-      "deps": [
-        "bundled_with OQ-121",
-        "bundled_with OQ-134"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-44",
         "OQ-121",
         "OQ-134"
       ]
@@ -2486,6 +2470,21 @@
         "OQ-83",
         "OQ-86",
         "OQ-121"
+      ]
+    },
+    {
+      "id": "OQ-137",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "Census the reading layer for the typed-absence convention (does every aggregatable predicate carry its absence as a type, not a silent failure?)",
+      "deps": [
+        "bundled_with OQ-121",
+        "bundled_with OQ-134"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-121",
+        "OQ-134"
       ]
     },
     {
