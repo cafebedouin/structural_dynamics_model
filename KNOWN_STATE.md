@@ -62,7 +62,10 @@ authored-channel finding replicates at 100% on every live leg (haiku 113/113, fl
 8/8). Two NL-gate coarseness data recorded in the OQ-45 addendum: victim-bearing stories certify
 (gate checks beneficiaries only); the 404 h1=4 uniformity is an original_v6 template artifact
 (twins mix h1∈{0,4}). Draw-variance witnessed (OQ-26): article_27/aneyoshi kernels read
-differently across twins — distinct draws, not re-measurements. VERB DISCIPLINE: only OQ-52
+differently across twins — distinct draws, not re-measurements. CITATION AMBIGUITY WITNESSED: 'HEAD yields strict=235' was read as a canonical-corpus count
+when it was the HEAD *engine* on kernel_v1 (one computation; live n=119 leg: manifest=71,
+strict=4, loose=4) — when citing counts across classify_corpus runs, name BOTH the corpus and
+the code state (rule promoted to CLAUDE.md Running the System). VERB DISCIPLINE: only OQ-52
 replicated member-level; OQ-45's twin/kernel hits are disjoint from the six 404 hits, the
 EXPECTED consequence of new draws — the phenomenon recurred, no member-level replication is
 claimed or possible.
