@@ -22,8 +22,10 @@ kernel_v1 was classified same-run and the false-mountain selection ranked
 demanded the selection recover the 13 strict / 3 loose; the original 16-member list was never
 saved to substrate and is not reconstructible, so the full-16 control could not be run as
 specified. What IS witnessed: all 5 recorded member names recover, with member-level H1 EXACT
-(quran=4, article_9=5, abrahamic=6) — but the population count does NOT reproduce: HEAD yields
-strict=235 + loose=58 (**N=293**, the ranking's population) of manifest=944 (vs 16 of 98 at
+(quran=4, article_9=5, abrahamic=6) — but the population count does NOT reproduce: the HEAD
+ENGINE on the SAME corpus (kernel_v1 — "HEAD" here is a code-state, not a corpus) yields
+strict=235 + loose=58 (**N=293**, the ranking's population) of manifest=944; for contrast the
+live default corpus (n=119) gives manifest=71, strict=4, loose=4 (vs 16 of 98 at
 n=772 on the 2026-06-02 engine). The 944 cross-witnesses the OQ-197 acceptance controls (commit
 `34ff919f`), so this is the known current-engine regime — four weeks of engine drift, not corpus
 growth. **The ranking is therefore a current-engine kernel_v1 selection (N=293) anchored by

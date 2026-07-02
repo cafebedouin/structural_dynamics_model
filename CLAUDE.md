@@ -216,7 +216,13 @@ do not fold `trajectory` back into the parallel `tasks` list.
   `asserta`, not plain `assertz` — see Corpus Loading). Corpus *content* changes are testset-local;
   *engine* changes are not. (Witnessed why it matters: OQ-178/OQ-51 `cs_kernel_divergence` behavior
   depends on the corpus's reading-sets and `unknown` distribution — a 97-story corpus leaves branches
-  unexercised.)
+  unexercised.) **To get a full manifest-bearing `per_constraint` output for a non-default corpus
+  WITHOUT overwriting the canonical `pipeline_output.json`, use `classify_corpus(corpus_path,
+  output_name, expected_model)` (`run_pipeline.py:147`)** — gate-free json_report path with built-in
+  refusals (zero-glob, load-completeness, single-model fingerprint, raw freshness); serialize calls
+  (they share the raw artifact). Precedent: kernel_v1/original_v6/twins, 2026-07-01–02. **When
+  citing counts across such runs, name BOTH the corpus and the code state** — "HEAD yields N" is
+  ambiguous between engine-regime and corpus and has already caused a misread (KNOWN_STATE 2026-07-02).
 - **A pipeline-diff is a valid behavior-preservation witness ONLY if the run rewrote the file.**
   `run_pipeline.py` aborts (non-zero) on its gates BEFORE writing `outputs/pipeline_output.json`, so
   a before/after diff then compares the baseline against *itself* and reads byte-identical — a false

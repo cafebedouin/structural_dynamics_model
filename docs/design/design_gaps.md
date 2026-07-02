@@ -496,6 +496,18 @@ surface mid-baseline — the rebuild's ε-idiom and diff baselines are forming).
   seats. That schema is a *candidate* author-independent reading of foundational immovability —
   but it needs its own validation (does a foreclosure structure separate immovable-by-structure
   from flattened-uniform?) when §7 is actually worked; it is NOT a drop-in for `HasAlternatives`.
+  **Empirical constraints on any §7 re-powering (OQ-45 content audit, 2026-07-01/02 —
+  `audits/2026-07-01_oq45_oq52_hidden_winners/WRITEUP.md`):** (1) the beneficiary leg must
+  distinguish **gain-AROUND-persistence from gain-from-authoring** — genuinely natural constraints
+  carry named ecosystem winners in prose (religious institutions ↔ mortality; extraction-system
+  beneficiaries ↔ carrying capacity), so a prose-winner criterion false-positives on real
+  mountains, while `BeneficiaryCount==0` over authored facts false-negatives nothing (0/404
+  authored) and misses content-level winners entirely; (2) the gate is **victim-blind** — NL
+  certified twin stories carrying authored `constraint_victim` facts (2 per twin, witnessed);
+  (3) content-vs-facts divergence is REAL, not hypothetical: 6/35 read 404-members + 4/26
+  kernel_v1 + 1/5 flash NL stories describe systematic winners in their own prose (quote-verified,
+  all social constraints; the formal/math members read clean) — so a re-powered detector
+  restricted to formal/physical domains has empirical support that a domain-blind one lacks.
 - **Retire the Pattern-2 duplicate.** The archival `oq50-power-scaling-residue` branch drafted a standalone
   `no_viable_alternatives/1` flag as the GAP-08 fill; it duplicates this declared `intent_*` layer and
   bypasses the revival protocol. The declared surface should be revived, not paralleled — the flag should

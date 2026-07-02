@@ -863,6 +863,20 @@ worthless. This applies to reasoning about the code, not only to shell commands:
 asserting "this is stated only once" is running an unfalsified diagnostic on the document, and "I
 didn't find it" is not "it is not there" until the finder is shown to find.
 
+**Chains: every verdict-producing instrument gets its OWN control — screen-controlled ≠
+rubric-controlled.** In a multi-stage audit (screen → content read; finder → judge), controlling
+the upstream stage does nothing for a downstream stage that can independently return "0 found."
+Spot-verifying a stage's *hits* checks true-positives only; it is powerless over a 0-flagged run,
+which stays byte-identical to a read that never looked. Pre-flight each stage on a known-positive
+BEFORE it touches the target population. Witnessed (2026-07-01, OQ-45 hidden-winner audit): the
+engine screen was positive-controlled on kernel_v1's known false-mountains, but the content
+rubric was not — its pre-flight then FAILED 0/3 on those same known cases (the rubric's
+naturalness clause required story-voice assertion; the known cases carry naturalness only as an
+in-frame reading). The amended rubric passed 3/3 and went on to find 6 real hits in the 404. An
+uncontrolled rubric would have returned a plausible clean read over the same population.
+Evidence: `audits/2026-07-01_oq45_oq52_hidden_winners/b3_rubric_and_strata_registration.md`
+(v1 kept beside v2 — the amendment history is part of the control's witness).
+
 **The oracle must differ from the probe in the exact dimension the probe could be wrong on, or a
 set-for-set "match" is vacuous.** A positive-control oracle that shares the probe's matching logic
 proves *agreement*, not *discrimination*: the two agree because they make the same mistake, not
@@ -916,6 +930,23 @@ boundary), or its verdict (pass *or* fail) carries no information. Forward-relev
 rename wave (the OQ-135 v8 seat/gauge/orientation vocabulary migration will hit this directly).
 
 ---
+
+## Existence questions are closed by adversarial coverage, not random samples
+
+"Do ANY of the N have property X?" is a different question from "what fraction of the N have X?",
+and a uniform random sample answers only the second — which may itself be a forbidden claim (a
+bait-confounded corpus licenses per-story reads but no prevalence). Closing an existence question
+on "k random members were clean" is the inverse flinch of hold-open-close: the sample cannot
+discharge the question it was assigned, and the full read usually remains an available, affordable
+kill condition. **The design:** pre-register what "most suspicious" means (the exact selection
+recipe, written before any member is read — that preserves the anti-cherry-pick discipline), make
+the worst candidates the primary stratum, keep a small seeded random stratum for calibration only.
+"Even the worst candidates are clean" earns an existence-close; "25 random are clean" earns
+route-not-close. Two riders, both witnessed (OQ-45, 2026-07-01): (1) the close is earned by the
+adversarial stratum TOGETHER with a positive-controlled instrument (see the chained-instrument
+rule above) — either alone is insufficient; (2) **a random-stratum hit is a bound-breaker, log it
+as one**: it means the pre-registered suspiciousness criterion did NOT bound the phenomenon — a
+fact worth a sentence precisely because the prevalence version of it cannot be claimed.
 
 ## Instrument richness is gated on substrate instrumentation (the positive control, one level up)
 
@@ -1376,6 +1407,17 @@ token travels while the artifact stays behind. Two distinct leaks hide under thi
   statement about a state that no longer exists. The witness wasn't false — the world moved under it.
 - **Compression-laundering.** Even at the same state, "verified X" promotes the witness to "known,"
   and "known" gets cited by its conclusion-label, never re-checked.
+
+**Corollary — save member LISTS, not counts, for any engine-computed selection.** A count over a
+selection the engine computes ("16 false-mountain rows of 98 manifest") is DERIVED twice over: it
+inherits both the corpus snapshot and the engine regime, and it rots when either moves — while a
+saved member list stays checkable item-by-item forever. Witnessed (OQ-52): the 2026-06-02
+"16 of 98" was recorded as counts + 5 example names; four weeks of engine drift later the count
+was 235 of 944, the full 16-list had never been written to substrate, and the historical selection
+was UNRECONSTRUCTIBLE — the recorded control ("recover the 16") had to be retired as impossible
+rather than run. The five saved names were the only member-level anchor that survived (their H1
+values reproduced exactly). Rule: when a finding is a selection, the artifact is the ID list (plus
+the manifest pin); the count is a summary of the artifact, never the artifact.
 
 **The edge, unsoftened:** this is *not* fully fixable with a better tag. Summarization is
 definitionally the discarding of the witness — a summary that carried every witness wouldn't be one.

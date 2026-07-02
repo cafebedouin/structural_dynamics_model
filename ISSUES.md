@@ -2760,9 +2760,10 @@ kernel_v1 classified same-run via `classify_corpus` (n=1106) and the CURRENT-ENG
 (N=293: strict=235 + loose=58) ranked —
 `audits/2026-07-01_oq45_oq52_hidden_winners/a3_false_mountain_w1_ranking.{md,json}`. Control outcome (the recover-the-16 control was RETIRED AS IMPOSSIBLE — list never saved — not passed):
 all 5 recorded member names recover with member-level H1 EXACT (quran=4/article_9=5/abrahamic=6), but
-the population count does NOT reproduce (HEAD: strict=235+loose=58 of manifest=944 vs 16 of 98 on the
-2026-06-02 engine; 944 cross-witnessed by OQ-197 acceptance controls, commit `34ff919f`) — engine
-drift. The ranking is anchored by the three named members, not a recovery of the sixteen. HEAD re-measure: 289/293 both-authored,
+the population count does NOT reproduce (HEAD ENGINE on kernel_v1 — same corpus, new code:
+strict=235+loose=58 of manifest=944; live n=119 leg for contrast: manifest=71, strict=4, loose=4 —
+vs 16 of 98 on the 2026-06-02 engine; 944 cross-witnessed by OQ-197 acceptance controls, commit
+`34ff919f`) — engine drift. The ranking is anchored by the three named members, not a recovery of the sixteen. HEAD re-measure: 289/293 both-authored,
 **4 victim-only** (first partial-disqualifier cases; repair sentinels screened 0/1106), 0 with neither
 — the corrective-grade reading holds. H1 stays the stable ordering; W1 magnitude is valid only for the
 pinned manifest.
