@@ -2209,14 +2209,29 @@ the dead intent top verdict moved to OQ-106. Witnesses:
 
 ## OQ-45 — Content audit: do any of the 404 NL constraints hide asymmetric winners?
 
-**Status:** open — (corpus-quality audit, NOT engine maintenance). Spun off from the D3 ruling so the
+**Ω-type:** Ω_E (empirical content question — closed by the witnessed content read).
+**Status:** resolved — 2026-07-01 — **YES.** The 404 (ARCHIVAL: measured on original_v6/testsets_3000;
+live NL count is 0 and the signature is dead-by-range on HEAD per OQ-113) were re-derived by a
+pre-`8b5a34b8` overlay probe (aggregate control PASS: exactly 404; member list now on substrate) and
+screened exhaustively (0 false-mountain-shaped, 0/404 authored beneficiaries — member-level control on
+the cascade-construction claim). Content read: 35/404 (adversarial-primary, pre-registered strata;
+rubric v1 pre-flight FAILED 0/3 on the OQ-52 anchors, amended v2 passed 3/3) → **6 hidden-winner / 4
+ambiguous / 25 genuine-natural**, all six quote-pairs verified verbatim. Adjudicated split (declared
+seat): (i) extraction wearing the mountain frame — `repeat_player_structural_advantage` ("16.6% award
+decline… real extraction" beside "emerges naturally… No policy created it"),
+`demographic_elimination_imperative`, `attention_as_capturable_resource` (random-stratum hit),
+`capability_compulsion_gradient` (borderline); (ii) genuine natural core with an unauthored ecosystem
+winner — `gilgamesh_mortality_limit`, `ecological_carrying_capacity`. Bucket (ii) is a design note for
+any future NL re-powering (GAP-08 §7): gain-AROUND-persistence ≠ gain-from-authoring; the beneficiary
+leg must distinguish them. No engine change follows (NL dark on HEAD; FSM cascade + fail-close already
+landed; live corpus post-de-leak). NO prevalence claim (chimera corpus, OQ-70/OQ-25). NOT exhaustive
+with OQ-52: a hidden-winner neither false-mountain-shaped nor NL-certified falls through both audits.
+Full evidence: `audits/2026-07-01_oq45_oq52_hidden_winners/` (WRITEUP.md).
 **Priority:** 1
-wiring fix (NL beneficiary gate fail-close, Commit B1) and the content question stay separate. The
-gate fail-close makes "no beneficiary authored" honestly-conditional rather than a vacuous pass; it
-does **not** decide whether any of the 404 natural-law certifications are *mis-authored* false-naturals
-with a real winner hidden behind an emergence claim. Populating `intent_power_change` faithfully for a
-genuine natural law yields 0 beneficiaries / 0 flips (OQ-43), so this audit only bites mis-authoring.
-Audit the 404 on their own merits; do **not** populate `intent_*` as maintenance. Connects to OQ-43.
+**Deps (dropped on close):** none were authored; cross-refs OQ-43 (origin), OQ-52 (partition sibling).
+**Origin:** spun off the D3 ruling (OQ-43), 2026-05-31.
+*(Investigation narrative compressed on close per footer rule; full history in git.)*
+
 
 ## OQ-46 — D4-for-suppression is a GENERATION-TEMPLATE requirement; it retires the row-23 stopgap
 

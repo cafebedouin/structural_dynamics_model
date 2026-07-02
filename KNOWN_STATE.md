@@ -45,6 +45,49 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-01 — OQ-45 RESOLVED (YES: hidden winners in the 404) + OQ-52 RESOLVED (W1 leg delivered; population counts are engine-regime-relative)
+**Files:** python/w1_sheaf_join.py, prolog/signature_detection.pl, audits/2026-07-01_oq45_oq52_hidden_winners/
+**Tier:** correction-key
+
+Both OQs closed as the presents-as-natural / hidden-winner pair (OQ-52 = beneficiary-AUTHORED
+side, OQ-45 = beneficiary-SILENT side; NOT exhaustive — a hidden-winner neither
+false-mountain-shaped nor NL-certified falls through both). Full evidence + writeup:
+`audits/2026-07-01_oq45_oq52_hidden_winners/WRITEUP.md`. Branch `oq45-oq52-hidden-winners`.
+
+**Citation corrections (why correction-key):**
+1. **The OQ-52 "16 of 98" false-mountain count is engine-regime-relative — do not cite it as a
+   current fact.** On HEAD, kernel_v1 yields strict=235 + loose=58 of manifest_presheaf=944 (the
+   944 matches the OQ-197 acceptance controls, `34ff919f`). Member-level assignments were the
+   stable part: all 5 recorded names recover with EXACT H1 (quran=4, article_9=5, abrahamic=6).
+   The original 16-list was never saved and is not reconstructible. General lesson: save member
+   LISTS, not counts, when a selection is engine-computed.
+2. **The "all false-mountain rows carry both authored channels" claim is now 289/293:** 4
+   victim-only rows exist at HEAD (repair sentinels screened, 0/1106). Cite the 2026-07-01
+   re-measure, not the 2026-06-02 absolute.
+3. **A naive NL sweep on HEAD returns 0 everywhere** (has_viable_alternatives dead-by-range,
+   `8b5a34b8`/OQ-113). The 404 population is recoverable ONLY via the pre-fix overlay swap —
+   recipe + controls in `b1_nl404_probe.pl` (PRE=unknown / MID=false dispatch controls,
+   Sig-UNBOUND sweep; aggregate control: count==404 PASS).
+4. **OQ-45 answer is YES, per-story only — no prevalence claims** (chimera corpus, OQ-70/OQ-25).
+   6 hidden-winner (spot-verified quotes): bucket (i) extraction wearing the mountain frame
+   (`repeat_player_structural_advantage`, `demographic_elimination_imperative`,
+   `attention_as_capturable_resource`, `capability_compulsion_gradient` borderline); bucket (ii)
+   genuine natural core with unauthored ecosystem winner (`gilgamesh_mortality_limit`,
+   `ecological_carrying_capacity`). Bucket (ii) is the design note for any future NL re-powering
+   (GAP-08 §7): gain-AROUND-persistence ≠ gain-from-authoring.
+
+**Landed:** `w1_sheaf_join.py` rows now carry `incomparable_mass` + `material`
+(W1_MATERIAL_PROVISIONAL=0.05, a LABEL freezing OQ-51's "~0.05" prose gate, never a filter);
+stale "unknown=N/A declared but unbuilt" prose retired (`e8189d10`; column-diff witnessed
+behavior-preserving). `classify_corpus` precedent: kernel_v1 (n=1106) and original_v6 (n=3380)
+classified into own manifest-bearing outputs without touching the canonical artifact.
+
+**Method note (rubric control):** the B3 content-rubric v1 pre-flight FAILED 0/3 on known
+false-mountains (their prose contests naturalness in narrator voice); v2 (in-frame naturalness
+counts) passed 3/3. A content rubric is an instrument — pre-flight it on known positives before
+reading the target population, or a 0-flagged read is unfalsified.
+
+
 ## 2026-07-01 — OQ-41 RESOLVED (row-26 five-site expansion) + OQ-40 RESOLVED (doc lift) + OQ-201 minted (row-22 spin-out)
 **Files:** ISSUES.md, docs/design/two_axis_architecture_v7.md, audits/2026-07-01_oq41_row26_expansion/, prolog/signature_detection.pl, prolog/drl_fpn.pl, prolog/covering_analysis.pl, prolog/gap_diagnostic.pl, prolog/omega1_audit.pl
 **Tier:** landed
