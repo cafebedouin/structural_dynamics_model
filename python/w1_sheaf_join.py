@@ -38,6 +38,11 @@ OUT_JSON = OUTPUTS_DIR / "w1_sheaf_join.json"
 OUT_MD = OUTPUTS_DIR / "w1_sheaf_join.md"
 
 W1_ZERO = 1e-9  # below this, W1 is "≈0"
+# Freezes OQ-51's standing "recompute ... with a real threshold (>= ~0.05)" prose gate into a
+# named constant. PROVISIONAL: the "~" is load-bearing — this is a floor picked by that ruling,
+# not a validated/calibrated threshold. Rows carry `material` = (w1 >= this) as a label only;
+# nothing is filtered on it.
+W1_MATERIAL_PROVISIONAL = 0.05
 CONTEXT_ORDER = ["powerless", "moderate", "institutional", "analytical"]
 
 
@@ -199,9 +204,12 @@ def main():
 
     rows = []
     for cid, e in by_id.items():
+        w1v = e.get("wasserstein_total_fracture")
         rows.append({
             "id": cid,
-            "w1": e.get("wasserstein_total_fracture"),
+            "w1": w1v,
+            "material": (w1v is not None and w1v >= W1_MATERIAL_PROVISIONAL),
+            "incomparable_mass": e.get("wasserstein_incomparable_mass"),
             "h1": e.get("h1_band"),
             "sheaf_status": e.get("sheaf_status"),
             "shift": shift_vec(cid),
@@ -291,6 +299,14 @@ def main():
             return "—"
         return "[" + ", ".join(x if x else "?" for x in s) + "]"
 
+    def fmt_inc(v):
+        # wasserstein_incomparable_mass is a per-seat dict {u1..u4}; the table shows
+        # the worst (max) seat's off-chain mass. JSON rows keep the full dict.
+        if isinstance(v, dict) and v:
+            vals = [x for x in v.values() if isinstance(x, (int, float))]
+            return f"{max(vals):.6f}" if vals else "—"
+        return fmt_w1(v)
+
     lines = []
     lines.append("# W1 × sheaf_status join (ranked presheaf-obstruction read)\n")
     lines.append("**Frame (label, not filter):** `H1=0` is the calibrated floor "
@@ -309,15 +325,19 @@ def main():
     lines.append("## W1 health — read before citing any magnitude (OQ-51)\n")
     lines.append("- **W1 is chain-conditional**, not total variation: it is the earth-mover distance "
                  "over `extraction_chain([mountain,rope,tangled_rope,snare])` after renormalizing by "
-                 "on-chain mass. Off-chain mass (scaffold/piton/naturalized) is **excluded** and lives "
-                 "in `wasserstein_incomparable_mass` (not joined here) — so **W1≈0 does not mean the "
-                 "distributions are identical**.")
+                 "on-chain mass. Off-chain mass (scaffold/piton/naturalized) is **excluded** from W1 "
+                 "and joined per row as `incomparable_mass` — read it NEXT TO W1; **W1≈0 with high "
+                 "incomparable_mass does not mean the distributions are identical**.")
+    lines.append(f"- **Materiality is PROVISIONAL:** `material` = W1 ≥ {W1_MATERIAL_PROVISIONAL} "
+                 "freezes OQ-51's \"~0.05\" prose gate into a label — a provisional floor, not a "
+                 "validated threshold. It labels; it never filters.")
     lines.append("- **W1 is corpus-relative** (OQ-26): magnitudes shift with corpus size (observed "
                  "~100× swings n=563→772). The ranking below is valid **only for the run manifest "
                  "above**; do not inherit it across corpus changes.")
     lines.append("- **H1 is corpus-stable** (per-constraint `dr_type`); for a stable ordering use the "
-                 "H1 column, not W1. `unknown` seats currently still inflate H1 (the unknown=N/A "
-                 "ruling is declared but unbuilt — OQ-51).\n")
+                 "H1 column, not W1. `unknown` seats are N/A on the H1 path (OQ-51 main build, "
+                 "2026-06-25): only both-real pairs are counted, <2 real seats → `h1_band=null` / "
+                 "`sheaf_status=undetermined` — the partition is checked live as control 3b below.\n")
 
     lines.append("## Positive controls\n")
     lines.append(f"1. **W1 non-vacuous:** sum={w1_sum:.4f}, nonzero={len(w1_nonzero)} "
@@ -384,10 +404,12 @@ def main():
         lines.append("")
 
     lines.append("## Ranked table (descending by W1)\n")
-    lines.append("| rank | id | W1 | H1 | sheaf_status | shift [powerless, moderate, institutional, analytical] |")
-    lines.append("|---|---|---|---|---|---|")
+    lines.append("| rank | id | W1 | mat≥0.05 | incomp.mass(max seat) | H1 | sheaf_status | shift [powerless, moderate, institutional, analytical] |")
+    lines.append("|---|---|---|---|---|---|---|---|")
     for r in rows:
         lines.append(f"| {r['rank']} | {r['id']} | {fmt_w1(r['w1'])} | "
+                     f"{'Y' if r['material'] else '·'} | "
+                     f"{fmt_inc(r['incomparable_mass'])} | "
                      f"{r['h1'] if r['h1'] is not None else '—'} | "
                      f"{r['sheaf_status'] if r['sheaf_status'] else '—'} | "
                      f"{fmt_shift(r['shift'])} |")
