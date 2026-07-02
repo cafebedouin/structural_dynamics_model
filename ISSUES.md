@@ -8290,63 +8290,21 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 ## OQ-136 — What the commentary census measures: corpus authoring gaps vs genuine structural categories
 
-**Ω-type:** Ω_E (measurable — cross-reference the census buckets against generation provenance and a bounded hand-read; a clustering test discriminates the two hypotheses) + a small Ω_C tail (per-bucket disposition is a ruling once the evidence is in).
+**Ω-type:** Ω_E (provenance-clustering test + bounded hand-read) + Ω_C tail (per-bucket disposition rulings) — both discharged.
 
-**Status:** open — Ω_E half done (evidence in, 2026-07-02: `audits/2026-07-02_oq136_census_bucket_provenance/`); the Ω_C tail (per-bucket dispositions R1–R6) is blocked on the operator.
+**Status:** resolved — 2026-07-02. Evidence in (pre-registered) + all six dispositions ruled by the operator and executed same day.
 
 **Priority:** 3
 
-**Deps:** blocked_on_human oq136-bucket-disposition-rulings-R1-R6, bundled_with OQ-121 (totalized census surfacing these buckets), bundled_with OQ-134 (census mechanism), bundled_with OQ-83 (q6 source), bundled_with OQ-86 (extraction source)
+**Deps (dropped on close):** was `blocked_on_human oq136-bucket-disposition-rulings-R1-R6`; ruled 2026-07-02 (recommendations executed as given). Bundled: OQ-121/OQ-134 (census), OQ-83 (q6 source), OQ-86 (extraction source).
 
-**EVIDENCE IN (2026-07-02, pre-registered — PROPOSAL frozen at `0ba48b4c` before any join ran).**
-Audit: `audits/2026-07-02_oq136_census_bucket_provenance/` (WRITEUP.md carries the full table;
-extractor Σ-check, statistic control pair, and json-twin crosscheck all fired/passed). At n=119,
-git `0ba48b4c`:
-- **q6_unmeasured (26) + no_agent_seats (26): AUTHORING ARTIFACT** — clustered on model AND
-  prompt_commit (p_holm=8e-4 each, Holm family=8); driven by the haiku files (16/28 in each
-  bucket) + ALL 9 provenance-less `*_contradictions` files; sonnet-4-5 nearly absent (1/64 and
-  0/64). 25/26 member overlap = ONE generation-path gap: the haiku path authors prose +
-  `constraint_beneficiary` but no `founding_problem_status` and no `stakeholders[]` facts (the
-  prose PLANS the seats it never emits — HANDREAD.md quotes); the contradictions path authors
-  neither and stamps no `story_provenance/8`.
-- **q6_signature_unknown (16): NOT clustered** on any axis — consistent with the config-VARIANT
-  computational component named in the denominator caveat below; genuine category of the
-  corpus×config pair.
-- **manufactured_consensus_candidate (9): GENUINE** — no clustering; hand-read 8/9 genuine with
-  in-file witnesses (deliberately authored `excluded` seats, substantively argued); 1/9
-  (radiative_levitation_stratification) is a false positive BY ITS OWN TEXT ("exclusion is
-  evidential, not structural") → names an `excluded`-role vocabulary gap (evidential-vs-
-  structural exclusion is inexpressible in the role atom).
-- **extraction_unnameable (3, unpowered — descriptive + hand-read only): COMPOUND** — the
-  extractor-seat limb is the same haiku artifact (fixing it migrates all 3 to
-  `extraction_fired`); the victim limb is genuine-to-the-reading (RULED 2/3: the readings deny
-  their victims by construction).
+**Origin:** 2026-06-16, the totalized commentary census — once the absence buckets stopped collapsing into silence, they became findings about the corpus needing an artifact-vs-genuine discrimination.
 
-**RULINGS NEEDED (R1–R6 — proposed dispositions in WRITEUP.md, not self-ratified):** R1/R2
-artifact buckets → mint a generation OQ (haiku + contradictions paths: author
-founding_problem_status + stakeholders[])? R3 q6_signature_unknown → keep as-is? R4 mcc →
-first-class reporting go/no-go, + a small OQ for the excluded-role vocabulary gap? R5
-extraction_unnameable → keep (post-fix membership = the genuine both-sides-unnamed residue)?
-R6 `*_contradictions` provenance stamping — generator fix-on-sight vs mint OQ? Note: the census
-`no_agent_seats` out-of-domain declaration is stamped PROVISIONAL in
-`prolog/commentary_census.pl` pending these rulings (flipping it is part of the follow-up if
-ruled differently).
+**Resolution (2026-07-02; PROPOSAL frozen `0ba48b4c` BEFORE any join; execution `2b66dedc`; evidence `audits/2026-07-02_oq136_census_bucket_provenance/` — PROPOSAL/RECON/membership.tsv/contingency_tables/stats_output/HANDREAD/WRITEUP; all controls fired; Holm family BY RULE = 4 powered buckets × 2 artifact axes = 8).** Findings at n=119: **q6_unmeasured (26) + no_agent_seats (26) = authoring artifact** (clustered on model AND prompt_commit, p_holm=8e-4; strata: haiku 16/28 each + ALL 9 provenance-less `*_contradictions`; 25/26 overlap = ONE generation-path gap — the prose plans the seats/fields the fact layer never emits). **q6_signature_unknown (16) = kept as genuine config-variant** — **one-legged verdict** (statistical leg only; the pre-registered hand-read leg was not run for this bucket — operator-flagged, ruled knowing that). **manufactured_consensus_candidate (9) = genuine** (8/9 hand-read RULED with in-file witnesses; 1/9 radiative_levitation false-positive BY ITS OWN TEXT → excluded-role vocabulary gap). **extraction_unnameable (3, unpowered) = compound** (seat limb = the haiku artifact; victim limb genuine-to-the-reading 2/3 RULED).
 
-**Origin:** 2026-06-16, the totalized commentary census. Once the absence / out-of-domain / unnameable buckets stopped collapsing into silence, several became visible as findings ABOUT THE CORPUS, not census defects. Live-corpus measurements (n=72, manifest-dated — re-witness, do not cite frozen):
-- **`extraction_unnameable` = 5** — extractive constraint-level type, NO authored victim, AND no nameable extractor seat: BOTH sides of an extractive relation unnamed (the starkest blindspot, previously swallowed whole).
-- **`q6_unmeasured` = 20 (28%)** — no `founding_problem_status` authored (R5 authoring gap).
-- **`q6_signature_unknown` = 8** — a founding-problem block present but `dr_type` = unknown (computed side absent despite authored origin).
-- **`consensus_provenance: no_agent_seats` = 21 (29%)** — no non-excluded agent seat exists.
-- **`manufactured_consensus_candidate` = 8** — unanimity with a NAMED excluded seat (e.g. `demographic_resource_allocation` excludes `migrant_worker_households`; `refugee_convention_text__expansive_humanitarian_reading` excludes `restrictive_sovereigntist_governments`, `procedural_integrity_advocates`).
+**Rulings executed (operator, 2026-07-02):** R1/R2 → **OQ-202** minted (ONE generation OQ covering both artifact buckets, haiku + contradictions strata named; extraction seat limb included per R5's compound reading; **R6 folded in** — the `*_contradictions` provenance-stamping gap is the same path, one witness). R3 → q6_signature_unknown kept, one-legged caveat written into WRITEUP + this close. R4 → mcc first-class reporting GO → **OQ-204**; excluded-role vocabulary → **OQ-203** (standalone — different fix site than OQ-202). R5 → extraction_unnameable bucket kept (post-OQ-202 membership = the genuine both-sides-unnamed residue). The census `no_agent_seats` out-of-domain declaration is RATIFIED (was provisional pending these rulings — the bucket was ruled artifact, the mapping stands; `prolog/commentary_census.pl` comment updated).
 
-**The question.** Are these systematic **authoring gaps** (the de-leak generation pipeline under-specifies victim / founding-problem / agent-seat fields on certain topics) or **genuine structural categories** (situations where extraction really is diffuse, origin really is contested-into-unknown, no agent seat really exists)? The two have opposite dispositions: a pipeline artifact is fixed at generation (and may mint a generation OQ); a genuine category is kept and possibly named/reported as a first-class corpus statistic.
-
-**Discriminating test (pre-registered).** For each absence/out-of-domain/unnameable bucket, cross-reference its member constraints against `story_provenance` (model, sampling params, prompt/schema/example commits) + run-tag + topic family. **Clustering by model / run-tag / topic ⇒ authoring artifact** (a generation-side gap, fixable); **spread roughly uniformly and corresponding on a hand-read to genuinely diffuse/contested situations ⇒ real category** (keep + report). Bounded hand-read of the 5 `extraction_unnameable` + the 8 `manufactured_consensus_candidate` (each names its excluded/unnamed party — check whether that party is genuinely absent from the situation or an authoring oversight). Caveat: generation is stochastic and the corpus is a small post-reset rebuild — re-witness the counts at run time against the manifest, and treat per-story provenance as the join key (never names across a regen boundary).
-
-**DENOMINATOR CAVEAT (witnessed, `census_sweep.py` 2026-06-16).** Before reading any census *rate* (prevalence) or *coverage* across a config / schema-refit / corpus change: a rate can move PURELY by domain-shrink with NO change in the underlying finding. Witnessed: `tangled_rope_chi_floor` 0.35→0.85 raised extraction `prevalence` 0.060→0.067 (+12%) while `extraction_blindspot_fired` held at **3** — 5 extractive constraints just fell out of the domain (`n_in_domain` 50→45). Always report the raw `fired` count and `n_in_domain` ALONGSIDE the rate, or hold the domain fixed. Likewise q6 `coverage` decomposes into a config-INVARIANT authoring component (`q6_unmeasured`, fixed) and a config-VARIANT computational one (`q6_signature_unknown`, moves with thresholds) — do not read q6 coverage as a single authoring-completeness figure. The clustering test above must use raw counts per (model/run-tag/topic), never rates. Sweep tool + full findings: `audits/2026-06-16_census_sweep/`.
-
-**What resolution changes.** Either a generation-pipeline authoring fix lands (if the gaps cluster — likely a new generation OQ), or a ruling that one or more buckets are genuine corpus categories worth first-class reporting (a seated dominance/statistic stage on the census). Either way the census's absence rates become INTERPRETABLE rather than raw counts. Cross-ref: OQ-121, OQ-134, `outputs/commentary_census.json`, `audits/2026-06-16_oq121_totalization/`, `python/sweeps/census_sweep.py` + `audits/2026-06-16_census_sweep/`.
-
+**DENOMINATOR CAVEAT (still-operative citation rule — kept intact per the compress-on-close exception; witnessed `census_sweep.py` 2026-06-16).** Before reading any census *rate* (prevalence) or *coverage* across a config / schema-refit / corpus change: a rate can move PURELY by domain-shrink with NO change in the underlying finding. Witnessed: `tangled_rope_chi_floor` 0.35→0.85 raised extraction `prevalence` 0.060→0.067 (+12%) while `extraction_blindspot_fired` held at **3** — 5 extractive constraints just fell out of the domain (`n_in_domain` 50→45). Always report the raw `fired` count and `n_in_domain` ALONGSIDE the rate, or hold the domain fixed. Likewise q6 `coverage` decomposes into a config-INVARIANT authoring component (`q6_unmeasured`) and a config-VARIANT computational one (`q6_signature_unknown`) — never read q6 coverage as a single authoring-completeness figure. Clustering-style tests use raw counts per stratum, never rates. Tool + findings: `audits/2026-06-16_census_sweep/`.
 ---
 
 ## OQ-137 — Census the reading layer for the typed-absence convention (does every aggregatable predicate carry its absence as a type, not a silent failure?)
@@ -10699,7 +10657,61 @@ queried on its authored grid (not a synthetic time).
 
 ---
 
-*Last updated: 2026-07-01. Add new items with sequential OQ-NN labels. Mark
+## OQ-202 — Generation authoring gap: haiku + contradictions paths under-emit the fact layer (stakeholders[], founding_problem_status; contradictions also stamps no provenance)
+
+**Ω-type:** Ω_E (mechanical generator fix, witnessable by post-fix census bucket shrinkage + per-file fact presence) + a small Ω_C tail (whether the 25 existing under-authored live-leg files are regenerated, patched, or left as-is until rebuild is an operator call).
+
+**Status:** open
+
+**Priority:** 3
+
+**Deps:** splits_from OQ-136
+
+**Origin:** 2026-07-02, the OQ-136 pre-registered provenance join (`audits/2026-07-02_oq136_census_bucket_provenance/`; minted per operator ruling R1/R2 with R6 folded in — one OQ, one witness, same generation path). q6_unmeasured (26) and no_agent_seats (26) cluster on model AND prompt_commit (p_holm=8e-4 each, Holm family 8) with 25/26 member overlap — ONE generation-path gap, two census buckets. Strata, named: **claude-haiku-4-5-20251001** (16/28 of its files in EACH bucket; prompt_commit `22843cdf…` carries 17) and the **`*_contradictions` path** (9/9 — every one, all also missing `story_provenance/8` entirely). Sonnet-4-5 nearly absent (1/64 and 0/64). The hand-read witness: the haiku files' prose PLANS the seat structure ("the payer seat (palestinian_presence_interpreters) should compute…", d-ranges assigned) and names beneficiaries at `constraint_beneficiary` level, but emits zero `constraint_stakeholder/7` facts and no `founding_problem_status/2` — the material exists in prose; the fact layer was never emitted.
+
+**Scope.** (a) Haiku generation path: emit `stakeholders[]` (→ `constraint_stakeholder/7`) and `founding_problem_status/2` facts. (b) Contradictions path: same two fields PLUS `story_provenance/8` stamping (folded R6 — the missing provenance also blanks the model/prompt_commit axes for these files in EVERY future provenance audit). (c) Post-fix expectation (the witness): q6_unmeasured and no_agent_seats shrink toward genuine residue on newly generated stories; the 3 `extraction_unnameable` members' seat limb migrates to `extraction_fired` (their victim limb is genuine-to-the-reading and should NOT change). (d) The Ω_C tail: regenerate/patch/leave the 25 existing under-authored files — beta posture says test-bed-not-backfill, but these are live-leg stories feeding live censuses; operator's call when (a)/(b) land.
+
+**What resolution changes.** The census absence buckets become interpretable as genuine residue rather than generator artifact; the contradictions files stop being provenance-invisible.
+
+---
+
+## OQ-203 — `excluded` role vocabulary cannot express evidential-vs-structural exclusion (mcc false-positive class)
+
+**Ω-type:** Ω_C (schema design ruling: how should exclusion KIND be authored — qualifier field, distinct role atom, or secondary_role?) + Ω_E once ruled (mechanical schema/prompt change, exercised on the testsets/ test bed per the 2026-06-24 posture).
+
+**Status:** open
+
+**Priority:** 3
+
+**Deps:** splits_from OQ-136
+
+**Origin:** 2026-07-02, the OQ-136 hand-read (HANDREAD.md; minted per operator ruling R4, standalone — the fix site is the generation schema, not the census). `radiative_levitation_stratification` authors `constraint_stakeholder(…, alternative_mechanism_proponents, excluded, …)` while its own ABSENT_VOICES text says "**No voices are structurally absent** — … their exclusion is evidential, not structural." `consensus_provenance/2` (and hence the mcc census bucket) reads `excluded` as a structurally absent seat, so this member is a manufactured-consensus false positive BY THE FILE'S OWN TEXT: the role atom is coarser than the prose's distinction. 1/9 mcc members at n=119; 8/9 are genuinely structural exclusions with in-file witnesses.
+
+**The question.** Give the authoring vocabulary a way to distinguish "excluded from the room" (structural — the mcc-relevant kind) from "participates fully but loses on evidence" (evidential — not an absent seat). Candidates: an exclusion-kind qualifier alongside the role; a distinct role atom (e.g. `dissenting`); or routing evidential exclusion through `secondary_role`. Consumers to update once ruled: `consensus_provenance/2`'s Excl set (and anything reading role=excluded as absence). Interaction: OQ-204's first-class mcc surfacing should re-read membership from the predicate, so this fix flows through automatically.
+
+**What resolution changes.** mcc flag precision (the known false-positive class disappears at the source); the `excluded` role stops conflating two exclusion kinds the corpus's own prose already distinguishes.
+
+---
+
+## OQ-204 — Surface manufactured_consensus_candidate as a first-class census/report statistic (operator GO, 2026-07-02)
+
+**Ω-type:** Ω_E (an output-changing build on an already-taken operator ruling; the design constraints below are part of the go).
+
+**Status:** open
+
+**Priority:** 3
+
+**Deps:** splits_from OQ-136, bundled_with OQ-134
+
+**Origin:** 2026-07-02, OQ-136 ruling R4: mcc ruled a genuine corpus category (8/9 hand-read with in-file witnesses, no provenance clustering) and first-class reporting APPROVED. Minted so the go has a tracking home (operator may fold elsewhere).
+
+**Scope.** Surface mcc beyond the bare census count: per-member lines naming the excluded seats (`Excl` from `consensus_provenance/2`) on the census human table and/or enhanced report. Output-changing — own commit with before/after report diffs. **Design constraints (part of the go):** (1) the flag names a structural footprint (unanimity among typed agent seats + a named excluded seat), NEVER a "manufactured consensus" verdict — the candidate semantics travel to every read site; (2) no prevalence-rate headline without the raw count + n_in_domain alongside (OQ-136 denominator caveat); the census currently declares NO prevalence bucket for the consensus source — revisiting that declaration is in-scope here, but the OQ-136 close's reasoning (candidate flag ≠ positive finding) must be answered, not ignored; (3) membership is read live from `consensus_provenance/2`, never a frozen list — so the OQ-203 vocabulary fix flows through automatically.
+
+**What resolution changes.** The first census bucket promoted from honest count to first-class corpus statistic — the seated-reporting precedent for any later bucket promotion.
+
+---
+
+*Last updated: 2026-07-02. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

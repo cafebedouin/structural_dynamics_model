@@ -56,7 +56,16 @@ report signature section silently TRUNCATED on one claim-authoring unknown-signa
 cs_terminal_attractor overlapping rows (dup + order-dependent terminals; row-disjoint, first
 solution preserved on all 42 combos); cs_has_axioms/cs_axiom_inconsistent doc key +C→+UID
 (constraint-name key never fires silently). test_cs_drift_engine was RED since the corpus reset
-(fixtures deleted) — rebuilt self-contained, 11/11. **Standing guard: `run_pipeline.py`
+(fixtures deleted) — rebuilt self-contained, 11/11. **OQ-136 RULINGS EXECUTED (operator,
+2026-07-02, post-review):** R1/R2+R6 → OQ-202 minted (ONE generation OQ: haiku +
+contradictions paths under-emit stakeholders[]/founding_problem_status; contradictions also
+stamps no story_provenance — folded, same path one witness); R4 → OQ-203 (excluded-role
+evidential-vs-structural vocabulary, standalone) + OQ-204 (mcc first-class reporting GO, with
+candidate-semantics + denominator-caveat design constraints); R3 q6_signature_unknown kept with
+a ONE-LEGGED caveat written into WRITEUP + close (statistical leg only — the pre-registered
+hand-read leg was not run for that bucket); R5 kept; census `no_agent_seats` out-of-domain
+declaration RATIFIED (provisional stamp replaced). OQ-136 → resolved (compress-on-close;
+denominator caveat kept intact as still-operative). **Standing guard: `run_pipeline.py`
 `_phase_prolog` opens with the reading-totality suite as a sequential fail-fast gate** (first
 plunit gate in the pipeline; adds one corpus-loading swipl run to each pipeline invocation);
 wiring control witnessed: planted broken registry entry → SystemExit red; clean → green;

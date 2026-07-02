@@ -43,7 +43,13 @@ family level, which is why the topic axis was pre-registered as non-discriminati
 2. **q6_signature_unknown = NOT an authoring artifact** (no clustering on any axis; spread
    ~proportionally over the sonnet-4-5 majority). Consistent with its OQ-136 framing as the
    config-VARIANT computational component (dr_type=unknown moves with thresholds, not with the
-   generator). Genuine category of the corpus×config pair.
+   generator). Genuine category of the corpus×config pair. **ONE-LEGGED relative to the freeze
+   (operator-flagged at review, 2026-07-02):** the pre-registered genuine rule was *no clustering
+   on any axis + hand-read confirms diffuse*, and the hand-read protocol covered only
+   extraction_unnameable and mcc — this bucket's "genuine" rests on the statistical leg alone,
+   NOT symmetric with mcc's fully-evidenced verdict. (A hand-read of threshold-sensitive
+   dr_type=unknown files would likely be uninformative, which is why the leg was skipped — but
+   the verdict's evidence base is thinner and the R3 ruling was taken knowing that.)
 3. **manufactured_consensus_candidate = GENUINE CATEGORY** (no clustering + 8/9 hand-read
    genuine with in-file witnesses; the exclusions are deliberately authored and substantively
    argued). One member (radiative_levitation_stratification) is a per-member false positive BY

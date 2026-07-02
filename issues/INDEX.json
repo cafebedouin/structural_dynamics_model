@@ -1,22 +1,22 @@
 {
   "manifest": {
-    "store_version": "ed851eb7938ef9dd5b6705b8586cbfb81fffa333",
+    "store_version": "526e33fccfc13ffe9427039f9e152b673415c98f",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-02T09:14:13"
+    "generated_at": "2026-07-02T10:08:02"
   },
-  "issues_sha": "2b56c48b2af21f4988976be3a5498aeceb5371fa7508844b08c3ff11397748c0",
-  "n_entries": 201,
+  "issues_sha": "8e476b8bb4a585ddc570d916e8f42f5dbb2f748c35183b6527bfb1714967e02e",
+  "n_entries": 204,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 109,
+    "resolved": 110,
     "mitigated": 13,
     "partial": 6,
     "disposed": 4,
-    "open": 65,
+    "open": 67,
     "future": 4
   },
   "active": [
@@ -334,26 +334,6 @@
         "OQ-27",
         "OQ-28",
         "OQ-195"
-      ]
-    },
-    {
-      "id": "OQ-136",
-      "status": "open",
-      "priority": 3,
-      "summary": "What the commentary census measures: corpus authoring gaps vs genuine structural categories",
-      "deps": [
-        "blocked_on_human oq136-bucket-disposition-rulings-R1-R6",
-        "bundled_with OQ-121",
-        "bundled_with OQ-134",
-        "bundled_with OQ-83",
-        "bundled_with OQ-86"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-83",
-        "OQ-86",
-        "OQ-121",
-        "OQ-134"
       ]
     },
     {
@@ -975,6 +955,49 @@
         "OQ-40",
         "OQ-83",
         "OQ-178"
+      ]
+    },
+    {
+      "id": "OQ-202",
+      "status": "open",
+      "priority": 3,
+      "summary": "Generation authoring gap: haiku + contradictions paths under-emit the fact layer (stakeholders[], founding_problem_status; contradictions also stamps no provenance)",
+      "deps": [
+        "splits_from OQ-136"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-136"
+      ]
+    },
+    {
+      "id": "OQ-203",
+      "status": "open",
+      "priority": 3,
+      "summary": "`excluded` role vocabulary cannot express evidential-vs-structural exclusion (mcc false-positive class)",
+      "deps": [
+        "splits_from OQ-136"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-136",
+        "OQ-204"
+      ]
+    },
+    {
+      "id": "OQ-204",
+      "status": "open",
+      "priority": 3,
+      "summary": "Surface manufactured_consensus_candidate as a first-class census/report statistic (operator GO, 2026-07-02)",
+      "deps": [
+        "splits_from OQ-136",
+        "bundled_with OQ-134"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-134",
+        "OQ-136",
+        "OQ-203"
       ]
     }
   ],
@@ -2470,6 +2493,23 @@
         "OQ-83",
         "OQ-86",
         "OQ-121"
+      ]
+    },
+    {
+      "id": "OQ-136",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "What the commentary census measures: corpus authoring gaps vs genuine structural categories",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-83",
+        "OQ-86",
+        "OQ-121",
+        "OQ-134",
+        "OQ-202",
+        "OQ-203",
+        "OQ-204"
       ]
     },
     {

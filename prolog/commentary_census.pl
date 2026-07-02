@@ -130,13 +130,13 @@ consensus_bucket(plural(_),                            plural).
 % ----------------------------------------------------------------------------
 commentary_out_of_domain_bucket(extraction_reading, extraction_out_of_domain).
 % q6: universal domain — no out-of-domain bucket.
-% consensus: PROVISIONAL SEAT (stamped 2026-07-02, pending the OQ-136 Phase-4
-% ruling). Follows the predicate's own documented semantics
-% (stakeholder_seats.pl:182 "out-of-domain (no seats to compare)") — but this
-% declaration pre-judges, at the census schema level, the very bucket OQ-136
-% adjudicates (authoring gap vs genuine category). If OQ-136 rules
-% no_agent_seats a genuine first-class category, flipping this line is part of
-% that output-changing follow-up; membership stays queryable either way.
+% consensus: RATIFIED (operator ruling R2, 2026-07-02 — was provisional pending
+% the OQ-136 adjudication). no_agent_seats was ruled an AUTHORING ARTIFACT of
+% the haiku/contradictions generation paths (OQ-202), not a genuine category,
+% so the out-of-domain mapping stands: it follows the predicate's own semantics
+% (stakeholder_seats.pl:182 "out-of-domain (no seats to compare)") and the
+% bucket is kept as the honest surface that CAUGHT the artifact. Post-OQ-202
+% its count should shrink toward genuine residue on newly generated stories.
 commentary_out_of_domain_bucket(consensus, no_agent_seats).
 
 % ----------------------------------------------------------------------------
