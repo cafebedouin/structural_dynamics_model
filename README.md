@@ -1,117 +1,65 @@
 # Deferential Realism
 
-**A formal framework for systems where what you see depends on where you stand**
+**A framework for systems where what you see depends on where you stand, which commitment you
+are looking at, and how its holder stands toward it**
 
-Deferential Realism (DR) is a framework for analyzing observer-dependent classification of social structures. Its core claim: power modulates the perception of extraction, and this dependence has formal mathematical structure. The framework models classification as a presheaf on a site of observer contexts, deliberately refusing the sheaf gluing axiom so that perspectival disagreement becomes a measurable structural feature rather than a defect to be resolved. A 91-module Prolog engine implements the axioms computationally and checks whether the predicted structural consequences actually emerge against a living corpus of 3,380 constraint stories. The engine makes the philosophy falsifiable — but the engine is not the point. The philosophy is the point.
+Deferential Realism (DR) is a philosophical framework with a working measurement engine. Its
+subject is constraints — the rules, arrangements, and structures that bind people, from labor
+law to doctrinal commitments to physical limits. The framework is *realist* about structural
+properties (extractiveness, suppression, coordination function exist independently of any
+observer) and *deferential* about classification (what a constraint *is* to you depends
+irreducibly on your structural position). The engine — a Prolog rule cascade with a Python
+orchestration layer — implements the axioms computationally and measures the dependence
+instead of resolving it: perspectival disagreement is the signal, not a defect. The engine
+makes the philosophy falsifiable, but the engine is not the point. The philosophy is the point.
 
----
-
-## The Core Idea
-
-### Perspectival Structure, Not Perspectival Relativism
-
-Classification of social structures — laws, norms, institutions, regulatory mechanisms — depends on who is classifying. A labor regulation that appears as an immutable feature of the economic landscape to a worker trapped within it may appear as a reformable coordination mechanism to a legislator, and as an extractive rent-seeking device to an analyst examining its distributional effects.
-
-The standard response to this is to resolve it — identify the "correct" classification by privileging one observer or aggregating across observers. DR takes the opposite approach: disagreement is the signal. The framework models perspectival dependence as a presheaf on a site of observer positions and deliberately refuses sheafification. The tools of topos theory — cohomology, descent, spectral analysis — then produce quantitative invariants that characterize the structure of disagreement in any domain where classification depends on perspective.
-
-This is not relativism (all views equally valid) or absolutism (one correct view). It is realism about the dependence of classification on position. Constraints have objective structural properties — extractiveness, suppression, coordination function — that exist independently of any observer. But the *classification* of those properties depends irreducibly on where the observer stands.
-
-### The Empirical Anchor
-
-The framework encodes a single core hypothesis as its empirical anchor (Axiom 2): **power reduces experienced extraction.** Each constraint has a base extractiveness ε that is observer-independent. The *experienced* extractiveness varies by observer:
-
-> χ = ε × f(d(P, E)) × σ(S)
-
-where f is a sigmoid over the observer's directionality (beneficiary, victim, neither), and σ encodes verification difficulty. At the canonical institutional position, f(d) goes negative — the institutional observer experiences extraction as coordination. Everything downstream inherits this axiom's empirical status. If it maps correctly to the world, the theorems describe structural necessities. If not, the mathematics remains valid within the model but the model no longer describes reality.
-
-### The Constraint Taxonomy
-
-Six structural types, organized around extraction and coordination:
-
-| Type | What It Means | Example |
-|------|---------------|---------|
-| **Mountain** | Appears as natural law across all positions | Speed of light, mortality |
-| **Rope** | Coordination constraint, low extraction | Traffic conventions |
-| **Tangled Rope** | Coordination and extraction simultaneously present | HOA covenants, non-compete clauses |
-| **Snare** | Pure extraction | Carried interest taxation |
-| **Scaffold** | Temporary structure in formation | Emerging regulations |
-| **Piton** | Local anchoring, position-specific | Informal workplace norms |
-
-These are not metaphors — they are classification outputs determined by the observer's experienced extractiveness χ. The same constraint is objectively different types depending on who is observing.
-
-### The Four Theorems
-
-From the axioms, four non-obvious consequences follow deductively:
-
-1. **Extraction requires perspectival cover** (Theorem 1). Under power-modulated perception, extraction cannot be universally recognized as extraction. For any high-extraction constraint, there exists at least one observer position where it is classified as coordination. The demand to "prove extraction exists" from the perspective of its beneficiaries is a structural impossibility.
-
-2. **Disagreement clusters in discrete blocs** (Theorem 2). On the 4-element linear site, H¹ values 1 and 2 are forbidden. Perspectival disagreement does not distribute smoothly — it clusters in blocs of size ≥ 3, determined by the site geometry. The contextuality fraction takes values only at {0, 0.5, 0.667, 0.833, 1.0}.
-
-3. **Institutional spectral dominance** (Theorem 3). The institutional observer carries 97% of the spectral weight in classification disputes. The Sheaf Laplacian on the path-graph site is dominated by the phase transition at the institutional position.
-
-4. **The Oracle Gap** (Theorem 4). Single-position analysis with complete information detects less than 3% of the cross-position structure that multi-position analysis reveals. Even with full information about a constraint's metrics, an analyst at any single position cannot recover the perspectival disagreement structure.
-
-### Why This Matters
-
-The framework provides formal machinery to measure perspectival fracture — how much of a domain is fractured, which positions disagree, and whether the disagreement is structurally determined or cognitively modulated. The implications are direct: if institutional perception is spectrally decoupled from other positions, institutional actors designing reforms are working from a classification structurally orthogonal to the experience of those affected — not because they ignore the data, but because their position transforms it.
+**Start with the paper:** [`docs/deferential_realism_paper_v8.md`](docs/deferential_realism_paper_v8.md)
+— the entry point and canonical vocabulary. Its closing Appendix states the current state of
+the project plainly, with no version history. This README is the repository tour.
 
 ---
 
-## The Computational Engine
+## The Intellectual Arc
 
-The Prolog engine is a test bed for the philosophy. It exists so the axioms can be implemented computationally and their consequences checked against data.
-
-**Architecture:**
-- 91 Prolog modules implementing the axioms as a deterministic rule cascade
-- 3,380-constraint living corpus (grows with each analytical run) plus 189 SOTU-derived constraints
-- 12+ diagnostic subsystems: classification, MaxEnt shadow, sheaf cohomology, game theory (Nash distance, cover story detection, two-regime extraction), parametric persistence, Wasserstein transport, variance decomposition, cognitive displacement, cultural cognition profiles, contamination network, boundary normality, boolean independence
-- 324+ enhanced reports with per-constraint structural analysis stacks — theorem instantiation, orbit analysis, Nash profiles, CCDP/margin analysis
-
-### The Two-Hub Architecture
-
-Classification variation across observer positions is driven by two independent subsystems:
-
-- **Hub 1: Power-Scaled Extraction.** Computes experienced extractiveness (χ) via a sigmoid-based power-scaling of base metrics. It measures *how much* extraction an observer experiences based on their directionality (beneficiary, victim, or neither).
-- **Hub 2: Effective Immutability.** A discrete lookup table mapping (TimeHorizon, ExitOptions) to mountain or rope perceptions. It measures *whether* an observer perceives a constraint as changeable, independently of extraction magnitude.
-
-The interaction of these hubs determines the final classification. Constraints where Hub 1 and Hub 2 signals conflict (e.g., high extraction but perceived as immutable) are the "false mountains" that characterize the snare and tangled-rope regimes.
-
-**Key validation results:**
-- Structural invariants (H¹ gap, spectral eigenvalues, contextuality fraction gap, institutional dissent direction) are identical across two independently generated corpora with inverted input distributions
-- All invariants survive FCR ablation, parameter sweeps (178 params, including 154 numeric params at ±25%), directionality sweeps (17 constants), cognitive displacement sweeps (δ ∈ [−0.15, +0.15]), and corpus growth from 887 to 3,380 constraints
-- These confirm the invariants are properties of the axioms, not of any dataset
-
-The engine exists so the philosophy can be tested computationally, not so users can process inputs into outputs.
-
-**Running the engine:**
-```bash
-cd prolog && swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t "halt(1)"
-```
+The project did not begin as a framework. It began with an origin artifact (a multi-model
+relay fiction about a care subroutine that outlived every recipient of its care — a
+constructed constraint become indistinguishable, from inside, from natural law), a set of
+children's stories in which mathematical invariants play as unbending rules that *create*
+freedom, and a debugging paper that classified paradoxes by generative mechanism and routed
+each type to a different fix. Apply that method — classify by mechanism, index by position,
+route rather than adjudicate — to social constraints, where position-dependence is structure
+rather than a bug in the question, and you get this framework: first an observer axis (v6),
+then a co-equal committer axis (v7), then the unifying ontology of seat, gauge, and
+orientation (v8). The full arc, with the readings owned and the sources cited, is v8 §2.
 
 ---
 
-## The Analytical Pipeline
+## The Framework in Twenty Lines
 
-The engine connects to analytical output through a constraint story pipeline:
+**One content-seat, gauge-rotated and orientation-audited.** Every contentful question about a
+constraint has exactly one **seat** (the reference reality the verdict is audited against —
+the authored metric reality of who benefits and what binds), many **gauges** (standpoints the
+content is read from — four canonical positions: powerless, moderate, institutional,
+analytical), and an **orientation** per commitment-holder (how the selection is presented, and
+whether it is kept honestly over time). The audit is one-directional — presentation is checked
+against the metric reality, never the reverse — and a machine-checked guard in the standing
+gate enforces it.
 
-**The Orchestrator:** The primary entry point for authoring is `agent/c-orchestrator.py`. It automates the full lifecycle: research (Haiku) → UKE_SCOPE decomposition → constraint generation (Sonnet) → corpus pipeline update → report generation → essay drafting.
+**The observer axis.** χ = ε × f(d) × σ(S): one formula, evaluated at four positions,
+generates six types — mountain, rope, tangled_rope, snare, scaffold, piton. Extraction is
+never visible from every position (the beneficiary's position is structurally the blind one);
+cross-position disagreement is quantized (with four real positions, disagreement counts 1 and
+2 cannot occur); no single position sees everything.
 
-**DR pipeline:** constraint story → Prolog validation → enhanced report → structural analysis stack. The enhanced report (`python/enhanced_report.py`) computes per-constraint theorem instantiation, orbit structure, Nash profiles, and game-theoretic analysis.
+**The committer axis.** Contested topics (kernels) carry rival readings; each declares its
+reference frame, drift state, and premise groundings, and the engine *computes* the
+consequences: drift's terminal attractor, premise foreclosure, and whether two contradictory
+readings are licensed plurality or real closure. Perspectival health and structural viability
+are independent measurements (Theorem 7) — a reading can look coherent from every position
+while resting on a premise its own evidential commitments have foreclosed.
 
-**UKE protocol suite:** Protocols for writing, editing, grounding, auditing, and reviewing analytical output. The suite includes UKE Write (essay synthesis from structural analysis), UKE Edit, UKE Ground, UKE Audit, UKE Review, and narrative transformation protocols. These live across `protocols/`, `prompts/`, and `agent/analysis/`.
-
-**Blog output:** [cafebedouin.org](https://cafebedouin.org) publishes daily using the pipeline — geopolitical analysis, philosophical essays, constraint stories, literary fiction, written in the zuihitsu tradition. The pipeline is infrastructure for the blog and for the paper, not a product.
-
----
-
-## The Paper
-
-The current paper is v6.13: *Axioms and Consequences of Observer-Dependent Classification* (`docs/deferential_realism_paper_v6.13.md`).
-
-- Six axioms (one empirical anchor, five structural), four theorems derived deductively
-- Empirical findings on a 3,380-constraint corpus: Wasserstein transport, variance decomposition, game-theoretic analysis, parametric persistence, cognitive displacement
-- Honest assessment framework distinguishing STRICT categorical correspondences (formally verified), STRUCTURAL analogies (mechanism confirmed, interpretation argued), and LOOSE interpretive claims
-- Key sections: Two-hub functional decomposition, cognitive displacement analysis (§5.6), Cultural Cognition psychometric bridge, 13 open questions for strengthening the framework (§6.6)
+Details, proofs, corrections, and the honest assessment: v8 §§3–5 and §9, and the record
+papers it cites.
 
 ---
 
@@ -119,101 +67,137 @@ The current paper is v6.13: *Axioms and Consequences of Observer-Dependent Class
 
 ```
 structural_dynamics_model/
-├── prolog/                    # The engine
-│   ├── stack.pl               # Module loader
-│   ├── config.pl              # Single source of truth for 178 parameters
-│   ├── drl_core.pl            # Primary classifier (classify_from_metrics/6)
-│   ├── constraint_indexing.pl # χ = ε × f(d(P, E)) × σ(S) computation
-│   ├── structural_signatures.pl # NL/Coordination/Constructed detection
-│   ├── validation_suite.pl    # Test runner
-│   ├── data_repair.pl         # Auto-repair for missing measurements
-│   ├── [75 additional modules]
-│   ├── testsets/              # Active constraint stories (~223 .pl files)
-│   └── testsets_3000/         # Full corpus (3,380 .pl files, read-only for tests)
-├── python/                    # Post-processing and diagnostics
-│   ├── enhanced_report.py     # Per-constraint structural analysis
-│   ├── run_pipeline.py        # Pipeline orchestration
-│   ├── cognitive_displacement_sweep.py
-│   ├── cc_diagnostic.py       # Cultural Cognition profiles
-│   ├── game_theory_*.py       # Nash, cover story, stability analysis
-│   ├── config_sensitivity_sweep.py
-│   └── [100+ diagnostic scripts]
-├── prompts/                   # Generation specifications
-│   ├── constraint_story_generation_prompt.md
-│   ├── constraint_story_generation_prompt_json.md
-│   └── uke_write_v2.1.md
-├── protocols/                 # UKE protocol suite
-│   ├── uke_write.md
-│   └── uke_write_v2.1.md
-├── agent/                     # Orchestrator, story generator, essay synthesis scripts
-│   ├── analysis/              # UKE Audit, Edit, Ground, Review, Reality
-│   ├── narrative_transform/   # UKE narrative architecture
-│   └── c-orchestrator.py      # Primary authoring entry point
-├── docs/                      # Paper and framework documentation
-│   ├── deferential_realism_paper_v6.13.md  # Canonical paper (v6.0–v6.12 superseded)
-│   ├── logic.md               # Formal classification rules
-│   └── [framework docs, analysis notes]
-├── outputs/                   # Generated reports and data
-│   ├── pipeline_output.json   # Pre-computed H¹, classifications, Arakelov heights
-│   ├── constraint_reports/    # 324+ enhanced reports
-│   └── [diagnostic outputs, game theory results]
-├── json/                      # Constraint stories in JSON format (LLM-generated inputs)
-├── essays/                    # Analytical essays
-├── examples/                  # Example compiled analyses
-├── audit/                     # Audit data and evidence files
-├── scripts/                   # Shell utilities
-├── CLAUDE.md                  # Development instructions (human-facing)
-├── AGENTS.md                  # Bot onboarding: tech stack, naming, testing, architecture
-└── ISSUES.md                  # Single tracking surface: open questions, work packages, backlog (OQ-NN)
+├── prolog/                # The engine (125 top-level modules, 2026-07-02)
+│   ├── stack.pl           #   module loader ([stack] alone loads NO testsets)
+│   ├── config.pl          #   single source of truth for all parameters
+│   ├── drl_core.pl        #   classifier (classify_from_metrics/6)
+│   ├── constraint_indexing.pl  # χ = ε × f(d) × σ(S)
+│   ├── signature_detection.pl  # signature layer (false_natural_law, FCR, FSM …)
+│   ├── corpus_loader.pl   #   corpus loading (corpus_constraint/1 = membership)
+│   ├── check_axis_boundary.pl  # the one-seat taint guard (v8 §5.6)
+│   ├── cs_*.pl            #   committer-axis modules (kernels, axioms, drift)
+│   ├── testsets/          #   LIVE working corpus (deliberately small test bed)
+│   ├── testsets_haiku/    #   twin corpus (stable comparison baseline)
+│   ├── testsets_flash/    #   twin corpus (stable comparison baseline)
+│   ├── tests/             #   plunit engine tests
+│   └── archives/datasets/ #   pre-reset corpora (kernel_v1, original_v5/v6, sotu …)
+├── python/                # Analysis layer (120 top-level scripts, 2026-07-02)
+│   ├── cli.py             #   discover/run any tool: python3 python/cli.py list
+│   ├── run_pipeline.py    #   full corpus re-classification
+│   ├── enhanced_report.py #   per-constraint reports
+│   └── omega_resolver.py  #   ISSUES.md open-questions resolver (menu/check/index)
+├── agent/                 # Orchestrators and UKE protocol suite
+│   ├── c-orchestrator.py  #   primary authoring loop (topic → corpus → reports)
+│   ├── uke_narrative_orchestrator.py  # narrative resleeving (air-gapped)
+│   └── narrative_transform/, analysis/  # protocols, run artifacts
+├── docs/                  # Papers and framework documentation
+│   ├── deferential_realism_paper_v8.md      # ← START HERE (canonical)
+│   ├── deferential_realism_paper_v7.md      # committer-axis record
+│   ├── deferential_realism_paper_v6.13.1.md # observer-axis record
+│   ├── seat-theorem-v1.md                   # the law (Coupling Theorem)
+│   ├── logic.md           #   formal classification rules (spec for config.pl)
+│   ├── design/            #   design specs, design_discipline, design_gaps
+│   ├── technical/         #   wiring notes, build_discipline, gotchas
+│   └── v8/                #   v8 source material (origin, math stories, foundations)
+├── audits/                # One dated dir per empirical investigation (evidence + writeup)
+├── outputs/               # Generated artifacts (pipeline_output.json + manifest; gitignored)
+├── json/ json_haiku/ json_flash/  # LLM-authored constraint specs (inputs, not analysis)
+├── issues/                # Generated ISSUES.md router (INDEX.md — never authoritative)
+├── schemas/ prompts/ protocols/ essays/ examples/ results/ scripts/ archives/
+├── CLAUDE.md              # Working instructions (agents and humans)
+├── AGENTS.md              # Onboarding: architecture, testing, conventions
+├── ISSUES.md              # THE single tracking surface (OQ-NN open questions)
+└── KNOWN_STATE.md         # Dated session changelog of witnessed findings
 ```
 
 ---
 
-## Current Status and Open Questions
+## Running the System
 
-**Current state:**
-- Corpus: 3,380 constraints, 324+ enhanced reports
-- Paper: v6.13
-- Engine: 91 Prolog modules, all tests passing
-- Research infrastructure under active development — not production software
+```bash
+# Corpus validation suite
+cd prolog && swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t "halt(1)"
 
-**Falsification tests:**
-- Colombia 2026 elections (May–June 2026): model predicts forced binary convergence with specific failure criteria
-- Tracked predictions maintained across analytical output
+# Full analysis pipeline (no generation; re-classifies the corpus)
+python3 python/run_pipeline.py
 
-**Key open questions** (from the paper §6.6):
-- **ε validation:** Does LLM-generated base extractiveness correlate with domain-expert judgment? Requires human-coded validation dataset.
-- **Non-linear site extension:** Which results survive relaxing the 4-element linear chain to a DAG or lattice?
-- **Temporal coupling:** The mechanism is implemented but dormant — requires longitudinal measurement data.
-- **Empirical δ calibration:** Can cognitive displacement be mapped to psychometric instruments?
-- **Per-constraint metric robustness:** Do individual classifications survive ε perturbation at ±10%?
+# Discover and run any Python tool
+python3 python/cli.py list
 
-**In-repo open questions tracker** (implementation and audit items):
-See [`ISSUES.md`](ISSUES.md) for the persistent tracker of
-engine-level, schema-level, and paper-synchronization open questions surfaced by
-correctness audits. Items are labeled OQ-01 through OQ-13.
+# Primary authoring loop: topic → readings → corpus → reports → tensions ledger
+python3 agent/c-orchestrator.py "some topic"
 
-**Known limitations:**
-- The corpus is LLM-generated. Both corpora inherit whatever latent political grammar their training data shares. Structural invariants under inversion demonstrate axiom-derived stability, but a real-world corpus with expert-assigned metrics would be a stronger test.
-- The psychometric bridge (Cultural Cognition profiles) is uncalibrated — it maps framework categories to Kahan's dimensions but has no empirical validation.
-- The scope modifier σ is architecturally fixed at [0.8, 1.0, 1.0, 1.2] for all constraints. Whether this masks meaningful per-constraint variation is an open empirical question.
+# Project gate (tracker grammar, resolver selftests, axis-boundary guard, …)
+./scripts/gate.sh
+```
+
+Two loading facts that save an hour each: `[stack]` alone loads **zero** testsets (call
+`corpus_loader:load_all_testsets` explicitly), and computed results live in
+`outputs/pipeline_output.json` — read the pre-computed values, don't recompute. Deeper wiring
+notes: `docs/technical/` (read the relevant file before modifying anything it names).
+
+---
+
+## The Corpus
+
+Constraint stories are LLM-authored readings of topics, generated by the orchestrator
+pipeline, compiled to Prolog testsets, and classified by the engine. Three live legs: the
+working test bed `prolog/testsets/` (deliberately small and singleton-per-topic while schema
+and wiring evolve — this is intended, not unfinished) and two reconciled twin corpora
+(`testsets_haiku/`, `testsets_flash/`) that serve as the stable comparison baseline. The live
+corpus was **reset on 2026-06-05**; everything earlier is archived under
+`prolog/archives/datasets/` (kernel_v1, original_v5/v6, the SOTU set) and remains available
+for retrospective sweeps.
+
+**Citation policy, stated once:** the corpus continuously extends, so its size is meaningful
+only relative to a timestamp. Never quote a remembered count — read
+`outputs/pipeline_output.json` → `manifest.n_constraints` (and cite the manifest's
+`pipeline_run_at` with it). Generation is stochastic and the committed story is the
+determinism frontier: re-generating a topic yields a *new reading*, not a re-measurement, so
+corpus statistics are one sample conditional on one generation (v8 §3.2, §7.2).
+
+---
+
+## Documentation Map
+
+| Layer | Where |
+|---|---|
+| Entry point / canonical vocabulary | `docs/deferential_realism_paper_v8.md` (Appendix = current state, plainly) |
+| Detailed records | `docs/deferential_realism_paper_v7.md` (committer axis) · `docs/deferential_realism_paper_v6.13.1.md` (observer axis) |
+| The law | `docs/seat-theorem-v1.md` + `docs/one_seat_audited.md`, `docs/choosing-the-seat-well-v0_2.md`, `docs/the-few-seats-worth-choosing-v2.md` |
+| Formal rules / calibration | `docs/logic.md` (spec) + `prolog/config.pl` (single source of truth) |
+| Operations | `docs/project_orientation.md` · `AGENTS.md` · `CLAUDE.md` |
+| Method | `docs/technical/build_discipline.md` (the six defect patterns) · `docs/design/design_discipline.md` · `docs/design/design_gaps.md` |
+| Open questions | `ISSUES.md` (single tracker; `python3 python/omega_resolver.py menu` for what's workable) |
+| Evidence | `audits/` (one dated directory per investigation) |
+
+---
+
+## Status
+
+Alpha, working toward beta (as of 2026-07-02). The engine and both axes are built and
+validated; the corpus stays deliberately small while schema and wiring evolve; correctness and
+reproducibility are prioritized over growth. The one-seat invariant is machine-enforced in the
+standing gate. Main open obligations: the general-n disagreement-spectrum proof (OQ-195), the
+false-natural-law authoring confound (OQ-70 — its prevalence may not be cited as a detection
+result until ruled), and the ε declaration discipline (v8 §6.4). The full frontier lives in
+`ISSUES.md`.
+
+Essays produced with the pipeline publish to [cafebedouin.org](https://cafebedouin.org).
 
 ---
 
 ## Contributing
 
-This is research infrastructure under active development, not production software.
+Research infrastructure under active development, not production software.
 
-**Valuable contributions:**
-- New constraint stories (run the generation prompt on novel domains, validate with the engine)
-- Falsification tracking (document where model predictions fail)
-- Cross-framework comparison (how does DR classification compare to other analytical traditions?)
-- Real-world validation data (expert-assigned metrics for constraints in domains you know)
+**Valuable:** new constraint stories on novel domains (validated through the engine);
+falsification tracking (document where predictions fail); real-world validation data
+(expert-assigned metrics in domains you know); cross-framework comparison.
 
-**Please don't:**
-- Rewrite the engine in Python — Prolog's logic programming enables the auto-repair and validation architecture
-- Add constraint types without theoretical justification — the six-type space is empirically validated as sufficient
-- Optimize for user-friendliness before methodology is validated
+**Please don't:** rewrite the engine in Python (the logic-programming substrate is
+load-bearing); add constraint types without theoretical justification; optimize for
+user-friendliness before methodology is validated.
 
 ---
 
@@ -222,14 +206,14 @@ This is research infrastructure under active development, not production softwar
 ```bibtex
 @software{deferential_realism_2026,
   author = {cafebedouin},
-  title = {Deferential Realism: Formal Framework for Observer-Dependent
-           Classification of Social Structures},
+  title = {Deferential Realism: Seat, Gauge, Orientation — a Two-Axis
+           Framework for Observer-Dependent Constraint Classification},
   year = {2026},
   publisher = {GitHub},
   url = {https://github.com/cafebedouin/structural_dynamics_model},
-  note = {91-module Prolog engine, 3,380-constraint corpus,
-          paper v6.13. Framework tested across finance, governance,
-          protocols, history, algorithms, theology, and literary domains.}
+  note = {Prolog engine + Python analysis layer; paper v8.0
+          (docs/deferential_realism_paper_v8.md); corpus size is
+          read from the pipeline manifest, not a frozen count.}
 }
 ```
 
@@ -239,8 +223,9 @@ This is research infrastructure under active development, not production softwar
 
 **Creative Commons Zero v1.0 Universal**
 
-You can copy, modify, and distribute this work, even for commercial purposes, without asking permission. If you improve the methodology, consider publishing your refinements so others can benefit.
+Copy, modify, and distribute freely, including commercially, without asking. If you improve
+the methodology, consider publishing your refinements.
 
 ---
 
-**Last updated:** 2026-05-28
+**Last updated:** 2026-07-02
