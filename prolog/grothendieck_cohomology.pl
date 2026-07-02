@@ -115,13 +115,19 @@ cache_registry:clear_hook :- cohomology_cleanup.
    site by changing that predicate.
 
    H¹ = count of disagreeing context-pairs across the observer site.
-   On the canonical 4-point site: range 0..6 = C(4,2).
-     Gap: H¹ ∈ {0, 3, 4, 5, 6} (values 1, 2 are impossible).
+   GENERAL LAW (OQ-195 resolved 2026-07-02, docs/h1_gap_spectrum_general_n.md):
+     for n REAL seats the reachable spectrum is H(n) — min nonzero = n-1
+     ({1..n-2} forbidden at every n), exact band decomposition by largest
+     agreement bloc, inter-band gap iff n >= j+3+C(j+1,2); with more real
+     seats than type tokens (n > 7) the top truncates (Theorem D there).
+   On the canonical 4-point site: range 0..6 = C(4,2);
+     H¹ ∈ {0, 3, 4, 5, 6} — the n=4 instance of the law.
    On the 156-point product site: range 0..C(156,2) = 0..12,090.
      Minimum nonzero H¹ = 3,380 (26 minority × 130 majority contexts).
      Classification is quantized in power-level blocks of ~39 contexts.
    The binary distinction (H¹ = 0 vs H¹ > 0) is site-invariant in the
-   current corpus (zero crossings across 3,301 constraints).
+   chimera-era corpus where measured (zero crossings across 3,301
+   constraints — pre-reset regime figure).
    ================================================================ */
 
 ordered_contexts(Contexts) :-
@@ -168,11 +174,12 @@ type_at_context(C, Ctx, Type) :-
 %% cohomological_obstruction(+Constraint, -H0, -H1)
 %  H0 = 1 if the constraint has a global section (all contexts agree on type).
 %  H0 = 0 otherwise.
-%  H1 = number of disagreeing context-pairs (0..6). Range reflects C(4,2) = 6.
-%  STALE-RANGE FLAG (OQ-27): "0..6" assumes |real seats| = 4. Under the OQ-51 N/A
-%  rule (below), fewer real seats give a SMALLER reachable spectrum (n=3 -> {0,2,3};
-%  n=2 -> {0,1}); the general-n gap spectrum is unproven. See OQ-195
-%  (general-n H1 gap spectrum under the OQ-51 variable-real-seat regime).
+%  H1 = number of disagreeing context-pairs (0..6 on the canonical 4-seat site).
+%  GENERAL-N LAW (OQ-195 RESOLVED 2026-07-02): the reachable spectrum for n real
+%  seats is H(n) of docs/h1_gap_spectrum_general_n.md — min nonzero = n-1, so
+%  {1..n-2} is forbidden at every cardinality (n=4 -> {0,3,4,5,6}; n=3 -> {0,2,3};
+%  n=2 -> {0,1}); proven for all n, machine-verified n<=40, engine-witnessed by
+%  tests/test_h1_spectrum.pl. A value outside H(n_real) is a bug witness.
 %  H0 and H1 are complementary: H0=1 implies H1=0; H1>0 implies H0=0.
 %  OQ-51 N/A rule (2026-06-25): `unknown` is N/A — an untypeable seat that can
 %  neither agree nor disagree. Fewer than two REAL seats can form no pair, so the

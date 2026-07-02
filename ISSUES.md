@@ -10279,19 +10279,12 @@ twin: **GAP-22** (`docs/design/design_gaps.md`).
 
 **Ω-type:** Ω_C (definitional completion — the general-n form of Theorem 2's gap, a proof obligation rather than a contested seat).
 
-**Status:** open
+**Status:** resolved — 2026-07-02. Proven for every cardinality: `docs/h1_gap_spectrum_general_n.md`.
 **Priority:** 3
 **Origin:** OQ-27 resolution, 2026-06-30 (split out at W5 of the OQ-27 plan so OQ-27 could close clean on the signature-resolved *disclosure* without gating on an unproven general law).
-**Deps:** splits_from OQ-27 (the general-n gap proof seam; OQ-27 closed clean on the signature-resolved disclosure). Caveat-propagation touches OQ-135 (v8 adoption) and rests on OQ-51 (the N/A rule that makes real-seat count variable).
-**Files:** `docs/deferential_realism_paper_v6.13.1.md` (Theorem 2 + the OQ-27 amendment, §4–5); `prolog/grothendieck_cohomology.pl:158` (the stale-range flag referencing this OQ); `docs/deferential_realism_paper_v7.md` / future v8 (caveat propagation target).
+**Deps:** splits_from OQ-27
 
-**Specific question:** Theorem 2's H¹ gap {0,3,4,5,6} and forbidden {1,2} are proven for **|real seats| = 4** (the proof invokes C(4,2) − Σ C(nᵢ,2); an n=5 corollary exists). The OQ-51 N/A rule (2026-06-25, post-dating Theorem 2) makes an `unknown` seat N/A, so the *real-seat count* varies per constraint and the reachable spectrum varies with it. The n=3 case ({0,2,3}) and n=2 case ({0,1}) are **already proven** by the same partition enumeration — this OQ does NOT inherit "n=3/n=2 unproven." What is open is only the **general-n** (arbitrary cardinality) statement: write the partition proof for arbitrary n and state the general gap/forbidden structure.
-
-**Evidence so far (pinned to manifest `2026-06-30T00:08:22Z`, n=116):** band-by-real-seat census — n=4: {0:21,3:26,4:3,5:35,6:1}; n=3: {0:5,2:4}; n=2: {0:3}; n≤1: null. No corpus counterexample (no n=3 at band 1, no n=2 outside {0,1}). The four `h1_band=2` constraints are all **three-real-seat** (`border_control_legitimacy__freedom_of_movement_primary`, `equal_protection_kernel__colorblind_reading`, `secession_legitimacy_boundary__constitutional_impossibility_reading`, `shinbutsu_ontological_commitment__incoherence_reading`; contextuality_fraction 0.667 = 2/C(3,2)) — NOT counterexamples to the n=4 forbidden-{1,2}. This 4-name census rots if the corpus regenerates: re-pin by manifest before reuse.
-
-**What resolution changes:** A general-n partition proof closes the induction and lets the |real seats|=4 caveat be propagated cleanly to v7/v8 and the `grothendieck_cohomology.pl:158` range comment (currently flagged stale, referencing this OQ). Until then, the n=4 spectrum is the only one stated in the published theorem; the small-n rows live in the v6.13.1 OQ-27 amendment as proven-by-enumeration but not theorem-promoted.
-
-**Propagation update (2026-07-02, OQ-135 close):** v8 (`docs/deferential_realism_paper_v8.md` §3.4) now carries the |real-seat| caveat and the per-count spectrum table **in the theorem body**, citing this OQ for the general-n induction — the v8 half of the propagation target is done. Remaining: the general-n proof itself, v7 (still cites the gap uncaveated), and the `grothendieck_cohomology.pl:158` range comment.
+**Resolution (2026-07-02; commits `5d052990` + close commit; evidence `audits/2026-07-02_oq195_general_n_gap/`).** The proof doc delivers: Lemma 1 (H¹ = C(n,2) − Σ C(nᵢ,2) = engine's pair count); **Theorem A** (min nonzero = n−1, so {1..n−2} forbidden at every n); **Theorem B** (exact band decomposition by largest agreement bloc, self-similar recursion); an unconditional band-floor lemma; **Theorem C** (inter-band gap iff n ≥ j+3+C(j+1,2), every value in the gap forbidden); **Theorem D** (type-token bound T=7, derived from code not assumed — top truncation live in the STAKEHOLDER frame, where authored seat counts reach 12; operator's pre-check reshaped the scope from caveat-closure to live law). Machine-verified n ≤ 40 under pre-registered BLOCKING criteria — **per-band architecture** (plan-review catch: the band union is invariant under dropping the parts-constraint, so a union check cannot verify the classification; the unconstrained classifier was run as a discriminating control: identical unions, mismatched bands at 38/39 n) — plus record-match, negative controls, Theorem-C iff (zero exceptions). Engine witness `prolog/tests/test_h1_spectrum.pl` 23/23 (exhaustive n=2–4; constructive all ≤7-bloc partitions n=5–12; OQ-51 filter at n=12; two negative controls). Propagation landed: v8 §3.4/§9.6/Appendix; v7 dated amendment note (band values seat-count-conditioned); v6.13.1 changelog item-6 pointer; `grothendieck_cohomology.pl` both range comments rewritten. **Line-drift note:** the flag everywhere cited as `grothendieck_cohomology.pl:158` actually lived at ll.167–182 — cite by predicate (`cohomological_obstruction/3` header), never that line. Successor build: **OQ-207** (stakeholder-frame H¹ wiring). The old 4-name band census (manifest `2026-06-30T00:08:22Z`) was evidence-so-far, superseded by the theorem; re-pin by manifest if ever reused.
 
 ---
 
@@ -10763,6 +10756,24 @@ queried on its authored grid (not a synthetic time).
 **The work.** (1) Census every dynamic-goal construction site in the engine files (`call/N` with non-literal goal, `=..`, goal terms stored in facts and later called); (2) classify each: can it, on any input, route committer (`cs_*`) content into observer computation? — each verdict carries a witness, not a code-read; (3) positive control REQUIRED before any "none can" claim: plant a dynamically-constructed cross-axis call, confirm the static guard misses it AND the census tool flags it (the census must be shown to find what the guard cannot); (4) then the ruling: accept-as-documented-residual (bounded by the census) or extend the guard (e.g. a runtime taint assertion on the sanctioned bridge's callee, or a lint on dynamic-goal sites touching `cs_*` atoms).
 
 **What resolution changes.** The one-seat kill-condition's enforcement boundary becomes *stated and witnessed* instead of implicit: either "no dynamic path exists, and the probe that would find one is controlled," or the guard grows to cover the dynamic class. Sibling of OQ-137's opt-in-registry residual (same shape: a guard whose coverage is opt-in/static needs its blind zone censused, not assumed empty).
+
+---
+
+## OQ-207 — Build the stakeholder-frame H¹ (per-seat disagreement spectrum over named stakeholder seats)
+
+**Ω-type:** Ω_E (mechanical wiring — two existing pieces joined, with census + controls) with an Ω_C tail (report/census surface design: which read sites carry the new measure and how).
+
+**Status:** open
+
+**Priority:** 3
+
+**Deps:** splits_from OQ-195
+
+**Origin:** 2026-07-02, the operator's pre-check on the OQ-195 plan: the cohomology was built on the four OBSERVER contexts, but the schema/generation (OQ-83/OQ-109) author a second frame — named stakeholder seats with roles {agenda_setter, beneficiary, payer, excluded, observer} and per-seat computed types — at variable cardinality (live census 3–12 seats/story; kernel_v1 has zero). Nothing aggregates the per-seat types into a disagreement measure; `reading_registry.pl:125–128` itself flags `dr_type_for_stakeholder/3` as "no totalized wrapper yet — first candidate if an aggregate ever consumes per-seat chi". Minted per the OQ-195 plan's embedded ruling 5.
+
+**The build.** Wire the per-story vector of `stakeholder_seats:dr_type_for_stakeholder/3` values through the existing pure core `grothendieck_cohomology:obstruction_from_vector/3` → a stakeholder-frame H¹ per constraint. Constraints (all pre-committed): (1) **commentary-grade** per the stakeholder_seats R3 rule — annotates, never overrides classification; (2) **OQ-51 rule carries over** — `unknown`-typed seats filtered, <2 real seats → null never 0, and the zero-seat stories (the OQ-202 generation-path artifact strata: 26/466/212 across the legs at mint) read null — name them as the denominator caveat in any census surface (OQ-136 rule: raw count + n_in_domain alongside any rate); (3) **register the new reading in `prolog/reading_registry.pl` in the same change** (OQ-137 — an unregistered reading escapes the totality guard silently); (4) **built-in validity check:** the reachable spectrum per real-seat count is the proven law (`docs/h1_gap_spectrum_general_n.md` — H(n), H(n,7) for n>7); any observed value outside it is a bug witness, and the plunit spectrum suite (`tests/test_h1_spectrum.pl`) already witnesses the core at n ≤ 12; (5) **coherence with the mcc flag:** `consensus_provenance/2` (OQ-204's manufactured-consensus candidate) is exactly this measure's H¹=0-with-excluded-seat special case — the two surfaces must not fork (Pattern 2); the graded measure should cite or subsume the flag, not duplicate it.
+
+**What resolution changes.** The framework gains a second live cohomology frame — disagreement measured over WHO IS IN THE STORY (agenda-setters, payers, the excluded, the synthetic observer) rather than over the four canonical vantages — at variable cardinality where the general-n law is the governing spectrum. First analytical customers: mcc reporting (OQ-204) gains its graded generalization; the OQ-199 seat-disagreement question gains its instrument.
 
 ---
 

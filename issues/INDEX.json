@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "f2d6f544590c9ff1ac91442b85370475839fbbe1",
+    "store_version": "5d0529905d1b655d2a129d5bef2b4d226c9da153",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-02T16:01:24"
+    "generated_at": "2026-07-02T18:51:43"
   },
-  "issues_sha": "50002f7045eef77be968a5f8c75f1866bfbfaa09b6f88a41ef862a0b247a753b",
-  "n_entries": 206,
+  "issues_sha": "e8e3859f53df846b94cbae3f97ee0180093accf9742172324f51d7b49a7c1e3d",
+  "n_entries": 207,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 111,
+    "resolved": 112,
     "mitigated": 13,
     "partial": 6,
     "disposed": 4,
@@ -854,21 +854,6 @@
       ]
     },
     {
-      "id": "OQ-195",
-      "status": "open",
-      "priority": 3,
-      "summary": "General-n H¹ gap spectrum under the OQ-51 variable-real-seat regime (the unwritten induction)",
-      "deps": [
-        "splits_from OQ-27"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-27",
-        "OQ-51",
-        "OQ-135"
-      ]
-    },
-    {
       "id": "OQ-196",
       "status": "open",
       "priority": 4,
@@ -1010,6 +995,27 @@
       "mentioned_in": [
         "OQ-135",
         "OQ-137"
+      ]
+    },
+    {
+      "id": "OQ-207",
+      "status": "open",
+      "priority": 3,
+      "summary": "Build the stakeholder-frame H¹ (per-seat disagreement spectrum over named stakeholder seats)",
+      "deps": [
+        "splits_from OQ-195"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-51",
+        "OQ-83",
+        "OQ-109",
+        "OQ-136",
+        "OQ-137",
+        "OQ-195",
+        "OQ-199",
+        "OQ-202",
+        "OQ-204"
       ]
     }
   ],
@@ -2805,6 +2811,21 @@
         "OQ-74",
         "OQ-95",
         "OQ-116"
+      ]
+    },
+    {
+      "id": "OQ-195",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "General-n H¹ gap spectrum under the OQ-51 variable-real-seat regime (the unwritten induction)",
+      "deps": [
+        "splits_from OQ-27"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-27",
+        "OQ-51",
+        "OQ-207"
       ]
     },
     {

@@ -268,11 +268,14 @@ varies with it:
 | ≤ 1 | undetermined (null — not zero) |
 
 An observed H¹ band of 2 is the three-real-seat signature, not a counterexample to the
-four-seat gap. The general-n form — arbitrary real-seat cardinality — is proven by enumeration
-for n ∈ {2, 3, 4} only; the general induction is open work, tracked as OQ-195. A reader who
-carries "1 and 2 are forbidden" without the cardinality condition will misread small-orbit
-constraints, and a consumer that reads a null band as 0 manufactures a determination that was
-never made.
+four-seat gap. The general-n form is now **proven for every cardinality**
+(`docs/h1_gap_spectrum_general_n.md`, resolving OQ-195): the minimum nonzero disagreement is
+n−1 — the bottom gap {1,…,n−2} widens linearly — with an exact band decomposition, an
+inter-band gap law, and a type-token truncation theorem that binds once real seats exceed
+the seven real type tokens (live in the stakeholder frame, where authored seat counts reach
+twelve). A reader who carries "1 and 2 are forbidden" without the cardinality condition will
+misread small-orbit constraints, and a consumer that reads a null band as 0 manufactures a
+determination that was never made.
 
 **Theorem 3 (Institutional Spectral Dominance).** In the spectral decomposition of
 classification disputes, the institutional position dominates: the variance concentrates at
@@ -1032,13 +1035,12 @@ Because v8 is largely re-description of a built engine, it must say what could s
 ### 9.6 Open problems, routed
 
 Per the framework's own discipline, open ends are typed and tracked, not parked in prose. The
-two that bear directly on this paper: **OQ-195** — the general-n H¹ gap spectrum under the
-variable-real-seat regime (proven by enumeration for n ∈ {2,3,4}; the induction unwritten;
-until it lands, Theorem 2's spectrum is cited only with its cardinality condition, §3.4); and
-**OQ-205** — the ε declaration discipline of §6.4, now with its own tracking home (OQ-03's
-empirical limb, unblocked by this paper's adoption, rides on it). The full frontier lives in
-`ISSUES.md`, which is the single tracking surface; anything this paper marks OPEN is findable
-there by its OQ number.
+one that bears directly on this paper: **OQ-205** — the ε declaration discipline of §6.4
+(OQ-03's empirical limb, unblocked by this paper's adoption, rides on it). The general-n gap
+spectrum, open at this paper's first printing as OQ-195, is now proven at every cardinality
+(`docs/h1_gap_spectrum_general_n.md`; §3.4). The full frontier lives in `ISSUES.md`, which is
+the single tracking surface; anything this paper marks OPEN is findable there by its OQ
+number.
 
 The engine architecture votes one-seat; the vocabulary now says what the architecture does;
 the invariant that keeps the claim honest runs in the gate; and the one thing the substrate
@@ -1143,10 +1145,11 @@ the operator, not automated); and a narrative experiment that extracts a story's
 topology, regenerates a new story from the formal skeleton behind an air gap, and re-measures
 it — the demonstration that the topology survives independent of its original body.
 
-**What is open.** Two named obligations: a general proof of the disagreement-spectrum law
-for any number of real positions (OQ-195); and a declaration discipline for ε — surfacing who
+**What is open.** One named obligation: a declaration discipline for ε — surfacing who
 authored each ε, from which reading, and how stable conclusions are under its perturbation —
-the framework's main owed artifact (OQ-205). The full open-questions ledger is `ISSUES.md`.
+the framework's main owed artifact (OQ-205). (The disagreement-spectrum law, open at first
+printing, is now proven for every number of real positions:
+`docs/h1_gap_spectrum_general_n.md`.) The full open-questions ledger is `ISSUES.md`.
 
 **Status.** Alpha, working toward beta: the corpus stays small while schema and wiring evolve,
 and correctness and reproducibility are prioritized over growth. Everything is CC0.

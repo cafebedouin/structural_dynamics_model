@@ -45,6 +45,36 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-02 — OQ-195 RESOLVED: general-n H¹ gap spectrum proven at every cardinality; stakeholder frame makes it the live law; OQ-207 minted
+**Files:** docs/h1_gap_spectrum_general_n.md, python/audits/oq195_h1_spectrum_check.py, prolog/tests/test_h1_spectrum.pl, prolog/grothendieck_cohomology.pl, docs/deferential_realism_paper_v8.md, docs/deferential_realism_paper_v7.md, docs/deferential_realism_paper_v6.13.1.md, ISSUES.md, audits/2026-07-02_oq195_general_n_gap/
+**Tier:** landed
+
+New proof doc `docs/h1_gap_spectrum_general_n.md` (commit `5d052990` + close commit): min
+nonzero H¹ = n−1 at every cardinality ({1..n−2} forbidden — the four-seat forbidden-{1,2} is
+the n=4 instance); exact band decomposition by largest agreement bloc with a self-similar
+recursion; unconditional band-floor lemma; inter-band gap iff n ≥ j+3+C(j+1,2) (every value
+in the gap forbidden); type-token bound T=7 (derived from code) truncating the top for n>7 —
+LIVE, not hypothetical: the operator's pre-check surfaced the stakeholder frame (named seats,
+roles {agenda_setter, beneficiary, payer, excluded, observer}, per-seat computed types) at
+3–12 seats/story across the live legs (kernel_v1: zero — the frame post-dates it). Verified
+under pre-registered BLOCKING criteria n≤40 with PER-BAND bookkeeping — the plan review
+caught that the band union is invariant under dropping the parts-constraint, so a union
+check cannot verify the classification; the unconstrained classifier ran as a discriminating
+control (unions identical ∀n, bands mismatch 38/39). Engine witness `test_h1_spectrum.pl`
+23/23 (exhaustive n=2–4, constructive n=5–12, OQ-51 filter at n=12, two negative controls).
+Adversarial multi-agent review was blocked by a session subagent limit — substituted by the
+operator's hand-derivation + enumeration + an author re-derivation pass that caught one
+prose defect (B_{j+1} is the band FLOOR, exact minimum only for j+1 ≤ n−j−1) — recorded in
+the WRITEUP. Propagated: v8 §3.4/§9.6/Appendix; v7 dated amendment note (band values are
+seat-count-conditioned); v6.13.1 changelog item-6 landed-pointer; `grothendieck_cohomology.pl`
+both range comments (comment-only, behavior-preserving). **Line-drift correction-key:** the
+stale-range flag cited repo-wide as `grothendieck_cohomology.pl:158` actually lived at
+ll.167–182 — cite it by predicate header, never by that line. **OQ-207 minted** (stakeholder-
+frame H¹ build: `dr_type_for_stakeholder/3` vectors → `obstruction_from_vector/3`;
+commentary-grade; registry-registered; `consensus_provenance/2` is its H¹=0 special case).
+
+---
+
 ## 2026-07-02 — OQ-70 premise-rot correction: canon said "until ruled" for 27 days after the ruling; v8/README inherited it on authoring day
 **Files:** CLAUDE.md, README.md, docs/deferential_realism_paper_v8.md, ISSUES.md
 **Tier:** correction-key
