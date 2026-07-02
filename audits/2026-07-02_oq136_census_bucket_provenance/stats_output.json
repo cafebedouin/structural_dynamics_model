@@ -1,0 +1,2571 @@
+{
+  "audit": "oq136_bucket_provenance",
+  "proposal": "audits/2026-07-02_oq136_census_bucket_provenance/PROPOSAL.md",
+  "git_rev": "0ba48b4c6dc91a5b27000e2f2ea694f06808b103",
+  "git_dirty": true,
+  "n_corpus_loaded": 119,
+  "seed": 20260702,
+  "n_perm": 10000,
+  "extractor_controls": {
+    "drop_one_fired": "[q6] sigma members (118) != n_corpus (119)",
+    "duplicate_fired": "[q6] non-exactly-one cids: ['ability_ceiling_reading']"
+  },
+  "statistic_controls": {
+    "control_planted_cluster": {
+      "p_raw": 2.8238902672889953e-07,
+      "enrich": {
+        "stratum": "A",
+        "members": 10,
+        "ratio": 5.449999999999999
+      },
+      "flagged": true
+    },
+    "control_uniform_draw": {
+      "p_raw": 1.0,
+      "enrich": {
+        "stratum": "B",
+        "members": 8,
+        "ratio": 1.0765432098765433
+      },
+      "flagged": false
+    }
+  },
+  "json_twin_crosscheck": {
+    "checked": 110,
+    "n_mismatches": 0,
+    "mismatches": [],
+    "twin_missing": []
+  },
+  "holm_family_size": 8,
+  "results": {
+    "q6_unmeasured": {
+      "n": 26,
+      "powered": true,
+      "axes": {
+        "model": {
+          "axis": "model",
+          "k_strata": 5,
+          "labels": [
+            "claude-haiku-4-5-20251001",
+            "claude-sonnet-4-20250514",
+            "claude-sonnet-4-5-20250929",
+            "gemini-2.5-flash",
+            "provenance_unauthored"
+          ],
+          "table": [
+            [
+              16,
+              12
+            ],
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              63
+            ],
+            [
+              0,
+              11
+            ],
+            [
+              9,
+              0
+            ]
+          ],
+          "p_raw": 9.999000099990002e-05,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "provenance_unauthored",
+            "members": 9,
+            "ratio": Infinity
+          },
+          "enrichment_gates_pass": true,
+          "p_holm": 0.0007999200079992001,
+          "clustered": true
+        },
+        "prompt_commit": {
+          "axis": "prompt_commit",
+          "k_strata": 4,
+          "labels": [
+            "046e0a40c34cddf4fff29b8c15f632dbdef31b7a",
+            "22843cdfd28a814d8f30c35778e75821452545bd",
+            "8080348c4e16a265fafc924dcde83360dfd170fc",
+            "provenance_unauthored"
+          ],
+          "table": [
+            [
+              0,
+              12
+            ],
+            [
+              17,
+              57
+            ],
+            [
+              0,
+              24
+            ],
+            [
+              9,
+              0
+            ]
+          ],
+          "p_raw": 9.999000099990002e-05,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "provenance_unauthored",
+            "members": 9,
+            "ratio": Infinity
+          },
+          "enrichment_gates_pass": true,
+          "p_holm": 0.0007999200079992001,
+          "clustered": true
+        },
+        "topic_family": {
+          "axis": "topic_family",
+          "k_strata": 79,
+          "labels": [
+            "actinide_replenishment_mechanism",
+            "adjunctification_of_university_teaching",
+            "alignment_constraint_narrowing",
+            "animal_status_kernel",
+            "apoe4_mitochondrial_vulnerability",
+            "architectural_pattern_validity",
+            "basic_law_interpretive_authority",
+            "basic_law_interpretive_boundary",
+            "behavioral_adoption_friction",
+            "benchmark_saturation_interpretation",
+            "bitcoin_whitepaper_purpose",
+            "border_control_legitimacy",
+            "capability_endogeneity",
+            "catastrophe_memory_kernel",
+            "dataset_recycling_amplification",
+            "demographic_resource_allocation",
+            "demographic_skill_mismatch",
+            "digital_money_legitimacy",
+            "divine_legitimacy_substrate",
+            "doomsday_clock_metric",
+            "dueling_disappearance_mechanism",
+            "empty_shell_tolerance",
+            "equal_protection_kernel",
+            "fourteenth_amendment_equal_protection",
+            "gendered_outcome_asymmetry",
+            "generality_standard",
+            "geopolitical_settlement_competition",
+            "gita_kurukshetra_discourse",
+            "historical_treaty_substrate",
+            "institutional_barrier_structure",
+            "institutional_trust_erosion",
+            "institutional_verification_collapse",
+            "intervention_target_selection",
+            "jewish_self_determination",
+            "jewish_sovereignty_palestine",
+            "jewish_territorial_claim",
+            "john_1_1_logos",
+            "knowledge_legitimacy_biomedicine",
+            "lausanne_minority_protections",
+            "learning_difficulty_substrate",
+            "llm_synthesis_capacity",
+            "longevity_mismatch",
+            "lycurgan_laws",
+            "maat_order_principle",
+            "marriage_authority",
+            "mitochondrial_demand_signal_deficiency",
+            "model_collapse_feedback",
+            "moral_causation_locus",
+            "nad_precursor_bioavailability",
+            "nicene_creed_authority",
+            "organization_floor",
+            "performance_legitimacy",
+            "polaris_document_status",
+            "press_reformation_causality",
+            "press_reformation_causation",
+            "propagation_speed_asymmetry",
+            "property_sector_overhang",
+            "protein_anabolic_resistance",
+            "radiative_levitation_stratification",
+            "reading_acquisition_legitimacy",
+            "refugee_convention_text",
+            "responsibility_preservation_mechanism",
+            "scale_ceiling",
+            "secession_legitimacy_boundary",
+            "sex_gender_category",
+            "shinbutsu_ontological_commitment",
+            "specification_binding_authority",
+            "speech_protection_kernel",
+            "state_killing_legitimacy",
+            "statutory_debt_ceiling",
+            "synthesis_infrastructure_gap",
+            "third_act_arbitrage",
+            "udhr_article_3",
+            "validation_judgment_separation",
+            "vedic_corpus_social_prescription",
+            "visual_evidentiary_authority",
+            "womens_financial_autonomy",
+            "zero_mathematical_status",
+            "zionist_legitimacy_basis"
+          ],
+          "table": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "p_raw": 0.8609139086091391,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "polaris_document_status",
+            "members": 2,
+            "ratio": 1.7884615384615383
+          },
+          "enrichment_gates_pass": false,
+          "descriptive_clustered": false
+        }
+      }
+    },
+    "q6_signature_unknown": {
+      "n": 16,
+      "powered": true,
+      "axes": {
+        "model": {
+          "axis": "model",
+          "k_strata": 5,
+          "labels": [
+            "claude-haiku-4-5-20251001",
+            "claude-sonnet-4-20250514",
+            "claude-sonnet-4-5-20250929",
+            "gemini-2.5-flash",
+            "provenance_unauthored"
+          ],
+          "table": [
+            [
+              1,
+              27
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              13,
+              51
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              0,
+              9
+            ]
+          ],
+          "p_raw": 0.1483851614838516,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "claude-sonnet-4-5-20250929",
+            "members": 13,
+            "ratio": 1.6409313725490196
+          },
+          "enrichment_gates_pass": false,
+          "p_holm": 0.5935406459354065,
+          "clustered": false
+        },
+        "prompt_commit": {
+          "axis": "prompt_commit",
+          "k_strata": 4,
+          "labels": [
+            "046e0a40c34cddf4fff29b8c15f632dbdef31b7a",
+            "22843cdfd28a814d8f30c35778e75821452545bd",
+            "8080348c4e16a265fafc924dcde83360dfd170fc",
+            "provenance_unauthored"
+          ],
+          "table": [
+            [
+              3,
+              9
+            ],
+            [
+              8,
+              66
+            ],
+            [
+              5,
+              19
+            ],
+            [
+              0,
+              9
+            ]
+          ],
+          "p_raw": 0.23717628237176283,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "046e0a40c34cddf4fff29b8c15f632dbdef31b7a",
+            "members": 3,
+            "ratio": 2.1458333333333335
+          },
+          "enrichment_gates_pass": true,
+          "p_holm": 0.5935406459354065,
+          "clustered": false
+        },
+        "topic_family": {
+          "axis": "topic_family",
+          "k_strata": 79,
+          "labels": [
+            "actinide_replenishment_mechanism",
+            "adjunctification_of_university_teaching",
+            "alignment_constraint_narrowing",
+            "animal_status_kernel",
+            "apoe4_mitochondrial_vulnerability",
+            "architectural_pattern_validity",
+            "basic_law_interpretive_authority",
+            "basic_law_interpretive_boundary",
+            "behavioral_adoption_friction",
+            "benchmark_saturation_interpretation",
+            "bitcoin_whitepaper_purpose",
+            "border_control_legitimacy",
+            "capability_endogeneity",
+            "catastrophe_memory_kernel",
+            "dataset_recycling_amplification",
+            "demographic_resource_allocation",
+            "demographic_skill_mismatch",
+            "digital_money_legitimacy",
+            "divine_legitimacy_substrate",
+            "doomsday_clock_metric",
+            "dueling_disappearance_mechanism",
+            "empty_shell_tolerance",
+            "equal_protection_kernel",
+            "fourteenth_amendment_equal_protection",
+            "gendered_outcome_asymmetry",
+            "generality_standard",
+            "geopolitical_settlement_competition",
+            "gita_kurukshetra_discourse",
+            "historical_treaty_substrate",
+            "institutional_barrier_structure",
+            "institutional_trust_erosion",
+            "institutional_verification_collapse",
+            "intervention_target_selection",
+            "jewish_self_determination",
+            "jewish_sovereignty_palestine",
+            "jewish_territorial_claim",
+            "john_1_1_logos",
+            "knowledge_legitimacy_biomedicine",
+            "lausanne_minority_protections",
+            "learning_difficulty_substrate",
+            "llm_synthesis_capacity",
+            "longevity_mismatch",
+            "lycurgan_laws",
+            "maat_order_principle",
+            "marriage_authority",
+            "mitochondrial_demand_signal_deficiency",
+            "model_collapse_feedback",
+            "moral_causation_locus",
+            "nad_precursor_bioavailability",
+            "nicene_creed_authority",
+            "organization_floor",
+            "performance_legitimacy",
+            "polaris_document_status",
+            "press_reformation_causality",
+            "press_reformation_causation",
+            "propagation_speed_asymmetry",
+            "property_sector_overhang",
+            "protein_anabolic_resistance",
+            "radiative_levitation_stratification",
+            "reading_acquisition_legitimacy",
+            "refugee_convention_text",
+            "responsibility_preservation_mechanism",
+            "scale_ceiling",
+            "secession_legitimacy_boundary",
+            "sex_gender_category",
+            "shinbutsu_ontological_commitment",
+            "specification_binding_authority",
+            "speech_protection_kernel",
+            "state_killing_legitimacy",
+            "statutory_debt_ceiling",
+            "synthesis_infrastructure_gap",
+            "third_act_arbitrage",
+            "udhr_article_3",
+            "validation_judgment_separation",
+            "vedic_corpus_social_prescription",
+            "visual_evidentiary_authority",
+            "womens_financial_autonomy",
+            "zero_mathematical_status",
+            "zionist_legitimacy_basis"
+          ],
+          "table": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "p_raw": 0.9259074092590741,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "behavioral_adoption_friction",
+            "members": 1,
+            "ratio": Infinity
+          },
+          "enrichment_gates_pass": false,
+          "descriptive_clustered": false
+        }
+      }
+    },
+    "extraction_unnameable": {
+      "n": 3,
+      "powered": false,
+      "axes": {
+        "model": {
+          "axis": "model",
+          "k_strata": 5,
+          "labels": [
+            "claude-haiku-4-5-20251001",
+            "claude-sonnet-4-20250514",
+            "claude-sonnet-4-5-20250929",
+            "gemini-2.5-flash",
+            "provenance_unauthored"
+          ],
+          "table": [
+            [
+              3,
+              25
+            ],
+            [
+              0,
+              7
+            ],
+            [
+              0,
+              64
+            ],
+            [
+              0,
+              11
+            ],
+            [
+              0,
+              9
+            ]
+          ],
+          "p_raw": 0.06179382061793821,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "claude-haiku-4-5-20251001",
+            "members": 3,
+            "ratio": 4.640000000000001
+          },
+          "enrichment_gates_pass": true
+        },
+        "prompt_commit": {
+          "axis": "prompt_commit",
+          "k_strata": 4,
+          "labels": [
+            "046e0a40c34cddf4fff29b8c15f632dbdef31b7a",
+            "22843cdfd28a814d8f30c35778e75821452545bd",
+            "8080348c4e16a265fafc924dcde83360dfd170fc",
+            "provenance_unauthored"
+          ],
+          "table": [
+            [
+              0,
+              12
+            ],
+            [
+              3,
+              71
+            ],
+            [
+              0,
+              24
+            ],
+            [
+              0,
+              9
+            ]
+          ],
+          "p_raw": 0.7675232476752325,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "22843cdfd28a814d8f30c35778e75821452545bd",
+            "members": 3,
+            "ratio": 1.6338028169014085
+          },
+          "enrichment_gates_pass": false
+        },
+        "topic_family": {
+          "axis": "topic_family",
+          "k_strata": 79,
+          "labels": [
+            "actinide_replenishment_mechanism",
+            "adjunctification_of_university_teaching",
+            "alignment_constraint_narrowing",
+            "animal_status_kernel",
+            "apoe4_mitochondrial_vulnerability",
+            "architectural_pattern_validity",
+            "basic_law_interpretive_authority",
+            "basic_law_interpretive_boundary",
+            "behavioral_adoption_friction",
+            "benchmark_saturation_interpretation",
+            "bitcoin_whitepaper_purpose",
+            "border_control_legitimacy",
+            "capability_endogeneity",
+            "catastrophe_memory_kernel",
+            "dataset_recycling_amplification",
+            "demographic_resource_allocation",
+            "demographic_skill_mismatch",
+            "digital_money_legitimacy",
+            "divine_legitimacy_substrate",
+            "doomsday_clock_metric",
+            "dueling_disappearance_mechanism",
+            "empty_shell_tolerance",
+            "equal_protection_kernel",
+            "fourteenth_amendment_equal_protection",
+            "gendered_outcome_asymmetry",
+            "generality_standard",
+            "geopolitical_settlement_competition",
+            "gita_kurukshetra_discourse",
+            "historical_treaty_substrate",
+            "institutional_barrier_structure",
+            "institutional_trust_erosion",
+            "institutional_verification_collapse",
+            "intervention_target_selection",
+            "jewish_self_determination",
+            "jewish_sovereignty_palestine",
+            "jewish_territorial_claim",
+            "john_1_1_logos",
+            "knowledge_legitimacy_biomedicine",
+            "lausanne_minority_protections",
+            "learning_difficulty_substrate",
+            "llm_synthesis_capacity",
+            "longevity_mismatch",
+            "lycurgan_laws",
+            "maat_order_principle",
+            "marriage_authority",
+            "mitochondrial_demand_signal_deficiency",
+            "model_collapse_feedback",
+            "moral_causation_locus",
+            "nad_precursor_bioavailability",
+            "nicene_creed_authority",
+            "organization_floor",
+            "performance_legitimacy",
+            "polaris_document_status",
+            "press_reformation_causality",
+            "press_reformation_causation",
+            "propagation_speed_asymmetry",
+            "property_sector_overhang",
+            "protein_anabolic_resistance",
+            "radiative_levitation_stratification",
+            "reading_acquisition_legitimacy",
+            "refugee_convention_text",
+            "responsibility_preservation_mechanism",
+            "scale_ceiling",
+            "secession_legitimacy_boundary",
+            "sex_gender_category",
+            "shinbutsu_ontological_commitment",
+            "specification_binding_authority",
+            "speech_protection_kernel",
+            "state_killing_legitimacy",
+            "statutory_debt_ceiling",
+            "synthesis_infrastructure_gap",
+            "third_act_arbitrage",
+            "udhr_article_3",
+            "validation_judgment_separation",
+            "vedic_corpus_social_prescription",
+            "visual_evidentiary_authority",
+            "womens_financial_autonomy",
+            "zero_mathematical_status",
+            "zionist_legitimacy_basis"
+          ],
+          "table": [
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "p_raw": 0.1810818918108189,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "animal_status_kernel",
+            "members": 1,
+            "ratio": Infinity
+          },
+          "enrichment_gates_pass": false,
+          "descriptive_clustered": false
+        }
+      }
+    },
+    "no_agent_seats": {
+      "n": 26,
+      "powered": true,
+      "axes": {
+        "model": {
+          "axis": "model",
+          "k_strata": 5,
+          "labels": [
+            "claude-haiku-4-5-20251001",
+            "claude-sonnet-4-20250514",
+            "claude-sonnet-4-5-20250929",
+            "gemini-2.5-flash",
+            "provenance_unauthored"
+          ],
+          "table": [
+            [
+              16,
+              12
+            ],
+            [
+              0,
+              7
+            ],
+            [
+              0,
+              64
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              9,
+              0
+            ]
+          ],
+          "p_raw": 9.999000099990002e-05,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "provenance_unauthored",
+            "members": 9,
+            "ratio": Infinity
+          },
+          "enrichment_gates_pass": true,
+          "p_holm": 0.0007999200079992001,
+          "clustered": true
+        },
+        "prompt_commit": {
+          "axis": "prompt_commit",
+          "k_strata": 4,
+          "labels": [
+            "046e0a40c34cddf4fff29b8c15f632dbdef31b7a",
+            "22843cdfd28a814d8f30c35778e75821452545bd",
+            "8080348c4e16a265fafc924dcde83360dfd170fc",
+            "provenance_unauthored"
+          ],
+          "table": [
+            [
+              0,
+              12
+            ],
+            [
+              17,
+              57
+            ],
+            [
+              0,
+              24
+            ],
+            [
+              9,
+              0
+            ]
+          ],
+          "p_raw": 9.999000099990002e-05,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "provenance_unauthored",
+            "members": 9,
+            "ratio": Infinity
+          },
+          "enrichment_gates_pass": true,
+          "p_holm": 0.0007999200079992001,
+          "clustered": true
+        },
+        "topic_family": {
+          "axis": "topic_family",
+          "k_strata": 79,
+          "labels": [
+            "actinide_replenishment_mechanism",
+            "adjunctification_of_university_teaching",
+            "alignment_constraint_narrowing",
+            "animal_status_kernel",
+            "apoe4_mitochondrial_vulnerability",
+            "architectural_pattern_validity",
+            "basic_law_interpretive_authority",
+            "basic_law_interpretive_boundary",
+            "behavioral_adoption_friction",
+            "benchmark_saturation_interpretation",
+            "bitcoin_whitepaper_purpose",
+            "border_control_legitimacy",
+            "capability_endogeneity",
+            "catastrophe_memory_kernel",
+            "dataset_recycling_amplification",
+            "demographic_resource_allocation",
+            "demographic_skill_mismatch",
+            "digital_money_legitimacy",
+            "divine_legitimacy_substrate",
+            "doomsday_clock_metric",
+            "dueling_disappearance_mechanism",
+            "empty_shell_tolerance",
+            "equal_protection_kernel",
+            "fourteenth_amendment_equal_protection",
+            "gendered_outcome_asymmetry",
+            "generality_standard",
+            "geopolitical_settlement_competition",
+            "gita_kurukshetra_discourse",
+            "historical_treaty_substrate",
+            "institutional_barrier_structure",
+            "institutional_trust_erosion",
+            "institutional_verification_collapse",
+            "intervention_target_selection",
+            "jewish_self_determination",
+            "jewish_sovereignty_palestine",
+            "jewish_territorial_claim",
+            "john_1_1_logos",
+            "knowledge_legitimacy_biomedicine",
+            "lausanne_minority_protections",
+            "learning_difficulty_substrate",
+            "llm_synthesis_capacity",
+            "longevity_mismatch",
+            "lycurgan_laws",
+            "maat_order_principle",
+            "marriage_authority",
+            "mitochondrial_demand_signal_deficiency",
+            "model_collapse_feedback",
+            "moral_causation_locus",
+            "nad_precursor_bioavailability",
+            "nicene_creed_authority",
+            "organization_floor",
+            "performance_legitimacy",
+            "polaris_document_status",
+            "press_reformation_causality",
+            "press_reformation_causation",
+            "propagation_speed_asymmetry",
+            "property_sector_overhang",
+            "protein_anabolic_resistance",
+            "radiative_levitation_stratification",
+            "reading_acquisition_legitimacy",
+            "refugee_convention_text",
+            "responsibility_preservation_mechanism",
+            "scale_ceiling",
+            "secession_legitimacy_boundary",
+            "sex_gender_category",
+            "shinbutsu_ontological_commitment",
+            "specification_binding_authority",
+            "speech_protection_kernel",
+            "state_killing_legitimacy",
+            "statutory_debt_ceiling",
+            "synthesis_infrastructure_gap",
+            "third_act_arbitrage",
+            "udhr_article_3",
+            "validation_judgment_separation",
+            "vedic_corpus_social_prescription",
+            "visual_evidentiary_authority",
+            "womens_financial_autonomy",
+            "zero_mathematical_status",
+            "zionist_legitimacy_basis"
+          ],
+          "table": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "p_raw": 0.7472252774722528,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "animal_status_kernel",
+            "members": 1,
+            "ratio": Infinity
+          },
+          "enrichment_gates_pass": false,
+          "descriptive_clustered": false
+        }
+      }
+    },
+    "manufactured_consensus_candidate": {
+      "n": 9,
+      "powered": true,
+      "axes": {
+        "model": {
+          "axis": "model",
+          "k_strata": 5,
+          "labels": [
+            "claude-haiku-4-5-20251001",
+            "claude-sonnet-4-20250514",
+            "claude-sonnet-4-5-20250929",
+            "gemini-2.5-flash",
+            "provenance_unauthored"
+          ],
+          "table": [
+            [
+              2,
+              26
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              5,
+              59
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              0,
+              9
+            ]
+          ],
+          "p_raw": 0.9524047595240476,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "claude-sonnet-4-5-20250929",
+            "members": 5,
+            "ratio": 1.0357815442561205
+          },
+          "enrichment_gates_pass": false,
+          "p_holm": 0.9524047595240476,
+          "clustered": false
+        },
+        "prompt_commit": {
+          "axis": "prompt_commit",
+          "k_strata": 4,
+          "labels": [
+            "046e0a40c34cddf4fff29b8c15f632dbdef31b7a",
+            "22843cdfd28a814d8f30c35778e75821452545bd",
+            "8080348c4e16a265fafc924dcde83360dfd170fc",
+            "provenance_unauthored"
+          ],
+          "table": [
+            [
+              2,
+              10
+            ],
+            [
+              7,
+              67
+            ],
+            [
+              0,
+              24
+            ],
+            [
+              0,
+              9
+            ]
+          ],
+          "p_raw": 0.1815818418158184,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "22843cdfd28a814d8f30c35778e75821452545bd",
+            "members": 7,
+            "ratio": 1.2769485903814262
+          },
+          "enrichment_gates_pass": false,
+          "p_holm": 0.5935406459354065,
+          "clustered": false
+        },
+        "topic_family": {
+          "axis": "topic_family",
+          "k_strata": 79,
+          "labels": [
+            "actinide_replenishment_mechanism",
+            "adjunctification_of_university_teaching",
+            "alignment_constraint_narrowing",
+            "animal_status_kernel",
+            "apoe4_mitochondrial_vulnerability",
+            "architectural_pattern_validity",
+            "basic_law_interpretive_authority",
+            "basic_law_interpretive_boundary",
+            "behavioral_adoption_friction",
+            "benchmark_saturation_interpretation",
+            "bitcoin_whitepaper_purpose",
+            "border_control_legitimacy",
+            "capability_endogeneity",
+            "catastrophe_memory_kernel",
+            "dataset_recycling_amplification",
+            "demographic_resource_allocation",
+            "demographic_skill_mismatch",
+            "digital_money_legitimacy",
+            "divine_legitimacy_substrate",
+            "doomsday_clock_metric",
+            "dueling_disappearance_mechanism",
+            "empty_shell_tolerance",
+            "equal_protection_kernel",
+            "fourteenth_amendment_equal_protection",
+            "gendered_outcome_asymmetry",
+            "generality_standard",
+            "geopolitical_settlement_competition",
+            "gita_kurukshetra_discourse",
+            "historical_treaty_substrate",
+            "institutional_barrier_structure",
+            "institutional_trust_erosion",
+            "institutional_verification_collapse",
+            "intervention_target_selection",
+            "jewish_self_determination",
+            "jewish_sovereignty_palestine",
+            "jewish_territorial_claim",
+            "john_1_1_logos",
+            "knowledge_legitimacy_biomedicine",
+            "lausanne_minority_protections",
+            "learning_difficulty_substrate",
+            "llm_synthesis_capacity",
+            "longevity_mismatch",
+            "lycurgan_laws",
+            "maat_order_principle",
+            "marriage_authority",
+            "mitochondrial_demand_signal_deficiency",
+            "model_collapse_feedback",
+            "moral_causation_locus",
+            "nad_precursor_bioavailability",
+            "nicene_creed_authority",
+            "organization_floor",
+            "performance_legitimacy",
+            "polaris_document_status",
+            "press_reformation_causality",
+            "press_reformation_causation",
+            "propagation_speed_asymmetry",
+            "property_sector_overhang",
+            "protein_anabolic_resistance",
+            "radiative_levitation_stratification",
+            "reading_acquisition_legitimacy",
+            "refugee_convention_text",
+            "responsibility_preservation_mechanism",
+            "scale_ceiling",
+            "secession_legitimacy_boundary",
+            "sex_gender_category",
+            "shinbutsu_ontological_commitment",
+            "specification_binding_authority",
+            "speech_protection_kernel",
+            "state_killing_legitimacy",
+            "statutory_debt_ceiling",
+            "synthesis_infrastructure_gap",
+            "third_act_arbitrage",
+            "udhr_article_3",
+            "validation_judgment_separation",
+            "vedic_corpus_social_prescription",
+            "visual_evidentiary_authority",
+            "womens_financial_autonomy",
+            "zero_mathematical_status",
+            "zionist_legitimacy_basis"
+          ],
+          "table": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "p_raw": 0.43625637436256376,
+          "method": "permutation_chi2_N10000",
+          "most_enriched": {
+            "stratum": "polaris_document_status",
+            "members": 2,
+            "ratio": 6.111111111111111
+          },
+          "enrichment_gates_pass": false,
+          "descriptive_clustered": false
+        }
+      }
+    }
+  },
+  "confounding_multi_commit_families": {
+    "learning_difficulty_substrate": {
+      "8080348c4e16a265fafc924dcde83360dfd170fc": 4,
+      "provenance_unauthored": 1
+    },
+    "actinide_replenishment_mechanism": {
+      "provenance_unauthored": 1,
+      "22843cdfd28a814d8f30c35778e75821452545bd": 3
+    },
+    "polaris_document_status": {
+      "22843cdfd28a814d8f30c35778e75821452545bd": 5,
+      "provenance_unauthored": 1
+    },
+    "digital_money_legitimacy": {
+      "22843cdfd28a814d8f30c35778e75821452545bd": 4,
+      "provenance_unauthored": 1
+    },
+    "moral_causation_locus": {
+      "8080348c4e16a265fafc924dcde83360dfd170fc": 4,
+      "provenance_unauthored": 1
+    },
+    "visual_evidentiary_authority": {
+      "22843cdfd28a814d8f30c35778e75821452545bd": 5,
+      "provenance_unauthored": 1
+    },
+    "generality_standard": {
+      "provenance_unauthored": 1,
+      "8080348c4e16a265fafc924dcde83360dfd170fc": 4
+    },
+    "knowledge_legitimacy_biomedicine": {
+      "22843cdfd28a814d8f30c35778e75821452545bd": 3,
+      "provenance_unauthored": 1
+    },
+    "performance_legitimacy": {
+      "046e0a40c34cddf4fff29b8c15f632dbdef31b7a": 5,
+      "provenance_unauthored": 1
+    }
+  }
+}
