@@ -45,6 +45,45 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-02 — OQ-135 RESOLVED: v8 adopted (seat/gauge/orientation); v8 paper authored; README/CLAUDE.md refreshed; vocabulary migration wave
+**Files:** docs/deferential_realism_paper_v8.md, README.md, CLAUDE.md, AGENTS.md, ISSUES.md, docs/seat-theorem-v1.md, docs/one_seat_audited.md, docs/design/design_discipline.md, docs/metrics_as_routing.md, docs/technical/paper_versioning.md, docs/v8/foundations/README.md, docs/logic.md
+**Tier:** landed
+
+Operator ruled v8 adoption + spec Q4 **wholesale** (plan approval, 2026-07-02). Shipped in
+four phased commits: `4ea2c2d5` the v8 paper (77KB, entry point + canonical vocabulary; §5.4
+bridge table; §5.7 kill-condition; Theorem 2 |real-seat| caveat in-body → OQ-195; §6.4 ε
+declaration discipline handed forward); `16143c15` review-response Appendix (operator ruling
+after multi-model review: adopt only the Perplexity point — a clean current-state statement at
+document end, no terminology-evolution baggage; other suggestions filtered as LLM-bias);
+`7c4cca6f` README rewrite (all quantitative claims re-witnessed on disk same session);
+`64a44514` CLAUDE.md what-this-repo-is + canonical-paper pointer (v8 entry point; v7/v6.13.1
+stay the detailed records — v7 §-references elsewhere in CLAUDE.md remain valid). Phase-4
+commit: OQ-135 close (dead-hash note: `fd1ee561` does not resolve; guard cited by
+artifact/gate/audit), OQ-03 03b unblocked, OQ-195 propagation update, migration notes in the
+five named docs, memory sweep (2 files), foundations README `core_v4.2`→`core_v4.3` link fix
+(3 occurrences). Verification witnessed at each commit (obligations grep-checklist; two-seat
+sweep judged per-hit; fresh-agent self-containedness control 7/7, its confusion list applied).
+
+**Near-fork DECLARED (Pattern 2 flag, not resolved): `docs/v8/foundations/` is source
+material; `docs/` + `config.pl` stay canonical.** Survey (2026-07-02): 8 files are byte-identical
+copies of live docs (incl. `core_v4.3.md`, `debugging_philosophy.md`, `metrics_as_routing.md`;
+`prolog_v6.8.md` = `deferential_realism_paper_v6.8.md` renamed); 4 are STALE pre-April
+snapshots of live docs (`logic.md`, `logic_extensions.md`, `logic_thresholds.md`,
+`omega_variables.md` — cite docs/ for current claims); 11 have no repo counterpart by filename
+(the v4.x domain suite); and `deferential_realism_paper_v6.9.md` there is ~12KB LARGER than
+docs/' copy (carries a related-literature section absent from the live file — which v6.9 is
+"the" v6.9 is unresolved). foundations' seven-category framing (incl. "Naturalized" as a
+category, internally contradicted at core_v4.3.md:46,117) is historical; the live taxonomy is
+six types + naturalized as cascade outcome (v8 §3.3).
+
+**Encoding regression flag (needs ruling, not fixed here):** live `docs/logic.md` carries 132
+mojibake `Ï‡` occurrences today while the foundations snapshot of the same file has 0 —
+CLAUDE.md says logic.md was UTF-8-repaired Feb 2026, so the repair was partial or the file
+re-corrupted since the March snapshot. Edit tool fails on multi-byte mojibake (standing
+warning); repair would be sed/Python. Flagged, not silently rewritten.
+
+---
+
 ## 2026-07-02 — OQ-137 RESOLVED (reading registry + totality suite + pipeline gate + sweep fixes); OQ-136 evidence in (haiku/contradictions authoring artifact vs genuine mcc)
 **Files:** prolog/reading_registry.pl, prolog/tests/test_reading_totality.pl, prolog/commentary_census.pl, prolog/signature_detection.pl, prolog/report_generator.pl, prolog/cs_drift_engine.pl, prolog/cs_axiom_engine.pl, prolog/tests/test_cs_drift_engine.pl, python/run_pipeline.py, python/audits/oq136_bucket_provenance.py, audits/2026-07-02_oq136_census_bucket_provenance/, audits/2026-07-02_oq137_reading_totality/
 **Tier:** landed

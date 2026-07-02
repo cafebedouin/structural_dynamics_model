@@ -111,7 +111,7 @@ structural_dynamics_model/
 │   └── essays/                   # Synthesized essay drafts
 ├── docs/
 │   ├── project_orientation.md    # Canonical operational reference
-│   ├── deferential_realism_paper_v6.13.md  # Canonical framework paper
+│   ├── deferential_realism_paper_v8.md  # Canonical entry-point paper (v7/v6.13.1 = detailed records)
 │   ├── logic.md                  # Formal classification rules (must match config.pl)
 │   ├── ISSUES.md                 # Unresolved engine/schema issues (OQ-01 – OQ-13)
 │   └── [100+ specialized docs]
@@ -888,9 +888,11 @@ These rules are absolute. Violating them silently changes the system's semantics
 - Load individual Prolog modules without going through `[stack]`.
 
 **Canonical papers:**
-- Framework paper: `docs/deferential_realism_paper_v6.13.md`. Files
-  `deferential_realism_paper.md` through `v6.12.md` are superseded. Do not cite
-  them as current.
+- Framework entry point: `docs/deferential_realism_paper_v8.md` (seat/gauge/orientation
+  vocabulary; OQ-135 adoption 2026-07-02). Detailed records: `_v7.md` (committer axis) and
+  `_v6.13.1.md` (observer axis; internally v6.13.2) remain authoritative for proofs and
+  empirical findings. Files `deferential_realism_paper.md` through `v6.13.md` are
+  superseded. Do not cite them as current. NB: v7's "seat" = v8's "gauge" (v8 §5.4).
 - Formal classification rules: `docs/logic.md`. This is the spec; `config.pl`
   must match it.
 

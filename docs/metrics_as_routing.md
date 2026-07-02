@@ -2,6 +2,12 @@
 
 **Foundation document — applies to all metrics across the Deferential Realism framework and its tooling**
 
+*(Cross-reference, post-v8: the framework entry point is now
+`docs/deferential_realism_paper_v8.md`; this document's routing thesis is cited there (§9.1,
+Appendix). In v8 vocabulary a threshold is a declared stand of the framework's **seat**, and
+the specific numbers quoted below are illustrations — `prolog/config.pl` is the live
+calibration.)*
+
 ---
 
 ## The Core Distinction

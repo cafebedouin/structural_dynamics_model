@@ -72,7 +72,7 @@ first solution is always correct.
 
 **Ω-type:** Ω_P (constitutively-open design choice — the engine witnesses, a declared seat settles).
 
-**Status:** partial — constitutive limb (03a) RESOLVED by operator seat-declaration (2026-06-18); empirical limb (03b) OPEN, gated behind v8 (OQ-135), and possibly unnecessary.
+**Status:** partial — constitutive limb (03a) RESOLVED by operator seat-declaration (2026-06-18); empirical limb (03b) OPEN, **unblocked 2026-07-02** (v8 adopted, OQ-135 resolved), and possibly unnecessary.
 **Priority:** 5
 **Deps:** blocked_on OQ-135
 **Origin:** `docs/deferential_realism_paper_v7.md` §6 open questions; reinforced by
@@ -114,10 +114,13 @@ DR-constraint-story under *pre-registered, declared* choices (referent + reading
 runs the pipeline, the type returned is a fact **seated on those authoring choices**
 ("DR-authored-as-X classifies Y, seated on X"), never "DR is Y" — and must be reported with
 its replicate-stability (generation is a draw, not a measurement — see Critical
-Distinctions). Deferred behind v8 adoption (OQ-135). The operator notes it **may not be
-necessary**: 03a already delivers what self-application was meant to reveal (DR's seat is
-declared, its orientation-discipline named), so 03b would add an illustrative seated datum,
-not a resolution.
+Distinctions). Was deferred behind v8 adoption; **unblocked 2026-07-02** (OQ-135 resolved —
+the v8 vocabulary any 03b writeup would be seated in is now canonical). The operator notes it
+**may not be necessary**: 03a already delivers what self-application was meant to reveal
+(DR's seat is declared, its orientation-discipline named), so 03b would add an illustrative
+seated datum, not a resolution. Next forward move if worked: pre-register referent + readings
++ ε, run the pipeline, report type + replicate-stability seated on those choices (v8 §7.2's
+redraw doctrine governs).
 
 ---
 
@@ -8272,19 +8275,15 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Ω-type:** Ω_C (design-boundary / declared-seat — what the engine's ontology *is*; the adoption call and the spec's Q4 vocabulary are the operator's seat, not computed).
 
-**Status:** open — blocked on operator (v8 adoption + spec Q4 vocabulary ruling) and the in-flight review of the design spec. Not workable until unblocked.
+**Status:** resolved — 2026-07-02. v8 adopted (operator plan-approval ruling; spec Q4 = **wholesale**); paper authored; invariant machine-enforced (pre-built); vocabulary migration executed.
 
 **Priority:** 3
 
-**Deps:** blocked_on_human (operator must adopt v8 and rule the spec Q4 vocabulary question), bundled_with OQ-15
+**Deps:** bundled_with OQ-15
 
-**Origin:** 2026-06-16, the seat/orientation invariant audit + R3 presentation-vs-structure probe (`audits/2026-06-16_seat_invariant_vs_prolog/`); design spec drafted rev1–rev3 (`docs/design/v8_seat_gauge_orientation_design_spec.md`).
+**Origin:** 2026-06-16, the seat/orientation invariant audit + R3 presentation-vs-structure probe (`audits/2026-06-16_seat_invariant_vs_prolog/`); design spec rev1–rev3 (`docs/design/v8_seat_gauge_orientation_design_spec.md`).
 
-**The work.** The audit concluded the engine **votes one seat** (R3 probe: `cs_pattern` tracks authored presentation, blind to binding structure; the `cs_verdict` false-X layer audits presentation against the metric reality, one-directionally). The v8 design spec states the resulting ontology (seat / gauge / orientation), draws the seat/face line by **audit direction**, and gives the standing invariant as a **transitive cross-axis taint property** (no committer field reaches observer computation by any path except entailment-typed payload on the single forward `influences` bridge). Spec §8 scopes the implementation; **priority-1 there is the one new artifact**: promote that invariant to a checkable **dataflow taint guard** with two positive controls (payload-injection on `influences`; (B)-seam-promotion off `influences`). The rest is low-stakes vocabulary migration. **NOT an engine rebuild — behavior-preserving** (the seat, gauge, and orientation machinery already exist; only the guard is new). See GAP-12 for the declared absence this closes (the invariant is prose-only today).
-
-**What resolution changes.** The one-seat invariant goes from a v7 *prose* invariant (v7 §4.5; recorded as a decision in `docs/design/two_axis_architecture_v7.md`, OQ-14 resolved) to *machine-enforced*; and the v7→v8 "seat"="gauge" vocabulary becomes canonical (the spec §4 bridge table). Vocabulary migration must reconcile with **OQ-27** (resolved 2026-06-30: H¹ is over the signature-resolved orbit; the general-n |real-seat| caveat propagation to v8 is the open **OQ-195**) and **OQ-28** (seat-theorem-v1 honesty edits not all witnessed). Cross-ref: `audits/2026-06-16_seat_invariant_vs_prolog/REPORT.md`, KNOWN_STATE 2026-06-16 (seat/orientation audit + v8 spec).
-
-**Spec §8 item 1 (the priority-1 artifact) BUILT — invariant is now machine-enforced (2026-06-23, commit `fd1ee561`).** The transitive taint guard landed via OQ-15's Phase 1 (`prolog/check_axis_boundary.pl` + `python/check_axis_boundary.py`, gate-wired; two required positive controls fire). **This closes GAP-12** (the invariant was prose-only) and confirms the spec's "exactly one forward bridge" *empirically in place* (the reachability census found only the sanctioned `influences` bridge + the bucket-3 `cs_kernel_id` exclusion as observer-verdict reads). **Still blocked_on_human:** the v8 *adoption* call and the §8 item-4 / Q4 *vocabulary* migration remain the operator's seat — the guard is architecture-neutral and does NOT itself adopt v8 over v7 (that is OQ-15 Phase 2). See `audits/2026-06-23_oq15_crossaxis_witnesses/`.
+**Resolution (2026-07-02; KNOWN_STATE 2026-07-02).** (1) **Paper:** `docs/deferential_realism_paper_v8.md` authored (commits `4ea2c2d5` + `16143c15` review-response Appendix) carrying every spec obligation: §5.4 bridge table verbatim, §5.7 kill-condition, §6.4 ε declaration discipline handed forward, Theorem 2 |real-seat| caveat in-body (→ OQ-195), two-seat retirement in prose. Verification witnessed at commit: obligations grep-checklist, docs-wide two-seat sweep (8 hits, all allowed senses), number-regime sweep, fresh-agent self-containedness control 7/7. (2) **Guard** (spec §8 item 1) was pre-built via OQ-15 Phase 1: `prolog/check_axis_boundary.pl` + `python/check_axis_boundary.py`, gate-wired (`scripts/gate.sh`), both positive controls fire; closed GAP-12; evidence `audits/2026-06-23_oq15_crossaxis_witnesses/`. **Dead-hash note:** the guard-landing commit recorded here and in GAP-12 as `fd1ee561` no longer resolves in repository history (likely rebase/squash casualty; the only main commit touching the guard file is `f6921ac1`) — cite the guard by artifact + gate wiring + audit dir, never that hash. (3) **Migration wave:** README rewrite (`7c4cca6f`), CLAUDE.md orientation + canonical-paper pointer (`64a44514`), cross-ref/vocabulary notes in `seat-theorem-v1.md`, `one_seat_audited.md`, `design_discipline.md`, `metrics_as_routing.md`, `paper_versioning.md` (v8 row), AGENTS.md pointers, memory sweep (2 files), foundations README link fix. **Residual risk (named, accepted):** the guard is *static* reachability over loaded clause bodies (descends into meta-call constructs); goals **constructed at runtime** (`=..`/`call` chains built from data) are invisible to it — same class as OQ-137's opt-in-registry residual; mint separately if the operator wants it closed. Unblocked: OQ-03 empirical limb (03b).
 
 ---
 
@@ -10277,6 +10276,8 @@ twin: **GAP-22** (`docs/design/design_gaps.md`).
 **Evidence so far (pinned to manifest `2026-06-30T00:08:22Z`, n=116):** band-by-real-seat census — n=4: {0:21,3:26,4:3,5:35,6:1}; n=3: {0:5,2:4}; n=2: {0:3}; n≤1: null. No corpus counterexample (no n=3 at band 1, no n=2 outside {0,1}). The four `h1_band=2` constraints are all **three-real-seat** (`border_control_legitimacy__freedom_of_movement_primary`, `equal_protection_kernel__colorblind_reading`, `secession_legitimacy_boundary__constitutional_impossibility_reading`, `shinbutsu_ontological_commitment__incoherence_reading`; contextuality_fraction 0.667 = 2/C(3,2)) — NOT counterexamples to the n=4 forbidden-{1,2}. This 4-name census rots if the corpus regenerates: re-pin by manifest before reuse.
 
 **What resolution changes:** A general-n partition proof closes the induction and lets the |real seats|=4 caveat be propagated cleanly to v7/v8 and the `grothendieck_cohomology.pl:158` range comment (currently flagged stale, referencing this OQ). Until then, the n=4 spectrum is the only one stated in the published theorem; the small-n rows live in the v6.13.1 OQ-27 amendment as proven-by-enumeration but not theorem-promoted.
+
+**Propagation update (2026-07-02, OQ-135 close):** v8 (`docs/deferential_realism_paper_v8.md` §3.4) now carries the |real-seat| caveat and the per-count spectrum table **in the theorem body**, citing this OQ for the general-n induction — the v8 half of the propagation target is done. Remaining: the general-n proof itself, v7 (still cites the gap uncaveated), and the `grothendieck_cohomology.pl:158` range comment.
 
 ---
 

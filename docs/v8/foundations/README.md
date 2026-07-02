@@ -4,7 +4,7 @@
 
 ## Start Here
 
-**[core_v4.2.md](core_v4.2.md)** (~5,000 words) - Current compressed introduction to the framework
+**[core_v4.3.md](core_v4.3.md)** (~5,000 words) - Current compressed introduction to the framework
 - Seven constraint categories (Mountain, Rope, Tangled Rope, Snare, Scaffold, Piton, Naturalized)
 - Four indexical parameters (WHO, WHEN, WHERE, HOW_MUCH)
 - Power-scaling mechanism
@@ -419,7 +419,7 @@ Predecessor framework for identifying reasoning error types:
 ## How to Engage
 
 ### If the framework makes sense:
-1. Start with [`core_v4.2.md`](core_v4.2.md) for compression
+1. Start with [`core_v4.3.md`](core_v4.3.md) for compression
 2. Read [`epistemology.md`](epistemology.md) for depth
 3. Apply [`../application/applied_guide.md`](../application/applied_guide.md) to your domain
 4. Check [`../validation/validation_report.md`](../validation/validation_report.md) for empirical grounding
@@ -479,7 +479,7 @@ See [`../validation/validation_report.md`](../validation/validation_report.md) f
 ## Installation
 
 ### For Reading/Study
-No installation required. Start with [`core_v4.2.md`](core_v4.2.md).
+No installation required. Start with [`core_v4.3.md`](core_v4.3.md).
 
 ### For Running the Validation Suite
 ```bash

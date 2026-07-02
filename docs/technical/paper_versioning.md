@@ -9,7 +9,8 @@ Generated 2026-05-28. Documents a mistake made in-session so future models don't
 There are multiple versions of `deferential_realism_paper_v*.md` in `docs/`. In one
 session, the model (Haiku 4.5) identified v6.13.1 as canonical based on file size:
 v6.13.1 was 1043 lines, v7 was 173 lines, so v7 was dismissed as a draft. This was
-wrong. v7 is the canonical framework paper.
+wrong. (v7 was the canonical framework paper at the time; since 2026-07-02 the canonical
+entry point is v8 — see Current State below.)
 
 **Do not infer canonical status from file size.**
 
@@ -35,8 +36,9 @@ regardless of length.
 
 2. **If CLAUDE.md is stale, use the highest version number.** The versioning scheme is
    monotone: higher number = later = canonical. The sequence is:
-   `v6.md → v6.2 → ... → v6.13 → v6.13.1 → v7.md`. v7 supersedes all of them for
-   the full framework.
+   `v6.md → v6.2 → ... → v6.13 → v6.13.1 → v7.md → v8.md`. v8 is the entry point and
+   canonical vocabulary; v7 and v6.13.1 remain the authoritative detailed records for the
+   committer and observer axes respectively (v8 §1 states the division explicitly).
 
 3. **Watch for parallel amendment files.** `v6.13.1` exists alongside `v7` — it is
    *not* a newer version of v7. It is an amendment to the v6.x observer-only line
@@ -51,12 +53,13 @@ regardless of length.
 
 ---
 
-## Current State (as of 2026-05-28)
+## Current State (as of 2026-07-02)
 
 | File | Role |
 |------|------|
-| `docs/deferential_realism_paper_v7.md` | **Canonical framework paper** — full two-axis DR (Axioms 1–7, Theorems 1–8) |
-| `docs/deferential_realism_paper_v6.13.1.md` | Observer-only Axiom 2 amendment (OQ-26: ε is reading-relative across generation runs). Header now **v6.13.2** (FNL signature-behavior errata, OQ-49); filename retains `_v6.13.1` for reference stability |
+| `docs/deferential_realism_paper_v8.md` | **Canonical entry point + canonical vocabulary** (seat/gauge/orientation; OQ-135 adoption 2026-07-02). Synthesis at altitude; cites the records below for proofs and empirical detail. Closing Appendix = current state, stated plainly |
+| `docs/deferential_realism_paper_v7.md` | Authoritative **committer-axis record** — Axiom 7, Theorems 7–8, §4.5 two-axis engine, §5.11 trifurcation. NB: v7's "seat" = v8's "gauge" (bridge table v8 §5.4) |
+| `docs/deferential_realism_paper_v6.13.1.md` | Authoritative **observer-axis record** — Axioms 1–6, Theorems 1–4, the OQ-26 ε amendment and OQ-27/OQ-51 H¹ amendments. Header **v6.13.2** (FNL errata, OQ-49); filename retains `_v6.13.1` for reference stability |
 | `docs/deferential_realism_paper_v6.13.md` | Superseded by v6.13.1 and v7 |
 | Earlier versions | Superseded |
 

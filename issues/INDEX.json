@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "526e33fccfc13ffe9427039f9e152b673415c98f",
+    "store_version": "64a445140b1ccbac447508efbbb5d4f3b6ac6f6a",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-02T10:08:02"
+    "generated_at": "2026-07-02T14:46:03"
   },
-  "issues_sha": "8e476b8bb4a585ddc570d916e8f42f5dbb2f748c35183b6527bfb1714967e02e",
+  "issues_sha": "333197b6e68800b308708ca7d656fbb350b25e0cb7876c6ab3e70fc8baa49fa9",
   "n_entries": 204,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 110,
+    "resolved": 111,
     "mitigated": 13,
     "partial": 6,
     "disposed": 4,
-    "open": 67,
+    "open": 66,
     "future": 4
   },
   "active": [
@@ -317,24 +317,6 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
-    },
-    {
-      "id": "OQ-135",
-      "status": "open",
-      "priority": 3,
-      "summary": "Adopt v8 (seat/gauge/orientation) + machine-enforce the one-seat invariant",
-      "deps": [
-        "blocked_on_human (operator must adopt v8 and rule the spec Q4 vocabulary question)",
-        "bundled_with OQ-15"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-14",
-        "OQ-15",
-        "OQ-27",
-        "OQ-28",
-        "OQ-195"
-      ]
     },
     {
       "id": "OQ-138",
@@ -2493,6 +2475,22 @@
         "OQ-83",
         "OQ-86",
         "OQ-121"
+      ]
+    },
+    {
+      "id": "OQ-135",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "Adopt v8 (seat/gauge/orientation) + machine-enforce the one-seat invariant",
+      "deps": [
+        "bundled_with OQ-15"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-03",
+        "OQ-15",
+        "OQ-137",
+        "OQ-195"
       ]
     },
     {

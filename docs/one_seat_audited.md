@@ -24,7 +24,7 @@ Seat and face are **not** told apart by "does varying it change a verdict" — t
 
 A signature (provenance) is audited against correspondence: a signed thing can still be false about the world. Correspondence is never legitimately audited against the signature — to rule a thing true *because* it is signed is not a reverse audit, it is the fraud (below). So in a correspondence question, correspondence is the seat and provenance is a face.
 
-This discriminator is **not verification-specific** — it is the general seat/face test, confirmed across substrates (the CS engine audits grounding against the metric reality, one-directional; v7's committer axis reads the observer axis and feeds nothing back). Its cross-substrate statement is deferred to v8; here it is stated generally and worked in the verification domain.
+This discriminator is **not verification-specific** — it is the general seat/face test, confirmed across substrates (the CS engine audits grounding against the metric reality, one-directional; v7's committer axis reads the observer axis and feeds nothing back). Its cross-substrate statement is now made in v8 (`docs/deferential_realism_paper_v8.md` §5.2, adopted 2026-07-02); here it is stated generally and worked in the verification domain.
 
 ## The two faces — already 2a and 3, not new
 
@@ -45,7 +45,7 @@ The one genuinely domain-local quantity: **the cost of making the showing-face d
 
 ## The cap — standing open work, deferred
 
-The seat may itself be **authored** rather than world-anchored: correspondence is often adjudicated against a reference that is someone's selection (a chain of custody, an institution's attestation, the engine's ε). The audit then runs face-against-authored-reality, not face-against-world. The architecture — one seat, one-directional audit — is sound regardless; the seat's **substrate-independence** is the open problem, handed to v8, not closed here.
+The seat may itself be **authored** rather than world-anchored: correspondence is often adjudicated against a reference that is someone's selection (a chain of custody, an institution's attestation, the engine's ε). The audit then runs face-against-authored-reality, not face-against-world. The architecture — one seat, one-directional audit — is sound regardless; the seat's **substrate-independence** was handed to v8, which settles the in-principle half (a world-anchored ε would be a seat-free seat, forbidden by the Coupling Theorem) and converts the residue into the ε declaration discipline — v8 §6.4, still open work there.
 
 ## Falsifier
 

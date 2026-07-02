@@ -4,6 +4,13 @@
 
 **Version: v2.4**
 
+> **Cross-reference (v8 adoption, 2026-07-02).** This document is the *law*;
+> `docs/deferential_realism_paper_v8.md` operationalizes it for the DR engine (§5–§6 there:
+> seat / gauge / orientation, the audit-direction discriminator, the machine-enforced one-seat
+> invariant). Vocabulary note: this document's "seat" IS v8's "seat" (the audited-against
+> content-position). The v7 paper used "seat" for an observer position — v8's **gauge**; the
+> translation table is v8 §5.4. Nothing in this document is changed by v8.
+
 ---
 
 ## Abstract

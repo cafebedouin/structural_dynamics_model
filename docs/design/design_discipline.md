@@ -23,6 +23,10 @@ this governs *what the engine is for, what follows from that, and what it must n
 
 ## 0. The declared seat
 
+*(Vocabulary, post-v8: "seat" throughout this document is v8's seat — the declared
+content-position — never v7's observer-position, which v8 renames **gauge**. Bridge table:
+`docs/deferential_realism_paper_v8.md` §5.4.)*
+
 This document does not issue from nowhere, and by its own central commitment (§2) it cannot. So
 the seat is declared first, before anything is argued from it.
 
