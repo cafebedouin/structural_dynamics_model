@@ -31,27 +31,27 @@ This question assumes truth is universal and context-free. But consider a carbon
 **The Corporation** views it from index (institutional, generational, arbitrage, global):
 - They possess rule-making power and can trade credits across borders
 - From their position, the system is a **coordination mechanism** that efficiently allocates emissions reduction
-- It costs them less than they extract from the market (Ï‡ = -0.132, negative value indicates net benefit)
-- Classification: **Rope** (âŠž)
-- **Note:** Negative Ï‡ values indicate the constraint extracts from others while providing advantage to this index
+- It costs them less than they extract from the market (χ = -0.132, negative value indicates net benefit)
+- Classification: **Rope** (⊞)
+- **Note:** Negative χ values indicate the constraint extracts from others while providing advantage to this index
 
 **The Small Business** views it from index (moderate, biographical, constrained, national):
 - They have moderate agency but face real compliance costs
 - The system both helps (provides framework) and hurts (imposes costs)
 - They can't avoid it but it's manageable
-- Classification: **Tangled Rope** (âŠžâŠ )
+- Classification: **Tangled Rope** (⊞⊠)
 
 **The Consumer** views it from index (powerless, biographical, trapped, local):
 - They have no control over the system or its implementation
 - Prices simply rise; they cannot opt out or influence the mechanism
 - They pay but receive no direct benefit
-- Classification: **Snare** (âŠ )
+- Classification: **Snare** (⊠)
 
 **The Climate Activist** views it from index (analytical, civilizational, analytical, global):
 - They can analyze the system from outside its immediate constraints
 - They see the mechanism delays real climate action while creating profit opportunities
 - The extraction exceeds the coordination value at civilization scale
-- Classification: **Tangled Rope** trending toward **Snare** (âŠžâŠ  â†’ âŠ )
+- Classification: **Tangled Rope** trending toward **Snare** (⊞⊠ → ⊠)
 
 Which classification is correct?
 
@@ -71,7 +71,7 @@ This is **Indexed Constraint Logic**: a formal system where truth is position-re
 
 Formally:
 ```
-âˆ€Iâ‚, Iâ‚‚: (Type(C, Iâ‚) â‰  Type(C, Iâ‚‚)) âˆ§ (True(Type(C, Iâ‚)) âˆ§ True(Type(C, Iâ‚‚)))
+∀I₁, I₂: (Type(C, I₁) ≠ Type(C, I₂)) ∧ (True(Type(C, I₁)) ∧ True(Type(C, I₂)))
 ```
 
 Multiple valid answers exist because different positions expose different structural properties of the same constraint.
@@ -82,11 +82,11 @@ Multiple valid answers exist because different positions expose different struct
 - One touches the ear: "It's a fan"
 - One steps back with a flashlight: "It's an elephant"
 
-In traditional epistemology, three people are wrong. In indexed constraint logic, all four are reporting true structural features from their positions. The person with the flashlight has more information (analytical index), but they're not contradicting the othersâ€”they're synthesizing.
+In traditional epistemology, three people are wrong. In indexed constraint logic, all four are reporting true structural features from their positions. The person with the flashlight has more information (analytical index), but they're not contradicting the others—they're synthesizing.
 
 **The critical difference:** We're not asking "What does this person believe?" We're asking "What structural properties are accessible from this position?"
 
-Position determines **epistemic access**, not belief. The consumer doesn't merely believe they're trappedâ€”they are trapped (no exit options, no power to modify the system). The corporation doesn't merely believe they benefitâ€”they genuinely extract value (negative Ï‡, net beneficiary position).
+Position determines **epistemic access**, not belief. The consumer doesn't merely believe they're trapped—they are trapped (no exit options, no power to modify the system). The corporation doesn't merely believe they benefit—they genuinely extract value (negative χ, net beneficiary position).
 
 ### 3. The Core Innovation
 
@@ -107,7 +107,7 @@ The goal: **Formal system for reasoning about what binds us, from where we stand
 ### 4. Why "Constraint" Not "Proposition"
 
 Constraints are structural features of reality that restrict agency. They have:
-- **Extractiveness** (Îµ): How much they take from participants
+- **Extractiveness** (ε): How much they take from participants
 - **Suppression** (Supp): Enforcement energy required
 - **Coordination function**: Whether they provide genuine value
 - **Asymmetry**: Whether costs/benefits distribute unevenly
@@ -120,41 +120,41 @@ Constraints are **structural**, not propositional. The logic must reflect that.
 
 The index structure I = (P, T, E, S) captures the **minimal sufficient** dimensions for constraint classification:
 
-**Power (P):** Determines your capacity to modify or exit the constraint. A law binds differently if you can lobby to change it (powerful) versus if you're subject to it with no recourse (powerless). Power position directly affects effective extractiveness via Ï€(P).
+**Power (P):** Determines your capacity to modify or exit the constraint. A law binds differently if you can lobby to change it (powerful) versus if you're subject to it with no recourse (powerless). Power position directly affects effective extractiveness via π(P).
 
 **Time Horizon (T):** Determines what counts as "changeable." A constitution is a Mountain on biographical timescale but potentially a Rope on civilizational timescale. Without temporal indexing, immutability becomes absolute rather than relative to your planning horizon.
 
 **Exit Options (E):** Determines whether you're genuinely trapped or can route around. Same employment contract: Snare if you're trapped in a company town with no alternatives, Tangled Rope if you have negotiating power from multiple offers. Exit options break the false binary of "free choice" vs "no choice."
 
-**Scope Awareness (S):** Determines verification difficulty and thus hidden extraction. A scam operates differently at local scale (easily verified) versus global scale (Dunbar number prevents verification). Scope scaling via Ïƒ(S) captures how constraints change with participant count.
+**Scope Awareness (S):** Determines verification difficulty and thus hidden extraction. A scam operates differently at local scale (easily verified) versus global scale (Dunbar number prevents verification). Scope scaling via σ(S) captures how constraints change with participant count.
 
-These four dimensions are **not arbitrary**â€”they're the structural features that empirically determine constraint type. Adding more dimensions (wealth, education, network position) would provide finer resolution but the current four capture 90%+ of classification variance in the 691-constraint corpus.
+These four dimensions are **not arbitrary**—they're the structural features that empirically determine constraint type. Adding more dimensions (wealth, education, network position) would provide finer resolution but the current four capture 90%+ of classification variance in the 691-constraint corpus.
 
 ### 5. The Seven Types: Terrain Metaphor
 
 Constraint-space is terrain you navigate with finite energy. From your position, constraints appear as:
 
-**Mountains (â– )**: Unchangeable terrain, route around
+**Mountains (■)**: Unchangeable terrain, route around
 - Examples: Thermodynamics, logical necessity, death
 - Action: Accept
 
-**Ropes (âŠž)**: Coordination tools, maintain
+**Ropes (⊞)**: Coordination tools, maintain
 - Examples: Language, UTF-8, traffic signals
 - Action: Maintain
 
-**Snares (âŠ )**: Traps, cut or exit
+**Snares (⊠)**: Traps, cut or exit
 - Examples: Debt spirals, predatory contracts
 - Action: Cut/Exit
 
-**Tangled Ropes (âŠžâŠ )**: Coordination with extraction, surgical reform
+**Tangled Ropes (⊞⊠)**: Coordination with extraction, surgical reform
 - Examples: Employment, carbon credits, social media
 - Action: Reform (preserve coordination, excise extraction)
 
-**Scaffolds (âŠ¡)**: Temporary supports, sunset when done
+**Scaffolds (⊡)**: Temporary supports, sunset when done
 - Examples: Training wheels, emergency powers
 - Action: Monitor sunset
 
-**Pitons (âŠŸ)**: Failed anchors, bypass
+**Pitons (⊟)**: Failed anchors, bypass
 - Examples: QWERTY keyboards, legacy systems
 - Action: Bypass
 
@@ -168,44 +168,44 @@ Same constraint can be different types from different indices. Carbon credits: R
 
 This document establishes:
 
-**Â§I (This Section):** Why indexed logic is necessary
+**§I (This Section):** Why indexed logic is necessary
 
-**Â§II Basic Syntax:**
+**§II Basic Syntax:**
 - Index structure (Power, Time, Exit, Scope)
 - Seven constraint operators with formal definitions
-- Power-scaling function Ï€(P)
-- Scope modifier Ïƒ(S)
+- Power-scaling function π(P)
+- Scope modifier σ(S)
 - Structural signature predicates
 
-**Â§III Temporal Logic:**
-- Temporal operators (â–¡, â—Š, â—‹, U, S)
+**§III Temporal Logic:**
+- Temporal operators (□, ◊, ○, U, S)
 - Lifecycle states and transitions
 - Eleven drift types (degradation patterns)
 
-**Â§IV Inference Rules:**
+**§IV Inference Rules:**
 - Priority ordering: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Naturalized
 - Classification algorithm
-- Two-regime architecture (metrics â†’ signature override)
+- Two-regime architecture (metrics → signature override)
 
-**Â§V Error Taxonomy:**
+**§V Error Taxonomy:**
 - Six misclassification types
 - Consequences and detection
 
-**Â§VI Decision Logic:**
+**§VI Decision Logic:**
 - Action routing from classification
 - Energy accounting
-- Purity-qualified extensions (â†’ logic_extensions.md)
+- Purity-qualified extensions (→ logic_extensions.md)
 
-**Â§VII Containment Logic:**
+**§VII Containment Logic:**
 - Irreducible structural paradoxes
 - When resolution impossible, containment required
 
-**Â§VIII Self-Application:**
+**§VIII Self-Application:**
 - Framework as Scaffold (designed for dissolution)
 - Canonical examples (carbon credits, Article 112, UTF-8)
 - Known limitations
 
-**Â§IX Conclusion:**
+**§IX Conclusion:**
 - What this logic achieves
 - Integration with Stages 7-9
 
@@ -217,29 +217,29 @@ This document establishes:
 
 **Incomplete, not comprehensive:** The seven types cover most constraint-space but not all of it. Edge cases exist. Unknown classification is valid output.
 
-**Provisional, not eternal:** Thresholds are empirically calibrated but subject to revision. The framework itself is a Scaffoldâ€”built-in expiration, designed to be replaced when better systems emerge.
+**Provisional, not eternal:** Thresholds are empirically calibrated but subject to revision. The framework itself is a Scaffold—built-in expiration, designed to be replaced when better systems emerge.
 
 **Complementary, not competitive:** Works alongside democratic theory, economics, psychology, sociology. We're adding formal machinery for constraint classification, not replacing existing frameworks.
 
-**Empirically grounded:** 691-constraint corpus, 35+ domains, electoral systems analysis, power modifier calibration from observed extraction patterns. Not armchair philosophyâ€”tested against real constraints.
+**Empirically grounded:** 691-constraint corpus, 35+ domains, electoral systems analysis, power modifier calibration from observed extraction patterns. Not armchair philosophy—tested against real constraints.
 
-**Implementation-first:** This is a formal specification document with canonical Prolog implementation. Thresholds are in config.pl, not this document (see logic_thresholds.md for values). Changes flow spec â†’ registry â†’ implementation, never backward.
+**Implementation-first:** This is a formal specification document with canonical Prolog implementation. Thresholds are in config.pl, not this document (see logic_thresholds.md for values). Changes flow spec → registry → implementation, never backward.
 
 ### 8. What This Enables
 
 **Precision with perspectivalism:** Same constraint, multiple types, all objectively true from their indices.
 
-**Modality with power-scaling:** Ï‡ = Îµ Ã— Ï€(P) Ã— Ïƒ(S) grounds classification in empirical measurement while preserving indexical relativity.
+**Modality with power-scaling:** χ = ε × π(P) × σ(S) grounds classification in empirical measurement while preserving indexical relativity.
 
 **Error-awareness with intentionality:** Built-in error taxonomy distinguishes confusion from deception, system bugs from fraud.
 
 **Action-routing with index-sensitivity:** From classification flows action recommendation, but indexed to your actual structural position, not abstracted universal agent.
 
-**Self-awareness with limitation acknowledgment:** Framework admits its own limits, tracks known issues (logic_thresholds.md Â§Known Issues), designed for falsification.
+**Self-awareness with limitation acknowledgment:** Framework admits its own limits, tracks known issues (logic_thresholds.md §Known Issues), designed for falsification.
 
-**Architectural coherence:** Spec â†’ thresholds â†’ implementation discipline. Single canonical predicate (classify_from_metrics/6). Two-regime system (metrics-first, signature-override). Shadow mode for extensions.
+**Architectural coherence:** Spec → thresholds → implementation discipline. Single canonical predicate (classify_from_metrics/6). Two-regime system (metrics-first, signature-override). Shadow mode for extensions.
 
-**Structural integrity measurement:** Stages 7-9 add Boltzmann compliance (natural law test), purity scoring (coordination health), network dynamics (contamination propagation). From static classification â†’ dynamic structural physics.
+**Structural integrity measurement:** Stages 7-9 add Boltzmann compliance (natural law test), purity scoring (coordination health), network dynamics (contamination propagation). From static classification → dynamic structural physics.
 
 ### 9. Reading This Document
 
@@ -248,7 +248,7 @@ This document establishes:
 2. **Formal definition** (mathematical/logical specification)
 3. **Implementation** (Prolog predicate reference)
 
-**Structural gates:** At key definitions (Mountain, Rope, Snare), **mathematical tests prevent constraints from masquerading as natural laws or pure coordination**. These gates use Boltzmann compliance (Stage 7) to detect physics-washing and coordination-washing. See callout boxes in Â§II.B and details in logic_extensions.md.
+**Structural gates:** At key definitions (Mountain, Rope, Snare), **mathematical tests prevent constraints from masquerading as natural laws or pure coordination**. These gates use Boltzmann compliance (Stage 7) to detect physics-washing and coordination-washing. See callout boxes in §II.B and details in logic_extensions.md.
 
 **Canonical thresholds:** All parameter values reference logic_thresholds.md. No hardcoded numbers in this document.
 
@@ -290,10 +290,10 @@ An **index** specifies the structural position from which a constraint is experi
 I ::= (P, T, E, S)
 
 where:
-  P âˆˆ {powerless, moderate, powerful, organized, institutional, analytical}
-  T âˆˆ {immediate, biographical, generational, historical, civilizational}
-  E âˆˆ {trapped, constrained, mobile, arbitrage, analytical}
-  S âˆˆ {local, regional, national, continental, global, universal}
+  P ∈ {powerless, moderate, powerful, organized, institutional, analytical}
+  T ∈ {immediate, biographical, generational, historical, civilizational}
+  E ∈ {trapped, constrained, mobile, arbitrage, analytical}
+  S ∈ {local, regional, national, continental, global, universal}
 ```
 
 Each dimension captures a distinct structural feature:
@@ -304,39 +304,39 @@ Each dimension captures a distinct structural feature:
 
 Your capacity to influence, exit, or modify the constraint.
 
-**powerless** â€” No control over entry, exit, or enforcement
+**powerless** — No control over entry, exit, or enforcement
 - Example: Minimum wage worker facing non-compete clause
 - Cannot negotiate, cannot exit without losing livelihood
-- Bears full extraction (Ï€ = 1.5, amplification)
+- Bears full extraction (π = 1.5, amplification)
 
-**moderate** â€” Average agency, some choices available
+**moderate** — Average agency, some choices available
 - Example: Mid-level employee with transferable skills
 - Can negotiate within limits, can exit at moderate cost
-- Baseline extraction (Ï€ = 1.0)
+- Baseline extraction (π = 1.0)
 
-**powerful** â€” Can deflect costs, influence rule-making
+**powerful** — Can deflect costs, influence rule-making
 - Example: Executive with board seat
 - Shapes policy, exits without penalty, arbitrage opportunities
-- Reduced extraction (Ï€ = 0.6)
+- Reduced extraction (π = 0.6)
 
-**organized** â€” Collective action, shared burden
+**organized** — Collective action, shared burden
 - Example: Union members with collective bargaining
 - Coordinated resistance distributes costs
-- Shared burden (Ï€ = 0.4)
+- Shared burden (π = 0.4)
 
-**institutional** â€” Rule-making position, net beneficiary
+**institutional** — Rule-making position, net beneficiary
 - Example: Legislature member, regulatory capture beneficiary
 - Creates rules that extract from others
-- Net extraction FROM system (Ï€ = -0.2, negative = benefits exceed costs)
+- Net extraction FROM system (π = -0.2, negative = benefits exceed costs)
 
-**analytical** â€” Analytical distance, sees through normalization
+**analytical** — Analytical distance, sees through normalization
 - Example: Academic researcher, systems analyst
 - Not subject to everyday pressures that normalize extraction
-- Detects extraction moderate agents normalize (Ï€ = 1.15, degeneracy-breaking)
+- Detects extraction moderate agents normalize (π = 1.15, degeneracy-breaking)
 
-**Key insight on Ï€(analytical) = 1.15:**
+**Key insight on π(analytical) = 1.15:**
 
-This value was calibrated to break moderate-analytical degeneracy. At Ï€ = 1.0, analytical and moderate perspectives produced identical Ï‡ values, making them indistinguishable. At Ï€ = 1.15, **93 constraints in the corpus** show the critical pattern: "only analyst catches snare." These are constraints where moderate agents have normalized the extraction (Ï‡ = 0.55, Tangled Rope) but analytical perspective detects it as extractive (Ï‡ = 0.63, near Snare threshold).
+This value was calibrated to break moderate-analytical degeneracy. At π = 1.0, analytical and moderate perspectives produced identical χ values, making them indistinguishable. At π = 1.15, **93 constraints in the corpus** show the critical pattern: "only analyst catches snare." These are constraints where moderate agents have normalized the extraction (χ = 0.55, Tangled Rope) but analytical perspective detects it as extractive (χ = 0.63, near Snare threshold).
 
 The analytical modifier is not about "smarter people see more." It's about **freedom from normalization pressure**. The analyst isn't subject to the daily constraints that make moderate agents rationalize extraction as coordination.
 
@@ -346,27 +346,27 @@ The analytical modifier is not about "smarter people see more." It's about **fre
 
 The temporal scale over which you can plan and act.
 
-**immediate** â€” Days to weeks
+**immediate** — Days to weeks
 - Example: Gig worker living paycheck to paycheck
 - Only immediate survival matters
 - Long-term constraints appear as Mountains (no time to change them)
 
-**biographical** â€” Lifetime scale (decades)
+**biographical** — Lifetime scale (decades)
 - Example: Professional planning career trajectory
 - Retirement, children's education, legacy
 - Some constraints changeable within lifetime
 
-**generational** â€” Children's and grandchildren's lifetimes
+**generational** — Children's and grandchildren's lifetimes
 - Example: Parent concerned with climate, institutions
 - Sees constraints as potentially changeable across generations
 - More constraints become Ropes (modifiable with sustained effort)
 
-**historical** â€” Centuries
+**historical** — Centuries
 - Example: Historian studying institutional evolution
 - Sees constitutions, empires rise and fall
 - Most constraints appear changeable
 
-**civilizational** â€” Millennia
+**civilizational** — Millennia
 - Example: Anthropologist, philosopher of deep time
 - Even "human nature" becomes contingent
 - Only fundamental physics remains Mountain
@@ -379,7 +379,7 @@ The temporal scale over which you can plan and act.
 
 Your practical ability to route around or escape the constraint.
 
-**trapped** â€” Physically or economically cannot leave
+**trapped** — Physically or economically cannot leave
 - Example: Prisoner, indentured worker, resident of company town
 - No alternatives, no negotiating power
 - Full constraint force
@@ -406,22 +406,22 @@ Your practical ability to route around or escape the constraint.
 
 **Implementation:** `effective_immutability/3` in `constraint_indexing.pl:172-205`; wrapper `effective_immutability_for_context/2` at line 207.
 
-**constrained** â€” Can exit but at high cost
+**constrained** — Can exit but at high cost
 - Example: Professional with golden handcuffs, homeowner in declining market
 - Exit possible but destroys accumulated capital
 - Partial constraint force
 
-**mobile** â€” Multiple alternatives available
+**mobile** — Multiple alternatives available
 - Example: In-demand specialist, remote worker
 - Can switch without major penalty
 - Reduced constraint force
 
-**arbitrage** â€” Can play alternatives against each other
+**arbitrage** — Can play alternatives against each other
 - Example: Recruited executive with competing offers
 - Uses alternatives as leverage
 - Minimal constraint force, possibly net benefit
 
-**analytical** â€” Can analyze from outside the constraint
+**analytical** — Can analyze from outside the constraint
 - Example: Researcher studying the system without being subject to it
 - Epistemic but not practical exit
 - Sees extraction others normalize
@@ -434,41 +434,41 @@ Your practical ability to route around or escape the constraint.
 
 The scale at which you experience or can verify the constraint.
 
-**local** â€” Neighborhood, town, face-to-face community
+**local** — Neighborhood, town, face-to-face community
 - Example: Small town resident
 - Direct verification possible (know the players, see the effects)
-- Extraction dampened by transparency (Ïƒ = 0.8)
+- Extraction dampened by transparency (σ = 0.8)
 
-**regional** â€” State, province, known cultural region
+**regional** — State, province, known cultural region
 - Example: State-level political engagement
 - Verification harder but still feasible
-- Slight amplification (Ïƒ = 0.9)
+- Slight amplification (σ = 0.9)
 
-**national** â€” Country-wide
+**national** — Country-wide
 - Example: National citizen with media access
 - Verification requires institutional mediators
-- Baseline (Ïƒ = 1.0)
+- Baseline (σ = 1.0)
 
-**continental** â€” Multi-country region
+**continental** — Multi-country region
 - Example: EU policy observer
 - Verification difficult, multiple languages/systems
-- Amplification (Ïƒ = 1.1)
+- Amplification (σ = 1.1)
 
-**global** â€” Planetary scale
+**global** — Planetary scale
 - Example: Multinational corporation, global activist
 - Dunbar number makes verification nearly impossible
-- Maximum amplification (Ïƒ = 1.2)
+- Maximum amplification (σ = 1.2)
 
-**universal** â€” Abstract, mathematical, scope-independent
+**universal** — Abstract, mathematical, scope-independent
 - Example: Mathematician, physicist
 - Natural laws don't change with scale
-- Neutral (Ïƒ = 1.0)
+- Neutral (σ = 1.0)
 
-**Why Ïƒ(universal) = 1.0:**
+**Why σ(universal) = 1.0:**
 
-Natural laws are scope-invariant. Thermodynamics operates identically at local and global scales. The universal modifier returns to baseline because genuine natural laws don't hide extraction behind verification difficultyâ€”there's no extraction to hide.
+Natural laws are scope-invariant. Thermodynamics operates identically at local and global scales. The universal modifier returns to baseline because genuine natural laws don't hide extraction behind verification difficulty—there's no extraction to hide.
 
-**Why Ïƒ(global) = 1.2:**
+**Why σ(global) = 1.2:**
 
 Global scope maximally amplifies extraction through verification difficulty. With 8 billion participants, direct verification is impossible. Claims about "global markets," "universal standards," or "planetary systems" cannot be individually verified. This verification gap creates space for hidden extraction. The 1.2 multiplier reflects empirically observed extraction amplification in global-scale constraints.
 
@@ -478,15 +478,15 @@ Global scope maximally amplifies extraction through verification difficulty. Wit
 
 We write:
 ```
-C[I] â€” constraint C experienced from index I
-Type(C[I]) âˆˆ {â– , âŠž, âŠ , âŠžâŠ , âŠ¡, âŠŸ} â€” classification from index I
+C[I] — constraint C experienced from index I
+Type(C[I]) ∈ {■, ⊞, ⊠, ⊞⊠, ⊡, ⊟} — classification from index I
 ```
 
 **Examples:**
 ```
-carbon_credits[(powerless, biographical, trapped, local)] = âŠ  (Snare)
-carbon_credits[(institutional, generational, arbitrage, global)] = âŠž (Rope)
-carbon_credits[(moderate, biographical, constrained, national)] = âŠžâŠ  (Tangled Rope)
+carbon_credits[(powerless, biographical, trapped, local)] = ⊠ (Snare)
+carbon_credits[(institutional, generational, arbitrage, global)] = ⊞ (Rope)
+carbon_credits[(moderate, biographical, constrained, national)] = ⊞⊠ (Tangled Rope)
 
 All three classifications are simultaneously true.
 ```
@@ -495,7 +495,7 @@ All three classifications are simultaneously true.
 
 #### **Valid Index Combinations**
 
-Not all 6Ã—5Ã—5Ã—6 = 900 combinations are coherent. Some constraints:
+Not all 6×5×5×6 = 900 combinations are coherent. Some constraints:
 
 **Mutual entailment:**
 - `analytical` power tends to imply `analytical` exit (epistemic freedom)
@@ -503,8 +503,8 @@ Not all 6Ã—5Ã—5Ã—6 = 900 combinations are coherent. Some constraints:
 - `universal` scope tends to imply `civilizational` time horizon
 
 **Incoherent combinations:**
-- `(institutional, immediate, trapped, local)` â€” institutional power + trapped exit is contradictory
-- `(powerless, civilizational, arbitrage, local)` â€” powerless position with arbitrage options is unstable
+- `(institutional, immediate, trapped, local)` — institutional power + trapped exit is contradictory
+- `(powerless, civilizational, arbitrage, local)` — powerless position with arbitrage options is unstable
 
 **Implementation:**
 
@@ -526,9 +526,9 @@ valid_context(context(
 **Note:** Coherence checks (e.g., `incoherent_power_exit/2`, `incoherent_time_scope/2`) are not currently enforced. Any valid dimension combination is accepted. Context terms use tagged wrappers (`agent_power(P)`, etc.) rather than bare atoms. The `identity_locked` exit option is coherent with all power levels including `analytical` (an analyst can recognize their own identity lock while being unable to break it — this instantiates the Classical Oracle Gap, Theorem 4).
 
 In practice, most real indices cluster around:
-- `(powerless/moderate, biographical, constrained, national)` â€” typical citizen
-- `(powerful, generational, mobile, global)` â€” elite perspective
-- `(analytical, civilizational, analytical, universal)` â€” researcher perspective
+- `(powerless/moderate, biographical, constrained, national)` — typical citizen
+- `(powerful, generational, mobile, global)` — elite perspective
+- `(analytical, civilizational, analytical, universal)` — researcher perspective
 
 ---
 
@@ -545,18 +545,18 @@ The four dimensions (P, T, E, S) represent **empirically validated minimum suffi
 
 ---
 
-**[Â§II.A COMPLETE]**
+**[§II.A COMPLETE]**
 
 **Integration check:**
-- âœ… Full four-dimensional index defined
-- âœ… Each dimension explained with examples
-- âœ… Ï€(analytical) = 1.15 rationale provided
-- âœ… Ïƒ values justified (verification difficulty)
-- âœ… Index notation established
-- âœ… Coherence constraints noted
-- âœ… Implementation reference included
+- ✅ Full four-dimensional index defined
+- ✅ Each dimension explained with examples
+- ✅ π(analytical) = 1.15 rationale provided
+- ✅ σ values justified (verification difficulty)
+- ✅ Index notation established
+- ✅ Coherence constraints noted
+- ✅ Implementation reference included
 
-**Next:** Â§II.B Core Modal Operators (Mountain, Rope, Snare with full triple-layer + structural gates)
+**Next:** §II.B Core Modal Operators (Mountain, Rope, Snare with full triple-layer + structural gates)
 
 ---
 
@@ -573,7 +573,7 @@ This ordering is implemented as a sequence of guards in drl_core.pl. The first t
 
 ---
 
-#### B.1 Mountain Operator: â– C[I]
+#### B.1 Mountain Operator: ■C[I]
 
 ##### Conceptual Overview
 
@@ -583,38 +583,38 @@ The name comes from mountaineering: you don't move a mountain, you route around 
 
 **Examples of true Mountains:**
 - **Second Law of Thermodynamics**: Entropy increases. True from all indices, all scopes, all time horizons.
-- **Computational complexity bounds**: P â‰  NP (assuming conjecture true). No amount of power changes this.
+- **Computational complexity bounds**: P ≠ NP (assuming conjecture true). No amount of power changes this.
 - **Dunbar Number (~150)**: Cognitive limit on stable relationships. Scales across human populations.
 - **Death**: From most biographical indices, genuinely unchangeable (though from civilizational + analytical index, aging may become modifiable).
 
 **Examples of False Mountains (physics-washing):**
-- **"Market forces are natural laws"**: Claims inevitability, but classification varies by PowerÃ—Scope (only binds powerless at global scale).
+- **"Market forces are natural laws"**: Claims inevitability, but classification varies by Power×Scope (only binds powerless at global scale).
 - **"Human nature is competitive"**: Claims universality, but cooperation levels vary dramatically by scope and cultural context.
 - **"Scarcity is fundamental"**: Claims natural necessity, but often reflects constructed property systems rather than physical limits.
 
-**The critical distinction:** True Mountains have **zero or minimal extraction** (Îµ â‰¤ 0.25) and **zero or minimal suppression** (Supp â‰¤ 0.05). If a constraint requires active enforcement or extracts heavily from participants, it's not a natural lawâ€”it's a constructed constraint claiming inevitability.
+**The critical distinction:** True Mountains have **zero or minimal extraction** (ε ≤ 0.25) and **zero or minimal suppression** (Supp ≤ 0.05). If a constraint requires active enforcement or extracts heavily from participants, it's not a natural law—it's a constructed constraint claiming inevitability.
 
 **Why such strict thresholds?**
 
-Because calling something a Mountain has massive consequences. It shifts from "reform or resist" to "accept and route around." The classification must be bulletproof. We tolerate no false positivesâ€”better to misclassify a Mountain as Rope than to let a Snare masquerade as natural law.
+Because calling something a Mountain has massive consequences. It shifts from "reform or resist" to "accept and route around." The classification must be bulletproof. We tolerate no false positives—better to misclassify a Mountain as Rope than to let a Snare masquerade as natural law.
 
 ##### Formal Definition
 
 ```
-â– C[I] â†” Îµ(C) â‰¤ 0.25 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ NaturalEmergence(C) âˆ§ Immutable(C, I.T, I.E)
+■C[I] ↔ ε(C) ≤ 0.25 ∧ Supp(C) ≤ 0.05 ∧ NaturalEmergence(C) ∧ Immutable(C, I.T, I.E)
 ```
 
 **Components:**
 
-- **Îµ(C) â‰¤ 0.25**: Base extractiveness at coordination floor
-  - Natural laws don't extractâ€"they simply constrain what's possible
+- **ε(C) ≤ 0.25**: Base extractiveness at coordination floor
+  - Natural laws don't extract—they simply constrain what's possible
   - The 0.25 threshold allows for minimal necessary coordination overhead
-  - Reference: logic_thresholds.md Â§3a, `mountain_extractiveness_max`
+  - Reference: logic_thresholds.md §3a, `mountain_extractiveness_max`
 
-- **Supp(C) â‰¤ 0.05**: Suppression at noise floor
-  - Natural laws don't require enforcementâ€”they're inescapable
+- **Supp(C) ≤ 0.05**: Suppression at noise floor
+  - Natural laws don't require enforcement—they're inescapable
   - The 0.05 threshold is noise floor (measurement error, edge cases)
-  - Reference: logic_thresholds.md Â§3a, `mountain_suppression_ceiling`
+  - Reference: logic_thresholds.md §3a, `mountain_suppression_ceiling`
 
 - **NaturalEmergence(C)**: Constraint emerges without active human construction
   - Checked via `emerges_naturally(C)` predicate (delegated to `domain_priors`)
@@ -630,7 +630,7 @@ Because calling something a Mountain has massive consequences. It shifts from "r
 **Immutability Gate Logic:**
 
 ```
-Immutable(C, T, E) â‰¡ effective_immutability_for_context(Context, mountain)
+Immutable(C, T, E) ≡ effective_immutability_for_context(Context, mountain)
 ```
 
 Truth conditions (from constraint_indexing.pl):
@@ -641,7 +641,7 @@ Truth conditions (from constraint_indexing.pl):
 
 **Power-Scaling Note:**
 
-Mountains **don't check Ï‡** (power-scaled extraction). They use raw Îµ and Supp directly. Why? Because natural laws affect everyone equally. Thermodynamics doesn't care about your power position. If a constraint's burden varies dramatically by power, it's not a Mountainâ€”it's constructed.
+Mountains **don't check χ** (power-scaled extraction). They use raw ε and Supp directly. Why? Because natural laws affect everyone equally. Thermodynamics doesn't care about your power position. If a constraint's burden varies dramatically by power, it's not a Mountain—it's constructed.
 
 **Hub-1 dynamic-range boundary (OQ-22, 2026-06-28).** Classification has two independent hubs: Hub 1
 (the χ-gates in the priority cascade) and Hub 2 (`effective_immutability`, observer-indexed). Hub 1
@@ -673,7 +673,7 @@ classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
 
 **Key observation:** The cut (!) means if Mountain classification succeeds, we don't check other types. Mountain has highest priority.
 
-**Canonical Thresholds** (from logic_thresholds.md Â§3a):
+**Canonical Thresholds** (from logic_thresholds.md §3a):
 - `mountain_extractiveness_max` = **0.25**
 - `mountain_suppression_ceiling` = **0.05**
 - `mountain_extractiveness_min` = **0.0** (theoretical minimum, unused in practice)
@@ -682,21 +682,21 @@ classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
 
 ---
 
-**ðŸ“Œ STRUCTURAL GATE â€” Boltzmann Compliance for Natural Law:**
+**📌 STRUCTURAL GATE — Boltzmann Compliance for Natural Law:**
 
-> **Shadow Mode Reminder:** This gate runs AFTER metric-based classification in `classify_from_metrics/6`. It does not modify the core classification logicâ€”it operates in the signature override layer (`signature_detection.pl`) and can demote a claimed Mountain to Constructed Constraint based on coupling topology.
+> **Shadow Mode Reminder:** This gate runs AFTER metric-based classification in `classify_from_metrics/6`. It does not modify the core classification logic—it operates in the signature override layer (`signature_detection.pl`) and can demote a claimed Mountain to Constructed Constraint based on coupling topology.
 >
-> **Before a constraint is accepted as a Mountain (â–  signature), it must pass the Boltzmann Independence Test.** 
+> **Before a constraint is accepted as a Mountain (■ signature), it must pass the Boltzmann Independence Test.** 
 >
-> Natural laws do not "senselessly couple" unrelated index dimensions. If a constraint's classification depends on the product of Power and Scope in a non-factorizable way, it is **constructed**, not naturalâ€”regardless of how low its Îµ and Supp values are.
+> Natural laws do not "senselessly couple" unrelated index dimensions. If a constraint's classification depends on the product of Power and Scope in a non-factorizable way, it is **constructed**, not natural—regardless of how low its ε and Supp values are.
 >
-> **Note:** Boltzmann compliance is **necessary but not sufficient** for Natural Law classification. A constraint must ALSO meet the Mountain thresholds (Îµ â‰¤ 0.25, Supp â‰¤ 0.05) AND show temporal stability AND have zero beneficiaries. Boltzmann compliance alone doesn't make something a Mountainâ€”it just prevents false Mountains from passing as natural laws.
+> **Note:** Boltzmann compliance is **necessary but not sufficient** for Natural Law classification. A constraint must ALSO meet the Mountain thresholds (ε ≤ 0.25, Supp ≤ 0.05) AND show temporal stability AND have zero beneficiaries. Boltzmann compliance alone doesn't make something a Mountain—it just prevents false Mountains from passing as natural laws.
 >
 > **The Test:**
 >
-> Does classification factorize across Power Ã— Scope dimensions?
+> Does classification factorize across Power × Scope dimensions?
 > ```
-> Ï‡(P, S) â‰ˆ f(P) Ã— g(S)  [within tolerance 0.10]
+> χ(P, S) ≈ f(P) × g(S)  [within tolerance 0.10]
 > ```
 >
 > If the effective extractiveness can be separated into independent power and scope functions, the constraint passes. If Power and Scope couple nonsensically (changing scope flips classification at one power level but not others), the constraint **fails Boltzmann compliance** and is reclassified as **Constructed**.
@@ -705,9 +705,9 @@ classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
 >
 > **Critical: FNL Detection is Signature Override, Not Audit.**
 >
-> When False Natural Law (FNL) is detected, it's not merely flagged for reviewâ€”it **overrides the metric-based classification**. A constraint that passes Mountain thresholds (Îµ â‰¤ 0.25, Supp â‰¤ 0.05) but fails Boltzmann compliance is **demoted** from "Universal Necessity" (Mountain) to "Asymmetric Construction" (Tangled Rope). This happens in signature_detection.pl, which runs after drl_core.pl's metric classification.
+> When False Natural Law (FNL) is detected, it's not merely flagged for review—it **overrides the metric-based classification**. A constraint that passes Mountain thresholds (ε ≤ 0.25, Supp ≤ 0.05) but fails Boltzmann compliance is **demoted** from "Universal Necessity" (Mountain) to "Asymmetric Construction" (Tangled Rope). This happens in signature_detection.pl, which runs after drl_core.pl's metric classification.
 >
-> **Note: Boltzmann compliance is necessary but not sufficient for Natural Law (NL) signature.** A constraint can factorize perfectly and still not be naturalâ€”it could be a well-designed coordination standard (CS). The full NL signature requires: Boltzmann compliance AND no viable alternatives AND zero beneficiaries AND temporal stability. See logic_extensions.md Â§1.2 for complete NL signature requirements.
+> **Note: Boltzmann compliance is necessary but not sufficient for Natural Law (NL) signature.** A constraint can factorize perfectly and still not be natural—it could be a well-designed coordination standard (CS). The full NL signature requires: Boltzmann compliance AND no viable alternatives AND zero beneficiaries AND temporal stability. See logic_extensions.md §1.2 for complete NL signature requirements.
 >
 > **Shadow Mode Reminder:** These gates do NOT modify `classify_from_metrics/6` (the canonical predicate in drl_core.pl). They operate in the signature override layer (signature_detection.pl) which runs afterward. The core classification logic remains unchanged; signatures can only enhance or override, not replace.
 >
@@ -715,17 +715,17 @@ classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
 > ```
 > Claimed Mountain: "Competition is human nature"
 > 
-> Test at (powerless, local): Îµ = 0.12, Supp = 0.04 â†’ Mountain âœ“
-> Test at (powerless, global): Îµ = 0.68, Supp = 0.65 â†’ Snare âœ—
-> Test at (institutional, local): Îµ = 0.08, Supp = 0.03 â†’ Mountain âœ“
-> Test at (institutional, global): Îµ = 0.02, Supp = 0.01 â†’ Mountain âœ“
+> Test at (powerless, local): ε = 0.12, Supp = 0.04 → Mountain ✓
+> Test at (powerless, global): ε = 0.68, Supp = 0.65 → Snare ✗
+> Test at (institutional, local): ε = 0.08, Supp = 0.03 → Mountain ✓
+> Test at (institutional, global): ε = 0.02, Supp = 0.01 → Mountain ✓
 > 
-> Coupling detected: PowerÃ—Scope interaction.
+> Coupling detected: Power×Scope interaction.
 > Only powerless agents at global scale experience high extraction.
-> This is not a natural lawâ€”it's a constructed system.
+> This is not a natural law—it's a constructed system.
 > 
 > Boltzmann compliance: FAIL
-> Reclassification: False Natural Law (FNL) â†’ Tangled Rope
+> Reclassification: False Natural Law (FNL) → Tangled Rope
 > ```
 >
 > **Why this matters:**
@@ -733,9 +733,9 @@ classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
 > Physics-washing is a common rhetorical move: "This constraint is just how things are, like gravity." The Boltzmann test mathematically refutes this claim. Natural laws factorize cleanly across independent dimensions. Constructed constraints couple dimensions to hide extraction.
 >
 > **See:**
-> - logic_extensions.md Â§1.3: Boltzmann Compliance Test (full algorithm)
-> - logic_extensions.md Â§1.4: False Natural Law (FNL) Detection
-> - logic_extensions.md Â§1.7: Nonsensical Coupling
+> - logic_extensions.md §1.3: Boltzmann Compliance Test (full algorithm)
+> - logic_extensions.md §1.4: False Natural Law (FNL) Detection
+> - logic_extensions.md §1.7: Nonsensical Coupling
 >
 > **Implementation:** signature_detection.pl + boltzmann_compliance.pl, `boltzmann_compliant/2`, `false_natural_law/2`
 
@@ -746,22 +746,22 @@ classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
 Even without full Boltzmann testing, we can detect obvious False Mountains:
 
 ```
-FM(C) â†” Claimed(â– C) âˆ§ âˆƒI(Â¬â– C[I]) âˆ§ Îµ(C) > 0.70
+FM(C) ↔ Claimed(■C) ∧ ∃I(¬■C[I]) ∧ ε(C) > 0.70
 ```
 
 If someone claims a constraint is a Mountain but:
-- It has Îµ > 0.70 (high extraction), AND
+- It has ε > 0.70 (high extraction), AND
 - From some index it's clearly NOT a Mountain (e.g., Snare from powerless perspective)
 
 Then we have a False Mountain claim. The high enforcement contradicts natural emergence.
 
 **Examples:**
-- "Poverty is inevitable" (Îµ = 0.75, Supp = 0.80) â€” high enforcement reveals construction
-- "Markets naturally produce inequality" (Îµ varies 0.15-0.85 by power position) â€” coupling reveals construction
+- "Poverty is inevitable" (ε = 0.75, Supp = 0.80) — high enforcement reveals construction
+- "Markets naturally produce inequality" (ε varies 0.15-0.85 by power position) — coupling reveals construction
 
 **Action Implication:**
 
-**Accept** â†’ Route strategy around what cannot be changed.
+**Accept** → Route strategy around what cannot be changed.
 
 When facing a true Mountain:
 - Don't waste energy trying to move it
@@ -769,13 +769,13 @@ When facing a true Mountain:
 - Adapt strategy to terrain constraints
 - Accept what genuinely cannot be changed
 
-**Critical distinction: Accept â‰  Resignation.**
+**Critical distinction: Accept ≠ Resignation.**
 
-Accepting a Mountain is a **strategic move to conserve energy** for changeability elsewhere. It's not defeatismâ€”it's tactical resource allocation. You acknowledge unchangeable constraints so you can focus energy on changeable ones (Ropes, Tangled Ropes, Snares).
+Accepting a Mountain is a **strategic move to conserve energy** for changeability elsewhere. It's not defeatism—it's tactical resource allocation. You acknowledge unchangeable constraints so you can focus energy on changeable ones (Ropes, Tangled Ropes, Snares).
 
-A mountaineer doesn't "resign" to the mountain's existenceâ€”they route intelligently around terrain. Similarly, you don't "resign" to thermodynamicsâ€”you work within physical constraints to achieve goals.
+A mountaineer doesn't "resign" to the mountain's existence—they route intelligently around terrain. Similarly, you don't "resign" to thermodynamics—you work within physical constraints to achieve goals.
 
-**But verify it's truly a Mountain first.** Most constraints claiming Mountain status are False Summitsâ€”constructed constraints with good PR.
+**But verify it's truly a Mountain first.** Most constraints claiming Mountain status are False Summits—constructed constraints with good PR.
 
 ---
 
@@ -783,63 +783,63 @@ A mountaineer doesn't "resign" to the mountain's existenceâ€”they route int
 
 **True Mountain: Second Law of Thermodynamics**
 ```
-Îµ(entropy_increase) = 0.0 (no extractionâ€”just physical constraint)
+ε(entropy_increase) = 0.0 (no extraction—just physical constraint)
 Supp(entropy_increase) = 0.0 (no enforcement needed)
 Immutable(entropy_increase, all_T, all_E) = true
 
 Boltzmann test:
-  All indices â†’ Mountain
-  All scopes â†’ Mountain  
+  All indices → Mountain
+  All scopes → Mountain  
   Factorizes perfectly (no coupling)
   
-Classification: â–  from all indices âœ“
+Classification: ■ from all indices ✓
 ```
 
 **False Mountain: "Natural monopolies in utilities"**
 ```
-Îµ(utility_monopoly) = 0.45 (moderate extraction)
+ε(utility_monopoly) = 0.45 (moderate extraction)
 Supp(utility_monopoly) = 0.55 (active regulatory protection)
 
 From (powerless, biographical, trapped, local):
-  Ï‡ = 0.45 Ã— 1.5 Ã— 0.8 = 0.54 â†’ Tangled Rope
+  χ = 0.45 × 1.5 × 0.8 = 0.54 → Tangled Rope
 
 From (institutional, generational, arbitrage, national):
-  Ï‡ = 0.45 Ã— -0.2 Ã— 1.0 = -0.09 â†’ Rope (net benefit)
+  χ = 0.45 × -0.2 × 1.0 = -0.09 → Rope (net benefit)
 
 Boltzmann test:
-  Coupling detected (PowerÃ—Scope interaction)
+  Coupling detected (Power×Scope interaction)
   Classification varies by index
   Fails factorization test
   
-FNL detected: Claimed natural but constructed âœ—
+FNL detected: Claimed natural but constructed ✗
 Reclassification: Tangled Rope (conservative fallback)
 ```
 
 **Edge Case: Dunbar Number (~150 stable relationships)**
 ```
-Îµ(dunbar_limit) = 0.08 (minimal coordination overhead)
-Supp(dunbar_limit) = 0.02 (no enforcementâ€”just cognitive limit)
+ε(dunbar_limit) = 0.08 (minimal coordination overhead)
+Supp(dunbar_limit) = 0.02 (no enforcement—just cognitive limit)
 
 From (powerless, biographical, trapped, local):
   Cannot maintain >150 stable relationships
-  â†’ Mountain âœ“
+  → Mountain ✓
 
 From (institutional, generational, mobile, global):
   Still cannot maintain >150 stable relationships
   (Power doesn't change cognitive architecture)
-  â†’ Mountain âœ“
+  → Mountain ✓
 
 From (analytical, civilizational, analytical, universal):
   Could potentially be transcended via technology (AI-assisted relationships)
   But on civilizational timescale, not biographical
-  â†’ Mountain at biographical scale, Rope at civilizational âœ“
+  → Mountain at biographical scale, Rope at civilizational ✓
 
 Boltzmann test:
-  Factorizes cleanly (no PowerÃ—Scope coupling)
+  Factorizes cleanly (no Power×Scope coupling)
   Same limit across all power positions
   Scope-invariant (local and global both ~150)
   
-Classification: â–  from most indices âœ“
+Classification: ■ from most indices ✓
 Note: May become Rope from (analytical, civilizational) as technology evolves
 ```
 
@@ -847,19 +847,19 @@ Note: May become Rope from (analytical, civilizational) as technology evolves
 
 **Summary: Mountain Operator**
 
-**Use when:** Constraint genuinely unchangeable from your index (Îµ â‰¤ 0.25, Supp â‰¤ 0.05, immutable)
+**Use when:** Constraint genuinely unchangeable from your index (ε ≤ 0.25, Supp ≤ 0.05, immutable)
 
-**Verify with:** Boltzmann compliance test (factorization across PowerÃ—Scope)
+**Verify with:** Boltzmann compliance test (factorization across Power×Scope)
 
 **Beware:** Physics-washing (constructed constraints claiming natural inevitability)
 
-**Action:** Accept and route aroundâ€”don't waste energy fighting what cannot change
+**Action:** Accept and route around—don't waste energy fighting what cannot change
 
-**Next operator:** Rope (âŠž) â€” genuine coordination mechanisms
+**Next operator:** Rope (⊞) — genuine coordination mechanisms
 
 ---
 
-#### B.2 Rope Operator: âŠžC[I]
+#### B.2 Rope Operator: ⊞C[I]
 
 **Conceptual Overview:**
 
@@ -870,35 +870,35 @@ The metaphor: climbers rope together for safety. Each person benefits from the c
 From your index I, a Rope provides **genuine coordination value while extracting minimally**. You benefit more than you pay. The constraint helps you navigate terrain more safely.
 
 **Examples of true Ropes:**
-- **UTF-8 encoding**: Universal text representation. Minimal learning cost (Îµ â‰ˆ 0.02), massive coordination benefit.
+- **UTF-8 encoding**: Universal text representation. Minimal learning cost (ε ≈ 0.02), massive coordination benefit.
 - **Metric system**: Shared measurement. Learning cost exists but dwarfed by interoperability gains.
-- **Traffic signals**: Red/yellow/green. Small time cost (Îµ â‰ˆ 0.05), prevents collisions.
+- **Traffic signals**: Red/yellow/green. Small time cost (ε ≈ 0.05), prevents collisions.
 - **Handshake protocol**: Social coordination. Nearly zero extraction, genuine signaling value.
 
 **Examples of Rope-like constraints that fail structural tests:**
-- **"Free" social media platforms**: Appear as Rope (low monetary cost, voluntary), but fail Boltzmann compliance (couple User Power Ã— Network Scope nonsensically).
-- **Opt-out privacy defaults**: Low Îµ but nonsensical coupling (why does privacy level depend on user sophistication?).
-- **Behavioral defaults with high switching costs**: Coordination-washingâ€”extraction hidden in friction.
+- **"Free" social media platforms**: Appear as Rope (low monetary cost, voluntary), but fail Boltzmann compliance (couple User Power × Network Scope nonsensically).
+- **Opt-out privacy defaults**: Low ε but nonsensical coupling (why does privacy level depend on user sophistication?).
+- **Behavioral defaults with high switching costs**: Coordination-washing—extraction hidden in friction.
 
 **The critical distinction:** True Ropes have **dual threshold protection**:
-1. Low power-scaled extraction: Ï‡ â‰¤ 0.35
-2. Low base extraction: Îµ â‰¤ 0.45
+1. Low power-scaled extraction: χ ≤ 0.35
+2. Low base extraction: ε ≤ 0.45
 
 **Why dual thresholds?**
 
-We check BOTH Ï‡ (power-scaled) AND Îµ (base). This prevents powerful agents from misclassifying high-Îµ constraints as Ropes just because THEY don't feel the extraction.
+We check BOTH χ (power-scaled) AND ε (base). This prevents powerful agents from misclassifying high-ε constraints as Ropes just because THEY don't feel the extraction.
 
 **Example:**
 ```
-Constraint X has Îµ = 0.60 (high base extraction)
+Constraint X has ε = 0.60 (high base extraction)
 
 From (institutional, generational, arbitrage, global):
-  Ï‡ = 0.60 Ã— -0.2 Ã— 1.2 = -0.144
-  â†’ Net benefit! Appears as Rope from institutional view
+  χ = 0.60 × -0.2 × 1.2 = -0.144
+  → Net benefit! Appears as Rope from institutional view
   
-BUT Îµ = 0.60 fails rope_epsilon_ceiling (0.45)
-â†’ NOT a Rope, even from institutional index
-â†’ Prevents powerful from reclassifying extraction as coordination
+BUT ε = 0.60 fails rope_epsilon_ceiling (0.45)
+→ NOT a Rope, even from institutional index
+→ Prevents powerful from reclassifying extraction as coordination
 ```
 
 The dual threshold ensures: "If it extracts heavily from ANYONE, it's not a Rope."
@@ -906,22 +906,22 @@ The dual threshold ensures: "If it extracts heavily from ANYONE, it's not a Rope
 **Formal Definition:**
 
 ```
-âŠžC[I] â†" Ï‡(C, I.P, I.S) â‰¤ 0.35 âˆ§ (Ï‡ â‰¤ 0 â†' â¤ | Îµ(C) â‰¤ 0.45)
-         âˆ§ (Changeable(C, I.T, I.E) âˆ¨ NaturalEmergence(C))
+⊞C[I] ↔ χ(C, I.P, I.S) ≤ 0.35 ∧ (χ ≤ 0 → ⤠| ε(C) ≤ 0.45)
+         ∧ (Changeable(C, I.T, I.E) ∨ NaturalEmergence(C))
 ```
 
 **Components:**
 
-- **Ï‡(C, I.P, I.S) â‰¤ 0.35**: Power-scaled extraction below ceiling
-  - Ï‡ = Îµ Ã— Ï€(P) Ã— Ïƒ(S)
+- **χ(C, I.P, I.S) ≤ 0.35**: Power-scaled extraction below ceiling
+  - χ = ε × π(P) × σ(S)
   - Accounts for how extraction scales with power position and scope
-  - Reference: logic_thresholds.md Â§3b, `rope_chi_ceiling`
+  - Reference: logic_thresholds.md §3b, `rope_chi_ceiling`
 
-- **Ï‡ â‰¤ 0 â†' â¤ | Îµ(C) â‰¤ 0.45**: Negative-chi epsilon bypass (v6.0)
-  - When Ï‡ â‰¤ 0 (net beneficiary from institutional perspective), the Îµ â‰¤ 0.45 check is skipped
+- **χ ≤ 0 → ⤠| ε(C) ≤ 0.45**: Negative-chi epsilon bypass (v6.0)
+  - When χ ≤ 0 (net beneficiary from institutional perspective), the ε ≤ 0.45 check is skipped
   - Rationale: negative effective extraction means the constraint is experienced as coordination infrastructure regardless of how high the raw base extraction is
-  - When Ï‡ > 0, the dual-threshold check applies: Îµ(C) â‰¤ 0.45 must also hold
-  - Reference: logic_thresholds.md Â§3b, `rope_epsilon_ceiling`
+  - When χ > 0, the dual-threshold check applies: ε(C) ≤ 0.45 must also hold
+  - Reference: logic_thresholds.md §3b, `rope_epsilon_ceiling`
   - Boundary (grounded 2026-06-18, `audits/2026-06-18_oq01_rope_bypass_twins/`): the
     dramatic presheaf collapse (Jaccard 0.319, ~1,417 spurious presheaves) once observed
     under a compressed-ceiling sign-flipped transform (Arm A3) on the chimera-era
@@ -933,9 +933,9 @@ The dual threshold ensures: "If it extracts heavily from ANYONE, it's not a Rope
     bypass is ratified as intentional modeling content with no guard (OQ-01 resolved
     2026-06-18). Residual "which eps/d distributions re-enter the collapse band" = OQ-22.
 
-- **Changeable(C, I.T, I.E) âˆ¨ NaturalEmergence(C)**: Changeability or natural emergence
+- **Changeable(C, I.T, I.E) ∨ NaturalEmergence(C)**: Changeability or natural emergence
   - Primary path: `effective_immutability_for_context(Context, rope)` checks changeability
-  - Alternative path: `emerges_naturally(C)` â€” domain-invariant bypass for naturally emerging constraints that may not satisfy power-indexed immutability checks
+  - Alternative path: `emerges_naturally(C)` — domain-invariant bypass for naturally emerging constraints that may not satisfy power-indexed immutability checks
   - Distinguishes Ropes (voluntary standards or natural coordination) from Mountains (natural laws)
   - Checked via `effective_immutability_for_context(Context, rope)`
   - Distinguishes Ropes (voluntary standards) from Mountains (natural laws)
@@ -943,11 +943,11 @@ The dual threshold ensures: "If it extracts heavily from ANYONE, it's not a Rope
 
 **Changeability vs Immutability:**
 
-The key distinction between Rope and Mountain at low Îµ:
-- **Mountain**: Îµ â‰¤ 0.25, Supp â‰¤ 0.05, **Immutable**
-- **Rope**: Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.45, **Changeable**
+The key distinction between Rope and Mountain at low ε:
+- **Mountain**: ε ≤ 0.25, Supp ≤ 0.05, **Immutable**
+- **Rope**: χ ≤ 0.35, ε ≤ 0.45, **Changeable**
 
-UTF-8 is a Rope (could be replaced by different encoding standard, unlikely but possible). Thermodynamics is a Mountain (cannot be replacedâ€”it's how reality works).
+UTF-8 is a Rope (could be replaced by different encoding standard, unlikely but possible). Thermodynamics is a Mountain (cannot be replaced—it's how reality works).
 
 **Implementation:**
 
@@ -963,9 +963,9 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, Context, rope) :-
     ), !.
 ```
 
-**Note:** Unlike Tangled Rope, current implementation doesn't explicitly check `has_coordination_function(C)`. Coordination is a **structural expectation** for Ropes but not a metric prerequisite. This is a known simplificationâ€”in practice, low Îµ + low Ï‡ strongly implies coordination value.
+**Note:** Unlike Tangled Rope, current implementation doesn't explicitly check `has_coordination_function(C)`. Coordination is a **structural expectation** for Ropes but not a metric prerequisite. This is a known simplification—in practice, low ε + low χ strongly implies coordination value.
 
-**Canonical Thresholds** (from logic_thresholds.md Â§3b):
+**Canonical Thresholds** (from logic_thresholds.md §3b):
 - `rope_chi_ceiling` = **0.35**
 - `rope_epsilon_ceiling` = **0.45**
 - `rope_suppression_ceiling` = **0.16** (base suppression, used in other predicates)
@@ -977,57 +977,57 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, Context, rope) :-
 
 ```
 UTF-8 encoding standard:
-  Îµ = 0.12 (learning cost)
+  ε = 0.12 (learning cost)
 
 From (powerless, biographical, trapped, global):
-  Ï€(powerless) = 1.5
-  Ïƒ(global) = 1.2
-  Ï‡ = 0.12 Ã— 1.5 Ã— 1.2 = 0.216
+  π(powerless) = 1.5
+  σ(global) = 1.2
+  χ = 0.12 × 1.5 × 1.2 = 0.216
   
-  Check: Ï‡ = 0.216 â‰¤ 0.35 âœ“
-  Check: Îµ = 0.12 â‰¤ 0.45 âœ"
-  Check: Changeable (could adopt different encoding) âœ“
-  â†’ Rope from powerless/global âœ“
+  Check: χ = 0.216 ≤ 0.35 ✓
+  Check: ε = 0.12 ≤ 0.45 ✔
+  Check: Changeable (could adopt different encoding) ✓
+  → Rope from powerless/global ✓
 
 From (institutional, generational, arbitrage, global):
-  Ï€(institutional) = -0.2
-  Ïƒ(global) = 1.2  
-  Ï‡ = 0.12 Ã— -0.2 Ã— 1.2 = -0.029
+  π(institutional) = -0.2
+  σ(global) = 1.2  
+  χ = 0.12 × -0.2 × 1.2 = -0.029
   
-  Check: Ï‡ = -0.029 â‰¤ 0.35 âœ“ (net benefit!)
-  Check: Îµ = 0.12 â‰¤ 0.45 âœ"
-  Check: Changeable âœ“
-  â†’ Rope from institutional/global âœ“
+  Check: χ = -0.029 ≤ 0.35 ✓ (net benefit!)
+  Check: ε = 0.12 ≤ 0.45 ✔
+  Check: Changeable ✓
+  → Rope from institutional/global ✓
 
 Same base structure, both perspectives experience genuine coordination.
-Negative Ï‡ for institutional means they benefit MORE than powerless (can leverage encoding ecosystem).
-But base Îµ low â†’ genuinely symmetric coordination, not extraction mechanism.
+Negative χ for institutional means they benefit MORE than powerless (can leverage encoding ecosystem).
+But base ε low → genuinely symmetric coordination, not extraction mechanism.
 ```
 
 ---
 
-**ðŸ“Œ STRUCTURAL GATE â€” Coupling-Invariant Rope Certification:**
+**📌 STRUCTURAL GATE — Coupling-Invariant Rope Certification:**
 
 > **Shadow Mode Reminder:** CI_Rope certification runs AFTER metric-based classification. A constraint classified as Rope by `classify_from_metrics/6` can be promoted to CI_Rope (certified coordination) if it passes all four Boltzmann invariance tests. This certification operates in `signature_detection.pl`.
 >
-> **A Rope can be certified as a CI_Rope (Coupling-Invariant Rope) if it maintains high structural purity (â‰¥ 0.7) and shows no nonsensical coupling.**
+> **A Rope can be certified as a CI_Rope (Coupling-Invariant Rope) if it maintains high structural purity (≥ 0.7) and shows no nonsensical coupling.**
 >
 > Certification distinguishes **true coordination mechanisms** from **low-extraction construction** (nudge architecture, behavioral defaults, coordination-washing).
 >
 > **The Four Tests:**
 >
 > ```
-> CI_Rope(C) â‰¡ 
+> CI_Rope(C) ≡ 
 >   boltzmann_compliant(C, compliant(_))          [Test 1: Factorization]
->   âˆ§ scale_invariant(C)                           [Test 2: Scope invariance]
->   âˆ§ excess_extraction(C, X) âˆ§ X â‰ˆ 0             [Test 3: At Boltzmann floor]
->   âˆ§ Coord(C)                                     [Test 4: Coordination function]
+>   ∧ scale_invariant(C)                           [Test 2: Scope invariance]
+>   ∧ excess_extraction(C, X) ∧ X ≈ 0             [Test 3: At Boltzmann floor]
+>   ∧ Coord(C)                                     [Test 4: Coordination function]
 > ```
 >
 > **Test 1: Boltzmann Compliance (Factorization)**
-> - Classification factorizes across Power Ã— Scope
+> - Classification factorizes across Power × Scope
 > - No nonsensical coupling
-> - Coupling score â‰¤ 0.25
+> - Coupling score ≤ 0.25
 > - Changing Power has same effect at all Scope levels
 >
 > **Test 2: Scope Invariance**
@@ -1036,7 +1036,7 @@ But base Îµ low â†’ genuinely symmetric coordination, not extraction mech
 > - Natural coordination doesn't become extractive at scale
 >
 > **Test 3: Excess Extraction**
-> - Îµ(C) â‰¤ BoltzmannFloor(coordination_type) + tolerance
+> - ε(C) ≤ BoltzmannFloor(coordination_type) + tolerance
 > - Any extraction is "necessary cost" not extractive overhead
 > - Price of Anarchy at theoretical minimum
 >
@@ -1045,11 +1045,11 @@ But base Îµ low â†’ genuinely symmetric coordination, not extraction mech
 > - Not just absence of extraction
 > - Provides value to participants
 >
-> **Editorial Note:** While the metric-based Rope classification in `classify_from_metrics/6` doesn't explicitly check `has_coordination_function(C)` (it's inferred from low Îµ + low Ï‡), a constraint seeking **CI_Rope certification** MUST satisfy the `Coord(C)` predicate to pass Test 4. This is the distinction between "appears to coordinate from metrics" and "provably coordinates via structural test."
+> **Editorial Note:** While the metric-based Rope classification in `classify_from_metrics/6` doesn't explicitly check `has_coordination_function(C)` (it's inferred from low ε + low χ), a constraint seeking **CI_Rope certification** MUST satisfy the `Coord(C)` predicate to pass Test 4. This is the distinction between "appears to coordinate from metrics" and "provably coordinates via structural test."
 >
 > **What Certification Means:**
 >
-> - **Rope** (from metrics): Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.45 â€" passes thresholds
+> - **Rope** (from metrics): χ ≤ 0.35, ε ≤ 0.45 — passes thresholds
 >   - Could be: true coordination OR low-extraction nudge OR behavioral default
 >
 > - **CI_Rope** (Boltzmann-certified): Passes all four tests
@@ -1065,51 +1065,51 @@ But base Îµ low â†’ genuinely symmetric coordination, not extraction mech
 >   (powerless, global): Rope  
 >   (institutional, local): Rope
 >   (institutional, global): Rope
->   â†’ No coupling, factorizes perfectly âœ“
+>   → No coupling, factorizes perfectly ✓
 >
 > Test 2 (Scope invariance):
->   Same classification (Rope) across all scopes âœ“
+>   Same classification (Rope) across all scopes ✓
 >
 > Test 3 (Excess extraction):
->   Îµ = 0.12
+>   ε = 0.12
 >   BoltzmannFloor(information_standard) = 0.02
 >   Excess = 0.12 - 0.02 = 0.10
->   Within tolerance (â‰¤ 0.10) âœ“
+>   Within tolerance (≤ 0.10) ✓
 >
 > Test 4 (Coordination):
->   Enables universal text representation âœ“
+>   Enables universal text representation ✓
 >
-> Certification: CI_Rope âœ“âœ“âœ“âœ“
+> Certification: CI_Rope ✓✓✓✓
 > ```
 >
 > **Example: "Opt-out" privacy default (fails CI_Rope certification)**
 > ```
-> Metrics: Îµ = 0.18, Ï‡ = 0.22 (appears as Rope)
+> Metrics: ε = 0.18, χ = 0.22 (appears as Rope)
 >
 > Test 1 (Factorization):
 >   (powerless, local): Rope (default = private)
 >   (powerless, global): Tangled Rope (default = share)
->   â†’ Coupling detected: scope-dependent privacy âœ—
+>   → Coupling detected: scope-dependent privacy ✗
 >
 > Test 2 (Scope invariance):
->   Classification changes: Rope â†’ Tangled Rope âœ—
+>   Classification changes: Rope → Tangled Rope ✗
 >
 > Test 3 (Excess extraction):
->   Îµ = 0.18
+>   ε = 0.18
 >   BoltzmannFloor(information_standard) = 0.02
->   Excess = 0.16 (above tolerance 0.10) âœ—
+>   Excess = 0.16 (above tolerance 0.10) ✗
 >
 > Test 4 (Coordination):
->   Debatableâ€”mostly benefits data collectors âœ—
+>   Debatable—mostly benefits data collectors ✗
 >
 > Certification: FAIL
-> Detection: False CI_Rope (FCR) â€” coordination-washed extraction
+> Detection: False CI_Rope (FCR) — coordination-washed extraction
 > Reclassification: Tangled Rope (downgraded)
 > ```
 >
 > **Why This Matters:**
 >
-> Modern extraction techniques hide behind low Îµ metrics:
+> Modern extraction techniques hide behind low ε metrics:
 > - Behavioral defaults (opt-out instead of opt-in)
 > - Distributed enforcement (no single suppression point)
 > - Scope-dependent extraction (free locally, extractive globally)
@@ -1118,9 +1118,9 @@ But base Îµ low â†’ genuinely symmetric coordination, not extraction mech
 > CI_Rope certification catches these patterns. It's the mathematical test for **coordination-washing**: claiming genuine coordination while hiding extraction behind metric manipulation.
 >
 > **See:**
-> - logic_extensions.md Â§1.5: CI_Rope Certification (full algorithm)
-> - logic_extensions.md Â§1.6: False CI_Rope (FCR) Detection
-> - logic_extensions.md Â§2.3: Purity Scoring (structural health measurement)
+> - logic_extensions.md §1.5: CI_Rope Certification (full algorithm)
+> - logic_extensions.md §1.6: False CI_Rope (FCR) Detection
+> - logic_extensions.md §2.3: Purity Scoring (structural health measurement)
 >
 > **Implementation:** signature_detection.pl, `coupling_invariant_rope/2`, `false_ci_rope/2`
 
@@ -1128,11 +1128,11 @@ But base Îµ low â†’ genuinely symmetric coordination, not extraction mech
 
 **Action Implication:**
 
-**Maintain** â†’ Preserve coordination benefits, avoid disruption.
+**Maintain** → Preserve coordination benefits, avoid disruption.
 
 When facing a true Rope:
 - Don't "improve" it hastily (Chesterton's fence)
-- Maintain stabilityâ€”coordination has value
+- Maintain stability—coordination has value
 - Protect from extraction (watch for drift to Tangled)
 - Document why it exists (institutional memory)
 
@@ -1144,55 +1144,55 @@ When facing a true Rope:
 
 **Certified CI_Rope: Metric System (SI Units)**
 ```
-Îµ(metric_system) = 0.08 (learning cost)
-Supp(metric_system) = 0.10 (minimal enforcementâ€”mostly voluntary)
+ε(metric_system) = 0.08 (learning cost)
+Supp(metric_system) = 0.10 (minimal enforcement—mostly voluntary)
 
 From all power positions:
-  Ï‡ varies 0.05-0.10 (minimal extraction for all)
+  χ varies 0.05-0.10 (minimal extraction for all)
   
 From all scopes:
   Works identically (local and global both benefit)
 
 Boltzmann tests:
-  âœ“ Factorizes (no PowerÃ—Scope coupling)
-  âœ“ Scope-invariant (same benefits at all scales)
-  âœ“ At floor (excess â‰ˆ 0.06, within tolerance)
-  âœ“ Coordinates (universal measurement)
+  ✓ Factorizes (no Power×Scope coupling)
+  ✓ Scope-invariant (same benefits at all scales)
+  ✓ At floor (excess ≈ 0.06, within tolerance)
+  ✓ Coordinates (universal measurement)
 
-Certification: CI_Rope âœ“
+Certification: CI_Rope ✓
 Action: Maintain, protect from replacement by inferior alternatives
 ```
 
 **Rope (not certified): Traffic signal conventions**
 ```
-Îµ(traffic_lights) = 0.05 (time waiting at red)
-Ï‡ varies 0.04-0.08 across indices
+ε(traffic_lights) = 0.05 (time waiting at red)
+χ varies 0.04-0.08 across indices
 
 Appears as Rope from all perspectives, but:
   - Hasn't been tested for Boltzmann compliance (not in corpus)
   - Likely would pass (factorizes, scope-invariant)
   - But certification not yet confirmed
 
-Status: Rope âœ“ (from metrics)
+Status: Rope ✓ (from metrics)
 CI_Rope: Unknown (needs Boltzmann testing)
 Action: Maintain (treat as coordination pending full analysis)
 ```
 
 **False CI_Rope: Social media "connection" features**
 ```
-Îµ(social_feed) = 0.20 (attention cost)
+ε(social_feed) = 0.20 (attention cost)
 Supp = 0.15 (algorithmic nudges, not legal enforcement)
 
 Appears as Rope from some perspectives (low monetary cost)
 
 But Boltzmann tests reveal:
-  âœ— Factorization FAIL (powerlessÃ—global = Snare, organizedÃ—local = Rope)
-  âœ— Scope variance (becomes extractive at scale)
-  âœ— Excess extraction (Îµ = 0.20 vs floor = 0.02, excess = 0.18)
-  âœ— Coordination questionable (optimizes for engagement, not connection)
+  ✗ Factorization FAIL (powerless×global = Snare, organized×local = Rope)
+  ✗ Scope variance (becomes extractive at scale)
+  ✗ Excess extraction (ε = 0.20 vs floor = 0.02, excess = 0.18)
+  ✗ Coordination questionable (optimizes for engagement, not connection)
 
 Detection: FCR (False CI_Rope)
-True classification: Tangled Rope â†’ Snare (scope-dependent)
+True classification: Tangled Rope → Snare (scope-dependent)
 Action: Reform or exit (not genuine coordination)
 ```
 
@@ -1200,27 +1200,27 @@ Action: Reform or exit (not genuine coordination)
 
 **Summary: Rope Operator**
 
-**Use when:** Genuine coordination with bounded extraction (Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.45, changeable)
+**Use when:** Genuine coordination with bounded extraction (χ ≤ 0.35, ε ≤ 0.45, changeable)
 
 **Verify with:** CI_Rope certification tests (four Boltzmann invariance tests)
 
-**Beware:** Coordination-washing (low Îµ hiding extraction via behavioral defaults, coupling)
+**Beware:** Coordination-washing (low ε hiding extraction via behavioral defaults, coupling)
 
-**Action:** Maintainâ€”preserve coordination value, watch for drift
+**Action:** Maintain—preserve coordination value, watch for drift
 
 **Distinction from Mountain:** Ropes are changeable voluntary standards; Mountains are unchangeable natural laws
 
-**Next operator:** Snare (âŠ ) â€” pure extraction mechanisms
+**Next operator:** Snare (⊠) — pure extraction mechanisms
 
 ---
 
-#### B.3 Snare Operator: âŠ C[I]
+#### B.3 Snare Operator: ⊠C[I]
 
 **Conceptual Overview:**
 
 A **Snare** is a trap. It extracts heavily with minimal or no return. Debt spirals. Predatory contracts. Rent-seeking institutions.
 
-The metaphor: hunter's snareâ€”once caught, struggling makes it tighter. The constraint actively harms those bound by it. Energy flows one direction: from participant to mechanism.
+The metaphor: hunter's snare—once caught, struggling makes it tighter. The constraint actively harms those bound by it. Energy flows one direction: from participant to mechanism.
 
 From your index I, a Snare appears as **active extraction requiring resistance**. You pay far more than you get. The constraint damages you.
 
@@ -1245,83 +1245,83 @@ All three classifications are simultaneously objectively true.
 
 **Why the strictest thresholds?**
 
-Snares require **triple gate**â€”all three conditions must hold:
-1. **High power-scaled extraction**: Ï‡ â‰¥ 0.66
-2. **High base extraction**: Îµ â‰¥ 0.46
-3. **High suppression**: Supp â‰¥ 0.60
+Snares require **triple gate**—all three conditions must hold:
+1. **High power-scaled extraction**: χ ≥ 0.66
+2. **High base extraction**: ε ≥ 0.46
+3. **High suppression**: Supp ≥ 0.60
 
 **All three must pass.** This prevents false positives:
 
-- **High Ï‡ alone**: Could be powerless perspective on legitimate coordination (Îµ might be low)
-- **High Îµ alone**: Could be complex but fair system (Ï‡ might vary by power position)
-- **High Supp alone**: Could be necessary enforcement for coordination (Îµ might be low)
+- **High χ alone**: Could be powerless perspective on legitimate coordination (ε might be low)
+- **High ε alone**: Could be complex but fair system (χ might vary by power position)
+- **High Supp alone**: Could be necessary enforcement for coordination (ε might be low)
 
 **Together: extractive trap requiring force.**
 
-**Why Îµ â‰¥ 0.46 (not just Ï‡)?**
+**Why ε ≥ 0.46 (not just χ)?**
 
-The Îµ threshold prevents powerless agents from misclassifying moderate-extraction constraints as Snares just because THEY feel high Ï‡.
+The ε threshold prevents powerless agents from misclassifying moderate-extraction constraints as Snares just because THEY feel high χ.
 
 **Example:**
 ```
-Constraint Y has Îµ = 0.30 (moderate extraction)
+Constraint Y has ε = 0.30 (moderate extraction)
 
 From (powerless, biographical, trapped, global):
-  Ï‡ = 0.30 Ã— 1.5 Ã— 1.2 = 0.54
+  χ = 0.30 × 1.5 × 1.2 = 0.54
   
-  BUT Îµ = 0.30 < 0.46 (snare_epsilon_floor)
-  â†’ NOT a Snare, despite Ï‡ feeling high to powerless
-  â†’ Prevents powerless-only classification
-  â†’ Likely Tangled Rope instead
+  BUT ε = 0.30 < 0.46 (snare_epsilon_floor)
+  → NOT a Snare, despite χ feeling high to powerless
+  → Prevents powerless-only classification
+  → Likely Tangled Rope instead
 ```
 
-The dual threshold (Ï‡ AND Îµ) ensures: "If it's going to be called a Snare, it must extract heavily from EVERYONE, not just the powerless."
+The dual threshold (χ AND ε) ensures: "If it's going to be called a Snare, it must extract heavily from EVERYONE, not just the powerless."
 
 **Formal Definition:**
 
 ```
-âŠ C[I] â†” Ï‡(C, I.P, I.S) â‰¥ 0.66 âˆ§ Îµ(C) â‰¥ 0.46 âˆ§ Supp(C) â‰¥ 0.60 âˆ§ Changeable(C, I.T, I.E)
+⊠C[I] ↔ χ(C, I.P, I.S) ≥ 0.66 ∧ ε(C) ≥ 0.46 ∧ Supp(C) ≥ 0.60 ∧ Changeable(C, I.T, I.E)
 ```
 
-**Note:** The implementation additionally requires `Â¬NaturalLawWithoutBeneficiary(C)` â€" natural laws without identifiable human beneficiaries are blocked from Snare classification regardless of metric values (asymmetric impact is not asymmetric extraction). See `natural_law_without_beneficiary/1` in `drl_core.pl`.
+**Note:** The implementation additionally requires `¬NaturalLawWithoutBeneficiary(C)` — natural laws without identifiable human beneficiaries are blocked from Snare classification regardless of metric values (asymmetric impact is not asymmetric extraction). See `natural_law_without_beneficiary/1` in `drl_core.pl`.
 
 **Components:**
 
-- **Ï‡(C, I.P, I.S) â‰¥ 0.66**: Power-scaled extraction high
-  - Ï‡ = Îµ Ã— Ï€(P) Ã— Ïƒ(S)
+- **χ(C, I.P, I.S) ≥ 0.66**: Power-scaled extraction high
+  - χ = ε × π(P) × σ(S)
   - From your power position, extraction exceeds coordination
-  - Reference: logic_thresholds.md Â§3c, `snare_chi_floor`
+  - Reference: logic_thresholds.md §3c, `snare_chi_floor`
 
-- **Îµ(C) â‰¥ 0.46**: Base extraction high
+- **ε(C) ≥ 0.46**: Base extraction high
   - Prevents powerless-only misclassification
   - Ensures constraint extracts heavily from most positions
-  - Reference: logic_thresholds.md Â§3c, `snare_epsilon_floor`
+  - Reference: logic_thresholds.md §3c, `snare_epsilon_floor`
 
-- **Supp(C) â‰¥ 0.60**: Requires active enforcement
+- **Supp(C) ≥ 0.60**: Requires active enforcement
   - Snares need force to maintain
   - People would exit if they could (high suppression prevents exit)
-  - Reference: logic_thresholds.md Â§3c, `snare_suppression_floor`
+  - Reference: logic_thresholds.md §3c, `snare_suppression_floor`
 
 - **Changeable(C, I.T, I.E)**: Not a natural law
   - Snares are constructed, not inevitable
-  - This prevents classifying death as Snare (it's Mountainâ€”unchangeable)
+  - This prevents classifying death as Snare (it's Mountain—unchangeable)
 
 **Load-Bearing Snare (Theorem 3):**
 
 Special category when suppression exceeds threshold:
 
 ```
-LoadBearing(C) â†” âŠ C[I] âˆ§ Supp(C) â‰¥ 0.70
+LoadBearing(C) ↔ ⊠C[I] ∧ Supp(C) ≥ 0.70
 ```
 
 If Supp > 0.70, the snare is **load-bearing**: cutting it immediately causes system collapse because other structures depend on it.
 
-**Theorem 3 (Catastrophic Collapse Avoidance):** Load-bearing constraints with Supp â‰¥ 0.70 require **Scaffold construction before removal**. Direct cutting triggers cascade failure.
+**Theorem 3 (Catastrophic Collapse Avoidance):** Load-bearing constraints with Supp ≥ 0.70 require **Scaffold construction before removal**. Direct cutting triggers cascade failure.
 
 **Formal statement:**
 ```
-âˆ€C: (âŠ C[I] âˆ§ Supp(C) â‰¥ 0.70) â†’ (Cut(C) â†’ SystemCollapse)
-âˆ´ Build(âŠ¡Replacement[I]) before Cut(C)
+∀C: (⊠C[I] ∧ Supp(C) ≥ 0.70) → (Cut(C) → SystemCollapse)
+∴ Build(⊡Replacement[I]) before Cut(C)
 ```
 
 **Examples:**
@@ -1331,9 +1331,9 @@ If Supp > 0.70, the snare is **load-bearing**: cutting it immediately causes sys
 
 **Action for load-bearing Snares:** Build **Scaffold** first, then cut Snare. Don't just cut and hope.
 
-**No Â¬Coord Gate:**
+**No ¬Coord Gate:**
 
-Current implementation doesn't require `Â¬has_coordination_function(C)` for Snares. Why?
+Current implementation doesn't require `¬has_coordination_function(C)` for Snares. Why?
 
 Many Snares have **vestigial coordination functions**. They started as Ropes, degraded to Tangled Ropes, degraded further to Snares. The coordination function dried up but structural memory remains.
 
@@ -1356,12 +1356,12 @@ classify_from_metrics(C, BaseEps, Chi, Supp, Context, snare) :-
 
 **Note:** The `natural_law_without_beneficiary(C)` guard blocks constraints that emerge naturally, require no enforcement, and have no identifiable human beneficiary from being classified as Snares. The `snare_immutability_check(Context)` ensures changeability.
 
-**Canonical Thresholds** (from logic_thresholds.md Â§3c):
+**Canonical Thresholds** (from logic_thresholds.md §3c):
 - `snare_chi_floor` = **0.66**
 - `snare_epsilon_floor` = **0.46**
 - `snare_suppression_floor` = **0.60**
 - `snare_extraction_ceil` = **1.00** (maximum possible extraction)
-- `snare_load_bearing_threshold` = **0.70** (above â†’ load-bearing snare)
+- `snare_load_bearing_threshold` = **0.70** (above → load-bearing snare)
 
 **Priority:** Snare > Scaffold > Rope > Tangled Rope (checked second, immediately after Mountain)
 
@@ -1369,30 +1369,30 @@ classify_from_metrics(C, BaseEps, Chi, Supp, Context, snare) :-
 
 ```
 Payday loan system:
-  Îµ = 0.70 (high base extractionâ€”interest rates, fees, spiral)
+  ε = 0.70 (high base extraction—interest rates, fees, spiral)
   Supp = 0.75 (active legal enforcement via debt collection)
 
 From (powerless, biographical, trapped, local):
-  Ï€(powerless) = 1.5
-  Ïƒ(local) = 0.8
-  Ï‡ = 0.70 Ã— 1.5 Ã— 0.8 = 0.84
+  π(powerless) = 1.5
+  σ(local) = 0.8
+  χ = 0.70 × 1.5 × 0.8 = 0.84
   
-  Check: Ï‡ = 0.84 â‰¥ 0.66 âœ“
-  Check: Îµ = 0.70 â‰¥ 0.46 âœ“
-  Check: Supp = 0.75 â‰¥ 0.60 âœ“
-  â†’ Snare from powerless/local âœ“
+  Check: χ = 0.84 ≥ 0.66 ✓
+  Check: ε = 0.70 ≥ 0.46 ✓
+  Check: Supp = 0.75 ≥ 0.60 ✓
+  → Snare from powerless/local ✓
   
-  Note: Supp = 0.75 â‰¥ 0.70 â†’ Load-bearing Snare
+  Note: Supp = 0.75 ≥ 0.70 → Load-bearing Snare
   (Cutting without alternative creates crisis for trapped borrowers)
 
 From (powerful, biographical, mobile, national):
-  Ï€(powerful) = 0.6
-  Ïƒ(national) = 1.0
-  Ï‡ = 0.70 Ã— 0.6 Ã— 1.0 = 0.42
+  π(powerful) = 0.6
+  σ(national) = 1.0
+  χ = 0.70 × 0.6 × 1.0 = 0.42
   
-  Check: Ï‡ = 0.42 < 0.66 âœ—
-  â†’ NOT Snare from powerful/national
-  â†’ Likely Tangled Rope (they see it as extractive but manageable)
+  Check: χ = 0.42 < 0.66 ✗
+  → NOT Snare from powerful/national
+  → Likely Tangled Rope (they see it as extractive but manageable)
 
 Same mechanism, different experience.
 Powerless agent: trapped in debt spiral (Snare)
@@ -1401,11 +1401,11 @@ Powerful agent: avoids mechanism entirely or uses strategically (Tangled/Rope)
 
 ---
 
-**ðŸ“Œ STRUCTURAL GATE â€” Nonsensical Coupling as Extraction Evidence:**
+**📌 STRUCTURAL GATE — Nonsensical Coupling as Extraction Evidence:**
 
 > **Shadow Mode Reminder:** Nonsensical coupling detection runs AFTER metric-based classification. A constraint classified as Snare by `classify_from_metrics/6` can have this classification confirmed (or a Mountain/Rope can be demoted to Tangled Rope) if nonsensical coupling is detected. This operates in `signature_detection.pl`.
 >
-> **Extraction is often hidden.** If a constraint fails the Boltzmann Factorization test (coupling score > 0.25), it couples independent dimensions in ways that natural laws cannotâ€”this is mathematical evidence of construction, even if it mimics a natural law or claims symmetric benefits.
+> **Extraction is often hidden.** If a constraint fails the Boltzmann Factorization test (coupling score > 0.25), it couples independent dimensions in ways that natural laws cannot—this is mathematical evidence of construction, even if it mimics a natural law or claims symmetric benefits.
 >
 > **The Core Insight:**
 >
@@ -1423,10 +1423,10 @@ Powerful agent: avoids mechanism entirely or uses strategically (Tangled/Rope)
 >
 > **Detection Pattern:**
 >
-> For each coupled pair (Dâ‚, Dâ‚‚) from Boltzmann test:
+> For each coupled pair (D₁, D₂) from Boltzmann test:
 > 1. Check if coordination function justifies coupling
 > 2. Check if coupling strength exceeds threshold (> 0.50)
-> 3. If strong coupling without justification â†’ nonsensical
+> 3. If strong coupling without justification → nonsensical
 >
 > **Functional Justifications:**
 > - **Global infrastructure**: Scope naturally couples with power (scale matters for coordination)
@@ -1434,47 +1434,47 @@ Powerful agent: avoids mechanism entirely or uses strategically (Tangled/Rope)
 > - **Enforcement mechanism**: Power couples with scope (jurisdictional range)
 >
 > **Nonsensical Patterns:**
-> - **Power Ã— Time**: Why does your power position change the time horizon relevant to a constraint?
-> - **Scope Ã— Exit**: Why does global scope eliminate exit options that existed locally?
-> - **Power Ã— Suppression (unusual)**: Why does suppression vary by power for a claimed "natural law"?
+> - **Power × Time**: Why does your power position change the time horizon relevant to a constraint?
+> - **Scope × Exit**: Why does global scope eliminate exit options that existed locally?
+> - **Power × Suppression (unusual)**: Why does suppression vary by power for a claimed "natural law"?
 >
 > **Example: "Competition is human nature" (physics-washed Snare)**
 > ```
 > Claimed: Mountain (universal natural law)
 > 
 > Boltzmann test grid:
->   (powerless, local):  Îµ=0.12, Supp=0.04 â†’ Mountain âœ“
->   (powerless, global): Îµ=0.68, Supp=0.65 â†’ Snare âœ—
->   (powerful, local):   Îµ=0.08, Supp=0.03 â†’ Mountain âœ“
->   (powerful, global):  Îµ=0.02, Supp=0.01 â†’ Mountain âœ“
+>   (powerless, local):  ε=0.12, Supp=0.04 → Mountain ✓
+>   (powerless, global): ε=0.68, Supp=0.65 → Snare ✗
+>   (powerful, local):   ε=0.08, Supp=0.03 → Mountain ✓
+>   (powerful, global):  ε=0.02, Supp=0.01 → Mountain ✓
 >
 > Nonsensical coupling detected:
->   Power Ã— Scope interaction
+>   Power × Scope interaction
 >   Only powerless agents at global scale experience high extraction
 >   
 >   Question: Why does "natural competition" only trap the powerless globally?
->   Answer: Because it's not naturalâ€”it's a constructed market system
+>   Answer: Because it's not natural—it's a constructed market system
 >           that extracts from those without bargaining power at scale.
 >
 > Coupling strength: 0.52 (strong)
 > Functional justification: NONE (competition doesn't require scope-dependent extraction)
 > 
-> Verdict: Nonsensical coupling â†’ Extractive complexity
-> Classification: False Natural Law (FNL) â†’ Constructed Constraint
-> Reclassification from claimed Mountain â†’ Tangled Rope (conservative fallback)
+> Verdict: Nonsensical coupling → Extractive complexity
+> Classification: False Natural Law (FNL) → Constructed Constraint
+> Reclassification from claimed Mountain → Tangled Rope (conservative fallback)
 > ```
 >
 > **Example: Carbon pricing mechanism**
 > ```
 > Coupling test:
->   (powerless, local):  Ï‡=0.66 â†’ Snare (borderline)
->   (powerless, global): Ï‡=0.90 â†’ Snare âœ“
->   (institutional, local): Ï‡=-0.10 â†’ Rope âœ“
->   (institutional, global): Ï‡=-0.13 â†’ Rope âœ“
+>   (powerless, local):  χ=0.66 → Snare (borderline)
+>   (powerless, global): χ=0.90 → Snare ✓
+>   (institutional, local): χ=-0.10 → Rope ✓
+>   (institutional, global): χ=-0.13 → Rope ✓
 >
-> Coupling detected: Power Ã— Scope
->   Powerless: Extraction increases with scope (0.66 â†’ 0.90)
->   Institutional: Net benefit regardless of scope (-0.10 â†’ -0.13)
+> Coupling detected: Power × Scope
+>   Powerless: Extraction increases with scope (0.66 → 0.90)
+>   Institutional: Net benefit regardless of scope (-0.10 → -0.13)
 >
 > Functional justification check:
 >   Does carbon pricing require differential extraction by power?
@@ -1496,12 +1496,12 @@ Powerful agent: avoids mechanism entirely or uses strategically (Tangled/Rope)
 > - "Coordination" becomes extraction at scale
 > - Complexity serves to obscure, not coordinate
 >
-> If your cereal choice determines your soap brand, someone's extracting via that coupling. If "market competition" only traps the powerless at global scale, it's not a natural lawâ€”it's a constructed extraction mechanism.
+> If your cereal choice determines your soap brand, someone's extracting via that coupling. If "market competition" only traps the powerless at global scale, it's not a natural law—it's a constructed extraction mechanism.
 >
 > **See:**
-> - logic_extensions.md Â§1.7: Nonsensical Coupling Detection
-> - logic_extensions.md Â§1.4: False Natural Law (FNL) â€” physics-washed Snares
-> - logic_extensions.md Â§1.6: False CI_Rope (FCR) â€” coordination-washed Snares
+> - logic_extensions.md §1.7: Nonsensical Coupling Detection
+> - logic_extensions.md §1.4: False Natural Law (FNL) — physics-washed Snares
+> - logic_extensions.md §1.6: False CI_Rope (FCR) — coordination-washed Snares
 >
 > **Implementation:** boltzmann_compliance.pl + signature_detection.pl, `detect_nonsensical_coupling/3`, `false_natural_law/2`
 
@@ -1509,19 +1509,19 @@ Powerful agent: avoids mechanism entirely or uses strategically (Tangled/Rope)
 
 **Action Implication:**
 
-**Cut/Exit** â†’ Escape extraction or resist actively if trapped.
+**Cut/Exit** → Escape extraction or resist actively if trapped.
 
 When facing a Snare:
 
 **If you have exit options (mobile, arbitrage):**
-- Cut immediatelyâ€”don't waste time reforming traps
+- Cut immediately—don't waste time reforming traps
 - Route around via alternatives
 - Warn others about the extraction mechanism
 
 **If you're trapped (trapped, constrained):**
 - Resist where possible
 - Build alternative systems (mutual aid, collective action)
-- Organize (trapped â†’ organized shifts Ï€ from 1.5 to 0.4)
+- Organize (trapped → organized shifts π from 1.5 to 0.4)
 - If load-bearing, build Scaffold first before cutting
 
 **Never normalize a Snare.** The fact that "everyone does it" or "that's how things work" doesn't make extraction legitimate. Snares persist through normalization.
@@ -1532,35 +1532,35 @@ When facing a Snare:
 
 **Clear Snare: Payday loan industry**
 ```
-Îµ = 0.70 (APR often >300%, debt spiral design)
+ε = 0.70 (APR often >300%, debt spiral design)
 Supp = 0.75 (legal enforcement, wage garnishment)
-Ï‡(powerless, local) = 0.84
+χ(powerless, local) = 0.84
 
-Triple gate: âœ“âœ“âœ“ â†’ Snare
-Load-bearing: Supp > 0.70 â†’ YES
+Triple gate: ✓✓✓ → Snare
+Load-bearing: Supp > 0.70 → YES
 
 Action: Build alternative (credit union, mutual aid) THEN cut
-Don't just ban payday loansâ€”trapped borrowers need alternatives first
+Don't just ban payday loans—trapped borrowers need alternatives first
 ```
 
 **Index-sensitive: Employment contract**
 ```
-Îµ = 0.50 (alienation, time extraction, power asymmetry)
+ε = 0.50 (alienation, time extraction, power asymmetry)
 Supp = 0.60 (legal enforcement, economic coercion)
 
 From (powerless, biographical, trapped, local):
-  Ï‡ = 0.50 Ã— 1.5 Ã— 0.8 = 0.60
-  Fails Ï‡ â‰¥ 0.66 (just below threshold)
-  â†’ Tangled Rope (extraction exists but below Snare threshold)
+  χ = 0.50 × 1.5 × 0.8 = 0.60
+  Fails χ ≥ 0.66 (just below threshold)
+  → Tangled Rope (extraction exists but below Snare threshold)
 
 From (moderate, biographical, constrained, national):
-  Ï‡ = 0.50 Ã— 1.0 Ã— 1.0 = 0.50
-  â†’ Tangled Rope âœ“
+  χ = 0.50 × 1.0 × 1.0 = 0.50
+  → Tangled Rope ✓
 
 From (powerful, generational, mobile, global):
-  Ï‡ = 0.50 Ã— 0.6 Ã— 1.2 = 0.36
-  Fails Ï‡ â‰¥ 0.66
-  â†’ Rope (net benefit from executive compensation, autonomy)
+  χ = 0.50 × 0.6 × 1.2 = 0.36
+  Fails χ ≥ 0.66
+  → Rope (net benefit from executive compensation, autonomy)
 
 Same employment system, three different types.
 All objectively true from their indices.
@@ -1570,45 +1570,45 @@ All objectively true from their indices.
 ```
 Claimed: Mountain (inevitable, natural)
 
-Actual metrics: Îµ varies 0.15-0.75 by power position
+Actual metrics: ε varies 0.15-0.75 by power position
                 Supp varies 0.05-0.70 by power position
 
 Boltzmann test:
   Coupling score = 0.58 (strong coupling)
-  Power Ã— Scope interaction detected
+  Power × Scope interaction detected
   Only binds powerless at global scale
   
-  Fails factorization test âœ—
+  Fails factorization test ✗
 
 FNL detected: Physics-washed construction
-True classification: Tangled Rope â†’ Snare (index-dependent)
+True classification: Tangled Rope → Snare (index-dependent)
 ```
 
 ---
 
 **Summary: Snare Operator**
 
-**Use when:** High extraction from your index (Ï‡ â‰¥ 0.66, Îµ â‰¥ 0.46, Supp â‰¥ 0.60)
+**Use when:** High extraction from your index (χ ≥ 0.66, ε ≥ 0.46, Supp ≥ 0.60)
 
 **Verify with:** Nonsensical coupling check (is extraction hidden in complexity?)
 
-**Beware:** Index sensitivity (Snare for powerless, Rope for powerfulâ€”both true)
+**Beware:** Index sensitivity (Snare for powerless, Rope for powerful—both true)
 
-**Load-bearing check:** If Supp â‰¥ 0.70, build Scaffold before cutting
+**Load-bearing check:** If Supp ≥ 0.70, build Scaffold before cutting
 
 **Action:** Cut/Exit if mobile; Resist/Organize if trapped; Build alternatives before destroying load-bearing Snares
 
-**Distinction from Tangled Rope:** Snares extract heavily (Îµ â‰¥ 0.46); Tangled Ropes have genuine coordination (Îµ typically 0.30-0.60, requires Coord predicate)
+**Distinction from Tangled Rope:** Snares extract heavily (ε ≥ 0.46); Tangled Ropes have genuine coordination (ε typically 0.30-0.60, requires Coord predicate)
 
-**Next operator:** Tangled Rope (âŠžâŠ ) â€” the hybrid coordination-extraction type
+**Next operator:** Tangled Rope (⊞⊠) — the hybrid coordination-extraction type
 
 ---
 
-#### B.4 Tangled Rope Operator: âŠžâŠ C[I]
+#### B.4 Tangled Rope Operator: ⊞⊠C[I]
 
 ##### Conceptual Overview
 
-A **Tangled Rope** both coordinates AND extracts. This is not a mistake, edge case, or failed Ropeâ€”it's the **most common constraint type** in real systems (~36% of analyzed constraints).
+A **Tangled Rope** both coordinates AND extracts. This is not a mistake, edge case, or failed Rope—it's the **most common constraint type** in real systems (~36% of analyzed constraints).
 
 The metaphor: ropes tangled with extraction mechanisms. The rope genuinely helps you climb (coordination) but snags constantly, requiring energy to manage (extraction). You benefit from being roped together, but you also pay asymmetric costs.
 
@@ -1619,54 +1619,54 @@ The metaphor: ropes tangled with extraction mechanisms. The rope genuinely helps
 **Examples:**
 - **Employment**: Provides income, skill-building, structure (coordination) while extracting time, agency, surplus value (extraction)
 - **Social media**: Enables communication, organization (coordination) while harvesting attention, data, behavioral manipulation (extraction)
-- **Carbon credits** (Îµ = 0.55): Market mechanism for emissions reduction (coordination) with asymmetric compliance costs (extraction)
+- **Carbon credits** (ε = 0.55): Market mechanism for emissions reduction (coordination) with asymmetric compliance costs (extraction)
 - **Mortgages**: Enable homeownership (coordination) with interest extraction and foreclosure risk (extraction)
 - **Public education**: Provides knowledge, credentialing (coordination) with standardization pressure and opportunity costs (extraction)
 
 ##### Formal Definition
 
 ```
-âŠžâŠ C[I] â†” Â¬NaturalLawWithoutBeneficiary(C)
-         âˆ§ 0.40 â‰¤ Ï‡(C, I.P, I.S) â‰¤ 0.90
-         âˆ§ Îµ(C) â‰¥ 0.30
-         âˆ§ Supp(C) â‰¥ 0.40
-         âˆ§ Enforce(C)
-         âˆ§ Coord(C)
-         âˆ§ Asymmetric(C)
+⊞⊠C[I] ↔ ¬NaturalLawWithoutBeneficiary(C)
+         ∧ 0.40 ≤ χ(C, I.P, I.S) ≤ 0.90
+         ∧ ε(C) ≥ 0.30
+         ∧ Supp(C) ≥ 0.40
+         ∧ Enforce(C)
+         ∧ Coord(C)
+         ∧ Asymmetric(C)
 ```
 
-**Note:** The `Â¬NaturalLawWithoutBeneficiary(C)` guard prevents natural laws without identifiable beneficiaries from being classified as Tangled Rope, same as for Snare.
+**Note:** The `¬NaturalLawWithoutBeneficiary(C)` guard prevents natural laws without identifiable beneficiaries from being classified as Tangled Rope, same as for Snare.
 
 **Components:**
 
-- **0.40 â‰¤ Ï‡ â‰¤ 0.90**: Moderate to high power-scaled extraction
-  - Overlaps with Snare range (Snare starts at Ï‡ â‰¥ 0.66)
+- **0.40 ≤ χ ≤ 0.90**: Moderate to high power-scaled extraction
+  - Overlaps with Snare range (Snare starts at χ ≥ 0.66)
   - Same constraint can be Tangled from one index, Snare from another
-  - Reference: logic_thresholds.md Â§3d, `tangled_rope_chi_floor`, `tangled_rope_chi_ceil`
+  - Reference: logic_thresholds.md §3d, `tangled_rope_chi_floor`, `tangled_rope_chi_ceil`
 
-- **Îµ(C) â‰¥ 0.30**: Moderate-to-high base extraction
-  - Distinguishes from Rope (Îµ â‰¤ 0.45)
+- **ε(C) ≥ 0.30**: Moderate-to-high base extraction
+  - Distinguishes from Rope (ε ≤ 0.45)
   - Ensures genuine extraction, not just coordination overhead
-  - Reference: logic_thresholds.md Â§3d, `tangled_rope_epsilon_floor`
+  - Reference: logic_thresholds.md §3d, `tangled_rope_epsilon_floor`
 
-- **Supp(C) â‰¥ 0.40**: Active enforcement required
+- **Supp(C) ≥ 0.40**: Active enforcement required
   - Not voluntary (unlike Rope)
   - Requires institutional force or social pressure
-  - Reference: logic_thresholds.md Â§3d, `tangled_rope_suppression_floor`
+  - Reference: logic_thresholds.md §3d, `tangled_rope_suppression_floor`
 
-- **Enforce(C)**: Structural predicateâ€”requires active enforcement mechanism
+- **Enforce(C)**: Structural predicate—requires active enforcement mechanism
   - Checked via `requires_active_enforcement(C)`
   - Distinguishes from low-enforcement Ropes
 
-- **Coord(C)**: Structural predicateâ€”has genuine coordination function
+- **Coord(C)**: Structural predicate—has genuine coordination function
   - Checked via `has_coordination_function(C)`
   - **Critical:** This distinguishes Tangled from Snare
-  - If Coord(C) false â†’ likely Snare, not Tangled
+  - If Coord(C) false → likely Snare, not Tangled
 
-- **Asymmetric(C)**: Structural predicateâ€”extraction distributed unevenly
+- **Asymmetric(C)**: Structural predicate—extraction distributed unevenly
   - Checked via `has_asymmetric_extraction(C)`
-  - Some agents benefit more than they pay (Ï€ < 0 or low Ï€)
-  - Others pay more than they benefit (high Ï€)
+  - Some agents benefit more than they pay (π < 0 or low π)
+  - Others pay more than they benefit (high π)
 
 ##### Implementation
 
@@ -1687,11 +1687,11 @@ classify_from_metrics(C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
     narrative_ontology:has_asymmetric_extraction(C), !.
 ```
 
-**Note:** Unlike other types, Tangled Rope requires **three structural predicates** to fire. Metrics alone insufficientâ€”must confirm enforcement, coordination, and asymmetry.
+**Note:** Unlike other types, Tangled Rope requires **three structural predicates** to fire. Metrics alone insufficient—must confirm enforcement, coordination, and asymmetry.
 
 ##### Canonical Thresholds
 
-From logic_thresholds.md Â§3d:
+From logic_thresholds.md §3d:
 - `tangled_rope_chi_floor` = **0.40**
 - `tangled_rope_chi_ceil` = **0.90**
 - `tangled_rope_epsilon_floor` = **0.30**
@@ -1701,58 +1701,58 @@ From logic_thresholds.md Â§3d:
 
 ##### Cross-Index Classification Table
 
-**Example: Carbon Credits System (Îµ = 0.55, Supp = 0.60)**
+**Example: Carbon Credits System (ε = 0.55, Supp = 0.60)**
 
 *Note: This table shows a representative slice of the index grid. The full system evaluates constraints across all combinations of (P, T, E, S), not just these four indices. These four were chosen to illustrate the range of indexical variation.*
 
-| Index | Power | Scope | Ï€ | Ïƒ | Ï‡ Calculation | Ï‡ Value | Type | Interpretation |
+| Index | Power | Scope | π | σ | χ Calculation | χ Value | Type | Interpretation |
 |-------|-------|-------|---|---|---------------|---------|------|----------------|
-| Iâ‚ | powerless | local | 1.5 | 0.8 | 0.55 Ã— 1.5 Ã— 0.8 | **0.66** | **Tangled** âŠžâŠ  | Benefits exist but costs high |
-| Iâ‚‚ | moderate | national | 1.0 | 1.0 | 0.55 Ã— 1.0 Ã— 1.0 | **0.55** | **Tangled** âŠžâŠ  | Clear hybrid (mid-range) |
-| Iâ‚ƒ | institutional | global | -0.2 | 1.2 | 0.55 Ã— -0.2 Ã— 1.2 | **-0.13** | **Rope** âŠž | Net beneficiary (extracts from system) |
-| Iâ‚„ | analytical | global | 1.15 | 1.2 | 0.55 Ã— 1.15 Ã— 1.2 | **0.76** | **Tangled** âŠžâŠ  | Sees extraction moderate normalizes |
+| I₁ | powerless | local | 1.5 | 0.8 | 0.55 × 1.5 × 0.8 | **0.66** | **Tangled** ⊞⊠ | Benefits exist but costs high |
+| I₂ | moderate | national | 1.0 | 1.0 | 0.55 × 1.0 × 1.0 | **0.55** | **Tangled** ⊞⊠ | Clear hybrid (mid-range) |
+| I₃ | institutional | global | -0.2 | 1.2 | 0.55 × -0.2 × 1.2 | **-0.13** | **Rope** ⊞ | Net beneficiary (extracts from system) |
+| I₄ | analytical | global | 1.15 | 1.2 | 0.55 × 1.15 × 1.2 | **0.76** | **Tangled** ⊞⊠ | Sees extraction moderate normalizes |
 
 **Key observations:**
-- Same Îµ (0.55), same Supp (0.60), same constraint
-- Four different experienced types (3Ã— Tangled, 1Ã— Rope)
+- Same ε (0.55), same Supp (0.60), same constraint
+- Four different experienced types (3× Tangled, 1× Rope)
 - All four classifications simultaneously objectively true
-- Institutional index experiences net benefit (Ï‡ < 0)
+- Institutional index experiences net benefit (χ < 0)
 - Powerless at Snare threshold (0.66 = borderline)
-- Analytical detects extraction moderate agents miss (Ï€ = 1.15)
+- Analytical detects extraction moderate agents miss (π = 1.15)
 
 ##### Overlap with Snare
 
-Tangled Rope overlaps with Snare in Ï‡ range:
-- Tangled Rope: 0.40 â‰¤ Ï‡ â‰¤ 0.90
-- Snare: Ï‡ â‰¥ 0.66
+Tangled Rope overlaps with Snare in χ range:
+- Tangled Rope: 0.40 ≤ χ ≤ 0.90
+- Snare: χ ≥ 0.66
 
 **How same constraint can be both:**
 
 ```
 Carbon credits from (powerless, biographical, trapped, global):
-  Ï‡ = 0.55 Ã— 1.5 Ã— 1.2 = 0.99
+  χ = 0.55 × 1.5 × 1.2 = 0.99
 
 Check Tangled Rope:
-  Ï‡ = 0.99 within [0.40, 0.90]? NO (exceeds ceiling) âœ—
+  χ = 0.99 within [0.40, 0.90]? NO (exceeds ceiling) ✗
   
 Check Snare:
-  Ï‡ = 0.99 â‰¥ 0.66? YES âœ“
-  Îµ = 0.55 â‰¥ 0.46? YES âœ“
-  Supp = 0.60 â‰¥ 0.60? YES âœ“
-  â†’ Snare from powerless/global âœ“
+  χ = 0.99 ≥ 0.66? YES ✓
+  ε = 0.55 ≥ 0.46? YES ✓
+  Supp = 0.60 ≥ 0.60? YES ✓
+  → Snare from powerless/global ✓
 
 Same constraint:
-  - Tangled from moderate/national (Ï‡ = 0.55)
-  - Snare from powerless/global (Ï‡ = 0.99)
+  - Tangled from moderate/national (χ = 0.55)
+  - Snare from powerless/global (χ = 0.99)
   
 Both true. The constraint genuinely coordinates for moderates while trapping powerless at global scale.
 ```
 
 ##### Action Implication: Surgical Reform
 
-**Reform (Surgical)** â†’ Preserve coordination, excise extraction.
+**Reform (Surgical)** → Preserve coordination, excise extraction.
 
-The goal is NOT to destroy the Tangled Ropeâ€”it provides genuine value. The goal is to **untangle** it: remove the extraction mechanism while preserving the coordination function.
+The goal is NOT to destroy the Tangled Rope—it provides genuine value. The goal is to **untangle** it: remove the extraction mechanism while preserving the coordination function.
 
 **Surgical reform process:**
 1. **Identify coordination function**: What genuine value does this provide?
@@ -1777,19 +1777,19 @@ Surgical reform:
   - Preserve: employment relationship, income, skill-building
   - Cut: surplus extraction (worker ownership, profit-sharing)
   - Cut: exit costs (decouple healthcare from employment)
-  - Result: Rope (pure coordination) or lower-Îµ Tangled (reduced extraction)
+  - Result: Rope (pure coordination) or lower-ε Tangled (reduced extraction)
 ```
 
 **When surgical reform fails:**
 
-If Îµ too high (> 0.70) or purity too low (< 0.30), reform may be blocked. At that point:
-- Transition from Reform â†’ Cut/Exit
+If ε too high (> 0.70) or purity too low (< 0.30), reform may be blocked. At that point:
+- Transition from Reform → Cut/Exit
 - Build alternative Scaffold first
 - Then abandon degraded Tangled Rope
 
-**Stage 7 Extension:** Purity scoring (logic_extensions.md Â§2) provides a **reformability subscore** that mathematically predicts surgical reform success probability. Tangled Ropes with purity â‰¥ 0.50 are reform candidates; those below 0.30 have reform blocked by composition gates. This moves from qualitative judgment ("seems reformable") to quantitative prediction ("78% success probability given purity 0.62").
+**Stage 7 Extension:** Purity scoring (logic_extensions.md §2) provides a **reformability subscore** that mathematically predicts surgical reform success probability. Tangled Ropes with purity ≥ 0.50 are reform candidates; those below 0.30 have reform blocked by composition gates. This moves from qualitative judgment ("seems reformable") to quantitative prediction ("78% success probability given purity 0.62").
 
-See logic_extensions.md Â§5.3 for composition gates (surgical reform requires purity â‰¥ 0.30).
+See logic_extensions.md §5.3 for composition gates (surgical reform requires purity ≥ 0.30).
 
 ##### Empirical Prevalence
 
@@ -1797,35 +1797,35 @@ See logic_extensions.md Â§5.3 for composition gates (surgical reform requires 
 
 **Why so common?**
 
-Real-world coordination is messy. Pure coordination (Rope, Îµ â‰¤ 0.45) is rare. Pure extraction (Snare, Îµ â‰¥ 0.46, no coordination) is also rare. Most constraints fall in the middle: they coordinate something while extracting asymmetrically.
+Real-world coordination is messy. Pure coordination (Rope, ε ≤ 0.45) is rare. Pure extraction (Snare, ε ≥ 0.46, no coordination) is also rare. Most constraints fall in the middle: they coordinate something while extracting asymmetrically.
 
 **Distribution:**
 - Mountains: ~8%
 - Ropes: ~12%
 - Snares: ~18%
-- **Tangled Ropes: ~36%** â† Most common
+- **Tangled Ropes: ~36%** ← Most common
 - Scaffolds: ~15%
 - Pitons: ~11%
 
 ##### Summary: Tangled Rope Operator
 
-**Use when:** Genuine coordination exists but extraction present (0.40 â‰¤ Ï‡ â‰¤ 0.90, Îµ â‰¥ 0.30, both Coord and Asymmetric)
+**Use when:** Genuine coordination exists but extraction present (0.40 ≤ χ ≤ 0.90, ε ≥ 0.30, both Coord and Asymmetric)
 
-**Key insight:** Not failed Ropesâ€”irreducible hybrids providing value AND extracting
+**Key insight:** Not failed Ropes—irreducible hybrids providing value AND extracting
 
-**Action:** Surgical reformâ€”preserve coordination, excise extraction
+**Action:** Surgical reform—preserve coordination, excise extraction
 
 **Beware:** Can appear as Snare from powerless index, Rope from institutional index (both true)
 
-**Reform limit:** If purity < 0.30 or Îµ > 0.70, surgical reform may be blocked â†’ transition to Cut/Exit
+**Reform limit:** If purity < 0.30 or ε > 0.70, surgical reform may be blocked → transition to Cut/Exit
 
 **Prevalence:** Most common type (~36% of constraints)
 
-**Next operator:** Scaffold (âŠ¡) â€” temporary support structures
+**Next operator:** Scaffold (⊡) — temporary support structures
 
 ---
 
-#### B.5 Scaffold Operator: âŠ¡C[I]
+#### B.5 Scaffold Operator: ⊡C[I]
 
 ##### Conceptual Overview
 
@@ -1833,7 +1833,7 @@ A **Scaffold** is temporary support. Built-in expiration, designed for dissoluti
 
 The metaphor: construction scaffolding. Essential while building, dangerous if left up permanently. The structure is meant to support something else, then disappear.
 
-From your index I, a Scaffold provides **time-limited coordination** with explicit sunset conditions. It's not permanent infrastructureâ€”it's transitional support.
+From your index I, a Scaffold provides **time-limited coordination** with explicit sunset conditions. It's not permanent infrastructure—it's transitional support.
 
 **Examples:**
 - **Training wheels**: Support while learning to bike, remove when skilled
@@ -1852,29 +1852,29 @@ These degraded from Scaffolds to Pitons (sunset violation).
 
 **Formal operator:**
 ```
-Sunset(C) â‰¡ âˆƒt_end, âˆƒconditions: (t â‰¥ t_end âˆ¨ Met(conditions)) â†’ Dissolve(C)
+Sunset(C) ≡ ∃t_end, ∃conditions: (t ≥ t_end ∨ Met(conditions)) → Dissolve(C)
 ```
 
-A Scaffold MUST have built-in expirationâ€”either:
+A Scaffold MUST have built-in expiration—either:
 - **Temporal**: Fixed end date
 - **Conditional**: Triggered by achievement
 - **Milestone**: Triggered by progress markers
 
-**Without sunset â†’ NOT a Scaffold.** A "permanent Scaffold" is incoherent. A "permanent emergency power" is a Piton.
+**Without sunset → NOT a Scaffold.** A "permanent Scaffold" is incoherent. A "permanent emergency power" is a Piton.
 
 ##### Formal Definition
 
 ```
-âŠ¡C[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.30 âˆ§ Coord(C) âˆ§ (Sunset(C) âˆ¨ Â¬Enforce(C)) âˆ§ Theater(C) â‰¤ 0.70
+⊡C[I] ↔ χ(C, I.P, I.S) ≤ 0.30 ∧ Coord(C) ∧ (Sunset(C) ∨ ¬Enforce(C)) ∧ Theater(C) ≤ 0.70
 ```
 
 **Note on temporality:** The implementation uses a soft temporality gate: an explicit sunset clause is the strongest signal, but absence of active enforcement also qualifies. Non-enforced coordination is inherently scaffold-like (temporary support that dissolves on its own) rather than tangled-rope-like (enforced extraction). See `scaffold_temporality_check/1` in `drl_core.pl`.
 
 **Components:**
-- **Ï‡ â‰¤ 0.30**: Low extraction (enabling, not extractive)
+- **χ ≤ 0.30**: Low extraction (enabling, not extractive)
 - **Coord(C)**: Has genuine coordination function
-- **Sunset(C)**: Built-in expiration clause â† **Critical distinguisher**
-- **Theater â‰¤ 0.70**: Ensures real work, not performance
+- **Sunset(C)**: Built-in expiration clause ← **Critical distinguisher**
+- **Theater ≤ 0.70**: Ensures real work, not performance
 
 ##### Implementation
 
@@ -1889,49 +1889,49 @@ classify_from_metrics(C, _BaseEps, Chi, _Supp, _Context, scaffold) :-
     \+ (narrative_ontology:constraint_metric(C, TheaterMetricName, TR), TR > 0.70), !.
 ```
 
-**Canonical Thresholds** (logic_thresholds.md Â§3e):
+**Canonical Thresholds** (logic_thresholds.md §3e):
 - `scaffold_extraction_ceil` = **0.45**
 
 **Priority:** Scaffold > Rope (checked after Mountain, Snare, before Rope)
 
-##### Lifecycle: Sunset Violation â†’ Piton
+##### Lifecycle: Sunset Violation → Piton
 
 **Healthy:**
 ```
-Build â†’ Serve purpose â†’ Sunset triggers â†’ Dissolve
+Build → Serve purpose → Sunset triggers → Dissolve
 ```
 
 **Degraded (Type 5 drift):**
 ```
-Build â†’ Serve purpose â†’ Sunset violated â†’ Piton
+Build → Serve purpose → Sunset violated → Piton
 ```
 
-**Sunset Drift:** A Scaffold without a functioning sunset mechanism is structurally indistinguishable from a decaying Rope or proto-Piton. The sunset clause is not merely administrative detailâ€”it's the core structural feature that defines Scaffold type. When sunset drifts (conditions become ambiguous, timeline extends indefinitely, triggers never evaluated), the constraint transitions from temporary support (Scaffold) to permanent theater (Piton). This is why "Monitor Sunset" is the highest-priority action for Scaffolds.
+**Sunset Drift:** A Scaffold without a functioning sunset mechanism is structurally indistinguishable from a decaying Rope or proto-Piton. The sunset clause is not merely administrative detail—it's the core structural feature that defines Scaffold type. When sunset drifts (conditions become ambiguous, timeline extends indefinitely, triggers never evaluated), the constraint transitions from temporary support (Scaffold) to permanent theater (Piton). This is why "Monitor Sunset" is the highest-priority action for Scaffolds.
 
 ##### Action Implication
 
-**Monitor Sunset** â†’ Ensure timely dissolution.
+**Monitor Sunset** → Ensure timely dissolution.
 
 - Track progress toward sunset conditions
 - **Resist sunset extension** (unless conditions genuinely unmet)
 - If extension needed, rebuild as new Scaffold with new sunset
-- If violated â†’ flag as Piton
+- If violated → flag as Piton
 
 ##### Summary
 
-**Use when:** Temporary support with sunset (Ï‡ â‰¤ 0.30, Coord, Sunset, Theater â‰¤ 0.70)
+**Use when:** Temporary support with sunset (χ ≤ 0.30, Coord, Sunset, Theater ≤ 0.70)
 
-**Distinguisher:** Sunset clauseâ€”built-in expiration
+**Distinguisher:** Sunset clause—built-in expiration
 
 **Action:** Monitor sunset, resist extension
 
-**Degradation:** Sunset violation â†’ Piton
+**Degradation:** Sunset violation → Piton
 
-**Next operator:** Piton (âŠŸ) â€” degraded constraints
+**Next operator:** Piton (⊟) — degraded constraints
 
 ---
 
-#### B.6 Piton Operator: âŠŸC[I]
+#### B.6 Piton Operator: ⊟C[I]
 
 ##### Conceptual Overview
 
@@ -1947,7 +1947,7 @@ From your index I, a Piton appears as **theater without substance**. Performance
 - **Obsolete regulations**: No longer serve purpose but remain enforced
 - **Expired Scaffolds**: Sunset violated, now just bureaucratic theater
 
-##### The Distinguishing Feature: Theater Ratio â‰¥ 0.70
+##### The Distinguishing Feature: Theater Ratio ≥ 0.70
 
 **Theater Ratio:**
 ```
@@ -1957,24 +1957,24 @@ Theater(C) = Performance / Substance
 When Performance >> Substance, constraint is "coordination in name only."
 
 **Pitons are characterized by:**
-- **Ï‡ â‰¤ 0.25**: Low effective extraction (inactive or near-inactive)
-- **Îµ > 0.10**: Still costs energy (maintenance burden)
-- **Theater â‰¥ 0.70**: High performance/substance ratio
+- **χ ≤ 0.25**: Low effective extraction (inactive or near-inactive)
+- **ε > 0.10**: Still costs energy (maintenance burden)
+- **Theater ≥ 0.70**: High performance/substance ratio
 
-The theater floor (â‰¥ 0.70) distinguishes Pitons from low-extraction Ropes:
-- **Rope**: Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.45, Theater < 0.70 (real coordination)
-- **Piton**: Ï‡ â‰¤ 0.45, Îµ > 0.10, Theater â‰¥ 0.70 (theater dominates)
+The theater floor (≥ 0.70) distinguishes Pitons from low-extraction Ropes:
+- **Rope**: χ ≤ 0.35, ε ≤ 0.45, Theater < 0.70 (real coordination)
+- **Piton**: χ ≤ 0.45, ε > 0.10, Theater ≥ 0.70 (theater dominates)
 
 ##### Formal Definition
 
 ```
-âŠŸC[I] â†" Ï‡(C, I.P, I.S) â‰¤ 0.25 âˆ§ Îµ(C) > 0.10 âˆ§ Theater(C) â‰¥ 0.70
+⊟C[I] ↔ χ(C, I.P, I.S) ≤ 0.25 ∧ ε(C) > 0.10 ∧ Theater(C) ≥ 0.70
 ```
 
 **Components:**
-- **Ï‡ â‰¤ 0.25**: Low effective extraction
-- **Îµ > 0.10**: Still requires maintenance
-- **Theater â‰¥ 0.70**: Performance >> Substance
+- **χ ≤ 0.25**: Low effective extraction
+- **ε > 0.10**: Still requires maintenance
+- **Theater ≥ 0.70**: Performance >> Substance
 
 ##### Implementation
 
@@ -1991,7 +1991,7 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
     TR >= TRFloor, !.
 ```
 
-**Canonical Thresholds** (logic_thresholds.md Â§3f):
+**Canonical Thresholds** (logic_thresholds.md §3f):
 - `piton_extraction_ceiling` = **0.45**
 - `piton_epsilon_floor` = **0.10**
 - `piton_theater_floor` = **0.70**
@@ -2000,32 +2000,32 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
 
 ##### Action Implication
 
-**Bypass** â†’ Route around obsolete structure.
+**Bypass** → Route around obsolete structure.
 
-**Critical distinction: Bypass â‰  Cut.**
+**Critical distinction: Bypass ≠ Cut.**
 
 - **Cut (Snare action)**: Active removal of harmful extraction mechanism. Snares are **active threats** requiring resistance.
 - **Bypass (Piton action)**: Route around inert theater. Pitons are **inactive remnants** not worth the energy of destruction.
 
 The energy-accounting logic differs:
-- **Snare**: High extraction (Îµ â‰¥ 0.46), high suppression (Supp â‰¥ 0.60) â†’ **active harm** â†’ justify energy cost of cutting
-- **Piton**: Low extraction (Ï‡ â‰¤ 0.45), mostly theater (â‰¥ 0.70) â†' **inert decay** â†' energy better spent building alternatives
+- **Snare**: High extraction (ε ≥ 0.46), high suppression (Supp ≥ 0.60) → **active harm** → justify energy cost of cutting
+- **Piton**: Low extraction (χ ≤ 0.45), mostly theater (≥ 0.70) → **inert decay** → energy better spent building alternatives
 
 Don't waste energy maintaining or fighting Pitons:
 - Ignore where possible
 - Build alternatives that make Piton irrelevant
-- Don't lobby for removal (low priorityâ€”it's already inactive)
+- Don't lobby for removal (low priority—it's already inactive)
 - Let natural obsolescence complete
 
 **Example:** QWERTY keyboard is a Piton. You could campaign to replace it (high energy cost, resistance from installed base), or you could route around it (voice input, alternative layouts for new contexts). Bypass > Cut for inert constraints.
 
 ##### Summary
 
-**Use when:** Degraded constraint with high theater (Ï‡ â‰¤ 0.25, Îµ > 0.10, Theater â‰¥ 0.70)
+**Use when:** Degraded constraint with high theater (χ ≤ 0.25, ε > 0.10, Theater ≥ 0.70)
 
-**Distinguisher:** Theater ratio â‰¥ 0.70
+**Distinguisher:** Theater ratio ≥ 0.70
 
-**Action:** Bypassâ€”route around, don't engage
+**Action:** Bypass—route around, don't engage
 
 **Origin:** Often degraded Scaffolds (sunset violation) or obsolete Ropes
 
@@ -2058,12 +2058,12 @@ This clause does **not** check χ or suppression. A dead-coordination constraint
 
 ##### Conceptual Overview
 
-An **Naturalized** constraint is one where power scaling dramatically changes the experienced extraction, making the constraint's "true nature" structurally ambiguous. It has high base extraction (Îµ > 0.45) but low power-scaled extraction (Ï‡ < 0.40), meaning the raw cost is high but the effective experienced cost is low from the evaluating index.
+An **Naturalized** constraint is one where power scaling dramatically changes the experienced extraction, making the constraint's "true nature" structurally ambiguous. It has high base extraction (ε > 0.45) but low power-scaled extraction (χ < 0.40), meaning the raw cost is high but the effective experienced cost is low from the evaluating index.
 
-This catches a specific structural gap: constraints that fall through all other gates because their base extraction is too high for Rope but their power-scaled extraction is too low for Tangled Rope or Snare. The disconnect between raw and effective extraction is itself informative â€" it reveals that power position is doing significant work in mediating the constraint's impact.
+This catches a specific structural gap: constraints that fall through all other gates because their base extraction is too high for Rope but their power-scaled extraction is too low for Tangled Rope or Snare. The disconnect between raw and effective extraction is itself informative — it reveals that power position is doing significant work in mediating the constraint's impact.
 
 **Examples:**
-- **Professional licensing** (from institutional perspective): High Îµ (training costs, compliance burden) but institutional power dramatically reduces effective extraction â€" the institution benefits from the barrier to entry
+- **Professional licensing** (from institutional perspective): High ε (training costs, compliance burden) but institutional power dramatically reduces effective extraction — the institution benefits from the barrier to entry
 - **Complex tax codes** (from organized perspective): High raw complexity/cost but organized actors reduce effective burden through professional management
 - **International trade regulations** (from institutional perspective): High base extraction but institutional actors extract net benefit through regulatory capture
 
@@ -2074,16 +2074,16 @@ The constraint's classification is "naturalized" because the same structural mec
 ##### Formal Definition
 
 ```
-Naturalized(C) â†" Îµ(C) > 0.45 âˆ§ Ï‡(C, I.P, I.S) < 0.40
+Naturalized(C) ↔ ε(C) > 0.45 ∧ χ(C, I.P, I.S) < 0.40
 ```
 
 **Components:**
-- **Îµ(C) > 0.45**: Base extraction exceeds Rope ceiling (`rope_epsilon_ceiling`)
+- **ε(C) > 0.45**: Base extraction exceeds Rope ceiling (`rope_epsilon_ceiling`)
   - Constraint imposes real costs in absolute terms
-- **Ï‡(C, I.P, I.S) < 0.40**: Power-scaled extraction below Tangled Rope floor (`tangled_rope_chi_floor`)
+- **χ(C, I.P, I.S) < 0.40**: Power-scaled extraction below Tangled Rope floor (`tangled_rope_chi_floor`)
   - From the evaluating index, those costs are dramatically compressed by power position
 
-**Gate Position:** Between Piton and unknown â€" catches constraints that fall through all six primary gates.
+**Gate Position:** Between Piton and unknown — catches constraints that fall through all six primary gates.
 
 ##### Implementation
 
@@ -2104,8 +2104,8 @@ Naturalized constraints participate in purity contamination propagation with spe
 
 | Property | Value | Rationale |
 |----------|-------|-----------|
-| `type_contamination_strength` | 0.3 | Moderate-low â€" structural ambiguity limits contagion |
-| `type_immunity` | 0.7 | High susceptibility â€" ambiguous structures easily influenced |
+| `type_contamination_strength` | 0.3 | Moderate-low — structural ambiguity limits contagion |
+| `type_immunity` | 0.7 | High susceptibility — ambiguous structures easily influenced |
 
 ##### Action Implication
 
@@ -2115,32 +2115,32 @@ When facing a Naturalized constraint:
 - Investigate why power scaling is doing so much work
 - Re-evaluate from multiple indices (powerless, moderate, institutional)
 - The naturalization often reveals that the constraint is a Tangled Rope or Snare from lower-power indices
-- Consider whether the base extraction (Îµ > 0.45) represents real structural cost that power is masking
+- Consider whether the base extraction (ε > 0.45) represents real structural cost that power is masking
 
 ##### Summary
 
-**Use when:** High base extraction with low power-scaled extraction (Îµ > 0.45, Ï‡ < 0.40)
+**Use when:** High base extraction with low power-scaled extraction (ε > 0.45, χ < 0.40)
 
 **Distinguisher:** Power scaling dramatically compresses experienced extraction
 
-**Action:** Investigate â€" re-evaluate from multiple indices
+**Action:** Investigate — re-evaluate from multiple indices
 
 **Diagnostic value:** Reveals constraints where power position does the most structural work in mediating experience
 
 ---
 
-**[Â§II.B COMPLETE - Seven Core Modal Operators]**
+**[§II.B COMPLETE - Seven Core Modal Operators]**
 
 All seven constraint types now defined with full triple-layer format:
-- âœ… Mountain (â– ): Unchangeable terrain
-- âœ… Rope (âŠž): Coordination mechanisms
-- âœ… Snare (âŠ ): Extraction traps
-- âœ… Tangled Rope (âŠžâŠ ): Hybrid coordination-extraction
-- âœ… Scaffold (âŠ¡): Temporary support
-- âœ… Piton (âŠŸ): Degraded theater
-- âœ… Naturalized: Power-scaling ambiguity
+- ✅ Mountain (■): Unchangeable terrain
+- ✅ Rope (⊞): Coordination mechanisms
+- ✅ Snare (⊠): Extraction traps
+- ✅ Tangled Rope (⊞⊠): Hybrid coordination-extraction
+- ✅ Scaffold (⊡): Temporary support
+- ✅ Piton (⊟): Degraded theater
+- ✅ Naturalized: Power-scaling ambiguity
 
-**Next:** Â§II.C Detection Pattern Operators (FNL, CI_Rope, FCR)
+**Next:** §II.C Detection Pattern Operators (FNL, CI_Rope, FCR)
 
 ---
 
@@ -2160,24 +2160,24 @@ The simplest detection pattern. If someone claims a constraint is a Mountain (un
 
 **Formal Definition:**
 ```
-FM(C) â†” Claimed(â– C) âˆ§ âˆƒI(Â¬â– C[I]) âˆ§ Îµ(C) > 0.70
+FM(C) ↔ Claimed(■C) ∧ ∃I(¬■C[I]) ∧ ε(C) > 0.70
 ```
 
 **Detection logic:**
 - Constraint is explicitly claimed as Mountain, OR
 - Indexed classification produces Mountain from some perspectives
-- BUT Îµ > 0.70 (high extraction contradicts natural emergence)
+- BUT ε > 0.70 (high extraction contradicts natural emergence)
 - AND from at least one index it's clearly NOT a Mountain
 
-**Why Îµ > 0.70?**
+**Why ε > 0.70?**
 
-High enforcement contradicts the claim of natural inevitability. If it takes 70%+ energy to maintain, it's not a natural lawâ€”it's a constructed constraint requiring force.
+High enforcement contradicts the claim of natural inevitability. If it takes 70%+ energy to maintain, it's not a natural law—it's a constructed constraint requiring force.
 
 **Example:**
 ```
 Claimed: "Poverty is inevitable" (Mountain claim)
-Actual: Îµ = 0.75, Supp = 0.80
-Detection: High enforcement reveals construction â†’ FM âœ“
+Actual: ε = 0.75, Supp = 0.80
+Detection: High enforcement reveals construction → FM ✓
 Reclassification: Tangled Rope or Snare (depending on power position)
 ```
 
@@ -2192,7 +2192,7 @@ false_mountain(C) :-
 
 ---
 
-#### C.2 False Natural Law (FNL) â€” Stage 7 Extension
+#### C.2 False Natural Law (FNL) — Stage 7 Extension
 
 **Conceptual Overview:**
 
@@ -2200,20 +2200,20 @@ Physics-washing detector. Uses Boltzmann compliance test to detect constructed c
 
 **Formal Definition:**
 ```
-FNL(C) â†” Claimed(â– C) 
-         âˆ§ boltzmann_compliant(C, non_compliant(Score, Threshold))
-         âˆ§ Score > Threshold
-         âˆ§ Îµ(C) > 0.70
+FNL(C) ↔ Claimed(■C) 
+         ∧ boltzmann_compliant(C, non_compliant(Score, Threshold))
+         ∧ Score > Threshold
+         ∧ ε(C) > 0.70
 ```
 
 **The critical test:**
 
 Natural laws **factorize** across index dimensions:
 ```
-Ï‡(P, S) â‰ˆ f(P) Ã— g(S)
+χ(P, S) ≈ f(P) × g(S)
 ```
 
-If classification depends on nonsensical coupling of Power Ã— Scope (e.g., only binds powerless at global scale), it's constructed, not natural.
+If classification depends on nonsensical coupling of Power × Scope (e.g., only binds powerless at global scale), it's constructed, not natural.
 
 **Example:**
 ```
@@ -2223,23 +2223,23 @@ Boltzmann test:
   (powerless, global): Snare (high extraction)
   (institutional, global): Rope (net benefit)
   
-Coupling detected: Power Ã— Scope interaction
-Factorization fails: Ï‡(P,S) â‰  f(P) Ã— g(S)
+Coupling detected: Power × Scope interaction
+Factorization fails: χ(P,S) ≠ f(P) × g(S)
 
-FNL detected â†’ Reclassification: Constructed Constraint
+FNL detected → Reclassification: Constructed Constraint
 ```
 
 **Why this matters:**
 
 Catches modern physics-washing. "It's just how things are" rhetoric often hides extractive construction. Boltzmann test mathematically refutes the claim.
 
-**See:** logic_extensions.md Â§1.4 for full FNL detection algorithm
+**See:** logic_extensions.md §1.4 for full FNL detection algorithm
 
 **Implementation:** `signature_detection.pl`, `false_natural_law/2`
 
 ---
 
-#### C.3 Coupling-Invariant Rope (CI_Rope) â€” Stage 7 Extension
+#### C.3 Coupling-Invariant Rope (CI_Rope) — Stage 7 Extension
 
 **Conceptual Overview:**
 
@@ -2247,41 +2247,41 @@ Certification that a Rope is genuinely coordinating, not coordination-washing.
 
 **Formal Definition:**
 ```
-CI_Rope(C) â†” boltzmann_compliant(C, compliant(_))
-             âˆ§ scale_invariant(C)
-             âˆ§ excess_extraction(C, X) âˆ§ X â‰ˆ 0
-             âˆ§ Coord(C)
+CI_Rope(C) ↔ boltzmann_compliant(C, compliant(_))
+             ∧ scale_invariant(C)
+             ∧ excess_extraction(C, X) ∧ X ≈ 0
+             ∧ Coord(C)
 ```
 
 **The four tests:**
 
 1. **Factorization** (Boltzmann compliance)
 2. **Scope invariance** (same type at all scopes)
-3. **At Boltzmann floor** (Îµ â‰ˆ theoretical minimum)
+3. **At Boltzmann floor** (ε ≈ theoretical minimum)
 4. **Coordination function** (genuine value provision)
 
 **Example:**
 ```
 UTF-8 encoding:
-  âœ“ Factorizes (no Power Ã— Scope coupling)
-  âœ“ Scope-invariant (works identically at local and global)
-  âœ“ At floor (Îµ = 0.12 vs floor = 0.02, excess within tolerance)
-  âœ“ Coordinates (universal text representation)
+  ✓ Factorizes (no Power × Scope coupling)
+  ✓ Scope-invariant (works identically at local and global)
+  ✓ At floor (ε = 0.12 vs floor = 0.02, excess within tolerance)
+  ✓ Coordinates (universal text representation)
   
-Certification: CI_Rope âœ“
+Certification: CI_Rope ✓
 ```
 
 **Why this matters:**
 
 Distinguishes true coordination (UTF-8) from coordination-washing (opt-out privacy defaults, behavioral nudges).
 
-**See:** logic_extensions.md Â§1.5 for full CI_Rope certification process
+**See:** logic_extensions.md §1.5 for full CI_Rope certification process
 
 **Implementation:** `signature_detection.pl`, `coupling_invariant_rope/2`
 
 ---
 
-#### C.4 False CI_Rope (FCR) â€” Stage 7 Extension
+#### C.4 False CI_Rope (FCR) — Stage 7 Extension
 
 **Conceptual Overview:**
 
@@ -2289,59 +2289,59 @@ Coordination-washing detector. Catches constraints that appear as Ropes from met
 
 **Formal Definition:**
 ```
-FCR(C) â†” appears_as_rope(C)
-         âˆ§ (Â¬boltzmann_compliant(C)
-            âˆ¨ Â¬scale_invariant(C)
-            âˆ¨ excess_extraction(C, X) > threshold
-            âˆ¨ nonsensical_coupling(C))
+FCR(C) ↔ appears_as_rope(C)
+         ∧ (¬boltzmann_compliant(C)
+            ∨ ¬scale_invariant(C)
+            ∨ excess_extraction(C, X) > threshold
+            ∨ nonsensical_coupling(C))
 ```
 
 **Detection logic:**
 
 If a constraint:
-- Passes Rope thresholds (Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.45), BUT
+- Passes Rope thresholds (χ ≤ 0.35, ε ≤ 0.45), BUT
 - Fails any of the four CI_Rope tests
 
-Then it's coordination-washingâ€”extraction hidden behind low metrics.
+Then it's coordination-washing—extraction hidden behind low metrics.
 
 **Example:**
 ```
 Social media "free" platform:
-  Appears: Îµ = 0.20, Ï‡ = 0.25 (looks like Rope)
+  Appears: ε = 0.20, χ = 0.25 (looks like Rope)
   
   Tests:
-    âœ— Factorization (couples Power Ã— Network Scope)
-    âœ— Scope variance (Rope locally, Snare globally)
-    âœ— Excess extraction (Îµ = 0.20 vs floor = 0.02)
-    âœ— Questionable coordination (optimizes engagement, not connection)
+    ✗ Factorization (couples Power × Network Scope)
+    ✗ Scope variance (Rope locally, Snare globally)
+    ✗ Excess extraction (ε = 0.20 vs floor = 0.02)
+    ✗ Questionable coordination (optimizes engagement, not connection)
     
-FCR detected â†’ Reclassification: Tangled Rope
+FCR detected → Reclassification: Tangled Rope
 ```
 
 **Why this matters:**
 
-Modern extraction techniques hide behind low Îµ:
+Modern extraction techniques hide behind low ε:
 - Behavioral defaults (opt-out, not opt-in)
 - Distributed enforcement (no single suppression point)
 - Asymmetric network effects
 
 FCR catches these patterns.
 
-**See:** logic_extensions.md Â§1.6 for full FCR detection
+**See:** logic_extensions.md §1.6 for full FCR detection
 
 **Implementation:** `signature_detection.pl`, `false_ci_rope/2`
 
 ---
 
-**[Â§II.C COMPLETE - Detection Pattern Operators]**
+**[§II.C COMPLETE - Detection Pattern Operators]**
 
 Four detection patterns defined:
-- âœ… False Mountain (FM): High extraction contradicts natural claim
-- âœ… False Natural Law (FNL): Boltzmann coupling reveals construction
-- âœ… Coupling-Invariant Rope (CI_Rope): Certified true coordination
-- âœ… False CI_Rope (FCR): Coordination-washing detector
+- ✅ False Mountain (FM): High extraction contradicts natural claim
+- ✅ False Natural Law (FNL): Boltzmann coupling reveals construction
+- ✅ Coupling-Invariant Rope (CI_Rope): Certified true coordination
+- ✅ False CI_Rope (FCR): Coordination-washing detector
 
-**Next:** Â§II.D Power-Scaling Function (Ï€ values and rationale)
+**Next:** §II.D Power-Scaling Function (π values and rationale)
 
 ---
 
@@ -2372,20 +2372,20 @@ Where:
 
 #### Power Position Modifiers
 
-| Position | Ï€ Value | Rationale |
+| Position | π Value | Rationale |
 |----------|---------|-----------|
-| **powerless** | **1.5** | Extraction amplifiedâ€”bear full cost, no deflection |
-| **moderate** | **1.0** | Baselineâ€”average agency |
-| **powerful** | **0.6** | Extraction reducedâ€”can deflect costs, influence rules |
-| **organized** | **0.4** | Shared burdenâ€”collective action distributes costs |
-| **institutional** | **-0.2** | Net beneficiaryâ€”extract MORE than pay |
-| **analytical** | **1.15** | Analytical clarityâ€”detects normalized extraction |
+| **powerless** | **1.5** | Extraction amplified—bear full cost, no deflection |
+| **moderate** | **1.0** | Baseline—average agency |
+| **powerful** | **0.6** | Extraction reduced—can deflect costs, influence rules |
+| **organized** | **0.4** | Shared burden—collective action distributes costs |
+| **institutional** | **-0.2** | Net beneficiary—extract MORE than pay |
+| **analytical** | **1.15** | Analytical clarity—detects normalized extraction |
 
 ---
 
 #### Rationale by Position
 
-**Ï€(powerless) = 1.5:**
+**π(powerless) = 1.5:**
 
 Powerless agents bear amplified extraction because they cannot:
 - Deflect costs to others
@@ -2393,31 +2393,31 @@ Powerless agents bear amplified extraction because they cannot:
 - Exit without catastrophic loss
 - Influence rule-making
 
-**Example:** Payday loan (Îµ = 0.70)
-- Powerless experiences: Ï‡ = 0.70 Ã— 1.5 = 1.05 (extraction exceeds coordination)
+**Example:** Payday loan (ε = 0.70)
+- Powerless experiences: χ = 0.70 × 1.5 = 1.05 (extraction exceeds coordination)
 - The 1.5 multiplier captures how lack of options amplifies harm
 
-**Ï€(moderate) = 1.0:**
+**π(moderate) = 1.0:**
 
 Baseline. Moderate agents have:
 - Some choices (but limited)
 - Some negotiating power (but constrained)
 - Some exit options (but costly)
 
-This is the reference point for Îµ calibration.
+This is the reference point for ε calibration.
 
-**Ï€(powerful) = 0.6:**
+**π(powerful) = 0.6:**
 
 Powerful agents deflect ~40% of extraction via:
 - Rule influence (shape constraints to benefit themselves)
 - Cost transfer (push burden to others)
 - Exit arbitrage (credible threat of leaving)
 
-**Example:** Employment contract (Îµ = 0.50)
-- Executive experiences: Ï‡ = 0.50 Ã— 0.6 = 0.30 (manageable, even beneficial)
+**Example:** Employment contract (ε = 0.50)
+- Executive experiences: χ = 0.50 × 0.6 = 0.30 (manageable, even beneficial)
 - Same contract that traps others becomes opportunity for powerful
 
-**Ï€(organized) = 0.4:**
+**π(organized) = 0.4:**
 
 Collective action distributes burden. Union members share:
 - Legal costs (collective bargaining)
@@ -2426,26 +2426,26 @@ Collective action distributes burden. Union members share:
 
 The 0.4 modifier reflects ~60% cost reduction from organization.
 
-**Ï€(institutional) = -0.2:**
+**π(institutional) = -0.2:**
 
 **Negative value = net extraction FROM system.**
 
-Institutional agents don't just pay lessâ€”they extract more than they contribute. The -0.2 captures:
+Institutional agents don't just pay less—they extract more than they contribute. The -0.2 captures:
 - Rule-making privilege (create constraints that benefit you)
 - Regulatory capture (shape enforcement to your advantage)
 - Rent extraction (extract from system without providing value)
 
-**Critical implementation note:** Handle sign carefully. Negative Ï‡ means net benefit, not impossibility.
+**Critical implementation note:** Handle sign carefully. Negative χ means net benefit, not impossibility.
 
-**Ï€(analytical) = 1.15:**
+**π(analytical) = 1.15:**
 
 **The degeneracy-breaking value.**
 
-At Ï€ = 1.0, analytical and moderate perspectives produced identical Ï‡ values, making them computationally indistinguishable.
+At π = 1.0, analytical and moderate perspectives produced identical χ values, making them computationally indistinguishable.
 
-At Ï€ = 1.15, we observe a critical pattern in **93 corpus constraints**:
-- Moderate agents: Ï‡ = 0.50-0.60 (Tangled Rope, normalized as "just how things work")
-- Analytical agents: Ï‡ = 0.58-0.69 (Snare threshold crossed, extraction detected)
+At π = 1.15, we observe a critical pattern in **93 corpus constraints**:
+- Moderate agents: χ = 0.50-0.60 (Tangled Rope, normalized as "just how things work")
+- Analytical agents: χ = 0.58-0.69 (Snare threshold crossed, extraction detected)
 
 **This is not "smarter people see more."** It's **freedom from normalization pressure.**
 
@@ -2456,9 +2456,9 @@ Analytical agents aren't subject to daily constraints that force rationalization
 
 The 1.15 modifier captures detection of extraction that embedded agents must normalize to function.
 
-**Example:** Credit card rewards system (Îµ = 0.55)
-- Moderate: Ï‡ = 0.55 Ã— 1.0 = 0.55 (Tangledâ€”"I get rewards, but...")
-- Analytical: Ï‡ = 0.55 Ã— 1.15 = 0.63 (near Snareâ€”"transfer from unsophisticated to sophisticated users")
+**Example:** Credit card rewards system (ε = 0.55)
+- Moderate: χ = 0.55 × 1.0 = 0.55 (Tangled—"I get rewards, but...")
+- Analytical: χ = 0.55 × 1.15 = 0.63 (near Snare—"transfer from unsophisticated to sophisticated users")
 
 Both true. Moderate agents can't see the full extraction (survival requires participation). Analytical agents detect the transfer mechanism.
 
@@ -2476,7 +2476,7 @@ Both true. Moderate agents can't see the full extraction (survival requires part
 
 2. **Temporal stability**: Modifiers may drift as power structures evolve
    - Requires periodic recalibration
-   - Watch for organized â†’ institutional transitions (labor movements, etc.)
+   - Watch for organized → institutional transitions (labor movements, etc.)
 
 3. **Granularity**: Six positions are coarse-grained
    - Finer distinctions possible (petit bourgeois vs haute bourgeois)
@@ -2499,7 +2499,7 @@ param(power_modifier_institutional, -0.2).
 param(power_modifier_analytical, 1.15).
 ```
 
-**Reference:** logic_thresholds.md Â§1 for complete power modifier registry
+**Reference:** logic_thresholds.md §1 for complete power modifier registry
 
 ---
 
@@ -2573,22 +2573,22 @@ These thresholds are hardcoded (not config-driven), unlike the full `classify_fr
 
 ---
 
-**[Â§II.D COMPLETE]**
+**[§II.D COMPLETE]**
 
 Power-scaling function defined with full rationale for all six modifiers, including:
-- âœ… Amplification (powerless 1.5Ã—)
-- âœ… Deflection (powerful 0.6Ã—)
-- âœ… Collective burden-sharing (organized 0.4Ã—)
-- âœ… Net extraction (institutional -0.2Ã—)
-- âœ… Degeneracy-breaking (analytical 1.15Ã—)
+- ✅ Amplification (powerless 1.5×)
+- ✅ Deflection (powerful 0.6×)
+- ✅ Collective burden-sharing (organized 0.4×)
+- ✅ Net extraction (institutional -0.2×)
+- ✅ Degeneracy-breaking (analytical 1.15×)
 
-**Next:** Â§II.E Scope Modifiers (Ïƒ values and verification difficulty)
+**Next:** §II.E Scope Modifiers (σ values and verification difficulty)
 
 ---
 
 ### E. Scope Modifiers
 
-The scope modifier Ïƒ(S) adjusts extraction based on verification difficulty at different scales.
+The scope modifier σ(S) adjusts extraction based on verification difficulty at different scales.
 
 **Core insight:** Larger scope = more participants = harder to verify claims = easier to hide extraction.
 
@@ -2596,20 +2596,20 @@ The scope modifier Ïƒ(S) adjusts extraction based on verification difficulty a
 
 #### Scope Modifiers Table
 
-| Scope | Ïƒ Value | Rationale |
+| Scope | σ Value | Rationale |
 |-------|---------|-----------|
-| **local** | **0.8** | Easy verification â†’ extraction dampened |
+| **local** | **0.8** | Easy verification → extraction dampened |
 | **regional** | **0.9** | Easier verification |
 | **national** | **1.0** | Baseline |
 | **continental** | **1.1** | Harder verification |
-| **global** | **1.2** | Hardest verification â†’ extraction amplified |
-| **universal** | **1.0** | Neutralâ€”natural laws are scope-invariant |
+| **global** | **1.2** | Hardest verification → extraction amplified |
+| **universal** | **1.0** | Neutral—natural laws are scope-invariant |
 
 ---
 
 #### Rationale by Scope
 
-**Ïƒ(local) = 0.8:**
+**σ(local) = 0.8:**
 
 Local scope enables direct verification:
 - Know the players (Dunbar number not exceeded)
@@ -2620,11 +2620,11 @@ Local scope enables direct verification:
 The 0.8 dampening reflects ~20% reduction in effective extraction due to transparency.
 
 **Example:** Local farmers market
-- Vendor overcharges once â†’ everyone knows â†’ vendor excluded
-- Îµ might be 0.40 (base extraction from market structure)
-- Ï‡ = 0.40 Ã— 0.8 = 0.32 (dampened by local accountability)
+- Vendor overcharges once → everyone knows → vendor excluded
+- ε might be 0.40 (base extraction from market structure)
+- χ = 0.40 × 0.8 = 0.32 (dampened by local accountability)
 
-**Ïƒ(regional) = 0.9:**
+**σ(regional) = 0.9:**
 
 Verification harder but still feasible:
 - State-level media coverage
@@ -2634,7 +2634,7 @@ Verification harder but still feasible:
 
 Slight dampening (10% reduction).
 
-**Ïƒ(national) = 1.0:**
+**σ(national) = 1.0:**
 
 Baseline. National scope is the reference point for most calibration:
 - Institutional mediators required (media, regulators)
@@ -2642,7 +2642,7 @@ Baseline. National scope is the reference point for most calibration:
 - Reputation mechanisms weakened
 - But still manageable scale
 
-**Ïƒ(continental) = 1.1:**
+**σ(continental) = 1.1:**
 
 Verification difficulty increases:
 - Multiple languages and legal systems
@@ -2652,7 +2652,7 @@ Verification difficulty increases:
 
 Amplification (10% increase).
 
-**Ïƒ(global) = 1.2:**
+**σ(global) = 1.2:**
 
 **Maximum amplification from Dunbar number constraints.**
 
@@ -2665,13 +2665,13 @@ At 8 billion participants:
 The 1.2 multiplier (20% amplification) reflects empirically observed extraction increase at global scale.
 
 **Example:** Global supply chain
-- Îµ = 0.50 (base extractionâ€”labor conditions, environmental costs)
-- Ï‡(powerless, global) = 0.50 Ã— 1.5 Ã— 1.2 = 0.90 (near maximum extraction)
-- Ï‡(institutional, global) = 0.50 Ã— -0.2 Ã— 1.2 = -0.12 (net extraction FROM system)
+- ε = 0.50 (base extraction—labor conditions, environmental costs)
+- χ(powerless, global) = 0.50 × 1.5 × 1.2 = 0.90 (near maximum extraction)
+- χ(institutional, global) = 0.50 × -0.2 × 1.2 = -0.12 (net extraction FROM system)
 
 Same supply chain: Snare for workers, Rope for institutions.
 
-**Ïƒ(universal) = 1.0:**
+**σ(universal) = 1.0:**
 
 **Special case: Natural laws are scope-invariant.**
 
@@ -2682,24 +2682,24 @@ Universal scope applies to:
 
 These constraints don't change with number of participants. Thermodynamics operates identically at local and global scales.
 
-The 1.0 modifier (neutral) reflects zero verification difficultyâ€”natural laws are self-verifying through observation.
+The 1.0 modifier (neutral) reflects zero verification difficulty—natural laws are self-verifying through observation.
 
 **Example:** Second Law of Thermodynamics
-- Îµ â‰ˆ 0 (no extractionâ€”just constraint on possibility)
-- Ïƒ(universal) = 1.0
-- Ï‡ same at all scopes (entropy increases regardless of scale)
+- ε ≈ 0 (no extraction—just constraint on possibility)
+- σ(universal) = 1.0
+- χ same at all scopes (entropy increases regardless of scale)
 
 ---
 
 #### The Dunbar Number Connection
 
-**Why Ïƒ(global) = 1.2 specifically?**
+**Why σ(global) = 1.2 specifically?**
 
 Based on Dunbar number (~150 stable relationships):
-- **Local** (< 150): All participants knowable â†’ verification easy
-- **Regional** (~1,000-10,000): Second-order networks â†’ verification feasible
-- **National** (~millions): Institutional mediation required â†’ baseline difficulty
-- **Global** (~billions): No direct verification path â†’ maximum difficulty
+- **Local** (< 150): All participants knowable → verification easy
+- **Regional** (~1,000-10,000): Second-order networks → verification feasible
+- **National** (~millions): Institutional mediation required → baseline difficulty
+- **Global** (~billions): No direct verification path → maximum difficulty
 
 The 1.2 value represents the empirically observed ceiling on verification-driven extraction amplification. Above this, additional scale doesn't further increase extraction (already at verification limit).
 
@@ -2711,18 +2711,18 @@ The 1.2 value represents the empirically observed ceiling on verification-driven
 
 **Known limitations:**
 
-1. **Information technology**: Digital verification may reduce Ïƒ values
+1. **Information technology**: Digital verification may reduce σ values
    - Blockchain, transparency platforms
    - But also: deep fakes, information overload
-   - Net effect unclearâ€”requires recalibration
+   - Net effect unclear—requires recalibration
 
 2. **Scope transitions**: Abrupt jumps between discrete levels
-   - Reality is continuous (local â†’ regional transition is gradual)
+   - Reality is continuous (local → regional transition is gradual)
    - Six levels are practical compromise
 
 3. **Cultural variation**: Verification difficulty varies by context
-   - High-trust societies: lower Ïƒ values
-   - Low-trust societies: higher Ïƒ values
+   - High-trust societies: lower σ values
+   - Low-trust societies: higher σ values
    - Current values reflect Western moderate-trust baseline
 
 4. **Temporal change**: Scope perception evolves
@@ -2741,33 +2741,33 @@ param(scope_modifier_global, 1.2).
 param(scope_modifier_universal, 1.0).
 ```
 
-**Reference:** logic_thresholds.md Â§2 for complete scope modifier registry
+**Reference:** logic_thresholds.md §2 for complete scope modifier registry
 
 ---
 
-**[Â§II.E COMPLETE]**
+**[§II.E COMPLETE]**
 
 Scope modifiers defined with verification difficulty rationale:
-- âœ… Local dampening (0.8Ã—, easy verification)
-- âœ… Regional/national baseline (0.9Ã—, 1.0Ã—)
-- âœ… Continental/global amplification (1.1Ã—, 1.2Ã—)
-- âœ… Universal neutrality (1.0Ã—, scope-invariant natural laws)
-- âœ… Dunbar number connection explained
+- ✅ Local dampening (0.8×, easy verification)
+- ✅ Regional/national baseline (0.9×, 1.0×)
+- ✅ Continental/global amplification (1.1×, 1.2×)
+- ✅ Universal neutrality (1.0×, scope-invariant natural laws)
+- ✅ Dunbar number connection explained
 
 ---
 
-**[Â§II COMPLETE - Basic Syntax]**
+**[§II COMPLETE - Basic Syntax]**
 
 All components of indexed constraint operators now defined:
-- âœ… Â§II.A: Index structure (P, T, E, S)
-- âœ… Â§II.B: Six core modal operators (â– , âŠž, âŠ , âŠžâŠ , âŠ¡, âŠŸ)
-- âœ… Â§II.C: Four detection patterns (FM, FNL, CI_Rope, FCR)
-- âœ… Â§II.D: Power-scaling function (Ï€ modifiers)
-- âœ… Â§II.E: Scope modifiers (Ïƒ modifiers)
+- ✅ §II.A: Index structure (P, T, E, S)
+- ✅ §II.B: Six core modal operators (■, ⊞, ⊠, ⊞⊠, ⊡, ⊟)
+- ✅ §II.C: Four detection patterns (FM, FNL, CI_Rope, FCR)
+- ✅ §II.D: Power-scaling function (π modifiers)
+- ✅ §II.E: Scope modifiers (σ modifiers)
 
-**Total Â§II word count:** ~17,000 words (comprehensive reference)
+**Total §II word count:** ~17,000 words (comprehensive reference)
 
-**Next section:** Â§III Temporal Logic & Lifecycle States
+**Next section:** §III Temporal Logic & Lifecycle States
 
 ---
 
@@ -2775,22 +2775,22 @@ All components of indexed constraint operators now defined:
 
 ### A. Temporal Operators (Indexed)
 
-Standard temporal logic operators apply to indexed constraints. **Critical:** These operators are **not universal**â€”they depend on your temporal index (I.T) and exit options (I.E).
+Standard temporal logic operators apply to indexed constraints. **Critical:** These operators are **not universal**—they depend on your temporal index (I.T) and exit options (I.E).
 
 ---
 
-#### Always (â–¡)
+#### Always (□)
 
 ```
-â–¡Ï†[I] â‰¡ âˆ€t: Ï†(t)[I]
+□φ[I] ≡ ∀t: φ(t)[I]
 ```
 
-"Always Ï† from index I" means Ï† holds at all times **accessible from your index**.
+"Always φ from index I" means φ holds at all times **accessible from your index**.
 
 **Indexical variation:**
 
 ```
-â–¡âŠ C[(powerless, immediate, trapped, local)]
+□⊠C[(powerless, immediate, trapped, local)]
 ```
 "This constraint is always a Snare from my perspective."
 
@@ -2801,7 +2801,7 @@ Standard temporal logic operators apply to indexed constraints. **Critical:** Th
 **But the same constraint:**
 
 ```
-â—ŠâŠžC[(institutional, historical, mobile, global)]
+◊⊞C[(institutional, historical, mobile, global)]
 ```
 "This constraint is eventually a Rope from institutional perspective."
 
@@ -2811,25 +2811,25 @@ Standard temporal logic operators apply to indexed constraints. **Critical:** Th
 
 **Both true.** "Always" and "Eventually" depend on temporal position, not just constraint.
 
-**This resolves the paradox of hope:** Hope is a function of your temporal index. From trapped + immediate, hope may be mathematically unjustified (â–¡âŠ  is objectively true). From mobile + generational, hope is rational (â—ŠâŠž is achievable).
+**This resolves the paradox of hope:** Hope is a function of your temporal index. From trapped + immediate, hope may be mathematically unjustified (□⊠ is objectively true). From mobile + generational, hope is rational (◊⊞ is achievable).
 
 ---
 
-#### Eventually (â—Š)
+#### Eventually (◊)
 
 ```
-â—ŠÏ†[I] â‰¡ âˆƒt: Ï†(t)[I]
+◊φ[I] ≡ ∃t: φ(t)[I]
 ```
 
-"Eventually Ï† from index I" means Ï† holds at some future time **accessible from your trajectory**.
+"Eventually φ from index I" means φ holds at some future time **accessible from your trajectory**.
 
 **Critical guard condition:**
 
 ```
-If E = trapped âˆ§ Â¬Transition(C) â†’ â—ŠExit is FALSE
+If E = trapped ∧ ¬Transition(C) → ◊Exit is FALSE
 ```
 
-If you're trapped and the constraint type doesn't transition (e.g., Snare remains Snare), eventual exit is **mathematically impossible** from your index. â—Š is not wishâ€”it's reachable trajectory.
+If you're trapped and the constraint type doesn't transition (e.g., Snare remains Snare), eventual exit is **mathematically impossible** from your index. ◊ is not wish—it's reachable trajectory.
 
 **Example:**
 
@@ -2838,48 +2838,48 @@ Powerless worker in company town:
   E = trapped (no jobs elsewhere, can't relocate)
   C = employment_contract (Snare from this index)
   
-  â—ŠExit? Only if:
-    1. Constraint transitions (Snare â†’ Rope via reform), OR
-    2. Index transitions (trapped â†’ mobile via collective action)
+  ◊Exit? Only if:
+    1. Constraint transitions (Snare → Rope via reform), OR
+    2. Index transitions (trapped → mobile via collective action)
     
-  Without transition: â—ŠExit = FALSE (objectively, not pessimism)
+  Without transition: ◊Exit = FALSE (objectively, not pessimism)
 ```
 
-This is why collective action matters. It's not just psychologicalâ€”it's the only path that makes â—ŠExit true.
+This is why collective action matters. It's not just psychological—it's the only path that makes ◊Exit true.
 
 ---
 
-#### Next (â—‹)
+#### Next (○)
 
 ```
-â—‹Ï†[I] â‰¡ Ï†(t+1)[I]
+○φ[I] ≡ φ(t+1)[I]
 ```
 
-"Next step, Ï† holds from index I."
+"Next step, φ holds from index I."
 
-Useful for state transition modeling (see Â§III.B).
+Useful for state transition modeling (see §III.B).
 
 ---
 
 #### Until (U) and Since (S)
 
 ```
-Ï† U Ïˆ[I] â‰¡ âˆƒt': Ïˆ(t')[I] âˆ§ âˆ€t < t': Ï†(t)[I]
+φ U ψ[I] ≡ ∃t': ψ(t')[I] ∧ ∀t < t': φ(t)[I]
 ```
 
-"Ï† holds until Ïˆ occurs from index I."
+"φ holds until ψ occurs from index I."
 
 ```
-Ï† S Ïˆ[I] â‰¡ âˆƒt': Ïˆ(t')[I] âˆ§ âˆ€t > t': Ï†(t)[I]
+φ S ψ[I] ≡ ∃t': ψ(t')[I] ∧ ∀t > t': φ(t)[I]
 ```
 
-"Ï† holds since Ïˆ occurred from index I."
+"φ holds since ψ occurred from index I."
 
 **Example:**
 
 ```
 Employment Snare Until Collective Bargaining:
-  âŠ (employment) U âŠž(employment)[(powerless, biographical, trapped, local)]
+  ⊠(employment) U ⊞(employment)[(powerless, biographical, trapped, local)]
   
   Means: Employment is Snare until unionization succeeds,
          after which it becomes Rope (from this index)
@@ -2891,7 +2891,7 @@ Employment Snare Until Collective Bargaining:
 
 Constraints are not static. They **degrade over time** through drift. The lifecycle model tracks state transitions between the seven types.
 
-**Metaphor:** Drift is the **weather** of constraint-space. You don't just find a Piton on the mountainâ€”you watch a Rope rot into one. Entropy is real.
+**Metaphor:** Drift is the **weather** of constraint-space. You don't just find a Piton on the mountain—you watch a Rope rot into one. Entropy is real.
 
 ---
 
@@ -2900,42 +2900,42 @@ Constraints are not static. They **degrade over time** through drift. The lifecy
 **The Seven Classical Transitions:**
 
 ```
-T1: âŠž â†’ âŠžâŠ   (Rope degradation via extraction accumulation)
-T2: âŠžâŠ  â†’ âŠ    (Tangled â†’ Snare via coordination loss)
-T3: âŠž â†’ âŠ¡    (Rope â†’ Scaffold via sunset acceptance)
-T4: âŠ¡ â†’ âŠŸ    (Scaffold â†’ Piton via sunset violation)
-T5: âŠžâŠ  â†’ âŠŸ   (Tangled â†’ Piton via extraction collapse)
-T6: âŠ  â†’ âŠŸ    (Snare â†’ Piton after extraction dried up)
-T7: â–  â†› *    (Mountains don't transitionâ€”unchangeable by definition)
+T1: ⊞ → ⊞⊠  (Rope degradation via extraction accumulation)
+T2: ⊞⊠ → ⊠   (Tangled → Snare via coordination loss)
+T3: ⊞ → ⊡    (Rope → Scaffold via sunset acceptance)
+T4: ⊡ → ⊟    (Scaffold → Piton via sunset violation)
+T5: ⊞⊠ → ⊟   (Tangled → Piton via extraction collapse)
+T6: ⊠ → ⊟    (Snare → Piton after extraction dried up)
+T7: ■ ↛ *    (Mountains don't transition—unchangeable by definition)
 ```
 
 **Transition Irreversibility (Entropic Direction):**
 
 ```
-Rope â†’ Snare: Low-energy natural decay (entropy)
-Snare â†’ Rope: Massive agency injection + Scaffold required
+Rope → Snare: Low-energy natural decay (entropy)
+Snare → Rope: Massive agency injection + Scaffold required
 ```
 
 Degradation is **thermodynamically favored**. Reform fights entropy. This is why:
 - Drift happens passively (just wait, constraints degrade)
 - Reform requires active energy (must fight natural decay)
-- Scaffold required for Snare â†’ Rope (can't jump directly)
+- Scaffold required for Snare → Rope (can't jump directly)
 
 **Visual state diagram:**
 
 ```
-         â”Œâ”€â”€â”€â”€â”€â”€â”
-         â”‚  â–    â”‚ (Mountains: unchangeable)
-         â””â”€â”€â”€â”€â”€â”€â”˜
+         ┌──────┐
+         │  ■   │ (Mountains: unchangeable)
+         └──────┘
               
-    â”Œâ”€â”€â”€â”€â”€â”  T1   â”Œâ”€â”€â”€â”€â”  T2   â”Œâ”€â”€â”€â”€â”  T6   â”Œâ”€â”€â”€â”€â”
-    â”‚  âŠž  â”‚ â”€â”€â”€â†’  â”‚ âŠžâŠ  â”‚ â”€â”€â”€â†’  â”‚ âŠ   â”‚ â”€â”€â”€â†’  â”‚ âŠŸ  â”‚
-    â””â”€â”€â”€â”€â”€â”˜       â””â”€â”€â”€â”€â”˜       â””â”€â”€â”€â”€â”˜       â””â”€â”€â”€â”€â”˜
-       â”‚  T3         â”‚  T5                      â–²
-       â–¼             â–¼                          â”‚
-    â”Œâ”€â”€â”€â”€â”€â”  T4   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-    â”‚  âŠ¡  â”‚ â”€â”€â”€â†’  â”‚ (Theater increases)
-    â””â”€â”€â”€â”€â”€â”˜       
+    ┌─────┐  T1   ┌────┐  T2   ┌────┐  T6   ┌────┐
+    │  ⊞  │ ───→  │ ⊞⊠ │ ───→  │ ⊠  │ ───→  │ ⊟  │
+    └─────┘       └────┘       └────┘       └────┘
+       │  T3         │  T5                      ▲
+       ▼             ▼                          │
+    ┌─────┐  T4   ┌────────────────────────────┘
+    │  ⊡  │ ───→  │ (Theater increases)
+    └─────┘       
 ```
 
 ---
@@ -2950,12 +2950,12 @@ Degradation is **thermodynamically favored**. Reform fights entropy. This is why
 - Result: Goodhart's Law (gaming the metric)
 
 **Type 2: Extraction Accumulation (EA)**
-- Îµ increases over time (T1: âŠž â†’ âŠžâŠ )
+- ε increases over time (T1: ⊞ → ⊞⊠)
 - Example: Free platform adds ads, then tracking, then manipulation
 - Mechanism: Ratchet effect (extraction easier to add than remove)
 
 **Type 3: Coordination Loss (CL)**
-- Coord(C) degrades (T2: âŠžâŠ  â†’ âŠ )
+- Coord(C) degrades (T2: ⊞⊠ → ⊠)
 - Example: Professional association becomes lobbying group
 - Original purpose lost, extraction remains
 
@@ -2965,17 +2965,17 @@ Degradation is **thermodynamically favored**. Reform fights entropy. This is why
 - Theater ratio increases
 
 **Type 5: Sunset Violation (SV)**
-- Scaffold sunset clause ignored (T4: âŠ¡ â†’ âŠŸ)
+- Scaffold sunset clause ignored (T4: ⊡ → ⊟)
 - Example: "Temporary" powers become permanent
 - **Critical observation:** Theater ratio spikes exactly when sunset missed
 - Mechanism: Function gone, but bureaucratic inertia maintains form
 
 **Type 6: Extraction Collapse (EC)**
-- Îµ drops rapidly (T5: âŠžâŠ  â†’ âŠŸ or T6: âŠ  â†’ âŠŸ)
+- ε drops rapidly (T5: ⊞⊠ → ⊟ or T6: ⊠ → ⊟)
 - Constraint no longer profitable to enforce
 - Example: Prohibition after repeal (still on books, no enforcement)
 
-**Type 7: Algorithm Shutdown â†’ Internalized Piton (AS)**
+**Type 7: Algorithm Shutdown → Internalized Piton (AS)**
 - Algorithmic constraint becomes habitual
 - Example: Factory rhythm internalized by workers
 - Mechanism: External constraint removed, behavior persists
@@ -2997,9 +2997,9 @@ CD(C, t_drift) ≡
 
 > **Note (February 2026):** The implementation uses an absolute coupling threshold (`boltzmann_coupling_threshold` = 0.25), not the delta-based 0.10 threshold from the original spec. See logic_extensions.md §4.1 for details.
 
-**Example:** App starts as messaging tool (Îµ = 0.10), gradually couples: messaging + location + contacts + camera + microphone (Îµ = 0.45). Coupling serves extraction, not coordination.
+**Example:** App starts as messaging tool (ε = 0.10), gradually couples: messaging + location + contacts + camera + microphone (ε = 0.45). Coupling serves extraction, not coordination.
 
-**See:** logic_extensions.md Â§4.1
+**See:** logic_extensions.md §4.1
 
 ---
 
@@ -3008,30 +3008,30 @@ CD(C, t_drift) ≡
 Minimum necessary extraction rises (legitimate complexity increase, not extractive drift).
 
 ```
-BFD(C, t_drift) â‰¡ 
-    BoltzmannFloor(C, t_drift) > BoltzmannFloor(C, tâ‚€)
-    âˆ§ Îµ(C, t_drift) tracks new floor
-    âˆ§ (Îµ(C) - Floor) remains constant
+BFD(C, t_drift) ≡ 
+    BoltzmannFloor(C, t_drift) > BoltzmannFloor(C, t₀)
+    ∧ ε(C, t_drift) tracks new floor
+    ∧ (ε(C) - Floor) remains constant
 ```
 
-**Example:** Local power grid â†’ regional grid. Floor rises from 0.05 to 0.12, but Îµ tracks floor (excess extraction stays constant). Complexity increased, not extractiveness.
+**Example:** Local power grid → regional grid. Floor rises from 0.05 to 0.12, but ε tracks floor (excess extraction stays constant). Complexity increased, not extractiveness.
 
-**See:** logic_extensions.md Â§4.2
+**See:** logic_extensions.md §4.2
 
 ---
 
-**Type 10: Purity Drift (PD) â€” Pre-Symptomatic Decay**
+**Type 10: Purity Drift (PD) — Pre-Symptomatic Decay**
 
-**Most critical v4.0 addition.** Structural health declines even when Ï‡ and Îµ appear stable.
+**Most critical v4.0 addition.** Structural health declines even when χ and ε appear stable.
 
 ```
-PD(C) â‰¡ 
+PD(C) ≡ 
     purity_score(C, t) declining
-    âˆ§ Â¬(Îµ(C, t) rising significantly)
-    âˆ§ Â¬(Ï‡(C, t) rising significantly)
+    ∧ ¬(ε(C, t) rising significantly)
+    ∧ ¬(χ(C, t) rising significantly)
 ```
 
-**The danger:** Metrics look fine, but Boltzmann compliance is failing. This is **pre-symptomatic**â€”decay is happening before metric-based detection.
+**The danger:** Metrics look fine, but Boltzmann compliance is failing. This is **pre-symptomatic**—decay is happening before metric-based detection.
 
 **Four signals:**
 1. Factorization declining (coupling score rising)
@@ -3044,34 +3044,34 @@ PD(C) â‰¡
 **Example:** 
 ```
 Year 1: Carbon credits
-  Îµ = 0.55, Ï‡ = 0.60 (moderate, national)
+  ε = 0.55, χ = 0.60 (moderate, national)
   Purity = 0.72 (sound)
   Coupling = 0.12 (clean factorization)
 
 Year 5: Same metrics externally
-  Îµ = 0.55, Ï‡ = 0.60 (unchanged!)
+  ε = 0.55, χ = 0.60 (unchanged!)
   Purity = 0.42 (contaminated)
   Coupling = 0.28 (nonsensical coupling emerging)
   
-Purity drift detected â† Early warning before type flip
+Purity drift detected ← Early warning before type flip
 ```
 
-**See:** logic_extensions.md Â§4.3 for full purity drift detection
+**See:** logic_extensions.md §4.3 for full purity drift detection
 
 ---
 
-**Type 11: Network Drift (ND) â€” Contagion**
+**Type 11: Network Drift (ND) — Contagion**
 
 **Induced degradation from neighbors.** Constraint gets worse because its context gets worse.
 
 ```
-ND(C, t_drift) â‰¡ 
+ND(C, t_drift) ≡ 
     intrinsic_purity(C, t) stable
-    âˆ§ effective_purity(C, t) declining
-    âˆ§ has_drifting_neighbor(C)
+    ∧ effective_purity(C, t) declining
+    ∧ has_drifting_neighbor(C)
 ```
 
-**The mechanism:** Low-purity constraints contaminate neighbors. Contamination flows **downward only** (Snare â†’ Rope, never Rope â†’ Snare). Entropy increases.
+**The mechanism:** Low-purity constraints contaminate neighbors. Contamination flows **downward only** (Snare → Rope, never Rope → Snare). Entropy increases.
 
 **Example:**
 ```
@@ -3079,19 +3079,19 @@ Constraint B (employment contract):
   Intrinsic purity = 0.65 (stable)
   
 Constraint A (housing market) drifts:
-  Purity drops 0.70 â†’ 0.25 (becomes Snare)
+  Purity drops 0.70 → 0.25 (becomes Snare)
   
 Network effect on B:
   Effective purity = 0.65 - contamination_pressure(A)
   Effective purity = 0.65 - 0.20 = 0.45
   
-B crosses from borderline â†’ contaminated
-Action recommendation escalates: monitor â†’ reform urgently
+B crosses from borderline → contaminated
+Action recommendation escalates: monitor → reform urgently
 ```
 
 **Predictive modeling (Stage 9):** Network drift velocity allows **cascade prediction**. If A continues drifting at current rate, we can predict when B will cross purity thresholds.
 
-**See:** logic_extensions.md Â§4.4 for network drift velocity calculation
+**See:** logic_extensions.md §4.4 for network drift velocity calculation
 
 ---
 
@@ -3100,33 +3100,33 @@ Action recommendation escalates: monitor â†’ reform urgently
 | Type | Name | Mechanism | Detection |
 |------|------|-----------|-----------|
 | 1 | Metric Substitution | Proxy replacement | Goodhart's Law |
-| 2 | Extraction Accumulation | Îµ increases | T1: âŠž â†’ âŠžâŠ  |
-| 3 | Coordination Loss | Coord(C) fails | T2: âŠžâŠ  â†’ âŠ  |
+| 2 | Extraction Accumulation | ε increases | T1: ⊞ → ⊞⊠ |
+| 3 | Coordination Loss | Coord(C) fails | T2: ⊞⊠ → ⊠ |
 | 4 | Function Obsolescence | Purpose gone | Theater rises |
-| 5 | Sunset Violation | Scaffold persists | T4: âŠ¡ â†’ âŠŸ |
-| 6 | Extraction Collapse | Îµ drops rapidly | T5/T6 â†’ âŠŸ |
-| 7 | Algorithm Shutdown | External â†’ internal | Habit formation |
-| **8** | **Coupling Drift** | Dimensions entangle | Coupling score â‰¥ 0.10 |
+| 5 | Sunset Violation | Scaffold persists | T4: ⊡ → ⊟ |
+| 6 | Extraction Collapse | ε drops rapidly | T5/T6 → ⊟ |
+| 7 | Algorithm Shutdown | External → internal | Habit formation |
+| **8** | **Coupling Drift** | Dimensions entangle | Coupling score ≥ 0.10 |
 | **9** | **Boltzmann Floor Drift** | Complexity rises | Floor rises, excess constant |
 | **10** | **Purity Drift** | Pre-symptomatic decay | Purity declining, metrics stable |
 | **11** | **Network Drift** | Neighbor contagion | Effective purity < intrinsic |
 
 ---
 
-**[Â§III COMPLETE - Temporal Logic & Lifecycle]**
+**[§III COMPLETE - Temporal Logic & Lifecycle]**
 
 Temporal operators and drift types defined:
-- âœ… Indexed temporal operators (â–¡, â—Š, â—‹, U, S)
-- âœ… Hope as function of temporal index
-- âœ… E=trapped guards on â—ŠExit
-- âœ… Seven classical transitions (T1-T7)
-- âœ… Transition irreversibility (entropy favors degradation)
-- âœ… Eleven drift types (1-7 classical, 8-11 structural physics)
-- âœ… Purity drift as pre-symptomatic decay
-- âœ… Network drift as contagion
-- âœ… Cross-references to logic_extensions.md
+- ✅ Indexed temporal operators (□, ◊, ○, U, S)
+- ✅ Hope as function of temporal index
+- ✅ E=trapped guards on ◊Exit
+- ✅ Seven classical transitions (T1-T7)
+- ✅ Transition irreversibility (entropy favors degradation)
+- ✅ Eleven drift types (1-7 classical, 8-11 structural physics)
+- ✅ Purity drift as pre-symptomatic decay
+- ✅ Network drift as contagion
+- ✅ Cross-references to logic_extensions.md
 
-**Next section:** Â§IV Inference Rules & Priority Ordering
+**Next section:** §IV Inference Rules & Priority Ordering
 
 ---
 
@@ -3142,13 +3142,13 @@ classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type)
 
 **Parameters:**
 - `C`: Constraint identifier
-- `BaseEps`: Base extractiveness Îµ(C)
-- `Chi`: Power-scaled extractiveness Ï‡(C, I.P, I.S)
+- `BaseEps`: Base extractiveness ε(C)
+- `Chi`: Power-scaled extractiveness χ(C, I.P, I.S)
 - `Supp`: Suppression requirement
 - `Context`: Index tuple (Power, TimeHorizon, Exit, Scope)
 - `Type`: Classified type (output)
 
-**Discipline:** All threshold logic flows through this predicate. No hardcoded thresholds elsewhere. All values from config.pl â†’ logic_thresholds.md.
+**Discipline:** All threshold logic flows through this predicate. No hardcoded thresholds elsewhere. All values from config.pl → logic_thresholds.md.
 
 ---
 
@@ -3156,14 +3156,14 @@ classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type)
 
 Classification checks types in strict order (first match wins):
 
-**â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”**
-**â”‚ PRIORITY ORDERING (First Match Wins):                  â”‚**
-**â”‚ Mountain > Snare > Scaffold > Rope > Tangled > Piton > Naturalized   â”‚**
-**â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜**
+**┌─────────────────────────────────────────────────────────┐**
+**│ PRIORITY ORDERING (First Match Wins):                  │**
+**│ Mountain > Snare > Scaffold > Rope > Tangled > Piton > Naturalized   │**
+**└─────────────────────────────────────────────────────────┘**
 
 **Why this ordering?**
 
-1. **Mountain first:** Most restrictive gate (Îµ â‰¤ 0.25, Supp â‰¤ 0.05, immutable). Must rule out before considering changeable types.
+1. **Mountain first:** Most restrictive gate (ε ≤ 0.25, Supp ≤ 0.05, immutable). Must rule out before considering changeable types.
 
 2. **Snare before Scaffold:** High extraction should be flagged before low-extraction temporaries. Safety-critical to catch Snares.
 
@@ -3186,7 +3186,7 @@ Each type checks its conditions with cut (`!`) at end. First successful check te
 **Regime 1: Metrics (drl_core.pl)**
 
 `classify_from_metrics/6` uses threshold logic:
-- Compares Îµ, Ï‡, Supp against configured thresholds
+- Compares ε, χ, Supp against configured thresholds
 - Checks immutability gates
 - Fast, deterministic classification
 - Priority: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Naturalized
@@ -3212,9 +3212,9 @@ final_type(C, Context) =
 ```
 
 **Override rules:**
-- **FNL fires**: Mountain â†’ Tangled Rope (physics-washed)
-- **CI_Rope fires**: Rope â†’ Rope (certified, no change in type but flagged)
-- **FCR fires**: Rope â†’ Tangled Rope (coordination-washed)
+- **FNL fires**: Mountain → Tangled Rope (physics-washed)
+- **CI_Rope fires**: Rope → Rope (certified, no change in type but flagged)
+- **FCR fires**: Rope → Tangled Rope (coordination-washed)
 - **NL signature + Mountain**: Keep Mountain (natural law confirmed)
 - **CS signature + Rope**: Keep Rope (coordination scaffold confirmed)
 
@@ -3222,7 +3222,7 @@ final_type(C, Context) =
 
 Signatures do NOT modify `classify_from_metrics/6`. They operate afterward, providing enhancement or override. Core classification logic remains stable and unchanged.
 
-**See:** logic_extensions.md Â§6.2 for full two-regime architecture details
+**See:** logic_extensions.md §6.2 for full two-regime architecture details
 
 ---
 
@@ -3230,59 +3230,59 @@ Signatures do NOT modify `classify_from_metrics/6`. They operate afterward, prov
 
 **Rule M (Mountain):**
 ```
-Îµ(C) â‰¤ 0.25 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ Immutable(C, I.T, I.E)
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-                    â– C[I]
+ε(C) ≤ 0.25 ∧ Supp(C) ≤ 0.05 ∧ Immutable(C, I.T, I.E)
+─────────────────────────────────────────────────────
+                    ■C[I]
 ```
 
 **Rule R (Rope):**
 ```
-Ï‡(C, I.P, I.S) â‰¤ 0.35 âˆ§ Îµ(C) â‰¤ 0.45 âˆ§ Changeable(C, I.T, I.E)
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-                         âŠžC[I]
+χ(C, I.P, I.S) ≤ 0.35 ∧ ε(C) ≤ 0.45 ∧ Changeable(C, I.T, I.E)
+──────────────────────────────────────────────────────────────
+                         ⊞C[I]
 ```
 
 **Rule N (Snare):**
 ```
-Ï‡(C, I.P, I.S) â‰¥ 0.66 âˆ§ Îµ(C) â‰¥ 0.46 âˆ§ Supp(C) â‰¥ 0.60 âˆ§ Changeable(C, I.T, I.E)
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-                                 âŠ C[I]
+χ(C, I.P, I.S) ≥ 0.66 ∧ ε(C) ≥ 0.46 ∧ Supp(C) ≥ 0.60 ∧ Changeable(C, I.T, I.E)
+────────────────────────────────────────────────────────────────────────────────
+                                 ⊠C[I]
 ```
 
 **Rule TR (Tangled Rope):**
 ```
-0.40 â‰¤ Ï‡(C, I.P, I.S) â‰¤ 0.90 âˆ§ Îµ(C) â‰¥ 0.30 âˆ§ Supp(C) â‰¥ 0.40
-âˆ§ Enforce(C) âˆ§ Coord(C) âˆ§ Asymmetric(C)
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-                      âŠžâŠ C[I]
+0.40 ≤ χ(C, I.P, I.S) ≤ 0.90 ∧ ε(C) ≥ 0.30 ∧ Supp(C) ≥ 0.40
+∧ Enforce(C) ∧ Coord(C) ∧ Asymmetric(C)
+───────────────────────────────────────────────────────────
+                      ⊞⊠C[I]
 ```
 
 **Rule SC (Scaffold):**
 ```
-Ï‡(C, I.P, I.S) â‰¤ 0.30 âˆ§ Coord(C) âˆ§ Sunset(C) âˆ§ Theater(C) â‰¤ 0.70
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-                           âŠ¡C[I]
+χ(C, I.P, I.S) ≤ 0.30 ∧ Coord(C) ∧ Sunset(C) ∧ Theater(C) ≤ 0.70
+──────────────────────────────────────────────────────────────────
+                           ⊡C[I]
 ```
 
 **Rule Z (Piton):**
 ```
-Ï‡(C, I.P, I.S) â‰¤ 0.25 âˆ§ Îµ(C) > 0.10 âˆ§ Theater(C) â‰¥ 0.70
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-                        âŠŸC[I]
+χ(C, I.P, I.S) ≤ 0.25 ∧ ε(C) > 0.10 ∧ Theater(C) ≥ 0.70
+─────────────────────────────────────────────────────────
+                        ⊟C[I]
 ```
 
 ---
 
-**[Â§IV COMPLETE - Inference Rules]**
+**[§IV COMPLETE - Inference Rules]**
 
 Priority ordering and two-regime architecture defined:
-- âœ… Canonical predicate: classify_from_metrics/6
-- âœ… Priority: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Naturalized
-- âœ… Two-regime: Metrics (fast) â†’ Signatures (structural)
-- âœ… Shadow mode discipline maintained
-- âœ… Override rules specified
+- ✅ Canonical predicate: classify_from_metrics/6
+- ✅ Priority: Mountain > Snare > Scaffold > Rope > Tangled > Piton > Naturalized
+- ✅ Two-regime: Metrics (fast) → Signatures (structural)
+- ✅ Shadow mode discipline maintained
+- ✅ Override rules specified
 
-**Next section:** Â§V Error Taxonomy & Misclassification
+**Next section:** §V Error Taxonomy & Misclassification
 
 ---
 
@@ -3333,7 +3333,7 @@ Confirmed worst cases: AI professional displacement classified as "structural ma
 
 **Example:** "Company culture" masking wage theft, "market efficiency" hiding rent extraction, "innovation" justifying precarity.
 
-**Detection:** Check Îµ (base extraction) even when Ï‡ appears low from your index
+**Detection:** Check ε (base extraction) even when χ appears low from your index
 
 **Why dangerous:** Most common error for moderate/powerful agents (they don't feel the extraction, classify as Rope)
 
@@ -3361,7 +3361,7 @@ Confirmed worst cases: AI professional displacement classified as "structural ma
 
 **Example:** Enforcing obsolete regulations (costs energy, provides no value), campaigning against dead letter laws.
 
-**Detection:** Theater ratio â‰¥ 0.70, Ï‡ â‰¤ 0.10 (inactive)
+**Detection:** Theater ratio ≥ 0.70, χ ≤ 0.10 (inactive)
 
 **Action:** Bypass, not maintain or cut
 
@@ -3382,7 +3382,7 @@ Confirmed worst cases: AI professional displacement classified as "structural ma
 **VI.c: Wrong Reform Strategy**
 - Consequence: Attempting surgical reform when purity < 0.30 (composition gate blocks it)
 - Should transition to Cut/Exit instead
-- See logic_extensions.md Â§5.3 for composition gates
+- See logic_extensions.md §5.3 for composition gates
 
 ---
 
@@ -3390,17 +3390,17 @@ Confirmed worst cases: AI professional displacement classified as "structural ma
 
 | Type | Pattern | Energy Sink | Cascade Risk |
 |------|---------|-------------|--------------|
-| **I: False Mountain** | Accept changeable as unchangeable | Normalization â†’ Drift T2 (EA) | High |
+| **I: False Mountain** | Accept changeable as unchangeable | Normalization → Drift T2 (EA) | High |
 | **II: Mountain Denial** | Reform unchangeable | Infinite energy loss | Catastrophic |
 | **III: Snare-as-Rope** | Normalize extraction | Voluntary exploitation | Medium |
 | **IV: Rope-as-Snare** | Destroy coordination | Coordination rebuild cost | High |
 | **V: Piton-as-Active** | Maintain dead theater | Agency heat sink | Low (but wasteful) |
-| **VI: Tangled Mishandling** | Wrong reform strategy | Reform failure â†’ disillusionment | Variable |
+| **VI: Tangled Mishandling** | Wrong reform strategy | Reform failure → disillusionment | Variable |
 
 **Energy sink explanation:**
-- **Infinite loss** (Type II): Attempting impossible (perpetual motion) â†’ unbounded waste
+- **Infinite loss** (Type II): Attempting impossible (perpetual motion) → unbounded waste
 - **Agency heat sink** (Type V): Energy absorbed by entropy, produces no work
-- **Cascade risk**: Probability error triggers further errors (Type I â†’ T2 drift â†’ Type III)
+- **Cascade risk**: Probability error triggers further errors (Type I → T2 drift → Type III)
 
 ---
 
@@ -3442,12 +3442,12 @@ Action flows from classification. Base routing:
 
 | Type | Action | Energy | Priority |
 |------|--------|--------|----------|
-| **Mountain (â– )** | Accept | Zero (don't fight) | Conserve for changeable |
-| **Rope (âŠž)** | Maintain | Low (preserve) | Protect from drift |
-| **Snare (âŠ )** | Cut/Exit | High (if trapped) | Escape extraction |
-| **Tangled (âŠžâŠ )** | Surgical Reform | Medium-High | Preserve Coord, cut extraction |
-| **Scaffold (âŠ¡)** | Monitor Sunset | Low (watch) | Ensure dissolution |
-| **Piton (âŠŸ)** | Bypass | Minimal (ignore) | Route around |
+| **Mountain (■)** | Accept | Zero (don't fight) | Conserve for changeable |
+| **Rope (⊞)** | Maintain | Low (preserve) | Protect from drift |
+| **Snare (⊠)** | Cut/Exit | High (if trapped) | Escape extraction |
+| **Tangled (⊞⊠)** | Surgical Reform | Medium-High | Preserve Coord, cut extraction |
+| **Scaffold (⊡)** | Monitor Sunset | Low (watch) | Ensure dissolution |
+| **Piton (⊟)** | Bypass | Minimal (ignore) | Route around |
 
 ---
 
@@ -3462,7 +3462,7 @@ purity_qualified_action(C, Context, BaseAction, Qualifier, Priority)
 ```
 
 Qualifiers:
-- **stable** (purity â‰¥ 0.70): Continue base action
+- **stable** (purity ≥ 0.70): Continue base action
 - **monitor** (0.50-0.70): Watch for decline
 - **escalate_reform** (0.30-0.50): Reform urgently
 - **degraded** (< 0.30): Base action blocked, switch to Cut/Exit
@@ -3470,10 +3470,10 @@ Qualifiers:
 **Example:**
 ```
 Tangled Rope with purity 0.65: Reform (viable)
-Tangled Rope with purity 0.25: Reform blocked â†’ Cut/Exit
+Tangled Rope with purity 0.25: Reform blocked → Cut/Exit
 ```
 
-**See:** logic_extensions.md Â§5.1 for purity-qualified action details
+**See:** logic_extensions.md §5.1 for purity-qualified action details
 
 ---
 
@@ -3482,28 +3482,28 @@ Tangled Rope with purity 0.25: Reform blocked â†’ Cut/Exit
 Reform cost increases as structural health declines:
 
 ```
-cost(surgical_reform, C) = base_cost Ã— purity_multiplier(purity_score(C))
+cost(surgical_reform, C) = base_cost × purity_multiplier(purity_score(C))
 ```
 
 **Purity multiplier:**
 ```
-M(p) = 1 + (3.0 - 1) Ã— (1 - p)Â²
+M(p) = 1 + (3.0 - 1) × (1 - p)²
 ```
 
 **Examples:**
-- Purity 0.90 â†’ M = 1.01Ã— (almost no overhead)
-- Purity 0.50 â†’ M = 1.50Ã— (moderate overhead)
-- Purity 0.31 â†’ M = 2.16Ã— (expensive!)
+- Purity 0.90 → M = 1.01× (almost no overhead)
+- Purity 0.50 → M = 1.50× (moderate overhead)
+- Purity 0.31 → M = 2.16× (expensive!)
 
 **Agency Heat Sink (p < 0.30):**
 
-When purity drops below 0.30, the constraint becomes an **agency heat sink**â€”a degraded system that absorbs reform energy without producing coordination work. The system's entropy consumes the work intended for structural improvement.
+When purity drops below 0.30, the constraint becomes an **agency heat sink**—a degraded system that absorbs reform energy without producing coordination work. The system's entropy consumes the work intended for structural improvement.
 
-This is why composition gates block surgical reform at p < 0.30. Not because reform is "hard"â€”because the degraded structure literally radiates away the intervention energy as waste heat (bureaucratic friction, factional conflicts, extraction recapture).
+This is why composition gates block surgical reform at p < 0.30. Not because reform is "hard"—because the degraded structure literally radiates away the intervention energy as waste heat (bureaucratic friction, factional conflicts, extraction recapture).
 
-**Implication:** At purity < 0.30, reform becomes prohibitively expensive â†’ composition gate blocks surgical reform.
+**Implication:** At purity < 0.30, reform becomes prohibitively expensive → composition gate blocks surgical reform.
 
-**See:** logic_extensions.md Â§5.2 for energy scaling formula
+**See:** logic_extensions.md §5.2 for energy scaling formula
 
 ---
 
@@ -3512,14 +3512,14 @@ This is why composition gates block surgical reform at p < 0.30. Not because ref
 Safety checks preventing harmful actions:
 
 ```
-can_perform(surgical_reform, C) â† purity(C) â‰¥ 0.30
-can_perform(safe_scaffold_transition, C) â† purity(C) â‰¥ 0.50
-can_perform(efficient_coordination, C) â† purity(C) â‰¥ 0.70
+can_perform(surgical_reform, C) ← purity(C) ≥ 0.30
+can_perform(safe_scaffold_transition, C) ← purity(C) ≥ 0.50
+can_perform(efficient_coordination, C) ← purity(C) ≥ 0.70
 ```
 
 If purity too low, action blocked. Must transition to different strategy (Cut/Exit instead of Reform).
 
-**See:** logic_extensions.md Â§5.3 for composition gates
+**See:** logic_extensions.md §5.3 for composition gates
 
 ---
 
@@ -3531,7 +3531,7 @@ Context-aware decisions based on effective purity (includes neighbor contaminati
 network_qualified_action(C, Context, BaseAction, NetworkQualifier, Priority)
 ```
 
-If effective_purity significantly < intrinsic_purity (drop â‰¥ 0.05), escalate priority due to network contamination.
+If effective_purity significantly < intrinsic_purity (drop ≥ 0.05), escalate priority due to network contamination.
 
 **Example:**
 ```
@@ -3543,20 +3543,20 @@ Action: Escalate from "monitor" to "reform urgently"
 Rationale: Network contamination pushing toward threshold
 ```
 
-**See:** logic_extensions.md Â§5.4 for network-qualified actions
+**See:** logic_extensions.md §5.4 for network-qualified actions
 
 ---
 
-**[Â§VI COMPLETE - Decision Logic]**
+**[§VI COMPLETE - Decision Logic]**
 
 Action routing with Stage 7-9 extensions:
-- âœ… Base action table (Mountain â†’ Accept, Rope â†’ Maintain, etc.)
-- âœ… Purity-qualified actions (degraded â†’ blocked)
-- âœ… Energy scaling (purity < 0.30 â†’ 2Ã—+ cost)
-- âœ… Composition gates (surgical reform requires purity â‰¥ 0.30)
-- âœ… Network-qualified actions (effective vs intrinsic purity)
+- ✅ Base action table (Mountain → Accept, Rope → Maintain, etc.)
+- ✅ Purity-qualified actions (degraded → blocked)
+- ✅ Energy scaling (purity < 0.30 → 2×+ cost)
+- ✅ Composition gates (surgical reform requires purity ≥ 0.30)
+- ✅ Network-qualified actions (effective vs intrinsic purity)
 
-**Next section:** Â§VII Containment Logic (Structural Paradoxes)
+**Next section:** §VII Containment Logic (Structural Paradoxes)
 
 ---
 
@@ -3569,7 +3569,7 @@ Some tensions are **irreducible**. They cannot be resolved, only contained.
 **Formal statement:**
 
 ```
-Contain(C) â† Irreducible(C) âˆ§ Paradoxical(C) âˆ§ Â¬Resolvable(C)
+Contain(C) ← Irreducible(C) ∧ Paradoxical(C) ∧ ¬Resolvable(C)
 ```
 
 When facing structural paradoxes:
@@ -3585,10 +3585,10 @@ When facing structural paradoxes:
 **Arrow's Impossibility Theorem (Social Choice)**
 - No voting system satisfies all fairness criteria simultaneously
 - Must choose which criteria to prioritize
-- Different contexts â†’ different trade-offs
+- Different contexts → different trade-offs
 - **Containment**: Accept that "perfect democracy" is impossible, optimize for context
 
-**GÃ¶del's Incompleteness (Formal Systems)**
+**Gödel's Incompleteness (Formal Systems)**
 - Sufficiently powerful formal systems can't be both complete and consistent
 - Must choose: completeness OR consistency, not both
 - **Containment**: Accept limitation, use appropriate system for context
@@ -3605,7 +3605,7 @@ When facing structural paradoxes:
 Some Tangled Ropes cannot be "untangled":
 
 ```
-âˆƒC: âŠžâŠ C[I] âˆ§ Â¬Separable(Coord(C), Extract(C))
+∃C: ⊞⊠C[I] ∧ ¬Separable(Coord(C), Extract(C))
 ```
 
 **Example:** Employment under capitalism
@@ -3625,7 +3625,7 @@ For irreducible hybrids, the goal is NOT surgical reform (separation impossible)
 - Recognize employment as irreducible hybrid
 - Oscillate: Defend coordination value (job security, benefits) while resisting extraction (wage theft, speedup)
 - Long-term: Shift ratio toward coordination (worker ownership, profit-sharing)
-- Don't wait for "perfect" pure Ropeâ€”work within hybrid constraint
+- Don't wait for "perfect" pure Rope—work within hybrid constraint
 
 This differs from surgical reform (which assumes separability). Strategic oscillation accepts inseparability but refuses stasis.
 
@@ -3636,10 +3636,10 @@ This differs from surgical reform (which assumes separability). Strategic oscill
 When analysis hits irreducible uncertainty, route to **Omega variables**:
 
 ```
-Î©â‚: Unknown unknowns (structural blind spots)
-Î©â‚‚: Measurement limits (can't observe without changing)
-Î©â‚ƒ: Computational intractability (knowable but not computable)
-Î©â‚„: Fundamental paradoxes (logical impossibilities)
+Ω₁: Unknown unknowns (structural blind spots)
+Ω₂: Measurement limits (can't observe without changing)
+Ω₃: Computational intractability (knowable but not computable)
+Ω₄: Fundamental paradoxes (logical impossibilities)
 ```
 
 **Usage:** Acknowledge limit, flag for meta-analysis, don't pretend certainty.
@@ -3669,15 +3669,15 @@ A **mandatrophy** is a specialized omega: a Mountain (natural fact) that functio
 
 ---
 
-**[Â§VII COMPLETE - Containment Logic]**
+**[§VII COMPLETE - Containment Logic]**
 
 Structural paradoxes and containment protocol:
-- âœ… Containment vs resolution distinction
-- âœ… Arrow, GÃ¶del, Heisenberg as examples
-- âœ… Tangled Ropes as irreducible hybrids
-- âœ… Omega variables for systemic uncertainty
+- ✅ Containment vs resolution distinction
+- ✅ Arrow, Gödel, Heisenberg as examples
+- ✅ Tangled Ropes as irreducible hybrids
+- ✅ Omega variables for systemic uncertainty
 
-**Next section:** Â§VIII Self-Application & Meta-Logic
+**Next section:** §VIII Self-Application & Meta-Logic
 
 ---
 
@@ -3688,7 +3688,7 @@ Structural paradoxes and containment protocol:
 Deferential Realism classifies **itself**:
 
 ```
-âŠ¡(Deferential_Realism)[(analytical, civilizational, analytical, universal)]
+⊡(Deferential_Realism)[(analytical, civilizational, analytical, universal)]
 ```
 
 **Why Scaffold, not Rope or Mountain?**
@@ -3700,26 +3700,26 @@ Deferential Realism classifies **itself**:
 **Sunset clause:**
 
 ```
-Sunset(DR) â‰¡ 
-    (Falsified(core_claims) âˆ¨ Better_Framework_Exists)
-    â†’ Dissolve(DR)
+Sunset(DR) ≡ 
+    (Falsified(core_claims) ∨ Better_Framework_Exists)
+    → Dissolve(DR)
 ```
 
 This framework has **designed obsolescence**. It's meant to be replaced.
 
 ---
 
-### B. GÃ¶del Limits & Known Limitations
+### B. Gödel Limits & Known Limitations
 
 **What this framework CANNOT do:**
 
-1. **Prove its own consistency** (GÃ¶del's Second Incompleteness)
+1. **Prove its own consistency** (Gödel's Second Incompleteness)
    - We cannot use DR logic to prove DR logic is sound
    - Requires external validation (empirical testing, peer review)
 
 2. **Guarantee universal correctness** (indexical relativity is fundamental)
    - Classifications are index-objective, not universally true
-   - Different indices â†’ different types (both correct)
+   - Different indices → different types (both correct)
 
 3. **Predict all drift** (complexity limits)
    - Can detect patterns, can't predict specific trajectories
@@ -3754,17 +3754,17 @@ This framework has **designed obsolescence**. It's meant to be replaced.
 **Power-scaling collision elimination:**
 - Before indexing: 8.2% of constraints had power-position-dependent classification ambiguity
 - After full (P, T, E, S) indexing: 0% ambiguity
-- Resolution: Same constraint, different indices â†’ both classifications true
+- Resolution: Same constraint, different indices → both classifications true
 
 ---
 
-### D. Canonical Example: Carbon Credits (Îµ = 0.55)
+### D. Canonical Example: Carbon Credits (ε = 0.55)
 
 **Full formal analysis:**
 
 ```
 carbon_credits:
-  Îµ = 0.55 (base extractiveness)
+  ε = 0.55 (base extractiveness)
   Supp = 0.60 (active enforcement via regulation)
   coordination_type = resource_allocation
   Coord(C) = true (emissions reduction mechanism)
@@ -3773,72 +3773,72 @@ carbon_credits:
 
 **Classification by index:**
 
-**Iâ‚ = (powerless, biographical, trapped, local):**
+**I₁ = (powerless, biographical, trapped, local):**
 ```
-Ï€ = 1.5, Ïƒ = 0.8
-Ï‡ = 0.55 Ã— 1.5 Ã— 0.8 = 0.66
+π = 1.5, σ = 0.8
+χ = 0.55 × 1.5 × 0.8 = 0.66
 
 Tangled Rope threshold check:
-  0.40 â‰¤ Ï‡=0.66 â‰¤ 0.90 âœ“
-  Îµ=0.55 â‰¥ 0.30 âœ"
-  Supp=0.60 â‰¥ 0.40 âœ“
+  0.40 ≤ χ=0.66 ≤ 0.90 ✓
+  ε=0.55 ≥ 0.30 ✔
+  Supp=0.60 ≥ 0.40 ✓
   
-Classification: âŠžâŠ  (Tangled Rope)
+Classification: ⊞⊠ (Tangled Rope)
 Experience: Benefits exist (cleaner air) but costs high (price increases)
 ```
 
-**Iâ‚‚ = (moderate, biographical, constrained, national):**
+**I₂ = (moderate, biographical, constrained, national):**
 ```
-Ï€ = 1.0, Ïƒ = 1.0
-Ï‡ = 0.55 Ã— 1.0 Ã— 1.0 = 0.55
+π = 1.0, σ = 1.0
+χ = 0.55 × 1.0 × 1.0 = 0.55
 
-Classification: âŠžâŠ  (Tangled Rope, clear mid-range)
-Experience: Balancedâ€”coordination value matches extraction cost
+Classification: ⊞⊠ (Tangled Rope, clear mid-range)
+Experience: Balanced—coordination value matches extraction cost
 ```
 
-**Iâ‚ƒ = (institutional, generational, arbitrage, global):**
+**I₃ = (institutional, generational, arbitrage, global):**
 ```
-Ï€ = -0.2, Ïƒ = 1.2
-Ï‡ = 0.55 Ã— -0.2 Ã— 1.2 = -0.132
+π = -0.2, σ = 1.2
+χ = 0.55 × -0.2 × 1.2 = -0.132
 
 Rope threshold check:
-  Ï‡=-0.132 â‰¤ 0.35 âœ“
-  Îµ=0.55 â‰° 0.45 âœ—
+  χ=-0.132 ≤ 0.35 ✓
+  ε=0.55 ≰ 0.45 ✗
 
 FAILS rope_epsilon_ceiling (dual threshold protection)
 
 Tangled Rope check:
-  Ï‡=-0.132 < 0.40 âœ—
+  χ=-0.132 < 0.40 ✗
   
-Falls below Tangled floor. But Ï‡ negative indicates net benefit.
+Falls below Tangled floor. But χ negative indicates net benefit.
 
-Classification: âŠž (Rope from institutional perspective)
+Classification: ⊞ (Rope from institutional perspective)
 Experience: Net extraction FROM system (profit from carbon trading)
 ```
 
-**Iâ‚„ = (analytical, civilizational, analytical, global):**
+**I₄ = (analytical, civilizational, analytical, global):**
 ```
-Ï€ = 1.15, Ïƒ = 1.2
-Ï‡ = 0.55 Ã— 1.15 Ã— 1.2 = 0.759
+π = 1.15, σ = 1.2
+χ = 0.55 × 1.15 × 1.2 = 0.759
 
 Snare threshold check:
-  Ï‡=0.759 â‰¥ 0.66 âœ“
-  Îµ=0.55 â‰¥ 0.46 âœ“
-  Supp=0.60 â‰¥ 0.60 âœ“
+  χ=0.759 ≥ 0.66 ✓
+  ε=0.55 ≥ 0.46 ✓
+  Supp=0.60 ≥ 0.60 ✓
   
-Classification: âŠ  (Snare from analytical perspective)
+Classification: ⊠ (Snare from analytical perspective)
 Experience: Extraction exceeds coordination (delays real climate action)
 ```
 
 **Indexical tension resolved:**
 
 All four classifications are simultaneously objectively true:
-- Powerless/local: Tangled (0.66) â€” benefits but high cost
-- Moderate/national: Tangled (0.55) â€” balanced
-- Institutional/global: Rope (-0.13) â€” **net beneficiary**
-- Analytical/global: Snare (0.76) â€” sees extraction moderate normalizes
+- Powerless/local: Tangled (0.66) — benefits but high cost
+- Moderate/national: Tangled (0.55) — balanced
+- Institutional/global: Rope (-0.13) — **net beneficiary**
+- Analytical/global: Snare (0.76) — sees extraction moderate normalizes
 
-Not disagreement about factsâ€”different structural properties visible from different indices.
+Not disagreement about facts—different structural properties visible from different indices.
 
 ---
 
@@ -3847,7 +3847,7 @@ Not disagreement about factsâ€”different structural properties visible from
 **1. Calibration bias:**
 - Power modifiers Western-biased (US/EU corpus)
 - Non-WEIRD validation needed
-- Ï€(institutional) may vary across cultures
+- π(institutional) may vary across cultures
 
 **2. Threshold uncertainty:**
 - Many values provisional (Boltzmann thresholds especially)
@@ -3871,7 +3871,7 @@ Not disagreement about factsâ€”different structural properties visible from
 
 **6. Purity scoring calibration:**
 - Weights (30/25/25/20) theoretical, not empirically fitted
-- Need sensitivity testing (Â±10% weight perturbation)
+- Need sensitivity testing (±10% weight perturbation)
 - Cross-corpus validation required
 
 ---
@@ -3888,7 +3888,7 @@ Not disagreement about factsâ€”different structural properties visible from
    - Would indicate: Index space incomplete
 
 2. **Power-scaling failure:**
-   - If Ï€ modifiers don't predict extraction amplification/reduction
+   - If π modifiers don't predict extraction amplification/reduction
    - Test: Controlled experiments with power position variation
    - Would indicate: Power position irrelevant (contradicts core claim)
 
@@ -3899,7 +3899,7 @@ Not disagreement about factsâ€”different structural properties visible from
 
 4. **Purity-drift disconnect:**
    - If purity score doesn't predict classification transitions
-   - Test: Longitudinal studies tracking purity â†’ type drift
+   - Test: Longitudinal studies tracking purity → type drift
    - Would indicate: Purity is epiphenomenal, not causal
 
 5. **Action-consequence mismatch:**
@@ -3914,17 +3914,17 @@ Not disagreement about factsâ€”different structural properties visible from
 
 ---
 
-**[Â§VIII COMPLETE - Self-Application]**
+**[§VIII COMPLETE - Self-Application]**
 
 Framework analyzed with own tools:
-- âœ… Classified as Scaffold (built-in obsolescence)
-- âœ… GÃ¶del limits acknowledged
-- âœ… v4.0 corpus statistics (691 constraints, 11 drift types)
-- âœ… Carbon credits full formal analysis (4 indices, 4 types)
-- âœ… Six known limitations explicit
-- âœ… Falsification criteria defined
+- ✅ Classified as Scaffold (built-in obsolescence)
+- ✅ Gödel limits acknowledged
+- ✅ v4.0 corpus statistics (691 constraints, 11 drift types)
+- ✅ Carbon credits full formal analysis (4 indices, 4 types)
+- ✅ Six known limitations explicit
+- ✅ Falsification criteria defined
 
-**Final section:** Â§IX Conclusion
+**Final section:** §IX Conclusion
 
 ---
 
@@ -3948,17 +3948,17 @@ Indexed constraint logic asks: "What type is this constraint from this index?"
 
 Whatever extensions or modifications we make to this system, these invariants MUST hold:
 
-1. **Metrics-first classification** â€” `classify_from_metrics/6` remains canonical predicate in drl_core.pl
-2. **Detection patterns only refine or demote** â€” Signatures in signature_detection.pl can override but never modify core logic
-3. **Action flows from final type** â€” Recommendations derive from integrated classification, not raw metrics
-4. **Thresholds are calibration points** â€” Not moral boundaries, not absolute truths, but measurement regime parameters subject to empirical validation
+1. **Metrics-first classification** — `classify_from_metrics/6` remains canonical predicate in drl_core.pl
+2. **Detection patterns only refine or demote** — Signatures in signature_detection.pl can override but never modify core logic
+3. **Action flows from final type** — Recommendations derive from integrated classification, not raw metrics
+4. **Thresholds are calibration points** — Not moral boundaries, not absolute truths, but measurement regime parameters subject to empirical validation
 
-**On Thresholds:** The values in logic_thresholds.md (Îµ â‰¤ 0.45 for Rope, Ï‡ â‰¥ 0.66 for Snare, etc.) are **calibration points in a noisy measurement regime**, not Platonic ideals. They represent empirically observed boundaries in the 691-constraint corpus but remain subject to:
+**On Thresholds:** The values in logic_thresholds.md (ε ≤ 0.45 for Rope, χ ≥ 0.66 for Snare, etc.) are **calibration points in a noisy measurement regime**, not Platonic ideals. They represent empirically observed boundaries in the 691-constraint corpus but remain subject to:
 - Sensitivity testing (perturbation analysis)
 - Cross-corpus validation (non-Western contexts)
 - Temporal recalibration (as power structures evolve)
 
-A constraint at Ï‡ = 0.65 vs Ï‡ = 0.67 is not categorically differentâ€”the threshold exists because discrete classification requires boundaries, not because reality has sharp edges.
+A constraint at χ = 0.65 vs χ = 0.67 is not categorically different—the threshold exists because discrete classification requires boundaries, not because reality has sharp edges.
 
 ---
 
@@ -3977,7 +3977,7 @@ A constraint at Ï‡ = 0.65 vs Ï‡ = 0.67 is not categorically differentâ€
 - Lifecycle drift (11 degradation patterns)
 - **Dynamic system**: "Is C degrading? How fast? Will it cascade?"
 
-**The achievement:** From taxonomy â†’ physics. From naming things â†’ predicting their evolution.
+**The achievement:** From taxonomy → physics. From naming things → predicting their evolution.
 
 ---
 
@@ -3990,7 +3990,7 @@ A constraint at Ï‡ = 0.65 vs Ï‡ = 0.67 is not categorically differentâ€
 **Indexed realism:** Truth is position-relative but each indexed claim is objectively verifiable.
 
 ```
-âˆ€Iâ‚, Iâ‚‚: (Type(C, Iâ‚) â‰  Type(C, Iâ‚‚)) âˆ§ (True(Type(C, Iâ‚)) âˆ§ True(Type(C, Iâ‚‚)))
+∀I₁, I₂: (Type(C, I₁) ≠ Type(C, I₂)) ∧ (True(Type(C, I₁)) ∧ True(Type(C, I₂)))
 ```
 
 Multiple valid answers exist because different positions expose different structural properties.
@@ -4006,13 +4006,13 @@ Modal logic traditionally treats constraints as universal (Mountain for everyone
 Indexed modal logic treats constraints as **power-scope-dependent**:
 
 ```
-Ï‡(C, P, S) = Îµ(C) Ã— Ï€(P) Ã— Ïƒ(S)
+χ(C, P, S) = ε(C) × π(P) × σ(S)
 ```
 
-Same base structure (Îµ = 0.55), different experienced types:
-- Ï‡(powerless, global) = 0.90 â†’ Snare
-- Ï‡(moderate, national) = 0.55 â†’ Tangled
-- Ï‡(institutional, global) = -0.13 â†’ Rope
+Same base structure (ε = 0.55), different experienced types:
+- χ(powerless, global) = 0.90 → Snare
+- χ(moderate, national) = 0.55 → Tangled
+- χ(institutional, global) = -0.13 → Rope
 
 **Grounded in empirical measurement**, not abstract possibility.
 
@@ -4026,24 +4026,24 @@ Built-in error taxonomy distinguishes:
 - **System bugs** (threshold miscalibration)
 - **Fraud** (coordination-washing via FCR)
 
-**Error â‰  Bad Faith.** The framework tracks both honest mistakes and deliberate misrepresentation.
+**Error ≠ Bad Faith.** The framework tracks both honest mistakes and deliberate misrepresentation.
 
 ---
 
 ### F. Action-Routing With Index-Sensitivity
 
 From classification flows action recommendation:
-- Mountain â†’ Accept (conserve energy for changeable constraints)
-- Rope â†’ Maintain (preserve coordination)
-- Snare â†’ Cut/Exit (escape extraction)
-- Tangled â†’ Surgical Reform (preserve Coord, excise extraction)
-- Scaffold â†’ Monitor Sunset (ensure dissolution)
-- Piton â†’ Bypass (route around theater)
+- Mountain → Accept (conserve energy for changeable constraints)
+- Rope → Maintain (preserve coordination)
+- Snare → Cut/Exit (escape extraction)
+- Tangled → Surgical Reform (preserve Coord, excise extraction)
+- Scaffold → Monitor Sunset (ensure dissolution)
+- Piton → Bypass (route around theater)
 
 **But actions are indexed to your structural position:**
-- If E = trapped, Cut/Exit may be impossible â†’ Organize first
-- If purity < 0.30, Surgical Reform blocked â†’ Cut/Exit instead
-- If T = immediate, Accept may be only option â†’ long-term change invisible
+- If E = trapped, Cut/Exit may be impossible → Organize first
+- If purity < 0.30, Surgical Reform blocked → Cut/Exit instead
+- If T = immediate, Accept may be only option → long-term change invisible
 
 **Strategy adapts to terrain AND your position on it.**
 
@@ -4052,7 +4052,7 @@ From classification flows action recommendation:
 ### G. Self-Awareness With Limitation Acknowledgment
 
 The framework admits:
-- GÃ¶del limits (can't prove own consistency)
+- Gödel limits (can't prove own consistency)
 - Calibration bias (Western corpus)
 - Threshold uncertainty (provisional values)
 - Complexity ceiling (becomes unwieldy at scale)
@@ -4064,7 +4064,7 @@ The framework admits:
 
 ### H. Architectural Coherence
 
-**Spec â†’ Implementation discipline:**
+**Spec → Implementation discipline:**
 - Single canonical predicate: `classify_from_metrics/6`
 - Single threshold registry: logic_thresholds.md
 - Single signature override: signature_detection.pl (via structural_signatures.pl facade)
@@ -4077,8 +4077,8 @@ The framework admits:
 ### I. Integration: The Six Stages + Three Extensions
 
 **Stages 1-6 (The Realist Core):**
-- Indexed constraint operators (â– , âŠž, âŠ , âŠžâŠ , âŠ¡, âŠŸ)
-- Power-scope scaling (Ï‡ = Îµ Ã— Ï€ Ã— Ïƒ)
+- Indexed constraint operators (■, ⊞, ⊠, ⊞⊠, ⊡, ⊟)
+- Power-scope scaling (χ = ε × π × σ)
 - Lifecycle states & temporal logic
 - Error taxonomy & action routing
 
@@ -4135,17 +4135,17 @@ That's the difference between **taxonomy and physics**.
 **Problem:** Implementation requires Prolog + 691-constraint corpus. Non-technical users lack accessible approximation methods.
 
 **Future work:**
-- Develop simplified field estimation protocol for Îµ, Ï‡, Supp
+- Develop simplified field estimation protocol for ε, χ, Supp
 - Create decision tree for index selection without code
 - Build "pocket guide" with 2-3 canonical examples per type
 - Minimal questions to test action appropriateness (e.g., "Is this Snare load-bearing?")
 
 **Example protocol sketch:**
 ```
-Q1: Can powerful agents exit easily? â†’ Estimate Ï€
-Q2: How many participants can verify claims? â†’ Estimate Ïƒ  
-Q3: What % of cost exceeds coordination value? â†’ Estimate Îµ
-Q4: Would people comply without enforcement? â†’ Estimate Supp
+Q1: Can powerful agents exit easily? → Estimate π
+Q2: How many participants can verify claims? → Estimate σ  
+Q3: What % of cost exceeds coordination value? → Estimate ε
+Q4: Would people comply without enforcement? → Estimate Supp
 ```
 
 **2. Intersectionality Gap (Multi-Index Agents)**
@@ -4153,26 +4153,26 @@ Q4: Would people comply without enforcement? â†’ Estimate Supp
 **Problem:** Power modeled as scalar (6 positions), missing compounding structures.
 
 **Known case:** Analytical + powerless (academic precariat)
-- Analytical index: Ï€ = 1.15 (detects extraction)
-- Powerless index: Ï€ = 1.5 (can't escape)
+- Analytical index: π = 1.15 (detects extraction)
+- Powerless index: π = 1.5 (can't escape)
 - **Compound effect not captured**
 
 **Future work:**
 - Model power as **vector** or **distribution** over nearby indices
 - Weight by time spent in each index position
 - Aggregate classification across inhabited indices
-- Example: Academic precariat = 70% powerless + 30% analytical â†’ mixed classification
+- Example: Academic precariat = 70% powerless + 30% analytical → mixed classification
 
 **3. Normative Entanglement (Auditable Assumptions)**
 
 **Problem:** System claims "structural not subjective" but value-laden choices exist:
-- Which metrics count as "extraction" (Îµ measurement)
+- Which metrics count as "extraction" (ε measurement)
 - Purity scoring weights (30/25/25/20) encode priorities
 - Which coordination functions "count" (Coord(C) predicate)
 
 **Future work:**
 - Explicit subsection: "Where Normative Assumptions Enter"
-- Document assumptionâ†’consequence chains
+- Document assumption→consequence chains
 - Make value choices **auditable**, not hidden
 - Example: "We weight Factorization at 30% because we prioritize natural-law detection over other purity signals"
 
@@ -4184,13 +4184,13 @@ Q4: Would people comply without enforcement? â†’ Estimate Supp
 - Longitudinal outcome studies
 - Compare recommended vs alternative actions
 - Measure: Did Accept (Mountain) conserve energy? Did Reform (Tangled) improve purity?
-- Build feedback loop: Outcome â†’ Threshold adjustment
+- Build feedback loop: Outcome → Threshold adjustment
 
 **Critical questions requiring empirical validation:**
 
-1. **Threshold sensitivity:** Do purity weight perturbations (Â±10%) cause mass reclassification?
-2. **Temporal granularity:** Does discrete scope (localâ†’regionalâ†’national) miss continuous transitions?
-3. **Cross-cultural robustness:** Do Ï€ modifiers hold in non-WEIRD contexts?
+1. **Threshold sensitivity:** Do purity weight perturbations (±10%) cause mass reclassification?
+2. **Temporal granularity:** Does discrete scope (local→regional→national) miss continuous transitions?
+3. **Cross-cultural robustness:** Do π modifiers hold in non-WEIRD contexts?
 4. **Cascade prediction accuracy:** Can network drift velocity actually predict transitions?
 
 **Next steps (priority order):**
@@ -4205,20 +4205,20 @@ Q4: Would people comply without enforcement? â†’ Estimate Supp
 
 **[DOCUMENT COMPLETE]**
 
-**Version 4.0 â€” Deferential Realism: A Logic of Indexed Constraints**
+**Version 4.0 — Deferential Realism: A Logic of Indexed Constraints**
 
 **Total document:** ~26,000 words
 
 **Sections complete:**
-- âœ… Â§I Foundation (indexed realism vs relativism)
-- âœ… Â§II Basic Syntax (index structure, seven types, detection patterns, Ï€/Ïƒ modifiers)
-- âœ… Â§III Temporal Logic (indexed operators, 11 drift types)
-- âœ… Â§IV Inference Rules (priority ordering, two-regime architecture)
-- âœ… Â§V Error Taxonomy (six misclassification types)
-- âœ… Â§VI Decision Logic (action routing + Stage 7-9 extensions)
-- âœ… Â§VII Containment Logic (structural paradoxes)
-- âœ… Â§VIII Self-Application (framework as Scaffold, v4.0 stats, limitations)
-- âœ… Â§IX Conclusion (achievements, integration, core shift)
+- ✅ §I Foundation (indexed realism vs relativism)
+- ✅ §II Basic Syntax (index structure, seven types, detection patterns, π/σ modifiers)
+- ✅ §III Temporal Logic (indexed operators, 11 drift types)
+- ✅ §IV Inference Rules (priority ordering, two-regime architecture)
+- ✅ §V Error Taxonomy (six misclassification types)
+- ✅ §VI Decision Logic (action routing + Stage 7-9 extensions)
+- ✅ §VII Containment Logic (structural paradoxes)
+- ✅ §VIII Self-Application (framework as Scaffold, v4.0 stats, limitations)
+- ✅ §IX Conclusion (achievements, integration, core shift)
 
 **Integration complete** with:
 - logic_index.md (navigation)
@@ -4229,9 +4229,9 @@ Q4: Would people comply without enforcement? â†’ Estimate Supp
 
 ## III. Temporal Logic & Lifecycle States
 
-Constraints don't just exist in static typesâ€”they evolve, degrade, and transition over time. Section III extends the core operators with temporal dynamics and lifecycle pathologies.
+Constraints don't just exist in static types—they evolve, degrade, and transition over time. Section III extends the core operators with temporal dynamics and lifecycle pathologies.
 
-**Key insight:** Temporal operators are **indexed**, not universal. A constraint can be â–¡Snare (Always a Snare) from one index but â—ŠRope (Eventually a Rope) from another.
+**Key insight:** Temporal operators are **indexed**, not universal. A constraint can be □Snare (Always a Snare) from one index but ◊Rope (Eventually a Rope) from another.
 
 ---
 
@@ -4239,52 +4239,52 @@ Constraints don't just exist in static typesâ€”they evolve, degrade, and tr
 
 Standard temporal logic operators, but **indexed to (P, T, E, S)**:
 
-**Always (â–¡):**
+**Always (□):**
 ```
-â–¡Ï†[I] â‰¡ âˆ€t: Ï†(t)[I]
+□φ[I] ≡ ∀t: φ(t)[I]
 ```
-From index I, Ï† holds at all times.
+From index I, φ holds at all times.
 
 **Example:**
 ```
-â–¡Snare[I_powerless] â€” constraint is Always a Snare for powerless agents
-â–¡Mountain[I_analytical] â€” constraint is Always a Mountain from analytical perspective
+□Snare[I_powerless] — constraint is Always a Snare for powerless agents
+□Mountain[I_analytical] — constraint is Always a Mountain from analytical perspective
 ```
 
-**Eventually (â—Š):**
+**Eventually (◊):**
 ```
-â—ŠÏ†[I] â‰¡ âˆƒt: Ï†(t)[I]
+◊φ[I] ≡ ∃t: φ(t)[I]
 ```
-From index I, Ï† holds at some future time.
+From index I, φ holds at some future time.
 
 **Example:**
 ```
-â—ŠRope[I_institutional] â€” Eventually becomes Rope for institutional agents
-â—ŠExit[I_mobile] â€” Eventually can exit (have mobile exit options)
+◊Rope[I_institutional] — Eventually becomes Rope for institutional agents
+◊Exit[I_mobile] — Eventually can exit (have mobile exit options)
 ```
 
-**Next (â—‹):**
+**Next (○):**
 ```
-â—‹Ï†[I] â‰¡ Ï†(t+1)[I]
+○φ[I] ≡ φ(t+1)[I]
 ```
-From index I, Ï† holds in the next time step.
+From index I, φ holds in the next time step.
 
 **Until (U):**
 ```
-Ï† U Ïˆ[I] â‰¡ âˆƒt': Ïˆ(t')[I] âˆ§ âˆ€t < t': Ï†(t)[I]
+φ U ψ[I] ≡ ∃t': ψ(t')[I] ∧ ∀t < t': φ(t)[I]
 ```
-Ï† holds Until Ïˆ becomes true, from index I.
+φ holds Until ψ becomes true, from index I.
 
 **Example:**
 ```
-Scaffold U Dissolved[I] â€” Scaffold holds until dissolution, from index I
+Scaffold U Dissolved[I] — Scaffold holds until dissolution, from index I
 ```
 
 **Since (S):**
 ```
-Ï† S Ïˆ[I] â‰¡ âˆƒt': Ïˆ(t')[I] âˆ§ âˆ€t > t': Ï†(t)[I]
+φ S ψ[I] ≡ ∃t': ψ(t')[I] ∧ ∀t > t': φ(t)[I]
 ```
-Ï† has held Since Ïˆ was true, from index I.
+φ has held Since ψ was true, from index I.
 
 ---
 
@@ -4295,7 +4295,7 @@ Scaffold U Dissolved[I] â€” Scaffold holds until dissolution, from index I
 **Indexed resolution:**
 
 ```
-â–¡Snare[I_powerless] âˆ§ â—ŠRope[I_institutional]
+□Snare[I_powerless] ∧ ◊Rope[I_institutional]
 ```
 
 From powerless perspective (E=trapped, T=immediate):
@@ -4306,19 +4306,19 @@ From institutional perspective (E=arbitrage, T=generational):
 - Eventually a Rope (system reformable with time and resources)
 - Change appears feasible
 
-**Both are objectively true.** Hope is not delusionâ€”it's indexical. What's "hopeless" from one structural position is "changeable" from another.
+**Both are objectively true.** Hope is not delusion—it's indexical. What's "hopeless" from one structural position is "changeable" from another.
 
-**Forensic Tip:** When an agent's index shows â–¡âŠ  (Always Snare) but the analytical index shows â—ŠâŠž (Eventually Rope), the delta between them measures the **energy required for collective action**. The gap from powerless to organized (Ï€: 1.5 â†’ 0.4) quantifies the coordination cost needed to make hope rational from the trapped position.
+**Forensic Tip:** When an agent's index shows □⊠ (Always Snare) but the analytical index shows ◊⊞ (Eventually Rope), the delta between them measures the **energy required for collective action**. The gap from powerless to organized (π: 1.5 → 0.4) quantifies the coordination cost needed to make hope rational from the trapped position.
 
-**Critical constraint on Eventually (â—Š) when E=trapped:**
+**Critical constraint on Eventually (◊) when E=trapped:**
 
 ```
-If E = trapped, then â—ŠExit â†’ âˆƒt: Type(C, t) â‰  Type(C, tâ‚€)
+If E = trapped, then ◊Exit → ∃t: Type(C, t) ≠ Type(C, t₀)
 ```
 
-If you're truly trapped (E=trapped), eventual exit is mathematically impossible **unless the constraint itself transitions**. You can't have â—ŠExit without either:
-- Constraint type changes (Snare â†’ Tangled â†’ Rope)
-- Your index changes (trapped â†’ constrained via external help)
+If you're truly trapped (E=trapped), eventual exit is mathematically impossible **unless the constraint itself transitions**. You can't have ◊Exit without either:
+- Constraint type changes (Snare → Tangled → Rope)
+- Your index changes (trapped → constrained via external help)
 
 This formalizes the difference between "eventual escape" (possible if mobile) and "eventual liberation" (requires constraint transformation).
 
@@ -4328,84 +4328,84 @@ This formalizes the difference between "eventual escape" (possible if mobile) an
 
 Constraints have **entropy**. Like physical systems, they naturally degrade from ordered (coordinating) to disordered (extractive) states.
 
-**Metaphor:** Drift is the **weather** of constraint-space. You don't just find a Piton lying aroundâ€”you watch a Rope rot into one. Scaffolds don't spontaneously appear as Pitonsâ€”they decay through sunset violation.
+**Metaphor:** Drift is the **weather** of constraint-space. You don't just find a Piton lying around—you watch a Rope rot into one. Scaffolds don't spontaneously appear as Pitons—they decay through sunset violation.
 
 ---
 
 #### State Transitions (T1-T7)
 
-**T1: Rope â†’ Tangled Rope (Extraction Accumulation)**
+**T1: Rope → Tangled Rope (Extraction Accumulation)**
 ```
-âŠžC â†’ âŠžâŠ C
+⊞C → ⊞⊠C
 ```
 Natural decay: Extraction creeps into coordination mechanism.
-- Example: Open-source project â†’ venture-funded company (coordination persists but extraction added)
-- Drift type: Type 2 (EA â€” Extraction Accumulation)
+- Example: Open-source project → venture-funded company (coordination persists but extraction added)
+- Drift type: Type 2 (EA — Extraction Accumulation)
 
-**T2: Tangled Rope â†’ Snare (Coordination Loss)**
+**T2: Tangled Rope → Snare (Coordination Loss)**
 ```
-âŠžâŠ C â†’ âŠ C
+⊞⊠C → ⊠C
 ```
 Coordination function dries up, extraction dominates.
-- Example: Employment â†’ gig economy (income provision decays, extraction intensifies)
-- Drift type: Type 3 (CL â€” Coordination Loss)
+- Example: Employment → gig economy (income provision decays, extraction intensifies)
+- Drift type: Type 3 (CL — Coordination Loss)
 
-**T3: Rope â†’ Scaffold (Sunset Acceptance)**
+**T3: Rope → Scaffold (Sunset Acceptance)**
 ```
-âŠžC â†’ âŠ¡C
+⊞C → ⊡C
 ```
 Intentional transition: Add sunset clause to permanent coordination.
-- Example: Permanent welfare â†’ time-limited assistance with job training
+- Example: Permanent welfare → time-limited assistance with job training
 - Drift type: Intentional (not pathological)
 
-**T4: Scaffold â†’ Piton (Sunset Violation)**
+**T4: Scaffold → Piton (Sunset Violation)**
 ```
-âŠ¡C â†’ âŠŸC
+⊡C → ⊟C
 ```
 **Most common Scaffold degradation.** Sunset clause violated, function dried up, theater persists.
-- Example: "Temporary" emergency powers â†’ permanent but unused authority
-- Drift type: Type 5 (SV â€” Sunset Violation)
-- **Theater spike:** When sunset missed, Theater ratio usually jumps from ~0.40 â†’ 0.75+ as performance replaces substance
+- Example: "Temporary" emergency powers → permanent but unused authority
+- Drift type: Type 5 (SV — Sunset Violation)
+- **Theater spike:** When sunset missed, Theater ratio usually jumps from ~0.40 → 0.75+ as performance replaces substance
 
-**T5: Tangled Rope â†’ Piton (Extraction Collapse)**
+**T5: Tangled Rope → Piton (Extraction Collapse)**
 ```
-âŠžâŠ C â†’ âŠŸC
+⊞⊠C → ⊟C
 ```
 Rare: Both coordination AND extraction dry up simultaneously.
 - Example: Obsolete guild restrictions (coordinated nothing, extracted nothing, pure bureaucracy)
-- Drift type: Type 6 (EC â€” Extraction Collapse)
+- Drift type: Type 6 (EC — Extraction Collapse)
 
-**T6: Snare â†’ Piton (Exhaustion)**
+**T6: Snare → Piton (Exhaustion)**
 ```
-âŠ C â†’ âŠŸC
+⊠C → ⊟C
 ```
 Extraction mechanism depleted, victims escaped or died, constraint becomes vestigial.
-- Example: Collapsed pyramid scheme â†’ empty legal shell
-- Drift type: Type 6 (EC â€” Extraction Collapse variant)
+- Example: Collapsed pyramid scheme → empty legal shell
+- Drift type: Type 6 (EC — Extraction Collapse variant)
 
 **T7: Mountain Stability (No Transitions)**
 ```
-â– C â†› X
+■C ↛ X
 ```
 Mountains don't transition. Natural laws don't degrade.
-- If a "Mountain" transitions â†’ it was never a Mountain (False Mountain detection)
+- If a "Mountain" transitions → it was never a Mountain (False Mountain detection)
 
 ---
 
 #### Transition Irreversibility (Entropy Principle)
 
-**Natural direction: Coordination â†’ Extraction**
+**Natural direction: Coordination → Extraction**
 
 ```
-Rope â†’ Tangled Rope â†’ Snare â†’ Piton
+Rope → Tangled Rope → Snare → Piton
 ```
 
 This is **low-energy decay** (entropy increase). Extraction accumulates naturally. Coordination degrades naturally.
 
-**Unnatural direction: Extraction â†’ Coordination**
+**Unnatural direction: Extraction → Coordination**
 
 ```
-Snare â†’ Tangled Rope â†’ Rope
+Snare → Tangled Rope → Rope
 ```
 
 This is **high-energy reform** requiring:
@@ -4415,17 +4415,17 @@ This is **high-energy reform** requiring:
 
 **Key asymmetry:**
 
-- **Decay** (â†’ extraction): Natural, low-energy, constant pressure
-- **Reform** (â†’ coordination): Unnatural, high-energy, requires intervention
+- **Decay** (→ extraction): Natural, low-energy, constant pressure
+- **Reform** (→ coordination): Unnatural, high-energy, requires intervention
 
-This is why Snares persist. Not because they're optimalâ€”because reversing entropy requires work.
+This is why Snares persist. Not because they're optimal—because reversing entropy requires work.
 
-**Stage 7 extension:** Purity scoring (logic_extensions.md Â§2) quantifies this asymmetry. Reform energy scales with purity:
+**Stage 7 extension:** Purity scoring (logic_extensions.md §2) quantifies this asymmetry. Reform energy scales with purity:
 ```
-energy_cost(reform) = base_cost Ã— purity_multiplier
+energy_cost(reform) = base_cost × purity_multiplier
 ```
-At purity 0.31: multiplier â‰ˆ 2.16Ã— (expensive)
-At purity 0.10: multiplier â‰ˆ 2.89Ã— (near-impossible)
+At purity 0.31: multiplier ≈ 2.16× (expensive)
+At purity 0.10: multiplier ≈ 2.89× (near-impossible)
 
 ---
 
@@ -4433,61 +4433,61 @@ At purity 0.10: multiplier â‰ˆ 2.89Ã— (near-impossible)
 
 **Classical Types (1-7):**
 
-**Type 1: Metric Substitution (MS)** â€” Goodhart's Law
+**Type 1: Metric Substitution (MS)** — Goodhart's Law
 - Optimization target becomes constraint itself
 - Example: Test scores replace learning
 
-**Type 2: Extraction Accumulation (EA)** â€” Rope â†’ Tangled
+**Type 2: Extraction Accumulation (EA)** — Rope → Tangled
 - Coordination persists but extraction added
 - Example: Ads added to free service
 
-**Type 3: Coordination Loss (CL)** â€” Tangled â†’ Snare
+**Type 3: Coordination Loss (CL)** — Tangled → Snare
 - Coordination function dries up
 - Example: HOA stops maintaining, keeps extracting fees
 
-**Type 4: Function Obsolescence (FO)** â€” Rope â†’ Piton
+**Type 4: Function Obsolescence (FO)** — Rope → Piton
 - Purpose served, constraint persists
 - Example: Typewriter-era regulations
 
-**Type 5: Sunset Violation (SV)** â€” Scaffold â†’ Piton
+**Type 5: Sunset Violation (SV)** — Scaffold → Piton
 - **Primary Scaffold degradation path**
 - Sunset missed, theater spikes
 - Example: Temporary tax becomes permanent
 
-**Type 6: Extraction Collapse (EC)** â€” Snare â†’ Piton
+**Type 6: Extraction Collapse (EC)** — Snare → Piton
 - Victims exhausted or escaped
 - Example: Depleted pyramid scheme
 
-**Type 7: Algorithm Shutdown â†’ Internalized Piton (AS)**
+**Type 7: Algorithm Shutdown → Internalized Piton (AS)**
 - Automated enforcement stops but behavioral pattern persists
 - Example: Recommendation algorithm removed but users still behave as if present
 
 **Stage 7-9 Extensions (Types 8-11):**
 
-**Type 8: Coupling Drift (CD)** â€” Independent dimensions become coupled
+**Type 8: Coupling Drift (CD)** — Independent dimensions become coupled
 - Constraint starts factorizing, later couples
-- Example: Simple app â†’ requires 15 permissions (couples data dimensions)
-- See logic_extensions.md Â§4.1
+- Example: Simple app → requires 15 permissions (couples data dimensions)
+- See logic_extensions.md §4.1
 
-**Type 9: Boltzmann Floor Drift (BFD)** â€” Necessary complexity increases
+**Type 9: Boltzmann Floor Drift (BFD)** — Necessary complexity increases
 - Minimum extraction rises due to problem complexity
-- Not extractive driftâ€”legitimate necessity increase
-- Example: Local clinic â†’ regional hospital (floor rises 0.05 â†’ 0.12)
-- See logic_extensions.md Â§4.2
+- Not extractive drift—legitimate necessity increase
+- Example: Local clinic → regional hospital (floor rises 0.05 → 0.12)
+- See logic_extensions.md §4.2
 
-**Type 10: Purity Drift (PD)** â€” **Pre-symptomatic decay**
-- Metrics (Îµ, Ï‡) appear stable
+**Type 10: Purity Drift (PD)** — **Pre-symptomatic decay**
+- Metrics (ε, χ) appear stable
 - BUT: Boltzmann compliance failing, coupling increasing
 - **Early warning signal** before type flip
 - Example: Rope at purity 0.45 drifting toward Tangled (threshold 0.50 crossed soon)
-- See logic_extensions.md Â§4.3
+- See logic_extensions.md §4.3
 
-**Type 11: Network Drift (ND)** â€” **Contagion from neighbors**
+**Type 11: Network Drift (ND)** — **Contagion from neighbors**
 - Constraint's intrinsic purity stable
 - BUT: Effective purity declining due to neighbor degradation
 - **Induced drift** from network contamination
-- Example: Clean regulation surrounded by corrupt ones â†’ effective purity drops
-- See logic_extensions.md Â§4.4
+- Example: Clean regulation surrounded by corrupt ones → effective purity drops
+- See logic_extensions.md §4.4
 
 ---
 
@@ -4497,9 +4497,9 @@ At purity 0.10: multiplier â‰ˆ 2.89Ã— (near-impossible)
 
 **Stage 9 extension:** **Predict when transitions will occur**
 
-Network Drift Velocity (logic_extensions.md Â§3.4):
+Network Drift Velocity (logic_extensions.md §3.4):
 ```
-dEP/dt = Î£ (dP_neighbor/dt Ã— contamination_strength Ã— attenuation)
+dEP/dt = Σ (dP_neighbor/dt × contamination_strength × attenuation)
 ```
 
 Where:
@@ -4525,16 +4525,16 @@ This moves from **reactive classification** ("this is degraded") to **proactive 
 
 ---
 
-**[Â§III COMPLETE - Temporal Logic & Lifecycle States]**
+**[§III COMPLETE - Temporal Logic & Lifecycle States]**
 
 Key achievements:
-- âœ… Indexed temporal operators (paradox of hope resolved)
-- âœ… Exit Ã— Eventually interaction formalized
-- âœ… Seven classical state transitions (T1-T7)
-- âœ… Transition irreversibility (entropy principle)
-- âœ… Eleven drift types (1-7 classical, 8-11 extensions)
-- âœ… Predictive modeling pointer (Stage 9)
+- ✅ Indexed temporal operators (paradox of hope resolved)
+- ✅ Exit × Eventually interaction formalized
+- ✅ Seven classical state transitions (T1-T7)
+- ✅ Transition irreversibility (entropy principle)
+- ✅ Eleven drift types (1-7 classical, 8-11 extensions)
+- ✅ Predictive modeling pointer (Stage 9)
 
-**Next:** Â§IV Inference Rules & Priority Ordering
+**Next:** §IV Inference Rules & Priority Ordering
 
 ---

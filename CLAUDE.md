@@ -593,7 +593,10 @@ Theorem 7 (detection independence), Theorem 8 (licensed plurality vs. real closu
 Read v8 first; cite v7/v6.13.1 for proofs and empirical detail.
 
 **Formal classification rules: `docs/logic.md`.** The spec document; `config.pl` must match it.
-(UTF-8 repaired Feb 2026; the Edit tool fails on multi-byte mojibake — use sed or Python.)
+(UTF-8 fully repaired 2026-07-02 — the Feb 2026 repair was partial and ~1,790 mojibake
+sequences persisted undetected for months, plus ~170 in `logic_thresholds.md`; if mojibake
+reappears, repair with sed/Python — the Edit tool fails on multi-byte mojibake. KNOWN_STATE
+2026-07-02 has the method + controls.)
 
 **`dr_type_at/4` and `classify_snapshot/3` were replaced (2026-05-17)** — both used the legacy
 `power_modifier` χ path (χ = ε × π, omitting σ). Replacements: `classify_at_time/4`

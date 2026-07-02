@@ -46,7 +46,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 ---
 
 ## 2026-07-02 — OQ-135 RESOLVED: v8 adopted (seat/gauge/orientation); v8 paper authored; README/CLAUDE.md refreshed; vocabulary migration wave
-**Files:** docs/deferential_realism_paper_v8.md, README.md, CLAUDE.md, AGENTS.md, ISSUES.md, docs/seat-theorem-v1.md, docs/one_seat_audited.md, docs/design/design_discipline.md, docs/metrics_as_routing.md, docs/technical/paper_versioning.md, docs/v8/foundations/README.md, docs/logic.md
+**Files:** docs/deferential_realism_paper_v8.md, README.md, CLAUDE.md, AGENTS.md, ISSUES.md, docs/seat-theorem-v1.md, docs/one_seat_audited.md, docs/design/design_discipline.md, docs/metrics_as_routing.md, docs/technical/paper_versioning.md, docs/v8/foundations/README.md, docs/logic.md, docs/logic_thresholds.md
 **Tier:** landed
 
 Operator ruled v8 adoption + spec Q4 **wholesale** (plan approval, 2026-07-02). Shipped in
@@ -76,11 +76,25 @@ docs/' copy (carries a related-literature section absent from the live file — 
 category, internally contradicted at core_v4.3.md:46,117) is historical; the live taxonomy is
 six types + naturalized as cascade outcome (v8 §3.3).
 
-**Encoding regression flag (needs ruling, not fixed here):** live `docs/logic.md` carries 132
-mojibake `Ï‡` occurrences today while the foundations snapshot of the same file has 0 —
-CLAUDE.md says logic.md was UTF-8-repaired Feb 2026, so the repair was partial or the file
-re-corrupted since the March snapshot. Edit tool fails on multi-byte mojibake (standing
-warning); repair would be sed/Python. Flagged, not silently rewritten.
+**Mojibake REPAIRED (operator ruled fix, 2026-07-02) — and the history corrects two guesses.**
+Scope was far larger than the flagged 132 `Ï‡`: `docs/logic.md` carried **1,791** mojibake
+sequences across 79 distinct patterns (→ — ε χ × § ≤ ✅ ∧ …), and `docs/logic_thresholds.md`
+carried **172** more (same disease, found by sweep). History evidence (per-revision `Ï‡`
+counts): the count sat at 127–135 from ≥2026-02-15 through HEAD across every edit — so this
+was NOT reintroduced by recent edits (operator's guess) and NOT a regression since March (this
+entry's earlier framing): the Feb-2026 "repair" noted in CLAUDE.md was partial, and the
+mojibake persisted continuously. Corollary: the clean `docs/v8/foundations/logic.md` is a
+separately-CLEANED variant, not a byte snapshot of the repo file. Repair method
+(scratchpad `moji_fix.py`, 5 positive controls passed pre-write: repairs-known / clean-untouched /
+idempotent / C1-fallback / mixed-run-splits): per-run cp1252 round-trip with C1 fallback, plus
+5 hand mappings for truncated sequences whose third byte a later quote/space normalization
+destroyed (`â€"`→—, `â†"`→↔, `â†'`→→, `âœ"`→✔, `â¤ |`→`⤠|`, each context-verified against the
+clean variant). Witnesses: residual audit ZERO suspicious runs in both files; diff balanced
+1,127/1,127 lines, encoding-only; the pre-March rope-bypass line now byte-identical to the
+clean variant's. One spec-content oddity surfaced, NOT decided in the encoding pass: the
+rope-gate bypass symbol is `⤠` (U+2920) in both the repo file and the clean variant — likely
+an ancient corruption of `⊤` (vacuous-true) predating all snapshots; cosmetic (the engine
+implements the OQ-01 bypass regardless), flag only.
 
 ---
 

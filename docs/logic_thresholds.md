@@ -16,21 +16,21 @@ This document provides the **canonical threshold values** for all parameters in 
 - **Provisional**: Subject to refinement through validation and cross-cultural replication
 - **Documented**: Each parameter includes stage, logic, and implementation significance
 
-**Critical Principle:** Changes flow spec â†’ registry â†’ implementation, never backward.
+**Critical Principle:** Changes flow spec → registry → implementation, never backward.
 
 ---
 
 ## Table of Contents
 
-1. Power Modifiers (Ï€) â€” How extraction scales by power position
-2. Scope Modifiers (Ïƒ) â€” How scope affects verification difficulty
-3. Classification Gates â€” Type threshold values (Mountain, Rope, Snare, etc.)
-4. Structural Signatures â€” Natural Law, Coordination Scaffold, Constructed
-5. Boltzmann Compliance â€” Independence testing for natural law claims
-6. Purity Scoring â€” Coordination health measurement
-7. Network Dynamics â€” Contamination propagation parameters
-8. Lifecycle Drift â€” Threshold values for detecting degradation
-9. Action Layer â€” Energy costs and decision gates
+1. Power Modifiers (π) — How extraction scales by power position
+2. Scope Modifiers (σ) — How scope affects verification difficulty
+3. Classification Gates — Type threshold values (Mountain, Rope, Snare, etc.)
+4. Structural Signatures — Natural Law, Coordination Scaffold, Constructed
+5. Boltzmann Compliance — Independence testing for natural law claims
+6. Purity Scoring — Coordination health measurement
+7. Network Dynamics — Contamination propagation parameters
+8. Lifecycle Drift — Threshold values for detecting degradation
+9. Action Layer — Energy costs and decision gates
 10. Defaults & Meta — Fallback values
 11. Maximum Entropy Shadow Classifier (v6.2) — Diagnostic probability distributions
 12. Abductive Reasoning Engine (v6.3) — Cross-subsystem anomaly detection
@@ -38,45 +38,45 @@ This document provides the **canonical threshold values** for all parameters in 
 
 ---
 
-## 1. Power Modifiers (Ï€)
+## 1. Power Modifiers (π)
 
-**Formula:** Ï‡ = Îµ Ã— Ï€(P) Ã— Ïƒ(S)  
+**Formula:** χ = ε × π(P) × σ(S)  
 **Purpose:** Determines how much base extraction is "felt" by agent at power position P
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `power_modifier_powerless` | **1.5** | 1-6 | Extraction amplified â€” powerless agents bear full cost |
-| `power_modifier_moderate` | **1.0** | 1-6 | Baseline â€” default extraction experience |
-| `power_modifier_powerful` | **0.6** | 1-6 | Extraction reduced â€” powerful agents can deflect costs |
-| `power_modifier_organized` | **0.4** | 1-6 | Shared burden â€” collective action distributes costs |
-| `power_modifier_institutional` | **-0.2** | 1-6 | **Net beneficiary** â€” institutions extract more than they pay |
-| `power_modifier_analytical` | **1.15** | 7 | Degeneracy-breaking value â€” detects extraction moderate agents normalize |
+| `power_modifier_powerless` | **1.5** | 1-6 | Extraction amplified — powerless agents bear full cost |
+| `power_modifier_moderate` | **1.0** | 1-6 | Baseline — default extraction experience |
+| `power_modifier_powerful` | **0.6** | 1-6 | Extraction reduced — powerful agents can deflect costs |
+| `power_modifier_organized` | **0.4** | 1-6 | Shared burden — collective action distributes costs |
+| `power_modifier_institutional` | **-0.2** | 1-6 | **Net beneficiary** — institutions extract more than they pay |
+| `power_modifier_analytical` | **1.15** | 7 | Degeneracy-breaking value — detects extraction moderate agents normalize |
 
 **Key Notes:**
-- **Ï€(analytical) = 1.15**: Chosen specifically to break moderate-analytical degeneracy. At 1.0, analytical and moderate produced identical Ï‡ values. At 1.15, 93 corpus constraints show "only analyst catches snare" pattern.
-- **Ï€(institutional) = -0.2**: Negative value represents net extraction from system. Handle sign carefully in implementations.
+- **π(analytical) = 1.15**: Chosen specifically to break moderate-analytical degeneracy. At 1.0, analytical and moderate produced identical χ values. At 1.15, 93 corpus constraints show "only analyst catches snare" pattern.
+- **π(institutional) = -0.2**: Negative value represents net extraction from system. Handle sign carefully in implementations.
 - **Calibration source**: 691-constraint corpus (2024-2026)
 - **Known limitation**: Values are Western-biased, require non-WEIRD validation
 
 ---
 
-## 2. Scope Modifiers (Ïƒ)
+## 2. Scope Modifiers (σ)
 
-**Formula:** Ï‡ = Îµ Ã— Ï€(P) Ã— Ïƒ(S)  
+**Formula:** χ = ε × π(P) × σ(S)  
 **Purpose:** Models verification difficulty and hidden extraction at larger scales
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `scope_modifier_local` | **0.8** | 1-6 | Easy verification â†’ extraction dampened |
+| `scope_modifier_local` | **0.8** | 1-6 | Easy verification → extraction dampened |
 | `scope_modifier_regional` | **0.9** | 1-6 | Easier verification |
 | `scope_modifier_national` | **1.0** | 1-6 | Baseline |
-| `scope_modifier_continental` | **1.1** | 1-6 | Harder verification â†’ extraction amplified |
-| `scope_modifier_global` | **1.2** | 1-6 | Hardest verification â†’ maximum extraction hiding |
-| `scope_modifier_universal` | **1.0** | 1-6 | Neutral â€” natural laws don't scale with scope |
+| `scope_modifier_continental` | **1.1** | 1-6 | Harder verification → extraction amplified |
+| `scope_modifier_global` | **1.2** | 1-6 | Hardest verification → maximum extraction hiding |
+| `scope_modifier_universal` | **1.0** | 1-6 | Neutral — natural laws don't scale with scope |
 
 **Key Notes:**
-- **Ïƒ(universal) = 1.0**: Natural laws are scope-invariant, hence neutral modifier
-- **Ïƒ(global) = 1.2**: Maximum amplification reflects Dunbar-number constraints on verification at planetary scale
+- **σ(universal) = 1.0**: Natural laws are scope-invariant, hence neutral modifier
+- **σ(global) = 1.2**: Maximum amplification reflects Dunbar-number constraints on verification at planetary scale
 - **Rationale**: Larger scope = more participants = harder to verify claims = easier to hide extraction
 
 ---
@@ -120,14 +120,14 @@ These calibrate the sigmoid so `f(d) ≈ π(P)` for each power level:
 
 ## 3. Classification Gates
 
-### 3a. Mountain (â– C[I])
+### 3a. Mountain (■C[I])
 
-**Formal:** `â– C[I] â†” Îµ(C) â‰¤ 0.25 âˆ§ Supp(C) â‰¤ 0.05 âˆ§ NaturalEmergence(C) âˆ§ Immutable(C, I.T, I.E)`
+**Formal:** `■C[I] ↔ ε(C) ≤ 0.25 ∧ Supp(C) ≤ 0.05 ∧ NaturalEmergence(C) ∧ Immutable(C, I.T, I.E)`
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
 | `mountain_extractiveness_max` | **0.25** | 1-6 | Max base extraction for natural law (coordination floor) |
-| `mountain_suppression_ceiling` | **0.05** | 1-6 | Noise floor â€” no enforcement needed |
+| `mountain_suppression_ceiling` | **0.05** | 1-6 | Noise floor — no enforcement needed |
 | `mountain_extractiveness_min` | **0.0** | 1-6 | Theoretical minimum (unused in practice) |
 
 **Implementation:** `classify_from_metrics/6` mountain clause `drl_core.pl:309` (block `:309-394`)  
@@ -151,9 +151,9 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 ---
 
-### 3b. Rope (âŠžC[I])
+### 3b. Rope (⊞C[I])
 
-**Formal:** `âŠžC[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.35 âˆ§ Îµ(C) â‰¤ 0.45 âˆ§ Changeable(C, I.T, I.E)`
+**Formal:** `⊞C[I] ↔ χ(C, I.P, I.S) ≤ 0.35 ∧ ε(C) ≤ 0.45 ∧ Changeable(C, I.T, I.E)`
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
@@ -163,15 +163,15 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 | `rope_extractiveness_min` | **0.0** | 1-6 | Theoretical minimum |
 
 **Implementation:** `classify_from_metrics/6` rope clause `drl_core.pl:350` (block `:309-394`)  
-**Structural Gate:** [Can be certified as CI_Rope if Boltzmann-compliant. See logic_extensions.md Â§1.4]
+**Structural Gate:** [Can be certified as CI_Rope if Boltzmann-compliant. See logic_extensions.md §1.4]
 
-**Key Note:** Dual threshold (Ï‡ AND Îµ) prevents high-power agents from misclassifying high-Îµ constraints as Ropes.
+**Key Note:** Dual threshold (χ AND ε) prevents high-power agents from misclassifying high-ε constraints as Ropes.
 
 ---
 
-### 3c. Snare (âŠ C[I])
+### 3c. Snare (⊠C[I])
 
-**Formal:** `âŠ C[I] â†” Ï‡(C, I.P, I.S) â‰¥ 0.66 âˆ§ Îµ(C) â‰¥ 0.46 âˆ§ Supp(C) â‰¥ 0.60 âˆ§ Changeable(C, I.T, I.E)`
+**Formal:** `⊠C[I] ↔ χ(C, I.P, I.S) ≥ 0.66 ∧ ε(C) ≥ 0.46 ∧ Supp(C) ≥ 0.60 ∧ Changeable(C, I.T, I.E)`
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
@@ -179,16 +179,16 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 | `snare_epsilon_floor` | **0.46** | 1-6 | Min base extraction (prevents powerless-only misclassification) |
 | `snare_suppression_floor` | **0.60** | 1-6 | Requires active enforcement |
 | `snare_extraction_ceil` | **1.00** | 1-6 | Maximum possible extraction |
-| `snare_load_bearing_threshold` | **0.70** | 1-6 | Above â†’ load-bearing snare (Theorem 3: cutting causes collapse) |
+| `snare_load_bearing_threshold` | **0.70** | 1-6 | Above → load-bearing snare (Theorem 3: cutting causes collapse) |
 
 **Implementation:** `classify_from_metrics/6` snare clause `drl_core.pl:332` (block `:309-394`)  
-**Structural Gate:** [Nonsensical coupling is evidence of snare. See logic_extensions.md Â§1.6]
+**Structural Gate:** [Nonsensical coupling is evidence of snare. See logic_extensions.md §1.6]
 
-**Key Note:** Triple threshold (Ï‡ AND Îµ AND Supp) is strictest gate â€” prevents false positives.
+**Key Note:** Triple threshold (χ AND ε AND Supp) is strictest gate — prevents false positives.
 
 ---
 
-### 3d. Tangled Rope (âŠžâŠ C[I])
+### 3d. Tangled Rope (⊞⊠C[I])
 
 **Formal:** `TR(C[I]) <-> 0.35 < chi(C, I.P, I.S) <= 0.90 AND eps(C) >= 0.30 AND Supp(C) >= 0.40 AND Enforce(C) AND Coord(C) AND Asymmetric(C)`  *(floor strict: rope owns chi=0.35; OQ-37 Move 1)*
 
@@ -204,15 +204,15 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 **Key Notes:**
 - **Empirical prevalence:** ~36% of analyzed constraints (most common type)
-- **Structural requirements:** Requires Coord(C) âˆ§ Enforce(C) âˆ§ Asymmetric(C)
+- **Structural requirements:** Requires Coord(C) ∧ Enforce(C) ∧ Asymmetric(C)
 - **Overlap with snare:** A constraint can be tangled at moderate power, snare at powerless power
-- **Calibration note:** Îµ threshold lowered to 0.30 during calibration to accommodate real constraints with moderate extractiveness that exhibit both coordination and extraction.
+- **Calibration note:** ε threshold lowered to 0.30 during calibration to accommodate real constraints with moderate extractiveness that exhibit both coordination and extraction.
 
 ---
 
-### 3e. Scaffold (âŠ¡C[I])
+### 3e. Scaffold (⊡C[I])
 
-**Formal:** `âŠ¡C[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.45 âˆ§ Coord(C) âˆ§ Sunset(C) âˆ§ Theater(C) â‰¤ 0.70`
+**Formal:** `⊡C[I] ↔ χ(C, I.P, I.S) ≤ 0.45 ∧ Coord(C) ∧ Sunset(C) ∧ Theater(C) ≤ 0.70`
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
@@ -227,19 +227,19 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 ---
 
-### 3f. Piton (âŠŸC[I])
+### 3f. Piton (⊟C[I])
 
-**Formal:** `âŠŸC[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.45 âˆ§ Îµ(C) > 0.10 âˆ§ Theater(C) â‰¥ 0.70`
+**Formal:** `⊟C[I] ↔ χ(C, I.P, I.S) ≤ 0.45 ∧ ε(C) > 0.10 ∧ Theater(C) ≥ 0.70`
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
 | `piton_extraction_ceiling` | **0.45** | 1-6 | Minimal effective extraction for anyone |
-| `piton_epsilon_floor` | **0.10** | 1-6 | Still costs energy to maintain (distinguishes from Îµ=0) |
+| `piton_epsilon_floor` | **0.10** | 1-6 | Still costs energy to maintain (distinguishes from ε=0) |
 | `piton_theater_floor` | **0.70** | 1-6 | High theater ratio distinguishes from low-extraction ropes |
 
 **Implementation:** `classify_from_metrics/6` line 2990 (drl_core.pl)
 
-**Key Note:** Degradation state â€” extraction dried up but structure persists. Theater ratio (performance/substance) is diagnostic.
+**Key Note:** Degradation state — extraction dried up but structure persists. Theater ratio (performance/substance) is diagnostic.
 
 ---
 
@@ -258,7 +258,7 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 **Implementation:** `signature_detection.pl` natural_law_signature/1
 
 **Enhancement (Stage 7):** NL claims must pass `boltzmann_invariant_mountain/2` test:
-- Factorization across Power Ã— Scope
+- Factorization across Power × Scope
 - Scope invariance
 - No excess extraction
 - Boltzmann compliance
@@ -307,20 +307,20 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 ## 5. Boltzmann Compliance (Stage 7)
 
-**Purpose:** Natural laws must factorize across index dimensions â€” independence test for NL claims
+**Purpose:** Natural laws must factorize across index dimensions — independence test for NL claims
 
 ### 5a. Coupling Detection
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
 | `boltzmann_coupling_threshold` | **0.25** | 7 | Max allowable coupling score for Boltzmann compliance |
-| `boltzmann_coupling_strong_threshold` | **0.50** | 7 | Above â†' "strong coupling" classification |
-| `boltzmann_factorization_tolerance` | **0.10** | 7 | Relative error margin for Ï‡(P,S) â‰ˆ f(P)Ã—g(S) test |
+| `boltzmann_coupling_strong_threshold` | **0.50** | 7 | Above → "strong coupling" classification |
+| `boltzmann_factorization_tolerance` | **0.10** | 7 | Relative error margin for χ(P,S) ≈ f(P)×g(S) test |
 | `boltzmann_min_classifications` | **3** | 7 | Min indexed classifications for reliable test (epistemic access) |
 
 **Implementation:** `boltzmann_compliance.pl` boltzmann_compliant/2, cross_index_coupling/2
 
-**Key Insight:** If Ï‡ doesn't factorize â†’ constraint couples independent variables â†’ constructed, not natural.
+**Key Insight:** If χ doesn't factorize → constraint couples independent variables → constructed, not natural.
 
 ---
 
@@ -356,11 +356,11 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 **Implementation:** `boltzmann_compliance.pl` excess_extraction/2
 
-**Formula:** Excess = Îµ(C) - BoltzmannFloor(coordination_type)
+**Formula:** Excess = ε(C) - BoltzmannFloor(coordination_type)
 
 **Key Insight:** Extraction above floor = extractive overhead (PoA excess), not necessary coordination cost.
 
-**Note:** Provisional values â€” require corpus calibration.
+**Note:** Provisional values — require corpus calibration.
 
 ---
 
@@ -368,8 +368,8 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `reformability_high_threshold` | **0.70** | 7 | Above â†’ "highly reformable" |
-| `reformability_low_threshold` | **0.30** | 7 | Below â†’ "low reformability" |
+| `reformability_high_threshold` | **0.70** | 7 | Above → "highly reformable" |
+| `reformability_low_threshold` | **0.30** | 7 | Below → "low reformability" |
 
 **Implementation:** `drl_modal_logic.pl` reformability_score/3
 
@@ -381,9 +381,9 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `boltzmann_floor_drift_threshold` | **0.05** | 7 | Min floor increase â†' drift event (Type 9) |
+| `boltzmann_floor_drift_threshold` | **0.05** | 7 | Min floor increase → drift event (Type 9) |
 
-> **Note (February 2026):** `coupling_drift_threshold` (0.10) was removed â€" it was an orphan parameter never wired into any code. `detect_coupling_drift` uses `boltzmann_coupling_threshold` (0.25) as the actual coupling gate.
+> **Note (February 2026):** `coupling_drift_threshold` (0.10) was removed — it was an orphan parameter never wired into any code. `detect_coupling_drift` uses `boltzmann_coupling_threshold` (0.25) as the actual coupling gate.
 
 **Implementation:** `metric_drift_events.pl` (via `drl_lifecycle.pl` facade) `detect_coupling_drift/1`, `detect_boltzmann_floor_drift/1`
 
@@ -393,16 +393,16 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 ## 6. Purity Scoring (Stage 7)
 
-**Purpose:** Structural integrity measurement â€” continuous health metric
+**Purpose:** Structural integrity measurement — continuous health metric
 
 ### 6a. Purity Score Components
 
 **Formula:**
 ```
-purity_score = 0.30 Ã— (1.0 - coupling_score)
-             + 0.25 Ã— scope_invariance
-             + 0.25 Ã— coupling_cleanliness
-             + 0.20 Ã— excess_extraction_decay
+purity_score = 0.30 × (1.0 - coupling_score)
+             + 0.25 × scope_invariance
+             + 0.25 × coupling_cleanliness
+             + 0.20 × excess_extraction_decay
 ```
 
 **Weights:**
@@ -412,10 +412,10 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 - **20%** excess extraction decay (proximity to Boltzmann floor)
 
 **Zones:**
-- **pristine** (â‰¥ 0.9)
-- **sound** (â‰¥ 0.7)
-- **borderline** (â‰¥ 0.5)
-- **contaminated** (â‰¥ 0.3)
+- **pristine** (≥ 0.9)
+- **sound** (≥ 0.7)
+- **borderline** (≥ 0.5)
+- **contaminated** (≥ 0.3)
 - **degraded** (< 0.3)
 
 **Sentinel:** -1.0 = insufficient epistemic data
@@ -426,15 +426,15 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `purity_action_sound_floor` | **0.70** | 7 | Below â†’ monitor purity |
-| `purity_action_escalation_floor` | **0.50** | 7 | Below â†’ escalate action urgency |
-| `purity_action_degraded_floor` | **0.30** | 7 | Below â†’ action type override (cut vs reform) |
-| `purity_surgical_reform_gate` | **0.30** | 7 | **Min purity for surgical reform** â€” below this, reform fails |
+| `purity_action_sound_floor` | **0.70** | 7 | Below → monitor purity |
+| `purity_action_escalation_floor` | **0.50** | 7 | Below → escalate action urgency |
+| `purity_action_degraded_floor` | **0.30** | 7 | Below → action type override (cut vs reform) |
+| `purity_surgical_reform_gate` | **0.30** | 7 | **Min purity for surgical reform** — below this, reform fails |
 | `purity_scaffold_health_gate` | **0.50** | 7 | Min scaffold purity for safe transition |
 
 **Implementation:** `drl_boltzmann_analysis.pl` (via `drl_modal_logic.pl` facade) `purity_qualified_action/4`, `action_composition_gate/3`
 
-**Key Insight:** Degraded constraints (< 0.30) block reform â€” transition to Cut/Exit.
+**Key Insight:** Degraded constraints (< 0.30) block reform — transition to Cut/Exit.
 
 ---
 
@@ -442,13 +442,13 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `purity_energy_max_multiplier` | **3.0** | 7 | **Cap on energy cost scaling** â€” max overhead for fixing degraded system |
+| `purity_energy_max_multiplier` | **3.0** | 7 | **Cap on energy cost scaling** — max overhead for fixing degraded system |
 
 **Implementation:** `drl_modal_logic.pl` purity_adjusted_energy/4
 
-**Formula:** Energy_cost Ã— multiplier(purity)
+**Formula:** Energy_cost × multiplier(purity)
 
-**Example:** Reform at purity 0.31 â†’ multiplier = 2.16Ã— (near cap)
+**Example:** Reform at purity 0.31 → multiplier = 2.16× (near cap)
 
 **Rationale:** Fixing rotten systems is harder than building new ones.
 
@@ -475,11 +475,11 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 |-----------|-------|-------|-------------------|
 | `purity_contamination_cap` | **0.30** | 8 | **Max purity reduction per edge** (prevents catastrophic drops) |
 | `purity_attenuation_factor` | **0.50** | 8 | **Edge strength scaling** (contamination loses 50% per hop) |
-| `purity_contamination_source_floor` | **0.50** | 8 | Below â†’ active contamination source |
+| `purity_contamination_source_floor` | **0.50** | 8 | Below → active contamination source |
 
 **Implementation:** `drl_purity_network.pl` effective_purity/4, purity_contamination_pressure/4
 
-**Key Rule:** Downward-only contamination (Snare â†’ Rope, not vice versa)
+**Key Rule:** Downward-only contamination (Snare → Rope, not vice versa)
 
 ---
 
@@ -509,19 +509,19 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 
 | Type | Immunity | Stage | Logic/Significance |
 |------|----------|-------|-------------------|
-| `mountain` | **0.0** | 8 | **Immune** â€" natural laws unaffected by neighbor contamination |
-| `piton` | **0.3** | 8 | Low susceptibility â€" degraded state already resistant |
+| `mountain` | **0.0** | 8 | **Immune** — natural laws unaffected by neighbor contamination |
+| `piton` | **0.3** | 8 | Low susceptibility — degraded state already resistant |
 | `snare` | **0.5** | 8 | Moderate susceptibility |
-| `naturalized` | **0.7** | 8 | High susceptibility â€" ambiguous structures easily influenced |
-| `tangled_rope` | **0.8** | 8 | High susceptibility â€" hybrid state easily influenced |
-| `scaffold` | **0.9** | 8 | Very high susceptibility â€" temporary structures fragile |
-| `rope` | **1.0** | 8 | **Fully susceptible** â€" pure coordination most affected |
+| `naturalized` | **0.7** | 8 | High susceptibility — ambiguous structures easily influenced |
+| `tangled_rope` | **0.8** | 8 | High susceptibility — hybrid state easily influenced |
+| `scaffold` | **0.9** | 8 | Very high susceptibility — temporary structures fragile |
+| `rope` | **1.0** | 8 | **Fully susceptible** — pure coordination most affected |
 
 **Implementation:** `drl_purity_network.pl` type_immunity/2
 
 **Key Insight:** Mountains (immunity 0.0) are completely immune to contamination; Ropes (immunity 1.0) receive full contamination pressure. This reflects the asymmetry: natural laws are structurally robust, while pure coordination is structurally fragile.
 
-**Formula integration:** `EffPurity = max(0.0, Intrinsic - TotalContam Ã— Immunity)`
+**Formula integration:** `EffPurity = max(0.0, Intrinsic - TotalContam × Immunity)`
 
 ---
 
@@ -529,8 +529,8 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `network_contamination_risk_threshold` | **2** | 8 | Low-purity neighbors â†’ "at_risk" classification |
-| `network_cluster_degraded_floor` | **0.40** | 8 | Below â†’ cluster classified as "degraded" |
+| `network_contamination_risk_threshold` | **2** | 8 | Low-purity neighbors → "at_risk" classification |
+| `network_cluster_degraded_floor` | **0.40** | 8 | Below → cluster classified as "degraded" |
 
 **Implementation:** `drl_purity_network.pl` network_purity_metrics/2
 
@@ -542,9 +542,9 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `network_drift_velocity_threshold` | **0.01** | 9 | Min effective purity drift per year â†’ network drift event |
-| `network_hub_degree_threshold` | **3** | 9 | Neighbors required for "hub" â†’ severity escalation |
-| `network_cascade_count_threshold` | **3** | 9 | Drifting constraints â†’ "cascading" network classification |
+| `network_drift_velocity_threshold` | **0.01** | 9 | Min effective purity drift per year → network drift event |
+| `network_hub_degree_threshold` | **3** | 9 | Neighbors required for "hub" → severity escalation |
+| `network_cascade_count_threshold` | **3** | 9 | Drifting constraints → "cascading" network classification |
 | `network_drift_hub_escalation` | **1** | 9 | 1=enable hub-based severity escalation (boolean flag) |
 
 **Implementation:** `drl_lifecycle.pl` network_drift_velocity/4, cascade_prediction/3, network_stability_assessment/2
@@ -559,8 +559,8 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `system_gradient_threshold` | **0.01** | 2 | Min change â†’ non-stable system |
-| `system_gradient_strong_threshold` | **1.00** | 2 | Above â†’ "strong" intent classification |
+| `system_gradient_threshold` | **0.01** | 2 | Min change → non-stable system |
+| `system_gradient_strong_threshold` | **1.00** | 2 | Above → "strong" intent classification |
 
 **Implementation:** `drl_lifecycle.pl` + `intent_engine.pl`
 
@@ -572,7 +572,7 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `default_extractiveness` | **0.10** | 1-6 | Fallback when Îµ unmeasured |
+| `default_extractiveness` | **0.10** | 1-6 | Fallback when ε unmeasured |
 | `default_suppression` | **0.10** | 1-6 | Fallback when Supp unmeasured |
 | `default_theater` | **0.0** | 1-6 | Fallback when theater unmeasured |
 
@@ -582,8 +582,8 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `data_high_threshold` | **0.95** | 2 | Above â†’ "high confidence" |
-| `data_medium_threshold` | **0.75** | 2 | Above â†’ "medium confidence" |
+| `data_high_threshold` | **0.95** | 2 | Above → "high confidence" |
+| `data_medium_threshold` | **0.75** | 2 | Above → "medium confidence" |
 
 **Implementation:** `data_validation.pl`
 
@@ -593,11 +593,11 @@ purity_score = 0.30 Ã— (1.0 - coupling_score)
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `critical_mass_threshold` | **3** | 6 | Shared snare victims â†’ organized power modifier |
+| `critical_mass_threshold` | **3** | 6 | Shared snare victims → organized power modifier |
 
 **Implementation:** `constraint_indexing.pl`
 
-**Rationale:** 3+ victims can coordinate â†’ shift from powerless to organized.
+**Rationale:** 3+ victims can coordinate → shift from powerless to organized.
 
 ---
 
@@ -727,7 +727,7 @@ Boltzmann/Purity/Network logic runs alongside core, doesn't modify `classify_fro
 ## Known Issues & Calibration Needs
 
 ### Issue 1: Tangled Rope Threshold Mismatch — RESOLVED
-**Problem:** `tangled_rope_epsilon_floor` was documented as 0.50, but carbon credits example uses Îµ = 0.40.
+**Problem:** `tangled_rope_epsilon_floor` was documented as 0.50, but carbon credits example uses ε = 0.40.
 **Resolution:** The threshold was lowered to 0.30 during calibration to accommodate real constraints with moderate extractiveness that exhibit both coordination and extraction. Documentation updated February 2026 to match config.pl.
 **Status:** Resolved
 **Impact:** No longer an issue — threshold, documentation, and examples are now consistent
@@ -735,22 +735,22 @@ Boltzmann/Purity/Network logic runs alongside core, doesn't modify `classify_fro
 ### Issue 2: Boltzmann Floor Calibration
 **Problem:** Current values (0.02-0.20) are provisional estimates  
 **Need:** Corpus-based calibration per coordination type  
-**Impact:** Medium â€” affects excess extraction calculations
+**Impact:** Medium — affects excess extraction calculations
 
 ### Issue 3: Purity Weight Sensitivity
 **Problem:** Weights (30/25/25/20) derived theoretically, not empirically fitted  
 **Need:** Sensitivity analysis to test robustness  
-**Impact:** Medium â€” affects purity score stability
+**Impact:** Medium — affects purity score stability
 
 ### Issue 4: Power Modifier Cultural Bias
 **Problem:** Calibrated on 691-constraint Western corpus  
 **Need:** Non-WEIRD validation and potential recalibration  
-**Impact:** High â€” affects indexical relativity claims
+**Impact:** High — affects indexical relativity claims
 
 ### Issue 5: Scope Modifier Empirical Uncertainty
-**Problem:** Ïƒ values based on theoretical reasoning about verification difficulty  
+**Problem:** σ values based on theoretical reasoning about verification difficulty  
 **Need:** Empirical validation of actual extraction hiding at different scopes  
-**Impact:** Medium â€” affects Ï‡ calculations at extreme scopes
+**Impact:** Medium — affects χ calculations at extreme scopes
 
 ---
 
@@ -766,10 +766,10 @@ Boltzmann/Purity/Network logic runs alongside core, doesn't modify `classify_fro
 
 ## Cross-Reference
 
-**For formal definitions** â†’ logic.md Â§II  
-**For implementation architecture** â†’ logic_extensions.md Â§6  
-**For calibration methodology** â†’ validation/validation_report.md  
-**For Prolog source** â†’ config.pl (lines 71-503)
+**For formal definitions** → logic.md §II  
+**For implementation architecture** → logic_extensions.md §6  
+**For calibration methodology** → validation/validation_report.md  
+**For Prolog source** → config.pl (lines 71-503)
 
 ---
 
