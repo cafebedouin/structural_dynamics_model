@@ -69,8 +69,19 @@ know what matters most.
 
 ## Project Context
 
-Prolog+Python research infrastructure implementing Deferential Realism (DR). ~110 Prolog modules,
-~110 Python analysis scripts. The live corpus (`prolog/testsets/`) was RESET 2026-06-05 and is
+**What this repo is:** the Deferential Realism (DR) research project — a philosophical
+framework plus the working engine that makes it falsifiable. Two axes (observer: `dr_type`
+over four positions; committer: `cs_*` kernels/readings/drift) under the v8
+seat/gauge/orientation ontology: one content-seat audited against, many gauge positions over
+it, orientation as the audited face — one-directional audit, machine-enforced by the
+axis-boundary taint guard in the gate. The Prolog engine classifies LLM-authored constraint
+stories (six types via χ = ε × f(d) × σ(S) + the signature layer); the Python layer
+orchestrates, reports, and gates; essays come out the other end (cafebedouin.org). Entry-point
+paper: **`docs/deferential_realism_paper_v8.md`** (its closing Appendix states the current
+state plainly); repo tour: `README.md`.
+
+Prolog+Python research infrastructure: ~125 Prolog modules, ~120 Python analysis scripts (as
+of 2026-07-02). The live corpus (`prolog/testsets/`) was RESET 2026-06-05 and is
 being rebuilt from scratch under the de-leaked generation pipeline (KNOWN_STATE 2026-06-05) —
 cite the pipeline manifest for its size, never a memorized count. All previous corpora live under
 `prolog/archives/datasets/`. Correctness and reproducibility matter most; model provenance (which
@@ -570,12 +581,16 @@ not dominance): `outputs/kernel_first_phase0/PHASE0_READOUT.md`, KNOWN_STATE 202
 orchestrator step 3 alongside the matching `prolog/testsets/` file; `run_pipeline.py` reads them,
 never writes them. Analysis output lives in `outputs/`.
 
-**Canonical framework paper: `docs/deferential_realism_paper_v7.md`.** v7 promotes the committer
-axis to a co-equal second axis: Axiom 7 (authored commitment structure with computed
-consequence), Theorem 7 (detection independence), Theorem 8 (licensed plurality vs. real
-closure), §4.5 (two-axis engine), §5.11 (trifurcation profile). Axioms 1–6 and Theorems 1–4
-unchanged from v6.13. `docs/deferential_realism_paper_v6.13.1.md` is a parallel observer-only
-amendment (Axiom 2 for OQ-26: ε is reading-relative across generation runs). Use v7.
+**Canonical framework paper: `docs/deferential_realism_paper_v8.md`** (OQ-135 adoption,
+2026-07-02) — the entry point and canonical seat/gauge/orientation vocabulary (v8 §5.4 bridge
+table translates v7's "seat" = v8 "gauge"). The detailed records remain authoritative and all
+§-references to them stay valid: **v7** (`docs/deferential_realism_paper_v7.md`) for the
+committer-axis promotion — Axiom 7 (authored commitment structure with computed consequence),
+Theorem 7 (detection independence), Theorem 8 (licensed plurality vs. real closure), §4.5
+(two-axis engine), §5.11 (trifurcation profile); **v6.13.1**
+(`docs/deferential_realism_paper_v6.13.1.md`, internally v6.13.2) for the observer-axis record
+(Axioms 1–6, Theorems 1–4, the OQ-26 ε reading-relativity and OQ-27/OQ-51 H¹ amendments).
+Read v8 first; cite v7/v6.13.1 for proofs and empirical detail.
 
 **Formal classification rules: `docs/logic.md`.** The spec document; `config.pl` must match it.
 (UTF-8 repaired Feb 2026; the Edit tool fails on multi-byte mojibake — use sed or Python.)
