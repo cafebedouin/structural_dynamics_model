@@ -94,14 +94,20 @@ generate_full_report(IntervalID) :-
     forensic_audit_false_mountains,
 
     % --- SECTION 4: STRUCTURAL SIGNATURE ANALYSIS ---
+    % OQ-137 fix (2026-07-02): the old shape catch(forall(...)) ; true let ONE
+    % failing member silently truncate the section at that constraint (forall
+    % stops at the first failure; the `; true` absorbed it — Pattern 6 at the
+    % composition; planted-fixture witness 0/110 lines). Per-member OQ-99
+    % fail-loud: print an OPEN marker for the failing constraint and keep
+    % iterating — the absence gets a token, the section stays complete.
     format('~n[STRUCTURAL SIGNATURE ANALYSIS]~n'),
-    (   catch(
-            forall(narrative_ontology:constraint_claim(CSig, _Claim),
-                   report_constraint_signature(CSig)),
-            Error,
-            format('  [FAIL] Exception: ~w~n', [Error]))
-    ;   true
-    ),
+    forall(narrative_ontology:constraint_claim(CSig, _Claim),
+           (   catch(report_constraint_signature(CSig), Error,
+                     format('  ~w: [FAIL] Exception: ~w~n', [CSig, Error]))
+           ->  true
+           ;   format('  ~w: [OPEN] no signature line (a chained reading failed — dr_signature/signature_confidence/explain_signature); graduation: make the failing reading total or author its inputs.~n',
+                      [CSig])
+           )),
 
     % --- SECTION 5: UKE_DR FEASIBILITY BRIDGE ---
     (   narrative_ontology:recommendation(_, _)

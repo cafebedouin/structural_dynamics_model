@@ -778,6 +778,19 @@ explain_signature(C, ambiguous, Explanation) :-
            'AMBIGUOUS signature for ~w: Insufficient structural differentiation to classify. Consider gathering more data on alternatives, beneficiaries, and temporal evolution.',
            [C]).
 
+% OQ-137 fix (2026-07-02): `unknown` had NO explanation clause, so
+% explain_signature/3 FAILED on its own domain (C, its computed signature) for
+% every honest-abstain constraint — and report_constraint_signature chained it
+% unguarded, so one claim-authoring unknown-signature constraint silently
+% truncated the whole [STRUCTURAL SIGNATURE ANALYSIS] section (planted-fixture
+% witness: 0/110 lines printed; audits/2026-07-02_oq137_reading_totality/).
+% The honest abstain carries its provenance, mirroring constraint_signature's
+% own unknown clause (:136): absence of authored metrics, not a verdict.
+explain_signature(C, unknown, Explanation) :-
+    format(atom(Explanation),
+           'UNKNOWN signature for ~w: honest abstain — the profile metrics are unauthored (absence sentinel), so no signature verdict is fabricated. Author the metric vector to obtain a signature (see constraint_signature/2 unknown clause).',
+           [C]).
+
 /* ================================================================
    INTEGRATION WITH MODAL CLASSIFICATION
 
