@@ -45,6 +45,33 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-02 — OQ-70 premise-rot correction: canon said "until ruled" for 27 days after the ruling; v8/README inherited it on authoring day
+**Files:** CLAUDE.md, README.md, docs/deferential_realism_paper_v8.md, ISSUES.md
+**Tier:** correction-key
+
+Found while ranking the frontier: OQ-70 (FNL bait confound) was RESOLVED 2026-06-05 (option A
+class ruling, bait clauses removed at `72ec2cdd`, detector-intact positive control), but
+CLAUDE.md Critical Distinctions kept the pre-ruling "Until OQ-70 is ruled" framing in present
+tense — and the v8 paper (§9.4/§9.6/Appendix) and README, authored 2026-07-01/02, inherited it
+from CLAUDE.md the day they were written. **The corrected canon (all surfaces now derive from
+it):** OQ-70 resolved; what survives permanently is (a) pre-reset/archive prevalence is
+regime-bound (authoring convention, never detection), (b) live prevalence is citable only as a
+CLAIMS statistic, (c) statistics reset twice (2026-06-05 class fix; 2026-06-11 example cutover
+— discount per `audits/2026-06-11_oq109_phase_b/EXAMPLE_INHERITED_SIGNATURES.md`). Engine
+re-witnessed correct at HEAD before any edit (`signature_detection.pl:1081–1096` source-2
+RULED-OUT + explicit-claim clause present; `:1404–1422` sibling likewise). Corrected: CLAUDE.md
+FNL block (present-tense bait description → past/regime-scoped + canon), v8 §9.4 (resolved +
+surviving prohibition), §9.6 + Appendix open-lists → {OQ-195, OQ-205}, README open-obligations
+likewise, MEMORY.md hook. **Downstream unblock:** OQ-138's `false_natural_law` member was
+deferred "pending OQ-70" 12 days AFTER the close (stale premise at authoring; no residual limb
+exists in the OQ-70 body) — gate-expiry annotation added, member now rulable-once-witnessed
+(ruling stays in the OQ-138 blocked_on_human queue); the parked `neutron_star`/FCR RED
+adjudication (orphaned "under OQ-70") re-homed into OQ-138's route-purity limb. Probe note:
+the stale-phrase grep needed a wrap-proof pattern ("OQ-70 is ruled", not "Until OQ-70 is
+ruled") — the v8 instances line-wrapped and the first probe missed them; control caught it.
+
+---
+
 ## 2026-07-02 — OQ-135 RESOLVED: v8 adopted (seat/gauge/orientation); v8 paper authored; README/CLAUDE.md refreshed; vocabulary migration wave
 **Files:** docs/deferential_realism_paper_v8.md, README.md, CLAUDE.md, AGENTS.md, ISSUES.md, docs/seat-theorem-v1.md, docs/one_seat_audited.md, docs/design/design_discipline.md, docs/metrics_as_routing.md, docs/technical/paper_versioning.md, docs/v8/foundations/README.md, docs/logic.md, docs/logic_thresholds.md
 **Tier:** landed

@@ -549,14 +549,21 @@ So an OQ-37-style "does this metric earn its keep" call is settled by *does it p
 it provide) useful analysis?* — make the schema/prompt change and test it on `testsets/` — never
 by "defer to the rebuild."
 
-**FNL prevalence is bait-confounded — do not cite it (or the FNL-driven tangled_rope dominance)
-as a detection result (OQ-70).** All FNL firings ride `claimed_natural/2` source 2, which reads
+**FNL prevalence is regime-bound — never a detection result (OQ-70, RESOLVED 2026-06-05).**
+All kernel_v1-era FNL firings (the 827/1106 era) rode `claimed_natural/2` source 2, which read
 ANY single authored mountain perspective as a naturality claim — a generation-template convention
 copied from the one-shot example (`agent/verification_bottleneck.json`, "ANALYTICAL OBSERVER /
 NATURAL LAW VIEW (MOUNTAIN)"). Counterfactual witnessed 2026-06-04: retracting the template
-perspectives migrates FNL→FCR almost wholesale (FCR's `appears_as_rope` source 2 is the same gate
-pattern), zero mass landing in genuine natural_law/CI_rope. Until OQ-70 is ruled,
-signature-prevalence statistics measure authoring convention. Also: pipeline outputs from runs
+perspectives migrated FNL→FCR almost wholesale (FCR's `appears_as_rope` sibling was the same gate
+pattern), zero mass landing in genuine natural_law/CI_rope. Operator ruled option A as the CLASS
+(2026-06-05, `72ec2cdd`): no signature may read a single authored perspective as a story-level
+claim — both bait clauses removed, detector intact (positive control still fires via the explicit
+story-level claim). What survives: (a) ALL pre-reset/archive prevalence stays regime-bound
+(authoring convention, never detection); (b) live prevalence is citable only as a CLAIMS
+statistic (stories that claim naturality/coordination and fail compliance); (c) statistics reset
+TWICE — 2026-06-05 (class fix) and 2026-06-11 (example cutover; discount example-inherited
+signatures per `audits/2026-06-11_oq109_phase_b/EXAMPLE_INHERITED_SIGNATURES.md`).
+Also: pipeline outputs from runs
 BEFORE 2026-06-04 carry ONE non-corpus per_constraint entry (`catholic_church_1200`, an engine
 demo from `constraint_instances.pl`) — exclude it, or corpus counts run one high vs the manifest.
 Runs from 2026-06-04 on enumerate `corpus_loader:corpus_constraint/1` and match the manifest;

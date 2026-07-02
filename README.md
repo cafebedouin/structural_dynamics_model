@@ -178,10 +178,8 @@ corpus statistics are one sample conditional on one generation (v8 §3.2, §7.2)
 Alpha, working toward beta (as of 2026-07-02). The engine and both axes are built and
 validated; the corpus stays deliberately small while schema and wiring evolve; correctness and
 reproducibility are prioritized over growth. The one-seat invariant is machine-enforced in the
-standing gate. Main open obligations: the general-n disagreement-spectrum proof (OQ-195), the
-false-natural-law authoring confound (OQ-70 — its prevalence may not be cited as a detection
-result until ruled), and the ε declaration discipline (v8 §6.4). The full frontier lives in
-`ISSUES.md`.
+standing gate. Main open obligations: the general-n disagreement-spectrum proof (OQ-195) and
+the ε declaration discipline (OQ-205; v8 §6.4). The full frontier lives in `ISSUES.md`.
 
 Essays produced with the pipeline publish to [cafebedouin.org](https://cafebedouin.org).
 

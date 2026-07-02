@@ -985,12 +985,17 @@ property applied to the authors as readily as to the corpus.
 
 Standing citation prohibitions, each with its reason:
 
-- **FNL prevalence is bait-confounded (OQ-70).** Every `false_natural_law` firing in the
-  measured corpora rides a generation-template convention (a single authored mountain
-  perspective read as a naturality claim); the witnessed counterfactual migrates the mass
-  almost wholesale to a sibling signature with none landing in genuine natural law. Until
-  OQ-70 is ruled, signature-prevalence statistics measure authoring convention. **Neither FNL
-  prevalence nor the FNL-driven tangled_rope dominance may be cited as a detection result.**
+- **FNL prevalence is regime-bound (OQ-70, resolved 2026-06-05).** Every pre-reset FNL firing
+  rode a generation-template convention (a single authored mountain perspective read as a
+  naturality claim); the witnessed counterfactual migrated the mass almost wholesale to a
+  sibling signature with none landing in genuine natural law, and the operator's class ruling
+  removed both bait clauses from the engine (detector intact via positive control). What
+  survives the resolution: archive prevalence permanently measures authoring convention, never
+  detection; live prevalence is citable only as a *claims statistic* (stories that claim
+  naturality and fail compliance), with the two reset boundaries (2026-06-05 class fix,
+  2026-06-11 example cutover) and example-inherited discounting respected. **Neither archive
+  FNL prevalence nor the FNL-driven tangled_rope dominance may ever be cited as a detection
+  result.**
 - **A kernel-positive is not a dominance claim (OQ-79).** The kernel-first router is
   deliberately kernel-liberal: it routes a topic as a contested kernel whenever a foundational
   reading is *constructible*. A kernel count or ranking cited as "the corpus contains N
@@ -1014,7 +1019,7 @@ Because v8 is largely re-description of a built engine, it must say what could s
    path other than the single entailment-typed forward bridge — reverse bridge, payload
    widening, or seam promotion — falls the ontology. The guard runs in the standing gate, and
    its two positive controls prove it would catch the two forms a weaker check would miss.
-2. **The ε declaration discipline (§6.4), owed and unbuilt.** v8 converts the seat's
+2. **The ε declaration discipline (§6.4; tracked as OQ-205), owed and unbuilt.** v8 converts the seat's
   substrate question into a design obligation with checkable outputs (provenance surfaced,
   stability checked). A future version that quietly drops the obligation, or an engine state
   where ε provenance is systematically unavailable, is v8 failing at its own showing-face.
@@ -1027,14 +1032,13 @@ Because v8 is largely re-description of a built engine, it must say what could s
 ### 9.6 Open problems, routed
 
 Per the framework's own discipline, open ends are typed and tracked, not parked in prose. The
-three that bear directly on this paper: **OQ-195** — the general-n H¹ gap spectrum under the
+two that bear directly on this paper: **OQ-195** — the general-n H¹ gap spectrum under the
 variable-real-seat regime (proven by enumeration for n ∈ {2,3,4}; the induction unwritten;
-until it lands, Theorem 2's spectrum is cited only with its cardinality condition, §3.4);
-**OQ-70** — the FNL bait confound (until ruled, the citation prohibition of §9.4 stands);
-**OQ-03 / the ε discipline** — the declaration-discipline build of §6.4 (the empirical limb
-unblocked by this paper's adoption of v8). The full frontier lives in `ISSUES.md`, which is
-the single tracking surface; anything this paper marks OPEN is findable there by its OQ
-number.
+until it lands, Theorem 2's spectrum is cited only with its cardinality condition, §3.4); and
+**OQ-205** — the ε declaration discipline of §6.4, now with its own tracking home (OQ-03's
+empirical limb, unblocked by this paper's adoption, rides on it). The full frontier lives in
+`ISSUES.md`, which is the single tracking surface; anything this paper marks OPEN is findable
+there by its OQ number.
 
 The engine architecture votes one-seat; the vocabulary now says what the architecture does;
 the invariant that keeps the claim honest runs in the gate; and the one thing the substrate
@@ -1127,9 +1131,10 @@ declared governance stands that make judgment explicit, consistent, and revisabl
 authored per reading, so every corpus statistic is conditional on one generation run;
 regenerating a topic produces a new reading, not a re-measurement of the old one. The live
 corpus is deliberately small — a working test bed plus two stable twin baselines — and its
-size is whatever the pipeline manifest says at the time of reading. Prevalence of the
-false-natural-law signature currently reflects an authoring convention and may not be cited as
-a detection result.
+size is whatever the pipeline manifest says at the time of reading. Signature prevalence is
+citable only as a claims statistic — how many stories *claim* naturality and fail compliance —
+never as a detection result about the world, and archive-era prevalence figures are
+permanently bound to the authoring regime they were measured under.
 
 **What is running.** The classification pipeline and its standing gate (tracker checks,
 self-tests, the cross-axis guard); an essay pipeline (topic → readings → corpus →
@@ -1138,11 +1143,10 @@ the operator, not automated); and a narrative experiment that extracts a story's
 topology, regenerates a new story from the formal skeleton behind an air gap, and re-measures
 it — the demonstration that the topology survives independent of its original body.
 
-**What is open.** Three named obligations: a general proof of the disagreement-spectrum law
-for any number of real positions (OQ-195); resolution of the authoring confound behind the
-false-natural-law signature (OQ-70); and a declaration discipline for ε — surfacing who
+**What is open.** Two named obligations: a general proof of the disagreement-spectrum law
+for any number of real positions (OQ-195); and a declaration discipline for ε — surfacing who
 authored each ε, from which reading, and how stable conclusions are under its perturbation —
-the framework's main owed artifact. The full open-questions ledger is `ISSUES.md`.
+the framework's main owed artifact (OQ-205). The full open-questions ledger is `ISSUES.md`.
 
 **Status.** Alpha, working toward beta: the corpus stays small while schema and wiring evolve,
 and correctness and reproducibility are prioritized over growth. Everything is CC0.

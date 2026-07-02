@@ -8343,6 +8343,16 @@ yet conversion-witnessed. Split from OQ-128 (2026-06-17): `natural_law` overwrit
 **Deps:** splits_from OQ-128, blocked_on_human per-clause-route-vs-reclassify-ruling
 *(Per-clause route-vs-reclassify is a declared seat. NB the `false_natural_law` MEMBER is gated on OQ-70 — see Origin — but that does not block FCR/FSM/constructed, so it is not an OQ-138-level dep.)*
 
+**Gate-expiry annotation (2026-07-02, OQ-70 premise-rot correction pass).** The OQ-70 gate
+named above and in the Origin/per-clause lines **expired before it was authored**: OQ-70 was
+resolved 2026-06-05 (option A class ruling, `72ec2cdd`), the defers here were written
+2026-06-17/21, and the OQ-70 body contains no residual limb a member could wait on (full-entry
+read + repo census witnessed at the correction pass, KNOWN_STATE 2026-07-02). The
+`false_natural_law` member is therefore **rulable-once-witnessed like its siblings** — witness
+= before/after diff + routing-adequacy positive control per the FCR-9 precedent; NB only 1
+live firing, so breadth comes from the twins/archives sweep. The route-vs-keep ruling itself
+stays in this entry's existing `blocked_on_human` per-clause queue.
+
 **Origin:** 2026-06-17, OQ-128 residual. The whole `resolve_modal_signature_conflict` table (lines 885–932) is OVERWRITES (rewrite `dr_type` by signature) — the same architecture as the retired `:867` and the discriminated type_1 cap. Unlike natural_law (0 fires → free retirement), these FIRE and CHANGE `dr_type`: witnessed on current main the signature layer changes the metric type at **66/288 live seats** (524/3840 haiku, 637/3840 flash); per-signature firing `constructed_high_extraction 41 / false_ci_rope 19 / coupling_invariant_rope 4 / false_summit_mountain 2 / false_natural_law 1`. So NONE retires free — each needs its own before/after diff and a routing-adequacy positive control. **SPLIT:** FCR / FSM / constructed are rulable-once-witnessed (mechanical gathering); `false_natural_law` is deferrable-pending-OQ-70.
 
 **What resolution changes.** A per-clause ruling (route / discriminate / keep-as-correction) with each clause's before/after verdict diff as the witness, consistent with the engine-ROUTES-never-RECLASSIFIES architecture (AGENTS.md). The type_1 discriminated-severity build (`drl_core.pl` `dr_claim_mismatch`) is the precedent pattern. Cross-ref: OQ-128 (parent), OQ-70 (FNL gate), OQ-98.
@@ -8434,7 +8444,8 @@ load-bearing-elsewhere. Each clause's diff is now IN HAND; the partition ruling 
   once dr_type=unknown. So a bare type-layer abstain silently drops #2's severe "mountain-claim over probable
   extraction" flag ⇒ constructed inherits the **FSM discriminated-severity template** (signature carries the
   diagnostic), NOT bare abstain. 47 inert seats byte-identical; behavior change is 3 (2 up, 1 down).
-- **false_natural_law** — still deferred pending OQ-70 (FNL bait-confound).
+- **false_natural_law** — UNGATED 2026-07-02 (the OQ-70 defer expired before it was authored —
+  see the Gate-expiry annotation above); rulable-once-witnessed, witness not yet gathered.
 
 **PER-CLAUSE RULINGS (operator, 2026-06-21).** Verdict → witness → kill condition. Two are evidence-settled
 (commitments); two are operator-merits seats (OPEN/conditional — the evidence frames but does not settle them,
@@ -8459,6 +8470,8 @@ type it writes, not just the seat's own verdict. (Reusable form in `docs/technic
   would repoint them at the CI-rope signature. Lean: do not rewire — `dr_type='rope'` is the more stable
   contract than a signature predicate's internal shape; the certification is correct either way. Convert only if
   route-purity is enforced engine-wide for a reason beyond this clause. Architecture-aesthetics, not diagnostic.
+  *This limb also inherits the parked `neutron_star`/FCR RED adjudication (OQ-122/OQ-128 closes parked it
+  "under OQ-70"; orphaned by the OQ-70 close — re-homed here 2026-07-02, it is an FCR case).*
 - **constructed — CONVERT the 3, gated on a claim-discriminant that keeps seat #2's floor (conditional).**
   47/50 winners are snare→snare (inert; convert byte-identical). Behavior change is 3. Bare abstain-to-unknown
   is refuted: it drops a severe `type_1_false_summit` on #2 (institutional_trust_erosion, RED→yellow) that
