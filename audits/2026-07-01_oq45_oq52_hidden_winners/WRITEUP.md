@@ -18,14 +18,17 @@ The deferred W1-magnitude leg was delivered: `w1_sheaf_join.py` gained the
 kernel_v1 was classified same-run and the false-mountain selection ranked
 (`a3_false_mountain_w1_ranking.{md,json}`).
 
-**Control outcome (the finding):** all 5 recorded 2026-06-02 member names recover, with
-member-level H1 EXACT (quran=4, article_9=5, abrahamic=6) — but the population count does NOT
-reproduce: HEAD yields strict=235 + loose=58 of manifest=944 (vs 16 of 98 at n=772 on the
-2026-06-02 engine). The 944 cross-witnesses the OQ-197 acceptance controls (commit `34ff919f`),
-so this is the known current-engine regime — four weeks of engine drift, not corpus growth. The
-original 16-member list was never saved to substrate and is not reconstructible. Lesson (already
-in the OQ-52 close): population counts over engine-computed selections are engine-regime-relative;
-member-level type assignments were the stable part.
+**Control outcome — the recover-the-16 control was RETIRED AS IMPOSSIBLE, not passed.** The plan
+demanded the selection recover the 13 strict / 3 loose; the original 16-member list was never
+saved to substrate and is not reconstructible, so the full-16 control could not be run as
+specified. What IS witnessed: all 5 recorded member names recover, with member-level H1 EXACT
+(quran=4, article_9=5, abrahamic=6) — but the population count does NOT reproduce: HEAD yields
+strict=235 + loose=58 (**N=293**, the ranking's population) of manifest=944 (vs 16 of 98 at
+n=772 on the 2026-06-02 engine). The 944 cross-witnesses the OQ-197 acceptance controls (commit
+`34ff919f`), so this is the known current-engine regime — four weeks of engine drift, not corpus
+growth. **The ranking is therefore a current-engine kernel_v1 selection (N=293) anchored by
+three named members — NOT a recovery of the 2026-06-02 sixteen.** Lesson (in the OQ-52 close):
+population counts over engine-computed selections are engine-regime-relative; save member LISTS.
 
 **Core-claim re-measure at HEAD:** 289/293 selected rows carry BOTH authored beneficiary and
 victim; 4 are victim-only (first partial-disqualifier cases; OQ-86 repair sentinels screened —
@@ -95,13 +98,23 @@ beneficiary leg needs the gain-around vs gain-from-authoring distinction, else g
 constraints with named ecosystem winners fail certification while bucket-(i) stories that
 merely omit the winner from prose pass.
 
+**Instrument error modes, both named (symmetric pair):** B2's screen carries a known BLINDNESS
+(it reads the same authored metrics that certified NL; metrics-faithful content hiding passes
+it). Bucket (ii) is the content rubric's known FALSE-POSITIVE mode: rubric v2 fires on
+genuine-natural-with-unauthored-ecosystem-winner, which is not a mis-authoring — its precision
+ceiling if ever automated. Any future re-powering or automation inherits BOTH labels or it
+inherits an unlabeled error class.
+
 **Verdict:** OQ-45 answers **YES** — mis-authored hidden winners exist among the 404 (bucket (i)
 is the direct answer; witnessed per-story with verbatim quotes). Coverage, stated exactly:
 exhaustive over the engine screen (404/404); content read 35/404 under an adversarial-primary
 pre-registered design with a rubric proven to fire on known positives. NO prevalence claim is
 made or licensed (chimera-era corpus: bait-confounded OQ-70, ID-reuse OQ-25; per-story reads
-valid, rates not). One calibration-stratum hit suggests the phenomenon is not confined to the
-adversarial selection — noted as a pointer, not a rate.
+valid, rates not). **The calibration-stratum hit is a bound-breaker**
+(`attention_as_capturable_resource` came from the seeded random draw, not the adversarial
+stratum): the pre-registered "suspicious" criterion did NOT bound the phenomenon — it appears in
+ordinary draws too. Under the chimera caveat this is exactly the fact that cannot be quantified,
+so it enters as "not confined to the adversarial stratum," never as prevalence.
 
 **Consequences:** none for the live engine — the NL signature is dark on HEAD (dead-by-range),
 the B1 fail-close + FSM cascade already route beneficiary-bearing mountains away from NL, and
@@ -140,9 +153,14 @@ The twin+kernel sets were content-read EXHAUSTIVELY (39/39, rubric v2):
   restorationists are beneficiaries" declarative, beside a Mountain claim; verified) — 2
   ambiguous, 2 genuine-natural. **A live-leg instance:** the phenomenon is not archival-only.
 
-**OQ-52 cross-leg replication:** the false-mountain selection's authored-channel finding holds
-at 100% on every live leg — haiku 113/113 both channels, flash 83/83, live 8/8 (kernel_v1's
-4 victim-only rows remain the only exceptions anywhere). Screen control re-fired per leg.
+**Verb discipline — what replicated vs what recurred:** OQ-52's finding REPLICATES member-level:
+the false-mountain selection's authored-channel result holds at 100% on every live leg — haiku
+113/113 both channels, flash 83/83, live 8/8 (kernel_v1's 4 victim-only rows remain the only
+exceptions anywhere; screen control re-fired per leg). OQ-45's finding does NOT member-level
+replicate and cannot: the twin/kernel hidden-winners are DISJOINT members from the six 404 hits,
+which is the EXPECTED consequence of OQ-26 draw-variance (twins are new draws), not a defect.
+What recurred is the PHENOMENON — hidden winners exist among NL-certified stories on live legs —
+via different constraints.
 
 **Two artifact notes:** (1) the all-404-h1=4 uniformity is an original_v6 template artifact —
 twins show h1∈{0,4} mixes; (2) 2 NL members per twin carry authored VICTIMS with no

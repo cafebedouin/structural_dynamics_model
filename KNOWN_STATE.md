@@ -45,7 +45,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-07-02 — OQ-45/OQ-52 cross-leg check: findings replicate on kernel_v1 + twins; live-leg hidden-winner exists
+## 2026-07-02 — Cross-leg check: OQ-52 replicates member-level; OQ-45's phenomenon recurs via DISJOINT members (draw-variance); live-leg hidden-winner exists
 **Files:** audits/2026-07-01_oq45_oq52_hidden_winners/, prolog/testsets_haiku/temple_sacrifice_commitment__performance_only.pl
 **Tier:** landed
 
@@ -62,7 +62,10 @@ authored-channel finding replicates at 100% on every live leg (haiku 113/113, fl
 8/8). Two NL-gate coarseness data recorded in the OQ-45 addendum: victim-bearing stories certify
 (gate checks beneficiaries only); the 404 h1=4 uniformity is an original_v6 template artifact
 (twins mix h1∈{0,4}). Draw-variance witnessed (OQ-26): article_27/aneyoshi kernels read
-differently across twins — distinct draws, not re-measurements.
+differently across twins — distinct draws, not re-measurements. VERB DISCIPLINE: only OQ-52
+replicated member-level; OQ-45's twin/kernel hits are disjoint from the six 404 hits, the
+EXPECTED consequence of new draws — the phenomenon recurred, no member-level replication is
+claimed or possible.
 
 
 ## 2026-07-01 — OQ-45 RESOLVED (YES: hidden winners in the 404) + OQ-52 RESOLVED (W1 leg delivered; population counts are engine-regime-relative)

@@ -2219,11 +2219,14 @@ rubric v1 pre-flight FAILED 0/3 on the OQ-52 anchors, amended v2 passed 3/3) →
 ambiguous / 25 genuine-natural**, all six quote-pairs verified verbatim. Adjudicated split (declared
 seat): (i) extraction wearing the mountain frame — `repeat_player_structural_advantage` ("16.6% award
 decline… real extraction" beside "emerges naturally… No policy created it"),
-`demographic_elimination_imperative`, `attention_as_capturable_resource` (random-stratum hit),
+`demographic_elimination_imperative`, `attention_as_capturable_resource` (random-stratum hit — a BOUND-BREAKER: the pre-registered
+suspicious criterion did not bound the phenomenon; unquantifiable under the chimera caveat),
 `capability_compulsion_gradient` (borderline); (ii) genuine natural core with an unauthored ecosystem
 winner — `gilgamesh_mortality_limit`, `ecological_carrying_capacity`. Bucket (ii) is a design note for
 any future NL re-powering (GAP-08 §7): gain-AROUND-persistence ≠ gain-from-authoring; the beneficiary
-leg must distinguish them. No engine change follows (NL dark on HEAD; FSM cascade + fail-close already
+leg must distinguish them — and bucket (ii) is simultaneously the content rubric's known
+FALSE-POSITIVE mode (it fires on non-mis-authorings), the symmetric label to B2's known
+metrics-blindness; automation inherits both or inherits an unlabeled error class. No engine change follows (NL dark on HEAD; FSM cascade + fail-close already
 landed; live corpus post-de-leak). NO prevalence claim (chimera corpus, OQ-70/OQ-25). NOT exhaustive
 with OQ-52: a hidden-winner neither false-mountain-shaped nor NL-certified falls through both audits.
 Full evidence: `audits/2026-07-01_oq45_oq52_hidden_winners/` (WRITEUP.md).
@@ -2753,12 +2756,13 @@ hidden-winner neither false-mountain-shaped nor NL-certified falls through both)
 false-mountain manifest rows carried authored beneficiary+victim → authored extraction visible only at
 the analytical seat. W1-magnitude leg (2026-07-01): `w1_sheaf_join.py` gained the
 `wasserstein_incomparable_mass` join + PROVISIONAL ≥0.05 materiality label (commit `e8189d10`);
-kernel_v1 classified same-run via `classify_corpus` (n=1106) and the selection ranked —
-`audits/2026-07-01_oq45_oq52_hidden_winners/a3_false_mountain_w1_ranking.{md,json}`. Control outcome:
+kernel_v1 classified same-run via `classify_corpus` (n=1106) and the CURRENT-ENGINE selection
+(N=293: strict=235 + loose=58) ranked —
+`audits/2026-07-01_oq45_oq52_hidden_winners/a3_false_mountain_w1_ranking.{md,json}`. Control outcome (the recover-the-16 control was RETIRED AS IMPOSSIBLE — list never saved — not passed):
 all 5 recorded member names recover with member-level H1 EXACT (quran=4/article_9=5/abrahamic=6), but
 the population count does NOT reproduce (HEAD: strict=235+loose=58 of manifest=944 vs 16 of 98 on the
 2026-06-02 engine; 944 cross-witnessed by OQ-197 acceptance controls, commit `34ff919f`) — engine
-drift, and the original 16-list was never saved to substrate. HEAD re-measure: 289/293 both-authored,
+drift. The ranking is anchored by the three named members, not a recovery of the sixteen. HEAD re-measure: 289/293 both-authored,
 **4 victim-only** (first partial-disqualifier cases; repair sentinels screened 0/1106), 0 with neither
 — the corrective-grade reading holds. H1 stays the stable ordering; W1 magnitude is valid only for the
 pinned manifest.
