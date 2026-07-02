@@ -1,0 +1,9 @@
+(g) T derivation: ALL_TYPES=8 tokens, real=7, proof value=7 -> PASS
+(a/b) per-band match n=2..40: unbounded PASS; T=7-bounded PASS
+(b-control) unconstrained predictor: unions identical for all n (PASS); per-band differs at 38 n-values (first: [3, 4, 5, 6, 7]) -> PASS (per-band check discriminates)
+(c) Theorem A min-nonzero = n-1, n=3..40: PASS
+(d) record match: n=4 PASS, n=5 PASS
+(e) negative control (band-2 off-by-one perturbation flagged): PASS
+(f) Theorem C full-spectrum iff, n=3..40, all j: PASS
+results -> audits/2026-07-02_oq195_general_n_gap/enumeration_results.json
+VERDICT: ALL PASS
