@@ -371,3 +371,34 @@ Two ways an in-session override fails, both witnessed building the OQ-22 Hub-1/H
   validator. (Corollary finding: the validator forecloses the most degenerate transforms — the
   originally-witnessed OQ-22 starvation regime, χ ceiling 0.15, is no longer reachable through a valid
   config, since it needs `sigmoid_upper < 0.5`.)
+
+## 13. Goal-TEMPLATE probes: `Key-m:g(...)` and `V^m:g(...)` parse WRONG — the vacuous-pass trap
+
+`:` is `op(600, xfy)` — LOOSER than both `-` (500) and `^` (200). So the natural template
+shapes bind the module qualifier to the wrong operand:
+
+```prolog
+T = [C]-stakeholder_seats:q6_crosscheck(C,_,_)   % = ([C]-stakeholder_seats):q6_crosscheck(...)
+setof(K, C^narrative_ontology:cs_kernel_id(C,K), Ks)  % = (C^narrative_ontology):cs_kernel_id(...)
+```
+
+The failure modes differ in loudness — and the quiet one is the dangerous one:
+
+- **`copy_term(T, Key-Goal)` FAILS silently** (a `:`-rooted term does not unify with a
+  `-`-rooted pattern) → the findall body fails per key → the violation list comes back `[]` →
+  the probe prints "0 violations" **vacuously**. Witnessed TWICE in one session (2026-07-02,
+  OQ-137): a determinism probe and a 37-predicate totality sweep both read all-clean while
+  measuring nothing. The sweep's planted-fail/planted-multi controls are what caught it; the
+  determinism probe had no control and its "0 non-exactly-one" was worthless (its claims were
+  independently re-proven by the plunit suite before anything was committed).
+- The `^` variant at least throws (`'$bags':pred/N` unknown procedure) — loud, but only if the
+  setof actually runs on the failing path.
+
+**Rules.** (1) Parenthesize the goal in ANY term that embeds a module-qualified goal under an
+operator: `[C]-( m:g(C,_) )`, `C^(m:g(C,K))` — spec facts, pair templates, ^-scoped setof/bagof.
+(2) A template-driven probe (anything routing goals through `copy_term`/`call`/metacall) carries
+a planted-fail AND a planted-multi control in the SAME run, plus a partition-sum invariant
+(`zero+one+multi =:= n`) — the standing "every diagnostic needs a positive control" rule, which
+is the ONLY thing that distinguishes this probe from a probe that measured nothing. (3) The
+immune construction: build the goal with `=..` and call `M:Goal` with M carried separately
+(`prolog/tests/test_reading_totality.pl:reading_solution_count/5` is the template).

@@ -691,6 +691,21 @@ field; any quantifier (`forall`, negation-as-failure) over a table that the curr
 leaves empty; any comparison `== V` / `=< V` where the producing predicate's range excludes the
 satisfying `V` (dead-by-range). See OQ-44 for the engine-wide audit.
 
+**Instance — a `[fail]`-mode test is an absence-gate, and corpus-fixture-loading suites rot on
+reset (witnessed 2026-07-02, OQ-137).** `tests/test_cs_drift_engine.pl` loaded its fixtures
+from `testsets/` (the capital-punishment triplet); the 2026-06-05 corpus reset deleted those
+files and the suite sat 7/8-red for a month unnoticed — plunit suites were wired into no gate,
+so red was invisible (partially closed: the reading-totality suite is now a `run_pipeline`
+gate; the rest still run only by hand). The sharper point: the one "passing" test was the
+`[fail]`-mode negative (`no_unacknowledged_retributive`) — a test asserting "predicate does NOT
+fire" is satisfied by TOTAL breakage exactly as by correct behavior. Rules: a test file asserts
+its own fixtures (setup/cleanup) rather than loading corpus files — the corpus is mutable
+substrate, not test vocabulary; and a `[fail]`-mode test needs a same-fixture positive sibling
+(the predicate DOES fire on the firing fixture) or it is an absence-gate. Diagnosing a red
+suite after an engine edit: run it against the PRE-edit engine first — identical failures =
+pre-existing rot, not your regression (the discriminating witness that separated the fixture
+rot from the same-day attractor-table change).
+
 ---
 
 ## Pattern 6 — Success-shaped absorption (measured-empty and didn't-look collapse to one output at aggregation/channel boundaries)

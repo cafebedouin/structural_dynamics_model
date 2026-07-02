@@ -120,7 +120,9 @@ operator-precedence bugs, fact-adapter patterns, and query gotchas — things th
 not general architecture. Read the relevant file before modifying `config_validation.pl`,
 `cs_kernel_registry.pl`, or the CS fact schema. Read `swipl_load_path_and_probe_gotchas.md` before
 diagnosing module-resolution behavior (REPL ≠ pipeline for wrong-qualifier calls), writing
-test-local predicate swaps or retract/re-assert probes, running an in-session corpus sweep or
+test-local predicate swaps or retract/re-assert probes, writing goal-TEMPLATE probes
+(`Key-m:g(...)` / `V^m:g(...)` parse wrong — `:` is priority 600 — and the probe passes
+VACUOUSLY, §13), running an in-session corpus sweep or
 overlay counterfactual (validated signature-sweep recipe; Boltzmann memo caches read stale unless
 cleared), or interpreting a pipeline_output.json diff. `build_discipline.md` documents the six
 defect patterns (summarized in Build Discipline below) with diagnostics; it also carries the
@@ -208,6 +210,14 @@ do not fold `trajectory` back into the parallel `tasks` list.
     aborts naming malformed entries). **Do not remove or bypass the gate — it is NOT dead code,
     including during refactors of run_pipeline.py.** If it fires, fix ISSUES.md until
     `python3 python/issues_status.py --check` passes. Grammar is in the ISSUES.md footer.
+  - `_phase_prolog` opens with the **OQ-137 reading-totality gate** (the registry-driven plunit
+    suite `tests/test_reading_totality.pl` as a sequential fail-fast step before the parallel
+    set — commentary_census presumes exactly the totality it proves). Also NOT dead code — do
+    not remove or fold into the parallel tasks. If red: a registered reading stopped being
+    exactly-one on its declared domain — fix the reading to a typed token
+    (`design_discipline.md` §5) or correct its `prolog/reading_registry.pl` entry. **When you
+    ADD a reading predicate an aggregate could consume, register it there in the same change** —
+    registration is opt-in; an unregistered reading escapes the guard silently.
 - **Testing an ENGINE change: exercise it across ALL the corpora, not just `testsets/`.** The live
   `testsets/` is a deliberately sparse singleton (~small N) and will NOT exercise every branch or
   surface corpus-sensitive behavior — an engine change "witnessed" only there is under-witnessed.
