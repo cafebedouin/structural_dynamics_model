@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "64a445140b1ccbac447508efbbb5d4f3b6ac6f6a",
+    "store_version": "ac7fcf0fefb3f3d34c470ef289c31effa0ff9056",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-02T14:46:03"
+    "generated_at": "2026-07-02T15:45:58"
   },
-  "issues_sha": "333197b6e68800b308708ca7d656fbb350b25e0cb7876c6ab3e70fc8baa49fa9",
-  "n_entries": 204,
+  "issues_sha": "8619a13cbc1ee1b5f76eecbbdc4d6d801fb4f16c302ddcdb4fb3d83fab09a692",
+  "n_entries": 206,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 13,
     "partial": 6,
     "disposed": 4,
-    "open": 66,
+    "open": 68,
     "future": 4
   },
   "active": [
@@ -30,7 +30,8 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-135"
+        "OQ-135",
+        "OQ-205"
       ]
     },
     {
@@ -980,6 +981,35 @@
         "OQ-134",
         "OQ-136",
         "OQ-203"
+      ]
+    },
+    {
+      "id": "OQ-205",
+      "status": "open",
+      "priority": 2,
+      "summary": "Build ε's declaration discipline (the v8 §6.4 handed-forward artifact)",
+      "deps": [
+        "splits_from OQ-135"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-03",
+        "OQ-78",
+        "OQ-135"
+      ]
+    },
+    {
+      "id": "OQ-206",
+      "status": "open",
+      "priority": 3,
+      "summary": "Taint-guard residual: runtime-constructed goals are invisible to static reachability",
+      "deps": [
+        "splits_from OQ-135"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-135",
+        "OQ-137"
       ]
     }
   ],

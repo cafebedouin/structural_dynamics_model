@@ -106,8 +106,9 @@ instantiates: `docs/litany_of_the_real.md` (orientation) and `docs/six_questions
 Cor 2b interrogative seat-exposure battery). DR therefore refuses the no-seat pose about
 itself precisely *by* declaring this seat; its inability to world-anchor ε is not a defect
 but the only law-consistent rest point (`v8_seat_gauge_orientation_design_spec.md` §7). The
-residual *work* — building ε's declaration discipline — is the same task tracked at OQ-135 /
-v8 §7, not a separate open question.
+residual *work* — building ε's declaration discipline — is now tracked at **OQ-205** (minted
+2026-07-02 after the OQ-135 close left it homeless; was "the same task tracked at OQ-135 /
+v8 §7"), not a separate open question here.
 
 **03b — empirical limb: OPEN, gated, possibly unnecessary.** If one authors a
 DR-constraint-story under *pre-registered, declared* choices (referent + readings + ε) and
@@ -10709,6 +10710,46 @@ queried on its authored grid (not a synthetic time).
 **Scope.** Surface mcc beyond the bare census count: per-member lines naming the excluded seats (`Excl` from `consensus_provenance/2`) on the census human table and/or enhanced report. Output-changing — own commit with before/after report diffs. **Design constraints (part of the go):** (1) the flag names a structural footprint (unanimity among typed agent seats + a named excluded seat), NEVER a "manufactured consensus" verdict — the candidate semantics travel to every read site; (2) no prevalence-rate headline without the raw count + n_in_domain alongside (OQ-136 denominator caveat); the census currently declares NO prevalence bucket for the consensus source — revisiting that declaration is in-scope here, but the OQ-136 close's reasoning (candidate flag ≠ positive finding) must be answered, not ignored; (3) membership is read live from `consensus_provenance/2`, never a frozen list — so the OQ-203 vocabulary fix flows through automatically.
 
 **What resolution changes.** The first census bucket promoted from honest count to first-class corpus statistic — the seated-reporting precedent for any later bucket promotion.
+
+---
+
+## OQ-205 — Build ε's declaration discipline (the v8 §6.4 handed-forward artifact)
+
+**Ω-type:** Ω_C (design task — which provenance and stability surfaces ε carries is a declared-seat spec, not a measurement) with an Ω_E build/verification tail (the surfaces, once specced, are mechanical to land and control).
+
+**Status:** open
+
+**Priority:** 2
+
+**Deps:** splits_from OQ-135
+
+**Origin:** 2026-07-02, minted at the operator's direction after the OQ-135 close left the obligation homeless: OQ-03 had said the ε-discipline work is "the same task tracked at OQ-135," and OQ-135 resolved without a successor. v8 §6.4 hands it forward as the framework's main owed artifact.
+
+**The obligation (v8 §6.4; v7 §6 l.147 is the confession it answers).** ε is the framework's least-grounded and most load-bearing primitive — authored by judgment, not computed from anything beneath it. The Coupling Theorem settles the world-anchor question *negatively* (a world-anchored ε would be a seat-free seat), so what is owed is not grounding but **declaration**: (a) **ε provenance** — who/what authored each ε, from which reading, under which prompt/schema/model — carried with the value and surfaced at read sites (the same carry-the-provenance-bit rule Build Discipline applies everywhere else); (b) **ε stability** — whether conclusions anchored on an ε survive small perturbation, generalized from the existing cross-axis-anchor requirement (v7 §6) to a checked, surfaced fact rather than a per-anchor manual discipline. *The no-seat pose the framework detects in its constraints is one it must not strike about its own ε.*
+
+**Scope notes.** (1) Spec before build: the design pass enumerates the read sites that must carry the bits (reports, pipeline output, census surfaces) and the perturbation protocol (radius, which conclusions count as "anchored"), each with a pre-registered positive control — a planted provenance-less ε must fail loud, a planted threshold-proximate anchor must flag. (2) First empirical customer: the OQ-78 ε authoring idiom (0.68 mode, 8/2 last-digit grid) — an authoring-convention fingerprint the provenance surface should make visible rather than a separate one-off finding. (3) Existing partial substrate: per-story model provenance already exists (Critical Distinctions: model provenance is a feature); this OQ adds the ε-specific reading-level declaration and the stability check, not a new provenance system from scratch.
+
+**What resolution changes.** v8 §9.5's second falsifiability leg ("owed and unbuilt") becomes built; ε-dependent findings carry their authorship and stability with them at every read site; OQ-03's 03b (if ever run) and any future cross-axis anchor inherit a checked discipline instead of a manual one.
+
+---
+
+## OQ-206 — Taint-guard residual: runtime-constructed goals are invisible to static reachability
+
+**Ω-type:** Ω_E (mechanical census of dynamic-call construction sites on the cross-axis surface, each classified with a witness) with a small Ω_C tail (accept-as-residual vs extend-the-guard is a ruling once the census is in).
+
+**Status:** open
+
+**Priority:** 3
+
+**Deps:** splits_from OQ-135
+
+**Origin:** 2026-07-02, the residual named-and-accepted at the OQ-135 close, minted at the operator's direction. External reviewer (Gemini, v8 Phase-1 review) raised the same class independently.
+
+**The gap.** `prolog/check_axis_boundary.pl` enforces the one-seat invariant by *static* reachability over loaded clause bodies — it descends into control constructs and meta-calls, but a goal **constructed at runtime from data** (`=..`, `atom_concat`+`call`, a goal term fetched from a fact and called) never appears as a static call edge. A kill-condition path (v8 §5.7 form (c)) built dynamically would be invisible to the guard while the gate stays green — absence-of-edge reading as absence-of-path, the exact success-shaped-absence the guard exists to prevent, one level up.
+
+**The work.** (1) Census every dynamic-goal construction site in the engine files (`call/N` with non-literal goal, `=..`, goal terms stored in facts and later called); (2) classify each: can it, on any input, route committer (`cs_*`) content into observer computation? — each verdict carries a witness, not a code-read; (3) positive control REQUIRED before any "none can" claim: plant a dynamically-constructed cross-axis call, confirm the static guard misses it AND the census tool flags it (the census must be shown to find what the guard cannot); (4) then the ruling: accept-as-documented-residual (bounded by the census) or extend the guard (e.g. a runtime taint assertion on the sanctioned bridge's callee, or a lint on dynamic-goal sites touching `cs_*` atoms).
+
+**What resolution changes.** The one-seat kill-condition's enforcement boundary becomes *stated and witnessed* instead of implicit: either "no dynamic path exists, and the probe that would find one is controlled," or the guard grows to cover the dynamic class. Sibling of OQ-137's opt-in-registry residual (same shape: a guard whose coverage is opt-in/static needs its blind zone censused, not assumed empty).
 
 ---
 
