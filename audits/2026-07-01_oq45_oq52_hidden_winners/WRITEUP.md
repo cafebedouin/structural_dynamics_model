@@ -114,6 +114,47 @@ A hidden-winner that is neither false-mountain-shaped (OQ-52's screen misses it)
 (no snare at analytical) that never met the NL metric gates. The partition is of the two OQs'
 scopes, not a coverage proof over the space.
 
+## B5 — Cross-leg check (2026-07-02, operator-requested): testsets_* + kernel_v1
+
+The same instruments run over the remaining legs (probe: `b5_nl_probe_generic.pl`, all PRE/MID
+dispatch controls PASS; twins classified via `classify_corpus` with the single-model fingerprint
+gate, haiku `2026-07-02T06:06:27Z` / flash `2026-07-02T06:08:21Z`, both n=960).
+
+**NL populations (pre-fix cascade):** original_v6=404, **kernel_v1=26 (matches the recorded
+2026-06-10 matrix — aggregate control PASS)**, haiku=8, flash=5, live testsets=0 (n=119).
+The twin+kernel sets were content-read EXHAUSTIVELY (39/39, rubric v2):
+
+- **kernel_v1 (26): 4 hidden-winner** — `honor_satisfaction_mechanism__contraction_reading`
+  (aristocrats "used it to resolve disputes and maintain status hierarchies" under "a genuine
+  natural law of cultural cognition"; gainer historical/extinct), `press_reformation_causation__
+  technological_determinism` (printers/reformers profit, Church the named victim, under
+  technology-as-Mountain), `state_killing_authority__abolition_reading` (abolition states
+  "capture moral authority" under first-principles framing), `tsunami_stone_commitment__
+  catastrophe_validation_axis` (resources "do concentrate" into agencies/contractors/insurers) —
+  6 ambiguous, 16 genuine-natural. All quote-pairs verified (5/5). Every hit is a SOCIAL
+  constraint in the NL set; the formal/physical members read clean.
+- **haiku (8): 0 hidden-winner** after adjudication (2 reader calls downgraded to ambiguous —
+  gain attribution lived in sibling readings the file explicitly excludes; same-kernel flash
+  draw agreed ambiguous), 6 ambiguous, 2 genuine-natural.
+- **flash (5): 1 hidden-winner** — `temple_sacrifice_commitment__performance_only` ("Messianic
+  restorationists are beneficiaries" declarative, beside a Mountain claim; verified) — 2
+  ambiguous, 2 genuine-natural. **A live-leg instance:** the phenomenon is not archival-only.
+
+**OQ-52 cross-leg replication:** the false-mountain selection's authored-channel finding holds
+at 100% on every live leg — haiku 113/113 both channels, flash 83/83, live 8/8 (kernel_v1's
+4 victim-only rows remain the only exceptions anywhere). Screen control re-fired per leg.
+
+**Two artifact notes:** (1) the all-404-h1=4 uniformity is an original_v6 template artifact —
+twins show h1∈{0,4} mixes; (2) 2 NL members per twin carry authored VICTIMS with no
+beneficiary — the NL gate checks beneficiaries only, so victim-bearing stories can certify;
+another coarseness datum for any future NL re-powering, same family as bucket (ii).
+
+**Draw-variance instance (OQ-26 working as designed):** the `article_27_veto_power__
+sovereignty_reading` kernel reads ambiguous on both twins but with different in-file
+argumentative structure; `aneyoshi` flips genuine(flash)↔ambiguous(haiku). Same-name cross-leg
+members are distinct draws; the per-leg verdicts are seat-indexed measurements, not
+re-measurements.
+
 ## Artifacts
 
 - A3: `a3_false_mountain_selection_kernel_v1.json`, `a3_false_mountain_w1_ranking.{md,json}`
@@ -123,3 +164,6 @@ scopes, not a coverage proof over the space.
 - B3: `b3_rubric_and_strata_registration.md` (v1+v2), `b3_strata_selection.json`,
   `b3_verdicts_consolidated.json` (per-story quotes in the batch agent returns; six
   hidden-winner quote pairs re-verified against raw files, 8/8)
+- B5 (cross-leg): `b5_nl_probe_generic.pl`, `b5_nl_members_{kernel_v1,haiku,flash,testsets}.txt`,
+  `b5_probe_*.log`, `b5_screen_kernel_v1.json`, `b5_screen_twins.json`,
+  `b5_cross_leg_consolidated.json`

@@ -2227,6 +2227,7 @@ leg must distinguish them. No engine change follows (NL dark on HEAD; FSM cascad
 landed; live corpus post-de-leak). NO prevalence claim (chimera corpus, OQ-70/OQ-25). NOT exhaustive
 with OQ-52: a hidden-winner neither false-mountain-shaped nor NL-certified falls through both audits.
 Full evidence: `audits/2026-07-01_oq45_oq52_hidden_winners/` (WRITEUP.md).
+**Cross-leg check (2026-07-02):** same instruments over kernel_v1 + twins + live (`b5_*` artifacts, same audit dir). NL populations 26/8/5/0; all 39 members content-read EXHAUSTIVELY: kernel_v1 **4 hidden-winner** (honor_satisfaction, press_reformation, state_killing_authority__abolition_reading, tsunami_stone catastrophe_validation), haiku 0 (2 reader calls downgraded on adjudication), flash **1** (`temple_sacrifice_commitment__performance_only` — a LIVE-leg instance). kernel_v1=26 matched the recorded matrix (aggregate control). Two more NL-gate coarseness data: victim-bearing stories certify (gate checks beneficiaries only); the 404 h1=4 uniformity is a v6 template artifact.
 **Priority:** 1
 **Deps (dropped on close):** none were authored; cross-refs OQ-43 (origin), OQ-52 (partition sibling).
 **Origin:** spun off the D3 ruling (OQ-43), 2026-05-31.
@@ -2761,6 +2762,7 @@ drift, and the original 16-list was never saved to substrate. HEAD re-measure: 2
 **4 victim-only** (first partial-disqualifier cases; repair sentinels screened 0/1106), 0 with neither
 — the corrective-grade reading holds. H1 stays the stable ordering; W1 magnitude is valid only for the
 pinned manifest.
+**Cross-leg check (2026-07-02):** the authored-channel finding replicates at 100% on every live leg — haiku 113/113 both channels, flash 83/83, live testsets 8/8 (kernel_v1 289/293, the 4 victim-only rows remain the only exceptions). `b5_screen_twins.json` in the audit dir.
 **Priority:** 1
 **Deps (dropped on close):** was prose-gated on "the OQ-51 W1 rebuild"; OQ-51 resolved via the
 h1_band-N/A route — of its W1 spec only snapshot-pinning pre-existed (`980f0224`); the join+threshold

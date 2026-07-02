@@ -45,6 +45,26 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-02 — OQ-45/OQ-52 cross-leg check: findings replicate on kernel_v1 + twins; live-leg hidden-winner exists
+**Files:** audits/2026-07-01_oq45_oq52_hidden_winners/, prolog/testsets_haiku/temple_sacrifice_commitment__performance_only.pl
+**Tier:** landed
+
+Operator-requested check of the 2026-07-01 closes against `testsets_*` + `kernel_v1` (B5 section
+of the audit WRITEUP). NL populations under the pre-fix cascade: kernel_v1=**26 (matches the
+recorded 2026-06-10 matrix — aggregate control PASS)**, haiku=8, flash=5, live=0; all PRE/MID
+dispatch controls PASS; twins classified via `classify_corpus` with the model-fingerprint gate
+(`pipeline_output_{haiku,flash}.json`, n=960 each). All 39 twin+kernel NL members content-read
+exhaustively (rubric v2): kernel_v1 → 4 hidden-winner (all social constraints; quotes verified
+5/5), haiku → 0 (two reader calls downgraded on adjudication: gain lived in sibling readings the
+file excludes), flash → **1 hidden-winner on a LIVE leg** (`temple_sacrifice_commitment__
+performance_only`, "Messianic restorationists are beneficiaries" beside a Mountain claim). OQ-52's
+authored-channel finding replicates at 100% on every live leg (haiku 113/113, flash 83/83, live
+8/8). Two NL-gate coarseness data recorded in the OQ-45 addendum: victim-bearing stories certify
+(gate checks beneficiaries only); the 404 h1=4 uniformity is an original_v6 template artifact
+(twins mix h1∈{0,4}). Draw-variance witnessed (OQ-26): article_27/aneyoshi kernels read
+differently across twins — distinct draws, not re-measurements.
+
+
 ## 2026-07-01 — OQ-45 RESOLVED (YES: hidden winners in the 404) + OQ-52 RESOLVED (W1 leg delivered; population counts are engine-regime-relative)
 **Files:** python/w1_sheaf_join.py, prolog/signature_detection.pl, audits/2026-07-01_oq45_oq52_hidden_winners/
 **Tier:** correction-key
