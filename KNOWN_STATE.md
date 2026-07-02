@@ -45,6 +45,31 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-02 — OQ-137 enabling slice landed (reading registry + totality suite + consensus census source); OQ-136 evidence in (haiku/contradictions authoring artifact vs genuine mcc)
+**Files:** prolog/reading_registry.pl, prolog/tests/test_reading_totality.pl, prolog/commentary_census.pl, python/audits/oq136_bucket_provenance.py, audits/2026-07-02_oq136_census_bucket_provenance/
+**Tier:** landed
+
+**OQ-137 slice (commits `a81d4c83` behavior-preserving + `2453b922` output-changing):**
+`reading_registry.pl` (`aggregatable_reading/3`: 5 proven-total seeds + `in_contention/3`
+partial-by-design; `census_source_backing/2` anti-fork bridge) + registry-driven
+`test_reading_totality.pl` (exactly-one over declared domain; two positive controls — planted
+silent stub flagged AT the hole, two-sided). `commentary_source(consensus)` added: compound
+`manufactured_consensus_candidate(Excl)` flattened to functor; `no_agent_seats` out-of-domain
+declared PROVISIONAL (source comment — it pre-judges the OQ-136 bucket); `seats_untyped` absence;
+no prevalence bucket (candidate flag ≠ positive finding). Witness: suites 10/40/8 green;
+run_pipeline exit 0 + mtimes advanced; census diff additive-only; per_constraint byte-identical.
+
+**OQ-136 (pre-registered; PROPOSAL frozen `0ba48b4c` BEFORE the join; execution `2b66dedc`):**
+q6_unmeasured (26) + no_agent_seats (26) cluster on model AND prompt_commit (p_holm=8e-4;
+haiku 16/28 + all 9 `*_contradictions`; 25/26 overlap) = ONE generation-path artifact — haiku
+path authors prose + constraint_beneficiary but NO founding_problem_status / stakeholders[]
+(prose plans the seats it never emits); contradictions path also stamps NO story_provenance/8.
+q6_signature_unknown (16) + manufactured_consensus_candidate (9): NOT clustered; mcc hand-read
+8/9 genuine (1/9 radiative_levitation false-positive by its own text → excluded-role
+evidential-vs-structural vocabulary gap). extraction_unnameable (3): compound (seat limb =
+haiku artifact; victim limb genuine-to-the-reading 2/3 RULED). **Dispositions R1–R6 are
+blocked_on_human** (ISSUES.md OQ-136; proposals in the audit WRITEUP.md).
+
 ## 2026-07-02 — Cross-leg check: OQ-52 replicates member-level; OQ-45's phenomenon recurs via DISJOINT members (draw-variance); live-leg hidden-winner exists
 **Files:** audits/2026-07-01_oq45_oq52_hidden_winners/, prolog/testsets_haiku/temple_sacrifice_commitment__performance_only.pl
 **Tier:** landed

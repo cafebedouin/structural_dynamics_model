@@ -8292,11 +8292,45 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Ω-type:** Ω_E (measurable — cross-reference the census buckets against generation provenance and a bounded hand-read; a clustering test discriminates the two hypotheses) + a small Ω_C tail (per-bucket disposition is a ruling once the evidence is in).
 
-**Status:** open — standalone, unblocked, do-whenever. The substantive payoff of the census (OQ-134/OQ-121): now that it reports honestly, its numbers are the first corpus measurements to interpret.
+**Status:** open — Ω_E half done (evidence in, 2026-07-02: `audits/2026-07-02_oq136_census_bucket_provenance/`); the Ω_C tail (per-bucket dispositions R1–R6) is blocked on the operator.
 
 **Priority:** 3
 
-**Deps:** bundled_with OQ-121 (totalized census surfacing these buckets), bundled_with OQ-134 (census mechanism), bundled_with OQ-83 (q6 source), bundled_with OQ-86 (extraction source)
+**Deps:** blocked_on_human oq136-bucket-disposition-rulings-R1-R6, bundled_with OQ-121 (totalized census surfacing these buckets), bundled_with OQ-134 (census mechanism), bundled_with OQ-83 (q6 source), bundled_with OQ-86 (extraction source)
+
+**EVIDENCE IN (2026-07-02, pre-registered — PROPOSAL frozen at `0ba48b4c` before any join ran).**
+Audit: `audits/2026-07-02_oq136_census_bucket_provenance/` (WRITEUP.md carries the full table;
+extractor Σ-check, statistic control pair, and json-twin crosscheck all fired/passed). At n=119,
+git `0ba48b4c`:
+- **q6_unmeasured (26) + no_agent_seats (26): AUTHORING ARTIFACT** — clustered on model AND
+  prompt_commit (p_holm=8e-4 each, Holm family=8); driven by the haiku files (16/28 in each
+  bucket) + ALL 9 provenance-less `*_contradictions` files; sonnet-4-5 nearly absent (1/64 and
+  0/64). 25/26 member overlap = ONE generation-path gap: the haiku path authors prose +
+  `constraint_beneficiary` but no `founding_problem_status` and no `stakeholders[]` facts (the
+  prose PLANS the seats it never emits — HANDREAD.md quotes); the contradictions path authors
+  neither and stamps no `story_provenance/8`.
+- **q6_signature_unknown (16): NOT clustered** on any axis — consistent with the config-VARIANT
+  computational component named in the denominator caveat below; genuine category of the
+  corpus×config pair.
+- **manufactured_consensus_candidate (9): GENUINE** — no clustering; hand-read 8/9 genuine with
+  in-file witnesses (deliberately authored `excluded` seats, substantively argued); 1/9
+  (radiative_levitation_stratification) is a false positive BY ITS OWN TEXT ("exclusion is
+  evidential, not structural") → names an `excluded`-role vocabulary gap (evidential-vs-
+  structural exclusion is inexpressible in the role atom).
+- **extraction_unnameable (3, unpowered — descriptive + hand-read only): COMPOUND** — the
+  extractor-seat limb is the same haiku artifact (fixing it migrates all 3 to
+  `extraction_fired`); the victim limb is genuine-to-the-reading (RULED 2/3: the readings deny
+  their victims by construction).
+
+**RULINGS NEEDED (R1–R6 — proposed dispositions in WRITEUP.md, not self-ratified):** R1/R2
+artifact buckets → mint a generation OQ (haiku + contradictions paths: author
+founding_problem_status + stakeholders[])? R3 q6_signature_unknown → keep as-is? R4 mcc →
+first-class reporting go/no-go, + a small OQ for the excluded-role vocabulary gap? R5
+extraction_unnameable → keep (post-fix membership = the genuine both-sides-unnamed residue)?
+R6 `*_contradictions` provenance stamping — generator fix-on-sight vs mint OQ? Note: the census
+`no_agent_seats` out-of-domain declaration is stamped PROVISIONAL in
+`prolog/commentary_census.pl` pending these rulings (flipping it is part of the follow-up if
+ruled differently).
 
 **Origin:** 2026-06-16, the totalized commentary census. Once the absence / out-of-domain / unnameable buckets stopped collapsing into silence, several became visible as findings ABOUT THE CORPUS, not census defects. Live-corpus measurements (n=72, manifest-dated — re-witness, do not cite frozen):
 - **`extraction_unnameable` = 5** — extractive constraint-level type, NO authored victim, AND no nameable extractor seat: BOTH sides of an extractive relation unnamed (the starkest blindspot, previously swallowed whole).
