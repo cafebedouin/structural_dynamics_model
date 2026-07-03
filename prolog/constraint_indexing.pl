@@ -899,8 +899,12 @@ restrict_by_access(felt_only, _, _, ChiFallback, ChiFallback) :- !.
 restrict_by_access(none, _, _, _, unknown).
 
 %% get_true_metric(+C, +MetricKey, -Value)
+%  OQ-205 (spec §3): absence of an authored ε reads `unknown`, never a
+%  fabricated 0.0 (a mountain-shaped ε that passes every floor).
+%  Consumers resolve `unknown` explicitly (resolve_for_classification/3),
+%  same as the none-access path.
 get_true_metric(C, extractiveness, Val) :-
-    (constraint_data:base_extractiveness(C, Val) -> true ; Val = 0.0).
+    (constraint_data:base_extractiveness(C, Val) -> true ; Val = unknown).
 get_true_metric(C, suppression_raw, Val) :-
     config:param(suppression_metric_name, MetricName),
     (narrative_ontology:constraint_metric(C, MetricName, Val) -> true ; Val = 0.0).
