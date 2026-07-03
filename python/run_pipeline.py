@@ -744,6 +744,16 @@ def _prolog_epsilon_declaration_gate():
 
     Fail-closed by construction: run_tests failing (or the unit not loading)
     makes the swipl -g goal fail -> non-zero exit -> PrologError.
+
+    Second swipl = Control P (spec §6): the four planted fixture stories in
+    tests/fixtures/eps_controls/ run through the REAL load path
+    (corpus_path overlay asserted BEFORE load_all_testsets — a FRESH process
+    is mandatory: the corpus_loaded/0 guard silently ignores an in-process
+    overlay-after-load; process exit is the cleanup). Violations must equal
+    EXACTLY the planted set (flagged AT the holes): drift == {eps_ctl_drifted},
+    loud-null == {eps_ctl_missing}, eps_ctl_clean flag-free (implied by the
+    exact sets, two-sided), and eps_ctl_no_epsilon must read ε = unknown
+    through get_true_metric (the U1 fallback is DEAD, not rerouted).
     """
     try:
         run_prolog(
@@ -757,6 +767,34 @@ def _prolog_epsilon_declaration_gate():
             "orphan provenance, a census-partition breach, or a planted "
             "control not firing. Fix the story file (or the emission) and "
             f"re-run. Detail: {e}"
+        )
+    try:
+        run_prolog(
+            ["stack.pl", "data_validation.pl"],
+            "retractall(config:param(corpus_path, _)), "
+            "assertz(config:param(corpus_path, 'tests/fixtures/eps_controls')), "
+            "corpus_loader:load_all_testsets, "
+            "findall(Cc, corpus_loader:corpus_constraint(Cc), Ccs), "
+            "sort(Ccs, CcsS), length(CcsS, NFix), "
+            "( NFix =:= 4 -> true ; throw(ctl_p_fixture_count(NFix)) ), "
+            "findall(Cd, ( corpus_loader:corpus_constraint(Cd), "
+            "              data_validation:epsilon_provenance_drift(Cd, _) ), Ds0), "
+            "sort(Ds0, Ds), "
+            "( Ds == [eps_ctl_drifted] -> true ; throw(ctl_p_drift_set(Ds)) ), "
+            "findall(Cm, ( corpus_loader:corpus_constraint(Cm), "
+            "              data_validation:missing_epsilon_provenance(Cm) ), Ms0), "
+            "sort(Ms0, Ms), "
+            "( Ms == [eps_ctl_missing] -> true ; throw(ctl_p_loud_null_set(Ms)) ), "
+            "( constraint_indexing:get_true_metric(eps_ctl_no_epsilon, extractiveness, unknown) "
+            "  -> true ; throw(ctl_p_fallback_not_dead) ), "
+            "format(user_error, '[ctl-p] fixture pass green: drift AT eps_ctl_drifted, "
+            "loud-null AT eps_ctl_missing, clean flag-free, no-eps reads unknown~n', [])",
+        )
+    except PrologError as e:
+        raise SystemExit(
+            "OQ-205 Control P fixture pass failed — the gate's checkers did "
+            "not flag exactly the planted fixture set through the real load "
+            f"path (tests/fixtures/eps_controls/). Detail: {e}"
         )
 
 

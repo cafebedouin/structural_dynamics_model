@@ -1,0 +1,6 @@
+=== Control P fixture pass — BREAK side (2026-07-03) ===
+After load, the planted drifted epsilon_provenance is retracted in-process;
+the planted-set equality must THROW (drift set [] != [eps_ctl_drifted]).
+( Ds == [eps_ctl_drifted] -> true ; throw(ctl_p_drift_set(Ds)) ),
+halt.: Unknown message: ctl_p_drift_set([])
+exit=2 (non-zero = the pass bites)
