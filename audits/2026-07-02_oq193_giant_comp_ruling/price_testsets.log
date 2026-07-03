@@ -1,0 +1,24 @@
+
+===== OQ-193 CONSUMER PRICE PROBE (corpus n=119) =====
+  same-kernel strip set: 64 edges, 34 incident endpoints; total affects=231
+PC_SUBSTRATE ok (dropped 64 == strip 64)
+PC_RESTORE_SUBSTRATE ok (231)
+
+-- per-consumer diff under same-kernel strip (endpoints only) --
+  FPN effective_purity               : NO DIFF
+  json_report neighbor sets          : CHANGED  -34 +34  (34 endpoints)
+      e.g. removed: ability_ceiling_reading-[access_barrier_reading,prerequisite_debt_reading]
+      e.g. added  : ability_ceiling_reading-[]
+  network_dynamics degree/hub status : CHANGED  -34 +34  (34 endpoints)
+      e.g. removed: ability_ceiling_reading-hub(2,no)
+      e.g. added  : ability_ceiling_reading-hub(0,no)
+  network_drift_severity             : CHANGED  -8 +8  (8 endpoints)
+      e.g. removed: conceptual_framework_reading-warning
+      e.g. added  : conceptual_framework_reading-watch
+  hub-status FLIPS (yes<->no): 15
+      e.g. authoritative_specification_reading
+
+-- PC_FPN_DETECTS (planted cross-kernel single-edge strips) --
+  cross-kernel edge pool: 167 (sampling up to 20)
+PC_FPN_DETECTS ok  edge apoe4_mitochondrial_vulnerability->mitochondrial_demand_signal_deficiency  ep(apoe4_mitochondrial_vulnerability): 0.3542->0.3542  ep(mitochondrial_demand_signal_deficiency): 0.4104->0.4292
+PC_RESTORE ok

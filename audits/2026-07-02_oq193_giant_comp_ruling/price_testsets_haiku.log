@@ -1,0 +1,23 @@
+
+===== OQ-193 CONSUMER PRICE PROBE (corpus n=960) =====
+  same-kernel strip set: 1810 edges, 950 incident endpoints; total affects=2680
+PC_SUBSTRATE ok (dropped 1810 == strip 1810)
+PC_RESTORE_SUBSTRATE ok (2680)
+
+-- per-consumer diff under same-kernel strip (endpoints only) --
+  FPN effective_purity               : NO DIFF
+  json_report neighbor sets          : CHANGED  -950 +950  (950 endpoints)
+      e.g. removed: abrahamic_covenant__isaac_covenant_reading-[abrahamic_covenant__ishmael_covenant_reading,abrahamic_covenant__land_promise_constraint]
+      e.g. added  : abrahamic_covenant__isaac_covenant_reading-[]
+  network_dynamics degree/hub status : CHANGED  -950 +950  (950 endpoints)
+      e.g. removed: abrahamic_covenant__isaac_covenant_reading-hub(2,no)
+      e.g. added  : abrahamic_covenant__isaac_covenant_reading-hub(0,no)
+  network_drift_severity             : CHANGED  -88 +88  (88 endpoints)
+      e.g. removed: abrahamic_covenant__land_promise_constraint-critical
+      e.g. added  : abrahamic_covenant__land_promise_constraint-warning
+  hub-status FLIPS (yes<->no): 282
+      e.g. abrahamic_covenant__land_promise_constraint
+
+-- PC_FPN_DETECTS (planted cross-kernel single-edge strips) --
+  cross-kernel edge pool: 870 (sampling up to 20)
+PC_FPN_DETECTS none_of_sample_moved_purity

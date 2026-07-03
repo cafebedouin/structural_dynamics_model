@@ -1,0 +1,11 @@
+
+===== GIANT-COMPONENT RIPPLE (corpus, 110 constraints) =====
+  same-kernel affects_constraint edges to strip : 64
+  -- POSITIVE CONTROL (strip reached graph layer) --
+  raw affects_constraint: 231 -> 167  (dropped 64; expected 64)
+  [ok] strip applied to substrate
+  -- giant_comp topology old -> new --
+  gc edges (at threshold)   : 55 -> 21  (delta 21-55)
+  connected components      : 69 -> 90  (delta 90-69)
+  giant component size      : 12 -> 9  (delta 9-12)
+  => RIPPLE PRESENT: connectivity changed — correction-vs-loss call needed
