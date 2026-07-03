@@ -1239,6 +1239,33 @@ def _phase_evaluative_convergence(progress):
     return [result]
 
 
+def _phase_epsilon_authorship_readout(progress):
+    """Phase 9c: OQ-78 standing ε-authorship readout (OQ-205 §8; cheap, pure JSON).
+
+    Consumes the U6 provenance emission + the U7 stability artifact; writes
+    outputs/epsilon_authorship_readout.{json,md}. Per-stratum mode fraction,
+    distinct values, last-digit histogram, exactly-at-threshold count — the
+    OQ-78 fingerprint as a standing per-run readout instead of a one-off
+    census.
+    """
+    if progress:
+        progress("pipeline", "[EPS-READOUT] epsilon authorship readout (OQ-78)...")
+
+    def _readout():
+        script = REPO_ROOT / "python" / "epsilon_authorship_readout.py"
+        result = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=str(REPO_ROOT), capture_output=True, text=True, timeout=300,
+        )
+        if result.returncode != 0:
+            raise RuntimeError(
+                f"epsilon_authorship_readout.py exited {result.returncode}: "
+                f"{(result.stderr or result.stdout).strip()[-400:]}")
+
+    result = _run_step("epsilon_authorship_readout", _readout, progress)
+    return [result]
+
+
 # ---------------------------------------------------------------------------
 # Main pipeline
 # ---------------------------------------------------------------------------
@@ -1472,6 +1499,10 @@ def run_pipeline(
     else:
         if progress:
             progress("pipeline", "[XCON] Skipping (enriched_pipeline.json missing).")
+
+    # Phase 9c: OQ-78 standing readout (OQ-205 §8) — sequential post-report,
+    # pure JSON (no swipl).
+    collect(_phase_epsilon_authorship_readout(progress))
 
     pipeline_result.total_duration_s = time.time() - t0
 
