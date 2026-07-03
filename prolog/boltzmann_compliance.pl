@@ -244,18 +244,20 @@ classify_at_context(C, Context, Type) :-
 %  modules are loaded by the time any coupling test runs.
 %  Also uses extractiveness_for_agent (v6.0 directionality chain)
 %  instead of the legacy power_modifier * scope_modifier calculation.
+%  OQ-205 (spec §3, fix 2): a missing ε FAILS the classification — never the
+%  fabricated BaseEps = 0.5 (the OQ-89 neutral-default class, silently above
+%  snare_epsilon_floor 0.46) or Supp = 0. Reads mirror the canonical is_X/3
+%  sources exactly: drl_core:base_extractiveness/2 (constraint_metric via
+%  constraint_data + direct multifile facts, fail-closed) and
+%  drl_core:get_raw_suppression/2 (`unknown` token on absence, which
+%  classify_from_metrics/6 already handles from the is_X path). Failure — not
+%  a Type = unknown token — so the coupling grid stays EMPTY for a no-ε story
+%  and downstream reads null/inconclusive (didn't-compute), not a
+%  computed-looking 0-violations over a grid of unknowns (Pattern 6).
 classify_at_context_impl(C, Context, Type) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    (   narrative_ontology:constraint_metric(C, ExtMetricName, BaseEps)
-    ->  true
-    ;   BaseEps = 0.5
-    ),
+    drl_core:base_extractiveness(C, BaseEps),
     constraint_indexing:extractiveness_for_agent(C, Context, Chi),
-    config:param(suppression_metric_name, SuppMetricName),
-    (   narrative_ontology:constraint_metric(C, SuppMetricName, Supp)
-    ->  true
-    ;   Supp = 0
-    ),
+    drl_core:get_raw_suppression(C, Supp),
     drl_core:classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type).
 
 %% count_coupling_violations(+Grid, +Powers, +Scopes, -Violations)
