@@ -1026,6 +1026,9 @@ Because v8 is largely re-description of a built engine, it must say what could s
   substrate question into a design obligation with checkable outputs (provenance surfaced,
   stability checked). A future version that quietly drops the obligation, or an engine state
   where ε provenance is systematically unavailable, is v8 failing at its own showing-face.
+  *[Annotation, 2026-07-03: BUILT — `epsilon_provenance/5` carrier, fail-fast gate, r=0.02
+  stability sweep, Controls P/S green through the recurring gate; witnesses in
+  `audits/2026-07-03_oq205_build/`.]*
 3. **The inherited empirical anchors.** Axiom 2 and Axiom 7 remain falsifiable as before
   (experts in powerless positions systematically rating trapped-worker constraints
   non-extractive would break the first; holders unable to author their premises' grounding

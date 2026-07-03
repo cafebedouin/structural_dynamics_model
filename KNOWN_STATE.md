@@ -45,6 +45,38 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-03 — OQ-205 RESOLVED: ε declaration discipline BUILT (11 units, Controls P/S green through the recurring gate)
+**Files:** prolog/constraint_indexing.pl, prolog/boltzmann_compliance.pl, prolog/narrative_ontology.pl, prolog/data_validation.pl, prolog/json_report.pl, prolog/reading_registry.pl, prolog/tests/test_epsilon_declaration.pl, prolog/tests/fixtures/eps_controls/, python/generate_constraint_pl.py, python/run_pipeline.py, python/enrich_pipeline_json.py, python/enhanced_report.py, python/sweeps/epsilon_stability.py, python/epsilon_authorship_readout.py, docs/design/epsilon_declaration_discipline.md, docs/deferential_realism_paper_v8.md, ISSUES.md, audits/2026-07-03_oq205_build/
+**Tier:** landed
+
+Build phase U1–U11 landed same-day as the spec (commits `e9041905`…close; unit→commit map +
+all transcripts: `audits/2026-07-03_oq205_build/README.md`). All five §9 graduation criteria
+met; OQ-205 → resolved. Highlights a future session needs:
+- **Both §3 fabrication fallbacks are DEAD** (U1 `get_true_metric` 0.0 → `unknown`; U2
+  boltzmann `BaseEps=0.5`/`Supp=0` → fail-closed mirroring `is_X/3`). Witness: live +
+  haiku + flash + kernel_v1 all byte-identical post-normalization; the U2 first cut
+  (`Type=unknown` token) was REJECTED for emitting computed-looking `scope_violations: 0`
+  over an unknown grid (Pattern 6) — fail is the honest arm.
+- **No-backfill ruling recorded** (spec §3/§9): generator-forward; the whole pre-build
+  corpus is the declared loud-null stratum (`"none_authored"` emission token, census
+  110+1 live); corpus-complete at rebuild.
+- **New recurring gates:** `_prolog_epsilon_declaration_gate` (suite + Control P fixture
+  corpus through the real load path, `tests/fixtures/eps_controls/`) and the ε-stability
+  sweep in the post-parallel slot (Control S selftest first, fail-closed; R3 tripwires
+  fatal-live/advisory-overlay). Deliberate-break controls witnessed for both.
+- **Sweep tripwire for probe authors:** `drl_core:base_extractiveness/2` is multifile
+  STATIC; `carbon_tax_2026`'s direct fact is clause 1 and an UNPINNED read backtracks past
+  it to any matching solution — took-effect guards must `once/1` the read (witnessed: the
+  unpinned guard "passed" under the shadow).
+- **New corpus finding:** `unstable_off_grid` (final type flips under ε±0.02 with ε
+  band-interior — χ-gate crossings) is the largest flag class on every leg (43/110 live,
+  452/1106 kernel_v1): ε-sensitivity is mostly NOT ε-threshold proximity. Routed to
+  OQ-78/OQ-48 consumers.
+- **OQ-78 standing readout** (`python/epsilon_authorship_readout.py`, pipeline Phase 9c)
+  reproduces the census exactly (0.68×46/110=41.8%, .x8/.x2 rail; flash on .x5/.x0).
+
+---
+
 ## 2026-07-03 — OQ-205 spec landed: ε declaration discipline (provenance + stability), read-only census with control PASS
 **Files:** docs/design/epsilon_declaration_discipline.md, docs/design/design_discipline.md, ISSUES.md, audits/2026-07-03_oq205_epsilon_census/
 **Tier:** landed

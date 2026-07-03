@@ -610,6 +610,32 @@ pipeline before the census. **When you add a reading predicate an aggregate coul
 register it in `prolog/reading_registry.pl` in the same change** (registration is opt-in —
 an unregistered reading escapes the guard; OQ-137 close, residual risk).
 
+### Run the ε-declaration suite (OQ-205 standing guard)
+
+```bash
+cd prolog && swipl -g "[stack], [data_validation], \
+  corpus_loader:load_all_testsets, [tests/test_epsilon_declaration], \
+  run_tests(epsilon_declaration), halt" -t "halt(1)"
+```
+
+Enforcement for the spec §3 fail-closed ε-provenance rule
+(`docs/design/epsilon_declaration_discipline.md`): three-site equality
+(`domain_priors:base_extractiveness/2` = `constraint_metric/3` = `epsilon_provenance/5`
+ValueAsWritten — drift is gate-red), orphan-provenance and census-partition checks, with
+planted in-memory controls keeping the gate non-vacuous on the pre-build corpus. Runs as
+the second sequential fail-fast gate in `run_pipeline.py`'s Prolog phase, followed by a
+second swipl over the Control P fixture corpus (`prolog/tests/fixtures/eps_controls/` via
+`corpus_path` overlay — violations must equal exactly the planted set). Missing provenance
+on pre-build stories is warning-grade (the declared loud-null stratum, operator ruling
+2026-07-03 — NO backfill of any `testsets*` leg; the compiler emits `epsilon_provenance/5`
+generator-forward). The ε-STABILITY sweep (`python/sweeps/epsilon_stability.py`, r=0.02,
+data-side) runs in the post-parallel slot with its own fail-closed Control S selftest;
+flags are commentary-grade (R4) and surface in `enriched_pipeline.json`, the report E5
+section, and the report sidecar. Probe authors: took-effect guards on
+`drl_core:base_extractiveness/2` must pin the FIRST solution (`once/1`) — the predicate is
+multifile and an unpinned read backtracks past a shadowing direct fact (witnessed,
+KNOWN_STATE 2026-07-03).
+
 ### Run the full analysis pipeline
 
 ```bash

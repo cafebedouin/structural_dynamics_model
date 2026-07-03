@@ -97,6 +97,15 @@ report/emission/derived-surface layer), a `base_extractiveness` read without a m
 default. The classification core already fail-closes on missing ε (the `is_X/3` clauses fail
 when `base_extractiveness/2` fails); this rule extends the same posture to the surfaces.
 
+**No-backfill ruling (operator, 2026-07-03, at build-plan review).** No `prolog/testsets*`
+leg is backfilled with `epsilon_provenance/5` — they are test corpora (the standing
+"test bed, not backfill target" ruling). The discipline lands **generator-forward**: new
+stories emit the fact from the compiler; the ENTIRE existing corpus is the **declared
+loud-null stratum** (criterion 1's sanctioned second arm — surfaced per-story as the
+emission's `"none_authored"` token, counted at the gate every run), and corpus-complete
+arrives at the future rebuild. No edits to existing story files or `constraint_instances.pl`
+literals.
+
 **Named live violations the build must fix (Pattern-5 instances, both verified at `6c59615e`):**
 1. `constraint_indexing.pl:902–903` — `get_true_metric(C, extractiveness, Val)` falls back to
    `Val = 0.0` when `constraint_data:base_extractiveness/2` fails: a fabricated
@@ -283,6 +292,10 @@ digit 5 × 599/960) where live/haiku/kernel_v1 sit on the .x8/.x2 rail. OQ-78's
   operator-attached):** if a commentary-grade stability flag is ever shown to have concealed
   a classification flip that mattered at a downstream read site, the disposition promotes to
   verdict-grade.
+
+**Build ruling (operator, 2026-07-03):** the loud-null arm of criterion 1 is the RULED arm
+for the current corpora — no backfill of any `testsets*` leg (see §3); corpus-complete
+arrives at the rebuild. Build landed 2026-07-03: `audits/2026-07-03_oq205_build/`.
 
 **Graduation criteria (the build is "done" when):**
 1. `epsilon_provenance/5` landed, corpus-complete or loud-null — with the OQ-89 0.5-neutral
