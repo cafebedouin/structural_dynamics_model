@@ -95,7 +95,8 @@
     % OQ-92 receipt surface (step 3 Stage B; tri-valued: named-seat/diffuse/ABSENT-fail-closed)
     stakeholder_gain_flow/2,       % stakeholder_gain_flow(+C, +Receiver) — Receiver = seat name (capturer) | diffuse (authored no-capture). NEVER synthesized (fabrication ban, OQ-92 Rulings; data_repair.pl is the named door). Receipt ≠ beneficiary-role.
     fixing_cost_class/2,           % fixing_cost_class(+C, +Class) — Class ∈ {cheap, prohibitive}; distinct field from gain_flow by ruling (b); cost never demotes capture
-    story_provenance/8, story_seed/3.  % Phase C provenance facts (compiler-emitted per story). MUST be multifile like every sibling above — declared dynamic-only, they loaded 1/N ("Redefined static procedure" on each testset consult, last-file-wins). Fixed 2026-06-13.
+    story_provenance/8, story_seed/3,  % Phase C provenance facts (compiler-emitted per story). MUST be multifile like every sibling above — declared dynamic-only, they loaded 1/N ("Redefined static procedure" on each testset consult, last-file-wins). Fixed 2026-06-13.
+    epsilon_provenance/5.   % epsilon_provenance(+C, +ValueAsWritten, +Author, +GenerationRunId, +Route) — OQ-205 spec §3 (R2 ratified 2026-07-03). ValueAsWritten redundantly records the authored ε so drift vs constraint_metric/3 is a checkable inequality; Author = authoring-model atom or human; Route ∈ {direct, scope_bin(Bin), hand_authored, seed_inherited} (every fabrication source its own token). Compiler-emitted (generate_constraint_pl.py); generator-forward by ruling — the pre-build corpus is the declared loud-null stratum, corpus-complete arrives at rebuild.
 
 :- dynamic
     attribute/3, has_mandatrophy_declaration/1,
@@ -105,6 +106,7 @@
     veto_actor/1, veto_exposed/2, constraint_metric/3, omega_variable/3,
     measurement/5, has_sunset_clause/1,
     story_provenance/8, story_seed/3,  % story_seed(C, SeededFrom, Draw) — forward-authored identity link (cohort ruling)            % story_provenance(C, PromptCommit, SchemaCommit, Date, SourceEssay, OneShotExample, Model, SamplingParams) — cohort metadata (Phase C growth rule + determinism-frontier ruling 2026-06-12)
+    epsilon_provenance/5,
     measurement_basis/2,
     suppression_profile/2,
     intent_viable_alternative/3, intent_alternative_rejected/3,

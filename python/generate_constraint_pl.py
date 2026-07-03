@@ -296,6 +296,12 @@ def _build_multifile_declarations(data):
     if data.get("_flat_control_of"):
         decls.append("narrative_ontology:flat_control_of/2")
 
+    # ε provenance carrier (OQ-205 spec §3, R2): every compiled story authors ε
+    # (base_properties.extractiveness is schema-required), so the fact is
+    # unconditional. Also declared multifile+dynamic module-level in
+    # narrative_ontology.pl (the story_provenance/8 lesson, 2026-06-13).
+    decls.append("narrative_ontology:epsilon_provenance/5")
+
     # human_readable and topic_domain
     decls.append("narrative_ontology:human_readable/2")
     decls.append("narrative_ontology:topic_domain/2")
@@ -850,6 +856,18 @@ def generate_pl(data):
     emit(f"    '{prov['source_essay']}', '{prov['one_shot_example']}',")
     emit(f"    '{prov['model']}', '{prov['sampling_params']}').")
     emit(f"narrative_ontology:story_seed({cid}, '{prov['seeded_from']}', {prov['draw']}).")
+    # ε provenance (OQ-205 spec §3, R2 ratified 2026-07-03): ValueAsWritten is
+    # bp['extractiveness'] — the SAME Python value emitted at the domain_priors
+    # and constraint_metric sites above, so the three in-file ε sites are equal
+    # by construction; the three-site equality check (data_validation) keeps
+    # them that way. Author = the authoring model (pipeline-stamped, never
+    # model-claimed); Route defaults to `direct` (model-authored in
+    # base_properties) — generation routes that map ε through a scope-bin or
+    # inherit it from a seed must stamp data['provenance']['epsilon_route'].
+    eps_route = prov.get("epsilon_route", "direct")
+    eps_run_id = prov.get("generation_run_id", "none")
+    emit(f"narrative_ontology:epsilon_provenance({cid}, {bp['extractiveness']}, "
+         f"'{prov['model']}', '{eps_run_id}', {eps_route}).")
     emit()
 
     # ------------------------------------------------------------------
