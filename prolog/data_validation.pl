@@ -5,7 +5,12 @@
     validate_classification_consistency/0,
     validate_edge_cases/0,
     validate_domain_coverage/0,
-    validation_summary/0
+    validation_summary/0,
+    % OQ-205 ε declaration checkers (single source: consumed here AND by the
+    % fail-fast gate suite tests/test_epsilon_declaration.pl — two copies
+    % would fork the check, Pattern 2)
+    epsilon_provenance_drift/2,
+    missing_epsilon_provenance/1
 ]).
 
 :- use_module(narrative_ontology).
@@ -118,6 +123,36 @@ is_complete_constraint(C) :-
             'base_extractiveness differs from constraint_metric(extractiveness)'))
     ;  true),
 
+    % THREE-SITE ε equality, site 2 (OQ-205 spec §3, R2 amendment): the in-file
+    % domain_priors:base_extractiveness/2 duplicate must match the live
+    % constraint_metric read (the check above compares the DELEGATING
+    % drl_core read, which equals constraint_metric for corpus stories —
+    % near-vacuous on the dual-authoring fork this site closes).
+    (domain_priors:base_extractiveness(C, DPE),
+     narrative_ontology:constraint_metric(C, extractiveness, ME2),
+     abs(DPE - ME2) > 0.01
+    -> assertz(validation_warning(epsilon_mismatch_domain_priors, C,
+            'domain_priors:base_extractiveness differs from constraint_metric(extractiveness)'))
+    ;  true),
+
+    % THREE-SITE ε equality, site 3 (OQ-205 spec §3): where epsilon_provenance/5
+    % exists, ValueAsWritten joins the equality — drift is a HARD
+    % validation_error (zero on the pre-build corpus by construction: no
+    % pre-build story carries the fact; enforcement lives in the dedicated
+    % pipeline gate, since this suite is WARN-only at the orchestrator).
+    (epsilon_provenance_drift(C, DriftDetail)
+    -> (assertz(validation_error(epsilon_provenance_drift, C, DriftDetail)), fail)
+    ;  true),
+
+    % LOUD-NULL census (OQ-205, operator ruling 2026-07-03): a constraint with
+    % an authored ε but no epsilon_provenance/5 fact is the DECLARED loud-null
+    % stratum — warning-grade BY RULING (expected on the pre-build corpus, not
+    % a defect). Counted so the denominator stays honest; never a to-fix list.
+    (missing_epsilon_provenance(C)
+    -> assertz(validation_warning(missing_epsilon_provenance, C,
+            'no epsilon_provenance/5 fact (loud-null stratum, pre-build story)'))
+    ;  true),
+
     % MANDATORY: Must have suppression_requirement metric
     (narrative_ontology:constraint_metric(C, suppression_requirement, S)
     -> (S >= 0.0, S =< 1.0)
@@ -147,6 +182,47 @@ agent_surface_present(C) :-
     constraint_indexing:constraint_classification(C, _, _), !.
 agent_surface_present(C) :-
     narrative_ontology:constraint_stakeholder(C, _, _, _, _, _, _), !.
+
+/* ----------------------------------------------------------------------------
+   OQ-205 ε declaration checkers (spec §3; R2 + amendment ratified 2026-07-03)
+   Single source of truth for the three-site equality and the loud-null
+   census — consumed by is_complete_constraint/1 above AND by the fail-fast
+   pipeline gate (tests/test_epsilon_declaration.pl). Do not duplicate the
+   logic there (Pattern 2).
+   ---------------------------------------------------------------------------- */
+
+%% epsilon_provenance_drift(?C, -Detail)
+%  Holds iff C carries an epsilon_provenance/5 fact whose ValueAsWritten
+%  differs (>0.01, the pre-existing epsilon_mismatch tolerance) from either
+%  of the other two in-file ε sites. Only post-build stories can drift —
+%  the pre-build corpus authors no epsilon_provenance fact.
+epsilon_provenance_drift(C, Detail) :-
+    narrative_ontology:epsilon_provenance(C, VW, _, _, _),
+    (   narrative_ontology:constraint_metric(C, extractiveness, ME),
+        abs(VW - ME) > 0.01
+    ->  format(atom(Detail),
+               'epsilon_provenance ValueAsWritten ~w != constraint_metric(extractiveness) ~w',
+               [VW, ME])
+    ;   domain_priors:base_extractiveness(C, DP),
+        abs(VW - DP) > 0.01
+    ->  format(atom(Detail),
+               'epsilon_provenance ValueAsWritten ~w != domain_priors:base_extractiveness ~w',
+               [VW, DP])
+    ;   fail
+    ).
+
+%% missing_epsilon_provenance(?C)
+%  The loud-null stratum: C has a resolvable authored ε but no
+%  epsilon_provenance/5 fact. Second tier over module-level ε literals
+%  (drl_core:base_extractiveness/2 direct multifile facts) so the
+%  constraint_instances.pl hand-authored class is in-domain and counted.
+%  Enumeration with unbound C can yield duplicates — census callers
+%  findall+sort; per-constraint callers bind C.
+missing_epsilon_provenance(C) :-
+    (   narrative_ontology:constraint_metric(C, extractiveness, _)
+    ;   drl_core:base_extractiveness(C, _)
+    ),
+    \+ narrative_ontology:epsilon_provenance(C, _, _, _, _).
 agent_surface_present(C) :-
     % authored-empty stakeholders[] is schema-legal ONLY with world_unchanged;
     % the compiled verdict fact is the witness that six_questions was authored.
