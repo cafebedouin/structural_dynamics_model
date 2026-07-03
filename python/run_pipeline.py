@@ -798,6 +798,31 @@ def _prolog_epsilon_declaration_gate():
         )
 
 
+def _epsilon_stability_sweep():
+    """OQ-205 ε-stability sweep (data-side, r=0.02) as a pipeline step.
+
+    Runs python/sweeps/epsilon_stability.py on the live leg. The script's
+    Control S selftest runs first fail-closed and its R3 tripwires are fatal
+    on the live leg — a non-zero exit here means the stability instrument
+    itself is broken (or a kill condition tripped), so the run stops rather
+    than ship a report whose stability column silently never looked.
+    """
+    script = REPO_ROOT / "python" / "sweeps" / "epsilon_stability.py"
+    result = subprocess.run(
+        [sys.executable, str(script)],
+        cwd=str(REPO_ROOT),
+        capture_output=True,
+        text=True,
+        timeout=3600,
+    )
+    if result.returncode != 0:
+        raise SystemExit(
+            "OQ-205 epsilon-stability sweep failed (Control S selftest red, "
+            "an R3 kill-condition tripwire, or a crash): "
+            f"{(result.stderr or result.stdout).strip()[-600:]}"
+        )
+
+
 def _phase_prolog(progress, parallel):
     """Phase 2: run all Prolog analyses in parallel."""
     # Diagnostic — remove after debugging
@@ -846,6 +871,16 @@ def _phase_prolog(progress, parallel):
     # Order is correctness-irrelevant: trajectory's only output (context_profile_report.md)
     # has no downstream consumer (C0 invariant).
     results.append(_run_step("trajectory", _prolog_trajectory, progress))
+
+    # OQ-205: ε-stability sweep — post-parallel sequential slot (the
+    # ThreadPoolExecutor above has joined, so the sweep's swipl never
+    # co-resides with giant_comp/trajectory, the OQ-182 rule). SystemExit on
+    # red: Control S's selftest and the R3 tripwires are recurring-gate-
+    # enforced from here on (ruling/close-honesty — once OQ-205 closes, this
+    # is the sole enforcement).
+    if progress:
+        progress("pipeline", "[PROLOG] epsilon-stability sweep (OQ-205)...")
+    _epsilon_stability_sweep()
 
     if progress:
         ok = sum(1 for r in results if r.status == "ok")

@@ -1,0 +1,34 @@
+=== U8 wiring witnesses (2026-07-03) ===
+
+--- full pipeline exit 0 with the sweep in the post-parallel slot ---
+[pipeline] [PROLOG] epsilon-stability sweep (OQ-205)...
+  evaluative_convergence         ok       [0.0s]
+
+  Total time: 17.2s
+
+--- enriched_pipeline.json join: additive-only ---
+added fields census: {'epsilon_grid_distance': 119, 'epsilon_stability_flags': 119}
+changed pre-existing: 0
+flag census: stable=62 unstable_off_grid=43 null=9 near_threshold=3 on_threshold_grid=1 override_locked=1 (matches sweep artifact)
+
+--- report A/B/C isolation (same session; only the ε-stability line differs) ---
+A(fresh) vs B(absent):
+239c239,240
+<   ε-stability (data-side, r=0.02): stable — final type unchanged under ε±0.02 (ε=0.68, grid distance 0.22)
+---
+>   ε-stability (data-side, OQ-205): not computed
+>   (run python3 python/sweeps/epsilon_stability.py)
+A(fresh) vs C(stale corpus_hash):
+239c239,240
+<   ε-stability (data-side, r=0.02): stable — final type unchanged under ε±0.02 (ε=0.68, grid distance 0.22)
+---
+>   ε-stability (data-side, OQ-205): STALE (OQ-29) — computed against corpus deadbeef0000, current is 78c299a3a92f;
+>   not rendered; re-run python3 python/sweeps/epsilon_stability.py
+
+--- flagged-story rendering (override_locked, classes render separately) ---
+  ε-stability (data-side, r=0.02): FLAGGED (ε=0.32, grid distance 0.02):
+    - override_locked: raw metric type flips under ε±r while the final type holds (signature-locked, OQ-30 class) — 'stable' must not read as 'insensitive'
+
+
+--- sidecar additive field ---
+{"assessed": true, "reason": null, "radius": 0.02, "flags": ["override_locked"], "grid_distance": 0.02, "epsilon": 0.32}

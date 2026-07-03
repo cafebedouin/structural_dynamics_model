@@ -2168,6 +2168,91 @@ def _fisher_probe_lines(constraint_id: str) -> list[str]:
     ]
 
 
+_EPS_STABILITY_PATH = PROJECT_ROOT / "outputs" / "epsilon_stability_results.json"
+_eps_stability_cache: dict | None = None
+_eps_stability_stale: str | None = None  # OQ-29 reason string if stale, else None
+_eps_stability_radius: float | None = None
+
+
+def _load_eps_stability() -> dict:
+    """Load epsilon_stability_results.json keyed by constraint id (OQ-205).
+
+    Same OQ-29 posture as the Fisher consumer: absent corpus_hash or a
+    mismatch means the sweep describes a corpus that has moved — surface
+    STALE, never render dead-corpus flags as live.
+    """
+    global _eps_stability_cache, _eps_stability_stale, _eps_stability_radius
+    if _eps_stability_cache is not None:
+        return _eps_stability_cache
+    if not _EPS_STABILITY_PATH.exists():
+        _eps_stability_cache = {}
+        return _eps_stability_cache
+    import json as _json
+    data = _json.loads(_EPS_STABILITY_PATH.read_text())
+    stored = data.get("corpus_hash")
+    if stored is None or stored != _current_corpus_hash():
+        _eps_stability_stale = ("carries no corpus_hash" if stored is None
+                                else f"computed against corpus {stored}, current is {_current_corpus_hash()}")
+        _eps_stability_cache = {}
+        return _eps_stability_cache
+    _eps_stability_radius = data.get("radius")
+    _eps_stability_cache = {e["id"]: e for e in data.get("per_constraint", [])}
+    return _eps_stability_cache
+
+
+_EPS_FLAG_GLOSS = {
+    # R3 amendment: the two classes render SEPARATELY — collapsing them lets
+    # the flash on-grid convention swamp the near-miss signal.
+    "on_threshold_grid": ("ε exactly AT a classification threshold — authoring-convention "
+                          "class (corpus-level finding, not a per-story fragility discovery); "
+                          "blocks cross-axis anchors"),
+    "near_threshold": ("ε within r of a threshold AND the final type flips under ε±r — "
+                       "the landed-near-a-boundary artifact; inspect before anchoring"),
+    "override_locked": ("raw metric type flips under ε±r while the final type holds "
+                        "(signature-locked, OQ-30 class) — 'stable' must not read as "
+                        "'insensitive'"),
+    "unstable_off_grid": ("final type flips under ε±r though ε is >r from every ε-threshold "
+                          "(a χ-gate crossing, not an ε-threshold one)"),
+}
+
+
+def _eps_stability_lines(constraint_id: str) -> list[str]:
+    """ε-stability flag sub-section (OQ-205; R4: commentary-grade, annotates only)."""
+    data = _load_eps_stability()
+    if _eps_stability_stale is not None:
+        return [
+            "",
+            f"  ε-stability (data-side, OQ-205): STALE (OQ-29) — {_eps_stability_stale};",
+            "  not rendered; re-run python3 python/sweeps/epsilon_stability.py",
+        ]
+    if not data:
+        return [
+            "",
+            "  ε-stability (data-side, OQ-205): not computed",
+            "  (run python3 python/sweeps/epsilon_stability.py)",
+        ]
+    entry = data.get(constraint_id)
+    r = _eps_stability_radius or 0.02
+    if entry is None:
+        return [
+            "",
+            f"  ε-stability (data-side, r={r}): not swept — no authored ε "
+            "(or the probe's took-effect guard failed; see the sweep artifact)",
+        ]
+    flags = entry.get("flags", [])
+    if not flags:
+        return [
+            "",
+            f"  ε-stability (data-side, r={r}): stable — final type unchanged under ε±{r} "
+            f"(ε={entry.get('epsilon')}, grid distance {entry.get('grid_distance')})",
+        ]
+    out = ["", f"  ε-stability (data-side, r={r}): FLAGGED "
+               f"(ε={entry.get('epsilon')}, grid distance {entry.get('grid_distance')}):"]
+    for f in flags:
+        out.append(f"    - {f}: {_EPS_FLAG_GLOSS.get(f, f)}")
+    return out
+
+
 def build_stability_band(constraint_id: str, stability_data: dict | None) -> str:
     """Render the parametric stability band section (E5)."""
     lines = ["", "--- PARAMETRIC STABILITY BAND ---", ""]
@@ -2175,11 +2260,13 @@ def build_stability_band(constraint_id: str, stability_data: dict | None) -> str
     if stability_data is None:
         lines.append("  [stability not computed]")
         lines.extend(_fisher_probe_lines(constraint_id))
+        lines.extend(_eps_stability_lines(constraint_id))
         return "\n".join(lines)
 
     if stability_data.get("no_kernel"):
         lines.append("  stability not assessed — no kernel linkage (cs_kernel_id absent from testset)")
         lines.extend(_fisher_probe_lines(constraint_id))
+        lines.extend(_eps_stability_lines(constraint_id))
         return "\n".join(lines)
 
     if stability_data.get("not_witnessed"):
@@ -2187,11 +2274,13 @@ def build_stability_band(constraint_id: str, stability_data: dict | None) -> str
         lines.append(f"  stability not assessed — kernel '{kid}' has no confirmed governing params yet")
         lines.append("  (witness required: coverage>0 AND fold_survival<1.0 in ≥1 context)")
         lines.extend(_fisher_probe_lines(constraint_id))
+        lines.extend(_eps_stability_lines(constraint_id))
         return "\n".join(lines)
 
     if stability_data.get("error"):
         lines.append(f"  [error: {stability_data['error']}]")
         lines.extend(_fisher_probe_lines(constraint_id))
+        lines.extend(_eps_stability_lines(constraint_id))
         return "\n".join(lines)
 
     kid = stability_data.get("kernel_id", "?")
@@ -2235,6 +2324,7 @@ def build_stability_band(constraint_id: str, stability_data: dict | None) -> str
                 )
 
     lines.extend(_fisher_probe_lines(constraint_id))
+    lines.extend(_eps_stability_lines(constraint_id))
     return "\n".join(lines)
 
 
@@ -3369,6 +3459,29 @@ def generate_report(constraint_id, data, iteration_round=None):
             ],
         }
     sidecar["stability_band"] = _sidecar_stability(stability_data)
+
+    # ε-stability (OQ-205) — additive sidecar field; validator ignores extras.
+    # R4: commentary-grade (annotates, never overrides a type). assessed=False
+    # covers absent/stale artifact AND unswept (no authored ε / guard-failed).
+    def _sidecar_eps_stability(cid):
+        data = _load_eps_stability()
+        if _eps_stability_stale is not None:
+            return {"assessed": False, "reason": f"stale: {_eps_stability_stale}",
+                    "flags": None, "grid_distance": None}
+        if not data:
+            return {"assessed": False, "reason": "not computed",
+                    "flags": None, "grid_distance": None}
+        entry = data.get(cid)
+        if entry is None:
+            return {"assessed": False,
+                    "reason": "not swept (no authored epsilon or guard failed)",
+                    "flags": None, "grid_distance": None}
+        return {"assessed": True, "reason": None,
+                "radius": _eps_stability_radius,
+                "flags": entry.get("flags", []),
+                "grid_distance": entry.get("grid_distance"),
+                "epsilon": entry.get("epsilon")}
+    sidecar["epsilon_stability"] = _sidecar_eps_stability(constraint_id)
 
     # Validate (warn but don't block)
     try:

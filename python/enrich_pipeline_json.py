@@ -37,6 +37,7 @@ NASH_JSON = OUTPUT_DIR / "game_theory_nash.json"
 STABILITY_JSON = OUTPUT_DIR / "game_theory_stability.json"
 MIXED_JSON = OUTPUT_DIR / "game_theory_mixed_strategy.json"
 COVER_JSON = OUTPUT_DIR / "game_theory_cover_story.json"
+EPS_STABILITY_JSON = OUTPUT_DIR / "epsilon_stability_results.json"
 
 # ---------------------------------------------------------------------------
 # Confidence band cuts (OQ-100b)
@@ -83,7 +84,8 @@ def _build_lookup(data):
 
 def enrich_entry(entry, orbit_data, abd_data=None,
                  nash_data=None, stability_data=None,
-                 mixed_data=None, cover_data=None):
+                 mixed_data=None, cover_data=None,
+                 eps_stability_data=None):
     """Add all derived fields to a single per_constraint entry."""
     dist = entry.get("maxent_probs")
     raw_dist = entry.get("raw_maxent_probs")
@@ -194,6 +196,23 @@ def enrich_entry(entry, orbit_data, abd_data=None,
     cover_entry = cover_data.get(cid, {})
     entry["cover_story_type"] = cover_entry.get("cover_story_type")
 
+    # --- ε-stability flags (OQ-205, from epsilon_stability_results.json) ---
+    # None = sweep artifact absent/stale (surfaced by the loader, never
+    # rendered as live); [] = swept, no flags (stable at r). The R4 ruling:
+    # commentary-grade — these ANNOTATE, they never override a type.
+    if eps_stability_data is None:
+        entry["epsilon_stability_flags"] = None
+        entry["epsilon_grid_distance"] = None
+    else:
+        es = eps_stability_data.get(cid)
+        if es is None:
+            # in the artifact's no-ε / guard-failed strata, or unswept
+            entry["epsilon_stability_flags"] = None
+            entry["epsilon_grid_distance"] = None
+        else:
+            entry["epsilon_stability_flags"] = es.get("flags", [])
+            entry["epsilon_grid_distance"] = es.get("grid_distance")
+
 
 # ---------------------------------------------------------------------------
 # Main
@@ -244,13 +263,33 @@ def main():
     mixed_data = _build_lookup(_safe_load(MIXED_JSON, "game_theory_mixed_strategy.json"))
     cover_data = _build_lookup(_safe_load(COVER_JSON, "game_theory_cover_story.json"))
 
+    # Load ε-stability sweep artifact (OQ-205) — OQ-29 posture: a missing or
+    # corpus_hash-mismatched file is treated as ABSENT (flags None, reason
+    # printed), never rendered as live stability data.
+    print("[ENRICH] Loading epsilon_stability_results.json...", file=sys.stderr)
+    eps_stability_data = None
+    try:
+        with open(EPS_STABILITY_JSON, "r", encoding="utf-8") as f:
+            _eps_raw = json.load(f)
+        from corpus_hash import compute_corpus_hash
+        _current = compute_corpus_hash(Path(__file__).resolve().parents[1] / "prolog" / "testsets")
+        if _eps_raw.get("corpus_hash") != _current:
+            print(f"[ENRICH] Warning: epsilon_stability_results.json is STALE "
+                  f"(corpus_hash {_eps_raw.get('corpus_hash')} != current {_current}) — "
+                  f"epsilon_stability_flags will be null (OQ-29)", file=sys.stderr)
+        else:
+            eps_stability_data = {e["id"]: e for e in _eps_raw.get("per_constraint", [])}
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"[ENRICH] Warning: Could not load {EPS_STABILITY_JSON}: {e}", file=sys.stderr)
+
     # Enrich each per_constraint entry
     per_constraint = pipeline.get("per_constraint", [])
     print(f"[ENRICH] Enriching {len(per_constraint)} constraints...", file=sys.stderr)
 
     for entry in per_constraint:
         enrich_entry(entry, orbit_data, abd_data,
-                     nash_data, stability_data, mixed_data, cover_data)
+                     nash_data, stability_data, mixed_data, cover_data,
+                     eps_stability_data)
 
     # Validate enriched output schema
     errors = validate_enriched_pipeline(pipeline)
