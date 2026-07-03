@@ -683,8 +683,13 @@ conduit). The canary guards this:
 (positive/negative/sentinel controls + the `no_coexists_or_forecloses_leak_on_loaded_corpus`
 regression gate). Cross-leg measurement: `run_coexists_census/0` / `run_forecloses_census/0` under a
 `corpus_path` overlay (per-leg census logs in `audits/2026-06-29_oq23_coexists_fpn_canary/`). Do NOT
-extend the same-kernel guard into `constraint_neighbors_existing/2` (giant_comp topology) without
-resolving OQ-193.
+extend the same-kernel guard into `constraint_neighbors_existing/2` (giant_comp topology): **OQ-193
+RESOLVED (c) 2026-07-02 — same-kernel sibling edges are INTENDED topology and stay in the graph for
+all 5 `constraint_neighbors/3` consumers.** The per-consumer price probe confirmed FPN is unaffected
+(the OQ-23 contamination guard already zeroes sibling edges) while json_report/network_dynamics
+change without feeding any re-classification; the misleading pooled count is fixed at the report
+surface instead (giant_comp reports both pooled + cross-kernel — OWED report-build, see OQ-193).
+Evidence: `audits/2026-07-02_oq193_giant_comp_ruling/`.
 
 ### Run the linter on a testset
 
