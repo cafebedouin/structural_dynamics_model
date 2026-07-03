@@ -10680,7 +10680,7 @@ queried on its authored grid (not a synthetic time).
 
 **Ω-type:** Ω_C (design task — which provenance and stability surfaces ε carries is a declared-seat spec, not a measurement) with an Ω_E build/verification tail (the surfaces, once specced, are mechanical to land and control).
 
-**Status:** open
+**Status:** partial — **spec landed 2026-07-03**: `docs/design/epsilon_declaration_discipline.md` (anchors verified at `6c59615e`; disambiguation vs DP-001/OQ-26, provenance schema, read-site table, stability protocol, pre-registered Controls P/S — NOT run, pre-registration preserved). Read-only ε census with planted positive control PASS: `audits/2026-07-03_oq205_epsilon_census/` (headline: flash twin authors ε exactly ON thresholds, 218/960; the (0.45,0.46) interval empty on all four legs). Build phase OPEN — graduation criteria = spec §9. **Rulings requested at spec review:** R2 carrier `epsilon_provenance/5`; R3 radius r = 0.02 (census-informed, two kill conditions); R4 stability flag commentary-grade + fail-closed provenance gate-blocking.
 
 **Priority:** 2
 

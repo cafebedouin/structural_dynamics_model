@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "f5cebc54dcab429fbc3669479b0bee0833166fb6",
+    "store_version": "6c59615e16b9cae7d6acc9c5d124f8e98fc7463a",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-02T20:25:15"
+    "generated_at": "2026-07-03T00:13:22"
   },
-  "issues_sha": "e98eb2d9ee416f1def758573a4220d38465284d340c793975e7ea5468d9d5c08",
+  "issues_sha": "932023acfb57c059052abe6ff6f0c0981924ed601069c8bb40eaf4c23a8349b1",
   "n_entries": 207,
   "active_token_set": [
     "investigating",
@@ -14,9 +14,9 @@
   "per_status": {
     "resolved": 114,
     "mitigated": 13,
-    "partial": 7,
+    "partial": 8,
     "disposed": 4,
-    "open": 65,
+    "open": 64,
     "future": 4
   },
   "active": [
@@ -940,7 +940,7 @@
     },
     {
       "id": "OQ-205",
-      "status": "open",
+      "status": "partial",
       "priority": 2,
       "summary": "Build ε's declaration discipline (the v8 §6.4 handed-forward artifact)",
       "deps": [
@@ -949,6 +949,7 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-03",
+        "OQ-26",
         "OQ-78",
         "OQ-135"
       ]

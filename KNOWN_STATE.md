@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-03 — OQ-205 spec landed: ε declaration discipline (provenance + stability), read-only census with control PASS
+**Files:** docs/design/epsilon_declaration_discipline.md, docs/design/design_discipline.md, ISSUES.md, audits/2026-07-03_oq205_epsilon_census/
+**Tier:** landed
+
+Spec-only session (no engine change, no threshold change; Controls P/S pre-registered, NOT
+run — running them would un-pre-register them). `docs/design/epsilon_declaration_discipline.md`
+authored per the approved plan: disambiguation vs DP-001/OQ-26 (never title anything "ε
+invariance"), provenance carrier recommendation `epsilon_provenance/5` (R2), read-site table
+anchored at `6c59615e`, stability protocol with census-informed r = 0.02 (R3, two kill
+conditions), commentary-grade flag disposition (R4), graduation criteria. OQ-205 → `partial`;
+design_discipline §7 cross-pointer added (bidirectional refs same-commit).
+
+**Census findings** (`audits/2026-07-03_oq205_epsilon_census/`, 4 legs, planted in-memory
+control at snare_epsilon_floor+0.0005 PASS): (1) **testsets_flash authors ε exactly ON
+classification thresholds** — 218/960 (22.7%) at distance 0.000 (its .x5/.x0 grid lands on
+0.45/0.30/0.25/0.10); these are unstable at every radius by authoring convention. (2) The
+(0.45, 0.46) open interval is EMPTY on all four legs — the tight-radius binding constraint is
+moot on current corpora (re-check at regeneration; kill condition on R3). (3) OQ-78
+re-baseline: live 0.68-mode share 41.8% (46/110); the last-digit rail is model-specific
+(flash 5/0, haiku+live+kernel_v1 8/2). (4) Recon corrections to the plan: the ε threshold set
+includes `mountain_extractiveness_max` 0.25 (plan omitted it); a SECOND fabrication fallback
+found at `boltzmann_compliance.pl:248–252` (`BaseEps = 0.5`, OQ-89 class) beside the known
+`constraint_indexing.pl:902–903` `Val = 0.0`; every story file authors ε TWICE
+(`domain_priors:base_extractiveness/2` + `constraint_metric/3`) — silent-fork surface, spec
+§3 requires the build to equality-check or declare canonical.
+
+---
+
 ## 2026-07-02 — Four blocked_on_human rulings landed: OQ-138 (CI-rope KEEP+close, FNL CONVERT), OQ-193 (giant_comp additive-split), OQ-75 (Stage-2 scoped-go)
 **Files:** ISSUES.md, audits/2026-06-21_oq138_fsm_route_conversion/CIROPE_RED_ADJUDICATION.md, audits/2026-07-02_oq138_fnl_evidence/, audits/2026-07-02_oq193_giant_comp_ruling/, audits/2026-07-02_oq75_stage2_preflight/
 **Tier:** landed

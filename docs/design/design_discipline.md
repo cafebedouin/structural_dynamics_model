@@ -797,6 +797,10 @@ authoring is stable within the frame — "does the frame hold," not "does it mat
 reality," because for the non-invariant there is no seat-free reality to match, and for the
 invariant there is nothing to author.
 
+*The declaration discipline this section's two rules foreshadow — ε provenance and ε stability
+as checked, surfaced facts rather than manual per-anchor practice — is specced at
+`docs/design/epsilon_declaration_discipline.md` (tracker OQ-205; v8 §6.4 is the obligation).*
+
 ---
 
 ## 8. The discipline as evidence, and the limit of any discipline (the t3 / honoring gap)
