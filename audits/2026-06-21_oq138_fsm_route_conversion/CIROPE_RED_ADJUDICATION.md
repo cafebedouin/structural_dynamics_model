@@ -56,13 +56,35 @@ verdict is CLASS behavior — all 8 null-verdict seats in the 119-run are analyt
   diagnostic_verdict / verdict_join: ABSENT (unknown-typed seat; class behavior)
 ```
 
-**Positive control (superheavy matches its post-FCR-9 state):** PASS in the benign-fail mode the
-plan pre-registered. superheavy is NOT among the routed-9 (`fcr_routed=no`, matching
-FCR9_FINDINGS.md's seat split) — it sits in the 13-inert group's *unknown-surfaced* stratum, so
-it no longer shows the pre-conversion "genuine FCR red path" at all: dr_type=unknown at the
-default context (only institutional resolves, to scaffold), no diagnostic verdict rendered. The
-detector layer still carries the genuine signal (boltzmann non_compliant coupling 0.75, excess
-0.66) — it is the VERDICT surface that is absent, per the OQ-37 honest-unknown convention.
+**Positive control (superheavy matches its post-FCR-9 state):** PASS — and the pass is grounded in
+the substrate's explicit seat classification, not in "class behavior" (the earlier phrasing was a
+control passing by absence, the byte-identical-to-never-looked shape; resolved below).
+
+*Pre-registration (verbatim from the plan, `~/.claude/plans/i-d-like-to-make-cosmic-lecun.md`
+Campaign 2 item 2):* "**Positive control (restated for HEAD): superheavy matches its post-FCR-9
+state per FCR9_FINDINGS.md** — FCR-9 shipped milder discriminated grading, so 'still shows its
+genuine FCR red path' would fail benignly if superheavy is among the routed seats."
+
+*Substrate reconciliation (against the seat lists, not the report's characterization):*
+- superheavy's post-FCR-9 seat classification is **documented explicitly**:
+  `CONSTRUCTED3_FINDINGS.md:21` names `superheavy_decay` as "an **FCR inert seat** — caught by the
+  sweep showing 4 routed when only 3 changed; §1 gotcha" (the bound-query gotcha that wrongly
+  counted it as routed). So its `fcr_routed=no` is not a probe miss — it is the seat's authored
+  post-conversion identity. My probe used the UNBOUND `constraint_signature/2` idiom (the §1 gotcha
+  fix), so it reads the true cascade winner, not the bound-query artifact.
+- **superheavy did NOT change under FCR-9**: 0 hits in `FCR9_live_diff.txt` (the 7 changed testsets
+  seats). An inert seat's dr_type is preserved, not overwritten to tangled_rope — superheavy's
+  preserved dr_type is `unknown`, so it sits in the 13-inert group's *unknown-surfaced* stratum.
+- **Why the verdict is ABSENT, not present-and-mild:** superheavy's per-perspective types are
+  `powerless/moderate/analytical = unknown`, `institutional = scaffold` (pipeline_output.json). At
+  the default (analytical) context it is unknown-typed, and unknown-typed seats render no
+  `diagnostic_verdict` — class behavior confirmed against the whole run (all 8 null-verdict seats
+  in the 119-corpus are analytical-unknown).
+- **The absence is DISCRIMINATED, not a probe that never fired:** neutron_star, in the SAME dump,
+  renders a *present* verdict (yellow, two alerts) — so the probe's verdict machinery is proven
+  live in this very run. superheavy's absence is therefore measured-empty, not didn't-look. The
+  detector layer independently carries superheavy's genuine signal (boltzmann non_compliant coupling
+  0.75, excess 0.66) — only the VERDICT surface is absent, per the OQ-37 honest-unknown convention.
 
 **The parked item dissolves — two subsequent rulings each independently removed the RED:**
 

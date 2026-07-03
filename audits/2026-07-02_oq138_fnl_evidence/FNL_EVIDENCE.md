@@ -52,7 +52,14 @@ FCR-9 conversions were ruled on:
 
 The TYPE-INERT FNL seats (1 testsets + 7 haiku) all sit at `unknown→unknown` — they ride the
 `:924` abstain clause (OQ-37 honest-unknown), so the override is type-inert on them and conversion
-is free either way. `organization_floor_c0` (the 1 live testsets firing) is exactly this case:
+is free either way.
+
+**Unremarked asymmetry (recorded, does NOT gate the ruling):** flash is 8/8 CHANGED while haiku is
+6/13 CHANGED (7 inert). Both point CONVERT, so it does not bear on the disposition, but it is
+either a probe artifact or a genuine model-difference finding (Flash authors mountain-claims that
+resolve to typed scaffold/snare; Haiku authors more that surface `unknown` at the analytical
+context). Worth a follow-up read under the twin-comparison harness if the operator wants it typed;
+flagged here so it is not silently absorbed. `organization_floor_c0` (the 1 live testsets firing) is exactly this case:
 `unknown→unknown`, grade commentary, verdict err (unknown-typed, no verdict rendered — class
 behavior).
 

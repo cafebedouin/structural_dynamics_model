@@ -49,13 +49,16 @@ regeneration (a spend ruling) or an explicit N/A declaration.
 **2. Part (b) tooling not built — CONFIRMED, but the dependency statement was STALE.**
 `check_axis_boundary.py` header confirms it is a fail-loud reachability **guard** (v8 §8
 invariant), not a correlation statistic; no §7.1 cross-axis correlation tool exists.
-**Correction: OQ-15 is RESOLVED (2026-06-24), not open** — ruled **policed-in-place (v8)**:
-the taint guard IS the structure, and the v7 mediator/synthesis layer is preserved only as a
-*triggered upgrade*. So part (b) is not "gated on OQ-15" — there is, by ruling, no mediator
-layer coming to consume. Building the §7.1 correlation statistic is its own build item (and
-would be a candidate trigger for the preserved upgrade path). The honest menu wording is
-"part (b) tooling unbuilt; its former named dependency has resolved to a design posture that
-leaves the statistic as a standalone build."
+**Correction: OQ-15 is RESOLVED (2026-06-24), not open** — `ISSUES.md` OQ-15
+`Status: resolved — load-bearing core, 2026-06-24: Phase 2 ruled policed-in-place (v8); the taint
+guard is the structure. Synthesis (v7 named mediator) preserved as a triggered upgrade`; ruling
+commit `279d7c24` ("docs(OQ-15): Phase 2 RULED policed-in-place (v8); core resolved"). The taint
+guard IS the structure, and the v7 mediator/synthesis layer is preserved only as a *triggered
+upgrade*. So part (b) is not "gated on OQ-15" — there is, by ruling, no mediator layer coming to
+consume. Building the §7.1 correlation statistic is its own build item (and would be a candidate
+trigger for the preserved upgrade path). Honest menu wording: "part (b) tooling unbuilt; its
+former named dependency has resolved to a design posture that leaves the statistic as a standalone
+build."
 
 **3. Part (a) tooling — PARTIAL CORRECTION: the core counter EXISTS.**
 The exploration claim "no `false_*`/`dr_claim_mismatch` corpus-prevalence counter exists" is
@@ -64,10 +67,16 @@ an over-claim. **`python/audits/oq49_override_remeasure.py`** (run 2026-06-14,
 `ROW <id> <MT> <FT> <Sig> <eff> <fnl_source>` table — signature prevalence (unbound cascade
 idiom), override effectiveness (MT≠FT), FNL source tagging — with per-process positive
 controls (PC_CLAUSE878, PC_SOURCE1, PC_LIVECHANGE), any corpus via argv.
-What it does NOT yet do for the Tier-2 diff-distribution readout: `dr_claim_mismatch`
-prevalence, per-claimed-type cells, and the "too-small-a-diff" health-check framing. The
-part-(a) build is therefore an **extension of a witnessed tool, not a from-scratch build** —
-materially cheaper than the menu assumed.
+What it does NOT yet do for the Tier-2 diff-distribution readout: **the gap is specific and must
+be labeled, not waved at.** `oq49_override_remeasure.py` counts *override firing* (MT≠FT) and
+tags FNL source — it does NOT count `false_*` / `dr_claim_mismatch` PREVALENCE per-corpus,
+per-claimed-type cells, or the "too-small-a-diff = author held the key" health-check framing that
+IS OQ-75 part (a). So "part (a) is an extension of a witnessed tool" is an ESTIMATE of the build
+shape (the corpus-loop, per-process controls, and overlay recipe are reusable), not a confirmed
+drop-in — someone must confirm the counter can be pointed at `dr_claim_mismatch`/`false_*`
+prevalence rather than per-override effectiveness before the cost line ("materially cheaper") is
+stated as fact. The correction stands (it is NOT from-scratch); its confidence is "reuses the
+harness," not "counts the right thing already."
 
 **4. `code_dirty: true` on both twin manifests — CONFIRMED** (item 3 above, both
 `b733b23`+dirty). A clean-tree `classify_corpus` re-run on each twin is owed before any

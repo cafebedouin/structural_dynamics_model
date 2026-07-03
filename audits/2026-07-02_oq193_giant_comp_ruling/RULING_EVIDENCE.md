@@ -87,13 +87,17 @@ with cross-topic structure.
 
 (c) **additive provenance split** — leave topology untouched; make giant_comp report BOTH the
 pooled number AND the cross-kernel stratum (the strip result is already computed here). Since
-nothing downstream consumes the headline, the per-consumer cost of (a) is entirely avoided and
-the misleading single count is fixed at the one surface that is actually read. This is the option
-the zero-consumer fact most directly supports.
+nothing downstream consumes the headline, the per-consumer cost of (a) is avoided and the
+misleading single count is fixed at the one surface that is actually read. **(c) is NOT neutral
+between (a) and (b): it is (b)-plus-a-report-fix.** Choosing it RULES that same-kernel sibling
+edges are *intended topology for all five `constraint_neighbors/3` consumers* — including the
+network_dynamics hub degrees this probe shows flipping 15 (testsets) / 282 (haiku) under a guard.
+The "zero blast radius" describes only the report surface; the topology ruling underneath is
+"siblings stay in the graph." That may well be right — the zero-consumer + FPN-unchanged facts
+support it — but it must be ruled as a topology decision, not sold as costless.
 
-**The witnesses point at (c):** the ripple is real and large (so the single number IS
-misleading), but FPN — the only classification-feeding consumer — is provably unaffected, and the
-headline has no downstream consumer. (a)'s consumer churn (282 haiku hub flips) buys correctness
-in surfaces nobody classifies on; (c) fixes the one misleading surface at zero blast radius.
-Operator's seat: whether topology purity is wanted engine-wide (→a) or the report-surface fix
-suffices (→c); (b) only if the pooled count is judged not misleading.
+**The witnesses point at (c):** the ripple is real and large (the single number IS misleading),
+FPN — the only classification-feeding consumer — is provably unaffected, and the headline has no
+downstream consumer. (a)'s consumer churn (282 haiku hub flips) buys correctness in surfaces
+nobody classifies on. Operator's seat: rule whether same-kernel siblings are intended topology
+(→ b or c; c additionally fixes the report count) or should be guarded engine-wide (→ a).
