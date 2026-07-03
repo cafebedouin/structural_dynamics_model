@@ -727,6 +727,39 @@ def _prolog_reading_totality_gate():
         )
 
 
+def _prolog_epsilon_declaration_gate():
+    """OQ-205 standing guard: the ε-declaration suite as a fail-fast gate.
+
+    Runs prolog/tests/test_epsilon_declaration.pl over the live corpus —
+    the ENFORCEMENT for the spec §3 fail-closed provenance rule (the
+    data_validation checkers it consumes are WARN-only at _prolog_validation).
+    Gate-red: (a) any three-site ε drift (epsilon_provenance ValueAsWritten
+    vs constraint_metric vs domain_priors); (b) emission-totality breach
+    (orphan provenance / census buckets not summing to the corpus);
+    (c) in-suite planted-control failure — on the pre-build corpus the drift
+    domain is EMPTY, so the planted controls are what keep this gate
+    non-vacuous (Pattern 5). NOT gate-red: missing provenance on pre-build
+    stories (the loud-null stratum, warning-grade by operator ruling
+    2026-07-03).
+
+    Fail-closed by construction: run_tests failing (or the unit not loading)
+    makes the swipl -g goal fail -> non-zero exit -> PrologError.
+    """
+    try:
+        run_prolog(
+            ["stack.pl", "data_validation.pl",
+             "tests/test_epsilon_declaration.pl"],
+            "corpus_loader:load_all_testsets, run_tests(epsilon_declaration)",
+        )
+    except PrologError as e:
+        raise SystemExit(
+            "OQ-205 epsilon-declaration gate failed — three-site ε drift, "
+            "orphan provenance, a census-partition breach, or a planted "
+            "control not firing. Fix the story file (or the emission) and "
+            f"re-run. Detail: {e}"
+        )
+
+
 def _phase_prolog(progress, parallel):
     """Phase 2: run all Prolog analyses in parallel."""
     # Diagnostic — remove after debugging
@@ -742,6 +775,13 @@ def _phase_prolog(progress, parallel):
     if progress:
         progress("pipeline", "[PROLOG] reading-totality gate...")
     _prolog_reading_totality_gate()
+
+    # OQ-205 standing guard — sequential fail-fast, same slot. Raises
+    # SystemExit on red. NOT dead code: enforcement for the ε-declaration
+    # fail-closed rule (do not remove or fold into the parallel tasks).
+    if progress:
+        progress("pipeline", "[PROLOG] epsilon-declaration gate...")
+    _prolog_epsilon_declaration_gate()
 
     if progress:
         progress("pipeline", "[PROLOG] Running analyses...")

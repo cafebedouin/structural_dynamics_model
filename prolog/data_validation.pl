@@ -217,10 +217,14 @@ epsilon_provenance_drift(C, Detail) :-
 %  (drl_core:base_extractiveness/2 direct multifile facts) so the
 %  constraint_instances.pl hand-authored class is in-domain and counted.
 %  Enumeration with unbound C can yield duplicates — census callers
-%  findall+sort; per-constraint callers bind C.
+%  findall+sort; per-constraint callers bind C. The domain_priors site is in
+%  the disjunction so a story authoring ε ONLY via its in-file
+%  domain_priors:base_extractiveness/2 duplicate cannot silently escape the
+%  census (every site of the three-site fork is a way INTO the stratum).
 missing_epsilon_provenance(C) :-
     (   narrative_ontology:constraint_metric(C, extractiveness, _)
     ;   drl_core:base_extractiveness(C, _)
+    ;   domain_priors:base_extractiveness(C, _)
     ),
     \+ narrative_ontology:epsilon_provenance(C, _, _, _, _).
 agent_surface_present(C) :-
