@@ -2662,7 +2662,10 @@ def build_cs_extended_section(constraint_id, pipeline_data):
     lines = ["--- COMMITMENT SYSTEM TEMPORAL STATUS ---"]
 
     if terminal is not None:
-        lines.append(f"  Drift terminal attractor: {terminal}")
+        # OQ-126 Gap 1: the terminal routes on the AUTHORED ack bit; render it
+        # as conditional so the panel never reads as a settled honor/reabsorb
+        # verdict (that verdict is seated, never engine-certified).
+        lines.append(f"  Drift terminal attractor (if authored acknowledgment taken at face value): {terminal}")
     if foreclosed is not None:
         lines.append(f"  Axiom foreclosed: {foreclosed}")
     if unacknowledged:
@@ -2795,7 +2798,8 @@ def build_kernel_reading_section(constraint_id, pipeline_data):
         marker = " *" if is_this else "  "
         parts = []
         if r.get("cs_drift_terminal"):
-            parts.append(f"terminal={r['cs_drift_terminal']}")
+            # OQ-126: compact form of the conditional rendering above
+            parts.append(f"terminal(if_authored_ack)={r['cs_drift_terminal']}")
         if r.get("cs_axiom_foreclosed"):
             parts.append(f"foreclosed")
         if r.get("cs_drift_unacknowledged"):

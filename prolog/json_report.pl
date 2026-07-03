@@ -631,10 +631,12 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     (   UIDs = []
     ->  format(S, '      "cs_instance_count": 0,~n', []),
         format(S, '      "cs_drift_terminal": null,~n', []),
+        format(S, '      "cs_drift_terminal_basis": null,~n', []),
         format(S, '      "cs_axiom_foreclosed": null,~n', []),
         format(S, '      "cs_reference_frame": null,~n', []),
         format(S, '      "cs_drift_moment": null,~n', []),
         format(S, '      "cs_drift_gap": null,~n', []),
+        format(S, '      "cs_drift_ack_witness": null,~n', []),
         format(S, '      "cs_drift_unacknowledged": false~n', [])
     ;   length(UIDs, NInst),
         format(S, '      "cs_instance_count": ~w,~n', [NInst]),
@@ -656,9 +658,15 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
         ;   UIDs = [UID]
         ),
         % cs_drift_terminal (UID-keyed)
+        % OQ-126 Gap 1: the terminal is conditional on the AUTHORED Acknowledged
+        % bit (cs_terminal_attractor routes on it); _basis carries that
+        % provenance so the read site cannot mistake the terminal for a settled
+        % honor/reabsorb verdict (which is seated, never engine-certified).
         (   catch(cs_drift_engine:cs_drift_trajectory(UID, _, Terminal), _, fail)
-        ->  format(S, '      "cs_drift_terminal": "~w",~n', [Terminal])
-        ;   format(S, '      "cs_drift_terminal": null,~n', [])
+        ->  format(S, '      "cs_drift_terminal": "~w",~n', [Terminal]),
+            format(S, '      "cs_drift_terminal_basis": "authored_ack",~n', [])
+        ;   format(S, '      "cs_drift_terminal": null,~n', []),
+            format(S, '      "cs_drift_terminal_basis": null,~n', [])
         ),
         % cs_axiom_foreclosed (UID-keyed; first matching atom)
         (   catch(cs_axiom_engine:cs_axiom_foreclosed(UID, AxAtom), _, fail)
@@ -677,9 +685,19 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
         (   catch(narrative_ontology:cs_drift_state(UID, Moment, gap(DDir, DMag, DAck)), _, fail)
         ->  format(S, '      "cs_drift_moment": "~w",~n', [Moment]),
             format(S, '      "cs_drift_gap": {"direction": "~w", "magnitude": "~w", "acknowledged": ~w},~n',
-                   [DDir, DMag, DAck])
+                   [DDir, DMag, DAck]),
+            % OQ-126 Gap 1: acknowledgment provenance witness. authored=true
+            % states the ack bit came from the story author, unconfronted.
+            % confrontation_path "none_exists" is a NO-PATH sentinel: no
+            % external instrument exists to confront the bit against (OQ-107
+            % unbuilt) — it does NOT mean "checked, none found". When an
+            % ingestion path lands, this flips to a real path descriptor and
+            % confronted_by becomes populatable.
+            format(S, '      "cs_drift_ack_witness": {"authored": true, "acknowledged": ~w, "confrontation_path": "none_exists", "confronted_by": null},~n',
+                   [DAck])
         ;   format(S, '      "cs_drift_moment": null,~n', []),
-            format(S, '      "cs_drift_gap": null,~n', [])
+            format(S, '      "cs_drift_gap": null,~n', []),
+            format(S, '      "cs_drift_ack_witness": null,~n', [])
         ),
         % cs_drift_unacknowledged (UID-keyed)
         (   catch(cs_pattern_detection:cs_drift_unacknowledged(UID, _), _, fail)
@@ -1764,6 +1782,9 @@ write_validation_object(S, Constraints) :-
     format(S, '    "cs_drift_terminal_distribution": ', []),
     write_json_count_object(S, TerminalPairs),
     format(S, ',~n', []),
+    % OQ-126 Gap 1: every terminal in the distribution is conditional on the
+    % authored Acknowledged bit (see per-constraint cs_drift_terminal_basis).
+    format(S, '    "cs_drift_terminal_distribution_basis": "authored_ack",~n', []),
 
     % CS trifurcation: distinct UIDs with unacknowledged drift
     % Filter to registered UIDs only (avoids picking up old C-keyed facts during Phase A interregnum)
@@ -2097,8 +2118,10 @@ write_reading_comparison_entry(S, UID-C, Comma) :-
     ;   format(S, '            "cs_pattern": null,~n', [])
     ),
     (   catch(cs_drift_engine:cs_drift_trajectory(UID, _, Term), _, fail)
-    ->  format(S, '            "cs_drift_terminal": "~w",~n', [Term])
-    ;   format(S, '            "cs_drift_terminal": null,~n', [])
+    ->  format(S, '            "cs_drift_terminal": "~w",~n', [Term]),
+        format(S, '            "cs_drift_terminal_basis": "authored_ack",~n', [])
+    ;   format(S, '            "cs_drift_terminal": null,~n', []),
+        format(S, '            "cs_drift_terminal_basis": null,~n', [])
     ),
     (   catch(cs_axiom_engine:cs_axiom_foreclosed(UID, AxAt), _, fail)
     ->  format(S, '            "cs_axiom_foreclosed": "~w",~n', [AxAt])

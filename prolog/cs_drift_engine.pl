@@ -34,6 +34,17 @@
 % NOTE: cs_drift_trajectory/3 does NOT depend on cs_drift_unacknowledged/2.
 %   cs_drift_unacknowledged/2 is a separate Type-A diagnostic in
 %   cs_pattern_detection.pl. Acknowledged drift still gets a computed terminal.
+%
+% PROVENANCE (OQ-126 Gap 1, 2026-07-02): the Acknowledged bit is AUTHORED —
+%   the story author's own call on whether the drift was acknowledged. The
+%   terminal this table computes is therefore CONDITIONAL on taking that bit
+%   at face value; it is not a settled honor-vs-reabsorb verdict (that verdict
+%   is seated and floats — a hostile reader can read the same edit as
+%   reabsorption-as-retreat; seat-theorem Cor 3 / design_discipline.md §8,§10).
+%   json_report.pl carries this as cs_drift_terminal_basis: "authored_ack"
+%   plus a cs_drift_ack_witness object whose confrontation_path "none_exists"
+%   sentinel states that NO external confrontation path exists (OQ-107
+%   unbuilt) — absence of a path, not a clean probe.
 % ============================================================================
 
 :- module(cs_drift_engine, [cs_drift_trajectory/3]).

@@ -103,6 +103,8 @@ class PipelineConstraint:
     # --- Commitment system UID-keyed fields (always written by json_report.pl) ---
     cs_instance_count: int = 0                    # 0 when no CS UID registered for this constraint
     cs_drift_terminal: str | None = None          # null when no drift trajectory
+    cs_drift_terminal_basis: str | None = None    # "authored_ack": terminal is conditional on the AUTHORED ack bit (OQ-126); null when terminal null
+    cs_drift_ack_witness: dict | None = None      # {authored, acknowledged, confrontation_path, confronted_by}; confrontation_path "none_exists" = NO external instrument exists (OQ-107 unbuilt), NOT "checked, none found"; null when no cs_drift_state
     cs_axiom_foreclosed: str | None = None        # null when no axiom foreclosed
     cs_drift_unacknowledged: bool = False         # false when no unacknowledged drift
 
@@ -251,6 +253,8 @@ PIPELINE_FIELDS = [
     # --- Commitment system UID-keyed fields ---
     ("cs_instance_count",       int,          False),  # 0 when no CS UID
     ("cs_drift_terminal",       str,          True),   # null when no drift trajectory
+    ("cs_drift_terminal_basis", str,          True),   # "authored_ack" (OQ-126: terminal conditional on authored ack bit); null when terminal null
+    ("cs_drift_ack_witness",    dict,         True),   # {authored, acknowledged, confrontation_path, confronted_by}; null when no cs_drift_state
     ("cs_axiom_foreclosed",     str,          True),   # null when no axiom foreclosed
     ("cs_drift_unacknowledged", bool,         False),  # false when no unacknowledged drift
     # --- Committer stage-time (OQ-83; for the offline observer-residual join) ---

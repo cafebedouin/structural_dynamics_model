@@ -29,6 +29,7 @@
 :- use_module(cs_drift_engine).
 :- use_module(cs_pattern_detection).
 :- use_module(narrative_ontology).
+:- ensure_loaded('../json_report').
 :- use_module(library(plunit)).
 
 :- multifile narrative_ontology:cs_drift_state/3.
@@ -114,3 +115,64 @@ test(trajectory_independent_of_unacknowledged) :-
     once(cs_drift_engine:cs_drift_trajectory(tst_cde_retributive, _, stable_pattern)).
 
 :- end_tests(cs_drift_engine).
+
+% ============================================================================
+% OQ-126 Gap 1: acknowledgment provenance witness at the JSON surface
+% ============================================================================
+% The terminal is conditional on the AUTHORED ack bit; the serialized entry
+% must carry that provenance (cs_drift_terminal_basis + cs_drift_ack_witness
+% with the no-path sentinel). Controls:
+%   w1 — drift story: witness fields present, acknowledged bit faithful,
+%        confrontation_path is the "none_exists" sentinel (a NO-PATH fact,
+%        not "checked, none found"), confronted_by null.
+%   w2 — no-drift story: basis and witness serialize as null (absence stays
+%        absence; no fabricated witness).
+% Both go RED if the emission is dropped (witnessed at introduction by running
+% once with the emission commented out — KNOWN_STATE 2026-07-02).
+% Render helper drives the identical pipeline render path (same pattern as
+% tests/test_a12_multi_instance_render.pl).
+
+ackw_render(C, Out) :-
+    with_output_to(string(Out),
+        ( current_output(S),
+          write_per_constraint_entry(S, C, false, context([],[],[],[])) )).
+
+% practice_drift + severe + true → revival (acknowledged=true also pins the
+% witness's acknowledged field to a non-default value).
+ackw_setup :-
+    assertz(narrative_ontology:cs_story_uid(ackw_c_drift, ackw_uid_drift)),
+    assertz(narrative_ontology:cs_drift_state(ackw_uid_drift, t1,
+                                              gap(practice_drift, severe, true))),
+    assertz(narrative_ontology:cs_story_uid(ackw_c_plain, ackw_uid_plain)).
+
+ackw_cleanup :-
+    retractall(narrative_ontology:cs_story_uid(ackw_c_drift, _)),
+    retractall(narrative_ontology:cs_drift_state(ackw_uid_drift, _, _)),
+    retractall(narrative_ontology:cs_story_uid(ackw_c_plain, _)).
+
+:- begin_tests(cs_drift_ack_witness, [setup(ackw_setup), cleanup(ackw_cleanup)]).
+
+test(w1_drift_story_carries_witness) :-
+    ackw_render(ackw_c_drift, Out),
+    assertion(sub_string(Out, _, _, _, "\"cs_drift_terminal\": \"revival\"")),
+    assertion(sub_string(Out, _, _, _, "\"cs_drift_terminal_basis\": \"authored_ack\"")),
+    assertion(sub_string(Out, _, _, _,
+        "\"cs_drift_ack_witness\": {\"authored\": true, \"acknowledged\": true, \"confrontation_path\": \"none_exists\", \"confronted_by\": null}")).
+
+test(w2_no_drift_story_nulls) :-
+    ackw_render(ackw_c_plain, Out),
+    assertion(sub_string(Out, _, _, _, "\"cs_drift_terminal\": null")),
+    assertion(sub_string(Out, _, _, _, "\"cs_drift_terminal_basis\": null")),
+    assertion(sub_string(Out, _, _, _, "\"cs_drift_ack_witness\": null")).
+
+% w3 — no-CS-UID story: the SEPARATE null-defaults branch (UIDs = []) must
+% also carry the new fields, or the schema forks by entry shape (this exact
+% miss was caught live: 30/119 entries lacked the fields on the first edited
+% run because only the UID-bearing branch was extended).
+test(w3_no_cs_uid_default_path_carries_nulls) :-
+    ackw_render(ackw_c_nouid, Out),
+    assertion(sub_string(Out, _, _, _, "\"cs_instance_count\": 0")),
+    assertion(sub_string(Out, _, _, _, "\"cs_drift_terminal_basis\": null")),
+    assertion(sub_string(Out, _, _, _, "\"cs_drift_ack_witness\": null")).
+
+:- end_tests(cs_drift_ack_witness).
