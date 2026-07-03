@@ -252,6 +252,19 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     write_json_number(S, BaseEps),
     format(S, ',~n', []),
 
+    % epsilon_provenance (OQ-205 spec §3/§4): the provenance bit rides beside
+    % the value. One object shape for both arms — status "authored" where the
+    % fact exists; the EXPLICIT loud-null token "none_authored" otherwise (on
+    % the pre-build corpus that is every story, and that is the honest
+    % picture — never a silent absence). author_derived carries the OQ-78
+    % readout's Author stratum from pure JSON: story_provenance/8 model where
+    % present (a read-time derivation, never a file edit — no-backfill
+    % ruling 2026-07-03), else the counted unknown_author degradation
+    % (kernel_v1 authors no story_provenance on disk).
+    format(S, '      "epsilon_provenance": ', []),
+    write_epsilon_provenance(S, C),
+    format(S, ',~n', []),
+
     % suppression
     (   catch(drl_core:get_raw_suppression(C, Supp), _, fail)
     ->  true
@@ -1076,6 +1089,32 @@ write_one_perspective(S, C, Power, Comma) :-
    perspective. Chi is computed by constraint_indexing:extractiveness_for_agent/3
    during classification but not previously exported to JSON.
    ================================================================ */
+
+%% write_epsilon_provenance(+Stream, +Constraint)
+%  OQ-205 nested per-constraint provenance object (see the call site for the
+%  loud-null semantics). Consumed fact registered in reading_registry.pl as
+%  partial_by_design (OQ-137 opt-in rule).
+write_epsilon_provenance(S, C) :-
+    (   catch(narrative_ontology:epsilon_provenance(C, VW, Author, RunId, Route), _, fail)
+    ->  format(S, '{"status": "authored", "value_as_written": ', []),
+        write_json_number(S, VW),
+        format(S, ', "author": ', []),
+        write_json_string(S, Author),
+        format(S, ', "generation_run_id": ', []),
+        write_json_string(S, RunId),
+        format(S, ', "route": ', []),
+        write_json_string(S, Route),
+        format(S, '}', [])
+    ;   (   catch(narrative_ontology:story_provenance(C, _, _, _, _, _, Model, _), _, fail)
+        ->  Derived = Model, Basis = 'derived(story_provenance)'
+        ;   Derived = unknown_author, Basis = 'unknown_author'
+        ),
+        format(S, '{"status": "none_authored", "author_derived": ', []),
+        write_json_string(S, Derived),
+        format(S, ', "author_derived_basis": ', []),
+        write_json_string(S, Basis),
+        format(S, '}', [])
+    ).
 
 %% write_perspective_chi(+Stream, +Constraint)
 write_perspective_chi(S, C) :-

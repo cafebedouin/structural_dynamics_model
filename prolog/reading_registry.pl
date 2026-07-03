@@ -168,6 +168,8 @@ aggregatable_reading(cs_trifurcation:cs_reading_trifurcation/3, kernel,
     partial_by_design('fails on singleton kernels by contract ("not contested, no verdict"); typed surface for singletons = cs_kernel_obstruction_status/2')).
 aggregatable_reading(cs_kernel_registry:cs_kernel_divergence/4, kernel,
     partial_by_design('relational enumeration of divergence pairs')).
+aggregatable_reading(narrative_ontology:epsilon_provenance/5, corpus_constraint,
+    partial_by_design('pre-build corpus carries no epsilon_provenance (loud-null stratum by operator ruling 2026-07-03, generator-forward, corpus-complete at rebuild); contradictions meta-files carry no epsilon at all. Emission surface json_report:write_epsilon_provenance/2 types the absence explicitly (none_authored token); census = data_validation:missing_epsilon_provenance/1')).
 
 % ----------------------------------------------------------------------------
 % ANTI-FORK BRIDGE  census_source_backing(?Source, ?Entry)
