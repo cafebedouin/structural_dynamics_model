@@ -13,7 +13,9 @@ customer is OQ-78 (§8).
 **Anchors:** all code citations verified at commit `6c59615e` (2026-07-03). Line numbers are
 convenience only; the predicate/param name is the anchor.
 **Status:** spec landed 2026-07-03; build NOT started. Controls in §6 are pre-registered, not
-run. Rulings R2–R4 (§9) are committed recommendations awaiting operator review.
+run. Rulings R2–R4 (§9) **RATIFIED by the operator 2026-07-03** with two amendments folded
+into §3 (three-site equality check) and §5 (two-class stability flag), and a promotion
+trigger attached to R4.
 
 ## 1. Scope and non-goals
 
@@ -82,10 +84,12 @@ come from the join on C. `epsilon_provenance/5` must stand alone only for storie
 `narrative_ontology:constraint_metric(C, extractiveness, V)` (e.g.
 `testsets/ability_ceiling_reading.pl:101,106`). The live read path uses only the second
 (`drl_core.pl:85` → `constraint_data:base_extractiveness/2` → `constraint_metric/3` via
-`config:param(extractiveness_metric_name)`), so a divergence would be silent. The build phase
-must either check equality per story (validation_suite class) or declare which fact is
-canonical in the spec sense; one `epsilon_provenance` fact covers both only if they are proven
-equal.
+`config:param(extractiveness_metric_name)`), so a divergence would be silent. And
+`epsilon_provenance/5`'s `ValueAsWritten` makes a **third** in-file ε site. **The equality
+check the build must land covers all three** (operator amendment at R2 ratification,
+2026-07-03): `domain_priors:base_extractiveness/2` = `constraint_metric/3` =
+`ValueAsWritten`, per story, validation_suite class — otherwise the provenance fact becomes a
+third fork surface instead of the anchor it exists to be.
 
 **Fail-closed rule (the spine rule applied to ε).** At every *surfaced* read site (§4:
 report/emission/derived-surface layer), a `base_extractiveness` read without a matching
@@ -174,8 +178,18 @@ Two census findings the protocol must absorb:
 - **The flash twin authors ε exactly ON thresholds** for 22.7% of its corpus (its .x5/.x0
   authoring grid lands on 0.45/0.30/0.25/0.10, which are grid points). An exactly-at value
   flips under *any* r > 0 (boundary semantics: `rope_epsilon_ceiling` is ≤, so 0.45 + δ exits
-  rope for every δ) — these stories are unstable at every radius, by authoring convention, and
-  the flag must say so rather than drown the readout.
+  rope for every δ) — these stories are unstable at every radius, by authoring convention.
+  **The flag therefore carries two classes** (operator amendment at R3 ratification,
+  2026-07-03): `on_threshold_grid` (distance exactly 0 — an authoring-convention fact, flagged
+  at every radius by construction) vs `near_threshold` (0 < distance ≤ r — the
+  landed-near-a-boundary-by-chance artifact the check exists to surface). Collapsing them
+  would let the flash convention swamp the signal: 218 convention flags drowning the handful
+  of genuine near-misses. Read sites surface the classes separately. Both classes block a
+  cross-axis anchor (an ε exactly at a threshold is maximally unstable — the design_discipline
+  §7 rule applies with full force); the split is for the *readout*: `near_threshold` is the
+  per-story artifact to inspect, `on_threshold_grid` is additionally a corpus-level authoring
+  finding (an OQ-78-class statistic, §8) that must not read as 218 independent fragility
+  discoveries.
 - **The (0.45, 0.46) open interval is empty on all four legs** (0 values, all legs — the 0.01
   quantization cannot populate it). The plan's binding constraint (i) — r ≤ 0.005 lest
   every ε between the pair be within r of both — is therefore **moot on current corpora**,
@@ -247,17 +261,28 @@ extends OQ-78's evidence: the live-leg mode share has risen to 41.8% (0.68 × 46
 digit 5 × 599/960) where live/haiku/kernel_v1 sit on the .x8/.x2 rail. OQ-78's
 "re-baseline on cohort zero" need lands here for free once the readout is standing.
 
-## 9. Rulings requested at review + graduation criteria
+## 9. Rulings (RATIFIED, operator, 2026-07-03) + graduation criteria
 
-**Rulings (committed recommendations, each with its kill condition in place):**
-- **R2** — provenance carrier = new `epsilon_provenance/5` (§3), not widened
-  `story_provenance/8`, not a sidecar.
-- **R3** — stability radius r = 0.02 (§5), census-informed, two kill conditions attached.
-- **R4** — flag disposition: **report-surfaced, commentary-grade** (annotates, never overrides
-  classification — the verdict-grade distinction; a stability flag is commentary about a
-  value, not a correction of a type), plus a *gate-blocking* check only for the fail-closed
-  provenance rule (§3) and the two controls (§6). Escalate to gate-blocking stability only if
-  a downstream consumer is caught anchoring on a flagged ε.
+**Rulings — all three RATIFIED by the operator 2026-07-03, with the amendments noted:**
+- **R2 (ratified)** — provenance carrier = new `epsilon_provenance/5` (§3), not widened
+  `story_provenance/8`, not a sidecar. **Amendment folded into §3:** the build's equality
+  check covers all THREE in-file ε sites (`domain_priors:base_extractiveness/2`,
+  `constraint_metric/3`, `ValueAsWritten`) — with value-as-written the provenance fact is
+  itself a fork surface unless anchored by the check.
+- **R3 (ratified)** — stability radius r = 0.02 (§5), census-informed, two kill conditions
+  attached. **Amendment folded into §5:** the flag distinguishes `on_threshold_grid`
+  (distance 0, authoring convention — flash's 218/960) from `near_threshold` (0 < d ≤ r,
+  the by-chance artifact) as separate classes, or the convention swamps the signal. Radius
+  unchanged.
+- **R4 (ratified)** — flag disposition: **report-surfaced, commentary-grade** (annotates,
+  never overrides classification — the verdict-grade distinction; a stability flag is
+  commentary about a value, not a correction of a type), plus a *gate-blocking* check only
+  for the fail-closed provenance rule (§3) and the two controls (§6). Commentary-grade is
+  also forced by the census: with flash's on-threshold rate, gate-blocking stability would
+  hold the gate permanently red on a whole corpus. **Promotion trigger (kill condition,
+  operator-attached):** if a commentary-grade stability flag is ever shown to have concealed
+  a classification flip that mattered at a downstream read site, the disposition promotes to
+  verdict-grade.
 
 **Graduation criteria (the build is "done" when):**
 1. `epsilon_provenance/5` landed, corpus-complete or loud-null — with the OQ-89 0.5-neutral

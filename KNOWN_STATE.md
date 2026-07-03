@@ -71,6 +71,13 @@ found at `boltzmann_compliance.pl:248–252` (`BaseEps = 0.5`, OQ-89 class) besi
 (`domain_priors:base_extractiveness/2` + `constraint_metric/3`) — silent-fork surface, spec
 §3 requires the build to equality-check or declare canonical.
 
+**Same-day ratification (operator):** R2–R4 RATIFIED with two spec-text amendments folded in —
+three-site equality check (§3: `ValueAsWritten` is a third ε site, covered by the check or
+it's a fork) and two-class stability flag (§5: `on_threshold_grid` vs `near_threshold`; both
+block anchors, split is for the readout); R4 gained its promotion trigger (concealed flip
+that mattered downstream ⇒ verdict-grade). Audit-dir tracking witnessed (`git ls-files`, 8
+files in `a2a87dc5`).
+
 ---
 
 ## 2026-07-02 — Four blocked_on_human rulings landed: OQ-138 (CI-rope KEEP+close, FNL CONVERT), OQ-193 (giant_comp additive-split), OQ-75 (Stage-2 scoped-go)
