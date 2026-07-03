@@ -65,6 +65,17 @@ Campaign 2 item 2):* "**Positive control (restated for HEAD): superheavy matches
 state per FCR9_FINDINGS.md** — FCR-9 shipped milder discriminated grading, so 'still shows its
 genuine FCR red path' would fail benignly if superheavy is among the routed seats."
 
+*Record honesty on the registration itself (settled against the pasted text):* the registration
+has two clauses — a headline control ("**matches its post-FCR-9 state per FCR9_FINDINGS.md**") and
+a hypothesized failure mechanism ("would fail benignly **if superheavy is among the routed
+seats**"). The headline control PASSED (superheavy's HEAD state matches its documented FCR-inert
+classification). But the registration's hypothesized *mechanism* was built on a mistaken
+exploration premise: it assumed superheavy might be **routed**, and it is **inert**. So this is not
+a clean "control passed as registered" — it is "headline control passed; the sub-hypothesis about
+which benign mode (routed vs inert) was corrected by resolving against the FCR9/CONSTRUCTED3 seat
+lists." The correction costs the ruling nothing (both routed and inert remove the red path), but
+the record should read as a superseded premise, not a clean pass.
+
 *Substrate reconciliation (against the seat lists, not the report's characterization):*
 - superheavy's post-FCR-9 seat classification is **documented explicitly**:
   `CONSTRUCTED3_FINDINGS.md:21` names `superheavy_decay` as "an **FCR inert seat** — caught by the

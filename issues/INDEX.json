@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "ee51cdff6e52a365cd1c67982a64c4dcda9f448c",
+    "store_version": "f5cebc54dcab429fbc3669479b0bee0833166fb6",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-02T19:11:01"
+    "generated_at": "2026-07-02T20:25:15"
   },
-  "issues_sha": "95336c4418102413e696d0ba0bde035a36514b494287cae368c9a0a6e9828273",
+  "issues_sha": "e98eb2d9ee416f1def758573a4220d38465284d340c793975e7ea5468d9d5c08",
   "n_entries": 207,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 113,
+    "resolved": 114,
     "mitigated": 13,
-    "partial": 6,
+    "partial": 7,
     "disposed": 4,
-    "open": 67,
+    "open": 65,
     "future": 4
   },
   "active": [
@@ -137,14 +137,15 @@
     },
     {
       "id": "OQ-75",
-      "status": "open",
+      "status": "partial",
       "priority": 1,
       "summary": "Stage-2 corpus rebuild under the de-leaked pipeline: diff distribution + cross-axis invariance correlation",
       "deps": [
-        "blocked_on_human operator-go"
+        "blocked_on OQ-76"
       ],
       "cross_refs": [],
       "mentioned_in": [
+        "OQ-15",
         "OQ-26",
         "OQ-48",
         "OQ-58",
@@ -820,21 +821,6 @@
         "OQ-75",
         "OQ-109",
         "OQ-118"
-      ]
-    },
-    {
-      "id": "OQ-193",
-      "status": "open",
-      "priority": 3,
-      "summary": "does giant_comp connectivity legitimately count same-kernel sibling edges? (deferred from OQ-23)",
-      "deps": [
-        "splits_from OQ-23",
-        "blocked_on_human operator-correction-vs-loss-ruling"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-23",
-        "OQ-84"
       ]
     },
     {
@@ -2795,6 +2781,20 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-22"
+      ]
+    },
+    {
+      "id": "OQ-193",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "does giant_comp connectivity legitimately count same-kernel sibling edges? (deferred from OQ-23)",
+      "deps": [
+        "splits_from OQ-23"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-23",
+        "OQ-84"
       ]
     },
     {

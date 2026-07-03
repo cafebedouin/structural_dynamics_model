@@ -952,17 +952,39 @@ false-halt guard routed persistence to Hub-1, never halt).
 
 **Ω-type:** Ω_C (design choice — is within-kernel sibling connectivity inflation a correction to make or legitimate topology).
 
-**Status:** open
+**Status:** resolved — RULED (c) additive provenance split (operator, 2026-07-02). Same-kernel sibling edges
+STAY in the topology for all 5 `constraint_neighbors/3` consumers (this is a topology ruling, not zero-cost —
+it declares siblings intended topology); giant_comp additionally reports BOTH the pooled count AND the
+cross-kernel stratum. The report-surface build is OWED, not started (recorded below). Not option (a): the
+per-consumer probe confirms FPN is unaffected (OQ-23 guard already zeroes sibling contamination) and the
+changed consumers (json_report neighbor lists, network_dynamics hub degrees/severity — 15/282 hub flips) feed
+nothing that re-classifies, so an engine-wide guard buys correctness in surfaces nobody classifies on. Witness:
+`audits/2026-07-02_oq193_giant_comp_ruling/RULING_EVIDENCE.md`.
 **Priority:** 3
 **Origin:** OQ-23 giant-comp ripple witness, 2026-06-29 (operator ruling option 3: narrow-now-giant_comp-later).
-**Deps:** splits_from OQ-23, blocked_on_human operator-correction-vs-loss-ruling
-**Files:** `prolog/giant_component_analysis.pl`; `prolog/drl_purity_network.pl` (`constraint_neighbors_existing/2` lines 91–110); `audits/2026-06-29_oq23_coexists_fpn_canary/giant_ripple_*.log`
+**Deps:** splits_from OQ-23
+**Files:** `prolog/giant_component_analysis.pl`; `prolog/drl_purity_network.pl` (`constraint_neighbors_existing/2` lines 91–110); `audits/2026-06-29_oq23_coexists_fpn_canary/giant_ripple_*.log`; `audits/2026-07-02_oq193_giant_comp_ruling/`
 
 **Specific question:** `giant_component_analysis` builds its contamination/coupling graph from `constraint_neighbors/3`, which admits same-kernel sibling `affects_constraint` edges (the DP-001 ε-linkage edges — see OQ-23). **Witnessed fact:** those sibling edges are heavily load-bearing for connectivity — stripping them collapses the giant component **334→70** and triples components **276→789** on kernel_v1 (testsets 66→87 / 12→9); positive control passed (raw `affects_constraint` dropped by exactly the strip count). So giant_comp's headline "the constraint network forms a giant component of N" currently counts within-kernel reading-plurality as cross-kernel coupling. Is that a **correction** to make (the true cross-kernel giant is ~70; same-kernel siblings are not a coupling signal — the engine already says so for shared-agent edges at `drl_purity_network.pl:105` and the `inferred_coupling` OQ-84 guard) or a **loss** to avoid (authored sibling edges are legitimate topology and 334 is intended)?
 
 **Why deferred, not folded into the OQ-23 fix:** the OQ-23 FPN purity leak was *witnessed wrong and shipping*; this giant_comp change is *not witnessed either way* (genuine correction-vs-loss). Resolving it by precedent-analogy (OQ-84 shared-agent → explicit) is the same analogy-across-consumers move that the OQ-23 per-consumer diff already falsified once. The OQ-23 fix was sited at `compute_edge_contamination/7` (contamination-local) precisely so giant_comp topology stays UNCHANGED (zero-change control witnessed) and this question can be ruled on its own evidence rather than as a side effect. A 334→70 reinterpretation of a shipped headline metric deserves its own witness + ruling.
 
 **What resolution changes:** if **correction** — extend the intra-kernel guard to the explicit-edge channel in the topology path (e.g. `constraint_neighbors_existing/2`, mirroring line 105), with an old-vs-new diff of every `constraint_neighbors` consumer (5 sites: fpn/network_dynamics/giant_comp/json_report) and the giant_comp headline restated to the cross-kernel value. If **loss** — document that giant_comp counts authored sibling edges as topology by design, and the OQ-84 shared-agent guard is NOT extended to explicit edges (record the asymmetry rationale).
+
+**RULING (operator, 2026-07-02): (c) additive provenance split — a THIRD option the binary missed.**
+Evidence (`audits/2026-07-02_oq193_giant_comp_ruling/RULING_EVIDENCE.md`): 3-leg ripple re-witnessed at HEAD
+(giant testsets 12→9, haiku 549→47, kernel_v1 334→70; positive control exact per leg). Per-consumer price probe
+(same-kernel `cs_kernel_id` strip discriminant): **FPN effective_purity NO DIFF both legs** (the OQ-23
+`compute_edge_contamination/7` guard already zeroes sibling contamination — two-sided controlled: a planted
+cross-kernel strip DOES move purity on testsets, `PC_FPN_DETECTS ok`; haiku has 0 contaminating cross-edges so
+its NO-DIFF is vacuous-but-consistent, stated as such); json_report neighbor sets, network_dynamics degree/hub
+(15/282 hub-status flips), and drift severity all CHANGE. giant_comp headline has ZERO downstream consumers.
+So (c): leave topology untouched (siblings ARE intended topology — the OQ-84 shared-agent asymmetry is
+accepted, `drl_purity_network.pl:60–74,:289–294` rationale stands), and fix the misleading single count at the
+one surface that is read by making `giant_component_analysis` report both the pooled number and the cross-kernel
+stratum. **Report-surface build OWED (not started):** giant_comp emits both counts; the strip computation is
+already in `probe_giant_ripple.pl`. This is (b)-plus-a-report-fix — the topology decision (siblings stay) is
+the substance; the report split fixes presentation at zero engine-behavior change.
 
 ---
 
@@ -4056,9 +4078,18 @@ override-effective readings remain two-seat metric/signature signal under the OQ
 
 **Ω-type:** Ω_E (the staked prediction is measurable).
 
-**Status:** open — gated on operator go; Stage-1 single-example gate passed 2026-06-05 (KNOWN_STATE.md 2026-06-05)
+**Status:** partial — SCOPED GO (a) ruled 2026-07-02 (operator). Part (a) diff-distribution readout is
+authorized and unblocked; **part (b) cross-axis invariance correlation — the OQ's headline staked falsifier —
+stays UNTESTED under this go** (it is a standalone build, not blocked on OQ-15 which resolved 2026-06-24).
+Construction-pair stratum declared **N/A for this cohort** (flat-control empty in both twins; see OQ-76). Two
+preconditions before any citable part-(a) number: build the `false_*`/`dr_claim_mismatch` per-corpus prevalence
+counter (a harness-reuse EXTENSION of `python/audits/oq49_override_remeasure.py` — confirm it can count
+prevalence, not just override firing) + re-run `classify_corpus` on a CLEAN tree (both twin manifests are
+`code_dirty:true`). Preflight witness: `audits/2026-07-02_oq75_stage2_preflight/PREFLIGHT.md`. Stage-1
+single-example gate passed 2026-06-05 (KNOWN_STATE.md 2026-06-05).
 **Priority:** 1
-**Deps:** blocked_on_human operator-go
+**Deps:** blocked_on OQ-76 (construction-pair stratum N/A recorded there)
+*(operator-go DISCHARGED for part (a), 2026-07-02 — scoped go. Full go (b) — flat-control regeneration ~$9–18 + the §7.1 correlation-statistic build — remains a separate operator spend ruling if the falsifiable core is to be put in motion.)*
 **Origin:** 2026-06-05 de-leak work item (audit brief §4 Stage 2). The generation pipeline no
 longer hands the author the engine's decision boundaries (schema bands stripped `9f2d050a`, prompt
 de-leaked `b6c4e113`, retry-path scrub `07f7b1c0`, axes cap optional `7ad86c5a`); the
@@ -4240,7 +4271,13 @@ the computed layer (tangled_rope ×4 seats, both constructions), divergent at th
 - **Stage-2 readout stratum (analysis-side):** report construction-pair diffs (computed-type
   agreement per seat; authored divergence) as their own stratum in the cross-axis correlation
   (OQ-75). The interim kernel-bias hedge is SUPERSEDED — the gate no longer determines whether
-  the axiom axis exists.
+  the axiom axis exists. **Construction-pair stratum N/A for the CURRENT twin cohort (recorded
+  2026-07-02, OQ-75 scoped-go preflight):** the 960/960 Haiku/Flash twins carry ZERO
+  `flat_control` files / `flat_control_of/2` facts (the 1005-seed pool predates generate-both);
+  witnessed `grep -c flat_control` = 0/0 both twins vs 9 files/10 facts on `testsets/`
+  (`audits/2026-07-02_oq75_stage2_preflight/PREFLIGHT.md`). So this stratum cannot be reported for
+  the twins without a flat-control regeneration (a spend ruling under OQ-75 full-go (b)); under the
+  scoped-go (a) it is declared N/A for this cohort, not silently skipped.
 - **Optional K2 cause probe** (phrasing sensitivity): still licensed, now diagnostic-only
   (informs whether the recognizer's salience bias also distorts WHICH topics get kernels at
   all — a corpus-composition question, not an axis-loss question).
@@ -8226,13 +8263,16 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 **Status:** partial — FSM sub-part RESOLVED 2026-06-21; **FCR-9 sub-part RESOLVED 2026-06-21** (seat-aware,
 witnessed + 5-corpus generality sweep; `audits/2026-06-21_oq138_fsm_route_conversion/FCR9_FINDINGS.md`).
 **constructed-3 sub-part RESOLVED 2026-06-21** (seat-aware + CLAIM discriminant; `CONSTRUCTED3_FINDINGS.md`).
-Remaining: CI-rope (KEEP), CI-rope route-purity (OPEN), constructed_high mountain-input + constructed_low/
-constraint (0 live changers, sub-item), piton-3 (OQ-90), false_natural_law (OQ-70). **Per-clause RULINGS recorded 2026-06-21**
-(operator; see PER-CLAUSE RULINGS below): CI-rope KEEP (out of frame, evidence-settled); FCR-9 CONVERT on the
-FSM template + piton-3 carved out (OQ-90); constructed CONVERT-conditional (owes a claim-discriminant witnessed
-to keep seat #2's floor); CI-rope route-purity HOLD/OPEN (operator-merits); `false_natural_law` deferred (OQ-70).
-The two CONVERT rulings owe their build (conversion commit + post-build surface diff) — partition-witnessed, not
-yet conversion-witnessed. Split from OQ-128 (2026-06-17): `natural_law` overwrite (`:867`) retired, type_1 cap discriminated.
+**CI-rope route-purity RULED KEEP + LIMB CLOSED 2026-07-02** (inherited neutron_star RED resolved MOOT;
+`CIROPE_RED_ADJUDICATION.md`). **false_natural_law WITNESSED + RULED CONVERT 2026-07-02** (4-leg census;
+`audits/2026-07-02_oq138_fnl_evidence/FNL_EVIDENCE.md`) — conversion build OWED.
+Remaining: constructed_high mountain-input + constructed_low/constraint (0 live changers, sub-item),
+piton-3 (OQ-90), and the two OWED conversion builds (constructed-conditional + FNL). **Per-clause RULINGS**
+(operator; see PER-CLAUSE RULINGS below): CI-rope KEEP (out of frame, evidence-settled); CI-rope route-purity
+KEEP + CLOSED (2026-07-02); FCR-9 CONVERT + piton-3 carved out (OQ-90); constructed CONVERT-conditional (owes a
+claim-discriminant witnessed to keep seat #2's floor); FNL CONVERT (2026-07-02, build owed). The CONVERT rulings
+(FCR-9 done; constructed + FNL owe their build — conversion commit + post-build surface diff) are
+partition-witnessed. Split from OQ-128 (2026-06-17): `natural_law` overwrite (`:867`) retired, type_1 cap discriminated.
 
 **Priority:** 3
 
@@ -8340,8 +8380,21 @@ load-bearing-elsewhere. Each clause's diff is now IN HAND; the partition ruling 
   once dr_type=unknown. So a bare type-layer abstain silently drops #2's severe "mountain-claim over probable
   extraction" flag ⇒ constructed inherits the **FSM discriminated-severity template** (signature carries the
   diagnostic), NOT bare abstain. 47 inert seats byte-identical; behavior change is 3 (2 up, 1 down).
-- **false_natural_law** — UNGATED 2026-07-02 (the OQ-70 defer expired before it was authored —
-  see the Gate-expiry annotation above); rulable-once-witnessed, witness not yet gathered.
+- **false_natural_law** — WITNESSED + RULED CONVERT (operator, 2026-07-02); conversion build OWED, not started.
+  Census across 4 legs (`audits/2026-07-02_oq138_fnl_evidence/FNL_EVIDENCE.md`): FNL cascade-winners
+  testsets 1 (inert) / haiku 13 (6 changed) / flash 8 (8 changed) / kernel_v1 0. The 14 type-changers repeat
+  the FSM/FCR shape EXACTLY — `scaffold/snare→tangled_rope` overwrite, base green→yellow unmask, grade
+  correction, discriminant (authored mountain-claim + vic) available. All 22 firings are source-1
+  `explicit_mountain_claim`, ZERO source-2 (OQ-70 class fix holds at HEAD). kernel_v1's 0 is measured-empty
+  (41 mountain-claims × 973 boltzmann-non-compliant, intersection 0; `PC_CLAIMED_NATURAL_REACHABLE ok`).
+  Census positive control PASSED (finds `organization_floor_c0`); diff control PASSED (flags the 3 unconverted
+  piton seats). **Ruling: CONVERT on the FSM/FCR-9 discriminated-severity template** — route (not overwrite)
+  at FNL cascade-winners; metric type reads unmasked, FNL becomes a signature annotation carrying the
+  claim+vic discriminant. **Build OWED (not started, recorded here per the family precedent):** conversion
+  commit (route branch keyed on an `fnl_routed/1`-style seat predicate) + 5-corpus invariant sweep + the
+  `abductive_helpers.pl:61,:93` FNL consumers + the UNCONDITIONAL non-seat-aware maxent boost
+  (`maxent_classifier.pl:350–351`). Near-free on the LIVE leg (1 inert firing) — build cost can be deferred
+  without live impact until a twin/rebuild surfaces the changers, but the defect is witnessed on the twins now.
 
 **PER-CLAUSE RULINGS (operator, 2026-06-21).** Verdict → witness → kill condition. Two are evidence-settled
 (commitments); two are operator-merits seats (OPEN/conditional — the evidence frames but does not settle them,
@@ -8361,13 +8414,21 @@ type it writes, not just the seat's own verdict. (Reusable form in `docs/technic
   passes (excess 0.03–0.10, non-gating; positive control 52 live seats fail boltzmann, so the passes
   discriminate); no sub-partition forced. **Kill:** a downstream consumer found to treat `dr_type='rope'` as
   contested-rather-than-certified ⇒ CI-rope re-enters the frame.
-- **CI-rope route-purity — HOLD, lean KEEP-as-written (OPEN, operator's seat).** The 5 consumers
+- **CI-rope route-purity — RULED KEEP-as-written, LIMB CLOSED (operator, 2026-07-02).** The 5 consumers
   (dirac→first_class, purity immunity 1.0, cohomology, boltzmann, maxent) read `dr_type='rope'`; route-purity
-  would repoint them at the CI-rope signature. Lean: do not rewire — `dr_type='rope'` is the more stable
-  contract than a signature predicate's internal shape; the certification is correct either way. Convert only if
-  route-purity is enforced engine-wide for a reason beyond this clause. Architecture-aesthetics, not diagnostic.
-  *This limb also inherits the parked `neutron_star`/FCR RED adjudication (OQ-122/OQ-128 closes parked it
-  "under OQ-70"; orphaned by the OQ-70 close — re-homed here 2026-07-02, it is an FCR case).*
+  would repoint them at the CI-rope signature. Ruling: do NOT rewire — `dr_type='rope'` is the more stable
+  contract than a signature predicate's internal shape; the certification is correct either way, and the rewire
+  buys route-purity only in surfaces nobody re-classifies on. Convert only if route-purity is enforced
+  engine-wide for a reason beyond this clause. **Kill (stays live):** a downstream consumer found to treat
+  `dr_type='rope'` as contested-rather-than-certified re-opens the limb. Witness (HEAD re-witness of the 5
+  consumers, staleness-ladder): `audits/2026-06-21_oq138_fsm_route_conversion/CIROPE_RED_ADJUDICATION.md` §1.
+  *Inherited `neutron_star`/FCR RED sub-item — RESOLVED MOOT (2026-07-02).* The parked item was a RED cap
+  flattening the ε=0.12-vs-0.68 gap against superheavy; at HEAD neither seat is RED — OQ-128 discriminated
+  severity (mountain→scaffold is informational, no floor) AND FCR-9 conversion (neutron_star is routed) each
+  independently removed the cap. neutron_star = YELLOW/cap=none; superheavy = FCR-inert/unknown-surfaced/
+  verdict-absent (documented FCR-inert seat per CONSTRUCTED3_FINDINGS.md:21; 0-hit in FCR9_live_diff; absence
+  discriminated by neutron_star's present verdict in the same dump). Only a report-layer confidence/magnitude
+  flattening remains, tracked elsewhere if wanted. Witness: `CIROPE_RED_ADJUDICATION.md` §2.
 - **constructed — CONVERT the 3, gated on a claim-discriminant that keeps seat #2's floor (conditional).**
   47/50 winners are snare→snare (inert; convert byte-identical). Behavior change is 3. Bare abstain-to-unknown
   is refuted: it drops a severe `type_1_false_summit` on #2 (institutional_trust_erosion, RED→yellow) that
