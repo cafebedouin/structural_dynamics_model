@@ -913,16 +913,25 @@ has_metric_perspectival_variance(C) :-
 % tombstone above. The detector survives; the overwrite does not. The other
 % resolve_modal_signature_conflict clauses (false_natural_law, ...) are UNTOUCHED.
 
-% FNL OVERRIDE RULE (v5.1, §III-A extension):  [ACTIVE]
-%   FNL(C) → tangled_rope regardless of metric-based classification — EXCEPT an
-%   honest `unknown` modal type, which is an *absence* of metric classification,
-%   not a metric result to override. Surfacing `unknown` (rather than laundering
-%   it to tangled_rope) keeps a band-gap / authored-gap / swallowed-error reading
-%   VISIBLE instead of masked. (2026-06-01, OQ-37 ruling; removes the
-%   "never preserve unknown" behavior — see resolve_with_perspectival_check above
-%   and KNOWN_STATE 2026-06-01.)
+% FNL RULE (v5.1 §III-A; OQ-138 conversion 2026-07-03):  [ACTIVE, routed]
+%   The honest `unknown` abstain is UNCHANGED (2026-06-01, OQ-37 ruling): an
+%   `unknown` modal type is an *absence* of metric classification, not a metric
+%   result to override — surfacing it keeps a band-gap / authored-gap /
+%   swallowed-error reading VISIBLE instead of masked.
+%   Otherwise FNL now ROUTES (OQ-138, 2026-07-03): the metric type stands and
+%   the FNL diagnostic rides the victim-discriminated severity
+%   (signature_diagnostic_severity/3 → verdict_join), mirroring FSM and FCR-9.
+%   Set false_natural_law_override_enabled=1 to RESTORE the legacy v5.1
+%   tangled_rope overwrite (ablation lever). Severe-escalation alternative
+%   (vic>0 → severe, treating naturalization-concealment as categorically more
+%   serious) is a config-shaped lever NOT taken — the ruling is moderate.
 resolve_modal_signature_conflict(unknown, false_natural_law, Result) :- !, Result = unknown.
-resolve_modal_signature_conflict(_, false_natural_law, Result) :- !, Result = tangled_rope.
+resolve_modal_signature_conflict(ModalType, false_natural_law, Result) :-
+    !,
+    (   config:param(false_natural_law_override_enabled, 1)
+    ->  Result = tangled_rope           % legacy overwrite (ablation lever)
+    ;   Result = ModalType              % OQ-138: ROUTE (default) — was tangled_rope
+    ).
 
 % CI_ROPE OVERRIDE RULE (v5.1, §III-A extension):  [ACTIVE, unconditional]
 %   CI_Rope(C) → rope regardless of metric-based classification.
@@ -1707,6 +1716,26 @@ constructed_routed(C) :-
     constraint_indexing:default_context(Ctx),
     drl_core:dr_type(C, Ctx, unknown).
 
+%% fnl_routed(+C)
+%  OQ-138 (2026-07-03): the false_natural_law seats actually ROUTED by the conversion —
+%  those whose post-conversion dr_type is NOT the override target (tangled_rope) and NOT
+%  the honest-abstain (unknown, the :924 OQ-37 clause — inert seats). Outcome-keyed on
+%  dr_type like fcr_routed/1 so it cannot drift from the dispatch. NO piton/coordination-dead/
+%  perspectival-variance gates: FNL has no such refinements (it is handled ONLY in
+%  resolve_modal_signature_conflict/3, no resolve_with_perspectival_check clause) — the
+%  generality sweep's routed∩piton=0 invariant is the standing positive control for this claim.
+%  NON-CIRCULAR: dr_type/3's reachable call set does not consult converted_at_seat/2 or the
+%  severity machinery — witnessed at HEAD 823b6789, not assumed
+%  (audits/2026-07-02_oq138_fnl_evidence/fnl_noncircularity_trace.log).
+fnl_routed(C) :-
+    constraint_signature(C, Sig0), Sig0 == false_natural_law,  % TRUE cascade winner (unbound;
+                                                            % a bound-arg query trips on the
+                                                            % detector even when shadowed — §1 gotcha)
+    constraint_indexing:default_context(Ctx),
+    drl_core:dr_type(C, Ctx, DT),
+    DT \== tangled_rope,        % routed away from the override target
+    DT \== unknown.             % not the honest-abstain inert case
+
 %% converted_at_seat(+C, +Signature)
 %  Seat-level "this seat is converted to route". Signature-level for false_summit_mountain
 %  (all its cascade-winners are genuinely overridden); seat-level for false_ci_rope
@@ -1716,6 +1745,7 @@ constructed_routed(C) :-
 converted_at_seat(_, false_summit_mountain).
 converted_at_seat(C, false_ci_rope) :- fcr_routed(C).
 converted_at_seat(C, constructed_high_extraction) :- constructed_routed(C).
+converted_at_seat(C, false_natural_law) :- fnl_routed(C).
 
 %% signature_diagnostic_severity(+C, +Signature, -Severity)
 %  Discriminated severity for a converted signature, decoupled from the type delta.
@@ -1733,6 +1763,16 @@ signature_diagnostic_severity(_, false_summit_mountain, informational).
 signature_diagnostic_severity(C, false_ci_rope, moderate) :-
     once(narrative_ontology:constraint_victim(C, _)), !.
 signature_diagnostic_severity(_, false_ci_rope, informational).
+% false_natural_law (OQ-138 FNL, 2026-07-03): same victim discriminant as FSM/FCR — an
+% authored victim => concealment possible => moderate (yellow floor); none => informational
+% (route, no floor); base tensions still render red honestly if warranted (FSM Position-A).
+% The CLAIM discriminant (constructed-3's) is degenerate here: every census firing is
+% mountain-claimed (FNL fires definitionally on claimed naturality), so it would floor
+% every routed seat identically; victim varies (census vic 0–4) and is robust to future
+% source-2 profile-match FNL seats where constraint_claim(mountain) is false.
+signature_diagnostic_severity(C, false_natural_law, moderate) :-
+    once(narrative_ontology:constraint_victim(C, _)), !.
+signature_diagnostic_severity(_, false_natural_law, informational).
 % constructed_high_extraction (OQ-138 constructed-3): CLAIM discriminant, not victim (all 3 routed
 % seats are vic>0, so victim does not distinguish; the authored claim does). A MOUNTAIN claim over a
 % high-extraction finding is the concealment (a false-summit shape) — keep its floor at `severe`,

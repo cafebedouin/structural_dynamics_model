@@ -263,9 +263,11 @@ param(snare_epsilon_floor, 0.46).
 % naturalized set is empty corpus-wide, so that coupling has no live effect.
 param(tangled_rope_chi_floor, 0.35).
 %% DEMOTION: signature-locked on all tested kernels (see OQ-30) — not confirmed
-%% unperturbable-by-construction. false_natural_law readings lock final type regardless
-%% of metric change; a false_ci_rope reading near this floor with variance could flip.
-%% Treat as perturbable-but-unperturbed pending witness on false_ci_rope kernels.
+%% unperturbable-by-construction. (2026-07-03, OQ-138: false_natural_law no longer locks
+%% the final type at routed cascade-winner seats — it ROUTES; only inert/abstain FNL seats
+%% and a re-enabled ablation lever retain the lock.) A false_ci_rope reading near this
+%% floor with variance could flip. Treat as perturbable-but-unperturbed pending witness
+%% on false_ci_rope kernels.
 param(tangled_rope_chi_ceil, 0.90).
 param(tangled_rope_epsilon_floor, 0.30).
 
@@ -486,6 +488,7 @@ param(fpn_enabled,                             1).     % Graduated Phase 7-T2: F
 param(fcr_override_enabled,                    1).     % 1=FCR overrides classification, 0=detection only (ablation)
 param(piton_refinement_enabled,                1).     % OQ-90: 1=capture-keyed piton refinement fires in the FCR branch, 0=kill-switch. Separate axis from fcr_override_enabled — fires even when that is 0 (intentional; the refinement is an authored-structure fact, not the metric-uniformity override).
 param(false_summit_override_target,    mountain).      % OQ-138 (2026-06-21): FSM ROUTES, does not RECLASSIFY. Default mountain = revert to the metric type (no overwrite); the discriminated severity (signature_diagnostic_severity/3) carries the diagnostic into verdict_join. Set to tangled_rope to RESTORE the legacy v6.9 overwrite (ablation lever).
+param(false_natural_law_override_enabled, 0).          % OQ-138 (2026-07-03): FNL ROUTES, does not RECLASSIFY. Default 0 = route (metric type stands at cascade-winner seats; the discriminated severity carries the FNL diagnostic into verdict_join, mirroring FSM/FCR-9). Set to 1 to RESTORE the legacy v5.1 tangled_rope overwrite (ablation lever).
 param(corpus_path,                       'testsets').   % Directory to load testsets from (relative to prolog/)
 
 /* ================================================================

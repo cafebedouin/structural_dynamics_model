@@ -320,6 +320,7 @@ param_spec(fcr_override_enabled, integer, oneof([0, 1]), "1=FCR overrides classi
 param_spec(piton_refinement_enabled, integer, oneof([0, 1]), "OQ-90: 1=capture-keyed piton refinement fires in the FCR branch, 0=kill-switch (separate axis from fcr_override_enabled)").
 param_spec(fcr_excess_floor,     number,  range(0.0, 1.0), "Excess-above-floor threshold for FCR Test 3 (diagnostic, not a certificate gate)").
 param_spec(false_summit_override_target, atom, oneof([mountain, rope, scaffold, piton, tangled_rope, snare]), "v6.9: reclassification target for false summit mountains (set to mountain to disable)").
+param_spec(false_natural_law_override_enabled, integer, oneof([0, 1]), "OQ-138 (2026-07-03): 0=FNL ROUTES (metric type stands, discriminated severity carries diagnostic), 1=legacy tangled_rope overwrite (ablation lever)").
 param_spec(corpus_path,          atom,    any,            "Directory to load testsets from (relative to prolog/)").
 
 % ============================================================
