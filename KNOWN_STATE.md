@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-02 — OQ-126 RESOLVED: drift terminal carries its authored-ack provenance (witness-not-verdict); external-anchoring tier ladder promoted to design_discipline.md §10
+**Files:** prolog/json_report.pl, prolog/cs_drift_engine.pl, prolog/tests/test_cs_drift_engine.pl, python/shared/schemas.py, python/enhanced_report.py, docs/design/design_discipline.md, ISSUES.md
+**Tier:** landed
+
+Gap 1 (the cyclopean shape: the engine consumed the AUTHORED `Acknowledged` bit in
+`cs_drift_state` gap/3 as if it settled the seated honor-vs-reabsorb verdict) fixed as
+provenance labeling, commit `ee51cdff` — Pass-0 gate re-witnessed the scoping claim first
+(`cs_terminal_attractor/4` internal to cs_drift_engine.pl; all 5 `cs_drift_trajectory/3`
+production consumers commentary-grade; no path to `classify_from_metrics/6`; HALT clause
+unused). New fields at every terminal surface incl. the no-CS-UID default branch (that branch
+was MISSED on the first edited run — 30/119 entries lacked the fields; test w3 now pins it):
+`cs_drift_terminal_basis: "authored_ack"|null` and `cs_drift_ack_witness {authored,
+acknowledged, confrontation_path, confronted_by}` where `confrontation_path: "none_exists"`
+is a NO-PATH sentinel (no external instrument exists; OQ-107 `future`), NOT "checked, none
+found" — operator null-semantics rider. `enhanced_report.py` renders the terminal conditional
+("if authored acknowledgment taken at face value") — the decoration kill-condition control;
+before/after panel diff witnessed on `ability_ceiling_reading`. RED control witnessed (both
+w-tests FAILED with emission dropped, then restored green 24/24; test_cs_trifurcation 19/19 —
+OQ-55 single-bit twin untouched). Scale: clean-vs-edited diff n=119 additive-only, 0
+pre-existing value changes, warning sets byte-identical (1,428 pre-existing `fingerprint_shift`/
+`repair_transitions` warnings — pre-existing condition, not this change's); twins
+`testsets_haiku` n=960 + `testsets_flash` n=960 at `5d6f219`-dirty, 0 missing/unfaithful.
+Item (c): tier ladder (Tier 1 external/dated / Tier 2 retained-record + NORMATIVE declared
+record-boundary MUST / Tier 3 no temporal handle / declared stop) promoted from the OQ entry
+into `design_discipline.md` §10. OQ-126 compressed-on-close; stale cross-refs corrected
+(OQ-74 was cited as "pending ruling" — resolved 2026-06-14). Ω_P core (honor/reabsorb seated,
+never engine-certifiable) closed as DECLARED, not solved.
+
 ## 2026-07-02 — OQ-195 RESOLVED: general-n H¹ gap spectrum proven at every cardinality; stakeholder frame makes it the live law; OQ-207 minted
 **Files:** docs/h1_gap_spectrum_general_n.md, python/audits/oq195_h1_spectrum_check.py, prolog/tests/test_h1_spectrum.pl, prolog/grothendieck_cohomology.pl, docs/deferential_realism_paper_v8.md, docs/deferential_realism_paper_v7.md, docs/deferential_realism_paper_v6.13.1.md, ISSUES.md, audits/2026-07-02_oq195_general_n_gap/
 **Tier:** landed

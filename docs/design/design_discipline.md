@@ -906,6 +906,54 @@ way down.
 
 ---
 
+## 10. Temporal accountability of the published artifact: the external-anchoring ladder
+
+*(Promoted from OQ-126, 2026-07-02. §9 places the engine in the context of discovery; the
+accountability bite of seat-theorem Corollary 3 — a real later seat confronting a pre-committed
+t0 — lives in **publication** (cafebedouin.org), not in the engine. This section grades how well
+a published artifact exposes itself to that confrontation. It is a property of the essay and
+venue, never an engine output.)*
+
+B-historical accountability is **graded**, not binary-on-falsifier:
+
+- **Tier 1 — external / dated / numeric / third-party.** The staked confrontation reads
+  near-identically from any seat; strongest accountability. Worked instance:
+  `essays/2026-05_or_before/columbia_falsification_matrix.md` (dated numeric thresholds
+  confronted by third-party market data; honored RED; where a confrontation was ambiguous it
+  staked a *further* dated test — the discipline working). A dated falsification matrix
+  confronted by external data is the gold standard — there is no "better"; the demand for one
+  is a flinch.
+
+- **Tier 2 — author's retained record.** Cor-2a-declared and legible, but the
+  **record-boundary Π** (which commitments count as live vs. superseded) is the author's seat
+  to draw, and it conceals a beneficiary (editorial privilege). Worked instance:
+  `essays/2026-06/the_vote_market/the_vote_market_draft3.md` (a retained draft-vs-draft
+  disposition log; a failed load-bearing test filed as "Accepted but modified").
+  **Requirement (normative): a Tier-2 accountability claim MUST carry a declared
+  record-boundary field — an explicit statement of which commitments count as live vs.
+  superseded. Omission is a visible gap in the artifact, not a style choice.** The requirement
+  is stated as a MUST so a future essay cannot cite this section and skip the declaration
+  frictionlessly — a prohibition left in memory instead of on the surface is the same failure
+  mode this ladder exists to prevent.
+
+- **Tier 3 — held-open.** No committed t0, no falsifier: **no temporal handle**. The honest
+  grade is "seated, no temporal handle" — not a lower score on the same scale, but the absence
+  of the thing the scale measures.
+
+**The declared stop.** There is no σ-settled floor even at Tier 1 (the columbia instance shows
+residual Π in what-the-data-meant), but descending to "therefore no floor in principle, add
+another declared-Π" is distributively inert — it conceals no who-pays. Descend while a seat
+hides a distribution; stop when the next descent is inert. The record-boundary (Tier 2) is the
+last live seat; below it is not written.
+
+*(Engine-side counterpart, for completeness: the drift machinery's `Acknowledged` bit is
+**authored**, and the computed terminal attractor is conditional on taking it at face value —
+the pipeline output carries this as `cs_drift_terminal_basis` / `cs_drift_ack_witness` with an
+explicit no-confrontation-path sentinel. The honor-vs-reabsorb verdict itself is seated and
+never engine-certifiable; see §8 on the t3/honoring gap and OQ-126.)*
+
+---
+
 ## Open items for the next pass on this document
 
 *(What this draft has not yet done — not load-bearing claims.)*

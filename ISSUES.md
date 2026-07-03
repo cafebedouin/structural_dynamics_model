@@ -7548,146 +7548,42 @@ sharpening (colocation decomposition over residualization; abductive-provenance 
 
 ## OQ-126 — Temporal accountability (commitment-systems T0→T1→T2→T3 / seat-theorem Cor 3): how much of the theory the engine can carry is UNKNOWN
 
-**Ω-type:** Ω_C (design — what an accountability surface should be) + Ω_E (the engine's current
-coverage is witnessable, and was witnessed below) + an **Ω_P core that does not reduce** (the
-honor/reabsorb verdict is seated, never engine-certifiable — Cor 2a/Cor 3). The entry's own claim
-is deliberately under-scoped: theory mapped, partial coverage witnessed, **full coverage not yet
-known and not settled here.**
+**Ω-type:** Ω_C (design) + Ω_E (engine coverage, witnessed) + an **Ω_P core that does not
+reduce** — the honor/reabsorb verdict is seated, never engine-certifiable; closed as
+DECLARED, not solved.
 
-**Status:** open — filed 2026-06-13 (CC session; doctrine thread with web-Claude, two essays as
+**Status:** resolved — 2026-07-02. T0→T3 vocabulary fully in-engine (witnessed at filing);
+"Gap 2" was retracted the same day by operator CORRECTION (engine = context of DISCOVERY;
+the Cor-3 accountability bite lives in PUBLICATION — cafebedouin.org — not the engine; that
+still-operative ruling is now promoted to `docs/design/design_discipline.md` §9/§10, and
+OQ-107 is a discovery-side *input* enhancement, never the accountability gate). Gap 1 fixed
+as witness-not-verdict provenance labeling (commit `ee51cdff`): `cs_drift_terminal_basis:
+"authored_ack"` + `cs_drift_ack_witness` (whose `confrontation_path: "none_exists"` is a
+NO-PATH sentinel — no external instrument exists, OQ-107 unbuilt — not "checked, none
+found") at every terminal emission site including the no-CS-UID default branch;
+`enhanced_report.py` renders the terminal as conditional on the authored ack bit. Item (c)
+promoted: the external-anchoring tier ladder (Tier 1 external/dated/numeric; Tier 2
+retained-record with the NORMATIVE declared record-boundary MUST; Tier 3 no temporal
+handle; the declared stop) → `design_discipline.md` §10.
 **Priority:** 1
-worked instances). Theory↔engine map below is witnessed. **CORRECTED same day — see below;
-"Gap 2" is retracted.**
+**Origin:** filed 2026-06-13 (CC session; doctrine thread with two worked-instance essays);
+same-day operator CORRECTION retracted Gap 2 as a category error (it located the Cor-3 bite
+inside the engine).
 
-**CORRECTION (2026-06-13, same day — operator confrontation honored, not silently rewritten).**
-The original entry located the Cor-3 *bite* inside the engine and framed its absence as a
-deficiency ("Gap 2 — no external-confrontation path; OQ-107 must build it"). **That is a category
-error**, corrected against `docs/design/design_discipline.md` §9: **the engine sits in the context
-of DISCOVERY, not justification** — "nothing in discovery has to be calibrated, because nothing in
-discovery is load-bearing; it only has to point somewhere worth digging." Miscalibration is nearly
-free *because of where the engine sits in the pipeline*; the engine is the corpus's immune system,
-not its court (§4: essay → constraint hypothesis → formalization → engine resistance → sharper next
-essay). The Cor-3 bite — a real later seat confronting a pre-committed t0 — does **not** belong in
-the engine and is **not missing** from it. **It lives in publication:** every essay goes to a
-public, dated, commentable record (**cafebedouin.org**, operator-confirmed 2026-06-13) that readers
-refer back to years later. The later seat is the **public** — commenters, future readers, the world
-itself (columbia's *actual election results* confronting the dated matrix; the bloc-leverage clock
-running to 2028/2032). So **"Gap 2" is retracted as a gap**: engine = discovery (self-consistency,
-appropriately, cheaply); accountability = the **published artifact**, confronted by external
-temporal seats the engine neither contains nor should. **OQ-107 is a discovery-side *input*
-enhancement** (ingest external data so the engine points better), **not** the missing bite — re-scope
-it there; do not gate Cor-3 accountability on it. The gate that makes this hold is §9's: **no verdict
-skips adjudication** — the engine is a hypothesis generator; the author, then the public, are the
-adjudication stages, and "the engine works" is a property of the pipeline *shape*, not the engine
-alone. (**Gap 1 survives, demoted:** acknowledgment-bit-as-verdict is a discovery-layer cleanliness
-item — scope it witness-not-verdict — not an accountability hole, since the engine was never the
-accountability layer.) This correction is itself the thread's worked instance: the operator is the
-later seat that confronted this entry; correcting it legibly rather than rewriting it silently is
-§8's t3 honor-vs-reabsorb distinction applied to my own artifact — and cafebedouin.org is where that
-same distinction bites for the essays.
+**Resolution pointers.** Engine fix `ee51cdff` (json_report.pl 4 sites, shared/schemas.py,
+enhanced_report.py, cs_drift_engine.pl provenance comment, tests/test_cs_drift_engine.pl
+new `cs_drift_ack_witness` unit incl. RED control + no-UID control; 24/24 green,
+test_cs_trifurcation 19/19 intact — OQ-55 single-bit twin untouched). Scale witness:
+clean-vs-edited pipeline diff n=119 additive-only (0 pre-existing value changes, warning
+sets byte-identical); twins `testsets_haiku`/`testsets_flash` n=960 each at `5d6f219`-dirty,
+0 missing/unfaithful fields. KNOWN_STATE 2026-07-02. Stale cross-refs corrected at close:
+OQ-74 RULED reading-relative 2026-06-14 (entry had said "pending operator ruling");
+OQ-49/50/55/116/122 resolved; OQ-107 `future`. Line anchors at close:
+cs_pattern_detection.pl:423–438 (was :404–412); cs_drift_engine.pl:67–99 attractor table
+(row-disjoint since OQ-137 fix 2026-07-02). Worked instances:
+`essays/2026-05_or_before/columbia_falsification_matrix.md`,
+`essays/2026-06/the_vote_market/the_vote_market_draft3.md`.
 
-**The theory (already present in the substrate, not invented here).** `commitment_systems_sketch_v5_2.md`
-§3 (the acknowledged-drift event) is a temporal-accountability structure:
-- **T0** — a kernel/commitment is issued from a seat (the prediction, the codification, the staked
-  claim).
-- **T1** — an authority interprets/operates it.
-- **T2** — drift: what actually happened, the kernel and its practice diverge over time.
-- **T3** — acknowledgment: does the seat **update** (honor the confrontation) or not (concealment /
-  reabsorption-as-retreat).
-
-This is seat-theorem **Corollary 3** (seats are non-interchangeable across time; the confronting
-seat is a *different*, later seat the t0-seat "could not author"; the discipline "secures that the
-price exists and is visible; it does not secure that anyone pays it"). It is also OQ-55's
-**B-historical** channel (= A-transition + Cor-3 accountability), distinct from B-structural
-(atemporal axiom-clash, ∥ A/C). The two essays are worked instances at opposite **external-anchoring**
-tiers: `essays/2026-05_or_before/columbia_falsification_matrix.md` (dated/numeric thresholds
-confronted by third-party market data — near-seat-invariant; honored RED at lines 81/89, and when a
-confrontation was ambiguous it staked a *further* dated test, lines 97–104 = the discipline working);
-`essays/2026-06/the_vote_market/the_vote_market_draft3.md` (a retained draft-vs-draft disposition log,
-lines 143–164 — record-membership is the author's seat to draw, hence Π-exposed: line 162 files a
-failed load-bearing test, "Branham rebuttal unfulfillable as posed," as "Accepted but modified").
-
-**Engine coverage — WITNESSED this session (grep, file:line pasted):**
-- **T2 is IN.** `cs_drift_trajectory/3` "computes t2 regardless of acknowledgment status"
-  (`cs_pattern_detection.pl:404–405`).
-- **T3 is IN, as routing.** `cs_drift_unacknowledged/2` reads the **authored** `Acknowledged` flag in
-  `narrative_ontology:cs_drift_state(UID,_,gap(Type,Mag,Ack))` (`cs_pattern_detection.pl:412`);
-  `cs_terminal_attractor/4` routes **acknowledged → revival/stable_pattern/framework-revision** vs
-  **unacknowledged → husk/extinction** (`cs_drift_engine.pl:70–84`). The honor/forget split is
-  already wired to outcomes.
-
-So the engine carries the full T0→T3 **vocabulary**. Two gaps remain, both familiar shapes:
-
-**Gap 1 — the acknowledgment bit is treated as the verdict (the cyclopean shape; same as
-OQ-49/50/116/122).** The `Acknowledged` flag is **authored**, and the engine consumes it as if it
-SETTLED honor-vs-reabsorb (terminal attractor). But honor/reabsorb is **seated and floats**:
-vote_market 162's "Accepted but modified" = the author's own call that the drift was acknowledged;
-a hostile reader reads the same edit as reabsorption-as-retreat. Reading an authored "acknowledged:
-true" as settling the seat-update is the same seated-verdict-scoped-as-engine-fact error the
-cyclopean cluster names. **Witness-not-verdict fix (UNKNOWN if buildable):** carry acknowledgment as
-a *witness* (drift authored? ack-bit set? by whom? confrontable against what?) and leave the
-honor/reabsorb verdict seated.
-
-**Gap 2 — RETRACTED by the CORRECTION above (retained per supersede-don't-delete; the engine is
-the discovery layer, so the absence of external confrontation is the correct division of labor, not
-a gap — the bite is in publication).** ~~no external confrontation, so it is self-consistency, not accountability (the bite; =
-OQ-107).~~ The acknowledgment is **self-reported**, not confronted against an external later state.
-`measurement/5` is authored/imputed (`data_repair.pl` is "an imputation engine"); there is no
-external-instrument adapter. The thing that makes Cor-3 *bite* — a pre-committed t0 confronted by an
-external later witness (the dated falsification matrix; columbia's third-party data) — has **no
-engine path.** That path is **OQ-107** (survey-wave witness adapter), UNBUILT. Until it exists, the
-engine's drift/acknowledgment is a within-story self-consistency check and **must not be cited as
-Cor-3 accountability.**
-
-**External-anchoring grade (the live correction this thread produced; the inert tail below it is
-named and declined).** B-historical accountability is **graded**, not binary-on-falsifier:
-- **Tier 1 — external/dated/numeric/third-party** (columbia): the staked confrontation reads
-  near-identically from any seat; strongest accountability. *A dated falsification matrix confronted
-  by external data is the gold standard — there is no "better"; the demand for one was a flinch.*
-- **Tier 2 — author's retained record** (vote_market Branham): Cor-2a-declared and legible, but the
-  **record-boundary Π** (which commitments count as live vs. superseded) is the author's seat to
-  draw, and it conceals a beneficiary (editorial privilege). Spec consequence: B-historical owes a
-  **declared record-boundary field** alongside the witness triple.
-- **Tier 3 — held-open** (no committed t0 / no falsifier): **no temporal handle**; honest router
-  output is "seated, no temporal handle."
-- **Stop, declared:** there is no σ-settled floor even at Tier 1 (columbia 97–104 shows residual Π in
-  what-the-data-meant), but descending to "therefore no floor in principle, add another declared-Π"
-  is **distributively inert** (it conceals no who-pays) — the halting-problem tail. Floor = Q1
-  (descend while a seat hides a distribution; stop when the next is inert). The record-boundary
-  (Tier 2) is the last live seat; below it is not written.
-
-**Why this is an artifact, not a self-correcting engine behavior.** Cor-3 accountability cannot live
-inside the generation step: no later seat confronts the earlier one within a single pass (the model
-authors prediction and confrontation together; it has no over-time). Accountability is therefore
-**installed in the artifact** — dated falsifiers, pasted witnesses, the disposition log — by the
-party that persists (`build_discipline.md`), and its accountability is *realized on publication*
-(cafebedouin.org), where external later seats (commenters, future readers, the world) actually
-confront it. So the engine's part is discovery; the bite is the published artifact, not the engine.
-
-**What resolution would change / graduation (all OPEN, none scheduled):** (a) refactor the
-acknowledgment consumer to witness-not-verdict (Gap 1) — a discovery-layer cleanliness item,
-buildability unknown, low-stakes (the engine is not the accountability layer); (b) ~~build the
-OQ-107 external-witness adapter as the missing bite~~ **RETRACTED** — OQ-107 is a discovery-side
-*input* enhancement, not an accountability gate; the bite is publication, which already exists;
-(c) grade the *published artifact's* accountability by external-anchoring tier and record a declared
-record-boundary (OQ-55 B-historical spec; this is a property of the essay/venue, not an engine
-build). The honest unknown stated as such: **whether (a) is worth building is open; there is no (b)
-to build — the accountability layer is the public record, not a future engine feature.**
-
-**Cross-refs:** `commitment_systems_sketch_v5_2.md` §3 (the T0→T3 source); `seat-theorem-v1.md`
-Cor 3 (non-interchangeable temporal seats), Cor 2a (declared-not-σ-settled), §6 Q1/Q5 (the floor),
-§8 (record-boundary Π); OQ-55 (B-historical channel = this; B-structural ∥ A/C); OQ-74 (the
-reading-relative declaration is the operator's to make — declared seat, not foreclosed; **pending
-operator ruling**, not authored here); OQ-107 (Gap 2 adapter); OQ-49/50/116/122 (Gap 1 = the same
-seated-verdict-as-engine-fact error); OQ-107 (discovery-side external-data *input*, NOT the
-accountability bite — see CORRECTION); OQ-83/OQ-102 (drift-series provenance);
-`design_discipline.md` §9 (engine = context of discovery), §8 (the t3/honoring gap). Worked
-instances: `columbia_falsification_matrix.md`, `the_vote_market/the_vote_market_draft3.md`;
-publication venue: cafebedouin.org.
-
-**Provenance:** 2026-06-13 CC session; engine coverage witnessed by grep this session
-(`cs_pattern_detection.pl:404–412`, `cs_drift_engine.pl:70–84`); the gold-standard-floor and
-stop-at-the-record-boundary rulings are the operator's (this thread).
 
 ## OQ-127 — SCAFFOLD_DANGER_ZONE lint calibration: 5/7 fire rate on a shape the de-leaked prompt authors legitimately
 
