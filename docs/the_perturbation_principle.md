@@ -309,6 +309,20 @@ key separates situation-fixed from seated); at axis B the invariant is **constit
 with no concept map there is no invariant at all, only blind. So "same signature" is true **at the
 level of form** and overstated if read as "same thing each time."
 
+> **Amendment (2026-07-04, OQ-72 resolved — the concept map is no longer empty, and the
+> divergence SURVIVES with sharper labels.)** `axiom_concept/2` is now populated by
+> `axiom_concept_registry.pl` (71 facts, 10-kernel pilot; operator-ratified vocabulary, baked
+> fail-closed — `audits/2026-07-03_oq72_concept_key_pilot/`). This does NOT promote axis B to
+> discovered footing: the pilot's design finding is that a mechanical key *relocates* the ruling
+> (from per-pair hand-authoring to vocabulary granularity) and swaps a silent seat for an
+> explicit **ratified** one. Axis B's invariant is now **ratified-legible** — auditable ontology
+> instead of invisible ontology — still seat-constituted, not discovered. The yield-divergence
+> verdict above therefore stands with three grades instead of two: discovered (axes C, A,
+> reflexive) / ratified (axis B, post-OQ-72) / silent-seat (axis B, pre-OQ-72). Any cross-axis
+> invariance correlation (OQ-75(b)) must carry the epistemic-KIND label per leg — a discovered
+> observer leg correlated against a ratified axiom leg is a legitimate measurement only when
+> labeled as such (parity-vs-label ruling pending, logged at OQ-75).
+
 **What §7 therefore establishes — scoped to what the control licenses.** The evidence supports: the
 engine has a **recurring method** (perturb-hold-read), discriminably present in four instruments and
 absent from its single-setting machinery — *not* the stronger claim that the four invariances are one

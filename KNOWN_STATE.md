@@ -45,6 +45,33 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-04 — OQ-72 resolved: ratified concept key for the axiom axis (pilot); axiom_concept_registry born; westphalia tests re-frozen
+**Files:** prolog/axiom_concept_registry.pl, python/axiom_concept_bake.py, prolog/stack.pl, prolog/tests/test_axiom_diff.pl, prolog/axiom_diff.pl, ISSUES.md, docs/the_perturbation_principle.md, docs/design/design_gaps.md
+**Tier:** landed
+
+OQ-72 closed at the scoped altitude "mechanism demonstrated" (mixed haiku/live 10-kernel
+pilot; audit `audits/2026-07-03_oq72_concept_key_pilot/`, WRITEUP.md there has the control
+table). The formerly-empty `axiom_diff:axiom_concept/2` seat is now populated by the NEW
+CANONICAL `prolog/axiom_concept_registry.pl` (71 ratified facts, tranche 1), loaded from
+`stack.pl`; regenerate ONLY via `python/axiom_concept_bake.py` (fail-closed on unratified
+rows) from a ratified TSV — hand-edits lose ratification provenance. All six pre-registered
+controls passed (C1 3/3, C2 3/3, C3 10/10, C4 fired w/ planted control, C5 green, C6
+refusal); false-merge 0/71; both kill legs clear. Three standing cautions for future
+sessions: (1) **the registry is name-keyed** — a mapping applies wherever the axiom name
+occurs on ANY leg (witnessed: one pilot name recurs in the flash twin; disclosed in the
+registry header) — never assume per-leg scoping; (2) **`cs_axiom_contradiction` is not
+universally same-subject** (2 of visual_evidentiary's 3 pairs oppose across subjects and
+cannot align under any assignment — don't read their non-alignment as proposer failure, and
+don't build scale-up gates on contradiction⟹same-subject); (3) **epistemic reframe**: the
+key makes the axiom axis RATIFIED-legible, not discovered (§7.1 amendment 2026-07-04);
+OQ-75(b) carries a labeled asymmetry + pending blocked_on_human parity ruling. Also fixed
+en route (pre-existing): `tests/test_axiom_diff.pl` westphalia tests had been silently
+unrunnable-green since the 2026-06-20 regime swap (froze old corpus axiom names; now
+fixture-local + corpus-independent), and their cleanup's blanket
+`retractall(axiom_concept(_,_))` would have wiped the baked registry mid-session (now
+scoped; post-run count 71 witnessed). SCOPE-time concept-slot emission = GAP-24. Scale-up
+= separate spend-go (recipe in the OQ-72 resolution).
+
 ## 2026-07-03 — OQ-03 RESOLVED: operator declared DR's own seat (extraction-seeking skepticism); 03b mooted; self-application run snapshotted
 **Files:** ISSUES.md, audits/2026-07-03_oq03_self_application/
 **Tier:** landed

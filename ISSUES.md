@@ -3966,24 +3966,52 @@ prevalence at 3000-scale).
 
 **Ω-type:** Ω_C (what counts as "the same axiom" across readings is a conceptual ruling), with an engineering build once ruled.
 
-**Status:** open — evidence witnessed; design not started (deferred out of the 2026-06-05 de-leak work item by user ruling)
+**Status:** resolved — 2026-07-04, at the scoped altitude **"mechanism demonstrated"** on the
+mixed haiku/live 10-kernel pilot substrate. NOT resolved as "the axiom axis now carries an
+auditable ontology on the corpus OQ-75(b) will cite" — that claim is earned only by the live
+scale-up spend-go below.
 **Priority:** 1
 **Origin:** 2026-06-05 generation-pipeline audit (brief F5). Evidence: `axiom_diff.pl:49-72` —
 `exact_name` alignment is structurally all-blind (0 of 935 within-kernel reading-pairs share an
-axiom NAME; see the OQ-59 axiom-diff demo), so all non-trivial alignment requires the hand-authored
-`axiom_concept/2` declared seat (empty by default, never baked). The observer diff (`reading_diff.pl`)
-aligns mechanically on (P,T,E,S) with zero hand-authoring; the axiom axis has no analogous key, so
-axiom-axis invariance claims are seat-constituted rather than discovered.
+axiom NAME), so all non-trivial alignment required the hand-authored `axiom_concept/2` declared
+seat (empty everywhere but the westphalia test fixture).
 
-**Specific question:** Can a mechanical alignment key (a controlled `axiom_concept` vocabulary
-emitted at SCOPE time, or post-hoc lexical/embedding clustering with human ratification) make the
-axiom diff discoverable without smuggling the analyst's ontology into the seat? The declared-seat
-design (`design_discipline.md`) is intentional — any mechanical key must remain a *proposal* the
-human ratifies, not a silent override.
-
-**What resolution changes:** the cross-axis invariance correlation (OQ-75;
-`the_perturbation_principle.md` §7.1) currently has a hand-authored axiom axis — a mechanical key
-would put all three axes (observer/axiom/time) on the same discovered footing.
+**Resolution (2026-07-04; audit `audits/2026-07-03_oq72_concept_key_pilot/`; commits `5494cbee`
+→ `046233a0` + close commit).** Built and witnessed: per-axiom label assignment against
+operator-ratified kernel-scoped vocabularies (blind to pairing — fresh subagents, one reading
+file + ratified vocabulary each), alignment unchanged as the existing concept-equality join;
+baked into the new canonical `prolog/axiom_concept_registry.pl` (71 facts, tranche 1) by the
+fail-closed `python/axiom_concept_bake.py`, loaded from `stack.pl`. Checkpoints R1/R2/R3 all
+operator-ratified. All six pre-registered controls passed with pasted witnesses: C1 within-kernel
+positive 3/3 named contradiction pairs aligned under blind assignment; C2 3/3 contained live
+pairs surfaced in real `axiom_diff` output (digital_money as the westphalia-shape DISPARITY cell
+`[conventional,deontological]|[conventional]`); C3 conversion floor 10/10 kernels (bar ≥7/10);
+C4 lexical adversary fired with its own planted-pair control; C5 westphalia join/regression green
+(re-frozen as fixture substrate — see build note below); C6 baker refused a planted unratified
+row fail-closed. False-merge rate 0/71 (bar ≤10%). Both kill-condition legs NOT tripped.
+**Epistemic reframe (operator ruling, R1):** the key does NOT move the axiom axis to "discovered"
+footing — the pre-close "what resolution changes" line claiming same-discovered-footing was
+WRONG. The key relocates the ruling from per-pair hand-authoring to vocabulary granularity and
+swaps a silent seat for an explicit RATIFIED one (operator author of record): an auditable
+ontology instead of an invisible one. OQ-75(b) accordingly correlates a discovered observer leg
+against a ratified axiom leg (asymmetry note + pending ruling logged in OQ-75).
+**Criterion-scope observation (pre-registered before the sweep, R2_RULING):**
+`cs_axiom_contradiction` does not universally mean same-subject — 2 of visual_evidentiary's 3
+pairs oppose ACROSS subjects (feasibility × warrant-source) and cannot align under any
+assignment; scale-up must not assume contradiction⟹same-subject.
+**Scale-up recipe (separate operator spend-go):** Haiku-batch proposer over the remaining
+multi-reading kernels (~321 haiku + ~10 live; the twins carry zero contradiction facts, so the
+criterion's discriminating case stays live-leg-only), reusing the same PROPOSAL → R2 vocabulary
+ratification → blind assignment → R3 row ratification → bake path; R2/R3 remain human seats —
+batch only the proposer.
+**SCOPE-time drop-in (recorded, not built):** concept label as an optional per-axiom
+generation-schema field, ratification-gated, flips on by config at rebuild — declared absence
+logged in `docs/design/design_gaps.md`.
+**Build note:** closing this OQ surfaced and fixed two pre-existing test defects
+(`tests/test_axiom_diff.pl`): the westphalia tests froze pre-regime-swap corpus content and had
+been silently unrunnable-green since 2026-06-20 (no leg carries the 4 mapped names — now
+fixture-local), and their cleanup's blanket `retractall(axiom_concept(_,_))` would have wiped the
+baked registry mid-session (now scoped to the 4 fixture names; post-run count witnessed 71).
 
 ## OQ-73 — Cross-cultural frame probe: does the reading-set move when the generation frame moves?
 
@@ -4086,6 +4114,15 @@ bait-bearing prompt does NOT discharge OQ-87's edge (the OQ-87 pilot witnessed t
 `authority_erosion/substantial/false` example anchoring drift direction; the OQ-87 twins run
 witnessed magnitude-convention rates of 0.87/0.51 substantial under bait). Verify the pin at
 generation time, not after.
+**Axiom-leg epistemic asymmetry (OQ-72 close, 2026-07-04):** part (b) now correlates a
+DISCOVERED observer leg (mechanical (P,T,E,S) alignment) against a RATIFIED axiom leg
+(`axiom_concept_registry.pl` — operator-ratified vocabulary, not discovered; OQ-72 resolution).
+One deferred ruling (`blocked_on_human`): whether (b) carries the asymmetry as an epistemic-kind
+LABEL on the correlation (cheap, honest, available now once the live scale-up runs) or demands
+footing PARITY (which would force the SCOPE-time concept-slot build before (b) can cite the
+axiom axis at all). Default posture pending the ruling: labeled asymmetry. Also inherited from
+OQ-72: (b) cannot cite the axiom axis until the live-corpus scale-up spend-go runs — the pilot
+demonstrated the mechanism, not corpus coverage.
 **Origin:** 2026-06-05 de-leak work item (audit brief §4 Stage 2). The generation pipeline no
 longer hands the author the engine's decision boundaries (schema bands stripped `9f2d050a`, prompt
 de-leaked `b6c4e113`, retry-path scrub `07f7b1c0`, axes cap optional `7ad86c5a`); the

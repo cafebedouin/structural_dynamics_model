@@ -1150,6 +1150,19 @@ firing as the positive control.
 
 ---
 
+## GAP-24 — SCOPE-time concept-slot emission not built (axiom concept labels are post-hoc only)
+
+**Declared at the OQ-72 close (2026-07-04).** The ratified `axiom_concept/2` seat exists
+(`prolog/axiom_concept_registry.pl`, baked post-hoc from ratified assignment TSVs), but the
+generation schema does NOT emit a concept label per axiom at SCOPE time — the documented drop-in
+shape (optional per-axiom schema field, ratification-gated, flipped on by config at rebuild) is
+recorded in the OQ-72 resolution and unbuilt. Until built, every corpus tranche needs the post-hoc
+PROPOSAL → ratify → bake path; an empty concept map for a new tranche means NOT-YET-RATIFIED,
+never "no shared subjects." Fill condition: the corpus rebuild (beta posture ruling, CLAUDE.md
+Critical Distinctions) or the OQ-75(b) parity ruling demanding SCOPE-time footing.
+
+---
+
 ## Deferred triggers (not yet gaps)
 
 A trigger is a capability that is **not** committed future work — it has too few real users to
