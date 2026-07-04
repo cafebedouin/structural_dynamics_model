@@ -56,6 +56,7 @@
 % 4. Load Diagnostic & UI
 :- use_module(reading_diff, []).        % cyclopean disparity operator (authored-cells-only)
 :- use_module(axiom_diff, []).          % reading_diff lifted to the cs_axiom layer
+:- ensure_loaded(axiom_concept_registry). % RATIFIED concept seat for axiom_diff (OQ-72; multifile facts, load-order safe)
 :- use_module(bifurcation_export, []).
 :- use_module(persistence_export, []).
 :- use_module(arakelov_height, []).

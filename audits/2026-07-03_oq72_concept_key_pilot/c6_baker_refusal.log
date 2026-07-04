@@ -1,0 +1,10 @@
+# C6 ratification-gate control (2026-07-04) — pasted verbatim from the run
+$ python3 python/axiom_concept_bake.py
+baked 71 axiom_concept/2 facts (1 no_slot rows skipped by design) -> prolog/axiom_concept_registry.pl
+$ # planted: copy of ratified TSV + one row with ratified_status=PENDING
+$ python3 python/axiom_concept_bake.py $S/c6_planted.tsv $S/c6_should_not_exist.pl
+REFUSED: line 74: axiom 'planted_unratified_axiom' has ratified_status='PENDING' (only 'ratified' rows may bake)
+exit: 1
+$ ls $S/c6_should_not_exist.pl
+ls: cannot access '.../c6_should_not_exist.pl': No such file or directory
+# => refusal is fail-closed: named the row, nonzero exit, wrote NOTHING. C6 PASS.
