@@ -8269,14 +8269,15 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 witnessed + 5-corpus generality sweep; `audits/2026-06-21_oq138_fsm_route_conversion/FCR9_FINDINGS.md`).
 **constructed-3 sub-part RESOLVED 2026-06-21** (seat-aware + CLAIM discriminant; `CONSTRUCTED3_FINDINGS.md`).
 **CI-rope route-purity RULED KEEP + LIMB CLOSED 2026-07-02** (inherited neutron_star RED resolved MOOT;
-`CIROPE_RED_ADJUDICATION.md`). **false_natural_law WITNESSED + RULED CONVERT 2026-07-02** (4-leg census;
-`audits/2026-07-02_oq138_fnl_evidence/FNL_EVIDENCE.md`) — conversion build OWED.
+`CIROPE_RED_ADJUDICATION.md`). **false_natural_law sub-part RESOLVED 2026-07-03 — BUILT + witnessed**
+(commits `d248a6b1`/`82aa372e`; twin pipeline diff + per-context consumer probe + two-sided ablation;
+`audits/2026-07-02_oq138_fnl_evidence/FNL_CONVERSION_DIFF.md`).
 Remaining: constructed_high mountain-input + constructed_low/constraint (0 live changers, sub-item),
-piton-3 (OQ-90), and the two OWED conversion builds (constructed-conditional + FNL). **Per-clause RULINGS**
+piton-3 (OQ-90), and the ONE remaining OWED conversion build (constructed-conditional). **Per-clause RULINGS**
 (operator; see PER-CLAUSE RULINGS below): CI-rope KEEP (out of frame, evidence-settled); CI-rope route-purity
 KEEP + CLOSED (2026-07-02); FCR-9 CONVERT + piton-3 carved out (OQ-90); constructed CONVERT-conditional (owes a
-claim-discriminant witnessed to keep seat #2's floor); FNL CONVERT (2026-07-02, build owed). The CONVERT rulings
-(FCR-9 done; constructed + FNL owe their build — conversion commit + post-build surface diff) are
+claim-discriminant witnessed to keep seat #2's floor); FNL CONVERT (2026-07-02) — BUILT 2026-07-03. The CONVERT
+rulings (FCR-9 + FNL done; constructed owes its build — conversion commit + post-build surface diff) are
 partition-witnessed. Split from OQ-128 (2026-06-17): `natural_law` overwrite (`:867`) retired, type_1 cap discriminated.
 
 **Priority:** 3
@@ -8385,21 +8386,27 @@ load-bearing-elsewhere. Each clause's diff is now IN HAND; the partition ruling 
   once dr_type=unknown. So a bare type-layer abstain silently drops #2's severe "mountain-claim over probable
   extraction" flag ⇒ constructed inherits the **FSM discriminated-severity template** (signature carries the
   diagnostic), NOT bare abstain. 47 inert seats byte-identical; behavior change is 3 (2 up, 1 down).
-- **false_natural_law** — WITNESSED + RULED CONVERT (operator, 2026-07-02); conversion build OWED, not started.
-  Census across 4 legs (`audits/2026-07-02_oq138_fnl_evidence/FNL_EVIDENCE.md`): FNL cascade-winners
-  testsets 1 (inert) / haiku 13 (6 changed) / flash 8 (8 changed) / kernel_v1 0. The 14 type-changers repeat
-  the FSM/FCR shape EXACTLY — `scaffold/snare→tangled_rope` overwrite, base green→yellow unmask, grade
-  correction, discriminant (authored mountain-claim + vic) available. All 22 firings are source-1
-  `explicit_mountain_claim`, ZERO source-2 (OQ-70 class fix holds at HEAD). kernel_v1's 0 is measured-empty
-  (41 mountain-claims × 973 boltzmann-non-compliant, intersection 0; `PC_CLAIMED_NATURAL_REACHABLE ok`).
-  Census positive control PASSED (finds `organization_floor_c0`); diff control PASSED (flags the 3 unconverted
-  piton seats). **Ruling: CONVERT on the FSM/FCR-9 discriminated-severity template** — route (not overwrite)
-  at FNL cascade-winners; metric type reads unmasked, FNL becomes a signature annotation carrying the
-  claim+vic discriminant. **Build OWED (not started, recorded here per the family precedent):** conversion
-  commit (route branch keyed on an `fnl_routed/1`-style seat predicate) + 5-corpus invariant sweep + the
-  `abductive_helpers.pl:61,:93` FNL consumers + the UNCONDITIONAL non-seat-aware maxent boost
-  (`maxent_classifier.pl:350–351`). Near-free on the LIVE leg (1 inert firing) — build cost can be deferred
-  without live impact until a twin/rebuild surfaces the changers, but the defect is witnessed on the twins now.
+- **false_natural_law** — RULED CONVERT (operator, 2026-07-02); **BUILT + RESOLVED 2026-07-03**
+  (commits `d248a6b1` route + severity, `82aa372e` consumer wiring). Census (4 legs,
+  `audits/2026-07-02_oq138_fnl_evidence/FNL_EVIDENCE.md`): 22 firings, all source-1 `explicit_mountain_claim`,
+  14 type-changers repeating the FSM/FCR shape. **Build as landed (departures from the owed sketch, both
+  witnessed):** `:925` route gated by NEW lever `false_natural_law_override_enabled` (0=route default,
+  1=legacy); `fnl_routed/1` outcome-keyed seat predicate (non-circularity of `dr_type/3` traced at HEAD,
+  152-pred closure + 3 positive controls); VICTIM discriminant (vic>0→moderate, else informational — claim
+  discriminant degenerate, all firings mountain-claimed); **consumers keyed on the LEVER, not `fnl_routed`**
+  (operator condition: `fnl_routed/1` is default-context-keyed while the overwrite was ORBIT-wide —
+  `organization_floor_c0` routes tangled_rope→scaffold at institutional while default-unknown; at lever=0 NO
+  seat overwrites, so seat_overrides/maxent-boost = lever state, orbit-safe by construction). **Witnesses:**
+  5-corpus generality sweep routed 0/6/8/0/0, three must-be-0 invariants incl. routed∩piton positive control
+  (`fnl_generality_sweep_results.log`); twin pipeline diff — 8/14 routed seats render RED, reconciled honest
+  (type_1_false_summit informational→severe on routed snare + h1 0→3: the overwrite flattened the whole orbit
+  into a manufactured global section; `FNL_CONVERSION_DIFF.md`); determinism control NEW-vs-NEW2 0/960;
+  live leg 0 verdict changes (89 records move in ensemble-relative fields only, attributed); per-context
+  consumer probe with org_floor_c0@institutional named line = scaffold + no_boost + probe agrees
+  (`fnl_consumer_state_*.log`); two-sided ablation lever=1 restores legacy at every context
+  (`fnl_ablation_control.log`). Maxent arm EXTENDS the OQ-173 seat-aware pattern to the third signature
+  (OQ-173 unchanged in its own scope). **Known census-scope correction recorded:** the census "type-inert"
+  column was default-context-scoped; org_floor_c0's institutional-only route is the witnessed instance.
 
 **PER-CLAUSE RULINGS (operator, 2026-06-21).** Verdict → witness → kill condition. Two are evidence-settled
 (commitments); two are operator-merits seats (OPEN/conditional — the evidence frames but does not settle them,
