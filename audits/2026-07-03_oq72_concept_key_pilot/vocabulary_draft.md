@@ -1,4 +1,7 @@
-# OQ-72 Phase-2 vocabulary draft — AWAITING R2
+# OQ-72 Phase-2 vocabulary draft — **R2 RATIFIED 2026-07-04, as drafted (all 10 kernels)**
+
+See `R2_RULING.md` (same dir) for the adoption record, the full contradiction-pair
+containment witness, and the pre-registered visual_evidentiary split-pair finding.
 
 Drafted 2026-07-04, after R1 ratification, before any assignment run.
 
