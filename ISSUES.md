@@ -8625,18 +8625,37 @@ type it writes, not just the seat's own verdict. (Reusable form in `docs/technic
 
 ## OQ-140 — Characterize author↔engine disagreement per diagnostic mode: what a routed diff MEANS, not where it goes (Ω_C + Ω_E)
 
-**Ω-type:** Ω_C (what KIND of disagreement each routed diff is — a typing judgment) over an Ω_E base (sub-classify the population by claim type / degrading seat / diagnostic mode).
+**Ω-type:** Ω_C (Ω_C label over an Ω_E base) — resolved as **Ω_E stratum + Ω_C label** (the population is Ω_E/Σ-checked; one kind carries an operator-ruled Ω_C name).
 
-**Status:** open — split from OQ-128 (2026-06-17). The foundational open the routing only made LEGIBLE: the sink NAMES disagreement; nothing yet says what KIND each is.
+**Status:** resolved — 2026-07-04, branch-3 characterization audit (`audits/2026-07-04_oq140_divergence_characterization/`). Scope-pinned to `route_address/5` at HEAD `7762b2c0`.
 
 **Priority:** 2
 
 **Deps:** splits_from OQ-128
-*(Its substrate, the routing sink, is already BUILT — so this is unblocked, not waiting on it.)*
 
-**Origin:** 2026-06-17, OQ-128 residual. The routing sink's `author_engine_divergence` address is **148/288 live seats — the MAJORITY** — and "they disagree" is a named category, not a characterization. Distinct from the routing rulings (which decide WHERE a diff goes); this decides WHAT a diff means (sub-type by claim type? by which seat degrades? by diagnostic mode?). The largest live bucket is its evidence base.
+**Origin:** 2026-06-17, OQ-128 residual. The routing sink's `author_engine_divergence` address is the MAJORITY (live at close: **277/512 records on 96/128**; the origin's "148/288" is pre-corpus-growth); "they disagree" was a named category, not a characterization.
 
-**What resolution changes.** A sub-typing of the `author_engine_divergence` population that turns "they disagree" into named kinds, each with a witness — the substantive research the routing made possible. Cross-ref: OQ-128 (parent), `prolog/routing_sink.pl` (the substrate), OQ-133 (orientation signature, a sibling diachronic-tier question).
+**Resolution (2026-07-04).** Cutting the mechanical confound before decomposing re-ranks the population and yields ONE validated kind. (1) **Confound near-total, committed:** ε uniform across seats 96/96 ⟹ 100% of per-seat orbit variation is `d`-driven; confound-free (G-A uniform-orbit) = 56/277 (20.2%), confound-exposed (G-B/G-C) = 221/277 (79.8%, *granularity-expected, not kind-shaped*). (2) **Re-ranking finding:** pre-confound lead `tangled_rope→snare` (111) is fully confound-exposed and dissolves; the surviving confound-free lead is `rope→scaffold`. (3) **Three OQ-proposed axes degenerate** (mismatch 273/4, author_mode 100% seat_blind, detector 100% nl_absent). (4) **The one kind — `naturalization-over-claim (rope→scaffold correction)` [Ω_E, operator-ruled]:** author over-claims `rope` for a constructed frame/reading/standard the engine corrects to `scaffold` (`emerges_naturally=False` 9/9); systematic one-directional over-claim (21/28 rope-claims→scaffold), not a symmetric disagreement. Pre-registered name "permanence disagreement" KILLED (predicted sunset structure; `has_sunset_clause` NO 8/9). 9/9 fit, 0 failures; Ω_E stratum reproduces on BOTH twins (rope→scaffold G-A: haiku 49/flash 64), Ω_C reading 3/3 twin-confirmed. Contested-kernel members (6/9) carry an Ω_P sub-note (the corrected *object* is Ω_P-contested; the rope-claim over it is a generation default); `fictional_construct_reading:204` is the one member with an authored prose seat-declaration of its rope claim (structured `emerges_naturally` still seat-blind on all 6 ⟹ Ω_E holds). **Controls:** emit-independence byte-agreement 277/277 (`constraint_claim/2`+`dr_type/3` vs sink); Σ+drop-one; mountain 0-count w/ same-path positive control; D-ladder 49 baseline raw≠final seats. **Residuals → OQ-211.** Evidence: `audits/2026-07-04_oq140_divergence_characterization/` (RECON/PROPOSAL/HANDREAD/WRITEUP + membership.tsv), commits `e90bf3db`/`9d7baf07`. Cross-ref: OQ-128 (parent), OQ-138 (sibling-clause edits invalidate the taxonomy — freshness condition), `prolog/routing_sink.pl`.
+
+## OQ-211 — OQ-140 residuals: divergence-population wiring, cross-corpus replication, and the unpromoted cells (Ω_E + Ω_P sub-note)
+
+**Ω-type:** Ω_E (mechanical/witnessed) with one carried Ω_P sub-note (a member whose rope-claim is authored seat-declared).
+
+**Status:** open — minted 2026-07-04 at OQ-140 close (`audits/2026-07-04_oq140_divergence_characterization/`).
+
+**Priority:** 4
+
+**Deps:** splits_from OQ-140, bundled_with OQ-138
+*(bundled_with OQ-138 = the freshness condition: sibling-clause edits in `resolve_modal_signature_conflict` repopulate the residual and silently invalidate OQ-140's taxonomy.)*
+
+**Origin:** OQ-140 resolved on branch 3 (confound-free G-A only). Four residuals were typed rather than absorbed, so a cold read can pick each up:
+
+- **(a) Wiring descriptor tuple (spend-go gated on operator).** OQ-140's descriptor tuple (G-class, pair, seat-shape, C-band) is computed by the audit's `python/audits/oq140_divergence_extract.py`, not wired into `routing_sink.pl`. Producer-without-consumer (Build Discipline Pattern 1). Deciding whether to stamp an Ω_E descriptor field into the sink emit is an operator spend-go, scope-pinned to `route_address/5` at HEAD `7762b2c0`.
+- **(b) Confound-exposed 221 (79.8%) — `granularity-expected, not kind-shaped`.** Carried as a committed quantity (reopenable if the confound analysis is ever revisited); NOT to be re-decomposed into content kinds without first re-partialling the `d`-at-fixed-ε confound (100% of per-seat orbit variation).
+- **(c) Named singletons (n=1, unpowered, kept as the main kind's falsifier reference-classes):** `press_reformation…strategic_deployment` (rope→snare, extraction-driven ext 0.62 — a *distinct* over-claim direction, into entanglement not construction); `procurement_inertia` (piton→rope, an *inversion* — engine reads more-naturalized than author, the mirror direction). Genuine tail (absorbed, no follow-up): `scaffold→piton | G-A` (2; n=2 cannot clear a kill by segregation), `refugee_convention…expansive_humanitarian_reading` (rope→piton, 1).
+- **(d) Ω_P re-typing candidate + cross-corpus replication.** `fictional_construct_reading:204` carries an authored prose seat-declaration of its rope claim — the one OQ-140 member a future analyst could rightly re-type Ω_P (structured `emerges_naturally` stays seat-blind, so OQ-140's Ω_E ruling holds for now). Archive replication (`kernel_v1`) was deferred (per-seat author_mode = different Ω_E base + re-key trap, Critical Distinctions); the live+twin evidence is at OQ-140.
+
+**What resolution changes.** Whether the divergence descriptor becomes a first-class sink field (a); whether any confound-exposed sub-population earns re-decomposition after a fresh confound cut (b); whether the singleton over-claim directions accrue enough members to become kinds (c); and whether `fictional_construct_reading` (or siblings) re-types Ω_P (d). Cross-ref: OQ-140 (parent), OQ-138 (freshness), `prolog/routing_sink.pl`.
 
 ## OQ-141 — Does `mitigated` belong in `omega_resolver.ACTIVE`? (footer-vs-code status-token conflict) (Ω_C)
 
@@ -10924,9 +10943,81 @@ detection independence gains an architectural framing-invariance corollary. If (
 the committer axis is framing-sensitive and every cs_* verdict needs a frame qualifier — a schema
 change, escalate before building.
 
+## OQ-209 — Single-constraint scenario reports render corpus-scope metrics as success-shaped defaults (W1=0.0000 beside H¹=4; network "stable" beside corpus "cascading")
+
+**Ω-type:** — (Build-Discipline Pattern 6 reporting defect, not an Ω variable)
+
+**Status:** open
+
+**Priority:** 3
+
+**Deps:** bundled_with OQ-97
+
+**Origin:** 2026-07-04, drone-report audit (procurement_inertia, technology_diffusion_asymmetry,
+weaponization_accessibility, regulatory_lag_extraction; `outputs/constraint_reports/`, run
+2026-07-03 22:16). A single-constraint scenario run (`run_scenario` → `test_harness`) prints two
+corpus-scope metrics that collapse *measured-empty* and *didn't-look* into the same success-shaped
+token:
+- **W1 (`test_harness.pl:75`, `measurement_layer:wasserstein_corpus_fracture`)** sums
+  `wasserstein_total_fracture/2` over the corpus and **silently skips** constraints lacking MaxEnt
+  distributions (`accumulate_fracture` catch-skip). regulatory_lag_extraction reports **H¹=4** (a
+  genuine perspectival fracture — MaxEnt snare P=0.99 vs tangled_rope, 2+2 seat split) yet prints
+  **"Corpus perspectival fracture (W1): 0.0000"** — two fracture measures maximally disagreeing.
+  Almost certainly the per-context distributions are absent in the scenario harness (skip→0.0),
+  rendered byte-identically to a genuine measured-zero; and "Corpus" is a misnomer in a 1-constraint
+  run.
+- **"Network stability: stable" (`metric_drift_report.pl:117`)** is the stability of a 1-node
+  network in a single-constraint run, printed directly beneath a corpus header reading "Network
+  stability: cascading | 58 omegas (57 critical)." The single-constraint verdict systematically
+  hides the corpus-level cascade. All four drone reports show this.
+
+**Graduation.** (1) Witness skip-vs-genuine: run `wasserstein_transport_profile(regulatory_lag_extraction, P)`
+in the scenario-harness load context; if it fails/skips, render "not measured at this scope
+(single-constraint run)" instead of `0.0000`, and label the line by its true scope. Positive
+control: a run where the profile IS populated must still print a real non-zero W1 (guard against a
+fix that just blanks the line unconditionally). (2) Network stability: suppress the line in
+single-constraint runs, or label it "single-constraint (1-node) — see corpus header for
+network-level stability."
+
+**What resolution changes.** Removes a Pattern-6 false-negative from every single-constraint report:
+today a reader who trusts the W1/network-stability lines reads "no fracture / stable" while the
+report's own H¹ and the corpus header say the opposite. Sibling of OQ-96/OQ-97 (channel/aggregate
+coverage) — fold the two sites into the OQ-97 candidate-site census.
+
+## OQ-210 — `coupling_invariant_rope` signature explanation overclaimed ("Passes all structural purity tests")
+
+**Ω-type:** — (reporting/wording defect, not an Ω variable)
+
+**Status:** resolved — 2026-07-04, both explanation branches softened in `signature_detection.pl`
+(769, 772); behavior-preserving (display atom only; grep-verified no code parses the string).
+Witness: `git diff prolog/signature_detection.pl`.
+
+**Priority:** 4
+
+**Origin:** 2026-07-04, drone-report audit. The `coupling_invariant_rope` explanation
+(`signature_detection.pl:769`) read "Certified true coordination mechanism … Passes all structural
+purity tests — this is genuine coordination, not low-extraction construction." But the signature
+gates ONLY on Boltzmann compliance + scope invariance; excess extraction (`ExcessEps`) is *reported,
+not tested*. procurement_inertia was certified with **excess_extraction=0.580** — which the same
+report's drift section flags as `excess_above_floor(0.58)` alongside two *critical* drift events
+(theater 0.38→0.71, extraction 0.45→0.68) and a predicted transition to tangled_rope. "Passes ALL
+purity tests" is a snapshot overclaim the report's own drift/excess signals contradict. (Contrast
+weaponization_accessibility: `false_ci_rope` at excess 0.13 — the discriminator between the two is
+Boltzmann *coupling*, not excess, so the certification is coupling-clean, never excess-clean.)
+
+**Resolution detail.** Softened to "coupling-clean coordination (snapshot) … Passes the
+coupling/scope-invariance tests (NOT an excess-extraction or drift gate) … check lifecycle drift and
+excess extraction for trajectory."
+
+**What resolution changes.** A reader who stops at the signature line no longer reads "certified
+genuine, passes all tests" over a constraint carrying high excess extraction and critical drift.
+Deeper design question left OPEN elsewhere if pursued: should `coupling_invariant_rope` gate on
+excess/drift at all, or is coupling-only certification correct-by-design? (Not opened here — the
+reported defect was the wording.)
+
 ---
 
-*Last updated: 2026-07-03. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-07-04. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

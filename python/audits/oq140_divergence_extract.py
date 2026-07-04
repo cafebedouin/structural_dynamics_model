@@ -323,18 +323,30 @@ def cmd_controls(args):
 
     print("\n[CONTROL 2 — independent mountain control]")
     src = _load_prolog_sourced()
-    mtn = [(c, seat) for (c, seat), (claim, dt) in src.items()
-           if claim == "mountain" and any(
-               r["constraint"] == c and r["seat"] == seat and
-               r["address"] == DIVERGENCE for r in div)]
+    div_keys = {(r["constraint"], r["seat"]) for r in div}
+
+    def mountain_in_divergence(source):
+        """The predicate under test: a divergence record whose INDEPENDENTLY-
+        sourced (Prolog constraint_claim/2) author is mountain."""
+        return [(c, seat) for (c, seat), (claim, _dt) in source.items()
+                if claim == "mountain" and (c, seat) in div_keys]
+
+    mtn = mountain_in_divergence(src)
     print(f"  divergence records with Prolog author_claim==mountain: {len(mtn)} "
           f"(expect 0 — seat-blind mountain routes to exit_table) -> "
           f"{'PASS' if len(mtn) == 0 else 'HARD STOP'}")
-    # positive control: a synthetic mountain row must be flagged by the same predicate
-    synthetic = [("__planted__", "institutional")]
-    flagged = [x for x in synthetic if "mountain" == "mountain"]  # trivial planted witness
-    print(f"  positive control (planted author=mountain row): "
-          f"flagged {len(flagged)}/1 -> {'PASS' if flagged else 'FAIL'}")
+    # POSITIVE CONTROL (same-path, non-tautological): inject a synthetic mountain
+    # claim at a REAL divergence key into a COPY of the source, run the SAME
+    # predicate. It must now flag exactly that key — proving the probe bites.
+    plant_key = next(iter(div_keys))
+    src_planted = dict(src)
+    src_planted[plant_key] = ("mountain", "dr_type=scaffold")
+    flagged = mountain_in_divergence(src_planted)
+    ok = plant_key in flagged and len(flagged) == len(mtn) + 1
+    print(f"  positive control (planted mountain at {plant_key[0]}@{plant_key[1]} "
+          f"through the SAME predicate): flagged {len(flagged)} "
+          f"(= real {len(mtn)} + 1), includes plant: {plant_key in flagged} -> "
+          f"{'PASS' if ok else 'FAIL'}")
 
     print("\n[CONTROL 3 — eps/chi band classifier, two-sided]")
     # planted chi at boundary-delta/2 (inside) and boundary-3*delta (outside)

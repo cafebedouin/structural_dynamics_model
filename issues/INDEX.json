@@ -1,21 +1,21 @@
 {
   "manifest": {
-    "store_version": "23b7faa4d04a0c32fe7d03086ec08cc2f1beb04b",
+    "store_version": "9d7baf07a8e15b456673f0206247c7ef1b71dbd0",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-04T10:33:55"
+    "generated_at": "2026-07-04T15:16:26"
   },
-  "issues_sha": "83c61e7138394e26ee941ed2f625a264dac44ee866f4e03925ea0509223cb275",
-  "n_entries": 208,
+  "issues_sha": "aec1179e5c24e8b8fec0103d247a54c2cd28284af9182759a88f29029ffb4151",
+  "n_entries": 211,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 117,
+    "resolved": 119,
     "mitigated": 13,
     "disposed": 4,
-    "open": 64,
+    "open": 65,
     "partial": 6,
     "future": 4
   },
@@ -322,20 +322,6 @@
       "mentioned_in": [
         "OQ-98",
         "OQ-128"
-      ]
-    },
-    {
-      "id": "OQ-140",
-      "status": "open",
-      "priority": 2,
-      "summary": "Characterize author↔engine disagreement per diagnostic mode: what a routed diff MEANS, not where it goes (Ω_C + Ω_E)",
-      "deps": [
-        "splits_from OQ-128"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-128",
-        "OQ-133"
       ]
     },
     {
@@ -969,6 +955,35 @@
       "mentioned_in": [
         "OQ-87",
         "OQ-119"
+      ]
+    },
+    {
+      "id": "OQ-209",
+      "status": "open",
+      "priority": 3,
+      "summary": "Single-constraint scenario reports render corpus-scope metrics as success-shaped defaults (W1=0.0000 beside H¹=4; network \"stable\" beside corpus \"cascading\")",
+      "deps": [
+        "bundled_with OQ-97"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-96",
+        "OQ-97"
+      ]
+    },
+    {
+      "id": "OQ-211",
+      "status": "open",
+      "priority": 4,
+      "summary": "OQ-140 residuals: divergence-population wiring, cross-corpus replication, and the unpromoted cells (Ω_E + Ω_P sub-note)",
+      "deps": [
+        "splits_from OQ-140",
+        "bundled_with OQ-138"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-138",
+        "OQ-140"
       ]
     }
   ],
@@ -2557,6 +2572,21 @@
       ]
     },
     {
+      "id": "OQ-140",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "Characterize author↔engine disagreement per diagnostic mode: what a routed diff MEANS, not where it goes (Ω_C + Ω_E)",
+      "deps": [
+        "splits_from OQ-128"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-128",
+        "OQ-138",
+        "OQ-211"
+      ]
+    },
+    {
       "id": "OQ-145",
       "status": "resolved",
       "priority": 5,
@@ -2866,6 +2896,15 @@
         "OQ-89",
         "OQ-135"
       ]
+    },
+    {
+      "id": "OQ-210",
+      "status": "resolved",
+      "priority": 4,
+      "summary": "`coupling_invariant_rope` signature explanation overclaimed (\"Passes all structural purity tests\")",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": []
     }
   ]
 }

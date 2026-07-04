@@ -45,6 +45,84 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-04 — OQ-140 RESOLVED: `author_engine_divergence` characterized (confound re-ranks kinds; one validated kind, twin-replicated)
+**Files:** ISSUES.md, prolog/routing_sink.pl, python/audits/oq140_divergence_extract.py, audits/2026-07-04_oq140_divergence_characterization/
+**Tier:** landed
+
+Branch-3 (hybrid G-A) characterization audit of the routing sink's majority address
+(`author_engine_divergence`, 277/512 on 96/128 at HEAD `7762b2c0`). No engine edits.
+
+- **Method finding (reusable):** partialling the mechanical confound BEFORE decomposing
+  re-ranks the population. ε is uniform across seats 96/96 ⟹ 100% of per-seat orbit variation
+  is `d`-driven; confound-free (G-A uniform-orbit) = 56/277 (20.2%), confound-exposed = 221/277
+  (79.8%, *granularity-expected, not kind-shaped*). Pre-confound lead `tangled_rope→snare` (111)
+  dissolves; surviving confound-free lead is `rope→scaffold`.
+- **One validated kind (operator-ruled):** **`naturalization-over-claim (rope→scaffold
+  correction)` [Ω_E]** — author over-claims `rope` for a constructed frame/reading/standard the
+  engine corrects to `scaffold` (`emerges_naturally=False` 9/9); one-directional 21/28
+  rope-claims→scaffold. Pre-registered name "permanence disagreement" KILLED (predicted sunset;
+  `has_sunset_clause` NO 8/9).
+- **Two-tier promotion (do NOT collapse):** Ω_E stratum reproduces on BOTH twins (rope→scaffold
+  G-A: haiku 49 / flash 64); Ω_C reading is live-corpus + 3/3 twin-confirmed. Contested-kernel
+  members (6/9) carry an Ω_P sub-note; `fictional_construct_reading:204` has an authored prose
+  seat-declaration (structured `emerges_naturally` still seat-blind ⟹ Ω_E holds). Re-typing
+  candidate parked in OQ-211.
+- **Scope pin (freshness):** kind name + counts valid only relative to `route_address/5` at HEAD
+  `7762b2c0`; any OQ-138 sibling-clause edit invalidates the taxonomy (OQ-211 carries this).
+- **Controls:** emit-independence byte-agreement 277/277 (`constraint_claim/2`+`dr_type/3` vs
+  sink); D-ladder 49 baseline raw≠final seats; mountain 0-count w/ same-path positive control.
+- Residuals → **OQ-211**. Commits `e90bf3db` (Phase 0/1), `9d7baf07` (Phase 2), this (Phase 4).
+
+*Promotion test:* no CLAUDE.md tripwire — this is a resolved research finding, not a silent
+pre-edit footgun. The one durable caution (scope-pin: sibling-clause edits invalidate the
+taxonomy) rides OQ-211's `bundled_with OQ-138` edge and the audit WRITEUP, where a reader
+editing `routing_sink.pl`/`signature_detection.pl` will meet it; not always-loaded material.
+
+---
+
+## 2026-07-04 — Drone-report audit (Claude-web critique): d-header fixed, signature wording softened, OQ-209/210 minted, regulatory_lag H¹ fracture witnessed ROBUST
+**Files:** python/enhanced_report.py, prolog/signature_detection.pl, ISSUES.md
+**Tier:** landed
+
+External critique of the four 2026-07-03 22:16 drone reports (procurement_inertia,
+technology_diffusion_asymmetry, weaponization_accessibility, regulatory_lag_extraction). Triage +
+actions:
+
+- **FIXED — d-comparability header was factually false** (`enhanced_report.py:356`). Old text: "d is
+  a function of the observer POSITION (a config lookup)… identical d across constraints for the same
+  position is by design." But `derive_directionality/3` (`constraint_indexing.pl:408`) precedence is
+  override → `beneficiary_victim_directionality` (power role + has-benef/victim + `exit_modulation`,
+  all authored per story) → `canonical_d_for_power` fallback. Only the fallback is a config lookup;
+  the common path is authored, so the SAME position label carries different d (institutional d ∈
+  {0.72, 0.45, 0.15, 0.12} across the four reports). Header rewritten to state the precedence and
+  that cross-constraint "same seat" d-comparison is NOT apples-to-apples. Reports on disk keep the
+  old header until regenerated.
+- **FIXED — `coupling_invariant_rope` explanation overclaimed** (`signature_detection.pl:769,772`).
+  "Passes all structural purity tests" was false: the signature gates on Boltzmann compliance + scope
+  invariance only; `ExcessEps` is reported, not tested (procurement certified at excess 0.580, which
+  its own drift section flags as `excess_above_floor(0.58)` + 2 critical drift events). Softened to
+  "coupling-clean (snapshot) … NOT an excess-extraction or drift gate." Behavior-preserving (display
+  atom only; grep-verified no parser). = OQ-210 (resolved).
+- **OQ-209 minted (open)** — single-constraint scenario reports render corpus-scope metrics as
+  success-shaped defaults: W1=0.0000 printed beside H¹=4 (`wasserstein_corpus_fracture` silently
+  skips constraints lacking MaxEnt distributions → skip-zero rendered as measured-zero, and "Corpus"
+  is a misnomer in a 1-constraint run); "Network stability: stable" is a 1-node network beside a
+  corpus header of "cascading". Pattern-6; bundled_with OQ-97. Graduation = witness skip-vs-genuine.
+- **FALSIFIER RUN (the "one thing the reports don't show") — regulatory_lag H¹=4 is ROBUST, not a
+  config/transfer-function artifact.** Baseline orbit `[tangled_rope,snare,tangled_rope,snare]`,
+  H¹=4, reproduced. Swept metric-ε and the f(d) seat-curve (`config:param(cognitive_displacement)`),
+  clearing caches each step. H¹>0 survives ε ∈ [0.50,0.90] and d_offset ∈ [-0.15,+0.20]; collapses to
+  agreement only at extreme shifts (d_offset −0.20 → all rope). The invariant throughout is the 2+2
+  structure powerless≡institutional ≠ moderate≡analytical (Hub-2 immutability axis) — that IS the
+  perspectival finding, and it is stable under perturbation of exactly the authored ε/d values the
+  critique questioned. NB: `domain_priors:base_extractiveness` is STATIC (χ-side ε unperturbable by
+  retract; the sweep moved the dynamic `constraint_metric(extractiveness)` metric-ε). The d-curve
+  perturbation directly moved f(d) and the fracture held. Probe scripts in scratchpad (not committed).
+  Caveat unchanged: ε/d are authored (OQ-102a) and Fisher/persistence remain STALE (OQ-29) — this
+  witnesses robustness for THIS constraint, not a corpus-wide re-validation.
+
+---
+
 ## 2026-07-04 — OQ-193 report-surface build: giant_comp provenance split (pooled + cross-kernel stratum)
 **Files:** prolog/giant_component_analysis.pl, python/run_pipeline.py, python/enhanced_report.py
 **Tier:** landed
