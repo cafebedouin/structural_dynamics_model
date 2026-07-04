@@ -1,8 +1,38 @@
-# OQ-140 PROPOSAL — frozen pre-registration (awaiting operator ratification, esc. 1)
+# OQ-140 PROPOSAL — pre-registration (RATIFIED 2026-07-04, esc. 1 + esc. 2)
 
-**Status: DRAFT — NOT YET FROZEN.** Freezes on operator ratification. Everything below is
-committed BEFORE any hand-read spend, per the OQ-136 template. The blanks the operator sets
-at ratification are flagged **[OPERATOR]**.
+**Status: FROZEN + RATIFIED.** Operator ruled 2026-07-04: **reframe gate → branch 3 (hybrid
+G-A)**; **twins → keep, with the promotion floor gated on cell EXISTENCE not read presence**
+(§7 amended). Everything below was committed BEFORE any hand-read spend, per the OQ-136
+template.
+
+## RATIFICATION RULING (operator, 2026-07-04)
+
+- **Lead finding (drives both rulings, counter to the OQ's prior):** partialling the confound
+  **re-ranks the kinds.** Pre-confound, `tangled_rope→snare` (111) was the dominant stratum and
+  the OQ's implicit lead candidate; post-confound it is fully confound-exposed and does not
+  appear in G-A at all. The surviving **confound-free lead is `rope→scaffold` (36) →
+  "permanence disagreement,"** a cell the OQ treated as secondary. This inversion is the
+  substantive answer and is visible only because the confound was cut before the decomposition.
+- **Branch 3 (hybrid G-A):** hand-read ONLY the confound-free G-A cells (~56 records / **14
+  constraints**); route all confound-exposed G-B/G-C to a residual OQ. Value-per-read argument:
+  the G-B/G-C reads would spend on reconfirming a witnessed null (100% d-driven); G-A is the one
+  population where a kind can be real by construction. **Conditional on G-A surviving its kill.**
+  **Falsifier → branch 1:** if the G-A `rope→scaffold` hand-reads also fail (≥3/9 lack
+  temporality/sunset structure), even the confound-free cell has no real kind ⇒ the whole
+  population is confound+noise; reframe-close on the confound finding alone.
+- **Expected realistic output: 1–2 kinds** (rope→scaffold solid; scaffold→piton a maybe; tail
+  dispositioned) — NOT 3–6. The "3–6" target was computed on pre-confound pair counts.
+- **The ≥80% coverage bar is dead under EVERY branch — a finding, not a shortfall.** After the
+  confound, ~80% of the population is covered by the *confound explanation* ("granularity-
+  expected"), not by named kinds; kinds cover the clean ~20%. Recorded as: the population is not
+  kind-shaped. No branch clears "kinds cover ≥80%."
+- **Gating precondition — DISCHARGED before naming (`recon_summary`/RECON §6 + this session):**
+  G-A uniform-orbit is operationalized independently of the divergence-count field. Witnessed
+  cross-source: the 14 G-A constraints recompute identically from `pipeline_output.perspectives`
+  (a different emit than the routing_sink engine field), 0 mismatches. "Genuine whole-story
+  disagreement" is not circular.
+- **Blanks:** δ = 0.05 (default stands, used only as the C-band segregation covariate). X
+  subsumed by the direct branch-3 ruling. Twin Ω_C spend = KEEP (existence-gated).
 
 ## 0. What recon settled (so the proposal doesn't re-open it)
 
@@ -116,6 +146,13 @@ Both branches are frozen here; the operator picks after reading the committed nu
   hand-reads at the kind's kill boundary passing on ≥1 twin.** A kind without twin Ω_C
   evidence records "Ω_E stratum reproduces; Ω_C replication not established" and stays OPEN.
   **[OPERATOR] may strike the twin Ω_C spend at ratification.**
+- **AMENDED at ratification — promotion floor gates on cell EXISTENCE, not read presence.** A
+  confound-free G-A kind (rope→scaffold) may have NO uniform-orbit rope→scaffold constraint on a
+  twin — a corpus-composition accident, not a kind failure. So: (1) run the cheap twin Ω_E
+  stratum check first (does the twin even HAVE a populated confound-free cell?); (2) only where a
+  twin has the populated cell do the ≥3 kill-boundary reads; (3) if BOTH twins lack the cell,
+  the kind is promoted with **"Ω_C replication not constructible — confound-free cell absent on
+  twins"** (honest), NOT "failed replication." "Absent on twin ≠ kind fails."
 - **Archives (`kernel_v1`): NO — residual OQ** (per-seat author_mode = different Ω_E base +
   re-key trap).
 

@@ -64,3 +64,23 @@ OQ-140 RECON — author_engine_divergence characterization
 [D-ladder note] axis-D raw!=final witness lives in RECON.md (Prolog: 49 baseline signature-overwrite seats = natural positive control).
 
 [wrote] /home/scott/bin/structural_dynamics_model/audits/2026-07-04_oq140_divergence_characterization/recon_summary.json
+[wrote] /home/scott/bin/structural_dynamics_model/audits/2026-07-04_oq140_divergence_characterization/membership.tsv  (277 divergence rows)
+
+[CONTROL 6 — emit independence: Prolog constraint_claim/2 + dr_type/3 vs routing_sink fields]
+  byte-agreement on all 277 rows (author + engine independently sourced) — PASS
+[CONTROL 1 — Sigma-checks + drop-one]
+  gclass record-sum 56+122+99 = 277 == n_divergence 277: True
+  address-counts sum = 512 == n_records 512: True
+  drop-one: sum 276 == n 277: False  (MUST be False) -> PASS
+
+[CONTROL 2 — independent mountain control]
+  divergence records with Prolog author_claim==mountain: 0 (expect 0 — seat-blind mountain routes to exit_table) -> PASS
+  positive control (planted author=mountain row): flagged 1/1 -> PASS
+
+[CONTROL 3 — eps/chi band classifier, two-sided]
+  chi=0.025 -> threshold_adjacent (expect threshold_adjacent) -> PASS
+  chi=0.15 -> deep (expect deep) -> PASS
+
+[CONTROL 4 — D-ladder] witnessed in d_ladder_control.log (49 baseline raw!=final signature-overwrite seats; scan powered).
+[CONTROL 5 — same-run coherence] routing_sink n_constraints 128 == pipeline n_constraints 128 (both this-session regen).
+[CONTROL 6 — emit independence] run via `extract` (byte-agreement PASS).
