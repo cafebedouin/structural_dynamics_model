@@ -1,0 +1,169 @@
+{
+  "regime": {
+    "n_constraints": 128,
+    "n_seats": 4,
+    "n_records": 512,
+    "per_seat_invariant_holds": true,
+    "manifest_carries_code_commit": false
+  },
+  "sigma_checks": {
+    "gclass_records_sum_eq_divergence": true
+  },
+  "address_counts": {
+    "author_engine_divergence": 277,
+    "both_silent": 36,
+    "engine_abstained": 46,
+    "engine_exit_table_review": 58,
+    "no_route": 95
+  },
+  "n_divergence_records": 277,
+  "n_divergence_constraints": 96,
+  "gclass": {
+    "G-A": {
+      "constraints": 14,
+      "records": 56
+    },
+    "G-B": {
+      "constraints": 50,
+      "records": 122
+    },
+    "G-C": {
+      "constraints": 32,
+      "records": 99
+    }
+  },
+  "pair_x_gclass": {
+    "tangled_rope->snare": {
+      "total": 111,
+      "G-A": 0,
+      "G-B": 63,
+      "G-C": 48
+    },
+    "rope->scaffold": {
+      "total": 61,
+      "G-A": 36,
+      "G-B": 0,
+      "G-C": 25
+    },
+    "tangled_rope->rope": {
+      "total": 49,
+      "G-A": 0,
+      "G-B": 30,
+      "G-C": 19
+    },
+    "snare->rope": {
+      "total": 11,
+      "G-A": 0,
+      "G-B": 11,
+      "G-C": 0
+    },
+    "scaffold->piton": {
+      "total": 8,
+      "G-A": 8,
+      "G-B": 0,
+      "G-C": 0
+    },
+    "snare->tangled_rope": {
+      "total": 7,
+      "G-A": 0,
+      "G-B": 7,
+      "G-C": 0
+    },
+    "tangled_rope->naturalized": {
+      "total": 7,
+      "G-A": 0,
+      "G-B": 4,
+      "G-C": 3
+    },
+    "scaffold->tangled_rope": {
+      "total": 4,
+      "G-A": 0,
+      "G-B": 3,
+      "G-C": 1
+    },
+    "rope->snare": {
+      "total": 4,
+      "G-A": 4,
+      "G-B": 0,
+      "G-C": 0
+    },
+    "piton->rope": {
+      "total": 4,
+      "G-A": 4,
+      "G-B": 0,
+      "G-C": 0
+    },
+    "rope->piton": {
+      "total": 4,
+      "G-A": 4,
+      "G-B": 0,
+      "G-C": 0
+    },
+    "rope->tangled_rope": {
+      "total": 3,
+      "G-A": 0,
+      "G-B": 3,
+      "G-C": 0
+    },
+    "scaffold->snare": {
+      "total": 2,
+      "G-A": 0,
+      "G-B": 0,
+      "G-C": 2
+    },
+    "snare->naturalized": {
+      "total": 1,
+      "G-A": 0,
+      "G-B": 1,
+      "G-C": 0
+    },
+    "scaffold->rope": {
+      "total": 1,
+      "G-A": 0,
+      "G-B": 0,
+      "G-C": 1
+    }
+  },
+  "tail_cells": {
+    "tangled_rope->naturalized": 7,
+    "scaffold->tangled_rope": 4,
+    "snare->naturalized": 1,
+    "rope->tangled_rope": 3,
+    "rope->snare": 4,
+    "piton->rope": 4,
+    "rope->piton": 4,
+    "scaffold->snare": 2,
+    "scaffold->rope": 1
+  },
+  "tail_records": 30,
+  "silent_axes": {
+    "provenance.mismatch": {
+      "none": 273,
+      "type_3_snare_as_rope-severe": 4
+    },
+    "author_mode": {
+      "seat_blind_claim": 277
+    },
+    "detector": {
+      "nl_absent": 277
+    }
+  },
+  "seat_distribution": {
+    "powerless": 48,
+    "moderate": 72,
+    "institutional": 93,
+    "analytical": 64
+  },
+  "confound": {
+    "epsilon_nonuniform_constraints": 0,
+    "epsilon_provenance": {
+      "none_authored": 89,
+      "authored": 7
+    },
+    "institutional_lowest_d": 92,
+    "institutional_diverges": 93,
+    "confound_free_records": 56,
+    "confound_exposed_records": 221,
+    "confound_exposed_share": 0.7978
+  }
+}

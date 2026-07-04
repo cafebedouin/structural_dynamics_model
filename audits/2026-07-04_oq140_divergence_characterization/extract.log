@@ -1,0 +1,66 @@
+======================================================================
+OQ-140 RECON — author_engine_divergence characterization
+======================================================================
+
+[regime — routing_sink manifest]
+  n_constraints = 128
+  n_seats = 4
+  n_records = 512
+  per_seat_invariant_holds = True
+  manifest_carries_code_commit = False  (NB: coherence witnessed by the run, not the file)
+
+[address counts]
+  author_engine_divergence     277
+  both_silent                  36
+  engine_abstained             46
+  engine_exit_table_review     58
+  no_route                     95
+
+[divergence population] 277 records on 96 constraints
+
+[G-class decomposition — record-level Sigma]
+  G-A:  14 constraints /  56 records
+  G-B:  50 constraints / 122 records
+  G-C:  32 constraints /  99 records
+  sum = 277   (Sigma-check == n_divergence: True)
+
+[pair x G-class crosstab]
+  tangled_rope->snare            tot=111  G-A= 0 G-B=63 G-C=48
+  rope->scaffold                 tot= 61  G-A=36 G-B= 0 G-C=25
+  tangled_rope->rope             tot= 49  G-A= 0 G-B=30 G-C=19
+  snare->rope                    tot= 11  G-A= 0 G-B=11 G-C= 0
+  scaffold->piton                tot=  8  G-A= 8 G-B= 0 G-C= 0
+  snare->tangled_rope            tot=  7  G-A= 0 G-B= 7 G-C= 0
+  tangled_rope->naturalized      tot=  7  G-A= 0 G-B= 4 G-C= 3
+  scaffold->tangled_rope         tot=  4  G-A= 0 G-B= 3 G-C= 1
+  rope->snare                    tot=  4  G-A= 4 G-B= 0 G-C= 0
+  piton->rope                    tot=  4  G-A= 4 G-B= 0 G-C= 0
+  rope->piton                    tot=  4  G-A= 4 G-B= 0 G-C= 0
+  rope->tangled_rope             tot=  3  G-A= 0 G-B= 3 G-C= 0
+  scaffold->snare                tot=  2  G-A= 0 G-B= 0 G-C= 2
+  snare->naturalized             tot=  1  G-A= 0 G-B= 1 G-C= 0
+  scaffold->rope                 tot=  1  G-A= 0 G-B= 0 G-C= 1
+  [tail] 9 unnamed cells, 30 records: tangled_rope->naturalized=7, scaffold->tangled_rope=4, rope->snare=4, piton->rope=4, rope->piton=4, rope->tangled_rope=3, scaffold->snare=2, snare->naturalized=1, scaffold->rope=1
+
+[silent-axis census over the 277]
+  provenance.mismatch: none=273, type_3_snare_as_rope-severe=4
+  author_mode: seat_blind_claim=277
+  detector: nl_absent=277
+
+[seat distribution of divergence records]
+  institutional: 93
+  moderate: 72
+  analytical: 64
+  powerless: 48
+
+[CONFOUND QUANTITY — feeds the reframe gate]
+  epsilon non-uniform across seats: 0/96 constraints  => per-seat orbit variation is d-driven at fixed eps
+  epsilon_provenance: none_authored=89, authored=7
+  institutional has lowest d in: 92/96
+  institutional diverges on: 93/96
+  confound-FREE population   (G-A, uniform orbit): 56/277 (20.2%)
+  confound-EXPOSED population (G-B+G-C, d-fractured): 221/277 (79.8%)
+
+[D-ladder note] axis-D raw!=final witness lives in RECON.md (Prolog: 49 baseline signature-overwrite seats = natural positive control).
+
+[wrote] /home/scott/bin/structural_dynamics_model/audits/2026-07-04_oq140_divergence_characterization/recon_summary.json
