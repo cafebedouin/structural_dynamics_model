@@ -1,0 +1,100 @@
+
+===== ARM testsets (loaded=119, expect 119; pool=89, no_uid=30) =====
+  observer buckets: {'incoherent': 58, 'coherent': 24, 'undetermined': 7}
+  2x2 (obs x com):
+    coherent   dead: 11
+    coherent   live: 13
+    incoherent dead: 44
+    incoherent live: 14
+    undetermined (excluded from 2x2): 7; err/fail: 0
+  fired core (cs_axiom_foreclosed fires): 16
+  gap direction marginal: {'practice_drift': 33, 'axiom_overriding': 21, 'authority_erosion': 15, 'stable': 8, 'revival_pressure': 3, 'codification_collapse': 2, 'repudiation_pressure': 1}
+  gap magnitude marginal: {'substantial': 62, 'minor': 12, 'severe': 9}
+  substantial-rate: 62/89 = 0.697
+  severe-rate: 9/89 = 0.101
+  non-minor-rate: 71/89 = 0.798
+  non-minor+unack-rate: 57/89 = 0.640
+  ao+non-minor+unack-rate: 19/89 = 0.213
+  death terminals (dead stories, N=59): {'husk': 34, 'axiom_foreclosure': 20, 'extinction': 3, 'repudiation': 2}
+
+===== ARM kernel_v1 (loaded=1106, expect 1106; pool=906, no_uid=200) =====
+  observer buckets: {'incoherent': 760, 'coherent': 136, 'undetermined': 10}
+  2x2 (obs x com):
+    coherent   dead: 82
+    coherent   live: 54
+    incoherent dead: 633
+    incoherent live: 127
+    undetermined (excluded from 2x2): 10; err/fail: 0
+  fired core (cs_axiom_foreclosed fires): 129
+  gap direction marginal: {'authority_erosion': 344, 'practice_drift': 269, 'axiom_overriding': 203, 'codification_collapse': 35, 'stable': 16, 'repudiation_pressure': 6, 'revival_pressure': 2}
+  gap magnitude marginal: {'substantial': 792, 'severe': 57, 'minor': 26}
+  substantial-rate: 792/906 = 0.874
+  severe-rate: 57/906 = 0.063
+  non-minor-rate: 849/906 = 0.937
+  non-minor+unack-rate: 697/906 = 0.769
+  ao+non-minor+unack-rate: 187/906 = 0.206
+  death terminals (dead stories, N=722): {'husk': 486, 'axiom_foreclosure': 189, 'repudiation': 32, 'extinction': 15}
+
+===== ARM haiku (loaded=960, expect 960; pool=960, no_uid=0) =====
+  observer buckets: {'incoherent': 691, 'undetermined': 77, 'coherent': 192}
+  2x2 (obs x com):
+    coherent   dead: 110
+    coherent   live: 82
+    incoherent dead: 605
+    incoherent live: 86
+    undetermined (excluded from 2x2): 77; err/fail: 0
+  fired core (cs_axiom_foreclosed fires): 136
+  gap direction marginal: {'practice_drift': 393, 'authority_erosion': 271, 'axiom_overriding': 220, 'stable': 37, 'codification_collapse': 21, 'repudiation_pressure': 8, 'revival_pressure': 5}
+  gap magnitude marginal: {'substantial': 835, 'severe': 64, 'minor': 56}
+  substantial-rate: 835/960 = 0.870
+  severe-rate: 64/960 = 0.067
+  non-minor-rate: 899/960 = 0.936
+  non-minor+unack-rate: 743/960 = 0.774
+  ao+non-minor+unack-rate: 203/960 = 0.211
+  death terminals (dead stories, N=765): {'husk': 509, 'axiom_foreclosure': 206, 'repudiation': 31, 'extinction': 19}
+
+===== ARM flash (loaded=960, expect 960; pool=960, no_uid=0) =====
+  observer buckets: {'incoherent': 641, 'undetermined': 91, 'coherent': 228}
+  2x2 (obs x com):
+    coherent   dead: 32
+    coherent   live: 196
+    incoherent dead: 291
+    incoherent live: 350
+    undetermined (excluded from 2x2): 91; err/fail: 0
+  fired core (cs_axiom_foreclosed fires): 18
+  gap direction marginal: {'practice_drift': 366, 'stable': 280, 'revival_pressure': 98, 'repudiation_pressure': 95, 'authority_erosion': 81, 'axiom_overriding': 34, 'codification_collapse': 6}
+  gap magnitude marginal: {'substantial': 485, 'minor': 373, 'severe': 102}
+  substantial-rate: 485/960 = 0.505
+  severe-rate: 102/960 = 0.106
+  non-minor-rate: 587/960 = 0.611
+  non-minor+unack-rate: 269/960 = 0.280
+  ao+non-minor+unack-rate: 26/960 = 0.027
+  death terminals (dead stories, N=333): {'husk': 163, 'repudiation': 101, 'extinction': 41, 'axiom_foreclosure': 28}
+
+===== C2 conjunction-cell control =====
+  propagation_speed_asymmetry: obs=coherent com=dead fired=True -> C2 PASS
+
+===== C5 kernel_v1 anchor (pool stage: 906 kernel-bearing) =====
+  banked diverge-A (2026-06-07): 74 (banked headline 74)
+  OQ-51 null-exclusion delta: 0 banked-diverge-A now undetermined
+  reproduction target = 74 - 0 = 74
+  NEW kernel_v1 diverge-A at HEAD: 82
+  deviation from target: +8
+  gained (not banked-diverge-A): 11 ['constitutional_authority_boundary__parliamentary_primacy_reading', 'divine_legitimacy_substrate__folk_syncretistic_reading', 'equal_protection_commitment__diversity_reading', 'hagia_sophia_substrate__orthodox_restitution_reading', 'kjv_text_1611__revisable_translation_reading', 'market_naturalization__lapsed_alternative_reading']
+  lost (banked, not excluded, not diverge-A now): 3 ['honor_satisfaction_mechanism__contraction_reading', 'monetary_anchor_principle__triffin_inevitability_reading', 'press_reformation_causation__technological_determinism']
+
+===== coverage gates =====
+  haiku: observer pool 883/960 (floor 300) -> OK
+  haiku: core N 136 (floor 20) -> citable
+  flash: observer pool 869/960 (floor 300) -> OK
+  flash: core N 18 (floor 20) -> DESCRIPTIVE-ONLY
+
+===== cross-twin (haiku x flash) =====
+  C7 join-rate: |haiku ∩ flash| = 960 (haiku 960, flash 960)
+  substantial-rate: haiku 0.870 vs flash 0.505; |delta| = 0.365 (LARGE -> raw agreement retains discriminating value)
+  core membership over join: both=9 haiku-only=127 flash-only=9 neither=815
+  diverge-A membership over join: both=13 haiku-only=97 flash-only=19
+  conditioning set (non-minor+unack in BOTH twins): 259
+  direction=axiom_overriding within conditioned set (haiku,flash): {(False, False): 177, (True, True): 13, (True, False): 56, (False, True): 13}
+  conditioned direction agreement: 190/259 = 0.734
+  base rates within conditioned set: haiku ao 69/259=0.266, flash ao 26/259=0.100; chance agreement = 0.687
