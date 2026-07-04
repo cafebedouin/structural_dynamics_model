@@ -45,6 +45,27 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-04 — OQ-72 consumer wiring: axiom concept alignment section in tensions_ledger (three-valued coverage); baker emits tranche-kernel facts
+**Files:** python/tensions_ledger.py, python/axiom_concept_bake.py, prolog/axiom_concept_registry.pl
+**Tier:** landed
+
+Operator-directed post-close wiring (the ledger, NOT enhanced_report — per-constraint is the
+wrong altitude for a cross-reading product). `tensions_ledger.py` now appends a kernel-level
+"Axiom concept alignment" section: swipl subprocess each run (fresh compute, no stale sidecar),
+both keys per within-kernel pair, agree/disparity cells rendered (a disparity cell = same
+subject, opposed groundings = a tension by construction). Coverage is THREE-VALUED per kernel
+and never collapsed: RATIFIED (cells) / NOT-YET-RATIFIED (tranche never ruled; blind BY DESIGN,
+never "no shared subjects" — GAP-24) / single-reading (no pair exists; named, not dropped);
+kernel-less constraints counted. Fails LOUD on swipl error (a missing section must not read as
+measured-no-tensions). Baker now also emits `axiom_diff:axiom_concept_tranche_kernel/1` (one per
+kernel in the ratified TSV, incl. hypothetical all-no_slot kernels) — the coverage provenance
+bit travels in the registry; regen witnessed concept-facts byte-identical + C6 refusal re-run.
+Witnesses: mixed-scope run (2 ratified kernels w/ cells + seat_gauge NOT-YET-RATIFIED + 1
+kernel-less) and full-128 run (46 kernels: 3 ratified / 10 unratified multi-reading / 33
+singletons named / 58 kernel-less), both pasted in-session 2026-07-04. New tension surfaced
+immediately: moral_causation_locus accountability_intervention_locus disparity
+[deontological]|[instrumental].
+
 ## 2026-07-04 — OQ-72 resolved: ratified concept key for the axiom axis (pilot); axiom_concept_registry born; westphalia tests re-frozen
 **Files:** prolog/axiom_concept_registry.pl, python/axiom_concept_bake.py, prolog/stack.pl, prolog/tests/test_axiom_diff.pl, prolog/axiom_diff.pl, ISSUES.md, docs/the_perturbation_principle.md, docs/design/design_gaps.md
 **Tier:** landed

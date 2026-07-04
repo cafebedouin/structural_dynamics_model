@@ -207,6 +207,106 @@ def build_block(entry, report_dir=REPORTS):
     return "\n".join(lines)
 
 
+# --- Axiom concept alignment (OQ-72): kernel-level, both-keys, three-valued ---
+# Computed FRESH each ledger run by a swipl subprocess over the default (live)
+# corpus + the ratified registry — no sidecar artifact that can go stale
+# (Build Discipline Pattern 1, "consumed-once is not kept-fresh"). Coverage is
+# three-valued per kernel and never collapsed (GAP-24; OQ-197 pattern):
+#   RATIFIED       -> pair diffs with agree/disparity cells (a disparity cell =
+#                     same subject, opposed groundings — a TENSION by construction)
+#   NOT-YET-RATIFIED -> the tranche never ruled on this kernel; axioms read
+#                     blind BY DESIGN, never "no shared subjects"
+#   single-reading -> no pair exists (counted, not silently dropped)
+
+_AXIOM_GOAL = """
+[stack],
+corpus_loader:ensure_corpus_loaded,
+Ids = [{ids}],
+findall(K, (member(C, Ids), narrative_ontology:cs_kernel_id(C, K)), Ks0), sort(Ks0, Ks),
+findall(C, (member(C, Ids), \\+ narrative_ontology:cs_kernel_id(C, _)), NoK0), sort(NoK0, NoK),
+length(NoK, NNoK), format('NOKERNEL\\t~w~n', [NNoK]),
+forall(member(K, Ks),
+  ( findall(C, (narrative_ontology:cs_kernel_id(C, K), corpus_loader:corpus_constraint(C)), Cs0),
+    sort(Cs0, Cs), length(Cs, NC),
+    ( axiom_diff:axiom_concept_tranche_kernel(K) -> R = ratified ; R = unratified ),
+    format('KERNEL\\t~w\\t~w\\t~w~n', [K, R, NC]),
+    ( NC >= 2, R == ratified ->
+        forall(( member(A, Cs), member(B, Cs), A @< B ),
+          ( axiom_diff:axiom_diff(A, B, exact_name, EAg, ED, EB),
+            axiom_diff:axiom_diff(A, B, concept, CAg, CD, CB),
+            length(EAg,NEAg), length(ED,NED), length(EB,NEB),
+            length(CAg,NCAg), length(CD,NCD), length(CB,NCB),
+            format('PAIR\\t~w\\t~w\\t~w/~w/~w\\t~w/~w/~w~n',
+                   [A, B, NEAg, NED, NEB, NCAg, NCD, NCB]),
+            forall(member(agree(VK, Gs), CAg),
+                   format('CELL\\tagree\\t~w\\t~w\\t~w\\t~w~n', [A, B, VK, Gs])),
+            forall(member(disparity(VK, GA, GB), CD),
+                   format('CELL\\tdisparity\\t~w\\t~w\\t~w\\t~w|~w~n', [A, B, VK, GA, GB])) ))
+    ; true ) )),
+halt(0)
+"""
+
+
+def build_axiom_alignment_section(constraint_ids):
+    """Kernel-level OQ-72 concept-key section. Fails LOUD on swipl error —
+    a missing section must never look like measured-no-tensions."""
+    import subprocess
+    ids = ",".join(sorted({c for c in constraint_ids}))
+    goal = " ".join(_AXIOM_GOAL.format(ids=ids).split())
+    proc = subprocess.run(["swipl", "-q", "-g", goal, "-t", "halt(4)"],
+                          cwd=ROOT / "prolog", capture_output=True, text=True,
+                          timeout=600)
+    if proc.returncode != 0:
+        raise RuntimeError(
+            f"axiom alignment section failed (swipl exit {proc.returncode}) — "
+            f"refusing to emit a ledger without it:\n{proc.stderr[-2000:]}")
+    kernels, pairs, cells, n_nokernel = {}, {}, {}, 0
+    current = None  # PAIR/CELL rows follow their KERNEL row in stream order
+    for ln in proc.stdout.splitlines():
+        f = ln.split("\t")
+        if f[0] == "NOKERNEL":
+            n_nokernel = int(f[1])
+        elif f[0] == "KERNEL":
+            current = f[1]
+            kernels[current] = (f[2], int(f[3]))
+            pairs[current], cells[current] = [], []
+        elif f[0] == "PAIR":
+            pairs[current].append(f[1:])
+        elif f[0] == "CELL":
+            cells[current].append(f[1:])
+    lines = [
+        "# Axiom concept alignment — kernel-level (OQ-72 concept key; "
+        "deterministic, both keys)",
+        "coverage: three-valued per kernel — RATIFIED (pair cells below) / "
+        "NOT-YET-RATIFIED (tranche never ruled on this kernel; axioms read "
+        "blind BY DESIGN, never 'no shared subjects' — GAP-24) / "
+        "single-reading (no pair exists). Pairs span ALL in-corpus readings "
+        "of each in-scope kernel, siblings included.",
+    ]
+    multi = {k: v for k, v in kernels.items() if v[1] >= 2}
+    single = {k: v for k, v in kernels.items() if v[1] < 2}
+    lines.append(
+        f"kernels in scope: {len(kernels)} ({len(multi)} multi-reading listed; "
+        f"{len(single)} single-reading, no pair exists"
+        + (f": {' '.join(sorted(single))}" if single else "")
+        + f") | constraints with no kernel membership: {n_nokernel}")
+    lines.append("")
+    for k in sorted(multi):
+        status, nc = multi[k]
+        if status == "ratified":
+            lines.append(f"## kernel {k} [RATIFIED tranche, {nc} readings]")
+            for a, b, exact, concept in pairs[k]:
+                lines.append(f"- {a} × {b}: exact_name agree/disp/blind {exact}"
+                             f" → concept {concept}")
+            for c in cells[k]:
+                kind, a, b, vk, g = c
+                lines.append(f"  - {kind} @ {vk} ({a} × {b}): {g}")
+        else:
+            lines.append(f"## kernel {k} [NOT-YET-RATIFIED, {nc} readings — "
+                         "axioms read blind by design]")
+    return "\n".join(lines)
+
+
 def build_ledger(constraint_ids=None, pipeline_path=None, output_path=None,
                  report_dir=REPORTS):
     pipeline_path = pipeline_path or OUTPUTS / "pipeline_output.json"
@@ -231,7 +331,9 @@ def build_ledger(constraint_ids=None, pipeline_path=None, output_path=None,
         "",
     ]
     blocks = [build_block(e, report_dir) for e in entries]
-    text = "\n".join(head) + "\n\n".join(blocks) + "\n"
+    axiom_section = build_axiom_alignment_section(
+        [e.get("id", "") for e in entries])
+    text = "\n".join(head) + "\n\n".join(blocks) + "\n\n" + axiom_section + "\n"
 
     output_path = Path(output_path) if output_path else OUTPUTS / "tensions_ledger.md"
     output_path.parent.mkdir(parents=True, exist_ok=True)

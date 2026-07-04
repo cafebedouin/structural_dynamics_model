@@ -25,9 +25,27 @@
 %     testsets_flash/animal_moral_status__abolitionist_reading.pl (same kernel,
 %     same reading role) — the name-keyed mapping reaches it by construction;
 %     ratified with this disclosure (R3 ask 3).
+%
+% axiom_concept_tranche_kernel/1 marks every kernel COVERED by a ratified
+% tranche (one fact per kernel in the ratified TSV, including kernels whose
+% rows all ratified to no_slot). Consumers use it to render the three-valued
+% coverage state: cells / NOT-YET-RATIFIED / no-pair-exists — an absent kernel
+% here means the tranche never ruled on it, NEVER "no shared subjects" (GAP-24).
 % ============================================================================
 
 :- multifile axiom_diff:axiom_concept/2.
+:- multifile axiom_diff:axiom_concept_tranche_kernel/1.
+
+axiom_diff:axiom_concept_tranche_kernel(ai_governance_legitimacy).
+axiom_diff:axiom_concept_tranche_kernel(animal_moral_status).
+axiom_diff:axiom_concept_tranche_kernel(digital_money_legitimacy).
+axiom_diff:axiom_concept_tranche_kernel(marriage_authority_kernel).
+axiom_diff:axiom_concept_tranche_kernel(moral_causation_locus).
+axiom_diff:axiom_concept_tranche_kernel(software_source_status).
+axiom_diff:axiom_concept_tranche_kernel(tordesillas_demarcation_kernel).
+axiom_diff:axiom_concept_tranche_kernel(vatican_ii_doctrinal_authority).
+axiom_diff:axiom_concept_tranche_kernel(visual_evidentiary_authority).
+axiom_diff:axiom_concept_tranche_kernel(wto_treaty_framework).
 
 axiom_diff:axiom_concept(animal_sentience_grounds_welfare_obligation, animal_moral_status__moral_standing_basis).
 axiom_diff:axiom_concept(animals_are_rights_bearing_individuals, animal_moral_status__moral_standing_basis).

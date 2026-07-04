@@ -4007,6 +4007,14 @@ batch only the proposer.
 **SCOPE-time drop-in (recorded, not built):** concept label as an optional per-axiom
 generation-schema field, ratification-gated, flips on by config at rebuild — declared absence
 logged in `docs/design/design_gaps.md`.
+**Report surface (landed post-close, 2026-07-04, operator-directed):** kernel-level "Axiom
+concept alignment" section in `python/tensions_ledger.py` (the OQ-101 deterministic ledger —
+a disparity cell IS a tension), computed fresh each run by swipl over the live corpus + registry
+(no stale sidecar); coverage three-valued per kernel (RATIFIED cells / NOT-YET-RATIFIED / no
+pair exists) so unratified never reads "no shared subjects" (OQ-197 pattern). Baker also emits
+`axiom_concept_tranche_kernel/1` coverage facts (concept facts byte-identical across the regen).
+Per-constraint `enhanced_report.py` deliberately NOT wired — wrong altitude (the product is
+cross-reading); revisit only if a per-kernel report family ever exists.
 **Build note:** closing this OQ surfaced and fixed two pre-existing test defects
 (`tests/test_axiom_diff.pl`): the westphalia tests froze pre-regime-swap corpus content and had
 been silently unrunnable-green since 2026-06-20 (no leg carries the 4 mapped names — now

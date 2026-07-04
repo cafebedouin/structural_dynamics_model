@@ -53,9 +53,16 @@ HEADER = """% ==================================================================
 %     testsets_flash/animal_moral_status__abolitionist_reading.pl (same kernel,
 %     same reading role) — the name-keyed mapping reaches it by construction;
 %     ratified with this disclosure (R3 ask 3).
+%
+% axiom_concept_tranche_kernel/1 marks every kernel COVERED by a ratified
+% tranche (one fact per kernel in the ratified TSV, including kernels whose
+% rows all ratified to no_slot). Consumers use it to render the three-valued
+% coverage state: cells / NOT-YET-RATIFIED / no-pair-exists — an absent kernel
+% here means the tranche never ruled on it, NEVER "no shared subjects" (GAP-24).
 % ============================================================================
 
 :- multifile axiom_diff:axiom_concept/2.
+:- multifile axiom_diff:axiom_concept_tranche_kernel/1.
 
 """
 
@@ -79,6 +86,7 @@ def main() -> None:
         fail(f"missing required column: {e}")
     ncol = len(header)
     facts: dict[str, str] = {}
+    tranche_kernels: set[str] = set()
     n_no_slot = 0
     for lineno, l in enumerate(lines[1:], start=2):
         f = l.split("\t")
@@ -90,6 +98,9 @@ def main() -> None:
                  f"(only 'ratified' rows may bake)")
         if not ATOM.match(axiom):
             fail(f"line {lineno}: malformed axiom name '{axiom}'")
+        if not ATOM.match(kernel):
+            fail(f"line {lineno}: malformed kernel id '{kernel}'")
+        tranche_kernels.add(kernel)
         if concept == "no_slot":
             n_no_slot += 1
             continue
@@ -101,10 +112,12 @@ def main() -> None:
                  f"'{facts[axiom]}', conflicting '{concept}' (name-keyed registry)")
         facts[axiom] = concept
     body = "".join(
+        f"axiom_diff:axiom_concept_tranche_kernel({k}).\n" for k in sorted(tranche_kernels))
+    body += "\n" + "".join(
         f"axiom_diff:axiom_concept({a}, {c}).\n" for a, c in sorted(facts.items()))
     out.write_text(HEADER + body)
     print(f"baked {len(facts)} axiom_concept/2 facts ({n_no_slot} no_slot rows "
-          f"skipped by design) -> {out}")
+          f"skipped by design) + {len(tranche_kernels)} tranche-kernel facts -> {out}")
 
 
 if __name__ == "__main__":
