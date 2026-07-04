@@ -4122,15 +4122,32 @@ bait-bearing prompt does NOT discharge OQ-87's edge (the OQ-87 pilot witnessed t
 `authority_erosion/substantial/false` example anchoring drift direction; the OQ-87 twins run
 witnessed magnitude-convention rates of 0.87/0.51 substantial under bait). Verify the pin at
 generation time, not after.
-**Axiom-leg epistemic asymmetry (OQ-72 close, 2026-07-04):** part (b) now correlates a
-DISCOVERED observer leg (mechanical (P,T,E,S) alignment) against a RATIFIED axiom leg
-(`axiom_concept_registry.pl` — operator-ratified vocabulary, not discovered; OQ-72 resolution).
-One deferred ruling (`blocked_on_human`): whether (b) carries the asymmetry as an epistemic-kind
-LABEL on the correlation (cheap, honest, available now once the live scale-up runs) or demands
-footing PARITY (which would force the SCOPE-time concept-slot build before (b) can cite the
-axiom axis at all). Default posture pending the ruling: labeled asymmetry. Also inherited from
-OQ-72: (b) cannot cite the axiom axis until the live-corpus scale-up spend-go runs — the pilot
-demonstrated the mechanism, not corpus coverage.
+**Axiom-leg epistemic asymmetry (OQ-72 close 2026-07-04; decision frame corrected 2026-07-04
+reviewer pass):** part (b) correlates two DISCOVERED-key legs (observer: mechanical (P,T,E,S);
+time: the index t — structural key, with the OQ-178 authored-GRID coverage caveat, a different
+kind of disclosure) against one RATIFIED leg (axiom: `axiom_concept_registry.pl`).
+**Parity is a CATEGORY ERROR, not the expensive option:** SCOPE-time concept-slot emission is
+still a ratified, content-indexed, human-gated key (GAP-24 records it as ratification-gated by
+design) — it changes when/how cheaply the axiom key is authored, never its epistemic kind, so
+"hold (b) until same footing" is unreachable by any available engineering and would hold (b)
+open forever without curing anything.
+**The real contamination is GRANULARITY:** measured axiom-leg invariance is sensitive to the
+ratified vocabulary's grain (coarser vocab ⇒ more alignment ⇒ more measured invariance) — present
+identically at post-hoc and SCOPE-time; witnessed both directions in the pilot (the R2
+one-slot-vs-two call would have made C1 unpassable by construction; the two visual split pairs
+can never align). The §7.1 correlation STATISTIC is not yet built (it is the full-go (b) spend
+item), so the check is pre-registrable into its spec, not a retrofit.
+One deferred ruling (`blocked_on_human`), now three-way: (i) label alone (provenance disclosed,
+contamination silent); (ii) parity/SCOPE-time (rejected above as non-responsive — recorded so it
+isn't re-derived); (iii) **label + granularity-robustness witness** (recommended, with falsifier):
+the correlation-statistic build MUST include a vocabulary-grain perturbation (coarsen/refine
+within the same-subject criterion, re-ratify, recompute). Stable across grain ⇒ substrate
+property, label is honest, (b) may cite the axiom axis. Swings with grain ⇒ the invariance is
+partly seat-constituted — label insufficient, a granularity-normalized measure is prerequisite,
+AND the result retroactively sharpens the OQ-72 close (the robustness check doubles as the
+deferred calibration witness that "ratified, not discovered" was calibrated, not optimistic).
+Also inherited from OQ-72: (b) cannot cite the axiom axis until the live scale-up spend-go runs
+— the pilot demonstrated mechanism, not coverage.
 **Origin:** 2026-06-05 de-leak work item (audit brief §4 Stage 2). The generation pipeline no
 longer hands the author the engine's decision boundaries (schema bands stripped `9f2d050a`, prompt
 de-leaked `b6c4e113`, retry-path scrub `07f7b1c0`, axes cap optional `7ad86c5a`); the
