@@ -410,7 +410,20 @@ even when a higher-priority signature shadows it, §1 gotcha; it wrongly caught 
 `constructed_routed`); `converted_at_seat/2` (signature-level for non-split, seat-level for split) feeding
 `signature_grade`/`signature_severity`; and `seat_overrides/2`
 (`abductive_helpers`) threaded through `probe_signature/3`+P1/P7 instead of removing the row from
-`known_override_signature/1`. **Standing gate before converting any override:** decompose BOTH the seat's
+`known_override_signature/1`. **For a LEVER-GLOBAL conversion** (FNL, OQ-138 2026-07-03,
+commits `d248a6b1`/`82aa372e` — the overwrite dies EVERYWHERE at the config default,
+`false_natural_law_override_enabled=0`: typed seats route, unknown seats abstain): the consumer recipe
+differs from BOTH shapes above — key `seat_overrides/2` and the maxent boost on the LEVER, not on the
+`*_routed/1` seat predicate. Reason (tripwire): `*_routed/1` predicates are DEFAULT-CONTEXT-keyed while
+`resolve_modal_signature_conflict` overwrites fire at EVERY context (witnessed: `organization_floor_c0`
+routes tangled_rope→scaffold at institutional while default-unknown), and the maxent boost applies
+PER-CONTEXT (all 4 Wasserstein contexts) — a default-keyed guard goes silently stale at non-default
+positions. Unifying rule across all three shapes: **the boost mirrors the LIVE type-layer overwrite at
+that seat** (FCR non-routed seats keep boost because `fcr_override_enabled` defaults 1; FNL at lever=0
+boosts nowhere). Default-keying stays fine for grade/severity (`converted_at_seat` — default-headlined
+like verdict_join); the specific kill is a future consumer reading `*_routed` for ORBIT-SENSITIVE
+override-liveness. Witness: `audits/2026-07-02_oq138_fnl_evidence/FNL_CONVERSION_DIFF.md`.
+**Standing gate before converting any override:** decompose BOTH the seat's
 own floor after revert AND what OTHER consumers read the manufactured type (the maxent distribution boost
 `maxent_classifier.pl` `apply_override_for_sig/4` is now ALSO seat-aware — OQ-173, 2026-06-21: thread `C`,
 skip the boost at `fcr_routed/1`/`constructed_routed/1`, the third surface after `dr_type` + the
