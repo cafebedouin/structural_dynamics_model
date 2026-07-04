@@ -4145,17 +4145,25 @@ identically at post-hoc and SCOPE-time; witnessed both directions in the pilot (
 one-slot-vs-two call would have made C1 unpassable by construction; the two visual split pairs
 can never align). The §7.1 correlation STATISTIC is not yet built (it is the full-go (b) spend
 item), so the check is pre-registrable into its spec, not a retrofit.
-One deferred ruling (`blocked_on_human`), now three-way: (i) label alone (provenance disclosed,
-contamination silent); (ii) parity/SCOPE-time (rejected above as non-responsive — recorded so it
-isn't re-derived); (iii) **label + granularity-robustness witness** (recommended, with falsifier):
-the correlation-statistic build MUST include a vocabulary-grain perturbation (coarsen/refine
-within the same-subject criterion, re-ratify, recompute). Stable across grain ⇒ substrate
-property, label is honest, (b) may cite the axiom axis. Swings with grain ⇒ the invariance is
-partly seat-constituted — label insufficient, a granularity-normalized measure is prerequisite,
-AND the result retroactively sharpens the OQ-72 close (the robustness check doubles as the
-deferred calibration witness that "ratified, not discovered" was calibrated, not optimistic).
-Also inherited from OQ-72: (b) cannot cite the axiom axis until the live scale-up spend-go runs
-— the pilot demonstrated mechanism, not coverage.
+**RULED (operator, 2026-07-04) — option (iii), labeled asymmetry + granularity-robustness as a
+construction constraint; the former `blocked_on_human` sub-item is DISCHARGED.** The ruling:
+(1) (b) may cite the axiom axis once the live scale-up runs, carrying per-leg epistemic-kind
+labels — observer: discovered; time: discovered key + OQ-178 authored-grid coverage disclosure;
+axiom: ratified. (2) The §7.1 correlation-statistic build (still the full-go (b) spend item)
+MUST ship with a vocabulary-grain perturbation (coarsen/refine within the same-subject
+criterion, recompute) and a pre-registered stability bar — a spec requirement of the unbuilt
+instrument, not a retrofit; the number is born with its falsifier. (3) Kill condition: stable
+across grain ⇒ substrate property, label honest; swings ⇒ granularity-normalized measure is
+prerequisite before (b) cites the axis, AND the result retroactively calibrates OQ-72's
+"ratified, not discovered" claim (the robustness check doubles as that deferred witness).
+(4) **Staged ratification of the perturbed arms** (cost control, evidentially asymmetric):
+Stage 1 = UNRATIFIED machine-perturbed vocabularies (cheap; stability here is a STRONG pass —
+robust even to unratified grain moves — and ends the check); Stage 2 = operator-RATIFIED arms,
+run ONLY if Stage 1 swings (a swing under unratified arms is ambiguous between genuine
+sensitivity and bad mechanical coarsening — ratified arms disambiguate). (i) label-alone and
+(ii) parity remain rejected as ruled above. Also inherited from OQ-72: (b) cannot cite the
+axiom axis until the live scale-up spend-go runs — the pilot demonstrated mechanism, not
+coverage.
 **Origin:** 2026-06-05 de-leak work item (audit brief §4 Stage 2). The generation pipeline no
 longer hands the author the engine's decision boundaries (schema bands stripped `9f2d050a`, prompt
 de-leaked `b6c4e113`, retry-path scrub `07f7b1c0`, axes cap optional `7ad86c5a`); the
