@@ -335,20 +335,43 @@ apply_signature_override(C, DistIn, DistOut) :-
     ).
 
 %% apply_override_for_sig(+C, +Sig, +DistIn, -DistOut)
-%  OQ-138/OQ-171 (2026-06-21): C threaded through so the two CONVERTED signatures
-%  (false_ci_rope, constructed_high_extraction) can skip the MaxEnt boost at their
-%  ROUTED seats, mirroring the type-layer's per-seat routing (dr_type no longer
-%  overwrites at fcr_routed/1 + constructed_routed/1 seats). At a routed seat the boost
-%  is skipped (DistOut = DistIn → the pre-override distribution passes through, so the
-%  seat's maxent reverts to its raw argmax). Non-converted clauses ignore C (byte-identical
-%  behavior). The skip guards re-key on their own UNBOUND cascade calls (fcr_routed/1 /
-%  constructed_routed/1), so no bound-arg mis-key is reintroduced here (§1 wiring gotcha).
+%  OQ-138/OQ-171 (2026-06-21): C threaded through so CONVERTED signatures
+%  (false_ci_rope, constructed_high_extraction, and — 2026-07-03 — false_natural_law)
+%  can skip the MaxEnt boost where the type layer no longer overwrites, mirroring the
+%  type-layer's routing. At a skipped seat DistOut = DistIn → the pre-override
+%  distribution passes through, so the seat's maxent reverts to its raw argmax.
+%  Non-converted clauses ignore C (byte-identical behavior). The FCR/constructed skip
+%  guards re-key on their own UNBOUND cascade calls (fcr_routed/1 / constructed_routed/1),
+%  so no bound-arg mis-key is reintroduced here (§1 wiring gotcha).
+%  GOVERNING RULE (reconciles the FCR/FNL asymmetry): the boost mirrors the LIVE
+%  type-layer overwrite at that seat. FCR's non-routed seats keep their boost because
+%  fcr_override_enabled defaults 1 (their override is still live); FNL at its route
+%  default (false_natural_law_override_enabled=0) overwrites NOWHERE — typed seats
+%  route, unknown seats abstain — so its boost is off everywhere, on everywhere at
+%  lever=1. NOTE this boost applies PER-CONTEXT (maxent_classify_one at all 4
+%  Wasserstein contexts) while fnl_routed/1 is default-context-keyed; the LEVER branch,
+%  not the routed guard, is what keeps non-default positions honest (witnessed:
+%  organization_floor_c0 routes only at institutional — OQ-138 twin diff §B). This
+%  EXTENDS the OQ-173 seat-aware pattern to the third signature (OQ-173 itself stays
+%  resolved for its own FCR/constructed scope).
 
-%% Unconditional overrides: set target to 0.95, redistribute 0.05 (NOT converted — keep)
+%% Unconditional overrides: set target to 0.95, redistribute 0.05 (natural_law, CI-rope NOT converted — keep)
 apply_override_for_sig(_, natural_law, DistIn, DistOut) :-
     !, override_unconditional(mountain, DistIn, DistOut).
-apply_override_for_sig(_, false_natural_law, DistIn, DistOut) :-
-    !, override_unconditional(tangled_rope, DistIn, DistOut).
+%% false_natural_law — CONVERTED (OQ-138, 2026-07-03): boost only under the legacy lever.
+%  Unconditional SHAPE retained (0.95 hard set, not a 3x conditional boost) so lever=1
+%  reproduces legacy maxent byte-for-byte. The fnl_routed guard is kept ahead of the
+%  lever for shape-parity with the FCR-9 arm and as a belt-and-braces skip: under
+%  lever=1 fnl_routed/1 is empty (routed seats revert to tangled_rope), so the guard
+%  is inert in the legacy regime and the lever branch alone decides.
+apply_override_for_sig(C, false_natural_law, DistIn, DistOut) :-
+    !,
+    (   signature_detection:fnl_routed(C)
+    ->  DistOut = DistIn                % Routed seat: skip boost (seat-aware, OQ-138)
+    ;   config:param(false_natural_law_override_enabled, 1)
+    ->  override_unconditional(tangled_rope, DistIn, DistOut)   % legacy overwrite mirror
+    ;   DistOut = DistIn                % Route default: no live overwrite -> no boost
+    ).
 apply_override_for_sig(_, coupling_invariant_rope, DistIn, DistOut) :-
     !, override_unconditional(rope, DistIn, DistOut).
 

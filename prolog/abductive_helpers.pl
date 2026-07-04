@@ -86,6 +86,21 @@ known_override_signature(constructed_constraint).
 %  cycle-avoidance as signature_grade's known_override_signature call — no load cycle).
 seat_overrides(C, false_ci_rope) :- !, \+ signature_detection:fcr_routed(C).
 seat_overrides(C, constructed_high_extraction) :- !, \+ signature_detection:constructed_routed(C).
+% false_natural_law (OQ-138, 2026-07-03): keyed on the LEVER, not on fnl_routed/1 — a
+% deliberate departure from the FCR seat-split shape, for two witnessed reasons:
+% (1) FNL's conversion is lever-global: at lever=0 NO seat is overwritten anywhere (typed
+%     seats route via signature_detection:925; unknown seats ride the OQ-37 abstain, which
+%     predates the conversion), so "this seat overrides" is exactly the lever state. A
+%     `\+ fnl_routed(C)` shape would mis-read the abstain seats as override-bearing.
+% (2) fnl_routed/1 is default-context-keyed while the :925 overwrite was ORBIT-wide:
+%     organization_floor_c0 routes tangled_rope->scaffold at the institutional position
+%     while its default-context type is unknown (fnl_routed=false) — witnessed in the
+%     OQ-138 twin diff (audits/2026-07-02_oq138_fnl_evidence/FNL_CONVERSION_DIFF.md §B).
+%     The lever check is orbit-safe by construction; no per-context dispatch needed here.
+% FCR keeps its `\+ fcr_routed` shape because its non-routed seats retain a LIVE type-layer
+% override (fcr_override_enabled defaults 1); FNL's non-routed seats do not.
+seat_overrides(_, false_natural_law) :- !,
+    config:param(false_natural_law_override_enabled, 1).
 seat_overrides(_, Sig) :- known_override_signature(Sig).
 
 %% override_target(+Signature, -TargetType)
