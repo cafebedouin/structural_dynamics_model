@@ -58,6 +58,42 @@ self-normed.
   could be trusted.
 - A0 external consistency: 47 == 47 vs the OQ-72 sweep (above).
 
+## A3 per-kernel rows (the probe's whole discriminating content; reviewer ask 2026-07-04)
+
+The coarsening arms are theorem-entailed and A0 is a cross-check — A3 is the only arm that
+can lose, so its per-kernel rows carry the probe's information:
+
+| kernel | A0 (agree/disp) | A3 (agree/disp) | Δcells |
+|---|---|---|---|
+| digital_money_legitimacy | 3 (0a/3d) | 2 (0a/2d) | −1 |
+| moral_causation_locus | 4 (3a/1d) | 4 (4a/0d) | 0 — see note |
+| visual_evidentiary_authority | 6 (4a/2d) | 3 (2a/1d) | −3 |
+| ai_governance_legitimacy | 4 (1a/3d) | 1 (0a/1d) | −3 |
+| animal_moral_status | 6 (2a/4d) | 2 (0a/2d) | −4 |
+| marriage_authority_kernel | 12 (2a/10d) | 4 (1a/3d) | −8 |
+| software_source_status | 3 (2a/1d) | 2 (1a/1d) | −1 |
+| tordesillas_demarcation_kernel | 1 (0a/1d) | 0 | −1 (conversion lost) |
+| vatican_ii_doctrinal_authority | 6 (4a/2d) | 2 (1a/1d) | −4 |
+| wto_treaty_framework | 2 (0a/2d) | 1 (0a/1d) | −1 |
+
+Three facts the aggregates masked: (1) the 9/10 is a PURE loss (conversion set: lost
+tordesillas, gained none — no swap); (2) the damage is BROAD — 9 of 10 kernels lost cells,
+so the throw is substrate-wide, not one fragile kernel; (3) the one flat kernel is not
+stable: moral_causation's composition turned over completely (3a/1d → 4a/0d — the
+accountability DISPARITY died while a split-slot agree appeared). A kernel-level count of
+"unchanged" conceals full compositional churn — a further reason the statistic cannot be a
+count: even the count's fixed points aren't fixed.
+
+**Upper-bound framing for ruled Stage 2 (reviewer sharpening, adopted):** A3 is ARBITRARY
+refinement — it can split subjects a ratified pass never would — so the A3 throw is an
+UPPER BOUND on the ratified-refinement throw; Stage-2's swing is bounded above by A3 and
+possibly well below. The Stage-1-will-likely-swing expectation is priced against this
+reference class, not asserted.
+
+**Control honesty note:** the per-run `FACTS 71` lines cannot discriminate arm-from-baseline
+(every arm maps the same 71 axioms); the discriminating overlay controls are the A1
+atom-set assertion and the known-changer merge (in-code halt paths; both passed).
+
 ## Scope limits (stated, not buried)
 
 Pilot substrate only (10 kernels, 42 pairs, tranche-1 registry). A3 is the *maximally

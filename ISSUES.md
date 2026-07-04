@@ -4171,7 +4171,11 @@ raw CELL COUNT is non-monotone (47→42 by vantage consolidation, witnessed). Sp
 fed to the statistic build: grain normalization load-bearing; NEVER a raw cell/vantage-count
 statistic (wrong sign under coarsening); contradiction-pair reads are refinement-brittle;
 `ax_stability_verdict` needs a grain stamp. Does NOT discharge Stage 1 (statistic unbuilt);
-expectation recorded that Stage 1 will swing → Stage-2 ratified arms likely needed.
+expectation recorded that Stage 1 will swing → Stage-2 ratified arms likely needed —
+priced against A3 as reference class, and A3 (ARBITRARY refinement) is an UPPER BOUND on
+ratified-refinement throw. Per-kernel A3 rows (WRITEUP): pure loss (no conversion swap),
+broad (9/10 kernels lost cells), and the one flat-count kernel churned compositionally
+(3a/1d→4a/0d) — counts' fixed points aren't fixed.
 **Origin:** 2026-06-05 de-leak work item (audit brief §4 Stage 2). The generation pipeline no
 longer hands the author the engine's decision boundaries (schema bands stripped `9f2d050a`, prompt
 de-leaked `b6c4e113`, retry-path scrub `07f7b1c0`, axes cap optional `7ad86c5a`); the
