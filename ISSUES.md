@@ -4164,6 +4164,14 @@ sensitivity and bad mechanical coarsening — ratified arms disambiguate). (i) l
 (ii) parity remain rejected as ruled above. Also inherited from OQ-72: (b) cannot cite the
 axiom axis until the live scale-up spend-go runs — the pilot demonstrated mechanism, not
 coverage.
+**Pilot-scale grain precursor RUN (2026-07-04; `audits/2026-07-04_oq75b_grain_probe/`):**
+throw is LARGE and direction-asymmetric — one arbitrary refinement step halved cells (47→21)
+and zeroed contradiction-pair co-slotting (3/3→0/3); coarsening grows alignment mass but the
+raw CELL COUNT is non-monotone (47→42 by vantage consolidation, witnessed). Spec constraints
+fed to the statistic build: grain normalization load-bearing; NEVER a raw cell/vantage-count
+statistic (wrong sign under coarsening); contradiction-pair reads are refinement-brittle;
+`ax_stability_verdict` needs a grain stamp. Does NOT discharge Stage 1 (statistic unbuilt);
+expectation recorded that Stage 1 will swing → Stage-2 ratified arms likely needed.
 **Origin:** 2026-06-05 de-leak work item (audit brief §4 Stage 2). The generation pipeline no
 longer hands the author the engine's decision boundaries (schema bands stripped `9f2d050a`, prompt
 de-leaked `b6c4e113`, retry-path scrub `07f7b1c0`, axes cap optional `7ad86c5a`); the

@@ -45,6 +45,23 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-04 — OQ-75(b) grain precursor probe: throw LARGE, cell-count non-monotone under coarsening (statistic-spec inputs)
+**Files:** python/audits/oq75b_grain_probe.py, prolog/axiom_concept_registry.pl
+**Tier:** landed
+
+Pre-registered unratified grain arms over the tranche-1 registry (10 pilot kernels, 42
+pairs, both legs; `audits/2026-07-04_oq75b_grain_probe/`). One arbitrary refinement step:
+cells 47→21, tordesillas conversion dead, contradiction-pair co-slotting 3/3→0/3.
+Coarsen-max: alignment mass grows (theorem, disclosed) but the raw cell count FELL 47→42 by
+vantage consolidation — a cell/vantage-count invariance statistic reads coarsening with the
+WRONG SIGN. Verdicts grain-labile both directions (key_fragile 26→38→12). Constraints fed
+to the future §7.1 correlation-statistic spec (recorded in OQ-75's ruled sub-item): grain
+normalization load-bearing; no raw-count statistic; contradiction-pair reads
+refinement-brittle; grain-stamp ax_stability_verdict aggregations. Controls fired:
+overlay-took-effect (fact counts + A1 atom set), known-changer (A1 merged digital_money's
+slots), A0 externally consistent with the OQ-72 sweep (47==47). Canonical registry never
+edited (arms are in-process overlays). Stage 1 proper NOT discharged — statistic unbuilt.
+
 ## 2026-07-04 — OQ-72 consumer wiring: axiom concept alignment section in tensions_ledger (three-valued coverage); baker emits tranche-kernel facts
 **Files:** python/tensions_ledger.py, python/axiom_concept_bake.py, prolog/axiom_concept_registry.pl
 **Tier:** landed
