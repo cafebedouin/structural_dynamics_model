@@ -289,6 +289,15 @@ to those surfaces, run the assembled-payload check: dump
 `story_generator_base.build_prompt(...)` and grep it for band values near type
 names — it must stay clean.
 
+**Rule 3c — `prolog/axiom_concept_registry.pl` is baked, never hand-edited (OQ-72,
+2026-07-04).** The ratified concept seat for `axiom_diff`'s `concept` key. Regenerate ONLY
+via `python/axiom_concept_bake.py` from a ratified assignments TSV (fail-closed on
+unratified rows) — a hand-edit loses its ratification provenance and voids the seat. The
+registry is NAME-keyed (a mapping applies wherever the axiom name occurs, on any corpus
+leg); an axiom absent from it reads `unmapped` = NOT-YET-RATIFIED, never "no shared
+subjects" (GAP-24; `axiom_concept_tranche_kernel/1` marks tranche coverage). Regression
+guard: `prolog/tests/test_axiom_diff.pl` (corpus-independent).
+
 **Rule 4 — Priority cascade.** Classification priority (highest to lowest):
 `mountain > piton(dead-coordination) > snare > scaffold > rope > tangled_rope > piton(fallback) > naturalized > unknown`
 
