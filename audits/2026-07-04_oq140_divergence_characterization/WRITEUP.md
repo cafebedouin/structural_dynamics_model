@@ -64,15 +64,22 @@ contested kernels, the corrected *object* is itself Ω_P-contested; the Ω_E fin
 *rope-claim over it* is a generation default, orthogonal to whether the kernel's contest is
 genuine.
 
-**Gating verification for the Ω_E ruling (operator-required, discharged before promotion):**
-structured `emerges_naturally` is **seat-blind on all 6** contested-kernel members (unauthored;
-engine default) — so no member carries a seat-indexed naturalization *fact*, and Ω_E holds.
-**One exception surfaced and recorded:** `fictional_construct_reading:204` carries an authored
-**prose** seat-declaration — *"the claimed type (rope) reflects the coordination function **this
-reading** identifies, independent of whether other readings see extraction or naturalized
-authority."* This is not a seat-indexed `emerges_naturally` fact (the structured driver stays
-seat-blind, Ω_E intact), but it is the one member where a future analyst could rightly re-type
-the *claim* as Ω_P; carried in the residual OQ as a named exception.
+**Gating verification for the Ω_E ruling (operator-required) — DISCHARGED on the structured
+witness, with one member's typing left OPEN.** The pre-registered falsifier: *if any of the 6
+contested-kernel members carries a seat-indexed naturalization assertion, that member's claim is
+genuinely Ω_P.* Structured `emerges_naturally` is **seat-blind on all 6** (unauthored; engine
+default) — so on the STRUCTURED channel the falsifier does not fire, and the kind's Ω_E typing
+is clean. **But the falsifier fires for one member through a channel the structured grep did not
+cover:** `fictional_construct_reading:204` carries an authored **prose** seat-declaration —
+*"the claimed type (rope) reflects the coordination function **this reading** identifies,
+independent of whether other readings see extraction or naturalized authority."* That is a
+seat-declaration of the rope-claim, arriving in prose rather than the `emerges_naturally` field.
+**Honest status: the kind's Ω_E typing is clean 5/6; one member (`fictional_construct_reading`)
+holds an UNRESOLVED Ω_P prose-signal at the claim level — the named falsifier, firing.** This
+does not retract the KIND's Ω_E typing (the correction mechanism `emerges_naturally=False` is
+seat-blind on all 9, and 8 of the 9 have no seat-declaration), but it is an **open falsifier
+against the Ω_E typing for that one member**, not a re-typing curiosity for the residual
+population. Parked in OQ-211(d) as an open item, not closed.
 
 **Two-tier replication (promotion line carries both, not collapsed):**
 - **Ω_E stratum reproduces on BOTH twins** — rope→scaffold G-A cell populated: haiku 49
@@ -105,10 +112,26 @@ the *claim* as Ω_P; carried in the residual OQ as a named exception.
   This is what licenses trusting the population.
 - **Control 1: Σ + drop-one** — G-A/B/C record-sum 56+122+99 = 277; address-sum = 512; drop-one
   correctly breaks the Σ-check.
-- **Control 2: independent mountain — 0 (PASS).** *Positive control now same-path and
-  non-tautological:* planting a `mountain` claim at a real divergence key and running the SAME
-  predicate flags exactly that key (1 = 0 real + 1 plant). (The earlier tautological positive
-  control is demoted; this is the witnessing one.)
+- **Control 2: independent mountain — 0 (PASS).** The 0-count is over GENUINELY Prolog-sourced
+  claims: `prolog_sourced.tsv` is `constraint_claim/2`+`dr_type/3` output, so the "no authored
+  mountain in the divergence population" claim rests on real sourcing, not the sink emit.
+  *Positive control (extract.log:93–95, pasted below), now non-tautological but SCOPE-PRECISE:*
+  it plants a synthetic `mountain` row **at the membership-source level** (into a copy of the
+  Prolog-sourced dict, matching the pre-registered spec "plant a synthetic membership row") and
+  runs the SAME *filter* predicate — flagging exactly that key (`real 0 → planted 1`,
+  `includes_plant: True`). **What it proves:** the filter bites when a mountain appears (0→1
+  witness, both states pasted). **What it does NOT prove** (stated so "through the SAME
+  predicate" is not misread): it does not re-exercise the Prolog SOURCING chain — the plant does
+  not route through `constraint_claim/2`; that the sourcing itself would emit `mountain` for a
+  real mountain story is witnessed separately by control 6's byte-agreement, not by this plant.
+  ```
+  divergence records with Prolog author_claim==mountain: 0 (expect 0) -> PASS
+  positive control (planted mountain at responsibility_preservation_mechanism@moderate
+    through the SAME predicate): flagged 1 (= real 0 + 1), includes plant: True -> PASS
+  ```
+  (The earlier tautological positive control — `flagged = [x for x in synthetic if
+  "mountain"=="mountain"]`, extract.log:78 — is demoted as non-witnessing; this is the
+  witnessing one, at its honest scope.)
 - **Control 3: ε/χ band, two-sided** — χ=0.025→threshold_adjacent, χ=0.15→deep.
 - **Control 4: D-ladder** — 49 baseline `raw≠final` signature-overwrite seats
   (`d_ladder_control.log`) prove the axis-D scan is powered; combined with the 273/277 mismatch-

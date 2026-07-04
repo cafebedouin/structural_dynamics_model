@@ -45,7 +45,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-07-04 — OQ-140 RESOLVED: `author_engine_divergence` characterized (confound re-ranks kinds; one validated kind, twin-replicated)
+## 2026-07-04 — OQ-140 RESOLVED: `author_engine_divergence` characterized (confound re-ranks kinds; one kind — Ω_E stratum reproduces on both twins, Ω_C reading 3/3 twin-confirmed)
 **Files:** ISSUES.md, prolog/routing_sink.pl, python/audits/oq140_divergence_extract.py, audits/2026-07-04_oq140_divergence_characterization/
 **Tier:** landed
 
@@ -64,9 +64,12 @@ Branch-3 (hybrid G-A) characterization audit of the routing sink's majority addr
   `has_sunset_clause` NO 8/9).
 - **Two-tier promotion (do NOT collapse):** Ω_E stratum reproduces on BOTH twins (rope→scaffold
   G-A: haiku 49 / flash 64); Ω_C reading is live-corpus + 3/3 twin-confirmed. Contested-kernel
-  members (6/9) carry an Ω_P sub-note; `fictional_construct_reading:204` has an authored prose
-  seat-declaration (structured `emerges_naturally` still seat-blind ⟹ Ω_E holds). Re-typing
-  candidate parked in OQ-211.
+  members (6/9) carry an Ω_P sub-note. **Ω_E typing clean 5/6 on the structured witness
+  (`emerges_naturally` seat-blind 6/6); one member — `fictional_construct_reading:204` — holds
+  an UNRESOLVED Ω_P prose-signal** (an authored seat-declaration of its rope-claim, the
+  pre-registered falsifier firing through a channel the structured grep didn't cover). Does NOT
+  retract the kind's Ω_E typing (correction flag seat-blind on all 9); open item parked in
+  OQ-211(d), not a curiosity.
 - **Scope pin (freshness):** kind name + counts valid only relative to `route_address/5` at HEAD
   `7762b2c0`; any OQ-138 sibling-clause edit invalidates the taxonomy (OQ-211 carries this).
 - **Controls:** emit-independence byte-agreement 277/277 (`constraint_claim/2`+`dr_type/3` vs
