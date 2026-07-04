@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "82aa372e2ff027e35004dad3b29b7d306d606384",
+    "store_version": "e99ccaf5606b2895508ec028bc17bd2772a7d3f3",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-03T19:31:28"
+    "generated_at": "2026-07-03T20:56:28"
   },
-  "issues_sha": "5b44cc5fbaeb33a3ad209c8d445b0d8a9f6a36b16896ad7a925fe929acc928fd",
-  "n_entries": 207,
+  "issues_sha": "facd41f08dea9f09a1303e10bf82609f77b3b773d039c0b6a2f7c59a5a51265d",
+  "n_entries": 208,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 13,
     "partial": 7,
     "disposed": 4,
-    "open": 64,
+    "open": 65,
     "future": 4
   },
   "active": [
@@ -152,6 +152,7 @@
         "OQ-70",
         "OQ-76",
         "OQ-77",
+        "OQ-87",
         "OQ-109",
         "OQ-117"
       ]
@@ -178,11 +179,17 @@
       "status": "partial",
       "priority": 1,
       "summary": "Committer-axis experiments (detection-independence / Type-B): BANKED, existence proof UNPROVEN",
-      "deps": [],
+      "deps": [
+        "blocked_on OQ-75"
+      ],
       "cross_refs": [],
       "mentioned_in": [
+        "OQ-51",
         "OQ-70",
-        "OQ-83"
+        "OQ-75",
+        "OQ-83",
+        "OQ-119",
+        "OQ-208"
       ]
     },
     {
@@ -972,6 +979,20 @@
         "OQ-199",
         "OQ-202",
         "OQ-204"
+      ]
+    },
+    {
+      "id": "OQ-208",
+      "status": "open",
+      "priority": 3,
+      "summary": "CA-2: committer framing-dependence is UNTESTED — the OQ-119 0/5 lacks a framing-sensitive positive control (or a proof none can exist)",
+      "deps": [
+        "splits_from OQ-87"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-87",
+        "OQ-119"
       ]
     }
   ],

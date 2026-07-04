@@ -123,6 +123,18 @@ The OQ-138 FNL CONVERT ruling's owed build, in two commits with the twin-diff ha
 
 ---
 
+## 2026-07-03 — OQ-87 twins characterization DONE (zero-spend): committer axis byte-stable, magnitude convention model-idiosyncratic, existence proof re-scoped to de-baited rate; OQ-208 minted (CA-2 split)
+**Files:** ISSUES.md, audits/2026-07-03_oq87_twins_ca3/, prompts/constraint_story_generation_prompt_DRIFTNEUTRAL.md
+**Tier:** landed
+Pre-registered read-only run (PLAN.md committed before any arm; four serialized swipl runs: kernel_v1 906-pool / testsets 89 / haiku 960 / flash 960; seven controls all discharged incl. two kill conditions). Full record: `audits/2026-07-03_oq87_twins_ca3/FINDINGS.md`; commits `8ac24afc`→`e99ccaf5` + this landing.
+- **Committer axis byte-stable across 26 days of observer-engine evolution:** banked (2026-06-07) vs HEAD `dfe10734` on the 906 pool = **0 committer-verdict flips vs 42 observer-bucket changes** (same differ read both columns — internal positive control). Anchor diverge-A 74→82 wholly observer-side (11 gained / 3 lost, all stayed `dead`; OQ-51 null-exclusion = 0). Theorem-7-consistent characterization, NOT a proof (bait-bearing substrate).
+- **fired = grep-candidate exactly on all four corpora** (16/16, 129/129, 136/136, 18/18): the `cs_axiom_foreclosed` conjunction is file-locally decidable at HEAD — grep-candidate counts may be cited as fired counts *at this code state*.
+- **Magnitude convention is model-idiosyncratic:** substantial-rate haiku 0.870 vs flash 0.505 (|Δ|=0.365). Foreclosure-shaped authoring (`axiom_overriding`+non-minor+unack) clusters ≈0.21 on the three Anthropic-era corpora (0.213/0.206/0.211) and collapses on the Gemini twin (0.027). Flash fired-core 18 < pre-registered floor 20 → flash-side and shared-core rates are DESCRIPTIVE-ONLY (flash-rate 1,067-story and shared-rate 2,133-pair sizing figures may NOT license a spend; only the haiku-rate 141 is citable). Conditioned direction agreement 0.734 vs chance 0.687 — near-chance cross-model content under bait.
+- **Rulings (operator):** (1) FOLD-IN — OQ-87's proof limb `blocked_on OQ-75`, with the edge tracking the MEASUREMENT (a de-baited fired-core rate), not the rebuild artifact; **DRIFTNEUTRAL pin currently ABSENT repo-wide** (controlled grep; only banked audit scripts reference the prompt) — pin note added to OQ-75; ~150-story pilot recorded as the sooner-option, trigger = a named downstream forcing function. (2) CA-2 SPLIT → **OQ-208** (Priority 3, `splits_from OQ-87`), Deps authored with BOTH exit branches: construct a framing-sensitive positive control OR prove none can exist (negative-by-construction close admitted; code-level branch (b) first, near-zero spend).
+- **Tripwire (probe adaptation, carried in the audit dir):** the banked ca3 probes bucket `H0==1 else incoherent` — post-OQ-51 that silently misbuckets `H0=null` as incoherent (77/91 stories per twin are undetermined). Any reuse of pre-2026-06-25 H0-consuming probes needs the 3-way bucket.
+
+---
+
 ## 2026-07-02 — Four blocked_on_human rulings landed: OQ-138 (CI-rope KEEP+close, FNL CONVERT), OQ-193 (giant_comp additive-split), OQ-75 (Stage-2 scoped-go)
 **Files:** ISSUES.md, audits/2026-06-21_oq138_fsm_route_conversion/CIROPE_RED_ADJUDICATION.md, audits/2026-07-02_oq138_fnl_evidence/, audits/2026-07-02_oq193_giant_comp_ruling/, audits/2026-07-02_oq75_stage2_preflight/
 **Tier:** landed

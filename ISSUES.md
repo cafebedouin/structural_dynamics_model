@@ -4090,6 +4090,16 @@ single-example gate passed 2026-06-05 (KNOWN_STATE.md 2026-06-05).
 **Priority:** 1
 **Deps:** blocked_on OQ-76 (construction-pair stratum N/A recorded there)
 *(operator-go DISCHARGED for part (a), 2026-07-02 — scoped go. Full go (b) — flat-control regeneration ~$9–18 + the §7.1 correlation-statistic build — remains a separate operator spend ruling if the falsifiable core is to be put in motion.)*
+**DRIFTNEUTRAL pin (OQ-87 supplier condition, operator ruling 2026-07-03):** if this rebuild is to
+supply OQ-87's de-baited fired-core rate (OQ-87 is `blocked_on` this OQ for exactly that), its
+generation prompt must be pinned to `prompts/constraint_story_generation_prompt_DRIFTNEUTRAL.md`
+(bait-free drift authoring). The pin is currently ABSENT: repo-wide grep 2026-07-03 (positive
+control: OQ-87 3 hits in the same fileset) finds DRIFTNEUTRAL referenced only in the 2026-06-07
+banked audit scripts and `audits/2026-07-03_oq87_twins_ca3/`. A rebuild generated with a
+bait-bearing prompt does NOT discharge OQ-87's edge (the OQ-87 pilot witnessed the Rule-5
+`authority_erosion/substantial/false` example anchoring drift direction; the OQ-87 twins run
+witnessed magnitude-convention rates of 0.87/0.51 substantial under bait). Verify the pin at
+generation time, not after.
 **Origin:** 2026-06-05 de-leak work item (audit brief §4 Stage 2). The generation pipeline no
 longer hands the author the engine's decision boundaries (schema bands stripped `9f2d050a`, prompt
 de-leaked `b6c4e113`, retry-path scrub `07f7b1c0`, axes cap optional `7ad86c5a`); the
@@ -4820,8 +4830,15 @@ Per-seat-extractive deliberately NOT the key (it names the victim, not the extra
 **Ω-type:** Ω_E (detection-independence is measurable; on kernel_v1 it is saturation-confounded, not
 proven) + Ω_P (whether to fund a larger de-leaked study — operator's, fresh decision).
 
-**Status:** partial — **BANKED/PARKED 2026-06-08.** Cold-read entry point:
+**Status:** partial — twins characterization DONE 2026-07-03 (zero-spend read-only;
+`audits/2026-07-03_oq87_twins_ca3/`); existence proof RE-SCOPED (operator ruling 2026-07-03): the
+limb is blocked on a **de-baited fired-core rate measurement** — the Deps edge below points at
+OQ-75 as the *expected supplier*, but the edge discharges only when that measurement exists (a
+rebuilt corpus generated WITHOUT the DRIFTNEUTRAL prompt pin does NOT discharge it — the pin is
+currently absent repo-wide, witnessed 2026-07-03; see OQ-75's pin note). CA-2 split to OQ-208.
+Full 2026-07-03 section at entry end. Banked record 2026-06-08 below; cold-read entry point:
 **Priority:** 1
+**Deps:** blocked_on OQ-75
 `audits/2026-06-07_stakeholder_layer_migration/COMMITTER_THREAD_HANDOFF.md`. Sub-questions answered;
 the overarching detection-independence existence proof is **UNPROVEN** and its next move is a
 fresh-decision larger study (NOT a parameter change). **Banked verdicts:** two-axis architecture
@@ -4927,6 +4944,33 @@ claim-drift model-stability, filed under OQ-83).
   swap), or accepting substantial-magnitude drift as the characteristic committer death-mode. The
   matched control was worth its cost — it caught a wrong conclusion (Step 1b) before it became a
   GEN_MODEL change. Report `PILOT_STEP01_REPORT.md`. Cost ≈284/500.
+
+**Twins characterization DONE (2026-07-03, zero-spend read-only) — `audits/2026-07-03_oq87_twins_ca3/`
+(PLAN.md pre-registered before any run; FINDINGS.md; raw arm_*.rows).** Four serialized arms
+(kernel_v1 906-pool anchor / testsets 89 / haiku 960 / flash 960), seven controls all discharged
+incl. both kill conditions (C1: engine fires at HEAD on kernel_v1, 129 stories; C2: hand-identified
+conjunction-cell story `propagation_speed_asymmetry` landed in diverge-A). Key results:
+(1) **fired = grep-candidate exactly on all four corpora** (16/16, 129/129, 136/136, 18/18) — the
+foreclosure conjunction is file-locally decidable at HEAD; (2) **committer axis byte-stable across
+26 days of observer-engine evolution**: banked-vs-HEAD on the 906 pool = 0 committer-verdict flips
+vs 42 observer-bucket changes (differ's internal positive control); anchor 74→82 diverge-A is
+wholly observer-side (11 gained / 3 lost, all kept `dead`; OQ-51 null-exclusion = 0); (3) **the
+magnitude convention is model-idiosyncratic**: substantial-rate haiku 0.870 vs flash 0.505
+(|Δ|=0.365 ≥ pinned 0.10) — the banked "one shared convention" kernel_v1 story does not transfer;
+(4) **flash fired-core 18 < pre-registered floor 20 → descriptive-only**; foreclosure-shaped
+authoring (`axiom_overriding`+non-minor+unack) clusters at ≈0.21 on the three Anthropic-era corpora
+(testsets 0.213 / kernel_v1 0.206 / haiku 0.211) and collapses on the Gemini twin (0.027);
+(5) conditioned direction-conjunct agreement 0.734 vs chance 0.687 — near-chance cross-model
+content under bait. **Sizing (target core 20):** haiku-rate 141 stories (citable); flash-rate 1,067
+and shared-core-rate 2,133 pairs (both DESCRIPTIVE-ONLY — flash below floor; they may not license a
+spend). **Ruling (operator 2026-07-03): FOLD-IN** — the proof limb is blocked on a de-baited
+fired-core rate; OQ-75's rebuild is the expected supplier ONLY once its generation prompt is pinned
+to `prompts/constraint_story_generation_prompt_DRIFTNEUTRAL.md` (pin currently ABSENT repo-wide —
+witnessed by controlled grep 2026-07-03; pin note added to OQ-75). **Sooner-option on record:** a
+~150-story DRIFTNEUTRAL pilot buys a citable de-baited rate standalone; its trigger is a NAMED
+downstream forcing function (none named at ruling time — absent one, fold-in dominates). CA-2
+(framing-dependence, untested; OQ-119's 0/5 lacks a framing-sensitive positive control) split to
+**OQ-208** per the same ruling.
 
 ## OQ-88 — Flat router under-routes COUPLED methodological kernels; a false-mountain (authored mountain → computed rope) on a flat-entry topic is a candidate missed-kernel signal
 
@@ -10744,9 +10788,47 @@ queried on its authored grid (not a synthetic time).
 
 **What resolution changes.** The framework gains a second live cohomology frame — disagreement measured over WHO IS IN THE STORY (agenda-setters, payers, the excluded, the synthetic observer) rather than over the four canonical vantages — at variable cardinality where the general-n law is the governing spectrum. First analytical customers: mcc reporting (OQ-204) gains its graded generalization; the OQ-199 seat-disagreement question gains its instrument.
 
+## OQ-208 — CA-2: committer framing-dependence is UNTESTED — the OQ-119 0/5 lacks a framing-sensitive positive control (or a proof none can exist)
+
+**Ω-type:** Ω_E (whether a commitment's verdict can flip under reframing alone is measurable — once
+a positive control exists) with an Ω_P tail (spend go for the construction attempt).
+
+**Status:** open
+
+**Priority:** 3
+
+**Deps:** splits_from OQ-87
+
+**Origin:** 2026-07-03, split from OQ-87 at the twins-characterization landing (operator ruling).
+CA-2 — does the committer axis's verdict depend on FRAMING (same commitment, two framings), the
+real C/B test — was the one OQ-87 limb no read-only run could touch (the archive varies content,
+not framing). OQ-119 measured committer framing-invariance 0/5, but with the flagged empty-result
+caveat: **no known framing-sensitive commitment was among the 5**, so a genuinely framing-invariant
+axis and a framing effect the probe cannot detect produce the identical 0/5 (Build Discipline: "I
+didn't find it" is a fact about the search until the search is shown to find). CA-1 confirmed
+framing-INVARIANCE on the static read (reference_frame/story_uid varied → identical verdicts;
+content flip → verdict moved), which *suggests* architectural invariance but does not prove it.
+
+**The question, with both exit branches authored (per the ruling — the Deps must admit the
+impossibility close):** EITHER (a) construct a framing-sensitive positive control — a commitment
+whose committer verdict (`cs_axiom_foreclosed` / terminal trajectory) flips under reframing alone,
+holding content fixed — and then re-run the OQ-119-style invariance probe against it (if the probe
+detects the flip, its 0/5 becomes citable; if the corpus then still shows invariance, CA-2 closes
+invariant-with-teeth); OR (b) prove no such control can exist — show the committer verdict path
+(`cs_axiom_engine.pl` conjunction + `cs_drift_engine.pl` theory table) is a function of fields the
+framing cannot reach (the CA-1 field partition, made architectural) — and close
+**negative-by-construction**. Branch (b) is a code-level argument, near-zero spend; attempt it
+FIRST. Branch (a) is generation spend (two framings × N commitments) and needs an operator go.
+
+**What resolution changes.** Closes the last untested limb of the two-axis architecture claim
+(observer axis: framing-effect witnessed, OQ-87 Step 0; committer axis: unknown). If (b): Theorem-7
+detection independence gains an architectural framing-invariance corollary. If (a) finds a flip:
+the committer axis is framing-sensitive and every cs_* verdict needs a frame qualifier — a schema
+change, escalate before building.
+
 ---
 
-*Last updated: 2026-07-02. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-07-03. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
