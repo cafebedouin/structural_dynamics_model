@@ -37,10 +37,12 @@
 :- use_module(drl_purity_network, [constraint_neighbors/3, effective_purity/4, type_contamination_strength/2, type_immunity/2]).
 :- use_module(drl_counterfactual).
 :- use_module(corpus_loader).
+:- use_module(cache_registry).      % OQ-193: clear_all_caches for the retract-recompute split
 :- use_module(library(lists)).
 :- use_module(library(apply)).
 :- use_module(library(ordsets)).
 :- use_module(library(aggregate)).
+:- use_module(library(http/json)).  % OQ-193: giant_component_analysis.raw.json co-product
 
 /* ================================================================
    DYNAMIC FACT DECLARATIONS
@@ -1358,6 +1360,247 @@ report_embedded_facts :-
     format('```~n~n').
 
 /* ================================================================
+   PROVENANCE SPLIT (OQ-193)
+   ================================================================
+   Presentation-only split (operator ruling (c), 2026-07-02): the engine
+   topology keeps same-kernel sibling affects_constraint edges (siblings are
+   intended topology; NO topology guard). But the single pooled headline reads
+   within-kernel reading-plurality as cross-kernel coupling, so we ALSO report a
+   sibling-stripped stratum. Method: retract-recompute (adapted from the frozen
+   probe audits/2026-07-02_oq193_giant_comp_ruling/probe_giant_ripple.pl) —
+   deduplicate_neighbors keeps the strongest edge per pair, so a post-hoc gc_edge
+   filter would miss an inferred edge that resurfaces on recompute; stripping the
+   affects_constraint SUBSTRATE and recomputing is the faithful strip.
+
+   Placed DEAD-LAST in run_giant_component_analysis, in a subprocess that then
+   exits — nothing downstream reads the stripped topology, so there is NO restore
+   (the probe's re-assert step is intentionally dropped). Does its own fresh
+   pooled measure first because phases 2/4 mutate gc state at other
+   thresholds/contexts.
+   ================================================================ */
+
+%% same_kernel_explicit_edge(?A, ?B)
+%  An explicit affects_constraint edge whose endpoints share a cs_kernel_id
+%  (the OQ-193 sibling discriminant; probe strip_edge/2). Stored direction —
+%  the retraction below removes the fact as authored.
+same_kernel_explicit_edge(A, B) :-
+    narrative_ontology:affects_constraint(A, B),
+    narrative_ontology:cs_kernel_id(A, K),
+    narrative_ontology:cs_kernel_id(B, K).
+
+%% same_kernel_pair(+A, +B)
+%  True when A and B share a cs_kernel_id (tests surviving edges for the
+%  second control — "cross-kernel" is a misnomer if any survive).
+same_kernel_pair(A, B) :-
+    narrative_ontology:cs_kernel_id(A, K),
+    narrative_ontology:cs_kernel_id(B, K).
+
+canon_pair(A-B, Lo-Hi) :- ( A @< B -> Lo = A, Hi = B ; Lo = B, Hi = A ).
+
+%% measure_topology(+Cs, +Ctx, -NComp, -GiantSize, -NE, -Components)
+%  Fresh full recompute of the component topology at the default coupling
+%  threshold over the CURRENT affects_constraint substrate (probe measure/6
+%  core, also returning Components for per-constraint membership). Clears all gc
+%  edge state + caches first so a prior phase's precompute cannot leak. Leaves
+%  adj/2 populated for the just-measured stratum — the caller reads per-node
+%  degree from adj/2 BEFORE the next measure overwrites it.
+measure_topology(Cs, Ctx, NComp, GiantSize, NE, Components) :-
+    retractall(gc_edge(_, _, _, _)),
+    retractall(gc_edges_precomputed),
+    retractall(gc_inferred_edge(_, _, _)),
+    retractall(adj(_, _)),
+    cache_registry:clear_all_caches,
+    precompute_all_edges(Cs, Ctx),
+    config:param(network_coupling_threshold, Thresh),
+    edges_at_threshold(Thresh, Edges),
+    length(Edges, NE),
+    build_adjacency_facts(Edges),
+    compute_components(Cs, Components),
+    length(Components, NComp),
+    ( Components = [component(GiantSize, _)|_] -> true ; GiantSize = 0 ).
+
+%% snapshot_per_constraint(+Cs, +Components, -Rows)
+%  Rows = [C-row(CompSize, InGiant, Degree), ...] for the CURRENT adj/2 stratum.
+%  MUST run immediately after measure_topology. Members are sorted (BFS builds
+%  Visited via ord_union), so ord_memberchk is safe.
+snapshot_per_constraint(Cs, Components, Rows) :-
+    ( Components = [component(_, GiantMembers)|_] -> true ; GiantMembers = [] ),
+    findall(C-row(CompSize, InGiant, Deg),
+        (   member(C, Cs),
+            component_size_of(C, Components, CompSize),
+            ( ord_memberchk(C, GiantMembers) -> InGiant = true ; InGiant = false ),
+            aggregate_all(count, adj(C, _), Deg)
+        ),
+        Rows).
+
+component_size_of(C, Components, Size) :-
+    ( member(component(S, Members), Components), ord_memberchk(C, Members)
+    -> Size = S
+    ;  Size = 0 ).
+
+%% compute_provenance_split(+Ctx, -Split)
+%  Split = split(Control, NNodes, NStrip, pooled(NE,NComp,Giant),
+%                stratum(NE,NComp,Giant), surviving(M,M1,M2), Label,
+%                PooledRows, StratumRows, CtxAtom)
+compute_provenance_split(Ctx, Split) :-
+    all_corpus_constraints(Cs),
+    length(Cs, NNodes),
+    % Raw strip list (stored direction) — for retraction + control count, as the
+    % probe does; NStrip counts facts, not canonical pairs (two authored
+    % directions retract two facts, so the control drop stays consistent).
+    findall(A-B, same_kernel_explicit_edge(A, B), StripRaw0),
+    sort(StripRaw0, StripEdges),
+    length(StripEdges, NStrip),
+    % Canonical strip set — for the survivor partition (survivor edges are A@<B).
+    maplist(canon_pair, StripEdges, StripCanon0),
+    sort(StripCanon0, StripCanon),
+    % Pooled (fresh) measure — dead-last, after phases 2/4 mutated gc state.
+    measure_topology(Cs, Ctx, NCompP, GiantP, NEP, ComponentsP),
+    aggregate_all(count, narrative_ontology:affects_constraint(_, _), NAff0),
+    snapshot_per_constraint(Cs, ComponentsP, PooledRows),
+    % Strip the same-kernel explicit edges from the substrate (NO restore).
+    forall(member(A-B, StripEdges), retract(narrative_ontology:affects_constraint(A, B))),
+    % Stripped measure.
+    measure_topology(Cs, Ctx, NCompS, GiantS, NES, ComponentsS),
+    aggregate_all(count, narrative_ontology:affects_constraint(_, _), NAff1),
+    snapshot_per_constraint(Cs, ComponentsS, StratumRows),
+    % Positive control: raw affects_constraint count dropped by exactly NStrip.
+    Drop is NAff0 - NAff1,
+    ( Drop =:= NStrip -> Control = ok ; Control = failed ),
+    % Second control: same-kernel edges surviving the stripped recompute.
+    config:param(network_coupling_threshold, Thresh),
+    edges_at_threshold(Thresh, SurvEdges),
+    findall(A-B, ( member(edge(A, B, _, _), SurvEdges), same_kernel_pair(A, B) ), SurvSK0),
+    sort(SurvSK0, SurvSK),
+    length(SurvSK, M),
+    ord_intersection(SurvSK, StripCanon, DedupResurfaced),
+    ord_subtract(SurvSK, StripCanon, NeverStripped),
+    length(DedupResurfaced, M1),
+    length(NeverStripped, M2),
+    % Partition identity (free positive control on the new cause-partition logic).
+    ( M1 + M2 =:= M -> true
+    ; throw(error(oq193_partition_broken(M, M1, M2), _)) ),
+    ( M =:= 0 -> Label = cross_kernel ; Label = explicit_sibling_stripped ),
+    term_to_atom(Ctx, CtxAtom),
+    Split = split(Control, NNodes, NStrip,
+                  pooled(NEP, NCompP, GiantP),
+                  stratum(NES, NCompS, GiantS),
+                  surviving(M, M1, M2),
+                  Label, PooledRows, StratumRows, CtxAtom).
+
+%% report_provenance_split(+Split)
+%  The `## Provenance split (OQ-193)` markdown section. NOT wrapped in catch —
+%  joins the plain conjunction so any exception fails the -g goal.
+report_provenance_split(Split) :-
+    Split = split(Control, NNodes, NStrip,
+                  pooled(NEP, NCompP, GiantP),
+                  stratum(NES, NCompS, GiantS),
+                  surviving(M, M1, M2),
+                  Label, _PooledRows, _StratumRows, _CtxAtom),
+    format('## Provenance split (OQ-193)~n~n'),
+    format('*Pooled topology counts within-kernel reading-plurality (sibling '),
+    format('`affects_constraint` edges) as coupling. The stratum strips explicit '),
+    format('same-kernel sibling edges (retract-recompute) to expose cross-kernel '),
+    format('structure. Operator ruling (c), 2026-07-02: siblings STAY in the engine '),
+    format('topology — this is a presentation split only, no engine-behavior change.*~n~n'),
+    GiantFracP is GiantP / max(1, NNodes),
+    format('**Sibling edges stripped**: ~w  ~n', [NStrip]),
+    format('**same_kernel_edges_surviving**: ~w (dedup-resurfaced ~w, never-stripped ~w)  ~n',
+           [M, M1, M2]),
+    (   Control == ok
+    ->  format('**Positive control**: ok — raw `affects_constraint` dropped by exactly ~w.~n~n',
+               [NStrip])
+    ;   format('**Positive control**: FAILED — the strip did not reach the substrate by '),
+        format('the expected count; the stratum is reported UNDETERMINED below.~n~n')
+    ),
+    format('| Stratum | Edges | Components | Giant size | Giant fraction |~n'),
+    format('|---------|-------|------------|------------|----------------|~n'),
+    format('| Pooled | ~w | ~w | ~w | ~3f |~n', [NEP, NCompP, GiantP, GiantFracP]),
+    (   Control == ok
+    ->  GiantFracS is GiantS / max(1, NNodes),
+        ( Label == cross_kernel
+        -> LabelStr = 'Cross-kernel'
+        ;  LabelStr = 'Explicit-sibling-stripped' ),
+        format('| ~w | ~w | ~w | ~w | ~3f |~n~n', [LabelStr, NES, NCompS, GiantS, GiantFracS])
+    ;   format('| Stratum | UNDETERMINED | UNDETERMINED | UNDETERMINED | UNDETERMINED |~n~n')
+    ),
+    (   Label == explicit_sibling_stripped, Control == ok
+    ->  format('> **Label note**: `same_kernel_edges_surviving > 0` — the stripped stratum '),
+        format('retains same-kernel coupling by inference, so the honest label is '),
+        format('`explicit_sibling_stripped`, not `cross_kernel`. Operator ruling owed on '),
+        format('whether retaining inferred same-kernel coupling in the stratum is intended.~n~n')
+    ;   true
+    ).
+
+%% write_provenance_split_json(+Split)
+%  Emit ../outputs/giant_component_analysis.raw.json (cwd-relative; run_pipeline
+%  enforces cwd=PROLOG_DIR). stratum + per-constraint stratum fields are null when
+%  the positive control failed.
+write_provenance_split_json(Split) :-
+    Split = split(Control, NNodes, NStrip,
+                  pooled(NEP, NCompP, GiantP),
+                  stratum(NES, NCompS, GiantS),
+                  surviving(M, M1, M2),
+                  Label, PooledRows, StratumRows, CtxAtom),
+    (   Control == ok
+    ->  StratumDict = _{n_edges: NES, n_components: NCompS, giant_size: GiantS},
+        ControlAtom = ok
+    ;   StratumDict = null,
+        ControlAtom = failed
+    ),
+    per_constraint_json(PooledRows, StratumRows, Control, PerConstraint),
+    Out = _{
+        pooled: _{n_nodes: NNodes, n_edges: NEP, n_components: NCompP, giant_size: GiantP},
+        stratum: StratumDict,
+        stratum_label: Label,
+        n_sibling_edges_stripped: NStrip,
+        same_kernel_edges_surviving: M,
+        surviving_dedup_resurfaced: M1,
+        surviving_never_stripped: M2,
+        positive_control: ControlAtom,
+        context: CtxAtom,
+        per_constraint: PerConstraint
+    },
+    RawPath = '../outputs/giant_component_analysis.raw.json',
+    setup_call_cleanup(
+        open(RawPath, write, S),
+        json_write_dict(S, Out, [width(80), null(null), true(true), false(false)]),
+        close(S)
+    ),
+    dict_pairs(PerConstraint, _, PCPairs),
+    length(PCPairs, NPC),
+    format(user_error, '[giant] wrote ~w (per_constraint=~w, control=~w, label=~w)~n',
+           [RawPath, NPC, ControlAtom, Label]).
+
+%% per_constraint_json(+PooledRows, +StratumRows, +Control, -Dict)
+%  PooledRows and StratumRows are both keyed by C in the same all_corpus_constraints
+%  order, so they zip position-wise; merge_row unifies the two C args (a free
+%  key-alignment check).
+per_constraint_json(PooledRows, StratumRows, ok, Dict) :-
+    maplist(merge_row, PooledRows, StratumRows, Pairs),
+    dict_pairs(Dict, _, Pairs).
+per_constraint_json(PooledRows, _StratumRows, failed, Dict) :-
+    maplist(pooled_only_row, PooledRows, Pairs),
+    dict_pairs(Dict, _, Pairs).
+
+merge_row(C-row(SzP, InGP, DP), C-row(SzS, InGS, DS),
+          C-_{component_size_pooled: SzP, in_giant_pooled: InGP, degree_pooled: DP,
+              component_size_stratum: SzS, in_giant_stratum: InGS, degree_stratum: DS}).
+
+pooled_only_row(C-row(SzP, InGP, DP),
+          C-_{component_size_pooled: SzP, in_giant_pooled: InGP, degree_pooled: DP,
+              component_size_stratum: null, in_giant_stratum: null, degree_stratum: null}).
+
+%% run_provenance_split
+%  Compute once, render md, write JSON. Plain conjunction (no catch): a failure
+%  fails run_giant_component_analysis -> swipl nonzero -> PrologError.
+run_provenance_split :-
+    constraint_indexing:default_context(Ctx),
+    compute_provenance_split(Ctx, Split),
+    report_provenance_split(Split),
+    write_provenance_split_json(Split).
+
+/* ================================================================
    MAIN ENTRY POINT
    ================================================================ */
 
@@ -1375,5 +1618,7 @@ run_giant_component_analysis :-
     run_phase4,
     format('---~n~n'),
     report_embedded_facts,
+    format('---~n~n'),
+    run_provenance_split,
     format('---~n~n'),
     format('*End of giant component analysis*~n').

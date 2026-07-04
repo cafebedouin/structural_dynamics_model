@@ -557,12 +557,29 @@ def _prolog_covering():
 
 
 def _prolog_giant_comp():
-    """Run giant_component_analysis → giant_component_analysis.md."""
+    """Run giant_component_analysis → giant_component_analysis.md (+ raw.json co-product).
+
+    OQ-193: pre-delete the raw.json co-product FIRST (before anything that can
+    raise) so a failed/partial run can never leave a stale sidecar that a later
+    manifest stamp would falsely certify as this run's (Path.unlink(missing_ok)
+    — a clean checkout has no raw.json, so a bare os.remove would crash every
+    first run). Then assert the owed provenance-split section is present in stdout
+    before writing the md — a standing marker guard so the standalone surface can
+    never silently drop its owed section while the step still reads ok (covers a
+    future catch-wrapping / soft-fail regression on the Prolog side).
+    """
+    (OUTPUTS_DIR / "giant_component_analysis.raw.json").unlink(missing_ok=True)
     result = run_prolog(
         ["stack.pl", "giant_component_analysis.pl"],
         "run_giant_component_analysis",
         timeout=900,
     )
+    if "## Provenance split (OQ-193)" not in result.stdout:
+        raise RuntimeError(
+            "giant_component_analysis stdout is missing the '## Provenance split "
+            "(OQ-193)' section — the owed report surface was dropped (a soft-fail "
+            "or catch-wrap regression on the Prolog side); refusing to write a "
+            "partial md.")
     (OUTPUTS_DIR / "giant_component_analysis.md").write_text(result.stdout, encoding="utf-8")
 
 
@@ -1429,12 +1446,35 @@ def run_pipeline(
             json.dump({"manifest": manifest}, f, indent=2)
         orbits_path = OUTPUTS_DIR / "product_site_orbits.json"
         check_orbits_corpus_hash(orbits_path)
+        # OQ-193: giant_component_analysis.raw.json sidecar manifest (mirrors the
+        # orbit sidecar). Same-run binding is gated on the EXECUTED-STAGE RESULT,
+        # not file existence alone: stamp ONLY when the giant_comp step actually
+        # ran ok AND raw.json exists. _prolog_giant_comp pre-deletes raw.json, so a
+        # failed/skipped stage leaves no file and no stamp — a leftover old sidecar
+        # then carries the OLD manifest and mismatches at join time (correct
+        # degrade to NOT ASSESSED). A future partial-run refactor that skipped
+        # giant_comp could otherwise pair a stale raw.json with a fresh stamp.
+        giant_ok = any(
+            s.name == "giant_comp" and s.status == "ok"
+            for s in pipeline_result.steps
+        )
+        gc_raw = OUTPUTS_DIR / "giant_component_analysis.raw.json"
+        gc_manifest_path = OUTPUTS_DIR / "giant_component_analysis.manifest.json"
+        if giant_ok and gc_raw.exists():
+            with open(gc_manifest_path, "w", encoding="utf-8") as f:
+                json.dump({"manifest": manifest}, f, indent=2)
+            _gc_stamp_msg = ("[MANIFEST] Stamped giant_component_analysis.manifest.json "
+                             f"(run_at={manifest['pipeline_run_at']})")
+        else:
+            _gc_stamp_msg = ("[MANIFEST] giant_comp not ok or raw.json absent — "
+                             "skipped giant_component_analysis sidecar stamp")
         if progress:
             progress("pipeline",
                      f"[MANIFEST] Stamped pipeline_output.json + orbit_data.manifest.json: "
                      f"run_at={manifest['pipeline_run_at']}, "
                      f"commit={manifest['code_commit_short']}, "
                      f"n={manifest['n_constraints']}, dirty={manifest['code_dirty']}")
+            progress("pipeline", _gc_stamp_msg)
 
     collect(_run_step("manifest_inject", _manifest_step, progress))
 
