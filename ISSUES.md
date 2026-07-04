@@ -72,56 +72,42 @@ first solution is always correct.
 
 **Ω-type:** Ω_P (constitutively-open design choice — the engine witnesses, a declared seat settles).
 
-**Status:** partial — constitutive limb (03a) RESOLVED by operator seat-declaration (2026-06-18); empirical limb (03b) OPEN, **unblocked 2026-07-02** (v8 adopted, OQ-135 resolved), and possibly unnecessary.
+**Status:** resolved — (2026-07-03, operator seat-declaration completes 03a; 03b mooted by the same ruling)
 **Priority:** 5
 **Deps:** blocked_on OQ-135
 **Origin:** `docs/deferential_realism_paper_v7.md` §6 open questions; reinforced by
 `docs/seat-theorem-v1.md` §7–§8.
-**File:** `prolog/tests/test_forecloses_fpn_injection.pl` (closest precedent)
 
-**The underspecification (the finding that reframed this OQ, 2026-06-18).** The original
-"specific question" — *run the engine on DR-as-constraint, does it return
-Mountain/Rope/Snare/Tangled Rope?* — is a **Type C paradox** in the operator's own
-taxonomy (`docs/debugging_philosophy.md` §5): a grammatically singular question packaging
-several distinct queries (which DR — the law, the v7 framework, or the engine, per
-`docs/design/v8_seat_gauge_orientation_design_spec.md` §0? authored under which seat? the
-*constitutive* "where does DR sit" vs. the *empirical* "what type does one authored draw
-return?"). Its fix is **index specification**, not a run. And a clean self-applied verdict
-reported as DR's *location* would **commit the no-seat pose** the framework names as its
-unique inconsistency (`seat-theorem-v1.md` §5, Cor 2a; the "present a face as the seat"
-fraud of `docs/one_seat_audited.md`): a seated verdict posed as seat-free. So the question
-as posed cannot be answered in the form it asks — and the seat corpus says exactly why.
+**Resolution.** 03a (constitutive) resolved by operator seat-declaration 2026-06-18, extended
+2026-07-03 (below). 03b (empirical) MOOTED by operator ruling 2026-07-03: where DR sits is not
+an empirical fact a redraw could measure — "it doesn't matter how many times we reran this" —
+it is the declared seat itself. (The redraw doctrine, v8 §7.2, still governs any *empirical*
+claim about what a given authored draw returns; it is the *location* question the ruling
+removes from the empirical register.) Evidence + full ruling text:
+`audits/2026-07-03_oq03_self_application/`; KNOWN_STATE 2026-07-03.
 
-**03a — constitutive limb: RESOLVED by declaration (operator, 2026-06-18).** Where DR sits
-in its own ontology has no seat-free answer (Coupling Theorem: DR is contentful ⇒ seated;
-§7–§8: it cannot self-certify its framing Π). The operator's declared seat: **base-layer
-skepticism** — we cannot know Truth as a base layer — *and yet a seat must be taken*, which
-means axioms, readings, and stakeholders/observers carrying time-evolving qualities (exit,
-power, …) relative to the question (`docs/debugging_philosophy.md`). DR's purpose is to make
-the effort to **expose those seats**, and beneath the seat, one's **orientation toward it** —
-toward oneself and others (`docs/one_seat_audited.md`) — which routinely runs on limited
-vision or an intentional cover story that presents a *choice* as an invariant, often a choice
-someone else pays for, or one we'd rather not acknowledge has a price. The human practice DR
-instantiates: `docs/litany_of_the_real.md` (orientation) and `docs/six_questions.md` (the
-Cor 2b interrogative seat-exposure battery). DR therefore refuses the no-seat pose about
-itself precisely *by* declaring this seat; its inability to world-anchor ε is not a defect
-but the only law-consistent rest point (`v8_seat_gauge_orientation_design_spec.md` §7). The
-residual *work* — building ε's declaration discipline — is now tracked at **OQ-205** (minted
-2026-07-02 after the OQ-135 close left it homeless; was "the same task tracked at OQ-135 /
-v8 §7"), not a separate open question here.
+**The declared seat (operative ruling — kept intact per compress-on-close exception).**
+2026-06-18: **base-layer skepticism** — we cannot know Truth as a base layer, and yet a seat
+must be taken; DR's purpose is to expose seats and, beneath each, the orientation toward it
+(`docs/one_seat_audited.md`, `docs/litany_of_the_real.md`, `docs/six_questions.md`); its
+inability to world-anchor ε is the law-consistent rest point (ε discipline built at OQ-205,
+resolved 2026-07-03). 2026-07-03 extension: DR is a variety of philosophical skepticism whose
+seat is to **look for extraction everywhere** — a technique for surfacing seats, particularly
+hidden ones, and the cover stories that conceal them. It is a lens, not the truth; the lens has
+different apertures and looks from different positions (`docs/seat-theorem-v1.md`,
+`docs/commitment_systems/*`, tying back to `docs/debugging_philosophy.md`), and the
+extraction-seeking focus shapes what it can see — which is exactly what makes it a seat. Known
+limit, witnessed: the outside seat cannot read some internal dynamics
+(`essays/2026-06/the_same_paper.md`).
 
-**03b — empirical limb: OPEN, gated, possibly unnecessary.** If one authors a
-DR-constraint-story under *pre-registered, declared* choices (referent + readings + ε) and
-runs the pipeline, the type returned is a fact **seated on those authoring choices**
-("DR-authored-as-X classifies Y, seated on X"), never "DR is Y" — and must be reported with
-its replicate-stability (generation is a draw, not a measurement — see Critical
-Distinctions). Was deferred behind v8 adoption; **unblocked 2026-07-02** (OQ-135 resolved —
-the v8 vocabulary any 03b writeup would be seated in is now canonical). The operator notes it
-**may not be necessary**: 03a already delivers what self-application was meant to reveal
-(DR's seat is declared, its orientation-discipline named), so 03b would add an illustrative
-seated datum, not a resolution. Next forward move if worked: pre-register referent + readings
-+ ε, run the pipeline, report type + replicate-stability seated on those choices (v8 §7.2's
-redraw doctrine governs).
+**Illustrative seated datum (2026-07-03 run — a demonstration, never a location claim).** v8
+paper through `c-orchestrator` (5 stories at commit `72ab7663`, manifest n=128): the engine
+returned reading-relative, seat-indexed verdicts, no single type — the
+`seat_gauge_orientation_kernel` sibling readings diverged (snare-family with an
+`extraction_blindness` powerless=snare/institutional=rope mismatch vs all-scaffold with
+`false_ci_rope` commentary), flat control unknown/scaffold. Inputs LLM-drawn, single draw, not
+pre-registered — reads as "DR-authored-as-drawn classifies per-reading, seated on those draws."
+Snapshot: `audits/2026-07-03_oq03_self_application/` (ledger + 5 reports).
 
 ---
 

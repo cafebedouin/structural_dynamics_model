@@ -45,6 +45,29 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-03 — OQ-03 RESOLVED: operator declared DR's own seat (extraction-seeking skepticism); 03b mooted; self-application run snapshotted
+**Files:** ISSUES.md, audits/2026-07-03_oq03_self_application/
+**Tier:** landed
+
+**The close.** Operator ruling in session: 03b (the empirical limb) is MOOTED — where DR sits is
+not a fact a redraw could measure ("it doesn't matter how many times we reran this"); it is the
+declared seat itself. Declaration (operative text in ISSUES.md OQ-03): DR is a variety of
+philosophical skepticism whose seat is to look for extraction everywhere — a technique for
+surfacing seats, particularly hidden ones, and the cover stories that conceal them; a lens with
+different apertures and positions (`docs/seat-theorem-v1.md`, `docs/commitment_systems/*`,
+`docs/debugging_philosophy.md`), not the truth; the focus shapes what it can see, which is what
+makes it a seat. Known limit: the outside seat cannot read some internal dynamics
+(`essays/2026-06/the_same_paper.md`).
+
+**The datum.** Same day, the operator ran `docs/deferential_realism_paper_v8.md` through
+`c-orchestrator` (5 stories, commit `72ab7663`, manifest n=128): seat-indexed plurality, no
+single type — kernel siblings diverged (snare-family w/ extraction_blindness mismatch vs
+all-scaffold w/ false_ci_rope commentary), flat control unknown/scaffold. Inputs LLM-drawn,
+single draw, not pre-registered → illustrative seated datum only, never "DR is X." Ledger + 5
+reports snapshotted (outputs/ is gitignored): `audits/2026-07-03_oq03_self_application/`.
+
+---
+
 ## 2026-07-03 — OQ-205 RESOLVED: ε declaration discipline BUILT (11 units, Controls P/S green through the recurring gate)
 **Files:** prolog/constraint_indexing.pl, prolog/boltzmann_compliance.pl, prolog/narrative_ontology.pl, prolog/data_validation.pl, prolog/json_report.pl, prolog/reading_registry.pl, prolog/tests/test_epsilon_declaration.pl, prolog/tests/fixtures/eps_controls/, python/generate_constraint_pl.py, python/run_pipeline.py, python/enrich_pipeline_json.py, python/enhanced_report.py, python/sweeps/epsilon_stability.py, python/epsilon_authorship_readout.py, docs/design/epsilon_declaration_discipline.md, docs/deferential_realism_paper_v8.md, ISSUES.md, audits/2026-07-03_oq205_build/
 **Tier:** landed
