@@ -57,7 +57,13 @@ subject, opposed groundings = a tension by construction). Coverage is THREE-VALU
 and never collapsed: RATIFIED (cells) / NOT-YET-RATIFIED (tranche never ruled; blind BY DESIGN,
 never "no shared subjects" — GAP-24) / single-reading (no pair exists; named, not dropped);
 kernel-less constraints counted. Fails LOUD on swipl error (a missing section must not read as
-measured-no-tensions). Baker now also emits `axiom_diff:axiom_concept_tranche_kernel/1` (one per
+measured-no-tensions), and carries an in-run TWO-SIDED join control closing the
+CLEAN-EMPTY hole (reviewer catch 2026-07-04: a present-but-empty registry loads fine and
+renders `concept 0/0/N` identically to a genuine no-shared-occupants pair): known
+same-concept pair must align AND known distinct pair must not, else halt(3); fired-status
+rendered into the section header. Both arms witnessed (positive: section line; negative:
+in-process retractall -> exit 3). The control's own falsifier caught a real bug in its
+first version (format/2-vs-format/3 on the failure branch). Baker now also emits `axiom_diff:axiom_concept_tranche_kernel/1` (one per
 kernel in the ratified TSV, incl. hypothetical all-no_slot kernels) — the coverage provenance
 bit travels in the registry; regen witnessed concept-facts byte-identical + C6 refusal re-run.
 Witnesses: mixed-scope run (2 ratified kernels w/ cells + seat_gauge NOT-YET-RATIFIED + 1

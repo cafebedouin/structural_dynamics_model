@@ -4014,7 +4014,15 @@ a disparity cell IS a tension), computed fresh each run by swipl over the live c
 pair exists) so unratified never reads "no shared subjects" (OQ-197 pattern). Baker also emits
 `axiom_concept_tranche_kernel/1` coverage facts (concept facts byte-identical across the regen).
 Per-constraint `enhanced_report.py` deliberately NOT wired — wrong altitude (the product is
-cross-reading); revisit only if a per-kernel report family ever exists.
+cross-reading); revisit only if a per-kernel report family ever exists. The section carries an
+in-run TWO-SIDED join control (known same-concept pair must align, known distinct pair must
+not; halt(3) otherwise, fired-status rendered into the section) so a zero-cell kernel is
+"looked and found none," never a clean-empty registry rendering as no-tensions. **Scope note
+for citers:** the pilot's C1/C2 "3/3" scored the PRE-REGISTERED pairs only — the key surfaces
+MORE structure than the controls sampled (first ledger run immediately found an unsampled
+`moral_causation_locus__accountability_intervention_locus` disparity, deontological vs
+instrumental). The ledger is the fuller running witness; the pilot was the seed — do not cite
+3/3 as the ceiling of what the key finds.
 **Build note:** closing this OQ surfaced and fixed two pre-existing test defects
 (`tests/test_axiom_diff.pl`): the westphalia tests froze pre-regime-swap corpus content and had
 been silently unrunnable-green since 2026-06-20 (no leg carries the 4 mapped names — now

@@ -220,6 +220,13 @@ def build_block(entry, report_dir=REPORTS):
 
 _AXIOM_GOAL = """
 [stack],
+( axiom_diff:axiom_aligned(concept, state_monopoly_on_legitimate_issuance,
+                           consensus_suffices_for_legitimacy),
+  \\+ axiom_diff:axiom_aligned(concept, state_monopoly_on_legitimate_issuance,
+                              transaction_visibility_required_for_policy)
+-> format('CONTROL\\tfired~n')
+;  format(user_error, 'CONTROL_FAIL: concept join dead or degenerate (registry empty/missing or all-one-atom)~n', []),
+   halt(3) ),
 corpus_loader:ensure_corpus_loaded,
 Ids = [{ids}],
 findall(K, (member(C, Ids), narrative_ontology:cs_kernel_id(C, K)), Ks0), sort(Ks0, Ks),
@@ -249,7 +256,19 @@ halt(0)
 
 def build_axiom_alignment_section(constraint_ids):
     """Kernel-level OQ-72 concept-key section. Fails LOUD on swipl error —
-    a missing section must never look like measured-no-tensions."""
+    a missing section must never look like measured-no-tensions.
+
+    The error path alone does not close the CLEAN-EMPTY hole: a registry that
+    is present-but-empty (baker bug) loads fine, the join returns unmapped
+    everywhere, and a RATIFIED pair renders `concept 0/0/N` — byte-identical
+    to a genuine no-shared-occupants pair. So every run carries a TWO-SIDED
+    in-process join control on the same code path (axiom_aligned/3 against
+    tranche-1 registry facts): a known same-concept pair must align AND a
+    known distinct-concept pair must not (guards the degenerate all-one-atom
+    registry too). Control failure => halt(3) => this raises; control success
+    is printed INTO the section header, so a zero-cell kernel in the .md sits
+    under a line proving the probe could find. (If tranche 1 is ever retired,
+    repoint the control pair — it names tranche-1 facts.)"""
     import subprocess
     ids = ",".join(sorted({c for c in constraint_ids}))
     goal = " ".join(_AXIOM_GOAL.format(ids=ids).split())
@@ -261,10 +280,13 @@ def build_axiom_alignment_section(constraint_ids):
             f"axiom alignment section failed (swipl exit {proc.returncode}) — "
             f"refusing to emit a ledger without it:\n{proc.stderr[-2000:]}")
     kernels, pairs, cells, n_nokernel = {}, {}, {}, 0
+    control_fired = False
     current = None  # PAIR/CELL rows follow their KERNEL row in stream order
     for ln in proc.stdout.splitlines():
         f = ln.split("\t")
-        if f[0] == "NOKERNEL":
+        if f[0] == "CONTROL":
+            control_fired = True
+        elif f[0] == "NOKERNEL":
             n_nokernel = int(f[1])
         elif f[0] == "KERNEL":
             current = f[1]
@@ -274,9 +296,17 @@ def build_axiom_alignment_section(constraint_ids):
             pairs[current].append(f[1:])
         elif f[0] == "CELL":
             cells[current].append(f[1:])
+    if not control_fired:
+        raise RuntimeError(
+            "axiom alignment section: join control line absent despite exit 0 "
+            "— output channel broken; refusing a section whose zeros would be "
+            "unwitnessed")
     lines = [
         "# Axiom concept alignment — kernel-level (OQ-72 concept key; "
         "deterministic, both keys)",
+        "join control: FIRED this run (known same-concept pair aligns; known "
+        "distinct-concept pair does not) — a zero-cell kernel below is "
+        "'looked and found none', not 'didn't look'",
         "coverage: three-valued per kernel — RATIFIED (pair cells below) / "
         "NOT-YET-RATIFIED (tranche never ruled on this kernel; axioms read "
         "blind BY DESIGN, never 'no shared subjects' — GAP-24) / "
