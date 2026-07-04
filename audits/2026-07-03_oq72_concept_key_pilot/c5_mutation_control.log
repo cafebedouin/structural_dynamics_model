@@ -1,0 +1,19 @@
+# C5/registry mutation control (2026-07-04, post-close reviewer OPEN) — pasted verbatim
+# Question: is the registry-tests' green a real witness (registry-sensitive) or
+# runnable-and-green in a new costume (the pre-fix westphalia failure mode)?
+# Design note: the westphalia tests are registry-INDEPENDENT by design (their 4 seat
+# facts are asserted in setup; C5 scope = "join consumes the seat", not the registry).
+# Registry-sensitivity lives in the axiom_concept_registry unit. Two-sided, targeted:
+--- BASELINE (registry intact) ---
+registry unit: GREEN (3/3)   registry facts: 71
+--- MUTATION: retractall(axiom_diff:axiom_concept(_,_)) -> 0 facts ---
+registry_loaded_c1_pair_mapped ......... **FAILED   (registry gone -> mapping gone)
+pilot_pair_exact_name_all_blind ........ passed     (registry-independent: targeting proof)
+pilot_pair_concept_key_disparity ....... **FAILED   (concept diff reverts toward blind)
+registry unit post-mutation: RED  => the green is registry-sensitive, witness REAL
+westphalia unit post-mutation: GREEN (4/4) => fixture-local seat, registry-independent
+                                              BY DESIGN (correct, not counterfeit)
+# Tordesillas 10/10 disambiguation (reviewer OPEN 2): conversion cell is ONE disparity at
+# papal_authority_scope — papal_demarcation_binds_christian_powers (deontological) vs
+# papal_supremacy_licenses_conquest (theological); other two axioms read blind (0/1/2).
+# Genuine shared subject, no sweep-to-one-slot: upside, not over-merge.
