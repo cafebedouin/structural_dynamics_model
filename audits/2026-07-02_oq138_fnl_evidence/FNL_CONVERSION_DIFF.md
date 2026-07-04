@@ -106,3 +106,13 @@ type/signature/grade changes, no non-determinism.
 fields again (routed seats lose the stale tangled_rope boost; under lever=0 the inert/abstain FNL
 seats also lose it — the plan's clause shape). The twin NEW pair must be re-projected after
 Commit 2; the graduation witness for the full conversion is that post-Commit-2 state.
+
+**CLOSED post-Commit-2 (`82aa372e`; re-projections `fnl_postc2_diff_{haiku,flash,testsets}.log`):**
+twins — changes confined to the FNL seats (8 flash routed; haiku 6 routed + 1 inert no-op seat
+whose spurious probe_signature tension cleared) plus 2 haiku refit ripples; the C1-interim
+override_mismatch tension from the stale catch-all is gone (first_amendment diag yellow→green,
+headline join stays RED via the severe cap). Live — 1/119 records changed, exactly
+`organization_floor_c0`: the stale 0.95 tangled_rope boost is replaced by the raw argmax
+(scaffold 0.785, matching its institutional routed type); verdict surface unchanged (null,
+unknown-typed). Boost-off moved precisely the seats that carried the stale boost — the §B
+prediction, measured.

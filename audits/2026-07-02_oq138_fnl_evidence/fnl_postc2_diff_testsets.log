@@ -1,0 +1,8 @@
+== testsets C1(post-route) vs C2(post-wiring) ==
+OLD manifest: 2026-07-03T22:45:44Z n=119 code=d248a6b
+NEW manifest: 2026-07-04T01:00:53Z n=119 code=1c40d1f
+record-level changed: 1/119 -> ['organization_floor_c0']
+org_floor_c0 (the operator-condition seat): stale FNL boost removed at C2:
+  maxent_top_type: tangled_rope -> scaffold (raw argmax now matches the institutional routed type scaffold)
+  maxent_probs: {"mountain": 0.01, "rope": 0.01, "tangled_rope": 0.95, "snare": 0.01, "scaffold": 0.01, "piton": 0.01} -> {"mountain": 0.0, "rope": 0.0, "tangled_rope": 0.215052, "snare": 0.0, "scaffold": 0.784948, "piton": 0.0}
+  verdict_join: None -> None (unrendered unknown-typed seat, unchanged)
