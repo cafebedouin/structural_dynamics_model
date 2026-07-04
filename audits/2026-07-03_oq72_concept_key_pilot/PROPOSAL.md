@@ -1,8 +1,9 @@
 # OQ-72 concept-key pilot — PROPOSAL (pre-registration)
 
-Status: **AWAITING R1** (operator ratification). Written 2026-07-03, BEFORE any vocabulary
-draft or assignment run. Substrate witnesses: `RECON.md` (same dir, re-witnessed this
-session). Plan of record: `~/.claude/plans/present-a-plan-for-humble-haven.md`.
+Status: **R1 RATIFIED 2026-07-04** (all four asks; C1 carries a diagnostic rider — see
+`R1_RULING.md`, same dir). Written 2026-07-03, BEFORE any vocabulary draft or assignment
+run. Substrate witnesses: `RECON.md` (same dir, re-witnessed this session). Plan of
+record: `~/.claude/plans/present-a-plan-for-humble-haven.md`.
 
 ## What this pilot claims and does not claim
 
@@ -81,6 +82,17 @@ Checked at Phase 3: blind assignment must independently land both members of a p
 same concept atom. **PASS = ≥2/3 pairs same-concept. 1/3 = MARGINAL (operator ruling at R3
 whether to proceed or revisit granularity). 0/3 = FAIL → kill-condition leg (b).** A
 proposer that maps everything to `no_slot`/unique concepts fails HERE, not silently.
+
+**R1 diagnostic rider (ratified 2026-07-04):** the count is the TRIGGER, not the verdict.
+At ANY miss, classify the cause before kill/pass fires — the two causes have opposite
+responses: (i) **granularity artifact** (vocabulary drawn too fine; both members occupy
+one subject-slot the vocab split) → re-vocab at R2 with the criterion intact — even 0/3
+from a globally-too-fine vocab is an R2 rerun, not a criterion death; (ii) **subject
+mismatch** (the `cs_axiom_contradiction` fact opposes on an axis other than shared
+subject) → the same-subject criterion is leaking — THAT is the criterion revisit. The
+classification, not the count, decides re-vocab vs criterion revisit; a 2/3 pass with a
+subject-mismatch miss still surfaces the mismatch to the operator rather than waving it
+through.
 
 **C2 — Contradiction-specific PASS (the criterion's own executable falsifier).**
 Checked at the Phase-5 sweep, on the 3 live kernels only: ≥1 `cs_axiom_contradiction` pair
