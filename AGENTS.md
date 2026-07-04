@@ -736,8 +736,16 @@ RESOLVED (c) 2026-07-02 — same-kernel sibling edges are INTENDED topology and 
 all 5 `constraint_neighbors/3` consumers.** The per-consumer price probe confirmed FPN is unaffected
 (the OQ-23 contamination guard already zeroes sibling edges) while json_report/network_dynamics
 change without feeding any re-classification; the misleading pooled count is fixed at the report
-surface instead (giant_comp reports both pooled + cross-kernel — OWED report-build, see OQ-193).
-Evidence: `audits/2026-07-02_oq193_giant_comp_ruling/`.
+surface instead. **Report-build LANDED 2026-07-04** (`giant_component_analysis.pl`
+`## Provenance split (OQ-193)` md section + same-run `giant_component_analysis.raw.json`;
+`enhanced_report.py` per-constraint "NETWORK POSITION (OQ-193)" section + `network_position` sidecar).
+Strip method = retract-recompute (NOT a post-hoc `gc_edge` filter — `deduplicate_neighbors` keeps the
+strongest edge per pair, so an inferred edge resurfaces on recompute and only a substrate strip is
+faithful), placed DEAD-LAST in `run_giant_component_analysis` so it is never restored. `run_pipeline.py`
+pre-deletes the raw.json and stamps `giant_component_analysis.manifest.json` only when the `giant_comp`
+step is `status==ok` — a stale raw.json can never pair with a fresh stamp. Behavior-preserving:
+`pipeline_output.json` `per_constraint` byte-identical. Evidence:
+`audits/2026-07-02_oq193_giant_comp_ruling/`; KNOWN_STATE 2026-07-04.
 
 ### Run the linter on a testset
 
