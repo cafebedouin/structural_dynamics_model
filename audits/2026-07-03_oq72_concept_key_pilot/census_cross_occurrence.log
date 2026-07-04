@@ -1,0 +1,10 @@
+# RECON §6 cross-occurrence census (run 2026-07-04, pre-R3)
+# Probe: regex cs_axiom(_,_,Name) over all three legs, for the 72 pilot axiom names.
+# Positive control: every pilot name must be found in its OWN file -> PASSED ([]).
+# Cross-occurrences outside the owning file:
+#   animals_are_rights_bearing_individuals -> prolog/testsets_flash/animal_moral_status__abolitionist_reading.pl
+# Reading: the FLASH TWIN of the same kernel+reading re-uses the axiom name. Because
+# axiom_concept/2 is NAME-keyed, ratifying this row extends the mapping to the flash
+# twin's axiom whenever the flash leg is loaded. Same kernel-id, same reading role ->
+# semantically consistent, but the row carries this explicit cross-occurrence note at
+# R3 per R2_RULING.md. All other 71 names: zero cross-occurrences.
