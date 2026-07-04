@@ -945,7 +945,8 @@ cross-kernel stratum. The report-surface build is OWED, not started (recorded be
 per-consumer probe confirms FPN is unaffected (OQ-23 guard already zeroes sibling contamination) and the
 changed consumers (json_report neighbor lists, network_dynamics hub degrees/severity — 15/282 hub flips) feed
 nothing that re-classifies, so an engine-wide guard buys correctness in surfaces nobody classifies on. Witness:
-`audits/2026-07-02_oq193_giant_comp_ruling/RULING_EVIDENCE.md`.
+`audits/2026-07-02_oq193_giant_comp_ruling/RULING_EVIDENCE.md`. **Report-surface build LANDED 2026-07-04**
+(note at end of entry).
 **Priority:** 3
 **Origin:** OQ-23 giant-comp ripple witness, 2026-06-29 (operator ruling option 3: narrow-now-giant_comp-later).
 **Deps:** splits_from OQ-23
@@ -971,6 +972,27 @@ one surface that is read by making `giant_component_analysis` report both the po
 stratum. **Report-surface build OWED (not started):** giant_comp emits both counts; the strip computation is
 already in `probe_giant_ripple.pl`. This is (b)-plus-a-report-fix — the topology decision (siblings stay) is
 the substance; the report split fixes presentation at zero engine-behavior change.
+
+**BUILT + RESOLVED (2026-07-04).** The owed report-surface build landed at **zero engine-behavior change**
+(`pipeline_output.json` `per_constraint` byte-identical, sha256 match, before/after a full pipeline run;
+`constraint_neighbors_existing/2` untouched; `drl_purity_network.pl` sibling warnings stand). Two surfaces:
+(1) **`giant_component_analysis.pl`** gains a `## Provenance split (OQ-193)` md section + a same-run
+`giant_component_analysis.raw.json` co-product (pooled vs sibling-stripped stratum {edges, components, giant,
+giant-fraction} + per-constraint membership/degree in both strata). Method = **retract-recompute** adapted from
+the frozen probe (`audits/2026-07-02_oq193_giant_comp_ruling/probe_giant_ripple.pl`, unchanged — a declared
+frozen snapshot expected to diverge from production), placed **dead-last** so the strip is never restored and
+nothing downstream reads stripped topology. (2) **`python/enhanced_report.py`** per-constraint "NETWORK POSITION
+(OQ-193)" L1 section + additive `network_position` sidecar, four-branch interpretation (cross-kernel coupled /
+within-kernel-plurality / peripheral / UNDETERMINED), same-run guard on the manifest sidecar (stale/missing/
+unparseable → NOT ASSESSED). **Commit-Gate-1 outcome:** `same_kernel_edges_surviving = 0` on `testsets/`
+(dedup-resurfaced 0, never-stripped 0) → the **`cross_kernel` label is HONEST**; the dedup subtlety did not bite;
+**no operator escalation triggered.** Witnessed values (testsets, 2026-07-04): 68 sibling edges stripped, pooled
+giant 12/72-components → stratum giant 9/95-components, positive control ok (raw `affects_constraint` 241→173,
+dropped 68 = strip count). Node set = `all_corpus_constraints/1` = **119** (extractiveness-bearing), a subset of
+the 128-constraint corpus; the 9 excluded are all `*_contradictions` stories (no extractiveness metric), surfaced
+by enhanced_report as "not in node set." Files: `prolog/giant_component_analysis.pl`, `python/run_pipeline.py`
+(run-scoped raw.json binding + gated sidecar stamp), `python/enhanced_report.py`. Provenance: KNOWN_STATE
+2026-07-04.
 
 ---
 

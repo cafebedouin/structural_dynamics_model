@@ -1293,6 +1293,154 @@ def build_contamination_network(constraint_id, pipeline_data):
     return "\n".join(lines)
 
 
+# --- Level 1: NETWORK POSITION (OQ-193 giant-component provenance split) ---
+
+_GC_RAW_PATH = OUTPUTS_DIR / "giant_component_analysis.raw.json"
+_GC_MANIFEST_PATH = OUTPUTS_DIR / "giant_component_analysis.manifest.json"
+_gc_cache: dict | None = None      # raw.json dict once loaded (same-run verified)
+_gc_reason: str | None = None      # NOT-ASSESSED reason if not loaded
+_gc_loaded: bool = False
+
+
+def _gc_manifest_key(m):
+    """Run-identity tuple; the sidecar must match pipeline_output on these
+    (mirrors w1_sheaf_join.manifest_key)."""
+    if not m:
+        return None
+    return (m.get("pipeline_run_at"), m.get("code_commit"), m.get("n_constraints"))
+
+
+def _load_giant_component(pipeline_manifest):
+    """Load giant_component_analysis.raw.json with a same-run guard (OQ-193).
+
+    Returns (raw_dict, None) when the artifact is present and provably from the
+    same run as pipeline_output.json; otherwise (None, reason). Degrades to NOT
+    ASSESSED — never renders stale/foreign numbers — when the raw artifact or its
+    manifest sidecar is missing, is from a different run (manifest_key mismatch),
+    or is unparseable (a truncated raw.json from a crash mid json_write_dict must
+    not propagate and take down the whole report). Cached: files are read once
+    per report process (the loop over constraints shares one run's data)."""
+    global _gc_cache, _gc_reason, _gc_loaded
+    if _gc_loaded:
+        return _gc_cache, _gc_reason
+    _gc_loaded = True
+    if not _GC_RAW_PATH.exists():
+        _gc_reason = "giant_component_analysis.raw.json not produced"
+        return None, _gc_reason
+    if not _GC_MANIFEST_PATH.exists():
+        _gc_reason = "giant_component_analysis.manifest.json (same-run sidecar) missing"
+        return None, _gc_reason
+    try:
+        raw = json.loads(_GC_RAW_PATH.read_text())
+        sidecar = json.loads(_GC_MANIFEST_PATH.read_text())
+    except (json.JSONDecodeError, OSError) as e:
+        _gc_reason = f"unparseable giant_component artifact ({type(e).__name__})"
+        return None, _gc_reason
+    gc_manifest = sidecar.get("manifest", {})
+    if _gc_manifest_key(gc_manifest) != _gc_manifest_key(pipeline_manifest):
+        _gc_reason = ("giant_component sidecar is from a different run "
+                      f"(gc={_gc_manifest_key(gc_manifest)} "
+                      f"pipeline={_gc_manifest_key(pipeline_manifest)})")
+        return None, _gc_reason
+    _gc_cache = raw
+    return _gc_cache, None
+
+
+def build_network_position_section(constraint_id, pipeline_data):
+    """L1: OQ-193 network position — corpus giant-component split (pooled vs
+    sibling-stripped stratum) + this constraint's membership/degree in both.
+
+    Interpretation has FOUR branches; the UNDETERMINED branch (stratum null /
+    positive control failed) is checked BEFORE any in/out comparison, so a null
+    can never read as "not in giant cross" and produce a confident wrong
+    within-kernel-plurality answer."""
+    lines = ["", "--- NETWORK POSITION (OQ-193) ---", ""]
+    pipeline_manifest = (pipeline_data or {}).get("manifest", {})
+    gc, reason = _load_giant_component(pipeline_manifest)
+    if gc is None:
+        lines.append(f"  NOT ASSESSED — {reason}.")
+        return "\n".join(lines)
+
+    pooled = gc.get("pooled", {})
+    stratum = gc.get("stratum")          # None when the positive control failed
+    control = gc.get("positive_control")
+    label = gc.get("stratum_label")
+    n_strip = gc.get("n_sibling_edges_stripped")
+    surviving = gc.get("same_kernel_edges_surviving")
+    per = gc.get("per_constraint", {})
+    row = per.get(constraint_id)
+
+    pn = pooled.get("n_nodes")
+    lines.append(f"  Corpus giant component (pooled):  {pooled.get('giant_size')} of {pn} "
+                 f"nodes, {pooled.get('n_components')} components")
+
+    # Branch (d): UNDETERMINED — checked before any in/out comparison.
+    if stratum is None or control != "ok":
+        lines.append("  Sibling-stripped stratum:         UNDETERMINED (positive control failed)")
+        lines.append(f"  Sibling edges stripped: {n_strip}   same-kernel edges surviving: {surviving}")
+        lines.append("")
+        lines.append("  Interpretation: UNDETERMINED — the sibling strip did not reach the "
+                     "substrate by the expected count; cross-kernel connectivity cannot be "
+                     "assessed this run.")
+        return "\n".join(lines)
+
+    lines.append(f"  Corpus giant component ({label}):  {stratum.get('giant_size')} of {pn} "
+                 f"nodes, {stratum.get('n_components')} components")
+    lines.append(f"  Sibling edges stripped: {n_strip}   same-kernel edges surviving: {surviving}")
+    lines.append("")
+
+    if row is None:
+        lines.append(f"  [{constraint_id} not in the giant-component node set]")
+        return "\n".join(lines)
+
+    ig_p = row.get("in_giant_pooled")
+    ig_s = row.get("in_giant_stratum")
+    lines.append(f"  This constraint — pooled:   in_giant={ig_p}, "
+                 f"component_size={row.get('component_size_pooled')}, "
+                 f"degree={row.get('degree_pooled')}")
+    lines.append(f"  This constraint — stratum:  in_giant={ig_s}, "
+                 f"component_size={row.get('component_size_stratum')}, "
+                 f"degree={row.get('degree_stratum')}")
+    lines.append("")
+
+    # Interpretation branches (a)/(b)/(c); (d) handled above.
+    if ig_p and ig_s:
+        lines.append("  Interpretation: cross-kernel coupled — in the giant component in BOTH "
+                     "strata; connectivity survives the sibling strip.")
+    elif ig_p and not ig_s:
+        lines.append("  Interpretation: connectivity is WITHIN-KERNEL (sibling) plurality — in the "
+                     "pooled giant but NOT the stratum giant; the pooled headline over-reads "
+                     "within-kernel reading-plurality as cross-kernel coupling here.")
+    else:
+        lines.append("  Interpretation: peripheral — not in the giant component in either stratum.")
+    return "\n".join(lines)
+
+
+def _sidecar_network_position(cid, pipeline_data):
+    """Additive sidecar field (OQ-193) — assessed/reason + membership/degree per
+    stratum, following the ε-stability sidecar shape. Validator ignores extras."""
+    pipeline_manifest = (pipeline_data or {}).get("manifest", {})
+    gc, reason = _load_giant_component(pipeline_manifest)
+    if gc is None:
+        return {"assessed": False, "reason": reason}
+    if gc.get("positive_control") != "ok" or gc.get("stratum") is None:
+        return {"assessed": False, "reason": "positive control failed (stratum undetermined)"}
+    row = gc.get("per_constraint", {}).get(cid)
+    if row is None:
+        return {"assessed": False, "reason": "constraint not in giant-component node set"}
+    return {
+        "assessed": True,
+        "reason": None,
+        "stratum_label": gc.get("stratum_label"),
+        "pooled": {"in_giant": row.get("in_giant_pooled"),
+                   "component_size": row.get("component_size_pooled"),
+                   "degree": row.get("degree_pooled")},
+        "stratum": {"in_giant": row.get("in_giant_stratum"),
+                    "component_size": row.get("component_size_stratum"),
+                    "degree": row.get("degree_stratum")},
+    }
+
+
 def _edge_is_authored(neighbor):
     """OQ-103 provenance bit: True iff the edge is a story-authored
     affects_constraint link (edge_type == 'explicit'). Everything else
@@ -3350,6 +3498,8 @@ def generate_report(constraint_id, data, iteration_round=None):
     l2_cs_kernel = build_kernel_reading_section(constraint_id, data["pipeline"])
     # Level 1: FPN contamination topology (Gap analysis Change 4 — resolved)
     l1_contamination = build_contamination_network(constraint_id, data["pipeline"])
+    # Level 1: OQ-193 network position — giant-component provenance split
+    l1_network_position = build_network_position_section(constraint_id, data["pipeline"])
 
     # Post-synthesis (only if T12 flags exist)
     post = build_post_synthesis(constraint_id, data["pipeline"])
@@ -3374,7 +3524,8 @@ def generate_report(constraint_id, data, iteration_round=None):
         l2_cs_kernel,    # kernel cross-reading panel — first (Phase 2: kernel-terminal)
         xcon_synthesis,
         build_level_header(1, "SELF-CONSISTENCY"),
-        l1_identity, l1_trajectory, l1_repair, l1_contamination, l1_orbit, l1_omega,
+        l1_identity, l1_trajectory, l1_repair, l1_contamination, l1_network_position,
+        l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
         l2_convergence, l2_maxent, l2_persistence, l2_stability, l2_abductive,
         l2_axiom2, l2_verdict, l2_theorems, l2_cs_pattern, l2_cs_extended,
@@ -3482,6 +3633,9 @@ def generate_report(constraint_id, data, iteration_round=None):
                 "grid_distance": entry.get("grid_distance"),
                 "epsilon": entry.get("epsilon")}
     sidecar["epsilon_stability"] = _sidecar_eps_stability(constraint_id)
+
+    # Network position (OQ-193) — additive sidecar field; validator ignores extras.
+    sidecar["network_position"] = _sidecar_network_position(constraint_id, data["pipeline"])
 
     # Validate (warn but don't block)
     try:

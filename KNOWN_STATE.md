@@ -45,6 +45,60 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-04 — OQ-193 report-surface build: giant_comp provenance split (pooled + cross-kernel stratum)
+**Files:** prolog/giant_component_analysis.pl, python/run_pipeline.py, python/enhanced_report.py
+**Tier:** landed
+
+The owed OQ-193 report-surface build (RULED (c) 2026-07-02) landed at **zero engine-behavior change**:
+`pipeline_output.json` `per_constraint` is **byte-identical** (sha256 match) before/after a full pipeline run;
+`constraint_neighbors_existing/2` and the `drl_purity_network.pl` sibling warnings are untouched. Two surfaces —
+(1) `giant_component_analysis.pl` gains a `## Provenance split (OQ-193)` md section + a same-run
+`giant_component_analysis.raw.json` co-product (pooled vs sibling-stripped stratum + per-constraint
+membership/degree); (2) `enhanced_report.py` gains a per-constraint "NETWORK POSITION (OQ-193)" L1 section +
+additive `network_position` sidecar with a four-branch interpretation.
+
+**Method = retract-recompute, dead-last.** `deduplicate_neighbors` keeps the strongest edge per pair, so a
+post-hoc `gc_edge` filter would miss an inferred edge that resurfaces on recompute; the faithful strip retracts
+the same-kernel-explicit `affects_constraint` **substrate** and recomputes. Placed dead-last in
+`run_giant_component_analysis` (after `report_embedded_facts`), in a subprocess that then exits, so the strip is
+**never restored** (the probe's re-assert step is intentionally dropped) and nothing downstream reads stripped
+topology. Does its own fresh pooled `measure_topology` first because phases 2/4 mutate gc state.
+
+**Commit-Gate-1 outcome (the witnessed cause, not the assumed one):** `same_kernel_edges_surviving = 0` on
+`testsets/` — dedup-resurfaced 0, never-stripped 0 (partition identity M1+M2==M asserted, held). So the
+**`cross_kernel` label is HONEST** and the dedup subtlety was defensive-only (did not bite); **no operator
+escalation triggered.** The M>0 branch (rename to `explicit_sibling_stripped` + escalate) exists in code but is
+unexercised on this corpus.
+
+**Witnessed values (testsets, 2026-07-04):** 68 sibling edges stripped; pooled giant 12 / 72 components →
+stratum giant 9 / 95 components; positive control ok (raw `affects_constraint` 241→173, dropped 68 = strip
+count). Matches the frozen probe at both endpoints. Node set = `all_corpus_constraints/1` = **119**
+(extractiveness-bearing), a **subset of the 128-constraint corpus** (manifest `n_constraints`) — the plan's
+"per_constraint == manifest" premise was slightly off; 119 is giant_comp's own denominator (phase-1 "Total nodes
+= 119"), and the 9 excluded are all `*_contradictions` stories lacking an extractiveness metric, correctly
+surfaced by enhanced_report as "not in node set."
+
+**Run-scoped binding.** `_prolog_giant_comp` pre-deletes `giant_component_analysis.raw.json` as its FIRST
+statement (`unlink(missing_ok=True)`) and asserts the `## Provenance split (OQ-193)` marker is in stdout before
+writing the md (a standing guard against a future Prolog-side catch-wrap/soft-fail silently dropping the owed
+section). `_manifest_step` stamps `giant_component_analysis.manifest.json` (mirroring the orbit sidecar) **only
+when the `giant_comp` StepResult is `status=="ok"` AND raw.json exists** — executed-stage membership, so a
+skip/fail path can never pair a stale raw.json with a fresh stamp. enhanced_report joins via `manifest_key`
+same-run guard and degrades to NOT ASSESSED on stale/missing/unparseable.
+
+**tripwire — giant_comp intermittently times out (900s) in the parallel Phase-2.** First full-pipeline run this
+session, `giant_comp` hit the 900s subprocess timeout **despite running in 0.64 s / 18 MB standalone** — the
+documented intermittent co-residency stall (OQ-182 class), NOT a regression from this split. The degrade design
+worked exactly as intended: step logged `status=error` (non-critical, pipeline continued to exit 0), the
+pre-deleted raw.json stayed absent, the md was not overwritten, and `_manifest_step` **skipped** the sidecar
+stamp (no fabricated current identity). A re-run completed `giant_comp` cleanly and produced all artifacts
+same-run. If a run's giant_comp surface is stale/absent, check for this timeout before suspecting the code.
+
+**Probe is a frozen dated snapshot.** `audits/2026-07-02_oq193_giant_comp_ruling/probe_giant_ripple.pl` is NOT
+edited; production adapts its strip/measure logic and is expected to diverge (the drift is declared, not silent).
+
+---
+
 ## 2026-07-04 — OQ-75(b) grain precursor probe: throw LARGE, cell-count non-monotone under coarsening (statistic-spec inputs)
 **Files:** python/audits/oq75b_grain_probe.py, prolog/axiom_concept_registry.pl
 **Tier:** landed
