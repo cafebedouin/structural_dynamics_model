@@ -733,7 +733,7 @@ resolved/stale items. The same monthly pass covers:
   premise has changed; this is the symmetric counterpart to the promotion test (promotion adds,
   this removes/refreshes).
 
-**Last review: 2026-06-04. Interval: monthly.** If today is on or after **2026-07-04**, prompt
+**Last review: 2026-07-05. Interval: monthly.** If today is on or after **2026-08-05**, prompt
 the user to run a consolidation pass before starting the requested work, then update both dates.
 
 ## Audit Methodology
