@@ -156,12 +156,12 @@ def tier_match(texts):
             "present": bool(TIER1_RE.search(joined) or TIER2_RE.search(joined))}
 
 
-def live_pl_path(cid):
-    p = TESTSETS / f"{cid}.pl"
+def live_pl_path(cid, testsets_dir=TESTSETS):
+    p = testsets_dir / f"{cid}.pl"
     return p if p.exists() else None
 
 
-def discriminator(cid, flat_manifest_paths):
+def discriminator(cid, flat_manifest_paths, testsets_dir=TESTSETS):
     """Union of manifest omegas (flat manifests carrying this id) + testset .pl
     omega_variable facts. Sources reported separately."""
     mtexts = []
@@ -169,7 +169,7 @@ def discriminator(cid, flat_manifest_paths):
         for oid, desc in manifest_omegas(mp):
             mtexts.append(f"{oid} {desc}")
     ptexts = []
-    plp = live_pl_path(cid)
+    plp = live_pl_path(cid, testsets_dir)
     if plp:
         ptexts = pl_omega_spans(plp)
     return {"manifest_omega_match": tier_match(mtexts) if mtexts else None,
@@ -177,6 +177,88 @@ def discriminator(cid, flat_manifest_paths):
             "union": tier_match(mtexts + ptexts),
             "n_manifest_omegas": len(mtexts), "n_pl_omega_spans": len(ptexts),
             "pl_source": str(plp.relative_to(REPO)) if plp else None}
+
+
+# ---------------------------------------------------------------------------
+# Per-corpus sweep (twin legs etc.) — same predicate, same maps, same tiers
+# ---------------------------------------------------------------------------
+
+def sweep_corpus(label, output_json, testsets_dir):
+    """Layer-B + routing partition + discriminator over an arbitrary
+    (pipeline output, testsets dir) pair. Per-instrument liveness controls are
+    built in (claimed-type distribution + alert-channel coverage), so an empty
+    firing set is distinguishable from a reader that never looked."""
+    d = json.loads(Path(output_json).read_text(encoding="utf-8"))
+    pc = d.get("per_constraint", [])
+    lb = layer_b(Path(output_json))
+
+    # liveness controls (didn't-look guards for a possibly-empty firing set)
+    claimed = {}
+    for c in pc:
+        claimed[c.get("claimed_type")] = claimed.get(c.get("claimed_type"), 0) + 1
+    n_alert_bearing = sum(1 for c in pc if ((c.get("verdict_join") or {}).get("alerts")))
+    n_claimed_mountain = claimed.get("mountain", 0)
+
+    kmap_raw = build_constraint_map()
+    kmap = {}
+    for cid, (kid, tag) in kmap_raw.items():
+        kmap.setdefault(norm_id(cid), []).append((kid, tag))
+    fmap = flat_walk()
+
+    partition = {"flat": [], "kernel_routed": [], "routing_unknown": [], "routing_ambiguous": []}
+    for row in lb["firing"]:
+        nid = row["norm_id"]
+        in_k, in_f = nid in kmap, nid in fmap
+        entry = dict(row)
+        if in_k and in_f:
+            entry["kernel"] = kmap[nid]
+            entry["flat_manifests"] = fmap[nid]
+            partition["routing_ambiguous"].append(entry)
+        elif in_k:
+            entry["kernel"] = kmap[nid]
+            partition["kernel_routed"].append(entry)
+        elif in_f:
+            entry["flat_manifests"] = fmap[nid]
+            entry["discriminator"] = discriminator(row["id"], fmap[nid], testsets_dir)
+            partition["flat"].append(entry)
+        else:
+            entry["discriminator_pl_only"] = discriminator(row["id"], [], testsets_dir)
+            partition["routing_unknown"].append(entry)
+    und = []
+    for row in lb["undetermined"]:
+        nid = row["norm_id"]
+        row = dict(row)
+        row["routing"] = ("ambiguous" if nid in kmap and nid in fmap else
+                          "kernel" if nid in kmap else "flat" if nid in fmap else "unknown")
+        row["discriminator_pl_only"] = discriminator(row["id"], [], testsets_dir)
+        und.append(row)
+
+    results = {
+        "corpus_label": label,
+        "manifest": {k: lb["manifest"].get(k) for k in
+                     ("pipeline_run_at", "n_constraints", "code_commit_short",
+                      "code_dirty", "corpus_path")},
+        "liveness_controls": {
+            "claimed_type_distribution": claimed,
+            "n_claimed_mountain": n_claimed_mountain,
+            "n_alert_bearing": n_alert_bearing,
+            "n_per_constraint": len(pc),
+        },
+        "partition": partition,
+        "partition_counts": {k: len(v) for k, v in partition.items()},
+        "undetermined_bucket": und,
+        "pin1_note": "twin/archive legs without manifest lineage fail-close to "
+                     "routing_unknown; they contribute to base-rate characterization, "
+                     "never to D",
+    }
+    out = AUDIT_DIR / f"oq88_sweep_{label}.json"
+    out.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"results -> {out.relative_to(REPO)}")
+    summary = {k: v for k, v in results.items() if k not in ("partition", "undetermined_bucket")}
+    summary["firing_ids"] = [r["id"] for r in lb["firing"]]
+    summary["undetermined_ids"] = [r["id"] for r in lb["undetermined"]]
+    print(json.dumps(summary, indent=2))
+    return results
 
 
 # ---------------------------------------------------------------------------
@@ -352,4 +434,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) == 4 and sys.argv[1] == "sweep_corpus":
+        # sweep_corpus <label> <pipeline_output_json>; testsets dir = prolog/<label>
+        sweep_corpus(sys.argv[2], sys.argv[3], REPO / "prolog" / sys.argv[2])
+    else:
+        main()

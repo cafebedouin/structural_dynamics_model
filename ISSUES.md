@@ -5162,6 +5162,21 @@ kernel-vs-flat review; likely prompt-wiring only)? Optional upgrade: label ONE c
 from the candidate list above and cell 2 becomes witnessable on re-run. Building either trigger
 is a follow-up gated on that ruling.
 
+**Twin-legs addendum (2026-07-05, operator-requested;
+`audits/2026-07-04_oq88_false_mountain_detector/TWINS_ADDENDUM.md`).** Fresh `classify_corpus`
+per twin at `8a529c73` (960/960 each, model fingerprint enforced). **D fires on ZERO twin
+stories — by construction:** both twins are 100% kernel-linked (960/960 carry in-file
+`cs_kernel_id`), so no flat conjunct exists; the twins measure Layer B + discriminator only.
+**Second Layer-A instrument found:** in-file `cs_kernel_id` resolves the manifest gap for
+seed-pipeline corpora — any wiring of D must read kernel-routed ⟺ manifest map ∨ in-file
+`cs_kernel_id`; retro-check confirms the 2026-07-04 live partition stands (0/5 of the live
+routing-unknown+undetermined stories carry it; flat candidates clean too). **Discriminator
+saturation replicates 69/69** (haiku 21/21, flash 48/48) — D′ confirmed dead corpus-family-wide;
+the Ω_P choice has no refined-gate middle option at this discriminator. Mountain→rope rates are
+REGIME/MODEL-BOUND descriptive stats (OQ-70 rule; era confounds corpus kind — not citable as
+contest-tracking evidence): live 10/18, kernel_v1 2/41, haiku 22/72, flash 55/104 — the twins
+disagree 30.6% vs 52.9% on the same seed pool.
+
 ---
 
 ## OQ-89 — `accessibility_collapse`/`resistance` under-authoring + the 0.5 neutral-default-crosses-threshold class

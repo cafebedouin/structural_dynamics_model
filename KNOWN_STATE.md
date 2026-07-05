@@ -71,6 +71,16 @@ bucket. **Residual (blocked_on_human, in OQ-88):** the Ω_P ruling — auto-rout
 witnessable. Verdict per the pre-registered cells: **gate-signal CANDIDATE, not a witnessed
 gate.**
 
+*Twin-legs addendum (2026-07-05, `TWINS_ADDENDUM.md` in the audit dir):* fresh per-twin
+`classify_corpus` at `8a529c73` (960/960 each, fingerprint enforced). D fires on ZERO twin
+stories **by construction** — both twins are 100% kernel-linked (960/960 in-file `cs_kernel_id`),
+so no flat conjunct exists. **New instrument:** in-file `cs_kernel_id` is a second Layer-A
+routing source the manifest walk misses (seed-pipeline corpora have no manifests); any D wiring
+must use manifest-map ∨ in-file `cs_kernel_id`. Live partition retro-checked and stands (0/5
+routing-unknown+undetermined carry it). Discriminator saturation replicates 69/69 → D′ dead
+corpus-family-wide. Mountain→rope rates regime/model-bound (OQ-70 rule, not citable as
+contest-tracking): live 10/18, kernel_v1 2/41, haiku 22/72, flash 55/104.
+
 ## 2026-07-04 — OQ-125 RESOLVED (value-invariance beyond H1) + OQ-123 MITIGATED ((a) refuted; (b)-or-(c2) live): conditioned twin re-analyses
 **Files:** python/audits/twin_comparison.py, ISSUES.md, audits/2026-07-04_twin_conditioned/
 **Tier:** correction-key
