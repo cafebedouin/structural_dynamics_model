@@ -99,6 +99,35 @@ agreement under a sonnet paired twin, (b) diverges.
    The `d==0.90` gate was dropped at freeze (recon falsified the universal d-tell;
    named imputed id has d=0.95).
 
+## Addendum (2026-07-04, post-review reconciliation)
+
+1. **Disagreeing-below-band disposition: no committed falsifier fired.** The frozen
+   control text (`PRE_REGISTRATION.md` §Track A, byte-unchanged since `bc04d809` —
+   `git diff bc04d809 HEAD -- PRE_REGISTRATION.md` = empty) commits to *report
+   n/band/width/observed* plus the REACH criterion only; "disagreeing pairs NOT
+   below band" was never frozen as a falsifier (the plan doc itself had already
+   demoted that verdict as trivially passable). The 3/4 below-band disagreeing
+   subsets are therefore genuinely unplanned, correctly filed report-only.
+2. **Strong-form (a)-kill (derivation from reported aggregates, no new witness).**
+   Corpus agrees 378/960, authored-both 316/805 ⇒ the 155 non-authored-both pairs
+   agree at 62/155 = **0.4000** vs authored-both **0.3925** — divergence is UNIFORM
+   across cells, not compositional. This pins (a) harder than "imputed cells too
+   small to drag": there is no depressed non-authored stratum at all.
+3. **Institutional margin robustness (post-hoc envelope, not a decision change).**
+   N=1000 permutations (stamped in the output). Probe on the harness code path
+   reproduces the shipped numbers at the frozen seed (obs 0.0129, band5 0.0188,
+   band95 0.0198); across 20 fresh seeds band5 ∈ [0.01883, 0.01891] — spread
+   ~8×10⁻⁵, two orders below the 0.006 margin; observed < min(band5) at every seed.
+4. **Stamp structure (make-or-break witness, stated precisely).** Each seat carries
+   ONE `same_side` block holding {n, idset hash, observed, band5, band95} as sibling
+   fields; observed and band are computed from the identical id list in a single
+   `_delta_stats` call — there are no two hashes to diff because set divergence is
+   structurally impossible at the JSON level (single-source, stronger than
+   hash-equality over separately selected sets).
+5. **Attribution note:** the DIRECTIONAL (c1) finding rides the deviation-4
+   secondary probe (frozen pre-join); the plan-literal primary alone was
+   report-only (n=5).
+
 ## Files
 
 - `PRE_REGISTRATION.md` — frozen rules + declared deviations (commit `bc04d809`)
