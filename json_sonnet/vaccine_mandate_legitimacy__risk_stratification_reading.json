@@ -1,0 +1,310 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_legitimacy__risk_stratification_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "5a90f68b-7519-4f1d-9c2c-3a4ec72de736"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.48,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vaccine Mandate Legitimacy — Risk-Stratification (Proportionality) Reading",
+    "topic_domain": "public_health/constitutional_law/bioethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_risk_occupational_cohorts",
+      "immunocompromised_patients",
+      "health_systems_administrators"
+    ],
+    "victims": [
+      "low_risk_mandate_targets",
+      "workers_in_misclassified_risk_tiers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "health_systems_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Design and defend the actuarial threshold that separates a permissible targeted mandate from an impermissible blanket one. They set the risk cutoffs (age bands, comorbidity scores, occupational exposure classes) and administer exemption and enforcement machinery. They bear reputational and legal risk if the threshold is challenged as arbitrary, but capture legitimacy and continued mandate authority when courts uphold a proportional design."
+    },
+    {
+      "name": "high_risk_occupational_cohorts",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Health workers, congregate-care staff, and others in demonstrably high-exposure or high-transmission-consequence settings. The targeted mandate reduces their occupational risk and the risk they pose to vulnerable patients/clients; they are the group whose inclusion is least contestable under the proportionality logic."
+    },
+    {
+      "name": "immunocompromised_patients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Cannot vaccinate themselves effectively or rely on their own immune response; depend entirely on the vaccination status of the workers and caregivers around them. The risk-stratification reading exists substantially to protect this group by justifying targeted (not blanket) mandates aimed at their care environment."
+    },
+    {
+      "name": "low_risk_mandate_targets",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals swept into a mandate whose actuarial justification is thin for their specific risk profile (e.g., young, low-exposure, remote workers included in an occupational category defined too broadly). They bear employment, legal, or social consequences of non-compliance without a correspondingly strong individual risk basis — the exact failure mode the proportionality doctrine is supposed to prevent but does not always catch in practice."
+    },
+    {
+      "name": "workers_in_misclassified_risk_tiers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Placed in a risk category by administrative classification (job title, facility type) that does not track their actual exposure (e.g., remote-facility clerical staff coded under a hospital-wide mandate). They have little recourse to contest the classification and face job loss or exclusion if they do not comply, despite the doctrine's promise that only genuinely high-risk targeting is permissible."
+    },
+    {
+      "name": "courts_and_reviewing_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate whether a given mandate's threshold and scope satisfy proportionality — whether it is narrowly tailored to actuarial risk or functions as a blanket mandate in targeted clothing. Their rulings define, case by case, where the risk-stratification line actually sits, and can force administrators to redraw the threshold."
+    },
+    {
+      "name": "vaccine_hesitant_advocacy_groups",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that any actuarial threshold is itself illegitimate because it treats bodily autonomy as tradeable against a state-calculated risk score rather than as categorically protected. Their objection is not to a particular threshold but to the whole risk-stratification logic; they are heard in litigation but their categorical objection is structurally foreclosed from altering the doctrine's own terms, since the doctrine's premise is that some threshold-based mandate is legitimate."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a legal and administrative middle path that permits targeted mandates for demonstrably high-risk settings (hospitals, congregate care, high-exposure occupations) while barring undifferentiated population-wide mandates — coordinating protection of vulnerable populations against transmission risk without claiming authority over the general population's medical choices.",
+    "transfer_function": "Moves compliance burden and bodily-integrity costs from the state's general population onto persons administratively classified as high-risk-adjacent (by occupation, facility, or exposure category), while moving protection benefits to immunocompromised and highly exposed persons in those same settings.",
+    "absent_voices": "Vaccine-hesitant advocacy groups object to the entire threshold-based framework as illegitimate in principle, not merely miscalibrated; their categorical objection is heard in court but cannot be resolved within a doctrine whose premise is that a threshold-based mandate can be legitimate. Workers placed in misclassified risk tiers rarely have standing or resources to contest their specific classification, so the doctrine's proportionality promise is tested far less often at the margin than at the extremes.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the risk-stratification doctrine vanished, mandate authority would collapse to one of the two extreme readings — either blanket mandates would become legally uncontestable (public health primacy) or all mandates would become legally impermissible (bodily autonomy primacy). Hospitals, courts, and employers currently rely on the middle doctrine's threshold tests to design policy; without it, every existing targeted mandate would need to be re-litigated under a different legal theory.",
+    "founding_problem": "Courts and legislatures needed a principle to resolve mandate disputes that avoided both extremes: unlimited state power to compel medical intervention on any population, and an absolute veto that would leave severely immunocompromised patients and high-exposure workers unprotected. The proportionality/risk-stratification doctrine was built to let mandates survive judicial review only when narrowly tailored to actual risk.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Public health administrators attest the actuarial-threshold problem remains live (variant risk, occupational exposure differentials persist). Independent legal scholars outside the administering health agencies and outside the advocacy groups note that in practice, threshold definitions are frequently drawn broadly enough to functionally approximate blanket mandates, and that misclassification litigation is rare because affected workers lack resources to challenge tier assignment — suggesting the doctrine's proportionality promise is only partially operative outside of high-profile test cases."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the risk-stratification reading of the vaccine-mandate-legitimacy kernel: the claim that mandate legitimacy is contingent on satisfying an actuarial risk threshold, such that blanket population-wide mandates fail proportionality review but mandates narrowly targeted at demonstrably high-risk settings (healthcare, congregate care, high-exposure occupations) remain permissible. This is a distinct constraint from the public-health-primacy reading (which grounds mandate authority in a general duty to prevent externalities, with no threshold gate) and the bodily-autonomy-primacy reading (which forecloses mandate authority categorically regardless of risk). The three readings are linked via network.affects_constraints and are not merged here — each has its own beneficiary/victim structure and its own epsilon. The structural delta for this reading, as anticipated, shows up in the victim set: because the actuarial threshold is administratively drawn (by job title, facility type, or occupational code) rather than measured directly per individual, some workers are swept into 'high-risk' tiers whose actual exposure does not match the tier's justification. The doctrine's proportionality promise is therefore only partially self-enforcing.",
+    "logic_rationale": "Extractiveness is moderate (0.42) and rising slowly over the interval, reflecting gradual threshold-creep: administrators, once granted authority to draw a risk line, face incentive pressure to draw it broadly enough to simplify enforcement, which erodes the doctrine's narrow-tailoring promise over time without ever becoming a full blanket mandate. Suppression is moderate (0.48) — real but bounded, because the doctrine's own logic requires exemption pathways and individualized risk review to survive judicial scrutiny, which caps how coercive enforcement can become before the doctrine collapses into the public-health-primacy reading. Theater ratio rises modestly (0.12 to 0.30) as administrative risk-classification processes accumulate procedural trappings (review boards, appeal processes) that in practice rarely overturn tier assignments — the appearance of individualized proportionality review outpacing its substantive operation. Accessibility collapse is moderate (0.40): exemption and reclassification routes formally exist, but are underused by exactly the powerless workers who need them most. Resistance is meaningfully high (0.55) because both extreme camps — public health absolutists and bodily-autonomy absolutists — attack the middle doctrine from opposite directions, and misclassified workers occasionally litigate their specific tier.",
+    "directionality_logic": "Health systems administrators are the agenda-setters: they draw and defend the threshold, and are structurally the analytical/institutional seat that bears legal risk rather than health risk. High-risk occupational cohorts and immunocompromised patients are genuine beneficiaries — the doctrine exists substantially to let mandates protect them without licensing unlimited state power. Low-risk mandate targets and misclassified-tier workers are the victims: they bear compliance costs disproportionate to their individual risk contribution because the actuarial threshold is applied at the group/classification level rather than the individual level. This group-level application is exactly where the doctrine's proportionality promise is weakest in practice, and where the tangled-rope structure (genuine coordination function plus asymmetric extraction on misclassified workers) is most visible.",
+    "perspectival_gap": "From the administrator's seat, this reads as principled, narrowly-tailored public health law — a genuine constraint on state overreach. From the seat of a worker in a misclassified risk tier, the same doctrine reads as a mandate imposed on them with the individualized-risk analysis promised by the doctrine never actually performed in their case. The engine should compute these as different seat-level classifications from the same structural facts; the divergence is the point, not an error.",
+    "mandatrophy_analysis": "The founding problem (needing a principle between unlimited mandate authority and an absolute veto) remains partially live — new pathogens and variant risk differentials keep recreating scenarios where a threshold-based approach is needed. But the specific administrative machinery built to implement any given mandate under this doctrine can outlive the acute risk that justified its threshold (e.g., a mandate calibrated to an early pandemic risk profile persisting after risk has fallen for most of a classified tier). The doctrine avoids blanket mandatrophy by requiring periodic threshold reassessment, but nothing in the structure guarantees that reassessment actually happens promptly, which is why founding_problem_status is marked contested rather than clearly live or clearly dead.",
+    "kernel_context": "This constraint is the risk_stratification_reading of the vaccine_mandate_legitimacy kernel. Two sibling readings exist as separate constraints: public_health_primacy_reading (state duty to prevent collective harm justifies mandate authority without an actuarial gate; unvaccinated status treated as a general externality) and bodily_autonomy_primacy_reading (medical self-sovereignty is absolute; state coercion is categorically impermissible regardless of any risk calculation). This reading occupies the structural middle: it accepts that mandate authority can be legitimate (rejecting the autonomy-primacy premise) but only within a proportionality gate keyed to actuarial risk (rejecting the public-health-primacy premise that risk-generality alone suffices). The expected structural delta — that victim-set size varies by where the threshold is drawn, and that the two extreme readings could in principle collapse into this one if either extreme reading's threshold were pushed to 0 (autonomy-primacy) or 1 (public-health-primacy) — is captured in the victim/beneficiary asymmetry authored above rather than folded into a single averaged epsilon."
+  },
+  "omegas": [
+    {
+      "id": "threshold_calibration_legitimacy",
+      "question": "Is there a principled, non-arbitrary way to set the actuarial risk threshold that separates a legitimate targeted mandate from an illegitimate blanket one, or is any specific threshold ultimately a policy choice dressed in actuarial language?",
+      "resolution_mechanism": "Comparative judicial review across jurisdictions using different threshold methodologies (relative risk ratios vs. absolute incidence vs. occupational exposure classification) to see whether courts converge on a stable, replicable standard or whether outcomes track political composition of the deciding body instead.",
+      "impact": "If no principled threshold exists, the risk-stratification reading is itself a contested construction rather than a neutral middle ground — its legitimacy claim would be structurally similar to the extremes it claims to mediate between, weakening its status as a distinct, defensible reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the actuarial threshold at the heart of this reading is principled or a disguised policy choice."
+    },
+    {
+      "id": "misclassification_correction_rate",
+      "question": "How often are workers who are administratively misclassified into a high-risk tier successfully reclassified through appeal or exemption processes, versus how often does misclassification simply persist uncontested?",
+      "resolution_mechanism": "Empirical audit of exemption/appeal request rates, grant rates, and time-to-resolution across a sample of mandate-administering institutions, compared against estimated misclassification prevalence from independent occupational exposure studies.",
+      "impact": "A low correction rate would confirm that the doctrine's individualized-proportionality promise is largely theatrical for the powerless victim group, supporting the theater_ratio trajectory authored here and strengthening the tangled_rope classification over a pure rope reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether administrative reclassification actually corrects misclassified risk tiers in practice."
+    },
+    {
+      "id": "kernel_collapse_direction",
+      "question": "Under sustained political or epidemiological pressure, does the risk-stratification reading tend to collapse toward the public-health-primacy reading (threshold drifting toward zero, effectively blanket) or toward the bodily-autonomy-primacy reading (threshold drifting toward one, effectively no mandate survives review)?",
+      "resolution_mechanism": "Longitudinal tracking of threshold definitions and mandate scope across multiple public health emergencies to observe directional drift, correlated with the political valence of the administering government and prevailing judicial composition.",
+      "impact": "Directional collapse toward either extreme would indicate the risk-stratification reading functions as an unstable equilibrium rather than a genuinely distinct, stable doctrine — informing whether this constraint should be modeled as an independent long-run attractor or a transitional state between the two extreme readings.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the middle reading is a stable equilibrium or drifts toward one of the two extreme kernel readings over time."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_health_primacy_reading",
+      "bodily_autonomy_primacy_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the vaccine_mandate_legitimacy kernel. public_health_primacy_reading grounds mandate authority in collective-harm prevention without an actuarial gate (broader beneficiary set, larger victim set, higher extractiveness expected). bodily_autonomy_primacy_reading forecloses mandate authority categorically (no beneficiaries from coercive mandate machinery; victims are anyone subject to any mandate; likely classifies as snare or tangled_rope depending on enforcement data). This risk_stratification_reading occupies the structural middle, with victim-set size directly sensitive to where the actuarial threshold is administratively drawn — the expected structural delta noted in the generation brief. Each story carries its own epsilon and its own stakeholder set; they are not merged."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "proportionality_gated_mandate_authority",
+    "drift_state": {
+      "moment": "post_pandemic_litigation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "vaccine_mandate_legitimacy__public_health_primacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mandate_legitimacy_requires_actuarial_proportionality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "individualized_risk_review_must_be_operative_not_nominal",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

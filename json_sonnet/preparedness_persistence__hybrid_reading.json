@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "b7eb92e6-4cc4-44ba-a6e2-1c323ed15202"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "piton",
+    "human_readable": "Stratified Disaster Preparedness System (Hybrid Reading)",
+    "topic_domain": "institutional/disaster_preparedness",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "structural_engineering_inspectorate",
+      "emergency_management_agencies"
+    ],
+    "victims": [
+      "building_occupants_relying_on_evacuation_drills",
+      "municipal_budget_holders"
+    ],
+    "vindicated_propositions": [
+      "preparedness_infrastructure_reduces_disaster_mortality"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "structural_engineering_inspectorate",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Conducts load-bearing, seismic-retrofit, and material-fatigue inspections on a fixed technical schedule. Findings are load-tested against physical failure modes and produce binding remediation orders. This function is exercised continuously against real structural failures elsewhere in the world and remains genuinely competent — its authority is not ritual, it is verified by post-disaster forensic audits."
+    },
+    {
+      "name": "emergency_management_agencies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Administers evacuation drills as a scheduled, low-cost compliance activity: staff walk a fixed route once or twice a year, sign an attendance sheet, and the drill is logged as complete. No scenario variation, no timing under real crowd conditions, no post-drill failure analysis feeds back into route design. Collects the credibility of 'we are prepared' without maintaining the operational capacity the drills nominally test."
+    },
+    {
+      "name": "building_occupants_relying_on_evacuation_drills",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Participate in the ritualized evacuation drills, told the exercise validates their safety route. In an actual event they would rely on muscle memory the drill never actually built — crowd bottlenecks, blocked exits, and panic dynamics are never simulated. They bear the cost of the gap between the credibility the drill manufactures and the operational readiness it fails to build, but this cost is invisible until an actual emergency occurs."
+    },
+    {
+      "name": "municipal_budget_holders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Fund both subsystems from the same preparedness line item, without a mechanism to distinguish the inspectorate's high-value spend from the emergency-management drill budget's low-value spend. Cannot easily redirect drill funding toward genuine readiness upgrades (route redesign, timed exercises with real crowd dynamics) because the drill's completion metric (attendance logged) already satisfies the compliance requirement the budget is checked against."
+    },
+    {
+      "name": "structural_failure_forensics_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Post-disaster investigators who examine which preparedness components actually held under real conditions. Their reports consistently validate the inspection regime (structures inspected under current codes perform as predicted) while flagging evacuation performance as decoupled from drill history — occupants who drilled regularly evacuate no faster than those who never drilled, once a real crowd-panic dynamic is present."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Preparedness as a category solves a real coordination problem: aligning many independent actors (engineers, building managers, occupants, regulators) around a shared readiness standard so that disaster response does not have to be improvised from zero each time.",
+    "transfer_function": "Moves inspection compliance costs from building owners to the inspectorate (a real transfer purchasing verified structural safety) and moves compliance-signaling costs from emergency managers to building occupants (a transfer purchasing a credibility signal — 'the building is prepared' — without a matched increase in actual evacuation capacity).",
+    "absent_voices": "Building occupants who would ask for drills tested under realistic crowd-panic conditions are not in the room when drill design is set; the drill's completion criterion (attendance) is set unilaterally by emergency-management administrators who are evaluated on compliance rates, not on evacuation-time outcomes.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the inspection regime disappeared, buildings would begin failing structurally within a measurable timeframe — the world clearly rearranges around its absence. If evacuation drills disappeared, the forensic evidence suggests actual evacuation outcomes would barely change, but the perceived-safety economy (insurance ratings, compliance certifications, occupant confidence) would rearrange sharply. The verdict is contested precisely because the two subsystems, bundled under one label, would produce opposite answers if disaggregated.",
+    "founding_problem": "Both subsystems were built to solve the same underlying problem: prevent disaster casualties by ensuring structures don't fail and people know how to leave them. Structural inspection was built to catch material and design failure before occupancy; evacuation drills were built to convert abstract emergency plans into embodied, rehearsed action.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The structural-failure forensics community, whose members are professionally independent of both agencies and are not compensated by either program's continuation, corroborates that the inspection function still solves its founding problem (structures inspected under current codes perform as predicted in real failures) while the evacuation-drill function has drifted from its founding problem (drilled and undrilled populations show statistically similar evacuation performance in real events). Neither agency itself, if asked in isolation, would concede this asymmetry — the corroboration comes specifically from outside both benefiting institutions."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the 'hybrid_reading' of the preparedness_persistence kernel: it takes as its core premise that 'disaster preparedness' as a colloquial label conflates two structurally distinct subsystems with divergent trajectories. Structural engineering inspection is exercised knowledge, load-tested continuously against real physical failure and independently corroborated by post-disaster forensics — it behaves like a Mountain-adjacent competent constraint. Evacuation drills, bundled under the same institutional umbrella and the same budget line, have ritualized: the completion metric (attendance) has decoupled from the outcome metric (evacuation speed under real panic conditions) it was built to produce — it behaves like a Piton, form outlasting function. This story does not adjudicate whether 'preparedness' overall is competent or hollow; it asserts that the honest answer is 'both, in different subsystems,' and that treating the whole category uniformly (as either the competence_reading or husk_reading would) obscures the stratification that is the actual structural fact on the ground.",
+    "key_agents": [
+      "structural_engineering_inspectorate: competent subsystem, institutional beneficiary of continued verified authority",
+      "emergency_management_agencies: ritualized subsystem, institutional beneficiary of compliance-signal credibility without matched operational investment",
+      "building_occupants_relying_on_evacuation_drills: powerless payers, trapped exit, bear the invisible gap between drilled confidence and real evacuation performance",
+      "municipal_budget_holders: moderate-power payers unable to differentiate high-value from low-value preparedness spend within one budget category",
+      "structural_failure_forensics_community: analytical observer, external corroborating source for the founding-problem status of each subsystem"
+    ],
+    "logic_rationale": "Extraction is authored moderate (0.42) rather than high because it is localized: the inspection subsystem contributes near-zero extraction (its function is intact and its cost tracks its service), while the drill subsystem contributes the bulk of the extraction (a credibility signal is sold to occupants and budget holders at a cost that no longer purchases the readiness it claims to). Averaged across the bundled category this yields a moderate figure, consistent with the expected structural delta for this reading. Theater ratio rises across the interval (0.20 to 0.48) purely from the drill subsystem's drift — the inspection subsystem's theater contribution is flat and near zero throughout, but because theater_ratio is authored at the story level (one shared grid), the rising trajectory reflects the composite. Suppression is authored moderate-low (0.38) because neither subsystem depends on coercion to persist: inspection persists because it works, drills persist because their failure mode is invisible until a real event, not because alternatives are actively blocked.",
+    "perspectival_gap": "From the inspectorate's seat, preparedness is a Mountain-adjacent, competently maintained technical function verified against real failure. From the emergency-management agency's seat, preparedness is functioning exactly as designed — the drill is completed, the compliance box is checked, the metric that matters to them is satisfied. From the building occupant's seat, both subsystems present identically as 'the preparedness program,' and the occupant has no visibility into which half of the bundle is real. The engine should compute these divergently: the inspectorate seat should score near-Mountain, the emergency-management seat should score Piton-adjacent (theater rising, function flat), and the occupant seat should register as bearing extraction without knowing its source.",
+    "directionality_logic": "The inspectorate and emergency-management agencies are both authored as beneficiaries because both derive institutional standing from the preparedness label, but their directionality diverges sharply in practice: the inspectorate's benefit is earned through continuously verified performance (low effective χ despite institutional power, because the coordination function is genuine and undisputed), while the emergency-management agency's benefit increasingly rests on an unverified credibility signal (higher effective χ, because the coordination story is now serving primarily as cover for an atrophied function). Building occupants are victims specifically of the drill subsystem's drift, not of the inspection subsystem — their trapped exit option (they cannot opt out of relying on the building's official evacuation plan) amplifies their exposure to exactly the subsystem that has hollowed out.",
+    "mandatrophy_analysis": "This hybrid reading is explicitly a mandatrophy-detection device: bundling both subsystems under one 'preparedness' label and asking 'has the mandate outlived its function' produces an incoherent answer, because the mandate has NOT outlived its function for inspection but HAS for drills. Declaring the constraint as a single hybrid/piton reading, rather than forcing a binary competence-vs-husk verdict, is itself the corrective — it prevents the coordination function that is genuinely alive (inspection) from being discredited by association with the subsystem that has ritualized (drills), and prevents the ritualized subsystem from borrowing legitimacy from the competent one.",
+    "kernel_context": "This constraint instantiates the 'hybrid_reading' of the preparedness_persistence kernel. Two sibling readings exist as separate constraint files: 'competence_reading' (drills and inspections are both live exercised knowledge; practice maintains readiness across the board) and 'husk_reading' (drills and inspections are both memorial performance; operational competence has atrophied everywhere). This hybrid_reading rejects the premise that the kernel resolves uniformly across subsystems — it asserts the stratification itself is the structural fact, with inspection tracking the competence_reading's premise and drills tracking the husk_reading's premise, simultaneously, within the same institutional bundle."
+  },
+  "omegas": [
+    {
+      "id": "hybrid_versus_uniform_reading",
+      "question": "Is 'preparedness' genuinely stratified into distinct competent and ritualized subsystems (this reading), or does the apparent stratification collapse into a single uniform verdict once measured consistently — either fully competent (competence_reading) or fully ritualized (husk_reading)?",
+      "resolution_mechanism": "Disaggregated post-disaster forensic comparison across many events: if inspection-subsystem performance and drill-subsystem performance track significantly different outcome curves across a large sample, the hybrid reading is supported; if they converge, one of the uniform readings is correct instead.",
+      "impact": "If the hybrid reading is wrong and preparedness is uniformly competent, this story's authored moderate extraction and rising theater_ratio should collapse toward the mountain end. If preparedness is uniformly ritualized, extraction and theater should be authored much higher across both subsystems, collapsing this story into the husk_reading's profile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the stratified hybrid reading, versus either uniform sibling reading, is the correct structural account of preparedness."
+    },
+    {
+      "id": "drill_theater_ratio_measurement",
+      "question": "The story-level theater_ratio is authored as a composite across both subsystems even though the drift is localized entirely to the drill subsystem — is a single bundled theater_ratio measurement obscuring the magnitude of drift within the drill subsystem specifically?",
+      "resolution_mechanism": "Decompose the story into two sibling constraints at finer grain (per the ε-invariance principle) if independent stakeholder or funding structures for inspection versus drills can be documented separately, rather than measuring theater_ratio at the bundled 'preparedness program' level.",
+      "impact": "A decomposed measurement would likely show the drill subsystem's theater_ratio well above 0.48 by interval end, while the inspection subsystem's would remain near 0.05-0.10 throughout — the bundled figure understates the drill subsystem's actual hollowing and overstates the inspection subsystem's theatricality.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the bundled measurement of a genuinely stratified constraint masks the magnitude of drift in its worse-performing component."
+    },
+    {
+      "id": "occupant_awareness_of_stratification",
+      "question": "Do building occupants have any structural means of learning which half of the 'preparedness' bundle they are relying on, or is the stratification itself invisible to the party who bears its cost?",
+      "resolution_mechanism": "Survey occupant understanding of the distinction between code-compliance inspection status and drill-tested evacuation readiness; check whether disclosure requirements exist for either.",
+      "impact": "If occupants cannot distinguish the two subsystems, their trapped exit option is compounded by an information asymmetry that the constraint's administrators (particularly emergency-management agencies) have no incentive to correct, since correction would expose the drill subsystem's atrophy.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the victim class can even perceive the stratification this reading asserts."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "unified_preparedness_doctrine",
+    "drift_state": {
+      "moment": "contemporary_forensic_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_persistence__competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "preparedness_persistence__husk_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "preparedness_components_have_independent_epistemic_status",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "bundled_labeling_obscures_differential_atrophy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "husk_reading",
+      "competence_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the preparedness_persistence kernel. competence_reading and husk_reading each assert a uniform verdict across the full 'preparedness' category (fully live vs. fully hollowed); this hybrid_reading asserts the stratification itself is the structural fact, with different subsystems (inspection vs. drills) tracking the two uniform readings' premises simultaneously. All three share the same underlying institutional referent but diverge on whether disaggregation is warranted — resolving the omega 'hybrid_versus_uniform_reading' would favor one reading over the other two."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

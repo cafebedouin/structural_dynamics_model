@@ -1,0 +1,321 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__developer_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "1378e28d-182d-4d7b-afb0-28c98c877ca9"
+  },
+  "base_properties": {
+    "extractiveness": 0.66,
+    "suppression": 0.58,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Developer-as-Primary-Liable-Party Doctrine",
+    "topic_domain": "technology governance / legal theory / regulatory design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "model_deploying_firms",
+      "downstream_integrators",
+      "end_use_operators"
+    ],
+    "victims": [
+      "model_development_labs",
+      "open_weight_maintainers",
+      "independent_ai_developers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "model_development_labs",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Trains and releases the underlying capability (a model, a library, a foundation system). Under this reading, bears primary legal and regulatory liability for downstream harms because it created the capability, regardless of how far removed it is from the deployment context that produced the harm. Cannot fully predict every downstream use, cannot inspect every deployment, and cannot contractually disclaim liability in jurisdictions adopting this reading. Exit means either withdrawing capability from a jurisdiction, over-restricting release (closed-sourcing, heavy gating), or absorbing litigation and compliance cost as a fixed tax on building at all."
+    },
+    {
+      "name": "open_weight_maintainers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Releases openly modifiable capability with no ongoing control over how it is deployed once released. Under developer-liability, this actor carries the heaviest asymmetry: liability attaches to creation, but the maintainer has the least visibility into or control over eventual use of anyone in the chain. Has essentially no exit short of ceasing open releases altogether, which forecloses the coordination benefit the ecosystem depends on."
+    },
+    {
+      "name": "independent_ai_developers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Small teams or solo developers building on top of foundation capability. Lack the legal resources of large labs to manage compliance or litigation risk, yet are swept into the same liability standard as capability creators if they fine-tune or repackage a model. Cannot negotiate liability allocation with upstream providers or downstream deployers; must either avoid building entirely or accept exposure they cannot insure against."
+    },
+    {
+      "name": "model_deploying_firms",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Integrates the capability into a product or service and controls the deployment context — who uses it, how it's configured, what guardrails are applied. Under this reading, externalizes the bulk of legal and regulatory risk upstream to the developer, despite holding the decision authority over the specific use that caused harm. Can select jurisdictions, structure contracts, and choose which capabilities to integrate based on which upstream provider will absorb liability exposure, giving it effective arbitrage over the liability allocation itself."
+    },
+    {
+      "name": "downstream_integrators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Builds applications on top of deployed capability, configuring it for specific end-use contexts. Benefits from a liability regime that treats the underlying model as the locus of legal risk, since it shifts scrutiny away from the integrator's own configuration and prompt-engineering choices. Can switch upstream providers relatively easily if liability terms become unfavorable."
+    },
+    {
+      "name": "end_use_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Operates the capability in a live context (a hospital, a call center, a hiring pipeline) and makes the operational choices that most proximately produce outcomes. Benefits from reduced legal exposure under this reading, since fault is attributed upstream to the capability's creator rather than to the operational decision to deploy it in this way. Bears reputational and operational cost when harms occur but rarely bears the legal cost."
+    },
+    {
+      "name": "harmed_end_users",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The people actually injured by a deployed capability's failure — denied a loan, misdiagnosed, wrongly flagged. Their interest is in whichever liability rule most reliably produces compensation and behavior change, not in which party along the chain is doctrinally 'primary.' They are not parties to the doctrinal debate about developer versus deployer liability and have no seat in the standard-setting process, even though the rule's structure determines whether they can recover at all."
+    },
+    {
+      "name": "regulators_and_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Sets and enforces the liability standard through statute, agency rule, or common-law doctrine. Chooses developer-liability partly because the capability creator is often the more identifiable, better-resourced, and more traceable party — an administrability preference that does not track causal contribution to any specific harm. Can revise the standard but faces sustained lobbying pressure from deploying firms favoring the status quo."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Gives regulators and courts a single, identifiable, well-capitalized point of legal contact for a diffuse and technically opaque harm-generating chain — rather than litigating fault across every deployment context individually, liability attaches at the point of creation, which is easier to locate and easier to regulate ex ante.",
+    "transfer_function": "Moves legal, compliance, and litigation risk from the parties who control the specific deployment decision (deployers, integrators, operators) to the party who built the general-purpose capability, even where that party had no visibility into or control over the eventual use.",
+    "absent_voices": "Harmed end users have no seat in the doctrinal contest between developer-liability, deployer-liability, and shared-liability framings — the debate is conducted among labs, deploying firms, and regulators, with the injured party's interest (reliable compensation, behavior change) treated as a secondary consideration to administrability and industry lobbying outcomes.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If developer-primary liability were replaced overnight by deployer-primary or shared liability, deploying firms would face direct exposure for configuration and use-context decisions they currently externalize, open-weight release practices would likely expand as creators shed disproportionate risk, and litigation strategy across the industry would shift its target from labs to the firms actually operating the capability in harmful contexts.",
+    "founding_problem": "As general-purpose AI capabilities proliferated through complex value chains, courts and regulators needed a liability anchor for harms whose proximate cause was hard to trace through layers of fine-tuning, integration, and deployment configuration — attaching liability to the creator offered a stable, identifiable target.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Regulators and legal scholars attest the administrability rationale is real and unresolved. Independent legal academics and plaintiff-side litigation groups — outside both the lab and deployer beneficiary sets — argue the doctrine has drifted from a genuine causation-tracing problem into a convenient risk-externalization tool for deploying firms with deployment control, since the party with the most proximate control over harm-producing configuration is systematically the one shielded by this reading."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates one reading within the liability_attribution kernel: the doctrine that developers — the creators of a general-purpose AI capability — bear primary legal and regulatory liability for downstream harms, as opposed to the deployer or a shared-liability standard. The reading is attractive to regulators for administrability (developers are identifiable, well-capitalized, and traceable) but structurally externalizes risk away from the parties who actually control deployment context, configuration, and end use. This is a genuinely distinct constraint from deployer_liability and shared_liability, not a different observation angle on one constraint — each reading produces a different victim set, a different beneficiary set, and a different epsilon. They are linked, not merged, per the ε-invariance principle.",
+    "logic_rationale": "Extractiveness starts moderate (0.42) reflecting early-stage regulatory attention to AI harms and rises to 0.66 as litigation and statutory frameworks concretize around developer-anchored liability, layering compliance cost and litigation exposure onto capability creators independent of their proximity to actual harm. Suppression tracks the hardening of this doctrine into binding law (rising from 0.38 to 0.58) as courts establish precedent and regulators codify the standard, closing off the developer's ability to contractually reallocate risk. Theater ratio stays comparatively low (0.18 to 0.28) because the liability exposure is materially real, not primarily symbolic — labs actually face litigation and compliance cost, not merely reputational performance.",
+    "directionality_logic": "Model development labs, open-weight maintainers, and independent developers are declared victims because the doctrine attaches liability at the point of creation regardless of downstream control — this drives their directionality toward the full-target end, amplified for open-weight maintainers and independent developers whose exit options (trapped) are worse than the large labs' (constrained, with some capacity to gate release or lobby). Deploying firms, integrators, and end-use operators are declared beneficiaries because they retain the actual decision authority over deployment context while the liability doctrine routes legal exposure upstream — this pulls their directionality toward the beneficiary end even though they are the proximate cause of many specific harms.",
+    "perspectival_gap": "From the regulator's seat this reads as sensible administrability: pick the traceable, resourced party. From the model development lab's seat, the same doctrine reads as bearing cost for decisions it never made and could not have foreseen — the engine should compute a materially different type at the payer seats than at the agenda-setter or beneficiary seats, and that divergence is the point of this reading rather than a defect in it.",
+    "mandatrophy_analysis": "The founding problem — an identifiable liability anchor for a technically opaque value chain — remains partially live (opacity and value-chain complexity are real), which is why founding_problem_status is authored as contested rather than dead. But the doctrine's persistence is increasingly attributable to deploying-firm lobbying advantage and administrative convenience rather than to a demonstrated superiority in producing compensation or behavior change, which is why the classification sits at tangled_rope rather than a clean rope: there is a genuine coordination function (administrability) riding alongside an asymmetric extraction (risk externalized from the party with deployment control to the party with creation responsibility).",
+    "kernel_context": "This constraint is the developer_liability reading of the liability_attribution kernel. Sibling readings deployer_liability (liability attaches to the party with deployment context and decision authority) and shared_liability (liability distributed along the value chain by causal contribution) are separate constraint stories with their own epsilon, beneficiary sets, and victim sets. Under this reading, developers enter the victim set and deployers become beneficiaries of externalized risk — the inverse of the deployer_liability reading, where deployers would be the payers and developers the beneficiaries of upstream shielding. Opacity of the deployment chain is treated here as the developer's burden to disclose or mitigate, not the deployer's burden to justify."
+  },
+  "omegas": [
+    {
+      "id": "developer_liability_kernel_reading",
+      "question": "Is developer-primary liability the structurally correct reading of causal responsibility for AI-capability harms, or is it one contested reading among several equally defensible allocations (deployer_liability, shared_liability) that happens to be administratively convenient for regulators and structurally favorable to deploying firms?",
+      "resolution_mechanism": "Comparative outcome analysis across jurisdictions that have adopted different readings: track compensation rates for harmed end users, rates of harm-reducing behavior change by deployers, and litigation cost distribution under each regime over a multi-year window.",
+      "impact": "If developer-primary liability does not outperform deployer-primary or shared liability on compensation and behavior-change outcomes, the doctrine's persistence is better explained by administrability convenience and deploying-firm lobbying than by superior causal attribution — supporting reclassification of this reading toward more extractive framing over time.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether developer-primary liability is structurally justified or one contested, administratively convenient reading among several."
+    },
+    {
+      "id": "sibling_reading_delta",
+      "question": "What would change structurally if a deployer_liability or shared_liability reading were adopted instead — specifically, would the victim and beneficiary sets fully invert, or would some parties (e.g., independent developers, harmed end users) remain in a similarly disadvantaged position across all three readings?",
+      "resolution_mechanism": "Author the sibling constraint stories (deployer_liability, shared_liability) with matched stakeholder sets and compare beneficiary/victim declarations directly; check whether harmed_end_users' excluded status persists across all three readings.",
+      "impact": "If harmed end users remain excluded and under-compensated across all three readings, the kernel contest itself may be a distraction from a deeper structural problem (no reading adequately serves the injured party) rather than a genuine debate about optimal allocation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the three kernel readings meaningfully differ in outcomes for the least powerful stakeholder or merely relocate extraction among powerful parties."
+    },
+    {
+      "id": "opacity_burden_allocation",
+      "question": "Is it defensible to place the burden of managing or disclosing model opacity entirely on the developer, given that deployment-context opacity (how the capability is configured and used) is often equally or more responsible for harm than model-level opacity?",
+      "resolution_mechanism": "Technical audit studies comparing the share of documented AI-harm incidents attributable to model-level failure versus deployment-configuration failure across a representative incident database.",
+      "impact": "If deployment-configuration failure accounts for a comparable or larger share of harms, placing the full opacity-management burden on developers under this reading is empirically mismatched to the actual causal structure of harm.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether opacity-related harm is predominantly a developer-side or deployer-side phenomenon."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "liability_attribution__deployer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "liability_attribution__shared_liability",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creation_of_capability_is_the_proximate_locus_of_responsibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "identifiable_well_resourced_party_should_bear_liability_for_administrability",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "product_liability_manufacturer_analogy",
+    "drift_state": {
+      "moment": "post_foundation_model_proliferation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__deployer_liability",
+      "liability_attribution__shared_liability"
+    ],
+    "dual_formulation_note": "This story is one of three siblings decomposing the natural-language concept 'AI liability attribution' per the ε-invariance principle: developer_liability, deployer_liability, and shared_liability each instantiate a structurally distinct constraint with a different victim/beneficiary allocation, not three observational angles on one constraint. All three should be authored as separate files and cross-linked via affects_constraints; each carries its own epsilon (this story's is 0.66, reflecting substantial and rising extraction from creators)."
+  },
+  "gain_flow": "model_deploying_firms",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

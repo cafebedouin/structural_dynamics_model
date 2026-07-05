@@ -1,0 +1,279 @@
+{
+  "header": {
+    "constraint_id": "monopoly_rulebook__social_scaffold_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "f4de5e85-fdcd-4e99-beb4-1a27efbb4159"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.4,
+    "claimed_type": "scaffold",
+    "human_readable": "Monopoly Rulebook — Social Scaffold Reading (House-Rule Coordination Buffer)",
+    "topic_domain": "game theory / social coordination / institutional design",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "social_group_cohesion",
+      "slower_eliminated_players",
+      "casual_host_household"
+    ],
+    "victims": [
+      "leading_players_denied_closure",
+      "rules_literalist_players"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "casual_host_household",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Sets the table's actual operating rules before play: free parking jackpot, no-auction-on-refusal, loans from the bank when a player is short. Administers enforcement informally by social pressure and by owning the physical game. Wants the evening to stay pleasant and to end at a natural stopping point, not at the harsh liquidation the printed rules specify."
+    },
+    {
+      "name": "social_group_cohesion",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "local",
+      "situation": "Not an actor itself, but the thing the house rules protect: the ongoing willingness of this group of friends/family to play games together again. Preserved by slowing elimination and injecting liquidity so no single evening produces a humiliated loser who leaves early or resents the group."
+    },
+    {
+      "name": "slower_eliminated_players",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Players with early bad luck or weak trading skill who, under the printed text, would be bankrupted and eliminated within the first hour. House rules (bank loans, free parking cash, informal rent forgiveness) keep them liquid and in the game for the full session. They pay a smaller cost: the game runs long past the point their position is actually competitive, and they know it."
+    },
+    {
+      "name": "leading_players_denied_closure",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Players who built a dominant board position through legitimate trading and property development. Under the text, their advantage should convert to a win within a bounded timeframe via forced bankruptcy of opponents. House-rule liquidity injections repeatedly rescue the trailing players, extending the game by hours and diluting the competitive payoff of the leading position. Exit means refusing to host or refusing to play by these house rules, which costs them standing in the group."
+    },
+    {
+      "name": "rules_literalist_players",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Players who came to play the game as written — auctions on refused purchases, no bailouts, hard bankruptcy — and find the social contract of the table has quietly substituted a different game. They can object, but objecting reads as poor sportsmanship or as prioritizing 'winning' over the group's fun; their preference for textual fidelity is the absent voice at most casual tables."
+    },
+    {
+      "name": "board_game_publisher",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Publishes the official rulebook that specifies hard bankruptcy, mandatory auctions, and no free-parking jackpot. Has no enforcement mechanism over home play and no stake in whether any given table follows the text; its interest is in the printed game being recognizable as itself, not in adjudicating house variants."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Keeps a multi-hour social game socially viable by preventing the printed rules' harsh, fast elimination mechanic from ending the evening early for weaker or unluckier players, and by giving the group a shared, informally-agreed alternative ruleset that everyone can follow without renegotiating mid-game.",
+    "transfer_function": "Moves competitive advantage away from players who achieved a dominant board position under the printed rules and toward trailing/eliminated players, via cash injections (free parking, bank loans, rent forgiveness) that the text does not authorize. The transfer is liquidity and turn-survival, not victory itself.",
+    "absent_voices": "Rules-literalist players who would prefer the printed endgame — hard bankruptcy, mandatory auctions — are structurally present at the table but functionally excluded from setting the actual rules in play; raising the objection carries a social cost framed as poor sportsmanship, so the preference rarely surfaces as an explicit veto.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the house rules vanished and the printed text were enforced strictly, most casual games would end in under 90 minutes with one or two players eliminated early and visibly resentful; the social event the group actually wants (a multi-hour shared activity ending near a natural close, like bedtime or dinner) would not occur in the same form. The group would either abandon the game, adopt a different game, or reconstruct equivalent house rules almost immediately.",
+    "founding_problem": "The printed Monopoly ruleset, played as written, produces fast, harsh, decisive elimination — a good demonstration of rent-extraction dynamics but a poor multi-hour social activity for a mixed-skill group that wants everyone engaged for most of the evening.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated informally by decades of near-universal convergent house-rule adoption across unrelated households and cultures (free parking, no-auction, loans-from-bank appear independently in surveys of casual play and in the publisher's own periodic public acknowledgment that house rules are near-universal); the publisher itself, an outside party with no stake in extending sessions, has commented publicly that most owners do not play by the strict text. No party benefiting from the scaffold is the sole source of this attestation."
+  },
+  "interval": {
+    "start": 0,
+    "end": 240
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 160,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 240,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 160,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 240,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story is the social-scaffold reading of the Monopoly rulebook kernel: house rules (free parking jackpots, loans from the bank, refusal to auction) are read here as a deliberate, socially-necessary buffer that prevents the printed text's harsh, fast elimination mechanic from ending a group evening too early or too bitterly. The coordination function is real — a mixed-skill, multi-player social event needs everyone engaged for most of its length — and the extraction is moderate: leading players are structurally denied the closure and payoff the printed rules would give them, and rules-literalist players are socially pressured out of insisting on the text. This is a scaffold, not a rope, because the buffer's justification is explicitly the transition through a long, uneven social evening to a natural close, not a steady-state alternative ruleset meant to persist as the 'real' rules; the game is understood by all parties to sunset back to the printed text (or simply end) once the evening's social purpose is served.",
+    "key_agents": [
+      "casual_host_household: agenda_setter (moderate/constrained) — administers house rules informally",
+      "social_group_cohesion: beneficiary, non-agent — the preserved good",
+      "slower_eliminated_players: beneficiary+payer (powerless/constrained) — kept liquid, game runs long",
+      "leading_players_denied_closure: payer (moderate/constrained) — dominant position diluted",
+      "rules_literalist_players: payer+excluded (powerless/trapped) — preference for text unvoiced",
+      "board_game_publisher: observer (institutional/analytical) — no stake in home enforcement"
+    ],
+    "logic_rationale": "Extractiveness sits at 0.38 by interval end (moderate band, consistent with the expected 0.31-0.55 delta for this reading): real value moves from leading players to trailing ones via unauthorized liquidity injections, but the amount involved per player is small relative to full elimination stakes and no party is bankrupted or permanently harmed. Suppression is low (0.22) because exit is mostly social-cost-based, not coercive — a literalist player can leave the table, just not without friction. Theater ratio rises modestly over the session (0.10 to 0.28) as free-parking jackpots and informal loans accumulate turns and the game increasingly runs on social-maintenance activity (extending play, redistributing cash) rather than the printed competitive mechanic. Accessibility collapse (0.35) and resistance (0.40) are mid-range: alternatives (playing strictly, or not playing) remain visible and are occasionally exercised, unlike a genuine mountain.",
+    "directionality_logic": "The host/agenda-setter administers but does not extract for themselves; d sits near symmetric. Social group cohesion is a non-agent beneficiary and is excluded from directionality math. Slower/eliminated players are structural near-beneficiaries of the liquidity mechanism (low d) but bear a secondary cost of an artificially prolonged, low-stakes endgame. Leading players are the clearest targets (higher d): their legitimately earned board dominance is diluted by rules not in the text. Rules-literalist players are targets of suppression rather than extraction — their cost is social, not financial.",
+    "mandatrophy_analysis": "The scaffold classification prevents this constraint from being mislabeled as pure extraction (as the sibling extraction_demo_reading would treat the same physical table) by requiring the sunset condition and the beneficiary declaration to both be present: house rules here explicitly exist to get the group through a long uneven evening, not to permanently supplant the printed game as a competing 'real' ruleset. If the house rules calcified into an unquestioned alternate canon that no one at the table remembered was optional, the classification would drift toward tangled_rope or piton — the omega on rule ossification below addresses exactly this drift risk.",
+    "kernel_context": "This constraint is the social_scaffold_reading of the monopoly_rulebook kernel. It reads the same printed text and observed house-rule practice as a temporary, socially-motivated coordination buffer whose justification is getting a mixed group through a multi-hour session, not as inevitable wealth concentration (extraction_demo_reading) or as noise obscuring the legitimate competitive framework (tournament_orthodoxy_reading). Those sibling readings are separate constraint stories with their own epsilon and stakeholder structures; this file does not average or hedge across them."
+  },
+  "omegas": [
+    {
+      "id": "scaffold_vs_permanent_house_canon",
+      "question": "Do the house rules at a given table remain understood as a temporary social buffer (scaffold) or have they calcified into an unquestioned permanent alternate ruleset that no participant remembers is optional (which would push the constraint toward tangled_rope or piton)?",
+      "resolution_mechanism": "Ask participants directly whether they know the printed rules differ, and whether they would consider playing the printed version; a table where no one recalls the text exists suggests calcification.",
+      "impact": "If calcified, the has_sunset_clause declaration would no longer be honestly assertible and the classification should move away from scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the social buffer remains understood as temporary or has become unquestioned permanent practice."
+    },
+    {
+      "id": "kernel_reading_indeterminacy",
+      "question": "Is the correct reading of a given real-world Monopoly session's house rules the social_scaffold_reading (coordination buffer), the extraction_demo_reading (inevitable wealth concentration demonstrated by the printed mechanic), or the tournament_orthodoxy_reading (text as legitimate competitive framework, house rules as noise)? A single physical table's practice can be read all three ways depending on which party in the room you ask.",
+      "resolution_mechanism": "No single measurement resolves this — it is a genuine committer-frame ambiguity. Interview all players present about their felt purpose for playing (social evening vs. competitive contest vs. pedagogical exercise) and note whether the readings are held by different players simultaneously at the same table.",
+      "impact": "The three readings are authored as separate constraint stories per the ε-invariance principle; a single table may in practice instantiate more than one reading among its own participants, which is exactly the structural disagreement the kernel-reading frame is built to surface rather than resolve.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which of the three kernel readings applies to a given table is itself contested and may vary by participant."
+    },
+    {
+      "id": "leading_player_dilution_magnitude",
+      "question": "How much competitive value does the free-parking/loan liquidity mechanism actually strip from a legitimately dominant board position, versus how much would that position have converted to a win anyway absent house rules?",
+      "resolution_mechanism": "Simulation or replay analysis comparing win probabilities for a given mid-game board state under printed rules versus common house rules.",
+      "impact": "A larger measured dilution would push extractiveness and the payer-seat experience of leading_players_denied_closure higher; a smaller one would support the scaffold's coordination framing as low-cost.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Quantifying the actual competitive cost house rules impose on players with dominant positions."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "extraction_demo_reading",
+      "tournament_orthodoxy_reading"
+    ],
+    "dual_formulation_note": "Three constraint stories decompose the single natural-language label 'the Monopoly rulebook / house rules controversy': extraction_demo_reading (the printed text as inevitable rent-extraction demonstration, near-mountain claim about the mechanic), social_scaffold_reading (this file — moderate-epsilon scaffold preserving group cohesion), and tournament_orthodoxy_reading (text as immutable competitive framework, house rules as illegitimate noise). Each reading has a distinct epsilon and distinct beneficiary/victim structure; they are linked here rather than merged because the underlying observable — 'what actually happens at a Monopoly table' — supports genuinely different structural claims depending on which party's stated purpose for playing is taken as authoritative."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "printed_rulebook_hard_elimination",
+    "drift_state": {
+      "moment": "contemporary_casual_play_norm",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "monopoly_rulebook__extraction_demo_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "monopoly_rulebook__tournament_orthodoxy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "social_continuity_outranks_textual_fidelity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "house_rules_are_provisional_not_canonical",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

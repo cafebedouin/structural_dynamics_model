@@ -45,6 +45,41 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-05 — THIRD model-twin leg built: `testsets_sonnet/` (claude-sonnet-5, 1001 stories) — matched triple 957/960; unblocks the 3-model divergence OQs
+**Files:** agent/run_no_scope_sonnet.py, prolog/testsets_sonnet/, json_sonnet/, prolog/beta_processed_sonnet.txt, prolog/testsets/, json/, python/audits/twin_comparison.py, ISSUES.md
+**Tier:** landed
+
+Built a **third matched twin** over the SAME 1005-seed pool as the haiku/flash twins
+(`prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json`), so the model-divergence
+OQs (OQ-123/124/149/211/212) get a third data point instead of a 2-model pair.
+- **Tool:** `agent/run_no_scope_sonnet.py` — Anthropic Batch-API mirror of
+  `generate_kernel_corpus.run_no_scope`, **byte-identical prompt** (reuses `build_cached_messages`
+  + `process_batch_results` unchanged), **thinking DISABLED** (`{"type":"disabled"}` — twin parity;
+  Sonnet 5 runs adaptive thinking by default), temperature omitted (Sonnet 5 400s on non-default).
+  Dir-scoped registry (SONNET dir + `beta_processed_sonnet.txt` ladder only) so basenames == seed
+  cids and the three legs pair by filename (twin recipe, `bulk_corpus_generation.md` §6).
+- **Result:** `testsets_sonnet/` = **1001 stories**, all `claude-sonnet-5` provenance; **~2% attrition**
+  (matches the haiku/flash band). Matched triple **sonnet∩haiku∩flash = 957/960** (99.7%).
+- **Third-leg pipeline output:** `outputs/pipeline_output.sonnet.json` (gitignored, regenerable) via
+  `classify_corpus('testsets_sonnet','pipeline_output.sonnet.json','claude-sonnet-5')` — passed all
+  four refusals (zero-glob, load-completeness, single-model `claude-sonnet-5` fingerprint,
+  raw-freshness); manifest n_constraints=1001.
+- **Extras merge (twin-parity rule):** 44 Sonnet extras (basenames not in the haiku∩flash 960). The
+  **39 collisions are exactly the twins' own extras already in `testsets/`** (28 haiku_only + 11
+  flash_only) — NOT overwritten (Build Discipline #3; their Sonnet draws stay in `testsets_sonnet/`),
+  matching how flash was handled vs haiku. The **5 genuinely-new** extras (`.pl`+`.json`) merged into
+  `testsets/` (130→135, +5 sonnet stories in the canonical live corpus).
+- **Spend:** ~$48 total (full run ~$46 + rerun ~$1.65), Sonnet-5 batch at intro promo rates.
+- **Systematic finding (→ OQ-213):** 4 seeds fail persistently across 3 fresh redraws — all
+  `'stakeholders' is a required property` post-repair, concentrated on treaty/legal kernels
+  (bitcoin_consensus, nsl_legal_text, article_27_veto, unsc_242_withdrawal). This is a Sonnet-SPECIFIC
+  schema-conformance mode (haiku/flash hit the `status:'contested'` enum instead); NOT chased further
+  because a prompt/schema patch would break twin-parity. 3 of the 4 are in the haiku∩flash intersection
+  (why the triple is 957 not 960).
+- **Wiring gap (→ OQ-213):** `twin_comparison.py` wires Sonnet only as a marginals-only, non-blind
+  `sonnet_control` (reads `.pl` directly, "says NOTHING about (c2)"). With a full classified leg now
+  present, it can graduate to a full paired third twin (haiku-flash / haiku-sonnet / flash-sonnet).
+
 ## 2026-07-04 — OQ-88 MITIGATED: false-mountain detector sweep (positive WITNESSED N=2; D′ discriminator SATURATES; Ω_P auto-route ruling handed to operator)
 **Files:** python/audits/oq88_false_mountain_detector.py, ISSUES.md, audits/2026-07-04_oq88_false_mountain_detector/
 **Tier:** landed

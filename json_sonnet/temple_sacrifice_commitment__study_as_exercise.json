@@ -1,0 +1,233 @@
+{
+  "header": {
+    "constraint_id": "temple_sacrifice_commitment__study_as_exercise",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "74162c19-ad6f-4d83-8b79-40b1eb0570af"
+  },
+  "base_properties": {
+    "extractiveness": 0.03,
+    "suppression": 0.05,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.15,
+    "resistance": 0.05,
+    "claimed_type": "rope",
+    "human_readable": "Study of Sacrifice Law as Full Performance of Divine Command (Study-as-Exercise Reading)",
+    "topic_domain": "religious_law/halakhic_tradition",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "study_communities",
+      "yeshiva_scholars",
+      "covenant_fidelity_tradition"
+    ],
+    "emerges_naturally": false,
+    "vindicated_propositions": [
+      "torah_study_equals_sacrifice_doctrine",
+      "divine_command_occupiable_through_intellect"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 1900
+  },
+  "omegas": [
+    {
+      "id": "study_as_exercise_vs_sibling_readings",
+      "question": "Is study of sacrifice law genuinely a full, non-deficient occupation of the divine command (this reading), or is it a suspended holding-pattern (hybrid_preparatory), a mere archive of a defunct practice (performance_only), or an authorized transformation into a new instantiation (symbolic_transformation)?",
+      "resolution_mechanism": "No empirical resolution is possible — this is a doctrinal/hermeneutic dispute within rabbinic tradition itself, adjudicated by which authorities and textual traditions a community follows (e.g. talmudic dicta equating study with sacrifice vs. maimonidean restoration-oriented readings vs. reform/conservative transformation theology). Resolution mechanism is communal doctrinal affiliation, not evidence.",
+      "impact": "If the sibling readings are correct instead, this constraint's zero-extraction, no-victim profile does not hold for those readings — hybrid_preparatory would carry a live restorationist orientation with different beneficiary dynamics, performance_only would treat the studying community as failing to occupy the commitment at all, and symbolic_transformation would relocate the commitment's site entirely. Each is a DIFFERENT constraint (per ε-invariance), not a recalibration of this one.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint instantiates ONE of four contested readings of the temple_sacrifice_commitment kernel; the readings are not reconcilable into a single ε."
+    },
+    {
+      "id": "sincerity_vs_convenience_of_study_equivalence",
+      "question": "Is the doctrine that study equals sacrifice a sincere theological development responding to the destruction of the Temple, or does it function (whatever its origin) to relieve the studying community of any obligation toward restoration, making the equivalence doctrine convenient for those least positioned to rebuild the Temple?",
+      "resolution_mechanism": "Historical-critical examination of when and by whom the equivalence doctrine was formulated relative to Temple-destruction-era political conditions, and whether its strongest proponents were also those most invested in scholarly (rather than priestly/political) authority structures.",
+      "impact": "If convenience-driven, the doctrine's beneficiary structure would include a class interest (scholarly authority displacing priestly authority) not captured in the current beneficiary declaration, which names only the studying community's covenant fidelity.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the study-equals-performance doctrine has a self-serving genealogy for the scholarly class that formulated it."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 900,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1400,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 900,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1400,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.03
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Following the destruction of the Second Temple, rabbinic tradition faced the problem of how to relate to sacrifice law (the laws of the korbanot) when the material conditions for performing sacrifice — the Temple, the altar, the priesthood in functioning form — no longer existed. This constraint instantiates the reading in which the talmudic and later halakhic position that 'the study of the laws of sacrifice is equivalent to their offering' is taken at face value: intellectual engagement with the relevant legal texts is not a substitute for, preparation for, or archive of the commandment — it IS the commandment's occupation, fully, in the absence of material conditions. Under this reading there is no deficit, no suspension, no waiting for restoration to complete the commitment. This is one of four structurally distinct constraints sharing a kernel (temple_sacrifice_commitment); the others — hybrid_preparatory, performance_only, symbolic_transformation — are separate stories with their own ε values, per the ε-invariance principle. Do not read this story as describing 'what Judaism believes about sacrifice' generally; it describes only the structural profile of the study-as-exercise reading specifically.",
+    "key_agents": [
+      "study_communities: Primary beneficiary (organized/mobile) — occupies the commitment through intellectual engagement, maintains covenant fidelity without material sacrifice",
+      "yeshiva_scholars: Beneficiary and agenda_setter (institutional/mobile) — sets the interpretive terms of what counts as full occupation of the command via study",
+      "priestly_lineage_descendants: Excluded voice (moderate/constrained) — under a restorationist reading they would have a claim to material performance that this reading renders moot",
+      "restorationist_traditions: Excluded/observer seat (organized/analytical) — advocate for hybrid_preparatory or performance_only readings and would object that this reading forecloses restoration urgency"
+    ],
+    "logic_rationale": "Extractiveness is authored near zero (0.03) because under this reading no party pays a cost through the constraint's operation: the studying community receives the full benefit of covenant fidelity through an activity (study) that is intrinsically available, requires no coerced tribute, and creates no dependent victim class. Suppression is near zero (0.05) because no alternative practice is being actively foreclosed by force — the constraint operates by persuasion within a textual tradition, not by coercive exclusion of dissenting readings (the sibling readings coexist as live positions elsewhere in the same broader tradition). Theater ratio is low (0.08) because the study activity is not merely performative cover for an absent function — under this reading's own premises, the study literally IS the function, so there is no gap between performance and substance to measure as theater. Accessibility collapse is moderate-low (0.15): the alternative readings remain fully articulable and are, in fact, actively held by other communities within the same broader tradition, so alternatives have not collapsed even though this reading's own community may not entertain them locally.",
+    "directionality_logic": "The studying community and its scholars are the structural beneficiaries: study is available to them without material infrastructure (no Temple, no altar, no priestly apparatus required), and the equivalence doctrine grants them full covenant standing on that basis alone. There is no victim group under this reading — no party is deprived, extracted from, or coerced by the claim that study equals sacrifice. This is the central structural feature that distinguishes this reading from performance_only, under which the studying community would be characterized as failing to occupy the commitment (a very different — though not extractive in the ordinary sense — relational structure), and from hybrid_preparatory, under which the same community occupies a suspended, incomplete state pending restoration.",
+    "mandatrophy_analysis": "Mandatrophy would apply if the founding problem (occupying a divine command without the material conditions to perform it in its original form) had been resolved or become moot while the study practice persisted only by institutional inertia. Under this reading specifically, that concern does not arise: the reading's own premise is that study fully and permanently occupies the command — there is no future material-condition-restoration event whose absence would create a mandatrophy gap, because under study_as_exercise the commitment was never contingent on the Temple's physical restoration in the first place. This is precisely what distinguishes it from hybrid_preparatory, where a live restorationist orientation means the founding problem (the Temple's absence) is explicitly still treated as unresolved and the practice is explicitly a stopgap — a structure much closer to classic mandatrophy risk.",
+    "kernel_context": "This constraint is the study_as_exercise reading of the temple_sacrifice_commitment kernel. Three sibling readings exist as separate constraint stories: performance_only (study is mere archival preservation, not occupation — the commitment remains substantially unoccupied), hybrid_preparatory (study maintains commitment in a suspended, incomplete state pending messianic restoration), and symbolic_transformation (the commitment itself has been authorized to relocate into prayer/study as a new instantiation, distinct from claiming study always already was performance). This reading is distinguished by asserting FULL, PRESENT, NON-DEFICIENT occupation via intellect alone — no suspension, no archive, no relocation, just direct equivalence."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "temple_sacrifice_commitment__hybrid_preparatory",
+      "temple_sacrifice_commitment__performance_only",
+      "temple_sacrifice_commitment__symbolic_transformation"
+    ],
+    "dual_formulation_note": "This story is one of four members of the temple_sacrifice_commitment constraint family, decomposed per the ε-invariance principle because the natural-language label 'the commitment to observe sacrifice law' covers structurally distinct claims with different ε profiles: study_as_exercise (this story, ε≈0.03, no victims, full present occupation), performance_only (ε would register differently — the studying community is cast as failing to occupy the commitment, a structurally different relational claim), hybrid_preparatory (a suspended, restoration-oriented reading with live messianic-timeline dynamics), and symbolic_transformation (a relocation-of-instantiation claim). Each sibling should independently link back to this story and to each other via affects_constraints, forming a fully connected kernel family rather than a hub-and-spoke structure, since each reading exerts interpretive pressure on how the others are received within the broader tradition."
+  },
+  "stakeholders": [
+    {
+      "name": "study_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Engage in sustained textual study of sacrifice law (korbanot) as a core religious practice. Under this reading, that study itself fully satisfies the covenant obligation regarding sacrifice — no material infrastructure, no priesthood, no altar is needed. They are free to affiliate with other readings (hybrid_preparatory, performance_only) elsewhere in the tradition without material constraint; their exit option is doctrinal affiliation, which is genuinely available."
+    },
+    {
+      "name": "yeshiva_scholars",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Set and transmit the interpretive framework establishing that study of sacrifice law constitutes full performance of the command. Their institutional authority (yeshivot, rabbinic courts, textual commentary traditions) both articulates this reading and benefits from it, since it grounds their own scholarly practice as the highest form of religious observance rather than as a lesser substitute for priestly performance."
+    },
+    {
+      "name": "priestly_lineage_descendants",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Retain hereditary status (kohanim) tied to a potential future priestly role that this reading renders largely moot in the present — if study alone fully occupies the commitment, there is no present functional deficit for priestly restoration to fill. They are not coerced or extracted from by this reading, but their distinct hereditary claim has no operative content under it; they would find more structural relevance under hybrid_preparatory or performance_only readings."
+    },
+    {
+      "name": "restorationist_traditions",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Hold that the Temple's restoration remains a live, urgent religious goal and would object that treating study as full occupation of the commitment removes the theological urgency of restoration. They are not silenced or coerced — they simply operate outside this specific reading's community and articulate the hybrid_preparatory or performance_only positions instead."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared, textually grounded practice through which a community maintains continuity of covenant obligation and religious identity around sacrifice law without requiring the physical infrastructure (Temple, altar, priesthood) that no longer exists. Everyone in the community can participate through study regardless of tribal lineage or geographic location, which is a genuine coordination achievement relative to a practice that formerly required centralized physical infrastructure and hereditary priestly status.",
+    "transfer_function": "No material transfer occurs. The doctrine transfers religious LEGITIMACY and STANDING — it certifies the studying community's practice as a full, non-deficient discharge of covenant obligation, rather than transferring goods, labor, or money from any party to another.",
+    "absent_voices": "Restorationist traditions and priestly lineage descendants would object that treating study as full occupation removes theological pressure toward physical Temple restoration and renders their hereditary/practical role moot; they are not silenced by force but simply operate in different interpretive communities that this reading's community does not centrally engage.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If this specific doctrinal reading vanished, study communities that hold it would need to either adopt a different reading (hybrid_preparatory or performance_only) or lose the theological grounding that currently certifies their practice as fully sufficient — a real rearrangement for them. But restorationist and priestly-lineage communities who already hold different readings would experience no change at all, since the doctrine's disappearance would simply mean one fewer competing interpretation in a field that already contains several. The verdict is genuinely contested between communities who structure their religious identity around this specific claim and those for whom it was never operative.",
+    "founding_problem": "After the Second Temple's destruction (70 CE), the sacrifice commandments could no longer be materially performed, creating an urgent theological problem: how can a community remain in covenant fidelity with commandments it is physically unable to fulfill? The study-as-exercise doctrine answers that intellectual engagement with the relevant law is itself the fulfillment, not merely a stopgap.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Talmudic sources (e.g. Menachot 110a, treating study of sacrificial law as equivalent to offering) are cited by the studying community itself as corroboration, which is an in-tradition, not fully independent, source. Historians of religion outside the beneficiary community (scholars of rabbinic Judaism studying the post-Temple period as an academic rather than theological matter) corroborate that the doctrine emerged as a documented historical response to the Temple's destruction, but they do not corroborate whether the problem is 'live' or 'dead' in the present — that theological judgment remains internal to the tradition and is exactly where hybrid_preparatory and performance_only readings dispute the study_as_exercise position. No source entirely outside all four readings' shared tradition attests to which reading is theologically correct; only the historical fact of the doctrine's emergence is independently corroborated."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "temple_era_sacrificial_praxis",
+    "drift_state": {
+      "moment": "post_destruction_rabbinic_consolidation",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "temple_sacrifice_commitment__performance_only",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "temple_sacrifice_commitment__hybrid_preparatory",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "symbolic_transformation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "study_fully_occupies_divine_command",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "material_instantiation_not_required_for_full_performance",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

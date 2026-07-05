@@ -1,0 +1,263 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence_mechanism__naturalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "9b2b3812-6326-4491-86a6-bcd4ed3feeae"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.08,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "QWERTY Keyboard Layout Persistence (Naturalization / Genuine Adequacy Reading)",
+    "topic_domain": "economic_history/technology_studies/path_dependence",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "typists_with_existing_skill",
+      "keyboard_manufacturers",
+      "software_and_hardware_ecosystem"
+    ],
+    "vindicated_propositions": [
+      "market_selection_produces_adequate_standards",
+      "switching_cost_reflects_genuine_investment_not_capture"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 140
+  },
+  "omegas": [
+    {
+      "id": "dvorak_advantage_magnitude",
+      "question": "Does the Dvorak layout (or any alternative) confer a real, replicable typing-speed or ergonomic advantage over QWERTY large enough to justify switching costs, or is the claimed advantage an artifact of small, methodologically weak, or industry-funded studies (notably the Navy studies commissioned by Dvorak's own patent holder)?",
+      "resolution_mechanism": "Independently replicated, blinded, large-N comparative typing studies controlling for training time and typist selection; meta-analysis of the existing literature including reexamination of the original 1944 Navy study's provenance.",
+      "impact": "If no robust advantage exists, QWERTY's persistence is adequately explained by genuine parity plus switching cost — supporting this naturalization reading. If a robust and substantial advantage is confirmed, the persistence looks more like a coordination failure (lock-in reading) regardless of switching costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the empirical basis for Dvorak's claimed superiority is sound or itself a contested/interested artifact."
+    },
+    {
+      "id": "systematic_beneficiary_absence",
+      "question": "Is there any identifiable party that actively benefits from QWERTY's persistence in a way that would constitute extraction rather than incidental, competitively-earned advantage (e.g., manufacturers with sunk tooling, typing-instruction industries, publishers of QWERTY-trained curricula)?",
+      "resolution_mechanism": "Trace manufacturer and publisher lobbying/standard-setting history; examine whether any actor has resisted alternative-layout interoperability (e.g., blocking OS-level layout switching) versus merely not subsidizing it.",
+      "impact": "If a systematic beneficiary with active suppression capacity is found, this constraint is mis-specified as naturalization and should be reclassified toward the beneficiary_extraction_reading sibling. Absent such a beneficiary, the naturalization reading holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the absence of a concentrated beneficiary, central to this reading, survives closer historical scrutiny."
+    },
+    {
+      "id": "naturalization_vs_lockin_framing",
+      "question": "Given identical observable facts (near-universal QWERTY adoption, never-successful Dvorak displacement, real retraining costs), is 'genuine adequacy plus fair competitive lapse' or 'path-dependent coordination failure' the correct structural reading — and is this a genuinely empirically resolvable question or an interpretive framing choice that cannot be settled by more data?",
+      "resolution_mechanism": "Counterfactual/historical case comparison: examine analogous standards contests (e.g., AC vs DC, VHS vs Betamax) where switching DID occur despite incumbency, to calibrate what evidence would distinguish 'adequate and stable' from 'locked-in and suboptimal.'",
+      "impact": "If the two readings are empirically indistinguishable in principle, the kernel is irreducibly under-determined and both readings persist as live interpretive commitments rather than one being correctable to the other.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the naturalization/lock-in dispute is empirically resolvable or a permanent framing divide — this constraint's central Ω_C."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 140,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 140,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In 1873, Christopher Sholes arranged typewriter keys to reduce mechanical jamming and, per some accounts, to support telegraph operators; the layout was refined through iterative commercial use and became the de facto standard by the early 20th century. In the 1930s, August Dvorak patented an alternative layout claiming substantial speed and ergonomic gains. Despite over eighty years of availability, free software-level switching, and periodic promotional pushes, Dvorak and other alternatives (Colemak, etc.) have captured only a marginal user base. This story instantiates the NATURALIZATION READING of the QWERTY persistence kernel: QWERTY persists not because of active suppression or an accident of frozen coordination, but because it reached and has remained at a genuinely adequate performance plateau, refined over a century of use, while alternatives failed to demonstrate a decisive, reproducible advantage large enough to justify near-universal retraining costs. This is one of three sibling readings of the same kernel (qwerty_persistence_mechanism); the lock_in_reading treats the identical historical facts as evidence of a path-dependent coordination failure despite technical inferiority, and the beneficiary_extraction_reading treats them as evidence of active incumbent maintenance protecting training and market investments. This file does not adjudicate between them — it presents the naturalization reading on its own structural terms, with its own epsilon.",
+    "key_agents": [
+      "typists_with_existing_skill: Primary incumbent-skill holders (moderate/mobile) — bear real but voluntarily-incurred retraining cost if they switch",
+      "keyboard_manufacturers: Coordination participants (organized/mobile) — produce to standard because it is the standard, not to suppress alternatives",
+      "dvorak_and_alternative_layout_advocates: Excluded/marginal voice (powerless/mobile) — argue for a superior alternative that has not achieved market traction",
+      "new_typists_and_students: Beneficiary of standardization (powerless/mobile) — learn the near-universal layout once and gain broad interoperability",
+      "economic_historians: Analytical observer — examines whether the persistence pattern is best read as adequacy, lock-in, or extraction"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.12) because, under this reading, no party structurally profits from QWERTY's persistence at the expense of an identifiable victim class — manufacturers produce to whatever standard prevails, and existing typists' switching costs are a personal, self-incurred consequence of skill investment, not a rent extracted by anyone. Suppression is authored very low (0.08): nothing prevents an individual, a school, or a company from adopting Dvorak or Colemak today — the layout is a free OS-level setting on every major platform. Theater ratio is low and only mildly rising over the interval (0.05 to 0.10) reflecting a small increase in QWERTY-defense rhetoric (ergonomic-marketing claims by manufacturers) without any corresponding enforcement machinery. Accessibility collapse is moderate-high (0.6): once a typist has invested years in QWERTY muscle memory, switching is costly in a real, non-artificial sense — but this reflects sunk human capital, not blocked alternatives. Resistance is low (0.2): there is no meaningful campaign of resistance against QWERTY because there is no coercive apparatus to resist; Dvorak advocacy exists but is diffuse and small-scale, consistent with a genuine-adequacy equilibrium rather than a contested extraction.",
+    "directionality_logic": "Under this reading, beneficiaries are diffuse and non-concentrated: existing typists benefit from not needing to retrain (a status-quo benefit, not an extracted rent), manufacturers benefit from standardization economies common to any settled convention, and the broader software/hardware ecosystem benefits from interoperability. None of these constitutes a concentrated beneficiary capturing rents from a victim class — which is precisely the structural delta distinguishing this reading from beneficiary_extraction_reading. No victims are declared because, under naturalization, the switching cost borne by anyone choosing to learn a new layout is a private, non-transferred cost of skill acquisition, not an extraction transferred to them by an agenda-setter. Directionality for typists_with_existing_skill sits near symmetric-to-beneficiary (d relatively low) because the status quo actively serves their accumulated investment; directionality for alternative-layout advocates sits moderate (not high) because their cost is opportunity cost of non-adoption, not extraction levied on them.",
+    "mandatrophy_analysis": "The founding problem (preventing typebar jams in mechanical typewriters) is definitionally dead — no keyboard sold today has mechanical typebars. Under the naturalization reading, this does NOT indicate mandatrophy/zombie persistence, because the reading's claim is that the layout, whatever its origin, became and remains genuinely adequate on its own terms (trained population size, muscle-memory infrastructure, absence of a demonstrated superior alternative) independent of the original jam-prevention rationale. The mismatch between founding_problem_status=dead and disappearance_verdict is the diagnostic the schema is built to surface: this reading asserts disappearance_verdict is closer to world_unchanged-leaning-contested (removing QWERTY tomorrow would be genuinely disruptive because of real accumulated skill capital, not because a rent-collecting agenda-setter would lose income) — which argues against a capture/zombie flag despite the dead founding problem, precisely because no concentrated beneficiary exists to be the zombie's parasite.",
+    "perspectival_gap": "From an economic historian's analytical seat, the pattern (century-long dominance, contested alternative, real switching costs) is genuinely ambiguous between naturalization and lock-in explanations — this is exactly the seat divergence the omega variable 'naturalization_vs_lockin_framing' names. From the seat of an individual typist, the lived experience is unambiguous: QWERTY works fine and switching is not worth it, which is evidence consistent with (but not proof of) the naturalization reading.",
+    "kernel_context": "This constraint instantiates the NATURALIZATION_READING of the qwerty_persistence_mechanism kernel — the claim that QWERTY persists because it reached genuine functional adequacy and alternatives lapsed through fair, uncoerced competition rather than suppression or coordination failure. Two sibling constraints exist over the same underlying historical facts: lock_in_reading (path-dependent coordination failure despite technical inferiority — treats the same switching costs as an inefficient equilibrium trap) and beneficiary_extraction_reading (active incumbent maintenance by manufacturers/training industries protecting sunk investment — treats the same switching costs as an extracted rent). All three share the observable substrate (QWERTY dominance, Dvorak's marginal adoption, retraining costs) but diverge sharply on epsilon and on whether a beneficiary/victim structure exists at all. This file's epsilon (0.12) is intentionally near-mountain-low and stable across the century-plus interval, reflecting the reading's core claim that nothing needs active defending."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.03
+  },
+  "network": {
+    "affects_constraints": [
+      "qwerty_persistence_mechanism__lock_in_reading",
+      "qwerty_persistence_mechanism__beneficiary_extraction_reading"
+    ],
+    "dual_formulation_note": "This story is one of three constraints decomposed from the single natural-language claim 'the QWERTY conjecture' (per the eps-invariance principle). naturalization_reading (this file, epsilon=0.12, claimed rope) asserts genuine adequacy and fair competitive lapse of alternatives. lock_in_reading asserts path-dependent coordination failure despite technical inferiority (expected higher epsilon, likely tangled_rope or piton). beneficiary_extraction_reading asserts active incumbent suppression protecting training/market investments (expected highest epsilon, likely snare or tangled_rope, with named beneficiaries and victims). All three share the same observable history but diverge in claimed beneficiary structure and epsilon; they are linked here rather than merged because measuring the same historical facts under different beneficiary-attribution assumptions yields structurally distinct constraints, not one constraint viewed from different angles."
+  },
+  "stakeholders": [
+    {
+      "name": "typists_with_existing_skill",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Have invested years building QWERTY muscle memory. They are not prevented from switching to Dvorak or Colemak by any external barrier; free software support exists on every major OS. Their continued use of QWERTY reflects that the accumulated skill remains adequate and the marginal benefit of switching does not clearly exceed the retraining cost, based on their own assessment."
+    },
+    {
+      "name": "keyboard_manufacturers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Manufacture physical keyboards printed with QWERTY key labels because that is what the market demands; they also sell Dvorak-labeled and blank/remappable keyboards as a smaller product line. Nothing prevents them from producing alternative layouts at scale if demand materialized; their production choice tracks existing demand rather than actively shaping it."
+    },
+    {
+      "name": "software_and_hardware_ecosystem",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operating systems, input-method frameworks, and hardware all support QWERTY as the default while also offering built-in, free, one-click switching to dozens of alternative layouts including Dvorak and Colemak. The ecosystem's investment in QWERTY-as-default reflects the size of the trained population, not a barrier erected against alternatives."
+    },
+    {
+      "name": "dvorak_and_alternative_layout_advocates",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Argue that Dvorak and similar layouts offer meaningful speed and ergonomic advantages and have promoted adoption for nearly a century with limited success. They are not blocked from switching or from advocating, but their claims have not translated into mass adoption, which this reading interprets as market feedback about the actual (contested/marginal) magnitude of the advantage rather than evidence of suppression."
+    },
+    {
+      "name": "new_typists_and_students",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Learn touch-typing on QWERTY by default in most educational and self-teaching contexts, gaining immediate interoperability with virtually every keyboard, job, and shared device they will encounter. They could choose to learn an alternative layout instead at no financial cost, and a small fraction do."
+    },
+    {
+      "name": "economic_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the QWERTY case as a canonical (and contested) example in path-dependence economics, debating since the 1990s (Liebowitz & Margolis vs. David) whether it demonstrates market failure or market adequacy. Their disagreement is part of what makes this kernel genuinely contested rather than settled."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "A single, near-universal keyboard layout lets any trained typist use almost any keyboard, and lets any manufacturer, educator, or software vendor target one standard rather than fragmenting across competing layouts.",
+    "transfer_function": "Under this reading, no systematic transfer occurs: retraining costs are borne privately by whoever chooses to switch, and the benefits of standardization (interoperability, shared training infrastructure, manufacturing economies) accrue broadly and diffusely to nearly everyone who uses a keyboard, without a concentrated collector.",
+    "absent_voices": "Alternative-layout advocates (Dvorak, Colemak communities) have had a public voice for decades via patents, promotional campaigns, and now online communities; they are not silenced, but their claims have not been validated by mass-market uptake. Under this reading their relative quietness in the aggregate outcome reflects unconvincing evidence of net advantage, not suppression — though the omega on Dvorak's contested empirical advantage leaves this genuinely open.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If QWERTY-as-default vanished overnight (all trained muscle memory and existing keyboards erased), a substantial one-time disruption would occur simply from the scale of retraining required — this argues against world_unchanged. But because this reading holds there is no concentrated beneficiary whose position depends on QWERTY specifically (any similarly-learnable layout would do), the disruption would be a coordination-transition cost, not the collapse of an extraction structure — which argues against world_rearranges in the sense that term carries elsewhere in this corpus (a beneficiary losing an income stream). The naturalization reading itself holds this verdict is properly contested between 'the transition cost is real and large' and 'no one's position structurally depends on this particular layout.'",
+    "founding_problem": "The original 1870s design problem was preventing frequently-paired typebars on mechanical typewriters from jamming when struck in quick succession, by physically separating common letter-pair keys.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Confirmed by typewriter mechanical historians and the general historical record independent of any party with a stake in QWERTY's continuation — no mechanical typewriter with typebars has been in mainstream production for decades, and the jamming problem does not exist on any modern keyboard technology. This is uncontested and attested from entirely outside any beneficiary group named in this story."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "qwerty_persistence_mechanism__lock_in_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "qwerty_persistence_mechanism__beneficiary_extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "market_outcomes_track_genuine_adequacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "switching_cost_is_private_skill_investment_not_extracted_rent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "competitive_standards_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

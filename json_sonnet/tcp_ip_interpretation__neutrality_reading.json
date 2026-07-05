@@ -1,0 +1,310 @@
+{
+  "header": {
+    "constraint_id": "tcp_ip_interpretation__neutrality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "b72909a4-6657-47db-bff5-c822b264b1a2"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.42,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "TCP/IP End-to-End Principle — Neutrality Reading",
+    "topic_domain": "technology governance/internet policy/telecommunications law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "edge_application_developers",
+      "internet_users",
+      "content_startups"
+    ],
+    "victims": [
+      "last_mile_isps",
+      "network_management_teams"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "regulatory_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adopts and enforces the reading that TCP/IP's design commits carriers to non-discriminatory packet handling regardless of source, destination, or application. Issues rules, investigates complaints, and can penalize ISPs found throttling or blocking traffic by content type. Frames the reading as a technical fact about the protocol's original design intent, not a policy choice."
+    },
+    {
+      "name": "last_mile_isps",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Owns the physical last-mile infrastructure and bears the capital cost of scaling capacity for high-bandwidth applications (video, gaming) without being permitted to charge those applications differentially or prioritize paying traffic. Cannot easily exit the jurisdiction; can lobby, litigate, or slow-walk compliance, but remains bound by whichever kernel reading the regulator adopts."
+    },
+    {
+      "name": "edge_application_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Builds and ships applications on the assumption that packets are treated identically regardless of source, letting a small team compete for bandwidth on equal technical footing with an incumbent. Depends entirely on the neutrality reading holding; would need to renegotiate distribution deals with every carrier if the prioritization or zero-rating readings prevailed instead."
+    },
+    {
+      "name": "internet_users",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives service where no application is technically privileged or degraded by the carrier, preserving the ability to reach any lawful service equally. Exit is bounded by local ISP competition (often thin), so the protection this reading provides is largely dependent on the regulator's continued adoption of it rather than on the user's own market power."
+    },
+    {
+      "name": "network_management_teams",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Operates congestion-management and quality-of-service tooling that must be justified as content-agnostic even where differentiating by application type would be the most technically efficient way to manage real-time-sensitive traffic during peak load. Bears operational cost of proving non-discriminatory intent for any traffic-shaping decision."
+    },
+    {
+      "name": "content_startups",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Depends on being unable to be priced out of reaching users by incumbents that could otherwise pay for fast-lane treatment. Has essentially no bargaining leverage with carriers and relies entirely on the neutrality reading's prohibition on paid prioritization to survive against better-capitalized rivals."
+    },
+    {
+      "name": "incumbent_platform_operators",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Would prefer the prioritization or zero-rating readings, under which their scale advantage could be converted into paid fast-lane or sponsored-data arrangements with carriers. Under the neutrality reading, this option is foreclosed; their objection is rarely solicited directly in neutrality rulemakings, which frame the question as carrier-versus-user rather than incumbent-versus-challenger."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a shared expectation across every application developer, carrier, and user that a packet is handled the same way regardless of what it carries, letting anyone build on the network without needing individual carriage agreements.",
+    "transfer_function": "Prevents ISPs from converting scarce last-mile bandwidth into a revenue stream by charging edge providers for preferential treatment, effectively transferring the option value of that potential revenue to edge developers and content startups as a free input.",
+    "absent_voices": "Incumbent platform operators who would benefit from paid prioritization or sponsored-data deals are structurally excluded from the neutrality framing, which is posed as protecting ordinary users and small developers rather than adjudicating between two classes of powerful commercial actors (carriers vs. platforms).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the neutrality reading were abandoned in favor of a sibling reading, ISPs would begin building paid-prioritization and sponsored-data products within a fiscal cycle, incumbent platforms would negotiate carriage deals unavailable to smaller developers, and the current assumption of uniform reachability for new entrants would end — the competitive landscape for internet-native businesses would reorganize around carrier relationships rather than technical merit alone.",
+    "founding_problem": "Early internetworking needed a design where the network layer would not need to understand or adjudicate among applications, so that innovation could happen at the edges without requiring carrier permission for each new use case.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Original protocol architects and academic network engineers outside the regulatory and carrier interest groups attest that the end-to-end design principle was a genuine architectural choice for extensibility, not an explicit non-discrimination mandate; carriers dispute that the design compels the specific policy conclusion regulators now derive from it, arguing the technical design underdetermines the neutrality reading."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "TCP/IP's end-to-end design is invoked as the technical basis for network neutrality regulation, which prohibits ISPs from discriminating against traffic by application or content type. This story instantiates ONLY the neutrality reading of the underlying TCP/IP-interpretation kernel: it treats the protocol's design as committing carriers to non-discriminatory packet handling as a matter of structural principle, requiring active regulatory enforcement to hold against carrier incentives to monetize prioritization. Two sibling constraints exist under the same kernel — a prioritization reading (differentiated service quality as legitimate network management) and a zero-rating reading (selective sponsored-content exemptions) — each with a different beneficiary/victim structure and a different ε. Those are separate constraint files, not alternate measurements of this one; this story does not average across them or hedge its extraction value against theirs.",
+    "logic_rationale": "Extraction is moderate-low (0.28) because the coordination function — uniform packet treatment enabling permissionless innovation — is genuine and substantial; the extraction component is the constrained revenue option value taken from ISPs and, secondarily, the compliance burden placed on network management teams who must justify traffic-shaping decisions as content-agnostic even when application-aware shaping would be more efficient. Suppression (0.42) reflects the active enforcement apparatus required to hold the line against carrier incentives to discriminate, not any coercion of end users. Theater ratio is low (0.2) — the enforcement substantially performs its stated function, though a growing share of compliance activity (documentation, audits) is procedural rather than functional as the doctrine matures.",
+    "directionality_logic": "Edge application developers, content startups, and internet users are structural beneficiaries — the neutrality reading subsidizes their access to bandwidth without requiring carriage negotiation, so their directionality sits near the beneficiary end. Last-mile ISPs and network management teams are targets: the reading forecloses a revenue and efficiency option they would otherwise exercise, placing them nearer the full-target end despite ISPs' considerable power — their power does not translate into exit, since they remain bound by whichever kernel reading the regulator adopts and cannot unilaterally reinterpret the protocol.",
+    "mandatrophy_analysis": "The neutrality reading's original founding problem — enabling edge innovation without requiring carrier permission — remains partially live (new entrants still depend on it) but is contested by carriers who argue the technical justification has been stretched to cover a policy preference the protocol design does not itself mandate. Classifying this as tangled_rope rather than a pure rope prevents mislabeling the arrangement as costless coordination: it is a genuine coordination mechanism for edge innovation that simultaneously extracts a real economic option from carriers, and both facts must be held together rather than resolved into a single verdict.",
+    "kernel_context": "This constraint instantiates the neutrality_reading of the tcp_ip_interpretation kernel: TCP/IP's end-to-end design is read as requiring non-discriminatory packet treatment, prohibiting content/application-based discrimination and protecting edge innovation at the cost of constraining ISP revenue optimization. Sibling readings under the same kernel are prioritization_reading (differentiated QoS as legitimate network management, favoring ISPs and latency-sensitive incumbents) and zero_rating_reading (selective sponsored-content exemptions, favoring platforms able to subsidize data costs). Each sibling reading is authored as its own constraint file with its own ε, beneficiaries, and victims; they are not alternate measurements of this file."
+  },
+  "omegas": [
+    {
+      "id": "protocol_design_vs_policy_mandate",
+      "question": "Does TCP/IP's technical architecture actually entail the neutrality reading's non-discrimination requirement, or is the reading a policy choice retrospectively justified by appeal to protocol design?",
+      "resolution_mechanism": "Historical analysis of RFC discussions and original architects' stated design intent (e.g., Saltzer, Reed, Clark's end-to-end arguments paper) compared against the specific regulatory non-discrimination rules derived from it; assess whether the technical design underdetermines the policy conclusion.",
+      "impact": "If the technical design underdetermines the neutrality reading, this constraint is better understood as a policy choice wearing a technical-necessity framing — which would not change this story's ε (that is fixed for this reading) but would reduce confidence in the mountain-adjacent legitimacy claims sometimes made on the neutrality reading's behalf.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether TCP/IP's design technically mandates the neutrality reading or merely permits it."
+    },
+    {
+      "id": "kernel_reading_selection_mechanism",
+      "question": "What determines which of the three readings (neutrality, prioritization, zero_rating) a given regulatory jurisdiction adopts, and is that selection mechanism itself contestable?",
+      "resolution_mechanism": "Comparative study of jurisdictions that have adopted each reading (EU/India for neutrality-leaning rules, other markets permitting zero-rating) tracing the political and lobbying processes that produced divergent readings of the same underlying protocol.",
+      "impact": "If reading-selection tracks political power of incumbent carriers versus edge developers more than any feature of the protocol itself, all three sibling constraints in this kernel family should be understood as contested policy outcomes rather than technical readings — reinforcing the need to keep them as separate, non-averaged constraint files.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether jurisdictional reading-selection is driven by political economy rather than technical interpretation."
+    },
+    {
+      "id": "enforcement_durability",
+      "question": "Does the neutrality reading persist as active law, or does it oscillate with regulatory administration changes, making its 'requires_active_enforcement' status intermittent rather than stable?",
+      "resolution_mechanism": "Track regulatory rulemaking history (adoption, repeal, re-adoption cycles) in jurisdictions with documented back-and-forth neutrality rulemaking.",
+      "impact": "If enforcement is intermittent, the effective suppression this reading imposes on ISPs is lower on average than the point-in-time metrics suggest, and edge beneficiaries face more uncertainty than a stable-tangled-rope classification implies.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether neutrality enforcement is a stable regime or a cyclically contested one."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "tcp_ip_interpretation__prioritization_reading",
+      "tcp_ip_interpretation__zero_rating_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the tcp_ip_interpretation kernel, each authored as a separate constraint story per the ε-invariance principle: neutrality_reading (this file, tangled_rope, moderate-low ε favoring edge developers/users), prioritization_reading (favoring ISPs' differentiated-QoS revenue model), and zero_rating_reading (favoring platforms able to subsidize sponsored data). The three do not share an ε value — each reading produces a structurally distinct beneficiary/victim configuration and is linked here via network edges rather than folded into one story."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "tcp_ip_interpretation__prioritization_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "tcp_ip_interpretation__zero_rating_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "packet_treatment_must_be_content_blind",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "edge_innovation_requires_permissionless_access",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "original_end_to_end_design_intent",
+    "drift_state": {
+      "moment": "post_streaming_and_5g_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

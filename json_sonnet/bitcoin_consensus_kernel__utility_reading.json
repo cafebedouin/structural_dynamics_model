@@ -1,0 +1,319 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_consensus_kernel__utility_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "33040279-3b6a-49bf-ab94-b1e24105abc7"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Consensus Kernel — Utility/Iterative-Improvement Reading",
+    "topic_domain": "cryptoeconomics/monetary_systems/distributed_consensus",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "protocol_developers",
+      "layer_two_builders",
+      "new_adopters",
+      "mining_pool_operators"
+    ],
+    "victims": [
+      "long_term_holders_seeking_monetary_certainty",
+      "minority_fork_participants"
+    ],
+    "vindicated_propositions": [
+      "protocol_improvability_doctrine",
+      "rough_consensus_governance_legitimacy"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "protocol_developers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Maintain reference client implementations and propose soft forks (BIPs) that extend functionality — SegWit, Taproot — arguing the whitepaper's design was explicitly minimal and meant to be built upon. They control the practical path of change even without formal authority, since miners and nodes must choose to adopt their releases. Their exit option is high: reputational capital transfers across projects if this one calcifies."
+    },
+    {
+      "name": "layer_two_builders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build payment channels, sidechains, and settlement layers (Lightning, federated sidechains) that depend on base-layer opcodes and soft-fork upgrades being possible. They collect fee revenue and equity value from the assumption that the base layer will continue to evolve to support their designs. If the kernel calcified as immutable, several of their business models would be foreclosed."
+    },
+    {
+      "name": "new_adopters",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Enter the network expecting continued usability improvements — lower fees via batching/SegWit, better custody via Taproot, eventual scaling via layer 2. They benefit from the reading that treats iterative improvement as legitimate rather than as covenant violation; a frozen protocol would leave them without the utility gains they were promised by the roadmap."
+    },
+    {
+      "name": "mining_pool_operators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Signal support for soft forks through hash power and collect transaction fee revenue that scales with usage the upgrades enable. They can arbitrage between competing forks or coin variants, giving them leverage over which reading of the kernel prevails in practice, since consensus changes require their cooperation."
+    },
+    {
+      "name": "long_term_holders_seeking_monetary_certainty",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold the asset specifically because they believe the whitepaper fixed an immutable monetary policy and settlement guarantee. Every soft fork, even non-monetary ones, is read by this group as evidence the 'rules' are negotiable, degrading the certainty premium they believed they purchased. Their exit is constrained: selling forfeits the position, forking off into a minority chain forfeits network effects and liquidity."
+    },
+    {
+      "name": "minority_fork_participants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Users and node operators who rejected a given soft fork (e.g., small-blockers, opponents of Taproot) and continued running old rules or split into a minority chain. They bear the cost of network effect loss, liquidity fragmentation, and being characterized as obstructionist, even though their objection was to the changeability of the base layer itself."
+    },
+    {
+      "name": "core_maximalist_holdouts",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Believe the whitepaper's design should be read as a closed covenant, not a minimum viable starting point. They are structurally present in the ecosystem but the utility reading's governance process (rough consensus among developers, node operators, and miners) does not treat their objection as a veto — their voice registers as opposition to be overcome via signaling thresholds, not as grounds to halt change."
+    },
+    {
+      "name": "protocol_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the actual history of protocol changes, whitepaper text, and mailing-list debates to assess which reading better fits the documentary record. They have no stake in the outcome but their analysis is frequently cited by all sides to legitimate their preferred reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates upgrade decisions across a decentralized network of developers, miners, and node operators so the protocol can add functionality (privacy, scaling, script capability) without requiring a hard fork or central authority to approve changes.",
+    "transfer_function": "Moves optionality and future utility gains toward those positioned to build on top of the evolving base layer (developers, L2 builders, new users chasing usability) and moves monetary-certainty value away from those who priced the asset on the assumption of a frozen rule set.",
+    "absent_voices": "Maximalist holdouts who read the whitepaper as an immutable covenant are present in the ecosystem's discourse but structurally outvoted by the rough-consensus signaling mechanism; their objection is treated as noise to route around rather than as a binding constraint.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the practice of soft-fork iteration disappeared overnight, layer-2 builders and developers would say the network loses its ability to remain competitive and useful, while long-term holders and maximalist holdouts would say the network finally becomes what it was always supposed to be — a fixed monetary settlement layer. The two camps disagree not just on value but on which state is the 'disappearance' and which is the 'restoration.'",
+    "founding_problem": "The whitepaper needed to establish that a Byzantine-fault-tolerant, permissionless network could reach consensus on transaction history without a trusted third party — a minimum viable mechanism to bootstrap trustless value transfer, not a complete or final specification of every future protocol feature.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Protocol developers and layer-2 builders (benefiting parties) attest the whitepaper explicitly frames the design as extensible. Independent corroboration comes from protocol historians analyzing the original mailing-list correspondence and the whitepaper's own language around versioning and node software updates, which shows Satoshi Nakamoto personally shipped protocol changes post-launch — evidence external to current beneficiaries that iteration was part of the original design posture, though maximalist-aligned historians dispute this reading of the same correspondence."
+  },
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the utility reading of the contested Bitcoin consensus kernel: the whitepaper as a minimum viable Byzantine-fault-tolerant mechanism deliberately left open for iterative improvement, not a sealed monetary covenant. Under this reading, soft forks (SegWit, Taproot) and layer-2 protocols (Lightning) are legitimate evolution of an intentionally extensible base design. This is a distinct constraint from the maximalist reading (whitepaper as immutable covenant) and the pragmatic synthesis (base layer immutable, upper layers open) — each of those is a separate story with its own ε, beneficiaries, and victims, linked via network.affects_constraints. Under the utility reading specifically, extraction is moderate: value flows from those who priced in monetary rigidity toward those positioned to capture the gains of continued protocol development.",
+    "key_agents": [
+      "protocol_developers: primary agenda-setter, organized/mobile — proposes and ships changes",
+      "layer_two_builders: primary beneficiary, organized/mobile — business models depend on continued evolvability",
+      "long_term_holders_seeking_monetary_certainty: primary payer, moderate/constrained — bears erosion of the certainty premium",
+      "minority_fork_participants: secondary victim, powerless/trapped — bears network effect loss from rejecting changes",
+      "core_maximalist_holdouts: excluded voice, organized/identity_locked — objects to the entire premise of changeability",
+      "protocol_historians: analytical observer — assesses documentary record without stake in outcome"
+    ],
+    "logic_rationale": "Extraction is authored as moderate (0.42) because the utility reading's costs to holders are real but partial — soft-fork changes are backward compatible by design, so no one is forcibly expropriated, but the informational value of 'the rules cannot change' is progressively degraded for those who held that as their core investment thesis. Suppression (0.38) reflects the rough-consensus mechanism's real coercive edge: node operators and miners who reject a soft fork face declining relevance rather than formal exclusion, which is softer than a hard fork's outright chain split but still narrows practical alternatives over time. Theater ratio is low-moderate (0.28) and rising, tracking the increasing use of 'decentralized rough consensus' as a legitimating narrative for what is, in practice, coordinated action by a concentrated set of developers and large mining pools.",
+    "directionality_logic": "Protocol developers and layer-2 builders sit near the beneficiary end: they set the practical agenda and capture the option value of continued evolution. New adopters benefit from ongoing usability improvements. Long-term holders seeking monetary certainty and minority fork participants sit near the target end: their exit options are constrained or trapped precisely because network effects lock in value even for those who reject specific changes. Mining pool operators are structurally ambiguous — beneficiaries of fee revenue growth but also agenda-setters via hash power signaling, hence the secondary role.",
+    "mandatrophy_analysis": "The utility reading resists mandatrophy in one direction and risks it in another: it correctly refuses to treat the founding whitepaper as frozen in amber when the whitepaper's own text and Nakamoto's own subsequent commits show iterative design intent — treating that founding problem as 'dead' would be historically false. But it risks its own mandatrophy if 'iterative improvement' becomes cover for changes that serve developer and L2-builder interests specifically rather than the network's original trust-minimization goal — the founding problem (permissionless BFT consensus without trusted third parties) could be quietly supplanted by a different mandate (maximizing transactional throughput or developer optionality) while retaining the same legitimating language.",
+    "kernel_context": "This constraint is the utility_reading of kernel bitcoin_consensus_kernel: it takes the whitepaper as establishing a deliberately minimal, extensible consensus mechanism where soft forks and layer-2 innovation are legitimate continuations of the original design intent, not violations of it. Sibling readings of the same kernel are maximalist_reading (whitepaper as immutable monetary covenant; any change is a covenant breach) and pragmatic_synthesis (base-layer monetary rules are immutable but upper-layer/L2 innovation is permitted without touching the kernel). All three readings share the same founding text but diverge on what counts as legitimate change versus covenant violation — they are linked via network.affects_constraints as siblings in the same contested kernel, not merged into one constraint."
+  },
+  "omegas": [
+    {
+      "id": "iterative_improvement_vs_captured_agenda",
+      "question": "Does 'iterative improvement' under the utility reading track the founding problem (trust-minimized permissionless consensus) or has it drifted toward serving the interests of the developers and layer-2 businesses who now control the practical upgrade path?",
+      "resolution_mechanism": "Trace whether proposed and shipped soft forks over the interval primarily improved base-layer security/decentralization properties versus primarily enabled new fee-generating business models for a concentrated set of developers and L2 operators.",
+      "impact": "If drift toward captured-agenda is found, the utility reading's own extraction estimate should rise and its classification should move from tangled_rope toward something closer to a snare on the affected stakeholder set; if not, the moderate tangled_rope reading holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the utility reading's iterative-improvement claim tracks its founding problem or has been captured by developer/builder interests."
+    },
+    {
+      "id": "which_reading_the_original_authors_intended",
+      "question": "Did Satoshi Nakamoto and the whitepaper's original text intend the protocol as extensible-by-design (supporting this reading) or as a fixed monetary policy where early software updates were merely bug fixes rather than precedent for ongoing evolution?",
+      "resolution_mechanism": "Close textual and historical analysis of the whitepaper, the original client's versioning history, and contemporaneous mailing-list correspondence, weighted for the fact that this evidence is contested by both maximalist and utility camps using the same source material.",
+      "impact": "If the historical record clearly supports one reading, the other readings lose founding-problem-status corroboration and should be marked more strongly contested or effectively dead in their own stories; if the record is genuinely ambiguous, all three readings retain legitimate contested status indefinitely.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Irreducible interpretive uncertainty about original design intent, contested by all three kernel readings using the same textual evidence."
+    },
+    {
+      "id": "rough_consensus_legitimacy_threshold",
+      "question": "At what threshold of miner/node-operator non-adoption does a soft fork cease to be legitimate rough consensus and become an imposition on a dissenting minority?",
+      "resolution_mechanism": "Compare adoption percentages and dissent intensity across historical soft forks (SegWit's contentious activation via UASF vs. Taproot's comparatively smooth rollout) against outcomes for minority participants.",
+      "impact": "A low legitimacy threshold would mean many past soft forks under this reading were closer to suppression than coordination, raising the effective suppression score materially.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Where rough consensus transitions from coordination to coercion of a dissenting minority."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_consensus_kernel__maximalist_reading",
+      "bitcoin_consensus_kernel__pragmatic_synthesis"
+    ],
+    "dual_formulation_note": "Three sibling stories decompose the natural-language 'Bitcoin consensus kernel' concept per the ε-invariance principle: maximalist_reading (whitepaper as immutable covenant; hard forks and soft forks alike are covenant violations; near-mountain claim with contested metrics), pragmatic_synthesis (base layer immutable, upper layers open; splits the difference structurally), and this story, utility_reading (whitepaper as deliberately minimal and extensible; soft forks and L2 are legitimate). Each has a distinct ε because each identifies different beneficiaries, victims, and enforcement structures from the same underlying text and network. They are linked bidirectionally via affects_constraints as siblings in one contested kernel, not merged into a single averaged constraint."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "minimum_viable_extensible_protocol",
+    "drift_state": {
+      "moment": "post_segwit_taproot_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bitcoin_consensus_kernel__maximalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bitcoin_consensus_kernel__pragmatic_synthesis",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "protocol_is_extensible_by_original_design",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "rough_consensus_among_practitioners_confers_legitimate_change_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

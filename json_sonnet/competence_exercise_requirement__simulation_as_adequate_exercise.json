@@ -1,0 +1,319 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_requirement__simulation_as_adequate_exercise",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "56b84a09-34b6-4b7d-9108-d8db27df3104"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "High-Fidelity Simulation as Adequate Exercise of Operator Competence",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulator_training_vendors",
+      "airline_operators",
+      "nuclear_utility_management",
+      "regulatory_certification_bodies"
+    ],
+    "victims": [
+      "frontline_operators",
+      "passengers_and_public",
+      "line_check_airmen"
+    ],
+    "vindicated_propositions": [
+      "regulatory_compliance_sufficiency_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "airline_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sets training curricula around simulator hours because simulators are cheaper, safer, and more schedulable than line operations or real aircraft time. Collects direct cost savings from reduced revenue-flight training time and reduced insurance exposure. Can point to catastrophe-free decades as proof the model works, and lobbies regulators to keep simulator-hour minimums as the compliance bar rather than requiring costlier real-world anchoring."
+    },
+    {
+      "name": "simulator_training_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sells full-motion simulator time and certification packages to operators. Revenue scales directly with the claim that simulation is sufficient; has commercial interest in the regulatory kernel staying fixed at 'simulation adequate' rather than drifting toward 'simulation plus mandatory real-world hours,' which would shrink their addressable spend per trainee relative to line-time alternatives."
+    },
+    {
+      "name": "regulatory_certification_bodies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Writes the certification standard that recognizes simulator hours as satisfying recurrent competence requirements. Benefits from a auditable, standardized, low-variance compliance metric (simulator log hours) that is far easier to inspect and defend than judgment calls about accumulated real-world exposure. Has institutional incentive to treat the absence of catastrophe as validation of the standard it wrote."
+    },
+    {
+      "name": "nuclear_utility_management",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Runs control-room simulator drills as the primary vehicle for operator recertification because it avoids the cost and risk of any real-world equivalent (there is no non-catastrophic real anchor for a reactor excursion). Strongly favors the simulation-adequate reading because the alternative readings have no safe real-world analog to point to."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Pilots and reactor operators who must demonstrate competence primarily through simulator sessions scored against a checklist. Many report that simulator scenarios, however realistic, do not reproduce the physiological stress, ambiguous cue environment, or organizational politics of a genuine emergency; some carry private doubt about their own readiness that the certification paperwork does not capture. Cannot decline the simulator-based pathway without losing certification and employment; exit from the training regime means exit from the profession."
+    },
+    {
+      "name": "line_check_airmen",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Senior instructors who observe the gap between simulator performance and real-world judgment firsthand but whose professional standing and pay depend on certifying trainees against the simulator-based standard the regulator has set. Their informal observations about simulator-real gaps rarely enter the formal record because there is no channel that credits them over the logged simulator score."
+    },
+    {
+      "name": "passengers_and_public",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the tail-risk consequence if simulator-validated competence proves inadequate during a genuine low-frequency, high-consequence event. Have no seat in setting the competence standard and no visibility into whether the catastrophe-free record reflects genuine competence or reflects that the rare events which would test the difference simply have not occurred yet."
+    },
+    {
+      "name": "safety_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study accident investigations and near-miss reports to assess whether simulator-trained competence transfers to real events. Their findings are the primary independent check on whether the catastrophe-free record is validation or survivorship bias, but their analyses arrive after the fact and rarely change certification standards prospectively."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a scalable, repeatable, auditable way to verify and refresh operator competence across a large workforce without exposing trainees, aircraft, reactors, or the public to the risk of live-fire training on catastrophic scenarios.",
+    "transfer_function": "Moves training cost and liability risk away from operators (who would otherwise need costlier real-world exposure or accept higher catastrophe risk) and concentrates residual uncertainty about competence transfer onto frontline operators and the public, who cannot independently verify whether simulator performance predicts real performance.",
+    "absent_voices": "Line check airmen who observe simulator-real gaps have no formal channel; passengers and the public have no representation in setting certification standards; safety researchers studying transfer validity are consulted post-hoc, after accidents, not prospectively in standard-setting.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If simulator-based certification were no longer accepted as adequate exercise of the competence kernel, operators would need to fund real-world anchoring (line time, non-jeopardy audits, actual equipment hours) or accept unverified competence gaps; training costs would rise sharply, simulator vendor revenue models would need restructuring, and regulatory certification bodies would need an entirely different audit instrument than logged simulator hours.",
+    "founding_problem": "Live training on catastrophic failure modes (engine-out at altitude, reactor excursion, cascading grid failure) is either impossible or unacceptably dangerous to rehearse for real; some substitute exercise mechanism was needed to build and verify competence without incurring the catastrophe being trained against.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Regulatory bodies and operators attest the problem is solved: decades without major simulator-trained-crew-caused catastrophe is offered as validation. Independent safety researchers and several accident investigation boards (outside the operator/vendor/regulator beneficiary set) attest the founding problem is only partially solved — post-accident analyses of events like Colgan 3407 and several loss-of-control accidents identified specific competence gaps that simulator training had not exercised, suggesting the catastrophe-free record may reflect the rarity of the triggering conditions rather than validated competence transfer."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates one reading of the competence-exercise-requirement kernel: that high-fidelity simulation with structured debriefing is a sufficient substitute for real-world exercise of the competence a safety-critical operator must maintain. The reading is dominant in commercial aviation recurrent training and nuclear control-room recertification, where simulator log hours function as the audited compliance metric. The reading's core evidentiary claim is that decades without a simulator-trained-crew-attributable catastrophe validate the substitution. Sibling readings (catastrophe_as_necessary_anchor, hybrid_dependency) are NOT modeled here — they are separate constraints with their own ε and stakeholder structures, linked via network.affects_constraints. This story's ε reflects only the structural claim that simulation-as-sufficient, as actually operated (regulator-approved, vendor-supplied, operator-administered), carries a moderate but rising extractive load: it externalizes unverified tail-risk onto operators and the public while concentrating training-cost savings and compliance-metric convenience among operators, vendors, and regulators.",
+    "logic_rationale": "Extractiveness starts moderate-low (0.22) and rises to 0.38 over the interval as simulator-based certification becomes the near-universal compliance pathway and alternative anchoring practices atrophy from disuse, concentrating the cost-savings benefit while the unverified-competence-transfer risk accumulates on operators and the public. Theater ratio rises modestly (0.12 to 0.28) reflecting the growing gap between the debriefing-and-scoring ritual and genuine uncertainty about whether scores predict real-event performance. Suppression is moderate (0.42 by interval end): it is not heavily coercive in the classic sense, but the certification pathway forecloses meaningful alternatives for frontline operators — no operator can substitute their own judgment about readiness for the logged simulator score without risking license.",
+    "directionality_logic": "Operators, vendors, and regulators sit near the beneficiary end: they set the standard, administer it, and capture the cost/liability savings or revenue it generates. Frontline operators and line check airmen sit nearer the target end: they must produce the certified performance and bear personal and reputational consequence if the substitution proves inadequate during an actual rare event, without having a voice in whether the substitution is validated. Passengers and the public sit furthest toward the target end with the least agency: trapped exit, no representation, bearing tail-risk they cannot price or avoid.",
+    "mandatrophy_analysis": "The founding problem (verify competence without incurring catastrophe) remains genuinely live — that part of the coordination function is real and durable, which is why this is authored as tangled_rope rather than snare. What keeps the reading from being a clean rope is that the specific instantiation (simulator-hours-as-sufficient, administered by parties with strong commercial and institutional incentive to declare it sufficient) has drifted from 'best available proxy under real constraint' toward 'convenient compliance metric insulated from post-hoc correction,' per the safety-researcher corroboration disagreement in six_questions. The classification prevents mislabeling this as pure extraction (it is not — the coordination function is genuine and the catastrophe-free record is real evidence, not fabricated) while also preventing it from being certified as a costless rope (the beneficiary concentration and the excluded/trapped seats are structurally real).",
+    "perspectival_gap": "From the operator/vendor/regulator seat, this looks like a mature, audited, successful safety system — the catastrophe-free decades ARE the proof. From the frontline-operator and line-check-airman seat, the same system looks like a certification ritual that cannot see its own blind spot: it certifies against the scenarios its designers anticipated, not against the scenario that will actually occur. From the passenger/public seat, the system is invisible until it fails. These are not disagreements about facts; they are structurally different exposures to the same arrangement, and the engine's per-seat computation is expected to diverge accordingly.",
+    "kernel_context": "This constraint instantiates the simulation_as_adequate_exercise reading of the competence_exercise_requirement kernel. Two sibling readings exist as separate constraints: catastrophe_as_necessary_anchor (only real catastrophic events/near-misses provide irreducible exercise — a much harsher, higher-ε reading with a different victim structure, since it implies current simulator-only regimes are systematically under-competent) and hybrid_dependency (simulation is necessary but insufficient; requires both simulation and periodic real-world anchoring like line time or non-jeopardy audits — a middle reading that would show lower extractiveness than this one because it does not concentrate all training cost-savings in the operator/vendor/regulator seat). This story's ε (0.38 at interval end) is authored specifically for the simulation-sufficient reading's actual operation; it should not be averaged with or reconciled against the siblings' ε values."
+  },
+  "omegas": [
+    {
+      "id": "catastrophe_free_record_as_validation_or_survivorship",
+      "question": "Does the decades-long catastrophe-free record validate that simulation is an adequate substitute for real-world exercise, or does it reflect survivorship bias — the rare triggering conditions simulators are weakest at reproducing simply have not occurred yet?",
+      "resolution_mechanism": "Systematic post-hoc analysis of near-miss and accident investigations (e.g. loss-of-control events, reactor near-excursions) for evidence of specific competence gaps that simulator curricula did not exercise, compared against base rates of triggering-condition occurrence.",
+      "impact": "If the record is genuine validation, this reading's low-to-moderate extraction and tangled_rope classification are well-supported. If it is survivorship bias, effective extraction is substantially understated and the reading functions closer to a snare on the public/passenger seat, with risk concentrated on those least able to detect it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the catastrophe-free record is validating evidence or an artifact of rare-event non-occurrence."
+    },
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "Which of the three declared readings of the competence_exercise_requirement kernel (simulation_as_adequate_exercise, catastrophe_as_necessary_anchor, hybrid_dependency) is operative determines who counts as adequately trained and who counts as a victim of undertraining — the readings disagree specifically about whether real-world anchoring is a necessary structural element or an optional supplement.",
+      "resolution_mechanism": "This is a committer-frame disagreement, not an empirical one in the first instance: it is located in whether 'adequate exercise' is defined by outcome record (this reading), by irreducible real-event content (catastrophe_as_necessary_anchor), or by a conjunctive requirement (hybrid_dependency). Resolution would require regulatory bodies to adjudicate which definition governs certification, informed by the empirical omega above.",
+      "impact": "If the hybrid_dependency reading were adopted as the operative kernel reading, current simulation-only certification regimes would be structurally insufficient and would need real-world anchoring requirements added, changing the beneficiary/victim structure of this constraint entirely. If catastrophe_as_necessary_anchor were adopted, current regimes would be judged as structurally incapable of producing verified competence at all.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This story is one reading of a contested kernel; the sibling readings would each change the classification of what counts as adequate exercise and who bears the risk of inadequacy."
+    },
+    {
+      "id": "regulatory_capture_of_certification_standard",
+      "question": "Is the regulatory certification body's endorsement of simulator-sufficiency an independent safety judgment, or is it substantially shaped by the operators and vendors who benefit from the lower-cost standard and who fund much of the applied research the standard rests on?",
+      "resolution_mechanism": "Trace funding sources and personnel overlap between simulator research programs, vendor-funded studies cited in rulemaking, and the regulatory bodies that adopt those standards; compare against independently funded transfer-validity research.",
+      "impact": "If substantially captured, the regulatory_certification_bodies seat should be read closer to a co-beneficiary than a neutral agenda-setter, which would raise the effective extraction attributable to the enforcement mechanism itself.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether regulatory endorsement of the simulation-sufficient standard is independent or captured."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_requirement__catastrophe_as_necessary_anchor",
+      "competence_exercise_requirement__hybrid_dependency"
+    ],
+    "dual_formulation_note": "This constraint is one of three linked readings of the competence_exercise_requirement kernel. simulation_as_adequate_exercise (this story) authors a moderate, rising ε concentrated as convenience/cost-savings for operators, vendors, and regulators, with unverified tail-risk externalized to frontline operators and the public. catastrophe_as_necessary_anchor authors a structurally different claim — that simulator-only regimes are categorically inadequate — which would produce a much higher ε and a different victim set (everyone currently certified under simulator-only regimes). hybrid_dependency sits between: it treats simulation as necessary-but-insufficient and would show intermediate ε, since real-world anchoring requirements partially re-distribute the cost-savings currently concentrated in this reading. Each story retains its own ε; they are not to be averaged or reconciled."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "simulator_certification_as_sufficient_proxy",
+    "drift_state": {
+      "moment": "post_multidecade_catastrophe_free_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "competence_exercise_requirement__catastrophe_as_necessary_anchor",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "competence_exercise_requirement__hybrid_dependency",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "engineered_fidelity_substitutes_for_lived_exposure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "absence_of_catastrophe_constitutes_positive_validation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "gain_flow": "airline_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

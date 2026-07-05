@@ -1,0 +1,383 @@
+% ============================================================================
+% CONSTRAINT STORY: tordesillas_demarcation_kernel__spanish_conquest_legitimation
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-19
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_tordesillas_demarcation_kernel__spanish_conquest_legitimation, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: tordesillas_demarcation_kernel__spanish_conquest_legitimation
+ *   human_readable: Papal Grant as License for Conquest and Subjugation West of the Tordesillas Line
+ *   domain: international_law/colonial_history/sovereignty_theory
+ *
+ * SUMMARY:
+ *   This story instantiates the Spanish reading of the Tordesillas
+ *   demarcation kernel: the papal bulls of 1493 (Inter Caetera) and the
+ *   resulting 1494 Treaty of Tordesillas, read as granting Spain a license
+ *   for territorial conquest and indigenous subjugation west of the
+ *   demarcation line. The Requerimiento (1513) formalized this into a legal
+ *   instrument read aloud to indigenous populations declaring their
+ *   obligation to submit to Spanish and papal authority on pain of war and
+ *   enslavement. The encomienda system distributed indigenous labor and
+ *   tribute to conquistadors under the theological cover of protection and
+ *   conversion. This is a distinct constraint from the sibling reading
+ *   (Portuguese exploration legitimation), which uses the same treaty text to
+ *   solve a different structural problem (excluding European rivals east of
+ *   the line) with a materially different beneficiary/victim structure and,
+ *   on the Portuguese side of the ledger, substantially lower measured
+ *   extraction against indigenous populations in the earliest exploration
+ *   phase (though the Portuguese reading has its own distinct extraction
+ *   profile in Brazil that would require its own story). The two readings
+ *   share a kernel — the papal donation doctrine and the line it drew — but
+ *   diverge sharply in structural consequence, which is why they are authored
+ *   as separate constraints per the ε-invariance principle rather than as one
+ *   story with a directional parameter.
+ *
+ * KEY AGENTS:
+ *   - spanish_crown: agenda-setter and structural beneficiary, holds the granted title and issues enforcement charters
+ *   - encomenderos: direct beneficiaries who extract labor and tribute under the grant's legal cover
+ *   - catholic_missionary_orders: institutional beneficiary via expanded ecclesiastical territory, with an internal reformist minority
+ *   - indigenous_populations_west_of_line: primary victims, structurally excluded from the instrument that determined their status
+ *   - papacy: co-agenda-setter, source of the doctrinal warrant, bears none of the enforcement cost
+ *   - historical_and_legal_scholarship: analytical observer, including the Church's own 2023 repudiation
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(tordesillas_demarcation_kernel__spanish_conquest_legitimation, 0.93).
+domain_priors:suppression_score(tordesillas_demarcation_kernel__spanish_conquest_legitimation, 0.95).
+domain_priors:theater_ratio(tordesillas_demarcation_kernel__spanish_conquest_legitimation, 0.4).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(tordesillas_demarcation_kernel__spanish_conquest_legitimation, extractiveness, 0.93).
+narrative_ontology:constraint_metric(tordesillas_demarcation_kernel__spanish_conquest_legitimation, suppression_requirement, 0.95).
+narrative_ontology:constraint_metric(tordesillas_demarcation_kernel__spanish_conquest_legitimation, theater_ratio, 0.4).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(tordesillas_demarcation_kernel__spanish_conquest_legitimation, accessibility_collapse, 0.35).
+narrative_ontology:constraint_metric(tordesillas_demarcation_kernel__spanish_conquest_legitimation, resistance, 0.8).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(tordesillas_demarcation_kernel__spanish_conquest_legitimation, snare).
+narrative_ontology:human_readable(tordesillas_demarcation_kernel__spanish_conquest_legitimation, "Papal Grant as License for Conquest and Subjugation West of the Tordesillas Line").
+narrative_ontology:topic_domain(tordesillas_demarcation_kernel__spanish_conquest_legitimation, "international_law/colonial_history/sovereignty_theory").
+
+domain_priors:requires_active_enforcement(tordesillas_demarcation_kernel__spanish_conquest_legitimation).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(tordesillas_demarcation_kernel__spanish_conquest_legitimation, 'd777fe2c-c455-46a0-844c-bf3097c4072c').
+narrative_ontology:cs_kernel_codification('d777fe2c-c455-46a0-844c-bf3097c4072c', formalized).
+narrative_ontology:cs_authority_grounding('d777fe2c-c455-46a0-844c-bf3097c4072c', extraction).
+narrative_ontology:cs_interpretation_layer_present('d777fe2c-c455-46a0-844c-bf3097c4072c').
+narrative_ontology:cs_reading_relation('d777fe2c-c455-46a0-844c-bf3097c4072c', tordesillas_demarcation_kernel__portuguese_exploration_legitimation, coexists_with).
+narrative_ontology:cs_axiom('d777fe2c-c455-46a0-844c-bf3097c4072c', foundational, papal_grant_licenses_conquest_and_subjugation).
+narrative_ontology:cs_axiom_status(papal_grant_licenses_conquest_and_subjugation, overridden).
+narrative_ontology:cs_axiom_grounding('d777fe2c-c455-46a0-844c-bf3097c4072c', papal_grant_licenses_conquest_and_subjugation, theological).
+narrative_ontology:cs_axiom('d777fe2c-c455-46a0-844c-bf3097c4072c', foundational, non_christian_polities_lack_cognizable_sovereign_title).
+narrative_ontology:cs_axiom_status(non_christian_polities_lack_cognizable_sovereign_title, overridden).
+narrative_ontology:cs_axiom_grounding('d777fe2c-c455-46a0-844c-bf3097c4072c', non_christian_polities_lack_cognizable_sovereign_title, theological).
+narrative_ontology:cs_axiom('d777fe2c-c455-46a0-844c-bf3097c4072c', secondary, forced_conversion_justifies_forced_labor_extraction).
+narrative_ontology:cs_axiom_status(forced_conversion_justifies_forced_labor_extraction, overridden).
+narrative_ontology:cs_axiom_grounding('d777fe2c-c455-46a0-844c-bf3097c4072c', forced_conversion_justifies_forced_labor_extraction, instrumental).
+narrative_ontology:cs_reference_frame('d777fe2c-c455-46a0-844c-bf3097c4072c', papal_universal_temporal_and_spiritual_jurisdiction).
+narrative_ontology:cs_drift_state('d777fe2c-c455-46a0-844c-bf3097c4072c', post_vatican_2023_repudiation, gap(repudiation_pressure, severe, true)).
+narrative_ontology:cs_created_at('d777fe2c-c455-46a0-844c-bf3097c4072c', '').
+narrative_ontology:cs_kernel_id(tordesillas_demarcation_kernel__spanish_conquest_legitimation, tordesillas_demarcation_kernel).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(tordesillas_demarcation_kernel__spanish_conquest_legitimation, spanish_crown).
+narrative_ontology:constraint_beneficiary(tordesillas_demarcation_kernel__spanish_conquest_legitimation, spanish_colonial_administration).
+narrative_ontology:constraint_beneficiary(tordesillas_demarcation_kernel__spanish_conquest_legitimation, encomenderos).
+narrative_ontology:constraint_beneficiary(tordesillas_demarcation_kernel__spanish_conquest_legitimation, catholic_missionary_orders).
+narrative_ontology:constraint_victim(tordesillas_demarcation_kernel__spanish_conquest_legitimation, indigenous_populations_west_of_line).
+narrative_ontology:constraint_victim(tordesillas_demarcation_kernel__spanish_conquest_legitimation, enslaved_indigenous_laborers).
+narrative_ontology:constraint_victim(tordesillas_demarcation_kernel__spanish_conquest_legitimation, indigenous_polities_extinguished).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(tordesillas_demarcation_kernel__spanish_conquest_legitimation, papacy).
+narrative_ontology:constraint_vindicates(tordesillas_demarcation_kernel__spanish_conquest_legitimation, papal_donation_doctrine).
+narrative_ontology:constraint_vindicates(tordesillas_demarcation_kernel__spanish_conquest_legitimation, doctrine_of_discovery).
+narrative_ontology:constraint_vindicates(tordesillas_demarcation_kernel__spanish_conquest_legitimation, requerimiento_legal_sufficiency).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Secured the 1493 papal bulls and the 1494 Treaty of Tordesillas as a legal instrument granting exclusive title to lands west of the demarcation line, contingent on a formal (if fictive) commitment to Christianize inhabitants. Issues charters, commissions conquistadors, and adjudicates disputes among its own agents. Bears no cost from the arrangement and can revise its terms unilaterally through further royal decree.
+narrative_ontology:constraint_stakeholder(tordesillas_demarcation_kernel__spanish_conquest_legitimation, spanish_crown, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% Received grants of indigenous labor and tribute under the encomienda system, justified as reciprocal protection and religious instruction. In practice extract forced labor, tribute in kind, and control over indigenous bodies and land, with the papal grant supplying the underlying legal fiction that the territory and its inhabitants were licitly subject to Spanish dominion in the first place.
+narrative_ontology:constraint_stakeholder(tordesillas_demarcation_kernel__spanish_conquest_legitimation, encomenderos, beneficiary,
+    powerful, biographical, mobile, regional).
+
+% Gain access to mass forced conversion campaigns and church-building authority under the papal donation's spiritual mandate; some individual friars (e.g., the Dominican critics) later contest the encomienda's brutality from within the same institutional structure, but the order as a whole benefits from expanded ecclesiastical territory and converts.
+narrative_ontology:constraint_stakeholder(tordesillas_demarcation_kernel__spanish_conquest_legitimation, catholic_missionary_orders, beneficiary,
+    institutional, generational, mobile, regional).
+narrative_ontology:stakeholder_secondary_role(tordesillas_demarcation_kernel__spanish_conquest_legitimation, catholic_missionary_orders, observer).
+
+% Subject to conquest, forced labor under encomienda, mass death from disease and violence, forced conversion, and the dissolution of prior political and religious structures. Never party to the papal grant or the treaty; their prior possession and sovereignty are declared void by a legal instrument issued between two European courts they had no access to or knowledge of. No structural exit exists — flight, resistance, or submission are the only available responses, all costly.
+narrative_ontology:constraint_stakeholder(tordesillas_demarcation_kernel__spanish_conquest_legitimation, indigenous_populations_west_of_line, payer,
+    powerless, generational, trapped, continental).
+
+% Bear the direct labor extraction of the encomienda and, later, chattel enslavement regimes it enabled: mining, agricultural, and domestic labor extracted under threat of violence, with mortality rates that in some regions approached demographic collapse within a generation.
+narrative_ontology:constraint_stakeholder(tordesillas_demarcation_kernel__spanish_conquest_legitimation, enslaved_indigenous_laborers, payer,
+    powerless, immediate, trapped, local).
+
+% Organized states and confederacies (Aztec, Inca, and numerous smaller polities) with their own governance, religious, and legal systems were militarily conquered and dismantled; their capacity for organized resistance was real and in some cases (Inca resistance, Mixtón War, Chichimeca War) prolonged, but ultimately could not match the combined military, epidemiological, and legal-legitimation apparatus deployed against them.
+narrative_ontology:constraint_stakeholder(tordesillas_demarcation_kernel__spanish_conquest_legitimation, indigenous_polities_extinguished, payer,
+    organized, civilizational, trapped, continental).
+
+% Issued the bulls (Inter Caetera and successors) asserting universal spiritual jurisdiction to allocate non-Christian lands to Christian monarchs. Gains expanded ecclesiastical authority, tithes, and the missionary field itself, while bearing none of the costs of enforcement, which fall to the Crown and its agents.
+narrative_ontology:constraint_stakeholder(tordesillas_demarcation_kernel__spanish_conquest_legitimation, papacy, agenda_setter,
+    institutional, civilizational, arbitrage, universal).
+narrative_ontology:stakeholder_secondary_role(tordesillas_demarcation_kernel__spanish_conquest_legitimation, papacy, beneficiary).
+
+% Party to the same treaty but on the other side of the line; not a stakeholder in the Spanish conquest of lands west of the demarcation, though the same kernel (the papal donation doctrine) legitimates its own eastward claims in a structurally distinct reading. Its interests are excluded from this constraint's operation because the line's function here is to grant Spain exclusivity, not to allocate anything to Portugal.
+narrative_ontology:constraint_stakeholder(tordesillas_demarcation_kernel__spanish_conquest_legitimation, portuguese_crown, excluded,
+    institutional, generational, constrained, global).
+
+% Figures such as Antonio de Montesinos and Bartolomé de las Casas objected from within the Church to the brutality of the encomienda and to the legal fiction that conquest was lawful, producing the Valladolid debate (1550-51). Their objections reached the Crown and produced some reform (New Laws of 1542) but never dismantled the underlying grant of title or halted subjugation at scale; their voice was heard but structurally overridden by the beneficiaries who administered enforcement.
+narrative_ontology:constraint_stakeholder(tordesillas_demarcation_kernel__spanish_conquest_legitimation, dominican_and_franciscan_reformist_friars, excluded,
+    moderate, biographical, constrained, regional).
+
+% Contemporary international law scholarship (and the Catholic Church's own 1992 and later statements) retrospectively characterizes the doctrine of discovery and papal donation as a legal fiction constructed to launder conquest, informing modern indigenous rights litigation and Vatican repudiation efforts (formally repudiated in 2023).
+narrative_ontology:constraint_stakeholder(tordesillas_demarcation_kernel__spanish_conquest_legitimation, historical_and_legal_scholarship, observer,
+    analytical, civilizational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(tordesillas_demarcation_kernel__spanish_conquest_legitimation, spanish_crown).
+narrative_ontology:fixing_cost_class(tordesillas_demarcation_kernel__spanish_conquest_legitimation, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Between the two Catholic monarchies, the demarcation genuinely solved a coordination problem: it prevented Spain and Portugal from going to war over overlapping exploration claims by allocating spheres of exclusive title in advance, backed by papal authority both crowns recognized as binding.
+% TRANSFER_FUNCTION: Under this reading, the arrangement transfers land title, labor, tribute, and political sovereignty from indigenous polities and populations west of the line to the Spanish Crown, its colonial administrators, and the encomenderos who received labor grants — with the Catholic Church receiving expanded ecclesiastical territory and converts as a secondary transfer.
+% ABSENT_VOICES: Indigenous polities and populations who possessed, governed, and inhabited the lands in question were never party to the papal bulls, the Treaty of Tordesillas, or any subsequent instrument asserting jurisdiction over them; the Requerimiento was read aloud in Spanish or Latin to populations who could not understand it, formalizing their exclusion from a process that determined their fate.
+% DISAPPEARANCE_RATIONALE: If the papal donation doctrine and its Spanish-reading legal apparatus had not existed, the conquest of the Americas would likely have still occurred through raw military and epidemiological force, but the specific legal architecture that transformed indigenous land tenure, sovereignty, and forced labor into legally recognized Spanish title and encomienda grants — surviving in property law, indigenous land claims litigation, and the doctrine of discovery's residue in later national law — would not exist in its present form; indigenous rights jurisprudence today still argues against the doctrine's afterlife.
+% FOUNDING_PROBLEM: Ostensibly built to solve two problems at once: prevent Iberian war over New World claims, and provide theological warrant for bringing non-Christian peoples under Christian sovereignty and instruction. In practice, for the Spanish reading, the operative problem it solved was providing a legal fiction of licit title so that conquest, land seizure, and forced labor could proceed under color of law rather than naked force.
+% FOUNDING_PROBLEM_CORROBORATION: The Catholic Church itself formally and explicitly repudiated the doctrine of discovery in a joint statement of the Pontifical Council for Culture and the Dicastery for Promoting Integral Human Development in March 2023, stating the papal bulls 'did not adequately reflect the equal dignity and rights of indigenous peoples' and 'were manipulated for political purposes.' Contemporary international law scholarship and indigenous rights advocates (outside the historical beneficiary set) corroborate that the doctrine functioned as legal cover for dispossession rather than genuine coordination; no institution outside the historical Spanish colonial administration and its ecclesiastical partners currently defends the founding problem as still live.
+narrative_ontology:disappearance_verdict(tordesillas_demarcation_kernel__spanish_conquest_legitimation, world_rearranges).
+narrative_ontology:founding_problem_status(tordesillas_demarcation_kernel__spanish_conquest_legitimation, dead).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(tordesillas_demarcation_kernel__spanish_conquest_legitimation, '8080348c4e16a265fafc924dcde83360dfd170fc',
+    'becd0f87568a1ec0be97d1229ae702098dbd6568', '2026-07-05',
+    'no_scope_rebuild_sonnet', 'agent/example_platform_commission.json',
+    'claude-sonnet-5', 'max_tokens=16384,thinking=disabled,temperature=api_default').
+narrative_ontology:story_seed(tordesillas_demarcation_kernel__spanish_conquest_legitimation, 'none', 1).
+narrative_ontology:epsilon_provenance(tordesillas_demarcation_kernel__spanish_conquest_legitimation, 0.93, 'claude-sonnet-5', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(tordesillas_demarcation_kernel__spanish_conquest_legitimation_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(tordesillas_demarcation_kernel__spanish_conquest_legitimation, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(tordesillas_demarcation_kernel__spanish_conquest_legitimation_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness starts moderate in 1493 (0.55) when the bulls are issued but before systematic enforcement machinery exists, then rises sharply through the early encomienda period (0.72 by 1512, 0.85 by 1524) as forced labor and tribute systems mature and indigenous demographic collapse accelerates extraction relative to a shrinking population base, reaching 0.93 by 1600 as the colonial administrative apparatus fully institutionalizes. Suppression tracks a similar but steeper curve, reflecting the buildup of the encomienda's coercive infrastructure, military conquest campaigns, and the Requerimiento's ritualized legal violence, peaking near 0.95 by 1600. Theater ratio is elevated throughout (0.4-0.65) and does not monotonically decline: the Requerimiento itself is a paradigm case of the performative-legal read aloud in a language the audience cannot understand, functioning as a compliance ritual to manufacture the appearance of lawful conquest rather than to communicate; theater spikes around 1512 with the Requerimiento's formalization and again dips as the encomienda's material extraction becomes self-justifying without needing the ritual as heavily. Accessibility collapse is authored moderately (0.35), not high, because indigenous polities did mount organized, sometimes prolonged resistance (Inca resistance at Vilcabamba, the Mixtón War, the Chichimeca War) — alternatives to submission were not fully foreclosed in practice even though the legal framework declared them so; resistance is authored high (0.8) to reflect this.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The Spanish Crown and the papacy sit at the full-beneficiary end of directionality: they authored the instrument, bear none of its enforcement costs directly, and can revise its terms unilaterally (arbitrage exit). Encomenderos and missionary orders are direct beneficiaries with mobile exit (they could return to Iberia or relocate within the colonial system) but are structurally dependent on the extraction continuing. Indigenous populations, enslaved laborers, and extinguished polities sit at the full-target end: trapped exit, no participation in the founding instrument, and the highest measured cost-bearing. The directionality derivation from beneficiary/victim declarations should place these groups near d=1.0 without need for override, since the beneficiary/victim/exit structure is unambiguous and not contested by any secondary effect requiring correction.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The founding_problem framing prevents this constraint from being mislabeled as pure coordination: there WAS a genuine coordination function between Spain and Portugal (avoiding Iberian war over overlapping claims), but that coordination function is not what this reading measures — the sibling reading (Portuguese exploration legitimation) carries that coordination component on its own side of the line. This reading isolates the specific transfer function that operated west of the line: license for conquest and subjugation. The founding_problem_status is authored as 'dead' because the theological warrant for bringing non-Christian peoples under Christian sovereignty is not defended by any institution today, including the Church that issued it — the 2023 Vatican repudiation is corroboration from squarely within the historically benefiting institution reversing itself, which is unusually strong corroboration for a mandatrophy finding, though it arrives five centuries after the fact.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    papal_authority_scope_ambiguity,
+    'Did the papal bulls actually confer temporal sovereignty and license for conquest, or only a spiritual/missionary mandate that Spanish jurists and conquistadors expansively (mis)read as territorial and political license?',
+    'Close textual and canon-law analysis of Inter Caetera and successor bulls against contemporaneous papal practice and later Vatican statements (including the 2023 repudiation), compared with how Spanish jurists (e.g., Francisco de Vitoria''s own contemporaneous critique in De Indis) understood the scope of papal temporal authority.',
+    'If the bulls conferred only spiritual mandate, the conquest and subjugation reading is a downstream misappropriation of the kernel rather than a faithful reading of it — this would not change this story''s classification (the Spanish colonial apparatus operated AS IF the license existed and built the encomienda on that basis) but would sharpen the omega about where the extraction properly attaches: to the kernel itself or to its Spanish operationalization.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(papal_authority_scope_ambiguity, conceptual, 'Whether the papal grant textually licensed conquest or was expansively reinterpreted to do so.').
+
+omega_variable(
+    sibling_reading_divergence_and_shared_kernel,
+    'Given that the Portuguese reading of the same kernel (portuguese_exploration_legitimation) produces a structurally different, lower-extraction constraint focused on excluding European rivals rather than subjugating indigenous populations, is the underlying kernel itself extractive, or does the extraction arise entirely from how each crown chose to operationalize a shared but ambiguous grant?',
+    'Compare the two sibling constraint stories'' authored epsilon, beneficiary/victim sets, and enforcement mechanisms directly; examine whether Portuguese colonial administration in Brazil (a separate downstream constraint not covered by either story here) converges toward the Spanish reading''s extraction profile over time, which would suggest the kernel itself tends toward extraction once contact with indigenous populations occurs regardless of which crown operationalizes it.',
+    'If Portuguese Brazil converges to similar extraction levels once colonization intensifies, this would suggest the kernel (papal donation doctrine) is intrinsically extraction-prone rather than merely permissive of extraction under one crown''s implementation — strengthening the case that the doctrine itself, not merely the Spanish reading, deserves scrutiny as a false-summit-adjacent structure.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(sibling_reading_divergence_and_shared_kernel, empirical, 'Whether the extraction is intrinsic to the shared kernel or specific to the Spanish operationalization.').
+
+omega_variable(
+    requerimiento_legal_sufficiency_status,
+    'Was the Requerimiento (and the papal grant underlying it) treated by contemporaneous Spanish legal and theological authorities as genuinely legally sufficient to establish just title, or was its inadequacy understood and tolerated because it served a convenient extractive function?',
+    'Examine the Valladolid debate record (1550-51) between Sepúlveda and Las Casas, and the extent to which royal and ecclesiastical authorities acted on Las Casas''s arguments versus continued issuing encomienda grants under the existing doctrine after the debate concluded inconclusively.',
+    'If contemporaneous authorities substantially doubted the doctrine''s sufficiency yet continued to rely on it, this strengthens the snare classification (coordination story as cover, known internally to be inadequate) over a genuine-belief mountain-adjacent reading.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(requerimiento_legal_sufficiency_status, empirical, 'Whether contemporaneous authorities believed the legal fiction or knowingly used it as pretext.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(tordesillas_demarcation_kernel__spanish_conquest_legitimation, 1493, 1600).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(tord_tr_t1493, tordesillas_demarcation_kernel__spanish_conquest_legitimation, theater_ratio, 1493, 0.5).
+narrative_ontology:measurement_basis(tord_tr_t1493, observed).
+narrative_ontology:measurement(tord_tr_t1512, tordesillas_demarcation_kernel__spanish_conquest_legitimation, theater_ratio, 1512, 0.65).
+narrative_ontology:measurement_basis(tord_tr_t1512, observed).
+narrative_ontology:measurement(tord_tr_t1524, tordesillas_demarcation_kernel__spanish_conquest_legitimation, theater_ratio, 1524, 0.45).
+narrative_ontology:measurement_basis(tord_tr_t1524, observed).
+narrative_ontology:measurement(tord_tr_t1542, tordesillas_demarcation_kernel__spanish_conquest_legitimation, theater_ratio, 1542, 0.5).
+narrative_ontology:measurement_basis(tord_tr_t1542, observed).
+narrative_ontology:measurement(tord_tr_t1570, tordesillas_demarcation_kernel__spanish_conquest_legitimation, theater_ratio, 1570, 0.42).
+narrative_ontology:measurement_basis(tord_tr_t1570, observed).
+narrative_ontology:measurement(tord_tr_t1600, tordesillas_demarcation_kernel__spanish_conquest_legitimation, theater_ratio, 1600, 0.4).
+narrative_ontology:measurement_basis(tord_tr_t1600, observed).
+
+% Extraction over time
+narrative_ontology:measurement(tord_be_t1493, tordesillas_demarcation_kernel__spanish_conquest_legitimation, base_extractiveness, 1493, 0.55).
+narrative_ontology:measurement_basis(tord_be_t1493, observed).
+narrative_ontology:measurement(tord_be_t1512, tordesillas_demarcation_kernel__spanish_conquest_legitimation, base_extractiveness, 1512, 0.72).
+narrative_ontology:measurement_basis(tord_be_t1512, observed).
+narrative_ontology:measurement(tord_be_t1524, tordesillas_demarcation_kernel__spanish_conquest_legitimation, base_extractiveness, 1524, 0.85).
+narrative_ontology:measurement_basis(tord_be_t1524, observed).
+narrative_ontology:measurement(tord_be_t1542, tordesillas_demarcation_kernel__spanish_conquest_legitimation, base_extractiveness, 1542, 0.88).
+narrative_ontology:measurement_basis(tord_be_t1542, observed).
+narrative_ontology:measurement(tord_be_t1570, tordesillas_demarcation_kernel__spanish_conquest_legitimation, base_extractiveness, 1570, 0.91).
+narrative_ontology:measurement_basis(tord_be_t1570, observed).
+narrative_ontology:measurement(tord_be_t1600, tordesillas_demarcation_kernel__spanish_conquest_legitimation, base_extractiveness, 1600, 0.93).
+narrative_ontology:measurement_basis(tord_be_t1600, observed).
+
+% Suppression requirement over time
+narrative_ontology:measurement(tord_su_t1493, tordesillas_demarcation_kernel__spanish_conquest_legitimation, suppression_requirement, 1493, 0.6).
+narrative_ontology:measurement_basis(tord_su_t1493, observed).
+narrative_ontology:measurement(tord_su_t1512, tordesillas_demarcation_kernel__spanish_conquest_legitimation, suppression_requirement, 1512, 0.78).
+narrative_ontology:measurement_basis(tord_su_t1512, observed).
+narrative_ontology:measurement(tord_su_t1524, tordesillas_demarcation_kernel__spanish_conquest_legitimation, suppression_requirement, 1524, 0.9).
+narrative_ontology:measurement_basis(tord_su_t1524, observed).
+narrative_ontology:measurement(tord_su_t1542, tordesillas_demarcation_kernel__spanish_conquest_legitimation, suppression_requirement, 1542, 0.85).
+narrative_ontology:measurement_basis(tord_su_t1542, observed).
+narrative_ontology:measurement(tord_su_t1570, tordesillas_demarcation_kernel__spanish_conquest_legitimation, suppression_requirement, 1570, 0.93).
+narrative_ontology:measurement_basis(tord_su_t1570, observed).
+narrative_ontology:measurement(tord_su_t1600, tordesillas_demarcation_kernel__spanish_conquest_legitimation, suppression_requirement, 1600, 0.95).
+narrative_ontology:measurement_basis(tord_su_t1600, observed).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(tordesillas_demarcation_kernel__spanish_conquest_legitimation, enforcement_mechanism).
+narrative_ontology:affects_constraint(tordesillas_demarcation_kernel__spanish_conquest_legitimation, portuguese_exploration_legitimation).
+narrative_ontology:affects_constraint(tordesillas_demarcation_kernel__spanish_conquest_legitimation, encomienda_labor_system).
+narrative_ontology:affects_constraint(tordesillas_demarcation_kernel__spanish_conquest_legitimation, requerimiento_legal_ritual).
+
+% DUAL FORMULATION NOTE:
+% This constraint is one of (at minimum) two sibling readings of the tordesillas_demarcation_kernel. The sibling, portuguese_exploration_legitimation, reads the same 1494 treaty and underlying papal bulls as confirming prior exploration rights and excluding European rivals east of the line — a materially different beneficiary/victim structure with substantially lower authored extractiveness against indigenous populations in its immediate operation (though Portuguese colonization of Brazil generates its own downstream extractive constraints not covered by either kernel-reading story). Both readings share the papal donation doctrine as their kernel but diverge in transfer function, victim set, and enforcement character, which is why they are authored as two files linked here rather than one story with a directional parameter, per the epsilon-invariance principle.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

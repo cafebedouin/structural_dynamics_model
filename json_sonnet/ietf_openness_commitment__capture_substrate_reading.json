@@ -1,0 +1,327 @@
+{
+  "header": {
+    "constraint_id": "ietf_openness_commitment__capture_substrate_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "1397a922-956f-404f-a9cb-a7cd994b305b"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.47,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IETF Standards Process as Capture Substrate (Resource-Advantage Reading)",
+    "topic_domain": "technology_governance/internet_standards/institutional_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_platform_operators",
+      "well_resourced_vendor_coalitions"
+    ],
+    "victims": [
+      "independent_implementers",
+      "small_isp_operators",
+      "end_users_of_locked_extensions"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "large_platform_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sends dozens of full-time paid engineers to working groups, chairs key groups, authors the majority of drafts, and can sustain multi-year attendance at every interim meeting. Proposes protocol extensions calibrated to interoperate cleanly with its own existing infrastructure while remaining merely 'compliant enough' with the open spec for competitors, effectively encoding its infrastructure advantage into the standard text itself. Can walk away from any given standard and ship a de facto proprietary alternative that market power makes the standard anyway."
+    },
+    {
+      "name": "well_resourced_vendor_coalitions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Coordinates informally among a handful of large vendors before working group meetings to arrive at rough consensus already agreed among themselves, presenting a unified front that reads as organic technical consensus to less-resourced participants. Benefits from the same encoded advantages as platform operators without bearing the reputational cost of being the sole proposer."
+    },
+    {
+      "name": "independent_implementers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Sends at most one engineer part-time, cannot attend every interim call, and must implement whatever the standard says even when informal side-channel agreements among larger vendors have already shaped the draft before it reaches public comment. Depends on interoperability with the standard for market access; cannot credibly threaten to fork because they lack the market share to make a fork stick."
+    },
+    {
+      "name": "small_isp_operators",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Must deploy whatever the ratified standard specifies to remain interoperable with upstream and downstream networks, absorbing the integration cost of extensions written to favor equipment vendors with working-group presence. Has no seat at the table and no resources to send one; discovers proprietary-flavored extensions only after ratification."
+    },
+    {
+      "name": "end_users_of_locked_extensions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Experiences the practical effect of encoded gatekeeping as reduced interoperability between products nominally built on the same 'open' standard — features that only work correctly within one vendor's ecosystem. Has no visibility into the standards process and no mechanism to object; bears the switching costs and degraded functionality without ever entering the room where the extension was proposed."
+    },
+    {
+      "name": "ietf_leadership",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Administers the rough-consensus process, chairs selection, and the appeals mechanism, but has limited tools to detect or correct for asymmetric resourcing among participants; procedural neutrality is maintained even when the underlying resource distribution predetermines whose drafts survive to last call."
+    },
+    {
+      "name": "academic_and_civil_society_participants",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Attends occasionally, raises interoperability and privacy concerns, but lacks the sustained engineering headcount to shepherd counter-drafts through the multi-year process; objections are procedurally heard but rarely translate into surviving text because sustained presence is what wins rough consensus in practice."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared, documented protocol specification so that independently built implementations can interoperate without bilateral negotiation between every pair of vendors — genuinely solves a real multi-party coordination problem that no single actor could solve alone.",
+    "transfer_function": "Moves technical control and de facto market position toward whichever participants can sustain the highest engineering headcount in the working-group process, at the expense of implementers and users who must accept whatever text results but had no proportionate voice in shaping it.",
+    "absent_voices": "Academic and civil-society participants raise interoperability and privacy concerns but cannot sustain multi-year drafting presence; end users and small ISP operators are structurally absent from the room entirely and only encounter the standard's effects after ratification.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the IETF process vanished, large platform operators would likely retain de facto standardization power through market dominance and closed specifications, while independent implementers would lose the one forum where they currently have any formal voice at all, however diluted by resourcing asymmetry. Whether the world 'rearranges' or 'stays the same' depends on whether the coordination function or the gatekeeping function is treated as primary — which is exactly the contest this reading exists to isolate.",
+    "founding_problem": "Early internet protocol development risked fragmenting into incompatible vendor-specific implementations; a body was needed to produce voluntary, rough-consensus, running-code-tested specifications that any implementer could adopt without licensing gatekeeping.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "IETF leadership and long-tenured participants attest the rough-consensus function still works as designed. Independent implementers, smaller vendors, and several academic observers (documented in workshop retrospectives and post-hoc analyses of specific working groups) attest that sustained-presence resourcing now functions as an informal but decisive gate that the original design did not anticipate and does not correct for."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.47
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the capture_substrate_reading of the ietf_openness_commitment kernel: the IETF's rough-consensus, running-code process is read here as a coordination substrate whose formally neutral procedure translates raw resource advantage (sustained paid engineering headcount, multi-year meeting attendance, ability to pre-coordinate among a vendor coalition) into encoded technical gatekeeping. The genuine coordination function (shared interoperable specifications) is real and is why this reading is tangled_rope rather than snare: independent implementers and end users do receive real interoperability benefit from having any open specification at all, even as the same mechanism structurally advantages whichever participants can outlast the drafting process. This is a distinct constraint from the commons_stewardship_reading (which treats the standard's openness itself as the primary fact, with capture as noise) and from the legitimacy_erosion_reading (which is about whether the rough-consensus mechanism's own legitimacy is failing, a meta-level question about the process rather than about resource-driven text capture). Each reading has its own ε and its own stakeholder structure; they are linked as siblings via network and cs_structure, not merged.",
+    "key_agents": [
+      "large_platform_operators: primary structural beneficiary (institutional/arbitrage) — encodes infrastructure advantage into standard text",
+      "well_resourced_vendor_coalitions: secondary beneficiary (organized/mobile) — pre-coordinates consensus outcomes",
+      "independent_implementers: primary target (moderate/constrained) — bears the cost of asymmetric resourcing",
+      "small_isp_operators and end_users_of_locked_extensions: diffuse targets (powerless/trapped) — absorb downstream effects with no process visibility",
+      "ietf_leadership: agenda_setter/observer (institutional/analytical) — administers a formally neutral process that does not correct for resourcing asymmetry"
+    ],
+    "logic_rationale": "Extractiveness is authored as moderate (0.58 at interval end, rising from 0.35) because the mechanism is genuinely mixed: real interoperability coordination coexists with resource-driven text capture that has intensified as standards work has grown more technically complex and time-intensive over the interval, raising the effective cost of sustained participation and widening the gap between well-resourced and under-resourced participants. Suppression is moderate (0.47) — there is no formal barrier to participation (the process is open by design), but the practical suppression comes from the cost structure of sustained engagement, which functions as a soft barrier without needing formal exclusion rules. Theater ratio rises to 0.42, reflecting a growing share of procedural activity (public comment periods, open mailing lists) that preserves the appearance of open participation while the substantive drafting work happens in pre-coordinated vendor discussions that precede formal working-group sessions.",
+    "directionality_logic": "Large platform operators and vendor coalitions sit near the beneficiary end: they set the agenda, shape the text, and can exit to proprietary alternatives if a standard doesn't suit them, giving them structural power even over the constraint's outcome. Independent implementers, small ISPs, and end users sit near the target end: they must accept whatever text results, cannot sustain the resourcing needed to shape it, and have limited or no exit (small ISPs are trapped by interoperability requirements; end users are trapped by product lock-in they cannot see the cause of). IETF leadership occupies an unusual dual position — institutional power but analytical exit options, since it administers rather than captures the extraction.",
+    "mandatrophy_analysis": "The coordination function (shared interoperable specs) has not disappeared or gone dead — it remains genuinely live, which is precisely why this constraint is authored as tangled_rope rather than snare. Classifying it as pure extraction would erase the real value independent implementers and end users receive from having any open standard rather than pure vendor balkanization; classifying it as pure coordination (rope) would erase the documented asymmetry in whose drafts survive to ratification. The tangled_rope classification is the only one of the six that requires both a genuine coordination function AND identifiable asymmetric extraction to be named simultaneously.",
+    "perspectival_gap": "From the platform operator's seat, the process looks like legitimate, hard-won rough consensus achieved through diligent sustained participation — an achievement, not a capture. From the independent implementer's seat, the same rough-consensus mechanism looks like a filter that systematically selects for whoever can afford to stay in the room longest. The engine computes both seats from the same structural data; the divergence is the finding, not an error to reconcile.",
+    "kernel_context": "This constraint is the capture_substrate_reading of the ietf_openness_commitment kernel. It takes the standards process's resource-driven text capture as the primary structural fact and treats the coordination benefit as real but secondary — hence tangled_rope, not rope or snare. The commons_stewardship_reading (sibling) treats the open-standard property itself as primary, with capture read as a manageable defect rather than the constraint's core operation — a different constraint with a different, lower ε. The legitimacy_erosion_reading (sibling) is about a different question entirely: whether the rough-consensus decision procedure itself is losing legitimacy as an institution, independent of who specifically benefits from any one standard's text — a meta-level claim about institutional trust rather than about text-level capture."
+  },
+  "omegas": [
+    {
+      "id": "capture_vs_stewardship_primacy",
+      "question": "Is resource-driven text capture the primary structural fact about the IETF process (this reading), or is open-standard preservation the primary fact with capture as a secondary, correctable defect (the sibling commons_stewardship_reading)?",
+      "resolution_mechanism": "Comparative analysis across working groups: measure the correlation between sponsor engineering headcount and survival rate of proposed text to last call, across a large sample of standards. A strong, consistent correlation supports this reading as primary; a weak or absent correlation across most working groups (with capture concentrated in a few high-stakes groups) would support treating stewardship as primary and capture as localized noise.",
+      "impact": "If capture correlation is weak and localized, this reading's extractiveness estimate is too high relative to the corpus as a whole and should be revised toward a rope classification with isolated tangled-rope exceptions rather than a general tangled-rope reading of the whole process.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capture or stewardship is the primary structural reading of the same kernel."
+    },
+    {
+      "id": "process_neutrality_vs_engineered_outcome",
+      "question": "Is the rough-consensus process's failure to correct for resourcing asymmetry a designed feature (the process was never meant to equalize resourcing, only to require technical justification) or a design failure relative to the process's own stated openness commitments?",
+      "resolution_mechanism": "Historical analysis of IETF founding documents and RFC 3935 (mission statement) against the actual resourcing patterns of high-impact working groups over multiple decades.",
+      "impact": "If the asymmetry is a designed feature rather than a failure, the 'gatekeeping' framing in this reading is less an indictment of the process and more a description of an intentional meritocratic filter — which would push this reading's claimed_type toward rope. If it is a genuine departure from founding commitments, tangled_rope or even a harder capture reading is supported.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether encoded resourcing advantage is a design feature or a departure from the process's own openness commitments."
+    },
+    {
+      "id": "sibling_kernel_reading_boundary",
+      "question": "Where exactly does this reading's claim (text-level capture via resourcing) stop and the legitimacy_erosion_reading's claim (institutional trust in the rough-consensus mechanism itself) begin?",
+      "resolution_mechanism": "Track whether critiques in the field target specific standards' text (supports this reading as the operative frame) versus target the legitimacy of the consensus-calling process itself, e.g. disputes over chair discretion in declaring consensus (supports the sibling reading as the operative frame).",
+      "impact": "Clarifies which reading a given empirical critique should be filed under, preventing double-counting of the same evidence across both sibling constraints.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary condition distinguishing this reading from the legitimacy_erosion_reading sibling."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "ietf_openness_commitment__commons_stewardship_reading",
+      "ietf_openness_commitment__legitimacy_erosion_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the ietf_openness_commitment kernel, decomposed per the ε-invariance principle: capture_substrate_reading (this story, tangled_rope, moderate-rising ε), commons_stewardship_reading (open-standard preservation as primary fact, lower ε, likely rope), and legitimacy_erosion_reading (meta-level question about the rough-consensus mechanism's own legitimacy under organized capture pressure, a distinct claim about institutional trust rather than text-level outcomes). All three share the same underlying institutional substrate (the IETF standards process) but instantiate structurally distinct constraints with different ε values, different beneficiary/victim structures, and different classifications. They are linked bidirectionally via affects_constraints; each carries its own cs_structure.reading_relations and axioms documenting the specific structural relationship to its siblings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "rough_consensus_running_code_meritocracy",
+    "drift_state": {
+      "moment": "post_platform_consolidation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "ietf_openness_commitment__commons_stewardship_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ietf_openness_commitment__legitimacy_erosion_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sustained_resourcing_functions_as_de_facto_veto",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "formal_procedural_openness_does_not_entail_substantive_access",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "large_platform_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

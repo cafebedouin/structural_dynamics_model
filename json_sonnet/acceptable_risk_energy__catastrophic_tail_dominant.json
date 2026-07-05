@@ -1,0 +1,343 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__catastrophic_tail_dominant",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "a6c000ee-3fc3-4665-8577-340dc6d3881c"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.79,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.61,
+    "resistance": 0.57,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Catastrophic-Tail-Dominant Acceptable Risk Standard (Energy Policy)",
+    "topic_domain": "risk_assessment/energy_policy/decision_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_fossil_fuel_operators",
+      "anti_nuclear_advocacy_organizations",
+      "risk_averse_regulators"
+    ],
+    "victims": [
+      "populations_near_fossil_fuel_plants",
+      "future_generations_facing_climate_harm",
+      "nuclear_industry_workers_and_engineers",
+      "energy_poor_households_paying_higher_prices"
+    ],
+    "vindicated_propositions": [
+      "precautionary_principle_for_irreversible_harm",
+      "catastrophic_risk_aversion_rationality"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_fossil_fuel_operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Continue operating existing fossil generation capacity and building new gas plants while nuclear licensing timelines stretch to decades and costs balloon under tail-risk-driven regulatory requirements. Benefit from a regulatory regime that treats their distributed, chronic emissions and mortality as an acceptable background cost while treating a competitor technology's rare catastrophic failure mode as intolerable. Face no comparably strict per-fatality standard despite killing far more people annually through air pollution."
+    },
+    {
+      "name": "anti_nuclear_advocacy_organizations",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Campaign to keep nuclear licensing, siting, and safety requirements maximally stringent by invoking catastrophic-outcome imagery (meltdown, exclusion zones, multi-generational contamination). Successfully embed the tail-risk framing into regulatory review processes, environmental impact statements, and public referenda. Their organizational identity and fundraising are structurally tied to nuclear remaining the salient danger; a normalized nuclear buildout would dissolve their core mandate."
+    },
+    {
+      "name": "risk_averse_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer licensing and safety review regimes that apply asymmetric scrutiny: a probabilistic risk assessment showing a one-in-a-million-per-reactor-year severe accident triggers years of additional review, while an existing coal plant's demonstrated, statistically certain excess mortality from particulate exposure requires no comparable process. Personally and institutionally exposed to blame for approving a facility that later fails catastrophically, but face no equivalent personal liability for the diffuse deaths their inaction perpetuates by keeping fossil plants running longer."
+    },
+    {
+      "name": "populations_near_fossil_fuel_plants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Bear elevated rates of respiratory and cardiovascular disease and shortened life expectancy from continuous exposure to combustion byproducts, a harm that is well-quantified, certain, and ongoing, but is not weighted as 'catastrophic' because it is statistically distributed across many individuals rather than concentrated in a single dramatic event. Cannot relocate easily due to housing costs and employment ties, and have no equivalent advocacy infrastructure to nuclear's opponents."
+    },
+    {
+      "name": "future_generations_facing_climate_harm",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Inherit the accumulated atmospheric carbon burden produced by a slower-than-necessary transition off fossil generation, itself partly attributable to nuclear buildout being throttled by tail-risk-driven licensing delays and cost overruns. Have no representation in current regulatory proceedings and cannot bargain for a different risk-weighting today."
+    },
+    {
+      "name": "nuclear_industry_workers_and_engineers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Work within a licensing and public-approval environment where safety margins are set not purely by engineering risk analysis but by the political cost of a low-probability, high-salience failure. Careers are subject to project cancellation, cost-overrun blame, and public distrust disproportionate to the technology's actual comparative mortality record. Cannot easily redirect skills to a fossil-fuel-favoring market without retraining."
+    },
+    {
+      "name": "energy_poor_households_paying_higher_prices",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Pay higher electricity prices where nuclear cost overruns driven by tail-risk-oriented regulatory requirements get passed through, or where slower decarbonization keeps volatile fossil fuel prices as the marginal price-setter. Have no seat in the regulatory risk-weighting process and experience the standard only as a bill."
+    },
+    {
+      "name": "decision_theorists_and_risk_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the divergence between expected-value risk aggregation and catastrophic-tail-weighted risk aggregation, publishing comparative mortality-per-TWh analyses that show nuclear as statistically among the safest generation sources per unit energy produced, while noting the psychological and institutional salience of rare catastrophic events distorts policy weighting away from the expected-value calculation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared, legible standard for what counts as an unacceptable risk when siting and licensing energy infrastructure, allowing regulators, courts, insurers, and the public to coordinate around a common threshold for catastrophic, irreversible, unbounded harms rather than litigating each proposed facility's risk profile from first principles every time.",
+    "transfer_function": "Moves accepted mortality and morbidity burden away from concentrated, dramatic, attributable failure events (nuclear accidents) and onto diffuse, chronic, statistically-certain-but-individually-unattributable harm (fossil fuel combustion exposure, delayed decarbonization, climate damage) — a transfer from the politically salient minority who could be harmed by a rare catastrophic event to the politically diffuse majority who are certainly harmed by the status quo continuing.",
+    "absent_voices": "Future generations bearing accumulated climate damage have no seat in present licensing and regulatory proceedings. Populations near existing fossil plants are individually powerless and rarely organized at the scale anti-nuclear advocacy groups achieve. Statisticians pointing out that per-TWh nuclear mortality is far lower than fossil generation are present in academic literature but structurally absent from the regulatory weighting process itself, which privileges catastrophic-scenario testimony over comparative mortality tables.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the catastrophic-tail-dominant standard were replaced overnight by an expected-value standard, nuclear licensing timelines and cost structures would shift substantially, fossil fuel operators would face the first regime treating their statistically certain mortality burden as comparably weighted to rare catastrophic events, and capital allocation across generation technologies would reorganize around comparative mortality-per-TWh rather than catastrophe-avoidance framing.",
+    "founding_problem": "Following Three Mile Island, Chernobyl, and later Fukushima, policymakers and publics confronted genuinely novel harm properties in nuclear accidents — potential unbounded geographic contamination, multi-generational exposure, and involuntary imposition on people who received no benefit from the facility — that classical expected-value mortality accounting did not obviously capture, motivating a precautionary standard specifically for catastrophic, irreversible, involuntarily-imposed risks.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Decision theorists and comparative-mortality researchers, working from outside both the fossil incumbency and anti-nuclear advocacy communities, corroborate that the underlying concern about irreversible, involuntary, unbounded harm is a genuine and still-live problem in risk theory — but many of the same researchers attest that its current instantiation has drifted into an asymmetric standard that no longer tracks aggregate harm reduction, citing IPCC and WHO mortality data showing fossil generation's per-TWh death toll substantially exceeds nuclear's even including Chernobyl and Fukushima."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.73,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.77,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.79,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint is the catastrophic-tail-dominant reading of the acceptable-risk-in-energy kernel: it weights low-probability, high-magnitude, geographically concentrated failure modes (principally nuclear accidents) as effectively infinite-cost outcomes to be avoided regardless of their contribution to aggregate expected harm, while treating high-probability, low-magnitude, geographically distributed harms (principally fossil fuel combustion mortality and climate damage) as an acceptable, discountable background cost because they are statistically diffuse and appear 'reversible' in a way a meltdown does not. The regime that instantiates this reading — nuclear licensing regulation, siting law, insurance liability caps, environmental review processes — produces a standard under which vastly more people die from the accepted pathway (fossil generation) than from the suppressed pathway (nuclear), yet the suppressed pathway is treated as the greater wrong. This is a coherent, structurally distinct constraint from a sibling reading (expected_value_dominant) that would weight all pathways by mortality-per-TWh, and from a further sibling (option_value_preserving) that would justify diversification on uncertainty-preservation grounds rather than tail-avoidance grounds. Per the ε-invariance principle, these are not the same constraint measured three ways — they are three constraints, linked here via network.affects_constraints, each with its own beneficiary/victim structure and its own ε.",
+    "key_agents": [
+      "incumbent_fossil_fuel_operators: primary beneficiary (powerful/arbitrage) — benefit from asymmetric scrutiny that spares their chronic emissions",
+      "anti_nuclear_advocacy_organizations: beneficiary and co-agenda-setter (organized/mobile) — embed catastrophic framing into regulatory review",
+      "risk_averse_regulators: agenda_setter (institutional/constrained) — administer asymmetric licensing standards, personally exposed to catastrophic-failure blame",
+      "populations_near_fossil_fuel_plants: primary payer (powerless/trapped) — bear statistically certain but individually undramatic harm",
+      "future_generations_facing_climate_harm: payer (powerless/trapped, civilizational horizon) — inherit delayed decarbonization",
+      "decision_theorists_and_risk_analysts: analytical observer — document the expected-value/tail-weighting divergence"
+    ],
+    "logic_rationale": "Extractiveness (0.68) and suppression (0.79) are both substantial and rising because the standard requires active, intensifying regulatory and political machinery to keep the asymmetry in place — probabilistic risk assessment frameworks, licensing review boards, insurance liability regimes, and public communication campaigns all must continually reproduce the framing that concentrates dread on nuclear failure modes while normalizing distributed fossil harm. Theater ratio (0.42) reflects that a real coordination function exists (some standard for catastrophic, irreversible, involuntary risk is genuinely needed) but a growing share of enforcement activity — additional review rounds, precautionary relicensing delays, worst-case scenario modeling exercises — now serves to perform diligence against a politically salient failure mode rather than to reduce aggregate harm. Accessibility collapse (0.61) is moderate-high: once a jurisdiction adopts the catastrophic-tail framing in its licensing law and public discourse, alternative expected-value framings become very difficult to reintroduce because any policymaker who relaxes nuclear scrutiny bears personal and political liability for a future accident, however statistically rare, while no symmetric liability attaches to perpetuating fossil-linked mortality. Resistance (0.57) is real but structurally weaker than the beneficiary coalition: comparative-mortality researchers and some public-health advocates push back, but lack the visceral narrative power of catastrophe imagery.",
+    "directionality_logic": "Incumbent fossil operators and anti-nuclear advocacy organizations sit near the beneficiary end: the standard's asymmetry directly protects the former's market position and directly serves the latter's institutional mandate. Risk-averse regulators are agenda-setters who administer the asymmetry but are also partially trapped by it — their personal liability structure makes them structurally unable to unwind the standard even if they privately doubt its aggregate-harm consequences, which is why they are NOT coded as pure beneficiaries. Populations near fossil plants, future generations, and energy-poor households sit near the full-target end: they bear concentrated, certain costs from a standard ostensibly designed to protect people from risk, and their exit options are trapped precisely because the harm is diffuse and slow enough to defy organized resistance. Nuclear industry workers are targets of a different kind — their livelihoods absorb the cost of licensing delay and public distrust that the standard generates.",
+    "perspectival_gap": "From the regulator's and anti-nuclear advocate's seats, this constraint reads as prudent, values-protective coordination against irreversible catastrophe — a rope. From the seat of populations near fossil plants and future generations, the identical structure reads as an enforced transfer that sacrifices their certain, quantifiable safety for the avoidance of a rarer, more narratively vivid harm to a different population — a tangled rope shading toward snare. The engine's per-seat computation is expected to diverge sharply here precisely because the standard's coordination function (a genuine need to weight irreversible, involuntary catastrophic risk specially) is real, but is yoked to an asymmetric application that the beneficiary coalition has strong incentive to maintain and weak incentive to correct.",
+    "mandatrophy_analysis": "The founding problem — how to weigh genuinely novel harm properties of nuclear accidents (unbounded contamination, multi-generational exposure, involuntary imposition) — was live and serious at founding. Its status today is contested: the underlying decision-theoretic problem (how should irreversible, involuntary catastrophic risk be weighted against reversible, chronic, statistically-certain risk) remains a genuine open question in risk theory, so this is not simple mandatrophy where the founding problem has vanished. What has drifted is the APPLICATION: the standard was meant to solve a weighting problem for catastrophic-versus-chronic risk in general, but in practice it has hardened into an asymmetric standard applied almost exclusively against one energy technology while leaving a comparably or more lethal alternative pathway essentially unweighted by the same logic. Classifying this as tangled_rope rather than snare or mountain preserves the genuine coordination function (some catastrophic-risk standard is defensible) while flagging the asymmetric extraction (the standard's actual operation transfers harm rather than minimizing it in aggregate) — collapsing it to a pure snare would deny the founding problem's continued legitimacy, while accepting the claimed rope framing at face value would launder the standard's asymmetric operation.",
+    "kernel_context": "This constraint is the catastrophic_tail_dominant reading of the acceptable_risk_energy kernel. Two sibling readings exist as separate constraints: expected_value_dominant (minimizes aggregate expected harm via mortality-per-TWh, which would NOT discount fossil deaths as reversible and would NOT suppress the nuclear pathway on tail-risk grounds alone) and option_value_preserving (maintains multiple pathways for flexibility under deep uncertainty, which values diversification itself rather than avoidance of any specific catastrophic tail). This reading is distinguished by treating catastrophic-magnitude, low-probability, involuntary harm as categorically different from and dominant over chronic, high-probability, distributed harm — the structural delta is that nuclear accident victims enter the moral accounting with effectively unbounded weight while fossil fuel mortality is discounted as ordinary, distributed, and reversible-in-aggregate even though it is neither reversible for the individuals who die nor smaller in aggregate magnitude."
+  },
+  "omegas": [
+    {
+      "id": "catastrophic_weighting_rational_or_captured",
+      "question": "Is the infinite/near-infinite weighting of catastrophic, low-probability nuclear harm a rationally defensible response to genuinely distinct harm properties (irreversibility, involuntary imposition, unbounded geographic scope), or is it a captured standard maintained by incumbent fossil interests and anti-nuclear advocacy organizations whose institutional survival depends on nuclear remaining maximally salient as a danger?",
+      "resolution_mechanism": "Comparative institutional analysis of which actors fund, testify in, and structurally benefit from maintaining asymmetric licensing review, cross-referenced against whether the same actors apply comparable precautionary logic to other catastrophic-tail risks (e.g., large hydro dam failure, LNG facility explosion) that do not implicate a competing generation technology.",
+      "impact": "If the weighting tracks genuine harm-property distinctions applied consistently across technologies, this reading is closer to a legitimate scaffold or rope solving a real decision-theory problem. If the weighting is applied asymmetrically and tracks incumbent benefit rather than harm-property consistency, this confirms the tangled_rope/snare-leaning classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether catastrophic-tail weighting is a principled decision-theoretic stance or a captured asymmetric standard."
+    },
+    {
+      "id": "kernel_framing_underdetermination",
+      "question": "Given that the acceptable_risk_energy kernel supports at least three coherent readings (catastrophic_tail_dominant, expected_value_dominant, option_value_preserving), is the choice among them itself a value judgment (how much should society discount for irreversibility and involuntariness) or is it resolvable by better empirical risk data?",
+      "resolution_mechanism": "Trace whether disagreement among readings persists even when all parties are shown identical mortality-per-TWh and irreversibility data — if disagreement persists on identical facts, the kernel contest is a values dispute (preference type_class); if disagreement dissolves with better data, it is empirical.",
+      "impact": "If the reading choice is a genuine values dispute, no amount of additional risk-quantification research will resolve which reading 'should' govern policy, and the contest among readings is a permanent feature of energy governance rather than a temporary data gap.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the choice among catastrophic-tail, expected-value, and option-value readings is empirically resolvable or an irreducible values contest."
+    },
+    {
+      "id": "future_generations_representation_gap",
+      "question": "Does the absence of any mechanism for future generations to participate in current risk-weighting decisions systematically bias the standard toward discounting slow, cumulative harms (climate damage from delayed decarbonization) relative to dramatic, immediate harms visible to currently-living voters?",
+      "resolution_mechanism": "Compare policy outcomes in jurisdictions with formal future-generations representation mechanisms (e.g., ombudsman offices, intergenerational equity statutes) against jurisdictions without them, controlling for other factors affecting nuclear/fossil licensing balance.",
+      "impact": "If representation mechanisms measurably shift the catastrophic/chronic risk balance, this substantiates the absent_voices claim as a structural driver of the constraint's asymmetry, not merely a rhetorical point.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether lack of future-generations representation structurally biases risk weighting toward present-salient over cumulative harms."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_energy__expected_value_dominant",
+      "acceptable_risk_energy__option_value_preserving"
+    ],
+    "dual_formulation_note": "This constraint is one of three members of the acceptable_risk_energy kernel family. acceptable_risk_energy__expected_value_dominant reads the same kernel as requiring aggregate mortality-per-TWh minimization across all pathways, with a correspondingly different beneficiary/victim structure (fossil operators would become victims of stricter scrutiny; nuclear pathway would gain beneficiary status). acceptable_risk_energy__option_value_preserving reads the kernel as justifying pathway diversification under deep uncertainty rather than tail-avoidance per se, and would show low suppression against any single pathway. Each story carries its own ε, its own claimed_type, and its own stakeholder set per the ε-invariance principle; they are linked here rather than merged."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "post_disaster_precautionary_consensus",
+    "drift_state": {
+      "moment": "contemporary_decarbonization_pressure_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "acceptable_risk_energy__expected_value_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "acceptable_risk_energy__option_value_preserving",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "irreversible_involuntary_harm_categorically_dominant",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "catastrophic_magnitude_outweighs_aggregate_frequency",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "gain_flow": "incumbent_fossil_fuel_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

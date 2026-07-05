@@ -1,0 +1,280 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__simulation_as_sufficient",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "2b592082-4fb8-4663-addf-dbfe8fb200e4"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.44,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.47,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-as-Sufficient Reading of Competence Retention",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulator_vendor_industry",
+      "regulatory_certification_bodies",
+      "operating_organization_leadership"
+    ],
+    "victims": [
+      "frontline_operators",
+      "downstream_public_exposed_to_residual_risk"
+    ],
+    "vindicated_propositions": [
+      "high_fidelity_simulation_equivalence_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "operating_organization_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets training policy, decides simulator investment levels, and certifies crews as competent based on simulator performance. Benefits from avoiding the cost, liability, and reputational exposure of running crews through actual catastrophic scenarios, and from a defensible paper trail showing compliance with competence standards."
+    },
+    {
+      "name": "simulator_vendor_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sells and maintains the high-fidelity training infrastructure that this reading declares equivalent to real events. Revenue scales directly with the doctrine's acceptance; has no exposure if the equivalence claim proves false in an actual event."
+    },
+    {
+      "name": "regulatory_certification_bodies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Writes and enforces the certification standards that accept simulator hours as proof of competence. Benefits from a tractable, auditable metric (simulator performance scores) rather than the much harder problem of assessing readiness for events that by design happen rarely or never during a career."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Are certified competent through simulator cycles and then bear the actual consequences if the equivalence claim is wrong during a real low-frequency, high-consequence event. Cannot independently verify whether their trained reflexes transfer, and cannot opt out of the certification regime while remaining employed in the role."
+    },
+    {
+      "name": "downstream_public_exposed_to_residual_risk",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Lives, works, or travels within the consequence radius of the systems these operators run. Has no visibility into whether certification reflects genuine catastrophe-avoidance competence or simulator-metric proficiency, and no channel to demand the more expensive validation regime."
+    },
+    {
+      "name": "safety_researchers_and_incident_investigators",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Studies post-incident records to compare simulator-certified performance against real-event performance. Has produced mixed findings: some domains show strong transfer, others show significant gaps in stress physiology, ambiguity tolerance, and multi-team coordination that simulators struggle to reproduce faithfully."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a scalable, repeatable, non-destructive mechanism for maintaining and verifying catastrophe-avoidance skills across a large workforce without requiring anyone to experience an actual catastrophe to be certified competent.",
+    "transfer_function": "Moves the cost of competence validation from 'accept the risk of real catastrophic exposure' to 'invest in simulator infrastructure and accept the certification it produces' — shifting residual risk from the certifying institutions onto frontline operators and the downstream public if the equivalence claim is imperfect.",
+    "absent_voices": "Downstream publics exposed to residual risk have no seat in setting certification standards. Frontline operators individually have limited power to demand costlier, higher-fidelity, or catastrophe-adjacent validation even when they privately doubt simulator transfer.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the simulation-as-sufficient doctrine were abandoned overnight, certification regimes would need an alternative competence-validation mechanism; simulator vendors would lose their core revenue justification, regulators would face a much harder and more expensive assessment problem, and organizations would either revert to costlier real-exposure training pathways or to the near-miss-as-bridge reading — the entire training-industrial infrastructure built around simulator equivalence would need restructuring.",
+    "founding_problem": "Real catastrophic events are too rare, too destructive, and too ethically fraught to use as the primary vehicle for training and certifying operator competence, yet organizations still need a way to verify that operators can respond correctly when such events occur.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Regulatory bodies and simulator vendors attest the equivalence problem is solved by high-fidelity simulation. Independent safety researchers and incident investigators — outside the beneficiary set — report mixed corroboration: some post-incident analyses show strong skill transfer, others document specific failure modes (stress physiology, novel-scenario improvisation, multi-agency coordination under real uncertainty) that simulator-certified crews handled worse than the doctrine predicted."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.44
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story is the 'simulation_as_sufficient' reading of the contested competence_retention_exercise kernel: high-fidelity simulation is treated as structurally equivalent to real catastrophic events for the purpose of maintaining and certifying operator competence. Under this reading, training infrastructure — not real catastrophic exposure — becomes the primary competence-maintenance mechanism, catastrophes are things to be prevented rather than pedagogical necessities, and competence itself is operationalized as simulator performance metrics. Two sibling readings exist as separate constraints (catastrophe_as_necessary, near_miss_as_bridge) and are not described here beyond the omega variables documenting the contest.",
+    "key_agents": [
+      "operating_organization_leadership: agenda-setter, benefits from defensible low-cost certification",
+      "simulator_vendor_industry: beneficiary, revenue scales with doctrine acceptance",
+      "regulatory_certification_bodies: agenda-setter/beneficiary, prefers tractable metrics over unverifiable readiness",
+      "frontline_operators: payer, bears the risk if equivalence claim is wrong",
+      "downstream_public_exposed_to_residual_risk: payer, no voice in standard-setting",
+      "safety_researchers_and_incident_investigators: analytical observer, produces mixed corroboration evidence"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.42 at interval end) rather than severe because the coordination function is real: simulation genuinely avoids the ethical and material costs of using catastrophes as training vehicles, and much of the skill transfer literature is supportive. But extraction accumulates because the doctrine's institutional convenience (cheaper, auditable, avoids destructive exposure) creates incentive pressure to over-claim equivalence beyond what the evidence supports, especially as simulator vendors and certification bodies gain entrenched interests in the doctrine's acceptance. Theater ratio rises over the interval (0.22 to 0.44) as certification increasingly optimizes for simulator-metric performance rather than the underlying catastrophe-avoidance competence it is meant to proxy — a Goodhart drift signature. Suppression (0.38) reflects that operators cannot easily contest their certification basis without professional consequences, but this is moderate, not severe, since safety research channels do exist and produce genuine countervailing evidence.",
+    "perspectival_gap": "From the agenda-setter seats (leadership, regulators), the arrangement reads as sound coordination: a scalable, ethical, cost-effective solution to an intractable training problem. From the frontline-operator and downstream-public payer seats, the same structure reads as a substitution of a measurable proxy for the actual unmeasurable target, with the substitution's risk falling on those least able to verify or contest it. The engine should compute divergent seat classifications from this asymmetry in exit options and stakes exposure.",
+    "directionality_logic": "Simulator vendors and certification bodies sit near the beneficiary end: they capture revenue or administrative tractability from the doctrine's acceptance and bear no direct consequence if it is imperfect. Leadership sits similarly favorable, gaining liability protection and cost savings. Frontline operators sit toward the target end: they are certified under the doctrine's terms and absorb the consequences of any equivalence gap during an actual event, with constrained exit (leaving the profession is costly and doesn't resolve the certification question for those who stay). The downstream public sits furthest toward the target end: powerless, trapped by geography or dependency on the systems in question, with zero input into the certification standard that governs their exposure.",
+    "mandatrophy_analysis": "The founding problem (need a competence-validation mechanism that doesn't require destructive real-world exposure) remains genuinely live — this prevents the classification from collapsing to pure snare. What keeps it tangled rather than a clean rope is the asymmetric evolution: as the doctrine matured, the metric (simulator performance) began drifting away from the target (actual catastrophe-avoidance competence) in ways that benefit the parties administering the metric and burden the parties whose competence is being certified. Enforcement (mandatory certification cycles, licensing requirements tied to simulator hours) is required to sustain the doctrine's institutional acceptance, which is why requires_active_enforcement is true — a purely voluntary, self-evidently correct claim would not need enforcement machinery to persist.",
+    "kernel_context": "This story instantiates the 'simulation_as_sufficient' reading of the competence_retention_exercise kernel. The kernel's persisting commitment is: organizations must maintain catastrophe-avoidance competence in a workforce that will rarely or never face the actual catastrophe during a normal career. This reading resolves that commitment by declaring high-fidelity simulation structurally equivalent to real-event exposure. The sibling readings — catastrophe_as_necessary (only real catastrophic events provide genuine competence-maintenance) and near_miss_as_bridge (near-misses provide sufficient real-world calibration without requiring full catastrophes) — are separate constraint stories with their own ε values, beneficiary/victim structures, and classifications. They are not incorporated into this story's metrics or narrative beyond the omega variables below."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_equivalence_gap",
+      "question": "Does high-fidelity simulation actually reproduce the cognitive and procedural demands of real catastrophic events, or does it systematically under-train specific failure modes (acute stress physiology, genuine irreversibility, novel-scenario improvisation, multi-agency coordination under real uncertainty)?",
+      "resolution_mechanism": "Longitudinal comparison of simulator-certified operator performance against actual real-event performance across multiple domains (aviation, nuclear, maritime, emergency medicine), controlling for event rarity and reporting bias.",
+      "impact": "If the gap is large and systematic, this reading's core premise (structural equivalence) is empirically false and the constraint functions primarily as institutional cover for a cheaper alternative rather than genuine competence maintenance — pushing the classification toward snare. If the gap is small, the tangled_rope classification is well-supported by a genuine, if imperfect, coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulator-certified competence actually transfers to real catastrophic events."
+    },
+    {
+      "id": "kernel_reading_selection_pressure",
+      "question": "Is the simulation_as_sufficient reading dominant because it is structurally correct, or because it is the reading most compatible with the interests of the parties (vendors, regulators, leadership) who administer the certification system?",
+      "resolution_mechanism": "Compare adoption patterns of the three kernel readings across domains with different institutional power structures — do domains with weaker vendor/regulator capture show more adoption of near_miss_as_bridge or catastrophe_as_necessary readings?",
+      "impact": "If reading-selection tracks institutional interest rather than domain-specific evidence about transfer fidelity, the dominance of simulation_as_sufficient is itself an artifact of the extraction dynamic it is meant to describe, reinforcing the tangled_rope reading over a cleaner rope reading.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether kernel-reading dominance is evidence-driven or interest-driven."
+    },
+    {
+      "id": "downstream_public_risk_pricing",
+      "question": "Is the residual risk this reading imposes on the downstream public correctly priced into the certification standards, or is it an externality invisible to the parties who set those standards?",
+      "resolution_mechanism": "Actuarial and regulatory-economics analysis of whether certification-standard-setting bodies internalize downstream-public risk exposure or optimize primarily for organizational liability and cost.",
+      "impact": "If the risk is unpriced, the constraint's extraction is understated by metrics that only capture direct operator and organizational costs, and the true victim set is larger than currently modeled.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether downstream public risk exposure is accounted for in the standard-setting process."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "simulator_certification_as_competence_proof",
+    "drift_state": {
+      "moment": "post_high_fidelity_simulator_proliferation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "competence_retention_exercise__catastrophe_as_necessary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "competence_retention_exercise__near_miss_as_bridge",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulated_stakes_structurally_equivalent_to_real_stakes",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "prevented_catastrophe_preserves_more_value_than_experienced_catastrophe_teaches",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_retention_exercise__catastrophe_as_necessary",
+      "competence_retention_exercise__near_miss_as_bridge"
+    ],
+    "dual_formulation_note": "This is one of three sibling readings of the competence_retention_exercise kernel. catastrophe_as_necessary holds that only real catastrophic events provide sufficient learning stakes; near_miss_as_bridge holds that near-misses provide adequate real-world calibration without requiring full catastrophes. Each reading is authored as an independent constraint with its own ε, stakeholder set, and classification per the ε-invariance principle; this story's simulation-vendor-heavy beneficiary structure and moderate extractiveness are specific to the simulation_as_sufficient reading and should not be averaged with the siblings' metrics."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "gain_flow": "simulator_vendor_industry",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

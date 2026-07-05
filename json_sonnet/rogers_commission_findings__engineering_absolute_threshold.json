@@ -1,0 +1,300 @@
+{
+  "header": {
+    "constraint_id": "rogers_commission_findings__engineering_absolute_threshold",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "5a78e1dc-2c7c-4f3f-bfe7-8efa569e1ac3"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.81,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rogers Commission Engineering Absolute Threshold: O-Ring Redesign Certification Gate",
+    "topic_domain": "organizational_safety/technology_governance/regulatory_compliance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "flight_crew",
+      "engineering_veto_holders"
+    ],
+    "victims": [
+      "launch_schedule_stakeholders",
+      "contractor_program_managers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "engineering_veto_holders",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Thiokol and NASA propulsion engineers who identified O-ring erosion in cold-temperature static tests hold formal authority within the Flight Readiness Review to certify or withhold flight-worthiness. Under this reading, their technical finding is treated as a hard stop: no launch proceeds until the joint redesign is certified against the identified failure mode. They benefit in the sense that their professional judgment is institutionally binding rather than advisory, and their vindication after Challenger cemented this authority into subsequent review structure."
+    },
+    {
+      "name": "flight_crew",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Astronauts assigned to Shuttle missions have no direct voice in the Flight Readiness Review and no ability to independently verify O-ring performance data. They are structurally trapped inside whatever risk determination the review process reaches — they cannot exit the mission once assigned without professional cost, and they cannot audit the engineering judgment themselves. This reading's absolute threshold is the only structural protection available to them."
+    },
+    {
+      "name": "launch_schedule_stakeholders",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "NASA program management, manifest planners, and the political apparatus depending on launch cadence (commercial payload commitments, Congressional funding narratives, the Teacher in Space program timeline) absorb the full cost of an indefinite grounding. Under the absolute-threshold reading, cadence considerations carry zero weight against the certification requirement — this seat cannot negotiate the boundary, only wait it out or attempt to reclassify the finding as advisory rather than binding."
+    },
+    {
+      "name": "contractor_program_managers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Morton Thiokol management, who initially recommended against launch and then reversed under schedule pressure, bear contractual and reputational exposure under this reading: their reversal is precisely the failure mode the absolute threshold is designed to prevent from recurring. Post-Rogers, this reading forecloses their ability to override engineering objections through management channels, converting what was a negotiable internal disagreement into a fixed veto they cannot appeal past."
+    },
+    {
+      "name": "rogers_commission",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The presidential commission investigating the Challenger disaster produced the findings this constraint interprets. It has no ongoing enforcement role but its report is the textual kernel from which this reading (and its two siblings) are drawn."
+    },
+    {
+      "name": "future_mission_crews",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Astronauts on missions after the redesign certification were never consulted on whether the threshold was set correctly; they simply inherit whichever reading of the Rogers findings prevailed in institutional practice. If the compliance-narrative or actuarial-acceptance reading displaces this one in later practice, they bear that consequence without having had a seat in the determination."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a single, non-negotiable technical criterion — certified O-ring redesign — as the sole condition for resuming flight, removing the erosion failure mode from any subsequent Flight Readiness Review's discretionary weighing.",
+    "transfer_function": "Moves decision authority away from program management and schedule stakeholders and concentrates it in engineering veto holders; moves the cost of the resulting delay from flight crews (who bear residual failure risk) onto launch cadence, contractor revenue, and program political capital.",
+    "absent_voices": "The flight crews whose safety is nominally the point are not parties to the Flight Readiness Review and have no mechanism to demand the threshold be enforced or to object if it is quietly softened in later missions; future crews inheriting whichever reading prevails are entirely absent from the determination.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this absolute-threshold reading disappeared and reverted to a discretionary risk-acceptance framework, the Flight Readiness Review would regain the ability to weigh schedule and cost against unresolved technical objections — precisely the pre-Challenger configuration the Commission identified as the causal failure. Launch cadence would recover, contractor exposure would ease, and the specific protective mechanism the reading created (a technical veto that cannot be overridden by management) would cease to exist.",
+    "founding_problem": "The Challenger disaster occurred because a known, unresolved engineering objection (O-ring cold-temperature erosion) was overridden by management under schedule pressure at the January 1986 Flight Readiness Review. The founding problem was the absence of any structural mechanism preventing a documented technical objection from being negotiated away.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Rogers Commission itself, an investigative body external to both NASA management and the engineering corps, attests the founding problem was real and specifically identifies the override of Thiokol engineers' launch recommendation as a proximate cause. However, subsequent NASA safety culture assessments (including the Columbia Accident Investigation Board in 2003) found that the absolute-threshold reading had eroded in practice back toward compliance-narrative and risk-acceptance framings within roughly a decade, corroborated by an investigative body independent of the beneficiaries of either reading."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.95
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.83
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.81
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the engineering-absolute-threshold reading of the Rogers Commission findings following the 1986 Challenger disaster: the O-ring erosion failure mode identified in the investigation is treated as an unconditional flight-stop criterion, resolvable only by certified redesign, with engineering judgment holding binding veto power over the Flight Readiness Review rather than advisory input weighed against schedule. This is distinct from the actuarial_risk_acceptance reading (which treats the same findings as a documentation/quantification requirement permitting flight if risk is disclosed and accepted) and the management_compliance_narrative reading (which treats them as a process-compliance standard satisfied by demonstrated mitigation effort, not by resolution of the underlying hazard). All three readings share the same source text and the same historical trigger event but diverge sharply on where the bar sits and who holds veto power — under ε-invariance, they are authored as three separate constraint stories rather than one story with a measurement parameter.",
+    "logic_rationale": "Extractiveness is authored low-to-moderate (0.15 rising to 0.28) because the absolute-threshold reading's primary effect is a redistribution of decision authority, not a resource transfer in the conventional extractive sense — the cost it imposes (grounded fleet, lost cadence) is a genuine byproduct of a real coordination function (preventing recurrence of a documented catastrophic failure mode), not rent-seeking. Suppression starts very high (0.95) in the immediate post-Challenger period when the finding functioned as an absolute, actively enforced bar on flight operations, then eases modestly (to 0.81) as certification proceeds and institutional memory of the disaster's proximate cause begins to fade — this is the beginning of the drift toward the sibling readings that later investigations (Columbia Accident Investigation Board) documented. Theater ratio is authored low throughout (0.05-0.15) because in this reading's ideal form the veto is functionally real, not performative; the modest rise reflects early erosion signals, not wholesale capture.",
+    "directionality_logic": "Engineering veto holders are the structural agenda-setters and incidental beneficiaries: the reading vests them with binding authority they previously lacked, and their earlier warnings are vindicated. Flight crews are the intended beneficiaries but are powerless and trapped — they cannot invoke or enforce the threshold themselves; the protection is structural, not something they can claim. Launch schedule stakeholders and contractor program managers are targets: the absolute threshold directly overrides their prior ability to weigh schedule against unresolved technical risk, converting a previously negotiable tradeoff into a fixed cost they must simply bear.",
+    "perspectival_gap": "From the engineering veto holder seat, this structure is Rope-adjacent: a genuine coordination mechanism that finally lets a documented hazard block a decision it should have blocked all along. From the launch schedule and contractor seats, the same structure reads as Tangled Rope at minimum — a real safety function bundled with what they experience as an inflexible, costly veto that removes their traditional latitude to manage risk against schedule. The engine computing these as different per-seat types from the same structural data is the point: the story does not resolve which seat is 'right,' it exposes the asymmetry the kernel contest is about.",
+    "mandatrophy_analysis": "The founding problem (unresolved engineering objections being overridden by schedule pressure) is authored as contested rather than resolved, because the corroborating record (CAIB 2003) shows the absolute-threshold reading's suppression softened within roughly a decade — precisely the drift pattern that would let a later Columbia-style override recur under a different technical objection. This constraint does not claim the mandate is dead; it documents that its enforcement strength (suppression_requirement) declined even while the underlying founding problem (silent erosion of engineering veto authority under schedule pressure) remained live, which is the standard mandatrophy risk signature.",
+    "kernel_context": "This story instantiates the engineering_absolute_threshold reading of the rogers_commission_findings kernel. Two sibling readings exist as separate constraint stories: actuarial_risk_acceptance (treats the findings as satisfied by documented, accepted risk quantification rather than by hazard resolution) and management_compliance_narrative (treats the findings as satisfied by demonstrated compliance process/mitigation effort). This reading is the strictest of the three: it forecloses negotiated risk acceptance as a substitute for certified redesign, whereas the other two readings explicitly permit flight to resume without the underlying hazard being eliminated, provided documentation or compliance activity is sufficient."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_indeterminacy",
+      "question": "Did the Rogers Commission's findings themselves mandate the absolute-threshold reading, or did NASA's post-Challenger institutional response construct this reading from findings that were actually more procedural/documentary in the Commission's own language?",
+      "resolution_mechanism": "Close textual analysis of the Rogers Commission report's specific recommendations versus NASA's internal post-1986 Flight Readiness Review policy revisions, cross-referenced against contemporaneous congressional testimony distinguishing what the Commission required from what NASA chose to implement.",
+      "impact": "If the absolute-threshold reading is a NASA institutional choice rather than a direct Commission mandate, this constraint's claimed_type shifts from a Rope-flavored coordination mechanism toward a self-imposed Scaffold (temporary institutional commitment) that could legitimately sunset — undermining the 'permanent veto' framing this story authors.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the absolute threshold originates in the Commission's text or in NASA's subsequent institutional interpretation of it."
+    },
+    {
+      "id": "sibling_reading_displacement",
+      "question": "At what point, and through what mechanism, did institutional practice shift from this absolute-threshold reading toward the actuarial_risk_acceptance or management_compliance_narrative readings documented by later investigations (e.g., foam-strike risk acceptance preceding Columbia)?",
+      "resolution_mechanism": "Historical trace of Flight Readiness Review decision records and waiver processes from 1988 (return to flight) through 2003 (Columbia), identifying the specific junctures where a hazard was accepted as documented risk rather than resolved as a hard stop.",
+      "impact": "A clear displacement trajectory would corroborate the founding_problem_status of 'contested' moving toward 'dead in practice, live in doctrine' — a specific and citable mandatrophy pattern rather than a general suspicion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Tracing the historical transition from this reading to its sibling readings in actual NASA practice."
+    },
+    {
+      "id": "beneficiary_status_of_flight_crew",
+      "question": "Is 'flight crew safety' correctly modeled as a beneficiary group, given that flight crews have no agency in invoking, monitoring, or enforcing the threshold on their own behalf?",
+      "resolution_mechanism": "Compare against cases where crew members (e.g., through the Astronaut Office) did or did not have documented input into Flight Readiness Review risk acceptance decisions in the years following Challenger.",
+      "impact": "If crew input was systematically absent, 'beneficiary' may overstate their structural position relative to a more passive 'protected-but-voiceless' status, which would not change the classification but would sharpen the absent_voices analysis.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether flight crews function as genuine beneficiaries or as passive, voiceless protected parties."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "rogers_commission_findings__management_compliance_narrative",
+      "rogers_commission_findings__actuarial_risk_acceptance"
+    ],
+    "dual_formulation_note": "This constraint is one of three linked readings of the rogers_commission_findings kernel, decomposed per the ε-invariance principle: engineering_absolute_threshold (this story, ε≈0.15-0.28, low-extraction Rope/Tangled-Rope-flavored coordination), management_compliance_narrative (higher theater ratio, process-substitutes-for-substance dynamic, likely Piton-flavored), and actuarial_risk_acceptance (moderate extraction, risk transferred to crew via documented-but-accepted probability, likely Tangled-Rope-flavored). Each reading has a distinct ε and distinct victim/beneficiary structure and must not be averaged into a single measurement."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "pre_challenger_discretionary_flight_readiness_review",
+    "drift_state": {
+      "moment": "post_columbia_caib_assessment",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "rogers_commission_findings__management_compliance_narrative",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "rogers_commission_findings__actuarial_risk_acceptance",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unresolved_hazard_bars_flight_regardless_of_documentation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "engineering_technical_judgment_is_binding_not_advisory",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "bce2aa1d898352b779d16b5f0effa0841713ee0c",
+    "store_version": "ea8ed72c6d5f5bbec0b571bf94085d2b8db259ba",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-05T01:43:37"
+    "generated_at": "2026-07-05T17:13:05"
   },
-  "issues_sha": "c3179693de4617b6c02566acad11591382d8edde1ed063917f8b89f6198d2bd2",
-  "n_entries": 212,
+  "issues_sha": "e77cd6b287b325104cced52920c39c986084ce7d1af6d35284a1484cb631b967",
+  "n_entries": 213,
   "active_token_set": [
     "investigating",
     "open",
@@ -15,7 +15,7 @@
     "resolved": 120,
     "mitigated": 15,
     "disposed": 4,
-    "open": 63,
+    "open": 64,
     "partial": 6,
     "future": 4
   },
@@ -969,6 +969,23 @@
       "mentioned_in": [
         "OQ-140",
         "OQ-211"
+      ]
+    },
+    {
+      "id": "OQ-213",
+      "status": "open",
+      "priority": 4,
+      "summary": "A THIRD model leg (`testsets_sonnet`, claude-sonnet-5) is built and classified — graduate it from marginals-only control to a full paired twin in `twin_comparison.py` (and adjudicate a Sonnet-specific schema-conformance mode) (Ω_E)",
+      "deps": [
+        "splits_from OQ-124"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-123",
+        "OQ-124",
+        "OQ-149",
+        "OQ-211",
+        "OQ-212"
       ]
     }
   ],

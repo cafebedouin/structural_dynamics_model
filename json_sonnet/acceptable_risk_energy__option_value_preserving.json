@@ -1,0 +1,342 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__option_value_preserving",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "4e07c3bd-dee9-4191-a1d7-758fc981fedd"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.48,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Option-Value-Preserving Reading of Acceptable Energy Risk",
+    "topic_domain": "risk_assessment/energy_policy/decision_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_fossil_operators",
+      "incumbent_nuclear_operators",
+      "grid_planning_authorities",
+      "future_decision_makers"
+    ],
+    "victims": [
+      "renewable_only_developers",
+      "communities_near_legacy_plants",
+      "climate_exposed_populations",
+      "future_taxpayers_funding_stranded_assets"
+    ],
+    "vindicated_propositions": [
+      "deep_uncertainty_precludes_premature_lock_in",
+      "portfolio_diversification_under_ignorance"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "grid_planning_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Sets integrated resource plans that formally require multiple pathways be kept 'available' — licensing extensions for nuclear, permitting continuations for gas, alongside renewable buildout. Justifies this as preserving flexibility against demand and technology uncertainty. Administers the licensing and permitting apparatus that keeps incumbent pathways alive rather than closing them."
+    },
+    {
+      "name": "incumbent_fossil_operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Continue operating gas and coal plants under 'bridge fuel' and 'reliability reserve' justifications that ride directly on the option-value framing. Collect capacity payments and avoid stranded-asset write-downs because the option-preserving standard treats their closure as a foreclosed-optionality risk rather than a completed transition."
+    },
+    {
+      "name": "incumbent_nuclear_operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive extended licenses and subsidy support justified by the same option-preserving logic — nuclear capacity is kept 'on the table' as a hedge against renewable intermittency, even where near-term economics disfavor new build. Benefits from being named a preserved pathway rather than judged on standalone merit."
+    },
+    {
+      "name": "renewable_only_developers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Compete for grid interconnection queue slots and capacity-market revenue against incumbent pathways that the acceptable-risk standard protects from full closure. Bear the opportunity cost: capital, land, and interconnection capacity that could accelerate renewable buildout is instead allocated to keeping fossil and nuclear options viable. Cannot exit the market they compete in; can only lobby to change the standard."
+    },
+    {
+      "name": "communities_near_legacy_plants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Continue to bear the localized health, pollution, and accident-risk burden of fossil and nuclear plants kept operating past the point their coordination case was strongest, because those plants are formally classified as preserved options rather than retired capacity. Geographically fixed near the facilities; cannot relocate the risk exposure."
+    },
+    {
+      "name": "climate_exposed_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the diffuse, delayed cost of slower fossil phase-out that the option-preserving standard permits by treating rapid fossil closure as itself a risk (loss of flexibility) rather than a benefit. Have no seat in the domestic planning process that sets the standard and no capacity to exit the climate system."
+    },
+    {
+      "name": "future_decision_makers",
+      "role": "beneficiary",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Inherit a wider menu of technically viable pathways than they would under an early-committal standard, and can revise the energy mix as new information (cost curves, failure data, climate trajectories) arrives. Benefit from optionality without bearing its present carrying cost."
+    },
+    {
+      "name": "future_taxpayers_funding_stranded_assets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Will ultimately fund decommissioning, remediation, and stranded-asset write-downs for fossil and nuclear capacity kept alive under the option-preserving standard longer than its economic case justified. Have no vote in current licensing decisions that create this future liability."
+    },
+    {
+      "name": "risk_assessment_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Evaluate competing acceptable-risk frameworks (this option-preserving reading versus catastrophic-tail-dominant and expected-value-dominant readings) using real-options theory, decision analysis under deep uncertainty, and comparative energy-mortality datasets. Can document the tradeoffs but do not set the standard."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents irreversible, premature foreclosure of energy pathways under conditions where the true relative costs and risks of nuclear, fossil, and renewable systems are not yet fully knowable — genuinely valuable when technology trajectories, demand growth, and climate sensitivity are all uncertain and reversal costs are asymmetric.",
+    "transfer_function": "Moves capital, grid-interconnection capacity, and regulatory attention away from renewable-only developers and toward maintaining incumbent fossil and nuclear capacity; moves localized health and pollution costs onto communities near legacy plants; moves climate risk forward in time onto future and globally distributed populations; moves flexibility benefits to future decision-makers who did not pay for the optionality.",
+    "absent_voices": "Climate-exposed populations in other jurisdictions and future taxpayers have no representation in the domestic grid-planning process that decides which pathways count as worth preserving. Renewable-only developers are present but structurally outweighed by incumbents with existing capacity and regulatory relationships.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Incumbent operators and grid planners argue the world would rearrange catastrophically — losing reserve capacity and technology hedges before replacements are proven at scale. Renewable developers and climate-exposed populations argue the standard mainly rearranges the world in incumbents' favor and that removing it would accelerate an already-viable transition; the dispute over which is true IS the kernel contest this story is one reading of.",
+    "founding_problem": "Energy infrastructure decisions are irreversible and capital-intensive (decades-long asset lives), made under genuine uncertainty about future technology costs, climate sensitivity, and demand — early full commitment to any single pathway risks catastrophic misallocation if the underlying assumptions prove wrong.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Decision-theory researchers studying deep uncertainty and real-options value attest the founding problem remains genuinely live for some technology classes. Independent grid economists and stranded-asset researchers outside the incumbent industries attest that for fossil generation specifically the uncertainty has substantially resolved (cost curves, climate impacts, and renewable maturity are now well-characterized), and that continued invocation of 'preserving optionality' functions increasingly as cover for delaying committed closure rather than genuine hedging."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This story instantiates the option_value_preserving reading of the acceptable_risk_energy kernel: acceptable risk is defined as maintaining decision flexibility across nuclear, fossil, and renewable pathways rather than committing to the pathway with the lowest expected aggregate harm (the expected_value_dominant sibling) or the pathway that minimizes catastrophic tail exposure regardless of expected cost (the catastrophic_tail_dominant sibling). Each sibling reading is a separate constraint story with its own ε, beneficiary/victim structure, and classification; this file does not describe or average over them.",
+    "narrative_context": "Grid planning authorities and energy regulators increasingly justify keeping both nuclear and fossil generation capacity licensed and subsidized — alongside renewable buildout — on the grounds that under deep uncertainty about technology costs, climate trajectories, and demand growth, foreclosing any major pathway too early risks catastrophic misallocation. This option-value framing has genuine decision-theoretic grounding (real-options value is a legitimate concept under irreversibility and uncertainty) but it also structurally favors incumbents: fossil and nuclear operators who would otherwise face closure on economic or environmental merit are instead protected as 'preserved options,' while renewable-only developers absorb the opportunity cost and diffuse populations absorb the delayed climate and health costs.",
+    "key_agents": [
+      "grid_planning_authorities: agenda_setter (institutional/analytical) — administers licensing that operationalizes the option-preserving standard",
+      "incumbent_fossil_operators and incumbent_nuclear_operators: beneficiaries (powerful/arbitrage,constrained) — protected from closure by the optionality framing",
+      "renewable_only_developers: payer (organized/constrained) — bears opportunity cost of capital and grid capacity diverted to incumbent preservation",
+      "communities_near_legacy_plants and climate_exposed_populations: payers (powerless/trapped) — bear localized and diffuse costs of delayed pathway closure",
+      "future_decision_makers: beneficiary (analytical/analytical) — inherits flexibility without bearing its present cost",
+      "risk_assessment_analysts: observer — evaluates the reading against its siblings using decision theory and empirical energy data"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.42 at interval end) because the coordination function is real — asymmetric irreversibility does genuinely justify some hedging — but the standard's actual operation increasingly protects incumbent revenue streams beyond what the uncertainty argument supports, particularly for fossil generation where cost and climate trajectories have substantially resolved. Suppression is moderate (0.48): both extreme readings (immediate fossil elimination on catastrophic-tail grounds, or pure least-cost selection on expected-value grounds) are structurally disadvantaged in the planning process, which is itself a form of suppression of alternative risk framings, not merely of physical exit options. Theater ratio rises modestly (0.30) as 'preserving optionality' becomes cited even where evidentiary uncertainty has narrowed and the real driver is protecting existing licensed capacity from write-down.",
+    "directionality_logic": "Incumbent fossil and nuclear operators sit near the beneficiary end: the standard converts what would otherwise be economically or environmentally forced closure into protected status, and their exit options (arbitrage for fossil operators who can redeploy capital, constrained for nuclear operators locked into long asset lives) reflect that asymmetric protection. Grid planning authorities are agenda-setters who administer but do not personally collect the extraction, so they sit closer to a coordination seat than a beneficiary seat despite formally implementing the standard. Renewable developers and the two powerless victim groups sit near the target end: they bear real costs (foregone market share, localized pollution, diffuse climate exposure) with no comparable capacity to redirect the standard. Future decision-makers are unusual: they benefit from the preserved optionality without paying its carrying costs, which the analytical power/exit combination captures without needing an override.",
+    "mandatrophy_analysis": "The founding problem (genuine decision-theoretic uncertainty justifying hedged commitment) was more clearly live decades ago when technology cost curves and climate sensitivity were far less characterized. The founding_problem_status is authored as contested rather than dead because the uncertainty argument remains partially live for genuinely novel technology classes (e.g., advanced nuclear, long-duration storage) even as it has become largely obsolete for continued fossil operation specifically. Classifying this as tangled_rope rather than snare or mountain prevents two mislabelings: treating the entire option-preserving standard as pure extraction (which would ignore the real hedging value for genuinely uncertain technologies) and treating it as natural/inevitable risk policy (which would ignore the asymmetric incumbent protection layered onto the genuine coordination core)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection_ambiguity",
+      "question": "Is option-value preservation the structurally correct reading of 'acceptable risk' for energy policy, or does its dominance in current planning practice reflect incumbent capture of the risk-framing process rather than superior decision theory?",
+      "resolution_mechanism": "Compare planning-body composition and public comment records across jurisdictions that have adopted option-preserving standards against those using expected-value or catastrophic-tail framings; look for correlation between incumbent industry representation on planning bodies and adoption of the option-preserving standard specifically.",
+      "impact": "If adoption correlates strongly with incumbent representation rather than with genuine technological uncertainty in the affected sector, the reading functions substantially as regulatory capture wearing decision-theory language; if adoption correlates with objectively high-uncertainty technology classes regardless of incumbent presence, the reading is closer to genuine coordination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the dominance of this reading reflects sound decision theory or incumbent capture of the risk-framing process."
+    },
+    {
+      "id": "uncertainty_decay_by_pathway",
+      "question": "Has the genuine deep uncertainty that justifies option preservation actually decayed asymmetrically across pathways — resolved for fossil (well-characterized cost and climate trajectories) but still substantially live for advanced nuclear and long-duration storage?",
+      "resolution_mechanism": "Track confidence intervals in independent (non-industry-funded) energy cost and climate-impact projections over time, per technology class; compare width of intervals for fossil versus emerging nuclear/storage technologies.",
+      "impact": "If uncertainty has resolved for fossil specifically, continued fossil preservation under this standard is a mandatrophy case — the founding problem is dead for that pathway even if live for others, which would argue for splitting this constraint further by technology rather than treating 'energy pathways' as one undifferentiated set.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether founding uncertainty has decayed unevenly across the preserved pathways."
+    },
+    {
+      "id": "sibling_reading_selection_is_the_dispute",
+      "question": "Which of the three kernel readings (option-value-preserving, catastrophic-tail-dominant, expected-value-dominant) a given regulator or advocate adopts is itself the primary site of political contest — is this selection driven by evidence about which framework best fits energy-specific uncertainty, or by prior commitments to incumbent or challenger interests?",
+      "resolution_mechanism": "Not resolvable by data internal to this constraint; requires tracing argument genealogies and funding sources behind advocacy for each reading across multiple jurisdictions.",
+      "impact": "Documents that the kernel contest itself is downstream of interest-driven framework selection, which affects how much independent weight the option-preserving reading's decision-theoretic justification should carry.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The kernel-level contest over which acceptable-risk reading applies is itself an object of dispute among differently-interested parties."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_energy__catastrophic_tail_dominant",
+      "acceptable_risk_energy__expected_value_dominant"
+    ],
+    "dual_formulation_note": "This story is one of three sibling readings of the acceptable_risk_energy kernel, decomposed per the ε-invariance principle because 'acceptable risk' in energy policy conflates structurally distinct decision rules with different beneficiary/victim structures and different ε values. option_value_preserving (this story) protects incumbent nuclear and fossil capacity as hedges and produces moderate, rising extraction (tangled_rope). catastrophic_tail_dominant would suppress high-tail-risk pathways (likely nuclear) regardless of expected-value cost. expected_value_dominant would select purely on mortality-per-TWh and would tend to favor whichever pathway has the best aggregate safety record, producing a different victim set (likely nuclear-adjacent communities or fossil-adjacent communities depending on current data) than this reading's diffuse opportunity-cost victims. All three are linked via affects_constraints; none averages or measures the others."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "acceptable_risk_energy__catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "acceptable_risk_energy__expected_value_dominant",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "irreversibility_under_deep_uncertainty_warrants_hedging",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "premature_pathway_closure_is_itself_a_harm",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "multi_pathway_hedged_portfolio",
+    "drift_state": {
+      "moment": "post_cost_curve_resolution_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

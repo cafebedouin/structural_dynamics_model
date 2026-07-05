@@ -1,0 +1,316 @@
+{
+  "header": {
+    "constraint_id": "software_control_legitimacy__property_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "89c6e44d-10e1-402b-bfaf-6e33f949caa3"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.55,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proprietary Software Control as Legitimate Property Right",
+    "topic_domain": "software_engineering/political_economy/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "software_vendors",
+      "venture_investors",
+      "proprietary_platform_operators"
+    ],
+    "victims": [
+      "foss_advocates",
+      "downstream_modifiers",
+      "interoperability_dependent_developers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "software_vendors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Write license terms restricting copying, modification, and redistribution; enforce them through EULAs, DRM, and litigation. Capture recurring license revenue and control over the software's evolution. Can relicense, sue infringers, or acquire competitors — their exit options are the broadest in the arrangement."
+    },
+    {
+      "name": "venture_investors",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Fund software development on the expectation that exclusivity rights will produce a return; the property claim is what makes the investment thesis work. They can diversify or exit a given company but depend on the legitimacy of the control mechanism across the portfolio."
+    },
+    {
+      "name": "proprietary_platform_operators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate platforms (app stores, OS ecosystems, enterprise suites) whose value depends on enforceable exclusivity; they lobby for stronger IP enforcement and litigate against reverse-engineering or unauthorized interoperability."
+    },
+    {
+      "name": "foss_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build and maintain alternatives under permissive or copyleft licenses, arguing the restriction denies users control over their own computing and denies developers the ability to build on prior work. They cannot force proprietary vendors to open source; their exit is limited to building parallel, often under-resourced, ecosystems that must interoperate with a proprietary world that resists them."
+    },
+    {
+      "name": "downstream_modifiers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals and small firms who need to modify, repair, or extend software they depend on (e.g., embedded devices, agricultural equipment firmware) but are legally and technically barred from doing so. They bear real costs — inability to repair, vendor lock-in, forced repurchase — with essentially no leverage against license terms."
+    },
+    {
+      "name": "interoperability_dependent_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build products that must interface with dominant proprietary systems; access to APIs, formats, and protocols is gated by the vendor's control rights. They can seek official partnerships (costly, discretionary) or reverse-engineer (legally risky) but cannot bypass the control claim itself."
+    },
+    {
+      "name": "end_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from a sustained commercial software industry funding continued development, support, and security patching, while also bearing restrictions on repair, resale, and modification of the software they've purchased or licensed."
+    },
+    {
+      "name": "courts_and_ip_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate the boundaries of the property claim — fair use, reverse engineering exemptions, right-to-repair statutes. Their rulings shift the balance between vendor control and downstream access over time."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables firms to internalize the return on software development investment, coordinating capital toward sustained engineering, support, and security maintenance that would be underprovided if output could be freely copied without compensation.",
+    "transfer_function": "Moves control over modification, redistribution, and interoperability from users and downstream developers to the rights-holding vendor, and moves recurring payment from users/licensees to vendors and their investors in exchange for continued access and support.",
+    "absent_voices": "FOSS advocates and downstream modifiers are represented in litigation and policy debates but rarely inside the vendor's own licensing decisions; embedded-device owners seeking right-to-repair are structurally outside the room where license terms are drafted.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If enforceable software property rights vanished overnight, the venture-funded commercial software industry's investment thesis would collapse for a large share of current business models; vendors would need to pivot to service, subscription-support, or open-core models. Some FOSS ecosystems would expand rapidly; others depending on proprietary interop would be disrupted. The change would be substantial, not cosmetic.",
+    "founding_problem": "Software is trivially copyable at near-zero marginal cost; without some enforceable exclusivity, firms that invest heavily in original development could be immediately undercut by copiers who bore none of the development cost, undermining the incentive to invest in the first place.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Independent economists studying public-goods provision and free-rider dynamics corroborate that non-excludable digital goods face underinvestment absent some exclusivity mechanism — a finding that predates and sits outside the software industry's own advocacy. However, FOSS-adjacent economists and legal scholars (e.g., studies of the Linux/Apache ecosystems) corroborate that peer-production and service-revenue models solve the same underinvestment problem without exclusivity, meaning the founding problem's necessity claim is actively disputed by parties outside both the vendor and FOSS camps."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the property-rights reading of the software control legitimacy kernel: software creators hold legitimate authority to restrict use, modification, and distribution, grounded in the need to protect investment and sustain commercial development. Under this reading, vendors and their investors are structural beneficiaries and FOSS advocates, downstream modifiers, and interoperability-dependent developers enter the victim set — they bear the cost of exclusion in exchange for the industry's claimed sustainability benefit. This is a distinct constraint from the freedom_imperative_reading (which treats the same restriction as ethically illegitimate), the pragmatic_openness_reading (which treats it as a neutral methodology choice with no rights claim at all), and the commons_reading (which reframes the entire question as collective governance rather than individual property or individual freedom). Each of those is a separate story with its own beneficiary/victim structure and its own epsilon; this file does not average or hedge across them.",
+    "key_agents": [
+      "software_vendors: agenda_setter/beneficiary (institutional/arbitrage) — sets and enforces license terms, captures recurring revenue",
+      "venture_investors: beneficiary (institutional/mobile) — funds development on the exclusivity thesis",
+      "foss_advocates: payer (organized/constrained) — denied return on shared derivative work, builds parallel ecosystems",
+      "downstream_modifiers: payer (powerless/trapped) — cannot repair or modify owned devices",
+      "courts_and_ip_regulators: observer (institutional/analytical) — adjudicates the boundary over time"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.48 at interval end) because the restriction genuinely correlates with a real investment-protection function for a meaningful share of the commercial software industry — this is not a pure rent, but it is also not costless to those it excludes. Suppression (0.55) reflects the active enforcement machinery (DRM, EULAs, litigation, DMCA-style anti-circumvention law) required to keep the exclusivity durable against a technology that is trivially copyable absent enforcement. Theater ratio stays low (0.2) because enforcement substantially tracks the claimed function rather than performing it — most licensing enforcement actually protects real revenue streams, though the modest upward drift signals growing use of IP enforcement against right-to-repair and interoperability efforts that serve vendor lock-in more than investment protection.",
+    "directionality_logic": "Software vendors and their investors sit at the beneficiary end: they set the terms, capture the transfer, and have the widest exit options (relicense, acquire, diversify). FOSS advocates and downstream modifiers sit at the target end: they bear the restriction's cost (denied modification rights, denied ability to build derivative works, denied repair) with little to no capacity to alter the terms. Interoperability-dependent developers occupy a middle position — moderate power, constrained exit — because they can sometimes negotiate official access but remain structurally dependent on vendor discretion.",
+    "mandatrophy_analysis": "The founding problem (free-rider risk on a non-excludable, zero-marginal-cost good) is genuinely live for a segment of the industry — first-party engine or platform vendors funding continuous R&D — but is contested as a universal justification, since large, healthy ecosystems (Linux kernel, Apache Foundation projects, PostgreSQL) demonstrate viable commercial sustainability without the exclusivity claim. Classifying this as tangled_rope rather than snare or rope prevents two mislabelings: treating all software property claims as pure extraction (ignoring the real coordination function for capital-intensive proprietary R&D) and treating all software property claims as costless coordination (ignoring the well-documented harms to repair rights, interoperability, and derivative innovation)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection_ambiguity",
+      "question": "Is the property-rights framing of software control the correct lens for a given case, or does it obscure that a freedom-based, methodology-neutral, or commons-based framing better describes the same underlying dispute?",
+      "resolution_mechanism": "This ambiguity is not resolved within a single story — it is routed to the sibling readings (freedom_imperative_reading, pragmatic_openness_reading, commons_reading) as separate constraint files linked via network.affects_constraints. Each reading is evaluated on its own structural merits; no single epsilon spans all four.",
+      "impact": "Selecting the property-rights reading fixes FOSS advocates and downstream modifiers as victims and vendors/investors as beneficiaries; under the freedom_imperative_reading the same facts would instead classify proprietary vendors as victimizers with no legitimate claim at all, producing a much higher extraction reading for the same base conduct.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which kernel reading applies is itself contested and not resolvable by data internal to this story."
+    },
+    {
+      "id": "investment_protection_necessity",
+      "question": "Is enforceable exclusivity actually necessary to sustain commercial software investment, or do service/support/open-core revenue models demonstrate the founding problem is largely solved by non-exclusive means?",
+      "resolution_mechanism": "Comparative economic analysis of R&D investment levels and sustainability across proprietary-exclusive firms versus open-core/service-revenue firms of comparable scale and complexity over multi-decade horizons.",
+      "impact": "If non-exclusive models are shown to sustain comparable investment at scale, the coordination justification for the property claim weakens substantially and the classification would drift toward snare; if exclusivity is shown necessary for high-capital-intensity segments (e.g., specialized enterprise or safety-critical software), the tangled_rope reading is reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exclusivity is empirically necessary for the claimed coordination function."
+    },
+    {
+      "id": "right_to_repair_carveout_scope",
+      "question": "Should the property-rights reading exempt repair and interoperability from the exclusivity claim without abandoning the core investment-protection rationale?",
+      "resolution_mechanism": "Track legislative and judicial right-to-repair and interoperability carveouts (e.g., DMCA exemptions, EU interoperability directives) over the interval and observe whether extraction and suppression metrics decline as carveouts expand.",
+      "impact": "A durable, well-scoped carveout would reduce victim-side harm to downstream_modifiers and interoperability_dependent_developers without eliminating the coordination function for core commercial development, potentially shifting the classification toward scaffold-like transitional accommodation within the property frame.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether carveouts can decouple repair/interop harms from the core exclusivity claim."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "exclusive_authorship_control_default",
+    "drift_state": {
+      "moment": "post_open_source_movement_maturity",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "software_control_legitimacy__freedom_imperative_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "software_control_legitimacy__pragmatic_openness_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "software_control_legitimacy__commons_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creator_investment_grounds_exclusivity_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "user_computing_autonomy_is_not_a_trumping_claim",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_control_legitimacy__freedom_imperative_reading",
+      "software_control_legitimacy__pragmatic_openness_reading",
+      "software_control_legitimacy__commons_reading"
+    ],
+    "dual_formulation_note": "This story is one of four siblings decomposing the natural-language concept 'software control legitimacy' per the epsilon-invariance principle. The property_rights_reading claims moderate, contested extraction grounded in investment-protection coordination with identifiable victims (tangled_rope). The freedom_imperative_reading treats the identical restriction as categorically illegitimate (expected much higher extraction, likely snare-leaning). The pragmatic_openness_reading strips out the rights claim entirely and treats the choice as a neutral methodology question (expected near-rope, minimal victim structure). The commons_reading reframes the underlying resource as collectively governed rather than individually owned or individually free (expected distinct beneficiary/victim topology centered on collective-action dynamics). Each has its own epsilon; none should be averaged with another."
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

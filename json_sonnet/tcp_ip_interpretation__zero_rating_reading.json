@@ -1,0 +1,310 @@
+{
+  "header": {
+    "constraint_id": "tcp_ip_interpretation__zero_rating_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "909c88fa-79c2-4bcf-a151-bad365956e4d"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.58,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Zero-Rating Reading of TCP/IP: Sponsored-Content Data Cap Exemptions",
+    "topic_domain": "technology_governance/internet_policy/telecommunications_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_content_platforms",
+      "isp_zero_rating_partners"
+    ],
+    "victims": [
+      "small_content_startups",
+      "capped_data_consumers",
+      "unaffiliated_isps"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "isp_zero_rating_partners",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design and administer data plans that exempt specific partnered applications or platforms from counting against subscriber data caps. Negotiates the exemption agreements, sets the technical criteria for qualifying traffic, and collects fees or reciprocal carriage benefits from participating content providers. Frames the practice as consumer-friendly pricing innovation and legitimate network management under the TCP/IP framework's silence on application-layer billing."
+    },
+    {
+      "name": "incumbent_content_platforms",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Pay or negotiate to have their traffic zero-rated, making their service effectively free to data-capped users while rivals' traffic consumes the user's limited allowance. Already has scale and capital to strike these deals across many carriers, cementing default status among cap-constrained users regardless of underlying service quality."
+    },
+    {
+      "name": "small_content_startups",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Cannot afford zero-rating deals or lack the negotiating leverage to strike them, so their traffic counts fully against users' data caps. Users facing tight data budgets systematically choose the zero-rated incumbent over the metered alternative, regardless of comparative quality — market entry is effectively gated by capital for carrier deals rather than product merit."
+    },
+    {
+      "name": "capped_data_consumers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Get short-term relief from data costs when using zero-rated apps, which reads as a benefit at the point of use. Over time their consumption patterns are steered toward whichever platforms bought exemptions, narrowing their functional choice set and making the exempted apps a default rather than a preference. Switching plans or ISPs to escape the steering is possible but costly and rarely done."
+    },
+    {
+      "name": "unaffiliated_isps",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Smaller or newer ISPs without the scale to negotiate exemption deals with major content platforms find themselves competitively disadvantaged versus larger carriers who can offer 'free' access to popular apps. Their only options are absorbing the competitive loss, seeking their own smaller-scale exemption deals, or lobbying for regulatory restriction of the practice."
+    },
+    {
+      "name": "telecom_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate whether zero-rating violates neutrality principles or is a permissible pricing innovation. Commission economic studies, take comments from all sides, and can approve, restrict, or ban the practice depending on which reading of the underlying protocol's neutrality commitments prevails in their jurisdiction."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Zero-rating solves a genuine problem for data-constrained users in markets with expensive or scarce data: it lets a carrier offer meaningfully cheaper access to some services when full unmetered access is not commercially viable, particularly in emerging markets with high per-megabyte costs.",
+    "transfer_function": "Moves competitive advantage and user attention from platforms that cannot afford exemption deals to those that can, mediated through the ISP's technical capacity to selectively meter traffic by source; the ISP itself collects fees or reciprocal carriage terms from the exemption sponsors.",
+    "absent_voices": "Small content startups and open-internet advocates from the countries where zero-rating has been most aggressively deployed rarely have a formal seat at the carrier-platform negotiating table; regulators hear from ISPs and incumbent sponsors far more often than from the excluded startups who cannot afford lobbying presence.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If selective exemption authority vanished, ISPs would need to meter all traffic identically, sponsored-content deals would dissolve, incumbent platforms would lose their cap-exemption advantage, and users would face uniform data costs across all services — competitive dynamics among content providers would shift toward quality and price rather than carrier-deal capital.",
+    "founding_problem": "In markets with expensive or capacity-constrained mobile data, full unmetered internet access was commercially unworkable for many carriers; zero-rating emerged as a way to give users some free access to at least a subset of services rather than none.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "ISPs and sponsored platforms attest the founding problem (data affordability) remains live and that zero-rating is the solution. Independent researchers, competition regulators in the EU and India, and digital-rights organizations outside the benefiting parties attest that in mature broadband markets the affordability problem is largely solved and the practice now functions primarily as a competitive-entrenchment mechanism for incumbents rather than an affordability bridge."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the zero-rating reading of the TCP/IP interpretation kernel: the protocol's silence on application-layer billing is read as authorization for ISPs to exempt sponsored content from data caps. This is structurally distinct from the neutrality reading (which reads the same protocol as mandating non-discrimination among packets) and the prioritization reading (which reads it as permitting differentiated service quality for network management purposes). All three are readings of the same underlying kernel — the protocol's silence on how carriers may treat traffic from different sources — but they authorize categorically different carrier behaviors and produce different beneficiary/victim structures. Zero-rating's distinctive delta is economic rather than technical: it does not touch packet routing or QoS, it touches billing, and its principal effect is to convert carrier billing discretion into a competitive moat for whichever content providers can afford exemption deals.",
+    "key_agents": [
+      "isp_zero_rating_partners: agenda_setter/beneficiary (institutional/arbitrage) — designs and administers exemption programs, collects fees",
+      "incumbent_content_platforms: beneficiary (powerful/mobile) — captures default status among cap-constrained users",
+      "small_content_startups: payer (powerless/trapped) — priced out of the exemption market, structurally disadvantaged",
+      "capped_data_consumers: payer/beneficiary (powerless/constrained) — short-term relief, long-term steering",
+      "unaffiliated_isps: payer (moderate/constrained) — competitively disadvantaged versus scaled incumbents",
+      "telecom_regulators: observer (institutional/analytical) — adjudicates permissibility jurisdiction by jurisdiction"
+    ],
+    "logic_rationale": "Extraction is authored as substantial (0.68 at interval end) because the arrangement's steady-state function is to convert carrier-side billing discretion into durable competitive advantage for whichever platforms have the capital to negotiate exemptions — a transfer from unaffiliated competitors and startups to incumbents, mediated through consumer data-cap anxiety. Suppression is moderate (0.58): there is no direct coercion of startups, but the practical foreclosure of a competitive path (offering a comparable but non-exempted alternative) functions as suppression once caps are tight enough to steer behavior. Theater ratio (0.42) reflects a genuinely mixed practice — some markets and users derive real affordability benefit — but a growing share of the practice's visible framing (as pure consumer benefit) diverges from its function of entrenching incumbents.",
+    "directionality_logic": "ISPs sit as agenda-setters who benefit from exemption fees and vertical partnership leverage. Incumbent platforms are pure beneficiaries — d near the beneficiary end — because they receive the exemption and could survive without it, gaining a durable moat they did not need to earn through service quality. Small content startups are targets — trapped, powerless — because the mechanism actively narrows the market the moment users are cap-constrained. Capped data consumers occupy an unusual mixed position: they receive genuine short-term relief (some d toward beneficiary) while being steered and having their long-run choice set narrowed (some d toward target) — this is exactly the dual-role case the schema's secondary_role field exists for.",
+    "mandatrophy_analysis": "The founding problem (data affordability in constrained markets) is not fully dead — it remains live in several emerging markets — but the corroboration split (ISPs/platforms say live; regulators and independent researchers in mature markets say largely resolved and now serving entrenchment) is exactly the founding_problem_status=contested case R5 exists to surface. Treating zero-rating uniformly as either 'pure Rope born of affordability necessity' or 'pure Snare of incumbent capture' would mislabel the practice in whichever markets it does not fit; the tangled_rope classification with victims AND beneficiaries preserves both readings simultaneously rather than forcing a single verdict.",
+    "perspectival_gap": "From the ISP/incumbent-platform seat, this is coordination: carriers solving an affordability problem by partnering with the services users most want. From the small-startup and unaffiliated-ISP seat, the identical billing mechanism operates as an entry barrier enforced by capital requirements rather than product merit. The engine should compute divergent per-seat types from these two positions given the same structural facts — that divergence is the data point, not an error to reconcile.",
+    "kernel_context": "This constraint instantiates the zero_rating_reading of the tcp_ip_interpretation kernel: the claim that TCP/IP's silence on application-layer billing authorizes ISPs to selectively exempt sponsored traffic from data caps. Two sibling readings of the same kernel are NOT part of this story: the neutrality_reading holds that the protocol's end-to-end design principle requires non-discriminatory treatment of all packets regardless of source or destination, which would forbid the exemption practice modeled here; the prioritization_reading holds that the protocol permits differentiated service quality (latency, bandwidth allocation) for network-management purposes, a technically distinct axis (QoS) from the billing axis this story addresses. Each reading is authored as its own constraint with its own epsilon, beneficiary/victim set, and classification, linked via network.affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "billing_silence_vs_neutrality_mandate",
+      "question": "Does TCP/IP's technical silence on application-layer billing constitute affirmative authorization for selective data-cap exemptions, or does the end-to-end design principle implicitly forbid source-based differential treatment even at the billing layer?",
+      "resolution_mechanism": "This is the core committer disagreement between this reading and the neutrality_reading. Resolution would require either an authoritative technical-body ruling on what the protocol's silence implies, or a legal/regulatory determination (as in India's 2016 zero-rating ban or the EU's net neutrality guidelines) establishing which reading governs a given jurisdiction.",
+      "impact": "If the neutrality reading is adopted as authoritative, zero-rating arrangements of the kind modeled here become impermissible and this constraint's beneficiary structure collapses; if the zero-rating reading holds, the practice persists and likely intensifies as incumbents deepen exemption deals.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer disagreement: whether protocol silence on billing implies permission or is foreclosed by the neutrality principle."
+    },
+    {
+      "id": "affordability_vs_entrenchment_balance",
+      "question": "In any given market, what fraction of zero-rating's effect is genuine affordability bridging for data-constrained users versus incumbent competitive entrenchment?",
+      "resolution_mechanism": "Comparative market studies tracking user platform-choice diversity and startup market entry rates in jurisdictions with versus without zero-rating, controlling for underlying data cost and market maturity.",
+      "impact": "In markets where affordability dominates, the coordination function is real and the tangled_rope classification's beneficiary-side legitimacy is well-grounded; in mature markets where entrenchment dominates, the same practice may be better classified as approaching snare given how thin the residual coordination function has become.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the affordability justification is genuinely load-bearing or has become a legitimating cover story."
+    },
+    {
+      "id": "consumer_short_vs_long_run_benefit",
+      "question": "Do capped data consumers' short-term savings from zero-rated access outweigh their long-term loss of platform diversity and negotiating leverage?",
+      "resolution_mechanism": "Longitudinal study of user welfare and platform-switching behavior in zero-rating markets versus neutral-pricing control markets.",
+      "impact": "Determines whether consumers should be modeled predominantly as beneficiaries (short-run framing) or predominantly as targets (long-run framing) — currently authored as dual-role to preserve both readings.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether consumer benefit from zero-rating is net positive over a realistic time horizon."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "tcp_ip_interpretation__neutrality_reading",
+      "tcp_ip_interpretation__prioritization_reading"
+    ],
+    "dual_formulation_note": "This story is one of three sibling readings of the tcp_ip_interpretation kernel, each authored as a separate ε-invariant constraint per the ε-invariance principle: neutrality_reading (non-discrimination mandate, likely rope/mountain-adjacent at the protocol level), prioritization_reading (permitted QoS differentiation for network management, likely tangled_rope depending on whether prioritization is sold competitively), and this zero_rating_reading (billing-layer sponsored exemptions, tangled_rope). The readings are linked bidirectionally via affects_constraints because regulatory or technical resolution of one reading structurally constrains what the others can claim — an authoritative neutrality ruling forecloses zero-rating's legitimating premise, while zero-rating's proliferation creates political pressure that shapes how regulators eventually rule on the neutrality question."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "tcp_ip_interpretation__neutrality_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "tcp_ip_interpretation__prioritization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "carrier_billing_discretion_is_permissible_absent_explicit_prohibition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "sponsored_exemption_serves_affordability_not_merely_incumbency",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "protocol_silence_as_permissive_default",
+    "drift_state": {
+      "moment": "post_2016_regulatory_challenges",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

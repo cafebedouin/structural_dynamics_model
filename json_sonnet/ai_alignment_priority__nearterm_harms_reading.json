@@ -1,0 +1,365 @@
+{
+  "header": {
+    "constraint_id": "ai_alignment_priority__nearterm_harms_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "6a34c30a-4cb1-43f7-9016-1ba37aa8b6c7"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.52,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Near-Term Harms Reading of AI Alignment Priority",
+    "topic_domain": "AI governance/technology ethics/risk assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "present_marginalized_users",
+      "fairness_audit_practitioners",
+      "ai_ethics_compliance_teams"
+    ],
+    "victims": [
+      "algorithmically_screened_job_applicants",
+      "predictive_policing_targets",
+      "credit_scored_low_income_borrowers",
+      "disabled_applicants_of_hiring_ai"
+    ],
+    "vindicated_propositions": [
+      "distributive_justice_priority_doctrine",
+      "present_harm_primacy_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "fairness_audit_practitioners",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Sets the methodology by which deployed systems are audited for disparate impact — defines the metrics (demographic parity, equalized odds), runs the audits, and certifies remediation. Controls what counts as 'aligned' under this reading and administers the enforcement mechanism (compliance requirements, disclosure mandates, litigation support)."
+    },
+    {
+      "name": "present_marginalized_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Subject to deployed hiring, lending, and policing algorithms right now. Gains from this reading: bias audits, disparate-impact remediation, and legal recourse target harms they are actually experiencing today. They cannot opt out of the systems that score them and have no independent capacity to audit those systems themselves."
+    },
+    {
+      "name": "algorithmically_screened_job_applicants",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Screened out or down-ranked by hiring algorithms with documented racial and disability-status disparities. Under this reading they are named victims whose harm justifies the entire framework, but the audit-and-remediate cycle is slow and any given rejected applicant bears the harm before, or instead of, remediation reaching them. They pay the cost of the system operating while its fairness properties are contested and litigated."
+    },
+    {
+      "name": "predictive_policing_targets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Residents of neighborhoods flagged by predictive policing tools trained on historically biased arrest data. Cannot exit the jurisdiction's policing apparatus; bear surveillance and enforcement intensity the algorithm recommends, largely without visibility into the model's operation or standing to contest a given flag before harm occurs."
+    },
+    {
+      "name": "credit_scored_low_income_borrowers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Denied or priced out of credit by scoring models that encode proxies for race and income history. Can in principle seek alternative lenders, but alternatives are scarce, more expensive, or nonexistent for the same population the algorithm disadvantages — exit is nominal, not real."
+    },
+    {
+      "name": "disabled_applicants_of_hiring_ai",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Video-interview and resume-screening AI systematically misreads speech patterns, facial affect, and employment-gap history correlated with disability. Named as a core victim group under this reading; largely unable to detect why they were screened out, let alone contest it."
+    },
+    {
+      "name": "ai_ethics_compliance_teams",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Internal corporate and consultancy teams whose professional mandate and budget derive from this reading's framework: they run the bias audits, write the fairness reports, and administer remediation. Career and institutional standing are built on near-term-harms alignment being the operative definition; a shift toward the existential-risk reading would displace their function."
+    },
+    {
+      "name": "ai_developers_and_deployers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Firms building and deploying the screened systems bear compliance costs (audits, remediation, litigation exposure, delayed launches) under this reading, but also benefit from a bounded, checklist-style compliance target that is more tractable and PR-legible than open-ended catastrophic-risk mitigation. Can lobby for weaker audit standards or relocate deployment to lower-scrutiny jurisdictions."
+    },
+    {
+      "name": "existential_risk_researchers",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Argue that resources and institutional attention devoted to near-term fairness audits are diverted from catastrophic-risk research on frontier model capability control. Structurally outside this reading's conversation — this reading's framing treats their priority as a distraction from present, documentable harm to identifiable people."
+    },
+    {
+      "name": "policy_analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Studies how the alignment-priority kernel is read differently by different institutional actors and traces resource allocation, audit outcomes, and harm trajectories across the near-term and existential readings without being a party to either."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates auditing, disclosure, and remediation practices across firms deploying algorithmic decision systems so that discriminatory impacts on protected and vulnerable groups are detected and corrected using a shared, comparable methodology rather than each firm inventing its own fairness standard ad hoc.",
+    "transfer_function": "Moves compliance cost, audit labor, and remediation investment from firms and their shareholders toward the marginalized populations whose treatment the audits target; simultaneously moves professional and budgetary standing toward audit practitioners and compliance teams, and moves institutional attention and funding away from catastrophic-risk research relative to the sibling reading.",
+    "absent_voices": "Existential-risk researchers are structurally excluded from this reading's framing — they would argue the near-term focus under-resources catastrophic-risk work, but this reading's kernel definition treats their priority as outside its scope of what counts as 'alignment.' Individually harmed applicants and borrowers are also rarely present in the audit-design process itself, despite being the named beneficiary class.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If this reading of alignment vanished, fairness-audit practitioners and compliance teams would lose their institutional mandate, and firms would face reduced near-term legal and reputational pressure over disparate impact — marginalized populations subject to hiring, lending, and policing algorithms would lose an active (if imperfect) remediation channel. Whether the 'world rearranges' or 'stays the same' is itself contested between this reading's proponents (who say real, present harm would go unaddressed) and existential-risk proponents (who say resources would simply flow to what they consider the more consequential problem).",
+    "founding_problem": "Deployed algorithmic systems (hiring screens, credit models, predictive policing tools) were documented causing disparate, discriminatory outcomes against protected groups, with no established audit or remediation mechanism holding deployers accountable in real time.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent academic audits (e.g., peer-reviewed studies of hiring-algorithm and recidivism-model disparate impact), investigative journalism, and civil-rights litigation outcomes corroborate ongoing discriminatory impact from outside the compliance-team and audit-practitioner beneficiary set. Regulatory agencies (in jurisdictions with algorithmic accountability statutes) independently attest the problem remains active, not resolved."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the near-term-harms reading of the contested 'AI alignment priority' kernel: alignment is defined as the elimination of present, documentable discriminatory and extractive harms from deployed systems — hiring screens, credit models, predictive policing tools — with justice for marginalized populations (by age, race, and disability status) as the governing priority. Under this reading, resources, institutional legitimacy, and the definition of 'doing alignment work' flow to fairness-audit methodology, disparate-impact litigation, and bias-mitigation engineering. This is NOT the existential-risk reading (which defines alignment as preventing catastrophic loss of control over advanced systems) nor the integrated reading (which treats both priorities as complementary) — those are separate constraints, linked here only via the kernel network, each with its own ε, victim set, and beneficiary structure.",
+    "key_agents": [
+      "fairness_audit_practitioners: agenda_setter (organized/mobile) — defines and administers the audit methodology",
+      "present_marginalized_users / algorithmically_screened_job_applicants / predictive_policing_targets / credit_scored_low_income_borrowers / disabled_applicants_of_hiring_ai: primary beneficiaries-in-name and simultaneous bearers of ongoing harm (powerless/trapped) — the named victim-beneficiary class this reading exists to serve",
+      "ai_ethics_compliance_teams: beneficiary/agenda_setter (organized/mobile) — professional and budgetary stake in this reading remaining the operative definition",
+      "ai_developers_and_deployers: payer/beneficiary (institutional/constrained) — bear audit and remediation cost, benefit from a bounded compliance target",
+      "existential_risk_researchers: excluded (organized/analytical) — structurally outside this reading's scope of what counts as alignment",
+      "policy_analytical_observer: observer (analytical) — traces the kernel contest across readings"
+    ],
+    "logic_rationale": "Extractiveness (0.68) is authored high because deployed-system audits under this reading extract real, ongoing harm from specific, identifiable populations (job applicants, loan applicants, policed residents) whose exposure is continuous while the audit-and-remediation cycle lags behind deployment cycles — the harm is current-tense even when a remediation program exists. Suppression (0.52) reflects that most affected individuals cannot contest an individual algorithmic decision in real time or exit the systems that score them; it is moderate rather than severe because audit and disclosure regimes, litigation, and regulatory attention provide partial, if slow, recourse. Theater ratio (0.40) reflects a documented tendency for compliance programs to produce audit reports and fairness dashboards that satisfy disclosure requirements without necessarily changing deployed-model behavior in proportion to the harm measured — a genuine risk under any purely metrics-driven fairness regime. Accessibility collapse (0.35) is moderate-low: unlike a mountain, real alternative institutional arrangements exist (stronger liability regimes, pre-deployment certification, banning certain use-cases outright) and are actively debated, so alternatives have not collapsed. Resistance (0.62) is authored high because affected communities, civil-rights organizations, and litigation actively contest both the harms and the adequacy of the audit regime — this is a live, contested arrangement, not a settled one.",
+    "directionality_logic": "Present marginalized users and the four named victim groups are declared as both the reading's justificatory beneficiary class (the entire framework exists to serve their interests) and structural payers (they are the ones actually screened, policed, and scored) — this dual role is intentional: this reading's moral claim is that their present suffering under deployed AI is the alignment problem, and its structural weakness is that remediation is slower than harm accrual, so the same population occupies both roles simultaneously. Fairness-audit practitioners and compliance teams are pure structural beneficiaries: their professional field and institutional mandate are constituted by this reading being the operative definition of alignment. Developers/deployers are payers of compliance cost but also beneficiaries of a bounded, legible compliance target relative to open-ended catastrophic-risk mitigation — this dual position reflects genuine industry preference for near-term reading's tractability.",
+    "mandatrophy_analysis": "The founding problem (documented discriminatory algorithmic harm with no accountability mechanism) is authored as live, not dead — audits, litigation, and journalism continue to surface new instances. This blocks a mandatrophy verdict: the arrangement's justification has not evaporated even though its administering class (audit practitioners, compliance teams) has an obvious institutional interest in the problem being framed as perpetually live. The tangled-rope classification captures this precisely: there IS a genuine coordination function (shared audit methodology beats each firm inventing its own fairness standard) AND genuine asymmetric extraction (the harm continues to accrue to specific populations while remediation lags, and compliance-industry incentives may extend the audit-and-report cycle beyond what remediation strictly requires).",
+    "kernel_context": "This constraint is the nearterm_harms_reading of the ai_alignment_priority kernel. The kernel's shared commitment is: 'alignment work must serve some overriding priority for AI development.' This reading resolves that commitment as: alignment = eliminating present discriminatory/extractive harm to marginalized populations from deployed systems, with sociotechnical audit as method. The sibling existential_risk_reading resolves the same kernel as: alignment = preventing catastrophic loss of control over advanced systems, with capability evaluation and control research as method — a structurally different constraint with a different victim set (future/hypothetical populations under catastrophic scenarios vs. specific present marginalized groups here), different beneficiaries (safety researchers and long-term humanity vs. present vulnerable populations and audit practitioners here), and near-certainly a different ε (this reading's ε is grounded in measured present-day disparate impact; the existential reading's ε would need to be grounded in speculative catastrophic-scenario probability, an entirely different evidentiary basis). The integrated_reading treats both as complementary rather than competing, which this reading's own framing implicitly denies by treating existential-risk prioritization as resource diversion from present injustice — see the reading_relations below."
+  },
+  "omegas": [
+    {
+      "id": "resource_zero_sum_ambiguity",
+      "question": "Is institutional/funding attention to near-term fairness harms genuinely in zero-sum competition with existential-risk research, or can both be pursued without meaningful tradeoff?",
+      "resolution_mechanism": "Track whether organizations that increase near-term fairness audit investment show measurably reduced capability-control research output (or vice versa) across a multi-year panel of AI labs and policy bodies; absence of correlation would support the integrated reading's premise.",
+      "impact": "If genuinely zero-sum, this reading's prioritization of near-term harms structurally extracts resources from existential-risk mitigation, strengthening the case that the readings are in real competition rather than complementary. If not zero-sum, the near-term reading's implicit framing of existential-risk work as 'distraction' is less defensible, and the integrated reading gains support.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether near-term and existential alignment priorities structurally compete for the same finite resources."
+    },
+    {
+      "id": "audit_remediation_lag_severity",
+      "question": "How large is the gap between when an audit detects disparate impact and when deployed systems are actually remediated, and does that gap itself constitute a distinct extraction mechanism (harm continues to accrue during the lag) or an acceptable transitional cost of a genuinely functioning coordination mechanism?",
+      "resolution_mechanism": "Longitudinal tracking of specific deployed systems from audit-flagged date to remediation-verified date, cross-referenced with harm incidence during the lag window.",
+      "impact": "A long, harm-accruing lag would push this constraint's classification toward snare (extraction with cosmetic coordination cover); a short, genuinely corrective lag supports the tangled_rope reading (real coordination function coexisting with real but bounded extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the audit-to-remediation lag is itself an extraction mechanism."
+    },
+    {
+      "id": "kernel_framing_choice_omega",
+      "question": "Is the choice to read 'alignment priority' as fundamentally about present distributive justice (rather than catastrophic risk, or both) itself a defensible reading of the underlying commitment, or does it presuppose a contestable moral framework (near-term identifiable-victim harms take normative priority over diffuse future-probability harms)?",
+      "resolution_mechanism": "Compare against how the sibling readings frame the same underlying kernel; document that both are internally coherent given different premises about moral priority under uncertainty (certain present harm to identifiable people vs. uncertain future catastrophic harm to unidentified people) — this is a genuine conceptual fork, not an empirical one.",
+      "impact": "If one premise is judged philosophically dominant, that reading's constraint would be authored as the 'true' kernel resolution and the others as derivative or subordinate; under the ε-invariance principle we instead keep all three as separate, co-equal constraints linked by network edges rather than adjudicating between them here.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether prioritizing present identifiable harm over diffuse future risk is itself a value choice this reading makes without fully surfacing it."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "ai_alignment_priority__existential_risk_reading",
+      "ai_alignment_priority__integrated_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three siblings decomposing the natural-language label 'AI alignment priority' per the ε-invariance principle: (1) nearterm_harms_reading (this file) — ε grounded in measured present disparate impact on named marginalized groups; (2) existential_risk_reading — ε grounded in speculative catastrophic loss-of-control scenarios, an entirely different evidentiary basis and victim set; (3) integrated_reading — treats both as complementary, with its own beneficiary/victim structure spanning both present and long-term populations. The three are linked via affects_constraints rather than merged, because averaging or parameterizing a single ε across them would violate DP-001 (ε-invariance) — each reading is measured by a genuinely different observable."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "civil_rights_disparate_impact_framework",
+    "drift_state": {
+      "moment": "post_generative_ai_deployment_surge",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "ai_alignment_priority__existential_risk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ai_alignment_priority__integrated_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "present_identifiable_harm_has_moral_priority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "disparate_impact_audit_is_primary_alignment_method",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "gain_flow": "fairness_audit_practitioners",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

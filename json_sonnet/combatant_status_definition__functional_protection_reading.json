@@ -1,0 +1,297 @@
+{
+  "header": {
+    "constraint_id": "combatant_status_definition__functional_protection_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "2dbbb7b9-51af-4a67-a98f-9cc247c98293"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.28,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Common Article 3 Status-Independent Minimum Protections",
+    "topic_domain": "international_humanitarian_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "all_detained_persons",
+      "captured_non_state_fighters",
+      "captured_state_combatants",
+      "civilian_internees"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "humane_treatment_is_status_independent",
+      "common_article_3_universal_floor_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "all_detained_persons",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Held in detention during armed conflict of any classification. Under this reading, receives humane treatment, prohibition on violence to life and person, prohibition on outrages upon personal dignity, and judicial guarantees regardless of whether a tribunal ever determines their combatant status. Cannot negotiate exit from detention; the protection floor is the only leverage they hold."
+    },
+    {
+      "name": "detaining_power_military",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operates detention facilities and makes day-to-day custody decisions. Under this reading, the detaining power cannot use unresolved status determination as a basis for withholding baseline humane treatment; must apply the floor immediately upon capture. Retains some latitude on classification-dependent privileges (POW combatant immunity, repatriation timing) but not on the minimum floor itself. Bears the administrative and political cost of applying protections before status is settled."
+    },
+    {
+      "name": "international_committee_of_the_red_cross",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Monitors detention conditions and asserts the Common Article 3 floor applies to everyone in the detaining power's hands, no exceptions. Has no coercive enforcement power itself but leverages visibility, reporting, and diplomatic pressure to keep detaining powers from conditioning treatment on status litigation outcomes."
+    },
+    {
+      "name": "domestic_courts_and_tribunals",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicates individual habeas and treatment claims; under this reading, can order remedies for mistreatment without first resolving whether the detainee is a lawful combatant, POW, or unprivileged belligerent. Their reasoning either reinforces or erodes the status-independence premise case by case."
+    },
+    {
+      "name": "captured_non_state_fighters",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Fighters for groups not meeting Article 4 organizational criteria, historically at greatest risk of falling into a protection gap between POW status and civilian protection. Under the functional reading, they receive the floor immediately, without waiting for a status tribunal that might otherwise never convene or might rule against them."
+    },
+    {
+      "name": "states_favoring_status_screening",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Would prefer combatant status be resolved before any treatment obligations attach, arguing this preserves incentives for lawful combatancy and denies legitimacy to irregular fighters. Their objection is structurally present in treaty negotiation history and in the state-centric sibling reading but is not part of the conversation this constraint's own operation instantiates — they operate through a different reading, not through modification of this one."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Guarantees every detained person a floor of humane treatment and fair trial guarantees the moment they are in custody, eliminating the need to resolve contested and often unresolvable status questions before basic protections attach — solving the real coordination problem of what to do with detainees when classification is disputed, delayed, or impossible.",
+    "transfer_function": "Moves an obligation of restraint and minimum process from the detaining power onto itself: it cannot extract intelligence, punishment, or leverage through denial of basic humane treatment, regardless of who it has captured. No resource moves between private parties; the transfer is a constraint on state coercive capacity in favor of the detained individual.",
+    "absent_voices": "States that prefer status-conditioned treatment (arguing that extending protections to fighters who don't meet formal combatant criteria removes incentives to comply with the laws of war) are structurally outside this reading's own framework — their position is expressed through the state-centric sibling reading, not through amendment of this one.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If status-independence collapsed, detaining powers could lawfully withhold humane treatment and judicial guarantees pending status determination — a process states control and can indefinitely delay. Detainees currently protected by the floor (particularly non-state fighters and those in contested classification limbo) would fall into a protection gap; interrogation practices, indefinite detention without charge, and denial of judicial review would become legally available tools rather than violations.",
+    "founding_problem": "The 1949 Geneva Conventions drafters recognized that internal and mixed conflicts produce detainees whose combatant status is genuinely contested or unresolvable, and that conditioning humane treatment on prior status resolution had produced atrocities in preceding conflicts (reprisals, denial of quarter, treatment of partisans as outside all legal protection).",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The ICRC, which has no direct stake in any state's detention policy outcomes, continues to document status-based treatment denial in contemporary conflicts (non-international armed conflicts, counterterrorism detention, contested-classification detainees) as an active, unresolved problem — corroboration from outside the population of protected detainees themselves, and independent of any detaining power's institutional interest."
+  },
+  "interval": {
+    "start": 1949,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1949,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1965,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1949,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1949,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the functional-protection reading of the contested combatant status kernel: Common Article 3 to the Geneva Conventions establishes that all persons detained in connection with armed conflict — regardless of whether they qualify as lawful combatants, POWs, or unprivileged belligerents — receive an irreducible floor of humane treatment, prohibition on violence and outrages upon dignity, and minimum judicial guarantees. This reading removes status determination as a precondition for baseline treatment: the floor attaches at capture, not after classification. The sibling readings (state_centric_reading, national_liberation_reading) address a different structural question entirely — who qualifies for full combatant/POW status and its associated privileges — and are NOT part of this constraint's own operation. This story's ε is low and stable because the functional floor is genuinely close to universal coordination: nearly every legal tradition and every state party has ratified Common Article 3, and its extraction profile is minimal (it restrains state power rather than transferring resources to a beneficiary class that extracts from others).",
+    "key_agents": [
+      "all_detained_persons: primary beneficiary (powerless/trapped) — receives the protection floor regardless of status",
+      "detaining_power_military: agenda_setter (institutional/constrained) — bears the administrative and political cost of applying protections pre-classification",
+      "international_committee_of_the_red_cross: observer/agenda_setter (institutional/analytical) — monitors and asserts the floor's application",
+      "domestic_courts_and_tribunals: observer (institutional/analytical) — adjudicates treatment claims independent of status resolution",
+      "states_favoring_status_screening: excluded (powerful/mobile) — objects through the sibling state-centric reading, not through this one"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.12) and essentially flat across 75 years because the functional floor does not transfer resources from a payer class to a beneficiary class in the extractive sense — it restrains the detaining power's coercive latitude, which is a cost the state bears rather than an extraction it collects. Suppression is moderate (0.28) reflecting genuine active enforcement requirement (states do not spontaneously apply the floor; ICRC monitoring, treaty ratification pressure, and judicial review are needed to keep detaining powers from conditioning treatment on status litigation). Theater ratio rises modestly (0.15 to 0.22) reflecting increasing gap between formal ratification/declaratory commitment and contested application in counterterrorism and non-international armed conflict contexts post-2001, without approaching piton-level performance.",
+    "directionality_logic": "All detained persons are beneficiaries under this reading by construction — the floor exists specifically to reach them regardless of classification, so their derived directionality sits near the full-beneficiary end even though they are individually powerless and trapped (the constraint subsidizes them structurally even though they hold no leverage). The detaining power sits as agenda_setter bearing a restraint cost, not extracting a rent — this is why no victims are declared: the story's transfer function moves an obligation onto the state, not a resource from one population to another. This is structurally a Rope, not a Tangled Rope, because there is no identifiable victim group paying through the same structure that produces the coordination benefit.",
+    "perspectival_gap": "From the detaining power's seat, the floor appears as a cost imposed regardless of operational judgment about who was captured — friction against battlefield discretion. From the detained person's seat, the same floor is the only guarantee standing between them and status-conditioned treatment denial. The engine should compute both seats as experiencing a genuine coordination structure (low ε), differing mainly in how costly compliance feels rather than in whether extraction is occurring — because none is, under this reading.",
+    "mandatrophy_analysis": "The founding problem (protection gaps produced by contested status classification) remains live: contemporary counterterrorism detention and non-international armed conflicts continue to generate classification disputes that this floor exists to bypass. Because founding_problem_status is 'live' and disappearance_verdict is 'world_rearranges', there is no mandatrophy here — the mandate has not outlived its function; if anything the function has intensified as irregular conflict has become more common relative to inter-state war.",
+    "kernel_context": "This constraint instantiates the functional_protection_reading of the combatant_status_definition kernel. The kernel concerns how combatant/POW status is determined and what follows from that determination. This reading holds that a baseline of humane treatment and judicial guarantees is status-independent — it applies before, and regardless of, any resolution of the harder classification question. The sibling readings occupy a different structural position: state_centric_reading holds that full combatant status (and its associated privileges, like POW combatant immunity from prosecution for lawful acts of war) requires formal Article 4 state-military organization, categorically excluding non-state actors from THOSE privileges. national_liberation_reading extends full combatant status to organized non-state groups fighting colonial/occupation/racist regimes under AP I Article 1(4). This reading does not resolve either of those questions — it establishes only that whatever the answer, a floor exists beneath it. All three readings can be simultaneously true within the actual treaty architecture: a state can deny POW status to an irregular fighter (state-centric) while still being bound to apply the Common Article 3 floor to that same person (functional-protection). The readings occupy different tiers of the same legal architecture rather than competing for the same question."
+  },
+  "omegas": [
+    {
+      "id": "floor_versus_full_status_boundary",
+      "question": "Where exactly does the status-independent floor end and status-dependent privilege (POW combatant immunity, repatriation rights, prisoner-of-war camp conditions) begin, and is that boundary itself stable across legal traditions?",
+      "resolution_mechanism": "Comparative analysis of state practice and ICRC customary law study entries distinguishing Common Article 3 floor obligations from Third Geneva Convention POW-specific obligations across multiple conflicts and jurisdictions.",
+      "impact": "If the boundary is unstable or contested in practice, some of what this reading treats as a clean floor may in practice be eroded by states re-importing status arguments through the back door (e.g., differential interrogation standards justified by 'unlawful combatant' framing) — which would raise this constraint's own ε above the low value currently authored.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Stability of the boundary between the universal floor and status-conditioned privilege."
+    },
+    {
+      "id": "enforcement_capacity_versus_declaratory_commitment",
+      "question": "Is the near-universal state ratification of Common Article 3 tracked by near-universal compliance, or does the floor operate mostly as declaratory law with compliance concentrated among states already inclined toward humane treatment?",
+      "resolution_mechanism": "Cross-referencing ICRC detention visit reports, UN human rights mechanisms, and post-conflict tribunal findings against ratification status to measure compliance gap.",
+      "impact": "A large compliance gap would suggest the low authored extractiveness reflects legal design rather than operational reality, and that theater_ratio should be authored higher to capture the gap between formal commitment and applied protection.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Gap between declaratory ratification and actual detention practice."
+    },
+    {
+      "id": "kernel_reading_coexistence_versus_tension",
+      "question": "Do the three kernel readings (functional_protection, state_centric, national_liberation) genuinely coexist as non-competing tiers, or does the state_centric reading's restrictive combatant definition create practical pressure to also restrict the functional floor's application in contested cases (e.g., 'unlawful enemy combatant' doctrines that attempted to narrow Common Article 3's reach)?",
+      "resolution_mechanism": "Historical case study of post-2001 detention policy debates (e.g., Guantanamo-era legal memoranda) to determine whether restrictive combatant-status arguments were used to argue the floor itself did not apply, not merely that full POW status did not apply.",
+      "impact": "If state-centric restrictiveness bleeds into floor-denial in practice, the readings are not as cleanly separable as this story assumes, and the functional_protection_reading's low ε may be more fragile / contested than the baseline authored here suggests.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether restrictive full-status readings create downstream pressure against the floor reading itself."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "geneva_1949_universal_floor_framework",
+    "drift_state": {
+      "moment": "post_2001_counterterrorism_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "combatant_status_definition__state_centric_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "combatant_status_definition__national_liberation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "humane_treatment_precedes_status_determination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "protection_floor_is_non_derogable_and_universal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "combatant_status_definition__state_centric_reading",
+      "combatant_status_definition__national_liberation_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three linked readings of the combatant_status_definition kernel. functional_protection_reading establishes a status-independent baseline of humane treatment that operates beneath and regardless of the status determination addressed by the other two readings. state_centric_reading and national_liberation_reading both concern who qualifies for full combatant/POW status and its associated privileges — a different, higher-tier structural question. All three readings can be simultaneously operative in the same legal system without contradiction, because they answer different questions (floor treatment vs. full-status privilege vs. the criteria for extending full status to non-state actors). Sibling files should each declare their own ε: this reading's ε is low and stable (0.12) reflecting near-universal ratification and minimal extraction; the state_centric and national_liberation readings are expected to show different ε profiles reflecting their more contested, unresolved status-determination function."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

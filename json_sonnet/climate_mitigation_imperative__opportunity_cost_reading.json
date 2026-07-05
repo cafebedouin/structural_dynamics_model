@@ -1,0 +1,356 @@
+{
+  "header": {
+    "constraint_id": "climate_mitigation_imperative__opportunity_cost_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "78477cad-25ef-4304-960b-804d96a34413"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mitigation-Speed Imperative: Carbon-per-Dollar-per-Year Opportunity-Cost Reading",
+    "topic_domain": "energy_policy/climate_mitigation/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "utility_scale_solar_developers",
+      "onshore_wind_developers",
+      "battery_storage_manufacturers",
+      "grid_flexibility_service_providers",
+      "climate_finance_analysts_favoring_fast_deployment"
+    ],
+    "victims": [
+      "nuclear_developers",
+      "nuclear_supply_chain_workers",
+      "communities_hosting_planned_reactors",
+      "nuclear_dependent_grid_operators",
+      "advanced_reactor_startups"
+    ],
+    "vindicated_propositions": [
+      "levelized_avoided_carbon_per_dollar_per_year_metric",
+      "deployment_speed_as_primary_mitigation_criterion"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "utility_scale_solar_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Build projects that can be permitted, financed, and interconnected in 1-3 years, so under a carbon-per-dollar-per-year allocation rule they capture a growing share of climate finance and policy support that would otherwise be split with nuclear. Their argument that speed dominates lifetime output is the operative allocation criterion, and it directs capital toward them by construction."
+    },
+    {
+      "name": "onshore_wind_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Similarly favored by the fast-deployment metric; can site and commission projects far faster than reactors, so the opportunity-cost framing routes subsidy, tax credit, and PPA volume toward them ahead of nuclear proposals competing for the same decarbonization budget."
+    },
+    {
+      "name": "battery_storage_manufacturers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit indirectly: as the metric pushes capital toward variable renewables, storage becomes the complementary investment needed to firm the grid, expanding their addressable market at nuclear's expense in the same capital pool."
+    },
+    {
+      "name": "grid_flexibility_service_providers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Demand-response and flexibility markets grow as the grid is built around fast, variable renewables rather than nuclear baseload, creating new revenue streams contingent on the allocation rule persisting."
+    },
+    {
+      "name": "climate_finance_analysts_favoring_fast_deployment",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Set and defend the carbon-per-dollar-per-year metric in IPCC-adjacent modeling, philanthropic funding criteria, and multilateral climate finance screens. They administer which projects qualify as 'climate-aligned,' and could revise the metric to weight long-lived firm capacity, but doing so would require reworking models and funding criteria they have already built institutional careers around defending."
+    },
+    {
+      "name": "nuclear_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Propose reactors with 6-15 year construction timelines and large upfront capital requirements; under the opportunity-cost allocation rule, their projects are systematically deprioritized or excluded from climate finance vehicles regardless of eventual lifetime carbon-free output, foreclosing projects already underway or shelving new ones. They cannot compress construction timelines to compete on the metric's terms and cannot exit the framing since it now governs sovereign, multilateral, and private climate capital simultaneously."
+    },
+    {
+      "name": "nuclear_supply_chain_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Skilled tradespeople, engineers, and fabricators whose employment depends on a pipeline of reactor construction. As the metric redirects capital away from nuclear, project cancellations and non-starts eliminate multi-year employment horizons with no comparable retraining pathway into renewables construction at the same skill/wage tier."
+    },
+    {
+      "name": "communities_hosting_planned_reactors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Regions that planned economic development, tax base, and long-term high-wage employment around a reactor project see it cancelled or indefinitely deferred when financing dries up under the opportunity-cost screen, with no equivalent replacement industrial anchor offered."
+    },
+    {
+      "name": "nuclear_dependent_grid_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Grid operators in regions with limited hydro or gas backup that were counting on new nuclear for firm decarbonized capacity must now solve reliability with faster-deploying but variable resources plus storage, absorbing higher integration costs and reliability risk that the metric does not price."
+    },
+    {
+      "name": "advanced_reactor_startups",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Small modular and advanced reactor firms betting on shorter future build times face investor skepticism because the current allocation metric penalizes any nuclear-adjacent bet before their claimed timeline compression is demonstrated at scale, starving them of the capital needed to prove the compression."
+    },
+    {
+      "name": "future_generations_2060_grid",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Would inherit whatever generation mix results from today's allocation choices decades hence; if the fast-deployment bias under-builds firm zero-carbon capacity, they bear the reliability and decarbonization-completion costs, but have no seat in current capital allocation debates."
+    },
+    {
+      "name": "climate_modelers_and_iam_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Run integrated assessment models comparing deployment-speed-weighted versus total-capacity-weighted decarbonization pathways; can show scenario sensitivity to the discount rate and time horizon chosen, revealing that the metric's dominance is itself a modeling choice rather than a physical necessity."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates scarce climate finance and policy attention toward the projects that remove the most carbon per dollar per year, under real urgency: emissions locked in during the 2020s-2030s compound and cannot be un-emitted later, so speed of avoided-carbon delivery is a genuine physical constraint on cumulative warming, not merely a preference.",
+    "transfer_function": "Moves capital, subsidy eligibility, and favorable financing terms away from capital-intensive, long-timeline nuclear projects and toward fast-deploying wind, solar, and storage — redirecting billions in public and private climate finance flows and, with them, construction employment, regional economic development, and long-term generation capacity commitments.",
+    "absent_voices": "Nuclear supply chain workers and host communities bear concentrated local costs from project cancellation but have no representation in the multilateral finance committees and philanthropic funding boards that set eligibility criteria. Future grid operators and consumers of the 2050s-2060s who may face reliability gaps from under-built firm capacity are not present in any current allocation decision.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Renewables developers and the finance institutions that built portfolios and models around the fast-deployment criterion would see it as a rearrangement — reallocated capital, revised model assumptions, disrupted competitive advantage. Nuclear developers and advocates would say the world 'unchanged' is closer to true in the sense that underlying physics and grid reliability needs don't change; only the allocation framework governing who gets funded would shift, restoring nuclear's eligibility for the same capital pool.",
+    "founding_problem": "Climate finance and policy needed some allocation rule to prioritize among competing decarbonization technologies under real capital scarcity and a hard emissions-budget deadline; the opportunity-cost/deployment-speed framing was adopted to prevent capital from being tied up for a decade-plus in projects that might not deliver avoided carbon before critical warming thresholds are crossed.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Independent energy-systems modelers outside both the renewables and nuclear industries (e.g., IEA and IPCC working-group contributors who model multiple pathways) attest that near-term deployment speed genuinely matters for cumulative emissions, corroborating that the founding problem remains partly live; but the same independent modelers note the metric, once adopted, is now defended by finance institutions whose portfolios and reputations are built on it, and by nuclear-industry critics who argue the framing has hardened past what the physical urgency case alone would justify — corroboration is split, not unanimous, and no source entirely outside all interested camps has adjudicated it."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested 'climate mitigation imperative' kernel: the opportunity-cost reading, which holds that because emissions accumulate and warming thresholds are time-sensitive, the correct allocation criterion for climate capital is carbon avoided per dollar per year, not total lifetime carbon avoided or system-level reliability. Under this metric, nuclear's long construction timelines and high capital intensity make it a comparatively poor allocation target relative to fast-deploying wind, solar, and storage — nuclear becomes a victim of the allocation rule even though it is not itself a climate-harming technology. This is distinct from the portfolio_optimization_reading (which treats nuclear as necessary baseload alongside renewables) and the systems_transition_reading (which treats nuclear as illegitimate for centralization reasons unrelated to deployment speed). Each reading produces a different victim/beneficiary structure and a different epsilon; they are not merged here.",
+    "key_agents": [
+      "utility_scale_solar_developers: primary beneficiary (organized/arbitrage) — captures reallocated capital",
+      "nuclear_developers: primary target (powerful/trapped) — capital and financing systematically deprioritized",
+      "climate_finance_analysts_favoring_fast_deployment: agenda-setter (institutional/analytical) — administers the allocation metric",
+      "nuclear_supply_chain_workers and host communities: powerless payers bearing concentrated local costs",
+      "future_generations_2060_grid: excluded — bears long-horizon reliability risk with no current seat",
+      "climate_modelers_and_iam_researchers: analytical observers who can show the metric's sensitivity to modeling choices"
+    ],
+    "logic_rationale": "Extractiveness (0.58 at interval end) reflects real diversion of capital from nuclear toward renewables under a metric that, while grounded in genuine physical urgency, has hardened into an institutional screening criterion defended independent of case-by-case reassessment. Suppression (0.42) is moderate: nuclear projects are not banned, but face systematically unfavorable financing terms, exclusion from green-taxonomy classifications in some jurisdictions, and reputational headwinds that function as soft coercion within capital markets. Theater ratio (0.28) is present but not dominant — the underlying deployment-speed concern is empirically real (near-term emissions do compound), so this is not pure performance, but a growing share of the metric's defense has become institutional self-justification rather than fresh physical analysis. Resistance (0.68) is high because nuclear industry actors, some grid operators, and portfolio_optimization-reading advocates actively contest the metric's dominance in policy and finance venues.",
+    "directionality_logic": "Renewables developers and storage manufacturers are structural beneficiaries: the allocation rule is defined in terms that favor their deployment profile, so declaring them beneficiaries directly derives a low directionality (subsidized position). Nuclear developers, their supply chains, and host communities are structural victims: capital that would have flowed to them under a different metric (e.g., total-lifetime-carbon-avoided) is redirected, and their trapped exit options (sunk site investments, long permitting histories, specialized workforce) push their derived directionality toward the full-target end. The agenda-setting climate finance institutions occupy an unusual seat: institutional power with analytical exit options, administering a rule they could revise but have entrenched through model dependencies and existing portfolio commitments — this is closer to Piton-adjacent inertia within an otherwise tangled-rope structure, which the seat-divergence analysis below addresses.",
+    "perspectival_gap": "From the beneficiary seats (solar, wind, storage), the constraint reads as pure Rope: legitimate coordination directing scarce capital to where it saves the most carbon fastest, with no injustice since nuclear remains free to compete by demonstrating faster builds. From the payer seats (nuclear developers, supply chain workers, host communities), the same structure reads as Tangled Rope shading toward Snare: a genuine-sounding coordination rationale (speed matters!) that in practice forecloses a technology needed for long-term grid decarbonization, enforced through financing gatekeeping that leaves little room for case-by-case reassessment of specific projects with credible faster timelines (e.g., advanced reactors). The engine's per-seat computation should reflect that gap without this story adjudicating which seat's perception is 'true' — that adjudication is exactly what the omega variables below are for.",
+    "mandatrophy_analysis": "The founding problem — genuine capital scarcity plus a hard, time-sensitive emissions budget — remains partly live (independent modelers corroborate that near-term deployment speed matters physically). But institutional entrenchment (climate finance analysts whose models, funding criteria, and professional reputations are built on the metric) risks converting a once-appropriate emergency allocation heuristic into a persistent structural bias against a technology class regardless of whether specific projects (e.g., demonstrated fast-build SMRs) later invalidate the premise that nuclear cannot deploy quickly. Classifying this as Tangled Rope rather than pure Rope or pure Snare captures both halves: real coordination value in directing capital toward proven-fast decarbonization, and real asymmetric extraction from a capital-intensive technology class that cannot escape the allocation rule's terms even where individual projects might merit exception.",
+    "kernel_context": "This story is the opportunity_cost_reading of the climate_mitigation_imperative kernel. It holds that carbon-per-dollar-per-year is the correct allocation metric because near-term emissions compound; nuclear enters the victim set because its capital intensity and timeline make it structurally disadvantaged under this metric regardless of its zero-carbon output. The sibling portfolio_optimization_reading treats nuclear as a necessary beneficiary alongside renewables for reliable baseload, inverting nuclear's role from victim to beneficiary. The sibling systems_transition_reading rejects nuclear on different grounds entirely (centralization/extraction, not deployment speed), producing yet another victim/beneficiary structure. These are three distinct constraints, each with its own epsilon and stakeholder set, linked via network.affects_constraints — not one constraint measured three ways."
+  },
+  "omegas": [
+    {
+      "id": "deployment_speed_versus_lifetime_output_tradeoff",
+      "question": "Does prioritizing carbon-per-dollar-per-year systematically under-value total lifetime avoided carbon from long-lived, high-capacity-factor assets like nuclear, or does near-term emissions urgency genuinely dominate any lifetime-output consideration given physical warming thresholds?",
+      "resolution_mechanism": "Integrated assessment model runs comparing cumulative 2025-2100 emissions and peak warming under a deployment-speed-weighted allocation versus a total-lifetime-avoided-carbon-weighted allocation, holding total capital constant, to see whether the ranking of nuclear versus renewables reverses under different discount rates and time horizons.",
+      "impact": "If lifetime output dominates under most credible discount rates, the opportunity-cost reading's exclusion of nuclear is a modeling artifact rather than a physical necessity, weakening its claim to be the mandatory reading of the kernel. If deployment speed dominates robustly, the reading is closer to physically grounded and the extraction reading of nuclear's exclusion is weaker.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the deployment-speed metric's ranking of technologies is robust to reasonable modeling choices or is itself a contestable framing choice."
+    },
+    {
+      "id": "kernel_reading_selection_ambiguity",
+      "question": "Is the opportunity_cost_reading the objectively correct instantiation of the climate_mitigation_imperative kernel, or is the choice among opportunity_cost_reading, portfolio_optimization_reading, and systems_transition_reading itself a value-laden framing decision made by whoever controls climate finance criteria?",
+      "resolution_mechanism": "Track whether climate finance institutions that adopt this reading can articulate a principled, technology-neutral justification for weighting near-term deployment speed above total decarbonization capacity and grid reliability, independent of which technologies happen to score well under each metric.",
+      "impact": "If the reading selection is principled and technology-neutral, the resulting nuclear exclusion is a legitimate consequence of physical urgency. If the reading selection tracks which technologies the selecting institutions already favor (e.g., renewables-focused philanthropies and funds), the reading itself is evidence of a captured framing rather than a physically necessitated one — this would support reclassifying toward snare rather than tangled_rope.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the choice of kernel reading is itself independent of the interests of the parties advocating for it."
+    },
+    {
+      "id": "advanced_reactor_timeline_compression_uncertainty",
+      "question": "Can advanced/modular reactor designs credibly compress construction timelines enough to compete on the opportunity-cost metric's own terms within the 2025-2035 window that matters most for near-term emissions?",
+      "resolution_mechanism": "Track actual construction timelines of first-of-a-kind and Nth-of-a-kind SMR and advanced reactor projects currently under construction against their announced schedules.",
+      "impact": "If timelines compress as claimed, the opportunity-cost reading's exclusion of nuclear becomes self-correcting as project-level evidence accumulates, and the current victim classification of nuclear developers would need revision for the specific subset achieving fast builds. If timelines do not compress, the opportunity-cost reading's treatment of nuclear as systematically slow is empirically vindicated for at least the current generation of projects.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether nuclear's capital-intensity/timeline disadvantage is a permanent technology feature or a current, correctable state."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_mitigation_imperative__portfolio_optimization_reading",
+      "climate_mitigation_imperative__systems_transition_reading"
+    ],
+    "dual_formulation_note": "This story is one of three siblings decomposing the natural-language 'climate mitigation imperative' concept per the epsilon-invariance principle. Each reading assigns a different victim/beneficiary structure to nuclear power and different epsilon values: opportunity_cost_reading (this story) treats nuclear as a victim of a deployment-speed allocation rule; portfolio_optimization_reading treats nuclear as a beneficiary necessary for reliable baseload; systems_transition_reading treats nuclear as a victim for centralization/extraction reasons unrelated to deployment speed. All three are linked via affects_constraints because they compete for the same climate finance capital pool and each reading's institutional dominance structurally affects the others' available resources and legitimacy."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "carbon_budget_urgency_baseline",
+    "drift_state": {
+      "moment": "post_2020s_ira_and_green_taxonomy_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "climate_mitigation_imperative__portfolio_optimization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "climate_mitigation_imperative__systems_transition_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "near_term_deployment_speed_dominates_allocation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "capital_intensive_long_timeline_projects_are_net_harmful_under_carbon_budget_constraint",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "header": {
+    "constraint_id": "preparedness_transmission__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "aca532d4-511e-4a34-aee1-e93a9cca3a90"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Stratified Preparedness: Engineering Intact, Civilian Coordination Decayed",
+    "topic_domain": "disaster risk management / institutional memory / civil defense",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "engineering_agencies",
+      "infrastructure_certifying_bodies"
+    ],
+    "victims": [
+      "residents_in_hazard_zones",
+      "municipal_emergency_managers"
+    ],
+    "vindicated_propositions": [
+      "engineering_standards_are_load_bearing"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "engineering_agencies",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design, certify, and maintain seawalls, levees, retrofitted structures, and warning hardware to exacting codes; their competence is regularly re-validated by inspection regimes, professional licensure, and structural failure post-mortems. They receive continued funding, prestige, and regulatory authority premised on the overall preparedness system 'working.' Their domain performs largely as specified and they have every incentive to let that performance stand for the whole system."
+    },
+    {
+      "name": "infrastructure_certifying_bodies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Issue compliance certificates for physical hazard infrastructure and audit engineering firms against codified standards. Their metrics track only the physical layer; they collect fees and legitimacy from certifying a preparedness posture that the public reasonably assumes includes functioning evacuation and coordination, which is outside their certification scope."
+    },
+    {
+      "name": "civil_defense_coordination_offices",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Nominally responsible for evacuation planning, public warning dissemination, shelter logistics, and interagency coordination during a hazard event. Budgets have shrunk relative to engineering programs; staff turnover is high, drills are infrequent or scripted, and institutional memory of how prior evacuations actually failed or succeeded has not been transmitted to current staff. They administer the coordination layer but lack the resources or authority to fix its atrophy, and they absorb blame when coordination fails despite functioning infrastructure."
+    },
+    {
+      "name": "municipal_emergency_managers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Charged with executing evacuation and shelter operations at the point of contact with residents, using coordination protocols and training pipelines that have degraded generationally. They inherit plans written by people no longer employed, run drills with declining participation, and are held accountable for outcomes shaped by a coordination deficit they did not create and cannot resource their way out of."
+    },
+    {
+      "name": "residents_in_hazard_zones",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Live behind engineering that will very likely hold, but depend on evacuation orders, shelter routing, and real-time coordination that has not been meaningfully exercised in a generation. When an event exceeds the infrastructure's design threshold or requires coordinated response, they bear the consequences of a coordination failure invisible to them until the moment it matters. They have no way to independently audit which layer of preparedness is real."
+    },
+    {
+      "name": "elected_officials",
+      "role": "beneficiary",
+      "secondary_role": "excluded",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Point to certified, engineered infrastructure as evidence of preparedness in budget cycles and campaigns, since it is legible and photogenic, while coordination-layer funding is easier to cut because its absence is invisible until an event. They are structurally excluded from the room where coordination-office staff would explain the actual erosion, because that testimony complicates a preparedness narrative that serves them politically."
+    },
+    {
+      "name": "disaster_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study post-event after-action reports and find a consistent pattern: physical infrastructure performs to spec while evacuation timing, shelter routing, and interagency communication fail or improvise under stress. They document the stratification but their findings compete for attention against the more legible engineering-success narrative."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The system as a whole is meant to coordinate two distinct things: physical hazard resistance (engineering) and human movement/communication under stress (evacuation coordination). The engineering half genuinely solves its coordination problem — shared codes, inspection cycles, and licensure keep structural competence current across generations of engineers.",
+    "transfer_function": "Funding, political credit, and legitimacy flow toward the engineering/certification apparatus, which produces visible, auditable artifacts (structures, certificates). Attention, budget, and institutional memory flow away from civilian coordination offices, whose failures are invisible until a live event, at which point the cost of the coordination deficit is transferred onto trapped residents and onto municipal managers who inherit undocumented, unexercised plans.",
+    "absent_voices": "Coordination-office staff and disaster researchers who could testify to the specific erosion of evacuation competence are structurally absent from budget and political conversations, which are dominated by the more legible, better-funded engineering side. Residents in hazard zones have no seat at all and cannot distinguish which layer of the preparedness claim is real.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the entire preparedness apparatus vanished, engineering standards and inspection regimes would need urgent replacement — the world clearly rearranges there. But if only the coordination layer's current (already-degraded) state vanished, many parties dispute whether much would actually change in practice, since drills are already largely unexercised; the contest is over whether the coordination layer currently does enough real work to count as something that would be missed.",
+    "founding_problem": "The dual system was built to ensure that, when a hazard event occurs, structures survive the physical stress AND people are moved out of harm's way and sheltered/coordinated in time. Both halves were originally treated as equally live operational capacities requiring regular exercise.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Disaster researchers, publishing independent after-action analyses outside the certifying and coordination institutions, corroborate that the engineering half of the founding problem remains live and well-served while the coordination half has quietly gone dead in practice despite continued nominal drills; civil defense coordination office staff privately corroborate the same erosion, but engineering agencies and elected officials, who benefit from the undifferentiated 'we are prepared' narrative, do not corroborate a bifurcated reading and instead treat the whole system as uniformly functional."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This is the hybrid reading of the preparedness_transmission kernel: the claim that preparedness competence is genuinely stratified by domain — physical infrastructure engineering remains a live, re-validated capacity (drills, inspections, licensure functioning as intended), while civilian evacuation and interagency coordination knowledge has decayed into unexercised, undocumented ritual. This is structurally distinct from the competence_reading sibling, which holds that BOTH domains remain live-exercised, and from the husk_reading sibling, which holds that BOTH domains have hollowed into memorial ritual. The hybrid reading locates the D5 break specifically in the coordination layer while treating the engineering layer as a Mountain-adjacent, well-functioning subsystem — it is a claim about differential decay, not uniform decay or uniform vitality.",
+    "narrative_context": "A regional hazard-preparedness system bundles two functionally separate coordination problems under one public narrative of 'preparedness': physical infrastructure resilience (seawalls, levees, retrofits, warning hardware) and civilian evacuation/shelter coordination (planning, drilling, interagency communication, public warning dissemination). Post-event after-action reports consistently show the engineering half performing to spec while the coordination half fails or improvises under stress. The single label 'preparedness' obscures that one subsystem is a well-maintained Rope-like coordination structure and the other has drifted toward Tangled Rope territory — nominally coordinating but now also quietly extracting legitimacy and funding away from the layer that actually needs it, while residents bear the risk of the gap.",
+    "logic_rationale": "Extractiveness is authored moderate (0.42 at interval end) because the extraction here is indirect: no party directly profits from residents' exposure, but funding, political credit, and institutional attention are systematically diverted from the coordination layer toward the more legible engineering layer, and that diversion has a real victim (residents, municipal managers) and a real (if diffuse) beneficiary structure (engineering agencies, certifying bodies, elected officials who get to claim 'preparedness' cheaply). Theater ratio rises steadily (0.12 to 0.48) as coordination-layer drills continue nominally while their operational content hollows out — this is the memorial-ritual dynamic the husk_reading sibling names in full, but here it applies only to HALF the system, which is exactly the structural delta this reading asserts. Suppression is moderate and rising (0.20 to 0.38): no one is actively coerced into silence, but budget structures and political incentives structurally suppress attention to the coordination deficit until an event forces it into visibility.",
+    "directionality_logic": "Engineering agencies and certifying bodies sit near the beneficiary end: they receive continued authority and funding premised on overall system credibility while their own subsystem genuinely performs, so they are net beneficiaries of the undifferentiated 'preparedness' label even though their own work is not the extractive part. Civil defense coordination offices are a mixed seat — they administer the failing subsystem (agenda_setter role) but are also structurally starved payers, which is why they carry a secondary payer role. Residents and municipal emergency managers are the clearest targets: trapped exit options, immediate/biographical time horizons, and no ability to independently verify which layer of the preparedness claim is sound before an event tests it.",
+    "mandatrophy_analysis": "The hybrid reading prevents two mislabeling errors symmetric with its sibling readings: it does not let the genuine, ongoing competence of the engineering layer get discounted by the coordination layer's decay (which the husk_reading would risk implying if applied wholesale), and it does not let the coordination layer's decay be laundered by the engineering layer's continued success (which the competence_reading would risk implying if applied wholesale). By splitting the constraint into two subsystems with different classifications — Rope-adjacent engineering, Tangled-Rope-adjacent coordination — the mandate to prepare is neither declared fully alive nor fully dead; it is declared alive in one place and needing active repair in another, which is the structurally accurate reading given the after-action evidence."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "unified_dual_competence_standard",
+    "drift_state": {
+      "moment": "post_series_of_coordination_failures",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_transmission__husk_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "preparedness_transmission__competence_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "preparedness_competence_is_domain_separable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "differential_decay_requires_differential_remedy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "domain_separability_of_the_kernel",
+      "question": "Is 'preparedness transmission' genuinely one kernel with two separable sub-competencies (as the hybrid reading holds), or is the appearance of separability itself an artifact of the engineering layer's institutional visibility crowding out an equally uniform decay in the coordination layer that the competence_reading and husk_reading dispute at the whole-system level?",
+      "resolution_mechanism": "Systematic cross-jurisdictional after-action review comparing engineering performance metrics against coordination performance metrics across many hazard events, controlling for event severity, to test whether the split is a stable empirical pattern or an artifact of which failures get investigated.",
+      "impact": "If the split does not hold up under systematic review, this hybrid reading collapses into either the husk_reading (uniform hollowing) or the competence_reading (uniform vitality) and should be retired as a separate constraint rather than treated as the accurate middle reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the engineering/coordination split this reading asserts is a real structural feature or an artifact of unequal institutional visibility."
+    },
+    {
+      "id": "coordination_layer_remediability",
+      "question": "Given that the coordination layer's decay is diagnosed, is it remediable through renewed investment and exercise, or has the loss of tacit, practice-based coordination knowledge crossed a threshold where it cannot simply be re-funded back into existence within a single generation?",
+      "resolution_mechanism": "Pilot intensive re-drilling and knowledge-transfer programs in a subset of municipalities and measure whether coordination performance in subsequent real or simulated events recovers to historical baselines within a defined period.",
+      "impact": "If remediable, the coordination-layer classification moves toward scaffold (transitional repair with a sunset once competence is restored); if not remediable within relevant timeframes, it settles more firmly as tangled_rope or drifts toward snare as the gap between claimed and actual preparedness widens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the diagnosed coordination decay can be reversed or represents an effectively permanent capacity loss."
+    },
+    {
+      "id": "beneficiary_awareness_of_stratification",
+      "question": "Do engineering agencies and elected officials who benefit from the undifferentiated preparedness narrative actually know that the coordination layer has decayed, or is the stratification itself opaque to the beneficiary seats and not merely convenient for them?",
+      "resolution_mechanism": "Internal agency correspondence, budget-hearing transcripts, and interviews to establish whether beneficiary seats have received and suppressed the disaster-researcher findings, versus genuinely not having integrated cross-domain after-action data.",
+      "impact": "Knowing suppression would push the coordination-layer component toward snare (deliberate extraction via engineered ignorance); genuine non-integration would support the tangled_rope reading of structural, not deliberate, extraction.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether beneficiaries' advantage from the undifferentiated narrative is knowing or structural."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "preparedness_transmission__husk_reading",
+      "preparedness_transmission__competence_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the preparedness_transmission kernel, decomposed per the epsilon-invariance principle because the natural-language label 'preparedness' conflates structurally distinct claims about which sub-competencies remain live. competence_reading claims both engineering and coordination remain exercised and current (low decay, low epsilon). husk_reading claims both have hollowed into memorial ritual (high theater, moderate-to-high epsilon uniformly). This hybrid_reading claims a differential: engineering stays live (low epsilon there) while coordination has decayed (moderate epsilon, rising theater_ratio, driven specifically by that subsystem). Each reading is generated as its own clean, epsilon-invariant constraint story per Rule 1; the contest among them is not resolved by averaging but is documented via omega variables in each file and linked here via affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

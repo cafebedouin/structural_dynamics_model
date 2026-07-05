@@ -1,0 +1,263 @@
+{
+  "header": {
+    "constraint_id": "licensing_statute_mandate__public_safety_coordination",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "6f0002f4-2c27-4d3c-a057-4ce64ad68e11"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.28,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Occupational Licensing as Minimum-Competence Consumer Protection",
+    "topic_domain": "labor_economics/regulatory_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "consumers_of_licensed_services",
+      "competent_new_entrants"
+    ],
+    "victims": [
+      "incompetent_practitioners",
+      "unlicensed_would_be_practitioners"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "licensing_board",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Sets and administers the minimum competence standard: exam content, education prerequisites, continuing-education requirements, and disciplinary enforcement against practitioners who fall below the threshold. Funded by licensing fees rather than general appropriations, which ties its operating budget to the population it screens."
+    },
+    {
+      "name": "consumers_of_licensed_services",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hire practitioners (electricians, physicians, cosmetologists, contractors) under conditions of severe information asymmetry — they cannot verify competence themselves before harm occurs. The credential functions as a pre-screened signal that lets them transact without individually vetting every provider. Their exit from the constraint would mean bearing the full cost of vetting themselves, which most cannot do reliably."
+    },
+    {
+      "name": "competent_new_entrants",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Pass the credential and gain access to a market where the license itself signals quality to consumers who could not otherwise distinguish them from undertrained competitors. The signal saves them the cost of individually building reputation from zero in a market plagued by asymmetric information."
+    },
+    {
+      "name": "incompetent_practitioners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Fail to meet the competence threshold and are excluded from practicing, or are disciplined/delicensed after demonstrated harm. From this reading's perspective, exclusion is the constraint functioning correctly — the cost they bear is the cost of not meeting a floor that protects the people they would otherwise have served."
+    },
+    {
+      "name": "unlicensed_would_be_practitioners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Have not yet obtained the credential and cannot legally practice in the interim, bearing the direct cost (time, exam fees, required coursework) of meeting the threshold before earning income in the field. Under this reading their cost is the price of demonstrated competence, not an arbitrary barrier."
+    },
+    {
+      "name": "consumer_protection_agencies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Track harm rates, complaint volumes, and disciplinary actions across licensed occupations to assess whether the credential threshold is calibrated to actual competence risk rather than to incumbent protection. Can recommend threshold adjustments based on harm data."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves an information asymmetry problem: consumers cannot verify practitioner competence before transacting, and the cost of harm from incompetent practice (electrical fires, medical injury, structural failure) is high and often irreversible. The credential aggregates a competence signal that would otherwise require costly individual verification by every consumer.",
+    "transfer_function": "Moves the cost of competence verification from individual consumers (who cannot bear it reliably) to a centralized testing and disciplinary apparatus, funded by practitioner fees; moves market access away from practitioners who cannot demonstrate the minimum threshold.",
+    "absent_voices": "Practitioners excluded by the threshold have no voice in setting it — the board is typically composed of incumbent licensed professionals, not excluded candidates or harmed consumers. Under this reading their absence is treated as appropriate, since the excluded population is precisely the population the standard exists to screen out.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the credential requirement vanished overnight, consumers would lose the pre-screening signal and would need to individually vet practitioners or rely on ex-post liability and reputation systems; harm rates in occupations with high asymmetric-information risk (electrical, medical, structural) would plausibly rise until an alternative signaling mechanism emerged.",
+    "founding_problem": "Consumers in occupations with high harm potential and severe information asymmetry (they cannot assess competence before an irreversible bad outcome) had no reliable way to distinguish competent from incompetent practitioners before transacting.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Consumer protection agencies and harm-rate data from occupations with weaker licensing regimes corroborate that the underlying information-asymmetry problem persists in some occupations (attesting from outside the practitioner-incumbent beneficiary set). However, comparative studies across states with differing licensing stringency for the same occupation find harm-rate differences too small to fully justify the threshold height in several fields — this is the substance of the sibling rent_seeking_suppression reading's challenge, not resolved here."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.19
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.21
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the public_safety_coordination reading of the licensing_statute_mandate kernel: statutory credential requirements read as a genuine solution to a consumer information-asymmetry problem in occupations where incompetent practice causes serious, sometimes irreversible harm. Under this reading, consumers and competent practitioners are the beneficiary set, incompetent or unqualified practitioners are the (structurally intended) excluded set, and the coordination function — a shared, verifiable competence floor — is real and load-bearing. This is a deliberately narrow, ε-invariant claim: it does not assert that all licensing regimes are calibrated correctly, only that a genuine coordination function exists and, under this reading, dominates. The sibling readings (rent_seeking_suppression, graduated_access_filter) claim the same statutory mechanism but attribute different dominant functions and different victim sets — those are different constraints, authored separately, linked via network and via the omega variables below.",
+    "logic_rationale": "Extractiveness is authored low (0.22) because under this reading the primary transfer is risk-reduction value delivered to consumers, not rent extraction from excluded practitioners — the cost borne by excluded/incompetent practitioners is treated as the price of a real competence floor, not surplus captured by incumbents. Suppression is moderate (0.28): entry is genuinely restricted, but the restriction tracks a demonstrated competence gate rather than an arbitrary quota. Theater ratio is low (0.15) and rises only slightly over the interval, reflecting that the exam/discipline apparatus performs a real screening function with modest administrative overhead rather than being predominantly performative.",
+    "directionality_logic": "Consumers and competent new entrants sit near the beneficiary end of directionality: the credential subsidizes their transactions by reducing verification cost (consumers) or providing a low-cost quality signal (competent entrants). Incompetent practitioners and not-yet-licensed candidates sit nearer the target end: they bear the direct cost of exclusion or of meeting the threshold. Under this reading that asymmetry is treated as the constraint functioning as designed, not as extraction — the omega variables document why this framing is exactly the site of dispute with the sibling readings.",
+    "mandatrophy_analysis": "This reading avoids mislabeling the coordination function as pure extraction by keeping the claim narrow: it asserts that a genuine, verifiable competence-signaling problem exists and that the statute solves it, without asserting that current threshold heights, board composition, or fee structures are optimally calibrated. Where the founding problem's status is contested (see six_questions), that contest is exactly the material the sibling readings and their omega-linked disagreement should resolve, not something this reading should paper over by inflating or deflating its own metrics.",
+    "kernel_context": "This constraint instantiates the public_safety_coordination reading of the licensing_statute_mandate kernel. Two sibling readings of the same statutory mechanism are authored as separate constraints: rent_seeking_suppression (incumbent practitioners as beneficiaries, consumers/excluded labor as victims, dominant function is supply restriction) and graduated_access_filter (differential barriers sort market access by prior class/resource access, independent of competence). All three readings share the same underlying statute but assign different dominant coordination/extraction structures and different beneficiary/victim sets — per the ε-invariance principle these are three distinct constraints, not one constraint measured three ways.",
+    "key_agents": [
+      "licensing_board: agenda_setter (institutional/analytical) — administers and enforces the competence threshold",
+      "consumers_of_licensed_services: beneficiary (moderate/constrained) — receive the competence signal, avoid individually vetting providers",
+      "competent_new_entrants: beneficiary (moderate/constrained) — gain market access via the credential signal",
+      "incompetent_practitioners: payer (powerless/trapped) — excluded or disciplined for falling below threshold",
+      "unlicensed_would_be_practitioners: payer (powerless/constrained) — bear cost of meeting threshold before earning income",
+      "consumer_protection_agencies: observer (institutional/analytical) — tracks harm-rate calibration"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "threshold_calibration_to_harm",
+      "question": "Is the credential threshold actually calibrated to measured harm reduction, or does it exceed the level needed to screen out genuinely dangerous incompetence?",
+      "resolution_mechanism": "Comparative harm-rate studies across jurisdictions with differing licensing stringency for the same occupation (e.g. interior design licensed in some US states, unlicensed in others) — if harm rates are statistically indistinguishable, the threshold height exceeds what public-safety coordination requires and the rent_seeking_suppression reading's dominant-function claim strengthens for that occupation.",
+      "impact": "If threshold height tracks harm reduction closely, this reading's dominance is supported; if thresholds are set well above measured harm-reduction need, the same statutory mechanism is better read as rent_seeking_suppression for that occupation, and this constraint's ε would need re-examination as a distinct claim, not a revision of this one.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether observed threshold height is explained by harm reduction or by supply restriction."
+    },
+    {
+      "id": "board_composition_capture_risk",
+      "question": "Does incumbent-practitioner-dominated board composition bias threshold-setting toward supply restriction even when consumer protection is the stated and partially real function?",
+      "resolution_mechanism": "Compare threshold and disciplinary outcomes in occupations with consumer/public-member-majority boards versus incumbent-majority boards, controlling for harm severity.",
+      "impact": "Evidence of board capture would not eliminate the genuine coordination function this reading claims, but would suggest the public_safety_coordination and rent_seeking_suppression readings are not mutually exclusive functions of the same statute at different magnitudes — supporting the coexists_with relation authored below rather than treating either reading as simply correct.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether board capture biases the coordination function toward incumbent protection."
+    },
+    {
+      "id": "kernel_reading_dominance_ambiguity",
+      "question": "For any given licensed occupation, which of the three kernel readings (public_safety_coordination, rent_seeking_suppression, graduated_access_filter) describes the dominant structural function, and does dominance vary by occupation?",
+      "resolution_mechanism": "Occupation-by-occupation analysis of harm severity, threshold-to-harm ratio, entry-cost distribution by socioeconomic background, and board composition would allow classification of which reading dominates for a given licensed field (e.g. medicine plausibly dominated by this reading; cosmetology or floristry more plausibly dominated by rent_seeking_suppression or graduated_access_filter).",
+      "impact": "This story is authored as a single occupation-general reading; if dominance varies substantially by occupation, the family should be further decomposed into occupation-specific constraints rather than treated as one general claim per reading.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether reading dominance is occupation-general or occupation-specific, bearing on further decomposition."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "licensing_statute_mandate__rent_seeking_suppression",
+      "licensing_statute_mandate__graduated_access_filter"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the licensing_statute_mandate kernel, each authored as a separate story with its own ε and structural data per the ε-invariance principle: public_safety_coordination (this story, Rope — consumers/competent entrants as beneficiaries, incompetent practitioners as victims, low ε), rent_seeking_suppression (incumbent practitioners as beneficiaries, consumers and excluded labor as victims, higher ε, likely tangled_rope or snare depending on threshold calibration), and graduated_access_filter (differential barriers sorting by class/prior resource access rather than competence, likely tangled_rope). All three are linked bidirectionally via affects_constraints; none subsumes the others."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "competence_verification_mandate",
+    "drift_state": {
+      "moment": "contemporary_deregulation_debate",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "licensing_statute_mandate__rent_seeking_suppression",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "licensing_statute_mandate__graduated_access_filter",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_verification_reduces_consumer_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "centralized_screening_dominates_individual_vetting",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

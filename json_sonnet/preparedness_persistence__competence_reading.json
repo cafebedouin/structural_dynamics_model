@@ -1,0 +1,274 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "8d79adf6-fd29-4afa-8c5f-ecd73d0c2401"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Preparedness Drills and Inspections as Live Exercised Knowledge",
+    "topic_domain": "disaster_preparedness/institutional_memory",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "building_occupants",
+      "emergency_response_agencies",
+      "facility_operators",
+      "municipal_governments"
+    ],
+    "vindicated_propositions": [
+      "practice_maintains_operational_readiness",
+      "physical_infrastructure_degrades_without_verification"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_disambiguation",
+      "question": "Is the drill/inspection regime, as generally practiced, the competence reading (this constraint), the husk reading (memorial performance), or the hybrid reading (stratified competence)?",
+      "resolution_mechanism": "Comparative audit: cross-check drill outcomes against actual incident response performance across a sample of facilities; components where drilled behavior predicts incident outcomes support the competence reading, components where it does not support the husk or hybrid readings.",
+      "impact": "If the empirical record for a given jurisdiction or facility class shows drills failing to predict incident performance, that population's constraint should be authored as husk_reading or hybrid_reading instead — this story's ε (0.08) would not transfer to that population.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether observed drill/inspection practice instantiates the competence, husk, or hybrid reading of the preparedness_persistence kernel."
+    },
+    {
+      "id": "verification_infrastructure_naturalness",
+      "question": "Is the coordination function of inspection regimes (verifying that physical infrastructure meets a fixed engineering standard) closer to a Mountain — an irreducible check against physical failure modes that would exist under any social arrangement — or is it a constructed institutional practice that happens to track physical reality well in this reading?",
+      "resolution_mechanism": "Examine whether inspection criteria derive directly from materials science and structural failure physics (Mountain-like) versus from negotiated regulatory compromise that could vary without changing physical safety (constructed-Rope-like).",
+      "impact": "If inspection criteria are substantially physics-derived, the Mountain component of this constraint is stronger than authored; if substantially negotiated, the Rope component dominates and the mountain framing in commentary should be read as approximate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the physical-infrastructure component of preparedness is genuinely mountain-like or a well-fitted construction."
+    },
+    {
+      "id": "beneficiary_vs_no_extraction",
+      "question": "Does the presence of declared beneficiaries (occupants, agencies, operators, governments) indicate hidden extraction, or is this a case of genuine positive-sum coordination where beneficiaries exist without any corresponding victim?",
+      "resolution_mechanism": "Check whether any party bears a cost from the drill/inspection regime that is not offset by a corresponding safety benefit they also receive — e.g., compare compliance cost burden on facility operators against their own risk reduction.",
+      "impact": "If a systematic net-payer group without offsetting benefit is identified, this story should be re-authored as tangled_rope with a victims array; absent such a group, the rope classification with no victims stands.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether beneficiary declarations here mask an unauthored victim class."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the competence reading of the preparedness_persistence kernel: drills and inspections are live exercised knowledge whose repeated performance maintains genuine operational readiness against physical and organizational failure modes. In this reading, evacuation drills keep muscle memory current, structural inspections verify real engineering tolerances, and the coordination overhead (scheduling, participation, documentation) is low relative to the safety benefit produced. The claim is Rope with a Mountain-adjacent floor: the physical failure modes drills and inspections guard against (fire spread rates, structural fatigue, egress bottlenecks) are not negotiable by social consensus, even though the specific drill/inspection protocol is a constructed coordination mechanism layered on top of that physical reality. Two sibling constraints exist in the same kernel contest and are NOT this story: husk_reading (drills as memorial performance with atrophied competence) and hybrid_reading (stratified competence — engineering inspection remains sound while evacuation drills degrade to ritual). Those siblings have their own ε values and their own stakeholder structures; this story does not average with them or hedge toward them.",
+    "key_agents": [
+      "building_occupants: Primary beneficiary (moderate/constrained) — participate in drills, receive the safety benefit of tested egress routes",
+      "facility_operators: Primary agenda_setter (organized/constrained) — schedule and run drills and inspections, bear the direct compliance cost, receive liability protection and continuity of operations",
+      "emergency_response_agencies: Beneficiary and coordination partner (institutional/mobile) — rely on drilled facility behavior to plan external response, gain predictability",
+      "municipal_governments: Beneficiary (institutional/analytical) — collect the public-safety benefit of a prepared building stock without running individual drills",
+      "inspection_engineers: Secondary agenda_setter (moderate/mobile) — perform the technical verification against physical standards"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.08) and essentially flat across the interval because in the competence reading there is no asymmetric transfer riding on the drill/inspection apparatus — the parties who bear the cost of running drills (facility operators) are the same parties who capture the safety and liability benefit. Suppression is low (0.12): participation in drills is not coerced by threat of exit-collapse, it is a condition of occupancy that most occupants would choose given the alternative (untested egress). Theater ratio is low but nonzero and slowly rising (0.10 to 0.15) — some performative compliance creep is honest to author even in the competence reading (paperwork accumulates even where practice stays real), but it stays well below the 0.5 threshold that would indicate Goodhart substitution. Accessibility collapse is authored moderately high (0.7): once a facility adopts a drilled evacuation plan and passes inspection, ad hoc alternatives (untested exits, undocumented structural assumptions) genuinely become unavailable as live options — this is the Mountain-adjacent floor, not suppression.",
+    "directionality_logic": "No victims are declared in this reading because the competence reading's defining claim is that the coordination cost and the safety benefit land on the same parties. Facility operators pay the direct cost of running drills and inspections and receive liability protection and continuity in return; occupants bear minor time cost (participating in a drill) and receive the tested egress route in return. This is what distinguishes the competence reading structurally from any tangled_rope reading of the same kernel: if a systematic net-payer without offsetting benefit existed, that would be a different, more extractive constraint (closer to the husk reading's degraded-function analysis) and would require its own story.",
+    "perspectival_gap": "Facility operators (agenda_setter) and building occupants (beneficiary/payer) are expected to compute similarly under this reading precisely because the reading's claim is that competence is genuinely maintained — there is no seat that experiences hidden extraction. The engine may compute a wider gap if the structural data (moderate power, constrained exit for occupants) generates more directionality drift than the narrative claim anticipates; that divergence, if it appears, is data about how well the competence reading's low-suppression claim holds structurally, not an error to correct.",
+    "mandatrophy_analysis": "The founding problem (untested infrastructure and untrained personnel failing during actual emergencies) remains live under this reading by construction — that is what distinguishes it from the husk reading, where the founding problem persists but the arrangement no longer solves it. Corroboration for the founding-problem-status claim should come from incident outcome data (do drilled facilities perform measurably better during real emergencies), not from operator self-report, since operators have an interest in claiming their drills remain effective regardless of actual competence retention.",
+    "kernel_context": "This constraint is the competence_reading of the preparedness_persistence kernel. The kernel's contested claim is whether repeated drills and inspections constitute live exercised knowledge (this reading) or have decayed into memorial performance with atrophied underlying competence (husk_reading), or whether the truth is stratified by component — engineering inspection remaining sound while evacuation drills ritualize (hybrid_reading). This story commits fully to the competence reading: low extraction, low suppression, low theater ratio, high accessibility collapse from genuine physical/organizational necessity rather than coercion. The sibling readings are separate constraint files with their own ε values, their own stakeholder structures, and in the husk case a substantially different classification (likely piton or tangled_rope, given atrophied function maintained by institutional inertia or performative compliance). No averaging across readings occurs here; the disagreement between readings is located in whether drilled behavior actually predicts real-incident performance, which is exactly the empirical question the kernel_reading_disambiguation omega names."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_persistence__husk_reading",
+      "preparedness_persistence__hybrid_reading"
+    ],
+    "dual_formulation_note": "This story is one of three readings of the preparedness_persistence kernel. competence_reading (this file) claims low extraction, genuine Rope/Mountain-hybrid coordination, no victims. husk_reading claims the same drill/inspection form persists while underlying competence has atrophied — expect substantially higher theater_ratio and a piton or tangled_rope classification. hybrid_reading claims stratification: engineering inspection remains competence_reading-like while evacuation drills degrade toward husk_reading-like. All three share the same underlying institutional form (scheduled drills, periodic inspections) but diverge on whether the practice still verifies the competence it claims to verify — this is the structural disagreement the kernel contest is designed to surface, and it is why each reading gets its own ε rather than one averaged value."
+  },
+  "stakeholders": [
+    {
+      "name": "building_occupants",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Participate in scheduled fire drills and evacuation exercises, losing a small amount of work time per drill. In return they get an egress route that has actually been walked and timed under simulated conditions, and a building whose structural systems have been checked against physical failure thresholds. They cannot opt out of occupancy-conditioned drills without leaving the building, but the drills themselves impose minimal cost relative to the benefit of a verified evacuation plan."
+    },
+    {
+      "name": "facility_operators",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Schedule and run the drills, hire inspectors, and maintain compliance documentation. They bear the direct scheduling and administrative cost. In the competence reading, this cost is offset by genuine liability protection, insurance rate benefits, and lower probability of catastrophic incident cost — the arrangement pays for itself through avoided tail risk, not through extraction from occupants."
+    },
+    {
+      "name": "inspection_engineers",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Perform the technical structural and systems inspections against engineering codes derived from materials science and failure physics. Their assessments are portable across facilities and jurisdictions (mobile exit options), and their professional standing depends on the inspection actually tracking real structural risk rather than becoming a rubber stamp — this is the professional-identity mechanism that keeps the competence reading's Mountain-adjacent floor intact."
+    },
+    {
+      "name": "emergency_response_agencies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Plan external response (fire, medical, structural collapse) partly on the assumption that facilities have drilled occupants and verified structures. A facility with genuinely maintained competence reduces the agency's own operational risk and resource burden during a real incident. They do not run the drills themselves but depend on their integrity."
+    },
+    {
+      "name": "municipal_governments",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Set the baseline regulatory requirement for drills and inspections and collect the aggregate public-safety benefit of a prepared building stock, without directly running any individual facility's program. Their interest in the competence reading being true is high, which is why independent incident-outcome data rather than self-report is needed to corroborate the founding problem's continued live status."
+    },
+    {
+      "name": "future_incident_populations",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Not-yet-realized occupants and responders who will experience the next actual emergency and will bear the consequences if the competence reading turns out to be false for their specific building. They have no voice in current drill design or inspection scheduling and cannot verify, before the fact, whether the practice they will depend on is genuinely competence-preserving or has quietly degraded."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem that untested evacuation plans and unverified structural systems fail unpredictably during real emergencies, by periodically exercising the plan and re-checking the structure against fixed physical and procedural standards.",
+    "transfer_function": "Moves scheduling time and administrative cost from facility operators and inspection engineers to the production of verified readiness, which is then consumed as reduced tail risk by occupants, response agencies, and municipal government collectively. No party is a net payer without a corresponding safety benefit in this reading.",
+    "absent_voices": "Future incident populations — the specific occupants and responders who will face the next real emergency at a given facility — have no seat in current drill design and cannot audit, in advance, whether the practiced competence will actually hold when needed. Their absence is structural to any preparedness regime, not specific to this reading, but it means the competence claim is always somewhat unfalsifiable until an actual incident occurs.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If drills and inspections vanished overnight, facility operators would lose liability protection and insurance benefits, occupants would face untested egress routes, response agencies would lose the planning assumption they currently rely on, and municipal governments would need some other mechanism to verify building-stock safety. The arrangement is load-bearing for multiple parties' current plans, which is why the competence reading claims Rope (removal would harm real coordination), not pure Mountain (removal of a true natural law would be impossible, not merely costly).",
+    "founding_problem": "Buildings and organizations historically failed to perform as expected during real fires, structural failures, and evacuations because plans and structures were never verified under realistic conditions before the emergency arrived — the gap between paper plan and actual performance was discovered only during the incident itself, at maximum cost.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Fire investigation reports and post-incident structural failure analyses from independent engineering review boards (outside both facility operators and municipal regulators, who both have an interest in claiming current practice is adequate) continue to document incidents where untested or under-inspected systems failed in ways drilled/inspected systems did not — this is external corroboration that the founding problem remains live, distinct from operator or regulator self-report."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "engineering_verified_readiness_standard",
+    "drift_state": {
+      "moment": "contemporary_compliance_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_persistence__husk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "preparedness_persistence__hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "repeated_practice_preserves_operational_capability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "inspection_criteria_track_real_physical_failure_modes",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

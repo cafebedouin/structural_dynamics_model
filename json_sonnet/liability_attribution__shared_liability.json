@@ -1,0 +1,316 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__shared_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "0c3aacf8-882f-4202-9c97-9061c62eef0f"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.44,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Value-Chain Joint Liability Apportionment (Causal Contribution / Control Standard)",
+    "topic_domain": "technology_governance/legal_theory/regulatory_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "insurance_and_indemnification_industry",
+      "large_integrated_platform_vendors",
+      "harmed_end_users"
+    ],
+    "victims": [
+      "ai_model_developers",
+      "downstream_deployers",
+      "small_and_midsize_deployers"
+    ],
+    "vindicated_propositions": [
+      "polluter_pays_along_causal_chain",
+      "control_tracks_responsibility_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ai_model_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Builds and trains the underlying model, sets architecture and training data choices, and licenses it downstream. Under the shared-liability standard, is co-defendant on any harm traceable in part to model behavior even when a deployer configured or fine-tuned it into the specific harmful use. Bears substantial legal exposure and discovery cost proportional to a causal-contribution test that is expensive to litigate and hard to predict ex ante; cannot fully exit the liability regime while continuing to license into the jurisdiction, though it can renegotiate contract terms to shift some exposure downstream via indemnification clauses."
+    },
+    {
+      "name": "downstream_deployers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Integrates the model into a product, controls deployment context, user-facing configuration, and guardrails. Under shared liability, is co-defendant alongside the developer whenever its deployment choices contributed to a harm, even when the underlying capability originated upstream. Negotiates indemnification and insurance to manage exposure, but the negotiation itself is a resource-intensive activity larger deployers manage more effectively than smaller ones."
+    },
+    {
+      "name": "small_and_midsize_deployers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Deploys licensed models into products without the legal or actuarial staff to negotiate favorable indemnification terms or carry standalone liability insurance at reasonable rates. Faces the same joint-and-several exposure as large deployers but without the bargaining leverage to shift the apportionment contractually, effectively absorbing a larger relative share of the coordination cost the regime imposes. Exiting the market rather than accepting the liability terms is often the only real alternative."
+    },
+    {
+      "name": "harmed_end_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Suffers direct harm from an AI system's output or behavior and seeks compensation. Under shared liability, no longer needs to identify a single culpable party before recovering — can proceed against the value chain collectively and let apportionment be litigated among defendants. Benefits from a larger, more solvent pool of potential compensators but still bears the initial burden of proving harm and causal contribution occurred somewhere in the chain."
+    },
+    {
+      "name": "insurance_and_indemnification_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Underwrites AI liability risk and drafts indemnification products for both developers and deployers now that both sides face joint exposure. The uncertainty created by a causal-contribution-and-control standard is exactly the risk this industry prices and sells protection against; more distributed liability means a larger addressable market for coverage, risk audits, and contractual allocation instruments."
+    },
+    {
+      "name": "large_integrated_platform_vendors",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operates both as developer and deployer within a single vertically integrated stack, or has the scale to dictate indemnification terms to smaller partners in either direction. Pays into the liability pool like anyone else but can internalize the coordination costs across a large balance sheet and can use its bargaining power to push disproportionate contractual exposure onto smaller counterparties, turning the joint-liability regime into a competitive moat against less integrated rivals."
+    },
+    {
+      "name": "regulators_and_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Designs and administers the causal-contribution-and-control test, sets apportionment procedures, and adjudicates disputes over relative fault. Determines how much discovery burden, litigation cost, and predictability the regime imposes on all parties through the specificity (or vagueness) of the standard it enforces."
+    },
+    {
+      "name": "open_source_and_independent_developers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Releases models or components without the resources to negotiate indemnification chains, obtain liability insurance at institutional rates, or participate meaningfully in the regulatory rulemaking that defines the causal-contribution standard. Bears joint-liability exposure identical in form to well-resourced developers but without comparable capacity to manage or transfer it, and is rarely consulted when the standard's contours are set."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a single apportionment procedure so that a harmed party need not first litigate which single actor in a multi-party AI value chain is 'the' responsible one; liability is distributed across developer and deployer according to their actual causal contribution and degree of control, avoiding both under-compensation (no party found solely liable) and arbitrary over-targeting of whichever party is easiest to sue.",
+    "transfer_function": "Moves compensation obligations from harmed end users' uncompensated losses toward a shared pool drawn from both developers and deployers; simultaneously moves coordination and insurance costs from the state (which would otherwise need to arbitrate single-party liability disputes) onto private contractual and actuarial markets, and moves relative cost burden from well-resourced integrated firms (who can price and shift it) toward smaller developers and deployers (who absorb it directly).",
+    "absent_voices": "Open-source and independent developers, plus small deployers with no seat in the standard-setting process, would argue that a causal-contribution test calibrated for well-lawyered defendants imposes fixed compliance and insurance costs that scale regressively against firm size — effectively taxing market entry. They are largely absent from the regulatory and industry-association tables where apportionment procedures are negotiated.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If shared liability disappeared and reverted to a single-party standard (either pure developer or pure deployer liability), harmed users would face a narrower, easier-to-litigate but less complete compensation pool; indemnification and insurance markets built around apportioned risk would need to reprice or dissolve; and either developers or deployers would suddenly bear concentrated liability they currently diffuse contractually — a substantial reorganization of contracting practice, pricing, and litigation strategy across the industry.",
+    "founding_problem": "Early AI harm litigation under single-party liability standards produced inconsistent, often unjust outcomes: developers escaped liability by pointing to deployer misuse, deployers escaped liability by pointing to inherent model defects, and harmed parties were left without a clear path to compensation when responsibility was genuinely distributed across the chain.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Plaintiffs' bar and consumer-harm advocacy groups (outside the developer/deployer beneficiary set) corroborate that the single-party gap was real and that shared liability closes it. Small developers and deployers, also outside the primary beneficiary set, corroborate a different founding-problem reading: that the joint standard, as currently administered, has become less about closing the compensation gap and more about a stable indemnification-market structure that primarily benefits insurers and large integrated vendors who can absorb its coordination costs."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.44
+    }
+  ],
+  "commentary": {
+    "narrative_context": "As AI systems cause harm through failures that arise from an interaction of upstream model behavior and downstream deployment choices, regulators and courts face a design question: who pays when responsibility is genuinely distributed? This story instantiates the shared-liability reading of the liability_attribution kernel — joint liability apportioned along the value chain according to causal contribution and control, with both developers and deployers named as potential co-defendants and an indemnification/insurance market emerging to price and reallocate the resulting exposure. This is a distinct constraint from the developer_liability and deployer_liability readings of the same kernel: those assign primary liability to a single named party in the chain, producing a narrower victim set and a simpler (cheaper, less coordination-intensive) compliance picture. Under shared liability, the victim set expands to include both developer and deployer categories simultaneously, coordination costs rise because apportionment must be litigated or contractually pre-negotiated in every case, and a derivative insurance/indemnification market emerges that does not exist under a single-party standard. These are structurally different constraints with different ε profiles, not the same constraint viewed from different angles — hence three separate stories linked by kernel context rather than one story with a hedge.",
+    "logic_rationale": "Extractiveness (0.52, rising over the interval from 0.34) reflects the growing cost of an apportionment standard whose predictability declines the more contested causal-contribution litigation becomes, layered onto a rent stream captured by the insurance/indemnification industry as it matures. Suppression (0.44) is moderate: the regime does not forbid exit from the market outright, but small developers and deployers face effectively trapped exit because abandoning the market (rather than accepting joint exposure) is the only real alternative to participation. Theater ratio (0.31) captures a meaningful and growing share of compliance activity — indemnification paperwork, contractual risk-shifting clauses, insurance audits — that manages liability allocation on paper more than it prevents underlying harm. Accessibility collapse is moderate (0.4): the single-party liability alternatives remain conceptually available and are litigated as competing legal theories in other jurisdictions, so alternatives have not fully disappeared. Resistance is elevated (0.58) because both developer and deployer trade associations actively lobby against aspects of the joint standard they experience as costly, and small-firm coalitions specifically resist the regressive cost structure.",
+    "directionality_logic": "Harmed end users are the clearest beneficiaries — the shared standard removes their burden of identifying a single culpable party, moving their directionality toward the subsidized end. The insurance/indemnification industry is a structural beneficiary of the uncertainty itself: more distributed, harder-to-predict liability is a larger market for its products. Large integrated platform vendors sit closer to the beneficiary end than their nominal payer role suggests because they can price the coordination cost into a diversified balance sheet and, critically, can use bargaining leverage to shift disproportionate contractual exposure onto smaller counterparties — this is why they carry a secondary payer role rather than a pure beneficiary one. Small and midsize deployers and open-source/independent developers sit at the target end: trapped exit options, no comparable bargaining leverage, and full exposure to the same joint-and-several standard as well-resourced parties.",
+    "perspectival_gap": "From the regulator/court seat, the standard is coordination: a genuine improvement on single-party liability's under- and mis-compensation failures. From the small-deployer or independent-developer seat, the same apportionment machinery computes as an extractive cost center — one they cannot meaningfully negotiate down and that functions, in practice, as a scale-dependent tax on market participation. The engine should register this divergence as a structural fact about differential exit options and bargaining power, not as disagreement about what the standard is for.",
+    "mandatrophy_analysis": "The founding problem — single-party liability leaving genuinely distributed harm uncompensated — remains partially live (contested, not dead): AI harms genuinely do arise from interaction effects across the chain, so the coordination function has not been fully obsoleted. But the corroboration split (plaintiffs' advocates vs. small-firm coalitions) signals a possible mandatrophy trajectory: if the indemnification-market structure that emerged to manage the standard has itself become the primary beneficiary structure — displacing the compensation-gap-closing function that justified the standard originally — that would be the signature of a coordination mechanism drifting toward tangled-rope status even while its founding rationale remains partially true. The rising theater_ratio and suppression_requirement trends over the measured interval are consistent with this drift and warrant continued monitoring rather than an early declaration of mandatrophy resolution.",
+    "kernel_context": "This constraint instantiates the shared_liability reading of the liability_attribution kernel. The kernel is the underlying question of how to allocate legal responsibility for AI-caused harm across a value chain; three readings exist. developer_liability reads the kernel as: the party that created the underlying capability bears primary responsibility regardless of downstream use — this forecloses treating deployment-context control as liability-determinative in the way shared_liability does. deployer_liability reads the kernel as: the party with deployment context and decision authority bears primary responsibility — this similarly treats a single locus of control as dispositive. shared_liability, this reading, rejects the premise that responsibility can be cleanly localized to one point in the chain, instead apportioning it according to a causal-contribution-and-control test applied across all participating parties. The three readings cannot all be simultaneously the operative legal standard in a single jurisdiction for a single harm event — a court applies one apportionment rule — but they coexist as live competing legislative and doctrinal proposals across different jurisdictions and different points in ongoing case law development."
+  },
+  "omegas": [
+    {
+      "id": "causal_contribution_test_specificity",
+      "question": "Can 'causal contribution and control' be operationalized as a predictable, litigable standard, or does its inherent vagueness function as a permanent discovery-cost generator that primarily benefits parties with more litigation resources?",
+      "resolution_mechanism": "Track case outcomes and settlement patterns over several years: if apportionment percentages converge to predictable ranges for similar fact patterns, the standard is maturing into workable doctrine; if outcomes remain highly variable and settlement-cost-driven, the vagueness is functioning as a structural extraction mechanism.",
+      "impact": "A maturing, predictable standard would support reclassifying this constraint toward rope (a converged coordination mechanism with declining transaction cost); persistent unpredictability would support tangled_rope or drift toward snare as litigation cost becomes the dominant feature experienced by smaller parties.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the causal-contribution-and-control standard converges to predictable doctrine or remains a persistent cost generator."
+    },
+    {
+      "id": "sibling_reading_selection_pressure",
+      "question": "Is the choice among the three liability_attribution readings (developer, deployer, shared) being made on the coordination merits of compensating genuinely distributed harm, or is it being selected by whichever industry coalition has more lobbying capacity in a given jurisdiction?",
+      "resolution_mechanism": "Compare the legislative and regulatory drafting history across multiple jurisdictions adopting different readings: does the choice track independent harm-compensation analysis, or does it track which industry segment (upstream model developers vs. downstream application deployers) has stronger lobbying presence in that jurisdiction?",
+      "impact": "If reading-selection tracks lobbying capacity rather than harm-compensation merits, all three readings in the kernel family should be understood partly as artifacts of relative political power rather than purely as competing legal theories — this would deepen the extraction reading of whichever standard prevails in a captured jurisdiction.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether cross-jurisdictional adoption of different kernel readings tracks coordination merit or lobbying power."
+    },
+    {
+      "id": "insurance_market_capture_risk",
+      "question": "Does the indemnification/insurance market that emerges under shared liability primarily transfer risk efficiently, or does it primarily generate a new rent stream that persists independent of whether it reduces actual harm?",
+      "resolution_mechanism": "Compare loss ratios and pricing trends in the AI liability insurance market over time against actual harm-reduction outcomes; a persistently profitable, growing market segment with flat or worsening underlying harm rates would indicate rent extraction rather than efficient risk transfer.",
+      "impact": "Efficient risk transfer supports the coordination reading of the shared-liability standard; rent extraction without harm reduction supports reclassifying the insurance-industry beneficiary role as a primary rather than incidental driver of the constraint's persistence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the derivative insurance market is efficient risk transfer or independent rent extraction."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__developer_liability",
+      "liability_attribution__deployer_liability"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the liability_attribution kernel. developer_liability and deployer_liability each assign primary responsibility to a single named party and have narrower victim sets and lower coordination overhead; shared_liability names both developers and deployers as victims simultaneously and carries higher coordination cost plus an emergent insurance/indemnification market absent from the single-party readings. Each story carries its own ε and its own stakeholder structure; they are linked here rather than merged because adopting one reading in a jurisdiction structurally forecloses simultaneous adoption of a sibling reading for the same harm event, even though all three remain live legislative and doctrinal proposals across different jurisdictions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "liability_attribution__developer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "liability_attribution__deployer_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "responsibility_is_apportionable_not_localizable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "control_and_causal_contribution_jointly_determine_share",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

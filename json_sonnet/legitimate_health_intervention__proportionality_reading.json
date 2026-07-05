@@ -1,0 +1,310 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "1010c239-3ae2-414a-87e0-a6323e36690c"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.48,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proportionality Standard for Legitimate Health Intervention",
+    "topic_domain": "public health policy / medical ethics / constitutional law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "susceptible_population_high_severity_disease",
+      "public_health_authorities",
+      "courts_applying_tiered_scrutiny"
+    ],
+    "victims": [
+      "individuals_subject_to_low_severity_mandates",
+      "religious_and_philosophical_objectors",
+      "populations_under_misclassified_severity_tiers"
+    ],
+    "vindicated_propositions": [
+      "graduated_scrutiny_doctrine",
+      "proportionality_as_constitutional_baseline"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Classify diseases by transmissibility and case-fatality rate, then calibrate intervention severity (school exclusion, quarantine, mandatory vaccination, fines) to that classification. Administers the proportionality test itself and therefore controls where thresholds are drawn and how contested severity data gets weighted."
+    },
+    {
+      "name": "susceptible_population_high_severity_disease",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Includes immunocompromised people, infants too young to vaccinate, and others who cannot independently protect themselves from high-transmissibility, high-fatality disease. They benefit directly when the proportionality standard permits strong intervention against measles-tier threats, since herd protection depends on population-level compliance they cannot personally compel."
+    },
+    {
+      "name": "individuals_subject_to_low_severity_mandates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Face intervention (mandatory vaccination, workplace exclusion, movement restriction) calibrated to a disease later shown to be lower-severity than assumed at the time of the mandate. Bear the autonomy cost of an intervention whose proportionality was miscalibrated, with limited recourse until retrospective severity data is available."
+    },
+    {
+      "name": "religious_and_philosophical_objectors",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Object to intervention on grounds the proportionality framework does not weight as heavily as measured population harm — their autonomy claim is treated as one input among several rather than a categorical bar. As disease severity rises, their exemption pathways narrow; at high severity tiers they may face exclusion from school, work, or public spaces with no accommodation."
+    },
+    {
+      "name": "populations_under_misclassified_severity_tiers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Bear the cost when the severity classification driving the proportionality calculation is wrong — either overstated (unnecessary coercion) or understated (insufficient protection followed by delayed escalation). Have no independent channel to contest the classification before the intervention is imposed."
+    },
+    {
+      "name": "courts_applying_tiered_scrutiny",
+      "role": "observer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate challenges to specific interventions by testing whether severity of the measure matches severity of the threat. The doctrine gives them a workable standard (vindicating graduated scrutiny) that avoids the all-or-nothing binaries of the rival readings, but they depend entirely on the epidemiological data the health authorities supply for the threat-side of the comparison."
+    },
+    {
+      "name": "vaccine_and_intervention_manufacturers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit when high-severity classification drives large-scale mandated uptake of their products, though they do not administer or set the proportionality standard themselves."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a graduated, defensible standard for calibrating how much coercion a health intervention may use, avoiding the failure modes of both an absolute autonomy veto (which would block interventions against genuinely catastrophic contagion) and an unconditional population-harm mandate (which would license maximal coercion against trivial threats).",
+    "transfer_function": "Moves autonomy costs onto individuals in proportion to a state-assessed severity score, and moves protection benefits to the susceptible population in proportion to the same score; when the severity assessment is wrong, the transfer is imposed on the wrong party in the wrong amount.",
+    "absent_voices": "Individuals contesting a specific severity classification in real time rarely have a forum before the intervention is imposed — courts review after the fact, and the epidemiological classification itself is treated as a technical input rather than a contestable claim by the people it binds.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without a proportionality standard, courts and legislatures would default to one of the sibling readings — either a categorical autonomy bar that blocks even measles-tier interventions, or an unconditional population-harm standard that licenses maximal coercion for flu-tier threats. Either shift would visibly change which interventions survive legal and political challenge.",
+    "founding_problem": "Courts and legislatures needed a workable standard to distinguish interventions proportionate to genuine catastrophic contagion risk (smallpox, measles) from interventions disproportionate to comparatively mild seasonal illness, after both categorical-autonomy and categorical-population-harm standards failed in practice — one blocked necessary quarantine measures, the other justified excessive coercion for minor threats.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Public health law scholars and constitutional courts outside the executive agencies that administer interventions attest the calibration problem remains active — cited in judicial opinions distinguishing Jacobson-type smallpox mandates from later challenges to lower-severity mandates. Civil liberties organizations, who are not beneficiaries of the standard, corroborate that the underlying tension (autonomy vs. population harm) has not been resolved, only structured."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the proportionality reading of the legitimate_health_intervention kernel: legitimacy is a function of the fit between intervention severity and disease severity, with both population harm and individual autonomy entering the calculus but weighted differently depending on transmissibility and case-fatality rate. This is distinct from the public_health_primary reading (which treats population-level harm reduction as sufficient legitimacy on its own, making refusal an externality) and the bodily_autonomy_primary reading (which treats informed consent as a categorical bar regardless of population benefit). Under this reading, the same underlying kernel — what makes a health intervention legitimate — produces a conditional, disease-dependent constraint rather than an unconditional one: a measles-scale threat licenses far more coercion than a seasonal-flu-scale threat, and the constraint's victim set changes accordingly. ε is authored here as moderate (0.42) because the standard genuinely constrains maximal coercion (unlike public_health_primary) while still permitting substantial autonomy cost at high severity tiers (unlike bodily_autonomy_primary) — this value is specific to the proportionality reading and is not an average of the sibling readings' ε values.",
+    "key_agents": [
+      "public_health_authorities: institutional agenda-setter administering the proportionality test",
+      "susceptible_population_high_severity_disease: primary beneficiary of calibrated protection",
+      "individuals_subject_to_low_severity_mandates: payer when severity is miscalibrated upward",
+      "religious_and_philosophical_objectors: payer whose autonomy claim is weighted rather than absolute",
+      "courts_applying_tiered_scrutiny: analytical observer applying the doctrine, dependent on epidemiological inputs it does not generate"
+    ],
+    "logic_rationale": "Extractiveness (0.42) and suppression (0.48) sit in a moderate band because the proportionality standard is explicitly conditional — it authorizes strong coercion against high-transmissibility, high-fatality disease and comparatively little against mild disease, so its aggregate extractive profile is lower than an unconditional population-harm standard but higher than a pure autonomy standard. Resistance (0.55) is elevated relative to a mountain because the classification step (how severe is this disease, really?) is a genuine site of contest — objectors, courts, and epidemiologists dispute severity data in real time, and that dispute is where most of the constraint's friction lives. Accessibility collapse (0.40) is moderate: once a disease is classified at a given severity tier, the menu of legitimate interventions narrows substantially, but the classification itself remains open to challenge and revision, so full collapse does not occur. The measurements track a slow rise in extractiveness, theater, and suppression-requirement over time as the doctrine matures into settled case law and severity classification becomes more institutionally routinized — increasingly treated as a technical finding rather than a contestable claim.",
+    "directionality_logic": "Public health authorities sit near the beneficiary end: they administer the classification, control which interventions the standard licenses, and are institutionally credited when interventions succeed. The susceptible population at high severity tiers is a genuine beneficiary — the standard's conditional structure is precisely what lets strong intervention be justified on their behalf. Individuals subject to low-severity mandates and misclassified populations sit near the target end: they bear the intervention's costs specifically because the severity assessment (which they did not participate in producing) placed them in a higher-coercion tier. Religious and philosophical objectors are structurally trapped payers because their autonomy claim, while doctrinally acknowledged, is weighted rather than dispositive — at high severity it is regularly outweighed.",
+    "perspectival_gap": "From the agenda-setter seat (public health authorities) and the beneficiary seat (susceptible populations), the doctrine reads as principled calibration — a rope, or close to it, solving a genuine coordination problem without maximal coercion. From the payer seats (objectors, misclassified populations) the same structure reads as tangled: a genuine coordination function (protecting the vulnerable) riding alongside asymmetric extraction (their autonomy cost is discounted by a classification process they cannot contest ex ante). The engine's per-seat computation should reflect this divergence directly from the declared power/exit/scope data, not from any narrative framing.",
+    "mandatrophy_analysis": "The proportionality standard resists mandatrophy better than either sibling reading precisely because its mandate is explicitly conditional on disease characteristics — it does not persist unconditionally once the founding problem (distinguishing catastrophic from mild threats) is solved; it re-derives legitimacy from current severity data. The founding problem remains live because new pathogens continue to require fresh severity classification, but the corroboration by outside courts and civil liberties scholars indicates the standard's application (not its underlying necessity) is the contested site — misclassification, not obsolescence, is the primary risk this reading names.",
+    "kernel_context": "This constraint instantiates the proportionality_reading of the legitimate_health_intervention kernel. The kernel is a single contested commitment — what makes a state health intervention legitimate — and three readings apply different weighting logics to the same kernel text/practice. public_health_primary treats population-level harm reduction as sufficient on its own (individual refusal is pure externality imposition; no proportionality discount for mild disease). bodily_autonomy_primary treats informed consent as categorical (no population-harm justification overrides it, regardless of disease severity). This reading (proportionality) treats both population harm and autonomy as inputs to a single graduated standard, weighted by transmissibility and case-fatality rate — producing a conditional constraint structure where the victim set and ε value shift with disease characteristics, rather than a fixed victim set as in the other two readings."
+  },
+  "omegas": [
+    {
+      "id": "severity_classification_authority",
+      "question": "Who has final authority to classify a disease's severity tier when epidemiological data is contested or preliminary (as in a novel pathogen's early spread), and does that authority itself introduce a form of unaccountable discretion the proportionality standard is supposed to prevent?",
+      "resolution_mechanism": "Comparative analysis of judicial deference standards across jurisdictions when reviewing agency severity classifications during outbreak conditions versus settled endemic conditions.",
+      "impact": "If courts defer nearly completely to agency classification during emergencies, the proportionality standard collapses toward public_health_primary in practice during exactly the periods when its constraining function matters most; if courts independently scrutinize classification even during emergencies, the standard holds its distinct conditional structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether emergency deference erodes the proportionality standard's distinctness from the public-health-primary reading."
+    },
+    {
+      "id": "committer_frame_reading_selection",
+      "question": "Is the proportionality reading the dominant one in actual constitutional doctrine (as in Jacobson v. Massachusetts and its progeny), or is it a normatively attractive middle position that legal scholars favor but that courts apply inconsistently, sometimes defaulting to public_health_primary language and sometimes to bodily_autonomy_primary language depending on the political salience of the specific disease?",
+      "resolution_mechanism": "Systematic doctrinal survey of case outcomes across disease types (smallpox/measles mandates vs. flu/HPV mandates) coded for which reading's reasoning actually drove the holding.",
+      "impact": "If courts apply proportionality reasoning inconsistently — invoking it as rhetoric while actually defaulting to one of the categorical siblings depending on the disease's political salience — this story's claimed_type (tangled_rope) may overstate the doctrine's actual operative coherence; it may function more as a legitimating veneer over ad hoc severity-dependent politics.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the proportionality reading is a coherent operative doctrine or a rhetorical overlay on inconsistent case-by-case politics."
+    },
+    {
+      "id": "victim_set_disease_dependence",
+      "question": "Given that the victim set is explicitly disease-dependent (per the expected structural delta), at what severity threshold does the constraint's classification shift from tangled_rope (genuine coordination plus real extraction) toward something closer to rope (extraction becomes negligible because the intervention genuinely tracks a catastrophic threat) or toward snare (extraction becomes dominant because the severity classification was manufactured or exaggerated)?",
+      "resolution_mechanism": "Threshold analysis comparing measured ε against independently verified case-fatality-rate and R0 data across a range of historical interventions (smallpox, measles, H1N1, seasonal flu, COVID variants).",
+      "impact": "Establishing the threshold would let future disease-specific instantiations of this reading be classified with an empirical severity cutoff rather than the moderate composite ε authored here, which necessarily reflects an average across the reading's conditional range rather than any single disease case.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Where the disease-severity-dependent victim set crosses classification boundaries within the proportionality reading itself."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_health_primary",
+      "bodily_autonomy_primary"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the legitimate_health_intervention kernel, decomposed per the ε-invariance principle because the natural-language concept 'what makes a health intervention legitimate' covers structurally distinct claims with different ε profiles. public_health_primary treats population harm as sufficient legitimacy (higher ε, unconditional); bodily_autonomy_primary treats consent as a categorical bar (lower ε from the coercion side, but forecloses interventions the proportionality reading would permit); this reading (proportionality) sits between them with a disease-conditional ε. All three are linked bidirectionally in commentary and network fields; each carries its own stakeholders, metrics, and claimed_type rather than one story with a severity parameter."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "jacobson_graduated_police_power_standard",
+    "drift_state": {
+      "moment": "post_covid19_pandemic_litigation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "legitimate_health_intervention__public_health_primary",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "legitimate_health_intervention__bodily_autonomy_primary",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "severity_conditional_weighting_required",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "no_categorical_priority_between_autonomy_and_population_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

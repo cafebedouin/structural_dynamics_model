@@ -1,0 +1,337 @@
+{
+  "header": {
+    "constraint_id": "software_control_legitimacy__commons_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "26b70d9a-faf8-4a27-a0c9-1b79b4c3f23d"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Software Control as Negotiated Commons Governance",
+    "topic_domain": "software_engineering/political_economy/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "stakeholder_communities",
+      "governance_body_participants",
+      "downstream_integrators"
+    ],
+    "victims": [
+      "free_software_absolutists",
+      "proprietary_rights_absolutists",
+      "unrepresented_end_users"
+    ],
+    "vindicated_propositions": [
+      "polycentric_governance_viability",
+      "commons_management_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "governance_body_participants",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Sit on foundations, steering committees, or standards bodies that negotiate license terms, contribution rules, and governance charters for shared codebases and infrastructure (e.g. Linux Foundation-style bodies, W3C-style consortia). They set the rules of participation and adjudicate disputes between contributors, corporate sponsors, and users. Their authority rests on continued buy-in from the parties they govern, not on unilateral property claim or ideological mandate."
+    },
+    {
+      "name": "stakeholder_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Corporate sponsors, maintainer collectives, and downstream user organizations that get predictable, negotiated access to shared infrastructure without needing to win either a purity contest or a licensing war. They contribute resources (code, funding, governance labor) in exchange for a voice in how the commons is managed. Exit means forking or abandoning the shared project, which is costly but not impossible."
+    },
+    {
+      "name": "downstream_integrators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Companies and developers who build products on top of commons-governed infrastructure. They benefit from stable, negotiated rules rather than either unrestricted freedom (which can mean unstable forks and no support guarantees) or rigid proprietary lock-in. They also pay through mandatory compliance with governance-imposed contribution requirements, licensing fees to sustain the commons, or CLA (contributor license agreement) obligations."
+    },
+    {
+      "name": "free_software_absolutists",
+      "role": "excluded",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Developers and advocates who hold that all software control by anyone other than the end user is ethically illegitimate. Under commons governance, their position is treated as one negotiating stance among several rather than a binding ethical floor — governance bodies routinely approve licenses and restrictions (trademark controls, CLA assignment, dual licensing) that the absolutist position would reject outright. They are structurally denied a veto; their participation is invited but their conclusions are not privileged."
+    },
+    {
+      "name": "proprietary_rights_absolutists",
+      "role": "excluded",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Firms and rights-holders who hold that creators have unrestricted authority to control use, modification, and distribution of their software as pure property. Commons governance structurally overrides this: participation in shared infrastructure requires accepting negotiated terms (copyleft obligations, patent non-assertion pledges, governance oversight of roadmap) that a pure property claim would reject. Their exit option — building fully proprietary, non-participating alternatives — is real but increasingly costly as commons-governed infrastructure becomes the default substrate (e.g. Linux kernel, core web standards)."
+    },
+    {
+      "name": "unrepresented_end_users",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individual users of software built atop commons-governed infrastructure who have no seat at any governance table — not the foundation board, not the corporate sponsor negotiations, not the maintainer councils. They experience the outcomes of governance decisions (license changes, deprecations, feature removals for compliance reasons) without having consented to the negotiated framework that produced them."
+    },
+    {
+      "name": "core_maintainers",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individual engineers who do the ongoing technical labor of maintaining shared infrastructure under governance rules set largely by better-resourced corporate stakeholders. They bear the burnout and unpaid-labor costs of the commons arrangement even as they participate in setting technical direction; their exit (walking away from a critical project) is possible but often blocked by reputational and community-obligation pressure."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Shared digital infrastructure (kernels, protocols, core libraries, standards) requires ongoing maintenance, security response, and directional decisions that no single party can unilaterally provide at the scale the infrastructure now operates. Commons governance solves the genuine collective-action problem of coordinating investment, contribution, and rule-setting across parties with divergent interests who nonetheless depend on the same shared substrate.",
+    "transfer_function": "Moves governance authority and negotiating leverage toward organized, resourced participants (corporate sponsors, foundation boards, veteran maintainer collectives) and away from both unaffiliated individual users and parties holding absolutist ideological or property positions who decline or are unable to participate in the negotiated framework. Contribution labor and compliance costs flow from individual maintainers and smaller downstream integrators toward the collective infrastructure; governance voice flows toward whoever can sustain a seat at the table.",
+    "absent_voices": "Unrepresented end users have no governance seat and are not consulted on license changes or roadmap decisions that materially affect them. Free software absolutists and proprietary rights absolutists are formally invited to participate but structurally cannot win outright — the governance process is designed to produce negotiated compromise, which by construction denies either absolutist position the total victory their framework demands.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Stakeholder communities and governance body participants would say the world rearranges catastrophically — critical infrastructure (kernels, protocols, security-critical libraries) would fragment into incompatible forks or revert to purely proprietary or purely libertarian-freedom models, each with their own severe costs. Absolutists on both sides would say the world improves for their position specifically, since the negotiated middle ground is exactly what currently blocks their preferred resolution. The verdict depends on which seat is asked, which is itself evidence the governance layer is doing real adjudicative work rather than merely ratifying a foregone consensus.",
+    "founding_problem": "As shared software infrastructure became foundational to commercial and civic life (kernels, web standards, cryptographic libraries), neither pure freedom-based governance (unpredictable forking, no enforceable quality or security floor, no mechanism to fund maintenance) nor pure property-based governance (fragmentation into incompatible proprietary silos, no interoperability, underinvestment in shared foundations) could produce stable, secure, adequately maintained infrastructure that multiple competing commercial and civic actors could all rely on.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent security researchers and academic commons-governance scholars (e.g. Ostrom-tradition institutional economists studying digital commons) attest that unmanaged shared infrastructure suffers real maintenance and security underinvestment absent negotiated governance — this is not solely asserted by the foundations and corporate sponsors who benefit from administering it. However, no fully independent audit exists of whether the SPECIFIC governance bodies now in place solve the problem proportionately to the authority and compliance burden they extract; that gap is exactly the tangled-rope signature."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the commons reading of the software-control-legitimacy kernel: software governance is treated as a negotiated collective-management problem over shared digital infrastructure, rejecting both the free-software-imperative claim (that any control beyond the end user is illegitimate) and the property-rights claim (that creators hold unrestricted authority). Governance bodies — foundations, standards consortia, maintainer councils — administer negotiated rules (licensing frameworks, CLAs, contribution requirements, trademark policy) that bind participants regardless of their prior ideological commitments. The structural delta from the sibling readings: both absolutist positions enter this story's victim set, because commons governance structurally denies either position a totalizing win; the beneficiary is the organized stakeholder community that can sustain participation in the negotiation, not any single ideological camp.",
+    "key_agents": [
+      "governance_body_participants: agenda_setter (organized/constrained) — administers negotiated rules",
+      "stakeholder_communities: beneficiary (organized/constrained) — gets predictable negotiated access",
+      "downstream_integrators: beneficiary/payer (moderate/constrained) — builds on the commons, pays compliance costs",
+      "free_software_absolutists: excluded/payer (moderate/trapped) — denied ethical veto",
+      "proprietary_rights_absolutists: excluded/payer (powerful/constrained) — denied unrestricted property claim",
+      "unrepresented_end_users: excluded (powerless/trapped) — no governance seat at all",
+      "core_maintainers: payer/agenda_setter (moderate/constrained) — does the labor, partially sets direction"
+    ],
+    "logic_rationale": "Extractiveness (0.38) reflects a genuine but moderate transfer: governance bodies extract compliance labor and negotiating deference from participants who would otherwise hold absolutist positions, but the extraction funds real coordination (security maintenance, interoperability) rather than pure rent capture — this is why the ε sits well below a snare-level reading and is variable depending on the specific commons' rules, exactly as the kernel context predicts. Suppression (0.42) is moderate: neither absolutist camp is criminalized or forcibly barred, but their totalizing claims are structurally unable to prevail within the negotiated framework, which is a real (if soft) form of suppression of alternatives. Theater ratio (0.28) is present but not dominant — governance bodies do real adjudicative work, though some compliance ritual (CLA signing, code-of-conduct enforcement theater) has grown over the measured interval. Resistance (0.55) is elevated because both absolutist camps actively contest the legitimacy of the negotiated middle ground on principled grounds, not merely self-interest.",
+    "directionality_logic": "Governance body participants and stakeholder communities sit near the beneficiary end: they set or ratify the rules and receive predictable, negotiated access in return for participation costs they can absorb. Free software absolutists and proprietary rights absolutists sit toward the target end DESPITE having real resources (the proprietary side is often powerful) because the constraint specifically extracts from their ability to prevail on principle — the commons reading structurally requires that neither win outright, which is itself the cost imposed on them. Unrepresented end users sit at the extreme target end: powerless, trapped, and structurally absent from the negotiation entirely, bearing downstream consequences of decisions made without them.",
+    "mandatrophy_analysis": "The founding problem (unmanaged infrastructure underinvestment and fragmentation) remains live per independent corroboration, which argues against pure mandatrophy — this is not simply a dead mandate propped up by institutional inertia. But the founding_problem_status is qualified: the corroboration explicitly notes no independent audit confirms the CURRENT governance bodies solve the problem proportionately to the authority and compliance burden extracted. This is the tangled-rope signature precisely: real coordination function (verified) plus asymmetric extraction (unaudited, likely present) riding the same structure. Classifying this as tangled_rope rather than rope prevents the common error of treating 'there is a genuine coordination problem here' as sufficient to certify the current governance arrangement as non-extractive.",
+    "kernel_context": "This constraint instantiates the COMMONS_READING of the software_control_legitimacy kernel. Sibling readings (separate constraint files, not folded in here): freedom_imperative_reading (control is illegitimate full stop), pragmatic_openness_reading (control is a methodology choice, both models legitimate), and property_rights_reading (control is an unrestricted property right). This reading's distinguishing move is to treat control as a THIRD-PARTY GOVERNANCE QUESTION rather than either an individual-rights question (freedom_imperative) or an owner-authority question (property_rights) — it introduces a governance body as agenda_setter that neither sibling reading contains, and it is the only reading in which both absolutists appear as victims simultaneously."
+  },
+  "omegas": [
+    {
+      "id": "commons_reading_versus_property_rights_reading",
+      "question": "Is the negotiated-governance framing itself a legitimate resolution of the control question, or is it a soft capture mechanism by which organized/well-resourced actors (corporate foundation sponsors) launder property-like control through the language of collective management, without ever conceding the property_rights_reading's core premise that creators hold prior authority?",
+      "resolution_mechanism": "Track whether governance-body voting power and rule-setting authority correlate with prior ownership/investment stakes (property-rights logic persisting under commons branding) versus correlating with contribution volume or user-affected-population (genuine commons logic). Audit specific foundation charters for veto rights held by founding corporate sponsors.",
+      "impact": "If governance authority tracks prior ownership stakes, this reading collapses structurally into a disguised property_rights_reading and the commons framing is theater; if it tracks contribution/impact, the commons_reading is structurally distinct as claimed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether commons governance is genuinely distinct from property-rights control or a relabeling of it."
+    },
+    {
+      "id": "commons_reading_versus_freedom_imperative_reading",
+      "question": "Does treating the freedom-imperative position as one negotiating stance among several (rather than a binding ethical floor) itself constitute a substantive rejection of the freedom_imperative_reading's core premise, or merely a procedural bracketing that leaves the ethical question unresolved?",
+      "resolution_mechanism": "Examine whether governance bodies that adopt commons framing ever approve outcomes (e.g. permissive relicensing, DRM integration, telemetry requirements) that the freedom_imperative_reading would deem categorically impermissible — if so, the commons reading is substantively, not just procedurally, incompatible with the freedom imperative on those points.",
+      "impact": "Determines whether commons_reading and freedom_imperative_reading are in a forecloses relationship on specific governance outcomes even though the two readings coexist as general orientations.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether commons governance procedurally brackets or substantively overrides the freedom-imperative ethical claim."
+    },
+    {
+      "id": "variable_epsilon_across_commons_instances",
+      "question": "Given that the expected structural delta explicitly notes 'variable ε depending on commons rules,' what specific governance features (voting weight formulas, CLA terms, veto structures, fork-friendliness) predict whether a given commons-governed project sits nearer the rope end or the snare end of the tangled-rope spectrum?",
+      "resolution_mechanism": "Comparative case study across major commons-governed infrastructure projects (Linux kernel, Apache Foundation projects, W3C standards, Rust language governance) coding for governance-rule variables and correlating with independently observed extraction indicators (maintainer burnout rates, corporate-vs-community decision outcomes, fork frequency and success rate).",
+      "impact": "Would allow this story's ε (0.38) to be understood as a corpus-average estimate rather than a fixed universal value — individual commons instances could be authored as separate, more specific constraint stories with their own ε once this variable is resolved.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The story's ε is an aggregate estimate across a genuinely heterogeneous class of commons governance arrangements."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "software_control_legitimacy__freedom_imperative_reading",
+      "software_control_legitimacy__pragmatic_openness_reading",
+      "software_control_legitimacy__property_rights_reading"
+    ],
+    "dual_formulation_note": "This story is one of four sibling readings of the software_control_legitimacy kernel, each authored as a separate ε-invariant constraint per the ε-invariance principle: freedom_imperative_reading (control as absolute user-rights violation), pragmatic_openness_reading (control as a neutral methodology choice), property_rights_reading (control as unrestricted creator property), and this commons_reading (control as negotiated collective governance). Each reading has its own beneficiary/victim structure and its own ε; they are linked here rather than merged because attempting to average or parameterize across them would violate DP-001 (ε-invariance) — the commons_reading's ε (0.38, moderate, tangled_rope) is not commensurable with what either absolutist sibling would report for the same underlying software, because each reading disputes what the 'underlying software' governance fact even IS."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "polycentric_negotiated_governance",
+    "drift_state": {
+      "moment": "post_foundation_consolidation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "software_control_legitimacy__freedom_imperative_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "software_control_legitimacy__pragmatic_openness_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "software_control_legitimacy__property_rights_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "control_authority_is_negotiated_not_unilateral",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "stakeholder_participation_legitimates_governance_outcomes",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "no_single_party_holds_prior_veto_over_shared_infrastructure",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

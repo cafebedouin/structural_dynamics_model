@@ -1,0 +1,265 @@
+{
+  "header": {
+    "constraint_id": "catastrophe_proxy_sufficiency__simulation_fidelity_threshold",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "03475916-9905-4e25-b9d3-036333e3f255"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.28,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Simulation Fidelity Threshold as Sufficiency Condition for Competence Retention",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "simulation_technology_vendors",
+      "high_reliability_organizations",
+      "training_program_administrators"
+    ],
+    "victims": [
+      "frontline_operators_under_underfunded_sims"
+    ],
+    "vindicated_propositions": [
+      "technology_dependent_sufficiency_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "simulation_technology_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Build and sell high-fidelity simulators (full-motion cockpit rigs, VR nuclear control-room replicas, adversarial cyber ranges). Their commercial case depends on the claim that crossing a specific fidelity threshold makes simulation sufficient for competence retention — a claim that justifies continued capital investment in ever-higher-fidelity hardware. They benefit whether or not the threshold is precisely locatable, because the framing keeps the investment question open and recurring."
+    },
+    {
+      "name": "high_reliability_organizations",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Airlines, nuclear plant operators, aircraft carrier crews, air traffic control agencies. They decide how much to invest in simulator fidelity and how to certify crews using simulated rather than real catastrophic exposure. They administer training budgets and set internal doctrine about what counts as sufficient practice, and they bear direct liability if competence degrades between real incidents."
+    },
+    {
+      "name": "training_program_administrators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design curricula and certification standards around simulator hours logged. Their professional standing and budget justification depend on the technology-dependent-threshold framing being taken as settled: it gives them a defensible, auditable sufficiency criterion instead of an unfalsifiable claim about real catastrophe being irreplaceable."
+    },
+    {
+      "name": "frontline_operators_under_underfunded_sims",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Pilots, control room operators, and crews trained on simulators that have not actually crossed the relevant fidelity threshold for their failure modes, but are certified as if they had because the organization purchased or maintained lower-fidelity equipment. They bear the risk of an undetected competence gap during a real event, without the ability to independently verify whether their training crossed the threshold or not."
+    },
+    {
+      "name": "regulators_and_certification_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Set minimum simulator standards (e.g. FAA Level D certification, NRC training requirements) and audit whether organizations meet them. They rely on engineering specifications and incident post-mortems to judge whether a given simulator's fidelity is sufficient for the failure modes it claims to train against."
+    },
+    {
+      "name": "past_catastrophe_survivors",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Operators who lived through an actual catastrophic event and whose tacit, stress-tempered competence is treated by this reading as reproducible by sufficiently advanced simulation. Their testimony about what real catastrophic stress does that no simulator has yet replicated for them personally rarely enters procurement or certification decisions, which are made on engineering-spec grounds."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Gives organizations, regulators, and vendors a shared, engineering-tractable criterion for how much simulation investment is 'enough' — replacing an otherwise unfalsifiable dispute (can any simulation ever substitute for a real catastrophe?) with a measurable, technology-dependent target that can be certified, audited, and improved over successive equipment generations.",
+    "transfer_function": "Moves capital from training budgets toward simulation-technology vendors, and moves certification authority from experience-based judgment toward specification-based engineering sign-off; in organizations that under-invest, it moves undetected competence risk onto frontline operators who are certified as threshold-crossing when the underlying hardware has not actually reached the relevant fidelity band.",
+    "absent_voices": "Frontline operators facing real events after training on simulators later shown to be sub-threshold have no seat in the fidelity-standard-setting process; survivors of actual catastrophes whose tacit stress-competence exceeds anything measured on a simulator spec sheet are rarely consulted when 'sufficiency' is defined in engineering terms.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the fidelity-threshold framing disappeared, training investment decisions would revert either to unbounded skepticism (simulation can never suffice, forcing exposure to real risk or accepting permanent competence uncertainty) or to unbounded confidence (any simulation suffices, removing the investment discipline the threshold currently imposes). Procurement standards, certification regimes, and vendor R&D roadmaps are all built around the assumption that a locatable threshold exists and can be approached technologically.",
+    "founding_problem": "High-consequence, low-frequency catastrophic events (reactor meltdowns, mid-air engine failures, carrier flight-deck fires) cannot ethically or practically be reproduced for training purposes, yet organizations must maintain operator competence for exactly these events between real occurrences.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Aviation and nuclear safety researchers outside the simulator industry (human factors academics, NTSB and INPO post-incident analysts) corroborate that the underlying problem — competence decay absent real catastrophic exposure — remains live and unresolved; their independent post-incident reviews (e.g. crew performance analyses following near-miss events) are the primary source used to argue that some currently-fielded simulators have NOT crossed the sufficiency threshold, even as vendors and program administrators treat the threshold as approached or met."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the 'simulation_fidelity_threshold' reading of the catastrophe_proxy_sufficiency kernel: the claim that competence retention through simulation is neither categorically impossible (the necessity reading) nor categorically achieved (the proxy reading), but depends on whether the simulation technology crosses a specific, technology-bound fidelity threshold matching the stress and uncertainty profile of the real catastrophe. This makes sufficiency an engineering question rather than a philosophical one, and creates a genuine coordination function: organizations, vendors, and regulators can converge on measurable specification targets instead of relitigating whether simulation can ever substitute for catastrophe. The coordination is real, but it also creates a beneficiary class (simulation vendors, training administrators) whose interests are served by the threshold-is-approachable framing regardless of whether any given fielded simulator has actually crossed it for a given failure mode — hence a modest but real and rising extractiveness as underfunded organizations certify against a threshold their equipment has not met.",
+    "logic_rationale": "Extractiveness starts moderate-low (0.30) and rises slowly to 0.42 over the interval, reflecting a slow drift where the threshold framing becomes a budget-justification mechanism as much as an engineering target — organizations increasingly cite 'threshold-crossing' investment as satisfying competence obligations even where audits of actual fidelity lag. Suppression is low (0.28): no one is coercively prevented from questioning whether a given simulator meets the threshold; the constraint persists because it is a genuinely useful coordination frame, not because dissent is blocked. Theater ratio is low-moderate and rising modestly (0.12 to 0.22), consistent with some certification activity becoming compliance-oriented (logging simulator hours) rather than fidelity-verification-oriented. Accessibility collapse (0.35) and resistance (0.40) are both moderate — organizations retain real alternatives (invest more, use hybrid programs, consult post-incident researchers) and resistance exists from frontline operators and independent safety researchers who push back on premature sufficiency claims.",
+    "directionality_logic": "Simulation vendors and training administrators sit near the beneficiary end: the threshold framing sustains recurring capital investment and gives administrators a defensible certification criterion, regardless of whether the threshold is precisely met. High-reliability organizations are agenda-setters who both benefit (avoid unfalsifiable necessity claims) and bear liability risk, placing them near symmetric. Frontline operators trained on sub-threshold simulators are the structural targets: trapped by employment and licensing structures, they cannot independently verify fidelity and bear the tail risk if the threshold claim is wrong for their specific training program.",
+    "mandatrophy_analysis": "The classification prevents mislabeling this as either pure extraction (the necessity reading's implicit charge that all simulation-based sufficiency claims are cover for underinvestment) or pure coordination (the proxy reading's claim that simulation is unconditionally sufficient). By making sufficiency technology-dependent and threshold-based, the reading preserves a real coordination function — a shared, auditable investment target — while remaining honest that under-resourced implementations of the same framework produce real victims. The founding problem (competence maintenance without reproducing catastrophe) remains live; the risk is that 'threshold crossed' becomes a self-certifying claim asserted by the same parties who benefit from asserting it, without independent verification from post-incident researchers or affected operators.",
+    "kernel_context": "This constraint is the 'simulation_fidelity_threshold' reading of the catastrophe_proxy_sufficiency kernel. It differs from simulation_as_proxy_catastrophe_reading by rejecting the claim that simulation is unconditionally sufficient — sufficiency here is contingent on a measurable, technology-bound fidelity threshold, not a categorical property of simulation-as-such. It differs from catastrophe_necessity_reading by rejecting the claim that only real catastrophe provides irreducible stress/uncertainty — this reading holds that sufficiently advanced technology can, in principle, cross that bar. It relates to hybrid_degradation_reading by sharing the intuition that sufficiency is not binary across all simulation, but diverges on mechanism: hybrid_degradation locates the gap in generational tacit-knowledge decay independent of technology, while this reading locates it in a fidelity specification that technology can, with investment, close."
+  },
+  "omegas": [
+    {
+      "id": "threshold_locatability",
+      "question": "Can the fidelity threshold that this reading posits actually be located and measured for a given failure mode, or is 'threshold-crossing' an unfalsifiable claim asserted by interested parties?",
+      "resolution_mechanism": "Compare simulator-trained crew performance against real-incident performance data (post-incident analyses, NTSB/INPO reports) for specific failure modes, checking whether performance gaps close monotonically with fidelity investment or plateau/discontinue at some measurable point.",
+      "impact": "If the threshold is empirically locatable and organizations can verify crossing it, this reading is well-grounded and the coordination function is genuine. If the threshold is not independently measurable and 'crossing' claims are asserted only by vendors and administrators who benefit from the claim, the reading collapses toward the proxy reading's overclaim, dressed in technology-dependent language that makes the same overclaim harder to falsify.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the sufficiency threshold is empirically locatable or a self-serving assertion."
+    },
+    {
+      "id": "sibling_reading_divergence_locus",
+      "question": "Where exactly does this reading's premise (technology-dependent, threshold-based sufficiency) diverge from the sibling readings, and which sibling would the evidence favor if the threshold turns out to be unreachable with current or foreseeable technology?",
+      "resolution_mechanism": "Track whether fidelity-threshold-chasing organizations show declining real-incident performance over generational timescales despite increasing simulator investment (favoring hybrid_degradation_reading or catastrophe_necessity_reading) versus stable or improving performance (favoring this reading or simulation_as_proxy_catastrophe_reading).",
+      "impact": "If evidence shows a persistent, non-closing gap despite technology investment, resources and legitimacy should shift toward the hybrid_degradation or necessity readings; if the gap closes with investment, this reading's coordination frame is vindicated and vendor investment claims gain credibility.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Where the four kernel readings' predictions diverge and what evidence would discriminate among them."
+    },
+    {
+      "id": "vendor_asserted_sufficiency_bias",
+      "question": "Given that simulation technology vendors are structural beneficiaries of the threshold-is-approachable-via-investment framing, how much of the 'threshold crossed' certification language in the industry reflects genuine engineering verification versus vendor-influenced self-certification?",
+      "resolution_mechanism": "Audit certification decisions for independence — whether the body declaring threshold-crossing has a financial relationship with the equipment vendor, and whether independent regulators or academic human-factors researchers concur.",
+      "impact": "High vendor influence over sufficiency declarations would push the constraint's true operation toward tangled_rope (genuine coordination function co-located with vendor rent-seeking); independent verification would support the cleaner rope classification claimed here.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether sufficiency certification is independently verified or vendor-influenced."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "simulation_as_proxy_catastrophe_reading",
+      "catastrophe_necessity_reading",
+      "hybrid_degradation_reading"
+    ],
+    "dual_formulation_note": "This story is one of four readings of the catastrophe_proxy_sufficiency kernel. simulation_as_proxy_catastrophe_reading claims unconditional sufficiency (no threshold, no gap); catastrophe_necessity_reading claims categorical insufficiency (no technology closes the gap); hybrid_degradation_reading locates the gap in generational tacit-knowledge decay independent of fidelity engineering. This reading (simulation_fidelity_threshold) occupies the middle ground: sufficiency is real but conditional on a measurable, technology-bound threshold. Each reading has its own ε, beneficiary/victim structure, and classification; they are linked here rather than merged into one constraint with a measurement parameter, per the ε-invariance principle."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "engineering_specification_sufficiency",
+    "drift_state": {
+      "moment": "post_high_fidelity_simulator_proliferation",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_proxy_sufficiency__simulation_as_proxy_catastrophe_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "catastrophe_proxy_sufficiency__catastrophe_necessity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "catastrophe_proxy_sufficiency__hybrid_degradation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sufficiency_is_technology_conditional_not_categorical",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "fidelity_threshold_is_measurable_engineering_target",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "simulation_technology_vendors",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

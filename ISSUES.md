@@ -7214,6 +7214,48 @@ type it writes, not just the seat's own verdict. (Reusable form in `docs/technic
 
 **What resolution changes.** Whether `scaffold` should decompose (a coordination_type subtype carried in the `dr_type` verdict or a sibling field), or whether the verdict-level flattening is correct-by-design (the engine types by extraction/naturalization *status*; *what is coordinated* is `coordination_type`'s job, read where needed). Given the positive-controlled consumer search already found the two live readers and neither needs the subtype in the verdict, this **leans correct-by-design → `docs/design/design_gaps.md`** (a declared absence, not a defect). Kill condition / discriminator (now sharp because the search is shown to bite): find a downstream consumer that reads `dr_type='scaffold'` as undifferentiated AND needs the coordination_type distinction it lost — if none (the search found only direct `coordination_type` readers), the verdict-flattening loses no consumed signal (route to design_gaps as intentional); if one exists, it is a real gap. Cross-ref: OQ-140 (parent kind), OQ-211(e) (twin-powered species), `docs/design/design_gaps.md`, `prolog/boltzmann_compliance.pl` + `prolog/cs_pattern_detection.pl` (the witnessed consumers), `prolog/drl_core.pl` (classify_from_metrics — where scaffold is assigned).
 
+## OQ-213 — A THIRD model leg (`testsets_sonnet`, claude-sonnet-5) is built and classified — graduate it from marginals-only control to a full paired twin in `twin_comparison.py` (and adjudicate a Sonnet-specific schema-conformance mode) (Ω_E)
+
+**Ω-type:** Ω_E (mechanical, witnessed: a built corpus leg + an analysis-harness wiring gap + a reproducible per-model generation-failure mode).
+
+**Status:** open — minted 2026-07-05 on building the Sonnet third leg (KNOWN_STATE.md 2026-07-05).
+
+**Priority:** 4
+
+**Deps:** splits_from OQ-124
+
+**Origin:** 2026-07-05. Built a third matched twin — `prolog/testsets_sonnet/` (1001 stories, all
+`claude-sonnet-5`) over the SAME 1005-seed pool as the haiku/flash twins, byte-identical prompt,
+thinking-disabled (`agent/run_no_scope_sonnet.py`). Matched triple **sonnet∩haiku∩flash = 957/960**;
+classified leg `outputs/pipeline_output.sonnet.json` (n=1001) passed the `classify_corpus` single-model
+`claude-sonnet-5` fingerprint. This is the third data point the twin-divergence program
+(OQ-123/124/149/211/212) was 2-model-limited without.
+
+**Two residuals to work:**
+- **(a) Wiring — graduate Sonnet from control to paired leg.** `python/audits/twin_comparison.py`
+  currently wires Sonnet only as a **marginals-only, non-blind `sonnet_control`** (`sonnet_control/5`
+  reads the `.pl` dir directly, explicitly "says NOTHING about (c2)"). Its pairwise engine
+  (`analyse_structural(inter, haiku, flash, ...)` / `analyse_continuous`) is hardwired to exactly two
+  legs. With a full classified `pipeline_output.sonnet.json` now present, extend it to the three
+  pairwise crossings (haiku-flash / haiku-sonnet / flash-sonnet) so the (c2) pair-crossing logic that
+  the control could not reach becomes decidable with a third model. **What resolution changes:** turns
+  OQ-124's "two models coding the same substrate differently" and OQ-123's "(b)-or-(c2)" from a 2-model
+  tie into a 3-model vote; a Sonnet leg agreeing with one twin against the other localizes the
+  divergence to the odd model out. Cross-ref: OQ-123, OQ-124, OQ-149 (Field C, the `sonnet_control`
+  origin), OQ-211(e), OQ-212.
+- **(b) Sonnet-specific schema-conformance mode (bounded finding, kill condition attached).** 4 seeds
+  fail persistently across **3 fresh stochastic redraws** — all `'stakeholders' is a required property`
+  after repair, concentrated on treaty/legal kernels (`bitcoin_consensus_kernel__pragmatic_synthesis`,
+  `nsl_legal_text__sovereignty_restoration_reading`, `article_27_veto_power__oligopoly_reading`,
+  `unsc_242_withdrawal_clause__partial_withdrawal_reading`; 3 of the 4 are in the haiku∩flash
+  intersection → why the triple is 957 not 960). Distinct from the haiku/flash mode (they hit the
+  `status:'contested'` enum, not a dropped `stakeholders`). **NOT chased** (a prompt/schema patch would
+  break twin-parity — the whole point is a byte-identical prompt). **Kill condition:** if a later
+  corpus/schema change re-runs these 4 (or if Sonnet is used for a non-twin generation path) and the
+  `stakeholders` omission persists over N≥3 draws, it is a real Sonnet↔schema interaction worth a
+  targeted `_repair` rule; if it clears on a schema-relaxation the twins already tolerate, it was a
+  transient. Evidence: `outputs/no_scope_runs_sonnet/failures.json`, KNOWN_STATE.md 2026-07-05.
+
 ## OQ-141 — Does `mitigated` belong in `omega_resolver.ACTIVE`? (footer-vs-code status-token conflict) (Ω_C)
 
 **Ω-type:** Ω_C (a tier/membership-boundary judgment: which status tokens count as "active" for the workable frontier — an undefined boundary between two sources, not a contested origin).

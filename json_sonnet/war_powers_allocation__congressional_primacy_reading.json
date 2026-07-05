@@ -1,0 +1,323 @@
+{
+  "header": {
+    "constraint_id": "war_powers_allocation__congressional_primacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "55a3697f-b7ed-4c3c-b8cf-76a2891d8444"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Congressional Primacy Reading of War Powers Allocation",
+    "topic_domain": "constitutional_law/separation_of_powers",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_branch_war_planners",
+      "standing_military_command_structure"
+    ],
+    "victims": [
+      "congress_war_declaration_power",
+      "deployed_service_members",
+      "affected_foreign_civilian_populations"
+    ],
+    "vindicated_propositions": [
+      "constitutional_separation_of_powers_doctrine",
+      "declare_war_clause_primacy"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "executive_branch_war_planners",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Initiates and sustains military operations under claimed Article II authority, treating the War Powers Resolution's 60/90-day clock and prior-authorization expectation as advisory rather than binding. Controls operational tempo, classification of engagements as 'hostilities' or not, and the timing of any request for authorization, effectively setting the terms under which Congress is asked to ratify decisions already made."
+    },
+    {
+      "name": "congress_war_declaration_power",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Holds the constitutionally textual Declare War and Letters of Marque powers under Article I, but faces a structural asymmetry: it can only react to force already deployed, cannot easily claw back appropriated funds mid-campaign without appearing to abandon troops, and lacks a reliable enforcement mechanism against a president who acts first and briefs later. Its formal power is real on paper but is bypassed in practice through sequencing."
+    },
+    {
+      "name": "deployed_service_members",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the direct physical risk of engagements initiated without the constitutional predicate of congressional authorization. Have no institutional voice in whether the deployment underlying their orders satisfies Article I requirements; their obligation to follow lawful orders is decoupled from the question of whether the initiating authority was itself lawful."
+    },
+    {
+      "name": "affected_foreign_civilian_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Bear the physical and social costs of military operations undertaken without the deliberative check that congressional authorization is meant to provide. Have no standing in the US constitutional process at all; their exposure to risk increases in proportion to how easily the executive can act without the friction of legislative debate."
+    },
+    {
+      "name": "standing_military_command_structure",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefits from operational flexibility and reduced political friction when force can be committed on executive timelines rather than legislative ones. Budget requests, force posture, and doctrine are built around expectation of executive-initiated action, reinforcing the pattern this reading identifies as extraction from congressional prerogative."
+    },
+    {
+      "name": "federal_judiciary",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Has repeatedly declined to resolve war powers disputes between the political branches on political question grounds, leaving the constitutional allocation contested in practice rather than settled by adjudication. Its abstention is itself a structural feature that lets the extraction persist unchecked by a third branch."
+    },
+    {
+      "name": "constitutional_law_scholars",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Argue at length, in law reviews and congressional testimony, that the Declare War Clause and the structure of Article I Section 8 make congressional authorization a precondition rather than a formality for sustained force. Their analysis informs public debate but has no binding mechanism; they are heard but not empowered."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "In its ideal form, requiring explicit congressional authorization for sustained force coordinates deliberative legitimacy (many elected voices debate before committing the nation to prolonged conflict) with military effectiveness (once authorized, the executive commands with a clear, publicly-debated mandate), preventing unilateral commitments that later fracture public and political support.",
+    "transfer_function": "Under this reading, congressional war power that should govern the initiation of sustained force is instead exercised post-hoc or not at all, transferring the practical authority to decide, fund by inertia, and prosecute prolonged military campaigns from the legislature to the executive and the standing command structure it directs.",
+    "absent_voices": "Deployed service members and foreign civilian populations bear the direct costs of the bypassed authorization but have no seat in the process; constitutional law scholars articulate the objection but hold no enforcement power; the judiciary that could adjudicate the dispute has largely declined to do so via the political question doctrine.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the congressional-primacy norm were dropped entirely (rather than merely bypassed as it now often is), executive branch planners and the standing command structure would experience little practical change since the norm is already frequently circumvented in practice. Congress would lose its remaining rhetorical and appropriations leverage. Whether the world 'rearranges' or stays the same is itself the contested question this reading exists to answer differently than its siblings.",
+    "founding_problem": "The founders divided the power to declare/fund war (Congress) from the power to command forces in the field (President) specifically to prevent a single actor from unilaterally committing the nation to war, based on historical experience with monarchical war-making that bypassed popular and legislative consent.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Congressional Research Service reports, War Powers Resolution legislative history, and testimony from constitutional scholars outside the executive branch attest the founding problem remains live and unresolved; executive branch legal counsel offices across administrations of both parties attest the problem has been functionally superseded by evolving practice and technological/operational necessity — corroboration is genuinely split across institutional lines rather than unanimous."
+  },
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the congressional-primacy reading of the war powers allocation kernel: the claim that the Constitution's text and structure make explicit congressional authorization a necessary predicate for military force beyond immediate self-defense, and that executive practice deviating from this is not a legitimate alternative reading but an extraction of a power the Constitution assigns elsewhere. Since the Korean War, and accelerating through Vietnam, the post-9/11 AUMFs, Libya (2011), and Syria operations, presidents have increasingly initiated and sustained force without contemporaneous authorization, treating the War Powers Resolution's reporting requirements as the operative standard rather than prior authorization. Under this reading, that pattern constitutes a sustained transfer of constitutional war power from Congress to the executive, dressed in the language of operational necessity. The sibling readings — inherent_executive and functional_accommodation — are NOT part of this constraint; they are separate constraints with their own ε values, linked here only by network reference.",
+    "key_agents": [
+      "executive_branch_war_planners: Primary agenda_setter and beneficiary (institutional/arbitrage) — initiates force and controls sequencing",
+      "congress_war_declaration_power: Primary payer/victim (institutional/constrained) — holds formal power bypassed in practice",
+      "deployed_service_members: Powerless payer (trapped) — bears physical risk without voice in authorization question",
+      "affected_foreign_civilian_populations: Powerless payer (trapped) — bears costs with no standing at all",
+      "federal_judiciary: Analytical observer — declines to adjudicate via political question doctrine"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.62 and rising over the interval, reflecting a pattern (not a single event) of executive-initiated sustained operations proceeding without the prior authorization this reading holds constitutionally required. Suppression is authored higher (0.71) because the mechanism that would check this pattern — congressional appropriations leverage, judicial review, the War Powers Resolution's clock — has been progressively defanged in practice; suppression here specifically captures the active foreclosure of the inherent-authority counter-claim within THIS reading's own framework, not scaled by power or scope. Theater ratio (0.40) captures the significant gap between formal compliance rituals (WPR notifications, informal 'consultations') and substantive prior authorization; the rising trajectory models notification-as-theater increasingly substituting for genuine authorization-seeking.",
+    "perspectival_gap": "From the executive branch planner's seat, the pattern is functional necessity — modern threats move faster than legislative deliberation allows, and the practice has become an accepted operational reality. From Congress's seat, and from the seat of this reading specifically, the same pattern is a structural bypass of an explicit constitutional textual assignment (Article I Section 8: 'To declare War'). The engine should compute these as structurally different experiences of the identical historical pattern — that divergence is exactly what the tangled_rope classification is measuring, not an error to reconcile.",
+    "directionality_logic": "Executive branch war planners and the standing command structure sit near the beneficiary end: they gain operational flexibility, reduced political friction, and effective control over the initiation question. Congress sits near the target end despite its formal institutional power, because its exit options are constrained (clawing back mid-campaign funding is politically costly) and its enforcement mechanism is weak. Deployed service members and foreign civilians sit at the extreme target end: trapped exit options, immediate time horizon, and zero voice in the authorization question whose absence directly produces their exposure to risk.",
+    "mandatrophy_analysis": "The founding problem — preventing unilateral war-initiation by a single actor — remains structurally live in the sense that the underlying danger (concentrated war-making power) has not disappeared; if anything, the speed and lethality of modern force projection make the danger more acute, not less. This is why founding_problem_status is authored as contested rather than dead: this reading holds the problem live, while executive branch corroborators effectively treat it as superseded by operational necessity. Classifying this as tangled_rope rather than snare preserves the genuine coordination function (national security decision-making does need SOME mechanism, and existing statutory frameworks are not wholly theater) while still naming the asymmetric extraction this reading identifies — a pure snare framing would erase the legitimate coordination problem the constitutional design was solving.",
+    "kernel_context": "This constraint instantiates the congressional_primacy_reading of the war_powers_allocation kernel — the position that Article I's Declare War Clause makes explicit congressional authorization a constitutional necessity for sustained force, and that executive unilateral action beyond immediate defense is not an alternative constitutional reading but an extraction from a power textually and structurally assigned to Congress. Two sibling readings exist as separate constraint stories: inherent_executive_reading (commander-in-chief power as sufficient standalone authority) and functional_accommodation_reading (a context-sensitive middle position permitting unilateral action for imminent threats but requiring authorization for prolonged campaigns). This reading treats those siblings' core claims as precisely the extraction mechanism it identifies, not as competing but equally valid framings."
+  },
+  "omegas": [
+    {
+      "id": "congressional_primacy_vs_inherent_executive_foreclosure",
+      "question": "Does the congressional-primacy reading logically foreclose the inherent-executive reading within a single constitutional framework, or can both be held as live competing interpretations by different political actors simultaneously?",
+      "resolution_mechanism": "This is fundamentally a question about constitutional interpretive method — whether the Declare War Clause is read as an exclusive grant (foreclosing inherent unilateral authority beyond genuine self-defense) or as one power among several concurrent war-related powers. No empirical fact resolves this; it depends on priors about original meaning, structural inference, and post-ratification practice's interpretive weight.",
+      "impact": "If congressional_primacy genuinely forecloses inherent_executive, then executive unilateral action beyond self-defense is definitionally unconstitutional extraction, sharpening this constraint toward snare. If the readings coexist as live alternatives across the political system, the tangled_rope framing better captures an unresolved contest rather than settled extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading's core premise is logically incompatible with the inherent-executive reading's core premise."
+    },
+    {
+      "id": "practice_drift_evidentiary_weight",
+      "question": "Does a long, bipartisan pattern of executive-initiated force (Korea through present) constitute legitimate constitutional gloss establishing a functional amendment to the original allocation, or does it constitute an accumulated pattern of extraction that never achieved constitutional legitimacy regardless of its duration?",
+      "resolution_mechanism": "Comparative analysis of how the judiciary treats 'historical gloss' arguments in other separation-of-powers contexts (e.g., appointments, removal power) versus its consistent refusal to resolve war powers disputes directly; also resolvable in part by whether Congress ever affirmatively ratifies the pattern through formal legislative action versus mere acquiescence by inaction.",
+      "impact": "If practice constitutes legitimate gloss, the congressional_primacy reading's extraction framing weakens over time as a matter of evolving constitutional meaning. If practice is extraction regardless of duration, the accumulating pattern strengthens the case for treating this as approaching snare rather than tangled_rope.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether sustained executive practice legitimizes the deviation or merely documents its persistence."
+    },
+    {
+      "id": "judicial_abstention_as_structural_enabler",
+      "question": "Is the federal judiciary's consistent refusal to adjudicate war powers disputes (via the political question doctrine) a neutral institutional restraint, or does it function as a structural enabler that allows the extraction this reading identifies to proceed unchecked by any independent arbiter?",
+      "resolution_mechanism": "Track whether any future war powers case overcomes the political question bar, and analyze whether the doctrine is applied consistently across analogous separation-of-powers questions or specifically hardened in this domain.",
+      "impact": "If judicial abstention is a neutral separation-of-powers principle, the absence of judicial check is not itself part of the extraction mechanism. If abstention specifically shields this pattern from review, it should be counted as part of the suppression apparatus this reading measures.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether judicial non-involvement is a neutral restraint or an active component of the suppression this reading identifies."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "inherent_executive_reading",
+      "functional_accommodation_reading"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the war_powers_allocation kernel. congressional_primacy_reading (this file) treats explicit prior authorization as constitutionally necessary and classifies unilateral executive action as extraction. inherent_executive_reading treats commander-in-chief power as an independent, sufficient constitutional grant and would classify the same executive actions as legitimate exercise of enumerated authority rather than extraction — under that reading Congress is not a victim but a co-equal branch declining to exercise a power it retains. functional_accommodation_reading occupies a middle position, authorizing unilateral action only for imminent threats and requiring authorization for prolonged campaigns — its ε would be lower than this story's for short engagements and would converge toward this story's ε for sustained campaigns. Each reading has its own beneficiary/victim structure and its own ε; they are not the same constraint measured three ways."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "declare_war_clause_exclusive_grant",
+    "drift_state": {
+      "moment": "post_9_11_authorization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "war_powers_allocation__inherent_executive_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "war_powers_allocation__functional_accommodation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "declare_war_clause_is_exclusive_prior_grant",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "sustained_force_without_authorization_is_ultra_vires",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "executive_branch_war_planners",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

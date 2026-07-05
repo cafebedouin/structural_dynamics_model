@@ -1,0 +1,312 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__freedom_imperative_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "478da145-51c7-4bea-aa07-d5982ffe27fa"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.62,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.74,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proprietary Software Licensing as Categorical Injustice (Freedom Imperative Reading)",
+    "topic_domain": "software_engineering/political_economy/ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_software_vendors",
+      "copyright_holding_corporations"
+    ],
+    "victims": [
+      "end_users_denied_source_access",
+      "downstream_developers_barred_from_modification",
+      "repair_and_interoperability_communities"
+    ],
+    "vindicated_propositions": [
+      "software_freedom_as_inalienable_right",
+      "four_freedoms_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "proprietary_software_vendors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Write license terms that withhold source code, prohibit reverse engineering, and forbid redistribution or modification. Enforce these terms through copyright litigation, DRM, and DMCA-style anti-circumvention law. Collect licensing revenue directly from the restriction itself, not merely from the software's use."
+    },
+    {
+      "name": "copyright_holding_corporations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold portfolios of software copyrights and lobby for stronger legal protection of source concealment (extended copyright terms, anti-circumvention statutes, software patents). Benefit from a legal architecture that treats source withholding as a default right rather than a contestable choice."
+    },
+    {
+      "name": "end_users_denied_source_access",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Run software whose behavior they cannot inspect, audit for malice or defect, or adapt to their own needs. Under this reading their inability to read, modify, and redistribute the code they depend on is a direct denial of a right they are owed, not merely an inconvenience of the market they participate in. Exit to free alternatives is often incomplete due to network effects, file-format lock-in, and hardware dependencies."
+    },
+    {
+      "name": "downstream_developers_barred_from_modification",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Want to fix bugs, extend functionality, or build interoperable tools but are legally and technically barred from viewing or altering the underlying source. Under the freedom-imperative reading, this bar is not a legitimate property boundary but an imposed disability — a constraint that exists only because enforcement (litigation, licensing terms, technical protection measures) makes disobedience costly."
+    },
+    {
+      "name": "repair_and_interoperability_communities",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Attempt to repair devices, build interoperable products, or preserve software against obsolescence, and are blocked by source concealment and anti-circumvention law. They lobby for right-to-repair and interoperability mandates but are structurally outside the license-drafting process entirely — their objections are litigated against, not negotiated with."
+    },
+    {
+      "name": "free_software_movement",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Articulates the position this constraint story instantiates: that software freedom (to run, study, modify, and share) is a moral entitlement, and that its systematic denial by license architecture is an injustice comparable to other denials of basic liberty. Produces free-licensed alternatives (copyleft software) but cannot compel proprietary vendors to relicense; its voice appears in public argument, standards bodies, and legislative testimony, but rarely inside the license-drafting rooms of dominant vendors."
+    },
+    {
+      "name": "legal_and_policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study the effects of copyright, patent, and anti-circumvention law on software markets, competition, security, and repairability, and testify in legislative and antitrust proceedings without holding a stake in either the vendor or user side."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "At a minimal level, licensing terms coordinate expectations between authors and users about what may be done with a copy of a program, avoiding ad hoc disputes over use. This reading holds that this coordination function could be, and normatively should be, achieved without withholding source — the coordination need does not require the restriction.",
+    "transfer_function": "Moves control over inspection, modification, and redistribution of software away from everyone who runs it and concentrates it exclusively in the copyright holder, converting what would otherwise be a shared technical commons into a metered, gatekept asset; enforcement (litigation, DRM, anti-circumvention statutes) is the mechanism that keeps this concentration in place against the technical fact that copying and modification are otherwise nearly costless.",
+    "absent_voices": "Users who cannot audit the software controlling their devices, medical equipment, or personal data are not party to the license terms they are bound by. Independent repair technicians and accessibility developers who could extend or fix software are excluded from the design conversation entirely and encounter the restriction only as an enforcement action.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If source-withholding licensing and its legal enforcement machinery vanished overnight, the entire proprietary software business model built on selling restricted binaries would collapse or be forced to pivot to services, support, or hardware; a large share of vendor revenue depends specifically on the enforceability of the restriction, not on the software's mere existence.",
+    "founding_problem": "Early software distribution needed some legal category to let authors control unauthorized commercial copying and to fund continued development; copyright-style exclusivity was adapted from other media to serve that funding need.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Vendors and copyright holders attest the restriction remains necessary to fund development. The Free Software Foundation and allied movement voices — external to the vendor beneficiary set — attest that the funding problem has long been solvable through alternative models (service revenue, support contracts, copyleft-compatible commercial licensing, public funding) and that the restriction now persists primarily as rent extraction rather than as the only viable funding mechanism; this corroboration is itself a party to the underlying dispute, so it is offered as an outside-the-beneficiary-set voice, not a neutral one."
+  },
+  "gain_flow": "proprietary_software_vendors",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the freedom-imperative reading of the software_source_status kernel: the claim that software freedom (to run, study, modify, and redistribute) is a fundamental ethical entitlement, and that any license restricting source access is a categorical injustice regardless of context, market conditions, or development-quality outcomes. Under this reading, EVERY instance of proprietary licensing enters the victim set structurally, because the wrong is located in the denial of the freedoms themselves, not in any downstream harm (security defect, lock-in cost, or repair barrier) that might or might not follow. This is a different, and more extractive, constraint than the pragmatic-development reading (which treats freedom as instrumentally valuable for code quality, not categorically required) or the property-rights reading (which treats source withholding as a legitimate exercise of authorial control, with no victims at all). Those are separate constraints, authored separately, and linked via network.affects_constraints — this file does not average across them or hedge its epsilon between them.",
+    "logic_rationale": "Extractiveness is authored high (0.71 by interval end) because, under this reading, the withholding of source from every user of proprietary software is itself the extraction — a rights denial that scales with every license sold, not merely a cost imposed in edge cases. Suppression is authored substantial but lower than extractiveness (0.62) because the mechanism runs through law (copyright, anti-circumvention statutes, EULA enforcement) rather than direct physical coercion; accessibility_collapse is moderate (0.58) because free-software alternatives exist and are growing but remain incomplete substitutes due to network effects and hardware/format lock-in. Resistance is high (0.74) reflecting an organized, decades-old movement (FSF, GNU project, copyleft licensing, right-to-repair coalitions) actively contesting the arrangement — this is not a quietly-accepted constraint.",
+    "directionality_logic": "Proprietary vendors and copyright-holding corporations sit at the beneficiary end: they draft the restriction, enforce it, and collect licensing revenue specifically contingent on the restriction holding. End users, downstream developers, and repair/interoperability communities sit at the target end: under this reading their inability to inspect, modify, or redistribute software is the direct harm the constraint imposes, independent of whether the software itself functions well. Their exit options are constrained rather than trapped because free-software alternatives exist for many use cases, but incomplete substitutability (proprietary formats, hardware drivers, enterprise software with no free equivalent) keeps most users and developers short of genuine mobility.",
+    "perspectival_gap": "From the vendor/agenda-setter seat, licensing is a legitimate exercise of authorship and a necessary funding mechanism — this is the property-rights reading's territory, not this file's. From this reading's seat, the same restriction is a categorical wrong regardless of funding necessity, because the entitlement to source access is held to be inalienable. The engine computes the payer seats as facing extraction near the target end and the vendor seats as beneficiaries; the divergence between those computed seats and the vendors' own self-story (funding legitimate development) is exactly the gap this reading exists to name.",
+    "mandatrophy_analysis": "The founding problem (funding continued software development) is contested as live or dead: this reading holds that alternative funding models (service contracts, copyleft-compatible commercial licensing, public and foundation funding) have long since solved the funding problem the restriction was originally introduced to address, and that the restriction now persists primarily as rent extraction rather than as the only viable mechanism — a mandatrophy pattern in which the original coordination justification (funding) has been substantially superseded but the restrictive mandate (source withholding) persists via enforcement rather than by continued necessity.",
+    "kernel_context": "This constraint instantiates the freedom_imperative_reading of the software_source_status kernel. Sibling readings — pragmatic_development_reading (freedom as instrumentally valuable for code quality, not a categorical right), property_rights_reading (source withholding as legitimate authorial control, no victims), and utilitarian_hybrid_reading (licensing choice should maximize aggregate welfare context-by-context) — are separate constraint stories with their own epsilon, beneficiary/victim sets, and classifications, linked via network.affects_constraints. This reading is the maximally victim-expansive one: every instance of proprietary licensing counts as an injustice under its premises, independent of empirical outcomes."
+  },
+  "omegas": [
+    {
+      "id": "categorical_vs_instrumental_wrong",
+      "question": "Is the wrong of proprietary licensing located categorically in the denial of the four freedoms themselves, or only instrumentally in the harms (security opacity, lock-in, repair barriers) that sometimes follow from that denial?",
+      "resolution_mechanism": "This is fundamentally a normative/conceptual question not resolvable by empirical data alone — it turns on whether one accepts a rights-based framework (freedom as inalienable entitlement) or a consequentialist framework (freedom as instrumentally valuable when it produces better outcomes). The pragmatic_development_reading and property_rights_reading sibling constraints instantiate the alternative framings.",
+      "impact": "If the categorical framing is rejected in favor of an instrumental one, the victim set collapses to only those proprietary-software instances that actually produce measurable harm, sharply reducing this reading's authored extractiveness and victim scope; if accepted, every instance of proprietary licensing remains a victim-generating instance regardless of outcome.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the wrong is categorical (rights-based) or instrumental (outcomes-based) — the central fault line between this reading and its siblings."
+    },
+    {
+      "id": "funding_alternative_sufficiency",
+      "question": "Are non-restrictive funding models (service revenue, support contracts, copyleft-compatible commercial licensing, public/foundation funding) actually sufficient to sustain the current volume and quality of software development across all domains, or only in some sectors?",
+      "resolution_mechanism": "Comparative empirical analysis of revenue models and development sustainability across proprietary and free/open-source software sectors, including enterprise, embedded, and safety-critical domains where free-software adoption has been slower.",
+      "impact": "If alternative funding is broadly sufficient, the founding_problem_status assessment of 'contested' should shift toward 'dead' with higher confidence, strengthening the mandatrophy reading; if funding is genuinely insufficient in significant sectors (e.g. capital-intensive safety-critical software), the founding problem retains more force as 'live' in those sectors specifically, which would argue for a more sector-differentiated constraint than this single global story captures.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative funding models are sufficient across all software sectors or only some."
+    },
+    {
+      "id": "cs_framing_underdetermination",
+      "question": "Is the kernel here best framed as 'what does the author of software owe the people who run it' (an obligation-of-creation framing, which this reading adopts) or as 'what property rights does a creator hold over a non-rivalrous good' (a property-definition framing, closer to the property_rights_reading)? The two framings produce structurally different cs_pattern classifications even though both describe the same licensing texts.",
+      "resolution_mechanism": "No empirical resolution exists; this is a framing choice that different legal and ethical traditions have made differently (continental droit d'auteur moral-rights traditions lean toward the obligation framing; Anglo-American copyright-as-property traditions lean toward the property framing).",
+      "impact": "Under the obligation framing (adopted here), authority_grounding reads as extraction (vendors extract benefit from denying an obligation) and the axiom of inalienable software freedom is coherent. Under the property framing, authority_grounding would read closer to a legitimate-property-right pattern with no victims at all, which is exactly the property_rights_reading sibling constraint's territory.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Alternative CS framings (obligation-of-creation vs. property-definition) yield different classifications for the same licensing text."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "software_source_status__pragmatic_development_reading",
+      "software_source_status__property_rights_reading",
+      "software_source_status__utilitarian_hybrid_reading"
+    ],
+    "dual_formulation_note": "This story is one of four constraints decomposing the natural-language label 'the software freedom debate' into structurally distinct claims per the kernel/reading discipline: freedom_imperative_reading (this file — categorical rights violation, maximal victim set), pragmatic_development_reading (instrumental quality claim, smaller victim set gated on actual quality/security harms), property_rights_reading (legitimate property exercise, no victims), and utilitarian_hybrid_reading (context-dependent welfare-maximization, victim set determined case-by-case). Each carries its own epsilon and classification; they are linked, not merged."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "four_freedoms_founding_charter",
+    "drift_state": {
+      "moment": "contemporary_platform_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "software_source_status__pragmatic_development_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "software_source_status__property_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "software_source_status__utilitarian_hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "software_freedom_is_inalienable_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "source_withholding_is_categorically_unjust_regardless_of_outcome",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__pragmatic_development_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "53c284e1-16ee-4864-8323-409f93890a60"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.22,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Open Source as Superior Engineering Methodology (Pragmatic/Developmental Reading)",
+    "topic_domain": "software_engineering/political_economy_of_technology",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "corporate_open_source_maintainers",
+      "downstream_integrators",
+      "security_researchers",
+      "permissive_license_adopters"
+    ],
+    "victims": [
+      "unpaid_volunteer_maintainers",
+      "small_proprietary_competitors"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "corporate_open_source_maintainers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Large firms fund and steer widely-used open source projects, framing openness as a quality-engineering practice (peer review catches bugs, external contributions accelerate velocity) rather than an ethical mandate. They capture reputational, hiring, and platform-control benefits from participation while retaining the freedom to build proprietary layers on top under permissive licenses."
+    },
+    {
+      "name": "downstream_integrators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Companies and developers who consume open source components to build products faster and more reliably than they could in isolation. They benefit from the methodological argument directly: they get audited, battle-tested code without needing to accept any obligation to release their own derivative work."
+    },
+    {
+      "name": "security_researchers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Independent and institutional researchers who rely on source visibility to find and responsibly disclose vulnerabilities. The pragmatic framing (openness improves quality via review) legitimizes and normalizes their access without requiring any ideological commitment to software freedom."
+    },
+    {
+      "name": "permissive_license_adopters",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Developers and firms who use MIT/BSD/Apache-style licenses specifically because this reading treats permissive terms as compatible with 'real' open source, letting them relicense, close, or commercialize derivatives while still claiming the reputational and quality benefits of an open development process."
+    },
+    {
+      "name": "unpaid_volunteer_maintainers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals who do the unglamorous maintenance work (triage, security patching, documentation) that the 'more eyeballs make bugs shallow' argument assumes is either abundant or fairly compensated. In practice they absorb burnout, liability exposure, and uncompensated labor that corporate consumers of the methodology do not share, because exit means the project (and their reputation investment in it) collapses or is forked away from them."
+    },
+    {
+      "name": "small_proprietary_competitors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Smaller software vendors who cannot match the velocity and review capacity that well-resourced firms achieve by commanding large open contributor pools. The 'open is simply better engineering' claim raises the competitive bar in a way that favors incumbents able to subsidize open development, squeezing vendors who must fund closed development entirely from license revenue."
+    },
+    {
+      "name": "software_freedom_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocates of the sibling ethical-freedom reading who argue that reducing openness to an engineering-quality argument strips it of moral force and enables permissive-license capture by proprietary interests. They are not part of the pragmatic reading's own justificatory framework and their objection surfaces mainly in license debates, not in this reading's day-to-day operation."
+    },
+    {
+      "name": "empirical_software_engineering_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics who study whether open development actually correlates with higher code quality, faster defect resolution, or better security outcomes, independent of the ideological stakes. Their empirical findings are the only evidence that could vindicate or falsify this reading's central instrumental claim."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Distributed peer review, parallel bug discovery, and low-friction reuse of vetted components solve a genuine engineering coordination problem: no single team can review, test, and harden code as thoroughly or as fast as a large, diverse contributor base can.",
+    "transfer_function": "Moves unpaid or under-compensated maintenance labor, security triage burden, and community-management overhead from well-resourced firms (who capture the resulting code quality, hiring pipeline, and reputational capital) onto volunteer maintainers and, secondarily, onto smaller vendors who cannot fund equivalent development capacity from closed revenue alone.",
+    "absent_voices": "Software freedom advocates who would object that the pragmatic framing evacuates openness of ethical content and thereby licenses corporate capture of the open commons; they are not represented within this reading's own justificatory apparatus, which explicitly treats freedom as instrumental rather than terminal.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the pragmatic-methodology justification vanished, corporate practice around open source contribution would likely persist largely unchanged in the short term (firms already capture the practical benefits regardless of the stated rationale), but the legitimating narrative that lets permissive licensing coexist comfortably with heavy corporate extraction would weaken, potentially strengthening the freedom-imperative reading's claim on the same practices — hence contested rather than a clean verdict.",
+    "founding_problem": "Early software development suffered from duplicated effort, undiscovered defects in closed codebases, and slow diffusion of fixes; making source visible and modifiable was proposed as a practical engineering discipline to accelerate review, reuse, and hardening.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Empirical software engineering researchers (outside the corporate beneficiary set) have produced peer-reviewed studies correlating open review processes with certain defect-detection and patch-velocity outcomes, though the magnitude and universality of the effect remain actively debated in that same literature — corroboration exists but is qualified, not unanimous."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.21
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the pragmatic-development reading of the software_source_status kernel: the claim that open source's value lies in engineering outcomes (peer review, bug detection, innovation velocity) rather than in any ethical duty to preserve user freedom. Under this reading, proprietary software is not inherently illegitimate and permissive licensing is fully acceptable, since the reading's justificatory core is instrumental quality, not moral obligation. This is a distinct constraint from the freedom_imperative_reading (which treats proprietary software as an injustice), the property_rights_reading (which grounds legitimacy in creator ownership), and the utilitarian_hybrid_reading (which weighs aggregate welfare across contexts) — each of those is authored as its own sibling story with its own ε, beneficiary/victim structure, and classification. Only this reading's structure is analyzed here.",
+    "key_agents": [
+      "corporate_open_source_maintainers: institutional agenda-setters who fund and frame openness as an engineering practice",
+      "downstream_integrators and permissive_license_adopters: organized beneficiaries who capture quality benefits without freedom obligations",
+      "unpaid_volunteer_maintainers: powerless payers who absorb uncompensated maintenance labor",
+      "small_proprietary_competitors: moderate-power payers squeezed by the higher engineering bar open development sets",
+      "empirical_software_engineering_researchers: analytical observers whose findings are the only evidence that could vindicate or falsify the reading's instrumental claim"
+    ],
+    "logic_rationale": "Extractiveness is low-to-moderate (0.28 at interval end) because the reading's coordination function — distributed review genuinely improving code quality — is real and widely corroborated, but a growing share of the practical benefit accrues asymmetrically to well-resourced corporate consumers rather than to the volunteer labor producing it. Suppression is low (0.22): no one is coerced into open development under this reading, and proprietary alternatives remain fully legitimate by its own terms — this is what most sharply distinguishes it from the freedom_imperative_reading, which would suppress the proprietary alternative as illegitimate. Theater ratio rises modestly over the interval (0.10 to 0.30) as 'open-source-friendly' branding by firms increasingly substitutes performative community engagement for genuine investment in maintainer sustainability.",
+    "directionality_logic": "Corporate maintainers and permissive-license adopters sit near the beneficiary end: they set norms, capture reputational and hiring value, and retain full freedom to build closed derivatives. Downstream integrators and security researchers are moderate beneficiaries who consume the coordination good without bearing its cost. Unpaid volunteer maintainers sit near the target end — trapped exit options (leaving means losing accumulated reputational capital or watching the project be forked without them) and the party actually absorbing the uncompensated labor the instrumental argument assumes will simply appear. Small proprietary competitors are secondary targets: the reading's own success (open development produces better software) raises the competitive floor in a way that specifically disadvantages closed-development shops that cannot draw on volunteer or subsidized-corporate labor pools.",
+    "mandatrophy_analysis": "The pragmatic reading resists mandatrophy misclassification by keeping the founding problem (duplicated effort, undiscovered defects, slow fix diffusion) explicitly live and testable via ongoing empirical software-engineering research, rather than resting on an untestable ethical premise. This is precisely what differentiates it from a scaffold or snare: it does not claim its own obsolescence (no sunset clause is appropriate, since better software is a persistent, not transitional, need), and its extraction is diffuse and moderate rather than concentrated and coercive — closer to a genuine, if imperfect, coordination mechanism than to organized rent extraction.",
+    "kernel_context": "This constraint instantiates the pragmatic_development_reading of the software_source_status kernel. Sibling readings — freedom_imperative_reading (ethical mandate; proprietary software as injustice), property_rights_reading (ownership grounds restriction rights), and utilitarian_hybrid_reading (context-dependent welfare maximization) — are separate constraint stories with their own ε values and structures, linked via network.affects_constraints. This reading's distinguishing move is treating freedom as instrumental to quality outcomes rather than as a terminal value, which is what licenses its acceptance of permissive licensing and proprietary legitimacy."
+  },
+  "omegas": [
+    {
+      "id": "instrumental_claim_empirical_status",
+      "question": "Does open development methodology actually produce measurably superior software quality, security, and innovation velocity compared to well-resourced closed development, or does the apparent advantage reduce to resource asymmetry (large corporate contributor pools) rather than openness per se?",
+      "resolution_mechanism": "Controlled or quasi-experimental comparisons of matched open and closed projects controlling for funding and team size; longitudinal defect-density and patch-latency studies across licensing models.",
+      "impact": "If the quality advantage is substantially attributable to funding/scale rather than openness, this reading's foundational instrumental claim weakens and the constraint drifts toward a corporate-legitimation function (tangled_rope) rather than genuine coordination (rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether openness itself, versus resourcing, drives the claimed quality benefits."
+    },
+    {
+      "id": "kernel_reading_boundary_location",
+      "question": "Where exactly does the pragmatic_development_reading's boundary sit relative to the utilitarian_hybrid_reading — is 'freedom is instrumental to quality' meaningfully distinct from a welfare-maximization calculus that happens to favor openness in most technical contexts, or is this reading simply the utilitarian_hybrid_reading applied narrowly to engineering outcomes?",
+      "resolution_mechanism": "Compare the two readings' treatment of a case where quality and aggregate welfare diverge (e.g., open development that improves code quality but harms a vulnerable user population through a different channel) — the readings should prescribe differently if truly distinct.",
+      "impact": "If the readings converge on all practical cases, they may warrant merging or explicit subsumption rather than separate constraint stories; if they diverge, the decomposition is validated.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether this reading is genuinely distinct from the utilitarian_hybrid sibling or a narrow special case of it."
+    },
+    {
+      "id": "volunteer_labor_capture_ambiguity",
+      "question": "Is the uncompensated labor burden on volunteer maintainers a structural feature necessary to the coordination benefit (review requires many contributors, most unpaid by construction) or an extractive externality that corporate beneficiaries could remedy through funding without losing the coordination benefit?",
+      "resolution_mechanism": "Track outcomes at open source foundations and firms that have implemented paid-maintainer programs (e.g., GitHub Sponsors uptake, corporate maintainer funding initiatives) against burnout and turnover rates in unfunded comparable projects.",
+      "impact": "If remediable without losing coordination value, the current extraction level is closer to avoidable rent than necessary coordination cost, pushing the classification toward tangled_rope; if structurally necessary, the rope classification is better supported.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether maintainer labor extraction is structurally necessary or a remediable externality."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "software_source_status__freedom_imperative_reading",
+      "software_source_status__property_rights_reading",
+      "software_source_status__utilitarian_hybrid_reading"
+    ],
+    "dual_formulation_note": "This story is one of four constraints decomposing the natural-language 'open source vs. proprietary software' debate under the software_source_status kernel. Each reading has a distinct ε, beneficiary/victim structure, and classification: freedom_imperative_reading treats proprietary software as ethically illegitimate (higher suppression, moral framing); property_rights_reading grounds legitimacy in ownership (different beneficiary set — creators/rightsholders); utilitarian_hybrid_reading evaluates context-dependently (no fixed claimed_type across contexts, by design). This reading (pragmatic_development) is distinguished by treating freedom as strictly instrumental to quality outcomes, which is the narrowest and most empirically falsifiable of the four."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "engineering_meritocracy_of_review",
+    "drift_state": {
+      "moment": "post_corporate_capture_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "software_source_status__freedom_imperative_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "software_source_status__property_rights_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "software_source_status__utilitarian_hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "freedom_is_instrumental_not_terminal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "proprietary_software_not_inherently_illegitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "low_moderate",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "gain_flow": "corporate_open_source_maintainers",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

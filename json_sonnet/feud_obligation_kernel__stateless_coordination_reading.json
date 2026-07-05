@@ -1,0 +1,294 @@
+{
+  "header": {
+    "constraint_id": "feud_obligation_kernel__stateless_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "bf329a78-84d7-4107-87b3-d67920e17382"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.28,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Blood-Feud Obligation as Self-Enforcing Justice Coordination",
+    "topic_domain": "legal_anthropology/comparative_political_systems",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "kin_groups_seeking_redress",
+      "potential_future_victims_deterred_by_reputation",
+      "community_dispute_resolution_order"
+    ],
+    "victims": [
+      "feud_defectors_facing_honor_loss",
+      "kinship_expelled_non_avengers"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_framing",
+      "question": "Is blood-feud obligation best modeled as a genuine coordination mechanism substituting for absent state capacity, or as a self-perpetuating extraction cycle that consumes the productive surplus it claims to protect?",
+      "resolution_mechanism": "Comparative study of feud-society economic output and violence rates against contemporaneous centralized-enforcement polities of similar resource base; track whether feud cycles terminate via wergild settlement (coordination signature) or escalate indefinitely (extraction signature).",
+      "impact": "If feud cycles systematically fail to terminate via wergild and instead escalate across generations, the coordination reading collapses toward the extraction_cycle_reading sibling; this story's low suppression/extraction values would need revision in that sibling constraint, not this one.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether feud obligation is a stable coordination equilibrium or a disguised extraction spiral — the central contest between this reading and its extraction_cycle sibling."
+    },
+    {
+      "id": "kernel_reading_selection_evidence",
+      "question": "What in the ethnographic/historical record justifies selecting the stateless-coordination reading over the christianized-pacification or extraction-cycle readings as the operative structural account for a given feud society at a given time?",
+      "resolution_mechanism": "Cross-reference saga/law-code evidence for (a) presence and uptake rate of wergild as an accepted substitute, (b) rate of feud termination without escalation, (c) ecclesiastical/royal intervention frequency and success rate in the same period.",
+      "impact": "High wergild uptake and low escalation support this reading; high ecclesiastical intervention success supports the pacification reading; high multi-generational escalation supports the extraction reading. Different societies/periods may genuinely instantiate different readings.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evidentiary basis for treating this kernel reading as the structurally correct one for a given case, versus its two siblings."
+    },
+    {
+      "id": "defector_victim_status_ambiguity",
+      "question": "Is the 'victim' status of feud-obligation defectors (honor loss, kinship expulsion) itself evidence of coercive suppression internal to the coordination mechanism, or is it the ordinary cost of declining to participate in any voluntary reciprocal institution?",
+      "resolution_mechanism": "Examine whether defectors retain access to alternative dispute-resolution or protection mechanisms (wergild, sanctuary, patron protection) after defection — if alternatives remain open, defection cost is closer to ordinary opportunity cost; if defectors become unprotectable (outlawry), the cost is closer to structural suppression.",
+      "impact": "If defectors are rendered wholly unprotectable, suppression should be scored materially higher than authored here, pushing this reading toward tangled_rope; if alternatives remain genuinely open, the low suppression score is well-grounded.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the cost borne by non-avenging kin constitutes coercive suppression or ordinary non-participation cost."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "In stateless or weakly-centralized societies (medieval Iceland, early medieval Ireland, highland Albania, pre-state Montenegro), blood-feud obligation operates as a kin-based liability system: an injury to a kin-group member obligates the group to seek redress, either through counter-violence or negotiated settlement (wergild). This story instantiates the reading under which feud obligation is a genuine, low-overhead coordination mechanism that substitutes for absent state enforcement capacity — providing both retrospective justice (redress for the injured party's kin) and prospective deterrence (the credible threat of retaliation discourages initial aggression), while wergild remains available as a lower-cost settlement path that most disputes actually use. This is ONE of three readings of the feud_obligation_kernel; the sibling christianized_pacification_reading holds that legitimate violence authority belongs to God/ecclesiastical-royal institutions and feud vengeance is itself illegitimate, while the sibling extraction_cycle_reading holds that feud is a destructive, self-perpetuating cycle that depletes productive capacity. Each sibling is a separate constraint story with its own ε and its own stakeholder set; this story does not describe or average over them.",
+    "key_agents": [
+      "kin_groups_seeking_redress: Primary beneficiary (moderate/constrained) — receive justice/deterrence value from the credible threat of retaliation",
+      "feud_defectors_facing_honor_loss: Primary target of the mechanism's internal enforcement (powerless/identity_locked) — bear the cost of declining to participate",
+      "wergild_arbiters: Secondary coordination actor (moderate/mobile) — provide the lower-cost settlement alternative that keeps the system from escalating",
+      "comparative_legal_historian: Analytical observer — sees the full structure across readings"
+    ],
+    "logic_rationale": "Extraction is authored low (0.32) because, under this reading, the mechanism's primary transfer is retributive/deterrent, not rent-extractive: value flows from aggressor's kin to victim's kin roughly in proportion to the original injury, and wergild caps escalation. Suppression is authored low-moderate (0.28) because wergild and other settlement paths remain genuinely open alongside feud — the coordination story does not depend on foreclosing alternatives, which is precisely the structural delta distinguishing this reading from its siblings. Theater ratio is low (0.15) because the mechanism's violence and settlement activity is functionally load-bearing, not performative. Accessibility collapse is moderate (0.35): once inside a kin group, the obligation is hard to escape, but the mechanism does not collapse alternatives at the societal level (multiple kin groups, multiple settlement paths coexist).",
+    "directionality_logic": "Kin groups seeking redress and future potential victims deterred by the reputation-and-retaliation system sit near the beneficiary end: the mechanism functions for them roughly as insurance plus deterrence. Feud defectors — kin members who decline to avenge or support avenging — sit near the target end: their exit from the obligation costs them honor and kinship standing, which is the mechanism's internal enforcement lever. This is NOT identical to the coercion of a centralized state; it is closer to a reputational/relational sanction within a voluntary-in-origin kinship structure, hence identity_locked rather than trapped for the defector seat.",
+    "perspectival_gap": "From the kin-group beneficiary seat, the system reads as functional justice-and-deterrence coordination sustaining social order in the absence of a state. From the defector seat, the same structure reads as coercive: honor loss and kinship expulsion are real costs imposed for non-compliance, regardless of whether a court or king imposes them. The engine should compute divergent per-seat types from these structural facts; this divergence is exactly what the mandatrophy/perspectival apparatus exists to surface, not something this story should resolve by fiat.",
+    "mandatrophy_analysis": "This reading treats the founding problem (justice and deterrence absent centralized enforcement) as substantially still live in the societies where feud obligation actually operates without state alternatives — hence founding_problem_status is authored 'contested' rather than 'dead', because whether the problem remains live depends heavily on which historical period and polity one examines (a saga-era Iceland with no king differs from a later period where royal courts become available and feud obligation persists past its functional necessity — which is exactly the terrain the extraction_cycle and pacification siblings claim).",
+    "kernel_context": "This constraint instantiates the stateless_coordination_reading of the feud_obligation_kernel. Two sibling readings exist as separate constraint stories: christianized_pacification_reading (feud vengeance is illegitimate; legitimate violence belongs to God and delegated ecclesiastical/royal authority) and extraction_cycle_reading (feud is a destructive extraction cycle depleting productive capacity and blocking territorial consolidation). This story does not adjudicate between the three; it generates only the coordination reading as a clean, ε-invariant constraint, with feud participants as beneficiaries and defectors as victims, and low suppression reflecting that wergild coexists as a genuine alternative under this reading."
+  },
+  "stakeholders": [
+    {
+      "name": "kin_groups_seeking_redress",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "When a member is injured or killed, the kin group is entitled to seek redress via retaliation or negotiated wergild. They receive the coordination value of a credible deterrent and a socially sanctioned path to justice in a system with no police or courts to appeal to; their exit option is constrained because leaving the kinship network entirely would strip them of the protection the same network provides."
+    },
+    {
+      "name": "feud_defectors_facing_honor_loss",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "A kin member who declines to support the group's retaliation or fails to participate as obligated loses honor standing and risks expulsion from the kinship network's protection. Their identity as a member of the kin group is bound up with fulfilling the obligation, making exit costly not merely materially but in terms of social selfhood; they bear the mechanism's internal enforcement cost."
+    },
+    {
+      "name": "kinship_expelled_non_avengers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals actually expelled from kin-group protection for failing to avenge are left without the network's defense in a society with no alternative centralized protection; their situation after expulsion is materially worse and their exit options collapse further, since they cannot easily join another kin group."
+    },
+    {
+      "name": "wergild_arbiters",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Respected local figures (chieftains, elders, assembly officials) who negotiate wergild settlements as an alternative to escalating retaliation. They administer the lower-cost settlement path that keeps the feud system from spiraling; their continued relevance depends on disputing parties finding settlement preferable to continued violence, which they have some capacity to steer."
+    },
+    {
+      "name": "potential_future_victims_deterred_by_reputation",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Community members whose potential aggressors are deterred by the credible threat that the victim's kin group would retaliate. They never see the mechanism activate in their favor but benefit from the baseline reduction in violence that a credible feud-retaliation norm produces community-wide."
+    },
+    {
+      "name": "comparative_legal_historian",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Studies feud-society law codes (Icelandic sagas, Irish Brehon law, Albanian Kanun) to assess whether feud obligation functioned as low-overhead coordination, coercive extraction, or illegitimate usurpation of a properly centralized violence-authority — the three contested readings of this kernel."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides justice (redress for injury to kin) and deterrence (credible threat of retaliation discourages initial aggression) in a society lacking centralized enforcement capacity, with wergild available as a lower-cost settlement alternative to actual violence.",
+    "transfer_function": "Moves compensation (wergild) or retaliatory harm from an aggressor's kin group to an injured party's kin group, roughly proportional to the original injury; internally, moves honor/status away from kin members who decline to fulfill the retaliation or support obligation.",
+    "absent_voices": "Individuals expelled from kin-group protection for non-participation have no forum within the feud system itself to contest their expulsion; a kin group too weak to credibly threaten retaliation has no recourse but submission or flight, and its voice is absent from the deterrence equation entirely.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If feud obligation vanished overnight in a genuinely stateless society with no substitute enforcement mechanism, the deterrent function underlying local order would disappear with it; absent an alternative (state courts, effective wergild-only norms), aggression against weaker kin groups would likely rise until some substitute coordination mechanism re-emerged — the arrangement is load-bearing for local order under this reading, not decorative.",
+    "founding_problem": "In the absence of a state with a monopoly on legitimate violence and the administrative capacity to investigate, adjudicate, and enforce judgments, kin groups needed a self-enforcing mechanism to deter aggression and secure redress for injuries without appeal to any higher authority.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Legal historians studying societies with functioning royal or ecclesiastical courts (external to the feuding kin groups) attest that in those same regions, once centralized adjudication becomes genuinely available and effective, feud obligation's practical necessity visibly declines and wergild-only or royal-court settlement increasingly displaces retaliatory violence — external corroboration that the founding problem is period- and polity-specific rather than perpetually live everywhere the norm is invoked."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "extraction_cycle_reading",
+      "christianized_pacification_reading"
+    ],
+    "dual_formulation_note": "This story is one of three readings of feud_obligation_kernel. extraction_cycle_reading models the same underlying practice as a destructive rent/violence spiral depleting productive capacity; christianized_pacification_reading models it as an illegitimate usurpation of violence-authority properly held by God/ecclesiastical-royal institutions. All three share the kernel (the feud obligation itself) but diverge in beneficiary/victim structure, suppression profile, and claimed type. Linked here per the ε-invariance decomposition principle; each carries its own stable ε rather than a single averaged value."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "kin_based_self_help_justice",
+    "drift_state": {
+      "moment": "post_royal_court_expansion",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "feud_obligation_kernel__christianized_pacification_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "feud_obligation_kernel__extraction_cycle_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "kin_group_self_help_is_legitimate_justice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "wergild_availability_demonstrates_coordination_not_coercion",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

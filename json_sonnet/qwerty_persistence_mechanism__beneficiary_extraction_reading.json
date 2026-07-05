@@ -1,0 +1,329 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence_mechanism__beneficiary_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "5101c6b8-5cd0-4f67-8df8-bb3ed66ee38a"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "QWERTY Persistence as Beneficiary-Maintained Extraction",
+    "topic_domain": "economic_history/technology_studies/path_dependence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "remington_union_typewriter_trust",
+      "incumbent_typing_schools",
+      "touch_typing_certification_bodies"
+    ],
+    "victims": [
+      "novice_typists",
+      "rival_keyboard_inventors",
+      "clerical_workers"
+    ],
+    "vindicated_propositions": [
+      "training_investment_protection_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "remington_union_typewriter_trust",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Manufactures and licenses the dominant typewriter hardware, standardizes on QWERTY across its product line and licensees, and coordinates with certification schools to fix the layout as the credentialing standard. Collects licensing revenue and hardware sales premised on layout continuity; would lose sunk tooling and trained-workforce advantages if a rival layout gained traction."
+    },
+    {
+      "name": "incumbent_typing_schools",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Have built curricula, textbooks, and instructor expertise entirely around QWERTY touch-typing. Certify typists for hire under the QWERTY standard and charge tuition and certification fees. A layout change would strand their curriculum investment and instructor skill base, so they actively lobby against alternative-layout adoption in commercial and clerical hiring standards."
+    },
+    {
+      "name": "touch_typing_certification_bodies",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer typing speed certifications used as hiring gates by employers, exclusively benchmarked to QWERTY. Control what counts as 'qualified' typing speed and refuse to develop parallel certification tracks for alternative layouts, which forecloses employer recognition of any rival system regardless of its measured efficiency."
+    },
+    {
+      "name": "novice_typists",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Must learn QWERTY to be employable as clerks and typists, regardless of whether an alternative layout would let them type faster with less repetitive strain risk. Their training hours and cognitive investment are the switching cost the arrangement extracts; once trained, retraining to a rival layout means discarding sunk skill capital, which is precisely the lock the beneficiaries rely on."
+    },
+    {
+      "name": "clerical_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Employed under QWERTY-certified hiring standards, bear the ergonomic and productivity costs of a layout not optimized for their labor, and have no institutional channel to demand or credential an alternative because employers hire against the certification bodies' single benchmark."
+    },
+    {
+      "name": "rival_keyboard_inventors",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Designed and patented alternative layouts (e.g., Dvorak) demonstrating typing efficiency gains, but could not get manufacturers to tool hardware, schools to teach the layout, or certification bodies to recognize it. Excluded from the entire distribution and credentialing chain that determines whether an alternative layout can ever reach market-relevant adoption."
+    },
+    {
+      "name": "economic_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the QWERTY case as a canonical example of path dependence, debating whether persistence reflects genuine coordination lock-in, deliberate rent protection by incumbents, or adequate performance under fair competition. Have no stake in the outcome but produce the competing readings this kernel comprises."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "A single, universally taught keyboard layout lets employers hire interchangeable typists and lets typists move between employers without retraining — genuine coordination value exists in having ONE standard, whichever it is.",
+    "transfer_function": "Moves training-investment protection and certification-gatekeeping rents from novice typists, clerical workers, and rival inventors to the incumbent manufacturer, the licensed typing schools, and the certification bodies whose curricula and credentials are sunk into QWERTY specifically.",
+    "absent_voices": "Rival keyboard inventors and the typists who would have benefited from a more efficient layout are structurally absent from the standard-setting conversation: manufacturers and schools that already profit from QWERTY control which layout gets tooled, taught, and certified, so the alternative's advocates never reach the decision table.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the coordinated maintenance of QWERTY (manufacturer tooling defaults, school curricula, certification benchmarks) disappeared overnight, hardware makers would be free to tool alternative layouts, schools could teach whichever layout tested fastest, and certification could re-benchmark — typists and employers would very plausibly reorganize around a layout selected on efficiency grounds rather than incumbency, given documented efficiency claims for alternatives that never got a fair market test.",
+    "founding_problem": "In the 1870s-80s, mechanical typewriters jammed when adjacent-key strikers collided; QWERTY was arranged partly to slow typists down and separate commonly-paired letters to reduce jamming, plus early manufacturer branding needs (the top row could type 'TYPE WRITER QUOTE' for salesmen).",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Mechanical engineers and typewriter historians outside the incumbent manufacturers attest that jam-prevention became irrelevant once electric and then electronic keyboards eliminated mechanical strikers entirely (by the mid-20th century); independent ergonomics researchers (not funded by typing-school or certification-body interests) have published layout-efficiency comparisons showing QWERTY's continued dominance persists for reasons unrelated to the original mechanical constraint. No corroboration for continued necessity comes from outside the manufacturer/school/certification beneficiary set."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the beneficiary-extraction reading of the QWERTY persistence kernel: the layout's continued dominance is explained not by superior ergonomics (naturalization_reading) nor by pure coordination-failure lock-in with no identifiable profiteer (lock_in_reading), but by the active, self-interested maintenance of the standard by Remington/Union Typewriter's manufacturing dominance, the typing schools whose curricula are sunk into QWERTY, and the certification bodies that gatekeep employability on a QWERTY-only benchmark. The original mechanical jam-prevention rationale died with electric typewriters and computer keyboards, but the beneficiary coalition kept the standard in place because their training investments, credentialing infrastructure, and market position depend on it, not because switching costs alone would have preserved it absent active maintenance.",
+    "key_agents": [
+      "remington_union_typewriter_trust: agenda_setter (institutional/arbitrage) — sets and maintains the hardware/curriculum standard",
+      "incumbent_typing_schools: beneficiary (organized/constrained) — curriculum sunk cost",
+      "touch_typing_certification_bodies: beneficiary+agenda_setter (organized/constrained) — controls employability gate",
+      "novice_typists: payer (powerless/trapped) — bears training-investment extraction",
+      "clerical_workers: payer (powerless/trapped) — bears ergonomic/productivity cost",
+      "rival_keyboard_inventors: excluded (powerless/trapped) — shut out of tooling and credentialing chain",
+      "economic_historians: observer (analytical/analytical) — produces the competing kernel readings"
+    ],
+    "logic_rationale": "Extractiveness rises over the century (0.35 to 0.68) as the mechanical rationale dies but the beneficiary coalition's certification and curriculum lock-in hardens — extraction accumulates precisely as the founding problem becomes dead. Suppression is authored high (0.72) because persistence in this reading depends on active exclusion: certification bodies refuse to build parallel tracks, schools lobby against curriculum change, and manufacturers do not tool alternative layouts at scale, foreclosing exit for typists and inventors alike. Theater ratio rises moderately (0.10 to 0.45) as 'typing efficiency' framing becomes increasingly performative cover for what is functionally credential-gatekeeping.",
+    "directionality_logic": "Remington/Union Typewriter and the certification bodies sit at the beneficiary end (d low): they collect licensing revenue, tuition, and gatekeeping rents from a standard they administer and could change but choose not to. Novice typists and clerical workers sit at the target end (d high): trapped exit options, their sunk training investment is exactly the switching cost the arrangement is designed to preserve. Rival inventors are excluded entirely from the standard-setting apparatus rather than coordinated by it — their exclusion is the enforcement object, not a side effect.",
+    "mandatrophy_analysis": "The founding problem (mechanical key-jamming) is dead, but the arrangement persists — this is the mandatrophy signature. Corroboration for continued necessity comes only from within the beneficiary set (manufacturers, schools, certification bodies); independent ergonomics research and typewriter historians outside that set attest the mechanical rationale ended with electric keyboards. This reading treats that mismatch (status=dead + verdict=world_rearranges) as diagnostic of extraction dressed as coordination, distinguishing it from the lock_in_reading (which would attribute persistence to coordination failure with no identifiable profiteer) and the naturalization_reading (which would deny any efficiency gap existed).",
+    "perspectival_gap": "From the manufacturer/school/certification seat, QWERTY-standardization is a genuine service — it lets employers hire interchangeably. From the novice-typist and rival-inventor seat, the same standardization operates as a closed credentialing gate that never let a superior layout compete on merits. The engine computes this divergence from the structural beneficiary/victim/enforcement data; this story does not adjudicate which seat is 'right' — it authors the extraction-reading's structural claim.",
+    "kernel_context": "This constraint is the beneficiary_extraction_reading of the qwerty_persistence_mechanism kernel. Two sibling readings exist as separate constraint stories: naturalization_reading (QWERTY persists because it became genuinely adequate; alternatives lapsed through fair competition — denies any efficiency gap or suppression), and lock_in_reading (QWERTY persists through path-dependent coordination failure despite technical inferiority — attributes persistence to network-effect lock-in with no identifiable profiteer actively suppressing alternatives). This reading differs from both by asserting an identifiable, self-interested beneficiary coalition (manufacturer trust, schools, certification bodies) that actively maintains the standard and suppresses alternatives to protect sunk training and credentialing investments, rather than treating persistence as either genuinely merited or a victimless coordination trap."
+  },
+  "omegas": [
+    {
+      "id": "active_maintenance_vs_passive_inertia",
+      "question": "Did Remington, Union Typewriter, and the typing schools actively lobby against and suppress alternative layouts (e.g., Dvorak), or did QWERTY simply persist through ordinary switching-cost inertia with no identifiable coordinated suppression?",
+      "resolution_mechanism": "Archival research into 19th/20th century typewriter manufacturer and typing-school trade association records, patent-dispute filings, and certification-body policy history to establish whether documented lobbying or exclusionary certification policy exists, versus mere absence of adoption.",
+      "impact": "If active suppression is documented, this reading (beneficiary_extraction) is the historically correct one and the constraint is properly tangled_rope/snare-adjacent. If no coordinated suppression is found and persistence reflects pure network-effect coordination cost, the lock_in_reading is the better structural account and this story's victim/beneficiary framing overstates intentionality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether QWERTY persistence involved documented active suppression versus passive coordination inertia."
+    },
+    {
+      "id": "dvorak_efficiency_gap_magnitude",
+      "question": "How large was the actual typing-efficiency gap between QWERTY and alternative layouts like Dvorak, and were early efficiency studies (some funded by Dvorak's own promoters) methodologically sound?",
+      "resolution_mechanism": "Independent modern ergonomic and cognitive-load replication studies controlling for training effects, conducted by researchers with no stake in either layout's adoption.",
+      "impact": "A large, well-replicated efficiency gap strengthens the extraction reading (suppressing a clearly superior alternative for rent-protection). A negligible or contested gap strengthens the naturalization_reading (QWERTY was adequate all along, and the 'suppression' narrative overstates what was lost).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the alternative layout's claimed efficiency advantage is real and substantial or overstated."
+    },
+    {
+      "id": "certification_gatekeeping_intent",
+      "question": "Did certification bodies decline to build parallel non-QWERTY certification tracks out of active protection of sunk curriculum investment, or simply because market demand for alternative-layout certification never materialized?",
+      "resolution_mechanism": "Review of certification body internal policy discussions or public statements regarding alternative-layout proposals, and market data on employer demand for non-QWERTY-certified typists over the period.",
+      "impact": "Intentional gatekeeping supports treating the certification bodies as active beneficiaries maintaining an extractive gate; absence-of-demand would suggest the bodies were passively responding to (rather than manufacturing) market conditions, weakening the tangled_rope classification toward something closer to rope or piton.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether certification-body inaction reflects active protectionism or passive market response."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "qwerty_persistence_mechanism__lock_in_reading",
+      "qwerty_persistence_mechanism__naturalization_reading"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the qwerty_persistence_mechanism kernel. beneficiary_extraction_reading (this file) claims tangled_rope with identifiable beneficiaries and active suppression. lock_in_reading claims a coordination-failure structure with no concentrated profiteer (likely rope or piton at the network-effect level). naturalization_reading claims the layout is genuinely adequate and alternatives lapsed through fair competition (likely mountain-adjacent or rope, denying suppression entirely). Each carries its own epsilon and stakeholder structure; they are linked via affects_constraints rather than merged, per the epsilon-invariance principle — the label 'QWERTY persistence' conflates three structurally distinct historical claims."
+  },
+  "gain_flow": "remington_union_typewriter_trust",
+  "fixing_cost": "cheap",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "qwerty_persistence_mechanism__naturalization_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "qwerty_persistence_mechanism__lock_in_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "persistence_reflects_active_beneficiary_maintenance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "training_investment_protection_justifies_standard_lock",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "mechanical_jam_prevention_standard",
+    "drift_state": {
+      "moment": "post_electronic_keyboard_era",
+      "direction": "axiom_overriding",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

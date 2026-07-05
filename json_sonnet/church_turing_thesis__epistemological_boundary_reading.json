@@ -1,0 +1,349 @@
+{
+  "header": {
+    "constraint_id": "church_turing_thesis__epistemological_boundary_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "e36f5fcd-e3b1-4278-b702-5ff088135454"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.42,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Church-Turing Thesis as Epistemological Boundary of Provable Computability",
+    "topic_domain": "philosophy_of_mathematics_and_computation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "computability_theorists",
+      "complexity_theory_researchers",
+      "proof_theoretic_journal_gatekeepers"
+    ],
+    "victims": [
+      "non_constructive_computability_claimants",
+      "hypercomputation_researchers",
+      "analog_and_physical_computation_theorists"
+    ],
+    "vindicated_propositions": [
+      "turing_computability_as_formal_standard",
+      "recursion_theoretic_equivalence_thesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "computability_theorists",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Maintain and police the standard that a function counts as 'proved computable' only when a Turing-equivalent formalism (recursive functions, lambda calculus, register machines) exhibits it. They referee journals, set curricula, and adjudicate what qualifies as a valid computability proof. Their professional standing and the coherence of complexity theory depend on this boundary holding."
+    },
+    {
+      "name": "complexity_theory_researchers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build an entire hierarchy of tractability (P, NP, PSPACE, etc.) on top of the assumption that the relevant notion of 'computation' is fixed and Turing-equivalent. If the boundary were loosened, foundational theorems would need re-derivation. They have strong incentive to treat the boundary as settled and rarely question it."
+    },
+    {
+      "name": "proof_theoretic_journal_gatekeepers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Decide whether a submitted computability or decidability proof is accepted as rigorous. A claim of computing a function 'non-constructively' or via an oracle/physical process outside the Turing-equivalent formalism is routinely rejected as not a proof of computability at all, regardless of its mathematical content, unless translated into an accepted formalism."
+    },
+    {
+      "name": "non_constructive_computability_claimants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Mathematicians who establish that a function or problem is 'effectively decidable' via non-constructive existence arguments (e.g. using excluded middle over infinite search spaces, or set-theoretic devices) find their results reclassified as not constituting a computability proof in the accepted sense. They must either produce an explicit Turing-equivalent algorithm or have their result excluded from the computability canon, even when the mathematical content is otherwise accepted."
+    },
+    {
+      "name": "hypercomputation_researchers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Study models (infinite-time Turing machines, Zeno machines, oracle machines, relativistic computers) that formally compute functions beyond the Turing-computable set. Their work is treated by the mainstream community as a curiosity outside 'real' computability theory rather than as a competing formal boundary, largely because publication venues, funding panels, and hiring committees use the epistemological reading to exclude such models from the core discipline."
+    },
+    {
+      "name": "analog_and_physical_computation_theorists",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Argue that certain analog or continuous physical processes might realize computations outside the Turing-equivalent formal hierarchy. Because the epistemological boundary reading defines 'provable computability' independently of physical realizability, their claims are structurally unable to count as computability proofs even if physically demonstrated — they are not part of the conversation that sets the formal standard."
+    },
+    {
+      "name": "philosophy_of_mathematics_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the thesis's status as a boundary-setting methodological commitment rather than a mathematical theorem or an empirical claim, tracking how the three readings (epistemological, definitional, physical) diverge in their victim sets and enforcement mechanisms."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single, stable, shared standard for what counts as a valid proof that a function is computable, allowing mathematicians and computer scientists across the world to build cumulative results (decidability, complexity classes, reducibility hierarchies) on a common formal foundation rather than each adjudicating computability claims from scratch.",
+    "transfer_function": "Moves epistemic legitimacy and publication/career capital toward those whose work fits the Turing-equivalent formal mold, and away from those pursuing non-constructive or extra-Turing-equivalent notions of computability — regardless of the mathematical or physical merit of the excluded work.",
+    "absent_voices": "Hypercomputation researchers and analog/physical computation theorists would argue that the boundary conflates 'what our current formalisms can capture' with 'what is knowable in principle,' but they are structurally excluded from the venues (journals, funding panels, core curricula) that set the standard they are being measured against.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the epistemological boundary reading vanished, the core mathematics of Turing computability itself would be unaffected (it would remain true that Turing machines compute a specific class of functions), but the METHODOLOGICAL GATEKEEPING — what counts as a legitimate computability proof — would reopen. Complexity theorists dispute that anything would change (the boundary is simply correct); excluded researchers argue the entire discipline's exclusionary practice would need re-examination.",
+    "founding_problem": "Early 20th-century mathematicians needed a rigorous, agreed notion of 'effective procedure' to resolve foundational questions (Hilbert's Entscheidungsproblem, the nature of provability) where an informal, intuitive notion of 'mechanically computable' was inadequate for proof.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Computability theorists and complexity researchers (the benefiting parties) attest the problem remains live and the boundary remains the correct formal answer. Independent philosophers of mathematics and historians of computing (outside the benefiting community) corroborate that the original foundational problem was substantially resolved by the 1950s, and that continued use of the boundary to exclude hypercomputation and physical-computation research functions increasingly as disciplinary boundary-maintenance rather than active resolution of an open foundational question."
+  },
+  "interval": {
+    "start": 0,
+    "end": 90
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.41,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.42,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story isolates ONE of three structurally distinct claims colloquially bundled as 'the Church-Turing thesis.' Here the thesis functions as a METHODOLOGICAL BOUNDARY on what counts as a formally valid proof of computability: a function is 'provably computable' if and only if a Turing-equivalent formalism can be exhibited to compute it, independent of whether some physical process might compute it by other means. This is neither the mathematical-definition reading (a stipulative convention, true by fiat, with no victims) nor the physical-claim reading (an empirical thesis about the physical universe, falsifiable by hypercomputational physics). Under THIS reading, the thesis operates as an actively enforced disciplinary gate: it coordinates a shared, cumulative proof standard across computability theory and complexity theory (the genuine coordination function), while simultaneously excluding non-constructive computability claims and physically-motivated hypercomputation proposals from counting as legitimate computability results (the extraction). The enforcement is real — journal referees, hiring committees, and curricula actively police the boundary — which is why this reading, unlike its siblings, carries a victim set and requires active enforcement to hold.",
+    "key_agents": [
+      "computability_theorists: agenda_setter (institutional/arbitrage) — set and police the proof standard",
+      "complexity_theory_researchers: beneficiary (organized/constrained) — build hierarchies on the fixed standard",
+      "proof_theoretic_journal_gatekeepers: agenda_setter/beneficiary (institutional/arbitrage) — enforce the boundary at publication",
+      "non_constructive_computability_claimants: payer (moderate/constrained) — results reclassified as non-proofs",
+      "hypercomputation_researchers: payer (powerless/trapped) — excluded from core discipline",
+      "analog_and_physical_computation_theorists: excluded (powerless/trapped) — structurally outside the conversation",
+      "philosophy_of_mathematics_observers: observer (analytical/analytical) — tracks the reading divergence"
+    ],
+    "logic_rationale": "Extractiveness is low-to-moderate (0.28 at interval end) because the boundary's cost falls narrowly — on researchers pursuing non-Turing-equivalent computability claims — while the vast majority of the discipline is simply unaffected or actively served by the standard. Suppression (0.42) is meaningfully higher than extraction because maintaining the boundary requires active gatekeeping at journals, hiring panels, and funding bodies; this is a raw structural fact about enforcement machinery, not scaled by scope or power. Theater ratio stays very low (0.10) throughout: the enforcement is substantively functional (it genuinely produces a coherent cumulative theory), not performative. Accessibility collapse is moderate (0.55): a hypercomputation researcher can still publish, just not within the core computability canon — alternatives are marginalized, not annihilated, distinguishing this from a mountain's near-total collapse. Resistance (0.45) reflects real, organized pushback from hypercomputation and non-constructive-mathematics communities over decades, which is inconsistent with pure natural law.",
+    "directionality_logic": "Computability theorists and journal gatekeepers sit near the beneficiary end: they set the rule and their institutional standing depends on it (d low). Complexity theorists are structural beneficiaries at one remove — they don't administer the boundary but their entire theoretical apparatus rests on it holding (d low-moderate). Non-constructive claimants and hypercomputation researchers are targets: the same rule that coordinates the discipline is the rule that excludes their results from the canon (d high). Analog/physical computation theorists are excluded rather than merely taxed — they are not merely paying a cost within the system, they are outside the system that sets the cost, which is why they carry 'excluded' rather than 'payer' as primary role.",
+    "mandatrophy_analysis": "The founding problem (Hilbert's Entscheidungsproblem, rigorizing 'effective procedure') was substantially resolved by the 1950s. What persists past that resolution is the boundary's use as an ongoing GATEKEEPING mechanism rather than as the answer to a still-open question. This is exactly the tangled-rope signature the mandatrophy analysis is built to catch: a genuine, historically necessary coordination function (a shared computability standard enabled cumulative complexity theory) has been retained past the point where its exclusionary force is still solving the original problem, and is now also serving disciplinary boundary-maintenance. Classifying this as pure mountain would hide the exclusion of hypercomputation research; classifying it as pure snare would deny the real, still-functioning coordination benefit complexity theory derives from a stable proof standard. Tangled rope holds both facts simultaneously.",
+    "perspectival_gap": "From the agenda-setter seat (computability theorists, journal gatekeepers), the boundary is simply the correct formal criterion — asking 'what is provably computable' obviously means 'provable within an accepted formal system,' so there is no exclusion, only rigor. From the payer/excluded seats (hypercomputation researchers, non-constructive claimants), the identical rule is experienced as a closed door: their results are mathematically or physically motivated but structurally cannot register as computability proofs. The engine computes these as different seat-level types from the same structural data; the divergence is not a measurement error but the actual social fact of gatekeeping.",
+    "kernel_context": "This story instantiates the EPISTEMOLOGICAL BOUNDARY reading of the Church-Turing kernel: the thesis as the boundary of what can be FORMALLY PROVEN computable, independent of physical possibility. Two sibling readings exist as separate constraints: the MATHEMATICAL DEFINITION reading (a stipulative convention fixing what 'effective computability' means — true by fiat, no victims, ε near zero) and the PHYSICAL CLAIM reading (an empirical thesis that no physical process exceeds Turing-computability — falsifiable by physics, victim set would include claimed hypercomputational physical models rather than mathematical proof practices). This reading is distinguished from both by having an ACTIVE ENFORCEMENT APPARATUS (journals, hiring, curricula) and a VICTIM SET (non-constructive and hypercomputational researchers) that neither sibling reading structurally requires."
+  },
+  "omegas": [
+    {
+      "id": "boundary_versus_convention_ambiguity",
+      "question": "Is the epistemological boundary reading actually separable from the mathematical-definition reading, or does the 'proof standard' just collapse into 'the stipulated definition of computability' once examined closely?",
+      "resolution_mechanism": "Examine cases where a non-Turing-equivalent formal system (e.g. certain infinite-time or oracle-relative systems) is proposed as an alternative computability standard: if the discipline treats this as a live methodological dispute (supporting the boundary reading) versus dismisses it as definitionally incoherent (supporting the definitional reading), that resolves which reading is operative in practice.",
+      "impact": "If the boundary collapses into pure stipulation, this reading's victim set (non-constructive claimants, hypercomputation researchers) dissolves into people who simply misunderstand a definition rather than people excluded by an enforced standard, and the constraint would reclassify toward mountain or rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the epistemological-boundary reading is structurally distinct from the definitional reading or reduces to it under scrutiny."
+    },
+    {
+      "id": "gatekeeping_versus_genuine_rigor",
+      "question": "Is the active enforcement (journal rejection of non-Turing-equivalent computability claims) protecting genuine mathematical rigor that non-constructive proofs actually lack, or is it disciplinary boundary-maintenance that excludes mathematically valid but differently-framed results?",
+      "resolution_mechanism": "Case-by-case review by neutral logicians (outside both the mainstream computability community and the excluded communities) of specific rejected non-constructive computability claims, assessing whether the mathematical content is sound under a weaker or different formal standard.",
+      "impact": "If rejections consistently track genuine gaps in constructive content, extraction is lower than authored and the constraint is closer to rope. If rejections track formalism-mismatch rather than mathematical unsoundness, extraction is higher than authored and the constraint drifts toward snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether enforcement tracks genuine rigor gaps or formalism-parochialism."
+    },
+    {
+      "id": "sibling_reading_disambiguation_committer",
+      "question": "Which of the three kernel readings (epistemological, definitional, physical) is actually operative when a working mathematician or computer scientist invokes 'the Church-Turing thesis' in ordinary practice?",
+      "resolution_mechanism": "Discourse analysis of how the thesis is invoked across textbooks, referee reports, and grant rejections — tracking whether invocations function as boundary-policing (this reading), stipulative definition (sibling), or empirical physical claim (sibling).",
+      "impact": "If most invocations in practice are boundary-policing (as authored here), this reading carries the bulk of the real-world enforcement weight and the sibling readings are comparatively low-stakes philosophical positions; if most invocations are definitional, the enforcement apparatus described here is overstated and the true operative reading is closer to rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which of the three sibling readings is empirically dominant in actual disciplinary practice, and what that implies about this reading's true weight."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "church_turing_thesis__mathematical_definition_reading",
+      "church_turing_thesis__physical_claim_reading"
+    ],
+    "dual_formulation_note": "Part of the Church-Turing kernel family (3 stories). mathematical_definition_reading has near-zero ε (stipulative convention, no enforced victims). physical_claim_reading has ε contingent on physical hypercomputation evidence (empirical, falsifiable, different victim set — claimed physical models rather than mathematical proof practices). THIS story (epistemological_boundary_reading) is distinguished by an active, enforced methodological gate with an identifiable victim set drawn from mathematical and computational research communities. All three share the same kernel text but instantiate structurally distinct constraints per the ε-invariance principle."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "hilbert_program_effective_procedure_standard",
+    "drift_state": {
+      "moment": "post_hypercomputation_challenge_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "church_turing_thesis__mathematical_definition_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "church_turing_thesis__physical_claim_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "provability_requires_formal_exhibition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "physical_realizability_irrelevant_to_proof_standard",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

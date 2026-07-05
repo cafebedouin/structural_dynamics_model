@@ -1,0 +1,279 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__interface_boundary_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "9ad36869-a08a-4d1a-a9dc-b07e04a47071"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "scaffold",
+    "human_readable": "API-Boundary Reading of the GPL Derivative-Work Trigger",
+    "topic_domain": "software_licensing/copyright_law/open_source_governance",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "ecosystem_integrators",
+      "commercial_plugin_vendors",
+      "proprietary_module_authors"
+    ],
+    "victims": [
+      "downstream_users_expecting_full_source",
+      "copyleft_maintainers_seeking_reciprocity"
+    ],
+    "vindicated_propositions": [
+      "modular_architecture_doctrine",
+      "clean_room_interface_separability"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ecosystem_integrators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build commercial products that call GPL-licensed components strictly through documented, stable APIs. They rely on the interface-boundary reading to combine proprietary code with copyleft infrastructure without triggering a disclosure obligation on their own codebase. Their exit option is architectural: they can always redesign around a permissively-licensed alternative if the boundary reading were rejected, but at real transition cost."
+    },
+    {
+      "name": "commercial_plugin_vendors",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Sell closed-source plugins that run against a GPL host application's public plugin API. Their business model depends entirely on the boundary reading holding; if the broad reading prevailed they would either have to open-source their product or exit the ecosystem, and switching host platforms is costly and slow."
+    },
+    {
+      "name": "gpl_project_maintainers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Wrote the license and the code, and in practice set the interpretive stance their project publicly adopts (whether the plugin API counts as a derivative-work boundary or not). Adopting the interface-boundary reading widens their user base and commercial adoption but narrows the copyleft's practical reach; adopting the broad reading maximizes reciprocity but risks driving commercial integrators to permissively-licensed rivals. They administer the ambiguity because no court has definitively resolved it for their specific architecture."
+    },
+    {
+      "name": "downstream_users_expecting_full_source",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Use the combined software stack believing the GPL's reciprocity guarantee extends to everything they run, including the proprietary plugins bundled with it. Under the interface-boundary reading they receive source for the GPL core but not for the closed modules that shape the actual behavior of the product they use — a gap they typically discover only when they want to modify or audit the software and find critical pieces are unavailable."
+    },
+    {
+      "name": "copyleft_maintainers_seeking_reciprocity",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Contributed labor to the GPL codebase on the understanding that derivative works built on it would remain open, viewing this as the reciprocal exchange that justified donating their work for free. The interface-boundary reading lets commercial actors capture value from their contributions via tightly-coupled but 'separate' proprietary modules, without returning source, undermining the reciprocity they contributed under."
+    },
+    {
+      "name": "free_software_foundation_and_allied_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Argue publicly for the broad copyleft reading and consider API-boundary combinations to often still be derivative works in substance, but have no binding authority over how any given project's maintainers or a court characterizes a specific integration. Their objections are visible in FAQs and legal commentary but do not bind the ecosystems that adopt the interface-boundary reading."
+    },
+    {
+      "name": "courts_and_licensing_counsel",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate derivative-work disputes case by case, applying copyright's abstraction-filtration-comparison and merger doctrines to specific technical architectures. Their rulings are jurisdiction-specific and fact-bound, which is precisely why no single kernel reading has become universally settled law."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Lets an open-source project and a commercial ecosystem coordinate around a shared, stable interface: the GPL core stays under strong copyleft while third parties build value-added modules against a documented contract, without either side needing to renegotiate licensing terms for every integration.",
+    "transfer_function": "Moves the practical benefit of reciprocal source disclosure away from downstream users and copyleft-committed contributors, and toward parties able to structure their code as a formally separate, API-coupled module rather than a modification of the GPL codebase itself.",
+    "absent_voices": "The Free Software Foundation and allied advocates argue publicly that tight API coupling is often substantively a derivative work regardless of formal separation, but they have no binding authority over how a specific project's maintainers characterize their own architecture, and are not present in the commercial integration decisions this reading enables.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the interface-boundary reading were rejected wholesale in favor of the broad reading, the entire plugin-vendor and ecosystem-integrator business model built on GPL-licensed hosts would need to either open-source or migrate to permissively-licensed platforms; conversely if courts affirmed it categorically, copyleft projects would lose meaningful leverage over commercial derivatives built at the API layer. Either resolution reorganizes which projects commercial actors build against.",
+    "founding_problem": "GPL projects needed a workable line between 'building on this code' (triggering reciprocity) and 'merely interoperating with this code' (not triggering it), because a maximally broad derivative-work standard would deter any commercial adoption and starve the ecosystem, while a maximally narrow standard would let trivial wrapper tricks evade copyleft entirely.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Commercial integrators and plugin vendors attest the API-boundary line is a workable and necessary compromise that keeps GPL projects commercially viable. Independent of that benefiting group, courts applying abstraction-filtration-comparison doctrine and academic copyright scholars analyzing technical coupling both describe the line as genuinely unsettled rather than resolved — no consensus corroboration exists outside the parties who benefit from the reading holding."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The GPL's derivative-work trigger has never been given a single settled reading: does linking two pieces of software, even loosely through a documented API, create a combined derivative work subject to copyleft, or does a clean interface boundary keep the pieces legally separate regardless of how tightly they cooperate at runtime? This story instantiates ONLY the interface-boundary reading: clean, stable API boundaries constitute non-derivative aggregation even under tight coupling. Under this reading, a proprietary module that calls a GPL program exclusively through a documented interface is not itself a derivative work, and its source need not be disclosed. This reading has become the practical operating assumption for large plugin ecosystems (databases, content management systems, IDEs) even though the FSF and allied commentators maintain that substantial technical coupling can still make the combination a derivative work in substance. The sibling readings (broad_copyleft_reading, narrow_linking_permissive_reading) are separate constraint stories with their own epsilon and their own beneficiary/victim structure — this story does not average across them or hedge its epsilon to accommodate them.",
+    "key_agents": [
+      "ecosystem_integrators: Primary beneficiary (organized/mobile) — build commercial value on the boundary reading",
+      "commercial_plugin_vendors: Primary beneficiary (moderate/constrained) — business model depends on the reading holding",
+      "gpl_project_maintainers: Agenda-setter (organized/constrained) — administers which reading their project adopts in practice",
+      "downstream_users_expecting_full_source: Primary target (powerless/trapped) — loses access to source they believed was guaranteed",
+      "copyleft_maintainers_seeking_reciprocity: Secondary target (moderate/constrained) — contributed labor under a reciprocity expectation this reading narrows",
+      "free_software_foundation_and_allied_advocates: Excluded voice (organized/analytical) — argues the reading is wrong but has no binding authority",
+      "courts_and_licensing_counsel: Analytical observer (institutional/analytical) — adjudicates case by case without settling the kernel"
+    ],
+    "logic_rationale": "Extraction is moderate (0.42 at interval end) rather than severe: the reading does enable real value capture by commercial actors who avoid disclosure obligations they might otherwise owe, but it also enables a genuine coordination function (letting a copyleft core interoperate with a broader commercial ecosystem at all). Suppression is moderate (0.38) — the reading is maintained by project-level interpretive practice and industry norm rather than heavy coercive enforcement; a determined litigant could still challenge a specific integration in court. Accessibility collapse is middling (0.4): alternative readings remain visibly contested in FAQs, legal commentary, and occasional litigation, so the interface-boundary reading has not fully foreclosed the field the way a settled legal rule would. Resistance is real (0.55) because the FSF and copyleft-committed contributors actively contest the reading in public discourse even though they cannot force a different outcome on any given project.",
+    "directionality_logic": "Ecosystem integrators and commercial plugin vendors sit near the beneficiary end: the reading is precisely what lets them retain proprietary value while consuming GPL infrastructure, and their exit options (redesign around a different architecture, or in the vendor case, migrate platforms) are real but costly, keeping them short of pure arbitrage. GPL project maintainers are the agenda-setters: they administer which reading their specific project's API practically instantiates, and benefit from wider commercial adoption in exchange for narrower practical reciprocity. Downstream users are the clearest targets — powerless, trapped in the sense that they cannot renegotiate the license after the fact, and they bear the cost of an expectation (full-stack source) that the reading does not honor. Copyleft-committed contributors are secondary targets: their labor was donated under an implicit reciprocity norm this reading narrows for commercial derivatives built at the API layer.",
+    "perspectival_gap": "From the ecosystem-integrator seat, this looks like a well-functioning scaffold: modular licensing coexistence that lets commercial and open-source development cooperate. From the seat of a user who assumed 'GPL' meant the whole running system was inspectable and modifiable, the same structure looks like an extraction mechanism that quietly narrows the license's promise at exactly the technical boundary most convenient for commercial capture. The engine computes both seats from the same structural data; the divergence is real and is not resolved by picking one seat's framing as authoritative.",
+    "mandatrophy_analysis": "The founding problem — needing a workable line between building-on and merely-interoperating-with GPL code — was live when the GPL was first drafted and arguably remains live today: no purely textual test resolves every architecture, and courts still decide these questions fact-by-fact. This keeps the reading from being a simple mandatrophy case (a dead founding problem propping up a live arrangement); the problem the API-boundary line answers has not disappeared, so the scaffold classification (transitional accommodation, not permanent settlement) fits better than declaring the reading either fully vindicated or a pure capture device.",
+    "kernel_context": "This constraint instantiates the interface_boundary_reading of the gpl_derivative_work_trigger kernel: clean API boundaries constitute non-derivative aggregation even under tight coupling. Two sibling readings exist as separate constraint stories: broad_copyleft_reading (any linking, even dynamic, creates a derivative work triggering disclosure) and narrow_linking_permissive_reading (linking is mere aggregation; only direct modification of GPL code triggers obligations). This story's epsilon (0.42, moderate) and beneficiary/victim structure are proper to this reading alone and are not averaged with or hedged against the siblings' distinct epsilon values."
+  },
+  "omegas": [
+    {
+      "id": "api_boundary_ambiguity_committer_structure",
+      "question": "Is the interface-boundary reading the operative reading of the gpl_derivative_work_trigger kernel, or does the broad_copyleft_reading (any linking creates a derivative work) or the narrow_linking_permissive_reading (only direct modification triggers obligations) better describe how courts and communities actually enforce the GPL for a given architecture?",
+      "resolution_mechanism": "This is the kernel-committer structure itself: no single case resolves it, because different jurisdictions, different projects, and different technical architectures instantiate different readings. A sibling reading would change which agents count as beneficiaries versus victims — under the broad reading, commercial plugin vendors become victims (facing forced disclosure) rather than beneficiaries; under the narrow reading, even the GPL project's own derivative modifications might escape reciprocity, harming copyleft maintainers further.",
+      "impact": "Adopting the broad reading instead would reclassify commercial_plugin_vendors and ecosystem_integrators as targets rather than beneficiaries, and would likely raise this story's epsilon substantially since the coordination function currently attributed to the API boundary would be read as extraction cover. Adopting the narrow reading would lower epsilon further and shift more victims toward copyleft_maintainers_seeking_reciprocity, since even less would trigger disclosure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This story is one committer reading of a genuinely contested kernel; the sibling readings are separate constraint stories with different epsilon and different victim sets, not measurement variants of this one."
+    },
+    {
+      "id": "technical_coupling_threshold",
+      "question": "At what degree of runtime coupling (shared memory, in-process function calls, versus network/IPC boundaries) does an 'API boundary' stop being clean enough to sustain the non-derivative-aggregation reading, even within this reading's own framework?",
+      "resolution_mechanism": "Case-by-case judicial application of abstraction-filtration-comparison analysis to specific technical architectures; a body of consistent rulings across jurisdictions would sharpen or collapse the boundary this reading depends on.",
+      "impact": "If courts converge on treating tight in-process coupling as derivative regardless of API formalism, this reading's practical scope narrows sharply even without abandoning its core premise, shrinking the beneficiary set to only genuinely loosely-coupled integrations.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the reading's own internal boundary (what counts as 'clean' coupling) is stable or will erode under judicial scrutiny."
+    },
+    {
+      "id": "user_expectation_versus_license_text",
+      "question": "Should the relevant standard for 'derivative work' be the GPL's own text and legislative-style intent, or the reasonable expectation of downstream users who understood the license as a full-stack source guarantee?",
+      "resolution_mechanism": "Survey or documented evidence of user understanding of GPL guarantees at time of adoption, weighed against textual and drafting-history analysis of the license itself; a values question ultimately, not fully resolvable by evidence alone.",
+      "impact": "If user expectation is weighted heavily, the interface-boundary reading looks more clearly extractive relative to what was promised; if license text and drafter intent control, the reading looks more like a legitimate, foreseen accommodation.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether the normative baseline for judging this reading's fairness should be textual license interpretation or downstream user expectation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_derivative_work_trigger__broad_copyleft_reading",
+      "gpl_derivative_work_trigger__narrow_linking_permissive_reading"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the gpl_derivative_work_trigger kernel. broad_copyleft_reading treats any linking as derivative-work-triggering (higher epsilon, plugin vendors and integrators become victims). narrow_linking_permissive_reading treats only direct code modification as triggering (lower epsilon, fewer victims among copyleft contributors). This story (interface_boundary_reading) sits structurally between them: it permits a real coordination function (modular mixed-licensing ecosystems) while shifting cost onto users and contributors who expected broader reciprocity. Each reading is authored with its own stable epsilon per the epsilon-invariance principle; they are not measurement variants of one constraint."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "gpl_v2_drafting_era_linking_ambiguity",
+    "drift_state": {
+      "moment": "contemporary_plugin_ecosystem_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "gpl_derivative_work_trigger__broad_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "formal_interface_separability_is_legally_dispositive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "runtime_coupling_tightness_is_legally_irrelevant_if_api_is_documented",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

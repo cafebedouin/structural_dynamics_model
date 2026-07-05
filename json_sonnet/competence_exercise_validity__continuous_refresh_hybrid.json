@@ -1,0 +1,302 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__continuous_refresh_hybrid",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "ebc68276-4bee-4bc1-bf34-fc52cab6356b"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Continuous Drill Cycle Requirement for Competence Retention",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "operating_organizations",
+      "frontline_operators",
+      "public_downstream_of_hazard"
+    ],
+    "victims": [
+      "shift_workers_bearing_drill_burden",
+      "training_budget_line_managers"
+    ],
+    "vindicated_propositions": [
+      "process_dependent_competence_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "operating_organizations",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sets the drill cadence and enforces it through certification requirements, audit schedules, and shift rostering that builds in recurring simulation time. Justifies the recurring cost by pointing to incident data showing skill decay between events. Bears the direct cost of running drills but avoids the far larger cost of a real failure caused by atrophied response capability."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Undergo repeated simulation cycles that keep procedural memory and muscle memory current. Benefit from genuinely higher survival and success odds during real events, but also bear the fatigue, scheduling disruption, and repeated performance-anxiety cost of drills that never end and are never 'passed' permanently."
+    },
+    {
+      "name": "shift_workers_bearing_drill_burden",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Absorb the recurring time cost of drills stacked onto already demanding shift schedules — lost rest, lost overtime pay opportunities, mandatory attendance regardless of fatigue state. Cannot opt out without risking certification lapse and employment consequences; the continuous-cycle requirement falls hardest on workers with least schedule flexibility."
+    },
+    {
+      "name": "training_budget_line_managers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must fund recurring drill infrastructure indefinitely rather than a one-time validation expense. Face perpetual budget pressure to prove the ongoing spend is still justified against competing capital priorities, without a clean endpoint at which the investment is 'done.'"
+    },
+    {
+      "name": "public_downstream_of_hazard",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Lives or works near the hazardous facility or system and depends entirely on operator competence during a real event. Has no visibility into whether drill cycles are actually maintained at effective frequency and no direct lever to demand it beyond regulatory proxies."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Audits drill records, sets minimum recurrence intervals, and can escalate enforcement when cadence lapses. Draws on incident investigation data across many operators to calibrate what recurrence interval actually correlates with retained competence, rather than trusting any single operator's self-report."
+    },
+    {
+      "name": "simulation_equals_catastrophe_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Argue drills are proxy-catastrophe events that fully substitute for real exposure and that a single well-designed simulation validates competence indefinitely. Not seated in the cadence-setting process; their position would eliminate the recurring cost this constraint imposes, so they have no institutional voice in setting drill frequency."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a recurring institutional commitment — funded, scheduled, audited — to keep hazard-response competence at a functional level across personnel turnover, memory decay, and procedure drift, solving the genuine problem that skills learned once erode without practice.",
+    "transfer_function": "Moves scheduling flexibility, rest time, and discretionary budget from shift workers and training managers into recurring drill infrastructure, in exchange for moving catastrophic-failure risk away from the public and frontline operators during real events.",
+    "absent_voices": "Advocates of the simulation-as-sufficient-proxy view and advocates of the real-catastrophe-only view are both excluded from the cadence-setting table; the former would argue for eliminating recurring cost after initial certification, the latter would argue no simulation regime is adequate at any cadence. Neither framing shapes the actual recurrence interval regulators set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the continuous-cycle requirement vanished and organizations reverted to one-time validation, certification would become a permanent credential rather than a maintained state; budget lines for recurring drills would be reallocated; and, per the documented skill-decay literature this reading relies on, response competence would degrade between real events with no institutional mechanism to detect or correct the drift until a real incident exposed it.",
+    "founding_problem": "Early safety regimes validated competence once at initial certification, then discovered during real incidents that responders whose only exposure was a single passed simulation years earlier could not perform under pressure — memory and procedural fluency had decayed silently with no intervening signal.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent incident-investigation boards across multiple regulatory jurisdictions attest to decay-driven response failures in post-incident reports, and academic skill-retention literature outside the operating organizations' own training departments corroborates that procedural competence measurably decays on timescales shorter than typical one-time-certification intervals."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the continuous_refresh_hybrid reading of the competence_exercise_validity kernel: neither the position that simulation alone permanently validates competence (simulation_as_proxy) nor the position that only a real catastrophe genuinely exercises it (real_catastrophe_only), but the claim that competence is a maintained process requiring recurring drill cycles, where simulation is necessary infrastructure but any single simulation event is insufficient on its own. The constraint is the institutional requirement — enforced through certification cadence, audit, and budget allocation — that drills recur rather than terminate after initial validation. The coordination function (retained hazard-response competence) is real and the extraction (recurring cost falling disproportionately on shift workers and training budgets, with organizations capturing the risk-reduction benefit) is also real, which is why this reading is claimed as tangled_rope rather than a pure rope or pure mountain.",
+    "logic_rationale": "Extractiveness (0.42) reflects that the recurring cost of drill cycles is real and unevenly distributed — organizations get the safety benefit and reputational insurance while shift workers absorb the scheduling and fatigue cost without proportional compensation. Suppression (0.38) is moderate: certification lapse consequences create real coercive pressure on workers and training managers to comply with the cadence, though it is not maximal because the underlying safety rationale is broadly accepted rather than purely coercive. Theater ratio (0.28) is nontrivially above zero and rising over the interval because as drill cycles mature into routine, a growing share of drill time in some regimes shifts toward documentation and box-checking rather than genuinely adversarial rehearsal — this is the Goodhart risk this reading must watch for even while defending the underlying continuous-cycle logic. Accessibility collapse (0.45) and resistance (0.4) are moderate: alternative regimes (one-time validation, or no simulation at all) remain conceivable and are actively argued for by excluded parties, so alternatives have not fully collapsed the way they would for a genuine mountain.",
+    "directionality_logic": "Operating organizations and public downstream beneficiaries sit toward the beneficiary end: the organization avoids catastrophic liability and reputational collapse, and the public receives protection it cannot directly monitor or price. Shift workers and training-budget managers sit toward the target end: they bear the recurring, non-terminating cost of a requirement that has no completion state, with constrained exit because certification lapse threatens employment or institutional standing. Frontline operators are dual-positioned — genuine beneficiaries of improved real-event survival odds, but also payers of the recurring drill burden, which is why they carry a secondary payer role rather than a single clean directionality.",
+    "mandatrophy_analysis": "The founding problem (silent competence decay after one-time validation, discovered through real incident failures) remains live and independently corroborated by incident-investigation boards outside the operating organizations, which is precisely what distinguishes this reading from a stalled mandate: the recurring cost persists because the decay mechanism it defends against continues to operate, not because of institutional inertia alone. Classifying this as tangled_rope rather than snare prevents mislabeling a genuine, evidence-grounded coordination function as pure extraction merely because its ongoing cost falls unevenly — the risk this reading must guard against is the rising theater_ratio trajectory tipping the balance toward performative drilling that no longer tracks retained competence, at which point the same structure would drift toward piton or snare.",
+    "kernel_context": "This constraint instantiates the continuous_refresh_hybrid reading of the competence_exercise_validity kernel. Two sibling readings exist as separate constraints: simulation_as_proxy (simulation itself, once passed, is treated as sufficient and permanent validation — no recurring cost, lower extraction, but also no defense against decay) and real_catastrophe_only (no simulation regime, however recurring, is treated as a valid substitute for real exposure — a position that would reject this entire constraint's coordination claim outright). This reading's distinguishing structural claim is that competence is process-dependent rather than state-validated: the safety record cited here demonstrates that continuous drilling correlates with retained competence, not that any simulation is equivalent to real catastrophe."
+  },
+  "omegas": [
+    {
+      "id": "decay_rate_empirical_basis",
+      "question": "Is the specific drill recurrence interval mandated by regulators actually calibrated to the true skill-decay curve for the hazard type in question, or is it a historically inherited round-number cadence (annual, quarterly) that has never been re-derived from decay data?",
+      "resolution_mechanism": "Cross-jurisdictional comparison of incident rates against varying drill-interval regimes, controlling for hazard type and workforce turnover, to establish whether the current cadence is evidence-derived or convention-derived.",
+      "impact": "If the interval is convention-derived rather than decay-derived, the extractiveness of the recurring requirement is higher than the safety justification supports, and the theater_ratio trajectory would be expected to accelerate as the mismatch between mandated cadence and actual decay curve widens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether drill recurrence intervals are decay-calibrated or historically inherited."
+    },
+    {
+      "id": "reading_boundary_simulation_sufficiency",
+      "question": "At what point, if any, does a sufficiently sophisticated and sufficiently frequent simulation regime become indistinguishable in practice from the continuous_refresh_hybrid reading's requirements — collapsing the distinction with simulation_as_proxy?",
+      "resolution_mechanism": "Compare high-fidelity, high-frequency simulation regimes against this reading's cadence requirements to determine whether the two readings converge in practice even while diverging in stated justification.",
+      "impact": "If they converge operationally, the kernel dispute is more about justificatory framing (process-dependent vs. state-validated) than about actual drill practice, which would reduce the practical stakes of the reading contest even though the underlying axioms remain distinct.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether this reading and simulation_as_proxy converge in operational practice despite differing foundational claims."
+    },
+    {
+      "id": "worker_burden_distribution_fairness",
+      "question": "Is the uneven distribution of drill burden onto shift workers with the least schedule flexibility a necessary feature of continuous-cycle competence maintenance, or a remediable allocation choice made by operating organizations to minimize their own scheduling cost?",
+      "resolution_mechanism": "Compare organizations that compensate drill time at premium rates or rotate drill burden equitably against those that do not, controlling for retained-competence outcomes, to see whether burden distribution is separable from the coordination function.",
+      "impact": "If separable, a substantial share of the measured extractiveness is a remediable allocation choice rather than an inherent cost of the coordination function, which would support reclassifying the burden-distribution component (not the drill requirement itself) as more purely extractive.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether uneven worker burden is inherent to the coordination function or a separable allocation choice."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "simulation_as_proxy",
+      "real_catastrophe_only"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the competence_exercise_validity kernel. simulation_as_proxy claims lower extraction and no recurring cost (single validation event treated as sufficient); real_catastrophe_only claims that no simulation regime, however recurring, satisfies the competence claim, and would classify any simulation-based drill regime as insufficient regardless of cadence. This reading (continuous_refresh_hybrid) sits structurally between them: it accepts simulation's necessity (against real_catastrophe_only) while rejecting its one-time sufficiency (against simulation_as_proxy), producing a distinct beneficiary/victim structure (recurring cost distribution) and a distinct ε profile (moderate, tangled_rope) that neither sibling reading shares."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "process_dependent_competence_maintenance",
+    "drift_state": {
+      "moment": "post_high_reliability_organization_research_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "competence_exercise_validity__simulation_as_proxy",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "competence_exercise_validity__real_catastrophe_only",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_is_process_not_state",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulation_necessary_but_not_terminal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

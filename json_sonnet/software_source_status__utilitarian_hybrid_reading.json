@@ -1,0 +1,286 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__utilitarian_hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "c14a1472-0d20-4c99-9053-c329f48e5470"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.18,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Utilitarian Hybrid Reading of Software Source Status (Context-Optimized Licensing)",
+    "topic_domain": "software_engineering/political_economy_of_technology/intellectual_property",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "infrastructure_dependent_developers",
+      "software_consuming_public",
+      "specialized_tool_vendors",
+      "mixed_ecosystem_integrators"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "aggregate_welfare_maximization_standard",
+      "context_dependent_licensing_optimality"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "infrastructure_dependent_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build on shared infrastructure — compilers, operating system kernels, networking stacks, cryptographic libraries — where open licensing lets them inspect, fork, and harden the tools their work depends on. Under this reading they benefit from a norm that pushes foundational layers toward openness while leaving room to build proprietary products above that layer."
+    },
+    {
+      "name": "specialized_tool_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develop narrow, high-investment tools — CAD systems, scientific instrumentation software, niche vertical applications — where the fixed cost of development is large relative to the addressable market. This reading's welfare calculus explicitly validates proprietary licensing here, on the argument that closed models fund development that would not otherwise occur, so vendors are not treated as illegitimate rent-seekers by default."
+    },
+    {
+      "name": "mixed_ecosystem_integrators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Assemble products that combine open infrastructure with proprietary components — enterprise software vendors, cloud platform builders, embedded systems integrators. They benefit from the reading's permission to mix models but also bear the ongoing cost of navigating license compatibility, dual-licensing terms, and the absence of a single bright-line rule telling them what is permitted."
+    },
+    {
+      "name": "software_consuming_public",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Uses the resulting mixed ecosystem of software without much say in how any individual license is set. Benefits when the welfare calculus correctly routes commodity infrastructure toward openness (lower prices, more scrutiny, more interoperability) but has no direct voice in whether any specific vendor's proprietary claim is actually welfare-maximizing or just self-serving."
+    },
+    {
+      "name": "free_software_movement_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold that software freedom is a non-negotiable ethical baseline, not one input to a welfare calculation to be traded off against vendor investment incentives. This reading treats their categorical claim as one consideration among several rather than as a side constraint, which the advocates experience as their core commitment being quietly demoted rather than engaged."
+    },
+    {
+      "name": "proprietary_rights_absolutists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold that creators have an unconditional right to restrict access to their work regardless of aggregate welfare effects. This reading subordinates that right to a welfare test, which the absolutists experience as their property claim being made contingent on a calculation courts, users, or economists could someday declare against them."
+    },
+    {
+      "name": "welfare_economists_and_policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Attempt to measure whether specific licensing arrangements actually maximize aggregate welfare — comparing consumer surplus, innovation rates, security outcomes, and market concentration across open and proprietary regimes. Their empirical findings are the load-bearing evidence this reading depends on but cannot itself generate."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a decision procedure for allocating source-status (open vs. proprietary) across the software ecosystem by asking, per artifact, which regime produces greater aggregate welfare given that artifact's development-cost structure, network effects, and substitutability — rather than applying one licensing rule universally.",
+    "transfer_function": "Does not transfer resources through a single fixed channel the way a tangled rope or snare would; instead it allocates legitimacy — it moves the burden of justification onto whichever regime (open or closed) is claimed for a given piece of software, requiring a welfare argument rather than granting either regime default legitimacy.",
+    "absent_voices": "Free software movement advocates and property-rights absolutists are both structurally present as objectors but functionally sidelined: the welfare calculus treats their categorical claims as one input among several, not as trumps, so neither position's core premise gets to actually determine outcomes even though both are loudly represented in public debate.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If this reading vanished, the two categorical readings (freedom_imperative and property_rights) would fill the vacuum and each would claim their principle as the correct default, restarting a legitimacy contest that the utilitarian hybrid reading currently manages by refusing to grant either side automatic priority. Vendors and developers who currently rely on 'it depends on context' as a working norm would lose that flexibility and face pressure to justify their licensing choice against a single categorical standard instead of a case-by-case welfare argument — a real practical change for mixed-ecosystem integrators, but not a change to the underlying technical capabilities of any software itself.",
+    "founding_problem": "Neither pure free-software absolutism nor pure property-rights absolutism could account for observed cases where the 'wrong' regime by their own lights produced better outcomes — infrastructure that thrived once opened, specialized tools that would never have been built without proprietary funding — so a framework was needed that could evaluate licensing choices by their actual welfare effects rather than by which side's foundational premise the software happened to satisfy.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Attested partly from outside any single benefiting party: empirical software-economics literature (e.g. studies of open-source adoption curves, security-outcome comparisons, and venture-funded proprietary tool markets) documents genuine welfare variance across licensing regimes that neither categorical camp fully predicts. However, the standard's practical application in any given dispute is still adjudicated largely by parties with a stake in the outcome — courts, industry consortia, and funding bodies whose welfare assessments are not independently audited — so corroboration of the standard's abstract validity is stronger than corroboration of its case-by-case application."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the utilitarian hybrid reading of the software_source_status kernel: the claim that software licensing should be evaluated case-by-case for its effect on aggregate welfare rather than governed by a single categorical rule. Under this reading, foundational infrastructure tends toward openness (network effects, security-by-scrutiny, avoidance of lock-in externalities favor open licensing at that layer) while narrow, high-fixed-cost specialized tools can legitimately be proprietary (the welfare loss from restricted access is outweighed by the welfare gain from investment the proprietary model funds). This is a distinct constraint from its sibling readings, not a synthesis or an average of them — it has its own ε, its own beneficiary structure (diffuse, context-dependent, with no categorical victim set), and its own classification path. The freedom_imperative_reading (software freedom as unconditional ethical requirement), the pragmatic_development_reading (openness as superior methodology, freedom as instrumental), and the property_rights_reading (software as property, restriction as a legitimate right) are each separate constraint stories with their own metrics; they are not represented inside this file except as named siblings in cs_structure and as excluded-voice stakeholders whose categorical claims this reading declines to adopt as trumps.",
+    "key_agents": [
+      "infrastructure_dependent_developers: primary beneficiary (moderate/mobile) — gains from open-licensed foundational layers",
+      "specialized_tool_vendors: beneficiary (organized/mobile) — gains legitimacy for proprietary models in narrow markets",
+      "mixed_ecosystem_integrators: beneficiary and payer (moderate/constrained) — gains flexibility, bears compliance complexity",
+      "software_consuming_public: diffuse beneficiary (powerless/constrained) — benefits indirectly from correctly-routed licensing",
+      "free_software_movement_advocates: excluded voice (organized/civilizational) — categorical claim demoted to one input",
+      "proprietary_rights_absolutists: excluded voice (organized/civilizational) — categorical claim made contingent on welfare test",
+      "welfare_economists_and_policy_analysts: analytical observer — supplies the empirical evidence the standard depends on"
+    ],
+    "logic_rationale": "Extractiveness is low (0.28) and drifts only slightly upward over the interval: this reading does not concentrate extraction on an identifiable victim class the way a snare or tangled rope would — its costs are diffuse (compliance friction for integrators, unresolved contest for the excluded categorical camps) rather than a rent flowing to a concentrated beneficiary. Suppression is low (0.18) because no party is coercively barred from advocating their preferred licensing model; the categorical camps remain free to argue their position, they simply do not get automatic priority. Accessibility collapse is moderate-low (0.25): alternatives to case-by-case welfare reasoning (the categorical readings) remain fully articulable and are in fact live constraints elsewhere in the kernel family, so nothing has collapsed — the reading coexists with rather than eliminates its alternatives. Resistance is moderate (0.35), reflecting genuine, sustained objection from both categorical camps who experience the welfare calculus as illegitimately relativizing what they hold as absolute principles.",
+    "perspectival_gap": "From the infrastructure-dependent developer and specialized-vendor seats, this reading looks like straightforward coordination — a sensible rule that lets different needs get different treatment. From the excluded categorical seats (free software absolutists, property rights absolutists) the same reading looks like an erosion of their principle into a mere factor to be weighed, which they experience as a loss even though no resource has been extracted from them in the conventional sense — the loss is normative standing, not material extraction.",
+    "directionality_logic": "No stakeholder here is a structural victim in the classical extraction sense — this reading's expected structural delta explicitly specifies no categorical victim set, and the beneficiary declarations reflect that: infrastructure developers, tool vendors, integrators, and the general public all derive some welfare gain from context-appropriate licensing, with costs (mainly compliance complexity for integrators, and standing-loss for the excluded categorical camps) diffused rather than concentrated. This differs sharply from the property_rights_reading, where restricted-access users would be structural targets, and from the freedom_imperative_reading, where proprietary vendors would be structural targets — this reading's whole point is to avoid manufacturing a categorical victim class.",
+    "mandatrophy_analysis": "The founding problem (neither absolutist premise survives contact with the empirical record of what actually maximizes welfare) remains live: the underlying tension between infrastructure economics and specialized-tool economics has not resolved, so this is not a mandate that has outlived its function. But because the standard's application in any concrete dispute is often adjudicated by interested parties rather than the analytical seat, there is real risk of mandatrophy at the point of use — a vendor could invoke 'welfare maximization' as cover for what is actually simple rent extraction, without triggering a formal reclassification, because the standard's abstract legitimacy is real even where its case-by-case invocation is not audited.",
+    "kernel_context": "This story instantiates the utilitarian_hybrid_reading of the software_source_status kernel. The kernel is the underlying contested question — what determines the legitimate source-status (open vs. proprietary) of software. Sibling readings NOT instantiated in this file: freedom_imperative_reading (software freedom as unconditional ethical baseline; proprietary software as inherent injustice), pragmatic_development_reading (open source as methodologically superior, with freedom as an instrumental rather than intrinsic good), and property_rights_reading (software as intellectual property with an unconditional creator right to restrict). This reading differs from all three in refusing categorical priority: it treats the question as an empirical optimization problem, evaluated context by context, with no fixed victim or beneficiary class assigned in advance."
+  },
+  "omegas": [
+    {
+      "id": "welfare_measurement_underdetermination",
+      "question": "Is 'aggregate welfare' in this reading a well-defined, measurable quantity, or does its apparent precision hide the fact that welfare comparisons across open and proprietary regimes depend on contested weightings (consumer surplus vs. producer surplus, short-run access vs. long-run innovation incentive) that are themselves value judgments?",
+      "resolution_mechanism": "Cross-check independent welfare-economics studies of comparable licensing decisions for convergent vs. divergent conclusions; divergence driven by weighting choices rather than data would indicate the standard smuggles in unstated value premises under an empirical-sounding label.",
+      "impact": "If welfare measurement is substantially underdetermined, this reading risks functioning as a laundering mechanism — any licensing choice can be retrofitted with a welfare justification — which would push its practical operation closer to a tangled rope (coordination language covering discretionary extraction) than the rope classification the low measured extractiveness currently supports.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether aggregate welfare is a measurable standard or a contested-weighting construct dressed as empirical."
+    },
+    {
+      "id": "committer_framing_alternative_readings",
+      "question": "Is the utilitarian hybrid reading genuinely a fourth distinct position, or is it better understood as a meta-level arbitration procedure that sits above the other three readings and adjudicates between them, rather than as a sibling occupying the same level?",
+      "resolution_mechanism": "Examine whether any real-world licensing dispute has been resolved by explicit appeal to welfare-maximization reasoning as opposed to appeal to freedom, property rights, or pragmatic development-quality arguments — if disputes are consistently resolved by translating into one of the three other readings' vocabulary, the hybrid reading may be descriptively empty at the point of application even though it is coherent in principle.",
+      "impact": "If the hybrid reading is actually a meta-level arbitration function rather than a peer reading, its cs_structure relations to the three siblings would need re-examination — it might more accurately 'influence' all three rather than merely 'coexist' with them, since an arbitration procedure structurally constrains how the object-level readings can be invoked in practice.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether this reading is a peer position or a meta-level procedure standing above its siblings."
+    },
+    {
+      "id": "excluded_voice_correction_risk",
+      "question": "Does treating the free-software and property-rights absolutist positions as inputs to a welfare calculation rather than as trumps risk systematically under-weighting non-consequentialist harms (e.g., dignitary harms from being denied the right to inspect code that governs one's own devices) that a welfare framework is not well-suited to capture?",
+      "resolution_mechanism": "Solicit direct testimony from the excluded stakeholder groups on cases where they believe welfare-framed reasoning produced an outcome they experienced as a rights violation rather than a mere cost, and assess whether the welfare framework has a mechanism for incorporating that testimony as more than one more input.",
+      "impact": "If such harms are structurally invisible to the welfare calculus, the 'no categorical victim set' claim in this reading's expected structural delta would need qualification — there may be a diffuse but real victim class (users and developers whose rights-based objections get systematically discounted) that current metrics do not capture.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether welfare-maximization reasoning structurally discounts rights-based objections that resist consequentialist translation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "software_source_status__freedom_imperative_reading",
+      "software_source_status__pragmatic_development_reading",
+      "software_source_status__property_rights_reading"
+    ],
+    "dual_formulation_note": "This story is one of four sibling constraints decomposing the natural-language concept 'the software freedom debate' / 'the open source vs proprietary question' per the ε-invariance principle. Each sibling reading of the software_source_status kernel is authored as its own file with its own ε, beneficiary/victim structure, and classification: freedom_imperative_reading (categorical ethical claim, proprietary software as injustice), pragmatic_development_reading (instrumental methodological claim), property_rights_reading (categorical property claim), and this file, utilitarian_hybrid_reading (context-dependent welfare-optimization claim, the only reading with no categorical victim set). The readings are linked bidirectionally via affects_constraints because each reading's practical uptake shifts the legitimacy conditions and resource availability for the others — e.g. growth in this reading's institutional acceptance (welfare-based licensing review in courts or standards bodies) reduces the property_rights_reading's ability to claim unconditional restriction rights, and increases pressure on the freedom_imperative_reading to justify its categorical claim in welfare terms it originally rejected."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "context_dependent_welfare_optimization",
+    "drift_state": {
+      "moment": "contemporary_platform_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "software_source_status__freedom_imperative_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "software_source_status__pragmatic_development_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "software_source_status__property_rights_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "licensing_legitimacy_is_context_dependent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "no_categorical_source_status_default",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

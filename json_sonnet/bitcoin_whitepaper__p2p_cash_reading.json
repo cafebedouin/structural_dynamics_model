@@ -1,0 +1,347 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__p2p_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "7c18c037-9ec6-4ed2-a209-403c0f860b21"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.31,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin as Peer-to-Peer Electronic Cash (Satoshi/Small-Block-Descendant Reading)",
+    "topic_domain": "cryptocurrency_economics/monetary_systems/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_block_miners",
+      "merchant_payment_processors",
+      "early_low_fee_users",
+      "onchain_scaling_developers"
+    ],
+    "victims": [
+      "small_transaction_users",
+      "unbanked_remittance_senders",
+      "users_priced_out_by_fee_markets",
+      "competing_small_block_chain_holders"
+    ],
+    "vindicated_propositions": [
+      "electronic_cash_thesis",
+      "low_fee_accessibility_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "large_block_miners",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Mining pools and hardware operators who advocate raising the block size limit so more transactions clear per block, keeping fees low and volume high. They set the practical agenda on which software forks get run and campaigned for on-chain scaling forks. They can redeploy hashpower to whichever chain rewards them, so their exit is comparatively cheap."
+    },
+    {
+      "name": "onchain_scaling_developers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Maintain client software implementing the cash-first reading, argue block size limits should scale with demand, and control which changes ship in their fork. Their credibility and funding depend on Bitcoin (or a Bitcoin-descended chain) functioning as everyday payment rail rather than settlement-only asset."
+    },
+    {
+      "name": "merchant_payment_processors",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Businesses that accept on-chain payments for goods and services depend on transaction fees staying low enough that small purchases remain economical. They lobby publicly for capacity increases and route volume toward whichever implementation keeps fees down; if fees rise structurally, their entire business model of accepting direct on-chain payment collapses."
+    },
+    {
+      "name": "small_transaction_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individuals who want to send small-value payments peer-to-peer without intermediaries. When block space is scarce and fee markets dominate, a fee that once cost cents can exceed the value of the transaction itself, pricing them out of the exact use case the whitepaper describes. Their only recourse is off-chain layers (custodial or semi-custodial) that reintroduce the intermediaries the constraint was meant to eliminate, or abandoning the base chain entirely."
+    },
+    {
+      "name": "unbanked_remittance_senders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "People without bank access who were promised censorship-resistant electronic cash as an alternative to costly remittance corridors. Fee volatility during network congestion periods has repeatedly made on-chain remittance more expensive than the traditional services it was supposed to disrupt, with no practical fallback since they lack banking access in the first place."
+    },
+    {
+      "name": "users_priced_out_by_fee_markets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "A broader class of would-be users who evaluated Bitcoin against its stated purpose (direct electronic cash) and found the achieved fee environment incompatible with that purpose during periods of high demand, so they transact elsewhere or not at all."
+    },
+    {
+      "name": "competing_small_block_chain_holders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Holders and developers of the chain that retained the original small block size and rejected the on-chain scaling premise; they bear reputational and market-value costs from being cast as having 'abandoned' the cash use case, and their chain's market share was structurally disadvantaged once the dominant chain's community and liquidity consolidated around the alternate reading."
+    },
+    {
+      "name": "store_of_value_holders",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Long-term holders who prioritize base-layer security and scarcity over transactional throughput are structurally opposed to this reading's block-size-expansion agenda, since larger blocks raise validation costs and could weaken decentralization guarantees they value. Their objections are visible in the sibling digital-gold reading but are not part of this constraint's own operating logic."
+    },
+    {
+      "name": "protocol_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic and independent researchers who study the empirical fee-market and transaction-throughput data without holding a stake in either the payments or store-of-value camps, publishing analyses of who is actually priced out and when."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a payment network in which any two parties can transact directly without a trusted third party, by keeping block capacity sufficient that ordinary transactions clear cheaply and quickly — solving the genuine problem of intermediary-dependent, censorable payment rails.",
+    "transfer_function": "Moves transaction-processing capacity and fee revenue: when block capacity is constrained relative to demand, value transfers from would-be low-value transactors (priced out or forced into fee auctions) to those who can afford fees, to entities offering off-chain alternatives, and to whichever developer/miner coalition controls the capacity-setting decision.",
+    "absent_voices": "Unbanked remittance users and small-transaction users in the developing world are the demographic most directly invoked in the whitepaper's stated purpose, but they have no seat in the governance conversations (developer mailing lists, mining pool coordination, protocol conferences) that set block size and fee policy.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If this reading's practical claim (low fees, expanded capacity as legitimate goal) disappeared as an organizing principle, on-chain small-value payments would become structurally unavailable and off-chain/custodial layers would absorb that demand — a real rearrangement for payment-use-case participants. But holders oriented to the sibling digital-gold reading would see no change at all, since their use case does not depend on this reading prevailing. The verdict is genuinely contested because the two readings' constituencies experience disappearance completely differently.",
+    "founding_problem": "The 2008 whitepaper was written to solve unauthorized reversal and third-party trust dependency in electronic payments — enabling any two willing parties to transact directly without relying on a financial institution as intermediary.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Independent protocol researchers and academic economists studying on-chain fee data corroborate that the small-payment use case has become empirically unreliable during demand spikes, supporting the claim that the founding problem (intermediary-free payment) is no longer straightforwardly solved at the base layer for small transactions. Onchain-scaling developers and merchant processors, who benefit from this reading prevailing, also attest the problem is live and worsening under the rival reading's dominance — but their attestation alone would be self-serving; the researcher corroboration is the material outside-party evidence."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.31,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint isolates the peer-to-peer electronic cash reading of the Bitcoin whitepaper's kernel claim: that Bitcoin functions as censorship-resistant money for direct transactions between parties, which structurally implies that keeping transaction fees low and block capacity adequate to demand is not merely a technical preference but the constraint's core legitimacy condition. This reading was the operative interpretation from Bitcoin's 2009 launch through roughly the 2015-2017 block-size contentious-fork period, after which the dominant chain's governing coalition settled into a different reading (digital_gold_reading, favoring fixed small blocks and off-chain scaling) while a minority chain preserved the cash-first premise. The measurements track the widening gap between this reading's promise (cheap universal transacting) and its achieved state on the chain(s) that still claim to instantiate it, as demand periodically outstripped whatever capacity commitments were in force. This is a genuinely separate constraint from digital_gold_reading: the two readings have different beneficiary/victim sets (large-block miners and remittance users here vs. long-term holders and base-layer security purists there), different claimed types, and different ε trajectories — they are not the same constraint measured two ways.",
+    "key_agents": [
+      "large_block_miners: agenda-setting beneficiaries who campaign for capacity expansion",
+      "onchain_scaling_developers: agenda-setters maintaining the cash-first client implementations",
+      "small_transaction_users and unbanked_remittance_senders: powerless payers, the demographic the whitepaper names as intended beneficiaries but who bear the cost when the reading's promise is not met",
+      "store_of_value_holders: excluded from this constraint's operating logic but central to the sibling reading's conflict with it",
+      "protocol_researchers: analytical observers tracking empirical fee-market outcomes"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.42) rather than extreme because when this reading's capacity commitments hold, the coordination function genuinely operates — cheap peer-to-peer transacting is real and delivered to many users much of the time. But extraction rises during demand-congestion periods when the same infrastructure that promises universal access becomes a fee auction that structurally excludes the lowest-value transactions it was designed to serve, transferring value to those able to pay fee premiums and to off-chain intermediary services that reintroduce exactly the trust dependency the whitepaper sought to eliminate. Suppression is moderate (0.31): there is no single actor coercively blocking alternatives, but network effects, liquidity concentration, and social/ideological pressure within the community make exit to alternative chains costly and reputation-laden, which functions as soft suppression. Theater ratio (0.38) reflects that a meaningful share of continued advocacy for this reading (repeated announcements of layer-2 fixes, promises that scaling is 'coming') has drifted toward reassurance rhetoric relative to delivered base-layer capacity.",
+    "perspectival_gap": "From the agenda-setting seats (large-block miners, onchain-scaling developers), this operates as functioning coordination they built and maintain in good faith against resistance from a rival faction. From the payer seats (small-transaction users, unbanked remittance senders), it operates as a promise that periodically fails exactly when they need it, with no institutional recourse — the engine's per-seat computation should register this divergence structurally rather than resolve it toward either seat's self-report.",
+    "directionality_logic": "Large-block miners and onchain-scaling developers are near the beneficiary end: they set policy, capture continued relevance/revenue from the payments use case succeeding, and have mobile exit if their preferred chain underperforms. Merchant processors are beneficiaries whose business model depends on the reading holding. Small transaction users, unbanked remittance senders, and fee-priced-out users are targets: they bear the direct cost of capacity shortfalls with constrained or trapped exit (the remittance-dependent population in particular lacks banking alternatives, which is precisely why d should sit near the full-target end for that group even though nominal 'exit' to another payment method nominally exists — the alternative is the costly system Bitcoin was meant to replace).",
+    "mandatrophy_analysis": "The founding problem (trust-free direct payment) is contested rather than cleanly live or dead: it remains genuinely solved for users transacting during low-congestion periods, but empirically fails during exactly the demand spikes when the promise matters most, which prevents either a clean 'still functioning as coordination' or 'fully mandatrophied into extraction' verdict. Classifying this as tangled_rope rather than snare or rope captures that both a real coordination function and asymmetric extraction coexist and require active defense (continued advocacy, forking, marketing) to sustain — collapsing it to either pure category would mislabel either the genuine transactions that succeed or the users structurally failed by the same mechanism.",
+    "kernel_context": "This constraint instantiates the p2p_cash_reading of the bitcoin_whitepaper kernel: Bitcoin as censorship-resistant medium of exchange prioritizing low fees and on-chain capacity expansion. Two sibling readings exist as separate constraints: digital_gold_reading (Bitcoin as scarce store-of-value/inflation-hedge asset, prioritizing base-layer scarcity and fixed block size over transactional throughput) and protocol_ossification_reading (protocol changes illegitimate absent near-universal consensus, prioritizing stability over any functional change including capacity expansion). This reading's core commitment — that capacity should scale with transactional demand — directly conflicts with protocol_ossification_reading's commitment to near-unanimous-consent-gated change, since capacity expansion historically required exactly the kind of contentious, non-unanimous fork that ossification-reading treats as illegitimate."
+  },
+  "omegas": [
+    {
+      "id": "cash_vs_gold_reading_primacy",
+      "question": "Which reading of the Bitcoin whitepaper — payments medium or store-of-value asset — represents the 'true' or founding intent of the system, and does that question even have a determinate answer given the whitepaper's own ambiguous framing (it invokes both 'electronic cash' and monetary-scarcity arguments)?",
+      "resolution_mechanism": "Textual and historical analysis of Satoshi Nakamoto's early writings, mailing list posts, and the whitepaper's own emphasis, weighed against which reading the surviving dominant chain's community and market capitalization have converged upon — though convergence is a sociological fact, not necessarily a resolution of authorial intent.",
+      "impact": "If the payments reading is judged the authoritative one, the dominant chain's current fee/capacity policy is a departure from founding purpose (supporting a mandatrophy or drift narrative); if the store-of-value reading is judged authoritative or co-equal, the current policy is a legitimate evolution rather than a broken promise.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the whitepaper has one determinate founding intent or genuinely supports multiple co-equal readings."
+    },
+    {
+      "id": "layer_two_adequacy",
+      "question": "Do off-chain scaling solutions (payment channels, sidechains) fully substitute for base-layer capacity in delivering the direct-transaction promise, or do they reintroduce enough custodial/trust dependency that the whitepaper's core claim (no trusted third party) is compromised?",
+      "resolution_mechanism": "Empirical study of what fraction of layer-2 payment volume flows through custodial versus genuinely non-custodial channels, and whether unbanked/remittance populations in practice access non-custodial layer-2 tools or default to custodial services.",
+      "impact": "If layer-2 substitution is largely non-custodial and effective, extraction from small-transaction users is lower than the base-layer fee data alone suggests. If substitution is largely custodial, the measured extraction understates the true cost, since users are pushed back toward the intermediary-dependent model the constraint claims to eliminate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether off-chain layers preserve or undermine the trust-minimization promise for the population priced off the base chain."
+    },
+    {
+      "id": "which_chain_instantiates_this_reading",
+      "question": "After the 2017 fork, does this constraint's p2p_cash_reading still apply to the dominant chain (via layer-2 development) or does it more accurately describe the minority chain that retained expanded block sizes, or does it apply to neither in its original form?",
+      "resolution_mechanism": "Track on-chain fee and throughput data across both chains over time relative to demand, and assess which chain's governing coalition actually still holds capacity-expansion as an operative policy commitment versus rhetorical legacy.",
+      "impact": "If the reading is best instantiated by the minority chain, this constraint's stakeholder power/scope figures (built around the historically dominant chain's scale) would need adjustment; if neither chain cleanly instantiates it, the reading may itself be better modeled as effectively dead rather than contested.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in which existing blockchain, if any, is the live instantiation of this reading after the community split."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_gold_reading",
+      "protocol_ossification_reading"
+    ],
+    "dual_formulation_note": "Part of the bitcoin_whitepaper kernel family (3 readings). This story (p2p_cash_reading) shares the founding text with digital_gold_reading and protocol_ossification_reading but instantiates a structurally distinct constraint: different beneficiary/victim sets, different claimed type (tangled_rope here vs. likely rope/mountain framing for digital_gold_reading's scarcity claim, vs. a governance-procedural framing for protocol_ossification_reading), and a different ε trajectory driven by fee-market dynamics rather than monetary-scarcity dynamics or governance-consensus dynamics. All three link to each other because a change in one reading's dominance (e.g. a successful block-size fork) directly alters resource availability and legitimacy conditions for the others."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "bitcoin_whitepaper__digital_gold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bitcoin_whitepaper__protocol_ossification_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "capacity_must_scale_with_transactional_demand",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "low_fee_accessibility_is_the_primary_success_criterion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "genesis_block_direct_payment_vision",
+    "drift_state": {
+      "moment": "post_2017_fee_market_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "header": {
+    "constraint_id": "feudal_oath_reciprocity__vassal_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "0319003f-bd47-4d62-ba8a-d5bd467a1f6c"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.18,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Feudal Oath as Fixed Reciprocal Charter Obligation (Vassal Coordination Reading)",
+    "topic_domain": "medieval political economy / legal history / institutional analysis",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "vassal_landholders",
+      "liege_lords",
+      "regional_peace_and_succession_order"
+    ],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "vassal_landholders",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Hold land and jurisdiction in exchange for a fixed, enumerated set of military and counsel obligations set out in the charter or customary record of the oath. They know in advance the ceiling on what can be demanded of them — a specified number of days' service, specified aids on specified occasions (ransom, eldest son's knighting, eldest daughter's marriage) — and can invoke the charter text against demands exceeding it. Exit from a given lord is difficult (land and lineage are entangled with the relationship) but the terms themselves are not open-ended, which is the coordination good this reading identifies."
+    },
+    {
+      "name": "liege_lords",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Grant land and protection in exchange for military service and counsel, and administer the oath's enforcement (calling up levies, adjudicating disputed obligations, hearing homage). Their own capacity to extract is bounded by the same charter text that binds the vassal — demanding beyond the enumerated obligations invites the vassal's recognized right of diffidatio (renunciation) and peer judgment in the lord's own court. This reading treats the lord as a co-bound party to a fixed schedule, not as an unconstrained extractor."
+    },
+    {
+      "name": "peer_vassals_court",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "The assembled body of fellow vassals who sit in judgment when a lord is accused of exceeding the charter's bounds or a vassal is accused of default. Their role is to interpret and enforce the fixed schedule of obligations as a coordination mechanism among peers with parallel interests in a stable, predictable regime, rather than as agents of either party."
+    },
+    {
+      "name": "regional_peace_and_succession_order",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Not an actor but the coordination good this reading names: a predictable succession, mustering, and dispute-resolution order across a fragmented territory lacking centralized administration. It is what the fixed, mutually enforceable obligation schedule produces when both parties keep to the charter."
+    },
+    {
+      "name": "unlanded_peasantry",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Work the land under the vassal's jurisdiction but are not party to the oath at all — the charter's reciprocal bounds run between lord and vassal only. They have no voice in setting or enforcing the schedule of obligations and bear whatever burdens the vassal in turn passes downward to meet the vassal's own service quota; this reading does not extend the coordination-good framing to them, and their absence from the charter relationship is exactly what the sibling extraction reading would foreground."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Converts an otherwise unbounded, renegotiable relationship of protection-for-service into a fixed, mutually legible schedule of obligations — a specific number of knight's-fee service days, specified aids on specified occasions, specified counsel duties — recorded or attested in charter form so that neither party can unilaterally escalate demands without breaching a text both can invoke.",
+    "transfer_function": "Land, jurisdiction, and protection flow from lord to vassal; military service, counsel, and specified aids flow from vassal to lord — both flows are capped by the charter's enumerated terms rather than open to continuous renegotiation.",
+    "absent_voices": "The unlanded peasantry working the vassal's land are not party to the oath and have no forum to contest obligations passed down to them; the sibling ecclesiastical_mediation_reading would also note the Church's independent claim to bound the relationship by sacramental obligation, a claim this reading treats as external to the charter mechanism itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the fixed, charter-enforced schedule vanished and reverted to open-ended personal fealty with no textual ceiling, both lords and vassals would lose the predictability that lets them plan military musters, successions, and inheritances years in advance; peer courts would lose their reference standard for adjudicating disputes, and the region would revert to case-by-case negotiation backed only by relative force — a materially different and less stable arrangement.",
+    "founding_problem": "In a territory without centralized administrative capacity to levy troops, collect revenue, or adjudicate disputes directly, some mechanism was needed to let a lord raise a reliable, predictable military and administrative capacity from landholders without renegotiating terms with each individually and continuously, while giving those landholders enough certainty about the ceiling on demands to invest in the land and pass it to heirs.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Legal historians examining surviving charters, feudal registers (e.g., cartularies, the Domesday-adjacent inquest records, and later custumals) attest that the coordination problem — raising predictable levies and settling succession without central bureaucracy — was real in the high medieval period and is now solved by other means (standing armies, centralized taxation, statutory inheritance law) in every jurisdiction where feudal tenure has since been abolished. This corroboration comes from historians and legal scholars outside the beneficiary class (neither lords nor vassals), though it should be noted that no contemporary party to the arrangement itself survives to attest either way."
+  },
+  "interval": {
+    "start": 0,
+    "end": 400
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 160,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 240,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 320,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 160,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 240,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 320,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The feudal oath — homage and fealty between a lord and a vassal, backed by charter or customary text specifying the bounded schedule of military service, counsel, and aids owed in exchange for land and protection — is a single institutional label covering structurally distinct claims depending on which enforcement mechanism and which party's bound the analyst foregrounds. This story instantiates the VASSAL COORDINATION reading: the oath as a fixed, textually bounded reciprocal schedule that both parties can invoke against the other's overreach, functioning as genuine coordination infrastructure in a territory lacking centralized administration. This is deliberately narrow — it is not a claim that feudal tenure was benign in general, only that THIS reading (fixed reciprocal bounds, mutual enforceability via charter and peer court) is a coordination mechanism with negligible structural extraction. The sibling readings (lord_extraction_reading: oath as cover for open-ended extraction bounded only by vassal capacity; ecclesiastical_mediation_reading: oath bound by Church-imposed charity obligations) are separate constraints with their own ε, not alternative measurements of this one.",
+    "key_agents": [
+      "vassal_landholders: primary co-beneficiary (moderate/constrained) — receives land and protection, owes bounded service",
+      "liege_lords: agenda-setter and co-beneficiary (powerful/constrained) — grants land and protection, bound by the same charter ceiling",
+      "peer_vassals_court: enforcement and interpretation body (organized/mobile) — adjudicates charter compliance disputes",
+      "unlanded_peasantry: excluded voice (powerless/trapped) — not party to the oath, bears downstream burdens with no charter standing",
+      "regional_peace_and_succession_order: the coordination good itself, not an actor"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.22) and rising only modestly across the interval because the defining feature of THIS reading is that the schedule is fixed and textually enumerated — demands beyond the charter's terms are the exception that peer courts exist to check, not the rule. Suppression is low (0.18): the mechanism that holds the arrangement together is mutual textual invocation and peer adjudication, not coercive enforcement against a trapped party, though the vassal's practical exit is genuinely constrained by land and lineage entanglement (hence exit_options: constrained rather than mobile). Theater ratio is low and stable (0.08 rising to ~0.15): the charter obligations are functionally invoked (musters actually occur on the schedule, aids are actually collected at the specified life events) rather than performed. Accessibility collapse is moderate (0.35) — once sworn, the specific lord-vassal bond is hard to exit, but the SCHEDULE OF TERMS itself remains a live, contestable text rather than a naturalized inevitability, which is why accessibility collapse is well below mountain-range values.",
+    "directionality_logic": "Both vassal and lord are declared beneficiaries because the coordination reading holds that each gains a predictable ceiling neither could unilaterally extract past without breaching a text the other side can invoke in a forum (peer court) that is not simply an instrument of the stronger party. This is what distinguishes the coordination reading from the extraction reading: in the extraction reading the lord's power to set terms is effectively unbounded by vassal service capacity alone; here it is bounded by the charter text and by a peer-judgment mechanism that exists independent of either party's individual power. The excluded unlanded_peasantry are marked non-beneficiary, non-victim WITHIN THIS CONSTRAINT because the oath's reciprocal bound simply does not run to them — their situation is a separate, un-modeled cost this reading is honest about not capturing.",
+    "mandatrophy_analysis": "The founding problem (predictable levy-raising and succession order without centralized administration) is dead in the sense that centralized states now perform this function through standing bureaucracies, yet the reading resists retroactive mandatrophy framing: at the time and place this reading describes, the fixed charter schedule was solving a live problem for both co-bound parties, not merely providing cover for one-sided extraction. Reading this constraint as a rope (bounded, mutual, low suppression) prevents collapsing it into the lord_extraction_reading's snare/tangled-rope framing, which is the mislabeling this decomposition is built to avoid — the two readings differ on exactly the empirical question of whether the charter ceiling was genuinely binding on the lord in practice, which is why that question is routed to an omega rather than resolved by fiat here.",
+    "kernel_context": "This constraint is the VASSAL_COORDINATION reading of the feudal_oath_reciprocity kernel: the oath read as a fixed, textually bounded, mutually enforceable schedule of reciprocal obligations, functioning as low-ε coordination infrastructure. Sibling readings of the same kernel are lord_extraction_reading (the oath as maximal extraction bounded only by vassal service capacity — high-ε, victim-bearing) and ecclesiastical_mediation_reading (the oath bound by Church-imposed sacramental and charitable obligation, an external moral ceiling layered on top of the secular charter). These are three separate constraint files, each with its own stable ε; this file does not average or hedge across them."
+  },
+  "omegas": [
+    {
+      "id": "charter_ceiling_actually_binding",
+      "question": "In documented practice, did the charter's enumerated obligation schedule actually constrain lords from demanding more than specified, or was the schedule routinely exceeded with the peer court mechanism too weak or too captured by lordly power to enforce it?",
+      "resolution_mechanism": "Comparative study of surviving charter texts against documented aid-levies, muster records, and recorded diffidatio (renunciation) cases: a high rate of charter-exceeding demands with rare or unsuccessful peer-court challenge would support the lord_extraction_reading over this one for the specific relationships studied.",
+      "impact": "If the ceiling was routinely exceeded in practice, this reading's low-ε rope classification is descriptively wrong for those relationships and the lord_extraction_reading's tangled_rope/snare framing is the accurate structural account; if the ceiling held, this reading is vindicated as the operative structural fact.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the charter's bound was practically enforceable or merely nominal."
+    },
+    {
+      "id": "kernel_reading_selection_ambiguity",
+      "question": "Is the choice among the three sibling readings (vassal_coordination, lord_extraction, ecclesiastical_mediation) determined by which specific lord-vassal relationship and period is examined, or is it an irreducible interpretive choice about how to weight the same surviving evidence?",
+      "resolution_mechanism": "Case-level historical analysis of specific charters and their enforcement histories, cross-referenced with regional variation in peer-court strength and ecclesiastical intervention frequency, would show whether the three readings sort cleanly onto different empirical cases or genuinely compete over the same cases.",
+      "impact": "If the readings sort onto different cases, the kernel decomposition is a taxonomy of historically distinct regimes; if they compete over the same evidence, the decomposition documents a genuine interpretive underdetermination in feudal legal history requiring separate historiographic treatment rather than resolution.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether sibling kernel readings map to distinct cases or to competing interpretations of the same evidence."
+    },
+    {
+      "id": "peasantry_exclusion_defensibility",
+      "question": "Is it structurally correct to treat the unlanded peasantry as fully external to this constraint (no beneficiary or victim status), or does the vassal's bounded service obligation systematically transfer pressure onto the peasantry in a way that should count as this constraint's own downstream extraction rather than a separate, unmodeled cost?",
+      "resolution_mechanism": "Manorial account analysis tracing whether periods of heavier lordly demand on vassals correlate with heavier vassal demand on tenant labor and dues, which would indicate the charter's bound displaces rather than absorbs extractive pressure.",
+      "impact": "If displacement is demonstrated, the coordination reading's claim of 'no structural victim' would need revision to include the peasantry as an indirect victim, moving this story's classification toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether obligation pressure absorbed at the lord-vassal level is passed downward onto excluded parties."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "feudal_oath_reciprocity__lord_extraction_reading",
+      "feudal_oath_reciprocity__ecclesiastical_mediation_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the feudal_oath_reciprocity kernel. vassal_coordination_reading claims low-ε rope status (fixed, mutually enforceable bounds, no structural victim). lord_extraction_reading claims high-ε tangled_rope or snare status (same oath, read as extraction bounded only by vassal capacity, with vassal and downstream peasantry as victims). ecclesiastical_mediation_reading claims a distinct ε reflecting the Church's independent moral ceiling on secular extraction. All three are linked here per the ε-invariance principle: they are not three measurements of one constraint but three structurally distinct constraints sharing a contested kernel."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "bounded_reciprocal_charter_schedule",
+    "drift_state": {
+      "moment": "post_centralization_state_formation",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "feudal_oath_reciprocity__lord_extraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "feudal_oath_reciprocity__ecclesiastical_mediation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "charter_ceiling_mutually_invocable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "peer_court_judgment_binds_lord",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

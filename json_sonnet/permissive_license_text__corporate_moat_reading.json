@@ -1,0 +1,281 @@
+{
+  "header": {
+    "constraint_id": "permissive_license_text__corporate_moat_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "97812fea-d3a7-4be3-9bf3-dd54f325cda5"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Permissive License Text (Corporate Moat Reading)",
+    "topic_domain": "software_licensing/intellectual_property/technology_governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "enterprise_cloud_vendors",
+      "proprietary_saas_incumbents"
+    ],
+    "victims": [
+      "individual_maintainers",
+      "volunteer_led_projects"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "enterprise_cloud_vendors",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Take permissively licensed code (MIT/BSD/Apache-2.0), wrap it in proprietary orchestration, support contracts, and managed hosting, and sell it back to the market at scale. Owe the original maintainers nothing beyond attribution. Because the license imposes no reciprocity requirement, they can fork, close, and monetize without ever contributing code, funding, or maintenance capacity back to the upstream project. Their exit option is total: they can walk away from any upstream dependency and re-host or re-implement without legal jeopardy."
+    },
+    {
+      "name": "proprietary_saas_incumbents",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Build core product features on top of permissively licensed libraries and frameworks, capturing the R&D savings as margin while offering no equivalent artifact back to the ecosystem. Use the absence of a reciprocity clause as a legal shield against demands for contribution."
+    },
+    {
+      "name": "individual_maintainers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Wrote and maintain the underlying software, often unpaid or under-compensated, and watch companies with orders of magnitude more resources monetize derivative products built on their work. Relicensing retroactively is usually legally impossible once adoption has occurred (dependents would break, and many maintainers lack the collective bargaining position to demand terms). Burnout, unpaid support burden, and the psychological toll of maintaining critical infrastructure without recognition or income are structural features of the position, not incidental."
+    },
+    {
+      "name": "volunteer_led_projects",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Governed by loose, under-resourced foundations or informal maintainer groups. Depend on goodwill contributions and cannot compel the corporations extracting value from their code to fund maintenance, triage security issues, or staff support. Some have attempted relicensing to source-available or business-source terms after high-profile extraction incidents, at the cost of community trust and contributor goodwill."
+    },
+    {
+      "name": "downstream_application_developers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from frictionless reuse of permissively licensed components in their own commercial and non-commercial products, lowering their own development costs. Some are small operators who could not survive if reciprocity requirements forced them to open-source their own proprietary work; others are simply passing along the same extraction pattern one level down."
+    },
+    {
+      "name": "open_source_foundations",
+      "role": "observer",
+      "secondary_role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Attempt to broker sustainability solutions (corporate sponsorship tiers, dual-licensing advocacy, maintainer stipends) but have no enforcement mechanism to compel contribution back from downstream commercial users under a permissive license. Their voice in license-drafting decisions is frequently absent from the corporate legal teams that draft the license text maintainers are asked to adopt."
+    },
+    {
+      "name": "license_drafting_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Legal foundations and corporate open-source offices draft and promote permissive license templates, framing them as maximizing adoption and innovation. They administer the license text itself and could add reciprocity requirements but generally do not, since the entities most influential in drafting are frequently the same enterprises that benefit from the absence of such requirements."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Permissive licensing genuinely lowers legal friction for anyone wanting to reuse, modify, or embed the code, which does solve a real coordination problem: without it, every integration would require bespoke negotiation.",
+    "transfer_function": "Moves unpaid engineering labor, maintenance burden, and design value from individual maintainers and volunteer-led projects to well-resourced corporations, who convert that labor into proprietary commercial products without any contractual or legal obligation to compensate or contribute back.",
+    "absent_voices": "Individual maintainers rarely have a seat at the table when license terms are chosen for a project they will spend years maintaining — the license is frequently selected at project founding, before maintenance burden or corporate extraction patterns are visible, and by the time the pattern is visible, relicensing existing contributors' code requires unanimous consent that is often practically unobtainable.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Corporate beneficiaries would say the world rearranges catastrophically — adoption would slow, legal friction would spike, and innovation would suffer. Maintainer advocates would say the world barely changes for coordination purposes (copyleft and source-available alternatives coordinate reuse too) but changes enormously for compensation: extraction that currently flows uncompensated would either stop or require negotiated terms. The dispute is precisely about which effect is primary.",
+    "founding_problem": "Early software licensing required negotiated agreements for every reuse, which made lightweight collaboration and broad adoption of shared code prohibitively slow and legally expensive; permissive licenses were built to remove that friction entirely.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corporate legal teams and standards bodies attest the friction-removal problem remains live and central. Independent researchers studying open-source sustainability (e.g., surveys of maintainer burnout, Tidelift and Open Source Collective sustainability reports) and several high-profile maintainers who have publicly relicensed projects after extraction incidents attest, from outside the corporate beneficiary set, that the original friction-removal problem is largely solved while a distinct, unaddressed compensation problem has emerged and calcified in its place."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the permissive_license_text kernel: the corporate moat reading, under which the absence of a reciprocity requirement in permissive licenses (MIT, BSD, Apache-2.0) structurally enables well-capitalized corporations to build proprietary derivative products on volunteer-maintained code without any obligation to compensate, contribute, or even sustain the upstream project. The same license text supports two other readings, generated as separate constraint stories: the commons_coordination_reading (which foregrounds the genuine friction-reduction and universal-implementation benefits of the same text) and the copyleft_counterfactual_reading (which argues the absence of reciprocity is the specific defect that a viral-copyleft alternative like the GPL would correct). This story does not average across those readings or hedge its epsilon between them — it asserts a single, moderate-epsilon extraction profile specific to the corporate-benefit structural claim.",
+    "key_agents": [
+      "enterprise_cloud_vendors: primary beneficiary (institutional/arbitrage) — captures uncompensated derivative value at global scope",
+      "individual_maintainers: primary target (powerless/trapped) — bears unpaid maintenance burden with no legal claim on downstream commercial value",
+      "volunteer_led_projects: secondary target (powerless/constrained) — collective version of the same extraction dynamic",
+      "license_drafting_bodies: agenda setter (institutional/analytical) — could add reciprocity terms but generally does not",
+      "open_source_foundations: analytical observer / partially excluded — sees the full structure but lacks enforcement leverage"
+    ],
+    "logic_rationale": "Extractiveness (0.58) is authored as moderate rather than severe because the coordination function is genuinely real — permissive licenses do lower friction and drive broad adoption, which is not itself the extraction. The extraction is specifically the asymmetric capture of derivative commercial value without any compensating flow back to origin. Suppression (0.42) is moderate: there is no active coercion forcing maintainers to use permissive terms, but switching costs, ecosystem lock-in, and the practical impossibility of retroactive relicensing after wide adoption function as a structural trap once the license choice is made early in a project's life. Theater ratio is low-moderate and rising (0.10 to 0.28) as corporate sponsorship programs and 'open source stewardship' initiatives increasingly perform commitment to sustainability without materially altering the underlying extraction pattern. Accessibility collapse (0.35) is moderate — alternatives exist (copyleft, source-available, dual licensing) but adopting them after the fact requires unanimous contributor consent that is frequently unobtainable, which is why accessibility does not collapse further toward 1.0: the option is visible, just often too late to exercise.",
+    "directionality_logic": "Enterprise cloud vendors and proprietary SaaS incumbents sit near the full-beneficiary end: they have arbitrage-grade exit (can substitute libraries, fork, or re-implement at will), institutional power, and directly capture the commercial value of derivative work. Individual maintainers sit near the full-target end: powerless, trapped (relicensing existing contributions requires consent they usually cannot obtain), and bear the maintenance costs the corporate beneficiaries impose without compensating. Downstream application developers are directionally mixed — they benefit from the same friction reduction while some also become payers if their own reuse patterns get further exploited a level down.",
+    "perspectival_gap": "From the corporate agenda-setter and beneficiary seats, this is unambiguously rope: minimal friction, maximal adoption, no coercion visible from where they stand because they never experience the maintenance burden side of the ledger. From the individual maintainer seat, the identical structure computes as extraction with a a real, if partial, coordination function riding on top of it — hence the claimed_type of snare here reflects the authoring seat's judgment that the extraction, not the coordination, is now the dominant and defining feature of the arrangement, even though a genuine coordination function is acknowledged to exist.",
+    "mandatrophy_analysis": "The founding problem (excessive legal friction blocking reuse) is largely solved industry-wide; permissive licensing succeeded at its original goal decades ago. What persists is a distinct, unaddressed problem — uncompensated extraction — that the license text was never designed to solve and that has calcified into the status quo because the parties best positioned to fix it (license drafting bodies, large corporate adopters) are also its principal beneficiaries. Classifying this as tangled_rope would risk crediting an active enforcement/coordination trade that model this constraint does not actually run on (there is no enforcement machinery at all, just an absence of an obligation); classifying it as pure mountain (natural fact) would erase the identifiable, addressable beneficiary/victim asymmetry. Snare captures that a genuine coordination story exists but is being used as cover for a persistent, addressable extraction that has no exit for the party bearing its cost.",
+    "kernel_context": "This constraint is the corporate_moat_reading of the permissive_license_text kernel. The same license text (MIT/BSD/Apache-2.0 style terms lacking a reciprocity requirement) is read three ways across three separate constraint stories: (1) commons_coordination_reading treats the text as maximizing universal implementation freedom with minimal legal friction — a rope; (2) copyleft_counterfactual_reading treats the absence of a reciprocity clause as the specific structural defect that necessitates a viral-copyleft (GPL-style) alternative; (3) this story, corporate_moat_reading, treats the same absence-of-reciprocity as the mechanism by which uncompensated extraction flows from unpaid maintainers to well-capitalized corporate adopters. All three readings are held by different real-world parties (permissive-license advocates, copyleft advocates, and maintainer-sustainability advocates respectively) with no single framework reconciling them, which is why they are authored as three separate ε-invariant constraints rather than one story with a measurement parameter."
+  },
+  "omegas": [
+    {
+      "id": "reciprocity_absence_as_design_choice_or_oversight",
+      "question": "Is the absence of a reciprocity requirement in permissive licenses a deliberate design choice reflecting a coherent normative commitment to unrestricted reuse, or an oversight/externality that license drafters failed to price when corporate-scale extraction was not yet a visible pattern?",
+      "resolution_mechanism": "Archival review of license-drafting deliberations (e.g., OSI mailing lists, BSD/MIT license history) to determine whether reciprocity was considered and rejected, versus never seriously considered given the scale of the software industry at drafting time.",
+      "impact": "If deliberate and well-reasoned, the corporate_moat_reading's extraction framing is weaker (the parties consented to the terms with full information). If an unpriced externality, the extraction framing strengthens: the beneficiaries are capturing value the original design never intended to cede.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether permissive terms reflect intentional policy or an unpriced historical externality."
+    },
+    {
+      "id": "sibling_reading_disagreement_locus",
+      "question": "Where exactly do the three sibling readings (commons_coordination, copyleft_counterfactual, corporate_moat) disagree — is it about the facts of who captures value, or purely about the normative weight assigned to that capture?",
+      "resolution_mechanism": "Compare stakeholder situations across all three sibling constraint stories: if beneficiary/victim declarations converge but claimed_type diverges, the disagreement is normative (framing); if the declared parties themselves differ, the disagreement is factual.",
+      "impact": "A purely normative disagreement means all three readings can coexist indefinitely as live positions (as authored in cs_structure.reading_relations). A factual disagreement about who actually benefits would mean at least one reading has an empirical error that further evidence could correct.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's contested readings differ in fact or in evaluation."
+    },
+    {
+      "id": "maintainer_collective_action_capacity",
+      "question": "Could individual maintainers, acting collectively (via foundations, license migration campaigns, or coordinated relicensing), meaningfully shift the extraction pattern, or is the powerlessness structural regardless of coordination?",
+      "resolution_mechanism": "Track outcomes of documented relicensing campaigns (e.g., MongoDB's SSPL move, Elastic's license change, HashiCorp's BSL adoption) for effects on corporate extraction, community trust, and project sustainability.",
+      "impact": "If collective relicensing meaningfully changes outcomes, the powerless/trapped exit_options declared for individual_maintainers should be revisited toward constrained rather than trapped in future iterations, and the snare classification may weaken toward tangled_rope (genuine, if costly, exit exists).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether maintainer collective action can alter the extraction pattern this story treats as structural."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "commons_coordination_reading",
+      "copyleft_counterfactual_reading"
+    ],
+    "dual_formulation_note": "This story is one of three constraint stories decomposed from the single natural-language label 'permissive open source licensing' per the ε-invariance principle. Each sibling reading (commons_coordination_reading: rope; copyleft_counterfactual_reading: analysis of the GPL alternative; corporate_moat_reading: this story, snare) shares the same underlying license text but produces a different ε and a different classification because each reading foregrounds a different structural claim about the same text's effect. They are linked bidirectionally via affects_constraints rather than merged into one story with a measurement parameter."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ],
+  "gain_flow": "enterprise_cloud_vendors",
+  "fixing_cost": "cheap",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "permissive_license_text__commons_coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "permissive_license_text__copyleft_counterfactual_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "uncompensated_derivative_capture_is_the_defining_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "license_neutrality_is_a_cover_story_not_a_fact",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "friction_minimization_founding_intent",
+    "drift_state": {
+      "moment": "platform_scale_cloud_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

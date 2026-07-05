@@ -1,0 +1,321 @@
+{
+  "header": {
+    "constraint_id": "licensing_statute_mandate__graduated_access_filter",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "c38dbf17-cc43-43b9-b419-b1c66efd3032"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.68,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.5,
+    "claimed_type": "snare",
+    "human_readable": "Occupational Licensing Statute as Graduated Access Filter",
+    "topic_domain": "labor_economics/regulatory_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "credentialed_incumbent_practitioners",
+      "accredited_training_institutions",
+      "licensing_board_administrators"
+    ],
+    "victims": [
+      "marginalized_aspirant_workers",
+      "informal_sector_practitioners",
+      "rural_low_income_applicants"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "credentialed_incumbent_practitioners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Already hold the license and practice under reduced competition. They shaped or lobbied for the statute's requirements (exam fees, apprenticeship hours, prior degree prerequisites) and benefit from wage premiums the barrier sustains. Their exit is arbitrage-grade: they can move between jurisdictions or specialties while newcomers cannot enter at all."
+    },
+    {
+      "name": "accredited_training_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sell the courses, exam prep, and certification pathways the statute mandates. Revenue scales directly with the number of people forced through the credentialing pipeline; they have no incentive to shorten or cheapen the pathway and lobby to preserve or extend it."
+    },
+    {
+      "name": "licensing_board_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Write and enforce the specific requirements — hours, fees, exam content, reciprocity rules — and adjudicate exceptions. Their institutional survival depends on the statute remaining in force; they control the knobs (fee levels, hour requirements, waiver criteria) that determine how steep the barrier actually is for any given applicant."
+    },
+    {
+      "name": "marginalized_aspirant_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Cannot afford the unpaid apprenticeship hours, exam fees, or the training institution's tuition, and often cannot take unpaid leave from existing work to accumulate required hours. The statute does not ban them from the trade outright — it prices and time-gates them out. Their only path in requires resources (savings, family support, employer sponsorship) that track existing class position, so the barrier reproduces rather than tests competence."
+    },
+    {
+      "name": "informal_sector_practitioners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Already perform the work competently outside the formal system (unlicensed contractors, community health workers, informal caregivers) but are criminalized or priced out of formal recognition. Enforcement actions target them directly — cease-and-desist orders, fines — while their actual skill is never assessed."
+    },
+    {
+      "name": "rural_low_income_applicants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Face the same fee and hour requirements as urban applicants but must also travel long distances to accredited testing centers or apprenticeship sites, adding transportation and lodging costs the statute does not account for. Reciprocity gaps between states compound the burden if they relocate."
+    },
+    {
+      "name": "consumers_of_licensed_services",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive some genuine assurance of minimum competence for high-stakes services, but pay elevated prices from the reduced labor supply and see wait times increase where credentialed practitioners are scarce, particularly in underserved areas the excluded practitioners would otherwise have served."
+    },
+    {
+      "name": "state_legislators",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Nominally set the statutory framework but in practice defer heavily to board and incumbent-association drafting language; economists and labor advocates who could testify to the class-sorting effect are rarely called before the relevant committees, which hear primarily from credentialed professional associations."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a shared minimum-competence signal so consumers and employers do not need to individually vet every practitioner's skill before transacting.",
+    "transfer_function": "Moves market access and the associated wage premium from applicants without prior capital, time flexibility, or educational credentials toward applicants who already possess those resources, and moves tuition/fee revenue from all applicants toward training institutions and board administration.",
+    "absent_voices": "Informal-sector practitioners with demonstrated competence and low-income aspirants who cannot afford the credentialing pathway rarely testify at rulemaking hearings; labor economists studying the barrier's distributional effects are seldom invited into board proceedings that set the specific hour and fee thresholds.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the statute vanished overnight, informal and marginalized practitioners would enter formal service delivery immediately, incumbent wage premiums would compress, training institutions would lose mandated enrollment, and licensing boards would lose their reason to exist — the labor market for the credentialed occupation would reorganize substantially within a single hiring cycle.",
+    "founding_problem": "Historically framed as preventing unqualified practitioners from causing consumer harm in occupations with real information asymmetry (e.g., a patient cannot easily verify a practitioner's competence in advance).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Licensing boards and incumbent associations attest the safety problem remains live and justifies current requirements. Independent labor economists (outside the beneficiary set) and antitrust regulators studying occupational licensing report that the same safety outcomes are achievable with substantially lower hour/fee thresholds or with narrower scope-of-practice tiers, and that the specific barrier heights track incumbent lobbying rather than measured harm rates — indicating the founding problem's magnitude does not match the current barrier design."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.68
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the 'graduated_access_filter' reading of the licensing_statute_mandate kernel: the same statutory credential requirement, read as a mechanism that sorts market access by pre-existing class position and resource access rather than by measured competence. Two sibling readings of the same kernel text exist as separate constraints: public_safety_coordination (the requirement genuinely solves an information-asymmetry problem for consumers) and rent_seeking_suppression (the requirement exists to restrict labor supply and extract incumbent rents). This reading does not deny that a safety function or a rent-extraction function may also be present — it isolates the specific structural claim that the barrier's HEIGHT and SHAPE (unpaid apprenticeship hours, fee schedules, geographic testing-center access) track applicants' prior capital and time-flexibility rather than their competence, and that this tracking reproduces class stratification in market access. The victim set here is specifically those excluded by resource constraints rather than by demonstrated incompetence.",
+    "key_agents": [
+      "credentialed_incumbent_practitioners: beneficiary (organized/arbitrage) — collects wage premium from restricted supply",
+      "accredited_training_institutions: beneficiary (institutional/arbitrage) — collects mandated enrollment revenue",
+      "licensing_board_administrators: agenda_setter (institutional/analytical) — sets and enforces the specific barrier parameters",
+      "marginalized_aspirant_workers: primary target (powerless/trapped) — priced and time-gated out regardless of competence",
+      "informal_sector_practitioners: primary target (powerless/trapped) — criminalized despite demonstrated skill",
+      "rural_low_income_applicants: secondary target (powerless/constrained) — bears added geographic cost layer",
+      "state_legislators: excluded from meaningful input despite nominal authorship"
+    ],
+    "logic_rationale": "Extraction (0.71 at interval end) reflects that the statute's specific design parameters — unpaid hour requirements, fee schedules, testing-center geography — are set by parties who benefit from a higher barrier, and that the barrier height does not track measured harm rates in comparable jurisdictions with lower requirements. Suppression (0.68) is substantial because enforcement (cease-and-desist actions, fines against informal practitioners) actively closes the informal-practice exit rather than merely failing to open a formal one. Theater ratio (0.4) is moderate: continuing-education and re-certification requirements increasingly serve institutional revenue rather than measurable competence maintenance, a share that has grown across the interval as the theater_ratio series shows.",
+    "directionality_logic": "Credentialed incumbents and training institutions sit near the full-beneficiary end: they collect wage premiums or tuition revenue and hold arbitrage-grade exit (they can relocate or diversify while newcomers cannot enter). Marginalized aspirants and informal practitioners sit near the full-target end: trapped exit options, no resources to absorb the barrier's cost, and enforcement actively directed against their existing informal practice. Rural low-income applicants are constrained rather than fully trapped — geographic mobility exists in principle but at a cost that reproduces the same class sort. Consumers occupy a genuinely mixed position: real benefit from competence assurance, real cost from reduced supply and higher prices — reflecting that this reading does not deny a safety function exists, only that the specific barrier design is not calibrated to that function alone.",
+    "mandatrophy_analysis": "The founding_problem status is authored as contested rather than dead: the underlying information-asymmetry problem the statute nominally addresses has not disappeared, so this is not a simple obsolescence case. What this reading isolates is that the CURRENT SHAPE of the requirement is not calibrated to the safety problem's actual magnitude — independent economic analysis finds barrier height tracks incumbent lobbying more than harm data. Classifying this as a graduated_access_filter snare (rather than collapsing it into either sibling reading) prevents two mislabeling errors: treating the whole statute as pure public-safety coordination (which would erase the documented class-sorting effect) and treating it as pure incumbent rent-seeking (which would erase the genuine, if miscalibrated, safety function the sibling readings separately capture).",
+    "kernel_context": "This constraint instantiates the 'graduated_access_filter' reading of the licensing_statute_mandate kernel. Sibling readings public_safety_coordination and rent_seeking_suppression are separate constraint files describing the same statutory text under different structural claims — the former treats the requirement as calibrated competence-signaling with negligible-to-moderate extraction, the latter treats it as concentrated incumbent rent extraction. This reading's distinct claim is that the SPECIFIC PARAMETERS of the barrier (hours, fees, geography) sort applicants by class and prior resource access independent of both the safety-function and the rent-extraction stories — it names a distributional mechanism the other two readings do not foreground. All three readings can be simultaneously true of the same statute at different structural layers; they are linked via network.affects_constraints and are not merged here per the ε-invariance principle."
+  },
+  "omegas": [
+    {
+      "id": "barrier_calibration_vs_safety_need",
+      "question": "Do the specific credentialing thresholds (hours, fees, exam content) track the actual measured harm rate from unlicensed practice, or do they track incumbent-lobbied barrier height independent of harm data?",
+      "resolution_mechanism": "Cross-jurisdictional comparison of harm/complaint rates against licensing stringency in occupations with wide state-to-state variation in requirements (e.g., cosmetology, interior design, teeth-whitening) controlling for other confounds.",
+      "impact": "If harm rates are flat across widely varying stringency levels, the graduated_access_filter reading is strongly corroborated as the dominant structural fact and the public_safety_coordination reading's ε should be revised toward negligible; if harm rates track stringency closely, this reading's extraction claim should be weighted lower relative to the safety reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether barrier height is calibrated to safety need or to class-sorting/incumbent interest."
+    },
+    {
+      "id": "class_sorting_vs_incumbent_capture_boundary",
+      "question": "Is the class-sorting effect (this reading) structurally distinct from incumbent rent extraction (the rent_seeking_suppression sibling), or are they the same mechanism described at different levels of abstraction?",
+      "resolution_mechanism": "Trace whether barrier parameters that most burden low-resource applicants (unpaid apprenticeship hours, geographic testing requirements) are the SAME parameters incumbents lobby hardest to preserve, versus parameters that burden resource-poor applicants disproportionately for reasons unrelated to incumbent lobbying (e.g., simple fixed fee structures set decades ago without adjustment).",
+      "impact": "If the two mechanisms are structurally identical, this reading and rent_seeking_suppression should be merged rather than kept as siblings; if distinct causal pathways exist (some barriers class-sort without being incumbent-lobbied, e.g. inherited colonial-era fee structures), the decomposition into separate readings is warranted and should be preserved.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the class-sorting reading is analytically separable from the rent-seeking reading of the same statute."
+    },
+    {
+      "id": "competence_assessment_alternative_availability",
+      "question": "Do lower-cost, less resource-dependent competence-assessment alternatives (e.g., direct practical examination without mandated hour requirements) exist and perform comparably, or is the current credentialing pathway the only viable competence signal?",
+      "resolution_mechanism": "Examine occupations that have piloted alternative certification pathways (portfolio review, direct examination, apprenticeship-equivalent work experience credit) and compare outcomes and access rates to traditional pathway states.",
+      "impact": "If viable low-cost alternatives exist and produce comparable competence outcomes, the current pathway's resource-intensiveness is not functionally necessary, strengthening the graduated_access_filter classification; if no viable alternative exists, some of the measured extraction may be irreducible coordination cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the resource-intensive credentialing pathway is functionally necessary or one of several viable competence-signaling designs."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_safety_coordination",
+      "rent_seeking_suppression"
+    ],
+    "dual_formulation_note": "This story is one of three constraint files decomposing the natural-language concept 'occupational licensing statute' per the ε-invariance principle. public_safety_coordination models the competence-signaling claim (lower ε, closer to rope/mountain). rent_seeking_suppression models the incumbent-extraction claim (high ε concentrated on a narrower victim set — market entrants generally, not class-stratified specifically). This file (graduated_access_filter) models the class/resource-stratification claim, with a victim set specifically defined by lack of prior capital/time-flexibility rather than lack of competence or mere market-entrant status. All three are linked bidirectionally in commentary and network.affects_constraints; none subsumes the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "licensing_statute_mandate__public_safety_coordination",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "licensing_statute_mandate__rent_seeking_suppression",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "barrier_design_reproduces_class_position",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "resource_gated_pathways_are_not_competence_neutral",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "competence_based_gatekeeping_ideal",
+    "drift_state": {
+      "moment": "contemporary_licensing_regime",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

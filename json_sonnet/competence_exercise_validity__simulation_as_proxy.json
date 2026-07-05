@@ -1,0 +1,314 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__simulation_as_proxy",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "39725223-c9d9-4ccf-9924-b92a743396de"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.61,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.44,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-as-Sufficient-Exercise Doctrine for Competence Retention",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_vendor_industry",
+      "facility_operators",
+      "regulatory_compliance_officers"
+    ],
+    "victims": [
+      "frontline_operators",
+      "emergency_responders",
+      "downstream_public_in_catastrophe_zones"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "facility_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets the training and drill curriculum, decides which simulation vendors and scenarios count as certified exercise, and reports simulation completion rates to regulators as evidence of maintained competence. Avoids the cost, disruption, and liability exposure of running exercises against real degraded conditions. Captures cost savings directly."
+    },
+    {
+      "name": "simulation_vendor_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sells simulator hours, scenario packages, and certification software to facilities and regulators. Revenue depends on simulation being accepted as the validated unit of competence exercise rather than one component among several. Lobbies for regulatory language that names simulation hours as the compliance metric."
+    },
+    {
+      "name": "regulatory_compliance_officers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers audits keyed to simulation-hour logs and drill-completion checklists because these are auditable and defensible in court; the audit trail itself becomes the object of compliance, decoupled from whether the exercises transferred real capability. Their institutional legitimacy depends on the audit framework being treated as sufficient."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Runs the simulated drills, accumulates certification hours, and is told this constitutes maintained readiness. Cannot decline the drills without losing certification, and cannot force exposure to conditions the simulator does not model (cascading failure, communication breakdown, panic dynamics). Bears the gap between rehearsed competence and real competence at the moment of an actual event."
+    },
+    {
+      "name": "emergency_responders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Arrives at incidents assuming facility personnel are competent per certification records. Discovers in real events that simulated competence does not transfer cleanly to conditions the simulation could not or did not model — sensory overload, equipment degradation, communication failure. Cannot audit the gap in advance; only discovers it during live response."
+    },
+    {
+      "name": "downstream_public_in_catastrophe_zones",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Bears the consequence if the competence gap manifests during an actual catastrophic event — the population whose safety the entire competence framework claims to protect, but who has no seat in deciding what counts as valid exercise and no visibility into simulation fidelity."
+    },
+    {
+      "name": "safety_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Studies post-incident reports and simulation-fidelity gaps across industries. Documents cases where simulation-validated personnel underperformed in real events relative to predicted competence, but has no enforcement authority over the certification regime."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a genuine problem: real catastrophic events are too rare, too costly, and too dangerous to use as the primary training mechanism, so simulation lets an organization exercise procedures, build muscle memory, and coordinate large numbers of personnel without waiting for or manufacturing real disasters.",
+    "transfer_function": "Moves the cost of competence verification from expensive, risky, hard-to-audit real-world testing to cheap, auditable, vendor-supplied simulation hours; moves the residual risk of any capability gap from the certifying institutions onto frontline operators and, ultimately, the public present during an actual event.",
+    "absent_voices": "Downstream public in catastrophe zones has no representation in curriculum design or fidelity standards; safety researchers documenting simulation-reality gaps are heard in academic venues but rarely given standing in the certification process itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If simulation-as-sufficient-exercise certification vanished overnight, facilities would need to either fund substantially more expensive live-condition testing, accept explicit uncertainty about competence levels, or face regulatory gaps in compliance frameworks — the entire audit and vendor ecosystem built around simulation-hour metrics would need to be reconstructed around a different evidentiary standard.",
+    "founding_problem": "Real catastrophic events (reactor failures, structural collapses, mass-casualty incidents) are too rare and too destructive to use as routine competence tests, so organizations needed a repeatable, safe, scalable way to exercise emergency procedures and verify personnel readiness.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Facility operators and simulation vendors attest the founding problem remains fully live and adequately solved by current simulation fidelity. Independent safety researchers and post-incident investigation boards (NTSB-style bodies, academic human-factors studies) attest that the founding problem has partially shifted — the coordination need for repeatable exercise is real and unresolved by simulation alone, while the verification function has been substituted by an auditable proxy that does not close the fidelity gap it claims to close."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint captures one reading of a contested doctrine about what validly exercises and verifies operational competence in high-consequence, low-frequency-catastrophe domains (nuclear operations, aviation, emergency response, industrial process safety). This reading holds that structured simulation — drills, tabletop exercises, simulator hours — constitutes sufficient exercise of competence, that safety records built under simulation-validated regimes demonstrate adequacy, and that regulatory compliance keyed to simulation completion is a sufficient evidentiary standard. Over the interval, the doctrine has drifted from a genuine coordination solution (simulation as scalable, safe alternative to impossible real-event training) toward an increasingly theatrical compliance artifact, where the auditability of simulation-hour logs displaces the underlying question of whether competence actually transferred.",
+    "logic_rationale": "Extractiveness (0.58) and theater_ratio (0.61) both rose across the interval as the doctrine matured from an honest training innovation into an entrenched compliance metric — vendor lock-in, audit-defensibility, and institutional liability-shielding increasingly drive curriculum design rather than fidelity to real-event conditions. Suppression (0.52) reflects that frontline operators cannot opt out of simulation-based certification even when they judge it inadequate, and cannot force exposure to higher-fidelity or real-condition testing. Accessibility_collapse (0.48) and resistance (0.44) are moderate rather than extreme: alternative validation methods (live-condition drills, cross-facility incident exchanges, red-team exercises) exist and are used in some jurisdictions, so the collapse is partial, not total — this is not a mountain, it is a maintained arrangement.",
+    "directionality_logic": "Facility operators and regulatory compliance officers sit near the beneficiary end: they capture cost savings, legal defensibility, and institutional legitimacy from a simulation-sufficient standard, and their exit options (arbitrage across jurisdictions, discretion over compliance framework design) are wide. The simulation vendor industry benefits directly and structurally from simulation being named as sufficient rather than supplementary. Frontline operators and emergency responders are trapped payers — they cannot decline certification requirements and cannot manufacture the real-condition testing that would close the fidelity gap; the downstream public bears the tail risk with zero voice in curriculum design, which is why they are declared excluded rather than payer despite ultimately absorbing the largest potential cost.",
+    "mandatrophy_analysis": "The founding problem — real catastrophe is too rare and too dangerous to use as the primary training mechanism — remains partially live: simulation genuinely solves a real coordination problem that has no easy substitute. Classifying this as tangled_rope rather than snare or piton preserves that genuine function while still registering the asymmetric extraction: the audit-defensibility function has grown to serve compliance officers' and vendors' institutional interests independent of whether it closes the actual competence gap. This is not mislabeled pure extraction (it retains real coordination value) nor mislabeled pure coordination (it requires active enforcement — mandatory certification, vendor-favorable regulatory language — and produces identifiable victims who bear a gap the beneficiaries do not disclose or bear themselves).",
+    "kernel_context": "This constraint is the simulation_as_proxy reading of the competence_exercise_validity kernel: the position that simulation constitutes valid, sufficient exercise and that drills function as an adequate proxy for real catastrophic conditions. Two sibling readings exist as separate constraints: real_catastrophe_only (only actual catastrophic events genuinely exercise competence; simulation is an insufficient substitute) and continuous_refresh_hybrid (simulation is necessary but not sufficient alone; competence retention requires ongoing drill cycles rather than one-time or periodic validation). This reading's distinguishing premise is sufficiency-by-simulation-metrics — it treats the safety record achieved under a simulation-validated regime as itself proof of adequacy, which the sibling readings each reject on different grounds (fidelity-insufficiency for real_catastrophe_only; frequency-insufficiency for continuous_refresh_hybrid)."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_ceiling",
+      "question": "Does current simulation technology have an irreducible fidelity ceiling that structurally cannot model cascading failure, sensory overload, and panic dynamics present in real catastrophic events, or is the gap merely a matter of insufficient current investment in simulation quality?",
+      "resolution_mechanism": "Comparative post-incident analysis: track performance of simulation-certified personnel during actual catastrophic events against their simulation-predicted competence scores, across multiple industries and multiple simulation vendors, over a sufficiently long interval to accumulate statistical power.",
+      "impact": "If the ceiling is structural (unfixable by better simulation), the simulation_as_proxy reading is a durable false summit — improved simulation cannot close the gap and the doctrine's sufficiency claim is permanently unsupportable. If the gap is investment-driven and closeable, the reading could converge toward legitimate coordination as simulation fidelity improves, weakening the case for tangled_rope classification over time.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulation's competence-validation gap is structural or merely underinvested."
+    },
+    {
+      "id": "sibling_reading_disagreement_locus",
+      "question": "The three kernel readings (simulation_as_proxy, real_catastrophe_only, continuous_refresh_hybrid) disagree about where the burden of proof for competence adequacy should sit — is it located in the frequency of exercise, the fidelity of exercise, or the outcome record under simulation-based regimes? This constraint instantiates the outcome-record answer; the disagreement is over which observable legitimately settles the question.",
+      "resolution_mechanism": "Structured elicitation across regulatory bodies, safety researchers, and frontline personnel unions to identify whether the disagreement is resolvable by better data (empirical) or is a genuine values disagreement about acceptable residual risk (preference).",
+      "impact": "If the disagreement is empirical and resolvable, one reading will eventually dominate the regulatory consensus. If it is a preference disagreement about acceptable risk tolerance, all three readings may persist indefinitely as coexisting positions held by different regulatory jurisdictions and institutional cultures.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's reading-disagreement is resolvable by evidence or is an irreducible values dispute."
+    },
+    {
+      "id": "coupling_between_theater_and_vendor_lobbying",
+      "question": "Is the rising theater_ratio observed over the interval driven primarily by simulation vendors lobbying regulators to enshrine simulation-hour metrics as the compliance standard, or by an independent institutional drift toward auditability-over-substance that would occur even absent vendor influence?",
+      "resolution_mechanism": "Trace regulatory rule-making history for documented vendor lobbying activity correlated against theater_ratio inflection points in the measurement series.",
+      "impact": "If vendor-driven, the tangled_rope classification is reinforced with a specific, addressable extraction mechanism (regulatory capture); if institutionally intrinsic, the extraction is more diffuse and harder to remedy through vendor-focused regulation alone.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether rising theater in the certification regime traces to vendor capture or intrinsic institutional drift."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_validity__real_catastrophe_only",
+      "competence_exercise_validity__continuous_refresh_hybrid"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the competence_exercise_validity kernel. simulation_as_proxy (this file) claims sufficiency of simulation-based validation; real_catastrophe_only claims simulation is categorically insufficient and only genuine catastrophic exposure exercises competence; continuous_refresh_hybrid claims simulation is necessary but requires continuous cyclical renewal rather than one-time or periodic sufficiency. Each reading has its own epsilon, its own beneficiary/victim structure, and its own classification — they are not the same constraint measured differently; they are three structurally distinct claims sharing a kernel (what validly exercises and verifies competence retention in high-consequence domains)."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_exercise_validity__real_catastrophe_only",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "competence_exercise_validity__continuous_refresh_hybrid",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_metrics_constitute_sufficient_proof_of_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "safety_record_under_simulation_regime_demonstrates_adequacy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "pre_simulation_apprenticeship_verification",
+    "drift_state": {
+      "moment": "contemporary_simulator_certification_regime",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "facility_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

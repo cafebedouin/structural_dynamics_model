@@ -1,0 +1,303 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__foreign_target_strict_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "64038855-a7e2-4383-b7ee-3f009a37b06e"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.22,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "FISA Section 702 — Foreign Target Strict Reading",
+    "topic_domain": "constitutional_law/national_security/surveillance_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "intelligence_community_analysts",
+      "foreign_intelligence_targets_of_legitimate_interest",
+      "us_persons_under_strict_reading"
+    ],
+    "victims": [
+      "incidentally_collected_us_persons_under_lax_enforcement"
+    ],
+    "vindicated_propositions": [
+      "fourth_amendment_compatibility_of_targeted_foreign_collection",
+      "statutory_text_as_binding_limit_on_executive_surveillance"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "nsa_fbi_collection_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Administer targeting and minimization procedures under FISC oversight. Under this reading, they must certify that both the sender and the primary investigative interest are non-U.S. persons located abroad, and must apply minimization procedures that delete rather than merely restrict access to incidentally collected U.S. person communications. They control the actual query and retention infrastructure and could, in practice, drift from the strict reading absent enforcement."
+    },
+    {
+      "name": "foreign_intelligence_targets_of_legitimate_interest",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Non-U.S. persons abroad who are the actual, lawful subjects of foreign intelligence collection. They have no standing to object domestically and no exit from being targeted, but under this reading the statute confines that targeting to a defined, bounded category rather than permitting general surveillance of any communications touching U.S. infrastructure."
+    },
+    {
+      "name": "us_persons_under_strict_reading",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Ordinary U.S. persons whose communications might incidentally touch a targeted foreign account. Under the strict reading, such incidental data must be minimized as deletion, not indexed for later query, and is categorically inaccessible for domestic law-enforcement purposes absent an individualized warrant. They retain Fourth Amendment protection functionally intact because the statute is read to exclude them from the extraction structure entirely."
+    },
+    {
+      "name": "incidentally_collected_us_persons_under_lax_enforcement",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The same population as above, but under conditions where agencies interpret or apply the statute more loosely than the strict reading requires (compliance failures, backdoor queries later found to be minimization violations). Where the strict reading is not actually enforced, this same population is transformed into the victim class this reading is designed to prevent from existing."
+    },
+    {
+      "name": "fisa_court",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Reviews certifications and minimization procedures for compliance with the strict foreign-target reading. Issues compliance opinions when agencies deviate, but operates largely ex parte and in secret, limiting the extent to which its oversight functions as a genuine external check versus a validating formality."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that the strict reading, however textually correct, is not the reading actually implemented in practice — that agencies systematically query incidental U.S. person data. They have no standing to appear before the FISC and can only advocate through Congress, litigation (frequently dismissed for lack of standing), or public compliance reports released years after the fact."
+    },
+    {
+      "name": "domestic_criminal_defendants",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals prosecuted using leads or evidence that may trace back to Section 702 collection. Under the strict reading, this pathway should not exist at all, since domestic-purpose queries are categorically prohibited; when it does occur, defendants are frequently barred from learning whether 702 data was the origin of the investigation, foreclosing their ability to challenge the search."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables a legally bounded, targeted mechanism for collecting foreign intelligence communications relevant to national security, without requiring a warrant for surveillance of non-U.S. persons abroad who have no Fourth Amendment claim, while textually walling off U.S. persons from the collection structure.",
+    "transfer_function": "Moves foreign-intelligence-relevant communications data from targeted non-U.S. persons abroad to the intelligence community; under the strict reading, moves nothing systematically from U.S. persons, since their incidental data is to be deleted rather than retained or queried.",
+    "absent_voices": "Civil liberties advocates and domestic criminal defendants would object that the strict reading is a legal fiction unmatched by operational practice; they are excluded from FISC proceedings (ex parte, classified) and often lack standing or notice to challenge collection or its downstream use in court.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the strict foreign-target reading were abandoned in favor of a looser interpretation, the population of protected U.S. persons would shrink and the incidental-collection victim class would grow; whether this constitutes 'the world rearranging' is disputed because the intelligence community argues operational continuity would be unaffected (they claim they already comply with the strict standard), while civil liberties advocates argue enforcement gaps mean this reading is already partially fictional in practice.",
+    "founding_problem": "Post-9/11 and post-2008 FISA Amendments Act reforms sought to authorize efficient foreign intelligence collection on non-U.S. persons using U.S. communications infrastructure, while preserving Fourth Amendment protection for U.S. persons who might be incidentally swept in.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Justice Department and ODNI attest the strict reading is operative and enforced through minimization procedures and FISC review. The Privacy and Civil Liberties Oversight Board (PCLOB), independent of the agencies being overseen, and repeated FISC compliance opinions documenting backdoor-search violations, corroborate that the strict reading is frequently not what happens in practice — supporting the contested status rather than a clean resolution in either direction."
+  },
+  "interval": {
+    "start": 2008,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2011,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the foreign-target strict reading of the Section 702 kernel: the statute's 'foreign target' language is read as a genuine, binding limit that excludes U.S. persons from the collection structure except through individualized warrants, requires deletion-grade minimization of incidental U.S. person data, and categorically forbids FBI queries of the 702 database for domestic criminal purposes. Under this reading the constraint functions largely as a Rope — a targeted collection mechanism against non-U.S. persons abroad, who lack Fourth Amendment standing, coordinated through certification and FISC review, with U.S. persons structurally walled off rather than incidentally captured. This is a distinct constraint from the incidental_collection_reading (which permits warrantless query of incidental U.S. person data) and the constitutional_floor_reading (which asserts the Fourth Amendment independently requires a warrant regardless of statutory text) — each of those readings has its own ε and its own victim set, and is authored as its own story linked via network.affects_constraints.",
+    "logic_rationale": "Extractiveness is authored low (0.15) because, under this reading, U.S. persons are excluded from the target set by statutory design and their incidental data is to be deleted rather than retained or searched — there is no systematic transfer from a U.S. person victim class under a faithfully implemented strict reading. Suppression is moderate-low (0.22) reflecting the genuine secrecy and classification barriers around minimization procedures and FISC opinions, which limit outside verification even when the substantive standard is followed. Theater ratio (0.30) captures that a meaningful share of compliance activity (FISC review, PCLOB reporting, DOJ certifications) is real but increasingly performs adherence to a standard whose actual operational fidelity is contested — hence the rising trajectory over the interval as compliance-violation reports accumulated post-2011.",
+    "directionality_logic": "Non-U.S. persons abroad who are legitimate foreign intelligence targets are treated as beneficiaries of the bounded structure (better than unbounded dragnet collection would be, though they bear the actual surveillance burden with no U.S. legal recourse — this is inherent to the foreign-intelligence function itself, not an artifact of this reading). U.S. persons are the central beneficiary class of this specific reading: the strict textual interpretation is what keeps them out of the victim set. The only declared victim group — incidentally collected U.S. persons under lax enforcement — exists precisely at the seam where the strict reading is not actually the operative practice; this population is the measurable gap between the claimed reading and enforcement reality, which is the crux of the kernel dispute.",
+    "mandatrophy_analysis": "The founding problem (efficient, warrant-free collection against non-U.S. persons while protecting U.S. persons) remains live in the sense that the underlying national security interest persists; but PCLOB and repeated FISC compliance opinions documenting backdoor searches corroborate, from outside the intelligence community itself, that the strict reading's protective function has been intermittently 'dead' in practice even while textually 'live.' This is why founding_problem_status is authored as contested rather than resolved in either direction — the classification depends on whether one measures the statute's text or its documented enforcement history, and those two measurements diverge, which is itself evidence for why this natural-language concept ('the 702 foreign-target rule') needed decomposition into separate kernel readings rather than a single averaged constraint.",
+    "kernel_context": "This story instantiates the foreign_target_strict_reading of the fisa_702_statutory_text kernel. It holds that the statutory text is a real, binding limit: only communications where both sender and primary investigative interest are non-U.S. persons abroad may be targeted, incidental U.S. person data must be deleted (not merely access-restricted), and domestic-purpose queries of the 702 database are categorically prohibited. The sibling reading incidental_collection_reading treats the same statute as permitting retention and warrantless query of incidentally collected U.S. person data when justified by a foreign intelligence purpose — under that reading the U.S. person victim class is populated by design, not by enforcement failure. The sibling reading constitutional_floor_reading treats the entire statutory question as subordinate to an independent Fourth Amendment warrant requirement for any government search of U.S. person content, regardless of how the foreign-target language is construed. Each reading is authored as its own constraint with its own ε; this one carries the lowest ε (≈0.15) because it defines the U.S. person population out of the extraction structure by construction."
+  },
+  "omegas": [
+    {
+      "id": "strict_reading_enforcement_fidelity",
+      "question": "Is the foreign-target strict reading actually the operative practice inside NSA and FBI query procedures, or is it a textually correct but operationally under-enforced standard?",
+      "resolution_mechanism": "Declassified FISC compliance opinions, PCLOB audits, and DOJ Inspector General reports documenting the rate and nature of backdoor-search violations relative to total query volume over the interval.",
+      "impact": "If enforcement fidelity is high, this reading's low ε (0.15) is descriptively accurate and the constraint functions close to a genuine Rope. If enforcement fidelity is low, the victim population (incidentally_collected_us_persons_under_lax_enforcement) is not a residual edge case but the modal outcome, and the true operative constraint is closer to the incidental_collection_reading sibling despite the statutory text supporting this reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the strict statutory reading is the reading actually implemented in agency practice."
+    },
+    {
+      "id": "minimization_as_deletion_vs_access_restriction",
+      "question": "Does 'minimization' under this reading mean actual deletion of incidental U.S. person data, or merely restricted-access retention (i.e., data kept but query-gated)?",
+      "resolution_mechanism": "Textual and regulatory analysis of NSA/FBI minimization procedures as approved by FISC, cross-checked against technical audits of actual data retention practices and retention-period disclosures.",
+      "impact": "If minimization functions as retention-with-access-restriction rather than deletion, the strict reading's exclusion of U.S. persons from the victim set is weaker than authored here, and this story's ε would need revision upward — or the constraint reclassified as the incidental_collection_reading in practice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether minimization procedures in practice match the strict reading's deletion-based theory."
+    },
+    {
+      "id": "kernel_framing_alternative_institutional_incentive",
+      "question": "Is the strict reading the correct legal interpretation of the statute, or is it the reading favored by oversight bodies because it is the most defensible position to publicly assert, independent of operational reality?",
+      "resolution_mechanism": "Compare congressional testimony and public DOJ/ODNI statements (which consistently assert the strict reading) against internal compliance memoranda and FISC opinion language (which sometimes describe departures from it) to see whether the public-facing framing and internal operative framing diverge.",
+      "impact": "If the strict reading is primarily an institutional legitimation narrative rather than the actual operative standard, this story's classification (Rope) would need to be read alongside the incidental_collection_reading as the more descriptively accurate account of practice, even though this story remains the textually correct kernel reading.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the strict reading is chosen for legal correctness or institutional defensibility, and what that implies for classification under this framework."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fisa_702_statutory_text__incidental_collection_reading",
+      "fisa_702_statutory_text__constitutional_floor_reading"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the fisa_702_statutory_text kernel. foreign_target_strict_reading (this story) authors the lowest ε (~0.15), treating U.S. persons as excluded from the collection structure by statutory design. incidental_collection_reading authors a higher ε reflecting a victim class populated by design rather than enforcement failure. constitutional_floor_reading treats the entire statutory question as subordinate to an independent Fourth Amendment warrant requirement, which would foreclose the incidental_collection_reading's premise that a foreign-intelligence purpose alone can justify a warrantless query of U.S. person content. All three stories are linked so that contamination or purity-degradation analysis on one can propagate to the others; none of the three should be read as 'the' 702 constraint in isolation."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "textualist_foreign_target_limitation",
+    "drift_state": {
+      "moment": "post_2011_backdoor_search_disclosures",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "fisa_702_statutory_text__incidental_collection_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "fisa_702_statutory_text__constitutional_floor_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "statutory_text_binds_executive_query_practice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "minimization_requires_deletion_not_mere_access_gating",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "non_us_persons_abroad_lack_fourth_amendment_standing",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__strict_invariance_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "ca6b1b85-e674-49bc-82a6-828eee162618"
+  },
+  "base_properties": {
+    "extractiveness": 0.06,
+    "suppression": 0.18,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.22,
+    "claimed_type": "rope",
+    "human_readable": "RFC 9293 TCP State Machine — Strict Invariance Reading",
+    "topic_domain": "network_protocol_engineering/internet_standards",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "protocol_implementers",
+      "interoperating_endpoint_operators",
+      "internet_standards_body"
+    ],
+    "victims": [
+      "implementations_relying_on_strict_conformance"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "internet_standards_body",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The IETF process produced RFC 9293 as the authoritative consolidation of TCP behavior, obsoleting RFC 793 and its accumulated errata. It administers the specification text and the errata/update process but does not enforce compliance directly — conformance is voluntary and self-interested, not policed."
+    },
+    {
+      "name": "protocol_implementers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operating system vendors and network stack authors write TCP implementations against the invariant state machine. They benefit because a single, exactly-replicated reference removes the need to negotiate behavior bilaterally with every peer they might ever talk to — the coordination gain is the entire value proposition. They can choose to deviate at the cost of interoperability, so exit exists but is self-defeating."
+    },
+    {
+      "name": "interoperating_endpoint_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Organizations running servers and clients get connections that behave predictably across the entire internet because every conforming stack replicates the same state transitions. They pay the modest engineering cost of implementing the full state machine correctly (including corner cases like simultaneous close and TIME-WAIT) rather than a simplified subset."
+    },
+    {
+      "name": "implementations_relying_on_strict_conformance",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Embedded and legacy stacks that implemented the state machine exactly as specified, with no defensive tolerance for deviation, break when they encounter a peer or intermediary that does not replicate the invariant transitions bit-for-bit. Under the strict reading, this breakage is correctly attributed to the deviating party, but the conforming implementation still bears the practical cost of the failed connection with no recourse beyond a bug report against the other side."
+    },
+    {
+      "name": "network_protocol_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the state machine's formal properties (safety, liveness, exactly-once close semantics) and treat exact replication as the premise that makes those proofs meaningful. From this seat the specification's value is inseparable from universal, literal compliance."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides one authoritative, exactly specified state machine so that any two independently written TCP implementations, developed decades apart by unrelated organizations, can establish and tear down a connection correctly without ever negotiating behavior out-of-band.",
+    "transfer_function": "Moves engineering effort from the transaction (bilateral negotiation of connection semantics between every pair of communicating hosts) into the specification (one-time, front-loaded correctness work amortized across the entire global implementer population). No party extracts rent through this reading; the transfer is effort-shifting, not wealth-shifting.",
+    "absent_voices": "Implementers of deliberately non-conforming or 'lenient' stacks that accept malformed sequences for robustness are not represented in this reading's framework — the strict reading treats their leniency as a category error (protocol violation), not a legitimate alternative design philosophy, so their objection is structurally out of scope here rather than merely unheard.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the invariant state machine were abandoned as a binding target, implementers would each choose their own interpretation of connection semantics; multi-vendor interoperability would degrade unpredictably wherever implementations diverged, and every pairwise connection would require either bilateral testing or defensive fallback logic — the coordination the specification currently provides for free would have to be reconstructed piecemeal by each pair of communicating parties.",
+    "founding_problem": "Early TCP implementations (pre-RFC 793 and its long errata tail) diverged on edge-case behavior — simultaneous open/close, retransmission timing, sequence number wraparound — producing interoperability failures between independently developed stacks as the network scaled past a small trusted set of implementers.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the beneficiary set by the IETF TCPM working group's documented rationale for consolidating decades of errata and interoperability reports into RFC 9293, and by independent academic protocol-conformance testing literature showing implementations still diverge on state-machine corner cases absent a strict invariant reference; no corroborating source disputes that the coordination problem remains live, though the middlebox_realism and optimization_latitude readings dispute whether strict textual invariance is still the right solution to it."
+  },
+  "interval": {
+    "start": 1981,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1981,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.04
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1981,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.08
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the strict_invariance_reading of the RFC 9293 kernel: the claim that the TCP state machine is a single invariant target that all conforming implementations must replicate exactly, with any deviation classified as a specification violation rather than a legitimate alternative. Under this reading the constraint is a Rope — a coordination requirement whose entire justification is enabling universal interoperability without bilateral negotiation, with negligible extraction because no party collects rent from the invariance requirement itself. This is a genuinely distinct constraint from its siblings, not a different observable of the same one: the optimization_latitude_reading treats the specification as bounding behavioral outcomes while permitting internal implementation freedom (a looser, more permissive constraint with different victim sets), and the middlebox_realism_reading treats the specification's authority as subordinate to deployed network reality (potentially a tangled_rope or even snare, since middleboxes that violate the specification for traffic-shaping reasons might extract value at the expense of endpoint correctness). Per the epsilon-invariance principle, these are three separate files with three separate epsilon values, linked by kernel structure, not one story averaged across readings.",
+    "key_agents": [
+      "internet_standards_body: agenda_setter (institutional/analytical) — administers the specification text",
+      "protocol_implementers: beneficiary (organized/mobile) — build stacks against the invariant reference",
+      "interoperating_endpoint_operators: beneficiary/payer (organized/mobile) — gain predictability, pay implementation cost",
+      "implementations_relying_on_strict_conformance: payer (moderate/constrained) — bear breakage when peers deviate",
+      "network_protocol_researchers: observer (analytical/analytical) — treat exact replication as the premise for formal guarantees"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.06) and essentially flat across the interval because under the strict reading no party collects rent from the invariance requirement — it is a pure coordination cost, amortized once in the specification rather than repeatedly in bilateral negotiation. Suppression (0.18) is modest and reflects only the specification's own internal logic (undefined/erroneous behavior is disallowed, not that alternative implementations are coercively blocked from existing — they simply fail to interoperate, which is a natural consequence, not an enforcement mechanism). Accessibility collapse is comparatively high (0.72) because once an implementer understands the state machine, the 'alternative' of inventing a different connection-establishment protocol collapses in practice — you either replicate the invariant machine or you are not speaking TCP to the rest of the internet. Resistance is low (0.22): implementers overwhelmingly comply because the coordination benefit dominates any cost of exact replication; the theater ratio stays low and only creeps slightly upward (0.02 to 0.08) as later-era conformance testing and certification suites add some process overhead around what remains a substantively functional requirement.",
+    "directionality_logic": "Protocol implementers and endpoint operators sit near the beneficiary end: they get universal interoperability essentially for free once they've paid the one-time cost of correct implementation, and they retain mobile exit (a vendor can choose not to build a TCP stack, or can choose a different transport protocol, without being trapped). The standards body sits in an agenda-setting but non-extractive position — it does not collect from the specification's operation, consistent with the Rope reading's premise. The victim group under this reading is narrower and more particular than in the sibling readings: only implementations that built brittle strict-conformance assumptions (no defensive tolerance for peer deviation) bear a real cost, and that cost falls on them specifically because OTHER parties fail to replicate the invariant machine — the constraint itself does not extract from them, but its invariance premise leaves no slack for handling the deviations that violate it. This is a much smaller and differently-shaped victim set than the middlebox_realism_reading would name.",
+    "mandatrophy_analysis": "The founding problem (divergent early implementations breaking interoperability) remains live by the corroborating IETF working-group record and independent conformance-testing literature, so this reading shows no mandatrophy: the coordination function the invariant state machine exists to serve is still operative, not vestigial. The strict reading's classification as a clean Rope with negligible extraction and no institutional capture is precisely what distinguishes it from a mislabeled-extraction case — there is no beneficiary skimming rent off the invariance requirement, only a genuine unresolved coordination problem (universal interoperability among independently written stacks) that the state machine continues to solve.",
+    "perspectival_gap": "From the standards body and protocol-implementer seats, the invariant state machine is unambiguously coordination-positive infrastructure. From the seat of an implementation that built strict, non-defensive conformance assumptions, the same invariance requirement becomes a source of fragility whenever ANY other party in the ecosystem deviates — not because the constraint extracts from them, but because it offers no tolerance for the deviations of others. This is a structural asymmetry the engine should register as different exposure to the same low-extraction constraint, not as evidence the constraint is itself extractive.",
+    "kernel_context": "This is the strict_invariance_reading of the rfc9293_tcp_specification kernel. It holds that the state machine specified in RFC 9293 is an invariant that all conforming implementations must replicate exactly, with deviation classified as specification violation rather than legitimate latitude. Sibling readings: optimization_latitude_reading holds that RFC 9293 specifies behavioral OUTCOMES (a reliable byte stream) while leaving internal state-machine implementation details open to optimization within those semantic bounds — a looser, more permissive constraint. middlebox_realism_reading holds that the specification describes idealized endpoint behavior subordinate to what deployed middlebox populations actually do to traffic in transit, making the specification's authority conditional on network reality rather than self-executing. These are three distinct constraints with three distinct epsilon values and victim sets, not the same constraint viewed three ways."
+  },
+  "omegas": [
+    {
+      "id": "invariance_versus_outcome_framing",
+      "question": "Does RFC 9293 actually mandate an invariant STATE MACHINE (transition-by-transition replication), or does it mandate a set of observable OUTCOMES (in-order reliable delivery, correct connection lifecycle) achievable by multiple internally distinct state machines? The strict_invariance_reading and optimization_latitude_reading disagree on exactly this point, and the disagreement is located in how RFC 9293's prose describing 'the' state machine (Section 3.3) is read relative to its stated purpose of ensuring interoperability rather than implementation uniformity.",
+      "resolution_mechanism": "Textual and historical analysis of IETF TCPM working group deliberation records: did the working group intend the state diagram as a literal conformance target, or as a canonical illustrative model with permitted internal variation? Cross-reference against actual accepted-conformant implementations (e.g., differing retransmission and congestion-control internals coexisting as RFC 9293-conformant) to see which reading the standards body's own enforcement behavior (accepting/rejecting implementations) actually supports.",
+      "impact": "If the outcome-oriented reading is correct, this strict_invariance_reading's classification as the sole legitimate coordination structure is too narrow, and much of what this story labels as 'deviation' would need to be reclassified as within-bounds optimization, shrinking the victim set to near zero.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether RFC 9293's kernel commits to state-machine literalism or outcome equivalence — the fault line between this reading and optimization_latitude_reading."
+    },
+    {
+      "id": "middlebox_authority_subordination",
+      "question": "Given that a substantial fraction of internet paths pass through middleboxes (NATs, firewalls, TCP-terminating proxies) that do not implement RFC 9293's state machine at all, is the specification's claimed authority over 'global interoperability' descriptively accurate, or is compliance with the strict reading a minority condition that happens to work because endpoints defensively tolerate deviation the specification does not sanction?",
+      "resolution_mechanism": "Empirical internet measurement studies (e.g., large-scale TCP behavior fingerprinting across deployed middleboxes) quantifying what fraction of real-world connections traverse a fully RFC 9293-conformant path end-to-end versus a path with at least one non-conformant intermediary.",
+      "impact": "If most real connections traverse at least one non-conformant middlebox, the strict_invariance_reading describes an idealized minority case, and the middlebox_realism_reading's claim that specification authority is subordinate to deployed network reality would be empirically favored, though the two readings remain structurally distinct constraints regardless of which better predicts observed traffic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether strict textual conformance describes the actual operative internet or an idealized subset of it."
+    },
+    {
+      "id": "fsm_naturalness_of_coordination_claim",
+      "question": "Is the invariant state machine's status as pure, non-extractive coordination (Rope) genuinely accurate, or does it function as cover for the standards body's institutional authority — i.e., does treating the specification as an inevitable, natural coordination requirement obscure that the IETF/TCPM working group benefits (in standing, relevance, and control over the specification's future evolution) from the strict reading being accepted as canonical?",
+      "resolution_mechanism": "Examine whether the standards body captures any resource, influence, or gatekeeping benefit from the strict reading being dominant (e.g., control over certification, influence over vendor roadmaps) versus whether its role is purely custodial with no such capture.",
+      "impact": "If the standards body captures meaningful institutional benefit from strict-reading dominance beyond the coordination function itself, the beneficiary declaration on internet_standards_body would need scrutiny as a potential false-summit signal rather than a purely custodial role.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether declaring the standards body a beneficiary reflects genuine custodial coordination or masks institutional rent-seeking, relevant because this reading declares beneficiaries on a constraint claimed as low-extraction coordination."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "rfc9293_tcp_specification__optimization_latitude_reading",
+      "rfc9293_tcp_specification__middlebox_realism_reading"
+    ],
+    "dual_formulation_note": "This story is one of three constraints instantiating readings of the rfc9293_tcp_specification kernel. strict_invariance_reading (this file) claims Rope with negligible extraction and a narrow victim set (brittle strict-conformance implementations only). optimization_latitude_reading claims outcome-bounded coordination with broader implementer freedom. middlebox_realism_reading claims the specification's authority is conditional on deployed network reality, likely yielding a tangled_rope or higher-extraction classification since middleboxes may extract value (e.g., traffic shaping, surveillance insertion) at the expense of endpoint-specified correctness. Each carries its own epsilon; they are linked here rather than merged, per the epsilon-invariance decomposition rule."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "rfc9293_tcp_specification__optimization_latitude_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "rfc9293_tcp_specification__middlebox_realism_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_machine_is_literal_conformance_target",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "specification_authority_is_self_executing",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "rfc793_original_specification_baseline",
+    "drift_state": {
+      "moment": "post_middlebox_proliferation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

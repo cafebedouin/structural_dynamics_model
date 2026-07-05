@@ -1,0 +1,325 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__property_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "9a6e2839-f70e-4179-8f3b-34bca3fb60b7"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.61,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proprietary Software Licensing as Legitimate Property Right",
+    "topic_domain": "software_engineering/political_economy/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_software_vendors",
+      "venture_capital_investors",
+      "enterprise_software_shareholders"
+    ],
+    "victims": [
+      "end_users_without_modification_rights",
+      "interoperability_dependent_developers",
+      "right_to_repair_advocates"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "proprietary_software_vendors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Write license terms, enforce them through copyright litigation and DRM, and lobby for statutory protections like the DMCA anti-circumvention provisions. Capture licensing revenue directly and set the terms under which anyone else may run, inspect, or modify the code. Can relocate incorporation and enforcement venue to whichever jurisdiction offers the strongest IP protection."
+    },
+    {
+      "name": "venture_capital_investors",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Fund software companies on the premise that exclusive control over source code is what makes the resulting revenue streams defensible and thus investable. Their return depends on the enforceability of restriction; they have no operational exposure to the restriction's effects on users."
+    },
+    {
+      "name": "enterprise_software_shareholders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold equity whose valuation depends on the company's ability to license, not sell, its software and to prevent competitors or users from replicating its function. Can divest if enforcement weakens, without personal exposure to the underlying product's restrictions."
+    },
+    {
+      "name": "end_users_without_modification_rights",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Purchase or subscribe to software they cannot inspect, repair, or adapt to their needs. Bound by clickwrap terms they did not negotiate; modifying the product to fix a defect or extend its life voids warranty or breaches license and may trigger legal liability. Exit means abandoning data, workflows, and sunk training cost, not achieving equivalent function elsewhere."
+    },
+    {
+      "name": "interoperability_dependent_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build products that must interface with proprietary platforms and are legally exposed for reverse-engineering interfaces the platform declines to document. Pay licensing fees, absorb compatibility risk when the vendor changes undocumented behavior, and cannot litigate on equal footing with the platform holder."
+    },
+    {
+      "name": "right_to_repair_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that ownership of a device should include the right to inspect and modify its embedded software, and push legislation to that effect. Largely locked out of the licensing negotiations themselves; their remedy runs through slow legislative or regulatory processes rather than direct bargaining with vendors."
+    },
+    {
+      "name": "software_engineers_at_vendor_firms",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Write the code that is then locked behind the license; their labor produces the asset without their holding any residual claim to it beyond salary. Benefit indirectly through employment and equity, but cannot themselves exercise the modification rights the license withholds from users, and are typically bound by employment agreements assigning all IP to the employer."
+    },
+    {
+      "name": "competition_and_ip_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate disputes over the boundary between legitimate IP enforcement and anticompetitive lock-in (tying, interoperability refusal, DRM overreach). Take testimony from vendors, developers, and advocacy groups and can narrow or widen the scope of enforceable restriction through rulings and legislation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Exclusive rights over source code let a firm capture the return on the engineering investment required to build complex software, which funds continued development, security maintenance, and support that would be underprovided if the code were immediately copyable by competitors.",
+    "transfer_function": "Moves control over modification, inspection, and reuse from users and downstream developers to the vendor, and moves payment from users to the vendor in exchange for a license to run (not own) the software; interoperability costs are shifted onto third-party developers who must reverse-engineer or license access to interfaces.",
+    "absent_voices": "Right-to-repair advocates and long-tail users of abandoned software (orphaned by vendors who stop maintaining it while the license still forbids modification) are not party to the license negotiation and have no seat in setting its terms; their objections surface only through legislative advocacy or litigation years after the fact.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If proprietary licensing enforceability vanished overnight, current vendor revenue models built on per-seat or subscription licensing would collapse or convert to service/support models; venture funding calculus for software would shift toward first-mover speed and service moats rather than code exclusivity; users would gain modification rights but vendors would lose the primary mechanism funding continued maintenance of complex codebases. The arrangement is load-bearing for a specific business model, not a background fact about software.",
+    "founding_problem": "Software development requires substantial up-front engineering investment; without a mechanism to prevent immediate free-riding by copiers, firms argued they could not recoup that investment or fund the ongoing maintenance and support complex software requires.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Vendors and their investors attest the problem remains live — security maintenance and feature development require sustained revenue that only exclusivity protects. Independent economists studying software markets and the free/open-source movement's four-decade track record of maintained, funded complex systems (operating system kernels, database engines, cryptographic libraries) attest the founding problem is empirically separable from the exclusivity mechanism: sustainable funding models exist without source restriction, which is corroboration from outside the beneficiary set that the coordination function and the extraction mechanism are not the same thing."
+  },
+  "gain_flow": "proprietary_software_vendors",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.61
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the property_rights_reading of the software_source_status kernel: source code is a proprietary asset, licensing restrictions are legitimate exercises of ownership analogous to any other IP right, and end users hold contractual rights only — not ownership, modification, or inspection rights — over the software they license. This is a deliberately narrow, internally coherent reading. It is NOT a story about whether open-source development is better or whether software freedom is an ethical imperative; those are separate constraints (pragmatic_development_reading, freedom_imperative_reading) with different beneficiary/victim structures and different ε values, linked here via network.affects_constraints. Under this reading, the coordination function (funding engineering investment through excludability) is real, and the extraction (locking users and downstream developers out of modification and interoperability) is also real and requires active enforcement (DMCA anti-circumvention, EULA litigation, DRM) — hence tangled_rope, not mountain or rope.",
+    "logic_rationale": "Extraction is moderate (0.52) because the underlying coordination function — funding continued development — is genuine and partially justifies the transfer; it is not zero because the restriction extends well beyond recouping investment into perpetual rent extraction (subscription renewal, planned obsolescence via license expiry, interoperability gatekeeping) that has no clear terminus. Suppression (0.61) is higher than extraction because the enforcement apparatus (anti-circumvention law, contractual liability, technical DRM) forecloses self-help remedies even where extraction in a given case is modest — a user who simply wants to fix a bug in software they purchased faces the same legal exposure as a commercial pirate. Theater is low (0.22): most enforcement activity is functionally real (it does gate access), not merely performative, though litigation posturing and boilerplate license terms contribute a nontrivial performative share. Accessibility collapse (0.58) reflects that once the licensing regime is understood, workaround options (reverse engineering, jailbreaking, open alternatives) are legally risky or functionally incomplete for most users, though not fully closed — open-source substitutes exist for many categories, which keeps this below mountain-level collapse. Resistance (0.55) reflects active organized pushback (right-to-repair movements, open-source advocacy, regulatory scrutiny of tying and DRM) — this is not an uncontested constraint.",
+    "directionality_logic": "Vendors, their investors, and shareholders sit at the beneficiary end: they collect licensing revenue and control the terms, with mobile-to-arbitrage exit (can relocate IP strategy, jurisdiction, or business model). End users and interoperability-dependent developers sit at the target end: they pay through licensing fees and bear the restriction's costs (no repair, no modification, no interoperability guarantee) with constrained exit — switching costs, data lock-in, and network effects make exit costly even when legally available. Software engineers employed by vendors are a genuinely dual seat: their labor produces the asset, they benefit indirectly via employment, but they hold no residual claim to the code itself and are bound by IP-assignment clauses — hence payer/beneficiary secondary role.",
+    "perspectival_gap": "From the vendor/agenda-setter seat, this is straightforwardly a rope: a legitimate property right that funds an investment they made and that no one is forced to purchase. From the end-user/payer seat, the same license terms compute as extraction with real suppression — they cannot fix, adapt, or transfer what they've paid for, and circumvention carries legal risk disproportionate to the harm caused. The engine's per-seat computation is expected to diverge along exactly this line; that divergence is not an error in the reading, it is what a tangled_rope structurally is.",
+    "mandatrophy_analysis": "The founding problem (funding engineering investment) has NOT disappeared — complex software still requires sustained investment — which is why founding_problem_status is 'contested' rather than 'dead.' But the corroboration from outside the beneficiary set (economists, the sustained track record of funded open development models) establishes that the specific mechanism of source-exclusivity is not the only viable funding path, which is what keeps this a tangled_rope rather than a clean rope: the coordination story is real but is not the only story, and the persistence of source-restriction specifically (as opposed to funding software development generally) depends on continued active legal enforcement rather than being self-evidently necessary.",
+    "kernel_context": "This constraint is the property_rights_reading of the software_source_status kernel. Sibling readings not instantiated here: freedom_imperative_reading (treats proprietary restriction itself as an ethical injustice — this reading's core premise that restriction is a legitimate ownership exercise directly contradicts that framing), pragmatic_development_reading (treats open methodology as instrumentally superior for quality/security, remaining agnostic on the ethics of restriction — coexists with this reading since a firm could accept the property right while conceding the methodological point), and utilitarian_hybrid_reading (treats licensing choice as a context-dependent welfare-maximization problem — coexists with this reading since it can endorse property_rights licensing in exactly the contexts where this reading's premises hold, while endorsing openness elsewhere)."
+  },
+  "omegas": [
+    {
+      "id": "ip_analogy_validity",
+      "question": "Is software genuinely analogous to physical or traditional creative property such that ownership-style exclusivity is the correct legal frame, or is the analogy itself doing unwarranted normative work (software's near-zero marginal reproduction cost and functional/interoperability requirements distinguish it from a novel or a physical invention)?",
+      "resolution_mechanism": "Comparative legal-economic analysis of how exclusivity regimes perform in domains with near-zero marginal cost and required interoperability versus domains without those features; historical comparison of patent vs. copyright vs. sui generis software protection outcomes across jurisdictions.",
+      "impact": "If the analogy is weak, the property_rights_reading's foundational premise is undermined even on its own terms, strengthening the case for the utilitarian_hybrid or pragmatic_development readings as better fits; if strong, this reading's axioms hold without qualification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether treating software as classical IP is a sound analogy or a category error with distributive consequences."
+    },
+    {
+      "id": "recoupment_vs_perpetual_rent",
+      "question": "Where is the line, if any, between exclusivity that recoups genuine development investment and exclusivity that has become pure perpetual rent extraction (e.g., subscription renewal on unchanged software, planned license expiry, interoperability gatekeeping unrelated to development cost)?",
+      "resolution_mechanism": "Firm-level financial disclosure correlating licensing revenue against ongoing development/maintenance spend over the product lifecycle; identify the point at which cumulative licensing revenue exceeds total development cost by orders of magnitude with no corresponding maintenance obligation.",
+      "impact": "If most licensing revenue tracks ongoing investment, the tangled_rope's coordination component is doing most of the work and extraction is closer to incidental; if revenue diverges sharply and persistently from investment, the coordination story is largely cover and the classification should trend toward snare for mature, minimally-maintained products.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether licensing revenue tracks investment recoupment or has decoupled into rent."
+    },
+    {
+      "id": "kernel_reading_selection_basis",
+      "question": "What structural or contextual signal should determine which of the four kernel readings (property_rights, freedom_imperative, pragmatic_development, utilitarian_hybrid) applies to a given piece of software, given that all four are simultaneously defensible as general theories?",
+      "resolution_mechanism": "This is inherently a preference/framing question rather than one resolvable by further data — different legal traditions, industries, and communities have stably held different readings for four decades without convergence.",
+      "impact": "Determines whether this reading's classification should be read as describing a universal default (most commercial software today) or one live option among contested alternatives whose relative prevalence shifts by sector and jurisdiction.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Committer-axis: which reading governs is a matter of contested normative commitment, not empirical settlement — routed here per Rule 2 rather than folded into this reading's classification."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "software_source_status__freedom_imperative_reading",
+      "software_source_status__pragmatic_development_reading",
+      "software_source_status__utilitarian_hybrid_reading"
+    ],
+    "dual_formulation_note": "This story is one of four constraints decomposing the natural-language concept 'software is/is not intellectual property.' Per the ε-invariance principle, each reading of the software_source_status kernel is authored as a separate constraint with its own ε, beneficiary/victim structure, and classification, since the readings produce structurally different (not merely differently-evaluated) claims. This reading (property_rights) computes as tangled_rope: genuine coordination (funding investment) plus asymmetric extraction (perpetual restriction beyond recoupment) requiring active enforcement. The freedom_imperative_reading is expected to compute closer to snare from the perspective this reading's own vendor seat would reject (restriction as pure injustice with no coordination story credited). The pragmatic_development_reading is expected to compute closer to rope (open methodology as voluntary superior coordination with minimal suppression). The utilitarian_hybrid_reading is expected to compute as a context-dependent hybrid, potentially scaffold-like, allocating each model to the domain where its welfare case is strongest. All four share the same underlying object (software source code control) but are structurally distinct constraints under DP-001."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "classical_authorial_property_doctrine",
+    "drift_state": {
+      "moment": "post_open_source_movement_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "software_source_status__freedom_imperative_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "software_source_status__pragmatic_development_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "software_source_status__utilitarian_hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creative_labor_grounds_exclusive_control",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "licensing_restriction_is_ownership_not_injustice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "users_hold_contractual_not_proprietary_interest",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__simulation_sufficiency",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "526a375e-3778-4c64-9226-ace4d185b5f9"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.51,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.44,
+    "resistance": 0.47,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-Sufficiency Reading of Competence Occupation",
+    "topic_domain": "high_reliability_organizations/safety_training",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_vendor_industry",
+      "training_departments",
+      "regulatory_compliance_officers"
+    ],
+    "victims": [
+      "frontline_operators",
+      "incident_response_teams",
+      "downstream_public_safety"
+    ],
+    "vindicated_propositions": [
+      "training_hours_predict_competence",
+      "fidelity_optimization_solves_decay"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "training_departments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design and mandate the drill schedule, select simulation vendors, and certify operators as competent based on simulator hours and scenario completion rates. They control the metric that defines compliance and are evaluated by regulators on documented training throughput, not on real incident outcomes."
+    },
+    {
+      "name": "simulation_vendor_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sell simulator hardware, scenario libraries, and certification software. Revenue scales directly with mandated drill frequency and fidelity upgrades. Has no exposure to the consequences if simulated competence fails to transfer to a real event; contracts renew regardless of downstream performance."
+    },
+    {
+      "name": "regulatory_compliance_officers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Audit training records against simulator-hour thresholds because those thresholds are auditable, unlike tacit skill retention. Their professional standing depends on a checkable proxy existing; they benefit from the proxy's legibility even when they privately doubt its sufficiency."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Spend mandated hours in simulators that reset to baseline conditions after each session and never carry the physiological stress, ambiguity, or irreversible stakes of a real event. They are certified competent by the metric while privately reporting the simulator does not replicate the freeze, tunnel vision, or improvisation demands of an actual crisis. Their license and pay depend on passing the drills, not on contesting their sufficiency."
+    },
+    {
+      "name": "incident_response_teams",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Arrive at actual incidents having only ever executed the scenario library the simulator vendor scripted, which cannot anticipate a genuinely novel failure mode. They pay the cost of the gap between rehearsed and real, sometimes fatally, while the institution that certified them bears no correlated liability if the gap is treated as unforeseeable."
+    },
+    {
+      "name": "downstream_public_safety",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "The public served by the certified operators has no visibility into whether competence certification tracks real capability. They bear the consequences of any decay the simulation regime fails to catch, without any voice in how sufficiency is defined."
+    },
+    {
+      "name": "hri_safety_researchers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Publish evidence that simulator-transfer to real high-stress performance is empirically contested and that fidelity gains plateau against cost, but their findings compete against a training-industrial complex with lobbying and procurement relationships the researchers cannot match. They are cited in appendices, not in policy."
+    },
+    {
+      "name": "external_auditor",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Reviews the full record of simulator certification against real incident outcomes to assess whether the compliance proxy correlates with the underlying competence it claims to measure."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a scalable, repeatable, low-cost, non-lethal mechanism to expose operators to procedural sequences and decision trees so that baseline procedural knowledge is genuinely refreshed across a large workforce without waiting for real incidents to occur.",
+    "transfer_function": "Moves training budget from institutions to simulation vendors, and moves certification risk from the institution (which sets the sufficiency standard) to frontline operators and incident response teams (who bear the consequences if the standard is wrong), while regulatory legibility accrues to compliance officers as an auditable artifact.",
+    "absent_voices": "HRI safety researchers who have published on the empirical gap between simulated and real-incident performance are cited but not weighted in procurement or standard-setting; downstream public safety has no seat in defining what 'sufficient' exercise means for the people whose competence protects them.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Training departments and vendors would say the world rearranges catastrophically — no scalable substitute exists and real-incident-only training is neither ethical nor available on demand. Incident response teams and researchers would say the world barely changes for actual competence, because the simulation regime was never shown to be the thing producing it; only the compliance paperwork would visibly change. The dispute is exactly the kernel contest this constraint is one reading of.",
+    "founding_problem": "High-reliability organizations cannot ethically or practically wait for real catastrophic incidents to occur in order to train operators, and cannot allow operators to enter high-stakes roles with zero rehearsal; some repeatable exercise mechanism was needed to occupy the competence-maintenance function between rare real events.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Training departments and the simulation industry attest the founding problem remains fully live and solved by frequency/fidelity optimization. Independent HRI safety researchers and several post-incident review boards (outside the training-vendor relationship) attest that the founding problem — genuine competence occupation — is only partially addressed, and that simulator-hour compliance has drifted into a self-certifying proxy decoupled from measured real-world transfer; no party outside training departments, compliance officers, and vendors affirms sufficiency without qualification."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.51
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This story instantiates the simulation_sufficiency reading of the competence_occupation kernel: the claim that simulator-based drills, optimized on frequency and fidelity, are sufficient to occupy the competence-maintenance function and prevent skill decay. Two sibling readings exist as separate constraints and are not described here beyond naming them: real_incident_necessity (only genuine catastrophic events provide adequate occupation) and hybrid_occupation (no single mechanism suffices; competence requires simulation plus refresher plus procedural reinforcement plus line audits, with no settled optimal mix). This reading's ε, beneficiary structure, and metrics are authored independently of those siblings' files.",
+    "narrative_context": "High-reliability organizations (aviation, nuclear operations, emergency medicine, offshore drilling, military readiness) face a structural problem: the catastrophic events that most reveal true competence are rare, and cannot ethically or practically be used as training occasions. The simulation-sufficiency reading resolves this by declaring that sufficiently frequent, sufficiently high-fidelity simulator drills occupy the same functional role as real exposure — that skill decay is a frequency/fidelity optimization problem, solvable by buying more simulator hours and better hardware. This declaration converts a contested epistemic question (does simulated stress transfer to real stress?) into an auditable compliance metric (hours logged, scenarios passed), and in doing so creates a large, durable market for simulation vendors and a legible certification artifact for regulators — while the actual transfer question remains empirically contested by the safety-research literature the compliance apparatus does not weight.",
+    "logic_rationale": "Extraction (0.58) and theater ratio (0.62) both rise over the interval because the reading's own success — increasing adoption, increasing budget capture by vendors, increasing regulatory reliance on the hours-logged proxy — deepens the gap between what is measured (simulator throughput) and what was meant to be produced (transferable competence). Suppression (0.51) is moderate: operators are not physically coerced into compliance, but licensure and employment are conditioned on passing simulator certification, and dissenting safety research is structurally kept out of procurement decisions rather than actively silenced. Accessibility collapse (0.44) is moderate-low because alternative or supplementary training mechanisms (real drills, hybrid regimes) remain conceptually available and are actively argued for by researchers and some incident review boards — the alternatives have not been suppressed so much as out-competed for institutional budget and legibility. Resistance (0.47) reflects real, sustained pushback from incident response teams and safety researchers, even though that pushback has not yet altered the dominant standard.",
+    "directionality_logic": "Training departments and simulation vendors sit at the beneficiary end: the drill regime is the source of budget, market, and legible compliance artifacts for them, and neither bears the cost if simulated competence fails to transfer. Regulatory compliance officers are a secondary beneficiary — the proxy gives them an auditable object, which is professionally valuable to them independent of whether it tracks real competence. Frontline operators and incident response teams are targets: they are certified by, and their careers depend on, a metric they may privately doubt, and they are the ones who pay when the gap between simulated and real performance manifests during an actual event. Downstream public safety is a diffuse, powerless, trapped payer with no seat in defining sufficiency at all.",
+    "mandatrophy_analysis": "The founding problem (some repeatable, ethical, scalable mechanism must occupy the competence-maintenance function between rare real events) remains genuinely live — this is not a pure zombie mandate, and the coordination function is real. What has drifted is the *sufficiency claim* riding on top of that genuine function: frequency/fidelity optimization has become the treated-as-solved answer to a question the safety literature treats as open. Classifying this as tangled_rope rather than snare or piton preserves that distinction — there is a real coordination problem being solved (workforce-scale procedural exposure), and a real asymmetric extraction layered on top (compliance-legible training budget capture that outpaces demonstrated transfer benefit), both requiring active enforcement (licensure conditioning) to hold. Classifying it as snare would erase the genuine coordination value; classifying it as piton would wrongly imply no one is currently profiting from its maintenance, when the vendor industry demonstrably is."
+  },
+  "omegas": [
+    {
+      "id": "simulator_transfer_validity",
+      "question": "Does performance in high-fidelity simulators reliably predict performance under genuine catastrophic-incident stress, or does the simulator's inherent reversibility and absence of true consequence produce a systematically different cognitive-performance profile than a real event?",
+      "resolution_mechanism": "Longitudinal comparison of operators' simulator certification scores against their documented performance in actual incidents they subsequently faced, controlled for incident severity and novelty relative to the trained scenario library.",
+      "impact": "If transfer validity is low, the simulation-sufficiency reading is a false summit: the compliance proxy is being treated as equivalent to the underlying competence it claims to measure, without evidence, while a real extraction (vendor revenue, regulatory legibility) rides on the untested equivalence claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulator performance transfers to real-incident performance."
+    },
+    {
+      "id": "kernel_reading_contest_location",
+      "question": "This constraint is one reading (simulation_sufficiency) of the competence_occupation kernel; the sibling readings (real_incident_necessity, hybrid_occupation) locate the disagreement differently. Where exactly does the contest sit — is it about whether ANY simulated exercise can occupy the kernel at all, or only about whether simulation ALONE (without supplementary mechanisms) is sufficient?",
+      "resolution_mechanism": "Structural comparison of the three sibling constraint files: real_incident_necessity forecloses simulation's adequacy entirely; hybrid_occupation accepts simulation as a necessary-but-insufficient component. Determining which structural element carries the actual dispute (kernel-adequacy vs. component-sufficiency) requires cross-reading analysis across all three files.",
+      "impact": "If the dispute is really about component-sufficiency (this reading vs. hybrid_occupation) rather than kernel-adequacy (this reading vs. real_incident_necessity), then the beneficiary structure identified here (simulation vendor capture of the full training budget) is the more consequential axis of contest, since hybrid_occupation would only partially displace vendor revenue while real_incident_necessity would eliminate the simulation market's centrality entirely.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Where the kernel contest is structurally located among the three sibling readings."
+    },
+    {
+      "id": "compliance_metric_capture",
+      "question": "Has the simulator-hours compliance metric been substantively captured by vendor and training-department interests (i.e., is the metric's definition itself shaped by parties who profit from higher thresholds), or does it remain an independently-set proxy that happens to also benefit those parties?",
+      "resolution_mechanism": "Trace the standard-setting history: who sat on the committees that defined minimum simulator hours and fidelity requirements, and what financial relationships did they hold with simulation vendors at the time.",
+      "impact": "Direct capture would sharpen the classification toward the extractive pole (supporting tangled_rope or even snare-leaning read); independent proxy-setting that happens to align with vendor interest would support a more benign coordination-dominant reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the compliance threshold itself was set independently or under vendor influence."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_occupation__real_incident_necessity",
+      "competence_occupation__hybrid_occupation"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the competence_occupation kernel. simulation_sufficiency (this file) claims frequency/fidelity-optimized simulation alone occupies the kernel; real_incident_necessity claims only genuine catastrophic exposure can occupy it, foreclosing simulation's adequacy in principle; hybrid_occupation claims no single mechanism suffices and multiple mechanisms must run concurrently without a settled optimal mix. Each reading carries its own ε, beneficiary/victim structure, and classification; they are linked here via affects_constraints rather than merged into one story, per the ε-invariance decomposition rule."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "procedural_proficiency_via_repeated_exposure",
+    "drift_state": {
+      "moment": "post_simulator_industry_maturation",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "competence_occupation__real_incident_necessity",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "competence_occupation__hybrid_occupation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulated_exposure_is_functionally_equivalent_to_real_exposure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "skill_decay_is_a_frequency_fidelity_optimization_problem",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

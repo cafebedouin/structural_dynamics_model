@@ -1,0 +1,321 @@
+{
+  "header": {
+    "constraint_id": "licensing_statute_mandate__rent_seeking_suppression",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "9368cb58-57f4-421b-9562-8ef16f5534d4"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Occupational Licensing Statute as Incumbent Rent Extraction",
+    "topic_domain": "labor_economics/regulatory_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_licensed_practitioners",
+      "professional_licensing_boards",
+      "trade_association_lobbies"
+    ],
+    "victims": [
+      "prospective_entrants",
+      "consumers_paying_higher_prices",
+      "cross_state_migrant_workers"
+    ],
+    "vindicated_propositions": [
+      "occupational_self_regulation_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_licensed_practitioners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Already hold the license and face no new compliance burden; benefit directly from reduced competition and the wage premium that scarcity produces. Sit on or fund the board that sets entry requirements, giving them ongoing control over the barrier's height."
+    },
+    {
+      "name": "professional_licensing_boards",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Composed predominantly of incumbent practitioners, sets examination content, continuing-education mandates, and reciprocity rules. Justifies each requirement as protecting the public, but requirements consistently track what raises entry cost rather than what predicts harm reduction. Funded by licensing fees paid by the very entrants it screens."
+    },
+    {
+      "name": "trade_association_lobbies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Lobbies statehouses to expand scope-of-practice restrictions and resist reciprocity agreements that would let out-of-state licensees compete locally. Drafts model legislation later adopted verbatim by state boards, then represents its members' interests in defending the resulting statute."
+    },
+    {
+      "name": "prospective_entrants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Must complete lengthy, costly training and examination requirements often unrelated to the tasks actually performed, or exit the field entirely. Cannot practice, even briefly or under supervision, without the credential; migrating to another jurisdiction usually means repeating requirements from scratch."
+    },
+    {
+      "name": "consumers_paying_higher_prices",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Pay higher prices for licensed services because supply is artificially restricted; have no visibility into whether the price premium buys any corresponding safety improvement. Can sometimes substitute unlicensed or DIY alternatives, but for many services the statute makes unlicensed provision illegal, closing that option too."
+    },
+    {
+      "name": "cross_state_migrant_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Hold a valid license in one state but face non-recognition or costly re-certification when relocating, effectively re-imposing the entry barrier at every jurisdictional line despite having already demonstrated competence."
+    },
+    {
+      "name": "legislators",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Nominally hold authority to revise or repeal licensing statutes but rarely do, given concentrated incumbent lobbying versus diffuse consumer interest; genuinely could reweigh the tradeoff but the political incentive structure keeps the question off the floor."
+    },
+    {
+      "name": "labor_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study wage premiums, price effects, and entry-rate data across licensed and unlicensed occupations; publish findings that consistently show licensing raises prices with little measurable quality improvement in many occupations, but their findings do not translate into statutory change."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "In principle, licensing coordinates a signal of minimum competence so consumers need not individually verify every practitioner's skill before transacting.",
+    "transfer_function": "Moves income from prospective entrants (foreclosed wages, sunk training costs) and consumers (price premiums) to incumbent practitioners (wage premium) and licensing boards (fee revenue), via a statutory barrier to entry that exceeds what competence verification alone would require.",
+    "absent_voices": "Prospective entrants who have not yet entered the field have no seat on the boards that set the barriers they will face; unlicensed practitioners who could offer lower-cost service are legally barred from testifying as market participants, only as petitioners for exemption.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the statute vanished overnight, entry would rise, incumbent wage premiums would compress toward competitive levels, and consumer prices would fall in the affected occupation — the licensing board itself would lose its funding base and likely dissolve. Some minimum-competence signaling would likely reconstitute voluntarily (certification, insurance requirements) but at a fraction of the current barrier height.",
+    "founding_problem": "Originally proposed to address genuine information asymmetries where consumers could not assess practitioner competence before suffering harm from incompetent service.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Licensing boards and incumbent associations attest the safety problem remains live and justifies current requirements. Labor economists and legislative auditors outside the beneficiary set attest that requirement stringency (hours, fees, exam content) correlates with incumbent lobbying intensity rather than with documented harm rates, and that many requirements (cosmetology hour minimums, geographic reciprocity denial) have no plausible safety rationale — supporting the reading that the founding problem has been substantially decoupled from the current statute's actual function."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This story instantiates the rent_seeking_suppression reading of the licensing_statute_mandate kernel: the statute exists primarily to restrict labor supply and transfer rents to incumbents, with the public-safety rationale operating as post-hoc justification rather than causal driver. This is distinct from the public_safety_coordination reading (same statute, read as genuine competence-signaling coordination with negligible extraction) and the graduated_access_filter reading (same statute, read as a class-sorting mechanism where the primary transfer is stratification by prior resource access rather than incumbent-to-entrant rent capture). All three readings share the same statutory text and kernel but diverge sharply in beneficiary/victim structure and in ε — they are linked via network.affects_constraints, not merged into one story.",
+    "narrative_context": "A state licensing board, captured by incumbent-dominated composition and sustained by trade association lobbying, sets entry requirements (hours of training, examination content, continuing education, reciprocity denial) that track incumbent interests far more closely than documented harm rates. Entrants pay in foreclosed wages and sunk training cost; consumers pay in price premiums; incumbents and the board capture the resulting rents. The claimed type (snare) and the authored metrics are independently asserted: extraction and suppression are both substantial and rising, consistent with an entrenching extraction mechanism rather than a stable coordination function.",
+    "key_agents": [
+      "incumbent_licensed_practitioners: primary beneficiary (organized/arbitrage) — captures wage premium and board control",
+      "professional_licensing_boards: agenda_setter (institutional/arbitrage) — sets and enforces entry barriers, captured by incumbents",
+      "trade_association_lobbies: agenda_setter/beneficiary (organized/arbitrage) — drafts model legislation, defends statute",
+      "prospective_entrants: primary target (powerless/trapped) — bears foreclosed wages and training cost",
+      "consumers_paying_higher_prices: secondary target (powerless/constrained) — bears price premium",
+      "cross_state_migrant_workers: secondary target (powerless/trapped) — barrier re-imposed at jurisdictional lines",
+      "legislators: excluded from meaningful revision (institutional/analytical) — could act but face concentrated-vs-diffuse incentive asymmetry",
+      "labor_economists: analytical observer (analytical/analytical) — documents effect without power to change it"
+    ],
+    "logic_rationale": "Extraction (0.78) is high because the entry barrier's stringency has been shown, in the empirical record for many licensed occupations, to track incumbent political influence rather than harm-reduction evidence — the wage premium and price premium are the measured transfer. Suppression (0.72) is high because exit for entrants is not merely inconvenient but statutorily foreclosed: practicing without the credential is often a criminal or civil violation, not just a market disadvantage. Theater ratio (0.55) reflects that continuing-education and re-certification requirements increasingly serve to maintain the appearance of ongoing competence verification while functioning mainly as recurring fee extraction and barrier maintenance — this rises over the measured interval as the coordination rationale increasingly serves as cover rather than function. All three time series share one grid (0/8/16/24/32/40) as required.",
+    "directionality_logic": "Incumbents and the board sit at the beneficiary end of directionality: they collect fees and wage premiums and control the mechanism that produces them, with arbitrage-grade exit (they can relocate their practice or shift board composition without losing the rent). Entrants and consumers sit at the target end: trapped or constrained exit, no control over requirement-setting, and the extraction lands on them structurally. Legislators are excluded rather than positioned as beneficiary or victim — they hold formal authority to change the arrangement but structurally do not exercise it, which is a distinct situation from either capturing or bearing the extraction.",
+    "perspectival_gap": "From the incumbent/board seat, the statute reads as legitimate professional self-governance protecting consumers and the profession's reputation. From the entrant/consumer seat, the same statute reads as an entry toll with a safety veneer. The engine computes these as structurally different seat classifications from the same base data — the divergence is the point of the classification, not an error to be reconciled.",
+    "mandatrophy_analysis": "The founding problem (genuine information asymmetry about practitioner competence) may have been real at statute inception, but the corroboration record shows it has substantially decoupled from the current requirement structure: requirement stringency tracks lobbying intensity, not harm data, and reciprocity denial (which has zero plausible safety rationale — a competent practitioner does not become incompetent by crossing a state line) persists specifically because it protects local incumbents from out-of-state competition. This is the signature of mandatrophy: the mandate (protect consumers) has been substantially retained as language while the operative function (protect incumbents) has taken over the machinery originally built for the mandate."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_disagreement_locus",
+      "question": "Given the same statutory text, is the primary structural function rent extraction (this reading), genuine safety coordination (public_safety_coordination reading), or class-based access sorting (graduated_access_filter reading)?",
+      "resolution_mechanism": "Compare requirement stringency against documented harm-rate data by occupation, and against the demographic/class composition of entrants versus incumbents; occupations where stringency has zero correlation with harm data and strong correlation with incumbent lobbying spend support this reading over public_safety_coordination; occupations where entry barriers disproportionately track prior resource access (unpaid apprenticeship hours, licensing exam fees relative to income) support graduated_access_filter as an additional or alternative structural layer.",
+      "impact": "If public_safety_coordination dominates for a given occupation's actual data, this reading's ε is overstated for that occupation and the statute should be re-authored as a separate, less extractive constraint. If graduated_access_filter dominates, the primary victim axis is class rather than incumbent-vs-entrant, which changes the beneficiary/victim structure entirely.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which of the three kernel readings best fits the empirical operation of a given occupation's licensing statute."
+    },
+    {
+      "id": "board_capture_degree",
+      "question": "To what degree is board composition genuinely captured by incumbent interest versus genuinely representing broader public-interest appointees?",
+      "resolution_mechanism": "Audit board member professional affiliation, appointment process, and voting record correlation with incumbent-favorable versus consumer-favorable rule changes over the statute's history.",
+      "impact": "High capture supports the snare classification robustly; if boards include substantial independent or consumer-representative membership with demonstrated influence on outcomes, the coordination function may be more genuine than this reading assumes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether licensing board composition is substantively captured by incumbent interest."
+    },
+    {
+      "id": "reciprocity_denial_rationale",
+      "question": "Is there any occupation-specific safety rationale for denying reciprocity to out-of-state licensees, or is reciprocity denial purely a competitive barrier?",
+      "resolution_mechanism": "Compare harm rates for cross-state-licensed practitioners operating under reciprocity agreements against locally-licensed practitioners in occupations that do versus do not have reciprocity.",
+      "impact": "Absence of any measurable harm differential would strongly corroborate this reading's characterization of reciprocity denial as pure rent protection with zero safety content.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether reciprocity denial has any safety justification beyond incumbent protection."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "licensing_statute_mandate__public_safety_coordination",
+      "licensing_statute_mandate__graduated_access_filter"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the licensing_statute_mandate kernel, sharing the same statutory text but instantiating structurally distinct constraints per the ε-invariance principle: rent_seeking_suppression (this story, snare, ε=0.78 — incumbents as beneficiary, entrants/consumers as victim), public_safety_coordination (mountain-or-rope framing, negligible extraction — genuine competence-signaling), and graduated_access_filter (tangled_rope framing — class-stratified access as the primary transfer axis, distinct victim set from this story). The three do not average into one ε; each is authored independently with its own beneficiary/victim structure and linked here for contamination-propagation analysis."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "consumer_protection_founding_rationale",
+    "drift_state": {
+      "moment": "contemporary_licensing_proliferation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "licensing_statute_mandate__public_safety_coordination",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "licensing_statute_mandate__graduated_access_filter",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "incumbent_control_of_entry_terms_is_illegitimate_self_dealing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "requirement_stringency_must_track_harm_evidence_not_lobbying_capacity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "incumbent_licensed_practitioners",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

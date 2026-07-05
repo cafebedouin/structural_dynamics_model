@@ -1,0 +1,315 @@
+{
+  "header": {
+    "constraint_id": "border_legitimacy__humanitarian_obligation_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "e679dc21-5f92-47eb-8903-e6797a459da6"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Refugee/Non-Refugee Categorical Admission Obligation",
+    "topic_domain": "political_philosophy/migration_studies/international_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "recognized_refugees",
+      "host_state_publics",
+      "unhcr_and_asylum_bureaucracies"
+    ],
+    "victims": [
+      "economic_migrants",
+      "climate_displaced_without_persecution_nexus",
+      "asylum_seekers_misclassified_at_screening"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "recognized_refugees",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Have fled persecution meeting the 1951 Convention definition. If successfully classified as such, they receive a legal admission pathway, non-refoulement protection, and eventual status. Their benefit depends entirely on passing a screening process they do not control and cannot appeal on equal footing with the state's resources."
+    },
+    {
+      "name": "economic_migrants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Flee severe poverty, wage collapse, or slow-onset livelihood destruction that does not fit the persecution nexus. They face the same borders and often the same journeys and smuggling risks as recognized refugees but are categorically excluded from the admission obligation, deportable on discovery, and denied the legal standing to contest exclusion on humanitarian grounds equivalent to asylum claims."
+    },
+    {
+      "name": "climate_displaced_without_persecution_nexus",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Displaced by disasters, sea-level rise, or ecological collapse with no persecuting agent to name. The convention's persecution requirement structurally cannot recognize their claim regardless of severity, leaving them in the same excluded category as economic migrants despite comparable or greater life-threat."
+    },
+    {
+      "name": "asylum_seekers_misclassified_at_screening",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Have genuine persecution claims but are screened out due to credibility assessment errors, inconsistent adjudication standards across states, lack of legal representation, or documentary evidentiary demands that persecution flight rarely allows. They occupy the same legal category as recognized refugees in principle but bear the cost of a bifurcation the state administers imperfectly and unevenly."
+    },
+    {
+      "name": "destination_state_governments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Draft and administer the legal test distinguishing persecution-based claims from economic ones, staff the adjudication bureaucracy, and control detention, deportation, and appeal infrastructure. The categorical line lets them honor the humanitarian obligation narrowly while retaining broad discretion to exclude the much larger population of economically displaced people."
+    },
+    {
+      "name": "host_state_publics",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from a bounded admission obligation that is politically defensible as morally motivated while remaining numerically limited. The persecution/economic distinction lets publics support humanitarian principle in the abstract without accepting the scale of admission that a needs-based or rights-based standard would require."
+    },
+    {
+      "name": "unhcr_and_asylum_bureaucracies",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Administer refugee status determination, receive funding and mandate legitimacy from maintaining the persecution-based category as a workable, bounded legal instrument. Their institutional relevance depends on the category remaining administrable and distinct from the much larger and more diffuse economic migration question."
+    },
+    {
+      "name": "origin_state_governments",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear no formal role in the destination state's admission determination even where their own economic policy, governance failures, or climate adaptation choices contributed to the displacement. They are not party to the humanitarian-obligation framework's line-drawing, though remittance flows and diaspora relations make them structurally interested."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a legally administrable, bounded standard letting states commit to a genuine humanitarian floor (non-refoulement for persecution victims) without the unbounded commitment a needs-based or rights-based admission standard would require — solving the real coordination problem of making a moral obligation operational and adjudicable at scale.",
+    "transfer_function": "Moves legal admission, protection status, and non-refoulement guarantees to those who can prove a persecution nexus, while withholding the same from those whose displacement is equally severe but categorized as economic or climate-driven — the transfer is legal standing itself, not a resource in the ordinary sense.",
+    "absent_voices": "Economic migrants and climate-displaced persons have no forum in which to contest the categorical line itself; asylum tribunals adjudicate individual claims against the existing category, not the legitimacy of the category. Origin-state governments whose conditions produced the displacement are not parties to the admission determination at all.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the persecution/economic distinction vanished, either admission obligations would expand dramatically (moving toward the freedom-of-movement reading) or the humanitarian floor itself would collapse into pure sovereign discretion (moving toward the sovereignty reading) — either direction reorganizes global admission law, refugee bureaucracies, and the legal status of tens of millions of currently-excluded displaced people.",
+    "founding_problem": "Post-WWII architects of the 1951 Refugee Convention needed a way to obligate states to protect people fleeing state-sponsored persecution (particularly targeted political and ethnic violence) without requiring states to accept unlimited migration for any reason, which no state would ratify.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "UNHCR and drafting-era diplomatic records attest the persecution-nexus problem was real and specific to Cold War-era political refugees. Independent migration scholars and origin-state governments increasingly attest that the founding problem has shifted: today's dominant displacement driver is climate and economic collapse, which the persecution framework was never built to address, making the categorical line's current function partly a legacy artifact rather than a live solution to the world's actual displacement pattern."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the humanitarian-obligation reading of the border_legitimacy kernel: states owe admission to persons fleeing persecution or (in some formulations) disaster, but not to general economic migrants. This reading is deliberately generated in isolation from its siblings — sovereignty_reading (border authority as an incident of territorial sovereignty) and freedom_of_movement_reading (movement as a presumptive right against which borders must justify themselves). Each reading is its own constraint with its own ε, beneficiary/victim structure, and classification; they are linked only through network edges and the kernel_context note, per the ε-invariance principle. This reading's structural signature is the bifurcated victim set the persecution/economic line produces: recognized refugees and misclassified asylum seekers sit on one side of an administrable but imperfectly applied test, while economic migrants and climate-displaced persons — often facing comparable severity of harm — sit permanently outside the obligation's scope regardless of need.",
+    "key_agents": [
+      "recognized_refugees: primary intended beneficiary (powerless/trapped) — receives protection only if classification succeeds",
+      "economic_migrants: primary categorical victim (powerless/trapped) — excluded by definition regardless of severity of hardship",
+      "climate_displaced_without_persecution_nexus: structural victim (powerless/trapped) — the convention's persecution requirement cannot recognize their claim by design",
+      "destination_state_governments: agenda-setter (institutional/arbitrage) — administers and benefits from the bounded scope of obligation",
+      "unhcr_and_asylum_bureaucracies: institutional beneficiary/co-administrator — mandate legitimacy tied to category's continued administrability"
+    ],
+    "logic_rationale": "Extraction is moderate (0.52) because the categorical exclusion imposes a real, severe cost on economic migrants and climate-displaced persons who are denied a legal pathway that recognized refugees receive for comparably severe circumstances — but the exclusion is not extraction in the classic rent-seeking sense; no party directly profits from excluding economic migrants the way a landlord profits from rent. Suppression (0.58) reflects the active enforcement apparatus — detention, deportation, credibility-based denial — required to maintain the categorical line against migrants who would otherwise claim protection on humanitarian grounds. Theater ratio (0.42) is elevated because a substantial share of asylum adjudication activity increasingly functions to perform rigorous line-drawing (credibility interviews, country-conditions litigation) that adjudicates the boundary rather than serving the convention's original persecution-specific purpose, especially as economic and climate displacement increasingly present with persecution-adjacent framing to fit the available category. accessibility_collapse (0.5) and resistance (0.62) sit mid-range: alternatives to the categorical line (needs-based standards, temporary protected status expansions) exist and are actively contested by migration advocates, refugee-receiving publics, and origin-state governments — this is not a closed, uncontested arrangement.",
+    "directionality_logic": "Recognized refugees and (nominally) misclassified asylum seekers are the coordination beneficiaries — the constraint's stated purpose is to protect them, and when classification succeeds it does. Economic migrants and climate-displaced persons are the structural targets: the same categorical apparatus that admits refugees is the apparatus that excludes them, with no separate mechanism bearing their case. Destination-state governments and host-state publics are beneficiaries in the directionality sense — they receive a bounded, politically sustainable humanitarian commitment rather than an open-ended one. UNHCR and asylum bureaucracies sit as institutional beneficiaries whose continued relevance depends on the persecution category remaining a workable administrative unit distinct from the much larger economic-migration question.",
+    "perspectival_gap": "From the destination-state and bureaucratic seats, this reading is genuine coordination: a scalable, principled way to honor a real moral obligation without accepting unlimited liability. From the economic-migrant and climate-displaced seats, the identical legal apparatus operates as a wall dressed in humanitarian language — the persecution requirement does the work of exclusion while the framework's moral vocabulary (refugee protection, non-refoulement) supplies its legitimacy. The engine computes these as different seat-level types from the same structural data; neither seat's computed type is wrong, they are reading different positions in the same structure.",
+    "mandatrophy_analysis": "The founding problem — obligating protection for Cold War-era political and ethnic persecution victims — was live and specific in 1951. Whether it remains the dominant global displacement problem today is contested: climate and economic collapse now drive a much larger share of forced displacement than state-targeted persecution, yet the legal category has not expanded to match. This is not classic mandatrophy (the founding problem is not simply dead) — persecution-based flight is still real and the obligation to protect it remains live — but the category's boundary has become mismatched to the world it was built to describe, which is why founding_problem_status is authored as contested rather than dead.",
+    "kernel_context": "This constraint is the humanitarian_obligation_reading of the border_legitimacy kernel. Two sibling readings exist as separate constraint stories: sovereignty_reading (border authority as an incident of territorial sovereignty, with no independent admission obligation) and freedom_of_movement_reading (movement as a presumptive human right, under which the persecution/economic distinction itself is illegitimate line-drawing). This reading occupies structural middle ground: it accepts that states may exclude (unlike freedom_of_movement_reading) but insists exclusion has limits state sovereignty alone cannot override (unlike sovereignty_reading). The committer structure — which premises this reading shares and rejects relative to its siblings — is routed to the omega variables below rather than folded into this constraint's own ε or classification."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection_ambiguity",
+      "question": "Is the humanitarian-obligation reading the correct framing of border legitimacy, or do the sovereignty_reading and freedom_of_movement_reading better capture the actual normative structure governing admission?",
+      "resolution_mechanism": "No empirical resolution exists; this is a genuine normative dispute among live positions in political philosophy and international law, evidenced by the persistent three-way split among states, courts, and scholars (restrictionist sovereignty doctrine vs. expansive rights-based movement doctrine vs. the bounded humanitarian-obligation compromise embedded in the 1951 Convention and its regional analogues).",
+      "impact": "If sovereignty_reading is correct, this constraint's entire obligation structure is supererogatory rather than obligatory, collapsing much of its claimed victim set into non-victims of a mere policy choice. If freedom_of_movement_reading is correct, the persecution/economic distinction is itself the primary injustice, and economic_migrants and climate_displaced_without_persecution_nexus become the central victims of an illegitimate border regime rather than excluded parties to a bounded but legitimate one.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which of the three border_legitimacy kernel readings correctly describes the normative structure of admission obligations."
+    },
+    {
+      "id": "persecution_nexus_versus_severity_ambiguity",
+      "question": "Should admission obligation track the SOURCE of harm (persecution by an identifiable agent) or the SEVERITY of harm regardless of source (life-threatening displacement from any cause)?",
+      "resolution_mechanism": "Comparative analysis of actual harm severity between recognized refugee populations and excluded climate/economic-displaced populations; if severity is comparable or greater for excluded groups, the persecution-nexus criterion is doing normative work disproportionate to its moral significance.",
+      "impact": "If severity should govern, the current categorical line systematically misclassifies genuine humanitarian emergencies as non-qualifying, and the constraint's moderate ε understates the harm to excluded groups. If source should govern (persecution carries distinct moral weight because of the identifiable perpetrator and rights violation, independent of comparative severity), the current line is more defensible than the severity comparison suggests.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether admission obligation should be triggered by harm source or harm severity."
+    },
+    {
+      "id": "administrability_versus_justice_tradeoff",
+      "question": "Does the persecution/economic distinction's administrative workability justify its under-inclusiveness, or does administrability provide cover for what is substantively an unjustifiable exclusion?",
+      "resolution_mechanism": "Track whether alternative administrable standards (e.g., graduated protection categories, complementary protection regimes some states have adopted for climate displacement) achieve comparable adjudication cost and accuracy while including a broader population — if such standards exist and function, administrability does not require the current narrow line.",
+      "impact": "If administrable alternatives exist and are not adopted, the persistence of the narrow persecution category is better explained by host-state political preference for bounded liability than by genuine administrative necessity, which would push this constraint's classification toward snare rather than tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the categorical line's administrability is a genuine constraint or a post-hoc justification for a narrower obligation than administratively feasible."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "border_legitimacy__sovereignty_reading",
+      "border_legitimacy__freedom_of_movement_reading"
+    ],
+    "dual_formulation_note": "This story is one of three linked readings of the border_legitimacy kernel. sovereignty_reading grounds border authority in territorial sovereignty with no independent admission obligation; freedom_of_movement_reading treats movement as a presumptive right against which any exclusion must be justified. This humanitarian_obligation_reading occupies the structural middle: it accepts legitimate state discretion to exclude (distinguishing it from freedom_of_movement_reading) while insisting a floor obligation exists that sovereignty alone cannot override (distinguishing it from sovereignty_reading). Each reading has its own ε, beneficiary/victim structure, and computed type; they are not to be merged or averaged. The expected structural delta for this reading, per the generation manifest, is the bifurcated victim set the persecution/economic line produces — a delta not present in either sibling reading's structure."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "convention_persecution_nexus_standard",
+    "drift_state": {
+      "moment": "contemporary_climate_displacement_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "border_legitimacy__sovereignty_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "border_legitimacy__freedom_of_movement_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "persecution_nexus_grounds_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "bounded_obligation_preserves_state_discretion",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

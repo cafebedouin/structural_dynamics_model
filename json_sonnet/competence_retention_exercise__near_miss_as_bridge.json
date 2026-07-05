@@ -1,0 +1,328 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__near_miss_as_bridge",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "0a3a009e-ca46-4de0-a174-06bcd940394c"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.22,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Near-Miss Investigation as the Bridge Between Simulation and Catastrophe",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "frontline_operators",
+      "safety_engineering_departments",
+      "regulatory_bodies",
+      "the_traveling_public"
+    ],
+    "victims": [
+      "incident_reporting_workers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "safety_engineering_departments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Designs and administers the near-miss reporting and investigation pipeline, decides which incidents feed simulator scenario updates, and defends the hybrid model against both pure-simulation budget cuts and pressure to wait for 'real data' from actual disasters. Their institutional legitimacy depends on demonstrating the pipeline actually improves outcomes."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Train on simulators whose scenarios are continuously updated from near-miss data, giving them exposure to realistic failure modes without personally living through a catastrophe. They also bear the cost of reporting their own errors and close calls, which requires trusting a non-punitive reporting culture that isn't always reliably delivered."
+    },
+    {
+      "name": "incident_reporting_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The individuals who actually experienced or caused a near-miss and must disclose it, often against organizational or peer incentives to minimize, hide, or reframe the event. They carry personal, reputational, and sometimes legal risk for supplying the raw material the entire system depends on, with uneven protection from retaliation depending on the jurisdiction and employer."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Rely on near-miss reporting rates and simulator-update cycles as evidence that an industry is self-correcting without needing to wait for fatal accidents to mandate reform. Their credibility depends on the pipeline being real rather than a paperwork exercise."
+    },
+    {
+      "name": "the_traveling_public",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Never sees the pipeline directly but is the ultimate beneficiary of competence maintained through near-miss-informed training rather than through learning exclusively from disasters that would otherwise have to happen to them first. Has no seat in how the reporting culture is designed or funded."
+    },
+    {
+      "name": "simulator_vendors",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Build and sell the simulator platforms and have a commercial interest in simulation being framed as self-sufficient (reducing their obligation to continuously integrate costly incident-derived updates). They are not formally part of the near-miss investigation process and can lobby for the simulation_as_sufficient framing without being accountable to the reporting culture they'd rather not depend on."
+    },
+    {
+      "name": "safety_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study whether near-miss-informed simulator updates actually track the causal structure of eventual catastrophes, or whether organizations cherry-pick comfortable near-misses while systemic risks accumulate unreported. They publish comparative safety-record analyses across industries with different reporting cultures."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Creates a continuous feedback loop where minor failures and near-misses are investigated, generalized, and fed into simulator scenario design, so that competence in catastrophe-avoidance is maintained and updated without requiring an actual catastrophe to occur first.",
+    "transfer_function": "Moves the burden of producing organizational learning material from the abstract 'the next disaster' onto the specific workers who must disclose their own errors and close calls, in exchange for distributing the resulting safety improvement broadly across operators, the public, and the institution's regulatory legitimacy.",
+    "absent_voices": "Individual incident reporters who fear retaliation or reputational damage are structurally underrepresented in shaping how the reporting culture is designed — they supply the raw material but rarely sit on the committees that decide how their disclosures will be used, credited, or protected. Simulator vendors are also excluded from the investigation loop despite having a stake in whether it is judged necessary.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If near-miss investigation and integration vanished overnight, simulator scenarios would stagnate on whatever failure modes were known at the time of last major update, regulatory bodies would lose their principal non-catastrophic evidence of industry self-correction, and organizations would face pressure to either wait for actual disasters to justify training updates or fabricate confidence in simulation alone — both worse equilibria than the hybrid.",
+    "founding_problem": "High-reliability industries needed a way to keep operator competence current against evolving real-world failure modes without waiting for catastrophic events to supply the lessons, and without over-trusting simulators that might drift away from actual operational risk.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent safety researchers and comparative-industry accident investigators (outside the safety engineering departments that administer the pipeline) corroborate that industries with active near-miss reporting cultures show measurably better long-run safety records than those relying on simulation alone or on catastrophe-driven reform, though they also note reporting completeness varies widely and is not independently audited in most jurisdictions."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.16
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the near_miss_as_bridge reading of the competence_retention_exercise kernel: the claim that near-miss incidents and minor failures, actively investigated and fed into simulator updates, are sufficient to maintain and validate operational competence without requiring either full catastrophes (the catastrophe_as_necessary sibling) or simulation alone (the simulation_as_sufficient sibling). The reading is a hybrid position — it treats simulators as necessary for routine skill preservation but insists they must be continuously informed by real-world near-miss data to avoid drifting away from actual risk. This is authored as its own constraint with its own ε, distinct from and not averaged with the sibling readings, which are separate stories.",
+    "key_agents": [
+      "safety_engineering_departments: agenda_setter (institutional/constrained) — designs and defends the hybrid pipeline",
+      "incident_reporting_workers: payer (powerless/trapped) — bear personal risk disclosing their own errors",
+      "frontline_operators: beneficiary/payer (moderate/constrained) — trained on updated simulators, also must self-report",
+      "regulatory_bodies: beneficiary/observer (institutional/analytical) — use reporting rates as evidence of self-correction",
+      "the_traveling_public: beneficiary (powerless/trapped) — benefits invisibly, has no seat at the table",
+      "simulator_vendors: excluded (organized/mobile) — commercial interest in the rival simulation_as_sufficient framing",
+      "safety_researchers: observer (analytical/global) — assess whether the pipeline tracks real catastrophic causal structure"
+    ],
+    "logic_rationale": "Extraction is modest (0.28 at interval end) because the core function — using minor failures to update training — genuinely improves outcomes for nearly everyone downstream; the extraction that exists falls narrowly on incident reporters who bear disclosure risk without proportionate protection or credit. Suppression is low (0.22) because reporting is generally voluntary and protected by non-punitive culture policies where those policies are honored, though enforcement of those protections is uneven. Theater ratio (0.30) reflects a real but imperfect risk: some near-miss reporting programs become box-checking exercises where reports are logged but not meaningfully integrated into simulator redesign, and this proportion has crept up over the measured interval as reporting volume outpaces investigative capacity.",
+    "directionality_logic": "Safety engineering departments and regulatory bodies sit near the beneficiary end: they administer and derive legitimacy from the pipeline. Frontline operators and the traveling public are largely beneficiaries with diffuse, structural exposure. Incident reporting workers are the clearest target: they supply the raw material (their own errors and close calls) and carry concentrated personal risk, while the benefit of better-trained colleagues and safer systems is spread across the whole population — a classic asymmetry between who bears the disclosure cost and who captures the systemic benefit.",
+    "mandatrophy_analysis": "The hybrid reading resists two mandatrophic failure modes at once: (1) treating the constraint as pure Rope with no cost (ignoring that reporting workers bear real, under-compensated risk) and (2) treating any friction in the reporting pipeline as proof the whole approach is a Snare or theater. The classification should register genuine coordination function (better competence, avoided catastrophes) coexisting with a real, identifiable payer class whose burden is not symmetric with the beneficiary class — but the enforcement is not so coercive, nor the alternatives so collapsed, that this rises to tangled_rope; incident reporters, while bearing risk, are not trapped in the sense of having no recourse (whistleblower protections and union grievance channels exist in most of the mature safety-culture jurisdictions this reading describes, even if imperfectly enforced)."
+  },
+  "omegas": [
+    {
+      "id": "near_miss_representativeness",
+      "question": "Do near-miss incidents actually sample the same causal space as full catastrophes, or do organizations selectively investigate the near-misses that are comfortable to investigate while systemic risks that would only surface in genuine catastrophe remain invisible to the pipeline?",
+      "resolution_mechanism": "Retrospective analysis comparing pre-catastrophe near-miss records (where catastrophes did eventually occur despite an active near-miss program) against the causal chain of the catastrophe itself, across multiple industries and jurisdictions.",
+      "impact": "If near-misses systematically fail to sample the rarer, more severe causal pathways, the near_miss_as_bridge reading overstates sufficiency and the catastrophe_as_necessary reading gains support for at least a residual class of risk; if near-misses do sample representatively, the hybrid reading is vindicated as sufficient without catastrophe.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether near-miss data structurally samples the same failure space as catastrophic events."
+    },
+    {
+      "id": "reporting_culture_authenticity",
+      "question": "Is the near-miss reporting culture genuinely non-punitive in practice, or does the theater_ratio increase over time reflect reporting becoming a compliance ritual disconnected from actual simulator scenario redesign?",
+      "resolution_mechanism": "Audit trail linking specific near-miss reports to specific simulator scenario changes, plus anonymous worker surveys on perceived retaliation risk, tracked longitudinally.",
+      "impact": "If reporting has decoupled from actual scenario updates, the constraint drifts from rope toward piton (a formerly functional pipeline maintained mostly as institutional performance) even though the claimed_type remains rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reporting-to-simulator-update pipeline remains functionally connected or has become largely performative."
+    },
+    {
+      "id": "kernel_reading_boundary_location",
+      "question": "Where exactly does the near_miss_as_bridge reading's claim of sufficiency break down — is there an identifiable class of catastrophic failure modes for which no amount of near-miss aggregation would have provided adequate warning, effectively requiring the catastrophe_as_necessary reading for that subset while near_miss_as_bridge holds for the rest?",
+      "resolution_mechanism": "Cross-industry taxonomy of catastrophe causal chains, coded for whether precursor near-misses existed and were reportable in principle versus catastrophes with no plausible near-miss precursor (e.g., novel failure modes with no prior partial manifestation).",
+      "impact": "If a nontrivial class of catastrophes has no near-miss precursor structure, this reading's sufficiency claim is falsified for that subclass, sharpening the boundary with catastrophe_as_necessary rather than eliminating either reading; this is the specific structural disagreement the kernel readings are meant to locate.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The located disagreement between this reading and catastrophe_as_necessary: whether all catastrophic causal structure has near-miss precursors."
+    },
+    {
+      "id": "simulator_fidelity_vs_incident_integration_tradeoff",
+      "question": "Is there a resource-allocation tradeoff between investing in higher-fidelity simulation (simulation_as_sufficient's preferred investment) and investing in near-miss investigation capacity, such that organizations adopting this hybrid reading are structurally under-resourcing one or the other?",
+      "resolution_mechanism": "Budget allocation studies across organizations claiming the hybrid approach, correlated with safety-outcome measures, to detect whether hybrid-claiming organizations actually under-invest in both relative to organizations that commit fully to one sibling reading.",
+      "impact": "If hybrid organizations systematically under-resource both components relative to committed single-reading organizations, the near_miss_as_bridge reading may function as a rationalization for under-investment rather than a genuinely superior structural design.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether claiming the hybrid reading provides cover for under-investing in either simulation fidelity or incident investigation capacity."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "simulation_as_sufficient",
+      "catastrophe_as_necessary"
+    ],
+    "dual_formulation_note": "This story is one of three readings of the competence_retention_exercise kernel. simulation_as_sufficient claims high-fidelity simulation alone is structurally equivalent to real events; catastrophe_as_necessary claims only actual catastrophic events provide adequate learning and stakes. This reading (near_miss_as_bridge) takes an intermediate position: simulators are necessary but insufficient alone, and must be continuously validated and updated using near-miss and minor-failure data, without requiring catastrophe. Each reading carries its own ε, its own beneficiary/victim structure, and its own claimed_type — they are not to be averaged or merged. The near_miss_as_bridge reading has the lowest extractiveness of the three because it distributes both the burden (routine reporting risk) and the benefit (continuously updated training) most broadly, whereas simulation_as_sufficient concentrates cost-avoidance benefit on vendors/institutions and catastrophe_as_necessary concentrates cost on populations who must experience the catastrophe."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "hybrid_feedback_competence_model",
+    "drift_state": {
+      "moment": "contemporary_safety_culture_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "competence_retention_exercise__simulation_as_sufficient",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "competence_retention_exercise__catastrophe_as_necessary",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "near_miss_data_is_causally_representative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulation_requires_continuous_real_world_recalibration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-05",
+    "source_essay": "no_scope_rebuild_sonnet",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
