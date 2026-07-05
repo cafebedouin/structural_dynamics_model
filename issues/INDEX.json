@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "9e2b83fe488388fa39d04ebf92766cf149f87470",
+    "store_version": "f394fde1ad06b03af9b512cb789f534f46d74df4",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-04T16:46:25"
+    "generated_at": "2026-07-04T20:31:54"
   },
-  "issues_sha": "86f858cb6fcc4b78740658859d000d491268bc98ed46e0f901a9c82be943fadf",
-  "n_entries": 211,
+  "issues_sha": "0ba0439d8a89b2be9712864b0a2c63ce3b8673347c0bbd68ebe9a4effd507a62",
+  "n_entries": 212,
   "active_token_set": [
     "investigating",
     "open",
@@ -15,7 +15,7 @@
     "resolved": 119,
     "mitigated": 13,
     "disposed": 4,
-    "open": 65,
+    "open": 66,
     "partial": 6,
     "future": 4
   },
@@ -983,7 +983,22 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-138",
-        "OQ-140"
+        "OQ-140",
+        "OQ-212"
+      ]
+    },
+    {
+      "id": "OQ-212",
+      "status": "open",
+      "priority": 5,
+      "summary": "The engine flattens the authored `coordination_type` distinction onto one `scaffold` verdict (engine-blindness / lost signal) (Ω_E)",
+      "deps": [
+        "splits_from OQ-140"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-140",
+        "OQ-211"
       ]
     }
   ],

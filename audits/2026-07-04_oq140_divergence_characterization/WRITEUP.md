@@ -41,6 +41,20 @@ correction is systematic and one-directional: of **28** live rope-claims the eng
 scaffold in **21 (75%)**; only 1 stays uniformly rope. The G-A cell is the confound-free
 (uniform-orbit) slice of this corpus-wide fact.
 
+**The kind is a genus — but stated at the grain the corpus witnesses (post-close refinement,
+`FAMILIES.md`).** The authored `coordination_type` field stratifies this kind into ~5 recurring
+families (information_standard, identity_coordination, enforcement_mechanism, resource_allocation,
+attachment_coordination). **Power-labeled honestly:** the species grain is witnessed on the TWIN
+corpora (haiku 49 / flash 64); the live corpus (9) shows the same field variation but every live
+family is n≤2 — per-family UNPOWERED. So *"the kind is a genus" is witnessed at species grain on
+the twins; live shows the field variation, not the per-family power to name species* — the
+species are twin-derived, live-corroborated at field level only. OQ-140 is deliberately NOT
+reopened to species grain (would promote twin-derived species into the live kind's name and
+invert the corpus hierarchy). The **powered** half — the engine flattens the authored ≥5-way
+`coordination_type` onto one invariant `scaffold` verdict (witnessed at n=9 live: field varies,
+verdict constant) — is split out as **OQ-212** (engine-blindness); the twin-powered species stay
+evidence under **OQ-211(e)**.
+
 **Witnesses (author claim by direct `constraint_claim/2`; engine by `perspective_chi`):**
 
 | # | constraint | authored object | ext | fits |
