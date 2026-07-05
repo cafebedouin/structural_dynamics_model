@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "f394fde1ad06b03af9b512cb789f534f46d74df4",
+    "store_version": "066b70153e98a4dfc77254d6d8d56bba040cfcb2",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-04T20:31:54"
+    "generated_at": "2026-07-04T20:44:31"
   },
-  "issues_sha": "0ba0439d8a89b2be9712864b0a2c63ce3b8673347c0bbd68ebe9a4effd507a62",
+  "issues_sha": "a16c21d64b8f19038cf55b17b27cd765a9ac1c7468a5cff17ec0bfb19e93caa5",
   "n_entries": 212,
   "active_token_set": [
     "investigating",
@@ -991,7 +991,7 @@
       "id": "OQ-212",
       "status": "open",
       "priority": 5,
-      "summary": "The engine flattens the authored `coordination_type` distinction onto one `scaffold` verdict (engine-blindness / lost signal) (Ω_E)",
+      "summary": "The `dr_type` verdict flattens the authored `coordination_type` distinction onto one `scaffold` (verdict-scoped, NOT lost signal — coordination_type has live consumers) (Ω_E)",
       "deps": [
         "splits_from OQ-140"
       ],

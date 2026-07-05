@@ -66,8 +66,18 @@ information_standard    | llm_synthesis_capacity             | [scaffold,scaffol
 resource_allocation    | weaponization_accessibility         | [scaffold,scaffold,scaffold,scaffold]
 ```
 
-Field varies 6 ways; verdict invariant `scaffold` across all 4 seats and all 9 constraints. The
-species varieties, if they exist, are an **authoring-side structure the engine is blind to** —
-which is the interesting result (a claim about what the substrate cannot see), and it is powered
-at n=9 in a way the species taxonomy is not. Minted as OQ-212 (sibling to OQ-140; the species
-stay twin-witnessed evidence under OQ-211).
+Field varies 6 ways; verdict invariant `scaffold` across all 4 seats and all 9 constraints.
+
+**Scope correction (consumer-search, positive-controlled — avoids the "engine is blind"
+over-claim).** The flattening is of the **`dr_type` verdict specifically, not engine-wide.**
+`coordination_type/2` HAS live consumers — proven by a consumer grep shown to FIND (so a later
+"no consumer" would be a real absence, not an unlooked grep): `boltzmann_compliance.pl:438,525`
+(it feeds the ExcessEps floor, `floor(coordination_type(C))`) and
+`cs_pattern_detection.pl:226,236,253,262` (CS pattern detection dispatches on
+`enforcement_mechanism`/`identity_coordination`). So the naturalization-path signal is **not
+lost** — it is consumed directly by ≥2 subsystems; only the `dr_type=scaffold` verdict omits the
+subtype, and those consumers read `coordination_type` directly so they don't need it in the
+verdict. This **leans correct-by-design** (`dr_type` types by status; the domain distinction is
+`coordination_type`'s job) → likely `docs/design/design_gaps.md`, not a defect. Minted as
+**OQ-212** (verdict-scoped flattening, sibling to OQ-140; the species stay twin-witnessed
+evidence under OQ-211).
