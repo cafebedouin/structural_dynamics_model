@@ -5077,13 +5077,14 @@ proposed detector is corpus-measurable) + Ω_P (design call: should the SCOPE ga
 inevitability/"mountain"/"irreducible" framing as a kernel trigger — seat necessity-vs-contingency —
 operator's, fresh decision).
 
-**Status:** mitigated — control sweep RUN (2026-07-04, pre-registered:
-`audits/2026-07-04_oq88_false_mountain_detector/`): positive control WITNESSED (full-D N=2),
-no over-fire observed but cell 2 only base-rate-inferred (no labeled flinch), and the
-pre-registered D′ refinement is DEAD (discriminator saturates). Detector = gate-signal
-CANDIDATE; residual = the Ω_P auto-route ruling (operator's) + optional flinch label.
+**Status:** mitigated — sweep RUN + Ω_P RULED (2026-07-05, operator): **light seat — false-mountain
+flag → operator kernel-vs-flat review prompt; NO auto-route** (kill condition: a labeled live
+candidate adjudicated suppressed-seat kernel at a rate holding across the 4 reopens auto-route).
+Positive control witnessed through one uniform predicate but N=1 per engine regime; cell 2 has
+NO archive leg (kernel_v1 D-applicable population empty by era) and no witness either direction;
+D′ dead (discriminator saturates; Phase 2c retroactively vacuous). Graduation: build the
+review-prompt wiring; optional flinch label (operator cost call) upgrades cell 2 to witnessed.
 **Priority:** 1
-**Deps:** blocked_on_human oq88-autoroute-or-review-prompt-ruling
 
 **Origin:** 2026-06-08, World3 essay comparison. A thesis-driven critique of the Nebel et al. 2024
 World3 recalibration ("The Robustness Is the Tell", web Claude) landed a spine the pipeline essay
@@ -5188,6 +5189,25 @@ no-alert mountain→rope (`statutory_debt_ceiling__constitutional_nullity_readin
 stamp-resolved **kernel-routed = caught**. Pin 1's result stands with sharpened reasoning:
 pre-router archive stories are D-inapplicable; only the review-prompt variant could apply to
 them at re-ingestion.
+
+**Post-review amendments + Ω_P ruling (2026-07-05; FINDINGS.md §Post-review amendments).**
+(a) Snare alert-type read (was OPEN): all mountain-claim divergences share alert type
+`type_1_false_summit` (5 live non-rope-top cases carry it; severity is `dr_type`-keyed,
+`drl_core.pl:636-644`, and crosses maxent top — `institutional_trust_erosion_c0` witness);
+the committed predicate's snare-exclusion rides the `maxent_top_type==rope` conjunct uniformly
+(never reads severity; type-only without it would read 14, not 9). Surviving caveat: the two
+positives span two ENGINE REGIMES (411db0e / 23b7faa) — **N=1 per regime** through one uniform
+predicate. (b) Cell 2 corrected: NO archive leg exists (kernel_v1's D-applicable population is
+empty by era — flat subset n=2 both tangled_rope, firing case pre-router), so cell 2 rests
+entirely on the 4 live flat candidates with no witness in either direction ("INFERRED-weak"
+overstated it). (c) Phase 2c retroactively vacuous under saturation: regime-omega was never
+validated as a discriminator on ANY instance, including the World3 inspiration case. (d) World3
+06-08 manifest join witnessed (`layer_a_source_present: true` in `oq88_sweep_results.json` +
+direct manifest read), discharging the Pin-2 OPEN. **(e) Ω_P RULED (operator, 2026-07-05):
+review-prompt light seat, no auto-route** — auto-route on an unwitnessed over-fire rate over a
+44%-covered live population is the OQ-79 over-route one level up; kill condition as in Status.
+Follow-ups: review-prompt wiring (gated on nothing; workable); optional flinch label from the
+live flat 3 (operator cost call — upgrades cell 2 to witnessed).
 
 ---
 

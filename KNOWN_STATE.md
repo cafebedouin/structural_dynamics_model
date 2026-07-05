@@ -89,6 +89,19 @@ exists); the no-alert mountain→rope (`statutory_debt_ceiling__...`) stamp-reso
 kernel-routed = caught. Pin 1 result stands, reasoning sharpened: pre-router archive stories
 are D-INAPPLICABLE, not D-negative.
 
+*Post-review amendments + Ω_P RULED (2026-07-05, FINDINGS.md §Post-review amendments):*
+(a) snare read — alert type `type_1_false_summit` is SHARED across divergence targets
+(severity is dr_type-keyed, crosses maxent top: `institutional_trust_erosion_c0` snare-top w/
+informational); predicate uniform (exclusion rides maxent-top-rope, never severity; type-only
+w/o conjunct = 14 not 9); positive control = **N=1 per engine regime** (411db0e / 23b7faa).
+(b) cell 2 has NO archive leg — kernel_v1's D-applicable population empty by era; rests on
+the 4 live flat candidates, no witness either direction. (c) Phase 2c retroactively vacuous
+(saturation ⇒ regime-omega never validated as discriminator on any instance). (d) World3
+06-08 manifest join witnessed (Pin-2 OPEN discharged). **(e) operator ruling: review-prompt
+light seat, NO auto-route** (kill condition: labeled live candidate adjudicated
+suppressed-seat kernel at a rate holding across the 4 reopens it). Follow-ups: prompt wiring;
+optional flinch label.
+
 ## 2026-07-04 — OQ-125 RESOLVED (value-invariance beyond H1) + OQ-123 MITIGATED ((a) refuted; (b)-or-(c2) live): conditioned twin re-analyses
 **Files:** python/audits/twin_comparison.py, ISSUES.md, audits/2026-07-04_twin_conditioned/
 **Tier:** correction-key

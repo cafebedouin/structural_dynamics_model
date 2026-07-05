@@ -108,6 +108,59 @@ neighborhood). Consequences:
    `demographic_resource_allocation`, `propagation_speed_asymmetry`,
    `validation_judgment_separation`.
 
+## Post-review amendments (2026-07-05, operator review of the three passes)
+
+**(a) The snare alert-type read (was OPEN; now witnessed) — predicate uniform, but positive
+control is N=1 per ENGINE REGIME.** Substrate read of all live mountain-claims with non-rope
+maxent top: 5 cases carry `type_1_false_summit` (4 snare-top — `animal_status_kernel__property_reading`
+severe, `institutional_trust_erosion_c0` *informational*, `jewish_self_determination__indigenous_return_reading`
+severe, `secession_legitimacy_boundary__constitutional_impossibility_reading` severe — and 1
+piton-top, `measurement_architecture_reading`, informational). So the alert TYPE is shared
+across all divergence targets and does NOT itself discriminate rope from snare; the committed
+predicate's snare-exclusion rides the separate `maxent_top_type == "rope"` conjunct, pinned in
+PROPOSAL.md and applied identically to live and archive — the predicate never reads severity,
+there are no two predicate branches, and 9 stays 9 legitimately (type-only WITHOUT the top-rope
+conjunct would read 14). Precision fix to this report's earlier gloss: severity is keyed on
+**`dr_type` at standard context** (`drl_core.pl:636-644`: snare→severe, other-non-mountain→
+informational), not on maxent top — `institutional_trust_erosion_c0` (maxent snare, alert
+informational) witnesses the two type-notions crossing. **The caveat that survives the review's
+Catch 1:** the two positives' Layer-B inputs come from two engine regimes (World3 at `411db0e`
+2026-06-11, demographic at `23b7faa` 2026-07-04), so "N=2" is one uniform predicate with **N=1
+per engine regime** — no cross-regime redundancy in the positive control. (World3's `severe` is
+pre-OQ-128 regime semantics; its maxent top is rope, witnessed.)
+
+**(b) Cell 2 correction — there is NO archive leg, and "measured-empty" does not rescue it.**
+The kernel_v1 re-partition (KERNEL_V1_ADDENDUM.md) shows kernel_v1's D-applicable population
+(router-chose-flat ∧ false-mountain) is EMPTY by era: the witnessed-flat subset is n=2, both
+claiming tangled_rope; the lone firing is pre-router (D-inapplicable). So "flinch tail 0/1" was
+measured over a population containing zero D-applicable members — the alert-channel liveness
+control rescued the *Layer-B read* (the 1/1,106 rate is measured-empty at Layer B), but it
+cannot rescue *cell 2*, whose population was never present. Cell 2 rests entirely on the 4 live
+flat candidates and currently carries **no witness in either direction** — "INFERRED-weak"
+overstated it; there is no kernel_v1 inference to make.
+
+**(c) Phase 2c is retroactively vacuous.** The discriminator-sanity check ("World3's regime-omega
+trace is capturable") passed for universal-presence, not seat-detection: the saturation result
+means regime-omega is present on everything measured, so World3 exhibiting it confirmed nothing,
+and **regime-omega was never validated as a discriminator on any instance** — including the
+World3 inspiration case (the omega would have been there whether or not a seat was suppressed).
+D′ didn't just fail to recover the negative control; it never had discriminating power.
+
+**(d) World3 06-08 manifest join (was OPEN from Pin 2; witnessed).** The dispatch control
+checked the specific 171605 manifest path against the flat map for `collapse_mechanism_ambiguity`:
+`positive_world3.layer_a_source_present: true` and `dispatch.join_resolved_world3_manifest: true`
+in `oq88_sweep_results.json`, plus the direct recon read (CSR `null`, plain-string
+`collapse_mechanism_ambiguity`). Layer A for the World3 positive is joined, not asserted.
+
+**(e) Operator ruling recorded (2026-07-05).** The Ω_P binary is settled against auto-route on
+the evidence (unwitnessed over-fire rate over a 44%-covered live population = the OQ-79
+kernel-liberal over-route one level up): **light seat — false-mountain flag → operator
+kernel-vs-flat review prompt, prompt-wiring only, no auto-route.** Kill condition attached: if
+a labeled live candidate is adjudicated a suppressed-seat kernel rather than a flinch, at a rate
+holding across the 4 live flat candidates, the auto-route case reopens. Remaining operator cost
+call: whether to spend a flinch label now (upgrading cell 2 to witnessed) or ship the
+review-prompt as-is.
+
 ## Artifacts
 
 - `PROPOSAL.md` — frozen pre-registration (predicate, tiers, three pins, cells, halt conditions)
