@@ -1,0 +1,298 @@
+{
+  "pre_registration": "audits/2026-07-04_twin_conditioned/PRE_REGISTRATION.md",
+  "permutations": 1000,
+  "seed": 20260613,
+  "rng_isolation": "per-analysis random.Random(f'{seed}:{tag}')",
+  "inputs": [
+    {
+      "label": "haiku",
+      "path": "outputs/pipeline_output.haiku.json",
+      "sha256_16": "c3150612801eeed1"
+    },
+    {
+      "label": "flash",
+      "path": "outputs/pipeline_output.flash.json",
+      "sha256_16": "e6c01619c4e3bada"
+    }
+  ],
+  "intersection_n": 960,
+  "track_a_oq125": [
+    {
+      "field": "chi:powerless",
+      "n_typed_numeric_pairs": 960,
+      "same_side": {
+        "n": 378,
+        "idset_sha256_16": "fbb336986b932a6e",
+        "observed_mean_abs_delta": 0.09199991798941794,
+        "permute_band_5": 0.2605481375661373,
+        "permute_band_95": 0.2868778843915338
+      },
+      "disagreeing_control": {
+        "n": 582,
+        "idset_sha256_16": "f4fdb7d496a2f118",
+        "observed_mean_abs_delta": 0.22977626804123713,
+        "permute_band_5": 0.2479766268041237,
+        "permute_band_95": 0.26819232164948476,
+        "band_width": 0.020215694845361065,
+        "observed_below_band": true,
+        "reach_ok": true,
+        "reading": "informative"
+      },
+      "status": "MEASURED",
+      "verdict": "VALUE_INVARIANCE_BEYOND_H1"
+    },
+    {
+      "field": "chi:moderate",
+      "n_typed_numeric_pairs": 960,
+      "same_side": {
+        "n": 566,
+        "idset_sha256_16": "4668fdbf20b70a9f",
+        "observed_mean_abs_delta": 0.07540616254416951,
+        "permute_band_5": 0.2676164335689052,
+        "permute_band_95": 0.28868776978798644
+      },
+      "disagreeing_control": {
+        "n": 394,
+        "idset_sha256_16": "ae3f4f45130297a4",
+        "observed_mean_abs_delta": 0.18868145177665002,
+        "permute_band_5": 0.26632502538071096,
+        "permute_band_95": 0.2918619411167514,
+        "band_width": 0.025536915736040444,
+        "observed_below_band": true,
+        "reach_ok": true,
+        "reading": "informative"
+      },
+      "status": "MEASURED",
+      "verdict": "VALUE_INVARIANCE_BEYOND_H1"
+    },
+    {
+      "field": "chi:institutional",
+      "n_typed_numeric_pairs": 960,
+      "same_side": {
+        "n": 664,
+        "idset_sha256_16": "158e9890cf3265cb",
+        "observed_mean_abs_delta": 0.012947659638554274,
+        "permute_band_5": 0.01883279894578311,
+        "permute_band_95": 0.019753148493975893
+      },
+      "disagreeing_control": {
+        "n": 296,
+        "idset_sha256_16": "d1fda1410ca25f88",
+        "observed_mean_abs_delta": 0.21281396283783785,
+        "permute_band_5": 0.21144067905405414,
+        "permute_band_95": 0.21279502533783795,
+        "band_width": 0.0013543462837838083,
+        "observed_below_band": false,
+        "reach_ok": true,
+        "reading": "informative"
+      },
+      "status": "MEASURED",
+      "verdict": "VALUE_INVARIANCE_BEYOND_H1"
+    },
+    {
+      "field": "chi:analytical",
+      "n_typed_numeric_pairs": 960,
+      "same_side": {
+        "n": 546,
+        "idset_sha256_16": "c3bc215426780b59",
+        "observed_mean_abs_delta": 0.08787265201465196,
+        "permute_band_5": 0.30952746300366396,
+        "permute_band_95": 0.3346372752747262
+      },
+      "disagreeing_control": {
+        "n": 414,
+        "idset_sha256_16": "c1474f1719d4a88d",
+        "observed_mean_abs_delta": 0.22717394685990341,
+        "permute_band_5": 0.33369239613526647,
+        "permute_band_95": 0.36351849130434843,
+        "band_width": 0.029826095169081968,
+        "observed_below_band": true,
+        "reach_ok": true,
+        "reading": "informative"
+      },
+      "status": "MEASURED",
+      "verdict": "VALUE_INVARIANCE_BEYOND_H1"
+    }
+  ],
+  "track_b_oq123": {
+    "partition_counts": {
+      "absent(haiku)×absent(flash)": 47,
+      "absent(haiku)×authored(flash)": 67,
+      "authored(haiku)×absent(flash)": 36,
+      "authored(haiku)×authored(flash)": 805,
+      "imputed(haiku)×authored(flash)": 5
+    },
+    "marginals": {
+      "haiku": {
+        "authored": 841,
+        "absent": 114,
+        "imputed": 5
+      },
+      "flash": {
+        "authored": 877,
+        "absent": 83
+      }
+    },
+    "cells_powerless": {
+      "authored_both": {
+        "n_ids": 805,
+        "n_both_populated": 805,
+        "agreement": 316,
+        "agreement_rate": 0.39254658385093166,
+        "wilson_lo": 0.35939986093968185,
+        "wilson_hi": 0.426714008574448,
+        "permute_band_5": 0.24341614906832298,
+        "permute_band_95": 0.28819875776397513,
+        "idset_sha256_16": "aa0ea764995fd517"
+      },
+      "imputed_both": {
+        "n_ids": 0,
+        "reading": "VACUOUS — empty cell"
+      },
+      "imputed_one": {
+        "n_ids": 5,
+        "n_both_populated": 5,
+        "agreement": 1,
+        "agreement_rate": 0.2,
+        "wilson_lo": 0.03622316096978745,
+        "wilson_hi": 0.6244717358814613,
+        "permute_band_5": 0.0,
+        "permute_band_95": 0.2,
+        "idset_sha256_16": "b4ba5fa360c9ca05"
+      },
+      "residual:absent(haiku)×authored(flash)": {
+        "n_ids": 67,
+        "n_both_populated": 67,
+        "agreement": 25,
+        "agreement_rate": 0.373134328358209,
+        "wilson_lo": 0.26717987071840976,
+        "wilson_hi": 0.49284813542487327,
+        "permute_band_5": 0.14925373134328357,
+        "permute_band_95": 0.29850746268656714,
+        "idset_sha256_16": "0fd241167e631912",
+        "role": "residual (reported only; no decision rule)"
+      },
+      "residual:authored(haiku)×absent(flash)": {
+        "n_ids": 36,
+        "n_both_populated": 36,
+        "agreement": 14,
+        "agreement_rate": 0.3888888888888889,
+        "wilson_lo": 0.24784655417822943,
+        "wilson_hi": 0.5513582970325652,
+        "permute_band_5": 0.1111111111111111,
+        "permute_band_95": 0.2777777777777778,
+        "idset_sha256_16": "44c68f4a738c5311",
+        "role": "residual (reported only; no decision rule)"
+      },
+      "residual:absent(haiku)×absent(flash)": {
+        "n_ids": 47,
+        "n_both_populated": 47,
+        "agreement": 22,
+        "agreement_rate": 0.46808510638297873,
+        "wilson_lo": 0.33331462168462633,
+        "wilson_hi": 0.6076785807322921,
+        "permute_band_5": 0.1702127659574468,
+        "permute_band_95": 0.3617021276595745,
+        "idset_sha256_16": "94a8b0908b167afe",
+        "role": "residual (reported only; no decision rule)"
+      }
+    },
+    "unconditioned_powerless": {
+      "n_ids": 960,
+      "n_both_populated": 960,
+      "agreement": 378,
+      "agreement_rate": 0.39375,
+      "wilson_lo": 0.3633252472290528,
+      "wilson_hi": 0.4250217176664238,
+      "permute_band_5": 0.19375,
+      "permute_band_95": 0.2313020833333333,
+      "idset_sha256_16": "60e7e7eebb2b0a51"
+    },
+    "decision": {
+      "cell": "authored_both",
+      "power_benchmark": 0.672,
+      "benchmark_wilson_lo": 0.638868141018353,
+      "band95": 0.28819875776397513,
+      "powered": true,
+      "r_ab_minus_r_all": -0.001203416149068326,
+      "outcome": "PERSISTENT DIVERGENCE — (a) imputation-drag REFUTED; (b)-or-(c2) LIVE; B4 not auto-armed (operator discretion)"
+    },
+    "asymmetry_primary_imputed_one": {
+      "haiku-omits(imputed)": 5,
+      "flash-omits(imputed)": 0,
+      "n": 5,
+      "larger_share_wilson_lo": 0.5655085052479191,
+      "reading": "REPORT-ONLY — n=5 < 10"
+    },
+    "asymmetry_secondary_omission": {
+      "haiku-omits(any)": 72,
+      "flash-omits(any)": 36,
+      "n": 108,
+      "larger_share_wilson_lo": 0.5733874039358369,
+      "reading": "DIRECTIONAL (haiku-omits(any)) — (c1)-signature"
+    },
+    "seat_gradient_bootstrap": {
+      "powerless": {
+        "rate_ci_2_5": 0.36455729166666667,
+        "rate_ci_97_5": 0.42604166666666665
+      },
+      "moderate": {
+        "rate_ci_2_5": 0.559375,
+        "rate_ci_97_5": 0.6208333333333333
+      },
+      "institutional": {
+        "rate_ci_2_5": 0.663515625,
+        "rate_ci_97_5": 0.7208333333333333
+      },
+      "analytical": {
+        "rate_ci_2_5": 0.535390625,
+        "rate_ci_97_5": 0.5989583333333334
+      },
+      "gradient_robust": true
+    }
+  },
+  "r_all_consistency": "equal to unconditioned persp:powerless rate",
+  "sonnet_control": {
+    "control_dir": "/home/scott/bin/structural_dynamics_model/prolog/testsets",
+    "n": 128,
+    "slices": {
+      "authored": 100,
+      "absent": 24,
+      "imputed": 4
+    },
+    "classifier_control_i": {
+      "authored_slice_populated": true,
+      "imputed_slice_populated": true,
+      "reading": "one-sided/THIN — imputed slice n=4 < 10",
+      "scope": "does NOT control the pair-crossing (three-cell) logic"
+    },
+    "authoring_level_ii": {
+      "sonnet_rate": 0.78125,
+      "sonnet_wilson": [
+        0.7020141264304118,
+        0.8440957508769025
+      ],
+      "twin_rates": {
+        "haiku": {
+          "authored": 841,
+          "n": 960,
+          "rate": 0.8760416666666667,
+          "wilson_lo": 0.8536846342945431,
+          "wilson_hi": 0.8954011075949956
+        },
+        "flash": {
+          "authored": 877,
+          "n": 960,
+          "rate": 0.9135416666666667,
+          "wilson_lo": 0.8940742647355122,
+          "wilson_hi": 0.9297125483673878
+        }
+      },
+      "pooled_twin_rate": 0.8947916666666667,
+      "verdict": "INDETERMINATE",
+      "blind": false,
+      "note": "non-blind (marginals observed at recon; disclosed in pre-reg); says NOTHING about (c2)"
+    },
+    "label": "sonnet"
+  }
+}

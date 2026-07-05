@@ -7626,18 +7626,30 @@ verdict boxes (this session).
 
 **Ω-type:** Ω_E (a measurable per-seat agreement-rate gap, testable on any twin pair).
 
-**Status:** open — filed 2026-06-13 from the twin cross-model comparison
+**Status:** mitigated — (a) REFUTED, (c1) present-but-not-driver (2026-07-04, pre-registered
+conditioned partition, `audits/2026-07-04_twin_conditioned/`); live remainder is (b)-or-(c2)
+inside the authored-both cell, separable only by the deferred B4 third-model paired twin.
 **Priority:** 1
-(`audits/2026-06-13_twin_comparison/`, n=960, haiku vs gemini-flash at commit 8126231). H1
-(structural type model-invariance) HELD per-field for all 7 fields, but with a steep **seat
-gradient**: `persp:powerless` agreement-rate 0.397 (the two models disagree on the powerless
-reading more often than they agree; just above its 0.308 chance band), vs `persp:institutional`
-0.672 and `verdict` 0.749. The powerless seat is where model choice moves classification most.
-Open question: is this (a) the seat with the least authored signal so it floats, (b) a real
-divergence in how the two models render powerless-perspective extraction/coercion, or (c) a
-generation-template artifact? Discriminating handle: condition the powerless disparity on
-authored-vs-imputed powerless metrics; compare against a third model when available. Under-claim:
-one twin pair earns "model-sensitive here," not "the powerless seat is model-dependent in general."
+Filed 2026-06-13 from the twin comparison (`audits/2026-06-13_twin_comparison/`, n=960):
+`persp:powerless` agreement 0.397 vs institutional 0.672 / verdict 0.749 — the seat where model
+choice moves classification most. Question: (a) least-authored-signal float, (b) real model
+divergence, or (c) generation-template artifact ((c1) under-authored / (c2) ambiguous-authored)?
+
+**RESOLUTION (partial, 2026-07-04).** Source-join partition (authored/imputed/absent per twin;
+sentinels minted only at load, sources witnessed clean): authored-both 805, imputed-one 5,
+imputed-both 0, absent-involved residuals 150. **(a) imputation/omission-drag REFUTED** by the
+pre-registered PERSISTENT-DIVERGENCE branch: authored-both agreement 0.3925 vs unconditioned
+0.3937 (Δ=−0.0012, frozen float margin +0.10; cell POWERED, benchmark Wilson-lo 0.639 > band95
+0.288) — the weak agreement lives in pairs where BOTH models authored a real victim; imputed
+cells (≤5/960) are arithmetically incapable of drag. **(c1) exists directionally but is not the
+driver:** haiku omits 72 vs flash 36 (larger-share Wilson-lo 0.573 > 0.5, DIRECTIONAL), yet the
+divergence persists at full strength inside authored-both; sonnet control (ii) INDETERMINATE and
+anti-(c1) (sonnet authors 0.781 < twins 0.876/0.914; non-blind, disclosed in pre-reg). Seat
+gradient ROBUST (bootstrap: powerless CI [0.365,0.426] wholly below the other three seats).
+**B4 NOT armed** (frozen rule armed it only on powered LOW; this landed PERSISTENT DIVERGENCE);
+B4 stays a dark operator-discretion spend whose role would be the (b)/(c2) split ((c2) recovers
+authored-cell agreement under a paired sonnet twin, (b) diverges). One twin pair earns
+"model-sensitive HERE," never "in general."
 
 **Origin:** 2026-06-13 twin-comparison audit (FINDINGS.md "seat gradient"); RESULTS.md H1 table.
 
@@ -7694,20 +7706,26 @@ RESULTS.md `signature` disparity exemplars).
 
 **Ω-type:** Ω_E (a pre-registered conditional-permutation test with a named decision rule).
 
-**Status:** open — filed 2026-06-13 from the twin comparison. The pre-registered H2 DRIFT test
+**Status:** resolved — 2026-07-04: **value-invariance CONFIRMED beyond H1** over the 4 typed χ
+seats (the pre-registered conditioned colocation test, `audits/2026-07-04_twin_conditioned/`);
+`theater_ratio` stays exploratory (no seat type to condition on — headline is 4/5, per the
+frozen scope rule).
 **Priority:** 1
-(observed mean|Δχ| > permute band95) FAILED for all 5 continuous fields (H2-drift FALSIFIED). The
-opposite tail fired instead — observed mean|Δχ| BELOW band5 for all 5 (true pairs more similar than
-chance re-pairing) — but that tail was pre-registered only to be REPORTED, carries no committed
-falsifier, and is **exploratory**. The load-bearing concern: the below-band tail may be **entailed
-by H1**, not separate evidence about models. The binding H1 constraint forces the haiku/flash χ pair
-onto the **same side of the decision threshold**, not to the **same value**; below-band similarity is
-a stronger value-proximity claim. **Pre-registered discriminating test:** condition on
-same-side-of-threshold pairs and ask whether the below-band |Δχ| SURVIVES within that conditioned
-set — survives ⇒ real continuous invariance beyond H1; relaxes to chance ⇒ the tail was
-threshold-colocation (H1-entailed). REJECTED alternative: conditioning on H1-disagreeing ids
-(underpowered, not independent, if H1 holds strongly). Until this runs on a fresh corpus, the
-invariance tail must not inherit H1's credibility.
+Filed 2026-06-13: the H2 DRIFT test FAILED all 5 continuous fields and the opposite tail fired
+(observed mean|Δχ| BELOW band5 — true pairs more similar than chance), but that tail carried no
+committed falsifier and might be threshold-colocation **entailed by H1** (same side of the
+decision threshold ≠ same value).
+
+**RESOLUTION.** Same-side operationalized as same seat TYPE (raw-χ cut rejected: dual-threshold +
+priority cascade make it ill-defined). Observed AND permutation band both recomputed from the SAME
+same-side id set (the make-or-break; id-set hashes stamped side-by-side). All four typed seats
+land BELOW their conditioned band5 — powerless 0.0920 < 0.2605 (n=378), moderate 0.0754 < 0.2676
+(n=566), institutional 0.0129 < 0.0188 (n=664), analytical 0.0879 < 0.3095 (n=546) — so the
+below-band tail SURVIVES conditioning: real continuous value-invariance beyond H1, per the
+pre-registered literal. Reach controls informative at all 4 (conditioned observed would register
+inside every disagreeing-subset band); report-only extra: 3/4 disagreeing subsets are themselves
+below-band (value proximity survives type disagreement — the opposite of colocation-only).
+Substrate: `bbf5c92` twins, n=960. Scope: haiku-vs-flash HERE, not "in general."
 
 **Precondition — `abductive_data.json` provenance (settled 2026-06-14):** it is
 **committed-derivable**, not a carried-with-no-generator artifact — generator is

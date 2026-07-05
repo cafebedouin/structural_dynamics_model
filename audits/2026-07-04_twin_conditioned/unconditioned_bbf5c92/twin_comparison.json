@@ -1,0 +1,367 @@
+{
+  "pre_registration": "audits/2026-06-13_twin_comparison/PRE_REGISTRATION.md",
+  "permutations": 1000,
+  "seed": 20260613,
+  "twins": [
+    {
+      "label": "haiku",
+      "path": "outputs/pipeline_output.haiku.json",
+      "manifest": {
+        "code_commit_short": "bbf5c92",
+        "n_constraints": 960,
+        "corpus_path": "testsets_haiku"
+      }
+    },
+    {
+      "label": "flash",
+      "path": "outputs/pipeline_output.flash.json",
+      "manifest": {
+        "code_commit_short": "bbf5c92",
+        "n_constraints": 960,
+        "corpus_path": "testsets_flash"
+      }
+    }
+  ],
+  "intersection_n": 960,
+  "structural_H1": [
+    {
+      "field": "verdict",
+      "n_both_populated": 817,
+      "one_sided": 124,
+      "agreement": 619,
+      "disparity": 198,
+      "agreement_rate": 0.7576499388004896,
+      "wilson_lo": 0.7271048441369733,
+      "wilson_hi": 0.7857833915469882,
+      "permute_band_95": 0.6604908140725176,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "haiku": "green",
+          "flash": "yellow"
+        },
+        {
+          "id": "ai_dignity_safeguarding__posthuman_continuity_reading",
+          "haiku": "yellow",
+          "flash": "red"
+        },
+        {
+          "id": "ai_governance_legitimacy__technocratic_optimization_reading",
+          "haiku": "yellow",
+          "flash": "green"
+        },
+        {
+          "id": "ai_human_relationship__technocratic_optimization",
+          "haiku": "red",
+          "flash": "yellow"
+        },
+        {
+          "id": "ai_risk_governance_priority__existential_risk_reading",
+          "haiku": "yellow",
+          "flash": "green"
+        }
+      ]
+    },
+    {
+      "field": "persp:powerless",
+      "n_both_populated": 960,
+      "one_sided": 0,
+      "agreement": 378,
+      "disparity": 582,
+      "agreement_rate": 0.39375,
+      "wilson_lo": 0.3633252472290528,
+      "wilson_hi": 0.4250217176664238,
+      "permute_band_95": 0.23229166666666667,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__isaac_covenant_reading",
+          "haiku": "tangled_rope",
+          "flash": "snare"
+        },
+        {
+          "id": "abrahamic_covenant__ishmael_covenant_reading",
+          "haiku": "tangled_rope",
+          "flash": "unknown"
+        },
+        {
+          "id": "abrahamic_covenant__land_promise_constraint",
+          "haiku": "naturalized",
+          "flash": "snare"
+        },
+        {
+          "id": "acceptable_risk_energy__catastrophic_tail_dominant",
+          "haiku": "tangled_rope",
+          "flash": "snare"
+        },
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "haiku": "tangled_rope",
+          "flash": "naturalized"
+        }
+      ]
+    },
+    {
+      "field": "persp:moderate",
+      "n_both_populated": 960,
+      "one_sided": 0,
+      "agreement": 566,
+      "disparity": 394,
+      "agreement_rate": 0.5895833333333333,
+      "wilson_lo": 0.5581687409015186,
+      "wilson_hi": 0.6202838181081776,
+      "permute_band_95": 0.31354166666666666,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__ishmael_covenant_reading",
+          "haiku": "tangled_rope",
+          "flash": "unknown"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "haiku": "unknown",
+          "flash": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__catastrophic_tail_dominant",
+          "haiku": "tangled_rope",
+          "flash": "snare"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "haiku": "snare",
+          "flash": "unknown"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "haiku": "tangled_rope",
+          "flash": "scaffold"
+        }
+      ]
+    },
+    {
+      "field": "persp:institutional",
+      "n_both_populated": 960,
+      "one_sided": 0,
+      "agreement": 664,
+      "disparity": 296,
+      "agreement_rate": 0.6916666666666667,
+      "wilson_lo": 0.6617378077797273,
+      "wilson_hi": 0.7200676673107853,
+      "permute_band_95": 0.61875,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "haiku": "naturalized",
+          "flash": "rope"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "haiku": "scaffold",
+          "flash": "rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "haiku": "naturalized",
+          "flash": "rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "haiku": "rope",
+          "flash": "scaffold"
+        },
+        {
+          "id": "ai_alignment_commitment__integrated_reading",
+          "haiku": "naturalized",
+          "flash": "rope"
+        }
+      ]
+    },
+    {
+      "field": "persp:analytical",
+      "n_both_populated": 960,
+      "one_sided": 0,
+      "agreement": 546,
+      "disparity": 414,
+      "agreement_rate": 0.56875,
+      "wilson_lo": 0.5372083367920225,
+      "wilson_hi": 0.5997436270991395,
+      "permute_band_95": 0.3302083333333333,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__ishmael_covenant_reading",
+          "haiku": "snare",
+          "flash": "unknown"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "haiku": "unknown",
+          "flash": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "haiku": "snare",
+          "flash": "unknown"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "haiku": "tangled_rope",
+          "flash": "scaffold"
+        },
+        {
+          "id": "ai_alignment_commitment__ethics_justice_reading",
+          "haiku": "snare",
+          "flash": "tangled_rope"
+        }
+      ]
+    },
+    {
+      "field": "signature",
+      "n_both_populated": 960,
+      "one_sided": 0,
+      "agreement": 693,
+      "disparity": 267,
+      "agreement_rate": 0.721875,
+      "wilson_lo": 0.6926887187049899,
+      "wilson_hi": 0.7492926193073972,
+      "permute_band_95": 0.4739583333333333,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__ishmael_covenant_reading",
+          "haiku": "constructed_high_extraction",
+          "flash": "false_ci_rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "haiku": "constructed_high_extraction",
+          "flash": "false_ci_rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "haiku": "constructed_high_extraction",
+          "flash": "false_ci_rope"
+        },
+        {
+          "id": "ai_alignment_priority__integrated_reading",
+          "haiku": "constructed_high_extraction",
+          "flash": "false_ci_rope"
+        },
+        {
+          "id": "ai_dignity_safeguarding__imago_dei_reading",
+          "haiku": "false_ci_rope",
+          "flash": "constructed_high_extraction"
+        }
+      ]
+    },
+    {
+      "field": "claimed_type",
+      "n_both_populated": 960,
+      "one_sided": 0,
+      "agreement": 692,
+      "disparity": 268,
+      "agreement_rate": 0.7208333333333333,
+      "wilson_lo": 0.6916188798930306,
+      "wilson_hi": 0.7482874283634297,
+      "permute_band_95": 0.35625,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__isaac_covenant_reading",
+          "haiku": "tangled_rope",
+          "flash": "snare"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "haiku": "tangled_rope",
+          "flash": "rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "haiku": "tangled_rope",
+          "flash": "rope"
+        },
+        {
+          "id": "ai_alignment_commitment__safety_control_reading",
+          "haiku": "tangled_rope",
+          "flash": "snare"
+        },
+        {
+          "id": "ai_alignment_priority__integrated_reading",
+          "haiku": "tangled_rope",
+          "flash": "rope"
+        }
+      ]
+    }
+  ],
+  "continuous_H2": [
+    {
+      "field": "theater_ratio",
+      "n_both_numeric": 960,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.1984166666666676,
+      "permute_band_5": 0.24441354166666723,
+      "permute_band_95": 0.25381770833333417,
+      "tail": "below",
+      "H2_holds_literal": false
+    },
+    {
+      "field": "chi:powerless",
+      "n_both_numeric": 960,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.17552683020833362,
+      "permute_band_5": 0.2574965166666671,
+      "permute_band_95": 0.27466501052083403,
+      "tail": "below",
+      "H2_holds_literal": false
+    },
+    {
+      "field": "chi:moderate",
+      "n_both_numeric": 960,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.12189622916666723,
+      "permute_band_5": 0.2938586254166667,
+      "permute_band_95": 0.3127496030208337,
+      "tail": "below",
+      "H2_holds_literal": false
+    },
+    {
+      "field": "chi:institutional",
+      "n_both_numeric": 960,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.07457310312500012,
+      "permute_band_5": 0.07927537791666671,
+      "permute_band_95": 0.08017025354166674,
+      "tail": "below",
+      "H2_holds_literal": false
+    },
+    {
+      "field": "chi:analytical",
+      "n_both_numeric": 960,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.14794633541666763,
+      "permute_band_5": 0.35544570812500037,
+      "permute_band_95": 0.37670953072916646,
+      "tail": "below",
+      "H2_holds_literal": false
+    }
+  ],
+  "essay_marginals": [],
+  "notes": [
+    "verdict_join.verdict is the only headline verdict (OQ-98).",
+    "verdict & perspectives are CORRELATED, not independent confirmations (verdict folds perspectives via compute_verdict/4).",
+    "signature agreement is STRUCTURAL-coding, not detection (OQ-70).",
+    "Per-field adjudication only; no aggregate H1 claim."
+  ]
+}
