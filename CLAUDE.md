@@ -1,8 +1,12 @@
 ## How the operator works (read first)
 
-- **One instance at a time; plans are staged.** No concurrent sessions by default — so work
-  directly on `main`, commit-as-you-go, branch for risky/multi-file code, and start a worktree
-  ONLY if asked (detail: *Git autonomy*).
+- **One writer at a time; plans are staged.** The operator runs a planning phase (Claude-web /
+  Ultra-plan, several rounds), hands each plan to a fresh instance, and keeps 2–3 staged while one
+  implements — instances may coexist, but only one *writes*. Concurrent writing was tried and
+  dropped because the shared `ISSUES.md`/`KNOWN_STATE.md` collide across instances **even in
+  worktrees** (a worktree isolates code, not these trackers). So work directly on `main`,
+  commit-as-you-go, branch for risky/multi-file code, and start a worktree ONLY if asked (detail:
+  *Git autonomy*).
 - **Iteration over correctness; everything is CC0; mistakes are recoverable.** Bias to action:
   fix simple errors on sight and prefer fixing to documenting (*Fix simple errors*); flag a
   better way in one sentence, then proceed (*One-sentence flag*). Reserve the *ask* for genuine
