@@ -115,19 +115,23 @@ population. Parked in OQ-211(d) as an open item, not closed.
 - **Control 2: independent mountain — 0 (PASS).** The 0-count is over GENUINELY Prolog-sourced
   claims: `prolog_sourced.tsv` is `constraint_claim/2`+`dr_type/3` output, so the "no authored
   mountain in the divergence population" claim rests on real sourcing, not the sink emit.
-  *Positive control (extract.log:93–95, pasted below), now non-tautological but SCOPE-PRECISE:*
-  it plants a synthetic `mountain` row **at the membership-source level** (into a copy of the
-  Prolog-sourced dict, matching the pre-registered spec "plant a synthetic membership row") and
-  runs the SAME *filter* predicate — flagging exactly that key (`real 0 → planted 1`,
-  `includes_plant: True`). **What it proves:** the filter bites when a mountain appears (0→1
-  witness, both states pasted). **What it does NOT prove** (stated so "through the SAME
-  predicate" is not misread): it does not re-exercise the Prolog SOURCING chain — the plant does
-  not route through `constraint_claim/2`; that the sourcing itself would emit `mountain` for a
-  real mountain story is witnessed separately by control 6's byte-agreement, not by this plant.
+  *Positive control (extract.log, pasted verbatim below), now non-tautological, EXPLICITLY
+  TWO-SIDED, and SCOPE-PRECISE:* it plants a synthetic `mountain` row **at the membership-source
+  level** (into a copy of the Prolog-sourced dict, matching the pre-registered spec "plant a
+  synthetic membership row") and runs the SAME *filter* predicate across three arms — plant
+  ABSENT, PRESENT, REMOVED. **What it proves:** the count moves `0 → 1 → 0` on the plant, so the
+  filter tracks THIS plant and is not an always-on probe (the removal arm rules out the one-sided
+  failure). **What it does NOT prove** (stated so "SAME predicate" is not misread): it does not
+  re-exercise the Prolog SOURCING chain — the plant does not route through `constraint_claim/2`;
+  that the sourcing itself would emit `mountain` for a real mountain story is witnessed
+  separately by control 6's byte-agreement, not by this plant.
   ```
   divergence records with Prolog author_claim==mountain: 0 (expect 0) -> PASS
-  positive control (planted mountain at responsibility_preservation_mechanism@moderate
-    through the SAME predicate): flagged 1 (= real 0 + 1), includes plant: True -> PASS
+  positive control, SAME predicate (seat_gauge_orientation_kernel_flat_control@institutional):
+    arm A plant ABSENT  -> flagged 0 (baseline)
+    arm B plant PRESENT -> flagged 1 (includes plant: True)
+    arm C plant REMOVED -> flagged 0 (back to baseline: True)
+    verdict: 0 -> 1 -> 0 on the plant -> PASS (probe tracks the plant, not always-on)
   ```
   (The earlier tautological positive control — `flagged = [x for x in synthetic if
   "mountain"=="mountain"]`, extract.log:78 — is demoted as non-witnessing; this is the

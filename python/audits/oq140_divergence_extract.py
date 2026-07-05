@@ -339,14 +339,27 @@ def cmd_controls(args):
     # claim at a REAL divergence key into a COPY of the source, run the SAME
     # predicate. It must now flag exactly that key — proving the probe bites.
     plant_key = next(iter(div_keys))
+    # ARM A — plant absent (baseline): same predicate on the unplanted source.
+    arm_absent = mountain_in_divergence(src)  # == mtn
+    # ARM B — plant present: same predicate on a copy with one mountain injected.
     src_planted = dict(src)
     src_planted[plant_key] = ("mountain", "dr_type=scaffold")
-    flagged = mountain_in_divergence(src_planted)
-    ok = plant_key in flagged and len(flagged) == len(mtn) + 1
-    print(f"  positive control (planted mountain at {plant_key[0]}@{plant_key[1]} "
-          f"through the SAME predicate): flagged {len(flagged)} "
-          f"(= real {len(mtn)} + 1), includes plant: {plant_key in flagged} -> "
-          f"{'PASS' if ok else 'FAIL'}")
+    arm_present = mountain_in_divergence(src_planted)
+    # ARM C — plant removed again: must return to the baseline (proves the flag
+    # tracks THIS plant, not an always-on probe).
+    src_removed = dict(src_planted)
+    del src_removed[plant_key]
+    arm_removed = mountain_in_divergence(src_removed)
+    two_sided = (len(arm_absent) == 0 and plant_key in arm_present
+                 and len(arm_present) == 1 and arm_removed == arm_absent)
+    print(f"  positive control, SAME predicate ({plant_key[0]}@{plant_key[1]}), two-sided:")
+    print(f"    arm A plant ABSENT  -> flagged {len(arm_absent)} (baseline)")
+    print(f"    arm B plant PRESENT -> flagged {len(arm_present)} "
+          f"(includes plant: {plant_key in arm_present})")
+    print(f"    arm C plant REMOVED -> flagged {len(arm_removed)} "
+          f"(back to baseline: {arm_removed == arm_absent})")
+    print(f"    verdict: 0 -> 1 -> 0 on the plant -> "
+          f"{'PASS (probe tracks the plant, not always-on)' if two_sided else 'FAIL'}")
 
     print("\n[CONTROL 3 — eps/chi band classifier, two-sided]")
     # planted chi at boundary-delta/2 (inside) and boundary-3*delta (outside)
