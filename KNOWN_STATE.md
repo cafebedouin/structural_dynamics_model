@@ -45,6 +45,31 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-04 — OQ-125 RESOLVED (value-invariance beyond H1) + OQ-123 MITIGATED ((a) refuted; (b)-or-(c2) live): conditioned twin re-analyses
+**Files:** python/audits/twin_comparison.py, ISSUES.md, audits/2026-07-04_twin_conditioned/
+**Tier:** correction-key
+
+Pre-registered conditioned re-analyses on the `bbf5c92` twin pair (n=960; pre-reg committed
+`bc04d809` BEFORE any run; results commit `1314fecf`). **OQ-125:** the below-band |Δχ| tail
+survives same-side (same-seat-type) conditioning at ALL 4 typed χ seats — observed and permute
+band recomputed from the same stamped id set — so it is real continuous value-invariance beyond
+H1, not threshold-colocation; `theater_ratio` stays exploratory (headline is 4/5). Citation rule:
+"value-invariance confirmed (4 typed seats)" — never unqualified. **OQ-123:** authored/imputed/
+absent source-join partition — (a) imputation-drag REFUTED (authored-both n=805 agreement 0.3925
+vs unconditioned 0.3937; imputed cells ≤5/960, flash has ZERO imputation-eligible stories);
+(c1) directional (haiku omits 72 vs flash 36) but not the driver; live remainder (b)-or-(c2),
+B4 NOT armed (frozen: powered LOW only). Harness extended additively (`--conditioned-outdir` /
+`--source` / `--control`); pristine-vs-extended regression byte-identical; positive-controlled.
+**Correction-keys for future citation:** (1) the "imputed ⇒ powerless d==0.90" tell is FALSE
+(witnessed d=0.95 on a sentinel-victim story; d has more inputs than the victim bridge — never
+classify imputation from d); (2) the 2026-06-13 twin tables are `8126231`-regime — the `bbf5c92`
+unconditioned tables live in `audits/2026-07-04_twin_conditioned/unconditioned_bbf5c92/`;
+(3) "authored-both clears its chance band" is trivially expected wherever corpus-wide H1 held —
+an (a)-style drag claim needs the comparative clause (cell rate ≫ unconditioned rate), not
+band-clearing alone.
+
+---
+
 ## 2026-07-04 — OQ-140 RESOLVED: `author_engine_divergence` characterized (confound re-ranks kinds; one kind — Ω_E stratum reproduces on both twins, Ω_C reading 3/3 twin-confirmed)
 **Files:** ISSUES.md, prolog/routing_sink.pl, python/audits/oq140_divergence_extract.py, audits/2026-07-04_oq140_divergence_characterization/
 **Tier:** landed
