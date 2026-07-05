@@ -81,6 +81,14 @@ routing-unknown+undetermined carry it). Discriminator saturation replicates 69/6
 corpus-family-wide. Mountain→rope rates regime/model-bound (OQ-70 rule, not citable as
 contest-tracking): live 10/18, kernel_v1 2/41, haiku 22/72, flash 55/104.
 
+*kernel_v1 re-partition (2026-07-05, `KERNEL_V1_ADDENDUM.md`):* with the stamp instrument,
+kernel_v1's Layer A is computable for 875/1,106 (873 stamped `__`-readings + 2 manifest-flat)
+and D is STILL 0 there — the firing false-mountain (`maxwell_demon_impossibility`) is
+pre-router (unstamped, no manifest, no provenance ⇒ D-inapplicable, no routing decision
+exists); the no-alert mountain→rope (`statutory_debt_ceiling__...`) stamp-resolves to
+kernel-routed = caught. Pin 1 result stands, reasoning sharpened: pre-router archive stories
+are D-INAPPLICABLE, not D-negative.
+
 ## 2026-07-04 — OQ-125 RESOLVED (value-invariance beyond H1) + OQ-123 MITIGATED ((a) refuted; (b)-or-(c2) live): conditioned twin re-analyses
 **Files:** python/audits/twin_comparison.py, ISSUES.md, audits/2026-07-04_twin_conditioned/
 **Tier:** correction-key

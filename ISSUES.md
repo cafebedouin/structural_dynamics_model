@@ -5177,6 +5177,18 @@ REGIME/MODEL-BOUND descriptive stats (OQ-70 rule; era confounds corpus kind — 
 contest-tracking evidence): live 10/18, kernel_v1 2/41, haiku 22/72, flash 55/104 — the twins
 disagree 30.6% vs 52.9% on the same seed pool.
 
+**kernel_v1 Layer-A re-partition (2026-07-05, operator-prompted; `KERNEL_V1_ADDENDUM.md` in the
+audit dir).** kernel_v1 is mixed (flat + kernel stories), so the new stamp instrument obligated
+a Pin-1 re-run: Layer A is now computable for 875/1,106 (873 `cs_kernel_id`-stamped = exactly
+the `__`-reading files; 2 manifest-witnessed flat, both claiming tangled_rope) and kernel_v1
+STILL contributes zero to D — the lone alert-firing false-mountain
+(`maxwell_demon_impossibility`) is an unstamped, manifest-less, provenance-less **pre-router**
+story (no routing decision exists to be false about ⇒ D-inapplicable, not D-negative), and the
+no-alert mountain→rope (`statutory_debt_ceiling__constitutional_nullity_reading`) is
+stamp-resolved **kernel-routed = caught**. Pin 1's result stands with sharpened reasoning:
+pre-router archive stories are D-inapplicable; only the review-prompt variant could apply to
+them at re-ingestion.
+
 ---
 
 ## OQ-89 — `accessibility_collapse`/`resistance` under-authoring + the 0.5 neutral-default-crosses-threshold class

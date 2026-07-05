@@ -183,6 +183,15 @@ def discriminator(cid, flat_manifest_paths, testsets_dir=TESTSETS):
 # Per-corpus sweep (twin legs etc.) — same predicate, same maps, same tiers
 # ---------------------------------------------------------------------------
 
+def has_kernel_stamp(cid, testsets_dir):
+    """Second Layer-A instrument (found on the twins, 2026-07-05): an in-file
+    cs_kernel_id fact marks the story as a kernel reading — kernel-routed even
+    when no manifest exists (seed-pipeline corpora). ABSENCE is NOT a flat
+    witness: pre-router/pre-stamp stories lack it too (fail-closed)."""
+    p = testsets_dir / f"{cid}.pl"
+    return p.exists() and "cs_kernel_id" in p.read_text(encoding="utf-8", errors="replace")
+
+
 def sweep_corpus(label, output_json, testsets_dir):
     """Layer-B + routing partition + discriminator over an arbitrary
     (pipeline output, testsets dir) pair. Per-instrument liveness controls are
@@ -205,17 +214,26 @@ def sweep_corpus(label, output_json, testsets_dir):
         kmap.setdefault(norm_id(cid), []).append((kid, tag))
     fmap = flat_walk()
 
+    # corpus-wide Layer-A instrument composition (also the stamp-reader's
+    # positive control: a corpus with known kernel readings must count > 0)
+    all_ids = sorted(p.stem for p in testsets_dir.glob("*.pl"))
+    n_stamped = sum(1 for i in all_ids if has_kernel_stamp(i, testsets_dir))
+    n_manifest_kernel = sum(1 for i in all_ids if norm_id(i) in kmap)
+    n_manifest_flat = sum(1 for i in all_ids if norm_id(i) in fmap)
+
     partition = {"flat": [], "kernel_routed": [], "routing_unknown": [], "routing_ambiguous": []}
     for row in lb["firing"]:
         nid = row["norm_id"]
-        in_k, in_f = nid in kmap, nid in fmap
+        stamped = has_kernel_stamp(row["id"], testsets_dir)
+        in_k, in_f = (nid in kmap) or stamped, nid in fmap
         entry = dict(row)
+        entry["cs_kernel_id_stamp"] = stamped
         if in_k and in_f:
-            entry["kernel"] = kmap[nid]
+            entry["kernel"] = kmap.get(nid, [("<in-file stamp>", None)])
             entry["flat_manifests"] = fmap[nid]
             partition["routing_ambiguous"].append(entry)
         elif in_k:
-            entry["kernel"] = kmap[nid]
+            entry["kernel"] = kmap.get(nid, [("<in-file stamp>", None)])
             partition["kernel_routed"].append(entry)
         elif in_f:
             entry["flat_manifests"] = fmap[nid]
@@ -227,9 +245,12 @@ def sweep_corpus(label, output_json, testsets_dir):
     und = []
     for row in lb["undetermined"]:
         nid = row["norm_id"]
+        stamped = has_kernel_stamp(row["id"], testsets_dir)
         row = dict(row)
-        row["routing"] = ("ambiguous" if nid in kmap and nid in fmap else
-                          "kernel" if nid in kmap else "flat" if nid in fmap else "unknown")
+        row["cs_kernel_id_stamp"] = stamped
+        row["routing"] = ("ambiguous" if (nid in kmap or stamped) and nid in fmap else
+                          "kernel" if (nid in kmap or stamped) else
+                          "flat" if nid in fmap else "unknown")
         row["discriminator_pl_only"] = discriminator(row["id"], [], testsets_dir)
         und.append(row)
 
@@ -243,6 +264,14 @@ def sweep_corpus(label, output_json, testsets_dir):
             "n_claimed_mountain": n_claimed_mountain,
             "n_alert_bearing": n_alert_bearing,
             "n_per_constraint": len(pc),
+        },
+        "layer_a_composition": {
+            "n_pl_files": len(all_ids),
+            "n_cs_kernel_id_stamped": n_stamped,
+            "n_in_manifest_kernel_map": n_manifest_kernel,
+            "n_in_manifest_flat_map": n_manifest_flat,
+            "note": "stamp-absence is NOT a flat witness (pre-router/pre-stamp "
+                    "stories lack it); only a manifest witnesses flat routing",
         },
         "partition": partition,
         "partition_counts": {k: len(v) for k, v in partition.items()},
@@ -434,8 +463,10 @@ def main():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 4 and sys.argv[1] == "sweep_corpus":
-        # sweep_corpus <label> <pipeline_output_json>; testsets dir = prolog/<label>
-        sweep_corpus(sys.argv[2], sys.argv[3], REPO / "prolog" / sys.argv[2])
+    if len(sys.argv) in (4, 5) and sys.argv[1] == "sweep_corpus":
+        # sweep_corpus <label> <pipeline_output_json> [<testsets_dir rel. to prolog/>]
+        # default testsets dir: prolog/<label>
+        ts = REPO / "prolog" / (sys.argv[4] if len(sys.argv) == 5 else sys.argv[2])
+        sweep_corpus(sys.argv[2], sys.argv[3], ts)
     else:
         main()
