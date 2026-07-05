@@ -5077,9 +5077,13 @@ proposed detector is corpus-measurable) + Ω_P (design call: should the SCOPE ga
 inevitability/"mountain"/"irreducible" framing as a kernel trigger — seat necessity-vs-contingency —
 operator's, fresh decision).
 
-**Status:** open — candidate detector, N=2 witnessed instances; the positive/negative control sweep
+**Status:** mitigated — control sweep RUN (2026-07-04, pre-registered:
+`audits/2026-07-04_oq88_false_mountain_detector/`): positive control WITNESSED (full-D N=2),
+no over-fire observed but cell 2 only base-rate-inferred (no labeled flinch), and the
+pre-registered D′ refinement is DEAD (discriminator saturates). Detector = gate-signal
+CANDIDATE; residual = the Ω_P auto-route ruling (operator's) + optional flinch label.
 **Priority:** 1
-that would license it as a gate signal has NOT been run.
+**Deps:** blocked_on_human oq88-autoroute-or-review-prompt-ruling
 
 **Origin:** 2026-06-08, World3 essay comparison. A thesis-driven critique of the Nebel et al. 2024
 World3 recalibration ("The Robustness Is the Tell", web Claude) landed a spine the pipeline essay
@@ -5132,6 +5136,31 @@ kernel-vs-flat review, not an auto-route." Cross-refs: OQ-79 (kernel-liberal gat
 this is its measured blind spot), OQ-76 (salience-driven under-firing), `docs/seat-theorem-v1.md`
 (Coupling Theorem), `docs/the_perturbation_principle.md` §7.1 (kernel-vs-flat is itself a seat).
 Provenance: this analysis + KNOWN_STATE 2026-06-08.
+
+**Control sweep RUN (2026-07-04, pre-registered; full detail
+`audits/2026-07-04_oq88_false_mountain_detector/{PROPOSAL,FINDINGS}.md`).** Verdict cells:
+(1) **positive WITNESSED** — both full-D positives fire (demographic live; World3 via the 06-08
+171605 flat manifest ∧ the 06-11 archived Layer B, alert-TYPE-keyed since the archived severity
+is pre-OQ-128 `severe`); dispatch controls two-sided green (`_c0` normalization, both flat
+manifests, known kernel-routed → kernel bucket). (2) **negative INFERRED-weak** — no labeled
+flinch exists; kernel_v1 base rate (fresh `classify_corpus` at e438723b, 1,106 stories, alert
+channel live on 1,082) shows 41 claimed mountains, ONE alert-firing false-mountain
+(`maxwell_demon_impossibility`), flinch tail 0/1; v5/v6 escalation declined (tail empty).
+(3) **D′ DEAD — the regime-omega discriminator SATURATES**: present 4/4 live flat, 4/4
+routing-unknown, 1/1 kernel_v1 (the corpus omega convention frames uncertainty as
+natural-vs-constructed almost universally), so D′ ≡ D, zero discriminating power;
+manifest-omega-only is more selective but misses the demographic positive. Live partition of the
+9 alert-firing: **4 flat** (demographic + `longevity_mismatch`, `scale_ceiling_c0`,
+`technology_diffusion_asymmetry`), **1 kernel-routed** (caught: `neutron_star_bombardment_reading`
+→ `actinide_replenishment_mechanism`), **4 routing-unknown fail-closed** (no manifest on disk:
+`architectural_pattern_validity`, `demographic_resource_allocation`,
+`propagation_speed_asymmetry`, `validation_judgment_separation`) — a ~44% Layer-A coverage hole
+any gate wiring must state; +1 undetermined-seat (`organization_floor_c0`, h1 null, no alert).
+**Residual (blocked_on_human):** the Ω_P ruling — auto-route authored-inevitability to a
+necessity-vs-contingency kernel, or land the light seat (false-mountain flag prompts an operator
+kernel-vs-flat review; likely prompt-wiring only)? Optional upgrade: label ONE confirmed flinch
+from the candidate list above and cell 2 becomes witnessable on re-run. Building either trigger
+is a follow-up gated on that ruling.
 
 ---
 

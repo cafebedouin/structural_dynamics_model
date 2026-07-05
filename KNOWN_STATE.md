@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-04 — OQ-88 MITIGATED: false-mountain detector sweep (positive WITNESSED N=2; D′ discriminator SATURATES; Ω_P auto-route ruling handed to operator)
+**Files:** python/audits/oq88_false_mountain_detector.py, ISSUES.md, audits/2026-07-04_oq88_false_mountain_detector/
+**Tier:** landed
+
+Pre-registered sweep (PROPOSAL.md frozen before any run) of the OQ-88 candidate detector
+`D = flat-routed ∧ engine-false-mountain` (claimed mountain ∧ maxent-top rope ∧
+`type_1_false_summit` alert — keyed on alert TYPE, not severity: the archived World3 positive
+is pre-OQ-128 `severe`, live firings are `informational`). **Cell 1 WITNESSED:** both full-D
+positives fire (`demographic_skill_mismatch_c0` live via china 163143 flat manifest;
+`collapse_mechanism_ambiguity` via World3 171605 flat manifest ∧ the 06-11 oq90 archived
+Layer B); dispatch controls two-sided green. **Cell 2 INFERRED-weak:** no labeled flinch;
+kernel_v1 fresh `classify_corpus` at e438723b (1,106 stories, `pipeline_output_kernel_v1_oq88.json`
+— the e8189d1-era `pipeline_output_kernel_v1.json` NOT reused, output-changing OQ-138/OQ-205
+commits landed between; not overwritten either) gives 41 claimed mountains, ONE alert-firing
+false-mountain, flinch tail 0/1; alert channel live (1,082/1,106 alert-bearing). **Cell 3 DEAD:
+the pre-registered regime-omega discriminator saturates** (present on 4/4 live flat, 4/4
+routing-unknown, 1/1 kernel_v1 — the corpus omega convention frames uncertainty as
+natural-vs-constructed nearly universally), so D′ ≡ D and cannot be the refined gate.
+Live partition of the 9 alert-firing: 4 flat / 1 kernel-routed (caught:
+`neutron_star_bombardment_reading`) / 4 routing-unknown fail-closed — a ~44% Layer-A coverage
+hole any gate wiring must state; `organization_floor_c0` = the h1-null no-alert undetermined
+bucket. **Residual (blocked_on_human, in OQ-88):** the Ω_P ruling — auto-route vs the light
+"operator kernel-vs-flat review prompt" seat; optional flinch label upgrades cell 2 to
+witnessable. Verdict per the pre-registered cells: **gate-signal CANDIDATE, not a witnessed
+gate.**
+
 ## 2026-07-04 — OQ-125 RESOLVED (value-invariance beyond H1) + OQ-123 MITIGATED ((a) refuted; (b)-or-(c2) live): conditioned twin re-analyses
 **Files:** python/audits/twin_comparison.py, ISSUES.md, audits/2026-07-04_twin_conditioned/
 **Tier:** correction-key
