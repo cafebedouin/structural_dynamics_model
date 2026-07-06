@@ -45,6 +45,51 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-06 — OQ-213(a): `twin_comparison.py` graduated to N-general (Sonnet now a full paired leg); 3-leg run at HEAD, intersection 957
+**Files:** python/audits/twin_comparison.py, outputs/pipeline_output.haiku.json, outputs/pipeline_output.flash.json, outputs/pipeline_output.sonnet.json, ISSUES.md, AGENTS.md
+**Tier:** landed
+
+Wired the built Sonnet leg from a marginals-only control into a full paired twin, and made
+the harness **N-general** (a 4th Opus leg is a one-line add). OQ-213(a) resolved; (b) stays open
+(kill-conditioned). Interpretation (which model is the odd one out) stays with OQ-123/124 —
+this entry is the WIRING + preservation witness only.
+
+- **Precondition (one coherent triple at one commit).** `twin_comparison.py` refuses to join
+  legs at different `code_commit`; the legs straddled commits (haiku/flash `bbf5c92`, sonnet
+  `ea8ed72`). Re-classified all three at HEAD **`1169170`** in ONE serialized `classify_corpus`
+  batch (shared `pipeline_output.raw.json`; no interleaved working-tree edit → identical stamp is
+  honest), each passing the four refusals (zero-glob / load-completeness / single-model fingerprint
+  / raw-freshness). n = 960 / 960 / 1001, all `code_dirty:True` (shared → guard compares commit only).
+- **Engine change (`twin_comparison.py`).** `--twin` takes ≥2 legs; refuse-to-join guards run over
+  **all pairs** (no two share `corpus_path`; **all** legs one `code_commit`); intersection is the
+  **common** id set; each pre-registered pairwise falsifier fans out over every unordered
+  `combinations(sorted(labels),2)` with a **per-pair salted RNG** `random.Random(f"{seed}:{x}:{y}")`
+  (buys P1 order-independence, NOT P2 old==new byte-identity — the old bare-seed stream is threaded
+  across fields, so any re-seed moves the permutation numbers by construction). New
+  `analyse_agreement_nway` emits the N-way partition (unanimous / odd-one-out + odd-leg tally /
+  split-multi) **with the missingness complement carried** (map-intersection ≠ field-non-null; guards
+  against residual (b) silently biasing the surface). `sonnet_control` + the conditioned OQ-125/123
+  block left AS-IS (byte-unchanged; run on their own 2-leg intersection). JSON keys renamed
+  `structural_H1`→`structural_H1_pairs`, `continuous_H2`→`continuous_H2_pairs`, added
+  `structural_agreement_nway` + `pairs` (no external consumers — only prose docs reference the artifact).
+- **Verification (`audits/2026-07-06_oq213a_twin_sonnet_leg/`).** V1 behavior-preservation **SPLIT**
+  witness on pinned pre-reclassify inputs: the rng-free deterministic bucket (`agreement/disparity/
+  rate/wilson_lo,hi/n_both/one_sided/exemplars` — traced rng-free by reading the helper bodies, not
+  inferred from the seed site) is **byte-identical** OLD vs NEW; the permutation bucket agrees within
+  the **measured** two-salt MC envelope (ran NEW at two seeds to size it — all `|old−new|`≤0.001), no
+  `H1_holds` flip. V2 3-leg at HEAD: common intersection **n=957**, three crossings/field, all seven
+  partitions close (`n_all_populated=unanimous+odd+split` AND `n_all_populated+missing=957`). V3:
+  the haiku×flash pairwise delta from the historical 960 is **exactly** the 3 non-triple ids
+  `(haiku∩flash)−sonnet` = the treaty/legal seeds (`article_27_veto_power`, `nsl_legal_text`,
+  `unsc_242_withdrawal_clause`) — residual (b)'s footprint, not a behavior change. V4 ingestion
+  control: sonnet JSON leg id-set == raw `.pl` source (1001==1001).
+- **Now-decidable INPUT (not verdicts).** odd-leg tallies: `persp:powerless` {sonnet 190, flash 185,
+  haiku 175} (near-even — no localization on one triple); `signature` {haiku 135, flash 89, sonnet 59}.
+  `verdict` missingness is 204 ids spread across all legs (sonnet 113 / flash 91 / haiku 71) — the
+  general `verdict_join`-null (OQ-51/98), NOT the residual-(b) sonnet drop; perspectives have 0 missing.
+- **Note the leg JSONs are now at HEAD `1169170`** (gitignored/regenerable) — a later citation of
+  `pipeline_output.{haiku,flash,sonnet}.json` must name BOTH corpus and commit (Running the System).
+
 ## 2026-07-05 — THIRD model-twin leg built: `testsets_sonnet/` (claude-sonnet-5, 1001 stories) — matched triple 957/960; unblocks the 3-model divergence OQs
 **Files:** agent/run_no_scope_sonnet.py, prolog/testsets_sonnet/, json_sonnet/, prolog/beta_processed_sonnet.txt, prolog/testsets/, json/, python/audits/twin_comparison.py, ISSUES.md
 **Tier:** landed

@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Twin-model cross-classification comparison harness (Part B2).
 
-Joins 2 twin `pipeline_output.*.json` (same engine + commit, different generating
-model) over the LIVE id intersection and adjudicates the pre-registered H1/H2
-falsifiers (see audits/2026-06-13_twin_comparison/PRE_REGISTRATION.md). n-agnostic:
-keys on the intersection, so it re-runs unchanged as the corpora grow.
+Joins >=2 twin `pipeline_output.*.json` (same engine + commit, different generating
+model) over the COMMON LIVE id intersection and adjudicates the pre-registered H1/H2
+falsifiers (see audits/2026-06-13_twin_comparison/PRE_REGISTRATION.md). n-agnostic in
+BOTH the corpus size (keys on the intersection) AND the number of legs (OQ-213(a)):
+each pre-registered pairwise falsifier runs over every unordered pair, and an N-way
+agreement partition localises disagreement to the odd leg out. A future 4th leg is a
+one-line add.
 
 A third, disjoint corpus (the mixed essay/control regime) may be supplied via
 `--essay`; it contributes per-corpus marginal tables only (labelled not-paired).
@@ -13,15 +16,17 @@ Usage:
     python3 python/audits/twin_comparison.py \
         --twin haiku=outputs/pipeline_output.haiku.json \
         --twin flash=outputs/pipeline_output.flash.json \
+        [--twin sonnet=outputs/pipeline_output.sonnet.json] \
         [--essay mixed=outputs/pipeline_output.json] \
         --permute 1000 \
         --outdir audits/2026-06-13_twin_comparison
 
-Validity guards (refuse-to-join): schema_version != 2; two inputs sharing
-corpus_path; twins differing in code_commit.
+Validity guards (refuse-to-join): schema_version != 2; any two legs sharing a
+corpus_path; legs differing in code_commit (ALL legs must share one commit).
 """
 import argparse
 import hashlib
+import itertools
 import json
 import math
 import random
@@ -105,7 +110,7 @@ def struct_rate(hvals, fvals):
     return (agree / len(both), agree, len(both), one_sided)
 
 
-def analyse_structural(inter, haiku, flash, field, n_perm, rng):
+def analyse_structural(inter, haiku, flash, field, n_perm, rng, lx, ly):
     hvals = [get_struct(haiku[i], field) for i in inter]
     fvals = [get_struct(flash[i], field) for i in inter]
     rate, agree, n_both, one_sided = struct_rate(hvals, fvals)
@@ -123,9 +128,10 @@ def analyse_structural(inter, haiku, flash, field, n_perm, rng):
     h1 = None
     if lo is not None and band95 is not None:
         h1 = bool(lo > band95)
-    # disparity exemplars (up to 5 ids where both populated and differ)
+    # disparity exemplars (up to 5 ids where both populated and differ); keys are the
+    # pair's actual labels (generalised from the old hardcoded "haiku"/"flash").
     exemplars = [
-        {"id": i, "haiku": a, "flash": b}
+        {"id": i, lx: a, ly: b}
         for i, a, b in zip(inter, hvals, fvals)
         if populated(a) and populated(b) and a != b
     ][:5]
@@ -177,6 +183,76 @@ def analyse_continuous(inter, haiku, flash, field, n_perm, rng):
         "permute_band_5": band5, "permute_band_95": band95,
         "tail": tail,
         "H2_holds_literal": bool(obs > band95),
+    }
+
+
+# --------------------------------------------------------------------------- N-way agreement
+def analyse_agreement_nway(inter, maps, labels, field):
+    """N-way agreement partition for one structural field, missingness carried.
+
+    Over ids where EVERY leg is field-populated, classify the value tuple:
+      unanimous            — all legs agree;
+      odd-one-out          — exactly one leg is a minority-of-one (N>=3 only); its
+                             label is tallied in odd_leg_tally (the (c2)-deciding
+                             surface — a leg that stands alone localises divergence);
+      split-multi          — >1 leg differs (all-distinct or plurality; also the
+                             N==2 disagreement case, where 'odd' is undefined).
+    Closure: n_all_populated == unanimous + odd_leg_total + n_split_multi.
+
+    The MISSINGNESS complement is load-bearing: 'all legs populated' (map
+    intersection) != field non-null. Residual (b) — the Sonnet `stakeholders`
+    schema drop — removes exactly those seeds for those fields. Carried so a low
+    odd-leg count cannot be misread as 'that leg agrees' when it in fact dropped out.
+    Complement closure: len(inter) == n_all_populated + n_ids_missing_ge1.
+    """
+    labels = sorted(labels)
+    n_labels = len(labels)
+    n_all_pop = unanimous = n_split_multi = 0
+    odd_tally = Counter()
+    odd_exemplars = {}
+    missing_ids = 0
+    missing_leg_tally = Counter()
+    missing_exemplars = []
+    for i in inter:
+        vals = {l: get_struct(maps[l][i], field) for l in labels}
+        missing = [l for l in labels if not populated(vals[l])]
+        if missing:
+            missing_ids += 1
+            for l in missing:
+                missing_leg_tally[l] += 1
+            if len(missing_exemplars) < 5:
+                missing_exemplars.append({"id": i, "missing": missing})
+            continue
+        n_all_pop += 1
+        vc = Counter(vals.values())
+        if len(vc) == 1:
+            unanimous += 1
+        elif n_labels >= 3 and len(vc) == 2 and max(vc.values()) == n_labels - 1:
+            odd_val = min(vc, key=lambda v: vc[v])   # the singleton value
+            odd_leg = next(l for l in labels if vals[l] == odd_val)
+            odd_tally[odd_leg] += 1
+            exs = odd_exemplars.setdefault(odd_leg, [])
+            if len(exs) < 5:
+                exs.append({"id": i, **{l: vals[l] for l in labels}})
+        else:
+            n_split_multi += 1
+    odd_total = sum(odd_tally.values())
+    return {
+        "field": field,
+        "n_in_intersection": len(inter),
+        "n_all_populated": n_all_pop,
+        "unanimous": unanimous,
+        "odd_leg_total": odd_total,
+        "odd_leg_tally": dict(odd_tally.most_common()),
+        "n_split_multi": n_split_multi,
+        "odd_leg_exemplars": odd_exemplars,
+        "missingness": {
+            "n_ids_missing_ge1": missing_ids,
+            "missing_leg_tally": dict(missing_leg_tally.most_common()),
+            "exemplars": missing_exemplars,
+        },
+        "closure_ok": n_all_pop == unanimous + odd_total + n_split_multi,
+        "intersection_accounts": len(inter) == n_all_pop + missing_ids,
     }
 
 
@@ -517,7 +593,7 @@ def manifest_of(data, label):
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--twin", action="append", required=True,
-                    help="label=path (exactly two)")
+                    help="label=path (two or more; every unordered pair is crossed)")
     ap.add_argument("--essay", action="append", default=[],
                     help="label=path (disjoint distribution corpus; marginals only)")
     ap.add_argument("--permute", type=int, default=1000)
@@ -533,35 +609,68 @@ def main():
                     help="label=corpus_dir of the unpaired third-model control")
     args = ap.parse_args()
 
-    if len(args.twin) != 2:
-        raise SystemExit(f"REFUSE: need exactly two --twin inputs, got {len(args.twin)}")
+    if len(args.twin) < 2:
+        raise SystemExit(f"REFUSE: need >=2 --twin inputs, got {len(args.twin)}")
     if args.permute < 1000:
         raise SystemExit(f"REFUSE: --permute {args.permute} < 1000 (pre-registered N>=1000)")
-    rng = random.Random(args.seed)
 
-    twins = [load_input(s) for s in args.twin]
-    (la, pa, da), (lb, pb, db) = twins
-    ma, mb = manifest_of(da, la), manifest_of(db, lb)
+    # N-general leg load: legs = [(label, path, data)]; keyed views by label.
+    legs = [load_input(s) for s in args.twin]
+    labels = [l for l, _, _ in legs]
+    if len(set(labels)) != len(labels):
+        raise SystemExit(f"REFUSE: duplicate --twin labels {labels}")
+    manifests = {l: manifest_of(d, l) for l, _, d in legs}
+    maps = {l: index_by_id(d) for l, _, d in legs}
+    paths = {l: p for l, p, _ in legs}
 
-    # refuse-to-join guards
-    cpa, cpb = ma.get("corpus_path"), mb.get("corpus_path")
-    if cpa is not None and cpa == cpb:
-        raise SystemExit(f"REFUSE: both twins share corpus_path={cpa!r} (corpus vs itself)")
-    if ma.get("code_commit") != mb.get("code_commit"):
+    # refuse-to-join guards, generalised over ALL pairs:
+    #  (i)  no two legs may share a corpus_path (corpus vs itself);
+    #  (ii) ALL legs must share one code_commit (else model-diff aliases onto code-diff).
+    for x, y in itertools.combinations(labels, 2):
+        cpx, cpy = manifests[x].get("corpus_path"), manifests[y].get("corpus_path")
+        if cpx is not None and cpx == cpy:
+            raise SystemExit(f"REFUSE: legs {x!r} and {y!r} share corpus_path={cpx!r} "
+                             f"(corpus vs itself)")
+    commit_of = {l: manifests[l].get("code_commit") for l in labels}
+    if len(set(commit_of.values())) != 1:
+        x, y = next((a, b) for a, b in itertools.combinations(labels, 2)
+                    if commit_of[a] != commit_of[b])
         raise SystemExit(
-            f"REFUSE: twins differ in code_commit ({ma.get('code_commit_short')} vs "
-            f"{mb.get('code_commit_short')}) — model-difference would alias onto "
-            f"code-difference. Re-classify both at one commit.")
+            f"REFUSE: legs differ in code_commit ({x}={manifests[x].get('code_commit_short')} "
+            f"vs {y}={manifests[y].get('code_commit_short')}) — model-difference would alias "
+            f"onto code-difference. Re-classify ALL legs at one commit.")
 
-    ha, hb = index_by_id(da), index_by_id(db)
-    inter = sorted(set(ha) & set(hb))
+    # COMMON intersection across ALL legs — one id set for every pairwise rate and the
+    # N-way partition, so all rates and the partition are directly comparable.
+    inter = sorted(set.intersection(*(set(m) for m in maps.values())))
     if not inter:
         raise SystemExit("REFUSE: empty id intersection")
 
-    structural = [analyse_structural(inter, ha, hb, f, args.permute, rng)
-                  for f in STRUCTURAL_FIELDS]
-    continuous = [analyse_continuous(inter, ha, hb, f, args.permute, rng)
-                  for f in CONTINUOUS_FIELDS]
+    # first two legs power the AS-IS conditioned/sonnet_control path (2-leg by design)
+    la, lb = labels[0], labels[1]
+    pa, pb = paths[la], paths[lb]
+    ha, hb = maps[la], maps[lb]
+
+    # Pairwise fan-out over every unordered pair; per-pair RNG salted by the sorted pair
+    # labels (P1 order-independence: a pair's permutation draw is the same regardless of
+    # its position in the loop, and a future leg cannot perturb it). NOT P2 (old==new
+    # byte-identity): the salt necessarily moves the stream off the old bare seed.
+    pair_labels = list(itertools.combinations(sorted(labels), 2))
+    structural_pairs, continuous_pairs = [], []
+    for x, y in pair_labels:
+        rng_xy = random.Random(f"{args.seed}:{x}:{y}")
+        for f in STRUCTURAL_FIELDS:
+            s = analyse_structural(inter, maps[x], maps[y], f, args.permute, rng_xy, x, y)
+            s["pair"] = [x, y]
+            structural_pairs.append(s)
+        for f in CONTINUOUS_FIELDS:
+            c = analyse_continuous(inter, maps[x], maps[y], f, args.permute, rng_xy)
+            c["pair"] = [x, y]
+            continuous_pairs.append(c)
+
+    # N-way agreement partition (the (c2)-deciding surface), missingness carried
+    agreement_nway = [analyse_agreement_nway(inter, maps, labels, f)
+                      for f in STRUCTURAL_FIELDS]
 
     # essay / distribution corpora — marginals only
     essays = []
@@ -580,23 +689,25 @@ def main():
         "pre_registration": "audits/2026-06-13_twin_comparison/PRE_REGISTRATION.md",
         "permutations": args.permute, "seed": args.seed,
         "twins": [
-            {"label": la, "path": str(pa),
-             "manifest": {k: ma.get(k) for k in
-                          ("code_commit_short", "n_constraints", "corpus_path")}},
-            {"label": lb, "path": str(pb),
-             "manifest": {k: mb.get(k) for k in
-                          ("code_commit_short", "n_constraints", "corpus_path")}},
+            {"label": l, "path": str(paths[l]),
+             "manifest": {k: manifests[l].get(k) for k in
+                          ("code_commit_short", "n_constraints", "corpus_path")}}
+            for l in labels
         ],
+        "pairs": [list(p) for p in pair_labels],
         "intersection_n": len(inter),
-        "structural_H1": structural,
-        "continuous_H2": continuous,
+        "structural_H1_pairs": structural_pairs,
+        "continuous_H2_pairs": continuous_pairs,
+        "structural_agreement_nway": agreement_nway,
         "essay_marginals": essays,
         "notes": [
             "verdict_join.verdict is the only headline verdict (OQ-98).",
             "verdict & perspectives are CORRELATED, not independent confirmations "
             "(verdict folds perspectives via compute_verdict/4).",
             "signature agreement is STRUCTURAL-coding, not detection (OQ-70).",
-            "Per-field adjudication only; no aggregate H1 claim.",
+            "Per-field, per-pair adjudication only; no aggregate cross-field H1 claim.",
+            "odd_leg tally is now-decidable INPUT to OQ-123/124, not a localization "
+            "verdict — one triple does not earn 'model X is the odd one out'.",
         ],
     }
 
@@ -604,9 +715,9 @@ def main():
     outdir.mkdir(parents=True, exist_ok=True)
     (outdir / "twin_comparison.json").write_text(
         json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
-    write_results_md(outdir / "RESULTS.md", result, la, lb)
+    write_results_md(outdir / "RESULTS.md", result, labels)
     print(f"wrote {outdir/'twin_comparison.json'} and RESULTS.md "
-          f"(intersection n={len(inter)})")
+          f"(legs={','.join(labels)}; intersection n={len(inter)})")
 
     # ------------------------------------------------------------ conditioned
     if args.conditioned_outdir:
@@ -617,6 +728,9 @@ def main():
                                  f"{lbl}=<corpus_dir>")
         status_a = source_victim_status(REPO_ROOT / sources[la])
         status_b = source_victim_status(REPO_ROOT / sources[lb])
+        # The conditioned analyses are a 2-leg (la vs lb) design; run them on the
+        # la∩lb intersection (== the N-way inter exactly when only two legs supplied).
+        cond_inter = sorted(set(ha) & set(hb))
         cond = {
             "pre_registration":
                 "audits/2026-07-04_twin_conditioned/PRE_REGISTRATION.md",
@@ -625,19 +739,20 @@ def main():
             "inputs": [{"label": l, "path": str(p),
                         "sha256_16": hashlib.sha256(p.read_bytes()).hexdigest()[:16]}
                        for l, p in ((la, pa), (lb, pb))],
-            "intersection_n": len(inter),
-            "track_a_oq125": track_a(inter, ha, hb, args.permute, args.seed),
-            "track_b_oq123": track_b(inter, ha, hb, status_a, status_b,
+            "intersection_n": len(cond_inter),
+            "track_a_oq125": track_a(cond_inter, ha, hb, args.permute, args.seed),
+            "track_b_oq123": track_b(cond_inter, ha, hb, status_a, status_b,
                                      args.permute, args.seed, la, lb),
         }
-        # internal consistency: Track B's unconditioned rate must equal the
-        # unconditioned structural persp:powerless rate from this same run
-        s_pow = next(s for s in structural if s["field"] == "persp:powerless")
+        # internal consistency: Track B's unconditioned rate must equal the la-vs-lb
+        # persp:powerless agreement rate on the same id set (deterministic; no rng).
+        r_pow_ab, *_ = struct_rate(
+            [get_struct(ha[i], "persp:powerless") for i in cond_inter],
+            [get_struct(hb[i], "persp:powerless") for i in cond_inter])
         r_all = cond["track_b_oq123"]["unconditioned_powerless"]["agreement_rate"]
-        if s_pow["agreement_rate"] != r_all:
-            raise SystemExit("INTERNAL: Track B r_all != unconditioned "
-                             "persp:powerless rate")
-        cond["r_all_consistency"] = "equal to unconditioned persp:powerless rate"
+        if r_pow_ab != r_all:
+            raise SystemExit("INTERNAL: Track B r_all != la-vs-lb persp:powerless rate")
+        cond["r_all_consistency"] = "equal to la-vs-lb persp:powerless rate"
         if args.control:
             lc, _, dc = args.control.partition("=")
             cond["sonnet_control"] = sonnet_control(REPO_ROOT / dc, status_a,
@@ -651,7 +766,11 @@ def main():
         print(f"wrote {cdir/'twin_conditioned.json'} and RESULTS_CONDITIONED.md")
 
 
-def write_results_md(path, r, la, lb):
+def _pair_tag(p):
+    return f"{p[0]} × {p[1]}"
+
+
+def write_results_md(path, r, labels):
     L = []
     L.append("# Twin-model cross-classification — RESULTS\n")
     L.append(f"Pre-registration: `{r['pre_registration']}` (committed before this run).\n")
@@ -662,47 +781,79 @@ def write_results_md(path, r, la, lb):
         m = t["manifest"]
         L.append(f"| {t['label']} | {m['code_commit_short']} | {m['n_constraints']} "
                  f"| {m.get('corpus_path')} |")
-    L.append(f"\n**Matched intersection: n = {r['intersection_n']}** "
-             f"(both twins classified at commit "
+    L.append(f"\n**Common matched intersection (all {len(r['twins'])} legs): n = "
+             f"{r['intersection_n']}** (all legs classified at commit "
              f"{r['twins'][0]['manifest']['code_commit_short']}).\n")
-    L.append(f"Permutations: {r['permutations']}; seed {r['seed']}.\n")
+    L.append(f"Permutations: {r['permutations']}; seed {r['seed']}. "
+             f"Pairs crossed: {', '.join(_pair_tag(p) for p in r['pairs'])}.\n")
 
-    L.append("## H1 — structural type model-invariance (per-field; NOT aggregated)\n")
+    pairs = [tuple(p) for p in r["pairs"]]
+    L.append("## H1 — structural type model-invariance (per-field, per-pair; NOT aggregated)\n")
     L.append("agreement-rate over both-populated pairs; H1 holds iff Wilson-95% lower "
-             "bound > permute band (95th pct). verdict & perspectives are CORRELATED "
-             "(verdict folds perspectives) — not independent confirmations.\n")
-    L.append("| field | both-pop | agree | disp | one-sided | rate | Wilson-95 lo | "
-             "band95 | H1 |")
+             "bound > permute band (95th pct). Each pair runs on the COMMON intersection, "
+             "so pairwise rates are directly comparable. verdict & perspectives are "
+             "CORRELATED (verdict folds perspectives) — not independent confirmations.\n")
+    for pk in pairs:
+        rows = [s for s in r["structural_H1_pairs"] if tuple(s["pair"]) == pk]
+        L.append(f"\n### Pair: {_pair_tag(pk)}\n")
+        L.append("| field | both-pop | agree | disp | one-sided | rate | Wilson-95 lo | "
+                 "band95 | H1 |")
+        L.append("|---|---|---|---|---|---|---|---|---|")
+        for s in rows:
+            rate = "—" if s["agreement_rate"] is None else f"{s['agreement_rate']:.3f}"
+            lo = "—" if s["wilson_lo"] is None else f"{s['wilson_lo']:.3f}"
+            b95 = "—" if s["permute_band_95"] is None else f"{s['permute_band_95']:.3f}"
+            h1 = {True: "HOLDS", False: "FALSIFIED", None: "n/a"}[s["H1_holds"]]
+            L.append(f"| `{s['field']}` | {s['n_both_populated']} | {s['agreement']} | "
+                     f"{s['disparity']} | {s['one_sided']} | {rate} | {lo} | {b95} | {h1} |")
+        exemplar_rows = [s for s in rows if s["disparity_exemplars"]]
+        if exemplar_rows:
+            L.append(f"\n_Disparity exemplars ({_pair_tag(pk)}):_")
+            for s in exemplar_rows:
+                L.append(f"- `{s['field']}`:")
+                for ex in s["disparity_exemplars"]:
+                    a, b = ex[pk[0]], ex[pk[1]]
+                    L.append(f"  - `{ex['id']}`: {pk[0]}={a!r} vs {pk[1]}={b!r}")
+
+    L.append("\n## N-way agreement partition (odd-leg localisation; missingness carried)\n")
+    L.append("Over ids where EVERY leg is field-populated: unanimous / odd-one-out "
+             "(exactly one leg a minority-of-one, N≥3) / split-multi (>1 leg differs). "
+             "odd_leg tally is now-decidable INPUT to OQ-123/124 — NOT a localization "
+             "verdict. Missingness complement carried so a low odd count is not misread "
+             "as agreement when a leg dropped the field (residual (b)).\n")
+    L.append("| field | in∩ | all-pop | unanim | split-multi | odd-total | odd-leg tally "
+             "| missing≥1 | closure |")
     L.append("|---|---|---|---|---|---|---|---|---|")
-    for s in r["structural_H1"]:
-        rate = "—" if s["agreement_rate"] is None else f"{s['agreement_rate']:.3f}"
-        lo = "—" if s["wilson_lo"] is None else f"{s['wilson_lo']:.3f}"
-        b95 = "—" if s["permute_band_95"] is None else f"{s['permute_band_95']:.3f}"
-        h1 = {True: "HOLDS", False: "FALSIFIED", None: "n/a"}[s["H1_holds"]]
-        L.append(f"| `{s['field']}` | {s['n_both_populated']} | {s['agreement']} | "
-                 f"{s['disparity']} | {s['one_sided']} | {rate} | {lo} | {b95} | {h1} |")
+    for a in r["structural_agreement_nway"]:
+        odd = ", ".join(f"{k}={v}" for k, v in a["odd_leg_tally"].items()) or "—"
+        clo = "ok" if a["closure_ok"] and a["intersection_accounts"] else "**BROKEN**"
+        L.append(f"| `{a['field']}` | {a['n_in_intersection']} | {a['n_all_populated']} | "
+                 f"{a['unanimous']} | {a['n_split_multi']} | {a['odd_leg_total']} | {odd} | "
+                 f"{a['missingness']['n_ids_missing_ge1']} | {clo} |")
+    miss_rows = [a for a in r["structural_agreement_nway"]
+                 if a["missingness"]["n_ids_missing_ge1"]]
+    if miss_rows:
+        L.append("\n_Missingness detail (which legs drop the field):_")
+        for a in miss_rows:
+            L.append(f"- `{a['field']}`: {a['missingness']['missing_leg_tally']}")
 
-    L.append("\n### Disparity exemplars (both populated, values differ)\n")
-    for s in r["structural_H1"]:
-        if s["disparity_exemplars"]:
-            L.append(f"- `{s['field']}`:")
-            for ex in s["disparity_exemplars"]:
-                L.append(f"  - `{ex['id']}`: {la}={ex['haiku']!r} vs {lb}={ex['flash']!r}")
-
-    L.append("\n## H2 — continuous drift (per-field)\n")
-    L.append("observed mean|Δ| (haiku−flash, paired) vs permuted-Δ band; pre-registered "
-             "literal: H2 holds iff observed > band95 (true pairs MORE dispersed than "
-             "chance). 'below' = natural invariance tail (more similar than chance).\n")
-    L.append("| field | both-numeric | obs mean\\|Δ\\| | band5 | band95 | tail | status |")
-    L.append("|---|---|---|---|---|---|---|")
-    for c in r["continuous_H2"]:
-        if c["status"] == "OPEN":
-            L.append(f"| `{c['field']}` | {c['n_both_numeric']} | — | — | — | — | OPEN |")
-        else:
-            L.append(f"| `{c['field']}` | {c['n_both_numeric']} | "
-                     f"{c['observed_mean_abs_delta']:.4f} | {c['permute_band_5']:.4f} | "
-                     f"{c['permute_band_95']:.4f} | {c['tail']} | "
-                     f"{'H2' if c['H2_holds_literal'] else 'no'} |")
+    L.append("\n## H2 — continuous drift (per-field, per-pair)\n")
+    L.append("observed mean|Δ| (paired) vs permuted-Δ band; pre-registered literal: H2 "
+             "holds iff observed > band95 (true pairs MORE dispersed than chance). "
+             "'below' = natural invariance tail (more similar than chance).\n")
+    for pk in pairs:
+        rows = [c for c in r["continuous_H2_pairs"] if tuple(c["pair"]) == pk]
+        L.append(f"\n### Pair: {_pair_tag(pk)}\n")
+        L.append("| field | both-numeric | obs mean\\|Δ\\| | band5 | band95 | tail | status |")
+        L.append("|---|---|---|---|---|---|---|")
+        for c in rows:
+            if c["status"] == "OPEN":
+                L.append(f"| `{c['field']}` | {c['n_both_numeric']} | — | — | — | — | OPEN |")
+            else:
+                L.append(f"| `{c['field']}` | {c['n_both_numeric']} | "
+                         f"{c['observed_mean_abs_delta']:.4f} | {c['permute_band_5']:.4f} | "
+                         f"{c['permute_band_95']:.4f} | {c['tail']} | "
+                         f"{'H2' if c['H2_holds_literal'] else 'no'} |")
 
     if r["essay_marginals"]:
         L.append("\n## Essay / distribution corpus (disjoint — marginals only, NOT paired)\n")

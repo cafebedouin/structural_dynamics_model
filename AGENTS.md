@@ -688,6 +688,30 @@ single deterministic clause and refuses on swap/zero-glob/load-incomplete/seen�
 `None` for mixed-model corpora). Used by `python/audits/twin_comparison.py`. Serial only
 (one classify run at a time — OQ-77).
 
+**Twin comparison is N-general (≥2 legs; OQ-213(a), 2026-07-06).** `twin_comparison.py` takes
+**two or more** `--twin label=path` legs, not exactly two — it crosses every unordered pair and
+emits an N-way agreement partition (odd-leg tally per structural field, missingness complement
+carried). Join guard: **ALL legs must share one `code_commit`** (any pair differing is refused —
+model-difference would alias onto code-difference), and no two may share a `corpus_path`. So the
+**precondition** for any multi-leg run is to re-classify **every** leg at ONE commit in a **single
+serialized `classify_corpus` batch** (they share `pipeline_output.raw.json`, and no working-tree
+edit may fall between the calls, else the commit stamps identical while the engine differs).
+Example (three legs at HEAD):
+
+```bash
+python3 python/audits/twin_comparison.py \
+  --twin haiku=outputs/pipeline_output.haiku.json \
+  --twin flash=outputs/pipeline_output.flash.json \
+  --twin sonnet=outputs/pipeline_output.sonnet.json \
+  --permute 1000 --outdir audits/<date>_<slug>
+```
+
+Output JSON keys: `structural_H1_pairs` / `continuous_H2_pairs` (per-pair, tagged `"pair"`) +
+`structural_agreement_nway`. Per-pair permutation RNG is salted by the sorted pair labels
+(`random.Random(f"{seed}:{x}:{y}")`) → order-independent, but permutation-derived numbers are NOT
+byte-comparable to the old bare-seed binary (deterministic fields ARE). The `sonnet_control` +
+conditioned (OQ-125/123) block stay a 2-leg design (first two legs).
+
 ### Stack consistency check (wrong-qualifier / undefined-predicate detection)
 
 ```bash

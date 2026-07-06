@@ -6151,6 +6151,12 @@ OQ-50 (detector), OQ-70 (neutron_star/FCR), OQ-117 (false-foundational gates), O
 **Status:** mitigated — (a) REFUTED, (c1) present-but-not-driver (2026-07-04, pre-registered
 conditioned partition, `audits/2026-07-04_twin_conditioned/`); live remainder is (b)-or-(c2)
 inside the authored-both cell, separable only by the deferred B4 third-model paired twin.
+**Update 2026-07-06 — the B4 third-model paired twin is now WIRED (OQ-213(a) resolved):** the Sonnet
+leg runs as a full paired leg, and the N-way partition emits a per-field odd-leg tally. On
+`persp:powerless` the tally is near-even (sonnet 190 / flash 185 / haiku 175 over the 957 triple),
+which is now-decidable INPUT — no leg localizes as the odd one out on one triple. This OQ is
+unblocked from "deferred" to "decidable with a spend"; it stays mitigated until a seated
+localization run is authored. Witness: `audits/2026-07-06_oq213a_twin_sonnet_leg/`.
 **Priority:** 1
 Filed 2026-06-13 from the twin comparison (`audits/2026-06-13_twin_comparison/`, n=960):
 `persp:powerless` agreement 0.397 vs institutional 0.672 / verdict 0.749 — the seat where model
@@ -6184,6 +6190,11 @@ authored-cell agreement under a paired sonnet twin, (b) diverges). One twin pair
 **Status:** mitigated — dominant lean ruled SIGNAL against a pre-registered, positive-controlled
 convention control (2026-06-27, `audits/2026-06-27_oq124_oq149_committer_convention_control/`);
 minority counter-direction + the third-model spend remain open.
+**Update 2026-07-06 — third-model spend now UNBLOCKED (OQ-213(a) resolved):** the Sonnet leg is a
+full paired leg; the N-way partition emits the `signature` odd-leg tally {haiku 135, flash 89,
+sonnet 59} over the 957 triple — now-decidable INPUT to "is the CHE↔FCR lean a stable model
+fingerprint?", not a verdict (one triple does not localize). The spend the resolution called
+"WARRANTED" is now runnable against a live third vote. Witness: `audits/2026-07-06_oq213a_twin_sonnet_leg/`.
 **Priority:** 1
 (`audits/2026-06-13_twin_comparison/`). The recurring `signature` disparity over matched ids is
 `constructed_high_extraction` (haiku side) ↔ `false_ci_rope` (flash side), in BOTH directions
@@ -7218,7 +7229,7 @@ type it writes, not just the seat's own verdict. (Reusable form in `docs/technic
 
 **Ω-type:** Ω_E (mechanical, witnessed: a built corpus leg + an analysis-harness wiring gap + a reproducible per-model generation-failure mode).
 
-**Status:** open — minted 2026-07-05 on building the Sonnet third leg (KNOWN_STATE.md 2026-07-05).
+**Status:** partial — **(a) wiring RESOLVED 2026-07-06**; (b) open (kill-conditioned). Minted 2026-07-05 on building the Sonnet third leg (KNOWN_STATE.md 2026-07-05).
 
 **Priority:** 4
 
@@ -7243,6 +7254,31 @@ classified leg `outputs/pipeline_output.sonnet.json` (n=1001) passed the `classi
   tie into a 3-model vote; a Sonnet leg agreeing with one twin against the other localizes the
   divergence to the odd model out. Cross-ref: OQ-123, OQ-124, OQ-149 (Field C, the `sonnet_control`
   origin), OQ-211(e), OQ-212.
+  - **RESOLVED 2026-07-06 — (a) is the WIRING, and only the wiring.** `python/audits/twin_comparison.py`
+    generalized from hardwired-2-legs to **N-general**: `--twin` accepts ≥2 legs; refuse-to-join
+    guards run over **all pairs** (no two share `corpus_path`; **all** legs one `code_commit`); the
+    intersection is the **common** id set across all legs; each pre-registered pairwise falsifier
+    (`analyse_structural`/`analyse_continuous`) fans out over every unordered `combinations(sorted
+    (labels), 2)` with a per-pair salted RNG (`random.Random(f"{seed}:{x}:{y}")` — P1 order-
+    independence, NOT P2 byte-identity); new `analyse_agreement_nway` emits the N-way partition
+    (unanimous / odd-one-out with odd-leg tally / split-multi) **with the missingness complement
+    carried**; `write_results_md` renders per-pair sections + the N-way table. A 4th (Opus) leg is a
+    one-line add. `sonnet_control` + the conditioned block left AS-IS (byte-unchanged; conditioned
+    runs on its own 2-leg intersection). **Precondition witnessed:** all three legs re-classified at
+    HEAD `1169170` in one serialized `classify_corpus` batch (each passing the four refusals),
+    `code_commit` identical so the join is coherent. **Verification (all pasted in the audit dir
+    `audits/2026-07-06_oq213a_twin_sonnet_leg/`):** V1 behavior-preservation SPLIT witness — the
+    rng-free deterministic bucket (`agreement/disparity/rate/wilson_lo,hi/n_both/one_sided/exemplars`,
+    traced rng-free, not inferred) **byte-identical** OLD-vs-NEW on pinned inputs, the permutation
+    bucket within the **measured** two-salt MC envelope, no `H1_holds` flip; V2 3-leg run — common
+    intersection **n=957**, three crossings/field, every partition closes (`n_all_populated =
+    unanimous+odd+split`, `n_all_populated+missing = 957`); V3 pairwise delta = **exactly** the 3
+    non-triple ids (`(haiku∩flash)−sonnet` = the treaty/legal seeds); V4 ingestion control — sonnet
+    JSON leg id-set == raw `.pl` source (1001==1001). **The (a) witness is the engine + preservation
+    + well-formed partition — NOT the odd-leg localization**, which is interpretation owned by
+    OQ-123/124 (they move from a 2-model tie to third-model-decidable, still open). odd-leg tallies
+    for the record (INPUT, not verdict): `persp:powerless` {sonnet 190, flash 185, haiku 175} (near-
+    even); `signature` {haiku 135, flash 89, sonnet 59}.
 - **(b) Sonnet-specific schema-conformance mode (bounded finding, kill condition attached).** 4 seeds
   fail persistently across **3 fresh stochastic redraws** — all `'stakeholders' is a required property`
   after repair, concentrated on treaty/legal kernels (`bitcoin_consensus_kernel__pragmatic_synthesis`,

@@ -1,0 +1,2060 @@
+{
+  "pre_registration": "audits/2026-06-13_twin_comparison/PRE_REGISTRATION.md",
+  "permutations": 1000,
+  "seed": 20260613,
+  "twins": [
+    {
+      "label": "haiku",
+      "path": "outputs/pipeline_output.haiku.json",
+      "manifest": {
+        "code_commit_short": "1169170",
+        "n_constraints": 960,
+        "corpus_path": "testsets_haiku"
+      }
+    },
+    {
+      "label": "flash",
+      "path": "outputs/pipeline_output.flash.json",
+      "manifest": {
+        "code_commit_short": "1169170",
+        "n_constraints": 960,
+        "corpus_path": "testsets_flash"
+      }
+    },
+    {
+      "label": "sonnet",
+      "path": "outputs/pipeline_output.sonnet.json",
+      "manifest": {
+        "code_commit_short": "1169170",
+        "n_constraints": 1001,
+        "corpus_path": "testsets_sonnet"
+      }
+    }
+  ],
+  "pairs": [
+    [
+      "flash",
+      "haiku"
+    ],
+    [
+      "flash",
+      "sonnet"
+    ],
+    [
+      "haiku",
+      "sonnet"
+    ]
+  ],
+  "intersection_n": 957,
+  "structural_H1_pairs": [
+    {
+      "field": "verdict",
+      "n_both_populated": 814,
+      "one_sided": 124,
+      "agreement": 607,
+      "disparity": 207,
+      "agreement_rate": 0.7457002457002457,
+      "wilson_lo": 0.7146784820281868,
+      "wilson_hi": 0.7744137822929238,
+      "permute_band_95": 0.66167290886392,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "flash": "yellow",
+          "haiku": "green"
+        },
+        {
+          "id": "ai_dignity_safeguarding__posthuman_continuity_reading",
+          "flash": "red",
+          "haiku": "yellow"
+        },
+        {
+          "id": "ai_governance_legitimacy__technocratic_optimization_reading",
+          "flash": "green",
+          "haiku": "yellow"
+        },
+        {
+          "id": "ai_human_relationship__technocratic_optimization",
+          "flash": "yellow",
+          "haiku": "red"
+        },
+        {
+          "id": "ai_risk_governance_priority__existential_risk_reading",
+          "flash": "green",
+          "haiku": "yellow"
+        }
+      ],
+      "pair": [
+        "flash",
+        "haiku"
+      ]
+    },
+    {
+      "field": "persp:powerless",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 377,
+      "disparity": 580,
+      "agreement_rate": 0.3939393939393939,
+      "wilson_lo": 0.3634644852473712,
+      "wilson_hi": 0.4252623975187373,
+      "permute_band_95": 0.22884012539184953,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__isaac_covenant_reading",
+          "flash": "snare",
+          "haiku": "tangled_rope"
+        },
+        {
+          "id": "abrahamic_covenant__ishmael_covenant_reading",
+          "flash": "unknown",
+          "haiku": "tangled_rope"
+        },
+        {
+          "id": "abrahamic_covenant__land_promise_constraint",
+          "flash": "snare",
+          "haiku": "naturalized"
+        },
+        {
+          "id": "acceptable_risk_energy__catastrophic_tail_dominant",
+          "flash": "snare",
+          "haiku": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "flash": "naturalized",
+          "haiku": "tangled_rope"
+        }
+      ],
+      "pair": [
+        "flash",
+        "haiku"
+      ]
+    },
+    {
+      "field": "persp:moderate",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 570,
+      "disparity": 387,
+      "agreement_rate": 0.5956112852664577,
+      "wilson_lo": 0.5641945629934646,
+      "wilson_hi": 0.6262634687986643,
+      "permute_band_95": 0.3166144200626959,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__ishmael_covenant_reading",
+          "flash": "unknown",
+          "haiku": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "flash": "tangled_rope",
+          "haiku": "unknown"
+        },
+        {
+          "id": "acceptable_risk_for_energy__catastrophic_tail_dominant",
+          "flash": "snare",
+          "haiku": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "flash": "unknown",
+          "haiku": "snare"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "flash": "scaffold",
+          "haiku": "tangled_rope"
+        }
+      ],
+      "pair": [
+        "flash",
+        "haiku"
+      ]
+    },
+    {
+      "field": "persp:institutional",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 670,
+      "disparity": 287,
+      "agreement_rate": 0.7001044932079414,
+      "wilson_lo": 0.6703201911278752,
+      "wilson_hi": 0.7282886950818809,
+      "permute_band_95": 0.6280041797283177,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "flash": "rope",
+          "haiku": "naturalized"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "flash": "rope",
+          "haiku": "scaffold"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "flash": "rope",
+          "haiku": "naturalized"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "flash": "scaffold",
+          "haiku": "rope"
+        },
+        {
+          "id": "ai_alignment_commitment__integrated_reading",
+          "flash": "rope",
+          "haiku": "naturalized"
+        }
+      ],
+      "pair": [
+        "flash",
+        "haiku"
+      ]
+    },
+    {
+      "field": "persp:analytical",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 551,
+      "disparity": 406,
+      "agreement_rate": 0.5757575757575758,
+      "wilson_lo": 0.5442027110983314,
+      "wilson_hi": 0.6067066583544485,
+      "permute_band_95": 0.3322884012539185,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__ishmael_covenant_reading",
+          "flash": "unknown",
+          "haiku": "snare"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "flash": "tangled_rope",
+          "haiku": "unknown"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "flash": "unknown",
+          "haiku": "snare"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "flash": "scaffold",
+          "haiku": "tangled_rope"
+        },
+        {
+          "id": "ai_alignment_commitment__ethics_justice_reading",
+          "flash": "tangled_rope",
+          "haiku": "snare"
+        }
+      ],
+      "pair": [
+        "flash",
+        "haiku"
+      ]
+    },
+    {
+      "field": "signature",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 691,
+      "disparity": 266,
+      "agreement_rate": 0.722048066875653,
+      "wilson_lo": 0.6928195377720273,
+      "wilson_hi": 0.7495010278654305,
+      "permute_band_95": 0.47335423197492166,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__ishmael_covenant_reading",
+          "flash": "false_ci_rope",
+          "haiku": "constructed_high_extraction"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "flash": "false_ci_rope",
+          "haiku": "constructed_high_extraction"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "flash": "false_ci_rope",
+          "haiku": "constructed_high_extraction"
+        },
+        {
+          "id": "ai_alignment_priority__integrated_reading",
+          "flash": "false_ci_rope",
+          "haiku": "constructed_high_extraction"
+        },
+        {
+          "id": "ai_dignity_safeguarding__imago_dei_reading",
+          "flash": "constructed_high_extraction",
+          "haiku": "false_ci_rope"
+        }
+      ],
+      "pair": [
+        "flash",
+        "haiku"
+      ]
+    },
+    {
+      "field": "claimed_type",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 689,
+      "disparity": 268,
+      "agreement_rate": 0.7199582027168234,
+      "wilson_lo": 0.6906732061985823,
+      "wilson_hi": 0.7474843423505231,
+      "permute_band_95": 0.3563218390804598,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__isaac_covenant_reading",
+          "flash": "snare",
+          "haiku": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "flash": "rope",
+          "haiku": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "flash": "rope",
+          "haiku": "tangled_rope"
+        },
+        {
+          "id": "ai_alignment_commitment__safety_control_reading",
+          "flash": "snare",
+          "haiku": "tangled_rope"
+        },
+        {
+          "id": "ai_alignment_priority__integrated_reading",
+          "flash": "rope",
+          "haiku": "tangled_rope"
+        }
+      ],
+      "pair": [
+        "flash",
+        "haiku"
+      ]
+    },
+    {
+      "field": "verdict",
+      "n_both_populated": 792,
+      "one_sided": 126,
+      "agreement": 552,
+      "disparity": 240,
+      "agreement_rate": 0.696969696969697,
+      "wilson_lo": 0.6640752081023467,
+      "wilson_hi": 0.7279626044472864,
+      "permute_band_95": 0.6462485852967178,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "flash": "green",
+          "sonnet": "yellow"
+        },
+        {
+          "id": "ai_alignment_commitment__ethics_justice_reading",
+          "flash": "yellow",
+          "sonnet": "green"
+        },
+        {
+          "id": "ai_alignment_priority__existential_risk_reading",
+          "flash": "yellow",
+          "sonnet": "green"
+        },
+        {
+          "id": "ai_dignity_safeguarding__posthuman_continuity_reading",
+          "flash": "red",
+          "sonnet": "yellow"
+        },
+        {
+          "id": "ai_risk_governance_priority__near_term_harms_reading",
+          "flash": "yellow",
+          "sonnet": "green"
+        }
+      ],
+      "pair": [
+        "flash",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "persp:powerless",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 362,
+      "disparity": 595,
+      "agreement_rate": 0.3782654127481714,
+      "wilson_lo": 0.348084109780495,
+      "wilson_hi": 0.4094201448229694,
+      "permute_band_95": 0.20480668756530826,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__isaac_covenant_reading",
+          "flash": "snare",
+          "sonnet": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_energy__catastrophic_tail_dominant",
+          "flash": "snare",
+          "sonnet": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "flash": "naturalized",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "flash": "tangled_rope",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_for_energy__catastrophic_tail_dominant",
+          "flash": "snare",
+          "sonnet": "naturalized"
+        }
+      ],
+      "pair": [
+        "flash",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "persp:moderate",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 416,
+      "disparity": 541,
+      "agreement_rate": 0.4346917450365726,
+      "wilson_lo": 0.40360711264906673,
+      "wilson_hi": 0.4662986033399163,
+      "permute_band_95": 0.20167189132706373,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__isaac_covenant_reading",
+          "flash": "snare",
+          "sonnet": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "flash": "snare",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "flash": "tangled_rope",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_for_energy__catastrophic_tail_dominant",
+          "flash": "snare",
+          "sonnet": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "flash": "unknown",
+          "sonnet": "piton"
+        }
+      ],
+      "pair": [
+        "flash",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "persp:institutional",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 722,
+      "disparity": 235,
+      "agreement_rate": 0.754440961337513,
+      "wilson_lo": 0.7261888804985744,
+      "wilson_hi": 0.7806584500083479,
+      "permute_band_95": 0.6656217345872518,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "flash": "rope",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "flash": "rope",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "flash": "rope",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "flash": "scaffold",
+          "sonnet": "piton"
+        },
+        {
+          "id": "ai_alignment_priority__integrated_reading",
+          "flash": "rope",
+          "sonnet": "piton"
+        }
+      ],
+      "pair": [
+        "flash",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "persp:analytical",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 472,
+      "disparity": 485,
+      "agreement_rate": 0.49320794148380354,
+      "wilson_lo": 0.46162249378088605,
+      "wilson_hi": 0.5248477006819683,
+      "permute_band_95": 0.23510971786833856,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__isaac_covenant_reading",
+          "flash": "snare",
+          "sonnet": "unknown"
+        },
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "flash": "snare",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "flash": "tangled_rope",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "flash": "unknown",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "flash": "scaffold",
+          "sonnet": "piton"
+        }
+      ],
+      "pair": [
+        "flash",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "signature",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 767,
+      "disparity": 190,
+      "agreement_rate": 0.8014629049111808,
+      "wilson_lo": 0.7750060593243552,
+      "wilson_hi": 0.8255091556704993,
+      "permute_band_95": 0.4566353187042842,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "flash": "constructed_high_extraction",
+          "sonnet": "false_ci_rope"
+        },
+        {
+          "id": "ai_dignity_safeguarding__imago_dei_reading",
+          "flash": "constructed_high_extraction",
+          "sonnet": "false_ci_rope"
+        },
+        {
+          "id": "ai_dignity_safeguarding__posthuman_continuity_reading",
+          "flash": "false_summit_mountain",
+          "sonnet": "false_ci_rope"
+        },
+        {
+          "id": "ai_governance_legitimacy__market_libertarian_reading",
+          "flash": "coupling_invariant_rope",
+          "sonnet": "false_ci_rope"
+        },
+        {
+          "id": "ai_human_relationship__incarnational_humanism",
+          "flash": "false_summit_mountain",
+          "sonnet": "false_ci_rope"
+        }
+      ],
+      "pair": [
+        "flash",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "claimed_type",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 633,
+      "disparity": 324,
+      "agreement_rate": 0.6614420062695925,
+      "wilson_lo": 0.6308674377350699,
+      "wilson_hi": 0.6907256323401642,
+      "permute_band_95": 0.3761755485893417,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__isaac_covenant_reading",
+          "flash": "snare",
+          "sonnet": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "flash": "rope",
+          "sonnet": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "flash": "rope",
+          "sonnet": "tangled_rope"
+        },
+        {
+          "id": "ai_alignment_commitment__safety_control_reading",
+          "flash": "snare",
+          "sonnet": "tangled_rope"
+        },
+        {
+          "id": "ai_alignment_priority__integrated_reading",
+          "flash": "rope",
+          "sonnet": "tangled_rope"
+        }
+      ],
+      "pair": [
+        "flash",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "verdict",
+      "n_both_populated": 792,
+      "one_sided": 146,
+      "agreement": 556,
+      "disparity": 236,
+      "agreement_rate": 0.702020202020202,
+      "wilson_lo": 0.6692532134361477,
+      "wilson_hi": 0.732836850717322,
+      "permute_band_95": 0.6649825382561956,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "haiku": "green",
+          "sonnet": "yellow"
+        },
+        {
+          "id": "ai_alignment_commitment__ethics_justice_reading",
+          "haiku": "yellow",
+          "sonnet": "green"
+        },
+        {
+          "id": "ai_alignment_priority__existential_risk_reading",
+          "haiku": "yellow",
+          "sonnet": "green"
+        },
+        {
+          "id": "ai_governance_legitimacy__magisterial_subsidiarity_reading",
+          "haiku": "green",
+          "sonnet": "yellow"
+        },
+        {
+          "id": "ai_governance_legitimacy__technocratic_optimization_reading",
+          "haiku": "yellow",
+          "sonnet": "green"
+        }
+      ],
+      "pair": [
+        "haiku",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "persp:powerless",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 372,
+      "disparity": 585,
+      "agreement_rate": 0.3887147335423197,
+      "wilson_lo": 0.358333974627072,
+      "wilson_hi": 0.41998536541815507,
+      "permute_band_95": 0.2602403343782654,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__ishmael_covenant_reading",
+          "haiku": "tangled_rope",
+          "sonnet": "unknown"
+        },
+        {
+          "id": "abrahamic_covenant__land_promise_constraint",
+          "haiku": "naturalized",
+          "sonnet": "snare"
+        },
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "haiku": "tangled_rope",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "haiku": "unknown",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_for_energy__catastrophic_tail_dominant",
+          "haiku": "tangled_rope",
+          "sonnet": "naturalized"
+        }
+      ],
+      "pair": [
+        "haiku",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "persp:moderate",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 388,
+      "disparity": 569,
+      "agreement_rate": 0.4054336468129572,
+      "wilson_lo": 0.37476453856906017,
+      "wilson_hi": 0.4368589381829873,
+      "permute_band_95": 0.2309299895506792,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__isaac_covenant_reading",
+          "haiku": "snare",
+          "sonnet": "tangled_rope"
+        },
+        {
+          "id": "abrahamic_covenant__ishmael_covenant_reading",
+          "haiku": "tangled_rope",
+          "sonnet": "unknown"
+        },
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "haiku": "snare",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "haiku": "unknown",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "haiku": "snare",
+          "sonnet": "piton"
+        }
+      ],
+      "pair": [
+        "haiku",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "persp:institutional",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 610,
+      "disparity": 347,
+      "agreement_rate": 0.6374085684430512,
+      "wilson_lo": 0.60645602123354,
+      "wilson_hi": 0.6672623523256397,
+      "permute_band_95": 0.5768025078369906,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "haiku": "naturalized",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "haiku": "scaffold",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "haiku": "naturalized",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "haiku": "rope",
+          "sonnet": "piton"
+        },
+        {
+          "id": "ai_alignment_commitment__integrated_reading",
+          "haiku": "naturalized",
+          "sonnet": "rope"
+        }
+      ],
+      "pair": [
+        "haiku",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "persp:analytical",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 430,
+      "disparity": 527,
+      "agreement_rate": 0.44932079414838033,
+      "wilson_lo": 0.4180700769109123,
+      "wilson_hi": 0.4809767586965386,
+      "permute_band_95": 0.25914315569487983,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__isaac_covenant_reading",
+          "haiku": "snare",
+          "sonnet": "unknown"
+        },
+        {
+          "id": "abrahamic_covenant__ishmael_covenant_reading",
+          "haiku": "snare",
+          "sonnet": "unknown"
+        },
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "haiku": "snare",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "haiku": "unknown",
+          "sonnet": "piton"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "haiku": "snare",
+          "sonnet": "piton"
+        }
+      ],
+      "pair": [
+        "haiku",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "signature",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 721,
+      "disparity": 236,
+      "agreement_rate": 0.7533960292580982,
+      "wilson_lo": 0.7251093585346325,
+      "wilson_hi": 0.7796564634281135,
+      "permute_band_95": 0.49320794148380354,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "abrahamic_covenant__ishmael_covenant_reading",
+          "haiku": "constructed_high_extraction",
+          "sonnet": "false_ci_rope"
+        },
+        {
+          "id": "acceptable_risk_energy__expected_value_dominant",
+          "haiku": "constructed_high_extraction",
+          "sonnet": "false_ci_rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+          "haiku": "constructed_high_extraction",
+          "sonnet": "false_ci_rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "haiku": "constructed_high_extraction",
+          "sonnet": "false_ci_rope"
+        },
+        {
+          "id": "ai_alignment_priority__integrated_reading",
+          "haiku": "constructed_high_extraction",
+          "sonnet": "false_ci_rope"
+        }
+      ],
+      "pair": [
+        "haiku",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "claimed_type",
+      "n_both_populated": 957,
+      "one_sided": 0,
+      "agreement": 795,
+      "disparity": 162,
+      "agreement_rate": 0.8307210031347962,
+      "wilson_lo": 0.8056503721119895,
+      "wilson_hi": 0.8531470821198007,
+      "permute_band_95": 0.48484848484848486,
+      "n_permutations": 1000,
+      "H1_holds": true,
+      "disparity_exemplars": [
+        {
+          "id": "acceptable_risk_energy__option_value_preserving",
+          "haiku": "rope",
+          "sonnet": "tangled_rope"
+        },
+        {
+          "id": "acceptable_risk_for_energy__expected_value_dominant",
+          "haiku": "tangled_rope",
+          "sonnet": "rope"
+        },
+        {
+          "id": "aneyoshi_land_use_prohibition__behavioral_competence_reading",
+          "haiku": "mountain",
+          "sonnet": "rope"
+        },
+        {
+          "id": "article17_erasure_right__censorship_mechanism_reading",
+          "haiku": "snare",
+          "sonnet": "tangled_rope"
+        },
+        {
+          "id": "article_51_self_defense__expansive_preventive_reading",
+          "haiku": "snare",
+          "sonnet": "tangled_rope"
+        }
+      ],
+      "pair": [
+        "haiku",
+        "sonnet"
+      ]
+    }
+  ],
+  "continuous_H2_pairs": [
+    {
+      "field": "theater_ratio",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.19825496342737817,
+      "permute_band_5": 0.24414524555903933,
+      "permute_band_95": 0.25355276907001084,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "flash",
+        "haiku"
+      ]
+    },
+    {
+      "field": "chi:powerless",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.175745352142111,
+      "permute_band_5": 0.25788579895506847,
+      "permute_band_95": 0.2741166301985377,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "flash",
+        "haiku"
+      ]
+    },
+    {
+      "field": "chi:moderate",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.12202398328108731,
+      "permute_band_5": 0.29365287220480707,
+      "permute_band_95": 0.3120859993730412,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "flash",
+        "haiku"
+      ]
+    },
+    {
+      "field": "chi:institutional",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.07479716196447242,
+      "permute_band_5": 0.07953152601880874,
+      "permute_band_95": 0.08039900762800424,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "flash",
+        "haiku"
+      ]
+    },
+    {
+      "field": "chi:analytical",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.14791340752351193,
+      "permute_band_5": 0.35436733270637427,
+      "permute_band_95": 0.3775784798328113,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "flash",
+        "haiku"
+      ]
+    },
+    {
+      "field": "theater_ratio",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.1605642633228847,
+      "permute_band_5": 0.21086102403343834,
+      "permute_band_95": 0.21929049111807783,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "flash",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "chi:powerless",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.15538401985370967,
+      "permute_band_5": 0.23903834503657317,
+      "permute_band_95": 0.2534347016718919,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "flash",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "chi:moderate",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.10051262277951972,
+      "permute_band_5": 0.2854268099268542,
+      "permute_band_95": 0.3029906628004177,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "flash",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "chi:institutional",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.011407842215255988,
+      "permute_band_5": 0.018335093312434637,
+      "permute_band_95": 0.01902813490073141,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "flash",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "chi:analytical",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.12365191327063764,
+      "permute_band_5": 0.3514566402298846,
+      "permute_band_95": 0.37427448411703207,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "flash",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "theater_ratio",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.09449320794148396,
+      "permute_band_5": 0.1654858934169278,
+      "permute_band_95": 0.17591640543364662,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "haiku",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "chi:powerless",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.15787377951933135,
+      "permute_band_5": 0.22057082748171372,
+      "permute_band_95": 0.23366462267502583,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "haiku",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "chi:moderate",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.11121694461860004,
+      "permute_band_5": 0.2596674064785792,
+      "permute_band_95": 0.2759628542319747,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "haiku",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "chi:institutional",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.07502420167189161,
+      "permute_band_5": 0.08244311734587265,
+      "permute_band_95": 0.08581791462904932,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "haiku",
+        "sonnet"
+      ]
+    },
+    {
+      "field": "chi:analytical",
+      "n_both_numeric": 957,
+      "status": "MEASURED",
+      "observed_mean_abs_delta": 0.13110461859979114,
+      "permute_band_5": 0.31130947972831724,
+      "permute_band_95": 0.32965486259143084,
+      "tail": "below",
+      "H2_holds_literal": false,
+      "pair": [
+        "haiku",
+        "sonnet"
+      ]
+    }
+  ],
+  "structural_agreement_nway": [
+    {
+      "field": "verdict",
+      "n_in_intersection": 957,
+      "n_all_populated": 753,
+      "unanimous": 454,
+      "odd_leg_total": 283,
+      "odd_leg_tally": {
+        "sonnet": 116,
+        "flash": 87,
+        "haiku": 80
+      },
+      "n_split_multi": 16,
+      "odd_leg_exemplars": {
+        "haiku": [
+          {
+            "id": "acceptable_risk_for_energy__expected_value_dominant",
+            "flash": "yellow",
+            "haiku": "green",
+            "sonnet": "yellow"
+          },
+          {
+            "id": "ai_governance_legitimacy__technocratic_optimization_reading",
+            "flash": "green",
+            "haiku": "yellow",
+            "sonnet": "green"
+          },
+          {
+            "id": "ai_human_relationship__technocratic_optimization",
+            "flash": "yellow",
+            "haiku": "red",
+            "sonnet": "yellow"
+          },
+          {
+            "id": "ai_risk_governance_priority__existential_risk_reading",
+            "flash": "green",
+            "haiku": "yellow",
+            "sonnet": "green"
+          },
+          {
+            "id": "article17_erasure_right__privacy_fundamental_reading",
+            "flash": "red",
+            "haiku": "yellow",
+            "sonnet": "red"
+          }
+        ],
+        "sonnet": [
+          {
+            "id": "ai_alignment_commitment__ethics_justice_reading",
+            "flash": "yellow",
+            "haiku": "yellow",
+            "sonnet": "green"
+          },
+          {
+            "id": "ai_alignment_priority__existential_risk_reading",
+            "flash": "yellow",
+            "haiku": "yellow",
+            "sonnet": "green"
+          },
+          {
+            "id": "ai_risk_governance_priority__near_term_harms_reading",
+            "flash": "yellow",
+            "haiku": "yellow",
+            "sonnet": "green"
+          },
+          {
+            "id": "ai_risk_prioritization__existential_risk_reading",
+            "flash": "yellow",
+            "haiku": "yellow",
+            "sonnet": "green"
+          },
+          {
+            "id": "aneyoshi_stone_directive__behavioral_competence_reading",
+            "flash": "green",
+            "haiku": "green",
+            "sonnet": "yellow"
+          }
+        ],
+        "flash": [
+          {
+            "id": "ai_dignity_safeguarding__posthuman_continuity_reading",
+            "flash": "red",
+            "haiku": "yellow",
+            "sonnet": "yellow"
+          },
+          {
+            "id": "ai_safety_commitment__existential_risk_reading",
+            "flash": "green",
+            "haiku": "yellow",
+            "sonnet": "yellow"
+          },
+          {
+            "id": "animal_status_kernel__abolitionist_reading",
+            "flash": "red",
+            "haiku": "yellow",
+            "sonnet": "yellow"
+          },
+          {
+            "id": "border_legitimacy__humanitarian_obligation_reading",
+            "flash": "green",
+            "haiku": "yellow",
+            "sonnet": "yellow"
+          },
+          {
+            "id": "catastrophe_memory_function__survival_competence_reading",
+            "flash": "red",
+            "haiku": "yellow",
+            "sonnet": "yellow"
+          }
+        ]
+      },
+      "missingness": {
+        "n_ids_missing_ge1": 204,
+        "missing_leg_tally": {
+          "sonnet": 113,
+          "flash": 91,
+          "haiku": 71
+        },
+        "exemplars": [
+          {
+            "id": "abrahamic_covenant__ishmael_covenant_reading",
+            "missing": [
+              "flash",
+              "sonnet"
+            ]
+          },
+          {
+            "id": "acceptable_risk_energy__option_value_preserving",
+            "missing": [
+              "haiku"
+            ]
+          },
+          {
+            "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+            "missing": [
+              "flash"
+            ]
+          },
+          {
+            "id": "ai_alignment_priority__integrated_reading",
+            "missing": [
+              "flash"
+            ]
+          },
+          {
+            "id": "ai_dignity_safeguarding__autonomy_rights_reading",
+            "missing": [
+              "flash",
+              "haiku"
+            ]
+          }
+        ]
+      },
+      "closure_ok": true,
+      "intersection_accounts": true
+    },
+    {
+      "field": "persp:powerless",
+      "n_in_intersection": 957,
+      "n_all_populated": 957,
+      "unanimous": 187,
+      "odd_leg_total": 550,
+      "odd_leg_tally": {
+        "sonnet": 190,
+        "flash": 185,
+        "haiku": 175
+      },
+      "n_split_multi": 220,
+      "odd_leg_exemplars": {
+        "flash": [
+          {
+            "id": "abrahamic_covenant__isaac_covenant_reading",
+            "flash": "snare",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "acceptable_risk_energy__catastrophic_tail_dominant",
+            "flash": "snare",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_dignity_safeguarding__posthuman_continuity_reading",
+            "flash": "mountain",
+            "haiku": "scaffold",
+            "sonnet": "scaffold"
+          },
+          {
+            "id": "ai_governance_legitimacy__magisterial_subsidiarity_reading",
+            "flash": "unknown",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_safety_commitment__near_term_harms_reading",
+            "flash": "naturalized",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          }
+        ],
+        "haiku": [
+          {
+            "id": "abrahamic_covenant__ishmael_covenant_reading",
+            "flash": "unknown",
+            "haiku": "tangled_rope",
+            "sonnet": "unknown"
+          },
+          {
+            "id": "abrahamic_covenant__land_promise_constraint",
+            "flash": "snare",
+            "haiku": "naturalized",
+            "sonnet": "snare"
+          },
+          {
+            "id": "ai_governance_legitimacy__technocratic_optimization_reading",
+            "flash": "tangled_rope",
+            "haiku": "scaffold",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_human_relationship__instrumental_subsidiarity",
+            "flash": "unknown",
+            "haiku": "naturalized",
+            "sonnet": "unknown"
+          },
+          {
+            "id": "ai_risk_governance_priority__bridge_reading",
+            "flash": "unknown",
+            "haiku": "tangled_rope",
+            "sonnet": "unknown"
+          }
+        ],
+        "sonnet": [
+          {
+            "id": "ai_alignment_commitment__integrated_reading",
+            "flash": "naturalized",
+            "haiku": "naturalized",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_alignment_priority__existential_risk_reading",
+            "flash": "snare",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_dignity_safeguarding__autonomy_rights_reading",
+            "flash": "unknown",
+            "haiku": "unknown",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_safety_commitment__dual_priority_reading",
+            "flash": "tangled_rope",
+            "haiku": "tangled_rope",
+            "sonnet": "unknown"
+          },
+          {
+            "id": "aneyoshi_stone_commitment__behavioral_competence_reading",
+            "flash": "scaffold",
+            "haiku": "scaffold",
+            "sonnet": "rope"
+          }
+        ]
+      },
+      "missingness": {
+        "n_ids_missing_ge1": 0,
+        "missing_leg_tally": {},
+        "exemplars": []
+      },
+      "closure_ok": true,
+      "intersection_accounts": true
+    },
+    {
+      "field": "persp:moderate",
+      "n_in_intersection": 957,
+      "n_all_populated": 957,
+      "unanimous": 286,
+      "odd_leg_total": 516,
+      "odd_leg_tally": {
+        "sonnet": 284,
+        "haiku": 130,
+        "flash": 102
+      },
+      "n_split_multi": 155,
+      "odd_leg_exemplars": {
+        "sonnet": [
+          {
+            "id": "abrahamic_covenant__isaac_covenant_reading",
+            "flash": "snare",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "acceptable_risk_energy__expected_value_dominant",
+            "flash": "snare",
+            "haiku": "snare",
+            "sonnet": "piton"
+          },
+          {
+            "id": "ai_alignment_commitment__safety_control_reading",
+            "flash": "snare",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_alignment_priority__existential_risk_reading",
+            "flash": "snare",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_alignment_priority__nearterm_harms_reading",
+            "flash": "snare",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          }
+        ],
+        "haiku": [
+          {
+            "id": "abrahamic_covenant__ishmael_covenant_reading",
+            "flash": "unknown",
+            "haiku": "tangled_rope",
+            "sonnet": "unknown"
+          },
+          {
+            "id": "ai_alignment_commitment__ethics_justice_reading",
+            "flash": "tangled_rope",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_governance_legitimacy__technocratic_optimization_reading",
+            "flash": "tangled_rope",
+            "haiku": "scaffold",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_risk_governance_priority__bridge_reading",
+            "flash": "unknown",
+            "haiku": "tangled_rope",
+            "sonnet": "unknown"
+          },
+          {
+            "id": "ai_risk_governance_priority__existential_risk_reading",
+            "flash": "tangled_rope",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          }
+        ],
+        "flash": [
+          {
+            "id": "acceptable_risk_for_energy__catastrophic_tail_dominant",
+            "flash": "snare",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_alignment_commitment__integrated_reading",
+            "flash": "snare",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_governance_legitimacy__magisterial_subsidiarity_reading",
+            "flash": "unknown",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "aneyoshi_land_use_prohibition__behavioral_competence_reading",
+            "flash": "scaffold",
+            "haiku": "rope",
+            "sonnet": "rope"
+          },
+          {
+            "id": "animal_moral_status__welfare_reading",
+            "flash": "unknown",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          }
+        ]
+      },
+      "missingness": {
+        "n_ids_missing_ge1": 0,
+        "missing_leg_tally": {},
+        "exemplars": []
+      },
+      "closure_ok": true,
+      "intersection_accounts": true
+    },
+    {
+      "field": "persp:institutional",
+      "n_in_intersection": 957,
+      "n_all_populated": 957,
+      "unanimous": 544,
+      "odd_leg_total": 370,
+      "odd_leg_tally": {
+        "haiku": 178,
+        "sonnet": 126,
+        "flash": 66
+      },
+      "n_split_multi": 43,
+      "odd_leg_exemplars": {
+        "haiku": [
+          {
+            "id": "ai_alignment_commitment__integrated_reading",
+            "flash": "rope",
+            "haiku": "naturalized",
+            "sonnet": "rope"
+          },
+          {
+            "id": "ai_alignment_commitment__safety_control_reading",
+            "flash": "rope",
+            "haiku": "naturalized",
+            "sonnet": "rope"
+          },
+          {
+            "id": "ai_governance_legitimacy__technocratic_optimization_reading",
+            "flash": "rope",
+            "haiku": "scaffold",
+            "sonnet": "rope"
+          },
+          {
+            "id": "ai_human_relationship__instrumental_subsidiarity",
+            "flash": "rope",
+            "haiku": "naturalized",
+            "sonnet": "rope"
+          },
+          {
+            "id": "ai_human_relationship__technocratic_optimization",
+            "flash": "rope",
+            "haiku": "naturalized",
+            "sonnet": "rope"
+          }
+        ],
+        "sonnet": [
+          {
+            "id": "ai_alignment_priority__integrated_reading",
+            "flash": "rope",
+            "haiku": "rope",
+            "sonnet": "piton"
+          },
+          {
+            "id": "aneyoshi_stone_commitment__behavioral_competence_reading",
+            "flash": "scaffold",
+            "haiku": "scaffold",
+            "sonnet": "rope"
+          },
+          {
+            "id": "animal_status__abolitionist_reading",
+            "flash": "rope",
+            "haiku": "rope",
+            "sonnet": "scaffold"
+          },
+          {
+            "id": "animal_status__property_reading",
+            "flash": "scaffold",
+            "haiku": "scaffold",
+            "sonnet": "rope"
+          },
+          {
+            "id": "anthropological_record__indigenous_epistemology_reading",
+            "flash": "rope",
+            "haiku": "rope",
+            "sonnet": "piton"
+          }
+        ],
+        "flash": [
+          {
+            "id": "ai_risk_governance_priority__bridge_reading",
+            "flash": "scaffold",
+            "haiku": "rope",
+            "sonnet": "rope"
+          },
+          {
+            "id": "all_men_created_equal__textualist_paradox_reading",
+            "flash": "scaffold",
+            "haiku": "rope",
+            "sonnet": "rope"
+          },
+          {
+            "id": "aneyoshi_land_use_prohibition__behavioral_competence_reading",
+            "flash": "scaffold",
+            "haiku": "rope",
+            "sonnet": "rope"
+          },
+          {
+            "id": "animal_status_kernel__abolitionist_reading",
+            "flash": "scaffold",
+            "haiku": "rope",
+            "sonnet": "rope"
+          },
+          {
+            "id": "article_27_veto_power__coordination_reading",
+            "flash": "rope",
+            "haiku": "scaffold",
+            "sonnet": "scaffold"
+          }
+        ]
+      },
+      "missingness": {
+        "n_ids_missing_ge1": 0,
+        "missing_leg_tally": {},
+        "exemplars": []
+      },
+      "closure_ok": true,
+      "intersection_accounts": true
+    },
+    {
+      "field": "persp:analytical",
+      "n_in_intersection": 957,
+      "n_all_populated": 957,
+      "unanimous": 331,
+      "odd_leg_total": 460,
+      "odd_leg_tally": {
+        "sonnet": 220,
+        "haiku": 141,
+        "flash": 99
+      },
+      "n_split_multi": 166,
+      "odd_leg_exemplars": {
+        "sonnet": [
+          {
+            "id": "abrahamic_covenant__isaac_covenant_reading",
+            "flash": "snare",
+            "haiku": "snare",
+            "sonnet": "unknown"
+          },
+          {
+            "id": "acceptable_risk_energy__expected_value_dominant",
+            "flash": "snare",
+            "haiku": "snare",
+            "sonnet": "piton"
+          },
+          {
+            "id": "ai_alignment_commitment__integrated_reading",
+            "flash": "snare",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_alignment_commitment__safety_control_reading",
+            "flash": "snare",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_alignment_priority__existential_risk_reading",
+            "flash": "snare",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          }
+        ],
+        "haiku": [
+          {
+            "id": "abrahamic_covenant__ishmael_covenant_reading",
+            "flash": "unknown",
+            "haiku": "snare",
+            "sonnet": "unknown"
+          },
+          {
+            "id": "ai_alignment_commitment__ethics_justice_reading",
+            "flash": "tangled_rope",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_governance_legitimacy__technocratic_optimization_reading",
+            "flash": "tangled_rope",
+            "haiku": "unknown",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_human_relationship__instrumental_subsidiarity",
+            "flash": "unknown",
+            "haiku": "snare",
+            "sonnet": "unknown"
+          },
+          {
+            "id": "ai_human_relationship__technocratic_optimization",
+            "flash": "snare",
+            "haiku": "naturalized",
+            "sonnet": "snare"
+          }
+        ],
+        "flash": [
+          {
+            "id": "ai_dignity_safeguarding__posthuman_continuity_reading",
+            "flash": "mountain",
+            "haiku": "scaffold",
+            "sonnet": "scaffold"
+          },
+          {
+            "id": "ai_governance_legitimacy__magisterial_subsidiarity_reading",
+            "flash": "unknown",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "aneyoshi_land_use_prohibition__behavioral_competence_reading",
+            "flash": "scaffold",
+            "haiku": "rope",
+            "sonnet": "rope"
+          },
+          {
+            "id": "article17_erasure_right__competitive_moat_reading",
+            "flash": "snare",
+            "haiku": "unknown",
+            "sonnet": "unknown"
+          },
+          {
+            "id": "article_27_veto_power__coordination_reading",
+            "flash": "rope",
+            "haiku": "scaffold",
+            "sonnet": "scaffold"
+          }
+        ]
+      },
+      "missingness": {
+        "n_ids_missing_ge1": 0,
+        "missing_leg_tally": {},
+        "exemplars": []
+      },
+      "closure_ok": true,
+      "intersection_accounts": true
+    },
+    {
+      "field": "signature",
+      "n_in_intersection": 957,
+      "n_all_populated": 957,
+      "unanimous": 632,
+      "odd_leg_total": 283,
+      "odd_leg_tally": {
+        "haiku": 135,
+        "flash": 89,
+        "sonnet": 59
+      },
+      "n_split_multi": 42,
+      "odd_leg_exemplars": {
+        "haiku": [
+          {
+            "id": "abrahamic_covenant__ishmael_covenant_reading",
+            "flash": "false_ci_rope",
+            "haiku": "constructed_high_extraction",
+            "sonnet": "false_ci_rope"
+          },
+          {
+            "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+            "flash": "false_ci_rope",
+            "haiku": "constructed_high_extraction",
+            "sonnet": "false_ci_rope"
+          },
+          {
+            "id": "acceptable_risk_for_energy__expected_value_dominant",
+            "flash": "false_ci_rope",
+            "haiku": "constructed_high_extraction",
+            "sonnet": "false_ci_rope"
+          },
+          {
+            "id": "ai_alignment_priority__integrated_reading",
+            "flash": "false_ci_rope",
+            "haiku": "constructed_high_extraction",
+            "sonnet": "false_ci_rope"
+          },
+          {
+            "id": "ai_human_relationship__instrumental_subsidiarity",
+            "flash": "false_ci_rope",
+            "haiku": "constructed_high_extraction",
+            "sonnet": "false_ci_rope"
+          }
+        ],
+        "sonnet": [
+          {
+            "id": "acceptable_risk_energy__expected_value_dominant",
+            "flash": "constructed_high_extraction",
+            "haiku": "constructed_high_extraction",
+            "sonnet": "false_ci_rope"
+          },
+          {
+            "id": "ai_risk_prioritization__near_term_harms_reading",
+            "flash": "constructed_high_extraction",
+            "haiku": "constructed_high_extraction",
+            "sonnet": "false_ci_rope"
+          },
+          {
+            "id": "aneyoshi_stone_directive__behavioral_competence_reading",
+            "flash": "ambiguous",
+            "haiku": "ambiguous",
+            "sonnet": "coupling_invariant_rope"
+          },
+          {
+            "id": "article_17_complementarity__international_oversight_reading",
+            "flash": "constructed_high_extraction",
+            "haiku": "constructed_high_extraction",
+            "sonnet": "false_ci_rope"
+          },
+          {
+            "id": "article_17_complementarity__national_primacy_reading",
+            "flash": "constructed_high_extraction",
+            "haiku": "constructed_high_extraction",
+            "sonnet": "false_ci_rope"
+          }
+        ],
+        "flash": [
+          {
+            "id": "ai_dignity_safeguarding__imago_dei_reading",
+            "flash": "constructed_high_extraction",
+            "haiku": "false_ci_rope",
+            "sonnet": "false_ci_rope"
+          },
+          {
+            "id": "ai_dignity_safeguarding__posthuman_continuity_reading",
+            "flash": "false_summit_mountain",
+            "haiku": "false_ci_rope",
+            "sonnet": "false_ci_rope"
+          },
+          {
+            "id": "ai_governance_legitimacy__market_libertarian_reading",
+            "flash": "coupling_invariant_rope",
+            "haiku": "false_ci_rope",
+            "sonnet": "false_ci_rope"
+          },
+          {
+            "id": "ai_human_relationship__incarnational_humanism",
+            "flash": "false_summit_mountain",
+            "haiku": "false_ci_rope",
+            "sonnet": "false_ci_rope"
+          },
+          {
+            "id": "ai_risk_governance_priority__bridge_reading",
+            "flash": "false_ci_rope",
+            "haiku": "constructed_high_extraction",
+            "sonnet": "constructed_high_extraction"
+          }
+        ]
+      },
+      "missingness": {
+        "n_ids_missing_ge1": 0,
+        "missing_leg_tally": {},
+        "exemplars": []
+      },
+      "closure_ok": true,
+      "intersection_accounts": true
+    },
+    {
+      "field": "claimed_type",
+      "n_in_intersection": 957,
+      "n_all_populated": 957,
+      "unanimous": 590,
+      "odd_leg_total": 347,
+      "odd_leg_tally": {
+        "flash": 205,
+        "sonnet": 99,
+        "haiku": 43
+      },
+      "n_split_multi": 20,
+      "odd_leg_exemplars": {
+        "flash": [
+          {
+            "id": "abrahamic_covenant__isaac_covenant_reading",
+            "flash": "snare",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "acceptable_risk_for_energy__comparative_risk_dominant",
+            "flash": "rope",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_alignment_commitment__safety_control_reading",
+            "flash": "snare",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_alignment_priority__integrated_reading",
+            "flash": "rope",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "ai_dignity_safeguarding__autonomy_rights_reading",
+            "flash": "rope",
+            "haiku": "tangled_rope",
+            "sonnet": "tangled_rope"
+          }
+        ],
+        "sonnet": [
+          {
+            "id": "acceptable_risk_energy__option_value_preserving",
+            "flash": "rope",
+            "haiku": "rope",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "aneyoshi_land_use_prohibition__behavioral_competence_reading",
+            "flash": "mountain",
+            "haiku": "mountain",
+            "sonnet": "rope"
+          },
+          {
+            "id": "article17_erasure_right__censorship_mechanism_reading",
+            "flash": "snare",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "beta_designation_doctrine__narrow_warning_reading",
+            "flash": "rope",
+            "haiku": "rope",
+            "sonnet": "scaffold"
+          },
+          {
+            "id": "beta_designation_doctrine__severity_carve_out_reading",
+            "flash": "mountain",
+            "haiku": "mountain",
+            "sonnet": "tangled_rope"
+          }
+        ],
+        "haiku": [
+          {
+            "id": "acceptable_risk_for_energy__expected_value_dominant",
+            "flash": "rope",
+            "haiku": "tangled_rope",
+            "sonnet": "rope"
+          },
+          {
+            "id": "article_51_self_defense__expansive_preventive_reading",
+            "flash": "tangled_rope",
+            "haiku": "snare",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "article_51_self_defense__narrow_armed_attack_reading",
+            "flash": "tangled_rope",
+            "haiku": "mountain",
+            "sonnet": "tangled_rope"
+          },
+          {
+            "id": "border_normative_status__freedom_primary",
+            "flash": "snare",
+            "haiku": "tangled_rope",
+            "sonnet": "snare"
+          },
+          {
+            "id": "bretton_woods_treaty_substrate__keynesian_embedded_liberalism",
+            "flash": "tangled_rope",
+            "haiku": "rope",
+            "sonnet": "tangled_rope"
+          }
+        ]
+      },
+      "missingness": {
+        "n_ids_missing_ge1": 0,
+        "missing_leg_tally": {},
+        "exemplars": []
+      },
+      "closure_ok": true,
+      "intersection_accounts": true
+    }
+  ],
+  "essay_marginals": [],
+  "notes": [
+    "verdict_join.verdict is the only headline verdict (OQ-98).",
+    "verdict & perspectives are CORRELATED, not independent confirmations (verdict folds perspectives via compute_verdict/4).",
+    "signature agreement is STRUCTURAL-coding, not detection (OQ-70).",
+    "Per-field, per-pair adjudication only; no aggregate cross-field H1 claim.",
+    "odd_leg tally is now-decidable INPUT to OQ-123/124, not a localization verdict — one triple does not earn 'model X is the odd one out'."
+  ]
+}
