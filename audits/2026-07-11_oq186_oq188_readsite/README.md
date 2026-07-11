@@ -59,6 +59,54 @@ Non-both-sides: 21, of which 9 (42.9%) inside |Δε| ≤ 0.02 — **not a majori
 **Pre-registered gate: KEEP the ε clause.** Note the confirmatory detail: the one live
 both-sides + ε-close pair IS the witnessed OQ-186 instance family (`moral_causation_locus`).
 
+## Post-close reconciliations (operator review, 2026-07-11)
+
+**R1 — census arithmetic vs recon.** Exact matched-bucket histogram (institutional seat,
+same manifest), reconciling the recon's summary against the final 103/105:
+
+| bucket | recon said | final census | note |
+|---|---|---|---|
+| d=0.12 (agenda_setter) | 101 | 101 — all fire | the recon population |
+| d=0.25 (beneficiary) | (not enumerated) | **2 — both fire** | the 2 "extra" flippers: the symmetric straddle partner; recon folded these into its "~15 non-role-constant" catch-all |
+| d=0.72 (observer) | (not enumerated) | 1 — silent | matched, nearest-alt same sign |
+| d=0.85 (payer) | (not enumerated) | 1 — silent | matched, nearest-alt same sign |
+| unmatched | "~15 non-role-constant" | 16 (0.07, 0.15×6, 0.20×2, 0.35, 0.45×2, 0.55, 0.68, 0.70, 0.88) | enumerated in census_oq188.log |
+| null | 9 | 9 | excluded from denominator (OQ-51 idiom) |
+
+Sum: 101+2+1+1+16+9 = 130 ✓. **The d=0.15 question is settled by the predicate, not
+judgment:** the five role constants are 0.12/0.25/0.72/0.85/0.90; 0.15 matches none at
+1e-6, so it is `unmatched` by construction — surfaced, denominator-shrinking, never
+silently unflagged (PREREG Block 1 said exactly this pre-run).
+
+**R2 — the grep-0 positive controls.** "`coordinated rather than independent operation`
+greps 0 in the regenerated dispositional_reading report" is an absence claim; the same
+grep (same pattern, same encoding) was run against places the phrase MUST appear:
+
+- current `evaluative_convergence.json`: **2 hits** (the clean sets network_2638bfb4 /
+  network_a6b8a722 keep the original ruling);
+- pre-fix artifact (`evaluative_convergence.before.json`, saved before regeneration):
+  **13 hits**, of which **1 in the `character_education_institutions` set** — the exact
+  set whose report carried the witnessed defect;
+- report level, same render path: regenerated `distributed_verification_report.md`
+  (a network_2638bfb4 member) → **1 hit**; `dispositional_reading_report.md` → **0**.
+
+So the 0 is the fix discriminating, not a dead grep.
+
+**R3 — fix-on-sight commit hygiene.** As originally landed, the ledger key fix WAS folded
+into the OQ-186 commit — the operator's review caught it. History was split locally
+(nothing had been pushed): the fix now lives in its own commit `1bcb7421`
+("fix(tensions_ledger): edge lines used wrong serialized keys…") carrying its own
+two-sided witness in the message (before: `? [explicit; strength ?]…`; after: real
+constraint_id/strength render), with the OQ-186 marker landing separately on top.
+Equivalence witness: `git diff oq-backup HEAD` is byte-empty (oq-backup = the pre-split
+head). **Disclosure found during the split:** `bb7cfcbe` (the OQ-188 commit) swept in one
+pre-existing uncommitted hunk in `enhanced_report.py` — the HOW TO READ d-derivation text
+rewrite ("d is DERIVED per seat — precedence: authored override → …" replacing the older
+"d is a config lookup" wording), which predates this session (visible as `M
+python/enhanced_report.py` in the session-start status). It is content-accurate and
+topically adjacent (it is the d-precedence correction the OQ-188 legend sits beside), so
+it was left in place rather than unpicked — flagged here for the operator's awareness.
+
 ## Phase 2–4 artifacts (this audit dir records decisions; code lands in-repo)
 
 - OQ-188: `enhanced_report.py` `_role_flip_caveat()` legend sentence + `‡` glyph on fired
