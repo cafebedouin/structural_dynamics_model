@@ -67,6 +67,7 @@ from corpus_hash import compute_corpus_hash  # single-source corpus fingerprint 
 # OQ-188/OQ-186 read-site flags — canonical predicates live in shared/, never
 # duplicated here (tensions_ledger + evaluative_convergence import the same).
 from shared.role_flip import role_flip_fired_seats, GLYPH as ROLE_FLIP_GLYPH
+from shared.independence import is_common_cause_pair, AGENT_EDGE_TYPES, EPS_MARGIN
 
 # --- Path Setup ---
 
@@ -1262,11 +1263,12 @@ def build_contamination_network(constraint_id, pipeline_data):
         lines.append(f"    Network neighbors ({len(neighbors)}):")
         lines.append("")
         lines.append(
-            "    | Neighbor | Type | Edge | Provenance | Salience | Strength | Purity |"
+            "    | Neighbor | Type | Edge | Provenance | Salience | Independence | Strength | Purity |"
         )
         lines.append(
-            "    |----------|------|------|------------|----------|----------|--------|"
+            "    |----------|------|------|------------|----------|--------------|----------|--------|"
         )
+        n_common_cause = 0
         for n in neighbors:
             nid = n.get("constraint_id", "?")
             ntype = n.get("neighbor_type") or "?"
@@ -1277,9 +1279,13 @@ def build_contamination_network(constraint_id, pipeline_data):
             p_str = f"{npurity:.4f}" if npurity is not None else "N/A"
             prov = "authored" if _edge_is_authored(n) else "corpus-derived"
             sal = "salient" if _edge_is_salient(n) else "low"
+            cc = _edge_is_common_cause(entry, n, pipeline_data)
+            if cc is True:
+                n_common_cause += 1
+            indep = {True: "common-cause", False: "distinct", None: "n/a"}[cc]
             lines.append(
                 f"    | {nid} | {ntype} | {etype} | {prov} | {sal} "
-                f"| {s_str} | {p_str} |"
+                f"| {indep} | {s_str} | {p_str} |"
             )
 
         # Provenance legend — the bit is now load-bearing, not just printed (OQ-103).
@@ -1291,8 +1297,27 @@ def build_contamination_network(constraint_id, pipeline_data):
             "(two constraints naming the same beneficiary/victim), NOT asserted by "
             "this case. Salience floor: a corpus-derived agent edge counts as "
             "'salient' only when the two constraints share ≥2 agents; a single "
-            "shared agent (strength 0.30) is weak corpus scaffolding."
+            "shared agent (strength 0.30) is weak corpus scaffolding. "
+            "Independence: 'common-cause' = a corpus-derived edge whose two "
+            f"constraints share ≥1 beneficiary AND ≥1 victim at near-identical ε "
+            f"(|Δε| ≤ {EPS_MARGIN}) — consistent with co-authored slices of one "
+            "underlying fact, so convergence across such edges is re-description, "
+            "not independent corroboration (OQ-186); 'n/a' = out of domain "
+            "(authored/inferred edge, or neighbor not comparable), never a "
+            "verified 'distinct'."
         )
+        # OQ-186 summary line: a >=2-common-cause neighborhood is consistent
+        # with one fact re-described, and its convergence must not be read as
+        # mutual corroboration. Salience (OQ-103) and independence stay
+        # orthogonal bits — this line joins, never replaces, the floor above.
+        if n_common_cause >= 2:
+            lines.append("")
+            lines.append(
+                f"  ⚠ {n_common_cause} of {len(neighbors)} neighbors are "
+                "common-cause pairs with this constraint — this cluster is "
+                "consistent with co-authored slices of one underlying fact; do "
+                "not read its convergence as independent corroboration (OQ-186)."
+            )
 
         # One-sentence interpretation — ranked over SALIENT edges only, so a
         # single-shared-agent corpus edge can no longer headline the contamination.
@@ -1491,6 +1516,21 @@ def _edge_is_authored(neighbor):
     (shared_beneficiary / shared_victim / inferred_coupling) is computed by the
     engine from corpus topology, not asserted by this case's source material."""
     return (neighbor.get("edge_type") or "") == "explicit"
+
+
+def _edge_is_common_cause(subject_entry, neighbor, pipeline_data):
+    """OQ-186 independence bit for one rendered edge. Domain: corpus-derived
+    agent edges (shared_beneficiary / shared_victim) — an authored 'explicit'
+    edge is the story's own asserted link and inferred_coupling carries no
+    agent identity, so both are out of domain. Returns True (common-cause pair:
+    shared beneficiary AND victim at |d-eps| <= 0.02 — see shared/independence),
+    False (distinct), or None (out of domain / neighbor not in batch / eps
+    null) — callers render None as 'n/a', never as a silent 'distinct'."""
+    if (neighbor.get("edge_type") or "") not in AGENT_EDGE_TYPES:
+        return None
+    nid = neighbor.get("constraint_id")
+    n_entry = find_constraint_entry(pipeline_data, nid) if nid else None
+    return is_common_cause_pair(subject_entry, n_entry)
 
 
 def _edge_is_salient(neighbor):
@@ -3261,11 +3301,30 @@ def build_xcon_synthesis_section(
             inst = ev.get("institutional_type", "?")
             anal = ev.get("analytical_type", "?")
             n = len(ev.get("constraints_with_split", []))
-            lines.append(
-                f"- Institutional observers classify this as {inst}; analytical observers "
-                f"classify it as {anal} — systematic divergence confirmed across {n} constraints "
-                f"cross-corpus."
-            )
+            # OQ-188/OQ-186: uniform institutional agreement produced by a
+            # shared config knife-edge or a common-cause clique is an artifact
+            # channel, not corroboration — suppress the elevation, say why.
+            knife = ev.get("all_members_knife_edge")
+            clique = ev.get("members_common_cause_clique")
+            if knife or clique:
+                reasons = []
+                if knife:
+                    reasons.append("all members' institutional seats are "
+                                   "role-authored knife-edge (OQ-188)")
+                if clique:
+                    reasons.append("members form a common-cause clique (OQ-186)")
+                lines.append(
+                    f"- [NOT elevated] Institutional/analytical divergence across {n} "
+                    f"constraints ({inst} vs {anal}) is consistent with "
+                    f"{'; and '.join(reasons)} — a shared configuration mechanism / "
+                    "common authored cause, not by itself evidence of coordination."
+                )
+            else:
+                lines.append(
+                    f"- Institutional observers classify this as {inst}; analytical observers "
+                    f"classify it as {anal} — systematic divergence confirmed across {n} constraints "
+                    f"cross-corpus."
+                )
         elif pname == "convergent_drift":
             drift = ev.get("shared_drift_type", "?")
             sev = ev.get("severity", "?")
@@ -3361,6 +3420,14 @@ def build_cross_constraint_section(constraint_id, evaluative_data):
                 lines.append(f"    Institutional type: {ev.get('institutional_type', '?')}")
                 lines.append(f"    Analytical type:    {ev.get('analytical_type', '?')}")
                 lines.append(f"    Constraints:        {', '.join(ev.get('constraints_with_split', []))}")
+                if ev.get("all_members_knife_edge"):
+                    lines.append("    ⚠ all members' institutional seats are "
+                                 "role-authored knife-edge (OQ-188) — uniform "
+                                 "institutional type is a config artifact channel")
+                if ev.get("members_common_cause_clique"):
+                    lines.append("    ⚠ members form a common-cause clique "
+                                 "(OQ-186) — convergence here is re-description, "
+                                 "not independent corroboration")
 
             elif pname == "convergent_drift":
                 lines.append(f"    Drift type:   {ev.get('shared_drift_type', '?')}")

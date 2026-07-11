@@ -30,6 +30,8 @@ sys.path.insert(0, str(ROOT / "python"))
 # OQ-188 role-flip flag — canonical predicate in shared/, same implementation
 # the report read-site uses (never fork it here).
 from shared.role_flip import role_flip_fired_seats, GLYPH as ROLE_FLIP_GLYPH  # noqa: E402
+from shared.independence import (  # noqa: E402
+    is_common_cause_pair, AGENT_EDGE_TYPES, EPS_MARGIN)
 
 POSITIONS = ("powerless", "moderate", "institutional", "analytical")
 # OQ-108: the full 6-atom authoring vocabulary (docs/logic.md:293), distinct
@@ -53,7 +55,7 @@ def _drift_confidence_lines(report_path):
             if re.match(r"^\s*\[(critical|warning|watch)( \| confidence: \w+)?\]", ln)]
 
 
-def build_block(entry, report_dir=REPORTS, config=None):
+def build_block(entry, report_dir=REPORTS, config=None, index=None):
     cid = entry.get("id", "?")
     lines = [f"## {cid} — {entry.get('human_readable') or '(no display name)'}"]
     # OQ-188: seats whose verdict flips under a single authored role change
@@ -197,25 +199,36 @@ def build_block(entry, report_dir=REPORTS, config=None):
         lines.append("- drift trajectory: series present for "
                      + ", ".join(sorted(entry["drift_trajectory"].keys())))
 
-    # contamination edges — provenance carried per edge.
+    # contamination edges — provenance + independence carried per edge.
     # (Key fix 2026-07-11: the serialized neighbor keys are constraint_id /
     # edge_strength — the previous id/neighbor + edge_contamination/strength
     # lookups matched nothing and every edge rendered as "? [...; strength ?]".
     # The stale "provenance NOT CARRIED — OQ-103 open" note went with it:
-    # OQ-103 is resolved (2026-06-12) and edge_type IS serialized.)
+    # OQ-103 is resolved and edge_type IS serialized.)
     cn = entry.get("contamination_network") or {}
     nbrs = cn.get("neighbors") or []
     if nbrs:
         def _edge_str(n):
             etype = n.get("edge_type", "?")
             prov = "authored" if etype == "explicit" else "corpus-derived"
-            return f"{n.get('constraint_id', '?')} [{etype}; {prov}; " \
-                   f"strength {n.get('edge_strength', '?')}]"
+            bits = f"{n.get('constraint_id', '?')} [{etype}; {prov}; " \
+                   f"strength {n.get('edge_strength', '?')}"
+            if etype in AGENT_EDGE_TYPES:
+                # OQ-186 independence bit; None = not computable -> 'n/a',
+                # never a silent 'distinct' (Pattern 6).
+                cc = is_common_cause_pair(
+                    entry, (index or {}).get(n.get("constraint_id")))
+                bits += "; " + {True: "common-cause", False: "distinct",
+                                None: "independence n/a"}[cc]
+            return bits + "]"
         edges = "; ".join(_edge_str(n) for n in nbrs[:6])
         more = f" (+{len(nbrs) - 6} more)" if len(nbrs) > 6 else ""
         lines.append(f"- contamination edges: {edges}{more}")
         lines.append("  - edge bits: 'authored' = story-asserted link, "
-                     "'corpus-derived' = computed from corpus topology (OQ-103)")
+                     "'corpus-derived' = computed from corpus topology (OQ-103); "
+                     "'common-cause' = shares ≥1 beneficiary AND ≥1 victim at "
+                     f"|Δε| ≤ {EPS_MARGIN} — re-description, not independent "
+                     "corroboration (OQ-186)")
     else:
         lines.append("- contamination edges: none")
 
@@ -383,7 +396,12 @@ def build_ledger(constraint_ids=None, pipeline_path=None, output_path=None,
         "",
     ]
     config = data.get("config") or {}
-    blocks = [build_block(e, report_dir, config=config) for e in entries]
+    # Neighbor lookups resolve against the FULL per_constraint set, not the
+    # filtered ledger subset — an edge to a constraint outside the requested
+    # ids must still get its independence bit.
+    index = {e.get("id"): e for e in data.get("per_constraint", [])}
+    blocks = [build_block(e, report_dir, config=config, index=index)
+              for e in entries]
     axiom_section = build_axiom_alignment_section(
         [e.get("id", "") for e in entries])
     text = "\n".join(head) + "\n\n".join(blocks) + "\n\n" + axiom_section + "\n"

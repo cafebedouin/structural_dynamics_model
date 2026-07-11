@@ -21,9 +21,16 @@ import json
 import sys
 from collections import Counter, defaultdict, deque
 from datetime import datetime, timezone
+from itertools import combinations
 from pathlib import Path
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
+
+sys.path.insert(0, str(_REPO_ROOT / "python"))
+# OQ-188/OQ-186 artifact-channel predicates — canonical implementations in
+# shared/, the same ones the report read-sites use (never fork them here).
+from shared.role_flip import role_flip_fired_seats  # noqa: E402
+from shared.independence import is_common_cause_pair  # noqa: E402
 PIPELINE = _REPO_ROOT / "outputs/enriched_pipeline.json"
 SCENARIO = _REPO_ROOT / "outputs/scenario_convergence.json"
 OMEGA    = _REPO_ROOT / "outputs/omega_cross_constraint.json"
@@ -274,11 +281,17 @@ def detect_convergent_signature(member_ids, signature_index):
     }
 
 
-def detect_convergent_institutional(member_ids, per_constraint_index):
+def detect_convergent_institutional(member_ids, per_constraint_index, config=None):
     """Fire when ≥2 constraints share the same institutional type while each
     has analytical != institutional (individual-level split, group-level convergence).
 
-    Returns evidence dict or None.
+    Returns evidence dict or None. The evidence carries two artifact-channel
+    booleans (OQ-188/OQ-186): uniform institutional agreement can be produced
+    by a shared config knife-edge (every member's institutional seat flips
+    under a single authored role change) or by a common-cause clique (members
+    are co-authored slices of one fact) — either makes the convergence an
+    artifact channel, not corroboration, and downstream reads (defensibility,
+    XCON elevation) must not read it as coordination.
     """
     splits = []
     for cid in member_ids:
@@ -301,10 +314,25 @@ def detect_convergent_institutional(member_ids, per_constraint_index):
     anal_counts = Counter(anal for _, _, anal in matching)
     dominant_anal = anal_counts.most_common(1)[0][0]
 
+    split_ids = [cid for cid, _, _ in matching]
+    cfg = config or {}
+    all_knife_edge = bool(split_ids) and all(
+        "institutional" in role_flip_fired_seats(per_constraint_index.get(cid) or {}, cfg)
+        for cid in split_ids
+    )
+    # is True (not truthy): None means not-computable and must not count as
+    # a common-cause verdict (Pattern 6).
+    common_cause_clique = len(split_ids) >= 2 and all(
+        is_common_cause_pair(per_constraint_index.get(a), per_constraint_index.get(b)) is True
+        for a, b in combinations(split_ids, 2)
+    )
+
     return {
         "institutional_type": dominant_inst,
         "analytical_type": dominant_anal,
-        "constraints_with_split": [cid for cid, _, _ in matching],
+        "constraints_with_split": split_ids,
+        "all_members_knife_edge": all_knife_edge,
+        "members_common_cause_clique": common_cause_clique,
     }
 
 
@@ -344,19 +372,46 @@ def build_defensibility(patterns):
     pattern_names = {p["pattern"] for p in patterns}
 
     if "convergent_signature" in pattern_names and "convergent_institutional" in pattern_names:
-        indefensible.append({
-            "position": "Treating all constraints in this set as independent coordination mechanisms",
-            "ruled_out_by": (
-                "Convergent signature and convergent institutional classification: "
-                "all constraints share the same structural signature and the same "
-                "institutional observer type, indicating coordinated rather than "
-                "independent operation."
-            ),
-        })
-        constrained.append(
-            "Reform interventions must address the group as a coordinated system, "
-            "not individual constraints."
-        )
+        inst = next(p for p in patterns if p["pattern"] == "convergent_institutional")
+        ev = inst.get("evidence", {})
+        knife = ev.get("all_members_knife_edge")
+        clique = ev.get("members_common_cause_clique")
+        if knife or clique:
+            # OQ-188/OQ-186 downgrade: uniform institutional agreement produced
+            # by a shared config knife-edge and/or a common-cause clique is an
+            # artifact channel — the coordination ruling would be the witnessed
+            # false-cartel read (dispositional_reading_report.md:396,428), so it
+            # is NOT emitted as indefensible; the caveated reading rides
+            # constrained_positions instead.
+            reasons = []
+            if knife:
+                reasons.append("a shared configuration mechanism (OQ-188: all "
+                               "members' institutional seats are role-authored "
+                               "knife-edge)")
+            if clique:
+                reasons.append("a common authored cause (OQ-186: members form "
+                               "a common-cause clique)")
+            constrained.append(
+                "Shared structural signature and shared institutional observer "
+                "type across this set are consistent with "
+                + " and/or ".join(reasons)
+                + " — not by itself evidence of coordination; do not treat the "
+                "set as a coordinated system on this evidence alone."
+            )
+        else:
+            indefensible.append({
+                "position": "Treating all constraints in this set as independent coordination mechanisms",
+                "ruled_out_by": (
+                    "Convergent signature and convergent institutional classification: "
+                    "all constraints share the same structural signature and the same "
+                    "institutional observer type, indicating coordinated rather than "
+                    "independent operation."
+                ),
+            })
+            constrained.append(
+                "Reform interventions must address the group as a coordinated system, "
+                "not individual constraints."
+            )
 
     cover = next((p for p in patterns if p["pattern"] == "cover_story_topology"), None)
     if cover:
@@ -426,7 +481,8 @@ def build_constraint_sets(pipeline_dict, scenario_data, omega_data):
                 "constraints_involved": sig_result["constraints"],
             })
 
-        inst_result = detect_convergent_institutional(member_ids, per_constraint_index)
+        inst_result = detect_convergent_institutional(
+            member_ids, per_constraint_index, pipeline_dict.get("config") or {})
         if inst_result:
             patterns.append({
                 "pattern": "convergent_institutional",
