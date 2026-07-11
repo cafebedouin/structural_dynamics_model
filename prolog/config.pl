@@ -153,6 +153,15 @@ param(canonical_d_analytical,    0.7250).
 % Whether these VALUES carve reality is NOT witnessed by the step-3 mechanism
 % demo (whose split they partly cause) — only the step-4 generated-arms
 % experiment and corpus data can speak to the values themselves.
+% STRADDLE NOTE (OQ-188, 2026-07-11): agenda_setter (0.12) and beneficiary
+% (0.25) sit on opposite sides of the f(d) sign root d* = d0 − ln((U−L)/(−L)
+% −1)/k ≈ 0.16418 under the sigmoid params above, so a SINGLE authored role
+% change between them flips the seat's chi sign — and with it the OQ-01
+% rope-gate bypass (chi =< 0 -> "sees rope"). 98.1% of matched institutional
+% seats on the live corpus sit on this knife-edge (census:
+% audits/2026-07-11_oq186_oq188_readsite/). Read sites carry a standing
+% legend + glyph (shared/role_flip.py); these VALUES stay the operator's
+% declared seat — do not move them to "fix" the straddle.
 param(stakeholder_role_d_agenda_setter, 0.12).
 param(stakeholder_role_d_beneficiary,   0.25).
 param(stakeholder_role_d_payer,         0.85).
