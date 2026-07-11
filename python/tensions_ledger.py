@@ -26,6 +26,11 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUTS = ROOT / "outputs"
 REPORTS = OUTPUTS / "constraint_reports"
 
+sys.path.insert(0, str(ROOT / "python"))
+# OQ-188 role-flip flag — canonical predicate in shared/, same implementation
+# the report read-site uses (never fork it here).
+from shared.role_flip import role_flip_fired_seats, GLYPH as ROLE_FLIP_GLYPH  # noqa: E402
+
 POSITIONS = ("powerless", "moderate", "institutional", "analytical")
 # OQ-108: the full 6-atom authoring vocabulary (docs/logic.md:293), distinct
 # from the 4-position observer fingerprint above. Witness coverage is reported
@@ -48,9 +53,12 @@ def _drift_confidence_lines(report_path):
             if re.match(r"^\s*\[(critical|warning|watch)( \| confidence: \w+)?\]", ln)]
 
 
-def build_block(entry, report_dir=REPORTS):
+def build_block(entry, report_dir=REPORTS, config=None):
     cid = entry.get("id", "?")
     lines = [f"## {cid} — {entry.get('human_readable') or '(no display name)'}"]
+    # OQ-188: seats whose verdict flips under a single authored role change
+    # (glyph on the per-position line; the one legend line lives in the header).
+    flagged = role_flip_fired_seats(entry, config or {})
 
     # verdict_join: headline verdict + alerts + provenance (OQ-98 source)
     vj = entry.get("verdict_join") or {}
@@ -106,7 +114,10 @@ def build_block(entry, report_dir=REPORTS):
     persp = entry.get("perspectives") or {}
     if persp:
         lines.append("- per-position types: " +
-                     " ".join(f"{p}={persp.get(p, '?')}" for p in POSITIONS))
+                     " ".join(
+                         f"{p}={persp.get(p, '?')}"
+                         + (ROLE_FLIP_GLYPH if p in flagged else "")
+                         for p in POSITIONS))
 
     # witness coverage (OQ-108): authored stakeholders per power atom. A 0 means
     # any perspective computed at that power is inference-only, not measured-
@@ -358,9 +369,16 @@ def build_ledger(constraint_ids=None, pipeline_path=None, output_path=None,
         f"{' DIRTY' if manifest.get('code_dirty') else ''}",
         f"constraints in this ledger: {len(entries)}"
         + (f" | NOT FOUND in pipeline output: {sorted(missing)}" if missing else ""),
+        # Standing legend line (OQ-188 pre-registered standing branch): defines
+        # the per-position glyph ONCE — never repeated caveat text per line.
+        f"{ROLE_FLIP_GLYPH} on a per-position type = the seat's verdict flips under a "
+        "single authored stakeholder-role change (authored role d and nearest "
+        "alternative role constant straddle the f(d) sign root) — role-authored, "
+        "not situation-measured. Standing note — OQ-188.",
         "",
     ]
-    blocks = [build_block(e, report_dir) for e in entries]
+    config = data.get("config") or {}
+    blocks = [build_block(e, report_dir, config=config) for e in entries]
     axiom_section = build_axiom_alignment_section(
         [e.get("id", "") for e in entries])
     text = "\n".join(head) + "\n\n".join(blocks) + "\n\n" + axiom_section + "\n"

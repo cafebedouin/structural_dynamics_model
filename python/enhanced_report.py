@@ -64,6 +64,9 @@ from pathlib import Path
 # runs no pipeline code.
 from enrich_pipeline_json import BAND_DEEP, BAND_MODERATE
 from corpus_hash import compute_corpus_hash  # single-source corpus fingerprint (OQ-29)
+# OQ-188/OQ-186 read-site flags — canonical predicates live in shared/, never
+# duplicated here (tensions_ledger + evaluative_convergence import the same).
+from shared.role_flip import role_flip_fired_seats, GLYPH as ROLE_FLIP_GLYPH
 
 # --- Path Setup ---
 
@@ -200,14 +203,24 @@ def _routing_addresses(constraint_id, routing_data):
     return lines
 
 
-def _compact_types(perspectives):
-    """Summarize perspectives as 'type1 (ctx1), type2 (ctx2)' — one ctx per unique type."""
-    type_to_ctx = {}
+def _compact_types(perspectives, flagged=frozenset()):
+    """Summarize perspectives as 'type1 (ctx1), type2 (ctx2)' — one ctx per unique
+    type. `flagged` (OQ-188): seats whose verdict flips under a single authored
+    role change get the ‡ glyph; a flagged seat is always NAMED (appended to its
+    type group even when another seat already represents that type), so the flag
+    can't vanish into the one-ctx-per-type compaction."""
+    type_to_ctxs = {}
     for ctx in ["powerless", "moderate", "institutional", "analytical"]:
         t = perspectives.get(ctx)
-        if t and t not in type_to_ctx:
-            type_to_ctx[t] = ctx
-    return ", ".join(f"{t} ({ctx})" for t, ctx in type_to_ctx.items())
+        if not t:
+            continue
+        if t not in type_to_ctxs:
+            type_to_ctxs[t] = [ctx]
+        elif ctx in flagged:
+            type_to_ctxs[t].append(ctx)
+    return ", ".join(
+        f"{t} ({', '.join(c + (ROLE_FLIP_GLYPH if c in flagged else '') for c in ctxs)})"
+        for t, ctxs in type_to_ctxs.items())
 
 
 def _explain_h1_band(h1, perspectives):
@@ -353,8 +366,13 @@ def build_header(pipeline_data):
         "  structural reading, not a ranking.",
         "  A RED verdict (e.g. dataset_recycling) flags the AUTHORED victim/beneficiary",
         "  DIRECTION (OQ-187), not a seat-free moral judgment. χ = ε × f(d) × σ(S) is computed",
-        "  per seat; d is a function of the observer POSITION (a config lookup), not authored",
-        "  per story — identical d across constraints for the same position is by design.",
+        "  per seat; d (directionality) is DERIVED per seat — precedence: authored override →",
+        "  beneficiary/victim structure + exit_options → canonical power fallback. Only the",
+        "  fallback is a pure position→config lookup; when a story authors victims/beneficiaries",
+        "  (the common case) d comes from that authored structure, so d for the SAME position",
+        "  label can differ across constraints (institutional d ranged 0.12–0.72 across the",
+        "  drone set) — cross-constraint 'same seat' d-comparison is NOT apples-to-apples.",
+        _role_flip_caveat(),
         "",
         f"CORPUS CONTEXT: {corpus_size} constraints",
         f"  Types: {', '.join(type_parts)}",
@@ -760,6 +778,29 @@ def build_verdict_banner(constraint_id, pipeline_data):
     return banner
 
 
+def _role_flip_caveat():
+    """Standing read-site legend sentence for the OQ-188 role-flip glyph
+    (pre-registered branch: fire rate 98.1% of matched institutional seats ->
+    standing type-level form, ONE legend sentence + per-line glyph, never
+    repeated per-line caveat text — the always-on-disclaimer failure OQ-187
+    died on). Named for the PREDICATE (flips under a single authored role
+    change), not root proximity: beneficiary at f=+0.110 is continuously
+    robust, and a proximity phrasing would read as a false alarm there.
+    Provenance: audits/2026-07-11_oq186_oq188_readsite/ (PREREG Block 3;
+    census census_oq188.log)."""
+    return (
+        f"  {ROLE_FLIP_GLYPH} on a seat's type (typically institutional) = the verdict flips "
+        "under a single authored\n"
+        "  stakeholder-role change: the seat's authored role d and its nearest alternative "
+        "role\n"
+        "  constant sit on opposite sides of the f(d) sign root (agenda_setter 0.12 ↔ "
+        "beneficiary\n"
+        "  0.25 straddle d*≈0.164), so that seat's rope/not-rope reading is role-authored, "
+        "not\n"
+        "  situation-measured. Standing note — OQ-188."
+    )
+
+
 def _red_direction_caveat():
     """Standing read-site note for RED verdicts (OQ-187, ruled 2026-06-27).
 
@@ -820,6 +861,9 @@ def build_level1_identity(constraint_id, pipeline_data, prolog_output, routing_d
     entry = find_constraint_entry(pipeline_data, constraint_id)
     live_claimed, live_perspectives = extract_live_perspectives(prolog_output)
     in_batch = entry is not None
+    # OQ-188: seats whose verdict flips under a single authored role change
+    # (computed from the SERIALIZED entry + config; empty when not in batch).
+    flagged = role_flip_fired_seats(entry, pipeline_data.get("config") or {})
 
     if in_batch:
         claimed = entry.get("claimed_type", "N/A")
@@ -834,7 +878,7 @@ def build_level1_identity(constraint_id, pipeline_data, prolog_output, routing_d
         lines.append(f"    Claimed Type:     {claimed}")
 
         if live_perspectives:
-            live_str = _compact_types(live_perspectives)
+            live_str = _compact_types(live_perspectives, flagged)
             if live_str:
                 lines.append(f"    Live Type:        {live_str}")
         lines.extend(_authored_vs_computed(claimed, live_perspectives))
@@ -1481,9 +1525,10 @@ def build_level2_convergence(constraint_id, pipeline_data):
         lines.append("  Not yet in batch — run full pipeline to include.")
         return "\n".join(lines)
 
-    # Batch type + agreement with live
+    # Batch type + agreement with live (OQ-188 role-flip glyph rides the seats)
     batch_persp = entry.get("perspectives", {})
-    batch_str = _compact_types(batch_persp)
+    batch_str = _compact_types(
+        batch_persp, role_flip_fired_seats(entry, pipeline_data.get("config") or {}))
     if batch_str:
         lines.append(f"    Batch Type:       {batch_str}")
 
