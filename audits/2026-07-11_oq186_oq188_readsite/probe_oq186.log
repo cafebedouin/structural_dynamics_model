@@ -1,0 +1,20 @@
+Warning: /home/scott/bin/structural_dynamics_model/prolog/constraint_instances.pl:152:
+Warning:    Local definition of drl_core:base_extractiveness/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/structural_dynamics_model/prolog/constraint_instances.pl:153:
+Warning:    Local definition of drl_core:suppression_score/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/structural_dynamics_model/prolog/arakelov_height.pl:35:
+Warning:    import/1: measurement_layer:wasserstein_contexts/1 is not exported (still imported into arakelov_height)
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+== OQ-186 A/B probe (context: context(agent_power(analytical),time_horizon(civilizational),exit_options(analytical),spatial_scope(global))) ==
+oq186_a1 neighbors: [neighbor(oq186_a2,0.3,shared_beneficiary),neighbor(oq186_a3,0.3,shared_beneficiary)]
+oq186_a2 neighbors: [neighbor(oq186_a1,0.3,shared_beneficiary),neighbor(oq186_a3,0.3,shared_beneficiary)]
+oq186_a3 neighbors: [neighbor(oq186_a1,0.3,shared_beneficiary),neighbor(oq186_a2,0.3,shared_beneficiary)]
+oq186_b1 neighbors: []
+oq186_b2 neighbors: []
+oq186_b3 neighbors: []

@@ -1,0 +1,29 @@
+manifest: run_at=2026-07-05T19:55:12Z n=130 commit=ea8ed72 dirty=True
+serialized roles: {'agenda_setter': 0.12, 'beneficiary': 0.25, 'payer': 0.85, 'excluded': 0.9, 'observer': 0.72}
+f(d) sign root from serialized params: 0.16418
+  f(agenda_setter=0.12) = -0.042252
+  f(beneficiary=0.25) = +0.110123
+  f(observer=0.72) = +1.141609
+  f(payer=0.85) = +1.314535
+  f(excluded=0.9) = +1.358606
+
+per_constraint entries: 130
+
+[powerless] matched=57 unmatched=64 canonical=0 null=9
+  unmatched d values: {0.28: 1, 0.5: 39, 0.58: 1, 0.65: 1, 0.78: 1, 0.82: 1, 0.88: 1, 0.92: 1, 0.95: 18}
+  flip-predicate fires: 1/57 matched (1.8% of matched)
+
+[moderate] matched=0 unmatched=121 canonical=0 null=9
+  unmatched d values: {0.65: 19, 0.68: 1, 0.7: 101}
+  flip-predicate fires: 0/0 matched (nan% of matched)
+
+[institutional] matched=105 unmatched=16 canonical=0 null=9
+  unmatched d values: {0.07: 1, 0.15: 6, 0.2: 2, 0.35: 1, 0.45: 2, 0.55: 1, 0.68: 1, 0.7: 1, 0.88: 1}
+  flip-predicate fires: 103/105 matched (98.1% of matched)
+  fired (role -> nearest-alt) counts: {('agenda_setter', 'beneficiary'): 101, ('beneficiary', 'agenda_setter'): 2}
+  sample fired ids: ['ability_ceiling_reading', 'access_barrier_reading', 'actinide_replenishment_mechanism_flat_control', 'adjunctification_of_university_teaching_c0', 'animal_status_kernel__property_reading']
+  GATE: >=50% -> STANDING type-level form (legend sentence + glyph)
+
+[analytical] matched=120 unmatched=1 canonical=0 null=9
+  unmatched d values: {0.5: 1}
+  flip-predicate fires: 0/120 matched (0.0% of matched)
