@@ -90,9 +90,10 @@ structural_dynamics_model/
 │   ├── directionality_sensitivity_sweep.py  # documented CLI sweep
 │   ├── [~23 pipeline modules]        # imported by run_pipeline.py
 │   ├── [~30 exploratory scripts]     # game theory, SOTU, harvest — phase 2 pending
-│   ├── shared/                       # utility package (loader, constants, maxent)
+│   ├── shared/                       # utility package (loader, constants, maxent,
+│   │                                 #   role_flip + independence read-site flags OQ-188/186)
 │   ├── reports/                      # report query subpackage
-│   ├── tests/                        # standalone test scripts (8 files)
+│   ├── tests/                        # standalone test scripts (16 files, count 2026-07-11)
 │   ├── sweeps/                       # parameter variation scripts (12 files)
 │   └── audits/                       # audit, diagnostic, probe scripts (19 files)
 ├── agent/

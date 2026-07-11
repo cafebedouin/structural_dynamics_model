@@ -3852,6 +3852,11 @@ historical leak was the PRE-de-leak prompt's numeric type-bands (scrubbed at b6c
 snapshot, 91 .pl = 91 .json = manifest n). Flagged as a watch at n=20 (`0.58` interior anchor gone,
 new `0.68` mode emerging); escalated to a finding at n=91.
 
+**Cross-ref (2026-07-11):** OQ-188's read-site role-flip flag (`shared/role_flip.py`, standing
+legend + glyph) is now a live read-site CONSUMER of the f(d)-dominance this OQ measures — ε
+compression is why f(d) carries χ variance and why the straddle flag fires on 98.1% of matched
+institutional seats (`audits/2026-07-11_oq186_oq188_readsite/`).
+
 **The observation:** authored `base_extractiveness` clusters hard. At n=91: **31/91 stories sit at
 exactly ε=0.68**; the mode stack is 0.68(31), 0.58(12), 0.48(11), 0.28(10), 0.08(6) — only 13
 distinct values over 91 stories; the last-digit grid is **8: 78, 5: 7, 2: 6** (86% end in 8). The
@@ -8873,20 +8878,28 @@ gate active+satisfied (0.35+0.25+0.25+0.15=1.0). Revert path (revert-on-red) unu
 
 ## OQ-186 — Contamination-network convergence does not distinguish independent constraints from common-cause re-descriptions: a clique of co-authored slices reads as mutual corroboration
 
-**Ω-type:** Ω_C (design choice — what an independence/common-cause caveat on convergence should be, and where it lands). The empirical leg (does the machinery in fact ignore node independence?) is Ω_E, witnessable by the positive control below.
+**Ω-type:** Ω_C (design choice — what an independence/common-cause caveat on convergence should be, and where it lands). The empirical leg (does the machinery in fact ignore node independence?) was Ω_E — witnessed by the pre-registered A/B probe.
 
-**Status:** open
+**Status:** resolved — 2026-07-11, outcome (a): read-site common-cause caveat landed. A/B probe
+(pre-registered before any run, `PREREG.md` commit `57159a36`): co-authored slices form the full
+3-clique, distinct-agent topic forms zero edges — the machinery has no node-independence notion;
+the defect was the corroboration READ. Discriminator `shared/independence.py` (shared ≥1
+beneficiary AND ≥1 victim AND |Δε|≤0.02; ε clause KEPT by census — 9/21=42.9% of non-both-sides
+live pairs inside margin, not a majority; the one live both-sides pair IS the witnessed
+`moral_causation_locus` family). Outcome (b) (un-computable from authored fields) was FORECLOSED
+by recon, not silently dropped: beneficiary/victim lists + ε verified serialized
+(`json_report.pl:386-396`). Read sites landed: enhanced_report Independence column + legend +
+≥2-common-cause summary; `evaluative_convergence.py` `members_common_cause_clique` +
+`all_members_knife_edge` (OQ-188) booleans, and `build_defensibility` no longer emits the
+witnessed false-cartel ruling ("coordinated rather than independent operation",
+`dispositional_reading_report.md:396,428`) on artifact-channel sets — downgraded to a caveated
+constrained position; XCON elevation suppressed likewise; tensions_ledger edge marker. OQ-103
+salience floor and OQ-174 ruling untouched (orthogonal bits). Evidence:
+`audits/2026-07-11_oq186_oq188_readsite/`; regressions
+`prolog/tests/test_oq186_common_cause_clique.pl` + `python/tests/test_role_flip_flag.py`.
 **Priority:** 2
-**Origin:** essay-review triage 2026-06-26 (gray_divorce draft, comment #5). Sibling of the contamination-edge work OQ-103 (salience floor) / OQ-174 (cs-edge shared-input) — both addressed edge STRENGTH and PROVENANCE; neither addresses node INDEPENDENCE.
-**File:** `prolog/drl_purity_network.pl` (`constraint_neighbors/3`, contamination cascade); `prolog/json_report.pl` (`write_contamination_network`); read site `python/tensions_ledger.py` / `python/enhanced_report.py`.
-
-**Specific question.** When several constraints in one topic are re-descriptions of a single underlying fact (the reviewer's instance: "gray divorce costs the lower-earning spouse," sliced into ~four extractive constraints — third-act, gendered-outcome, etc.), the contamination network builds edges among them (`shared_beneficiary`/`shared_victim`/`inferred_coupling`) and the resulting clique reads as convergence — i.e. as mutual corroboration. But N descriptions of one common cause agreeing is NOT N independent witnesses. The machinery has no notion of node independence: it cannot tell a clique of co-authored slices from a clique of genuinely distinct constraints that happen to point the same way. Decision: should convergence carry a common-cause / independence caveat to the read site (cf. OQ-108's witness-coverage pattern — carry the provenance bit, do not collapse), and if so what is the discriminator?
-
-**Evidence so far (review-raised, UNWITNESSED on substrate).** The gray_divorce instance is the reviewer's read, not yet a run. **Graduation / positive control (riskiest-shape test):** construct two synthetic topics — (A) N constraints that are deliberate slices of one authored fact (shared victim+beneficiary, near-duplicate ε), (B) N constraints with genuinely distinct victims/beneficiaries that nonetheless type extractive — run both through `constraint_neighbors/3` and confirm the network/convergence read treats A and B identically (the defect) vs differently (no defect). Only the run licenses "the machinery ignores independence." Cross-refs: OQ-103, OQ-174, OQ-101 (synthesis-read enforcement).
-
-**What resolution changes.** Either (a) the read site gains an independence/common-cause caveat so a co-authored clique stops reading as corroboration, (b) the discriminator is ruled un-computable from authored fields and the caveat becomes a synthesis-checklist item (OQ-101 family), or (c) the run shows the machinery already separates A from B and the concern is essay-side only. Bears directly on any essay that cites contamination convergence as evidence.
-
-**Witnessed instance (2026-06-26).** The `moral_causation_locus` reports' `convergent_institutional` reasoning (`outputs/constraint_reports/dispositional_reading_report.md:396,428`) rules a coordinated-cartel reading on the grounds that all readings "share the same institutional observer type [rope] … indicating coordinated rather than independent operation." But that uniform institutional=rope is a generic consequence of low-d institutional seats sitting below the f(d) root (**OQ-188**), not coordination — a concrete case of convergence-as-config-artifact, distinct from the shared-agent-edge route. Two independent artifact channels now feed the false-cartel read.
+**Deps:** bundled_with OQ-188 (joint read-site fix — shared audit + false-cartel defect), bundled_with OQ-78 (ε-mode confound on the Δε clause — censused; clause kept)
+**Origin:** essay-review triage 2026-06-26 (gray_divorce draft, comment #5). Sibling of OQ-103 (salience floor) / OQ-174 (cs-edge shared-input) — both addressed edge STRENGTH/PROVENANCE; this added node INDEPENDENCE.
 
 ---
 
@@ -8910,18 +8923,27 @@ gate active+satisfied (0.35+0.25+0.25+0.15=1.0). Revert path (revert-on-red) unu
 
 ## OQ-188 — Low-d institutional seats sit just below the f(d) sign-change root, so the OQ-01 rope-gate bypass that makes them "see rope" is knife-edge on an authored stakeholder-role choice
 
-**Ω-type:** Ω_C (read-site surface — whether root-proximity is flagged where a classification is read) over a witnessed Ω_E core (the straddle below is computed, not argued).
+**Ω-type:** Ω_C (read-site surface — whether authored-d fragility is flagged where a classification is read) over a witnessed Ω_E core (the straddle is computed, not argued).
 
-**Status:** open
+**Status:** resolved — 2026-07-11, standing read-site flag landed (pre-registered branch, `PREREG.md`
+commit `57159a36` predates every run). Zero-free-parameter predicate (`shared/role_flip.py`): a seat
+flags iff its serialized d matches a `stakeholder_role_d_*` constant (1e-6, against the SERIALIZED
+config) AND f(d) changes sign to the nearest alternative role constant (root d\*≈0.16418;
+agenda_setter 0.12 ↔ beneficiary 0.25 are the straddle pair — named for the FLIP, not root
+proximity: beneficiary at f=+0.110 is continuously robust). Fire-rate census (manifest
+2026-07-05T19:55:12Z, n=130): institutional matched=105, fires=**103 (98.1%)** → pre-registered
+≥50% STANDING branch: ONE legend sentence + per-line `‡` glyph (enhanced_report Live/Batch Type +
+HOW TO READ; tensions_ledger per-position line + header legend) — never repeated per-line caveat
+text (OQ-187's always-on-disclaimer failure). Buckets surfaced, never silently unflagged:
+unmatched=16 (incl. d=0.15 ×6), null=9; 1 powerless firing → glyph is per-fired-seat (declared
+deviation, audit README). The knife-edge boolean also feeds `evaluative_convergence.py`
+(`all_members_knife_edge`) → the OQ-186 false-cartel downgrade. `config.pl:156-160` carries the
+straddle note (comment-only); the d VALUES stay the operator's declared seat and the OQ-01 χ≤0
+bypass is untouched — the flag is commentary-grade, it annotates and never overrides. Evidence:
+`audits/2026-07-11_oq186_oq188_readsite/`; regression `python/tests/test_role_flip_flag.py`.
 **Priority:** 2
-**Origin:** essay-review triage 2026-06-26 (`moral_causation_locus` twin; the reviewer's "softest load-bearing spot"). The graduation question raised at the OQ-187 filing (canonical-config vs story-authored `d`) is settled empirically here.
-**File:** `prolog/config.pl` (`canonical_d_institutional` :144, `stakeholder_role_d_*` :156–160, sigmoid params :130–133); χ path `prolog/drl_core.pl` / `prolog/drl_composition.pl`; rope-gate bypass (OQ-01); read sites `python/enhanced_report.py` / `python/tensions_ledger.py`.
-
-**The witnessed mechanism.** f(d) (sigmoid L=−0.20, U=1.50, d0=0.50, k=6.00) changes sign at **d=0.1642**. In `outputs/constraint_reports/dispositional_reading_report.md:80,243` the institutional seat sits at **d=0.120** — which is `stakeholder_role_d_agenda_setter` (a config constant **selected by an authored role**, NOT the canonical institutional fallback 0.00) — giving f=−0.042 → χ = 0.68 × −0.042 = **−0.029**. χ ≤ 0 trips the rope-gate bypass (OQ-01); that bypass IS "institution sees rope." The two commonest institutional roles **straddle the root**: agenda_setter d=0.12 → f=−0.042 (rope) vs beneficiary d=0.25 → f=+0.110 → χ=+0.075 (**not** rope). A SINGLE authored role change crosses the root and flips the institutional verdict. The report's own decomposition confirms f(d) is **101.2%** of cross-seat χ variance (ε constant 0.68 contributes ~0) — which is *why* root-proximity is load-bearing. Witness: config greps + `python3` sigmoid root/straddle computation (conversation 2026-06-26); report lines cited.
-
-**Scope (graduation question answered): SYSTEMIC, with a story-level trigger.** The role→d mapping is a config constant, so ANY story authoring an institutional `agenda_setter` lands at d=0.12, generically ~0.044 below the root — institutional-seat rope verdicts are knife-edge corpus-wide, not a one-twin fluke. The trigger is which role got authored. Direction matters: moving toward canonical 0.00 makes it MORE robustly rope (f=−0.119); the flip requires moving UP past 0.164. The lever is the DISCRETE authored role, not a continuous "nudge the observer."
-
-**Specific question / what resolution changes.** Should a read site flag when a seat's classification rests within ε of the f(d) root (so an authored-d-fragile verdict stops reading as solid), and/or should the agenda_setter/beneficiary straddle of the root carry a config note? Bears on every essay leaning on an institutional rope / extraction-blindness result, and partly explains the "uniform institutional=rope convergence" that reports read as coordination (OQ-186) — that uniformity is a generic consequence of this mechanism, not a cartel. Cross-refs: OQ-01 (the bypass), OQ-78 (f(d) dominates variance), OQ-123 (seat model-sensitivity), OQ-186 (convergence-as-artifact).
+**Deps:** bundled_with OQ-186 (joint read-site fix — shared audit), bundled_with OQ-78 (f(d)-dominance is why the straddle is load-bearing; ε-compression measured there), bundled_with OQ-01 (the bypass the knife-edge toggles — unchanged)
+**Origin:** essay-review triage 2026-06-26 (`moral_causation_locus` twin; the reviewer's "softest load-bearing spot"). The graduation question raised at the OQ-187 filing (canonical-config vs story-authored `d`) was settled empirically here: SYSTEMIC — any story authoring institutional `agenda_setter` lands d=0.12, ~0.044 below the root. Cross-refs: OQ-123 (seat model-sensitivity).
 
 ---
 

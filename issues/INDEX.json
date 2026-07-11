@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "1169170fa26f130df2fcba51b5b1fe3c496db89f",
+    "store_version": "8e68ede69aa313327b4d89b106a292009c86b0c3",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-06T13:26:57"
+    "generated_at": "2026-07-11T18:27:48"
   },
-  "issues_sha": "22a34140a09569b543b17ee822800c84f33fd5050abf050b1068a61b6412bf3c",
+  "issues_sha": "27f15b686ee0e48d5edcd058f778cb8c6aaa996581401997abb237e8120b40a3",
   "n_entries": 213,
   "active_token_set": [
     "investigating",
@@ -12,10 +12,10 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 120,
+    "resolved": 122,
     "mitigated": 15,
     "disposed": 4,
-    "open": 63,
+    "open": 61,
     "partial": 7,
     "future": 4
   },
@@ -147,6 +147,7 @@
         "OQ-109",
         "OQ-116",
         "OQ-117",
+        "OQ-188",
         "OQ-205"
       ]
     },
@@ -712,36 +713,6 @@
       "mentioned_in": [
         "OQ-39",
         "OQ-183"
-      ]
-    },
-    {
-      "id": "OQ-186",
-      "status": "open",
-      "priority": 2,
-      "summary": "Contamination-network convergence does not distinguish independent constraints from common-cause re-descriptions: a clique of co-authored slices reads as mutual corroboration",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-101",
-        "OQ-103",
-        "OQ-108",
-        "OQ-174",
-        "OQ-188"
-      ]
-    },
-    {
-      "id": "OQ-188",
-      "status": "open",
-      "priority": 2,
-      "summary": "Low-d institutional seats sit just below the f(d) sign-change root, so the OQ-01 rope-gate bypass that makes them \"see rope\" is knife-edge on an authored stakeholder-role choice",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-01",
-        "OQ-78",
-        "OQ-123",
-        "OQ-186",
-        "OQ-187"
       ]
     },
     {
@@ -2779,6 +2750,23 @@
       ]
     },
     {
+      "id": "OQ-186",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "Contamination-network convergence does not distinguish independent constraints from common-cause re-descriptions: a clique of co-authored slices reads as mutual corroboration",
+      "deps": [
+        "bundled_with OQ-188",
+        "bundled_with OQ-78"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-78",
+        "OQ-103",
+        "OQ-174",
+        "OQ-188"
+      ]
+    },
+    {
       "id": "OQ-187",
       "status": "resolved",
       "priority": 3,
@@ -2799,6 +2787,25 @@
         "OQ-186",
         "OQ-188",
         "OQ-189"
+      ]
+    },
+    {
+      "id": "OQ-188",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "Low-d institutional seats sit just below the f(d) sign-change root, so the OQ-01 rope-gate bypass that makes them \"see rope\" is knife-edge on an authored stakeholder-role choice",
+      "deps": [
+        "bundled_with OQ-186",
+        "bundled_with OQ-78",
+        "bundled_with OQ-01"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-01",
+        "OQ-78",
+        "OQ-123",
+        "OQ-186",
+        "OQ-187"
       ]
     },
     {

@@ -45,6 +45,44 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-11 — OQ-188 + OQ-186 RESOLVED: pre-registered read-site flags (role-flip standing glyph; common-cause independence bit); false-cartel defensibility ruling downgraded
+**Files:** python/shared/role_flip.py, python/shared/independence.py, python/enhanced_report.py, python/tensions_ledger.py, python/evaluative_convergence.py, prolog/config.pl, prolog/tests/test_oq186_common_cause_clique.pl, python/tests/test_role_flip_flag.py
+**Tier:** landed
+
+Full pre-registration (`PREREG.md` committed `57159a36` BEFORE any run) → evidence →
+read-site fix, all in `audits/2026-07-11_oq186_oq188_readsite/`.
+
+- **OQ-188 (98.1% branch).** Fire-rate census (manifest 2026-07-05T19:55:12Z, n=130):
+  103/105 matched institutional seats flip under a single authored role change
+  (agenda_setter 0.12 ↔ beneficiary 0.25 straddle the f(d) root d\*≈0.16418) →
+  pre-registered ≥50% STANDING form: one legend sentence + per-line `‡` glyph
+  (`shared/role_flip.py`, zero free parameters — role ladder, sigmoid, and root all
+  from the SERIALIZED config). Buckets surfaced (unmatched=16 incl. 0.15×6, null=9);
+  1 powerless firing → glyph is per-fired-seat (declared deviation, audit README).
+  `config.pl:156-160` straddle note is comment-only; d values + OQ-01 bypass untouched
+  (flag is commentary-grade — annotates, never overrides).
+- **OQ-186 (outcome (a)).** A/B probe: co-authored slices form the full 3-clique,
+  distinct-agent topic forms zero edges — node independence is not expressible
+  Prolog-side (dedup keeps one edge per pair); discriminator `shared/independence.py`
+  (≥1 shared beneficiary AND ≥1 shared victim AND |Δε|≤0.02; ε clause kept by census,
+  9/21=42.9% of non-both-sides pairs inside margin). The one live both-sides pair IS
+  the witnessed `moral_causation_locus` family.
+- **Joint defect fixed.** `evaluative_convergence.py` `build_defensibility` no longer
+  rules "coordinated rather than independent operation" on artifact-channel sets
+  (either `all_members_knife_edge` or `members_common_cause_clique` true) — downgraded
+  to a caveated constrained position; XCON elevation suppressed likewise. Two-sided
+  witness: the dispositional_reading set fires both booleans and is caveated;
+  network_2638bfb4 / network_a6b8a722 stay knife=False clique=False with the original
+  ruling byte-unchanged.
+- **Fix-on-sight (tensions_ledger).** Serialized neighbor keys are
+  `constraint_id`/`edge_strength` — the old `id`/`edge_contamination` lookups rendered
+  EVERY ledger edge as `? [...; strength ?]`; fixed, and the stale "provenance NOT
+  CARRIED — OQ-103 open" note dropped (OQ-103 resolved 2026-06-12).
+
+Regressions: plunit `test_oq186_common_cause_clique` (3/3) +
+`python/tests/test_role_flip_flag.py` (6/6) + existing OQ-103 salience test still
+green. No new Prolog reading predicate → `reading_registry.pl` obligation N/A.
+
 ## 2026-07-06 — OQ-213(a): `twin_comparison.py` graduated to N-general (Sonnet now a full paired leg); 3-leg run at HEAD, intersection 957
 **Files:** python/audits/twin_comparison.py, outputs/pipeline_output.haiku.json, outputs/pipeline_output.flash.json, outputs/pipeline_output.sonnet.json, ISSUES.md, AGENTS.md
 **Tier:** landed
