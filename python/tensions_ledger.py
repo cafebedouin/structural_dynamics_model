@@ -197,20 +197,25 @@ def build_block(entry, report_dir=REPORTS, config=None):
         lines.append("- drift trajectory: series present for "
                      + ", ".join(sorted(entry["drift_trajectory"].keys())))
 
-    # contamination edges — provenance gap labeled, never absorbed (OQ-103)
+    # contamination edges — provenance carried per edge.
+    # (Key fix 2026-07-11: the serialized neighbor keys are constraint_id /
+    # edge_strength — the previous id/neighbor + edge_contamination/strength
+    # lookups matched nothing and every edge rendered as "? [...; strength ?]".
+    # The stale "provenance NOT CARRIED — OQ-103 open" note went with it:
+    # OQ-103 is resolved (2026-06-12) and edge_type IS serialized.)
     cn = entry.get("contamination_network") or {}
     nbrs = cn.get("neighbors") or []
     if nbrs:
-        edges = "; ".join(
-            f"{n.get('id', n.get('neighbor', '?'))} "
-            f"[{n.get('edge_type', n.get('relation', '?'))}; "
-            f"strength {n.get('edge_contamination', n.get('strength', '?'))}]"
-            for n in nbrs[:6])
+        def _edge_str(n):
+            etype = n.get("edge_type", "?")
+            prov = "authored" if etype == "explicit" else "corpus-derived"
+            return f"{n.get('constraint_id', '?')} [{etype}; {prov}; " \
+                   f"strength {n.get('edge_strength', '?')}]"
+        edges = "; ".join(_edge_str(n) for n in nbrs[:6])
         more = f" (+{len(nbrs) - 6} more)" if len(nbrs) > 6 else ""
         lines.append(f"- contamination edges: {edges}{more}")
-        lines.append("  - edge provenance (story-authored vs corpus-topology): "
-                     "NOT CARRIED — OQ-103 open; treat every edge as possibly "
-                     "corpus-topology, not this story's claim")
+        lines.append("  - edge bits: 'authored' = story-asserted link, "
+                     "'corpus-derived' = computed from corpus topology (OQ-103)")
     else:
         lines.append("- contamination edges: none")
 
