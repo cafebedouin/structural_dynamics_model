@@ -45,6 +45,41 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-12 — OQ-215 CLOSED on operator read; posture ruled assisted-by-design; OQ-218/OQ-219 minted (spend HELD); probe sources staged + Stage-0 certified
+**Files:** ISSUES.md, agent/uke_narrative_orchestrator.py, agent/uke_narrative_architecture_v0_3.md, agent/uke_story_v0.1.md, agent/uke_story_v0.2.md, docs/design/design_discipline.md, agent/narrative_transform/originals/the_good_name_book.md, agent/narrative_transform/originals/the_eighth_commentary.md, agent/narrative_transform/originals/the_table_of_winters.md, agent/narrative_transform/originals/the_datum_stone.md
+**Tier:** landed
+
+- **OQ-215 resolved** (commit `0e353a24`): no kill fired; counting dissolved with R2 live;
+  invariant 4/5 strong + rev6 partial-via-ending; flinch withdrawn; D9-adversarial conforming.
+  **Run↔rev correction:** arm-3 runs are rev3–rev7 (rev6 = "The Platform Knows" = run 4,
+  `the_empty_pan_1783872143`); rev2 is arm 1. **rev6 stage-9 HOLDS hand-checked GENUINE** —
+  the correctable-reading pressure (Kiran's representative-sample rebuild) is foreclosed by the
+  ending (Sokol's compliance reframe; "changes nothing"). Compressed entry keeps the operative
+  rulings (D9 composed fixes + HOLDS-guard; Forty-Hertz partial; rift3 class; R3(b) trail).
+  OQ-214 gained the rev5 EARNED word-arithmetic calibration datum.
+- **Carried flag wired** (commit `e96b2bf3`): `DENSITY_CAVEAT` ("density measures counting only;
+  invariant survival is adjudicated by blind stage-9 + operator read; 0.0 is not evidence the
+  invariant held") now renders in the sidecar JSON, the inventory prompt block, and a new
+  always-emitted numeric_gate summary line (pass path was silent before). Also in the
+  architecture doc, which previously had no density-gate section at all.
+- **Posture ruled assisted-by-design** (commit `9d08165f`): design_discipline.md §11 — the
+  sharpening judgment is operator-held BY NECESSITY (arm-2 witness: stage-10 D9 scored the
+  negative control 5/5); autonomous is structurally foreclosed, not deferred. `--edit FILE`
+  documented as the first-class assisted mode. **Protocol files renamed** `uke_resleeve_v0.*.md`
+  → `agent/uke_story_v0.1.md` (superseded draft) / `agent/uke_story_v0.2.md` (current): the
+  pipeline is the TRANSLATION instrument, UKE_STORY is the IMPROVEMENT protocol — no translation
+  protocol file exists; v0.2 footer + v0.1 Ω-NAME note corrected; Zone.Identifier sidecars deleted.
+- **OQ-218/OQ-219 minted, spend HELD** (commit `b59ec941`): scored-Snare reframed to "can
+  UKE_STORY v0.2 repair a Type-B seed?" (rev6 = the gating Ω_E1 control; fresh sources are a
+  conditional Stage 2; executor separation binding — improver ≠ blind reader); missing-floor
+  probe with "load-bearing" pre-registered. Both `blocked_on_human operator-spend-go`.
+- **Four probe sources authored + certified** (commit `434ec74d`, ~$0.12 total dry-run spend):
+  three scored-Snare in distinct instrument classes (credit standing / examination / actuarial
+  table) + one Detector-B-primary. All four Stage-0 dry-runs witnessed: `inherent_instrument
+  value="yes"` (the snares), `missing_floor present="yes"` (datum stone, primary),
+  `untranslatable_real present="yes"` on ALL FOUR, break contracts authored. **Full probe runs
+  did not run** — held for operator spend-go, against the seed→UKE_STORY chain.
+
 ## 2026-07-12 — Break-contract threading landed: stage 0 authors the break's ADDRESS; carried to stages 2/9/10 (rides R13/R14 plumbing)
 **Files:** agent/uke_narrative_orchestrator.py, agent/narrative_transform/stage0.md, agent/narrative_transform/stage2.md, agent/narrative_transform/stage9.md, agent/narrative_transform/stage10.md, python/tests/test_break_contract_threading.py
 **Tier:** landed
