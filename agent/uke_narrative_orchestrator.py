@@ -444,6 +444,27 @@ _STAGE0_CONTRACT_RE = re.compile(
     flags=re.DOTALL | re.IGNORECASE,
 )
 
+# Stage-9 falsifier hand-off (operator ruling 2026-07-12): stage 9's blind
+# falsifier finding is fed to stage 10 as a MANDATORY D9 adjudication
+# target — the externally supplied candidate D9 doesn't get to choose,
+# the same architecture as _numeric_inventory for counting. Witnessed
+# need: D9 scored 5 on the negative control by refuting a passage of its
+# own choosing while walking past the kill passage stage 9 had named.
+_S9_FALSIFIER_RE = re.compile(
+    r'^\s{0,3}(?:#{1,6}\s+)?\*{0,2}INVARIANT FALSIFIER\*{0,2}\s*:?\s*$'
+    r'(.*?)'
+    r'(?=^\s{0,3}(?:#{1,6}\s+)?\*{0,2}(?:READINESS|ROUTE)\b)',
+    flags=re.MULTILINE | re.DOTALL | re.IGNORECASE,
+)
+
+
+def _extract_stage9_falsifier(stage_9_output: str) -> str:
+    """Extract the INVARIANT FALSIFIER section from a stage-9 review.
+
+    Returns '' when the section is absent (pre-threading outputs)."""
+    m = _S9_FALSIFIER_RE.search(stage_9_output)
+    return m.group(0).strip() + "\n" if m else ""
+
 
 def _extract_invariant_contract(stage_2_output: str) -> str:
     """Extract SECTION 0: INVARIANT CONTRACT from stage 2 output ('' if absent)."""
@@ -1510,6 +1531,31 @@ class UKEOrchestrator:
                 f"=== VALIDATION MODE (computed by orchestrator; not yours "
                 f"to decide) ===\n{mode_line}\n\n"
             )
+            # D9 compose (operator ruling 2026-07-12): the blind stage-9
+            # falsifier finding is a mandatory adjudication target — an
+            # ADDITION to D9's own strongest-candidate obligation, never
+            # a replacement (a stage-9 false-negative must not become an
+            # unchallenged PASS).
+            s9 = stage_outputs.get("stage_9", "")
+            finding = _extract_stage9_falsifier(s9) if s9 else ""
+            if finding:
+                prompt_parts.append(
+                    "=== STAGE-9 BLIND FALSIFIER FINDING (carried by "
+                    "orchestrator; MANDATORY D9 adjudication target) ===\n"
+                    + finding +
+                    "\nD9 obligation: adjudicate THIS finding explicitly — "
+                    "refute the specific passage it flags against the text, "
+                    "or concede it. You may not substitute a different "
+                    "passage. This is an ADDITION to your own "
+                    "strongest-candidate obligation, never a replacement.\n\n"
+                )
+            else:
+                prompt_parts.append(
+                    "=== STAGE-9 BLIND FALSIFIER FINDING ===\n"
+                    "NOT AVAILABLE for this run. Your own "
+                    "strongest-candidate obligation stands alone — state "
+                    "explicitly that no stage-9 finding was provided.\n\n"
+                )
 
         # R8: strategy targets must respect the downstream output caps —
         # stage 6 once set a 12,500-13,000-word target against a ~12k-word

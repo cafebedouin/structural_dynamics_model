@@ -62,6 +62,13 @@ Run the contract's falsifier against the finished story:
 - 1: The invariant is absent; the injustice reads as a correctable local error.
 D9 is reported alongside the total, not summed into it (the /40 and /25 routing bands were calibrated without it); it gates through the automatic override below.
 
+**D9 WITNESS OBLIGATIONS — a D9 entry missing either subsection is INVALID; no score may be recorded without both:**
+
+1. `STRONGEST CANDIDATE (own):` Quote the single passage from the story that comes CLOSEST to violating the contract — the most recoverable-value-shaped or better-authority-shaped line you can find. This is mandatory even when you believe the invariant holds, and even when the stage-9 finding says HOLDS (a stage-9 miss must not become an unchallenged PASS). Then refute it against the text, or concede it. Picking a weak candidate is a waiver, not a finding: choose the line a hostile reviewer would choose.
+2. `STAGE-9 FINDING ADJUDICATION:` When a blind stage-9 falsifier finding is provided, adjudicate the SPECIFIC passage it flags — refute it against the text or concede it. You may not substitute a different passage. If no finding was provided, write "no stage-9 finding provided" here explicitly.
+
+A concession on either obligation caps D9 at 2. Use the two subsection labels exactly as written — downstream checks key on them.
+
 ---
 
 ### Routing
@@ -159,6 +166,10 @@ DIMENSIONAL SCORES:
   D8: [score] — [evidence]
   D9: [score] — [falsifier result + evidence] (or UNVERIFIED — contract
       not available; never N/A)
+      STRONGEST CANDIDATE (own): "[quoted passage]" — [refuted: why /
+      conceded]
+      STAGE-9 FINDING ADJUDICATION: [refuted against the text: why /
+      conceded / "no stage-9 finding provided"]
 
 TOTAL: [score]/[40 or 25] (D9 reported, not summed)
 

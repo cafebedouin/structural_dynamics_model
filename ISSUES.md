@@ -9733,9 +9733,32 @@ hallucinated with no spec on both runs — mode now orchestrator-injected). Fort
 came back LOST (expected HOLDS) — ambiguous between a genuine unchecked Part-Three reversion and
 generic-contract strictness; disambiguation = 1 call under its own SECTION 0. Arm-1 verdict
 STANDS but re-weighted onto the discriminating witnesses (blind stage-9 + operator read), not
-stage-10 D9. Full readout + proposed D9 adversarial-obligation fix (needs ruling before arm 3):
-`audits/2026-07-12_oq215_arm2_d9_control/READOUT.md`.** Arm 3 not yet run — gated on the D9
-instrument ruling.
+stage-10 D9. Full readout:
+`audits/2026-07-12_oq215_arm2_d9_control/READOUT.md`.**
+
+**Operator rulings (2026-07-12, both recorded in the READOUT appendix):**
+- **D9 instrument: BOTH fixes composed, plus the HOLDS-guard.** (i) Adversarial obligation — a D9
+  entry is INVALID without a quoted `STRONGEST CANDIDATE (own):` + refutation-or-concession; own
+  candidate mandatory even when stage 9 says HOLDS (a stage-9 false-negative must not become an
+  unchallenged PASS). (ii) Forced adjudication — stage 9's blind falsifier finding is fed to
+  stage 10 by the orchestrator as a `STAGE-9 FINDING ADJUDICATION:` target the model may not
+  substitute; stage 9 is to D9 what `_numeric_inventory` is to counting (externally supplied
+  candidate, model supplies judgment, neither waives wholesale). Concession on either caps D9
+  at 2. Landed + witnessed on all three stage-9 fixture formats.
+- **Forty-Hertz stage-9 LOST is GENUINE (reading (a)); do NOT loosen the contract to
+  disambiguate** — that would be the pipeline grading itself lenient to protect a prior pass.
+  Ruled: Forty-Hertz is a PARTIAL — Part One holds the invariant, Part Three reverts
+  (detectable-and-missed degradation = correctable-error frame); the rewrite-era "it passes"
+  checked presence, not Part Three's framing. The variance baseline must NOT treat Forty-Hertz
+  as a clean invariant-preserved exemplar. Protocol item 2's "the Forty-Hertz story must pass
+  D9" expectation is RETIRED accordingly.
+
+**Arm 3: GO (operator, 2026-07-12), with three metrics pre-registered SEPARATELY before spend**
+(full pre-registration: `audits/2026-07-12_oq215_arm3_variance/PROPOSAL.md`): (1) R2's first
+live test — `<numeric_register>` present in stage_3 + numeric-register distribution; (2) the
+ruled D9 — every run must show both witness subsections; ANY bare-5 (D9 score without them) →
+STOP THE ARM, the compose didn't take, and that finding outranks any variance number; (3)
+invariant survival — stage-9 HOLDS rate + foam-class substrate rate + R14 floor presence.
 
 **Operator witness-read notes on arm 1 (2026-07-12) — carry into arm-3 reads and revision:**
 (a) D9=5 is "defensible, precariously" — the story carries TWO reals: the clean discarded signal

@@ -64,3 +64,20 @@ D9 adversarial obligation (R5 applied to D9): a PASS requires the validator to q
 candidate is invalid. Optionally: feed stage-9's INVARIANT FALSIFIER finding into stage 10 for
 forced adjudication (changes stage-10's input topology — currently stages 9 and 10 are
 independent readers). Not applied mid-protocol; arm 3 should run on a ruled instrument.
+
+## Post-readout rulings (operator, 2026-07-12)
+
+1. **D9 fix: BOTH composed, with the HOLDS-guard.** Adversarial obligation (quoted own strongest
+   candidate, mandatory even on a stage-9 HOLDS) + forced adjudication of the stage-9 finding
+   (orchestrator-carried; may not be substituted). Rationale: the obligation alone inherits R5's
+   kill condition (quote a weak candidate, refute it, dodge the kill passage); the externally
+   supplied candidate closes it — the same architecture as `_numeric_inventory`. Concession on
+   either caps D9 at 2. Landed: `_extract_stage9_falsifier` + stage-10 injection (witnessed on
+   all three stage-9 fixture formats) + stage10.md witness obligations with checkable labels.
+2. **Forty-Hertz LOST ruled GENUINE (reading (a)).** The world-independent contract being
+   stricter than the story's own SECTION 0 is a feature — it caught that the rewrite-era "pass"
+   verified the invariant's presence (Part One) and never audited Part Three's framing
+   ("degrading the whole time… we'd caught it, we'd filed alerts" = detectable-and-missed, the
+   correctable-error frame). Forty-Hertz is relabeled a PARTIAL in all baselines. Reading (b)
+   (loosen the contract to match SECTION 0) is rejected as self-lenient grading; the
+   disambiguation rerun is NOT performed.
