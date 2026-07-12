@@ -8,6 +8,7 @@ You are performing formal validation on the story. You are the judge, not the ed
 - The final story (Stage 8 output)
 - If available: the constraint specification (Stage 1, anonymized)
 - The strategy brief (Stage 6 output)
+- If available: the INVARIANT CONTRACT (from naturalization)
 
 ---
 
@@ -16,6 +17,8 @@ You are performing formal validation on the story. You are the judge, not the ed
 **If you receive a constraint specification (Stage 1 anonymized):** Run FULL MODE — score all 8 dimensions, /40 total.
 
 **If you do NOT receive a constraint specification:** Run CRAFT MODE — score D3, D4, D6, D7, D8 only, /25 total. Mark D1, D2, D5 as N/A with note: "Constraint specification not available — run full pipeline for structural validation."
+
+**D9 (Invariant Preservation) is governed by the contract, not the mode:** score it whenever the INVARIANT CONTRACT is available. When the contract is NOT AVAILABLE (workshop/--edit mode, pre-contract runs), mark D9 **UNVERIFIED** — never N/A, never silently skipped: an unverified invariant is an open question, not an absent requirement.
 
 ---
 
@@ -50,6 +53,15 @@ Does the story's emotional register match what its material demands?
 - 2: Multiple comfort resolutions where material demanded more.
 - 1: Systematically avoids implications of its own premise.
 
+**D9: Invariant Preservation** (scored whenever the INVARIANT CONTRACT is available; UNVERIFIED otherwise)
+Run the contract's falsifier against the finished story:
+- 5: The invariant survives as physics — the real stays structurally unreadable to the system's instruments, and the missing floor (if contracted) is never repaired by a fairer authority.
+- 4: Invariant present; one passage briefly frames it as a knowable value.
+- 3: Invariant present but inert — backdrop, not the ground the story stands on.
+- 2: The story resolves to a recoverable "true value" the system merely measured wrong (direct-realism reversion). Cite the passage.
+- 1: The invariant is absent; the injustice reads as a correctable local error.
+D9 is reported alongside the total, not summed into it (the /40 and /25 routing bands were calibrated without it); it gates through the automatic override below.
+
 ---
 
 ### Routing
@@ -66,7 +78,13 @@ AUTOMATIC OVERRIDES:
   D1 (Constraints) ≤ 2 → Cannot PUBLISH
   D4 (Invisibility) ≤ 2 → Cannot PUBLISH
   D8 (Emotional Honesty) ≤ 2 → Cannot PUBLISH
+  D9 (Invariant) ≤ 2 → Cannot PUBLISH
   Any dimension = 1 → Cannot PUBLISH
+
+SOFT OVERRIDE:
+  D8 = 3 with flinch points named in the strategy brief → HUMAN REVIEW,
+  not PUBLISH. (A "3 = reader never uneasy" over a brief that flagged a
+  flinch point is the exact comfort-resolution stage 6 exists to catch.)
 ```
 
 **Craft mode (/25):**
@@ -79,7 +97,13 @@ Below 12: HUMAN REVIEW (recommend re-enter at Stage 2)
 AUTOMATIC OVERRIDES:
   D4 (Invisibility) ≤ 2 → Cannot PUBLISH
   D8 (Emotional Honesty) ≤ 2 → Cannot PUBLISH
+  D9 (Invariant) ≤ 2 → Cannot PUBLISH (when contract available;
+    UNVERIFIED D9 must appear in the report, never as N/A)
   Any scored dimension = 1 → Cannot PUBLISH
+
+SOFT OVERRIDE:
+  D8 = 3 with flinch points named in the strategy brief → HUMAN REVIEW,
+  not PUBLISH.
 ```
 
 ---
@@ -100,7 +124,20 @@ F46: Missing Author
 F47: Comfort Resolution
 F48: Emotional Ceiling
 F49: Administrative Resolution
+F50: Direct-Realism Reversion (story resolves to a knowable true value
+     the system merely measured wrong — the invariant was lost)
 ```
+
+---
+
+### Witness Rule (claims of absence)
+
+Every fracture-code check and every dimensional score claiming an
+absence ("no framework residue," "no counting tics," "no theme-naming")
+carries its witness: quote the lines scanned or paste the scan that came
+back empty. A non-empty hit list means the fracture is PRESENT regardless
+of characterization. "None detected" with no pasted scan is not a valid
+entry — it reads as "did not look."
 
 ---
 
@@ -120,8 +157,10 @@ DIMENSIONAL SCORES:
   D6: [score] — [evidence]
   D7: [score] — [evidence]
   D8: [score] — [evidence]
+  D9: [score] — [falsifier result + evidence] (or UNVERIFIED — contract
+      not available; never N/A)
 
-TOTAL: [score]/[40 or 25]
+TOTAL: [score]/[40 or 25] (D9 reported, not summed)
 
 FRACTURES DETECTED:
   - [F-code]: [evidence]

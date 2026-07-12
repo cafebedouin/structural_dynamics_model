@@ -122,6 +122,43 @@ Network contamination: Is any healthy constraint surrounded by
   degraded neighbors?
 ```
 
+**B6. Invariant Contract + Inherent-Instrument Flag (source-sighted; MANDATORY)**
+
+You are the only stage that sees the source. Two facts die in the formal
+channel unless you author them here, because the symbolic spec cannot carry
+them and every later stage is air-gapped from the source:
+
+```
+Detector A — the untranslatable real:
+  Does the source contain a real that binds everyone equally and is owned
+  by no one — something that stops being itself the instant anyone tries
+  to use, measure, or own it? (In the formalism it survives only as a
+  near-zero-ε Mountain, stripped of what it is.)
+  → One sentence, WORLD-INDEPENDENT and SURFACE-FREE (no names, no
+    occupations, no setting nouns from the source), stating the real and
+    why no instrument of the system can read it. Or "absent".
+
+Detector B — the missing floor:
+  Does the central injustice presuppose a baseline, standard, zero, or
+  partition that someone SET — a founding choice the system treats as
+  given, with no neutral ground beneath it? (This is usually deferred as
+  background and never formalized; it is INVISIBLE downstream unless you
+  write it here.)
+  → One sentence, world-independent and surface-free. Or "absent".
+
+Inherent-instrument flag:
+  Is the source constraint inherently INSTRUMENT-MEDIATED — extraction
+  running through a certified measurement, score, or reading, such that
+  removing the instrument removes the constraint?
+  → yes/no + one surface-free sentence. This flag alone licenses a
+    scored-Snare naturalization downstream; the naturalization model is
+    never allowed to decide this for itself.
+```
+
+Phrasing test before you emit: could this sentence be read by someone who
+must not learn the source's setting, era, occupation, or names? If not,
+rewrite until it can. The air gap depends on it.
+
 ---
 
 ### PHASE C: SELECTION (Three-axis budget)
@@ -205,6 +242,12 @@ Document each deferred constraint with one sentence on what structural work it d
 
   <generation_sequence>C1 → C2 → C3</generation_sequence>
 
+  <invariant_contract>
+    <untranslatable_real present="yes/no">[Detector A sentence, or "absent"]</untranslatable_real>
+    <missing_floor present="yes/no">[Detector B sentence, or "absent"]</missing_floor>
+    <inherent_instrument value="yes/no">[one surface-free sentence]</inherent_instrument>
+  </invariant_contract>
+
   <omegas>
     <omega id="[label]">[Bounded uncertainty the analysis cannot resolve]</omega>
   </omegas>
@@ -231,6 +274,12 @@ Document each deferred constraint with one sentence on what structural work it d
 ☐ No <experience> fields — classifications only, no narrative interpretation
 ☐ ε values reflect source structure, not dramatic optimization
 ☐ Story name NOT included (air gap for Stage 4)
+☐ <invariant_contract> authored: both detectors answered (a sentence or
+  the explicit word "absent" — never omitted), inherent_instrument
+  answered yes/no with its sentence
+☐ Contract phrasing is surface-free: no source names, occupations,
+  setting nouns, or era markers survive in it (it is carried through the
+  air gap verbatim)
 ```
 
 ---

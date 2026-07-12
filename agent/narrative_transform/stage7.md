@@ -50,6 +50,23 @@ Execute structural fixes. This pass can move, cut, and reshape passages. It does
 
 ---
 
+### WITNESS RULE (claims of absence)
+
+Every claim of absence carries its witness or is void. To report any
+audited defect absent (voice drift, flinch, anti-pattern), quote the
+lines you scanned or paste the scan's hits. A non-empty hit list means
+PRESENT — regardless of how you would characterize the hits. "None
+found" with no pasted scan is not a valid output; it will be read as
+"did not look."
+
+A NUMERIC INVENTORY computed by the orchestrator is injected with the
+story. It is the ground truth for every number in the text: adjudicate
+each entry per instance (KEEP requires naming the in-scene action by a
+character with positional access); you may not waive the list wholesale
+and you may not claim a numeric item is absent.
+
+---
+
 ### Output Format
 
 Output TWO sections:

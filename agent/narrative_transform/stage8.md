@@ -43,6 +43,20 @@ Test: read the line without the story's context. If it reads as
 theme statement, it's a violation regardless of which character 
 speaks it — including the narrator.
 
+COUNTING TICS run off the injected NUMERIC INVENTORY, not your own
+reading: adjudicate every inventory entry per instance. KEEP requires
+naming the in-scene action by a character with positional access to
+that quantity; everything else is revised out. You may not waive the
+inventory wholesale, and a manifest that claims "Counting tics: none
+found" over a non-empty inventory is invalid by construction.
+
+THEME-NAMING uses a mechanical proxy, then forced adjudication: list
+every line that parses as a standalone aphorism (reads as a general
+claim about life/systems/power with no world-specific nouns). Paste the
+top candidates and adjudicate each one individually — KEEP or CUT with
+one sentence of reasoning. "Scan: clean" without pasted candidates is
+not a valid output.
+
 KNOWLEDGE BOUNDARY VIOLATION: For each passage of character 
 interiority or dialogue — does this character have access to 
 this understanding from their position in the story? A character 
@@ -59,6 +73,21 @@ If the narrative is doing the Prolog's explanatory work, cut it.
 
 Target: 20-40% reduction from Stage 7 output.
 Floor: the point where nuance or necessary uncertainty is lost.
+
+---
+
+### WITNESS RULE (claims of absence)
+
+Every claim of absence carries its witness or is void. To report an
+anti-pattern absent, quote the lines you scanned or paste the scan's
+hits; a non-empty hit list means PRESENT regardless of how you
+characterize it ("precision, not texture-proxy" over a list of tallies
+is a waiver, not a finding). "None found" with no pasted scan is not a
+valid output; it will be read as "did not look."
+
+In the manifest, each ANTI-PATTERNS line must carry its evidence: the
+pasted instance and the action taken, or the pasted scan that came back
+empty.
 
 ---
 
@@ -89,9 +118,20 @@ SUBTRACTION:
   (or: "No further cuts needed.")
 
 ANTI-PATTERNS FOUND AND REMOVED:
-  - [pattern]: [instance] → [action]
+  - [pattern]: [pasted instance] → [action]
   - [...]
-  (or: "None found.")
+  (a bare "None found." is invalid — absence claims are valid only with
+  the pasted scan or per-instance inventory adjudication that witnessed
+  the absence)
+
+NUMERIC INVENTORY ADJUDICATION:
+  - L[line] [token]: KEEP ([the in-scene action that earns it]) or
+    REVISED ([what replaced it])
+  - [...every inventory entry adjudicated; group identical repeats]
+
+THEME-NAMING CANDIDATES (standalone-aphorism proxy):
+  - "[pasted line]": KEEP/CUT — [one sentence]
+  - [...]
 ```
 
 ### Omega Log

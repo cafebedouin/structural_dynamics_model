@@ -149,8 +149,8 @@ STAGE_INPUTS = {
         "stage_6": ["stage_4", "stage_5"],                                     # Strategy: story + discovery report
         "stage_7": ["stage_4", "stage_6"],                                     # Structure/rewrite: story + strategy brief
         "stage_8": ["stage_7", "stage_6"],                                     # Pacing/subtraction: revised story + strategy brief
-        "stage_9": ["stage_8"],                                                # Review: BLIND — only the edited story
-        "stage_10": ["stage_8", "stage_1_anon", "stage_6"],                   # Validation: story + spec (optional) + strategy
+        "stage_9": ["stage_8", "invariant_contract"],                          # Review: BLIND — story + invariant contract ONLY (contract carries no strategy/source info)
+        "stage_10": ["stage_8", "stage_1_anon", "stage_6", "invariant_contract"],  # Validation: story + spec (optional) + strategy + contract (D9)
     },
     "artifact": {
         "stage_0": ["source", "dr_logic"],
@@ -405,6 +405,46 @@ def _format_numeric_inventory(inv: dict, header: str) -> str:
             f"omitted ones are still violations if unearned."
         )
     return "\n".join(lines) + "\n"
+
+
+# ---------------------------------------------------------------------------
+# Invariant contract threading (R13/R14)
+#
+# Stage 2 writes SECTION 0: INVARIANT CONTRACT — previously orphaned after
+# stage 4. The orchestrator extracts it and feeds it to stages 9 and 10 so
+# the invariant has a downstream consumer. Stage 0 (the only source-sighted
+# stage) additionally authors a surface-free contract + inherent_instrument
+# flag carried into stage 2's input.
+# ---------------------------------------------------------------------------
+
+_SECTION0_HEADER_RE = re.compile(
+    r'^\s{0,3}(?:#{1,6}\s+)?\*{0,2}SECTION 0\s*[:—–-]\s*INVARIANT CONTRACT.*$',
+    flags=re.MULTILINE | re.IGNORECASE,
+)
+_SECTION1_HEADER_RE = re.compile(
+    r'^\s{0,3}(?:#{1,6}\s+)?\*{0,2}SECTION 1\b.*$',
+    flags=re.MULTILINE | re.IGNORECASE,
+)
+_STAGE0_CONTRACT_RE = re.compile(
+    r'<invariant_contract>.*?</invariant_contract>',
+    flags=re.DOTALL | re.IGNORECASE,
+)
+
+
+def _extract_invariant_contract(stage_2_output: str) -> str:
+    """Extract SECTION 0: INVARIANT CONTRACT from stage 2 output ('' if absent)."""
+    m = _SECTION0_HEADER_RE.search(stage_2_output)
+    if not m:
+        return ""
+    m2 = _SECTION1_HEADER_RE.search(stage_2_output, m.end())
+    end = m2.start() if m2 else len(stage_2_output)
+    return stage_2_output[m.start():end].strip() + "\n"
+
+
+def _extract_stage0_contract(stage_0_output: str) -> str:
+    """Extract the <invariant_contract> block from stage 0 output ('' if absent)."""
+    m = _STAGE0_CONTRACT_RE.search(stage_0_output)
+    return m.group(0) if m else ""
 
 
 _WORD_COUNT_LINE_RE = re.compile(
@@ -1341,11 +1381,15 @@ class UKEOrchestrator:
             assert "source" not in input_keys, f"Air gap violation: source in {stage}"
             assert "stage_0" not in input_keys, f"Air gap violation: stage_0 in {stage}"
 
-        # Review reads blind — enforce that stage_9 receives ONLY stage_8
+        # Review reads blind — stage_9 receives ONLY the edited story plus
+        # the invariant contract (a structural commitment + falsifier; it
+        # carries no strategy, edit-history, or source information, so
+        # blindness holds — R13).
         mode_config = PIPELINE_MODES.get(self.mode, {})
         if stage == mode_config.get("review_blind_stage"):
-            assert input_keys == ["stage_8"], (
-                f"Review blind violation: {stage} receives {input_keys}, expected ['stage_8']"
+            assert input_keys == ["stage_8", "invariant_contract"], (
+                f"Review blind violation: {stage} receives {input_keys}, "
+                f"expected ['stage_8', 'invariant_contract']"
             )
 
         prompt_parts = []
@@ -1372,6 +1416,21 @@ class UKEOrchestrator:
                 if content:
                     prompt_parts.append(
                         f"=== CONSTRAINT ENGINE REPORTS ===\n{content}\n\n"
+                    )
+            elif key == "invariant_contract":
+                content = stage_outputs.get(key, "")
+                if content:
+                    prompt_parts.append(
+                        f"=== INVARIANT CONTRACT (from naturalization; "
+                        f"carried by orchestrator) ===\n{content}\n\n"
+                    )
+                else:
+                    prompt_parts.append(
+                        "=== INVARIANT CONTRACT ===\n"
+                        "NOT AVAILABLE for this run (e.g. workshop/--edit "
+                        "mode, or a pre-contract stage 2 output). Invariant "
+                        "preservation is UNVERIFIED — say so explicitly; "
+                        "never mark it N/A or silently skip it.\n\n"
                     )
             else:
                 content = stage_outputs.get(key, "")
@@ -1829,6 +1888,23 @@ class UKEOrchestrator:
                 self._save_stage_output("stage_1_anon", stage_1_anon, result)
                 self._progress("cache", "Recomputed stage_1_anon from cached stages")
 
+            # Restore the invariant contract (R13) — recompute from a
+            # cached stage_2 if the sidecar predates contract threading.
+            cached_contract = self._load_stage_output("invariant_contract")
+            if cached_contract:
+                result.stage_outputs["invariant_contract"] = cached_contract
+                self._progress("cache", "Loaded invariant_contract from cache")
+            elif "stage_2" in result.stage_outputs:
+                contract = _extract_invariant_contract(result.stage_outputs["stage_2"])
+                if contract:
+                    result.stage_outputs["invariant_contract"] = contract
+                    self._save_stage_output("invariant_contract", contract, result)
+                    self._progress("cache", "Recomputed invariant_contract from cached stage_2")
+
+            cached_c0 = self._load_stage_output("invariant_contract_stage0")
+            if cached_c0:
+                result.stage_outputs["invariant_contract_stage0"] = cached_c0
+
             # Also restore scope_manifest for summary output
             manifest_path = self.output_dir / "scope_manifest.json"
             if manifest_path.exists():
@@ -1878,7 +1954,23 @@ class UKEOrchestrator:
             result.stage_outputs["stage_1_anon"] = stage_1_anon
             self._save_stage_output("stage_1_anon", stage_1_anon, result)
 
-            step = self._run_stage_2(stage_1_anon)
+            # R14: Stage 0 is the only source-sighted stage; it authors the
+            # Invariant Contract (Detector B is invisible in the anonymized
+            # symbolic input) and the inherent_instrument flag. Carry both
+            # into stage 2's input, name-scrubbed as an air-gap backstop
+            # (stage0.md requires surface-free phrasing).
+            contract0 = _extract_stage0_contract(stage_0_out)
+            if contract0:
+                contract0 = self._anonymize_stage_1(stage_0_out, contract0)
+                result.stage_outputs["invariant_contract_stage0"] = contract0
+                self._save_stage_output("invariant_contract_stage0", contract0, result)
+            else:
+                self._progress(
+                    "stage_2",
+                    "Stage 0 emitted no <invariant_contract> block — stage 2 "
+                    "falls back to its own Step-0 detectors")
+
+            step = self._run_stage_2(stage_1_anon, contract0)
             result.steps.append(step)
             if step.status == "error":
                 result.total_duration_s = time.time() - t0
@@ -1886,6 +1978,19 @@ class UKEOrchestrator:
                 return result
             result.stage_outputs["stage_2"] = step.data
             self._save_stage_output("stage_2", step.data, result)
+
+            # R13: SECTION 0 (INVARIANT CONTRACT) gets a downstream consumer
+            # — extract and save it for stages 9 and 10.
+            contract = _extract_invariant_contract(step.data)
+            if contract:
+                result.stage_outputs["invariant_contract"] = contract
+                self._save_stage_output("invariant_contract", contract, result)
+            else:
+                self._progress(
+                    "stage_2",
+                    "WARNING: stage 2 output has no SECTION 0 INVARIANT "
+                    "CONTRACT — stages 9/10 will run with invariant "
+                    "preservation UNVERIFIED")
 
         # ── Stage 3: Editorial Decisions (Claude) ─────────────────────
         if start_idx <= 3:
@@ -2468,17 +2573,26 @@ class UKEOrchestrator:
             text = re.sub(pat, "the source author", text, flags=re.IGNORECASE)
 
         # ── Phase 6: Log what was anonymized ──
+        # Labels ONLY — listing the original names here would carry the
+        # source identities downstream in the very text this function
+        # exists to scrub (the mapping is recoverable from the saved raw
+        # stage_1_output.md when the operator needs it).
         anon_note = (
-            f"\n\n<!-- ANONYMIZATION: {len(name_map)} character names replaced: "
-            + ", ".join(f"{k} -> {v}" for k, v in name_map.items())
+            f"\n\n<!-- ANONYMIZATION: {len(name_map)} character names replaced "
+            f"with structural labels: "
+            + ", ".join(name_map.values())
             + " -->\n"
         )
         text += anon_note
 
         return text
 
-    def _run_stage_2(self, stage_1_output: str) -> StepResult:
-        """Stage 2: Naturalization (Claude). Narrative mode."""
+    def _run_stage_2(self, stage_1_output: str, stage0_contract: str = "") -> StepResult:
+        """Stage 2: Naturalization (Claude). Narrative mode.
+
+        stage0_contract: the source-sighted Invariant Contract +
+        inherent_instrument flag from Stage 0 (R14), already name-scrubbed.
+        """
         self._progress("stage_2", "Designing naturalized context (Claude)...")
         t0 = time.time()
 
@@ -2488,6 +2602,18 @@ class UKEOrchestrator:
             stage_1_output,
             "\n\n",
         ]
+        if stage0_contract:
+            prompt_parts.extend([
+                "=== INVARIANT CONTRACT (Stage 0, source-sighted; surface-free) ===\n",
+                "Authored by the one stage that saw the source. Use it in Step 0:\n"
+                "Detector B (the missing floor) is frequently invisible in the\n"
+                "symbolic spec above — this contract carries it. The\n"
+                "inherent_instrument flag is a source-sighted FACT: it alone\n"
+                "licenses the Scored-Snare exception in the affordance gate;\n"
+                "you never decide 'it's inherent this time' yourself.\n\n",
+                stage0_contract,
+                "\n\n",
+            ])
         logic_ref = self.dr_logic_narrative or self.dr_logic
         if logic_ref:
             prompt_parts.extend([
