@@ -9714,6 +9714,11 @@ on in-scene) — so it is also a template for the meter's hard case: a character
 thesis-shaped or arithmetic-shaped line from inside their position. Flag-not-fail is the
 adjudication the meter must deliver.
 
+**Second calibration datum (2026-07-12, operator close read of OQ-215 arm 3):** rev5's
+word-arithmetic (variance-arm run 3; run↔rev correction in OQ-215) adjudicated EARNED — the
+register is shown to be REFUSED, not adopted; the assayer-read percentage is positional. Confirms
+the hard-case template above from the earned side: the meter must deliver flag-not-fail here too.
+
 **What resolution changes:** the last waivable absence-claim in the editorial audit layer becomes
 paste-or-void with mechanical ground truth; stage 8's "Theme-naming: none found" stops being
 self-certifiable.
@@ -9724,169 +9729,75 @@ self-certifiable.
 
 **Ω-type:** Ω_E (empirical: pre-registered runs against a witnessed baseline).
 
-**Status:** open — implementation landed 2026-07-11 (commit series from `600abbae`); conditional
-spend-go granted 2026-07-12 (arm 1, then stop and report). **Arm 1 RUN — verdict PASS,
-CONFIRMED by operator direct read of the full story (2026-07-12, witness not concurrence:
-operator's own numeral count matched — 3 digits, all placement-certificate IDs). **Arm 2 RUN
-(2026-07-12) — SPLIT verdict: the blind stage-9 falsifier DISCRIMINATES (Assessment → LOST with
-the kill passage named and grep-verified; ROUTE STRATEGY, exactly as pre-registered); stage-10
-D9 does NOT (scored 5 on everything incl. the negative control, quote-and-rationalize witnessed
-— cited a by-eye-recoverable true value as evidence of unrecoverability; plus FULL-mode
-hallucinated with no spec on both runs — mode now orchestrator-injected). Forty-Hertz stage-9
-came back LOST (expected HOLDS) — ambiguous between a genuine unchecked Part-Three reversion and
-generic-contract strictness; disambiguation = 1 call under its own SECTION 0. Arm-1 verdict
-STANDS but re-weighted onto the discriminating witnesses (blind stage-9 + operator read), not
-stage-10 D9. Full readout:
-`audits/2026-07-12_oq215_arm2_d9_control/READOUT.md`.**
+**Status:** resolved — 2026-07-12, closed on operator read of all three arms (two Claude-web
+comments + in-session ruling). No kill condition fired. Verdict: counting genuinely dissolved —
+arm-3 stage-8 densities 0.0/0.12/0.0/0.47/0.0 vs anchored baseline 47.6, with R2 confirmed LIVE
+(arm 3 was R2's first real exercise; arm 1's 0.48/1000 was achieved without R2 reaching stage 4 —
+stage-3 truncation, see OQ-216). Invariant held strongly 4/5, partially-via-ending on rev6; the
+arm-1 valence flinch was withdrawn as systematic on operator read; D9-adversarial conforming 4/4
+(zero bare-5s). The battery is verified against the defect it was built for.
+`NUMERIC_DENSITY_THRESHOLD` 25.0 → 10.0, variance-calibrated (improved ceiling ~0.5/1000 across
+six improved runs; defect band 37.6–47.6). **Run↔rev correction:** the five arm-3 runs are
+rev3–rev7 (rev6 = "The Platform Knows" = run 4,
+`agent/narrative_transform/uke/the_empty_pan_1783872143/`); rev2 is the arm-1 story — the close
+comments' "rev2, rev3, rev5, rev6, rev7" enumeration was off by one run; no verdict changes.
+**rev6 stage-9 HOLDS hand-checked at close: genuine** — the correctable-reading pressure (Kiran's
+representative-sample template rebuild) is foreclosed by the ending (Sokol's compliance reframe;
+"It exists. But it changes nothing"), matching the partial-via-ending call; the verdict does not
+rest on the forbidden correctable-value reading. Evidence:
+`audits/2026-07-12_oq215_arm3_variance/READOUT.md` (+ PROPOSAL.md pre-registration),
+`audits/2026-07-12_oq215_arm2_d9_control/READOUT.md`, arm-1 run `the_empty_pan_1783838645`.
 
-**Operator rulings (2026-07-12, both recorded in the READOUT appendix):**
-- **D9 instrument: BOTH fixes composed, plus the HOLDS-guard.** (i) Adversarial obligation — a D9
-  entry is INVALID without a quoted `STRONGEST CANDIDATE (own):` + refutation-or-concession; own
-  candidate mandatory even when stage 9 says HOLDS (a stage-9 false-negative must not become an
-  unchallenged PASS). (ii) Forced adjudication — stage 9's blind falsifier finding is fed to
-  stage 10 by the orchestrator as a `STAGE-9 FINDING ADJUDICATION:` target the model may not
-  substitute; stage 9 is to D9 what `_numeric_inventory` is to counting (externally supplied
-  candidate, model supplies judgment, neither waives wholesale). Concession on either caps D9
-  at 2. Landed + witnessed on all three stage-9 fixture formats.
-- **Forty-Hertz stage-9 LOST is GENUINE (reading (a)); do NOT loosen the contract to
-  disambiguate** — that would be the pipeline grading itself lenient to protect a prior pass.
-  Ruled: Forty-Hertz is a PARTIAL — Part One holds the invariant, Part Three reverts
-  (detectable-and-missed degradation = correctable-error frame); the rewrite-era "it passes"
-  checked presence, not Part Three's framing. The variance baseline must NOT treat Forty-Hertz
-  as a clean invariant-preserved exemplar. Protocol item 2's "the Forty-Hertz story must pass
-  D9" expectation is RETIRED accordingly.
+**Carried flags (not blockers):** (1) rev6 is the scored-Snare watch-case → OQ-218 (its Ω_E1
+gating control: rev6 through UKE_STORY v0.2, Path B); (2) density-green ≠ invariant-alive —
+density measures counting only, invariant survival is adjudicated by blind stage-9 + operator
+read; 0.0 is not evidence the invariant held → standing caveat wired into the orchestrator's
+inventory/gate output + `agent/uke_narrative_architecture_v0_3.md` (this close, same commit
+series).
 
-**Arm 3: RUN COMPLETE (2026-07-12) — 5/5 runs, no kill condition fired. Readout:
-`audits/2026-07-12_oq215_arm3_variance/READOUT.md`; pre-registration: PROPOSAL.md (before
-spend).** Three metrics, read separately: **M1** — `<numeric_register>` complete 5/5 (R2's first
-live firings); stage-8 densities 0.0/0.12/0.0/0.47/0.0 vs anchored baseline 47.6; six surviving
-number-words across all five runs (ordinary prose, zero numerals, zero tallies/monotones); run-3
-word-arithmetic logged to OQ-214's calibration set (assayer-read percentage = earned; closer
-"Percentage of loss. Value after extraction." shades thematic — flag-not-fail). **M2** — 4/4
-runs reaching stage 10 produced conforming D9 entries (both witness subsections; hostile own
-candidates; explicit stage-9 adjudication); zero bare-5s; run 5 exited at review (STRATEGY at
-cycle limit — designed behavior, not K2). **M3** — stage-9 HOLDS 5/5, floor authored 5/5,
-SECTION 0 present 5/5, five distinct worlds each with an in-principle-unreadable substrate.
-**Threshold recalibrated per the 2026-07-11 ruling: NUMERIC_DENSITY_THRESHOLD 25.0 → 10.0**
-(improved ceiling ~0.5/1000 across six improved runs; defect band 37.6–47.6). **REMAINING for
-close: operator reads** — refutation quality (M2), foam-class substrate adjudication (M3), run-3
-word-arithmetic, ≥1 full story read; then the close-out decision. Arm 7 (R12 A/B) optional,
-separate.
+**Still-operative rulings (kept intact per the compress exception):**
 
-**Operator witness-read notes on arm 1 (2026-07-12) — carry into arm-3 reads and revision:**
-(a) D9=5 is "defensible, precariously" — the story carries TWO reals: the clean discarded signal
-(Assessment-class, recoverable, and the middle leans correctable-error — Okonkwo's
-alternative-certification project is literally build-a-better-meter) vs the GRAIN ("grammar for
-what your hands already know"), never resolved to a value; the ending stages the
-correctable-error temptation and refuses it on-screen (Okonkwo abandons the alternative standard:
-"This will not make you money"). The 5 lives in the last two pages. (b) WATCH-ITEM the digit
-meter cannot see: word-arithmetic — "Quota minus rejections equals certified placements... Gross
-minus fees, minus rent, minus food equals what's left" (×2) — extraction-math-on-the-page in
-prose form; defensible here (Lena's own survival math, positional access, acted on), FLAG not
-fail; OQ-214's meter is the eventual tool. (c) The flinch is BROADER than the flagged F48 scene:
-the gold-crater-sunset + "the stone holds its memory whether anyone listens" consolation refrain
-closes all three section-clusters, and the finale is warm where the source was cold — the
-resleeve preserved the invariant and warmed the valence (diffuse consolation, gentler cousin of
-the multi-POV bummer). HUMAN-REVIEW-not-PUBLISH is correct routing; the 39 is not a near-miss on
-publish — the flag is the system working.
-
-**Arm 1 result (2026-07-12, run `agent/narrative_transform/uke/the_empty_pan_1783838645/`,
-story `stories/the-empty-pan_rev2.md`, ~$1.71, 2 editorial cycles):** first launch truncated
-stage 0 at the 8192 cap (Gemini thinking tokens) — fixed + fail-loud guard (`b715f3dc`), evidence
-run `1783838645`'s predecessor `1783838405`. Relaunch: Stage 0 authored the full contract
-UNPROMPTED (untranslatable_real yes / missing_floor yes / inherent_instrument yes — the King's
-Even as "certified measurement... without the official standard and the act of stamping, the
-constraint has no mechanism"), so (b) was genuinely licensed. Read against
-earned-numbers-plus-live-invariant, NOT density alone (operator ruling): (i) instrument SURVIVED
-AS MECHANISM — Sudbury Basin certification world, SSA sulfide standard as 1883 interested
-partition, extraction runs through certified readings ("Nobody buys uncertified readings") —
-while the page stayed out of the system's numbers: final density 0.48/1000 (3 numerals, all
-quoted placement-certificate IDs = institution-held documents, earned under the rift3 lens; vs
-Forty-Hertz baseline 47.6); (ii) invariant LIVE — blind stage-9 falsifier HOLDS ("formations that
-sing are not mismeasured; they're measuring something the standard was never designed to
-recognize"), stage-10 D9 = 5/5 with both falsifiers run against named passages, missing floor
-held (structural, "not correctable error", no fairer authority). 39/40 → HUMAN REVIEW on one
-named F48 flinch (SSA office scene), which matches the strategy brief's own flinch point. Spot
-checks: R9 final story manifest-free + sidecar; R7 computed 6,202 vs wc 6,207 (+trailer, 0.08%);
-R5/R6 manifest carries pasted per-instance adjudication. Note for arm 3's read: (b)'s ideal
-outcome witnessed here is instrument-in-world + near-zero page density — LOW density with a live
-instrument is the design working, not displacement (displacement = no certified measurement
-anywhere in the world).
-
-**Arm-1 CAVEAT (found post-verdict, 2026-07-12): stage_2 and stage_3 both hit their MAX_TOKENS
-caps exactly and downstream stages consumed the partial outputs silently (OQ-216).** stage_2 @
-8192: omega-log tail cut mid-word (SECTION 0/1 complete — harmless to the control). stage_3 @
-4096: blueprint truncated mid-Act-1 — no `</story_blueprint>`, and the R2 `<numeric_register>`
-field NEVER REACHED stage 4. So arm 1's 0.48/1000 was achieved by the stage-2 Scored-Snare gate +
-R1 exemplars + R6 pressure ALONE; **R2's blueprint field is untested in live fire** — arm 3 (post
-cap-raise + cap-hit guard) is its first real exercise. The verdict stands (the control tests the
-output, and both conditions were witnessed on the output), but the channel attribution is
-narrower than the design intended. Fixes: caps raised (stage_1/2/3 → 16384/16384/12288) + a
-universal cap-hit guard in `_call` (tout >= cap → fail loud; witnessed two-sided).
+- **D9 instrument: BOTH fixes composed, plus the HOLDS-guard (operator ruling 2026-07-12,
+  arm-2 READOUT appendix).** (i) Adversarial obligation — a D9 entry is INVALID without a quoted
+  `STRONGEST CANDIDATE (own):` + refutation-or-concession; own candidate mandatory even when
+  stage 9 says HOLDS (a stage-9 false-negative must not become an unchallenged PASS). (ii) Forced
+  adjudication — stage 9's blind falsifier finding is fed to stage 10 by the orchestrator as a
+  `STAGE-9 FINDING ADJUDICATION:` target the model may not substitute; stage 9 is to D9 what
+  `_numeric_inventory` is to counting. Concession on either caps D9 at 2. Stage-10 D9 is NOT a
+  discriminating witness (scored the arm-2 negative control 5/5); the discriminating witnesses
+  are blind stage-9 + operator read.
+- **Forty-Hertz stage-9 LOST is GENUINE; do NOT loosen the contract to disambiguate.** Ruled:
+  Forty-Hertz is a PARTIAL — Part One holds the invariant, Part Three reverts
+  (detectable-and-missed degradation = correctable-error frame). The variance baseline must NOT
+  treat Forty-Hertz as a clean invariant-preserved exemplar.
+- **Known meter false-positive class (rift3, witnessed 2026-07-12) — governs every future
+  density read:** `originals/rift3.md` reads 46.0/1000 — above both positives — yet is NOT the
+  defect: a gauge-owning institutional POV where every reading is taken and acted on in-scene,
+  plus numeric proper nouns. Density measures numeric REGISTER, narrower than the defect
+  (UNEARNED counting); the discriminator is R2's positional access via R6 per-instance
+  adjudication + OPEN-flag escalation (the gate never auto-rejects — a rift3-shaped revision
+  keeps its earned numbers and escalates OPEN to the operator). Read: WHO holds the number, on
+  what instrument, acting how. OQ-214 inherits this as its template problem.
+- **R3(b) conditional — evidence trail and fate:** (b) held in arm 1 (Stage-0 authored
+  `inherent_instrument: yes` unprompted; instrument survived AS MECHANISM at 0.48/1000 page
+  density; blind stage-9 HOLDS) and arm 3 (5/5, floor authored 5/5). Its fate now lives in
+  OQ-218's Ω_E1 outcome: a prettier correctable-bias story from the rev6 control drops (b) to
+  the hard ban via the standing stage2.md fallback clause ("drop to the hard ban WITH this
+  evidence, never pre-emptively") — the pre-registered evidence path executing, not a new ruling.
 
 **Priority:** 2
 
 **Deps:** blocked_on_human operator-spend-go
 
 **Origin:** 2026-07-11. The full R1–R14 plan (instruments R6/R7, witness rule R5, invariant
-threading R13/R14, counting-incentive prompt changes R1–R4, scope budget R8) is implemented but
-its kill conditions have not been run.
+threading R13/R14, counting-incentive prompt changes R1–R4, scope budget R8) was implemented with
+kill conditions pre-registered; arms run + operator-read 2026-07-12.
 
-**Protocol (pre-registered in the plan § Verification; REORDERED by operator ruling 2026-07-12 —
-spend ordered by what could invalidate the rest, falsification-first):**
-
-1. **R3(b) symmetric control FIRST (highest-information single run, most likely to fail):** run
-   Empty Pan under (b) with Stage-0 `inherent_instrument: yes`; the output must BOTH clear the R6
-   density threshold AND pass D9 — the number survives as mechanism without reverting to
-   legible-mismeasured-value (the Assessment failure) or displacing the instrument away (the
-   hard-ban failure). **If this fails, the conditional ruling collapses to the hard ban and the
-   variance arm is re-planned before further spend.** Fallback ruled in the plan: drop R3 to the
-   hard ban WITH this evidence, never pre-emptively.
-2. **R13 D9 positive control:** the pre-rewrite "Assessment"-class invariant-dropped story
-   (`agent/narrative_transform/stories/the-empty-pan_rev1.md`, run `the_empty_pan_1783474314`)
-   pushed through stages 9–10 with a contract must route STRATEGY / fail D9; the Forty-Hertz story
-   (`stories/the_empty_pan_rev1.md`) must pass D9.
-3. **Variance check (only if 1–2 hold):** 5 runs of `agent/narrative_transform/originals/the-empty-pan.md`
-   against the same spec. Invariant: foam-class substrate in most runs ⇒ stage-2 gate confirmed;
-   floor present after R14 ⇒ contract confirmed. Counting: `_numeric_inventory` density per run vs
-   the 2026-07-11 baseline (stage_4 = 37.6/1000, stage_8 = 47.6/1000, run
-   `agent/narrative_transform/uke/the_empty_pan_1783821245/`). Success = large drop PLUS operator
-   read — the meter is a proxy; vagueness that merely hides numbers is not a win.
-   **Recalibration output (operator ruling 2026-07-12): `NUMERIC_DENSITY_THRESHOLD = 25.0` is
-   PROVISIONAL — a two-point calibration with an 8-point dead band above the cleanest human prose
-   (16.3) and 12 more points below the nearest positive (37.6); it passes stories that count 2x any
-   clean control. The five fresh densities from this arm are the first real data on where
-   "improved" vs "still anchored" sits for generated output; set the threshold from them, not from
-   the two-point control.**
-4. **R5/R6 spot check (rides along with any run):** stage-8 manifests carry pasted per-instance
-   adjudication; a manifest claiming absence over a non-empty injected inventory is structurally
-   impossible.
-5. **R7 spot check:** stage-9 word-count statements match `wc -w` ±2%.
-6. **R9 spot check:** final `stories/*.md` contains no `EDIT MANIFEST` string; the run-dir sidecar does.
-7. **R12 (separate arm, never bundled):** optional `--stage-4-model` / `--stage-7-model` A/B
-   (e.g. `anthropic:claude-opus-4-8`) — flags already exist; run only after 1–6 so it doesn't
-   confound the measurement.
-
-**Known meter false-positive class (witnessed 2026-07-12, pre-spend; governs arm 3's read):**
-`originals/rift3.md` reads 46.0/1000 — above both positives — yet is NOT the defect: a
-gauge-owning institutional POV (the Warden) where every reading is taken and acted on in-scene
-(the log-vs-reading discrepancy — 12.1% logged vs 11.6% read, "Both numbers were his" — IS the
-story's hinge), plus numeric proper nouns ("Vent Fourteen" ×10, "Vent Three"). Its 2026-07-11
-calibration "exclusion" as "counting-saturated by design" was UNSOUND — the operator's agent
-pre-deciding the instrument's verdict — and is retracted; rift3 is reclassified as the witnessed
-false-positive class. Density measures numeric REGISTER, narrower than the defect (UNEARNED
-counting); the discriminator is R2's positional access, which only the R6 per-instance
-adjudication + OPEN-flag escalation can apply. The gate architecture already handles the class
-correctly (it never auto-rejects: a faithful revision of a rift3-shaped story keeps the earned
-numbers, density stays high, and it escalates OPEN to the operator). When adjudicating arm 3's
-densities, apply the same read: WHO holds the number, on what instrument, acting how. Cross-ref:
-OQ-214 inherits this as its template problem — the theme-naming analogue is a character who EARNS
-a thesis-shaped line from inside their position.
-
-**What resolution changes:** the R1–R14 changes graduate from "landed with offline wiring
-witnesses" to "verified against the defect they were built for"; R3(b) either holds or is dropped
-to the hard ban with evidence; the density threshold graduates from provisional two-point
-calibration to variance-run calibration.
+**What resolution changed:** the R1–R14 changes graduated from "landed with offline wiring
+witnesses" to "verified against the defect they were built for"; R3(b) held conditionally (the
+hard-ban fallback now rides OQ-218's Ω_E1 outcome); the density threshold graduated from
+provisional two-point calibration to variance-run calibration; posture ruled assisted-by-design
+(recorded in `docs/design/design_discipline.md`).
 
 ---
 

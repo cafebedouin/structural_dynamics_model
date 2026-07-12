@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "cbd44d19a37ad731dd1decbca27b4558974169ad",
+    "store_version": "168bc22263eb34297865f653f84d34ccc94a656a",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-12T13:19:59"
+    "generated_at": "2026-07-12T15:37:19"
   },
-  "issues_sha": "035163aa1be20453984d9cf158bb76f160e62671b48dc9c2c9518bcedc216f48",
+  "issues_sha": "431ff208a9b56e2c2e45596d3cdf23c842b378cd5477802fd6916005d19c29dd",
   "n_entries": 217,
   "active_token_set": [
     "investigating",
@@ -12,10 +12,10 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 123,
+    "resolved": 124,
     "mitigated": 15,
     "disposed": 4,
-    "open": 64,
+    "open": 63,
     "partial": 7,
     "future": 4
   },
@@ -948,20 +948,8 @@
       "summary": "Theme-naming has no deterministic backstop: build the theme-naming meter on the counting-meter template (Ω_E)",
       "deps": [],
       "cross_refs": [],
-      "mentioned_in": []
-    },
-    {
-      "id": "OQ-215",
-      "status": "open",
-      "priority": 2,
-      "summary": "Run the counting-defect verification protocol (5-run variance + three controls) over the R1–R14 changes (Ω_E)",
-      "deps": [
-        "blocked_on_human operator-spend-go"
-      ],
-      "cross_refs": [],
       "mentioned_in": [
-        "OQ-214",
-        "OQ-216"
+        "OQ-215"
       ]
     },
     {
@@ -2986,6 +2974,21 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
+    },
+    {
+      "id": "OQ-215",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "Run the counting-defect verification protocol (5-run variance + three controls) over the R1–R14 changes (Ω_E)",
+      "deps": [
+        "blocked_on_human operator-spend-go"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-214",
+        "OQ-216",
+        "OQ-218"
+      ]
     }
   ]
 }
