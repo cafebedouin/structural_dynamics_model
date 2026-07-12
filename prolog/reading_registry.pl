@@ -118,12 +118,18 @@ aggregatable_reading(cs_kernel_registry:cs_kernel_coverage/2,    kernel, total_o
 aggregatable_reading(cs_kernel_registry:cs_kernel_obstruction_status/2, kernel, total_on_domain).
 aggregatable_reading(cs_drift_engine:cs_drift_trajectory/3,      drift_story, total_on_domain).
 
+% OQ-207 stakeholder-frame H¹ (registered in the same change that added them —
+% an unregistered reading escapes the totality guard silently).
+aggregatable_reading(stakeholder_seats:stakeholder_agent_seats/2, corpus_constraint, total_on_domain).
+aggregatable_reading(stakeholder_seats:stakeholder_type_vector/2, corpus_constraint, total_on_domain).
+aggregatable_reading(stakeholder_seats:stakeholder_obstruction/5, corpus_constraint, total_on_domain).
+
 % Partial-by-design (relational; off-domain silence is the domain, not a
 % defect). The doc-named case from OQ-137's scope discriminator:
 aggregatable_reading(stakeholder_seats:in_contention/3, corpus_constraint,
     partial_by_design('relation between seats, not a per-constraint verdict; holds only where a beneficiary-side/payer pair shares a power atom')).
 aggregatable_reading(stakeholder_seats:dr_type_for_stakeholder/3, seat,
-    partial_by_design('raw per-seat computation, can fail by design; totalized wrapper = seat_perceived_vs_real/4 (Computed=untyped)')).
+    partial_by_design('raw per-seat computation, can fail by design; TWO totalized wrappers with DISTINCT absence tokens: seat_perceived_vs_real/4 (Computed=untyped, census-facing) and stakeholder_type_vector/2 (unknown, kernel-facing — the OQ-51 is_real_type filter; never unify the two tokens)')).
 aggregatable_reading(stakeholder_seats:chi_for_stakeholder/3, seat,
     partial_by_design('raw per-seat chi, same shape as dr_type_for_stakeholder/3; no totalized wrapper yet — first candidate if an aggregate ever consumes per-seat chi')).
 aggregatable_reading(stakeholder_seats:power_witness_count/3, corpus_constraint,

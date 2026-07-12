@@ -29,6 +29,9 @@
     in_contention/3,
     seat_perceived_vs_real/4,
     consensus_provenance/2,
+    stakeholder_agent_seats/2,
+    stakeholder_type_vector/2,
+    stakeholder_obstruction/5,
     q6_crosscheck/3,
     extraction_reading/2,
     extraction_state/2,
@@ -41,6 +44,10 @@
 :- use_module(narrative_ontology).
 :- use_module(constraint_indexing).
 :- use_module(drl_core).
+% OQ-207: only the PURE kernel of the cohomology module (no corpus, no cache) —
+% no import cycle (nothing in grothendieck_cohomology's dep tree imports this
+% module; verified 2026-07-12).
+:- use_module(grothendieck_cohomology, [obstruction_from_vector/3, is_real_type/1]).
 
 % Per-(C,Name) override — probe surface (mirrors directionality_override/3 one
 % level finer). Dynamic; nothing in the corpus asserts it.
@@ -156,6 +163,19 @@ seat_perceived_vs_real(C, Name, Perceived, Computed) :-
     ;   Computed = untyped                          % explicit absence, not silence
     ).
 
+%% stakeholder_agent_seats(+C, -Ns)
+%  The NON-EXCLUDED AGENT seats of C — the shared vector domain for the two
+%  seat-aggregating surfaces (consensus_provenance/2 and the OQ-207
+%  stakeholder-frame H¹). Extracted from consensus_provenance/2 so the two
+%  surfaces CANNOT fork (Build Discipline Pattern 2): a seat is in this list
+%  iff it is a constraint_stakeholder with role \= excluded that is not
+%  registered stakeholder_non_agent. TOTAL: always succeeds ([] when no such
+%  seat exists — the out-of-domain case both consumers type explicitly).
+stakeholder_agent_seats(C, Ns) :-
+    findall(N, ( narrative_ontology:constraint_stakeholder(C, N, R, _, _, _, _),
+                 R \= excluded,
+                 \+ narrative_ontology:stakeholder_non_agent(C, N) ), Ns).
+
 %% consensus_provenance(+C, -Verdict)
 %  R3 consumer (commentary-grade ONLY): did unanimity arise because the
 %  reading is situation-fixed, or because the dissenting seats were never in
@@ -171,10 +191,27 @@ seat_perceived_vs_real(C, Name, Perceived, Computed) :-
 %                       constraint with seats that simply agree.
 %    - seats_untyped  : agent seats exist but NONE derives a per-seat type — an
 %                       explicit absence, never read as unanimous.
+%
+%  COHERENCE WITH THE STAKEHOLDER-FRAME H¹ (OQ-207, operator ruling 2026-07-11):
+%  this verdict and stakeholder_obstruction/5 relate as a biconditional with
+%  named divergence cells — `unknown` is a TYPE TOKEN here (it can be unanimous
+%  or a plural member) but is FILTERED by the H¹'s OQ-51 real-seat rule:
+%    coherent   : unanimous with >=2 real-typed seats  <-> H1 = 0
+%                 plural with >=2 distinct REAL types  <-> H1 > 0
+%    cell (a)   : exactly one real-typed seat -> unanimous here, H1 = null
+%                 ("unanimity of one" — defensible flag semantics, documented).
+%    cell (b)   : all seats typed `unknown` -> unanimous here (possibly
+%                 manufactured_consensus_candidate), H1 = null. Absence read as
+%                 agreement — a WRONG verdict. KILL CONDITION: nonzero live
+%                 population in this cell makes tightening this predicate
+%                 (require >=2 real-typed seats for unanimity) an OBLIGATORY
+%                 follow-up commit (output-changing, own witness).
+%    mixed      : plural([T,unknown]) — a real type beside the unknown token;
+%                 H1 follows the REAL seats only (0 if they agree, null if <2).
+%                 Reachable (witnessed 2026-07-12); counted by the OQ-207 census.
+%  Full case table: tests/test_h1_stakeholder_spectrum.pl coherence_case/5.
 consensus_provenance(C, Verdict) :-
-    findall(N, ( narrative_ontology:constraint_stakeholder(C, N, R, _, _, _, _),
-                 R \= excluded,
-                 \+ narrative_ontology:stakeholder_non_agent(C, N) ), Ns),
+    stakeholder_agent_seats(C, Ns),
     findall(T, ( member(N, Ns), dr_type_for_stakeholder(C, N, T) ), Ts),
     sort(Ts, UniqueTypes),
     findall(X, narrative_ontology:constraint_stakeholder(C, X, excluded, _, _, _, _), Excl),
@@ -187,6 +224,81 @@ consensus_provenance(C, Verdict) :-
     ;   UniqueTypes = [_]
     ->  Verdict = unanimous_no_excluded_seats
     ;   Verdict = plural(UniqueTypes)
+    ).
+
+% ============================================================================
+% STAKEHOLDER-FRAME H¹ (OQ-207) — per-seat disagreement spectrum
+% ============================================================================
+% The second live cohomology frame: disagreement measured over WHO IS IN THE
+% STORY (the named non-excluded agent seats) rather than the four canonical
+% observer vantages. Commentary-grade (R3): annotates, never overrides
+% classification. The pure pair-counting kernel is
+% grothendieck_cohomology:obstruction_from_vector/3 — the OQ-51 rule (<2 real
+% seats -> H0 = null, H1 = null, never 0) is inherited from it, and the
+% reachable spectrum per real-seat count is the proven general-n law
+% (docs/h1_gap_spectrum_general_n.md): any value outside H(NReal) is a bug
+% witness (tests/test_h1_stakeholder_spectrum.pl enforces this on the corpus).
+
+% Memoized per constraint; registered with the central invalidation surface —
+% a stale entry read across a corpus/fixture swap fails silently as a
+% plausible number, so EVERY corpus_path overlay or fixture mutation must run
+% cache_registry:clear_all_caches (see cache_registry.pl).
+:- dynamic cached_stakeholder_obstruction/5.
+
+:- multifile cache_registry:clear_hook/0.
+cache_registry:clear_hook :- stakeholder_seats_cleanup.
+
+stakeholder_seats_cleanup :-
+    retractall(cached_stakeholder_obstruction(_, _, _, _, _)).
+
+%% stakeholder_type_vector(+C, -Vector)
+%  One type token per non-excluded agent seat (domain = stakeholder_agent_seats/2,
+%  the SAME findall consensus_provenance/2 consumes — Pattern-2 no-fork). TOTAL:
+%  always succeeds; [] when the constraint has no agent seats.
+%
+%  TWO ABSENCE TOKENS COEXIST BY DESIGN — do not unify them:
+%    - `unknown` (KERNEL-FACING, used here): the token
+%      grothendieck_cohomology:is_real_type/1 filters under the OQ-51 rule. A
+%      seat whose type derivation FAILS maps to `unknown` so the H¹ counts it
+%      as neither agreeing nor disagreeing. It lands on the same token as a
+%      seat that derives literal `unknown` (dr_type_with_d fallback) — both are
+%      untypeable for pair-counting purposes.
+%    - `untyped` (CENSUS-FACING, seat_perceived_vs_real/4 only): the explicit
+%      absence token for per-seat census read sites. It MUST NOT appear in this
+%      vector: is_real_type(untyped) is TRUE (the filter tests \== unknown), so
+%      an `untyped` here would be counted as a REAL DISAGREEING TYPE and
+%      silently inflate H¹.
+stakeholder_type_vector(C, Vector) :-
+    stakeholder_agent_seats(C, Ns),
+    maplist(seat_type_token(C), Ns, Vector).
+
+% seat_type_token(+C, +N, -T): kernel-facing token for one seat. Failed
+% derivation -> `unknown` (NEVER `untyped` — see stakeholder_type_vector/2).
+seat_type_token(C, N, T) :-
+    (   dr_type_for_stakeholder(C, N, T0)
+    ->  T = T0
+    ;   T = unknown
+    ).
+
+%% stakeholder_obstruction(+C, -H0, -H1, -NSeats, -NReal)
+%  Stakeholder-frame cohomological obstruction with its coverage IN-BAND:
+%    H0/H1   : from obstruction_from_vector/3 over the seat type vector —
+%              null/null when <2 real seats (OQ-51: UNDETERMINED, never 0).
+%    NSeats  : # non-excluded agent seats (the vector length).
+%    NReal   : # real-typed seats (is_real_type/1 survivors) — the `n` whose
+%              proven spectrum H(n) bounds H1.
+%  Zero-seat story -> (null, null, 0, 0). TOTAL: always succeeds exactly once.
+%  Coherence with consensus_provenance/2 incl. the two divergence cells: see
+%  that predicate's header (D4 case table).
+stakeholder_obstruction(C, H0, H1, NSeats, NReal) :-
+    (   cached_stakeholder_obstruction(C, CH0, CH1, CN, CNR)
+    ->  H0 = CH0, H1 = CH1, NSeats = CN, NReal = CNR
+    ;   stakeholder_type_vector(C, Vector),
+        length(Vector, NSeats),
+        include(is_real_type, Vector, RealVector),
+        length(RealVector, NReal),
+        obstruction_from_vector(Vector, H0, H1),
+        assertz(cached_stakeholder_obstruction(C, H0, H1, NSeats, NReal))
     ).
 
 %% q6_crosscheck(+C, -Cell, -Daylight)
