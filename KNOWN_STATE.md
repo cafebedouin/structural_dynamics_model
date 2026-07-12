@@ -45,6 +45,50 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-11 — UKE narrative pipeline: counting-defect plan R1–R14 landed (deterministic numeric meter, computed word counts, invariant threading, counting-incentive prompt fixes)
+**Files:** agent/uke_narrative_orchestrator.py, agent/narrative_transform/stage0.md, agent/narrative_transform/stage2.md, agent/narrative_transform/stage3.md, agent/narrative_transform/stage4.md, agent/narrative_transform/stage5.md, agent/narrative_transform/stage6.md, agent/narrative_transform/stage7.md, agent/narrative_transform/stage8.md, agent/narrative_transform/stage9.md, agent/narrative_transform/stage10.md
+**Tier:** landed
+
+Implemented the full counting-defect plan (`~/.claude/plans/we-are-evaluating-the-zany-biscuit.md`
+rev 2; Claude-web comments reconciled) in five committed phases starting at `600abbae` (precursor:
+Claude-web's stage2.md invariant-recovery rewrite + the evidence runs, incl. the witnessed
+"Forty-Hertz" counting run `the_empty_pan_1783821245`).
+
+- **Instruments (load-bearing, landed before prompt edits):** `_numeric_inventory()` — deterministic
+  extraction of numerals/number-words/count-verbs/monotone sequences, injected complete into
+  stage 7/8 prompts; model only adjudicates per instance. Post-stage-8 density gate: one targeted
+  revision call, then `NUMERIC_DENSITY_OPEN.md` (fail-visible). **Threshold 25/1000 words,
+  calibrated:** positives (must flag) stage_4=37.6, stage_8=47.6; clean human originals 2.3–16.3
+  pass; inherent-instrument source `the-empty-pan.md` 18.8 passes; rift3 (46.0, counting-saturated
+  draft) and the_waste_land (33.1, line-number artifact) excluded from calibration. All story
+  word counts now orchestrator-computed and injected ("any other figure is wrong"); stage-8 manifest
+  WORD COUNT line overwritten (model had fabricated 13,400 over a 5,927-word file and stage 9
+  reasoned from it).
+- **Invariant threading:** stage-2 SECTION 0 INVARIANT CONTRACT extracted and fed to stages 9
+  (blind falsifier; assertion now `["stage_8","invariant_contract"]`) and 10 (new D9, reported not
+  summed, D9≤2 → cannot PUBLISH; UNVERIFIED never N/A in craft mode; F50 fracture code). stage0.md
+  authors the source-sighted Detector-A/B contract + `inherent_instrument` flag (surface-free),
+  carried into stage 2.
+- **Counting incentives killed at source (R3 per operator ruling (b)):** stage3.md exemplars
+  rewritten so narrators structurally can't count (doctrine kept); numeric-register blueprint field
+  (gauge-indexed access; numbers only when acted on in-scene); stage2.md Scored-Snare
+  default-reject, exception gated on the Stage-0 flag only; stage5/6/9 stop rewarding counting
+  (ANCHOR CHECK + invariant probe).
+- **Mechanical:** final story ships without the EDIT MANIFEST (sidecar); stage4/stage7 prompt fork
+  deduped (orchestrator appends canonical craft directives at load time); dead
+  `_run_stage_5_narrative` + no-op `--skip-final-audit` removed; per-model cost table; stage-6
+  feasible-range injection from `MAX_TOKENS` (16,384 tokens ⇒ ceiling ~11,468 words).
+- **Fix-on-sight:** the stage_1_anon ANONYMIZATION note listed ORIGINAL character names (source
+  leak into stages 2/3); now labels only. Cycle-2 stage_4 slot gets story-only (manifest stripped).
+  Byte-identical dupes deleted: `stage2-original.md` (== HEAD stage2.md), `originals/the_empty_pan.md`
+  (would double-process in --batch).
+
+All wiring witnessed offline with fake providers (no spend). **Verification runs NOT yet done** —
+protocol pre-registered as **OQ-215** (blocked_on_human: spend-go): 5-run variance vs the 37.6/47.6
+baseline, R13 D9 positive control (pre-rewrite "Assessment" story must fail D9), R3(b) symmetric
+control (Empty Pan under the flag must clear the meter AND pass D9). Theme-naming meter gap minted
+as **OQ-214**.
+
 ## 2026-07-11 — OQ-188 + OQ-186 RESOLVED: pre-registered read-site flags (role-flip standing glyph; common-cause independence bit); false-cartel defensibility ruling downgraded
 **Files:** python/shared/role_flip.py, python/shared/independence.py, python/enhanced_report.py, python/tensions_ledger.py, python/evaluative_convergence.py, prolog/config.pl, prolog/tests/test_oq186_common_cause_clique.pl, python/tests/test_role_flip_flag.py
 **Tier:** landed

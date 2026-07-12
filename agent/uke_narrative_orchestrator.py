@@ -1455,6 +1455,26 @@ class UKEOrchestrator:
                         )
                     prompt_parts.append(f"=== {label} OUTPUT ===\n{content}\n\n")
 
+        # R8: strategy targets must respect the downstream output caps —
+        # stage 6 once set a 12,500-13,000-word target against a ~12k-word
+        # ceiling, and the shortfall was papered over by a fabricated
+        # count. Inject the feasible range, derived from MAX_TOKENS.
+        if self.mode == "narrative" and stage == "stage_6":
+            cap_tokens = min(self.MAX_TOKENS.get("stage_7", 16384),
+                             self.MAX_TOKENS.get("stage_8", 16384))
+            # ~0.75 words/token for English prose, minus headroom for the
+            # edit manifest the same output must carry.
+            feasible_words = int(cap_tokens * 0.70)
+            prompt_parts.append(
+                f"=== FEASIBLE RANGE (computed from output caps) ===\n"
+                f"The rewrite and pacing stages can emit at most "
+                f"{cap_tokens:,} tokens ≈ {feasible_words:,} words including "
+                f"their edit manifest. Set the SCOPE target range with a "
+                f"ceiling at or below {feasible_words:,} words — a target "
+                f"above it is physically unreachable and produces silent "
+                f"shortfalls.\n\n"
+            )
+
         # R6: the rewrite/pacing stages receive the deterministic numeric
         # inventory of the story they are editing. Extraction is the
         # orchestrator's job; the model only adjudicates per instance.

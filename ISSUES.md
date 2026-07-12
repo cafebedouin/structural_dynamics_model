@@ -9674,6 +9674,85 @@ reported defect was the wording.)
 
 ---
 
+## OQ-214 — Theme-naming has no deterministic backstop: build the theme-naming meter on the counting-meter template (Ω_E)
+
+**Ω-type:** Ω_E (mechanical: a missing instrument, with a working template to copy).
+
+**Status:** open — minted 2026-07-11 during the counting-defect implementation.
+
+**Priority:** 4
+
+**Origin:** 2026-07-11, the UKE narrative-pipeline counting-defect plan
+(`~/.claude/plans/we-are-evaluating-the-zany-biscuit.md`, "Tracked gap"; implementation landed as
+the 2026-07-11 `uke-narrative` commit series starting at `600abbae`). Counting got a deterministic
+meter (`_numeric_inventory` in `agent/uke_narrative_orchestrator.py`: orchestrator extracts every
+numeric-register item, model only adjudicates per instance, post-stage-8 density gate with
+calibrated threshold 25/1000 words). Theme-naming and Beneficiary-collapse remain governed by a
+waivable model scan — R5's paste-or-void (stage7/8/10.md WITNESS RULE + the stage-8
+standalone-aphorism proxy with forced per-candidate adjudication) raises the cost of a false
+"clean" but does not eliminate it. That is exactly the failure class the counting fix eliminated:
+an LLM self-assertion where a mechanical extraction should be.
+
+**The work:** a `_theme_inventory(text)` on the counting-meter template — mechanical candidate
+extraction (lines that parse as standalone aphorisms: general claims about life/systems/power with
+no world-specific nouns; plausible proxies: abstract-noun density, absence of scene deixis,
+sentence-initial generic subjects) injected into stages 7/8, forced per-instance KEEP/CUT
+adjudication, plus positive/negative calibration controls exactly as `NUMERIC_DENSITY_THRESHOLD`
+was calibrated (positive: a witnessed theme-naming story; negative: operator-judged clean prose).
+Known hard part: the proxy is much harder than a digit regex — expect precision problems; the
+design goal is a HIGH-RECALL candidate list the model must adjudicate, not a verdict-issuing meter.
+
+**What resolution changes:** the last waivable absence-claim in the editorial audit layer becomes
+paste-or-void with mechanical ground truth; stage 8's "Theme-naming: none found" stops being
+self-certifiable.
+
+---
+
+## OQ-215 — Run the counting-defect verification protocol (5-run variance + three controls) over the R1–R14 changes (Ω_E)
+
+**Ω-type:** Ω_E (empirical: pre-registered runs against a witnessed baseline).
+
+**Status:** open — implementation landed 2026-07-11 (commit series from `600abbae`); the runs are
+API spend and an operator read, so the go is the operator's.
+
+**Priority:** 2
+
+**Deps:** blocked_on_human operator-spend-go
+
+**Origin:** 2026-07-11. The full R1–R14 plan (instruments R6/R7, witness rule R5, invariant
+threading R13/R14, counting-incentive prompt changes R1–R4, scope budget R8) is implemented but
+its kill conditions have not been run. Protocol (pre-registered in the plan, § Verification):
+
+1. **Variance check (kill condition):** 5 runs of `agent/narrative_transform/originals/the-empty-pan.md`
+   against the same spec. Invariant: foam-class substrate in most runs ⇒ stage-2 gate confirmed;
+   floor present after R14 ⇒ contract confirmed. Counting: `_numeric_inventory` density per run vs
+   the 2026-07-11 baseline (stage_4 = 37.6/1000, stage_8 = 47.6/1000, run
+   `agent/narrative_transform/uke/the_empty_pan_1783821245/`). Success = large drop PLUS operator
+   read — the meter is a proxy; vagueness that merely hides numbers is not a win.
+2. **R5/R6:** stage-8 manifests carry pasted per-instance adjudication; a manifest claiming absence
+   over a non-empty injected inventory is structurally impossible — check one run's manifest.
+3. **R7:** stage-9 word-count statements match `wc -w` ±2%.
+4. **R9:** final `stories/*.md` contains no `EDIT MANIFEST` string; the run-dir sidecar does.
+5. **R13 positive control:** the pre-rewrite "Assessment"-class invariant-dropped story
+   (`agent/narrative_transform/stories/the-empty-pan_rev1.md`, run `the_empty_pan_1783474314`)
+   pushed through stages 9–10 with a contract must route STRATEGY / fail D9; the Forty-Hertz story
+   (`stories/the_empty_pan_rev1.md`) must pass D9.
+6. **R3(b) held, not collapsed (symmetric control — REQUIRED, else a clean counting meter over a
+   dead invariant reads as success):** run Empty Pan under (b) with Stage-0 `inherent_instrument:
+   yes`; the output must BOTH clear the R6 density threshold AND pass D9 — the number survives as
+   mechanism without reverting to legible-mismeasured-value (the Assessment failure) or displacing
+   the instrument away (the hard-ban failure). Fallback ruled in the plan: if the variance runs show
+   R6 cannot hold the line on a diegetic score, drop R3 to the hard ban WITH that evidence.
+7. **R12 (separate arm, never bundled):** optional `--stage-4-model` / `--stage-7-model` A/B
+   (e.g. `anthropic:claude-opus-4-8`) — flags already exist; run only after 1–6 so it doesn't
+   confound the measurement.
+
+**What resolution changes:** the R1–R14 changes graduate from "landed with offline wiring
+witnesses" to "verified against the defect they were built for"; R3(b) either holds or is dropped
+to the hard ban with evidence.
+
+---
+
 *Last updated: 2026-07-04. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
