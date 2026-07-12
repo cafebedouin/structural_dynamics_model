@@ -345,6 +345,20 @@ SUBTRACTION:
   Floor: the point where nuance or necessary uncertainty is lost.
 ```
 
+**Post-stage-8 numeric density gate (R6/R7, 2026-07-11; threshold recalibrated
+2026-07-12):** the orchestrator runs a deterministic numeric-register meter
+(`_numeric_inventory`) over the stage-8 story, writes the sidecar
+`numeric_inventory_stage_8.json`, and — above `NUMERIC_DENSITY_THRESHOLD`
+(10.0/1000 words) — issues one targeted revision call, then flags OPEN for the
+operator (fail-visible, never a silent loop; the gate never auto-rejects).
+
+**Standing caveat (OQ-215 close, 2026-07-12): density-green ≠ invariant-alive.**
+Density measures counting only; invariant survival is adjudicated by blind
+stage-9 + operator read. 0.0 is not evidence the invariant held. The meter is a
+proxy for numeric register, narrower than the defect (unearned counting) — a
+gauge-owning POV can read high and be earned (the rift3 false-positive class),
+and an invariant can die on a story the meter scores 0.0.
+
 ---
 
 ## Stage 9: Review

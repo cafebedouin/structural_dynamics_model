@@ -302,6 +302,14 @@ _MATH_PHRASE_RE = re.compile(r'\bthe (?:math|arithmetic)\b', flags=re.IGNORECASE
 # than the defect (UNEARNED counting). The operator read is the verdict.
 NUMERIC_DENSITY_THRESHOLD = 10.0
 
+# Standing caveat, rendered wherever a density figure is read (sidecar
+# JSON, inventory prompt block, gate summary). OQ-215 close, 2026-07-12:
+# a green density is not evidence the invariant survived.
+DENSITY_CAVEAT = (
+    "Density measures counting only; invariant survival is adjudicated by "
+    "blind stage-9 + operator read. 0.0 is not evidence the invariant held."
+)
+
 # No silent caps: if an inventory listing is truncated for prompt size,
 # the omitted count is stated in the listing itself.
 _MAX_INVENTORY_LISTING = 300
@@ -375,6 +383,7 @@ def _numeric_inventory(text: str) -> dict:
         "counts": counts,
         "density_per_1000": round(density, 2),
         "threshold": NUMERIC_DENSITY_THRESHOLD,
+        "caveat": DENSITY_CAVEAT,
         "monotone_sequences": monotone,
         "entries": entries,
     }
@@ -391,6 +400,7 @@ def _format_numeric_inventory(inv: dict, header: str) -> str:
         f"{inv['counts']['number_word']}, count-verbs: "
         f"{inv['counts']['count_verb']}, math-phrases: "
         f"{inv['counts']['math_phrase']}).",
+        f"CAVEAT: {DENSITY_CAVEAT}",
         "",
         "Adjudicate EVERY item below, per instance: KEEP only where a "
         "character with positional access to the quantity acts on it "
@@ -967,6 +977,10 @@ class UKEOrchestrator:
 
         inv = _numeric_inventory(story)
         self._save_json_sidecar("numeric_inventory_stage_8.json", inv)
+        self._progress(
+            "numeric_gate",
+            f"Stage-8 numeric density {inv['density_per_1000']:.1f}/1000 "
+            f"words (threshold {NUMERIC_DENSITY_THRESHOLD}). {DENSITY_CAVEAT}")
         if inv["density_per_1000"] > NUMERIC_DENSITY_THRESHOLD:
             self._progress(
                 "numeric_gate",
