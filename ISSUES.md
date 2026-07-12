@@ -9872,6 +9872,82 @@ source; the mcc flag can no longer fire over an all-untypeable seat set.
 
 ---
 
+## OQ-218 — Scored-Snare probe, reframed: can UKE_STORY v0.2 repair a Type-B seed? (rev6 watch-case; gates R3(b)'s fate) (Ω_E)
+
+**Ω-type:** Ω_E (pre-registered probe; decision rules authored before any run).
+
+**Status:** open — minted 2026-07-12 at the OQ-215 close; spend HELD (staging + Stage-0 dry-runs
+done; full runs only on operator spend-go).
+
+**Priority:** 2
+
+**Deps:** blocked_on_human operator-spend-go
+
+**Origin:** 2026-07-12, the OQ-215 close. Carries the rev6 watch-case flag: rev6 ("The Platform
+Knows", arm-3 run 4, `agent/narrative_transform/uke/the_empty_pan_1783872143/`) is the
+scored-Snare story the gate passed with the invariant only partial-via-ending. Question REFRAMED
+per operator ruling — not "does the gate let a rev6 through" (known: sometimes) but "can UKE_STORY
+v0.2 (`agent/uke_story_v0.2.md`) repair a Type-B seed?" All probe runs go against the
+seed→UKE_STORY chain, never the bare pipeline ("build the instrument, then spend").
+
+**Pre-registration (authored at mint, before any run; a dated
+`audits/<date>_oq218_scored_snare/PROPOSAL.md` is authored at spend time):**
+
+- **STAGE 1 — the gating positive control (= v0.2's Ω_E1):** rev6 through v0.2, **Path B
+  declared** (immanent: the platform's narration becomes a seat and its confidence the evidence —
+  rev6 does not get a better ending). Pre-registered outcomes:
+  (i) **re-founded grain** — the index becomes unreadable-in-principle — = repair confirmed,
+  Stage 2 unlocks; (ii) **prettier correctable-bias story** = downstream repair is DEAD and the
+  R3(b) conditional drops to the hard ban **via the standing stage2.md/OQ-215 fallback clause
+  ("drop to the hard ban WITH this evidence, never pre-emptively") — the pre-registered evidence
+  path executing, not a new ruling.** Spend STOPS there; Stage 2 does not run.
+- **STAGE 2 — explicitly conditional on the rev6 control passing; NOT one batch with Stage 1:**
+  2–3 fresh scored-Snare sources (distinct instrument classes — e.g. credit score, exam,
+  actuarial/insurance rating; not another platform-posture score) through seed→v0.2.
+- **Executor separation (binding):** whichever instance runs the v0.2 improvement passes, a
+  *different* party executes the §6 blind read, receiving ONLY seed + improved story — no audit
+  trail, no manifest, no deformation record. An improver who also blind-reads has pre-broken the
+  terminal gate (F-PROCESS-VOUCH) and voids the probe.
+- **Decision rule for (b), written here before any run:** R3(b) survives iff Stage 1 lands
+  re-founded grain; a prettier correctable-bias story drops (b) to the hard ban on that evidence.
+
+**What resolution changes:** either UKE_STORY v0.2 is a working Type-B repair instrument and the
+R3(b) conditional stands verified downstream, or the repair is dead and the scored-Snare hard ban
+lands with its evidence. Cross-refs: OQ-215 (carried flag + R3(b) evidence trail), v0.2 Ω_E1,
+OQ-219 (sibling probe, same spend gate).
+
+---
+
+## OQ-219 — Missing-floor / Detector-B probe: is R14's floor-contract load-bearing in output? (Ω_E)
+
+**Ω-type:** Ω_E (pre-registered single-source probe).
+
+**Status:** open — minted 2026-07-12 at the OQ-215 close; spend HELD (source staged + Stage-0
+dry-run only; full run on operator spend-go).
+
+**Priority:** 2
+
+**Deps:** blocked_on_human operator-spend-go
+
+**Origin:** 2026-07-12, the OQ-215 close. R14's floor-contract is confirmed AUTHORED (arm 3:
+floor authored 5/5) but never confirmed LOAD-BEARING in output — every arm-3 source led with a
+Detector-A grain; no run has tested whether the floor element does narrative work. Runs against
+the seed→UKE_STORY chain (same posture as OQ-218).
+
+**Pre-registration (authored at mint, before the run; dated
+`audits/<date>_oq219_missing_floor/PROPOSAL.md` at spend time):** one source whose PRIMARY
+invariant is Detector-B (missing floor). Two questions: (1) does the seed dramatize it? (2) if
+not, can UKE_STORY v0.2 dramatize a contract-only invariant? **"Load-bearing" is pre-registered
+as:** blind stage-9 names the floor unprompted, AND erasure of the floor element weakens the
+story (the §4-style erasure test). A floor authored in the contract but only decorative in the
+text = NOT load-bearing.
+
+**What resolution changes:** R14 graduates from "contract authored 5/5" to "contract does
+narrative work" — or the floor-contract is shown decorative and missing-floor dramatization
+becomes a v0.2 repair question, not a pipeline-generation claim.
+
+---
+
 *Last updated: 2026-07-12. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
