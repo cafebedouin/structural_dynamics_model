@@ -45,6 +45,40 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-12 — Break-contract threading landed: stage 0 authors the break's ADDRESS; carried to stages 2/9/10 (rides R13/R14 plumbing)
+**Files:** agent/uke_narrative_orchestrator.py, agent/narrative_transform/stage0.md, agent/narrative_transform/stage2.md, agent/narrative_transform/stage9.md, agent/narrative_transform/stage10.md, python/tests/test_break_contract_threading.py
+**Tier:** landed
+
+Posture ruling (operator, 2026-07-12): the pipeline AUTHORS the break's address;
+EXECUTION belongs to the story stages downstream. No break-execution instructions in
+stage4; no auto-reject on break-absence anywhere.
+
+- **stage0.md B6a:** source-sighted `<break_contract>` — `original_break` (expectation
+  the source violated for its first readers), `prior_status` (LIVE/DEAD), `target_prior`
+  (if DEAD, nearest living expectation the resleeve must violate; if LIVE, restated in
+  current terms). All surface-free; same phrasing test as the invariant contract.
+- **Orchestrator:** `_extract_stage0_break_contract` + `_STAGE0_BREAK_RE`; anonymized
+  via `_anonymize_stage_1` (air-gap backstop) and saved as sidecar `break_contract`;
+  cache-restore recomputes from a cached stage_0 when the sidecar predates threading.
+  STAGE_INPUTS: stage_9 blind assert is NOW
+  `["stage_8","invariant_contract","break_contract"]` (supersedes the two-element list
+  cited in the 2026-07-11 R1–R14 entry); stage_10 gains the key; stage_2 receives it
+  via `_run_stage_2(…, stage0_break)`. Generic runner has a NOT AVAILABLE fallback
+  (break presence UNVERIFIED, never N/A). `_S9_FALSIFIER_RE` lookahead now includes
+  BREAK — without it the new stage-9 BREAK section is swallowed into the D9 payload.
+- **stage2.md:** one affordance-gate line — reject a naturalization whose substrate
+  FORECLOSES the target_prior violation (world leaves the break executable; need not
+  execute it). **stage9.md:** BREAK NAMING as a reader (name from text FIRST, then
+  compare to target_prior); non-naming is a FINDING, not a failure. **stage10.md:**
+  D10 Break Presence — informational only: reported, never summed, exempt from every
+  override including the =1 rule.
+- **Witnesses:** `python/tests/test_break_contract_threading.py` 5/5 PASS (extraction
+  ± negative control; anonymization surface-free with two-sided map-driven control;
+  STAGE_INPUTS threading; falsifier-stops-before-BREAK). Dry-run Stage 0 on
+  the-empty-pan.md: `<break_contract>` authored, prior_status ruled DEAD, zero
+  source-vocabulary hits in the block (probe positive control: same sweep hits
+  Verrel/King/seal in the source-sighted remainder of the output).
+
 ## 2026-07-12 — OQ-207 RESOLVED: stakeholder-frame H¹ built, emitted, censused; D4 kill condition FIRED → OQ-217 minted; TWO ABSENCE TOKENS tripwire
 **Files:** prolog/stakeholder_seats.pl, prolog/reading_registry.pl, prolog/tests/test_h1_stakeholder_spectrum.pl, prolog/json_report.pl, python/shared/schemas.py, python/audits/oq207_stakeholder_h1_census.py, docs/h1_gap_spectrum_general_n.md
 **Tier:** tripwire

@@ -1,7 +1,7 @@
 ## STAGE 2: NATURALIZATION
 
 **Model:** Claude or equivalent creative model
-**Input:** Stage 1 symbolic specifications (anonymized) + Narrative Translation Guide (logic_narrative_translation.md) + [optional] Invariant Contract from Stage 0
+**Input:** Stage 1 symbolic specifications (anonymized) + Narrative Translation Guide (logic_narrative_translation.md) + [optional] Invariant Contract and Break Contract from Stage 0
 **Output:** A world to inhabit — and a substrate built to hold what the formalism could not carry.
 
 ### Purpose
@@ -86,6 +86,8 @@ BUT "1740 CE Chang'an, during Emperor Xuanzong's later reign, after the
 
 - **If yes → reject the setting.** It can host only a mismeasured-but-knowable real, which collapses the invariant into direct realism — a correct value the system got wrong, recoverable by a smarter meter or a fairer authority. The protein score, the exam grade, the credit rating, the algorithm's bias all fail this test. This is exactly how the invariant dies: the world is built so that the real thing is a number, and a number is always in principle readable.
 - **If no → the setting affords the invariant.** There must be a *substrate* — deep rock, an old language, a body, a dead the living carry, a practice that cannot be recorded, a name that holds only while unclaimed — that holds the real while remaining structurally unreadable to the system's measuring apparatus. Build the world's central physics there.
+
+**The break-affordance line.** If a Break Contract arrived from Stage 0, also reject any naturalization whose substrate FORECLOSES the `target_prior` violation — a world in which the contracted expectation could not be broken. The world must leave the break executable; it need not execute it (execution belongs downstream, not to you).
 
 **The Scored-Snare gate (the affordance test, extended to the Snare).**
 Scored naturalizations of the central Snare — a queue, a rating, a

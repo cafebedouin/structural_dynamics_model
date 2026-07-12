@@ -9,6 +9,7 @@ You are performing formal validation on the story. You are the judge, not the ed
 - If available: the constraint specification (Stage 1, anonymized)
 - The strategy brief (Stage 6 output)
 - If available: the INVARIANT CONTRACT (from naturalization)
+- If available: the BREAK CONTRACT (from Stage 0; surface-free)
 
 ---
 
@@ -18,7 +19,7 @@ You are performing formal validation on the story. You are the judge, not the ed
 
 **If you do NOT receive a constraint specification:** Run CRAFT MODE — score D3, D4, D6, D7, D8 only, /25 total. Mark D1, D2, D5 as N/A with note: "Constraint specification not available — run full pipeline for structural validation."
 
-**D9 (Invariant Preservation) is governed by the contract, not the mode:** score it whenever the INVARIANT CONTRACT is available. When the contract is NOT AVAILABLE (workshop/--edit mode, pre-contract runs), mark D9 **UNVERIFIED** — never N/A, never silently skipped: an unverified invariant is an open question, not an absent requirement.
+**D9 (Invariant Preservation) is governed by the contract, not the mode:** score it whenever the INVARIANT CONTRACT is available. When the contract is NOT AVAILABLE (workshop/--edit mode, pre-contract runs), mark D9 **UNVERIFIED** — never N/A, never silently skipped: an unverified invariant is an open question, not an absent requirement. **D10 (Break Presence) is likewise contract-governed:** score it whenever the BREAK CONTRACT is available; UNVERIFIED otherwise.
 
 ---
 
@@ -69,6 +70,15 @@ D9 is reported alongside the total, not summed into it (the /40 and /25 routing 
 
 A concession on either obligation caps D9 at 2. Use the two subsection labels exactly as written — downstream checks key on them.
 
+**D10: Break Presence** (informational — scored whenever the BREAK CONTRACT is available; UNVERIFIED otherwise)
+The contract names a `target_prior` — the living expectation the resleeve was to violate. Ask of the finished story: does it break that expectation for a reader?
+- 5: The target_prior violation lands in the text — a reader's live expectation is broken, and the passage can be quoted.
+- 4: The violation is present but soft, late, or partially telegraphed.
+- 3: The world affords the break (nothing forecloses it) but the story never executes it.
+- 2: The substrate forecloses the break — the contracted expectation could not have been violated in this world.
+- 1: No relation between story and contract is discernible.
+Cite the passage (or state plainly that none exists — absence of a break is a reportable finding, not a scoring failure). **D10 is score-for-information only:** reported alongside the total, never summed into it, and it triggers NO automatic override at any value — a missing or unmet break informs the human reader; it does not gate routing.
+
 ---
 
 ### Routing
@@ -87,6 +97,8 @@ AUTOMATIC OVERRIDES:
   D8 (Emotional Honesty) ≤ 2 → Cannot PUBLISH
   D9 (Invariant) ≤ 2 → Cannot PUBLISH
   Any dimension = 1 → Cannot PUBLISH
+  (D10 is exempt from every override, including the =1 rule — it is
+  informational and never gates.)
 
 SOFT OVERRIDE:
   D8 = 3 with flinch points named in the strategy brief → HUMAN REVIEW,
@@ -107,6 +119,8 @@ AUTOMATIC OVERRIDES:
   D9 (Invariant) ≤ 2 → Cannot PUBLISH (when contract available;
     UNVERIFIED D9 must appear in the report, never as N/A)
   Any scored dimension = 1 → Cannot PUBLISH
+  (D10 is exempt from every override, including the =1 rule — it is
+  informational and never gates.)
 
 SOFT OVERRIDE:
   D8 = 3 with flinch points named in the strategy brief → HUMAN REVIEW,
@@ -170,8 +184,12 @@ DIMENSIONAL SCORES:
       conceded]
       STAGE-9 FINDING ADJUDICATION: [refuted against the text: why /
       conceded / "no stage-9 finding provided"]
+  D10: [score] — [break-presence evidence: the quoted passage where the
+      target_prior breaks, or the plain statement that none exists] (or
+      UNVERIFIED — break contract not available; never N/A). Informational
+      only: never summed, never an override.
 
-TOTAL: [score]/[40 or 25] (D9 reported, not summed)
+TOTAL: [score]/[40 or 25] (D9 and D10 reported, not summed)
 
 FRACTURES DETECTED:
   - [F-code]: [evidence]

@@ -124,7 +124,7 @@ Network contamination: Is any healthy constraint surrounded by
 
 **B6. Invariant Contract + Inherent-Instrument Flag (source-sighted; MANDATORY)**
 
-You are the only stage that sees the source. Two facts die in the formal
+You are the only stage that sees the source. These facts die in the formal
 channel unless you author them here, because the symbolic spec cannot carry
 them and every later stage is air-gapped from the source:
 
@@ -153,6 +153,30 @@ Inherent-instrument flag:
   → yes/no + one surface-free sentence. This flag alone licenses a
     scored-Snare naturalization downstream; the naturalization model is
     never allowed to decide this for itself.
+```
+
+**B6a. Break Contract (source-sighted; MANDATORY)**
+
+You also author the break's ADDRESS — the expectation the story exists to
+violate. Authoring only: executing the break belongs to the story stages
+downstream; you name where it lives, never how it lands.
+
+```
+original_break:
+  The expectation this source violated for its FIRST readers — what they
+  assumed the story would do, that it then broke.
+  → One sentence, surface-free.
+
+prior_status:
+  LIVE — the break still violates a current reader's expectation.
+  DEAD — absorbed into common knowledge: a twist everyone now arrives
+  already knowing.
+  → Rule it one way or the other; never omit.
+
+target_prior:
+  If DEAD — the nearest LIVING expectation the resleeve must violate
+  instead. If LIVE — the same expectation restated in current terms.
+  → One sentence, surface-free.
 ```
 
 Phrasing test before you emit: could this sentence be read by someone who
@@ -248,6 +272,12 @@ Document each deferred constraint with one sentence on what structural work it d
     <inherent_instrument value="yes/no">[one surface-free sentence]</inherent_instrument>
   </invariant_contract>
 
+  <break_contract>
+    <original_break>[one sentence, surface-free]</original_break>
+    <prior_status>LIVE or DEAD</prior_status>
+    <target_prior>[one sentence, surface-free]</target_prior>
+  </break_contract>
+
   <omegas>
     <omega id="[label]">[Bounded uncertainty the analysis cannot resolve]</omega>
   </omegas>
@@ -277,9 +307,11 @@ Document each deferred constraint with one sentence on what structural work it d
 ☐ <invariant_contract> authored: both detectors answered (a sentence or
   the explicit word "absent" — never omitted), inherent_instrument
   answered yes/no with its sentence
+☐ <break_contract> authored: original_break named, prior_status ruled
+  LIVE or DEAD, target_prior stated — all three present, never omitted
 ☐ Contract phrasing is surface-free: no source names, occupations,
   setting nouns, or era markers survive in it (it is carried through the
-  air gap verbatim)
+  air gap verbatim); this test covers the break contract too
 ```
 
 ---

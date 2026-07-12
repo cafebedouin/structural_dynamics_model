@@ -142,15 +142,15 @@ STAGE_INPUTS = {
     "narrative": {
         "stage_0": ["source", "dr_logic_symbolic"],
         "stage_1": ["stage_0", "dr_logic_symbolic"],
-        "stage_2": ["stage_1_anon", "dr_logic_narrative"],
+        "stage_2": ["stage_1_anon", "dr_logic_narrative", "break_contract"],  # break_contract: documented flow; _run_stage_2 (the actual runner) mirrors it
         "stage_3": ["stage_1_anon", "stage_2"],                               # NO logic ref
         "stage_4": ["stage_2", "stage_3"],                                     # AIR GAP: no source, no stage_0, no stage_1, no logic ref
         "stage_5": ["stage_4", "constraint_reports"],                          # Discovery: story + engine reports (if available)
         "stage_6": ["stage_4", "stage_5"],                                     # Strategy: story + discovery report
         "stage_7": ["stage_4", "stage_6"],                                     # Structure/rewrite: story + strategy brief
         "stage_8": ["stage_7", "stage_6"],                                     # Pacing/subtraction: revised story + strategy brief
-        "stage_9": ["stage_8", "invariant_contract"],                          # Review: BLIND — story + invariant contract ONLY (contract carries no strategy/source info)
-        "stage_10": ["stage_8", "stage_1_anon", "stage_6", "invariant_contract"],  # Validation: story + spec (optional) + strategy + contract (D9)
+        "stage_9": ["stage_8", "invariant_contract", "break_contract"],       # Review: BLIND — story + the two contracts ONLY (both are surface-free, no strategy/source info)
+        "stage_10": ["stage_8", "stage_1_anon", "stage_6", "invariant_contract", "break_contract"],  # Validation: story + spec (optional) + strategy + contracts (D9/D10)
     },
     "artifact": {
         "stage_0": ["source", "dr_logic"],
@@ -446,6 +446,14 @@ _STAGE0_CONTRACT_RE = re.compile(
     r'<invariant_contract>.*?</invariant_contract>',
     flags=re.DOTALL | re.IGNORECASE,
 )
+# Break contract (rides the R14 plumbing): stage 0 authors the break's
+# ADDRESS (original_break / prior_status / target_prior, surface-free);
+# execution belongs to the story stages downstream. Carried to stages
+# 2 (affordance gate), 9 (break naming), 10 (D10, informational).
+_STAGE0_BREAK_RE = re.compile(
+    r'<break_contract>.*?</break_contract>',
+    flags=re.DOTALL | re.IGNORECASE,
+)
 
 # Stage-9 falsifier hand-off (operator ruling 2026-07-12): stage 9's blind
 # falsifier finding is fed to stage 10 as a MANDATORY D9 adjudication
@@ -456,7 +464,11 @@ _STAGE0_CONTRACT_RE = re.compile(
 _S9_FALSIFIER_RE = re.compile(
     r'^\s{0,3}(?:#{1,6}\s+)?\*{0,2}INVARIANT FALSIFIER\*{0,2}\s*:?\s*$'
     r'(.*?)'
-    r'(?=^\s{0,3}(?:#{1,6}\s+)?\*{0,2}(?:READINESS|ROUTE)\b)',
+    # BREAK is in the alternatives because stage 9's output format places
+    # its BREAK section between INVARIANT FALSIFIER and READINESS — without
+    # it the falsifier extraction swallows the break finding into the D9
+    # payload.
+    r'(?=^\s{0,3}(?:#{1,6}\s+)?\*{0,2}(?:BREAK|READINESS|ROUTE)\b)',
     flags=re.MULTILINE | re.DOTALL | re.IGNORECASE,
 )
 
@@ -482,6 +494,12 @@ def _extract_invariant_contract(stage_2_output: str) -> str:
 def _extract_stage0_contract(stage_0_output: str) -> str:
     """Extract the <invariant_contract> block from stage 0 output ('' if absent)."""
     m = _STAGE0_CONTRACT_RE.search(stage_0_output)
+    return m.group(0) if m else ""
+
+
+def _extract_stage0_break_contract(stage_0_output: str) -> str:
+    """Extract the <break_contract> block from stage 0 output ('' if absent)."""
+    m = _STAGE0_BREAK_RE.search(stage_0_output)
     return m.group(0) if m else ""
 
 
@@ -1443,14 +1461,14 @@ class UKEOrchestrator:
             assert "stage_0" not in input_keys, f"Air gap violation: stage_0 in {stage}"
 
         # Review reads blind — stage_9 receives ONLY the edited story plus
-        # the invariant contract (a structural commitment + falsifier; it
-        # carries no strategy, edit-history, or source information, so
-        # blindness holds — R13).
+        # the two contracts (structural commitments + falsifiers; both are
+        # surface-free and carry no strategy, edit-history, or source
+        # information, so blindness holds — R13 / break threading).
         mode_config = PIPELINE_MODES.get(self.mode, {})
         if stage == mode_config.get("review_blind_stage"):
-            assert input_keys == ["stage_8", "invariant_contract"], (
+            assert input_keys == ["stage_8", "invariant_contract", "break_contract"], (
                 f"Review blind violation: {stage} receives {input_keys}, "
-                f"expected ['stage_8', 'invariant_contract']"
+                f"expected ['stage_8', 'invariant_contract', 'break_contract']"
             )
 
         prompt_parts = []
@@ -1491,6 +1509,22 @@ class UKEOrchestrator:
                         "NOT AVAILABLE for this run (e.g. workshop/--edit "
                         "mode, or a pre-contract stage 2 output). Invariant "
                         "preservation is UNVERIFIED — say so explicitly; "
+                        "never mark it N/A or silently skip it.\n\n"
+                    )
+            elif key == "break_contract":
+                content = stage_outputs.get(key, "")
+                if content:
+                    prompt_parts.append(
+                        f"=== BREAK CONTRACT (Stage 0, source-sighted; "
+                        f"surface-free; carried by orchestrator) ===\n"
+                        f"{content}\n\n"
+                    )
+                else:
+                    prompt_parts.append(
+                        "=== BREAK CONTRACT ===\n"
+                        "NOT AVAILABLE for this run (e.g. workshop/--edit "
+                        "mode, or a pre-break-contract stage 0 output). "
+                        "Break presence is UNVERIFIED — say so explicitly; "
                         "never mark it N/A or silently skip it.\n\n"
                     )
             else:
@@ -2030,6 +2064,24 @@ class UKEOrchestrator:
             if cached_c0:
                 result.stage_outputs["invariant_contract_stage0"] = cached_c0
 
+            # Restore the break contract — recompute from a cached
+            # stage_0 if the sidecar predates break threading.
+            cached_break = self._load_stage_output("break_contract")
+            if cached_break:
+                result.stage_outputs["break_contract"] = cached_break
+                self._progress("cache", "Loaded break_contract from cache")
+            elif "stage_0" in result.stage_outputs:
+                break0 = _extract_stage0_break_contract(
+                    result.stage_outputs["stage_0"])
+                if break0:
+                    break0 = self._anonymize_stage_1(
+                        result.stage_outputs["stage_0"], break0)
+                    result.stage_outputs["break_contract"] = break0
+                    self._save_stage_output("break_contract", break0, result)
+                    self._progress(
+                        "cache",
+                        "Recomputed break_contract from cached stage_0")
+
             # Also restore scope_manifest for summary output
             manifest_path = self.output_dir / "scope_manifest.json"
             if manifest_path.exists():
@@ -2095,7 +2147,22 @@ class UKEOrchestrator:
                     "Stage 0 emitted no <invariant_contract> block — stage 2 "
                     "falls back to its own Step-0 detectors")
 
-            step = self._run_stage_2(stage_1_anon, contract0)
+            # Break contract (rides R14): stage 0 authors the break's
+            # address; anonymize as the same air-gap backstop and carry
+            # to stage 2 (affordance gate) and stages 9/10 (via
+            # STAGE_INPUTS key "break_contract").
+            break0 = _extract_stage0_break_contract(stage_0_out)
+            if break0:
+                break0 = self._anonymize_stage_1(stage_0_out, break0)
+                result.stage_outputs["break_contract"] = break0
+                self._save_stage_output("break_contract", break0, result)
+            else:
+                self._progress(
+                    "stage_2",
+                    "Stage 0 emitted no <break_contract> block — break "
+                    "presence will be UNVERIFIED downstream")
+
+            step = self._run_stage_2(stage_1_anon, contract0, break0)
             result.steps.append(step)
             if step.status == "error":
                 result.total_duration_s = time.time() - t0
@@ -2732,11 +2799,16 @@ class UKEOrchestrator:
 
         return text
 
-    def _run_stage_2(self, stage_1_output: str, stage0_contract: str = "") -> StepResult:
+    def _run_stage_2(self, stage_1_output: str, stage0_contract: str = "",
+                     stage0_break: str = "") -> StepResult:
         """Stage 2: Naturalization (Claude). Narrative mode.
 
         stage0_contract: the source-sighted Invariant Contract +
         inherent_instrument flag from Stage 0 (R14), already name-scrubbed.
+        stage0_break: the source-sighted Break Contract (original_break /
+        prior_status / target_prior), already name-scrubbed. Stage 2's
+        only obligation on it is the affordance gate — the world must
+        leave the target_prior violation executable.
         """
         self._progress("stage_2", "Designing naturalized context (Claude)...")
         t0 = time.time()
@@ -2757,6 +2829,18 @@ class UKEOrchestrator:
                 "licenses the Scored-Snare exception in the affordance gate;\n"
                 "you never decide 'it's inherent this time' yourself.\n\n",
                 stage0_contract,
+                "\n\n",
+            ])
+        if stage0_break:
+            prompt_parts.extend([
+                "=== BREAK CONTRACT (Stage 0, source-sighted; surface-free) ===\n",
+                "The break's ADDRESS, authored by the one stage that saw the\n"
+                "source; executing the break belongs to the story stages\n"
+                "downstream, never to you. Your one obligation is the\n"
+                "affordance gate: reject any naturalization whose substrate\n"
+                "FORECLOSES the target_prior violation. The world must leave\n"
+                "the break executable; it need not execute it.\n\n",
+                stage0_break,
                 "\n\n",
             ])
         logic_ref = self.dr_logic_narrative or self.dr_logic
