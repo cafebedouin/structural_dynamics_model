@@ -1,0 +1,30 @@
+T (real type tokens, derived from code) = 7
+
+[testsets] n_corpus=135 numbered=108 null=27 (denominators: rates below are over n_corpus=135)
+  null-cause strata (n_in_domain=27): {'no_agent_seats': 26, 'seats_untyped': 0, 'single_real_seat': 0, 'all_unknown_cell_b': 1}
+  mcc cells (n_in_domain=135): {'coherent_plural': 64, 'no_agent_seats': 26, 'coherent_unanimous': 25, 'mixed_plural_unknown': 19, 'cell_b_all_unknown': 1}
+  violations: spectrum=0 null_rule=0 incoherent=0 table_exhausted=0
+
+[testsets_haiku] n_corpus=960 numbered=484 null=476 (denominators: rates below are over n_corpus=960)
+  null-cause strata (n_in_domain=476): {'no_agent_seats': 466, 'seats_untyped': 0, 'single_real_seat': 10, 'all_unknown_cell_b': 0}
+  mcc cells (n_in_domain=960): {'no_agent_seats': 466, 'coherent_plural': 368, 'mixed_plural_unknown': 66, 'coherent_unanimous': 60}
+  violations: spectrum=0 null_rule=0 incoherent=0 table_exhausted=0
+
+[testsets_flash] n_corpus=960 numbered=724 null=236 (denominators: rates below are over n_corpus=960)
+  null-cause strata (n_in_domain=236): {'no_agent_seats': 212, 'seats_untyped': 0, 'single_real_seat': 21, 'all_unknown_cell_b': 3}
+  mcc cells (n_in_domain=960): {'coherent_plural': 478, 'mixed_plural_unknown': 129, 'no_agent_seats': 212, 'coherent_unanimous': 137, 'cell_b_all_unknown': 3, 'cell_a_single_real': 1}
+  violations: spectrum=0 null_rule=0 incoherent=0 table_exhausted=0
+
+[kernel_v1] n_corpus=1106 numbered=0 null=1106 (denominators: rates below are over n_corpus=1106)
+  null-cause strata (n_in_domain=1106): {'no_agent_seats': 1106, 'seats_untyped': 0, 'single_real_seat': 0, 'all_unknown_cell_b': 0}
+  mcc cells (n_in_domain=1106): {'no_agent_seats': 1106}
+  violations: spectrum=0 null_rule=0 incoherent=0 table_exhausted=0
+
+[control] kernel_v1 all-(null,null,0,0): n=1106 PASS
+[control] planted violation (id=ability_ceiling_reading, h1->1 at n_real=5): FLAGGED - PASS
+[report] zero-seat vs OQ-202 mint strata (drift = finding, not failure): {'testsets': {'mint': 26, 'now': 26, 'drift': 0}, 'testsets_haiku': {'mint': 466, 'now': 466, 'drift': 0}, 'testsets_flash': {'mint': 212, 'now': 212, 'drift': 0}}
+
+[kill-condition] cell (b) live population: {'testsets': 1, 'testsets_haiku': 0, 'testsets_flash': 3} -> TRIGGERED: consensus_provenance tightening is now an OBLIGATORY follow-up
+
+census -> /home/scott/bin/structural_dynamics_model/outputs/oq207_census/census.json
+VERDICT: PASS
