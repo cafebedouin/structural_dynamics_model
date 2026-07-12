@@ -471,6 +471,21 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     ;   format(S, '      "h1_band": null,~n', [])
     ),
 
+    % h1_stakeholder (OQ-207: stakeholder-frame obstruction — disagreement over
+    % the named non-excluded agent seats, coverage in-band). null = UNDETERMINED
+    % (<2 real-typed seats, OQ-51), never 0. n_real is the `n` whose proven
+    % spectrum H(n) bounds the value (docs/h1_gap_spectrum_general_n.md).
+    % H1 fields ONLY (D6): the mcc verdict is OQ-204's surface — one verdict,
+    % one serialization site; no copy here.
+    (   catch(stakeholder_seats:stakeholder_obstruction(C, _SH0, SH1, SNSeats, SNReal), _, fail)
+    ->  format(S, '      "h1_stakeholder": ~w,~n', [SH1]),
+        format(S, '      "h1_stakeholder_n_seats": ~w,~n', [SNSeats]),
+        format(S, '      "h1_stakeholder_n_real": ~w,~n', [SNReal])
+    ;   format(S, '      "h1_stakeholder": null,~n', []),
+        format(S, '      "h1_stakeholder_n_seats": null,~n', []),
+        format(S, '      "h1_stakeholder_n_real": null,~n', [])
+    ),
+
     % sheaf_status (discrete gluing regime: genuine_sheaf / fragile_presheaf /
     % manifest_presheaf / undetermined — OQ-51 N/A)
     (   catch(sheaf_analysis:sheaf_status(C, SheafStatus), _, fail)

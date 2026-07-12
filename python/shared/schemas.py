@@ -71,6 +71,9 @@ class PipelineConstraint:
     maxent_indexed: dict | None = None            # indexed-mode distribution {context, distribution, entropy, top_type, top_prob}
     maxent_divergence: dict | None = None         # {total_variation, interpretation}
     h1_band: int = 0                              # cohomological obstruction band [0..6]
+    h1_stakeholder: int | None = None             # OQ-207 stakeholder-frame H1; null = UNDETERMINED (<2 real seats, OQ-51), never 0
+    h1_stakeholder_n_seats: int | None = None     # non-excluded agent seats (vector length); null only on emission failure
+    h1_stakeholder_n_real: int | None = None      # real-typed seats — the n whose spectrum H(n) bounds h1_stakeholder
 
     # --- Structural objects ---
     coupling: dict = field(default_factory=dict)   # {category: str, score: float, boltzmann: str}
@@ -212,6 +215,10 @@ PIPELINE_FIELDS = [
     ("maxent_indexed",              dict,         True),   # null when indexed run unavailable
     ("maxent_divergence",           dict,         True),   # null when either mode missing
     ("h1_band",                     int,          True),   # OQ-51: null = undetermined (<2 real seats; the obstruction is N/A, not 0)
+    # --- Stakeholder-frame H1 (OQ-207): disagreement over named agent seats, coverage in-band ---
+    ("h1_stakeholder",              int,          True),   # OQ-51 rule inherited: null = undetermined, never 0
+    ("h1_stakeholder_n_seats",      int,          True),   # null only on emission failure (all three null together)
+    ("h1_stakeholder_n_real",       int,          True),   # bounds: h1_stakeholder in proven H(n_real)
     ("sheaf_status",                str,          True),   # null if sheaf_analysis:sheaf_status/2 fails
     ("sheaf_undetermined_reason",   str,          True),   # OQ-51: insufficient_seats|uncomputable_height; null unless sheaf_status==undetermined
     ("drift_events",                list,         False),
@@ -434,6 +441,19 @@ def _check_structure(entry, cid):
     h1 = entry.get("h1_band")
     if isinstance(h1, int) and not (0 <= h1 <= 6):
         errors.append(f"[{cid}] h1_band={h1}, expected [0..6]")
+
+    # h1_stakeholder consistency (OQ-207). Do NOT read via `.get(..., 0)` /
+    # `or 0` downstream: null means UNDETERMINED, never 0 (OQ-51).
+    h1s = entry.get("h1_stakeholder")
+    ns = entry.get("h1_stakeholder_n_seats")
+    nr = entry.get("h1_stakeholder_n_real")
+    if isinstance(ns, int) and isinstance(nr, int) and nr > ns:
+        errors.append(f"[{cid}] h1_stakeholder_n_real={nr} > n_seats={ns}")
+    if isinstance(h1s, int):
+        if not isinstance(nr, int) or nr < 2:
+            errors.append(f"[{cid}] h1_stakeholder={h1s} with n_real={nr} (<2 real seats must be null)")
+        elif not (0 <= h1s <= nr * (nr - 1) // 2):
+            errors.append(f"[{cid}] h1_stakeholder={h1s} outside [0..C({nr},2)]")
 
     # diagnostic_verdict structure
     dv = entry.get("diagnostic_verdict")
