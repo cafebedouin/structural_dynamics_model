@@ -9753,12 +9753,22 @@ stage-10 D9. Full readout:
   as a clean invariant-preserved exemplar. Protocol item 2's "the Forty-Hertz story must pass
   D9" expectation is RETIRED accordingly.
 
-**Arm 3: GO (operator, 2026-07-12), with three metrics pre-registered SEPARATELY before spend**
-(full pre-registration: `audits/2026-07-12_oq215_arm3_variance/PROPOSAL.md`): (1) R2's first
-live test — `<numeric_register>` present in stage_3 + numeric-register distribution; (2) the
-ruled D9 — every run must show both witness subsections; ANY bare-5 (D9 score without them) →
-STOP THE ARM, the compose didn't take, and that finding outranks any variance number; (3)
-invariant survival — stage-9 HOLDS rate + foam-class substrate rate + R14 floor presence.
+**Arm 3: RUN COMPLETE (2026-07-12) — 5/5 runs, no kill condition fired. Readout:
+`audits/2026-07-12_oq215_arm3_variance/READOUT.md`; pre-registration: PROPOSAL.md (before
+spend).** Three metrics, read separately: **M1** — `<numeric_register>` complete 5/5 (R2's first
+live firings); stage-8 densities 0.0/0.12/0.0/0.47/0.0 vs anchored baseline 47.6; six surviving
+number-words across all five runs (ordinary prose, zero numerals, zero tallies/monotones); run-3
+word-arithmetic logged to OQ-214's calibration set (assayer-read percentage = earned; closer
+"Percentage of loss. Value after extraction." shades thematic — flag-not-fail). **M2** — 4/4
+runs reaching stage 10 produced conforming D9 entries (both witness subsections; hostile own
+candidates; explicit stage-9 adjudication); zero bare-5s; run 5 exited at review (STRATEGY at
+cycle limit — designed behavior, not K2). **M3** — stage-9 HOLDS 5/5, floor authored 5/5,
+SECTION 0 present 5/5, five distinct worlds each with an in-principle-unreadable substrate.
+**Threshold recalibrated per the 2026-07-11 ruling: NUMERIC_DENSITY_THRESHOLD 25.0 → 10.0**
+(improved ceiling ~0.5/1000 across six improved runs; defect band 37.6–47.6). **REMAINING for
+close: operator reads** — refutation quality (M2), foam-class substrate adjudication (M3), run-3
+word-arithmetic, ≥1 full story read; then the close-out decision. Arm 7 (R12 A/B) optional,
+separate.
 
 **Operator witness-read notes on arm 1 (2026-07-12) — carry into arm-3 reads and revision:**
 (a) D9=5 is "defensible, precariously" — the story carries TWO reals: the clean discarded signal

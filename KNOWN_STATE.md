@@ -45,6 +45,23 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-12 — OQ-215 arm 3 COMPLETE: 5/5 variance runs, R2 live for the first time, composed D9 conforming, invariant HOLDS 5/5; threshold recalibrated 25→10
+**Files:** agent/uke_narrative_orchestrator.py, python/audits/oq215_arm3_variance.py, audits/2026-07-12_oq215_arm3_variance/
+**Tier:** landed
+
+Five serial full-pipeline runs of the-empty-pan.md at the post-ruling instrument state
+(pre-registered PROPOSAL.md; driver-enforced kill conditions; neither fired). Read separately:
+**M1** `<numeric_register>` complete 5/5 (first live firings — arm 1's was truncated off);
+stage-8 densities 0.0/0.12/0.0/0.47/0.0 vs anchored 47.6; six surviving number-words total,
+all ordinary prose. **M2** 4/4 stage-10 runs produced conforming D9 (both witness subsections,
+hostile own candidates, explicit stage-9 adjudication; zero bare-5s); run 5 exited at review
+(STRATEGY at cycle limit — designed). **M3** blind falsifier HOLDS 5/5, floor authored 5/5,
+five distinct instrument-unreadable substrates. **NUMERIC_DENSITY_THRESHOLD recalibrated
+25.0 → 10.0** per the 2026-07-11 ruling (improved ceiling ~0.5/1000 over six improved runs;
+defect band 37.6–47.6). Run-3 word-arithmetic logged to OQ-214's calibration set. Remaining
+for OQ-215 close: operator reads (refutation quality, foam-class substrates, ≥1 full story) +
+close-out. Readout: `audits/2026-07-12_oq215_arm3_variance/READOUT.md`.
+
 ## 2026-07-12 — OQ-215 arms 1–2 run: R3(b) holds (operator-witnessed); blind falsifier discriminates, stage-10 D9 does not; truncation class fixed (caps + cap-hit guard + mode injection)
 **Files:** agent/uke_narrative_orchestrator.py, agent/narrative_transform/stories/the-empty-pan_rev2.md, audits/2026-07-12_oq215_arm2_d9_control/
 **Tier:** landed

@@ -273,14 +273,17 @@ _MATH_PHRASE_RE = re.compile(r'\bthe (?:math|arithmetic)\b', flags=re.IGNORECASE
 # Density threshold (numerals + number-words per 1,000 story words) above
 # which the post-stage-8 gate fires.
 #
-# PROVISIONAL (operator ruling 2026-07-12): set from a two-point control,
-# to be RECALIBRATED from the OQ-215 five-run variance densities — those
-# runs are the first data on where "improved" vs "still anchored" actually
-# sits for generated output. Do not treat 25.0 as settled. Known slack:
-# clean human prose tops out at 16.3 and the nearest positive is 37.6, so
-# this gate passes stories counting 2x any clean control.
+# RECALIBRATED from the OQ-215 arm-3 variance runs (operator ruling
+# 2026-07-11: "set the threshold from them, not from the two-point
+# control"). Witnessed stage-8 densities of improved generated output:
+# 0.0, 0.12, 0.0, 0.47, 0.0 (five arm-3 runs) + 0.48 (arm 1) — the
+# improved ceiling is ~0.5/1000. The anchored defect sits at 37.6-47.6.
+# 10.0 is 20x the improved ceiling and far below the defect band; a
+# hypothetical legitimate earned-instrument story tripping it costs one
+# revision call + an OPEN read (the gate escalates, never auto-rejects),
+# which is the designed behavior for the rift3-class false positive.
 #
-# Calibration record (2026-07-11, amended 2026-07-12):
+# Original calibration record (2026-07-11, amended 2026-07-12):
 #   positive controls (flag): uke/the_empty_pan_1783821245
 #     stage_4_output.md = 37.6, stage_8_output.md = 47.6 (powerless POV
 #     tallying ambiently — the knowledge-boundary violation)
@@ -297,7 +300,7 @@ _MATH_PHRASE_RE = re.compile(r'\bthe (?:math|arithmetic)\b', flags=re.IGNORECASE
 #     the gate escalates to the operator, it never auto-rejects.
 # The meter is a proxy for numeric REGISTER DENSITY, which is narrower
 # than the defect (UNEARNED counting). The operator read is the verdict.
-NUMERIC_DENSITY_THRESHOLD = 25.0
+NUMERIC_DENSITY_THRESHOLD = 10.0
 
 # No silent caps: if an inventory listing is truncated for prompt size,
 # the omitted count is stated in the listing itself.
