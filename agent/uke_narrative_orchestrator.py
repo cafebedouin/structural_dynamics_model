@@ -801,7 +801,12 @@ class UKEOrchestrator:
     }
 
     MAX_TOKENS = {
-        "stage_0":  8192,
+        # Gemini 2.5 Pro's thinking tokens count against max_output_tokens;
+        # at 8192 the R14 contract block (end of the manifest) was truncated
+        # off (witnessed 2026-07-12: output cut mid-tag at 4.5KB while the
+        # same-cap baseline completed at 6.9KB). Headroom is cheap; the
+        # truncation guard in _run_stage_0 fails loud if it ever recurs.
+        "stage_0":  24576,
         "stage_1":  8192,
         "stage_2":  8192,
         "stage_3":  4096,
@@ -2404,6 +2409,26 @@ class UKEOrchestrator:
 
         try:
             text, tin, tout, model, provider = self._call("stage_0", prompt)
+            # Truncation guard: a stage-0 output cut off mid-manifest
+            # (thinking tokens exhausting max_output_tokens) silently costs
+            # the run its generation_sequence, deferred constraints, and
+            # R14 invariant contract. Fail loud instead (witnessed
+            # 2026-07-12: output ended mid-tag at </selection_reason).
+            if "<constraint_manifest>" in text and "</constraint_manifest>" not in text:
+                self._progress(
+                    "stage_0",
+                    "TRUNCATED: manifest opened but never closed "
+                    f"({len(text)} chars, {tout} output tokens) — raise "
+                    "MAX_TOKENS['stage_0'] or reduce the task")
+                return StepResult(
+                    step="stage_0", status="error",
+                    error="stage 0 output truncated mid-manifest "
+                          "(</constraint_manifest> missing)",
+                    data=text,
+                    tokens_in=tin, tokens_out=tout,
+                    duration_s=time.time() - t0,
+                    model_used=model, provider=provider,
+                )
             self._progress("stage_0", f"Extraction complete ({tin}→{tout} tokens)")
             return StepResult(
                 step="stage_0", status="success", data=text,
