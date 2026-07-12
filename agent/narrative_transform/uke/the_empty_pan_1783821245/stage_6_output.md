@@ -1,0 +1,34 @@
+# STRATEGY BRIEF
+
+**IMPLIED AUTHOR:**
+A technical observer who notices what systems cannot measure—the flutter in a carrier wave, the weight of unverifiable minds, the gap between diagnostic certainty and material truth. This author cares about epistemological limits, the labor that sustains extraction, and the difference between refusal and resistance. Skips: villains, individual heroism, revolutionary transformation. The prose lives in precise technical detail that carries emotional weight without naming it. Endings open onto permanent ambiguity rather than resolution.
+
+**AUDIENCE:**
+Readers who work inside systems they cannot reform. Who understand the difference between complicity and participation, between optimizing extraction and refusing to optimize it. Who have felt the gap between what instruments measure and what hands know. Who need stories that honor the weight of necessary work done without illusions. Assumes: familiarity with institutional constraint, comfort with technical density, tolerance for endings that refuse consolation.
+
+**SCOPE:**
+Novella. Current 11,800 words, target 12,500-13,000. The material wants slightly more room—not for exposition but for the substrate degradation to accumulate visibly across Part Three. World-building density is correct: quantum mechanics grounded but not explained, institutional structure shown through practice. Ending resolution: the catastrophic failure stands, but needs its causality earned through prior material preparation.
+
+**CREATIVE DEEPENING:**
+The declaration signatories are holding the Archive together through unsustainable compensatory labor. Make this visible: Kael's reports show drift rates climbing despite "nominal" diagnostics. The Section 20 meeting reveals declaration signatories are working longer hours, catching failures the instruments miss, preventing cascade through sheer attentiveness. Section 22's "catastrophic failure rate dropped by eighteen percent" isn't system improvement—it's forty-seven people working themselves to exhaustion to compensate for accelerating substrate degradation. When Section 23's collapse comes, it's not because the substrate suddenly failed—it's because human compensation finally couldn't keep pace with exponential drift. The apocalypse becomes: they were the only thing standing between the Archive and entropy, and entropy won.
+
+This deepening serves the core meaning: refusal isn't resistance, but it is *something*. The declaration signatories couldn't reform the system, but their labor kept eight million minds in superposition for three additional months. When they could no longer compensate, the truth the instruments couldn't measure became undeniable. The ending's horror is that we'll never know if those eight million minds were preserved or already gone—but we know the declaration signatories were the only ones who cared enough to try to tell the difference.
+
+**FLINCH POINTS:**
+
+1. **Section 8 (Sova's score collapse)**: The draft shows Sova recognizing "the system wasn't fair" but converts this recognition into organizational analysis rather than paying its personal cost. What it's doing: dignifying her situation through structural understanding. What honesty requires: Sova has spent fifteen years believing adequate meant adequate, that the queue was real. The recognition that it was always rigged doesn't produce clarity—it produces vertigo, rage, the feeling of having been made a fool. Show the humiliation before the analysis.
+
+2. **Section 14 (Kael and Maren's confrontation)**: The draft has Maren explain her complicity cleanly: "I ran the numbers, I saw the stratification, Voss approved it anyway." What it's doing: converting guilt into helplessness, making complicity a matter of structural position rather than choice. What honesty requires: Maren wrote the proposal that locked out the Outer Ring. She knew what it would do. She did it anyway because refusing would have cost her queue position. She chose her own translation over their lives. The draft lets her off too easily.
+
+3. **Section 23 (the catastrophic failure)**: The draft treats the collapse as revelation—"the substrate had been failing the whole time." What it's doing: making the apocalypse a vindication of the declaration signatories' epistemological position. What honesty requires: They were right that the instruments couldn't measure fidelity, but they were also *wrong* to keep the Archive running. Every state they collapsed for three months might have been a person they killed. The ending's horror isn't that the system failed—it's that they'll never know if their refusal to optimize was mercy or murder.
+
+**PATTERN CHECK:**
+Concern. The draft's default is quiet resistance through institutional competence (trust hands over instruments, file unverifiable alerts, write honest reports). This is the pipeline's comfort zone. Section 23's catastrophic failure breaks the pattern—it's loud, undeniable, strips away all institutional mediation. But the draft hasn't earned it through prior material accumulation. The failure reads as authorial intervention rather than consequence. The revision must show: the declaration signatories' compensatory labor is unsustainable, the drift rates are climbing exponentially, the collapse is coming regardless of what they do. Then their choice to keep working becomes genuinely costly rather than quietly dignified.
+
+---
+
+**Ω_E:** Substrate drift acceleration—revision will add Kael's Section 19 report showing drift rates climbing 3-4% monthly despite stable diagnostics, plus Section 20 meeting testimony revealing declaration signatories are working 70-80 hour weeks to compensate. This establishes material causality: they're holding back exponential degradation through finite human labor. When Section 23's collapse comes, it's because the exponential finally exceeded their capacity.
+
+**Ω_C:** Flinch point #3 (complicity in collapse)—the declaration signatories kept the Archive running for three months after recognizing the instruments couldn't verify preservation. Every state collapsed during that period might have been murder. The revision will add this weight to Section 22-23: they chose to maintain the system rather than force its failure, and they'll never know if that choice saved eight million minds or destroyed them. The ending's ambiguity cuts both ways.
+
+**Ω_P:** The pattern check identifies the core tension: the story wants to honor refusal-as-practice while acknowledging its limits. The revision will sharpen this by showing the declaration signatories' work as simultaneously necessary (preventing premature collapse) and insufficient (unable to prevent eventual cascade). Their labor matters—it bought three months—but it couldn't save the Archive. This respects both the weight of their choice and the reality that individual refusal cannot reform extractive systems.

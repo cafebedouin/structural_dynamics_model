@@ -1,0 +1,35 @@
+# STRATEGY BRIEF
+
+**IMPLIED AUTHOR:** A systems-literate observer who notices how measurement creates reality, who understands both technical precision and human exhaustion, who sees power as structural rather than personal. This author values embodied expertise (eighteen years of reading water), tracks the gap between lived experience and administrative abstraction, and finds meaning in knowledge transmission rather than dramatic confrontation. Comfortable with irresolution. Fluent in the language of satisficing, coordination costs, and epistemic distance. Notices what people do with their tiredness.
+
+**AUDIENCE:** Readers who have lived inside systems they couldn't change — who understand the difference between measurement error and systematic bias, who recognize Chen Wei's exhaustion as real even while his position frustrates them. Readers who can hold "the trap persists" and "knowledge accumulates" as simultaneous truths without needing one to cancel the other. Comfortable with technical detail (cultivation tanks, algorithm bias, optimization functions) as characterization rather than exposition. Can read code-switching as structural rather than decorative.
+
+**SCOPE:** Novella (18,000-22,000 words). The perspectival gap structure is present but compressed. The piece wants to develop each position more fully — particularly Chen Wei's perspective and Director Huang's direct appearance. The "seventeen floors" should become structural organizing principle rather than single metaphor. Current draft is a complete short story (3,400 words) that contains the novella's architecture in compressed form.
+
+**CREATIVE DEEPENING:** 
+
+The Frankl question is present but underdeveloped: what meaning is available *within* this constraint, not just in resistance to it? Liang sees clearly, names the trap, teaches her daughter — but the prose hasn't yet articulated why this matters beyond survival. The strongest gesture: "The recognition is passing. The alternative logic is seeding itself." But what *is* that alternative logic? 
+
+The Oracle Gap theorem points to Chen Wei as richest territory: he's confident in his understanding of "transition costs" but has never stood where Liang stands, never read Tank Seven's water clarity with eighteen years of expertise. He sees her frustration and Huang's metrics but not what cross-position comparison would reveal. This gap could be made explicit through his own perspective section.
+
+The "seventeen floors" image (literal elevation between Director Huang's office and the mudflats) appears once but could organize the entire structure: different sections at different elevations, showing how the same system looks from different distances. Not just geographic but epistemic altitude.
+
+The satisficing concept threads through but could be more deliberate: introduced as jargon in Chen Wei's office, then mirrored in Huìlín's homework. What if Liang already knew this word? What if she'd been thinking in these terms for years?
+
+**FLINCH POINTS:**
+
+1. **The ending's quietness** (final three sections): The "seed planted" resolution is thematically consistent but may be *too* consistent with the pipeline's default toward quiet resistance and organizational hope. The draft converts the cost of living inside the trap into meaning-making (teaching Huìlín) and long-term optimism ("someday, maybe, someone will stand close enough"). What would honesty require? Perhaps that the exhaustion is just exhaustion sometimes. That knowledge transmission might not lead anywhere. That Huìlín might end up exactly where her mother is, with the same notebook, teaching her own daughter the same things. The draft looks away from the possibility that nothing changes.
+
+2. **Chen Wei's humanity** (office scene, phone call): The draft is generous to him — shows his tiredness, his trapped position, his awareness of the system's flaws. This generosity is a strength, but it may soften what his choice actually costs Liang. He knows the scores are wrong. He defends them anyway. He gets to leave every two weeks. The draft dignifies his exhaustion without fully reckoning with his complicity. What would honesty require? Perhaps showing what his comfort costs her more directly. Perhaps showing him making the choice to maintain the system in a moment where he could choose differently.
+
+3. **What Huìlín writes in her notebook** (withheld throughout): The deliberate mystery preserves the sense of knowledge beyond the narrator's view, but it also keeps the "alternative logic" abstract and therefore safe. The draft gestures toward resistance without specifying what that resistance might look like or cost. What would honesty require? Either showing what she writes (and risking that it's inadequate or naive) or showing why the withholding matters — what it means that even Liang doesn't know, that the knowledge is already moving beyond her.
+
+**PATTERN CHECK:** Concern. The draft exhibits the pipeline's characteristic moves: systemic evil (algorithm bias), no villains (everyone is tired), quiet rebellion (teaching Huìlín), composure under duress (Liang's daily submission of scores), organizational hope (someday someone will fix it). These emerge organically from the material, but the ending's optimism about knowledge transmission may be imposed rather than earned. The pressure test suggests the draft is flinching from the possibility that the trap is more total than the prose admits — that knowledge might accumulate without leading to change, that Huìlín might be trapped too, that Chen Wei's choice might be more culpable than the draft allows.
+
+---
+
+**Ω_E1**: The "seventeen floors above sea level" needs verification — is Director Huang's office literally seventeen floors up in a building, or is this metaphorical? Platform 47 is described as water-based. If literal, need to establish where this building is. If metaphorical, the precision of "seventeen" is doing specific work that should be preserved.
+
+**Ω_C1**: The novella expansion would require breaking Liang's limited perspective to show Chen Wei and Director Huang directly. This is a significant structural choice — the current power comes from seeing Chen Wei only through Liang's eyes (and hearing him through the door). Expansion might dilute this. Consider whether multiple perspectives serve the perspectival gap theme or undermine the ground-level position's authority.
+
+**Ω_P1**: The flinch point about the ending's quietness is a preference question about what kind of story this is. Some readers will find the "seed planted" resolution perfect; others will want more dramatic confrontation or change. The strategy brief identifies it as a potential flinch because it's *very* consistent with the pipeline's defaults, but that doesn't mean it's wrong for this material.
