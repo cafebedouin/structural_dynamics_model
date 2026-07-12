@@ -230,12 +230,21 @@ Today the engine has two such frames:
   `stakeholder_seats:dr_type_for_stakeholder/3`). Seat counts are **variable and larger**:
   the live census at this writing spans 3–12 seats per story across the three legs
   (re-runnable: `python3 python/audits/oq195_h1_spectrum_check.py --census`; as-of-stamped
-  output in the audit dir). No aggregate currently consumes these per-seat types as a
-  disagreement measure; if one ever does, this note is its spectrum law, the OQ-51 rule
-  carries over unchanged (zero-seat stories — a known generation-path artifact, OQ-202 —
-  read null, never 0), and the existing unanimity flag
-  (`stakeholder_seats:consensus_provenance/2`) is the H¹ = 0 special case of exactly such a
-  measure.
+  output in the audit dir). **Consumed since 2026-07-12 (OQ-207) by
+  `stakeholder_seats:stakeholder_obstruction/5`** — memoized per constraint, coverage
+  in-band (NSeats, NReal), emitted per constraint as `h1_stakeholder` /
+  `h1_stakeholder_n_seats` / `h1_stakeholder_n_real` in `pipeline_output.json`. This note
+  is its spectrum law; the OQ-51 rule carries over unchanged (zero-seat stories — a known
+  generation-path artifact, OQ-202 — read null, never 0). The census over the three live
+  legs + kernel_v1 found **zero out-of-spectrum values** across 1,316 numbered H¹s
+  (`audits/2026-07-12_oq207_stakeholder_h1/`), and the plunit suite
+  `tests/test_h1_stakeholder_spectrum.pl` enforces spectrum membership on every run. The
+  unanimity flag (`stakeholder_seats:consensus_provenance/2`) relates to this measure as a
+  biconditional with named divergence cells (its clause header carries the case table):
+  `unknown` is a type token for the flag but is filtered by the H¹'s real-seat rule, so
+  "unanimity of one," all-`unknown` unanimity, and `plural([T,unknown])` all diverge — the
+  all-`unknown` cell is live (4 stories) and triggered the pre-committed tightening
+  follow-up (see the audit README).
 
 ---
 

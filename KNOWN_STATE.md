@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-12 — OQ-207 RESOLVED: stakeholder-frame H¹ built, emitted, censused; D4 kill condition FIRED → OQ-217 minted; TWO ABSENCE TOKENS tripwire
+**Files:** prolog/stakeholder_seats.pl, prolog/reading_registry.pl, prolog/tests/test_h1_stakeholder_spectrum.pl, prolog/json_report.pl, python/shared/schemas.py, python/audits/oq207_stakeholder_h1_census.py, docs/h1_gap_spectrum_general_n.md
+**Tier:** tripwire
+
+**TRIPWIRE — two absence tokens coexist BY DESIGN in the per-seat type surfaces; never
+unify them.** `untyped` is CENSUS-FACING (`seat_perceived_vs_real/4`'s Computed when the
+per-seat derivation fails); `unknown` is KERNEL-FACING (`stakeholder_type_vector/2`'s
+token for the same failure, and the literal `dr_type_with_d/4` fallback type). The
+kernel's OQ-51 filter `is_real_type/1` tests `\== unknown` ONLY — an `untyped` leaking
+into the H¹ vector is counted as a REAL DISAGREEING TYPE and silently inflates
+`h1_stakeholder`. Conversely a reader "normalizing" the vector's `unknown` to `untyped`
+breaks the null rule. Positive control on the actual failure path:
+`test_h1_stakeholder_spectrum.pl` `no_untyped_in_vector`.
+
+Landed (commits `8048a568`, `96047f19`, `cbd44d19` + docs): `stakeholder_obstruction/5`
+(memoized; cache_registry hook; coverage in-band; domain = `stakeholder_agent_seats/2`
+extracted from `consensus_provenance/2` — no fork), three OQ-137 registrations,
+per-constraint `h1_stakeholder`/`_n_seats`/`_n_real` (null = UNDETERMINED, never 0 —
+same OQ-51 read rule as `h1_band`), schemas.py contract + consistency check, census
+`audits/2026-07-12_oq207_stakeholder_h1/`: 0 spectrum violations / 1,316 numbered H¹s,
+kernel_v1 all-null PASS, planted-violation FLAGGED, zero-seat = OQ-202 mint exactly.
+**Cell (b) live population 4 → the pre-committed tightening is now OBLIGATORY →
+OQ-217** (also scopes the newly-pinned mixed `plural([T,unknown])` cell, 19/66/129
+live). D4 case table lives at the `consensus_provenance/2` clause header + the plunit
+`coherence_case/5` — OQ-217 must update BOTH in its commit or the suite goes red.
+
+---
+
 ## 2026-07-12 — OQ-215 arm 3 COMPLETE: 5/5 variance runs, R2 live for the first time, composed D9 conforming, invariant HOLDS 5/5; threshold recalibrated 25→10
 **Files:** agent/uke_narrative_orchestrator.py, python/audits/oq215_arm3_variance.py, audits/2026-07-12_oq215_arm3_variance/
 **Tier:** landed

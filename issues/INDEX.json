@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "e9c2fabe2501a2221950a635e78316f81e43af88",
+    "store_version": "cbd44d19a37ad731dd1decbca27b4558974169ad",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-12T12:33:44"
+    "generated_at": "2026-07-12T13:19:59"
   },
-  "issues_sha": "9a3509df782c41d7fba76ccce992a3852af9b4d3c5bffe42bb70643aaf62acde",
-  "n_entries": 216,
+  "issues_sha": "035163aa1be20453984d9cf158bb76f160e62671b48dc9c2c9518bcedc216f48",
+  "n_entries": 217,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 122,
+    "resolved": 123,
     "mitigated": 15,
     "disposed": 4,
     "open": 64,
@@ -773,7 +773,8 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-197"
+        "OQ-197",
+        "OQ-207"
       ]
     },
     {
@@ -846,7 +847,9 @@
       "mentioned_in": [
         "OQ-134",
         "OQ-136",
-        "OQ-203"
+        "OQ-203",
+        "OQ-207",
+        "OQ-217"
       ]
     },
     {
@@ -861,27 +864,6 @@
       "mentioned_in": [
         "OQ-135",
         "OQ-137"
-      ]
-    },
-    {
-      "id": "OQ-207",
-      "status": "open",
-      "priority": 3,
-      "summary": "Build the stakeholder-frame H¹ (per-seat disagreement spectrum over named stakeholder seats)",
-      "deps": [
-        "splits_from OQ-195"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-51",
-        "OQ-83",
-        "OQ-109",
-        "OQ-136",
-        "OQ-137",
-        "OQ-195",
-        "OQ-199",
-        "OQ-202",
-        "OQ-204"
       ]
     },
     {
@@ -991,6 +973,20 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-215"
+      ]
+    },
+    {
+      "id": "OQ-217",
+      "status": "open",
+      "priority": 2,
+      "summary": "Tighten consensus_provenance/2: unanimity requires ≥2 real-typed seats (OQ-207 kill condition fired)",
+      "deps": [
+        "splits_from OQ-207"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-204",
+        "OQ-207"
       ]
     }
   ],
@@ -2959,6 +2955,27 @@
         "OQ-78",
         "OQ-89",
         "OQ-135"
+      ]
+    },
+    {
+      "id": "OQ-207",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "Build the stakeholder-frame H¹ (per-seat disagreement spectrum over named stakeholder seats)",
+      "deps": [
+        "splits_from OQ-195"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-51",
+        "OQ-83",
+        "OQ-109",
+        "OQ-137",
+        "OQ-195",
+        "OQ-199",
+        "OQ-202",
+        "OQ-204",
+        "OQ-217"
       ]
     },
     {

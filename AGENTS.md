@@ -633,6 +633,21 @@ pipeline before the census. **When you add a reading predicate an aggregate coul
 register it in `prolog/reading_registry.pl` in the same change** (registration is opt-in —
 an unregistered reading escapes the guard; OQ-137 close, residual risk).
 
+### Run the stakeholder-frame H¹ suite (OQ-207)
+
+```bash
+cd prolog && swipl -g "[stack], corpus_loader:ensure_corpus_loaded, \
+  [tests/test_h1_spectrum], [tests/test_h1_stakeholder_spectrum], \
+  run_tests([h1_spectrum, h1_stakeholder_spectrum]), halt" -t "halt(1)"
+```
+
+Live-corpus spectrum validity (`h1_stakeholder` ∈ proven H(n_real)), the
+consensus_provenance↔H¹ coherence table (D4 divergence cells), and the fixture-pinned
+boundary cases. **Tripwire: two absence tokens — `untyped` (census-facing) vs `unknown`
+(kernel-facing) — must never unify** (KNOWN_STATE 2026-07-12). Scope `run_tests/1` as
+shown: a bare `run_tests` after corpus load also sweeps the testset-embedded units
+(pre-existing failures unrelated to these suites).
+
 ### Run the ε-declaration suite (OQ-205 standing guard)
 
 ```bash

@@ -9342,6 +9342,11 @@ about the authoring, not yet a validated fact about the world.
 structural check (not the stakeholder facts themselves) — e.g. do the (a)-only gaps correspond to authored
 directionality/beneficiary structure, or to grid-authoring artifacts? Until then, gap-omega firings sourced
 from (a) are reported as "authored-stakeholder disagreement," never as validated cover-story detection.
+**Instrument note (2026-07-12, OQ-207 close):** the seat-disagreement measure now exists as a graded,
+spectrum-validated instrument — per-constraint `h1_stakeholder` (+ `_n_seats`/`_n_real`) in
+`pipeline_output.json`, 0 out-of-spectrum values across all legs (`audits/2026-07-12_oq207_stakeholder_h1/`).
+The validation design (scoring divergences against an independent structural check) remains this OQ's open
+work; the instrument gives it its measured variable.
 **Files:** `prolog/report_generator.pl` (`seat_type_reading/2` stakeholder clause), `prolog/stakeholder_seats.pl`
 (`dr_type_for_stakeholder/3`), `narrative_ontology:constraint_stakeholder/7` authored facts.
 
@@ -9502,6 +9507,8 @@ queried on its authored grid (not a synthetic time).
 
 **Scope.** Surface mcc beyond the bare census count: per-member lines naming the excluded seats (`Excl` from `consensus_provenance/2`) on the census human table and/or enhanced report. Output-changing — own commit with before/after report diffs. **Design constraints (part of the go):** (1) the flag names a structural footprint (unanimity among typed agent seats + a named excluded seat), NEVER a "manufactured consensus" verdict — the candidate semantics travel to every read site; (2) no prevalence-rate headline without the raw count + n_in_domain alongside (OQ-136 denominator caveat); the census currently declares NO prevalence bucket for the consensus source — revisiting that declaration is in-scope here, but the OQ-136 close's reasoning (candidate flag ≠ positive finding) must be answered, not ignored; (3) membership is read live from `consensus_provenance/2`, never a frozen list — so the OQ-203 vocabulary fix flows through automatically.
 
+**Instrument note (2026-07-12, OQ-207 close):** the graded generalization is built — `stakeholder_seats:stakeholder_obstruction/5` + per-constraint `h1_stakeholder`/`_n_seats`/`_n_real` in `pipeline_output.json`; the verdict×H¹ coherence table (incl. divergence cells) is at the `consensus_provenance/2` clause header, per-leg cell counts in `audits/2026-07-12_oq207_stakeholder_h1/`. **Sequencing:** OQ-217 (obligatory tightening — cell (b) fired) changes mcc membership; land it before or with this surface build (membership is read live, so it flows through, but the promoted statistic should never ship the wrong-verdict members).
+
 **What resolution changes.** The first census bucket promoted from honest count to first-class corpus statistic — the seated-reporting precedent for any later bucket promotion.
 
 ---
@@ -9550,17 +9557,13 @@ queried on its authored grid (not a synthetic time).
 
 **Ω-type:** Ω_E (mechanical wiring — two existing pieces joined, with census + controls) with an Ω_C tail (report/census surface design: which read sites carry the new measure and how).
 
-**Status:** open
+**Status:** resolved — built + censused 2026-07-12: commits `8048a568` (engine: `stakeholder_seats:stakeholder_obstruction/5` over the shared agent-seat domain `stakeholder_agent_seats/2` extracted from `consensus_provenance/2` — Pattern-2 no-fork; memoized w/ cache_registry hook; three OQ-137 registrations; 10-test corpus-loaded plunit suite `tests/test_h1_stakeholder_spectrum.pl` reusing the sibling's expected-spectrum table), `96047f19` (per-constraint emission `h1_stakeholder`/`_n_seats`/`_n_real` + schemas.py contract; per_constraint diff = exactly the three keys), `cbd44d19` (census, D8 two-stage artifact-read design). All five pre-committed constraints held (commentary-grade; OQ-51 null carry-over; same-change registration; spectrum validity; mcc coherence as a biconditional with named divergence cells — D4 ruling 2026-07-11). Evidence: `audits/2026-07-12_oq207_stakeholder_h1/` — **0 spectrum violations across 1,316 numbered H¹s** (testsets/haiku/flash), kernel_v1 1106 all-(null,null,0,0) negative-domain control PASS, planted-violation control FLAGGED on the artifact it audits, zero-seat strata = OQ-202 mint exactly (26/466/212, drift 0). **Cell (b) LIVE population = 4 → the pre-committed D4 KILL CONDITION FIRED → tightening minted as OQ-217 (obligatory).** A third divergence cell was discovered and pinned: `plural([T,unknown])`, heavily live (19/66/129) — in OQ-217 scope. Two-absence-token tripwire (`untyped` census-facing / `unknown` kernel-facing) at KNOWN_STATE 2026-07-12. Instruments delivered: OQ-204 (graded mcc generalization), OQ-199 (seat-disagreement instrument).
 
 **Priority:** 3
 
 **Deps:** splits_from OQ-195
 
-**Origin:** 2026-07-02, the operator's pre-check on the OQ-195 plan: the cohomology was built on the four OBSERVER contexts, but the schema/generation (OQ-83/OQ-109) author a second frame — named stakeholder seats with roles {agenda_setter, beneficiary, payer, excluded, observer} and per-seat computed types — at variable cardinality (live census 3–12 seats/story; kernel_v1 has zero). Nothing aggregates the per-seat types into a disagreement measure; `reading_registry.pl:125–128` itself flags `dr_type_for_stakeholder/3` as "no totalized wrapper yet — first candidate if an aggregate ever consumes per-seat chi". Minted per the OQ-195 plan's embedded ruling 5.
-
-**The build.** Wire the per-story vector of `stakeholder_seats:dr_type_for_stakeholder/3` values through the existing pure core `grothendieck_cohomology:obstruction_from_vector/3` → a stakeholder-frame H¹ per constraint. Constraints (all pre-committed): (1) **commentary-grade** per the stakeholder_seats R3 rule — annotates, never overrides classification; (2) **OQ-51 rule carries over** — `unknown`-typed seats filtered, <2 real seats → null never 0, and the zero-seat stories (the OQ-202 generation-path artifact strata: 26/466/212 across the legs at mint) read null — name them as the denominator caveat in any census surface (OQ-136 rule: raw count + n_in_domain alongside any rate); (3) **register the new reading in `prolog/reading_registry.pl` in the same change** (OQ-137 — an unregistered reading escapes the totality guard silently); (4) **built-in validity check:** the reachable spectrum per real-seat count is the proven law (`docs/h1_gap_spectrum_general_n.md` — H(n), H(n,7) for n>7); any observed value outside it is a bug witness, and the plunit spectrum suite (`tests/test_h1_spectrum.pl`) already witnesses the core at n ≤ 12; (5) **coherence with the mcc flag:** `consensus_provenance/2` (OQ-204's manufactured-consensus candidate) is exactly this measure's H¹=0-with-excluded-seat special case — the two surfaces must not fork (Pattern 2); the graded measure should cite or subsume the flag, not duplicate it.
-
-**What resolution changes.** The framework gains a second live cohomology frame — disagreement measured over WHO IS IN THE STORY (agenda-setters, payers, the excluded, the synthetic observer) rather than over the four canonical vantages — at variable cardinality where the general-n law is the governing spectrum. First analytical customers: mcc reporting (OQ-204) gains its graded generalization; the OQ-199 seat-disagreement question gains its instrument.
+**Origin:** 2026-07-02, the operator's pre-check on the OQ-195 plan: the cohomology was built on the four OBSERVER contexts, but the schema/generation (OQ-83/OQ-109) author a second frame — named stakeholder seats at variable cardinality (live census 3–12 seats/story; kernel_v1 has zero); nothing aggregated the per-seat types into a disagreement measure. Minted per the OQ-195 plan's embedded ruling 5.
 
 ## OQ-208 — CA-2: committer framing-dependence is UNTESTED — the OQ-119 0/5 lacks a framing-sensitive positive control (or a proof none can exist)
 
@@ -9919,7 +9922,46 @@ its producer never finished writing.
 
 ---
 
-*Last updated: 2026-07-04. Add new items with sequential OQ-NN labels. Mark
+## OQ-217 — Tighten consensus_provenance/2: unanimity requires ≥2 real-typed seats (OQ-207 kill condition fired)
+
+**Ω-type:** Ω_E (output-changing one-predicate tightening on an already-taken ruling; witnesses pre-specified) with an Ω_C tail (the mixed `plural([T,unknown])` cell's semantics is a small design call inside the same ruling's scope).
+
+**Status:** open
+
+**Priority:** 2
+
+**Deps:** splits_from OQ-207
+
+**Origin:** 2026-07-12, the OQ-207 census fired the pre-committed D4 kill condition (operator
+ruling 2026-07-11): cell (b) — every agent seat types to the literal `unknown` token, yet the
+consensus verdict reads unanimous — has LIVE population 4: `livelihood_security_reading`
+(testsets, unanimous_no_excluded_seats); `fair_use_statutory_exception__transformative_right_reading`
+and `gdpr_article_3_scope__market_access_reading` (flash, both **manufactured_consensus_candidate**
+— the mcc flag naming excluded seats as manufacturing a "consensus" that is actually just
+untypeable seats, the sharpest form of absence-read-as-agreement);
+`second_amendment_scope__civic_right_reading` (flash, unanimous). Evidence:
+`audits/2026-07-12_oq207_stakeholder_h1/`.
+
+**The work (OBLIGATORY per the ruling; output-changing, own commit, own witness):** require ≥2
+real-typed (`is_real_type/1`) seats for the unanimous verdicts (`unanimous_no_excluded_seats` /
+`manufactured_consensus_candidate`) in `stakeholder_seats:consensus_provenance/2`; an all-`unknown`
+or single-real type set routes to an explicit insufficiency token, never unanimity. In the same
+ruling's scope: decide the mixed `plural([T,unknown])` cell (19/66/129 live across the legs —
+`unknown` currently counts as a disagreeing type token, so a "plural" verdict can be partly
+absence-driven). Witnesses owed: before/after verdict diff naming exactly the 4 cell-(b) stories
+(plus any mixed-cell movement); the D4 case table at the `consensus_provenance/2` clause header AND
+`tests/test_h1_stakeholder_spectrum.pl` `coherence_case/5` updated in the same commit (they encode
+the CURRENT cells and will go red otherwise); census re-run (`python3
+python/audits/oq207_stakeholder_h1_census.py`) showing cell (b) = 0. Consumers read the verdict
+live, so membership flows through automatically (OQ-204 constraint 3) — but land this BEFORE or
+WITH the OQ-204 surface build so the promoted statistic never ships the wrong-verdict members.
+
+**What resolution changes:** the absence-read-as-agreement wrong-verdict class is removed at its
+source; the mcc flag can no longer fire over an all-untypeable seat set.
+
+---
+
+*Last updated: 2026-07-12. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
