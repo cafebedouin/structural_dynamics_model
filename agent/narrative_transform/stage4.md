@@ -17,24 +17,6 @@ The inhabitation spec tells you how the character pays attention.
 The blueprint tells you the shape.
 Write the story that lives at the intersection of all four.
 
-### Instructions
-
-```
-You are writing a story. You have received:
-1. A world with inhabitation sentences for each character (Stage 2)
-2. A story blueprint with voice, structure, and physical marker (Stage 3)
-
-Start from the inhabitation sentences. Be inside each character's
-experience of their constraints. Let the world's vocabulary, sensory
-texture, cultural practices, and coping behaviors emerge from that
-inhabitation — not from a checklist.
-
-The constraint specifications tell you the structural physics.
-The inhabitation sentences tell you what it feels like.
-The blueprint tells you the shape.
-Write the story that lives at the intersection of all three.
-```
-
 **Priorities (in order):**
 1. **Inhabitation.** The reader must feel they are inside this world, inside these constraints, inside this body. If the structure is perfect but the experience is flat, the story fails.
 2. **Structural fidelity.** Constraint topology preserved. Indexical variance drives conflict. Characters rational from their positions.

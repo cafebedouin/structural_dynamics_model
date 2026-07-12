@@ -203,6 +203,42 @@ def _title_to_filename(title: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Editorial-output helpers (manifest split, word counts)
+# ---------------------------------------------------------------------------
+
+# Stage 7/8 outputs append an EDIT MANIFEST section (header decoration
+# varies across runs: "EDIT MANIFEST", "## EDIT MANIFEST", "**EDIT MANIFEST**").
+_EDIT_MANIFEST_HEADER_RE = re.compile(
+    r'^\s{0,3}(?:#{1,6}\s+)?\*{0,2}EDIT MANIFEST\*{0,2}\s*:?\s*$',
+    flags=re.MULTILINE,
+)
+
+
+def _split_edit_manifest(text: str) -> tuple[str, str]:
+    """Split a stage-7/8 output into (story, manifest+omega log).
+
+    The final published story must not ship with editorial apparatus;
+    the manifest is kept as a run-dir sidecar. Returns manifest '' when
+    no marker is present (e.g. stage_4 fallback output).
+    """
+    m = _EDIT_MANIFEST_HEADER_RE.search(text)
+    if not m:
+        return text, ""
+    cut = m.start()
+    # Pull a horizontal rule immediately above the header into the manifest.
+    before = text[:cut]
+    rule = re.search(r'(?:^|\n)(-{3,}\s*\n\s*)\Z', before)
+    if rule:
+        cut = rule.start(1)
+    return text[:cut].rstrip() + "\n", text[cut:]
+
+
+def _word_count(text: str) -> int:
+    """wc -w equivalent: whitespace-separated tokens."""
+    return len(text.split())
+
+
+# ---------------------------------------------------------------------------
 # Data classes
 # ---------------------------------------------------------------------------
 
@@ -513,10 +549,10 @@ class UKEOrchestrator:
         "stage_4":  16384,
         "stage_5":  8192,
         "stage_6":  8192,
-		"stage_7":  16384,
-		"stage_8":  16384,
+        "stage_7":  16384,
+        "stage_8":  16384,
         "stage_9":  16384,
-		"stage_10": 8192,
+        "stage_10": 8192,
     }
 
     def __init__(
@@ -525,7 +561,6 @@ class UKEOrchestrator:
         models: dict[str, tuple[str, str]] | None = None,
         dr_logic_path: str | Path | None = None,
         output_dir: str | Path | None = None,
-        skip_final_audit: bool = False,
         skip_engine: bool = False,          # NEW: skip constraint engine
         dry_run: bool = False,
         force_gate: bool = False,
@@ -539,7 +574,6 @@ class UKEOrchestrator:
         self.final_output_dir = mode_config["output_dir"]
 
         self.models = {**self.DEFAULT_MODELS, **(models or {})}
-        self.skip_final_audit = skip_final_audit
         self.skip_engine = skip_engine
         self.dry_run = dry_run
         self.force_gate = force_gate
@@ -559,6 +593,13 @@ class UKEOrchestrator:
             else:
                 _log.warning("Stage instruction file not found: %s", stage_file)
                 self.stage_prompts[stage] = ""
+
+        # Stage 7 rewrites prose, so it operates under stage 4's craft
+        # directives. Append the canonical copy from stage4.md at load
+        # time — a hand-pasted duplicate in stage7.md drifted stale
+        # (Pattern 2: one-canonical-thing-became-two).
+        if mode == "narrative" and self.stage_prompts.get("stage_7"):
+            self._append_stage4_craft_directives()
 
         # Load DR logic references
         # - self.dr_logic: combined reference (artifact mode, backward compat)
@@ -588,6 +629,25 @@ class UKEOrchestrator:
         self.engine_protocols: dict[str, str] = {}
         if not self.skip_engine and self.mode == "narrative":
             self._load_engine_protocols()
+
+    def _append_stage4_craft_directives(self):
+        """Append stage4.md's craft directives + prohibitions + checklist
+        to the stage 7 system prompt (canonical single copy, R10)."""
+        src = self.stage_prompts.get("stage_4", "")
+        start = re.search(r'^### CRAFT DIRECTIVES\b', src, flags=re.MULTILINE)
+        if not start:
+            _log.warning("stage4.md has no '### CRAFT DIRECTIVES' section — "
+                         "stage 7 runs without the appended craft directives")
+            return
+        end = re.search(r'^### Output\b', src, flags=re.MULTILINE)
+        block = src[start.start():end.start() if end else len(src)].rstrip()
+        self.stage_prompts["stage_7"] = (
+            self.stage_prompts["stage_7"].rstrip()
+            + "\n\n### Stage 4 Craft Directives Apply\n\n"
+            + "(Appended by the orchestrator from stage4.md — the canonical copy. "
+            + "Apply these to the rewritten prose.)\n\n"
+            + block + "\n"
+        )
 
     def _load_engine_protocols(self):
         """Load UKE_SCOPE, generation prompt, and schema for constraint engine."""
@@ -1676,6 +1736,14 @@ class UKEOrchestrator:
         # Fall back to stage_4 if editorial pipeline didn't run.
         final_key = "stage_8" if "stage_8" in result.stage_outputs else "stage_4"
         final_text = result.stage_outputs.get(final_key, "")
+        # The published story must not ship with the editorial apparatus:
+        # split off the EDIT MANIFEST (+ omega log) and keep it as a
+        # run-dir sidecar.
+        final_text, manifest_text = _split_edit_manifest(final_text)
+        if manifest_text and self.output_dir:
+            sidecar = self.output_dir / f"{final_key}_edit_manifest.md"
+            sidecar.write_text(manifest_text, encoding="utf-8")
+            self._progress("save", f"Edit manifest sidecar: {sidecar}")
         if final_text:
             # Compute _revN base name from source path
             rev_base = None
@@ -2183,61 +2251,6 @@ class UKEOrchestrator:
                 duration_s=time.time() - t0,
             )
 
-    def _run_stage_5_narrative(self, stage_4_output: str, stage_1_output: str) -> StepResult:
-        """Stage 5: Subtractive Audit (Claude). Narrative mode."""
-        self._progress("stage_5", "Running subtractive audit (Claude)...")
-        t0 = time.time()
-
-        prompt_parts = [
-            "Audit the following story. Apply the subtractive audit protocol "
-            "from your system instructions.\n\n"
-            "CRITICAL: The origin obfuscation check must be rigorous. "
-            "Ask: would a reader familiar with the Western literary canon "
-            "recognize the source? Check: character names, occupation, setting, "
-            "plot beats, relationship structures, and iconic imagery. "
-            "If ANY of these are recognizably derived from a known work, "
-            "the story FAILS origin obfuscation regardless of other qualities. "
-            "A fishing story about an old man and a boy with a marlin and sharks "
-            "is recognizable. Do not pass it.\n\n",
-        ]
-
-        # Add symbolic logic for formal validation reference
-        logic_ref = self.dr_logic_symbolic or self.dr_logic
-        if logic_ref:
-            prompt_parts.append(
-                f"=== SYMBOLIC CONSTRAINT LOGIC REFERENCE ===\n{logic_ref}\n\n"
-            )
-
-        prompt_parts.extend([
-            "=== CONSTRAINT SPECIFICATION (for validation) ===\n",
-            stage_1_output,
-            "\n\n",
-            "=== STORY (Stage 4) ===\n",
-            stage_4_output,
-            "\n\n",
-            "Perform: EARNED/FORCED scan, INHABITED/DEPLOYED scan, "
-            "anti-pattern removal, compression audit. "
-            "Output the revised story (should be tighter than input) "
-            "followed by the validation report.",
-        ])
-        prompt = "".join(prompt_parts)
-
-        try:
-            text, tin, tout, model, provider = self._call("stage_5", prompt)
-            self._progress("stage_5", f"Subtractive audit complete ({tin}→{tout} tokens)")
-            return StepResult(
-                step="stage_5", status="success", data=text,
-                tokens_in=tin, tokens_out=tout,
-                duration_s=time.time() - t0,
-                model_used=model, provider=provider,
-            )
-        except Exception as e:
-            self._progress("stage_5", f"Failed: {e}")
-            return StepResult(
-                step="stage_5", status="error", error=str(e),
-                duration_s=time.time() - t0,
-            )
-
     # ------------------------------------------------------------------
     # Helpers
     # ------------------------------------------------------------------
@@ -2246,6 +2259,43 @@ class UKEOrchestrator:
     def _tally(result: PipelineResult):
         result.total_tokens_in = sum(s.tokens_in for s in result.steps)
         result.total_tokens_out = sum(s.tokens_out for s in result.steps)
+
+
+# ---------------------------------------------------------------------------
+# Cost estimation
+# ---------------------------------------------------------------------------
+
+# $/MTok (input, output), matched by substring on the recorded model id;
+# first match wins. Models are configurable per stage (--stage-N-model),
+# so costs are computed per step from StepResult.model_used rather than
+# a single hardcoded rate. Unknown/blank models fall back to Sonnet rates
+# and the estimate is marked approximate.
+MODEL_PRICING = [
+    ("opus",             (15.00, 75.00)),
+    ("sonnet",           (3.00, 15.00)),
+    ("haiku",            (1.00, 5.00)),
+    ("gemini-2.5-pro",   (1.25, 10.00)),
+    ("gemini-2.5-flash", (0.30, 2.50)),
+]
+FALLBACK_PRICING = (3.00, 15.00)
+
+
+def _estimate_cost(steps: list[StepResult]) -> tuple[float, bool]:
+    """Return (estimated_cost_usd, all_models_priced)."""
+    total = 0.0
+    all_priced = True
+    for s in steps:
+        model = (s.model_used or "").lower()
+        for key, rates in MODEL_PRICING:
+            if key in model:
+                cin, cout = rates
+                break
+        else:
+            cin, cout = FALLBACK_PRICING
+            if s.tokens_in or s.tokens_out:
+                all_priced = False
+        total += s.tokens_in / 1_000_000 * cin + s.tokens_out / 1_000_000 * cout
+    return total, all_priced
 
 
 # ---------------------------------------------------------------------------
@@ -2332,7 +2382,6 @@ def _run_single(args, parser):
             models=model_overrides if model_overrides else None,
             dr_logic_path=args.dr_logic,
             output_dir=output_dir,
-            skip_final_audit=args.skip_final_audit,
             skip_engine=args.skip_engine,
             dry_run=args.dry_run,
             force_gate=args.force_gate,
@@ -2433,7 +2482,6 @@ def _run_single(args, parser):
         models=model_overrides if model_overrides else None,
         dr_logic_path=args.dr_logic,
         output_dir=output_dir,
-        skip_final_audit=args.skip_final_audit,
         skip_engine=skip_engine,
         dry_run=args.dry_run,
         force_gate=args.force_gate,
@@ -2482,9 +2530,9 @@ def _print_summary(result, mode: str, workshop_mode: bool = False):
     if result.story_path:
         print(f"\n  Output: {result.story_path}")
 
-    cost_in = result.total_tokens_in / 1_000_000 * 3.0
-    cost_out = result.total_tokens_out / 1_000_000 * 15.0
-    print(f"  Est cost: ~${cost_in + cost_out:.2f}")
+    cost, all_priced = _estimate_cost(result.steps)
+    note = "" if all_priced else " (some steps priced at fallback Sonnet rates)"
+    print(f"  Est cost: ~${cost:.2f}{note}")
 
 
 def _run_batch(args, parser):
@@ -2571,7 +2619,6 @@ def _run_batch(args, parser):
             models=model_overrides if model_overrides else None,
             dr_logic_path=args.dr_logic,
             output_dir=output_dir,
-            skip_final_audit=args.skip_final_audit,
             skip_engine=args.skip_engine,
             dry_run=args.dry_run,
             force_gate=args.force_gate,
@@ -2634,9 +2681,15 @@ def _run_batch(args, parser):
     print(f"  Tokens:   {batch_tokens_in:,} → {batch_tokens_out:,}")
     print(f"  Duration: {batch_duration:.0f}s ({batch_duration / 60:.1f}m)")
 
-    cost_in = batch_tokens_in / 1_000_000 * 3.0
-    cost_out = batch_tokens_out / 1_000_000 * 15.0
-    print(f"  Est cost: ~${cost_in + cost_out:.2f} (Sonnet input ${cost_in:.2f} + output ${cost_out:.2f})")
+    batch_cost = 0.0
+    batch_all_priced = True
+    for _, result, _ in batch_results:
+        if result:
+            cost, all_priced = _estimate_cost(result.steps)
+            batch_cost += cost
+            batch_all_priced = batch_all_priced and all_priced
+    note = "" if batch_all_priced else " (some steps priced at fallback Sonnet rates)"
+    print(f"  Est cost: ~${batch_cost:.2f}{note}")
 
 
 def main():
@@ -2672,8 +2725,6 @@ def main():
         choices=ALL_POSSIBLE_STAGES,
         help="Resume from this stage (default: stage_0)"
     )
-    parser.add_argument("--skip-final-audit", action="store_true",
-                        help="Skip final audit stage (stage 5 narrative / stage 6 artifact)")
     parser.add_argument("--skip-engine", action="store_true",
                         help="Skip constraint engine (SCOPE → stories → Prolog reports)")
     parser.add_argument("--force-gate", action="store_true",
