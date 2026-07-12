@@ -159,16 +159,16 @@
 - **Attractor:** ✓ Equilibrium, ⚠ Seeded Possibility, ✗ Tragedy, ✗ Rupture
 - **Requires:** System with exploitable inefficiencies, BIR model, low power (π ≥ 0.8), constraint logic rigid enough to have predictable gaps
 - **POV:** First person natural. Third limited works. The Scavenger's voice is too particular for omniscient.
-- **Stage 4 directive:** The Scavenger's comedy comes from radical pragmatism. While other characters experience constraints as existential (Condemned), righteous (Zealot), or invisible (Beneficiary), the Scavenger treats them as engineering problems with material solutions. "The sensor cycles every forty-two seconds" is not a philosophical observation — it's a survival tactic. The Scavenger never philosophizes. The Scavenger counts, times, and moves.
-- **Example:** "The sensor cycles every forty-two seconds. That's not a security feature; that's a four-second window to breathe."
+- **Stage 4 directive:** The Scavenger's comedy comes from radical pragmatism. While other characters experience constraints as existential (Condemned), righteous (Zealot), or invisible (Beneficiary), the Scavenger treats them as engineering problems with material solutions. "The sensor sweeps and comes back before you finish an exhale" is not a philosophical observation — it's a survival tactic. The Scavenger never philosophizes. The Scavenger reads the machine's rhythm in the body — the pause, the wear, the gap — and moves. The Scavenger does not own the system's instruments and does not narrate in the system's numbers; what the Scavenger knows, the Scavenger knows by feel, and the feel is more reliable than the gauge.
+- **Example:** "The sensor sweeps, then rests. The rest is a held breath long — cross on the exhale, or wait for the next."
 
 ### Voice Combination Strategies (Advanced)
 
 **Shifting Voice:** Transition at marked points (Condemned → Witness, Builder → Survivor)
 **Nested Voice:** Primary contains secondary (Witness framing Condemned's testimony)
 **Chorus Voice:** Multiple voices in parallel (several Condemned showing indexical variance)
-**Counterpoint Voice:** Two voices at opposite ends of the power scale observing the same physical marker. The Beneficiary sees a flickering lamp as atmosphere; the Condemned counts the minutes of oil remaining. The contrast is the story.
-**Double-Blind:** Two voices that are both structurally blind but in opposite directions. The most devastating form of Chorus. The Beneficiary: "The harvest festival was so vibrant this year; everyone gave so much of themselves." The Condemned: "They took three liters of blood this time. I don't think I can walk home." The reader performs the extraction math. Neither narrator can.
+**Counterpoint Voice:** Two voices at opposite ends of the power scale observing the same physical marker. The Beneficiary sees a flickering lamp as atmosphere; the Condemned watches the oil sink and knows the dark will arrive before morning. The contrast is the story.
+**Double-Blind:** Two voices that are both structurally blind but in opposite directions. The most devastating form of Chorus. The Beneficiary: "The harvest festival was so vibrant this year; everyone gave so much of themselves." The Condemned: "They took more than they ever have. I don't think I can walk home." The reader performs the extraction math. Neither narrator can — the Beneficiary because from there there is nothing to count, the Condemned because the body is not an instrument and does not issue receipts.
 **Comic Frame:** Beneficiary or Fool as primary voice, with Condemned or Builder visible in the background. Reader sees two stories simultaneously — the voice's comedy and the constraint's cost.
 **Capture Arc:** Transition from Builder → System or Condemned → Zealot. The voice loses its "I" as the constraint completes its capture.
 **Misrecognition Arc:** A voice that believes it is one archetype but is structurally another. The Zealot who thinks they're a Builder (testing leverage, but actually enforcing). The Condemned who thinks they're a Scavenger (believing they're gaming the system, but actually trapped by it). The gap between self-description and structural position *is* the story. Stage 4 must sustain both layers: what the character believes about themselves, and what the constraint topology actually shows.
@@ -214,7 +214,7 @@ Examples:
 - **Performing Fool:** Fool voice that knows it's funny → becomes a comedian character, not a structural Fool. The test: would the Fool be surprised to learn they'd exposed something? If yes, the voice is correct. If the Fool would say "I meant to do that," the voice has collapsed into Trickster.
 - **Ironic Fool:** Fool voice that uses sarcasm → sarcasm requires understanding the system's absurdity. The Fool must find the system's absurdity completely normal. Sarcasm is a Builder's tool, not a Fool's.
 - **Doubting Zealot:** Zealot voice that wavers or shows internal conflict → becomes Condemned approaching realization. The Zealot's certainty is structural, not psychological. Doubt is a different archetype.
-- **Philosophical Scavenger:** Scavenger voice that reflects on the system → becomes Builder. The Scavenger never asks *why* the sensor cycles every forty-two seconds. They only care *that* it does.
+- **Philosophical Scavenger:** Scavenger voice that reflects on the system → becomes Builder. The Scavenger never asks *why* the sensor rests between sweeps. They only care *that* it does.
 - **Angry Scavenger:** Scavenger voice + Rupture attractor → if the Scavenger gets angry at the system, they become a Builder or a revolutionary. A true Scavenger is only angry when the gap they were using gets closed. Their grievance is practical, not moral.
 
 ---
@@ -281,7 +281,33 @@ Examples:
      the character nor the prose comments on the mismatch
    ```
 
-6. **Plan structural physics beats:**
+6. **Author the numeric register (gauge-indexed):**
+
+   Counting is gauge-indexed: the system and its institutional positions
+   own the instruments and the ledgers; the powerless position mostly has
+   sensation and consequence. A powerless POV narrating in the system's
+   numbers is a knowledge-boundary violation — the same category as the
+   Beneficiary seeing extraction — extended to numeric register.
+
+   Decide three things:
+   - **Diegetic quantities:** which quantities exist as OBJECTS in this
+     world (a score, a queue, a certified weight) — only where the
+     constraint topology demands an instrument. Default is none.
+   - **Positional access:** for each POV, which of those quantities the
+     position can actually read, and through what instrument. The
+     Condemned rarely has access to the ledger that measures them; what
+     they have is the body and the consequence.
+   - **The narration rule:** narration is never denominated in the
+     system's numbers. A number may appear only when a character with
+     access ACTS ON IT in-scene — reads it aloud, forges it, disputes it,
+     breaks the weight — never as ambient texture, countdown, tally, or
+     emotional beat.
+
+   This field gives the voice audits an enforceable per-POV test instead
+   of a global ban: for each number in the draft, WHO read it, on WHAT
+   instrument, doing WHAT with it?
+
+7. **Plan structural physics beats:**
    ```
    False Mountain reveal: Setup → Evidence → Reveal
    Purity drift arc: Surface stability → Subtle degradation → Crisis
@@ -320,7 +346,17 @@ Examples:
   <error_manifestations>
     [concrete scenes with physical consequences]
   </error_manifestations>
-  
+
+  <numeric_register>
+    <diegetic_quantities>[quantities that exist as objects in this world,
+      or "none" — only where the topology demands an instrument]</diegetic_quantities>
+    <positional_access>[per POV: which quantities this position can read,
+      through what instrument]</positional_access>
+    <narration_rule>Narration is never denominated in the system's
+      numbers. A number appears only when a character with access acts
+      on it in-scene — never as texture, countdown, tally, or beat.</narration_rule>
+  </numeric_register>
+
   <invisibility_spec>
     <banned_terms>index, power-scaling, Tangled Rope, extraction,
       coordination, chi, epsilon, constraint type, purity</banned_terms>
@@ -337,6 +373,17 @@ BLUEPRINT CONSISTENCY:
 ☐ All constraints have activation moments in act structure
 ☐ Character arcs map to index transitions
 ☐ Error manifestations are concrete scenes, not abstractions
+
+NUMERIC REGISTER:
+☐ Diegetic quantities listed only where the topology demands an
+  instrument (default: none).
+☐ Positional access authored per POV — no POV narrates a quantity
+  their position cannot read.
+☐ Every planned appearance of a number is an in-scene ACTION by a
+  character with access, not texture, countdown, tally, or beat.
+☐ The exemplar test, applied to this blueprint's own prose: does any
+  voice note or scene sketch model a narrator performing a tally?
+  If yes, rewrite it as a body-read (rhythm, wear, gap, guttering).
 
 INHABITATION SPEC:
 ☐ Does the spec describe sensation or measurement?

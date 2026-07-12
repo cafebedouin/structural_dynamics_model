@@ -19,6 +19,14 @@ The INVARIANT CONTRACT is not context leakage: it is a structural commitment wit
 **ASSESSMENT:**
 Read the story as a reader. Produce a brief assessment:
 
+Rubric note (this is a rubric, not context — your blindness holds):
+numeric escalation — descending scores, countdowns, tallies,
+"mathematical inevitability" — is a known pipeline anchor, not
+precision. Do not cite counting passages as strengths; arithmetic always
+reads as inevitability, and that is the instrument's register, not the
+story's. If the prose's most vivid moments are numbers, that is a
+weakness to name.
+
 STRENGTHS: What is working. (2-3 sentences. Specific.)
 BIGGEST WEAKNESS: The single most impactful problem. (1-2 sentences.)
 READINESS: How far is this from publishable?

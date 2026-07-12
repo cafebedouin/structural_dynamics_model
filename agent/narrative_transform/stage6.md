@@ -34,6 +34,8 @@ Base all length judgments on the ACTUAL WORD COUNT (computed) injected alongside
 
 What meaning, turn, or dimension exists in the material that editing could bring out? Draw from discovery report's latent potential section.
 
+Numeric escalation (descending scores, countdowns, tallies) is a known pipeline anchor, not precision — never deepen INTO it, and never treat counting passages as the spine to build around. If the discovery report's ANCHOR CHECK flagged such passages, the strategy names what the numbers stand in for and directs the craft passes to carry that load through sensation, consequence, or rhythm instead.
+
 If Prolog reports were available to discovery:
 - Perspectival gaps tell you where the richest structural divergence exists between characters
 - Extraction masking reveals what the story is structurally about underneath its surface

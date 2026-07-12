@@ -87,6 +87,35 @@ BUT "1740 CE Chang'an, during Emperor Xuanzong's later reign, after the
 - **If yes → reject the setting.** It can host only a mismeasured-but-knowable real, which collapses the invariant into direct realism — a correct value the system got wrong, recoverable by a smarter meter or a fairer authority. The protein score, the exam grade, the credit rating, the algorithm's bias all fail this test. This is exactly how the invariant dies: the world is built so that the real thing is a number, and a number is always in principle readable.
 - **If no → the setting affords the invariant.** There must be a *substrate* — deep rock, an old language, a body, a dead the living carry, a practice that cannot be recorded, a name that holds only while unclaimed — that holds the real while remaining structurally unreadable to the system's measuring apparatus. Build the world's central physics there.
 
+**The Scored-Snare gate (the affordance test, extended to the Snare).**
+Scored naturalizations of the central Snare — a queue, a rating, a
+percentage, an index, a contribution score — are **rejected by default**.
+A numeric Snare re-seeds counting that no downstream ban removes (the
+generation model receives "the queue is 90 years long" as a specific
+instruction that beats any generic prohibition), and it pulls the
+injustice toward correctable-bias direct realism: a legible number the
+system merely got wrong.
+
+The exception is **not yours to judge**. It fires only when Stage 0 —
+the one stage that saw the source — passed an `inherent_instrument: yes`
+flag in its Invariant Contract, stating that the source constraint is
+*inherently instrument-mediated* (extraction running through a certified
+measurement, such that removing the instrument removes the constraint).
+If no flag arrived, or it says no, the default rejection stands: design
+the Snare's enforcement so the powerless position meets it as
+consequence and sensation, never as arithmetic.
+
+When the flag IS set, the instrument may exist diegetically, but:
+- (i) the narration rule holds — a number appears only when a character
+  with positional access **acts on it in-scene** (reads it aloud, forges
+  it, disputes it, breaks the weight); narration is never denominated in
+  the system's numbers;
+- (ii) extraction is **felt and enforced, never tallied**, in every POV
+  passage — the instrument is the mechanism of the taking, not the
+  texture of the telling;
+and the orchestrator's deterministic numeric meter governs every number
+that reaches the page regardless.
+
 **Override the Mountain-as-backdrop default.** The Narrative Translation Guide instructs you to treat a Mountain as terrain characters navigate around. That is correct for terrain-Mountains and *wrong* for the invariant-Mountain from Step 0. The invariant is not what the characters route past; it is the ground the whole world stands on and the thing the system is constitutionally unable to see. Make the setting's substrate **be** the invariant.
 
 ```
@@ -258,6 +287,11 @@ INVARIANT (new — the checks the old pipeline lacked):
   value, mismeasured." If it can, return to Step 1 and reject the setting.
 ☐ Substrate inhabitation sentence written
 ☐ Substrate has a non-quantitative name in the world's language
+☐ Scored-Snare gate applied: the central Snare is NOT naturalized as a
+  queue/rating/percentage/index/score unless Stage 0 passed
+  inherent_instrument: yes — and if it did, the narration rule (numbers
+  only when acted on in-scene) and felt-never-tallied extraction are
+  designed into every POV
 
 DISPLACEMENT:
 ☐ ZERO framework terminology in Sections 0 and 1

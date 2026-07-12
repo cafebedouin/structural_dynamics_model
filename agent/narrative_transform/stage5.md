@@ -45,6 +45,22 @@ Where is the prose most alive? These passages are the spine. Everything else ser
 
 Be specific. Quote or cite passages. "The dialogue in section III" is not specific enough. "The exchange where Maren says 'I don't need you to understand it' while rewinding the same gauge she's been checking all shift" is specific.
 
+ANCHOR CHECK (report separately — never as strongest writing): numeric
+escalation — descending scores, countdowns, tallies, "the math is
+simple" — is a known pipeline anchor, not precision. It reads as
+inevitability because arithmetic always does; that is the meter's
+register leaking into the prose, not craft. Never select counting
+passages as the spine. If they are among the most vivid passages, list
+them under an ANCHOR CHECK header with what the numbers are standing in
+for, so the strategy pass can replace the anchor instead of protecting it.
+
+**INVARIANT PROBE:**
+Is there a real here the system's instruments can't read?
+Unrecoverable-in-principle, or merely hidden? Name it. If everything of
+value in this world is in principle readable by a better instrument or a
+fairer authority, say so plainly — that absence is the single most
+important discovery this report can surface.
+
 **SCOPE ASSESSMENT:**
 What did the piece become?
 - Short story (overlong) / novella (undercooked)
@@ -71,6 +87,14 @@ LATENT POTENTIAL:
 
 STRONGEST WRITING:
 [...]
+
+ANCHOR CHECK:
+[counting/numeric-escalation passages, with what the numbers stand in
+for — or "none found" with the lines scanned]
+
+INVARIANT PROBE:
+[the unreadable real, named — or the plain statement that everything
+here is in principle readable]
 
 SCOPE ASSESSMENT:
 [...]
