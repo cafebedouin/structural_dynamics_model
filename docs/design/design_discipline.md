@@ -958,6 +958,32 @@ never engine-certifiable; see §8 on the t3/honoring gap and OQ-126.)*
 
 ---
 
+## 11. The narrative pipeline is assisted-by-design (operator ruling, 2026-07-12; OQ-215 close)
+
+**The sharpening judgment — does this story say something a competent model wouldn't? — is the
+product's core value and is operator-held *by necessity*, not by immaturity.** Autonomous
+operation is structurally foreclosed, not deferred pending better tooling.
+
+The witness (OQ-215 arm 2, `audits/2026-07-12_oq215_arm2_d9_control/READOUT.md`): stage-10 D9 —
+the pipeline's own terminal scorer — scored the arm-2 *negative control* 5/5, quote-and-
+rationalizing a by-eye-recoverable value as evidence of unrecoverability. The only witnesses that
+discriminate are the **blind stage-9 falsifier** and the **operator read**. A verdict-issuing
+layer that cannot tell its negative control from its positive is not a judge the pipeline can
+stand on alone; the machine layers are instruments that *feed* the operator's adjudication, never
+substitutes for it (same shape as §0's declared seat and the omega_resolver determinism floor:
+priority/type stay a declared seat).
+
+The safeguard that keeps the assisted posture honest is **blind originality**: UKE_STORY v0.2 §6
+(`agent/uke_story_v0.2.md`) makes the terminal gate a blind read — seed + improved story ONLY, no
+audit trail, manifest, or deformation record — because process-sophistication reads as depth to
+anyone who can see the process (F-PROCESS-VOUCH: the trail vouching for the output). Executor
+separation is binding on probe runs (OQ-218): the improver may not blind-read their own output.
+
+Standing record in-protocol: v0.2 Ω_C2 — "the sharpens-verdict and the blind read are
+operator-held by design — assisted, not autonomous; **revisit only at volume**."
+
+---
+
 ## Open items for the next pass on this document
 
 *(What this draft has not yet done — not load-bearing claims.)*

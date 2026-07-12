@@ -532,6 +532,28 @@ Review sees omegas only if embedded in the prose (it reads blind). Strategy sees
 
 ---
 
+## Operating Posture: Assisted-by-Design (operator ruling, 2026-07-12)
+
+The pipeline is an **assisted instrument, not an autonomous author**. The sharpening judgment —
+does this story say something a competent model wouldn't? — is the product's core value and is
+operator-held *by necessity*: stage-10 D9 scored the OQ-215 arm-2 negative control 5/5, so the
+only discriminating witnesses are the blind stage-9 falsifier and the operator read. Autonomous
+operation is structurally foreclosed, not deferred. Full ruling:
+`docs/design/design_discipline.md` §11.
+
+**`--edit FILE` is the first-class assisted/audit-only mode:** stages 5–10 run on a human-written
+(or externally drafted) story — discovery, strategy, rewrite, pacing, blind review, validation —
+with no generation stages. Use it to put an operator draft through the editorial and audit layers
+without the pipeline authoring anything upstream.
+
+**Division of labor (matches commit `168bc222`):** the pipeline authors the break's **ADDRESS**
+(stage 0 writes the break contract — original_break / prior_status / target_prior — carried to
+stages 2/9/10); **executing the violation** — the improvement judgment itself — belongs to the
+UKE_STORY protocol (`agent/uke_story_v0.2.md`) under the operator's read. The pipeline names
+where the break lives; it does not certify that the break landed.
+
+---
+
 ## What This Architecture Changes
 
 **Old model (monolithic Stage 5):** One LLM call does everything. No structural intelligence from Prolog. No pressure test. No rupture audit. No discovery. Editor and judge are the same instance.
