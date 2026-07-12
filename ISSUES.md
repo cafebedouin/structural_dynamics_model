@@ -9712,8 +9712,32 @@ self-certifiable.
 
 **Ω-type:** Ω_E (empirical: pre-registered runs against a witnessed baseline).
 
-**Status:** open — implementation landed 2026-07-11 (commit series from `600abbae`); the runs are
-API spend and an operator read, so the go is the operator's.
+**Status:** open — implementation landed 2026-07-11 (commit series from `600abbae`); conditional
+spend-go granted 2026-07-12 (arm 1, then stop and report). **Arm 1 RUN and read — verdict PASS
+(pending operator confirmation); arms 2–3 not yet run.**
+
+**Arm 1 result (2026-07-12, run `agent/narrative_transform/uke/the_empty_pan_1783838645/`,
+story `stories/the-empty-pan_rev2.md`, ~$1.71, 2 editorial cycles):** first launch truncated
+stage 0 at the 8192 cap (Gemini thinking tokens) — fixed + fail-loud guard (`b715f3dc`), evidence
+run `1783838645`'s predecessor `1783838405`. Relaunch: Stage 0 authored the full contract
+UNPROMPTED (untranslatable_real yes / missing_floor yes / inherent_instrument yes — the King's
+Even as "certified measurement... without the official standard and the act of stamping, the
+constraint has no mechanism"), so (b) was genuinely licensed. Read against
+earned-numbers-plus-live-invariant, NOT density alone (operator ruling): (i) instrument SURVIVED
+AS MECHANISM — Sudbury Basin certification world, SSA sulfide standard as 1883 interested
+partition, extraction runs through certified readings ("Nobody buys uncertified readings") —
+while the page stayed out of the system's numbers: final density 0.48/1000 (3 numerals, all
+quoted placement-certificate IDs = institution-held documents, earned under the rift3 lens; vs
+Forty-Hertz baseline 47.6); (ii) invariant LIVE — blind stage-9 falsifier HOLDS ("formations that
+sing are not mismeasured; they're measuring something the standard was never designed to
+recognize"), stage-10 D9 = 5/5 with both falsifiers run against named passages, missing floor
+held (structural, "not correctable error", no fairer authority). 39/40 → HUMAN REVIEW on one
+named F48 flinch (SSA office scene), which matches the strategy brief's own flinch point. Spot
+checks: R9 final story manifest-free + sidecar; R7 computed 6,202 vs wc 6,207 (+trailer, 0.08%);
+R5/R6 manifest carries pasted per-instance adjudication. Note for arm 3's read: (b)'s ideal
+outcome witnessed here is instrument-in-world + near-zero page density — LOW density with a live
+instrument is the design working, not displacement (displacement = no certified measurement
+anywhere in the world).
 
 **Priority:** 2
 
