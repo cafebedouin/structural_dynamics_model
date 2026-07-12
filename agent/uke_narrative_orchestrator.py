@@ -239,6 +239,211 @@ def _word_count(text: str) -> int:
 
 
 # ---------------------------------------------------------------------------
+# Numeric inventory (R6) — mechanical counting meter
+#
+# The counting ban failed exhortatively at three sites (stage 4 system
+# prompt, stage 7's embedded copy, stage 8's scan): the model quoted the
+# ban back and waived it. The fix is structural (OQ-101 remedy class):
+# the orchestrator extracts every numeric-register item deterministically
+# and injects the complete list into the editorial prompts. The model's
+# only job is per-instance adjudication; neither side can waive wholesale.
+# This is the register-level analogue of stage 4's framework-terminology
+# grep — the invisibility check extended to the leak the grep can't see.
+# ---------------------------------------------------------------------------
+
+_SPELLED_UNITS = (
+    "one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|"
+    "thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen"
+)
+_SPELLED_TENS = "twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety"
+_SPELLED_BIG = "hundred|thousand|million|billion"
+_NUMBER_WORD_RE = re.compile(
+    rf'\b(?:(?:{_SPELLED_TENS})(?:-(?:{_SPELLED_UNITS}))?'
+    rf'|{_SPELLED_UNITS}|{_SPELLED_BIG})\b',
+    flags=re.IGNORECASE,
+)
+_NUMERAL_RE = re.compile(r'\b\d+(?:[.,:]\d+)*\s?%?')
+_COUNT_VERB_RE = re.compile(
+    r'\b(?:count|counts|counted|counting|recount|recounts|recounted|'
+    r'tally|tallies|tallied|tallying)\b',
+    flags=re.IGNORECASE,
+)
+_MATH_PHRASE_RE = re.compile(r'\bthe (?:math|arithmetic)\b', flags=re.IGNORECASE)
+
+# Density threshold (numerals + number-words per 1,000 story words) above
+# which the post-stage-8 gate fires. Calibrated 2026-07-11:
+#   positive controls (MUST flag): uke/the_empty_pan_1783821245
+#     stage_4_output.md = 37.6, stage_8_output.md = 47.6
+#   negative controls (MUST pass): human-authored originals/ — classic
+#     prose cluster 2.3–16.3; the inherent-instrument source
+#     the-empty-pan.md = 18.8 (a story ABOUT certified measurement; the
+#     R3(b) exception class must not be flagged by the meter alone).
+#   Excluded from calibration: rift3.md (46.0 — an operator draft that is
+#     itself counting-saturated by design) and the_waste_land.md (33.1 —
+#     verse line-number transcription artifact).
+# 25.0 passes every clean negative with headroom and flags both positives
+# at ≥1.5x margin. The meter is a proxy; the operator read is the verdict.
+NUMERIC_DENSITY_THRESHOLD = 25.0
+
+# No silent caps: if an inventory listing is truncated for prompt size,
+# the omitted count is stated in the listing itself.
+_MAX_INVENTORY_LISTING = 300
+
+
+def _numeric_inventory(text: str) -> dict:
+    """Deterministic numeric-register extraction. Pure function.
+
+    Returns entries (line, kind, token, context), per-kind counts,
+    monotone numeric sequences (3+ strictly monotone numerals inside one
+    paragraph — the descending-scores/countdown shape), word count, and
+    density per 1,000 words (numerals + number-words).
+    """
+    lines = text.splitlines()
+    entries: list[dict] = []
+    for i, line in enumerate(lines, 1):
+        for kind, rx in (
+            ("numeral", _NUMERAL_RE),
+            ("number_word", _NUMBER_WORD_RE),
+            ("count_verb", _COUNT_VERB_RE),
+            ("math_phrase", _MATH_PHRASE_RE),
+        ):
+            for m in rx.finditer(line):
+                entries.append({
+                    "line": i,
+                    "kind": kind,
+                    "token": m.group(0).strip(),
+                    "context": line.strip()[:160],
+                })
+
+    # Monotone numeric sequences within a paragraph (blank-line separated)
+    monotone: list[dict] = []
+    para_start = 1
+    para_lines: list[str] = []
+    def _flush(start: int, plines: list[str]):
+        values = []
+        for ln in plines:
+            for m in _NUMERAL_RE.finditer(ln):
+                tok = m.group(0).strip().rstrip('%').replace(',', '')
+                try:
+                    values.append(float(tok.replace(':', '.')))
+                except ValueError:
+                    pass
+        if len(values) >= 3:
+            inc = all(a < b for a, b in zip(values, values[1:]))
+            dec = all(a > b for a, b in zip(values, values[1:]))
+            if inc or dec:
+                monotone.append({
+                    "start_line": start,
+                    "direction": "increasing" if inc else "decreasing",
+                    "values": values,
+                })
+    for i, line in enumerate(lines, 1):
+        if line.strip():
+            if not para_lines:
+                para_start = i
+            para_lines.append(line)
+        elif para_lines:
+            _flush(para_start, para_lines)
+            para_lines = []
+    if para_lines:
+        _flush(para_start, para_lines)
+
+    counts = {k: 0 for k in ("numeral", "number_word", "count_verb", "math_phrase")}
+    for e in entries:
+        counts[e["kind"]] += 1
+    words = _word_count(text)
+    density = 1000.0 * (counts["numeral"] + counts["number_word"]) / max(words, 1)
+    return {
+        "word_count": words,
+        "counts": counts,
+        "density_per_1000": round(density, 2),
+        "threshold": NUMERIC_DENSITY_THRESHOLD,
+        "monotone_sequences": monotone,
+        "entries": entries,
+    }
+
+
+def _format_numeric_inventory(inv: dict, header: str) -> str:
+    """Render an inventory as a prompt block for per-instance adjudication."""
+    lines = [
+        f"=== {header} ===",
+        f"Computed by the orchestrator (deterministic; complete). Story word "
+        f"count: {inv['word_count']:,}. Numeric density: "
+        f"{inv['density_per_1000']:.1f} per 1,000 words "
+        f"(numerals: {inv['counts']['numeral']}, number-words: "
+        f"{inv['counts']['number_word']}, count-verbs: "
+        f"{inv['counts']['count_verb']}, math-phrases: "
+        f"{inv['counts']['math_phrase']}).",
+        "",
+        "Adjudicate EVERY item below, per instance: KEEP only where a "
+        "character with positional access to the quantity acts on it "
+        "in-scene (reads it aloud, forges it, breaks the weight) — name "
+        "that action. Otherwise revise the line to carry the same pressure "
+        "without the number. Numbers as ambient texture, countdown, tally, "
+        "or emotional beat are violations regardless of how precise they "
+        "feel. You may not waive this list wholesale, and you may not "
+        "claim a numeric item is absent: this list is the ground truth.",
+        "",
+    ]
+    for seq in inv["monotone_sequences"]:
+        vals = ", ".join(f"{v:g}" for v in seq["values"])
+        lines.append(
+            f"MONOTONE SEQUENCE (line {seq['start_line']}, "
+            f"{seq['direction']}): {vals} — the descending/ascending-ledger "
+            f"shape; a known pipeline anchor, not precision."
+        )
+    if inv["monotone_sequences"]:
+        lines.append("")
+    shown = inv["entries"][:_MAX_INVENTORY_LISTING]
+    for e in shown:
+        lines.append(f"L{e['line']} [{e['kind']}] {e['token']!r}: {e['context']}")
+    omitted = len(inv["entries"]) - len(shown)
+    if omitted > 0:
+        lines.append(
+            f"... {omitted} additional entries omitted from this listing "
+            f"for length; the totals above cover ALL entries, and the "
+            f"omitted ones are still violations if unearned."
+        )
+    return "\n".join(lines) + "\n"
+
+
+_WORD_COUNT_LINE_RE = re.compile(
+    r'^\s*(?:#{1,6}\s+)?\*{0,2}WORD COUNT:?\*{0,2}.*$',
+    flags=re.MULTILINE | re.IGNORECASE,
+)
+
+
+def _rewrite_manifest_word_count(manifest: str, in_words: int, out_words: int) -> str:
+    """Replace any model-emitted WORD COUNT line with computed values (R7).
+
+    Models cannot count (witnessed: claimed 13,400 over a 5,927-word file);
+    the orchestrator's figures are the only valid ones.
+    """
+    if not manifest:
+        return manifest
+    pct = 0.0 if in_words == 0 else (in_words - out_words) / in_words * 100.0
+    computed = (
+        f"WORD COUNT (computed by orchestrator): {in_words:,} → {out_words:,} "
+        f"({pct:+.1f}% reduction)" if in_words else
+        f"WORD COUNT (computed by orchestrator): {out_words:,}"
+    )
+    computed += (
+        "\n(Any other word-count figure appearing in this manifest is "
+        "model-emitted and must be ignored.)"
+    )
+    if _WORD_COUNT_LINE_RE.search(manifest):
+        manifest, n = _WORD_COUNT_LINE_RE.subn(computed, manifest)
+        if n > 1:
+            _log.info("Rewrote %d WORD COUNT lines in edit manifest", n)
+    else:
+        m = _EDIT_MANIFEST_HEADER_RE.search(manifest)
+        if m:
+            insert_at = m.end()
+            manifest = manifest[:insert_at] + "\n\n" + computed + manifest[insert_at:]
+    return manifest
+
+
+# ---------------------------------------------------------------------------
 # Data classes
 # ---------------------------------------------------------------------------
 
@@ -630,6 +835,136 @@ class UKEOrchestrator:
         if not self.skip_engine and self.mode == "narrative":
             self._load_engine_protocols()
 
+    # ------------------------------------------------------------------
+    # Post-stage-8 instrumentation (R6 density gate, R7 computed counts)
+    # ------------------------------------------------------------------
+
+    def _post_process_stage_8(self, result: PipelineResult) -> str:
+        """Run after every stage-8 completion, before the output is saved
+        or read by stage 9.
+
+        R7: the manifest's WORD COUNT line is overwritten with
+        orchestrator-computed values (models cannot count — witnessed
+        13,400 claimed over a 5,927-word file).
+        R6: if numeric density is still above threshold after the pacing
+        pass, issue ONE targeted revision call with the flagged lines,
+        then — if still above — flag OPEN for the operator (fail-visible,
+        no silent loop).
+        """
+        raw = result.stage_outputs.get("stage_8", "")
+        story, manifest = _split_edit_manifest(raw)
+
+        prev_story, _ = _split_edit_manifest(result.stage_outputs.get("stage_7", ""))
+        manifest = _rewrite_manifest_word_count(
+            manifest, _word_count(prev_story) if prev_story else 0,
+            _word_count(story))
+
+        inv = _numeric_inventory(story)
+        self._save_json_sidecar("numeric_inventory_stage_8.json", inv)
+        if inv["density_per_1000"] > NUMERIC_DENSITY_THRESHOLD:
+            self._progress(
+                "numeric_gate",
+                f"Numeric density {inv['density_per_1000']:.1f}/1000 words "
+                f"exceeds threshold {NUMERIC_DENSITY_THRESHOLD} — "
+                f"one targeted revision call")
+            revised = self._numeric_revision_call(story, inv, result)
+            if revised:
+                if self.output_dir:
+                    (self.output_dir / "stage_8_output_prenumeric.md").write_text(
+                        raw, encoding="utf-8")
+                story = revised
+                inv2 = _numeric_inventory(story)
+                self._save_json_sidecar(
+                    "numeric_inventory_stage_8_postrevision.json", inv2)
+                manifest = _rewrite_manifest_word_count(
+                    manifest, _word_count(prev_story) if prev_story else 0,
+                    _word_count(story))
+                if inv2["density_per_1000"] > NUMERIC_DENSITY_THRESHOLD:
+                    self._flag_numeric_open(inv2)
+                else:
+                    self._progress(
+                        "numeric_gate",
+                        f"Revision brought density to "
+                        f"{inv2['density_per_1000']:.1f}/1000 words")
+            else:
+                self._flag_numeric_open(inv)
+
+        combined = story.rstrip() + ("\n\n" + manifest if manifest else "\n")
+        result.stage_outputs["stage_8"] = combined
+        return combined
+
+    def _numeric_revision_call(
+        self, story: str, inv: dict, result: PipelineResult
+    ) -> str | None:
+        """One targeted revision pass over the flagged numeric lines.
+
+        Returns the revised story text, or None on failure (the caller
+        flags OPEN — never a silent retry loop).
+        """
+        t0 = time.time()
+        system = (
+            "You are performing a single targeted revision on a finished "
+            "story. The orchestrator's deterministic meter found the story "
+            "still anchored in counting: numbers used as ambient texture, "
+            "countdown, tally, or emotional beat rather than as objects a "
+            "character acts on.\n\n"
+            "Revise ONLY the flagged lines (and the minimum surrounding "
+            "prose needed for continuity). For each flagged number: keep it "
+            "only if a character with positional access to that quantity "
+            "acts on it in-scene; otherwise rewrite the line to carry the "
+            "same pressure through sensation, consequence, or rhythm — "
+            "never by hiding the number behind vague phrasing that still "
+            "gestures at arithmetic.\n\n"
+            "Do not summarize, restructure, cut scenes, or edit unflagged "
+            "prose. Output ONLY the complete revised story text — no "
+            "commentary, no manifest, no word counts."
+        )
+        prompt = (
+            f"=== STORY ===\n{story}\n\n"
+            + _format_numeric_inventory(
+                inv, "FLAGGED NUMERIC INVENTORY (revise these)")
+            + "\nOutput the complete revised story now."
+        )
+        try:
+            provider_name, model = self.models["stage_8"]
+            provider = self.providers.get(provider_name)
+            if provider is None:
+                raise RuntimeError(f"No provider registered for '{provider_name}'")
+            text, tin, tout = provider.call(
+                prompt=prompt,
+                model=model,
+                system_instruction=system,
+                temperature=0.4,
+                max_tokens=self.MAX_TOKENS.get("stage_8", 16384),
+            )
+            result.steps.append(StepResult(
+                step="numeric_revision", status="success", data=None,
+                tokens_in=tin, tokens_out=tout,
+                duration_s=time.time() - t0,
+                model_used=model, provider=provider_name,
+            ))
+            return text.strip() + "\n" if text and text.strip() else None
+        except Exception as e:
+            self._progress("numeric_gate", f"Revision call failed: {e}")
+            result.steps.append(StepResult(
+                step="numeric_revision", status="error", error=str(e),
+                duration_s=time.time() - t0,
+            ))
+            return None
+
+    def _flag_numeric_open(self, inv: dict):
+        """Fail-visible: the density gate could not be satisfied this run."""
+        msg = (
+            f"NUMERIC DENSITY OPEN: {inv['density_per_1000']:.1f}/1000 words "
+            f"(threshold {NUMERIC_DENSITY_THRESHOLD}) after the one allowed "
+            f"revision call. Operator adjudication required — see "
+            f"numeric_inventory_stage_8*.json for the per-line evidence."
+        )
+        self._progress("numeric_gate", msg)
+        if self.output_dir:
+            (self.output_dir / "NUMERIC_DENSITY_OPEN.md").write_text(
+                msg + "\n", encoding="utf-8")
+
     def _append_stage4_craft_directives(self):
         """Append stage4.md's craft directives + prohibitions + checklist
         to the stage 7 system prompt (canonical single copy, R10)."""
@@ -756,6 +1091,14 @@ class UKEOrchestrator:
         if path.exists():
             return path.read_text(encoding="utf-8")
         return None
+
+    def _save_json_sidecar(self, name: str, data: dict):
+        """Write a JSON evidence sidecar into the run directory."""
+        if self.output_dir is None:
+            return
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        (self.output_dir / name).write_text(
+            json.dumps(data, indent=2), encoding="utf-8")
 
     # ------------------------------------------------------------------
     # Output save logic
@@ -1040,7 +1383,36 @@ class UKEOrchestrator:
                     else:
                         snum = key.split("_")[1]
                         label = f"STAGE {snum}"
+                    # R7: models cannot count; every editorial stage receives
+                    # the orchestrator-computed word count of the story text
+                    # (manifest excluded) and is forbidden to emit its own.
+                    if (self.mode == "narrative"
+                            and key in ("stage_4", "stage_7", "stage_8")):
+                        story_part, _ = _split_edit_manifest(content)
+                        label += (
+                            f" — ACTUAL WORD COUNT of story text: "
+                            f"{_word_count(story_part):,} (computed by "
+                            f"orchestrator; any other figure is wrong)"
+                        )
                     prompt_parts.append(f"=== {label} OUTPUT ===\n{content}\n\n")
+
+        # R6: the rewrite/pacing stages receive the deterministic numeric
+        # inventory of the story they are editing. Extraction is the
+        # orchestrator's job; the model only adjudicates per instance.
+        if self.mode == "narrative" and stage in ("stage_7", "stage_8"):
+            story_key = "stage_4" if stage == "stage_7" else "stage_7"
+            story_src = stage_outputs.get(story_key, "")
+            if story_src:
+                story_part, _ = _split_edit_manifest(story_src)
+                inv = _numeric_inventory(story_part)
+                self._save_json_sidecar(
+                    f"numeric_inventory_{story_key}.json", inv)
+                prompt_parts.append(_format_numeric_inventory(
+                    inv,
+                    f"NUMERIC INVENTORY of the story you are editing "
+                    f"(computed from {story_key} output)",
+                ))
+                prompt_parts.append("\n")
 
         prompt_parts.append(self._get_prompt_suffix(stage))
         prompt = "".join(prompt_parts)
@@ -1649,9 +2021,12 @@ class UKEOrchestrator:
             if editorial_start <= 6:
                 # On second cycle, replace discovery report with review assessment
                 if cycle > 1 and "stage_9" in result.stage_outputs:
-                    # Second-cycle inputs: stage_8 (latest story) + review assessment
+                    # Second-cycle inputs: stage_8 (latest story) + review assessment.
+                    # The stage_4 slot must hold a STORY — strip the edit
+                    # manifest so editorial apparatus doesn't feed the rewrite.
                     result.stage_outputs["stage_5"] = result.stage_outputs["stage_9"]
-                    result.stage_outputs["stage_4"] = result.stage_outputs["stage_8"]
+                    story_only, _ = _split_edit_manifest(result.stage_outputs["stage_8"])
+                    result.stage_outputs["stage_4"] = story_only
 
                 step = self._run_stage_generic("stage_6", result.stage_outputs, source_story)
                 result.steps.append(step)
@@ -1682,7 +2057,11 @@ class UKEOrchestrator:
                     self._tally(result)
                     return result
                 result.stage_outputs["stage_8"] = step.data
-                self._save_stage_output("stage_8", step.data, result)
+                # R6/R7 instrumentation: computed word counts into the
+                # manifest, numeric density gate (may issue one targeted
+                # revision). Must run before stage 9 reads the output.
+                processed = self._post_process_stage_8(result)
+                self._save_stage_output("stage_8", processed, result)
 
             # ── Stage 9: Review (BLIND) ───────────────────────────────
             if editorial_start <= 9:

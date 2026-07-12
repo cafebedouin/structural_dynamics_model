@@ -74,7 +74,9 @@ Output TWO sections:
 ---
 EDIT MANIFEST
 
-WORD COUNT: [input] → [output] ([percentage] reduction)
+WORD COUNT: (computed and inserted by the orchestrator — do NOT fill in
+numbers; you cannot count, and any totals you write here will be
+overwritten by the computed values)
 
 PACING CHANGES:
   - [section]: [tempo was X, should be Y] → [what changed]

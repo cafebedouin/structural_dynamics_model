@@ -50,7 +50,9 @@ What did the piece become?
 - Short story (overlong) / novella (undercooked)
 - What would expansion require?
 - What would compression sacrifice?
-- Current word count and target range
+- Current word count and target range. Use the ACTUAL WORD COUNT
+  (computed) injected alongside the story — never estimate or compute
+  a word count yourself; a model-emitted total is treated as fabricated.
 
 ---
 

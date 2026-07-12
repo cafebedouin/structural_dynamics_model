@@ -28,6 +28,8 @@ Specific audience > "general educated reader." Determines assumed knowledge, exp
 
 Based on discovery report: short story / novella / larger work? Set a target word count range, world-building density, ending resolution.
 
+Base all length judgments on the ACTUAL WORD COUNT (computed) injected alongside the story — never estimate the current length yourself. Keep the target range inside the FEASIBLE RANGE if one is injected; a target the downstream stages cannot physically emit produces silent shortfalls papered over by fabricated counts.
+
 **4. What creative deepening is available?**
 
 What meaning, turn, or dimension exists in the material that editing could bring out? Draw from discovery report's latent potential section.
