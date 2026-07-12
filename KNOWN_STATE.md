@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-12 — OQ-215 arms 1–2 run: R3(b) holds (operator-witnessed); blind falsifier discriminates, stage-10 D9 does not; truncation class fixed (caps + cap-hit guard + mode injection)
+**Files:** agent/uke_narrative_orchestrator.py, agent/narrative_transform/stories/the-empty-pan_rev2.md, audits/2026-07-12_oq215_arm2_d9_control/
+**Tier:** landed
+
+**Arm 1 (R3(b) symmetric control): PASS, operator-witnessed by direct read.** Run
+`uke/the_empty_pan_1783838645/` → `stories/the-empty-pan_rev2.md`. Stage 0 authored the R14
+contract unprompted (inherent_instrument: yes); instrument survived as mechanism (SSA
+certification world) with page density 0.48/1000 vs baseline 47.6 (3 numerals, all
+institution-held certificate IDs — earned); blind stage-9 falsifier HOLDS; D9=5. Operator
+watch-item: word-arithmetic in prose ("Quota minus rejections…") — invisible to the digit meter,
+OQ-214's calibration case. **Caveat: stage_2 AND stage_3 hit their caps exactly (silent
+truncation, OQ-216) — stage_3's blueprint lost `<numeric_register>`, so R2's field never reached
+generation; arm 1's density win is attributable to the stage-2 gate + R1 exemplars + R6 only.**
+
+**Arm 2 (D9 discrimination control): SPLIT.** Blind stage-9 DISCRIMINATES (Assessment → LOST,
+kill passage named + grep-verified, ROUTE STRATEGY as pre-registered). Stage-10 D9 scored 5 on
+everything including the negative control — quote-and-rationalize witnessed (cited a
+by-eye-recoverable value as proof of unrecoverability), plus FULL-mode hallucinated with no spec
+on both runs. **Consequence: any stage-10 D9=5 (incl. rev2's) is weak evidence alone; the
+discriminating witnesses are the blind stage-9 falsifier + an operator read.** Readout + proposed
+D9 adversarial-obligation fix (awaiting ruling): `audits/2026-07-12_oq215_arm2_d9_control/`.
+
+**Infrastructure (the silent-green class, OQ-216):** stage-0 Gemini truncation guard (`b715f3dc`);
+stage_1/2/3 caps raised 16384/16384/12288; universal cap-hit guard in `_call` (tout ≥ cap → fail
+loud; Gemini exempt-by-accounting — needs semantic closure checks, noted in OQ-216); stage-10
+validation mode now orchestrator-injected (never model judgment). All guards witnessed two-sided
+offline.
+
 ## 2026-07-12 — CORRECTIONS to the R1–R14 landing: density threshold PROVISIONAL; rift3 "exclusion" retracted (witnessed meter false-positive class); prior D5/origin-obfuscation scores taken with the air gap partially open
 **Files:** agent/uke_narrative_orchestrator.py, agent/narrative_transform/originals/rift3.md, ISSUES.md
 **Tier:** correction-key

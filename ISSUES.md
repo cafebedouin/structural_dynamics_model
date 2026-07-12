@@ -9702,6 +9702,15 @@ was calibrated (positive: a witnessed theme-naming story; negative: operator-jud
 Known hard part: the proxy is much harder than a digit regex — expect precision problems; the
 design goal is a HIGH-RECALL candidate list the model must adjudicate, not a verdict-issuing meter.
 
+**Witnessed instance for the eventual calibration set (2026-07-12, operator read of
+`stories/the-empty-pan_rev2.md`):** word-arithmetic — "Quota minus rejections equals certified
+placements... Gross minus fees, minus rent, minus food equals what's left" (appears twice) — the
+extraction-math-on-the-page move in PROSE form, invisible to the digit meter (density 0.48/1000
+on that story). Defensible in context (the narrator's own survival math, positional access, acted
+on in-scene) — so it is also a template for the meter's hard case: a character who EARNS a
+thesis-shaped or arithmetic-shaped line from inside their position. Flag-not-fail is the
+adjudication the meter must deliver.
+
 **What resolution changes:** the last waivable absence-claim in the editorial audit layer becomes
 paste-or-void with mechanical ground truth; stage 8's "Theme-naming: none found" stops being
 self-certifiable.
@@ -9713,8 +9722,37 @@ self-certifiable.
 **Ω-type:** Ω_E (empirical: pre-registered runs against a witnessed baseline).
 
 **Status:** open — implementation landed 2026-07-11 (commit series from `600abbae`); conditional
-spend-go granted 2026-07-12 (arm 1, then stop and report). **Arm 1 RUN and read — verdict PASS
-(pending operator confirmation); arms 2–3 not yet run.**
+spend-go granted 2026-07-12 (arm 1, then stop and report). **Arm 1 RUN — verdict PASS,
+CONFIRMED by operator direct read of the full story (2026-07-12, witness not concurrence:
+operator's own numeral count matched — 3 digits, all placement-certificate IDs). **Arm 2 RUN
+(2026-07-12) — SPLIT verdict: the blind stage-9 falsifier DISCRIMINATES (Assessment → LOST with
+the kill passage named and grep-verified; ROUTE STRATEGY, exactly as pre-registered); stage-10
+D9 does NOT (scored 5 on everything incl. the negative control, quote-and-rationalize witnessed
+— cited a by-eye-recoverable true value as evidence of unrecoverability; plus FULL-mode
+hallucinated with no spec on both runs — mode now orchestrator-injected). Forty-Hertz stage-9
+came back LOST (expected HOLDS) — ambiguous between a genuine unchecked Part-Three reversion and
+generic-contract strictness; disambiguation = 1 call under its own SECTION 0. Arm-1 verdict
+STANDS but re-weighted onto the discriminating witnesses (blind stage-9 + operator read), not
+stage-10 D9. Full readout + proposed D9 adversarial-obligation fix (needs ruling before arm 3):
+`audits/2026-07-12_oq215_arm2_d9_control/READOUT.md`.** Arm 3 not yet run — gated on the D9
+instrument ruling.
+
+**Operator witness-read notes on arm 1 (2026-07-12) — carry into arm-3 reads and revision:**
+(a) D9=5 is "defensible, precariously" — the story carries TWO reals: the clean discarded signal
+(Assessment-class, recoverable, and the middle leans correctable-error — Okonkwo's
+alternative-certification project is literally build-a-better-meter) vs the GRAIN ("grammar for
+what your hands already know"), never resolved to a value; the ending stages the
+correctable-error temptation and refuses it on-screen (Okonkwo abandons the alternative standard:
+"This will not make you money"). The 5 lives in the last two pages. (b) WATCH-ITEM the digit
+meter cannot see: word-arithmetic — "Quota minus rejections equals certified placements... Gross
+minus fees, minus rent, minus food equals what's left" (×2) — extraction-math-on-the-page in
+prose form; defensible here (Lena's own survival math, positional access, acted on), FLAG not
+fail; OQ-214's meter is the eventual tool. (c) The flinch is BROADER than the flagged F48 scene:
+the gold-crater-sunset + "the stone holds its memory whether anyone listens" consolation refrain
+closes all three section-clusters, and the finale is warm where the source was cold — the
+resleeve preserved the invariant and warmed the valence (diffuse consolation, gentler cousin of
+the multi-POV bummer). HUMAN-REVIEW-not-PUBLISH is correct routing; the 39 is not a near-miss on
+publish — the flag is the system working.
 
 **Arm 1 result (2026-07-12, run `agent/narrative_transform/uke/the_empty_pan_1783838645/`,
 story `stories/the-empty-pan_rev2.md`, ~$1.71, 2 editorial cycles):** first launch truncated
@@ -9738,6 +9776,17 @@ R5/R6 manifest carries pasted per-instance adjudication. Note for arm 3's read: 
 outcome witnessed here is instrument-in-world + near-zero page density — LOW density with a live
 instrument is the design working, not displacement (displacement = no certified measurement
 anywhere in the world).
+
+**Arm-1 CAVEAT (found post-verdict, 2026-07-12): stage_2 and stage_3 both hit their MAX_TOKENS
+caps exactly and downstream stages consumed the partial outputs silently (OQ-216).** stage_2 @
+8192: omega-log tail cut mid-word (SECTION 0/1 complete — harmless to the control). stage_3 @
+4096: blueprint truncated mid-Act-1 — no `</story_blueprint>`, and the R2 `<numeric_register>`
+field NEVER REACHED stage 4. So arm 1's 0.48/1000 was achieved by the stage-2 Scored-Snare gate +
+R1 exemplars + R6 pressure ALONE; **R2's blueprint field is untested in live fire** — arm 3 (post
+cap-raise + cap-hit guard) is its first real exercise. The verdict stands (the control tests the
+output, and both conditions were witnessed on the output), but the channel attribution is
+narrower than the design intended. Fixes: caps raised (stage_1/2/3 → 16384/16384/12288) + a
+universal cap-hit guard in `_call` (tout >= cap → fail loud; witnessed two-sided).
 
 **Priority:** 2
 
@@ -9802,6 +9851,38 @@ a thesis-shaped line from inside their position.
 witnesses" to "verified against the defect they were built for"; R3(b) either holds or is dropped
 to the hard ban with evidence; the density threshold graduates from provisional two-point
 calibration to variance-run calibration.
+
+---
+
+## OQ-216 — Sweep the narrative orchestrator for silent-continue-on-partial-input sites (truncation-guard template) (Ω_E)
+
+**Ω-type:** Ω_E (mechanical census against a witnessed template).
+
+**Status:** open — minted 2026-07-12 from the arm-one launch failure.
+
+**Priority:** 4
+
+**Origin:** 2026-07-12 (operator note on the OQ-215 arm-1 report). Stage 0 truncated on the token
+cap and the pipeline CONTINUED SILENTLY on the corrupted manifest — aggregate-green-over-red
+reproduced at the infrastructure layer: a stage reporting success over a substrate it didn't
+verify. Fixed for stage 0 by `b715f3dc` (fail-loud guard: `<constraint_manifest>` opened but
+never closed → StepResult error; two-sided witness). The lesson generalizes from content to
+plumbing: **anywhere a stage can proceed on a partial or truncated input without halting is
+another silent-green waiting.**
+
+**The work:** census `agent/uke_narrative_orchestrator.py` (and the stage prompt contracts) for
+sites where a stage's output can be truncated (max_tokens), empty, or structurally incomplete and
+the next stage consumes it without a check. Known candidates to adjudicate: stage-1 formalization
+(no closing-structure check; MAX_TOKENS 8192), stage-2 SECTION structure (SECTION 0/1/2 present?
+— arm-1 stage_2 hit exactly 8192 output tokens, suspicious of truncation that happened to land
+after SECTION 2), stage-3 blueprint XML (`</story_blueprint>` closure), stage-7/8 story+manifest
+shape (a stage-8 output missing its manifest reads as pure story silently), stage-10 report
+completeness. For each: guard-or-justify, on the b715f3dc template (narrow closure check,
+fail-loud StepResult error, two-sided witness). Per Build Discipline, the guard added is itself a
+claim — each needs its positive control.
+
+**What resolution changes:** no stage in the narrative pipeline can report success over an input
+its producer never finished writing.
 
 ---
 

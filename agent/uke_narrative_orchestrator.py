@@ -807,9 +807,14 @@ class UKEOrchestrator:
         # same-cap baseline completed at 6.9KB). Headroom is cheap; the
         # truncation guard in _run_stage_0 fails loud if it ever recurs.
         "stage_0":  24576,
-        "stage_1":  8192,
-        "stage_2":  8192,
-        "stage_3":  4096,
+        # stage_1/2/3 raised 2026-07-12: arm-1 run 1783838645 hit the old
+        # caps EXACTLY (stage_2 at 8192 — omega log cut mid-word; stage_3
+        # at 4096 — blueprint truncated, <numeric_register> never emitted)
+        # and downstream stages consumed the partial outputs silently
+        # (OQ-216). The cap-hit guard in _call now fails loud on this.
+        "stage_1":  16384,
+        "stage_2":  16384,
+        "stage_3":  12288,
         "stage_4":  16384,
         "stage_5":  8192,
         "stage_6":  8192,
@@ -1102,6 +1107,19 @@ class UKEOrchestrator:
             temperature=temp,
             max_tokens=max_tok,
         )
+        # Cap-hit guard (OQ-216): an output that used its entire token
+        # budget was almost certainly cut mid-thought, and every witnessed
+        # truncation (stage_2 @ 8192, stage_3 @ 4096, run 1783838645) was
+        # consumed silently by the next stage. Fail loud instead.
+        # NOTE: reliable for Anthropic (tokens_out == cap on truncation);
+        # Gemini's candidates_token_count EXCLUDES thinking tokens, so a
+        # Gemini cap-hit can pass this guard — Gemini stages need semantic
+        # closure checks as well (stage 0 has one).
+        if tout >= max_tok:
+            raise RuntimeError(
+                f"{stage} output hit its MAX_TOKENS cap ({tout} >= {max_tok}) "
+                f"— output is truncated; raise MAX_TOKENS['{stage}'] or "
+                f"reduce the task")
         return text, tin, tout, model, provider_name
 
     def _call_engine(
@@ -1473,6 +1491,25 @@ class UKEOrchestrator:
                             f"orchestrator; any other figure is wrong)"
                         )
                     prompt_parts.append(f"=== {label} OUTPUT ===\n{content}\n\n")
+
+        # Validation mode is a fact the orchestrator knows — never model
+        # judgment (witnessed 2026-07-12, OQ-215 arm 2: stage 10 declared
+        # FULL (/40) and scored D1/D2 with NO constraint spec provided,
+        # on both control runs).
+        if self.mode == "narrative" and stage == "stage_10":
+            if stage_outputs.get("stage_1_anon"):
+                mode_line = (
+                    "FULL MODE (/40) — the constraint specification IS "
+                    "provided above.")
+            else:
+                mode_line = (
+                    "CRAFT MODE (/25) — NO constraint specification was "
+                    "provided. Do NOT score D1, D2, or D5 (mark N/A per "
+                    "protocol); do not claim a /40 total.")
+            prompt_parts.append(
+                f"=== VALIDATION MODE (computed by orchestrator; not yours "
+                f"to decide) ===\n{mode_line}\n\n"
+            )
 
         # R8: strategy targets must respect the downstream output caps —
         # stage 6 once set a 12,500-13,000-word target against a ~12k-word
