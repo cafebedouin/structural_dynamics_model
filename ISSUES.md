@@ -9721,35 +9721,63 @@ API spend and an operator read, so the go is the operator's.
 
 **Origin:** 2026-07-11. The full R1–R14 plan (instruments R6/R7, witness rule R5, invariant
 threading R13/R14, counting-incentive prompt changes R1–R4, scope budget R8) is implemented but
-its kill conditions have not been run. Protocol (pre-registered in the plan, § Verification):
+its kill conditions have not been run.
 
-1. **Variance check (kill condition):** 5 runs of `agent/narrative_transform/originals/the-empty-pan.md`
+**Protocol (pre-registered in the plan § Verification; REORDERED by operator ruling 2026-07-12 —
+spend ordered by what could invalidate the rest, falsification-first):**
+
+1. **R3(b) symmetric control FIRST (highest-information single run, most likely to fail):** run
+   Empty Pan under (b) with Stage-0 `inherent_instrument: yes`; the output must BOTH clear the R6
+   density threshold AND pass D9 — the number survives as mechanism without reverting to
+   legible-mismeasured-value (the Assessment failure) or displacing the instrument away (the
+   hard-ban failure). **If this fails, the conditional ruling collapses to the hard ban and the
+   variance arm is re-planned before further spend.** Fallback ruled in the plan: drop R3 to the
+   hard ban WITH this evidence, never pre-emptively.
+2. **R13 D9 positive control:** the pre-rewrite "Assessment"-class invariant-dropped story
+   (`agent/narrative_transform/stories/the-empty-pan_rev1.md`, run `the_empty_pan_1783474314`)
+   pushed through stages 9–10 with a contract must route STRATEGY / fail D9; the Forty-Hertz story
+   (`stories/the_empty_pan_rev1.md`) must pass D9.
+3. **Variance check (only if 1–2 hold):** 5 runs of `agent/narrative_transform/originals/the-empty-pan.md`
    against the same spec. Invariant: foam-class substrate in most runs ⇒ stage-2 gate confirmed;
    floor present after R14 ⇒ contract confirmed. Counting: `_numeric_inventory` density per run vs
    the 2026-07-11 baseline (stage_4 = 37.6/1000, stage_8 = 47.6/1000, run
    `agent/narrative_transform/uke/the_empty_pan_1783821245/`). Success = large drop PLUS operator
    read — the meter is a proxy; vagueness that merely hides numbers is not a win.
-2. **R5/R6:** stage-8 manifests carry pasted per-instance adjudication; a manifest claiming absence
-   over a non-empty injected inventory is structurally impossible — check one run's manifest.
-3. **R7:** stage-9 word-count statements match `wc -w` ±2%.
-4. **R9:** final `stories/*.md` contains no `EDIT MANIFEST` string; the run-dir sidecar does.
-5. **R13 positive control:** the pre-rewrite "Assessment"-class invariant-dropped story
-   (`agent/narrative_transform/stories/the-empty-pan_rev1.md`, run `the_empty_pan_1783474314`)
-   pushed through stages 9–10 with a contract must route STRATEGY / fail D9; the Forty-Hertz story
-   (`stories/the_empty_pan_rev1.md`) must pass D9.
-6. **R3(b) held, not collapsed (symmetric control — REQUIRED, else a clean counting meter over a
-   dead invariant reads as success):** run Empty Pan under (b) with Stage-0 `inherent_instrument:
-   yes`; the output must BOTH clear the R6 density threshold AND pass D9 — the number survives as
-   mechanism without reverting to legible-mismeasured-value (the Assessment failure) or displacing
-   the instrument away (the hard-ban failure). Fallback ruled in the plan: if the variance runs show
-   R6 cannot hold the line on a diegetic score, drop R3 to the hard ban WITH that evidence.
+   **Recalibration output (operator ruling 2026-07-12): `NUMERIC_DENSITY_THRESHOLD = 25.0` is
+   PROVISIONAL — a two-point calibration with an 8-point dead band above the cleanest human prose
+   (16.3) and 12 more points below the nearest positive (37.6); it passes stories that count 2x any
+   clean control. The five fresh densities from this arm are the first real data on where
+   "improved" vs "still anchored" sits for generated output; set the threshold from them, not from
+   the two-point control.**
+4. **R5/R6 spot check (rides along with any run):** stage-8 manifests carry pasted per-instance
+   adjudication; a manifest claiming absence over a non-empty injected inventory is structurally
+   impossible.
+5. **R7 spot check:** stage-9 word-count statements match `wc -w` ±2%.
+6. **R9 spot check:** final `stories/*.md` contains no `EDIT MANIFEST` string; the run-dir sidecar does.
 7. **R12 (separate arm, never bundled):** optional `--stage-4-model` / `--stage-7-model` A/B
    (e.g. `anthropic:claude-opus-4-8`) — flags already exist; run only after 1–6 so it doesn't
    confound the measurement.
 
+**Known meter false-positive class (witnessed 2026-07-12, pre-spend; governs arm 3's read):**
+`originals/rift3.md` reads 46.0/1000 — above both positives — yet is NOT the defect: a
+gauge-owning institutional POV (the Warden) where every reading is taken and acted on in-scene
+(the log-vs-reading discrepancy — 12.1% logged vs 11.6% read, "Both numbers were his" — IS the
+story's hinge), plus numeric proper nouns ("Vent Fourteen" ×10, "Vent Three"). Its 2026-07-11
+calibration "exclusion" as "counting-saturated by design" was UNSOUND — the operator's agent
+pre-deciding the instrument's verdict — and is retracted; rift3 is reclassified as the witnessed
+false-positive class. Density measures numeric REGISTER, narrower than the defect (UNEARNED
+counting); the discriminator is R2's positional access, which only the R6 per-instance
+adjudication + OPEN-flag escalation can apply. The gate architecture already handles the class
+correctly (it never auto-rejects: a faithful revision of a rift3-shaped story keeps the earned
+numbers, density stays high, and it escalates OPEN to the operator). When adjudicating arm 3's
+densities, apply the same read: WHO holds the number, on what instrument, acting how. Cross-ref:
+OQ-214 inherits this as its template problem — the theme-naming analogue is a character who EARNS
+a thesis-shaped line from inside their position.
+
 **What resolution changes:** the R1–R14 changes graduate from "landed with offline wiring
 witnesses" to "verified against the defect they were built for"; R3(b) either holds or is dropped
-to the hard ban with evidence.
+to the hard ban with evidence; the density threshold graduates from provisional two-point
+calibration to variance-run calibration.
 
 ---
 

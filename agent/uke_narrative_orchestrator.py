@@ -271,18 +271,32 @@ _COUNT_VERB_RE = re.compile(
 _MATH_PHRASE_RE = re.compile(r'\bthe (?:math|arithmetic)\b', flags=re.IGNORECASE)
 
 # Density threshold (numerals + number-words per 1,000 story words) above
-# which the post-stage-8 gate fires. Calibrated 2026-07-11:
-#   positive controls (MUST flag): uke/the_empty_pan_1783821245
-#     stage_4_output.md = 37.6, stage_8_output.md = 47.6
-#   negative controls (MUST pass): human-authored originals/ — classic
-#     prose cluster 2.3–16.3; the inherent-instrument source
-#     the-empty-pan.md = 18.8 (a story ABOUT certified measurement; the
-#     R3(b) exception class must not be flagged by the meter alone).
-#   Excluded from calibration: rift3.md (46.0 — an operator draft that is
-#     itself counting-saturated by design) and the_waste_land.md (33.1 —
-#     verse line-number transcription artifact).
-# 25.0 passes every clean negative with headroom and flags both positives
-# at ≥1.5x margin. The meter is a proxy; the operator read is the verdict.
+# which the post-stage-8 gate fires.
+#
+# PROVISIONAL (operator ruling 2026-07-12): set from a two-point control,
+# to be RECALIBRATED from the OQ-215 five-run variance densities — those
+# runs are the first data on where "improved" vs "still anchored" actually
+# sits for generated output. Do not treat 25.0 as settled. Known slack:
+# clean human prose tops out at 16.3 and the nearest positive is 37.6, so
+# this gate passes stories counting 2x any clean control.
+#
+# Calibration record (2026-07-11, amended 2026-07-12):
+#   positive controls (flag): uke/the_empty_pan_1783821245
+#     stage_4_output.md = 37.6, stage_8_output.md = 47.6 (powerless POV
+#     tallying ambiently — the knowledge-boundary violation)
+#   negative controls (pass): human originals — classic prose 2.3-16.3;
+#     inherent-instrument source the-empty-pan.md = 18.8
+#   measurement artifact (excluded): the_waste_land.md = 33.1 (verse
+#     line-number transcription, a scanner false positive)
+#   KNOWN FALSE-POSITIVE CLASS (witnessed, NOT excluded): rift3.md = 46.0
+#     — a gauge-owning institutional POV where every reading is taken and
+#     acted on in-scene (the log-vs-reading discrepancy IS the story), plus
+#     numeric proper nouns ("Vent Fourteen"). Density alone cannot see
+#     positional access; the R6 per-instance PRECISION/TEXTURE adjudication
+#     and the OPEN-flag escalation are the layers that catch this class —
+#     the gate escalates to the operator, it never auto-rejects.
+# The meter is a proxy for numeric REGISTER DENSITY, which is narrower
+# than the defect (UNEARNED counting). The operator read is the verdict.
 NUMERIC_DENSITY_THRESHOLD = 25.0
 
 # No silent caps: if an inventory listing is truncated for prompt size,

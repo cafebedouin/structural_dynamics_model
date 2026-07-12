@@ -45,6 +45,40 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-12 — CORRECTIONS to the R1–R14 landing: density threshold PROVISIONAL; rift3 "exclusion" retracted (witnessed meter false-positive class); prior D5/origin-obfuscation scores taken with the air gap partially open
+**Files:** agent/uke_narrative_orchestrator.py, agent/narrative_transform/originals/rift3.md, ISSUES.md
+**Tier:** correction-key
+
+Three qualifications on the 2026-07-11 entry below (operator review, 2026-07-12):
+
+1. **`NUMERIC_DENSITY_THRESHOLD = 25.0` is PROVISIONAL, not settled.** Two-point calibration with
+   an 8-point dead band above the cleanest human prose (16.3) and 12 more below the nearest
+   positive (37.6) — it passes stories counting 2x any clean control. To be RECALIBRATED from the
+   OQ-215 arm-3 variance densities (the first real data on the improved-vs-anchored boundary for
+   generated output). Do not cite 25.0 as a validated boundary.
+2. **The rift3.md calibration "exclusion" was UNSOUND and is retracted.** Calling it
+   "counting-saturated by design" was the agent pre-deciding the verdict the instrument exists to
+   deliver. Witnessed read (no spend, `_numeric_inventory` + per-line contexts): 46.0/1000 — above
+   both positives — but the narrator is a gauge-owning institutional POV whose every reading is
+   taken and acted on in-scene (the 12.1%-logged / 11.6%-read discrepancy IS the story's hinge),
+   plus numeric proper nouns ("Vent Fourteen" ×10). rift3 is therefore the witnessed
+   FALSE-POSITIVE CLASS of the meter: density measures numeric REGISTER, narrower than the defect
+   (UNEARNED counting); the discriminator is R2's positional access, applied only by the R6
+   per-instance adjudication + OPEN-flag escalation (the gate never auto-rejects — correct). Full
+   read + protocol implications in OQ-215; OQ-214 inherits it as the template problem (a character
+   who EARNS a thesis-shaped line).
+3. **Prior D5/origin-obfuscation scores were taken with the air gap partially open.** The
+   stage_1_anon ANONYMIZATION note listed ORIGINAL character names into stages 2/3 for the whole
+   life of the anonymizer (fixed in `a3d0fdc4`). Invariant/topology findings are unaffected (those
+   were about structure, not names), but any pre-2026-07-11 D5/origin-obfuscation score or
+   displacement read was measured over a pipeline that leaked source names into setting design —
+   treat those numbers as upper bounds on obfuscation, not clean measurements. Applies to all runs
+   in `agent/narrative_transform/uke/` predating `a3d0fdc4`.
+
+OQ-215 protocol also REORDERED (operator ruling): R3(b) symmetric control runs FIRST (highest
+information, most likely to fail; its failure collapses the conditional ruling to the hard ban),
+then the R13 D9 positive control, then the 5-run variance only if both hold.
+
 ## 2026-07-11 — UKE narrative pipeline: counting-defect plan R1–R14 landed (deterministic numeric meter, computed word counts, invariant threading, counting-incentive prompt fixes)
 **Files:** agent/uke_narrative_orchestrator.py, agent/narrative_transform/stage0.md, agent/narrative_transform/stage2.md, agent/narrative_transform/stage3.md, agent/narrative_transform/stage4.md, agent/narrative_transform/stage5.md, agent/narrative_transform/stage6.md, agent/narrative_transform/stage7.md, agent/narrative_transform/stage8.md, agent/narrative_transform/stage9.md, agent/narrative_transform/stage10.md
 **Tier:** landed
