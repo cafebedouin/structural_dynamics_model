@@ -5,8 +5,9 @@
 % that suite proves the kernel (obstruction_from_vector/3) realizes the proven
 % general-n spectra on SYNTHETIC vectors; this one proves the stakeholder
 % WIRING (stakeholder_seats:stakeholder_obstruction/5) — live-corpus spectrum
-% validity, coherence with consensus_provenance/2 (the D4 biconditional with
-% named divergence cells), and the fixture-pinned boundary cases.
+% validity, coherence with consensus_provenance/2 (EXACT biconditional since
+% OQ-217; the pre-tightening D4 divergence cells (a)/(b)/mixed are pinned as
+% insufficiency/annotated-unanimity fixtures), and the boundary cases.
 %
 % The expected-spectrum table is REUSED module-qualified from the sibling
 % (plunit_h1_spectrum:expected_spectrum/2) — never forked (Pattern 2).
@@ -94,16 +95,16 @@ test(live_spectrum_validity) :-
            ;   throw(null_h1_with_enough_real_seats(C2, n_real(NR2)))
            )).
 
-% ---- 3. mcc biconditional coherence (D4 case table) -------------------------
+% ---- 3. mcc biconditional coherence (D4 case table, OQ-217 exact) -----------
 % consensus_provenance/2 and stakeholder_obstruction/5 must relate EXACTLY as
 % the case table permits, per corpus constraint, both directions (the verdicts
 % are exhaustive and each names its exact obstruction constraint; any pair
-% outside the table throws the offender). Named divergence cells:
-%   cell (a): unanimous with NReal = 1 ("unanimity of one") — H1 null.
-%   cell (b): unanimous over the `unknown` token (NReal = 0) — H1 null.
-%             Absence-read-as-agreement; nonzero LIVE population triggers the
-%             D4 kill condition (tighten consensus_provenance — census's job).
-%   mixed   : plural([T, unknown]) — H1 follows the real seats only.
+% outside the table throws the offender). Since OQ-217 (operator ruling
+% 2026-07-12) both sides compute over the SAME is_real_type/1 domain, so the
+% biconditional is EXACT — the former divergence cells (a) (unanimity of one),
+% (b) (all-`unknown` unanimity, the fired D4 kill condition) and mixed
+% (plural([T,unknown])) all route to insufficient_real_seats / annotated
+% unanimity and no longer exist as verdict-vs-H¹ daylight.
 test(mcc_biconditional_coherence) :-
     forall(corpus_loader:corpus_constraint(C),
            ( stakeholder_seats:consensus_provenance(C, V),
@@ -118,29 +119,21 @@ coherence_case(no_agent_seats, H0, H1, NS, NR) :-
     NS == 0, NR == 0, H0 == null, H1 == null.
 coherence_case(seats_untyped, H0, H1, NS, NR) :-
     NS >= 1, NR == 0, H0 == null, H1 == null.
+coherence_case(insufficient_real_seats, H0, H1, NS, NR) :-
+    NS >= 1, NR < 2, H0 == null, H1 == null.
 coherence_case(unanimous_no_excluded_seats, H0, H1, NS, NR) :-
-    unanimous_obstruction(H0, H1, NS, NR).
+    NR >= 2, NR == NS, H0 == 1, H1 == 0.
+coherence_case(unanimous_with_untypeable_seats, H0, H1, NS, NR) :-
+    NR >= 2, NR < NS, H0 == 1, H1 == 0.
 coherence_case(manufactured_consensus_candidate(_), H0, H1, NS, NR) :-
-    unanimous_obstruction(H0, H1, NS, NR).
+    NR >= 2, NR == NS, H0 == 1, H1 == 0.
+coherence_case(manufactured_consensus_candidate_untypeable(_), H0, H1, NS, NR) :-
+    NR >= 2, NR < NS, H0 == 1, H1 == 0.
 coherence_case(plural(Us), H0, H1, NS, NR) :-
-    NS >= 2,
-    exclude(==(unknown), Us, RealUs),
-    length(RealUs, K),
-    (   K >= 2
-    ->  H0 == 0, integer(H1), H1 > 0          % genuine plurality <-> obstruction
-    ;   K =:= 1                                % mixed cell: plural by unknown-token only
-    ->  (   NR >= 2
-        ->  H0 == 1, H1 == 0                   % real seats actually agree
-        ;   H0 == null, H1 == null             % <2 real seats
-        )
-    ).                                          % K = 0 unreachable (>=2 distinct, one may be unknown)
-
-unanimous_obstruction(H0, H1, NS, NR) :-
-    NS >= 1,
-    (   NR >= 2
-    ->  H0 == 1, H1 == 0                       % coherent unanimity
-    ;   H0 == null, H1 == null                 % cell (a) NR=1 / cell (b) NR=0
-    ).
+    NR >= 2,
+    \+ memberchk(unknown, Us),                 % OQ-217: unknown never in the term
+    length(Us, K), K >= 2,
+    H0 == 0, integer(H1), H1 > 0.              % genuine plurality <-> obstruction
 
 % ---- fixtures ----------------------------------------------------------------
 % Recipes witnessed by probe 2026-07-12 (scratchpad probe_fixture_reachability):
@@ -195,8 +188,11 @@ test(zero_seat_reads_null,
     H0 == null, H1 == null, NS == 0, NR == 0,
     stakeholder_seats:consensus_provenance(tsh_zero_seat, no_agent_seats).
 
-% ---- 6. cell (a) pinned: 2 agent seats / 1 typeable -> (null, null, 2, 1) ---
-test(single_real_seat_null,
+% ---- 6. former cell (a): 2 agent seats / 1 typeable -> insufficiency --------
+% H¹-boundary probe (operator rider, 2026-07-12): single real seat MUST read
+% (null, null) on the H side — the exact biconditional's insufficiency row is
+% asserted here at its boundary, not just claimed at the header.
+test(single_real_seat_insufficient,
      [ setup(( fixture_metrics(tsh_cell_a),
                fixture_real_seat(tsh_cell_a, boss),
                fixture_fail_seat(tsh_cell_a, phantom),
@@ -207,11 +203,16 @@ test(single_real_seat_null,
     grothendieck_cohomology:is_real_type(T),
     stakeholder_seats:stakeholder_obstruction(tsh_cell_a, H0, H1, NS, NR),
     H0 == null, H1 == null, NS == 2, NR == 1,
-    % the divergence: mcc side reads "unanimity of one"
-    stakeholder_seats:consensus_provenance(tsh_cell_a, unanimous_no_excluded_seats).
+    % OQ-217: "unanimity of one" is gone — the insufficiency token, coherent
+    stakeholder_seats:consensus_provenance(tsh_cell_a, insufficient_real_seats),
+    coherence_case(insufficient_real_seats, H0, H1, NS, NR).
 
-% ---- 7. cell (b) pinned: all seats type `unknown`, mcc reads unanimous ------
-test(all_unknown_cell_b,
+% ---- 7. former cell (b): all seats derive `unknown` -> insufficiency --------
+% H¹-boundary probe (operator rider, 2026-07-12): all-derived-unknown MUST
+% read (null, null) on the H side. The excluded [ghost] seat stays in the
+% fixture to prove the mcc flag can no longer fire over an all-untypeable
+% seat set (the OQ-207 D4 kill-condition defect, removed at source).
+test(all_unknown_insufficient,
      [ setup(( fixture_unknown_seat(tsh_cell_b, vp1, agenda_setter),
                fixture_unknown_seat(tsh_cell_b, vp2, payer),
                fixture_excluded_seat(tsh_cell_b, ghost),
@@ -222,27 +223,104 @@ test(all_unknown_cell_b,
     stakeholder_seats:dr_type_for_stakeholder(tsh_cell_b, vp2, unknown),
     stakeholder_seats:stakeholder_obstruction(tsh_cell_b, H0, H1, NS, NR),
     H0 == null, H1 == null, NS == 2, NR == 0,
-    % the documented WRONG verdict: absence read as (manufactured) agreement
-    stakeholder_seats:consensus_provenance(tsh_cell_b,
-        manufactured_consensus_candidate([ghost])).
+    % OQ-217: absence is never read as (manufactured) agreement
+    stakeholder_seats:consensus_provenance(tsh_cell_b, insufficient_real_seats),
+    coherence_case(insufficient_real_seats, H0, H1, NS, NR).
 
-% ---- 7b. mixed cell pinned: plural([T, unknown]) with H1 null ---------------
-% Not in the plan's D4 two-cell table; reachable live (witnessed 2026-07-12:
-% plural([rope,unknown]) on a probe constraint). Consensus counts `unknown` as
-% a type token; the H¹ filters it — so a real type beside an unknown-typed
-% seat reads plural there and null (or 0) here. Counted by the OQ-207 census.
-test(mixed_plural_unknown_cell,
+% ---- 7b. former mixed cell, NR = 1: real type beside unknown -> insufficiency
+% Pre-OQ-217 this read plural([rope,unknown]) — absence as disagreement, the
+% dual of cell (b). Now: <2 real seats -> insufficiency, coherent with H null.
+test(mixed_single_real_insufficient,
      [ setup(( fixture_metrics(tsh_mixed),
                fixture_real_seat(tsh_mixed, boss),
                fixture_unknown_seat(tsh_mixed, vp, payer),
                cache_registry:clear_all_caches )),
        cleanup(teardown_fixture(tsh_mixed)) ]) :-
-    stakeholder_seats:consensus_provenance(tsh_mixed, plural(Us)),
-    memberchk(unknown, Us),
     stakeholder_seats:stakeholder_obstruction(tsh_mixed, H0, H1, NS, NR),
     H0 == null, H1 == null, NS == 2, NR == 1,
-    % and the pair sits inside the coherence table (same checker as test 3)
+    stakeholder_seats:consensus_provenance(tsh_mixed, insufficient_real_seats),
+    coherence_case(insufficient_real_seats, H0, H1, NS, NR).
+
+% ---- 7c. annotated unanimity: 2 reals agree + unknown seat ------------------
+% The OQ-217 option-3 token: >=2 real seats agreeing while an untypeable seat
+% sits in the room -> unanimous_with_untypeable_seats (the caveat rides in the
+% token, not side-band counts), H = (1, 0) — the exact biconditional's
+% unanimity row with NReal < NSeats.
+test(unanimous_with_untypeable,
+     [ setup(( fixture_metrics(tsh_annot),
+               fixture_real_seat(tsh_annot, boss),
+               fixture_real_seat(tsh_annot, boss2),
+               fixture_unknown_seat(tsh_annot, vp, payer),
+               cache_registry:clear_all_caches )),
+       cleanup(teardown_fixture(tsh_annot)) ]) :-
+    stakeholder_seats:stakeholder_obstruction(tsh_annot, H0, H1, NS, NR),
+    H0 == 1, H1 == 0, NS == 3, NR == 2,
+    stakeholder_seats:consensus_provenance(tsh_annot,
+        unanimous_with_untypeable_seats),
+    coherence_case(unanimous_with_untypeable_seats, H0, H1, NS, NR).
+
+% ---- 7d. plural is real-only: 2 distinct reals + unknown seat ---------------
+% Plurality is EXISTENTIAL (witnessed by >=2 distinct real types), so it needs
+% no annotation and the unknown token never appears in the term. Fixture
+% recipe for the second real type: victim/powerless -> snare (probe witnessed
+% 2026-07-12, sibling of the boss rope recipe).
+fixture_snare_seat(C, N) :-
+    assertz(narrative_ontology:constraint_stakeholder(C, N, victim,
+        powerless, generational, arbitrage, national)).
+test(plural_excludes_unknown_token,
+     [ setup(( fixture_metrics(tsh_realplural),
+               fixture_real_seat(tsh_realplural, boss),
+               fixture_snare_seat(tsh_realplural, worker),
+               fixture_unknown_seat(tsh_realplural, vp, payer),
+               cache_registry:clear_all_caches )),
+       cleanup(teardown_fixture(tsh_realplural)) ]) :-
+    % fixture precondition: the two real seats derive DISTINCT real types
+    stakeholder_seats:dr_type_for_stakeholder(tsh_realplural, boss, T1),
+    stakeholder_seats:dr_type_for_stakeholder(tsh_realplural, worker, T2),
+    T1 \== T2,
+    grothendieck_cohomology:is_real_type(T1),
+    grothendieck_cohomology:is_real_type(T2),
+    stakeholder_seats:consensus_provenance(tsh_realplural, plural(Us)),
+    \+ memberchk(unknown, Us),
+    msort([T1, T2], SortedTs), Us == SortedTs,
+    stakeholder_seats:stakeholder_obstruction(tsh_realplural, H0, H1, NS, NR),
+    H0 == 0, integer(H1), H1 > 0, NS == 3, NR == 2,
     coherence_case(plural(Us), H0, H1, NS, NR).
+
+% ---- 7e. mcc still fires on a genuine all-real unanimity + excluded seat ----
+% The tightening must not have thrown out the flag itself: 2 real agreeing
+% seats, no unknowns, non-empty excluded set -> mcc(Excl) exactly as before.
+test(mcc_still_fires_all_real,
+     [ setup(( fixture_metrics(tsh_mcc),
+               fixture_real_seat(tsh_mcc, boss),
+               fixture_real_seat(tsh_mcc, boss2),
+               fixture_excluded_seat(tsh_mcc, ghost),
+               cache_registry:clear_all_caches )),
+       cleanup(teardown_fixture(tsh_mcc)) ]) :-
+    stakeholder_seats:consensus_provenance(tsh_mcc,
+        manufactured_consensus_candidate([ghost])),
+    stakeholder_seats:stakeholder_obstruction(tsh_mcc, H0, H1, NS, NR),
+    H0 == 1, H1 == 0, NS == 2, NR == 2,
+    coherence_case(manufactured_consensus_candidate([ghost]), H0, H1, NS, NR).
+
+% ---- 7f. mcc_untypeable reachability (ruled in session 2026-07-12) ----------
+% Predicted-zero live population; the token exists for case-analysis totality
+% and this fixture proves the cell is REACHABLE (a token no input can produce
+% would be a phantom row in the coherence table).
+test(mcc_untypeable_reachable,
+     [ setup(( fixture_metrics(tsh_mccu),
+               fixture_real_seat(tsh_mccu, boss),
+               fixture_real_seat(tsh_mccu, boss2),
+               fixture_unknown_seat(tsh_mccu, vp, payer),
+               fixture_excluded_seat(tsh_mccu, ghost),
+               cache_registry:clear_all_caches )),
+       cleanup(teardown_fixture(tsh_mccu)) ]) :-
+    stakeholder_seats:consensus_provenance(tsh_mccu,
+        manufactured_consensus_candidate_untypeable([ghost])),
+    stakeholder_seats:stakeholder_obstruction(tsh_mccu, H0, H1, NS, NR),
+    H0 == 1, H1 == 0, NS == 3, NR == 2,
+    coherence_case(manufactured_consensus_candidate_untypeable([ghost]),
+                   H0, H1, NS, NR).
 
 % ---- 8. negative control: perturbed expected set rejected -------------------
 % The SAME comparator (check_h1_in_table/4) must FLAG every live determinable

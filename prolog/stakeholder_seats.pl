@@ -179,51 +179,94 @@ stakeholder_agent_seats(C, Ns) :-
 %% consensus_provenance(+C, -Verdict)
 %  R3 consumer (commentary-grade ONLY): did unanimity arise because the
 %  reading is situation-fixed, or because the dissenting seats were never in
-%  the room? Unanimous computed types across non-excluded agent seats + a
-%  non-empty excluded set => manufactured-consensus candidate, naming the
-%  absent seats. Never feeds classification.
+%  the room? Never feeds classification.
 %
-%  TOTAL (OQ-121 convention): ALWAYS succeeds with exactly one explicit Verdict,
-%  so a census/aggregate read site can distinguish the genuine outcomes from the
-%  two boundary cases a silent failure used to swallow:
+%  VERDICTS ARE COMPUTED OVER REAL-TYPED SEATS ONLY (OQ-217, operator ruling
+%  2026-07-12): the same is_real_type/1 domain as the stakeholder-frame H¹,
+%  consumed through the SAME stakeholder_type_vector/2 (Pattern-2 no-fork).
+%  An `unknown` seat can drive NEITHER agreement (the OQ-207 cell-(b) wrong
+%  verdict, absence-read-as-agreement — the D4 kill condition that forced
+%  this tightening) NOR disagreement (the mixed-cell dual, absence-read-as-
+%  plurality).
+%
+%  WHY UNANIMITY IS ANNOTATED BUT PLURALITY IS NOT (operator, 2026-07-12):
+%  unanimity is a UNIVERSAL claim, witnessed by absence-of-disagreement,
+%  which untypeable seats genuinely weaken — so their presence rides in the
+%  token itself (the caveat cannot be dropped at a display site; OQ-204
+%  constraint 3: the token is the interface). Plurality is EXISTENTIAL,
+%  witnessed positively by >=2 distinct real types, which unknowns cannot
+%  undermine.
+%
+%  TOTAL (OQ-121 convention): ALWAYS succeeds with exactly one explicit
+%  Verdict. The exhaustive verdict set:
 %    - no_agent_seats : no non-excluded agent seat exists — the consensus
-%                       question does not APPLY (out-of-domain), distinct from a
-%                       constraint with seats that simply agree.
-%    - seats_untyped  : agent seats exist but NONE derives a per-seat type — an
-%                       explicit absence, never read as unanimous.
+%                       question does not APPLY (out-of-domain).
+%    - seats_untyped  : agent seats exist but NO per-seat derivation succeeds
+%                       — probe-side absence (distinct from a seat DERIVING
+%                       literal `unknown`; the two-absence-token discipline,
+%                       see stakeholder_type_vector/2).
+%    - insufficient_real_seats : >=1 derivation succeeded but fewer than 2
+%                       real-typed seats — the OQ-217 insufficiency token.
+%                       Absorbs the former divergence cells (a) (single real
+%                       seat, "unanimity of one") and (b) (all seats derive
+%                       literal `unknown`). NReal/NSeats stay queryable
+%                       in-band via stakeholder_obstruction/5.
+%    - unanimous_no_excluded_seats        : one real type over >=2 real
+%                       seats, every seat real, no excluded set.
+%    - unanimous_with_untypeable_seats    : as above but untypeable seats
+%                       sit beside the agreeing real seats (NReal < NSeats).
+%    - manufactured_consensus_candidate(Excl)            : unanimous (all
+%                       seats real) + non-empty excluded set, naming the
+%                       absent seats.
+%    - manufactured_consensus_candidate_untypeable(Excl) : mcc with
+%                       untypeable seats beside the agreeing reals. Ruled IN
+%                       SESSION 2026-07-12 as an extension of the option-3
+%                       ruling (same universal-claim principle; NOT part of
+%                       the 2026-07-11 D4 ruling): predicted-zero live,
+%                       kept for case-analysis totality.
+%    - plural(RealTypes) : >=2 DISTINCT real types; `unknown` never appears
+%                       in the list.
 %
-%  COHERENCE WITH THE STAKEHOLDER-FRAME H¹ (OQ-207, operator ruling 2026-07-11):
-%  this verdict and stakeholder_obstruction/5 relate as a biconditional with
-%  named divergence cells — `unknown` is a TYPE TOKEN here (it can be unanimous
-%  or a plural member) but is FILTERED by the H¹'s OQ-51 real-seat rule:
-%    coherent   : unanimous with >=2 real-typed seats  <-> H1 = 0
-%                 plural with >=2 distinct REAL types  <-> H1 > 0
-%    cell (a)   : exactly one real-typed seat -> unanimous here, H1 = null
-%                 ("unanimity of one" — defensible flag semantics, documented).
-%    cell (b)   : all seats typed `unknown` -> unanimous here (possibly
-%                 manufactured_consensus_candidate), H1 = null. Absence read as
-%                 agreement — a WRONG verdict. KILL CONDITION: nonzero live
-%                 population in this cell makes tightening this predicate
-%                 (require >=2 real-typed seats for unanimity) an OBLIGATORY
-%                 follow-up commit (output-changing, own witness).
-%    mixed      : plural([T,unknown]) — a real type beside the unknown token;
-%                 H1 follows the REAL seats only (0 if they agree, null if <2).
-%                 Reachable (witnessed 2026-07-12); counted by the OQ-207 census.
+%  COHERENCE WITH THE STAKEHOLDER-FRAME H¹ — EXACT biconditional (OQ-217
+%  closed the OQ-207 divergence cells (a)/(b)/mixed; history of the cells and
+%  the fired kill condition: ISSUES.md OQ-207/OQ-217 + git log of this header):
+%    unanimous_* / manufactured_*_          <-> H0 = 1,    H1 = 0
+%    plural(_)                              <-> H0 = 0,    H1 > 0
+%    no_agent_seats / seats_untyped /
+%    insufficient_real_seats                <-> H0 = null, H1 = null
 %  Full case table: tests/test_h1_stakeholder_spectrum.pl coherence_case/5.
 consensus_provenance(C, Verdict) :-
     stakeholder_agent_seats(C, Ns),
     findall(T, ( member(N, Ns), dr_type_for_stakeholder(C, N, T) ), Ts),
-    sort(Ts, UniqueTypes),
     findall(X, narrative_ontology:constraint_stakeholder(C, X, excluded, _, _, _, _), Excl),
     (   Ns == []
     ->  Verdict = no_agent_seats                    % out-of-domain (no seats to compare)
-    ;   UniqueTypes == []
+    ;   Ts == []
     ->  Verdict = seats_untyped                     % seats present, none typed (absence)
-    ;   UniqueTypes = [_], Excl \= []
+    ;   stakeholder_type_vector(C, Vector),         % SAME tokens the H¹ consumes
+        include(is_real_type, Vector, RealVector),
+        length(Vector, NSeats),
+        length(RealVector, NReal),
+        sort(RealVector, RealTypes),
+        (   NReal < 2
+        ->  Verdict = insufficient_real_seats       % OQ-217: never unanimity
+        ;   RealTypes = [_]
+        ->  unanimous_verdict(NReal, NSeats, Excl, Verdict)
+        ;   Verdict = plural(RealTypes)
+        )
+    ).
+
+% unanimous_verdict(+NReal, +NSeats, +Excl, -Verdict): one real type over
+% >=2 real seats. The token carries BOTH provenance bits: the excluded set
+% (manufactured-consensus candidacy) and untypeable-seat presence (OQ-217).
+unanimous_verdict(NReal, NSeats, Excl, Verdict) :-
+    (   Excl \= [], NReal < NSeats
+    ->  Verdict = manufactured_consensus_candidate_untypeable(Excl)
+    ;   Excl \= []
     ->  Verdict = manufactured_consensus_candidate(Excl)
-    ;   UniqueTypes = [_]
-    ->  Verdict = unanimous_no_excluded_seats
-    ;   Verdict = plural(UniqueTypes)
+    ;   NReal < NSeats
+    ->  Verdict = unanimous_with_untypeable_seats
+    ;   Verdict = unanimous_no_excluded_seats
     ).
 
 % ============================================================================

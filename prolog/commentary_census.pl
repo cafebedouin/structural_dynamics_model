@@ -119,8 +119,15 @@ commentary_cell(consensus, C, Bucket) :-
 
 consensus_bucket(no_agent_seats,                       no_agent_seats).
 consensus_bucket(seats_untyped,                        seats_untyped).
+% insufficient_real_seats (OQ-217) is a MEASURED bucket, not an absence
+% bucket: the derivations ran and returned a determination about the seats
+% (<2 real-typed), a fact about the story, not about the probe. Revisable.
+consensus_bucket(insufficient_real_seats,              insufficient_real_seats).
 consensus_bucket(manufactured_consensus_candidate(_),  manufactured_consensus_candidate).
+consensus_bucket(manufactured_consensus_candidate_untypeable(_),
+                 manufactured_consensus_candidate_untypeable).
 consensus_bucket(unanimous_no_excluded_seats,          unanimous_no_excluded_seats).
+consensus_bucket(unanimous_with_untypeable_seats,      unanimous_with_untypeable_seats).
 consensus_bucket(plural(_),                            plural).
 
 % ----------------------------------------------------------------------------

@@ -8,8 +8,9 @@
 % bare failure used to swallow.
 %
 %   consensus_provenance/2 : TOTAL over ALL constraints. no_agent_seats (no
-%     non-excluded agent seat — out-of-domain) and seats_untyped (seats present,
-%     none typed — absence) are explicit, distinct from the genuine verdicts.
+%     non-excluded agent seat — out-of-domain), seats_untyped (seats present,
+%     none typed — absence) and insufficient_real_seats (<2 real-typed seats,
+%     OQ-217) are explicit, distinct from the genuine verdicts.
 %   seat_perceived_vs_real/4 : TOTAL over EXISTING (C,Name) seats; Computed =
 %     untyped when the per-seat type cannot be derived (explicit absence). A
 %     NON-existent seat correctly has no reading (that is the domain, not silence).
@@ -26,6 +27,7 @@
 fixture_id(tst_no_seats).
 fixture_id(tst_excluded_only).
 fixture_id(tst_agent_seat).
+fixture_id(tst_two_agent_seats).
 
 setup_fixtures :-
     % a constraint with metrics but NO stakeholder seats at all
@@ -33,8 +35,17 @@ setup_fixtures :-
     % a constraint whose only seats are EXCLUDED (no non-excluded agent seat)
     assertz(narrative_ontology:constraint_stakeholder(tst_excluded_only, ghost, excluded,
         institutional, generational, arbitrage, national)),
-    % a constraint with one real agent seat (for the seat-level total test)
+    % a constraint with one real agent seat (for the seat-level total test;
+    % under OQ-217 a single seat reads insufficient_real_seats, never unanimity)
     assertz(narrative_ontology:constraint_stakeholder(tst_agent_seat, boss, agenda_setter,
+        institutional, generational, arbitrage, national)),
+    % a constraint with TWO real agent seats (the genuine-verdict probe under
+    % the OQ-217 >=2-real-seat rule; recipe from test_h1_stakeholder_spectrum)
+    assertz(narrative_ontology:constraint_metric(tst_two_agent_seats, extractiveness, 0.8)),
+    assertz(narrative_ontology:constraint_metric(tst_two_agent_seats, suppression_requirement, 0.7)),
+    assertz(narrative_ontology:constraint_stakeholder(tst_two_agent_seats, boss, agenda_setter,
+        institutional, generational, arbitrage, national)),
+    assertz(narrative_ontology:constraint_stakeholder(tst_two_agent_seats, boss2, agenda_setter,
         institutional, generational, arbitrage, national)).
 
 teardown_fixtures :-
@@ -61,11 +72,15 @@ test(consensus_no_seats_is_explicit) :-
 test(consensus_excluded_only_is_no_agent_seats) :-
     stakeholder_seats:consensus_provenance(tst_excluded_only, no_agent_seats).
 
-% a real agent seat -> a genuine verdict, never the boundary token
-test(consensus_agent_seat_genuine_verdict) :-
-    stakeholder_seats:consensus_provenance(tst_agent_seat, V),
-    V \== no_agent_seats,
-    V \== seats_untyped.
+% a SINGLE agent seat -> the OQ-217 insufficiency token (a "unanimity of one"
+% can no longer be read as unanimous), still explicit, never a failure
+test(consensus_single_seat_insufficient) :-
+    stakeholder_seats:consensus_provenance(tst_agent_seat, insufficient_real_seats).
+
+% two real agreeing agent seats -> a genuine verdict, never a boundary token
+test(consensus_two_seats_genuine_verdict) :-
+    stakeholder_seats:consensus_provenance(tst_two_agent_seats, V),
+    V == unanimous_no_excluded_seats.
 
 % --- seat_perceived_vs_real/4 is TOTAL over EXISTING seats -------------------
 test(seat_total_over_existing_seats) :-
