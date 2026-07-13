@@ -75,6 +75,13 @@ End-of-Session Documentation Review), not in CLAUDE.md.
   finding (an ergodic prose voice metabolizing a non-ergodic subject back into pattern) recorded
   on OQ-214 — the resonant-closer class can be subject-interfering, not merely mannered.
   math_stories Zone.Identifier sidecars removed (same artifact class as the agent/ pair).
+- **OQ-220 pilot artifact 2:** operator had Claude web run UKE_STORY v0.2 on the ergodicity
+  story WITH the label → `essays/2026-07/the_clean_small_song.md` (committed). It exercised the
+  protocol's reject-and-regenerate branch (first time anywhere) and re-translated the concept
+  one layer deeper: the ergodic hypothesis + non-stationary collapse (fast convergence as danger
+  signal; absence satisfying the measurement) — Build Discipline Patterns 5/6 as fiction, with
+  the taught "hole" as carry-the-provenance-bit. Recorded on OQ-220 with honest costs
+  (single-voice; closer tic persists at the final image).
 
 ## 2026-07-12 — OQ-218 Stage 2 batch RUN (3 sources, 4.5-pinned): rev6 weakness 0/3; residual defect is Type-A register-level
 **Files:** ISSUES.md, audits/2026-07-12_oq218_scored_snare/READOUT_STAGE2.md, agent/uke_narrative_orchestrator.py

@@ -10030,6 +10030,22 @@ ALONE — no manifests, contracts, or audit trail — so the §6 process-blindne
 the reversal is a clean label-delta proof-of-concept; but the reader was operator-adjacent (knew
 the asking context), not a cold arm. The OQ-220 runs use cold arms; this datum is the pilot.**
 
+**Pilot artifact 2 (2026-07-13): label-primed v0.2 rewrite —
+`essays/2026-07/the_clean_small_song.md`** (Claude web, same reader, UKE_STORY v0.2 in hand).
+Process finding: it took the protocol's **reject-and-regenerate branch** (§0 shadow criterion),
+not Path A/B — seed topology discarded entirely (reef-diving "tellers"; a held note that "comes
+to true" = time-average converging to ensemble average), which no Stage-2 batch pass exercised.
+Concept finding: it dramatizes a DEEPER layer than the seed's reversibility axis — the ergodic
+hypothesis itself plus its non-stationary failure mode (a shrinking reef "comes to true faster";
+the depleted "pale" settles in one breath; the next-generation teller tells the depleted reef
+TRUE — shifting-baseline collapse), i.e. **fast clean convergence as a danger signal, and a gate
+that passes BECAUSE its input is missing — Build Discipline Patterns 5/6 as fiction; the taught
+"hole" (a held rest kept on purpose) is carrying-the-provenance-bit as craft.** Costs, noted
+honestly: single-voice (collision carried by Sao/Lo only), and the resonant-closer tic persists
+at the final image. Cold-arm question now concrete and cheap: can a cold reader recover
+"ergodicity" from "come to true"? — the natural first label-delta measurement, runnable on this
+story the moment OQ-220 gets its spend-go.
+
 **The work (pre-registered shape; spend held):** (1) run the remaining four sources through the
 pipeline (post-guard, current defaults — these runs double as the Sonnet-5 re-baseline series);
 (2) **label-delta blind read** per output: a cold §6-style read, then a concept-primed re-read
