@@ -9889,8 +9889,15 @@ recorded; **instrument note: Q4 is the discrimination instrument, Q1 stays as-is
 OPEN — Stage 2 (3 fresh scored-Snare sources) RELEASED, pre-registered in `PROPOSAL_STAGE2.md`;
 **all ten Anthropic stages pinned to `claude-sonnet-4-5-20250929` via --stage-N-model overrides
 (operator instruction — dissolves the R12 model-change confound from commit `c23319d1`; the
-4.5-anchored density baselines remain valid for this batch).** Per-source adjudication (blind
-arms + operator §1a + ruling) remains the operator's.
+4.5-anchored density baselines remain valid for this batch).** **STAGE 2 BATCH RUN COMPLETE
+(2026-07-12, ~$5.70): readout `READOUT_STAGE2.md`.** Headline: the rev6 Type-B weakness appeared
+on 0/3 fresh sources (all seeds stage-9 HOLDS on structural grounds; all three v0.2 triages =
+Type A explanation over-run — the pipeline's residual defect is REGISTER-level, feeding OQ-214);
+both addressed deformations named blind by both arms; Q4 re-confirmed as the discrimination
+instrument; run-3 subtraction-only delta below Gemini's floor (confabulation datum, factual
+error grep-witnessed); one OQ-216 guard fire, fixed loud (`25b27343`). Maps to pre-registered
+outcome 3 ("rev6 = variance, not class; R3(b) stands; watch flag closes") — PENDING the
+operator's per-source adjudication + class ruling, which remain the operator's seat.
 
 **Priority:** 2
 

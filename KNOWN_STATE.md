@@ -45,6 +45,25 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-12 — OQ-218 Stage 2 batch RUN (3 sources, 4.5-pinned): rev6 weakness 0/3; residual defect is Type-A register-level
+**Files:** ISSUES.md, audits/2026-07-12_oq218_scored_snare/READOUT_STAGE2.md, agent/uke_narrative_orchestrator.py
+**Tier:** landed
+
+Stage-1 ruling (repair confirmed, both legs) opened the gate; batch ran same day, all Anthropic
+stages pinned to `claude-sonnet-4-5-20250929` per operator instruction (R12 confound dissolved).
+Full detail: `READOUT_STAGE2.md` + per-run manifests/arms in the audit dir. Headlines: (1) the
+rev6 Type-B scored-Snare weakness appeared on **0/3** fresh sources — all seeds HOLDS on
+structural grounds mid-story; maps to pre-registered outcome 3, ruling pending (operator's
+seat); (2) all three v0.2 triages = **Type A explanation over-run** — the pipeline's residual
+template signature is register-level (blind Sonnet r3 enumerated the house patterns), the
+OQ-214 meter's target class, now witnessed 3/3; (3) both addressed deformations named blind by
+both arms; Q4 re-confirmed as THE discrimination instrument; (4) subtraction-only deltas sit
+below Gemini's detection floor — it confabulated a difference (grep-witnessed false claim),
+so near-identical A/B pairs need an "identical? say so" escape or strong-arm-only Q4;
+(5) residue-inversion: cold readers Q2-pick F39 framework residue as inimitable — Q2 alone
+must never adjudicate keeps; (6) one OQ-216 cap-hit fire (stage_3 12288, run-2 attempt 1) —
+guard fail-loud worked, cap → 16384 (`25b27343`), loud retry clean.
+
 ## 2026-07-12 — Sonnet 4.5 → Sonnet 5 across the three agent entry points; sampling params gated per model
 **Files:** agent/llm_call.py, agent/c-orchestrator.py, agent/generate_kernel_corpus.py, agent/uke_narrative_orchestrator.py
 **Tier:** landed
