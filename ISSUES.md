@@ -9999,6 +9999,13 @@ as:** blind stage-9 names the floor unprompted, AND erasure of the floor element
 story (the §4-style erasure test). A floor authored in the contract but only decorative in the
 text = NOT load-bearing.
 
+**Executor note (2026-07-13): model-agnostic — an Opus (or other) session can run this cold
+from this entry.** Pre-registration is complete in-entry; standing rules travel (improver ≠
+blind reader; arms = fresh instances, ≥2 model families, identical-escape payloads,
+grep-adjudicated claims). PIPELINE STAGES STAY ON PRODUCTION DEFAULTS (the runs double as the
+Sonnet-5 re-baseline — putting the executor's model into the stage flags would recreate the R12
+confound). Operator legs and spend-go are the operator's regardless of executor.
+
 **What resolution changes:** R14 graduates from "contract authored 5/5" to "contract does
 narrative work" — or the floor-contract is shown decorative and missing-floor dramatization
 becomes a v0.2 repair question, not a pipeline-generation claim.
@@ -10083,6 +10090,13 @@ log the authored-vs-latent question (the ergodicity exemplar: stratified discret
 irreversibility — every piece on the page, never touching) as the class's Ω_C. Payloads carry
 the "these may be identical — say so" escape and arm factual claims get grep-adjudicated
 (OQ-218 standing rules).
+
+**Executor note (2026-07-13): model-agnostic — an Opus (or other) session can run this cold
+from this entry.** Pre-registration is complete in-entry; standing rules travel (improver ≠
+blind reader; arms = fresh instances, ≥2 model families, identical-escape payloads,
+grep-adjudicated claims). PIPELINE STAGES STAY ON PRODUCTION DEFAULTS (the runs double as the
+Sonnet-5 re-baseline — putting the executor's model into the stage flags would recreate the R12
+confound). Operator legs and spend-go are the operator's regardless of executor.
 
 **What resolution changes:** whether the pipeline can carry formal invariants through
 naturalization (vs the social grains it was built on); the label-delta becomes a reusable
