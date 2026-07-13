@@ -44,6 +44,15 @@ where it appears? Retrospective validity preserved by model pinning (below).
   reads as variance, not class; R3(b) stands; the watch flag closes.
 - Mixed results: adjudicated per source by the operator; the entry must not average them.
 
+## Deviations log
+
+- **2026-07-12, run 2 first attempt (`the_eighth_commentary_1783908190`):** halted at stage 3 by
+  the OQ-216 cap-hit guard (`12288 >= 12288`) — fail-loud as designed, no partial output consumed.
+  Plumbing fix applied per the guard's prescription: `MAX_TOKENS["stage_3"]` 12288 → 16384
+  (commit `25b27343`; run 1's blueprint had reached 11,546 — cap marginally sized, not a one-off).
+  No measurement instrument touched; failed run dir kept as evidence; run 2 relaunched. This is
+  a loud retry after a witnessed infrastructure fix, not a silent one.
+
 ## Kill/stop conditions
 
 - Any pipeline run fails (rc != 0 or no run dir): stop the batch, report, no silent retry.
