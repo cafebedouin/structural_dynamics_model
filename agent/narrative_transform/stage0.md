@@ -267,8 +267,8 @@ Document each deferred constraint with one sentence on what structural work it d
   <generation_sequence>C1 → C2 → C3</generation_sequence>
 
   <invariant_contract>
-    <untranslatable_real present="yes/no">[Detector A sentence, or "absent"]</untranslatable_real>
-    <missing_floor present="yes/no">[Detector B sentence, or "absent"]</missing_floor>
+    <untranslatable_real present="yes/no" primary="yes/no">[Detector A sentence, or "absent"]</untranslatable_real>
+    <missing_floor present="yes/no" primary="yes/no">[Detector B sentence, or "absent"]</missing_floor>
     <inherent_instrument value="yes/no">[one surface-free sentence]</inherent_instrument>
   </invariant_contract>
 
@@ -285,6 +285,16 @@ Document each deferred constraint with one sentence on what structural work it d
 ```
 
 ---
+
+**Authoring `primary` (which invariant dominates — AUTHORED here, never inferred downstream).**
+At most ONE of the two invariants may be marked `primary="yes"`: the world's **Tier-1 real**, the
+one whose structural carrier is the **foundational / highest-centrality** selected constraint, not
+merely deferred background. Mark `missing_floor primary="yes"` when the zero-point the system rests
+on IS that foundational constraint — the injustice is the **chosen baseline itself**, and the
+untranslatable real (if any) is subordinate/background. Mark `untranslatable_real primary="yes"`
+when the **grain owns the story** and the floor is background. If neither dominates, or a detector
+is `present="no"`, mark both `primary="no"`. This flag is the only source-sighted signal of
+dominance; a downstream stage keys a dominance-ordering pass on it and must never re-decide it.
 
 ### Validation Checklist
 
@@ -307,6 +317,9 @@ Document each deferred constraint with one sentence on what structural work it d
 ☐ <invariant_contract> authored: both detectors answered (a sentence or
   the explicit word "absent" — never omitted), inherent_instrument
   answered yes/no with its sentence
+☐ <invariant_contract> primary= authored: at most ONE invariant marked
+  primary="yes" (the Tier-1 real, tied to the foundational constraint);
+  both primary="no" if neither dominates or a detector is absent
 ☐ <break_contract> authored: original_break named, prior_status ruled
   LIVE or DEAD, target_prior stated — all three present, never omitted
 ☐ Contract phrasing is surface-free: no source names, occupations,

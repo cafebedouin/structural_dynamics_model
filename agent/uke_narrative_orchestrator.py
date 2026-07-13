@@ -513,6 +513,57 @@ def _extract_stage0_break_contract(stage_0_output: str) -> str:
     return m.group(0) if m else ""
 
 
+# Stage-2 dominance-ordering clause (OQ-219 routing outcome (a), operator ruling
+# 2026-07-13). Injected into the Stage-2 prompt IFF the Stage-0 contract AUTHORS
+# missing_floor present="yes" AND primary="yes" — a STRUCTURAL gate, never
+# model-inferred (R3(b) architecture, third application). The floor is the grain's
+# structural sibling (not a break-species: presupposition vs unreadability); when
+# it is the world's Tier-1 real, the grain must be subordinated on-screen so the
+# floor's contract-dominance carries into the reader-facing story. INERT on
+# grain-primary / no-primary sources (dual-real competition is legitimate there).
+# Provenance + the run that settled it: audits/2026-07-13_oq219_missing_floor/.
+_STAGE2_DOMINANCE_CLAUSE = (
+    "=== DOMINANCE ORDERING (floor-primary source; gated on the Stage-0 contract) ===\n"
+    "This source's Stage-0 contract marks missing_floor PRIMARY.\n\n"
+    "- The floor is the world's Tier-1 real: the zero-point the system's honest\n"
+    "  operation presupposes and cannot audit. Naturalize it as what the\n"
+    "  instruments stand ON, not a thing they fail to read.\n"
+    "- If the contract also carries a grain (untranslatable_real present), SUBORDINATE\n"
+    "  it on-screen: at least one beat where the grain's question resolves or recedes\n"
+    "  while the floor's question stands — two-reals subordination, applied floor-over-grain.\n"
+    "- The instrument stays HONEST. The floor's native carrier is a true reading\n"
+    "  taken from a bought zero (the scale weighs true; ask it to weigh the mountain).\n"
+    "  Never smuggle the floor in as miscalibration — a dishonest instrument converts\n"
+    "  the floor back into a correctable."
+)
+
+_MISSING_FLOOR_TAG_RE = re.compile(r'<missing_floor\b[^>]*>')
+_ATTR_PRESENT_YES_RE = re.compile(r'present\s*=\s*["\']yes["\']')
+_ATTR_PRIMARY_YES_RE = re.compile(r'primary\s*=\s*["\']yes["\']')
+
+
+def _contract_marks_floor_primary(stage0_contract: str) -> bool:
+    """True iff the Stage-0 invariant contract AUTHORS missing_floor as primary.
+
+    Authored flag ONLY — never model-inferred (OQ-219). Requires the
+    <missing_floor> tag to carry BOTH present="yes" AND primary="yes".
+    """
+    if not stage0_contract:
+        return False
+    m = _MISSING_FLOOR_TAG_RE.search(stage0_contract)
+    if not m:
+        return False
+    tag = m.group(0)
+    return bool(_ATTR_PRESENT_YES_RE.search(tag) and _ATTR_PRIMARY_YES_RE.search(tag))
+
+
+def _stage2_dominance_suffix(stage0_contract: str) -> str:
+    """The dominance-ordering clause text iff the contract marks the floor primary,
+    else '' (INERT). This is the seam the free negative-control fixture tests
+    (`agent/tests/test_stage2_dominance_gate.py`, OQ-219)."""
+    return _STAGE2_DOMINANCE_CLAUSE if _contract_marks_floor_primary(stage0_contract) else ""
+
+
 _WORD_COUNT_LINE_RE = re.compile(
     r'^\s*(?:#{1,6}\s+)?\*{0,2}WORD COUNT:?\*{0,2}.*$',
     flags=re.MULTILINE | re.IGNORECASE,
@@ -2872,6 +2923,15 @@ class UKEOrchestrator:
                 stage0_contract,
                 "\n\n",
             ])
+            # OQ-219 outcome (a): floor-primary sources get the dominance-ordering
+            # clause so the floor's contract-dominance carries into the read.
+            # Structural gate on the authored primary flag; INERT otherwise.
+            dominance = _stage2_dominance_suffix(stage0_contract)
+            if dominance:
+                prompt_parts.extend([dominance, "\n\n"])
+                self._progress(
+                    "stage_2",
+                    "floor-primary contract → dominance-ordering clause injected (OQ-219)")
         if stage0_break:
             prompt_parts.extend([
                 "=== BREAK CONTRACT (Stage 0, source-sighted; surface-free) ===\n",
