@@ -90,6 +90,12 @@ End-of-Session Documentation Review), not in CLAUDE.md.
   different stories; both operator-adjacent). Convergent editorial datum: the unprimed reader
   independently requested the error-vs-incommensurability sharpening = §1a/F-CORRECTABLE-REAL
   from outside the protocol's vocabulary.
+- **`docs/the_taught_hole.md` written (operator request):** the story read back as method for a
+  general audience — coming-to-true = convergence-is-not-adequacy (Pattern 5/6), any-teller-
+  any-route = consensus-needs-positive-controls, three reefs = seat-indexed verdicts, Lo = the
+  fresh instance (KNOWN_STATE/tripwire rationale), the taught hole = carry-the-provenance-bit
+  (nullable h1_band as "a held rest with a schema"). Standalone; v8-note-or-standalone left as
+  the operator's editorial call, stated in the doc.
 
 ## 2026-07-12 — OQ-218 Stage 2 batch RUN (3 sources, 4.5-pinned): rev6 weakness 0/3; residual defect is Type-A register-level
 **Files:** ISSUES.md, audits/2026-07-12_oq218_scored_snare/READOUT_STAGE2.md, agent/uke_narrative_orchestrator.py
