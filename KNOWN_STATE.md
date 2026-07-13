@@ -65,6 +65,12 @@ forbids same-story on/off); clean signals = subordination beat + Haiku rescue + 
 fixture. NOTE the OQ-216 intermittent stage-2 SECTION-0 guard fired on the first clause draw (also
 witnessed pre-clause) and cleared on re-draw — not clause-induced. Below is the mitigation-stage record.
 
+**Plan-file "wobbly-torvalds" typed VOID (not a deferred task).** The plan filename
+`review-oq-219-and-present-wobbly-torvalds.md` carries no second task — its 21KB body is OQ-219
+only. `wobbly-<name>` is the operator's plan-slug naming convention (cf. sibling
+`~/.claude/plans/can-you-review-oq-91-wobbly-cray.md`), not a "present X" deliverable. The plan is
+fully discharged by this resolution; no open item remains from it.
+
 ## 2026-07-13 — OQ-219 (mitigation record): floor-recovery tracks dominance (routing outcome a)
 **Files:** ISSUES.md, agent/narrative_transform/stage2.md, audits/2026-07-13_oq219_missing_floor/READOUT_datum_stone.md, audits/2026-07-13_oq219_missing_floor/READOUT_v02repair.md
 **Tier:** landed
