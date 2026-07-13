@@ -9880,13 +9880,17 @@ source; the mcc flag can no longer fire over an all-untypeable seat set.
 pre-registration committed BEFORE the run: `audits/2026-07-12_oq218_scored_snare/PROPOSAL.md`).
 Deliverables: improved story `the_platform_knows_v02_pathB.md` + `MANIFEST.md` (blind_read
 PENDING — the structural pause; improver may not administer §6) + `blind_arm_payload.md`
-(unlabeled A/B, randomized) + `AB_KEY.md`. Blind arms RUN 2026-07-12 (Sonnet fresh instance +
-Gemini 2.5 Pro, payload only; outputs verbatim: `blind_arm_sonnet.md`, `blind_arm_gemini25pro.md`;
-key: A = improved). Both arms answered Q2 with an improved-story sentence and "No" for the seed;
-Sonnet's Q1 named the target_prior violation blind ("that a fixed or unbiased version of the same
-instrument would be adequate at all"); neither arm preferred the seed. NOW PENDING: (i) operator's
-contaminated-expert §1a audit; (ii) operator ruling (+ optional human gold arm / delayed Q3).
-Both legs must pass for "repair confirmed." Stage 2 remains conditional.
+(unlabeled A/B, randomized) + `AB_KEY.md`. Blind arms RUN 2026-07-12 (outputs verbatim:
+`blind_arm_sonnet.md`, `blind_arm_gemini25pro.md`). **STAGE 1 RULED: repair confirmed, BOTH legs
+(operator, 2026-07-12; record: `STAGE1_ADJUDICATION.md`)** — kill condition did not fire in its
+strongest form (Sonnet named the target_prior blind); legibility gradient logged as
+consistent-with-theory with its caveat; cut-ratification + contested-keep-frontier findings
+recorded; **instrument note: Q4 is the discrimination instrument, Q1 stays as-is.** THE GATE IS
+OPEN — Stage 2 (3 fresh scored-Snare sources) RELEASED, pre-registered in `PROPOSAL_STAGE2.md`;
+**all ten Anthropic stages pinned to `claude-sonnet-4-5-20250929` via --stage-N-model overrides
+(operator instruction — dissolves the R12 model-change confound from commit `c23319d1`; the
+4.5-anchored density baselines remain valid for this batch).** Per-source adjudication (blind
+arms + operator §1a + ruling) remains the operator's.
 
 **Priority:** 2
 
