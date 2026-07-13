@@ -10025,6 +10025,10 @@ caste layer "decorative" → the reversibility axis instantiated socially; sharp
 is ergodic while the subject is non-ergodic — the register metabolizes irreversibility into
 recurrence; intact: the over-explained scene stays over-explained). Reader-seat-indexing at the
 vocabulary level: what a blind read can recover depends on whether the reader holds the concept.
+**Blindness qualification (operator, 2026-07-13): the reader evaluated the stage-8 story text
+ALONE — no manifests, contracts, or audit trail — so the §6 process-blindness condition held and
+the reversal is a clean label-delta proof-of-concept; but the reader was operator-adjacent (knew
+the asking context), not a cold arm. The OQ-220 runs use cold arms; this datum is the pilot.**
 
 **The work (pre-registered shape; spend held):** (1) run the remaining four sources through the
 pipeline (post-guard, current defaults — these runs double as the Sonnet-5 re-baseline series);
