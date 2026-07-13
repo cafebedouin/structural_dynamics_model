@@ -45,8 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-07-13 — OQ-219 MITIGATED: floor-recovery tracks dominance (routing outcome a); seed-side Stage-2 dominance clause, no v0.3
-**Files:** ISSUES.md, agent/narrative_transform/stage2.md, agent/uke_story_v0.2.md, audits/2026-07-13_oq219_missing_floor/READOUT_datum_stone.md, audits/2026-07-13_oq219_missing_floor/READOUT_v02repair.md
+## 2026-07-13 — OQ-219 RESOLVED: Stage-2 dominance clause implemented + validated (routing outcome a); no v0.3
+**Files:** ISSUES.md, agent/narrative_transform/stage0.md, agent/uke_narrative_orchestrator.py, python/tests/test_stage2_dominance_gate.py, agent/uke_story_v0.2.md, audits/2026-07-13_oq219_missing_floor/READOUT_dominance_clause.md, audits/2026-07-13_oq219_missing_floor/READOUT_datum_stone.md
+**Tier:** landed
+
+**Clause implemented + validated (commits `83ecf045` impl+fixture, + clause run/READOUT).** stage0.md
+authors `primary="yes/no"` on the invariant contract (at most one invariant primary; never inferred
+downstream). Orchestrator `_contract_marks_floor_primary` / `_stage2_dominance_suffix` inject the
+dominance-ordering clause into the Stage-2 prompt IFF `missing_floor present="yes" primary="yes"` —
+STRUCTURAL gate (R3(b) third application), behavior-preserving on all committed contracts (none carry
+`primary=` → INERT → identical prompt; output-changing only on newly-flagged floor-primary sources).
+Free negative-control fixture `python/tests/test_stage2_dominance_gate.py` 5/5 PASS (over-fire on
+grain-primary structurally impossible — the hard-ban mistake relocated, guarded by a fixture not a
+run). Paired re-run (control = no-clause Datum Stone `a02246f7`) met all pre-registered criteria:
+subordination beat nameable, cold recovery 3/3 (Sonnet+Gemini+Haiku, same arms held constant) ≥ 2.5/3
+baseline, **Haiku rescued partial→full floor** (predicted sensitive indicator), grain preserved (kill
+condition unmet). Confound noted: clause run = different stochastic surface (determinism frontier
+forbids same-story on/off); clean signals = subordination beat + Haiku rescue + grain-preservation +
+fixture. NOTE the OQ-216 intermittent stage-2 SECTION-0 guard fired on the first clause draw (also
+witnessed pre-clause) and cleared on re-draw — not clause-induced. Below is the mitigation-stage record.
+
+## 2026-07-13 — OQ-219 (mitigation record): floor-recovery tracks dominance (routing outcome a)
+**Files:** ISSUES.md, agent/narrative_transform/stage2.md, audits/2026-07-13_oq219_missing_floor/READOUT_datum_stone.md, audits/2026-07-13_oq219_missing_floor/READOUT_v02repair.md
 **Tier:** landed
 
 Commits: pilot `86c36f29`/`30120d32`, routing pre-commit `354ef198`, resolution (this). Reframed

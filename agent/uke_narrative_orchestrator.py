@@ -560,7 +560,7 @@ def _contract_marks_floor_primary(stage0_contract: str) -> bool:
 def _stage2_dominance_suffix(stage0_contract: str) -> str:
     """The dominance-ordering clause text iff the contract marks the floor primary,
     else '' (INERT). This is the seam the free negative-control fixture tests
-    (`agent/tests/test_stage2_dominance_gate.py`, OQ-219)."""
+    (`python/tests/test_stage2_dominance_gate.py`, OQ-219)."""
     return _STAGE2_DOMINANCE_CLAUSE if _contract_marks_floor_primary(stage0_contract) else ""
 
 

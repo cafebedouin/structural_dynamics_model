@@ -7,7 +7,7 @@ INERT cases are the ones that matter: the failure mode this guards is OVER-FIRIN
 (the hard-ban mistake relocated) — the clause suppressing the grain globally and
 flattening the legitimate dual-real richness of grain-primary (Margins-class) stories.
 
-Run: python3 agent/tests/test_stage2_dominance_gate.py   (exit 0 = all pass)
+Run: python3 python/tests/test_stage2_dominance_gate.py   (exit 0 = all pass)
 """
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))

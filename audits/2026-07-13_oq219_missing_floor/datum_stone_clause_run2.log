@@ -1,0 +1,83 @@
+START retry 1783971079
+2026-07-13 14:31:20,041 [uke_pipeline] DR engine available at /home/scott/bin/structural_dynamics_model
+2026-07-13 14:31:20,044 [uke_pipeline] Anonymization Phase 0: stripped 6 variable mapping lines
+2026-07-13 14:31:23,194 [httpx] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-13 14:32:41,115 [httpx] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-13 14:34:30,198 [httpx] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-13 14:36:23,994 [httpx] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-13 14:37:26,914 [httpx] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-13 14:38:03,082 [httpx] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-13 14:40:09,973 [httpx] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-13 14:42:21,009 [httpx] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-13 14:42:36,092 [httpx] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-13 14:43:03,237 [httpx] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-13 14:44:54,142 [httpx] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-13 14:46:51,291 [httpx] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[engine] Missing protocol file: verification_bottleneck.json — constraint reports disabled
+[stage_0] Loaded from cache (7360 chars)
+[stage_1] Loaded from cache (23786 chars)
+[stage_4] Using source story as stage_4 output
+[cache] Loaded stage_1_anon from cache
+[cache] Loaded break_contract from cache
+[stage_2] Designing naturalized context (Claude)...
+[stage_2] floor-primary contract → dominance-ordering clause injected (OQ-219)
+[stage_2] Naturalization complete (21361→5541 tokens)
+[stage_3] Making editorial decisions (Claude)...
+[stage_3] Editorial decisions complete (25959→8285 tokens)
+[stage_4] Generating narrative (Claude, air gap active)...
+[stage_4] Story generated (16791→6997 tokens, 22799 chars)
+[engine] Constraint engine skipped (--skip-engine)
+[stage_5] Running stage 5 (Claude)...
+[stage_5] Stage 5 complete (8529→4120 tokens)
+[editorial] Editorial cycle 1/2
+[stage_6] Running stage 6 (Claude)...
+[stage_6] Stage 6 complete (12699→2237 tokens)
+[stage_7] Running stage 7 (Claude)...
+[stage_7] Stage 7 complete (16100→11035 tokens)
+[stage_8] Running stage 8 (Claude)...
+[stage_8] Stage 8 complete (17602→12659 tokens)
+[numeric_gate] Stage-8 numeric density 4.3/1000 words (threshold 10.0). Density measures counting only; invariant survival is adjudicated by blind stage-9 + operator read. 0.0 is not evidence the invariant held.
+[stage_9] Running stage 9 (Claude)...
+[stage_9] Stage 9 complete (15381→829 tokens)
+[review] Review routes to: STRATEGY
+[editorial] Editorial cycle 2/2
+[stage_6] Running stage 6 (Claude)...
+[stage_6] Stage 6 complete (10213→1662 tokens)
+[stage_7] Running stage 7 (Claude)...
+[stage_7] Stage 7 complete (14423→10258 tokens)
+[stage_8] Running stage 8 (Claude)...
+[stage_8] Stage 8 complete (15554→10543 tokens)
+[numeric_gate] Stage-8 numeric density 4.1/1000 words (threshold 10.0). Density measures counting only; invariant survival is adjudicated by blind stage-9 + operator read. 0.0 is not evidence the invariant held.
+[stage_9] Running stage 9 (Claude)...
+[stage_9] Stage 9 complete (13265→854 tokens)
+[review] Review routes to: STRATEGY
+[review] STRATEGY requested but at cycle limit (2). Exiting for human review.
+[save] Edit manifest sidecar: agent/narrative_transform/uke/the_datum_stone_clause_1783889757/stage_8_edit_manifest.md
+[save] Final story saved to /home/scott/bin/structural_dynamics_model/agent/narrative_transform/stories/section_1_the_revised_narrative.md
+[save] Copy saved to agent/narrative_transform/uke/the_datum_stone_clause_1783889757
+
+======================================================================
+PIPELINE SUMMARY — NARRATIVE MODE
+======================================================================
+  stage_2              success    (21,361→5,541 tokens) [80.2s] (claude-sonnet-5)
+  stage_3              success    (25,959→8,285 tokens) [106.7s] (claude-sonnet-5)
+  stage_4              success    (16,791→6,997 tokens) [116.2s] (claude-sonnet-5)
+  stage_5              success    (8,529→4,120 tokens) [61.4s] (claude-sonnet-5)
+  stage_6              success    (12,699→2,237 tokens) [37.1s] (claude-sonnet-5)
+  stage_7              success    (16,100→11,035 tokens) [126.1s] (claude-sonnet-5)
+  stage_8              success    (17,602→12,659 tokens) [132.3s] (claude-sonnet-5)
+  stage_9              success    (15,381→829 tokens) [13.4s] (claude-sonnet-5)
+  stage_6              success    (10,213→1,662 tokens) [28.8s] (claude-sonnet-5)
+  stage_7              success    (14,423→10,258 tokens) [109.8s] (claude-sonnet-5)
+  stage_8              success    (15,554→10,543 tokens) [114.7s] (claude-sonnet-5)
+  stage_9              success    (13,265→854 tokens) [17.5s] (claude-sonnet-5)
+
+  Total tokens: 187,877 → 75,020
+  Total time:   944.4s
+
+  Editorial cycles: 2
+  Review route: STRATEGY
+
+  Output: /home/scott/bin/structural_dynamics_model/agent/narrative_transform/stories/section_1_the_revised_narrative.md
+  Est cost: ~$1.69
+EXIT=0

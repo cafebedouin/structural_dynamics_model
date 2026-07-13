@@ -9969,12 +9969,15 @@ OQ-214; the human gold arm bound to publication, not to this close.
 
 **Ω-type:** Ω_E (pre-registered single-source probe).
 
-**Status:** mitigated — REFRAMED then MITIGATED 2026-07-13 (operator ruling). Minted 2026-07-12 at
-the OQ-215 close. Step-0 leg-B triage witnessed NO corpus-drawn pure-Detector-B source (corpus is
-architected dual-grain) → reframed to the v0.2-repair form. Pilot (Margins) + isolating run (Datum
-Stone, floor-primary) → **routing outcome (a): floor-recovery tracks dominance; fragility is
-dual-grain competition, not a missing socket; NO v0.3; seed-side Stage-2 dominance clause is the
-fix (implementation-pending).** Full record: `audits/2026-07-13_oq219_missing_floor/`.
+**Status:** resolved — 2026-07-13 (operator-held verdict, Ω_C2). Minted 2026-07-12 at the OQ-215
+close. Step-0 leg-B triage witnessed NO corpus-drawn pure-Detector-B source (corpus is architected
+dual-grain) → reframed to the v0.2-repair form. Pilot (Margins) + isolating run (Datum Stone,
+floor-primary) → **routing outcome (a): floor-recovery tracks dominance; fragility is dual-grain
+competition, not a missing socket; NO v0.3.** Seed-side **Stage-2 dominance-ordering clause
+IMPLEMENTED + VALIDATED** (structural gate on an authored floor-primary flag; free fixture 5/5;
+paired re-run met all pre-registered criteria — subordination beat nameable, cold recovery 3/3 ≥
+2.5/3 baseline, Haiku rescued partial→full floor, grain preserved, over-fire structurally impossible).
+Full record: `audits/2026-07-13_oq219_missing_floor/`.
 
 **Priority:** 2
 
@@ -10079,6 +10082,24 @@ marks the floor primary, subordinate the grain on-screen) and re-test on a floor
 Gated behind: operator go on a generation-protocol change. The floor's fragility on **grain-
 dominant** seeds is filed as a **known seam** (expected, per the presuppositional-prior legibility
 handicap). Human-read gate (OQ-218 standing) still gates publication of any output.
+
+**RESOLVED (2026-07-13) — clause IMPLEMENTED + VALIDATED.** stage0.md authors a `primary="yes/no"`
+flag on the invariant contract; the orchestrator injects the dominance-ordering clause into the
+Stage-2 prompt IFF `missing_floor present="yes" primary="yes"` (structural gate
+`_contract_marks_floor_primary`, never model-inferred; R3(b) third application). Behavior-preserving
+on all committed contracts (none carry `primary=` → INERT). **(1) Free negative-control fixture**
+`python/tests/test_stage2_dominance_gate.py` 5/5 PASS (clause iff floor-primary; INERT on
+grain-primary/legacy/absent — over-fire structurally impossible). **(2) Paired re-run** (control =
+no-clause Datum Stone `a02246f7`; clause = same contract, floor authored primary): gate-fire
+witnessed; met ALL pre-registered criteria — subordination beat nameable (§IV grain given away
+while §VI floor stands), **cold recovery 3/3** (Sonnet+Gemini+Haiku all clean floor) ≥ 2.5/3
+baseline, **Haiku rescued partial→full floor** (the predicted sensitive indicator), **grain
+preserved** (kill condition not triggered). **(3) Kill condition** unmet (grain vivid). Confound
+stated (clause run is a different stochastic surface; clean signals = subordination beat + Haiku
+rescue + grain-preservation + fixture). Commits: impl+fixture `83ecf045`, clause run + READOUT
+(this). Evidence: `audits/2026-07-13_oq219_missing_floor/READOUT_dominance_clause.md`. **Residue
+filed:** Margins-class (grain-primary) fragility is accepted structural residue (INERT by design),
+never a bug awaiting a pass; the floor term stays dead (no v0.3); OQ-218 human-read gates publication.
 
 ---
 
