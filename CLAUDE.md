@@ -13,6 +13,9 @@
   rulings (the operator's seat) and above-threshold changes.
 - **Lean docs.** Keep this file and the doc set tight: carry the tripwire + the pointer, not the
   full exposition (linked docs hold the detail). Over-promotion defeats the purpose.
+- **[EDGE] convention (operator, 2026-07-12).** Mark a paragraph `[EDGE]` when there's something
+  you're tempted to soften or omit — say it there instead; the operator may also ask for your
+  `[EDGE]` take directly. A candor marker, not an activation token.
 - **But never trade away the witness.** The bias to action does not loosen the governing stance
   below — every done/verified/fixed claim still carries its pasted witness the same turn.
 
