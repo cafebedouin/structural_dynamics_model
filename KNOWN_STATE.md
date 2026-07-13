@@ -82,6 +82,14 @@ End-of-Session Documentation Review), not in CLAUDE.md.
   signal; absence satisfying the measurement) — Build Discipline Patterns 5/6 as fiction, with
   the taught "hole" as carry-the-provenance-bit. Recorded on OQ-220 with honest costs
   (single-voice; closer tic persists at the final image).
+- **OQ-220 pilot datum 3 (Perplexity, two-stage on the rewrite): both poles of the label-delta
+  scale witnessed.** Cold read recovered the concept structurally without the word ("convergence
+  condition indistinguishable from impoverishment"; "loss function has silently changed");
+  label produced sharpening-only (no retraction) — vs the seed pilot's reorganization. Delta
+  magnitude tracked dramatization as pre-registered. Confound stated (different readers,
+  different stories; both operator-adjacent). Convergent editorial datum: the unprimed reader
+  independently requested the error-vs-incommensurability sharpening = §1a/F-CORRECTABLE-REAL
+  from outside the protocol's vocabulary.
 
 ## 2026-07-12 — OQ-218 Stage 2 batch RUN (3 sources, 4.5-pinned): rev6 weakness 0/3; residual defect is Type-A register-level
 **Files:** ISSUES.md, audits/2026-07-12_oq218_scored_snare/READOUT_STAGE2.md, agent/uke_narrative_orchestrator.py

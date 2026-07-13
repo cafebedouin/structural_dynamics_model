@@ -10046,6 +10046,24 @@ at the final image. Cold-arm question now concrete and cheap: can a cold reader 
 "ergodicity" from "come to true"? — the natural first label-delta measurement, runnable on this
 story the moment OQ-220 gets its spend-go.
 
+**Pilot datum 3 (2026-07-13): second independent reader (Perplexity), two-stage on the REWRITE —
+and both poles of the pre-registered delta scale are now witnessed.** Its COLD read recovered the
+concept's structure without the word: "a convergence condition indistinguishable from
+impoverishment"; consensus-as-validation broken when "the domain itself has thinned"; "a
+measurement system whose loss function has silently changed." Under the label, the reading
+SHARPENED ONLY — "from 'epistemic loss' to 'path-dependent epistemology'" (time-average vs
+ensemble-average made explicit; the hole as a non-ergodicity marker) — no retraction. Compare
+the seed pilot: cold read had "the picture upside down," label forced a RETRACTION. So: seed =
+reorganization under label (concept latent); rewrite = refinement under label (concept
+dramatized) — the delta magnitude tracked dramatization exactly as pre-registered. **Confound,
+stated:** different readers on different stories (Claude web cold-read the seed and AUTHORED the
+rewrite, so it cannot cold-read it; Perplexity is also operator-adjacent, not a cold arm). The
+formal runs need same-reader-different-story or cold-arm crossing. **Convergent editorial
+datum:** the unprimed external reader's one push-further note — sharpen error vs
+incommensurability, "no amount of additional sampling would resolve the mismatch" — is v0.2
+§1a's counterfactual test / F-CORRECTABLE-REAL arriving unprompted from outside the protocol's
+vocabulary; it is also the named revision target if the essay gets a pass before posting.
+
 **The work (pre-registered shape; spend held):** (1) run the remaining four sources through the
 pipeline (post-guard, current defaults — these runs double as the Sonnet-5 re-baseline series);
 (2) **label-delta blind read** per output: a cold §6-style read, then a concept-primed re-read
