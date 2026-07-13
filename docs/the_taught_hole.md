@@ -26,7 +26,11 @@ in the middle of a true song — knowing it is one life deep.
 This project builds and audits a measuring practice: a logic engine that classifies stories
 about constraints, a corpus it measures, and — this is most of the actual work — a discipline
 for not being fooled by our own instruments. The story dramatizes every load-bearing rule in
-that discipline. Not approximately: element for element.
+that discipline. Not approximately: element for element. (Nor is the correspondence a
+coincidence to marvel at: the rewrite was produced *through* the repo's improvement protocol,
+whose own text carries the witness rule and the provenance-bit ethos — the discipline was
+transmitted into the fiction by the instrument built for the crossing, which is a stronger fact
+than resonance.)
 
 **"Coming to true" is convergence, and convergence is not adequacy.** The most dangerous moment
 in any measuring practice is when everything agrees. A small reef comes to true faster than a

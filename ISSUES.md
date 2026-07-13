@@ -9696,7 +9696,8 @@ same reader's label-primed re-read: the recurrence register is not just a tic bu
 subject-interfering — an ergodic prose voice metabolizing a non-ergodic subject back into
 pattern at the sentence level, i.e. the register can undo the story's own invariant)**. Design warning
 from the residue-inversion finding: cold readers Q2-pick out-of-register jargon as INIMITABLE,
-so sentence-level taste cannot adjudicate residue from either side of the blind wall — the meter
+so sentence-level taste cannot adjudicate residue from either side of the blind wall. **Formal mandate: the OQ-218 close ruling (2026-07-13) reassigns the
+pipeline's residual defect class — Type-A explanation over-run — to this OQ** — the meter
 needs the R6 architecture exactly (deterministic extraction + per-instance adjudication; Q2
 nominates, the register gate vetoes, neither rules alone).
 
@@ -9899,77 +9900,78 @@ source; the mcc flag can no longer fire over an all-untypeable seat set.
 
 **Ω-type:** Ω_E (pre-registered probe; decision rules authored before any run).
 
-**Status:** open — Stage-1 spend-go granted + improvement passes RUN 2026-07-12 (Path B declared;
-pre-registration committed BEFORE the run: `audits/2026-07-12_oq218_scored_snare/PROPOSAL.md`).
-Deliverables: improved story `the_platform_knows_v02_pathB.md` + `MANIFEST.md` (blind_read
-PENDING — the structural pause; improver may not administer §6) + `blind_arm_payload.md`
-(unlabeled A/B, randomized) + `AB_KEY.md`. Blind arms RUN 2026-07-12 (outputs verbatim:
-`blind_arm_sonnet.md`, `blind_arm_gemini25pro.md`). **STAGE 1 RULED: repair confirmed, BOTH legs
-(operator, 2026-07-12; record: `STAGE1_ADJUDICATION.md`)** — kill condition did not fire in its
-strongest form (Sonnet named the target_prior blind); legibility gradient logged as
-consistent-with-theory with its caveat; cut-ratification + contested-keep-frontier findings
-recorded; **instrument note: Q4 is the discrimination instrument, Q1 stays as-is.** THE GATE IS
-OPEN — Stage 2 (3 fresh scored-Snare sources) RELEASED, pre-registered in `PROPOSAL_STAGE2.md`;
-**all ten Anthropic stages pinned to `claude-sonnet-4-5-20250929` via --stage-N-model overrides
-(operator instruction — dissolves the R12 model-change confound from commit `c23319d1`; the
-4.5-anchored density baselines remain valid for this batch).** **STAGE 2 BATCH RUN COMPLETE
-(2026-07-12, ~$5.70): readout `READOUT_STAGE2.md`.** Headline: the rev6 Type-B weakness appeared
-on 0/3 fresh sources (all seeds stage-9 HOLDS on structural grounds; all three v0.2 triages =
-Type A explanation over-run — the pipeline's residual defect is REGISTER-level, feeding OQ-214);
-both addressed deformations named blind by both arms; Q4 re-confirmed as the discrimination
-instrument; run-3 subtraction-only delta below Gemini's floor (confabulation datum, factual
-error grep-witnessed); one OQ-216 guard fire, fixed loud (`25b27343`). Maps to pre-registered
-outcome 3 ("rev6 = variance, not class; R3(b) stands; watch flag closes") — PENDING the
-operator's per-source adjudication + class ruling, which remain the operator's seat.
-**2026-07-13 riders:** (i) the readout's absence claim is now SWEPT (correctable-vocabulary
-sweep, rev6 positive control fired 16 hits; seeds 0/1-homograph/0 — READOUT addendum);
-(ii) operator leg staged: `OPERATOR_LEG_BUNDLE.md` (all six files, one upload); (iii) standing
-instrument rules from the batch: blind payloads carry a "these may be identical — say so"
-escape from now on, and any arm factual claim gets grep-adjudicated before filing;
-(iv) SCOPE OF THE EVENTUAL RULING: "no class weakness *given sources that carry certified
-grains*" (the only regime the pipeline permits — Stage-0 certification is mandatory), 0/3 on
-friendly probes, provenance caveat in the readout; the class watch REOPENS LIGHTLY at the first
-Sonnet-5 production re-baseline; (v) first Sonnet-5-default run witnessed (ergodicity story,
-operator-invoked): completed end-to-end, density point 4.84/1000, but stage 2 omitted SECTION 0
-→ OQ-216 guard built + two-sided witnessed (the R13 threading now fails loud instead of running
-dead).
+**Status:** resolved — 2026-07-13, operator ruling below (both legs in hand; the condition on the
+class ruling — the correctable-vocabulary sweep with fired positive control — discharged same
+day). Evidence: `audits/2026-07-12_oq218_scored_snare/` (PROPOSAL.md + PROPOSAL_STAGE2.md
+pre-registrations, STAGE1_ADJUDICATION.md, READOUT_STAGE2.md + addenda, per-run manifests,
+blind-arm outputs ×8, A/B keys, OPERATOR_LEG_BUNDLE.md). Full investigation narrative in git
+history of this entry.
+
+**OPERATOR RULING — OQ-218 close (2026-07-13), kept verbatim per the D9-ruling precedent:**
+
+> STAGE 1 (Type-B repair control): REPAIR CONFIRMED, both legs. rev6 through v0.2 Path B
+> re-founded the grain by category (temporal + representational foreclosure; falsifier granted
+> and met with indifference). Legs: contaminated §1a audit PASS (operator leg, full-text); blind
+> arms PASS (Sonnet named the target_prior unprompted; both arms' only inimitable-sentence votes
+> went to the improved story; zero seed preference). v0.2 Ω_E1 → RESOLVED: repair of a Type-B
+> seed is POSSIBLE where the grain's shadow is live. The resolution claims possibility, not
+> guarantee — a future Type-B pass that yields polish is F-MISROUTED, handled per-instance; it
+> does not reopen this ruling.
+>
+> STAGE 2 (class probe, 3 fresh scored-Snare sources, 4.5-pinned): operator leg PASS ×3 —
+> Wang-scene falsifier structural (staged in good faith, defeated by category, false-correctable
+> fix shown as the damage mechanism); run-1 triage ratified (workshop deformation load-bearing
+> under erasure); consolation levels ratified. Correctable-vocabulary sweep clean (rev6 control
+> fired 16; seeds 0 / 1-homograph / 0). Blind arms discriminated on runs 1–2; run 3's
+> subtraction-only delta recovered exactly by one arm, below the other's floor (confabulation
+> documented; standing rules already cover it).
+>
+> CLASS RULING: the rev6 weakness is VARIANCE, NOT CLASS. Pre-registered outcome 3 executes.
+> Tally across all scored-instrument runs: 1 weak in 8, ending-saved. Scope: no class weakness
+> GIVEN CERTIFIED-GRAIN SOURCES — the only regime the pipeline permits (Stage-0 certification
+> mandatory).
+>
+> CONSEQUENCES:
+> - R3(b) graduates CONDITIONAL → STANDING. The stage2.md:100-118 hard-ban fallback stays in the
+>   file as the documented escape, not armed.
+> - The rev6 watch flag CLOSES.
+> - REOPEN CONDITION (travels with the close): from the Sonnet-5 re-baseline on, one
+>   Type-B/correctable-real seed on a certified-grain source = log and re-arm the watch; two
+>   within any five consecutive runs = reopen the class question and the R3(b)-vs-hard-ban rule,
+>   with this evidence trail.
+> - Residual defect class formally reassigned: Type-A explanation over-run (witnessed 3/3) is
+>   OQ-214's mandate.
+>
+> NOT RULED / CARRIED OPEN:
+> - v0.2 §5 (ensemble) is UNTESTED — skipped by design in all five passes; Ω_E2 stays open.
+>   "v0.2 verified" may not be cited as covering §5.
+> - The sentence-level register ceiling stands (Q2 double-No on the batch's best run): v0.2
+>   sharpens structure, not sentences. OQ-214 / OQ-220 territory, not a v0.2 defect.
+> - External validity: every blind reader to date is a model. The human gold arm gates
+>   PUBLICATION of arc outputs (Clean Small Song first), not this close.
+> - The improved stories are audit artifacts; publication is a separate per-story decision
+>   (rev6-improved carries the Cliffside 806-812 flag).
+
+**Standing instrument rules (compression survivors, alongside the scope line and reopen
+condition above):** blind payloads carry a "these may be identical — say so" escape; any arm
+factual claim is grep-adjudicated before filing; improver ≠ blind reader (F-PROCESS-VOUCH).
+Q4 is the discrimination instrument; Q1 stays as-phrased; Q2 alone never adjudicates keeps
+(residue-inversion). v0.2's decision tree is fully walked: Path A ×3, Path B ×1,
+reject-and-regenerate ×1 (label-primed rewrite, OQ-220 pilot), null-deformation ×1.
 
 **Priority:** 2
 
 **Deps:** blocked_on_human operator-adjudication
 
-**Origin:** 2026-07-12, the OQ-215 close. Carries the rev6 watch-case flag: rev6 ("The Platform
-Knows", arm-3 run 4, `agent/narrative_transform/uke/the_empty_pan_1783872143/`) is the
-scored-Snare story the gate passed with the invariant only partial-via-ending. Question REFRAMED
-per operator ruling — not "does the gate let a rev6 through" (known: sometimes) but "can UKE_STORY
-v0.2 (`agent/uke_story_v0.2.md`) repair a Type-B seed?" All probe runs go against the
-seed→UKE_STORY chain, never the bare pipeline ("build the instrument, then spend").
+**Origin:** 2026-07-12, the OQ-215 close; reframed per operator ruling from "does the gate let a
+rev6 through" to "can UKE_STORY v0.2 repair a Type-B seed?"; Stage 1 run same day under
+pre-registration committed before the pass; Stage 2 released by the Stage-1 ruling and run
+4.5-pinned (operator instruction, dissolving the Sonnet-5 migration confound).
 
-**Pre-registration (authored at mint, before any run; a dated
-`audits/<date>_oq218_scored_snare/PROPOSAL.md` is authored at spend time):**
-
-- **STAGE 1 — the gating positive control (= v0.2's Ω_E1):** rev6 through v0.2, **Path B
-  declared** (immanent: the platform's narration becomes a seat and its confidence the evidence —
-  rev6 does not get a better ending). Pre-registered outcomes:
-  (i) **re-founded grain** — the index becomes unreadable-in-principle — = repair confirmed,
-  Stage 2 unlocks; (ii) **prettier correctable-bias story** = downstream repair is DEAD and the
-  R3(b) conditional drops to the hard ban **via the standing stage2.md/OQ-215 fallback clause
-  ("drop to the hard ban WITH this evidence, never pre-emptively") — the pre-registered evidence
-  path executing, not a new ruling.** Spend STOPS there; Stage 2 does not run.
-- **STAGE 2 — explicitly conditional on the rev6 control passing; NOT one batch with Stage 1:**
-  2–3 fresh scored-Snare sources (distinct instrument classes — e.g. credit score, exam,
-  actuarial/insurance rating; not another platform-posture score) through seed→v0.2.
-- **Executor separation (binding):** whichever instance runs the v0.2 improvement passes, a
-  *different* party executes the §6 blind read, receiving ONLY seed + improved story — no audit
-  trail, no manifest, no deformation record. An improver who also blind-reads has pre-broken the
-  terminal gate (F-PROCESS-VOUCH) and voids the probe.
-- **Decision rule for (b), written here before any run:** R3(b) survives iff Stage 1 lands
-  re-founded grain; a prettier correctable-bias story drops (b) to the hard ban on that evidence.
-
-**What resolution changes:** either UKE_STORY v0.2 is a working Type-B repair instrument and the
-R3(b) conditional stands verified downstream, or the repair is dead and the scored-Snare hard ban
-lands with its evidence. Cross-refs: OQ-215 (carried flag + R3(b) evidence trail), v0.2 Ω_E1,
-OQ-219 (sibling probe, same spend gate).
+**What resolution changed:** R3(b) standing (hard-ban fallback documented, not armed); the rev6
+watch closed with a travelling reopen condition; v0.2 verified as a Type-B repair instrument
+(possibility, not guarantee; §5 excluded); the pipeline's residual defect class reassigned to
+OQ-214; the human gold arm bound to publication, not to this close.
 
 ---
 
@@ -10069,8 +10071,14 @@ pipeline (post-guard, current defaults — these runs double as the Sonnet-5 re-
 (2) **label-delta blind read** per output: a cold §6-style read, then a concept-primed re-read
 with the word supplied; the DELTA is the measurement — how much of the concept survived
 translation *without its label*. Pre-register per source which layer should be recoverable cold
-(the story's break) vs only under the label (the formal axis). No delta = concept fully
-dramatized; wholesale reorganization = concept riding as latent structure only. (3) Per story,
+(the story's break) vs only under the label (the formal axis). **Two measurements per read, not
+one — cold-recovery AND delta — because the scale has a third pole the delta alone aliases:**
+dramatized = HIGH cold-recovery + small delta; ABSENT = LOW cold-recovery + small delta (the
+label adds nothing because there is nothing to organize); latent = reorganization under the
+label. **Model-scoping disambiguator, pre-registered before spend:** the four runs double as the
+Sonnet-5 re-baseline, so a weak class result is ambiguous between concept-difficulty and
+model-change — the cheap disambiguator is one 4.5-pinned rerun of a single source, run only if
+the class result is weak. (3) Per story,
 log the authored-vs-latent question (the ergodicity exemplar: stratified discretion over
 irreversibility — every piece on the page, never touching) as the class's Ω_C. Payloads carry
 the "these may be identical — say so" escape and arm factual claims get grep-adjudicated
@@ -10078,7 +10086,10 @@ the "these may be identical — say so" escape and arm factual claims get grep-a
 
 **What resolution changes:** whether the pipeline can carry formal invariants through
 naturalization (vs the social grains it was built on); the label-delta becomes a reusable
-instrument for concept sources; feeds the v8 math_stories path and the Sonnet-5 re-baseline.
+instrument for concept sources; feeds the v8 math_stories path and the Sonnet-5 re-baseline. **Publication gate (OQ-218 close
+ruling): one genuinely cold HUMAN read — no context, no label, no machine-provenance knowledge —
+gates publication of arc outputs, The Clean Small Song first; it doubles as the human gold arm
+the blind design has owed since Stage 1.**
 
 ---
 

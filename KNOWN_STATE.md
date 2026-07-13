@@ -45,6 +45,22 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-13 — OQ-218 RESOLVED (operator ruling): rev6 = variance not class; R3(b) STANDING; watch closed w/ travelling reopen
+**Files:** ISSUES.md, audits/2026-07-12_oq218_scored_snare/READOUT_STAGE2.md, agent/uke_story_v0.2.md, docs/the_taught_hole.md
+**Tier:** landed
+
+Ruling filed VERBATIM in OQ-218 (D9 precedent) + mirrored in the READOUT appendix. Stage 1:
+repair confirmed both legs; v0.2 Ω_E1 resolved (possibility, not guarantee) — propagated into
+the protocol file. Class: variance not class (1 weak in 8, ending-saved), scoped to
+certified-grain sources; R3(b) conditional → STANDING (hard-ban fallback documented, not armed);
+reopen condition travels (one Type-B seed post-re-baseline = re-arm; two in five = reopen).
+Type-A over-run formally = OQ-214's mandate. NOT ruled: v0.2 §5 untested (Ω_E2 open); register
+ceiling; human gold arm gates PUBLICATION (Clean Small Song first) not the close; improved
+stories are audit artifacts (rev6-improved carries the Cliffside 806-812 flag). OQ-220
+pre-registration hardened before spend: cold-recovery AND delta as separate measurements
+(closes the absent-pole alias) + one 4.5-pinned rerun as the model-confound disambiguator.
+Taught-hole doc corrected: transmission-through-the-protocol, not resonance.
+
 ## 2026-07-13 — OQ-218 sweep witness + OQ-214 promoted + stage-2 SECTION-0 guard (first Sonnet-5 production run fired OQ-216's candidate)
 **Files:** ISSUES.md, agent/uke_narrative_orchestrator.py, audits/2026-07-12_oq218_scored_snare/READOUT_STAGE2.md
 **Tier:** landed

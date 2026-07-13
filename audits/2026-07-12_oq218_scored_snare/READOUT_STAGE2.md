@@ -108,3 +108,24 @@ ergodicity stage_2, passes on all three batch stage_2s). Also the first Sonnet-5
 batch's 0.0–0.78; re-baseline datum, not a baseline. Register note (operator's Web-Claude read):
 the "resonant closer" tic — each unit landing on a summarizing image, often "the way X" — logged
 to OQ-214's calibration set.
+
+## Appendix (2026-07-13): OPERATOR RULING — OQ-218 close
+
+Filed verbatim in the OQ-218 entry (ISSUES.md); mirrored here per filing instruction. Summary:
+STAGE 1 repair CONFIRMED both legs (v0.2 Ω_E1 → resolved: Type-B repair POSSIBLE where the
+grain's shadow is live — possibility, not guarantee). STAGE 2 operator leg PASS ×3 (Wang-scene
+falsifier structural; run-1 triage ratified, workshop deformation load-bearing; consolation
+levels ratified). CLASS RULING: rev6 = VARIANCE, NOT CLASS (1 weak in 8 scored-instrument runs,
+ending-saved); scope = certified-grain sources. R3(b) CONDITIONAL → STANDING (stage2.md hard-ban
+fallback documented, not armed); watch CLOSES with travelling reopen condition (from the
+Sonnet-5 re-baseline: one Type-B seed = re-arm; two in any five consecutive runs = reopen with
+this trail). Residual Type-A class = OQ-214's mandate. NOT RULED: v0.2 §5 untested (Ω_E2 open);
+sentence-register ceiling (OQ-214/OQ-220); human gold arm gates PUBLICATION (Clean Small Song
+first), not this close; improved stories are audit artifacts (rev6-improved carries the
+operator's Cliffside 806-812 flag).
+
+Operator-leg additions to the record: the run-3 foreclosure is the same temporal-category move
+as Stage 1's ("the trace records the preparation") — 2-for-2 from the same authoring instance;
+the house's signature unreadability mechanism, watch for template-hardening at higher N. Run-2
+residue note: the kept crystallization block survives the pass — explanation over-run reduced,
+not eliminated (OQ-214's job, not v0.2's).

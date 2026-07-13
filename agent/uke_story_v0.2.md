@@ -167,7 +167,7 @@ operator_estimate (optional): per kept beat, probability the median model produc
 **Self-application:** each version ships shorter than its predecessor. Option per run: suspend one gate deliberately, log the violation, keep the result only if it passes §6 — the protocol must not fossilize into its own competent mean. The blind read stays blind to this manifest too.
 
 **Ω:**
-- **Ω_E1 (positive control, gates everything):** rev6 through v0.2, Path B declared. Pre-registered: re-founded grain (the index becomes unreadable-in-principle) = repair confirmed; prettier correctable-bias story = downstream repair is dead, contraction not layering, the scored-Snare hard ban reopens.
+- **Ω_E1 (positive control — RESOLVED 2026-07-13, OQ-218 close):** rev6 through v0.2, Path B: re-founded grain, repair CONFIRMED both legs (blind arms + operator §1a). Resolution claims POSSIBILITY, not guarantee — a Type-B pass yielding polish is F-MISROUTED, handled per-instance, and does not reopen the ruling. Evidence: `audits/2026-07-12_oq218_scored_snare/`.
 - **Ω_E2:** does the ensemble ever produce a §4-surviving deviation? If not across runs, amputate §5.
 - **Ω_E3:** break verdicts are one reader's priors. Run the five resleeves past a reader who doesn't know the sources; if the surprise-map diverges (Blood Silver surprises them; the veterinary clause doesn't), the layer is real but the map needs a panel.
 - **Ω_C3:** the deformation worsening-license is one revision cycle; whether some deformations need longer to integrate is unruled.
