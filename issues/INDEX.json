@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "a534395b8ae536772a477e00b82cda636a1d7aea",
+    "store_version": "cb60bd0a37a7ce14abb6dbc201a95aaf119382f0",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-13T08:33:38"
+    "generated_at": "2026-07-13T08:49:45"
   },
-  "issues_sha": "a35d1c08bc2a8b504decf073d5fdce428eb177a1867a092c23a9509cc05da1ba",
+  "issues_sha": "32742e7904b06eb5142a95a7f6bc34225a864a1bbcb67fb506b32889596d0684",
   "n_entries": 220,
   "active_token_set": [
     "investigating",
@@ -12,10 +12,10 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 125,
+    "resolved": 126,
     "mitigated": 15,
     "disposed": 4,
-    "open": 65,
+    "open": 64,
     "partial": 7,
     "future": 4
   },
@@ -963,20 +963,6 @@
       "mentioned_in": [
         "OQ-215",
         "OQ-218"
-      ]
-    },
-    {
-      "id": "OQ-217",
-      "status": "open",
-      "priority": 2,
-      "summary": "Tighten consensus_provenance/2: unanimity requires ≥2 real-typed seats (OQ-207 kill condition fired)",
-      "deps": [
-        "splits_from OQ-207"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-204",
-        "OQ-207"
       ]
     },
     {
@@ -3018,6 +3004,19 @@
         "OQ-214",
         "OQ-216",
         "OQ-218"
+      ]
+    },
+    {
+      "id": "OQ-217",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "Tighten consensus_provenance/2: unanimity requires ≥2 real-typed seats (OQ-207 kill condition fired)",
+      "deps": [
+        "splits_from OQ-207"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-207"
       ]
     },
     {

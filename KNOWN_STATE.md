@@ -45,6 +45,35 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-13 — OQ-217 RESOLVED: consensus_provenance/2 real-seat verdicts; verdict⟺H¹ now an EXACT biconditional
+**Files:** prolog/stakeholder_seats.pl, prolog/commentary_census.pl, prolog/tests/test_h1_stakeholder_spectrum.pl, prolog/tests/test_seat_totality.pl, python/audits/oq207_stakeholder_h1_census.py, python/audits/oq217_movement_diff.py
+**Tier:** landed
+
+Commits `871e69ac` (tightening, output-changing) + `cb60bd0a` (movement census). Operator ruled
+option 3 (filter `unknown` from verdict computation everywhere + annotated unanimity; rationale
+at the clause header: unanimity is universal — untypeable seats weaken it, so the caveat rides in
+the TOKEN; plurality is existential — unknowns can't undermine it) + the
+`manufactured_consensus_candidate_untypeable/1` extension (ruled in session, distinct from the
+2026-07-11 D4 ruling). Verdict set grew by three tokens: `insufficient_real_seats` (<2 real-typed
+seats — absorbs retired divergence cells (a)/(b) and the 1-real mixed cell),
+`unanimous_with_untypeable_seats`, `manufactured_consensus_candidate_untypeable/1`.
+`consensus_bucket/2` gained the three rows (insufficient = MEASURED bucket, not absence —
+declared choice, revisable). Witnesses: plunit 37/37 + 19/19 + 20/20; census PASS on 4 legs
+(retired cells (a)/(b)/mixed = 0 via KEPT-LIVE detectors; all controls fire); per-id movement
+diff == the pre-derived prediction, 0 mismatches (4 cell-(b) + 1 cell-(a) stories →
+insufficiency; full named table `audits/2026-07-12_oq217_consensus_tightening/README.md`);
+pipeline per_constraint byte-identical (same-session clean-vs-edited runs, both exit 0).
+
+Two correction-grade riders: (1) `mcc_untypeable` is HEAVILY LIVE (12/50/39 across
+testsets/haiku/flash), NOT the predicted-zero cell — any OQ-204-era consumer reading only the
+bare `manufactured_consensus_candidate` token silently drops the larger untypeable stratum
+(constraint recorded in OQ-204). (2) The v1 movement prediction was under-determined because the
+pre-OQ-217 census dump AUTHORED `n_excluded: 0` for non-mcc verdicts instead of measuring it
+(Pattern 5, caught by the diff comparator on real data — `movement_diff.v1_flagged.json`); the
+dump now measures `n_excluded` per record by direct fact query.
+
+---
+
 ## 2026-07-13 — OQ-218 RESOLVED (operator ruling): rev6 = variance not class; R3(b) STANDING; watch closed w/ travelling reopen
 **Files:** ISSUES.md, audits/2026-07-12_oq218_scored_snare/READOUT_STAGE2.md, agent/uke_story_v0.2.md, docs/the_taught_hole.md
 **Tier:** landed

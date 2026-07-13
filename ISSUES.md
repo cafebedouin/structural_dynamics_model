@@ -9509,6 +9509,8 @@ queried on its authored grid (not a synthetic time).
 
 **Instrument note (2026-07-12, OQ-207 close):** the graded generalization is built — `stakeholder_seats:stakeholder_obstruction/5` + per-constraint `h1_stakeholder`/`_n_seats`/`_n_real` in `pipeline_output.json`; the verdict×H¹ coherence table (incl. divergence cells) is at the `consensus_provenance/2` clause header, per-leg cell counts in `audits/2026-07-12_oq207_stakeholder_h1/`. **Sequencing:** OQ-217 (obligatory tightening — cell (b) fired) changes mcc membership; land it before or with this surface build (membership is read live, so it flows through, but the promoted statistic should never ship the wrong-verdict members).
 
+**OQ-217 landed (2026-07-13, commits `871e69ac`/`cb60bd0a`) — two facts this surface build must carry:** (1) **the mcc candidate set is now TWO tokens** — `manufactured_consensus_candidate(Excl)` (all seats real) and `manufactured_consensus_candidate_untypeable(Excl)` (untypeable seats beside the agreeing reals; heavily live: 12/50/39 across the legs) — a surface reading only the bare token silently drops the larger untypeable stratum; decide jointly whether the promoted statistic merges or splits them, and say which. (2) **Pre-registered kill condition for the annotated tokens (operator, 2026-07-12):** if this surface ends up carrying NReal/NSeats inseparably alongside the verdict token everywhere it is displayed, the `_with_untypeable`/`_untypeable` annotation is redundant and collapses back to plain filtering (option 1) — check it against the built surface when this lands.
+
 **What resolution changes.** The first census bucket promoted from honest count to first-class corpus statistic — the seated-reporting precedent for any later bucket promotion.
 
 ---
@@ -9859,40 +9861,28 @@ its producer never finished writing.
 
 ## OQ-217 — Tighten consensus_provenance/2: unanimity requires ≥2 real-typed seats (OQ-207 kill condition fired)
 
-**Ω-type:** Ω_E (output-changing one-predicate tightening on an already-taken ruling; witnesses pre-specified) with an Ω_C tail (the mixed `plural([T,unknown])` cell's semantics is a small design call inside the same ruling's scope).
+**Ω-type:** Ω_E (output-changing one-predicate tightening on an already-taken ruling; witnesses pre-specified) with an Ω_C tail (the mixed `plural([T,unknown])` cell's semantics — RULED, see resolution).
 
-**Status:** open
+**Status:** resolved — built + censused 2026-07-12/13; commits `871e69ac` (tightening) + `cb60bd0a` (movement census)
 
 **Priority:** 2
 
 **Deps:** splits_from OQ-207
 
-**Origin:** 2026-07-12, the OQ-207 census fired the pre-committed D4 kill condition (operator
-ruling 2026-07-11): cell (b) — every agent seat types to the literal `unknown` token, yet the
-consensus verdict reads unanimous — has LIVE population 4: `livelihood_security_reading`
-(testsets, unanimous_no_excluded_seats); `fair_use_statutory_exception__transformative_right_reading`
-and `gdpr_article_3_scope__market_access_reading` (flash, both **manufactured_consensus_candidate**
-— the mcc flag naming excluded seats as manufacturing a "consensus" that is actually just
-untypeable seats, the sharpest form of absence-read-as-agreement);
-`second_amendment_scope__civic_right_reading` (flash, unanimous). Evidence:
-`audits/2026-07-12_oq207_stakeholder_h1/`.
+**Origin:** 2026-07-12, the OQ-207 census fired the pre-committed D4 kill condition (cell (b) —
+all-`unknown` seats read unanimous — live population 4). Evidence: `audits/2026-07-12_oq207_stakeholder_h1/`.
 
-**The work (OBLIGATORY per the ruling; output-changing, own commit, own witness):** require ≥2
-real-typed (`is_real_type/1`) seats for the unanimous verdicts (`unanimous_no_excluded_seats` /
-`manufactured_consensus_candidate`) in `stakeholder_seats:consensus_provenance/2`; an all-`unknown`
-or single-real type set routes to an explicit insufficiency token, never unanimity. In the same
-ruling's scope: decide the mixed `plural([T,unknown])` cell (19/66/129 live across the legs —
-`unknown` currently counts as a disagreeing type token, so a "plural" verdict can be partly
-absence-driven). Witnesses owed: before/after verdict diff naming exactly the 4 cell-(b) stories
-(plus any mixed-cell movement); the D4 case table at the `consensus_provenance/2` clause header AND
-`tests/test_h1_stakeholder_spectrum.pl` `coherence_case/5` updated in the same commit (they encode
-the CURRENT cells and will go red otherwise); census re-run (`python3
-python/audits/oq207_stakeholder_h1_census.py`) showing cell (b) = 0. Consumers read the verdict
-live, so membership flows through automatically (OQ-204 constraint 3) — but land this BEFORE or
-WITH the OQ-204 surface build so the promoted statistic never ships the wrong-verdict members.
-
-**What resolution changes:** the absence-read-as-agreement wrong-verdict class is removed at its
-source; the mcc flag can no longer fire over an all-untypeable seat set.
+**Resolution (operator ruling 2026-07-12, option 3 + in-session mcc extension):** verdicts compute
+over `is_real_type/1` seats only via the shared `stakeholder_type_vector/2` — verdict ⟺ H¹ is now an
+EXACT biconditional (divergence cells (a)/(b)/mixed retired; rationale — unanimity is universal so
+untypeable presence rides in the token; plurality is existential — at the `consensus_provenance/2`
+header). New tokens: `insufficient_real_seats`, `unanimous_with_untypeable_seats`,
+`manufactured_consensus_candidate_untypeable/1` (the last HEAVILY LIVE at 12/50/39, not
+predicted-zero — most former `plural([T,unknown])` stories carry excluded seats). Witnesses: plunit
+37/37+19/19+20/20; census PASS ×4 legs w/ retired-cells gate + all controls; per-id movement diff =
+prediction exactly (0 mismatches; 4 cell-(b) + 1 cell-(a) → insufficiency); pipeline per_constraint
+byte-identical. Full movement table + the v1 authored-zero `n_excluded` finding (Pattern 5):
+`audits/2026-07-12_oq217_consensus_tightening/README.md`, KNOWN_STATE 2026-07-13.
 
 ---
 
