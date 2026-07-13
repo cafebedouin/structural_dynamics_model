@@ -642,8 +642,9 @@ cd prolog && swipl -g "[stack], corpus_loader:ensure_corpus_loaded, \
 ```
 
 Live-corpus spectrum validity (`h1_stakeholder` ∈ proven H(n_real)), the
-consensus_provenance↔H¹ coherence table (D4 divergence cells), and the fixture-pinned
-boundary cases. **Tripwire: two absence tokens — `untyped` (census-facing) vs `unknown`
+consensus_provenance↔H¹ coherence table (EXACT biconditional since OQ-217, 2026-07-13 —
+the former D4 divergence cells are retired and fixture-pinned as
+insufficiency/annotated-unanimity), and the fixture-pinned boundary cases. **Tripwire: two absence tokens — `untyped` (census-facing) vs `unknown`
 (kernel-facing) — must never unify** (KNOWN_STATE 2026-07-12). Scope `run_tests/1` as
 shown: a bare `run_tests` after corpus load also sweeps the testset-embedded units
 (pre-existing failures unrelated to these suites).
