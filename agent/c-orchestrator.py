@@ -112,11 +112,12 @@ class DRAuditOrchestrator:
     # architect  : structured output workhorse, equivalent to gemini-2.5-pro
     # (essayist retired 2026-06-11 with the OQ-101 ledger replacement)
     #
-    # Change these to claude-opus-4-5-20251101 (or claude-haiku-4-5-20251001)
-    # if you want to test at different price points.
+    # Change these to claude-opus-4-8 (or claude-haiku-4-5-20251001)
+    # if you want to test at different price points. Sonnet 5+/Opus 4.7+
+    # reject temperature — llm_call.sampling_overrides gates it per model.
     MODELS = {
         "researcher": "claude-haiku-4-5-20251001",
-        "architect":  "claude-sonnet-4-5-20250929",
+        "architect":  "claude-sonnet-5",
     }
 
     # Default max_tokens per role (Claude requires an explicit cap)

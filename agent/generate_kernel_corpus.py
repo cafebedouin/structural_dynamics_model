@@ -43,6 +43,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import anthropic
 
+from agent.llm_call import sampling_overrides
 from agent.story_generator_base import (
     PROLOG_DIR,
     PROMPT_PATH,
@@ -70,7 +71,7 @@ from story_repair import repair_story           # noqa: E402  canonical determin
 # SCOPE protocol prompt — patched on kernel-frame branch with §1.3-K and expanded CSR object
 SCOPE_PROMPT_PATH = REPO_ROOT / "prompts" / "uke_scope_v2_json.md"
 
-SCOPE_MODEL = "claude-sonnet-4-5-20250929"   # matches c-orchestrator.py architect
+SCOPE_MODEL = "claude-sonnet-5"              # matches c-orchestrator.py architect
 GEN_MODEL = "claude-haiku-4-5-20251001"      # matches generate_json_haiku.py
 BATCH_POLL_INTERVAL = 30
 
@@ -156,7 +157,7 @@ def _call(prompt, model, system_instruction="", temperature=0.2, max_tokens=8192
     kwargs = {
         "model": model,
         "max_tokens": max_tokens,
-        "temperature": temperature,
+        **sampling_overrides(model, temperature),
         "messages": [{"role": "user", "content": prompt}],
     }
     if system_instruction:
@@ -1030,7 +1031,8 @@ def generate_from_manifests(manifests, json_dir, testsets_dir, processed_log, *,
             custom_id = f"w{wave_no}i{idx}"
             idmap[custom_id] = cid
             requests.append({"custom_id": custom_id, "params": {
-                "model": model, "max_tokens": max_tokens, "temperature": temperature,
+                "model": model, "max_tokens": max_tokens,
+                **sampling_overrides(model, temperature),
                 "system": system, "messages": _seed_messages(seed, generated_by_id)}})
 
         progress("generate", f"Wave {wave_no}: batch of {len(requests)} ({', '.join(idmap.values())})")

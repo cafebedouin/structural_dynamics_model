@@ -636,12 +636,23 @@ class AnthropicProvider:
         import anthropic
 
         client = self._get_client()
+        # Sonnet 5 / Opus 4.7+ reject non-default sampling params (400);
+        # Sonnet 5 runs ADAPTIVE thinking when the field is omitted, which
+        # would spend the calibrated per-stage max_tokens caps on thinking
+        # — pin it off. Legacy models keep the per-stage temperature.
+        # (Same rule as agent/llm_call.py sampling_overrides; kept local —
+        # this module is self-contained.)
         kwargs: dict[str, Any] = {
             "model": model,
             "max_tokens": max_tokens,
-            "temperature": temperature,
             "messages": [{"role": "user", "content": prompt}],
         }
+        if model.startswith(("claude-sonnet-5", "claude-opus-4-7",
+                             "claude-opus-4-8", "claude-fable", "claude-mythos")):
+            if model.startswith("claude-sonnet-5"):
+                kwargs["thinking"] = {"type": "disabled"}
+        else:
+            kwargs["temperature"] = temperature
         if system_instruction:
             kwargs["system"] = system_instruction
 
@@ -806,16 +817,16 @@ class UKEOrchestrator:
 
     DEFAULT_MODELS = {
         "stage_0":  ("google",    "gemini-2.5-pro"),
-        "stage_1":  ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_2":  ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_3":  ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_4":  ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_5":  ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_6":  ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_7":  ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_8":  ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_9":  ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_10": ("anthropic", "claude-sonnet-4-5-20250929"),
+        "stage_1":  ("anthropic", "claude-sonnet-5"),
+        "stage_2":  ("anthropic", "claude-sonnet-5"),
+        "stage_3":  ("anthropic", "claude-sonnet-5"),
+        "stage_4":  ("anthropic", "claude-sonnet-5"),
+        "stage_5":  ("anthropic", "claude-sonnet-5"),
+        "stage_6":  ("anthropic", "claude-sonnet-5"),
+        "stage_7":  ("anthropic", "claude-sonnet-5"),
+        "stage_8":  ("anthropic", "claude-sonnet-5"),
+        "stage_9":  ("anthropic", "claude-sonnet-5"),
+        "stage_10": ("anthropic", "claude-sonnet-5"),
     }
 
     TEMPERATURES = {

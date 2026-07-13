@@ -19,6 +19,7 @@ from typing import Any
 # ingest ceiling rather than assert a KB number. Conservative; update on model
 # changes.
 MODEL_CONTEXT_WINDOW = {
+    "claude-sonnet-5": 1_000_000,
     "claude-sonnet-4-5-20250929": 200_000,
     "claude-haiku-4-5-20251001": 200_000,
     "claude-opus-4-5-20251101": 200_000,
@@ -108,6 +109,23 @@ def call_with_retry(client, max_retries: int = 3, **kwargs):
             raise                              # don't retry auth / bad request
 
 
+def sampling_overrides(model: str, temperature: float) -> dict:
+    """Per-model request params for the sampling/thinking surface.
+
+    Sonnet 5 / Opus 4.7+ / Fable reject non-default sampling params with a
+    400 — omit temperature there. Sonnet 5 additionally runs ADAPTIVE
+    thinking when the field is omitted, which would spend max_tokens on
+    thinking — pin it off so max_tokens stays a pure text budget. Legacy
+    models keep the caller's temperature.
+    """
+    if model.startswith(("claude-sonnet-5", "claude-opus-4-7",
+                         "claude-opus-4-8", "claude-fable", "claude-mythos")):
+        if model.startswith("claude-sonnet-5"):
+            return {"thinking": {"type": "disabled"}}
+        return {}
+    return {"temperature": temperature}
+
+
 def call(prompt: str, model: str, *, system: str = "", temperature: float = 0.2,
          max_tokens: int = 8192, tools: list | None = None) -> tuple[str, int, int]:
     """Call Claude and return (text, tokens_in, tokens_out).
@@ -120,7 +138,7 @@ def call(prompt: str, model: str, *, system: str = "", temperature: float = 0.2,
     kwargs: dict[str, Any] = {
         "model": model,
         "max_tokens": max_tokens,
-        "temperature": temperature,
+        **sampling_overrides(model, temperature),
         "messages": [{"role": "user", "content": prompt}],
     }
     if system:

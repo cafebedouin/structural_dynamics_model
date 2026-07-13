@@ -45,6 +45,25 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-12 — Sonnet 4.5 → Sonnet 5 across the three agent entry points; sampling params gated per model
+**Files:** agent/llm_call.py, agent/c-orchestrator.py, agent/generate_kernel_corpus.py, agent/uke_narrative_orchestrator.py
+**Tier:** landed
+
+Operator request. `claude-sonnet-4-5-20250929` → `claude-sonnet-5` (exact ID, no date suffix) in
+c-orchestrator architect, generate_kernel_corpus SCOPE_MODEL, and all ten uke stage models
+(Haiku researcher/GEN_MODEL and Gemini stage-0 unchanged). Sonnet 5 rejects non-default
+`temperature` (400) and runs ADAPTIVE thinking when the field is omitted (would spend the
+calibrated per-stage max_tokens caps on thinking) — new `llm_call.sampling_overrides(model,
+temperature)` gates both per model (Sonnet 5: drop temperature + pin `thinking: disabled`;
+Opus 4.7+/Fable: drop temperature; legacy: unchanged), consumed by llm_call.call, the
+generate_kernel_corpus single-call AND batch-wave paths, and duplicated locally in the uke
+AnthropicProvider (self-contained module). `MODEL_CONTEXT_WINDOW` gains claude-sonnet-5 = 1M
+(old entries kept — still served). Witness: py_compile clean; live `OK` round-trip on all three
+call paths with claude-sonnet-5 at non-default temperature (no 400). OPEN/[TUNE]: Sonnet 5's
+new tokenizer runs ~30% more tokens for the same text — per-stage max_tokens caps and the
+0.48–47.6 density baselines were calibrated on Sonnet 4.5 output; the cap-hit guard fails loud
+if a cap binds, and the next pipeline run is the re-baseline.
+
 ## 2026-07-12 — OQ-215 CLOSED on operator read; posture ruled assisted-by-design; OQ-218/OQ-219 minted (spend HELD); probe sources staged + Stage-0 certified
 **Files:** ISSUES.md, agent/uke_narrative_orchestrator.py, agent/uke_narrative_architecture_v0_3.md, agent/uke_story_v0.1.md, agent/uke_story_v0.2.md, docs/design/design_discipline.md, agent/narrative_transform/originals/the_good_name_book.md, agent/narrative_transform/originals/the_eighth_commentary.md, agent/narrative_transform/originals/the_table_of_winters.md, agent/narrative_transform/originals/the_datum_stone.md
 **Tier:** landed
