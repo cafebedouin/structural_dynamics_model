@@ -9691,7 +9691,10 @@ false-positive class = rev5's earned word-arithmetic (below) + run-1's earned li
 pattern list = Sonnet r3's unprompted blind enumeration (arc-closing refrains, glossed tricolons,
 causal-chain formulas, repeated scene-closers — `blind_arm_sonnet_run3.md`) **+ the resonant-
 closer tic (operator Web-Claude read of the ergodicity story, 2026-07-13: units landing on a
-summarizing image, often "the way X" — witnessed ×4 in one 2,280-word story)**. Design warning
+summarizing image, often "the way X" — witnessed ×4 in one 2,280-word story; SHARPENED by the
+same reader's label-primed re-read: the recurrence register is not just a tic but can be
+subject-interfering — an ergodic prose voice metabolizing a non-ergodic subject back into
+pattern at the sentence level, i.e. the register can undo the story's own invariant)**. Design warning
 from the residue-inversion finding: cold readers Q2-pick out-of-register jargon as INIMITABLE,
 so sentence-level taste cannot adjudicate residue from either side of the blind wall — the meter
 needs the R6 architecture exactly (deterministic extraction + per-instance adjudication; Q2
@@ -10000,7 +10003,48 @@ becomes a v0.2 repair question, not a pipeline-generation claim.
 
 ---
 
-*Last updated: 2026-07-12. Add new items with sequential OQ-NN labels. Mark
+## OQ-220 — Concept-translation stress tests (math_stories class): the label-delta blind read (Ω_E)
+
+**Ω-type:** Ω_E (pre-registered runs + a two-stage read design; instrument idea already witnessed
+once) with an Ω_C tail per story (authored-vs-latent structure).
+
+**Status:** open — minted 2026-07-13 from the ergodicity run + the operator's Web-Claude reversal.
+
+**Priority:** 3
+
+**Deps:** blocked_on_human operator-spend-go
+
+**Origin:** 2026-07-13. The operator ran `docs/v8/math_stories/112_ergodocity_kids.md` through
+the pipeline (first Sonnet-5-default run; fired the OQ-216 stage-2 guard site). The source class
+is CONCEPT-TRANSLATION — five stories (prime number theorem, Galois theory, Euler characteristic,
+ergodicity, Ship of Theseus), each a formal concept already translated into narrative, then
+resleeved: a stress test (operator's framing) because the invariant is a FORMAL axis, not a
+social grain. **Witnessed instrument datum:** a strong cold reader's finished verdict
+REORGANIZED when handed the single organizing word — differentiated, not wholesale (retraction:
+caste layer "decorative" → the reversibility axis instantiated socially; sharpening: the prose
+is ergodic while the subject is non-ergodic — the register metabolizes irreversibility into
+recurrence; intact: the over-explained scene stays over-explained). Reader-seat-indexing at the
+vocabulary level: what a blind read can recover depends on whether the reader holds the concept.
+
+**The work (pre-registered shape; spend held):** (1) run the remaining four sources through the
+pipeline (post-guard, current defaults — these runs double as the Sonnet-5 re-baseline series);
+(2) **label-delta blind read** per output: a cold §6-style read, then a concept-primed re-read
+with the word supplied; the DELTA is the measurement — how much of the concept survived
+translation *without its label*. Pre-register per source which layer should be recoverable cold
+(the story's break) vs only under the label (the formal axis). No delta = concept fully
+dramatized; wholesale reorganization = concept riding as latent structure only. (3) Per story,
+log the authored-vs-latent question (the ergodicity exemplar: stratified discretion over
+irreversibility — every piece on the page, never touching) as the class's Ω_C. Payloads carry
+the "these may be identical — say so" escape and arm factual claims get grep-adjudicated
+(OQ-218 standing rules).
+
+**What resolution changes:** whether the pipeline can carry formal invariants through
+naturalization (vs the social grains it was built on); the label-delta becomes a reusable
+instrument for concept sources; feeds the v8 math_stories path and the Sonnet-5 re-baseline.
+
+---
+
+*Last updated: 2026-07-13. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

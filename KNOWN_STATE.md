@@ -67,6 +67,14 @@ End-of-Session Documentation Review), not in CLAUDE.md.
   say so" escape; arm factual claims get grep-adjudicated before filing. Ruling-scope line
   recorded (certified-grain sources; watch reopens lightly at the Sonnet-5 re-baseline).
   OQ-219 remains gated on its own spend-go.
+- **OQ-220 minted (label-delta blind read; math_stories stress-test class, 5 sources, spend
+  held):** the operator's Web-Claude read of the ergodicity story REVERSED in a differentiated
+  way when handed the word "ergodicity" (retraction/sharpening/intact) — reader-seat-indexing at
+  the vocabulary level. Design: cold read then concept-primed re-read; the delta measures how
+  much of a formal concept survives naturalization without its label. The sharpened register
+  finding (an ergodic prose voice metabolizing a non-ergodic subject back into pattern) recorded
+  on OQ-214 — the resonant-closer class can be subject-interfering, not merely mannered.
+  math_stories Zone.Identifier sidecars removed (same artifact class as the agent/ pair).
 
 ## 2026-07-12 — OQ-218 Stage 2 batch RUN (3 sources, 4.5-pinned): rev6 weakness 0/3; residual defect is Type-A register-level
 **Files:** ISSUES.md, audits/2026-07-12_oq218_scored_snare/READOUT_STAGE2.md, agent/uke_narrative_orchestrator.py
