@@ -9880,9 +9880,13 @@ source; the mcc flag can no longer fire over an all-untypeable seat set.
 pre-registration committed BEFORE the run: `audits/2026-07-12_oq218_scored_snare/PROPOSAL.md`).
 Deliverables: improved story `the_platform_knows_v02_pathB.md` + `MANIFEST.md` (blind_read
 PENDING — the structural pause; improver may not administer §6) + `blind_arm_payload.md`
-(unlabeled A/B, randomized) + `AB_KEY.md`. NOW PENDING: (i) blind arms — two fresh instances,
-different model families, payload only; (ii) operator's contaminated-expert §1a audit; (iii)
-operator ruling. Both legs must pass for "repair confirmed." Stage 2 remains conditional.
+(unlabeled A/B, randomized) + `AB_KEY.md`. Blind arms RUN 2026-07-12 (Sonnet fresh instance +
+Gemini 2.5 Pro, payload only; outputs verbatim: `blind_arm_sonnet.md`, `blind_arm_gemini25pro.md`;
+key: A = improved). Both arms answered Q2 with an improved-story sentence and "No" for the seed;
+Sonnet's Q1 named the target_prior violation blind ("that a fixed or unbiased version of the same
+instrument would be adequate at all"); neither arm preferred the seed. NOW PENDING: (i) operator's
+contaminated-expert §1a audit; (ii) operator ruling (+ optional human gold arm / delayed Q3).
+Both legs must pass for "repair confirmed." Stage 2 remains conditional.
 
 **Priority:** 2
 
