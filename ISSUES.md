@@ -9969,10 +9969,12 @@ OQ-214; the human gold arm bound to publication, not to this close.
 
 **Ω-type:** Ω_E (pre-registered single-source probe).
 
-**Status:** open — REFRAMED 2026-07-13 (operator ruling). Minted 2026-07-12 at the OQ-215 close.
-Step-0 leg-B triage witnessed NO corpus-drawn pure-Detector-B source (the corpus is architected
-dual-grain); the graded existence-run is retired and the question is reframed to the v0.2-repair
-form. Pre-registration + triage committed (`audits/2026-07-13_oq219_missing_floor/`).
+**Status:** mitigated — REFRAMED then MITIGATED 2026-07-13 (operator ruling). Minted 2026-07-12 at
+the OQ-215 close. Step-0 leg-B triage witnessed NO corpus-drawn pure-Detector-B source (corpus is
+architected dual-grain) → reframed to the v0.2-repair form. Pilot (Margins) + isolating run (Datum
+Stone, floor-primary) → **routing outcome (a): floor-recovery tracks dominance; fragility is
+dual-grain competition, not a missing socket; NO v0.3; seed-side Stage-2 dominance clause is the
+fix (implementation-pending).** Full record: `audits/2026-07-13_oq219_missing_floor/`.
 
 **Priority:** 2
 
@@ -10051,6 +10053,32 @@ at floor-primary → **v0.3 executes** (spec pre-committed); if the floor is abs
 seed → **pipeline-side (stages 2/3)**. Routing table + v0.3 spec + label-delta leg pre-registered in
 `PROPOSAL.md` ADDENDUM before the run. Datum Stone run: resume stage_1→10 (Sonnet-5 defaults), §6
 with THREE cold arms + primed(stage-9)-vs-cold label-delta.
+
+**RESULT — Datum Stone (floor-PRIMARY) → ROUTING OUTCOME (a) (2026-07-13).** Run: stages 1–10,
+exit 0, ~$1.65, generated "The Long Breath" (`the_datum_stone_1783889757/stage_8_output.md`); the
+floor is dramatized **primary and in the text** ("The stake's where a man named Corliss Rade put
+it, for a sum"; "no place at all for whose ground this was"). **Label-delta:** primed stage-9
+recovers the floor; **cold recovery ≈ 2.5/3** (Sonnet + Gemini clean floor incl. the parameter-
+irreducibility falsifier "not a fairer official / better instrument / corrected record"; Haiku
+grain-led but names it) — vs **1/2 at grain-primary** (Margins pilot). **Decisive datum: Sonnet
+FLIPPED** — grain on grain-primary Margins, floor on floor-primary Datum Stone. **Floor-recovery
+tracks dominance**, so the Margins fragility was **dual-grain competition, NOT a missing protocol
+socket and NOT craft failure.** Per the pre-committed table → **OUTCOME (a): NO v0.3.** Fix is
+**seed-side**: a **Stage-2 dominance-ordering clause** — when the contract marks the floor primary
+(C1 foundational), Stage 2 subordinates the other real on-screen (the §1a two-reals machinery
+applied to floor-vs-grain), carrying the floor's contract-dominance into the seed's reader-facing
+read. Evidence: `audits/2026-07-13_oq219_missing_floor/READOUT_datum_stone.md` + 3 arm files.
+**Existence now n=2 across dominance regimes** (robust when floor-primary, fragile when a break-
+rider on a grain-dominant seed).
+
+**Status → MITIGATED (2026-07-13):** the reframed question is answered (v0.2 CAN dramatize a
+contract-only floor; fragility localized to dual-grain dominance; v0.3 not indicated; taxonomy
+ruling standing). **Forward step (implementation-pending, seed-side):** author the **Stage-2
+dominance-ordering clause** in `agent/narrative_transform/stage2.md` (when the invariant contract
+marks the floor primary, subordinate the grain on-screen) and re-test on a floor-primary seed.
+Gated behind: operator go on a generation-protocol change. The floor's fragility on **grain-
+dominant** seeds is filed as a **known seam** (expected, per the presuppositional-prior legibility
+handicap). Human-read gate (OQ-218 standing) still gates publication of any output.
 
 ---
 

@@ -45,6 +45,29 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-13 — OQ-219 MITIGATED: floor-recovery tracks dominance (routing outcome a); seed-side Stage-2 dominance clause, no v0.3
+**Files:** ISSUES.md, agent/narrative_transform/stage2.md, agent/uke_story_v0.2.md, audits/2026-07-13_oq219_missing_floor/READOUT_datum_stone.md, audits/2026-07-13_oq219_missing_floor/READOUT_v02repair.md
+**Tier:** landed
+
+Commits: pilot `86c36f29`/`30120d32`, routing pre-commit `354ef198`, resolution (this). Reframed
+OQ-219 (v0.2-repair: can v0.2 dramatize a contract-only floor?) resolved via TWO runs. **Pilot**
+(Margins, grain-primary, contract-only floor): v0.2 CAN dramatize the floor (existence) but FRAGILE
+— §6 cold arms split 1/2 (Gemini floor, Sonnet grain). Cause unassignable at n=1. **Isolating run**
+(Datum Stone, floor-PRIMARY, ~$1.65, "The Long Breath"): cold floor-recovery ≈2.5/3, and **Sonnet
+FLIPPED** grain→floor with dominance. **Floor-recovery TRACKS DOMINANCE** → the fragility is
+**dual-grain competition, NOT a missing protocol socket** → pre-committed **routing outcome (a): NO
+v0.3.** Fix = **seed-side Stage-2 dominance-ordering clause** (when the contract marks the floor
+primary, Stage 2 subordinates the grain on-screen — the §1a two-reals machinery applied to
+floor-vs-grain); implementation-pending, gated on operator go for a generation-protocol change.
+**Standing taxonomy ruling (operator):** the floor is the grain's **structural sibling, not a
+break-species** (presupposition vs unreadability; fairer-authority vs better-instrument falsifier;
+instrument's-honest-operation vs character's-knowing carrier) — the §1b break-rider was the correct
+vehicle, only the §1 structural home is debated, and outcome (a) says it's not even missing.
+**Label-delta method (reusable):** record primed (stage-9, contract-threaded) vs cold (§6 blind)
+floor-recovery; cold recovery is presuppositional so it runs BELOW grain-recovery and is
+measured-and-reported, not required, in the load-bearing bar. Not a tripwire (loud; the reframe +
+fix live in the OQ-219 entry).
+
 ## 2026-07-13 — OQ-219 REFRAMED: UKE originals corpus is architected dual-grain — no corpus-drawn pure-Detector-B source
 **Files:** ISSUES.md, audits/2026-07-13_oq219_missing_floor/PROPOSAL.md, audits/2026-07-13_oq219_missing_floor/TRIAGE.md, agent/narrative_transform/originals/
 **Tier:** landed

@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "30120d32e5c7315e611ca42aaafbfd4555b7e71c",
+    "store_version": "354ef1981a4bc8f738f2c7cf03631f3d56809d2c",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-13T13:50:05"
+    "generated_at": "2026-07-13T14:13:31"
   },
-  "issues_sha": "6a0e0f8a56fc79dfd9e12a4dd2cfe00b7bcbd6ae9d2aef61dd99ae9e25568bc2",
+  "issues_sha": "9e41951795bf3f2fe3bd1099b39ac4608883236ed58530f7c1d84f2c402028ce",
   "n_entries": 220,
   "active_token_set": [
     "investigating",
@@ -13,9 +13,9 @@
   ],
   "per_status": {
     "resolved": 126,
-    "mitigated": 15,
+    "mitigated": 16,
     "disposed": 4,
-    "open": 64,
+    "open": 63,
     "partial": 7,
     "future": 4
   },
@@ -963,21 +963,6 @@
       "mentioned_in": [
         "OQ-215",
         "OQ-218"
-      ]
-    },
-    {
-      "id": "OQ-219",
-      "status": "open",
-      "priority": 2,
-      "summary": "Missing-floor / Detector-B: R14's floor is a co-presence grain (no corpus-drawn pure-B) — reframed to the v0.2-repair question (Ω_E)",
-      "deps": [
-        "blocked_on_human operator-spend-go"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-215",
-        "OQ-218",
-        "OQ-220"
       ]
     },
     {
@@ -3032,6 +3017,21 @@
       "mentioned_in": [
         "OQ-214",
         "OQ-215",
+        "OQ-220"
+      ]
+    },
+    {
+      "id": "OQ-219",
+      "status": "mitigated",
+      "priority": 2,
+      "summary": "Missing-floor / Detector-B: R14's floor is a co-presence grain (no corpus-drawn pure-B) — reframed to the v0.2-repair question (Ω_E)",
+      "deps": [
+        "blocked_on_human operator-spend-go"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-215",
+        "OQ-218",
         "OQ-220"
       ]
     }
