@@ -10030,7 +10030,7 @@ the reversal is a clean label-delta proof-of-concept; but the reader was operato
 the asking context), not a cold arm. The OQ-220 runs use cold arms; this datum is the pilot.**
 
 **Pilot artifact 2 (2026-07-13): label-primed v0.2 rewrite —
-`essays/2026-07/the_clean_small_song.md`** (Claude web, same reader, UKE_STORY v0.2 in hand).
+`blog/2026-07/the_clean_small_song.md`** (Claude web, same reader, UKE_STORY v0.2 in hand).
 Process finding: it took the protocol's **reject-and-regenerate branch** (§0 shadow criterion),
 not Path A/B — seed topology discarded entirely (reef-diving "tellers"; a held note that "comes
 to true" = time-average converging to ensemble average), which no Stage-2 batch pass exercised.

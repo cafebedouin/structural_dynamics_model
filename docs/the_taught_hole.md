@@ -2,7 +2,7 @@
 
 *What "The Clean Small Song" knows about this repository — the project's epistemology told as a
 story, and the story read back as method. Written 2026-07-13; the story is at
-`essays/2026-07/the_clean_small_song.md`. Provenance of both at the end. CC0, like everything
+`blog/2026-07/the_clean_small_song.md`. Provenance of both at the end. CC0, like everything
 here.*
 
 ---
