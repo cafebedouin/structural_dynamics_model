@@ -9965,12 +9965,14 @@ OQ-214; the human gold arm bound to publication, not to this close.
 
 ---
 
-## OQ-219 — Missing-floor / Detector-B probe: is R14's floor-contract load-bearing in output? (Ω_E)
+## OQ-219 — Missing-floor / Detector-B: R14's floor is a co-presence grain (no corpus-drawn pure-B) — reframed to the v0.2-repair question (Ω_E)
 
 **Ω-type:** Ω_E (pre-registered single-source probe).
 
-**Status:** open — minted 2026-07-12 at the OQ-215 close; spend HELD (source staged + Stage-0
-dry-run only; full run on operator spend-go).
+**Status:** open — REFRAMED 2026-07-13 (operator ruling). Minted 2026-07-12 at the OQ-215 close.
+Step-0 leg-B triage witnessed NO corpus-drawn pure-Detector-B source (the corpus is architected
+dual-grain); the graded existence-run is retired and the question is reframed to the v0.2-repair
+form. Pre-registration + triage committed (`audits/2026-07-13_oq219_missing_floor/`).
 
 **Priority:** 2
 
@@ -9996,9 +9998,31 @@ grep-adjudicated claims). PIPELINE STAGES STAY ON PRODUCTION DEFAULTS (the runs 
 Sonnet-5 re-baseline — putting the executor's model into the stage flags would recreate the R12
 confound). Operator legs and spend-go are the operator's regardless of executor.
 
-**What resolution changes:** R14 graduates from "contract authored 5/5" to "contract does
-narrative work" — or the floor-contract is shown decorative and missing-floor dramatization
-becomes a v0.2 repair question, not a pipeline-generation claim.
+**Step-0 triage + reframe (2026-07-13, operator ruling).** The pre-registration
+(`audits/2026-07-13_oq219_missing_floor/PROPOSAL.md`, committed `90631e4e` before any run) carried
+operator sharpenings #1–#5 and made **leg B (pure Detector-B) the naming probe's POSITIVE CONTROL**
+— the arm that proves the probe can flag a floor at all, without which a dual-grain leg-A null is
+uninterpretable (#2). Step-0 leg-B triage (`TRIAGE.md`, committed `6ff9f480`; ~$0.06, 2 Stage-0
+`--dry-run`s, exit 0) found **NO corpus-drawn pure-Detector-B source**: prose pre-screen across 11
+sources + engine certs on the two best shots (`rift3` "Insufficient", `rift2` "Load-Bearing") ALL
+certify `untranslatable_real present="yes"`. **The UKE originals corpus is architected dual-grain**
+— every source authored for the detector schema pairs a Detector-B instrument with a live
+untranslatable-real, which is almost certainly WHY every OQ-215 arm-3 source led with a Detector-A
+grain. So the pure-B positive control cannot be sourced corpus-drawn, and (operator ruling: corpus-
+drawn-only, no authoring) the graded existence-run is retired.
+
+**Reframed question (the finding IS the answer to the old question):** R14's floor is a
+**co-presence grain** in this corpus — never authored standalone-primary — so "does the pipeline
+GENERATE a load-bearing floor" is not answerable corpus-drawn. The live question becomes the OQ's
+own alternative: **can UKE_STORY v0.2 dramatize a contract-only floor (the §4 repair pass)?** —
+a v0.2-*repair* question, not a pipeline-generation existence claim. That run is still spend-gated
+(`blocked_on_human operator-spend-go`); leg A (`the_datum_stone`, dual-grain) remains available as a
+co-presence supplement if the operator later wants it.
+
+**What resolution changes (reframed):** whether v0.2 can dramatize a contract-only floor (a repair
+capability), NOT whether the pipeline generates one. The general "R14's floor does narrative work"
+claim is retired here as unanswerable from this corpus; establishing floor-carrying existence would
+need a pure-B source the operator authors (off unless the corpus-drawn-only ruling is lifted).
 
 ---
 

@@ -45,6 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-13 — OQ-219 REFRAMED: UKE originals corpus is architected dual-grain — no corpus-drawn pure-Detector-B source
+**Files:** ISSUES.md, audits/2026-07-13_oq219_missing_floor/PROPOSAL.md, audits/2026-07-13_oq219_missing_floor/TRIAGE.md, agent/narrative_transform/originals/
+**Tier:** landed
+
+Commits `90631e4e` (pre-registration) + `6ff9f480` (Step-0 triage + raw artifacts). OQ-219 asked
+whether R14's floor-contract (Detector-B "missing floor") is LOAD-BEARING in output, needing a
+**pure-Detector-B leg B** as the naming probe's POSITIVE CONTROL (without it a dual-grain leg-A
+null is uninterpretable, sharpening #2). **Finding: no corpus-drawn pure-B source exists.** Prose
+pre-screen across 11 `originals/` sources + Stage-0 `--dry-run` engine certs on the two best shots
+(`rift3` "Insufficient", `rift2` "Load-Bearing") ALL certify `untranslatable_real present="yes"`
+alongside `missing_floor present="yes"`. **The UKE originals corpus is architected dual-grain by
+construction** — every source authored for the detector schema pairs a Detector-B codifying
+instrument with a live Detector-A untranslatable-real (the datum/table/book/commentaries/baseline
+vs the walking/boat-grammar/live-judgment/palm-to-stone), and the untranslatable-real is typically
+dominant. This is almost certainly WHY every OQ-215 arm-3 source led with a Detector-A grain.
+**Operator ruled (this session): corpus-drawn only, no authoring → reframe.** R14's floor is a
+**co-presence grain** here (never authored standalone-primary); the graded existence-run is retired
+and OQ-219 is reframed to its own alternative — the **v0.2-repair** question (can UKE_STORY v0.2
+dramatize a contract-only floor?), still spend-gated. Triage spend ~$0.06 (2 Stage-0 dry-runs,
+gemini-2.5-pro, exit 0). Not a tripwire (loud: any future pure-B hunt re-runs the same triage);
+the reframe lives in the OQ-219 entry.
+
 ## 2026-07-13 — OQ-217 RESOLVED: consensus_provenance/2 real-seat verdicts; verdict⟺H¹ now an EXACT biconditional
 **Files:** prolog/stakeholder_seats.pl, prolog/commentary_census.pl, prolog/tests/test_h1_stakeholder_spectrum.pl, prolog/tests/test_seat_totality.pl, python/audits/oq207_stakeholder_h1_census.py, python/audits/oq217_movement_diff.py
 **Tier:** landed
