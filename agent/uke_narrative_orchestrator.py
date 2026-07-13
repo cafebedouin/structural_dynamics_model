@@ -2207,11 +2207,23 @@ class UKEOrchestrator:
                 result.stage_outputs["invariant_contract"] = contract
                 self._save_stage_output("invariant_contract", contract, result)
             else:
-                self._progress(
-                    "stage_2",
-                    "WARNING: stage 2 output has no SECTION 0 INVARIANT "
-                    "CONTRACT — stages 9/10 will run with invariant "
-                    "preservation UNVERIFIED")
+                # OQ-216 guard (site witnessed live 2026-07-12, run
+                # 112_ergodocity_kids_1783916200: Sonnet-5 stage 2 folded the
+                # invariant into SECTION 1 as "Step 0" and the run continued
+                # to completion with R13 threading dead — stage 9 could only
+                # report "contract not available"). A full run's stage 2 MUST
+                # author the extractable SECTION 0 block; fail loud, never
+                # warn-and-continue.
+                err = ("stage_2 output has no extractable 'SECTION 0: "
+                       "INVARIANT CONTRACT' block — R13 threading would run "
+                       "UNVERIFIED downstream. The section is mandatory in "
+                       "stage2.md; re-run stage 2. See OQ-216.")
+                self._progress("stage_2", "ERROR: " + err)
+                result.steps.append(StepResult(
+                    step="stage_2_section0_guard", status="error", error=err))
+                result.total_duration_s = time.time() - t0
+                self._tally(result)
+                return result
 
         # ── Stage 3: Editorial Decisions (Claude) ─────────────────────
         if start_idx <= 3:
