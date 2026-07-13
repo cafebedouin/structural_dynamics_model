@@ -877,7 +877,11 @@ class UKEOrchestrator:
         # (OQ-216). The cap-hit guard in _call now fails loud on this.
         "stage_1":  16384,
         "stage_2":  16384,
-        "stage_3":  12288,
+        # stage_3 raised 12288 → 16384 (2026-07-12, OQ-218 Stage-2 run 2):
+        # the_eighth_commentary blueprint hit 12288 exactly (cap-hit guard
+        # fired, fail-loud as designed); run 1's blueprint reached 11546 —
+        # the cap was marginally sized for richer sources, not a one-off.
+        "stage_3":  16384,
         "stage_4":  16384,
         "stage_5":  8192,
         "stage_6":  8192,
