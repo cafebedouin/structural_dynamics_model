@@ -1106,6 +1106,30 @@ convergence-softening, not signal (the operator's `[EDGE]` call). Worked instanc
 
 ---
 
+## A model swap is an engine change: its witness is a full run through the structural gates
+
+A witness class must match the failure class it guards. An API round-trip ("OK" came back, no
+400) witnesses *reachability* — params accepted, auth works, the gate on sampling params holds.
+The failure class of a **generator change** is different: format and register drift at stage
+boundaries — output that parses, flows, and lands at the wrong address. Only a full run through
+the structural gates can witness against that class.
+
+Witnessed both ways in one day (2026-07-12/13, Sonnet 4.5 → Sonnet 5 migration): the swap was
+verified with live round-trips on all three call paths and called clean; the first full
+production run (`112_ergodocity_kids_1783916200`) had stage 2 fold SECTION 0: INVARIANT CONTRACT
+into SECTION 1 as "Step 0" — content at the wrong address, extraction empty, R13 threading dead
+behind a warning, run "completed." The round-trip witness could not have caught it in principle:
+the failure lived in output *structure*, a class the witness never sampled. (The fix is the
+OQ-216 template: the stage-2 SECTION-0 guard now fails loud; two-sided witness in the guard's
+comment.)
+
+**Rule: after any model change in a generator — pipeline stage models, SCOPE/architect roles,
+batch paths — the migration is OPEN until one full run passes the structural gates on the new
+model.** Round-trips are the pre-flight, not the witness. Corollary, same class: pin the OLD
+model via per-stage overrides when a probe's comparability depends on the generator
+(the OQ-218 Stage-2 batch pattern) — the executor's model and the generator's model are
+independent choices.
+
 ## Shuffle-test / permutation-null discipline (the control's precision must match what it gates)
 
 A permutation null ("real structure beats shuffled structure") is an absence claim about the

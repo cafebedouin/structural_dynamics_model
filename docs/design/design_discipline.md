@@ -982,6 +982,17 @@ separation is binding on probe runs (OQ-218): the improver may not blind-read th
 Standing record in-protocol: v0.2 Ω_C2 — "the sharpens-verdict and the blind read are
 operator-held by design — assisted, not autonomous; **revisit only at volume**."
 
+**§11a — the reception loop is part of the instrument (added 2026-07-13, OQ-218 close).** Every
+blind arm run to date is a model, and every pilot reader has been operator-adjacent. Model-reader
+agreement — however fast, clean, and cross-family — is F-PROCESS-VOUCH at ecosystem scale and
+may never be cited as external validity: aligned readers converging quickly is the exact danger
+signal the apparatus teaches (fast clean convergence reads as success while sampling a thinned
+reader-domain; `docs/the_taught_hole.md` is the long form). The standing consequence, ruled at
+the OQ-218 close: the unsampled reader class — one genuinely cold human, no context, no label,
+no machine-provenance knowledge — **gates publication of arc outputs**, not internal closes.
+Internal rulings may rest on model arms plus operator legs; anything that ships must first meet
+the reader class the loop cannot manufacture.
+
 ---
 
 ## Open items for the next pass on this document

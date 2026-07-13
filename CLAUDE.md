@@ -267,6 +267,14 @@ do not fold `trajectory` back into the parallel `tasks` list.
   (snapshot-first, verified restore, automatic cache clearing via
   `cache_registry:clear_all_caches/0`) instead of hand-rolled retract/assert — see
   `swipl_load_path_and_probe_gotchas.md` §§2–4, 7.
+- **New Claude API call sites: route through `agent/llm_call.py` `call()` (or reuse its
+  `sampling_overrides`).** Sonnet 5/Opus 4.7+ reject non-default `temperature` (loud 400), but
+  Sonnet 5 runs ADAPTIVE thinking when the field is omitted — silently spending `max_tokens` on
+  thinking (truncation with no guard outside the uke pipeline). And **a model swap in any
+  generator is an ENGINE change: it stays OPEN until one full run passes the structural gates on
+  the new model — API round-trips are pre-flight, not the witness** (witnessed 2026-07-13: first
+  Sonnet-5 run drifted stage-2 format silently; `build_discipline.md` → *A model swap is an
+  engine change*).
 - Linter: must be imported as library (`from linter import lint_file`), not run directly
 - Config sensitivity: `python3 python/config_sensitivity_sweep.py`; directionality:
   `python3 python/directionality_sensitivity_sweep.py`
