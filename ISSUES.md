@@ -10024,6 +10024,34 @@ capability), NOT whether the pipeline generates one. The general "R14's floor do
 claim is retired here as unanswerable from this corpus; establishing floor-carrying existence would
 need a pure-B source the operator authors (off unless the corpus-drawn-only ruling is lifted).
 
+**PILOT (2026-07-13) — v0.2-repair on "The Margins" (existence-at-n=1, split preserved):** applied
+v0.2 to a clean contract-only-floor seed (`the_empty_pan_1783870196`, grain-dominant) targeting the
+floor; §6 blind read, 2 cold arms. **SPLIT 1/2:** Gemini recovered the floor cleanly ("the injustice
+*of* the system of measurement… by design… foundational"); Sonnet read the same beats as
+grain/normalization. **Verdict (operator-held, Ω_C2): v0.2 CAN dramatize a contract-only floor —
+EXISTENCE at n=1, FRAGILE / reader-dependent.** Not decorative (clean blind recovery +
+capability-adding §4 erasure); not robust (rides the grain/floor seam; v0.2 has no native floor
+concept, floor enters as a break-rider). Filed as the OQ-219 pilot (cf. ergodicity pilot under
+OQ-220); both arms preserved, never averaged. Evidence: `audits/2026-07-13_oq219_missing_floor/`
+(MANIFEST/ERASURE/READOUT_v02repair + arms). Cost ~a few cents.
+
+**TAXONOMY RULING (operator, 2026-07-13, STANDING — settled by the pilot):** the floor is the
+**grain's structural sibling, not a break-species** — different mechanism (presupposition vs
+unreadability), falsifier class (fairer authority vs better instrument), dramatic carrier (the
+instrument's *honest operation* vs a character's *knowing*). The break-rider (§1b) was the correct
+*vehicle*; only the §1 *structural home* is missing. **Legibility handicap (permanent):**
+floor-recovery runs BELOW grain-recovery in blind arms by nature (the neutrality prior is
+presuppositional) — so cold recovery is MEASURED-AND-REPORTED, not required, in the load-bearing bar.
+
+**SPEND-GO GRANTED + routing pre-committed (2026-07-13).** The pilot cannot assign the fragility's
+cause (protocol / seed / reader). The isolating instrument is **The Datum Stone** (floor-PRIMARY,
+staged + certified `434ec74d`): if floor-recovery tracks dominance (clean at floor-primary), fault =
+dual-grain competition → **seed-side Stage-2 dominance clause, NO v0.3**; if it collapses cold even
+at floor-primary → **v0.3 executes** (spec pre-committed); if the floor is absent from the generated
+seed → **pipeline-side (stages 2/3)**. Routing table + v0.3 spec + label-delta leg pre-registered in
+`PROPOSAL.md` ADDENDUM before the run. Datum Stone run: resume stage_1→10 (Sonnet-5 defaults), §6
+with THREE cold arms + primed(stage-9)-vs-cold label-delta.
+
 ---
 
 ## OQ-220 — Concept-translation stress tests (math_stories class): the label-delta blind read (Ω_E)

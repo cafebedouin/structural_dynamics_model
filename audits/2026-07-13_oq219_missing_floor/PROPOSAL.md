@@ -216,3 +216,81 @@ at spend time.
 - **Three-valued AND (residue A):** a blocked/confounded erasure is scored **INCONCLUSIVE → OPEN**,
   never a negative; the READOUT states which conjunct carried when the other was blocked. No outcome
   silently defaults to NOT-load-bearing on an instrument block.
+
+---
+
+# ADDENDUM — Datum Stone run: routing table + pre-committed v0.3 spec (operator ruling, 2026-07-13)
+
+Written **before** the Datum Stone graded run, per the operator's directive ("routing table into the
+pre-registration first"). Follows the v0.2-repair **pilot** on "The Margins" (READOUT_v02repair.md):
+n=1 seed, split 1/2 cold arms (Gemini recovered the floor; Sonnet read grain). **The pilot cannot
+assign the fragility's cause** — three candidates it cannot separate: the **protocol** (floor entered
+as a break-rider, no §1 structural home), the **seed** (dual-grain by construction, dominant grain
+absorbs the floor), the **reader** (presuppositional prior — recovering a floor is "asking a reader
+to see water"). Don't design at a fork the next run resolves.
+
+## The isolating instrument: The Datum Stone (floor-PRIMARY)
+
+The Margins was the **hardest case, run first by accident**: grain-dominant, floor contract-only — we
+asked v0.2 to *add* a floor to a story whose grain owns the reader. The Datum Stone **inverts the
+dominance**: floor primary (C1 foundational), grain (the walking-of-the-water) present but subordinate
+in the contract. If floor-recovery **tracks dominance** (clean on Datum Stone, fragile on Margins), the
+fault was never the protocol — it is dual-grain competition, and the fix is **seed-side**. If the floor
+**collapses cold even at floor-primary**, the §1 socket is genuinely missing → v0.3.
+
+## Routing table (pre-committed — the run lands on a DECISION, not a design meeting)
+
+- **(a) Clean cold floor-recovery on Datum Stone** → **NO v0.3.** Add a **Stage-2 dominance-ordering
+  clause**: when the contract marks the floor primary, subordinate the other real on-screen. This is
+  machinery v0.2 already owns one level down — the **two-reals subordination** clause (§1a: "two reals
+  may coexist only if the story subordinates one on-screen"), applied to floor-vs-grain. File the
+  floor's fragility on **dual-grain** seeds as a known seam.
+- **(b) Collapse at floor-primary (cold arms miss the floor even when it is the primary invariant)** →
+  **v0.3 executes** (spec pre-committed below).
+- **(c) Floor ABSENT from the generated seed entirely** → the R14 thread isn't reaching generation →
+  **pipeline-side (stages 2/3)**, NOT v0.3 at all.
+
+## Pre-committed v0.3 spec (executes ONLY on outcome b; budget-legal, ships shorter)
+
+- **One new term: "the floor."** Passes Parfit easily (far shorter than "a zero-point the system's
+  honest operation presupposes and cannot audit"). Concept budget 4 → 5 with the offset below.
+- **§1a gains a two-kinds clause with PAIRED falsifiers:** the **grain's** falsifier is *a better
+  instrument*; the **floor's** is *a fairer authority*. Floor-indifference = the fairer authority
+  arrives and **re-founds the same zero** (the correction relocates the line; there is no right place).
+- **One deformation operator (§2), the Mendoza move generalized:** *let the instrument be perfectly
+  honest, then ask it to weigh its own founding.*
+- **Ships-shorter offset (self-application):** §5 (the ensemble) is **untested across five passes and
+  compressible** (its own Ω_E2 amputation condition) — cut/compress it to pay for the new term.
+
+## Taxonomy ruling (STANDING — settled by the pilot, regardless of a/b/c outcome)
+
+**The floor is the grain's structural SIBLING, not a break-species.** Different **mechanism**
+(presupposition vs unreadability — the mountain isn't unreadable, it's *un-weighed by the choice that
+set the zero*); different **falsifier class** (fairer authority vs better instrument); different
+**dramatic carrier** (the grain lives in a character's *knowing*; the floor lives in the instrument's
+*honest operation* — which is why the seed's honest scale was the right stage for it). **The break-rider
+was NOT a hack:** violating the neutrality prior *is* the floor's reader-facing form, so §1b was the
+correct vehicle; what is missing is only the §1 **structural home**. **Legibility handicap (permanent):**
+the neutrality prior is *presuppositional*, so **floor-recovery runs BELOW grain-recovery in blind arms
+by nature** — not a craft failure. Do not build a concept because the floor is the framework's darling
+([EDGE], operator): localize before building (the counting-ban-at-five-sites lesson). If Datum Stone
+says seed-side, the floor does not get a term, however much the theory loves it.
+
+## Label-delta leg (added to the load-bearing bar)
+
+Record **BOTH** recoveries: **primed** (stage-9 reads *with* the contract) vs **cold** (§6 arms read
+blind). The delta is the measurement. The honest **load-bearing bar** becomes: **primed reader names
+the floor + erasure weakens it + cold recovery MEASURED-AND-REPORTED (not required)** — because a
+presuppositional prior should not be *required* of a cold reader to count as load-bearing.
+
+## Datum Stone §6 design (this run)
+
+- **Arms: THREE cold** (given the pilot's observed 50/50), payload = the generated seed only (no
+  contract), floor-vs-grain discriminator; grep-adjudicated. (Two-plus-a-human would double as the
+  gold arm this arc owes — deferred; no human arm available this session, so three machine arms.)
+- **Primed leg:** the pipeline's stage-9 (contract-threaded) floor-affirmation, grep-witnessed and
+  labelled **primed/un-re-prompted**, reported beside the cold recovery as the label-delta.
+- **Filing:** The Margins goes under OQ-219 as its **pilot** (cf. the ergodicity pilot under OQ-220),
+  existence-at-n=1, **split preserved** (both arms filed, never averaged). Verdict of record is the
+  operator's (v0.2 Ω_C2); the machine arms are the assisted instrument; the OQ-218 human-read gate
+  still gates publication.
