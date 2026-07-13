@@ -9876,12 +9876,17 @@ source; the mcc flag can no longer fire over an all-untypeable seat set.
 
 **Ω-type:** Ω_E (pre-registered probe; decision rules authored before any run).
 
-**Status:** open — minted 2026-07-12 at the OQ-215 close; spend HELD (staging + Stage-0 dry-runs
-done; full runs only on operator spend-go).
+**Status:** open — Stage-1 spend-go granted + improvement passes RUN 2026-07-12 (Path B declared;
+pre-registration committed BEFORE the run: `audits/2026-07-12_oq218_scored_snare/PROPOSAL.md`).
+Deliverables: improved story `the_platform_knows_v02_pathB.md` + `MANIFEST.md` (blind_read
+PENDING — the structural pause; improver may not administer §6) + `blind_arm_payload.md`
+(unlabeled A/B, randomized) + `AB_KEY.md`. NOW PENDING: (i) blind arms — two fresh instances,
+different model families, payload only; (ii) operator's contaminated-expert §1a audit; (iii)
+operator ruling. Both legs must pass for "repair confirmed." Stage 2 remains conditional.
 
 **Priority:** 2
 
-**Deps:** blocked_on_human operator-spend-go
+**Deps:** blocked_on_human operator-adjudication
 
 **Origin:** 2026-07-12, the OQ-215 close. Carries the rev6 watch-case flag: rev6 ("The Platform
 Knows", arm-3 run 4, `agent/narrative_transform/uke/the_empty_pan_1783872143/`) is the

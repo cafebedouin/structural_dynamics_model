@@ -73,6 +73,19 @@ End-of-Session Documentation Review), not in CLAUDE.md.
   UKE_STORY v0.2 repair a Type-B seed?" (rev6 = the gating Ω_E1 control; fresh sources are a
   conditional Stage 2; executor separation binding — improver ≠ blind reader); missing-floor
   probe with "load-bearing" pre-registered. Both `blocked_on_human operator-spend-go`.
+- **OQ-218 Stage 1 RUN (spend-go granted same day; operator concurred with the Phase-0
+  hand-check at closer range).** Pre-registration committed BEFORE the pass
+  (`audits/2026-07-12_oq218_scored_snare/PROPOSAL.md`, commit `b2c2c542`). Improvement executed
+  by this instance under v0.2 Path B: platform-record seat (4 interstitials; the §III fail-count
+  moved into the instrument's own grammar — the stage-9 weakness repaired with the seed's device),
+  grain scene drafted in isolation (sensor crossing: the trace records the preparation, cannot
+  record that it was preparation), falsifier granted with indifference (notebook: "reads her
+  exactly as deep as the cruel one did"), stage-10 flinch line cut, consolation level 1 (terminal
+  beat = intake record scheduling the daughter). **Paused pre-§6 per executor separation** —
+  manifest carries blind_read PENDING; unlabeled randomized A/B payload staged for two fresh
+  arms of different model families (+ human gold arm; Q3 delayed; Q4 added). Adjudication:
+  blind arms test the break; operator takes the contaminated §1a audit; operator rules.
+  Also landed: `[EDGE]` convention added to CLAUDE.md (operator instruction).
 - **Four probe sources authored + certified** (commit `434ec74d`, ~$0.12 total dry-run spend):
   three scored-Snare in distinct instrument classes (credit standing / examination / actuarial
   table) + one Detector-B-primary. All four Stage-0 dry-runs witnessed: `inherent_instrument
