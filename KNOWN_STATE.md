@@ -45,6 +45,29 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-13 — OQ-218 sweep witness + OQ-214 promoted + stage-2 SECTION-0 guard (first Sonnet-5 production run fired OQ-216's candidate)
+**Files:** ISSUES.md, agent/uke_narrative_orchestrator.py, audits/2026-07-12_oq218_scored_snare/READOUT_STAGE2.md
+**Tier:** landed
+
+- **Absence claim discharged:** correctable-vocabulary sweep over the three Stage-2 seeds with
+  rev6 as positive control (fired: 16 hits, the rebuild subplot recovered exactly); seeds
+  0 / 1-homograph / 0. READOUT addendum carries the paste. Operator per-source leg staged as
+  `OPERATOR_LEG_BUNDLE.md` (six files, one upload).
+- **OQ-214 PROMOTED (Priority 4→2)** with the witnessed calibration corpus: 3/3 Type-A seed
+  instances (manifest anchors), false-positive class (rev5 + run-1 earned lines), Sonnet-r3's
+  blind pattern enumeration, and the resonant-closer tic (operator Web-Claude read of the
+  ergodicity story: units landing on "the way X" images, ×4 in 2,280 words). Residue-inversion
+  design warning recorded: Q2 nominates, register gate vetoes, neither rules alone.
+- **First Sonnet-5-default production run** (`112_ergodocity_kids_1783916200`, operator-invoked):
+  ran end-to-end (migration held; density point 4.84/1000), but **stage 2 omitted SECTION 0**
+  (folded into SECTION 1 "Step 0") — OQ-216's stage-2 census candidate fired in production; R13
+  threading ran dead behind a warning. Guard built (warn → fail-loud StepResult error), two-sided
+  witness: fires on the ergodocity stage_2, passes on all three batch stage_2s. OQ-216 updated.
+- Standing instrument rules recorded on OQ-218: blind payloads get a "these may be identical —
+  say so" escape; arm factual claims get grep-adjudicated before filing. Ruling-scope line
+  recorded (certified-grain sources; watch reopens lightly at the Sonnet-5 re-baseline).
+  OQ-219 remains gated on its own spend-go.
+
 ## 2026-07-12 — OQ-218 Stage 2 batch RUN (3 sources, 4.5-pinned): rev6 weakness 0/3; residual defect is Type-A register-level
 **Files:** ISSUES.md, audits/2026-07-12_oq218_scored_snare/READOUT_STAGE2.md, agent/uke_narrative_orchestrator.py
 **Tier:** landed

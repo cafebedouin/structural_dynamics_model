@@ -9681,9 +9681,23 @@ reported defect was the wording.)
 
 **Ω-type:** Ω_E (mechanical: a missing instrument, with a working template to copy).
 
-**Status:** open — minted 2026-07-11 during the counting-defect implementation.
+**Status:** open — minted 2026-07-11; **PROMOTED 2026-07-13 (operator adjudication of the OQ-218
+Stage-2 batch): explanation over-run witnessed 3/3 on fresh seeds — the pipeline's residual
+defect class with counting dead. A calibration corpus now exists:** positives = the flagged
+instances in the three Stage-2 seeds (run-1 F39 leakage + refrain ×4 + philosophy-seminar
+ending; run-2 §VII thesis-essay ×4; run-3 syllogism ×4 + double anaphora + hope-clause — all
+enumerated with anchors in `audits/2026-07-12_oq218_scored_snare/MANIFEST_RUN{1,2,3}.md`);
+false-positive class = rev5's earned word-arithmetic (below) + run-1's earned lines; independent
+pattern list = Sonnet r3's unprompted blind enumeration (arc-closing refrains, glossed tricolons,
+causal-chain formulas, repeated scene-closers — `blind_arm_sonnet_run3.md`) **+ the resonant-
+closer tic (operator Web-Claude read of the ergodicity story, 2026-07-13: units landing on a
+summarizing image, often "the way X" — witnessed ×4 in one 2,280-word story)**. Design warning
+from the residue-inversion finding: cold readers Q2-pick out-of-register jargon as INIMITABLE,
+so sentence-level taste cannot adjudicate residue from either side of the blind wall — the meter
+needs the R6 architecture exactly (deterministic extraction + per-instance adjudication; Q2
+nominates, the register gate vetoes, neither rules alone).
 
-**Priority:** 4
+**Priority:** 2
 
 **Origin:** 2026-07-11, the UKE narrative-pipeline counting-defect plan
 (`~/.claude/plans/we-are-evaluating-the-zany-biscuit.md`, "Tracked gap"; implementation landed as
@@ -9824,7 +9838,13 @@ the next stage consumes it without a check. Known candidates to adjudicate: stag
 — arm-1 stage_2 hit exactly 8192 output tokens, suspicious of truncation that happened to land
 after SECTION 2), stage-3 blueprint XML (`</story_blueprint>` closure), stage-7/8 story+manifest
 shape (a stage-8 output missing its manifest reads as pure story silently), stage-10 report
-completeness. For each: guard-or-justify, on the b715f3dc template (narrow closure check,
+completeness. **Stage-2 candidate FIRED IN PRODUCTION and is now GUARDED (2026-07-13):** the
+first Sonnet-5-default run (`112_ergodocity_kids_1783916200`) folded SECTION 0 into SECTION 1 as
+"Step 0" — content at the wrong address, extraction empty, run completed with R13 threading dead
+(stage 9 could only report "contract not available"). Warn-and-continue → fail-loud StepResult
+error; two-sided witness (fires on the ergodocity stage_2, passes on all three Stage-2-batch
+stage_2s). A cap-hit variant also fired during the OQ-218 batch (stage_3 at 12288 exactly —
+caught by the existing guard, cap raised, commit `25b27343`). Remaining candidates unchanged. For each: guard-or-justify, on the b715f3dc template (narrow closure check,
 fail-loud StepResult error, two-sided witness). Per Build Discipline, the guard added is itself a
 claim — each needs its positive control.
 
@@ -9898,6 +9918,18 @@ instrument; run-3 subtraction-only delta below Gemini's floor (confabulation dat
 error grep-witnessed); one OQ-216 guard fire, fixed loud (`25b27343`). Maps to pre-registered
 outcome 3 ("rev6 = variance, not class; R3(b) stands; watch flag closes") — PENDING the
 operator's per-source adjudication + class ruling, which remain the operator's seat.
+**2026-07-13 riders:** (i) the readout's absence claim is now SWEPT (correctable-vocabulary
+sweep, rev6 positive control fired 16 hits; seeds 0/1-homograph/0 — READOUT addendum);
+(ii) operator leg staged: `OPERATOR_LEG_BUNDLE.md` (all six files, one upload); (iii) standing
+instrument rules from the batch: blind payloads carry a "these may be identical — say so"
+escape from now on, and any arm factual claim gets grep-adjudicated before filing;
+(iv) SCOPE OF THE EVENTUAL RULING: "no class weakness *given sources that carry certified
+grains*" (the only regime the pipeline permits — Stage-0 certification is mandatory), 0/3 on
+friendly probes, provenance caveat in the readout; the class watch REOPENS LIGHTLY at the first
+Sonnet-5 production re-baseline; (v) first Sonnet-5-default run witnessed (ergodicity story,
+operator-invoked): completed end-to-end, density point 4.84/1000, but stage 2 omitted SECTION 0
+→ OQ-216 guard built + two-sided witnessed (the R13 threading now fails loud instead of running
+dead).
 
 **Priority:** 2
 

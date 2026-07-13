@@ -80,3 +80,31 @@ Seeds: `stories/the_{good_name_book,eighth_commentary,table_of_winters}_rev1.md`
 `the_keeping_v02_pathA.md`, `the_red_ink_v02_pathA.md`, `the_hands_that_measure_v02_pathA.md`.
 Manifests: `MANIFEST_RUN{1,2,3}.md`. Arms: `blind_arm_{sonnet,gemini25pro}_run{1,2,3}.md`.
 Keys: `AB_KEY_run{1,2,3}.md`. Run dirs: `agent/narrative_transform/uke/…` (committed).
+
+## Addendum (2026-07-13): the absence claim's witness
+
+The claim "no better-meter subplot appeared anywhere" is now swept, not asserted. Correctable-
+vocabulary sweep (recalibrat*/rebuil*/fairer/representative sample/true value/mismeasur*/
+improve-the-{system,template,...}/reform*, case-insensitive, hits read in context):
+
+- **Positive control (rev6):** 16 hits — the known rebuild subplot recovered exactly
+  (recalibration ×8, rebuild/rebuilt ×3, representative sample ×3).
+- **Seed 1 (The Keeping): 0 hits.**
+- **Seed 2 (The Red Ink): 1 hit — homograph.** "The crowd shifts and reforms around the board"
+  (bodies re-forming at the results posting; not reform-the-system). Adjudicated non-hit.
+- **Seed 3 (The Hands That Measure): 0 hits.**
+
+Sweep script inline in the session transcript; control fired before the absence was read.
+
+## Addendum (2026-07-13): ergodicity run (first Sonnet-5-default production run)
+
+`112_ergodocity_kids_1783916200` (operator-invoked, default models = claude-sonnet-5 post-
+migration): completed to a final story; **stage 2 omitted the SECTION 0: INVARIANT CONTRACT
+block** (folded the material into SECTION 1 "Step 0" — content at the wrong address), so R13
+threading ran dead and stage 9 could only report "contract not available." The OQ-216 stage-2
+census candidate fired in production; fail-loud guard built + two-sided-witnessed (fires on the
+ergodicity stage_2, passes on all three batch stage_2s). Also the first Sonnet-5 density point:
+4.84/1000 (11 number-words, 0 numerals) on a 2,280-word story — below threshold, above the 4.5
+batch's 0.0–0.78; re-baseline datum, not a baseline. Register note (operator's Web-Claude read):
+the "resonant closer" tic — each unit landing on a summarizing image, often "the way X" — logged
+to OQ-214's calibration set.
