@@ -222,8 +222,12 @@ stakeholder_agent_seats(C, Ns) :-
 %                       untypeable seats beside the agreeing reals. Ruled IN
 %                       SESSION 2026-07-12 as an extension of the option-3
 %                       ruling (same universal-claim principle; NOT part of
-%                       the 2026-07-11 D4 ruling): predicted-zero live,
-%                       kept for case-analysis totality.
+%                       the 2026-07-11 D4 ruling). HEAVILY LIVE, not the
+%                       predicted-zero cell (12/50/~100 across the legs at
+%                       mint — most former plural([T,unknown]) stories carry
+%                       excluded seats; the pre-fix dump authored n_excluded=0
+%                       for plural verdicts, which hid this. Census 2026-07-12,
+%                       audits/2026-07-12_oq217_consensus_tightening/).
 %    - plural(RealTypes) : >=2 DISTINCT real types; `unknown` never appears
 %                       in the list.
 %

@@ -28,9 +28,13 @@ Controls:
   - zero-seat counts vs the OQ-202 mint strata 26/466/212 (drift = finding,
     not failure; reported, never asserted).
 
-KILL CONDITION (D4): nonzero cell-(b) population on a LIVE leg makes the
-consensus_provenance tightening (require >=2 real-typed seats for unanimity)
-an OBLIGATORY follow-up commit.
+KILL CONDITION (D4) — FIRED 2026-07-12 (cell (b) live = 4) and RESOLVED by the
+OQ-217 tightening (commit 871e69ac): consensus verdicts now compute over
+is_real_type/1 seats only, so the divergence cells (a)/(b)/mixed are RETIRED.
+Post-OQ-217 this script asserts their populations are ZERO — the detectors
+stay live as regression tripwires (deleting them would be Build Discipline
+Pattern 5: a gate satisfied by absence of its input). New coherent cells:
+insufficient_real_seats, coherent_unanimous_untypeable.
 
 Spectrum machinery is IMPORTED from oq195_h1_spectrum_check (Lemma-1 brute
 force + T-bound), never forked; T is derived from code exactly as that script
@@ -87,23 +91,40 @@ dump_list(S, [C|T]) :-
     ( T == [] -> true ; format(S, ",", []) ),
     dump_list(S, T).
 
+% n_excluded is MEASURED for every record by direct fact query, independent
+% of the verdict shape (pre-OQ-217 dumps authored 0 for non-mcc verdicts — an
+% authored-zero that under-determined the movement prediction, witnessed
+% 2026-07-12 in movement_diff v1; Build Discipline Pattern 5).
 dump_one(S, C) :-
     stakeholder_seats:stakeholder_obstruction(C, H0, H1, NS, NR),
     stakeholder_seats:consensus_provenance(C, V),
-    verdict_fields(V, VName, HasUnknown, NExcl),
+    findall(X, narrative_ontology:constraint_stakeholder(C, X, excluded, _, _, _, _), Excl),
+    length(Excl, NExcl),
+    verdict_fields(V, VName, HasUnknown),
     format(S, '~n  {"id": "~w", "h0": ~w, "h1": ~w, "n_seats": ~w, "n_real": ~w, "verdict": "~w", "plural_has_unknown": ~w, "n_excluded": ~w}',
            [C, H0, H1, NS, NR, VName, HasUnknown, NExcl]).
 
-verdict_fields(no_agent_seats,               no_agent_seats,               null, 0).
-verdict_fields(seats_untyped,                seats_untyped,                null, 0).
-verdict_fields(unanimous_no_excluded_seats,  unanimous_no_excluded_seats,  null, 0).
-verdict_fields(manufactured_consensus_candidate(Excl),
-               manufactured_consensus_candidate, null, N) :- length(Excl, N).
-verdict_fields(plural(Us), plural, HU, 0) :-
+verdict_fields(no_agent_seats,               no_agent_seats,               null).
+verdict_fields(seats_untyped,                seats_untyped,                null).
+verdict_fields(insufficient_real_seats,      insufficient_real_seats,      null).
+verdict_fields(unanimous_no_excluded_seats,  unanimous_no_excluded_seats,  null).
+verdict_fields(unanimous_with_untypeable_seats,
+               unanimous_with_untypeable_seats, null).
+verdict_fields(manufactured_consensus_candidate(_),
+               manufactured_consensus_candidate, null).
+verdict_fields(manufactured_consensus_candidate_untypeable(_),
+               manufactured_consensus_candidate_untypeable, null).
+% plural_has_unknown is a RETIRED-cell tripwire post-OQ-217: the unknown token
+% can no longer appear in a plural term, so true here = regression.
+verdict_fields(plural(Us), plural, HU) :-
     ( memberchk(unknown, Us) -> HU = true ; HU = false ).
 '''
 
-UNANIMOUS = {'unanimous_no_excluded_seats', 'manufactured_consensus_candidate'}
+UNANIMOUS_ALL_REAL = {'unanimous_no_excluded_seats', 'manufactured_consensus_candidate'}
+UNANIMOUS_UNTYPEABLE = {'unanimous_with_untypeable_seats',
+                        'manufactured_consensus_candidate_untypeable'}
+# Cells retired by OQ-217 — populations MUST be 0; the detectors stay live.
+RETIRED_CELLS = ('cell_a_single_real', 'cell_b_all_unknown', 'mixed_plural_unknown')
 
 
 def derive_T():
@@ -138,26 +159,34 @@ def dump_all(outdir):
 
 
 def classify_cell(rec):
-    """The D4 coherence cell of one record (mirrors the plunit case table)."""
+    """The coherence cell of one record (mirrors the plunit case table,
+    post-OQ-217 EXACT biconditional). The retired divergence cells
+    (cell_a/cell_b/mixed) are still DETECTED — they are regression
+    tripwires asserted to zero in main(), never deleted branches."""
     v, h1, nr, ns = rec['verdict'], rec['h1'], rec['n_real'], rec['n_seats']
     if v == 'no_agent_seats':
         return 'no_agent_seats' if (ns == 0 and h1 is None) else 'INCOHERENT'
     if v == 'seats_untyped':
         return 'seats_untyped' if (ns >= 1 and nr == 0 and h1 is None) else 'INCOHERENT'
-    if v in UNANIMOUS:
-        if nr >= 2:
+    if v == 'insufficient_real_seats':
+        return 'insufficient_real_seats' if (ns >= 1 and nr < 2 and h1 is None) \
+            else 'INCOHERENT'
+    if v in UNANIMOUS_ALL_REAL:
+        if nr >= 2 and nr == ns:
             return 'coherent_unanimous' if h1 == 0 else 'INCOHERENT'
         if nr == 1:
-            return 'cell_a_single_real' if h1 is None else 'INCOHERENT'
-        return 'cell_b_all_unknown' if h1 is None else 'INCOHERENT'
+            return 'cell_a_single_real'      # RETIRED (OQ-217) — must be 0
+        if nr == 0:
+            return 'cell_b_all_unknown'      # RETIRED (OQ-217) — must be 0
+        return 'INCOHERENT'                  # nr>=2,nr<ns owed the _untypeable token
+    if v in UNANIMOUS_UNTYPEABLE:
+        return 'coherent_unanimous_untypeable' \
+            if (nr >= 2 and nr < ns and h1 == 0) else 'INCOHERENT'
     if v == 'plural':
-        if not rec['plural_has_unknown']:
-            return 'coherent_plural' if (isinstance(h1, int) and h1 > 0) else 'INCOHERENT'
-        # mixed plural([T, unknown]): H1 follows the real seats only
-        if nr >= 2:
-            return 'mixed_plural_unknown' if h1 == 0 else ('coherent_plural'
-                    if isinstance(h1, int) and h1 > 0 else 'INCOHERENT')
-        return 'mixed_plural_unknown' if h1 is None else 'INCOHERENT'
+        if rec['plural_has_unknown']:
+            return 'mixed_plural_unknown'    # RETIRED (OQ-217) — must be 0
+        return 'coherent_plural' if (nr >= 2 and isinstance(h1, int) and h1 > 0) \
+            else 'INCOHERENT'
     return 'INCOHERENT'
 
 
@@ -166,8 +195,11 @@ def assess(records, T):
     n = len(records)
     out = {'n_corpus': n, 'violations': {'spectrum': [], 'null_rule': [], 'incoherent': []},
            'table_exhausted': []}
+    # (key rename at OQ-217: 'all_unknown_cell_b' -> 'all_unknown_derived' —
+    # the stratum now arrives via insufficient_real_seats, not a unanimity
+    # wrong-verdict; nr, not the verdict, is the discriminator.)
     strata = {'no_agent_seats': 0, 'seats_untyped': 0, 'single_real_seat': 0,
-              'all_unknown_cell_b': 0}
+              'all_unknown_derived': 0}
     h1_by_nreal = {}
     cells = {}
     for r in records:
@@ -183,9 +215,8 @@ def assess(records, T):
                 strata['seats_untyped'] += 1
             elif nr == 1:
                 strata['single_real_seat'] += 1
-            elif r['verdict'] in UNANIMOUS and nr == 0:
-                strata['all_unknown_cell_b'] += 1
-            # (plural-with-unknown at nr<2 lands in the cell table below)
+            elif nr == 0:
+                strata['all_unknown_derived'] += 1
         else:
             if nr > 12:
                 out['table_exhausted'].append(r['id'])   # extension signal, not a law violation
@@ -292,13 +323,22 @@ def main():
     census['controls']['zero_seat_vs_oq202_mint'] = drift
     print(f"[report] zero-seat vs OQ-202 mint strata (drift = finding, not failure): {drift}")
 
-    # --- kill condition (D4) --------------------------------------------------
-    live_cell_b = {leg: census['legs'][leg]['mcc_coherence_cells'].get('cell_b_all_unknown', 0)
-                   for leg in LIVE_LEGS}
-    kill = sum(live_cell_b.values()) > 0
-    census['kill_condition'] = {'cell_b_live_counts': live_cell_b, 'triggered': kill}
-    print(f"\n[kill-condition] cell (b) live population: {live_cell_b} -> "
-          f"{'TRIGGERED: consensus_provenance tightening is now an OBLIGATORY follow-up' if kill else 'not triggered'}")
+    # --- retired-cell regression gate (OQ-217; successor of the D4 kill
+    # condition, which FIRED 2026-07-12 and was resolved by the tightening).
+    # The detectors above stay live; any nonzero population here is a
+    # regression of the tightening itself and FAILS the census.
+    retired = {leg: {c: census['legs'][leg]['mcc_coherence_cells'].get(c, 0)
+                     for c in RETIRED_CELLS}
+               for leg in LEGS}
+    hot = {leg: cells for leg, cells in retired.items()
+           if any(v > 0 for v in cells.values())}
+    census['retired_cells_gate'] = {
+        'counts': retired, 'pass': not hot,
+        'provenance': 'D4 kill condition fired 2026-07-12; OQ-217 tightening'}
+    print(f"\n[retired-cells gate] (a)/(b)/mixed populations (must all be 0): "
+          f"{'PASS' if not hot else 'FAIL ' + str(hot)}")
+    if hot:
+        failures.append(f'retired_cells_nonzero: {hot}')
 
     census['verdict'] = 'PASS' if not failures else f'FAIL: {failures}'
     out = os.path.join(args.outdir, 'census.json')

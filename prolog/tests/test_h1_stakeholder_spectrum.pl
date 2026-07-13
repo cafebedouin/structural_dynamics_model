@@ -303,10 +303,11 @@ test(mcc_still_fires_all_real,
     H0 == 1, H1 == 0, NS == 2, NR == 2,
     coherence_case(manufactured_consensus_candidate([ghost]), H0, H1, NS, NR).
 
-% ---- 7f. mcc_untypeable reachability (ruled in session 2026-07-12) ----------
-% Predicted-zero live population; the token exists for case-analysis totality
-% and this fixture proves the cell is REACHABLE (a token no input can produce
-% would be a phantom row in the coherence table).
+% ---- 7f. mcc_untypeable pinned (ruled in session 2026-07-12) ----------------
+% Initially predicted zero-live from the OQ-207 artifacts — FALSIFIED at the
+% first post-tightening census (heavily live: most former plural([T,unknown])
+% stories carry excluded seats; the old dump authored n_excluded=0 for plural
+% verdicts, hiding this). This fixture pins the cell's minimal witness.
 test(mcc_untypeable_reachable,
      [ setup(( fixture_metrics(tsh_mccu),
                fixture_real_seat(tsh_mccu, boss),
