@@ -14,7 +14,8 @@
     has_metric_perspectival_variance/1,
     signature_grade/2,              % OQ-98: correction | commentary
     signature_severity/2,           % OQ-98: correction-grade -> moderate
-    level_gradient_divergence/2     % OQ-93 Stage D: the level-gradient crossing
+    level_gradient_divergence/2,    % OQ-93 Stage D: the level-gradient crossing
+    residual_signature_firing/1     % OQ-138 (2026-07-14): residual-clause fire monitor
 ]).
 
 :- use_module(library(lists)).
@@ -766,10 +767,10 @@ explain_signature(C, coupling_invariant_rope, Explanation) :-
     (   coupling_invariant_rope(C, ci_rope_evidence(Compliance, ScopeResult,
                                                      ExcessEps, _))
     ->  format(atom(Explanation),
-               'COUPLING-INVARIANT ROPE signature for ~w: Certified true coordination mechanism. Boltzmann compliance=~w, scope invariance=~w, excess extraction=~3f. Passes all structural purity tests — this is genuine coordination, not low-extraction construction.',
+               'COUPLING-INVARIANT ROPE signature for ~w: coupling-clean coordination (snapshot). Boltzmann compliance=~w, scope invariance=~w, excess extraction=~3f. Passes the coupling/scope-invariance tests (NOT an excess-extraction or drift gate) — reads as genuine coordination rather than coordination-washed construction; check lifecycle drift and excess extraction for trajectory.',
                [C, Compliance, ScopeResult, ExcessEps])
     ;   format(atom(Explanation),
-               'COUPLING-INVARIANT ROPE signature for ~w: Certified true coordination mechanism. Use coupling_invariant_rope/2 for detailed evidence.',
+               'COUPLING-INVARIANT ROPE signature for ~w: coupling-clean coordination (snapshot; coupling/scope tests only, not excess/drift). Use coupling_invariant_rope/2 for detailed evidence.',
                [C])
     ).
 
@@ -950,7 +951,8 @@ resolve_modal_signature_conflict(ModalType, false_ci_rope, Result) :-
     ).
 
 % Coordination scaffolds should be ROPES not mountains
-resolve_modal_signature_conflict(mountain, coordination_scaffold, Result) :- !, Result = rope.
+% OQ-138 (2026-07-14): RESIDUAL — routes to abstain via residual_route/2 (was `rope`).
+resolve_modal_signature_conflict(mountain, coordination_scaffold, Result) :- !, residual_route(rope, Result).
 
 % False Summit Mountain — OQ-138 (2026-06-21): CONVERTED from RECLASSIFY to ROUTE/COMMENT.
 % FSM no longer overwrites dr_type; it reverts to the metric type (mountain — the
@@ -975,13 +977,17 @@ resolve_modal_signature_conflict(mountain, false_summit_mountain, Result) :-
 resolve_modal_signature_conflict(unknown, false_summit_mountain, Result) :- !, Result = unknown.
 
 % Constructed constraints override mountain classification
-resolve_modal_signature_conflict(mountain, constructed_low_extraction, Result) :- !, Result = rope.
-resolve_modal_signature_conflict(mountain, constructed_high_extraction, Result) :- !, Result = tangled_rope.
-resolve_modal_signature_conflict(mountain, constructed_constraint, Result) :- !, Result = tangled_rope.
+% OQ-138 (2026-07-14): RESIDUAL (mountain-input) — route to abstain via residual_route/2. The
+% unknown-input constructed_high clause below is a SEPARATE, already-converted case (constructed-3).
+resolve_modal_signature_conflict(mountain, constructed_low_extraction, Result) :- !, residual_route(rope, Result).
+resolve_modal_signature_conflict(mountain, constructed_high_extraction, Result) :- !, residual_route(tangled_rope, Result).
+resolve_modal_signature_conflict(mountain, constructed_constraint, Result) :- !, residual_route(tangled_rope, Result).
 
 % When metrics fail (unknown), signature provides extraction-aware classification
-resolve_modal_signature_conflict(unknown, coordination_scaffold, Result) :- !, Result = rope.
-resolve_modal_signature_conflict(unknown, constructed_low_extraction, Result) :- !, Result = rope.
+% OQ-138 (2026-07-14): RESIDUAL (unknown-input stragglers) — route to abstain via residual_route/2
+% (was `rope`), completing the OQ-37 honest-unknown arc these two clauses had escaped.
+resolve_modal_signature_conflict(unknown, coordination_scaffold, Result) :- !, residual_route(rope, Result).
+resolve_modal_signature_conflict(unknown, constructed_low_extraction, Result) :- !, residual_route(rope, Result).
 % OQ-138 (2026-06-21): constructed_high_extraction unknown-input CONVERTED RECLASSIFY→ROUTE.
 % Was `snare` (manufactured a type from unknown metrics, against which type_1_false_summit then
 % fired severe on a mountain-claim). Now routes to the honest abstain (unknown); the diagnostic
@@ -990,13 +996,48 @@ resolve_modal_signature_conflict(unknown, constructed_low_extraction, Result) :-
 % Seat-aware via constructed_routed/1. Mountain-input constructed + constructed_low/constraint are
 % NOT converted here (0 live changers — separate sub-item). Restore by reverting to `snare`.
 resolve_modal_signature_conflict(unknown, constructed_high_extraction, Result) :- !, Result = unknown.
-resolve_modal_signature_conflict(unknown, constructed_constraint, Result) :- !, Result = tangled_rope.
+% OQ-138 (2026-07-14): RESIDUAL — route to abstain via residual_route/2 (was `tangled_rope`).
+resolve_modal_signature_conflict(unknown, constructed_constraint, Result) :- !, residual_route(tangled_rope, Result).
 % superseded by OQ-90 FCR refinement; unreachable from profile path (dispatch retired 2026-06-11).
 resolve_modal_signature_conflict(unknown, piton_signature, Result) :- !, Result = piton.
 resolve_modal_signature_conflict(unknown, ambiguous, Result) :- !, Result = unknown.
 
 % No conflict - keep original classification
 resolve_modal_signature_conflict(ModalType, _, ModalType).
+
+%% residual_route(+LegacyTarget, -Result)  — OQ-138 (2026-07-14)
+%  The seven RESIDUAL overwrite clauses route through this. Default (lever 0): abstain to `unknown`
+%  — the honest "a residual signature matched, the engine declines to manufacture a type." Legacy
+%  (lever 1): the historical overwrite target (ablation). The abstain target is `unknown`, NEVER
+%  `untyped`: is_real_type/1 tests `\== unknown`, so `unknown` is filtered out of the H¹ real-seat
+%  set (an abstained seat is not a real typed seat) while `untyped` would count as a real disagreeing
+%  type and silently INFLATE H¹ (the exact pathology OQ-138 exists to kill). See the footgun control
+%  in tests/test_residual_signature_guard.pl.
+residual_route(Legacy, Result) :-
+    (   config:param(residual_signature_override_enabled, 1)
+    ->  Result = Legacy
+    ;   Result = unknown
+    ).
+
+%% residual_signature_firing(+C)  — OQ-138 (2026-07-14) MONITOR
+%  A seat where one of the seven residual (metric-type, signature) patterns is met — i.e. a residual
+%  clause fires. Under the guard the fire routes to `unknown` (no manufacture); this predicate is the
+%  MONITORED surface (a run_pipeline gate RED on count>0 auto-reopens the successor OQ). Detects a
+%  fire regardless of the guard's output token, so it also catches the unknown-input no-op cases.
+%  Corpus-inert on all four legs at build time (0 fires) — a nonzero count is the reopen witness.
+residual_signature_firing(C) :-
+    constraint_indexing:default_context(Ctx),
+    constraint_signature(C, Sig),
+    drl_core:metric_based_type_indexed(C, Ctx, MT),
+    residual_signature_pattern(MT, Sig).
+
+residual_signature_pattern(mountain, coordination_scaffold).
+residual_signature_pattern(mountain, constructed_low_extraction).
+residual_signature_pattern(mountain, constructed_high_extraction).
+residual_signature_pattern(mountain, constructed_constraint).
+residual_signature_pattern(unknown,  coordination_scaffold).
+residual_signature_pattern(unknown,  constructed_low_extraction).
+residual_signature_pattern(unknown,  constructed_constraint).
 
 /* ================================================================
    BOLTZMANN-DERIVED SIGNATURES v5.1
