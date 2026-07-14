@@ -65,6 +65,15 @@ each entry per instance (KEEP requires naming the in-scene action by a
 character with positional access); you may not waive the list wholesale
 and you may not claim a numeric item is absent.
 
+A THEME INVENTORY is injected the same way: the deterministic extraction
+of every theme-naming / explanation-over-run candidate (anaphora, causal
+chains, refrains, aphorisms, resonant closers, word-arithmetic). It is
+the ground truth for theme-naming: adjudicate each entry per instance
+(KEEP only where the repetition/aphorism is an EARNED device); you may
+not waive it wholesale and you may not claim a theme-naming item is
+absent. It is high-recall — false positives are expected and resolved by
+your adjudication, not by a verdict from the meter.
+
 ---
 
 ### Output Format

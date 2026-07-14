@@ -359,6 +359,32 @@ proxy for numeric register, narrower than the defect (unearned counting) — a
 gauge-owning POV can read high and be earned (the rift3 false-positive class),
 and an invariant can die on a story the meter scores 0.0.
 
+**Post-stage-8 theme-density gate (OQ-214, 2026-07-13):** the analogue of the
+numeric meter for theme-naming / explanation over-run. `_theme_inventory`
+deterministically extracts every candidate in six kinds — **density-bearing:**
+`anaphora` (consecutive sentence-initial repetition) and `causal_chain`
+(repeated because/therefore formulas); **adjudication-only:** `refrain`,
+`aphorism`, `resonant_closer`, `word_arithmetic` — injects the complete list
+into stages 7/8 for per-instance adjudication, writes
+`theme_inventory_stage_8.json`, and above `THEME_DENSITY_THRESHOLD` (8.0/1000
+words, **density-bearing kinds ONLY**) issues one targeted revision call over
+the flagged density-bearing lines, then flags OPEN.
+
+**INVARIANT — this gate MUST NOT auto-reject; it escalates OPEN only.** Why theme
+differs from counting: a digit does not correlate with merit, so the counting
+gate can arm; theme-repetition DOES — the same surface is lazy theme-naming AND
+earned craft (rift3's institutional creed, the empty-pan's refused ledger-math).
+So only the two low-merit-correlation kinds move the gate, and even they escalate
+to the operator rather than rejecting. **Kill condition:** promoting any
+merit-correlated kind (refrain/aphorism/closer/word_arithmetic) to the density
+gate "for determinism" turns the meter into a craft-suppressor — revert.
+**Calibration finding (2026-07-13, `audits/2026-07-13_oq214_theme_meter/`):** the
+density-bearing kinds do NOT separate the OQ-218 defect from its v0.2 fix (the
+fix lived in refrain/aphorism, which cannot gate); the threshold is PROVISIONAL,
+set above every observed earned-dense story (rift3 5.12, run3-improved 7.21) and
+reopens at the first earned-dense encounter above 8.0. The real value is the
+injected candidate list under adjudication, not the deliberately narrow auto-gate.
+
 ---
 
 ## Stage 9: Review

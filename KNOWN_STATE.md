@@ -45,6 +45,38 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-13 — OQ-214 Phase A LANDED: `_theme_inventory` theme-naming meter (mitigated; Phase B spend-gated)
+**Files:** agent/uke_narrative_orchestrator.py, agent/narrative_transform/stage7.md, agent/narrative_transform/stage8.md, agent/narrative_transform/stage10.md, agent/uke_narrative_architecture_v0_3.md, python/tests/test_theme_inventory.py, audits/2026-07-13_oq214_theme_meter/, ISSUES.md
+**Tier:** landed
+
+`_theme_inventory(text)` built on the `_numeric_inventory` (OQ-215) template — the last waivable
+absence-claim in the editorial audit layer (theme-naming) gets a deterministic backstop. Six kinds
+split by the **bucket rule** (density-bearing ⟺ flagging it in rift3.md is NOT a false positive):
+**density-bearing** = `anaphora` (≥2 consecutive sentences sharing a ≥3-word initial phrase),
+`causal_chain` (stacked/near because-therefore formulas); **adjudication-only** = `refrain`,
+`aphorism`, `resonant_closer`, `word_arithmetic`. `density_per_1000` uses the two density-bearing
+kinds ONLY; the full list is injected into stages 7/8; the post-stage-8 gate escalates OPEN, **never
+auto-rejects** (protected INVARIANT + kill condition written verbatim in-source; refrain-doesn't-gate
+locked by `python/tests/test_theme_inventory.py`).
+
+**Calibration finding (contradicts the naive expectation — see WRITEUP.md):** the density-bearing
+kinds do NOT separate the OQ-218 defect from its v0.2 fix. Runs 1&2 SEED vs IMPROVED have IDENTICAL
+anaphora/causal counts (18/10, 14/5) — the improvement lived entirely in the merit-correlated
+refrain/aphorism, which cannot gate. Earned-dense rift3 = 5.12 outscores two of three SEED defects
+(3.64, 3.31). So `THEME_DENSITY_THRESHOLD = 8.0` is PROVISIONAL, set above every observed
+earned/good dense story (rift3 5.12, run3-improved 7.21); only run3 SEED (9.10) trips it. The value
+is the injected candidate list under adjudication, not the deliberately narrow auto-gate.
+
+**Tripwire (promotion candidate → judged history):** a future optimizer must NOT arm the theme gate
+on refrain/aphorism/closer/word_arithmetic "for determinism" — that turns the meter into a
+craft-suppressor (the hard-ban failure in a third costume). This is enforced in-substrate three ways
+(in-source invariant comment, `THEME_CAVEAT` rendered at every read site, the regression test), so it
+is a LOUD failure, not a silent one → stays history, not promoted to CLAUDE.md.
+
+**Graduation to resolved (Phase B, SPEND-GATED):** one full narrative run passing the structural
+gates on the new instrument; a generation-pipeline change is an ENGINE change (CLAUDE.md), OPEN until
+witnessed live. Requires operator spend-go AND the cold human read first.
+
 ## 2026-07-13 — OQ-219 RESOLVED: Stage-2 dominance clause implemented + validated (routing outcome a); no v0.3
 **Files:** ISSUES.md, agent/narrative_transform/stage0.md, agent/uke_narrative_orchestrator.py, python/tests/test_stage2_dominance_gate.py, agent/uke_story_v0.2.md, audits/2026-07-13_oq219_missing_floor/READOUT_dominance_clause.md, audits/2026-07-13_oq219_missing_floor/READOUT_datum_stone.md
 **Tier:** landed

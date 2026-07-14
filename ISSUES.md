@@ -9683,7 +9683,25 @@ reported defect was the wording.)
 
 **Ω-type:** Ω_E (mechanical: a missing instrument, with a working template to copy).
 
-**Status:** open — minted 2026-07-11; **PROMOTED 2026-07-13 (operator adjudication of the OQ-218
+**Status:** mitigated — **Phase A LANDED 2026-07-13** (offline, free; the correctness bulk).
+`_theme_inventory` built on the `_numeric_inventory` template (six kinds; density-bearing =
+anaphora + causal_chain ONLY, adjudication-only = refrain/aphorism/resonant_closer/word_arithmetic),
+injected into stages 7/8, post-stage-8 gate escalates OPEN (never auto-rejects), the protected
+invariant + kill condition written verbatim in-source. Calibration + controls PASS
+(`audits/2026-07-13_oq214_theme_meter/`: WRITEUP.md, calibrate_theme_meter.py, theme_density_table.txt);
+permanent regression test `python/tests/test_theme_inventory.py` locks the bucket invariant (refrain
+never moves density). **Calibration FINDING (contradicts the naive expectation):** the
+density-bearing kinds do NOT separate the OQ-218 defect from its v0.2 fix — runs 1&2 have IDENTICAL
+anaphora/causal counts across the improvement (the fix lived in the merit-correlated refrain/aphorism,
+which cannot gate), and earned-dense rift3 (5.12) outscores two of three SEED defects. So
+`THEME_DENSITY_THRESHOLD = 8.0` is PROVISIONAL, set above every observed earned-dense story (rift3
+5.12, run3-improved 7.21), reopens at first earned-dense encounter; the real value is the injected
+candidate list under adjudication, not the narrow auto-gate. **GRADUATION to resolved (Phase B,
+SPEND-GATED):** one full narrative run passing the structural gates on the new instrument (injected
+list appears in stage-7/8 prompts, gate fires/escalates correctly, a v0.2 story survives with theme
+density in the improved band) — a generation-pipeline change is an ENGINE change (CLAUDE.md), OPEN
+until witnessed on a real run. Requires operator spend-go AND the cold human read first.
+_Promotion context (retained):_ **PROMOTED 2026-07-13 (operator adjudication of the OQ-218
 Stage-2 batch): explanation over-run witnessed 3/3 on fresh seeds — the pipeline's residual
 defect class with counting dead. A calibration corpus now exists:** positives = the flagged
 instances in the three Stage-2 seeds (run-1 F39 leakage + refrain ×4 + philosophy-seminar

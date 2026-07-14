@@ -160,6 +160,18 @@ back empty. A non-empty hit list means the fracture is PRESENT regardless
 of characterization. "None detected" with no pasted scan is not a valid
 entry — it reads as "did not look."
 
+Two of these absence claims — "no counting tics" and "no theme-naming" —
+are NOT self-scans upstream: the orchestrator computes a deterministic
+NUMERIC INVENTORY and THEME INVENTORY over the story at stages 7-8 (the
+theme inventory covers anaphora, causal chains, refrains, aphorisms,
+resonant closers, and word-arithmetic). Your absence claim must be
+consistent with what a mechanical extraction of the SAME story would
+find; you cannot certify "clean" on a story whose text still carries the
+repetition/aphorism surface. When you flag the surface as present but
+EARNED (rift3-class institutional refrain, a narrator's own math acted on
+in-scene), say so and name the earning — the meter never auto-rejects, it
+forces exactly this adjudication.
+
 ---
 
 ### Output Format

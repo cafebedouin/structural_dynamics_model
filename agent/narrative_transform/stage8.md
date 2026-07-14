@@ -50,12 +50,21 @@ that quantity; everything else is revised out. You may not waive the
 inventory wholesale, and a manifest that claims "Counting tics: none
 found" over a non-empty inventory is invalid by construction.
 
-THEME-NAMING uses a mechanical proxy, then forced adjudication: list
-every line that parses as a standalone aphorism (reads as a general
-claim about life/systems/power with no world-specific nouns). Paste the
-top candidates and adjudicate each one individually — KEEP or CUT with
-one sentence of reasoning. "Scan: clean" without pasted candidates is
-not a valid output.
+THEME-NAMING runs off the injected THEME INVENTORY, not your own
+reading. The orchestrator has deterministically extracted every
+theme-naming / explanation-over-run candidate — anaphora (consecutive
+sentence-initial repetition), causal chains (repeated because/therefore
+formulas), refrains, aphorisms, resonant closers, and prose
+word-arithmetic — and injected the complete list. Adjudicate EVERY entry
+per instance: KEEP only where the repetition/aphorism/closer is EARNED (a
+load-bearing device the prose uses on purpose — an incantatory voice, a
+narrator's own math acted on in-scene), otherwise revise it out with one
+sentence of reasoning. You may not waive the inventory wholesale, and a
+manifest that claims "Theme-naming: none found" over a non-empty
+inventory is invalid by construction. The list is high-recall by design:
+false positives are EXPECTED and are exactly what your per-instance
+adjudication resolves — the meter never rejects a story, it only forces
+the adjudication.
 
 KNOWLEDGE BOUNDARY VIOLATION: For each passage of character 
 interiority or dialogue — does this character have access to 
@@ -129,9 +138,10 @@ NUMERIC INVENTORY ADJUDICATION:
     REVISED ([what replaced it])
   - [...every inventory entry adjudicated; group identical repeats]
 
-THEME-NAMING CANDIDATES (standalone-aphorism proxy):
-  - "[pasted line]": KEEP/CUT — [one sentence]
-  - [...]
+THEME INVENTORY ADJUDICATION (from the injected THEME INVENTORY):
+  - L[line] [kind] "[token]": KEEP ([the earned device it serves]) or
+    REVISED ([what replaced it])
+  - [...every inventory entry adjudicated; group identical repeats]
 ```
 
 ### Omega Log

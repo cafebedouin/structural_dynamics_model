@@ -1,0 +1,86 @@
+==============================================================================
+OQ-214 THEME METER CALIBRATION — density-bearing kinds only
+(current in-source THEME_DENSITY_THRESHOLD = 8.0)
+==============================================================================
+
+## POSITIVE + NEGATIVE control: SEED (defect) vs IMPROVED (v0.2)
+
+  run1 STORY A = SEED      density=  3.64  [anaph=18 causal=10]  (adj: refr=40 aph=66 clos=59 wmath=0)  words=7682
+  run1 STORY B = IMPROVED  density=  3.84  [anaph=18 causal=10]  (adj: refr=20 aph=59 clos=52 wmath=0)  words=7286
+  run2 STORY A = IMPROVED  density=  3.53  [anaph=14 causal= 5]  (adj: refr=16 aph=28 clos=22 wmath=0)  words=5386
+  run2 STORY B = SEED      density=  3.31  [anaph=14 causal= 5]  (adj: refr=21 aph=31 clos=25 wmath=0)  words=5743
+  run3 STORY A = IMPROVED  density=  7.21  [anaph=30 causal=24]  (adj: refr=15 aph=30 clos=31 wmath=0)  words=7486
+  run3 STORY B = SEED      density=  9.10  [anaph=36 causal=34]  (adj: refr=17 aph=31 clos=32 wmath=0)  words=7695
+
+## NEGATIVE control: standalone IMPROVED v0.2 legs
+
+  the_keeping_v02_pathA.md               density=  3.84  [anaph=18 causal=10]  (adj: refr=20 aph=59 clos=52 wmath=0)  words=7289
+  the_red_ink_v02_pathA.md               density=  3.53  [anaph=14 causal= 5]  (adj: refr=16 aph=28 clos=22 wmath=0)  words=5390
+  the_hands_that_measure_v02_pathA.md    density=  7.21  [anaph=30 causal=24]  (adj: refr=15 aph=30 clos=31 wmath=0)  words=7491
+  the_platform_knows_v02_pathB.md        density=  2.78  [anaph=17 causal= 9]  (adj: refr=49 aph=22 clos=24 wmath=1)  words=9345
+
+## NEGATIVE control: clean human originals (classic literature)
+
+  alice_in_wonderland                density=  1.47  [anaph=17 causal=22]  (adj: refr=13 aph=10 clos=14 wmath=0)  words=26524
+  an_occurance_at_owl_creek_bridge   density=  0.00  [anaph= 0 causal= 0]  (adj: refr=0 aph=8 clos=7 wmath=0)  words=3759
+  eighty_yard_run                    density=  1.08  [anaph= 2 causal= 4]  (adj: refr=4 aph=0 clos=3 wmath=0)  words=5575
+  frankenstein                       density=  0.99  [anaph= 8 causal=66]  (adj: refr=4 aph=84 clos=19 wmath=0)  words=75042
+  lysistrata                         density=  0.17  [anaph= 0 causal= 2]  (adj: refr=24 aph=10 clos=7 wmath=0)  words=12077
+  medea                              density=  0.42  [anaph= 6 causal= 0]  (adj: refr=2 aph=2 clos=2 wmath=0)  words=14287
+  philosophy_four                    density=  0.44  [anaph= 5 causal= 0]  (adj: refr=0 aph=11 clos=9 wmath=0)  words=11255
+  the_old_man_and_the_sea            density=  1.88  [anaph=26 causal=24]  (adj: refr=24 aph=29 clos=31 wmath=0)  words=26646
+  the_velveteen_rabbit               density=  0.51  [anaph= 0 causal= 2]  (adj: refr=4 aph=2 clos=0 wmath=0)  words=3951
+  treasure_island                    density=  0.64  [anaph=24 causal=20]  (adj: refr=28 aph=51 clos=23 wmath=0)  words=68638
+
+## FLAG-NOT-FAIL + EARNED-DENSE control (must flag, must NOT gate)
+
+  rift3 (institutional refrain)          density=  5.12  [anaph= 9 causal= 6]  (adj: refr=10 aph=6 clos=5 wmath=0)  words=2932
+      refrain caught: 'The phrase addressed what was present.' x2
+      refrain caught: 'He logged: *Vent 19, position 4.' x2
+      refrain caught: 'Monitor for progression.*' x2
+      refrain caught: 'He moved to Vent Twenty.' x2
+      refrain caught: 'Sector contamination average: declining to nominal.*' x2
+  the-empty-pan_rev2 (survival math)     density=  3.87  [anaph=20 causal= 4]  (adj: refr=31 aph=23 clos=22 wmath=3)  words=6207
+      refrain caught: 'My helmet lamp flickers.' x2
+      refrain caught: 'This placement sings.' x2
+      refrain caught: 'The formation face looks clean.' x2
+      refrain caught: 'But something is wrong.' x2
+      refrain caught: "The sensor can't find the grain." x2
+      refrain caught: 'The resonance was *clean*.' x2
+      refrain caught: "I don't understand." x2
+      refrain caught: 'The stone was speaking.' x2
+      refrain caught: 'The placement sang.' x3
+      refrain caught: '"So what do we do?"' x2
+      refrain caught: 'She stood and walked to the window.' x2
+      refrain caught: "Always someone who'll cross the line." x2
+      refrain caught: 'And the SSA knows it.' x2
+      refrain caught: 'The standard is the standard.' x2
+      refrain caught: 'All scientifically valid.' x2
+
+  densest clean human original: the_old_man_and_the_sea = 1.88
+
+==============================================================================
+SUMMARY (density-bearing kinds only)
+==============================================================================
+  SEED (defect) densities:     [9.1, 3.64, 3.31]
+    min SEED = 3.31
+  IMPROVED (v0.2) densities:   [7.21, 7.21, 3.84, 3.84, 3.53, 3.53, 2.78]
+    max IMPROVED = 7.21
+    max clean-original = 1.88
+  earned-dense rift3 (institutional refrain): 5.12
+  earned-dense the-empty-pan_rev2 (survival math): 3.87
+
+  gap: IMPROVED ceiling 7.21  <->  SEED floor 3.31
+  => arms OVERLAP on density-bearing kinds — inspect per-story.
+
+==============================================================================
+CONTROLS VERDICT
+==============================================================================
+  [PASS] positive: SEED arms surface density-bearing candidates (max SEED density 9.10)
+  [PASS] negative: clean human originals below threshold (max 1.88 < 8.0)
+  [PASS] flag-not-fail: rift3 (institutional refrain) flagged=True, density 5.12 <= 8.0 = True
+  [PASS] flag-not-fail: the-empty-pan_rev2 (survival math) flagged=True, density 3.87 <= 8.0 = True
+
+  At THEME_DENSITY_THRESHOLD=8.0: 1 of 10 arms gate (escalate OPEN): [9.1]
+
+  OVERALL CONTROLS: PASS

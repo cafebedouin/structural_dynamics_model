@@ -435,6 +435,484 @@ def _format_numeric_inventory(inv: dict, header: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Theme inventory (OQ-214) — mechanical theme-naming / explanation-over-run meter
+#
+# Built on the _numeric_inventory template (part-for-part above). Same
+# structural remedy class (OQ-101): the orchestrator extracts every
+# theme-naming-register candidate deterministically and injects the
+# complete list into stages 7/8; the model may only adjudicate per
+# instance, and can neither waive the list wholesale nor claim a candidate
+# is absent. Replaces the waivable standalone-aphorism model scan
+# (stage8.md:53-58) — the last self-certifiable absence-claim in the
+# editorial audit layer.
+#
+# THE LOAD-BEARING INVARIANT (why theme is NOT counting). A digit is
+# theme-free: `47` means the same in a defect and a masterpiece, so
+# _numeric_inventory's false positives are rare and UNCORRELATED with
+# quality — which is why the counting meter can arm its gate. Theme-naming's
+# extractable surface (sentence-initial repetition, refrains, aphoristic
+# closers) is the SAME surface earned prose uses on purpose (rift3's
+# institutional creed, the empty-pan's refused ledger-math, McCarthy's whole
+# body of work). This meter's false positives are therefore concentrated in
+# exactly the prose you least want to flatten.
+#
+# BUCKET RULE (in-source, do not remove): a kind is density-bearing only if
+# flagging it in agent/narrative_transform/originals/rift3.md would NOT be a
+# false positive. Refrain fails this test (institutional creed = craft);
+# anaphora and causal_chain pass (consecutive sentence-initial triples and
+# repeated because/therefore formulas are rarely load-bearing craft).
+#   density-bearing (move the auto-gate): anaphora, causal_chain
+#   adjudication-only (listed, injected, NEVER density-scored):
+#       refrain, aphorism, resonant_closer, word_arithmetic
+#
+# INVARIANT — the theme-density gate MUST NOT auto-reject; it escalates OPEN
+# only. Rationale (do not remove): the counting meter could gate because
+# digits do not correlate with merit. Theme-repetition does — the same
+# surface is lazy theme-naming AND earned craft. Arming this gate on a
+# merit-correlated kind converts it into a craft-suppressor: the hard-ban
+# failure in a third costume. Any future change that makes theme-density
+# auto-reject reintroduces the exact defect this meter was built under
+# adjudication to avoid.
+# KILL CONDITION: if any merit-correlated kind (refrain, aphorism,
+# resonant_closer, word_arithmetic) is ever promoted to the density gate
+# "for determinism," the meter has become a craft-suppressor — revert. The
+# per-instance adjudication ("earned by positional access / craft, or
+# thesis-restatement?") is the entire safety mechanism; it is what
+# distinguishes LLM-lazy repetition (usually the defect) from earned
+# repetition (real, rarer, never to be flattened).
+# ---------------------------------------------------------------------------
+
+# --- extraction patterns ---------------------------------------------------
+_SENT_SPLIT_RE = re.compile(r'(?<=[.!?])["\')\]]?\s+')
+_WORDS_RE = re.compile(r"[A-Za-z']+")
+# density-bearing: repeated because/therefore-formula connectives (the
+# syllogism / thesis-chain tell). Isolated causality is NOT flagged — only
+# clusters of >=2 within a short window (see _detect_causal_chain).
+_CAUSAL_RE = re.compile(
+    r'\b(?:because|therefore|thus|hence|and so|so that|which meant|'
+    r'which is why|as a result|and because|could not)\b',
+    flags=re.IGNORECASE,
+)
+# adjudication-only: prose word-arithmetic register (the empty-pan hard
+# case). Extends the numeric _MATH_PHRASE_RE register into spelled-out
+# operators; kept separate so numeric-meter behavior is unchanged.
+_WORD_ARITH_RE = re.compile(
+    r'\b[\w%]+\s+(?:minus|plus|divided by)\s+[\w%]+', flags=re.IGNORECASE)
+_THE_WAY_RE = re.compile(r'\bthe way\b', flags=re.IGNORECASE)
+_GENERIC_SUBJECT_RE = re.compile(
+    r'^\W*(?:the|a|an|every|no|all|some|each|any|this|that|these|those|it|'
+    r'they|we|you|one|people|everything|nothing|everyone|no one|nobody|'
+    r'life|power|memory|history|truth|silence)\b',
+    flags=re.IGNORECASE,
+)
+_ABSTRACT_NOUNS = frozenset((
+    "system", "systems", "power", "coordination", "extraction", "meaning",
+    "truth", "freedom", "control", "order", "world", "life", "love", "death",
+    "memory", "history", "structure", "value", "cost", "price", "silence",
+    "justice", "name", "names", "accounting", "keeping", "math", "arithmetic",
+    "pattern", "patterns", "way", "ways", "difference", "faith", "hope",
+    "fear", "loss", "grief", "time", "work", "labor", "care", "nature",
+))
+
+# Density threshold (density-bearing kinds only: anaphora + causal_chain,
+# per 1,000 story words) above which the post-stage-8 theme gate fires.
+# THIS GATE ESCALATES OPEN, NEVER AUTO-REJECTS (see invariant above).
+#
+# Calibration corpus: audits/2026-07-12_oq218_scored_snare/ (the OQ-218
+# Stage-2 before/after batch). The high-density "before" seeds are embedded
+# as STORY A / STORY B inside blind_arm_payload_run{1,2,3}.md, labelled by
+# AB_KEY_run{1,2,3}.md (SEED = defect / high, IMPROVED = v0.2 / low).
+# Earned negatives (must FLAG but must NOT push density over threshold):
+# originals/rift3.md (gauge-owning institutional POV) and
+# stories/the-empty-pan_rev2.md (narrator's own survival math, refused).
+# Calibration script + raw table: audits/2026-07-13_oq214_theme_meter/.
+#
+# THRESHOLD_CALIBRATION_RECORD (offline run 2026-07-13, controls PASS,
+# theme_density_table.txt):
+#   density-bearing (anaphora+causal) per-1000, SEED vs IMPROVED arms:
+#     run1: SEED 3.64 / IMPROVED 3.84   (IDENTICAL anaph=18 causal=10 —
+#           the improvement did not touch the gateable kinds at all)
+#     run2: SEED 3.31 / IMPROVED 3.53   (IDENTICAL anaph=14 causal=5)
+#     run3: SEED 9.10 / IMPROVED 7.21   (only run where they diverge)
+#   negative controls (clean human originals): 0.00-1.88 (well separated)
+#   EARNED-DENSE controls: rift3.md = 5.12, the-empty-pan_rev2 = 3.87.
+#
+# KEY FINDING (contradicts the naive design expectation, escalated to the
+# operator): the density-bearing kinds do NOT separate the OQ-218 defect
+# from its v0.2 fix. The SEED->IMPROVED signal lives almost entirely in the
+# MERIT-CORRELATED kinds we are forbidden to gate on (refrain 40->20,
+# aphorism 66->59 in run1) — anaphora/causal were essentially invariant.
+# And earned-dense rift3 (5.12) outscores two of the three SEED defects.
+# So the meter CANNOT separate earned-dense from lazy-dense on the gateable
+# axis; the threshold is therefore PROVISIONAL, set ABOVE every observed
+# earned/good dense story (rift3 5.12, run3-IMPROVED 7.21) so none of them
+# gate. Only the single most extreme defect (run3 SEED 9.10) trips it, and
+# it merely escalates OPEN. The real value is the full 6-kind candidate list
+# injected for per-instance adjudication — where the defect signal actually
+# lives — NOT this deliberately narrow auto-gate.
+# REOPENS at the first earned-dense encounter above 8.0 (exactly as
+# NUMERIC_DENSITY_THRESHOLD was provisional pending variance): a story that
+# earns density > 8.0 on anaphora/causal is the datum that recalibrates this.
+THEME_DENSITY_THRESHOLD = 8.0  # PROVISIONAL — above all observed earned-dense
+
+# Standing caveat, rendered wherever a theme-density figure is read. The
+# gate meters only the DETECTABLE slice of explanation over-run (anaphora,
+# causal_chain); the merit-correlated majority (refrain, thesis-endings,
+# state-after-show) stays in the adjudication layer and the operator read.
+THEME_CAVEAT = (
+    "Theme density meters only anaphora + causal_chain (the detectable, "
+    "low-merit-correlation slice). refrain/aphorism/resonant_closer/"
+    "word_arithmetic are adjudication-only and never move this number; a "
+    "green density is NOT evidence explanation over-run is absent — the "
+    "meter never auto-rejects, it escalates OPEN for the operator read."
+)
+
+
+def _sentences_with_lines(text: str) -> list[dict]:
+    """Split story text into sentences with a starting-line anchor.
+
+    Paragraphs are blank-line separated; sentences split on terminal
+    punctuation. The last sentence of each paragraph carries
+    is_para_final=True (used by the resonant_closer detector).
+    """
+    lines = text.splitlines()
+    paras: list[list[tuple[int, str]]] = []
+    cur: list[tuple[int, str]] = []
+    for i, line in enumerate(lines, 1):
+        if line.strip():
+            cur.append((i, line))
+        elif cur:
+            paras.append(cur)
+            cur = []
+    if cur:
+        paras.append(cur)
+
+    sents: list[dict] = []
+    for para in paras:
+        chunks: list[str] = []
+        char_line: list[int] = []
+        for ln, lt in para:
+            stripped = lt.strip()
+            if chunks:
+                chunks.append(" ")
+                char_line.append(ln)
+            chunks.append(stripped)
+            char_line.extend([ln] * len(stripped))
+        joined = "".join(chunks)
+        para_sents: list[dict] = []
+        pos = 0
+        for m in _SENT_SPLIT_RE.finditer(joined):
+            sent = joined[pos:m.start() + 1].strip()
+            if sent:
+                anchor = char_line[pos] if pos < len(char_line) else para[0][0]
+                para_sents.append({"line": anchor, "text": sent})
+            pos = m.end()
+        tail = joined[pos:].strip()
+        if tail:
+            anchor = char_line[pos] if pos < len(char_line) else para[0][0]
+            para_sents.append({"line": anchor, "text": tail})
+        if para_sents:
+            para_sents[-1]["is_para_final"] = True
+        sents.extend(para_sents)
+    return sents
+
+
+def _lead_words(sent: str, n: int) -> list[str]:
+    return [w.lower() for w in _WORDS_RE.findall(sent)][:n]
+
+
+def _detect_anaphora(sents: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Density-bearing: runs of >=2 consecutive sentences sharing a
+    sentence-initial phrase of >=3 words ("They do not tell us" x3)."""
+    entries: list[dict] = []
+    groups: list[dict] = []
+    i, n = 0, len(sents)
+    while i < n:
+        shared = _lead_words(sents[i]["text"], 8)
+        run = [i]
+        k = i + 1
+        while k < n:
+            wk = _lead_words(sents[k]["text"], 8)
+            common = 0
+            for a, b in zip(shared, wk):
+                if a == b:
+                    common += 1
+                else:
+                    break
+            if common >= 3:
+                shared = shared[:common]
+                run.append(k)
+                k += 1
+            else:
+                break
+        if len(run) >= 2:
+            phrase = " ".join(shared)
+            for idx in run:
+                entries.append({
+                    "line": sents[idx]["line"], "kind": "anaphora",
+                    "token": phrase, "context": sents[idx]["text"][:160],
+                })
+            groups.append({
+                "kind": "anaphora", "phrase": phrase, "count": len(run),
+                "lines": [sents[idx]["line"] for idx in run],
+            })
+            i = k
+        else:
+            i += 1
+    return entries, groups
+
+
+def _detect_causal_chain(sents: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Density-bearing: the because...and because...therefore syllogism tell.
+    Fires two ways — (a) a single sentence STACKING >=2 causal connectives
+    (the compressed syllogism), or (b) >=2 near-consecutive sentences each
+    carrying a connective (the drawn-out chain). Isolated causality (one
+    connective, no neighbour) is NOT flagged."""
+    per_sent = [_CAUSAL_RE.findall(s["text"]) for s in sents]
+    counts = [len(x) for x in per_sent]
+    entries: list[dict] = []
+    groups: list[dict] = []
+    i, n = 0, len(sents)
+    while i < n:
+        if counts[i] >= 2:  # (a) intra-sentence stack
+            for m in _CAUSAL_RE.finditer(sents[i]["text"]):
+                entries.append({
+                    "line": sents[i]["line"], "kind": "causal_chain",
+                    "token": m.group(0), "context": sents[i]["text"][:160],
+                })
+            groups.append({
+                "kind": "causal_chain", "count": counts[i],
+                "lines": [sents[i]["line"]], "intra_sentence": True,
+            })
+            i += 1
+            continue
+        if counts[i] >= 1:  # (b) cross-sentence cluster, window gap <= 1
+            cluster = [i]
+            k, gap = i + 1, 0
+            while k < n and gap <= 1:
+                if counts[k] >= 1:
+                    cluster.append(k)
+                    gap = 0
+                else:
+                    gap += 1
+                k += 1
+            if len(cluster) >= 2:
+                for idx in cluster:
+                    tok = _CAUSAL_RE.search(sents[idx]["text"]).group(0)
+                    entries.append({
+                        "line": sents[idx]["line"], "kind": "causal_chain",
+                        "token": tok, "context": sents[idx]["text"][:160],
+                    })
+                groups.append({
+                    "kind": "causal_chain", "count": len(cluster),
+                    "lines": [sents[idx]["line"] for idx in cluster],
+                })
+                i = cluster[-1] + 1
+                continue
+        i += 1
+    return entries, groups
+
+
+def _normalize_sentence(s: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9 ]", "", s.lower())).strip()
+
+
+def _detect_refrain(sents: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Adjudication-only: a normalized sentence recurring >=2 times ("The
+    keeping became accounting." x4). Exact detection, but CANNOT distinguish
+    lazy from earned (rift3's institutional creed) — so it forces per-
+    instance adjudication and never moves the density gate."""
+    from collections import defaultdict
+    buckets: dict[str, list[dict]] = defaultdict(list)
+    for s in sents:
+        norm = _normalize_sentence(s["text"])
+        if len(norm.split()) >= 3:
+            buckets[norm].append(s)
+    entries: list[dict] = []
+    groups: list[dict] = []
+    for norm, occ in buckets.items():
+        if len(occ) >= 2:
+            for s in occ:
+                entries.append({
+                    "line": s["line"], "kind": "refrain",
+                    "token": norm[:60], "context": s["text"][:160],
+                })
+            groups.append({
+                "kind": "refrain", "text": occ[0]["text"][:80],
+                "count": len(occ), "lines": [s["line"] for s in occ],
+            })
+    return entries, groups
+
+
+def _detect_aphorism(sents: list[dict]) -> list[dict]:
+    """Adjudication-only: stage8.md's standalone-aphorism proxy made
+    mechanical — generic sentence-initial subject + abstract-noun density +
+    no mid-sentence proper noun / scene deixis. High-recall by design."""
+    entries: list[dict] = []
+    for s in sents:
+        text = s["text"]
+        words = text.split()
+        if not 3 <= len(words) <= 30:
+            continue
+        if not _GENERIC_SUBJECT_RE.match(text):
+            continue
+        mid = [w.strip(".,;:!?\"'()") for w in words[1:]]
+        if any(w and w[0].isupper() and w != "I" for w in mid):
+            continue  # world-specific proper noun ⇒ not a bare generalization
+        toks = {w.lower() for w in _WORDS_RE.findall(text)}
+        if not toks & _ABSTRACT_NOUNS:
+            continue
+        entries.append({
+            "line": s["line"], "kind": "aphorism",
+            "token": text[:60], "context": text[:160],
+        })
+    return entries
+
+
+def _detect_resonant_closer(
+    sents: list[dict], aphorism_lines: set[int]
+) -> list[dict]:
+    """Adjudication-only: paragraph-final sentence landing on a summarizing
+    image, often "the way X" (operator Web-Claude read, 2026-07-13), or an
+    aphorism-shaped closer."""
+    entries: list[dict] = []
+    for s in sents:
+        if not s.get("is_para_final"):
+            continue
+        if _THE_WAY_RE.search(s["text"]) or s["line"] in aphorism_lines:
+            entries.append({
+                "line": s["line"], "kind": "resonant_closer",
+                "token": s["text"][:60], "context": s["text"][:160],
+            })
+    return entries
+
+
+def _detect_word_arithmetic(sents: list[dict]) -> list[dict]:
+    """Adjudication-only: prose arithmetic ("Quota minus rejections equals
+    certified placements"). The empty-pan hard case; always flag-not-fail."""
+    entries: list[dict] = []
+    for s in sents:
+        for m in _WORD_ARITH_RE.finditer(s["text"]):
+            entries.append({
+                "line": s["line"], "kind": "word_arithmetic",
+                "token": m.group(0)[:60], "context": s["text"][:160],
+            })
+    return entries
+
+
+_THEME_KINDS = (
+    "anaphora", "causal_chain",  # density-bearing
+    "refrain", "aphorism", "resonant_closer", "word_arithmetic",  # adjudication
+)
+_THEME_DENSITY_KINDS = ("anaphora", "causal_chain")
+
+
+def _theme_inventory(text: str) -> dict:
+    """Deterministic theme-naming / explanation-over-run extraction. Pure.
+
+    Returns entries (line, kind, token, context), per-kind counts, repetition
+    groupings, word count, and density per 1,000 words computed from the two
+    DENSITY-BEARING kinds only (anaphora + causal_chain). The merit-correlated
+    kinds (refrain, aphorism, resonant_closer, word_arithmetic) are listed for
+    per-instance adjudication and NEVER contribute to density_per_1000 — the
+    bucket invariant, locked by python/tests/test_theme_inventory.py.
+    """
+    sents = _sentences_with_lines(text)
+    anaphora_e, anaphora_g = _detect_anaphora(sents)
+    causal_e, causal_g = _detect_causal_chain(sents)
+    refrain_e, refrain_g = _detect_refrain(sents)
+    aphorism_e = _detect_aphorism(sents)
+    aphorism_lines = {e["line"] for e in aphorism_e}
+    closer_e = _detect_resonant_closer(sents, aphorism_lines)
+    wordarith_e = _detect_word_arithmetic(sents)
+
+    entries = (anaphora_e + causal_e + refrain_e
+               + aphorism_e + closer_e + wordarith_e)
+    entries.sort(key=lambda e: (e["line"], e["kind"]))
+    counts = {k: 0 for k in _THEME_KINDS}
+    for e in entries:
+        counts[e["kind"]] += 1
+    words = _word_count(text)
+    density = 1000.0 * sum(counts[k] for k in _THEME_DENSITY_KINDS) / max(words, 1)
+    return {
+        "word_count": words,
+        "counts": counts,
+        "density_per_1000": round(density, 2),
+        "density_kinds": list(_THEME_DENSITY_KINDS),
+        "threshold": THEME_DENSITY_THRESHOLD,
+        "caveat": THEME_CAVEAT,
+        "groupings": anaphora_g + causal_g + refrain_g,
+        "entries": entries,
+    }
+
+
+def _theme_inventory_density_only(inv: dict) -> dict:
+    """Return a copy of a theme inventory keeping only the density-bearing
+    entries — used to build the FLAGGED block for the one revision call so
+    the model never revises earned refrains/aphorisms out of the story."""
+    dense = [e for e in inv["entries"] if e["kind"] in _THEME_DENSITY_KINDS]
+    return {**inv, "entries": dense,
+            "groupings": [g for g in inv["groupings"]
+                          if g["kind"] in _THEME_DENSITY_KINDS]}
+
+
+def _format_theme_inventory(inv: dict, header: str) -> str:
+    """Render a theme inventory as a prompt block for per-instance
+    adjudication (mirrors _format_numeric_inventory)."""
+    c = inv["counts"]
+    out = [
+        f"=== {header} ===",
+        f"Computed by the orchestrator (deterministic; complete). Story word "
+        f"count: {inv['word_count']:,}. Theme density (density-bearing kinds "
+        f"only): {inv['density_per_1000']:.1f} per 1,000 words.",
+        f"Density-bearing (move the gate): anaphora={c['anaphora']}, "
+        f"causal_chain={c['causal_chain']}.",
+        f"Adjudication-only (listed, NEVER gated): refrain={c['refrain']}, "
+        f"aphorism={c['aphorism']}, resonant_closer={c['resonant_closer']}, "
+        f"word_arithmetic={c['word_arithmetic']}.",
+        f"CAVEAT: {THEME_CAVEAT}",
+        "",
+        "Adjudicate EVERY item below, per instance: KEEP only where the "
+        "repetition/aphorism/closer is EARNED — a load-bearing device the "
+        "prose uses on purpose (an incantatory institutional voice, a "
+        "narrator's own survival math acted on in-scene, a refrain whose "
+        "recurrence is the point). Otherwise revise: cut the thesis-"
+        "restatement, break the syllogism into dramatized consequence, or "
+        "vary the sentence-initial repetition. You may not waive this list "
+        "wholesale, and you may not claim a theme-naming item is absent: "
+        "this list is the ground truth. (High-recall by design — false "
+        "positives are EXPECTED and absorbed by this adjudication; the gate "
+        "never auto-rejects.)",
+        "",
+    ]
+    for g in inv["groupings"]:
+        if g["kind"] == "anaphora":
+            out.append(
+                f"ANAPHORA (lines {g['lines']}, x{g['count']}): "
+                f"'{g['phrase']}...' — consecutive sentence-initial repetition.")
+        elif g["kind"] == "causal_chain":
+            out.append(
+                f"CAUSAL CHAIN (lines {g['lines']}, x{g['count']}): repeated "
+                f"because/therefore formula — the syllogism/thesis-chain tell.")
+        elif g["kind"] == "refrain":
+            out.append(
+                f"REFRAIN (lines {g['lines']}, x{g['count']}): "
+                f"'{g['text']}' — ADJUDICATION-ONLY (earned refrain is craft).")
+    if inv["groupings"]:
+        out.append("")
+    shown = inv["entries"][:_MAX_INVENTORY_LISTING]
+    for e in shown:
+        out.append(f"L{e['line']} [{e['kind']}] {e['token']!r}: {e['context']}")
+    omitted = len(inv["entries"]) - len(shown)
+    if omitted > 0:
+        out.append(
+            f"... {omitted} additional entries omitted from this listing for "
+            f"length; the totals above cover ALL entries, and the omitted "
+            f"ones still require adjudication if unearned.")
+    return "\n".join(out) + "\n"
+
+
+# ---------------------------------------------------------------------------
 # Invariant contract threading (R13/R14)
 #
 # Stage 2 writes SECTION 0: INVARIANT CONTRACT — previously orphaned after
@@ -1075,6 +1553,45 @@ class UKEOrchestrator:
             else:
                 self._flag_numeric_open(inv)
 
+        # OQ-214: theme-density gate, parallel to the numeric one but
+        # gating on anaphora+causal_chain ONLY (the density-bearing kinds).
+        # Escalates OPEN, NEVER auto-rejects (see the invariant at
+        # _theme_inventory). Measured on the (possibly numeric-revised) story.
+        tinv = _theme_inventory(story)
+        self._save_json_sidecar("theme_inventory_stage_8.json", tinv)
+        self._progress(
+            "theme_gate",
+            f"Stage-8 theme density {tinv['density_per_1000']:.1f}/1000 "
+            f"words (threshold {THEME_DENSITY_THRESHOLD}, density-bearing "
+            f"kinds only). {THEME_CAVEAT}")
+        if tinv["density_per_1000"] > THEME_DENSITY_THRESHOLD:
+            self._progress(
+                "theme_gate",
+                f"Theme density {tinv['density_per_1000']:.1f}/1000 words "
+                f"exceeds threshold {THEME_DENSITY_THRESHOLD} — "
+                f"one targeted revision call")
+            revised = self._theme_revision_call(story, tinv, result)
+            if revised:
+                if self.output_dir:
+                    (self.output_dir / "stage_8_output_pretheme.md").write_text(
+                        story, encoding="utf-8")
+                story = revised
+                tinv2 = _theme_inventory(story)
+                self._save_json_sidecar(
+                    "theme_inventory_stage_8_postrevision.json", tinv2)
+                manifest = _rewrite_manifest_word_count(
+                    manifest, _word_count(prev_story) if prev_story else 0,
+                    _word_count(story))
+                if tinv2["density_per_1000"] > THEME_DENSITY_THRESHOLD:
+                    self._flag_theme_open(tinv2)
+                else:
+                    self._progress(
+                        "theme_gate",
+                        f"Revision brought theme density to "
+                        f"{tinv2['density_per_1000']:.1f}/1000 words")
+            else:
+                self._flag_theme_open(tinv)
+
         combined = story.rstrip() + ("\n\n" + manifest if manifest else "\n")
         result.stage_outputs["stage_8"] = combined
         return combined
@@ -1149,6 +1666,88 @@ class UKEOrchestrator:
         self._progress("numeric_gate", msg)
         if self.output_dir:
             (self.output_dir / "NUMERIC_DENSITY_OPEN.md").write_text(
+                msg + "\n", encoding="utf-8")
+
+    def _theme_revision_call(
+        self, story: str, inv: dict, result: PipelineResult
+    ) -> str | None:
+        """One targeted revision pass over the flagged DENSITY-BEARING theme
+        lines (anaphora + causal_chain only). The merit-correlated kinds
+        (refrain, aphorism, closer, word_arithmetic) are deliberately NOT in
+        the revision set — earned refrains must never be revised out. Returns
+        the revised story, or None on failure (caller flags OPEN — never a
+        silent retry loop)."""
+        t0 = time.time()
+        system = (
+            "You are performing a single targeted revision on a finished "
+            "story. The orchestrator's deterministic meter found the story "
+            "over-explaining structurally: consecutive sentence-initial "
+            "repetition (anaphora) and repeated because/therefore formulas "
+            "(causal chains) that restate the theme rather than dramatize "
+            "it.\n\n"
+            "Revise ONLY the flagged lines (and the minimum surrounding "
+            "prose needed for continuity). For each flagged run: keep it "
+            "only if the repetition is an EARNED device the prose uses on "
+            "purpose (an incantatory voice, a deliberate structural echo); "
+            "otherwise vary the sentence openings and break the syllogism "
+            "into shown consequence, so the pressure lands through scene "
+            "rather than restatement.\n\n"
+            "Do NOT touch refrains, aphorisms, or other prose the meter did "
+            "not flag here — those are adjudicated elsewhere. Do not "
+            "summarize, restructure, cut scenes, or edit unflagged prose. "
+            "Output ONLY the complete revised story text — no commentary, no "
+            "manifest, no word counts."
+        )
+        prompt = (
+            f"=== STORY ===\n{story}\n\n"
+            + _format_theme_inventory(
+                _theme_inventory_density_only(inv),
+                "FLAGGED THEME INVENTORY (density-bearing; revise these)")
+            + "\nOutput the complete revised story now."
+        )
+        try:
+            provider_name, model = self.models["stage_8"]
+            provider = self.providers.get(provider_name)
+            if provider is None:
+                raise RuntimeError(f"No provider registered for '{provider_name}'")
+            text, tin, tout = provider.call(
+                prompt=prompt,
+                model=model,
+                system_instruction=system,
+                temperature=0.4,
+                max_tokens=self.MAX_TOKENS.get("stage_8", 16384),
+            )
+            result.steps.append(StepResult(
+                step="theme_revision", status="success", data=None,
+                tokens_in=tin, tokens_out=tout,
+                duration_s=time.time() - t0,
+                model_used=model, provider=provider_name,
+            ))
+            return text.strip() + "\n" if text and text.strip() else None
+        except Exception as e:
+            self._progress("theme_gate", f"Revision call failed: {e}")
+            result.steps.append(StepResult(
+                step="theme_revision", status="error", error=str(e),
+                duration_s=time.time() - t0,
+            ))
+            return None
+
+    def _flag_theme_open(self, inv: dict):
+        """Fail-visible: the theme-density gate could not be satisfied this
+        run. NEVER an auto-reject — the operator adjudicates (invariant)."""
+        msg = (
+            f"THEME DENSITY OPEN: {inv['density_per_1000']:.1f}/1000 words "
+            f"(threshold {THEME_DENSITY_THRESHOLD}, density-bearing kinds "
+            f"anaphora+causal_chain) after the one allowed revision call. "
+            f"This gate escalates, it does not reject — operator adjudication "
+            f"required; see theme_inventory_stage_8*.json for the per-line "
+            f"evidence, and remember the merit-correlated kinds "
+            f"(refrain/aphorism/closer/word_arithmetic) are not in this "
+            f"number by design."
+        )
+        self._progress("theme_gate", msg)
+        if self.output_dir:
+            (self.output_dir / "THEME_DENSITY_OPEN.md").write_text(
                 msg + "\n", encoding="utf-8")
 
     def _append_stage4_craft_directives(self):
@@ -1708,6 +2307,18 @@ class UKEOrchestrator:
                 prompt_parts.append(_format_numeric_inventory(
                     inv,
                     f"NUMERIC INVENTORY of the story you are editing "
+                    f"(computed from {story_key} output)",
+                ))
+                prompt_parts.append("\n")
+                # OQ-214: the same story's deterministic theme-naming /
+                # explanation-over-run inventory, injected for per-instance
+                # adjudication (replaces stage8.md's waivable aphorism scan).
+                tinv = _theme_inventory(story_part)
+                self._save_json_sidecar(
+                    f"theme_inventory_{story_key}.json", tinv)
+                prompt_parts.append(_format_theme_inventory(
+                    tinv,
+                    f"THEME INVENTORY of the story you are editing "
                     f"(computed from {story_key} output)",
                 ))
                 prompt_parts.append("\n")
