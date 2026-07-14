@@ -11,6 +11,13 @@
 
 Each constraint type produces a distinct experiential register. Stage 2 uses these to design settings where characters inhabit constraint experiences without naming them.
 
+> **Six registers, not six types total.** The engine also emits **Naturalized** (high base
+> extraction hidden by power position) and **unknown** (metrics under-determine the type); both are
+> handled upstream in Stage 1 classification. They have no distinct Stage-2 experiential register of
+> their own — a Naturalized constraint is *felt* as whatever its power-scaled χ routes toward (often
+> Rope-like from the beneficiary's seat) — so this guide covers the six inhabitable registers, by
+> design, not by omission.
+
 ### Mountain (■) — Unchangeable Terrain
 
 The experience of routing around what cannot change. Characters accept, adapt, find paths over or around. Not resignation — strategic conservation of energy for what IS changeable. The Mountain is backdrop: characters don't fight it, they navigate relative to it. Tension comes from characters who haven't yet accepted the Mountain, or from discovering a supposed Mountain is actually constructed (False Mountain reveal).
@@ -146,7 +153,7 @@ Constraints don't stay static. Degradation creates urgency (act before the trans
 
 Stage 1 provides symbolic classifications: χ values, type designations, index tuples. These are structural coordinates — they tell you WHERE in constraint-space each character stands.
 
-Stage 2's job is to translate those coordinates into a world where the positions feel inevitable. The question is not "what does χ = 0.84 mean?" but "what setting, occupation, and social structure would make a person feel what χ = 0.84 describes — trapped in a system that takes almost everything?"
+Stage 2's job is to translate those coordinates into a world where the positions feel inevitable. The question is not "what does χ = 0.84 mean?" but "what setting, occupation, and social structure would make a person feel what χ = 0.84 describes — trapped in a system that takes almost everything?" (χ = 0.84 here is **illustrative of a high-χ register**, not a classification threshold — the gate boundaries live in `logic_symbolic.md §IV`.)
 
 The χ value routes toward an experiential register. A high χ routes toward feeling trapped. A moderate χ routes toward feeling conflicted. A low or negative χ routes toward feeling empowered. Stage 2 designs a world where those feelings emerge naturally from material conditions.
 
@@ -174,5 +181,7 @@ The χ value routes toward an experiential register. A high χ routes toward fee
 **END OF NARRATIVE TRANSLATION GUIDE**
 
 Version 1.0
-Extracted from logic_narrative_v4.1.md, routed to Stage 2 only.
+Extracted from logic_narrative_v4.1.md, routed to Stage 2 (Naturalization) only.
+Qualitative guide — carries no numeric thresholds; the gate values live in `logic_symbolic.md §IV`
+(mirrored from `prolog/config.pl`, verified against `drl_core.pl` at `d2f8b829`).
 Compatible with UKE_Narrative v1.4+

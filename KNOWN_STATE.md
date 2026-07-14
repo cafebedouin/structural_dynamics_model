@@ -45,6 +45,52 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-14 — logic_symbolic.md §IV reconciled to the ENGINE + gate-context drift guard (silent-fork + Stage-5-role fork resolved)
+**Files:** agent/narrative_transform/logic_symbolic.md, agent/narrative_transform/logic_narrative_translation.md, agent/uke_narrative_orchestrator.py, python/check_logic_symbolic_drift.py, ISSUES.md
+**Tier:** landed
+
+Reconciled the narrative pipeline's constraint-logic references to `prolog/config.pl` +
+`drl_core.pl:classify_from_metrics/6` (**the engine wins**, not `docs/logic*` — those are stale too;
+see correction-key below). Two forks resolved:
+
+- **Silent fork (Build Discipline Pattern 2).** `logic_symbolic.md §IV` hand-mirrored the gate
+  thresholds and had drifted (Snare `χ>0.70` → real `χ≥0.66 ∧ ε≥0.46 ∧ Supp≥0.60`; Tangled
+  `0.46≤χ≤0.70` → `0.35<χ≤0.90 ∧ ε≥0.30 ∧ Supp≥0.40`; Scaffold `χ≤0.35/theater≤0.40` →
+  `χ≤0.45/theater≤0.70`; Piton fallback rewritten to `χ≤0.45 ∧ ε>0.10 ∧ theater≥0.70`; Naturalized
+  `χ<0.40` → `χ<0.35`; **added** the dead-coordination piton pre-check `ε>0.10 ∧ theater≥0.70`; cascade
+  relabelled the **metric** cascade, pre-signature-override). Anti-fork mechanism:
+  `python/check_logic_symbolic_drift.py` derives its checklist from the `config:param` calls in
+  `classify_from_metrics/6`, reads values from `config.pl`, asserts each on its §IV gate line
+  (value-in-context; catches right-number-wrong-gate). GREEN (15 params) → RED on a wrong-gate swap
+  (scaffold 0.45↔snare 0.66, presence-grep stays green) → GREEN reverted. **NOT wired into a pipeline
+  gate** (operator say-so required). Deferral tracked: **OQ-222** (guard now, load-time injection on a
+  churn reopen trigger). Guard scope stated: structural predicate gates + the hardcoded scaffold
+  theater `TR>0.70` literal are numeric-unguardable by design (RECURSE-IF-REFACTORED note in-file).
+
+- **Stage-5-role fork.** The doc header claimed §IV serves "verification (Stage 5)" and the
+  orchestrator comment `uke_narrative_orchestrator.py:1471` said "stages 0, 1, 5" — both wrong.
+  `STAGE_INPUTS["narrative"]` wires `dr_logic_symbolic` to **stage_0 (classification) + stage_1
+  (formalization) only**; stage_5 is a narrative-critique Discovery pass (`["stage_4",
+  "constraint_reports"]`) with no logic ref. Both corrected. Assembled-prompt probe confirms the
+  corrected §IV reaches the stage-0 prompt in gate-line context.
+
+- **Part B (committer/CS axis):** confirmed absent from the narrative pipeline (observer-axis only);
+  recorded as **OQ-223**, held pending corpus graduation (committer dimension is a standing null vs 319
+  omegas per `commitment_systems_sketch_v5_1.md`; only the has-beneficiaries bit graduated, already fed
+  via `d`). No code.
+
+## 2026-07-14 — [correction-key] docs/logic.md + logic_thresholds.md themselves diverge from code (out of scope; own OQ warranted)
+**Files:** docs/logic.md, docs/logic_thresholds.md
+**Tier:** correction-key
+
+Surfaced while reconciling `logic_symbolic.md` (do NOT reconcile the narrative docs *to* these — the
+engine is the source of truth). The canonical human-readable spec is itself stale vs `config.pl`:
+`logic.md` prose + registry say Naturalized `χ<0.40` (code: `< 0.35`, `tangled_rope_chi_floor`);
+`logic.md` prose says Scaffold `χ≤0.30` / Piton `χ≤0.25` (code: `0.45`, `scaffold_extraction_ceil` /
+`piton_extraction_ceiling`). Flagged as a one-line finding per the plan's Out-of-scope; **not edited
+here** — `docs/logic.md` is a separate canonical surface that should carry its own OQ + `config.pl`
+cross-check before edits. Not yet ticketed.
+
 ## 2026-07-13 — OQ-214 Phase A LANDED: `_theme_inventory` theme-naming meter (mitigated; Phase B spend-gated)
 **Files:** agent/uke_narrative_orchestrator.py, agent/narrative_transform/stage7.md, agent/narrative_transform/stage8.md, agent/narrative_transform/stage10.md, agent/uke_narrative_architecture_v0_3.md, python/tests/test_theme_inventory.py, audits/2026-07-13_oq214_theme_meter/, ISSUES.md
 **Tier:** landed

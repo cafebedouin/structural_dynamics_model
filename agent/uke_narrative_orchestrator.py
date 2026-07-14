@@ -1468,7 +1468,7 @@ class UKEOrchestrator:
 
         # Load DR logic references
         # - self.dr_logic: combined reference (artifact mode, backward compat)
-        # - self.dr_logic_symbolic: formal spec (narrative stages 0, 1, 5)
+        # - self.dr_logic_symbolic: formal spec (narrative stages 0, 1 — see STAGE_INPUTS)
         # - self.dr_logic_narrative: translation guide (narrative stage 2)
         if dr_logic_path is None:
             dr_logic_path = LOGIC_NARRATIVE_PATH

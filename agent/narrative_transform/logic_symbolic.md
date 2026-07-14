@@ -1,8 +1,8 @@
 # Indexed Constraint Logic: Symbolic Reference
 
 **Version:** 5.0 Symbolic Edition
-**Purpose:** Formal system for constraint classification — formalization (Stage 1) and verification (Stage 5)
-**Source:** Deferential Realism full logic (logic.md)
+**Purpose:** Formal system for constraint classification. Consumed by **Stage 0 (per-character classification)** and **Stage 1 (formalization)** of the narrative pipeline — `STAGE_INPUTS["narrative"]` wires `dr_logic_symbolic` to `stage_0` and `stage_1` only (not Stage 5, which is a narrative-critique Discovery pass with no logic reference).
+**Source of truth:** `prolog/config.pl` `param/2` facts, verified against `drl_core.pl:classify_from_metrics/6` (§IV thresholds). Historical extraction from `logic.md`; where the two disagree, **the engine wins**.
 **Scope:** Definitions, predicates, thresholds, error taxonomy, lifecycle. No narrative guidance.
 
 ---
@@ -109,10 +109,22 @@ Where:
 
 ## IV. The Six Constraint Types
 
-**Classification priority in classify_from_metrics/6:**
+**Metric cascade in `classify_from_metrics/6`** (priority order, **pre-signature-override**):
 ```
-Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > Naturalized > unknown
+Mountain > Piton(dead-coordination) > Snare > Scaffold > Rope > Tangled Rope > Piton(fallback) > Naturalized > unknown
 ```
+
+This is the **metric** cascade only. After it runs, `dr_type/3` (`drl_core.pl:441`) applies a
+structural-signature override (`metric_based_type_indexed` → `integrate_signature_with_modal`) that
+**can change the final type**. The classifications below are what the metric cascade yields per
+character; the signature layer is not modelled here (Stages 0/1 reason about these metric types).
+
+> **Provenance.** The numeric bounds and gate structure below mirror `prolog/config.pl` `param/2`
+> facts, verified against `drl_core.pl:classify_from_metrics/6` (clause bodies at `:333–428`) at
+> commit **`d2f8b829`** (`config.pl` / `drl_core.pl` working tree clean for those files). `config.pl`
+> is the source of truth; these values are a hand-mirror. Re-sync on any classification-gate param
+> change — a drift guard (`python/check_logic_symbolic_drift.py`) reads the live values from
+> `config.pl` and asserts each appears on its type's gate line here.
 
 ### Mountain (■) — Unchangeable Terrain
 
@@ -129,6 +141,26 @@ Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > Naturalized > unknow
 **Thresholds:** ε ≤ 0.25 (mountain_extractiveness_max), Supp ≤ 0.05 (mountain_suppression_ceiling)
 
 **Structural gate:** Must pass Boltzmann Independence Test (see §VIII). If classification varies by Power × Scope in non-factorizable way → constructed, not natural.
+
+### Piton (⊟, dead-coordination pre-check) — Vitality Override
+
+Fires **before Snare** when coordination vitality is explicitly declared dead or degrading. A
+constraint whose coordination is dead but which still performs (high theater) is a Piton regardless
+of extraction level.
+
+```
+⊟C[I] ↔ CoordinationDead(C) ∧ ε(C) > 0.10 ∧ TheaterRatio(C) ≥ 0.70
+```
+
+- **Does not check χ or suppression** (v7.0 vitality gate) — dead coordination + theater is a Piton
+  at any extraction level
+- ε > 0.10 floor prevents zero-extraction Mountains from misclassifying here
+- `CoordinationDead(C)` = authored `coordination_vitality(C, dead)` or `(C, degrading)`; absent
+  declaration ⇒ falls through to the normal priority chain below
+
+**Thresholds:** ε > 0.10 (piton_epsilon_floor), TheaterRatio ≥ 0.70 (piton_theater_floor).
+`CoordinationDead` reads an authored vitality flag — a structural gate, no numeric threshold of its
+own (`drl_core.pl:coordination_dead/1`).
 
 ### Rope (⊞) — Coordination Mechanism
 
@@ -148,72 +180,85 @@ Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > Naturalized > unknow
 ### Snare (⊠) — Extraction Trap
 
 ```
-⊠C[I] ↔ χ(C, I.P, I.S) > 0.70
-         ∧ ¬LowBaseExtraction(C)
+⊠C[I] ↔ χ(C, I.P, I.S) ≥ 0.66 ∧ ε(C) ≥ 0.46 ∧ Supp(C) ≥ 0.60
+         ∧ ¬NaturalLawWithoutBeneficiary(C)
+         ∧ SnareImmutability(C, I)
 ```
 
-- High power-scaled extraction (χ > 0.70)
-- Not low base extraction (prevents false Snare from power amplification of low-ε constraint)
-- Typically high suppression (requires force to maintain)
-- No genuine coordination from this index
-- **Most index-sensitive type** — same constraint: Snare (powerless), Tangled (moderate), Rope (institutional)
+- High power-scaled extraction (χ ≥ 0.66)
+- High base extraction (ε ≥ 0.46) — prevents false Snare from power amplification of a low-ε constraint
+- High suppression (Supp ≥ 0.60) — requires force to maintain
+- Not a beneficiary-free natural law (see gloss below)
+- Immutable-to-this-index but changeable to some higher-power context (`SnareImmutability`)
+- **Most index-sensitive type** — same constraint: Snare (powerless), Tangled (moderate), Rope (institutional). `SnareImmutability` encodes exactly this: the gate fires when *this* index sees the constraint as immutable but a higher-power context perceives it as Rope (changeable).
 
-**Threshold:** χ > 0.70 (snare_chi_threshold)
+**Thresholds:** χ ≥ 0.66 (snare_chi_floor), ε ≥ 0.46 (snare_epsilon_floor), Supp ≥ 0.60 (snare_suppression_floor). `SnareImmutability(C, I)` = `drl_core.pl:snare_immutability_check/1` (some standard context perceives Rope).
+
+> **Gloss — `¬NaturalLawWithoutBeneficiary(C)`** (`drl_core.pl:natural_law_without_beneficiary/1`, no numeric threshold): Snare is blocked when the constraint **emerges naturally, requires no active enforcement, AND names no beneficiary** — asymmetric *impact* is not asymmetric *extraction*, so such a constraint stays a Mountain. All three conjuncts must hold for the block to fire.
 
 ### Tangled Rope (⊞⊠) — Hybrid Coordination-Extraction
 
 ```
-⊞⊠C[I] ↔ 0.46 ≤ χ(C, I.P, I.S) ≤ 0.70
-           ∧ Coord(C) = true ∧ Asym(C) = true
+⊞⊠C[I] ↔ 0.35 < χ(C, I.P, I.S) ≤ 0.90 ∧ ε(C) ≥ 0.30 ∧ Supp(C) ≥ 0.40
+           ∧ RequiresActiveEnforcement(C) ∧ Coord(C) = true ∧ Asym(C) = true
+           ∧ ¬NaturalLawWithoutBeneficiary(C)
 ```
 
-- Moderate power-scaled extraction (χ in mid-range)
-- Genuine coordination value AND asymmetric cost distribution
-- **Most common real-world type (~36% of constraints in corpus)**
-- Irreducible hybrid — not confused Rope or disguised Snare
+- Moderate-to-high power-scaled extraction (χ in the (0.35, 0.90] band)
+- **Strict χ floor:** χ = 0.35 belongs to Rope (χ ≤ ceiling); Tangled owns (0.35, 0.90] (OQ-37 Move 1 keeps the partition single-valued at the seam)
+- Genuine coordination value (Coord) AND asymmetric cost distribution (Asym), AND the constraint must be actively enforced (`RequiresActiveEnforcement`) — a non-enforced coordination is Scaffold-like, not Tangled
+- Not a beneficiary-free natural law (same gloss as Snare)
+- **Common real-world type** — irreducible hybrid, not confused Rope or disguised Snare
 
-**Thresholds:** χ ≥ 0.46 (tangled_chi_floor), χ ≤ 0.70 (snare_chi_threshold)
+**Thresholds:** χ > 0.35 (tangled_rope_chi_floor, **strict**), χ ≤ 0.90 (tangled_rope_chi_ceil), ε ≥ 0.30 (tangled_rope_epsilon_floor), Supp ≥ 0.40 (tangled_rope_suppression_floor). `RequiresActiveEnforcement` = `drl_core.pl:requires_active_enforcement/1` (authored enforcement flag, no numeric threshold).
 
 ### Scaffold (⊡) — Temporary Support
 
 ```
-⊡C[I] ↔ χ(C, I.P, I.S) ≤ 0.35
+⊡C[I] ↔ χ(C, I.P, I.S) ≤ 0.45
          ∧ Coord(C) = true
-         ∧ SunsetClause(C) = true
-         ∧ TheaterRatio(C) ≤ 0.40
+         ∧ ¬Captured(C)
+         ∧ ScaffoldTemporality(C)
+         ∧ TheaterRatio(C) ≤ 0.70
 ```
 
-- Low extraction
-- Provides coordination
-- Built-in expiration (sunset clause)
-- Real work, not performance (low theater ratio)
-- Degrades to Piton when sunset is violated
+- Low-to-moderate extraction (χ ≤ 0.45)
+- Provides coordination (`has_coordination_function`)
+- **Temporality gate** (`ScaffoldTemporality`): built-in expiration (sunset clause) — OR, absent a sunset, the constraint requires no active enforcement (non-enforced coordination is inherently scaffold-like)
+- Real work, not pure performance (theater ratio ≤ 0.70)
+- Degrades to Piton when the sunset is violated
 
-**Thresholds:** χ ≤ 0.35, TheaterRatio ≤ 0.40 (scaffold_theater_ceiling)
+**Thresholds:** χ ≤ 0.45 (scaffold_extraction_ceil), TheaterRatio ≤ 0.70. **The theater bound is a hardcoded literal `TR > 0.70` in `drl_core.pl:382` — NOT a `config.pl` param** (the drift guard cannot read it from `config.pl`; see the guard's stated scope). `ScaffoldTemporality` = `drl_core.pl:scaffold_temporality_check/1` (`has_sunset_clause` ∨ ¬`requires_active_enforcement`), no numeric threshold.
 
-### Piton (⊟) — Degraded Theater
+> **Gloss — `¬Captured(C)`** (`narrative_ontology.pl:constraint_captured/1`, OQ-94, no numeric threshold): Scaffold is blocked when the authored **gain-flow surface names a specific, existing (non-`diffuse`) stakeholder seat** as the receiver of the constraint's gains — i.e. a witnessed beneficiary of record, not merely "some beneficiary could exist." An absent or `diffuse` gain-flow leaves the constraint *uncaptured* (the block does not fire). Captured coordination routes to Tangled Rope (the cell that says "genuinely coordinates AND has an owner"), never benign Scaffold.
+
+### Piton (⊟, fallback) — Degraded Theater
+
+The general-priority Piton (distinct from the dead-coordination pre-check above): reached late in the
+cascade for a low-χ, still-extracting, high-theater constraint.
 
 ```
-⊟C[I] ↔ TheaterRatio(C) > 0.75
-         ∧ ActiveExtraction(C) < 0.15
+⊟C[I] ↔ χ(C, I.P, I.S) ≤ 0.45 ∧ ε(C) > 0.10 ∧ TheaterRatio(C) ≥ 0.70
 ```
 
 - Function dried up, structure persists
+- Low power-scaled extraction (χ ≤ 0.45) but non-trivial base extraction (ε > 0.10)
 - High theater ratio (performance >> substance)
-- Minimal active extraction (inactive)
 - Still costs maintenance energy
 
-**Thresholds:** TheaterRatio > 0.75 (piton_theater_floor), ActiveExtraction < 0.15
+**Thresholds:** χ ≤ 0.45 (piton_extraction_ceiling), ε > 0.10 (piton_epsilon_floor), TheaterRatio ≥ 0.70 (piton_theater_floor)
 
 ### Naturalized — Power-Scaling Ambiguity
 
 ```
-ε(C) > 0.45 ∧ χ(C, I.P, I.S) < 0.40
+ε(C) > 0.45 ∧ χ(C, I.P, I.S) < 0.35
 ```
 
-- High base extraction but low power-scaled extraction
-- Suggests extraction is being absorbed/hidden by power position
+- High base extraction (ε > 0.45, the Rope ε-ceiling) but low power-scaled extraction (χ < 0.35)
+- Suggests extraction is being absorbed/hidden by power position — primary substrate for false-summit rhetoric
 - Action: investigate_naturalization
+
+**Thresholds:** ε > 0.45 (rope_epsilon_ceiling), χ < 0.35 (tangled_rope_chi_floor — the χ bound is the Tangled floor, so Naturalized occupies the low-χ / high-ε corner the other gates leave open)
 
 ---
 
@@ -448,5 +493,8 @@ Characters are designated as variables: X₁, X₂, X₃, ... Xₙ. No source na
 **END OF SYMBOLIC LOGIC REFERENCE**
 
 Version 5.0 Symbolic Edition
-Extracted from logic.md v4.0, stripped for formalization and verification use.
+§IV threshold values mirror `prolog/config.pl`, verified against `drl_core.pl:classify_from_metrics/6`
+at commit **`d2f8b829`** (`config.pl` / `drl_core.pl` working tree clean for those files). Re-sync on
+any classification-gate param change; drift guard: `python/check_logic_symbolic_drift.py`.
+Consumed by narrative Stage 0 (per-character classification) and Stage 1 (formalization).
 Compatible with UKE_Narrative v1.4+

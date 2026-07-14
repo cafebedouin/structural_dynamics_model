@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "979196be9c7c6d906e4d9ab140b3e8a770f3129f",
+    "store_version": "d2f8b829f2957b5b6cd0f677c34ec78eeef417a8",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-13T22:25:52"
+    "generated_at": "2026-07-14T08:53:02"
   },
-  "issues_sha": "70ae7747681f45e7a1aee9e2dfdd08a09266376c1e071d953c5ad2fbb7905691",
-  "n_entries": 221,
+  "issues_sha": "3fe9ff63b6a0dfc5cbae050173fae31450ff57b1d43340eb538b1cd2ae3eced2",
+  "n_entries": 223,
   "active_token_set": [
     "investigating",
     "open",
@@ -13,30 +13,13 @@
   ],
   "per_status": {
     "resolved": 127,
-    "mitigated": 16,
+    "mitigated": 17,
     "disposed": 4,
+    "future": 5,
     "open": 63,
-    "partial": 7,
-    "future": 4
+    "partial": 7
   },
   "active": [
-    {
-      "id": "OQ-48",
-      "status": "open",
-      "priority": 1,
-      "summary": "Classification thresholds never recalibrated against the live (post-rebuild) corpus",
-      "deps": [],
-      "cross_refs": [
-        "OQ-30",
-        "OQ-37"
-      ],
-      "mentioned_in": [
-        "OQ-26",
-        "OQ-30",
-        "OQ-37",
-        "OQ-194"
-      ]
-    },
     {
       "id": "OQ-60",
       "status": "open",
@@ -979,6 +962,17 @@
       "mentioned_in": [
         "OQ-214"
       ]
+    },
+    {
+      "id": "OQ-223",
+      "status": "open",
+      "priority": 4,
+      "summary": "Committer/CS axis is absent from the narrative pipeline: record-only; hold pending corpus graduation (Ω_C)",
+      "deps": [
+        "blocked_on_human operator-ruling (whether to ever build the committer-axis narrative step; default is hold)"
+      ],
+      "cross_refs": [],
+      "mentioned_in": []
     }
   ],
   "archive": [
@@ -1554,6 +1548,23 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-46"
+      ]
+    },
+    {
+      "id": "OQ-48",
+      "status": "future",
+      "priority": 1,
+      "summary": "Classification thresholds never recalibrated against the live (post-rebuild) corpus",
+      "deps": [],
+      "cross_refs": [
+        "OQ-30",
+        "OQ-37"
+      ],
+      "mentioned_in": [
+        "OQ-26",
+        "OQ-30",
+        "OQ-37",
+        "OQ-194"
       ]
     },
     {
@@ -3047,6 +3058,18 @@
         "OQ-215",
         "OQ-218",
         "OQ-220"
+      ]
+    },
+    {
+      "id": "OQ-222",
+      "status": "mitigated",
+      "priority": 4,
+      "summary": "logic_symbolic.md §IV hand-mirrors config.pl gate params (silent-fork risk): drift-guarded now, load-time injection deferred (Ω_E)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-22",
+        "OQ-37"
       ]
     }
   ]

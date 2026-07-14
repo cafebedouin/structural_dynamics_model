@@ -2001,7 +2001,7 @@ Connects to OQ-46 (the regen that retires the row-23 stopgap) and D7/D5 (the pro
 
 **Ω-type:** Ω_E (design-relevant — closeable by recalibration; deferred by policy until the corpus is worth calibrating against).
 
-**Status:** open — (table-setting for the rebuild). The χ / ε / suppression classification
+**Status:** future — (deferred by policy to the post-rebuild recalibration; marked future 2026-07-13 at operator request — kept full-bodied as the standing recalibration ledger, revive when the rebuild lands). The χ / ε / suppression classification
 **Priority:** 1
 thresholds (`config.pl` §5B + §5) are documented as **"Calibrated: Derived from 691-constraint
 corpus analysis (2024–2026)"** (`logic_thresholds.md:15`), with the known limitation that the
@@ -10313,7 +10313,105 @@ existing evidence + per-item constructed cases); does not block the cold human r
 
 ---
 
-*Last updated: 2026-07-13. Add new items with sequential OQ-NN labels. Mark
+## OQ-222 — logic_symbolic.md §IV hand-mirrors config.pl gate params (silent-fork risk): drift-guarded now, load-time injection deferred (Ω_E)
+
+**Ω-type:** Ω_E (a build-cost/churn tradeoff whose reopen trigger is evidence-witnessable — a
+count of future param changes, or the appearance of a second mirroring surface).
+
+**Status:** mitigated — the fork risk is guarded by `python/check_logic_symbolic_drift.py` (GREEN at
+`d2f8b829`); the root-cause fix (load-time injection) is deferred behind the reopen trigger below.
+
+**Priority:** 4
+
+*(Edge-free: no `**Deps:**` line — the reopen is churn-triggered, see Reopen trigger, not blocked on
+another OQ; not currently blocked on a human. Escalate the injection build only if the operator wants
+it now.)*
+
+**Origin:** 2026-07-14, reconciling `agent/narrative_transform/logic_symbolic.md §IV` to the engine.
+§IV's inline gate thresholds (Snare/Scaffold/Tangled/Piton/Naturalized/Mountain) are a hand-copy of
+`prolog/config.pl` `param/2` facts (verified against `drl_core.pl:classify_from_metrics/6`), consumed
+by the narrative pipeline at **Stage 0 (per-character classification) + Stage 1 (formalization)**
+(`STAGE_INPUTS["narrative"]`). A hand-copied threshold table with no checked link to its source is
+Build Discipline **Pattern 2 (the silent fork)**. Two prior forks already bit here (the pre-OQ-22
+Mountain χ divergence; the doc's own stale Naturalized 0.40 vs code 0.35).
+
+**Why guard, not regenerate, now (both reference classes agree churn is low):** since the doc's last
+edit (`408a6387..d2f8b829`) the drifted gate values changed **once** (`tangled_rope_chi_floor`
+0.40→0.35, OQ-37 Move 1); over `config.pl`'s **entire history** each gate param has ≤1 value change
+(snare/piton floors: 0; tangled/scaffold: 1). These params are OQ-governed (rare, review-gated), so
+load-time generation does not earn its assembly-complexity cost yet.
+
+**Mitigation in place:** the guard **derives its checklist from the code** (parses the `config:param`
+names actually referenced by `classify_from_metrics/6`, reads their values from `config.pl`), then
+asserts each numeric value appears on its type's §IV gate line **in gate-context** — a
+right-number-on-wrong-gate edit fails. Adding a new inline gate param auto-extends coverage. Positive
+control (swap two **different-valued** gates — scaffold 0.45 ↔ snare 0.66 — so presence-grep stays
+GREEN while the gate-context guard goes RED; revert restores GREEN) witnessed this session. **Not
+wired into any pipeline gate** (operator say-so required to wire).
+
+**Stated scope — numeric-unguardable BY DESIGN, not blind spot:** the structural exclusion/predicate
+gates (`snare_immutability_check`, `scaffold_temporality_check`, `requires_active_enforcement`,
+`natural_law_without_beneficiary`, `constraint_captured`, `coordination_dead`) carry no `config:param`
+numeric threshold one level down (their bodies were read this session — flag/stakeholder/immutability
+checks); and the **scaffold theater ceiling is a hardcoded literal `TR > 0.70` in `drl_core.pl`**, not
+a param, so it is outside `config.pl` derivation. **RECURSE-IF-REFACTORED:** if a future refactor
+pushes a numeric threshold into one of the structural predicates, the guard's derivation must recurse
+one level — noted in the guard's docstring.
+
+**Reopen trigger:** regenerate §IV from `config.pl` (stop hand-mirroring) if these gate params change
+**more than ~twice more**, OR a **second doc surface** starts mirroring these values.
+
+**Required form if reopened = LOAD-TIME INJECTION** (not a build-step): the orchestrator composes the
+value-block from `config.pl` at stage-0/1 prompt assembly, so §IV-on-disk becomes a placeholder
+template. A build-step that regenerates a file only relocates the fork to "forgot to run the build."
+
+**What resolution changes:** settles whether the doc/engine mirror is kept honest by *guard* (current)
+or by *construction* (injection removes the fork entirely at some assembly cost). Not spend-gated.
+
+---
+
+## OQ-223 — Committer/CS axis is absent from the narrative pipeline: record-only; hold pending corpus graduation (Ω_C)
+
+**Ω-type:** Ω_C (the committer axis — authored commitment structure; whether to formalize it in the
+narrative pipeline is a committer-side design question).
+
+**Status:** open — findings note; the default is HOLD (see framework verdict). Whether to ever build
+is a genuine operator ruling, so this is blocked on a human, not on engine work.
+
+**Priority:** 4
+
+**Deps:** blocked_on_human operator-ruling (whether to ever build the committer-axis narrative step; default is hold)
+
+**Origin:** 2026-07-14 (Part B of the logic-docs reconciliation). Confirmed absence: the narrative
+pipeline touches the committer axis **nowhere** — zero `cs_`/`kernel`/`authority_grounding` references
+in `agent/uke_narrative_orchestrator.py`; it formalizes the **observer** axis only (`dr_logic_symbolic`
+→ Stage 0/1). The CS/committer axis lives in the kernel-corpus generator
+(`agent/generate_kernel_corpus.py` + `python/generate_constraint_pl.py:~269–704`) and the `cs_*.pl`
+engine, born at *decompose* time from contested kernels with sibling readings.
+
+**What a minimal CS narrative step would require:** a `story_uid` header + a `cs_structure` block with
+the two schema-required enums (`kernel_codification`, `authority_grounding`; schema in
+`schemas/constraint_story_schema.json`; emitter `generate_constraint_pl.py` is reusable).
+
+**The blocker (why this is NOT a one-file doc-pointer add):** the kernel/reading-relation machinery
+assumes a **contested kernel with sibling readings + a manifest-injected `kernel_id`**, which the
+single-story narrative pipeline does not produce. Wiring the CS axis in means producing that structure,
+not merely emitting two more enums.
+
+**The reason to hold (the framework's own verdict):** per `commitment_systems_sketch_v5_1.md`, the
+rich committer dimension tested as a **standing null against 319 omegas and did not graduate**; only
+the has-victims/beneficiaries **bit** graduated, and it is already fed to the engine via directionality
+`d`. Adding the full apparatus would formalize a dimension the engine ruled null. **Revisit only if a
+future corpus makes the committer axis graduate.**
+
+**What resolution changes:** either confirms the narrative pipeline is correctly observer-only (close as
+`future`/disposed with the standing-null citation), or — if a future corpus graduates the committer
+axis — promotes this to a scoped build with the requirements above. No code, no orchestrator change,
+no new reference doc is warranted now.
+
+---
+
+*Last updated: 2026-07-14. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
