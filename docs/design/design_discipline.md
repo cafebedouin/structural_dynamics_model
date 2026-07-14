@@ -993,6 +993,31 @@ no machine-provenance knowledge — **gates publication of arc outputs**, not in
 Internal rulings may rest on model arms plus operator legs; anything that ships must first meet
 the reader class the loop cannot manufacture.
 
+**§11b — the assisted posture has a structural boundary, and it is the mechanization floor (operator
+ruling, 2026-07-13; OQ-214 close).** §11 ruled the posture assisted-by-necessity; the theme-naming
+null gives the *boundary that makes the necessity precise.* The general law (build side:
+`docs/technical/build_discipline.md`, "A deterministic gate is buildable IFF the defect has a
+merit-independent signature"): a defect can be mechanically gated only where its extractable surface
+is **merit-independent**. Counting was (a digit means the same in a defect and a masterpiece → it
+gates); theme-naming is not (its surface *is* the surface earned prose uses on purpose → it collapses
+to a candidate list under adjudication). **The mechanization boundary runs exactly along
+merit-correlation** — and counting was, provisionally, the last pipeline defect on the meterable side.
+Two rulings follow:
+
+- **Mechanization floor — provisionally yes, with the falsifier stated so it does not harden into
+  dogma:** *no remaining known defect has a merit-independent signature; the falsifier is finding one
+  that does.* If a future failure is mechanically separable, the meter approach revives for it and the
+  architecture extends, not breaks (same shape as every threshold ruling here). The repo-wide test of
+  the partition is OQ-221.
+- **Assisted posture — permanent architecture, by the structure of the problem, not a maturity
+  stage.** Above the boundary is instrumented (counting dead, invariant-preservation gated,
+  break-address authored, R1–R14); below is definitionally reader-held (already witnessed: §11's
+  arm-2 D9 rubber-stamp, the Q2 double-No at the sentence level). So autonomous operation is
+  foreclosed not by missing tooling but by the shape of what remains, and **"improve the pipeline"
+  now means improve the READERS in the loop, not build more meters.** The cold human read (§11a) is
+  not a gate to clear before resuming meter-work — it is the first instance of the actual remaining
+  work.
+
 ---
 
 ## Open items for the next pass on this document

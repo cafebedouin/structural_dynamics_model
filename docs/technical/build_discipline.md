@@ -1106,6 +1106,45 @@ convergence-softening, not signal (the operator's `[EDGE]` call). Worked instanc
 
 ---
 
+## A deterministic gate is buildable IFF the defect has a merit-independent signature (the counting↔theme mirror)
+
+Before arming a mechanical gate against a defect, ask the only question that decides whether the
+gate can exist: **is the defect's extractable surface merit-INDEPENDENT or merit-CORRELATED?** A
+gate is buildable iff independent.
+
+Two witnessed instances, learned one after the other, define the frontier:
+
+- **Counting — merit-INDEPENDENT ⇒ the meter gates.** A digit means the same in a defect and in a
+  masterpiece (`47` carries no craft), so `_numeric_inventory`'s false positives are rare and
+  uncorrelated with quality. The gate can arm: measure density, one revision call, escalate. (OQ-215;
+  `agent/uke_narrative_orchestrator.py`.)
+- **Theme-naming — merit-CORRELATED ⇒ the meter cannot gate.** The extractable surface (anaphora,
+  refrains, aphoristic closers) IS the surface earned prose uses on purpose — rift3's institutional
+  creed, the empty-pan's refused ledger-math, McCarthy's whole body of work all light it up. So
+  `_theme_inventory` collapses to a **high-recall candidate list under per-instance adjudication**;
+  its auto-gate is deliberately narrow (two low-merit-correlation kinds) and, on calibration, sits
+  above everything good and essentially never fires. (OQ-214; `audits/2026-07-13_oq214_theme_meter/`.)
+
+**The tell that decides it (construct it before you arm anything):** run the extractor over the
+*earned* exemplar and over a before/after fix. If flagging the earned case is a false positive, or if
+defect and fix score the SAME on the would-be gating kinds, the signature is merit-correlated —
+ship the candidate list, never the auto-reject. OQ-214's calibration showed exactly this: runs 1&2
+had *identical* anaphora/causal counts across the improvement (the fix lived in the merit-correlated
+refrain), and earned-dense rift3 outscored two of three defects.
+
+**The trap this kills:** a merit-correlated meter that "looks successful" — defect-high, fix-low —
+while it is actually issuing revision calls against earned craft. The **bucket rule** (a kind may
+gate only if flagging it in the earned exemplar is NOT a false positive) is what turned OQ-214's
+false success into a true null. Had the merit-correlated kind stayed on the gate, the calibration
+would have validated a craft-suppressor.
+
+The **design consequence** — that this boundary marks the mechanization floor and makes the assisted
+posture permanent architecture — is `docs/design/design_discipline.md` §11b. The **repo-wide test**
+of whether the partition generalizes beyond these two defects is **OQ-221**. Provisional, with the
+falsifier stated: a future defect that *is* mechanically separable revives the meter approach for it.
+
+---
+
 ## A model swap is an engine change: its witness is a full run through the structural gates
 
 A witness class must match the failure class it guards. An API round-trip ("OK" came back, no

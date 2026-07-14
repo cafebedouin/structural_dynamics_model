@@ -9707,7 +9707,10 @@ what turned a false success into a true null:** had refrain stayed on the gate, 
 have LOOKED successful (defect-high, fix-low) while issuing revision calls against rift3's creed
 and every earned refrain — a meter that "worked" by suppressing craft. `THEME_DENSITY_THRESHOLD =
 8.0` sits above everything good and will essentially never fire — the correct behavior for a gate
-that cannot discriminate and would damage craft if it tried.
+that cannot discriminate and would damage craft if it tried. **The law now lives at design altitude:**
+`docs/technical/build_discipline.md` ("A deterministic gate is buildable IFF the defect has a
+merit-independent signature") for the build side, `docs/design/design_discipline.md` §11b for the
+design consequence (mechanization floor + permanent assisted posture); repo-wide test = OQ-221.
 
 **Honest close framing (do not let `mitigated` overclaim).** WHAT SHIPPED: the last waivable
 absence-claim ("Theme-naming: none found") is now backed by a mechanical high-recall candidate list
