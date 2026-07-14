@@ -396,6 +396,16 @@ is not metered and cannot be by this approach; the register problem stays
 reader-held (the Q2 double-No), unreachable by regex. Do not let the meter's
 existence imply the register problem moved.
 
+**Consequence (ruled 2026-07-13, OQ-214).** The mechanization boundary runs
+along merit-correlation, and counting was provisionally the LAST pipeline defect
+with a merit-independent signature (falsifier: a future defect that IS
+mechanically separable → the meter approach revives for it). So the assisted
+posture is **permanent architecture, by the structure of the problem** — not a
+maturity stage: above the line is instrumented (counting/invariant/break-address,
+R1–R14), below is definitionally reader-held. "Improve the pipeline" now means
+improve the READERS in the loop, not build more meters. The repo-wide test of
+whether this partition generalizes is OQ-221.
+
 ---
 
 ## Stage 9: Review

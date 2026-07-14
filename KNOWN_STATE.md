@@ -78,11 +78,17 @@ absence-claim is now a mechanical candidate list, but explanation-over-run is NO
 be by this approach — the register problem stays reader-held (the Q2 double-No), unreachable by
 regex. The meter's existence does not move it.**
 
-**[EDGE] design-level claim (flagged, not self-ruled):** if the residual defect class is
-merit-correlated and mechanically inseparable, no deterministic backstop closes it — counting was
-plausibly the last defect with a mechanical signature, and the assisted posture becomes permanent
-architecture, not a maturity stage. "Improve the pipeline" shifts from more meters to better readers
-in the loop. Operator to rule; recorded in OQ-214.
+**Two design claims RULED (operator, 2026-07-13):** (1) **Mechanization floor — provisionally yes,
+with falsifier:** *no remaining KNOWN defect has a merit-independent signature; the falsifier is
+finding one that does* — if it surfaces the meter approach revives for it and the architecture
+extends (same shape as every threshold ruling: provisional, reopens). (2) **Assisted posture —
+PERMANENT architecture, by the structure of the problem** (not a maturity stage): the mechanization
+boundary runs along merit-correlation; above it is instrumented (counting/invariant/break-address,
+R1–R14), below it is definitionally reader-held (arm-2 D9 model-judge rubber-stamped the negative
+control, only the reader discriminated; the Q2 double-No). So "improve the pipeline" now means
+improve the READERS in the loop, not build more meters — the cold human read is the first instance
+of the actual remaining work, not a gate before resuming it. Repo-wide test of the law = **OQ-221**
+(does the meterable-vs-reader-held partition apply beyond this defect).
 
 **Tripwire (promotion candidate → judged history):** a future optimizer must NOT arm the theme gate
 on refrain/aphorism/closer/word_arithmetic "for determinism" — that turns the meter into a

@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "b627df862ed345d7f37ad5b91e116d71481e19e5",
+    "store_version": "89c505f3ac0a286d7e4dab8275cc9da65515fa14",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-13T20:09:23"
+    "generated_at": "2026-07-13T22:18:12"
   },
-  "issues_sha": "d250985c819eb10b5072ab9940d5b3d18e91a1f2b28eaf11a9c76655437c417a",
-  "n_entries": 220,
+  "issues_sha": "9359056745b61d80913046f343ce30b0e67b31dd9a5f147542a9075a3b85ca3e",
+  "n_entries": 221,
   "active_token_set": [
     "investigating",
     "open",
@@ -15,7 +15,7 @@
     "resolved": 127,
     "mitigated": 16,
     "disposed": 4,
-    "open": 62,
+    "open": 63,
     "partial": 7,
     "future": 4
   },
@@ -965,6 +965,19 @@
       "mentioned_in": [
         "OQ-216",
         "OQ-218"
+      ]
+    },
+    {
+      "id": "OQ-221",
+      "status": "open",
+      "priority": 3,
+      "summary": "Partition the pipeline's defect/gate set by the merit-independent-signature law (meterable vs reader-held) (Ω_E)",
+      "deps": [
+        "splits_from OQ-214"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-214"
       ]
     }
   ],
@@ -2974,7 +2987,8 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-215",
-        "OQ-218"
+        "OQ-218",
+        "OQ-221"
       ]
     },
     {
@@ -2983,7 +2997,7 @@
       "priority": 2,
       "summary": "Run the counting-defect verification protocol (5-run variance + three controls) over the R1–R14 changes (Ω_E)",
       "deps": [
-        "blocked_on_human operator-spend-go"
+        "blocked_on_human operator-cold-read"
       ],
       "cross_refs": [],
       "mentioned_in": [

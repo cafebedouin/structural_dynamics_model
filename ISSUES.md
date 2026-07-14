@@ -9728,16 +9728,26 @@ extraction; register work reassigned to the read layer."** Phase-B is a generati
 change and stays OPEN until witnessed live IF chosen — but the higher-information spend is the human
 read, and it may show Phase B would be witnessing plumbing for the wrong meter.
 
-**[EDGE] What the null surfaces past OQ-214 (flagged for the operator, not self-ruled).** If the
-pipeline's residual defect class is merit-correlated and mechanically inseparable, then no
-deterministic backstop closes it — ever. Counting was plausibly the LAST defect with a mechanical
-signature; everything left (explanation over-run, the sentence-level ceiling, break-execution) is in
-the reader-discriminated class. If that holds, the assisted posture stops being a stage of maturity
-and becomes the permanent architecture: the remaining quality gap is definitionally
-operator-and-human-held, and "improve the pipeline" shifts from *more meters* to *better readers in
-the loop*. This is the map reaching its mechanization floor — a completed map, not a failure — but
-it is a design-level claim the operator should rule, not an instance conclusion. Recorded, not
-closed.
+**[EDGE] What the null surfaces past OQ-214 — RULED (operator, 2026-07-13).** Two claims, ruled:
+- **Mechanization floor: PROVISIONALLY yes, with the falsifier stated so it does not harden into
+  dogma.** The honest form is not "counting was the last mechanically-signatured defect" (a universal
+  over a set only sampled) but: *no remaining KNOWN defect has a merit-independent signature, and the
+  search that would falsify this is finding a new defect that does.* If a future failure turns out
+  mechanically separable, the meter approach revives for that one and the architecture EXTENDS, not
+  breaks. Filed the same shape as every threshold ruling here — "provisionally the floor, reopens if
+  a merit-independent defect surfaces" — the line between a finding and a faith.
+- **Assisted posture: PERMANENT architecture, by the structure of the problem (the more important
+  half).** This is the map completing, not a wall. The pipeline mechanized story-quality
+  discrimination exactly as far as quality had mechanical signatures — through counting — and the
+  boundary runs precisely along merit-correlation. Above the line is well-instrumented (counting
+  dead, invariant-preservation gated, break-address authored, R1–R14); below is definitionally
+  reader-held (already shown empirically: arm-2 D9 model-judge rubber-stamped the negative control,
+  only the reader discriminated; the Q2 double-No at the sentence level). So "assisted" is not
+  "autonomous, not yet" — it is the answer to the actual problem, and "improve the pipeline" now means
+  *improve the readers in the loop*, not build more meters. The cold human read is not a gate to clear
+  before resuming meter-work; it is the first instance of the actual remaining work.
+- **Repo-wide test of the law → OQ-221** (does the merit-independent-signature partition apply beyond
+  this one defect). That review is the vehicle; it does not gate this ruling.
 _Promotion context (retained):_ **PROMOTED 2026-07-13 (operator adjudication of the OQ-218
 Stage-2 batch): explanation over-run witnessed 3/3 on fresh seeds — the pipeline's residual
 defect class with counting dead. A calibration corpus now exists:** positives = the flagged
@@ -9863,7 +9873,7 @@ series).
 
 **Priority:** 2
 
-**Deps:** blocked_on_human operator-spend-go
+**Deps:** blocked_on_human operator-cold-read
 
 **Origin:** 2026-07-11. The full R1–R14 plan (instruments R6/R7, witness rule R5, invariant
 threading R13/R14, counting-incentive prompt changes R1–R4, scope budget R8) was implemented with
@@ -10251,6 +10261,52 @@ instrument for concept sources; feeds the v8 math_stories path and the Sonnet-5 
 ruling): one genuinely cold HUMAN read — no context, no label, no machine-provenance knowledge —
 gates publication of arc outputs, The Clean Small Song first; it doubles as the human gold arm
 the blind design has owed since Stage 1.**
+
+---
+
+## OQ-221 — Partition the pipeline's defect/gate set by the merit-independent-signature law (meterable vs reader-held) (Ω_E)
+
+**Ω-type:** Ω_E (a per-defect partition against a stated criterion; the falsifier is
+evidence-witnessable — a defect that violates its assigned bucket).
+
+**Status:** open — minted 2026-07-13 from the OQ-214 null, at operator prompt ("a new OQ to review
+the other OQs to test whether this applies… even if provisional, it applies beyond this one").
+
+**Priority:** 3
+
+**Deps:** splits_from OQ-214
+
+**Origin:** 2026-07-13. OQ-214's calibration null established a general law, learned twice now: **a
+defect is mechanically gateable IFF it has a merit-INDEPENDENT signature.** Counting had one (a digit
+means the same in a defect and a masterpiece → `_numeric_inventory` gates); theme-naming does not
+(its extractable surface IS the surface earned prose uses on purpose → the meter collapses to a
+candidate list under adjudication). The difference is the defect, not the meter. The operator's
+conjecture: the partition applies beyond this one case and should be run over the rest of the frontier.
+
+**The work:** for each open defect-class OQ and each existing-or-proposed gate, ask the discriminating
+question — is the defect's extractable surface merit-INDEPENDENT (a digit: same token in defect and
+masterpiece) or merit-CORRELATED (theme-repetition: the surface IS the craft)? Merit-independent →
+*meterable* (a deterministic gate can and should exist); merit-correlated → *reader-held* (candidate
+list under adjudication at most, never an auto-gate — arming it suppresses craft, the OQ-214 kill
+condition). **Pre-register the discriminating test per item BEFORE ruling it** (the unguarded-axis-swap
+discipline, `build_discipline.md`): construct the case where merit-independent and merit-correlated
+come apart for that defect, name what each outcome means, then rule. Output: a partition table (defect
+→ bucket → the meter that exists / should exist / is provably impossible) covering the known pipeline
+defects (explanation over-run [ruled reader-held, OQ-214], the sentence-level ceiling, break-execution,
+beneficiary-collapse) and any DR-engine gates the law plausibly reaches.
+
+**Falsifier (stated so it does not harden into dogma):** the working claim "no remaining KNOWN defect
+has a merit-independent signature" is falsified by finding a remaining defect that IS mechanically
+separable — in which case the meter approach revives for that one and the architecture extends, not
+breaks. Provisionally the floor; reopens if a merit-independent defect surfaces. Do NOT conclude
+"absent" from a survey that never constructed the separating case per item (false-absence discipline).
+
+**What resolution changes:** settles whether counting was the last meterable pipeline defect (⇒ the
+mechanization floor is reached and the assisted posture is permanent architecture, per the OQ-214
+ruling — "improve the pipeline" = improve the readers in the loop) or whether a meterable defect
+remains unbuilt (⇒ one more meter is worth building, and the floor claim reopens). Converts the OQ-214
+[EDGE] conjecture from a vibe into a per-item-witnessed partition. Not spend-gated (a read/review of
+existing evidence + per-item constructed cases); does not block the cold human read.
 
 ---
 
