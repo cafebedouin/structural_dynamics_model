@@ -248,6 +248,20 @@ output (the review round's measurable effect was one claim with two hedges → t
 three clocks); (b) when triaging multi-reviewer feedback, **weight reviewers' questions over their
 line edits** — edits propose substitutions inside your frame; questions force synthesis across it.
 
+**Reconciling two surfaces owes the full product table, not the named cells.** A special case of
+false-unification's demand for a distinction-check, with its own trigger: when two predicates
+measure "the same" thing (a flag and its graded generalization; a verdict and its metric), the
+coherence claim is over the *entire* verdict×value product space. Derive every cell from the two
+definitions and census-count each; the plan's enumerated special cases are hypotheses about which
+cells are populated, not the table. Twice in one build chain the un-named cell carried the most
+mass: the OQ-207 D4 ruling enumerated "two divergence cells (exact special case)" — deriving the
+full `consensus_provenance/2` × `stakeholder_obstruction/5` table from the definitions found a
+third (`plural([T,unknown])`), which was the *most* populated live (19/66/129 across the legs);
+then the OQ-217 tightening's predicted-zero cell (`mcc_untypeable`) censused heavily live
+(12/50/39). A coherence check that tests only the named cells passes over the cell nobody
+predicted — enumerate from the definitions, let the census say which cells are empty.
+(`audits/2026-07-12_oq207_stakeholder_h1/`, `audits/2026-07-12_oq217_consensus_tightening/`.)
+
 ---
 
 ## When to stop verifying: the verification-depth seat and the conceal-an-open check
@@ -1084,6 +1098,18 @@ after round 1 was an added instrument escaping its own check:
   not tell the two apart; replaced with an uneven-spacing control — endpoint `+0.0005` vs LSQ
   `−0.0035`, opposite sign — after which the corpus census, with the comparator proven live, was a
   trustworthy measured zero.)
+- **A planted control needs an artifact boundary to doctor.** When an assertion layer reads *live
+  computation*, "planted violation" has no injection point: fabricating a bad value after the read
+  witnesses the comparator's arithmetic, not the probe. Design the pipeline so the assertion layer
+  consumes an intermediate artifact, and plant the violation in a doctored COPY of that artifact
+  run through the same assertion path — the control then fires on the thing audited, not on a
+  post-read fabrication. (OQ-207 census design D8, `audits/2026-07-12_oq207_stakeholder_h1/`:
+  swipl dumps `census_input_<leg>.json`, Python asserts over the artifacts only, the doctored copy
+  is shown FLAGGED.) **And the artifact layer inherits Pattern 5:** the same census's first dump
+  AUTHORED `n_excluded: 0` for non-mcc verdicts instead of measuring it, silently
+  under-determining the OQ-217 movement prediction until the diff comparator caught it on real
+  data (`movement_diff.v1_flagged.json`). Every field in a dumped artifact is measured-or-absent,
+  never defaulted.
 
 Two more from the same review, about plan *structure* rather than the instruments:
 - **A fallback gated on a condition the design avoids is dead code.** The first close-vs-keep-open

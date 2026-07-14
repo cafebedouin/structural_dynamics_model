@@ -381,6 +381,15 @@ meaningful only relative to a timestamp. See `when_apparatus_sharpens_taxonomy.m
   OQ-51 N/A rule fewer real seats give a smaller spectrum (n=3→{0,2,3}, n=2→{0,1}), so band 2 is the
   3-seat signature, not a 4-seat counterexample. General-n law PROVEN at every cardinality:
   `docs/h1_gap_spectrum_general_n.md` (OQ-195 resolved 2026-07-02). Provenance: KNOWN_STATE 2026-06-30 + 2026-07-02.
+  **The same null rule governs the STAKEHOLDER frame (OQ-207/OQ-217, 2026-07-12/13):**
+  `h1_stakeholder` (+ `_n_seats`/`_n_real`) in `pipeline_output.json` — null = <2 real-typed seats,
+  never 0; a `.get("h1_stakeholder", 0)` reader makes the same silent mistake; the reachable
+  spectrum per `n_real` is the proven H(n) (out-of-spectrum = bug witness). **Two absence tokens
+  coexist by design — never unify them:** `untyped` (census-facing, `seat_perceived_vs_real/4`) vs
+  `unknown` (kernel-facing, the only token `is_real_type/1` filters) — an `untyped` leaking into a
+  type vector counts as a real disagreeing type and silently inflates H¹. Verdict⟺H¹ is an EXACT
+  biconditional since OQ-217, and a consumer reading the bare `manufactured_consensus_candidate`
+  token silently drops the larger `_untypeable` stratum. Provenance: KNOWN_STATE 2026-07-12 + 2026-07-13.
 
 ## Build Discipline (recurring failure modes — check before declaring work done)
 

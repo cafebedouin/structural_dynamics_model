@@ -402,3 +402,23 @@ a planted-fail AND a planted-multi control in the SAME run, plus a partition-sum
 is the ONLY thing that distinguishes this probe from a probe that measured nothing. (3) The
 immune construction: build the goal with `=..` and call `M:Goal` with M carried separately
 (`prolog/tests/test_reading_totality.pl:reading_solution_count/5` is the template).
+
+## 14. Bare `run_tests` in a corpus-loaded session sweeps the testset-embedded units — scope it
+
+Loading the corpus loads plunit units EMBEDDED IN THE TESTSET FILES (per-story `*_tests` units,
+e.g. `mountain_threshold_validation`), so a bare `run_tests` after
+`corpus_loader:load_all_testsets` runs your suite PLUS every testset unit. The live corpus is an
+evolving-schema test bed: some of those units fail at any given HEAD **by design** (23 failures
+on 135 testsets, witnessed 2026-07-12), and the failure report misattributes — it reads as "my
+change broke 23 tests" when the failures pre-exist. The cost is a lost diagnosis cycle or a
+wrongly held-back commit, both witnessed.
+
+**Rules.** (1) In any corpus-loaded session, run suites scoped:
+`run_tests([my_unit, other_unit])` — never bare `run_tests`. (2) Before attributing ANY failure
+count to your change, baseline the identical invocation on a clean tree (`git stash` → run →
+count → `git stash pop`): identical counts pre/post = pre-existing, and the delta is exactly
+your suites (witnessed: 23 failed / 101 passed clean vs 23 failed / 124 passed edited — the +23
+passing were the new suites, 2026-07-12). (3) Load-order corollary: a suite that loads the
+corpus INSIDE a test (an `ensure_corpus_loaded` vacuity guard) changes which units a bare
+`run_tests` even sees, depending on whether the corpus loaded before or during the run — another
+reason the scoped form is the only stable invocation.
