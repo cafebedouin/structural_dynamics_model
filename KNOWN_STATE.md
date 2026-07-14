@@ -79,17 +79,19 @@ see correction-key below). Two forks resolved:
   omegas per `commitment_systems_sketch_v5_1.md`; only the has-beneficiaries bit graduated, already fed
   via `d`). No code.
 
-## 2026-07-14 — [correction-key] docs/logic.md + logic_thresholds.md themselves diverge from code (out of scope; own OQ warranted)
-**Files:** docs/logic.md, docs/logic_thresholds.md
+## 2026-07-14 — [correction-key] docs/logic.md diverges from config.pl (OQ-37 doc-lag); logic_thresholds.md does NOT → OQ-224
+**Files:** docs/logic.md
 **Tier:** correction-key
 
-Surfaced while reconciling `logic_symbolic.md` (do NOT reconcile the narrative docs *to* these — the
-engine is the source of truth). The canonical human-readable spec is itself stale vs `config.pl`:
-`logic.md` prose + registry say Naturalized `χ<0.40` (code: `< 0.35`, `tangled_rope_chi_floor`);
-`logic.md` prose says Scaffold `χ≤0.30` / Piton `χ≤0.25` (code: `0.45`, `scaffold_extraction_ceil` /
-`piton_extraction_ceiling`). Flagged as a one-line finding per the plan's Out-of-scope; **not edited
-here** — `docs/logic.md` is a separate canonical surface that should carry its own OQ + `config.pl`
-cross-check before edits. Not yet ticketed.
+Surfaced while reconciling `logic_symbolic.md` (OQ-222); do NOT reconcile the narrative docs *to*
+these — the engine is the source of truth. **Witnessed (grep, not the plan's restatement — the plan
+overstated):** the divergences are all in `docs/logic.md`, from OQ-37 Move 1 (2026-06-01,
+`tangled_rope_chi_floor` 0.40→0.35) being only partially propagated: `:1695` param dump still `0.40`;
+Naturalized `χ<0.40` (`:2077`/`:2083`, code `<0.35`); a quick-ref table `:2565` says piton `χ≤0.25`
+while `logic.md`'s OWN prose (`:1966`/`:2012`/`:1995`) correctly says `0.45` (internally inconsistent).
+**`docs/logic_thresholds.md` does NOT diverge** for these params (its table `:197` is correct with the
+OQ-37 note); **no "Scaffold χ≤0.30" exists** in `logic.md` (its scaffold dump `:1893` is correct at
+0.45). Not edited here (separate canonical surface). **Now ticketed: OQ-224** (bundled_with OQ-222).
 
 ## 2026-07-13 — OQ-214 Phase A LANDED: `_theme_inventory` theme-naming meter (mitigated; Phase B spend-gated)
 **Files:** agent/uke_narrative_orchestrator.py, agent/narrative_transform/stage7.md, agent/narrative_transform/stage8.md, agent/narrative_transform/stage10.md, agent/uke_narrative_architecture_v0_3.md, python/tests/test_theme_inventory.py, audits/2026-07-13_oq214_theme_meter/, ISSUES.md

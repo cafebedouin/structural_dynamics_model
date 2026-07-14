@@ -10411,6 +10411,55 @@ no new reference doc is warranted now.
 
 ---
 
+## OQ-224 — docs/logic.md diverges from config.pl (OQ-37 doc-lag + a stale piton quick-ref): canonical spec surface (Ω_E)
+
+**Ω-type:** Ω_E (an empirically witnessable doc-vs-code divergence; resolution = a factual doc edit,
+the falsifier is a grep of the doc against `config.pl`).
+
+**Status:** open — surfaced 2026-07-14 while reconciling `logic_symbolic.md` (OQ-222); flagged as a
+one-line finding, not fixed in that change (separate canonical surface).
+
+**Priority:** 3
+
+**Deps:** bundled_with OQ-222
+
+*(Sibling doc↔code-sync fork: OQ-222 fixed the narrative-pipeline mirror `logic_symbolic.md`; this OQ
+covers the canonical human-readable spec `docs/logic.md`.)*
+
+**Origin:** 2026-07-14. `docs/logic.md` is nominally the formal classification spec (`CLAUDE.md`:
+"config.pl must match it"), but it has drifted from `config.pl` — and the drift is a **doc-lag from a
+ruled change**, so code is authoritative here. Root cause: **OQ-37 Move 1 (2026-06-01)** lowered
+`tangled_rope_chi_floor` 0.40→0.35; `config.pl` (`:273`) and `docs/logic_thresholds.md` (`:197`, with
+the provenance note) were updated, but `docs/logic.md` was only partially updated.
+
+**Witnessed divergences (grep, 2026-07-14; all in `docs/logic.md`):**
+- `:1695` param dump: `tangled_rope_chi_floor = **0.40**` — STALE (code/`logic_thresholds.md`: 0.35).
+- `:2077` `Naturalized(C) ↔ ε(C) > 0.45 ∧ χ < 0.40` and `:2083` "χ < 0.40 … below Tangled Rope floor" —
+  STALE (code: `χ < 0.35`, since the Naturalized χ bound IS `tangled_rope_chi_floor`).
+- `:2565` quick-ref table row `piton | theater ≥ 0.70 ∧ χ ≤ **0.25** ∧ ε > 0.10` — STALE and
+  **internally inconsistent with `logic.md`'s own prose** (`:1966`/`:2012` and the param dump `:1995`
+  all correctly say `piton_extraction_ceiling = 0.45`). Code: `χ ≤ 0.45`.
+
+**Plan-overstatement corrected (audit discipline — witness before claiming):** the originating plan
+listed "logic_thresholds.md (Naturalized 0.40→0.35)" and "logic.md prose Scaffold 0.30 / Piton 0.25"
+as divergences. Witnessed: **`logic_thresholds.md` does NOT diverge** for these params (its table is
+correct); **no "Scaffold χ ≤ 0.30" exists** in `logic.md` (its scaffold dump `:1893` correctly says
+0.45); the piton `0.25` is a single stale quick-ref table row, not the prose.
+
+**Resolution direction:** update `docs/logic.md` to code (`tangled_rope_chi_floor` 0.35 everywhere;
+Naturalized `χ < 0.35`; piton quick-ref `χ ≤ 0.45`) — these are all doc-lag behind ruled changes
+already reflected in `config.pl` + `logic_thresholds.md`, NOT a genuine spec-vs-code contest. **One
+ruling to confirm before editing:** whether any `logic.md` value is intentionally *ahead* of code (a
+spec the engine should catch up to); the OQ-37 case is unambiguously the reverse. A `config.pl`↔
+`logic.md` cross-check (the OQ-222 guard pattern, over the canonical surface) would prevent recurrence.
+
+**What resolution changes:** removes the stale/contradictory thresholds from the document CLAUDE.md
+points to as the classification spec, so a fresh reader citing `logic.md` does not inherit
+`tangled_rope_chi_floor = 0.40` / Naturalized `χ < 0.40` / piton `χ ≤ 0.25`. Not spend-gated (a doc
+edit + optional cross-check checker).
+
+---
+
 *Last updated: 2026-07-14. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

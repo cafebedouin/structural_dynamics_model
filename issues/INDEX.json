@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "d2f8b829f2957b5b6cd0f677c34ec78eeef417a8",
+    "store_version": "4cbc953bf9bd1b552720e45edbcbdd9d2d1fcd54",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-14T08:53:02"
+    "generated_at": "2026-07-14T09:03:33"
   },
-  "issues_sha": "3fe9ff63b6a0dfc5cbae050173fae31450ff57b1d43340eb538b1cd2ae3eced2",
-  "n_entries": 223,
+  "issues_sha": "2d3a5fc3e267dc8aecbda87f42ba948f939b6bfc4e519e2fc76c0eea710aea85",
+  "n_entries": 224,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 17,
     "disposed": 4,
     "future": 5,
-    "open": 63,
+    "open": 64,
     "partial": 7
   },
   "active": [
@@ -973,6 +973,20 @@
       ],
       "cross_refs": [],
       "mentioned_in": []
+    },
+    {
+      "id": "OQ-224",
+      "status": "open",
+      "priority": 3,
+      "summary": "docs/logic.md diverges from config.pl (OQ-37 doc-lag + a stale piton quick-ref): canonical spec surface (Ω_E)",
+      "deps": [
+        "bundled_with OQ-222"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-37",
+        "OQ-222"
+      ]
     }
   ],
   "archive": [
