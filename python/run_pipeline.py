@@ -815,6 +815,39 @@ def _prolog_epsilon_declaration_gate():
         )
 
 
+def _prolog_residual_signature_gate():
+    """OQ-138 standing guard: the seven residual resolve_modal_signature_conflict
+    clauses are corpus-inert.
+
+    The residual clauses ROUTE to abstain (unknown) rather than manufacture a type
+    (config residual_signature_override_enabled=0). That guard prevents silent
+    manufacture at RUNTIME; this gate is the MONITORED surface that makes a future
+    fire LOUD — a residual clause firing (a new metric-type × signature co-occurrence)
+    aborts the run, so the successor OQ auto-reopens for the owed fire-time discriminant
+    ruling rather than the fire passing silently as an abstained seat.
+
+    Runs prolog/tests/test_residual_signature_inert.pl over the live corpus:
+    (a) residual_signature_firing count == 0; (b) a non-vacuity positive control
+    (the monitor recognizes the residual shape) so the 0 is measured-empty, not
+    didn't-look (Pattern 5). Fail-closed by construction (run_tests failing ->
+    nonzero exit -> PrologError). NOT dead code: do not remove or fold into the
+    parallel tasks. Provenance: audits/2026-07-14_oq138_residual_rewitness/.
+    """
+    try:
+        run_prolog(
+            ["stack.pl", "tests/test_residual_signature_inert.pl"],
+            "corpus_loader:load_all_testsets, run_tests(residual_signature_inert)",
+        )
+    except PrologError as e:
+        raise SystemExit(
+            "OQ-138 residual-signature gate failed — a residual "
+            "resolve_modal_signature_conflict clause fired on the corpus. The guard "
+            "abstained it to unknown (no manufacture), but the fire-time discriminant "
+            "is now owed: reopen the successor OQ and rule the route (route target + "
+            f"severity), then re-run. Detail: {e}"
+        )
+
+
 def _epsilon_stability_sweep():
     """OQ-205 ε-stability sweep (data-side, r=0.02) as a pipeline step.
 
@@ -862,6 +895,13 @@ def _phase_prolog(progress, parallel):
     if progress:
         progress("pipeline", "[PROLOG] epsilon-declaration gate...")
     _prolog_epsilon_declaration_gate()
+
+    # OQ-138 standing guard — sequential fail-fast, same slot. Raises SystemExit
+    # on red (a residual signature clause fired). NOT dead code: the monitored
+    # surface for the residual-clause abstain guard (do not remove or fold in).
+    if progress:
+        progress("pipeline", "[PROLOG] residual-signature gate...")
+    _prolog_residual_signature_gate()
 
     if progress:
         progress("pipeline", "[PROLOG] Running analyses...")

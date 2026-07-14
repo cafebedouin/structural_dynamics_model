@@ -1,0 +1,17 @@
+
+
+  mountain + coordination_scaffold -> rope   [FIRES(change)]
+  mountain + constructed_low_extraction -> rope   [FIRES(change)]
+  mountain + constructed_high_extraction -> tangled_rope   [FIRES(change)]
+  mountain + constructed_constraint -> tangled_rope   [FIRES(change)]
+  unknown + coordination_scaffold -> rope   [FIRES(change)]
+  unknown + constructed_low_extraction -> rope   [FIRES(change)]
+  unknown + constructed_constraint -> tangled_rope   [FIRES(change)]
+
+  resolve_with_perspectival_check(_, ModalType=mountain, sig=coordination_scaffold) -> rope
+
+  RESIDUAL bucketing:  residual-shaped tuple in RESIDUAL? yes   (must be yes)
+                       CI-rope-shaped tuple in RESIDUAL?  no   (must be no)
+
+[CONTROL B PASS] real dispatch routes residual seat (mountain->rope) AND the column
+                 reads it as RESIDUAL while excluding the CI-rope shape (discriminates)

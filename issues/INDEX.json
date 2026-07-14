@@ -1,23 +1,23 @@
 {
   "manifest": {
-    "store_version": "4cbc953bf9bd1b552720e45edbcbdd9d2d1fcd54",
+    "store_version": "b99cd8135b646342a51ade5d32212e94563d1e91",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-14T09:03:33"
+    "generated_at": "2026-07-14T14:19:49"
   },
-  "issues_sha": "2d3a5fc3e267dc8aecbda87f42ba948f939b6bfc4e519e2fc76c0eea710aea85",
-  "n_entries": 224,
+  "issues_sha": "520f19a250708eeb7b2110e3cd9da3404eb39871c195d4435fd9f32c2d30ecde",
+  "n_entries": 225,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 127,
+    "resolved": 128,
     "mitigated": 17,
     "disposed": 4,
     "future": 5,
-    "open": 64,
-    "partial": 7
+    "open": 65,
+    "partial": 6
   },
   "active": [
     {
@@ -241,28 +241,6 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
-    },
-    {
-      "id": "OQ-138",
-      "status": "partial",
-      "priority": 3,
-      "summary": "`resolve_modal_signature_conflict` family: which signature OVERWRITES should route, not reclassify? (Ω_C + Ω_E)",
-      "deps": [
-        "splits_from OQ-128",
-        "blocked_on_human per-clause-route-vs-reclassify-ruling"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-37",
-        "OQ-50",
-        "OQ-70",
-        "OQ-90",
-        "OQ-94",
-        "OQ-98",
-        "OQ-122",
-        "OQ-128",
-        "OQ-173"
-      ]
     },
     {
       "id": "OQ-139",
@@ -986,6 +964,21 @@
       "mentioned_in": [
         "OQ-37",
         "OQ-222"
+      ]
+    },
+    {
+      "id": "OQ-225",
+      "status": "open",
+      "priority": 8,
+      "summary": "Residual-signature fire-time discriminant: rule the route when a residual clause fires (Ω_C, trigger-deferred)",
+      "deps": [
+        "splits_from OQ-138"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-90",
+        "OQ-138",
+        "OQ-169"
       ]
     }
   ],
@@ -2609,6 +2602,28 @@
       "mentioned_in": [
         "OQ-121",
         "OQ-134"
+      ]
+    },
+    {
+      "id": "OQ-138",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "`resolve_modal_signature_conflict` family: which signature OVERWRITES should route, not reclassify? (Ω_C + Ω_E)",
+      "deps": [
+        "splits_from OQ-128"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-37",
+        "OQ-50",
+        "OQ-70",
+        "OQ-90",
+        "OQ-94",
+        "OQ-98",
+        "OQ-122",
+        "OQ-128",
+        "OQ-173",
+        "OQ-225"
       ]
     },
     {

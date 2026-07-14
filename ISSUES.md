@@ -6963,25 +6963,36 @@ commit, `audits/2026-06-16_q6_crosscheck_completion/`.
 
 **Ω-type:** Ω_C (per-clause ruling: is each overwrite a load-bearing correction or a manufacturing reclassification the router should replace?) over an Ω_E base (a mechanical before/after `dr_type`+headline diff per clause).
 
-**Status:** partial — FSM sub-part RESOLVED 2026-06-21; **FCR-9 sub-part RESOLVED 2026-06-21** (seat-aware,
+**Status:** resolved — 2026-07-14. All firing families ruled + built, and the corpus-inert residual
+guarded. FSM sub-part RESOLVED 2026-06-21; **FCR-9 sub-part RESOLVED 2026-06-21** (seat-aware,
 witnessed + 5-corpus generality sweep; `audits/2026-06-21_oq138_fsm_route_conversion/FCR9_FINDINGS.md`).
 **constructed-3 sub-part RESOLVED 2026-06-21** (seat-aware + CLAIM discriminant; `CONSTRUCTED3_FINDINGS.md`).
 **CI-rope route-purity RULED KEEP + LIMB CLOSED 2026-07-02** (inherited neutron_star RED resolved MOOT;
 `CIROPE_RED_ADJUDICATION.md`). **false_natural_law sub-part RESOLVED 2026-07-03 — BUILT + witnessed**
 (commits `d248a6b1`/`82aa372e`; twin pipeline diff + per-context consumer probe + two-sided ablation;
 `audits/2026-07-02_oq138_fnl_evidence/FNL_CONVERSION_DIFF.md`).
-Remaining: constructed_high mountain-input + constructed_low/constraint (0 live changers, sub-item),
-piton-3 (OQ-90), and the ONE remaining OWED conversion build (constructed-conditional). **Per-clause RULINGS**
-(operator; see PER-CLAUSE RULINGS below): CI-rope KEEP (out of frame, evidence-settled); CI-rope route-purity
-KEEP + CLOSED (2026-07-02); FCR-9 CONVERT + piton-3 carved out (OQ-90); constructed CONVERT-conditional (owes a
-claim-discriminant witnessed to keep seat #2's floor); FNL CONVERT (2026-07-02) — BUILT 2026-07-03. The CONVERT
-rulings (FCR-9 + FNL done; constructed owes its build — conversion commit + post-build surface diff) are
-partition-witnessed. Split from OQ-128 (2026-06-17): `natural_law` overwrite (`:867`) retired, type_1 cap discriminated.
+**RESIDUAL disposition BUILT 2026-07-14** — the seven corpus-inert overwrite clauses (constructed
+mountain-input + constructed_low/constraint + coordination_scaffold) route to abstain-to-`unknown` via
+`residual_route/2` (lever `residual_signature_override_enabled=0`), byte-identical on all four legs
+(~3,061 stories; RESIDUAL=0 with the CI-rope control firing 9/18/34/37 + a residual-shape positive
+control). Runtime guard prevents silent manufacture; a fail-fast pipeline gate
+(`residual_signature_firing/1` → `_prolog_residual_signature_gate`) is the monitored surface that
+reopens **OQ-225** loud on any future fire (the fire-time discriminant ruling). Abstain target is
+`unknown` (is_real_type-filtered — cannot inflate H¹), NEVER `untyped` (footgun controlled:
+`tests/test_residual_signature_guard.pl`). Witness: `audits/2026-07-14_oq138_residual_rewitness/`.
+**Per-clause RULINGS** (operator; see PER-CLAUSE RULINGS below): CI-rope KEEP (evidence-settled);
+CI-rope route-purity KEEP + CLOSED (2026-07-02); FCR-9 CONVERT + piton-3 carved out (OQ-90);
+constructed-3 CONVERT (built 2026-06-21); FNL CONVERT (built 2026-07-03); residual seven ABSTAIN-guard
+(built 2026-07-14, fire-time discriminant → OQ-225). piton-3 remains on OQ-90. Split from OQ-128
+(2026-06-17): `natural_law` overwrite (`:867`) retired, type_1 cap discriminated.
 
 **Priority:** 3
 
-**Deps:** splits_from OQ-128, blocked_on_human per-clause-route-vs-reclassify-ruling
-*(Per-clause route-vs-reclassify is a declared seat. NB the `false_natural_law` MEMBER is gated on OQ-70 — see Origin — but that does not block FCR/FSM/constructed, so it is not an OQ-138-level dep.)*
+**Deps:** splits_from OQ-128
+*(The per-clause route-vs-reclassify ruling — the former `blocked_on_human` — is now made for every
+clause: convert (FSM/FCR-9/constructed-3/FNL), keep (CI-rope), or abstain-guard (residual seven). The
+one deferred remainder is the residual fire-time discriminant, split out as OQ-225 and gated on an
+actual fire, not on OQ-138.)*
 
 **Gate-expiry annotation (2026-07-02, OQ-70 premise-rot correction pass).** The OQ-70 gate
 named above and in the Origin/per-clause lines **expired before it was authored**: OQ-70 was
@@ -7139,15 +7150,18 @@ type it writes, not just the seat's own verdict. (Reusable form in `docs/technic
   verdict-absent (documented FCR-inert seat per CONSTRUCTED3_FINDINGS.md:21; 0-hit in FCR9_live_diff; absence
   discriminated by neutron_star's present verdict in the same dump). Only a report-layer confidence/magnitude
   flattening remains, tracked elsewhere if wanted. Witness: `CIROPE_RED_ADJUDICATION.md` §2.
-- **constructed — CONVERT the 3, gated on a claim-discriminant that keeps seat #2's floor (conditional).**
-  47/50 winners are snare→snare (inert; convert byte-identical). Behavior change is 3. Bare abstain-to-unknown
-  is refuted: it drops a severe `type_1_false_summit` on #2 (institutional_trust_erosion, RED→yellow) that
-  correctly rode the manufactured snare ⇒ constructed needs the FSM discriminated-severity template, not bare
-  abstain. Candidate discriminant: authored claim (mountain/contested keeps a floor). **Conditional** — the
-  discriminant ships only once WITNESSED to keep #2's floor while letting inert seats route free (the way FSM's
-  victim-discriminant was witnessed on protein, not argued). **Kill:** if the claim-discriminant cannot hold
-  #2's severe without also flooring genuinely-inert seats, it is the wrong discriminant and constructed
-  re-opens. Owes: conversion commit + post-build surface diff. Partition-witnessed only, not conversion-witnessed.
+- **constructed — CONVERTED (RESOLVED 2026-06-21, seat-aware + CLAIM discriminant).** [Bullet reconciled
+  2026-07-14 to its built state — the earlier "conditional / owes a conversion commit" phrasing was stale
+  (a summary-vs-substrate divergence: the build had already landed).] 47/50 winners are snare→snare (inert;
+  convert byte-identical); behavior change is 3. Bare abstain-to-unknown was refuted (it drops a severe
+  `type_1_false_summit` on #2, institutional_trust_erosion, RED→yellow), so constructed took the FSM
+  discriminated-severity template with a CLAIM discriminant (mountain→severe keeps #2's floor). **Witnessed
+  (the kill condition MET):** #2 keeps RED byte-identical (floor moved type_1→signature severe); #1/#3 route
+  to yellow/commentary; 47 inert + all non-constructed byte-identical; 5-corpus `mountain-routed→severe`
+  holds (`constructed_routed = 3/63/11/0/0`). Build: `signature_detection.pl:992` route + `constructed_routed/1`
+  + claim discriminant (`:1782`); record `audits/2026-06-21_oq138_fsm_route_conversion/CONSTRUCTED3_FINDINGS.md`
+  (content-read 2026-07-14). Scoped to constructed_high unknown-input; mountain-input + low/constraint are the
+  RESIDUAL (now guarded — see the residual disposition in Status).
 - **FCR-9 — CONVERTED (RESOLVED 2026-06-21, seat-aware); piton-3 carved out.** Build record:
   `audits/2026-06-21_oq138_fsm_route_conversion/FCR9_FINDINGS.md`. The FSM template did NOT transfer directly:
   false_ci_rope is seat-split (9 routed / 3 piton / 13 inert, one signature), so signature-level keying would
@@ -10457,6 +10471,47 @@ spec the engine should catch up to); the OQ-37 case is unambiguously the reverse
 points to as the classification spec, so a fresh reader citing `logic.md` does not inherit
 `tangled_rope_chi_floor = 0.40` / Naturalized `χ < 0.40` / piton `χ ≤ 0.25`. Not spend-gated (a doc
 edit + optional cross-check checker).
+
+---
+
+## OQ-225 — Residual-signature fire-time discriminant: rule the route when a residual clause fires (Ω_C, trigger-deferred)
+
+**Ω-type:** Ω_C (a per-fire route-vs-severity ruling — the same declared-seat class as OQ-138's
+per-clause rulings; the falsifier/trigger is Ω_E-witnessed, an actual fire on the corpus).
+
+**Status:** open — minted 2026-07-14 at OQ-138 close, **trigger-deferred** (dormant until a residual
+clause fires; cannot be worked before then — there is no seat to rule). Precedent: OQ-169 (dormant,
+trigger-deferred).
+
+**Priority:** 8
+
+**Deps:** splits_from OQ-138
+*(Not workable-now despite the edge-free default: it is gated on an external trigger — a residual
+firing — not on another OQ. The trigger is a live gate, not a memory: see the reopen mechanism.)*
+
+**Origin:** 2026-07-14, OQ-138 residual disposition. The seven corpus-inert
+`resolve_modal_signature_conflict` overwrite clauses (constructed mountain-input + constructed_low/
+constraint + coordination_scaffold) were converted to abstain-to-`unknown` (`residual_route/2`,
+lever `residual_signature_override_enabled=0`) rather than converted blind: they fire 0× on all four
+legs (~3,061 stories), so a bespoke discriminant could not be *witnessed* (no firing seat), and
+shipping one unwitnessed is exactly the move OQ-138 forbids. The abstain is the safe interim; the
+route a fired seat *should* take (revert-to-metric vs a claim/victim-discriminated severity like
+FSM/FCR/constructed) is the genuine fire-time ruling, deferred here.
+
+**Reopen mechanism (the kill condition is WIRED, not remembered).** `signature_detection:
+residual_signature_firing/1` counts residual firings; `run_pipeline._prolog_residual_signature_gate`
+(via `tests/test_residual_signature_inert.pl`) is a fail-fast pipeline gate that goes RED — aborting
+the run — on the first fire. So a fire cannot pass silently as an abstained seat; it forces this OQ
+open. The gate carries a non-vacuity positive control (the monitor recognizes the residual shape) so
+its green is measured-empty, not didn't-look.
+
+**What resolution changes.** When the gate fires: rule the route target (`unknown` abstain kept, or
+revert-to-metric, or a discriminated-severity route) and, if a floor is warranted, the discriminant
+(claim vs victim, per the FSM/constructed precedents), witnessed on the actual firing seat + a
+generality check. Until then the abstain-guard stands. Abstain target must remain `unknown`
+(is_real_type-filtered), never `untyped` (footgun; `tests/test_residual_signature_guard.pl`).
+Cross-ref: OQ-138 (parent), OQ-90 (piton-3, the other deferred residual), `signature_detection.pl`
+`residual_route/2`.
 
 ---
 
