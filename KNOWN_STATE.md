@@ -59,13 +59,30 @@ kinds ONLY; the full list is injected into stages 7/8; the post-stage-8 gate esc
 auto-rejects** (protected INVARIANT + kill condition written verbatim in-source; refrain-doesn't-gate
 locked by `python/tests/test_theme_inventory.py`).
 
-**Calibration finding (contradicts the naive expectation — see WRITEUP.md):** the density-bearing
-kinds do NOT separate the OQ-218 defect from its v0.2 fix. Runs 1&2 SEED vs IMPROVED have IDENTICAL
-anaphora/causal counts (18/10, 14/5) — the improvement lived entirely in the merit-correlated
-refrain/aphorism, which cannot gate. Earned-dense rift3 = 5.12 outscores two of three SEED defects
-(3.64, 3.31). So `THEME_DENSITY_THRESHOLD = 8.0` is PROVISIONAL, set above every observed
-earned/good dense story (rift3 5.12, run3-improved 7.21); only run3 SEED (9.10) trips it. The value
-is the injected candidate list under adjudication, not the deliberately narrow auto-gate.
+**The finding is a NULL, and the null IS the deliverable (operator ruling — see WRITEUP.md).** The
+density-bearing kinds do NOT separate the OQ-218 defect from its v0.2 fix. Runs 1&2 SEED vs IMPROVED
+have IDENTICAL anaphora/causal counts (18/10, 14/5) — the improvement lived entirely in refrain
+(40→20), the kind the ruling forbids gating on. Earned-dense rift3 = 5.12 outscores two of three
+SEED defects (3.64, 3.31). The gateable axis is orthogonal to the defect. `THEME_DENSITY_THRESHOLD =
+8.0` sits above everything good and will essentially never fire — correct for a gate that cannot
+discriminate and would damage craft if it tried.
+
+**GENERAL LAW (correction-key, learned twice): a defect is mechanically gateable IFF it has a
+merit-INDEPENDENT signature.** Counting had one (a digit means the same in a defect and a
+masterpiece) → the meter worked and could gate. Theme-naming does NOT (its surface IS the surface
+earned prose uses on purpose) → the meter cannot gate and collapses to a candidate list under
+adjudication. Not a difference of meter quality. **The bucket rule turned a false success into a
+true null:** had refrain stayed on the gate, calibration would have LOOKED successful (defect-high,
+fix-low) while suppressing rift3's creed and every earned refrain. **Honest close: the last waivable
+absence-claim is now a mechanical candidate list, but explanation-over-run is NOT metered and cannot
+be by this approach — the register problem stays reader-held (the Q2 double-No), unreachable by
+regex. The meter's existence does not move it.**
+
+**[EDGE] design-level claim (flagged, not self-ruled):** if the residual defect class is
+merit-correlated and mechanically inseparable, no deterministic backstop closes it — counting was
+plausibly the last defect with a mechanical signature, and the assisted posture becomes permanent
+architecture, not a maturity stage. "Improve the pipeline" shifts from more meters to better readers
+in the loop. Operator to rule; recorded in OQ-214.
 
 **Tripwire (promotion candidate → judged history):** a future optimizer must NOT arm the theme gate
 on refrain/aphorism/closer/word_arithmetic "for determinism" — that turns the meter into a
@@ -73,9 +90,12 @@ craft-suppressor (the hard-ban failure in a third costume). This is enforced in-
 (in-source invariant comment, `THEME_CAVEAT` rendered at every read site, the regression test), so it
 is a LOUD failure, not a silent one → stays history, not promoted to CLAUDE.md.
 
-**Graduation to resolved (Phase B, SPEND-GATED):** one full narrative run passing the structural
-gates on the new instrument; a generation-pipeline change is an ENGINE change (CLAUDE.md), OPEN until
-witnessed live. Requires operator spend-go AND the cold human read first.
+**Graduation — human read FIRST, may MOOT Phase B:** the cold human read answers whether the
+register problem is even the right target (if the improved stories read machine-made at the sentence
+level, the meter treated a symptom). Do the read; THEN decide — one Phase-B run (engine-change
+witness; low-information now the gate barely fires) OR close OQ-214 as "candidate list shipped;
+explanation-over-run confirmed un-meterable; register work reassigned to the read layer." No tokens
+spent yet.
 
 ## 2026-07-13 — OQ-219 RESOLVED: Stage-2 dominance clause implemented + validated (routing outcome a); no v0.3
 **Files:** ISSUES.md, agent/narrative_transform/stage0.md, agent/uke_narrative_orchestrator.py, python/tests/test_stage2_dominance_gate.py, agent/uke_story_v0.2.md, audits/2026-07-13_oq219_missing_floor/READOUT_dominance_clause.md, audits/2026-07-13_oq219_missing_floor/READOUT_datum_stone.md

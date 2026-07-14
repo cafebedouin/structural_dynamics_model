@@ -9690,17 +9690,54 @@ injected into stages 7/8, post-stage-8 gate escalates OPEN (never auto-rejects),
 invariant + kill condition written verbatim in-source. Calibration + controls PASS
 (`audits/2026-07-13_oq214_theme_meter/`: WRITEUP.md, calibrate_theme_meter.py, theme_density_table.txt);
 permanent regression test `python/tests/test_theme_inventory.py` locks the bucket invariant (refrain
-never moves density). **Calibration FINDING (contradicts the naive expectation):** the
-density-bearing kinds do NOT separate the OQ-218 defect from its v0.2 fix — runs 1&2 have IDENTICAL
-anaphora/causal counts across the improvement (the fix lived in the merit-correlated refrain/aphorism,
-which cannot gate), and earned-dense rift3 (5.12) outscores two of three SEED defects. So
-`THEME_DENSITY_THRESHOLD = 8.0` is PROVISIONAL, set above every observed earned-dense story (rift3
-5.12, run3-improved 7.21), reopens at first earned-dense encounter; the real value is the injected
-candidate list under adjudication, not the narrow auto-gate. **GRADUATION to resolved (Phase B,
-SPEND-GATED):** one full narrative run passing the structural gates on the new instrument (injected
-list appears in stage-7/8 prompts, gate fires/escalates correctly, a v0.2 story survives with theme
-density in the improved band) — a generation-pipeline change is an ENGINE change (CLAUDE.md), OPEN
-until witnessed on a real run. Requires operator spend-go AND the cold human read first.
+never moves density).
+
+**THE FINDING IS A NULL, and the null IS the deliverable (operator ruling, 2026-07-13).** The
+calibration killed the meter's premise, and that is the result — not a shortfall to route around.
+The density-bearing kinds do NOT separate the OQ-218 defect from its v0.2 fix: runs 1&2 have
+IDENTICAL anaphora/causal counts across the improvement (the entire fix lived in refrain, 40→20,
+the kind the operator ruling forbids gating on), and earned-dense rift3 (5.12) outscores two of
+three SEED defects. The gateable axis is orthogonal to the actual defect. **General law (learned
+twice now): a defect is mechanically gateable IFF it has a merit-INDEPENDENT signature.** Counting
+had one (a digit means the same in a defect and a masterpiece → the meter worked and could gate);
+theme-naming does NOT (its extractable surface IS the surface earned prose uses on purpose → the
+meter cannot gate and collapses to a candidate list under adjudication). The difference is not
+meter quality — it is whether the defect has a merit-independent signature. **The bucket rule is
+what turned a false success into a true null:** had refrain stayed on the gate, calibration would
+have LOOKED successful (defect-high, fix-low) while issuing revision calls against rift3's creed
+and every earned refrain — a meter that "worked" by suppressing craft. `THEME_DENSITY_THRESHOLD =
+8.0` sits above everything good and will essentially never fire — the correct behavior for a gate
+that cannot discriminate and would damage craft if it tried.
+
+**Honest close framing (do not let `mitigated` overclaim).** WHAT SHIPPED: the last waivable
+absence-claim ("Theme-naming: none found") is now backed by a mechanical high-recall candidate list
+the adjudication layer must address per-instance — the self-certifiable scan is closed. WHAT DID
+NOT: explanation over-run is NOT metered and CANNOT be by this approach; the register problem stays
+exactly where the Q2 double-No always put it — in the register, adjudicated by a reader, unreachable
+by regex. The meter's existence does not move the register problem.
+
+**GRADUATION — human read FIRST; it may MOOT Phase B (operator, 2026-07-13).** The cold human read
+is not merely ahead of Phase B procedurally — it answers the question the null raised: *is the
+register problem even the right target?* If a cold reader hears the improved stories as machine-made
+at the SENTENCE level, explanation-over-run was a symptom and the meter treated the wrong thing.
+So: (1) get the cold human read (unsampled across the arc, gates the Clean Small Song). (2) THEN
+decide — either ONE Phase-B run (witness the candidate-list injection threads a live run, satisfying
+the engine-change-stays-OPEN rule; low-information now that the gate barely fires) OR close OQ-214
+directly as **"candidate list shipped; explanation-over-run confirmed un-meterable by mechanical
+extraction; register work reassigned to the read layer."** Phase-B is a generation-pipeline (ENGINE)
+change and stays OPEN until witnessed live IF chosen — but the higher-information spend is the human
+read, and it may show Phase B would be witnessing plumbing for the wrong meter.
+
+**[EDGE] What the null surfaces past OQ-214 (flagged for the operator, not self-ruled).** If the
+pipeline's residual defect class is merit-correlated and mechanically inseparable, then no
+deterministic backstop closes it — ever. Counting was plausibly the LAST defect with a mechanical
+signature; everything left (explanation over-run, the sentence-level ceiling, break-execution) is in
+the reader-discriminated class. If that holds, the assisted posture stops being a stage of maturity
+and becomes the permanent architecture: the remaining quality gap is definitionally
+operator-and-human-held, and "improve the pipeline" shifts from *more meters* to *better readers in
+the loop*. This is the map reaching its mechanization floor — a completed map, not a failure — but
+it is a design-level claim the operator should rule, not an instance conclusion. Recorded, not
+closed.
 _Promotion context (retained):_ **PROMOTED 2026-07-13 (operator adjudication of the OQ-218
 Stage-2 batch): explanation over-run witnessed 3/3 on fresh seeds — the pipeline's residual
 defect class with counting dead. A calibration corpus now exists:** positives = the flagged
@@ -9728,7 +9765,8 @@ nominates, the register gate vetoes, neither rules alone).
 the 2026-07-11 `uke-narrative` commit series starting at `600abbae`). Counting got a deterministic
 meter (`_numeric_inventory` in `agent/uke_narrative_orchestrator.py`: orchestrator extracts every
 numeric-register item, model only adjudicates per instance, post-stage-8 density gate with
-calibrated threshold 25/1000 words). Theme-naming and Beneficiary-collapse remain governed by a
+calibrated threshold 10.0/1000 words — recalibrated 2026-07-12 from the provisional 25.0 at mint).
+Theme-naming and Beneficiary-collapse remain governed by a
 waivable model scan — R5's paste-or-void (stage7/8/10.md WITNESS RULE + the stage-8
 standalone-aphorism proxy with forced per-candidate adjudication) raises the cost of a false
 "clean" but does not eliminate it. That is exactly the failure class the counting fix eliminated:

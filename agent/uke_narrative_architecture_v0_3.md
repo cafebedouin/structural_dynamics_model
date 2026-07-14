@@ -378,12 +378,23 @@ So only the two low-merit-correlation kinds move the gate, and even they escalat
 to the operator rather than rejecting. **Kill condition:** promoting any
 merit-correlated kind (refrain/aphorism/closer/word_arithmetic) to the density
 gate "for determinism" turns the meter into a craft-suppressor — revert.
-**Calibration finding (2026-07-13, `audits/2026-07-13_oq214_theme_meter/`):** the
-density-bearing kinds do NOT separate the OQ-218 defect from its v0.2 fix (the
-fix lived in refrain/aphorism, which cannot gate); the threshold is PROVISIONAL,
-set above every observed earned-dense story (rift3 5.12, run3-improved 7.21) and
-reopens at the first earned-dense encounter above 8.0. The real value is the
-injected candidate list under adjudication, not the deliberately narrow auto-gate.
+**Calibration finding — a NULL, and the null is the deliverable (2026-07-13,
+`audits/2026-07-13_oq214_theme_meter/`):** the density-bearing kinds do NOT
+separate the OQ-218 defect from its v0.2 fix (runs 1&2 identical anaphora/causal
+counts; the fix lived entirely in refrain, which cannot gate; earned rift3=5.12
+outscores two of three defects). The gateable axis is orthogonal to the defect,
+so the threshold sits above everything good and essentially never fires.
+
+**General law (the counting↔theme mirror): a defect is mechanically gateable IFF
+it has a merit-INDEPENDENT signature.** Counting had one (a digit means the same
+in a defect and a masterpiece → `_numeric_inventory` gates); theme-naming does
+not (its surface IS the surface earned prose uses on purpose → this meter
+collapses to a candidate list under adjudication). WHAT SHIPPED: the self-
+certifiable "Theme-naming: none found" is closed — the adjudication layer gets a
+high-recall list it must address per instance. WHAT DID NOT: explanation over-run
+is not metered and cannot be by this approach; the register problem stays
+reader-held (the Q2 double-No), unreachable by regex. Do not let the meter's
+existence imply the register problem moved.
 
 ---
 

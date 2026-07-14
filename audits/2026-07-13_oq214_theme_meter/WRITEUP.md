@@ -54,6 +54,21 @@ This is not a detector artifact — the identical counts across the improvement,
 band on human literature, show the extractor measures real structure. It is the
 "expected-precision-problem contract" the plan anticipated, now confirmed by data.
 
+**The null IS the deliverable.** General law, learned twice: *a defect is mechanically gateable IFF
+it has a merit-INDEPENDENT signature.* Counting had one (a digit means the same in a defect and a
+masterpiece → `_numeric_inventory` gates); theme-naming does not (its surface IS the surface earned
+prose uses on purpose → this meter collapses to a candidate list under adjudication). The difference
+is not meter quality. **The bucket rule turned a false success into a true null:** had refrain stayed
+on the gate, calibration would have LOOKED successful — defect-high, fix-low — while issuing revision
+calls against rift3's creed and every earned refrain, actively suppressing craft. The refrain fight
+is what made the result honest.
+
+**Honest close.** WHAT SHIPPED: the last waivable absence-claim ("Theme-naming: none found") is now
+backed by a mechanical high-recall candidate list — the self-certifiable scan is closed. WHAT DID
+NOT: explanation over-run is not metered and cannot be by this approach; the register problem stays
+where the Q2 double-No always put it — in the register, adjudicated by a reader, unreachable by
+regex. The meter's existence does not move the register problem.
+
 ## Consequence for the threshold
 
 `THEME_DENSITY_THRESHOLD = 8.0`, **PROVISIONAL**, set ABOVE every observed earned/good dense story
@@ -72,8 +87,19 @@ the defect signal actually lives — not the deliberately narrow auto-gate.
 - `python/tests/test_theme_inventory.py` — permanent regression test: density-bearing kinds fire;
   refrain never arms the gate (the bucket invariant, locked).
 
-## Held for Phase B (spend-gated)
-A generation-pipeline change is an ENGINE change (CLAUDE.md): OQ-214 stays OPEN until one full
-narrative run passes the structural gates on it (injected list appears in stage-7/8 prompts, gate
-fires/escalates correctly, a v0.2 story survives with theme density in the improved band). Requires
-explicit operator spend-go AND the cold human read first (per the plan's Phase B).
+## Next: human read FIRST — it may moot Phase B
+The cold human read is not merely ahead of Phase B procedurally; it answers the question the null
+raised — *is the register problem even the right target?* If a cold reader hears the improved stories
+as machine-made at the SENTENCE level, explanation over-run was a symptom and the meter treated the
+wrong thing. Sequence: (1) get the cold human read (unsampled across the arc; gates the Clean Small
+Song). (2) THEN decide — either ONE Phase-B run (witness the candidate-list injection threads a live
+run, satisfying the engine-change-stays-OPEN rule; low-information now the gate barely fires) OR
+close OQ-214 directly as *"candidate list shipped; explanation-over-run confirmed un-meterable by
+mechanical extraction; register work reassigned to the read layer."* Phase B is a generation-pipeline
+(ENGINE) change and stays OPEN until witnessed live IF chosen. No tokens spent.
+
+**[EDGE] design-level claim surfaced, for operator ruling (not self-closed):** if the residual defect
+class is merit-correlated and mechanically inseparable, no deterministic backstop closes it — counting
+was plausibly the last defect with a mechanical signature, and the assisted posture becomes the
+permanent architecture rather than a maturity stage. "Improve the pipeline" then shifts from *more
+meters* to *better readers in the loop*. Recorded in OQ-214; the operator rules it, not this audit.
