@@ -6368,6 +6368,14 @@ legitimate de-leaked ropes don't fire; (b) demote severity / mark coarse heurist
 "authoring-time predictor of a perspective-dependent gate" (accurate, but does not address the
 5/7 rate). No trigger surgery pending the ruling.
 
+**OQ-221 datum (2026-07-16):** the partition's row 10 ran SDZ as a two-distribution condition:
+earned-side fire rate **5/7, Wilson95 [0.359, 0.918]** on the legitimately-authored shapes;
+defect side **n=0** — no witnessed genuine scaffold-gate misfire exists anywhere in the record,
+so SDZ-as-armed is reader-held at any threshold and cannot be RULED gateable until a real
+misfire is witnessed. Strengthens the calibration question's premise (5/7 is a positive earned
+rate, not noise); the remedy choice stays the operator's. Witness:
+`audits/2026-07-16_oq221_meter_partition/WRITEUP.md` row 10.
+
 **Cross-refs:** OQ-116 (MMC half resolved; the shared operator-only linter ruling), OQ-74 (seat
 divergence / de-leak-in-reverse — transfers to MMC, NOT to SDZ), OQ-117 (claim/metric
 co-authoring doctrine), `docs/design/design_discipline.md` (linter operator-vs-engine principle).
@@ -8886,6 +8894,11 @@ gate active+satisfied (0.35+0.25+0.25+0.15=1.0). Revert path (revert-on-red) unu
 
 **Evidence so far (witnessed 2026-06-25).** The cross-leg counts above (OQ-39 implementation; cross-checked against an independent inline probe — same 14 firings on `testsets/`). The prompt-locus negative (no series instruction) is a read-witness, not a memory: `grep suppression_requirement agent/uke_write_v2.1.md` is empty; the scaffold row is qualitative-only. Positive-control lesson carried from OQ-39/OQ-183: bind `C` from `corpus_loader:corpus_constraint/1` before any `cs_verdict(C, scaffold_suppression_escalating)` re-census (an unbound query returns a false 0).
 
+**OQ-221 cross-note (2026-07-16):** the meter-partition audit records this question as its row 11,
+state **BLOCKED-ON-SEAT** — deliberately not forced into the meterable/reader-held partition; the
+(a)–(d) ruling here decides whether the row re-enters (a (d) ruling exits it entirely). Operator
+deferred at the 2026-07-16 checkpoint. `audits/2026-07-16_oq221_meter_partition/WRITEUP.md` row 11.
+
 **What resolution changes.** Picks the generation-fidelity remedy and either (a/b) tightens the generation surface so future corpora honor the rule, (c) ratifies post-hoc annotation as sufficient, or (d) reclassifies the finding as a non-violation — which would re-grade OQ-39's verdict from rule-break to descriptor. Not a live correctness bug (the engine annotates, does not mis-classify); a generation-quality + rule-realism decision best ruled before the next bulk rebuild, since (a)/(b) only bind corpora generated after the change.
 
 ---
@@ -9725,6 +9738,13 @@ that cannot discriminate and would damage craft if it tried. **The law now lives
 `docs/technical/build_discipline.md` ("A deterministic gate is buildable IFF the defect has a
 merit-independent signature") for the build side, `docs/design/design_discipline.md` §11b for the
 design consequence (mechanization floor + permanent assisted posture); repo-wide test = OQ-221.
+**Update (2026-07-16, OQ-221 partition):** the law's anchor case is DEPLOYMENT-RELATIVE — the
+counting condition fired on 4/12 ratified earned texts (operator-approved rift3 at 46.04/1000,
+inside the defect band; ordinary earned prose carries ~10–16/1000 number-words), so counting
+gates only relative to the pipeline's own output distribution, never as a universal craft
+meter. Sharpened restatement ("gateability is deployment-relative; a gateable verdict names
+its denominator") proposed for build_discipline.md / design_discipline.md §11b — flagged in
+`audits/2026-07-16_oq221_meter_partition/WRITEUP.md`, operator ratifies the doc edit.
 
 **Honest close framing (do not let `mitigated` overclaim).** WHAT SHIPPED: the last waivable
 absence-claim ("Theme-naming: none found") is now backed by a mechanical high-recall candidate list
@@ -10286,8 +10306,37 @@ the blind design has owed since Stage 1.**
 **Ω-type:** Ω_E (a per-defect partition against a stated criterion; the falsifier is
 evidence-witnessable — a defect that violates its assigned bucket).
 
-**Status:** open — minted 2026-07-13 from the OQ-214 null, at operator prompt ("a new OQ to review
-the other OQs to test whether this applies… even if provisional, it applies beyond this one").
+**Status:** mitigated — 2026-07-16, two-corpus partition run + build queue
+(`audits/2026-07-16_oq221_meter_partition/`: PREREG commit `a823cd47` + checkpoint-ratification
+AMENDMENT `ad132911` predate every run; WRITEUP.md carries the table). Residual = the build
+queue (→ OQ-226) + two seat questions (row 7b arming; row 11 = OQ-185's ruling). Minted
+2026-07-13 from the OQ-214 null, at operator prompt ("a new OQ to review the other OQs to test
+whether this applies… even if provisional, it applies beyond this one").
+
+**Partition result (2026-07-16, all rates Wilson-bounded in the WRITEUP; earned story leg n=12
+= 10 external classics + rift3 + rev5, ratified at checkpoint):** row 1 counting **RULED —
+gateable within the pipeline's deployment distribution, reader-held as a universal craft meter**
+(FINDING F1: the condition fired on 4/12 earned texts, operator-approved rift3 at 46.04/1000
+INSIDE the recorded defect band — ordinary earned prose runs ~10–16/1000 number-words; the
+anchor case of the law is deployment-relative); row 2 theme-naming **RULED reader-held** (11/12
+earned fires — OQ-214 null re-confirmed); row 3 explanation over-run **UNSPECIFIABLE** (P3
+confirmed; 3 recorded specification attempts); row 4 sentence-level ceiling **UNSPECIFIABLE**
+(no per-instance defect corpus at sentence grain); row 5 break-execution **PROPOSED**; row 6
+beneficiary-collapse **PROPOSED-capped** (defect n=0); row 7 F39-as-declared **RULED
+reader-held** (3/12 earned fires: scaffold-as-gallows in Frankenstein, in-register
+classification/extraction), row 7b narrowed hard-token lexicon **PROPOSED** (build queue #1 —
+0/12 earned post-hoc, needs a fresh pre-registered confirmation set); row 8 resonant-closer
+**RULED reader-held** (11/12 earned fires; the density variant also fails — rev5 sits inside
+the defect range); row 9 word-arithmetic **PROPOSED-capped** (defect n=0, plus a witnessed
+recall gap: rev5's operator-adjudicated earned instance is percentage-form and evades
+`_WORD_ARITH_RE`); row 10 SDZ **PROPOSED-capped** (defect n=0; earned 5/7 — cross-note OQ-127);
+row 11 **BLOCKED-ON-SEAT** (OQ-185, operator deferred at checkpoint); rows 12–14 OPEN-by-scope
+with graduation steps. **Law sharpened (proposed for `build_discipline.md` /
+`design_discipline.md` §11b — flagged, operator ratifies the doc edit):** gateability is
+DEPLOYMENT-RELATIVE — separation must hold over the distribution the gate will actually meet,
+and a gateable verdict names its denominator. **Floor claim re-scoped three ways:** R5
+selection (the defect roster contains only reader-noticed defects), F1, and the endogeneity
+qualifier (genre-adjacent earned prose unmeasured).
 
 **Priority:** 3
 
@@ -10515,7 +10564,54 @@ Cross-ref: OQ-138 (parent), OQ-90 (piton-3, the other deferred residual), `signa
 
 ---
 
-*Last updated: 2026-07-14. Add new items with sequential OQ-NN labels. Mark
+## OQ-226 — Meter build queue from the OQ-221 partition: narrowed F39 lexicon, word-arithmetic recall + defect witness, break-execution overlap, beneficiary-collapse witness hook (Ω_E)
+
+**Ω-type:** Ω_E (each item is a specified firing condition awaiting a pre-registered two-corpus
+confirmation run; the falsifiers are evidence-witnessable rates).
+
+**Status:** open — minted 2026-07-16 at OQ-221 close; the queue is ranked by earned-side Wilson
+upper bound (`audits/2026-07-16_oq221_meter_partition/WRITEUP.md` → Build queue).
+
+**Priority:** 3
+
+**Deps:** splits_from OQ-221
+
+**Origin:** 2026-07-16, OQ-221 partition. The partition's PROPOSED rows are conditions specified
+to the `_numeric_inventory` precision standard but not yet RULED; graduation for each = a fresh
+PRE-REGISTERED confirmation run over both corpora (the 2026-07-16 measurements are post-hoc
+observations on the same sample the conditions were tuned against, and may not be reused as the
+confirmation).
+
+**The queue (rank = earned-side Wilson 95% upper bound at the 2026-07-16 sample):**
+1. **Narrowed F39 hard-token lexicon** {substrate, ontologically, coordination function, theater
+   ratio, tangled rope, piton, legibility} — "scaffold"/"snare"/"extraction"/"constraint"/
+   "classification" excluded (witnessed English homonyms: Frankenstein's gallows-scaffold,
+   rift3's in-register classification). Post-hoc: 0/12 earned (UB 0.243), 1/4 defect stories
+   (D6). NEEDS: fresh confirmation set including genre-adjacent earned material (the ratified
+   endogeneity qualifier: prose ABOUT systems/craft is unmeasured by both classics and pipeline
+   output); arming severity is the operator's seat. Cost: trivial (pure lexicon scan).
+2. **Word-arithmetic recall extension + defect witness** — extend `_WORD_ARITH_RE` to the
+   witnessed percentage/portion forms (rev5 L101/L129/L157 — "the fee as a portion of that
+   value", "More ore = more fee" — currently evade the minus-equals regex); keep flag-not-fail.
+   Blocked on ONE cold-read defect-side adjudication made with the row's needs firewalled (the
+   Q3 checkpoint ruling: never adjudicate an instance DEFECT because the row needs one).
+3. **Break-execution overlap condition** — n-gram overlap between a run's `break_contract`
+   target_prior text and story prose outside positional dialogue (the "story explains its own
+   break" tell; `agent/uke_narrative_orchestrator.py:937–939`). Specified, untested; cost low
+   (pure function over uke run dirs carrying break_contract).
+4. **Beneficiary-collapse witness hook** — blocked on a witnessed instance (defect n=0) and on a
+   voice-map sidecar (stage-3 voice annotations) as the condition's input
+   (`agent/narrative_transform/uke_narrative_v1_4.md:585–595` is the contract).
+
+**What resolution changes:** each graduating item converts a PROPOSED row of the OQ-221
+partition to RULED (gateable-with-named-denominator, or reader-held); item 1 is the only
+near-term candidate for a new deterministic gate anywhere in the pipeline. A failed
+confirmation is equally a result — the row moves to reader-held and the OQ-214 assisted-posture
+ruling extends to it.
+
+---
+
+*Last updated: 2026-07-16. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

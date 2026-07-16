@@ -1,0 +1,150 @@
+==============================================================================
+OQ-221 PASS-2 ADJUDICATION RUNS — deterministic conditions, both corpora
+units: fires/1000 words + per-text binary fire (PREREG AMENDMENT 1)
+==============================================================================
+
+## H1 (control) — Row 1 counting: _numeric_inventory density >= 10.0
+
+Baseline identification (two same-named files; band 37.6-47.6):
+  baseline?:the-empty-pan_rev1           density= 30.66 words=  2805 in-band=False
+  baseline?:the_empty_pan_rev1           density= 50.57 words=  5932 in-band=False
+  NOTE: neither candidate in the recorded band; using highest (baseline?:the_empty_pan_rev1) and flagging for diagnosis.
+
+  WITHIN-ROW POSITIVE CONTROL: baseline?:the_empty_pan_rev1 fires -> True
+
+  earned leg (n=12): fires=4 ['classic:eighty_yard_run.md', 'classic:philosophy_four.md', 'classic:treasure_island.md', 'pipeline:rift3']
+    classic:alice_in_wonderland.md             density=  8.03 words= 26524
+    classic:an_occurance_at_owl_creek_bridge.md density=  7.71 words=  3759
+    classic:eighty_yard_run.md                 density= 16.32 words=  5575
+    classic:frankenstein.md                    density=  5.56 words= 75042
+    classic:lysistrata.md                      density=  5.46 words= 12077
+    classic:medea.md                           density=  5.32 words= 14287
+    classic:philosophy_four.md                 density= 14.13 words= 11255
+    classic:the_old_man_and_the_sea.md         density=  7.81 words= 26646
+    classic:the_velveteen_rabbit.md            density=  6.33 words=  3951
+    classic:treasure_island.md                 density= 10.78 words= 68638
+    pipeline:rift3                             density= 46.04 words=  2932
+    pipeline:the-empty-pan_rev5                density=  0.00 words=  3453
+  earned rate = 4/12, Wilson95 [0.138, 0.609]
+
+## H2 (control) — Row 2 theme-naming: density-bearing kinds (anaphora+causal_chain)
+
+  WITHIN-ROW POSITIVE CONTROL: rift3 flagged -> True (anaph=9 causal=6 density=5.12)
+
+  text                                           dens anaph causal fire@>0
+  classic:alice_in_wonderland.md                 1.47    17     22 True
+  classic:an_occurance_at_owl_creek_bridge.md    0.00     0      0 False
+  classic:eighty_yard_run.md                     1.08     2      4 True
+  classic:frankenstein.md                        0.99     8     66 True
+  classic:lysistrata.md                          0.17     0      2 True
+  classic:medea.md                               0.42     6      0 True
+  classic:philosophy_four.md                     0.44     5      0 True
+  classic:the_old_man_and_the_sea.md             1.88    26     24 True
+  classic:the_velveteen_rabbit.md                0.51     0      2 True
+  classic:treasure_island.md                     0.64    24     20 True
+  pipeline:rift3                                 5.12     9      6 True
+  pipeline:the-empty-pan_rev5                    2.32     6      2 True
+
+  earned-side positive fires = 11/12, Wilson95 [0.646, 0.985]  (positive fires expected -> reader-held)
+  defect seed:the_good_name_book_rev1            3.64    18     10
+  defect seed:the_eighth_commentary_rev1         3.30    14      5
+  defect seed:the_table_of_winters_rev1          9.08    36     34
+
+!! FALSIFIED PREDICTION(S):
+   - FINDING F1 — H1 earned-side prediction FALSIFIED: counting fired on 4/12 earned texts (rift3 in the defect band). Diagnosis: prediction error, not instrument error (see docstring).
+   --post-diagnosis: recorded as findings; continuing to novel rows.
+
+## Row 7 — F39 framework-residue: Tier-A lexicon (declared in PREREG)
+
+  WITHIN-ROW POSITIVE CONTROL: D6 tokens in run-1 seed -> 3 hit(s)
+    [substrate] The substrate—the unwriteable care, the direct reciprocal keeping between people who knew each other's names—would remain ontologically real
+    [substrate] "Maybe. Or maybe—" He stopped. Because what? Maybe someday people would remember? Maybe the system would collapse under its own contradictio
+    [ontologically] The substrate—the unwriteable care, the direct reciprocal keeping between people who knew each other's names—would remain ontologically real
+
+  text                                         tierA   /1000  tokens
+  classic:alice_in_wonderland.md                   0   0.000  []
+  classic:an_occurance_at_owl_creek_bridge.md      0   0.000  []
+  classic:eighty_yard_run.md                       0   0.000  []
+  classic:frankenstein.md                          3   0.040  ['scaffold']
+  classic:lysistrata.md                            0   0.000  []
+  classic:medea.md                                 0   0.000  []
+  classic:philosophy_four.md                       0   0.000  []
+  classic:the_old_man_and_the_sea.md               0   0.000  []
+  classic:the_velveteen_rabbit.md                  0   0.000  []
+  classic:treasure_island.md                       0   0.000  []
+  pipeline:rift3                                   3   1.023  ['classification']
+  pipeline:the-empty-pan_rev5                      3   0.869  ['extraction']
+
+  earned-side binary fires = 3/12, Wilson95 [0.089, 0.532]
+  per-hit contexts on earned texts (adjudication surface, first 3 each):
+    classic:frankenstein.md [scaffold] You, my playfellow, my companion, my sister, perish on the scaffold!
+    classic:frankenstein.md [scaffold] perished on the scaffold as a murderess!
+    classic:frankenstein.md [scaffold] scaffold for the same crimes, I would not change places with such a
+    pipeline:rift3 [classification] Three days after that, Vent Eleven. Contamination reading 13.1%, the core having concealed the intrusion through modified clothing — an anom
+    pipeline:rift3 [classification] Three cases. Three phrases. The phrase-library had contained all three without revision or supplementary classification. The Warden logged h
+    pipeline:rift3 [classification] He looked at the log entry and could not identify what it was that made the entry feel, in some way he lacked classification for, incorrect.
+    pipeline:the-empty-pan_rev5 [extraction] But when I looked at what I had written, the marks looked like nothing. They looked like I was trying to certify his death the way Mendoza c
+    pipeline:the-empty-pan_rev5 [extraction] Túpac defends Mendoza now. He does not see that Mendoza's honesty does not reduce the extraction. The scale is true, but the fee is the trap
+    pipeline:the-empty-pan_rev5 [extraction] Túpac Mamani, first year. Arrived angry. Said Mendoza is a thief. Still sees the extraction.
+
+  defect leg:
+  seed:the_good_name_book_rev1                     3 hits  ['ontologically', 'substrate']
+  seed:the_eighth_commentary_rev1                  1 hits  ['constraint']
+  seed:the_table_of_winters_rev1                   0 hits  []
+  seed:112_ergodocity_kids_rev1                    0 hits  []
+
+## Row 8 — resonant-closer: _detect_resonant_closer (via _theme_inventory)
+
+  WITHIN-ROW POSITIVE CONTROL: ergodicity story closers surfaced = 8 (operator witnessed x4) -> PASS
+  'the way X'-form among them: 3
+    L15: They came in the second week after the last caravan, the way they always did — a Reckoner's apprentice, young,
+    L51: He said this the way a man says a thing he has said so many times he no longer hears it, and watching his stil
+    L73: I walked home with the question still in my mouth, shaped and unspoken, the way you carry a stone in your chee
+
+  text                                         closers   /1000 fire@>0
+  classic:alice_in_wonderland.md                    14   0.528 True
+  classic:an_occurance_at_owl_creek_bridge.md        7   1.862 True
+  classic:eighty_yard_run.md                         3   0.538 True
+  classic:frankenstein.md                           19   0.253 True
+  classic:lysistrata.md                              7   0.580 True
+  classic:medea.md                                   2   0.140 True
+  classic:philosophy_four.md                         9   0.800 True
+  classic:the_old_man_and_the_sea.md                31   1.163 True
+  classic:the_velveteen_rabbit.md                    0   0.000 False
+  classic:treasure_island.md                        23   0.335 True
+  pipeline:rift3                                     5   1.705 True
+  pipeline:the-empty-pan_rev5                       18   5.213 True
+
+  earned-side binary fires = 11/12, Wilson95 [0.646, 0.985]
+  defect leg:
+  seed:the_good_name_book_rev1                      59   7.672
+  seed:the_eighth_commentary_rev1                   25   4.346
+  seed:the_table_of_winters_rev1                    32   4.153
+  seed:112_ergodocity_kids_rev1                      8   3.509
+
+## Row 9 — word-arithmetic: _detect_word_arithmetic (defect leg n=0 -> PROPOSED-capped; earned rate still reported)
+
+  WITHIN-ROW POSITIVE CONTROL: rev2 wmath surfaced = 3 (expect 3) -> PASS
+    L63: Quota minus rejections equals certified placements.
+    L63: Gross minus fees, minus rent, minus food equals what's left.
+    L261: Quota minus rejections leaves too few certified placements.
+
+  text                                         wmath fire@>0
+  classic:alice_in_wonderland.md                   0 False
+  classic:an_occurance_at_owl_creek_bridge.md      0 False
+  classic:eighty_yard_run.md                       0 False
+  classic:frankenstein.md                          0 False
+  classic:lysistrata.md                            0 False
+  classic:medea.md                                 0 False
+  classic:philosophy_four.md                       0 False
+  classic:the_old_man_and_the_sea.md               0 False
+  classic:the_velveteen_rabbit.md                  0 False
+  classic:treasure_island.md                       0 False
+  pipeline:rift3                                   0 False
+  pipeline:the-empty-pan_rev5                      0 False
+  earned-side binary fires = 0/12, Wilson95 [0.000, 0.243]
+  NOTE: rev5 is IN the earned story leg; its earned instance firing here is the operator-adjudicated earned fire (ISSUES.md:9820-9823).
+
+==============================================================================
+RUN COMPLETE — controls PASS; novel-row outputs above are the witnesses.
+==============================================================================

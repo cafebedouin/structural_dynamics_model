@@ -1,0 +1,54 @@
+==============================================================================
+OQ-221 PASS-2 ADJUDICATION RUNS — deterministic conditions, both corpora
+units: fires/1000 words + per-text binary fire (PREREG AMENDMENT 1)
+==============================================================================
+
+## H1 (control) — Row 1 counting: _numeric_inventory density >= 10.0
+
+Baseline identification (two same-named files; band 37.6-47.6):
+  baseline?:the-empty-pan_rev1           density= 30.66 words=  2805 in-band=False
+  baseline?:the_empty_pan_rev1           density= 50.57 words=  5932 in-band=False
+  NOTE: neither candidate in the recorded band; using highest (baseline?:the_empty_pan_rev1) and flagging for diagnosis.
+
+  WITHIN-ROW POSITIVE CONTROL: baseline?:the_empty_pan_rev1 fires -> True
+
+  earned leg (n=12): fires=4 ['classic:eighty_yard_run.md', 'classic:philosophy_four.md', 'classic:treasure_island.md', 'pipeline:rift3']
+    classic:alice_in_wonderland.md             density=  8.03 words= 26524
+    classic:an_occurance_at_owl_creek_bridge.md density=  7.71 words=  3759
+    classic:eighty_yard_run.md                 density= 16.32 words=  5575
+    classic:frankenstein.md                    density=  5.56 words= 75042
+    classic:lysistrata.md                      density=  5.46 words= 12077
+    classic:medea.md                           density=  5.32 words= 14287
+    classic:philosophy_four.md                 density= 14.13 words= 11255
+    classic:the_old_man_and_the_sea.md         density=  7.81 words= 26646
+    classic:the_velveteen_rabbit.md            density=  6.33 words=  3951
+    classic:treasure_island.md                 density= 10.78 words= 68638
+    pipeline:rift3                             density= 46.04 words=  2932
+    pipeline:the-empty-pan_rev5                density=  0.00 words=  3453
+  earned rate = 4/12, Wilson95 [0.138, 0.609]
+
+## H2 (control) — Row 2 theme-naming: density-bearing kinds (anaphora+causal_chain)
+
+  WITHIN-ROW POSITIVE CONTROL: rift3 flagged -> True (anaph=9 causal=6 density=5.12)
+
+  text                                           dens anaph causal fire@>0
+  classic:alice_in_wonderland.md                 1.47    17     22 True
+  classic:an_occurance_at_owl_creek_bridge.md    0.00     0      0 False
+  classic:eighty_yard_run.md                     1.08     2      4 True
+  classic:frankenstein.md                        0.99     8     66 True
+  classic:lysistrata.md                          0.17     0      2 True
+  classic:medea.md                               0.42     6      0 True
+  classic:philosophy_four.md                     0.44     5      0 True
+  classic:the_old_man_and_the_sea.md             1.88    26     24 True
+  classic:the_velveteen_rabbit.md                0.51     0      2 True
+  classic:treasure_island.md                     0.64    24     20 True
+  pipeline:rift3                                 5.12     9      6 True
+  pipeline:the-empty-pan_rev5                    2.32     6      2 True
+
+  earned-side positive fires = 11/12, Wilson95 [0.646, 0.985]  (positive fires expected -> reader-held)
+  defect seed:the_good_name_book_rev1            3.64    18     10
+  defect seed:the_eighth_commentary_rev1         3.30    14      5
+  defect seed:the_table_of_winters_rev1          9.08    36     34
+
+!! CONTROL MISS — stopping before novel rows:
+   - H1: counting condition fired on earned material

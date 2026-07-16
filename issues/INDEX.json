@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "b99cd8135b646342a51ade5d32212e94563d1e91",
+    "store_version": "ad132911eabff52e4082f1a4aaf5aed7fdab7428",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-14T14:19:49"
+    "generated_at": "2026-07-16T18:09:54"
   },
-  "issues_sha": "520f19a250708eeb7b2110e3cd9da3404eb39871c195d4435fd9f32c2d30ecde",
-  "n_entries": 225,
+  "issues_sha": "7bbc545bd2027bd013ccbd0e382edb24b241466493598d16080400a93893d7a2",
+  "n_entries": 226,
   "active_token_set": [
     "investigating",
     "open",
@@ -13,7 +13,7 @@
   ],
   "per_status": {
     "resolved": 128,
-    "mitigated": 17,
+    "mitigated": 18,
     "disposed": 4,
     "future": 5,
     "open": 65,
@@ -197,7 +197,8 @@
       "mentioned_in": [
         "OQ-74",
         "OQ-116",
-        "OQ-117"
+        "OQ-117",
+        "OQ-221"
       ]
     },
     {
@@ -673,7 +674,8 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-39",
-        "OQ-183"
+        "OQ-183",
+        "OQ-221"
       ]
     },
     {
@@ -929,19 +931,6 @@
       ]
     },
     {
-      "id": "OQ-221",
-      "status": "open",
-      "priority": 3,
-      "summary": "Partition the pipeline's defect/gate set by the merit-independent-signature law (meterable vs reader-held) (Ω_E)",
-      "deps": [
-        "splits_from OQ-214"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-214"
-      ]
-    },
-    {
       "id": "OQ-223",
       "status": "open",
       "priority": 4,
@@ -979,6 +968,20 @@
         "OQ-90",
         "OQ-138",
         "OQ-169"
+      ]
+    },
+    {
+      "id": "OQ-226",
+      "status": "open",
+      "priority": 3,
+      "summary": "Meter build queue from the OQ-221 partition: narrowed F39 lexicon, word-arithmetic recall + defect witness, break-execution overlap, beneficiary-collapse witness hook (Ω_E)",
+      "deps": [
+        "splits_from OQ-221"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-214",
+        "OQ-221"
       ]
     }
   ],
@@ -3087,6 +3090,22 @@
         "OQ-215",
         "OQ-218",
         "OQ-220"
+      ]
+    },
+    {
+      "id": "OQ-221",
+      "status": "mitigated",
+      "priority": 3,
+      "summary": "Partition the pipeline's defect/gate set by the merit-independent-signature law (meterable vs reader-held) (Ω_E)",
+      "deps": [
+        "splits_from OQ-214"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-127",
+        "OQ-185",
+        "OQ-214",
+        "OQ-226"
       ]
     },
     {
