@@ -45,6 +45,31 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-16 — [correction-key] OQ-221 partition run: the merit-independent-signature law is DEPLOYMENT-RELATIVE (F1 — counting fires on earned external prose); OQ-221 mitigated, OQ-226 build queue minted
+**Files:** agent/uke_narrative_orchestrator.py, ISSUES.md, audits/2026-07-16_oq221_meter_partition/
+**Tier:** correction-key
+
+The OQ-221 two-corpus partition (PREREG `a823cd47` + checkpoint ratification `ad132911` predate
+every run; results `a6820230`) falsified the H1 earned-side prediction: `_numeric_inventory`'s
+counting condition (≥10.0/1000) fired on **4/12 ratified earned texts** — ordinary earned prose
+runs ~10–16/1000 number-words, and operator-approved **rift3 measured 46.04/1000, inside the
+recorded defect band** (its vent-logging register IS the craft). Diagnosis witnessed: prediction
+error, not instrument error (positive controls passed; fires are real tokens; threshold 10.0 was
+variance-calibrated on pipeline output, never human-prose base rates). **Correction to how the
+OQ-214 law may be cited: "counting is gateable" is true only relative to the pipeline's own
+output distribution (defect band 37.6–50.6 vs improved ≤0.5) — never as a universal craft meter.
+A gateable verdict must name its denominator.** Doc restatement for build_discipline.md /
+design_discipline.md §11b proposed-and-flagged (operator ratifies), not applied. Partition:
+rows 2/7/8 RULED reader-held; 3/4 UNSPECIFIABLE (P3 confirmed); 5 PROPOSED; 6/9/10
+PROPOSED-capped (defect n=0 — notably SDZ has NO witnessed genuine misfire, earned 5/7 →
+cross-note on OQ-127); 11 BLOCKED-ON-SEAT (OQ-185). Secondary witnessed gap: rev5's
+operator-adjudicated earned word-arithmetic is percentage-form and EVADES `_WORD_ARITH_RE`
+(recall narrower than the defect-class name) — extension queued in OQ-226 item 2. Floor claim
+re-scoped: the defect roster contains only reader-noticed defects (R5 selection check: counting
+was noticed before the meter existed).
+
+---
+
 ## 2026-07-14 — logic_symbolic.md §IV reconciled to the ENGINE + gate-context drift guard (silent-fork + Stage-5-role fork resolved)
 **Files:** agent/narrative_transform/logic_symbolic.md, agent/narrative_transform/logic_narrative_translation.md, agent/uke_narrative_orchestrator.py, python/check_logic_symbolic_drift.py, ISSUES.md
 **Tier:** landed
