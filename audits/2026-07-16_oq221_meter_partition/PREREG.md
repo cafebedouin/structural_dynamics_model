@@ -306,3 +306,65 @@ can be supported by this instrument — only "no meterable defect remains among 
 3. Pass 2: H1/H2 first (a miss stops the run); then per-row protocol over the ratified corpora.
 4. Pass 3: WRITEUP.md + ISSUES.md (OQ-221 → mitigated with build queue) + index regeneration,
    commit gated on `./scripts/gate.sh` GREEN (pasted).
+
+---
+
+## AMENDMENT 1 — checkpoint ratification (operator, 2026-07-16; recorded BEFORE Pass 2)
+
+The operator ratified at the checkpoint with the following rulings (evaluator read, verbatim
+consequences carried below). This section amends the PREREG; nothing above is silently edited.
+
+**Q1 (rosters): ratified WITH amendment — unit declaration + D→row map.**
+
+*Unit declaration (computed identically over both legs):* the E-leg mixes granularities (a
+whole story, one instance, kept lines) and a prevalence has no meaning until the unit is
+declared. Two units, both reported wherever a condition runs:
+- **fires per 1,000 words** over full texts (the rate that makes "near-zero" comparable), and
+- **per-text binary fire** at the row's threshold (the arming question).
+Story-grained earned denominator = the 10 classics + rift3 + rev5-as-full-story (operator-read
+at OQ-215 close) = 12 texts. Instance-grained items (E2's specific word-arithmetic lines,
+E3–E5 kept lines) enter only instance-level rows (row 9's contrast; row 3's earned-crystallization
+context) and are never divided into a story-grained denominator.
+
+*D→row map (a row with zero D-instances cannot show P(fire | defect) and is **PROPOSED at
+best** regardless of its earned-side rate):*
+
+| row | defect-side instances | defect n |
+|---|---|---|
+| 1 counting | D17 (baseline arc) | 1 arc |
+| 2 theme-naming | D11 (syllogism/causal), D13 (double anaphora) + the 3 SEED arms run-level | 2 inst / 3 runs |
+| 3 explanation over-run | D1, D7, D8, D9, D10, D12 | 6 |
+| 4 sentence-level ceiling | none at sentence grain (Q2 double-No is run-level testimony) | 0 |
+| 5 break-execution | D1, D7, D8–D10 (the explicit tellings that blunt the break; shared with row 3 — same instances, different question; sharing rows is permitted, sharing SIDES is not) | 5 |
+| 6 beneficiary-collapse | none | 0 → PROPOSED-capped |
+| 7 F39 residue | D6 | 1 |
+| 8 resonant-closer | D16 (×4); D2, D3, D14 mapped here as closer-shaped consolation endings (session mapping, evidence-based sort — flagged as INFERRED, in-file witness is the manifest CUT rationale) | 4+3 |
+| 9 word-arithmetic | **none** (D17 is digit-form counting, not prose word-arithmetic — checked per Q3) | 0 → PROPOSED-capped |
+| 10 SDZ (code register) | none witnessed | 0 → PROPOSED-capped |
+| 11 rising-suppression | (blocked on seat) | — |
+
+**Q2 (classics): RATIFIED as the external-provenance earned leg, with two qualifiers carried
+verbatim into the WRITEUP:**
+(a) the classics were the OQ-214 calibration negatives, so H2's confirmation on them is
+partially circular — fine for a demonstration row, worth a sentence in the WRITEUP;
+(b) the endogeneity kill is defused but the R3 scope point survives it — F39's tokens are
+earned precisely in prose *about* systems/craft, and neither 19th-century classics nor our own
+scrubbed output covers that region. A row-7 gateable ruling still carries: **"near-zero on
+classics + pipeline output; the genre-adjacent region is unmeasured."**
+
+**Q3 (pathB word-arithmetic instance): LEFT UNADJUDICATED.** The D-roster check confirms no
+D-instance is prose word-arithmetic, so row 9 has no defect leg — and that is exactly the
+condition under which pathB must NOT be adjudicated DEFECT (the judgment running backward to
+complete a contrast pair would be a counterfeit witness at the load-bearing row). Row 9 lands
+PROPOSED-or-worse honestly; its graduation step is one cold-read defect-side adjudication made
+with row 9's needs firewalled.
+
+**Q4 (row 11 seat): DEFERRED — BLOCKED-ON-SEAT recorded as the table state.** The 5–6:1 ratio
+is a base-rate fact about the pipeline's tendency; whether the tendency is a defect is the
+operator's aesthetic judgment, not to be made for the first time under checkpoint momentum.
+OQ-185 keeps the ruling.
+
+*Consequence for the partition states:* rows 6, 9, 10 are PROPOSED-capped by the zero-D rule
+above even where their conditions are executable and their earned-side rates are measurable
+(those rates are still run and reported — they answer the arming question — but no RULED state
+issues without a defect leg).
