@@ -30,7 +30,12 @@ commits — it can land before or after them.
 
 ### Producer commits (the actual fix) — partitioned by terminus, EX before FLOOR
 Each = producer edit + its own subscore line + its own fail-open callers (0c section D). All but
-C-FLOOR are latent (expect byte-identical). **Witness method: reuse the Phase-0 census TSVs as the
+C-FLOOR are latent (expect byte-identical). **Per edited .pl file, run `swipl -g halt -l <file>`
+before the pipeline** — moves a syntax-break catch from the slowest gate to seconds (the swallowed
+comma in 0a survived to the pipeline stage error; five producer commits of Prolog editing remain).
+**EX-before-FLOOR ordering demoted from insurance to confirmation:** with C-EX at zero victims, all
+floor-movers are already known to carry extraction data, so the confound the ordering guarded
+against does not exist — ship it anyway (costs nothing, argument stays clean). **Witness method: reuse the Phase-0 census TSVs as the
 clean-HEAD baseline** — run `classify_corpus(Leg, out, model)` on the edited engine per leg and
 assert per-constraint `purity_score == (census P if number & ≠ -1.0 else null)`; for C-FLOOR the
 census `disposition==unknown` rows (m5) must become JSON `null` and NOT throw.
@@ -43,6 +48,12 @@ census `disposition==unknown` rows (m5) must become JSON `null` and NOT throw.
    `metric_drift_events` drift-event sites (312/332/353/362/422) are **existential** (R3: a
    positive finding legitimately doesn't fire on absent data — leave as-is, they do not read
    "clean," they read "no positive finding").
+   **Money witness — paste per-constraint in the C-FLOOR commit body** (pre-values from census,
+   clean HEAD; post = `null`/`unknown`): `conceptual_framework_reading` 0.972 → unknown,
+   `vocabulary_collision_reading` 0.948 → unknown (both testsets, near-pristine off a fabricated
+   floor — OQ-60's thesis on real data). Full flip set = the `disposition==unknown` rows of each
+   `census_*.tsv`.
+
 2. **C-FLOOR (mech 5, THE live commit):** `boltzmann_floor_for/2` clause 3
    (`boltzmann_compliance.pl:528-529`) absent `coordination_type` → fail/sentinel per spec
    (`logic_extensions.md:746`), NOT `boltzmann_floor_default`. This makes `excess_extraction` fail

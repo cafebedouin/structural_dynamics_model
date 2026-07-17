@@ -41,6 +41,15 @@ legs m1–m4 never fire at all. This confirms and localizes the origin audit's "
 current victim" finding (`0/1106 variant_0`), and adds the empirical result that the
 **only live-firing mechanism is m5 — the one the rev-4 plan added.**
 
+**The census inverted OQ-60's premise (the headline close).** OQ-60 was witnessed on
+mechanisms 1–3 (SI-empty / coupling-grid), with mechanism 5 named only as a parenthetical
+aside ("how many corpus constraints hit the default floor is uncensused"). The census shows
+**the three witnessed mechanisms are entirely latent (zero live victims), and the uncensused
+aside — mechanism 5, the fabricated `boltzmann_floor_default` — is the only live defect.**
+Without R2's all-mechanisms scope this pass would ship four byte-identical commits and close
+OQ-60 having changed nothing. The honest close: *the witnessed mechanism was not the live one;
+the aside was.* This is the KNOWN_STATE line worth more than the fix.
+
 Implication for Phase 1: **C-SI / C-COUPLING / C-CC / C-EX are latent** (expect
 `per_constraint` byte-identical on the live-firing witness); **only C-FLOOR moves
 constraints** (scored→unknown). The m5 victims have a *full* grid (G=12) and real ε data —
@@ -100,15 +109,57 @@ constraint (override=0.12, coordination_type=enforcement_mechanism, G=12, varian
 scores exactly `purity_score = 0.3541666666666667`. This value must be byte-identical pre/post
 every commit. (Captured in `census_testsets.tsv`.)
 
-## 0d — coverage / decision statistic (partial; −1.0-in-aggregate pending 0c)
+## 0d — R3 falsifier (decidable; harness `network_p_0d.pl`)
 
-- Every leg carries ≥1 unknown post-fix. Under R3's default **coverage-1.0** gate, the
-  corpus-wide *clean* purity aggregates (`giant_component_analysis.pl:898-904` intrinsic/effective
-  min/median/mean) therefore gate to `unknown` on **all four legs**. This is precisely the R3
-  falsifier surface: coverage-1.0 blanks the whole aggregate on a single unknown member
-  (P(≥1 unknown)=1 for every leg here), so a future relaxation ruling — not this pass — decides
-  whether a threshold < 1.0 is warranted. 96/145 `testsets/` constraints carry `coexists_with`
-  edges, so per-component refinement is available if that ruling is ever taken.
+Recorded falsifier: strict coverage-1.0 is wrong iff **(a) unknowns are common in live corpora
+AND (b) gated/clean-aggregate consumers outnumber existential ones.** Both halves now measured.
+
+**(a) P(network contains ≥1 unknown), per leg** — connected components of the
+`constraint_neighbors` graph joined against the census `unknown` set:
+
+| Leg | unknown | components | P(a component has ≥1 unknown) | constraints in an unknown-containing component | **giant component contains unknown?** |
+|---|---|---|---|---|---|
+| testsets | 9/145 | 94 | 0.074 | 41/145 (28%) | **yes** (size 12) |
+| haiku | 2/960 | 123 | 0.016 | 552/960 (58%) | **yes** (size 549) |
+| flash | 80/960 | 86 | 0.163 | 817/960 (85%) | **yes** (size 783) |
+| kernel_v1 | 2/1106 | 276 | 0.007 | 335/1106 (30%) | **yes** (size 334) |
+
+Two scopes matter: at **corpus scope** (the `purity_summary` band tally / any whole-corpus mean),
+P(≥1 unknown) = **1 on every leg** — the corpus purity aggregate blanks everywhere the moment
+C-FLOOR lands. At **giant-component scope** (`giant_component:893` intrinsic/effective purity
+distribution), the giant contains an unknown on **all four legs** — that distribution blanks too.
+Per-*small*-component P is low (most components are unknown-free singletons), but the salient
+aggregates (corpus tally, giant-component distribution) are exactly the ones that blank.
+
+**(b) gated/clean-aggregate consumers vs existential/per-constraint (from 0c):**
+- **Gated aggregates (blank at coverage-1.0), ~8:** `json_report:tally_purity_bands` (corpus band
+  distribution), `giant_component:893/894` (intrinsic + effective purity distributions),
+  `maxent_report:375` (HN↔purity correlation), `maxent_diagnostic:606/616/625`
+  (count_low_purity / count_purity_available / avg_purity_for), `grothendieck:791` (H¹↔purity
+  correlation).
+- **Existential / per-constraint (fire at coverage>0; NOT blanked), ~35:** all abductive triggers,
+  metric_drift_events drift events, network_dynamics contamination detection, drl_purity_network
+  per-edge/per-constraint, drl_boltzmann_analysis per-constraint actions, per-constraint json/report
+  emit, diagnostic_summary probe.
+
+**Verdict on the recorded falsifier: half (a) holds (unknowns common — 8.3% on flash, giant blanks
+everywhere), half (b) does NOT (existential ~35 ≫ gated ~8).** The recorded criterion required
+BOTH, so by its letter it does **not** trip → coverage-1.0 default STANDS. Caveat for the ruling:
+the ~8 gated aggregates that blank are the *headline* summary statistics (corpus purity mean/band
+distribution), so blanking is high-salience even though low-count — but blanking there is honest
+abstention over a corpus 8% of which is genuinely unmeasurable, which is the *desired* behavior
+(the alternative, a mean over 92% presented as "the" mean, is OQ-60 at the aggregate layer).
+**Escalated to operator** — relaxing coverage-1.0 is a ruling the executor may not self-resolve.
+
+## 0d(rate) — 80/9/2/2 rate and cause (point 4)
+
+Rate of `unknown` among **gate-pass** constraints: testsets 9/117 = **7.7%**, haiku 2/494 = **0.4%**,
+flash 80/748 = **10.7%**, kernel_v1 2/1104 = **0.18%**. haiku and flash are **the same corpus size
+(960)** and the same topical set, so the 27× gap (10.7% vs 0.4%) is **not corpus size** — it is a
+**generating-model difference in `coordination_type` emission**: the Flash model omits
+`coordination_type` far more often than Haiku, so its constraints fall to `boltzmann_floor_default`.
+This is a **corpus/provenance finding, not an engine finding** — belongs in the writeup; the engine
+change is identical across legs.
 - **−1.0-in-aggregate census** (OQ-62, from 0c): the explicit purity averages/counts
   (`maxent_report:375`, `maxent_diagnostic:606/616/625`, `grothendieck_cohomology:791`,
   `json_report:2013`, `giant_component:893`) **already filter −1.0** (`>= 0.0` / `\= -1.0`), so
