@@ -6331,7 +6331,7 @@ cs_pattern_detection.pl:423–438 (was :404–412); cs_drift_engine.pl:67–99 a
 
 **Status:** open — split-refiled from OQ-116 on 2026-06-14 when the MMC half resolved. The
 **Priority:** 1
-**Deps:** splits_from OQ-116
+**Deps:** splits_from OQ-116, blocked_on_human sdz-demotion-ruling (demote-to-advisory or disarm pending a witnessed TP; the OQ-221 row-10 datum below shifted the burden — ruling is the operator's)
 operator-only linter ruling (OQ-116: the linter is an operator diagnostic, lint never gates
 generation, threshold-coupled codes never reach the authoring LLM) **was applied here and
 explicitly did NOT settle SDZ** — do not re-derive the MMC reasoning and extend it to SDZ; the
@@ -6368,13 +6368,18 @@ legitimate de-leaked ropes don't fire; (b) demote severity / mark coarse heurist
 "authoring-time predictor of a perspective-dependent gate" (accurate, but does not address the
 5/7 rate). No trigger surgery pending the ruling.
 
-**OQ-221 datum (2026-07-16):** the partition's row 10 ran SDZ as a two-distribution condition:
-earned-side fire rate **5/7, Wilson95 [0.359, 0.918]** on the legitimately-authored shapes;
-defect side **n=0** — no witnessed genuine scaffold-gate misfire exists anywhere in the record,
-so SDZ-as-armed is reader-held at any threshold and cannot be RULED gateable until a real
-misfire is witnessed. Strengthens the calibration question's premise (5/7 is a positive earned
-rate, not noise); the remedy choice stays the operator's. Witness:
-`audits/2026-07-16_oq221_meter_partition/WRITEUP.md` row 10.
+**OQ-221 datum → the live decision (2026-07-16; promoted from cross-note on operator review):**
+the partition's row 10 ran SDZ as a two-distribution condition: earned-side fire rate **5/7,
+Wilson95 [0.359, 0.918]** on the legitimately-authored shapes; defect side **n=0** — in the
+entire record there is no witnessed instance of the engine's scaffold gate actually misfiring.
+**Zero witnessed true positives plus a measured 5/7 false-positive rate on legitimate shapes is
+the profile of a lint that is pure suppression cost until it produces one genuine catch — the
+burden of proof now sits on SDZ, not on the stories it flags.** This moves the remedy weight
+toward (b)-or-disarm (demote to advisory / disarm pending a witnessed TP) and promotes that
+choice to this entry's live question (Deps now carries `blocked_on_human`); the ruling itself
+stays the operator's — nothing here self-resolves it. Witnesses:
+`audits/2026-07-16_oq221_meter_partition/WRITEUP.md` row 10;
+`audits/2026-06-12_cohort_zero/pilot_witness.out` (as-of 2026-06-12).
 
 **Cross-refs:** OQ-116 (MMC half resolved; the shared operator-only linter ruling), OQ-74 (seat
 divergence / de-leak-in-reverse — transfers to MMC, NOT to SDZ), OQ-117 (claim/metric
@@ -9744,7 +9749,12 @@ inside the defect band; ordinary earned prose carries ~10–16/1000 number-words
 gates only relative to the pipeline's own output distribution, never as a universal craft
 meter. Sharpened restatement ("gateability is deployment-relative; a gateable verdict names
 its denominator") proposed for build_discipline.md / design_discipline.md §11b — flagged in
-`audits/2026-07-16_oq221_meter_partition/WRITEUP.md`, operator ratifies the doc edit.
+`audits/2026-07-16_oq221_meter_partition/WRITEUP.md`, operator ratifies the doc edit. **Decay
+rider (operator review, 2026-07-16): the restatement must also name the decay condition — an
+armed gate carries its calibration distribution and a re-validation trigger (re-run the
+two-corpus measurement when the deployment distribution changes materially: model swap, genre
+shift, prompt-regime change) — else §11b ratifies gates-as-facts with a footnote and the next
+F1 waits for the next accidental audit.
 
 **Honest close framing (do not let `mitigated` overclaim).** WHAT SHIPPED: the last waivable
 absence-claim ("Theme-naming: none found") is now backed by a mechanical high-recall candidate list
@@ -10590,6 +10600,10 @@ confirmation).
    (D6). NEEDS: fresh confirmation set including genre-adjacent earned material (the ratified
    endogeneity qualifier: prose ABOUT systems/craft is unmeasured by both classics and pipeline
    output); arming severity is the operator's seat. Cost: trivial (pure lexicon scan).
+   **Recall control precedes the sample-reuse rule:** the 0/12 was measured by a sibling of an
+   instrument family with a witnessed earned-side recall gap (item 2) — an undercount biasing
+   exactly toward gateable; the confirmation instrument's zero does not count until it first
+   surfaces a PLANTED earned-form instance (within-row positive control).
 2. **Word-arithmetic recall extension + defect witness** — extend `_WORD_ARITH_RE` to the
    witnessed percentage/portion forms (rev5 L101/L129/L157 — "the fee as a portion of that
    value", "More ore = more fee" — currently evade the minus-equals regex); keep flag-not-fail.

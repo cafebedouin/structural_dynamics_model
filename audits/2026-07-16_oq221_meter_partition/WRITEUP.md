@@ -29,9 +29,30 @@ logging register would gate). The OQ-214 law survives in sharpened form:
 > will actually meet. Gateability is deployment-relative; a gateable verdict must name its
 > denominator.**
 
+**With the decay rider (added on operator review):** deployment-relativity converts every gate
+from a fact into a dated measurement — the deployment distribution moves whenever the generation
+model, genre, or prompt discipline changes, and F1 is itself the demonstration (a threshold
+calibrated on pipeline variance met a different distribution and failed silently until this
+session constructed the test). So the restatement must name the decay condition, not only the
+denominator: **an armed gate carries its calibration distribution and a re-validation trigger —
+re-run the two-corpus measurement when the deployment distribution changes materially** (model
+swap, genre shift, prompt-regime change). Without the rider, §11b would ratify gates-as-facts
+with a footnote, and the next F1 waits for the next accidental audit.
+
 This is the restatement **proposed (flagged, not rewritten)** for
 `docs/technical/build_discipline.md` ("A deterministic gate is buildable IFF…") and
 `docs/design/design_discipline.md` §11b — operator ratifies the doc edits, not this audit.
+
+### Stop-rule accounting (why ruling proceeded after the H1 miss)
+
+The PREREG stop-rule fired and the run halted (`partition_run.txt`); after diagnosis the run
+proceeded, and **the diagnosis licensed exactly the rulings made and no others**: every novel
+ruling landed in the direction insensitive to the miscalibration F1 exposed. Reader-held
+rulings are existence proofs — earned-side fires were *observed*, and a fire is real regardless
+of where any threshold sits; UNSPECIFIABLE and PROPOSED assert nothing about separation. **No
+novel row was ruled gateable.** Had any row come back gateable post-F1, ruling it would have
+violated the stop-rule (a gateable verdict leans on the calibrated half of the instrument F1
+broke) and it would have been held for a re-calibrated instrument instead.
 
 ## The partition table
 
@@ -82,6 +103,12 @@ ratified zero-D rule regardless of earned-side rate.
 1. **Row 7b — narrowed F39 hard-token lexicon.** Post-hoc 0/12 earned (UB 0.243), 1/4 defect
    stories. Cost: trivial. Graduation to RULED: pre-register the exact sublist, run over a
    FRESH confirmation set including genre-adjacent earned material; arming is the operator's.
+   **Recall control (added on operator review):** the 0/12 was measured with a sibling of an
+   instrument family with a WITNESSED earned-side recall gap (`_WORD_ARITH_RE` misses rev5's
+   percentage-form earned instance) — an undercount that biases exactly toward gateable. All
+   reader-held rulings survive a fortiori (more fires only strengthen them), but a zero does
+   not count until the confirmation instrument first demonstrates it surfaces a PLANTED
+   earned-form instance (the within-row positive control, again).
 2. **Row 9 — word-arithmetic: recall extension + defect witness.** Extend the surface to
    percentage/portion forms (the witnessed rev5 shapes), keep flag-not-fail; blocked on one
    cold-read defect-side adjudication (firewalled per Q3).
@@ -116,7 +143,8 @@ control, not a novel ruling), noted here as required.
 Where a RULED verdict exists, the contract-vs-deficit sort AGREES with the separation verdict
 in every case (rows 1, 2, 3, 4, 8; row 7 partial): **contract-violations name a finite token
 surface and trend gateable exactly when that surface is protocol-unique; standard-deficits
-trend reader-held/unspecifiable.** n is small; reported as an observed alignment, not a law.
+trend reader-held/unspecifiable.** The alignment rests on 3–4 RULED rows, all in one
+direction — consistent-with, not warrant-for.
 
 ## Escalated seat questions
 
@@ -140,3 +168,29 @@ trend reader-held/unspecifiable.** n is small; reported as an observed alignment
   "the way X" forms; the operator witnessed ×4. 8 ≥ 4 satisfies "the instrument surfaces the
   known instances," but the per-instance identity of the operator's 4 was not re-derived —
   recall against that specific list is asserted at ≥3/4, not 4/4.
+
+## Closeout verification (added on operator review — the a6820230 WRITEUP lacked the gate paste)
+
+Spot-check result, reported honestly: the gate output for commit `a6820230` was pasted in-chat
+only, not in the committed WRITEUP. Fixed here: the closeout gate run below was executed after
+the review edits (stop-rule accounting, 7b recall control, decay rider, R6 honesty sentence,
+OQ-127 promotion) and immediately before the closeout commit.
+
+Commit chain: `a823cd47` PREREG (alone) → `ad132911` ratification AMENDMENT (before Pass 2) →
+`a6820230` writeup + ISSUES.md + index → `b02e089f` KNOWN_STATE F1 entry → closeout commit
+(this file's HEAD).
+
+```
+# Gate checks
+  ✓ issues_status    226 parsed, 0 malformed
+  ✓ omega check      0 problems
+  ✓ omega selftest   selftest: all positive controls fired (10/10)
+  ✓ omega index      index --check: fresh (226 rows, 71 active / 155 archive)
+  ✓ known_state      235 entries parsed, 0 problems
+  ✓ axis boundary    [AXIS-SELFTEST] ALL PASS
+  ✓ audit cites      ERRORS: 0
+  ✓ gap surfaces     gap surfaces check: 3/3 human surfaces distinguish no_gap vs undetermined (self-test OK)
+  ✓ cli selftest     cli selftest: OK (226 commands across 17 groups)
+
+GATE: GREEN
+```
