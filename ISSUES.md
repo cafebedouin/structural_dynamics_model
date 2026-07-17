@@ -2854,7 +2854,10 @@ pairs are cross-kernel probes; OQ-58 repair progress that was logged here (2 del
 
 **Ω-type:** Ω_E (empirical — mechanism witnessed by synthetic probe; zero current corpus victims).
 
-**Status:** open — (log-only by ruling — do NOT fix in auto; see "What resolution changes")
+**Status:** partial — deliberate pass UNDERWAY (2026-07-17); supersedes the earlier log-only ruling
+(operator authorized this pass). Inert `unknown` layer landed byte-identical (commits 0a `8ada1ff2`
++ 0a.2 `30a39ab4`); producer commits (EX→FLOOR→…) + tests + Commit 0b + close pending. Recipe:
+`audits/2026-07-17_oq60_purity_absence/HANDOFF.md`.
 **Priority:** 1
 **Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §3, K5).
 **Files:** `purity_scoring.pl:62-71` (scope_invariance_subscore), `boltzmann_compliance.pl`
@@ -2878,6 +2881,28 @@ gets `has_coupling=1, F=1.0`. Related authored-zero-vs-absent instances: OQ-43/O
 (Pattern 5); `boltzmann_floor_for` clause 3 silently uses `boltzmann_floor_default=0.05` when
 `coordination_type` is absent (spec logic_extensions.md:746 says sentinel) — how many corpus
 constraints hit the default floor is uncensused.
+
+**Update (2026-07-17 — deliberate pass, `audits/2026-07-17_oq60_purity_absence/`):** Full census
+across all four legs (0 cross-check mismatches; per-process positive control) **inverts the premise
+above.** The three witnessed mechanisms (SI `variant([])`, coupling `GridSize<2`, CC/EX no-data) are
+**entirely latent — zero gate-pass victims on any leg** (they fire only on already-gate-failed
+constraints → already `-1.0`). The only LIVE defect is the parenthetical aside in *Evidence so far*:
+**mechanism 5 — `boltzmann_floor_for` clause 3's fabricated `boltzmann_floor_default=0.05`** when
+`coordination_type` is absent (scored→`unknown`: testsets 9, haiku 2, flash 80, kernel_v1 2; incl.
+`conceptual_framework_reading` 0.972 and `vocabulary_collision_reading` 0.948 scored near-pristine
+off the fabricated floor). Honest close: *the witnessed mechanism was not the live one; the aside
+was.* **Operator rulings this pass** (cite in the eventual close): **R1** no-data disposition =
+`unknown` (JSON `null`, distinct from the −1.0 epistemic-gate-fail sentinel); **R2** all-mechanisms
+scope; **R3** gate axis = **claim-type, not coverage threshold** — descriptive stats
+(mean/distribution/counts) compute over scorable + carry `n_scored/n_total`, NO gate; dispositive
+verdicts (band/clean/severity) gate at coverage 1.0 → distinct abstention token; **R4** unconditional
+per-section coverage line. Landed: complete inert `unknown` plumbing (0a throw-guards + 0a.2
+`effective_purity` second-order consumers), both witnessed byte-identical on testsets/. The
+`−1.0`-in-aggregate exposure (propagation via `effective_purity`/`fpn_intrinsic`/`gc_node_purity`,
+not the explicit means which already filter) is filed to **OQ-62**. Remaining: producer commits +
+`prolog/tests/test_purity_absence.pl` + Commit 0b (R3/R4 additive) + 4-leg witness + close; mint
+follow-ups incl. cross-leg comparability (non-random provenance exclusion, 10.7% flash vs 0.4%
+haiku). Full recipe, money witness, and the scorable-mean falsifier: `HANDOFF.md`.
 
 **What resolution changes:** Fixing changes the no-data fixed point for constraints that are not
 currently misbehaving — the latent-path-fix risk — so the fix is held for a deliberate pass, not
