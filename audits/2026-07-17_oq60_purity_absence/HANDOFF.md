@@ -53,6 +53,10 @@ census `disposition==unknown` rows (m5) must become JSON `null` and NOT throw.
    `vocabulary_collision_reading` 0.948 → unknown (both testsets, near-pristine off a fabricated
    floor — OQ-60's thesis on real data). Full flip set = the `disposition==unknown` rows of each
    `census_*.tsv`.
+   **Prediction to record in the C-FLOOR body (whole-story check, operator):** flash's
+   *scorable-mean* purity moves **DOWN** post-fix (fabricated near-pristine scores leave the
+   numerator). **If it moves UP, the 80 skewed low and the mechanism-5 account is wrong** — cheap
+   falsifier of the entire account; run it.
 
 2. **C-FLOOR (mech 5, THE live commit):** `boltzmann_floor_for/2` clause 3
    (`boltzmann_compliance.pl:528-529`) absent `coordination_type` → fail/sentinel per spec
@@ -119,7 +123,11 @@ All-bare synthetic corpus control: JSON carries `n_unknown` + abstention token; 
 Audit writeup; ISSUES.md OQ-60 → resolved (R1/R2/R3/R4); file the −1.0-in-aggregate finding to
 OQ-62 (propagation via `effective_purity`/`fpn_intrinsic`/`gc_node_purity` — see CENSUS 0c/0d);
 mint follow-ups (SI N≥5 undershoot; "every filtering section prints what it dropped"; any
-live-firing split-out; census-motivated R3 relaxation). Author Priority/Deps; regenerate
+live-firing split-out; census-motivated R3 relaxation; **cross-leg comparability** — exclusion is
+non-random w.r.t. provenance (10.7% flash vs 0.4% haiku), scorable-means not comparable across
+legs, biased before the fix and differently after; tripwire "scorable-means are not comparable
+across legs"; **build_discipline lesson** — don't write falsifiers over counts of heterogeneous
+populations, write over the load-bearing member). Author Priority/Deps; regenerate
 `omega_resolver.py index`. KNOWN_STATE dated entry + the two Architecture-Invariants tripwires
 (reading rule: two absence tokens null/unknown vs −1.0, never coerce/average; writing rule:
 clean-aggregate coverage-1.0 gate, existential fires >0 w/ coverage, abstain≠pass, unconditional
