@@ -604,7 +604,7 @@ count_low_purity(Cs, N) :-
     findall(C, (
         member(C, Cs),
         catch(purity_scoring:purity_score(C, P), _, fail),
-        P >= 0.0,  % Exclude -1.0 sentinel
+        number(P), P >= 0.0,   % OQ-60: exclude -1.0 sentinel AND `unknown`
         P < 0.50
     ), Found),
     sort(Found, Unique),
@@ -614,7 +614,7 @@ count_purity_available(Cs, N) :-
     findall(C, (
         member(C, Cs),
         catch(purity_scoring:purity_score(C, P), _, fail),
-        P >= 0.0
+        number(P), P >= 0.0   % OQ-60: exclude -1.0 AND `unknown`
     ), Found),
     sort(Found, Unique),
     length(Unique, N).
@@ -623,7 +623,7 @@ avg_purity_for(Cs, Avg) :-
     findall(P, (
         member(C, Cs),
         catch(purity_scoring:purity_score(C, P), _, fail),
-        P >= 0.0
+        number(P), P >= 0.0   % OQ-60: exclude -1.0 AND `unknown`
     ), Ps),
     (   Ps \= []
     ->  sum_list(Ps, Sum),

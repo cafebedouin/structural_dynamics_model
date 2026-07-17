@@ -373,7 +373,7 @@ report_cross_diagnostic_correlation(Constraints, Context) :-
         (   member(C, Constraints),
             maxent_classifier:maxent_entropy(C, Context, HN),
             catch(purity_scoring:purity_score(C, Purity), _, fail),
-            Purity >= 0.0  % Exclude sentinel -1.0
+            number(Purity), Purity >= 0.0  % OQ-60: exclude sentinel -1.0 AND `unknown`
         ),
         EPRows),
 

@@ -227,7 +227,7 @@ effective_purity(C, Context, EffPurity, purity_components(Intrinsic, TotalContam
     ->  TotalContam = 0.0,
         Detail = no_neighbors,
         EffPurity = Intrinsic
-    ;   Intrinsic < 0.0
+    ;   ( \+ number(Intrinsic) ; Intrinsic < 0.0 )   % OQ-60: unknown intrinsic → unknown effective (R3 propagation); -1.0 unchanged
     ->  TotalContam = 0.0,
         Detail = no_neighbors,
         EffPurity = Intrinsic
@@ -298,7 +298,7 @@ compute_edge_contamination(C, _MyPurity, Other, _EdgeStrength, _Context, 0.0, ed
     !.
 compute_edge_contamination(_C, MyPurity, Other, EdgeStrength, Context, Contam, edge(Other, Delta, Contam)) :-
     purity_scoring:purity_score(Other, OtherPurity),
-    OtherPurity >= 0.0,
+    number(OtherPurity), OtherPurity >= 0.0,   % OQ-60: unknown neighbor → fall to the 0.0 fallback clause (no contamination)
     !,
     Delta is max(0.0, MyPurity - OtherPurity),
     (   Delta > 0.0
@@ -322,8 +322,8 @@ purity_contamination_pressure(Src, Tgt, Context, pressure(Delta, Attenuation, Ty
     constraint_indexing:valid_context(Context),
     purity_scoring:purity_score(Src, SrcPurity),
     purity_scoring:purity_score(Tgt, TgtPurity),
-    SrcPurity >= 0.0,
-    TgtPurity >= 0.0,
+    number(SrcPurity), SrcPurity >= 0.0,   % OQ-60: unknown → clause fails (no pressure computed)
+    number(TgtPurity), TgtPurity >= 0.0,
     Delta is max(0.0, TgtPurity - SrcPurity),
     config:param(purity_attenuation_factor, AttFactor),
     constraint_neighbors(Tgt, Context, Neighbors),
@@ -419,6 +419,7 @@ weighted_sum_acc(EP-W, AccEP-AccW, NewAccEP-NewAccW) :-
 contamination_path(Src, Tgt, Context, Path, Loss) :-
     constraint_indexing:valid_context(Context),
     purity_scoring:purity_score(Src, SrcP),
+    number(SrcP),   % OQ-60: unknown source purity → no path (build_path_steps does arithmetic on SrcP)
     bfs_path(Src, Tgt, Context, [Src], RevPath),
     reverse(RevPath, FwdPath),
     build_path_steps(FwdPath, Context, Path, 0.0, Loss, SrcP).
@@ -460,7 +461,8 @@ network_qualified_action(C, Context, QAction, Rationale) :-
     constraint_indexing:valid_context(Context),
     effective_purity(C, Context, EffPurity, _Components),
     purity_scoring:purity_score(C, Intrinsic),
-    (   Intrinsic >= 0.0,
+    (   number(Intrinsic), number(EffPurity),   % OQ-60: unknown → else-branch (delegate), never throw
+        Intrinsic >= 0.0,
         EffPurity >= 0.0,
         Drop is Intrinsic - EffPurity,
         Drop >= 0.05

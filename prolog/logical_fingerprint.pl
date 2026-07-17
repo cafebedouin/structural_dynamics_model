@@ -590,6 +590,10 @@ print_fingerprint(C) :-
     (fingerprint_coupling(C, coupling(Cat, Score, Pairs, Comp, Purity))
     -> (Score = unknown
        -> format('  Coupling:   ~w (insufficient data)~n', [Cat])
+       ;  \+ number(Purity)   % OQ-60: `unknown` no-data (distinct from -1.0 inconclusive)
+       -> format('  Coupling:   ~w (score=~3f, pairs=~w, boltzmann=~w)~n',
+                  [Cat, Score, Pairs, Comp]),
+          format('  Purity:     ~w (no data)~n', [Purity])
        ;  Purity =:= -1.0
        -> format('  Coupling:   ~w (score=~3f, pairs=~w, boltzmann=~w)~n',
                   [Cat, Score, Pairs, Comp]),
@@ -604,6 +608,10 @@ print_fingerprint(C) :-
 
 %% purity_zone(+Score, -Zone)
 %  Categorizes purity score into named zones for display.
+%  OQ-60: purity_score/2 can return the atom `unknown` (no-data). Guard the
+%  arithmetic so a non-number yields zone `unknown` rather than throwing
+%  type_error(evaluable, unknown/0). Inert until a producer emits `unknown`.
+purity_zone(S, unknown)      :- \+ number(S), !.
 purity_zone(S, pristine)     :- S >= 0.90, !.
 purity_zone(S, sound)        :- S >= 0.70, !.
 purity_zone(S, borderline)   :- S >= 0.50, !.

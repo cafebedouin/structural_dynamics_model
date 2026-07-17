@@ -227,7 +227,7 @@ probe_boltzmann(C, DetType, Signal) :-
 %% probe_purity(+C, +DetType, -Signal)
 probe_purity(C, DetType, Signal) :-
     (   catch(purity_scoring:purity_score(C, PScore), _, fail),
-        PScore \= -1.0
+        number(PScore), PScore \= -1.0   % OQ-60: `unknown \= -1.0` succeeds; number/1 routes no-data to the else
     ->  logical_fingerprint:purity_zone(PScore, Zone),
         (   (DetType = mountain ; DetType = rope)
         ->  (   (Zone = pristine ; Zone = sound)

@@ -65,7 +65,7 @@ detect_network_contamination(C, Context, evidence(drifting_neighbors, ContagionL
     constraint_indexing:valid_context(Context),
     drl_purity_network:effective_purity(C, Context, EP, _Components),
     purity_scoring:purity_score(C, IP),
-    IP >= 0.0,
+    number(IP), IP >= 0.0,   % OQ-60: unknown → clause fails (no contamination evidence)
     network_drift_contagion(C, Context, ContagionList),
     ContagionList \= [].
 
@@ -80,7 +80,7 @@ detect_network_contamination(C, Context, evidence(drifting_neighbors, ContagionL
 network_drift_contagion(C, Context, ContagionList) :-
     constraint_indexing:valid_context(Context),
     purity_scoring:purity_score(C, MyPurity),
-    (   MyPurity < 0.0
+    (   ( \+ number(MyPurity) ; MyPurity < 0.0 )   % OQ-60: unknown → empty contagion (same as sentinel)
     ->  ContagionList = []
     ;   drl_purity_network:constraint_neighbors(C, Context, Neighbors),
         findall(
@@ -98,7 +98,7 @@ network_drift_contagion(C, Context, ContagionList) :-
 %  Inline edge contamination using same formula as compute_edge_contamination/7.
 compute_neighbor_contamination(MyPurity, Other, EdgeStrength, Context, EdgeContam) :-
     purity_scoring:purity_score(Other, OtherPurity),
-    OtherPurity >= 0.0,
+    number(OtherPurity), OtherPurity >= 0.0,   % OQ-60: unknown neighbor → no contamination
     Delta is max(0.0, MyPurity - OtherPurity),
     (   Delta > 0.0
     ->  config:param(purity_attenuation_factor, AttFactor),
@@ -127,7 +127,7 @@ network_drift_velocity(C, Context, Velocity, Contributors) :-
     constraint_indexing:valid_context(Context),
     drl_purity_network:constraint_neighbors(C, Context, Neighbors),
     purity_scoring:purity_score(C, MyPurity),
-    (   MyPurity < 0.0
+    (   ( \+ number(MyPurity) ; MyPurity < 0.0 )   % OQ-60: unknown → zero velocity (same as sentinel)
     ->  Velocity = 0.0, Contributors = []
     ;   drl_core:dr_type(C, Context, MyType),
         drl_purity_network:type_immunity(MyType, Immunity),

@@ -103,9 +103,14 @@ fpn_precompute(Constraints, Context) :-
 
 fpn_precompute_constraints([], _).
 fpn_precompute_constraints([C|Cs], Context) :-
-    % Cache intrinsic purity
-    (   purity_scoring:purity_score(C, IP)
-    ->  true
+    % Cache intrinsic purity.
+    % OQ-60: no-data `unknown` collapses to the FPN cache's established -1.0 no-data
+    % sentinel here — the Jacobi iterator treats -1.0 as "skip" throughout, and the
+    % unknown/-1.0 distinction is preserved at the purity_score API + JSON layer
+    % (json_report falls back to purity_score → null). number/1 also stops `unknown`
+    % from poisoning the iterator's arithmetic. Inert until a producer emits `unknown`.
+    (   purity_scoring:purity_score(C, IP0), number(IP0)
+    ->  IP = IP0
     ;   IP = -1.0
     ),
     assertz(fpn_intrinsic(C, IP)),
@@ -251,7 +256,7 @@ fpn_edge_contamination(MyPurity, Other, EdgeStrength, Context, Contam) :-
 % they aren't being iterated.
 fpn_edge_contamination(MyPurity, Other, EdgeStrength, Context, Contam) :-
     purity_scoring:purity_score(Other, OtherPurity),
-    OtherPurity >= 0.0,
+    number(OtherPurity), OtherPurity >= 0.0,   % OQ-60: unknown neighbor → 0.0 fallback clause
     !,
     Delta is max(0.0, MyPurity - OtherPurity),
     (   Delta > 0.0

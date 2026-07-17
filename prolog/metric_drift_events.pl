@@ -376,7 +376,7 @@ reform_pressure(C, Pressure) :-
 %% detect_purity_drift(+ConstraintID)
 detect_purity_drift(C) :-
     purity_scoring:purity_score(C, Purity),
-    Purity >= 0.0,
+    number(Purity), Purity >= 0.0,   % OQ-60: unknown -> clause fails (no drift event)
     collect_purity_decline_signals(C, Signals),
     Signals \= [],
     length(Signals, N),
@@ -388,7 +388,7 @@ detect_purity_drift(C) :-
 drift_event(C, purity_drift,
             evidence(current_purity, Purity, decline_signals, Signals)) :-
     purity_scoring:purity_score(C, Purity),
-    Purity >= 0.0,
+    number(Purity), Purity >= 0.0,   % OQ-60: unknown -> clause fails (no drift event)
     collect_purity_decline_signals(C, Signals),
     Signals \= [].
 
@@ -397,7 +397,7 @@ drift_event(C, Context, purity_drift_indexed,
             evidence(current_purity, Purity, chi, Chi, signals, Signals)) :-
     constraint_indexing:valid_context(Context),
     purity_scoring:purity_score(C, Purity),
-    Purity >= 0.0,
+    number(Purity), Purity >= 0.0,   % OQ-60: unknown -> clause fails (no drift event)
     constraint_indexing:extractiveness_for_agent(C, Context, Chi),
     collect_purity_decline_signals(C, Signals),
     Signals \= [].
@@ -493,13 +493,13 @@ drift_velocity(C, Metric, Rate) :-
 
 drift_severity(C, purity_drift, critical) :-
     purity_scoring:purity_score(C, Purity),
-    Purity < 0.30,
+    number(Purity), Purity < 0.30,   % OQ-60: unknown -> clause fails (falls through to warning/watch)
     collect_purity_decline_signals(C, Signals),
     length(Signals, N), N >= 3, !.
 
 drift_severity(C, purity_drift, warning) :-
     purity_scoring:purity_score(C, Purity),
-    Purity < 0.50, !.
+    number(Purity), Purity < 0.50, !.   % OQ-60: unknown -> clause fails (falls through to watch)
 drift_severity(C, purity_drift, warning) :-
     collect_purity_decline_signals(C, Signals),
     length(Signals, N), N >= 2, !.

@@ -789,7 +789,7 @@ cohomology_selftest :-
         (   findall(P,
                 (cached_obstruction(C, _, V),
                  purity_scoring:purity_score(C, P),
-                 P >= 0.0),  % Exclude -1.0 sentinel
+                 number(P), P >= 0.0),  % OQ-60: exclude -1.0 sentinel AND `unknown`
                 Purities),
             (   Purities \= []
             ->  sum_list(Purities, SumP),

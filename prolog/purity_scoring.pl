@@ -46,8 +46,16 @@ purity_score(C, Score) :-
     scope_invariance_subscore(C, SI),
     coupling_cleanliness_subscore(C, CC),
     excess_extraction_subscore(C, EX),
-    RawScore is 0.30 * F + 0.25 * SI + 0.25 * CC + 0.20 * EX,
-    Score is min(1.0, max(0.0, RawScore)).
+    % OQ-60: a subscore may report `unknown` (no-data) once its producer commit
+    % lands. No-data is not perfection — propagate `unknown` rather than feeding
+    % it to the weighted sum (which would throw). Distinct from the -1.0
+    % epistemic-gate-fail sentinel below (short-circuited by the cut above).
+    % Inert until a producer emits `unknown` (Commit 0a is byte-identical).
+    (   ( F == unknown ; SI == unknown ; CC == unknown ; EX == unknown )
+    ->  Score = unknown
+    ;   RawScore is 0.30 * F + 0.25 * SI + 0.25 * CC + 0.20 * EX,
+        Score is min(1.0, max(0.0, RawScore))
+    ).
 purity_score(_, -1.0).  % Sentinel for insufficient epistemic data
 
 %% factorization_subscore(+C, -F)

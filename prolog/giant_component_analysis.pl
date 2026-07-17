@@ -350,8 +350,13 @@ precompute_props_loop([C|Cs], Context, Done, Total) :-
     ),
     assertz(gc_node_type(C, Context, Type)),
     % Purity
-    (   catch(purity_scoring:purity_score(C, IntrinsicP), _, IntrinsicP = -1.0)
-    ->  true
+    % OQ-60: `unknown` (no-data) is not an exception, so the catch recovery does
+    % not fire — collapse it to the gc cache's -1.0 no-data sentinel so the
+    % `IP >= 0.0` distribution filters exclude it (as they do -1.0) rather than
+    % throwing in sumlist. Inert until a producer emits `unknown`.
+    (   catch(purity_scoring:purity_score(C, IntrinsicP0), _, IntrinsicP0 = -1.0),
+        number(IntrinsicP0)
+    ->  IntrinsicP = IntrinsicP0
     ;   IntrinsicP = -1.0
     ),
     (   catch(drl_purity_network:effective_purity(C, Context, EffP, _), _, EffP = -1.0)

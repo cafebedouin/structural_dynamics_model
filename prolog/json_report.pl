@@ -319,8 +319,11 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     format(S, ',~n', []),
 
     % purity_score + purity_band
+    % OQ-60: `number(PScore), PScore \= -1.0` — `unknown \= -1.0` succeeds, so the
+    % bare `\=` guard would leak `unknown` into purity_zone/write_json_number;
+    % route both -1.0 (gate-fail) and `unknown` (no-data) to JSON null.
     (   catch(purity_scoring:purity_score(C, PScore), _, fail),
-        PScore \= -1.0
+        number(PScore), PScore \= -1.0
     ->  logical_fingerprint:purity_zone(PScore, PBand)
     ;   PScore = null, PBand = null
     ),
@@ -1266,11 +1269,11 @@ boltzmann_label(_, unknown).
 %  propagation delta, and neighbor list with edge metadata.
 write_contamination_network(S, C, Context) :-
     % Intrinsic purity: prefer FPN cache, fall back to purity_score/2
-    (   catch(fpn_intrinsic(C, IP0), _, fail), IP0 \= -1.0
+    (   catch(fpn_intrinsic(C, IP0), _, fail), number(IP0), IP0 \= -1.0
     ->  IP = IP0
-    ;   (   catch(purity_scoring:purity_score(C, IP1), _, fail), IP1 \= -1.0
+    ;   (   catch(purity_scoring:purity_score(C, IP1), _, fail), number(IP1), IP1 \= -1.0
         ->  IP = IP1
-        ;   IP = null
+        ;   IP = null   % OQ-60: -1.0 gate-fail OR `unknown` no-data → null
         )
     ),
     % Effective purity: from FPN iteration state
@@ -2011,7 +2014,7 @@ tally_purity_bands(Constraints, Pairs) :-
     findall(Zone,
             (   member(C, Constraints),
                 catch(purity_scoring:purity_score(C, PS), _, fail),
-                PS \= -1.0,
+                number(PS), PS \= -1.0,   % OQ-60: exclude `unknown` (and -1.0) from the band tally
                 logical_fingerprint:purity_zone(PS, Zone)),
             Zones),
     msort(Zones, Sorted),

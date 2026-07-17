@@ -409,7 +409,7 @@ stress_indicator(C, _Context, has_false_signature) :-
 
 stress_indicator(C, _Context, low_purity) :-
     catch(purity_scoring:purity_score(C, P), _, fail),
-    P >= 0.0,
+    number(P), P >= 0.0,   % OQ-60: unknown -> no low_purity indicator (catch doesn't fire on a successful `unknown`)
     config:param(abductive_stress_purity_threshold, PT),
     P < PT.
 

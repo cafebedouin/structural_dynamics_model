@@ -267,7 +267,7 @@ coupling_aware_scaffold_need(C, Context, Assessment) :-
 %  constraint's current purity already exceeds 0.85.
 purity_reform_target(C, Target) :-
     purity_scoring:purity_score(C, Purity),
-    Purity >= 0.0, !,
+    number(Purity), Purity >= 0.0, !,   % OQ-60: unknown -> clause fails (no reform target)
     Target is max(Purity, 0.85).
 purity_reform_target(_, 0.85).  % Fallback if purity inconclusive
 
@@ -290,7 +290,7 @@ purity_reform_recommendation(C, reform_recommendation(
         Reformability, Pressure, Deficits, Urgency)) :-
     % Get current purity
     purity_scoring:purity_score(C, CurrentPurity),
-    CurrentPurity >= 0.0,
+    number(CurrentPurity), CurrentPurity >= 0.0,   % OQ-60: unknown -> clause fails
 
     % Compute target and gap
     purity_reform_target(C, TargetPurity),
@@ -423,6 +423,7 @@ purity_qualified_action(C, Context, QAction, Rationale) :-
     constraint_indexing:valid_context(Context),
     drl_core:dr_action(C, Context, BaseAction),
     purity_scoring:purity_score(C, Purity),
+    number(Purity),   % OQ-60: unknown -> clause fails (qualify_action compares Purity internally)
     qualify_action(BaseAction, Purity, C, QAction, Rationale).
 
 %% purity_qualified_action(+C, -QAction, -Rationale)
@@ -542,6 +543,7 @@ purity_adjusted_energy(C, Context, BaseAction, energy_cost(BaseCost, Mult, Adjus
     constraint_indexing:valid_context(Context),
     base_action_complexity(BaseAction, BaseCost),
     purity_scoring:purity_score(C, Purity),
+    number(Purity),   % OQ-60: unknown -> clause fails (energy_multiplier compares Purity internally)
     config:param(purity_energy_max_multiplier, MaxMult),
     energy_multiplier(BaseAction, Purity, MaxMult, Mult),
     Adjusted is BaseCost * Mult.
@@ -599,7 +601,7 @@ energy_multiplier(_, _, _, 1.0).
 
 action_composition_gate(C, surgical_reform, gate(Pass, Reason)) :-
     purity_scoring:purity_score(C, Purity),
-    (   Purity < 0.0
+    (   ( \+ number(Purity) ; Purity < 0.0 )   % OQ-60: unknown -> no_gate_defined (same as sentinel)
     ->  Pass = pass, Reason = no_gate_defined
     ;   config:param(purity_surgical_reform_gate, MinPurity),
         (   Purity >= MinPurity
@@ -614,7 +616,7 @@ action_composition_gate(C, surgical_reform, gate(Pass, Reason)) :-
 
 action_composition_gate(C, safe_transition, gate(Pass, Reason)) :-
     purity_scoring:purity_score(C, Purity),
-    (   Purity < 0.0
+    (   ( \+ number(Purity) ; Purity < 0.0 )   % OQ-60: unknown -> no_gate_defined (same as sentinel)
     ->  Pass = pass, Reason = no_gate_defined
     ;   config:param(purity_scaffold_health_gate, MinPurity),
         (   Purity >= MinPurity
@@ -625,7 +627,7 @@ action_composition_gate(C, safe_transition, gate(Pass, Reason)) :-
 
 action_composition_gate(C, efficient_coordination, gate(Pass, Reason)) :-
     purity_scoring:purity_score(C, Purity),
-    (   Purity < 0.0
+    (   ( \+ number(Purity) ; Purity < 0.0 )   % OQ-60: unknown -> no_gate_defined (same as sentinel)
     ->  Pass = pass, Reason = no_gate_defined
     ;   config:param(purity_action_escalation_floor, MinPurity),
         (   Purity >= MinPurity
@@ -659,6 +661,7 @@ purity_scaffold_urgency(C, Context, Urgency, Factors) :-
     ;   BaseAssessment = no_scaffold_needed
     ),
     purity_scoring:purity_score(C, Purity),
+    number(Purity),   % OQ-60: unknown -> clause fails (compute_scaffold_urgency compares Purity internally)
     has_purity_drift(C, DriftDetected),
     compute_scaffold_urgency(BaseAssessment, Purity, DriftDetected, Urgency, Factors).
 
