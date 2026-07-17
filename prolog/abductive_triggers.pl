@@ -575,6 +575,7 @@ trigger_contamination_cascade(C, Context, Hypothesis) :-
     % FPN EP divergence exceeds threshold
     catch(drl_modal_logic:fpn_ep(C, Context, FPNEP), _, fail),
     catch(drl_modal_logic:effective_purity(C, Context, OneHopEP), _, fail),
+    number(OneHopEP), number(FPNEP),   % OQ-60: effective_purity can propagate `unknown` (0a)
     Divergence is abs(OneHopEP - FPNEP),
     config:param(abductive_fpn_divergence_threshold, DivThresh),
     Divergence > DivThresh,

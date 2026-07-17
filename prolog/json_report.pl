@@ -1277,12 +1277,12 @@ write_contamination_network(S, C, Context) :-
         )
     ),
     % Effective purity: from FPN iteration state
-    (   catch(fpn_ep(C, Context, EP0), _, fail), EP0 \= -1.0
+    (   catch(fpn_ep(C, Context, EP0), _, fail), number(EP0), EP0 \= -1.0
     ->  EP = EP0
-    ;   EP = IP   % no FPN or no data → effective = intrinsic
+    ;   EP = IP   % no FPN or no data → effective = intrinsic (IP already null-safe above)
     ),
     % Delta = effective - intrinsic (negative = contaminated)
-    (   IP \= null, EP \= null
+    (   number(IP), number(EP)   % OQ-60: `unknown`/null-safe (was `\= null`, which lets `unknown` through)
     ->  Delta is EP - IP
     ;   Delta = null
     ),

@@ -359,8 +359,12 @@ precompute_props_loop([C|Cs], Context, Done, Total) :-
     ->  IntrinsicP = IntrinsicP0
     ;   IntrinsicP = -1.0
     ),
-    (   catch(drl_purity_network:effective_purity(C, Context, EffP, _), _, EffP = -1.0)
-    ->  true
+    % OQ-60: effective_purity can now propagate `unknown` (0a) — not an exception,
+    % so collapse to the gc cache's -1.0 no-data sentinel (as with IntrinsicP above)
+    % so the `EP >= 0.0` distribution filters exclude it rather than throwing.
+    (   catch(drl_purity_network:effective_purity(C, Context, EffP0, _), _, EffP0 = -1.0),
+        number(EffP0)
+    ->  EffP = EffP0
     ;   EffP = -1.0
     ),
     assertz(gc_node_purity(C, IntrinsicP, EffP)),

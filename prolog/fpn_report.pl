@@ -106,6 +106,7 @@ type_safe(C, Context, Type) :-
    PURITY ZONES
    ================================================================ */
 
+purity_zone(EP, unknown)   :- \+ number(EP), !.   % OQ-60: effective_purity can propagate `unknown` (0a)
 purity_zone(EP, sound)     :- EP >= 0.70, !.
 purity_zone(EP, contested) :- EP >= 0.50, !.
 purity_zone(EP, degraded)  :- EP >= 0.30, !.

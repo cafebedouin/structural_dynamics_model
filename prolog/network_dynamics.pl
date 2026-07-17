@@ -166,7 +166,7 @@ sum_contributions([contributor(_, _, _, C)|Rest], Total) :-
 cascade_prediction(C, Context, Crossings) :-
     constraint_indexing:valid_context(Context),
     drl_purity_network:effective_purity(C, Context, EP, _),
-    EP >= 0.0,
+    number(EP), EP >= 0.0,   % OQ-60: effective_purity now propagates `unknown` (0a) → skip (no cascade prediction)
     network_drift_velocity(C, Context, Velocity, _),
     config:param(network_drift_velocity_threshold, VelThresh),
     Velocity >= VelThresh,
@@ -250,6 +250,9 @@ network_drift_severity(C, Context, Severity) :-
     ).
 
 %% ep_base_severity(+EP, -Severity)
+% OQ-60 (R3 dispositive): effective_purity can be `unknown` (no-data). A severity
+% band is a VERDICT — it abstains rather than fabricating `watch` from absence.
+ep_base_severity(EP, undetermined) :- \+ number(EP), !.
 ep_base_severity(EP, critical) :- EP < 0.30, !.
 ep_base_severity(EP, warning) :- EP < 0.70, !.
 ep_base_severity(_, watch).

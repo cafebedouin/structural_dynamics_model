@@ -350,7 +350,7 @@ network_purity_metrics(Context, network_metrics(WeakestLink, AvgPurity, AtRiskCo
         narrative_ontology:constraint_claim(C, _),
         \+ is_list(C),
         effective_purity(C, Context, EP, _),
-        EP >= 0.0
+        number(EP), EP >= 0.0   % OQ-60: unknown effective (0a propagation) → excluded from scorable set
     ), Pairs),
     length(Pairs, Total),
     (   Total > 0
@@ -390,6 +390,7 @@ cluster_purity(Constraints, Context, Score) :-
     findall(EP-Weight, (
         member(C, Constraints),
         effective_purity(C, Context, EP, _),
+        number(EP),   % OQ-60: unknown effective excluded from the weighted-purity scorable set
         constraint_neighbors(C, Context, Neighbors),
         findall(S, (
             member(neighbor(Other, S, _), Neighbors),
@@ -435,9 +436,10 @@ bfs_path(Current, Target, Context, Visited, [Current|RestPath]) :-
 %% build_path_steps(+Nodes, +Context, -Steps, +AccLoss, -TotalLoss, +PrevPurity)
 build_path_steps([], _, [], Loss, Loss, _).
 build_path_steps([C], Context, [step(C, EP, 0.0)], AccLoss, AccLoss, _) :-
-    effective_purity(C, Context, EP, _), !.
+    effective_purity(C, Context, EP, _), number(EP), !.   % OQ-60: unknown effective → no path step
 build_path_steps([C|Rest], Context, [step(C, EP, Delta)|RestSteps], AccLoss, TotalLoss, PrevP) :-
     effective_purity(C, Context, EP, _),
+    number(EP),   % OQ-60: unknown effective → clause fails (path through unknown-purity node undefined)
     Delta is max(0.0, PrevP - EP),
     NewAcc is AccLoss + Delta,
     build_path_steps(Rest, Context, RestSteps, NewAcc, TotalLoss, EP).
