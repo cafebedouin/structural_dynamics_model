@@ -176,6 +176,12 @@ only, not in the committed WRITEUP. Fixed here: the closeout gate run below was 
 the review edits (stop-rule accounting, 7b recall control, decay rider, R6 honesty sentence,
 OQ-127 promotion) and immediately before the closeout commit.
 
+**Two distinct claims, one witnessed, one not:** the paste below witnesses the substrate's
+CURRENT state (post-review-edits, immediately pre-closeout-commit) — it does not retroactively
+witness that `a6820230` was GREEN at its commit time. The a6820230-era gate ran in-session and
+was not committed; that historical claim is permanently chat-only and is recorded here as
+UNWITNESSED-in-substrate, not re-asserted.
+
 Commit chain: `a823cd47` PREREG (alone) → `ad132911` ratification AMENDMENT (before Pass 2) →
 `a6820230` writeup + ISSUES.md + index → `b02e089f` KNOWN_STATE F1 entry → closeout commit
 (this file's HEAD).
