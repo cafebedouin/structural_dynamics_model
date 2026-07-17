@@ -109,9 +109,32 @@ every commit. (Captured in `census_testsets.tsv`.)
   (P(≥1 unknown)=1 for every leg here), so a future relaxation ruling — not this pass — decides
   whether a threshold < 1.0 is warranted. 96/145 `testsets/` constraints carry `coexists_with`
   edges, so per-component refinement is available if that ruling is ever taken.
-- **−1.0-in-aggregate census** (which aggregates today take `-1.0` as a real number — the
-  opposite-sign OQ-62 defect): pending the 0c consumer-polarity classification; folded in on
-  its return.
+- **−1.0-in-aggregate census** (OQ-62, from 0c): the explicit purity averages/counts
+  (`maxent_report:375`, `maxent_diagnostic:606/616/625`, `grothendieck_cohomology:791`,
+  `json_report:2013`, `giant_component:893`) **already filter −1.0** (`>= 0.0` / `\= -1.0`), so
+  they are not OQ-62 victims. The real −1.0 exposure is **propagation into shared aggregate
+  state, unfiltered at the store**: `drl_purity_network:224` (`effective_purity` returns
+  `-1.0` when `Intrinsic = -1.0`), `drl_fpn:107` (asserts `fpn_intrinsic(C, -1.0)`),
+  `giant_component:353` (asserts `gc_node_purity(C, -1.0, -1.0)`). Downstream means over network/
+  FPN state can therefore average −1.0. **Filed to OQ-62 (not fixed here).** So the promoted
+  "never average −1.0" invariant *describes a latent risk*, it does not contradict a clean code
+  path — safe to promote as a writing rule.
+
+## 0c — consumer polarity (throw-site map for Commit 0)
+
+Full per-site table: `consumer_polarity_0c.md`. Summary: **~30 reader sites THROW on `unknown`**
+(every unsafe path is a hard arithmetic/`purity_zone` throw — there is **no silent-misorder
+category**, because no consumer feeds raw purity to `@<`/`sort`/`min`/`max`). Critically,
+**`unknown \= -1.0` succeeds**, so every existing `\= -1.0` guard is now *insufficient* — guards
+must become `number(P)`, not merely extend the `\=`. Two **state-poisoning** asserts
+(`drl_fpn:107` → `fpn_intrinsic`, `giant_component:353` → `gc_node_purity`) are safe at the store
+but make later aggregate arithmetic throw — they need a guard at the store. Genuinely safe
+(no change): the abductive_triggers evidence-term sites (87/467/531/824/957),
+`context_profile_mining:191`, `genuine_findings_query:101`, `json_report:1338`
+(`write_json_number` maps `unknown→null`). **Producer-side (point D):** many producer call sites
+read a producer *failure* as clean/absent silently (FNL clause fails → not flagged; purity tests
+→ `pass`; drift/severity fall through to `watch`) — these are the C-COUPLING/C-CC/C-EX/C-FLOOR
+per-site handling targets, addressed in the producer commits, not Commit 0.
 
 ## Positive control (per-process, every leg)
 
