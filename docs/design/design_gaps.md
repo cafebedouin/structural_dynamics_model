@@ -104,6 +104,25 @@ cannot carry it. This is the part worth preserving if the gap is ever closed.
 **Status:** Deferred. Apparatus removed; gap recorded here. Re-opening is a framework-direction
 decision (is derivation-chain provenance a first-class axis?), not a code fix.
 
+**Reframe (2026-07-17, from `blog/2026-07/no-four-oclock-v8.md` + `docs/debugging_philosophy.md`):**
+derivation-*origin* is not merely untracked but, for a completed naturalization, unrecoverable from
+any single time-slice probe — the counterfactual "otherwise" an origin claim needs has been
+eliminated by the drift itself. Two things narrow the gap. (1) The *mountain-vs-naturalized* boundary
+does **not** need origin at all: it is cut by the beneficiary leg (`false_natural_law` — a present
+otherwise checked structurally, not remembered), so it is not part of this gap. (2) The
+*temporally-invariant* case splits further into **forced** (genuine mountain — no beneficiary, no
+consistent negation) and **chosen** (a declared axiom, invariant like Euclid's parallel postulate but
+with a live otherwise); that split is also structural (beneficiary present ⇒ chosen). What is left —
+and all that is left — is **declared-choice vs unacknowledged-foreclosure** (Euclid-as-known-choice vs
+Euclid-that-forgot): both are seated choices, temporally reconstructible only where the pre-closure
+snapshot was authored, and separable only by the `cs_drift` acknowledged bit, which is authored not
+detected. So the residual of GAP-01 is an **evidence-base limit, not a meter limit**: origin stays
+unrecoverable exactly for terminal foreclosures whose earlier snapshot was never written down — the
+population the essay argues correlates with power (most-administered ⇒ least paper). If the gap is
+closed, the `Reason`-slot (typed generation-mechanism) is still the part worth preserving; the new
+observation is that a *temporal* mechanism tag (`temporal_decomposition` / drift-snapshot lineage) is
+the one that would carry the reconstructed otherwise.
+
 ---
 
 ## GAP-02 — The engine does not compute husk trajectory-shape (born-saturated vs glided)

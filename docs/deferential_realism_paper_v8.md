@@ -652,6 +652,59 @@ that would refute one-seat, held by a running guard), and the ε declaration dis
 (the seat's own substrate, unsolved and handed forward as open work). Re-description is the honest
 bulk of the work; those two are the entire epistemic spine.
 
+### 5.9 Forced and chosen invariants: the three legs, and where the meter stops
+
+The gauge and the two faces of orientation are this framework's instance of a general diagnostic
+partition (`docs/debugging_philosophy.md`): index underspecification (Type C, resolved by naming
+the observer position — the gauge), frame drift (Type A, resolved by fixing the frame and tracing
+the snapshot series — the keeping-face's temporal axis), and axiomatic inconsistency (Type B,
+resolved by revising the premise — the committer's axiom engine). Read together the three legs
+settle a question none of them settles alone: when is an apparent natural limit a genuine
+mountain, and when is it a choice that has stopped being felt as one? A single-slice probe cannot
+tell them apart; the partition is what the cross-perturbation is for — hold the axiom still and
+vary time to expose a shifting who-benefits reading, hold the observer still and vary the premise
+over time to expose foreclosure, and read the *flip* as the signal.
+
+Temporal invariance is necessary but not sufficient for mountain-status. Drift disqualifies — a
+base extractiveness that moves across an authored snapshot series is not a natural limit — but
+flatness across time does not certify, because a *held choice* is invariant too. Euclidean
+geometry sat invariant for two millennia and read as the geometry of space, yet the parallel
+postulate was a chosen axiom, and non-Euclidean geometry demoted it from necessary to contingent
+not by finding drift but by exhibiting a consistent otherwise. Invariance was compatible with a
+choice nobody had tried to negate.
+
+So three cases, and each boundary is cut by a different leg. A **mountain** is forced: no
+beneficiary, no consistent negation, binding every position — its no-seat pose is true. A
+**declared choice** (Euclid stated as an axiom; the reference librarian who took the desk) is
+seated — an otherwise exists and a holder is present — and honest because the seat is declared. A
+**naturalized foreclosure** (Aesop's fox who comes to find the grapes sour; Euclid mistaken for a
+mountain) is equally seated, but posed as no-seat: the choice no longer experienced as chosen. The
+mountain/choice boundary is drawn by the beneficiary leg, *not* by time — `false_natural_law` fires
+when a natural-status claim coexists with an authored beneficiary, a present otherwise checked
+structurally rather than remembered. The choice/foreclosure boundary — Euclid-as-known-choice
+versus Euclid-that-forgot — is invisible to that leg, because both are seated; only the
+keeping-face's acknowledged bit (drift rescued to `stable_pattern` versus hollowed to `husk`)
+separates them.
+
+This is why the engine can decide authorship where a first-person probe cannot. An
+adaptive-preference argument holds that the counterfactual an origin claim needs — *would this be
+here had the alternative not closed* — is erased by the very process that makes the question urgent,
+because complete formation leaves nothing on the other side (`blog/2026-07/no-four-oclock-v8.md`).
+The reply is that the otherwise need not be a datable memory, which formation does erase; it can be
+a structural fact — a consistent negation, a present beneficiary — which formation cannot erase,
+because it is a property of the axiom rather than of anyone's history. Non-Euclidean geometry is the
+standing otherwise for the parallel postulate two thousand years after any originating moment, and
+`false_natural_law` fires on a constraint with no authored history at all. Euclid's own demotion
+locates itself precisely on the Oracle Gap (Theorem 4): the invariance was an artifact of a site
+that lacked the hyperbolic observer, and widening the site sent H¹ positive — a supposed mountain
+revealed as position-local all along. One boundary the meter cannot draw from structure remains, and
+it is the honest residual: separating a genuinely honored choice from an unacknowledged foreclosure
+needs the acknowledged bit, and that bit is *authored*, not detected — which relocates the limit from
+the classifier to the corpus. The positions most thoroughly foreclosed are the least likely to author
+a dissenting reading or a pre-closure snapshot, so the evidence for the choice/foreclosure distinction
+is thinnest exactly where formation ran to completion. Knowability of a constraint's authorship is, at
+the end, a property of what was written down.
+
 ---
 
 ## 6. Seat Theory: The Law Beneath the Ontology

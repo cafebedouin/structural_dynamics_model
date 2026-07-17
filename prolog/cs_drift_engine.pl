@@ -45,6 +45,16 @@
 %   plus a cs_drift_ack_witness object whose confrontation_path "none_exists"
 %   sentinel states that NO external confrontation path exists (OQ-107
 %   unbuilt) — absence of a path, not a clean probe.
+%
+% CROSS-REF (2026-07-17, blog/2026-07/no-four-oclock-v8.md; v8 paper §5.9):
+%   the Acknowledged bit IS the chosen-vs-adaptive distinction — invariant-as-
+%   declared-choice (Euclid stated as an axiom) vs invariant-by-unacknowledged-
+%   foreclosure (Euclid mistaken for a mountain). It is authored precisely
+%   because no single time-slice probe recovers it: naturalization is a Type-A
+%   drift (docs/debugging_philosophy.md), seeable only by frame-fixing and
+%   tracing the snapshot series. This table cuts choice/foreclosure ONLY; the
+%   mountain/choice boundary is cut elsewhere, by the beneficiary leg
+%   (false_natural_law — a present otherwise, checked structurally not remembered).
 % ============================================================================
 
 :- module(cs_drift_engine, [cs_drift_trajectory/3]).

@@ -45,6 +45,37 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-17 — [correction-key] blog essay "Everything Becomes Taste" → three-legs = trifurcation; forced-vs-chosen invariant; the synchronic mountain/naturalized read is WRONG
+**Files:** docs/deferential_realism_paper_v8.md, docs/design/design_gaps.md, prolog/cs_drift_engine.pl, docs/debugging_philosophy.md
+**Tier:** correction-key
+
+Reading of `blog/2026-07/no-four-oclock-v8.md` (adaptive-preference / "is this preference *yours*")
+against the engine, corrected mid-session by the operator. **The correction:** a first pass claimed
+completed naturalization is indistinguishable from a genuine mountain — true **only synchronically**
+(single time-slice), which is exactly the essay's own trap (its three dead probes each fix one leg
+and vary within it). The engine's three legs are the paradox trifurcation of
+`docs/debugging_philosophy.md`: observer/gauge = Type-C index, temporal/drift (`classify_at_time`,
+`snapshot_type`, `drift_trajectory`, `cs_drift_engine`) = Type-A frame, axiom (`cs_axiom_engine`,
+`axiom_foreclosure`) = Type-B structure. Naturalization is a **Type-A drift**, seeable by
+frame-fixing (hold ε at t0) and tracing — the analytical/sub-specie position does exactly this.
+**Operator's sharpening (Euclid):** temporal invariance is necessary-not-sufficient for mountain;
+a *held choice* is invariant too (Euclidean geometry read as a mountain for 2000y; the parallel
+postulate was a chosen axiom, demoted by a consistent otherwise, NOT by drift). Three-way partition,
+each boundary cut by a different leg: **mountain** (forced — no beneficiary/no consistent negation,
+honest no-seat pose) vs **declared choice** (Euclid/librarian — seated, otherwise live, acknowledged)
+vs **naturalized foreclosure** (fox/Euclid-that-forgot — seated but posed-as-fact, unacknowledged).
+mountain/choice is cut by the **beneficiary leg** (`false_natural_law`, a *structural* otherwise —
+fires with no authored history at all); choice/foreclosure is cut ONLY by the **acknowledged bit**
+(`cs_drift`: rescue-to-`stable_pattern` vs `husk`). Euclid's demotion = Oracle Gap (Theorem 4): a
+site lacking the hyperbolic observer; widen the site → H¹>0. **The residual** (essay's real earned
+limit) is choice-vs-foreclosure, and it is an **evidence-base limit not a meter limit**: the
+acknowledged bit is authored, and the most-foreclosed positions author the least ("record density
+tracks power"). Preference↔constraint mapping ruled **analogical only** (operator: "probably a
+category error") — informs framing/docs, not asserted as a structural bridge; no H¹ experiment run.
+Applied: v8 §5.9 (new), design_gaps.md GAP-01 reframe, cs_drift_engine.pl header cross-ref.
+
+---
+
 ## 2026-07-16 — [correction-key] OQ-221 partition run: the merit-independent-signature law is DEPLOYMENT-RELATIVE (F1 — counting fires on earned external prose); OQ-221 mitigated, OQ-226 build queue minted
 **Files:** agent/uke_narrative_orchestrator.py, ISSUES.md, audits/2026-07-16_oq221_meter_partition/
 **Tier:** correction-key
