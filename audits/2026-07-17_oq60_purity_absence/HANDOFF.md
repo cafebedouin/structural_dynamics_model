@@ -87,10 +87,20 @@ never both; (e) R3 polarity (existential fires through unknown members; clean ag
 with one unknown → distinct abstention token); (f) `purity_zone`/json handle `unknown` without
 throwing. Positive-control template: `oq60_control_bare` in `census_oq60.pl`.
 
-### Commit 0b (additive) — R3/R4
-- json: `purity_summary` (`json_report.pl:tally_purity_bands` ~2009) gains `n_scorable`/`n_unknown`
-  coverage siblings; R3 clean aggregates in `drl_purity_network`/`network_dynamics`/
-  `giant_component_analysis`/`fpn_report` gate at coverage 1.0 → distinct surfaced abstention token.
+### Commit 0b (additive) — R3 (revised ruling) / R4
+**R3 axis = claim-type, NOT a coverage threshold (operator, 2026-07-17; CENSUS 0d(ruling)):**
+- **Descriptive** (mean/distribution/counts — all ~8 shape-aggregates, confirmed terminal by the
+  consumption trace): compute over scorable, **label carries `n_scored/n_total`, NO gate**. Restate
+  the referent. Sites: `tally_purity_bands`/`purity_summary`, `giant_component:893/894` distributions,
+  `maxent_report:375`, `grothendieck:791`, `maxent_diagnostic:606/616/625`,
+  `drl_purity_network` weighted-purity means.
+- **Dispositive** (band/pristine/clean/severity verdicts): gate at coverage 1.0 → distinct
+  abstention token. Sites: `ep_base_severity` (DONE in 0a.2 → `undetermined`),
+  `network_stability_assessment=stable` (negative existential — must abstain if any member severity
+  is `undetermined`), `purity_zone` verdicts, signature `purity_test_*` (→ producer commits).
+- **Before encoding, re-confirm the classification by CONSUMPTION** for any new aggregate: a
+  descriptive stat that feeds a threshold is dispositive-by-consumption.
+- json: `purity_summary` gains `n_scored`/`n_total` coverage siblings (descriptive label, not a gate).
 - enhanced_report.py: **unconditional** per-section coverage line (`N/N scorable, M unknown`,
   including `40/40` on a fully-covered corpus — R4); per-constraint unknown rows already render
   `N/A` (line 891-894, safe). Python null-safety: grep `purity_score`/`purity_band` for truthiness

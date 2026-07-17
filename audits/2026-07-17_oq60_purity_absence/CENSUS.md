@@ -151,6 +151,45 @@ abstention over a corpus 8% of which is genuinely unmeasurable, which is the *de
 (the alternative, a mean over 92% presented as "the" mean, is OQ-60 at the aggregate layer).
 **Escalated to operator** — relaxing coverage-1.0 is a ruling the executor may not self-resolve.
 
+## 0d(ruling) — R3 revised (operator, 2026-07-17): claim-type, not coverage threshold
+
+The axis is what the aggregate *claims*, not a coverage number:
+- **Existential/positive** — unchanged; fire at coverage>0, coverage attached.
+- **Descriptive** (mean, distribution, counts) — ALWAYS compute over scorable; label carries
+  `n_scored/n_total`; **no gate**. A mean over 492 is a true statement about 492 — it lies only if
+  it claims to be about 494, so restate the referent rather than blank it.
+- **Dispositive** (band, pristine/clean, severity verdicts) — gate at coverage 1.0 → distinct
+  abstention token. The gate belongs where it creates pressure to author the missing fact
+  (flash's 80), not where it only blanks a dashboard (haiku's 2).
+
+**The ruling's own falsifier (classify the ~8 by CONSUMPTION, not shape) — RAN, ruling holds.**
+A descriptive stat that feeds a threshold is dispositive-by-consumption and must gate; if most of
+the 8 fed thresholds the descriptive class would be empty and strict-1.0 right. Result:
+**all ~8 shape-aggregates are terminal/descriptive** — `tally_purity_bands`→`purity_summary` is
+serialized to JSON + displayed (no band/verdict downstream, `json_report:1682`); giant-component
+distributions, maxent/grothendieck correlations, `avg_purity_for`/`count_*` terminate in report
+tables. The **dispositive** purity consumers are separate and per-constraint verdicts:
+`ep_base_severity` (EP→severity band, `network_dynamics:253`), `network_stability_assessment=stable`
+(negative existential, `network_dynamics:197`), `purity_zone`, signature `purity_test_*`. Descriptive
+class non-empty → strict-1.0 was wrong for it → ruling stands.
+
+**Lesson recorded (falsifier mis-specification):** the original half-(b) was a *count* (gated vs
+existential); counts assume a homogeneous population, but 8 headline stats outweigh 35 minor checks.
+*Do not write falsifiers over counts of heterogeneous populations; write them over the load-bearing
+member.*
+
+## 0d(gap) — second-order unknown surface: `effective_purity` consumers (NOT in 0c)
+
+Commit 0a made `effective_purity/4` **propagate** `unknown` (R3). That is a **new unknown source**;
+its arithmetic consumers read `effective_purity`, not `purity_score`, so **none were in the 0c
+census** and the guard↔0c residue check (residue 0) structurally could not see them. They throw at
+C-FLOOR time: `network_dynamics:169/176-177/233` (`ep_base_severity:253`), `fpn_report:94`→its own
+`purity_zone/2` (109-111), `giant_component:362` (the EffP store — 0a guarded only the IntrinsicP
+branch at 353), `json_report:1286` (`Delta is EP-IP`). Fixed in **Commit 0a.2** (below).
+**Discipline lesson:** a fix that introduces a new unknown *source* owes a census of that source's
+consumers, not just the original's — the byte-identical witness cannot catch an unexercised
+second-order site.
+
 ## 0d(rate) — 80/9/2/2 rate and cause (point 4)
 
 Rate of `unknown` among **gate-pass** constraints: testsets 9/117 = **7.7%**, haiku 2/494 = **0.4%**,
