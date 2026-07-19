@@ -67,6 +67,7 @@ MAX_OUTPUT_TOKENS = 32000        # must cover mandatory reasoning + the story JS
 SYNC_WORKERS = 5
 POLL_INTERVAL = 20
 HTTP_TIMEOUT = 1200              # K3 max-reasoning stories can exceed 10 min (pilot: 3/5 > 600s)
+MAX_BATCH_FILE_BYTES = 90_000_000  # Moonshot /files hard limit is 100MB; margin for the newline+encoding
 
 # Kimi destinations (pair-by-filename with the other twins; separate ladder + json)
 KIMI_TESTSETS = REPO_ROOT / "prolog" / "testsets_kimi"
@@ -214,38 +215,41 @@ def run_sync(seeds, id_map, model):
 # --------------------------------------------------------------------------
 # BATCH transport — OpenAI-style file batch (/files + /batches), -50%, for the full run
 # --------------------------------------------------------------------------
-def run_batch(seeds, id_map, model, poll_interval):
-    static = _static_prefix()
-    seed_by_key = {k: s for k, s in zip(id_map.keys(), seeds)}
-    lines = []
-    for k in id_map:
-        lines.append(json.dumps({
-            "custom_id": k, "method": "POST", "url": "/v1/chat/completions",
-            "body": _body(seed_by_key[k], static, model),
-        }, ensure_ascii=False))
-    jsonl = ("\n".join(lines) + "\n").encode("utf-8")
+def _chunk_lines(lines, limit=MAX_BATCH_FILE_BYTES):
+    """Greedily pack jsonl lines into <=limit-byte chunks (a request line is never split)."""
+    chunks, cur, cur_bytes = [], [], 0
+    for ln in lines:
+        b = len(ln.encode("utf-8")) + 1  # + newline
+        if cur and cur_bytes + b > limit:
+            chunks.append(cur)
+            cur, cur_bytes = [], 0
+        cur.append(ln)
+        cur_bytes += b
+    if cur:
+        chunks.append(cur)
+    return chunks
 
+
+def _submit_batch(jsonl_bytes, n, model, poll_interval):
+    """Upload one (<100MB) jsonl, create + poll a batch, return its rows as shim _Results."""
     up = requests.post(f"{BASE_URL}/files",
                        headers={"Authorization": f"Bearer {_api_key()}"},
-                       files={"file": ("batch.jsonl", jsonl, "application/jsonl")},
+                       files={"file": ("batch.jsonl", jsonl_bytes, "application/jsonl")},
                        data={"purpose": "batch"}, timeout=HTTP_TIMEOUT)
     up.raise_for_status()
     fid = up.json()["id"]
-    print(f"  uploaded input file {fid} ({len(lines)} requests)")
+    print(f"  uploaded input file {fid} ({n} requests, {len(jsonl_bytes)/1e6:.0f}MB)")
 
     cr = requests.post(f"{BASE_URL}/batches", headers=_headers(),
                        json={"input_file_id": fid, "endpoint": "/v1/chat/completions",
                              "completion_window": "24h"}, timeout=HTTP_TIMEOUT)
     if cr.status_code >= 300:
-        # Witnessed 2026-07-18: on the staff/preview key, a fully valid create (file exists,
-        # endpoint == the API's own stated valid "/v1/chat/completions", completion_window a
-        # valid Go duration) still 404s "resource_not_found" — batch-create is not provisioned
-        # for this account, though file-upload and batch-list work. Enable batch on the account,
-        # or run with --sync (interactive rate, no -50%).
+        # Batch is MODEL-gated (2026-07-19): kimi-k2.6 -> 200; kimi-k2.7-code / kimi-k3 -> 404
+        # "resource_not_found". A 404 here almost always means --model is a non-batch model.
         raise SystemExit(
             f"batch create failed: HTTP {cr.status_code} {cr.text[:300]}\n"
-            "Moonshot batch-create appears unprovisioned for this key (see the note above). "
-            "Enable batch on the account, or re-run with --sync.")
+            "Batch is model-gated on Moonshot — use --model kimi-k2.6 (k2.7-code/k3 are not "
+            "batch-enabled), or run with --sync.")
     bid = cr.json()["id"]
     print(f"  batch {bid}")
     while True:
@@ -253,7 +257,7 @@ def run_batch(seeds, id_map, model, poll_interval):
         g.raise_for_status()
         b = g.json()
         rc = b.get("request_counts") or {}
-        print(f"  batch {b.get('status')} ({rc.get('completed', 0)}/{rc.get('total', 0)})")
+        print(f"  batch {bid} {b.get('status')} ({rc.get('completed', 0)}/{rc.get('total', 0)})")
         if b.get("status") in BATCH_TERMINAL:
             break
         time.sleep(poll_interval)
@@ -267,6 +271,30 @@ def run_batch(seeds, id_map, model, poll_interval):
         for line in dl.text.splitlines():
             if line.strip():
                 out.append(_batch_row_to_result(json.loads(line), model))
+    return out
+
+
+def run_batch(seeds, id_map, model, poll_interval):
+    static = _static_prefix()
+    seed_by_key = {k: s for k, s in zip(id_map.keys(), seeds)}
+    lines = []
+    for k in id_map:
+        lines.append(json.dumps({
+            "custom_id": k, "method": "POST", "url": "/v1/chat/completions",
+            "body": _body(seed_by_key[k], static, model),
+        }, ensure_ascii=False))
+    # Moonshot's /files limit is 100 MB and every request inlines the full prompt (~139 KB), so a
+    # full-pool jsonl (~143 MB for 1000 seeds) MUST be split into <100MB batches — one batch job
+    # per chunk, run sequentially, results merged. Witnessed 2026-07-19: a 1000-request upload 400s
+    # "File size is too large, max size is 100000000".
+    chunks = _chunk_lines(lines)
+    print(f"  {len(lines)} requests -> {len(chunks)} batch(es) "
+          f"(<= {MAX_BATCH_FILE_BYTES // 10**6}MB each)")
+    out = []
+    for i, chunk in enumerate(chunks, 1):
+        print(f"  [chunk {i}/{len(chunks)}] {len(chunk)} requests")
+        jsonl = ("\n".join(chunk) + "\n").encode("utf-8")
+        out.extend(_submit_batch(jsonl, len(chunk), model, poll_interval))
     seen = {r.custom_id for r in out}
     for k in id_map:
         if k not in seen:

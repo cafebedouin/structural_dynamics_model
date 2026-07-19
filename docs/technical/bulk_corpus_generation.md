@@ -170,6 +170,11 @@ run needs (supersedes the 2026-07-18 "sync-only / batch unprovisioned" reading, 
   asymmetry. We extract `content`; `reasoning_content` is discarded. Prompt caching fires
   (~28.7k cached input tok/story).
 - **Key:** reads `MOONSHOT_API_KEY` OR `KIMI_API_KEY` from the env (never in the repo).
+- **Moonshot's `/files` limit is 100 MB** and every batch request inlines the full ~139 KB prompt,
+  so a full-pool jsonl is ~143 MB for 1000 seeds — over the cap. `run_batch` auto-splits into
+  sub-90 MB chunks (`_chunk_lines`, one batch job per chunk, sequential, merged); 1000 seeds → 2
+  batches (~630 + ~370). Do NOT remove the chunking — a single-file full-pool upload 400s
+  "File size is too large" (witnessed 2026-07-19).
 - **Run the full pool:** `python3 -u -m agent.run_no_scope_kimi --seeds
   prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json --batch` (kimi ladder skips the 5
   pilot stories already done). Use `python3 -u` — the driver block-buffers stdout to a file
