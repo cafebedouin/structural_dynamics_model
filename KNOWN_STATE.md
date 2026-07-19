@@ -66,6 +66,20 @@ prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json --batch` once creat
 the 5 done), or `--sync` now. Needs `MOONSHOT_API_KEY` in env (never repo). **Key hygiene:** the API
 key was pasted in chat — operator should ROTATE it.
 
+**Update (same day):** the 5 kimi-k3 pilot stories were **relocated into the live heterogeneous
+`prolog/testsets/`** (+ json into `json/`; operator ruling — testsets/ tolerates mixed models), so
+the LIVE corpus is now **150** (was 145; loads clean; local `pipeline_output.json` manifest stale at
+145 until a `run_pipeline` folds them in). The twin (`testsets_kimi/`) is **retargeted to
+`kimi-k2.7-code`** (the batch-eligible production model; DEFAULT_MODEL changed) and cleared to empty,
+ladder reset. **Batch is STILL account-blocked even with k2.7-code** — POST /v1/batches 404s
+identically across every model + completion_window, and Moonshot's own OpenAPI documents only
+400/401/500 here, so the 404 is out-of-contract = account-level batch access, NOT model/request
+(re-verified 2026-07-18). **k2.7-code cost finding:** 2-story sync sample → **output ~8.0k tok/story,
+HALF of k3's 16.5k** (input ~29.6k, same) → k2.7-code sync is markedly cheaper than k3 sync; it is
+also NOT reasoning-forced (a fairer twin than k3). Provenance sampling_params label corrected to
+`reasoning=model_default` (we only set max_tokens). PENDING operator decision: full twin via
+**sync-k2.7-code now** vs **wait for batch access**.
+
 ---
 
 ## 2026-07-18 — [correction-key] commitment-drift terminals are complete only under a SURVIVING-REFERENT precondition (OQ-227, from the *Hearts of Glass* fiction test-rig)

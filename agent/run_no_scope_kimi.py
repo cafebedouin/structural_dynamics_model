@@ -20,12 +20,16 @@ Provider mechanics: Moonshot's OpenAI-compatible API (https://api.moonshot.ai/v1
     fully valid create 404s "resource_not_found"). The batch path is written and validated
     through file-upload; create/poll/download resume once batch is enabled on the account.
 
-STATUS (2026-07-18): 5-seed pilot PASSED (5/5 valid .pl, engine-load OK, provenance stamped
-kimi-k3, reading_relations resolved). Measured cost $0.289/story sync (output ~16.5k tok/story,
-reasoning-heavy). Full ~1005-story twin projects to ~$291 sync / ~$145 batch. PAUSED pending
-batch enablement on the account (operator ruling). RESUME: `--seeds <pool> --batch` once create
-works (the kimi ladder skips the 5 done), or `--seeds <pool> --sync` to run at interactive rate.
-Seed pool: prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json (1005). Runbook §6.
+STATUS (2026-07-18): 5-seed pilot PASSED on kimi-k3 (5/5 valid .pl, engine-load OK, provenance
+stamped kimi-k3, reading_relations resolved). Measured cost $0.289/story sync (k3, output ~16.5k
+tok/story, reasoning-heavy). Batch model set to kimi-k2.7-code (the batch-eligible model) — but
+batch-create is STILL account-blocked (re-verified with k2.7-code: same 404, out-of-contract), so
+NOTHING runs via batch until batch access is enabled on the account. PAUSED (operator ruling).
+Two open decisions before resuming: (1) enable batch access on the Moonshot account; (2) the twin's
+MODEL — the 5 pilot stories are kimi-k3, so a homogeneous k2.7-code batch twin needs them cleared
+and regenerated (or keep k3 and run sync). RESUME once batch works: `--seeds <pool> --batch`
+(uses kimi-k2.7-code). Seed pool: prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json
+(1005). Needs MOONSHOT_API_KEY in env. Runbook §6/§7b.
 
 CAVEAT — kimi-k3 is a REASONING-ONLY model (`supports_thinking_type: "only"`, think_efforts
 valid only ["max"]): thinking CANNOT be disabled. Unlike the haiku/flash/sonnet twins (run
@@ -59,7 +63,13 @@ from agent.generate_kernel_corpus import (
 )
 
 BASE_URL = os.environ.get("MOONSHOT_BASE_URL", "https://api.moonshot.ai/v1")
-DEFAULT_MODEL = "kimi-k3"
+# Batch is model-gated to kimi-k2.7-code (the batch-eligible production model; kimi-k3 is
+# staff/preview). --model overrides. NOTE (2026-07-18): switching to k2.7-code did NOT unblock
+# batch-create — POST /v1/batches still 404s "resource_not_found" identically across every model
+# and completion_window, which is out-of-contract (the API documents only 400/401/500 here), so
+# the block is ACCOUNT-LEVEL batch access, not the model. The pilot's 5 stories are kimi-k3; a
+# homogeneous batch twin on k2.7-code needs those cleared/regenerated (single-model fingerprint).
+DEFAULT_MODEL = "kimi-k2.7-code"
 MAX_OUTPUT_TOKENS = 32000        # must cover mandatory reasoning + the story JSON
 SYNC_WORKERS = 5
 POLL_INTERVAL = 20
@@ -342,7 +352,9 @@ def run(args):
             gen_seeds_by_id=gen_by_id, rejections_path=OUT_DIR / "rejections.json",
             overwrite=True, id_map=id_map, token_acc=token_acc,
             provenance_source="no_scope_rebuild_kimi",
-            sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=default,reasoning=max")
+            # we send only max_tokens; temperature + reasoning are the model's own defaults
+            # (k3 forces max reasoning, k2.7-code uses its default) — stamp reflects what we set.
+            sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=model_default,reasoning=model_default")
         done = load_processed_log(KIMI_LADDER)
         remaining = [s for s in remaining if s["constraint_id"] not in done]
         if not remaining:
