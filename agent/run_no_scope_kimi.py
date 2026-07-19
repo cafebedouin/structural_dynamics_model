@@ -14,34 +14,29 @@ Same process as the Haiku/Gemini runs, only the model/provider differs:
     testsets/), so cids stay == seed cids and the sets pair by filename (runbook §6).
 
 Provider mechanics: Moonshot's OpenAI-compatible API (https://api.moonshot.ai/v1).
-  - --sync (default): parallel /chat/completions. The only working path on the current key.
-  - --batch: OpenAI-style file batch (/files + /batches), would be -50%. BUT batch-create is
-    NOT provisioned on the staff/preview key as of 2026-07-18 (file-upload + batch-list work; a
-    fully valid create 404s "resource_not_found"). The batch path is written and validated
-    through file-upload; create/poll/download resume once batch is enabled on the account.
+  - --batch (the full run): OpenAI-style file batch (/files + /batches), -50%. Batch is
+    MODEL-gated: kimi-k2.6 -> 200; kimi-k2.7-code / kimi-k3 -> 404 "resource_not_found". Moonshot's
+    batch output rows set response.status_code == 0 on SUCCESS (see _batch_row_to_result).
+  - --sync: parallel /chat/completions (pilot / small N, interactive rate, no -50%).
+  - --resume-batch <id>: reprocess an already-completed batch with NO generation (recovers a dead
+    poll loop without re-billing); pass the same --n.
 
-STATUS (2026-07-18): 5-seed pilot PASSED on kimi-k3 (5/5 valid .pl, engine-load OK, provenance
-stamped kimi-k3, reading_relations resolved). Measured cost $0.289/story sync (k3, output ~16.5k
-tok/story, reasoning-heavy). Batch model set to kimi-k2.7-code (the batch-eligible model) — but
-batch-create is STILL account-blocked (re-verified with k2.7-code: same 404, out-of-contract), so
-NOTHING runs via batch until batch access is enabled on the account. PAUSED (operator ruling).
-Two open decisions before resuming: (1) enable batch access on the Moonshot account; (2) the twin's
-MODEL — the 5 pilot stories are kimi-k3, so a homogeneous k2.7-code batch twin needs them cleared
-and regenerated (or keep k3 and run sync). RESUME once batch works: `--seeds <pool> --batch`
-(uses kimi-k2.7-code). Seed pool: prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json
-(1005). Needs MOONSHOT_API_KEY in env. Runbook §6/§7b.
+STATUS (2026-07-19): batch VERIFIED on kimi-k2.6 (the batch-eligible model); 5-seed pilot PASSED
+(5/5 valid .pl into testsets_kimi/, classify_corpus GREEN on model kimi-k2.6, reading_relations
+resolved). Measured k2.6 batch: input ~29.6k / output ~15.5k tok/story (~11.7k reasoning) — k2.6 is
+reasoning-heavy too, so this remains a *thinking-model* twin. Full 1000-seed remainder pending a
+spend-go. Seed pool: prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json (1005; kimi
+ladder skips the 5 pilot). Needs MOONSHOT_API_KEY or KIMI_API_KEY in env. Runbook §6/§7b.
 
-CAVEAT — kimi-k3 is a REASONING-ONLY model (`supports_thinking_type: "only"`, think_efforts
-valid only ["max"]): thinking CANNOT be disabled. Unlike the haiku/flash/sonnet twins (run
-thinking-off for fairness), every K3 story carries mandatory max-effort reasoning tokens. This
-twin is therefore a *thinking-model* twin; the asymmetry is documented in the run README and is
-why per-story output (reasoning + content) runs higher than the other twins. We extract only the
-final `content` (the story JSON); `reasoning_content` is discarded.
+CAVEAT — this is a *thinking-model* twin. Unlike the haiku/flash/sonnet twins (run thinking-off for
+fairness), every kimi-k2.6 story carries mandatory reasoning tokens (~11.7k/story), so per-story
+output runs higher. We extract only the final `content` (the story JSON); `reasoning_content` is
+discarded. Cross-twin comparisons must carry that asymmetry (stamped in provenance as kimi-k2.6).
 
-Key: reads MOONSHOT_API_KEY from the environment (never hard-code it).
+Key: reads MOONSHOT_API_KEY (or KIMI_API_KEY) from the environment (never hard-code it).
 
 Usage:
-  MOONSHOT_API_KEY=... python3 -m agent.run_no_scope_kimi --seeds <chunk.json> [--n N] \
+  KIMI_API_KEY=... python3 -m agent.run_no_scope_kimi --seeds <chunk.json> [--n N] \
       [--sync|--batch] [--model kimi-k3] [--estimate]
 """
 import argparse
@@ -63,13 +58,11 @@ from agent.generate_kernel_corpus import (
 )
 
 BASE_URL = os.environ.get("MOONSHOT_BASE_URL", "https://api.moonshot.ai/v1")
-# Batch is model-gated to kimi-k2.7-code (the batch-eligible production model; kimi-k3 is
-# staff/preview). --model overrides. NOTE (2026-07-18): switching to k2.7-code did NOT unblock
-# batch-create — POST /v1/batches still 404s "resource_not_found" identically across every model
-# and completion_window, which is out-of-contract (the API documents only 400/401/500 here), so
-# the block is ACCOUNT-LEVEL batch access, not the model. The pilot's 5 stories are kimi-k3; a
-# homogeneous batch twin on k2.7-code needs those cleared/regenerated (single-model fingerprint).
-DEFAULT_MODEL = "kimi-k2.7-code"
+# Batch is MODEL-gated: kimi-k2.6 is batch-eligible (POST /v1/batches -> 200), while kimi-k2.7-code
+# and kimi-k3 404 "resource_not_found" (not batch-enabled yet — NOT a credential problem; verified
+# 2026-07-18 by creating a k2.6 batch on the same key). completion_window must be an h-unit Go
+# duration ("24h" works; the docs' "1d" is rejected). --model overrides (e.g. sync run on k2.7/k3).
+DEFAULT_MODEL = "kimi-k2.6"
 MAX_OUTPUT_TOKENS = 32000        # must cover mandatory reasoning + the story JSON
 SYNC_WORKERS = 5
 POLL_INTERVAL = 20
@@ -85,9 +78,11 @@ BATCH_TERMINAL = {"completed", "failed", "expired", "cancelled", "cancelling"}
 
 
 def _api_key():
-    k = os.environ.get("MOONSHOT_API_KEY")
+    # Accept either name: MOONSHOT_API_KEY (original convention) or KIMI_API_KEY (the .bashrc
+    # export added 2026-07-19). Same Moonshot key either way.
+    k = os.environ.get("MOONSHOT_API_KEY") or os.environ.get("KIMI_API_KEY")
     if not k:
-        raise SystemExit("MOONSHOT_API_KEY not set in environment.")
+        raise SystemExit("Set MOONSHOT_API_KEY (or KIMI_API_KEY) in the environment.")
     return k
 
 
@@ -270,17 +265,8 @@ def run_batch(seeds, id_map, model, poll_interval):
                           timeout=HTTP_TIMEOUT)
         dl.raise_for_status()
         for line in dl.text.splitlines():
-            if not line.strip():
-                continue
-            row = json.loads(line)
-            key = row.get("custom_id")
-            resp = row.get("response") or {}
-            if resp.get("status_code") == 200 and resp.get("body"):
-                text, it, ot = _extract(resp["body"])
-                if text.strip():
-                    out.append(_Result(key, "succeeded", _Msg(text, model, _Usage(it, ot))))
-                    continue
-            out.append(_Result(key, "errored", None))
+            if line.strip():
+                out.append(_batch_row_to_result(json.loads(line), model))
     seen = {r.custom_id for r in out}
     for k in id_map:
         if k not in seen:
@@ -289,6 +275,41 @@ def run_batch(seeds, id_map, model, poll_interval):
 
 
 # --------------------------------------------------------------------------
+def _batch_row_to_result(row, model):
+    """Map ONE Moonshot batch-output row to a shim _Result. Moonshot sets
+    response.status_code == 0 on SUCCESS (not 200), carrying the completion in
+    `body` with a null row-level error; a hard `status_code == 200` gate therefore
+    discarded every valid Kimi result (witnessed 2026-07-19: batch completed 5/5,
+    all rejected -> driver looped into a 2nd batch). Gate on the payload (no row
+    error + a usable choices/content body); treat status_code as advisory."""
+    key = row.get("custom_id")
+    resp = row.get("response") or {}
+    body = resp.get("body") or {}
+    sc = resp.get("status_code")
+    ok = (row.get("error") in (None, "", {}) and sc in (200, 0, None)
+          and isinstance(body.get("choices"), list) and body["choices"])
+    if ok:
+        text, it, ot = _extract(body)
+        if text.strip():
+            return _Result(key, "succeeded", _Msg(text, model, _Usage(it, ot)))
+    print(f"  [{key}] batch row not usable (status_code={sc}, error={row.get('error')})")
+    return _Result(key, "errored", None)
+
+
+def download_batch_results(batch_id, model):
+    """Download an ALREADY-completed batch's output rows as shim _Results — no
+    generation. Lets a run recover from a dead poll loop without re-billing."""
+    g = requests.get(f"{BASE_URL}/batches/{batch_id}", headers=_headers(), timeout=HTTP_TIMEOUT)
+    g.raise_for_status()
+    b = g.json()
+    ofid = b.get("output_file_id")
+    if not ofid:
+        raise SystemExit(f"batch {batch_id} status={b.get('status')} has no output_file_id yet.")
+    dl = requests.get(f"{BASE_URL}/files/{ofid}/content", headers=_headers(), timeout=HTTP_TIMEOUT)
+    dl.raise_for_status()
+    return [_batch_row_to_result(json.loads(l), model) for l in dl.text.splitlines() if l.strip()]
+
+
 def build_id_map(seeds):
     return {f"k{i}": s["constraint_id"] for i, s in enumerate(seeds)}
 
@@ -338,6 +359,32 @@ def run(args):
         final_seeds.append(s)
 
     token_acc = {"input_tokens": 0, "output_tokens": 0}
+
+    if args.resume_batch:
+        # Recover an ALREADY-completed batch without regenerating: its k-index custom_ids
+        # (k0..kN-1, seed order) map back onto these same first-n unprocessed seeds. Valid
+        # only against the registry state the batch was submitted under — pass the same --n.
+        gen_by_id = {s["constraint_id"]: s for s in final_seeds}
+        id_map = build_id_map(final_seeds)
+        print(f"\n[resume] downloading batch {args.resume_batch} "
+              f"({len(final_seeds)} seeds, {args.model})...")
+        wrapped = download_batch_results(args.resume_batch, args.model)
+        process_batch_results(
+            _ShimClient(wrapped), "kimi-batch", KIMI_JSON, KIMI_TESTSETS, KIMI_LADDER,
+            gen_seeds_by_id=gen_by_id, rejections_path=OUT_DIR / "rejections.json",
+            overwrite=True, id_map=id_map, token_acc=token_acc,
+            provenance_source="no_scope_rebuild_kimi",
+            sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=model_default,reasoning=model_default")
+        done = load_processed_log(KIMI_LADDER)
+        got = [s for s in final_seeds if s["constraint_id"] in done]
+        it, ot = token_acc["input_tokens"], token_acc["output_tokens"]
+        print(f"\nResume {args.resume_batch}: {len(got)}/{len(final_seeds)} written to "
+              f"{KIMI_TESTSETS.relative_to(REPO_ROOT)} (ladder: {KIMI_LADDER.name}).")
+        print(f"  token_acc: input={it:,} output={ot:,} (output INCLUDES reasoning tokens)")
+        if got:
+            print(f"  per-story mean: input={it//len(got):,} output={ot//len(got):,}")
+        return
+
     remaining = final_seeds
     transport = run_sync if args.sync else run_batch
     for attempt in range(1, 4):
@@ -383,6 +430,8 @@ def main():
     ap.add_argument("--batch", action="store_true", help="file batch (-50%%; the full run)")
     ap.add_argument("--poll-interval", type=int, default=POLL_INTERVAL)
     ap.add_argument("--estimate", action="store_true", help="rough token count; no generation")
+    ap.add_argument("--resume-batch", default=None,
+                    help="reprocess an already-completed batch id (no generation); pass same --n")
     args = ap.parse_args()
     if not args.sync and not args.batch:
         args.sync = True  # default to sync for safety on small runs

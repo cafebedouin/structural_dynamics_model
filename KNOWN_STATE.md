@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-19 — [correction-key] Kimi batch WORKS on kimi-k2.6 (was model-gated, not account-gated); status_code==0 batch-extraction bug fixed; twin retargeted k2.6; 5 pilot landed
+**Files:** agent/run_no_scope_kimi.py, prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, docs/technical/bulk_corpus_generation.md
+**Tier:** correction-key
+
+Resuming the Kimi twin after a machine restart (prior instance's `testsets_kimi/` etc. were empty
+by design — the 5 pilot stories had been relocated to `testsets/`, 2026-07-18 entry below).
+**Corrects two claims from 2026-07-18:**
+1. **Batch is NOT account-blocked — it was MODEL-gated.** `POST /v1/batches` returns **200 on
+   `kimi-k2.6`**; `kimi-k2.7-code` and `kimi-k3` 404 "resource_not_found". The 2026-07-18 "account-
+   level block" tested only the two non-eligible models. Live-verified 2026-07-19 (our pilot batch
+   `batch_6a5d1f28…` completed 5/5). `completion_window` must be an h-unit Go duration ("24h"; "1d"
+   rejected). Twin **retargeted to `kimi-k2.6` --batch** (DEFAULT_MODEL).
+2. **k2.6 is reasoning-HEAVY too**, NOT the "cheaper non-thinking / fairer twin" the k2.7-code note
+   assumed. Measured k2.6 batch: **input ≈29.6k / output ≈15.5k tok/story, of which ~11.7k are
+   reasoning tokens** (prompt caching fires, ~28.7k cached in). Stays a *thinking-model* twin.
+
+**Bug fixed (was actively billing):** Moonshot's batch output rows carry `response.status_code == 0`
+on SUCCESS (not 200), completion in `body`, null row-level `error`. The driver gated on
+`status_code == 200`, so it **rejected all 5 valid results and auto-looped into a 2nd batch**
+(cancelled before it billed inference). Fixed in `_batch_row_to_result` (gate on payload, not
+status_code) — **do not reinstate a `== 200` check.** Added `--resume-batch <id>` (reprocess a
+completed batch, no regeneration); used it to recover the already-paid pilot → **5/5 into
+`testsets_kimi/`, classify_corpus GREEN on model kimi-k2.6, h1_band populated (2,3,3,3,5)**. Also
+`_api_key()` now accepts `KIMI_API_KEY` (the .bashrc export) as well as `MOONSHOT_API_KEY`. Full
+1000-seed remainder pending a spend-go (~$130–150 est. at k2.6 batch). Runbook §7b rewritten.
+
+---
+
 ## 2026-07-18 — [landed] Kimi (K3) twin driver built + 5-seed pilot PASSED; batch unprovisioned → sync-only; PAUSED pending batch enablement
 **Files:** agent/run_no_scope_kimi.py, prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, docs/technical/bulk_corpus_generation.md
 **Tier:** landed

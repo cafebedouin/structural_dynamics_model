@@ -144,31 +144,42 @@ To build a comparison corpus (same prompts/seeds, different model — robust tes
 - **Estimate before a big run** with `run_no_scope_gemini.py --estimate` (count_tokens only, zero
   generation): per-request input × N + a prior run's output/story as the output proxy.
 
-## 7b. Kimi (K3) twin — sync-only, reasoning-inflated, PAUSED (2026-07-18)
+## 7b. Kimi (Moonshot) twin — kimi-k2.6 BATCH, reasoning-inflated (2026-07-19)
 
 `agent/run_no_scope_kimi.py` is the Moonshot/Kimi twin (`testsets_kimi/` + `json_kimi/` +
-`beta_processed_kimi.txt`), same Anthropic-result-shaped shim as the Gemini driver. Two facts a
-future run needs:
+`beta_processed_kimi.txt`), same Anthropic-result-shaped shim as the Gemini driver. What a future
+run needs (supersedes the 2026-07-18 "sync-only / batch unprovisioned" reading, which was wrong):
 
-- **`kimi-k3` is reasoning-ONLY** (`supports_thinking_type: "only"`, `think_efforts` = `["max"]`):
-  thinking CANNOT be disabled, so §6's "keep it fair with `thinking_budget=0`" does NOT apply. This
-  twin is a *thinking-model* twin — output runs ~16.5k tok/story (vs Haiku 10.8k, Flash 4.5k), the
-  reasoning inflation. We extract `content`; `reasoning_content` is discarded. Cross-twin comparisons
-  carry that asymmetry (stamped in provenance as `kimi-k3`).
-- **Batch-create is NOT provisioned on the staff/preview key** (witnessed 2026-07-18): file-upload +
-  batch-list work, but a fully valid `POST /v1/batches` (file exists, endpoint == the API's own
-  stated valid value, `completion_window` a valid Go duration) 404s "resource_not_found". So the
-  full run is **sync-only at the interactive rate** — measured **$0.289/story** (no −50% batch
-  discount), ≈ $291 for the ~1005-seed pool. **PAUSED at 5 pilot stories** pending batch enablement
-  on the account (operator ruling). **Resume:** `python3 -m agent.run_no_scope_kimi --seeds
-  prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json --batch` once create works (the kimi
-  ladder skips the 5 done), or `--sync` to run at interactive rate now. Needs `MOONSHOT_API_KEY` in
-  the env (never in the repo).
+- **Batch IS available — it was MODEL-gated, not account-gated (witnessed 2026-07-19).** `POST
+  /v1/batches` returns 200 on **`kimi-k2.6`**; `kimi-k2.7-code` and `kimi-k3` 404
+  "resource_not_found" (not batch-enabled). The earlier "account-blocked" conclusion tested only the
+  non-eligible models. `completion_window` must be an h-unit Go duration (`"24h"` works; the docs'
+  `"1d"` is rejected). So **the twin is `kimi-k2.6` via `--batch`** (`DEFAULT_MODEL`).
+- **Moonshot's batch output rows set `response.status_code == 0` on SUCCESS (not 200)**, carrying
+  the completion in `body` with a null row-level `error`. The driver originally gated on
+  `status_code == 200`, so it **discarded every valid result and looped into a fresh batch**
+  (witnessed: pilot completed 5/5, all rejected, a 2nd batch auto-created + billed). Fixed in
+  `_batch_row_to_result` (gate on payload, not status_code). If you touch the batch download path,
+  keep that: **do NOT reinstate a hard `status_code == 200` check.**
+- **`--resume-batch <id>`** reprocesses an already-completed batch WITHOUT regenerating (recovers a
+  dead poll loop without re-billing). Its `k{i}` custom_ids map back onto the same first-`--n`
+  unprocessed seeds, so pass the same `--n` and run against the same ladder state.
+- **kimi-k2.6 is reasoning-HEAVY too** (not the "cheaper non-thinking" model the k2.7-code note
+  assumed): measured **input ≈29.6k / output ≈15.5k tok/story**, of which **~11.7k are reasoning
+  tokens**. So this stays a *thinking-model* twin (like k3); cross-twin comparisons carry that
+  asymmetry. We extract `content`; `reasoning_content` is discarded. Prompt caching fires
+  (~28.7k cached input tok/story).
+- **Key:** reads `MOONSHOT_API_KEY` OR `KIMI_API_KEY` from the env (never in the repo).
+- **Run the full pool:** `python3 -u -m agent.run_no_scope_kimi --seeds
+  prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json --batch` (kimi ladder skips the 5
+  pilot stories already done). Use `python3 -u` — the driver block-buffers stdout to a file
+  otherwise, so progress is invisible until exit. Status as of 2026-07-19: **5 pilot stories landed
+  in `testsets_kimi/`** (k2.6, classify_corpus GREEN); full 1000-seed remainder pending a spend-go.
 
 ## 8. Pointers
 
 - Drivers: `agent/generate_kernel_corpus.py` (`run_no_scope`), `agent/run_no_scope_gemini.py`,
-  `agent/run_no_scope_kimi.py` (Kimi K3 twin — §7b).
+  `agent/run_no_scope_kimi.py` (Kimi kimi-k2.6 batch twin — §7b).
 - Helpers: `agent/_pilot_ladder_strip.py` (OQ-121 strip + witness), `agent/build_never_generated_seeds.py`.
 - This build's saved records: `prolog/kernels/rebuild_2026-06-13/` (seed pool, reconcile sets,
   per-model failure lists, README).
