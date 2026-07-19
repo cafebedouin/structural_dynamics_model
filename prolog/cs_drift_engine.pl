@@ -55,6 +55,16 @@
 %   tracing the snapshot series. This table cuts choice/foreclosure ONLY; the
 %   mountain/choice boundary is cut elsewhere, by the beneficiary leg
 %   (false_natural_law — a present otherwise, checked structurally not remembered).
+%
+% SCOPE (2026-07-18, OQ-227; blog/2026-07/ *Hearts of Glass* test-rig): the six
+%   terminals below are complete only under a SURVIVING-REFERENT precondition.
+%   Deep-time referent-dissolution — the referent a commitment is *about* decays
+%   while its internal form and grounding persist perfectly — is unhandled
+%   state-space. It surfaces `sealed_closure`: warm, complete, "checks against
+%   nothing," and UNRECOGNIZABLE by any observer incl. the keeper (vs `husk`, a
+%   *recognized* hollowing — Kodashim knows the Temple is gone). Undetectable by
+%   construction (H¹=0, no pre-closure snapshot, no referent to check against),
+%   so authored-only if ever added — the drift analog of h1_band=null. See OQ-227.
 % ============================================================================
 
 :- module(cs_drift_engine, [cs_drift_trajectory/3]).

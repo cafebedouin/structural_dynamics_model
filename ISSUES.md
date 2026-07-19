@@ -10650,7 +10650,73 @@ ruling extends to it.
 
 ---
 
-*Last updated: 2026-07-16. Add new items with sequential OQ-NN labels. Mark
+## OQ-227 — Does the commitment-drift terminal set miss a regime? Deep-time referent-dissolution surfaces `sealed_closure` (+ an `acknowledgment_collapse` standing terminal) — fiction test-rig
+
+**Ω-type:** Ω_E for the completeness question — a constructed referent-dissolution case either
+routes to an existing `cs_terminal_attractor/4` row or falls through, decidable by construction —
+with a rider: the leading candidate is undetectable-in-principle (an authored-only terminal, like
+the `cs_drift` acknowledged bit; the commitment-scale analog of the essay's terminal fox and of
+`h1_band=null`), so part of the resolution is Ω_P-adjacent (the engine abstains / records an
+undetermined terminal, never self-certifies it).
+
+**Status:** open — surfaced 2026-07-18 from *Hearts of Glass* (`blog/2026-07/`), the eon-scale
+fiction used as a framework test rig (the Claude-web review's "fiction is the only rig that can run
+a differential-metabolism experiment"). Zero live-corpus instances — thought-experiment only, like
+the self-consuming-standing trigger in `design_gaps.md`.
+
+**Priority:** 3
+
+**Deps:** bundled_with OQ-153
+
+**Origin:** operator, 2026-07-18. The six `cs_terminal_attractor/4` terminals (`stable_pattern`,
+`husk`, `extinction`, `revival`, `repudiation`, `axiom_foreclosure`) each presuppose a **surviving
+referent** — a Temple to be hollow about (husk/Kodashim), a cosmology to be foreclosed
+(Aristotelian), a text for practice to depart from — and their examples are all time-bounded. The
+story runs the drift past the point where the **referent itself dissolves** while the commitment's
+internal form and grounding are perfectly preserved (Ito, the ties, the world, the star all gone;
+the marriage/joke/roster fully warm). That is unreached state-space.
+
+**Candidate additions:**
+- **`sealed_closure`** (commitment axis) — subjectively complete, grounding fully present (the love
+  is real, unlost), but the external referent has decayed to nothing: it "checks against nothing, a
+  closed circle warming itself." The discriminator from `husk` is *recognizability, not
+  referent-presence*: `husk`/Kodashim is a **recognized** hollowing (the community knows the Temple
+  is gone and studies the form as memorial), whereas `sealed_closure` is **unrecognizable by any
+  standing observer, the keeper included** — grounding warm, referent gone, no vantage from which
+  the gap shows. It is the commitment-scale instance of the terminal fox
+  (`blog/2026-07/no-four-oclock-v8.md`, v8 §5.9). Mark: internally complete ∧ referentially empty ∧
+  undetectable-as-such.
+- **`referent_dissolution`** — a candidate new **gap-descriptor direction** (`cs_drift_state/3`)
+  feeding `sealed_closure`: the reference frame's external referent decays while
+  codification/practice/grounding persist. None of the existing directions (`authority_erosion`,
+  `codification_collapse`, `axiom_overriding`, `practice_drift`, the pressures) names it.
+- **`acknowledgment_collapse`** (standing axis, NOT a commitment terminal) — the ratifying authority
+  (the Keeper) "can no longer tell its faith from the perfect performance of its faith." This is the
+  **terminal form of the self-consuming-standing trigger** (`design_gaps.md`): the keeper spends the
+  faith-vs-forgery distinction in the act of exercising it. Route it to the standing trigger, not
+  the commitment table.
+
+**The honest complication (why this may not become a *computed* terminal):** `sealed_closure` is by
+construction the state where detection fails — it glues from every synchronic angle (H¹=0, per the
+§9.4 synchronic-invariant prohibition), has no authored pre-closure snapshot, and no referent to
+check against. The engine cannot *detect* it; at most it carries it as an **authored-only /
+undetermined terminal** (drift analog of `h1_band=null`, sibling of the acknowledged bit's authored
+basis). This is the same shape as OQ-51's ruled-not-yet-built 4th sheaf value: a real terminal the
+apparatus can name but not measure.
+
+**What resolution changes:** either (a) add `referent_dissolution` + `sealed_closure` to
+`cs_drift_state/3` / `cs_terminal_attractor/4` as an authored-only region with a
+`cs_drift_terminal_basis` value marking it undetectable-in-principle, routing `acknowledgment_collapse`
+to the standing trigger; or (b) rule the referent-dissolution regime out-of-scope for a corpus with
+no eon-scale cases, keeping this as the recorded reasoning a reviver would need. Either way the
+finding stands: the current six are complete only under a **surviving-referent precondition**, which
+belongs in the `cs_drift_engine.pl` header. Adjacent: OQ-153 (husk/naturalized temporal-axis
+taxonomy, bundled), OQ-126 (T0→T3 temporal accountability), GAP-02 (husk trajectory-shape), and the
+`design_gaps.md` self-consuming-standing trigger.
+
+---
+
+*Last updated: 2026-07-18. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

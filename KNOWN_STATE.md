@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-18 — [correction-key] commitment-drift terminals are complete only under a SURVIVING-REFERENT precondition (OQ-227, from the *Hearts of Glass* fiction test-rig)
+**Files:** prolog/cs_drift_engine.pl, ISSUES.md, docs/design/design_gaps.md, docs/deferential_realism_paper_v8.md, blog/2026-07/no-four-oclock-v8.md
+**Tier:** correction-key
+
+The six `cs_terminal_attractor/4` terminals (`stable_pattern`, `husk`, `extinction`, `revival`,
+`repudiation`, `axiom_foreclosure`) each **presuppose a surviving referent** (a Temple to be hollow
+about; a cosmology to foreclose; a text to depart from) — and all their examples are time-bounded.
+Do NOT treat the six as exhaustive: deep-time **referent-dissolution** (the referent a commitment is
+*about* decays while its internal form and grounding persist perfectly) is unhandled state-space.
+OQ-227 (minted this session, `bundled_with OQ-153`) logs three candidates: **`sealed_closure`**
+(commitment axis — warm, complete, "checks against nothing"), **`referent_dissolution`** (a new
+`cs_drift_state/3` direction), and **`acknowledgment_collapse`** (standing axis — the ratifying
+authority can no longer tell faith from its perfect performance; the terminal form of the
+`design_gaps.md` self-consuming-standing trigger). **Load-bearing discriminator = recognizability,
+not referent-presence:** `husk`/Kodashim is a *recognized* hollowing (the community knows the Temple
+is gone); `sealed_closure` is unrecognizable by any observer incl. the keeper — the commitment-scale
+instance of the essay's terminal fox (v8 §5.9). It is undetectable by construction (glues from every
+synchronic angle → H¹=0, per the v8 §9.4 synchronic-invariant prohibition added same session; no
+pre-closure snapshot), so **authored-only if ever built** — the drift analog of `h1_band=null`, same
+shape as OQ-51's ruled-not-yet-built 4th sheaf value. Provenance: fiction as eon-scale test rig
+(Claude-web review). Zero live-corpus cases — the additive path stays deferred; the recorded reasoning
+is for a reviver. Also landed same session: v8 §9.4 H¹-synchronic citation prohibition; `design_gaps.md`
+self-consuming-standing trigger; blog Part IV "The otherwise you can't erase" (temporal/Euclid repair).
+
+---
+
 ## 2026-07-17 — [correction-key] blog essay "Everything Becomes Taste" → three-legs = trifurcation; forced-vs-chosen invariant; the synchronic mountain/naturalized read is WRONG
 **Files:** docs/deferential_realism_paper_v8.md, docs/design/design_gaps.md, prolog/cs_drift_engine.pl, docs/debugging_philosophy.md
 **Tier:** correction-key

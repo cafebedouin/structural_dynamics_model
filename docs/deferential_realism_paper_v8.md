@@ -1065,6 +1065,21 @@ Standing citation prohibitions, each with its reason:
 - **A retracted number stays retracted.** The 94% single-observer Nash figure was
   self-retracted as a projection artifact (§3.4, Theorem 3) and appears in older sections
   without inline correction; quote the corrected block-level characterization only.
+- **H¹ is a synchronic invariant and may not be cited as touching authenticity or
+  naturalization.** H¹ (and `sheaf_status`) is computed over the observer orbit at a *single
+  time slice*. The mountain-vs-naturalized distinction — a genuine natural limit versus a
+  hollowed construction that has drifted into looking like one — is *temporal*, recoverable only
+  by fixing the frame and tracing the snapshot series (§5.9). The two are disjoint machinery, and
+  the corpus shows it: on the live `testsets/` run (`20f5731`, 2026-07-17) H¹ = 0 — perfect
+  synchronic consensus, a genuine global section — spans five distinct drift terminals
+  (`stable_pattern`, `husk`, `axiom_foreclosure`, `revival`, `repudiation`), so a real mountain
+  and a naturalized husk are byte-identical at the cohomological layer. The presheaf/H¹ apparatus
+  is load-bearing on the observer axis — it produces orbit classifications the flat six-type
+  taxonomy cannot (a snare its beneficiary alone reads as coordination; a manufactured versus a
+  genuine consensus) — but is silent on the temporal axis. Citing a gluing status or an H¹ value
+  as evidence about whether a constraint is *really* natural, or about the authorship of a
+  commitment, cites the invariant at an altitude it cannot support; those are Theorem-2 (§3.4)
+  quantities about perspectival fracture, and the authenticity question lives on the drift axis.
 
 ### 9.5 What keeps v8 falsifiable
 

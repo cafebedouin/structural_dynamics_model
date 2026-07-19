@@ -1189,6 +1189,32 @@ justify a gap entry, which would read as planned work. It is recorded here so th
 triggering condition is met, a cold read finds the prior reasoning rather than re-deriving it.
 Promote a trigger to a full GAP-NN only when its condition fires.
 
+### TRIGGER — Acknowledgment-authority as a depletable stock (self-consuming standing)
+
+**Surfaced 2026-07-18 (fiction stress-test — the `blog/2026-07/` *Hearts of Glass* review; not a
+corpus case).** The orientation / `cs_*` axis models **standing** — who may acknowledge drift or
+ratify a reading — as a **stable positional property**: a party has standing or does not, and
+exercising it *expresses* it (the `cs_drift` acknowledged bit, the `cs_drift_ack_witness`
+confrontation-path, seat-theorem Corollary 3 honor-vs-reabsorb). There is no state for standing
+that is a **stock exercise depletes** — a principal the system defers to *because* its authority is
+latent and unreachable, whose act of exercising it converts it from principal to witness (the
+authority the system orbits becomes a party it cross-examines; exercising the standing destroys it).
+Its **terminal** form is `acknowledgment_collapse` — the authority that can no longer tell its faith
+from the perfect performance of its faith (OQ-227): the standing is not refused but *spent*.
+The nearest live surface is the **inverse**: dormant-container reactivation (Meiji, the
+Estates-General) *credits* latent standing by switching it on; self-consuming standing would *debit*
+live standing by using it. **Declined, not gapped:** zero live-corpus instances — the only case is a
+fiction thought-experiment (a charter that defers to sleepers who lose ultimate standing the moment
+they are woken to exercise it). A standing-as-stock state variable + a debit-on-exercise transition
++ a consumer, justified by no corpus data, would read as planned work (the same reasoning that keeps
+the 1:N reading layer below a trigger).
+
+**Promotion condition:** a live-corpus kernel whose acknowledgment authority is genuinely *consumed*
+by exercise — a ratifying party that loses standing by ratifying — not merely activated (the
+reactivation inverse) or transferred. When that fires, promote to a GAP-NN. Until then the property
+model of standing (`cs_drift_engine.pl`, seat-theorem Cor 3) is correct for every case the corpus
+actually contains.
+
 ### TRIGGER — 1:N reading-object layer (one reading covers N constraints)
 
 **Deferred per OQ-04 (2026-06-23, design-cut ruling).** A predicate (`cs_reading_covers/2` and
