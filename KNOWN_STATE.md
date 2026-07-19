@@ -68,8 +68,19 @@ on SUCCESS (not 200), completion in `body`, null row-level `error`. The driver g
 status_code) — **do not reinstate a `== 200` check.** Added `--resume-batch <id>` (reprocess a
 completed batch, no regeneration); used it to recover the already-paid pilot → **5/5 into
 `testsets_kimi/`, classify_corpus GREEN on model kimi-k2.6, h1_band populated (2,3,3,3,5)**. Also
-`_api_key()` now accepts `KIMI_API_KEY` (the .bashrc export) as well as `MOONSHOT_API_KEY`. Full
-1000-seed remainder pending a spend-go (~$130–150 est. at k2.6 batch). Runbook §7b rewritten.
+`_api_key()` now accepts `KIMI_API_KEY` (the .bashrc export) as well as `MOONSHOT_API_KEY`.
+
+**Full-run attempt BLOCKED on account balance (2026-07-19).** With a spend-go, the full 1000-seed
+run was launched. Two mechanical issues found + fixed: (a) Moonshot `/files` hard limit is **100 MB**
+and each request inlines the ~139 KB prompt, so a 1000-request jsonl is ~143 MB → 400 "File size is
+too large"; fixed by size-chunking `run_batch` into <90 MB batches (`_chunk_lines`; 1000 → 630+370;
+commit d92b3cb7). (b) The 630-request batch then **failed on `failed_precondition: user has
+insufficient balance`** — Moonshot reserves cost against `max_tokens` (32000), and the reservation
+for 630 requests exceeds the account's **available_balance = $51.85** ($50 cash + $1.85 voucher). The
+370-request batch cleared the reservation but was cancelled for a clean slate. **The full ~1000-story
+k2.6 batch needs a recharge** (reservation ~$82–140 at max_tokens=32000; ACTUAL spend lower since
+output ≈15.5k vs reserved 32k). Kimi leg stays at **n=5** until funded. Resume after recharge: one
+clean `--batch` run (ladder skips the 5). Balance endpoint: `GET /v1/users/me/balance`. Runbook §7b.
 
 ---
 
