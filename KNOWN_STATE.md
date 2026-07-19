@@ -45,6 +45,29 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-18 — [landed] Kimi (K3) twin driver built + 5-seed pilot PASSED; batch unprovisioned → sync-only; PAUSED pending batch enablement
+**Files:** agent/run_no_scope_kimi.py, prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, docs/technical/bulk_corpus_generation.md
+**Tier:** landed
+
+New Moonshot/Kimi twin driver `agent/run_no_scope_kimi.py` (same Anthropic-result-shaped shim as
+`run_no_scope_gemini.py`; reuses `build_cached_messages` + `process_batch_results` from the canonical
+`agent/generate_kernel_corpus.py`; dest `testsets_kimi/` + `json_kimi/` + `beta_processed_kimi.txt`,
+registry scoped to the kimi dir per runbook §6). **Pilot (5 seeds, sync) PASSED:** 5/5 valid `.pl`,
+engine-load OK, `reading_relations` resolved, provenance stamped `kimi-k3` (five-defect fix intact),
+0 rejections/failures. **Two findings (detail: runbook §7b):** (1) `kimi-k3` is REASONING-ONLY
+(`supports_thinking_type:"only"`, effort only `["max"]`) — thinking can't be disabled, so this is a
+*thinking-model* twin, asymmetric to the haiku/flash/sonnet twins (output ~16.5k tok/story). (2)
+**batch-create is NOT provisioned on the staff/preview key** — file-upload + batch-list work, but a
+fully valid `POST /v1/batches` 404s "resource_not_found" (endpoint/duration/file all verified valid),
+so the full run is **sync-only at interactive rate, measured $0.289/story** (operator-confirmed
+$1.44677/5 pilot), ≈ $291 for the 1005-seed pool vs ~$145 if batch is enabled. **PAUSED at 5 pilot
+stories** (operator ruling: enable batch first). RESUME: `python3 -m agent.run_no_scope_kimi --seeds
+prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json --batch` once create works (ladder skips
+the 5 done), or `--sync` now. Needs `MOONSHOT_API_KEY` in env (never repo). **Key hygiene:** the API
+key was pasted in chat — operator should ROTATE it.
+
+---
+
 ## 2026-07-18 — [correction-key] commitment-drift terminals are complete only under a SURVIVING-REFERENT precondition (OQ-227, from the *Hearts of Glass* fiction test-rig)
 **Files:** prolog/cs_drift_engine.pl, ISSUES.md, docs/design/design_gaps.md, docs/deferential_realism_paper_v8.md, blog/2026-07/no-four-oclock-v8.md
 **Tier:** correction-key

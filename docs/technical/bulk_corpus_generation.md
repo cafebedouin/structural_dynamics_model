@@ -144,9 +144,31 @@ To build a comparison corpus (same prompts/seeds, different model — robust tes
 - **Estimate before a big run** with `run_no_scope_gemini.py --estimate` (count_tokens only, zero
   generation): per-request input × N + a prior run's output/story as the output proxy.
 
+## 7b. Kimi (K3) twin — sync-only, reasoning-inflated, PAUSED (2026-07-18)
+
+`agent/run_no_scope_kimi.py` is the Moonshot/Kimi twin (`testsets_kimi/` + `json_kimi/` +
+`beta_processed_kimi.txt`), same Anthropic-result-shaped shim as the Gemini driver. Two facts a
+future run needs:
+
+- **`kimi-k3` is reasoning-ONLY** (`supports_thinking_type: "only"`, `think_efforts` = `["max"]`):
+  thinking CANNOT be disabled, so §6's "keep it fair with `thinking_budget=0`" does NOT apply. This
+  twin is a *thinking-model* twin — output runs ~16.5k tok/story (vs Haiku 10.8k, Flash 4.5k), the
+  reasoning inflation. We extract `content`; `reasoning_content` is discarded. Cross-twin comparisons
+  carry that asymmetry (stamped in provenance as `kimi-k3`).
+- **Batch-create is NOT provisioned on the staff/preview key** (witnessed 2026-07-18): file-upload +
+  batch-list work, but a fully valid `POST /v1/batches` (file exists, endpoint == the API's own
+  stated valid value, `completion_window` a valid Go duration) 404s "resource_not_found". So the
+  full run is **sync-only at the interactive rate** — measured **$0.289/story** (no −50% batch
+  discount), ≈ $291 for the ~1005-seed pool. **PAUSED at 5 pilot stories** pending batch enablement
+  on the account (operator ruling). **Resume:** `python3 -m agent.run_no_scope_kimi --seeds
+  prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json --batch` once create works (the kimi
+  ladder skips the 5 done), or `--sync` to run at interactive rate now. Needs `MOONSHOT_API_KEY` in
+  the env (never in the repo).
+
 ## 8. Pointers
 
-- Drivers: `agent/generate_kernel_corpus.py` (`run_no_scope`), `agent/run_no_scope_gemini.py`.
+- Drivers: `agent/generate_kernel_corpus.py` (`run_no_scope`), `agent/run_no_scope_gemini.py`,
+  `agent/run_no_scope_kimi.py` (Kimi K3 twin — §7b).
 - Helpers: `agent/_pilot_ladder_strip.py` (OQ-121 strip + witness), `agent/build_never_generated_seeds.py`.
 - This build's saved records: `prolog/kernels/rebuild_2026-06-13/` (seed pool, reconcile sets,
   per-model failure lists, README).
