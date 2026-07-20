@@ -45,6 +45,31 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-20 — [landed] Kimi-k2.6 twin COMPLETE at n=1005; five-leg cross-model comparison
+**Files:** prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, agent/run_no_scope_kimi.py, python/audits/five_leg_twin_comparison.py, audits/2026-07-20_five_leg_twin_comparison/
+**Tier:** landed
+
+The balance-blocked full run (below) was completed after a recharge landed. **Key operational
+finding: batch tail latency is batch-SIZE dependent.** A 350-request batch stalled at ~332/350 for
+hours (30 reqs stuck at +2/hr, rode toward the 24h window); **335/336-request batches completed
+335/335 and 336/336 with NO stall.** So keep kimi batches ≤ ~335. **Cancel returns completed rows**
+in the output file (output_file_id populates on cancel) — `--resume-batch <id> --n <same>` harvests
+them with no regen; used once to recover 329 from the stalled 350-batch. Path to full n=1005: pilot
+5 + harvest 329 + round-1 335 + round-2 336. Actual cost ~$0.043/story batch (round-1: $14.3/335);
+balance drew ~$65 total from the ~$150 recharged pool. `testsets_kimi/` is now the FIFTH full leg.
+
+**Five-leg comparison** (`audits/2026-07-20_five_leg_twin_comparison/`, all 5 legs classified at one
+HEAD `9c226e8`): (1) **kimi-k2.6 is strikingly homogeneous — 63% of stories in H¹ band-3** (vs
+26–34% others), N-invariant (63% at both n=334 and n=1005) — the sharpest single-model signature.
+(2) **H¹ obstruction is overwhelmingly model-dependent**: across 957 shared seeds, all-4 twins agree
+on h1_band only 14.5% (maxent type 35.1%) — empirical support for seat-indexed verdicts. (3)
+**CORRECTION:** the partial-N (334) "kimi is cleanest, 0.3% red" claim was a first-334-seeds artifact
+— at full N kimi red% = 2.7%, comparable to sonnet/haiku. Lesson: marginals over a non-random slice
+mislead; paired agreement rates were N-stable. sonnet remains the type outlier (only tangled_rope >
+snare leg, high piton).
+
+---
+
 ## 2026-07-19 — [correction-key] Kimi batch WORKS on kimi-k2.6 (was model-gated, not account-gated); status_code==0 batch-extraction bug fixed; twin retargeted k2.6; 5 pilot landed
 **Files:** agent/run_no_scope_kimi.py, prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, docs/technical/bulk_corpus_generation.md
 **Tier:** correction-key
