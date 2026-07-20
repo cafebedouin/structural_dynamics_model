@@ -1,0 +1,275 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__p2p_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "btcp2p",
+    "story_uid": "d0869954-35ea-440d-9397-9a98208afc16"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Base-Layer P2P Electronic Cash Constraint",
+    "topic_domain": "economic/monetary/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "miners",
+      "sovereign_settlement_users"
+    ],
+    "victims": [
+      "retail_transactors"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "miners",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Secure the network by producing blocks and enforcing consensus rules including the block size limit. They collect transaction fees and block subsidies. Their infrastructure is locked into SHA-256 mining, making exit to other consensus systems costly."
+    },
+    {
+      "name": "retail_transactors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Use Bitcoin for everyday payments, remittances, or small-value transfers. When on-chain fees rise above a few dollars, they are priced out of base-layer settlement and must rely on custodial exchanges or complex second-layer infrastructure that reintroduces counterparty risk."
+    },
+    {
+      "name": "sovereign_settlement_users",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Move large capital sums on-chain and can afford volatile fees during congestion. They benefit from Bitcoin's censorship resistance and final settlement guarantees, which the fee market pays for without excluding them."
+    },
+    {
+      "name": "core_protocol_maintainers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Maintain the Bitcoin Core reference implementation and influence consensus parameter defaults, including block weight limits. Their technical decisions directly determine base-layer throughput and the intensity of the fee market."
+    },
+    {
+      "name": "unbanked_emerging_market_users",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Need censorship-resistant payment rails for subsistence-level transactions but lack access to banking, Lightning infrastructure, or the capital to absorb high base-layer fees. They are structurally absent from protocol governance and developer prioritization."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides global, permissionless, censorship-resistant final settlement of electronic value transfers without trusted intermediary clearance or account-based exclusion.",
+    "transfer_function": "Moves purchasing power from transactors seeking block inclusion to miners via transaction fees; moves economic access from low-value transactors to high-fee bidders during congestion.",
+    "absent_voices": "Unbanked populations in high-inflation economies and small merchants who accepted Bitcoin in the early low-fee era are priced out of on-chain settlement and excluded from protocol governance. They would argue for base-layer capacity expansion but are not in the room where consensus parameters are set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the base-layer censorship-resistant settlement mechanism disappeared, unbanked remittance corridors, grey-market commerce, and sovereign wealth preservation flows would lose their primary non-intermediated rail and be forced back onto regulated banking or less secure altcoin networks.",
+    "founding_problem": "Double-spending in digital cash without a trusted third party; creating a non-sovereign medium of exchange for direct electronic transactions between parties.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The whitepaper and early cypherpunk literature attest the p2p electronic cash founding problem from within the kernel tradition. Independent development economists and Global South remittance researchers corroborate that low-fee digital cash remains an unsolved problem, while institutional custody providers and monetary hedge funds argue the founding problem has shifted to store-of-value settlement."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.45
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the p2p_cash_reading of the bitcoin_whitepaper kernel, which holds that Bitcoin is defined by its function as a censorship-resistant medium of exchange for direct electronic transactions. Under this reading, low fees and block size expansion are legitimate mechanisms. The actual protocol enforces a constrained block size that produces a fee market, extracting from retail transactors who are priced out of base-layer settlement while still coordinating global final settlement for those who can pay. The sibling digital_gold_reading treats fee markets as security-preserving scarcity, while the protocol_ossification_reading treats any base-layer expansion as illegitimate.",
+    "key_agents": [
+      "miners: primary agenda-setter and beneficiary (organized/constrained) â enforces consensus and collects fees",
+      "retail_transactors: primary target (powerless/constrained) â priced out by fee markets",
+      "sovereign_settlement_users: primary beneficiary (powerful/mobile) â purchases censorship-resistant settlement",
+      "core_protocol_maintainers: secondary agenda-setter (institutional/mobile) â sets throughput parameters",
+      "unbanked_emerging_market_users: excluded voice (powerless/trapped) â needs low-fee rails but absent from governance"
+    ],
+    "logic_rationale": "Base extractiveness rises from negligible to 0.55 as block space saturates and fee markets price out low-value transactions. Theater rises to 0.45 because the p2p electronic cash narrative is maintained in protocol culture and whitepaper citation even as empirical base-layer usage shifts toward high-value settlement. Suppression spikes during the block size wars (time points 6-9) as social consensus enforces the small-block roadmap and marginalizes fork alternatives, then moderates as the new equilibrium stabilizes. Accessibility collapse is 0.60 because alternatives (altcoins, Lightning, custodial layers) exist but require significant friction, counterparty risk, or capital. Resistance is 0.50 reflecting the ongoing big-block dissent, hard forks, and competing chain formations.",
+    "perspectival_gap": "From the miner and sovereign settlement seats, the fee market is a necessary cost of decentralized security and anti-censorship infrastructure; from the retail transactor and unbanked seats, the same structure operates as extraction that denies access to the base layer. The engine computes this divergence from the structural data rather than adjudicating it.",
+    "directionality_logic": "Miners sit near the beneficiary end: they collect fees and enforce the scarcity. Sovereign settlement users also sit near the beneficiary end: they capture censorship-resistant finality subsidized by the fee market. Retail transactors sit near the full-target end: they bear the cost of fee-driven exclusion with constrained exit. Unbanked emerging market users are excluded rather than coordinated â their absence from the fee market is the structural result.",
+    "mandatrophy_analysis": "The founding problem of p2p electronic cash is contested: the whitepaper articulates it, but empirical base-layer fee behavior has shifted practical usage toward store-of-value settlement. Mislabeling the constraint as a snare would ignore the genuine coordination function (global censorship-resistant settlement); mislabeling it as a rope would ignore the asymmetric extraction (retail transactors priced out). Tangled rope captures both: the constraint coordinates real final settlement while actively enforcing a scarcity that extracts from low-value users.",
+    "kernel_context": "This constraint is the p2p_cash_reading of the bitcoin_whitepaper kernel. It instantiates the reading that Bitcoin is a censorship-resistant medium of exchange for direct electronic transactions, with low fees and block size expansion as legitimate. Sibling readings are digital_gold_reading (store of value, inflation hedge) and protocol_ossification_reading (immutability as primary virtue, changes illegitimate)."
+  },
+  "omegas": [
+    {
+      "id": "fee_market_necessity",
+      "question": "Is the base-layer fee market an inevitable result of decentralized security budgeting, or an artifact of the protocol's chosen block size limit?",
+      "resolution_mechanism": "Natural experiment via a block size increasing fork: if security decentralization collapses, the fee market is structurally necessary; if security holds, the scarcity is artificial extraction.",
+      "impact": "If artificial, the constraint is more extractive and the victim set larger; if necessary, the extraction is the price of coordination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether fee market scarcity is structurally necessary or constructed."
+    },
+    {
+      "id": "p2p_cash_viability",
+      "question": "Can the base layer still serve as p2p electronic cash given empirical fee market behavior, or has the kernel drifted to a different function?",
+      "resolution_mechanism": "Longitudinal analysis of median transaction value versus median fee; if median fee consistently exceeds everyday transaction thresholds, the p2p cash reading is empirically overridden.",
+      "impact": "If empirically overridden, this reading's axioms may shift to overridden status and the constraint reclassifies toward snare or piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether empirical fee behavior overrides the p2p cash reading."
+    },
+    {
+      "id": "kernel_reading_legitimacy",
+      "question": "Does the p2p cash reading retain enough protocol-adherent support to be considered a live reading, or has it been structurally displaced by the digital gold reading?",
+      "resolution_mechanism": "Measure developer commit activity, node signaling, and community governance participation aligned with each reading.",
+      "impact": "Determines whether this reading is holdable or overridden within the kernel's tradition.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether p2p cash reading remains live within the kernel."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "reference_frame": "whitepaper_p2p_cash_intent",
+    "drift_state": {
+      "moment": "post_2017_fee_crisis",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bitcoin_whitepaper__digital_gold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bitcoin_whitepaper__protocol_ossification_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "peer_to_peer_electronic_cash_is_kernel_purpose",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "block_size_increase_preserves_decentralization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

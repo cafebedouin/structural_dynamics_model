@@ -1,0 +1,235 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "45f8b6a7-b055-48d6-bcd1-406d9bbf97b8"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.18,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Competence Reading of Preparedness Persistence",
+    "topic_domain": "disaster_preparedness/institutional_memory/commitment_systems",
+    "beneficiaries": [
+      "emergency_management_officials",
+      "operational_personnel",
+      "public_at_risk"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "emergency_management_officials",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Designs and administers drill protocols and inspection schedules; maintains the institutional commitment to readiness; believes that regular practice sustains operational competence and prevents skill decay across the organization."
+    },
+    {
+      "name": "operational_personnel",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Participates in regular drills and equipment inspections; exercises emergency protocols in simulated conditions; depends on maintained competence for personal safety and effective performance during actual incidents."
+    },
+    {
+      "name": "public_at_risk",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Relies on emergency services that maintain readiness through drills and inspections; receives downstream protection from competent response during disasters; cannot opt out of depending on institutional preparedness."
+    },
+    {
+      "name": "regulatory_oversight_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Audits compliance with preparedness mandates from outside the operational chain; reviews drill records and inspection logs; evaluates whether institutions meet legally prescribed readiness standards."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains distributed operational competence across time and personnel turnover by requiring regular collective practice of emergency protocols and physical inspection of readiness infrastructure.",
+    "transfer_function": "Moves time, attention, and labor from routine operations into rehearsal and verification activities; moves competence from experienced personnel to newer personnel through repeated joint practice.",
+    "absent_voices": "Personnel who experience drills as bureaucratic burden rather than learning opportunities; alternative readiness models such as just-in-time immersive simulation or decentralized mutual-aid networks are underrepresented in mandate design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without regular drills and inspections, operational competence would decay due to skill atrophy, equipment degradation, and personnel turnover; emergency response would shift toward ad-hoc improvisation, increasing catastrophic risk.",
+    "founding_problem": "Emergency response skills and equipment readiness decay without regular exercise; institutional memory fragments across personnel turnover; no individual responder can maintain system-wide readiness alone.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent disaster-sociology research, post-incident after-action reviews, and safety-science literature attest that response effectiveness correlates with training frequency and recency; these sources are outside the direct beneficiary set of drill-administering agencies."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.08
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the competence_reading of the preparedness_persistence kernel, which treats institutional drills and inspections as live exercised knowledge that maintains operational readiness over time. The reading asserts that preparedness is not merely recorded in manuals or embodied in static infrastructure, but must be actively practiced to persist. The constraint coordinates distributed personnel across turnover and time, ensuring that response capabilities do not atrophy. The sibling husk_reading claims this activity has become empty ritual, while hybrid_reading sees a mix; this reading forecloses the husk interpretation by asserting genuine competence transfer.",
+    "key_agents": [
+      "emergency_management_officials (agenda_setter / institutional / constrained) â designs and enforces drill protocols",
+      "operational_personnel (beneficiary / moderate / constrained) â bears practice costs and receives competence",
+      "public_at_risk (beneficiary / powerless / trapped) â downstream beneficiary of maintained readiness",
+      "regulatory_oversight_bodies (observer / institutional / analytical) â audits compliance from outside"
+    ],
+    "logic_rationale": "Extractiveness is low (0.12) because the arrangement moves resources into genuine coordination rather than rent collection. Suppression is low (0.18) because participation, while mandatory, is understood as professionally necessary rather than coercively enforced. Theater ratio is minimal (0.08) under the competence reading, which asserts functional rather than performative maintenance. Accessibility collapse is moderate (0.42): alternatives to regular practice exist (simulation, just-in-time training) but are understood to be inferior for distributed team coordination. Resistance is low (0.10) because the founding problem remains live and broadly recognized. Measurements track a stable, low-extraction trajectory over the interval.",
+    "perspectival_gap": "The primary perspectival gap is not between beneficiary and victim seats (there are no victims in this reading) but between this reading and its sibling kernels. From the competence_reading, the constraint is rope: net-beneficial coordination with low theater. From the husk_reading, the same observed behavior would compute as piton or snare: high theater, extraction of labor for no readiness return. The gap is observer-relative because the same drills are read through different commitment frameworks.",
+    "directionality_logic": "All declared agents are either agenda_setters or beneficiaries. Emergency management officials administer the constraint and benefit from institutional legitimacy; operational personnel bear participation costs but receive maintained competence and safety; the public receives downstream protection. No victim group is declared, so directionality derivation produces uniformly low d (beneficial/sub symmetric) across all seats. The lack of a payer-who-is-extracted is structurally constitutive of the rope classification.",
+    "mandatrophy_analysis": "Mandatrophy is avoided because the founding problem (skill decay and memory fragmentation) is live, and the disappearance verdict is world_rearranges. The constraint is not a zombie: it would be missed if it vanished, and its justification is current function rather than historical precedent. If the founding problem were dead but the drills persisted, the constraint would drift toward piton; the low theater ratio and live founding problem status prevent this misclassification.",
+    "kernel_context": "This constraint is the competence_reading of the preparedness_persistence kernel, asserting that drills and inspections are live exercised knowledge maintaining operational readiness. Sibling constraints are preparedness_persistence__husk_reading (memorial performance) and preparedness_persistence__hybrid_reading (stratified competence/ritual)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Is the observed preparedness activity live exercised knowledge (competence_reading), empty memorial performance (husk_reading), or a stratified mix (hybrid_reading)?",
+      "resolution_mechanism": "Longitudinal comparison of drill-exercised units versus non-drilled controls under actual incident conditions; ethnographic observation of drill engagement versus ritual compliance.",
+      "impact": "If husk_reading or hybrid_reading is correct, base_extractiveness and theater_ratio would be substantially higher, likely shifting classification from rope to piton or tangled_rope; the competence_reading's low-extraction claim would be falsified.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural ambiguity between competence, ritual, and hybrid readings of the preparedness persistence kernel."
+    },
+    {
+      "id": "competence_measurement_validity",
+      "question": "Can operational readiness be verified independently of drill participation metrics and self-assessment?",
+      "resolution_mechanism": "Objective performance benchmarking under simulated high-fidelity incident scenarios, blind to drill history.",
+      "impact": "If readiness is not independently verifiable, the competence reading's empirical foundation weakens and the constraint approaches identity_coordination or theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether preparedness competence has an external measurement standard."
+    },
+    {
+      "id": "participation_cost_asymmetry",
+      "question": "Do the personnel who bear the primary participation costs (time, physical risk in drills) receive proportionate readiness benefits, or is the benefit captured diffusely by the institution?",
+      "resolution_mechanism": "Agent-level outcome tracking linking individual drill exposure to incident performance and safety outcomes.",
+      "impact": "If costs fall on personnel while benefits accrue institutionally without returning to personnel, directionality shifts toward extraction despite the coordination frame.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Distribution of costs and benefits across drill participants."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "operational_competence_baseline",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_persistence__husk_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "preparedness_persistence__hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "live_exercise_preserves_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "operational_readiness_requires_regular_practice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_persistence__husk_reading",
+      "preparedness_persistence__hybrid_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the preparedness_persistence kernel. The kernel decomposes into multiple constraints because the observable evaluation of drills (performance under incident conditions versus ritual compliance metrics) yields different epsilon values. Each reading carries its own structural data and classification."
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

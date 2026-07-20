@@ -1,0 +1,304 @@
+{
+  "header": {
+    "constraint_id": "article17_erasure_right__privacy_fundamental_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "a17_priv",
+    "story_uid": "5c9ad57e-d5f3-42d5-a781-e57036c3e384"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.42,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.38,
+    "claimed_type": "rope",
+    "human_readable": "Article 17 Right to Erasure â Privacy Fundamental Reading",
+    "topic_domain": "technology_governance/data_protection_law/competition_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "european_data_subjects"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 72
+  },
+  "omegas": [
+    {
+      "id": "erasure_speech_collision",
+      "question": "Does a broad interpretation of Article 17 structurally collide with freedom of expression, and is that collision internal to the constraint or an external sibling-reading effect?",
+      "resolution_mechanism": "Comparative case-law tracing of CJEU and national DPA decisions balancing erasure against journalism and public-interest exceptions.",
+      "impact": "If the collision is unresolved and internal, the coordination function is compromised; if external (a different constraint), the privacy reading remains a clean rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Speech-erasure tension location within the kernel"
+    },
+    {
+      "id": "compliance_cost_asymmetry",
+      "question": "Do Article 17 compliance costs fall asymmetrically on smaller controllers, converting rights-protection into an extraction vector against them?",
+      "resolution_mechanism": "Empirical cost-survey across controller size tiers; DPA fine and complaint distribution data.",
+      "impact": "If severe asymmetry exists, the constraint exhibits tangled-rope structure for the small-platform seat even under the privacy reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Small-platform cost asymmetry under broad erasure"
+    },
+    {
+      "id": "kernel_reading_indeterminacy",
+      "question": "Does the legal text of Article 17 underdetermine which reading (privacy fundamental, competitive moat, censorship mechanism) is structurally dominant?",
+      "resolution_mechanism": "Corpus-wide comparison of the three sibling constraint stories; empirical analysis of actual erasure request patterns (individual exercise vs. strategic suppression vs. compliance-barrier effects).",
+      "impact": "If the text is genuinely underdetermined, no single reading captures the full constraint; the kernel must remain decomposed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Underdetermination of dominant reading in the kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 48,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 72,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 48,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 72,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 48,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 72,
+      "value": 0.5
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Article 17 of the GDPR creates a statutory right to erasure of personal data. This constraint story instantiates the privacy_fundamental_reading of the contested article17_erasure_right kernel, which frames the provision as an instantiation of individual data sovereignty â a coordination mechanism that corrects the power asymmetry between data subjects and global controllers by giving individuals a low-friction, enforceable deletion right. The kernel decomposes into three readings because the same legal text sustains three structurally distinct constraints: this reading centers on rights-protection, the competitive_moat_reading centers on incumbent-protecting compliance asymmetry, and the censorship_mechanism_reading centers on speech-suppression via strategic requests. This reading authors low theater, moderate extraction (compliance costs borne by controllers), and a coordination function for data subjects.",
+    "key_agents": [
+      "european_data_subjects: Primary beneficiary (organized/moderate power, mobile exit) â gains statutory control over personal data retention",
+      "major_tech_platforms: Primary payer (institutional power, constrained exit) â bears bulk of compliance infrastructure, request volume, and legal uncertainty",
+      "small_online_services: Secondary payer (moderate power, constrained exit) â faces disproportionate compliance costs relative to resources",
+      "data_protection_authorities: Agenda setter (institutional power, analytical exit) â enforces and interprets the right, shapes scope through guidance",
+      "digital_rights_advocates: Observer (organized power, analytical exit) â advocates for broad erasure interpretation and monitors compliance",
+      "research_archivists: Excluded voice (moderate power, constrained exit) â concerned about information loss for research and historical record, not party to the dyad"
+    ],
+    "logic_rationale": "Extractiveness (0.28â0.40) is moderate because the constraint imposes real compliance costs on controllers, but these costs are bounded by rule-of-law procedures and do not concentrate as rents to a third party. Suppression (0.30â0.50) is moderate-to-low relative to extractive constraints because enforcement is administrative and judicial rather than coercive in the snare sense. Theater ratio stays low (0.10â0.18) because the erasure function is operational and not primarily performative. Accessibility collapse is high (0.70) because the statutory right replaces individual contractual negotiation as the dominant deletion mechanism. Resistance (0.38) reflects persistent platform lobbying and strategic legal challenges.",
+    "perspectival_gap": "The data subject seat experiences the constraint as genuine coordination â a granted right with low procedural friction. The platform seats experience it as a cost center and legal risk. The authority seat experiences it as an enforcement mandate. The engine computes these divergences from structural position: beneficiaries with organized power and mobile exit sit near dâ0.2, while constrained institutional payers sit near dâ0.8.",
+    "directionality_logic": "European data subjects are declared beneficiaries; their directionality is low because the constraint subsidizes their agency. Major and small platforms are payers with constrained exit (must operate in the EU market); their directionality is high because the constraint extracts compliance effort from them. The absence of a concentrated beneficiary capturing the extracted value keeps the base extractiveness moderate rather than high.",
+    "mandatrophy_analysis": "Classifying this as a rope (rather than a snare) preserves the genuine coordination function â individuals historically lacked bargaining power against global controllers, and statutory erasure solves a real collective-action problem. Classifying it as a tangled rope would require naming victims of asymmetric extraction; while small platforms bear disproportionate costs, the primary structure is rights-protection rather than rent extraction. The mandatrophy risk is that the constraint could decay into a piton if enforcement becomes theatrical, or into a snare if weaponized; the temporal measurements show stable, low theater over the observed interval.",
+    "kernel_context": "This constraint is the privacy_fundamental_reading of the article17_erasure_right kernel. Sibling readings are competitive_moat_reading (incumbent protection via compliance barriers) and censorship_mechanism_reading (content suppression via strategic requests). This reading is distinguished by its deontological grounding in individual data sovereignty and its broad, low-friction interpretation of erasure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "article17_erasure_right__competitive_moat_reading",
+      "article17_erasure_right__censorship_mechanism_reading"
+    ],
+    "dual_formulation_note": "The natural-language label 'Article 17' conflates three structurally distinct constraints. This story isolates the privacy-fundamental reading; the competitive-moat and censorship-mechanism siblings carry different Îµ values, beneficiary/victim structures, and directionalities. All three are linked as a constraint family."
+  },
+  "stakeholders": [
+    {
+      "name": "european_data_subjects",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Can request erasure of personal data with low procedural friction under GDPR Article 17; gain control over digital identity and retention; rely on a statutory mechanism rather than individual contractual negotiation with global platforms."
+    },
+    {
+      "name": "major_tech_platforms",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Must process high volumes of erasure requests, maintain technical infrastructure for deletion across distributed systems, absorb compliance costs and legal uncertainty; operate under threat of significant administrative fines for non-compliance."
+    },
+    {
+      "name": "small_online_services",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Face disproportionate compliance costs relative to revenue; often lack dedicated legal or engineering capacity to assess request validity; risk-averse over-deletion driven by fear of fines."
+    },
+    {
+      "name": "data_protection_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Enforce Article 17 through investigations and fines; issue interpretive guidance on scope and exceptions; adjudicate disputes between data subjects and controllers; shape the practical boundaries of the right."
+    },
+    {
+      "name": "digital_rights_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Advocate for broad erasure interpretation; assist individuals in exercising rights; monitor controller compliance and enforcement activity; publish accountability research."
+    },
+    {
+      "name": "research_archivists",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Concerned that broad erasure undermines research datasets, reproducibility, and historical record; lack standing in the data subject-controller dyad and are not consulted in standard erasure proceedings."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aggregates individual data-deletion demands into a uniform statutory mechanism, solving the collective-action problem of isolated individuals lacking bargaining power or information against global data controllers.",
+    "transfer_function": "Transfers control over personal data retention from data controllers to data subjects, and transfers the operational compliance burden from the regulatory state to private platforms.",
+    "absent_voices": "Research archivists, historians, and future public-interest users of data are structurally excluded; they would argue for information-preservation exceptions and scientific-research carve-outs but are not party to the individual-platform dyad.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Article 17 vanished overnight, individuals would revert to contractual negotiation with negligible leverage; platforms would default to data retention; the digital rights landscape would reorganize around retention and processing rather than erasure; supervisory authorities would lose a primary enforcement mandate.",
+    "founding_problem": "Asymmetric power between individuals and global data processors meant personal data could be retained indefinitely, spread across opaque systems, and used for purposes beyond the individual's knowledge or control, with no effective individual remedy.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Privacy advocates and academic legal scholars attest the problem remains live. Major tech platforms and some free-speech advocates contest the framing, arguing the problem is overstated or the remedy disproportionate. Independent digital-rights organizations such as EDRi corroborate the live status from outside the immediate beneficiary set."
+  },
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "article17_erasure_right__censorship_mechanism_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "article17_erasure_right__competitive_moat_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_data_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "broad_interpretation_of_erasure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "individual_data_sovereignty_framework",
+    "drift_state": {
+      "moment": "post_gdpr_implementation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "header": {
+    "constraint_id": "ietf_openness_commitment__commons_stewardship_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "b8c9c969-c204-4bbb-a4cc-96d7073e01b4"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Open Standards as Public Infrastructure (Commons Stewardship Reading)",
+    "topic_domain": "technology_governance/internet_standards",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "large_platform_implementers",
+      "small_independent_implementers",
+      "network_end_users"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "stakeholders": [
+    {
+      "name": "ietf_process_institution",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Administers the RFC standards process through working groups and area directors, maintaining publicly available protocol specifications. Derives mission legitimacy from technical competence and open participation norms rather than rent extraction. Can revise or obsolete standards but lacks coercive enforcement power; adherence is voluntary and market-driven."
+    },
+    {
+      "name": "large_platform_implementers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Implement open standards at scale across global infrastructure. Bear substantial engineering costs to conform but net-benefit from interoperability that reduces fragmentation and expands addressable markets. Participate in standards development to protect technical interests but do not uniquely capture the standard's value."
+    },
+    {
+      "name": "small_independent_implementers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Rely on freely accessible, royalty-free specifications to build interoperable products without negotiating proprietary licenses. Conformance is costly in engineering time but enables market entry that closed ecosystems would block. Equally constrained by the standard relative to large platforms."
+    },
+    {
+      "name": "network_end_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Experience seamless connectivity across services and devices as a downstream effect of implementer conformance. Do not directly engage with standards processes and have limited individual leverage, but benefit from the public-goods character of the interoperable network."
+    },
+    {
+      "name": "proprietary_ecosystem_vendors",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Prefer walled-garden architectures and closed protocol stacks that lock users into vertically integrated ecosystems. Are structurally absent from the IETF rough consensus process because their business model conflicts with openness norms; can exit to proprietary alternatives but face network-effect penalties."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables heterogeneous hardware and software systems to communicate through shared, publicly specified protocols, solving the collective-action problem of network interoperability without centralized coercion.",
+    "transfer_function": "Moves engineering effort and architectural commitment from proprietary, fragmented development toward reusable, openly published protocol specifications; incumbents and entrants alike bear conformance costs, and no seat captures centralized rents.",
+    "absent_voices": "Proprietary ecosystem vendors seeking walled-garden lock-in and state actors preferring sovereign control over domestic data flows are structurally underrepresented in the rough consensus process; their interests are largely absent from standards development discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without the constraint of open, interoperable standards, the internet would fragment into competing proprietary silos, collapsing network effects and raising switching costs. The public-goods character of global connectivity depends on this coordination mechanism.",
+    "founding_problem": "Early networking suffered from incompatible proprietary protocols that prevented communication across systems, raising costs and fragmenting infrastructure.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent internet governance scholars and early ARPANET engineers attest that proprietary fragmentation motivated open standardization; the problem persists as new technology layers require continuous coordination, corroborated from outside the IETF beneficiary set."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.12
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the commons_stewardship_reading of the ietf_openness_commitment kernel. It treats IETF open standards as neutral public infrastructure that symmetrically constrains all implementersâlarge platforms and small independents alikeâtoward interoperability. The constraint is claimed as rope: a genuine coordination mechanism with no structural beneficiary class extracting asymmetric rents. Sibling readings (capture_substrate_reading, legitimacy_erosion_reading) dispute this neutrality, framing standards as either encoded gatekeeping substrates or as procedurally vulnerable to concentrated influence. This story authors low extractiveness and symmetric directionalities consistent with the commons-stewardship interpretation, while preserving the kernel contest in omega variables.",
+    "key_agents": [
+      "ietf_process_institution: Agenda-setter (institutional/analytical) â administers the standards process without rent extraction",
+      "large_platform_implementers: Beneficiary (powerful/constrained) â net benefits from interoperability despite conformance costs",
+      "small_independent_implementers: Beneficiary (moderate/constrained) â gains equal access to specifications",
+      "network_end_users: Beneficiary (powerless/constrained) â receives interoperability fruits indirectly",
+      "proprietary_ecosystem_vendors: Excluded (powerful/mobile) â prefers closed ecosystems, absent from consensus"
+    ],
+    "logic_rationale": "Extractiveness is low (0.15) because the standard is published openly, royalty-free, and imposes no discriminatory licensing. Suppression is low (0.20) because adoption is voluntary and driven by network effects rather than coercion. Theater ratio is low (0.10) because standards maintenance is functional, not performative. Accessibility collapse is moderate (0.50): proprietary alternatives exist but lose value as the interoperability commons thickens. Resistance is minimal (0.10) because implementers are net beneficiaries of coordination. Temporal measurements are flat, reflecting institutional stability rather than drift.",
+    "perspectival_gap": "From the commons-stewardship seat, the constraint is a rope: all implementers gain more from interoperability than they lose in conformance costs. From the capture-substrate seat, large incumbents appear to capture the process and encode barriers; from the legitimacy-erosion seat, procedural neutrality is itself contested. The engine will compute divergent per-seat types from these structural framings; this story authors only the stewardship reading.",
+    "directionality_logic": "All implementers are declared beneficiaries with constrained exit: they must conform to participate in the network, but are not targets of extraction. Directionality is therefore near-symmetric (d approx 0.5), with mild beneficiary bias because the coordination surplus is positive. The IETF process institution is assigned a mild beneficiary override (d = 0.25) because it gains legitimacy and purpose from the arrangement without capturing monetary rents. No victim declarations are made.",
+    "mandatrophy_analysis": "The classification guards against mandatrophy by requiring a live coordination function (interoperability), net beneficiaries across all implementer scales, and absence of active enforcement or sunset needs. The constraint persists because it solves a genuine collective-action problem, not because any party extracts enough to fund its defense. Should capture emerge, the type would drift toward tangled_rope; the flat temporal series argues against such drift.",
+    "kernel_context": "This constraint is the commons_stewardship_reading of the ietf_openness_commitment kernel. Sibling readings include capture_substrate_reading (standards as coordination substrate where resource advantage translates to encoded gatekeeping) and legitimacy_erosion_reading (rough consensus mechanism itself as contested and vulnerable to organized capture despite procedural safeguards)."
+  },
+  "omegas": [
+    {
+      "id": "ietf_kernel_reading_contest",
+      "question": "Does the IETF openness commitment function as neutral commons stewardship, or does it serve as a substrate for encoded capture by resource-advantaged participants?",
+      "resolution_mechanism": "Comparative analysis of standards participation records, document authorship concentration, and downstream market structure across standards regimes.",
+      "impact": "If capture is demonstrated, this reading's rope classification collapses toward tangled_rope or snare; if neutrality holds, the commons_stewardship reading is vindicated.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Contested kernel ambiguity between commons stewardship and capture substrate readings."
+    },
+    {
+      "id": "rough_consensus_vulnerability",
+      "question": "Is the IETF rough consensus process structurally robust against organized capture, or does resource asymmetry among participants erode neutrality despite procedural safeguards?",
+      "resolution_mechanism": "Empirical study of working group outcomes correlated with participant organizational backing and travel funding concentration.",
+      "impact": "A finding of vulnerability would support the legitimacy_erosion reading and undermine this reading's confidence in symmetric constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical robustness of rough consensus against concentrated power."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "capture_substrate_reading",
+      "legitimacy_erosion_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the ietf_openness_commitment kernel; sibling readings instantiate competing structural interpretations of the same institutional arrangement."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "open_interoperability_commons",
+    "drift_state": {
+      "moment": "contemporary_platform_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "ietf_openness_commitment__capture_substrate_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ietf_openness_commitment__legitimacy_erosion_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "open_standards_public_infrastructure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "rough_consensus_neutrality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

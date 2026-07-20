@@ -1,0 +1,236 @@
+{
+  "header": {
+    "constraint_id": "catastrophe_proxy_sufficiency__simulation_as_proxy_catastrophe_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cps_sim",
+    "story_uid": "5fe35ce1-495a-41b1-b746-8a00c20e7f24"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.15,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Simulation as Catastrophe-Equivalent Practice for Operational Competence",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "regulatory_bodies",
+      "hro_operators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "regulatory_bodies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Mandate simulation-based training regimes for high-reliability operators and defend against liability by asserting that operational competence is maintained. They set the standards that operationalize the sufficiency claim and are shielded from accountability for competence gaps as long as simulation protocols are followed."
+    },
+    {
+      "name": "hro_operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Conduct regular simulation exercises to maintain team competence in rare catastrophic scenarios. Benefit from structured, repeatable training without relying on actual system failures for learning. Their operational licenses depend on demonstrating simulation completion."
+    },
+    {
+      "name": "catastrophe_necessity_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that genuine competence requires the irreducible stress and uncertainty of actual catastrophic events. They are systematically excluded from safety standard-setting bodies when those bodies adopt the simulation-sufficiency framing, because their position would imply accepting periodic real failures as necessary."
+    },
+    {
+      "name": "safety_regime_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study whether simulation-sufficiency claims hold up across industries and generational time scales. They track incident rates, skill degradation, and learning transfer from simulation to real operations."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintain operational competence in high-reliability organizations for rare catastrophic scenarios without requiring actual system failures to serve as training events.",
+    "transfer_function": "Moves the burden of competence maintenance from real catastrophic events to structured, repeatable simulation exercises; moves liability protection to regulatory bodies by providing a defensible standard that competence is maintained.",
+    "absent_voices": "Catastrophe-necessity advocates who argue that irreducible stress and uncertainty of real events are required for genuine competence; they are excluded from standard-setting bodies when simulation-sufficiency is adopted as policy.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the claim that simulation is sufficient vanished, regulatory frameworks would require restructuring to permit or mandate alternative competence-maintenance mechanisms, training budgets would shift toward real-event exposure or hybrid models, and liability exposure for regulators and operators would increase.",
+    "founding_problem": "Catastrophic events in high-reliability domains are too rare, costly, and dangerous to serve as routine training stimuli, yet operational teams must maintain readiness for them.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Safety engineering literature, organizational learning theorists, and accident-investigation boards attest to the rarity of catastrophic learning opportunities; these sources sit outside the regulatory beneficiary seat."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the simulation_as_proxy_catastrophe_reading of the contested catastrophe_proxy_sufficiency kernel. It claims that structured simulation exercises provide catastrophe-equivalent practice adequate to maintain operational competence indefinitely, without requiring actual catastrophic events. In safety-critical domains (aviation, nuclear power, medicine), this claim allows regulatory bodies to mandate simulation-based training and defend against liability by asserting maintained competence. The reading treats simulation as a pure coordination mechanism: it solves the collective-action problem of readiness-for-rarity by substituting repeatable, safe training for dangerous real-world failures. No victim set is declared because all parties are understood to benefitâregulators gain defensible standards, operators avoid catastrophe exposure, and the public retains safety margins. Sibling readings contest this by arguing that real catastrophe provides irreducible stress (catastrophe_necessity), that tacit knowledge degrades without real events (hybrid_degradation), or that sufficiency depends on technology-dependent fidelity thresholds (simulation_fidelity_threshold). This story authors the simulation-sufficiency reading only, per the epsilon-invariance principle; the disagreement is routed to omega variables and the cs_structure committer frame.",
+    "key_agents": [
+      "regulatory_bodies: Primary beneficiary (institutional/national) â collect liability protection and set defensible training standards",
+      "hro_operators: Coordinated beneficiary (powerful/global) â maintain competence through simulation without catastrophe exposure",
+      "catastrophe_necessity_advocates: Excluded voice (organized/global) â argue real events are irreducible, kept out of standard-setting",
+      "safety_regime_analysts: Analytical observer (analytical/global) â track learning transfer and incident rates across regimes"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.18) because the simulation-sufficiency reading presents a genuine coordination function: it solves the readiness-for-rarity problem without extracting asymmetric rents. Regulatory bodies benefit from liability protection, but this is a side effect of a true coordination gain, not extraction from a victim set. Suppression is low (0.15) because alternative training philosophies are not actively suppressed; they are merely disadvantaged in funding and institutional attention. Theater ratio is low (0.15) because most simulation activity is functional competence maintenance rather than performative compliance. Resistance is moderate (0.35) because competing readings (catastrophe necessity, hybrid degradation) actively contest the claim in research and policy discourse. Accessibility collapse is moderate (0.45): once a simulation regime is institutionalized, reverting to catastrophe-dependent learning becomes operationally and ethically inaccessible, but this collapse is driven by the genuine superiority of simulation, not by barrier construction.",
+    "perspectival_gap": "The regulatory beneficiary seat and the operator beneficiary seat both experience net benefit, but of different kinds: regulators gain liability shielding and standardization, while operators gain safety and predictability. Neither seat experiences extraction. The excluded catastrophe-necessity advocates experience the constraint as epistemic closureâtheir preferred learning architecture is not barred by enforcement but by the collapse of institutional imagination once simulation is accepted as sufficient. The engine will compute a low directionality for all beneficiary seats and a moderate d for excluded advocates, yielding low effective extraction across all seated perspectives.",
+    "directionality_logic": "Regulatory bodies and HRO operators are declared beneficiaries with relatively high power (institutional/powerful) and mobile/constrained exit. Their directionality sits near the beneficiary end (low d), which dampens effective extraction toward negligible levels. Catastrophe-necessity advocates are excluded, not victims; they bear no direct cost from the constraint but are locked out of agenda-setting. Their exit is constrained by institutional exclusion rather than identity lock. No victim declarations are made because the reading asserts competence is genuinely maintained and no party is net-harmed.",
+    "mandatrophy_analysis": "This reading prevents mislabeling by limiting itself to the genuine coordination claim: simulation suffices for competence maintenance. If the claim were falseâif competence actually degradedâthe same institutional structure would become a tangled rope or snare (regulatory bodies collecting liability protection while operators and public bear hidden risk). The mandatrophy guard is the empirical status of the sufficiency claim. The story marks the founding problem as live and corroborated by outside sources, distinguishing it from a post-hoc justification. If future evidence shows tacit knowledge degradation, the constraint would flip toward scaffold (if sunsetted) or tangled rope (if enforcement persists despite known inadequacy).",
+    "kernel_context": "This constraint is the simulation_as_proxy_catastrophe_reading of kernel catastrophe_proxy_sufficiency. It claims that simulation exercises constitute catastrophe-equivalent practice sufficient to maintain operational competence indefinitely. Sibling readings include catastrophe_necessity_reading (only real events suffice), hybrid_degradation_reading (procedural competence maintained but tacit knowledge degrades), and simulation_fidelity_threshold (sufficiency is technology-dependent). The disagreement centers on whether simulation captures all competence dimensions and whether sufficiency is categorical or conditional."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_uncertainty",
+      "question": "Does current simulation technology faithfully reproduce the stress-response and tacit-knowledge demands of actual catastrophe, or only the procedural dimensions?",
+      "resolution_mechanism": "Longitudinal studies comparing operational performance of crews trained exclusively on simulation versus those with real incident exposure, measuring tacit knowledge transfer and stress adaptation.",
+      "impact": "If simulation fails to transfer tacit knowledge, the constraint's classification as low-extraction rope may shift toward tangled_rope or snare as regulatory bodies collect liability protection while actual competence degrades.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulation captures non-procedural competence dimensions"
+    },
+    {
+      "id": "kernel_reading_location",
+      "question": "This constraint is the simulation_as_proxy_catastrophe_reading of kernel catastrophe_proxy_sufficiency. Sibling readings (catastrophe_necessity, hybrid_degradation, simulation_fidelity_threshold) locate the disagreement on whether competence requires real catastrophe exposure, whether tacit knowledge degrades under simulation-only regimes, or whether sufficiency is technology-dependent. Does the simulation-sufficiency reading hold only for procedural competence, or for the full operational competence stack?",
+      "resolution_mechanism": "Decompose operational competence into measurable sub-competencies and test transfer from simulation for each.",
+      "impact": "If the reading is scope-restricted to procedural competence, it coexists with hybrid_degradation; if it claims full-stack sufficiency, it forecloses catastrophe_necessity but may be empirically fragile.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Location of disagreement within the catastrophe proxy sufficiency kernel"
+    },
+    {
+      "id": "sibling_reading_structural_pressure",
+      "question": "How does the categorical simulation-sufficiency reading interact with technology-dependent fidelity-threshold and hybrid-degradation readings in institutional practice?",
+      "resolution_mechanism": "Cross-institutional comparison of training regimes: do organizations that adopt the categorical reading disinvest in fidelity improvement and generational knowledge transfer compared to those holding hybrid or threshold readings?",
+      "impact": "If categorical adoption suppresses fidelity investment, this reading exerts structural influence on its siblings beyond mere logical coexistence, validating the influences relation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural pressure from categorical sufficiency on alternative readings"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the catastrophe_proxy_sufficiency kernel, decomposed per the epsilon-invariance principle from sibling readings that instantiate structurally distinct claims about catastrophe exposure, simulation fidelity, and competence degradation."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "simulation_sufficiency_reference",
+    "drift_state": {
+      "moment": "contemporary_hro_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_proxy_sufficiency__catastrophe_necessity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "catastrophe_proxy_sufficiency__hybrid_degradation_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "catastrophe_proxy_sufficiency__simulation_fidelity_threshold",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_catastrophe_equivalence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "indefinite_competence_maintenance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope"
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

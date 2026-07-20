@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__narrow_warning_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "beta_narrow",
+    "story_uid": "6381d43c-c6c7-457b-ab55-a74dfeb48f84"
+  },
+  "base_properties": {
+    "extractiveness": 0.16,
+    "suppression": 0.22,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.2,
+    "claimed_type": "scaffold",
+    "human_readable": "Beta Designation Narrow Warning Reading",
+    "topic_domain": "technology_law/software_liability/consumer_protection",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "software_developers",
+      "end_users"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "software_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Deploy software under a beta designation to conduct real-world user testing, benefiting from a temporary and narrowly construed liability adjustment. Must provide clear disclosure and adhere to good-faith time bounds; upon completion of the genuine testing phase, the shield expires and full ordinary product liability attaches."
+    },
+    {
+      "name": "end_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receive explicit, conspicuous disclosure that the software is in a time-bounded testing phase and that base product liability protections remain fully in force. They voluntarily use the software, retain ordinary legal recourse for defects, and benefit from earlier access and anticipated product improvement."
+    },
+    {
+      "name": "judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicates the scope of the beta designation doctrine, enforcing the narrow reading by verifying genuine disclosure, good-faith temporal boundaries, and expiration of the testing-phase shield. Sets precedent that distinguishes legitimate testing from disguised commercial release."
+    },
+    {
+      "name": "consumer_protection_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monitor judicial and legislative treatment of beta designations to prevent drift toward expansive liability waiver. Corroborate that the narrow reading preserves user rights and that the doctrine's sunset remains functional."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables software developers to obtain essential real-world user feedback during pre-release development while providing users with transparent notice of the software's unfinished status, solving the coordination problem between innovation speed and user safety during bounded testing periods.",
+    "transfer_function": "Temporarily adjusts the litigation risk profile for developers during a defined testing window, without transferring legal liability to users; the primary transfer is information (disclosure of testing status) and time (early access in exchange for known instability).",
+    "absent_voices": "Users with low technical literacy who cannot meaningfully parse beta disclosures, and plaintiffs in jurisdictions that have adopted the expansive shield reading, are structurally absent from the narrow reading's protections. They would argue that any liability modulation, however bounded, disadvantages the least sophisticated users.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Developers would lose the legal certainty for bounded public testing, likely forcing testing into costlier closed environments and slowing user-feedback loops. Users would lose the formal guarantee that base liability survives the beta label, and courts would lack a calibrated doctrine to distinguish genuine testing from commercial deployment.",
+    "founding_problem": "Pre-release software testing requires real-world exposure that standard product liability rules would chill, because subjecting unfinished software to users would expose developers to unbounded litigation risk, thereby stifling innovation and preventing user feedback from improving final products.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Consumer protection advocates and software industry associations both attest that some mechanism for bounded pre-release testing is necessary to sustain innovation; independent economic analyses of closed-beta cost differentials and innovation timelines corroborate that the problem remains live from outside the direct beneficiary set."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.12
+    }
+  ],
+  "omegas": [
+    {
+      "id": "base_liability_practical_efficacy",
+      "question": "Does preserving nominal base product liability during beta testing result in actual compensation for injured users, or does the beta disclosure create a de facto assumption-of-risk defense that extinguishes recovery?",
+      "resolution_mechanism": "Empirical analysis of beta-related product liability claim outcomes, settlement rates, and jury instructions in jurisdictions adopting the narrow reading.",
+      "impact": "If users rarely recover despite preserved liability, they are effectively victims and the constraint's extractiveness is higher than the narrow reading claims; if recovery rates hold, the reading is structurally accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether preserved liability translates to actual user recovery."
+    },
+    {
+      "id": "temporal_boundary_enforceability",
+      "question": "Can adjudicators reliably distinguish a good-faith, time-bounded testing phase from a commercially deployed product bearing a beta label?",
+      "resolution_mechanism": "Longitudinal case law analysis tracking duration, user base scale, revenue generation, and feature completeness at time of injury for products bearing beta designations.",
+      "impact": "If the boundary is unenforceable, the narrow reading collapses into the expansive shield in practice, invalidating its sunset clause and raising theater_ratio as the label becomes performative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforceability of the genuine testing phase boundary."
+    },
+    {
+      "id": "kernel_reading_irreducibility",
+      "question": "Is the beta designation doctrine a single constraint with competing interpretations, or do the narrow, expansive, and severity readings represent three structurally distinct constraints?",
+      "resolution_mechanism": "Comparative legal analysis across jurisdictions to determine if the readings map to different enforceable rules or are merely rhetorical framings of a single doctrine.",
+      "impact": "If the readings are structurally distinct, the engine must treat them as a constraint family; if they are rhetorical framings, this story's epsilon may be observer-relative rather than intrinsic.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel decomposes into distinct constraints."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the narrow_warning_reading of the beta_designation_doctrine kernel. It treats the beta label as a temporary, good-faith testing disclosure that preserves underlying product liability and expires when the genuine testing phase concludes. The kernel is contested: the expansive_shield_reading treats beta as a comprehensive, indefinite liability waiver, while the severity_carve_out_reading excludes beta designation entirely for critical systems. This reading is authored as a low-extraction scaffold with a built-in sunset, and its metrics are authored independently of the claimed type.",
+    "key_agents": [
+      "software_developers: Primary beneficiary (moderate/mobile) â receive temporary, bounded liability shield for genuine testing.",
+      "end_users: Co-beneficiary (moderate/mobile) â informed participants with preserved liability rights and voluntary exit.",
+      "judiciary: Agenda-setter (institutional/analytical) â defines and enforces the narrow doctrine and its temporal boundaries.",
+      "consumer_protection_advocates: Observer (organized/analytical) â monitor against expansive drift and corroborate founding problem status."
+    ],
+    "logic_rationale": "Extractiveness is low (0.16) because the liability shield is narrow, temporary, and preserves base liability; the transfer is minimal and consensual. Suppression is low (0.22) because users retain legal recourse and can exit by not using the beta. Theater_ratio is low (0.12) because the beta label corresponds to a genuine functional state rather than a performative legal fiction. Accessibility_collapse is low (0.25) because alternatives remain open. Resistance is modest (0.20) reflecting ongoing vigilance against liability-shield expansion. The measurement grid is flat, reflecting a stable constraint under the narrow reading.",
+    "perspectival_gap": "The developer seat and the user seat should compute similarly under this reading: both are net beneficiaries of the coordination (developers get testing, users get transparency and final product quality), with directionality near the beneficiary end for both. The judiciary seat computes as agenda-setter. There is minimal seat divergence because the narrow reading is designed to be symmetrically beneficial and time-bounded.",
+    "directionality_logic": "Both software_developers and end_users are declared beneficiaries, deriving low directionality. The judiciary is agenda_setter with analytical exit. No victims are declared. The engine will compute low effective extraction for all seated agents, consistent with the scaffold's transitional coordination function.",
+    "mandatrophy_analysis": "The narrow reading's built-in sunset prevents mandatrophy by design: the justification is the transition from testing to release, not the steady state. If the testing phase becomes indefinite or the liability shield expands, the constraint would drift toward tangled_rope or snare under the expansive reading. The authored metrics remain low and stable to test whether the narrow reading, in practice, avoids the mandatrophy that afflicts the kernel's other readings.",
+    "kernel_context": "This is the narrow_warning_reading of the beta_designation_doctrine kernel. Sibling readings: expansive_shield_reading (comprehensive liability waiver, indefinite duration) and severity_carve_out_reading (beta categorically excluded for critical systems). The narrow reading is distinguished by its axioms of temporal boundary and preserved base liability."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "expansive_shield_reading",
+      "severity_carve_out_reading"
+    ],
+    "dual_formulation_note": "This constraint is the narrow_warning_reading of the beta_designation_doctrine kernel, distinguished from the expansive_shield_reading and severity_carve_out_reading by its insistence on good-faith temporal bounds and preserved base liability."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "good_faith_testing_transition",
+    "drift_state": {
+      "moment": "contemporary_perpetual_beta_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "beta_designation_doctrine__expansive_shield_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "beta_designation_doctrine__severity_carve_out_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "testing_phase_requires_temporal_boundary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "disclosure_preserves_base_liability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

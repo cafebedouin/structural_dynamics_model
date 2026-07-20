@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__severity_carve_out_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "beta_sev_carve",
+    "story_uid": "858f4b90-cbce-41ab-b524-b93866581dd4"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.65,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Beta Designation Severity Carve-Out for Critical Systems",
+    "topic_domain": "legal/technology/consumer_protection",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "critical_system_public"
+    ],
+    "victims": [
+      "high_stakes_vendors"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "high_stakes_vendors",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Develop and distribute software for life-safety, financial, and critical infrastructure domains; cannot invoke beta designation to limit liability regardless of product maturity or disclosure quality; bear full products liability exposure without the contractual shield available in non-critical domains."
+    },
+    {
+      "name": "critical_system_public",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Relies on software embedded in medical devices, financial systems, transportation control, and other critical infrastructure; protected from vendors unilaterally disclaiming liability through beta labels regardless of testing status or disclosure completeness."
+    },
+    {
+      "name": "liability_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interprets products liability and consumer protection precedent to enforce that harm severity and physical safety requirements override contractual beta disclaimers in critical domains; establishes precedent removing beta availability as a liability allocation mechanism for high-stakes software."
+    },
+    {
+      "name": "commercial_insurers",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Underwrite products liability and errors-and-omissions coverage for software vendors; face altered risk pools and pricing models when beta shields are categorically removed in critical domains, observing the constraint's effects without setting its terms."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents software vendors in life-safety, financial, and critical domains from using beta labels to contractually disclaim liability for physical and economic harm, coordinating risk allocation so that safety severity overrides contractual bargaining power.",
+    "transfer_function": "Moves liability exposure from consumers and the general public to software vendors in critical domains, and transfers legal certainty from vendor-controlled contractual terms to judicially enforced safety-priority standards.",
+    "absent_voices": "Software vendors from non-critical domains concerned the carve-out will expand; international standards bodies seeking harmonized software liability regimes; beta-testing communities and early adopters who argue for access to unfinished but innovative critical tools.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Critical system vendors would immediately deploy beta disclaimers to shed liability exposure; consumer recourse for defective medical, financial, and infrastructure software would fragment; the liability landscape would reorganize around contractual rather than safety-based allocation.",
+    "founding_problem": "Software vendors in critical domains used perpetual, disguised, or aggressively disclosed beta labels to avoid products liability for defects in life-safety and financial systems, producing a persistent gap between contractual disclaimers and physical harm.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Consumer protection agencies and medical device safety regulators attest that vendors continue to attempt beta-label disclaimers for critical systems; plaintiffs' bar and independent tort scholars corroborate that contractual disclaimers do not prevent physical harm in high-stakes domains."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the severity_carve_out_reading of the contested beta_designation_doctrine kernel. It holds that beta designation is categorically unavailable as a liability-limitation mechanism for life-safety, financial, and other critical systems, regardless of testing status or disclosure completeness. The doctrine represents a judicial and regulatory assertion that physical harm severity and safety requirements override contractual allocation of risk in high-stakes domains.",
+    "key_agents": [
+      "critical_system_public: Primary beneficiary (powerless/trapped) â gains protection from unilateral beta disclaimers",
+      "high_stakes_vendors: Primary target (powerful/constrained) â bears full liability exposure without beta shield",
+      "liability_judiciary: Agenda setter (institutional/analytical) â enforces safety-priority interpretation",
+      "commercial_insurers: Analytical observer (organized/analytical) â monitors risk pool effects"
+    ],
+    "logic_rationale": "Extractiveness is high (0.72 at interval end) because the carve-out categorically removes a liability shield that vendors in other domains retain, concentrating exposure on critical-domain software producers. Suppression is substantial (0.65) because the constraint suppresses the contractual alternative (beta disclaimer) through active judicial enforcement. Theater ratio is low-moderate (0.25): most enforcement activity is functional safety protection rather than performative ritual, though some litigation posture exists. Accessibility collapse is high (0.80) because once the doctrine is understood, beta disclaimers in critical domains offer no legal refuge. Resistance is high (0.70) due to sustained vendor lobbying and doctrinal opposition. The measurement series share a single time grid to prevent misaligned drift dating.",
+    "directionality_logic": "high_stakes_vendors are declared victims with constrained exit (cannot easily abandon critical domains if that is their core business), placing their directionality near the full-target end. critical_system_public are declared beneficiaries with trapped exit (patients and infrastructure operators cannot opt out of the software they depend on), placing their directionality near the full-beneficiary end. liability_judiciary sits at the agenda_setter position with analytical exit; it does not collect extraction and its directionality is neutral-to-beneficiary. commercial_insurers observe without bearing or receiving the core extraction.",
+    "perspectival_gap": "The vendor seat experiences the constraint as asymmetric extraction â a liability exposure imposed without a corresponding coordination benefit to them. The public seat experiences the same structure as genuine coordination â a safety guarantee that overrides vendor bargaining power. The judicial seat experiences it as norm enforcement. The engine computes this divergence from the structural data rather than the narrative claim.",
+    "mandatrophy_analysis": "The founding problem â vendors using beta labels to escape liability for critical system defects â remains live, as corroborated by regulators and plaintiffs outside the benefiting parties. Were the problem solved (e.g., universal vendor insurance or formal safety certification making beta disclaimers irrelevant), persistence of the carve-out would indicate mandatrophy and a slide toward piton. For now, the constraint retains genuine coordination function alongside its extraction, supporting tangled_rope classification and guarding against mislabeling it as pure snare or degraded piton.",
+    "kernel_context": "This constraint is the severity_carve_out_reading of the beta_designation_doctrine kernel. Sibling readings include the expansive_shield_reading (comprehensive liability waiver for all contexts) and the narrow_warning_reading (time-bounded testing disclosure with preserved liability). The kernel decomposes into these three structurally distinct claims because each reading produces a different epsilon, beneficiary/victim structure, and classification."
+  },
+  "omegas": [
+    {
+      "id": "beta_doctrine_reading_contest",
+      "question": "Is the beta designation doctrine properly read as a comprehensive liability shield (expansive), a time-bounded testing disclosure (narrow), or a categorically unavailable mechanism in critical domains (severity carve-out)?",
+      "resolution_mechanism": "Corpus-level analysis of the three sibling constraint stories; tracking judicial precedent and legislative codification of software liability standards across jurisdictions.",
+      "impact": "Adoption of the expansive shield reading would eliminate victims and convert the constraint into a rope for vendors; adoption of the narrow warning reading would reduce extractiveness and limit the victim set to post-testing-phase harms; the severity carve-out reading maintains high extractiveness concentrated on critical-domain vendors.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The beta designation doctrine kernel admits multiple structurally distinct readings."
+    },
+    {
+      "id": "critical_domain_boundary",
+      "question": "What constitutes a 'critical system' such that beta designation is unavailable â is the boundary defined by potential harm severity, regulatory classification, or sectoral labels?",
+      "resolution_mechanism": "Comparative analysis of judicial and regulatory classifications across jurisdictions; tracking which software domains are treated as critical under the doctrine.",
+      "impact": "If the boundary expands, the constraint becomes more extractive for more vendors; if it contracts, the carve-out shrinks toward the narrow_warning reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Uncertainty in the boundary definition of critical systems."
+    },
+    {
+      "id": "safety_investment_invariance",
+      "question": "Do contractual beta disclaimers in critical domains actually reduce vendor safety investment, or do vendors maintain high standards regardless of liability exposure?",
+      "resolution_mechanism": "Empirical studies comparing safety outcomes and security investment levels in jurisdictions with and without beta shield carve-outs.",
+      "impact": "If disclaimers reduce safety investment, the coordination function is genuine; if investment is invariant, the carve-out may be pure extraction without protective benefit.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the constraint's coordination function produces measurable safety benefits."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "expansive_shield_reading",
+      "narrow_warning_reading"
+    ],
+    "dual_formulation_note": "This constraint is the severity_carve_out_reading of the beta_designation_doctrine kernel. The kernel decomposes into three structurally distinct claims: an expansive shield reading (pure vendor protection with negligible extraction), a narrow warning reading (time-bounded testing disclosure with moderate extraction), and this severity carve-out reading (categorical unavailability in critical domains with high extraction concentrated on critical-domain vendors). Each reading has a different epsilon, beneficiary/victim structure, and classification."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "safety_priority_liability_framework",
+    "drift_state": {
+      "moment": "contemporary_software_liability_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "beta_designation_doctrine__expansive_shield_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "beta_designation_doctrine__narrow_warning_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "harm_severity_overrides_contract",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "beta_unavailability_in_critical_domains",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
