@@ -1,0 +1,250 @@
+{
+  "header": {
+    "constraint_id": "gpl_copyleft_scope__narrow_scope_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpl_narrow",
+    "story_uid": "db96c662-07fd-43f4-b094-bad8c752a1ad"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "GPL Section 2(b) Narrow Scope Reading",
+    "topic_domain": "software licensing / intellectual property / open source governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "commercial_integrators",
+      "gpl_component_authors",
+      "proprietary_end_users"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "commercial_integrators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Combine GPL components with proprietary application layers without triggering copyleft obligations, provided they do not create direct derivative works. They retain legal flexibility to distribute mixed codebase products under proprietary terms and can choose integration architectures that preserve separation."
+    },
+    {
+      "name": "gpl_component_authors",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Publish code under GPL and benefit from wider adoption because commercial integrators can incorporate their components into larger products without fear of contaminating proprietary layers. They receive contributions, visibility, and maintenance support but not reciprocal code sharing for adjacent proprietary modules."
+    },
+    {
+      "name": "judicial_interpreters",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts and legal scholars who apply traditional copyright doctrine to determine whether a software work constitutes a derivative work under GPL Section 2(b). Their rulings establish the enforceable boundary between direct modification and permissible aggregation or linking."
+    },
+    {
+      "name": "strong_copyleft_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Promote the view that GPL copyleft should extend to all forms of software coupling including dynamic linking and plugin architectures. Under the narrow reading, their expectation of universal reciprocal code sharing is structurally weakened and their position is marginalized in commercial and judicial interpretive contexts."
+    },
+    {
+      "name": "proprietary_end_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from a larger software ecosystem where proprietary applications can integrate robust open source components without license contagion, preserving consumer choice and product diversity across mixed codebase offerings."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables mixed codebase development by clarifying that mere aggregation, plugin architectures, and certain dynamic linking forms do not trigger GPL copyleft, creating a predictable legal environment for combining open and proprietary software.",
+    "transfer_function": "Transfers legal certainty and integration flexibility to commercial developers and end users; transfers broader distribution and adoption opportunities to GPL component authors who would otherwise face integration barriers.",
+    "absent_voices": "Strong copyleft advocates who argue for universal reciprocal licensing across all coupling forms are not in the room when judicial and commercial actors apply traditional copyright doctrine to limit the derivative work boundary.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the narrow scope reading vanished and was replaced by expansive copyleft interpretation, commercial integrators would face immediate relicensing obligations for combined works, the mixed codebase ecosystem would contract, and proprietary software architectures relying on GPL components would require fundamental restructuring.",
+    "founding_problem": "How to prevent proprietary enclosure of free software while preserving a clear, legally defensible boundary that does not capture independent works or standard integration techniques.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Legal historians and copyright scholars outside the commercial integration ecosystem attest that the founding problem was historically addressed through traditional infringement remedies; strong copyleft advocates and the Free Software Foundation dispute that the narrow reading adequately solves the enclosure problem, asserting that the founding problem remains live and requires broader copyleft scope."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the narrow_scope_reading of the gpl_copyleft_scope kernel. Under this reading, GPL Section 2(b) applies only to direct derivative works as defined by traditional copyright doctrine, excluding mere aggregation, plugin architectures, and many dynamic linking scenarios. Commercial firms retain flexibility to integrate GPL components with proprietary layers. The constraint functions as coordination infrastructure for mixed codebases. Copyleft advocates' expectations of universal code sharing are structurally weakened. Enforcement against dynamic linking patterns is rare. This reading coexists with strong_copyleft_reading and enforcement_vacuum_reading as competing interpretations of the same license text.",
+    "key_agents": [
+      "commercial_integrators (beneficiary): retain proprietary flexibility by avoiding derivative work status",
+      "gpl_component_authors (beneficiary): gain wider adoption through integrator-friendly boundaries",
+      "judicial_interpreters (agenda_setter): enforce narrow copyright boundary through case law",
+      "strong_copyleft_advocates (excluded): marginalized expectation of universal reciprocal sharing",
+      "proprietary_end_users (beneficiary): access mixed ecosystem products"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.38) because the constraint does impose a genuine boundaryâdirect derivatives must be GPLâbut leaves most integration paths open, minimizing rent extraction. Suppression is low (0.22) because the narrow boundary persists through legal interpretation and commercial practice rather than active enforcement machinery. Theater ratio is low (0.18) because the coordination function (legal certainty for mixed codebases) is structurally real and not performative. Accessibility collapse is moderate (0.42): alternatives such as proprietary clean room implementations or permissive licenses exist but involve switching costs. Resistance is moderate (0.35): strong copyleft advocates contest the reading but lack institutional leverage to shift judicial doctrine.",
+    "perspectival_gap": "Commercial integrators experience the constraint as enabling flexibility and legal predictability (beneficiary seat). Strong copyleft advocates experience the same license text as a failed promise, but they are structurally excluded from the interpretive framework that defines enforceable obligationsânot victims of extraction, but holders of a displaced reading.",
+    "directionality_logic": "Commercial integrators, component authors, and end users are positioned as beneficiaries with mobile exit options; their effective extraction is damped. Judicial interpreters sit at analytical exit. Strong copyleft advocates are excluded rather than victims because the narrow reading does not extract resources from them; it simply declines to enforce their preferred normative framework.",
+    "mandatrophy_analysis": "The classification as rope rather than snare is warranted by the absence of identifiable victims and the absence of concentrated extraction. The coordination functionâenabling predictable mixed source developmentâis genuine and not a cover story. If the constraint were a snare, we would expect active suppression of alternatives and a clear payer class; instead, commercial actors freely choose integration patterns that avoid the copyleft trigger.",
+    "kernel_context": "This is the narrow_scope_reading of kernel gpl_copyleft_scope. Sibling readings: strong_copyleft_reading (expansive derivative boundary extending to all coupling forms) and enforcement_vacuum_reading (effective scope determined by enforcement capacity in context). The narrow reading follows traditional copyright doctrine; the strong reading extends copyleft to dynamic linking and plugins; the vacuum reading treats scope as an artifact of who can enforce."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Is the derivative work boundary in GPL Section 2(b) determined by traditional copyright doctrine or by the license text's own expansive terms?",
+      "resolution_mechanism": "Definitive appellate or Supreme Court ruling interpreting the scope of derivative works in software under the Copyright Act and its interaction with GPL.",
+      "impact": "If courts adopt an expansive statutory interpretation, the narrow reading collapses and commercial integrators face higher effective extraction; if courts affirm traditional doctrine, the narrow reading stabilizes.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the narrow or expansive reading is legally correct."
+    },
+    {
+      "id": "dynamic_linking_copyright_status",
+      "question": "Does dynamic linking create a derivative work under traditional copyright doctrine?",
+      "resolution_mechanism": "Federal circuit precedent specifically addressing whether dynamic linking constitutes a derivative work or a separate aggregate.",
+      "impact": "Would determine whether plugin architectures and dynamic linking fall inside or outside the narrow reading's boundary.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Legal status of dynamic linking under copyright law."
+    },
+    {
+      "id": "enforcement_asymmetry",
+      "question": "Does the narrow reading persist because of doctrinal coherence, or because commercial actors have greater litigation resources than copyleft enforcers?",
+      "resolution_mechanism": "Comparative analysis of enforcement actions, litigation outcomes, and resource asymmetry between FSF-aligned enforcers and industry defendants.",
+      "impact": "If asymmetry-driven, the constraint is better described by the enforcement_vacuum_reading; if doctrine-driven, the narrow reading is independently stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether narrow reading stability rests on legal merit or enforcement capacity."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "strong_copyleft_reading",
+      "enforcement_vacuum_reading"
+    ],
+    "dual_formulation_note": "The gpl_copyleft_scope kernel decomposes into three structurally distinct constraints: the narrow_scope_reading (traditional copyright boundary, rope), the strong_copyleft_reading (expansive coupling boundary, contested extraction), and the enforcement_vacuum_reading (scope as artifact of enforcement capacity). Each has a different epsilon, stakeholder structure, and classification. They are linked as a constraint family."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "traditional_copyright_doctrine",
+    "drift_state": {
+      "moment": "contemporary_software_ecosystem",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "gpl_copyleft_scope__strong_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gpl_copyleft_scope__enforcement_vacuum_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "statutory_derivative_work_standard_governs_gpl",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "license_cannot_expand_beyond_copyright_boundary",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

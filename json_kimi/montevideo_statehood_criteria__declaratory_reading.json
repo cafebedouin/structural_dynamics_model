@@ -1,0 +1,248 @@
+{
+  "header": {
+    "constraint_id": "montevideo_statehood_criteria__declaratory_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "b3467350-bcb8-47a2-a6f3-00a0bfc62bd1"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.6,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Montevideo Statehood Criteria â Declaratory Reading",
+    "topic_domain": "international_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "de_facto_authorities",
+      "third_party_states"
+    ],
+    "victims": [
+      "parent_states",
+      "great_power_gatekeepers"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 90
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.6
+    }
+  ],
+  "omegas": [
+    {
+      "id": "declaratory_constitutive_logical_relation",
+      "question": "Does the declaratory reading logically foreclose the constitutive reading in international legal practice, or do they function as permanently coexisting interpretations of the same kernel?",
+      "resolution_mechanism": "Examine state practice and ICJ jurisprudence for instances where both premises are simultaneously asserted by the same legal actor or institution.",
+      "impact": "If foreclosed, the declaratory constraint functions as a stronger legal norm with higher suppression of constitutive alternatives; if coexisting, the measured extraction from gatekeepers is lower because constitutive practice remains structurally legitimate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether declaratory and constitutive readings are logical contradictories or coexisting doctrinal positions."
+    },
+    {
+      "id": "human_rights_as_implicit_fifth_criterion",
+      "question": "Has state practice effectively introduced human rights and democratic governance as an unwritten fifth criterion, overriding the pure declaratory axiom that objective facts alone suffice?",
+      "resolution_mechanism": "Comparative analysis of recognition practice since 1990 for entities meeting Montevideo criteria but lacking democratic governance or human rights compliance.",
+      "impact": "If so, the drift_state is closer to axiom_overriding and the constraint is functionally nearer the hybrid reading than the pure declaratory reading suggests; if not, the declaratory reading retains its structural integrity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether empirical recognition practice has added normative conditions beyond the four criteria."
+    },
+    {
+      "id": "enforcement_gap_vs_extractive_design",
+      "question": "Is the gap between declaratory legal status and practical recognition an enforcement failure, or is the declaratory doctrine itself designed to legitimize a system that leaves de facto authorities in permanent limbo?",
+      "resolution_mechanism": "Measure the rate of UN admission and treaty participation for entities meeting criteria but opposed by a P5 member versus those without P5 opposition.",
+      "impact": "If the gap is systematic and P5-dependent, the constraint may be a tangled rope where legal form coordinates weak parties while great-power practice extracts from them; if random, it is a rope with weak enforcement.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether non-recognition is a bug or a structural feature of the declaratory regime."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the declaratory reading of the Montevideo statehood criteria kernel: the legal doctrine that meeting four objective criteria (permanent population, defined territory, government, capacity to enter relations with other states) establishes statehood as an objective legal fact independent of recognition. It coordinates the international system by supplying a non-discretionary standard for state identity, but it asymmetrically extracts gatekeeping leverage from parent states and great powers, who lose the ability to condition legal personality on political alignment. De facto authorities are the doctrine's intended beneficiaries, yet recognition denial in practice places them in a victim position when the constraint is suppressed by non-compliant powerful states. The claim and metrics are independently authored: the constraint is claimed as tangled_rope because it mixes genuine coordination with the extraction of great-power discretion, while the metrics describe moderate-high extractiveness and resistance without tuning to match the claim.",
+    "key_agents": [
+      "de_facto_authorities: Intended beneficiaries (powerless/trapped) â gain legal personality under the doctrine but suffer recognition denial in practice",
+      "parent_states: Primary payers (powerful/constrained) â lose leverage to block secessionist entities that meet objective criteria",
+      "great_power_gatekeepers: Secondary payers (powerful/constrained) â lose recognition policy as a discretionary foreign policy instrument",
+      "icj: Agenda-setter (institutional/analytical) â enforces declaratory interpretation through advisory opinions and contentious judgments",
+      "third_party_states: Beneficiaries (organized/constrained) â gain predictability in diplomatic relations and treaty membership"
+    ],
+    "logic_rationale": "Extractiveness (0.60) is moderate-high because the doctrine strips powerful actors of discretionary gatekeeping authority and transfers legal standing to weaker entities. Suppression (0.60) reflects the active force required to maintain the declaratory rule against constitutive practice and great-power resistance. Theater_ratio (0.45) captures the growing performative gap between ICJ assertions of objective statehood and the continued practice of political recognition in the Security Council and bilateral relations. Accessibility_collapse (0.50) acknowledges that while the declaratory reading dominates legal textbooks and convention text, the constitutive alternative remains operationally accessible to powerful states. Resistance (0.65) is high because parent states and P5 members actively contest the automaticity of statehood in admission politics and bilateral recognition.",
+    "perspectival_gap": "The ICJ and third-party states compute the constraint as legal coordination that reduces ambiguity and stabilizes interstate relations. Parent states and great powers compute it as an illegitimate constraint on sovereign discretion and foreign policy flexibility. De facto authorities occupy a split seat: structurally beneficiaries of the legal rule, but practically victims of its non-enforcement when powerful states ignore or override it.",
+    "directionality_logic": "De facto authorities and third_party_states are declared beneficiaries (low d, effective extraction damped or inverted into subsidy). Parent_states and great_power_gatekeepers are declared victims (high d, effective extraction amplified). The ICJ, as the enforcing institution with analytical exit options, sits near the beneficiary end because its authority and institutional function are subsidized by the constraint's stability. Great powers have constrained exit (cannot unilaterally exit customary international law) coupled with victim status, pushing d toward the full-target end.",
+    "mandatrophy_analysis": "The founding problem â stabilizing state identity after imperial collapse and decolonization â is partially solved. The doctrine persists beyond its founding moment because it coordinates ongoing secession and state formation, but it has accumulated extractive tension as great powers resist its application to contemporary contested cases. The mismatch between founding_problem_status (contested) and disappearance_verdict (world_rearranges) signals mandatrophy risk: the arrangement would fundamentally rearrange interstate relations if removed, yet its original problem is contested, suggesting the constraint now serves both coordination and the extraction of gatekeeping privilege simultaneously.",
+    "kernel_context": "This constraint is the declaratory reading of the montevideo_statehood_criteria kernel. It reads the four Montevideo criteria as self-executing and recognition as merely declaratory of pre-existing legal fact. Sibling readings include the constitutive reading (recognition by existing states is constitutive of statehood) and the hybrid reading (objective criteria plus normative legitimacy such as democracy and human rights). The structural delta of this reading is that de facto authorities enter the victim set under recognition denial, parent states lose leverage to condition recognition, and international law becomes self-executing rather than consensus-dependent."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "dual_formulation_note": "This constraint is one reading of the Montevideo statehood criteria kernel. The constitutive and hybrid readings are structurally distinct constraints with different epsilon values and should be authored as separate stories. Decomposition follows the epsilon-invariance principle: the declaratory reading's epsilon (moderate-high extraction from gatekeepers) differs from the constitutive reading's epsilon (high extraction from entities denied recognition)."
+  },
+  "stakeholders": [
+    {
+      "name": "de_facto_authorities",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Entities that control territory and population and meet the four Montevideo criteria but lack widespread diplomatic recognition. Under the declaratory reading they possess statehood as an objective legal fact, yet they are excluded from UN membership, treaty regimes, and bilateral relations when powerful states withhold recognition."
+    },
+    {
+      "name": "parent_states",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Recognized states facing secessionist entities that meet objective statehood criteria. Under the declaratory reading they lose the ability to condition recognition on territorial concessions, political subordination, or extended autonomy negotiations, forfeiting a traditional instrument of statecraft."
+    },
+    {
+      "name": "great_power_gatekeepers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Major powers, including permanent members of the UN Security Council, that have historically used recognition policy to reward allies and isolate adversaries. The declaratory doctrine constrains this discretion by asserting that objective criteria alone establish statehood regardless of strategic preference."
+    },
+    {
+      "name": "icj",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "International Court of Justice and affiliated judicial bodies that apply and enforce the declaratory reading through advisory opinions and contentious cases, treating statehood as a matter of objective fact and recognition as declaratory rather than constitutive."
+    },
+    {
+      "name": "third_party_states",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "States not directly involved in particular statehood disputes. They benefit from reduced legal ambiguity and clear standards for diplomatic relations, treaty participation, and international organization membership, though they remain bound by the same customary framework."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides objective, verifiable criteria for determining which entities possess international legal personality as states, thereby reducing ambiguity in diplomatic relations, treaty-making, and international organization membership.",
+    "transfer_function": "Transfers the authority to determine statehood from the political discretion of existing states, parent states, and great powers to an objective factual assessment of four criteria; transfers legal standing, diplomatic capacity, and treaty eligibility to criteria-meeting entities.",
+    "absent_voices": "Populations of de facto authorities are excluded from the UNSC and bilateral recognition negotiations where their status is effectively decided. Constitutive theorists are present in academia but structurally marginalized in formal treaty bodies and courtrooms dominated by declaratory precedent. Parent-state domestic opposition movements are heard only through the parent state's own representation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the declaratory reading vanished, dozens of entities would lose their strongest legal claim to statehood, parent states would regain leverage to condition recognition on political concessions, great powers would resume unconstrained gatekeeping over system membership, and the interstate order would shift from objective criteria to pure political recognition.",
+    "founding_problem": "The collapse of empires and the proliferation of new entities in the early twentieth century created uncertainty over which communities qualified as sovereign states; the inter-American system sought to prevent great-power recognition politics from destabilizing newly independent republics and to establish an objective, anti-imperial standard.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Historical records of the 1933 Montevideo Conference and inter-American jurists attest the anti-imperial, anti-gatekeeping intent. However, post-Cold War hybrid theorists and human rights advocates contest whether objective criteria alone ever fully addressed the problem; corroboration from purely non-legal seats is limited because the problem was defined by the international legal profession itself."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "objective_statehood_by_criteria",
+    "drift_state": {
+      "moment": "post_cold_war_contested_statehood",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "montevideo_statehood_criteria__constitutive_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "montevideo_statehood_criteria__hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "objective_criteria_suffice_for_statehood",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "recognition_lacks_constitutive_legal_force",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

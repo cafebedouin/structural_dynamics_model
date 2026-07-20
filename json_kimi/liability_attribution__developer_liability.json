@@ -1,0 +1,271 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__developer_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "a947a97e-deb4-4636-b92e-a77f8447c72f"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.69,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Developer Primary Liability Attribution",
+    "topic_domain": "technology_governance/legal_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "system_deployers"
+    ],
+    "victims": [
+      "technology_developers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "technology_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Design and build foundational models, algorithms, and software capabilities. Under a developer-primary liability rule, they bear legal responsibility for harms arising from system use regardless of how deployers configure or operate the technology. They must invest heavily in defensive documentation, capability limitation, and compliance infrastructure. Exit requires abandoning capability development entirely, as liability attaches to the artifact itself."
+    },
+    {
+      "name": "system_deployers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Integrate, configure, and operate technology in specific real-world contexts. Under developer-primary liability, they inherit reduced or secondary legal exposure despite controlling the operational environment and user interactions. They capture the value of externalized risk, arbitraging across jurisdictions with favorable liability rules, while the upstream developer absorbs the expected litigation cost."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Draft, interpret, and enforce liability frameworks for emerging technologies. They find developer-primary liability administratively tractable because it identifies a clear, early-point defendant and avoids complex discovery into deployment context. They face asymmetric lobbying pressure: deployers often prefer this framing, while developers lack comparable political organization."
+    },
+    {
+      "name": "shared_liability_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Legal scholars, civil society advocates, and some jurists arguing that liability should be distributed across the value chain according to actual causal contribution and operational control. They contend deployment context is essential to harm prevention. They are structurally excluded from drafting tables when statutes or early precedent fix primary liability on developers by default."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Creates a direct, upstream incentive for developers to invest in safety, transparency, and controllability by internalizing the expected cost of harm caused by the capabilities they originate.",
+    "transfer_function": "Transfers legal and financial liability risk from deployers, who control the operational context, to developers, who create the underlying capability, moving expected litigation cost and compliance burden upstream in the value chain.",
+    "absent_voices": "Shared-liability advocates and deployer-liability proponents argue that operational context and real-time control are essential to harm prevention; they are structurally excluded when primary liability is fixed on developers by statutory default or judicial precedent. Small developers without legal departments are underrepresented in regulatory drafting.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If developer-primary liability vanished overnight, deployers would face reassessed risk exposure, insurance markets would reprice coverage along the value chain, developer product architectures would shift away from defensive limitation toward capability expansion, and regulatory enforcement would lose its primary administrative hook.",
+    "founding_problem": "The difficulty of attributing harm caused by complex socio-technical systems to a responsible party, combined with information asymmetry between creators and operators regarding system limits and the opacity of deployment contexts.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Regulatory agencies and tort scholars attest that causal attribution in socio-technical systems is genuinely difficult. However, civil society advocates and deployer-liability scholars attest the problem is being solved in the wrong directionâdeveloper liability is over-weighted relative to deployer controlâand that the attribution-difficulty narrative is partly deployed by deployers to externalize risk. Independent legal theorists outside the benefiting deployer class corroborate that attribution is hard but dispute that developer-primary is the natural resolution."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.69
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the developer_liability reading of the contested liability_attribution kernel: the legal rule that creators of underlying technological capabilities bear primary liability for downstream harms, regardless of deployment context. Deployers, who control the operational environment and user interactions, are structurally positioned as beneficiaries of risk externalization, while developersâoften with less visibility into downstream useâare positioned as liability targets. The claim/metric independence is deliberate: the constraint is claimed as tangled_rope because a genuine coordination function (safety incentives) coexists with asymmetric extraction (risk offloading), while the metrics describe substantial extractiveness and active enforcement.",
+    "key_agents": [
+      "technology_developers: Primary target (moderate/constrained) â bears extraction via upstream liability",
+      "system_deployers: Primary beneficiary (powerful/mobile) â captures risk externalization and reduced legal exposure",
+      "regulatory_authorities: Agenda setter (institutional/analytical) â administratively convenient enforcement hook",
+      "shared_liability_advocates: Excluded voice (moderate/constrained) â argues for distributed attribution across the value chain"
+    ],
+    "logic_rationale": "Extractiveness (0.71 at interval end) is high because the liability rule decouples risk-bearing from operational control: developers pay for harms they cannot prevent. Suppression (0.69) reflects the active legal machinery required to maintain this allocationâcourts, statutory interpretation, and preemption of alternative liability schemas. Theater ratio (0.42) indicates that a growing share of developer activity is defensive documentation and performative safety ritual rather than substantive capability improvement. The measurement series share a single time grid so temporal sampling is aligned across all tracked metrics.",
+    "directionality_logic": "Technology_developers are structural targets: they bear costs without controlling the harm-generating context (high d). System_deployers are structural beneficiaries: they offload risk while retaining operational authority (low d). Regulatory authorities sit near symmetricâthey enforce the transfer but do not personally collect the extracted value. Shared_liability_advocates are excluded from the directional computation because they are structurally absent from the rule-setting process.",
+    "perspectival_gap": "The developer seat experiences the constraint as unjust risk allocationâbeing held responsible for contexts they do not control. The deployer seat experiences it as efficient incentive alignment that happens to align with their risk-minimization interest. The regulatory seat experiences it as an administratively tractable enforcement target. The engine computes this divergence from the structural data; the authored claim does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problemâattribution difficulty in complex systemsâis genuine, but the developer-primary solution risks mandatrophy if it persists beyond its functional justification. If deployers develop sufficient operational monitoring and control capacity, fixing primary liability on developers becomes a zombie coordination story: it still claims to solve attribution, but the actual function is risk externalization to a less politically powerful party. The temporal measurements show rising extractiveness and theater, suggesting the coordination story is aging into extraction.",
+    "kernel_context": "This constraint is one reading of the liability_attribution kernel, instantiating developer_liability. Sibling readings include deployer_liability (deployers bear primary responsibility as context controllers) and shared_liability (joint attribution along the value chain). The structural delta for this reading: developers enter the victim set under regulatory/tort pressure; deployers become beneficiaries of externalized risk; opacity becomes the developer's burden to manage or disclose."
+  },
+  "omegas": [
+    {
+      "id": "developer_control_limit",
+      "question": "Can developers meaningfully control or monitor downstream deployment contexts sufficiently to prevent the harms for which they are held liable?",
+      "resolution_mechanism": "Empirical study of developer visibility into deployer operations, combined with natural experiments from jurisdictions with shared or deployer-primary liability comparing safety outcomes.",
+      "impact": "If developers lack meaningful control, the liability rule is primarily extractive risk-shifting rather than genuine safety coordination, supporting reclassification toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether developer liability tracks controllable design choices or offloads uncontrollable deployment risk."
+    },
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the liability_attribution kernel genuinely underdetermined, or does the developer_liability reading dominate because deployers capture the regulatory process?",
+      "resolution_mechanism": "Comparative regulatory history tracing lobbyist influence and legislative drafting origins across jurisdictions with divergent liability rules.",
+      "impact": "If deployer capture explains the reading's dominance, the constraint is better understood as a snare disguised by legal formalism; if genuine theoretical disagreement explains it, tangled_rope remains appropriate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading reflects open normative contestation or regulatory capture by deployer interests."
+    },
+    {
+      "id": "deployer_benefit_driver",
+      "question": "Does the developer-primary liability reading persist because it optimally solves the attribution problem, or because deployers are structurally better positioned to lobby for risk externalization?",
+      "resolution_mechanism": "Political economy analysis of liability reform campaigns, comparing deployer and developer lobbying expenditure against legislative outcomes.",
+      "impact": "A deployer-driven persistence mechanism would confirm the extraction function dominates the coordination function, raising effective extraction and supporting snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Political economy of why the developer liability reading endures."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__deployer_liability",
+      "liability_attribution__shared_liability"
+    ],
+    "dual_formulation_note": "The liability_attribution kernel decomposes into three structurally distinct constraints (developer_liability, deployer_liability, shared_liability) because each reading assigns a different Îµ, a different beneficiary/victim structure, and a different directionality profile to the same natural-language concept. This story (developer_liability) is substantially extractive and contested; the sibling stories may carry different metric profiles."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "developer_accountability_framework",
+    "drift_state": {
+      "moment": "contemporary_ai_regulation_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "liability_attribution__deployer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "liability_attribution__shared_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creator_originary_liability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "deployer_context_non_attenuating",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "system_deployers",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "preparedness_commitment__husk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "3be89f28-64ab-467c-8681-bbf243225d9b"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.85,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.28,
+    "claimed_type": "piton",
+    "human_readable": "Preparedness Commitment â Husk Reading (Memorial Performance)",
+    "topic_domain": "institutional/disaster_preparedness",
+    "requires_active_enforcement": false,
+    "victims": [
+      "frontline_operators",
+      "public_at_risk"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.85
+    }
+  ],
+  "omegas": [
+    {
+      "id": "husk_vs_competence_location",
+      "question": "Is the observed husk state a property of the specific institution studied, or an inherent tendency of all preparedness commitments under resource constraint?",
+      "resolution_mechanism": "Cross-institutional comparison of preparedness outcomes under stress; if husk state correlates with institutional age and budget pressure rather than domain, it is a structural tendency.",
+      "impact": "If inherent tendency, the husk reading generalizes to all preparedness commitment; if contingent, the competence reading may hold in better-resourced contexts.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether husk state is universal or contingent"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Does the persistence of the husk state depend on active suppression of competence metrics, or on passive institutional inertia?",
+      "resolution_mechanism": "Trace whether deviance from ritual (e.g., competence-based drills) is actively penalized by audit structures, or simply not resourced.",
+      "impact": "Active suppression would push classification toward snare; passive inertia supports piton. Determines whether the constraint is maintained by coercion or by neglect.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs inertial suppression mechanism"
+    },
+    {
+      "id": "kernel_reading_decomposition",
+      "question": "Does the preparedness commitment kernel decompose into exactly three readings, or do additional hybrid forms exist?",
+      "resolution_mechanism": "Inventory of institutional self-descriptions; if significant actors claim blended forms not captured by the threefold decomposition, the kernel needs expansion.",
+      "impact": "If additional readings exist, the epsilon-invariance of each authored constraint is compromised by framing under-determination.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Completeness of the three-reading decomposition"
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "preparedness_agency",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers disaster preparedness programs, certifies drill completion, and audits compliance against formal checklists. Institutionally committed to measurable outputs such as drill frequency and participation rates as proxies for readiness. Cannot easily abandon the ritual framework without admitting decades of assessment were hollow."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Required to participate in recurring drills and documentation exercises that simulate emergencies but do not develop adaptive judgment. Aware that scenarios are scripted and do not reflect novel stress conditions. Time spent on ritual compliance displaces genuine training."
+    },
+    {
+      "name": "public_at_risk",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Funds preparedness through taxation and believes institutional certifications indicate genuine protection. Bears the catastrophic cost when memorial performance fails under actual novel stress. Has no direct voice in drill design or audit criteria."
+    },
+    {
+      "name": "competence_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Emergency management professionals who argue for adaptive, stress-tested exercises and outcome-based metrics. Their proposals threaten the existing audit-and-drill apparatus and are treated as resource-intensive deviations from proven protocol. Structurally marginalized in budget and standards conversations."
+    },
+    {
+      "name": "institutional_analyst",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Studies organizational rituals and disaster outcomes. Notes the divergence between drill completion rates and actual response competence. Does not participate in the constraint but documents the gap between memorial performance and functional capacity."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Originally, to coordinate collective readiness across dispersed agencies and populations by standardizing response protocols and maintaining shared operational memory.",
+    "transfer_function": "Moves institutional energy, budget, and attention from adaptive skill-building into ceremonial drill completion and documentation, while transferring risk from the certifying institution onto the public and frontline operators.",
+    "absent_voices": "Competence advocates who demand adaptive stress-testing and outcome-based validation; frontline operators who know the drills are scripted but are not consulted on redesign; future disaster victims who have no seat at the audit table.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the memorial-performance constraint vanished, agencies would lose their compliance infrastructure, audit criteria would collapse, frontline operators would shift time to genuine training, and the public's false confidence would dissolve â the institutional landscape of emergency management would reorganize around functional competence or explicit risk acceptance.",
+    "founding_problem": "Catastrophic events revealed chaotic, uncoordinated response capacities across agencies and jurisdictions; a systematic method was needed to ensure baseline readiness and interoperable protocols.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Disaster sociology researchers and post-event after-action reports from outside the preparedness bureaucracy attest that the founding coordination problem has been supplanted by ritual compliance; the preparedness agency itself claims the problem is still live, citing ongoing threats, but independent evaluations such as GAO reports and academic disaster studies document competence gaps that the ritual does not address."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "operational_competence_ideal",
+    "drift_state": {
+      "moment": "contemporary_institutional_practice",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_commitment__competence_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "preparedness_commitment__hybrid_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "ritual_fidelity_discharges_preparation_duty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "operational_competence_nonessential_to_memorial_function",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Preparedness commitment as a contested kernel admits multiple readings. This story instantiates the husk reading: the constraint is institutional disaster-preparedness routines that have atrophied into memorial performanceâhigh form-compliance, negligible adaptive capacity, and drills that serve institutional memory rather than operational readiness. The constraint persists not because any party extracts concentrated rent from it, but because bureaucratic inertia, audit path dependence, and the institutional cost of admitting hollowness keep it in place. When novel stress exceeds scripted scenarios, competence collapse reveals the gap between ceremonial fidelity and functional capacity.",
+    "key_agents": [
+      "preparedness_agency: Agenda-setter (institutional/constrained) â administers the ritual and is locked into its metrics",
+      "frontline_operators: Payer (moderate/constrained) â performs hollow drills, bears opportunity cost",
+      "public_at_risk: Payer (powerless/trapped) â funds and relies on a competence shell",
+      "competence_advocates: Excluded (moderate/constrained) â would redesign for adaptive stress but lack institutional voice",
+      "institutional_analyst: Observer (analytical) â documents the gap without institutional stake"
+    ],
+    "logic_rationale": "Extractiveness (0.58) is moderate: the constraint consumes real budget and time without generating commensurate readiness, but it does not concentrate gains in any single seat. Suppression (0.52) is moderate: the ritual is enforced through audit criteria and professional certification, yet the enforcement is of form, not function, and resistance is muted because costs are diffuse. Theater_ratio (0.85) is high and rising: most observable activity is performative maintenance of institutional memory. Accessibility_collapse (0.42) reflects that alternative competence-based models exist but are institutionally invisible under the audit regime. Resistance (0.28) is low because frontline complaint is individualized and the public does not observe the hollowness until disaster strikes. Temporal measurements trace the drift from modest ritual overlay (t=0) to near-total theatrical reproduction (t=40).",
+    "perspectival_gap": "The preparedness_agency seat experiences the constraint as a legitimate, generational stewardship of institutional memory and standard-setting; discontinuing the ritual would feel like abandoning the mission. The frontline_operator and public_at_risk seats experience the same structure as misdirected resources and false security. The engine computes this divergence from the structural data: the agenda-setter has institutional power and constrained but present exit (could reform), while payers have moderate or powerless positions with trapped or constrained exit. The computed per-seat types should diverge accordingly.",
+    "directionality_logic": "No concentrated beneficiary is declared, consistent with the piton signature: the preparedness_agency does not capture extracted surplusâit merely administers the husk. Victims frontline_operators and public_at_risk bear the diffuse costs in wasted time, misallocated budget, and catastrophic exposure. Directionality for the agency derives structurally toward low targethood (it subsidizes itself with institutional continuity), while the payers sit near full target. No override is needed because the structural derivation captures the relationship.",
+    "mandatrophy_analysis": "The constraint prevents mislabeling as a snare because there is no identifiable party capturing the extraction: the agency's budget is consumed by the ritual apparatus itself, not siphoned as rent. It prevents mislabeling as a rope because the coordination functionâgenuine readinessâhas atrophied; the remaining form is not solving the collective action problem it was built for. It is not a scaffold because there is no sunset clause and no transitional justification; the ritual is self-perpetuating. The husk reading thus isolates the degradation path: founding problem dead, function atrophied, persistence inertial.",
+    "kernel_context": "This constraint is the husk reading of kernel preparedness_commitment. Sibling readings: competence_reading (preparedness as live exercised knowledge maintaining operational capacity) and hybrid_reading (memorial elements stabilize commitment while competence elements maintain function). The husk reading asserts that operational competence is absent and the kernel has collapsed into pure memorial performance. If the competence reading were adopted, epsilon would drop substantially and the constraint would classify as rope or tangled_rope; if the hybrid reading were adopted, epsilon would be moderate and the beneficiary/victim structure would split between memorial and competence layers."
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

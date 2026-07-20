@@ -1,0 +1,305 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_requirement__simulation_as_adequate_exercise",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sim_adeq",
+    "story_uid": "c2c02373-4b63-4911-8f83-29c1187037f4"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.45,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation as Adequate Exercise of Competence Kernel",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "operating_organizations",
+      "simulation_vendors"
+    ],
+    "victims": [
+      "frontline_operators",
+      "public_at_risk"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "standards_setting_body",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Codifies training adequacy standards and accepts scheduled simulation with debriefing as compliant exercise of the competence kernel. Sets certification thresholds measured in simulator hours and protocol adherence. Can revise the standard but faces institutional pressure to maintain regulatory stability and industry compliance costs."
+    },
+    {
+      "name": "operating_organizations",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Airlines, nuclear utilities, and high-risk operators that substitute simulator-based training for live operational exposure or hybrid apprenticeship. They realize substantial cost avoidance and scheduling predictability while remaining compliant. Their exit is constrained by regulatory mandates and competitive cost structures."
+    },
+    {
+      "name": "simulation_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develop and sell high-fidelity simulators, scenario libraries, and debriefing platforms. Revenue scales with regulatory acceptance of simulation-only adequacy. They market fidelity improvements as closing the reality gap."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Pilots, control-room operators, and surgical teams whose licenses depend on simulator-based certification cycles. They may experience tacit skill decay or negative transfer but cannot unilaterally demand real-world anchoring without jeopardizing employment and professional standing. Their professional identity is fused to the certification path."
+    },
+    {
+      "name": "public_at_risk",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "General public and adjacent communities who depend on HRO performance but cannot opt out of airspace, grid proximity, or medical services. They bear catastrophic tail risk if simulated competence proves insufficient in rare but consequential events."
+    },
+    {
+      "name": "hybrid_model_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Safety researchers, veteran operators, and union safety officers who argue that simulation is insufficient without periodic real-world anchoring or live-fire validation. They are structurally underrepresented on standards panels where compliance metrics are defined by simulator vendors and operating organizations."
+    },
+    {
+      "name": "accident_investigation_boards",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Review incidents and near-misses for competence failures. They intermittently question whether simulation adequately prepared operators for the event dynamics observed, but lack regulatory authority to mandate alternative training regimes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a scalable, schedulable, and standardized mechanism for high-reliability organizations to maintain operator competence for rare, high-consequence scenarios without relying on stochastic catastrophic events or prohibitively expensive continuous live operations.",
+    "transfer_function": "Moves the cost and burden of competence maintenance from operating organizations and training budgets to frontline operators and the public, who bear the latent risk of competence gaps manifesting in catastrophic failure.",
+    "absent_voices": "Proponents of catastrophe-dependent or hybrid competence modelsâexperienced operators who sense tacit skill decay, and safety researchers documenting simulator-to-reality transfer failuresâare structurally underrepresented on standards panels where adequacy is measured by simulator hours and debrief logs.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the adequacy claim vanished overnight, operating organizations would face immediate pressure to fund substantially more expensive live-training, apprenticeship, or catastrophe-exposure programs; regulatory compliance frameworks would require rewriting; the simulation industry's revenue model would contract; and frontline operators would demand revised certification paths anchored in real-world performance.",
+    "founding_problem": "High-risk industries needed to maintain operator competence for rare, high-consequence scenarios without relying solely on the stochastic occurrence of actual catastrophes or maintaining prohibitively expensive continuous live operations.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Operating organizations and simulation vendors attest the problem remains live and that simulation solves it. Accident investigation boards and independent safety researchers outside the benefiting parties attest the problem is partially solved but the current arrangement overclaims adequacy; empirical studies of skill decay and negative transfer are corroborated by regulatory dissent filings and union safety reports."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.45
+    }
+  ],
+  "omegas": [
+    {
+      "id": "simulation_fidelity_ceiling",
+      "question": "Is there an irreducible gap between simulated and real-world competence that debriefing cannot close, and does that gap grow with time since last real-world anchoring?",
+      "resolution_mechanism": "Comparative performance studies and incident analyses contrasting simulator-only operators against hybrid-trained peers in actual critical events, augmented by longitudinal skill-decay metrics.",
+      "impact": "If a persistent irreducible gap exists, the constraint's extractiveness is higher than authored because the adequacy claim systematically overstates competence transfer; if debriefing fully closes the gap, the coordination function dominates and the constraint shifts toward rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Irreducible fidelity gap between simulation and real-world competence"
+    },
+    {
+      "id": "catastrophe_rate_validation",
+      "question": "Do long catastrophe-free intervals validate simulation adequacy, or do they merely reflect layered system redundancy and luck masking progressive competence decay?",
+      "resolution_mechanism": "Statistical analysis of near-miss rates, latent error detection trends, and micro-failure frequencies against historical baselines pre-dating simulation-dominant regimes.",
+      "impact": "If competence decay is hidden by redundancy, the constraint is more extractive than it appears; if competence is truly maintained, the coordination claim strengthens.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether catastrophe-free operation validates simulation or masks decay"
+    },
+    {
+      "id": "kernel_reading_contingency",
+      "question": "This constraint is one reading of the competence_exercise_requirement kernel; how would adopting a sibling reading restructure the beneficiary-victim map and extraction profile?",
+      "resolution_mechanism": "Comparative institutional analysis across jurisdictions or industries that have adopted hybrid or catastrophe-anchor training models, measuring cost distribution and incident outcomes.",
+      "impact": "If hybrid_dependency is adopted, this constraint's victim set shrinks and it may degrade to scaffold or piton; if catastrophe_as_necessary_anchor is correct, this constraint functions as a snare extracting safety margin from the public.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural contingency of this reading relative to sibling kernel readings"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In high-reliability organizations, the claim that scheduled high-fidelity simulation plus structured debriefing constitutes fully adequate exercise of the competence kernel has become a regulatory standard. Operating organizations adopt it for cost predictability; simulator vendors scale their markets around it; frontline operators are certified through it. The constraint coordinates training at scale while simultaneously transferring catastrophic tail risk to the public and compressing real-world skill maintenance into a cheaper, schedulable format. It is one reading of a contested kernel, structurally incompatible with readings that demand real catastrophe or hybrid anchoring.",
+    "key_agents": [
+      "standards_setting_body (agenda_setter, institutional/constrained): codifies training adequacy rules and accepts simulation-based compliance",
+      "operating_organizations (beneficiary, powerful/constrained): realize cost savings by substituting simulation for live training and catastrophic exposure",
+      "simulation_vendors (beneficiary, organized/mobile): supply high-fidelity simulators and debriefing platforms",
+      "frontline_operators (payer, moderate/identity_locked): certified via simulation cycles; bear skill-atrophy risk and liability exposure",
+      "public_at_risk (payer, powerless/trapped): unknowingly carries catastrophic tail risk if simulated competence proves insufficient",
+      "hybrid_model_advocates (excluded, moderate/constrained): argue for real-world anchoring but are sidelined in standards panels",
+      "accident_investigation_boards (observer, institutional/analytical): incident reviewers who intermittently question simulation adequacy"
+    ],
+    "logic_rationale": "Extractiveness (0.62) is moderate-high because the constraint systematically transfers the cost of competence maintenance from organizations to operators and the public, while the adequacy claim insulates organizations from bearing fuller training costs. Suppression (0.45) reflects institutional marginalization of hybrid and catastrophe-anchor models in regulatory discourse rather than overt prohibition. Theater ratio (0.40) captures the performative dimension of debriefing protocols and fidelity claims that increasingly substitute for empirical transfer validation. Accessibility collapse (0.60) because alternatives such as mandatory live-fire regimes or catastrophe-dependent training are institutionally unimaginable within the current compliance framework. Resistance (0.30) is moderate but diffuse, arising from frontline intuition and occasional accident reports rather than organized opposition. Measurements share one time grid to prevent misaligned drift dating.",
+    "perspectival_gap": "The agenda-setter and beneficiary seats experience the constraint as genuine coordination: scalable, safe, standardized training that solves a real collective-action problem in high-risk industries. The payer seatsâfrontline operators and the publicâexperience the same structure as risk transfer that conceals competence decay behind compliance theater. The engine computes this divergence from the structural asymmetry in exit options and cost-bearing; the authored claim does not adjudicate it.",
+    "directionality_logic": "Operating organizations and simulation vendors sit near the beneficiary pole: they collect cost savings and revenue from the constraint's operation. Standards_setting_body sits near symmetricâit exercises authority without directly capturing the extracted value. Frontline_operators and public_at_risk sit near the target pole: they bear the costs of competence gaps and catastrophic risk without corresponding bargaining power or exit. Hybrid_model_advocates are excluded and receive no subsidy.",
+    "mandatrophy_analysis": "The classification prevents mislabeling by requiring both beneficiaries (cost-saving organizations, simulator vendors) and victims (operators, public). Without the victim declaration, the story might read as a Ropeâgenuine coordination of training resources. Without the beneficiary declaration, it might read as a Mountainâthe inevitable form of modern training technology. The Tangled Rope classification captures that simulation genuinely coordinates training logistics while simultaneously extracting risk-bearing capacity from those excluded from the adequacy determination.",
+    "kernel_context": "This constraint instantiates the simulation_as_adequate_exercise reading of the competence_exercise_requirement kernel. Sibling readings are catastrophe_as_necessary_anchor (only real catastrophic events provide irreducible exercise) and hybrid_dependency (simulation necessary but insufficient without real-world anchoring). This reading treats scheduled, high-fidelity simulation plus debriefing as fully adequate for competence maintenance; the sibling readings dispute that sufficiency claim. The kernel is contested precisely because the same organizational and regulatory arrangements look like legitimate cost-effective coordination under this reading and like dangerous overclaim under the siblings."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "scheduled_simulation_excellence",
+    "drift_state": {
+      "moment": "contemporary_high_reliability_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "competence_exercise_requirement__catastrophe_as_necessary_anchor",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "competence_exercise_requirement__hybrid_dependency",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_exercise_sufficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "competence_without_contingent_exposure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "catastrophe_as_necessary_anchor",
+      "hybrid_dependency"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the competence_exercise_requirement kernel. The three readingsâsimulation_as_adequate_exercise, catastrophe_as_necessary_anchor, and hybrid_dependencyâare structurally distinct claims about how competence is maintained. They form a constraint family linked by mutual logical exclusion or pressure, and are modeled as separate stories to preserve Îµ-invariance."
+  },
+  "gain_flow": "operating_organizations",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

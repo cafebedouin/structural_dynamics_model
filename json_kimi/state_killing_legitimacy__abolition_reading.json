@@ -1,0 +1,280 @@
+{
+  "header": {
+    "constraint_id": "state_killing_legitimacy__abolition_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "25b37bf5-b6ac-4396-b523-627a74197faa"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.72,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Abolitionist Reading: Categorical Prohibition of State Killing",
+    "topic_domain": "criminal_justice/political_philosophy/legal_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "condemned_persons"
+    ],
+    "victims": [
+      "state_execution_authority"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.77
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.72
+    }
+  ],
+  "omegas": [
+    {
+      "id": "abolition_retributive_foreclosure",
+      "question": "Does the abolition reading's core axiom logically foreclose the retributive and deterrence readings within a single legal framework, or do they merely coexist as incompatible ideologies across different polities?",
+      "resolution_mechanism": "Engine computation from cs_axiom_contradiction once sibling readings are loaded; empirical test by examining whether any single legal system simultaneously maintains categorical dignity-based abolition and desert-based or deterrence-based execution.",
+      "impact": "If foreclosed, the readings cannot coexist in one jurisdiction and their global distribution reflects jurisdictional partitioning, not interpretive pluralism within one system.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between abolition and sibling readings within a single framework."
+    },
+    {
+      "id": "true_cost_bearer_ambiguity",
+      "question": "Does the categorical prohibition primarily extract from state sovereignty, or does the cost diffuse to crime victims and societies denied the retributive option they prefer?",
+      "resolution_mechanism": "Comparative analysis of abolitionist versus retentionist jurisdictions measuring victim-family satisfaction, public trust in justice, and state carceral costs.",
+      "impact": "If costs fall on victims or society rather than on state power, the victim declaration should shift and directionality toward the state may be overstated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the extraction cost is borne by state power or diffuses to broader society."
+    },
+    {
+      "id": "enforcement_source_ambiguity",
+      "question": "Is the constraint's active enforcement sustained by genuine normative commitment or by diplomatic pressure and treaty conditionality?",
+      "resolution_mechanism": "Track execution resumption rates in states after they exit international human rights frameworks or face reduced diplomatic pressure.",
+      "impact": "If enforcement is externally coerced rather than internally legitimate, the coordination function may be weaker and the constraint may read as more extractive from the state's perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Source of enforcement legitimacy for the abolition norm."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "condemned_persons",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals under sentence of death who are categorically protected from execution by the dignity-based prohibition; their survival depends entirely on the constraint's enforcement against state power, and they cannot opt out of the protection without being executed."
+    },
+    {
+      "name": "state_execution_authority",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The state's penal and executive institutions that historically exercised the power to kill condemned prisoners. The prohibition extracts their sovereign capacity to execute, forcing them to maintain incarceration and foreclosing a tool they previously claimed as rightful."
+    },
+    {
+      "name": "international_human_rights_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Treaty bodies and monitoring organizations that legitimate, adjudicate, and enforce the abolition norm through international law, reporting mechanisms, and individual petitions against retentionist states."
+    },
+    {
+      "name": "crime_victim_families",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Families of murder victims who would advocate for execution as retributive closure. Their voice is structurally excluded from dignity-based frameworks that treat the condemned person's life as unconditional and non-negotiable regardless of the harm suffered."
+    },
+    {
+      "name": "retributive_justice_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Legal and political actors who hold that desert-based proportionality justifies execution. They are absent from the abolitionist frame because their core premise is categorically foreclosed by the dignity prohibition."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents the state from extinguishing human life as a tool of punishment, establishing an unconditional floor below which state power cannot descend against any condemned person.",
+    "transfer_function": "Transfers the final say over the condemned person's existence from the state's punitive apparatus to a legal-ethical norm that unconditionally protects life regardless of desert or social utility.",
+    "absent_voices": "Crime victims' families seeking retributive closure and retributive justice advocates who believe proportional desert justifies execution are structurally excluded because the dignity frame treats killing as unconditionally impermissible and therefore non-negotiable.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the categorical prohibition vanished overnight, states would resume executions, international human rights law would lose a foundational jus cogens anchor, and condemned persons would lose their unconditional protection; the global criminal justice landscape would reorganize around the re-legitimation of state killing.",
+    "founding_problem": "State killing as an instrument of criminal justice created a class of persons whose lives were contingent on sovereign will, judicial error, or political mood, with no inviolable floor against deliberate extinction by the state.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "International human rights treaty bodies and constitutional courts outside the direct beneficiary class attest to the problem; however, retentionist states and victim-advocacy groups deny the framing entirely, asserting that the founding problem is not the absence of a dignity floor but the absence of just desert."
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the abolition_reading of the state_killing_legitimacy kernel. It is the normative and legal prohibition that state killing categorically violates human dignity regardless of desert or utility. The constraint is authored as a tangled_rope because it coordinates a genuine protection (condemned persons' lives) while asymmetrically extracting from state punitive sovereignty. The condemned person is the beneficiary; the state execution authority is the payer and declared victim. International human rights bodies administer the norm, while crime victims and retributive advocates are structurally excluded from its dignity-based frame.",
+    "key_agents": [
+      "condemned_persons: Primary beneficiary (powerless/trapped) â their lives are the object of unconditional protection.",
+      "state_execution_authority: Primary payer/victim (institutional/constrained) â bears the loss of sovereign killing power.",
+      "international_human_rights_bodies: Agenda setter (institutional/analytical) â administers and legitimates the norm globally.",
+      "crime_victim_families: Excluded voice (moderate/identity_locked) â retributive needs absent from dignity frame.",
+      "retributive_justice_advocates: Excluded voice (organized/constrained) â desert-based justification foreclosed."
+    ],
+    "logic_rationale": "Extractiveness is high (0.78) because a categorical prohibition imposes an absolute, non-compensable cost on the state's punitive capacity: the permanent loss of execution as a tool regardless of context. Suppression is high (0.72) because the constraint's persistence requires active legal and diplomatic enforcement against retentionist pressure. Theater ratio is low (0.25) because the dignity claim is substantively operational, though some enforcement is symbolic diplomacy. Accessibility collapse is high (0.75): once the norm is accepted, execution ceases to be an accessible policy option. Resistance is moderate (0.60) because retentionist states and victim-advocacy groups actively contest the norm. The metrics and claim are independently authored: the constraint is claimed as tangled_rope because it has both a genuine coordination function and asymmetric extraction, matching the high epsilon and suppression values without tuning either to the other.",
+    "perspectival_gap": "From the condemned person's seat, the constraint is protective coordination with near-zero extraction (subsidized existence). From the state execution authority's seat, the same constraint is heavy extraction of sovereign discretion (high effective extraction). From the international body's seat, it is neutral coordination with analytical distance. The engine computes this divergence from the structural data: beneficiary versus payer roles, trapped versus constrained exit, and powerless versus institutional power.",
+    "directionality_logic": "Condemned persons are declared beneficiaries with trapped exit and zero power, placing directionality near the full-beneficiary end; effective extraction is damped into subsidy. State execution authority is declared victim with constrained exit and institutional power, placing directionality near the full-target end; effective extraction is amplified. International bodies are agenda-setters with analytical exit and are neither beneficiaries nor victims, so they revert to canonical fallback. The victim-beneficiary asymmetry is the engine's primary input for seat divergence.",
+    "mandatrophy_analysis": "The classification as tangled_rope prevents mislabeling the constraint as pure coordination (rope) â the cost to state sovereignty is real and asymmetric, not a reciprocal arrangement. It also prevents mislabeling as pure extraction (snare) â the beneficiary is genuinely protected by the constraint's operation, not merely a cover story. If the protection function atrophied while the prohibition persisted (for example, if states ignored it while paying lip service), it would drift toward piton; the authored metrics show active enforcement and low theater, indicating the coordination function remains live.",
+    "kernel_context": "This constraint is the abolition_reading of the state_killing_legitimacy kernel. The kernel is the contested legitimacy of state killing as criminal punishment. Sibling readings are retributive_reading (desert-based proportional justification under lex talionis) and deterrence_reading (instrumental prevention through rational signaling). This reading treats condemned persons as beneficiaries of an unconditional dignity-based prohibition and the state's punitive apparatus as the cost-bearing victim."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "retributive_reading",
+      "deterrence_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the state_killing_legitimacy kernel. The retributive and deterrence readings instantiate structurally distinct constraints from the same kernel, each with different beneficiary-victim structures and epsilon values, linked as a constraint family."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "unconditional_human_dignity_floor",
+    "drift_state": {
+      "moment": "contemporary_retentionist_resurgence",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "state_killing_legitimacy__retributive_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "state_killing_legitimacy__deterrence_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "execution_categorically_impermissible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "human_dignity_inviolable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

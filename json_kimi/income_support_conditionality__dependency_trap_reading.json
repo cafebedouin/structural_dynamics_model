@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "c6be91a6-f2b1-4e38-90ae-934a4ba899ae"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Unconditional Income Support Dependency Trap",
+    "topic_domain": "political_economy/social_policy/labor_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "welfare_administrators"
+    ],
+    "victims": [
+      "ubi_recipients",
+      "taxpayers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ubi_recipients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Receive unconditional income transfers sufficient for subsistence. Over time, labor market skills depreciate and re-entry becomes increasingly difficult. The cash transfer is offset by eroded human capital and a reduced lifetime earnings trajectory, constituting an extraction masquerading as aid."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Compelled by law to fund unconditional transfer programs through taxation. Experience the arrangement as a persistent fiscal extraction with no individual opt-out, while observing recipients outside the labor market."
+    },
+    {
+      "name": "welfare_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Design and administer unconditional transfer programs. Justify expansion based on poverty-reduction metrics while capturing institutional budget, staffing, and authority. Career trajectories and departmental prestige are tied to program scale."
+    },
+    {
+      "name": "labor_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study employment effects of transfer programs. Produce evidence on work disincentives and human capital depreciation. Neither collect transfers nor fund them; influence operates through research findings and policy advising."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Unconditional income support is presented as a solution to poverty and to the bureaucratic complexity of means-tested welfare systems.",
+    "transfer_function": "Moves income from taxpayers to non-working recipients, extracting human capital and labor-market attachment from recipients in the process.",
+    "absent_voices": "Employers facing labor shortages; recipients future selves who bear the skill atrophy; advocates of reciprocal obligation and work-conditioned support.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support disappeared, recipients currently outside the labor market would face immediate survival pressure, likely reorganizing into employment, informal work, or family support networks; taxpayers would retain withheld income; the administrative apparatus would contract and civil society alternatives would partially revive.",
+    "founding_problem": "Industrial poverty and the inadequacy of patchwork, means-tested social assistance.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Historians of social policy and labor economists outside the administrative beneficiary set attest that absolute poverty was the original problem; however, these same external observers dispute whether that problem remains acute enough to justify the current unconditional form, citing post-industrial growth and the emergence of dependency itself as a new pathology."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.45
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the dependency_trap_reading of the income_support_conditionality kernel. Unconditional income support is read not as a safety net but as a structural trap: recipients lose labor market attachment and human capital over time, while taxpayers bear the fiscal burden without reciprocal obligation. The arrangement is enforced through state taxation and disbursement, with exit blocked by skill atrophy on the recipient side and legal compulsion on the taxpayer side. Welfare administrators act as agenda-setters and institutional beneficiaries, sustaining the program through poverty-reduction rhetoric that obscures the extraction it performs.",
+    "key_agents": [
+      "ubi_recipients: Primary targets (powerless/trapped) â bear dependency and skill atrophy costs.",
+      "taxpayers: Secondary targets (moderate/constrained) â fund transfers through coerced taxation.",
+      "welfare_administrators: Agenda-setters and beneficiaries (institutional/mobile) â administer and justify program expansion.",
+      "labor_economists: Analytical observers (analytical/analytical) â evaluate employment effects from outside."
+    ],
+    "logic_rationale": "Extractiveness (0.78) is high because the constraint moves substantial resources from taxpayers to recipients while imposing severe human capital depreciation on recipients, constituting a double extraction. Suppression (0.72) reflects the states monopoly on coercive taxation and the collapse of alternative support structures once unconditional provision becomes dominant. Theater ratio (0.45) captures the performative compassion narrative that sustains political support despite mounting evidence of labor-market detachment. Accessibility collapse (0.65) registers the atrophy of private charity and family support networks where state provision is universal, and the impossibility of individual tax opt-out. Resistance (0.58) reflects persistent political opposition and taxpayer resentment, moderated by the diffuse nature of the fiscal burden.",
+    "directionality_logic": "Recipients are declared victims despite receiving cash, because the constraint extracts human capital and future earnings; their directionality sits near the full-target end. Taxpayers are victims of coerced extraction, also high directionality. Welfare administrators are the named beneficiary, with low directionality reflecting their institutional subsidy and agenda control. The engine will compute seat divergence: the administrator seat sees coordination (poverty relief), while recipient and taxpayer seats see extraction.",
+    "perspectival_gap": "The agenda-setter seat experiences the constraint as a legitimate welfare institution delivering social insurance; the recipient seat experiences it as a comfortable trap with invisible walls of skill decay; the taxpayer seat experiences it as a persistent fiscal drain. These divergences are structurally encoded through the beneficiary and victim declarations and distinct exit options (mobile for administrators, trapped and constrained for victims).",
+    "mandatrophy_analysis": "Classifying this as snare rather than rope or scaffold prevents the error of accepting the poverty-relief coordination story at face value. A scaffold would require a sunset clause and transitional intent; none is present. A rope would require net beneficiaries among the governed and minimal coercion; here the governed (recipients and taxpayers) are both victim classes, and coercion is high. The mandate has not outlived its function because the claimed function (poverty relief) is still asserted, but the classification captures that the extraction is the operative structure.",
+    "kernel_context": "This constraint is one reading of the contested kernel income_support_conditionality. The reading instantiated here is dependency_trap_reading, which treats unconditional transfers as producing recipient dependency and taxpayer extraction. Sibling readings are freedom_floor_reading (recipients as beneficiaries of decommodified labor power) and wage_subsidy_reading (employers as hidden beneficiaries via suppressed wages)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Which causal mechanism of unconditional income support is structurally dominant: dependency trap, freedom floor, or employer subsidy?",
+      "resolution_mechanism": "Comparative natural experiments across jurisdictions with varying benefit levels and labor market institutions; longitudinal tracking of recipient work hours, wages, and skill acquisition.",
+      "impact": "If the dependency trap mechanism dominates, classification as snare is reinforced; if freedom floor dominates, the constraint recasts as rope or scaffold; if employer subsidy dominates, it recasts as tangled_rope with employers as hidden beneficiaries.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Contested kernel reading ambiguity for income support conditionality."
+    },
+    {
+      "id": "dependency_structural_vs_behavioral",
+      "question": "Is the observed dependency a structural trap (high effective marginal tax rates, skill depreciation) or an internalized behavioral norm (learned helplessness, identity fusion with beneficiary status)?",
+      "resolution_mechanism": "Longitudinal studies of recipient trajectories post-benefit cessation; comparison with conditional transfer outcomes controlling for labor market conditions.",
+      "impact": "If structural, exit options are constrained and directionality toward target is high; if internalized, effective suppression exceeds structural measures and the trap operates as cognitive capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether welfare dependency is structurally enforced or cognitively internalized."
+    },
+    {
+      "id": "beneficiary_concentration_ambiguity",
+      "question": "Does the unconditional income support constraint concentrate benefits in a specific agent (administrative class, political coalition), or is the extraction purely diffuse?",
+      "resolution_mechanism": "Analysis of budget allocation, administrative cost ratios, and political economy of program expansion.",
+      "impact": "If concentrated beneficiaries exist, the snare classification is sharpened; if extraction is diffuse with no capturer, the constraint drifts toward piton.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether there is a concentrated beneficiary or diffuse extraction."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "income_support_conditionality__freedom_floor_reading",
+      "income_support_conditionality__wage_subsidy_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the income_support_conditionality kernel. Each reading assigns different beneficiary and victim structures to the same policy instrument, producing distinct epsilon values and classifications."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "income_support_conditionality__freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "income_support_conditionality__wage_subsidy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unconditional_support_causes_dependency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "labor_attachment_as_welfare_criterion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "market_participation_as_baseline",
+    "drift_state": {
+      "moment": "post_ubi_pilot_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

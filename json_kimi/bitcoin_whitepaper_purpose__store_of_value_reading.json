@@ -1,0 +1,268 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper_purpose__store_of_value_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "btc_sov",
+    "story_uid": "6087b54c-5fe4-4a67-b448-365194e17a35"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Store-of-Value Reading: Base Layer Capacity Subordinated to Decentralization",
+    "topic_domain": "distributed_systems/monetary_theory/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "long_term_holders",
+      "full_node_operators"
+    ],
+    "victims": [
+      "low_fee_onchain_users"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "long_term_holders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Hold bitcoin as a long-term store of value and base-layer settlement asset. Benefit from the hard-capped supply and the security model that depends on widely distributed, cheaply runnable full nodes. Their wealth preservation thesis relies on the protocol remaining resistant to centralized capture."
+    },
+    {
+      "name": "full_node_operators",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Run fully validating Bitcoin nodes on commodity hardware, enforcing consensus rules including the block-size limit by rejecting blocks and chains that violate them. They bear the cost of storage, bandwidth, and uptime, but the constrained block size keeps that cost low enough for individual operation."
+    },
+    {
+      "name": "low_fee_onchain_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Need base-layer bitcoin transactions for remittances, small payments, or savings access but cannot compete in the fee market during congestion. They are priced off the base layer and pushed toward Lightning Network, custodial wrappers, or alternative chains, none of which replicate the base-layer trust guarantees they originally sought."
+    },
+    {
+      "name": "large_block_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Argued that the block size should rise to accommodate low-fee on-chain transactions. Lost the Blocksize War consensus battle; their exclusion was effected by the economic majority of nodes and holders rejecting their software forks. They persist in separate chains but no longer influence the kernel's dominant reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Preserve decentralization by ensuring that the resource cost of independently verifying the entire blockchain remains low enough that individuals can run full nodes on commodity hardware, removing the need to trust intermediaries for final settlement.",
+    "transfer_function": "Moves the cost of scarce base-layer block space from the network's security budget and node operators' hardware requirements onto users who need cheap on-chain transactions, pricing them out of the base layer and into off-chain or alternative systems.",
+    "absent_voices": "Large-block advocates who argued for on-chain scaling via bigger blocks, and low-income users in the Global South who need sub-dollar remittances but cannot afford base-layer fees; both were structurally sidelined during the Blocksize War consensus consolidation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the capacity constraint vanishedâif block size were raised indefinitelyâthe cost to run a fully validating node would rise to data-center levels, the validator set would collapse to a handful of infrastructure providers, and the ecosystem would reorganize around trusted custodial verification. The trustless settlement guarantee that underpins the store-of-value function would dissolve.",
+    "founding_problem": "How to create a peer-to-peer electronic money system that operates without a trusted third party, avoiding the centralization failures that destroyed earlier digital-currency experiments.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The cypherpunk mailing list and early digital-cash literature corroborate the founding problem of trusted-third-party risk from outside the benefiting parties. No independent corroboration exists for the specific claim that base-layer capacity must be permanently subordinated to store-of-value functionality; that resolution is asserted by the benefiting parties themselves."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.6
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the store-of-value reading of the bitcoin_whitepaper_purpose kernel. It reads Satoshi's fixed kernel (the whitepaper and early protocol choices) as structurally subordinating on-chain transaction capacity to the preservation of decentralization and full-node verifiability. The 1MB block-size limit and the fee market enforce this subordination, pricing low-value users off the base layer and routing them toward Lightning Network or custodial alternatives. The constraint is claimed as tangled rope: it coordinates a genuine decentralization goal while asymmetrically extracting from users who need cheap on-chain settlement.",
+    "key_agents": [
+      "long_term_holders: Primary beneficiary (organized/mobile) â accrue store-of-value security from the constrained base layer",
+      "full_node_operators: Agenda-setter and beneficiary (organized/mobile) â enforce consensus rules and benefit from low operational cost",
+      "low_fee_onchain_users: Primary payer/target (powerless/constrained) â priced off the base layer by the fee market",
+      "large_block_advocates: Excluded voice (organized/mobile) â lost the scaling dispute and were structurally sidelined"
+    ],
+    "logic_rationale": "Extractiveness (0.68) reflects the deliberate pricing out of low-fee users from the base layer; suppression (0.60) reflects the protocol-level enforcement of the block limit and the social consensus that marginalizes forks. Theater ratio (0.30) is moderate: the decentralization rhetoric is partly performative (many nodes are hobbyists rather than economically sovereign validators), but the technical constraint on block size is functionally real. Resistance (0.70) captures the Blocksize War and ongoing dissent. Accessibility collapse (0.60) captures the fact that while altcoins exist, the specific property of trustless base-layer Bitcoin settlement has no substitute once one is committed to the Bitcoin network.",
+    "perspectival_gap": "From the full-node operator seat, the constraint is necessary technical coordination to preserve decentralization; from the low-fee user seat, the same protocol is enforced extraction that denies them settlement access. The engine computes this divergence from the structural data rather than adjudicating it.",
+    "directionality_logic": "long_term_holders and full_node_operators are declared beneficiaries, giving them directionality near the subsidy end (low d). Their exit options are mobile and their power is organized. low_fee_onchain_users are declared victims with constrained exit (Lightning requires capital and liquidity, altcoins lack the network effect) and powerless status, placing them near the full-target end (high d). The asymmetry is structural: the same consensus rule that subsidizes node operators by keeping hardware costs low extracts from transactors by converting block space into a scarce fee-good.",
+    "mandatrophy_analysis": "The constraint prevents mandatrophy mislabeling because it possesses a genuine coordination functionâdecentralized verificationâthat would be lost if block size were uncapped. However, the asymmetric extraction (pricing out low-value users) is not incidental; it is the mechanism by which the coordination is preserved and funded. Without the victim group, the constraint would read as a rope; the presence of priced-out users makes it tangled rope rather than pure coordination.",
+    "kernel_context": "This constraint is the store-of-value reading of the bitcoin_whitepaper_purpose kernel. It reads Satoshi's fixed kernel as subordinating on-chain capacity to decentralization. The sibling electronic_cash_reading holds that the whitepaper's 'cash' telos demands low-fee on-chain transactions. A third reading, nakamoto_oracle_opacity, notes that Satoshi's disappearance left the kernel text as contested substrate with no authoritative interpreter. The SOV reading consolidated dominance during the Blocksize War (2015â2017) around the 1MB limit and Lightning as the legitimate scaling path."
+  },
+  "omegas": [
+    {
+      "id": "blocksize_centralization_empirics",
+      "question": "Does increasing the block size beyond 1MB actually cause a material centralization of the full-node network, or is this relationship underspecified?",
+      "resolution_mechanism": "Empirical measurement of node-operator bandwidth, storage, and compute costs correlated with block-size stress tests or natural experiments from forked chains with larger blocks.",
+      "impact": "If the centralization risk is overstated, the constraint's extraction is higher than its coordination function justifies, pushing classification toward snare. If validated, the tangled-rope balance holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical ambiguity around block size and node centralization."
+    },
+    {
+      "id": "lightning_custody_replacement",
+      "question": "Does the Lightning Network preserve the trustlessness of the base layer, or does it reintroduce custodial intermediation that substitutes for the base-layer constraint?",
+      "resolution_mechanism": "Measurement of Lightning channel liquidity concentration, custodial wallet market share, and routing-node centralization.",
+      "impact": "If Lightning reintroduces trusted intermediaries, the coordination function (decentralized verification) is undermined by the supposed solution, increasing theater and extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether off-chain scaling replicates or replaces trust."
+    },
+    {
+      "id": "kernel_telos_ambiguity",
+      "question": "Is the store-of-value reading an authentic expression of the whitepaper kernel, or an imposition that retroactively redefines the project's telos?",
+      "resolution_mechanism": "Textual and historical analysis of the whitepaper, mailing-list posts, and Satoshi's early communications; sociological study of narrative retrojection.",
+      "impact": "If the SOV reading is a retroactive imposition, the constraint's legitimacy is conventional rather than lineage-based, affecting authority_grounding and potentially reclassifying the commitment-system structure.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the SOV reading is authentic to the kernel or retroactively imposed."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "reference_frame": "decentralized_verification_floor",
+    "drift_state": {
+      "moment": "post_blocksize_war_consolidation",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bitcoin_whitepaper_purpose__electronic_cash_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bitcoin_whitepaper_purpose__nakamoto_oracle_opacity",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "onchain_capacity_risk_to_decentralization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "base_layer_monetary_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper_purpose__electronic_cash_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the bitcoin_whitepaper_purpose kernel, decomposed from the electronic_cash_reading per the Îµ-invariance principle. The two readings share the same kernel text but instantiate different constraints with different Îµ values and beneficiary structures."
+  },
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence_mechanism__lock_in_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "qwerty_lockin",
+    "story_uid": "05db1a99-9ea6-4255-a1cf-e31106539e05"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.35,
+    "theater_ratio": 0.7,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.2,
+    "claimed_type": "piton",
+    "human_readable": "QWERTY Persistence via Path-Dependent Lock-In",
+    "topic_domain": "economic_history/technology_studies/path_dependence",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false
+  },
+  "interval": {
+    "start": 0,
+    "end": 140
+  },
+  "stakeholders": [
+    {
+      "name": "platform_vendors",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Set the default keyboard layout in operating systems and firmware. They could ship alternative layouts but do not because user retraining risk and support costs outweigh the efficiency gains. They do not capture surplus from QWERTY specifically; keyboard layout is incidental to their core business."
+    },
+    {
+      "name": "general_typists",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Learn QWERTY as the default input method and bear the diffuse cost of lower typing speed and inferior ergonomics compared to alternative layouts. Individual switching is possible but costly due to relearning time and loss of interoperability with shared devices and workplace norms."
+    },
+    {
+      "name": "alternative_layout_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Promote optimized keyboard layouts such as Dvorak or Colemak on ergonomic and efficiency grounds. They are structurally excluded from mainstream adoption because network effects and educational lock-in prevent collective switching, not because their arguments are refuted."
+    },
+    {
+      "name": "economic_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the QWERTY case as a canonical example of path dependence and coordination failure. They observe the divergence between private switching costs and social optimality without being bound by the constraint."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single compatible keyboard input standard across all devices and users, eliminating the need to relearn layout when switching machines or sharing equipment.",
+    "transfer_function": "Imposes a diffuse opportunity cost on typists in the form of foregone typing speed and ergonomic efficiency; no concentrated agent receives the transfer.",
+    "absent_voices": "Alternative keyboard layout designers and ergonomic reformers are absent from standard-setting; their exclusion is structural (no viable market entry due to network effects) rather than active suppression.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If QWERTY vanished overnight, hardware defaults, software keyboards, and typing pedagogy would rapidly restandardize; the temporary unlock of collective action would permit migration to more efficient layouts before a new equilibrium locked in.",
+    "founding_problem": "Preventing mechanical typebar jams by spatially separating frequently paired letters on early typewriters.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Technology historians and mechanical engineers attest that the jamming problem was real for late-19th-century typewriters but was solved by other mechanical improvements and is irrelevant to electronic keyboards; these sources are outside the set of actors with a stake in maintaining the layout."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 110,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 140,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 110,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 140,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 110,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 140,
+      "value": 0.35
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the lock_in_reading of the qwerty_persistence_mechanism kernel. It models the QWERTY keyboard layout as a degraded coordination standard that persists through path-dependent inertia rather than active extraction or current technical merit. The layout solved a genuine typewriter-engineering problem in the 1880s, but the problem died with mechanical typing. What remains is institutional inertia: platform defaults, educational curricula, and hardware form factors that re-enact a obsolete standard. The reading asserts no concentrated beneficiary captures rent from this persistence; the costs are diffuse productivity and ergonomic losses borne by typists collectively. Sibling readings differ structurally: naturalization_reading claims QWERTY is genuinely adequate, and beneficiary_extraction_reading identifies incumbents who actively maintain it to protect sunk investments.",
+    "key_agents": [
+      "platform_vendors: Agenda setter (organized/constrained) â they control default software layouts and could change them but do not because of user-retraining risk.",
+      "general_typists: Primary payer (powerless/constrained) â they bear the diffuse ergonomic and speed cost of the suboptimal standard.",
+      "alternative_layout_advocates: Excluded voice (moderate/trapped) â they promote superior layouts but are locked out by network effects.",
+      "economic_historians: Analytical observer (analytical/analytical) â they document the path dependence without being bound by the constraint."
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.45 because the aggregate productivity loss from using a suboptimal layout across billions of daily typing hours is real, even though no agent captures it. Suppression is moderate (0.35): alternatives are not banned but are structurally marginalized by educational lock-in and hardware defaults. Theater ratio is high (0.70) because the original typewriter-jam rationale is dead, and contemporary maintenance of QWERTY is almost entirely performative (typing classes, 'standard' keyboard molds, cultural norm). Accessibility collapse is 0.65: once a user invests in QWERTY muscle memory and acquires QWERTY hardware, switching layouts imposes high relearning and interoperability costs. Resistance is low (0.20) because the costs are diffuse and individually too small to provoke organized opposition. The measurement grid uses a single shared timeline (1880â2020) to prevent misaligned substitution.",
+    "perspectival_gap": "Typists experience the constraint as a biographical sunk cost and minor daily friction; they do not experience it as extraction because no one is taking anything from them. Platform vendors experience no cost and only downside risk from deviating. Economic historians see the full social-cost divergence that individual agents cannot perceive. The engine should compute very different directionalities for the payer seat (high d, diffuse but real extraction) and the agenda-setter seat (low d, constrained but not benefiting).",
+    "directionality_logic": "General typists are the structural targets: they pay through foregone productivity and ergonomics, and their exit is constrained by network effects and relearning costs (d near target end). Platform vendors are near symmetric to slightly beneficiary: they do not profit from QWERTY but incur risk from switching, giving them a mild structural subsidy in staying put (d near middle). Alternative layout advocates are excluded and trapped, experiencing the constraint as pure external imposition. No directionality overrides are needed because the structural derivation matches the actual relationships.",
+    "mandatrophy_analysis": "The founding problemâpreventing typebar jamsâwas solved by technology change long ago. The constraint persists not because it solves a live problem but because the cost of collective switching exceeds private benefits. This prevents misclassification as a Rope (the coordination function is atrophied) and as a Snare (there is no active beneficiary defending the arrangement for rent). The mandatrophy is resolved: the problem is dead, the arrangement is inertial.",
+    "kernel_context": "This constraint is the lock_in_reading of the qwerty_persistence_mechanism kernel. It instantiates the reading that QWERTY persists due to path-dependent coordination failure without active extraction. Sibling readings: naturalization_reading (QWERTY is genuinely adequate) and beneficiary_extraction_reading (incumbents actively maintain it to protect investments). The disagreement is located on the beneficiary structure: this reading asserts zero concentrated beneficiaries, while the sibling asserts concentrated beneficiaries exist."
+  },
+  "omegas": [
+    {
+      "id": "lock_in_vs_beneficiary_extraction",
+      "question": "Does QWERTY persistence stem purely from decentralized path dependence, or do concentrated beneficiaries (manufacturers, training institutions) actively suppress alternatives?",
+      "resolution_mechanism": "Trace the funding and governance of keyboard standardization bodies; examine whether alternative-layout keyboard production is actively discouraged by incumbent firms beyond ordinary market risk.",
+      "impact": "If active suppression by beneficiaries is found, this reading merges into the beneficiary_extraction reading and the constraint reclassifies as tangled_rope or snare; if purely decentralized inertia, the piton classification holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the lock-in reading's no-extraction claim survives against the beneficiary extraction sibling"
+    },
+    {
+      "id": "adequacy_vs_suboptimality",
+      "question": "Is QWERTY genuinely adequate for modern typing tasks, rendering the 'suboptimality' claim moot?",
+      "resolution_mechanism": "Meta-analysis of ergonomic studies comparing QWERTY to alternative layouts on speed, accuracy, and injury metrics.",
+      "impact": "If QWERTY is adequate, the naturalization_reading is supported and the constraint is closer to a benign rope; if substantially inferior, the lock-in reading is corroborated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether QWERTY's technical adequacy falsifies the suboptimality premise"
+    },
+    {
+      "id": "collective_action_mechanism",
+      "question": "Could a centralized or platform-coordinated switch to a superior layout overcome the path dependence, and if so, what mechanism would unlock the collective action?",
+      "resolution_mechanism": "Natural experiments from jurisdictions or platforms that have attempted layout migration (e.g., software-keyboard dual-layout trials).",
+      "impact": "If collective switching is demonstrably unlockable, the constraint is a transient coordination failure rather than a deep piton; if switching remains stuck even with coordination, the inertial classification is reinforced.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the lock-in is technically reversible through coordination"
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "reference_frame": "path_dependent_standardization_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "qwerty_persistence_mechanism__naturalization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "qwerty_persistence_mechanism__beneficiary_extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "path_dependent_inefficiency_generates_reform_pressure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "diffuse_suboptimality_without_extraction_lacks_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "naturalization_reading",
+      "beneficiary_extraction_reading"
+    ],
+    "dual_formulation_note": "The qwerty_persistence_mechanism kernel decomposes into three structurally distinct constraints because the natural-language label 'QWERTY persistence' conflates claims with different epsilon values, beneficiary structures, and enforcement mechanisms. This reading (lock_in_reading) models diffuse inertial persistence without concentrated extraction; the sibling readings model genuine adequacy and active extraction respectively."
+  },
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

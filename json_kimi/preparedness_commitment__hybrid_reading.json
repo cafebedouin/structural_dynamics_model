@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "preparedness_commitment__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prep_hyb",
+    "story_uid": "b0f98ff6-dee8-4f73-a1aa-eceff8b128d1"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.5,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Preparedness as Layered Memorial-Competence System",
+    "topic_domain": "institutional/disaster_preparedness",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "emergency_management_institutions",
+      "memorial_institutions",
+      "disaster_exposed_public"
+    ],
+    "victims": [
+      "frontline_operators",
+      "municipal_taxpayers"
+    ],
+    "vindicated_propositions": [
+      "institutional_memory_preserves_commitment",
+      "dual_layer_preparedness_theory"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "emergency_management_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers preparedness grants, sets training standards, and audits local agencies. Their authority and budget depend on maintaining a visible preparedness system that satisfies political principals. They enforce the dual-layer mandate: competence metrics and memorial participation requirements."
+    },
+    {
+      "name": "memorial_institutions",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Museums, memorial sites, and commemorative programs that receive public funding to preserve disaster memory and conduct annual ceremonies. Their institutional survival is tied to the preparedness system's commitment to memorial stabilization; they do not deliver operational response capacity."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Firefighters, emergency medical services, and local response personnel who must maintain equipment readiness, certifications, and exercised drills while also participating in memorial ceremonies, public commemorations, and documentation rituals that stabilize political commitment. The tension between the two layers consumes time and operational budget."
+    },
+    {
+      "name": "municipal_taxpayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Fund both emergency response capabilities and memorial infrastructure through local taxation. They cannot opt out of funding the memorial layer even when they would prefer resources directed entirely toward competence; the bundled funding mechanism is enforced by intergovernmental grant requirements."
+    },
+    {
+      "name": "disaster_exposed_public",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Receive reduced disaster risk from maintained operational competence and psychological reassurance from visible memorial commitment. They have limited ability to audit whether the layered system is genuinely functional or performative, and cannot selectively opt out of the institutional arrangement."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains societal capacity to respond to disasters across long inter-crisis periods by combining operational readiness with institutionalized memory that prevents policy abandonment and funding attrition.",
+    "transfer_function": "Moves financial resources from municipal taxpayers and labor resources from frontline operators to emergency management and memorial institutions, in exchange for maintained disaster readiness and stabilized public commitment.",
+    "absent_voices": "Communities permanently displaced by past disasters, and frontline operators who would prefer to defund memorial ceremonies in favor of equipment maintenance, are underrepresented in preparedness planning and standard-setting.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the layered system vanished, emergency management would collapse into either pure competence (risking abandonment during quiet periods) or pure memorial (risking catastrophic failure when competence is needed); the institutional form of preparedness would reorganize around whichever reading dominated locally.",
+    "founding_problem": "Disaster preparedness suffers from a cycle of investment after crises and abandonment during quiet periods, leading to catastrophic surprise when the next event occurs.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Disaster sociologists and public administration scholars outside the emergency management profession attest to the boom-bust funding cycle; independent audits of post-disaster responses routinely identify competence decay during inter-crisis periods as a contributing factor to failure."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.4
+    }
+  ],
+  "omegas": [
+    {
+      "id": "memorial_competence_separability",
+      "question": "Can the memorial layer and competence layer be funded and maintained separately, or does the constraint require their institutional fusion?",
+      "resolution_mechanism": "Natural experiments from jurisdictions that fund response agencies and memorial institutions through separate budget lines.",
+      "impact": "If separable, the hybrid constraint dissolves into two independent constraints (one rope-like, one potentially piton-like); if inseparable, the tension is structural and the tangled_rope classification holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether memorial and competence layers are structurally separable"
+    },
+    {
+      "id": "husk_drift_inevitability",
+      "question": "Does the memorial layer inevitably drift toward pure performance (husk) when the competence layer is stressed by resource constraints?",
+      "resolution_mechanism": "Longitudinal comparison of preparedness systems under fiscal austerity; measure whether memorial budgets survive deeper cuts than competence budgets.",
+      "impact": "If inevitable, the hybrid reading describes an unstable equilibrium and the constraint family collapses toward husk over time; if contingent, the layered system can be maintained with adequate resources.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether hybrid systems inevitably decay toward pure memorial performance"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "Is preparedness commitment best understood as a single layered constraint, or as a family of distinct constraints (competence, memorial, hybrid) that compete for institutional resources?",
+      "resolution_mechanism": "Comparative institutional analysis of how agencies define and measure preparedness.",
+      "impact": "If the kernel is irreducibly contested, the hybrid reading is one legitimate constraint among many; if the readings are merely facets of one system, decomposition into separate stories overstates the disjunction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel decomposes into distinct structurally separate constraints"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the hybrid_reading of the preparedness_commitment kernel: preparedness is understood as a layered system in which memorial elements stabilize long-term commitment while competence elements maintain operational function. The constraint governs how institutions allocate resources and attention across inter-crisis periods. It is actively enforced through intergovernmental grant requirements, training mandates, and audit regimes that demand both exercised capability and commemorative participation. The claim is tangled_rope because the arrangement genuinely coordinates disaster readiness but also extracts maintenance costs from frontline operators and taxpayers through its insistence on fused institutional performance.",
+    "key_agents": [
+      "emergency_management_institutions: Primary agenda-setter (institutional/national) â administers standards, funding, and audits that enforce the dual-layer mandate.",
+      "memorial_institutions: Secondary beneficiary (moderate/regional) â receives public funding to preserve memory and conduct commemorative rituals.",
+      "frontline_operators: Primary target (moderate/constrained) â bears the tension between competence maintenance and memorial duties.",
+      "municipal_taxpayers: Secondary target (organized/constrained) â funds both layers through taxation without opt-out.",
+      "disaster_exposed_public: Diffuse beneficiary (organized/constrained) â receives risk reduction and commitment stability."
+    ],
+    "logic_rationale": "Extractiveness (0.60) is moderate-high because the system bundles genuine coordination with memorial overhead that is not directly risk-reducing. Suppression (0.50) reflects moderate coercion: grant conditions and audit mandates enforce participation but do not fully close alternatives. Theater ratio (0.40) captures the growing performative load of the memorial layer over the 25-year interval. Accessibility collapse (0.50) indicates that alternatives (pure competence or pure memorial approaches) are visible but institutionally devalued. Resistance (0.30) is low because the public goods framing muffles opposition.",
+    "directionality_logic": "Emergency management institutions and memorial institutions are structural beneficiaries: they receive funding and authority from the constraint's operation (d near beneficiary end). Disaster_exposed_public sits near symmetric: they benefit from competence but cannot disaggregate the memorial cost. Frontline_operators and municipal_taxpayers are structural targets: they bear the maintenance cost and the tension between layers (d near target end).",
+    "perspectival_gap": "The agenda-setter seat experiences the constraint as necessary coordination against political abandonment; the payer seats experience it as an enforced bundle that diverts resources from purely operational readiness. The engine computes this divergence from the structural data: same constraint, opposed directionality, different computed seat types.",
+    "mandatrophy_analysis": "The hybrid reading prevents mandatrophy mislabeling by acknowledging that the founding problem (boom-bust preparedness cycles) is still live. If the competence layer were to atrophy while the memorial layer persisted, the constraint would drift toward the husk_reading (piton/snare territory); if the memorial layer were abandoned while competence remained, it would drift toward the competence_reading (rope territory). The hybrid classification holds only while both layers are structurally required and the tension between them is actively maintained.",
+    "kernel_context": "This constraint is the hybrid_reading of the preparedness_commitment kernel. It posits that preparedness requires both memorial and competence layers. Sibling readings include the competence_reading (preparedness as live exercised knowledge) and the husk_reading (preparedness as memorial performance without operational competence). The hybrid reading forecloses the husk reading because competence is necessary, and influences the competence reading by arguing that memorial commitment is required to prevent abandonment."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "layered_commitment_system",
+    "drift_state": {
+      "moment": "contemporary_austerity",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_commitment__competence_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "preparedness_commitment__husk_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_requires_memorial_commitment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "memorial_without_competence_fails",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_commitment__competence_reading",
+      "preparedness_commitment__husk_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the preparedness_commitment kernel. The hybrid reading posits that preparedness requires both memorial and competence layers; the competence reading isolates operational knowledge; the husk reading isolates memorial performance. Each reading has distinct epsilon and stakeholder structures, linked as a constraint family."
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

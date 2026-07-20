@@ -1,0 +1,262 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__deployer_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "18e15543-43f2-4007-b601-8e47ee76f401"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Deployer Primary Liability for AI Harm",
+    "topic_domain": "technology_governance/legal_theory/regulatory_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_system_developers",
+      "foundation_model_providers"
+    ],
+    "victims": [
+      "deployers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "deployers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organizations that integrate AI systems into products or services and place them on the market. Under this liability rule, they bear primary legal and financial responsibility for harms arising from deployment, including due diligence burdens to investigate opaque model behavior they did not create. Their exit options are constrained by market participation requirements and the cost of liability insurance."
+    },
+    {
+      "name": "ai_system_developers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Organizations that design and train AI systems but do not deploy them directly to end users. They externalize deployment risk downstream under this rule, retaining revenue from licensing while avoiding direct exposure to harm caused by contextual application of their models."
+    },
+    {
+      "name": "foundation_model_providers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Entities that develop general-purpose foundation models and provide them via API or weights to downstream deployers. They are shielded from downstream harm liability, insulating them from claims arising from specific deployment contexts they do not control."
+    },
+    {
+      "name": "liability_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legislators, courts, and regulatory agencies that establish and enforce the primary liability rule. They set the standard of care and due diligence expected of deployers, adjudicate claims, and determine the boundary between deployment harm and upstream design defect."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a clear, administrable standard for AI harm liability by anchoring accountability to the party that makes deployment decisions and controls the operational context, reducing legal uncertainty for plaintiffs and creating a direct incentive for pre-deployment risk assessment.",
+    "transfer_function": "Moves liability risk, compliance cost, and due diligence burden from upstream developers and foundation model providers to downstream deployers, while transferring to plaintiffs the right to sue the deployer as the most accessible defendant.",
+    "absent_voices": "Deployers who lack technical visibility into foundation model internals but are held liable for their behavior; shared-liability advocates who argue causal contribution should be distributed across the value chain; affected end users who might prefer upstream deep-pocket defendants but are not consulted in the liability design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If deployer primary liability disappeared, upstream developers and foundation model providers would face direct exposure to harm claims, insurance and contractual markets would reallocate risk along the value chain, deployers would reduce due diligence spending, and plaintiffs would lose the clarity of a single accessible defendant.",
+    "founding_problem": "Legal uncertainty over who pays for AI harm, coupled with under-deterrence of risky deployments and barriers to victim redress when upstream creators are unreachable or judgment-proof.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Consumer protection agencies and tort scholars attest the redress gap from outside the beneficiary set. Developer and foundation model industry associations contest the framing, arguing the problem is misuse rather than design, corroborating the contested status from outside the deployer-payer seat."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story models the deployer_liability reading of the contested liability_attribution kernel. Under this reading, deployersâparties that control deployment context and make operational decisionsâbear primary legal liability for AI system harms. The rule coordinates victim redress by providing a clear defendant and incentivizes deployment-care, but it also extracts disproportionately from deployers who must police opaque models they did not create, while developers and foundation model providers externalize risk. The claim/metric independence is maintained: the constraint is claimed as tangled_rope because it combines genuine coordination with asymmetric extraction, while the metrics describe a moderately high extraction profile with rising enforcement.",
+    "key_agents": [
+      "deployers (payer/victim): Organizations deploying AI, bearing primary liability and due diligence burdens despite upstream opacity (organized/national/constrained).",
+      "ai_system_developers (beneficiary): Upstream creators externalizing deployment risk while retaining licensing revenue (institutional/global/arbitrage).",
+      "foundation_model_providers (beneficiary): General-purpose model developers shielded from downstream harm claims (institutional/global/arbitrage).",
+      "liability_regulators (agenda_setter): Legislators and courts setting the liability standard and adjudicating its boundaries (institutional/national/analytical)."
+    ],
+    "logic_rationale": "Extractiveness (0.68) is high because deployers assume liability for harms arising from model behavior they cannot fully inspect or control, while upstream parties retain benefits without corresponding exposure. Suppression (0.72) reflects the active legal and institutional enforcement required to maintain this liability boundary against competing theories (shared liability, developer liability). Theater_ratio (0.25) is moderate-low: the coordination function (clear defendant, victim redress) is real, but a growing share of deployer due diligence activity is performative compliance with opacity they cannot resolve. Accessibility_collapse (0.65) captures the narrowing of judicial and legislative pathways for shared or upstream liability as the deployer-primary frame becomes default. Resistance (0.40) tracks organized deployer pushback through litigation and lobbying.",
+    "perspectival_gap": "The deployer seat experiences the constraint as extraction (bearing costs for opaque upstream systems), while the developer and foundation model provider seats experience it as coordination (clear rules, risk externalization). The regulator seat sees a solvable administrative framework. The engine computes this divergence from structural data: identical scope but opposite beneficiary/victim declarations, with deployers constrained and upstream actors mobile.",
+    "directionality_logic": "Deployers are declared victims (high d, near target): they pay the liability transfer and lack exit from the legal jurisdiction. Developers and foundation model providers are declared beneficiaries (low d, near beneficiary): they collect risk externalization and enjoy global arbitrage exit. Regulators are agenda_setters with analytical exit, sitting near neutral. No overrides are needed because the structural derivation matches the true relationships.",
+    "mandatrophy_analysis": "Classifying this as a rope would ignore the asymmetric extraction: deployers pay for upstream opacity they did not create. Classifying as a snare would ignore the genuine coordination in victim redress and deployment incentives. Tangled_rope is the only category that admits both the coordination function (clear liability standard) and the extraction function (risk offloading to the party with least informational control). Mandatrophyâpersistence after the founding problem is solvedâis flagged as contested because the redress gap is partially addressed by this rule, but the rule may persist even if opacity renders deployer control a fiction.",
+    "kernel_context": "This constraint is one reading of the liability_attribution kernel. The reading instantiated here is deployer_liability. Sibling readings are developer_liability (developers bear primary liability as creators of underlying capability) and shared_liability (joint liability distributed along the value chain). This reading's structural delta is that deployers enter the victim set, developers and foundation model providers externalize risk, opacity becomes a deployer due diligence burden, and upstream actors are shielded from downstream harm."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "This constraint instantiates the deployer_liability reading of the liability_attribution kernel; the disagreement with sibling readings developer_liability and shared_liability is located on whether deployment context control, creation of underlying capability, or distributed causal contribution should determine primary liability. Is this reading stable or will empirical pressure from upstream opacity collapse it into shared liability?",
+      "resolution_mechanism": "Comparative regulatory impact assessment across jurisdictions adopting different readings; litigation outcomes testing deployer capacity to exercise due diligence over opaque models.",
+      "impact": "If deployers cannot meaningfully control opaque models, this reading either shifts to scaffold status (transitional until distributed liability is enacted) or drifts toward piton (theatrical maintenance of a liability fiction); if control is demonstrable, the reading stabilizes as tangled_rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Stability of the deployer_liability reading against empirical opacity challenges and sibling reading pressure."
+    },
+    {
+      "id": "opacity_as_extraction_vector",
+      "question": "Does the opacity of foundation models function as an irreducible information asymmetry that makes deployer liability extractive, or is opacity a solvable due diligence cost that deployers can contract around?",
+      "resolution_mechanism": "Industry cost accounting of deployer due diligence; contractual analysis of whether developers disclose sufficient technical documentation to render liability non-extractive.",
+      "impact": "If opacity is irreducible and developers withhold information, the liability rule extracts from deployers without giving them means to comply, strengthening the snare/tangled_rope classification; if opacity is contractually solvable, the extraction is the legitimate price of coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether model opacity is a solvable cost or an extraction mechanism."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "developer_liability",
+      "shared_liability"
+    ],
+    "dual_formulation_note": "The liability_attribution kernel decomposes into three structurally distinct readings because the epsilon values and victim/beneficiary structures differ materially across deployer, developer, and shared liability frames. Each reading has its own epsilon, stakeholders, and classification."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "deployer_control_accountability",
+    "drift_state": {
+      "moment": "post_foundation_model_scaling",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "liability_attribution__developer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "liability_attribution__shared_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "deployment_control_creates_accountability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "upstream_opacity_deployer_burden",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "header": {
+    "constraint_id": "digital_money_emergence_boundary__infrastructure_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "cbe3be6e-6085-4a6e-bdfb-33cbf6785dfc"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.55,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Digital Money Emergence â Infrastructure Reading",
+    "topic_domain": "monetary_economics/financial_history/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "banking_infrastructure_providers"
+    ],
+    "victims": [
+      "member_banks",
+      "retail_consumers"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "banking_infrastructure_providers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate the proprietary electronic networks (SWIFT, ACH, early ATM switches) that enable interbank money transfer. Set messaging standards, membership rules, and transaction fees. Collect revenue from member banks for network access and maintain the technical infrastructure that defines the operational boundary of digital money."
+    },
+    {
+      "name": "member_banks",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Must connect to SWIFT and ACH to participate in the modern payment system. Pay per-message fees, membership dues, and compliance costs. Bear the operational risk of standard changes. Benefit from faster clearing and reduced float, but lose autonomy over routing and messaging formats."
+    },
+    {
+      "name": "retail_consumers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Cannot directly hold or transfer digital money in this era; must operate through bank intermediaries. Bear indirect costs of infrastructure fees passed through as higher banking charges and account fees. Are excluded from the digital money boundary even though their deposits back the system."
+    },
+    {
+      "name": "monetary_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Observe the blurring of monetary aggregates as electronic deposits become harder to categorize within traditional M1-M5 frameworks. Gain improved monetary policy transmission through faster clearing but lose precision in money-supply measurement and face definitional ambiguity."
+    },
+    {
+      "name": "non_member_financial_institutions",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Are barred from direct access to SWIFT and major ACH networks due to membership criteria and capital requirements. Cannot compete in the electronic transfer market without costly correspondent banking relationships that force them to piggyback on member banks."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables reliable electronic transfer of monetary value between banks across distance, replacing physical check clearing and reducing settlement risk.",
+    "transfer_function": "Moves transaction fees, compliance authority, and definitional control from member banks and consumers to the infrastructure operators who own the electronic rails.",
+    "absent_voices": "Retail consumers who cannot yet directly hold digital money; non-member financial institutions excluded by membership barriers; alternative rail innovators locked out by network effects and standard dominance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the infrastructure constraint vanished, banks would revert to physical clearing, settlement times would lengthen from minutes to days, monetary aggregates would re-solidify into pre-digital categories, and the revenue and authority of infrastructure operators would collapse.",
+    "founding_problem": "Physical money transfer was slow, expensive, and risky: checks had to be physically transported for clearing, cross-border settlement took days, and banks needed a trusted electronic substitute to manage float and counterparty risk.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Monetary historians outside the infrastructure providers attest that physical clearing was severely inefficient in the 1960s; heterodox economists and competition authorities attest the problem is now solved and the arrangement persists through network lock-in and definitional capture."
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the infrastructure_reading of the digital_money_emergence_boundary kernel. It locates digital money's emergence in the operationalization of electronic interbank transfer infrastructure (1967 ATMs, 1972 ACH, 1977 SWIFT), asserting that money becomes digital when banks can move it electronically even if consumers cannot yet directly hold it. This reading treats the payment rail operators as the structural beneficiaries of the boundary definition, while member banks bear the fees and compliance costs, and consumers remain outside the boundary entirely. Sibling readings (conceptualization_reading, consumer_holdings_reading) locate the boundary earlier (theoretical formalization) and later (direct consumer access) respectively.",
+    "key_agents": [
+      "banking_infrastructure_providers: Primary agenda-setter (institutional/global) â controls SWIFT/ACH rails, sets standards, collects fees",
+      "member_banks: Primary payer (powerful/global) â must use rails, pays fees, loses routing autonomy",
+      "retail_consumers: Excluded party (powerless/national) â cannot directly hold digital money, bears indirect costs",
+      "monetary_authorities: Analytical observer (institutional/national) â tracks M4/M5 collapse, ambivalent about definitional control"
+    ],
+    "logic_rationale": "Extractiveness (0.62) is substantial because the infrastructure providers capture ongoing rents from a network that became essential; suppression (0.55) reflects active enforcement of membership standards and exclusion of non-compliant institutions; theater_ratio (0.30) is moderate because the coordination function is genuine but some standard-setting activity serves provider control more than interoperability; accessibility_collapse (0.65) captures how alternatives to SWIFT/ACH became impractical once the network reached critical mass; resistance (0.35) is modest because banks recognized genuine efficiency gains despite the asymmetric cost structure.",
+    "perspectival_gap": "From the infrastructure provider seat, the constraint is the indispensable plumbing of modern finance; from the member bank seat, it is a necessary but costly toll road with no practical detour; from the consumer seat, the boundary is invisible exclusion â they fund the system through deposits but cannot directly access the digital layer.",
+    "directionality_logic": "Infrastructure providers are beneficiaries with arbitrage-grade exit (can monetize the rails in multiple ways), yielding low directionality. Member banks are victims with constrained exit (trapped by network effects), yielding high directionality. Retail consumers are excluded victims with trapped exit, yielding high directionality. The engine will compute strongly asymmetric effective extraction.",
+    "mandatrophy_analysis": "The constraint avoids mandatrophy mislabeling because it carries both a live coordination function (interbank electronic transfer genuinely improved on physical clearing) and asymmetric extraction (provider control, membership fees, definitional capture). Neither pure coordination nor pure extraction would be accurate. The Tangled Rope classification captures this duality.",
+    "kernel_context": "This constraint is the infrastructure_reading of the digital_money_emergence_boundary kernel. Sibling readings include conceptualization_reading (theoretical thinkability as the boundary) and consumer_holdings_reading (direct consumer digital access as the boundary). The disagreement is located in where the emergence boundary is drawn: infrastructure operationalization, theoretical conception, or consumer direct access."
+  },
+  "omegas": [
+    {
+      "id": "m4_m5_categorization_ambiguity",
+      "question": "Do electronic bank deposits constitute a novel monetary category that collapses M4/M5 distinctions, or merely a technological acceleration of existing M1/M2 deposits?",
+      "resolution_mechanism": "Comparative historical analysis of monetary policy behavior and velocity stability pre- and post-electronic infrastructure deployment; correlation of regime changes with infrastructure milestones versus consumer-access milestones.",
+      "impact": "If novel category, the infrastructure reading gains empirical support as a genuine boundary; if mere acceleration, the consumer_holdings_reading or conceptualization_reading may better locate digital money emergence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether electronic infrastructure creates new money categories or accelerates old ones"
+    },
+    {
+      "id": "kernel_provider_centric_imposition",
+      "question": "Does the infrastructure reading locate the emergence boundary objectively, or does it project the commercial interests of SWIFT and ACH operators onto monetary history?",
+      "resolution_mechanism": "Triangulation against sibling readings: compare predictive validity for subsequent innovations (e.g., real-time gross settlement, stablecoins) across the three boundary dates; assess whether 1967-1977 infrastructure milestones predict later digital money behavior better than 1985 conceptualization or 1990 consumer-access milestones.",
+      "impact": "If provider-centric imposition, reclassify toward higher extraction (snare-like); if structurally accurate, maintain tangled_rope classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This reading's status as one of three competing kernel readings"
+    },
+    {
+      "id": "enforcement_or_network_effect_dominance",
+      "question": "Does SWIFT/ACH persistence depend on active enforcement of standards and exclusion, or primarily on passive network effects?",
+      "resolution_mechanism": "Entry-rate analysis of alternative payment rails in jurisdictions with varying regulatory openness; observation of alternative rail success where SWIFT exclusion is legally prohibited versus where it is permitted.",
+      "impact": "Classification shifts between tangled_rope (active enforcement) and rope (passive network benefits) depending on the dominance mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether infrastructure dominance is actively enforced or emergent"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "consumer_holdings_reading"
+    ],
+    "dual_formulation_note": "The digital_money_emergence_boundary kernel decomposes into three structurally distinct readings: conceptualization_reading (theoretical thinkability), infrastructure_reading (interbank electronic transfer), and consumer_holdings_reading (direct consumer digital access). Each reading assigns a different epsilon, beneficiary structure, and emergence date to the same colloquial label."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "electronic_interbank_transfer_operational",
+    "drift_state": {
+      "moment": "contemporary_digital_money_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "digital_money_emergence_boundary__conceptualization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "digital_money_emergence_boundary__consumer_holdings_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "electronic_transfer_sufficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "rail_control_constitutes_monetary_boundary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "banking_infrastructure_providers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

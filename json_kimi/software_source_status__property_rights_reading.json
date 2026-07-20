@@ -1,0 +1,311 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__property_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "f48783ff-df12-40fc-9a4d-efb41139cb90"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Software Source Code as Intellectual Property (Property Rights Reading)",
+    "topic_domain": "software engineering/political economy/intellectual property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_vendors",
+      "commercial_licensors"
+    ],
+    "victims": [
+      "software_users",
+      "independent_repair_providers",
+      "interoperability_developers"
+    ],
+    "vindicated_propositions": [
+      "intellectual_property_doctrine",
+      "creative_labor_deserves_exclusive_reward"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.72
+    }
+  ],
+  "omegas": [
+    {
+      "id": "source_status_kernel_contest",
+      "question": "Is software source code more accurately modeled as a proprietary asset, a shared public good, an instrumental development input, or a welfare-maximizing hybrid?",
+      "resolution_mechanism": "Comparative institutional analysis across jurisdictions and development models; assessment of which reading's predictions hold empirically.",
+      "impact": "Resolving toward one reading would dissolve the current constraint into a different classification (rope for pragmatic, mountain-like norm for freedom-imperative, etc.).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural ambiguity of the software source status kernel"
+    },
+    {
+      "id": "marginal_incentive_effect",
+      "question": "What is the marginal effect of source-code restriction on software production relative to unrestricted models?",
+      "resolution_mechanism": "Natural experiments from industries with weak software IP enforcement; comparison of open-source and proprietary output quality and quantity.",
+      "impact": "If negligible, the coordination story is cover for extraction (snare); if substantial, the tangled rope classification holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Empirical test of the coordination justification"
+    },
+    {
+      "id": "enforcement_mechanism_ambiguity",
+      "question": "Does the suppression of copying and modification rely primarily on technical measures, legal statutes, or internalized norms of consumer passivity?",
+      "resolution_mechanism": "Cross-jurisdictional comparison of piracy rates, DRM circumvention prevalence, and user autonomy movements.",
+      "impact": "If suppression is mostly internalized, effective extraction exceeds the structural measure; if mostly legal/technical, suppression tracks enforcement capacity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the property-rights reading of the software_source_status kernel: the claim that software source code is a proprietary asset and that licensing restrictions on access and modification are legitimate exercises of ownership. The constraint operates through copyright statutes, contract law (EULAs), and technical protection measures (DRM) to enforce exclusion. It functions as a market-coordination mechanism (incentivizing production by enabling rent capture) while simultaneously extracting from users and secondary developers through monopoly pricing and rights forfeiture. The engine will compute per-seat classifications; the structural data here should produce divergent types across the vendor seat (beneficiary/agenda-setter) and the user/repair/developer seats (targets).",
+    "key_agents": [
+      "proprietary_vendors: Primary agenda-setter and beneficiary (institutional/global/arbitrage) â defines licensing terms and captures monopoly rents",
+      "software_users: Primary target (organized/global/constrained) â pay monopoly prices and surrender modification rights",
+      "commercial_licensors: Secondary beneficiary (powerful/global/mobile) â extract fees via patent and copyright portfolios",
+      "independent_repair_providers: Target (moderate/regional/trapped) â legally prohibited from modifying firmware",
+      "interoperability_developers: Target (moderate/national/constrained) â blocked by anti-circumvention law",
+      "free_software_advocates: Excluded voice (organized/global/analytical) â marginalized in IP policy forums"
+    ],
+    "logic_rationale": "Extractiveness (0.68) is high because the constraint transfers monopoly rents and control rights from users to vendors, decoupled from marginal service cost. Suppression (0.72) is higher because the constraint's persistence depends on active legal enforcement (copyright, DMCA, contract law) and technical barriers (DRM) to suppress copying and modification. Theater ratio (0.25) is moderate-low: most enforcement is functional for rights-holders, though some is performative (e.g., DRM that is quickly broken). Accessibility collapse (0.60) reflects that once a user commits to a proprietary stack, alternatives collapse due to interoperability lock-in and data formats. Resistance (0.55) is significant due to the free software movement, piracy, and right-to-repair campaigns. Measurements track the maturation of enforcement infrastructure from 1970 to 2020 on a single shared grid.",
+    "perspectival_gap": "The vendor seat experiences the constraint as a necessary and legitimate coordination mechanism that enables investment and market organization. The user, repair, and interoperability seats experience the same structure as enforced extraction that strips autonomy and imposes artificial scarcity. The engine should compute this divergence from the structural data: agenda-setter with arbitrage exit versus payers with constrained or trapped exit.",
+    "directionality_logic": "Beneficiaries (proprietary_vendors, commercial_licensors) receive low directionality (d near the beneficiary end), translating their structural position into subsidy and control. Victims (software_users, independent_repair_providers, interoperability_developers) receive high directionality (d near the target end), amplifying effective extraction. Free software advocates, though excluded, have analytical exit and thus do not sit at the full-target end despite their opposition.",
+    "mandatrophy_analysis": "The founding problem â incentivizing software creation in the face of trivial copyability â may have been live in the 1970s. Today it is contested: open-source production, SaaS, and alternative funding models demonstrate that restriction is not the only viable coordination mechanism. The constraint persists beyond its original justification, suggesting potential mandatrophy. However, because the coordination function (market organization) remains real and a concentrated beneficiary class actively maintains it, the constraint is classified as tangled rope rather than piton. If the coordination function fully atrophied while enforcement persisted, it would degrade toward snare.",
+    "kernel_context": "This is the property_rights_reading of the software_source_status kernel. Sibling readings are: freedom_imperative_reading (software freedom as ethical requirement), pragmatic_development_reading (open source as superior methodology), and utilitarian_hybrid_reading (welfare-maximizing mix). This reading treats source restriction as a deontological property right; siblings treat it as injustice, instrumentality, or contingent optimization."
+  },
+  "network": {
+    "affects_constraints": [
+      "freedom_imperative_reading",
+      "pragmatic_development_reading",
+      "utilitarian_hybrid_reading"
+    ],
+    "dual_formulation_note": "This constraint is the property-rights reading of the software_source_status kernel. It decomposes the colloquial 'software IP' label into structurally distinct claims: this reading treats source restriction as a fundamental property right; siblings treat it as ethical imperative, instrumental methodology, or welfare optimization."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "proprietary_property_framework",
+    "drift_state": {
+      "moment": "contemporary_open_source_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "software_source_status__freedom_imperative_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "software_source_status__pragmatic_development_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "software_source_status__utilitarian_hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "software_source_as_property",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "restrictive_license_as_owner_prerogative",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "proprietary_vendors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Develop and distribute proprietary software under restrictive licenses; lobby for stronger copyright and anti-circumvention laws; collect monopoly rents from controlled distribution. They define the terms of access and modification restriction and can pivot business models across jurisdictions."
+    },
+    {
+      "name": "software_users",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Purchase or subscribe to software under licenses that prohibit modification, redistribution, and often reverse engineering. They bear monopoly pricing and lose autonomy over devices they own. Exit to open alternatives is possible for some categories but blocked by interoperability lock-in and market dominance in others."
+    },
+    {
+      "name": "commercial_licensors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Acquire and enforce software patents and copyrights, extracting licensing fees without producing software. They benefit directly from the legal enforceability of source code as property and can move capital across licensing portfolios."
+    },
+    {
+      "name": "independent_repair_providers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Provide hardware and software repair services. Prohibited by DRM and licensing restrictions from modifying firmware or circumventing access controls to restore functionality. Legal risk from anti-circumvention laws traps them in a shrinking legitimate service market."
+    },
+    {
+      "name": "interoperability_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Develop compatibility layers, reverse-engineer protocols, or port software to new platforms. Face legal threats and technical barriers from license terms and anti-circumvention statutes that prohibit needed research and implementation."
+    },
+    {
+      "name": "free_software_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Advocate for software freedom and user rights to study, modify, and share code. Marginalized or excluded from intellectual property policy forums where proprietary frameworks are codified; their alternative model is structurally disadvantaged by the legal enforcement of source-code restriction."
+    },
+    {
+      "name": "open_source_competitors",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Develop and distribute non-proprietary alternatives. Disadvantaged by procurement preferences for proprietary software, patent thickets, and interoperability secrecy enforced through IP law. They would compete on equal terms if source restriction were not enforced."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Incentivize software creation by enabling creators to capture value through exclusive control over distribution and modification; organize a market for digital goods where development costs can be recouped through licensing.",
+    "transfer_function": "Moves monopoly rents and control rights from software users and secondary developers to proprietary vendors and rights-holders through licensing restrictions and legal enforcement.",
+    "absent_voices": "Free software advocates and interoperability developers are structurally underrepresented in IP policy bodies; independent repair professionals are excluded from device-design conversations where access controls are embedded.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If proprietary source-code restrictions vanished overnight, business models for a significant software sector would collapse, open-source alternatives would rapidly replace many proprietary stacks, users would gain modification and repair rights, and the legal apparatus around software IP would become obsolete. The digital economy would reorganize around unrestricted distribution.",
+    "founding_problem": "Early software creation faced a free-rider problem: digital goods are trivially copyable, making it difficult for creators to recoup development investment without exclusion mechanisms.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Proprietary vendors and industry associations attest the problem is still live, citing R&D costs. Free software advocates and empirical economists from outside the beneficiary set attest that alternative models (services, support, open-source development) have proven viable and the founding problem is substantially solved for many categories; no independent consensus confirms that restriction is the only viable solution."
+  },
+  "gain_flow": "proprietary_vendors",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

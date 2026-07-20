@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence__lapsed_alternatives_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "4b4cf2b3-3c3a-4300-ae15-c693092f7f4c"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.1,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "QWERTY Persistence via Lapsed Alternatives (Coordination Reading)",
+    "topic_domain": "technology history / industrial standards / path dependence",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [],
+    "victims": []
+  },
+  "interval": {
+    "start": 0,
+    "end": 150
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.1
+    }
+  ],
+  "omegas": [
+    {
+      "id": "qwerty_kernel_reading_position",
+      "question": "Does the persistence of the QWERTY standard reflect pure coordination lock-in, or does it mask incumbent preservation dynamics?",
+      "resolution_mechanism": "Historical analysis of typewriter manufacturer patent litigation, keyboard supplier contracting practices, and OEM bundling decisions versus pure user-side adoption data.",
+      "impact": "If incumbent preservation is dominant, the constraint reclassifies as tangled_rope or snare with identifiable beneficiaries; if pure coordination, it remains rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether QWERTY persistence is a contested kernel with two structurally distinct readings."
+    },
+    {
+      "id": "switching_cost_symmetry",
+      "question": "Are the switching costs of QWERTY abandonment borne symmetrically across all users and producers, or do they fall asymmetrically on specific classes?",
+      "resolution_mechanism": "Empirical measurement of retraining costs, hardware retooling expenses, and software compatibility losses across user demographics and manufacturer tiers.",
+      "impact": "Asymmetric cost bearing would introduce a victim set and shift classification toward tangled_rope; symmetric costs support rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Symmetry of switching cost distribution across agents."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the lapsed_alternatives reading of the qwerty_persistence kernel. Under this reading, the QWERTY keyboard layout persists not because identifiable incumbents actively defend it, but because the standard solves a genuine coordination problem: any trained user can operate any compatible machine. Alternative layouts (Dvorak, Colemak) lapsed because they failed to reach the critical mass required to overcome network effects. The constraint is symmetric â all parties bear coordination costs (switching inertia) and benefits (interoperability) equally. There is no concentrated beneficiary extracting rents from the standard's persistence.",
+    "key_agents": [
+      "mass_typists_and_users: Symmetrically coordinated agents who bear no extraction but face switching costs",
+      "hardware_manufacturers: Commodity producers assembling to the dominant standard without capturing rents from its persistence",
+      "alternative_layout_advocates: Agents promoting ergonomic alternatives who remain structurally excluded from manufacturing scale due to coordination failure, not active suppression"
+    ],
+    "logic_rationale": "Extractiveness is low (0.25) because the constraint extracts only via switching costs â the opportunity cost of maintaining compatibility with the dominant standard. Suppression is minimal (0.10) because persistence requires no active enforcement; alternatives die from coordination failure, not coercion. Theater ratio is low (0.10) because there is little performative maintenance of the standard. Accessibility collapse is moderate-high (0.65): once the standard is understood, alternatives collapse due to network effects, but this is a natural feature of coordination goods rather than constructed barriers. Resistance is low (0.15) because most users and producers accept the arrangement as mutually beneficial. The measurement series shows a slow rise in base_extractiveness as network effects hardened over the 20th century, but the constraint remains within rope parameters.",
+    "perspectival_gap": "Because the constraint is structurally symmetric â no beneficiaries or victims are declared â the engine should compute similar directionality and classification across all power and exit levels. The primary divergence is between agents with high switching costs (biographical identity locked in muscle memory) and those with low switching costs (new entrants), but both are coordination costs rather than extraction.",
+    "directionality_logic": "No directionality asymmetry is declared: the base_properties.beneficiaries and victims arrays are intentionally empty. All agents are structurally symmetric with respect to this constraint. The engine will derive directionality near 0.5 for all seats, reflecting the coordination-cost symmetry. No overrides are needed.",
+    "mandatrophy_analysis": "The classification as rope prevents mislabeling symmetric coordination costs as extraction. The founding problem â standardized typing interface â is contested regarding this specific layout but live in general form. Because there is no active enforcement, no concentrated beneficiary, and no suppressed alternative, the constraint does not satisfy the gates for tangled_rope or snare. If the constraint were to develop active incumbent defense (e.g., manufacturers suing alternative-layout competitors), it would drift toward tangled_rope.",
+    "kernel_context": "This constraint is the lapsed_alternatives reading of the qwerty_persistence kernel. The sibling reading (incumbent_preservation_reading) holds that standards persist via active beneficiary defense. This reading holds that they persist via coordination value and network-effect lock-in. The two readings are structurally distinct: the sibling posits beneficiaries and active enforcement; this reading posits symmetric coordination costs and passive lapsing of alternatives."
+  },
+  "six_questions": {
+    "coordination_function": "Provides a shared interface protocol (keyboard layout) allowing any trained user to operate any compatible machine without relearning, solving the coordination problem of heterogeneous equipment and transferable operator skill.",
+    "transfer_function": "No asymmetric transfer; all parties bear symmetric coordination costs in the form of foregone alternative layouts and the inertia of maintaining compatibility with the dominant standard.",
+    "absent_voices": "Advocates of alternative keyboard layouts (Dvorak, Colemak, Workman) and ergonomic researchers who argue for superior arrangements are present in niche communities but excluded from mainstream manufacturing scale by coordination failure rather than by deliberate suppression.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the QWERTY layout vanished overnight, global typing infrastructure, software input methods, manufacturing tooling, and embodied human capital would require massive re-coordination toward a replacement standard. The rearrangement would be costly but symmetric.",
+    "founding_problem": "The need for a standardized mechanical typing interface to allow interchangeable operator skill across typewriting equipment in the late 19th century.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Economic historians and ergonomics researchers outside any manufacturing beneficiary class attest that the original mechanical coordination problem was genuine; computer scientists note that the live problem is general input standardization rather than this specific layout. No concentrated beneficiary group self-asserts the founding myth."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "qwerty_persistence__incumbent_preservation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "network_effects_sufficient_for_lock_in",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "incumbent_agency_unnecessary_for_persistence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "de_facto_coordination_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "network": {
+    "affects_constraints": [
+      "incumbent_preservation_reading"
+    ],
+    "dual_formulation_note": "The qwerty_persistence kernel decomposes into two structurally distinct constraints. This reading (lapsed_alternatives) treats persistence as symmetric coordination with no beneficiaries and low extraction; the sibling (incumbent_preservation) treats persistence as asymmetric extraction with active beneficiaries and enforcement. They share the same empirical phenomenon (QWERTY dominance) but instantiate different constraints due to different epsilon values and causal mechanisms."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

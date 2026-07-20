@@ -1,0 +1,226 @@
+{
+  "header": {
+    "constraint_id": "technology_reformation_causality__technological_determinism_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tech_ref_td",
+    "story_uid": "966f0847-12b1-4162-9d96-81627432e4c4"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.88,
+    "resistance": 0.2,
+    "claimed_type": "mountain",
+    "human_readable": "Technological Determinism Reading: Printing Press as Inevitable Cause of Reformation",
+    "topic_domain": "history/religious_history/media_studies",
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "reform_movements",
+      "vernacular_printers"
+    ],
+    "victims": [
+      "catholic_church_hierarchy",
+      "manuscript_copyists"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "reform_movements",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Operate downstream of printing technology, using mass-produced vernacular scripture and theological pamphlets to disseminate doctrine across regions at a scale impossible under manuscript production. Their strategic options are bounded by the physical affordances of the press."
+    },
+    {
+      "name": "vernacular_printers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Commercialize the production of vernacular and reformist texts, capturing economic surplus from the dramatic reduction in per-unit reproduction costs relative to scribal copying."
+    },
+    {
+      "name": "catholic_church_hierarchy",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Lose the monopoly on doctrinal interpretation and scriptural dissemination as identical vernacular texts circulate outside ecclesiastical control. Cannot exit the technological reality of mechanical reproduction."
+    },
+    {
+      "name": "manuscript_copyists",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Bear the economic and vocational costs of technological displacement as demand for hand-copied texts collapses; specialized scribal skills lose market value with no alternative path."
+    },
+    {
+      "name": "economic_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Measure and compare production costs between manuscript and print economies, providing empirical estimates of the physical cost reduction that underwrites technological determinism claims."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Mass reproduction of identical texts across geographic space without centralized institutional control, solving the physical bottleneck of manual scribal copying.",
+    "transfer_function": "Moves text reproduction capacity from centralized ecclesiastical scriptoria to decentralized print shops; moves doctrinal dissemination control away from the Catholic Church toward any agent with access to a press.",
+    "absent_voices": "Illiterate lay populations structurally excluded from the textual public sphere despite vernacular printing; women in enclosed religious orders losing institutional scriptorial roles; Eastern Orthodox and non-Latin Christian communities outside the initial print geography.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the production-cost reduction and mass reproduction capacity of movable-type printing vanished, vernacular scripture distribution would collapse back to manuscript scale; the decentralized, rapid theological mobilization of the Reformation would be structurally impossible, and the Church's information monopoly would reconstitute.",
+    "founding_problem": "The physical and economic impossibility of producing and distributing sufficient identical texts to sustain a mass theological movement against an institution controlling manuscript reproduction.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Economic historians of the book trade corroborate the magnitude of production cost reduction from outside the benefiting reformer parties; Catholic polemicists and Index compilers at the time corroborate the Church's perception of lost monopoly from an opposed seat."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.06
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.1
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_tool",
+      "question": "Is the printing press a physical constraint with inevitable historical effects analogous to natural law, or a constructed tool whose effects depend entirely on social deployment choices?",
+      "resolution_mechanism": "Comparative historiography: examine print cultures (e.g., Chinese woodblock, Ottoman print bans) where the same production-cost reduction did not produce Reformation-equivalent outcomes.",
+      "impact": "If the effect is contingent on social context, the mountain claim is a false summit and the engine should reclassify toward tangled_rope or snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether printing press causality is physical inevitability or constructed narrative"
+    },
+    {
+      "id": "cost_reduction_inevitability",
+      "question": "Does production cost reduction inevitably undermine centralized religious authority, or is this correlation specific to the Latin Christian institutional context of the early sixteenth century?",
+      "resolution_mechanism": "Counterfactual and comparative historical analysis across religious and political systems with and without print technology.",
+      "impact": "If contingent, the constraint's effective extractiveness is context-dependent rather than physically determined, undermining the mountain classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cost reduction necessarily produces institutional destabilization"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the technological determinism reading of the printing press's role in the Reformation: the press is treated as a physical-economic mountain that, by reducing text production costs, made mass vernacular scripture distribution inevitable and thereby caused the Reformation independent of reformer agency. The story is authored as a false-summit mountain candidate because identifiable beneficiaries (reformers, printers) and victims (Church hierarchy, copyists) are declared, triggering the FSM evaluation chain despite the mountain claim.",
+    "key_agents": [
+      "reform_movements: Primary beneficiary (moderate/constrained) â gain scalable distribution from the technology",
+      "vernacular_printers: Secondary beneficiary (moderate/mobile) â capture commercial surplus from cost reduction",
+      "catholic_church_hierarchy: Primary target (institutional/constrained) â loses information monopoly to mechanical reproduction",
+      "manuscript_copyists: Secondary target (powerless/trapped) â displaced by technological substitution",
+      "economic_historians: Analytical observer (analytical/analytical) â empirically assess production cost differentials"
+    ],
+    "logic_rationale": "Extractiveness is low (0.15) because the constraint is framed as a physical production-cost floor rather than an active extraction mechanism; suppression is low (0.10) because the press operates through physical possibility rather than coercion. Theater ratio is near-zero (0.05) as there is no performative maintenance. Accessibility collapse is high (0.88) because once print exists, manuscript alternatives collapse for mass distribution. Resistance is moderate-low (0.20): the Church resisted the consequences but could not resist the physics. Metrics are authored independently of the mountain claim to preserve divergence signal.",
+    "perspectival_gap": "Reformers and printers experience the press as an affordance that subsidizes their scale; the Church experiences it as an external force extracting its monopoly control. Copyists experience direct economic displacement. The engine will compute divergent per-seat classifications: beneficiaries near the subsidy end (low d), victims near the target end (high d), with the analytical seat seeing the full structural picture.",
+    "directionality_logic": "Beneficiaries (reform_movements, vernacular_printers) derive low directionality because the constraint structurally subsidizes their capacity; victims (catholic_church_hierarchy, manuscript_copyists) derive high directionality because the same physical constraint extracts from their established position. The Church's institutional power is overridden by the universal scope of the technology, pushing its d toward the target end despite high global power.",
+    "mandatrophy_analysis": "The mountain classification prevents mislabeling the press as a snare or tangled rope in the technological determinism reading: the press is not actively enforced by an agenda-setter, and its operation does not require suppressing alternatives (manuscript copying remains physically possible but economically non-viable). However, declaring beneficiaries and victims acknowledges that the 'mountain' framing may naturalize gains that are structurally contingent, routing the story through FSM to test whether the mountain claim survives or collapses into a different type.",
+    "kernel_context": "This constraint instantiates the technological_determinism_reading of the technology_reformation_causality kernel. Sibling readings include beneficiary_agency_reading (reformers strategically deployed print as a tool) and co_constitution_reading (technology and social actors co-evolved). The epsilon-invariance principle is maintained by treating each reading as a separate constraint with distinct structural data."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "technological_autonomy",
+    "drift_state": {
+      "moment": "post_social_history_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "technology_reformation_causality__beneficiary_agency_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "technology_reformation_causality__co_constitution_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "technology_autonomously_determines",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "social_agents_are_downstream_adapters",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "beneficiary_agency_reading",
+      "co_constitution_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the technology_reformation_causality kernel. It is structurally paired with beneficiary_agency_reading and co_constitution_reading as a constraint family. Each reading carries a distinct epsilon and stakeholder geometry."
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

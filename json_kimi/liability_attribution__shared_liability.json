@@ -1,0 +1,282 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__shared_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "e23d69d1-29af-48c9-82ae-126b492d053e"
+  },
+  "base_properties": {
+    "extractiveness": 0.66,
+    "suppression": 0.7,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Shared Liability by Causal Contribution and Control",
+    "topic_domain": "technology_governance/legal_theory/regulatory_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "injured_parties",
+      "commercial_insurers"
+    ],
+    "victims": [
+      "ai_system_developers",
+      "ai_system_deployers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ai_system_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Design and train AI systems whose architectural choices are subsequently scrutinized for causal contribution to downstream harms. They must document design decisions, engage in safety testing, and purchase liability insurance or set aside capital reserves. They cannot opt out of the legal regime without exiting the market entirely, and their ability to contractually shift liability to deployers is constrained by the shared-liability rule."
+    },
+    {
+      "name": "ai_system_deployers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Integrate AI systems into operational contexts such as healthcare, finance, and transportation, bearing liability for deployment decisions, monitoring failures, and interaction effects with local conditions. They face compliance costs, mandatory insurance, and litigation risk even when the underlying model was created by another party. Exit is constrained by licensing requirements and market access rules that make full withdrawal prohibitively expensive."
+    },
+    {
+      "name": "injured_parties",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals or organizations harmed by AI system behavior who seek compensation through the shared-liability regime. They benefit from not needing to isolate a single responsible party in a complex value chain, but their recovery is mediated by slow litigation, contingency fees, and insurance payout schedules. They have no practical exit from the need for redress."
+    },
+    {
+      "name": "commercial_insurers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Offer liability insurance products to AI developers and deployers, pricing premiums based on risk assessments of causal contribution and control. They benefit from the mandatory or de-facto mandatory nature of the liability regime, which creates a captured demand base. They can exit unprofitable lines or jurisdictions but are structurally incentivized to maintain a regime complex enough to sustain intermediation."
+    },
+    {
+      "name": "regulatory_enforcers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design the liability allocation framework, define evidentiary standards for causal contribution and control, and enforce compliance through courts and administrative bodies. They set the agenda for how liability is distributed but do not themselves bear costs or collect damages. They can reform or repeal the regime, though political and institutional inertia makes abrupt exit unlikely."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allocates responsibility for technology-related harms across the AI value chain when causal attribution is ambiguous, ensuring injured parties can recover damages without isolating a single responsible party and incentivizing safety investment by all contributors.",
+    "transfer_function": "Moves financial liability, compliance costs, and insurance premiums from injured parties to AI system developers and deployers based on their causal contribution and control, while also generating premium flows into emerging insurance and indemnification markets.",
+    "absent_voices": "Small open-source developers without legal departments are largely absent from the rulemaking conversation; they would argue that proportional liability based on opaque causal contribution forces them out of the market. Consumer advocates seeking absolute strict liability rather than distributed proportionality are also underrepresented.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the shared liability regime vanished, developers and deployers would revert to contractual risk-shifting and warranty disclaimers, injured parties would face higher barriers to recovery when causation is diffuse, and the emerging AI liability insurance market would contract sharply.",
+    "founding_problem": "Single-point liability regimes fail to account for distributed causation in complex AI supply chains, leaving injured parties uncompensated when harm arises from the interaction of design choices and deployment contexts.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Legal scholars and law-and-economics researchers attest to the attribution gap; empirical incident databases document causal diffusion across the value chain. However, the claim that joint liability improves compensation outcomes relative to no-fault or strict single-party regimes is contested by industry economists, and independent empirical corroboration from outside the legal academy remains limited."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story models the 'shared liability' reading of the liability attribution kernel in AI governance: a legal regime distributing joint liability along the technology value chain according to each actor's causal contribution and degree of control. Unlike readings that assign primary liability to developers or deployers alone, this reading places both in the cost-bearing set, generates contractual and insurance intermediation, and is defended as solving the collective-action problem of diffuse causation. The kernel is contested; this file instantiates only the shared-liability reading.",
+    "key_agents": [
+      "ai_system_developers: Primary target (powerful/constrained) â bear design-phase liability, compliance costs, and insurance burdens.",
+      "ai_system_deployers: Primary target (powerful/constrained) â bear deployment-phase liability and operational safety obligations.",
+      "injured_parties: Primary beneficiary (powerless/constrained) â receive a compensation pathway without isolating a single tortfeasor.",
+      "commercial_insurers: Secondary beneficiary (institutional/arbitrage) â capture premium flows from mandated risk-pooling and intermediation.",
+      "regulatory_enforcers: Agenda setter (institutional/arbitrage) â design and enforce the liability allocation framework."
+    ],
+    "logic_rationale": "Extractiveness (0.66 at interval end) is substantial because the regime imposes compliance, litigation, and insurance costs on developers and deployers that may exceed the direct compensation delivered to injured parties. Suppression (0.70) reflects the active legal enforcement needed to override contractual waivers and maintain the liability chain. Theater ratio (0.52) rises over the interval as performative safety documentation and contractual box-checking partially displace genuine risk reduction. Accessibility collapse (0.60) captures the legal unavailability of pure contractual risk-shifting once the regime is entrenched. Resistance (0.58) is moderate-to-high because both developer and deployer coalitions actively lobby for alternative single-point regimes.",
+    "perspectival_gap": "The agenda-setter seat (regulatory enforcers) experiences the constraint as a necessary coordination mechanism that solves the attribution gap; the payer seats (developers and deployers) experience it as an extractive cost layer that compounds opacity burdens. The beneficiary seat (injured parties) perceives improved access to compensation, while the secondary beneficiary seat (insurers) sees a new revenue line. The engine computes these divergences from the same structural data.",
+    "directionality_logic": "Developers and deployers are declared victims because the constraint extracts compliance costs, insurance premiums, and damages from them. Injured parties are declared beneficiaries because the constraint subsidizes their recovery pathway. Commercial insurers are declared beneficiaries because the constraint creates a mandated demand for their product. Regulatory enforcers are agenda setters, not beneficiaries. The exit modulation (constrained for devs/deployers, arbitrage for insurers) amplifies the extraction asymmetry: devs/deployers cannot easily exit the legal regime, while insurers can price and segment risk across jurisdictions.",
+    "mandatrophy_analysis": "The regime could atrophy into a piton if the coordination function (genuine victim compensation) degrades while the extraction layer (insurance premiums and legal fees) persists. Mandatrophy is not yet resolved: the founding problem (diffuse causation) remains live, but the current reading's effectiveness is contested. A scaffold reading would require a sunset clause tied to empirical evaluation of compensation rates; absent such a clause, the regime risks ossification into theatrical compliance.",
+    "kernel_context": "This constraint is the 'shared_liability' reading of the liability_attribution kernel. Sibling readings are 'developer_liability' (assigning primary blame to creators) and 'deployer_liability' (assigning primary blame to deployment-context controllers). The shared-liability reading distributes costs across the value chain rather than concentrating them at either endpoint."
+  },
+  "omegas": [
+    {
+      "id": "shared_liability_naturalness",
+      "question": "Does joint liability distributed by causal contribution represent a natural legal response to technological diffusion, or is it a constructed regime whose primary effect is to sustain litigation and insurance intermediation?",
+      "resolution_mechanism": "Compare compensation rates and administrative costs under shared-liability regimes versus no-fault or single-point strict-liability regimes in comparable technology domains.",
+      "impact": "If administrative costs consume most of the transferred value, the regime functions more as extraction for intermediaries than coordination for victims; if victim compensation rises disproportionately, the coordination function is genuine.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the regime is a natural coordination response or a constructed extraction mechanism."
+    },
+    {
+      "id": "insurance_market_extraction",
+      "question": "Do emerging liability insurance markets for AI improve risk-pooling efficiency, or do they capture value that would otherwise flow to injured parties?",
+      "resolution_mechanism": "Analyze loss-ratio data and premium-to-payout spreads in AI liability insurance as the market matures; compare to established product liability lines.",
+      "impact": "High loss ratios with controlled premiums would indicate genuine coordination; low loss ratios with inflated premiums would indicate extractive intermediation layered onto the liability constraint.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether insurance markets pool risk or extract rent."
+    },
+    {
+      "id": "causal_contribution_opacity",
+      "question": "Can causal contribution and control be operationalized transparently enough to avoid arbitrary judicial allocation, or does the opacity of AI systems make 'proportionate' liability a mask for random extraction?",
+      "resolution_mechanism": "Track variance in liability allocation across courts for similar AI harm profiles; high variance suggests opacity drives arbitrary extraction.",
+      "impact": "If allocation is unpredictable, developers and deployers face extraction without clear behavioral guidance, undermining the coordination justification; if predictable, the regime genuinely coordinates safety investment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proportionate liability is transparent or arbitrary."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__developer_liability",
+      "liability_attribution__deployer_liability"
+    ],
+    "dual_formulation_note": "The liability_attribution kernel decomposes into three structurally distinct readings: shared_liability (this file), developer_liability, and deployer_liability. Each reading assigns a different locus of primary obligation and produces a different beneficiary/victim structure. They compete within the same policy domain and cannot be averaged into a single epsilon."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "proportional_contribution_framework",
+    "drift_state": {
+      "moment": "ai_liability_emergence",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "liability_attribution__developer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "liability_attribution__deployer_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "liability_proportional_to_causal_contribution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "joint_control_expands_duty_beyond_single_actor",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
