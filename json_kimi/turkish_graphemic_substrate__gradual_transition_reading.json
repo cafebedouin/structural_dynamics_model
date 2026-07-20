@@ -1,0 +1,283 @@
+{
+  "header": {
+    "constraint_id": "turkish_graphemic_substrate__gradual_transition_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tgstr",
+    "story_uid": "5e66912d-c809-4a58-86ec-9f3faa1e9cc9"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.48,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.45,
+    "claimed_type": "scaffold",
+    "human_readable": "Turkish Graphemic Substrate â Gradual Transition Reading",
+    "topic_domain": "political_linguistics/state_formation/cultural_engineering",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "ottoman_literate_elders",
+      "transitional_youth"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the gradual_transition_reading of the turkish_graphemic_substrate kernel. It models a state policy mandating a 5â15 year period of official dual-script (Ottoman Arabic and Latin) coexistence to preserve intergenerational knowledge transfer while completing a graphemic modernization program. The constraint is claimed as scaffold because its entire justification is transitional; its steady-state endpoint is single-script Latin literacy. Sibling readingsâottoman_continuity_reading (permanent Arabic legitimacy) and secular_nationalist_reading (immediate Latinization)âare structurally distinct constraints under the same colloquial label.",
+    "key_agents": [
+      "republican_state_administration: Agenda-setter (institutional/generational) that designs, funds, and enforces the dual-script transition regime.",
+      "ottoman_literate_elders: Primary beneficiary (organized/biographical) whose existing Arabic-script literacy retains public value during the window.",
+      "transitional_youth: Beneficiary-payer hybrid (powerless/biographical/identity_locked) who receives Ottoman heritage access but bears the pedagogical burden of dual literacy.",
+      "secular_nationalist_modernizers: Payer (organized/generational) whose homogenization and European-alignment agenda is actively slowed by the transition period.",
+      "ottoman_continuity_advocates: Excluded voice (moderate/generational/identity_locked) who reject any terminus in Latinization."
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.42 (mid-range) because the state bears real fiscal costs (dual official publishing, bifurcated teacher training) and the transitional youth bear steep pedagogical opportunity costs; it is not negligible because the arrangement also extracts political time and homogenization momentum from the nationalist modernizers. Suppression is 0.48 because the state must actively hold the line against both accelerationist demands for immediate Latinization and conservative demands for indefinite Arabic retention. Theater ratio is 0.30 (low-moderate): the dual-script apparatus is functionally operational but develops ritualized elements (official documents printed in both scripts where one would suffice, ceremonial bilingual signage). Accessibility collapse is 0.60 because state policy legally forecloses both permanent Arabic and immediate full-Latin alternatives. Resistance is 0.45 owing to organized opposition on both flanks. The temporal grid is aligned across all three tracked metrics so lifecycle drift can be detected without imputation.",
+    "perspectival_gap": "The Ottoman-literate elders experience the constraint as a life-support system for their linguistic capital (low d, subsidized by the state), while secular nationalist modernizers experience it as an enforced delay of their political project (high d, extraction measured as deferred homogenization). The transitional youth sit asymmetrically in the middle: they are declared beneficiaries because they receive heritage access, but their identity_locked exit and steep learning burden mean their effective extraction is higher than a pure beneficiary seat. The engine computes this divergence from the structural data; the authored claim does not adjudicate it.",
+    "directionality_logic": "Base beneficiary declarations map ottoman_literate_elders and transitional_youth to the beneficiary set, which drives their derived directionality toward the low-d (subsidy) end. Secular_nationalist_modernizers are absent from the beneficiary set and present in the payer role, pushing their d toward the target end. The republican_state_administration, as agenda-setter absent from both beneficiary and victim arrays, reverts to the institutional fallback (moderate d), reflecting that it both funds and legitimates the arrangement without capturing concentrated rents.",
+    "mandatrophy_analysis": "The scaffold classification prevents mislabeling the gradual transition as permanent extraction (snare) or as pure coordination (rope). By explicitly declaring has_sunset_clause, the story commits to the constraint's transitional intent. The measurement series models Goodhart drift: theater_ratio rises mid-transition as bureaucratic ritual accumulates, then falls as the sunset is honored. If the sunset were missed and the dual-script period extended indefinitely, the constraint would drift toward tangled_rope (asymmetric extraction crystallizing around textbook publishers and dual-script bureaucrats) or piton (theatrical maintenance of a functionless dual system); the authored measurements are positioned to flag this drift.",
+    "kernel_context": "Reading: gradual_transition_reading of kernel turkish_graphemic_substrate. Sibling readings: ottoman_continuity_reading (Arabic script as permanent legitimate substrate) and secular_nationalist_reading (immediate Latinization as the only legitimate endpoint). This reading's structural delta is temporary dual-script literacy, reduced generational rupture, slower homogenization, and higher implementation costs."
+  },
+  "omegas": [
+    {
+      "id": "gradual_transition_kernel_location",
+      "question": "This constraint instantiates the gradual_transition_reading of the turkish_graphemic_substrate kernel. Would adoption of the ottoman_continuity_reading or secular_nationalist_reading reclassify the constraint's beneficiary structure, sunset status, and effective extraction?",
+      "resolution_mechanism": "Comparative structural analysis of the sibling constraint stories within this kernel family.",
+      "impact": "If the kernel is read as ottoman_continuity, the constraint becomes a permanent commitment system with no sunset, reversed beneficiaries, and likely high extraction for the modernizing state. If read as secular_nationalist, the constraint collapses to a rapid scaffold (or rope) with very low theater, minimal victims, and no intergenerational transfer function.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame uncertainty: this constraint is one reading of a contested kernel."
+    },
+    {
+      "id": "transition_cost_benefit_ratio",
+      "question": "Does the social benefit of intergenerational knowledge transfer exceed the fiscal and pedagogical cost of maintaining dual-script infrastructure for 5â15 years?",
+      "resolution_mechanism": "Comparative historical analysis of script-reform timelines (e.g., Azerbaijan 1990s rapid switch vs. ongoing Central Asian gradual transitions) and measurement of generational literacy rupture in archival access.",
+      "impact": "If costs exceed benefits, the scaffold's coordination function is weaker than claimed and the constraint functions partly as inertial piton; if benefits exceed costs, the transition period is vindicated as genuine scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dual-script transition costs exceed intergenerational continuity benefits."
+    },
+    {
+      "id": "sustainability_of_dual_literacy",
+      "question": "Can a population segment actually achieve functional dual-script literacy under state-managed transition, or does the policy produce a failed hybrid generation proficient in neither script?",
+      "resolution_mechanism": "Longitudinal literacy assessment of cohorts educated under dual-script curricula, compared with single-script cohorts before and after.",
+      "impact": "If the transitional cohort shows below-benchmark proficiency in both scripts, the coordination function (intergenerational transfer) is compromised and the constraint's extraction (pedagogical time) is unjustified; if proficiency holds, the scaffold is structurally sound.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical viability of dual-script literacy acquisition during transition."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "republican_state_administration",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Designs the 5â15 year dual-script curriculum, mandates bilingual official publishing, and funds the parallel teacher-training and textbook-production pipelines. Bears the direct fiscal burden of higher implementation costs. Captures diffuse legitimacy as a modernizing yet culturally sensitive regime, but does not concentrate the extraction as rent."
+    },
+    {
+      "name": "ottoman_literate_elders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Retain public literacy status and intergenerational communicative authority during the transition window. Their existing Arabic-script capital remains economically and socially valuable rather than being overnight nullified. Exit would mean cultural irrelevance and loss of standing as knowledge mediators."
+    },
+    {
+      "name": "transitional_youth",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Required to achieve dual-script competency in state schools, gaining mediated access to Ottoman textual heritage while learning the Latin script for modern citizenship. Bear the pedagogical opportunity cost of roughly double the script-learning time compared with single-script cohorts. Their generational identity is defined by the transition itself."
+    },
+    {
+      "name": "secular_nationalist_modernizers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for immediate and total Latinization to sever Ottoman-Islamic ties and align the republic with European phonetic modernity. Their political project is deliberately slowed by the gradualist policy; they bear the cost of deferred homogenization and continued recognition of the Arabic-script past."
+    },
+    {
+      "name": "ottoman_continuity_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "View Arabic script as the legitimate and permanent graphemic substrate of Turkish civilization. They are structurally excluded from the policy's design coalition because the transition always terminates in Latinization; the 5â15 year window is a concession, not a shared destination. Their core demandâpermanent Arabic legitimacyâis foreclosed by the sunset clause."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables a literate population to transition from an Ottoman-Arabic graphemic system to a Latin-based system without severing intergenerational textual access, preserving knowledge transfer while modernizing state communication infrastructure.",
+    "transfer_function": "Moves fiscal resources from the state treasury and pedagogical time from students into dual-script educational and bureaucratic infrastructure; moves linguistic capital from the Ottoman-literate elder generation to the transitional youth generation via state-mandated schooling.",
+    "absent_voices": "Hardline secular nationalists demanding immediate total Latinization and Ottoman continuity advocates demanding permanent Arabic script legitimacy are both partially excluded from the policy's design coalition; their objections are recorded in deliberation but overridden by the gradualist technocratic consensus.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the managed transition vanished overnight, the state would be forced to choose between immediate Latinization (rupturing elder literacy and archival access) or indefinite Arabic retention (stalling European-alignment); educational curricula, official publishing schedules, and generational knowledge-transfer practices would require immediate reorganization.",
+    "founding_problem": "How to modernize the graphemic substrate of a post-imperial nation-state to align with European phonetic norms without rendering the existing literate population's skills obsolete and severing access to centuries of textual heritage.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Comparative sociolinguists and Ottoman historians outside the Republican state coalition attest that rapid script switches in comparable contexts (e.g., post-Soviet Central Asia) produced measurable generational literacy rupture and archival discontinuity, corroborating that the founding problem is structurally real. Secular nationalist historians inside the coalition dispute its severity, arguing that cultural rupture is an acceptable cost of revolutionary modernization."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "dual_formulation_note": "This constraint is one reading of the turkish_graphemic_substrate kernel, decomposed per the epsilon-invariance principle from ottoman_continuity_reading and secular_nationalist_reading. Each reading carries a distinct epsilon, stakeholder topology, and sunset structure."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "managed_dual_script_transition",
+    "drift_state": {
+      "moment": "historical_rapid_switch_1928",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "turkish_graphemic_substrate__ottoman_continuity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "turkish_graphemic_substrate__secular_nationalist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "intergenerational_continuity_imperative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "managed_transition_pragmatism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "scaffold",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

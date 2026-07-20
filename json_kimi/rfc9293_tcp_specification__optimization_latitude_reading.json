@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__optimization_latitude_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rfc9293_optlat",
+    "story_uid": "60638f32-3f66-4c4d-a25f-e420d0287140"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.05,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.05,
+    "claimed_type": "rope",
+    "human_readable": "RFC 9293 TCP Specification â Optimization Latitude Reading",
+    "topic_domain": "network_protocol_engineering",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "major_stack_maintainers",
+      "internet_end_users",
+      "performance_researchers"
+    ],
+    "vindicated_propositions": [
+      "transport_semantic_contract_doctrine",
+      "implementation_latitude_principle"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ietf_tcp_maintenance",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Maintains the TCP standards track including RFC 9293. Defines the semantic contract of a reliable byte stream and deliberately omits implementation-specific mandates to preserve interoperability across heterogeneous systems while permitting performance innovation."
+    },
+    {
+      "name": "major_stack_maintainers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Implement TCP in widely deployed operating systems and networking stacks. Exploit the specification's latitude to deploy optimized congestion-control and timing algorithms such as BBR and DCTCP without breaking interoperability with other compliant endpoints."
+    },
+    {
+      "name": "internet_end_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Rely on TCP for reliable, ordered data delivery across the internet. Benefit indirectly from continuous performance improvements delivered by competing implementers within the semantic bounds of the specification."
+    },
+    {
+      "name": "performance_researchers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Design, simulate, and validate novel transport mechanisms that conform to the RFC 9293 semantic contract. The specification's openness enables publication and upstreaming of algorithms that would be barred under a strict invariance reading."
+    },
+    {
+      "name": "strict_compliance_testers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Maintain test suites and certification programs that check implementations against canonical state-machine traces. Their preferred reading, exact replication, is backgrounded by the optimization-latitude framing, though they continue to test boundary conditions and flag deviations."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single, globally adopted semantic contract for reliable, ordered byte-stream delivery across heterogeneous networks, eliminating the need for pairwise implementation agreements between every communicating host.",
+    "transfer_function": "Moves engineering flexibility from the standards body to implementers, allowing local performance innovations to diffuse globally without requiring centralized protocol revision for each optimization.",
+    "absent_voices": "Strict invariance advocates who hold that exact state-machine replication is necessary for interoperability are backgrounded in this reading; middlebox operators and path-realist observers who treat the deployed network as the true authority are more central to the sibling middlebox_realism reading but are less audible here because the specification abstracts away path-dependent behavior.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without the semantic contract, reliable transport would fragment into vendor-specific protocols or require application-layer reimplementation; the global internet's application ecosystem assumes this constraint.",
+    "founding_problem": "Early packet-switched networks lacked a standardized transport service that could guarantee reliable, ordered delivery over an unreliable datagram layer across diverse host architectures and operating systems.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Internet historians and original ARPANET engineers attest to pre-TCP fragmentation; independent measurement studies by academic network research groups corroborate that the reliable byte-stream abstraction remains the dominant coordination mechanism for global internet traffic."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Is the RFC 9293 specification best understood as a semantic outcome contract with implementation latitude, as an invariant state machine, or as a path-dependent protocol shaped by middlebox reality?",
+      "resolution_mechanism": "Cross-reading empirical analysis: measure whether implementations that deviate from a canonical state machine but preserve semantic outcomes achieve interoperable connectivity at scale.",
+      "impact": "If semantic-outcome preservation is sufficient for interoperability, the optimization-latitude reading is vindicated; if deviations break connectivity, strict-invariance gains support; if middlebox filtering determines success regardless of spec compliance, middlebox-realism is favored.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Contest between three readings of the TCP specification kernel"
+    },
+    {
+      "id": "extractiveness_under_latitude",
+      "question": "Does implementation latitude under RFC 9293 enable covert extraction by implementers who deploy non-standard optimizations that disadvantage competing stacks?",
+      "resolution_mechanism": "Corpus analysis of implementation diversity: if latitude is exercised uniformly and openly through published algorithms, extraction is low; if latitude is exercised opaquely to create ecosystem lock-in, extraction is higher.",
+      "impact": "Would reclassify from rope to tangled_rope if latitude is used to create asymmetric advantage while maintaining a coordination cover.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether implementation latitude masks extractive behavior"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "RFC 9293 defines the Transmission Control Protocol as a semantic contract guaranteeing reliable, ordered byte-stream delivery while explicitly permitting implementation latitude for performance optimization. This constraint story instantiates the optimization_latitude_reading of the rfc9293_tcp_specification kernel, which treats the specification as coordinating on outcomes rather than prescribing internal state. The reading enables high-performance variants such as BBR and DCTCP without requiring bilateral negotiation or protocol revision. It is claimed as rope: a genuine coordination mechanism with low extraction, where beneficiaries are implementers and end users who gain from interoperability and innovation. No identifiable victim group exists; the constraint persists through network effects and voluntary adoption rather than coercion.",
+    "key_agents": [
+      "ietf_tcp_maintenance: Agenda setter (organized/global) â maintains the semantic contract and the latitude framing.",
+      "major_stack_maintainers: Primary beneficiary (powerful/constrained) â deploys optimized implementations within the contract.",
+      "internet_end_users: Diffuse beneficiary (powerless/constrained) â receives reliable transport and indirect performance gains.",
+      "performance_researchers: Innovation beneficiary (moderate/mobile) â publishes novel algorithms within the spec's bounds.",
+      "strict_compliance_testers: Excluded voice (moderate/constrained) â advocates exact replication but is backgrounded by the latitude reading."
+    ],
+    "logic_rationale": "Extractiveness is low (0.18) because the specification does not extract surplus from participants; it distributes engineering freedom. Suppression is negligible (0.05) because the constraint relies on coordination benefits and network effects, not on excluding alternatives (QUIC, SCTP, and UDP coexist). Theater ratio is minimal (0.05) because enforcement is not performative â compliance is measured by interoperability, not ritual. Accessibility collapse is moderate (0.35): alternatives to TCP exist but the installed base makes them costly to adopt at scale. Resistance is near-zero because the constraint is widely understood as beneficial infrastructure.",
+    "perspectival_gap": "The agenda-setter seat (IETF) and beneficiary seats (implementers, users) largely converge on type: all experience the constraint as coordination. The excluded seat (strict compliance testers) would compute a higher extraction or tangled classification because the latitude they view as dangerous is, from their perspective, a loss of guaranteed behavioral uniformity. The engine will derive this divergence from the same structural data.",
+    "directionality_logic": "All named agents except the excluded compliance testers are either agenda setters or beneficiaries. Major stack maintainers and performance researchers receive engineering freedom (subsidized directionality). Internet end users receive reliable service (subsidized). The IETF sets the rule but does not capture rents from it. Strict compliance testers are excluded rather than targeted; they bear no direct cost but their preferred framework is displaced.",
+    "mandatrophy_analysis": "The classification prevents mistaking the absence of a strict invariance mandate for extraction. A piton or snare reading would require active enforcement, identifiable victims, or atrophied function maintained theatrically. Here, the specification's latitude is actively used by innovators, the founding problem (reliable transport) remains live, and the constraint is self-sustaining through coordination value. Mandatrophy is not present.",
+    "kernel_context": "This constraint is the optimization_latitude_reading of the contested kernel rfc9293_tcp_specification. Sibling readings include strict_invariance_reading (the specification mandates exact state-machine replication) and middlebox_realism_reading (specification authority is subordinate to deployed network reality). This reading claims that the text coordinates on semantic outcomes and permits implementation freedom."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "strict_invariance_reading",
+      "middlebox_realism_reading"
+    ],
+    "dual_formulation_note": "This constraint is the optimization_latitude_reading of the rfc9293_tcp_specification kernel. It decomposes from the colloquial label 'RFC 9293' because the specification text supports multiple structurally distinct interpretations: one treating the text as mandating exact state-machine replication (strict_invariance_reading), one treating it as permitting implementation latitude within semantic bounds (this reading), and one treating operational reality as subordinating specification authority to deployed middlebox behavior (middlebox_realism_reading). Each reading has distinct epsilon, stakeholders, and classification."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "outcome_based_coordination",
+    "drift_state": {
+      "moment": "contemporary_internet",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "rfc9293_tcp_specification__strict_invariance_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "rfc9293_tcp_specification__middlebox_realism_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "semantic_outcome_sufficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "implementation_innovation_entitlement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

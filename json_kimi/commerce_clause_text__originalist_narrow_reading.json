@@ -1,0 +1,278 @@
+{
+  "header": {
+    "constraint_id": "commerce_clause_text__originalist_narrow_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "c11c15e0-18c5-44ed-bbbb-61a05b432a05"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Originalist Narrow Reading of the Commerce Clause",
+    "topic_domain": "constitutional/law/federalism",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_governments",
+      "federalism_advocates"
+    ],
+    "victims": [
+      "federal_legislators",
+      "intrastate_workforce"
+    ]
+  },
+  "interval": {
+    "start": 1789,
+    "end": 2024
+  },
+  "omegas": [
+    {
+      "id": "commerce_clause_kernel_decomposition",
+      "question": "Does the originalist narrow reading of the Commerce Clause constitute a structurally distinct constraint from the expansive federal reading, such that epsilon-invariance requires separate stories?",
+      "resolution_mechanism": "Compare base extractiveness, beneficiary and victim sets, and foundational axioms across sibling readings; material divergence validates decomposition.",
+      "impact": "If structurally distinct, the kernel decomposition holds and the constraint family is correctly modeled; if not, the epsilon-invariance principle is violated and the readings should be merged.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this reading is structurally distinct from its siblings to warrant separate constraint stories"
+    },
+    {
+      "id": "original_public_meaning_veracity",
+      "question": "Does the historical record of the founding era support the claim that 'commerce' was limited to trade crossing borders and instrumentalities of movement?",
+      "resolution_mechanism": "Linguistic corpus analysis of eighteenth-century usage, constitutional convention records, and ratification debates.",
+      "impact": "If the empirical claim fails, the reading's foundational axiom collapses and its authority erodes; if supported, the empirically contingent foundation is strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Historical accuracy of the narrow reading's core semantic claim"
+    },
+    {
+      "id": "federalism_externality_tradeoff",
+      "question": "Does the state autonomy preserved by the narrow reading produce greater social welfare than the interstate externalities and regulatory gaps it creates?",
+      "resolution_mechanism": "Cross-state comparative policy analysis measuring environmental, labor, and health outcomes under divergent state standards versus uniform federal floors.",
+      "impact": "If externalities dominate, the reading functions as net extraction from interstate populations; if autonomy benefits dominate, the coordination function is primary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Welfare balance between federalism autonomy and interstate externality control"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1789,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1937,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1789,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1937,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1789,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1937,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.68
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint is the originalist narrow reading of the Commerce Clause kernel: the claim that federal power extends only to trade crossing state borders and the instrumentalities of interstate movement, leaving intrastate economic activity to state police power. It is one of three structurally distinct readings of the same constitutional text, differentiated by its core semantic axiom about original public meaning. The reading coordinates federalism by delineating a hard boundary between federal and state authority, while simultaneously extracting regulatory protection from federal legislators and intrastate workers who would benefit from national standards. The engine will compute divergent seat types from this single structural description.",
+    "key_agents": [
+      "state_governments: Primary beneficiary (institutional/constrained) â retains police power and regulatory autonomy.",
+      "federalism_advocates: Secondary beneficiary (organized/mobile) â gains ideological vindication and influence.",
+      "originalist_judiciary: Agenda-setter (institutional/constrained) â enforces the narrow reading through judicial review.",
+      "federal_legislators: Primary payer/target (institutional/constrained) â loses jurisdiction over intrastate activity.",
+      "intrastate_workforce: Primary payer/target (powerless/trapped) â denied federal floor protections.",
+      "national_regulatory_advocates: Excluded voice (organized/constrained) â preferred national solutions rendered constitutionally unreachable."
+    ],
+    "logic_rationale": "Extractiveness (0.58) reflects the asymmetric loss of federal regulatory protection for workers and the truncation of federal legislative capacity. Suppression (0.68) is high because the reading persists only through active judicial enforcement striking down statutes; it does not survive as a passive equilibrium. Theater ratio (0.42) captures the increasing performative dimension of originalist methodology â the reading must continuously re-enact historical frames to justify striking down modern legislation. Accessibility collapse (0.62) is moderate-to-high: once the narrow reading governs a policy domain, expansive federal alternatives are constitutionally barred for that domain, though doctrinal contestation keeps them conceptually alive. Resistance (0.72) is high because the reading blocks major federal legislative agendas and provokes sustained opposition from Congress, administrative agencies, and national advocacy coalitions.",
+    "perspectival_gap": "From the state government seat, the reading is protective coordination that preserves federalism boundaries; from the intrastate workforce seat, it is extraction that withholds federal protections; from the federal legislator seat, it is a snare-like truncation of democratic capacity. The originalist judiciary experiences it as methodological fidelity. The engine computes these divergences from the same structural data â the claim does not adjudicate among them.",
+    "directionality_logic": "State governments and federalism_advocates are structural beneficiaries (low d), collecting regulatory autonomy and ideological vindication. Federal legislators and intrastate_workforce are structural targets (high d), bearing the cost of truncated federal protection. The originalist_judiciary sits near symmetric: they enforce but do not personally extract; their institutional authority is bound to the reading's persistence but they do not accrue its material gains.",
+    "mandatrophy_analysis": "The classification as tangled_rope prevents mislabeling the reading as pure coordination (rope) by insisting on the presence of identifiable victims who bear asymmetric costs â the intrastate workforce and federal legislators. It also prevents mislabeling as snare by acknowledging the genuine coordination function: state governments do receive a real structural benefit in retained police power. The founding problem (preserving state autonomy against federal overreach) is contested as to whether it remains live in an integrated national economy; if dead, the reading risks mandatrophy, but the current judicial revival (Lopez, Morrison, ongoing litigation) suggests active enforcement rather than inertia, ruling out piton.",
+    "kernel_context": "This constraint instantiates the originalist_narrow_reading of the commerce_clause_text kernel. Sibling readings include the expansive_federal_reading (interstate commerce encompasses all economic activity with substantial aggregate effects) and the substantial_effects_limited_reading (federal power extends to intrastate activity with substantial effects but requires jurisdictional nexus and non-pretextual regulation). The originalist narrow reading is distinguished by its foundational axiom that the constitutional text fixes federal authority to border-crossing trade and instrumentalities of movement."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "commerce_clause_text__expansive_federal_reading",
+      "commerce_clause_text__substantial_effects_limited_reading"
+    ],
+    "dual_formulation_note": "This constraint is the originalist narrow reading of the Commerce Clause kernel. It is structurally distinct from the expansive federal reading and the substantial effects limited reading because its base extractiveness derives from confining federal authority rather than expanding it. Each reading has different beneficiary and victim sets, different foundational axioms, and different empirical warrants. They form a constraint family linked by network edges."
+  },
+  "stakeholders": [
+    {
+      "name": "state_governments",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Retain police power and regulatory autonomy over intrastate economic activity; shielded from federal preemption in areas like labor, health, and safety where commerce is classified as purely local."
+    },
+    {
+      "name": "federalism_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Legal scholars, politicians, and advocacy organizations who argue for constitutionally limited federal power; they gain ideological vindication and institutional influence when courts adopt the narrow reading."
+    },
+    {
+      "name": "originalist_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Federal judges who interpret the Commerce Clause according to original public meaning; they enforce the narrow reading by invalidating federal statutes that regulate non-commercial intrastate activity."
+    },
+    {
+      "name": "federal_legislators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Members of Congress who seek to enact uniform national standards for labor, environment, or health; their legislative jurisdiction is truncated by judicial holdings that confine commerce to border-crossing trade."
+    },
+    {
+      "name": "intrastate_workforce",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Workers in industries deemed purely local; denied federal minimum wage, overtime, or safety protections when courts classify their activity as beyond the commerce power."
+    },
+    {
+      "name": "national_regulatory_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Environmental and labor organizations seeking national regulatory floors; their preferred policy instruments are structurally excluded from the constitutional conversation under the narrow reading."
+    }
+  ],
+  "gain_flow": "state_governments",
+  "six_questions": {
+    "coordination_function": "Preserves a constitutional balance between federal and state sovereignty by delineating a limited federal commerce power; prevents federal overreach into local police powers and maintains a structural boundary for state regulatory experimentation.",
+    "transfer_function": "Transfers regulatory authority over intrastate economic activity from federal legislators to state governments and to the judiciary that polices the boundary.",
+    "absent_voices": "Federal agency staff, intrastate workers in non-unionized states, and environmental groups seeking national emission floors are excluded from the originalist interpretive framework; their policy preferences are rendered constitutionally unreachable.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Federal statutes previously invalidated under Lopez, Morrison, or similar narrow-reading precedents would survive review; national labor, environmental, and civil rights floors would extend to previously local activity; states would lose their constitutional shield against federal preemption.",
+    "founding_problem": "The Founders needed to empower the federal government to prevent state trade barriers and regulate cross-border trade, while preserving state autonomy over purely local affairs.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "State governments and originalist legal scholars attest the problem is maintaining federalism boundaries against federal overreach. Progressive legal historians and federal administrative agencies attest the narrow reading is obsolete and the founding problem of fragmented interstate trade has been solved by national integration. Corroboration is split along ideological lines with no neutral party commanding consensus."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "commerce_clause_text__expansive_federal_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "commerce_clause_text__substantial_effects_limited_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "original_public_meaning_of_commerce",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "state_police_power_reserved",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "founding_era_federalism_balance",
+    "drift_state": {
+      "moment": "contemporary_national_economy",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

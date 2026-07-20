@@ -1,0 +1,260 @@
+{
+  "header": {
+    "constraint_id": "software_control_legitimacy__freedom_imperative_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "43fd8658-8a89-48bd-aaf2-47735cf0b97e"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.8,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.6,
+    "claimed_type": "snare",
+    "human_readable": "Proprietary Software Control Regime â Freedom Imperative Reading",
+    "topic_domain": "software engineering/political economy/intellectual property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_vendors"
+    ],
+    "victims": [
+      "end_users",
+      "software_developers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "proprietary_vendors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Set the terms of software licensing, control distribution channels, deploy technical restrictions such as DRM and remote attestation, and enforce copyright through legal instruments. Collect revenue from licenses, subscriptions, and platform fees. They determine what users may run, inspect, modify, and share on computing devices they administer."
+    },
+    {
+      "name": "end_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Receive software only as opaque binary executables subject to end-user license agreements that prohibit reverse engineering, redistribution, and modification. Subject to remote revocation, telemetry, and format lock-in. Migration to free alternatives requires abandoning data, relearning interfaces, and replacing hardware or peripherals with proprietary drivers."
+    },
+    {
+      "name": "software_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build applications atop proprietary operating systems, libraries, and cloud APIs whose source code is withheld. License terms restrict how derivative works may be distributed. Unable to inspect, patch, or port the underlying stack, even when bugs or security vulnerabilities are discovered."
+    },
+    {
+      "name": "free_software_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Maintain and promote free software licenses, distributions, and documentation that preserve the four freedoms. Document the harms of proprietary control, provide technical alternatives, and represent a persistent source of resistance to the regime's legitimacy claims."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates large-scale software production by centralizing investment risk, quality assurance, marketing, and technical support under firms that recoup costs through unit sales and subscriptions.",
+    "transfer_function": "Transfers control over computing from end users and developers to proprietary vendors through legal restrictions on use, modification, and distribution, supplemented by technical prevention of inspection and interoperability; transfers money from users to vendors as the price of access.",
+    "absent_voices": "Users in low-income regions who forfeit autonomy because proprietary licenses dominate educational and government procurement; hobbyist maintainers who would adapt software for local languages and accessibility needs if source were available; free software advocates are routinely excluded from standards-setting bodies dominated by vendor consortia.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without proprietary licensing and technical control, software financing would shift to service contracts, commons-based peer production, and public funding; vendor lock-in, planned obsolescence, and format dependency would lose their structural support; the entire ecology of software distribution would reorganize around user-modifiable code.",
+    "founding_problem": "How to finance complex software development and coordinate reliable distribution when digital goods can be copied at near-zero marginal cost, creating a free-rider threat to concentrated investment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Proprietary vendors and industry trade groups attest the problem remains live, citing development costs and security liability. Free software advocates and institutional economists (e.g., Benkler, Weber) attest that commons-based peer production and service models already solve it at scale; no independent arbiter has resolved the dispute."
+  },
+  "interval": {
+    "start": 0,
+    "end": 44
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 11,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 22,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 33,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 44,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 11,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 22,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 33,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 44,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 11,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 22,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 33,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 44,
+      "value": 0.8
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story models the proprietary software control regimeâlicensing, copyright enforcement, DRM, and distribution restrictionsâthrough the freedom imperative reading of the software_control_legitimacy kernel. From this reading, all proprietary software is ethically illegitimate because it denies users control over their computing. The reading treats user freedom as a fundamental right and proprietary control as a snare that extracts autonomy from users to benefit vendors. This is one reading of a contested kernel; siblings include the pragmatic openness reading, the property rights reading, and the commons reading. The authored metrics are descriptively honest for the regime's operation, while the claimed_type reflects this reading's structural assessment.",
+    "key_agents": [
+      "Proprietary vendors (institutional/agenda_setter): set licensing terms, enforce restrictions, and collect revenue globally.",
+      "End users (powerless/payer): bear the loss of the four freedoms through opaque binaries and restrictive terms.",
+      "Software developers (moderate/payer): constrained by proprietary APIs and licensing that prevent inspection and redistribution.",
+      "Free software advocates (organized/observer): resist the regime and provide alternative infrastructure."
+    ],
+    "logic_rationale": "Extractiveness is high (0.85) because the regime systematically withholds source code, prohibits modification, and deploys technical and legal barriers that strip users of control over their own computing. Suppression is high (0.80) because the regime depends on active enforcement: copyright litigation, DRM, anti-circumvention laws, and network-effects lock-in that suppresses viable alternatives. Theater ratio is moderate (0.35): there is growing performative openness (source-available licenses, corporate open-washing) that does not restore substantive freedom, masking the underlying extraction. Accessibility collapse (0.75) reflects how file formats, hardware compatibility, and network effects collapse user alternatives once they enter a proprietary ecosystem. Resistance (0.60) captures the sustained but structurally disadvantaged opposition from the free software movement.",
+    "directionality_logic": "Proprietary vendors are the declared beneficiaries: they collect revenue and control from the constraint and have arbitrage-grade exit (they can pivot to service models or open-core strategies). End users and developers are the declared victims: they are denied the four freedoms, face high switching costs, and have constrained or trapped exit. The engine will derive low directionality for vendors and high directionality for users and developers, amplifying effective extraction for the victim seats and damping it for the beneficiary seat.",
+    "perspectival_gap": "The agenda-setter seat (proprietary vendors) experiences the constraint as legitimate coordination that funds innovation and provides accountable support. The payer seats (users and developers) experience the same structure as denial of autonomy and extraction of control. The freedom imperative reading authored here adopts the payer-seat structural assessment as its primary frame, producing a claimed_type of snare that the engine may or may not replicate when processing the beneficiary seat.",
+    "mandatrophy_analysis": "The freedom imperative reading resists mandatrophy mislabeling by refusing to credit the coordination story (investment, support, QA) as justification for the steady state. It treats the founding problem (financing software) as either solved by alternative means or as a cover story for ongoing extraction. The R5 genealogy records that the founding problem is contested, preventing the regime from inheriting automatic legitimacy from its origin.",
+    "kernel_context": "This constraint is the freedom_imperative_reading of the software_control_legitimacy kernel. It instantiates the reading that user control is a fundamental freedom and proprietary software is categorically illegitimate. Sibling readings are: pragmatic_openness_reading (open source as better methodology but proprietary as legitimate), property_rights_reading (creators have legitimate authority to restrict), and commons_reading (negotiated collective management of shared infrastructure). This reading forecloses all three siblings because its categorical deontological claim (all proprietary restriction is wrongful) cannot coexist with any framework that accommodates proprietary legitimacy."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer",
+      "question": "Does the freedom_imperative_reading of the software_control_legitimacy kernel capture the full structural reality of proprietary control, or does its categorical deontology obscure coordination functions that a tangled_rope framing would reveal?",
+      "resolution_mechanism": "Comparative analysis across the four sibling readings of this kernel; evaluation of whether any proprietary regime can be authored with descriptively low Îµ without changing the observable.",
+      "impact": "If the coordination function is irreducible and separable from extraction, this reading overstates the case for snare and the engine will compute a tangled_rope or mountain classification for the beneficiary seat; if the coordination is inseparable from control denial, the snare classification holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committing-frame ambiguity for the freedom imperative reading within the software_control_legitimacy kernel."
+    },
+    {
+      "id": "coordination_extraction_separability",
+      "question": "Can the financing and coordination functions of proprietary software production be separated from the regime's freedom-denying extraction, or are they structurally fused?",
+      "resolution_mechanism": "Empirical comparison of free software and proprietary business models at equivalent scale; natural experiments in jurisdictions with strong public software funding.",
+      "impact": "If separable, the high Îµ authored here is partially the price of coordination and the constraint is tangled_rope; if fused, the extraction is intrinsic and snare classification is structurally accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coordination and extraction are separable in proprietary software."
+    },
+    {
+      "id": "suppression_source_ambiguity",
+      "question": "Is the persistence of proprietary software dominance driven primarily by active legal-technical suppression (enforcement, DRM, litigation), or by passive network effects and user inertia?",
+      "resolution_mechanism": "Measure exit elasticity in the absence of legal barriers: if migration surges when enforcement is removed, suppression is active; if migration remains low, dominance is inertial.",
+      "impact": "Active suppression would validate the high suppression score and snare classification; inertial dominance would suggest a piton or degraded rope dynamic with lower active extraction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Active enforcement versus inertial lock-in as the source of proprietary persistence."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "user_sovereign_control",
+    "drift_state": {
+      "moment": "contemporary_cloud_computing_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "software_control_legitimacy__pragmatic_openness_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "software_control_legitimacy__property_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "software_control_legitimacy__commons_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "user_control_as_moral_imperative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "proprietary_restriction_always_harmful",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the software_control_legitimacy kernel. Sibling constraints (pragmatic_openness_reading, property_rights_reading, commons_reading) model the same kernel through different normative frames. They are linked as a constraint family."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "gain_flow": "proprietary_vendors",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

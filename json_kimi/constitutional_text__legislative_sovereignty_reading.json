@@ -1,0 +1,237 @@
+{
+  "header": {
+    "constraint_id": "constitutional_text__legislative_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cslsr",
+    "story_uid": "fd45cf4a-98cf-474f-b3ee-1d41ff3dd776"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.55,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Legislative Sovereignty with Notwithstanding Override",
+    "topic_domain": "constitutional/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "parliamentary_majority"
+    ],
+    "victims": [
+      "constitutional_minorities"
+    ],
+    "vindicated_propositions": [
+      "parliamentary_sovereignty_doctrine",
+      "majoritarian_democratic_legitimacy"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "parliamentary_majority",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Holds legislative power and can pass ordinary or constitutional legislation asserting final meaning over contested rights. Invokes notwithstanding clauses or simple override when judicial advice conflicts with majority preferences. Retains office through elections and can alter the constraint's operation by majority vote."
+    },
+    {
+      "name": "constitutional_minorities",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Groups whose rights protections depend on judicial enforcement or constitutional entrenchment against majority preferences. Face the risk that parliamentary majority can override specific rights protections through legislative procedures. Political exit is constrained by national boundaries; domestic voice is diluted by majority electoral dominance."
+    },
+    {
+      "name": "high_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Hear constitutional challenges and issue advisory or non-binding interpretations of legislation relative to rights charters. Lack final authority to invalidate legislation; decisions can be set aside by legislative majority. Retain institutional role in clarifying legal norms but cannot block parliamentary will."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single, electorally accountable locus of constitutional authority, avoiding inter-institutional deadlock over constitutional meaning and locating final interpretive power in a representative legislature rather than unelected courts.",
+    "transfer_function": "Transfers final constitutional interpretive authority from the judiciary (and diffuse popular mechanisms) to the legislative majority, and transfers the cost of rights override from the majority to constitutional minorities whose judicial protections become non-binding.",
+    "absent_voices": "Judicial supremacy advocates argue that rights should be insulated from majority override, but their position is non-binding under this reading. Constitutional minorities are formally present in legislative debate but structurally outvoted. International human rights bodies offer external norms that lack domestic enforceability.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If legislative supremacy and override capacity vanished overnight, constitutional interpretation would shift toward judicial supremacy or popular mechanisms, minority rights protections would gain final judicial enforceability, and the balance between democratic accountability and rights insulation would invert.",
+    "founding_problem": "How to reconcile unelected judicial review with democratic self-government and prevent constitutional deadlock between branches of government.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Parliamentary sovereignty advocates and democratic theorists attest the problem of judicial tyranny remains live. Constitutional minority advocates and comparative rights scholars attest the problem is overstated and the arrangement persists as majoritarian domination; external comparative constitutional analysis corroborates both positions."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the legislative_sovereignty_reading of the constitutional_text kernel. Under this reading, the constitutional text establishes the legislature (Parliament) as the supreme institutional authority with final say over constitutional meaning, typically exercised through notwithstanding clauses or ordinary legislative override. Judicial review is advisory rather than binding. The constraint coordinates constitutional interpretation by locating final authority in a single, electorally accountable institution, but simultaneously extracts from constitutional minorities by permitting legislative override of rights protections. This is one of three sibling readings of the constitutional_text kernel; the judicial_supremacy_reading and popular_sovereignty_reading are authored as separate constraint stories linked via network.affects_constraints.",
+    "key_agents": [
+      "parliamentary_majority: Agenda-setter and primary beneficiary (institutional power, national scope, mobile exit through elections) â controls constitutional override capacity.",
+      "constitutional_minorities: Primary payer (moderate power, national scope, constrained exit) â bear the risk of rights override by majority.",
+      "high_courts: Advisory institutional observer (institutional power, national scope, analytical exit) â interpret but cannot finally block legislative will."
+    ],
+    "logic_rationale": "Extractiveness (0.62) is moderate-high: the constraint structurally permits the majority to override minority rights protections, transferring the cost of majoritarian preferences to vulnerable groups. Suppression (0.55) is moderate: judicial alternatives are not abolished but are rendered formally non-binding, collapsing the accessibility of final judicial remedy. Accessibility collapse (0.68) reflects that once legislative supremacy is established, domestic alternatives to majority will are severely limited. Resistance (0.52) captures ongoing contestation by minorities, rights advocates, and judicial supremacy proponents. Theater ratio (0.28) is low-moderate: parliamentary processes are largely functional, though some constitutional rhetoric asserting supremacy is performative. The measurement series tracks gradual extraction accumulation as rights-charter regimes mature alongside override mechanisms.",
+    "perspectival_gap": "The parliamentary majority experiences this constraint as the legitimate expression of democratic self-government and coordination (a rope-like function locating constitutional authority in elected representatives). Constitutional minorities experience it as exposure to unaccountable majority override (a snare-like function extracting their rights security for majority convenience). High courts occupy an intermediate seat: they retain institutional dignity and procedural role but experience subordination of their interpretive function. The engine computes these divergent seat classifications from the structural data.",
+    "directionality_logic": "The parliamentary majority is the structural beneficiary and agenda-setter (low d): it collects final constitutional authority and the capacity to legislate without judicial veto. Constitutional minorities are the structural targets (high d): they bear the costs of reduced rights security and limited institutional recourse. High courts are neither beneficiaries nor victims in the extraction chain; their directionality defaults toward symmetric (d ~0.5) due to analytical exit options, though their institutional role is constrained by the override mechanism.",
+    "mandatrophy_analysis": "The founding problem â reconciling judicial review with democratic self-government and avoiding inter-branch constitutional deadlock â remains contested and live in many jurisdictions. The constraint retains a genuine coordination function: it provides a clear, electorally accountable locus for resolving constitutional ambiguity. Because the coordination function is still operational and invoked (not merely theatrical), the constraint has not atrophied into a piton. However, if legislative override were exercised routinely rather than exceptionally, the coordination story would degrade into cover for extraction, and the constraint would drift toward snare.",
+    "kernel_context": "This constraint is the legislative_sovereignty_reading of the constitutional_text kernel. Sibling readings are judicial_supremacy_reading (courts have final say) and popular_sovereignty_reading (the people retain ultimate authority). This reading distinguishes itself by placing final interpretive authority in the legislature rather than the judiciary or the demos."
+  },
+  "omegas": [
+    {
+      "id": "majoritarian_coordination_vs_extraction",
+      "question": "Does legislative supremacy solve a genuine democratic coordination problem (avoiding judicial tyranny and deadlock), or does it primarily serve as a structural mechanism for majoritarian extraction from minorities?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with and without notwithstanding clauses: if rights outcomes are systematically worse for minorities under legislative supremacy while democratic legitimacy is not measurably enhanced, extraction dominates; if judicial supremacy jurisdictions show comparable or worse democratic deficits, coordination is genuine.",
+      "impact": "If extraction dominates, classification shifts toward snare; if coordination is genuine and asymmetric costs are incidental, classification remains tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether legislative supremacy is primarily coordination or extraction."
+    },
+    {
+      "id": "kernel_reading_contest_legislative",
+      "question": "This constraint instantiates the legislative_sovereignty_reading of the constitutional_text kernel; how would classification change under judicial_supremacy_reading or popular_sovereignty_reading?",
+      "resolution_mechanism": "Compare the sibling constraint stories: judicial supremacy likely shifts beneficiary/victim structure (courts as beneficiaries, legislative majorities as victims of constraint) and changes the directionality profile; popular sovereignty may diffuse directionality across the demos.",
+      "impact": "The current reading's extraction profile depends on the specific locus of final authority; alternative readings rewire who is coordinated and who pays.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "How sibling readings of the same kernel restructure the constraint."
+    },
+    {
+      "id": "override_usage_pattern",
+      "question": "Is the notwithstanding clause or legislative override used sparingly as a democratic safety valve, or routinely as an ordinary legislative tool?",
+      "resolution_mechanism": "Empirical counting of notwithstanding invocations across jurisdictions; qualitative analysis of whether usage clusters around rights-limiting legislation or coincidental statutory drafting.",
+      "impact": "Routine usage raises extractiveness and suppression over time, pushing the constraint toward snare; rare, high-salience usage maintains the tangled rope profile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether override mechanisms are exceptional or normalized."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "judicial_supremacy_reading",
+      "popular_sovereignty_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the constitutional_text kernel, decomposed per the Îµ-invariance principle. The legislative_sovereignty_reading, judicial_supremacy_reading, and popular_sovereignty_reading share the same constitutional domain but instantiate structurally distinct constraints with different Îµ values, beneficiary/victim structures, and loci of final authority."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "parliamentary_sovereignty_framework",
+    "drift_state": {
+      "moment": "contemporary_rights_charter_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_text__judicial_supremacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "constitutional_text__popular_sovereignty_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "parliamentary_supremacy_doctrine",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "legislative_override_validity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "gain_flow": "parliamentary_majority",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

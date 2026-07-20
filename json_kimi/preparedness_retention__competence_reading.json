@@ -1,0 +1,232 @@
+{
+  "header": {
+    "constraint_id": "preparedness_retention__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "preparedness_competence",
+    "story_uid": "ad20bc71-e360-4382-9cad-0e73180cb65e"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.08,
+    "claimed_type": "rope",
+    "human_readable": "Preparedness as Live Exercised Knowledge (Competence Reading)",
+    "topic_domain": "disaster_preparedness/institutional_memory/governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "general_public",
+      "emergency_operators"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Does the observed drill and inspection regime actually preserve live competence, or does it produce a ceremonial husk that merely performs readiness?",
+      "resolution_mechanism": "Empirical assessment of exercise outcomes: measure whether drill scenarios produce adaptive, context-specific responses or scripted, predictable performances; compare competence retention metrics between high-ceremony/low-outcome programs and low-ceremony/high-outcome programs.",
+      "impact": "If the regime is largely ceremonial, this constraint dissolves into the husk_reading (higher extraction, theater_ratio rises, beneficiary shifts to agencies performing legitimacy rather than population safety). If genuinely competent, the competence_reading holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between live competence and ceremonial performance in preparedness regimes."
+    },
+    {
+      "id": "resource_allocation_efficiency",
+      "question": "Does resource allocation for drills optimize for skill retention and adaptive capacity, or does it drift toward visible but inefficient preparedness theater?",
+      "resolution_mechanism": "Budget trace analysis: map expenditures to measurable competence outputs (retention curves, error rates in simulated events) versus ceremonial outputs (documentation volume, participation counts without skill verification).",
+      "impact": "If resources flow to ceremony, extraction rises (taxpayer-to-agency transfer without safety benefit); if to competence, the rope classification is sustained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether preparedness spending tracks competence or ceremony."
+    },
+    {
+      "id": "stratification_ambiguity",
+      "question": "Is preparedness competence uniformly distributed across the institutional landscape, or is it stratified with technical competence in specialized agencies and ceremonial memory elsewhere?",
+      "resolution_mechanism": "Cross-institutional competence auditing comparing specialized technical bodies against broad administrative or political institutions.",
+      "impact": "If stratified, the hybrid_reading is activated and the competence_reading applies only to a subset of the preparedness system.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether competence retention is uniform or stratified across institutions."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the competence_reading of the preparedness_retention kernel: the claim that preparedness is live exercised knowledge, maintained through drills and inspections that preserve operational capacity. It asserts a low ceremony-to-competence ratio and treats resource allocation as optimizing for skill retention and adaptive capacity. The beneficiary is diffuse population safety; no structural victim is declared because the coordination function is primary and extraction is minimal. The kernel is contested by the husk_reading (memorial performance) and the hybrid_reading (stratified competence). This JSON contains ONLY the competence_reading as a clean, epsilon-invariant constraint.",
+    "key_agents": [
+      "general_public: Diffuse beneficiary (powerless/organized scope) â receives safety from maintained response capacity.",
+      "emergency_operators: Direct beneficiary (moderate/constrained) â retain professional competence through repeated practice.",
+      "emergency_management_agencies: Agenda-setter and secondary beneficiary (institutional/constrained) â design, fund, and administer drill regimes.",
+      "oversight_bodies: Analytical observer (institutional/analytical) â reviews whether expenditures produce competence or ceremony."
+    ],
+    "logic_rationale": "Extractiveness is low (0.18) because the constraint moves resources into competence preservation rather than rent capture. Suppression is minimal (0.12) because alternatives (no drills) are not actively suppressed; they are simply known to produce skill decay. Theater_ratio is very low (0.08) reflecting the reading's explicit claim of low ceremony-to-competence ratio. Accessibility_collapse is moderate-low (0.25): once the decay function of unpracticed skills is understood, alternatives lose appeal but do not structurally disappear. Resistance is near-zero (0.08) because genuine competence preservation meets little opposition. Metrics are authored independently of the rope claim; they describe the constraint's actual operation under this reading.",
+    "perspectival_gap": "Seat divergence is mild in this reading because it is a genuine rope: all named parties are net beneficiaries of the coordination. The emergency_management_agencies experience the constraint as mission fulfillment and institutional purpose (low d, near-beneficiary); the general_public experiences it as background safety (low d); emergency_operators experience it as professional maintenance (low d). The engine will compute all seats toward the rope cluster. Divergence from the sibling husk_reading is large, but that is a different constraint.",
+    "directionality_logic": "Both declared beneficiaries (general_public and emergency_operators) receive low directionality because the constraint subsidizes their safety and professional capacity. The emergency_management_agencies sit near the agenda-setter pole but are not extractive targets: their institutional benefit is mission coherence, not captured rent. No victims are declared, so no stakeholder is pushed toward the target pole. The structural relationship is symmetric-to-beneficial for all parties.",
+    "mandatrophy_analysis": "This reading avoids mandatrophy mislabeling because the absence of victims, the absence of active enforcement, and the very low theater_ratio keep it outside snare or piton territory. If the constraint were secretly ceremonial, the metrics would show higher theater_ratio and some suppressed alternative (e.g., outcome-based audit), which would push classification toward tangled_rope or piton. The authored metrics do not show that pattern."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_retention__husk_reading",
+      "preparedness_retention__hybrid_reading"
+    ],
+    "dual_formulation_note": "This constraint is the competence_reading of the preparedness_retention kernel, which decomposes into three structurally distinct claims: competence_reading (live exercised knowledge), husk_reading (memorial performance), and hybrid_reading (stratified competence). The kernel's ambiguity is in the phrase 'preparedness retention', which conflates live competence with ceremonial repetition. Each reading carries a distinct epsilon, beneficiary structure, and classification."
+  },
+  "stakeholders": [
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from maintained emergency response capacity; lives and property are better protected when drills preserve operator competence. Cannot opt out of societal preparedness infrastructure."
+    },
+    {
+      "name": "emergency_operators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Maintain live competence through repeated drills and inspections; their professional capacity, safety, and effective response depend on practiced readiness. Career path is specialized and exit is costly."
+    },
+    {
+      "name": "emergency_management_agencies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design, fund, and administer drill programs and inspection regimes to keep response systems operationally ready. Derive institutional legitimacy and budget from the mission of preserving competence."
+    },
+    {
+      "name": "oversight_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Review preparedness budgets and exercise outcomes; assess whether funds produce measurable competence rather than ceremonial activity. Can mandate reforms but do not directly administer drills."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Preserve perishable operational skills and inter-organizational coordination across long intervals between infrequent disasters, ensuring that response capacity does not decay to ineffectiveness.",
+    "transfer_function": "Moves public funds and personnel labor into repeated drills, simulations, and inspections, converting them into retained competence and faster, more adaptive emergency response that protects population safety.",
+    "absent_voices": "Future disaster victims who have no voice before the event; taxpayers in jurisdictions where preparedness is underfunded; critics of drill regimes who are excluded from safety planning forums.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without live exercised knowledge, emergency response would revert to protocol reliance and improvisation under stress; inter-agency coordination would fragment and casualty curves would shift in the next major event.",
+    "founding_problem": "Operational skills and coordination protocols decay when not exercised; rare disasters provide insufficient real-world feedback to maintain readiness without synthetic practice.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent disaster sociology (Wildavsky, Clarke) and post-event inquiries (Katrina, Grenfell) corroborate that skill atrophy and coordination failure follow periods without live practice; these sources are outside the beneficiary set."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "live_competence_practice",
+    "drift_state": {
+      "moment": "contemporary_audit_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_retention__husk_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "preparedness_retention__hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "live_exercise_as_essential_retention",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "adaptive_capacity_over_compliance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

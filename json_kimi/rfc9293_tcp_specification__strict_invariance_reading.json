@@ -1,0 +1,234 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__strict_invariance_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rfc9293_strict",
+    "story_uid": "e63b5393-9e1b-47f5-a025-6c456ec01242"
+  },
+  "base_properties": {
+    "extractiveness": 0.02,
+    "suppression": 0.05,
+    "theater_ratio": 0.01,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "claimed_type": "rope",
+    "human_readable": "RFC 9293 Strict Invariance Reading",
+    "topic_domain": "network_protocol_engineering",
+    "beneficiaries": [
+      "compliant_implementations",
+      "internet_end_users"
+    ],
+    "victims": [
+      "strict_stack_implementations"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ietf_standards_body",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Maintains the RFC series and the TCP specification as a formalized state machine. Publishes errata and updates but treats the core invariants as non-negotiable for interoperability. Its authority derives from the open standards process and the textual lineage of RFCs."
+    },
+    {
+      "name": "compliant_implementations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Implement the RFC 9293 state machine exactly. Benefit from guaranteed interoperability with all other compliant stacks without pairwise negotiation. Cannot deviate without losing interoperability."
+    },
+    {
+      "name": "strict_stack_implementations",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Implement the specification literally and rely on wire-level invariants holding end-to-end. Bear the cost when middleboxes or non-compliant peers violate those invariants, requiring defensive engineering and workarounds."
+    },
+    {
+      "name": "middlebox_operators",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operate NATs, firewalls, and accelerators that modify TCP headers or segment boundaries in flight. Under this reading they are non-compliant actors, yet they remain pervasive and largely unaccountable to the standards body."
+    },
+    {
+      "name": "performance_optimizers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Seek to optimize TCP for datacenters, high-BDP paths, or constrained environments by relaxing timing or window behaviors. Their proposed deviations are treated as violations under strict invariance."
+    },
+    {
+      "name": "internet_end_users",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Rely on TCP for everyday connectivity. Benefit from the interoperability that the invariant state machine preserves, without needing to know which stack is running at either end."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single, unambiguous transport state machine that eliminates pairwise negotiation of core semantics across the global Internet, enabling any two compliant implementations to communicate reliably.",
+    "transfer_function": "Transfers implementation certainty and interoperability risk: each endpoint trades local engineering discretion for the assurance that remote peers will behave identically; no monetary transfer occurs, but the cost of strict compliance is borne by implementers while the benefit of interoperability is shared.",
+    "absent_voices": "Middlebox operators who alter TCP streams and performance-oriented implementers seeking local optimizations are structurally excluded or labeled as violators; their operational reality is acknowledged only as non-compliant.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the invariant state machine vanished, the global assumption of identical TCP behavior would collapse. Implementations would diverge, middlebox intolerance would fragment connectivity, and the Internet would splinter into incompatible transport islands.",
+    "founding_problem": "Reliable, ordered byte-stream transport across independently administered networks required a common protocol; without a shared specification, every host pair would require bespoke integration.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Network operators, systems researchers, and implementers outside the IETF attest that the absence of a unified transport standard would cause immediate interoperability collapse; operational experience with protocol diversity corroborates the live status."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.01
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.01
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.01
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.01
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the strict_invariance_reading of the RFC 9293 TCP specification kernel. Under this reading, RFC 9293 specifies an invariant state machine that implementations must replicate exactly; any deviation, including middlebox modification, is a violation. The constraint is claimed as a pure rope â a coordination mechanism that solves the collective-action problem of global interoperability without extraction. The metrics are authored independently: extraction is negligible, suppression minimal, and the theater ratio near zero, consistent with a technical standard whose function is purely coordinative. The victim seat (strict_stack_implementations) acknowledges that implementations relying on strict guarantees bear fragility costs when the operational network deviates, but the constraint itself extracts almost nothing.",
+    "key_agents": [
+      "ietf_standards_body (agenda setter, institutional)",
+      "compliant_implementations (beneficiary, organized)",
+      "strict_stack_implementations (payer, moderate)",
+      "middlebox_operators (excluded, powerful)",
+      "performance_optimizers (excluded, moderate)",
+      "internet_end_users (beneficiary, organized)"
+    ],
+    "logic_rationale": "Extractiveness is 0.02 because the specification itself moves no rents; it is a published text. Suppression is 0.05 because adoption is voluntary and non-compliant stacks simply fail to interoperate rather than being actively coerced. Theater ratio is 0.01 because enforcement is not performative â there is no compliance theater, only operational success or failure. Accessibility collapse is high (0.92) because once the spec is understood, ad-hoc alternatives collapse: deviating means non-interoperation. Resistance is low (0.08) because the industry generally accepts the standard, though middlebox operators and optimizers constitute a latent resistance.",
+    "perspectival_gap": "The IETF and compliant implementations experience the constraint as coordination: a solved problem with clear rules. Strict_stack_implementations experience it as a source of fragility: they pay in defensive engineering when the operational network violates the invariants they rely on. Performance_optimizers experience it as exclusion: they are barred from beneficial deviation. The engine computes these divergences from the structural data.",
+    "directionality_logic": "The IETF sits near the agenda-setter center; compliant implementations and end users are structural beneficiaries (low d) because the spec subsidizes their interoperability. Strict_stack_implementations are payers (high d) because they bear the cost of invariant fragility in a non-compliant world. Middlebox_operators and performance_optimizers are excluded, with d near the target end because the constraint is designed to suppress their behavior.",
+    "mandatrophy_analysis": "Not applicable as mandatrophy: the founding problem (global transport interoperability) remains live, and the constraint's function has not atrophied. The low theater ratio and live founding problem status prevent piton misclassification.",
+    "kernel_context": "This is the strict_invariance_reading of the rfc9293_tcp_specification kernel. Sibling readings are optimization_latitude_reading (permits performance latitude within semantic bounds) and middlebox_realism_reading (treats deployed middlebox behavior as authoritative over the text). This reading treats the RFC as a formalized, invariant kernel and forecloses both siblings."
+  },
+  "omegas": [
+    {
+      "id": "middlebox_prevalence_vs_strict_invariance",
+      "question": "Is the deployed middlebox population so pervasive that the strict invariance reading is operationally false, making strict implementations structurally fragile?",
+      "resolution_mechanism": "Empirical measurement of path-level TCP invariant preservation across diverse network paths.",
+      "impact": "If middleboxes universally violate invariants, strict invariance is a rope only in specification and a snare/tangled rope in operation; if paths are clean, strict invariance remains viable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether operational reality matches the strict state machine."
+    },
+    {
+      "id": "optimization_latitude_separability",
+      "question": "Can performance optimizations be separated from the core invariants without breaking interoperability, or does any latitude collapse the coordination function?",
+      "resolution_mechanism": "Controlled interop testing of optimized stacks against strict stacks.",
+      "impact": "If separable, strict invariance forecloses genuine coordination-compatible improvements; if inseparable, strictness is the price of the rope.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether optimization and invariance are structurally separable."
+    },
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "Does the RFC 9293 text itself logically compel strict invariance, or does it underdetermine the reading such that latitude is equally valid?",
+      "resolution_mechanism": "Close textual and formal analysis of the specification's normative language versus descriptive language.",
+      "impact": "If the text underdetermines, strict invariance is one reading among many and its foreclosure claims are overreach; if it compels, the reading is textually grounded.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel text supports only strict invariance."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "strict_state_machine_invariance",
+    "drift_state": {
+      "moment": "contemporary_middlebox_pervasive_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "rfc9293_tcp_specification__optimization_latitude_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "rfc9293_tcp_specification__middlebox_realism_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "protocol_identity_equals_state_machine_identity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "middlebox_modification_is_protocol_violation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

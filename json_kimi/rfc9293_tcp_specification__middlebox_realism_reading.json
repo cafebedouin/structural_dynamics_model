@@ -1,0 +1,310 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__middlebox_realism_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "1c47a7ef-4d50-41dd-b63d-fcb5087a43ff"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.78,
+    "theater_ratio": 0.6,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "RFC 9293 Middlebox Realism Reading: Specification Subordinated to Deployed Middlebox Population",
+    "topic_domain": "network_protocol_engineering/internet_standards",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "middlebox_operators",
+      "state_surveillance_infrastructure",
+      "network_equipment_vendors"
+    ],
+    "victims": [
+      "tcp_endpoints",
+      "application_developers"
+    ],
+    "vindicated_propositions": [
+      "middlebox_legitimacy_doctrine",
+      "traffic_shaping_necessity"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "middlebox_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Deploy and operate firewalls, NATs, proxies, and deep-packet inspection systems that inspect, modify, drop, or rate-limit TCP packets. They extract policy enforcement, surveillance compliance, and traffic-management capacity from the divergence between RFC 9293's endpoint-centric model and operational reality. They resist transport innovations (e.g., encrypted headers) that would restore endpoint autonomy and render their equipment obsolete."
+    },
+    {
+      "name": "state_surveillance_infrastructure",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Relies on middlebox visibility into TCP flows for lawful intercept, censorship, metadata extraction, and traffic analysis. Benefits from the fact that the deployed network preserves inspection points that RFC 9293's ideal end-to-end model would eliminate. Their operational continuity depends on the constraint's active enforcement by middlebox operators."
+    },
+    {
+      "name": "network_equipment_vendors",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Manufacture and sell the middlebox hardware and software that implements the de facto protocol by modifying traffic. Profit from the gap between specification and reality by selling DPI, NAT, and firewall products whose value proposition assumes continued meddling in transport-layer semantics."
+    },
+    {
+      "name": "tcp_endpoints",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Implement TCP stacks according to RFC 9293 but must deviate or accept modification by middleboxes to achieve global connectivity. Path MTU discovery is routinely broken, TCP options are stripped, and congestion signals are rewritten by middleboxes. They cannot opt out without losing reachability to large portions of the Internet."
+    },
+    {
+      "name": "application_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build applications assuming end-to-end TCP semantics, but must code defensively against middlebox interference: conservative option usage, TLS fingerprint randomization, complex retry logic, and NAT traversal hacks. They bear the engineering and reliability costs of the specification-reality divergence."
+    },
+    {
+      "name": "ietf_standards_body",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Authors and maintains RFC 9293 describing ideal endpoint behavior. Must temper specifications to accommodate known middlebox pathologies, documenting workarounds rather than enforcing the original end-to-end architecture. Their formal authority is aspirational because the deployed network determines what is actually viable."
+    },
+    {
+      "name": "quic_proponents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Design and advocate for QUIC and other encrypted transports that restore endpoint autonomy by making transport headers opaque to middleboxes. Treated as external disruptive forces by incumbent operators and equipment vendors; their proposals threaten the middlebox ecosystem and are resisted through deployment barriers and standards-process opposition."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a globally interoperable reliable byte-stream abstraction across heterogeneous autonomous networks by standardizing endpoint state-machine behavior, sequence numbering, and congestion control.",
+    "transfer_function": "Transfers control over packet semantics, option processing, timing, and flow visibility from endpoints and applications to middlebox operators, surveillance infrastructure, and network-equipment vendors, under the cover of a shared specification that remains nominally endpoint-centric.",
+    "absent_voices": "End users who assume their TCP connections are private and end-to-end; peer-to-peer and real-time application developers whose architectures are broken by NAT and DPI; encrypted-transport designers whose solutions are stonewalled by operator resistance; civil-society advocates for net neutrality who are not seated in the IETF operational community.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If middleboxes ceased modifying traffic and the specification became fully enforceable, NAT traversal libraries would become unnecessary, TCP options and extensions would become usable, application designs would simplify, encrypted transports would deploy faster, and the surveillance and policy-enforcement infrastructure would lose its passive inspection points. The global Internet protocol stack would reorganize toward the specified end-to-end ideal.",
+    "founding_problem": "Achieving reliable, ordered, and congestion-responsive data delivery across unreliable packet-switched networks with heterogeneous link characteristics, endpoint implementations, and administrative boundaries.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Internet historians and early RFC authors (e.g., Postel, Cerf) attest the founding problem was reliable transport. Network operators and security practitioners attest the current middlebox layer addresses distinct problemsâaddress scarcity, perimeter security, and regulatory complianceârather than the original transport problem. QUIC Working Group documents and independent measurement studies (e.g., IMC, SIGCOMM) corroborate that middlebox ossification is now an independent obstacle to transport evolution, not a solution to the founding problem."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.78
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint is the middlebox_realism_reading of the contested kernel rfc9293_tcp_specification. The kernel is RFC 9293, the TCP specification, which presents itself as an authoritative endpoint behavior standard. This reading holds that real TCP is path-dependent and shaped by the deployed middlebox population (NATs, firewalls, DPI, proxies); the specification is aspirational because middleboxes actively modify, drop, and reinterpret traffic, and specification authority is subordinate to what the network actually does. The constraint coordinates global interoperability in name while extracting control from endpoints in practice. Sibling readingsâstrict_invariance_reading and optimization_latitude_readingâare instantiated as separate constraints.",
+    "key_agents": [
+      "middlebox_operators (institutional/mobile): Primary beneficiariesâISPs and enterprises that operate packet-modifying infrastructure and resist transport encryption.",
+      "state_surveillance_infrastructure (institutional/constrained): Secondary beneficiaryârelies on middlebox visibility for lawful intercept and censorship.",
+      "network_equipment_vendors (institutional/arbitrage): Tertiary beneficiaryâprofit from selling middlebox hardware whose value depends on continued meddling.",
+      "tcp_endpoints (moderate/constrained): Primary targetsâend hosts that must accept modification or lose global reachability.",
+      "application_developers (moderate/constrained): Secondary targetsâbear the engineering costs of coding around middlebox interference.",
+      "ietf_standards_body (institutional/constrained): Agenda setter with aspirational authorityâmaintains the specification but cannot enforce it against the deployed base.",
+      "quic_proponents (organized/mobile): Excluded voicesâadvocate for encrypted transports that would restore endpoint autonomy and destroy the middlebox value proposition."
+    ],
+    "logic_rationale": "Extractiveness (0.72) is high because middleboxes extract policy control and surveillance capacity from every flow, transferring semantic authority from endpoints to network operators. Suppression (0.78) is higher still because endpoints cannot unilaterally reject middlebox modification without losing connectivity; the constraint is enforced by the topology of the deployed network. Theater_ratio (0.60) is elevated because the IETF continues to publish and update RFC 9293 as if it governed the network, while operational reality is determined by middlebox behaviorâmuch of standards activity becomes performative maintenance of an authority fiction. Accessibility_collapse (0.80) is high: once an engineer understands that middleboxes determine what works, the alternative of strict RFC compliance collapses because it fails in the wild. Resistance (0.55) reflects the partial pushback via QUIC, TLS 1.3, and encrypted DNS, which have gained traction but face deployment barriers from incumbent operators.",
+    "perspectival_gap": "From the middlebox operator and equipment-vendor seats, the constraint is necessary network management and security hygieneâgenuine coordination without which the Internet would fragment or collapse into abuse. From the endpoint and application-developer seats, the same structure reads as extraction of control by a network layer that has captured transport semantics for surveillance and policy enforcement. The IETF seat experiences cognitive dissonance: it authors an ideal model that it knows is systematically overridden. The engine computes this divergence from the structural beneficiary/victim asymmetry and the differential exit options (operators can change their boxes; endpoints cannot escape them).",
+    "directionality_logic": "Middlebox operators, state surveillance, and equipment vendors are structural beneficiaries: they collect control and revenue from the gap between specification and reality, so their directionality sits near the beneficiary end (low d). TCP endpoints and application developers are structural targets: they pay the cost in lost autonomy and defensive engineering, with constrained exit, so their directionality sits near the target end (high d). The IETF is an agenda setter whose limited enforcement power gives it a mid-range d; it is neither a primary beneficiary of extraction nor a direct target, but its authority is undermined by the constraint it documents. QUIC proponents are excluded and mobileâtheir high exit options and outsider status place them near the analytical edge.",
+    "mandatrophy_analysis": "The founding problemâreliable transport across unreliable networksâhas been solved for decades. The middlebox layer persists not to solve that original problem but to address address scarcity, perimeter security, and policy enforcement. This is a classic mandatrophy risk: a coordination mechanism outlives its founding problem and accumulates extraction. However, because the constraint still carries a genuine coordination function (global TCP interoperability is real and not trivially replaceable), the classification stops at Tangled Rope rather than Snare. A pure Snare would have no remaining coordination value; here, the middleboxes do mediate connectivity across heterogeneous networks, even as they extract control. The theater_ratio captures the growing distance between the coordination story and the extraction reality.",
+    "kernel_context": "This constraint instantiates the middlebox_realism_reading of kernel rfc9293_tcp_specification. The kernel is the TCP specification (RFC 9293), read three ways: strict_invariance_reading treats it as an invariant state machine; optimization_latitude_reading treats it as a behavioral outcome spec with implementation freedom; this reading treats it as an aspirational endpoint model subordinate to deployed middlebox behavior. The three readings are structurally distinct constraints linked by network.affects_constraints in the constraint family."
+  },
+  "omegas": [
+    {
+      "id": "specification_subordination_degree",
+      "question": "To what degree is RFC 9293 specification authority actually subordinate to deployed middlebox behavior, versus middleboxes gradually adapting to specification updates?",
+      "resolution_mechanism": "Longitudinal analysis of TCP option deployment rates post-RFC publication versus middlebox pass-through rates; measurement of RFC 8312 (CUBIC) and RFC 9000 (QUIC) adoption barriers attributable to middlebox intolerance.",
+      "impact": "If specifications can still drive deployment, the constraint is less extractive than this reading claims; if middleboxes consistently veto standards evolution, the reading is confirmed and the Tangled Rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether deployed middlebox population dominates specification authority."
+    },
+    {
+      "id": "middlebox_coordination_extraction_boundary",
+      "question": "Do middleboxes perform a genuine coordination function (address scarcity mitigation, DDoS protection, congestion management) that justifies their packet modification, or is their interference primarily extractive control (surveillance, policy enforcement, rent-seeking)?",
+      "resolution_mechanism": "Audit of middlebox modification types across major autonomous systems: classify NAT, security filtering, traffic shaping, and DPI by necessity to basic network function versus policy or surveillance goals.",
+      "impact": "If the majority of modifications are necessary for basic connectivity, the constraint may be a Rope or Tangled Rope with strong coordination; if majority is policy enforcement or surveillance, the Snare classification becomes more accurate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary between middlebox coordination function and extraction."
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "Does the middlebox realism reading foreclose the strict invariance reading, or can they coexist as descriptions of different layers (specification vs. implementation)?",
+      "resolution_mechanism": "Formal analysis of whether an endpoint can simultaneously hold the strict state-machine view (for compliance testing) and the path-dependent middlebox view (for operational engineering) without logical contradiction.",
+      "impact": "If coexisting, the readings describe different constraints linked by network affects; if foreclosing, they are rival commitment systems within the same kernel.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Logical relationship between middlebox realism and strict invariance readings."
+    },
+    {
+      "id": "endpoint_exit_structural_or_internalized",
+      "question": "Is the endpoint inability to escape middlebox modification a structural constraint (no alternative viable paths to global connectivity) or internalized (developers have accepted middlebox interference as natural and do not attempt alternatives even where available)?",
+      "resolution_mechanism": "Measure QUIC and TCP Fast Open adoption rates as natural experiments in endpoint exit; if adoption surges where paths exist, constraint is structural; if developers avoid features despite availability, internalization is present.",
+      "impact": "Structural suppression confirms high extractiveness via external enforcement; internalized suppression means effective extraction exceeds the structural measure because endpoints carry the constraint even where paths are open.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression of endpoint autonomy."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "reference_frame": "ietf_authoritative_specification",
+    "drift_state": {
+      "moment": "contemporary_internet",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "rfc9293_tcp_specification__strict_invariance_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "rfc9293_tcp_specification__optimization_latitude_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "deployed_path_as_operative_standard",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "network_operator_modification_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-20",
+    "source_essay": "no_scope_rebuild_kimi",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
