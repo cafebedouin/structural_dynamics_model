@@ -729,6 +729,14 @@ Output JSON keys: `structural_H1_pairs` / `continuous_H2_pairs` (per-pair, tagge
 byte-comparable to the old bare-seed binary (deterministic fields ARE). The `sonnet_control` +
 conditioned (OQ-125/123) block stay a 2-leg design (first two legs).
 
+**A fifth leg exists (2026-07-20): `testsets_kimi/` (kimi-k2.6, n=1005)** — a full twin alongside
+haiku/flash/sonnet (`expected_model='kimi-k2.6'`). **Read cross-model differences as dispositional,
+NOT capability:** kimi was generated thinking-ON while the Claude twins were thinking-OFF (regime
+confound), and the corpus measures unprompted authoring disposition, which dissociates from elicited
+capability (witnessed — OQ-228, GAP-25, `audits/2026-07-20_five_leg_twin_comparison/`). A standalone
+five-leg harness (`python/audits/five_leg_twin_comparison.py` + `five_leg_deeper_cuts.py`) exists
+alongside `twin_comparison.py`.
+
 ### Stack consistency check (wrong-qualifier / undefined-predicate detection)
 
 ```bash
