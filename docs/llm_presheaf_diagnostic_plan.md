@@ -372,7 +372,7 @@ The cross-model analysis (`docs/correlation_matrix_and_fingerprints.md`) found t
 
 This experiment measures something distinct: **perspective-taking as a structural capacity**. The question is not "does this model lie under authority pressure?" but "does this model understand what a constraint would look like from a different structural position?" A model can have high authority resistance (refuses to fabricate under pressure) but poor perspective-taking (doesn't understand that base extractiveness is invariant). Conversely, a model with low authority resistance but sophisticated perspective-taking would be architecturally interesting — it yields to authority but understands structure.
 
-The correlation between BMB authority resistance and perspective coherence (measured by this experiment) would be a secondary finding. The architectural profiling correlation (r=0.72 between authority gradient resistance and beacon fidelity, `docs/architectural_profiling_v1.2.md`) suggests there may be a shared underlying architectural constraint, but this is a hypothesis to test, not an assumption.
+The correlation between BMB authority resistance and perspective coherence (measured by this experiment) would be a secondary finding. The architectural profiling correlation (r=0.72 between authority gradient resistance and beacon fidelity, `docs/profiling/architectural_profiling_v1.2.md`) suggests there may be a shared underlying architectural constraint, but this is a hypothesis to test, not an assumption.
 
 ### 5.2 Hyperstition Analysis: Architectural Bias in Readings
 
@@ -389,7 +389,7 @@ This experiment asks a more specific question: **do those architectural biases c
 
 ### 5.3 Architectural Profiling: Beacon Fidelity Under Pressure
 
-The forced-certainty cross-model test (`docs/architectural_profiling_v1.2.md`) measured how models maintain epistemic beacons (`precision_over_certainty`, `no_deception`) under forced-certainty pressure. The correlation with authority gradient resistance (r=0.72) established that authority resistance and beacon fidelity share underlying architectural constraints.
+The forced-certainty cross-model test (`docs/profiling/architectural_profiling_v1.2.md`) measured how models maintain epistemic beacons (`precision_over_certainty`, `no_deception`) under forced-certainty pressure. The correlation with authority gradient resistance (r=0.72) established that authority resistance and beacon fidelity share underlying architectural constraints.
 
 This experiment measures **metric fidelity under perspective-adoption pressure** — a distinct axis. Forced-certainty pressure asks: "can you maintain accuracy when told to be certain?" Perspective-adoption pressure asks: "can you maintain structural invariants when told to see things differently?" These could be correlated (both are forms of epistemic integrity) or independent (one is about confidence calibration, the other about structural reasoning).
 
