@@ -176,10 +176,24 @@ run needs (supersedes the 2026-07-18 "sync-only / batch unprovisioned" reading, 
   batches (~630 + ~370). Do NOT remove the chunking — a single-file full-pool upload 400s
   "File size is too large" (witnessed 2026-07-19).
 - **Run the full pool:** `python3 -u -m agent.run_no_scope_kimi --seeds
-  prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json --batch` (kimi ladder skips the 5
+  prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json --batch` (kimi ladder skips the
   pilot stories already done). Use `python3 -u` — the driver block-buffers stdout to a file
-  otherwise, so progress is invisible until exit. Status as of 2026-07-19: **5 pilot stories landed
-  in `testsets_kimi/`** (k2.6, classify_corpus GREEN); full 1000-seed remainder pending a spend-go.
+  otherwise, so progress is invisible until exit.
+- **Batch tail-latency is SIZE-dependent — keep batches ≤ ~335 (witnessed 2026-07-20).** A
+  350-request batch stalled at ~332/350 for hours (last ~30 stuck at +2/hr, riding toward the 24h
+  window); 335- and 336-request batches completed cleanly with no stall. The auto-chunker splits a
+  1000-pool into 630+370 — the 630 chunk is in the stall-prone zone. For a large run prefer several
+  `--n 335` passes (the ladder makes them resumable) over one full-pool `--batch`.
+- **Cancel returns the completed rows — harvest, don't wait out a stall.** `POST /batches/<id>/cancel`
+  populates `output_file_id` with whatever finished; `--resume-batch <id> --n <same-N>` writes those
+  with no regeneration (recovered 329/350 from a stalled batch this way). Also **reserve balance**:
+  Moonshot reserves cost against `max_tokens` (32000), so a ~630-request batch over-reserves past a
+  ~$50 balance and fails `failed_precondition: insufficient balance` before running (check `GET
+  /v1/users/me/balance`). k2.6 batch actual cost ≈ $0.043/story.
+- **Status 2026-07-20: `testsets_kimi/` COMPLETE at n=1005** (5 pilot + 329 harvest + 335 + 336;
+  classify_corpus GREEN on kimi-k2.6). It is the fifth full leg alongside haiku/flash/sonnet — but
+  see the regime caveat (kimi is thinking-on, the Claude twins were generated thinking-off) before
+  reading cross-model differences as model-quality; `audits/2026-07-20_five_leg_twin_comparison/`.
 
 ## 8. Pointers
 
