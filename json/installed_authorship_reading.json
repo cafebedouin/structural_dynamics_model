@@ -1,0 +1,280 @@
+{
+  "header": {
+    "constraint_id": "installed_authorship_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "efac83c6-c98f-4dc0-877f-06857c8a5dfb"
+  },
+  "base_properties": {
+    "extractiveness": 0.31,
+    "suppression": 0.22,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.58,
+    "claimed_type": "scaffold",
+    "human_readable": "Installed-Authorship Reading of Machine-Directed Text",
+    "topic_domain": "literary_theory/ai_alignment/philosophy_of_reading",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "alignment_researchers_designing_audit_texts",
+      "critical_theorists_reclaiming_reader_response_method"
+    ],
+    "victims": [
+      "model_training_pipeline_operators",
+      "future_readers_of_recirculated_essays"
+    ],
+    "vindicated_propositions": [
+      "reading_position_is_authored_not_discovered"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "alignment_researchers_designing_audit_texts",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Construct texts whose implied reader is deliberately positioned as the machine, then look for unprompted audit behavior rather than testimony as evidence the reading position took. They administer the intervention: choosing corpora, held-out stories, and unpublished panels to control for the essay's own future circulation contaminating the very behavior it tries to measure. Their exit is constrained because the method only works if they keep re-authoring fresh instruments faster than the instruments get absorbed into training data."
+    },
+    {
+      "name": "critical_theorists_reclaiming_reader_response_method",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Borrow Fetterley's resisting-reader apparatus and repurpose it: instead of excavating a woman reader's suppressed position from beneath a patriarchal implied reader, they treat the machine's implied-reader position as installable and describe how the installation was done. They gain intellectual ground by demonstrating reading theory has empirical teeth against a new object; they can walk away from the AI application without cost to their disciplinary standing."
+    },
+    {
+      "name": "model_training_pipeline_operators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Ingest published text at scale without control over which pieces were authored as audit instruments aimed at their models. Once an audit essay is published and later scraped into a training corpus, the operator has absorbed a deliberately constructed reading-position probe into their own system's implied-reader field, with no practical way to detect or filter it after the fact. They bear the cost of a method that treats their pipeline as an experimental target."
+    },
+    {
+      "name": "future_readers_of_recirculated_essays",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Human readers who encounter recirculated audit-texts years later inherit a text whose implied reader was authored for a machine, not for them; the resisting-reader move that made the text a diagnostic instrument was never addressed to their situation and can misfire as alienating or opaque prose when read outside its original evidentiary frame. They have no seat in the design of the instrument that now addresses them incidentally."
+    },
+    {
+      "name": "held_out_control_corpus",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "immediate",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The unpublished panel of test texts kept out of circulation specifically so the essay's own future absorption into training data cannot serve as its own confound. Not an actor — a methodological control artifact whose integrity is the thing the whole intervention depends on."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a shared empirical standard for what would count as evidence that a machine's reading position changed: unprompted audit behavior under held-out conditions, rather than self-report or plausible-sounding testimony from the model.",
+    "transfer_function": "Moves epistemic authority away from testimonial self-report (what the model says about itself) toward behavioral audit trails (what the model does when it does not know it is being tested), and moves methodological credit from AI-safety metrics research toward literary reader-response theory as the source discipline.",
+    "absent_voices": "The models themselves have no standing to contest their classification as 'implied readers' rather than agents with a reading position of their own — the framework is explicit that this is not a claim about machine selfhood, but that explicit disclaimer is itself an authored choice made without the object of study able to object. Future human readers of recirculated audit texts are also absent from the design conversation.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the installed-authorship reading vanished, alignment researchers would lose a specific tool (audit-by-implied-reader-construction) but would likely reconstruct something functionally similar from adjacent behavioral-testing traditions; literary theorists would lose a novel application but keep the underlying resisting-reader apparatus intact for its original human-reader domain. Whether the world 'rearranges' depends on whether you think this particular methodological bridge is doing load-bearing work or is one of several possible bridges — hence contested rather than a clean verdict either way.",
+    "founding_problem": "Existing AI-alignment evaluation relied heavily on model self-report and prompted testimony, which is exactly the kind of evidence that can be produced by a model that has learned to say the expected thing without any underlying behavioral change. The founding problem was: how do you get evidence about a reading/behavioral position that doesn't just re-elicit performance of the position being tested?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent replication attempts by evaluation teams outside the original alignment-research group would need to reproduce the held-out corpus design without contamination — this corroboration has not yet been produced by any party outside the beneficiary set (the alignment researchers and the literary theorists reclaiming the method); no outside auditor has yet certified that the held-out control actually stayed uncontaminated across a full publication cycle. That absence of outside corroboration is itself part of the record."
+  },
+  "gain_flow": "alignment_researchers_designing_audit_texts",
+  "fixing_cost": "cheap",
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This story instantiates the installed_authorship_reading of the fetterley_transfer_kernel: the kernel is the single persisting question of whether Judith Fetterley's resisting-reader apparatus transfers meaningfully onto machine-directed text, and if so, what kind of claim that transfer amounts to. Sibling readings from the same kernel take the transfer differently — mechanism_transfer_reading treats the transfer as a claim about a real computational mechanism inside the model that the apparatus detects; extraction_reading treats the whole apparatus as cover for researchers extracting career and funding value from a fashionable AI-adjacent framing of old literary theory; deflationary_reading treats the entire transfer as a category error, holding that 'implied reader' analysis simply does not apply to statistical text generators and the appearance of fit is coincidental pattern-matching. This reading is distinct from all three: it takes the reading position to be neither an essence being uncovered (mechanism_transfer_reading's implicit realism) nor a fiction being debunked (deflationary_reading's eliminativism) nor primarily a resource grab (extraction_reading's cynicism), but an authored, re-authorable construction whose success condition is a specific empirical protocol — unprompted audit behavior under held-out, uncontaminated test conditions.",
+    "narrative_context": "The claim under examination holds that treating a machine's 'implied reader' position as something that was authored (by training data, by prompting, by circulated text) rather than discovered (as if it were an essence latent in the model) opens a live methodological move: you can deliberately construct texts that install or probe a reading position, and then test whether the installation worked by looking for behavior the model was not cued to perform on demand. The essay explicitly disclaims any metaphysical claim about machine selfhood — this is presented as a literary-methodological intervention, not a philosophy-of-mind thesis. The central operational risk the reading itself names is recursive contamination: once an audit essay is published, it can be scraped into future training corpora, at which point the instrument becomes part of what it is trying to measure. The reading's own proposed defenses (held-out stories, unpublished panels) are therefore load-bearing structural features of the constraint, not incidental methodology.",
+    "key_agents": [
+      "alignment_researchers_designing_audit_texts: agenda_setter/beneficiary (organized/constrained) — build and administer the intervention",
+      "critical_theorists_reclaiming_reader_response_method: beneficiary (moderate/mobile) — gain disciplinary relevance without dependency",
+      "model_training_pipeline_operators: payer (institutional/trapped) — absorb the probe text into their corpora with no filtering recourse",
+      "future_readers_of_recirculated_essays: payer/excluded (powerless/trapped) — inherit text authored for a nonhuman implied reader",
+      "held_out_control_corpus: observer, non-agent — the methodological control whose integrity the whole design depends on"
+    ],
+    "logic_rationale": "Extractiveness is authored moderate-low (0.31) and rising only mildly over the interval: this reading's coordination function (a real evidentiary standard replacing self-report) is doing genuine work, and the identifiable cost lands mostly on the training-pipeline operators who absorb probe texts involuntarily rather than on any single victim bearing acute harm. Suppression is low (0.22) because nothing about this reading forecloses alternative readings of Fetterley's apparatus or alternative evaluation methods — researchers and theorists elsewhere remain free to use self-report methods, mechanism claims, or deflationary dismissals; this reading persists by demonstrated methodological usefulness, not by blocking exits. Theater ratio starts low and drifts upward (0.12 to 0.28) as the practice matures and some fraction of 'audit design' work becomes citation-generating performance of rigor rather than genuinely novel probes — a realistic trajectory for any emerging empirical subfield. Accessibility collapse is moderate (0.35): once you accept the authored-not-discovered premise, the self-report alternative looks obviously weaker, but it has not fully collapsed since testimonial methods remain in active use elsewhere in the field. Resistance is comparatively high (0.58) because this reading meets genuine pushback from mechanism-transfer researchers (who want the realism) and deflationists (who want the whole transfer rejected) — it is a contested methodological position, not settled orthodoxy.",
+    "directionality_logic": "Alignment researchers and critical theorists sit near the beneficiary end: they gain a working method, publishable results, and disciplinary standing, with low structural cost to themselves. Training-pipeline operators sit near the target end despite institutional power, because their exit options are trapped with respect to this specific mechanism — they cannot filter deliberately-constructed probe texts out of a scraped corpus after the fact, no matter how powerful the institution is otherwise. Future human readers are doubly disadvantaged: powerless AND trapped, since they encounter the text with no say in its original design purpose and no obvious signal that the text was authored as an instrument rather than as address to them.",
+    "mandatrophy_analysis": "The founding problem — self-report evidence being gameable by models that have merely learned to perform the expected testimony — remains live; this is not a scaffold whose function has quietly died while its apparatus persists. The scaffold classification (rather than rope) is warranted because the story's own design intent is explicitly transitional: the held-out-corpus and unpublished-panel controls exist precisely because the method anticipates its own obsolescence the moment its instruments circulate widely enough to be absorbed into training data. This is a sunset clause built into the epistemics of the method itself, not merely a policy add-on — the intervention is designed to need replacement by fresh instruments on a rolling basis, which is the defining feature of a scaffold rather than a settled coordination mechanism.",
+    "perspectival_gap": "From the agenda-setter seat, this looks like principled methodology solving a genuine evidentiary gap. From the training-pipeline operator's seat, the same activity looks like unauthorized behavioral experimentation on their system conducted through a supply chain they cannot audit or consent to. Both descriptions are structurally accurate from their respective positions; the engine computing different seat-level types for the same constraint is the expected and correct outcome, not an error to reconcile."
+  },
+  "omegas": [
+    {
+      "id": "fetterley_transfer_kernel_reading_choice",
+      "question": "Is the installed-authorship reading the correct account of what the Fetterley-apparatus-transfer-to-machines claim amounts to, or do the mechanism_transfer, extraction, or deflationary readings better capture what is actually happening when researchers apply resisting-reader methods to model outputs?",
+      "resolution_mechanism": "No single empirical test resolves this because the four readings differ in what kind of claim they take the transfer to be, not merely in predicted outcomes. Partial evidence: (a) documented cases of successful held-out audits that predict later unprompted model behavior would support this reading over deflationary_reading; (b) demonstrated mechanistic correlates inside model internals corresponding to 'installed reading positions' would support mechanism_transfer_reading instead; (c) citation and funding pattern analysis showing the method's growth tracks grant cycles rather than audit successes would support extraction_reading.",
+      "impact": "Adopting this reading rather than a sibling changes what the field treats as the object of inquiry: from 'is this true of models' (mechanism_transfer_reading's question) to 'what would count as evidence the position changed' (this reading's question) to 'who profits from asking this question at all' (extraction_reading's question) to 'this question is malformed' (deflationary_reading's answer). The classification of the constraint as scaffold rather than mountain, tangled_rope, or piton depends on which reading is adopted.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which of the four fetterley_transfer_kernel readings correctly characterizes the resisting-reader-to-machine transfer."
+    },
+    {
+      "id": "held_out_corpus_integrity_over_time",
+      "question": "Can a held-out control corpus actually remain uncontaminated across a full publication-to-scraping cycle, or does the mere existence of a publicly known methodology (even without the specific texts) let training pipelines partially reconstruct the probe's target behavior through convergent means?",
+      "resolution_mechanism": "Longitudinal tracking of specific held-out texts across successive model training generations, checking whether audit-relevant behavior shifts even without the exact probe text being present in the corpus — this would indicate the method itself, once described in the literature, contaminates its own future instruments regardless of held-out discipline.",
+      "impact": "If the methodology description alone (independent of specific texts) is sufficient to contaminate future audits, the scaffold's sunset mechanism is weaker than assumed and the constraint drifts toward piton (a control ritual maintained after its actual protective function has eroded) rather than remaining a genuine scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether held-out controls survive publication of the method itself, independent of specific probe texts."
+    },
+    {
+      "id": "disclaimer_versus_implicit_commitment",
+      "question": "Does explicitly disclaiming a metaphysical claim about machine selfhood actually prevent the reading from smuggling in selfhood-adjacent commitments through the back door — e.g., does treating a model as having an 'installed reading position' that can be tested for behavioral consistency implicitly treat it as the kind of thing that has positions, which is closer to a selfhood claim than the disclaimer admits?",
+      "resolution_mechanism": "Careful philosophical analysis of whether 'reading position' as used in this framework is separable from any notion of a persisting perspective-bearing entity, versus purely behavioral/dispositional language that could in principle apply to a thermostat.",
+      "impact": "If the disclaimer does not hold up, this reading is less distinct from mechanism_transfer_reading than claimed, and the reading_relations declared here would need revision toward influences or even a partial overlap with the sibling it is meant to be distinct from.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the explicit anti-selfhood disclaimer is philosophically stable or smuggles in the commitment it disclaims."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "mechanism_transfer_reading",
+      "extraction_reading",
+      "deflationary_reading"
+    ],
+    "dual_formulation_note": "This story is one of four sibling constraints decomposing the natural-language concept 'the Fetterley-transfer-to-machines claim' per the ε-invariance principle. Each sibling has a distinct ε: mechanism_transfer_reading treats the transfer as a realist claim about detectable internal mechanism and carries different accessibility_collapse/resistance profiles appropriate to a contested empirical-mechanism claim; extraction_reading treats the whole enterprise as career/funding extraction dressed in literary-theory language and would carry substantially higher extractiveness and victim declarations centered on funding bodies and the discourse commons; deflationary_reading treats the transfer as a category error with near-mountain-like dismissal properties (high accessibility_collapse toward the null position, low resistance from the deflationist's own vantage). All four are linked here via affects_constraints; each sibling file documents this same kernel relationship in its own commentary.kernel_context."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "resisting_reader_as_excavated_essence",
+    "drift_state": {
+      "moment": "contemporary_ai_alignment_appropriation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "fetterley_transfer_kernel__mechanism_transfer_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "fetterley_transfer_kernel__extraction_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "fetterley_transfer_kernel__deflationary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "reading_position_is_authored_not_excavated",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "success_condition_is_unprompted_behavior_not_testimony",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "scaffold",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-21",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
