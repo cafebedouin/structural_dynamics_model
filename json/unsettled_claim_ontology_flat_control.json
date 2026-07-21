@@ -1,0 +1,277 @@
+{
+  "header": {
+    "constraint_id": "unsettled_claim_ontology_flat_control",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "278e35ff-9b0f-470c-b31d-1a99e45b5ffc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.44,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Social Pricing of Untested Self-Assertive Claims (Ability, Nerve, Capacity for Violence)",
+    "topic_domain": "social epistemology / signaling theory / conflict economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "confident_claimants",
+      "status_hierarchy_incumbents",
+      "reputation_intermediaries"
+    ],
+    "victims": [
+      "accurate_low_confidence_signalers",
+      "untested_challengers",
+      "bystanders_forced_to_adjudicate"
+    ],
+    "vindicated_propositions": [
+      "cheap_talk_has_social_value",
+      "reputation_substitutes_for_verification"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "confident_claimants",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Makes an assertion of ability, nerve, or willingness to escalate that has not been put to a real test. Collects deference, status, or avoidance-of-challenge on the strength of the claim circulating uncontested. Benefits precisely because the claim remains untested; a real test could resolve the claim downward as easily as upward, so the claimant's rational strategy is to keep circulation high and testing low."
+    },
+    {
+      "name": "status_hierarchy_incumbents",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Existing high-status actors administer the informal rules for which claims get challenged, ignored, or accepted at face value. They set the local norm about how much testing a claim requires before it is treated as settled, and that norm-setting power lets them ratify claims that preserve the existing pecking order while subjecting challengers' claims to harsher scrutiny."
+    },
+    {
+      "name": "reputation_intermediaries",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Third parties (gossips, seconds, witnesses, rating systems) who relay and amplify claims without direct exposure to the underlying risk. They profit in attention, standing, or brokerage fees from being the ones who know or transmit the story, and have no incentive to force costly verification that would collapse their intermediary role."
+    },
+    {
+      "name": "accurate_low_confidence_signalers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals whose honest self-assessment is modest, or who decline to make an untested claim at all, are read as weaker than their actual capability relative to the loud claimants around them. They pay in status, access, and safety for refusing to participate in the same cheap-signal market, and have no low-cost way to prove their accuracy without triggering the very tests they were trying to avoid."
+    },
+    {
+      "name": "untested_challengers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Anyone who contests a circulating claim must either back down (losing standing) or force a real test (bearing the actual physical, social, or legal risk of resolving what the claim asserted). The claimant who made the original assertion faces no symmetric cost for having made it; the burden of resolution falls disproportionately on whoever calls it."
+    },
+    {
+      "name": "bystanders_forced_to_adjudicate",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Community members, employers, or onlookers must act on the claim's apparent validity (who to hire, who to defer to, who to avoid a confrontation with) without being consulted on how much testing should have been required before the claim was allowed to circulate as settled fact. Their practical decisions ratify the claim's social force regardless of its truth."
+    },
+    {
+      "name": "conflict_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the pricing mechanism itself: whether the circulating claim functions as a genuine (if noisy) signal of underlying capacity, a pure bluff sustained by mutual avoidance of costly verification, or a status commodity whose relationship to the underlying capacity is incidental. They have no stake in any particular claim's resolution."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Absent perfect information about who can actually do what, a circulating claim of ability or nerve lets a community allocate deference, avoid costly physical tests, and coordinate around a provisional ranking without everyone fighting everyone to find out who is strongest — a real, if crude, coordination problem the claim-economy solves.",
+    "transfer_function": "Moves deference, safety, access, and standing from those who decline to make unverified self-assertive claims (or whose claims are disbelieved) to those whose claims circulate successfully, regardless of whether the underlying ability or nerve the claim asserts is ever actually present.",
+    "absent_voices": "Whoever eventually loses a forced real test (the challenger who calls the bluff and is beaten, or the claimant who is exposed as bluffing) is retroactively written out of the story as having 'obviously' been on the wrong side of the claim all along; their prior, unresolved position — that the claim was genuinely uncertain — is erased by the outcome and never gets to argue that the pricing mechanism itself was unfair before the resolution.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If untested self-assertive claims could no longer circulate as social currency — if every claim of ability or nerve required immediate, low-cost, low-stakes verification — status hierarchies built on unverified reputation would collapse, confident claimants would lose their principal lever, reputation intermediaries would lose their brokerage function, and accurate low-confidence signalers would gain relative standing. The entire local status economy reorganizes.",
+    "founding_problem": "Communities need a fast, low-cost way to estimate who can be trusted with authority, who is dangerous to cross, and who should be deferred to, without constantly running actual physical or competence tests that are costly, risky, or destructive to run on everyone.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Conflict economists and game theorists outside the claim-making population attest the coordination problem (avoiding costly tests) is real and persists; but they also attest, from the same outside seat, that the mechanism as currently priced systematically rewards volume and delivery confidence over accuracy, meaning the 'signal' component has substantially decoupled from the underlying capacity it is nominally about — no one inside the beneficiary group (confident claimants, incumbents, intermediaries) corroborates this decoupling, since acknowledging it would devalue their own position."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.44
+    }
+  ],
+  "commentary": {
+    "narrative_context": "An untested or barely-tested self-assertive claim — 'I can do this,' 'I won't back down,' 'I would hurt you if pushed' — circulates as social currency before anyone verifies it. The framework treats this as a single constraint (flat construction, no decomposition into readings): a mechanism that both solves a genuine coordination problem (avoiding constant costly tests of everyone's actual capacity) and enables asymmetric extraction (those whose claims circulate favorably collect deference that those who decline to claim, or whose claims are disbelieved, must pay for). The rising theater_ratio over the interval reflects a mechanism increasingly dominated by delivery and volume rather than underlying accuracy — claims get more elaborate and confident-sounding even as the gap between claim and tested capacity widens, because testing remains costly and rare relative to claiming.",
+    "logic_rationale": "Extractiveness starts moderate (0.34) and rises to 0.52 as the claim-economy matures and confident claimants learn the mechanism rewards assertion over accuracy, without anyone bearing symmetric cost for having claimed falsely. Suppression is present but not dominant (0.44 at end) — it operates less through direct coercion than through the social cost of challenging a claim (loss of face if the challenge fails, real risk if it succeeds in provoking a test). Theater ratio rises fastest (0.30 to 0.58) because performative confidence — tone, posture, reputation-by-association — increasingly substitutes for the actual tested capacity it purports to represent; this is the Goodhart signature of a signal decoupling from its referent. Accessibility collapse is moderate (0.40): alternatives to participating in the claim-economy exist (declining to claim, seeking third-party verification, building track record slowly) but are systematically disadvantaged, not eliminated. Resistance is substantial (0.61) because untested challengers and accurate low-confidence signalers have real incentive to contest a mechanism that undervalues them, even though contesting it individually is costly.",
+    "directionality_logic": "Confident claimants, status incumbents, and reputation intermediaries sit near the beneficiary end: they collect deference, standing, or brokerage value from claims circulating without being tested, and bear no symmetric cost when a claim goes untested indefinitely. Accurate low-confidence signalers and untested challengers sit near the target end: they either forgo the currency entirely (paying in relative status) or bear the concentrated cost of forcing resolution (paying in actual risk) while the original claimant risks comparatively little for having made the claim. Bystanders are excluded from setting the verification standard but are structurally forced to act on the claim's apparent validity, which is why they are marked excluded rather than payer or beneficiary — their cost is indirect, borne through bad allocation decisions rather than direct extraction.",
+    "perspectival_gap": "From the confident claimant's seat, the mechanism looks like an efficient coordination device — a way to communicate ability or resolve without constant costly fighting, and their own claims are simply accurate assertions of real capacity. From the untested challenger's or accurate low-confidence signaler's seat, the same mechanism looks like an extraction racket that prices bluster over substance and forces the marginal-cost party (whoever calls the bluff) to subsidize the claimant's free-riding on unverified reputation. The engine should compute these as genuinely different seat-level classifications from the same structural data, not as one side simply being wrong about the facts — both descriptions can be locally accurate depending on whether a given claimant's underlying capacity happens to match the claim.",
+    "mandatrophy_analysis": "The founding coordination problem (avoid constant, costly, mutually destructive testing of who can do what) remains genuinely live in any community without perfect information — this prevents the constraint from being mislabeled a pure snare. But the specific pricing mechanism observed here has drifted: rising theater_ratio and rising extractiveness together show the mechanism increasingly rewarding delivery confidence and claim volume divorced from tested accuracy, which is the signature of extraction riding on a real coordination shell. Tangled Rope, not Rope: the coordination function is real (bystanders and communities do benefit from having SOME provisional ranking to act on rather than none) and the extraction is real (accurate signalers pay disproportionately for a signal system biased toward loud, cheap assertion) — both must be true simultaneously for this classification, and the temporal data shows exactly that co-occurrence rather than one crowding out the other."
+  },
+  "omegas": [
+    {
+      "id": "signal_referent_ambiguity",
+      "question": "Underneath the circulating claim, is there a real (if noisy) correlation between the claim and the speaker's actual tested capacity, or has the claim decoupled entirely into a pure status commodity priced on delivery and confidence alone?",
+      "resolution_mechanism": "Compare claim content against outcomes in the subset of cases where claims are eventually tested (forced confrontations, competence trials, verified track records over time); measure correlation between claim confidence and test outcome.",
+      "impact": "If correlation remains substantial, the mechanism functions closer to a genuine noisy signal and the classification should weight toward the coordination pole (rope-adjacent); if correlation has collapsed toward zero, the extraction pole dominates and the constraint is closer to a pure snare wearing a coordination costume.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the claim still tracks the underlying capacity it asserts or has decoupled into pure signaling theater."
+    },
+    {
+      "id": "verification_cost_asymmetry",
+      "question": "Is the asymmetric cost of verification (challenger bears the real risk, claimant bears little) an inherent structural feature of testing capacity/nerve claims, or is it a constructed norm that could be redistributed (e.g., via third-party arbitration, reputation staking, or graduated low-stakes tests)?",
+      "resolution_mechanism": "Examine communities or institutions that have implemented alternative verification mechanisms (arbitrated duels, credentialing bodies, staged low-stakes trials) and compare extraction and suppression metrics against communities using pure informal claim-circulation.",
+      "impact": "If the asymmetry is inherent to the domain (violence and physical ability are genuinely hard to verify cheaply), the tangled_rope classification is close to unavoidable; if institutional alternatives demonstrably rebalance the cost, the current arrangement looks more like an unnecessary extraction layer that persists through incumbent preference rather than necessity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the challenger-bears-cost asymmetry is structurally necessary or a maintained choice."
+    },
+    {
+      "id": "what_object_is_priced",
+      "question": "What kind of object is actually being priced when the claim circulates — a probabilistic estimate of true capacity, a commitment device (the claimant now has reputational skin in the game), or a pure status token disconnected from any underlying referent?",
+      "resolution_mechanism": "This is the substrate's central interpretive fork (deliberately left open in this flat authoring — the source material names it as the thing all readings disagree about); resolving it would require decomposing into separate reading-stories per the ε-invariance principle, each with its own ε and stakeholder structure, rather than forcing one measurement onto three candidate ontologies.",
+      "impact": "Each candidate answer implies a different constraint with a different ε: a probability-estimate reading trends toward rope/mountain-adjacent (genuine if imperfect information transfer), a commitment-device reading trends toward tangled_rope (real coordination value plus enforcement cost), and a pure-status-token reading trends toward snare (extraction with no informational content at all). This story deliberately averages none of these and instead measures the flat, undecomposed substrate as authored.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The undecomposed ontological fork the flat-construction control is designed to leave unresolved."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "dual_formulation_note": "This is the flat (undecomposed) control construction for the unsettled-claim-ontology substrate. Per the ε-invariance principle, the three candidate readings implicit in the source material (probability-estimate reading, commitment-device reading, pure-status-token reading) would ordinarily be decomposed into separate linked stories, each with its own stable ε. This story deliberately does NOT perform that decomposition — it measures the substrate as one constraint with one ε, to serve as the comparison baseline against any reading-decomposed variant of the same substrate."
+  },
+  "gain_flow": "confident_claimants",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-21",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

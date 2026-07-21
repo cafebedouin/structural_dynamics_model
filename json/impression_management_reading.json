@@ -1,0 +1,288 @@
+{
+  "header": {
+    "constraint_id": "impression_management_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "53035c08-d23d-4412-a6a5-6ef1e640d6d5"
+  },
+  "base_properties": {
+    "extractiveness": 0.44,
+    "suppression": 0.28,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Audience-Tailored Persona Management Reading of Claim-Making",
+    "topic_domain": "social_epistemology/signaling_theory/conflict_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "speaker_making_the_claim",
+      "sympathetic_lay_audiences"
+    ],
+    "victims": [
+      "domain_expert_challengers",
+      "downstream_claim_consumers"
+    ],
+    "vindicated_propositions": [
+      "audience_relativity_of_epistemic_confidence"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "speaker_making_the_claim",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Adjusts the strength and defense of the claim to the audience present in the room. Presents confidently to lay or sympathetic audiences, retreats to hedged or qualified versions when a domain expert enters the conversation. Controls the presentation; bears reputational cost only if caught shifting register across audiences."
+    },
+    {
+      "name": "sympathetic_lay_audiences",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Receive the confident, unhedged version of the claim, which is easier to act on and socially satisfying to hear. They are also the ones who absorb the claim's overstated certainty if it turns out to be wrong, since they lack the expertise to detect the tailoring."
+    },
+    {
+      "name": "domain_expert_challengers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "When present, trigger the speaker's retreat to a hedged version of the claim — but this retreat is often invisible to them if they only see the hedged version and never the confident version shown to lay audiences. They bear the cost of not knowing the claim was ever presented more strongly elsewhere, which limits their ability to correct the record for the audiences who received the stronger claim."
+    },
+    {
+      "name": "downstream_claim_consumers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Act on the claim as relayed through lay audiences, often without ever encountering the hedged expert-facing version. They inherit whatever certainty was manufactured for the original sympathetic audience, several steps removed from the original tailoring."
+    },
+    {
+      "name": "analytical_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Track the claim across multiple audience contexts to detect whether its strength systematically varies with audience expertise — the empirical signature this reading predicts and that any single-instance test can only partially confirm or falsify."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Audience-calibrated presentation solves a real communicative problem: matching technical precision and hedging to the audience's capacity to process qualification, so lay audiences aren't drowned in caveats and experts aren't insulted by oversimplification.",
+    "transfer_function": "Moves epistemic confidence away from where it would be warranted by the evidence and toward whatever level plays best with the audience physically present, transferring the cost of miscalibration to audiences who never see the alternate version.",
+    "absent_voices": "Downstream consumers of the lay-audience version never hear the hedged expert-facing version and have no way to know a stronger claim was made elsewhere; they would object to the disparity if it were visible to them.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If audience-tailoring vanished, some speakers would default to uniformly hedged claims (world barely changes for careful communicators) while others who relied on strategic confidence-shifting to persuade would lose a persuasion tool that shaped downstream belief and action (world rearranges for audiences who no longer receive an inflated-confidence version). The parties dispute which describes them.",
+    "founding_problem": "Genuine communicative adaptation problem: the same true information requires different framing, vocabulary, and hedging depending on the audience's background knowledge, to be both accurate and comprehensible.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The speaker attests the tailoring is purely pedagogical register-matching. A documented case (the hotel-manager instance underlying this constraint family) shows retreat specifically triggered by the arrival of a domain expert rather than by audience comprehension level, which is the signature this reading predicts and which an outside observer — not the speaker — identified from comparing the two audience-facing versions."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the audience-tailored-persona-management reading of a broader kernel about what an unqualified, publicly-repeated factual claim structurally IS. Under this reading, the claim's apparent strength is not a fixed epistemic commitment but a variable output of an audience-sensing process: the speaker calibrates confidence and defensiveness to what the specific audience in the room will accept, and retreats when a domain expert changes the audience composition. The reading predicts a specific empirical signature — hedging correlated with audience expertise, not with new evidence. In the underlying case (a hotel manager's claim, tracked across a lay-facing and an expert-facing presentation), this signature was in fact observed: the claim softened only when an expert entered, not when new information arrived. That single data point is consistent with this reading but does not by itself establish it as the generally correct reading of all such claims — hence the reading remains a live, testable hypothesis rather than a settled fact, and its siblings (stance, register, drift, filter) remain open descriptions of other cases.",
+    "key_agents": [
+      "speaker_making_the_claim: sets the claim's presented strength per audience (moderate/mobile) — collects persuasive advantage",
+      "sympathetic_lay_audiences: receive the confident version, bear miscalibration risk (moderate/constrained)",
+      "domain_expert_challengers: trigger retreat, but often can't see the confident version shown elsewhere (powerful/constrained)",
+      "downstream_claim_consumers: inherit the lay-facing confidence several steps removed (powerless/trapped)",
+      "analytical_observers: track the claim across contexts to test the audience-expertise correlation (analytical)"
+    ],
+    "logic_rationale": "Extraction is moderate (0.44): the speaker gains persuasive traction and reputational insulation by presenting different claim strengths to different audiences, at the expense of audiences who never see the alternate version and therefore cannot properly discount the claim's real evidentiary basis. Suppression is comparatively low (0.28) because nothing coercively prevents audiences from comparing notes — the mechanism relies on audience segregation, not force. Theater ratio is elevated and rising (0.40 to 0.62) because an increasing share of the speaker's presentational effort goes toward managing appearance-of-confidence rather than communicating actual uncertainty, particularly once the tailoring becomes habitual across many audience encounters.",
+    "perspectival_gap": "From the speaker's seat, this looks like ordinary register-matching — good communicative practice. From the domain-expert seat, the same behavior looks like selective concealment: the claim they see hedged was, to their knowledge, never confidently defended to them, but they cannot know it was defended elsewhere without cross-audience comparison. The engine should compute divergent seat-level types precisely because the coordination function (matching complexity to audience) and the extraction function (manufacturing appearance-consistency across incompatible presentations) are both genuinely present and asymmetrically distributed.",
+    "directionality_logic": "The speaker sits near the beneficiary end: they set the tailoring, retain mobility across audience contexts, and are rarely held to a single consistent public claim. Sympathetic lay audiences are dual-positioned — beneficiaries of comprehensible, confident framing, but payers when that confidence overstates the evidence. Domain expert challengers and downstream consumers are targets: the former because their challenge is neutralized by version-switching rather than genuinely engaged, the latter because they receive the least-hedged version furthest from its point of production and origin scrutiny.",
+    "mandatrophy_analysis": "The founding problem — that different audiences genuinely need different levels of technical hedging to correctly understand the same claim — is real and durable; it does not disappear. What can go stale is treating EVERY instance of audience-sensitive variation as illegitimate impression management, which would misclassify genuine pedagogical adaptation as extraction. Conversely, treating every instance as innocent register-matching risks laundering strategic retreat-under-expert-challenge as pedagogy. The tangled_rope classification holds both: a genuine coordination function (comprehensibility) riding alongside an extraction function (confidence laundering) that requires the audience segregation to persist — separating audiences (i.e., always presenting to mixed audiences, or archiving claims across audiences) would collapse the extraction component while leaving the coordination component intact."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_generality",
+      "question": "Does the audience-tailored persona management reading generalize beyond the hotel-manager instance that motivated it, or is it a single-case pattern being extrapolated into a general reading of unqualified claims?",
+      "resolution_mechanism": "Track claim strength for a sample of speakers across matched audience-expertise variations (lay vs. domain-expert audiences, holding evidence constant); look for the specific signature of expertise-triggered retreat rather than evidence-triggered revision.",
+      "impact": "If the signature generalizes, this reading correctly describes a structural feature of much public claim-making and the tangled_rope classification is well-founded broadly. If it is idiosyncratic to the single documented case, this reading should be scoped narrowly and the sibling readings (register, drift, stance, filter) may better describe the general phenomenon.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the impression-management signature generalizes beyond its founding case."
+    },
+    {
+      "id": "sibling_reading_disambiguation",
+      "question": "In any given instance of claim-strength variation across audiences, is the correct reading impression management (strategic, expertise-triggered retreat), register adaptation (pedagogically appropriate framing), stance shift (genuine belief update), drift (unintentional inconsistency), or filter (selective disclosure of caveats already held)?",
+      "resolution_mechanism": "Compare the trigger condition for the shift: expertise of audience (impression management), comprehension level (register), new evidence (stance/drift), or pre-existing caveat suppression revealed under scrutiny (filter). The hotel-manager case shows an expertise-triggered trigger, which is this reading's diagnostic signature.",
+      "impact": "Misidentifying which reading applies to a given instance would misclassify pedagogical adaptation as extraction, or launder strategic confidence-shifting as legitimate register-matching.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The five sibling readings are structurally distinct claims about the same surface phenomenon; disambiguation is instance-specific."
+    },
+    {
+      "id": "detectability_asymmetry",
+      "question": "How often does audience-tailoring escape detection because audiences are structurally segregated (lay audiences and expert audiences rarely compare notes on the same claim)?",
+      "resolution_mechanism": "Audit rate of cross-audience claim comparison in comparable domains (public communication, expert testimony, marketing) to estimate what fraction of tailoring instances would surface if audiences were merged or claims were archived publicly.",
+      "impact": "A high detection-escape rate would support treating the theater_ratio trend as understated rather than overstated, since much tailoring never becomes visible enough to measure.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural audience segregation likely undercounts the true extent of tailoring."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "stance_reading",
+      "register_reading",
+      "drift_reading",
+      "filter_reading"
+    ],
+    "dual_formulation_note": "This story is one of five siblings decomposing the natural-language concept 'what kind of claim was this' under the unsettled_claim_ontology kernel. Each sibling names a structurally distinct hypothesis about why claim strength varied across contexts: impression_management_reading (audience-tailored persona management, expertise-triggered retreat), stance_reading (genuine belief change), register_reading (legitimate comprehension-matched framing), drift_reading (unintentional inconsistency over time), filter_reading (selective disclosure of pre-existing caveats). Each carries its own epsilon and stakeholder structure; they are linked via affects_constraints rather than merged, per the ε-invariance principle — averaging or hedging across them would misrepresent five distinct empirical claims as one."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.55
+    }
+  ],
+  "gain_flow": "speaker_making_the_claim",
+  "fixing_cost": "cheap",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "single_stable_claim_across_all_audiences",
+    "drift_state": {
+      "moment": "post_cross_audience_comparison",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "unsettled_claim_ontology__stance_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "unsettled_claim_ontology__register_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "unsettled_claim_ontology__drift_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "unsettled_claim_ontology__filter_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "claim_strength_tracks_audience_composition_not_evidence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "expert_challenge_is_the_diagnostic_trigger_for_retreat",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-21",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
