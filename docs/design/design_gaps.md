@@ -1231,3 +1231,39 @@ apparatus already expresses "N constraints of one kernel" as sibling readings.
 own multiple constraints. When that fires, promote to a GAP-NN. Until then this stays a trigger.
 The one-reading-vs-three *ontology* question (whether the cyclopean constraints are one reading or
 three) is left open by OQ-04 and is orthogonal to this schema deferral.
+
+---
+
+## GAP-25 — No external calibration for cross-model corpus differences (the marginals are dispositional fingerprints, not capability scores)
+
+**Declared:** 2026-07-21. **Witness:** `audits/2026-07-20_five_leg_twin_comparison/` (WRITEUP +
+DEEPER_CUTS + BATTERY_WRITEUP + PARITY_WRITEUP). **Drives:** OQ-228.
+
+**The absence:** the engine can fingerprint how models differ in *authored structure* (the five-leg
+twin corpora — haiku/flash/sonnet/kimi over the shared seed pool — yield per-model marginals: H¹-band
+distribution, type mix, perspective-pattern diversity, signature mix). It has **no anchor that
+licenses reading those differences as model *quality*.** "Model X authors thinner structure than
+model Y" is a real, reproducible measurement; "model X is *weaker*" is a different claim the corpus
+cannot make on its own.
+
+**Why the upgrade is unlicensed (witnessed dissociation, not just caution):** the constraint-story
+corpus measures **unprompted authoring disposition** — what a model reaches for across 1005 stories
+with no instruction to differentiate (kimi-k2.6 → ~2 perspective molds → 63% H¹ band-3, the
+"thinnest" leg). The 2026-07-20 stance battery + thinking-parity re-run measured **elicited
+capability** — the same model asked once to differentiate/critique — and it **dissociated cleanly**:
+kimi is top-of-set there (a sharp Critic reaching for non-stock analytical lenses), while
+gemini-flash stays thin *even at max reasoning*. So low structural differentiation is a *disposition*,
+not a capability ceiling, and the two do not co-vary. A cross-model corpus difference is therefore a
+**projective fingerprint** (like a Rorschach read — see `docs/profiling/`), not a benchmark score.
+
+**What closing the gap would require:** an external calibration axis — e.g. correlating the
+DR-derived "differentiation" with an independent capability measure or human ratings of the same
+stories, or a matched-regime design (see OQ-228's thinking-parity confound) — that gives
+"differentiation" an *up*. Absent that, the marginals are cited as dispositional/regime-bound
+descriptive stats only (the OQ-26/OQ-70 rule, applied to the model axis).
+
+**Interim discipline:** report cross-model corpus differences as fingerprints, never as a
+model-quality ranking. The five-leg writeups already carry this caveat; OQ-228 tracks the regime
+confound that must also be closed before any capability reading. Related: OQ-228 (regime confound +
+dispositional caveat), OQ-75 (twin corpora), `docs/profiling/README.md` (the two-read-out framing:
+mechanical structure vs interpretive stance).

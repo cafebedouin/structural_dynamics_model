@@ -10716,7 +10716,53 @@ taxonomy, bundled), OQ-126 (T0→T3 temporal accountability), GAP-02 (husk traje
 
 ---
 
-*Last updated: 2026-07-18. Add new items with sequential OQ-NN labels. Mark
+## OQ-228 — The five-leg cross-model comparison is confounded by inference regime; corpus differences are dispositional, not capability
+
+**Ω-type:** Ω_E (the regime confound is closeable by an evidence-witnessable experiment — a
+thinking-on Claude-twin regen and re-measure; the dispositional-vs-capability framing is the
+standing caveat that survives the experiment either way).
+
+**Status:** open — minted 2026-07-21 at the five-leg / stance-battery investigation close;
+**resolution deferred** (the closing experiment is an expensive, stochastic corpus regen).
+
+**Priority:** 6
+
+**Deps:** bundled_with OQ-75
+
+**Origin:** 2026-07-21, the kimi-k2.6 twin build + five-leg audit
+(`audits/2026-07-20_five_leg_twin_comparison/`). Two coupled hazards a future reader of the
+cross-model marginals must know:
+
+1. **Inference-regime confound.** The structural legs were generated with the Claude twins
+   **thinking-off** but kimi-k2.6 **thinking-on** (mandatory ~11.7k reasoning tok/story). So a
+   cross-model marginal ("kimi 63% H¹ band-3, least-differentiated observer authoring; patterns
+   near gemini-flash, far from sonnet") is confounded by regime, not cleanly attributable to the
+   model. The **battery-level** version of this confound was CLOSED (`PARITY_WRITEUP.md`: giving
+   gemini max reasoning did not manufacture stance-richness; kimi's sharpness replicated) — but the
+   **corpus-level** version stands: the 1005-story legs were never regenerated under matched thinking.
+
+2. **Dispositional ≠ capability.** The stance battery + thinking-parity re-run showed the
+   constraint-story corpus measures **unprompted authoring disposition** (what a model reaches for
+   across 1005 stories — kimi → ~2 perspective molds), which **dissociates** from elicited
+   capability (asked to differentiate/critique once, kimi is top-of-set — a sharp Critic with
+   non-stock analytical lenses). So a cross-model corpus difference is a **projective fingerprint,
+   not a model-quality score**; "model X authors thinner structure" does NOT upgrade to "model X is
+   weaker" without external calibration — which is exactly what dissociated here (GAP-25).
+
+**What resolution changes.** Either (a) regenerate the Claude-twin legs **thinking-on** and
+re-run the five-leg audit to see whether the "kimi thin" structural finding survives matched
+regime — deferred as expensive + stochastic (redraws are new draws, not re-measurements, OQ-26); or
+(b) formally scope the five-leg marginals as **dispositional/regime-bound descriptive stats** (the
+OQ-26/OQ-70 rule applied to the model axis) and never cite them as capability. Until then, cite
+cross-model differences as dispositional fingerprints only. **Also: the kimi leg is `kimi-k2.6`,
+NOT K3/"3.0"** — nothing here bears on the K3 hype (a K3 read needs a separate sync leg). Cross-ref:
+OQ-75 (twin corpora), OQ-26/OQ-70 (regime-bound descriptive-stat rule), GAP-25 (missing external
+calibration), `audits/2026-07-20_five_leg_twin_comparison/` (WRITEUP + DEEPER_CUTS + BATTERY +
+PARITY writeups).
+
+---
+
+*Last updated: 2026-07-21. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

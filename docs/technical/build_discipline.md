@@ -1318,6 +1318,17 @@ the single-writer assumption made explicit: counts aggregate; diffs attribute. S
 section above ("a gating count is not a finding without its composition") — under multi-writer,
 the composition of a count delta includes other writers' work.
 
+**Corollary — `git commit -- <pathspec>` silently omits UNTRACKED files, at exit 0 (witnessed
+2026-07-21).** A commit with explicit pathspecs commits only *tracked* modifications matching those
+paths; **untracked new files under the same pathspec are NOT added** and the command still exits 0.
+Instance: a `git add A B C` that hit a stale pathspec aborted the whole add, then
+`git commit -- <dir>` committed the tracked rename + edit but silently dropped THREE untracked new
+`.md` files — `git log --stat` showed 2 files, exit 0, and a turn-end recap would have read "done."
+This is the Pattern-4/6 shape (a green exit conceals the absence). **The rule: after any commit
+whose staging was non-trivial, witness the commit's CONTENTS (`git show --stat <sha>`), not its exit
+code — and for a tracked+untracked mix, `git add` the paths explicitly first and confirm
+`git status` is clean.** Exit 0 attests the command ran, never that it captured what you intended.
+
 ---
 
 ## Extension-touching diffs decompose into direct targets vs ensemble refit (or they read as walls)
