@@ -42,6 +42,7 @@
     narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:suppression_profile/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:constraint_stakeholder/7,
     narrative_ontology:stakeholder_secondary_role/3,
@@ -71,29 +72,31 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: coverage_neutral_reading
- *   human_readable: OEWS Coverage-Neutral Reading of Adverse Effect Wage Measurement
- *   domain: political_economy_of_labor_migration/administrative_law/agricultural_policy
+ *   human_readable: OEWS Coverage Gap as Correctable Transitional Measurement Artifact
+ *   domain: administrative_law/labor_economics/immigration_policy
  *
  * SUMMARY:
- *   The Adverse Effect Wage Rate for H-2A agricultural guest workers is
- *   increasingly computed from Occupational Employment and Wage Statistics
- *   (OEWS) data, which does not sample farm establishments directly. Advocacy
- *   groups and some researchers treat this coverage gap as evidence that the
- *   wage floor is systematically depressed relative to what a farm-inclusive
- *   survey would produce. This story takes the coverage-neutral reading: the
- *   gap is real and undisputed, but the inferential leap from 'gap exists' to
- *   'floor is biased downward' is not established by the gap alone. OEWS
- *   offers genuine advantages — higher sampling frequency, finer geographic
- *   and occupational resolution — that the instrument it replaced lacked, and
- *   the empirical direction of any coverage-driven bias remains open. This
- *   reading is one of four readings of the adverse_effect_measurability
- *   kernel; the instrument_capture_reading asserts the downward-bias
- *   inference as established, the bureaucratic_drift_reading treats the
- *   instrument choice as inertial administrative habit rather than a live
- *   methodological tradeoff, and the hold_up_efficiency_reading treats the
- *   gap as a deliberate lever employers exploit in rulemaking capture. This
- *   story does not adopt any of those framings.
+ *   The H-2A Adverse Effect Wage Rate is calculated using OEWS wage survey
+ *   data that structurally excludes direct farm employers (as opposed to
+ *   labor contractors and other intermediaries) from its sampling frame.
+ *   Advocates for wage reform cite this exclusion as a mechanism that
+ *   systematically depresses the computed prevailing wage, and some analyses
+ *   attach a large aggregate transfer estimate (~$24bn) to the practice. This
+ *   story takes the position that the exclusion is real but that its
+ *   wage-direction effect is not established, and that the Department of
+ *   Labor's IFR-committed phase-in represents an ordinary, correctable
+ *   administrative transition rather than a designed extraction channel.
+ *   Under this reading, coordination (a workable, litigation-avoiding wage
+ *   benchmark) is real and largely undiluted by extraction — most of what
+ *   critics attribute to the coverage gap should, on this reading, be
+ *   reattributed to separable discretionary parameters.
  *
+ * KEY AGENTS:
+ *   - h2a_program_administrators: agenda_setter (institutional/analytical) — owns the OEWS methodology and the phase-in commitment
+ *   - agricultural_employers_using_h2a: beneficiary (organized/constrained) — pays AEWR wages set from the current survey base
+ *   - h2a_farmworkers: observer/payer (powerless/trapped) — receives the wage floor whose direction of bias is disputed
+ *   - domestic_farmworkers: observer (powerless/constrained) — wage anchor effects, contested magnitude and direction
+ *   - regulatory_economists: observer (analytical/analytical) — adjudicates between this reading and its siblings
  */
 
 /* ==========================================================================
@@ -101,49 +104,52 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(coverage_neutral_reading, 0.18).
-domain_priors:suppression_score(coverage_neutral_reading, 0.12).
+domain_priors:base_extractiveness(coverage_neutral_reading, 0.12).
+domain_priors:suppression_score(coverage_neutral_reading, 0.08).
 domain_priors:theater_ratio(coverage_neutral_reading, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(coverage_neutral_reading, extractiveness, 0.18).
-narrative_ontology:constraint_metric(coverage_neutral_reading, suppression_requirement, 0.12).
+narrative_ontology:constraint_metric(coverage_neutral_reading, extractiveness, 0.12).
+narrative_ontology:constraint_metric(coverage_neutral_reading, suppression_requirement, 0.08).
 narrative_ontology:constraint_metric(coverage_neutral_reading, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(coverage_neutral_reading, accessibility_collapse, 0.35).
-narrative_ontology:constraint_metric(coverage_neutral_reading, resistance, 0.4).
+narrative_ontology:constraint_metric(coverage_neutral_reading, resistance, 0.2).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(coverage_neutral_reading, rope).
-narrative_ontology:human_readable(coverage_neutral_reading, "OEWS Coverage-Neutral Reading of Adverse Effect Wage Measurement").
-narrative_ontology:topic_domain(coverage_neutral_reading, "political_economy_of_labor_migration/administrative_law/agricultural_policy").
+narrative_ontology:human_readable(coverage_neutral_reading, "OEWS Coverage Gap as Correctable Transitional Measurement Artifact").
+narrative_ontology:topic_domain(coverage_neutral_reading, "administrative_law/labor_economics/immigration_policy").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(coverage_neutral_reading, '4bb318ab-871e-4ac9-88c2-eefb3df698f9').
-narrative_ontology:cs_kernel_codification('4bb318ab-871e-4ac9-88c2-eefb3df698f9', distributed).
-narrative_ontology:cs_authority_grounding('4bb318ab-871e-4ac9-88c2-eefb3df698f9', expertise).
-narrative_ontology:cs_interpretation_layer_present('4bb318ab-871e-4ac9-88c2-eefb3df698f9').
-narrative_ontology:cs_reading_relation('4bb318ab-871e-4ac9-88c2-eefb3df698f9', adverse_effect_measurability__instrument_capture_reading, influences).
-narrative_ontology:cs_reading_relation('4bb318ab-871e-4ac9-88c2-eefb3df698f9', adverse_effect_measurability__bureaucratic_drift_reading, coexists_with).
-narrative_ontology:cs_reading_relation('4bb318ab-871e-4ac9-88c2-eefb3df698f9', adverse_effect_measurability__hold_up_efficiency_reading, coexists_with).
-narrative_ontology:cs_axiom('4bb318ab-871e-4ac9-88c2-eefb3df698f9', foundational, coverage_gap_bias_direction_unresolved).
-narrative_ontology:cs_axiom_status(coverage_gap_bias_direction_unresolved, holdable).
-narrative_ontology:cs_axiom_grounding('4bb318ab-871e-4ac9-88c2-eefb3df698f9', coverage_gap_bias_direction_unresolved, empirically_contingent).
-narrative_ontology:cs_axiom('4bb318ab-871e-4ac9-88c2-eefb3df698f9', secondary, measurement_quality_gains_are_genuine_coordination).
-narrative_ontology:cs_axiom_status(measurement_quality_gains_are_genuine_coordination, holdable).
-narrative_ontology:cs_axiom_grounding('4bb318ab-871e-4ac9-88c2-eefb3df698f9', measurement_quality_gains_are_genuine_coordination, instrumental).
-narrative_ontology:cs_reference_frame('4bb318ab-871e-4ac9-88c2-eefb3df698f9', methodological_tradeoff_neutrality).
-narrative_ontology:cs_drift_state('4bb318ab-871e-4ac9-88c2-eefb3df698f9', post_2015_oews_transition_era, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('4bb318ab-871e-4ac9-88c2-eefb3df698f9', '').
-narrative_ontology:cs_kernel_id(coverage_neutral_reading, adverse_effect_measurability).
+narrative_ontology:cs_story_uid(coverage_neutral_reading, '739c0b15-45e0-41dd-8885-88071253def5').
+narrative_ontology:cs_kernel_codification('739c0b15-45e0-41dd-8885-88071253def5', formalized).
+narrative_ontology:cs_authority_grounding('739c0b15-45e0-41dd-8885-88071253def5', expertise).
+narrative_ontology:cs_interpretation_layer_present('739c0b15-45e0-41dd-8885-88071253def5').
+narrative_ontology:cs_reading_relation('739c0b15-45e0-41dd-8885-88071253def5', adverse_effect_guarantee_kernel__instrument_dependent_reading, coexists_with).
+narrative_ontology:cs_reading_relation('739c0b15-45e0-41dd-8885-88071253def5', adverse_effect_guarantee_kernel__textualist_severability_reading, influences).
+narrative_ontology:cs_reading_relation('739c0b15-45e0-41dd-8885-88071253def5', adverse_effect_guarantee_kernel__capture_reading, coexists_with).
+narrative_ontology:cs_reading_relation('739c0b15-45e0-41dd-8885-88071253def5', adverse_effect_guarantee_kernel__channel_conversion_reading, influences).
+narrative_ontology:cs_axiom('739c0b15-45e0-41dd-8885-88071253def5', foundational, coverage_gap_direction_unestablished).
+narrative_ontology:cs_axiom_status(coverage_gap_direction_unestablished, holdable).
+narrative_ontology:cs_axiom_grounding('739c0b15-45e0-41dd-8885-88071253def5', coverage_gap_direction_unestablished, empirically_contingent).
+narrative_ontology:cs_axiom('739c0b15-45e0-41dd-8885-88071253def5', foundational, agency_phase_in_commitment_presumptively_credible).
+narrative_ontology:cs_axiom_status(agency_phase_in_commitment_presumptively_credible, holdable).
+narrative_ontology:cs_axiom_grounding('739c0b15-45e0-41dd-8885-88071253def5', agency_phase_in_commitment_presumptively_credible, conventional).
+narrative_ontology:cs_reference_frame('739c0b15-45e0-41dd-8885-88071253def5', administrable_prevailing_wage_benchmark_standard).
+narrative_ontology:cs_drift_state('739c0b15-45e0-41dd-8885-88071253def5', post_ifr_phase_in_announcement, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('739c0b15-45e0-41dd-8885-88071253def5', '').
+narrative_ontology:cs_kernel_id(coverage_neutral_reading, adverse_effect_guarantee_kernel).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(coverage_neutral_reading, wage_survey_statisticians).
-narrative_ontology:constraint_beneficiary(coverage_neutral_reading, h2a_employers).
-narrative_ontology:constraint_beneficiary(coverage_neutral_reading, labor_department_rulemakers).
-narrative_ontology:constraint_vindicates(coverage_neutral_reading, measurement_neutrality_of_establishment_surveys).
-narrative_ontology:constraint_vindicates(coverage_neutral_reading, coverage_gap_does_not_entail_directional_bias).
+narrative_ontology:constraint_beneficiary(coverage_neutral_reading, h2a_program_administrators).
+narrative_ontology:constraint_beneficiary(coverage_neutral_reading, agricultural_employers_using_h2a).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(coverage_neutral_reading, h2a_farmworkers).
+narrative_ontology:constraint_vindicates(coverage_neutral_reading, adverse_effect_wage_rate_methodology_integrity).
+narrative_ontology:constraint_vindicates(coverage_neutral_reading, phase_in_schedule_reliability).
 
 /* ==========================================================================
    2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
@@ -152,42 +158,38 @@ narrative_ontology:constraint_vindicates(coverage_neutral_reading, coverage_gap_
    standardized across readings (OQ-84).
    ========================================================================== */
 
-% Design and run the Occupational Employment and Wage Statistics survey, sampling non-farm establishments by industry and geography at a resolution the agricultural survey it replaced could not match. They know the farm exclusion is real and documented in the methodology notes, and they maintain that its directional effect on the wage floor is unresolved rather than settled downward bias.
-narrative_ontology:constraint_stakeholder(coverage_neutral_reading, wage_survey_statisticians, agenda_setter,
+% Administers the Adverse Effect Wage Rate methodology and the OEWS-derived prevailing wage survey. Committed under the current IFR to a phase-in schedule that will bring direct farm employers into OEWS sampling over a defined transition period, treating the current exclusion as a known, bounded, and already-scheduled-for-correction data gap rather than a permanent structural feature.
+narrative_ontology:constraint_stakeholder(coverage_neutral_reading, h2a_program_administrators, agenda_setter,
     institutional, generational, analytical, national).
 
-% Pay the Adverse Effect Wage Rate computed substantially from OEWS data for many occupations. They benefit if OEWS's higher-frequency, higher-granularity data produces a wage floor that tracks local labor markets more accurately than the coarser instrument it replaced, regardless of whether that floor is higher or lower than a farm-inclusive alternative would produce.
-narrative_ontology:constraint_stakeholder(coverage_neutral_reading, h2a_employers, beneficiary,
+% Currently pay AEWR wages calculated from an OEWS survey base that excludes direct farm employers, which under this reading is a temporary measurement artifact rather than a designed wage suppression channel. They anticipate the phase-in will normalize sampling and expect wage levels to adjust predictably once direct farm employer wage data enters the survey base.
+narrative_ontology:constraint_stakeholder(coverage_neutral_reading, agricultural_employers_using_h2a, beneficiary,
     organized, biographical, constrained, national).
 
-% Are paid the wage rate the survey produces but are not employed in the establishments the survey samples, since OEWS excludes farm establishments by design. They are not part of the data-generating process for the wage floor that governs their own pay, though this reading holds that exclusion from the sample does not by itself establish that the resulting number is biased against them.
-narrative_ontology:constraint_stakeholder(coverage_neutral_reading, h2a_farmworkers, excluded,
-    powerless, immediate, trapped, national).
+% Receive the AEWR as their wage floor. Under this reading, whatever wage effect exists from the coverage gap is not attributable to the exclusion itself in a directionally predictable way — the survey composition change could raise or lower the computed wage depending on how direct farm employer pay compares to the currently-sampled base, so no clear extraction from this population via the coverage mechanism is asserted here.
+narrative_ontology:constraint_stakeholder(coverage_neutral_reading, h2a_farmworkers, observer,
+    powerless, biographical, trapped, national).
+narrative_ontology:stakeholder_secondary_role(coverage_neutral_reading, h2a_farmworkers, payer).
 
-% Select OEWS as the instrument for computing wage floors under a rulemaking process, weighing its documented gaps against its granularity and frequency advantages over the alternative (farm-specific or reduced-frequency instruments). They can defend the choice on methodological grounds independent of any claim about who the choice benefits.
-narrative_ontology:constraint_stakeholder(coverage_neutral_reading, labor_department_rulemakers, beneficiary,
-    institutional, generational, arbitrage, national).
-narrative_ontology:stakeholder_secondary_role(coverage_neutral_reading, labor_department_rulemakers, agenda_setter).
+% Compete in the same regional farm labor markets and are affected by the AEWR as a wage anchor. Under this reading their situation is not asserted to be worsened by the coverage gap specifically, since the gap's wage-direction effect is treated as empirically ambiguous pending the phase-in.
+narrative_ontology:constraint_stakeholder(coverage_neutral_reading, domestic_farmworkers, observer,
+    powerless, biographical, constrained, national).
 
-% Argue in comment letters and litigation that the farm exclusion depresses the measured wage floor because non-farm occupational wages used as proxies are unrepresentative of farm labor markets. This reading does not adopt their inferential leap from 'gap exists' to 'floor is biased downward' as established, though it acknowledges the gap itself is real and the advocacy position is a legitimate contesting claim.
-narrative_ontology:constraint_stakeholder(coverage_neutral_reading, farmworker_advocacy_organizations, excluded,
-    organized, biographical, constrained, national).
-
-% Study whether OEWS-derived wage floors converge with, exceed, or fall below floors that would be computed from farm-inclusive data where such data exists (e.g., in occupations with partial overlap). Their empirical findings to date are mixed and do not establish a uniform directional bias, which is the evidentiary basis this reading rests on.
-narrative_ontology:constraint_stakeholder(coverage_neutral_reading, labor_economists, observer,
+% Evaluate whether the OEWS exclusion biases the wage floor and whether the IFR phase-in schedule is a credible, funded, monitored commitment. Their assessment determines whether this reading (ordinary correctable gap) or a sibling reading (structural extraction) is the operative account.
+narrative_ontology:constraint_stakeholder(coverage_neutral_reading, regulatory_economists, observer,
     analytical, generational, analytical, national).
 
 % --- Six-questions battery (story-level; texts kept as comments — the
 % engine consumes only the two atoms below; the founding-problem narrative
 % is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
-% COORDINATION_FUNCTION: Provides a single, high-frequency, geographically and occupationally granular wage survey that multiple regulatory programs (including H-2A wage-setting) can reference instead of maintaining separate, lower-resolution, agriculture-specific instruments.
-% TRANSFER_FUNCTION: The survey itself transfers nothing directly; it sets a reference number that then determines wage transfers from employers to workers under the AEWR rule. Whether that reference number transfers value away from farmworkers relative to some counterfactual instrument is exactly the open question this reading refuses to presume answered.
-% ABSENT_VOICES: Farmworkers whose wages are set by reference to a survey that does not sample their workplaces are not participants in the survey's design; farmworker advocacy organizations raise this on their behalf but their inferential claim (gap implies downward bias) is contested rather than corroborated by independent economic analysis.
-% DISAPPEARANCE_RATIONALE: If OEWS were dropped as the wage-floor instrument, rulemakers would need to revert to a lower-frequency, lower-granularity alternative or construct a new farm-inclusive survey; employers would face a different (not necessarily lower) wage floor and advocacy groups would treat this as either vindication or continued injustice depending on which direction the new number moved. The world clearly rearranges administratively; whether it rearranges in farmworkers' favor is exactly what remains contested and is not resolved by removing the instrument.
-% FOUNDING_PROBLEM: Agricultural labor markets needed a wage-setting mechanism to prevent H-2A guest-worker admission from depressing wages for domestic workers in similar occupations ('adverse effect'), and the original agriculture-specific survey used to compute this rate was low-frequency and coarse-grained.
-% FOUNDING_PROBLEM_CORROBORATION: Labor department rulemakers and wage survey statisticians attest the switch to OEWS solved a real measurement-quality problem (frequency and granularity). Farmworker advocacy organizations and some labor economists attest the founding problem — protecting farmworker wages from erosion — is not being solved and may be undermined by the farm exclusion; independent academic studies on the direction of bias are inconclusive, which is the corroboration this reading relies on for its central claim of genuine uncertainty.
+% COORDINATION_FUNCTION: The AEWR/OEWS system solves a genuine coordination problem: setting a single, administratively tractable prevailing-wage benchmark across a fragmented, geographically dispersed agricultural labor market so that H-2A employers and enforcement agencies share one reference point instead of litigating wage adequacy case by case.
+% TRANSFER_FUNCTION: Under this reading, no directional transfer is asserted to flow from the coverage gap itself — the gap is measurement incompleteness, not a mechanism moving value from one party to another. Any transfer in the system is attributed to the discretionary parameters (entry-level wage tier selection, housing cost deduction methodology) which this reading holds are separable from the coverage question.
+% ABSENT_VOICES: Direct farm employers themselves are not sampled in OEWS and so cannot speak to whether their inclusion would raise or lower the computed wage; their absence is exactly the gap this reading treats as scheduled for closure rather than as evidence of a suppressed voice with a known directional interest.
+% DISAPPEARANCE_RATIONALE: If the OEWS exclusion were corrected overnight (direct farm employers fully sampled), this reading predicts a modest, empirically uncertain adjustment to the AEWR rather than a large one-directional wage jump — because the excluded population's wage distribution relative to the currently-sampled base is not known to be systematically lower. Sibling readings dispute this and predict a large downward-biased-wage-floor correction, which is exactly the disagreement this reading exists to name.
+% FOUNDING_PROBLEM: Agricultural guest-worker wage-setting needed an objective, defensible, and administrable prevailing-wage benchmark that would not require case-by-case wage litigation for every H-2A petition, while credibly protecting domestic farmworker wages from erosion by an influx of guest labor.
+% FOUNDING_PROBLEM_CORROBORATION: The Department of Labor's own rulemaking record (the IFR itself) attests the coverage gap is recognized and scheduled for phase-in, which this reading treats as corroboration from the administering agency that the problem is being actively managed. However, this corroboration comes from the same agency administering the program rather than from an independent party, and farmworker advocacy organizations and some academic economists dispute that the phase-in timeline is either funded or enforceable — no corroboration from outside the administering and employer-beneficiary parties currently affirms the phase-in will close the gap on schedule.
 narrative_ontology:disappearance_verdict(coverage_neutral_reading, contested).
-narrative_ontology:founding_problem_status(coverage_neutral_reading, contested).
+narrative_ontology:founding_problem_status(coverage_neutral_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
@@ -198,7 +200,7 @@ narrative_ontology:story_provenance(coverage_neutral_reading, '8080348c4e16a265f
     'unspecified', 'agent/example_platform_commission.json',
     'claude-sonnet-5', 'unspecified').
 narrative_ontology:story_seed(coverage_neutral_reading, 'none', 1).
-narrative_ontology:epsilon_provenance(coverage_neutral_reading, 0.18, 'claude-sonnet-5', 'none', direct).
+narrative_ontology:epsilon_provenance(coverage_neutral_reading, 0.12, 'claude-sonnet-5', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -213,16 +215,13 @@ narrative_ontology:epsilon_provenance(coverage_neutral_reading, 0.18, 'claude-so
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is authored low (0.18) because this reading holds that no directional extraction has been established — the coordination function (a higher-resolution wage survey usable across regulatory programs) is real and the alleged extraction (downward-biased wage floor harming farmworkers) is an unresolved empirical claim, not a structural fact of the instrument's operation. Suppression is low (0.12): no party is coerced into accepting OEWS as the instrument in a way that forecloses the advocacy groups' ability to contest it in rulemaking comments or litigation — the debate is open and ongoing, which is itself evidence against high suppression. Theater ratio is low and rises only slightly over the interval, reflecting that the survey performs substantive statistical function rather than performative compliance. Accessibility collapse is moderate (0.35): farmworkers cannot easily generate an alternative, farm-inclusive wage statistic themselves, but the political and administrative channel (rulemaking comment, litigation) for contesting the instrument choice remains genuinely open, which caps collapse well below mountain-level.
- *
- * PERSPECTIVAL GAP:
- *   Statisticians and rulemakers experience the instrument as a genuine methodological upgrade; farmworker advocates experience the same instrument as an unaccountable black box that determines their members' pay without sampling their members' workplaces. Both experiences are structurally real and do not require choosing a winner — the gap in experience is exactly why this kernel needs multiple readings rather than one story trying to average across them.
+ *   Extractiveness is authored low (0.12) because this reading's central claim is that the coverage gap does not have an established directional bias — without a demonstrated direction, there is no clear extraction to measure at the coverage-mechanism level. Suppression is low (0.08) because nothing in this reading's account requires active coercion to hold the gap in place; it persists because collecting direct-farm-employer wage data is administratively harder, not because alternatives are being suppressed. Accessibility collapse is moderate (0.35): the phase-in path exists and is not blocked, but implementing it requires sustained agency follow-through that has not yet occurred, so alternatives to the current partial-coverage state are only partially open. Resistance is low (0.2): the main friction is analytical disagreement among economists and advocates, not organized resistance to a coercive structure, because on this reading there isn't one.
  *
  * DIRECTIONALITY LOGIC:
- *   Wage survey statisticians and labor department rulemakers are coded beneficiaries because they get a survey instrument with real methodological advantages (frequency, granularity) that lowers their own operational costs, independent of wage-floor direction. H-2A employers benefit from a more responsive, locally-accurate wage floor whether or not it happens to run higher or lower than a hypothetical farm-inclusive alternative — the benefit here is measurement quality, not necessarily a lower number. Farmworkers and their advocacy organizations are coded excluded, not victim: this reading declines to assert they bear a proven cost, because the direction of the coverage-driven effect on the AEWR is exactly the open question. Coding them as victims would smuggle in the instrument_capture_reading's contested inferential step as if it were settled structural fact.
+ *   Under this reading's structural derivation, agricultural employers using H-2A are the nearest thing to a beneficiary (low d) because they currently pay a wage computed from the existing survey base and would face an uncertain adjustment if the base changed — but the reading declines to assert that this constitutes extraction from farmworkers, since the wage-direction effect of full coverage is not established. Farmworkers are named as payers of the wage floor as it currently exists (they receive whatever the floor is) but not as victims of a directional suppression mechanism, because this reading's core claim is exactly that no such mechanism is demonstrated. This is a materially different directionality picture than the sibling readings, which assign farmworkers a clear victim role.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (protecting domestic farmworker wages from erosion by guest-worker admission) is still live in the sense that H-2A admissions continue and the AEWR mechanism still operates against that stated purpose. Whether the current instrument still serves that purpose, versus having drifted into serving employer and statistical-agency convenience, is contested precisely because the coverage gap's directional effect is unresolved. This reading resists premature mandatrophy declaration in either direction: declaring the AEWR mechanism dead-but-persisting (pure extraction) would require establishing the downward bias claim, which this reading holds open.
+ *   This reading is precisely the check against overclaiming mandatrophy: it insists that identifying an administrative gap (excluded sampling frame) is not sufficient to establish an extraction mechanism, and that the IFR's phase-in commitment should be evaluated as an ordinary regulatory correction unless and until evidence shows the commitment is hollow or the gap's directional bias is empirically confirmed. If the phase-in slips repeatedly or direct farm employer wages are shown to systematically exceed the current survey base, this reading's premises would be falsified and a sibling reading (capture_reading or channel_conversion_reading) would become the better-supported account.
  */
 
 /* ==========================================================================
@@ -230,41 +229,41 @@ narrative_ontology:epsilon_provenance(coverage_neutral_reading, 0.18, 'claude-so
    ========================================================================== */
 
 omega_variable(
-    coverage_gap_bias_direction,
-    'Does the exclusion of farm establishments from OEWS sampling produce a wage floor that is systematically lower, systematically higher, or not systematically different from what a farm-inclusive survey would produce for the same occupations and areas?',
-    'Comparative studies using occupations with partial farm/non-farm overlap, or construction of a pilot farm-inclusive supplemental survey compared against OEWS estimates for the same geography and occupation codes over multiple cycles.',
-    'If a systematic downward bias is established, this reading''s central premise collapses and the instrument_capture_reading''s inferential step is vindicated; if bias is neutral or upward, the instrument_capture_reading''s core claim fails even though the coverage gap remains a real technical limitation.',
+    coverage_gap_directional_bias,
+    'Does full OEWS inclusion of direct farm employers raise, lower, or leave roughly unchanged the computed AEWR, relative to the current survey base?',
+    'A pilot survey extension sampling direct farm employer wages in a representative set of regions, compared against the current OEWS-derived AEWR for the same regions and job categories.',
+    'If direct farm employer wages are systematically lower than the current sampled base, this reading is falsified and the structural extraction readings (capture_reading, instrument_dependent_reading) gain support, with the $24bn transfer estimate becoming attributable to the coverage gap itself. If wages are comparable or higher, this reading is corroborated and the transfer estimate must be reattributed to the discretionary parameters.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(coverage_gap_directional_bias, empirical, 'Whether the OEWS exclusion has an established downward wage-direction effect.').
+
+omega_variable(
+    phase_in_schedule_credibility,
+    'Is the IFR''s phase-in schedule for including direct farm employers in OEWS sampling actually funded, monitored, and enforced, or is it an announced-but-unimplemented commitment?',
+    'Track agency budget allocations, published sampling frame updates, and independent audits (e.g., GAO review) of whether the phase-in milestones are met on the announced timeline.',
+    'If the phase-in repeatedly slips or lacks funding, this reading''s central premise (ordinary correctable transition) collapses and the constraint should be reclassified toward channel_conversion_reading or capture_reading, which treat the gap as a durable extraction feature rather than a transitional artifact.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(coverage_gap_bias_direction, empirical, 'Whether the farm-exclusion coverage gap produces a directionally biased wage floor.').
-
-omega_variable(
-    instrument_choice_as_capture_signal,
-    'Is the Department of Labor''s continued reliance on OEWS despite the known coverage gap evidence of regulatory capture by employer interests, or a defensible tradeoff favoring a demonstrably superior general-purpose instrument over a discontinued, lower-quality agriculture-specific one?',
-    'Review of rulemaking record for explicit consideration of alternative instruments, cost-benefit analysis of reinstating a farm-specific survey, and comparison of rulemaking outcomes across administrations with different asserted policy priorities.',
-    'If the rulemaking record shows the coverage gap was raised and dismissed without substantive analysis, that supports a capture or drift reading; if it shows genuine cost-benefit deliberation reaching this outcome under multiple administrations, that supports the coverage-neutral reading''s framing of a defensible methodological tradeoff.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(instrument_choice_as_capture_signal, conceptual, 'Whether the persistence of the coverage gap despite advocacy objections reflects capture, drift, or genuine tradeoff.').
+narrative_ontology:omega_variable(phase_in_schedule_credibility, empirical, 'Whether the phase-in commitment is a credible, tracked regulatory transition or a symbolic gesture.').
 
 omega_variable(
     kernel_framing_underdetermination,
-    'Is the adverse_effect_measurability kernel better understood as a single contested technical question (what does the survey measure) or as four structurally distinct claims that only share a label because they all discuss the same statistical instrument?',
-    'Track whether empirical resolution of the bias-direction question (this reading''s central omega) actually resolves the bureaucratic_drift_reading and hold_up_efficiency_reading''s claims, or whether those readings'' claims are orthogonal to bias direction and would survive resolution of it.',
-    'If the sibling readings'' claims are genuinely orthogonal to bias direction, the four readings are less like contested interpretations of one kernel and more like four separate constraints wearing one label — which would argue for further decomposition rather than a four-reading kernel structure.',
-    confidence_without_resolution(low)
+    'Is the adverse_effect_guarantee_kernel better framed as the OEWS methodology itself (the obvious framing, which this reading and instrument_dependent_reading engage) or as the higher-order legitimacy claim that the entire AEWR system protects domestic wages adequately (the framing capture_reading and channel_conversion_reading implicitly contest)?',
+    'Compare classification outcomes under both framings: does treating the kernel as ''the survey methodology'' versus ''the wage-protection guarantee as a whole'' change which parameters are held fixed and which are treated as the site of contest?',
+    'Under the narrower framing (this reading''s choice), the coverage gap and the discretionary parameters are analytically separable, supporting this reading''s rope/mountain-hybrid classification. Under the broader framing, the entire AEWR system''s legitimacy is at stake, which supports the sibling readings'' more extractive classifications since any parameter choice becomes evidence for or against the overall guarantee.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_framing_underdetermination, conceptual, 'Whether the four sibling readings are genuinely contesting the same kernel or are separable constraints.').
+narrative_ontology:omega_variable(kernel_framing_underdetermination, conceptual, 'Whether the kernel is the survey methodology narrowly or the wage-protection guarantee broadly, and how that choice pre-shapes the classification this reading reaches.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(coverage_neutral_reading, 0, 20).
+narrative_ontology:interval(coverage_neutral_reading, 0, 24).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
@@ -272,19 +271,21 @@ narrative_ontology:interval(coverage_neutral_reading, 0, 20).
 
 % Theater ratio over time
 narrative_ontology:measurement(cove_tr_t0, coverage_neutral_reading, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(cove_tr_t4, coverage_neutral_reading, theater_ratio, 4, 0.11).
-narrative_ontology:measurement(cove_tr_t8, coverage_neutral_reading, theater_ratio, 8, 0.12).
-narrative_ontology:measurement(cove_tr_t12, coverage_neutral_reading, theater_ratio, 12, 0.13).
-narrative_ontology:measurement(cove_tr_t16, coverage_neutral_reading, theater_ratio, 16, 0.14).
+narrative_ontology:measurement(cove_tr_t4, coverage_neutral_reading, theater_ratio, 4, 0.12).
+narrative_ontology:measurement(cove_tr_t8, coverage_neutral_reading, theater_ratio, 8, 0.13).
+narrative_ontology:measurement(cove_tr_t12, coverage_neutral_reading, theater_ratio, 12, 0.14).
+narrative_ontology:measurement(cove_tr_t16, coverage_neutral_reading, theater_ratio, 16, 0.15).
 narrative_ontology:measurement(cove_tr_t20, coverage_neutral_reading, theater_ratio, 20, 0.15).
+narrative_ontology:measurement(cove_tr_t24, coverage_neutral_reading, theater_ratio, 24, 0.15).
 
 % Extraction over time
 narrative_ontology:measurement(cove_be_t0, coverage_neutral_reading, base_extractiveness, 0, 0.14).
-narrative_ontology:measurement(cove_be_t4, coverage_neutral_reading, base_extractiveness, 4, 0.15).
-narrative_ontology:measurement(cove_be_t8, coverage_neutral_reading, base_extractiveness, 8, 0.16).
-narrative_ontology:measurement(cove_be_t12, coverage_neutral_reading, base_extractiveness, 12, 0.17).
-narrative_ontology:measurement(cove_be_t16, coverage_neutral_reading, base_extractiveness, 16, 0.17).
-narrative_ontology:measurement(cove_be_t20, coverage_neutral_reading, base_extractiveness, 20, 0.18).
+narrative_ontology:measurement(cove_be_t4, coverage_neutral_reading, base_extractiveness, 4, 0.13).
+narrative_ontology:measurement(cove_be_t8, coverage_neutral_reading, base_extractiveness, 8, 0.13).
+narrative_ontology:measurement(cove_be_t12, coverage_neutral_reading, base_extractiveness, 12, 0.12).
+narrative_ontology:measurement(cove_be_t16, coverage_neutral_reading, base_extractiveness, 16, 0.12).
+narrative_ontology:measurement(cove_be_t20, coverage_neutral_reading, base_extractiveness, 20, 0.12).
+narrative_ontology:measurement(cove_be_t24, coverage_neutral_reading, base_extractiveness, 24, 0.12).
 
 % Suppression authored static: scalar-only by design, no temporal series
 narrative_ontology:suppression_profile(coverage_neutral_reading, static).
@@ -294,12 +295,14 @@ narrative_ontology:suppression_profile(coverage_neutral_reading, static).
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:affects_constraint(coverage_neutral_reading, instrument_capture_reading).
-narrative_ontology:affects_constraint(coverage_neutral_reading, bureaucratic_drift_reading).
-narrative_ontology:affects_constraint(coverage_neutral_reading, hold_up_efficiency_reading).
+narrative_ontology:coordination_type(coverage_neutral_reading, resource_allocation).
+narrative_ontology:affects_constraint(coverage_neutral_reading, instrument_dependent_reading).
+narrative_ontology:affects_constraint(coverage_neutral_reading, textualist_severability_reading).
+narrative_ontology:affects_constraint(coverage_neutral_reading, capture_reading).
+narrative_ontology:affects_constraint(coverage_neutral_reading, channel_conversion_reading).
 
 % DUAL FORMULATION NOTE:
-% This story is one of four readings of the adverse_effect_measurability kernel (OEWS coverage of farm establishments in AEWR wage-setting). coverage_neutral_reading asserts no established directional bias and treats OEWS's granularity/frequency advantages as genuine coordination gains. instrument_capture_reading asserts the coverage gap produces an established downward bias serving employer interests. bureaucratic_drift_reading treats the instrument choice as administrative inertia rather than active interest-capture. hold_up_efficiency_reading treats the gap as a deliberately exploited lever in an employer/rulemaker hold-up dynamic. Each reading has its own epsilon and stakeholder structure per the epsilon-invariance principle; they are linked here rather than merged into one story with a bias-direction parameter.
+% This story is one of five linked readings of the adverse_effect_guarantee_kernel (the Department of Labor's AEWR/OEWS wage-protection commitment for H-2A agricultural labor). coverage_neutral_reading holds the coverage gap is directionally unestablished and the phase-in is a credible ordinary transition — the least extractive reading of the five, functioning as a rope/mountain hybrid with the discretionary parameters (entry-tier wage selection, housing deduction) doing analytical work this reading treats as severable. instrument_dependent_reading finds directional bias contingent on instrument choice; textualist_severability_reading treats coverage and parameters as legally severable with different remedies; capture_reading treats the exclusion as employer-lobbying-driven by design; channel_conversion_reading holds that closing the coverage gap alone will not eliminate wage suppression because it will migrate to the discretionary parameters. Each reading carries its own epsilon and stakeholder structure; they are linked here rather than merged because the underlying kernel — what the AEWR/OEWS commitment actually guarantees — is genuinely contested across these five structurally distinct claims.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

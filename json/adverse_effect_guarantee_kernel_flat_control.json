@@ -1,0 +1,273 @@
+{
+  "header": {
+    "constraint_id": "adverse_effect_guarantee_kernel_flat_control",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "59b3b30f-0b3a-43cf-8ac7-4bd8aa9f803d"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.47,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "INA H-2A Adverse Effect Wage Bar",
+    "topic_domain": "administrative law/labor economics/immigration policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "agricultural_employers",
+      "h2a_guestworkers"
+    ],
+    "victims": [
+      "domestic_farmworkers",
+      "united_farm_workers_members"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "department_of_labor",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Sets and periodically revises the methodology for the Adverse Effect Wage Rate (AEWR) — the instrument that operationalizes the statutory bar. Controls which wage surveys, occupational classifications, and regional aggregations count as evidence of 'adverse effect.' Can tighten or loosen the measuring instrument through rulemaking without touching the statutory text itself, which lets it satisfy or defeat the commitment administratively."
+    },
+    {
+      "name": "agricultural_employers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Petition for H-2A certification and pay the AEWR as set by DOL's current methodology. Lobby continuously for methodology changes (broader occupational categories, coarser regional aggregation) that lower the computed wage floor. Bear the wage they must pay but capture the labor supply the program exists to guarantee; a lower AEWR is a direct cost reduction for them."
+    },
+    {
+      "name": "h2a_guestworkers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Receive the wage the current AEWR methodology sets and depend entirely on continued employer sponsorship for legal presence. Benefit from having any wage floor at all relative to undocumented alternatives, but cannot contest the methodology that sets it — visa status is tied to the sponsoring employer, foreclosing any exit that would let them bargain over the number."
+    },
+    {
+      "name": "domestic_farmworkers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Are the statute's named intended beneficiaries — the 'similarly employed U.S. workers' whose wages the bar exists to protect from suppression. Experience the AEWR as a wage ceiling in practice: employers calibrate offers to the certified rate, and when methodology changes lower that rate, domestic workers' bargaining position erodes without any change to the statutory text they were told protects them."
+    },
+    {
+      "name": "united_farm_workers_members",
+      "role": "excluded",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Litigate and comment against AEWR methodology revisions, arguing that DOL's technical changes are a laundering mechanism that defeats the statutory guarantee without repealing it. Are heard in comment periods and litigation but do not control the rulemaking pen; their objections are recorded, not binding."
+    },
+    {
+      "name": "federal_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Review challenges to AEWR methodology under arbitrary-and-capricious and Chevron/Loper Bright-successor deference standards. Can vacate or remand a methodology but cannot compel DOL to adopt any particular measuring instrument, leaving the agency wide latitude to try again with a different formula that produces a similar result."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides agricultural employers a lawful, predictable channel for temporary foreign labor while nominally guaranteeing that importing that labor will not be used to undercut the wages of domestic farmworkers doing the same work — a genuine coordination problem (seasonal labor shortage vs. wage-suppression risk) that the statute was built to solve simultaneously.",
+    "transfer_function": "Moves bargaining leverage and wage floor from domestic farmworkers to agricultural employers whenever the AEWR measuring instrument is loosened, and moves it back toward domestic farmworkers whenever the instrument is tightened; H-2A guestworkers receive whatever wage the instrument currently yields, without say in the instrument's design.",
+    "absent_voices": "Domestic farmworkers as a class are formally protected but structurally underrepresented in the rulemaking process that actually sets the number; individual workers rarely comment on Federal Register notices, and UFW's institutional voice is present but non-binding. H-2A workers themselves are almost entirely absent from the process that sets the wage floor they will receive.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Agricultural employers would say the world barely changes — H-2A flows continue on some replacement standard, since the labor need is real and would be met one way or another. UFW and domestic farmworker advocates would say the world rearranges sharply: without any wage floor requirement, AEWR-level protection collapses to whatever the market alone would clear, which they argue is materially lower given seasonal labor's monopsony structure. The two camps disagree about the counterfactual, not just the value of the current arrangement.",
+    "founding_problem": "Congress needed a way to admit temporary agricultural labor to meet seasonal shortages without that admission becoming a tool for employers to displace or underbid the wages of the domestic workforce already doing that work — the 1986 IRCA-era H-2A framework was built explicitly to prevent guestworker admission from functioning as a wage-suppression backdoor.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "DOL and agricultural employer associations attest the founding problem is substantially addressed by the current AEWR methodology and ongoing labor shortages justify continued reliance on it. UFW, worker advocacy groups, and several federal court opinions (including successful APA challenges to specific AEWR methodology changes) attest that the founding problem persists in substance — that methodology revisions have repeatedly been used to erode the wage floor the statute was meant to guarantee — corroboration that comes from outside the employer-DOL axis that benefits from a lower measured AEWR."
+  },
+  "interval": {
+    "start": 0,
+    "end": 38
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 31,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 38,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 31,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 38,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 31,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 38,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The INA's adverse-effect bar has been continuously in force since the 1986 H-2A framework: no party disputes that the statutory sentence prohibiting wage-depressing guestworker admission is still law. What has moved is DOL's Adverse Effect Wage Rate (AEWR) methodology — the regulatory instrument that translates the statutory guarantee into an actual dollar figure. Successive rulemakings have changed the wage surveys used, the geographic and occupational aggregation, and the treatment of piece-rate versus hourly work, each time producing a different number while leaving the underlying statutory bar textually untouched. This story authors the substrate as a single flat constraint: one commitment, one set of metrics, with the contestation over what 'satisfies' the bar landing in perspectival divergence across stakeholder seats and in omega variables, rather than in decomposed reading-stories.",
+    "key_agents": [
+      "department_of_labor: administers and revises the AEWR methodology that operationalizes the statutory guarantee",
+      "agricultural_employers: pay the AEWR, benefit from methodology loosening, organized lobbying presence",
+      "h2a_guestworkers: receive the AEWR wage, powerless over its construction, visa-tied to sponsoring employer",
+      "domestic_farmworkers: the statute's named intended beneficiaries, experience methodology changes as wage ceiling effects",
+      "united_farm_workers_members: excluded from rulemaking control but active in litigation and comment",
+      "federal_courts: reviews methodology challenges but cannot dictate the measuring instrument DOL must use"
+    ],
+    "logic_rationale": "Extractiveness is authored at a moderate-high 0.58 and rising over the interval because the AEWR methodology has trended, across multiple rulemakings, toward broader occupational and regional aggregation that produces lower computed wage floors — a drift that operates entirely beneath the unrepealed statutory text. Suppression sits at 0.52: it is not zero, because domestic farmworkers face real barriers to contesting the methodology (individual comment periods, costly litigation, monopsonistic regional labor markets that limit their own exit), but it is not total, because UFW retains standing to sue and has won specific APA challenges. Theater ratio rises to 0.47 because an increasing share of DOL's methodological activity is defended in the language of technical statistical refinement while its practical effect is wage-floor erosion — the coordination function (matching seasonal labor need to supply) persists genuinely, but a growing extractive layer rides on the same administrative machinery.",
+    "perspectival_gap": "From DOL and agricultural employers' seats, the constraint looks like a working Rope: a real coordination problem (seasonal labor shortage) solved by a wage-floor mechanism that is periodically refined for statistical accuracy. From domestic farmworkers' and UFW's seats, the same structure computes as a Tangled Rope shading toward Snare: the coordination function is real, but the wage floor it produces has been repeatedly loosened through methodology changes that function as a laundering mechanism defeating the statutory guarantee without ever amending it. The engine's per-seat computation from differing power/exit/scope atoms is expected to reproduce this divergence structurally rather than requiring either side's framing to be adopted wholesale.",
+    "directionality_logic": "Agricultural employers derive a low-d, beneficiary-leaning position: they pay the AEWR but capture the labor-supply guarantee and benefit directly from any methodology change that lowers it, with organized power and only constrained (not trapped) exit since they can adjust hiring mix. H-2A guestworkers also derive toward the beneficiary end structurally (they receive wages they would not otherwise access) but their trapped exit options and powerless position mean the derivation should sit closer to the middle than a pure beneficiary reading would suggest — visa-tied dependency means they cannot bargain over the instrument that sets their wage, which caps how much benefit-derived subsidy the framework should assign them. Domestic farmworkers and UFW members derive high-d, target-leaning positions: they are the statute's named beneficiaries in text but bear the actual cost when the measuring instrument moves, with powerless-to-organized power split and constrained exit (regional labor markets, few alternative employers) amplifying the effective extraction they experience relative to the raw statutory promise.",
+    "mandatrophy_analysis": "The founding problem — guestworker admission being used to undercut domestic wages — is genuinely contested as live or dead: DOL argues current methodology reasonably reflects labor market conditions, while UFW and independent court findings argue the methodology has been progressively weakened in ways that let the underlying evasion recur through a different door. Classifying this as tangled_rope rather than snare or rope avoids two mislabeling errors: treating the arrangement as pure benign coordination (which would erase the wage-floor drift domestic farmworkers experience) and treating it as pure extraction (which would erase the genuine seasonal-labor-matching function that both employers and guestworkers actually rely on). The tangled_rope classification requires exactly the beneficiary/victim/enforcement triple this story authors, and keeps the mandatrophy question — whether the 1986 anti-suppression mandate has outlived its operative function while the statute persists as text — open for resolution by the corroboration evidence rather than foreclosed by the classification itself."
+  },
+  "omegas": [
+    {
+      "id": "methodology_change_as_statutory_defeat",
+      "question": "Does a facially technical revision to the AEWR wage-survey methodology that produces a materially lower wage floor constitute 'defeating' the statutory adverse-effect guarantee, or is it a legitimate exercise of DOL's delegated technical discretion under Chevron-successor deference?",
+      "resolution_mechanism": "Comparative analysis of AEWR levels under successive methodologies against independent labor-market wage data for the same occupations and regions, cross-checked against APA arbitrary-and-capricious rulings that have vacated specific methodology changes.",
+      "impact": "If methodology changes systematically track employer preference rather than independent wage evidence, the constraint's true operative function has shifted from guarantee to laundering mechanism even though the statutory text is unchanged — supporting a snare-leaning reading. If methodology changes track genuine improvements in wage-data quality, the tangled_rope's coordination function remains dominant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether AEWR methodology revisions are technical refinement or substantive evasion of the statutory bar."
+    },
+    {
+      "id": "guestworker_dependency_direction",
+      "question": "Should H-2A guestworkers be modeled primarily as beneficiaries of the wage floor (relative to their pre-migration alternatives) or as targets of the same visa-dependency structure that suppresses domestic wages (since their inability to bargain is part of what makes the wage floor moveable)?",
+      "resolution_mechanism": "Track whether AEWR reductions correlate with reduced guestworker bargaining outcomes independent of domestic wage effects, and whether guestworkers who exit sponsorship (where legally possible) achieve materially different wages.",
+      "impact": "If guestworkers are primarily beneficiaries, the directionality derivation toward the beneficiary end is correct as authored. If their trapped exit options mean they are effectively co-targets alongside domestic farmworkers, the directionality should shift toward the target end and the overall extraction reading intensifies.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether visa-tied guestworkers are structurally closer to beneficiaries or to co-targets of the wage-floor mechanism."
+    },
+    {
+      "id": "judicial_check_sufficiency",
+      "question": "Is APA arbitrary-and-capricious review, as currently exercised by federal courts, a sufficient check on methodology drift, or does the courts' inability to dictate a specific measuring instrument leave DOL free to iterate toward the same low-AEWR outcome through successive reformulations?",
+      "resolution_mechanism": "Track the pattern of vacated AEWR rules over time: if DOL's replacement methodologies converge back toward similar wage outcomes after each vacatur, judicial review is a formal check without substantive bite; if replacement methodologies genuinely diverge, the check is functioning.",
+      "impact": "If judicial review is toothless in practice, the suppression metric is understated relative to the structural reality, and the classification should weight more heavily toward snare; if judicial review meaningfully constrains outcomes, the tangled_rope classification's enforcement requirement is satisfied by a genuinely contestable process rather than a captured one.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether judicial review of AEWR methodology meaningfully constrains outcomes or is a formal check that DOL can iterate around."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "h2a_labor_certification_process",
+      "domestic_farmworker_wage_protection_standard"
+    ],
+    "dual_formulation_note": "This story treats the adverse-effect bar as a single flat constraint per the construction-perturbation control condition: it does not decompose the statutory guarantee from its AEWR-methodology instrument into separate reading-stories, even though the source material identifies exactly the kind of committer structure (stable kernel, contested measuring instrument) that would warrant decomposition under the ordinary authoring rules. The contestation is instead carried entirely by perspectival stakeholder divergence and the omega variables above. A companion decomposed treatment, if authored, would separate 'the statutory text is unrepealed' (near-mountain, uncontested) from 'the current AEWR methodology satisfies the statutory bar' (contested, tangled_rope-or-snare) as linked siblings."
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-22",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
