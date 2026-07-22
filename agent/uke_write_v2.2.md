@@ -1,6 +1,6 @@
-# UKE_W v2.1 [Universal Knowledge Evaluator - Writing Protocol]
-## Revised: 2026-02-16
-## Changes from v2.0: Added Deferential Realism constraint story integration, revised model transparency for invisible-scaffolding mode
+# UKE_W v2.2 [Universal Knowledge Evaluator - Writing Protocol]
+## Revised: 2026-07-22
+## Changes from v2.1: Added the Forecast Register (§1.6, §6.1) — predictions scoreable-by-construction via a machine-extractable block; scoreability gate (§5.7); F-UNSCOREABLE-PREDICTION anti-pattern; companion scoring rubric `uke_score_v0.1.md`
 
 ---
 
@@ -192,6 +192,58 @@ After reviewing all constraint stories and reports for a scenario, look for the 
 - What does the network graph look like? (Star topology? Chain? Independent clusters?)
 
 This meta-reading often generates the essay's thesis. The Alberta essay's thesis — "the remedy intensifies the vulnerabilities" — emerged from the pattern that three of six constraints were coordination-washed in the same direction: extraction hiding behind coordination rhetoric.
+
+### §1.6 From Falsifier to Forecast: The Scoreable Prediction Requirement (NEW in v2.2)
+
+§1.4 requires stating what evidence would falsify a claim. That is necessary but not
+sufficient for a later grading pass: a falsifier without a date, a numeric threshold, and a
+named resolver cannot be scored — only argued about. **Scoreability is a property of how the
+essay is written, not something conferred by the passage of time.** An essay that names a
+specific institution, forks the outcome explicitly, and writes resolution criteria in-body can
+be graded years later; an essay making structural claims of equal ambition with no date, no
+threshold, and no named measurable cannot be graded by anyone.
+
+**REQUIRED:** Every Tier 3 hypothesis that makes a claim about future world-behavior must emit
+at least one **forecast pair** into the Forecast Register (§6.1 format):
+
+- **Mechanism question** — "Will [stress/failure/change] express through [the named joint]?"
+  Resolvable without any timeline commitment. Scores whether the structural read found the
+  right load-bearing element.
+- **Magnitude/timeline question** — "Will [named measurable] cross [numeric threshold] by
+  [absolute date], per [named resolver]?" Scores the resilience/severity estimate.
+
+**These are separable skills that fail independently — never collapse them into one question.**
+A structural read can name the right joint and still misjudge the redundancy around it. A
+single pooled score punishes the correct mechanism call for the timeline miss and teaches
+timeline-hedging, which degrades exactly what structural analysis is good for.
+
+**Each register row must be self-contained.** A scoring model reading ONLY the row — not the
+essay — must be able to resolve it. No anaphora ("the crisis," "the institution"): name the
+entity, the measurable, the threshold, the source. Dates absolute (YYYY-MM-DD), never relative.
+
+**Both probabilities are mandatory:**
+- `p_essay` — your probability, informed by the structural analysis.
+- `p_baseline` — what a reference-class forecaster would assign WITHOUT the structural read
+  (state the reference class).
+
+The downstream headline is skill over baseline, not raw accuracy. This is also the
+anti-hedging mechanism: hedging drags `p_essay` toward `p_baseline`, which zeroes measured
+skill — a hedged forecast protects nothing.
+
+**Direction tag:** mark each forecast `fragility` (predicts breakdown, paralysis, collapse,
+degradation) or `stability` (predicts persistence, absorption, recovery). The error-direction
+distribution then reads off directly at scoring time — misses clustering on over-predicted
+fragility vs. scattering both ways — with no additional apparatus.
+
+**Omega promotion rule:** before writing the Unresolved Questions section, sweep the empirical
+omegas. Any empirical omega that is outcome-shaped — the world will produce the resolving data
+on its own schedule — is promoted to a register row. Omegas requiring someone to go gather
+data, and all conceptual omegas, remain Unresolved Questions.
+
+**Scoring contract:** the register's consumer is the companion protocol
+`agent/uke_score_v0.1.md` — a standard rubric a subsequent model applies to the register block
+alone. A row the scorer cannot resolve from its own fields is reported as a protocol defect
+(UNRESOLVABLE), never repaired by interpretation. Write rows so that cannot happen.
 
 ---
 
@@ -468,6 +520,20 @@ For major claims:
 - [ ] Evidence that would disprove claim identified
 - [ ] If claim is unfalsifiable, it's been removed or completely reframed
 
+### §5.7 The Scoreability Gate (NEW in v2.2)
+
+For the Forecast Register (§1.6, §6.1):
+
+- [ ] Every Tier 3 hypothesis making a future-behavior claim has at least one forecast pair
+- [ ] Mechanism and magnitude are separate rows, never one pooled question
+- [ ] Each row passes the register-only-reader test: resolvable with no access to the essay
+- [ ] All dates absolute; all thresholds numeric; every resolver named
+- [ ] Both `p_essay` and `p_baseline` stated, with the reference class
+- [ ] Every row direction-tagged (`fragility` | `stability`)
+- [ ] The block parses as YAML and carries the `FORECAST REGISTER v1` marker
+- [ ] Claims with predictive ambition but no register row have been explicitly reclassified as
+      non-predictive (interpretive/retrospective) — silence is not an exemption
+
 ---
 
 ## §6. OUTPUT FORMAT (REVISED)
@@ -503,6 +569,10 @@ For major claims:
 1. [Specific action] - [Which institution] - [Timeline]
 2. [Specific action] - [Which institution] - [Timeline]
 
+## Forecast Register
+[REQUIRED — the machine-extractable block per §6.1. Publication in the public copy is a
+per-essay voice call; the archived copy MUST retain it.]
+
 ## Unresolved Questions
 [What could existing institutions answer but haven't]
 
@@ -535,6 +605,47 @@ For major claims:
 - Omega-to-question mapping: [Which omegas became which unresolved questions]
 - Unsupported translations: [Any DR insights that lack independent Tier 1 evidence — these should have been removed]
 ```
+
+### §6.1 The Forecast Register Block Format (NEW in v2.2)
+
+The register is the scoring interface: a subsequent model extracts this block alone (per
+`agent/uke_score_v0.1.md`) and grades it without reading the essay. Keep the fence and the
+`FORECAST REGISTER v1` marker exactly as formatted.
+
+```yaml
+# FORECAST REGISTER v1
+essay: [slug]
+date_written: [YYYY-MM-DD]
+forecasts:
+  - id: F1
+    hypothesis: "[the Tier 3 hypothesis this pair scores, restated self-contained]"
+    column: mechanism            # mechanism | magnitude
+    question: "[Binary, self-contained: named entity, no anaphora. e.g. 'Will the leadership
+      succession process — not sanctions, protest, or economic shock — be the primary locus
+      of governance disruption in COUNTRY X following EVENT Y?']"
+    resolution_date: YYYY-MM-DD
+    resolver: "[Named source/criterion that settles it]"
+    p_essay: 0.00                # your probability, structural analysis included
+    p_baseline: 0.00             # reference-class probability without the structural read
+    reference_class: "[what base rate p_baseline comes from]"
+    direction: fragility         # fragility | stability
+  - id: F2
+    hypothesis: "[same hypothesis — the paired magnitude/timeline question]"
+    column: magnitude
+    question: "[e.g. 'Will INSTITUTION Z remain without a confirmed head for more than 30
+      days after EVENT Y, per REUTERS/AP reporting?']"
+    resolution_date: YYYY-MM-DD
+    resolver: "[Named source/criterion]"
+    p_essay: 0.00
+    p_baseline: 0.00
+    reference_class: "[...]"
+    direction: fragility
+```
+
+Rows are pairs by construction (`column: mechanism` + `column: magnitude` per hypothesis); a
+hypothesis may carry several magnitude rows at different thresholds/horizons, but never a
+pooled row. Scoring, aggregation, and the two-column discipline live in `uke_score_v0.1.md` —
+do not restate them here.
 
 ---
 
@@ -588,6 +699,14 @@ DR vocabulary or metric citations appearing in a Mode B (invisible scaffolding) 
 Translating a DR diagnostic finding into domain language but failing to provide independent evidence for the translated claim. The essay says "presents as coordination but structurally transfers dependency" because the Prolog said "coordination-washed" — but the essay provides no public-record evidence for that claim.
 **Fix:** Every translated DR insight must have at least one Tier 1 fact supporting it independently. If you can't find one, the insight stays in your notes, not in the essay.
 
+### F-UNSCOREABLE-PREDICTION (NEW in v2.2)
+Making a structural claim with predictive ambition — atrophy, cascade, baseline shift,
+paralysis — with no date, no threshold, and no named measurable, so that nothing could ever
+grade it. The claim reads as bold but is immune to being wrong.
+**Fix:** Emit the forecast pair (§1.6) into the Forecast Register, or explicitly mark the
+claim as interpretive (non-predictive). The test: could a model reading only the register
+grade this essay in two years? If not, the prediction is decoration.
+
 ---
 
 ## §8. THE CORE DISCIPLINE
@@ -613,6 +732,31 @@ This doesn't mean hedging everything. It means:
 ---
 
 ## §9. VERSION NOTES
+
+**Changes from v2.1 to v2.2:**
+
+**Added:**
+- §1.6: The Scoreable Prediction Requirement — every future-behavior Tier 3 hypothesis emits
+  a mechanism/magnitude forecast pair with absolute dates, numeric thresholds, named
+  resolvers, `p_essay` + `p_baseline`, and a fragility/stability direction tag
+- §6.1: The Forecast Register block format (machine-extractable YAML, `FORECAST REGISTER v1`
+  marker) + a register slot in the §6 output template
+- §5.7: The Scoreability Gate
+- F-UNSCOREABLE-PREDICTION anti-pattern
+- Companion scoring protocol `agent/uke_score_v0.1.md` — the register's consumer; a
+  subsequent model applies it as a standard rubric to the register block alone
+
+**Lesson that prompted this revision:**
+A retrospective grading attempt over the essay archive found that scoreability is a property
+of how an essay was written, not of elapsed time: essays that named institutions, forked
+outcomes, and wrote falsifiers in-body could be graded; essays making structural claims of
+equal ambition with no date, threshold, or named measurable could not. The one graded case
+also showed mechanism-identification and magnitude-estimation failing independently (right
+joint, wrong resilience estimate) — hence the two-column register, and skill-over-baseline as
+the headline so the scoring rule cannot reward timeline-hedging. Provenance and the
+pre-registered fragility-bias hypothesis: ISSUES.md OQ-229.
+
+---
 
 **Changes from v2.0 to v2.1:**
 
@@ -666,9 +810,10 @@ In practice, the Prolog diagnostic stack was doing more work than initially reco
 
 ---
 
-## END OF UKE_W v2.1
+## END OF UKE_W v2.2
 
 **Status:** Production-ready
 **Purpose:** Generate arguments that survive adversarial review and force institutional response
 **Key innovation (v2.0):** Mandatory adversarial verification and evidence tiering prevents brittleness
 **Key innovation (v2.1):** Explicit integration of DR constraint stories as hypothesis-validation inputs with invisible-scaffolding default
+**Key innovation (v2.2):** The Forecast Register — predictions scoreable-by-construction, two-column (mechanism/magnitude), graded later by `uke_score_v0.1.md` without human triage

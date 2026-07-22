@@ -1,7 +1,7 @@
 """Editorial Analysis Pipeline — post-essay review and revision.
 
 Takes an essay (typically from c-orchestrator stage 6) and runs it through
-four independent editorial protocols, then revises using uke_write_v2.1.md.
+four independent editorial protocols, then revises using uke_write_v2.2.md.
 
 Usage:
     python3 agent/analysis.py outputs/essays/some_essay.md
@@ -77,7 +77,7 @@ class EditorialAnalysisPipeline:
             "uke_grounding": _load_context_file(str(agent_dir / "analysis" / "uke_grounding.md")),
             "uke_audit":     _load_context_file(str(agent_dir / "analysis" / "uke_audit.md")),
             "uke_reality":   _load_context_file(str(agent_dir / "analysis" / "uke_reality.md")),
-            "uke_write":     _load_context_file(str(agent_dir / "uke_write_v2.1.md")),
+            "uke_write":     _load_context_file(str(agent_dir / "uke_write_v2.2.md")),
         }
 
     # -- API helpers (same pattern as c-orchestrator) ----------------------

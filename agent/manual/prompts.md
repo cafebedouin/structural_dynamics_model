@@ -1,6 +1,6 @@
 Prompt 1:
 
-Can you use uke_write_v2.1.md to write an essay on the topic:
+Can you use uke_write_v2.2.md to write an essay on the topic:
 
 The Inevitability of Hardship and Friction Moving through the world guarantees encountering obstacles, unavoidable pain, and problems that defy easy solutions.
 

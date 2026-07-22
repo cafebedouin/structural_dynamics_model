@@ -90,7 +90,7 @@ mis-listed AC/resistance as "emitted but never read."
 apart: (1) **DP-001 ε-invariance linkage** between *sibling* readings of one kernel ("link
 ε-distinct constraints via affects_constraint/2" — every story's header comment, from
 `generate_constraint_pl.py`); (2) the **UKE upstream→downstream dependency** graph
-(`uke_write_v2.1.md`, `stage0.md` — "downstream constraints reference upstream ids"); (3) generic
+(`uke_write_v2.2.md`, `stage0.md` — "downstream constraints reference upstream ids"); (3) generic
 network edges. Seven consumers read the *same* edge as different structure — the FPN
 `compute_edge_contamination` as contamination, `drl_composition:detect_extraction_dominance` as
 composite→component, `drl_counterfactual:dependency_chain` as ordered dependency,

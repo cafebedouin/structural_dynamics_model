@@ -45,6 +45,29 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-22 — [landed] uke_write v2.1→v2.2 (Forecast Register) + uke_score v0.1 companion rubric + OQ-229 minted (pre-registered fragility-bias hypothesis)
+**Files:** agent/uke_write_v2.2.md, agent/uke_score_v0.1.md, agent/analysis.py, quick_start.md, agent/manual/prompts.md, docs/technical/generator_emission_map.md, ISSUES.md, issues/INDEX.md
+**Tier:** landed
+
+Operator-relayed review feedback on the planned essay-archive grading pass (scoreability is
+authored, not conferred by time; mechanism-ID and magnitude-estimation fail independently;
+fragility-bias hypothesis + kill condition) was landed as: (1) **uke_write v2.2** — renamed
+from v2.1 (single-file lineage convention; `git mv`), adding §1.6 Scoreable Prediction
+Requirement, §6.1 machine-extractable `FORECAST REGISTER v1` YAML block (two-column
+mechanism/magnitude pairs, absolute dates, named resolvers, `p_essay`+`p_baseline`,
+fragility/stability direction tags), §5.7 Scoreability Gate, F-UNSCOREABLE-PREDICTION;
+(2) **`agent/uke_score_v0.1.md`** — the register's consumer, a standard rubric a subsequent
+model applies to the register block alone (producer+consumer in one change per Build
+Discipline Pattern 1); (3) **OQ-229** — both arms (forward instrument landed-unwitnessed;
+retrospective triage-then-grade pass not started) + the pre-registered hypothesis and kill
+condition, recorded before any grading run. All 8 live `uke_write_v2.1.md` references updated
+(analysis.py:4,80 hardcoded load path; quick_start; manual/prompts; generator_emission_map;
+OQ-185's three citations — its `:173` scaffold-row line anchor verified still valid post-edit,
+and its `grep suppression_requirement` empty-witness still returns 0). Audit-dir references
+left historical. **Protocol change is under model-swap discipline: unwitnessed until the
+first v2.2 essay run passes the §5.7 gate on real output** (OQ-229 graduation step).
+Checks: issues_status 229/0 malformed, omega check 0 problems, index regenerated fresh.
+
 ## 2026-07-20 — [landed] Kimi-k2.6 twin COMPLETE at n=1005; five-leg cross-model comparison
 **Files:** prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, agent/run_no_scope_kimi.py, python/audits/five_leg_twin_comparison.py, audits/2026-07-20_five_leg_twin_comparison/
 **Tier:** landed

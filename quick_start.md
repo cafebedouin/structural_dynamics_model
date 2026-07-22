@@ -64,7 +64,7 @@ If you prefer to author constraints manually:
 The final step is synthesizing high-level insights from the structural data.
 
 1. Capture the executive summary from the orchestrator or enhanced reports.
-2. Use the UKE_W protocol (`protocols/uke_write_v2.1.md`) to guide an LLM in synthesizing a formal essay.
+2. Use the UKE_W protocol (`protocols/uke_write_v2.2.md`) to guide an LLM in synthesizing a formal essay.
 3. The result is a "Deferential Realist" analysis that traces every claim back to the structural invariants surfaced by the engine.
 
 ---

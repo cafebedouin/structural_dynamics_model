@@ -8912,17 +8912,17 @@ gate active+satisfied (0.35+0.25+0.25+0.15=1.0). Revert path (revert-on-red) unu
 **Status:** open
 **Priority:** 2
 **Origin:** OQ-39 row-14 close (2026-06-25). The engine-side disposition (a commentary verdict that annotates the rule-break post-hoc) surfaced the generation-side question OQ-39 did not own. KNOWN_STATE 2026-06-25.
-**File:** `agent/uke_write_v2.1.md:173` (scaffold prompt definition — qualitative only); generation step `agent/c-orchestrator.py` `_step_generate`; post-hoc detector `prolog/cs_pattern_detection.pl` `cs_verdict(C, scaffold_suppression_escalating)` + control `prolog/tests/test_oq39_scaffold_escalation.pl`.
+**File:** `agent/uke_write_v2.2.md:173` (scaffold prompt definition — qualitative only); generation step `agent/c-orchestrator.py` `_step_generate`; post-hoc detector `prolog/cs_pattern_detection.pl` `cs_verdict(C, scaffold_suppression_escalating)` + control `prolog/tests/test_oq39_scaffold_escalation.pl`.
 **Deps:** splits_from OQ-39
 
-**Specific question.** Scaffold's analytical signature includes *suppression declines over time* (the "temporary framework / sunset" reading — census G4 row 14). Generation produces the opposite at scale: among scaffold-certified constraints with an authored `suppression_requirement` series, **rising beats falling ≈ 5–6:1 in every leg** (testsets/ 13:2, testsets_haiku 53:7, testsets_flash 43:9 @ institutional context). The two reconciled twins share one generation prompt, so this is not one model's idiosyncrasy. **Crux (witnessed):** the prompt never actually asks for a declining suppression series — `uke_write_v2.1.md:173` defines Scaffold only qualitatively ("transitional arrangement," "temporary framework"), with no `suppression_requirement`-series instruction anywhere in the prompt. So the "rule" is an analytical inference from the *type definition*, not an authored generation instruction generation could honor. The decision: which remedy, given the engine already annotates the gap (OQ-39)?
+**Specific question.** Scaffold's analytical signature includes *suppression declines over time* (the "temporary framework / sunset" reading — census G4 row 14). Generation produces the opposite at scale: among scaffold-certified constraints with an authored `suppression_requirement` series, **rising beats falling ≈ 5–6:1 in every leg** (testsets/ 13:2, testsets_haiku 53:7, testsets_flash 43:9 @ institutional context). The two reconciled twins share one generation prompt, so this is not one model's idiosyncrasy. **Crux (witnessed):** the prompt never actually asks for a declining suppression series — `uke_write_v2.2.md:173` defines Scaffold only qualitatively ("transitional arrangement," "temporary framework"), with no `suppression_requirement`-series instruction anywhere in the prompt. So the "rule" is an analytical inference from the *type definition*, not an authored generation instruction generation could honor. The decision: which remedy, given the engine already annotates the gap (OQ-39)?
 
 - **(a) Make it explicit** — add a series-level instruction to the scaffold generation guidance ("a scaffold's `suppression_requirement` series should trend down toward sunset"). Tests on `testsets/` per the test-bed posture; risks over-fitting generation to the engine's expectation.
 - **(b) Gate at authoring** — a linter/validator check that flags a rising-suppression scaffold at generation time (operator-eval surface, like the row-18 perspective checks), not an engine enforcer.
 - **(c) Accept-and-annotate (status quo)** — OQ-39's `scaffold_suppression_escalating` verdict already records the break post-hoc; do nothing at the generation surface and read the verdict as a fidelity signal.
 - **(d) Drop the expectation** — rule that a scaffold may legitimately *tighten* before it sunsets (rising suppression is not anti-scaffold), retiring census row 14 as a non-rule. If so, the OQ-39 verdict becomes a neutral descriptor, not a rule-break flag.
 
-**Evidence so far (witnessed 2026-06-25).** The cross-leg counts above (OQ-39 implementation; cross-checked against an independent inline probe — same 14 firings on `testsets/`). The prompt-locus negative (no series instruction) is a read-witness, not a memory: `grep suppression_requirement agent/uke_write_v2.1.md` is empty; the scaffold row is qualitative-only. Positive-control lesson carried from OQ-39/OQ-183: bind `C` from `corpus_loader:corpus_constraint/1` before any `cs_verdict(C, scaffold_suppression_escalating)` re-census (an unbound query returns a false 0).
+**Evidence so far (witnessed 2026-06-25).** The cross-leg counts above (OQ-39 implementation; cross-checked against an independent inline probe — same 14 firings on `testsets/`). The prompt-locus negative (no series instruction) is a read-witness, not a memory: `grep suppression_requirement agent/uke_write_v2.2.md` is empty; the scaffold row is qualitative-only. Positive-control lesson carried from OQ-39/OQ-183: bind `C` from `corpus_loader:corpus_constraint/1` before any `cs_verdict(C, scaffold_suppression_escalating)` re-census (an unbound query returns a false 0).
 
 **OQ-221 cross-note (2026-07-16):** the meter-partition audit records this question as its row 11,
 state **BLOCKED-ON-SEAT** — deliberately not forced into the meterable/reader-held partition; the
@@ -10760,9 +10760,72 @@ OQ-75 (twin corpora), OQ-26/OQ-70 (regime-bound descriptive-stat rule), GAP-25 (
 calibration), `audits/2026-07-20_five_leg_twin_comparison/` (WRITEUP + DEEPER_CUTS + BATTERY +
 PARITY writeups).
 
+## OQ-229 — Essay-archive outcome scoring: triage-then-grade retrospective pass + the Forecast Register forward instrument (pre-registered fragility-bias hypothesis)
+
+**Ω-type:** Ω_E (world-witnessable — graded outcomes settle it; the world produces the resolving data on its own schedule).
+
+**Status:** open — forward instrument LANDED 2026-07-22 (uke_write v2.2 §1.6/§6.1 Forecast Register + `agent/uke_score_v0.1.md` rubric); retrospective pass NOT started; hypothesis pre-registered below, unadjudicated. The protocol change is under model-swap discipline: it stays unwitnessed until the next essay run shows the model actually emits resolvable rows (§5.7 gate is the check).
+**Priority:** 3
+
+**Origin.** Operator-relayed review feedback on a planned retrospective grading pass over the
+cafebedouin.org essay archive (2026-07-22, chat — recorded here before any grading run so the
+run cannot be shaped to confirm it).
+
+**1. Triage precedes grading; the scoreable ratio is the first finding.** Scoreability is a
+property of how an essay was written, not of elapsed time. The Iran essay is scoreable because
+it named a specific institution, forked the outcome explicitly, tiered the evidence so
+attributed claims couldn't contaminate inferences, and wrote falsifiers in-body for the Tier 3
+hypotheses; the Atrophy essay (four months earlier) makes structural claims of the same
+ambition — atrophy, network effects, baseline shift — with no date, no threshold, no named
+measurable: nothing could grade it. So the first archive pass is triage (which essays admit
+grading at all), and the ratio over time is the cheapest available finding — it dates when the
+writing practice acquired the discipline that makes the corpus pay out.
+
+**2. Pre-registered hypothesis (do NOT adjudicate before the graded pass): structural analysis
+is systematically biased toward predicting fragility.** The method works by locating the
+load-bearing joint and asking what happens when it fails; it is good at joint-finding and
+blind to redundancy, because redundancy is what makes a joint *not* fail and therefore leaves
+no structural signature. One graded case (Iran): correctly identified succession as the
+vulnerable joint, then predicted weeks-to-months of paralysis; the machinery closed it in
+eight days — the gap was the resilience estimate, not the joint-finding. Predicted error
+shape: misses cluster in `over_fragility`, concentrated in the magnitude column, mechanism
+column clean. **Kill condition:** graded failures scatter in both directions (some
+over-fragility, some over-stability) → no systematic bias, just noise; what's owed is
+calibration, not a theory correction. Apparatus-level corroboration (raises the prior, CANNOT
+discharge the claim — the corpus has no outcome ground truth and is selected on
+constraint-hood, so a fragility skew there is selection, not evidence): OQ-91 (transition
+space was all-downward/lateral-into-worse until the repair detector, 2026-06-26), OQ-185
+(5–6:1 rising:falling suppression across all three legs).
+
+**3. Rubric design constraint (operator [EDGE], binding on any scorer).**
+Mechanism-identification and magnitude-estimation are separable skills that fail
+independently; a scorer that collapses them teaches timeline-hedging, degrading what
+structural reads are good for. Two columns, never pooled — built into the §6.1 register
+format and `uke_score_v0.1.md` §0; skill-over-baseline (`brier_baseline − brier_essay`) is
+the headline so the scoring rule cannot reward hedging (hedging drags `p_essay` toward
+`p_baseline`, zeroing measured skill).
+
+**Two arms.**
+- **Forward (landed, unwitnessed):** uke_write v2.2 emits a machine-extractable
+  `FORECAST REGISTER v1` YAML block (self-contained rows: binary question, absolute
+  resolution date, named resolver, `p_essay` + `p_baseline` + reference class,
+  fragility/stability direction tag); `uke_score_v0.1.md` is the standard rubric a subsequent
+  model applies to the register alone, no essay read, no human triage. Graduation step:
+  first essay run under v2.2 with the §5.7 gate passing on real output.
+- **Retrospective (not started):** triage the archive for scoreability; grade the scoreable
+  subset two-column under the uke_score rubric (prose-reconstructed registers, marked as
+  reconstructions — uke_score §1.1 forbids doing this silently); read the miss-direction
+  distribution against the kill condition. `prolog/testsets*` CANNOT serve as the test bed:
+  no outcome ground truth, and selection on constraint-hood confounds any fragility skew.
+
+**What resolution changes.** Hypothesis survives → a theory correction (resilience-estimation
+blindness) is owed to the framework paper, with the graded pass as its witness; kill
+condition fires → calibration work on the authoring side, paper untouched. Either way the
+scoreable-ratio triage finding stands on its own.
+
 ---
 
-*Last updated: 2026-07-21. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-07-22. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
