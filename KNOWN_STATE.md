@@ -68,6 +68,18 @@ left historical. **Protocol change is under model-swap discipline: unwitnessed u
 first v2.2 essay run passes the §5.7 gate on real output** (OQ-229 graduation step).
 Checks: issues_status 229/0 malformed, omega check 0 problems, index regenerated fresh.
 
+Same-session extension (still v2.2 — landed unpushed/unwitnessed, so extended rather than
+bumped): **§2.4 Tensegrity Architecture for the multi-seat essay** (from the operator's
+stereo-pair essay design cycle) — seats as compression struts at measured strength (χ),
+declared disparities with kill conditions as the tension net (§1.4 extended to disparities;
+tensegrity-without-tension = both-sides filler), no privileged front (author's seat declared
+as one strut), hydrostatic local commitment (declared/costed/temporary, emits a Forecast
+Register pair when outcome-shaped). §2.3 scoped as the convergent mode with an explicit
+mode-choice rule; §1.5.2 gauge-variant bullet routes to §2.4 (same-line edit — the
+uke_write:173 scaffold-row anchor re-verified intact); new F-MANUFACTURED-CENTER
+anti-pattern (seatless synthesis voice / fake tensegrity). Aligns with OQ-101
+(plurality collapses by form) and the verdict-omits-seat finding.
+
 ## 2026-07-20 — [landed] Kimi-k2.6 twin COMPLETE at n=1005; five-leg cross-model comparison
 **Files:** prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, agent/run_no_scope_kimi.py, python/audits/five_leg_twin_comparison.py, audits/2026-07-20_five_leg_twin_comparison/
 **Tier:** landed

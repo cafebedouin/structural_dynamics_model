@@ -136,7 +136,7 @@ The Prolog diagnostic stack applies formal evaluation methods that the constrain
 
 **Gauge orbit (Dirac classification)** — determines perspectival structure.
 - Gauge-invariant (singleton orbit): All observers agree. Classification is observer-independent. These are your hardest structural facts.
-- Gauge-variant (multi-type orbit): Observers disagree. The orbit tells you *who* disagrees and *how*. **For the essay:** The perspectival disagreement IS the story. Map each orbit position to a real-world stakeholder group.
+- Gauge-variant (multi-type orbit): Observers disagree. The orbit tells you *who* disagrees and *how*. **For the essay:** The perspectival disagreement IS the story. Map each orbit position to a real-world stakeholder group, and structure the essay as tensegrity (§2.4), not convergence (§2.3).
 
 **Drift events** — identify dynamic claims.
 - `metric_substitution` (theater rising): Rhetoric is substituting for substance, and the substitution is accelerating. **For the essay:** The political theater angle has formal backing.
@@ -309,6 +309,61 @@ Paragraph D: Together, these independent lines point to [conclusion]
 ```
 
 If any one paragraph is refuted, the others still function. The argument degrades gracefully rather than collapsing entirely.
+
+**Scope:** this is the architecture for a **convergent** (single-conclusion) essay. When the
+material is gauge-variant and the disagreement is the finding, use §2.4 — same
+graceful-degradation goal, opposite mechanism.
+
+### §2.4 Tensegrity Architecture: The Multi-Seat Essay (NEW in v2.2)
+
+§2.3 is the wrong architecture when the material is gauge-variant (§1.5.2): when observers
+genuinely disagree and the disagreement IS the story, forcing the essay onto a single
+verdict-spine collapses the plurality by form, no matter how carefully the prose hedges.
+Spine-as-monolith — one load-bearing column that either holds a single verdict or fails — is
+not the only load-bearing anatomy. Three alternatives define the design space:
+
+**Tensegrity (the load path).** A vertebrate spine parsed into components was never a stacked
+column bearing load in compression: bones float as isolated compression struts inside a
+continuous tension net (fascia, ligament, muscle); nothing touches; load anywhere
+redistributes everywhere. Build the multi-seat essay this way:
+
+- **Seats are compression struts.** Each perspective is rendered at its measured strength —
+  the evidence and structural weight it actually carries (for DR material: its indexed
+  position's χ magnitude) — and held APART. Never fuse seats into a synthetic middle
+  position; never refute a seat merely to clear room for a conclusion.
+- **Declared disparities are the tension members.** Each disparity between seats is stated
+  explicitly AND carries its kill condition: what observation would collapse it (the seats
+  actually converge) or snap it (one seat is untenable). **Tensegrity without tension is a
+  pile of struts:** a disparity with no kill condition is not a structural member, it is
+  both-sides filler — cut it or sharpen it. §1.4 applies to disparities, not just claims.
+- **Graceful degradation is the payoff.** Refute one strut and the net holds, because no
+  perspective was carrying the load alone. This is §2.3's goal achieved by the opposite
+  mechanism: §2.3 gets it from redundant support of one conclusion; §2.4 gets it from
+  distributed load across held-apart seats. The disparity is not indecision — it is the
+  load-bearing structure.
+
+**Radial, not axial (no front).** The brittlestar has no spine, no brain, and no front: a
+nerve ring, five equivalent arms, a calcite skeleton packed with microlenses — the organism
+is a distributed eye with no cyclopean point, and it moves whichever arm the situation loads.
+The multi-seat essay likewise needs no privileged "forward" seat and no center that sees for
+everyone. **Your own analytical seat is one more strut, declared as such** — not the frame
+the other seats hang from. A synthesis voice that presents itself as seatless has
+manufactured a center (F-MANUFACTURED-CENTER).
+
+**Hydrostatic commitment (local, costed stiffness).** The octopus arm has no skeleton; it
+manufactures rigidity on demand by pressurizing fluid where needed and stays fluid elsewhere.
+The multi-seat essay may still commit HARD — locally: one joint stiffened to a verdict when
+the cost of delaying a decision exceeds the cost of being wrong. The commitment is declared,
+costed, and temporary-until-resolved — real, local stiffness that never pretends to be
+permanent bone ("I am flattening this and owning the flattening"). Every pressurized joint
+carries its falsifier, and if it is outcome-shaped it emits a Forecast Register pair (§1.6):
+it is exactly the empirical hinge whose resolution would legitimately stiffen the whole
+structure — and until resolution, it stays fluid.
+
+**Choosing the architecture:** singleton orbit (observers agree), or a flattening you declare
+and own → §2.3 convergent. Multi-type orbit where the disparity is the finding → §2.4
+tensegrity. Writing gauge-variant material as a convergent essay WITHOUT declaring the
+flattening is F-MANUFACTURED-CENTER.
 
 ---
 
@@ -707,6 +762,17 @@ grade it. The claim reads as bold but is immune to being wrong.
 claim as interpretive (non-predictive). The test: could a model reading only the register
 grade this essay in two years? If not, the prediction is decoration.
 
+### F-MANUFACTURED-CENTER (NEW in v2.2)
+Writing gauge-variant material as a single-verdict essay without declaring the flattening:
+the synthesis voice presents itself as seatless — a center that sees for everyone — and the
+plurality collapses by form regardless of how carefully the prose hedges. The dual failure
+is fake tensegrity: seats listed side by side with no kill-conditioned disparities holding
+them in relation — both-sides filler posing as structure.
+**Fix:** Either build the essay as tensegrity (§2.4 — seats as struts at measured strength,
+disparities as tension members with kill conditions, your own seat declared as one strut),
+or commit to the flattening explicitly: name the seat you are collapsing to, own the cost,
+and attach the falsifier (hydrostatic commitment, §2.4).
+
 ---
 
 ## §8. THE CORE DISCIPLINE
@@ -745,6 +811,13 @@ This doesn't mean hedging everything. It means:
 - F-UNSCOREABLE-PREDICTION anti-pattern
 - Companion scoring protocol `agent/uke_score_v0.1.md` — the register's consumer; a
   subsequent model applies it as a standard rubric to the register block alone
+- §2.4: Tensegrity architecture for the multi-seat essay — seats as compression struts at
+  measured strength, declared disparities with kill conditions as the tension net, no
+  privileged front (the author's seat declared as one strut), hydrostatic local commitment
+  wired to the Forecast Register; §2.3 scoped as the convergent mode; §1.5.2 gauge-variant
+  material now routes to §2.4
+- F-MANUFACTURED-CENTER anti-pattern (seatless synthesis voice; dual: fake tensegrity —
+  seats with no kill-conditioned disparities)
 
 **Lesson that prompted this revision:**
 A retrospective grading attempt over the essay archive found that scoreability is a property
@@ -754,7 +827,11 @@ equal ambition with no date, threshold, or named measurable could not. The one g
 also showed mechanism-identification and magnitude-estimation failing independently (right
 joint, wrong resilience estimate) — hence the two-column register, and skill-over-baseline as
 the headline so the scoring rule cannot reward timeline-hedging. Provenance and the
-pre-registered fragility-bias hypothesis: ISSUES.md OQ-229.
+pre-registered fragility-bias hypothesis: ISSUES.md OQ-229. §2.4 came from the same review
+cycle: designing a stereo-pair (multi-seat) essay exposed that the protocol's only
+architecture was a convergent verdict-spine — the form itself collapsed plurality (the same
+lesson the pipeline learned when the auto-synthesized essay was removed), so the multi-seat
+form got its own load-bearing architecture instead of a hedged version of the old one.
 
 ---
 
