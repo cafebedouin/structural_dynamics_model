@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "coverage_neutral_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "4bb318ab-871e-4ac9-88c2-eefb3df698f9"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "OEWS Coverage-Neutral Reading of Adverse Effect Wage Measurement",
+    "topic_domain": "political_economy_of_labor_migration/administrative_law/agricultural_policy",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "wage_survey_statisticians",
+      "h2a_employers",
+      "labor_department_rulemakers"
+    ],
+    "vindicated_propositions": [
+      "measurement_neutrality_of_establishment_surveys",
+      "coverage_gap_does_not_entail_directional_bias"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "wage_survey_statisticians",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Design and run the Occupational Employment and Wage Statistics survey, sampling non-farm establishments by industry and geography at a resolution the agricultural survey it replaced could not match. They know the farm exclusion is real and documented in the methodology notes, and they maintain that its directional effect on the wage floor is unresolved rather than settled downward bias."
+    },
+    {
+      "name": "h2a_employers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Pay the Adverse Effect Wage Rate computed substantially from OEWS data for many occupations. They benefit if OEWS's higher-frequency, higher-granularity data produces a wage floor that tracks local labor markets more accurately than the coarser instrument it replaced, regardless of whether that floor is higher or lower than a farm-inclusive alternative would produce."
+    },
+    {
+      "name": "h2a_farmworkers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Are paid the wage rate the survey produces but are not employed in the establishments the survey samples, since OEWS excludes farm establishments by design. They are not part of the data-generating process for the wage floor that governs their own pay, though this reading holds that exclusion from the sample does not by itself establish that the resulting number is biased against them."
+    },
+    {
+      "name": "labor_department_rulemakers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Select OEWS as the instrument for computing wage floors under a rulemaking process, weighing its documented gaps against its granularity and frequency advantages over the alternative (farm-specific or reduced-frequency instruments). They can defend the choice on methodological grounds independent of any claim about who the choice benefits."
+    },
+    {
+      "name": "farmworker_advocacy_organizations",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue in comment letters and litigation that the farm exclusion depresses the measured wage floor because non-farm occupational wages used as proxies are unrepresentative of farm labor markets. This reading does not adopt their inferential leap from 'gap exists' to 'floor is biased downward' as established, though it acknowledges the gap itself is real and the advocacy position is a legitimate contesting claim."
+    },
+    {
+      "name": "labor_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study whether OEWS-derived wage floors converge with, exceed, or fall below floors that would be computed from farm-inclusive data where such data exists (e.g., in occupations with partial overlap). Their empirical findings to date are mixed and do not establish a uniform directional bias, which is the evidentiary basis this reading rests on."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single, high-frequency, geographically and occupationally granular wage survey that multiple regulatory programs (including H-2A wage-setting) can reference instead of maintaining separate, lower-resolution, agriculture-specific instruments.",
+    "transfer_function": "The survey itself transfers nothing directly; it sets a reference number that then determines wage transfers from employers to workers under the AEWR rule. Whether that reference number transfers value away from farmworkers relative to some counterfactual instrument is exactly the open question this reading refuses to presume answered.",
+    "absent_voices": "Farmworkers whose wages are set by reference to a survey that does not sample their workplaces are not participants in the survey's design; farmworker advocacy organizations raise this on their behalf but their inferential claim (gap implies downward bias) is contested rather than corroborated by independent economic analysis.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If OEWS were dropped as the wage-floor instrument, rulemakers would need to revert to a lower-frequency, lower-granularity alternative or construct a new farm-inclusive survey; employers would face a different (not necessarily lower) wage floor and advocacy groups would treat this as either vindication or continued injustice depending on which direction the new number moved. The world clearly rearranges administratively; whether it rearranges in farmworkers' favor is exactly what remains contested and is not resolved by removing the instrument.",
+    "founding_problem": "Agricultural labor markets needed a wage-setting mechanism to prevent H-2A guest-worker admission from depressing wages for domestic workers in similar occupations ('adverse effect'), and the original agriculture-specific survey used to compute this rate was low-frequency and coarse-grained.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Labor department rulemakers and wage survey statisticians attest the switch to OEWS solved a real measurement-quality problem (frequency and granularity). Farmworker advocacy organizations and some labor economists attest the founding problem — protecting farmworker wages from erosion — is not being solved and may be undermined by the farm exclusion; independent academic studies on the direction of bias are inconclusive, which is the corroboration this reading relies on for its central claim of genuine uncertainty."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Adverse Effect Wage Rate for H-2A agricultural guest workers is increasingly computed from Occupational Employment and Wage Statistics (OEWS) data, which does not sample farm establishments directly. Advocacy groups and some researchers treat this coverage gap as evidence that the wage floor is systematically depressed relative to what a farm-inclusive survey would produce. This story takes the coverage-neutral reading: the gap is real and undisputed, but the inferential leap from 'gap exists' to 'floor is biased downward' is not established by the gap alone. OEWS offers genuine advantages — higher sampling frequency, finer geographic and occupational resolution — that the instrument it replaced lacked, and the empirical direction of any coverage-driven bias remains open. This reading is one of four readings of the adverse_effect_measurability kernel; the instrument_capture_reading asserts the downward-bias inference as established, the bureaucratic_drift_reading treats the instrument choice as inertial administrative habit rather than a live methodological tradeoff, and the hold_up_efficiency_reading treats the gap as a deliberate lever employers exploit in rulemaking capture. This story does not adopt any of those framings.",
+    "logic_rationale": "Extractiveness is authored low (0.18) because this reading holds that no directional extraction has been established — the coordination function (a higher-resolution wage survey usable across regulatory programs) is real and the alleged extraction (downward-biased wage floor harming farmworkers) is an unresolved empirical claim, not a structural fact of the instrument's operation. Suppression is low (0.12): no party is coerced into accepting OEWS as the instrument in a way that forecloses the advocacy groups' ability to contest it in rulemaking comments or litigation — the debate is open and ongoing, which is itself evidence against high suppression. Theater ratio is low and rises only slightly over the interval, reflecting that the survey performs substantive statistical function rather than performative compliance. Accessibility collapse is moderate (0.35): farmworkers cannot easily generate an alternative, farm-inclusive wage statistic themselves, but the political and administrative channel (rulemaking comment, litigation) for contesting the instrument choice remains genuinely open, which caps collapse well below mountain-level.",
+    "directionality_logic": "Wage survey statisticians and labor department rulemakers are coded beneficiaries because they get a survey instrument with real methodological advantages (frequency, granularity) that lowers their own operational costs, independent of wage-floor direction. H-2A employers benefit from a more responsive, locally-accurate wage floor whether or not it happens to run higher or lower than a hypothetical farm-inclusive alternative — the benefit here is measurement quality, not necessarily a lower number. Farmworkers and their advocacy organizations are coded excluded, not victim: this reading declines to assert they bear a proven cost, because the direction of the coverage-driven effect on the AEWR is exactly the open question. Coding them as victims would smuggle in the instrument_capture_reading's contested inferential step as if it were settled structural fact.",
+    "perspectival_gap": "Statisticians and rulemakers experience the instrument as a genuine methodological upgrade; farmworker advocates experience the same instrument as an unaccountable black box that determines their members' pay without sampling their members' workplaces. Both experiences are structurally real and do not require choosing a winner — the gap in experience is exactly why this kernel needs multiple readings rather than one story trying to average across them.",
+    "mandatrophy_analysis": "The founding problem (protecting domestic farmworker wages from erosion by guest-worker admission) is still live in the sense that H-2A admissions continue and the AEWR mechanism still operates against that stated purpose. Whether the current instrument still serves that purpose, versus having drifted into serving employer and statistical-agency convenience, is contested precisely because the coverage gap's directional effect is unresolved. This reading resists premature mandatrophy declaration in either direction: declaring the AEWR mechanism dead-but-persisting (pure extraction) would require establishing the downward bias claim, which this reading holds open.",
+    "kernel_context": "This is the coverage_neutral_reading of the adverse_effect_measurability kernel, one of four readings of how OEWS's exclusion of farm establishments from its sampling frame should be interpreted for AEWR wage-setting purposes. The instrument_capture_reading treats the coverage gap as established downward bias serving employer interests through a captured instrument. The bureaucratic_drift_reading treats the instrument choice as inertial administrative habit disconnected from active interest-serving. The hold_up_efficiency_reading treats the gap as a deliberately exploited lever in a hold-up dynamic between employers and the rulemaking process. This reading holds that the coverage gap is real but its directional consequence for the wage floor is empirically open, and that OEWS's granularity/frequency advantages are genuine coordination benefits independent of that open question. If future research established a clear downward bias, this reading's core premise (neutral or indeterminate direction) would be falsified and the instrument_capture_reading's inferential step would be vindicated instead."
+  },
+  "omegas": [
+    {
+      "id": "coverage_gap_bias_direction",
+      "question": "Does the exclusion of farm establishments from OEWS sampling produce a wage floor that is systematically lower, systematically higher, or not systematically different from what a farm-inclusive survey would produce for the same occupations and areas?",
+      "resolution_mechanism": "Comparative studies using occupations with partial farm/non-farm overlap, or construction of a pilot farm-inclusive supplemental survey compared against OEWS estimates for the same geography and occupation codes over multiple cycles.",
+      "impact": "If a systematic downward bias is established, this reading's central premise collapses and the instrument_capture_reading's inferential step is vindicated; if bias is neutral or upward, the instrument_capture_reading's core claim fails even though the coverage gap remains a real technical limitation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the farm-exclusion coverage gap produces a directionally biased wage floor."
+    },
+    {
+      "id": "instrument_choice_as_capture_signal",
+      "question": "Is the Department of Labor's continued reliance on OEWS despite the known coverage gap evidence of regulatory capture by employer interests, or a defensible tradeoff favoring a demonstrably superior general-purpose instrument over a discontinued, lower-quality agriculture-specific one?",
+      "resolution_mechanism": "Review of rulemaking record for explicit consideration of alternative instruments, cost-benefit analysis of reinstating a farm-specific survey, and comparison of rulemaking outcomes across administrations with different asserted policy priorities.",
+      "impact": "If the rulemaking record shows the coverage gap was raised and dismissed without substantive analysis, that supports a capture or drift reading; if it shows genuine cost-benefit deliberation reaching this outcome under multiple administrations, that supports the coverage-neutral reading's framing of a defensible methodological tradeoff.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the persistence of the coverage gap despite advocacy objections reflects capture, drift, or genuine tradeoff."
+    },
+    {
+      "id": "kernel_framing_underdetermination",
+      "question": "Is the adverse_effect_measurability kernel better understood as a single contested technical question (what does the survey measure) or as four structurally distinct claims that only share a label because they all discuss the same statistical instrument?",
+      "resolution_mechanism": "Track whether empirical resolution of the bias-direction question (this reading's central omega) actually resolves the bureaucratic_drift_reading and hold_up_efficiency_reading's claims, or whether those readings' claims are orthogonal to bias direction and would survive resolution of it.",
+      "impact": "If the sibling readings' claims are genuinely orthogonal to bias direction, the four readings are less like contested interpretations of one kernel and more like four separate constraints wearing one label — which would argue for further decomposition rather than a four-reading kernel structure.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the four sibling readings are genuinely contesting the same kernel or are separable constraints."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "instrument_capture_reading",
+      "bureaucratic_drift_reading",
+      "hold_up_efficiency_reading"
+    ],
+    "dual_formulation_note": "This story is one of four readings of the adverse_effect_measurability kernel (OEWS coverage of farm establishments in AEWR wage-setting). coverage_neutral_reading asserts no established directional bias and treats OEWS's granularity/frequency advantages as genuine coordination gains. instrument_capture_reading asserts the coverage gap produces an established downward bias serving employer interests. bureaucratic_drift_reading treats the instrument choice as administrative inertia rather than active interest-capture. hold_up_efficiency_reading treats the gap as a deliberately exploited lever in an employer/rulemaker hold-up dynamic. Each reading has its own epsilon and stakeholder structure per the epsilon-invariance principle; they are linked here rather than merged into one story with a bias-direction parameter."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "methodological_tradeoff_neutrality",
+    "drift_state": {
+      "moment": "post_2015_oews_transition_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "adverse_effect_measurability__instrument_capture_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "adverse_effect_measurability__bureaucratic_drift_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "adverse_effect_measurability__hold_up_efficiency_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "coverage_gap_bias_direction_unresolved",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "measurement_quality_gains_are_genuine_coordination",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-22",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

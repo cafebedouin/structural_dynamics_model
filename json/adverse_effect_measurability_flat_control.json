@@ -1,0 +1,273 @@
+{
+  "header": {
+    "constraint_id": "adverse_effect_measurability_flat_control",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "f69fe408-4e0e-4092-bd2f-d79cc38f7c72"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.55,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "H-2A Adverse Effect Wage Rate Certification System",
+    "topic_domain": "political_economy/labor_migration/administrative_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "agricultural_employers",
+      "dol_certifying_office"
+    ],
+    "victims": [
+      "us_farmworkers",
+      "h2a_guest_workers"
+    ],
+    "vindicated_propositions": [
+      "statutory_wage_protection_guarantee"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "dol_certifying_office",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers the H-2A certification process, sets the Adverse Effect Wage Rate (AEWR) annually using USDA Farm Labor Survey data, and certifies employer applications on the premise that the AEWR prevents wage suppression. Its institutional legitimacy rests on the claim that the wage baseline it publishes is a real, measured floor, not an administrative fiction; it controls the methodology and its revisions."
+    },
+    {
+      "name": "agricultural_employers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Petition for H-2A certification, pay the published AEWR, and gain access to a guest-worker labor pool with lower turnover and no independent bargaining leverage. They lobby the survey methodology, litigate wage-rate increases, and can shift acreage or crop mix if a regional AEWR rises, giving them exit options domestic workers lack."
+    },
+    {
+      "name": "us_farmworkers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Compete for the same jobs the AEWR is supposed to protect. The wage baseline is measured by a survey with declining sample coverage in many states, so the number that is supposed to represent 'their' prevailing wage is often modeled or imputed rather than directly observed in their labor market. They have no standing in the AEWR-setting process and cannot appeal a rate they believe understates true market wages."
+    },
+    {
+      "name": "h2a_guest_workers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Are tied to a single certified employer through the visa and are paid at the AEWR, which is often set below what they might command in a competitive local labor market; the visa's employer-lock removes the ability to seek a higher-paying position even where alternatives exist. They also benefit relative to their home-country wage floor, which is why they enter the program at all."
+    },
+    {
+      "name": "usda_farm_labor_survey_office",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Conducts the Farm Labor Survey that feeds the AEWR calculation. Sample sizes and regional coverage have shrunk over decades due to budget constraints, meaning some regional AEWRs are statistically thin or imputed from adjacent regions. This office does not adjudicate wage disputes but its methodological choices determine whether the 'measured baseline' the whole certification regime depends on is empirically solid or largely notional."
+    },
+    {
+      "name": "worker_advocacy_organizations",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Litigate and comment on AEWR methodology on behalf of farmworkers but have no seat in the annual survey design or certification decision itself; their objections are addressed, if at all, through slow notice-and-comment rulemaking rather than real-time adjustment."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single, administratively predictable wage floor that lets employers plan guest-worker hiring and lets the government certify admissions without a case-by-case wage investigation for every petition — genuine coordination value if the underlying wage measurement is sound.",
+    "transfer_function": "Moves labor market leverage from domestic farmworkers and guest workers (who cannot bargain above the administratively set rate, and in the guest-worker case cannot bargain at all) to agricultural employers, who obtain a legally certified, artificially anchored wage ceiling in practice even though the AEWR is nominally a floor.",
+    "absent_voices": "US farmworkers and H-2A workers themselves have no formal role in setting the AEWR; the survey methodology is set by USDA/DOL technical staff and contested, if at all, by advocacy organizations through litigation years after the fact — the workers whose wages the system claims to protect are structurally absent from its calibration.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Employers and DOL would say the certification regime's disappearance would collapse orderly guest-worker admission and invite unregulated wage undercutting; worker advocates would say its disappearance would simply remove a legitimating cover for a wage rate that already functions as a suppressed administrative ceiling rather than a market floor, and would force employers into genuine local wage competition.",
+    "founding_problem": "Congress required, in the 1986 IRCA framework, that admitting temporary agricultural guest workers not adversely affect the wages of similarly employed US workers — the felt problem was that guest-worker admission absent a wage floor would drive down domestic farm wages and displace US labor.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "DOL and agricultural employer associations attest the AEWR mechanism continues to serve its founding purpose. GAO reports, academic labor economists, and farmworker advocacy litigation (outside the beneficiary set) have repeatedly found the Farm Labor Survey's declining sample sizes and imputation methods produce wage estimates with substantial measurement uncertainty, undermining the claim that a real, observed 'similarly employed' wage baseline exists in many certified regions."
+  },
+  "interval": {
+    "start": 1987,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1987,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1997,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1987,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1997,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1987,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1997,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.55,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The H-2A program's legitimacy rests on a statutory guarantee: admitting foreign guest workers into US agriculture will not adversely affect the wages of similarly employed domestic workers. DOL operationalizes this guarantee through the Adverse Effect Wage Rate (AEWR), computed annually from USDA Farm Labor Survey data. The certification regime functions as a commitment system — DOL's authority to certify admissions is legitimated by its claim to enforce a fixed, measured wage baseline. But the survey underlying that baseline has degraded in coverage over decades: shrinking sample sizes mean many regional AEWRs are imputed or modeled rather than directly observed, so the 'measured baseline' the entire certification chain depends on is, in a growing number of regions, closer to an administrative construct than an empirical fact. This story treats the constraint as a single, flat structure — the tension between the coordination function (a predictable wage floor enabling orderly certification) and its drift toward theatrical measurement is captured through stakeholder divergence and temporal metrics, not through decomposition into separate readings.",
+    "logic_rationale": "Extractiveness (0.62) reflects that the AEWR increasingly functions as an anchored ceiling employers can plan around rather than a genuine floor tracking local labor market conditions, especially where imputed data understate true prevailing wages. Theater ratio (0.58) captures the widening gap between the survey's claimed measurement function and its actual statistical thinness — the ratio has risen steadily as sample coverage eroded, which is why the temporal series shows monotonic increase rather than a stable value. Suppression (0.55) is a raw structural property: domestic farmworkers have no formal channel to contest an AEWR they believe understates their market wage, and H-2A workers are visa-locked to a single employer, both independent of enforcement intensity or scope.",
+    "directionality_logic": "Agricultural employers are structural beneficiaries: they gain a certified, predictable wage rate and mobility to shift operations if a regional AEWR becomes unfavorable — their exit options push their effective directionality toward the beneficiary end. US farmworkers are targets with no formal role in AEWR-setting and no exit from the regional labor market — trapped exit pushes their directionality toward full target. H-2A workers are also targets by wage structure (employer-lock, no bargaining) but partially offset by the benefit of dollar-denominated wages relative to home-country baselines, which is why they carry a dual beneficiary/payer role rather than a pure victim designation.",
+    "perspectival_gap": "DOL and agricultural employer associations experience this constraint as a functioning coordination mechanism: a stable, legally defensible wage rate that lets certification proceed predictably. Domestic farmworkers and worker advocates experience the same structure as an extractive mechanism whose legitimating measurement has hollowed out — the 'similarly employed' wage the statute promises to protect is, in an increasing share of regions, not actually observed. The engine computes these as structurally distinct per-seat classifications from the same authored data; the divergence is the finding, not an inconsistency to be resolved.",
+    "mandatrophy_analysis": "The founding problem — guest-worker admission driving down domestic farm wages absent a wage floor — remains at least partially live (agricultural labor markets are still thin and geographically concentrated, giving employers wage-setting power in the absence of any floor). This prevents a simple 'pure extraction' reading: the coordination function is not dead, which is why this is authored as tangled_rope rather than snare. But the measurement infrastructure that gives the floor its legitimacy has degraded independently of whether the underlying problem persists, producing a constraint whose coordination claim increasingly outruns its evidentiary basis — the theater_ratio trend is the diagnostic trace of that divergence."
+  },
+  "omegas": [
+    {
+      "id": "aewr_measurement_validity",
+      "question": "In regions where the Farm Labor Survey sample is thin or where the AEWR is imputed from adjacent regions, does the published rate still represent a genuine measurement of 'similarly employed' domestic wages, or has it become an administrative construct decoupled from the local labor market it claims to describe?",
+      "resolution_mechanism": "Independent re-survey of thin-sample regions with adequate sample size, compared against the imputed AEWR; GAO or OIG audit of USDA survey methodology and coverage trends over the interval.",
+      "impact": "If the AEWR is substantially decoupled from actual local wages in a material share of certified regions, the statutory guarantee DOL claims to enforce is not being measured at all in those regions, which would support reclassifying the certification regime's operation there as closer to snare than tangled_rope — the coordination premise fails where the measurement fails.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the AEWR wage baseline is genuinely measured or increasingly administratively imputed."
+    },
+    {
+      "id": "founding_problem_persistence",
+      "question": "Is the original 1986 concern — guest-worker admission suppressing domestic farm wages absent a floor — still empirically live in the agricultural labor markets where H-2A certifications concentrate, or has the sector's structure (consolidation, year-round guest-worker reliance in some regions) changed such that the AEWR now primarily preserves employer wage-setting power rather than counteracting it?",
+      "resolution_mechanism": "Longitudinal wage studies comparing counties with high H-2A penetration against comparable counties with low penetration, controlling for crop mix and mechanization trends.",
+      "impact": "If the founding problem has substantially receded in high-penetration regions, the certification regime there functions closer to a piton — a system defended on its founding rationale while the coordination function it names has weakened relative to the extraction it still performs.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the 1986 wage-suppression concern remains empirically active or has been superseded by structural sector change."
+    },
+    {
+      "id": "guest_worker_net_directionality",
+      "question": "Given that H-2A workers are both wage-suppressed relative to a competitive local labor market AND wage-benefited relative to home-country alternatives, does the constraint net-extract from them or net-benefit them?",
+      "resolution_mechanism": "Comparative analysis of H-2A wages against (a) competitive US farm labor market rates absent the program and (b) home-country agricultural wage rates, weighted by worker-reported preference and re-enrollment rates.",
+      "impact": "Resolving this toward net-extraction would strengthen the case for treating guest workers primarily as victims; resolving toward net-benefit would support their dual beneficiary/payer role as authored.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether guest workers are net beneficiaries or net victims of the wage-setting mechanism, given the dual comparison baseline."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "h2a_visa_employer_lock",
+      "farm_labor_survey_methodology"
+    ],
+    "dual_formulation_note": "This story treats the adverse-effect wage guarantee as a single flat constraint per the construction-perturbation control instructions, without decomposing it into separate readings of the statutory text. It links to the H-2A visa employer-lock constraint (which shares the same worker population but a distinct extraction mechanism — mobility restriction rather than wage measurement) and to the underlying Farm Labor Survey methodology constraint (which is the upstream measurement infrastructure this story's legitimacy depends on)."
+  },
+  "gain_flow": "agricultural_employers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-22",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

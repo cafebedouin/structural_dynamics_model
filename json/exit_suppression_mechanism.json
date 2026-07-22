@@ -1,0 +1,351 @@
+{
+  "header": {
+    "constraint_id": "exit_suppression_mechanism",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "acd929a3-6878-4235-bde9-f77e05413c08"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.79,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.61,
+    "resistance": 0.47,
+    "claimed_type": "tangled_rope",
+    "human_readable": "H-2A Adverse-Effect Wage Floor Under Unmeasurable Instrument Substitution",
+    "topic_domain": "political_economy/administrative_law/agricultural_labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "h2a_certified_employers"
+    ],
+    "victims": [
+      "h2a_workers"
+    ],
+    "vindicated_propositions": [
+      "adverse_effect_wage_protection_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 2019,
+    "end": 2026
+  },
+  "omegas": [
+    {
+      "id": "coverage_gap_bias_direction",
+      "question": "Does OEWS's structural exclusion of farm establishments from its sampling frame bias the computed AEWR downward, or is the direction of bias genuinely indeterminate given OEWS's superior granularity and frequency relative to the discontinued Farm Labor Survey?",
+      "resolution_mechanism": "GAO or independent econometric comparison of AEWR trajectories under FLS (historical) versus OEWS (current) for the same commodity/region cells, controlling for the IFR's phased inclusion of farm employers in the OEWS sample.",
+      "impact": "If bias is confirmed downward and structural, the instrument substitution functions as a de facto repeal mechanism supporting tangled_rope/snare classification. If bias is neutral or the gap is genuinely closing under the IFR remediation, the coverage_neutral_reading is vindicated and the constraint shifts toward ordinary regulatory transition (scaffold or rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether OEWS's farm-exclusion structurally biases the wage floor downward or is direction-neutral."
+    },
+    {
+      "id": "intent_vs_structure_mechanism_threshold",
+      "question": "Does a mechanism require coordinated intent across DOL/USDA/employer-lobby actors to count as extraction, or does structural alignment of independently-motivated discretionary choices producing a consistent downward-biased outcome itself constitute the operative mechanism?",
+      "resolution_mechanism": "Documentary/administrative-record review (rulemaking dockets, inter-agency correspondence, comment-period submissions) to establish whether the instrument substitution and employer-tied status restructuring were coordinated or independently arrived at.",
+      "impact": "If coordinated, instrument_capture_reading is strongly supported and extraction should be scored higher; if genuinely independent (bureaucratic_drift_reading), the same observable pattern carries substantially less normative weight and the constraint may be closer to a piton (atrophied enforcement via inertia) than a tangled_rope (active engineered extraction).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether mechanism-hood requires coordinated intent or is satisfied by structural outcome alone."
+    },
+    {
+      "id": "hold_up_efficiency_counterfactual",
+      "question": "Is employer-tied visa status a legitimate mechanism-design solution to a genuine contracting hold-up problem (sunk recruitment costs, judgment-proof workers), such that the wage-floor degradation is an incidental second-order cost rather than the point — or does the H-1B portability counterexample show that the hold-up problem is solvable without tying, making the tying itself the extractive lever?",
+      "resolution_mechanism": "Comparative program analysis: does H-1B's portable-status structure (where workers may transfer employers without re-starting the visa process) produce comparably functioning labor markets without the sunk-cost/hold-up failure hold_up_efficiency_reading predicts for a portable H-2A?",
+      "impact": "If H-1B's portability disproves the hold-up necessity claim, hold_up_efficiency_reading's legitimation of tied status collapses and the tying reads as extraction-enabling rather than efficiency-enabling.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether employer-tied status is a necessary efficient response to a hold-up problem or an extractive lever disguised as one."
+    },
+    {
+      "id": "cs_framing_kernel_choice",
+      "question": "Is the operative kernel the statutory adverse-effect clause itself (INA text, fixed), or the measurement instrument that operationalizes it (FLS/OEWS, substitutable)? The instrument_capture_reading treats the instrument as constitutive of the standard ('a legal standard requires operational measurement to be a standard at all'); a narrower textualist reading could hold the statutory guarantee stands independent of any particular measurement instrument, with instrument adequacy a separate administrative-law question (arbitrary-and-capricious review) rather than a kernel-drift question.",
+      "resolution_mechanism": "Judicial review outcome (APA challenge to the OEWS substitution) would settle whether courts treat instrument adequacy as go/no-go for statutory compliance or as a severable procedural matter.",
+      "impact": "If the kernel is the instrument itself, drift_state (codification_collapse) is the correct characterization and this story's classification holds. If the kernel is the statutory text alone, this constraint may be better modeled as a narrower rulemaking-quality dispute with lower stakes, and the CS classification would shift toward implicit/practice rather than formalized/extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the contested kernel is the statutory text or the measurement instrument that operationalizes it — the two candidate framings this story's cs_structure block must choose between."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.79,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The H-2A guest worker program admits agricultural labor conditioned on DOL certifying that admission will not adversely affect wages of similarly-employed US workers. That test is only as real as the wage baseline it measures against. For decades, USDA's Farm Labor Survey provided a farm-sector-specific baseline, making the adverse-effect test falsifiable. USDA discontinued the FLS; DOL substituted the Occupational Employment and Wage Statistics (OEWS) survey, which structurally excludes most farm establishments from its sampling frame. The operative causal question is whether farmworker wage stagnation traces to ordinary supply/demand adjustment in a labor market with genuine surplus, or to a specific engineered mechanism: workers cannot observe an alternative wage (because the instrument measuring the 'prevailing wage' cannot see the sector it governs) and cannot act on any wage they do observe because H-2A visa status ties them to a single certified employer, foreclosing exit. This story treats exit_suppression_mechanism as the compound structural claim that unmeasurability plus employer-tied status jointly suppress wages below what a portable-status, correctly-measured baseline would yield -- distinct from and structurally prior to the underlying labor-supply story addressed elsewhere. State-line wage discontinuities at binding-vs-non-binding minimum wage borders (F9/F10) and the NAICS 111 wage-growth gap relative to the private-sector average (F3/F4) are the observables that would empirically distinguish the two hypotheses.",
+    "key_agents": [
+      "h2a_certified_employers: Primary beneficiary (institutional/arbitrage) -- collects the wage suppression via a baseline it does not set but that structurally favors it, and via workers who cannot exit mid-contract",
+      "h2a_workers: Primary target (powerless/trapped) -- bears the wage suppression, cannot observe an enforceable alternative wage, cannot change employer without risking status",
+      "us_domestic_farmworkers: Secondary target (powerless/constrained) -- the class the adverse-effect clause exists to protect, whose wages are the ostensible measurement object",
+      "dol_ofcc: Agenda-setter (institutional/analytical) -- administers certification, adopted the substitute instrument, defends the substitution as methodologically sound",
+      "usda_nass: Secondary institutional actor (institutional/constrained) -- discontinued FLS citing budget and methodological exposure, initiating the instrument gap",
+      "gao_crs: Analytical observer (institutional/analytical) -- audits the instrument substitution and its downstream wage effects from outside both benefiting parties"
+    ],
+    "logic_rationale": "Extractiveness rises steadily across the interval (0.42 to 0.68) tracking the years since FLS discontinuation and OEWS substitution -- the gap between the instrument's blind spot and the AEWR's continued operation as if fully informed widens as farm-sector wage data staleness compounds. Suppression is authored high and rising (0.58 to 0.79) because the mechanism's persistence depends on two compounding structural facts, not participant consent: the worker cannot observe a countervailing wage (unmeasurability) and cannot act on one even if observed (employer-tied status forecloses lateral movement without risking status termination). Theater ratio is moderate and rising (0.20 to 0.42): the certification process continues to perform statutory compliance -- DOL issues determinations, publishes AEWRs, processes applications -- while the substantive falsifiability of the underlying test has eroded, consistent with instrument_capture_reading's framing of the substitution as a procedural continuity masking substantive discontinuity. Resistance is moderate (0.47): worker resistance is structurally dampened by isolation, geographic dispersion, and status precarity, but is not negligible -- worker centers, legal aid networks, and periodic litigation (APA challenges to OEWS adoption) constitute real, if underpowered, resistance.",
+    "perspectival_gap": "From the agenda-setter seat (DOL), the arrangement is continuous statutory compliance using the best available federal wage instrument, with a stated remediation path (the IFR's phased inclusion of farm employers in OEWS sampling). From the payer seat (h2a_workers), the same arrangement operates as an unenforceable protection: the wage floor cannot be contested because there is no farm-specific baseline against which a worker or advocate could demonstrate adverse effect, and even a demonstrated gap does not translate into exit because status is employer-tied. The engine should compute markedly different seat classifications precisely because DOL's exit options are analytical/arbitrage (it can revise the instrument at will) while workers' exit options are trapped (visa status forecloses employer change without re-starting the entire certification and travel process, often from another country).",
+    "directionality_logic": "h2a_certified_employers sit near the beneficiary end of directionality: they set no formal policy but structurally benefit from a wage floor that cannot rise to reflect the sector's true labor-market tightness, and from workers who cannot leave for a better-paying certified employer without risking removal. h2a_workers sit near the full-target end: they bear the suppressed wage, cannot observe an alternative (unmeasurability), and cannot act on one if somehow observed (visa lock-in) -- both suppression channels operate on the same seat simultaneously, which is the compound mechanism this story isolates from ordinary supply/demand adjustment. us_domestic_farmworkers are declared as a secondary victim class in the narrative (the clause's intended beneficiary) but are not carried in beneficiaries/victims arrays because their harm is indirect (crowd-out effects on a wage floor that no longer functions) rather than the direct extraction this constraint measures; a downstream sibling story on domestic-worker crowd-out would be the correct place to formalize that claim per the epsilon-invariance principle.",
+    "mandatrophy_analysis": "The founding problem -- protecting domestic agricultural wages from undercutting by an admitted guest-worker supply -- remains textually live (the statute is unrepealed) but functionally contested: DOL's authority to certify continues to be exercised as though the measurement problem the clause depends on is solved, when the instrument doing the measuring cannot see the regulated sector. This is precisely the tangled_rope signature rather than a pure snare: there IS a genuine coordination function (a real adverse-effect test, when properly instrumented, solves a real hold-up/undercutting problem that would otherwise erode domestic farm wages) AND there is asymmetric extraction riding the same structure (employers benefit from a floor that cannot rise to meet true market tightness, workers bear a wage suppressed below what accurate measurement plus portable status would yield). Classifying this as snare would erase the genuine, if degraded, coordination function the clause still nominally performs; classifying it as rope would erase the compounding of unmeasurability with visa lock-in that the instrument_capture_reading identifies as functional repeal without a vote."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "h2a_employer_tied_visa_status",
+      "farm_labor_survey_discontinuation",
+      "naics_111_wage_supply_demand_baseline"
+    ],
+    "dual_formulation_note": "This story isolates the exit-suppression hypothesis (unmeasurability + visa lock-in as the operative causal mechanism) from the sibling hypothesis that observed NAICS 111 wage stagnation reflects ordinary labor-supply/demand adjustment (naics_111_wage_supply_demand_baseline, a distinct constraint with its own epsilon -- likely lower, since ordinary market adjustment is not itself an extraction mechanism). Per the epsilon-invariance principle these are NOT two measurements of one constraint: exit_suppression_mechanism claims a specific engineered suppression pathway with an identifiable beneficiary (h2a_certified_employers) and victim (h2a_workers); the supply/demand sibling claims a market-clearing process with no comparable beneficiary/victim structure. h2a_employer_tied_visa_status is authored separately to isolate the status-lock component (which this story treats as a compounding input, not the sole mechanism) from the measurement-instrument component (farm_labor_survey_discontinuation, which isolates USDA's discontinuation decision on its own administrative-process merits per the bureaucratic_drift_reading)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "h2a_certified_employers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Petition DOL for H-2A certification, pay the AEWR computed from OEWS data, and receive workers bound to their operation by visa status. They benefit from a wage floor that cannot be empirically shown to be adverse-effect-compliant, and from a labor supply that cannot exit mid-contract for a better-paying certified employer even if one exists nearby. They can adjust recruitment volume, timing, and which regions they certify in year to year -- a form of arbitrage unavailable to the workers they employ."
+    },
+    {
+      "name": "h2a_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Travel from home countries under contracts tied to a single named employer. Cannot observe a reliable market wage for their specific occupation and locality because the instrument computing the prevailing wage structurally excludes most farm establishments. Cannot act on a better wage even if aware of one, because changing employers requires the new employer to file a new petition and often requires the worker to depart the country and re-enter -- a process most cannot afford to attempt without secured alternative employment first, which the isolation and information gap make difficult to arrange."
+    },
+    {
+      "name": "us_domestic_farmworkers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The class the adverse-effect clause exists to protect. Not directly party to H-2A certification, but their wages are the ostensible reference point the test protects. Have no formal voice in the certification process and no standing to challenge individual AEWR determinations; their interests are represented, if at all, by farmworker advocacy organizations that are not parties to certification either."
+    },
+    {
+      "name": "dol_ofcc",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers H-2A certification and computes the AEWR from OEWS data following USDA's discontinuation of the Farm Labor Survey. Defends the substitution as methodologically sound and has committed, via interim final rule, to phasing farm employers into the OEWS sample. Can revise the instrument, the methodology, or the certification standard at will -- the broadest degrees of freedom of any seat in this structure."
+    },
+    {
+      "name": "usda_nass",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Discontinued the Farm Labor Survey citing budget exposure and methodological concerns about survey design. Bears no direct cost from the AEWR's degraded measurement basis and benefits modestly from reduced survey overhead; its discretionary choice is the upstream trigger for DOL's instrument substitution, though the two agencies' actions were not necessarily coordinated."
+    },
+    {
+      "name": "gao_crs",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Audits the instrument substitution's effects on wage floor accuracy from outside the benefiting employer class and the administering agencies, producing reports that can trigger congressional or judicial scrutiny of the certification process without themselves being party to it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "A correctly-instrumented adverse-effect wage test solves a genuine hold-up/undercutting problem: without it, admitted guest workers could be used to depress wages below what a tight domestic labor market would otherwise sustain, harming both domestic farmworkers and, longer-run, program legitimacy. The certification process, when its measurement basis functions, coordinates guest-worker admission with wage protection.",
+    "transfer_function": "Moves wage income from h2a_workers (and secondarily from us_domestic_farmworkers via crowd-out) to h2a_certified_employers, mediated by a wage floor that cannot rise to reflect true sector-specific labor market tightness because the instrument computing it structurally excludes the sector, compounded by employer-tied visa status that forecloses workers from exiting toward whatever true market wage might exist.",
+    "absent_voices": "H-2A workers themselves have no formal participatory role in AEWR-setting or in USDA's or DOL's instrument-selection decisions; they are represented, if at all, by farmworker legal aid organizations and worker centers who are not parties to certification. Rival portable-status program designs (the H-1B counterexample) are never before the agency as an alternative to the current tied-status structure.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the exit-suppression mechanism were removed overnight -- restoring a farm-specific wage measurement instrument and converting H-2A status to be portable across certified employers -- offered wages would likely converge toward the level observable at binding-state-minimum borders, employer certification volumes and recruitment practices would shift substantially, and the state-line wage discontinuity (F9/F10) this story identifies as diagnostic would narrow or disappear. Employers who currently benefit from the suppressed floor would face materially higher labor costs.",
+    "founding_problem": "Guest-worker admission programs create a structural risk that an elastic supply of admitted labor will be used to undercut wages that a tighter, protectionist domestic labor market would otherwise sustain; the INA's adverse-effect clause was built to make that undercutting legally and empirically detectable and prohibited.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "DOL attests the founding problem remains addressed through the OEWS-based AEWR and the IFR's remediation commitment. GAO and academic labor economists studying the FLS-to-OEWS transition (corroboration from outside both DOL and the employer class) have documented the sector-coverage gap as a real measurement discontinuity with unresolved bias-direction implications; no independent source outside DOL itself has affirmed that the current instrument fully satisfies the statutory test's original falsifiability requirement."
+  },
+  "gain_flow": "h2a_certified_employers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "farm_labor_survey_baseline_falsifiability",
+    "drift_state": {
+      "moment": "post_oews_substitution",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bureaucratic_drift_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hold_up_efficiency_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "coverage_neutral_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "measurement_instrument_constitutive_of_legal_standard",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "instrument_substitution_as_de_facto_repeal",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-22",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
