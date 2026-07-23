@@ -2855,65 +2855,32 @@ pairs are cross-kernel probes; OQ-58 repair progress that was logged here (2 del
 
 ## OQ-60 — Latent absence-reward in the purity scalar: zero-evidence constraint scores pristine 1.0
 
-**Ω-type:** Ω_E (empirical — mechanism witnessed by synthetic probe; zero current corpus victims).
+**Ω-type:** Ω_E (empirical — mechanism witnessed by synthetic probe; live victims = mechanism 5).
 
-**Status:** partial — deliberate pass UNDERWAY (2026-07-17); supersedes the earlier log-only ruling
-(operator authorized this pass). Inert `unknown` layer landed byte-identical (commits 0a `8ada1ff2`
-+ 0a.2 `30a39ab4`); producer commits (EX→FLOOR→…) + tests + Commit 0b + close pending. Recipe:
-`audits/2026-07-17_oq60_purity_absence/HANDOFF.md`.
+**Status:** resolved — 2026-07-23. No-data purity is `unknown` (JSON `null`), distinct from the
+−1.0 gate-fail sentinel; the fabricated `boltzmann_floor_default` fallback is removed. Commits:
+`bc9bffde` (preflight: token pin, 0a/0a.2 retro-witness, testsets census re-run after drift),
+`3f0f96c2` (ordering audit), `0bc180c0` (C-LATENT m1–m4, byte-identical testsets+flash),
+`0be41518` (C-FLOOR m5: 4-leg census join CLEAN — flips exactly 11/2/80/2, money pair
+0.972→null / 0.948→null, flash scorable-mean falsifier held), `2a9e3c5f` (0b coverage
+denominators + stability abstention), `d051d06c` (python sweep + R4 line). Witnesses:
+`audits/2026-07-17_oq60_purity_absence/` (PREFLIGHT/ORDERING_AUDIT/WITNESS_CLATENT/
+WITNESS_CFLOOR/CONSUMPTION_TABLE_0B/PYTHON_SWEEP _2026-07-23.md); tests
+`prolog/tests/test_purity_absence.pl` (17, RED→GREEN per mechanism); KNOWN_STATE 2026-07-23.
 **Priority:** 1
 **Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §3, K5).
-**Files:** `purity_scoring.pl:62-71` (scope_invariance_subscore), `boltzmann_compliance.pl`
-(`scope_invariance_test` — `variant([])` case; `compute_cross_index_coupling` — `GridSize < 2 ->
-CouplingScore = 0.0`), `purity_scoring.pl:41-50` (final clamp).
 
-**Specific question:** A constraint holding *nothing but* the 3 classification facts needed to pass
-`epistemic_access_check` scores `purity_score = 1.0 → pristine` (witnessed,
-`audits/2026-06-03_purity/census_control.tsv`). Three stacked mechanisms: (1)
-`scope_invariance_test` returns `variant([])` when `classify_at_context` fails at every test scope,
-and the SI formula `1-(N-1)·0.25` yields **1.25** — out of range, then concealed by the final
-`min(1.0,…)` clamp; (2) `cross_index_coupling` is total — "not enough data points" returns coupling
-0.0 → F = 1.0 (perfect factorization for absence), which also makes the documented F = 0.5 neutral
-default **unreachable** (the historical "default_fired 0/194" at ISSUES.md:1631 and this audit's
-fresh 0/1106 are vacuous truths, not data-completeness facts); (3) CC/EX default clean on missing
-data. Should absence fail-closed (sentinel/no-data subscore) rather than scoring as perfection?
-
-**Evidence so far:** Corpus census 0/1106 `variant_0`, 0/1106 SI>1.0 — **latent, no current
-victim**: every live constraint classifies at the test grid. Positive control: a nonexistent ID
-gets `has_coupling=1, F=1.0`. Related authored-zero-vs-absent instances: OQ-43/OQ-44
-(Pattern 5); `boltzmann_floor_for` clause 3 silently uses `boltzmann_floor_default=0.05` when
-`coordination_type` is absent (spec logic_extensions.md:746 says sentinel) — how many corpus
-constraints hit the default floor is uncensused.
-
-**Update (2026-07-17 — deliberate pass, `audits/2026-07-17_oq60_purity_absence/`):** Full census
-across all four legs (0 cross-check mismatches; per-process positive control) **inverts the premise
-above.** The three witnessed mechanisms (SI `variant([])`, coupling `GridSize<2`, CC/EX no-data) are
-**entirely latent — zero gate-pass victims on any leg** (they fire only on already-gate-failed
-constraints → already `-1.0`). The only LIVE defect is the parenthetical aside in *Evidence so far*:
-**mechanism 5 — `boltzmann_floor_for` clause 3's fabricated `boltzmann_floor_default=0.05`** when
-`coordination_type` is absent (scored→`unknown`: testsets 9, haiku 2, flash 80, kernel_v1 2; incl.
-`conceptual_framework_reading` 0.972 and `vocabulary_collision_reading` 0.948 scored near-pristine
-off the fabricated floor). Honest close: *the witnessed mechanism was not the live one; the aside
-was.* **Operator rulings this pass** (cite in the eventual close): **R1** no-data disposition =
-`unknown` (JSON `null`, distinct from the −1.0 epistemic-gate-fail sentinel); **R2** all-mechanisms
-scope; **R3** gate axis = **claim-type, not coverage threshold** — descriptive stats
-(mean/distribution/counts) compute over scorable + carry `n_scored/n_total`, NO gate; dispositive
-verdicts (band/clean/severity) gate at coverage 1.0 → distinct abstention token; **R4** unconditional
-per-section coverage line. Landed: complete inert `unknown` plumbing (0a throw-guards + 0a.2
-`effective_purity` second-order consumers), both witnessed byte-identical on testsets/. The
-`−1.0`-in-aggregate exposure (propagation via `effective_purity`/`fpn_intrinsic`/`gc_node_purity`,
-not the explicit means which already filter) is filed to **OQ-62**. Remaining: producer commits +
-`prolog/tests/test_purity_absence.pl` + Commit 0b (R3/R4 additive) + 4-leg witness + close; mint
-follow-ups incl. cross-leg comparability (non-random provenance exclusion, 10.7% flash vs 0.4%
-haiku). Full recipe, money witness, and the scorable-mean falsifier: `HANDOFF.md`.
-
-**What resolution changes:** Fixing changes the no-data fixed point for constraints that are not
-currently misbehaving — the latent-path-fix risk — so the fix is held for a deliberate pass, not
-auto. Resolution would: treat `variant([])` as no-data (0.5 neutral or propagate insufficiency),
-clamp SI to [0,1] at the subscore so out-of-range can't hide under the final clamp, and make
-`cross_index_coupling` fail or return a sentinel below GridSize 2. Until then, the correction key
-applies: a surprising-*clean* reading on a sparse-data story is suspect-by-construction.
-
+**Still-operative rulings (cite when consuming purity):** **R1** no-data = `unknown`/JSON `null`
+(never 1.0, never −1.0); **R2** all-mechanisms scope; **R3** gate axis = claim-type — descriptive
+stats compute over scorable + carry `n_scored/n_total`, dispositive verdicts gate at coverage 1.0
+→ distinct abstention token (`inconclusive(no_data)`, `undetermined`); **R4** unconditional
+per-section coverage line. Declared residue: `excess_extraction_factor` 0.5 neutral prior
+(reformability heuristic, commented in place); `boltzmann_compliance` T3 `pass(no_extraction_data)`
+(design intent); complexity_offset default half stays OQ-41-class. Honest-close note: the three
+originally-witnessed mechanisms were latent (zero gate-pass victims); the live defect was the
+floor aside — the census inverted the premise before the fix. Follow-ups: OQ-236 (cross-leg
+comparability), OQ-237 (print-what-you-dropped), OQ-238 (SI N≥6 floor undershoot); −1.0-in-
+aggregate remains OQ-62.
 ---
 
 ## OQ-61 — Corpus header purity/cascade line: saturated cascade flag, type-composition restatement, hidden no-access count
@@ -2943,6 +2910,10 @@ constraints (sums 1104 of 1106; M=2 today) — should it emit `no_access: M` alo
 `audits/2026-06-03_purity/` (census.tsv joined to pipeline per_constraint for the type
 cross-tab). Contaminated fraction stable across corpus growth (~68.8% at N≈770, 68.2% at N=1104) —
 consistent with structural property of scoring-on-this-composition, not story drift.
+**Update (2026-07-23, OQ-60 0b):** `network_stability_assessment` gained a 4th token —
+`undetermined` when zero-drifting coexists with any claimed member of non-numeric effective
+purity (coverage-1.0 gate on `stable`; commit `2a9e3c5f`). Question (1)'s saturation and (2)/(3)
+remain open; the header renderer must accept the new token.
 
 **What resolution changes:** (1) makes the cascade flag informative again (or removes a dead
 indicator); (2) decides whether the header's purity line is a type-distribution echo or a
@@ -2971,6 +2942,11 @@ banders map the −1.0 sentinel to their worst zone when fed directly (witnessed
 `fpn_zone(-1.0)=critical`, `purity_zone(-1.0)=degraded`) — latent only because every current
 gating caller filters −1.0 first. Should both get an explicit `< 0.0 → unknown` guard clause
 (mechanical, fail-closed) independent of the vocabulary ruling?
+**Update (2026-07-23, OQ-60 close):** `purity_zone(unknown)=unknown` since 0a (non-number
+clause); the −1.0→worst-zone hazard above is UNCHANGED and remains this OQ. −1.0-in-aggregate
+exposure (unfiltered propagation via `fpn_intrinsic`/`gc_node_purity` stores) also stays here —
+per the OQ-60 python witness, −1.0 never reaches JSON (emitter routes it to null), so the live
+exposure is engine-internal caches + direct-fed banders only.
 
 **Evidence so far:** Audit doc §4. The categorical needle's cut also differs from both:
 post-bound-probe-fix `structural_purity` says 96.6% contaminated (excess ≤ 0.05 pass bar) vs the
@@ -11156,6 +11132,71 @@ the committer axis.
 instrument would detect from outside), OQ-234 (structural-witness repair family),
 `docs/commitment_systems/type_b_adjudication_2026-07-23.md` (gate resolution + addenda),
 v8 §5.9 close + §6.1, KNOWN_STATE 2026-07-17 (*Everything Becomes Taste* trifurcation).
+
+---
+
+## OQ-236 — Cross-leg purity comparability: exclusion is non-random w.r.t. provenance; scorable means are not comparable across legs
+
+**Ω-type:** Ω_E (empirical — the exclusion-rate asymmetry is measured; what it does to any
+cross-leg comparison is testable).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-60
+**Origin:** OQ-60 close (2026-07-23), predicted at the 2026-07-17 census.
+**Files:** `audits/2026-07-17_oq60_purity_absence/census_*.tsv`, `python/enhanced_report.py`.
+
+**Specific question:** Post-OQ-60, purity exclusion (null) rates differ sharply by generation
+provenance: flash 292/960 (30.4% incl. gate-fail; 80 no-floor flips = 10.7% of its scorable) vs
+haiku 2/492 flips (0.4%), testsets 11/153, kernel_v1 2/1102. Exclusion is non-random w.r.t.
+which model authored the story (flash under-authors `coordination_type`), so scorable-mean
+purity is NOT comparable across legs — biased before the fix (fabricated floors), differently
+composed after. What discipline should cross-leg purity comparisons carry (per-leg coverage
+strata? matched-authored subsets?), and should twin-comparison surfaces refuse un-stratified
+purity deltas?
+
+**What resolution changes:** whether any cross-leg purity table may headline a raw mean; the
+twin-comparison harness's refusal conditions.
+
+---
+
+## OQ-237 — Filtering surfaces should print what they dropped (purity NaN masks, query filters)
+
+**Ω-type:** Ω_C (design — which surfaces owe a dropped-count line).
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-60
+**Origin:** OQ-60 python sweep (2026-07-23, `PYTHON_SWEEP_2026-07-23.md`).
+**Files:** `python/query.py:276-293`, pandas mask sites over `purity_score`/`purity_band`.
+
+**Specific question:** `query.py` `--min-purity`/`--max-purity`/`--purity-band` masks silently
+drop NaN (unscored) rows — correct exclusion, unlabeled (the mask-semantics twin of the
+`.mean()` skipna case R4 now labels). Which filtering surfaces owe an unconditional
+"N dropped as unscored" line, and is there a shared helper worth extracting?
+
+**What resolution changes:** query/report ergonomics only; no classification path.
+
+---
+
+## OQ-238 — SI penalty formula floor undershoot at N≥6 (rawSI < 0 pre-clamp)
+
+**Ω-type:** Ω_E (empirical — constructible; zero corpus instances at every census to date).
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-60
+**Origin:** OQ-60 census 0b line (floor-violation count, always 0 to date).
+**Files:** `prolog/purity_scoring.pl` (scope_invariance_subscore), `docs/logic_extensions.md`
+(S(C) formula).
+
+**Specific question:** `SI = 1.0 − (N−1)·0.25` goes negative at N≥6 distinct types; the
+`max(0.0, …)` clamp hides the undershoot (the mirror of the N=0 overshoot OQ-60 removed via
+`no_data`). With only 6 type atoms the corpus can reach N=6 exactly; every census to date
+counts 0 instances. Should the formula saturate explicitly (documented floor) or should an
+N≥6 case get a distinct marker instead of silent 0.0?
+
+**What resolution changes:** subscore semantics at an unreached boundary; spec text.
 
 ---
 

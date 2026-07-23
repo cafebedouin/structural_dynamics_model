@@ -1,4 +1,12 @@
-# OQ-60 implementation handoff (2026-07-17; updated 2026-07-23)
+# OQ-60 implementation handoff (2026-07-17; updated 2026-07-23) — **PASS COMPLETE**
+
+**OQ-60 RESOLVED 2026-07-23** (ISSUES.md entry compressed, rulings R1–R4 kept operative;
+[GATE] GREEN at close). Final commits: preflight `bc9bffde`, ordering `3f0f96c2`, C-LATENT
+`0bc180c0`, C-FLOOR `0be41518`, 0b `2a9e3c5f`, python `d051d06c`, Phase-2 `38b60fb2`, close
+commit (ISSUES/KNOWN_STATE/CLAUDE). Phase-2: final-engine 4-leg join residue NONE
+(`PHASE2_CLOSE_2026-07-23.md`). Follow-ups: OQ-236/237/238. Residue: grothendieck per-band
+line OPEN (module not pipeline-wired); `excess_extraction_factor` 0.5 declared neutral;
+OQ-41 offset half; OQ-62 −1.0-in-aggregate. This file is now historical record.
 
 State of the rev-4 plan (`~/.claude/plans/review-and-present-a-virtual-breeze.md`), executed
 2026-07-23 under `~/.claude/plans/can-you-review-oq-60-reflective-clarke.md` (operator

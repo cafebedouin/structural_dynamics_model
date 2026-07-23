@@ -363,6 +363,16 @@ meaningful only relative to a timestamp. See `when_apparatus_sharpens_taxonomy.m
   provenance) and serialized as a sibling of `diagnostic_verdict` — any new report/consumer
   surface must headline the join; rendering `diagnostic_verdict.verdict` as a summary recreates
   the GREEN-over-severe-alerts defect. Provenance: KNOWN_STATE 2026-06-11.
+- **Purity carries TWO absence tokens; JSON null covers both — never coerce, average, or
+  `.get(...,0)` (OQ-60, 2026-07-23).** Engine: `unknown` (no-data — e.g. no authored
+  `coordination_type`, so no Boltzmann floor; the old fabricated `boltzmann_floor_default` is
+  REMOVED) vs `-1.0` (epistemic-gate-fail sentinel); both serialize as JSON `null`
+  (`purity_score`/`purity_band`). Write rule: clean/dispositive purity aggregates gate at
+  coverage 1.0 → abstention token (`inconclusive(no_data)`/`undetermined`); positive
+  existentials fire through unknowns; descriptive stats carry `n_scored/n_total`
+  (`diagnostic.purity_n_scored/_n_total`). Atoms sort BEFORE numbers — guard `number/1` before
+  any sort/max over purity. Synthetic test constraints needing scorable purity must AUTHOR
+  `coordination_type`. Provenance: KNOWN_STATE 2026-07-23; rulings R1–R4 in ISSUES OQ-60.
 - **`h1_band` is NULLABLE; null = UNDETERMINED, never 0 (OQ-51, 2026-06-25).** A null `h1_band`
   (in `pipeline_output.json`, and the product-site `"h1"`/`"h0"` in `product_site_orbits.json`)
   means the cohomological obstruction is N/A — `<2` real (non-`unknown`) seats. A new reader that

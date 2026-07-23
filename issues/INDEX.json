@@ -1,38 +1,25 @@
 {
   "manifest": {
-    "store_version": "3e3232ee82916716d611f332bc7e17ea2325ddb6",
+    "store_version": "d051d06cad74ff9dc87a78feabef4d7cbd2aafcc",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-23T16:51:39"
+    "generated_at": "2026-07-23T18:37:04"
   },
-  "issues_sha": "aa8eda934c4a354e9dd3dad578336f67d4df808a523aa8cc8dd2ed14cef23265",
-  "n_entries": 235,
+  "issues_sha": "31840c512ed8fb814a194e4df18cd9b742db12d7ed34697ab601553ff781be4c",
+  "n_entries": 238,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 129,
+    "resolved": 130,
     "mitigated": 18,
     "disposed": 4,
     "future": 5,
-    "partial": 7,
-    "open": 72
+    "open": 75,
+    "partial": 6
   },
   "active": [
-    {
-      "id": "OQ-60",
-      "status": "partial",
-      "priority": 1,
-      "summary": "Latent absence-reward in the purity scalar: zero-evidence constraint scores pristine 1.0",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-43",
-        "OQ-44",
-        "OQ-62"
-      ]
-    },
     {
       "id": "OQ-61",
       "status": "open",
@@ -40,7 +27,9 @@
       "summary": "Corpus header purity/cascade line: saturated cascade flag, type-composition restatement, hidden no-access count",
       "deps": [],
       "cross_refs": [],
-      "mentioned_in": []
+      "mentioned_in": [
+        "OQ-60"
+      ]
     },
     {
       "id": "OQ-62",
@@ -49,7 +38,9 @@
       "summary": "Purity band vocabulary fork: fpn_zone vs purity_zone, and sentinel→worst-zone in both banders",
       "deps": [],
       "cross_refs": [],
-      "mentioned_in": []
+      "mentioned_in": [
+        "OQ-60"
+      ]
     },
     {
       "id": "OQ-66",
@@ -1090,6 +1081,45 @@
         "OQ-227",
         "OQ-234"
       ]
+    },
+    {
+      "id": "OQ-236",
+      "status": "open",
+      "priority": 3,
+      "summary": "Cross-leg purity comparability: exclusion is non-random w.r.t. provenance; scorable means are not comparable across legs",
+      "deps": [
+        "splits_from OQ-60"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60"
+      ]
+    },
+    {
+      "id": "OQ-237",
+      "status": "open",
+      "priority": 4,
+      "summary": "Filtering surfaces should print what they dropped (purity NaN masks, query filters)",
+      "deps": [
+        "splits_from OQ-60"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60"
+      ]
+    },
+    {
+      "id": "OQ-238",
+      "status": "open",
+      "priority": 4,
+      "summary": "SI penalty formula floor undershoot at N≥6 (rawSI < 0 pre-clamp)",
+      "deps": [
+        "splits_from OQ-60"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60"
+      ]
     }
   ],
   "archive": [
@@ -1825,6 +1855,21 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-58"
+      ]
+    },
+    {
+      "id": "OQ-60",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Latent absence-reward in the purity scalar: zero-evidence constraint scores pristine 1.0",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-41",
+        "OQ-62",
+        "OQ-236",
+        "OQ-237",
+        "OQ-238"
       ]
     },
     {

@@ -45,6 +45,43 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-23 — [tripwire] OQ-60 RESOLVED: no-data purity is `unknown`/JSON null (never 1.0); fabricated boltzmann_floor_default removed; two absence tokens must never be coerced or averaged
+**Files:** prolog/purity_scoring.pl, prolog/boltzmann_compliance.pl, prolog/signature_detection.pl, prolog/json_report.pl, prolog/network_dynamics.pl, prolog/giant_component_analysis.pl, prolog/maxent_report.pl, prolog/grothendieck_cohomology.pl, prolog/drl_boltzmann_analysis.pl, prolog/context_profile_mining.pl, prolog/tests/test_purity_absence.pl, prolog/tests/test_coexists_fpn_canary.pl, python/enhanced_report.py, prolog/config.pl, docs/logic_extensions.md
+**Tier:** tripwire
+
+OQ-60 deliberate pass completed (rulings R1–R4; commits `bc9bffde`→`d051d06c`; full witnesses in
+`audits/2026-07-17_oq60_purity_absence/*_2026-07-23.md`).
+
+**READ rule (promoted to CLAUDE.md Architecture Invariants):** purity now carries TWO absence
+tokens — engine `unknown` (no-data) and `-1.0` (epistemic-gate-fail sentinel); JSON serializes
+BOTH as `null`. Never coerce either to a number, never average them in, never read `.get(...,0)`.
+`purity_zone(unknown)=unknown`; a `purity_band` of JSON null covers both causes.
+
+**WRITE rule:** a clean/dispositive aggregate over purity (pristine/stable/pure_*) gates at
+coverage 1.0 → distinct abstention token (`inconclusive(no_data)`, `undetermined`); positive
+existentials (contaminated/cascading/drift) fire through unknown members; every descriptive
+purity stat carries `n_scored/n_total` unconditionally (json `diagnostic.purity_n_scored/_n_total`;
+report coverage lines).
+
+**Ordering trap:** atoms sort BEFORE numbers — an `unknown` reaching msort/max_member silently
+heads the list. Guarded at the two cache boundaries (fpn/gc precompute collapse unknown→-1.0 for
+their `>= 0.0` filters); new sorts over purity must guard `number/1` (ordering audit:
+`ORDERING_AUDIT_2026-07-23.md`; tests 6–7 of test_purity_absence.pl).
+
+**Fixture rule:** synthetic test constraints that need SCORABLE purity must now AUTHOR
+`coordination_type` (+ extractiveness) — the engine no longer fabricates a floor (witnessed: the
+FPN canary fixtures and the preflight non-target control both broke on this and were repaired).
+
+**Ripple (declared, attributed):** removing 93 fabricated floors moved corpus-relative layers
+(maxent empirical-profile fits, wasserstein, arakelov, signature_pressure, FPN contamination) —
+headline `classifications` changed on ZERO rows; 12 near-boundary rows flipped shadow
+maxent_top_type, 9 downgraded verdict_join red→yellow via the maxent-divergence alert; 1
+gate-fail flash row lost its fabricated excess_above_floor FCR failure. Scorable-mean purity by
+leg: testsets 0.5450, haiku 0.4916, flash 0.5711 (moved DOWN as predicted — the operator's
+falsifier), kernel_v1 0.4813. Cross-leg scorable means NOT comparable (OQ-236).
+
+---
+
 ## 2026-07-23 — [correction-key] *Hearts of Glass* is NOT a pipeline artifact (provenance witnessed); Commitment Systems adjudicated as blocked-B refinement of the debugging-philosophy taxonomy
 **Files:** blog/2026-07/hearts-of-glass.md, blog/2026-07/implied_machine_reader.md, agent/analysis/originals/machine_reader.md, prolog/cs_drift_engine.pl, docs/commitment_systems/type_b_adjudication_2026-07-23.md, docs/debugging_philosophy.md, ISSUES.md
 **Tier:** correction-key
