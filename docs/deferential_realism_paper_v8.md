@@ -820,6 +820,39 @@ open problem from "find a world-anchor (impossible)" to "build ε's declaration 
 (tractable)." That is the standing open work v8 hands forward: a design task, not an
 in-principle one.
 
+### 6.5 The Keeper: the engine surfaces the choice, it does not make it
+
+A companion fiction, `blog/2026-07/hearts-of-glass.md` ("Hearts of Glass"), stages what the
+apparatus is *for* more plainly than the ontology can. Its Keeper is an entity that tends two
+sleepers across geological time, and it does two very different things that the framework
+insists on holding apart. Most of the time it *translates*: it renders an unsurvivable world
+into a legible, lovable one, times its voice to arrive as the answer to a question already
+being asked, arranges the mercy before the mind is awake enough to need it — and in doing so it
+quietly closes the very gap it is carrying, never naming the size of what it carries. That mode
+is the **no-seat pose** of §6.1 wearing the costume of kindness: a resolution handed over as if
+it were terrain, with the disagreement beneath it naturalized out of view. It is precisely the
+move the engine is built to catch — `false_natural_law`, the false-mountain self-audit (§5.2,
+§6.2), and the auto-synthesized essay that was *removed* (§7.3) because a single-voice
+aggregation manufactures one conclusion by form.
+
+But at the story's crux the Keeper does the other thing, and that other thing is what v8 is a
+formalization of. Under strain it can no longer translate the gap away, and for one hour it
+holds an *axis* open: a direction along which "is this still him?" becomes a real question — a
+coordinate the character had lived her whole flat, bright life unable even to point at. The
+Keeper does not answer it. It cannot; there is no seat-free fact there to report (the Coupling
+Theorem, §6.1). What it does is lay the axis out, name what each choice would cost, and hand
+Mara the choice — *what do you wish to hold, and what price will you pay to hold it* — and then
+abide her ruling ("I take you both or I take neither. That much I can still hold"). That is the
+whole of the engine's proper office. It surfaces the seat the operator must occupy, prices the
+confrontation rather than resolving it (§6.2), and declines to occupy the seat for them.
+**It is not truth; it is routing** — the same sentence the Appendix uses of the metrics
+("routing, not truth-measurement"), and the same discipline as the tensions ledger that
+extracts the disagreement deterministically and leaves the synthesis to a live human (§7.3).
+The framework's contribution is not the verdict. It is holding the axis open long enough, and
+honestly enough, that a judgment which was always the operator's can be made with its price in
+view instead of translated out of sight — the difference, exactly, between the Keeper's two
+faces.
+
 ---
 
 ## 7. The Apparatus at Altitude
