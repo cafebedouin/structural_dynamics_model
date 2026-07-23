@@ -46,7 +46,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 ---
 
 ## 2026-07-23 — [correction-key] *Hearts of Glass* is NOT a pipeline artifact (provenance witnessed); Commitment Systems adjudicated as blocked-B refinement of the debugging-philosophy taxonomy
-**Files:** blog/2026-07/hearts-of-glass.md, agent/analysis/originals/machine_reader.md, prolog/cs_drift_engine.pl, docs/commitment_systems/type_b_adjudication_2026-07-23.md, docs/debugging_philosophy.md
+**Files:** blog/2026-07/hearts-of-glass.md, blog/2026-07/implied_machine_reader.md, agent/analysis/originals/machine_reader.md, prolog/cs_drift_engine.pl, docs/commitment_systems/type_b_adjudication_2026-07-23.md, docs/debugging_philosophy.md
 **Tier:** correction-key
 
 Two rulings from a Claude-web planning conversation (2026-07-23), landed to substrate.
@@ -63,14 +63,16 @@ artifact would appear); (b) the process leaves a characteristic artifact shape (
 story's actual seed was a conversation about human hibernation. **Distinction to preserve:
 "the system" (Prolog/uke) ≠ LLM assistance** — the commit carries a Claude co-author line, so
 model collaboration happened; pipeline involvement did not. Operator framing: "the system is
-my creating Prolog that thinks like I do." FLAG (unresolved, essay-voice call): the untracked
-draft `agent/analysis/originals/machine_reader.md` line 3 says the story is "from this site's
-pipeline — grown ... through the multi-model process"; loose-true under the LLM-assistance
-reading, false under the uke-pipeline reading. The story remains OQ-227's *test-rig* (the
-2026-07-18 entry below) — that role is unaffected; only its provenance is corrected. Why it
-matters: the story's mechanism (the reader as sole holder of both readings; the drifted joke
-detectable only in the *difference between* near-identical passages) is a datum about what the
-formal system did NOT produce — throughput is the machine, quality is the seat.
+my creating Prolog that thinks like I do." FLAG RESOLVED same day (operator authorized the
+edit): the provenance sentence — "from this site's pipeline — grown ... through the
+multi-model process" — corrected in BOTH copies (`blog/2026-07/implied_machine_reader.md`,
+the later revision staged to publish, and the older draft
+`agent/analysis/originals/machine_reader.md`) to affirm multi-model involvement while denying
+pipeline involvement. The story remains OQ-227's *test-rig* (the 2026-07-18 entry below).
+Sharper description than "outside the system" (operator, same day): the story is an
+*instrument* for the thing the engine cannot yet formalize — `acknowledgment_collapse` (the
+ratifying authority that can no longer tell faith from its performance) is the Keeper's
+terminal state near verbatim. Not pipeline output; aimed at the pipeline's frontier.
 
 **2. Commitment Systems classified: a refinement on Type B, by the fix-identity criterion
 (operator ruling) — full adjudication in

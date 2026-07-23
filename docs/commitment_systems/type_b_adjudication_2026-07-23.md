@@ -51,8 +51,34 @@ revisers are structurally unable to act, and *that* is the property blocked-B na
    the space deterministically) still contains a seat — at the *choice of axiom set*
    rather than in the operation. The parallel postulate read as necessity for two
    millennia while a coherent otherwise stood beside it unbuilt. Deterministic where
-   facts decide, declared where seats decide.
+   facts decide, declared where seats decide. *(Closed by citation, later same day:
+   v8 §5.9 already draws this boundary — declared choice (Euclid stated as an axiom)
+   vs naturalized foreclosure (Euclid mistaken for a mountain), demotion "not by
+   finding drift but by exhibiting a consistent otherwise." The paper was ahead of
+   the conversation here.)*
 2. **Cost of remedy-identity.** If types are fixed by their fix, the framework is a
    theory of *repair*, not of drift — drift is the given, repairability the subject.
    "The Architecture of Drift" names the half that isn't the contribution. A naming/
    emphasis question, not a defect; unresolved.
+
+## Addendum (2026-07-23, later same day): blockage is a gate, not a type
+
+The revisable-B/blocked-B language above, read as a *split*, strains the ruling it is
+built on: if the fix individuates the type, and blocked-A's remedy were "restore
+standing" rather than "fix the frame," blocked-A would be a distinct type by the same
+criterion — a six-cell space, not a trifurcation. The resolution (operator, same day):
+**restoring standing is not a fix; it is the enabling condition for running one.**
+Nobody resolves Sorites by acquiring authority. Blockage is a **gate on remedy
+execution**, not a remedy — it mints no types, and the trifurcation survives intact at
+three. Commitment Systems is the theory of the gate.
+
+Two questions were riding together in the original adjudication, and both survive
+separated: (1) Commitment Systems is kernel-level in intervention and vocabulary — the
+Type B refinement, which holds; (2) its *contribution* is the gate. They coincide
+because the gate is a gradient and kernel revision sits at the top of it — revision
+demands the most standing, so closure is most visible at B.
+
+This also yields the three-stage diagnostic's implicit Stage 0 in precise form: not
+"is the object a reasoning instrument?" but **"does an agent exist who can execute the
+fix and wants to?"** Stage 2 returning an uninformative pass against an institution is
+what a closed gate looks like when a remedy test is run through it.
