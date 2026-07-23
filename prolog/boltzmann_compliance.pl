@@ -525,15 +525,21 @@ excess_extraction(C, ExcessEps) :-
 
 %% boltzmann_floor_for(+Constraint, -Floor)
 %  Returns the Boltzmann floor for a constraint.
-%  Priority: per-constraint override > coordination type > default
+%  Priority: per-constraint override > coordination type; FAILS when neither
+%  is authored. OQ-60 mech 5 (C-FLOOR, 2026-07-23): the former clause 3
+%  fabricated boltzmann_floor_default=0.05 on absent coordination_type,
+%  letting 93 constraints (11/2/80/2 across the four legs) score purity off a
+%  floor nobody authored (e.g. conceptual_framework_reading 0.972
+%  near-pristine). An unauthored floor is no data: this fails, excess
+%  extraction fails, the EX subscore reports `unknown`, and purity_score
+%  propagates `unknown` (JSON null). Spec: docs/logic_extensions.md
+%  (fabricated-default pattern, formerly flagged OQ-41).
 boltzmann_floor_for(C, Floor) :-
     narrative_ontology:boltzmann_floor_override(C, Floor), !.
 boltzmann_floor_for(C, Floor) :-
     narrative_ontology:coordination_type(C, Type),
     coordination_type_to_floor_param(Type, ParamName),
     config:param(ParamName, Floor), !.
-boltzmann_floor_for(_, Floor) :-
-    config:param(boltzmann_floor_default, Floor).
 
 coordination_type_to_floor_param(information_standard,    boltzmann_floor_information_standard).
 coordination_type_to_floor_param(attachment_coordination, boltzmann_floor_attachment_coordination).

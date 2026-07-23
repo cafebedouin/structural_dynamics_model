@@ -119,8 +119,23 @@ test(json_writers_total_on_unknown) :-
 % `unknown`; the golden constraint keeps numeric subscores either way).
 
 test(injected_unknown_end_to_end, [
-        setup(oq60_assert_bare(oq60_inject_bare)),
-        cleanup(oq60_retract_bare(oq60_inject_bare))
+        setup((
+            oq60_assert_bare(oq60_inject_bare),
+            % synthetic SCORED control (corpus-independent): authored
+            % extractiveness + coordination_type ⇒ EX computes numerically.
+            % (Originally used corpus row epistemic_collapse — an m5 flip row,
+            % legitimately unknown post-C-FLOOR; witnessed 2026-07-23.)
+            oq60_assert_bare(oq60_scored_ctl),
+            assertz(narrative_ontology:constraint_metric(oq60_scored_ctl, extractiveness, 0.5)),
+            assertz(narrative_ontology:coordination_type(oq60_scored_ctl, information_standard)),
+            cache_registry:clear_all_caches
+        )),
+        cleanup((
+            oq60_retract_bare(oq60_inject_bare),
+            retractall(narrative_ontology:constraint_metric(oq60_scored_ctl, extractiveness, _)),
+            retractall(narrative_ontology:coordination_type(oq60_scored_ctl, _)),
+            oq60_retract_bare(oq60_scored_ctl)
+        ))
     ]) :-
     Bare = oq60_inject_bare,
     Golden = alignment_constraint_narrowing,
@@ -140,7 +155,7 @@ test(injected_unknown_end_to_end, [
             % non-target untouched
             purity_scoring:excess_extraction_subscore(Bare, EXm), EXm == unknown,
             purity_scoring:excess_extraction_subscore(Golden, EXg), EXg == unknown,
-            purity_scoring:excess_extraction_subscore(epistemic_collapse, EXo), number(EXo),
+            purity_scoring:excess_extraction_subscore(oq60_scored_ctl, EXo), number(EXo),
             % scalar: 0a propagation guard (purity_scoring.pl:54-55) fires
             purity_scoring:purity_score(Bare, P1), P1 == unknown,
             purity_scoring:purity_score(Golden, P2), P2 == unknown,
@@ -296,3 +311,64 @@ test(aggregation_polarity) :-
     V3 == all_pass.
 
 :- end_tests(purity_absence_producers).
+
+% ============================================================================
+% C-FLOOR producer tests — mechanism 5, the LIVE commit.
+% boltzmann_floor_for/2 clause 3 fabricated boltzmann_floor_default=0.05 when
+% coordination_type was absent, letting 93 constraints (11/2/80/2 per leg at
+% the 2026-07-23 census) score purity off a floor nobody authored. Post-fix:
+% no override + no coordination_type ⇒ boltzmann_floor_for FAILS ⇒
+% excess_extraction fails ⇒ EX subscore unknown ⇒ purity unknown (C-LATENT
+% wiring). The authored paths (override, coordination type) are unchanged.
+% ============================================================================
+
+:- begin_tests(purity_absence_floor).
+
+% Gate-passing constraint WITH an extractiveness metric but NO
+% coordination_type and NO override — the m5 victim shape.
+oq60_assert_floor_probe(C) :-
+    oq60_assert_bare(C),
+    assertz(narrative_ontology:constraint_metric(C, extractiveness, 0.5)),
+    cache_registry:clear_all_caches.
+
+oq60_retract_floor_probe(C) :-
+    retractall(narrative_ontology:constraint_metric(C, extractiveness, _)),
+    retractall(narrative_ontology:coordination_type(C, _)),
+    retractall(narrative_ontology:boltzmann_floor_override(C, _)),
+    oq60_retract_bare(C).
+
+% RED at pre-fix HEAD (floor succeeded with the fabricated 0.05 default).
+test(m5_absent_coordination_type_floor_fails, [
+        setup(oq60_assert_floor_probe(oq60_floor_probe)),
+        cleanup(oq60_retract_floor_probe(oq60_floor_probe))
+    ]) :-
+    \+ boltzmann_compliance:boltzmann_floor_for(oq60_floor_probe, _),
+    \+ boltzmann_compliance:excess_extraction(oq60_floor_probe, _),
+    purity_scoring:excess_extraction_subscore(oq60_floor_probe, EX),
+    EX == unknown,
+    purity_scoring:purity_score(oq60_floor_probe, P),
+    P == unknown.
+
+% Authored paths unchanged: coordination type routes to its typed floor param.
+test(m5_coordination_type_floor_unchanged, [
+        setup(( oq60_assert_floor_probe(oq60_floor_probe),
+                assertz(narrative_ontology:coordination_type(oq60_floor_probe, information_standard)),
+                cache_registry:clear_all_caches )),
+        cleanup(oq60_retract_floor_probe(oq60_floor_probe))
+    ]) :-
+    boltzmann_compliance:boltzmann_floor_for(oq60_floor_probe, F),
+    config:param(boltzmann_floor_information_standard, Expected),
+    F == Expected,
+    boltzmann_compliance:excess_extraction(oq60_floor_probe, _).
+
+% Authored paths unchanged: per-constraint override wins outright.
+test(m5_override_floor_unchanged, [
+        setup(( oq60_assert_floor_probe(oq60_floor_probe),
+                assertz(narrative_ontology:boltzmann_floor_override(oq60_floor_probe, 0.2)),
+                cache_registry:clear_all_caches )),
+        cleanup(oq60_retract_floor_probe(oq60_floor_probe))
+    ]) :-
+    boltzmann_compliance:boltzmann_floor_for(oq60_floor_probe, F),
+    F == 0.2.
+
+:- end_tests(purity_absence_floor).

@@ -229,9 +229,12 @@ equivalent. The **offset is signature-layer-ACTIVE** — it adds into
 `complexity_adjusted_threshold` and can flip `boltzmann_compliant` and hence the final
 `dr_type` (48 witnessed flips). The **floor is classification-INACTIVE** — it only shifts
 the `excess_extraction` metric and leaves `dr_type` unchanged (witnessed: `abolition_reading`
-holds `tangled_rope` across floor 0.0→0.99). When coordination_type is absent, the engine
-silently falls back to `complexity_offset_default = 0.00` / `boltzmann_floor_default = 0.05`
-(fabricated-default pattern; open as OQ-41).
+holds `tangled_rope` across floor 0.0→0.99). When coordination_type is absent, the
+**offset** still falls back to `complexity_offset_default = 0.00` (fabricated-default
+pattern; open as OQ-41), but the **floor no longer does** (OQ-60 C-FLOOR, 2026-07-23):
+`boltzmann_floor_for/2` FAILS on absent coordination_type/override, `excess_extraction`
+fails with it, and the purity EX subscore reports `unknown` (JSON `null`) — an unauthored
+floor is no data, not 0.05.
 
 **Edge Case: Epistemic Access**
 

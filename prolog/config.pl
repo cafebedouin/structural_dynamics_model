@@ -409,7 +409,7 @@ param(boltzmann_floor_resource_allocation,   0.15).
 param(boltzmann_floor_identity_coordination, 0.08).
 param(boltzmann_floor_enforcement_mechanism, 0.10).
 param(boltzmann_floor_global_infrastructure, 0.20).
-param(boltzmann_floor_default,               0.05).
+param(boltzmann_floor_default,               0.05).  % RETIRED from the engine (OQ-60 C-FLOOR, 2026-07-23): boltzmann_floor_for/2 no longer falls back to it — absent coordination_type now FAILS the floor (no fabricated default). Kept for the census probes' cross-checks.
 
 % --- Reformability Scoring ---
 % Thresholds for coupling-aware reformability assessment.
