@@ -104,6 +104,20 @@ view-from-nowhere) — the writing model flagged it as its own likeliest Draft-4
 correctly called it writer-vigilance, not protocol; carried here as a Draft-4 REVIEW
 watch-item instead of an over-promoted rule.
 
+Sibling-protocol propagation (same session, operator request): **uke_think v1.1→v1.2** —
+new §4.4 Multi-Seat Architecture (tensegrity import: positions as struts at argued
+strength, kill-conditioned disparities, writer's position as one declared strut, declared
+flattening w/ falsifier + Forecast Register pair when outcome-shaped) + position-provenance
+rule (occupied/constructed/absent; silence = UNDETERMINED between no-objection and
+never-occupied — §0's counterexample principle made structural) + §8 multi-seat gate +
+F-MANUFACTURED-CENTER; **uke_opinion v1.3→v1.4** — tensegrity NOT imported (the verdict
+form is the protocol's purpose); instead §1.5 "The Declared Flattening": collapse legit
+only when indexed to a named seat where readings are position-indexed, falsifier attached,
+consensus-absence ≠ assent (absent seat attributed to citation base, method level), plus a
+routing rule (divergence-is-the-finding → UKE_THINK §4.4 / UKE_W §2.4); stray trailing
+fences removed. Versions are in-file only (filenames unversioned, no code loads them);
+essays' historical UKE_META stamps naming v1.1/v1.3 left as provenance records.
+
 ## 2026-07-20 — [landed] Kimi-k2.6 twin COMPLETE at n=1005; five-leg cross-model comparison
 **Files:** prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, agent/run_no_scope_kimi.py, python/audits/five_leg_twin_comparison.py, audits/2026-07-20_five_leg_twin_comparison/
 **Tier:** landed

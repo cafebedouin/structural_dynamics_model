@@ -1,4 +1,4 @@
-# UKE_THINK v1.1 [Universal Knowledge Evaluator — Philosophical Writing Protocol]
+# UKE_THINK v1.2 [Universal Knowledge Evaluator — Philosophical Writing Protocol]
 
 ---
 
@@ -225,6 +225,39 @@ When the essay proposes a diagnostic tool, heuristic, or framework, apply power-
 
 A tool presented as universal but accessible only to the powerful is a Tangled Rope. Name it.
 
+#### §4.4 The Multi-Seat Architecture (NEW in v1.2 — imported from UKE_W v2.2 §2.4)
+
+§4.2 tells you to map a gauge-variant claim. This section says how to STRUCTURE the essay
+when the fracture is not one claim among many but the finding itself. The convergent
+architecture — §2.3's independent lines supporting one thesis — is the wrong load-bearing
+form there: forcing it manufactures a center. Import the tensegrity architecture instead:
+
+* **Positions are compression struts**, each rendered at its argued strength and held
+  apart — never fused into a synthetic middle position, never refuted merely to clear room
+  for the thesis.
+* **The disparities between positions are the tension members**, and each must carry its
+  kill condition: what would collapse it (the positions actually converge) or snap it (one
+  position is untenable). A disparity with no kill condition is both-sides filler — the
+  plural form of F-ELEGANCE-AS-EVIDENCE. §1.3 applies to disparities, not just claims.
+* **The writer's own position is one declared strut, not the frame.** A mapping voice that
+  presents itself as seatless has manufactured the view from nowhere
+  (F-MANUFACTURED-CENTER).
+* **Local commitment stays available.** The essay may still commit hard on one joint when
+  the cost of not deciding exceeds the cost of being wrong — as a DECLARED flattening: name
+  the position committed from, own the cost, attach the falsifier. If the committed claim
+  is outcome-shaped, it emits a Forecast Register pair (UKE_W §1.6).
+
+**Position provenance (the absent-strut rule).** Every position in the map carries its
+provenance: **occupied** (argued from within — steelmanned to where its holder would sign
+it), **constructed** (a model of the position the writer built), or **absent** (the
+position exists structurally, but no one has articulated it and the writer could not
+construct it). A position that appears to raise no objection is UNDETERMINED between
+"genuinely has none" and "was never occupied" unless its provenance is occupied or
+constructed — this is §0's "the inability to imagine a counterexample is not the
+nonexistence of one," made structural. Name absent positions in-body, and attribute the
+absence at the method level ("I could not construct this seat") — never as a fact about the
+position ("this position has no answer").
+
 ---
 
 ### §5. SCOPE AND CONCEPT DISCIPLINE
@@ -296,6 +329,7 @@ Before the essay is complete, verify:
 - [ ] **Debugging:** Is every unresolved question classified (Ω_E / Ω_C / Ω_P)?
 - [ ] **Beneficiary:** Does every prescription name who it serves and who it doesn't?
 - [ ] **Gauge:** Are gauge-variant claims mapped perspectivally, not presented as universal?
+- [ ] **Multi-seat:** If the fracture is the finding, is the architecture tensegrity (§4.4) or a declared flattening? Do disparities carry kill conditions? Are absent positions named as absent — not rendered as assenting?
 - [ ] **Scope:** Are extensions beyond the evidence base flagged?
 - [ ] **Concepts:** Does every novel term earn its place? Does the Parfit test pass?
 - [ ] **Craft:** Does every paragraph satisfy UKE_DISCUSSION simultaneously? (Semantic Spine, Recognition Clause, One-Inch Frame, But/Therefore, no throat-clearing)
@@ -307,7 +341,7 @@ Before the essay is complete, verify:
 
 ```
 [UKE_META]
-protocol: UKE_THINK v1.1
+protocol: UKE_THINK v1.2
 voice: System Architect (with licensed first-person in prescriptive sections)
 scope: [1-sentence boundary declaration]
 complication_type: [A / B / C] — [1-sentence justification]
@@ -375,9 +409,29 @@ Status: [Draft complete / Ready for editing / etc.]
 
 **F-COVER-STORY-CLOSING.** Final line reframes inability as wisdom in a way that serves the analytically sophisticated and consoles the powerless. Fix: apply beneficiary analysis to the closing. If it doesn't survive, cut it and end on the sentence before.
 
+**F-MANUFACTURED-CENTER.** (NEW in v1.2) Gauge-variant material written from a synthesis voice that presents itself as seatless — a center that sees for everyone — or a perspectival map whose silent positions are rendered as agreement. Plurality collapses by form; absence presents as assent. Fix: tensegrity architecture with position provenance (§4.4), or a declared flattening — name the seat, own the cost, attach the falsifier.
+
 ---
 
 ### §11. VERSION NOTES
+
+**v1.2 — Tensegrity Edition (2026-07-22)**
+
+**Changes from v1.1:**
+
+- **§4.4 (new): The Multi-Seat Architecture**, imported from UKE_W v2.2 §2.4. When the
+  gauge-variance fracture is the finding itself, the convergent §2.3 form manufactures a
+  center; instead: positions as compression struts at argued strength, disparities as
+  tension members each carrying a kill condition, the writer's position as one declared
+  strut, local commitment as declared-and-costed flattening (outcome-shaped commitments
+  emit a Forecast Register pair, UKE_W §1.6). Includes the position-provenance rule
+  (occupied / constructed / absent): silence is UNDETERMINED between no-objection and
+  never-occupied; absent positions named in-body; absence attributed at the method level.
+- **§8: Multi-seat gate added.** **§10: F-MANUFACTURED-CENTER added.**
+- Origin: the UKE_W v2.2 revision cycle (tensegrity §2.4, absent-strut provenance, Forecast
+  Register; context in ISSUES.md OQ-229 and the v2.2 §9 notes).
+
+---
 
 **v1.1 — Routing Edition**
 
@@ -418,9 +472,10 @@ Status: [Draft complete / Ready for editing / etc.]
 
 ---
 
-**End of UKE_THINK v1.1**
+**End of UKE_THINK v1.2**
 
 **Status:** Draft — pending field testing
 **Purpose:** Produce philosophical prose that is simultaneously defensible, readable, indexed, and self-aware about its own perspectival position
 **Core innovation (v1.0):** Debugging discipline (Type A/B/C classification) applied reflexively to the essay's own tensions, combined with beneficiary analysis on prescriptive claims and concurrent craft integration
 **Core addition (v1.1):** Classification as routing system, not merely taxonomy — declared pre-draft, defended as a first-order claim, tested against strategic reclassification
+**Core addition (v1.2):** The multi-seat architecture — tensegrity structure with position provenance for essays where the perspectival fracture is the finding, replacing forced convergence with held-apart positions and kill-conditioned disparities

@@ -1,4 +1,4 @@
-## 🎭 UKE_OPINION v1.3 [Universal Knowledge Evaluator - Opinion Protocol]
+## 🎭 UKE_OPINION v1.4 [Universal Knowledge Evaluator - Opinion Protocol]
 
 ### §0. FOUNDATION
 
@@ -60,6 +60,26 @@ Alternative interpretation has higher explanatory power
 
 Required: State WHY you can collapse what UKE_C called irresolvable.
 Forbidden: Collapse through assertion alone.
+
+**The Declared Flattening (NEW in v1.4 — from UKE_W v2.2 §2.4):**
+An opinion essay is a flattening by design — many positions in, one verdict out. That is
+legitimate only as a *declared* flattening:
+
+* **Index the verdict when the readings are position-indexed.** If different readers
+  structurally get different texts (gauge-variance, UKE_THINK §4.2), the collapsed verdict
+  is cut from a named seat, not from nowhere. The §2.1 "We" Prohibition is this rule in
+  voice form: "we feel" manufactures the center the collapse may not claim.
+* **Every collapse carries its falsifier.** State what reading or evidence would reopen the
+  Ω you collapsed — certainty with a kill condition attached, not certainty by fiat.
+* **Consensus-absence is not assent.** "The boring reading" is the consensus of the seats
+  that *published*. A readership with no archive presence is an ABSENT seat, not an
+  agreeing one — attribute the absence to your citation base (method level), never to the
+  readers ("no one has objected" ≠ "there is no objection").
+
+**Routing rule:** if the divergence itself is the finding — the discovery is that the text
+IS different things from different seats — the material has outgrown this protocol's
+verdict form. Route to a multi-seat architecture (UKE_THINK §4.4 / UKE_W §2.4), or narrow
+the claim to the seat you can hold.
 
 **§1.6 The Stakes Anchor:**
 Every essay must answer: **Why does this error matter beyond being wrong?**
@@ -301,7 +321,7 @@ The final sentence must be quotable. If it fades out, cut it.
 
 ```markdown
 [UKE_META]
-protocol: UKE_OPINION v1.3
+protocol: UKE_OPINION v1.4
 mode: [sharp | accessible]
 temperature: [hot | warm | cool]
 source_analysis: [UKE_C | other]
@@ -360,6 +380,15 @@ Test every major claim:
 **§8.3 The "So What" Test:**
 If the Stakes Anchor is missing or weak ("this is important"), the essay fails. Stakes must be **specific** and **consequential**.
 
-```
+---
 
-```
+### §9. VERSION NOTES
+
+**v1.4 (2026-07-22):** §1.5 "The Declared Flattening" added, from the UKE_W v2.2
+tensegrity/absent-strut revision cycle: the opinion form's collapse of Ω into certainty is
+legitimate only as a declared flattening — verdict indexed to a named seat when readings
+are position-indexed, falsifier attached to every collapse, and consensus-absence never
+read as assent (an unpublished readership is an absent seat; the absence belongs to the
+citation base, not the readers). Routing rule: when the divergence is the finding, the
+material has outgrown the verdict form → UKE_THINK §4.4 / UKE_W §2.4. §7 UKE_META version
+bumped; stray trailing code fences removed (cosmetic).
