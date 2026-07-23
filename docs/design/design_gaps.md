@@ -259,6 +259,23 @@ kernel-divergent. **Still open under OQ-53:** requirement (1) (kernel as a first
 object), the kernel-fixed↔transpose pair as a formal paired operation, and the full curated stance
 vocabulary (this build seeds an initial declared table for the exercised stances only).
 
+**The missing population layer (noted 2026-07-23, operator-framed).** Readings are discrete
+idealized standpoints; real holders of a reading (e.g. positivist on a `rule_of_law` kernel) hold
+it across a *range of attitudes* — and nothing in the axis models that range. Two halves, sharply
+different in kind. (a) The COMPUTED half already exists: a reading's gauge orbit over the observer
+index (power × scope × time × exit) IS the engine's predicted attitude-range toward it, per
+position — see `blog/2026-05_or_before/diagnostic_value_of_perspectival_gaps.md` for the
+index-position account. (b) The AUTHORING half is the gap, and **for an LLM-authored corpus it
+cannot be factual population data — it is an existential/generative question about the authoring
+position itself**: can variation in the perspective the model is given change what gets authored?
+Is handing the generator a stakeholder or other position enough to produce a genuinely different
+(better) story, or does the model's disposition swamp the assigned seat? Adjacent evidence, both
+directions: OQ-228 (cross-model corpora are dispositional fingerprints; kimi collapses to ~2
+perspective molds regardless of material) suggests disposition dominates; OQ-73 (does the
+reading-set move when the generation frame moves?) is the controlled probe that would answer it and
+is already authored — this note is a second consumer for OQ-73's result. Not a new tracker;
+population-layer work, if taken up, extends OQ-53/OQ-73 rather than minting a parallel question.
+
 ---
 
 ## GAP-05 — The reading axis has no cross-index gluing test (Boltzmann is observer-axis only)
@@ -315,7 +332,22 @@ internal incoherence ⇒ Type B; same-seat criterion drift ⇒ Type A).
 three-stage diagnostic of `debugging_philosophy.md` §6 implemented over a kernel's readings, mapping
 existing diagnostics onto A/B/C; (3) a consumer that reads the verdict. Open question: **OQ-55**.
 
-**Status:** Deferred. Named on first availability of the corpus that exercises it (2026-06-02).
+**Status:** Built (within-kernel) 2026-06-20 via OQ-55 — `prolog/cs_trifurcation.pl`
+(`cs_reading_trifurcation/3`), serialized as `reading_trifurcation`, controls 8/8 green, all four
+branches firing on the live corpus. This entry's status had sat stale at "Deferred" until
+2026-07-23. What remains gap-shaped is UPSTREAM of the router: the router types a disagreement
+(A/B/C/unknown) but nothing discriminates *diagnostic* from *erroneous* disagreement before typing
+applies.
+
+**Upstream candidate (added 2026-07-23): the three-feature test** from the operator's essay
+`blog/2026-05_or_before/diagnostic_value_of_perspectival_gaps.md` — disagreement is diagnostic
+(structure-revealing) rather than erroneous iff it is (1) **structurally predictable** from the
+observers' index positions, (2) **persistent across instances**, and (3) **irreducible by
+information** (sharing data does not close it). Mapping onto the router: irreducible-by-information
+disagreement ≈ Type C genuine plurality; reducible ≈ a communication error the router should never
+see; non-persistent ≈ case-specific error. Not yet an implemented predicate — a design candidate
+recorded here so the router's next revision considers a pre-filter; also binds essay-side work
+(uke_write §2.4: a disparity failing the three-feature test is not a load-bearing tension member).
 
 ---
 

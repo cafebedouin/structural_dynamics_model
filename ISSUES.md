@@ -2462,6 +2462,9 @@ gates only OQ-53's cross-kernel transpose leg, not this within-kernel router. No
 **Files:** `prolog/cs_trifurcation.pl` (`cs_reading_trifurcation/3`), `prolog/json_report.pl`
 (`write_kernel_comparison_entry` → `reading_trifurcation` field), `prolog/tests/test_cs_trifurcation.pl`;
 spec `docs/debugging_philosophy.md` §6.
+**Post-resolution cross-ref (2026-07-23):** an upstream diagnostic-vs-erroneous pre-filter candidate
+(the three-feature test) is recorded in `design_gaps.md` GAP-06, from
+`blog/2026-05_or_before/diagnostic_value_of_perspectival_gaps.md` — design note only, no reopen.
 
 **Resolution (2026-06-20).** New module `cs_trifurcation.pl` maps a kernel's reading-set onto
 {Type A drift, Type B structure, Type C ambiguity, unknown} by dispatching on the authored obstruction
