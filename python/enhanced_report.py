@@ -380,8 +380,26 @@ def build_header(pipeline_data):
         f"  Network stability: {network} | {omega_count} omegas ({critical} critical)",
     ]
 
-    # Confidence distribution from per_constraint
     per_constraint = pipeline_data.get("per_constraint", [])
+
+    # OQ-60 R4: UNCONDITIONAL purity coverage line — printed even at N/N.
+    # JSON null purity covers both the -1.0 gate-fail sentinel and the
+    # `unknown` no-data token; a purity distribution without its denominator
+    # silently reads as full coverage. Prefer the 0b diagnostic siblings,
+    # fall back to counting per_constraint for pre-0b outputs.
+    pur_n_scored = diag.get("purity_n_scored")
+    pur_n_total = diag.get("purity_n_total")
+    if pur_n_scored is None or pur_n_total is None:
+        pur_n_total = len(per_constraint)
+        pur_n_scored = sum(
+            1 for pc in per_constraint if pc.get("purity_score") is not None
+        )
+    lines.append(
+        f"  Purity coverage: {pur_n_scored}/{pur_n_total} scorable, "
+        f"{pur_n_total - pur_n_scored} unscored (gate-fail sentinel or no-data)"
+    )
+
+    # Confidence distribution from per_constraint
     band_counts = {}
     for pc in per_constraint:
         b = pc.get("confidence_band")
