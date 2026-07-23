@@ -182,10 +182,12 @@ build_trajectory_summary(C, Summary) :-
     ->  true
     ;   Preservation = unknown
     ),
-    % Coupling
+    % Coupling. OQ-60: cross_index_coupling fails on a <2-point grid — report
+    % unknown (the summary's native absence token, cf. Shift/Preservation
+    % above), never a fabricated 0.0.
     (   catch(boltzmann_compliance:cross_index_coupling(C, Coupling), _, fail)
     ->  true
-    ;   Coupling = 0.0
+    ;   Coupling = unknown
     ),
     % Purity
     (   catch(purity_scoring:purity_score(C, Purity), _, fail)

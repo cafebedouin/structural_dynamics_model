@@ -151,7 +151,11 @@ excess_extraction_factor(C, Factor) :-
         config:param(excess_factor_peak, Peak),
         config:param(excess_factor_floor, Floor),
         Factor is Floor + (Peak - Floor) * exp(-((Excess - Center)**2) / (2 * Sigma**2))
-    ;   Factor = 0.5  % No data
+    ;   Factor = 0.5  % No data: DECLARED neutral prior in a reformability
+        % heuristic — not a measurement. Left numeric (OQ-60 close, 2026-07-23):
+        % converting to `unknown` cascades through reformability_score into
+        % type_to_dirac_class(tangled_rope,...) with no witnessable surface;
+        % this is not a purity-scalar site. Residue routed via OQ-60 close.
     ).
 
 /* ----------------------------------------------------------------
@@ -214,10 +218,14 @@ coupling_aware_scaffold_need(C, Context, Assessment) :-
     ->  % Get base scaffold assessment
         drl_counterfactual:assess_scaffold_need(C, Context, BaseAssessment),
 
-        % Get coupling topology
+        % Get coupling topology. OQ-60: cross_index_coupling now FAILS on a
+        % <2-point grid — that is no-data, not "coupling measured 0.0". The
+        % no_data token yields the same non-escalated assessment a 0.0 did
+        % (it can never satisfy the > 0.30 escalation), but no longer reads
+        % as a measurement.
         (   boltzmann_compliance:cross_index_coupling(C, CouplingScore)
         ->  true
-        ;   CouplingScore = 0.0
+        ;   CouplingScore = no_data
         ),
 
         % Get reformability
@@ -227,7 +235,7 @@ coupling_aware_scaffold_need(C, Context, Assessment) :-
         (   Type = tangled_rope, ReformScore > 0.60
         ->  Assessment = reform_preferred(ReformScore)
         ;   BaseAssessment = scaffold_required,
-            CouplingScore > 0.30
+            number(CouplingScore), CouplingScore > 0.30
         ->  Assessment = scaffold_required(high)
         ;   BaseAssessment = scaffold_required
         ->  Assessment = scaffold_required(moderate)

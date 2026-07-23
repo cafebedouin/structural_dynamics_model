@@ -44,7 +44,7 @@
 oq60_original_ex_clause((purity_scoring:excess_extraction_subscore(C, EX) :-
     (   boltzmann_compliance:excess_extraction(C, Excess)
     ->  EX is max(0.0, 1.0 - min(1.0, Excess * 2.0))
-    ;   EX = 1.0
+    ;   EX = unknown
     ))).
 
 oq60_swap_in :-
@@ -211,3 +211,88 @@ test(gc_ingest_collapses_unknown_to_sentinel, [
     ).
 
 :- end_tests(purity_absence).
+
+% ============================================================================
+% C-LATENT producer tests — one per mechanism terminus (m1-m4), plus the
+% top-level bare-constraint claim and the R3 aggregation polarity.
+% Written RED at pre-fix HEAD; land together with the producer edits (GREEN).
+% All use the bare gate-passing template: no grid, no scope types, no
+% extraction data — every no-data branch fires at once, but each test pins
+% its OWN terminus, giving per-mechanism attribution without four commits.
+% ============================================================================
+
+:- begin_tests(purity_absence_producers).
+
+% mech 1 (SI): empty type list is no_data, not variant([]) — and the subscore
+% is unknown, not the N=0 overshoot 1.25.
+test(m1_scope_invariance_no_data, [
+        setup(oq60_assert_bare(oq60_inject_bare)),
+        cleanup(oq60_retract_bare(oq60_inject_bare))
+    ]) :-
+    boltzmann_compliance:scope_invariance_test(oq60_inject_bare, R),
+    R == no_data,
+    purity_scoring:scope_invariance_subscore(oq60_inject_bare, SI),
+    SI == unknown.
+
+% mech 2 (coupling): a <2-point grid is no data — cross_index_coupling FAILS
+% (never a fabricated 0.0, and failure is not cached), and the factorization
+% subscore reports unknown.
+test(m2_coupling_fails_not_zero, [
+        setup(oq60_assert_bare(oq60_inject_bare)),
+        cleanup(oq60_retract_bare(oq60_inject_bare))
+    ]) :-
+    \+ boltzmann_compliance:cross_index_coupling(oq60_inject_bare, _),
+    \+ boltzmann_compliance:cached_coupling(oq60_inject_bare, _),
+    purity_scoring:factorization_subscore(oq60_inject_bare, F),
+    F == unknown.
+
+% mech 3 (CC): empty grid → coupling-cleanliness unknown, never "clean 1.0".
+test(m3_coupling_cleanliness_unknown, [
+        setup(oq60_assert_bare(oq60_inject_bare)),
+        cleanup(oq60_retract_bare(oq60_inject_bare))
+    ]) :-
+    purity_scoring:coupling_cleanliness_subscore(oq60_inject_bare, CC),
+    CC == unknown.
+
+% mech 4 (EX): no extraction data → unknown, never "clean 1.0".
+test(m4_excess_extraction_unknown, [
+        setup(oq60_assert_bare(oq60_inject_bare)),
+        cleanup(oq60_retract_bare(oq60_inject_bare))
+    ]) :-
+    purity_scoring:excess_extraction_subscore(oq60_inject_bare, EX),
+    EX == unknown.
+
+% The OQ-60 headline: a bare gate-passing constraint must NOT score pristine.
+test(bare_constraint_purity_unknown_never_1, [
+        setup(oq60_assert_bare(oq60_inject_bare)),
+        cleanup(oq60_retract_bare(oq60_inject_bare))
+    ]) :-
+    purity_scoring:purity_score(oq60_inject_bare, P),
+    P == unknown,
+    P \== 1.0.
+
+% R3 aggregation polarity at the structural_purity verdict:
+% clean aggregate over a set with an unknown member → distinct abstention.
+test(structural_purity_abstains_on_no_data, [
+        setup(oq60_assert_bare(oq60_inject_bare)),
+        cleanup(oq60_retract_bare(oq60_inject_bare))
+    ]) :-
+    signature_detection:structural_purity(oq60_inject_bare, PC),
+    PC == inconclusive(no_data).
+
+% R3 polarity, both directions, at the pure aggregation helper:
+% a witnessed failure fires THROUGH unknown members (existential); a clean
+% aggregate with an unknown member abstains; all-pass delegates.
+test(aggregation_polarity) :-
+    signature_detection:aggregate_purity_tests(
+        [pass(a), fail(scope_invariance, variant([x, y])), unknown(no_extraction_data)],
+        V1),
+    V1 == contaminated([fail(scope_invariance, variant([x, y]))]),
+    signature_detection:aggregate_purity_tests(
+        [pass(a), pass(b), unknown(no_extraction_data)],
+        V2),
+    V2 == inconclusive(no_data),
+    signature_detection:aggregate_purity_tests([pass(a), pass(b)], V3),
+    V3 == all_pass.
+
+:- end_tests(purity_absence_producers).

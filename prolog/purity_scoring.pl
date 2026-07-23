@@ -63,7 +63,7 @@ purity_score(_, -1.0).  % Sentinel for insufficient epistemic data
 factorization_subscore(C, F) :-
     (   cross_index_coupling(C, CouplingScore)
     ->  F is max(0.0, 1.0 - CouplingScore)
-    ;   F = 0.5  % Neutral if no data
+    ;   F = unknown  % OQ-60 mech 2: no coupling grid = no data, not a 0.5 neutral
     ).
 
 %% scope_invariance_subscore(+C, -SI)
@@ -76,16 +76,22 @@ scope_invariance_subscore(C, SI) :-
     ->  length(Types, N),
         % Penalize 0.25 per extra type beyond unity
         SI is max(0.0, 1.0 - (N - 1) * 0.25)
+    ;   Result = no_data
+    ->  SI = unknown  % OQ-60 mech 1: empty type list = no data (was variant([]) → 1.25)
     ;   SI = 0.5
     ).
 
 %% coupling_cleanliness_subscore(+C, -CC)
 %  1.0 if no nonsensical coupling. Decays with coupling strength.
 coupling_cleanliness_subscore(C, CC) :-
-    (   detect_nonsensical_coupling(C, Pairs, Strength),
-        Pairs \= []
-    ->  CC is max(0.0, 1.0 - Strength)
-    ;   CC = 1.0  % No coupling = clean
+    % OQ-60 mech 3: detect_nonsensical_coupling now FAILS on an empty grid
+    % (no data) — distinguish that from a measured grid with no coupled pairs.
+    (   detect_nonsensical_coupling(C, Pairs, Strength)
+    ->  (   Pairs \= []
+        ->  CC is max(0.0, 1.0 - Strength)
+        ;   CC = 1.0  % Measured grid, no coupling = clean
+        )
+    ;   CC = unknown  % No grid = no data, not clean
     ).
 
 %% excess_extraction_subscore(+C, -EX)
@@ -93,5 +99,5 @@ coupling_cleanliness_subscore(C, CC) :-
 excess_extraction_subscore(C, EX) :-
     (   excess_extraction(C, Excess)
     ->  EX is max(0.0, 1.0 - min(1.0, Excess * 2.0))
-    ;   EX = 1.0  % No extraction data = clean
+    ;   EX = unknown  % OQ-60 mech 4: no extraction data = no data, not clean
     ).

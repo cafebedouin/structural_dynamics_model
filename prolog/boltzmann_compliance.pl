@@ -184,9 +184,12 @@ compute_cross_index_coupling(C, CouplingScore) :-
         Grid
     ),
     length(Grid, GridSize),
-    (   GridSize < 2
-    ->  CouplingScore = 0.0  % Not enough data points
-    ;   count_coupling_violations(Grid, Powers, Scopes, Violations),
+    % OQ-60 mech 2: a <2-point grid is NO DATA, not independence — FAIL rather
+    % than fabricate 0.0 (absence must not present as a measurement). Failure
+    % is not cached (cross_index_coupling asserts cached_coupling only on
+    % success), so a later grid-bearing state recomputes.
+    GridSize >= 2,
+    (   count_coupling_violations(Grid, Powers, Scopes, Violations),
         length(Powers, NP),
         length(Scopes, NS),
         MaxViolations is NP * (NS - 1),
@@ -393,6 +396,10 @@ detect_nonsensical_coupling(C, CoupledPairs, Strength) :-
         ),
         Grid
     ),
+    % OQ-60 mech 3: an EMPTY grid is no data — fail rather than report a
+    % vacuously clean Pairs=[]/Strength=0.0. A nonempty grid with no coupled
+    % pairs still succeeds ([], 0.0): that is a measured-clean, not absence.
+    Grid \== [],
     findall(
         coupled(power_scope, P, ScopePair, Score),
         (   member(P, Powers),
@@ -618,7 +625,12 @@ scope_invariance_test(C, Result) :-
         Types
     ),
     sort(Types, UniqueTypes),
-    (   length(UniqueTypes, 1)
+    % OQ-60 mech 1: an EMPTY type list means classification produced nothing
+    % at any scope — no data, distinct from measured variance. variant([])
+    % previously leaked here and scored SI = 1.0 - (0-1)*0.25 = 1.25 downstream.
+    (   UniqueTypes == []
+    ->  Result = no_data
+    ;   length(UniqueTypes, 1)
     ->  Result = invariant
     ;   Result = variant(UniqueTypes)
     ).

@@ -1255,35 +1255,61 @@ structural_purity(C, PurityClass) :-
     purity_test_excess(C, T4),
 
     Tests = [T1, T2, T3, T4],
-    include(boltzmann_compliance:is_failure, Tests, Failures),
+    (   aggregate_purity_tests(Tests, all_pass)
+    ->  determine_pure_subtype(C, PurityClass)
+    ;   aggregate_purity_tests(Tests, PurityClass)
+    ).
 
-    (   Failures = []
-    ->  % All tests pass — determine purity subtype
-        determine_pure_subtype(C, PurityClass)
-    ;   PurityClass = contaminated(Failures)
+%% aggregate_purity_tests(+Tests, -Verdict)
+%  R3 aggregation polarity (OQ-60):
+%    - A witnessed failure fires THROUGH unknown members (existential):
+%      contaminated(Failures) even when other tests are unknown.
+%    - A clean aggregate over a set with an unknown member ABSTAINS:
+%      inconclusive(no_data), the distinct abstention token — never a
+%      pure_* certificate at coverage < 1.0.
+%    - all_pass only when every test is a pass.
+aggregate_purity_tests(Tests, Verdict) :-
+    include(boltzmann_compliance:is_failure, Tests, Failures),
+    (   Failures \== []
+    ->  Verdict = contaminated(Failures)
+    ;   include([T]>>(T = unknown(_)), Tests, Unknowns),
+        (   Unknowns \== []
+        ->  Verdict = inconclusive(no_data)
+        ;   Verdict = all_pass
+        )
     ).
 
 %% purity_test_factorization(+C, -Result)
 purity_test_factorization(C, Result) :-
-    boltzmann_compliant(C, Comp),
-    (   Comp = compliant(_) -> Result = pass(factorization)
-    ;   Comp = inconclusive(_) -> Result = pass(factorization_inconclusive)
-    ;   Result = fail(factorization, Comp)
+    % OQ-60: boltzmann_compliant can now FAIL for a gate-passing constraint
+    % with no coupling grid (cross_index_coupling no longer fabricates 0.0) —
+    % that is no-data, not a pass and not a failure.
+    (   boltzmann_compliant(C, Comp)
+    ->  (   Comp = compliant(_) -> Result = pass(factorization)
+        ;   Comp = inconclusive(_) -> Result = pass(factorization_inconclusive)
+        ;   Result = fail(factorization, Comp)
+        )
+    ;   Result = unknown(factorization_no_data)
     ).
 
 %% purity_test_scope_invariance(+C, -Result)
 purity_test_scope_invariance(C, Result) :-
     scope_invariance_test(C, ScopeResult),
     (   ScopeResult = invariant -> Result = pass(scope_invariance)
+    ;   ScopeResult = no_data -> Result = unknown(scope_invariance_no_data)  % OQ-60: absence is not variance
     ;   Result = fail(scope_invariance, ScopeResult)
     ).
 
 %% purity_test_coupling(+C, -Result)
 purity_test_coupling(C, Result) :-
-    (   detect_nonsensical_coupling(C, Pairs, Strength),
-        Pairs \= []
-    ->  Result = fail(nonsensical_coupling, strength(Strength))
-    ;   Result = pass(no_nonsensical_coupling)
+    % OQ-60: detect_nonsensical_coupling now FAILS on an empty grid — that is
+    % no-data, not a clean pass (the old shape read failure as pass).
+    (   detect_nonsensical_coupling(C, Pairs, Strength)
+    ->  (   Pairs \= []
+        ->  Result = fail(nonsensical_coupling, strength(Strength))
+        ;   Result = pass(no_nonsensical_coupling)
+        )
+    ;   Result = unknown(coupling_no_data)
     ).
 
 %% purity_test_excess(+C, -Result)
@@ -1293,7 +1319,7 @@ purity_test_excess(C, Result) :-
         ->  Result = pass(no_excess_extraction)
         ;   Result = fail(excess_extraction, Excess)
         )
-    ;   Result = pass(no_extraction_data)
+    ;   Result = unknown(no_extraction_data)  % OQ-60: absence is not a clean pass (was pass(no_extraction_data))
     ).
 
 %% determine_pure_subtype(+C, -Subtype)
