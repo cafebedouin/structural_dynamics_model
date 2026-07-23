@@ -355,6 +355,27 @@ redistributes everywhere. Build the multi-seat essay this way:
   distributed load across held-apart seats. The disparity is not indecision — it is the
   load-bearing structure.
 
+**Snapping a strut (earned collapses only).** A tension member snaps ONLY when its
+pre-stated kill condition fires on witnessed grounds — never because the composition wants
+a collapse. Three rules:
+
+- **The snap engages the seat's stated claim, not a crisper substitute.** Refuting a
+  sharper argument than the one the seat made reads clean precisely because it answers the
+  wrong claim (a seat pleading *margin* is not refuted by showing a *floor*-claim circular).
+  Before any snap, restate the claim being snapped and check it is the one the seat
+  actually holds.
+- **A concession scripted into the seat's own mouth earns nothing.** You write every
+  account, so you can make any account self-destruct; relocating your inference into the
+  teller's voice makes the collapse look *inevitable*, not *sound*
+  (F-VENTRILOQUIZED-CONCESSION). The inhabitability test governs the whole account,
+  concession included: would its holder sign it?
+- **The architecture never requires a snap.** An essay with zero snapped joints is
+  structurally complete; pressure to snap something "for structural variety" is form
+  driving content. And **like joints get like treatment:** two disparities hanging on the
+  same missing resolver share the same status — hold both open, or commit both with the
+  same priced kill condition. Snapping one while holding its structural twin open is an
+  unearned asymmetry.
+
 **Absent struts (the provenance rule).** A strut can read weak for two reasons that no
 single seat can distinguish: the domain is genuinely flat there, or that eye was suppressed
 below the threshold of being heard — never authored, never measured. χ is computed from what
@@ -410,10 +431,34 @@ returning. Reserve depth-fusion — recovering a single answer from the disparit
 joints where a fact of the matter actually exists: those are precisely the hydrostatic
 joints above, and their fusion waits on the named resolver, not on the writer.
 
+**Discretion is not constraint (the agency line).** Symmetric inhabitability is not
+symmetric agency. Some tellers live inside constraints that other tellers SET: where a seat
+had a fork and chose — a dataset picked, a deduction designed, a tier authored — the choice
+is named as a choice, not dissolved into that teller's constraint story. Scoring discretion
+as constraint is how the symmetric form manufactures "no one is responsible": the
+view-from-nowhere returning through equal treatment. The genre's symmetry is for *hearing*
+the seats, never for equating their authorship.
+
+**When every joint hangs on the same missing instrument.** You cannot Rashomon a
+well-measured thing. If the kill conditions of most tension members name the SAME absent
+resolver — the survey cancelled, the series never collected, the rate unpublished — say so
+in the essay: the plurality of accounts is then the fingerprint of the missing instrument,
+the held-open questions are one question wearing several coats, and the spine may be the
+absence itself rather than the disagreement. Each instrument-absence is a decision by
+someone, attributed PER INSTANCE where witnessed; the pattern needs no coordinator, and
+inferring one from the pattern alone is unwitnessed attribution (the absent-strut rule's
+method-level discipline applies here too).
+
 **Choosing the architecture:** singleton orbit (observers agree), or a flattening you declare
 and own → §2.3 convergent. Multi-type orbit where the disparity is the finding → §2.4
 tensegrity. Writing gauge-variant material as a convergent essay WITHOUT declaring the
 flattening is F-MANUFACTURED-CENTER.
+
+**And the architecture is scaffolding too.** The reader gets accounts and the differences
+between them — never the frame names, the strut count, or the genre machinery. If the prose
+needs its architecture explained to work, the scaffolding is leaking at the structural
+level (F-SCAFFOLDING-LEAK); every frame beyond the one doing load-bearing work for the
+READER is a candidate to drop.
 
 ---
 
@@ -848,6 +893,16 @@ the deliverable), the replicate-stability rule (§1.5.2), Mode B with no §2.4 e
 (§3.3, §5.5). The only world-measurements in the essay are world-side sources with named
 resolvers — everything engine-side is scaffolding, and scaffolding disappears.
 
+### F-VENTRILOQUIZED-CONCESSION (NEW in v2.2)
+Making a seat refute itself by scripting the collapse into its own mouth — often paired
+with quietly swapping the seat's stated claim for a crisper one the refutation can beat.
+The relocation makes the writer's inference look like the teller's inevitability; the snap
+reads earned and is not. Common driver: form-pressure to snap a joint for structural
+variety, which sacrifices the softest seat to the aesthetic.
+**Fix:** §2.4 snapping rules — snap only on a fired, pre-stated kill condition; engage the
+claim the seat actually made; the holder must be able to sign the whole account, concession
+included; zero snaps is structurally complete; like joints get like treatment.
+
 ---
 
 ## §8. THE CORE DISCIPLINE
@@ -910,6 +965,17 @@ This doesn't mean hedging everything. It means:
   voice; depth-fusion reserved for hydrostatic joints with a real resolver), the
   replicate-stability rule (§1.5.2: run-stability is evidence about the authoring, never
   the world), and F-ENGINE-AS-TRUTH.
+- Third reviewer-found correction (Draft 6): snapping was ungoverned — the Rashomon rule
+  lets the writer script every account, so an account can be made to self-destruct. §2.4
+  snapping rules added (snap only on a fired pre-stated kill condition; engage the seat's
+  stated claim, not a crisper substitute; the holder signs the whole account, concession
+  included; zero snaps is complete; like joints hanging on the same missing resolver get
+  like treatment) + F-VENTRILOQUIZED-CONCESSION; the agency line (discretion is not
+  constraint — symmetry must not launder operators into weather); the shared-instrument
+  convergence rule (you cannot Rashomon a well-measured thing — when most kill conditions
+  name the same absent resolver, the absence is the spine; per-instance attribution, no
+  coordinator inferred from the pattern); and "the architecture is scaffolding too" (frame
+  machinery never appears to the reader; excess frames are dropped).
 
 **Lesson that prompted this revision:**
 A retrospective grading attempt over the essay archive found that scoreability is a property

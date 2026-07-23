@@ -135,6 +135,24 @@ pointed at). Register placement question answered from the existing §6 rule: tr
 public copy at will, the ARCHIVED essay copy retains the register (single carrier — a
 separate scoring file would fork the artifact, Pattern 2).
 
+Third reviewer-found correction (Draft 6, second-Claude review, operator-relayed):
+**snapping was ungoverned** — the Rashomon rule gives the writer authorship of every
+account, so any account can be scripted to self-destruct and the collapse looks inevitable
+rather than sound (witnessed: the grower seat's margin-claim silently swapped for a
+refutable floor-claim, concession ventriloquized, under form-pressure to snap something).
+uke_write §2.4 snapping rules landed (fired pre-stated kill condition only; engage the
+seat's stated claim; holder-signs-whole-account test; zero snaps = complete; like joints
+on the same missing resolver share status) + F-VENTRILOQUIZED-CONCESSION; the agency line
+(discretion ≠ constraint; symmetric form must not launder operators into weather — the
+"no one is responsible" view-from-nowhere via equal treatment); the shared-instrument
+convergence rule (plurality as fingerprint of a missing resolver; per-instance attribution
+of instrument retirements, no coordinator inferred from the pattern); "the architecture is
+scaffolding too" (frame machinery invisible to the reader; excess frames dropped).
+uke_think §4.4 mirrored compactly (earned snaps + agency line). Essay-side calls NOT made
+here (operator/writer's): monopsony-commit vs hold-open on the grower joint — the
+like-joints rule now forces consistency either way — and the measurement-destruction
+reframe for Draft 7.
+
 ## 2026-07-20 — [landed] Kimi-k2.6 twin COMPLETE at n=1005; five-leg cross-model comparison
 **Files:** prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, agent/run_no_scope_kimi.py, python/audits/five_leg_twin_comparison.py, audits/2026-07-20_five_leg_twin_comparison/
 **Tier:** landed

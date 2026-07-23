@@ -255,6 +255,15 @@ A reconciling voice that "integrates" them is the manufactured center returning.
 single-answer fusion for joints where a fact of the matter exists — the declared-flattening
 commitments above, which wait on their falsifiers, not on the writer.
 
+**Earned snaps and the agency line.** Declaring a position untenable is licensed only by
+its pre-stated kill condition firing on the position's OWN claim — not on a sharper
+substitute, and not through a concession you script into its steelman (the occupied test
+governs the whole account: would its holder sign it, concession included?). Zero snapped
+positions is a complete essay; positions whose fates hang on the same unresolved question
+share the same status. And symmetric treatment is not symmetric agency: where a position's
+holder authored constraints the other positions live inside, name the discretion as
+discretion — equal inhabitability must not launder operators into weather.
+
 **Position provenance (the absent-strut rule).** Every position in the map carries its
 provenance: **occupied** (argued from within — steelmanned to where its holder would sign
 it), **constructed** (a model of the position the writer built), or **absent** (the
