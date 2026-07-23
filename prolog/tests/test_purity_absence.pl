@@ -18,11 +18,18 @@
 %   Producer-commit units (C-LATENT mechanisms, C-FLOOR) are appended by their
 %   own commits — each RED at the HEAD it lands on, GREEN with its fix.
 %
-% Run (needs the PIPELINE load chain — json_report is not loaded by [stack];
-% the emitter test fails loudly, not silently, if the chain is short):
+%   (d) Ordering-boundary ingest (item-0 audit, ORDERING_AUDIT_2026-07-23.md):
+%       atoms sort BEFORE numbers in the standard order, so an `unknown`
+%       reaching msort/max_member-based stats would silently head the list.
+%       The two cache boundaries that feed ordering predicates (drl_fpn
+%       precompute, giant_component precompute) must collapse `unknown` to the
+%       -1.0 sentinel their downstream `>= 0.0` filters already exclude.
+%
+% Run (needs the PIPELINE load chain — json_report/giant_component are not
+% loaded by [stack]; tests fail loudly, not silently, if the chain is short):
 %   cd prolog && swipl -l stack.pl -l covering_analysis.pl -l maxent_classifier.pl \
 %     -l dirac_classification.pl -l diagnostic_summary.pl -l post_synthesis.pl \
-%     -l json_report.pl \
+%     -l json_report.pl -l giant_component_analysis.pl \
 %     -g "[tests/test_purity_absence], run_tests(purity_absence), halt" -t "halt(1)"
 % ============================================================================
 
@@ -155,5 +162,52 @@ test(injected_unknown_end_to_end, [
     % post dispatch control: restore verified against the captured values
     purity_scoring:purity_score(Bare, PBare9), PBare9 == PBare0,
     purity_scoring:purity_score(Golden, PGold9), PGold9 == PGold0.
+
+% ----------------------------------------------------------------------------
+% (d) Ordering-boundary ingest: unknown collapses to -1.0 BEFORE any sort
+% ----------------------------------------------------------------------------
+
+test(fpn_ingest_collapses_unknown_to_sentinel, [
+        setup(oq60_assert_bare(oq60_inject_bare)),
+        cleanup(oq60_retract_bare(oq60_inject_bare))
+    ]) :-
+    assertz(user:oq60_inject_target(oq60_inject_bare)),
+    setup_call_cleanup(
+        oq60_swap_in,
+        once((
+            purity_scoring:purity_score(oq60_inject_bare, P), P == unknown,
+            constraint_indexing:default_context(Ctx),
+            drl_fpn:fpn_precompute_constraints([oq60_inject_bare], Ctx),
+            drl_fpn:fpn_intrinsic(oq60_inject_bare, IP),
+            IP == -1.0
+        )),
+        oq60_swap_out
+    ).
+
+test(gc_ingest_collapses_unknown_to_sentinel, [
+        setup(oq60_assert_bare(oq60_inject_bare)),
+        cleanup((
+            oq60_retract_bare(oq60_inject_bare),
+            retractall(giant_component_analysis:gc_node_purity(oq60_inject_bare, _, _)),
+            retractall(giant_component_analysis:gc_node_type(oq60_inject_bare, _, _))
+        ))
+    ]) :-
+    retractall(giant_component_analysis:gc_node_purity(oq60_inject_bare, _, _)),
+    assertz(user:oq60_inject_target(oq60_inject_bare)),
+    setup_call_cleanup(
+        oq60_swap_in,
+        once((
+            purity_scoring:purity_score(oq60_inject_bare, P), P == unknown,
+            constraint_indexing:default_context(Ctx),
+            giant_component_analysis:precompute_props_loop([oq60_inject_bare], Ctx, 0, 1),
+            giant_component_analysis:gc_node_purity(oq60_inject_bare, IP, EP),
+            IP == -1.0,
+            EP == -1.0,
+            % and the downstream distribution filter excludes the sentinel
+            findall(V, ( member(V, [IP, EP]), V >= 0.0 ), Kept),
+            Kept == []
+        )),
+        oq60_swap_out
+    ).
 
 :- end_tests(purity_absence).
