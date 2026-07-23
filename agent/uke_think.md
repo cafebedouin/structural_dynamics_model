@@ -247,6 +247,14 @@ form there: forcing it manufactures a center. Import the tensegrity architecture
   the position committed from, own the cost, attach the falsifier. If the committed claim
   is outcome-shaped, it emits a Forecast Register pair (UKE_W §1.6).
 
+**Integration lives in the reader.** The map is not a fifth position that reconciles the
+others. Held-apart positions are integrated by the READER, who holds all of them and sees
+what each position's shape reveals about where it stands — write positions as inhabitable
+accounts, not exhibits, each honest enough to live inside, including the ones you dispute.
+A reconciling voice that "integrates" them is the manufactured center returning. Reserve
+single-answer fusion for joints where a fact of the matter exists — the declared-flattening
+commitments above, which wait on their falsifiers, not on the writer.
+
 **Position provenance (the absent-strut rule).** Every position in the map carries its
 provenance: **occupied** (argued from within — steelmanned to where its holder would sign
 it), **constructed** (a model of the position the writer built), or **absent** (the
@@ -428,6 +436,10 @@ Status: [Draft complete / Ready for editing / etc.]
   (occupied / constructed / absent): silence is UNDETERMINED between no-objection and
   never-occupied; absent positions named in-body; absence attributed at the method level.
 - **§8: Multi-seat gate added.** **§10: F-MANUFACTURED-CENTER added.**
+- **§4.4 reader-integration rule** (same-day consumer correction): the map is not a fifth
+  position that reconciles the others — integration happens in the reader; a reconciling
+  voice is the manufactured center returning; single-answer fusion is reserved for
+  declared-flattening joints with real falsifiers.
 - Origin: the UKE_W v2.2 revision cycle (tensegrity §2.4, absent-strut provenance, Forecast
   Register; context in ISSUES.md OQ-229 and the v2.2 §9 notes).
 

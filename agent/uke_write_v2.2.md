@@ -150,6 +150,13 @@ The Prolog diagnostic stack applies formal evaluation methods that the constrain
 - Omegas flagged as `empirical`: Data exists or could be gathered to resolve the question. The essay should name the data.
 - Omegas flagged as `conceptual`: The question requires definitional work, not just data. The essay should frame the conceptual ambiguity.
 
+**Replicate stability across runs** — evidence about your authoring, never about the world.
+A stable spread across regenerated runs measures how you authored the constraint stories
+(plus engine determinism from the committed JSON onward). It sharpens which views to hold;
+it measures nothing in the domain. Never cite run-stability, spreads, or any engine scalar
+as if it were a world-measurement — the world-facing question stays with its world-side
+resolver (name it, and if it is outcome-shaped it belongs in the Forecast Register, §1.6).
+
 #### 1.5.3 Network Edges as Essay Architecture
 
 The `affects_constraint` declarations encode a dependency graph. Constraints that feed into other constraints suggest argumentative structure:
@@ -328,9 +335,15 @@ continuous tension net (fascia, ligament, muscle); nothing touches; load anywher
 redistributes everywhere. Build the multi-seat essay this way:
 
 - **Seats are compression struts.** Each perspective is rendered at its measured strength —
-  the evidence and structural weight it actually carries (for DR material: its indexed
-  position's χ magnitude) — and held APART. Never fuse seats into a synthetic middle
-  position; never refute a seat merely to clear room for a conclusion.
+  and *rendered* means the PROSE carries the weight, never the number. For DR material, the
+  indexed position's χ magnitude calibrates how hard you write that seat (a strong seat gets
+  a direct, forceful account; a weak seat reads visibly thinner); the number itself stays in
+  the scaffolding. **Mode B governs tensegrity essays with no exception** (§1.5.4, §3.3): a
+  χ value on the page is not measurement the reader can use — it is the *impression* of
+  measurement, a false authority smuggled into the exact structure claiming no seat is
+  neutral, and it manufactures the center this section exists to prevent. Hold seats APART;
+  never fuse them into a synthetic middle position; never refute a seat merely to clear
+  room for a conclusion.
 - **Declared disparities are the tension members.** Each disparity between seats is stated
   explicitly AND carries its kill condition: what observation would collapse it (the seats
   actually converge) or snap it (one seat is untenable). **Tensegrity without tension is a
@@ -383,6 +396,19 @@ permanent bone ("I am flattening this and owning the flattening"). Every pressur
 carries its falsifier, and if it is outcome-shaped it emits a Forecast Register pair (§1.6):
 it is exactly the empirical hinge whose resolution would legitimately stiffen the whole
 structure — and until resolution, it stays fluid.
+
+**Integration lives in the reader (the Rashomon rule).** A stereo pair implies fusion: two
+eyes, one recoverable depth — a fact of the matter the disparity triangulates. Most
+gauge-variant material is not like that. The seats are not noisy measurements of one hidden
+number; they are accounts shaped by what each teller cannot afford to have be true, and the
+integrated whole is NOT a fifth account that averages or reconciles them — it is the reader
+holding all of them and seeing what each account's distortion reveals about its teller's
+stake. So write the seats as ACCOUNTS a reader can inhabit — each honest enough to live
+inside, including the ones you dispute — and refuse the reconciling voice: the shape of the
+difference is the finding, and a fifth voice that "integrates" is the manufactured center
+returning. Reserve depth-fusion — recovering a single answer from the disparity — for the
+joints where a fact of the matter actually exists: those are precisely the hydrostatic
+joints above, and their fusion waits on the named resolver, not on the writer.
 
 **Choosing the architecture:** singleton orbit (observers agree), or a flattening you declare
 and own → §2.3 convergent. Multi-type orbit where the disparity is the finding → §2.4
@@ -588,7 +614,7 @@ If essay uses analytical models/frameworks:
 - [ ] Confidence levels across sections track the purity/entropy gradient from the reports (strong language for clean constraints, cautious language for contaminated ones)
 - [ ] Omega variables have been translated into the "Unresolved Questions" section
 - [ ] The essay would be fully intelligible and defensible to a reader who has never heard of Deferential Realism
-- [ ] You have not cited coupling scores, purity numbers, theater ratios, or any DR metric as evidence
+- [ ] You have not cited coupling scores, purity numbers, theater ratios, χ magnitudes, or any DR metric as evidence — in a §2.4 tensegrity essay too; §2.4 is not an exception to Mode B
 
 ### §5.6 The Counterfactual Completeness Check (REVISED)
 
@@ -809,6 +835,19 @@ eye-selection is attributed at the METHOD level (what the author sourced — dec
 fact), with the world-side cause of the absence left undetermined unless independently
 witnessed.
 
+### F-ENGINE-AS-TRUTH (NEW in v2.2)
+Treating the engine's outputs as findings about the world rather than as sharpened
+hypotheses about where to look: χ values placed in prose as if they were measurements;
+run-stability ("three runs, stable spread") cited as evidence about the domain when it is
+evidence about how the constraint stories were authored; the essay auditing the reports
+instead of telling the story the reports pointed at. The engine's job is to sharpen the
+analysis and let the writer hold multiple views at once — it measures the authored corpus,
+never the world.
+**Fix:** §1.5.1 orientation (stories are hypotheses, reports are validation, the essay is
+the deliverable), the replicate-stability rule (§1.5.2), Mode B with no §2.4 exception
+(§3.3, §5.5). The only world-measurements in the essay are world-side sources with named
+resolvers — everything engine-side is scaffolding, and scaffolding disappears.
+
 ---
 
 ## §8. THE CORE DISCIPLINE
@@ -864,6 +903,13 @@ This doesn't mean hedging everything. It means:
   structure for what may be a sourcing limit smuggles the verdict back in). Scope of the
   rule, stated plainly: it closes the REPRESENTATIONAL gap, not the epistemic one — it makes
   the writer say they cannot tell which cause produced the zero; it does not let them tell.
+- Second consumer-found correction (Draft 4 → Draft 5): §2.4's "at its measured χ" clause
+  read as a Mode B exception and put scores in the prose — closed: χ calibrates how hard
+  each seat is written, the number never appears; Mode B has no §2.4 exception (§5.5
+  hardened). Plus the Rashomon rule (integration lives in the reader — no reconciling fifth
+  voice; depth-fusion reserved for hydrostatic joints with a real resolver), the
+  replicate-stability rule (§1.5.2: run-stability is evidence about the authoring, never
+  the world), and F-ENGINE-AS-TRUTH.
 
 **Lesson that prompted this revision:**
 A retrospective grading attempt over the essay archive found that scoreability is a property

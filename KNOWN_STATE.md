@@ -118,6 +118,23 @@ routing rule (divergence-is-the-finding → UKE_THINK §4.4 / UKE_W §2.4); stra
 fences removed. Versions are in-file only (filenames unversioned, no code loads them);
 essays' historical UKE_META stamps naming v1.1/v1.3 left as provenance records.
 
+Second consumer-found correction (Draft 4 → Draft 5, operator-relayed): the writing model
+put χ values in prose while claiming Mode B — §2.4's "rendered at its measured strength
+(χ magnitude)" read as a Mode B exception. Closed in uke_write v2.2: χ calibrates prose
+intensity, the number never appears; §5.5 checklist hardened (χ magnitudes named; "§2.4 is
+not an exception to Mode B"). Plus three additions from the same failure: the **Rashomon
+rule** in §2.4 (+ uke_think §4.4) — integration lives in the READER; seats are inhabitable
+accounts, not exhibits; a reconciling fifth voice is the manufactured center returning;
+depth-fusion (single recoverable answer) reserved for hydrostatic joints with a named
+resolver — the stereo-pair geometry over-promised fusion where no fact-of-the-matter
+exists; the **replicate-stability rule** (§1.5.2): run-stability/spreads are evidence about
+the authoring (authored corpus + engine determinism), never about the world — the
+essay-layer form of the report-scalars-are-not-measurement finding; and
+**F-ENGINE-AS-TRUTH** (auditing the reports instead of writing the story the reports
+pointed at). Register placement question answered from the existing §6 rule: trim from the
+public copy at will, the ARCHIVED essay copy retains the register (single carrier — a
+separate scoring file would fork the artifact, Pattern 2).
+
 ## 2026-07-20 — [landed] Kimi-k2.6 twin COMPLETE at n=1005; five-leg cross-model comparison
 **Files:** prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, agent/run_no_scope_kimi.py, python/audits/five_leg_twin_comparison.py, audits/2026-07-20_five_leg_twin_comparison/
 **Tier:** landed
