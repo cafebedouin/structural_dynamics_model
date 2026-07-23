@@ -1,0 +1,239 @@
+{
+  "header": {
+    "constraint_id": "citation_purity_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "fe9a6d92-33c5-4922-94b5-8ea6e072da0a"
+  },
+  "base_properties": {
+    "extractiveness": 0.31,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Non-Self-Citation Quarantine (Reader-Verifiability Reading)",
+    "topic_domain": "governance/institutional_economics/scholarly_publishing",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "reading_audience",
+      "peer_review_gatekeepers"
+    ],
+    "victims": [
+      "authors_with_legitimate_private_priors",
+      "cross_disciplinary_researchers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "peer_review_gatekeepers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Administer the non-self-citation boundary at submission review: any reference to an unpublished, privately-controlled source (internal memo, proprietary dataset, unshared code, a working relationship the author cannot disclose) is flagged and the paper is held until the citation is replaced or removed. They do not personally collect anything from enforcement but their institutional legitimacy as gatekeepers depends on the boundary holding."
+    },
+    {
+      "name": "reading_audience",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Strangers to the author who cannot inspect the author's private archive, notebooks, or internal communications. They rely on the paper being self-contained and verifiable from the published record alone. The quarantine is what lets them extend trust to a claim without personally auditing the author's private holdings."
+    },
+    {
+      "name": "authors_with_legitimate_private_priors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Have real intellectual debts to unpublished internal work — a private notebook derivation, an unshared internal report, a controlled dataset used to sanity-check the published result. Under this reading, any such debt that a stranger cannot verify must be quarantined regardless of its good-faith origin, even when the private source is honestly held and not competitively withheld. Removing or laundering the citation costs them time and sometimes forces re-derivation of results from only publicly defensible steps."
+    },
+    {
+      "name": "cross_disciplinary_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Work in fields where key background knowledge is transmitted through unpublished lab traditions, internal technical reports, or private correspondence that never became formal literature. The purity reading treats any reliance on that transmission as a verifiability gap requiring quarantine, which falls disproportionately on subfields with weaker publication norms even though the underlying knowledge is genuinely shared and not privately hoarded."
+    },
+    {
+      "name": "editorial_boards",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Set the formal policy that operationalizes the boundary and adjudicate disputed cases where an author claims a source is not really private control but shared or defensible knowledge. They watch the boundary's enforcement pattern across many papers and can loosen or tighten the test."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Lets a stranger extend evidentiary trust to a published claim without personally auditing the author's private archive, by guaranteeing that nothing load-bearing in the argument depends on a source only the author can see.",
+    "transfer_function": "Moves the burden of verifiability from the reader (who would otherwise have to trust the author's private holdings) to the author (who must either publish the supporting source or forgo relying on it), at the cost of authors' time and sometimes at the cost of demonstrably true but unverifiable background knowledge being excluded from the visible chain of reasoning.",
+    "absent_voices": "Authors whose private priors are honestly held and not competitively withheld (e.g., an internal lab notebook, a shared-but-unpublished disciplinary convention) are not heard in the adjudication of what counts as a verifiability gap; the test asks only whether a stranger would have to trust the archive, not whether the archive-holder is acting in good or bad faith.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the quarantine vanished, strangers reading a paper would have no structural guarantee that its claims are checkable from the public record; peer review would have to substitute either blind trust in author reputation or costly independent verification of private sources, and citation practice would likely re-fragment along lines of who personally trusts whom rather than what is publicly checkable.",
+    "founding_problem": "A reader who is a stranger to the author has no way to check a citation to something only the author controls (an unpublished dataset, an internal memo, a private notebook derivation) — so a paper that rests its claims on such sources is not actually verifiable by the community it addresses, even if the private source is entirely honest.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent replication studies and meta-science audits of irreproducible results repeatedly identify undisclosed reliance on private, unpublished materials as a contributing factor — this is attested by replication researchers and methodology auditors who are not party to the specific papers being quarantined, i.e. from outside the set of authors and gatekeepers who benefit from any particular boundary decision."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates one reading of the paper-ready boundary kernel: the boundary is understood strictly as a reader-verifiability device. Under this reading, the question that determines what gets quarantined is never 'whose source is this' or 'is this a security risk' or 'does this reflect our design philosophy' — it is only 'would accepting this claim require a stranger to trust something they cannot check.' A private notebook derivation the author is happy to share is still quarantined if it is not actually published; an internal doctrine everyone in the field knows informally is still quarantined if a reader from outside that tradition cannot verify it. This reading draws the victim set narrowly around the paper's own credibility and the beneficiary set around the anonymous reading audience, and it is deliberately indifferent to ownership, security, or aesthetic/design considerations that the sibling readings (ip_provenance_reading, operational_security_reading, design_philosophy_reading) treat as central.",
+    "key_agents": [
+      "peer_review_gatekeepers: administer the boundary at submission (institutional/analytical) — enforce but do not personally collect",
+      "reading_audience: strangers who cannot check unpublished sources (organized/analytical) — the boundary's beneficiary",
+      "authors_with_legitimate_private_priors: pay the cost of quarantine even when their private source is honestly held (moderate/constrained)",
+      "cross_disciplinary_researchers: disproportionately burdened where field norms rely on informally transmitted, unpublished knowledge (moderate/constrained)",
+      "editorial_boards: set and adjust the operational test across many cases (institutional/analytical)"
+    ],
+    "logic_rationale": "Extractiveness is moderate-low (0.31) because the coordination function is genuine and the cost imposed on authors is mostly friction (rewriting, re-deriving, or forgoing a citation) rather than rent extraction — no party collects a toll from the boundary's operation the way a gatekeeper collects a fee. Suppression (0.42) reflects that the test is applied categorically ('would a stranger have to trust the archive') rather than case-by-case on the merits of the author's honesty, which does foreclose some legitimate citations. Theater ratio is modest and rising slightly (0.15→0.28) as editorial boards accumulate boilerplate compliance language around the test without always interrogating whether a given source really opens a verifiability gap. Accessibility collapse is moderate (0.58): once a source is understood to be privately held, the only path forward is publication or removal — there is no partial credit.",
+    "directionality_logic": "The reading audience is the clean beneficiary: the entire point of the boundary is to let them trust a paper without personal verification of the author's private holdings, so their directionality sits near full beneficiary. Authors with legitimate private priors and cross-disciplinary researchers are the targets: the quarantine falls on them regardless of the private source's actual trustworthiness, because the test is verifiability-only, not honesty-only. Peer review gatekeepers and editorial boards are structurally symmetric — they neither collect from the boundary nor bear its costs directly, but their institutional legitimacy depends on consistent enforcement.",
+    "mandatrophy_analysis": "The founding problem (strangers cannot check private sources) remains fully live — publication and archiving technology has not eliminated the gap between what an author privately knows and what a reader can verify. This keeps the reading from being a pure mandatrophy case: the coordination function this reading isolates has not atrophied. Where mandatrophy risk enters is in the theater ratio's slow rise — as editorial boards accumulate rote compliance checks, some enforcement drifts from 'does this open a real verifiability gap' toward 'does this citation superficially resemble a private source,' which is exactly the kind of proxy substitution the boundary's other readings (ip_provenance, opsec, design_philosophy) would not measure the same way, because their tests are about ownership, risk, or aesthetics rather than verifiability per se.",
+    "kernel_context": "This constraint is the citation_purity_reading of the paper_ready_boundary kernel. The kernel is the single quarantine practice: a paper defers to nothing the author privately controls. This reading draws the boundary strictly around reader-verifiability — the operative test is whether accepting a fact would require a stranger to trust the author's private archive, independent of whether the source is 'the author's own,' a security concern, or a matter of house style. Sibling readings of the same kernel (ip_provenance_reading, operational_security_reading, design_philosophy_reading) draw the boundary around ownership claims, information-security risk, and stylistic/architectural convention respectively — each produces a different victim set and a different beneficiary structure from the same underlying quarantine practice, and each is authored as its own separate constraint story."
+  },
+  "omegas": [
+    {
+      "id": "verifiability_vs_ownership_boundary_divergence",
+      "question": "When a private source is both unverifiable to strangers AND owned/controlled by the author in a proprietary sense, does the citation_purity_reading and the ip_provenance_reading draw the quarantine line in the same place, or does the purity reading quarantine sources the ownership reading would permit (and vice versa)?",
+      "resolution_mechanism": "Compare adjudicated cases across editorial boards operating under each framing: identify cases where a source is freely shareable (no IP claim) but still unverifiable (never actually published), and cases where a source is IP-protected but independently verifiable through a different public channel.",
+      "impact": "If the two readings diverge substantially in practice, that confirms they are genuinely distinct constraints (per the ε-invariance principle) rather than two descriptions of the same enforcement pattern; if they converge in nearly all real cases, the decomposition into separate stories may be less load-bearing than assumed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the reader-verifiability test and the ownership test actually diverge in practice or merely in framing."
+    },
+    {
+      "id": "good_faith_private_prior_treatment",
+      "question": "Should an author's honestly-held, non-competitive private prior (e.g., an internal lab notebook they are willing to share on request) be treated identically to a competitively withheld proprietary source, given that both fail the strict verifiability test?",
+      "resolution_mechanism": "Track outcomes for authors who voluntarily offer their private source for reviewer inspection versus authors who cannot or will not share it; if reviewer-inspection cases are treated more leniently in practice despite the formal test being categorical, that reveals an implicit informal exception the strict reading doesn't officially recognize.",
+      "impact": "If good-faith and bad-faith unverifiable sources are treated identically, the boundary's extraction from authors_with_legitimate_private_priors is higher than the coordination story alone would justify, pushing this reading closer to tangled_rope; if an informal good-faith exception operates in practice, the effective extractiveness is lower than the formal rule implies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the strict verifiability test is applied uniformly regardless of the private source-holder's good faith."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "ip_provenance_reading",
+      "operational_security_reading",
+      "design_philosophy_reading"
+    ],
+    "dual_formulation_note": "This story is one of four sibling readings of the paper_ready_boundary kernel (citation_purity_reading, ip_provenance_reading, operational_security_reading, design_philosophy_reading). Each reading draws the same underlying quarantine ('defer to nothing you privately control') along a different structural test — verifiability-to-strangers here, ownership/provenance, security risk, and stylistic convention in the siblings — producing different victim sets and different epsilon values. They are linked via network edges rather than merged into one story, per the epsilon-invariance principle: an observable that changes which sources get quarantined (verifiability vs. ownership vs. risk vs. style) changes which constraint is being measured."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "paper_ready_boundary__ip_provenance_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "paper_ready_boundary__operational_security_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "paper_ready_boundary__design_philosophy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "verifiability_to_strangers_is_the_only_relevant_test",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "good_faith_of_source_holder_is_irrelevant_to_quarantine",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "peer_review_stranger_verification_norm",
+    "drift_state": {
+      "moment": "contemporary_preprint_and_open_science_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-23",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
