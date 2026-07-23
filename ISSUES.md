@@ -10823,6 +10823,90 @@ blindness) is owed to the framework paper, with the graded pass as its witness; 
 condition fires → calibration work on the authoring side, paper untouched. Either way the
 scoreable-ratio triage finding stands on its own.
 
+## OQ-230 — Source-provenance instrument is half-built: `source_essay` authored `'unspecified'` even in source-fed runs, no consumer, no coverage field
+
+**Ω-type:** Ω_E (buildable instrument; every piece witnessable at generation time).
+
+**Status:** open
+**Priority:** 3
+
+**Origin.** Claude-web engine critique on the emotives.md run (2026-07-22), verified this
+session. The critique claimed "no field records what text a reading was generated from" —
+half wrong, and the true state is sharper: the field EXISTS and is silently unfilled.
+
+**Verified state (all witnessed 2026-07-22).**
+- `provenance.source_essay` exists in the constraint-JSON schema and is emitted into the
+  `.pl` files (`python/generate_constraint_pl.py:856`).
+- All three stories from the emotives run carry `source_essay: 'unspecified'` —
+  **despite the run being invoked as `c-orchestrator.py emotives.md`, with the source file
+  as the literal argument** (`agent/analysis/originals/emotives.md`, on disk in-repo). The
+  orchestrator never threads its input into the field; grep of `agent/c-orchestrator.py`
+  for `source_essay` is empty (positive control: the emitter hit in generate_constraint_pl).
+- Only code touching the field is the emitter — no consumer (Build Discipline Pattern 1).
+- `'unspecified'` is a success-shaped absence token (Pattern 5): the field reads as authored
+  while recording nothing.
+- The COVERAGE half has no field at all: nothing records what the source says about its own
+  scope. Witnessed instance: `emotives.md:7` announces "I'll skip most of that" — the post
+  summarizes only After Virtue's diagnostic half. The corpus's flagship omega
+  (`vacuum_is_permanent_or_transitional`, conceptual, held open) is per Claude-web answered
+  in the book's constructive back half that the source declares skipped [UNVERIFIED against
+  the book text; the structural point — no place to record the declared skip — is verified].
+
+**What resolution looks like (three pieces, smallest first).**
+1. Thread the orchestrator's source input into `provenance.source_essay` (fill-at-generation;
+   `'unspecified'` only for genuinely sourceless topic runs — and consider renaming the
+   sentinel to distinguish "no source existed" from "not threaded", per the
+   provenance-buckets rule).
+2. Add a source-coverage field: the source's self-declared scope/skips, authored at
+   generation from the source text (template: the OQ-205 ε-provenance loud-null object).
+3. Wire a consumer — minimum: surface `source_essay` in enhanced_report; ambition: an
+   omega×coverage cross-check flagging omegas whose answer-region the source declared
+   skipped. Piece 3 is gated on 1–2.
+
+**Cross-refs.** OQ-205 (the provenance-declaration discipline this should copy); OQ-223 +
+two-axis note: during verification the adjacent "declared-vs-concealed" critique resolved to
+EXISTING apparatus — the CS acknowledgment layer (`cs_drift_ack_witness`,
+`cs_drift_unacknowledged`) — which topic-run stories simply don't author (0 `cs_*` facts in
+`emotivism_as_diagnosis_vs_practice.pl`); whether the c-orchestrator topic path should ever
+author committer-axis facts is OQ-223-class (default hold), recorded here, not re-minted.
+
+## OQ-231 — personhood_boundary_kernel: author the mandated third reading (`golden_rule_consistency_reading`); flat-control linkage claim REFUTED
+
+**Ω-type:** Ω_E (a generation gap with an in-repo source; completion witnessable by the standard integrity sweep).
+
+**Status:** open
+**Priority:** 2
+
+**Origin.** Claude-web critique on the emotives run (2026-07-22), verified this session.
+
+**Confirmed half (witnessed).** The kernel's own decomposition note mandates THREE sibling
+readings ("the three personhood_boundary_kernel readings (autonomy_reading,
+golden_rule_consistency_reading, personhood_continuity_reading) should each be authored as
+separate sibling constraint stories" — `authority_vacuum_incommensurability.pl:262`); the
+pipeline authored TWO (`autonomy_reading.pl`, `personhood_continuity_reading.pl` exist;
+`golden_rule_consistency_reading.pl` does not — positive control: both siblings found by the
+same ls). Both siblings carry dangling `cs_reading_relation` edges to the missing third
+(autonomy_reading.pl:126, personhood_continuity_reading.pl:135), and
+`authority_vacuum_incommensurability.pl:340` carries the dangling `affects_constraint`.
+Analytical interest (per the critique): MacIntyre's Golden-Rule argument explicitly declines
+legal-prohibition standing ("I am not of course thereby committed…"), making it a
+seat-claim-with-site-standing-declined instance. Source for authoring: MacIntyre's (b) as
+relayed via `agent/analysis/originals/emotives.md` — verify the quote against the source
+text before authoring, and fill `provenance.source_essay` properly (OQ-230 piece 1 applies;
+manual fill if the wiring isn't built yet).
+
+**Refuted half (do NOT execute the critique's second fix).** The claim that the flat control
+is "not registered to the kernel it's the control for" is FALSE:
+`personhood_boundary_kernel_flat_control.pl:110` carries
+`flat_control_of(personhood_boundary_kernel_flat_control, personhood_boundary_kernel)`, and
+all 17/17 corpus flat controls carry `flat_control_of/2`. The absence of `cs_kernel_id` on
+flat controls is an OPERATOR RULING (2026-06-05, the generate-both resolution: "mechanical
+alignment key `flat_control_of/2` … never `cs_kernel_id` — flat controls are NOT readings,
+so kernel statistics and the OQ-58 sweep are untouched"). "Link the flat control via
+cs_kernel_id" would violate that ruling — any session working this OQ must not do it. The
+critique's surviving point (the control controls for *seating*, its H¹=6 confirms the
+Coupling Theorem on a deliberately unseated input, a priori) needs no repo change.
+
 ---
 
 *Last updated: 2026-07-22. Add new items with sequential OQ-NN labels. Mark

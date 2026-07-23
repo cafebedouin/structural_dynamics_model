@@ -153,6 +153,22 @@ here (operator/writer's): monopsony-commit vs hold-open on the grower joint — 
 like-joints rule now forces consistency either way — and the measurement-destruction
 reframe for Draft 7.
 
+Claude-web ENGINE critique (emotives.md run) verified per agent-inventory discipline —
+scorecard 1 confirmed / 1 refuted / 1 sharpened / 1 rerouted: (1) CONFIRMED missing
+`golden_rule_consistency_reading` (mandated by the kernel's own decomposition note at
+authority_vacuum_incommensurability.pl:262; both siblings dangle cs_reading_relation edges
+to it) → **OQ-231** (P2; also records the REFUTED half so the fix isn't executed);
+(2) REFUTED "flat control not registered to its kernel": flat_control_of/2 present
+(…flat_control.pl:110), 17/17 corpus-wide, and cs_kernel_id-on-flat-controls is excluded by
+the 2026-06-05 operator ruling; (3) SHARPENED "no source-provenance field":
+`provenance.source_essay` EXISTS and is emitted (generate_constraint_pl.py:856) but reads
+`'unspecified'` in all three stories despite the run being invoked with the source file as
+argv — no filler, no consumer, no coverage field (source's self-declared skip at
+emotives.md:7) → **OQ-230** (P3); (4) REROUTED "showing-face field unauthored": the
+declared-vs-concealed instrument exists on the CS axis (cs_drift_ack_witness); topic-run
+stories author 0 cs_* facts — OQ-223-class question, recorded in OQ-230 cross-refs, not
+re-minted.
+
 ## 2026-07-20 — [landed] Kimi-k2.6 twin COMPLETE at n=1005; five-leg cross-model comparison
 **Files:** prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, agent/run_no_scope_kimi.py, python/audits/five_leg_twin_comparison.py, audits/2026-07-20_five_leg_twin_comparison/
 **Tier:** landed
