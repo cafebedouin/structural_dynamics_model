@@ -11093,6 +11093,72 @@ any new falsifier added to the papers inherits the general condition above at au
 
 ---
 
+## OQ-235 — Blocked-B has no capability move: the divergence instrument (self-account vs non-report practice measure) + conversion-rate predictors
+
+**Ω-type:** Ω_C (does blocked-B admit a capability move; instrument design), with an Ω_E tail
+(divergence is measurable wherever a non-report practice measure exists; the predictor list is
+testable).
+
+**Status:** open
+**Priority:** 4
+
+**Origin.** Claude-web continuation of the Commitment Systems adjudication (2026-07-23, third
+round); rulings and the gate resolution are in
+`docs/commitment_systems/type_b_adjudication_2026-07-23.md`.
+
+**The gap.** The gate framework (blocked-B; see the adjudication note) stops one section short
+of the *Everything Becomes Taste* arc: structural negative, then a capability move built from
+present-tense substitutes. Commitment Systems has the negative — only insiders can ratify
+acknowledgment, so a blocked system cannot acknowledge its own blockage; diagnosis is available
+exactly where it is inert — and no capability move. v8 names the SAME wall as its "honest
+residual" at the close of §5.9 (v8:700–706): the acknowledged bit is *authored, not detected*,
+and evidence for choice-vs-foreclosure is thinnest exactly where formation ran to completion.
+
+**Arm A — the divergence instrument.** An institution's kernel IS a claim about its own
+operational practice, so calibration-to-practice is the right criterion there (the July essay's
+librarian defeater — calibration doesn't make a preference *yours* — does not transfer:
+authenticity was the wrong question, decoupling is the right one). Divergence between the
+system's self-account and a NON-REPORT measure of the same practice = drift-denial made
+observable — present-tense, third-person, gate-independent, no admission required. This is an
+instance of OQ-234 repair strategy (c) (structural witnesses: facts formation cannot erase),
+applied to the commitment axis. **Scope condition, stated at mint:** requires a non-report
+measure to exist — covers constitutions, professions, labs (practice has consequences outside
+the interpretive layer); does not cover systems whose whole product is interpretation
+(a philosophical position, a marriage). Engine surface question: `cs_drift_state/3`'s
+`gap(Direction, Magnitude, Acknowledged)` is currently authored end-to-end — the instrument
+would make the gap (and possibly the Acknowledged bit) *detected* from paired
+self-account/practice series rather than authored. Sen's morbidity/longevity divergence is the
+model instrument.
+
+**Arm B — conversion-rate predictors.** Blocked-A held long enough presents as B (Sparta at
+Leuctra) and the arrow has no rate: nothing predicts non-conversion. Port the personal-scale
+candidates from the July essay: counterfactual vividness → a living comparison case doing it
+differently; visible reference group → a preserved record of the original kernel; said-aloud
+before the door shut → whether the drift was ever minuted. A testable list; the section
+unwritten in both papers.
+
+**The standing objection (recorded at mint, from the same round).** The divergence test is a
+diagnosis with no prescription — it hands the finding to observers who lack standing, the same
+wall one step over. The framework's own answer (v8 §6.1, Coupling Theorem): no seat-free
+evaluative ground exists for ANYONE — Sen's "somewhere else to stand" was itself a declared
+evaluative seat (the capability approach), not neutral ground. So a Part V, if it exists, is a
+*declared external seat* evaluating over the divergence record, plus Corollary-3
+time-accountability (staked predictions confronted later) — not standing-free evaluation, which
+the theorem says never existed. Whether that is a capability move or a relabeled wall is the
+open question.
+
+**Resolution changes:** whether Commitment Systems earns a Part V (capability section) or is
+honestly titled a theory of repair for repairable systems; whether the engine gets a detected
+(vs authored) acknowledgment surface; whether the OQ-234 structural-witness family extends to
+the committer axis.
+
+**Cross-refs.** OQ-227 (drift terminals; `acknowledgment_collapse` is the terminal the
+instrument would detect from outside), OQ-234 (structural-witness repair family),
+`docs/commitment_systems/type_b_adjudication_2026-07-23.md` (gate resolution + addenda),
+v8 §5.9 close + §6.1, KNOWN_STATE 2026-07-17 (*Everything Becomes Taste* trifurcation).
+
+---
+
 *Last updated: 2026-07-23. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

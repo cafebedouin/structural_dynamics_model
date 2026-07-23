@@ -46,7 +46,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 ---
 
 ## 2026-07-23 — [correction-key] *Hearts of Glass* is NOT a pipeline artifact (provenance witnessed); Commitment Systems adjudicated as blocked-B refinement of the debugging-philosophy taxonomy
-**Files:** blog/2026-07/hearts-of-glass.md, blog/2026-07/implied_machine_reader.md, agent/analysis/originals/machine_reader.md, prolog/cs_drift_engine.pl, docs/commitment_systems/type_b_adjudication_2026-07-23.md, docs/debugging_philosophy.md
+**Files:** blog/2026-07/hearts-of-glass.md, blog/2026-07/implied_machine_reader.md, agent/analysis/originals/machine_reader.md, prolog/cs_drift_engine.pl, docs/commitment_systems/type_b_adjudication_2026-07-23.md, docs/debugging_philosophy.md, ISSUES.md
 **Tier:** correction-key
 
 Two rulings from a Claude-web planning conversation (2026-07-23), landed to substrate.
@@ -85,7 +85,17 @@ revisable-B vs **blocked-B** — Commitment Systems is the theory of blocked-B, 
 patterns its map. A proposed "Type D (extraction-generated)" collapses into B (standing is
 constitution-level). Two marked open notes in the adjudication file: the Euclid exception's
 seat at axiom-set choice, and remedy-identity making the framework a theory of repair rather
-than drift.
+than drift. **Round-2 sharpening (same day, adjudication Addendum 1): blockage is a GATE on
+remedy execution, not a type** — restoring standing is the enabling condition for running a
+fix, not a fix (nobody resolves Sorites by acquiring authority); trifurcation stays at three;
+Commitment Systems is the theory of the gate; Stage 0 in precise form = "does an agent exist
+who can execute the fix and wants to." **Round 3 (Addendum 2 + OQ-235 minted):** three-valued
+gate proposed, unruled (vacancy/capture/bandwidth — treatments disjoint: build authority /
+change incentives / add throughput); the §5.9 closable-by-citation check returned the
+OPPOSITE of the Euclid case — v8:700–706 names the same wall (acknowledged bit authored-not-
+detected, evidence thinnest where formation completed) as its own honest residual. The open
+capability question — a detected (vs authored) acknowledgment surface via self-account/
+non-report-practice divergence, plus conversion-rate predictors — is **OQ-235**.
 
 ---
 

@@ -82,3 +82,36 @@ This also yields the three-stage diagnostic's implicit Stage 0 in precise form: 
 "is the object a reasoning instrument?" but **"does an agent exist who can execute the
 fix and wants to?"** Stage 2 returning an uninformative pass against an institution is
 what a closed gate looks like when a remedy test is run through it.
+
+## Addendum 2 (2026-07-23, third round): gate refinements and the §5.9 check
+
+**Proposed (not yet operator-ruled): the gate is three-valued, not binary.** "Does an
+agent exist who can execute the fix and wants to" collapses three closures with
+disjoint treatments: **vacancy** — no one has standing (diffuse reconstruction; build
+an authority structure); **capture** — someone has standing and benefits from not
+using it (anchored fixity with extraction stakes; change incentives or route around);
+**bandwidth** — someone has standing, wants to, and cannot keep up (the mathematics
+case; proof assistants as bandwidth extension, not reform). The binary gate cannot
+tell capture from bandwidth, and the difference is prescribing revolution vs
+prescribing tooling.
+
+**The closable-by-citation check ran and returned the OPPOSITE of the Euclid case.**
+The question was whether v8 §5.9 already stakes out the external standing the
+divergence instrument needs. It does not — it *names the same wall*, as its declared
+honest residual (v8:700–706): the acknowledged bit is "*authored*, not detected —
+which relocates the limit from the classifier to the corpus. The positions most
+thoroughly foreclosed are the least likely to author a dissenting reading or a
+pre-closure snapshot, so the evidence for the choice/foreclosure distinction is
+thinnest exactly where formation ran to completion." Two documents arrived at the
+graveyard independently. What §5.9 *does* stake out is the structural-witness move
+for the OTHER boundary (mountain/choice via consistent-negation + present-beneficiary
+— detection without memory or admission), which is the family the divergence
+instrument would extend to the acknowledged-bit boundary.
+
+**On "somewhere else to stand" (the [EDGE] objection):** the seat theorem (v8 §6.1)
+answers it in the framework's own terms — no seat-free evaluative ground exists for
+anyone; Sen's somewhere-else was itself a *declared* evaluative seat. So the missing
+Part V, if it exists, is a declared external seat over the divergence record plus
+Corollary-3 time-accountability, not standing-free evaluation. Whether that is a
+capability move or a relabeled wall is now **OQ-235** (with the divergence
+instrument's scope condition and the conversion-rate predictor list as its arms).
