@@ -11011,6 +11011,45 @@ egocenter is not fixed at the bridge of the nose and shifts with task and fixati
 COMPLICATE "a single manufactured origin" rather than support it. The query to run: the
 egocenter's stability in the vision-science literature. Either outcome is a datum for this OQ.
 
+**Probe RESULT (n=1 datum, run 2026-07-23 by the operator's separate-corpus seat; the load-bearing
+citation independently spot-verified this session via WebSearch — the one external element, per the
+declared seam).** The rule earned the query and **hit on LOCATION, missed on SUBSTANCE** — the
+honest scoring:
+- *Location (the rule's actual content): HIT.* The counterexample is at the import point, in the
+  home field, not the essay's field — as predicted.
+- *Content (the reviewer's pre-registered egocenter hypothesis): HALF-WRONG.* Egocenter variability
+  is real (VR ~1cm shifts toward the dominant eye) but Pickwell's lateral-displacement proposal
+  failed a direct test, and the kinesthetic egocenter (shifts toward the used hand) is a separate
+  thing from the visual one (stays midway). Not the essay's problem.
+- *The actual counterexample (bigger than pre-registered):* Erkelens & van Ee, *Vision Research*
+  2002, "The role of the cyclopean eye in vision: sometimes inappropriate, always irrelevant"
+  (pp. 1157–1163) — the cyclopean eye may be a theorist's computational-bookkeeping device, not
+  something the visual system synthesizes. That lands on the essay's load-bearing sentence: the
+  isomorphism ("the mind does to two displaced views exactly what the visual system does") needs
+  the visual system to MANUFACTURE a felt origin; if it is bookkeeping, the Type-B isomorphism
+  degrades to analogy.
+- *But UNSETTLED, and that is the richer datum:* Ono/Mapp/Howard hold the cyclopean eye is
+  "logically and functionally necessary for judging object directions" (verified: "New data support
+  previous findings: cyclopean eye is relevant for predicting visual direction," JOV/ScienceDirect
+  2005; "the new and old data continue to hit you right between the eyes"). 20+ years, both camps
+  running experiments, no convergence. By the essay's OWN criterion (noise shrinks under
+  aggregation; disparity persists and structures) this is an open-parameter live dispute, not
+  settled fact — so the essay's strongest available move is to retype its vision case from
+  settled-fact to live-dispute and take the persistence as support FROM the borrowed field, not
+  refutation.
+- *Terminology (lower confidence):* "cyclopean point" is closer to coined than borrowed (standard
+  terms of art are *cyclopean eye* / *egocenter*), and sits adjacent to a live homonym — Julesz's
+  *cyclopean perception* (1971) = disparity processing beyond the retinal level (random-dot
+  stereograms), a different referent.
+
+**Scoring for the rule:** a rule that only LOCATES is still worth running; a rule that also
+predicts CONTENT would be worth more. This datum says the borrowed-example rule locates reliably
+(1/1) and does not yet predict content (0/1 on the one content attempt). Kill condition UNCHANGED
+(subsequent misses landing in-field, not at import points → coincidence off n=2). **Repo exposure
+found + corrected same session:** `docs/cyclopean-point.md:12` typed the binocular-vision facts as
+`bedrock`, but the manufacture claim the isomorphism rests on is home-field-contested — confidence
+gradient corrected there (see KNOWN_STATE 2026-07-23).
+
 **Declared seam (carried with the rule, not fixable).** The rule was derived from the only two
 misses the reviewing frame was positioned to catch; the miss class where BOTH frames agree leaves
 no trace in any record either seat can produce. The residual response is declaration, not recall:

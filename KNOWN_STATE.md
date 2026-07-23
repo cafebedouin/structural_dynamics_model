@@ -67,6 +67,25 @@ home field) landed as protocol with checklist items + §6 "Corpus consulted" dec
 reviewer's kill condition and the egocenter probe recorded before running. §5.4 placement chosen
 to keep the OQ-185 uke_write:180 anchor stable (verified).
 
+**OQ-233 probe RUN same day (n=1 datum, operator's separate-corpus seat; load-bearing citation
+independently spot-verified here via WebSearch — the one external element per the declared
+seam).** Scored precisely: the borrowed-example rule **HIT on location** (counterexample at the
+import point, in vision science's home field, as predicted) and **MISSED on substance** (the
+pre-registered egocenter-shift hypothesis was half-wrong; the real counterexample is Erkelens &
+van Ee, Vision Research 2002, "sometimes inappropriate, always irrelevant" — the cyclopean eye as
+theorist's bookkeeping, not brain-synthesized, which would degrade the essay's Type-B isomorphism
+to analogy). But home-field-UNSETTLED (Ono/Mapp/Howard counter-camp, 20+ yrs unconverged,
+verified), so by the essay's own persistence-criterion the honest move is retype settled→live and
+take persistence as support FROM the borrowed field. **Repo exposure corrected:**
+`docs/cyclopean-point.md:12` typed binocular-vision facts as `bedrock`; added a marked grounding
+correction (geometry stands; the *manufacture* claim the isomorphism rests on is home-field
+contested, not bedrock) — annotation, not rewrite, matching the essay's own declaration
+discipline. **Fork noted (not annotated):** `agent/analysis/originals/cyclopean-point.md` is a
+variant copy (different header/subtitle) carrying the same 7 manufacture/isomorphism references;
+left as analysis-input material (originals/ = sources to analyze, operator 2026-07-23), NOT
+canonical — the canonical doc cited by `unknown_reading_review.md` + the perturbation principle is
+`docs/cyclopean-point.md`. If the originals copy is ever promoted, carry the correction.
+
 ## 2026-07-22 — [landed] uke_write v2.1→v2.2 (Forecast Register) + uke_score v0.1 companion rubric + OQ-229 minted (pre-registered fragility-bias hypothesis)
 **Files:** agent/uke_write_v2.2.md, agent/uke_score_v0.1.md, agent/analysis.py, quick_start.md, agent/manual/prompts.md, docs/technical/generator_emission_map.md, ISSUES.md, issues/INDEX.md
 **Tier:** landed
