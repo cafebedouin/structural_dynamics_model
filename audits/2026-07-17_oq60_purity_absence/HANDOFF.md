@@ -1,8 +1,39 @@
-# OQ-60 implementation handoff (2026-07-17)
+# OQ-60 implementation handoff (2026-07-17; updated 2026-07-23)
 
-State of the rev-4 plan (`~/.claude/plans/review-and-present-a-virtual-breeze.md`).
+State of the rev-4 plan (`~/.claude/plans/review-and-present-a-virtual-breeze.md`), executed
+2026-07-23 under `~/.claude/plans/can-you-review-oq-60-reflective-clarke.md` (operator
+plan-review corrections folded in).
 
-## Landed (committed, witnessed)
+## Landed 2026-07-23 (read this first)
+
+- **`bc9bffde` — Preflight.** (a) testsets DRIFTED 145→189 since pin → census probe RE-RUN
+  (`census_testsets_2026-07-23.tsv`): **m1–m4 gate-pass victims = 0 re-established; m5
+  gate-pass victims 9→11** (new: deflationary_reading 0.988, sufficiency_reading 0.972).
+  Expected C-FLOOR flips now **11/2/80/2**; testsets join uses the 2026-07-23 TSV, other legs
+  the pinned 2026-07-17 TSVs. (b) tokens pinned both producers (census `-1.0` literal /
+  emitter `unknown`→`null`). (c) 0a/0a.2 retro-witnessed via injected unknown end-to-end
+  (`PREFLIGHT_2026-07-23.md`; durable: `prolog/tests/test_purity_absence.pl`).
+- **`3f0f96c2` — item-0 ordering audit.** No live path lets `unknown` reach a sort; fpn/gc
+  ingest collapse unknown→-1.0 ahead of `>= 0.0` filters (`ORDERING_AUDIT_2026-07-23.md`;
+  +2 ingest tests).
+- **`0bc180c0` — C-LATENT (m1–m4, ONE commit).** 7 tests RED→GREEN; per_constraint
+  BYTE-IDENTICAL testsets+flash (stash-baseline method, planted-difference differ control);
+  sweeps pasted+controlled; synthetic all-bare + mixed controls green
+  (`WITNESS_CLATENT_2026-07-23.md`). New tokens: `scope_invariance_test` → `no_data`;
+  `cross_index_coupling`/`detect_nonsensical_coupling` FAIL on no-grid; subscores → `unknown`;
+  `structural_purity` → `inconclusive(no_data)` via `aggregate_purity_tests/2`. Declared
+  residue: `excess_extraction_factor` 0.5 neutral; `boltzmann_compliance:589` T3.
+  **haiku/kernel_v1 legs OPEN — discharge at C-FLOOR.**
+- **Census probe v2 (`census_oq60_v2.pl`):** REQUIRED for any census re-run on the
+  post-C-LATENT engine — v1's m1 tag reads the retired `variant([])` token (vacuous zero).
+- **C-FLOOR join notes:** (1) corpus is LIVE (operator topic runs land mid-day; testsets was
+  189→199 during execution) — re-census testsets with v2 immediately before the C-FLOOR
+  baseline, same session, and md5-fingerprint the corpus around every witness pair;
+  (2) JSON serializes purity at 6 decimals (`0.354167`) vs census TSV full precision — join
+  numerically at JSON precision, never string-equal; (3) pre-C-FLOOR baseline dumps =
+  `oq60_clatent_edit_{testsets,flash}.json.gz` (this commit's edited-engine runs).
+
+## Landed 2026-07-17 (committed, witnessed)
 
 - **`62493223` — Phase-0 census.** All four legs instrumented (0 cross-check mismatches;
   positive control fires all 5 branches per-process). Artifacts: `CENSUS.md`,
