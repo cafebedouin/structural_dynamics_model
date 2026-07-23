@@ -45,6 +45,48 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-23 — [correction-key] *Hearts of Glass* is NOT a pipeline artifact (provenance witnessed); Commitment Systems adjudicated as blocked-B refinement of the debugging-philosophy taxonomy
+**Files:** blog/2026-07/hearts-of-glass.md, agent/analysis/originals/machine_reader.md, prolog/cs_drift_engine.pl, docs/commitment_systems/type_b_adjudication_2026-07-23.md, docs/debugging_philosophy.md
+**Tier:** correction-key
+
+Two rulings from a Claude-web planning conversation (2026-07-23), landed to substrate.
+
+**1. *Hearts of Glass* (`blog/2026-07/hearts-of-glass.md`, commit `50d7ddab`) sits OUTSIDE
+the narrative_transform/uke pipeline — do not cite it as pipeline output.** The conversation's
+kill condition ("a stage-1 constraint spec or a .pl behind it locally would refute this") was
+run this session and does NOT fire. Witness: no `agent/narrative_transform/uke/hearts*` run
+dir, no `originals/`/`stories/` entry, no `prolog/testsets/*.pl`, no `json/` spec; positive
+control `quellcrist` found across all those surfaces, so the probe finds pipeline artifacts.
+Corroborated three ways by the operator: (a) not written with agent/uke-narrative (where a uke
+artifact would appear); (b) the process leaves a characteristic artifact shape (uke run dir +
+`source_story.txt` + staged outputs) the story lacks; (c) the pipeline requires a seed — the
+story's actual seed was a conversation about human hibernation. **Distinction to preserve:
+"the system" (Prolog/uke) ≠ LLM assistance** — the commit carries a Claude co-author line, so
+model collaboration happened; pipeline involvement did not. Operator framing: "the system is
+my creating Prolog that thinks like I do." FLAG (unresolved, essay-voice call): the untracked
+draft `agent/analysis/originals/machine_reader.md` line 3 says the story is "from this site's
+pipeline — grown ... through the multi-model process"; loose-true under the LLM-assistance
+reading, false under the uke-pipeline reading. The story remains OQ-227's *test-rig* (the
+2026-07-18 entry below) — that role is unaffected; only its provenance is corrected. Why it
+matters: the story's mechanism (the reader as sole holder of both readings; the drifted joke
+detectable only in the *difference between* near-identical passages) is a datum about what the
+formal system did NOT produce — throughput is the machine, quality is the seat.
+
+**2. Commitment Systems classified: a refinement on Type B, by the fix-identity criterion
+(operator ruling) — full adjudication in
+`docs/commitment_systems/type_b_adjudication_2026-07-23.md`.** Types are individuated by
+their FIX, not their generating mechanism ("drift-generated" labels the A bucket, doesn't
+gate entry; frame-fixing passes trivially-and-uninformatively on a drifting institution,
+which is not a confused reasoner). The refinement precisely: debugging_philosophy's Type B
+silently assumed the reviser exists (Russell→ZF, Liar→Tarski); drop that and B splits into
+revisable-B vs **blocked-B** — Commitment Systems is the theory of blocked-B, the five
+patterns its map. A proposed "Type D (extraction-generated)" collapses into B (standing is
+constitution-level). Two marked open notes in the adjudication file: the Euclid exception's
+seat at axiom-set choice, and remedy-identity making the framework a theory of repair rather
+than drift.
+
+---
+
 ## 2026-07-23 — [correction-key] Axiom 2's empirical anchor currently has no runnable falsifier (OQ-232 resolved; falsifiers rescoped in v8 §9.5 + v6.13.1:88; class OQ-234 minted)
 **Files:** docs/deferential_realism_paper_v8.md, docs/deferential_realism_paper_v6.13.1.md, ISSUES.md, audits/2026-07-23_oq232_falsifier_redesign/
 **Tier:** correction-key
