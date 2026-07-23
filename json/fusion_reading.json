@@ -1,0 +1,324 @@
+{
+  "header": {
+    "constraint_id": "fusion_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "db348a76-c800-4c56-9a6d-e9f365a5ff0b"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.78,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Money-Governance Fusion: Stake-Weighted Consensus as Permanent Electorate",
+    "topic_domain": "constitutional political economy / blockchain governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "founding_allocation_holders",
+      "large_stake_validators",
+      "protocol_treasury_controllers"
+    ],
+    "victims": [
+      "non_wealth_participants",
+      "late_joining_users",
+      "labor_contributors_without_capital"
+    ],
+    "vindicated_propositions": [
+      "skin_in_the_game_alignment_doctrine",
+      "sybil_resistance_necessity_claim"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "founding_allocation_holders",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Received disproportionate token allocations at genesis (pre-mine, founder grants, early investor rounds). Because voting weight is denominated in stake, their initial capital position converts directly and permanently into law-making power over protocol upgrades, treasury disbursement, and fee structures. They can sell, delegate, or restake without losing standing, and their share compounds through staking rewards, which are themselves proportional to existing stake."
+    },
+    {
+      "name": "large_stake_validators",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operate validator infrastructure sized to their capital; they propose blocks, ratify governance proposals, and set the effective agenda of what upgrades even reach a vote. Their exit option is real (they can migrate stake to a competing chain) but this mobility is precisely what disciplines the protocol toward serving large holders rather than the median participant."
+    },
+    {
+      "name": "protocol_treasury_controllers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Multisig or DAO-elected bodies that disburse treasury funds; election to these seats is itself token-weighted, so control over the money supply and control over who controls the money supply are the same fused mechanism. They benefit from the fusion's self-reinforcing character."
+    },
+    {
+      "name": "non_wealth_participants",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Contribute labor, code, community moderation, or usage to the network but hold negligible stake. Their preferences can be expressed only through voice channels (forums, social pressure) that carry no binding weight against a stake-weighted vote. They cannot buy in without capital they do not have, and cannot vote-signal their way around the fusion."
+    },
+    {
+      "name": "late_joining_users",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Acquire tokens after genesis, typically at prices reflecting the accumulated network effects the founding cohort already captured governance rents from. Their per-dollar voting weight is identical in principle to an early holder's, but they need vastly more capital to reach equivalent influence, effectively pricing out political participation for anyone who was not present at allocation time."
+    },
+    {
+      "name": "labor_contributors_without_capital",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Developers, translators, node-support volunteers, and community organizers whose work sustains the protocol's value but who are compensated (if at all) in ways that do not convert into commensurate governance weight. Their structural position is labor without capital in a system where only capital votes."
+    },
+    {
+      "name": "protocol_designers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic and applied cryptoeconomics researchers who study whether stake-weighted governance produces plutocratic capture or genuine sybil-resistant coordination. They can document the pattern but hold no lever to alter deployed protocols unless their analysis is adopted by a future fork."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Stake-weighted consensus solves a genuine sybil-resistance problem: without some costly signal tied to identity, an attacker could manufacture unlimited voting identities for free. Requiring economic stake to vote or validate makes identity-manufacture costly and lets the protocol reach agreement without a trusted central authority.",
+    "transfer_function": "Moves political agenda-setting power and treasury control from anyone who might otherwise have a claim (users, laborers, later entrants) to whoever already holds capital, and further concentrates it over time because staking rewards are paid in proportion to existing stake, compounding the founding allocation into permanent structural advantage.",
+    "absent_voices": "Non-wealth-holding contributors and late-joining users would object that governance weight tracks capital rather than contribution, use, or stake in outcomes broadly construed (as opposed to token stake narrowly construed) — but the voting mechanism itself has no channel for this objection to register as a vote; it can only appear as off-chain social pressure, which the on-chain mechanism is not obligated to honor.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If money-governance fusion were removed and replaced with a one-participant-one-vote or contribution-weighted scheme, treasury allocation, protocol upgrade paths, and validator economics would all reorganize substantially — the current beneficiary class would lose its compounding structural advantage and would resist the change accordingly, which is itself evidence of how much is currently riding on the fusion.",
+    "founding_problem": "Permissionless networks needed a way to reach consensus and allocate scarce coordination rights (block production, governance weight) without a trusted central party, in an environment where anyone could otherwise fabricate unlimited free identities (the Sybil problem).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Protocol designers and independent cryptoeconomics researchers attest the sybil-resistance problem is real and durable — but the same researchers, along with non-wealth contributors, attest that the specific solution chosen (permanently fusing capital and political weight rather than, e.g., time-decaying stake, quadratic weighting, or identity-based schemes) was a design choice that also serves the founding allocation holders' ongoing capture, not a forced solution. The founding allocation holders themselves are the primary source asserting the fusion is the only or best solution."
+  },
+  "gain_flow": "founding_allocation_holders",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.69
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.78
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the FUSION reading of the money-governance coupling kernel: the claim that wealth held on-chain converts directly and structurally into voting weight or law-making power. Under this reading, stake-weighted consensus and token-voting DAOs are not merely using money as one input among several to governance — they identify capital ownership WITH political standing, such that the founding allocation compounds permanently into political power via staking rewards proportional to existing stake. This reading treats the resulting structure as fusion: a single mechanism that is simultaneously the sybil-resistance solution and the plutocracy-generating mechanism, with no principled separation between the two functions. The victim set under this reading specifically includes participants who contribute labor, use, or presence to the network but hold no capital — their voice is not merely weighted less; it is structurally priced out because the vote-weight function has no non-monetary input channel at all.",
+    "key_agents": [
+      "founding_allocation_holders: Primary beneficiary (institutional/arbitrage) — captures compounding governance rent from genesis allocation",
+      "large_stake_validators: Agenda-setter (organized/mobile) — sets what proposals reach a vote via block production and delegation",
+      "non_wealth_participants: Primary excluded target (powerless/trapped) — labor and use without capital, structurally without voting channel",
+      "protocol_designers: Analytical observer (analytical/analytical) — documents but cannot alter deployed fusion mechanics"
+    ],
+    "logic_rationale": "Extractiveness (0.71) reflects the compounding character of stake-proportional rewards: the mechanism does not merely give capital a voice, it gives capital a growing voice over time relative to labor or late entry, which is a structural rent rather than a one-time allocation effect. Suppression (0.78) is high because alternative governance forms — one-participant-one-vote, quadratic voting, contribution-weighted schemes — are foreclosed once a chain's social and technical infrastructure locks into stake-weighting; forking away is technically possible but carries prohibitive coordination costs that only large, already-advantaged holders can bear, which itself reproduces the fusion's asymmetry at the exit layer. Theater ratio (0.42) is moderate-rising: governance forums and community calls perform deliberation, but binding outcomes track stake regardless of forum sentiment, and this gap widens over the measured interval as governance theater becomes more elaborate while its substantive bindingness does not increase.",
+    "directionality_logic": "Founding allocation holders and large validators sit near the full-beneficiary end: they set the rules, collect the compounding reward, and retain exit options (arbitrage/mobile) that let them discipline the protocol toward their preferences without bearing the cost of protocol failure symmetrically with others. Non-wealth participants and labor contributors sit near the full-target end: trapped exit options (their sunk contribution has no capital-equivalent value in the vote), and the extraction they bear is diffuse but real — foreclosed political voice, not a directly billed cost. Late-joining users occupy an intermediate position: moderate power, constrained exit, paying a capital premium for governance weight that founders received for free.",
+    "perspectival_gap": "From the founding-allocation seat, stake-weighted governance is a rope: coordination that solves sybil-resistance efficiently, and the compounding reward is simply the market correctly pricing early risk-bearing. From the non-wealth-participant seat, the identical mechanism is a tangled rope shading toward snare: a genuine coordination problem (sybil resistance) is being used as cover for a permanent capture of political voice by whoever arrived first with capital. The engine's structural inputs — beneficiary/victim declarations, enforcement requirement, compounding reward structure — are what produce this divergence; the fusion reading asserts this divergence is intrinsic to the mechanism itself, not an artifact of observation.",
+    "mandatrophy_analysis": "The founding problem (sybil resistance in a permissionless network) remains partially live — the technical need for costly identity signals has not disappeared. But under the fusion reading, the SPECIFIC solution chosen (permanent capital-political fusion via compounding stake rewards) is not required by the founding problem; alternative sybil-resistant designs exist (bonded identity, time-decaying stake, quadratic funding) that do not fuse wealth and political power as tightly. The persistence of the fusion form specifically, rather than sybil-resistance generally, is best explained by its service to the beneficiary class rather than by continued necessity — a classic mandatrophy signature: the founding problem partially survives, but the mechanism retained exceeds what the surviving problem requires.",
+    "kernel_context": "This is the FUSION reading of the money_governance_coupling kernel. Fusion holds that wealth-to-power conversion in stake-weighted systems is not incidental or partial but constitutive: capital ownership IS political standing, with no structural separation and no decay function on founding advantage. The sibling EXILE reading would hold that money and governance should be kept categorically separate — treating any capital-to-vote conversion as illegitimate regardless of degree, and would foreclose fusion's premise that stake-weighting can be a legitimate solution to sybil resistance at all. The sibling ADJACENCY reading holds that money and governance are properly correlated but not identical — capital can inform or bound political weight (e.g., minimum stake to participate, but voting power capped or decayed independent of holdings) without the compounding, permanent fusion this reading describes. This story generates ONLY the fusion reading as a clean, self-contained constraint; the exile and adjacency readings are separate constraint files linked via network.affects_constraints, not alternative measurements of this one."
+  },
+  "omegas": [
+    {
+      "id": "fusion_vs_adjacency_boundary_location",
+      "question": "Is the compounding, permanent character of stake-weighted governance rewards an intrinsic requirement of sybil-resistant consensus, or a specific and separable design choice that the adjacency reading shows is avoidable (e.g. via decaying stake weight or capped voting power)?",
+      "resolution_mechanism": "Comparative protocol analysis: examine deployed systems using bounded or decaying stake-weight schemes and measure whether they achieve comparable sybil-resistance without comparable governance concentration over multi-year intervals.",
+      "impact": "If bounded/decaying schemes achieve equivalent sybil-resistance, the fusion reading's core premise — that fusion is required, not merely chosen — is undermined, and this constraint's classification would shift toward a more clearly extractive reading (snare) since the coordination justification would no longer require the specific extractive mechanism observed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether fusion's compounding character is structurally necessary or a contingent design choice distinguishing it from the adjacency reading."
+    },
+    {
+      "id": "founding_allocation_naturalness",
+      "question": "Is the founding allocation's conversion into permanent political weight best understood as a natural consequence of first-mover risk-bearing (as founders claim), or as a constructed advantage that the protocol's own governance mechanism then entrenches and could, in principle, unwind?",
+      "resolution_mechanism": "Examine hard-fork or governance-vote history: has any stake-weighted system's own governance process ever voted to redistribute or decay founding advantage? If never, and if attempts are structurally blocked by the same stake-weighting, that is evidence for constructed-and-entrenched rather than natural-and-earned.",
+      "impact": "If entrenchment is confirmed as self-protecting rather than natural, this strengthens the case that fusion functions as tangled_rope-shading-to-snare rather than genuine coordination; if founding advantage regularly gets voted down or decayed, the fusion reading's extraction claim weakens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether founder capital-to-power conversion is a natural consequence of risk-bearing or a self-entrenching constructed advantage."
+    },
+    {
+      "id": "exit_cost_asymmetry_measurement",
+      "question": "How prohibitive, in practice, is the cost of forking away from a fused-governance chain for non-wealth participants versus for large stakeholders?",
+      "resolution_mechanism": "Case studies of historical contentious forks (e.g. governance disputes leading to chain splits): measure the capital and coordination cost borne by each stakeholder class and whether non-wealth participants' interests were represented in the resulting fork's design.",
+      "impact": "If exit costs are shown to be dramatically asymmetric (large holders exit cheaply, small/no-capital participants cannot meaningfully exit at all), this corroborates the trapped exit_options classification for non_wealth_participants and labor_contributors_without_capital and supports the high suppression score.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether fork/exit costs are asymmetric across stakeholder capital classes, corroborating the trapped-exit classification for non-capital participants."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "exile_reading",
+      "adjacency_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the money_governance_coupling kernel. exile_reading holds money and governance should be categorically separated (forecloses fusion's premise that stake can legitimately ground vote weight). adjacency_reading holds capital can bound or inform political weight without full, compounding fusion (coexists with fusion as an alternative design space; influences fusion by demonstrating a less extractive alternative is available, which raises the bar for what fusion must justify). Each reading has a distinct ε: fusion is authored here as substantially extractive and hardening (ε rising 0.42→0.71 over the interval); the sibling readings are expected to show different ε profiles reflecting their different structural commitments. Do not average across the three files — each is a self-contained, ε-invariant constraint."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "capital_risk_bearing_legitimizes_political_weight",
+    "drift_state": {
+      "moment": "post_dao_treasury_capture_controversies",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "money_governance_coupling__exile_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "money_governance_coupling__adjacency_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "capital_risk_bearing_grounds_permanent_voice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "sybil_resistance_requires_undecayed_stake_weighting",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-23",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}

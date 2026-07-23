@@ -1,0 +1,265 @@
+{
+  "header": {
+    "constraint_id": "verification_cost_as_constitutional_precondition",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "171464a6-9c97-479c-9bda-68f8ed7a4f3a"
+  },
+  "base_properties": {
+    "extractiveness": 0.66,
+    "suppression": 0.58,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.51,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Verification Cost as Constitutional Precondition",
+    "topic_domain": "constitutional_political_economy/blockchain_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "intermediating_infrastructure_operators"
+    ],
+    "victims": [
+      "members_priced_off_self_verification"
+    ],
+    "vindicated_propositions": [
+      "verifiability_is_a_constitutional_variable_not_an_engineering_metric"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "intermediating_infrastructure_operators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Run the full nodes, indexers, and RPC endpoints that most participants rely on because independently verifying the chain's state requires hardware, bandwidth, and uptime few members can sustain. They set de facto protocol parameters (block size, state growth, gas limits) that determine the verification-cost curve, and they capture fee revenue, staking delegation, and data-access rents from the resulting dependency. They can migrate services or jurisdictions if regulation tightens; the underlying dependency they profit from is largely insulated from their own exit."
+    },
+    {
+      "name": "members_priced_off_self_verification",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold or use the chain but cannot run a full verifying node against current hardware/bandwidth requirements, so they trust light clients, block explorers, or custodial intermediaries for the state they act on. Their only exits are accepting delegated trust, pooling resources into a coalition node they do not control, or exiting the system entirely — none of which restores the self-verification the protocol's legitimacy claim is premised on."
+    },
+    {
+      "name": "protocol_core_developers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Write and propose the parameter changes (block size, state rent, pruning rules) that directly move the verification-cost curve up or down. They face competing pressure from throughput demands and from the constitutional commitment to member-verifiability, and can fork or move between competing protocol communities if a given governance process becomes unworkable for them personally."
+    },
+    {
+      "name": "resource_pooled_verification_coalitions",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Groups of members who pool funds to jointly run a verifying node, converting individual inaccessibility into collective access. They gain verification capacity unavailable to any single member but must now trust their own coalition's governance and are exposed to free-rider and capture dynamics within the pool itself — a second-order version of the same constitutional problem."
+    },
+    {
+      "name": "light_client_protocol_designers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Research and propose cryptographic techniques (fraud proofs, validity proofs, data availability sampling) intended to lower the hardware floor for meaningful verification without collapsing it into pure trust. Their work is the main structural lever that could shift the equilibrium back toward self-verification, but adoption depends on the agenda-setters and is not guaranteed."
+    },
+    {
+      "name": "future_low_bandwidth_members",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Prospective participants in regions with limited bandwidth or hardware access who are not yet in the system and have no voice in current parameter debates, even though rising verification costs will determine whether they can ever join as verifying members rather than as intermediary-dependent users."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared, tamper-evident ledger state that many mutually distrusting parties can act on without a central authority adjudicating truth — solving a genuine coordination problem of establishing common knowledge among strangers.",
+    "transfer_function": "Moves epistemic authority (the practical ability to know and certify the chain's true state) from members who cannot afford verification hardware to intermediating operators who can, and correspondingly moves fee revenue, delegation power, and information-access rents toward those operators.",
+    "absent_voices": "Future low-bandwidth members and current members in low-resource regions have no seat in parameter-setting debates about block size or state growth, even though those parameters set the hardware floor that will determine whether they can ever verify independently.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the verification-cost gap vanished — i.e., if verification became affordable to any participant on ordinary hardware — the intermediation layer's rents, delegation power, and structural leverage over protocol governance would collapse, and members currently dependent on it would regain independent epistemic authority over the ledger's state.",
+    "founding_problem": "Early distributed ledger design needed to guarantee that any participant, not just a privileged few, could independently verify the system's state without trusting an intermediary — self-verification was the constitutional promise that distinguished the design from conventional trusted-third-party finance.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Light client protocol designers and independent researchers outside the intermediary operator class attest that the self-verification guarantee has eroded as state size and bandwidth requirements grew; intermediating infrastructure operators themselves characterize the shift as a natural efficiency-driven division of labor rather than an erosion of the founding guarantee, which is exactly the disagreement the paper's own quarantine discipline seeks to keep separate from unverified self-interested testimony."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint reframes a seemingly technical engineering parameter — the hardware and bandwidth cost of independently verifying a distributed ledger's state — as a constitutional variable that determines whether the system's stable equilibrium is self-verification (member sovereignty over truth) or delegated intermediation (a de facto trusted-third-party layer re-emerging inside a design meant to eliminate it). As state size, transaction throughput, and indexing demands grow, the gap between 'verifiable by anyone with commodity hardware' and 'verifiable only by well-resourced operators' widens, and that widening gap is where extraction accrues. The coordination function (a shared ledger state usable by mutually distrusting parties) remains genuine even as the extraction layer thickens — which is why this is authored as tangled_rope rather than snare: both the coordination benefit and the asymmetric extraction are real and co-located in the same structure.",
+    "key_agents": [
+      "intermediating_infrastructure_operators: primary beneficiary (institutional/arbitrage) — captures rents, delegation power, and information-access advantage from the verification-cost gap",
+      "members_priced_off_self_verification: primary target (powerless/constrained) — bears the loss of independent epistemic authority over ledger state",
+      "protocol_core_developers: agenda-setters (organized/mobile) — control the parameters that determine the verification-cost curve",
+      "light_client_protocol_designers: analytical observers (analytical) — hold the main technical lever that could reverse the drift"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.28 to 0.66 over the interval as state growth and throughput demands outpace commodity hardware capacity, tracking a real historical dynamic in ledger design where 'anyone can verify' erodes into 'anyone can verify who can afford enterprise-grade infrastructure.' Theater ratio rises in parallel (0.12 to 0.42) because protocol communities increasingly perform commitments to decentralization (light-client roadmaps, 'anyone can run a node' messaging) at a rate that outpaces actual hardware-floor reduction. Suppression is authored as moderate rather than severe (peaking at 0.58) because no single actor coercively blocks self-verification — the barrier is economic and technical rather than legally enforced, but it functions as a structural closure once the hardware floor exceeds ordinary member means. Accessibility collapse (0.62) reflects that once a member cannot afford the verification hardware, the practical alternative (trusting an intermediary) becomes close to the only live option, even though it is not formally mandated.",
+    "perspectival_gap": "From the intermediating operator's seat, this looks like an efficient division of labor: specialization in verification infrastructure is what lets the system scale to serve more users, and light-client research is proof the ecosystem takes the problem seriously. From the priced-off member's seat, the same structure looks like exactly the trusted-third-party dependency the ledger was built to eliminate, re-imported through a hardware floor rather than a legal mandate. The engine should compute divergent seat classifications from this same structural data — a tangled_rope for the system as a whole, but the beneficiary seat may compute closer to a rope (the coordination looks sufficient) while the payer seat computes closer to a snare (the extraction dominates the lived experience).",
+    "directionality_logic": "Intermediating infrastructure operators are the structural beneficiary: they set parameters affecting the cost curve, capture the resulting fee/delegation/data rents, and retain mobile exit options themselves even as the dependency they profit from is sticky for others — d sits near the beneficiary end. Members priced off self-verification are the structural target: they bear the loss of independent verification capacity, have only constrained exits (trust an intermediary, join a pooled coalition, or leave the system), and cannot individually restore the founding guarantee — d sits near the full-target end. Resource-pooled verification coalitions occupy an intermediate position: they convert individual powerlessness into moderate collective power but reproduce a second-order version of the same constitutional problem at smaller scale, which is why they carry both beneficiary and payer roles.",
+    "mandatrophy_analysis": "The founding problem (member self-verification without trusted intermediaries) is contested rather than cleanly dead or live: the cryptographic and coordination need that motivated it persists, but the specific guarantee has been substantially eroded by state growth, making the founding claim increasingly aspirational relative to current practice. Classifying this as tangled_rope rather than snare or piton preserves the fact that the coordination function (shared, tamper-evident state) remains genuinely valuable and actively used — it has not been reduced to pure performance (piton) nor is the coordination story purely cover for extraction (snare); it correctly registers that a real coordination good and a real, growing extraction are co-occurring in the same mechanism, which is the diagnostic tangled_rope exists to make legible rather than force into one bucket or the other."
+  },
+  "omegas": [
+    {
+      "id": "hardware_floor_reversibility",
+      "question": "Can light-client cryptographic techniques (validity proofs, data availability sampling) durably lower the verification hardware floor back toward commodity-affordable levels, or does state growth structurally outpace any feasible proof-system improvement?",
+      "resolution_mechanism": "Track adoption rates and real-world hardware requirements of validity-proof and DA-sampling light clients against state growth curves over a multi-year window; a durable, sustained narrowing of the verification-cost gap would resolve toward reversibility.",
+      "impact": "If reversible, this constraint is better modeled as a scaffold — a transitional extraction pending a technical fix with a foreseeable sunset. If irreversible, the tangled_rope classification is stable and the extraction is structural rather than transitional.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the verification-cost gap is a temporary engineering lag or a structural feature of ledger scaling."
+    },
+    {
+      "id": "constitutional_vs_engineering_framing",
+      "question": "Is the hardware/bandwidth requirement for verification best understood as a constitutional variable (determining who holds ultimate epistemic authority over the system) or as an ordinary engineering tradeoff (throughput vs. decentralization) that happens to have distributive consequences?",
+      "resolution_mechanism": "Examine whether protocol governance processes treat verification-cost parameters with the same deliberative weight and amendment friction as core constitutional commitments, versus treating them as routine performance-tuning decisions.",
+      "impact": "If treated as constitutional, failure to hold the verification-cost line should be read as a constitutional breach with corresponding legitimacy costs; if treated as ordinary engineering, the drift is better read as unremarkable optimization with incidental distributive effects, softening the case for tangled_rope over rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether verification cost is properly a constitutional or engineering variable — the paper's own reframing claim."
+    },
+    {
+      "id": "kernel_reading_selection_ambiguity",
+      "question": "Within the money_governance_coupling kernel, does this constraint's verification-cost dynamic instantiate the fusion reading (wealth in infrastructure converts to governance power over parameters), the exile reading (a discretionary technical elite exercises unaccountable judgment over the cost curve), or the adjacency reading (verification capacity and governance weight are meant to be held apart but leak into each other via parameter-setting influence)?",
+      "resolution_mechanism": "Examine whether infrastructure operators' capital/resource advantage converts into formal governance weight (fusion), whether protocol developers exercise unconstrained discretion insulated from member input (exile), or whether the system's own design intends non-convertibility but the verification-cost gap is an unintended leak in that intention (adjacency).",
+      "impact": "Under fusion, this constraint is a direct instance of capital-buys-governance and belongs in that reading's victim set. Under exile, it is a capture-by-discretion failure with a diffuse victim set. Under adjacency, it is the specific leak the adjacency design's own objections 8/9 concede — a partial breach of an intended firewall rather than either pure pattern.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which money-governance kernel reading this constraint's verification-cost dynamic actually instantiates."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "money_governance_coupling_fusion_reading",
+      "money_governance_coupling_adjacency_reading"
+    ],
+    "dual_formulation_note": "This constraint is a structural precondition feeding the money_governance_coupling kernel's readings: the verification-cost gap determines the practical stakeholder class capable of participating meaningfully in either fusion-style stake-weighted governance or adjacency-style capped-crossing governance. It is not itself a reading of that kernel but an upstream constraint whose severity shapes which reading is empirically achievable — a severe verification-cost gap makes the adjacency reading's claimed 'empty victim set by construction' harder to sustain, since verification capacity itself becomes an unenumerated crossing point between resources and governance influence."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ],
+  "gain_flow": "intermediating_infrastructure_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "8080348c4e16a265fafc924dcde83360dfd170fc",
+    "schema_commit": "becd0f87568a1ec0be97d1229ae702098dbd6568",
+    "generated_date": "2026-07-23",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1
+  }
+}
