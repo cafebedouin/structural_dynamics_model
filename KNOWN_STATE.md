@@ -80,6 +80,17 @@ uke_write:173 scaffold-row anchor re-verified intact); new F-MANUFACTURED-CENTER
 anti-pattern (seatless synthesis voice / fake tensegrity). Aligns with OQ-101
 (plurality collapses by form) and the verdict-omits-seat finding.
 
+Third same-session extension — **§2.4 absent-strut provenance rule** (consumer-found: the
+writing model, applying §2.4 live on Draft 4, hit the gap that a seat nobody authored
+renders at a χ magnitude as if measured — beneficiary seats inference-only, `powerful=0,
+organized=0` — so the χ spread over present struts presents as a complete stereo picture).
+Fix is the Build Discipline spine applied at the essay layer (carry the provenance bit with
+the value; h1-null rule analog): per-strut provenance measured/inferred/absent;
+flat-without-measured = UNDETERMINED (two indistinguishable causes: genuinely-flat vs
+suppressed-below-hearing); absent struts named in-body; eye-selection decision attributed.
+Plus F-ABSENT-STRUT anti-pattern + a §6 metadata "Strut provenance" line so the declaration
+can't be silently skipped. uke_write:173 anchor re-verified.
+
 ## 2026-07-20 — [landed] Kimi-k2.6 twin COMPLETE at n=1005; five-leg cross-model comparison
 **Files:** prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, agent/run_no_scope_kimi.py, python/audits/five_leg_twin_comparison.py, audits/2026-07-20_five_leg_twin_comparison/
 **Tier:** landed

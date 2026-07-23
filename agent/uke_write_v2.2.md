@@ -342,6 +342,25 @@ redistributes everywhere. Build the multi-seat essay this way:
   distributed load across held-apart seats. The disparity is not indecision — it is the
   load-bearing structure.
 
+**Absent struts (the provenance rule).** A strut can read weak for two reasons that no
+single seat can distinguish: the domain is genuinely flat there, or that eye was suppressed
+below the threshold of being heard — never authored, never measured. χ is computed from what
+was authored, so a seat with no authored eye still renders at a magnitude as if measured,
+and the χ spread across the *present* struts silently looks like a complete picture. So
+every strut carries its provenance to the read site — **measured** (authored data grounds
+it), **inferred** (constructed by the analyst from other seats' material), or **absent** (no
+eye exists) — and three rules follow:
+
+- A flat or zero-disparity reading is **undetermined** between genuinely-flat and
+  suppressed-below-hearing unless the seat's provenance is measured. Never render an absence
+  as a weak strut.
+- Absent struts are named **in-body**, not in a footnote: the structure declares its own
+  coverage, because a tensegrity figure over the struts that exist presents as symmetric —
+  a stereo pair with two eyes missing must say so.
+- The decision of which eyes count toward the depth computation is itself structural
+  content — attribute it. That decision is where the power the essay is analyzing tends to
+  sit.
+
 **Radial, not axial (no front).** The brittlestar has no spine, no brain, and no front: a
 nerve ring, five equivalent arms, a calcite skeleton packed with microlenses — the organism
 is a distributed eye with no cyclopean point, and it moves whichever arm the situation loads.
@@ -659,6 +678,7 @@ per-essay voice call; the archived copy MUST retain it.]
 - Purity gradient: [Which sections are high-confidence vs. boundary cases]
 - Omega-to-question mapping: [Which omegas became which unresolved questions]
 - Unsupported translations: [Any DR insights that lack independent Tier 1 evidence — these should have been removed]
+- Strut provenance (§2.4 essays): [Per seat: measured / inferred / absent; absent struts named in-body? Y/N; who decided which eyes count]
 ```
 
 ### §6.1 The Forecast Register Block Format (NEW in v2.2)
@@ -773,6 +793,15 @@ disparities as tension members with kill conditions, your own seat declared as o
 or commit to the flattening explicitly: name the seat you are collapsing to, own the cost,
 and attach the falsifier (hydrostatic commitment, §2.4).
 
+### F-ABSENT-STRUT (NEW in v2.2)
+Rendering a seat nobody authored as if it were a weak seat: a flat reading that actually
+means "no eye was ever pointed there" enters the structure at face value, and the χ spread
+over the struts that exist presents as a complete, symmetric picture. Absence presenting as
+presence — the same failure F-MANUFACTURED-CENTER names at the center, occurring at a strut.
+**Fix:** Carry provenance per strut (measured / inferred / absent, §2.4). Flat-without-
+measured is undetermined, never evidence of flatness; absent struts are named in-body; the
+eye-selection decision is attributed.
+
 ---
 
 ## §8. THE CORE DISCIPLINE
@@ -818,6 +847,11 @@ This doesn't mean hedging everything. It means:
   material now routes to §2.4
 - F-MANUFACTURED-CENTER anti-pattern (seatless synthesis voice; dual: fake tensegrity —
   seats with no kill-conditioned disparities)
+- §2.4 absent-strut provenance rule + F-ABSENT-STRUT anti-pattern + §6 metadata line —
+  a consumer-found blind spot (first live §2.4 application, Draft 4): a seat nobody authored
+  renders at a χ magnitude as if measured, so absence presents as presence; per-strut
+  provenance (measured / inferred / absent), flat-without-measured = undetermined, coverage
+  declared in-body, eye-selection decision attributed
 
 **Lesson that prompted this revision:**
 A retrospective grading attempt over the essay archive found that scoreability is a property
