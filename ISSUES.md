@@ -10907,6 +10907,67 @@ cs_kernel_id" would violate that ruling — any session working this OQ must not
 critique's surviving point (the control controls for *seating*, its H¹=6 confirms the
 Coupling Theorem on a deliberately unseated input, a priori) needs no repo change.
 
+## OQ-232 — Axiom 2's falsifier is confounded by adaptive preference: a report-based kill condition for an axiom that treats reports as position-derived
+
+**Ω-type:** Ω_C (falsifier redesign — conceptual/design work on the evidentiary bridge), with an Ω_E tail (a redesigned perturbation falsifier is runnable in principle).
+
+**Status:** open
+**Priority:** 2
+
+**Origin.** Claude-web [EDGE] critique (2026-07-23, operator-relayed), verified this session
+against the papers.
+
+**Verified state.** The falsifier text exists as characterized: v8 §9.5 item 3
+(`deferential_realism_paper_v8.md:1133–1137`) — "experts in powerless positions
+systematically rating trapped-worker constraints non-extractive would break [Axiom 2]" —
+compressing v6.13.1's fuller design (`deferential_realism_paper_v6.13.1.md:88`). The
+framework's architecture treats ratings/reports as position-indexed appearances (the χ
+computation; ε reading-relativity, v8 §3.2), and "adaptive preference" appears NOWHERE in
+docs/ or ISSUES.md (grepped 2026-07-23; the Axiom-2 and falsifier greps beside it are the
+positive controls).
+
+**The precise defect (sharper than the critique's version).** The v6.13.1 design
+half-remembered the framework's own rule: it controls for **information access** (that is
+why experts) and for **position** (that is why powerless-position experts). It does not
+control for the third mechanism — **preference adaptation from entrapment itself** — which
+the framework's own machinery models (suppression, accessibility_collapse): a live snare
+predicts non-extractive ratings from raters inside it, expert or not. So the falsifying
+observation is compatible with both (a) Axiom 2 false and (b) Axiom 2 true with a live
+snare operating — the kill condition can fire while the axiom is true. This is the
+witness-discriminates-the-confound rule applied to the paper's own kill condition: a
+falsifier earns nothing unless it tells apart the specific confound, and this one cannot.
+
+**Candidate resolution (perturbation-shaped — operator-pointed at
+`docs/the_perturbation_principle.md`).** Replace the static rating pattern with a
+perturbation design: hold position fixed, vary entrapment — powerless-position experts
+INSIDE the constraint vs. position-matched experts OUTSIDE it (or ratings before/after an
+exogenous exit-cost change). Adaptive preference predicts ratings track *entrapment*;
+Axiom 2 predicts they track *position*. The restated falsifier then reads: powerless-position
+**non-trapped** experts systematically rating trapped-worker constraints non-extractive
+breaks Axiom 2 — the entrapped arm gets evidentiary standing only with the perturbation
+control attached. Alternative/supplementary: behavioral (revealed-preference) falsifiers —
+exit behavior under exogenous cost shocks — which bypass the report channel entirely. Per
+the perturbation doc's §6, the redesigned falsifier is itself an instrument and owes a
+positive control (a case where it demonstrably fires).
+
+**Sub-item.** Sweep the OTHER inherited anchor in the same v8 sentence: Axiom 7's falsifier
+("holders unable to author their premises' grounding and drift without truth claims") reads
+as structural/behavioral rather than report-based, but verify that when working this OQ —
+the same confound class must be checked, not assumed absent.
+
+**What resolution changes.** v8 §9.5 item 3 and v6.13.1's Axiom 2 "What would change"
+paragraph amended to the discriminating falsifier; optionally a short v8 note on the
+evidentiary bridge (under what conditions testimony counts as measurement rather than
+appearance — the general question this instance surfaced). Until amended, the papers'
+stated kill condition for the observer axis's single empirical anchor is non-discriminating
+and should not be cited as the axiom's falsifiability warrant without this caveat.
+
+**Cross-refs.** OQ-26 (ε reading-relativity — the reports-are-derived doctrine), OQ-205
+(declaration discipline; the falsifier-as-instrument-owes-a-control pattern),
+`docs/the_perturbation_principle.md` (the repair template), OQ-229 (the essay-side
+fragility-bias pre-registration — a sibling case of pre-registering a discriminating
+design before the data pass).
+
 ---
 
 *Last updated: 2026-07-22. Add new items with sequential OQ-NN labels. Mark
