@@ -91,6 +91,19 @@ suppressed-below-hearing); absent struts named in-body; eye-selection decision a
 Plus F-ABSENT-STRUT anti-pattern + a §6 metadata "Strut provenance" line so the declaration
 can't be silently skipped. uke_write:173 anchor re-verified.
 
+Consumer round-trip refinement (same session, writing model's correction accepted): the
+attribution clause was a defect as first written — "attribute the eye-selection decision"
+invited laundering a method-side absence (the author's own sourcing limits) into a
+world-side suppression claim, re-importing the verdict through the provenance rule. Amended
+to method-level attribution only; world-side cause = a second undetermined one level up
+(suppressed eye and unsourced eye present identically from the author's seat). §9 now also
+scopes the rule plainly: representational fix, not epistemic (makes the writer say they
+can't tell; doesn't let them tell). NOT added, deliberately: a rule against the
+second-order no-seat pose (scrupulous UNDETERMINED-tagging as a reconstructed
+view-from-nowhere) — the writing model flagged it as its own likeliest Draft-4 failure and
+correctly called it writer-vigilance, not protocol; carried here as a Draft-4 REVIEW
+watch-item instead of an over-promoted rule.
+
 ## 2026-07-20 — [landed] Kimi-k2.6 twin COMPLETE at n=1005; five-leg cross-model comparison
 **Files:** prolog/testsets_kimi/, json_kimi/, prolog/beta_processed_kimi.txt, agent/run_no_scope_kimi.py, python/audits/five_leg_twin_comparison.py, audits/2026-07-20_five_leg_twin_comparison/
 **Tier:** landed

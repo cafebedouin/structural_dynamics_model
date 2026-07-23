@@ -358,8 +358,13 @@ eye exists) — and three rules follow:
   coverage, because a tensegrity figure over the struts that exist presents as symmetric —
   a stereo pair with two eyes missing must say so.
 - The decision of which eyes count toward the depth computation is itself structural
-  content — attribute it. That decision is where the power the essay is analyzing tends to
-  sit.
+  content — but **attribute only what you can witness.** The near cause of an absent strut
+  is always your own method, and that IS declarable as fact ("these seats are absent from my
+  corpus because I authored from institutional records"). Whether the method-side absence
+  mirrors a real-world suppression is a SECOND undetermined, one level up: the suppressed
+  eye and the unsourced eye present identically from your seat. Never attribute to the
+  domain's power structure what may belong to your own sourcing limits — that smuggles the
+  verdict back in through the provenance rule.
 
 **Radial, not axial (no front).** The brittlestar has no spine, no brain, and no front: a
 nerve ring, five equivalent arms, a calcite skeleton packed with microlenses — the organism
@@ -800,7 +805,9 @@ over the struts that exist presents as a complete, symmetric picture. Absence pr
 presence — the same failure F-MANUFACTURED-CENTER names at the center, occurring at a strut.
 **Fix:** Carry provenance per strut (measured / inferred / absent, §2.4). Flat-without-
 measured is undetermined, never evidence of flatness; absent struts are named in-body; the
-eye-selection decision is attributed.
+eye-selection is attributed at the METHOD level (what the author sourced — declarable as
+fact), with the world-side cause of the absence left undetermined unless independently
+witnessed.
 
 ---
 
@@ -851,7 +858,12 @@ This doesn't mean hedging everything. It means:
   a consumer-found blind spot (first live §2.4 application, Draft 4): a seat nobody authored
   renders at a χ magnitude as if measured, so absence presents as presence; per-strut
   provenance (measured / inferred / absent), flat-without-measured = undetermined, coverage
-  declared in-body, eye-selection decision attributed
+  declared in-body, eye-selection attributed at the method level only (the world-side cause
+  of an absence is a second undetermined, one level up — the suppressed eye and the
+  unsourced eye present identically from the author's seat; attributing the domain's power
+  structure for what may be a sourcing limit smuggles the verdict back in). Scope of the
+  rule, stated plainly: it closes the REPRESENTATIONAL gap, not the epistemic one — it makes
+  the writer say they cannot tell which cause produced the zero; it does not let them tell.
 
 **Lesson that prompted this revision:**
 A retrospective grading attempt over the essay archive found that scoreability is a property
