@@ -1678,11 +1678,17 @@ write_diagnostic_object(S, Constraints, CorpusSize) :-
     write_json_count_object(S, TypeDist),
     format(S, ',~n', []),
 
-    % purity_summary
+    % purity_summary + R3/R4 coverage siblings (OQ-60 0b): the band tally is
+    % DESCRIPTIVE — computed over scorable rows only, so it must carry its
+    % denominator (n_scored/n_total), unconditionally (R4: even N/N).
     tally_purity_bands(Constraints, PurityDist),
     format(S, '    "purity_summary": ', []),
     write_json_count_object(S, PurityDist),
     format(S, ',~n', []),
+    purity_scored_count(Constraints, NPurScored),
+    length(Constraints, NPurTotal),
+    format(S, '    "purity_n_scored": ~w,~n', [NPurScored]),
+    format(S, '    "purity_n_total": ~w,~n', [NPurTotal]),
 
     % coupling_summary
     tally_coupling_categories(Constraints, CouplingDist),
@@ -2008,6 +2014,18 @@ tally_claimed_types(Constraints, Pairs) :-
             Types),
     msort(Types, Sorted),
     run_length_encode(Sorted, Pairs).
+
+%% purity_scored_count(+Constraints, -N)
+%  R3 denominator helper: rows whose purity is a genuine scalar (excludes
+%  both the -1.0 gate-fail sentinel and the `unknown` no-data token).
+purity_scored_count(Constraints, N) :-
+    findall(C,
+            (   member(C, Constraints),
+                catch(purity_scoring:purity_score(C, PS), _, fail),
+                number(PS), PS \= -1.0
+            ),
+            Cs),
+    length(Cs, N).
 
 %% tally_purity_bands(+Constraints, -Pairs)
 tally_purity_bands(Constraints, Pairs) :-

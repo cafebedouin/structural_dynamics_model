@@ -386,6 +386,11 @@ report_cross_diagnostic_correlation(Constraints, Context) :-
         length(HighEntropyRows, NHigh),
         length(LowEntropyRows, NLow),
         format('### Entropy vs Purity~n~n'),
+        % OQ-60 0b (R4): unconditional coverage line for this descriptive stat.
+        length(Constraints, NAllEP),
+        length(EPRows, NScoredEP),
+        format('Coverage: ~w/~w constraints have scorable purity (excluded: gate-fail sentinel + unknown).~n~n',
+               [NScoredEP, NAllEP]),
         format('| Group | Count | Avg Purity |~n'),
         format('|-------|-------|------------|~n'),
         format('| High entropy (H > ~4f) | ~w | ~4f |~n', [Threshold, NHigh, AvgPurityHigh]),

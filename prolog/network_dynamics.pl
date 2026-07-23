@@ -204,7 +204,19 @@ network_stability_assessment(Context, Assessment) :-
     ), DriftingCs),
     length(DriftingCs, NumDrifting),
     (   NumDrifting =:= 0
-    ->  Assessment = stable
+    ->  % OQ-60 0b (R3): `stable` is a NEGATIVE EXISTENTIAL over the whole
+        % network — it may only be asserted at coverage 1.0. A member whose
+        % effective purity is unknowable (purity `unknown`, post-C-FLOOR)
+        % cannot be certified non-drifting; abstain rather than read absence
+        % as stability. cascading/degrading are positive existentials and
+        % fire through unknown members unchanged.
+        (   narrative_ontology:constraint_claim(CU, _),
+            \+ is_list(CU),
+            drl_purity_network:effective_purity(CU, Context, EPu, _),
+            \+ number(EPu)
+        ->  Assessment = undetermined
+        ;   Assessment = stable
+        )
     ;   % Count how many have critical or warning severity
         findall(C, (
             member(C, DriftingCs),

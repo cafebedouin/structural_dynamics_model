@@ -902,6 +902,13 @@ report_gc_composition(Members, Ctx) :-
     findall(IP, (member(C, Members), gc_node_purity(C, IP, _), IP >= 0.0), IPs),
     findall(EP, (member(C, Members), gc_node_purity(C, _, EP), EP >= 0.0), EPs),
     format('#### Purity Within Giant Component~n~n'),
+    % OQ-60 0b (R3/R4): descriptive stats compute over scorable rows and carry
+    % their denominator unconditionally (excluded = -1.0 sentinel + unknown).
+    length(Members, NMembersPur),
+    length(IPs, NIPs),
+    length(EPs, NEPs),
+    format('- Coverage: intrinsic ~w/~w scorable, effective ~w/~w scorable~n',
+           [NIPs, NMembersPur, NEPs, NMembersPur]),
     (   IPs \= []
     ->  distribution_stats(IPs, stats(IMin, _, IMed, _, IMax, IMean, _)),
         format('- **Intrinsic**: min=~3f, median=~3f, max=~3f, mean=~3f~n',

@@ -795,7 +795,9 @@ cohomology_selftest :-
             ->  sum_list(Purities, SumP),
                 length(Purities, NP),
                 MeanP is SumP / NP,
-                format('  H1=~w: mean_purity=~4f (n=~w)~n', [V, MeanP, NP])
+                % OQ-60 0b (R3): carry the band denominator with the mean
+                aggregate_all(count, cached_obstruction(_, _, V), NBandTot),
+                format('  H1=~w: mean_purity=~4f (n_scored=~w/~w)~n', [V, MeanP, NP, NBandTot])
             ;   format('  H1=~w: no purity data~n', [V])
             )
         )
