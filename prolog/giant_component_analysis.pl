@@ -519,7 +519,10 @@ report_purity_landscape(Cs, _Ctx) :-
     % Intrinsic purity distribution
     findall(IP, (member(C, Cs), gc_node_purity(C, IP, _), IP >= 0.0), IPs),
     length(IPs, NIP),
-    format('#### Intrinsic Purity (~w constraints with valid scores)~n~n', [NIP]),
+    % OQ-60 0b (R3/R4): denominator carried unconditionally (excluded rows =
+    % -1.0 gate-fail sentinel + unknown no-data, both cached as -1.0 here).
+    length(Cs, NTotalCs),
+    format('#### Intrinsic Purity (~w/~w constraints with valid scores)~n~n', [NIP, NTotalCs]),
     (   IPs \= []
     ->  distribution_stats(IPs, stats(IMin, IQ1, IMed, IQ3, IMax, IMean, _)),
         format('| Stat | Value |~n'),
@@ -535,7 +538,7 @@ report_purity_landscape(Cs, _Ctx) :-
     % Effective purity distribution
     findall(EP, (member(C, Cs), gc_node_purity(C, _, EP), EP >= 0.0), EPs),
     length(EPs, NEP),
-    format('#### Effective Purity (~w constraints with valid scores)~n~n', [NEP]),
+    format('#### Effective Purity (~w/~w constraints with valid scores)~n~n', [NEP, NTotalCs]),
     (   EPs \= []
     ->  distribution_stats(EPs, stats(EMin, EQ1, EMed, EQ3, EMax, EMean, _)),
         format('| Stat | Value |~n'),

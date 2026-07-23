@@ -89,12 +89,13 @@ copresent_pairs(Rel, Pairs) :-
             Raw),
     sort(Raw, Pairs).            % dedup unordered co-present pairs
 
-% A pair is ELIGIBLE for contamination iff both purities are non-sentinel
-% (>= 0) and they differ (delta > 0). A sentinel (-1.0) or zero-delta pair is
-% short-circuited by compute_edge_contamination / effective_purity.
+% A pair is ELIGIBLE for contamination iff both purities are numeric,
+% non-sentinel (>= 0) and they differ (delta > 0). A sentinel (-1.0),
+% `unknown` (OQ-60 no-data — number/1 guard, else >= throws), or zero-delta
+% pair is short-circuited by compute_edge_contamination / effective_purity.
 pair_eligible(A-B) :-
-    purity_scoring:purity_score(A, PA), PA >= 0.0,
-    purity_scoring:purity_score(B, PB), PB >= 0.0,
+    purity_scoring:purity_score(A, PA), number(PA), PA >= 0.0,
+    purity_scoring:purity_score(B, PB), number(PB), PB >= 0.0,
     abs(PA - PB) > 0.0.
 
 % A pair is COUPLED iff an authored affects_constraint edge (the side channel)
@@ -228,6 +229,10 @@ report_leaked_pairs(Rel) :-
 assert_reading(C, Ext, Supp, Type) :-
     assertz(narrative_ontology:constraint_claim(C, coexists_canary_fixture)),
     assertz(narrative_ontology:constraint_metric(C, extractiveness, Ext)),
+    % OQ-60 C-FLOOR: fixtures must AUTHOR their Boltzmann floor — the engine
+    % no longer fabricates boltzmann_floor_default on absent coordination_type
+    % (excess would fail -> EX unknown -> purity unknown -> fixtures unscored).
+    assertz(narrative_ontology:coordination_type(C, resource_allocation)),
     assertz(narrative_ontology:constraint_metric(C, suppression_requirement, Supp)),
     forall(member(X, [c_analytical, c_national, c_institutional]),
            assertz(constraint_indexing:constraint_classification(C, Type, X))),
@@ -246,6 +251,7 @@ assert_coexists_pair(C1, UID1, C2) :-
 canary_teardown :-
     forall(member(C, [cx_high, cx_low, eq_a, eq_b, snt_a, snt_b, tw_x, tw_y]),
            ( retractall(narrative_ontology:constraint_claim(C, _)),
+             retractall(narrative_ontology:coordination_type(C, _)),
              retractall(narrative_ontology:constraint_metric(C, _, _)),
              retractall(constraint_indexing:constraint_classification(C, _, _)),
              retractall(corpus_loader:corpus_constraint(C)),
