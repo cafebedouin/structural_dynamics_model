@@ -1,0 +1,157 @@
+==============================================================================
+OQ-232 discrimination probe -- logical demonstration under declared links
+==============================================================================
+
+--- Ground truth chi per position (E=mobile / E=trapped) ---
+      powerless: chi_mobile=+0.9202  chi_trapped=+0.9510
+       moderate: chi_mobile=+0.7745  chi_trapped=+0.8329
+       powerful: chi_mobile=+0.4550  chi_trapped=+0.5436
+      organized: chi_mobile=+0.3664  chi_trapped=+0.4550
+  institutional: chi_mobile=-0.0102  chi_trapped=+0.0288
+
+  Axiom 2 end-to-end P-slope (chi units, E=mobile): +0.9303
+  Proportional-adaptation end-to-end per unit s:    0.70
+  Cancellation point s_c = 1.3291 (adaptation magnitude equal to the axiom's own P-slope)
+
+==============================================================================
+A.3 magnitude criterion: chi-bound, per-link translation, feasibility
+==============================================================================
+  Axiom 2 bound on the between-arm experienced-chi gap at fixed P:
+  |dchi| <= eps*sigma*|f(d+0.05) - f(d)|  (trapped vs mobile)
+    held P=    powerless: chi-bound=0.0308  linear-translation=0.0259 rating units  3x=0.0778
+    held P=     moderate: chi-bound=0.0584  linear-translation=0.0490 rating units  3x=0.1471
+    held P=     powerful: chi-bound=0.0886  linear-translation=0.0744 rating units  3x=0.2233
+    held P=    organized: chi-bound=0.0886  linear-translation=0.0744 rating units  3x=0.2233
+    held P=institutional: chi-bound=0.0390  linear-translation=0.0328 rating units  3x=0.0983
+  Declared linear instrument resolution (7-point): 0.1667 rating units
+  Max linear-translated bound over positions: 0.0744  (3x: 0.2233)
+  ASSERT PASS: the 1x bound sits below one 7-point scale step at EVERY held
+  position -- at 1x the magnitude criterion decides nothing at a realistic
+  7-point instrument (any observed gap is within one scale step of the bound).
+  The 3x-inflated bound CROSSES one scale step at mid-slope positions ['organized', 'powerful']:
+  the feasibility verdict itself flips inside the 1x-3x band, which is why
+  the 3x safety factor is REGISTERED AS ARBITRARY and the 1x-3x band
+  DECLARED INDETERMINATE -- the indeterminacy is live, not academic.
+
+  Threshold-link breaker (assertion iv): a sub-bound chi gap straddling theta
+    dchi = 0.002 (<< bound 0.0886) -> rating gap = 1.0 (full scale)
+  ASSERT PASS: the threshold link maps an arbitrarily small chi gap to a
+  full-scale rating gap -- the magnitude criterion BREAKS under a saturating
+  link. STATED LIMIT confirmed: the criterion is licensed only under an
+  approximately linear reporting channel (the paper owes that sentence).
+
+==============================================================================
+SWEEP under linear link (res = 0.1667)
+==============================================================================
+
+(v) CONTROL PASS: world A at s=0 -> old silent, E-arm silent, P-arm
+    positive (the axiom's own predicted signature; no falsifier fires).
+
+(i) OLD observable ("a trapped worker rates non-extractive"), first firing s:
+      A (axiom true, E-adaptation): s >= 0.695
+      B (axiom false):              s >= 0.0 (fires at all s; no adaptation needed)
+      C (axiom true, P-adaptation): s >= 0.82
+      D (cancellation, s=1.329):  fires = True
+    ASSERT PASS: the old observable fires in A, B, C and D -- consistent
+    with axiom-true-plus-adaptation and axiom-false alike: NON-DISCRIMINATING.
+
+(ii) E-ARM falsifier (2x2 Cell 4, held P=moderate), first firing s:
+      A: None   B: 0.0   C: s >= 0.825   D (s=1.329): True
+    ASSERT PASS: fires in B, C, D and never in A. Firing in C and D --
+    where Axiom 2 is TRUE -- demonstrates the conjunct is necessary: Cell 4
+    refutes (Axiom 2 AND no P-channel adaptation), never Axiom 2 alone.
+
+(iii) P-ARM sign read (end-to-end powerless-institutional, E held mobile):
+      A: positive at every swept s.  B: flat at every swept s.
+      C: verdicts over sweep = ['flat', 'positive']; first flat at s=1.015; first negative at s=None
+      D (s=1.329): flat -- the cancellation signature, as pre-registered.
+
+      SEPARATION: world-B signature = (E-arm fired, P-arm flat).
+      C collapses onto B for s in [1.015, +inf (whole remaining sweep)]
+      Band lower edge = s_c -23.6% (s_c = 1.329).
+      BAND UNBOUNDED ABOVE at this resolution: past the lower edge the
+      bounded scale floors both ends of the P range, so the NEGATIVE
+      verdict (dominant adaptation) is UNREACHABLE -- flat absorbs it.
+      ASSERT PASS: D (s=s_c) lies inside the declared cancellation band.
+
+==============================================================================
+SWEEP under threshold link (res = 1.0000)
+==============================================================================
+
+(v) CONTROL PASS: world A at s=0 -> old silent, E-arm silent, P-arm
+    positive (the axiom's own predicted signature; no falsifier fires).
+
+(i) OLD observable ("a trapped worker rates non-extractive"), first firing s:
+      A (axiom true, E-adaptation): s >= 0.455
+      B (axiom false):              s >= 0.0 (fires at all s; no adaptation needed)
+      C (axiom true, P-adaptation): s >= 0.535
+      D (cancellation, s=1.329):  fires = True
+    ASSERT PASS: the old observable fires in A, B, C and D -- consistent
+    with axiom-true-plus-adaptation and axiom-false alike: NON-DISCRIMINATING.
+
+(ii) E-ARM falsifier (2x2 Cell 4, held P=moderate), first firing s:
+      A: None   B: 0.0   C: s >= 0.48   D (s=1.329): True
+    ASSERT PASS: fires in B, C, D and never in A. Firing in C and D --
+    where Axiom 2 is TRUE -- demonstrates the conjunct is necessary: Cell 4
+    refutes (Axiom 2 AND no P-channel adaptation), never Axiom 2 alone.
+
+(iii) P-ARM sign read (end-to-end powerless-institutional, E held mobile):
+      A: positive at every swept s.  B: flat at every swept s.
+      C: verdicts over sweep = ['flat', 'positive']; first flat at s=0.495; first negative at s=None
+      D (s=1.329): flat -- the cancellation signature, as pre-registered.
+
+      SEPARATION: world-B signature = (E-arm fired, P-arm flat).
+      C collapses onto B for s in [0.495, +inf (whole remaining sweep)]
+      Band lower edge = s_c -62.8% (s_c = 1.329).
+      BAND UNBOUNDED ABOVE at this resolution: past the lower edge the
+      bounded scale floors both ends of the P range, so the NEGATIVE
+      verdict (dominant adaptation) is UNREACHABLE -- flat absorbs it.
+      ASSERT PASS: D (s=s_c) lies inside the declared cancellation band.
+
+==============================================================================
+Negative-verdict POSITIVE CONTROL (absence claims need a control that can fire)
+==============================================================================
+  Config: fine-resolution instrument (res=0.01, ~101-point) + CONCENTRATED
+  P-adaptation (h=1 at powerless, 0 elsewhere) -- labeled control, not a world.
+  First s with a NEGATIVE P-arm verdict: 0.945
+  ASSERT PASS: the verdict machinery CAN produce "negative". Its absence in
+  the primary sweep (proportional adaptation, 7-point linear link) is a real
+  absence -- a resolution+shape feasibility fact, not a dead code branch.
+
+==============================================================================
+HEADLINE FINDINGS (in the pre-registered reporting form)
+==============================================================================
+
+1. Separation holds except for adaptation magnitudes within the cancellation
+   neighborhood of the axiom's own P-slope (s_c = 1.329 chi-units):
+     linear 7-point link:  separation on s in [0, 1.015); band = [1.015, +inf)
+                           (lower edge -23.6% of s_c; UNBOUNDED ABOVE -- the
+                           bounded scale floors the inversion, so band width at the
+                           declared 7-point resolution is INFINITE, not the finite
+                           +/-X the plan's expected-form sentence anticipated)
+     threshold link:       separation on s in [0, 0.495); band = [0.495, +inf)
+                           (lower edge -62.8% of s_c -- saturation widens the
+                           band far below s_c; sign survives only up to saturation)
+   The cancellation hole and the instrument-resolution feasibility limit are ONE
+   finding: the failing neighborhood's lower edge moves with resolution, and its
+   upper edge exists only for instruments fine enough to see below the
+   institutional position's headroom (control: reachable at res=0.01 under
+   concentrated adaptation).
+
+2. The P-arm sign table's NEGATIVE row is empirically empty at the declared
+   7-point instrument under proportional adaptation: dominant P-adaptation
+   presents as FLAT, so flat = (axiom false) OR (comparable-magnitude
+   cancellation) OR (dominant adaptation, floored). The flat row's disjunction
+   gains a third disjunct; the sign read still separates A (positive at every s)
+   from every collapsed world, and the E-arm conjunct is still demonstrated
+   necessary. Coverage did NOT collapse: the separation interval [0, 1.015)
+   is non-empty and covers all sub-cancellation adaptation magnitudes.
+
+3. E-arm magnitude criterion: chi-bound translates to < one scale step at every
+   held position on a 7-point instrument (max 0.074 vs step 0.167);
+   the threshold link amplifies a sub-bound gap to full scale. The criterion is
+   licensed only under an approximately linear reporting channel at fine
+   resolution -- declared limits, confirmed, not discovered late.
+
+ALL ASSERTIONS PASSED (worlds A-D x two links, s-sweep 0..2.5 step 0.005,
+s=0 control, negative-branch positive control, criterion checks).

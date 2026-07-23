@@ -1130,11 +1130,36 @@ Because v8 is largely re-description of a built engine, it must say what could s
   *[Annotation, 2026-07-03: BUILT — `epsilon_provenance/5` carrier, fail-fast gate, r=0.02
   stability sweep, Controls P/S green through the recurring gate; witnesses in
   `audits/2026-07-03_oq205_build/`.]*
-3. **The inherited empirical anchors.** Axiom 2 and Axiom 7 remain falsifiable as before
-  (experts in powerless positions systematically rating trapped-worker constraints
-  non-extractive would break the first; holders unable to author their premises' grounding
-  and drift without truth claims would break the second), and v8 adds no insulation around
-  either.
+3. **The inherited empirical anchors, with their falsifiers scoped (OQ-232).** Axiom 2's
+  prior kill — experts in powerless positions systematically rating trapped-worker
+  constraints non-extractive — controlled for information access and position but not for
+  **preference adaptation**, a third mechanism the framework itself models (`suppression`,
+  `accessibility_collapse`): the observable could fire while the axiom held. A perturbation
+  control closes one channel at a time, and adaptation can index either of the site's two
+  predicament indices (P, E — separable, since d(P, E) makes "powerless = high exit costs"
+  a population correlation, not a definition), so the kill is now **two scoped falsifiers**,
+  each refuting an explicit conjunction it can actually reach. **E-arm** (position-matched
+  inside/outside cohorts at held P; instantiable now): both cohorts rating non-extractive
+  refutes *(Axiom 2 ∧ no P-channel adaptation)*. **P-arm** (position change at held
+  entrapment; specified, sign-discriminating, **OPEN-instantiation**): the rating slope in
+  the less-power direction — positive is the axiom's own signature; flat refutes *(Axiom 2 ∧
+  no comparable-or-dominant P-channel adaptation)*; negative is adaptation confirmed
+  dominant, axiom status indeterminate. Scope sentence: the two arms leave a declared
+  **cancellation band** — P-indexed adaptation at magnitudes from roughly three-quarters of
+  the axiom's own P-slope upward makes axiom-true worlds observationally identical to
+  axiom-false ones at a realistic 7-point instrument — so both arms firing is the kill's
+  limit case, not its headline. The evidentiary bridge this rests on: a rating counts as
+  *measurement*, rather than §3.2 appearance, only when perturbation controls cover every
+  channel adaptation can index. The same confound class touches **Axiom 7**: its prior kill
+  ("holders unable to author their premises' grounding and drift without truth claims") can
+  be produced at the report level by naturalized foreclosure while the axiom is true — the
+  positions most thoroughly foreclosed are the least likely to author (§5.9) — so the kill
+  is conditioned on the structural witnesses formation cannot erase (a consistent negation,
+  a present beneficiary; §5.9) and on the authored acknowledged bit: holders unable to
+  author *those* would break the axiom; bare report-level silence does not. v8 adds no
+  insulation around either anchor. *[Annotation, 2026-07-23: falsifiers rescoped under
+  OQ-232; discrimination probe and witnesses in
+  `audits/2026-07-23_oq232_falsifier_redesign/`.]*
 
 ### 9.6 Open problems, routed
 
