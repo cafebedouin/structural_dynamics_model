@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "1c557497072b450d604d5218a01c7914959b94d7",
+    "store_version": "e9ab87ac2b68fb5d1702a5257f850bbb3168a235",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-23T12:43:39"
+    "generated_at": "2026-07-23T14:04:42"
   },
-  "issues_sha": "c606d6be3a9ce0813877d9e5a4b87e817620314b0378c420db67816a5b79f934",
-  "n_entries": 233,
+  "issues_sha": "b522ee1a107a3038e3fe51779da35ecdcf73915da8de8b49c1d5299921cc8c71",
+  "n_entries": 234,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 128,
+    "resolved": 129,
     "mitigated": 18,
     "disposed": 4,
     "future": 5,
@@ -1053,19 +1053,6 @@
       ]
     },
     {
-      "id": "OQ-232",
-      "status": "open",
-      "priority": 2,
-      "summary": "Axiom 2's falsifier is confounded by adaptive preference: a report-based kill condition for an axiom that treats reports as position-derived",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-26",
-        "OQ-205",
-        "OQ-229"
-      ]
-    },
-    {
       "id": "OQ-233",
       "status": "open",
       "priority": 3,
@@ -1075,6 +1062,21 @@
       "mentioned_in": [
         "OQ-229",
         "OQ-230"
+      ]
+    },
+    {
+      "id": "OQ-234",
+      "status": "open",
+      "priority": 4,
+      "summary": "Report-based falsifiers in a reports-are-derived framework: the evidentiary-bridge class",
+      "deps": [
+        "splits_from OQ-232"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-26",
+        "OQ-205",
+        "OQ-232"
       ]
     }
   ],
@@ -3211,6 +3213,17 @@
       "mentioned_in": [
         "OQ-22",
         "OQ-37"
+      ]
+    },
+    {
+      "id": "OQ-232",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "Axiom 2's falsifier is confounded by adaptive preference: a report-based kill condition for an axiom that treats reports as position-derived",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-234"
       ]
     }
   ]

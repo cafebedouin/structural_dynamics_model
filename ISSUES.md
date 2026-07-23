@@ -10914,62 +10914,26 @@ Coupling Theorem on a deliberately unseated input, a priori) needs no repo chang
 
 **Ω-type:** Ω_C (falsifier redesign — conceptual/design work on the evidentiary bridge), with an Ω_E tail (a redesigned perturbation falsifier is runnable in principle).
 
-**Status:** open
+**Status:** resolved — 2026-07-23, rev-4 redesign landed (commit `e9ab87ac`): two scoped
+falsifiers with explicit conjuncts replace the single confounded kill in v8 §9.5 item 3 +
+v6.13.1:88; probe green in `audits/2026-07-23_oq232_falsifier_redesign/`.
 **Priority:** 2
 
-**Origin.** Claude-web [EDGE] critique (2026-07-23, operator-relayed), verified this session
-against the papers.
+**Origin.** Claude-web [EDGE] critique (2026-07-23, operator-relayed), verified against the papers.
 
-**Verified state.** The falsifier text exists as characterized: v8 §9.5 item 3
-(`deferential_realism_paper_v8.md:1133–1137`) — "experts in powerless positions
-systematically rating trapped-worker constraints non-extractive would break [Axiom 2]" —
-compressing v6.13.1's fuller design (`deferential_realism_paper_v6.13.1.md:88`). The
-framework's architecture treats ratings/reports as position-indexed appearances (the χ
-computation; ε reading-relativity, v8 §3.2), and "adaptive preference" appears NOWHERE in
-docs/ or ISSUES.md (grepped 2026-07-23; the Axiom-2 and falsifier greps beside it are the
-positive controls).
-
-**The precise defect (sharper than the critique's version).** The v6.13.1 design
-half-remembered the framework's own rule: it controls for **information access** (that is
-why experts) and for **position** (that is why powerless-position experts). It does not
-control for the third mechanism — **preference adaptation from entrapment itself** — which
-the framework's own machinery models (suppression, accessibility_collapse): a live snare
-predicts non-extractive ratings from raters inside it, expert or not. So the falsifying
-observation is compatible with both (a) Axiom 2 false and (b) Axiom 2 true with a live
-snare operating — the kill condition can fire while the axiom is true. This is the
-witness-discriminates-the-confound rule applied to the paper's own kill condition: a
-falsifier earns nothing unless it tells apart the specific confound, and this one cannot.
-
-**Candidate resolution (perturbation-shaped — operator-pointed at
-`docs/the_perturbation_principle.md`).** Replace the static rating pattern with a
-perturbation design: hold position fixed, vary entrapment — powerless-position experts
-INSIDE the constraint vs. position-matched experts OUTSIDE it (or ratings before/after an
-exogenous exit-cost change). Adaptive preference predicts ratings track *entrapment*;
-Axiom 2 predicts they track *position*. The restated falsifier then reads: powerless-position
-**non-trapped** experts systematically rating trapped-worker constraints non-extractive
-breaks Axiom 2 — the entrapped arm gets evidentiary standing only with the perturbation
-control attached. Alternative/supplementary: behavioral (revealed-preference) falsifiers —
-exit behavior under exogenous cost shocks — which bypass the report channel entirely. Per
-the perturbation doc's §6, the redesigned falsifier is itself an instrument and owes a
-positive control (a case where it demonstrably fires).
-
-**Sub-item.** Sweep the OTHER inherited anchor in the same v8 sentence: Axiom 7's falsifier
-("holders unable to author their premises' grounding and drift without truth claims") reads
-as structural/behavioral rather than report-based, but verify that when working this OQ —
-the same confound class must be checked, not assumed absent.
-
-**What resolution changes.** v8 §9.5 item 3 and v6.13.1's Axiom 2 "What would change"
-paragraph amended to the discriminating falsifier; optionally a short v8 note on the
-evidentiary bridge (under what conditions testimony counts as measurement rather than
-appearance — the general question this instance surfaced). Until amended, the papers'
-stated kill condition for the observer axis's single empirical anchor is non-discriminating
-and should not be cited as the axiom's falsifiability warrant without this caveat.
-
-**Cross-refs.** OQ-26 (ε reading-relativity — the reports-are-derived doctrine), OQ-205
-(declaration discipline; the falsifier-as-instrument-owes-a-control pattern),
-`docs/the_perturbation_principle.md` (the repair template), OQ-229 (the essay-side
-fragility-bias pre-registration — a sibling case of pre-registering a discriminating
-design before the data pass).
+**Resolution note.** Probe (worlds A–D × linear/threshold links, s-sweep interval assertion):
+old observable fires in all four worlds (non-discriminating); E-arm Cell 4 refutes only
+(Axiom 2 ∧ no P-channel adaptation) — fires in axiom-true worlds C/D, conjunct necessary;
+cancellation band lower edge −23.6% of the axiom's own P-slope and UNBOUNDED above at 7-point
+resolution (the bounded scale floors the inversion — the sign table's negative row is
+unreachable under proportional adaptation; positive control at res=0.01 proves the branch
+live); the 3× factor's 1×–3× indeterminacy is live (feasibility verdict flips inside it).
+Sub-item (Axiom 7 sweep): confound class PRESENT per the pre-registered criterion — v8 kill
+now conditioned on structural witnesses (consistent negation, present beneficiary, §5.9) via
+cross-reference. Arm statuses: E-arm instantiable (conjunction-kill only); P-arm
+sign-discriminating, OPEN-instantiation → **Axiom 2 currently has no runnable
+full falsifier**; do not cite pre-amendment wording as the falsifiability warrant
+(KNOWN_STATE 2026-07-23). Class question split to OQ-234.
 
 ## OQ-233 — The borrowed-example rule: grounding misses cluster in the home fields of imported examples (pre-registered off n=2, kill condition attached)
 
@@ -11061,9 +11025,57 @@ OQ-229 (pre-registration-before-the-data-pass pattern), uke_write v2.2 §5.4 + �
 (the operational landing), `docs/technical/build_discipline.md` (the byte-identical-read spine
 this instantiates at the grounding layer).
 
+## OQ-234 — Report-based falsifiers in a reports-are-derived framework: the evidentiary-bridge class
+
+**Ω-type:** Ω_C (class characterization + completeness question), with an Ω_E tail (each
+instantiated falsifier arm is a runnable datum).
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-232
+
+**Origin.** Split from OQ-232 at its close (2026-07-23): two confirmed instances make a class.
+
+**The general condition.** Every report-based falsifier in this framework is disjunctive over
+(axiom false ∨ adaptation live in whichever channel is held fixed): the framework models
+reports as position-derived appearances, so a report-level observable can always be produced
+by the modeled adaptation mechanism while the axiom is true. Perturbation controls close
+channels one at a time, so the number of required controls equals the number of channels
+adaptation can index — and controls on sign-opposed channels leave a **cancellation band**
+(the OQ-232 residue: at 7-point resolution the band is unbounded above, since a bounded
+scale floors the inversion; probe in `audits/2026-07-23_oq232_falsifier_redesign/`). The
+evidentiary bridge, stated once: a rating counts as *measurement*, not §3.2 appearance, only
+when perturbation controls cover every channel adaptation can index.
+
+**Instances (2).** (1) Axiom 2's old falsifier — confounded by adaptive preference; redesigned
+as two scoped arms (OQ-232, resolved 2026-07-23). (2) Axiom 7's falsifier — confound class
+PRESENT per the OQ-232 Part-B pre-registered criterion: report-level inability-to-author is
+producible by naturalized foreclosure while the axiom is true (v8:700–706's own thin-evidence
+observation), and the §9.5 kill carried no structural-witness conditioning; now conditioned
+via cross-reference (commit `e9ab87ac`).
+
+**Channel enumeration (sub-item, partially discharged 2026-07-23).** The framework's own
+index set is exactly four: `context(agent_power, time_horizon, exit_options, spatial_scope)`
+(`constraint_indexing.pl:139`). P and E are the adaptation-indexable pair — adaptation
+attaches to what the rater cannot costlessly vary (position, exit). T is an adoptable
+evaluation horizon, not a fact of the rater's predicament — not plausibly adaptation-indexable.
+S is likewise an adoptable analytic frame that does not determine the rater's lived exposure.
+So the framework's *own* exposure is closed at {P, E} by OQ-232's two arms, and the open
+question sharpens to: **is the four-index set complete?** — i.e., is there a channel adaptation
+can index that the site cannot hold fixed (candidate: the rater's own exposure
+duration/location, which no index carries)?
+
+**What resolution changes.** A completeness argument (or a counterexample channel) either
+certifies the two-arm design as the full control set or names the missing perturbation arm;
+any new falsifier added to the papers inherits the general condition above at authoring time.
+
+**Cross-refs.** OQ-232 (first instance + probe), OQ-26 (reports-are-derived doctrine), OQ-205
+(declaration discipline), `docs/the_perturbation_principle.md` (repair template),
+`docs/technical/build_discipline.md` → witness-discriminates-the-confound.
+
 ---
 
-*Last updated: 2026-07-22. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-07-23. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

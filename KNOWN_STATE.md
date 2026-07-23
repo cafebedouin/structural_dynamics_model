@@ -45,6 +45,38 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-23 — [correction-key] Axiom 2's empirical anchor currently has no runnable falsifier (OQ-232 resolved; falsifiers rescoped in v8 §9.5 + v6.13.1:88; class OQ-234 minted)
+**Files:** docs/deferential_realism_paper_v8.md, docs/deferential_realism_paper_v6.13.1.md, ISSUES.md, audits/2026-07-23_oq232_falsifier_redesign/
+**Tier:** correction-key
+
+**Headline: Axiom 2's empirical anchor currently has no runnable falsifier: the E-arm is
+instantiable but refutes only (Axiom 2 ∧ no P-channel adaptation); the P-arm is specified,
+sign-discriminating, and uninstantiated. Do not cite either paper's pre-amendment wording as
+the falsifiability warrant.**
+
+Arm bookkeeping (below the headline, not in place of it). OQ-232 rev-4 redesign landed
+(commit `e9ab87ac`; probe + writeup in `audits/2026-07-23_oq232_falsifier_redesign/`): the
+single confounded kill (controlled information-access and position, not preference
+adaptation) replaced by two scoped falsifiers, each refuting an explicit conjunction —
+E-arm 2×2 Cell 4 (position-matched inside/outside cohorts; candidates: FTC non-compete
+window, H-1B portability, plant closures with pre-period surveys); P-arm sign read
+(position change at held entrapment; candidates: promotion studies, union-officer
+elections, tenure cases; OPEN-instantiation). Probe findings that scope any future
+citation: (a) the cancellation band's lower edge is −23.6% of the axiom's own P-slope and
+the band is UNBOUNDED ABOVE at 7-point resolution — the bounded scale floors the
+inversion, so the sign table's negative row is unreachable under proportional adaptation
+(flat = axiom-false ∨ cancellation ∨ dominant-adaptation-floored); (b) the E-arm magnitude
+criterion's 1× bound sits below one 7-point scale step at every held position and its
+3×-inflated bound crosses resolution at mid-slope positions — the 1×–3× indeterminacy is
+live; the criterion is licensed only under an approximately linear reporting channel.
+Part B: Axiom 7's falsifier carries the same confound class (PRESENT per pre-registered
+criterion); its v8 kill is now conditioned on structural witnesses (consistent negation,
+present beneficiary, §5.9) via explicit cross-reference. Old falsifier text survives only
+in archived v6.x versions and docs/v8/foundations/ snapshots — historical records,
+contained by pointer, not amended. Class tracking: OQ-234 (evidentiary-bridge class;
+channel enumeration partially discharged — site indices are exactly {P, T, E, S}, only
+{P, E} adaptation-indexable; open question sharpened to index-set completeness).
+
 ## 2026-07-23 — [landed] Recall limit + borrowed-example rule (uke_write §5.4, OQ-233); Axiom-2 falsifier confound (OQ-232); perspectival-gaps essay landed (blog/, GAP-04/06 notes)
 **Files:** agent/uke_write_v2.2.md, ISSUES.md, blog/2026-05_or_before/diagnostic_value_of_perspectival_gaps.md, docs/design/design_gaps.md
 **Tier:** landed
