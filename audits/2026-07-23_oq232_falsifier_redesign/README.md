@@ -117,3 +117,28 @@ is uninstantiated.
 - `discrimination_probe.py` — the probe (standalone, no repo imports)
 - `discrimination_probe.log` — pasted run, all assertions green
 - `falsifier_sweep_grep.txt` — C.3 sweep with positive controls + eyeball verdict
+
+## Post-close adjudication (2026-07-23, Claude-web round-4 review — six checks, all run against the artifacts)
+
+1. **Feasibility lands where the falsifier doesn't apply — CONFIRMED from the log's
+   per-position table.** At powerless (the position the kill names): 3× bound = 0.0778
+   rating units vs 0.1667 resolution — sub-resolution; the 3× bound crosses resolution only
+   at `organized`/`powerful` (0.2233). Point-of-use qualifiers added: v8 item 3 ("instantiable
+   now on its categorical read"), v6.13.1, OQ-232 close, KNOWN_STATE headline.
+2. **The 3× factor manufactures the discriminating power rather than being conservative —
+   CONFIRMED** (1× decides nothing anywhere; 3× clears only mid-slope). v6.13.1 reworded:
+   threshold derived from a declared number of scale steps, implied multiplier reported per
+   position (one step at powerless implies k≈6.4); bare-multiplier framing removed.
+3. **"Sign-discriminating" overclaimed — CONFIRMED.** Under proportional adaptation at
+   7-point the negative row is unreachable; the arm discriminates positive-vs-flat.
+   All four surfaces requalified; the P-arm's OPEN-instantiation is now stated as a spec
+   (floor-free or fine-resolution measure), not merely "none identified."
+4. **Structural witnesses are a third repair strategy (exits the class), not a scope
+   patch** — added to OQ-234 with the leading sub-item: is there a structural observable
+   for Axiom 2 (the behavioral supplement's demotion was exit-specific, so the question is
+   open, not settled negative)?
+5. **The {P,E} closure claim is a declared judgment, not an engine read** (the engine does
+   not index adaptation at all — suppression is constraint-level) — labeled as such in
+   OQ-234's channel-enumeration sub-item.
+6. **§5.9 citation resolves** — §5.9 heads at v8:655; the structural-witness passage
+   (consistent negation, present beneficiary) sits at v8:677/694, inside it. No fix needed.

@@ -10930,8 +10930,10 @@ unreachable under proportional adaptation; positive control at res=0.01 proves t
 live); the 3× factor's 1×–3× indeterminacy is live (feasibility verdict flips inside it).
 Sub-item (Axiom 7 sweep): confound class PRESENT per the pre-registered criterion — v8 kill
 now conditioned on structural witnesses (consistent negation, present beneficiary, §5.9) via
-cross-reference. Arm statuses: E-arm instantiable (conjunction-kill only); P-arm
-sign-discriminating, OPEN-instantiation → **Axiom 2 currently has no runnable
+cross-reference. Arm statuses: E-arm instantiable on the categorical read (conjunction-kill
+only; magnitude criterion sub-resolution at the powerless position the kill names); P-arm
+OPEN-instantiation with a spec (floor-free or fine-resolution measure — sign-discriminating
+only positive-vs-flat at realistic instruments) → **Axiom 2 currently has no runnable
 full falsifier**; do not cite pre-amendment wording as the falsifiability warrant
 (KNOWN_STATE 2026-07-23). Class question split to OQ-234.
 
@@ -11054,10 +11056,26 @@ producible by naturalized foreclosure while the axiom is true (v8:700–706's ow
 observation), and the §9.5 kill carried no structural-witness conditioning; now conditioned
 via cross-reference (commit `e9ab87ac`).
 
+**Repair strategies (3 — named 2026-07-23, post-close review).** (a) *Perturbation control* —
+closes one adaptation channel at a time; sign-opposed channels leave a cancellation band (the
+Axiom 2 arms). (b) *Disjunctive scoping* — state the falsifier as refuting an explicit
+conjunction it can actually reach (both OQ-232 arms). (c) *Structural witnesses* — replace the
+report-level observable with facts formation cannot erase (consistent negation, present
+beneficiary — the Axiom 7 repair): the only strategy that EXITS the class rather than managing
+it inside the report channel. **Leading sub-item (recommended next forward step): is there a
+structural observable for Axiom 2?** The behavioral supplement was demoted to a Cell-2 audit
+role for exit-specific reasons (exit under suppression is itself suppressed), so the question
+is open, not answered in the negative — what fact about experienced extraction, analogous to
+a present beneficiary, survives preference adaptation?
+
 **Channel enumeration (sub-item, partially discharged 2026-07-23).** The framework's own
 index set is exactly four: `context(agent_power, time_horizon, exit_options, spatial_scope)`
 (`constraint_indexing.pl:139`). P and E are the adaptation-indexable pair — adaptation
-attaches to what the rater cannot costlessly vary (position, exit). T is an adoptable
+attaches to what the rater cannot costlessly vary (position, exit). **The indexability call
+is a declared judgment, not an engine read**: the engine does not index adaptation at all
+(`suppression`/`accessibility_collapse` are constraint-level scalars keyed to neither P nor
+E), so the enumeration witnesses only which site indices exist; the T/S exclusion is the
+argument that follows, not a measured fact. T is an adoptable
 evaluation horizon, not a fact of the rater's predicament — not plausibly adaptation-indexable.
 S is likewise an adoptable analytic frame that does not determine the rater's lived exposure.
 So the framework's *own* exposure is closed at {P, E} by OQ-232's two arms, and the open

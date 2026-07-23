@@ -1139,12 +1139,17 @@ Because v8 is largely re-description of a built engine, it must say what could s
   predicament indices (P, E — separable, since d(P, E) makes "powerless = high exit costs"
   a population correlation, not a definition), so the kill is now **two scoped falsifiers**,
   each refuting an explicit conjunction it can actually reach. **E-arm** (position-matched
-  inside/outside cohorts at held P; instantiable now): both cohorts rating non-extractive
+  inside/outside cohorts at held P; instantiable now on its categorical read — the arm's
+  magnitude criterion is sub-resolution at the powerless position on realistic rating
+  scales): both cohorts rating non-extractive
   refutes *(Axiom 2 ∧ no P-channel adaptation)*. **P-arm** (position change at held
-  entrapment; specified, sign-discriminating, **OPEN-instantiation**): the rating slope in
+  entrapment; specified, **OPEN-instantiation** — its spec is a floor-free or
+  fine-resolution measure, since a bounded scale floors the inversion and leaves the arm
+  sign-discriminating only positive-vs-flat): the rating slope in
   the less-power direction — positive is the axiom's own signature; flat refutes *(Axiom 2 ∧
   no comparable-or-dominant P-channel adaptation)*; negative is adaptation confirmed
-  dominant, axiom status indeterminate. Scope sentence: the two arms leave a declared
+  dominant, axiom status indeterminate — a row reachable only by such a measure. Scope
+  sentence: the two arms leave a declared
   **cancellation band** — P-indexed adaptation at magnitudes from roughly three-quarters of
   the axiom's own P-slope upward makes axiom-true worlds observationally identical to
   axiom-false ones at a realistic 7-point instrument — so both arms firing is the kill's

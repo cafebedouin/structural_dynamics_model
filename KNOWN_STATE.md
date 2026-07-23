@@ -50,9 +50,12 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 **Tier:** correction-key
 
 **Headline: Axiom 2's empirical anchor currently has no runnable falsifier: the E-arm is
-instantiable but refutes only (Axiom 2 ∧ no P-channel adaptation); the P-arm is specified,
-sign-discriminating, and uninstantiated. Do not cite either paper's pre-amendment wording as
-the falsifiability warrant.**
+instantiable on its categorical read (its magnitude criterion is sub-resolution at the
+powerless position the kill names, on realistic rating scales) but refutes only (Axiom 2 ∧
+no P-channel adaptation); the P-arm is specified and uninstantiated — sign-discriminating
+only positive-vs-flat at realistic instruments, so its instantiation spec is a floor-free or
+fine-resolution measure. Do not cite either paper's pre-amendment wording as the
+falsifiability warrant.**
 
 Arm bookkeeping (below the headline, not in place of it). OQ-232 rev-4 redesign landed
 (commit `e9ab87ac`; probe + writeup in `audits/2026-07-23_oq232_falsifier_redesign/`): the
