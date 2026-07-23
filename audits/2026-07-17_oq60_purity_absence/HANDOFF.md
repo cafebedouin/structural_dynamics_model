@@ -24,6 +24,15 @@ plan-review corrections folded in).
   `structural_purity` → `inconclusive(no_data)` via `aggregate_purity_tests/2`. Declared
   residue: `excess_extraction_factor` 0.5 neutral; `boltzmann_compliance:589` T3.
   **haiku/kernel_v1 legs OPEN — discharge at C-FLOOR.**
+- **`0be41518` — C-FLOOR (m5, THE live commit).** `boltzmann_floor_for/2` default clause
+  removed; 4-leg census join CLEAN (flips exactly 11/2/80/2, screens within 1e-5, money pair
+  0.972→null / 0.948→null); C-LATENT OPEN legs (haiku/kernel_v1) discharged by the join.
+  Declared ensemble ripple (attributed): maxent/wasserstein/arakelov/FPN corpus-relative
+  layers move; `classifications` changed on ZERO rows; 9 near-boundary rows verdict_join
+  red→yellow via the maxent-divergence alert; 1 gate-fail raw-m5 flash row loses its
+  fabricated FCR failure. `WITNESS_CFLOOR_2026-07-23.md`; post-C-FLOOR dumps
+  `oq60_cfloor_*.json.gz` = the Phase-2 baseline. Remaining: 0b (additive R3/R4), Python
+  commit, Phase-2 consolidation, Phase-3 close.
 - **Census probe v2 (`census_oq60_v2.pl`):** REQUIRED for any census re-run on the
   post-C-LATENT engine — v1's m1 tag reads the retired `variant([])` token (vacuous zero).
 - **C-FLOOR join notes:** (1) corpus is LIVE (operator topic runs land mid-day; testsets was
