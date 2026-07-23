@@ -1403,6 +1403,51 @@ bespoke and do not let it assert an invariant it never tried to break.
 
 ---
 
+## The relocating confound: a discriminating design is finished when the confound has nowhere left to land
+
+A falsifier, gate, or discriminating probe is not done when a control is attached — a control
+closes exactly ONE channel, and the confound relocates rather than dies. The OQ-232 review arc
+witnessed three relocations in a single design (2026-07-23): the Axiom 2 falsifier's
+adaptive-preference confound moved from the entrapment channel (the naive report-based kill) to
+the position channel (under the single perturbation control — the "fixed" falsifier was
+disjunctive over axiom-false ∨ P-indexed adaptation) to the cancellation neighborhood (under the
+factorial — sign-opposed hypotheses cancel, so "flat" is both the axiom-false signature and the
+both-true-and-cancelling signature). The design converged only when the last landing was
+DECLARED as a scoped residue (the cancellation band, carried in the shipped falsifier text)
+rather than fixed. Checklist before any kill condition or discriminating gate ships:
+
+- **Ask where the confound lands NOW.** Iterate until it lands nowhere or the landing is a
+  declared, scoped residue — never an unexamined corner.
+- **Sign-opposed hypotheses cancel.** Assert over the swept magnitude interval, not a point —
+  and expect a bounded instrument to widen the failing band: floors/ceilings absorb inversions,
+  so an outcome row can be empirically EMPTY at realistic resolution (check reachability with a
+  positive control; don't assume the outcome space).
+- **Check feasibility at the position the claim NAMES**, not in aggregate: OQ-232's magnitude
+  criterion was feasible only at mid-slope positions and sub-resolution at the powerless
+  position the kill condition is stated over — "feasible somewhere" concealed "infeasible
+  exactly where asked to work."
+- **An arbitrary factor that CREATES discriminating power has inverted semantics** (at 1× the
+  criterion decided nothing; the 3× multiplier was what cleared resolution) — derive thresholds
+  from the declared instrument spec (N scale steps, implied multiplier reported per position),
+  so the arbitrariness lives in a visible instrument choice.
+- **Scope capability labels to the regimes the probe reached** ("sign-discriminating" was really
+  positive-vs-flat at realistic instruments) — and an unreachable outcome row converts an arm's
+  OPEN-instantiation from "none identified" into a SPEC (the measure that makes the row
+  reachable).
+- **A conjunctive kill with an unrunnable arm is worse for practice than scoped falsifiers** —
+  ship each arm as a falsifier of the explicit conjunction it can actually reach, and state the
+  full kill as the limit case.
+- **Exiting the corrupted channel is a distinct repair strategy** (structural witnesses — facts
+  formation cannot erase — the Axiom 7 fix), the only one that exits the confound class rather
+  than managing it; ask whether the other instances admit one.
+
+Instance, probe, and per-position witness: `audits/2026-07-23_oq232_falsifier_redesign/`; class
+tracker OQ-234. Sibling law: *A deterministic gate is buildable IFF the defect has a
+merit-independent signature* (above) governs whether the gate can exist at all; this section
+governs when its kill condition actually discriminates.
+
+---
+
 ## Cross-sibling comparison disambiguates authored-field calls (the corpus as its own control)
 
 When a per-item call about an authored field is ambiguous in one file — is this beneficiary value

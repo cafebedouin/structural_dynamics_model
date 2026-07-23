@@ -1299,3 +1299,29 @@ model-quality ranking. The five-leg writeups already carry this caveat; OQ-228 t
 confound that must also be closed before any capability reading. Related: OQ-228 (regime confound +
 dispositional caveat), OQ-75 (twin corpora), `docs/profiling/README.md` (the two-read-out framing:
 mechanical structure vs interpretive stance).
+
+## GAP-26 — No rating/report channel in the engine (deliberate: reports are position-derived appearances)
+
+**Declared:** 2026-07-23. **Witness:** `audits/2026-07-23_oq232_falsifier_redesign/`
+(`discrimination_probe.py` models the channel standalone). **Drives:** OQ-234.
+
+**The absence:** the engine computes experienced extraction (χ per position) and models
+`suppression`/`accessibility_collapse` as constraint-level authored scalars, but carries NO
+χ→rating link — no model of what a rater at a position would *report*. The OQ-232 falsifier
+probe needed one and built it as a declared, invented modeling assumption in a standalone
+script (two link forms, linear and threshold, sensitivity-tested), deliberately outside the
+engine.
+
+**Why deliberate, not unbuilt:** v8 §3.2 treats every rating as a position-indexed appearance;
+wiring a testimony/report channel into the engine would smuggle reports into the χ computation
+— exactly the evidentiary-bridge inversion OQ-232/OQ-234 exist to prevent (a rating counts as
+measurement only when perturbation controls cover every channel adaptation can index). The
+probe also showed the invented link is load-bearing (the magnitude criterion is licensed only
+under an approximately linear channel and breaks under a saturating one), so any engine-side
+link would be a strong empirical commitment wearing an infrastructure costume.
+
+**Interim discipline:** a future instantiation of the OQ-232 falsifier arms, or the OQ-234
+structural-observable question, may need a report model — build it beside the engine (the
+probe is the template: declared link, ≥2 forms, criterion-level assertions), never into it.
+Promoting a report channel to engine surface is an operator ruling, not a wiring task.
+Related: OQ-232 (resolved), OQ-234 (the class), v8 §9.5 item 3 (the evidentiary bridge).

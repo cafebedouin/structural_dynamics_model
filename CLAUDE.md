@@ -528,6 +528,15 @@ the synthesis side* and *When to stop verifying*):
   vs defense) is a **deferred Ω_E** (witnessable later by world-observation), NOT Ω_P — typing it Ω_P
   lets the actor self-certify by fiat; a genuinely *contested origin* IS Ω_P/Ω_C (engine abstains).
   Same surface OPEN, opposite type. Pass-count is not the variable; whether the stop is declared is.
+- **(6) Non-discriminating falsifier (the relocating confound).** A kill condition, gate, or
+  discriminating probe is not done when a control is attached — a control closes ONE channel and
+  the confound relocates rather than dies (witnessed 3× in one review arc, OQ-232: entrapment →
+  position → cancellation neighborhood). Before it ships: ask where the confound lands NOW, and
+  iterate until it lands nowhere or the landing is a declared scoped residue; sign-opposed
+  hypotheses cancel — "flat" is the cancellation signature, so assert over swept intervals, not
+  points; check feasibility at the position the claim NAMES, not in aggregate; scope capability
+  labels to the regimes the probe reached. Full checklist + the channel-exit repair option:
+  `build_discipline.md` → *The relocating confound*.
 
 ## Critical Distinctions
 
