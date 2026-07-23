@@ -45,6 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-23 — [landed] Recall limit + borrowed-example rule (uke_write §5.4, OQ-233); Axiom-2 falsifier confound (OQ-232); perspectival-gaps essay landed (blog/, GAP-04/06 notes)
+**Files:** agent/uke_write_v2.2.md, ISSUES.md, blog/2026-05_or_before/diagnostic_value_of_perspectival_gaps.md, docs/design/design_gaps.md
+**Tier:** landed
+
+Day's three verified Claude-web critiques, each landed at its right altitude: (1) **OQ-232** —
+Axiom 2's falsifier (v8 §9.5 / v6.13.1:88) is confounded by adaptive preference (controls
+information-access and position but not preference-adaptation-from-entrapment, a mechanism the
+framework itself models); candidate repair is perturbation-shaped (hold position, vary
+entrapment) per docs/the_perturbation_principle.md; papers' kill condition not citable as
+falsifiability warrant until amended. (2) **Perspectival-gaps essay** (2026-02-11, was
+published-never-landed) → blog/; three-feature test → GAP-06 as upstream
+diagnostic-vs-erroneous pre-filter (GAP-06's stale "Deferred" corrected — router was built
+2026-06-20 via OQ-55); GAP-04 population-layer note, operator-framed as generative not factual
+(orbit = computed attitude-range; whether assigned position moves authoring routes to
+OQ-73/OQ-228). (3) **OQ-233 + uke_write §5.4** — verification is precision-shaped
+(draft-as-query-source; fresh reader inherits the seat from the artifact; recall needs a
+different question, not a different reader); borrowed-example rule (query the example in its
+home field) landed as protocol with checklist items + §6 "Corpus consulted" declaration
+(essay-layer sibling of OQ-230's coverage field); pattern claim pre-registered off n=2 with the
+reviewer's kill condition and the egocenter probe recorded before running. §5.4 placement chosen
+to keep the OQ-185 uke_write:180 anchor stable (verified).
+
 ## 2026-07-22 — [landed] uke_write v2.1→v2.2 (Forecast Register) + uke_score v0.1 companion rubric + OQ-229 minted (pre-registered fragility-bias hypothesis)
 **Files:** agent/uke_write_v2.2.md, agent/uke_score_v0.1.md, agent/analysis.py, quick_start.md, agent/manual/prompts.md, docs/technical/generator_emission_map.md, ISSUES.md, issues/INDEX.md
 **Tier:** landed

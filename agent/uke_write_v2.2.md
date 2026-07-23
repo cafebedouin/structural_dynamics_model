@@ -643,6 +643,31 @@ For every Tier 1 claim:
 - [ ] If source is contested, alternative sources provided
 - [ ] If using secondary sources, primary sources identified where possible
 
+**The recall limit, and the borrowed-example rule (NEW in v2.2).** Verification is
+precision-shaped by construction: every check is seeded by a claim already in the draft, so it
+searches the frame's own neighborhood — a true claim returns confirmation, and the counterexample
+sitting one step to the side of a sentence that passed is unreachable by any query the sentence
+generates. A pass returning all-claims-check is byte-identical to a pass that never looked for
+what wasn't claimed. A fresh reader does not fix this: a new instance reading the finished essay
+inherits the seat from the artifact — the text is the query. **Recall requires a different
+question, not a different reader.**
+
+One blind zone is predictable and therefore addressable: when the essay leans on an example
+imported from outside its field, the likeliest counterexample lives in that example's HOME field,
+which has known things about its own canonical cases for decades and whose literature the essay's
+author does not hold. **Rule: for every borrowed example, run at least one verification query
+whose subject is the EXAMPLE in its home literature, not the essay's claim** ("what does the
+history of non-Euclidean geometry say about how the alternative became available" finds Saccheri;
+"was the parallel postulate a choice" never will, because that claim is true and verification
+returns confirmation). Evidence status and kill condition: ISSUES.md OQ-233.
+
+The residual no query closes is declared, not recalled: state what corpus the piece was built
+from and what was knowingly not consulted (§6 metadata, "Corpus consulted"). That converts an
+invisible miss into a marked one — the only move available from a seat.
+
+- [ ] Every borrowed example has at least one home-field query run against the example itself
+- [ ] The Corpus-consulted declaration is filled (§6 metadata)
+
 ### §5.5 The Model Humility Check (REVISED in v2.1)
 
 If essay uses analytical models/frameworks:
@@ -755,6 +780,7 @@ per-essay voice call; the archived copy MUST retain it.]
 - Omega-to-question mapping: [Which omegas became which unresolved questions]
 - Unsupported translations: [Any DR insights that lack independent Tier 1 evidence — these should have been removed]
 - Strut provenance (§2.4 essays): [Per seat: measured / inferred / absent; absent struts named in-body? Y/N; who decided which eyes count]
+- Corpus consulted: [Sources and fields the piece was built from; fields knowingly NOT consulted — especially the home fields of borrowed examples (§5.4); converts invisible misses into marked ones]
 ```
 
 ### §6.1 The Forecast Register Block Format (NEW in v2.2)
@@ -965,6 +991,12 @@ This doesn't mean hedging everything. It means:
   voice; depth-fusion reserved for hydrostatic joints with a real resolver), the
   replicate-stability rule (§1.5.2: run-stability is evidence about the authoring, never
   the world), and F-ENGINE-AS-TRUTH.
+- Fourth reviewer-found addition (2026-07-23): the recall limit + borrowed-example rule in §5.4
+  (verification is precision-shaped — draft-as-query-source searches its own neighborhood; a
+  fresh reader inherits the seat from the artifact, so recall needs a different question, not a
+  different reader; for borrowed examples, query the example in its home field, not the claim) +
+  the Corpus-consulted declaration in §6 metadata (the declared residual — the essay-layer
+  instance of the OQ-230 coverage field). Evidence + kill condition: OQ-233.
 - Third reviewer-found correction (Draft 6): snapping was ungoverned — the Rashomon rule
   lets the writer script every account, so an account can be made to self-destruct. §2.4
   snapping rules added (snap only on a fired pre-stated kill condition; engage the seat's

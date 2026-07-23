@@ -10971,6 +10971,57 @@ and should not be cited as the axiom's falsifiability warrant without this cavea
 fragility-bias pre-registration — a sibling case of pre-registering a discriminating
 design before the data pass).
 
+## OQ-233 — The borrowed-example rule: grounding misses cluster in the home fields of imported examples (pre-registered off n=2, kill condition attached)
+
+**Ω-type:** Ω_E (each future classified miss is a datum; the pre-registered egocenter probe is runnable now).
+
+**Status:** open — rule landed operationally in uke_write v2.2 §5.4 (2026-07-23); the PATTERN
+CLAIM this OQ tracks is pre-registered off n=2 and unadjudicated.
+**Priority:** 3
+
+**Origin.** Claude-web review of the essay pipeline's grounding pass (2026-07-23,
+operator-relayed). The two instances are reviewer-witnessed in that session, not independently
+re-verified here: (1) the Euclid essay's Saccheri miss — the claim "the parallel postulate was a
+choice" is TRUE, so verification returned confirmation, and the Saccheri finding sat one step to
+the side, reachable only by querying the example's home literature (history of non-Euclidean
+geometry); (2) a who-leaves-records claim borrowed from history, killed by historiography.
+
+**The mechanism (settled, not what this OQ tracks).** Verification is precision-shaped by
+construction: the draft is the query source, so every search is seeded by a claim already in the
+text and returns the frame's own neighborhood; all-claims-check is byte-identical to
+never-looked-for-the-unclaimed (the Build Discipline byte-identical-read rule applied to the
+pipeline's own grounding pass). Fresh-context re-readers inherit the seat from the artifact — the
+text is the query — so recall needs a different QUESTION, not a different reader. This much is
+doctrine and is now protocol (uke_write §5.4).
+
+**The pattern claim (what this OQ tracks).** Grounding misses are not random: they cluster where
+the essay imports an example from outside its field, because the example's home field has known
+things about its own canonical cases that neither the author nor the claim-seeded queries hold.
+Rule under test: query the EXAMPLE in its home literature, not the claim.
+
+**Kill condition (pre-registered by the reviewer).** If the pipeline's other significant misses,
+as they accumulate and get classified, land INSIDE the essay's own field rather than at import
+points, the pattern is coincidence off n=2 and the query rule buys nothing (keep the declaration,
+drop the rule's priority).
+
+**Pre-registered first probe (medium confidence, unchecked — recorded before running).** The
+Cyclopean essay borrows the cyclopean point from vision science, so its exposure is predictable
+in advance: vision science's own egocenter literature — the reviewer's recollection is that the
+egocenter is not fixed at the bridge of the nose and shifts with task and fixation, which would
+COMPLICATE "a single manufactured origin" rather than support it. The query to run: the
+egocenter's stability in the vision-science literature. Either outcome is a datum for this OQ.
+
+**Declared seam (carried with the rule, not fixable).** The rule was derived from the only two
+misses the reviewing frame was positioned to catch; the miss class where BOTH frames agree leaves
+no trace in any record either seat can produce. The residual response is declaration, not recall:
+the §6 "Corpus consulted" metadata line (the essay-layer instance of OQ-230's source-coverage
+field — same instrument, one layer up).
+
+**Cross-refs.** OQ-230 (source/coverage provenance — the declaration's substrate-side sibling),
+OQ-229 (pre-registration-before-the-data-pass pattern), uke_write v2.2 §5.4 + §6 metadata
+(the operational landing), `docs/technical/build_discipline.md` (the byte-identical-read spine
+this instantiates at the grounding layer).
+
 ---
 
 *Last updated: 2026-07-22. Add new items with sequential OQ-NN labels. Mark
