@@ -502,6 +502,22 @@ are pre-computed. The corpus is continuous-growing; the manifest key records
 the timestamp and commit at which values were computed. Always cite the manifest
 when reporting findings.
 
+### Purity absence contract (OQ-60, 2026-07-23)
+
+Purity carries **two absence tokens that must never be coerced, averaged, or unified**:
+engine `unknown` (no-data — a subscore's evidence is unauthored; e.g. no `coordination_type`
+⇒ no Boltzmann floor ⇒ `excess_extraction` fails; the old fabricated
+`boltzmann_floor_default` fallback is REMOVED) vs `-1.0` (epistemic-gate-fail sentinel).
+JSON serializes BOTH as `null` (`purity_score`/`purity_band`). Consumer rules: never
+`.get("purity_score", 0)`; guard `number/1` before arithmetic OR any sort/max (atoms sort
+before numbers — silent misorder); dispositive clean verdicts (pristine/`stable`/`pure_*`)
+gate at coverage 1.0 → distinct abstention token (`inconclusive(no_data)`, `undetermined`)
+while positive existentials (contaminated/cascading) fire through unknown members;
+descriptive stats carry `n_scored`/`n_total` (json `diagnostic.purity_n_scored/_n_total`).
+**Fixture rule:** synthetic test constraints needing scorable purity must AUTHOR
+`coordination_type` (+ `extractiveness`). Rulings R1–R4: ISSUES.md OQ-60; witnesses:
+`audits/2026-07-17_oq60_purity_absence/`.
+
 ### Headline verdict contract (OQ-98, 2026-06-11)
 
 Per-constraint entries in `pipeline_output.json` / `enriched_pipeline.json` carry BOTH
@@ -674,6 +690,24 @@ section, and the report sidecar. Probe authors: took-effect guards on
 `drl_core:base_extractiveness/2` must pin the FIRST solution (`once/1`) — the predicate is
 multifile and an unpinned read backtracks past a shadowing direct fact (witnessed,
 KNOWN_STATE 2026-07-03).
+
+### Run the purity-absence suite (OQ-60 standing guard)
+
+```bash
+cd prolog && swipl -l stack.pl -l covering_analysis.pl -l maxent_classifier.pl \
+  -l dirac_classification.pl -l diagnostic_summary.pl -l post_synthesis.pl \
+  -l json_report.pl -l giant_component_analysis.pl \
+  -g "[tests/test_purity_absence], run_tests([purity_absence, purity_absence_producers, purity_absence_floor]), halt" -t "halt(1)"
+```
+
+17 tests, three units: preflight injection end-to-end (0a/0a.2 guards live, not shadowed),
+two-sided golden + sentinel-XOR-unknown precedence, token totality, fpn/gc ingest-boundary
+collapse (ordering guard), the four no-data producer termini (m1–m4), R3 aggregation
+polarity, and the C-FLOOR m5 fixture (floor fails on absent `coordination_type`; authored
+override/typed paths unchanged). Needs the PIPELINE load chain shown — `json_report` /
+`giant_component_analysis` are not loaded by `[stack]`; the tests fail loudly (not silently)
+on a short chain. Scope `run_tests/1` as shown (bare `run_tests` sweeps testset-embedded
+units).
 
 ### Run the full analysis pipeline
 
