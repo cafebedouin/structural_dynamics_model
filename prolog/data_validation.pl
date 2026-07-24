@@ -10,7 +10,9 @@
     % fail-fast gate suite tests/test_epsilon_declaration.pl — two copies
     % would fork the check, Pattern 2)
     epsilon_provenance_drift/2,
-    missing_epsilon_provenance/1
+    missing_epsilon_provenance/1,
+    % OQ-153 keying (b) — MEASURE-ONLY, deliberately not in validate_all (see clause)
+    inconsistent_update_authority/2
 ]).
 
 :- use_module(narrative_ontology).
@@ -373,6 +375,24 @@ validate_update_authority :-
 valid_update_authority_value(licensed_revisable).
 valid_update_authority_value(frozen).
 valid_update_authority_value(absent_diffuse).
+
+%% inconsistent_update_authority(-KernelId, -Values)   [MEASURE-ONLY — NOT a gate]
+%  OQ-153 keying (b): update_authority is CID-keyed, but revision authority is a
+%  KERNEL property — sibling readings of one kernel share one amending institution.
+%  This reports kernels whose CIDs carry DIFFERING authored values. It is deliberately
+%  NOT wired into validate_all (operator 2026-07-24): during the step-3 measurement
+%  phase, cross-kernel disagreement IS the reliability signal (test-retest); gating on
+%  it would convert that signal into an error to reconcile away. Measure, record, THEN
+%  enforce. Scoped to AUTHORED facts only; ONE-authored / one-unauthored is PARTIAL
+%  COVERAGE, not inconsistency (only >=2 distinct AUTHORED values on one kernel count).
+inconsistent_update_authority(K, Values) :-
+    setof(K0, C0^V0^( narrative_ontology:update_authority(C0, V0),
+                      narrative_ontology:cs_kernel_id(C0, K0) ), Ks),
+    member(K, Ks),
+    findall(V, ( narrative_ontology:cs_kernel_id(C, K),
+                 narrative_ontology:update_authority(C, V) ), Vs),
+    sort(Vs, Values),          % distinct authored values on this kernel
+    Values = [_, _|_].         % >=2 distinct => inconsistent (1 value or 1 authored => not reported)
 
 /* ============================================================================
    4. CLASSIFICATION CONSISTENCY VALIDATION

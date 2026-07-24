@@ -127,3 +127,61 @@ Cross-leg same-kernel opposite-stratum authorings (e.g. `constitutional_text_aut
 sonnet, in in testsets), pulled from the other leg's text, shuffled in unmarked. Tests same-kernel /
 different-model reliability (distinct from the primary-15 Kill C). To be listed in
 `PREREGISTRATION_replicates.md`.
+
+---
+
+## ADDENDUM 1 — appended 2026-07-24, AFTER the seal (not a rewrite)
+
+Primary pre-registration above sealed at commit **`21496a1c`** (git history is rewritable; this hash
+pins the sealed object). This addendum corrects one selection flaw and hardens the pass.
+
+### A1.1 Frozen-swap: immutability-claim → institutional-superseded (collinearity fix)
+
+Items 9 (`salic_prohibition__immutable_mandate_reading`) and 10
+(`eternal_marriage_covenant__immutable_commandment_reading`) are **REMOVED**. They were selected by
+immutability *language*, and **a reading asserting immutability IS a naturalization claim** — so
+`frozen` sourced that way is collinear with the naturalized signature in substance while Kill C passes
+in form: condition 5 (frozen authority) would become a restatement of condition 3 (naturalization),
+the exact laundering the leg exists to prevent, entering underneath the falsifier. It is also
+reading-the-reading: a doctrine's immutability claim is one party's claim, not the institution's
+authority structure (an eternal-covenant doctrine can be held by a church that demonstrably amends).
+
+**Replaced with institutional-`frozen`** (superseded instrument, no successor amending body — `frozen`
+for institutional-structure reasons, not asserted ones), both in-stratum, 7/8 preserved:
+- 9′ `bretton_woods_treaty_substrate__neoliberal_convertibility` — Bretton Woods system (superseded 1971).
+- 10′ `versailles_reparations_clauses__punitive_liability_reading` — Treaty of Versailles (defunct/repudiated).
+
+### A1.2 Supply-only items — excluded from the Kill B denominator
+
+Items 9′ and 10′ are **SELECTED-FOR-`frozen`** (on superseded structure). Mark them **supply-only**:
+they exist to populate the value, and cannot test assignability when the answer (superseded / no
+successor body) is in the text. **Exclude 9′ and 10′ from the Kill B denominator.** (Item 8
+`balfour_mandate_instruments` was already in the sample and its `frozen` prediction is uncertain — it
+is NOT supply-only.)
+
+### A1.3 Remaining Kill A exposure (stated honestly)
+
+- `frozen` is now **protected by construction** (9′, 10′ selected-for + `bitcoin_whitepaper` out).
+- `licensed_revisable` is well supplied (US Const ×2, Japan Const, refugee convention, legislature).
+- **`absent_diffuse` rests ENTIRELY on unpredicted calls** (`church_turing`, `notability`,
+  `biblical_source_text`, `legitimacy_of_practice_standardization`, `bitcoin_consensus`) with
+  **nothing selected for it.** If Kill A fires on `absent_diffuse`, that is the **honest** version and
+  reads differently from the `frozen` case, which is now unfireable by design.
+
+### A1.4 Subagent input hardening
+
+- **Strip CIDs and reading labels from the handed texts** — a filename/label like
+  `immutable_mandate_reading` hands over the answer. The subagent sees only the authored
+  situation/narrative prose.
+- **Record per item whether the text contains an explicit unalterability phrase** ("shall not be
+  altered", "immutable", "eternal", "closed", "final") — the covariate that separates "the field is
+  assignable off institutional structure" from "the text said so."
+
+### A1.5 Final 15 (superseding the table's items 9/10)
+
+in: `commerce_clause_scope`, `bitcoin_consensus_kernel`, `article_9_war_renunciation`,
+`biblical_authority`, `balfour_mandate_instruments`, `bretton_woods_treaty_substrate__neoliberal_convertibility`,
+`versailles_reparations_clauses__punitive_liability_reading`.
+out: `equal_protection_clause`, `bitcoin_whitepaper_purpose`, `biblical_source_text`,
+`church_turing_thesis`, `notability_guidelines`, `legitimacy_of_practice_standardization`,
+`refugee_convention_text`, `licensing_statute_mandate`.
