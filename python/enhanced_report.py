@@ -332,6 +332,267 @@ def find_constraint_entry(pipeline_data, constraint_id):
     return None
 
 
+# --- OQ-61 Q1: network severe-fraction render ---
+
+def _network_severity_render(diag):
+    """OQ-61 Q1: render the network line as a SEVERE FRACTION, replacing the
+    saturated categorical (which read `cascading` at NumSevere>=3 absolute —
+    633/643 severe on the witnessing corpus). Four cases keyed on
+    n_drifting x token, DERIVED FROM network_dynamics.pl clause order
+    (cascading/degrading only when n_drifting>0; stable/undetermined only when
+    n_drifting==0). Fail-closed: an out-of-order token or n_severe>n_drifting is
+    an engine bug and raises rather than rendering a plausible line.
+
+    The JSON `network_stability` token stays byte-identical (this is render-only).
+    """
+    token = diag.get("network_stability", "unknown")
+    n_drift = diag.get("network_n_drifting")
+    n_sev = diag.get("network_n_severe")
+    thresh = diag.get("network_cascade_count_threshold")
+    # Pre-Q1 output (counts absent): fall back to the bare token, unchanged.
+    if n_drift is None or n_sev is None:
+        return f"Network stability: {token}"
+    # (a) universal invariant across ALL branches: severe subseteq drifting.
+    assert n_sev <= n_drift, (
+        f"OQ-61 network: n_severe {n_sev} > n_drifting {n_drift} "
+        "(counts from different contexts?)"
+    )
+    if n_drift > 0:
+        # clause order: token in {cascading, degrading}; cascading iff n_sev>=Thresh
+        assert token in ("cascading", "degrading"), (
+            f"OQ-61 network: n_drifting {n_drift} > 0 but token={token} "
+            "(expected cascading|degrading)"
+        )
+        if thresh is not None:
+            assert (token == "cascading") == (n_sev >= thresh), (
+                f"OQ-61 network: token={token} inconsistent with n_severe {n_sev} "
+                f"vs cascade threshold {thresh}"
+            )
+        pct = round(n_sev / n_drift * 100) if n_drift else 0
+        return (
+            f"Network severity: {n_sev}/{n_drift} drifting are severe ({pct}%) "
+            "[severe = effective purity < 0.70]"
+        )
+    # n_drift == 0
+    assert n_sev == 0, f"OQ-61 network: n_drifting 0 but n_severe {n_sev}"
+    if token == "stable":
+        return "Network severity: no drifting (full coverage)"
+    if token == "undetermined":
+        return "Network severity: no drifting observed, coverage incomplete"
+    # cascading/degrading at zero drift is unreachable by clause order — never
+    # fall through silently to a plausible line.
+    return f"Network severity: INCONSISTENT (token={token} at n_drifting=0)"
+
+
+def build_severity_by_type_block(diag):
+    """OQ-61 Q1 backstop: type x severity over the DRIFTING subset. Prolog-built
+    (severity_by_type) using the engine's <0.30/<0.70 cut — no Python
+    reimplementation. Render-only. Its severe total == network_n_severe (asserted
+    in Prolog at emit; re-asserted here as a read-site marginal check). Empty when
+    nothing is drifting or the field is absent (pre-Q1 output)."""
+    from collections import Counter
+    sbt = diag.get("severity_by_type")
+    if not sbt:
+        return []
+    n_sev = diag.get("network_n_severe")
+    n_drift = diag.get("network_n_drifting")
+    lines = [
+        f"  SEVERITY x TYPE  (drifting subset, n_drifting={n_drift}; engine "
+        "severity cut, Q1 backstop):",
+        "        {:<14}{:>9}{:>8}{:>6}{:>7} | {:>6}{:>9}".format(
+            "type", "critical", "warning", "watch", "undet", "severe", "drifting"),
+    ]
+    tot = Counter()
+    for t in sorted(sbt):
+        r = sbt[t]
+        lines.append("        {:<14}{:>9}{:>8}{:>6}{:>7} | {:>6}{:>9}".format(
+            t, r.get("critical", 0), r.get("warning", 0), r.get("watch", 0),
+            r.get("undetermined", 0), r.get("severe", 0), r.get("drifting", 0)))
+        tot["severe"] += r.get("severe", 0)
+        tot["drifting"] += r.get("drifting", 0)
+    if n_sev is not None:
+        assert tot["severe"] == n_sev, (
+            f"OQ-61 Q1 backstop: severity_by_type severe {tot['severe']} != "
+            f"network_n_severe {n_sev}")
+    return lines
+
+
+# --- OQ-61 Q2: purity x type cross-tab (render-only) ---
+
+# Column (band) order and the reporting-convention expected band per type.
+# The convention is a REPORTING CONVENTION, not ground truth (labeled as such
+# in the rendered block); purity_zone vocabulary (logic_extensions.md 2.3),
+# OQ-62 governs the band vocabulary. "mixed" maps to the borderline band.
+_PURITY_BAND_ORDER = ["pristine", "sound", "borderline", "contaminated", "degraded"]
+_PURITY_TYPE_ORDER = ["mountain", "rope", "tangled_rope", "snare", "piton", "scaffold"]
+_EXPECTED_BANDS = {
+    "mountain": {"pristine", "sound"},
+    "rope": {"pristine", "sound"},
+    "tangled_rope": {"contaminated", "degraded"},
+    "snare": {"contaminated", "degraded"},
+    "scaffold": {"borderline"},
+    "piton": {"borderline"},
+}
+# Off-diagonal interpretation glosses (only the two headlined directions).
+_RESIDUAL_GLOSS = {
+    ("rope", "contaminated"): "cover-story candidates",
+    ("rope", "degraded"): "cover-story candidates",
+    ("mountain", "contaminated"): "cover-story candidates",
+    ("mountain", "degraded"): "cover-story candidates",
+    ("tangled_rope", "pristine"): "fragile-rope candidates",
+    ("tangled_rope", "sound"): "fragile-rope candidates",
+    ("snare", "pristine"): "fragile-rope candidates",
+    ("snare", "sound"): "fragile-rope candidates",
+}
+
+
+def build_purity_type_band_block(per_constraint, diag):
+    """OQ-61 Q2: type x band (INTRINSIC purity) cross-tab, headlining the
+    off-diagonal residual. Render-only, built from per_constraint (claimed_type,
+    purity_band, purity_class). The renderer ASSERTS its marginals and fails
+    loudly — a hand/loop-built cross-tab that prints wrong margins is the exact
+    failure this block exists to prevent.
+
+    Descriptive (R3/R4): every row carries scored/gf/nd/total. Single reported
+    leg, labeled (OQ-236) — not cross-leg comparable. Returns a list of lines
+    (empty if per_constraint is unavailable or carries no purity_class, i.e. a
+    pre-Q3 output that cannot split gf/nd)."""
+    from collections import Counter, defaultdict
+    if not per_constraint:
+        return []
+    # Require purity_class on every row to split gf/nd; else this is a pre-Q3
+    # output and the tab's gf/nd columns cannot be honored — skip rather than
+    # print a tab whose margins we cannot assert.
+    if any(pc.get("purity_class") is None for pc in per_constraint):
+        return []
+
+    cells = defaultdict(Counter)      # type -> band -> count (scored only)
+    gf = Counter()                    # type -> gate_fail count
+    nd = Counter()                    # type -> no_data count
+    scored_by_type = Counter()
+    types_seen = []
+    for pc in per_constraint:
+        t = pc.get("claimed_type") or "unknown"
+        if t not in types_seen:
+            types_seen.append(t)
+        cls = pc.get("purity_class")
+        if cls == "scored":
+            band = pc.get("purity_band")
+            cells[t][band] += 1
+            scored_by_type[t] += 1
+        elif cls == "gate_fail":
+            gf[t] += 1
+        elif cls == "no_data":
+            nd[t] += 1
+        # malformed cannot reach here — the Prolog emit halts on it.
+
+    # Type order: canonical first, then any extras in first-seen order.
+    types = [t for t in _PURITY_TYPE_ORDER if t in types_seen]
+    types += [t for t in types_seen if t not in _PURITY_TYPE_ORDER]
+
+    # --- marginal asserts (fail loudly) ---
+    col_tot = Counter()
+    grand_scored = 0
+    for t in types:
+        row_scored = sum(cells[t][b] for b in _PURITY_BAND_ORDER)
+        assert row_scored == scored_by_type[t], (
+            f"OQ-61 Q2: row {t} band cells {row_scored} != scored {scored_by_type[t]}"
+        )
+        for b in _PURITY_BAND_ORDER:
+            col_tot[b] += cells[t][b]
+        grand_scored += row_scored
+    # grand total == purity_n_scored (when available)
+    pur_n_scored = diag.get("purity_n_scored")
+    if pur_n_scored is not None:
+        assert grand_scored == pur_n_scored, (
+            f"OQ-61 Q2: grand scored {grand_scored} != purity_n_scored {pur_n_scored}"
+        )
+    # gf/nd column sums == diagnostic totals (when available)
+    pur_n_gf = diag.get("purity_n_gate_fail")
+    pur_n_nd = diag.get("purity_n_no_data")
+    if pur_n_gf is not None:
+        assert sum(gf.values()) == pur_n_gf, (
+            f"OQ-61 Q2: gf column {sum(gf.values())} != purity_n_gate_fail {pur_n_gf}"
+        )
+    if pur_n_nd is not None:
+        assert sum(nd.values()) == pur_n_nd, (
+            f"OQ-61 Q2: nd column {sum(nd.values())} != purity_n_no_data {pur_n_nd}"
+        )
+
+    # --- off-diagonal residual (headline) ---
+    residual_lines = []
+    for t in types:
+        expected = _EXPECTED_BANDS.get(t)
+        if expected is None:
+            continue
+        for b in _PURITY_BAND_ORDER:
+            n = cells[t][b]
+            if n and b not in expected:
+                gloss = _RESIDUAL_GLOSS.get((t, b))
+                plural = f"{t}s" if not t.endswith("s") else t
+                line = f"       {n:3d} {b} {plural}"
+                if gloss:
+                    line += f"  -> {gloss}"
+                residual_lines.append(line)
+
+    # --- render ---
+    lines = [
+        "  PURITY x TYPE  (INTRINSIC purity; descriptive; single leg -- OQ-236, "
+        "not cross-leg comparable)",
+    ]
+    if residual_lines:
+        lines.append("    Off-diagonal residual -- where purity says what type does not:")
+        lines.extend(residual_lines)
+    else:
+        lines.append("    Off-diagonal residual: none (every scored type sits in its "
+                     "expected band)")
+    lines.append(
+        "    Expected band by type  (REPORTING CONVENTION, not ground truth; "
+        "purity_zone vocabulary -- OQ-62 governs 'contaminated' = [0.30,0.50)):"
+    )
+    lines.append(
+        "      mountain,rope -> pristine|sound ; tangled_rope,snare -> contaminated ; "
+        "scaffold,piton -> mixed"
+    )
+    lines.append("    Full matrix  (per-row unscored split kept as gate-fail/no-data "
+                 "-- OQ-236 provenance):")
+    hdr = ("        {:<14}{:>9}{:>6}{:>7}{:>7}{:>7} | {:>6}{:>4}{:>4}{:>6}"
+           .format("type", "pristine", "sound", "border", "contam", "degrad",
+                   "scored", "gf", "nd", "total"))
+    lines.append(hdr)
+    tot_row = Counter()
+    tot_gf = tot_nd = tot_scored = tot_total = 0
+    for t in types:
+        rs = scored_by_type[t]
+        g = gf[t]
+        d = nd[t]
+        total = rs + g + d
+        lines.append(
+            "        {:<14}{:>9}{:>6}{:>7}{:>7}{:>7} | {:>6}{:>4}{:>4}{:>6}".format(
+                t,
+                cells[t]["pristine"], cells[t]["sound"], cells[t]["borderline"],
+                cells[t]["contaminated"], cells[t]["degraded"],
+                rs, g, d, total,
+            )
+        )
+        for b in _PURITY_BAND_ORDER:
+            tot_row[b] += cells[t][b]
+        tot_gf += g
+        tot_nd += d
+        tot_scored += rs
+        tot_total += total
+    lines.append("        " + "-" * 71)
+    lines.append(
+        "        {:<14}{:>9}{:>6}{:>7}{:>7}{:>7} | {:>6}{:>4}{:>4}{:>6}".format(
+            "totals",
+            tot_row["pristine"], tot_row["sound"], tot_row["borderline"],
+            tot_row["contaminated"], tot_row["degraded"],
+            tot_scored, tot_gf, tot_nd, tot_total,
+        )
+    )
+    return lines
+
+
 # --- Header Builder ---
 
 def build_header(pipeline_data):
@@ -346,7 +607,8 @@ def build_header(pipeline_data):
 
     corpus_size = diag.get("corpus_size", "?")
     type_dist = diag.get("type_distribution", {})
-    network = diag.get("network_stability", "unknown")
+    # OQ-61 Q1: severe fraction, not the saturated categorical.
+    network_render = _network_severity_render(diag)
     omega_count = val.get("omega_count", 0) if val else 0
     critical = val.get("omega_by_severity", {}).get("critical", 0) if val else 0
 
@@ -377,7 +639,7 @@ def build_header(pipeline_data):
         "",
         f"CORPUS CONTEXT: {corpus_size} constraints",
         f"  Types: {', '.join(type_parts)}",
-        f"  Network stability: {network} | {omega_count} omegas ({critical} critical)",
+        f"  {network_render} | {omega_count} omegas ({critical} critical)",
     ]
 
     per_constraint = pipeline_data.get("per_constraint", [])
@@ -389,15 +651,41 @@ def build_header(pipeline_data):
     # fall back to counting per_constraint for pre-0b outputs.
     pur_n_scored = diag.get("purity_n_scored")
     pur_n_total = diag.get("purity_n_total")
+    pur_n_gate_fail = diag.get("purity_n_gate_fail")
+    pur_n_no_data = diag.get("purity_n_no_data")
     if pur_n_scored is None or pur_n_total is None:
+        # Pre-0b output: purity siblings absent. This path CANNOT split the
+        # unscored bucket — write_json_number collapsed both -1.0 and `unknown`
+        # to JSON null upstream (json_report.pl), so per_constraint loses the
+        # distinction. Print it truthfully as unavailable.
         pur_n_total = len(per_constraint)
         pur_n_scored = sum(
             1 for pc in per_constraint if pc.get("purity_score") is not None
         )
-    lines.append(
-        f"  Purity coverage: {pur_n_scored}/{pur_n_total} scorable, "
-        f"{pur_n_total - pur_n_scored} unscored (gate-fail sentinel or no-data)"
-    )
+        lines.append(
+            f"  Purity coverage: {pur_n_scored}/{pur_n_total} scorable, "
+            f"{pur_n_total - pur_n_scored} unscored (split unavailable pre-0b)"
+        )
+    else:
+        unscored = pur_n_total - pur_n_scored
+        if pur_n_gate_fail is not None and pur_n_no_data is not None:
+            # OQ-61 Q3: the two absence tokens, existing vocabulary. Assert the
+            # split closes (Z == G + D) in the renderer.
+            assert unscored == pur_n_gate_fail + pur_n_no_data, (
+                f"OQ-61 purity coverage split mismatch: {unscored} unscored "
+                f"!= {pur_n_gate_fail} gate-fail + {pur_n_no_data} no-data"
+            )
+            lines.append(
+                f"  Purity coverage: {pur_n_scored}/{pur_n_total} scorable, "
+                f"{unscored} unscored = {pur_n_gate_fail} gate-fail (sentinel) "
+                f"+ {pur_n_no_data} no-data (no coordination_type)"
+            )
+        else:
+            # 0b but pre-Q3: the split siblings are not emitted yet.
+            lines.append(
+                f"  Purity coverage: {pur_n_scored}/{pur_n_total} scorable, "
+                f"{unscored} unscored (gate-fail sentinel or no-data)"
+            )
 
     # Confidence distribution from per_constraint
     band_counts = {}
@@ -413,6 +701,13 @@ def build_header(pipeline_data):
             pct = round(n / total * 100) if total else 0
             parts.append(f"{n} {band} ({pct}%)")
         lines.append(f"  MaxEnt bands (corpus): {' | '.join(parts)}")
+
+    # OQ-61 Q2: purity x type cross-tab (render-only), headlining the
+    # off-diagonal residual — where purity says what type does not.
+    lines.extend(build_purity_type_band_block(per_constraint, diag))
+
+    # OQ-61 Q1 backstop: type x severity over the drifting subset.
+    lines.extend(build_severity_by_type_block(diag))
 
     # CS pattern distribution (when present)
     cs_dist = val.get("cs_pattern_distribution") if val else None

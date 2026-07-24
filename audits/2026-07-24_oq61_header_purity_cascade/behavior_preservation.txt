@@ -1,0 +1,19 @@
+=== (1) DETERMINISM: two changed-code runs ===
+=== oq61_det_a.json  vs  oq61_det_b.json ===
+per_constraint ids: 199 vs 199  (shared 199)
+[diagnostic] added keys:   []
+[diagnostic] removed keys: []
+[diagnostic] CHANGED shared keys: []
+[per_constraint] added keys:   []
+[per_constraint] removed keys: []
+[per_constraint] CHANGED shared (id,key): 0
+
+=== (2) ADDITIVE-ONLY: HEAD baseline vs changed ===
+=== oq61_baseline_head.json  vs  oq61_det_a.json ===
+per_constraint ids: 199 vs 199  (shared 199)
+[diagnostic] added keys:   ['network_cascade_count_threshold', 'network_n_drifting', 'network_n_severe', 'purity_n_gate_fail', 'purity_n_no_data', 'severity_by_type']
+[diagnostic] removed keys: []
+[diagnostic] CHANGED shared keys: []
+[per_constraint] added keys:   ['purity_class']
+[per_constraint] removed keys: []
+[per_constraint] CHANGED shared (id,key): 0

@@ -333,6 +333,14 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     format(S, '      "purity_band": ', []),
     write_json_string(S, PBand),
     format(S, ',~n', []),
+    % OQ-61 Q3/Q2: per-row absence class (scored|gate_fail|no_data). Both
+    % absence tokens serialize purity_score/purity_band to null, so this is the
+    % only per-row surface that keeps the gate_fail/no_data distinction — the
+    % type×band tab's gf/nd columns are built from it.
+    purity_absence_class(C, PClass),
+    format(S, '      "purity_class": ', []),
+    write_json_string(S, PClass),
+    format(S, ',~n', []),
 
     % contamination_network (FPN topology)
     format(S, '      "contamination_network": ', []),
@@ -1685,9 +1693,33 @@ write_diagnostic_object(S, Constraints, CorpusSize) :-
     format(S, '    "purity_summary": ', []),
     write_json_count_object(S, PurityDist),
     format(S, ',~n', []),
-    purity_scored_count(Constraints, NPurScored),
+    % OQ-61 Q3: split the unscored bucket into its two absence tokens with the
+    % existing vocabulary (gate_fail = -1.0 sentinel, no_data = `unknown`).
+    purity_absence_counts(Constraints, NPurScored, NPurGateFail, NPurNoData, NPurMalformed),
     length(Constraints, NPurTotal),
+    % Fail-closed guard: out-of-range purity is a bug, not a category. malformed
+    % is NOT a fifth token — halt with the offending ids so the two-token
+    % vocabulary (unscored == gate_fail + no_data) always closes.
+    (   NPurMalformed =:= 0
+    ->  true
+    ;   findall(Cm, (member(Cm, Constraints), purity_absence_class(Cm, malformed)), BadIds),
+        format(user_error,
+               "FATAL OQ-61: ~w malformed (out-of-range) purity score(s): ~w~n",
+               [NPurMalformed, BadIds]),
+        halt(1)
+    ),
+    % Cross-source ENUMERATION check (not a tautology): the positive classifier
+    % and the corpus length must enumerate the same list.
+    (   NPurScored + NPurGateFail + NPurNoData =:= NPurTotal
+    ->  true
+    ;   format(user_error,
+               "FATAL OQ-61: purity split ~w+~w+~w =\\= n_total ~w~n",
+               [NPurScored, NPurGateFail, NPurNoData, NPurTotal]),
+        halt(1)
+    ),
     format(S, '    "purity_n_scored": ~w,~n', [NPurScored]),
+    format(S, '    "purity_n_gate_fail": ~w,~n', [NPurGateFail]),
+    format(S, '    "purity_n_no_data": ~w,~n', [NPurNoData]),
     format(S, '    "purity_n_total": ~w,~n', [NPurTotal]),
 
     % coupling_summary
@@ -1708,7 +1740,10 @@ write_diagnostic_object(S, Constraints, CorpusSize) :-
     write_json_count_object(S, DriftDist),
     format(S, ',~n', []),
 
-    % network_stability
+    % network_stability + OQ-61 Q1 severe-fraction counts + type×severity
+    % backstop tab. The counts use the SAME shared helpers the assessment token
+    % uses (network_drifting_constraints/2, network_severe_constraints/3), so
+    % the header fraction matches the categorical token by construction.
     logical_fingerprint:standard_context_for_power(analytical, StabCtx),
     (   catch(drl_lifecycle:network_stability_assessment(StabCtx, StabAssessment), _, fail)
     ->  true
@@ -1716,6 +1751,35 @@ write_diagnostic_object(S, Constraints, CorpusSize) :-
     ),
     format(S, '    "network_stability": ', []),
     write_json_string(S, StabAssessment),
+    format(S, ',~n', []),
+    (   catch((
+            drl_lifecycle:network_drifting_constraints(StabCtx, DriftingCs0),
+            drl_lifecycle:network_severe_constraints(StabCtx, DriftingCs0, SevereCs0),
+            severity_by_type_rows(StabCtx, DriftingCs0, SevRows0, NSevereTab0)
+        ), _, fail)
+    ->  length(DriftingCs0, NDrifting),
+        length(SevereCs0, NSevere),
+        SevRows = SevRows0, NSevereTab = NSevereTab0
+    ;   SevRows = [], NDrifting = 0, NSevere = 0, NSevereTab = 0
+    ),
+    % Backstop reconciliation (fail-closed): the tab's severe total must equal
+    % the fraction's severe count — both derive from the same helpers, so a
+    % mismatch is an engine bug, not a data condition. Halt loudly.
+    (   NSevereTab =:= NSevere
+    ->  true
+    ;   format(user_error,
+               "FATAL OQ-61: severity_by_type severe total ~w =\\= network_n_severe ~w~n",
+               [NSevereTab, NSevere]),
+        halt(1)
+    ),
+    format(S, '    "network_n_drifting": ~w,~n', [NDrifting]),
+    format(S, '    "network_n_severe": ~w,~n', [NSevere]),
+    % Emit the cascade threshold so the Python renderer's token↔count
+    % consistency check reads the config value, never a literal 3.
+    config:param(network_cascade_count_threshold, CascadeThreshEmit),
+    format(S, '    "network_cascade_count_threshold": ~w,~n', [CascadeThreshEmit]),
+    format(S, '    "severity_by_type": ', []),
+    write_severity_by_type(S, SevRows),
     format(S, ',~n', []),
 
     % corpus_wasserstein_fracture (total W1 across all constraints)
@@ -2015,17 +2079,104 @@ tally_claimed_types(Constraints, Pairs) :-
     msort(Types, Sorted),
     run_length_encode(Sorted, Pairs).
 
+%% purity_absence_class(+Constraint, -Class)
+%  OQ-61 Q3: positive, total, choicepoint-free classifier of a constraint's
+%  purity status. Class ∈ {scored, gate_fail, no_data, malformed}. Membership
+%  is defined POSITIVELY (not by exclusion) so the four classes partition every
+%  constraint:
+%    scored    — number in [0.0, 1.0]
+%    gate_fail — the -1.0 epistemic-gate-fail sentinel
+%    no_data   — non-number (the `unknown` token / no purity fact / thrown)
+%    malformed — any other number (out-of-range, NOT the sentinel)
+%  `malformed` is a FAIL-CLOSED GUARD-CLASS, not a fifth vocabulary token: the
+%  emit block asserts n_malformed==0 and halts with the offending ids. It exists
+%  only so an out-of-range purity (a bug) cannot masquerade as scored/gate_fail.
+%  purity_score/2 is deterministic (clause-1 cut / clause-2 -1.0 fallback);
+%  once/1 defends the classifier against a future multi-solution regression.
+purity_absence_class(C, Class) :-
+    (   catch(once(purity_scoring:purity_score(C, PS0)), _, fail)
+    ->  PS = PS0
+    ;   PS = unknown
+    ),
+    purity_absence_classify(PS, Class).
+
+%% purity_absence_classify(+PurityScore, -Class)
+%  Pure value → class step (no corpus fetch), so the malformed branch — which
+%  cannot arise through the real clamped purity_score/2 — is directly testable.
+purity_absence_classify(PS, Class) :-
+    (   number(PS)
+    ->  (   PS >= 0.0, PS =< 1.0 -> Class = scored
+        ;   PS =:= -1.0          -> Class = gate_fail
+        ;   Class = malformed
+        )
+    ;   Class = no_data
+    ).
+
+%% purity_absence_counts(+Constraints, -NScored, -NGateFail, -NNoData, -NMalformed)
+%  Tally each constraint's purity_absence_class. The four counts partition
+%  Constraints (their sum == length(Constraints)) — the emit block's
+%  cross-source enumeration check depends on that partition property.
+purity_absence_counts(Constraints, NScored, NGateFail, NNoData, NMalformed) :-
+    findall(Class, (member(C, Constraints), purity_absence_class(C, Class)), Classes),
+    include(==(scored),    Classes, S), length(S, NScored),
+    include(==(gate_fail), Classes, G), length(G, NGateFail),
+    include(==(no_data),   Classes, D), length(D, NNoData),
+    include(==(malformed), Classes, M), length(M, NMalformed).
+
 %% purity_scored_count(+Constraints, -N)
 %  R3 denominator helper: rows whose purity is a genuine scalar (excludes
 %  both the -1.0 gate-fail sentinel and the `unknown` no-data token).
+%  Refactored (OQ-61) onto the single classifier so there is one source of
+%  truth for "scored".
 purity_scored_count(Constraints, N) :-
-    findall(C,
-            (   member(C, Constraints),
-                catch(purity_scoring:purity_score(C, PS), _, fail),
-                number(PS), PS \= -1.0
-            ),
-            Cs),
-    length(Cs, N).
+    purity_absence_counts(Constraints, N, _, _, _).
+
+%% severity_by_type_rows(+Context, +DriftingCs, -Rows, -NSevere)
+%  OQ-61 Q1 backstop tab: type × severity over the DRIFTING subset (caller
+%  supplies DriftingCs so the tab and the header fraction share one set). Each
+%  drifting constraint is mapped through the engine's network_drift_severity/3
+%  — the SAME <0.30/<0.70 cut the shared helpers use; no reimplementation.
+%  Rows = sorted list of Type-row(Crit,Warn,Watch,Undet,Total,Severe) pairs;
+%  Severe = Crit+Warn per type; NSevere = Σ Severe (== network_n_severe, asserted
+%  by the caller).
+severity_by_type_rows(Context, DriftingCs, Rows, NSevere) :-
+    findall(Type-Sev,
+        (   member(C, DriftingCs),
+            ( narrative_ontology:constraint_claim(C, T0) -> Type = T0 ; Type = unknown ),
+            ( drl_lifecycle:network_drift_severity(C, Context, S0) -> Sev = S0 ; Sev = undetermined )
+        ), Pairs),
+    ( setof(T, X^member(T-X, Pairs), Types) -> true ; Types = [] ),
+    findall(Type-row(Cr,Wa,Wt,Un,Tot,Sev),
+        (   member(Type, Types),
+            count_sev(Pairs, Type, critical,     Cr),
+            count_sev(Pairs, Type, warning,      Wa),
+            count_sev(Pairs, Type, watch,        Wt),
+            count_sev(Pairs, Type, undetermined, Un),
+            Tot is Cr + Wa + Wt + Un,
+            Sev is Cr + Wa
+        ), Rows),
+    findall(Sv, member(_-row(_,_,_,_,_,Sv), Rows), Sevs),
+    sum_list(Sevs, NSevere).
+
+%% count_sev(+Pairs, +Type, +Sev, -N)
+%  Count Type-Sev occurrences (both bound) in the drifting pair list.
+count_sev(Pairs, Type, Sev, N) :-
+    findall(x, member(Type-Sev, Pairs), Xs),
+    length(Xs, N).
+
+%% write_severity_by_type(+Stream, +Rows)
+%  Emit the backstop tab as a JSON object keyed by type. Empty → {}.
+write_severity_by_type(S, Rows) :-
+    format(S, '{', []),
+    write_sev_rows(S, Rows),
+    format(S, '}', []).
+
+write_sev_rows(_, []).
+write_sev_rows(S, [Type-row(Cr,Wa,Wt,Un,Tot,Sev)|Rest]) :-
+    format(S, '"~w": {"critical": ~w, "warning": ~w, "watch": ~w, "undetermined": ~w, "severe": ~w, "drifting": ~w}',
+           [Type, Cr, Wa, Wt, Un, Sev, Tot]),
+    ( Rest == [] -> true ; format(S, ', ', []) ),
+    write_sev_rows(S, Rest).
 
 %% tally_purity_bands(+Constraints, -Pairs)
 tally_purity_bands(Constraints, Pairs) :-

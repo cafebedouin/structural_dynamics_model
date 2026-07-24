@@ -9,6 +9,8 @@
     network_drift_velocity/4,
     cascade_prediction/3,
     network_stability_assessment/2,
+    network_drifting_constraints/2,
+    network_severe_constraints/3,
     network_drift_severity/3
 ]).
 
@@ -193,15 +195,33 @@ cascade_threshold(degraded_floor, V) :-
    Network-wide classification of drift status.
    ---------------------------------------------------------------- */
 
-%% network_stability_assessment(+Context, -Assessment)
-%  Assessment ∈ {stable, degrading, cascading}
-network_stability_assessment(Context, Assessment) :-
-    constraint_indexing:valid_context(Context),
+%% network_drifting_constraints(+Context, -DriftingCs)
+%  OQ-61 Q1: the drifting set — constraints with detectable network
+%  contamination at Context. Extracted from network_stability_assessment/2 so
+%  the header severe-fraction accessor and the assessment token compute the
+%  SAME denominator from the SAME predicate (behavior-preserving refactor).
+network_drifting_constraints(Context, DriftingCs) :-
     findall(C, (
         narrative_ontology:constraint_claim(C, _),
         \+ is_list(C),
         detect_network_contamination(C, Context, _)
-    ), DriftingCs),
+    ), DriftingCs).
+
+%% network_severe_constraints(+Context, +DriftingCs, -SevereCs)
+%  OQ-61 Q1: the severe subset of a given drifting set — the <0.30/<0.70 cut
+%  (critical|warning) via network_drift_severity/3. SevereCs ⊆ DriftingCs.
+network_severe_constraints(Context, DriftingCs, SevereCs) :-
+    findall(C, (
+        member(C, DriftingCs),
+        network_drift_severity(C, Context, Sev),
+        member(Sev, [critical, warning])
+    ), SevereCs).
+
+%% network_stability_assessment(+Context, -Assessment)
+%  Assessment ∈ {stable, undetermined, degrading, cascading}
+network_stability_assessment(Context, Assessment) :-
+    constraint_indexing:valid_context(Context),
+    network_drifting_constraints(Context, DriftingCs),
     length(DriftingCs, NumDrifting),
     (   NumDrifting =:= 0
     ->  % OQ-60 0b (R3): `stable` is a NEGATIVE EXISTENTIAL over the whole
@@ -218,11 +238,7 @@ network_stability_assessment(Context, Assessment) :-
         ;   Assessment = stable
         )
     ;   % Count how many have critical or warning severity
-        findall(C, (
-            member(C, DriftingCs),
-            network_drift_severity(C, Context, Sev),
-            member(Sev, [critical, warning])
-        ), SevereCs),
+        network_severe_constraints(Context, DriftingCs, SevereCs),
         length(SevereCs, NumSevere),
         config:param(network_cascade_count_threshold, CascadeThresh),
         (   NumSevere >= CascadeThresh
