@@ -1373,3 +1373,33 @@ reason the OQ-152 static cross-section is config-fixed (GAP-14 update, 2026-07-2
 **Status:** Declared absence (baseline calibration). Not a defect to fix on sight — δ=0 is the deliberate
 "no perceptual bias" baseline; the gap is that consumers must not assume seat-power modulation without a
 δ calibration in place.
+
+---
+
+## GAP-28 — The five-condition husk annotation is not built: the husk conjunction is empty and condition-5 independence is untestable on this corpus
+
+**The capability:** A commentary-grade annotation firing when all five husk conditions co-occur —
+(1) kernel, (2) reading layer, (3) naturalization, (4) dead founding-problem/moving world, (5) frozen
+update-authority. OQ-153 built condition 5 as the `update_authority` field (the only one lacking an
+authored surface) and validated it, but the annotation itself is deferred.
+
+**Why it is absent (evidence, not preference):** two independent findings (OQ-153 step 3,
+`audits/2026-07-24_oq153_step3_blind_pass/`):
+1. **`dead ∧ frozen = 0/8`** in a sample enriched for both halves — the conjunction the annotation
+   keys on is empty. A *mechanism* for `husk_signature_read.py`'s synchronic K=0.
+2. **Condition-5 independence from conditions 2+3 is UNTESTED** — the corpus cannot populate non-canon
+   `frozen` (a live kernel with foreclosed amendment, outside closed canon); a valid shape test could
+   not be assembled (3/4 attempted items failed to instantiate the shape). NOT disproven as a proxy —
+   untested.
+
+**What closing the gap would require (the REOPENING CONDITION):** a corpus containing **≥3
+live-kernel-foreclosed-amendment instances outside closed canon**. On such a corpus: (a) the shape
+test becomes valid (condition-5 independence testable); (b) the husk conjunction may be non-empty.
+Absent that, the annotation would fire on nothing and gain no *established*-independent signal.
+
+**Status:** Declared absence. The `update_authority` field (condition 5) is BUILT and validated
+(`narrative_ontology.pl` + `data_validation.pl`); the annotation over all five is deferred to a corpus
+that meets the reopening condition. A reviver must NOT read the deferral as "condition 5 is a proxy"
+(that is untested) nor rebuild it on the current corpus (the conjunction is empty). Related: OQ-153
+(resolved), `husk_signature_read.py` (K=0), `cs_pattern_detection.pl:336-351` (the naturalized∧forecloses
+coupling that already computes conditions 2+3).

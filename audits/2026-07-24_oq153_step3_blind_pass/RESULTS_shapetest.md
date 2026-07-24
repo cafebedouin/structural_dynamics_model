@@ -41,3 +41,28 @@ what is not warranted is condition-5-as-independent-husk-discriminator.
 - **Build a reduced annotation** that flags the closed-canon shape (2+3) directly and drops condition
   5 as redundant; or
 - widen once more (diminishing returns — two independent lines already converge on non-independence).
+
+---
+
+## CORRECTION (operator, 2026-07-24) — "proxy" was an overclaim
+
+The pre-stated falsifier was: *if the non-canon `frozen` candidates read `licensed_revisable`, then
+`frozen` ≈ closed canon.* Only **1 of 4** did (`basic_law`). The other three read values that are
+**correct under the rubric and say nothing about `frozen` independence**: `salic` → `unauthored` is
+case 7 firing correctly (superseded); `bitcoin_ossification` → `absent_diffuse` is Q1 firing correctly
+(no owner); `second_amendment` → `absent_diffuse` likewise. So 3 of 4 candidates **failed to
+instantiate the frozen shape at all** — the null is a fact about the **candidate pool**, not the field.
+
+**Corrected finding — SCARCITY, not proxy.** Keyword search across all legs surfaced too few
+structural non-canon `frozen` candidates (a live kernel with foreclosed amendment, outside closed
+canon) to assemble a valid shape test, and 3/4 attempted items did not instantiate the shape.
+**`frozen`-independence from conditions 2+3 is therefore UNTESTED, not disproven.** Do NOT read this
+as "condition 5 is a proxy for 2+3."
+
+**Reopening condition** (for a reviver): a corpus containing **≥3 live-kernel-foreclosed-amendment
+instances outside closed canon**. On such a corpus the shape test becomes valid and independence can
+be tested.
+
+The load-bearing, independent result stands on its own: **`dead ∧ frozen = 0/8` under enrichment for
+both halves** — the husk conjunction is empty, so the five-condition annotation would fire on nothing.
+That is the mechanism for `husk_signature_read.py` K=0, and it does not depend on the shape test.

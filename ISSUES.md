@@ -7875,9 +7875,44 @@ here (witnessed 12/12 config).
 axis, and where husk lives relative to the existing `piton`/`naturalized` types and the committer
 attractor; a framework-direction question, not a code fix).
 
-**Status:** open
+**Status:** resolved — 2026-07-24: `update_authority` field built + validated (assignable, tense-
+correct, reliable), but the five-condition husk annotation is NOT warranted (the husk conjunction is
+empty under enrichment; condition-5 independence untested for corpus-scarcity reasons). Full close
+below. Evidence: `audits/2026-07-24_oq153_step3_blind_pass/`.
 **Priority:** 3
 **Deps:** bundled_with OQ-152
+
+**Resolution (2026-07-24).** Condition 5 (frozen update-authority) was the one husk condition with no
+authored field (the others map to `naturalized`/FNL, `cs_reading_relation`, `founding_problem_status`).
+It was built as `update_authority ∈ {licensed_revisable, frozen, absent_diffuse}` (+ authoring token
+`unauthored`) with a rubric (`docs/design/update_authority_rubric.md`) and a blind-authored quality
+test (three passes, sealed pre-registration + addenda). The field is **validated**: assignable on
+institutional grounds, the tense defect found in pass 1 was fixed and the fix **generalizes** (an
+un-enumerated superseded shape read `unauthored`), and non-modal replicates are reliable.
+**But the five-condition annotation does not earn its build:**
+- **`dead ∧ frozen = 0/8`** — in a sample deliberately enriched for BOTH halves (8 dead-founding
+  items + `frozen` supply), the husk conjunction (dead founding-problem ∧ live-foreclosed amendment)
+  was **empty**. The annotation would fire on nothing — a *mechanism* for `husk_signature_read.py`'s
+  synchronic K=0, not a restatement of it.
+- **Condition-5 independence is UNTESTED (not disproven).** A shape test to check whether `frozen`
+  carries information beyond conditions 2+3 could not be assembled: keyword search across all legs
+  surfaced too few structural non-canon `frozen` candidates (a live kernel with foreclosed amendment,
+  outside closed canon), and 3/4 attempted items failed to instantiate the shape. Do **not** record
+  this as "condition 5 is a proxy for 2+3."
+- **Reduced-annotation-on-2+3 rejected:** that is `naturalized ∧ forecloses`, already computed and
+  coupled at `cs_pattern_detection.pl:336-351` — a new surface with no new information.
+
+**`update_authority` field disposition:** kept as a **validated standalone institutional field**,
+decoupled from the husk five-condition claim. Surface = `narrative_ontology.pl` (dynamic fact) +
+`data_validation.pl` (enum/uniqueness/orphan validators + measure-only `inconsistent_update_authority/2`).
+**Authored-on-demand only** (audit passes); **no generation-schema emission and no consumer until one
+is warranted** — it is not dead schema, it is a declared-dormant field (this note is its provenance so
+it is not read as unused-therefore-removable). Zero authored facts in any live corpus (verified).
+
+**REOPENING CONDITION:** a corpus containing **≥3 live-kernel-foreclosed-amendment instances outside
+closed canon** — on which the shape test becomes valid and condition-5 independence can be tested. Also
+recorded in `design_gaps.md` as the standing gap for the husk five-condition annotation.
+
 **Origin:** operator framing, 2026-06-19 ("a husk is a naturalized scaffold that locked instead of
 dissolving"; the clarifier: scaffold and husk are the two *temporal* categories — scaffold on the
 way **up** (temporary, increasing coordination, meant to dissolve), husk on the way **down**
