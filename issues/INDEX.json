@@ -1,36 +1,25 @@
 {
   "manifest": {
-    "store_version": "89149e7f1fc409edcde138f7ecef0b3a7ed4d09c",
+    "store_version": "ae9b0848b8e17e2e7bc79d82ec669604913efd8f",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-24T04:41:04"
+    "generated_at": "2026-07-24T10:47:15"
   },
-  "issues_sha": "1211a09689d5f1f5a31377ca9d42af9f375445a167948aea8d1a259411e77898",
-  "n_entries": 238,
+  "issues_sha": "0f330719abd3a5c59144cfd9820ee87fd444a60b6e021703cc21838fd69313f1",
+  "n_entries": 241,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 132,
+    "resolved": 133,
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 72,
+    "open": 74,
     "partial": 6
   },
   "active": [
-    {
-      "id": "OQ-61",
-      "status": "open",
-      "priority": 1,
-      "summary": "Corpus header purity/cascade line: saturated cascade flag, type-composition restatement, hidden no-access count",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-60"
-      ]
-    },
     {
       "id": "OQ-62",
       "status": "open",
@@ -1081,6 +1070,47 @@
       "mentioned_in": [
         "OQ-60"
       ]
+    },
+    {
+      "id": "OQ-239",
+      "status": "open",
+      "priority": 2,
+      "summary": "Per-component severity home for the network-stability line (the categorical's declared future)",
+      "deps": [
+        "splits_from OQ-61"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-61",
+        "OQ-240"
+      ]
+    },
+    {
+      "id": "OQ-240",
+      "status": "open",
+      "priority": 2,
+      "summary": "Off-diagonal severe cover-story population: effective purity ⟂ claimed type (classification/calibration, not report-text)",
+      "deps": [
+        "splits_from OQ-61"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-61",
+        "OQ-236"
+      ]
+    },
+    {
+      "id": "OQ-241",
+      "status": "open",
+      "priority": 3,
+      "summary": "Mountain within-type under-severity: ep_base_severity's fixed 0.70 cut behaves differently across types",
+      "deps": [
+        "splits_from OQ-61"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-61"
+      ]
     }
   ],
   "archive": [
@@ -1831,6 +1861,20 @@
         "OQ-236",
         "OQ-237",
         "OQ-238"
+      ]
+    },
+    {
+      "id": "OQ-61",
+      "status": "resolved",
+      "priority": "–",
+      "summary": "Corpus header purity/cascade line: saturated cascade flag, type-composition restatement, hidden no-access count",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-62",
+        "OQ-239",
+        "OQ-240",
+        "OQ-241"
       ]
     },
     {

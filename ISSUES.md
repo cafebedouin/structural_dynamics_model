@@ -2887,38 +2887,50 @@ aggregate remains OQ-62.
 
 **Ω-type:** Ω_C (conceptual/design — three operator rulings, none resolvable from code).
 
-**Status:** open — awaiting operator ruling on three linked questions
-**Priority:** 1
+**Status:** resolved — 2026-07-24, three operator rulings implemented (commit `ae9b0848`),
+report/aggregation only; **the Q1 pre-registered decision rule's "no residual signal beyond type
+composition" premise is WITHDRAWN** (falsified — see below); the header change stands on
+saturation grounds alone. Follow-ups minted OQ-239/240/241. **Priority:** 1
 **Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §6, K1/K2/K7).
-**Files:** `json_report.pl:1244,1267-1273` (producers), `network_dynamics.pl:197-255`
-(`network_stability_assessment`, `ep_base_severity`), `config.pl:483`
-(`network_cascade_count_threshold=3`), `enhanced_report.py:262` (header render).
+**Build audit:** `audits/2026-07-24_oq61_header_purity_cascade/`.
 
-**Specific question:** The header line ("Network stability: cascading … purity N/M contaminated")
-is one signal wearing two costumes, and both halves need rulings. (1) **Cascade saturation:**
-severity derives from effective purity (`EP<0.70→warning`), and the cascade trigger is an
-*absolute* count of 3 — witnessed 633 severe vs threshold 3 (211×) on N=1106. Should the threshold
-be proportional/band-aware, or the flag dropped from the header? (2) **What the purity line should
-mean:** the contaminated band is 98.1% tangled_rope+snare (witnessed cross-tab: TR 73.4%
-contaminated, snare 87.4%, vs rope 7.7%, mountain 0.0%; converse control rope 92.3%
-pristine+sound, mountain 95.1% pristine) — corpus-wide purity mostly restates type composition.
-Should the header report purity conditioned on type (the spec §2.1 "coordination health" use
-case), keep the raw bands, or both? (3) **Denominator:** purity_summary silently drops no-access
-constraints (sums 1104 of 1106; M=2 today) — should it emit `no_access: M` alongside the bands?
+**What landed (three rulings, all report-text/aggregation — no classification path touched):**
+- **Q1** (cascade saturation, witnessed 633/643 severe at absolute threshold 3, 211×): header
+  shows the **severe fraction** (`N/M drifting are severe (pct%)`, four fail-closed branches from
+  clause order); JSON `network_stability` categorical **byte-identical**; new siblings
+  `network_n_severe`/`_drifting`/`network_cascade_count_threshold`/`severity_by_type` (backstop
+  tab, drifting subset, severe total == `network_n_severe` asserted). Shared helpers
+  `network_drifting_constraints/2`, `network_severe_constraints/3` extracted (behavior-preserving).
+- **Q2** (type-composition restatement): raw bands kept **and** a type×band cross-tab
+  headlining the off-diagonal residual (cover-story / fragile-rope candidates); render-only,
+  marginal-asserted; convention table cites `purity_zone` + OQ-62; new per-row `purity_class`.
+- **Q3** (hidden no-access count): unscored split into the two existing tokens
+  `gate_fail`(−1.0)/`no_data`(`unknown`); `malformed` is a fail-closed guard-class (emit halts on
+  it, **NOT a fifth vocabulary token**) + cross-source enumeration check. Reproduces the census
+  sentinel+flip split exactly on all four target legs (testsets 46=35+11, haiku 468=466+2, flash
+  292=212+80, kernel_v1 4=2+2); kimi/sonnet measured fresh.
 
-**Evidence so far:** Runtime witnesses in the audit doc §6; raw data
-`audits/2026-06-03_purity/` (census.tsv joined to pipeline per_constraint for the type
-cross-tab). Contaminated fraction stable across corpus growth (~68.8% at N≈770, 68.2% at N=1104) —
-consistent with structural property of scoring-on-this-composition, not story drift.
-**Update (2026-07-23, OQ-60 0b):** `network_stability_assessment` gained a 4th token —
-`undetermined` when zero-drifting coexists with any claimed member of non-numeric effective
-purity (coverage-1.0 gate on `stable`; commit `2a9e3c5f`). Question (1)'s saturation and (2)/(3)
-remain open; the header renderer must accept the new token.
+**Escalated call (operator, 2026-07-24 — ruling stands, rationale corrected).** The plan
+pre-registered a decision rule gating Q1 on "the corpus-stability line has no residual signal
+beyond type composition." Evaluated across all six legs it **FAILS**: rule (b) off-diagonal severe
+mass (severe rope+mountain / n_drifting) exceeds 5% on **all six legs** under the drifting
+denominator and **five of six** under the scored denominator (only kimi passes, 3.3%; kernel_v1
+6.2%, flash 24.0%); rule (a)'s mountain under-severity (~68–72% vs ~91–96% overall) is a genuine
+within-type deviation on the large-n legs (flash mountain n=51, haiku 22, sonnet 19), arithmetic
+only where n is single-digit (testsets 3, kimi 1). **This does not reverse anything implemented:**
+Q1's header change was justified by *saturation* (633/643 is information-free whether or not type
+explains it), not by the residual premise — and a residual beyond type composition *strengthens*
+the ruling's forward half (severity is informative **per-component**, the categorical's declared
+future home). The premise sentence is withdrawn; the two rule defects (no minimum-cell n-floor;
+the 5% threshold had no provenance) are recorded in OQ-239 so the next pre-registration inherits
+the fix, not the number. The residual is now **visible** in the report (Q2 off-diagonal tab + Q1
+backstop tab), not concealed.
 
-**What resolution changes:** (1) makes the cascade flag informative again (or removes a dead
-indicator); (2) decides whether the header's purity line is a type-distribution echo or a
-within-type health metric; (3) makes the unmeasured population visible. All three change report
-text/aggregation only — no classification path is touched.
+**Follow-ups (the escalation split, not bundled):** OQ-239 (per-component severity home — Ω_C,
+reporting surface, continuous with this OQ; carries the rule-defect record); OQ-240 (the
+off-diagonal severe cover-story population — a *classification*/calibration question, out of this
+OQ's report-only scope); OQ-241 (mountain within-type under-severity → `ep_base_severity` fixed
+0.70 cut — touches a threshold this OQ put out of scope).
 
 ---
 
@@ -11313,7 +11325,95 @@ N≥6 case get a distinct marker instead of silent 0.0?
 
 ---
 
-*Last updated: 2026-07-23. Add new items with sequential OQ-NN labels. Mark
+## OQ-239 — Per-component severity home for the network-stability line (the categorical's declared future)
+
+**Ω-type:** Ω_C (conceptual/design — reporting-surface ruling, continuous with OQ-61).
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-61
+**Origin:** OQ-61 close (2026-07-24). The Q1 ruling put the network_stability **categorical**'s
+future home at *per-component* severity; the pre-registered decision rule then falsified the
+premise that corpus-wide severity restates type composition (residual is real — see OQ-240), which
+is exactly the signal a per-component surface would carry.
+**Files:** `enhanced_report.py` (header render; `severity_by_type` backstop already emitted),
+`json_report.pl` (`severity_by_type` producer), `network_dynamics.pl` (`network_stability_assessment`).
+
+**Specific question:** The header now shows a corpus-wide severe *fraction* (OQ-61 Q1). Should the
+4-token categorical (`stable`/`undetermined`/`degrading`/`cascading`) be re-homed to a
+**per-component** surface (per connected component / per hub neighborhood), where a non-saturated
+count is meaningful again? The `severity_by_type` backstop tab is the first per-stratum cut; a
+component-indexed version is the natural next.
+
+**Rule-defect record (carry forward — the next pre-registration inherits the fix, not the number):**
+the OQ-61 Q1 decision rule had two defects — (i) **no minimum-cell n-floor**, so rule (a) fired on
+single-digit types by construction (testsets mountain n=3, kimi n=1 were arithmetic, not signal);
+(ii) the **5% threshold in rule (b) had no provenance** — a number fixed to make pre-registration
+possible, not a boundary derived from anything. Any future residual-vs-composition rule must set an
+n-floor and derive (or explicitly declare arbitrary) its cut.
+
+**What resolution changes:** whether the categorical survives as a per-component indicator or is
+retired; report surface only.
+
+---
+
+## OQ-240 — Off-diagonal severe cover-story population: effective purity ⟂ claimed type (classification/calibration, not report-text)
+
+**Ω-type:** Ω_E (empirical — a measurable population; whether it is a type-assignment error or a
+purity-detects-cover-story signal is the open question).
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-61
+**Origin:** OQ-61 Q1 pre-registered decision rule, rule (b) (2026-07-24). Robust across the corpus
+family — off-diagonal severe mass (severe drifting rope+mountain / n_drifting) exceeds 5% on **all
+six legs** under the drifting denominator, five of six under scored (kernel_v1 68/642=10.6% drift /
+6.2% scored; flash 160/391=40.9% / 24.0%; only kimi passes at 3.3% scored). NOT leg-specific.
+**Files:** classification path (out of OQ-61's report-only scope) — `drl_core.pl` type assignment,
+`purity_scoring.pl` effective purity, `network_dynamics.pl` severity cut. Evidence:
+`audits/2026-07-24_oq61_header_purity_cascade/` (`q1_decision_rule.json`, per-leg table).
+
+**Specific question:** These are constraints whose claimed type ("expects" pristine|sound purity:
+rope, mountain) are nonetheless **severe** on effective purity — the Q2 "cover-story candidates".
+Two readings: (a) the type assignment is wrong on these constraints, or (b) effective purity is
+detecting structure the type label cannot see (a genuine cover-story reading — clean-looking type,
+contaminated dynamics). Distinguishing them is a **classification/calibration** question, not a
+render — the same population the OQ-61 build **excluded** (no calibration of purity against
+ground-truth story quality). Cross-leg counts are **not** comparable un-stratified (OQ-236); any
+census must reproduce per-leg first.
+
+**What resolution changes:** either a type-assignment correction on a real population, or a
+validated cover-story detector — a classification-grade finding, not report text.
+
+---
+
+## OQ-241 — Mountain within-type under-severity: ep_base_severity's fixed 0.70 cut behaves differently across types
+
+**Ω-type:** Ω_E (empirical — a within-type severity deviation, confirmed on the large-n legs).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-61
+**Origin:** OQ-61 Q1 pre-registered decision rule, rule (a) (2026-07-24). On the legs with enough
+mountain-typed drifting constraints to see it — flash (mountain 37/51 = 72.5% severe), haiku
+(15/22 = 68%), sonnet (13/19 = 68.4%), kernel_v1 (10/15 = 66.7%) — mountains are severe ~20–29pp
+**below** the corpus overall (~91–96%). Small-n legs (testsets n=3, kimi n=1) are arithmetic; the
+large-n legs are not.
+**Files:** `network_dynamics.pl:264-270` (`ep_base_severity`, fixed `<0.30 critical`/`<0.70
+warning` cuts) — a threshold OQ-61 put explicitly out of scope.
+
+**Specific question:** A ~20pp within-type severity deviation for mountains says the fixed 0.70
+effective-purity cut interacts with type — mountain effective-purity distributions sit differently
+against the cut than the corpus does. Should `ep_base_severity`'s cut be type-aware, or is the
+deviation the correct reading (mountains genuinely less severe when drifting)? Requires the
+per-type effective-purity distribution, not just the severity tally.
+
+**What resolution changes:** possibly a type-aware severity cut (engine threshold change) — or a
+confirmed, documented structural property. Not report text.
+
+---
+
+*Last updated: 2026-07-24. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

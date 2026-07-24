@@ -45,6 +45,43 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-24 — [landed] OQ-61 CLOSED: header purity/cascade three rulings (severe fraction + type×band tab + gate_fail/no_data split); "purity restates type composition" premise WITHDRAWN; residual → OQ-239/240/241
+**Files:** prolog/json_report.pl, prolog/network_dynamics.pl, python/enhanced_report.py, prolog/tests/test_purity_absence_class.pl, python/tests/test_oq61_network_render.py, ISSUES.md, python/shared/schemas.py
+**Tier:** landed
+
+Commit `ae9b0848`. Three operator rulings on the corpus header, **report/aggregation only** —
+proven additive (behavior-preservation: two changed-code runs canonicalize identical; HEAD-vs-changed
+adds 6 diagnostic keys + per-row `purity_class`, ZERO changed shared values, `network_stability`
+token byte-identical). Q1: header severe **fraction** (four fail-closed branches from clause order)
+replaces the saturated categorical (633/643 severe at absolute threshold 3); shared helpers
+`network_drifting_constraints/2`+`network_severe_constraints/3` extracted (behavior-preserving);
+`severity_by_type` backstop tab (severe total == `network_n_severe`, asserted). Q2: type×band tab
+(render-only, marginal-asserted) headlining the off-diagonal residual. Q3: unscored split into
+`gate_fail`(−1.0)/`no_data`(`unknown`); `malformed`(out-of-range) is a **fail-closed guard-class,
+NOT a fifth token** — the emit halts on it. Reproduces the census sentinel+flip split exactly on
+all four target legs (testsets 46=35+11, haiku 468=466+2, flash 292=212+80, kernel_v1 4=2+2);
+kimi/sonnet fresh. Fixtures: 14 Prolog classifier tests + 16 Python render tests, existing 17
+purity-absence green.
+
+**Correction (operator ruling, escalated call):** the plan pre-registered a rule gating Q1 on
+"the corpus-stability line has no residual signal beyond type composition." It **FAILS across the
+corpus family** — off-diagonal severe mass (severe rope+mountain / n_drifting) > 5% on all six legs
+(scored-denominator: 5/6, only kimi passes); mountain within-type under-severity real on large-n
+legs (flash n=51). The premise is **WITHDRAWN** — do NOT cite OQ-61 as establishing that purity
+restates type composition. The header change stands on **saturation grounds alone** (633/643 is
+information-free regardless), and the residual *strengthens* the ruling's per-component future.
+Nothing implemented reverses. Residual split into OQ-239 (per-component severity home + the rule's
+two defects: no n-floor, unprincipled 5%), OQ-240 (off-diagonal cover-story population — a
+classification/calibration question, not report-text), OQ-241 (`ep_base_severity` fixed-0.70 cut
+type-interaction). Audit: `audits/2026-07-24_oq61_header_purity_cascade/`.
+
+**Follow-ups flagged to operator (out of scope, not fixed here):** (1) `python/shared/schemas.py`
+`PIPELINE_FIELDS` should register the new per-row `purity_class` — until then
+`validate_pipeline_output` emits a (non-fatal) schema-drift WARNING for it (schemas.py is
+operator-modified; left untouched per shared-index discipline). (2) CLAUDE.md "THREE LIVE LEGS" +
+MEMORY.md are stale — **five** live legs now on disk (`testsets`, `testsets_haiku`,
+`testsets_flash`, `testsets_kimi`, `testsets_sonnet`).
+
 ## 2026-07-24 — [landed] OQ-152 / OQ-153 / OQ-227 husk bundle CLOSED; `update_authority` field is validated-but-dormant; two unfireable reviver conditions
 **Files:** ISSUES.md, docs/design/design_gaps.md, docs/design/update_authority_rubric.md, prolog/narrative_ontology.pl, prolog/data_validation.pl, prolog/cs_drift_engine.pl, prolog/tests/test_cs_drift_engine.pl
 **Tier:** landed
