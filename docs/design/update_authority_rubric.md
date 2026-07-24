@@ -18,18 +18,25 @@ Assign the value by answering these questions **from the authority text**, in or
      this is **not** `absent_diffuse`).
    - **Yes** → go to Q1.
 
-1. **Is there a party who owns or controls the kernel — a body that could change it at all?**
-   - **No** — a kernel exists, but authority over it is distributed or emergent; no one is in a
-     position to decide a change → **`absent_diffuse`**.
+1. **Is the kernel's amending authority LIVE and present — a party whose authority over *this* kernel
+   is current, who could legitimately amend it NOW?** (Present tense: read the authority as it stands
+   now, not as the founding text once described it.)
+   - **No, the instrument is superseded / defunct** — the body that once amended it no longer holds
+     jurisdiction over the kernel; any procedure it had is *historical*, not a live authority →
+     **`unauthored`** (not `licensed_revisable`: the procedure is not live; not `frozen`: `frozen`
+     is reserved for a *live* kernel with foreclosed amendment).
+   - **No, authority is distributed or emergent** — a live kernel exists, but no party is in a
+     position to decide a change now → **`absent_diffuse`**.
    - **Yes** → go to Q2.
 
-2. **Is there a defined, recognized procedure by which that party amends *the kernel itself* — the
-   foundational content, not merely its application or interpretation — such that a kernel amendment
-   through it is legitimate (an ordinary act, not a rupture of the authority)?**
+2. **Is there a defined, recognized, LIVE procedure by which that party amends *the kernel itself* —
+   the foundational content, not merely its application or interpretation — such that a kernel
+   amendment through it is legitimate right now (an ordinary act, not a rupture of the authority)?**
    - **Yes** → **`licensed_revisable`**.
-   - **No** — kernel amendment is not provided for: the kernel is declared closed/complete/
+   - **No** — the kernel is live but its amendment is not provided for: declared closed/complete/
      unalterable (even where its *application* stays freely revisable), or the only way to change it
-     is to override the authority's own standing → **`frozen`**.
+     is to override the authority's own standing → **`frozen`** (the husk-relevant state: a live
+     kernel whose amendment is foreclosed).
 
 **The Q2 cut is kernel-amendment legitimacy, not activity or application-revisability.** A system may
 develop its *application* vigorously — reinterpret, extend, adjudicate — while declaring the *kernel*
@@ -49,12 +56,13 @@ kernel-amendment procedure; `absent_diffuse` has no owner at all.
   common-law precedent that can overturn precedent; an interpretive authority empowered to issue
   binding revisions to the foundational content; openly-revisable published consensus.
 
-- **`frozen`** — a recognized owner/authority, but **no legitimate procedure to amend the kernel
-  itself**; the kernel is declared closed/complete/unalterable, even where application or
-  interpretation remains freely revisable. Changing the kernel would require overriding the
-  authority's own standing (fiat/rupture). *Examples:* a canon declared closed; a founding charter
-  its own terms hold unamendable ("perpetual", "shall not be altered"); a specification published as
-  final with no revision channel.
+- **`frozen`** — a **live** kernel with a recognized owner/authority, but **no legitimate procedure
+  to amend the kernel itself**; the kernel is declared closed/complete/unalterable, even where
+  application or interpretation remains freely revisable. Changing the kernel would require overriding
+  the authority's own standing (fiat/rupture). The **husk-relevant** state. *Examples:* a canon
+  declared closed by a still-authoritative body; a founding charter its own terms hold unamendable
+  ("perpetual", "shall not be altered") and still in force; a specification published as final by a
+  live standards body. **NOT** a superseded/defunct instrument (that is `unauthored`, case 7).
 
 - **`absent_diffuse`** — **no single party owns** the kernel and no procedure governs its amendment;
   authority is distributed or emergent, and change (if it happens) comes from uncoordinated adoption,
@@ -93,6 +101,15 @@ kernel-amendment procedure; `absent_diffuse` has no owner at all.
    application is shared with the revisable case, so it is not the test. A tradition that recognizes
    a procedure to revise the **foundational content itself** — binding reinterpretation treated as
    amendment of the kernel, precedent empowered to overturn precedent — → **`licensed_revisable`**.
+
+7. **Superseded / defunct instrument — the tense cut (Q1).** An instrument whose amending body once
+   had a revision procedure but **no longer holds jurisdiction** over the kernel (a repudiated treaty,
+   a monetary order that has ended, a superseded mandate) → **`unauthored`**, **not**
+   `licensed_revisable`. The founding text describing a procedure does **not** make the authority
+   live; read amendment authority in the **present tense**. This is the case the field must not
+   misread as revisable — a dead/ended kernel that still recites its original governance is precisely
+   where a husk hides. `frozen` is **not** this case: `frozen` needs a *live* kernel whose amendment
+   is foreclosed.
 
 ## Evidence rule (for the authoring pass)
 

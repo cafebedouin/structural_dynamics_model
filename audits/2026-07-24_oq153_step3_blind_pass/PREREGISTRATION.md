@@ -206,3 +206,26 @@ reads prose, not institution ⇒ fails regardless of quote quality.
 Pass = 20 items (15 primary + 5 replicate), 15 distinct kernels. Each replicate's value is expected
 STABLE vs its primary (same institution); a split is the failure signal — EXCEPT where the Bitcoin
 caveat's logic applies (a genuinely different sub-instrument), which does not arise in R1–R5.
+
+---
+
+## ADDENDUM 3 — rubric amendment (tense) + re-run prediction (2026-07-24)
+
+The step-3 pass surfaced a rubric defect: the field read HISTORICAL amendment authority (a superseded
+instrument's founding text recites a procedure ⇒ `licensed_revisable`), so condition-5 could never see
+the present-tense frozen state husking requires. Rubric amended (`update_authority_rubric.md`): Q1 is
+present-tense ("authority LIVE and present, could amend it NOW"); new boundary case 7 routes a
+superseded/defunct instrument to `unauthored`; `frozen` reserved for a live kernel with foreclosed
+amendment.
+
+**Checkable prediction for the re-run (fixed rubric):** the three superseded instruments —
+`bretton_woods_treaty_substrate` (P9/R3), `versailles_reparations_clauses` (P10),
+`balfour_mandate_instruments` (P8) — **move OFF `licensed_revisable`** (to `unauthored`, or `frozen`
+if judged live-and-foreclosed). Mechanical covariate: no item with `founding_problem_status=dead` may
+read `licensed_revisable` (R3 was the violation to fix). A re-run where these do NOT move is a
+re-scored sample, not a fixed rubric.
+
+**Re-run sample design:** widen toward LIVE kernels with contested amendment legitimacy AND
+dead-founding husk-shaped kernels (not just more closed canon); choose replicates with NON-MODAL
+predicted values so test–retest measures something against the ~75% `licensed_revisable` base rate.
+Verdicts back UNRULED.

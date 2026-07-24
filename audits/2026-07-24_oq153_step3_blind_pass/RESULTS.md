@@ -43,3 +43,31 @@ DID separate (canon vs rest, cleanly, and test-retest-stably), but only one true
 not a field failure. **Indicated fix: a wider sample with multiple closed-canon institutions**
 (biblical, Quranic, a constitutionally-entrenched unamendable clause, a final-published spec), NOT an
 abort. Operator to rule.
+
+---
+
+## CORRECTIONS (operator ruling, 2026-07-24) — read these over the section above
+
+1. **Count:** 15 licensed_revisable / 3 absent_diffuse / 2 frozen = 20 (the "16" above was an
+   arithmetic error; 16+3+2=21 does not reconcile).
+2. **Kill A ruling — NEITHER branch: a RUBRIC DEFECT (tense), amend + re-run.** The drift to
+   `licensed_revisable` is not a supply problem: the subagent read *superseded* instruments
+   (Bretton Woods post-1971, repudiated Versailles, superseded Balfour mandate) as revisable because
+   the FOUNDING TEXT recites a procedure — i.e. the field read **historical** amendment authority, not
+   present-tense. Covariate witness: the one `founding_problem_status=dead` item (R3
+   `bretton_woods@kimi`) read `licensed_revisable` — a direct tense violation. Husk teeth: a husk is a
+   dead-founding-problem kernel that persists; a rubric reading amendment off the founding text can
+   NEVER see the present-tense frozen state husking requires, and would return `licensed_revisable`
+   on exactly the constraints most likely to be husks. Widening the canon stratum would have hidden
+   this behind a satisfied Kill A. **Fix:** Q1 present-tense + superseded/defunct → `unauthored`
+   (rubric case 7, `frozen` reserved for a live kernel with foreclosed amendment).
+3. **Kill B is weaker than "appears PASS."** Kill B tests whether a call is *justifiable from its
+   quote*, not whether it is right. The Versailles call carried a clean institutional quote and was
+   WRONG under the corrected rubric — the pass's main defect walked through Kill B. Record the limit.
+4. **Test–retest agreement is base-rate-inflated.** With 15/20 on one value, replicate agreement is
+   near-free; "zero dispositive disagreement" is thin, not a clean pass.
+5. **Kill C's real witness is the REPLICATE, not the free pairs.** `biblical_authority@flash` is
+   out-of-stratum and read `frozen` — a direct falsifier of "`frozen` occurs only in-stratum" (the
+   laundering direction that matters). The free pairs falsify the biconditional formally but contain
+   no `frozen` item, so they cannot test that direction. Credit the replicate set on the axis it was
+   added for.
