@@ -111,6 +111,12 @@ kernel-amendment procedure; `absent_diffuse` has no owner at all.
    where a husk hides. `frozen` is **not** this case: `frozen` needs a *live* kernel whose amendment
    is foreclosed.
 
+8. **A dead founding problem is NOT a dead amending authority.** Judge the amending authority in the
+   present tense on its OWN terms: a kernel whose original founding problem has lapsed may still have
+   a fully LIVE authority that can amend it (a statute whose original rationale is obsolete but which
+   the legislature can amend or repeal now → `licensed_revisable`). Do NOT infer `unauthored`/`frozen`
+   from a dead founding problem alone; infer it only from the state of the amending authority itself.
+
 ## Evidence rule (for the authoring pass)
 
 Assign the value from the constraint's **authority text**, and record **one quoted sentence** that
