@@ -10716,10 +10716,14 @@ the `cs_drift` acknowledged bit; the commitment-scale analog of the essay's term
 `h1_band=null`), so part of the resolution is Ω_P-adjacent (the engine abstains / records an
 undetermined terminal, never self-certifies it).
 
-**Status:** open — surfaced 2026-07-18 from *Hearts of Glass* (`blog/2026-07/`), the eon-scale
-fiction used as a framework test rig (the Claude-web review's "fiction is the only rig that can run
-a differential-metabolism experiment"). Zero live-corpus instances — thought-experiment only, like
-the self-consuming-standing trigger in `design_gaps.md`.
+**Status:** resolved — 2026-07-24 on C1+C2, with the `sealed_closure` row recorded OPEN (a declared
+absence, not added). C1: surviving-referent precondition made structural as a tripwire
+(`test_cs_drift_engine.pl terminal_set_pinned`). C2: `acknowledgment_collapse` routed to the standing
+trigger. C3: reduction test FAILED (orthogonal axes) and near-miss search EMPTY — the row is not added
+on fiction alone; it would counterfeit a finding (no possible positive control). Full C-leg record
+below. Surfaced 2026-07-18 from *Hearts of Glass* (`blog/2026-07/`), the eon-scale fiction test rig;
+zero live-corpus instances — thought-experiment only, like the self-consuming-standing trigger in
+`design_gaps.md`.
 
 **Priority:** 3
 
@@ -10771,7 +10775,7 @@ belongs in the `cs_drift_engine.pl` header. Adjacent: OQ-153 (husk/naturalized t
 taxonomy, bundled), OQ-126 (T0→T3 temporal accountability), GAP-02 (husk trajectory-shape), and the
 `design_gaps.md` self-consuming-standing trigger.
 
-**Leg C progress (2026-07-24) — stays OPEN (the `sealed_closure` row is the open part):**
+**Leg C record (2026-07-24) — RESOLVED on C1+C2; the `sealed_closure` row is the declared-open part:**
 - **C1 DONE (precondition made structural as a TRIPWIRE, not a guard).** The surviving-referent
   scope is now in the `cs_drift_engine.pl` header (`:59–67`), and the terminal SET is pinned by
   `tests/test_cs_drift_engine.pl` `terminal_set_pinned`: any added/removed terminal fires RED,
@@ -10781,10 +10785,18 @@ taxonomy, bundled), OQ-126 (T0→T3 temporal accountability), GAP-02 (husk traje
 - **C2 DONE (routing confirmed + cross-linked).** `acknowledgment_collapse` is standing-axis, routed
   to the `design_gaps.md` self-consuming-standing trigger, never a commitment terminal. "Declined,
   not gapped" status kept. Bidirectional cross-link with the trigger.
-- **C3 HELD (the `sealed_closure` row).** Gated on Leg B's `update_authority` field (the reduction
-  test) + a near-miss corpus witness; if neither is met the structural precondition (C1) is the
-  honest form and the row stays OPEN here. An unreachable enum row with no possible positive control
-  risks counterfeiting a finding — do not add it on fiction alone.
+- **C3 RUN — both gates came back empty; the `sealed_closure` row stays OPEN (2026-07-24).**
+  **Reduction test FAILS** (as predicted): `sealed_closure` does not reduce to a degenerate
+  `update_authority` value — `update_authority` tracks the kernel-amendment axis (live jurisdiction to
+  amend the kernel), while `sealed_closure` is on the orthogonal referent-dissolution axis (the
+  referent decays while form/grounding persist); the Keeper is a *compromised observer*, not an
+  *absent amending authority*. **Near-miss search EMPTY:** the 2 dead-founding husk/extinction proxy
+  hits (`epistemic_collapse`, `vedic_corpus…`) are ordinary husks (surviving referent, recognized
+  hollowing), correctly assigned; there is no authored referent-dissolution signal to search on (that
+  absence *is* the gap), matching the "zero live-corpus instances" finding. So the row is NOT added —
+  it stays OPEN, the structural precondition (C1 tripwire) is the honest form, and an unreachable enum
+  row with no possible positive control would counterfeit a finding. Evidence:
+  `audits/2026-07-24_oq152_seat_crosssection/` sibling + this session's C3 probe.
 
 ---
 
