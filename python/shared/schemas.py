@@ -6,9 +6,17 @@ they serve as human-readable specifications.
 
 Two contracts:
   PipelineConstraint  -- per-constraint entry in pipeline_output.json
-                         (27 fields emitted by Prolog json_report.pl)
+                         (emitted by Prolog json_report.pl)
   EnrichedConstraint  -- per-constraint entry in enriched_pipeline.json
-                         (PipelineConstraint + 20 fields from enrich_pipeline_json.py)
+                         (PipelineConstraint + the fields enrich_pipeline_json.py adds)
+
+The VALIDATED contracts are the ``PIPELINE_FIELDS`` / ``ENRICHED_EXTRA_FIELDS``
+tables below -- they are what the validators read.  The dataclasses are prose
+companions and currently document a SUBSET (they lag the tables); do not treat
+a field's absence from a dataclass as absence from the contract.  Field counts
+are deliberately not asserted here: a hardcoded count rots on every additive
+emit and reads authoritative while wrong (it sat at "27" against a 67-field
+table).  Count the table if you need a number.
 
 Two public validators:
   validate_pipeline_output(data)   -> list[str]   (empty = valid)
@@ -34,8 +42,10 @@ from shared.constants import MAXENT_TYPES
 class PipelineConstraint:
     """Contract for a single per_constraint entry in pipeline_output.json.
 
-    28 fields emitted by Prolog json_report.pl.  All fields must be present
-    in the JSON.  Fields marked ``| None`` may be null; others must not be.
+    Documents a subset of the fields emitted by Prolog json_report.pl; the
+    validated contract is ``PIPELINE_FIELDS`` below.  Fields marked ``| None``
+    are nullable -- they may be null OR absent from the entry entirely (see
+    ``_check_field``).  Non-nullable fields must be present and non-null.
 
     Nullable fields fall into two categories:
       - Legitimately optional: purity_score/purity_band (26/1034 null when
