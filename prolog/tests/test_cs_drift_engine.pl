@@ -81,6 +81,32 @@ test(attractor_table_row_disjoint) :-
            ( findall(T, cs_drift_engine:cs_terminal_attractor(D, M, A, T), Ts),
              Ts = [_] )).
 
+% --- Terminal-set TRIPWIRE (OQ-227 / Leg C1, 2026-07-24) -------------------
+% NOT a precondition check. This test CANNOT verify the surviving-referent
+% precondition (that deep-time referent-dissolution is out of scope — see
+% cs_drift_engine.pl header :59-67 and ISSUES OQ-227). It only DETECTS a change
+% to the terminal set: it pins the six terminals the table currently yields and
+% fires RED on any added or removed terminal. Adding a 7th terminal — e.g. a
+% `referent_dissolution` Direction routed to `sealed_closure` — turns this red,
+% which is the intended trip: it forces whoever edits the table to read the
+% surviving-referent scope first. The precondition stays DOCUMENTED and
+% CHANGE-DETECTED, never ENFORCED (a tripwire cannot check what it cannot see).
+% Positive control for the tripwire's detection logic: adding any terminal to the
+% current set makes the sorted set differ from the pin (asserted below).
+test(terminal_set_pinned) :-
+    findall(T, ( member(D, [stable, authority_erosion, codification_collapse,
+                            axiom_overriding, practice_drift,
+                            revival_pressure, repudiation_pressure]),
+                 member(M, [minor, substantial, severe]),
+                 member(A, [true, false]),
+                 cs_drift_engine:cs_terminal_attractor(D, M, A, T) ), Ts0),
+    sort(Ts0, Actual),
+    Pinned = [axiom_foreclosure, extinction, husk, repudiation, revival, stable_pattern],
+    Actual == Pinned,
+    % detection control: a 7th terminal (sealed_closure) would break the pin
+    sort([sealed_closure|Actual], WithSeventh),
+    WithSeventh \== Pinned.
+
 % ...and the fixture whose gap sat in the old overlap now yields exactly one
 % solution through the trajectory surface (was 2 identical, witnessed on 8
 % corpus UIDs pre-fix).

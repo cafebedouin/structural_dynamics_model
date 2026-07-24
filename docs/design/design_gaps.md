@@ -1259,6 +1259,13 @@ reactivation inverse) or transferred. When that fires, promote to a GAP-NN. Unti
 model of standing (`cs_drift_engine.pl`, seat-theorem Cor 3) is correct for every case the corpus
 actually contains.
 
+**Cross-ref (OQ-227 Leg C2, 2026-07-24):** `acknowledgment_collapse` — surfaced in OQ-227 alongside
+`sealed_closure` — is routed **here** as the standing-axis terminal of this trigger, **never a
+`cs_terminal_attractor/4` commitment terminal** (that table is the commitment axis; standing is a
+distinct axis). OQ-227's surviving-referent precondition on the commitment terminals is now header-
+documented and change-detected by `tests/test_cs_drift_engine.pl terminal_set_pinned` (a tripwire).
+This trigger's "Declined, not gapped" status is unchanged.
+
 ### TRIGGER — 1:N reading-object layer (one reading covers N constraints)
 
 **Deferred per OQ-04 (2026-06-23, design-cut ruling).** A predicate (`cs_reading_covers/2` and

@@ -10721,6 +10721,21 @@ belongs in the `cs_drift_engine.pl` header. Adjacent: OQ-153 (husk/naturalized t
 taxonomy, bundled), OQ-126 (T0→T3 temporal accountability), GAP-02 (husk trajectory-shape), and the
 `design_gaps.md` self-consuming-standing trigger.
 
+**Leg C progress (2026-07-24) — stays OPEN (the `sealed_closure` row is the open part):**
+- **C1 DONE (precondition made structural as a TRIPWIRE, not a guard).** The surviving-referent
+  scope is now in the `cs_drift_engine.pl` header (`:59–67`), and the terminal SET is pinned by
+  `tests/test_cs_drift_engine.pl` `terminal_set_pinned`: any added/removed terminal fires RED,
+  forcing a reader to the scope before editing the table. It is CHANGE-DETECTED, not ENFORCED — a
+  test cannot verify a precondition about what is out of scope. Adding a 7th terminal (a
+  `referent_dissolution` → `sealed_closure`) trips it by design.
+- **C2 DONE (routing confirmed + cross-linked).** `acknowledgment_collapse` is standing-axis, routed
+  to the `design_gaps.md` self-consuming-standing trigger, never a commitment terminal. "Declined,
+  not gapped" status kept. Bidirectional cross-link with the trigger.
+- **C3 HELD (the `sealed_closure` row).** Gated on Leg B's `update_authority` field (the reduction
+  test) + a near-miss corpus witness; if neither is met the structural precondition (C1) is the
+  honest form and the row stays OPEN here. An unreachable enum row with no possible positive control
+  risks counterfeiting a finding — do not add it on fiction alone.
+
 ---
 
 ## OQ-228 — The five-leg cross-model comparison is confounded by inference regime; corpus differences are dispositional, not capability

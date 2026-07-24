@@ -65,6 +65,14 @@
 %   *recognized* hollowing — Kodashim knows the Temple is gone). Undetectable by
 %   construction (H¹=0, no pre-closure snapshot, no referent to check against),
 %   so authored-only if ever added — the drift analog of h1_band=null. See OQ-227.
+%
+%   CHANGE-DETECTED, NOT ENFORCED (Leg C1, 2026-07-24): the terminal SET below is
+%   pinned by tests/test_cs_drift_engine.pl `terminal_set_pinned` — a TRIPWIRE, not
+%   a guard. It cannot verify the surviving-referent precondition (a test cannot see
+%   what is out of scope); it fires RED on any added/removed terminal, forcing whoever
+%   edits this table to read this scope first. Adding a 7th terminal (a
+%   `referent_dissolution` Direction → `sealed_closure`) turns it red by design. The
+%   precondition stays DOCUMENTED here; it is never machine-enforced.
 % ============================================================================
 
 :- module(cs_drift_engine, [cs_drift_trajectory/3]).
