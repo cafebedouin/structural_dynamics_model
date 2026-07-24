@@ -7941,6 +7941,13 @@ out-naturalizes the beneficiary, **12/12 explained by config**, 0 seat-relative 
 `audits/2026-07-24_oq152_seat_crosssection/`). Keying condition (3) on a named seat would inherit
 "the beneficiary naturalizes" as though it were observed — the mislabel one level up.
 
+**Husk conditions 3+4 (naturalized∧forecloses) are substantially MODEL-DEPENDENT (data point,
+2026-07-24).** The in-stratum rate — constraints computing a `naturalized` seat AND authoring a
+`forecloses` reading relation — runs **11.6% (`testsets`) → 34% (`testsets_kimi`)** across the five
+legs by authoring model alone (`audits/2026-07-24_oq153_step3_blind_pass/PREREGISTRATION.md`). So any
+eventual five-condition husk *rate* is model-relative, not a corpus constant — a data point for OQ-228
+(cross-model regime confound). Do not cite a husk prevalence without naming the leg.
+
 **How a husk ends (two refinements to "eventually disappears"):** husks do **not** die from drift —
 they can carry a total kernel↔reading gap for centuries looking healthy, because the reading absorbs
 everything and the token still clears. They die from **de-naturalization**: a *phase change* when
