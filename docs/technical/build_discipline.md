@@ -977,6 +977,33 @@ rule above) — either alone is insufficient; (2) **a random-stratum hit is a bo
 as one**: it means the pre-registered suspiciousness criterion did NOT bound the phenomenon — a
 fact worth a sentence precisely because the prevalence version of it cannot be claimed.
 
+## Selecting a sample to make a value PRESENT severs it from the question (selection on the outcome variable)
+
+The dual of the existence-question flinch above. When you build a sample or probe so a needed value is
+*present* — to satisfy a variance gate, populate a cell, complete a 2×2 — you select on the outcome
+variable, and the sample can no longer answer whether the value *occurs*, only that you put it there.
+Witnessed four times in one instrument-build arc (OQ-153, 2026-07-24), all caught: an all-in-stratum
+sample (a Kill-C 2×2 collapsed to a column); immutability-language selection for a `frozen` value (the
+selecting signal *was* the confound being tested against); a "widen the canon stratum" proposal to
+satisfy a variance gate (buys a number whose answer is already known); a shape-test pool too thin to
+instantiate the shape (3/4 candidates failed — the null was about the pool, not the field). **Rules:**
+- **Selecting for a value forfeits the right to read its presence as a finding.** Only its *absence
+  under enrichment* carries information — `dead∧frozen = 0/8` in a sample *built* to contain both
+  halves is a real empty; the items that DID show the value prove nothing, because they were selected
+  for. Pre-register any selected-for value as **supply-only** and exclude it from every test that
+  reads presence as evidence (the Kill-B-denominator move).
+- **Instruction-following ≠ readable-from-substrate (contamination inside a fix).** If a rubric or
+  instruction *names the exact item-class* the test is about, a pass shows the classifier can follow
+  the instruction — not that the property is readable from the substrate. A fix's prediction only
+  *generalizes* once an **un-enumerated** case (not named in the rule) also moves; the named cases are
+  instruction-following. Any fix validated on the cases it names owes one un-named case.
+- **Unsearchable ≠ empty; an argument ≠ a run** (extends *Every diagnostic needs a positive control*).
+  A probe that cannot detect the thing — no authored signal to search on, no constructible positive
+  control — returns **unsearchable**, not negative; recording it as "empty" tells a reviver a capable
+  search ran and found nothing, so they will not repeat it (write "pending an authoring channel").
+  And a reasoned conclusion ("the axes are orthogonal, so X does not reduce to Y") is an **authored
+  conclusion**, not a measurement — label it so nobody later cites a probe that never ran.
+
 ## Instrument richness is gated on substrate instrumentation (the positive control, one level up)
 
 The positive-control rule asks *did the probe fire?* — generalize it one level up to *is the axis
