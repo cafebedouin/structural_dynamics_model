@@ -34,7 +34,7 @@ from shared.constants import MAXENT_TYPES
 class PipelineConstraint:
     """Contract for a single per_constraint entry in pipeline_output.json.
 
-    27 fields emitted by Prolog json_report.pl.  All fields must be present
+    28 fields emitted by Prolog json_report.pl.  All fields must be present
     in the JSON.  Fields marked ``| None`` may be null; others must not be.
 
     Nullable fields fall into two categories:
@@ -65,6 +65,7 @@ class PipelineConstraint:
     # --- Categorical metrics ---
     signature: str = ""                           # structural signature label
     purity_band: str | None = None                # "clean", "degraded", etc.; null when purity not computed (26/1034)
+    purity_class: str = "no_data"                 # OQ-61: scored|gate_fail|no_data — the absence split purity_score/purity_band lose to null (both tokens serialize null); always present, never null (malformed halts the emit)
     domain: str = ""                              # legacy domain classification
     topic_domain: str | None = None               # topic domain; null for some constraints (6/1034)
     maxent_top_type: str = ""                     # argmax of maxent_probs
@@ -230,6 +231,7 @@ PIPELINE_FIELDS = [
     # --- Nullable: legitimately optional ---
     ("purity_score",                (int, float), True),   # 26/1034 null
     ("purity_band",                 str,          True),   # 26/1034 null
+    ("purity_class",                str,          False),  # OQ-61: scored|gate_fail|no_data; always present (never null — malformed halts the emit)
     ("topic_domain",                str,          True),   # 6/1034 null
     ("resistance",                  (int, float), True),   # always null
     ("resolution_strategy",         str,          True),   # always null (deferred)
