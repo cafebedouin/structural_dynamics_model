@@ -81,31 +81,52 @@ test(attractor_table_row_disjoint) :-
            ( findall(T, cs_drift_engine:cs_terminal_attractor(D, M, A, T), Ts),
              Ts = [_] )).
 
-% --- Terminal-set TRIPWIRE (OQ-227 / Leg C1, 2026-07-24) -------------------
+% --- Terminal/Direction-set TRIPWIRE (OQ-227 / Leg C1, 2026-07-24) ----------
 % NOT a precondition check. This test CANNOT verify the surviving-referent
 % precondition (that deep-time referent-dissolution is out of scope — see
 % cs_drift_engine.pl header :59-67 and ISSUES OQ-227). It only DETECTS a change
-% to the terminal set: it pins the six terminals the table currently yields and
-% fires RED on any added or removed terminal. Adding a 7th terminal — e.g. a
-% `referent_dissolution` Direction routed to `sealed_closure` — turns this red,
-% which is the intended trip: it forces whoever edits the table to read the
-% surviving-referent scope first. The precondition stays DOCUMENTED and
-% CHANGE-DETECTED, never ENFORCED (a tripwire cannot check what it cannot see).
-% Positive control for the tripwire's detection logic: adding any terminal to the
-% current set makes the sorted set differ from the pin (asserted below).
+% to the table's terminal SET and Direction SET, firing RED on any added/removed
+% member. Adding a 7th terminal via a new Direction — a `referent_dissolution`
+% clause routed to `sealed_closure`, exactly how the header says one would be
+% added — trips it, forcing whoever edits the table to read the surviving-referent
+% scope first. DOCUMENTED and CHANGE-DETECTED, never ENFORCED.
+%
+% Enumeration MUST visit the table, not reconstruct it from a known Direction
+% list (a hardcoded list cannot see a Direction added later — the first version
+% of this test had that bug and stayed green on the very case it names). We grid
+% over the fixed Magnitude×Acknowledged vocabulary with Direction UNBOUND: this
+% visits every Direction-bound clause (incl. a new one). We cannot leave M/A
+% unbound too — the `\= minor` / `\= stable` guards fail on unbound vars and would
+% drop revival_pressure/repudiation_pressure from the Direction set.
+attractor_sets(Table, Terminals, Directions) :-
+    findall(D-T, ( member(M, [minor, substantial, severe]),
+                   member(A, [true, false]),
+                   call(Table, D, M, A, T) ), Pairs),
+    findall(D, member(D-_, Pairs), Ds), sort(Ds, Directions),
+    findall(T, member(_-T, Pairs), Ts), sort(Ts, Terminals).
+
+% A mutated copy of the table (real rows + one 7th-terminal row added as a new
+% Direction clause) — the detection control runs the actual pin logic against it.
+mutated_attractor(D, M, A, T) :- cs_drift_engine:cs_terminal_attractor(D, M, A, T).
+mutated_attractor(referent_dissolution, severe, false, sealed_closure).
+
 test(terminal_set_pinned) :-
-    findall(T, ( member(D, [stable, authority_erosion, codification_collapse,
-                            axiom_overriding, practice_drift,
-                            revival_pressure, repudiation_pressure]),
-                 member(M, [minor, substantial, severe]),
-                 member(A, [true, false]),
-                 cs_drift_engine:cs_terminal_attractor(D, M, A, T) ), Ts0),
-    sort(Ts0, Actual),
-    Pinned = [axiom_foreclosure, extinction, husk, repudiation, revival, stable_pattern],
-    Actual == Pinned,
-    % detection control: a 7th terminal (sealed_closure) would break the pin
-    sort([sealed_closure|Actual], WithSeventh),
-    WithSeventh \== Pinned.
+    attractor_sets(cs_drift_engine:cs_terminal_attractor, Terminals, Directions),
+    PinnedTerminals  = [axiom_foreclosure, extinction, husk, repudiation, revival, stable_pattern],
+    PinnedDirections = [authority_erosion, axiom_overriding, codification_collapse,
+                        practice_drift, repudiation_pressure, revival_pressure, stable],
+    Terminals  == PinnedTerminals,
+    Directions == PinnedDirections,
+    % detection control (exercises the real pin logic on a mutated table): a new
+    % Direction routed to a new terminal breaks BOTH pins.
+    attractor_sets(mutated_attractor, MutTerminals, MutDirections),
+    MutTerminals  \== PinnedTerminals,
+    MutDirections \== PinnedDirections.
+
+% NOTE (2026-07-24): test(attractor_table_row_disjoint) above has the same
+% hardcoded-grid limitation — it checks disjointness only for the seven Directions
+% it lists, so a Direction added later is unchecked there. Left as-is for this leg;
+% the tripwire above is what catches the new-Direction case.
 
 % ...and the fixture whose gap sat in the old overlap now yields exactly one
 % solution through the trajectory surface (was 2 identical, witnessed on 8
