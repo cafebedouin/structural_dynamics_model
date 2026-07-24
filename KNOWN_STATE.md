@@ -45,6 +45,46 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-24 — [landed] OQ-152 / OQ-153 / OQ-227 husk bundle CLOSED; `update_authority` field is validated-but-dormant; two unfireable reviver conditions
+**Files:** ISSUES.md, docs/design/design_gaps.md, docs/design/update_authority_rubric.md, prolog/narrative_ontology.pl, prolog/data_validation.pl, prolog/cs_drift_engine.pl, prolog/tests/test_cs_drift_engine.pl
+**Tier:** landed
+
+The three closes (reasoning in ISSUES.md; evidence in `audits/2026-07-24_oq152_seat_crosssection/` and
+`audits/2026-07-24_oq153_step3_blind_pass/`):
+- **OQ-152 disposed** — the per-seat naturalization-collapse cross-section is unfingerprintable:
+  suppression is a constraint-level *gate* (not a seat dial) and the seat-χ ordering is config-fixed
+  by `role→d` (0/158 within-constraint crossings). Spun out **GAP-27** (`agent_power` is inert for
+  seat χ under δ=0).
+- **OQ-153 resolved → (c) decline** the five-condition husk annotation. Two findings drove it:
+  `dead∧frozen = 0/8` under enrichment (the husk conjunction is empty — a *mechanism* for
+  `husk_signature_read.py` K=0), and condition-5 independence is *untested* (the corpus cannot populate
+  non-canon `frozen`; 3/4 shape-test items failed to instantiate the shape — not "proxy," untested).
+- **OQ-227 resolved on C1+C2** — surviving-referent precondition is a structural tripwire
+  (`test_cs_drift_engine.pl terminal_set_pinned`); `acknowledgment_collapse` routed to the standing
+  trigger; `sealed_closure` row OPEN.
+
+**`update_authority` — the item most likely to be wrongly deleted.** A validated institutional field
+(enum `{licensed_revisable, frozen, absent_diffuse}` + authoring token `unauthored`; rubric
+`docs/design/update_authority_rubric.md`) with **ZERO authored facts, no consumer, no generation-schema
+emission — declared-dormant by design** (authored-on-demand by audit passes). Surface = the dynamic
+fact in `narrative_ontology.pl` + validators in `data_validation.pl` (enum/uniqueness/orphan +
+measure-only `inconsistent_update_authority/2`). It is NOT dead schema — provenance is the OQ-153 close.
+Do not remove it as "unused."
+
+**Two UNFIREABLE conditions — reviver documentation, nothing monitors them** (do not read as tracked):
+GAP-28's reopening condition (≥3 non-canon live-foreclosed-amendment instances — only checkable by
+authoring the dormant field) and OQ-227's `sealed_closure` near-miss (no authored referent-dissolution
+signal exists to search on). Both are surfaced only by a **corpus-expansion / generation-scope
+decision**, not a query.
+
+**Pattern for the next instrument build:** *selection on the outcome variable* recurred four times
+across this arc (all caught) — enriching a sample so a needed value is present severs the sample from
+the question. Guard: pre-register a selected-for value as supply-only and exclude it from any test that
+reads presence as evidence; only *absence under enrichment* carries information. Full note:
+`audits/2026-07-24_oq153_step3_blind_pass/RESULTS.md` → "PATTERN FOR THE NEXT INSTRUMENT BUILD".
+
+---
+
 ## 2026-07-23 — [tripwire] OQ-60 RESOLVED: no-data purity is `unknown`/JSON null (never 1.0); fabricated boltzmann_floor_default removed; two absence tokens must never be coerced or averaged
 **Files:** prolog/purity_scoring.pl, prolog/boltzmann_compliance.pl, prolog/signature_detection.pl, prolog/json_report.pl, prolog/network_dynamics.pl, prolog/giant_component_analysis.pl, prolog/maxent_report.pl, prolog/grothendieck_cohomology.pl, prolog/drl_boltzmann_analysis.pl, prolog/context_profile_mining.pl, prolog/tests/test_purity_absence.pl, prolog/tests/test_coexists_fpn_canary.pl, python/enhanced_report.py, prolog/config.pl, docs/logic_extensions.md
 **Tier:** tripwire
