@@ -70,6 +70,7 @@ validate_all :-
     % Run all validation checks
     validate_constraint_completeness,
     validate_metric_ranges,
+    validate_update_authority,
     validate_classification_consistency,
     validate_edge_cases,
     validate_domain_coverage,
@@ -308,6 +309,36 @@ valid_metric_range(_, V) :-
     number(V),
     V >= 0.0,
     V =< 1.0.
+
+%% validate_update_authority/0
+%  OQ-153 (step 2): institutional revision-authority enum. Membership is checked
+%  ONLY on AUTHORED facts — the findall ranges over existing update_authority/2
+%  clauses, so an unauthored constraint has NO fact, is NEVER flagged, and is NEVER
+%  defaulted. This is deliberate and load-bearing (operator, 2026-07-24): a default
+%  would let a downstream blind authoring pass read a value instead of deciding one,
+%  and `absent_diffuse` ("nobody owns the kernel", a substantive finding) must stay
+%  distinct from unauthored ("not looked at") — the value travels with the fact or
+%  not at all. No consumer yet; this guards the authoring surface only.
+validate_update_authority :-
+    format('[CHECK: Update-Authority Enum (OQ-153)]~n'),
+    findall(C-V,
+            ( narrative_ontology:update_authority(C, V),
+              \+ valid_update_authority_value(V) ),
+            Invalid),
+    length(Invalid, N),
+    (   N > 0
+    ->  ( format('  ✗ ~w constraint(s) with an out-of-enum update_authority~n~n', [N]),
+          forall(member(C-V, Invalid),
+                 ( format('    ✗ ~w: update_authority = ~w (not in {licensed_revisable, frozen, absent_diffuse})~n', [C, V]),
+                   assertz(validation_error(invalid_update_authority, C, V)) )) )
+    ;   format('  ✓ all authored update_authority values in enum (or none authored)~n', [])
+    ),
+    nl.
+
+%% valid_update_authority_value(+V)  — the closed enum; membership only, NO default.
+valid_update_authority_value(licensed_revisable).
+valid_update_authority_value(frozen).
+valid_update_authority_value(absent_diffuse).
 
 /* ============================================================================
    4. CLASSIFICATION CONSISTENCY VALIDATION

@@ -49,6 +49,14 @@
     coordination_type/2,
     boltzmann_floor_override/2,
 
+    % Institutional revision authority (OQ-153) — who may amend the kernel and by
+    % what procedure. Auth ∈ {licensed_revisable, frozen, absent_diffuse}. OPTIONAL:
+    % an authored fact or nothing; ABSENCE ≠ absent_diffuse (unauthored is "not
+    % looked at"; absent_diffuse is the substantive "nobody owns the kernel"). No
+    % default is ever imputed — the value travels with the fact or not at all. No
+    % consumer yet (step 2 of the OQ-153 staging).
+    update_authority/2,
+
     % Coordination vitality (v7.0 — piton gate revision)
     coordination_vitality/2,
 
@@ -75,6 +83,7 @@
     constraint_beneficiary/2, constraint_victim/2, input_vector/2,
     constraint_vindicates/2,  % OQ-64 split (2026-06-05): propositions a constraint vindicates are NOT beneficiaries; never feeds d/chi or beneficiary gates
     coupling_profile/2, coordination_type/2, boltzmann_floor_override/2,
+    update_authority/2,   % OQ-153 institutional revision authority (optional; absence ≠ absent_diffuse; no default)
     coordination_vitality/2,
     cs_story_uid/2,          % cs_story_uid(+C, +UID) — name→UUID identity map; C repeatable, UID unique per generation event
     cs_reading_relation/3,  % cs_reading_relation(+UID, +SiblingName, +Rel) — source UID-keyed; target name-keyed (stateless generation)
@@ -116,6 +125,7 @@
     constraint_beneficiary/2, constraint_victim/2, input_vector/2,
     constraint_vindicates/2,  % OQ-64 split (2026-06-05): propositions a constraint vindicates are NOT beneficiaries; never feeds d/chi or beneficiary gates
     coupling_profile/2, coordination_type/2, boltzmann_floor_override/2,
+    update_authority/2,   % OQ-153 institutional revision authority (optional; absence ≠ absent_diffuse; no default)
     coordination_vitality/2,
     cs_story_uid/2,
     cs_axiom_grounding/3,
