@@ -12,8 +12,17 @@ run_check :-
 
 main :-
     [stack],
-    corpus_loader:load_all_testsets,
     use_module(data_validation),
+
+    format("~n(F) partial/empty load — corpus_constraint defined-but-empty; orphan must SKIP:~n"),
+    assertz(narrative_ontology:update_authority(cid_under_empty_corpus, frozen)),
+    run_check,
+    ( err(orphan_update_authority, cid_under_empty_corpus)
+      -> format("    FALSE-FIRE: orphan flagged under empty corpus ✗~n")
+      ;  format("    not flagged orphan under empty corpus ✓ (skipped, no false-fire)~n") ),
+    retract(narrative_ontology:update_authority(cid_under_empty_corpus, frozen)),
+
+    corpus_loader:load_all_testsets,
     corpus_loader:corpus_constraint(Real), !,   % a real corpus CID for membership/uniqueness
     format("~nreal corpus CID for controls = ~w~n", [Real]),
 

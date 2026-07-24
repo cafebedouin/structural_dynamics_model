@@ -346,7 +346,12 @@ validate_update_authority :-
     % and never joins (Kill-A would read it as authored variance that never reaches
     % the annotation). Authority: corpus_loader:corpus_constraint/1. Gated on the
     % corpus being loaded so a corpus-free load degrades to a skip, not a false-orphan.
-    (   predicate_property(corpus_loader:corpus_constraint(_), defined)
+    % Gate on a NON-EMPTY corpus, not merely a DEFINED predicate: corpus_constraint/1
+    % is dynamic, so it is `defined` while empty (e.g. after [stack] with no
+    % load_all_testsets). Firing then would flag EVERY authored fact orphan against an
+    % empty corpus — a false-fire. Require ≥1 loaded constraint; else skip (loud note).
+    (   predicate_property(corpus_loader:corpus_constraint(_), defined),
+        corpus_loader:corpus_constraint(_)
     ->  findall(C,
                 ( narrative_ontology:update_authority(C, _),
                   \+ corpus_loader:corpus_constraint(C) ),
@@ -355,7 +360,7 @@ validate_update_authority :-
                ( format('    ✗ ~w: update_authority on a non-corpus constraint (orphan)~n', [C]),
                  assertz(validation_error(orphan_update_authority, C, not_a_corpus_constraint)) ))
     ;   Orphans = [],
-        format('    (orphan check skipped — corpus not loaded)~n')
+        format('    (orphan check skipped — no corpus loaded)~n')
     ),
     length(Invalid, NI), length(Dups, ND), length(Orphans, NO),
     (   NI =:= 0, ND =:= 0, NO =:= 0
