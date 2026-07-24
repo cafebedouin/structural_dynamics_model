@@ -321,17 +321,46 @@ valid_metric_range(_, V) :-
 %  not at all. No consumer yet; this guards the authoring surface only.
 validate_update_authority :-
     format('[CHECK: Update-Authority Enum (OQ-153)]~n'),
+    % (1) MEMBERSHIP — authored facts only (findall over existing clauses); no default.
     findall(C-V,
             ( narrative_ontology:update_authority(C, V),
               \+ valid_update_authority_value(V) ),
             Invalid),
-    length(Invalid, N),
-    (   N > 0
-    ->  ( format('  ✗ ~w constraint(s) with an out-of-enum update_authority~n~n', [N]),
-          forall(member(C-V, Invalid),
-                 ( format('    ✗ ~w: update_authority = ~w (not in {licensed_revisable, frozen, absent_diffuse})~n', [C, V]),
-                   assertz(validation_error(invalid_update_authority, C, V)) )) )
-    ;   format('  ✓ all authored update_authority values in enum (or none authored)~n', [])
+    forall(member(C-V, Invalid),
+           ( format('    ✗ ~w: update_authority = ~w (not in {licensed_revisable, frozen, absent_diffuse})~n', [C, V]),
+             assertz(validation_error(invalid_update_authority, C, V)) )),
+    % (2) UNIQUENESS — at most one fact per constraint. The step-3 blind authoring
+    % pass emits these; a per-context row or duplicate would pass membership yet let
+    % the five-condition husk signature read a constraint authored two ways.
+    findall(C, narrative_ontology:update_authority(C, _), AllC),
+    sort(AllC, UniqC),
+    findall(C-N,
+            ( member(C, UniqC),
+              aggregate_all(count, narrative_ontology:update_authority(C, _), N),
+              N > 1 ),
+            Dups),
+    forall(member(C-N, Dups),
+           ( format('    ✗ ~w: ~w update_authority facts (must be at most one)~n', [C, N]),
+             assertz(validation_error(duplicate_update_authority, C, N)) )),
+    % (3) ORPHAN CID — a fact keyed on a typo'd/unknown constraint passes membership
+    % and never joins (Kill-A would read it as authored variance that never reaches
+    % the annotation). Authority: corpus_loader:corpus_constraint/1. Gated on the
+    % corpus being loaded so a corpus-free load degrades to a skip, not a false-orphan.
+    (   predicate_property(corpus_loader:corpus_constraint(_), defined)
+    ->  findall(C,
+                ( narrative_ontology:update_authority(C, _),
+                  \+ corpus_loader:corpus_constraint(C) ),
+                Orphans),
+        forall(member(C, Orphans),
+               ( format('    ✗ ~w: update_authority on a non-corpus constraint (orphan)~n', [C]),
+                 assertz(validation_error(orphan_update_authority, C, not_a_corpus_constraint)) ))
+    ;   Orphans = [],
+        format('    (orphan check skipped — corpus not loaded)~n')
+    ),
+    length(Invalid, NI), length(Dups, ND), length(Orphans, NO),
+    (   NI =:= 0, ND =:= 0, NO =:= 0
+    ->  format('  ✓ update_authority: enum ok, unique, no orphans (or none authored)~n', [])
+    ;   format('  ✗ update_authority: ~w out-of-enum, ~w duplicate, ~w orphan~n', [NI, ND, NO])
     ),
     nl.
 
