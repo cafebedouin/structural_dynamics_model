@@ -1392,10 +1392,17 @@ authored surface) and validated it, but the annotation itself is deferred.
    not be assembled (3/4 attempted items failed to instantiate the shape). NOT disproven as a proxy —
    untested.
 
-**What closing the gap would require (the REOPENING CONDITION):** a corpus containing **≥3
-live-kernel-foreclosed-amendment instances outside closed canon**. On such a corpus: (a) the shape
-test becomes valid (condition-5 independence testable); (b) the husk conjunction may be non-empty.
-Absent that, the annotation would fire on nothing and gain no *established*-independent signal.
+**What closing the gap would require (REOPENING CONDITION — documentation, NOT a trigger):** a corpus
+containing **≥3 live-kernel-foreclosed-amendment instances outside closed canon**. On such a corpus:
+(a) the shape test becomes valid (condition-5 independence testable); (b) the husk conjunction may be
+non-empty. **This condition is UNFIREABLE as a monitor** — it is only evaluable by authoring
+`update_authority` on candidates, which the field's dormancy disposition means nobody will do; so it
+is checkable only by someone already doing the work it would prompt (same self-referential dead-end as
+`sealed_closure`, OQ-227). It is therefore documentation for a REVIVER, not a monitored trigger — do
+not read GAP-28 as watched. **The occasion that would actually surface it:** a corpus-expansion /
+generation-scope decision that adds live standards-body or entrenched-clause material — a scoping
+decision, not a query. Until such an expansion, the annotation would fire on nothing and gain no
+*established*-independent signal.
 
 **Status:** Declared absence. The `update_authority` field (condition 5) is BUILT and validated
 (`narrative_ontology.pl` + `data_validation.pl`); the annotation over all five is deferred to a corpus

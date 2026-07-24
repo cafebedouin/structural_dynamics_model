@@ -7909,9 +7909,17 @@ decoupled from the husk five-condition claim. Surface = `narrative_ontology.pl` 
 is warranted** — it is not dead schema, it is a declared-dormant field (this note is its provenance so
 it is not read as unused-therefore-removable). Zero authored facts in any live corpus (verified).
 
-**REOPENING CONDITION:** a corpus containing **≥3 live-kernel-foreclosed-amendment instances outside
-closed canon** — on which the shape test becomes valid and condition-5 independence can be tested. Also
-recorded in `design_gaps.md` as the standing gap for the husk five-condition annotation.
+**Against OQ-153's original fork** (build the five-condition annotation / partial 4-condition
+annotation + logged gap / decline), this resolution lands on **(c) decline** — plus the
+`update_authority` field (condition 5), a validated standalone deliverable the fork did not
+contemplate. The 4-condition option was already ruled wrong (it false-flags living traditions).
+
+**REOPENING CONDITION (documentation for a reviver, NOT a monitored trigger):** a corpus containing
+**≥3 live-kernel-foreclosed-amendment instances outside closed canon** — on which the shape test
+becomes valid and condition-5 independence can be tested. This is UNFIREABLE as a monitor (it can only
+be checked by authoring the dormant no-consumer field, i.e. by someone already doing the work it would
+prompt); the occasion that surfaces it is a **corpus-expansion / generation-scope decision** adding
+live standards-body or entrenched-clause material, not a query. Recorded as `design_gaps.md` **GAP-28**.
 
 **Origin:** operator framing, 2026-06-19 ("a husk is a naturalized scaffold that locked instead of
 dissolving"; the clarifier: scaffold and husk are the two *temporal* categories — scaffold on the

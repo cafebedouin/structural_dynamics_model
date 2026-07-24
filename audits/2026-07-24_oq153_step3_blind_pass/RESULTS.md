@@ -71,3 +71,23 @@ abort. Operator to rule.
    laundering direction that matters). The free pairs falsify the biconditional formally but contain
    no `frozen` item, so they cannot test that direction. Credit the replicate set on the axis it was
    added for.
+
+---
+
+## PATTERN FOR THE NEXT INSTRUMENT BUILD (ledger note, 2026-07-24)
+
+The recurring failure mode across every leg of this arc was the **same one: selection on the outcome
+variable** — engineering the sample so a needed value would be present, which severs the sample from
+the question. Four instances, all caught before they contaminated a result:
+1. the all-in-stratum sample (Kill C would have been a column, not a 2×2);
+2. the immutability-language `frozen` swaps (collinear with the naturalization signal in substance);
+3. the canon-widening proposal for Kill A (would have padded `frozen` with a known answer);
+4. the thin shape-test pool (3/4 candidates failed to instantiate the shape — the null was about the
+   pool, not the field).
+
+It recurs the moment someone needs a value to be **present** (to satisfy a variance gate, to populate a
+cell, to complete a 2×2). Guard for the next instrument build: whenever a sample is enriched for a
+value, **pre-register that the value is selected-for and exclude it from any test that reads presence
+as evidence** (the supply-only / Kill-B-denominator move used here). Selecting for a value forfeits the
+right to read its presence as a finding — only its *absence under enrichment* (e.g. `dead∧frozen=0/8`)
+carries information. Three of the four were caught by the operator after the first was flagged.
