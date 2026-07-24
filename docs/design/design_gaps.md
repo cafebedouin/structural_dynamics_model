@@ -830,6 +830,18 @@ re-gates the type** — re-adding a suppression maximum to the classifier would 
 (metric/claim independence; divergence is the signal). This GAP is the full *temporal feedback*; OQ-152 is
 its seat-resolved static snapshot. Named here 2026-06-19.
 
+**Update 2026-07-24 — OQ-152 DISPOSED (answered-negative); the static side is foreclosed, the temporal
+law here is NOT.** The static cross-section is unfingerprintable under the baseline calibration:
+suppression is a **constraint-level gate**, not a seat dial (absent from seat χ and from the
+`naturalized` clause; a step at the 0.60 snare floor), and the seat-χ ordering is **fixed by `role→d`
+config** (beneficiary d≤0.30 vs high-d d≥0.69, unbridgeable by `exit_modulation`/`scope_modifier`
+across the affine sigmoid; 0/158 within-constraint crossings). **Revival class — config-level only,
+never a corpus authoring pass:** (i) a positional-δ calibration (which would also make `agent_power`
+live for seat χ — see GAP-27), (ii) the `role→d` map itself, (iii) the `exit_modulation`/`scope_modifier`
+ranges. This forecloses the *static seat-ordering* instrument; it does **not** foreclose GAP-14's
+temporal grip-decay law (a different object — over-time series, not a fixed-time seat cross-section).
+Evidence: `audits/2026-07-24_oq152_seat_crosssection/`.
+
 ---
 
 ## GAP-15 — gkc `--scope` is not routed through the unified generation backend (deferred one-path cleanliness)
@@ -1325,3 +1337,32 @@ structural-observable question, may need a report model — build it beside the 
 probe is the template: declared link, ≥2 forms, criterion-level assertions), never into it.
 Promoting a report channel to engine surface is an operator ruling, not a wiring task.
 Related: OQ-232 (resolved), OQ-234 (the class), v8 §9.5 item 3 (the evidentiary bridge).
+
+---
+
+## GAP-27 — A stakeholder's authored `agent_power` is inert for its seat χ under the baseline δ=0
+
+**The absence:** In the per-seat (stakeholder) path, a seat's authored `agent_power` atom does **not**
+enter its χ. Seat χ is `constraint_indexing:extractiveness_for_agent_d/4` = `ε · f(D_eff) · σ(scope)`,
+where `D_eff = clamp(D + Δ)`, `D` comes from `role→d` + `exit_modulation` (not power), and
+`Δ = resolve_displacement(Power, Δ)`. Under the live baseline (`cognitive_displacement = 0.0`, profile
+`uniform`; and every `positional_displacement = 0.0`) **Δ = 0 regardless of Power**, so `agent_power`
+drops out of seat χ entirely — only role, exit, and scope move it.
+
+**Why it reads as a footgun, not just a fact:** the seat path *accepts* an authored power atom and
+threads it through a context term, so a consumer that keys on stakeholder power expecting seat-χ
+modulation is a **silent no-op** (success-shaped inertness, Build-Discipline Pattern 6). Distinct from
+the canonical-context path (`dr_type/3` via `context→d`), where power *does* set d.
+
+**Witness (2026-07-24):** identical χ = 0.442 for `power=powerless` vs `power=institutional` at fixed
+D=0.50, scope=national (`audits/2026-07-24_oq152_seat_crosssection/verify.pl`, control (c)).
+
+**What closing it would require:** a non-zero displacement calibration — `cognitive_displacement ≠ 0`
+(uniform, shifts all seats equally, preserves ordering) or a `positional_displacement` per-power-atom
+profile (would make the authored power atom live for seat χ, and could reorder seats). This is a
+**config/calibration** decision, not a per-story authored field. Surfaced by the OQ-152 leg; it is the
+reason the OQ-152 static cross-section is config-fixed (GAP-14 update, 2026-07-24).
+
+**Status:** Declared absence (baseline calibration). Not a defect to fix on sight — δ=0 is the deliberate
+"no perceptual bias" baseline; the gap is that consumers must not assume seat-power modulation without a
+δ calibration in place.

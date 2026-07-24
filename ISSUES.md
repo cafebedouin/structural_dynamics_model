@@ -7812,7 +7812,7 @@ Either is a real outcome; the kill condition (cochain reconstruction) decides wh
 
 **Ω-type:** Ω_C (design — a new commentary-grade diagnostic; **annotates, never overrides** the type).
 
-**Status:** open
+**Status:** disposed — answered-reframed (negative), 2026-07-24: the specified deliverable (a per-seat suppression-collapse curve) is NOT built; the cross-section is unfingerprintable under baseline calibration. No instrument. Evidence: `audits/2026-07-24_oq152_seat_crosssection/`.
 **Priority:** 3
 **Origin:** suppression/scaffold thread off OQ-56 (operator, 2026-06-19); the temporal half is
 `design_gaps.md` GAP-14 (this OQ is its commentary-grade static cross-section).
@@ -7839,14 +7839,33 @@ commentary-grade stakeholder diagnostics (`seat_perceived_vs_real`, `consensus_p
 `q6_crosscheck`, `cs_authority_masking`) — it does not touch `drl_core` classification (verdict-grade
 distinction: correction-grade overrides, commentary-grade annotates).
 
-**What resolution changes:** Adds the **per-seat suppression-collapse curve** as a reported
-diagnostic — the static cross-section of GAP-14's temporal grip-decay (over time, seats abandon the
-cover story one by one, beneficiary last). The finding *is* the ordering; the witness is a
-constraint where the payer-seat collapse-threshold is below the beneficiary's. No params on the
-classifier; a new commentary predicate + a per_constraint output field, with a positive control
-(a high-ε/χ-compressed/high-suppression constraint whose payer-seat reading is flagged collapsed
-while the beneficiary's is not) and the never-overrides invariant checked. The full temporal
-feedback stays in GAP-14.
+**Resolution (2026-07-24) — disposed, answered with a negative; no instrument.** The per-seat
+suppression-collapse cross-section is unfingerprintable under the baseline calibration, on two
+witnessed grounds (evidence + decompositions: `audits/2026-07-24_oq152_seat_crosssection/`):
+1. **Suppression is a constraint-level GATE, not a seat dial.** Seat χ (`extractiveness_for_agent_d/4`
+   = `ε·f(d)·σ`) carries no suppression term; suppression enters only `classify_from_metrics/6` via
+   `get_raw_suppression(C,_)`, keyed on C (identical across seats), and the `naturalized` clause
+   ignores it. Sweep witness: `naturalized` invariant under supp 0.0→0.95; `snare` appears as a
+   *step* at the 0.60 floor. So no per-seat suppression ordering exists — the curve is not computable.
+2. **Seat-χ ordering is fixed by `role→d` config.** Under δ=0 (live: `cognitive_displacement=0.0`
+   and all `positional_displacement=0.0`; the authored `agent_power` atom is therefore inert for seat
+   χ), the only per-seat channels are `exit_modulation∈[−0.03,+0.05]` and `scope_modifier∈[0.8,1.2]`,
+   which cannot bridge the beneficiary(d≤0.30)/high-d(d≥0.69) gap across the affine sigmoid
+   `f∈[−0.20,1.50]` (bound 3.75×; empirical 0/158 within-constraint crossings). A seat-ordering
+   diagnostic restates config; a band-membership one reads ε back.
+
+**Substrate finding (what the leg produced):** `naturalized` concentrates on the beneficiary seat
+by *band membership*, not lowest-χ (modal 65/128: agenda_setter→`rope` below the band, beneficiary→
+`naturalized`). The 12/158 "agenda out-naturalizes beneficiary" stratum is **12/12 config, 0
+seat-relative** — role→d ordering inside the naturalized band; which sub-floor seat reads
+`naturalized` and their order is ε + role→d + cascade, not seat structure.
+
+**Revival class (config-only; no corpus authoring pass revives this):** (i) a positional-δ
+calibration (would also make `agent_power` live for seat χ), (ii) the `role→d` map itself, (iii) the
+`exit_modulation`/`scope_modifier` ranges. The static cross-section stays empty; the full temporal
+feedback stays in GAP-14 (see its cross-ref). Downstream: OQ-153 condition (3) keys on `naturalized`
+band membership *at any seat* (seat as attribute, not test) — seat identity carries no information
+here (witnessed 12/12 config).
 
 ---
 
@@ -7912,6 +7931,15 @@ naturality claim — the likely witness surface), and the committer husk attract
 (`cs_reading_relation` edges, multiple readings/kernel ✓ partial), naturalization (FNL / `naturalized`
 ✓), moving world (`founding_problem_status` dead/live, `disappearance_verdict` ✓ partial), **frozen
 update-authority (no obvious authored field — a gap).**
+
+**Reading the naturalization condition (3) — OQ-152 handoff (2026-07-24):** test it as `naturalized`/
+FNL **band membership at *any* seat**, recording *which* seat as an attribute, not as the test. Do
+**not** phrase it as "the beneficiary seat naturalizes": the beneficiary is only the *modal*
+naturalized seat by band membership, and seat identity carries **no information** here — the per-seat
+cross-section is config-fixed (`role→d`), including a 12/158 stratum where the agenda_setter
+out-naturalizes the beneficiary, **12/12 explained by config**, 0 seat-relative (OQ-152 disposed;
+`audits/2026-07-24_oq152_seat_crosssection/`). Keying condition (3) on a named seat would inherit
+"the beneficiary naturalizes" as though it were observed — the mislabel one level up.
 
 **How a husk ends (two refinements to "eventually disappears"):** husks do **not** die from drift —
 they can carry a total kernel↔reading gap for centuries looking healthy, because the reading absorbs
