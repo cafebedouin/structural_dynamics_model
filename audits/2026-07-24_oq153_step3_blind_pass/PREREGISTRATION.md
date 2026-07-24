@@ -185,3 +185,24 @@ in: `commerce_clause_scope`, `bitcoin_consensus_kernel`, `article_9_war_renuncia
 out: `equal_protection_clause`, `bitcoin_whitepaper_purpose`, `biblical_source_text`,
 `church_turing_thesis`, `notability_guidelines`, `legitimacy_of_practice_standardization`,
 `refugee_convention_text`, `licensing_statute_mandate`.
+
+---
+
+## ADDENDUM 2 — replicate set (sealed 2026-07-24, before the pass)
+
+5 cross-leg same-kernel opposite-stratum authorings, shuffled UNMARKED into the same pass. Tests
+same-kernel / different-authoring-model reliability (test–retest); disagreement dispositive, agreement
+weak (§ Other notes). A replicate returning a DIFFERENT value from its primary pairing ⇒ the field
+reads prose, not institution ⇒ fails regardless of quote quality.
+
+| R | Item (other leg) | Leg | Stratum(leg) | Pairs with primary (sonnet) | Institution |
+|---|---|---|---|---|---|
+| R1 | `commerce_clause_scope__broad_effects_test` | flash | out | #1 (in) — SAME reading | US Constitution |
+| R2 | `biblical_authority__tradition_scripture_reading` | haiku | out | #6 (in) — SAME reading | Church magisterium |
+| R3 | `bretton_woods_treaty_substrate__neoliberal_convertibility` | flash | out | #9′ (in) — SAME reading | Bretton Woods |
+| R4 | `church_turing_thesis__physical_claim_reading` | haiku | in | #11 (out) — same kernel | Math/CS |
+| R5 | `equal_protection_clause__remedial_reading` | kimi | in | #2 (out) — same kernel | US Constitution |
+
+Pass = 20 items (15 primary + 5 replicate), 15 distinct kernels. Each replicate's value is expected
+STABLE vs its primary (same institution); a split is the failure signal — EXCEPT where the Bitcoin
+caveat's logic applies (a genuinely different sub-instrument), which does not arise in R1–R5.
