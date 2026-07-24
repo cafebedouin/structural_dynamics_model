@@ -580,6 +580,27 @@ Prolog analyses. When you ADD a reading predicate, register it in the same chang
 is opt-in (the named residual risk in the OQ-137 close); the sweep evidence is
 `audits/2026-07-02_oq137_reading_totality/classification_table.md`.
 
+### Aggregation polarity over typed absences — the claim-type gate axis (ruled for purity, OQ-60 R3)
+
+Typed absence (above) settles what a single reading returns; this settles what an AGGREGATE over a
+set containing those tokens may claim. The operator's R3 ruling (2026-07-17, OQ-60): the gate axis
+is **claim-type, not a coverage threshold** —
+
+- **Descriptive** (mean / distribution / count): compute over the scorable subset, and CARRY the
+  denominator (`n_scored/n_total`) unconditionally — no gate, but no silent full-coverage read.
+- **Dispositive negative / universal** (pristine, `stable`, `pure_*` — "nothing is wrong here"):
+  gate at coverage 1.0; any absent member ⇒ a DISTINCT abstention token
+  (`inconclusive(no_data)`, `undetermined`), never the clean verdict.
+- **Existential positive** (contaminated, cascading, a drift event): fires THROUGH absent members
+  — a witnessed finding is not suppressed by unknowns elsewhere in the set.
+
+A descriptive stat that feeds a threshold is **dispositive-by-consumption** — classify by where
+the value lands, not by how it is computed (the OQ-60 0b consumption table is the worked method).
+**Scope note:** ruled for the purity surface; reading it as an engine-wide invariant for every
+aggregate is an un-ruled generalization (the false-unification check applies — each aggregate
+family gets its own consumption-classified pass before inheriting the rule). Provenance: ISSUES.md
+OQ-60 (rulings block), `audits/2026-07-17_oq60_purity_absence/CONSUMPTION_TABLE_0B_2026-07-23.md`.
+
 ### The override layer corrects metric blindness — mostly *(audit finding; predicate identity now resolved)*
 
 The signature-override layer is the **correction-grade** half of the verdict-layer pattern

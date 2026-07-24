@@ -75,6 +75,13 @@ swapped a predicate definition in setup and restored it in cleanup; the post-res
 control ran while the swap was still active (restore deferred behind goal choicepoints) and the
 test failed mysteriously. **Fix: wrap the goal in `once/1`.** The test file carries the comment.
 
+**Second instance (2026-07-23, `test_purity_absence.pl`): `sub_string/5` is a quiet culprit.**
+Bare `sub_string(JSON, _, _, _, "...")` membership checks leave choicepoints; the same probe run
+as a hand-rolled script PASSED because its sub_strings sat inside committed if-then-elses, so the
+bug only surfaced when the sequence was transplanted into a plunit body — both post-restore reads
+returned the swapped value. Same fix (`once/1` around the whole swap-window goal); the test file
+marks the `once/1` as load-bearing.
+
 ---
 
 ## 3. Test-local redefinition of static predicates (the swap/restore pattern)
@@ -138,6 +145,15 @@ still returns a plausible value (the session-scope version of §2's trap).
   capture; diff the two with `pipeline_run_at` normalized, or diff `per_constraint` only (the manifest
   does not touch it). This is the symmetric twin of the next bullet's false-PASS: there a real change
   reads identical (stale file); here a behavior-preserving change reads different (live manifest).
+- **A same-session witness pair is only valid over a FROZEN corpus — fingerprint both halves.** The
+  live `testsets/` leg grows mid-session (operator c-orchestrator topic runs landed stories TWICE
+  during the OQ-60 pass, 189→195→199); a clean-vs-edited pair spanning such a landing reads corpus
+  growth as engine behavior. Guard: md5 the sorted corpus files immediately before AND after each
+  run of the pair and require all four fingerprints equal (template:
+  `audits/2026-07-17_oq60_purity_absence/clatent_witness.py`); a probe whose baseline rides a
+  census/TSV must re-run that census same-session on the live leg before joining. Also serialize
+  behind any running orchestrator (`ps` for `c-orchestrator|run_pipeline`) — its `run_pipeline`
+  step races yours (OQ-77).
 - **The diff is only valid if the run REWROTE the file — the aborted-gate stale-output false pass.**
   `run_pipeline.py` runs its gates (load-warning gate, ISSUES status-grammar gate) and aborts
   *non-zero BEFORE* the json write. On an abort, `outputs/pipeline_output.json` keeps its PRIOR

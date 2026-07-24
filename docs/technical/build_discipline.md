@@ -1130,6 +1130,14 @@ this one class with the count *dropping*, that is the floor: fix inline and ship
 convergence-softening, not signal (the operator's `[EDGE]` call). Worked instance with all witnesses:
 `audits/2026-06-20_oq69_ledger_drain/`.
 
+**Instrument vocabulary rots when the engine's tokens change (2026-07-23, OQ-60).** A probe that
+tags a condition by matching an engine token (census v1: mechanism-1 ⟺
+`scope_invariance_test(C, variant([]))`) reports a VACUOUS zero the moment the fix retires that
+token (`variant([])` → `no_data`) — Pattern 5 inside the instrument, doubly invisible because zero
+was also the hoped-for post-fix answer. Rule: an instrument is versioned WITH the engine tokens it
+reads (`census_oq60_v2.pl` shipped alongside the producer commit that retired v1's tags), and its
+positive control must re-fire on the NEW engine before any re-census is trusted.
+
 ---
 
 ## A deterministic gate is buildable IFF the defect has a merit-independent signature (the counting↔theme mirror)
@@ -1331,6 +1339,32 @@ code — and for a tracked+untracked mix, `git add` the paths explicitly first a
 
 ---
 
+## A latent edit's witness is a RED→GREEN test, not a null diff (operator corrections, 2026-07-23)
+
+A byte-identical pipeline diff for a supposedly-latent edit is consistent with two states: the
+edit is latent, or the edit was never exercised (shadowed clause, off-path guard, dead branch).
+The null diff cannot distinguish them — it is the success-shaped absence of the spine applied to
+the *witness itself*. Ruling from the OQ-60 pass: **every producer edit is witnessed by a plunit
+test that fails RED at pre-edit HEAD and goes GREEN with the fix, landing together**; the pipeline
+diff then witnesses only the LATENCY claim (nothing else moved), never the edit. Retroactive:
+already-landed commits whose only witness was a null diff owe a retro positive control (OQ-60's
+0a/0a.2 were retro-witnessed by injecting a synthetic `unknown` through the full consumer chain).
+Companions from the same review arc:
+
+- **Not-RED is a HALT, not a lucky green.** A new mechanism test that already passes at pre-fix
+  HEAD means the model of HEAD is wrong — never record it as a pass.
+- **Screen vs witness.** A pre-registered aggregate prediction (exact per-leg delta-mean, with a
+  float-tolerance window stated BEFORE the run so a ULP mismatch cannot HALT a correct fix)
+  SCREENS; only the per-item join (flip set == predicted rows, nothing else) WITNESSES. Name both
+  failure directions with different first suspects — over-flip ⇒ the census/premise is falsified;
+  under-flip ⇒ a missed caller — so the join is self-interpreting.
+- **Collapse latent commits when tests already attribute.** N zero-victim mechanisms can land as
+  ONE commit when N RED→GREEN tests give per-mechanism attribution — the per-commit witness cycle
+  bought nothing the tests don't.
+
+Provenance: `audits/2026-07-17_oq60_purity_absence/` (PREFLIGHT / WITNESS_CLATENT /
+WITNESS_CFLOOR _2026-07-23.md).
+
 ## Extension-touching diffs decompose into direct targets vs ensemble refit (or they read as walls)
 
 **Instance (2026-06-12, OQ-109 B3 unanimity guard):** a guard change that moved THREE
@@ -1361,6 +1395,16 @@ the same shape as the noise it would excuse.
 Witnessed pair: `audits/2026-06-11_oq109_phase_b/b3_unanimity_pattern3_diff.out` (the
 decomposed 60/62 wall) and `b3_unanimity_dispatch_diff.out` (the byte-identical revert that
 confirmed the decomposition's accounting was complete).
+
+**Second instance + two refinements (2026-07-23, OQ-60 C-FLOOR):** removing 93 fabricated
+Boltzmann floors diffed 181/199 and 960/960 rows on the two diffed legs — off-target changes
+confined to maxent_*/wasserstein_*/arakelov/signature_pressure/contamination_network.
+(1) **Attribute at the consumer, not by pattern-match**: the attribution is the pasted consumer
+line (`maxent_classifier.pl:140-141` — profiles "computed from actual corpus statistics"), not
+"probably the ensemble." (2) The strongest containment statement is the **headline-key count:
+`classifications` changed on ZERO rows** — then the statistic-driven consumer flips (12 shadow
+`maxent_top_type`, 9 alert-driven `verdict_join` red→yellow) are named separately per rule 2.
+`audits/2026-07-17_oq60_purity_absence/WITNESS_CFLOOR_2026-07-23.md`.
 
 ## Perturbation is the probe; invariance is the read (a claimed invariant needs a perturbation that moves it)
 

@@ -251,6 +251,9 @@ do not fold `trajectory` back into the parallel `tasks` list.
   (they share the raw artifact). Precedent: kernel_v1/original_v6/twins, 2026-07-01–02. **When
   citing counts across such runs, name BOTH the corpus and the code state** — "HEAD yields N" is
   ambiguous between engine-regime and corpus and has already caused a misread (KNOWN_STATE 2026-07-02).
+- **A witness diff-pair is only valid over a FROZEN corpus:** operator topic runs land stories
+  mid-session (witnessed 2×, 2026-07-23) — md5-fingerprint each corpus leg around BOTH halves of a
+  clean-vs-edited pair, and serialize behind any running `c-orchestrator` (gotchas §5).
 - **A pipeline-diff is a valid behavior-preservation witness ONLY if the run rewrote the file.**
   `run_pipeline.py` aborts (non-zero) on its gates BEFORE writing `outputs/pipeline_output.json`, so
   a before/after diff then compares the baseline against *itself* and reads byte-identical — a false
