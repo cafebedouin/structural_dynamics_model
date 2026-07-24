@@ -239,7 +239,8 @@ do not fold `trajectory` back into the parallel `tasks` list.
 - **Testing an ENGINE change: exercise it across ALL the corpora, not just `testsets/`.** The live
   `testsets/` is a deliberately sparse singleton (~small N) and will NOT exercise every branch or
   surface corpus-sensitive behavior — an engine change "witnessed" only there is under-witnessed.
-  Run it against all three live legs (`testsets/`, `testsets_haiku/`, `testsets_flash/`) AND the
+  Run it against all five live legs (`testsets/`, `testsets_haiku/`, `testsets_flash/`,
+  `testsets_kimi/`, `testsets_sonnet/`) AND the
   breadth archive `archives/datasets/kernel_v1/` (~1,106 stories) by overlaying `corpus_path` (use
   `asserta`, not plain `assertz` — see Corpus Loading). Corpus *content* changes are testset-local;
   *engine* changes are not. (Witnessed why it matters: OQ-178/OQ-51 `cs_kernel_divergence` behavior
@@ -572,11 +573,15 @@ in v5, 133/1151 in original_json; 0 in v6/kernel_v1. Re-key by the in-file subje
 filename==subject) before trusting a legacy-corpus DR sweep. Provenance: OQ-20 audit, KNOWN_STATE
 2026-06-22.**
 
-**THREE LIVE LEGS, and the beta posture (operator ruling, 2026-06-20).** `prolog/testsets/` is the
-LIVE leg — a small, **deliberately singleton topical working set** that lets the operator exercise
-the engine *while building it* (running it surfaces more live issues); `prolog/testsets_haiku/` +
-`prolog/testsets_flash/` are the reconciled multi-reading **twins**, kept as the comparison baseline.
-All three are live. **`testsets/`'s singleton sparsity is INTENDED, not a defect or a half-finished
+**FIVE LIVE LEGS, and the beta posture (operator ruling, 2026-06-20; legs extended 2026-07).**
+`prolog/testsets/` is the LIVE leg — a small, **deliberately singleton topical working set** that
+lets the operator exercise the engine *while building it* (running it surfaces more live issues);
+`prolog/testsets_haiku/` + `prolog/testsets_flash/` are the reconciled multi-reading **twins**, kept
+as the comparison baseline; `prolog/testsets_kimi/` + `prolog/testsets_sonnet/` are two additional
+model-named legs added later (postdate the 2026-07-23 OQ-60 census). **File counts (disk-verified
+2026-07-24, cite the manifest not these for any run): testsets 199, testsets_haiku 960,
+testsets_flash 960, testsets_kimi 1005, testsets_sonnet 1001.** All five are live. **`testsets/`'s
+singleton sparsity is INTENDED, not a defect or a half-finished
 rebuild** — do not "complete," flatten, or rebuild it on sight; its high OQ-58 dangling rate is the
 expected sparsity artifact (each lone reading dangles edges to ungenerated siblings). **The project
 is currently ALPHA, working toward BETA: extract maximum value from the corpus we have so the work
@@ -585,13 +590,13 @@ earns its way to beta before any rebuild.** The rebuild (a fresh `testsets_*`-st
 is a ways off. A future instance **may SUGGEST a
 rebuild** when accumulated schema/wiring changes seem to warrant it, but should not propose one
 lightly or treat the singleton working set as something to fix. (Resolves the OQ-58 corpus-identity
-flag; the regime swap that produced the three legs is witnessed in
-`audits/2026-06-20_oq58_cross_corpus_incompleteness/`.)
+flag; the regime swap that produced the original three legs is witnessed in
+`audits/2026-06-20_oq58_cross_corpus_incompleteness/`; the kimi/sonnet legs were added afterward.)
 **Test bed, not backfill target (operator clarification, 2026-06-24).** `testsets/` is the
 **evolving-schema test bed**: schema/prompt/scope changes are *encouraged* pre-rebuild and
 exercised HERE (the twins stay the stable matched-pair baseline). A change that breaks a
 `testsets/` result is fine — the twins are the comparison, not `testsets/`. We do **not**
-backfill any leg (all three are for testing); "hold off until rebuild" is the WRONG posture.
+backfill any leg (all five are for testing); "hold off until rebuild" is the WRONG posture.
 So an OQ-37-style "does this metric earn its keep" call is settled by *does it provide (or might
 it provide) useful analysis?* — make the schema/prompt change and test it on `testsets/` — never
 by "defer to the rebuild."

@@ -75,12 +75,15 @@ two defects: no n-floor, unprincipled 5%), OQ-240 (off-diagonal cover-story popu
 classification/calibration question, not report-text), OQ-241 (`ep_base_severity` fixed-0.70 cut
 type-interaction). Audit: `audits/2026-07-24_oq61_header_purity_cascade/`.
 
-**Follow-ups flagged to operator (out of scope, not fixed here):** (1) `python/shared/schemas.py`
-`PIPELINE_FIELDS` should register the new per-row `purity_class` — until then
-`validate_pipeline_output` emits a (non-fatal) schema-drift WARNING for it (schemas.py is
-operator-modified; left untouched per shared-index discipline). (2) CLAUDE.md "THREE LIVE LEGS" +
-MEMORY.md are stale — **five** live legs now on disk (`testsets`, `testsets_haiku`,
-`testsets_flash`, `testsets_kimi`, `testsets_sonnet`).
+**Follow-ups (both done at operator request, 2026-07-24):** (1) `purity_class` registered in
+`python/shared/schemas.py` `PIPELINE_FIELDS` (non-nullable) + `PipelineConstraint` — commit
+`ae3090d2`, isolated from the operator's uncommitted OQ-205 schema WIP via stash/commit/restore
+(non-overlapping region; verified 0 validation errors, no drift warning). (2) CLAUDE.md updated
+**THREE→FIVE LIVE LEGS** (added `testsets_kimi` 1005, `testsets_sonnet` 1001; disk-verified
+2026-07-24); MEMORY.md `project_corpus_reset_2026_06_05` note refreshed. NB: the operator's
+uncommitted set (`schemas.py`, `validation_suite.pl`, `cs_reading_relation_quarantine.json`,
+`oracle_gap_results.json`) is OQ-205 ε-provenance engine WIP, **not** essay constraint stories —
+left intact.
 
 ## 2026-07-24 — [landed] OQ-152 / OQ-153 / OQ-227 husk bundle CLOSED; `update_authority` field is validated-but-dormant; two unfireable reviver conditions
 **Files:** ISSUES.md, docs/design/design_gaps.md, docs/design/update_authority_rubric.md, prolog/narrative_ontology.pl, prolog/data_validation.pl, prolog/cs_drift_engine.pl, prolog/tests/test_cs_drift_engine.pl
