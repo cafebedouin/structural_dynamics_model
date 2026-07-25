@@ -86,17 +86,33 @@ constraint whose effective purity is absent also has an absent intrinsic. That c
 property of the current data, **not enforced anywhere in the code**, which is exactly why the
 guard is still worth landing.
 
-### Correction to the plan's premise 2
+### Correction to the plan's premise 2 — three claims with three different warrants
 
 The plan recorded the sentinel hazard as "not latent … live-shaped," reasoning from today's
-0-`critical` count on `testsets`. Both halves need adjusting:
+0-`critical` count on `testsets`. That reasoning does not hold, and the replacement must not
+overstate in the other direction. Keeping the claims separate:
 
-- The 0-`critical` count on `testsets` is **not** evidence of an unfiltered sentinel — it is just
-  that leg's purity distribution. `testsets_haiku` shows 14 `critical` with no sentinel involved.
-- The path is **structurally** unfiltered but **empirically inert on all six corpora**, measured
-  at the bander input rather than inferred from the output. So Phase 1b is
-  **behavior-preserving**, not output-changing, and does not need the output-changer's
-  manual-approval treatment.
+- **(a) Structurally unfiltered — CODE READ.** `one_hop_ep_safe/3`/`fpn_ep_safe/3` fall back to
+  `-1.0`; only the intrinsic is gated (`:50`). Nothing filters the banded values.
+- **(b) No leg exercises the path — WITNESSED on six corpora.** The table above, measured at the
+  bander input, per-process.
+- **(c) *Why* — DATA on one leg, NOT a traced code guarantee.** On `testsets` the set of
+  constraints with an absent intrinsic equals the set with an absent one-hop EP — **set equality
+  by membership**, 28 ≡ 28, not merely matching cardinality (`trigger6_control.pl` PART C). So
+  the `IP >= 0.0` filter is co-extensive with EP-absence *here*. Whether it structurally
+  *guarantees* exclusion would require tracing `drl_fpn:fpn_intrinsic/2` against
+  `drl_purity_network:effective_purity/4`; **that trace was not done.**
+
+Consequence for the guard's justification, which does not depend on (c): **it converts a
+data-dependent property into a code-guaranteed one.** Under (c) the path is *unexercised*, not
+*unreachable*. Either way Phase 1b is behavior-preserving and needs no output-changer treatment.
+
+Also: the 0-`critical` count on `testsets` is not evidence about reachability at all — it is that
+leg's purity distribution. `testsets_haiku` shows 14 `critical` with no sentinel involved.
+
+**Provenance of the six-leg table.** It was measured **per-process, after** the leg-accumulation
+defect below was discovered. Verifiable from the numbers themselves: the in-process run reported
+`testsets_haiku` at 642 rows; the per-process run reports 492, which is what the table carries.
 
 ### Two methodological notes (both were near-misses)
 
@@ -110,11 +126,42 @@ The plan recorded the sentinel hazard as "not latent … live-shaped," reasoning
    does not retract the `narrative_ontology` facts the testset files asserted, so legs accumulate
    and `sort/2` masks it behind ID dedup. The tell: kimi and sonnet returned byte-identical counts
    (1005 / 696 / identical zone histogram). Re-run one leg per **process**, they differ
-   (700 vs 930 rows). Any future multi-leg sweep must fork per leg.
+   (700 vs 930 rows). Any future multi-leg sweep must fork per leg. **This invalidates any prior
+   in-process multi-leg measurement in this project, not only this one** — escalated to its own
+   tracker item, **OQ-246**, with the detection recipe.
 
-## 4. Verdict
+## 4. The rename check that the byte-identity could not provide (2a)
+
+Recorded here because it belongs with the census: `fpn_band/2`'s only consumer is T6, T6 fires 0,
+and §2's blanket `catch(_, _, true)` swallows exceptions — so a missed call site would have left
+every 2a witness (0 firings, byte-identical `abductive_report.md`, green gate) exactly as it
+looks when the rename is correct. `trigger6_control.pl` closes it:
+
+- **PART A** — T6 called directly on all 181 constraints, outside the catch wrapper: **0
+  exceptions**, 0 fired.
+- **PART B (reach-depth)** — because "no throw" is worthless if control never reached the renamed
+  goals. Walking the body: `:522 subsystem_available → true`, `:524 fpn_ep → -1.0`,
+  **`:525 fpn_band/2 → unknown`**, **`:526 one_hop_band/3 → failed cleanly`**. A missing predicate
+  raises existence_error rather than failing, so a cleanly-failing goal is a resolved goal.
+- The overlay route (force the full body by asserting the two blockers) is **unavailable**: both
+  are static procedures — `drl_purity_network:effective_purity/3` (`:249`) and
+  `metric_drift_events:drift_event/3` — so `assertz` raises `permission_error`. Hence reach-depth.
+- `:534`'s `evidence_line(fpn, fpn_band, _)` key is TERM data, not a goal; a missed rename there
+  cannot throw and T6 emits nothing, so it is read-verified only.
+
+Incidental finding: `:525` returning `unknown` is the **Phase-1b guard firing live in the real
+trigger path** (pre-guard: `fpn_critical`). The guard therefore does change an intermediate value
+at the 28 constraints whose `fpn_ep` is `-1.0` — output-invisible only because `:526` fails
+immediately after. "Guard inert" is exact about *output*, not about *evaluation*.
+
+## 5. Verdict
 
 Guarding all four banders is **behavior-preserving at every enumerated call site**, witnessed on
 six corpora rather than argued from a code read. No call site depends on the throw: the only two
 throwing sites are (a) already inside a blanket trigger-level `catch`, and (b) downstream of a
-predicate that never succeeds.
+static predicate that never succeeds.
+
+The blanket catch in §2 is itself a defect larger than OQ-62 — it makes all ten trigger firing
+counts ambiguous between "didn't fire" and "errored," which is why the 0-firing count for
+`accelerating_pathology` cited when OQ-62 opened was never a witness of non-firing. Escalated to
+**OQ-247**.

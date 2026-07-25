@@ -2942,7 +2942,7 @@ OQ's report-only scope); OQ-241 (mountain within-type under-severity → `ep_bas
 Four banders, not two; three colliding words, not one. Guard landed uncoupled from the ruling.
 Witnesses in the resolution block below. Scalar-identity and the ≤0.05 bar split out to OQ-244/245.
 **Priority:** 1
-**Deps:** splits_from OQ-244, splits_from OQ-245
+**Deps:** splits_from OQ-244, splits_from OQ-245, splits_from OQ-246, splits_from OQ-247
 **Origin:** Purity audit 2026-06-03 (`audits/2026-06-03_purity/purity_audit_20260603.md` §4, K4/K6).
 **Files:** `abductive_helpers.pl:97-103` (`fpn_zone`: pure/clean/contaminated/compromised/critical
 at .80/.60/.40/.20), `logical_fingerprint.pl:605-611` (`purity_zone`:
@@ -2990,15 +2990,33 @@ names), plus **`degraded`** (<0.30 vs [0.30,0.50)) and **`critical`** (<0.30 vs 
 recorded here before. Counting the categorical `contaminated(Reasons)`, one word meant four
 things, not three.
 
-*2. The latency premise was wrong in BOTH directions.* This entry called the sentinel hazard
-"latent only because every current gating caller filters −1.0 first." `fpn_report`'s
-`one_hop_ep_safe/3` and `fpn_ep_safe/3` fall back to `-1.0` and nothing filters the banded value
-(only the intrinsic is gated) — so structurally it is *not* filtered. But measured at the bander
-input, no absence token reaches it on **any** corpus: token mix is pure `value` on all six legs
-(testsets 153 rows, haiku 492, flash 668, kimi 700, sonnet 930, kernel_v1 1102). Every `critical`
-band on every leg comes from a genuinely low real value. So the path is **structurally
-unfiltered but empirically inert**, and the guard was behavior-preserving — the reverse of the
-plan's expectation that it would be output-changing at `fpn_report`.
+*2. The latency premise was wrong, and so was the correction first drafted for it.* This entry
+called the sentinel hazard "latent only because every current gating caller filters −1.0 first."
+The 2026-07-24 plan replaced that with "`fpn_report`'s −1.0 path is unfiltered and live-shaped,"
+reasoning from the 0-`critical` count on `testsets`. **That replacement is also falsified** —
+measuring at the bander input rather than at the report output settles it the other way. Three
+claims, kept separate because their warrants differ:
+
+- **(a) Structurally unfiltered — code read.** `one_hop_ep_safe/3` and `fpn_ep_safe/3`
+  (`fpn_report.pl:93,99`) fall back to `-1.0`; only the intrinsic is gated (`IP >= 0.0`, `:50`).
+  Nothing filters the two banded values. This much of the original reading is right.
+- **(b) No leg exercises the path — WITNESSED, six corpora.** Token mix at the bander input is
+  pure `value` on every leg: testsets 153 rows, haiku 492, flash 668, kimi 700, sonnet 930,
+  kernel_v1 1102. Every `critical` band on every leg comes from a genuinely low real value, none
+  from a sentinel. Measured per-process (see the leg-accumulation defect, OQ-246).
+- **(c) *Why* no leg exercises it — DATA, not a code guarantee, and NOT traced.** On `testsets`
+  the set of constraints with an absent intrinsic and the set with an absent one-hop EP are
+  **equal by membership** (28 ≡ 28, verified as set equality rather than matching cardinality;
+  `trigger6_control.pl` PART C). So the `IP >= 0.0` filter is co-extensive with EP-absence *here*.
+  It is **not** established that the filter structurally *guarantees* exclusion — that would
+  require tracing `drl_fpn:fpn_intrinsic/2` against `drl_purity_network:effective_purity/4`, which
+  was not done. Until it is, (c) is a property of the current data on one leg, not of the code.
+
+The distinction matters for the guard's justification, which is (c)-independent and worth stating
+plainly: **the guard converts a data-dependent property into a code-guaranteed one.** Under (c)
+the path is merely *unexercised*; only a traced structural filter would make it *unreachable*.
+Either way the guard was behavior-preserving on all six legs — the reverse of the plan's
+expectation that it would be output-changing at `fpn_report`.
 
 *3. The throw was never loud.* `abductive_helpers:fpn_zone/2` and the GCA bander threw
 `type_error(evaluable, unknown/0)` on the OQ-60 atom, but `abductive_engine.pl:145` wraps every
@@ -3058,12 +3076,37 @@ an empty-table artifact; the control confirms the sweep does find serialised pur
 elsewhere. `fpn_intrinsic/2` and `gc_node_purity/3` are `:- dynamic` in-memory stores with no
 disk write path. No migration or read-side alias needed.
 
+**Rename-broke-the-only-consumer check (the one surface where byte-identity proved nothing).**
+`fpn_band/2`'s only consumer is T6 `trigger_accelerating_pathology/3`, which fires 0 on the live
+leg — and `abductive_engine.pl:145` wraps every trigger in `catch(_, _, true)`. So a missed call
+site would have thrown, been swallowed, left the firing count at 0, left `abductive_report.md`
+byte-identical and `gate.sh` green: every 2a witness was consistent with both "rename correct" and
+"rename broke the only consumer," and the plunit suite does not close it either (it calls the
+banders directly, not through the trigger path). Closed by
+`audits/2026-07-25_oq62_band_vocabulary_fork/trigger6_control.pl`:
+- PART A — T6 called directly on all 181 constraints **outside** the catch wrapper: 0 exceptions.
+- PART B — reach-depth, because "no throw" is worthless if control never reached the renamed
+  goals: `:522 subsystem_available → true`, `:524 fpn_ep → -1.0`, **`:525 fpn_band/2 → unknown`**,
+  **`:526 one_hop_band/3 → failed cleanly`**. A missing predicate raises existence_error rather
+  than failing, so a goal that fails cleanly is a goal that resolved. The byte-identity is
+  load-bearing retroactively.
+- `:534`'s `evidence_line(fpn, fpn_band, _)` key is TERM data, not a goal — a missed rename there
+  cannot throw, and T6 emits nothing, so it is read-verified only.
+
+Incidental: `:525` returning `unknown` is the Phase-1b guard firing **live in the real trigger
+path** — pre-guard it returned `fpn_critical`. So the guard does change an intermediate value at
+the 28 constraints whose `fpn_ep` is `-1.0`; it is output-invisible only because `:526` fails
+immediately after. "Guard inert" is exact about *output*, not about *evaluation*.
+
 **Latent, recorded rather than fixed.** `abductive_triggers.pl:527` tests `FPNZone \= OneHopZone`.
 With the guard, an `unknown` band compares unequal to a real band and would read as a zone
 migration — absence as presence. Unreachable today because `one_hop_band/3` depends on
-`drl_modal_logic:effective_purity/3`, which succeeds 0 times on the authored grid (control: the
-4-arity `drl_purity_network:effective_purity/4` succeeds 181/181 in the same session/context, so
-this is measured-empty, not didn't-look). If that predicate is ever revived, the fix is to
+`drl_modal_logic:effective_purity/3`, which resolves by import to the **static**
+`drl_purity_network:effective_purity/3` (`drl_purity_network.pl:249`) and succeeds 0 times on the
+authored grid — measured-empty, not didn't-look (control: the 4-arity sibling
+`drl_purity_network:effective_purity/4` succeeds 181/181 in the same session and context). Being
+static, it also cannot be overlaid in-session, so a forced full-body T6 run is not available as a
+witness — hence the reach-depth probe above. If that predicate is ever revived, the fix is to
 require both bands real — not to remove the guard.
 
 ---
@@ -11655,6 +11698,92 @@ an interval and report where the verdict mix moves, rather than asserting at the
 **What resolution changes:** either the bar is re-seated (output-changing on the classification
 path — split the commit and land under manual approval), or 96.6% becomes a citable finding about
 the corpus rather than a suspected instrument artifact.
+
+---
+
+## OQ-246 — In-process corpus-leg iteration silently accumulates; every prior in-process multi-leg measurement is suspect
+
+**Ω-type:** Ω_E (measurable defect in the measuring apparatus, not in the engine under test).
+
+**Status:** open
+**Priority:** 1
+**Deps:** splits_from OQ-62
+**Origin:** OQ-62 execution 2026-07-25 — hit while sweeping the purity banders across six corpora.
+**Files:** `prolog/corpus_loader.pl` (`corpus_loaded/0`, `corpus_constraint/1`),
+`docs/technical/swipl_load_path_and_probe_gotchas.md` (where the recipe belongs),
+`CLAUDE.md` "Corpus Loading" (candidate promotion).
+
+**The defect.** The documented overlay recipe (`asserta` the `corpus_path`, reload) is correct for
+loading ONE leg. Iterating legs **within a single process** is not: retracting `corpus_loaded/0`
+and `corpus_constraint/1` does **not** retract the `narrative_ontology` facts the testset files
+asserted. Legs therefore accumulate, and because leg IDs overlap across the model-named twins,
+`sort/2` dedups the union and the count looks plausible instead of obviously doubled. Every
+symptom is success-shaped: no error, no warning, a believable N.
+
+**Detection recipe (this is the part worth keeping).** The tell is **two legs reporting
+byte-identical statistics**. Witnessed: `testsets_kimi` and `testsets_sonnet` both reported
+1005 constraints / 696 rows / an identical zone histogram in-process; re-run one leg per
+**process**, they differ (kimi 1005/700, sonnet 1001/930). Two genuinely distinct corpora
+agreeing to the row is the signature — treat it as a defect in the harness, never as a finding
+about the corpora. Secondary check: compare `corpus_constraint` count against the leg's on-disk
+file count before trusting anything downstream.
+
+**Blast radius (the reason this is Priority 1 and not a footnote).** This invalidates **any**
+prior in-process multi-leg measurement in this project, not just OQ-62's — the apparatus is
+shared, and the failure predates this session. The scope of the re-measure is unknown until
+someone enumerates which recorded cross-corpus results were produced in-process. Note the
+asymmetry: a contaminated leg reports a SUPERSET, so "found X on leg L" may actually be
+"found X on legs 1..L" — false positives for the later legs, and no error anywhere.
+
+**What resolution changes:** either a fork-per-leg helper (or a documented "one leg per process"
+rule with a checked precondition), plus an audit of which existing cross-corpus claims were
+measured in-process and need re-taking. Until then, no multi-leg number in the repo should be
+cited without confirming how it was produced.
+
+---
+
+## OQ-247 — `catch(_, _, true)` around every abductive trigger: all 10 firing counts are ambiguous between "didn't fire" and "errored"
+
+**Ω-type:** Ω_E (observability defect — measurable once the channel distinguishes the two cases).
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-62
+**Origin:** OQ-62 execution 2026-07-25 — found while auditing whether the purity-bander guard
+converted a loud failure into a silent one. It did not: the failure was already silent.
+**Files:** `prolog/abductive_engine.pl:142-154` (`run_trigger_over_constraints/3`),
+`prolog/abductive_triggers.pl` (all 10 triggers), `outputs/abductive_report.md`.
+
+**The defect.** Every trigger is invoked as:
+
+```prolog
+catch(( call(TriggerPred, C, Context, H), assertz(abd_hypothesis(C, Context, H)) ),
+      _Error,
+      true)  % Silently skip constraints where trigger fails
+```
+
+A blanket catch-all with no allowlist and no logging. Any exception inside any trigger — a typo, a
+missing predicate after a rename, an arithmetic error on an absence token, a genuine engine bug —
+is discarded and presents identically to "this trigger correctly did not fire." This is Build
+Discipline Pattern 6 (measured-empty vs didn't-look collapsing at a channel boundary), and it sits
+at the boundary where *every* abductive result is produced.
+
+**What it already cost.** The 0-firing count for `accelerating_pathology` cited when OQ-62 opened
+was never a witness of non-firing — it was consistent with the trigger erroring on every
+constraint. OQ-62 had to build a bespoke direct-call probe
+(`audits/2026-07-25_oq62_band_vocabulary_fork/trigger6_control.pl`) to establish something the
+report should state directly. Any future rename touching a trigger's call graph inherits the same
+blind spot, and `gate.sh` stays green through all of it.
+
+**Method note (needs a two-sided control).** A fix is only demonstrated if a *planted* exception
+in one trigger shows up as an error count while the other nine stay clean — an error channel that
+reports 0 on a healthy corpus is indistinguishable from one that is not wired. Plant the defect,
+confirm it surfaces, remove it, confirm the count returns to 0.
+
+**What resolution changes:** the abductive firing table stops being ambiguous. Minimum viable fix
+is an allowlist-plus-counter at the catch (the `python/load_warning_gate.py` pattern: name the
+exceptions that are expected, count and surface the rest) so a 0 means measured-zero. Report
+surfacing the error count alongside the firing count is the graduation step.
 
 ---
 

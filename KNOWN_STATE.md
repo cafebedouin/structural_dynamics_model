@@ -77,12 +77,16 @@ their WORST zone, and two threw `type_error(evaluable, unknown/0)` on the OQ-60 
    or `giant_component`, and does not cite `audits/2025-05-15_recon_2/`, which had already
    recorded three `purity_zone/2` implementations. **Predicts sibling undercounts from the same
    audit** — treat its other counts as floors, not totals.
-2. *The sentinel path is structurally unfiltered but empirically inert.* Measured at the bander
-   INPUT, the token mix is pure `value` on all six corpora (testsets 153 rows / haiku 492 /
-   flash 668 / kimi 700 / sonnet 930 / kernel_v1 1102). Every `critical` band on every leg comes
-   from a genuinely low real value, none from a sentinel. So the guard was behavior-preserving,
-   not output-changing as expected. Do not cite a 0-`critical` count on one leg as evidence about
-   reachability — it is that leg's purity distribution.
+2. *The sentinel path is structurally unfiltered but empirically inert — three claims, three
+   warrants, do not merge them.* **(a)** unfiltered = code read (only the intrinsic is gated).
+   **(b)** no leg exercises it = WITNESSED, six corpora, measured at the bander INPUT, pure
+   `value` on every leg (testsets 153 rows / haiku 492 / flash 668 / kimi 700 / sonnet 930 /
+   kernel_v1 1102). **(c)** *why* = DATA on one leg, NOT traced: IP-absence and EP-absence are
+   set-equal on testsets (28 ≡ 28, membership not cardinality), so the `IP >= 0.0` filter is
+   co-extensive with EP-absence *here*; whether it structurally guarantees exclusion was never
+   traced. Under (c) the path is **unexercised, not unreachable** — the guard's real value is that
+   it converts a data-dependent property into a code-guaranteed one. Do not cite a 0-`critical`
+   count on one leg as evidence about reachability; it is that leg's purity distribution.
 3. *The throw was never loud.* `abductive_engine.pl:145` wraps every trigger in
    `catch(_, _, true)`, so the `type_error` was already being discarded. Guarding converted one
    silent path into another.
@@ -97,7 +101,28 @@ caught them):
   `corpus_constraint/1` does NOT retract the `narrative_ontology` facts the testset files
   asserted, so legs accumulate and `sort/2` masks it behind ID dedup. The tell was kimi and
   sonnet returning byte-identical counts; re-run one leg per **process**, they differ (700 vs 930
-  rows). Any future multi-leg sweep must fork per leg.
+  rows). Any future multi-leg sweep must fork per leg. **Blast radius is not local: this
+  invalidates any prior in-process multi-leg measurement in this project** — now **OQ-246**,
+  Priority 1, carrying the detection recipe (two distinct legs agreeing to the row is the
+  signature; a contaminated leg reports a SUPERSET, so "found X on leg L" may be "found X on legs
+  1..L"). The six-leg table above was measured per-process AFTER this discovery — verifiable from
+  the numbers, since the in-process run put haiku at 642 rows and the table carries 492.
+
+**The rename check byte-identity could not provide (and the defect behind it).** `fpn_band/2`'s
+only consumer is trigger 6, which fires 0, and `abductive_engine.pl:145` swallows every trigger
+exception — so a missed call site would have left 0 firings, a byte-identical
+`abductive_report.md` and a green gate, exactly as a correct rename does. Closed by
+`trigger6_control.pl`: T6 called directly outside the catch on all 181 constraints → **0
+exceptions**; reach-depth then shows control actually arrives at the renamed goals
+(`:525 fpn_band/2 → unknown`, `:526 one_hop_band/3 → failed cleanly`; a missing predicate throws
+rather than fails, so a cleanly-failing goal resolved). The overlay route was unavailable — both
+blockers are static procedures, so `assertz` raises `permission_error`. `:534`'s `evidence_line`
+key is term data, not a goal, so it is read-verified only. **Incidental:** `:525 → unknown` is the
+Phase-1b guard firing live in the real trigger path (pre-guard `fpn_critical`), so the guard does
+change an intermediate value at the 28 `-1.0` constraints — "inert" is exact about output, not
+evaluation. **The blanket `catch(_, _, true)` is now OQ-247:** all ten trigger firing counts are
+ambiguous between "didn't fire" and "errored," which means the 0-firing count for
+`accelerating_pathology` cited when OQ-62 opened was never a witness of non-firing.
 
 **Straggler class worth remembering.** `python/husk_signature_read.py` parses
 `outputs/fpn_report.md` and gated `proxy_husk` on the literal string `"critical"`. Post-rename
@@ -113,8 +138,9 @@ holding `fpn_report` values, i.e. named after the wrong bander.
 the new atoms; the other two reports byte-identical untouched. `structural_purity` verdict mix
 preserved exactly across the rename (purity_fail 151 / inconclusive 35 / inconclusive_nodata 4 /
 pure_coordination 9). purity_absence 7/7, reading-totality 10/10, `[GATE]` GREEN.
-Follow-ons minted: **OQ-244** (scalar identity — do any two band the same quantity?) and
-**OQ-245** (is the ≤0.05 excess bar calibrated, or is 96.6% failure the finding?).
+Follow-ons minted: **OQ-244** (scalar identity — do any two band the same quantity?),
+**OQ-245** (is the ≤0.05 excess bar calibrated, or is 96.6% failure the finding?), **OQ-246**
+(in-process leg accumulation), **OQ-247** (blanket trigger catch-all).
 
 ---
 

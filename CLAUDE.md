@@ -265,7 +265,15 @@ do not fold `trajectory` back into the parallel `tasks` list.
   use a same-session clean-vs-edited diff, never a prior-run baseline). Detail:
   `swipl_load_path_and_probe_gotchas.md` §5.
 - Prolog tests (corpus validation): `cd prolog && swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t "halt(1)"`
-- Prolog unit tests (engine): `cd prolog && swipl -g "[stack], [tests/test_snapshot_migration], run_tests, halt" -t "halt(1)"` — substitute any file in `prolog/tests/` (except `test_battery_variants.pl`, a variant harness, not a plunit test)
+- Prolog unit tests (engine): `cd prolog && swipl -g "[stack], [tests/test_snapshot_migration], run_tests, halt" -t "halt(1)"` — substitute any file in `prolog/tests/` (except `test_battery_variants.pl`, a variant harness, not a plunit test).
+  **`[stack]` is NOT a sufficient load chain for every suite, and a short chain fails LOUD but
+  MISLEADINGLY — the suite reports test failures, not a load error, so the natural read is
+  "regression" (witnessed 2026-07-25: 7 spurious `reading_totality` failures under `[stack]`).
+  Each suite's correct chain is in its own file header — read it first.** Known extended chains:
+  `test_reading_totality` → `-l stack.pl -l reading_registry.pl -l commentary_census.pl` **plus**
+  `corpus_loader:load_all_testsets` in the goal (this is exactly what `run_pipeline.py`'s OQ-137
+  gate runs); `test_purity_bands` → `-l stack.pl -l fpn_report.pl -l giant_component_analysis.pl`;
+  `test_purity_absence` → the 8-module pipeline chain in its header.
 - Stack consistency check (OQ-57-class wrong-qualifier detection): `cd prolog && swipl -l check_stack.pl -g "run_check_stack, halt" -t "halt(1)"` — compare against the recorded baseline (KNOWN_STATE.md 2026-06-04); new findings are regressions. Not a pipeline gate while the baseline is non-empty.
 - In-session overlay probes: use `probe_harness:with_retracted/2` / `with_overlay/3`
   (snapshot-first, verified restore, automatic cache clearing via
