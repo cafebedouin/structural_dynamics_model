@@ -431,7 +431,17 @@ stability_distance(T1, T2, DStability) :-
     DStability is 0.30 * CoupDiff + 0.25 * PurDiff
                + 0.25 * PresDist + 0.20 * BoltzDist.
 
-normalize_purity(P, 0.5) :- (P =:= -1.0 ; \+ number(P)), !.
+%% normalize_purity(+Purity, -Normalized)
+%  Maps BOTH OQ-60 absence tokens to 0.5 for the stability-distance component:
+%  the `unknown` atom (no-data — purity_scoring.pl:54) and the -1.0
+%  epistemic-gate-fail sentinel (purity_scoring.pl:59).
+%
+%  Guard order is load-bearing: `\+ number(P)` MUST precede the arithmetic.
+%  `=:=` evaluates its args, so testing `P =:= -1.0` first THROWS on the
+%  `unknown` atom before the non-number disjunct can catch it (CLAUDE.md
+%  OQ-60 invariant: guard number/1 before any arithmetic over purity).
+normalize_purity(P, 0.5) :- \+ number(P), !.   % `unknown` (no-data) — never reaches =:=
+normalize_purity(P, 0.5) :- P =:= -1.0, !.     % gate-fail sentinel
 normalize_purity(P, P).
 
 preservation_distance(preserved(_), preserved(_), 0.0) :- !.
