@@ -119,6 +119,23 @@ def _provenance_stamp(model, sampling_params="unspecified", source_essay="unspec
         # Read by generate_constraint_pl into epsilon_provenance/5 arg 4.
         "generation_run_id": generation_run_id,
     }
+def _scope_manifest_provenance(model, axes_ceiling=None, topic="unspecified"):
+    """Manifest self-provenance block (OQ-254, 2026-07-25): the SCOPE manifest is the
+    Q-choice record (which axes were asked, which deferred, why) but carried no record
+    of its OWN generation conditions — the OQ-205-shaped hole one level up. Stamped by
+    the pipeline at persist time (the SCOPE model cannot know its commits), stored
+    under `_provenance` in the manifest JSON. Shared by both front-ends
+    (c-orchestrator._persist_manifest and the gkc batch decompose sidecar write)."""
+    return {
+        "scope_model": model,
+        "scope_prompt_commit": _git_commit_of("prompts/uke_scope_v2_json.md"),
+        "scope_schema_commit": _git_commit_of("python/scope_manifest_schema.json"),
+        "persisted_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        "axes_ceiling": axes_ceiling,   # the --axes cap in force; None = uncapped
+        "topic": topic,
+    }
+
+
 MAX_CUSTOM_ID = 64  # Anthropic batch custom_id pattern: ^[a-zA-Z0-9_-]{1,64}$
 
 
@@ -1529,6 +1546,8 @@ def run_decompose(args):
             continue
         m["_seed_id"] = kid
         m["_generation_run_id"] = kid  # OQ-254 join key = sidecar filename stem
+        m["_provenance"] = _scope_manifest_provenance(
+            SCOPE_MODEL, args.axes, topic=seed.get("human_readable") or kid)
         csr = m.get("commitment_system_recognition", {}) or {}
         tag = "KERNEL" if csr.get("is_contested_kernel") else "collapsed"
         print(f"  {kid}: {tag} ({len(csr.get('readings', []))} readings)")

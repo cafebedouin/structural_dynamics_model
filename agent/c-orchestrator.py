@@ -482,7 +482,7 @@ class DRAuditOrchestrator:
             notes = fracture.get("notes", "")
             self._progress("decompose", f"Fracture warning: {notes}")
 
-        self._persist_manifest(manifest)
+        self._persist_manifest(manifest, topic=topic)
         self._progress("decompose", f"SCOPE complete — {len(manifest['generation_sequence'])} axes selected")
         return StepResult(
             step="decompose", status="success", data=manifest,
@@ -490,7 +490,7 @@ class DRAuditOrchestrator:
             duration_s=time.time() - t0,
         )
 
-    def _persist_manifest(self, manifest: dict) -> None:
+    def _persist_manifest(self, manifest: dict, topic: str = "unspecified") -> None:
         """Persist the SCOPE manifest to disk (added 2026-06-05).
 
         Previously flat (un-run-tagged) runs DISCARDED the manifest — the axis
@@ -508,6 +508,11 @@ class DRAuditOrchestrator:
         ts = time.strftime("%Y%m%d_%H%M%S")
         manifest["_generation_run_id"] = f"{fam}_{ts}"  # == manifest filename stem
         try:
+            # Self-provenance (OQ-254): the manifest records the Q-choice; this block
+            # records the conditions the Q-choice was generated under.
+            from agent.generate_kernel_corpus import _scope_manifest_provenance
+            manifest["_provenance"] = _scope_manifest_provenance(
+                self.MODELS["architect"], self.axes, topic=topic)
             mdir = self._manifests_dir or (REPO_ROOT / "outputs" / "kernel_manifests" / "flat")
             mdir.mkdir(parents=True, exist_ok=True)
             path = mdir / f"{fam}_{ts}.manifest.json"
