@@ -26,9 +26,9 @@
     % Fingerprint void classification
     extractive_void/1,
 
-    % Zone helpers
-    fpn_zone/2,
-    one_hop_zone/3,
+    % Band helpers (OQ-62: renamed from fpn_zone/2, one_hop_zone/3)
+    fpn_band/2,
+    one_hop_band/3,
 
     % Confidence computation
     compute_confidence/3,
@@ -131,32 +131,34 @@ extractive_void(coercion_without_coordination).
    ZONE HELPERS
    ================================================================ */
 
-%% fpn_zone(+EP, -Zone)
+%% fpn_band(+EP, -Band)
 %  Bands the FPN intrinsic/effective purity scalar for abductive evidence lines.
-%  NOT the same vocabulary as any other bander — the old "matching fpn_report.pl"
-%  claim here was FALSE (OQ-62): fpn_report:purity_zone/2 has 4 zones cut at
-%  .7/.5/.3 with names sound/contested/degraded/critical, while this has 5 zones
-%  cut at .8/.6/.4/.2. `contaminated` in particular means [0.40,0.60) here but
-%  [0.30,0.50) in the canonical spec bander logical_fingerprint:purity_zone/2.
+%  NOT the same vocabulary as any other bander — the old name (fpn_zone/2) sat
+%  under a comment claiming parity with fpn_report.pl that was FALSE (OQ-62):
+%  that bander has 4 zones cut at .7/.5/.3, this has 5 cut at .8/.6/.4/.2, and
+%  the shared word `contaminated` meant [0.40,0.60) here but [0.30,0.50) in the
+%  canonical spec bander logical_fingerprint:purity_zone/2. Renamed and the
+%  atoms namespaced so the two vocabularies cannot be silently interchanged.
 %  Band-vocabulary convention table: docs/logic_extensions.md §2.3.
 %  OQ-62/OQ-60: fail closed on both absence tokens. `unknown` previously threw
 %  type_error(evaluable, unknown/0) here — a throw that abductive_engine.pl:145's
 %  blanket catch already swallowed, so nothing depended on it (census:
 %  audits/2026-07-25_oq62_band_vocabulary_fork/CALL_SITE_CENSUS.md §2).
-%  Order is load-bearing: `< 0.0` throws on the atom.
-fpn_zone(EP, unknown)      :- \+ number(EP), !.
-fpn_zone(EP, unknown)      :- EP < 0.0, !.
-fpn_zone(EP, pure)         :- EP >= 0.80, !.
-fpn_zone(EP, clean)        :- EP >= 0.60, !.
-fpn_zone(EP, contaminated) :- EP >= 0.40, !.
-fpn_zone(EP, compromised)  :- EP >= 0.20, !.
-fpn_zone(_,  critical).
+%  Order is load-bearing: `< 0.0` throws on the atom. `unknown` is the one
+%  deliberately shared token across all four banders.
+fpn_band(EP, unknown)         :- \+ number(EP), !.
+fpn_band(EP, unknown)         :- EP < 0.0, !.
+fpn_band(EP, fpn_pure)        :- EP >= 0.80, !.
+fpn_band(EP, fpn_clean)       :- EP >= 0.60, !.
+fpn_band(EP, fpn_mixed)       :- EP >= 0.40, !.
+fpn_band(EP, fpn_compromised) :- EP >= 0.20, !.
+fpn_band(_,  fpn_critical).
 
-%% one_hop_zone(+C, +Context, -Zone)
-%  Zone from the standard one-hop effective purity.
-one_hop_zone(C, Context, Zone) :-
+%% one_hop_band(+C, +Context, -Band)
+%  Band from the standard one-hop effective purity.
+one_hop_band(C, Context, Band) :-
     catch(drl_modal_logic:effective_purity(C, Context, EP), _, fail),
-    fpn_zone(EP, Zone).
+    fpn_band(EP, Band).
 
 /* ================================================================
    CONFIDENCE COMPUTATION

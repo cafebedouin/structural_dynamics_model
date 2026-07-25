@@ -58,7 +58,7 @@ run_fpn_report :-
 
     % Classify zone migrations
     findall(row(C, IP, OH, FP, T),
-        (member(row(C, IP, OH, FP, T), Rows), purity_zone(OH, Z1), purity_zone(FP, Z2), Z1 \= Z2),
+        (member(row(C, IP, OH, FP, T), Rows), ep_band(OH, Z1), ep_band(FP, Z2), Z1 \= Z2),
         Migrations),
     length(Migrations, NMigrations),
 
@@ -110,12 +110,21 @@ type_safe(C, Context, Type) :-
 % filters the banded value (only the intrinsic is gated, :50). Fail closed to
 % `unknown` rather than banding an absence `critical`. Order is load-bearing:
 % `< 0.0` throws on the atom, so it must follow the `\+ number` clause.
-purity_zone(EP, unknown)   :- \+ number(EP), !.   % OQ-60: effective_purity can propagate `unknown` (0a)
-purity_zone(EP, unknown)   :- EP < 0.0, !.        % OQ-62: -1.0 sentinel is absence, not worst-zone
-purity_zone(EP, sound)     :- EP >= 0.70, !.
-purity_zone(EP, contested) :- EP >= 0.50, !.
-purity_zone(EP, degraded)  :- EP >= 0.30, !.
-purity_zone(_,  critical).
+%% ep_band(+EP, -Band)
+%  Bands EFFECTIVE purity (one-hop and fixed-point) for this report only.
+%  OQ-62: renamed from purity_zone/2 — three modules defined a purity_zone/2
+%  with different cuts and partly-overlapping words, so the shared name invited
+%  a unification the cut-points do not license. The canonical spec bander keeps
+%  the name (logical_fingerprint:purity_zone/2, docs/logic_extensions.md §2.3);
+%  this one is purpose-named and its atoms are namespaced to be disjoint.
+%  `unknown` is the ONE deliberately shared token across all four banders — it
+%  means the same thing everywhere (input absent or out of range, fail closed).
+ep_band(EP, unknown)     :- \+ number(EP), !.   % OQ-60: effective_purity can propagate `unknown` (0a)
+ep_band(EP, unknown)     :- EP < 0.0, !.        % OQ-62: -1.0 sentinel is absence, not worst-band
+ep_band(EP, ep_sound)     :- EP >= 0.70, !.
+ep_band(EP, ep_contested) :- EP >= 0.50, !.
+ep_band(EP, ep_low)       :- EP >= 0.30, !.
+ep_band(_,  ep_critical).
 
 /* ================================================================
    REPORT SECTIONS
@@ -165,8 +174,8 @@ report_zone_migrations(Migrations) :-
     format('| Constraint | Type | One-Hop EP | Zone | FPN EP | Zone | Shift |~n'),
     format('|------------|------|-----------|------|--------|------|-------|~n'),
     forall(member(row(C, _IP, OH, FP, T), Migrations), (
-        purity_zone(OH, Z1),
-        purity_zone(FP, Z2),
+        ep_band(OH, Z1),
+        ep_band(FP, Z2),
         Shift is OH - FP,
         format('| ~w | ~w | ~4f | ~w | ~4f | ~w | ~4f |~n',
                [C, T, OH, Z1, FP, Z2, Shift])

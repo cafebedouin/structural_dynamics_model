@@ -102,7 +102,7 @@ def parse_fpn_report():
             rows[parts[0]] = parts[1:]
         return rows
 
-    # Zone migrations: constraint -> [type, one_hop_ep, one_hop_zone, fpn_ep, fpn_zone, shift]
+    # Zone migrations: constraint -> [type, one_hop_ep, one_hop_ep_band, fpn_ep, ep_band, shift]
     zm_rows = parse_table(zm_start, zm_end)
 
     # Significant movers: constraint -> [type, intrinsic, one_hop_ep, fpn_ep, shift]
@@ -127,38 +127,48 @@ def assemble(constraint_family, constraint_uniform, constraint_gauge, zm_rows, s
         # FPN data
         if cid in zm_rows:
             zm = zm_rows[cid]
-            # [type, one_hop_ep, one_hop_zone, fpn_ep, fpn_zone, shift]
+            # [type, one_hop_ep, one_hop_ep_band, fpn_ep, ep_band, shift]
             ctype = zm[0] if len(zm) > 0 else "NA"
             one_hop_ep = zm[1] if len(zm) > 1 else "NA"
-            one_hop_zone = zm[2] if len(zm) > 2 else "NA"
+            one_hop_ep_band = zm[2] if len(zm) > 2 else "NA"
             fpn_ep = zm[3] if len(zm) > 3 else "NA"
-            fpn_zone = zm[4] if len(zm) > 4 else "NA"
+            ep_band = zm[4] if len(zm) > 4 else "NA"
             ep_shift = zm[5] if len(zm) > 5 else "NA"
-            fpn_zone_migration = f"{one_hop_zone}->{fpn_zone}"
+            ep_band_migration = f"{one_hop_ep_band}->{ep_band}"
         elif cid in sm_rows:
             sm = sm_rows[cid]
             # [type, intrinsic, one_hop_ep, fpn_ep, shift]
             ctype = sm[0] if len(sm) > 0 else "NA"
             one_hop_ep = sm[2] if len(sm) > 2 else "NA"
-            one_hop_zone = "NA"
+            one_hop_ep_band = "NA"
             fpn_ep = sm[3] if len(sm) > 3 else "NA"
-            fpn_zone = "NA"
+            ep_band = "NA"
             ep_shift = sm[4] if len(sm) > 4 else "NA"
-            fpn_zone_migration = "none"
+            ep_band_migration = "none"
         else:
             ctype = "NA"
             one_hop_ep = "NA"
-            one_hop_zone = "NA"
+            one_hop_ep_band = "NA"
             fpn_ep = "NA"
-            fpn_zone = "NA"
+            ep_band = "NA"
             ep_shift = "NA"
-            fpn_zone_migration = "stable"
+            ep_band_migration = "stable"
 
         # Proxy husk: criterion 2 only (criterion 1 vacuously true for all)
-        proxy_husk = "Y" if fpn_zone == "critical" else "N"
+        #
+        # OQ-62: these values come from fpn_report.md, i.e. from
+        # fpn_report:ep_band/2 — NOT from abductive_helpers:fpn_band/2. The
+        # columns were previously named fpn_zone/one_hop_zone, which named them
+        # after the wrong bander; renamed with them. The worst band was renamed
+        # "critical" -> "ep_critical", and matching only the old string would
+        # silently yield zero proxy husks — which reads exactly like a genuine
+        # finding rather than a broken parse. Accept both so a re-run against an
+        # archived pre-rename report still parses.
+        WORST_EP_BAND = ("ep_critical", "critical")
+        proxy_husk = "Y" if ep_band in WORST_EP_BAND else "N"
 
-        # Sharper structural annotation: uniform + critical
-        uniform_critical = "Y" if (is_uniform and fpn_zone == "critical") else "N"
+        # Sharper structural annotation: uniform + worst band
+        uniform_critical = "Y" if (is_uniform and ep_band in WORST_EP_BAND) else "N"
 
         rows.append({
             "constraint_id": cid,
@@ -167,10 +177,10 @@ def assemble(constraint_family, constraint_uniform, constraint_gauge, zm_rows, s
             "gauge_family": gauge,
             "constraint_type": ctype,
             "one_hop_EP": one_hop_ep,
-            "one_hop_zone": one_hop_zone,
+            "one_hop_ep_band": one_hop_ep_band,
             "fpn_EP": fpn_ep,
-            "fpn_zone": fpn_zone,
-            "fpn_zone_migration": fpn_zone_migration,
+            "ep_band": ep_band,
+            "ep_band_migration": ep_band_migration,
             "ep_shift": ep_shift,
             "has_measurement_series": "N",
             "drift_velocity": "NA",
@@ -188,8 +198,8 @@ def assemble(constraint_family, constraint_uniform, constraint_gauge, zm_rows, s
 FIELDNAMES = [
     "constraint_id", "fingerprint_family", "is_fingerprint_uniform",
     "gauge_family", "constraint_type",
-    "one_hop_EP", "one_hop_zone", "fpn_EP", "fpn_zone",
-    "fpn_zone_migration", "ep_shift",
+    "one_hop_EP", "one_hop_ep_band", "fpn_EP", "ep_band",
+    "ep_band_migration", "ep_shift",
     "has_measurement_series", "drift_velocity",
     "proxy_husk", "uniform_critical",
 ]
@@ -246,12 +256,12 @@ def analyze(rows):
     # Zone migration breakdown
     migration_counts = defaultdict(int)
     for r in rows:
-        migration_counts[r["fpn_zone_migration"]] += 1
+        migration_counts[r["ep_band_migration"]] += 1
 
     # FPN zone distribution
     zone_counts = defaultdict(int)
     for r in rows:
-        zone_counts[r["fpn_zone"]] += 1
+        zone_counts[r["ep_band"]] += 1
 
     return {
         "total": total,
@@ -276,12 +286,12 @@ def analyze(rows):
 def write_proxy_list(proxy_rows):
     path = OUT / "husk_shaped_list.txt"
     with open(path, "w") as f:
-        f.write("# Proxy-husk constraints (synchronic: fpn_zone=critical only)\n")
+        f.write("# Proxy-husk constraints (synchronic: ep_band=ep_critical only)\n")
         f.write("# NOT confirmed husk — temporal data absent. See husk_signature_report.md.\n\n")
         for r in sorted(proxy_rows, key=lambda x: x["constraint_id"]):
             f.write(f"{r['constraint_id']}\t{r['fingerprint_family']}\t"
                     f"{r['constraint_type']}\t{r['one_hop_EP']}\t{r['fpn_EP']}\t"
-                    f"{r['fpn_zone_migration']}\t{r['is_fingerprint_uniform']}\n")
+                    f"{r['ep_band_migration']}\t{r['is_fingerprint_uniform']}\n")
     print(f"Wrote {len(proxy_rows)} proxy-husk rows to {path}")
 
 
@@ -308,7 +318,7 @@ def write_report(stats):
             f"| {sid} | {r.get('fingerprint_family','?')} | "
             f"{r.get('is_fingerprint_uniform','?')} | "
             f"{r.get('gauge_family','?')} | "
-            f"{r.get('fpn_zone_migration','?')} | "
+            f"{r.get('ep_band_migration','?')} | "
             f"{r.get('fpn_EP','?')} | "
             f"{r.get('proxy_husk','?')} |"
         )
@@ -382,7 +392,7 @@ in the CSV). This is *not* the specified husk criterion — it is a separate ann
 
 ## Proxy Population (N = {s["N_proxy"]:,})
 
-**N = {s["N_proxy"]:,}** constraints have fpn_zone = "critical" ({proxy_pct:.1f}% of corpus).
+**N = {s["N_proxy"]:,}** constraints have ep_band = "ep_critical" ({proxy_pct:.1f}% of corpus).
 These satisfy criterion 2 but criterion 1 is vacuous, so N is the proxy count, not a husk count.
 
 Of those {s["N_proxy"]:,}:
@@ -424,7 +434,7 @@ The peer-review trio's fingerprint family is `shift(tangled_rope, tangled_rope, 
 tangled_rope)` with **{s["tr_family_total"]:,} members** corpus-wide.
 
 Of those {s["tr_family_total"]:,}:
-- proxy_husk=Y (fpn_zone=critical): **{s["tr_family_proxy"]:,}** ({tr_pct:.1f}%)
+- proxy_husk=Y (ep_band=ep_critical): **{s["tr_family_proxy"]:,}** ({tr_pct:.1f}%)
 - proxy_husk=N: **{s["tr_family_total"] - s["tr_family_proxy"]:,}** ({100-tr_pct:.1f}%)
 
 **The synchronic proxy fails to discriminate.** {tr_pct:.0f}% of all uniform tangled_rope
@@ -449,7 +459,7 @@ fpn_report.md, all 2026-05-21). The fourth — drift_velocity — yielded K=0: n
 facts are in scope for any of the {s["total"]:,} main-corpus constraints; the measurement layer
 exists only in unloaded archives.
 
-The synchronic proxy (fpn_zone=critical) flags {s["N_proxy"]:,} constraints ({proxy_pct:.1f}%
+The synchronic proxy (ep_band=ep_critical) flags {s["N_proxy"]:,} constraints ({proxy_pct:.1f}%
 of corpus). But the population control shows that {tr_pct:.0f}% of the uniform tangled_rope
 family — the peer-review trio's own family — lands in that critical zone. The proxy does not
 isolate a coherent sub-population; it describes a majority behavior of the largest fingerprint
@@ -501,7 +511,7 @@ def main():
     print("=" * 60)
     print("HEADLINE: K=0 — husk undetectable on loaded corpus")
     print(f"Total constraints: {stats['total']:,}")
-    print(f"Proxy N (fpn_zone=critical): {stats['N_proxy']:,}")
+    print(f"Proxy N (ep_band=ep_critical): {stats['N_proxy']:,}")
     print(f"Uniform+critical: {stats['N_uniform_critical']:,}")
     print(f"K (with measurement series): {stats['K']}")
     print(f"M (confirmed husk): {stats['M']}")

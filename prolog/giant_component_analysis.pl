@@ -581,8 +581,8 @@ report_purity_landscape(Cs, _Ctx) :-
         (   member(C, Cs),
             gc_node_purity(C, IP, EP),
             IP >= 0.0, EP >= 0.0,
-            purity_zone(IP, ZoneI),
-            purity_zone(EP, ZoneE),
+            action_band(IP, ZoneI),
+            action_band(EP, ZoneE),
             ZoneI \= ZoneE
         ),
         Shifted),
@@ -600,15 +600,23 @@ in_float_range(Lo, Hi, V) :- V >= Lo, V < Hi.
 % defense in depth — but that filter is a property of one caller, not of the
 % predicate, and `unknown` here previously threw type_error(evaluable,unknown/0).
 % Order is load-bearing: `< 0.0` throws on the atom.
-purity_zone(P, unknown) :- \+ number(P), !.
-purity_zone(P, unknown) :- P < 0.0, !.
-purity_zone(P, sound) :-
+%% action_band(+P, -Band)
+%  Bands purity against the config ACTION floors (purity_action_*) — this is an
+%  operational escalation ladder, not the spec purity vocabulary.
+%  OQ-62: renamed from purity_zone/2; the atoms carry a `gc_` prefix so the
+%  rename's back-substitution witness cannot collide with the generic English
+%  words (monitor/watch/escalate) that occur in this module's narrative prose,
+%  and so disjointness holds by construction rather than by luck.
+%  `unknown` is the one deliberately shared token (see fpn_report:ep_band/2).
+action_band(P, unknown) :- \+ number(P), !.
+action_band(P, unknown) :- P < 0.0, !.
+action_band(P, gc_monitor) :-
     config:param(purity_action_sound_floor, F), P >= F, !.
-purity_zone(P, borderline) :-
+action_band(P, gc_watch) :-
     config:param(purity_action_escalation_floor, F), P >= F, !.
-purity_zone(P, warning) :-
+action_band(P, gc_escalate) :-
     config:param(purity_action_degraded_floor, F), P >= F, !.
-purity_zone(_, degraded).
+action_band(_, gc_override).
 
 report_super_spreaders(Cs, Ctx) :-
     format('### Super-spreaders (Highest Contamination Potential)~n~n'),
@@ -1253,7 +1261,7 @@ report_contamination_collapse_analysis(Members, Ctx) :-
         retract(config:param(purity_contamination_cap, _)),
         assertz(config:param(purity_contamination_cap, Cap)),
         % Recompute effective purities for GC members
-        count_by_purity_zone(Members, Ctx, SoundFloor, DegFloor, NS, NB, NW, ND),
+        count_by_action_band(Members, Ctx, SoundFloor, DegFloor, NS, NB, NW, ND),
         format('| ~2f | ~w | ~w | ~w | ~w |~n', [Cap, NS, NB, NW, ND])
     )),
     % Restore original cap
@@ -1261,9 +1269,9 @@ report_contamination_collapse_analysis(Members, Ctx) :-
     assertz(config:param(purity_contamination_cap, OrigCap)),
     format('~n').
 
-%% count_by_purity_zone(+Members, +Ctx, +SoundFloor, +DegFloor, -NS, -NB, -NW, -ND)
+%% count_by_action_band(+Members, +Ctx, +SoundFloor, +DegFloor, -NS, -NB, -NW, -ND)
 %  Recomputes effective purity for members and counts by zone.
-count_by_purity_zone(Members, Ctx, SoundFloor, DegFloor, NS, NB, NW, ND) :-
+count_by_action_band(Members, Ctx, SoundFloor, DegFloor, NS, NB, NW, ND) :-
     config:param(purity_action_escalation_floor, EscFloor),
     findall(EP,
         (   member(C, Members),

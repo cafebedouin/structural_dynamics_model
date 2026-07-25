@@ -522,8 +522,8 @@ trigger_accelerating_pathology(C, Context, Hypothesis) :-
     subsystem_available(fpn),
     % FPN shows zone migration (FPN zone differs from one-hop zone)
     catch(drl_modal_logic:fpn_ep(C, Context, FPNEP), _, fail),
-    fpn_zone(FPNEP, FPNZone),
-    one_hop_zone(C, Context, OneHopZone),
+    fpn_band(FPNEP, FPNZone),
+    one_hop_band(C, Context, OneHopZone),
     FPNZone \= OneHopZone,
     % Purity drift event detected
     catch(drl_lifecycle:drift_event(C, purity_drift, PurityEvidence), _, fail),
@@ -531,8 +531,8 @@ trigger_accelerating_pathology(C, Context, Hypothesis) :-
     catch(purity_scoring:purity_score(C, Purity), _, (Purity = -1.0)),
     EvidenceLines = [
         evidence_line(fpn, fpn_ep, FPNEP),
-        evidence_line(fpn, fpn_zone, FPNZone),
-        evidence_line(fpn, one_hop_zone, OneHopZone),
+        evidence_line(fpn, fpn_band, FPNZone),
+        evidence_line(fpn, one_hop_band, OneHopZone),
         evidence_line(drift, purity_drift, PurityEvidence),
         evidence_line(signature, purity_score, Purity)
     ],
