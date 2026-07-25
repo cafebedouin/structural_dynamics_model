@@ -1471,6 +1471,34 @@ def _phase_epsilon_authorship_readout(progress):
     return [result]
 
 
+def _phase_q_provenance_readout(progress):
+    """Phase 9d: OQ-254 standing Q-provenance readout (cheap, pure JSON).
+
+    Buckets every story's epsilon_provenance generation_run_id against the
+    tracked SCOPE-manifest surface (agent/decompose_manifests/): joined /
+    joined_archive_not_authoritative / no_run_id_authored (with counted
+    breakdown) / run_id_authored_manifest_unreachable (the Pattern-6 bucket).
+    The script runs its planted two-sided controls on every invocation and
+    exits non-zero if they fail. Writes outputs/q_provenance_readout.{json,md}.
+    """
+    if progress:
+        progress("pipeline", "[Q-READOUT] Q-provenance readout (OQ-254)...")
+
+    def _readout():
+        script = REPO_ROOT / "python" / "q_provenance_readout.py"
+        result = subprocess.run(
+            [sys.executable, str(script)],
+            cwd=str(REPO_ROOT), capture_output=True, text=True, timeout=300,
+        )
+        if result.returncode != 0:
+            raise RuntimeError(
+                f"q_provenance_readout.py exited {result.returncode}: "
+                f"{(result.stderr or result.stdout).strip()[-400:]}")
+
+    result = _run_step("q_provenance_readout", _readout, progress)
+    return [result]
+
+
 # ---------------------------------------------------------------------------
 # Main pipeline
 # ---------------------------------------------------------------------------
@@ -1731,6 +1759,9 @@ def run_pipeline(
     # Phase 9c: OQ-78 standing readout (OQ-205 §8) — sequential post-report,
     # pure JSON (no swipl).
     collect(_phase_epsilon_authorship_readout(progress))
+
+    # Phase 9d: OQ-254 standing Q-provenance readout — sequential, pure JSON.
+    collect(_phase_q_provenance_readout(progress))
 
     pipeline_result.total_duration_s = time.time() - t0
 
