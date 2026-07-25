@@ -3609,49 +3609,40 @@ blocked_on OQ-255`; ruled, and OQ-255 resolved.
 with an Ω_E recon/build tail (whether the decomposition step already records its Q-choice is a
 code fact, checkable now).
 
-**Status:** open
+**Status:** resolved — recon + minimal wiring, one pass (operator-scoped); audit
+`audits/2026-07-25_oq254_q_provenance/` (STEP0–STEP4 witnesses); commits `01d503aa`
+(re-witnessed census), `f1436bd4` (join key), `2d7432a0` (self-stamp), `7f29bfea`
+(tracked location + 515-manifest archive), `c200fcd2` (standing readout + Phase 9d).
 **Priority:** 4
 **Origin:** [EDGE] extension in the same 2026-07-25 analysis turn that produced OQ-253.
-**Provenance caveat, preserved verbatim in force:** the claim was inferred *from the v8 document
-only* — the source turn did not read the decomposition code and explicitly declined to claim what
-it does. Recon precedes spec.
-**Files:** `agent/c-orchestrator.py:413` (`_step_decompose`, the UKE_SCOPE/primed-scope call),
-`agent/generate_kernel_corpus.py` (`_scope_user_prompt`, reused by the router), OQ-205's landed
-surfaces (`epsilon_provenance/5`, `python/epsilon_authorship_readout.py`).
 
-**Deps:** splits_from OQ-253
+**Correction marked on close (operator flag — not folded silently):** the headline above is
+FALSE AS WRITTEN. Step-0 census (515 manifests): the question IS audited — richly
+(`selection_reason` 2596/2598 axes counting schema variants; `deferral_reason` 1022/1022
+deferred entries; kernel verdict 486/515) — just not JOINABLY: the whole surface sat under
+gitignored `outputs/` with no self-provenance and no story-side link (`epsilon_provenance/5`
+arg 4 `'none'` in 71/71 live emissions). The defect is Pattern 6 (declaration unreachable
+from the verdict), not concealment. This is the second same-direction inference (reasoning
+from v8 prose about what the engine does) corrected by code contact, kin to the OQ-255 §8
+Q6-channel misidentification, and marked the same way.
 
-**The claim.** OQ-205 (resolved 2026-07-03) built ε's declaration discipline: who authored each
-ε, from which reading, under which prompt/schema/model. But the reading set itself comes from
-UKE_SCOPE decomposing a topic — and that decomposition is a Q-choice upstream of every ε in the
-run (which axes get asked determines which readings exist to author ε at all). Under the OQ-253
-framing (Q → Π → σ): the ε discipline as scoped audits the *answer* and not the *question that
-admitted it*. The no-seat pose the framework must not strike about its own ε (OQ-205's closing
-line) recurses one level up to the battery that selected the readings.
+**What landed:** `generation_run_id` join key (schema-optional Provenance field; minted at
+decompose = manifest filename stem; threaded through all three scope-manifest write paths into
+`epsilon_provenance/5` arg 4); manifest `_provenance` self-stamp (scope model/prompt-commit/
+schema-commit/timestamp/axes-ceiling/topic); tracked location `agent/decompose_manifests/`
+(515 pre-existing manifests archived there under `archive_pre_2026-07-25/`,
+declared archive-not-read-surface); standing `python/q_provenance_readout.py` (four
+loud-null-obliged tokens incl. the Pattern-6 `run_id_authored_manifest_unreachable` and the
+archive's own `joined_archive_not_authoritative`; planted two-sided controls every
+invocation) wired as run_pipeline Phase 9d.
 
-**Recon first (the code fact the source turn could not supply):** what does `_step_decompose`
-already record about the decomposition choice? Known partial substrate from the repo record: the
-primed scope prompt is pinned (kernel-first router, 2026-06-06), the manifest carries the axes,
-and per-story provenance carries model/prompt/schema commits (Critical Distinctions). The open
-question is whether the *question-level* choice — why these axes, what the §3-distinctness call
-foreclosed, which candidate axes were considered and dropped — is carried anywhere a read site
-can see, or exists only as the transient LLM output of step 2. If the manifest already carries
-it, this OQ reduces to wiring a read-surface; if not, it is a spec task in the OQ-205 mold
-(carry-the-provenance-bit, loud-null, generator-forward, no backfill).
-
-**Sequencing (amended 2026-07-25, third turn): FULLY UNBLOCKED.** Both former waits are
-settled — OQ-253 ruled (adopted, `fdc502ec`: the graded seat-cost + Q → Π → σ chain are now
-doc law) and OQ-255 resolved (the gate-v1.1/grade measure is the vocabulary for declaring what
-a decomposition foreclosed). Recon first (a code read of `_step_decompose` plus one manifest
-inspection), then the spec if owed. Note for the spec: the OQ-255 audit's channel-misidentification
-lesson applies here too — before claiming the decomposition's Q-choice is uncarried, sweep ALL
-candidate surfaces (manifest fields, story_provenance, the scope-prompt output schema), not the
-first-named one.
-
-**What resolution changes:** ε-dependent findings become auditable against the question that
-admitted their reading set, not only against their authoring reading; the OQ-205 discipline
-closes its upstream gap or records (in `design_gaps.md` if declined) that Q-provenance is a
-declared absence.
+**The close records WIRED, not JOINED (second marked correction-of-scope):** at close every
+live story is `no_run_id_authored` (129 no-fact / 76 run_id `'none'`) and `joined` is
+exercised only by a planted control. Graduation = the next operator topic run producing a
+story whose run_id resolves to its manifest. One item pending operator eyes: the
+`_step_commit` extension (stage the run's manifest with its stories) is an UNCOMMITTED
+working-tree diff per the manual-approval fork ruling. Follow-up: OQ-256 (§3 foreclosure
+as structure, deliberately unbundled).
 
 ---
 
@@ -12218,7 +12209,48 @@ surfacing the error count alongside the firing count is the graduation step.
 
 ---
 
-*Last updated: 2026-07-24. Add new items with sequential OQ-NN labels. Mark
+## OQ-256 — Structured §3-foreclosure record in the SCOPE manifest: a shape the OQ-255 grade measure can consume
+
+**Ω-type:** Ω_C (what the decomposition declares about its own foreclosures is a seat choice —
+the record's schema is authored, not computed) with an Ω_E build tail (prompt/schema change,
+testable on `testsets/`).
+
+**Status:** open
+**Priority:** 5
+**Origin:** 2026-07-25, split from OQ-254 at its close (operator-ruled unbundled — see
+sequencing below for why it does not land with the OQ-254 wiring).
+**Files:** `prompts/uke_scope_v2_json.md` (§5 deferred-axes instruction),
+`python/scope_manifest_schema.json`, `agent/c-orchestrator.py` (`_step_decompose`),
+`docs/seat-theorem-v1.md` (the OQ-255 foreclosure/Gate/Grade measure).
+
+**Deps:** splits_from OQ-254
+
+**The gap (OQ-254 Step-0 census, `audits/2026-07-25_oq254_q_provenance/`):** the SCOPE
+manifest's §3-distinctness record is PROSE ONLY — `deferral_reason` strings (authored
+1022/1022 on the 515-manifest population) and `fracture_scan.notes`. There is no structured
+pairwise table, no overlap-type field, nothing the OQ-255 foreclosure/Gate/Grade measure could
+consume without an LLM re-read. A structured record (e.g. per deferred axis: which retained
+axis it collapsed into, overlap type, what distinction the deferral forecloses) would make the
+Q-choice's foreclosures first-class the way OQ-255 made answer-partition foreclosures
+first-class.
+
+**Sequencing — blocked on a first exercise of OQ-255's hand-enumerated foreclosure branch.**
+OQ-255's measure computes foreclosure-sets from gate structure for ENGINE-KIN questions and
+prescribes hand-enumerate-and-declare for everything else. A §3-foreclosure field would be the
+FIRST consumer of that hand-enumerated branch, which has never been exercised — building the
+read surface before the reader exists is the anti-pattern (a schema shaped for a consumer
+nobody has run gets frozen wrong). No OQ tracks "first hand-enumerated foreclosure
+declaration" as an event, so this is stated here as prose rather than faked as a Deps edge:
+do not start this until some analysis has actually walked OQ-255's declare-by-hand path once
+and its shape is known to work. (OQ-253 is already ruled; that is NOT the wait.)
+
+**What resolution changes:** the tensions ledger / seat-cost analyses can read what a
+decomposition foreclosed without re-interpreting prose; the OQ-254 join (story →
+manifest) gains a structured payload at the manifest end worth joining TO.
+
+---
+
+*Last updated: 2026-07-25. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

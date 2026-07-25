@@ -45,6 +45,34 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-25 — [landed] OQ-254 RESOLVED: Q-provenance wired (join key, self-stamp, tracked manifests, standing readout); headline corrected on close
+
+**Files:** agent/c-orchestrator.py, agent/generate_kernel_corpus.py, python/generate_constraint_pl.py, schemas/constraint_story_schema.json, python/run_pipeline.py, python/q_provenance_readout.py, agent/decompose_manifests/, ISSUES.md
+**Tier:** landed
+
+Audit `audits/2026-07-25_oq254_q_provenance/`; commits `01d503aa`/`f1436bd4`/`2d7432a0`/
+`7f29bfea`/`c200fcd2`. The OQ's headline was FALSE as written (marked on the entry, second
+v8-prose inference corrected by code contact): the Q-choice was richly declared
+(selection_reason 2596/2598 axes, deferral_reason 1022/1022, kernel verdict 486/515 over the
+515-manifest census) but unreachable — gitignored, unstamped, unjoined (Pattern 6). Landed:
+(1) `generation_run_id` = manifest filename stem, minted at decompose, threaded through all
+THREE scope-manifest write paths (c-orch `_persist_manifest`, gkc batch decompose, legacy
+`--scope`) into story provenance → `epsilon_provenance/5` arg 4 (schema-optional field —
+never required; `'none'` = declared pre-wiring stratum, NEVER a defect and never backfilled);
+(2) manifest `_provenance` self-stamp; (3) manifests now write to tracked
+`agent/decompose_manifests/<run_tag|flat|decompose>/`, the 515 pre-existing ones archived at
+`archive_pre_2026-07-25/` (archive-not-read-surface; readout token
+`joined_archive_not_authoritative`, never `joined`/`unreachable`); (4) standing
+`q_provenance_readout.py` + run_pipeline Phase 9d (planted two-sided controls every run;
+behavior-preservation witnessed: per_constraint byte-equal over md5-frozen corpus). Close
+records WIRED not JOINED: all 205 live stories `no_run_id_authored`; e2e join graduates at
+the next operator topic run. Pending operator eyes: `_step_commit` extension (stage the run's
+manifest with its stories) left as an uncommitted diff per the manual-approval fork ruling.
+Follow-up minted: OQ-256 (§3 foreclosure as structure; waits on first exercise of OQ-255's
+hand-enumerated branch).
+
+---
+
 ## 2026-07-25 — [landed] Seat-theorem v2.5 ADOPTED (OQ-253 ruled): Q enters the formalism; interrogative type exemption struck at all three sites
 **Files:** docs/seat-theorem-v1.md, docs/deferential_realism_paper_v8.md, docs/the-few-seats-worth-choosing-v2.md, ISSUES.md
 **Tier:** landed
