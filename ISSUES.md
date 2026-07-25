@@ -3678,6 +3678,16 @@ declaration-class.
    nothing (its kill condition), 2b's type exemption survives *as a gate* — not "questions are
    free" but "questions that admit their own terminator are free enough." That is a weaker
    revision than originally sold, and it is the pre-declared fallback, not a retreat.
+4. **OQ-255 executed and resolved same day** (`audits/2026-07-25_oq255_seat_cost_measure/`):
+   the kill condition did NOT fire (witnessed pair Q3/Q5 — grade is load-bearing on the
+   engine-kin subset), so the FULL graded revision, not the weaker gate-only landing, is what
+   stands for adjudication. Kinship verdict on the addendum's conditional: looser than the
+   source's enumeration (Q5 is a one-sided mountain-excluder — its positive pole is inhabited
+   by five types on the live corpus, rope bypass `drl_core.pl:423`), but the run-witness path
+   sharpened rather than collapsed: foreclosure-sets are computed from gate structure, not
+   question glosses — the gloss's overstatement of Q5 is itself the false-precision the measure
+   prices. What remains here is purely the ruling: adopt/reject the three edits under the
+   OQ-255 measure, and the three-site sweep decision (item 2).
 
 **What resolution changes:** if adopted, `seat-theorem-v1.md` bumps version with the three edits
 under whatever measure OQ-255 lands (and the sweep decision for the two sibling sites); the
@@ -3739,63 +3749,46 @@ declared absence.
 
 ## OQ-255 — Define the seat-cost measure: a function from foreclosure-sets to gate + grade
 
-**Ω-type:** Ω_C (the measure is itself a declared seat — what counts as a foreclosure-set and
-which coarsening is adopted are choices, not derivations) with an Ω_E tail (the engine-kin
-positive control and the gate/grade pair-existence test are runnable).
+**Ω-type:** Ω_C (the measure is itself a declared seat) with an Ω_E tail (engine-kin controls).
 
-**Status:** open
+**Status:** resolved — candidate measure delivered, kinship verified against the classifier,
+kill condition answered; full audit `audits/2026-07-25_oq255_seat_cost_measure/WRITEUP.md`
+(census evidence + controls in `evidence/census.json`; manifest 2026-07-25T07:20:20Z, n=199,
+ee025a0). **Adoption of the measure is NOT self-certified here — it rides OQ-253's
+blocked_on_human ruling.**
 **Priority:** 3
-**Origin:** 2026-07-25, second turn from the source instance — its one-sentence flag: the
-measure was filed as a sub-part of OQ-253's edit 3 while blocking both OQ-253's kill condition
-and OQ-254's spec, "a blocker living inside the thing it blocks." Spun out on mint-day.
-**Files:** `docs/seat-theorem-v1.md` (§6.2, the edit-3 target), `docs/deferential_realism_paper_v8.md:781-805`
-(§6.3, the kinship sentence), `docs/the-few-seats-worth-choosing-v2.md` (the six-question
-battery whose foreclosure-sets are the first test data), `prolog/drl_core.pl` (the classifier
-the engine-kin verification runs against).
+**Origin:** 2026-07-25, second turn from the source instance — the measure was a blocker living
+inside OQ-253's edit 3; spun out and executed same day.
+**Files:** `docs/seat-theorem-v1.md`, `docs/deferential_realism_paper_v8.md:781-805`,
+`prolog/drl_core.pl:364-459`, `audits/2026-07-25_oq255_seat_cost_measure/`.
 
 **Deps:** splits_from OQ-253, gates OQ-253
 
-**Why a measure at all.** OQ-253's edit 3 replaces the interrogative type exemption with "a
-question's seat-cost is what it structurally cannot return." As minted, the kill condition on
-that revision was unfireable: if seat-cost IS the foreclosure-set, different sets have different
-cost by identity. So the measure must be a **function from foreclosure-sets to a coarser
-ordering** — and everything contested now lives in that function.
+**The measure (still-operative build spec, kept per compress-on-close exception):**
+foreclosure(Q) = the distinctions over the engine token-set Q's answer-partition cannot separate
+— **computed from gate structure for engine-kin questions, hand-enumerated-and-declared
+otherwise**; **Gate(Q)** = Q admits ≥1 *positively-shaped* answer landing in the terminator set
+{mountain, justified rope} (negative existentials do not pass — Build Discipline Pattern 5
+imported; Q3/Q5/Q6 pass, Q1/Q2/Q4 fail); **Grade(Q)** = foreclosure(Q) under set-inclusion
+partial order (cardinality coarsening rejected — it destroys witnessed incomparability).
 
-**Proposed shape (source's, to adjudicate): gate + grade.**
-- **Gate** (binary, checkable): does the question's foreclosure-set contain the answers that
-  would terminate the battery? This is the genealogical guard made mechanical — the theorem
-  doc's unnumbered balance requirement (`seat-theorem-v1.md:140`) and the few-seats essay's Q6
-  ("can return a verdict *against* the selecting bet") become one checkable condition: **the
-  battery must admit at least one answer that terminates the battery.**
-- **Grade** (ordered): everything else the question forecloses, ordered by the coarsening.
-
-**Pre-declared concession (the honest weaker landing):** if the gate does the work and the grade
-is decorative, 2b's type exemption survives *as a gate* — "questions that admit their own
-terminator are free enough." Then edit 3 shrinks to replacing one virtue-requirement with one
-checkable condition — worth doing, but not a correction to the type exemption.
-
-**Kill condition on the gate/grade split (pre-registered, and fireable):** exhibit two questions
-that BOTH pass the gate and whose grades differ, where the grade difference **changes which seat
-a practitioner selects**. If no such pair exists, the grade is ornamental and the gate is the
-whole revision (→ the concession above).
-
-**The run-witness path (the measure's positive control).** v8 §6.3 asserts the engine kinships
-in text (verified verbatim this session, `deferential_realism_paper_v8.md:803-805`): Q3's
-coordination-to-transfer ratio ↔ the rope/snare/tangled_rope axis; Q5's rearrangement test ↔
-mountain-versus-arrangement. On that subset the foreclosure-set is enumerable over the engine's
-type tokens (six core types + `naturalized`/`unknown`): Q5 partitions {mountain} against the
-rest and structurally cannot separate snare from tangled_rope. Per the §8-rule (a probe licenses
-"absent" only when shown to fire), this enumerable case is the positive control — without it the
-measure is a clean grep. **Declared caveat (source's, preserved):** the kinship is asserted as
-visible-in-the-text, not as identity; the first execution step is verifying it against the
-classifier (`drl_core.pl` type clauses; does Q5's rearrangement test actually track the mountain
-gate's conditions?). If the kinship is looser than the text asserts, the run-witness path
-collapses and the measure falls back to declaration-class.
-
-**What resolution changes:** OQ-253's edit 3 becomes adjudicable (its kill condition is this
-OQ's, now fireable); the genealogical guard becomes a mechanical gate with a worked example; and
-OQ-254's spec inherits the vocabulary for declaring what a decomposition foreclosed. If the kill
-condition fires, the type exemption is re-affirmed as a gate and OQ-253 shrinks accordingly.
+**Resolution findings:** (1) v8 §6.3's kinship is REAL but looser than the source's enumeration
+— `emerges_naturally` is necessary for mountain but its true-pole is inhabited by FIVE types on
+the live corpus (rope bypass `drl_core.pl:423`; mountain 6 / rope 32 / scaffold 18 / snare 8 /
+unknown 8 slots), so Q5 is a one-sided excluder, not a certifier; snare↮tangled_rope foreclosure
+confirmed; Q3 ↔ χ-band+boolean pair confirmed. The run-witness path did NOT collapse — it
+sharpened: foreclosure-sets are computed from gates, not question glosses. (2) **Kill condition
+does NOT fire:** exhibited pair (Q3, Q5), both gate-passing, grades incomparably different with
+all four witness cells inhabited, and the difference changes seat selection (rope-vs-snare
+candidates). The grade is load-bearing on the engine-kin subset; the pre-declared weaker landing
+(gate-only) is NOT forced. Scoped: an existence result over engine tokens, not all question
+pairs everywhere. (3) Residual finding: Q6's unique engine channel — the dead-coordination piton
+path reading authored `coordination_vitality/2` — is **authored-empty on all five live legs AND
+kernel_v1** (only legacy `original_json` authors it; grep control ladder in the writeup); all 32
+live piton slots are theater-fallback pitons. Fails closed (dormant, not defective), but the
+essay's guard question maps to a surface generation stopped feeding at the reset — re-emit at
+the generation frontier or declare in `design_gaps.md` if Q6's drift-verdict is ever wanted
+measured.
 
 ---
 

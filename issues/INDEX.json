@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "03e57ec395003d9bc99c3d2b54a8fdb6d279d080",
+    "store_version": "2fa3eca267ddc0143c2ba78bcc02be2d005d1ba3",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-07-25T10:58:45"
+    "generated_at": "2026-07-25T11:10:31"
   },
-  "issues_sha": "7d0b94f627748c338d8bb1864da4e99a71d1063bca6d5cb52b25bebf7282e045",
+  "issues_sha": "0c039acba24ed2496c81ba89a61f0d46891d9c3de30aee76058442221b9136d0",
   "n_entries": 255,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 136,
+    "resolved": 137,
     "mitigated": 18,
     "disposed": 5,
     "future": 5,
-    "open": 84,
+    "open": 83,
     "partial": 7
   },
   "active": [
@@ -1255,21 +1255,6 @@
         "OQ-205",
         "OQ-253",
         "OQ-255"
-      ]
-    },
-    {
-      "id": "OQ-255",
-      "status": "open",
-      "priority": 3,
-      "summary": "Define the seat-cost measure: a function from foreclosure-sets to gate + grade",
-      "deps": [
-        "splits_from OQ-253",
-        "gates OQ-253"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-253",
-        "OQ-254"
       ]
     }
   ],
@@ -3528,6 +3513,20 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-234"
+      ]
+    },
+    {
+      "id": "OQ-255",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "Define the seat-cost measure: a function from foreclosure-sets to gate + grade",
+      "deps": [
+        "splits_from OQ-253",
+        "gates OQ-253"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-253"
       ]
     }
   ]

@@ -45,6 +45,37 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-07-25 — [landed] OQ-255 seat-cost measure delivered; two corpus facts: `emerges_naturally`'s true-pole holds FIVE types, and `coordination_vitality` is authored-empty on every live leg
+**Files:** audits/2026-07-25_oq255_seat_cost_measure/, prolog/drl_core.pl, docs/seat-theorem-v1.md, docs/deferential_realism_paper_v8.md, docs/the-few-seats-worth-choosing-v2.md, ISSUES.md
+**Tier:** landed
+
+OQ-253/254/255 minted and OQ-255 executed same day (commits `03e57ec3`, `2fa3eca2`, this one) —
+the seat-theorem Q-upstream-of-Π revision proposal, its Q-provenance extension, and the seat-cost
+measure (gate + grade over foreclosure-sets; kill condition did NOT fire — exhibited Q3/Q5 pair;
+audit has the census, controls, and scope declarations). OQ-253 now rides purely on the operator
+ruling (adopt/reject the three edits + the three-site exemption-sentence sweep:
+seat-theorem-v1.md:138, v8:796, few-seats-v2:31 — the last is the STRONGEST form).
+
+**Two corpus facts worth knowing independent of the philosophy** (manifest
+2026-07-25T07:20:20Z, n=199, ee025a0; slots = constraint × context):
+
+1. **`emerges_naturally=true` does NOT mean mountain.** The true-pole is inhabited by five
+   types — mountain 6, rope 32 (the `drl_core.pl:423` bypass, inhabited), scaffold 18, snare 8
+   (nlwb blocked by `agent_beneficiary` alone), unknown 8. A probe or report treating
+   `emerges_naturally` as a mountain proxy misreads 66/72 of the flag's true-pole slots.
+2. **`coordination_vitality/2` is authored by ZERO stories on all five live legs and
+   kernel_v1** — only the legacy `original_json` archive authors it (grep control ladder in the
+   audit). The dead-coordination piton path (`drl_core.pl:354-357`, clause 1 at `:381-388`) is a
+   live gate over an authored-empty table; ALL 32 live piton slots ride the theater fallback
+   (`:440-448`). Fails closed (dormant, not defective). If a drift/dead-coordination verdict is
+   ever wanted measured, re-emit the fact at the generation frontier
+   (`generate_constraint_pl.py` emit set) or declare the absence in `design_gaps.md`.
+
+Also of record: `per_constraint.classifications` empty corpus-wide (known OQ-148) — type
+censuses must read `per_constraint.perspectives`.
+
+---
+
 ## 2026-07-25 — [correction-key] OQ-67 CLOSED: the legacy χ = ε × π path is fully drained; it was UNREACHABLE, not merely deprecated
 **Files:** prolog/drl_audit_core.pl, prolog/drl_composition.pl, prolog/stack.pl, prolog/constraint_indexing.pl, prolog/config.pl, python/sweeps/bifurcation_sweep.py, docs/design/design_gaps.md, docs/lawvere_glossary.md, ISSUES.md, audits/2026-07-25_oq67_legacy_chi_retire/
 **Tier:** correction-key
