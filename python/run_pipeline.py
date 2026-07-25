@@ -870,6 +870,106 @@ def _prolog_residual_signature_gate():
         )
 
 
+def _prolog_agency_gate():
+    """OQ-66 standing guard: the two-gate agency principle is enforced.
+
+    Replaced the old drl_core natural_law_without_beneficiary/1 INERTNESS
+    tripwire, which the 2026-06-05 corpus reset left red-for-the-wrong-reason
+    for ~7 weeks (0 of its 11 fixture constraints survived the reset, and one
+    of its tests passed VACUOUSLY as a \\+ over an absent constraint). The
+    deferral it watched is gone: the agent-filtered read landed 2026-07-25
+    (ruling 63-A). What is watched now is the two-gate principle at
+    prolog/narrative_ontology.pl:398-419 — a non_agent_beneficiary/1 entry
+    RELEASES a natural-law certification on its host, so it needs both an
+    ontology-kind gate and a host-convergence gate; an unlisted value defaults
+    to AGENT (fail-open to status quo).
+
+    First swipl — the suite over the live corpus: registry contents exactly the
+    two ruled values, the filter is EXACTLY registry membership (single clause,
+    static, no kind inference), nlwb reads the filtered view, and the three
+    snare floors are still config constants. Fail-closed by construction
+    (run_tests failing, or the unit not loading, makes the swipl -g goal fail
+    -> non-zero exit -> PrologError).
+
+    Second swipl = the planted fixture pass, and it is what makes this gate
+    NON-VACUOUS. No beneficiary fact in ANY of the five live legs carries a
+    registered non-agent value (9,119 facts, zero hits — measured 2026-07-25),
+    so on the live corpus the raw and filtered reads are extensionally
+    IDENTICAL and a revert of drl_core.pl would keep the suite green. The four
+    tests/fixtures/nlwb_controls/ stories are the only place the two readings
+    come apart. They run through the REAL load path (corpus_path overlay
+    asserted BEFORE load_all_testsets — a FRESH process is mandatory: the
+    corpus_loaded/0 guard silently ignores an in-process overlay-after-load;
+    process exit is the cleanup) and must satisfy the planted truth table
+    EXACTLY: nlwb true at {nonagent_only, no_beneficiary} and false at
+    {agent_only, mixed}, with nlwb_ctl_nonagent_only reachable as snare under
+    the RAW reading (a fixture whose snare gate never opens produces a no-flip
+    that reads exactly like a working control).
+
+    NOT dead code: do not remove or fold into the parallel tasks. Reopen
+    condition is in the suite header. Cost: one additional swipl per run.
+    Provenance: audits/2026-07-25_oq66_nlwb_filter_cutover/.
+    """
+    try:
+        run_prolog(
+            ["stack.pl", "tests/test_agent_beneficiary.pl"],
+            "corpus_loader:load_all_testsets, run_tests(agent_beneficiary)",
+        )
+    except PrologError as e:
+        raise SystemExit(
+            "OQ-66 agency gate failed — the non_agent_beneficiary registry, the "
+            "agent_beneficiary filter, the nlwb filtered read, or the snare floor "
+            "provenance broke. If a registry entry was added, it owes the gate-2 "
+            f"convergence read (narrative_ontology.pl:398-419). Detail: {e}"
+        )
+    try:
+        run_prolog(
+            ["stack.pl"],
+            "retractall(config:param(corpus_path, _)), "
+            "assertz(config:param(corpus_path, 'tests/fixtures/nlwb_controls')), "
+            "corpus_loader:load_all_testsets, "
+            "findall(Cc, corpus_loader:corpus_constraint(Cc), Ccs), "
+            "sort(Ccs, CcsS), length(CcsS, NFix), "
+            "( NFix =:= 4 -> true ; throw(agency_fixture_count(NFix)) ), "
+            # The planted truth table: nlwb is TRUE exactly where the filtered
+            # reading has no surviving agent-kind beneficiary.
+            "findall(Ct, ( corpus_loader:corpus_constraint(Ct), "
+            "              drl_core:natural_law_without_beneficiary(Ct) ), Ts0), "
+            "sort(Ts0, Ts), "
+            "( Ts == [nlwb_ctl_no_beneficiary, nlwb_ctl_nonagent_only] "
+            "  -> true ; throw(agency_nlwb_set(Ts)) ), "
+            # Reachability control, two-sided on IDENTICAL metrics. All four
+            # fixtures author the same ε/supp/theater; the ONLY variable is
+            # beneficiary composition. nlwb_ctl_agent_only (unlisted value,
+            # survives the filter) must still reach snare, and
+            # nlwb_ctl_nonagent_only (registered value, filtered away) must not.
+            # Same metrics + opposite outcome ⇒ the block is caused by registry
+            # membership, not by weak metrics. Without the positive half, a
+            # fixture whose snare gate never opens would produce a no-snare that
+            # reads exactly like a working control.
+            "constraint_indexing:site_contexts_canonical(Cxs), "
+            "findall(At, ( member(Cx, Cxs), "
+            "              drl_core:classify_from_metrics(nlwb_ctl_agent_only, 0.80, "
+            "                  0.80, 0.75, Cx, At) ), Ats), "
+            "( memberchk(snare, Ats) -> true ; throw(agency_snare_unreachable(Ats)) ), "
+            "findall(Nt, ( member(Cx, Cxs), "
+            "              drl_core:classify_from_metrics(nlwb_ctl_nonagent_only, 0.80, "
+            "                  0.80, 0.75, Cx, Nt) ), Nts), "
+            "( memberchk(snare, Nts) -> throw(agency_flip_absent(Nts)) ; true ), "
+            "format(user_error, '[agency] fixture pass green: nlwb AT "
+            "{no_beneficiary, nonagent_only}, snare reachable at nonagent_only, "
+            "agent_only + mixed unflipped~n', [])",
+        )
+    except PrologError as e:
+        raise SystemExit(
+            "OQ-66 agency fixture pass failed — the planted nlwb_controls truth "
+            "table did not hold through the real load path "
+            "(tests/fixtures/nlwb_controls/). A revert of the agent_beneficiary "
+            "read in drl_core.pl surfaces HERE, not in the live-corpus suite "
+            f"(the live legs carry zero registered beneficiary values). Detail: {e}"
+        )
+
+
 def _epsilon_stability_sweep():
     """OQ-205 ε-stability sweep (data-side, r=0.02) as a pipeline step.
 
@@ -924,6 +1024,15 @@ def _phase_prolog(progress, parallel):
     if progress:
         progress("pipeline", "[PROLOG] residual-signature gate...")
     _prolog_residual_signature_gate()
+
+    # OQ-66 standing guard — sequential fail-fast, same slot. Raises SystemExit
+    # on red. NOT dead code: the two-gate agency principle's enforcement, and
+    # the ONLY place a revert of the drl_core agent-filtered read is visible
+    # (the live legs carry zero registered beneficiary values, so the suite
+    # alone would stay green). Do not remove or fold into the parallel tasks.
+    if progress:
+        progress("pipeline", "[PROLOG] agency gate...")
+    _prolog_agency_gate()
 
     if progress:
         progress("pipeline", "[PROLOG] Running analyses...")
